@@ -1,0 +1,210 @@
+<Type Name="CatalogZone" FullName="System.Web.UI.WebControls.WebParts.CatalogZone">
+  <TypeSignature Language="C#" Value="public class CatalogZone : System.Web.UI.WebControls.WebParts.CatalogZoneBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CatalogZone extends System.Web.UI.WebControls.WebParts.CatalogZoneBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.CatalogZone" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.CatalogZoneBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.CatalogZoneDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como o controle principal no conjunto de controles de Web Parts para hospedar controles <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> em uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dentro do conjunto de controle de Web Parts, uma zona é uma região em uma página da Web que contém os controles de Web Parts. Uma zona de Web Parts é criada por um controle de zona, que é um tipo de <xref:System.Web.UI.WebControls.CompositeControl> criado para conter outros controles. As funções principais de uma zona são para dispor os controles que ele contém e para fornecer uma interface de usuário (UI) comum para esses controles. Para obter informações gerais sobre zonas e como eles são usados em aplicativos Web Parts, consulte a base de <xref:System.Web.UI.WebControls.WebParts.WebZone> classe, e [Web Parts Control Set Overview](http://msdn.microsoft.com/library/ff0149e4-695a-401a-8cda-53df6d7d2668).  
+  
+ Um recurso importante de controles de Web Parts é que eles permitem que os usuários finais modificar (ou personalizar) em páginas da Web de acordo com suas preferências e salvem suas configurações personalizadas para sessões futuras do navegador. Um aspecto da modificação de páginas de Web Parts inclui a capacidade de adicionar <xref:System.Web.UI.WebControls.WebParts.WebPart> controles ou outros controles de servidor a uma página de Web Parts. O <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle fornece uma lista ou um catálogo de controles que os usuários podem adicionar a uma página.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle é um dos controles fundamentais no conjunto de controle de Web Parts. Ele deriva de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe e a maioria de seu comportamento é herdado da classe. O <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe essencialmente adiciona a classe base um modelo de zona, que é uma implementação do <xref:System.Web.UI.ITemplate> interface. O modelo de zona permite aos desenvolvedores adicionar declarativamente <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles a uma zona no formato de persistência de página.  
+  
+> [!IMPORTANT]
+>  Um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> zona só pode conter <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles e por outro lado, <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles podem residir somente em zonas que derivam de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe, como <xref:System.Web.UI.WebControls.WebParts.CatalogZone>.  
+  
+ Um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle fica visível apenas quando um usuário alterna uma página da Web para o modo de exibição de catálogo (<xref:System.Web.UI.WebControls.WebParts.WebPartManager.CatalogDisplayMode>). Um catálogo pode conter vários tipos de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles. Cada <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle é um tipo de contêiner que contém os controles de servidor que os usuários podem adicionar à página. O <xref:System.Web.UI.WebControls.WebParts.CatalogPart> diferem de controles de acordo com onde os controles de servidor que eles contêm são provenientes. A tabela a seguir resume o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controla fornecido com o conjunto de controles de Web Parts e, para cada controle, o tipo de servidor controla a ele contém.  
+  
+|Controle|Descrição|  
+|-------------|-----------------|  
+|<xref:System.Web.UI.WebControls.WebParts.PageCatalogPart>|Mantém referências aos controles que foram fechados em uma página. Esses controles podem ser reabertos (adicionado de volta para a página) por usuários.|  
+|<xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>|Contém referências aos controles que são declarados em um catálogo de Web Parts na marcação de uma página da Web. Esses controles podem ser adicionados a uma página da Web por usuários.|  
+|<xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart>|Fornece a interface do usuário para um usuário carregar um arquivo de definição (um arquivo XML com um. Extensão de Web Part e um formato especificado que contém as informações de estado) para um controle a um catálogo, para que o controle pode ser adicionado a uma página da Web.|  
+  
+ Porque o <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe adiciona um modelo de zona para o comportamento de sua classe base, ele tem alguns membros. O <xref:System.Web.UI.WebControls.WebParts.CatalogZone.%23ctor%2A> construtor é um construtor padrão; com ele, você pode inicializar uma nova instância do <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe. O <xref:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate%2A> propriedade obtém ou define uma referência para o <xref:System.Web.UI.ITemplate> objeto que contém os controles para a zona. O <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> método é crítico. Ela substitui o método base para criar a coleção de todos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles contidos dentro do modelo de zona.  
+  
+> [!NOTE]
+>  Os botões a <xref:System.Web.UI.WebControls.WebParts.CatalogZone> UI exigem scripts do lado do cliente para funcionar corretamente. Se o script está desabilitado no navegador, o usuário não poderá executar ações por meio de <xref:System.Web.UI.WebControls.WebParts.CatalogZone> interface do usuário.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ A marcação processada por padrão para este controle pode não estar de acordo com os padrões de acessibilidade, como as diretrizes de prioridade 1 conteúdo WCAG Web Accessibility Guidelines 1.0 (). Para obter detalhes sobre o suporte de acessibilidade para este controle, consulte [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático e declarativo do <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle. O exemplo de código tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição na página da Web.  
+  
+-   Um arquivo com o código-fonte para um personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle que é importado para o catálogo e adicionado à página da Web.  
+  
+-   Uma página da Web que declara o controle de usuário e o personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle.  
+  
+-   Obter uma explicação de como executar o exemplo.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_CatalogZone_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/displaymodemenucs.ascx#7)]
+ [!code-aspx-vb[WebParts_CatalogZone_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/displaymodemenuvb.ascx#7)]  
+  
+ A segunda parte do exemplo de código contém o código personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> e <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. O código para o <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle demonstra como herdam o <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe e personalizar suas propriedades, definir valores de propriedade de algum padrão no construtor. O código-fonte também demonstra como criar um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> classe denominada `TextDisplayWebPart`. Este é o controle associado com o. Arquivo de descrição de Web Part que você vai importar como parte deste exemplo de código. Depois de importar o arquivo de descrição usando o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle na página da Web, você poderá adicionar o `TextDisplayWebPart` controle para a página previamente configurada conforme especificado no arquivo de descrição.  
+  
+ Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Este exemplo de código usa compilação dinâmica, então se você quiser executar o exemplo dessa maneira, nomeie o arquivo de código fonte e adicioná-lo para uma subpasta de App_Code do diretório raiz do seu aplicativo Web. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_CatalogZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/catalogSamples.cs#1)]
+ [!code-vb[WebParts_CatalogZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/catalogSamples.vb#1)]  
+  
+ A terceira parte do exemplo de código é a página da Web que contém os controles. Ele contém um `Register` diretiva para o controle de usuário e outro para o arquivo de origem com os controles personalizados. Observe que na diretiva de segundo, ele não nomeia o assembly, como o exemplo não usa um assembly, ele usa a compilação dinâmica com o código-fonte colocado na subpasta App_Code. A página da Web declara um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle e dentro de seu filho `<zonetemplate>` elemento, ele declara um <xref:System.Web.UI.WebControls.BulletedList> controle. Embora esse seja um controle padrão do ASP.NET, ele terá a funcionalidade completa de Web Parts em tempo de execução, porque o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar encapsula qualquer controle de servidor colocado em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> com um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> do objeto, para que outros controles de servidor podem participar da Web Aplicativos de partes. Também declarada desta zona for personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle chamado `TextDisplayWebPart`. Observe que este controle tem um atributo de `ExportMode="All"` declarado nele. Isso permite que você exporte um. Arquivo de descrição de Web Part que contém os valores de propriedade do controle, que pode ser importado por outros usuários para adicionar o controle pré-configurado para outras páginas da Web.  
+  
+> [!NOTE]
+>  Para permitir que os usuários de um aplicativo de Web Parts para exportar um arquivo de descrição de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, você também deve habilitar o recurso de exportação no aplicativo da Web adicionando um `enableExport="true"` de atributo para o `<webParts>` elemento (que é um filho de `<system.web>`elemento) no arquivo Web. config. Exportar é desabilitado por padrão, portanto, se você ainda não foi habilitado exportação para seu aplicativo, edite o arquivo Web. config e fazê-lo agora.  
+  
+ A página da Web também declara personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e, dentro dele, um `<zonetemplate>` elemento que contém um <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. O usuário usará esse controle em tempo de execução para importar o. Arquivo de descrição de Web Part de personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZone_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/catalogzonecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZone_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/catalogzonevb.aspx#2)]  
+  
+ Agora execute o exemplo de código. Carregar a página da Web em um navegador. A primeira etapa é exportar um. Arquivo de descrição de Web Part para o `TextDisplayWebPart` controle. Clique no menu de verbos do controle personalizado (representada pela seta para baixo na barra de título) e, em seguida, clique em **exportar**. Siga as instruções para salvar um arquivo de descrição para o controle. Abra o. Descrição de Web Part em um editor de arquivo e editar o valor de propriedade do texto do título. Localizar o `<property>` elemento que tem o atributo `name="Title"`e editar o texto de título que está contido entre a abertura e fechamento `<property>` marcas. Agora, feche a página da Web e editar a origem da página em um editor. Excluir o `<aspSample:TextDisplayWebPart>` controlar o elemento de declaração, em seguida, salve e feche o arquivo.  
+  
+ Carregar a página da Web novamente em um navegador. O `TextDisplayWebPart` controle não deve aparecer porque ele foi removido. Use o **modo de exibição** controle de lista suspensa e selecione **catálogo** para alternar a página para o modo de catálogo. Observe que personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle aparece, juntamente com o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle. Clique o **procurar** botão para localizar o. Arquivo de descrição de Web Part que você exportou para o `TextDisplayWebPart` controle. Você pode clicar em **carregar**, selecione a caixa de seleção ao lado de controle importado e clique em **adicionar** para adicioná-lo para a página. Clique em **Fechar catálogo** para retornar a página para o modo de procura normal. O controle importado agora deve aparecer na página e o título que aparece na barra de título do controle deve ser adicionado para o texto do título do. Arquivo de descrição de Web Part.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+    <block subset="none" type="overrides">
+      <para>Você pode criar <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> classes se você quiser mais controle sobre o processamento e o comportamento do catálogo da interface do usuário. Se você não precisa fornecer aos usuários de seu controle com a capacidade de adicionar <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controla declarativamente, em seguida, você pode herdar diretamente de <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe. Se você deseja habilitar os controles sejam adicionados declarativamente, a abordagem simples é herdam o <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> de classe, porque ele fornece o modelo de zona essenciais.  
+  
+ Se você herdar do <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> classe, você pode substituir o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts" /> método e use o método para adicionar personalizado <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles para um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" />, se desejar maior controle programático sobre adicionando personalizado <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles para a zona .</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CatalogZone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZone.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle implementa um modelo de zona, ele é normalmente usado declarativamente e raramente você precisará criar uma nova instância da classe usando o <xref:System.Web.UI.WebControls.WebParts.CatalogZone.%23ctor%2A> construtor. No entanto, se você herdar o <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe para criar uma zona personalizada, talvez você queira usar o construtor para inicializar alguns de seus valores de propriedade e personalizar sua aparência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático do <xref:System.Web.UI.WebControls.WebParts.CatalogZone.%23ctor%2A> construtor em um personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle. O construtor é usado para inicializar alguns valores de propriedade padrão para o controle. O código a seguir mostra personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe com o construtor declarado na parte superior. Para o código completo e as instruções necessárias para configurar e executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZone> visão geral da classe.  
+  
+ [!code-csharp[WebParts_CatalogZone_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/CS/catalogSamples.cs#1)]
+ [!code-vb[WebParts_CatalogZone_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZone_Overview/VB/catalogSamples.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCatalogParts">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.WebParts.CatalogPartCollection CreateCatalogParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.WebParts.CatalogPartCollection CreateCatalogParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de cada <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> tipo que é declarado na zona.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> com referências a todos os <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles na zona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> é um método crítico como quando um usuário alterna uma página para o modo de exibição de catálogo, esse método cria todos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles que compõem o catálogo de Web Parts.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> método o <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe fornecida com as Web Parts do conjunto de controle pode criar qualquer controle de servidor que herda do <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe. Portanto, se você criar um personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controlar e declare-o em uma página dentro de um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> , esse método criará seu controle quando um usuário alterna a página para o modo de catálogo.  
+  
+ No entanto, por várias razões você pode querer ter controle sobre o <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> método. Você pode deseja apenas criar determinados <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles. Por exemplo, suponha que você criar um conjunto de personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles que têm uma aparência consistente e pertencem a um único produto ou uma organização. Se você deseja que os desenvolvedores de página a ser limitado ao uso desses controles personalizados em um catálogo, você deve herdar do <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe, substitua o <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A> método e permitir que o método para criar somente os controles do mesmo tipo que os controles personalizados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Atual <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controle não tem uma identificação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoneTemplate">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.ITemplate ZoneTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ZoneTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.WebParts.CatalogZone))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateInstance(System.Web.UI.TemplateInstance.Single)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um modelo para conter controles filho dentro de um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> controle no formato de persistência de página.</summary>
+        <value>Um <see cref="T:System.Web.UI.ITemplate" /> que atua como um contêiner para controles filho na zona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate%2A> propriedade faz referência a um modelo do tipo <xref:System.Web.UI.ITemplate> que é usado para conter o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles na zona. O modelo de zona permite que os desenvolvedores de página declarar o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles para usar no formato de persistência, em vez de precisar criar todos os controles de forma programática.  
+  
+ O acessador set para a <xref:System.Web.UI.WebControls.WebParts.CatalogZone.ZoneTemplate%2A> chamadas de propriedade de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InvalidateCatalogParts%2A> método, o que força a coleção de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles que são declarados no modelo de zona na página a ser atualizado. Isso garante que a coleção de controles referenciado pela zona permaneça atual sempre que um usuário altera os controles realmente declarados dentro do modelo na página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você quiser criar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> zona, mas você pretende criar o <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controla programaticamente, em vez de permitir que os desenvolvedores de página declará-los, você não precisa da zona suporte de modelo, e você pode herdar diretamente do <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

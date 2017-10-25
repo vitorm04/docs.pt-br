@@ -1,0 +1,238 @@
+<Type Name="UdpDiscoveryEndpoint" FullName="System.ServiceModel.Discovery.UdpDiscoveryEndpoint">
+  <TypeSignature Language="C#" Value="public class UdpDiscoveryEndpoint : System.ServiceModel.Discovery.DiscoveryEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UdpDiscoveryEndpoint extends System.ServiceModel.Discovery.DiscoveryEndpoint" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Discovery.DiscoveryEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Associação de um ponto de extremidade padrão que é pré-configurado para operações de descoberta através de um UDP multicast. Esse ponto de extremidade herda de <see cref="T:System.ServiceModel.Discovery.DiscoveryEndpoint" /> e tem um contrato fixado da mesma forma e dá suporte a duas versões do protocolo WS-Discovery. Além disso, ele tem uma associação de UDP fixa e um endereço padrão, conforme as especificações do WS-Discovery (WS-Discovery de abril de 2005 ou WS-Discovery V1.1).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpDiscoveryEndpoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpDiscoveryEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">O <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> a ser usado.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" /> classe com especificado <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente há suporte para as duas versões do protocolo WS-Discovery: WS-Discovery de abril de 2005 e WS-Discovery 1.1, que correspondem do <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005%2A> e <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11%2A> valores de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpDiscoveryEndpoint (string multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="multicastAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="multicastAddress">O endereço de multicast.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" /> classe com o endereço de multicast especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpDiscoveryEndpoint (Uri multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.#ctor(System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="multicastAddress" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="multicastAddress">O endereço de multicast.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" /> classe com o endereço de multicast especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpDiscoveryEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, string multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, string multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+        <Parameter Name="multicastAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">O <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> a ser usado.</param>
+        <param name="multicastAddress">O endereço de multicast para o ponto de extremidade de descoberta UDP.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" /> classe com especificado <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> e o endereço de multicast.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente há suporte para as duas versões do protocolo WS-Discovery: WS-Discovery de abril de 2005 e WS-Discovery 1.1, que correspondem do <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005%2A> e <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11%2A> valores de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UdpDiscoveryEndpoint (System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, Uri multicastAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.DiscoveryVersion discoveryVersion, class System.Uri multicastAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.#ctor(System.ServiceModel.Discovery.DiscoveryVersion,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="discoveryVersion" Type="System.ServiceModel.Discovery.DiscoveryVersion" />
+        <Parameter Name="multicastAddress" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="discoveryVersion">O <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> a ser usado.</param>
+        <param name="multicastAddress">Um <see cref="T:System.Uri" /> com o endereço de multicast.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" /> classe com especificado <see cref="T:System.ServiceModel.Discovery.DiscoveryVersion" /> e o endereço de multicast.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente há suporte para as duas versões do protocolo WS-Discovery: WS-Discovery de abril de 2005 e WS-Discovery 1.1, que correspondem do <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005%2A> e <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11%2A> valores de enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIPv4MulticastAddress">
+      <MemberSignature Language="C#" Value="public static readonly Uri DefaultIPv4MulticastAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri DefaultIPv4MulticastAddress" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.DefaultIPv4MulticastAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Endereço de multicast UDP padrão para IPv4.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIPv6MulticastAddress">
+      <MemberSignature Language="C#" Value="public static readonly Uri DefaultIPv6MulticastAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Uri DefaultIPv6MulticastAddress" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.DefaultIPv6MulticastAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O multicast UDP padrão de endereços IPv6.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastAddress">
+      <MemberSignature Language="C#" Value="public Uri MulticastAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri MulticastAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de multicast.</summary>
+        <value>Um <see cref="T:System.Uri" /> instância que contém o endereço de multicast.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.DefaultIPv4MulticastAddress>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportSettings">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.UdpTransportSettings TransportSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.UdpTransportSettings TransportSettings" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("TranportSettings property in System.SerivceModel.Discovery.UdpDiscoveryEndpoint is obsolete. Consider using System.ServiceModel.Channels.UdpTransportBindingElement for setting the transport properties.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.UdpTransportSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Discovery.UdpTransportSettings" /> instância associada a <see cref="T:System.ServiceModel.Discovery.UdpDiscoveryEndpoint" />.</summary>
+        <value>As configurações de transporte UDP para o ponto de extremidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Discovery.UdpTransportSettings> para alterar as configurações de transporte UDP para o ponto de extremidade UDP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

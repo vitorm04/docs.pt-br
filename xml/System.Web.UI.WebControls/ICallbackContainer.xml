@@ -1,0 +1,60 @@
+<Type Name="ICallbackContainer" FullName="System.Web.UI.WebControls.ICallbackContainer">
+  <TypeSignature Language="C#" Value="public interface ICallbackContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICallbackContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ICallbackContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um método que permite que os controles obter um script de retorno de chamada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes que implementam o <xref:System.Web.UI.WebControls.ICallbackContainer> interface fornece controles com um script que iniciará um retorno de chamada para o servidor. Um retorno de chamada é diferente de postback mais comum, a processamento do retorno de chamada de página recria a página sem alterar as informações de estado mantidas pela página. Para obter mais informações sobre a criação de retornos de chamada, consulte [implementando retornos de chamada de cliente sem Postbacks](http://msdn.microsoft.com/library/dfaaa7d4-e1f2-4322-b2f5-796e0419f185).  
+  
+ As classes que implementam o <xref:System.Web.UI.WebControls.ICallbackContainer> também deve implementar a interface de <xref:System.Web.UI.ICallbackEventHandler> interface para manipular os eventos gerados pelos controles.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCallbackScript">
+      <MemberSignature Language="C#" Value="public string GetCallbackScript (System.Web.UI.WebControls.IButtonControl buttonControl, string argument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetCallbackScript(class System.Web.UI.WebControls.IButtonControl buttonControl, string argument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ICallbackContainer.GetCallbackScript(System.Web.UI.WebControls.IButtonControl,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buttonControl" Type="System.Web.UI.WebControls.IButtonControl" />
+        <Parameter Name="argument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="buttonControl">O controle iniciando a solicitação de retorno de chamada.</param>
+        <param name="argument">Os argumentos usados para criar o script de retorno de chamada.</param>
+        <summary>Cria um script para iniciar um retorno de chamada do cliente para um servidor Web.</summary>
+        <returns>Um script que, quando executado em um cliente, iniciará um retorno de chamada para o servidor Web.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações de <xref:System.Web.UI.WebControls.ICallbackContainer.GetCallbackScript%2A> método deve retornar um script que, quando executado no cliente, iniciará um retorno de chamada para o servidor Web.  
+  
+ O `argument` parâmetro é passado para o <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> método que manipula o retorno de chamada.  
+  
+ Para obter mais informações sobre a criação de retornos de chamada, consulte [implementando retornos de chamada de cliente sem Postbacks](http://msdn.microsoft.com/library/dfaaa7d4-e1f2-4322-b2f5-796e0419f185).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

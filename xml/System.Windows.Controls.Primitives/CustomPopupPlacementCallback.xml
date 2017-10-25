@@ -1,0 +1,35 @@
+<Type Name="CustomPopupPlacementCallback" FullName="System.Windows.Controls.Primitives.CustomPopupPlacementCallback">
+  <TypeSignature Language="C#" Value="public delegate System.Windows.Controls.Primitives.CustomPopupPlacement[] CustomPopupPlacementCallback(Size popupSize, Size targetSize, Point offset);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CustomPopupPlacementCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.CustomPopupPlacementCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="popupSize" Type="System.Windows.Size" />
+    <Parameter Name="targetSize" Type="System.Windows.Size" />
+    <Parameter Name="offset" Type="System.Windows.Point" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Windows.Controls.Primitives.CustomPopupPlacement[]</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="popupSize">O <see cref="T:System.Windows.Size" /> do controle <see cref="T:System.Windows.Controls.Primitives.Popup" />.</param>
+    <param name="targetSize">O <see cref="T:System.Windows.Size" /> do <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />.</param>
+    <param name="offset">O <see cref="T:System.Windows.Point" /> computado dos valores de propriedade <see cref="P:System.Windows.Controls.Primitives.Popup.HorizontalOffset" /> e <see cref="P:System.Windows.Controls.Primitives.Popup.VerticalOffset" />.</param>
+    <summary>Representa um método que fornece o posicionamento personalizado de um controle <see cref="T:System.Windows.Controls.Primitives.Popup" />.</summary>
+    <returns>Uma matriz de possíveis posições de <see cref="T:System.Windows.Controls.Primitives.CustomPopupPlacement" /> para o controle <see cref="T:System.Windows.Controls.Primitives.Popup" /> com relação ao <see cref="P:System.Windows.Controls.Primitives.Popup.PlacementTarget" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o pop-up for exibido, um ponto é escolhido que maximiza a quantidade do <xref:System.Windows.Controls.ToolTip> janela está visível. O <xref:System.Windows.Controls.ContextMenu>, <xref:System.Windows.Controls.Primitives.Popup> e <xref:System.Windows.Controls.ToolTip> classes cada definem uma propriedade do tipo <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

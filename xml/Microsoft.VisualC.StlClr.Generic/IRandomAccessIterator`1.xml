@@ -1,0 +1,91 @@
+<Type Name="IRandomAccessIterator&lt;TValue&gt;" FullName="Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator&lt;TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IRandomAccessIterator&lt;TValue&gt; : Microsoft.VisualC.StlClr.Generic.IBidirectionalIterator&lt;TValue&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IRandomAccessIterator`1&lt;TValue&gt; implements class Microsoft.VisualC.StlClr.Generic.IBidirectionalIterator`1&lt;!TValue&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator`1" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.VisualC.StlClr.Generic.IBidirectionalIterator&lt;TValue&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TValue">[!INCLUDE[cpp_iter_arg](~/includes/cpp-iter-arg-md.md)]</typeparam>
+    <summary>Define a interface para um iterador de acesso aleatório. Iteradores de acesso aleatório suportam as seguintes operações: mover uma posição forward chamando <c>operador + +</c>, movendo uma posição para trás chamando <c>operator--</c>, acessar um elemento usando <c>operador []</c>e acessar um elemento usando a aritmética de ponteiro.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="distance">
+      <MemberSignature Language="C#" Value="public int distance (Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator&lt;TValue&gt; _Right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 distance(class Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator`1&lt;!TValue&gt; _Right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator`1.distance(Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Right" Type="Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="_Right">Um iterador válido que aponta para o mesmo contêiner que o iterador atual.</param>
+        <summary>Determina a distância entre o elemento que aponta para o iterador atual e o elemento que aponta para o iterador determinado.</summary>
+        <returns>A distância, em número de elementos entre o elemento que aponta para o iterador atual e o elemento que <paramref name="_Right" /> está apontando. Esse número for negativo se <paramref name="_Right" /> aponta para um elemento que está antes do elemento que o iterador atual aponta para.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="less_than">
+      <MemberSignature Language="C#" Value="public bool less_than (Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator&lt;TValue&gt; _Right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool less_than(class Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator`1&lt;!TValue&gt; _Right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator`1.less_than(Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Right" Type="Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator&lt;TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="_Right">Um iterador válido que aponta para o mesmo contêiner que o iterador atual.</param>
+        <summary>Determina se o iterador atual está apontando para um elemento no contêiner que precede o elemento que o iterador determinado aponta para.</summary>
+        <returns>
+          <see langword="true" />Se o iterador atual está apontando para um elemento que vem antes do elemento que <paramref name="_Right" /> está apontando para; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="move">
+      <MemberSignature Language="C#" Value="public int move (int _Offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 move(int32 _Offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.Generic.IRandomAccessIterator`1.move(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="_Offset">O número de elementos para atravessar. Para continuar o iterador, especifique um número positivo. Para mover o iterador com versões anteriores, use um número negativo.</param>
+        <summary>Move o iterador pelo número especificado de elementos.</summary>
+        <returns>O número real de elementos percorridos. Esse número será diferente de <paramref name="_Offset" /> se o início ou fim do contêiner for atingido antes da iteração o número desejado de elementos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

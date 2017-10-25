@@ -1,0 +1,123 @@
+<Type Name="SoapFaultSubCode" FullName="System.Web.Services.Protocols.SoapFaultSubCode">
+  <TypeSignature Language="C#" Value="public class SoapFaultSubCode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SoapFaultSubCode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapFaultSubCode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o conteúdo do opcional <see langword="Subcode" /> elemento de uma falha SOAP ao SOAP versão 1.2 é usado para comunicação entre um cliente e um serviço Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma falha de SOAP 1.2 contém um `Code` elemento e, dentre outras coisas um opcional `Subcode` elemento. O `Code` elemento Especifica o tipo de erro que ocorreu usando um número limitado de códigos de erro predefinidos especificado pelo protocolo SOAP, enquanto o `Subcode` elemento permite que o remetente da falha de SOAP fornecer um código de erro específico do aplicativo. Essa classe representa o conteúdo do `Subcode` elemento.  
+  
+ Os XML Web services retornam uma falha de SOAP, lançando um <xref:System.Web.Services.Protocols.SoapException>, e os clientes do .NET recebem uma falha de SOAP capturando um <xref:System.Web.Services.Protocols.SoapException>. Um <xref:System.Web.Services.Protocols.SoapException> tem um <xref:System.Web.Services.Protocols.SoapException.Code%2A> propriedade que representa o `Code` elemento e um <xref:System.Web.Services.Protocols.SoapException.SubCode%2A> propriedade que representa o `Subcode` elemento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapFaultSubCode (System.Xml.XmlQualifiedName code);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlQualifiedName code) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapFaultSubCode.#ctor(System.Xml.XmlQualifiedName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> especificando o código de erro específico do aplicativo. Define a propriedade <see cref="P:System.Web.Services.Protocols.SoapFaultSubCode.Code" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapFaultSubCode" /> classe e define o código de erro específico do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapFaultSubCode (System.Xml.XmlQualifiedName code, System.Web.Services.Protocols.SoapFaultSubCode subcode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlQualifiedName code, class System.Web.Services.Protocols.SoapFaultSubCode subcode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapFaultSubCode.#ctor(System.Xml.XmlQualifiedName,System.Web.Services.Protocols.SoapFaultSubCode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="code" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="subCode" Type="System.Web.Services.Protocols.SoapFaultSubCode" />
+      </Parameters>
+      <Docs>
+        <param name="code">Um <see cref="T:System.Xml.XmlQualifiedName" /> especificando o código de erro específico do aplicativo. Define a propriedade <see cref="P:System.Web.Services.Protocols.SoapFaultSubCode.Code" />.</param>
+        <param name="subcode">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Protocols.SoapFaultSubCode" /> classe definindo o código de erro específico do aplicativo e as informações de erro adicionais.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Code" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapFaultSubCode.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de erro específico do aplicativo na forma de um nome qualificado XML.</summary>
+        <value>Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa o código de erro específico do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um construtor para definir o <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A> propriedade.  
+  
+ O valor da <xref:System.Web.Services.Protocols.SoapFaultSubCode.Code%2A> propriedade pode ser qualquer definida pelo usuário nome qualificado de XML, incluindo os códigos representados pelo <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcProcedureNotPresentFaultCode?displayProperty=nameWithType>, <xref:System.Web.Services.Protocols.Soap12FaultCodes.RpcBadArgumentsFaultCode?displayProperty=nameWithType>, <xref:System.Web.Services.Protocols.Soap12FaultCodes.EncodingMissingIdFaultCode?displayProperty=nameWithType>, e <xref:System.Web.Services.Protocols.Soap12FaultCodes.EncodingUntypedValueFaultCode?displayProperty=nameWithType> campos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubCode">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapFaultSubCode SubCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.SoapFaultSubCode SubCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapFaultSubCode.SubCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapFaultSubCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações de erro adicionais contidas em um elemento <see langword="Subcode" /> filho.</summary>
+        <value>Um <see cref="T:System.Web.Services.Protocols.SoapFaultSubCode" /> que contém informações de erro adicionais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um construtor para definir o <xref:System.Web.Services.Protocols.SoapFaultSubCode.SubCode%2A> propriedade. O <xref:System.Web.Services.Protocols.SoapFaultSubCode.SubCode%2A> propriedade permite que um serviço Web XML fornecer informações de erro aninhado. Isso é útil para fornecer um código de erro específico do serviço Web XML ao passar ao longo de informações de erro retornado de componentes do serviço Web XML chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

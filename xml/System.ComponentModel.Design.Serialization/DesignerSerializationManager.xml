@@ -1,0 +1,957 @@
+<Type Name="DesignerSerializationManager" FullName="System.ComponentModel.Design.Serialization.DesignerSerializationManager">
+  <TypeSignature Language="C#" Value="public class DesignerSerializationManager : IServiceProvider, System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerSerializationManager extends System.Object implements class System.ComponentModel.Design.Serialization.IDesignerSerializationManager, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.DesignerSerializationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.Serialization.IDesignerSerializationManager</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma implementação da interface <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationManager" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager> interface é projetada para ser uma interface independente de formato para um objeto que controla a serialização. Essencialmente, ele fornece contexto e serviços para serializadores, o que realmente executam a desserialização. <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager>auxilia no processo de desserialização, controlando de objetos. Isso é semelhante a técnica para o <xref:System.ComponentModel.Design.IDesignerHost> interface: designers, na verdade, fornecem a interface do usuário (IU), e <xref:System.ComponentModel.Design.IDesignerHost> fornece a liga que permite que os designers diferentes trabalhar juntos.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager> classe implementa <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager>. Ele é projetado para fornecer um formulário genérico de desserialização é semelhante a serializadores de tempo de execução como o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager> classe atinge três objetivos:  
+  
+-   É um objeto simple, completo, que pode ser usado para desserializar uma variedade de formatos.  
+  
+-   É genérico e não associado a qualquer formato específico. Ele pode ser usado igualmente para desserialização de CodeDOM, bem como a desserialização de marcação.  
+  
+-   Ele é extensível e oferece suporte a métodos de serialização diferentes que são usados em cenários de copiar/colar e desfazer/refazer.  
+  
+ Serialização de tempo de design tem as seguintes diferenças de serialização do objeto de tempo de execução:  
+  
+-   O objeto que realiza a serialização é geralmente separado do objeto de tempo de execução, para que a lógica de tempo de design pode ser removida de um componente.  
+  
+-   O esquema de serialização pressupõe que o objeto será criado completamente inicializado e, em seguida, modificadas por meio de chamadas de método e propriedade durante a desserialização.  
+  
+-   Propriedades de um objeto que têm valores que nunca foram definidos no objeto (as propriedades contêm os valores padrão) não são serializadas. Por outro lado, o fluxo de desserialização pode ter falhas.  
+  
+-   A qualidade do conteúdo dentro do fluxo de serialização, em vez da serialização completa de um objeto é dada ênfase. Isso significa que, se não houver nenhuma forma definida para serializar um objeto, esse objeto pode ser ignorado em vez de gerar uma exceção. O mecanismo de serialização pode fornecer a heurística para decidir qual falhas podem ser ignoradas e quais são irrecuperável.  
+  
+-   O fluxo de serialização pode ter mais dados do que é necessário para desserialização. Serialização de código fonte, por exemplo, tem misturado com o código necessário para desserializar um gráfico de objeto de código do usuário. Esse código de usuário deve ser ignorado na desserialização e preservado na serialização.  
+  
+ Devido a essas diferenças, um modelo de serialização diferentes se aplica a serialização de tempo de design. Esse modelo utiliza um objeto serializador separado para cada tipo de dados que está sendo serializado. Cada serializador fornece sua contribuição pequena para o problema como um todo. Esses serializadores estejam todos coordenados por meio de um Gerenciador de serialização comum. O Gerenciador de serialização é responsável por manter o estado entre esses serializadores diferentes. Por exemplo, considere a seguinte classe:  
+  
+ [!code-csharp[System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject/CS/Program.cs#2)]
+ [!code-vb[System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject/VB/Program.vb#2)]  
+  
+ Uma instância dessa classe utilizaria três serializadores diferentes: uma para `SampleObject`, um para cadeias de caracteres e outro para números inteiros. O serializador para `SampleObject` é chamado o serializador raiz porque `SampleObject` é a raiz do gráfico de serialização. Gráficos de objeto mais complexos podem ser criados também. Por exemplo, considere o que aconteceria se `SampleObject` foram alterados da seguinte maneira:  
+  
+ [!code-csharp[System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject/CS/SampleObject.cs#11)]
+ [!code-vb[System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject/VB/SampleObject.vb#11)]  
+  
+ Isso permite que `SampleObject` ter um filho que é outra instância de si mesma. O gráfico de objeto preenche o código a seguir:  
+  
+ [!code-csharp[System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject/CS/SampleObject.cs#12)]
+ [!code-vb[System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.Serialization.DesignerSerializationManager.SampleObject/VB/SampleObject.vb#12)]  
+  
+ Quando `root` é serializado, haverá quatro serializadores usados: o serializador de uma raiz, um serializador para o filho `SampleObject`, um serializador para `int`e um serializador para `string`. Serializadores são armazenados em cache com base no tipo, portanto, não há necessidade de criar um serializador para cada instância do `SampleObject`.  
+  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager> classe baseia-se a ideia de uma sessão de serialização. Uma sessão mantém o estado que pode ser acessado pelos serializadores vários. Quando uma sessão é descartada, esse estado é destruído. Isso ajuda a garantir que serializadores permanecem em grande parte sem monitoração de estado, e ajuda a limpar os serializadores que estão corrompida. As tabelas a seguir descrevem como o estado é gerenciado no e entre as sessões.  
+  
+## <a name="global-state"></a>Estado global  
+ Esse estado é de propriedade do objeto do Gerenciador de serialização, mas é independente da sessão atual de serialização.  
+  
+|Objeto|Uso|  
+|------------|-----------|  
+|Provedores de serialização|Objetos podem adicionar a mesmos como provedores de serialização personalizada. Como esses provedores são usados para localizar os serializadores, eles sobreviver além de uma sessão de serialização.|  
+  
+## <a name="session-owned-state"></a>Estado de sessão de propriedade  
+ Esse estado é de propriedade de uma sessão e é destruído quando uma sessão é destruída. Consequentemente, acessar quaisquer propriedades ou métodos que poderiam manipular esse estado lançará uma exceção se o Gerenciador de serialização não estiver em uma sessão ativa.  
+  
+|Objeto|Uso|  
+|------------|-----------|  
+|Evento <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ResolveName>|O <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ResolveName> evento está conectado por um serializador para fornecer a resolução de nomes adicional. Todos os manipuladores são desanexados desse evento quando uma sessão termina.|  
+|Evento <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SerializationComplete>|O <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SerializationComplete> é gerado antes de uma sessão é descartada. Em seguida, todos os manipuladores são desanexados desse evento.|  
+|Tabela de nomes|O Gerenciador de serialização mantém uma tabela que mapeia entre objetos e seus nomes. Serializadores podem resultar em nomes de objetos para facilitar sua identificação. Esta tabela de nome é apagada quando o término da sessão.|  
+|Cache do serializador|O Gerenciador de serialização mantém um cache de serializadores que foi solicitado a fornecer. Esse cache é limpo quando a sessão termina. O público <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetSerializer%2A> método pode ser chamado com segurança a qualquer momento, mas seu valor é armazenado em cache somente se ele é chamado de dentro de uma sessão.|  
+|Pilha de contexto|O Gerenciador de serialização mantém um objeto chamado a pilha de contexto, você pode acessar com o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context%2A> propriedade. Serializadores podem usar esta pilha para armazenar informações adicionais que estão disponíveis para outros serializadores. Por exemplo, um serializador que é serializar um valor de propriedade pode enviar por push o nome da propriedade na pilha de serialização antes de solicitar o valor para serializar. Esta pilha é limpo quando a sessão é encerrada.|  
+|Lista de erros|O Gerenciador de serialização mantém uma lista de erros que ocorreram durante a serialização. Essa lista, que é acessada por meio de <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.Errors%2A> propriedade, será apagada quando a sessão é encerrada. Acessando o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.Errors%2A> propriedade entre sessões resultará em uma exceção.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerSerializationManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializationManager" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.PreserveNames%2A> e <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes%2A> propriedades `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerSerializationManager (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um <see cref="T:System.IServiceProvider" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializationManager" /> classe com o provedor de serviço em questão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um serializador de solicitações de serviços que não podem ser atendidos pelo Gerenciador de serialização, a implementação padrão encaminhar essas solicitações para o `provider` parâmetro.  
+  
+ Esse construtor define o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.PreserveNames%2A> e <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes%2A> propriedades `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="provider" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Container">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IContainer Container { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IContainer Container" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contêiner para este Gerenciador de serialização.</summary>
+        <value>O <see cref="T:System.ComponentModel.IContainer" /> à qual o Gerenciador de serialização adicionará componentes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se existe um contêiner, todos os componentes que são criados pelo Gerenciador de serialização serão adicionados ao contêiner. A implementação padrão dessa propriedade pesquisará o provedor de serviços para um <xref:System.ComponentModel.Design.IDesignerHost> e usar o contêiner fornecido pelo host do designer, um existe. Caso contrário, essa propriedade retornará `null` e componentes não serão adicionados a um contêiner.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O Gerenciador de serialização tem uma sessão de serialização ativa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected virtual object CreateInstance (Type type, System.Collections.ICollection arguments, string name, bool addToContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object CreateInstance(class System.Type type, class System.Collections.ICollection arguments, string name, bool addToContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="arguments" Type="System.Collections.ICollection" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="addToContainer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para criar uma instância do.</param>
+        <param name="arguments">Os parâmetros do construtor do tipo. Isso pode ser <see langword="null" /> ou uma coleção vazia para chamar o construtor padrão.</param>
+        <param name="name">Um nome para dar ao objeto. Se <see langword="null" />, o objeto não terá um nome, a menos que o objeto é adicionado a um contêiner e o contêiner fornece o objeto de um nome.</param>
+        <param name="addToContainer">
+          <see langword="true" />Para adicionar o objeto para o contêiner, se o objeto implementa <see cref="T:System.ComponentModel.IComponent" />; caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma instância de um tipo.</summary>
+        <returns>Uma nova instância do tipo especificado pelo <paramref name="type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado pelo serializadores quando tentam criar uma instância de um tipo. A implementação padrão cria uma nova instância do tipo, ou pode retornar uma instância existente, dependendo dos valores da <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.PreserveNames%2A> e <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances%2A> propriedades. O <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance%2A> método usa reflexão para criar instâncias e executará alguns genérico <xref:System.IConvertible> transformações em parâmetros para localizar um construtor correspondente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">
+          <paramref name="type" />não tem um construtor que aceite parâmetros na <paramref name="arguments" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSession">
+      <MemberSignature Language="C#" Value="public IDisposable CreateSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IDisposable CreateSession() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateSession" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova sessão de serialização.</summary>
+        <returns>Um <see cref="T:System.IDisposable" /> que representa uma nova sessão de serialização.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria dos dados dentro do Gerenciador de serialização é transitórios e existe somente durante a vida útil de uma sessão de serialização. Quando uma sessão é descartada, serialização é considerada concluída e estado transiente está desmarcado. Isso permite que uma única instância de um Gerenciador de serialização a ser usado para serializar várias árvores de objeto. Alguns estados, incluindo o provedor de serviços e quaisquer provedores de serialização personalizada que foram adicionados ao Gerenciador de serialização, abrangem as sessões.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O Gerenciador de serialização é já dentro de uma sessão. Esta versão do <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializationManager" /> não oferece suporte a sessões simultâneas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Collections.IList Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList Errors" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de erros que ocorreram durante a serialização ou desserialização.</summary>
+        <value>A lista de erros que ocorreram durante a serialização ou desserialização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você somente pode ler a lista de erros durante uma sessão de serialização ativa.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi acessada fora de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeType">
+      <MemberSignature Language="C#" Value="public Type GetRuntimeType (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Type GetRuntimeType(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetRuntimeType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo a ser obtido.</param>
+        <summary>Obtém o tipo correspondente ao nome do tipo especificado.</summary>
+        <returns>O tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSerializer">
+      <MemberSignature Language="C#" Value="public object GetSerializer (Type objectType, Type serializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetSerializer(class System.Type objectType, class System.Type serializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetSerializer(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="serializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">O tipo de objeto para o qual recuperar o serializador.</param>
+        <param name="serializerType">O tipo de serializador a recuperar.</param>
+        <summary>Obtém o serializador para o tipo de objeto em questão.</summary>
+        <returns>O serializador para <paramref name="objectType" />, ou <see langword="null" />, se não encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode solicitar o tipo de serializador desejado. Este método retorna `null` se não houver nenhum serializador do tipo solicitado para o tipo de objeto especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="objectType" /> ou <paramref name="serializerType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected virtual object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço a ser recuperado.</param>
+        <summary>Obtém o serviço solicitado.</summary>
+        <returns>O serviço solicitado, ou <see langword="null" /> se o serviço não pode ser resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetService%2A> método fornece acesso ao contêiner subjacente ou provedor de serviço que foi definida no construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="protected virtual Type GetType (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type GetType(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo para recuperar.</param>
+        <summary>Obtém o tipo solicitado.</summary>
+        <returns>O tipo solicitado, ou <see langword="null" /> se o tipo não pode ser resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetType%2A> método pesquisará o provedor de serviços para um <xref:System.ComponentModel.Design.ITypeResolutionService> e, se disponível, ele delegará a esse serviço para resolver o tipo. Se um <xref:System.ComponentModel.Design.ITypeResolutionService> não estiver disponível, <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetType%2A> chamará o <xref:System.Object.GetType%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResolveName">
+      <MemberSignature Language="C#" Value="protected virtual void OnResolveName (System.ComponentModel.Design.Serialization.ResolveNameEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnResolveName(class System.ComponentModel.Design.Serialization.ResolveNameEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnResolveName(System.ComponentModel.Design.Serialization.ResolveNameEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.Serialization.ResolveNameEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.Serialization.ResolveNameEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ResolveName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnResolveName%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnResolveName(System.ComponentModel.Design.Serialization.ResolveNameEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnResolveName(System.ComponentModel.Design.Serialization.ResolveNameEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSessionCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnSessionCreated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSessionCreated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionCreated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Design.Serialization.DesignerSerializationManager.SessionCreated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionCreated%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionCreated(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionCreated(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSessionDisposed">
+      <MemberSignature Language="C#" Value="protected virtual void OnSessionDisposed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSessionDisposed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionDisposed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Design.Serialization.DesignerSerializationManager.SessionDisposed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionDisposed%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionDisposed(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.OnSessionDisposed(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreserveNames">
+      <MemberSignature Language="C#" Value="public bool PreserveNames { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreserveNames" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.PreserveNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> método deve verificar a presença do nome fornecido no contêiner.</summary>
+        <value>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> passará o nome do componente especificado; <see langword="false" /> se <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> verifica a presença do nome fornecido no contêiner. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.PreserveNames%2A> propriedade determina o comportamento do <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> método. Se `true`, <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> passará o nome do componente especificado. Se `false`, <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> verifica a presença do nome fornecido no contêiner. Se o nome não existe no contêiner, <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> usará o nome fornecido. Se o nome existe no contêiner, <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> passará um valor nulo como o nome de um componente ao adicioná-lo para o contêiner, assim, dando a ele um novo nome. Essa segunda é útil para implementar um serializador que duplica sempre objetos, em vez de supondo que esses objetos não existem. Colar comandos geralmente usam esse tipo de serializador.  
+  
+ Você só pode alterar essa propriedade quando você não estiver em uma sessão de serialização.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi alterada de dentro de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyProvider">
+      <MemberSignature Language="C#" Value="public object PropertyProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object PropertyProvider" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.PropertyProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que deve ser usado para fornecer as propriedades para o Gerenciador de serialização <see cref="P:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties" /> propriedade.</summary>
+        <value>O objeto que deve ser usado para fornecer as propriedades para o Gerenciador de serialização <see cref="P:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.PropertyProvider%2A> propriedade fornece uma maneira de dar o Gerenciador de serialização de um conjunto de propriedades de serialização que serializadores podem usar para configurar seu comportamento.  
+  
+ As propriedades públicas do objeto serão inspecionadas e encapsuladas em novos descritores de propriedade que tem um objeto de destino do Gerenciador de serialização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecycleInstances">
+      <MemberSignature Language="C#" Value="public bool RecycleInstances { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RecycleInstances" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> sempre criará uma nova instância de um tipo.</summary>
+        <value>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> retornará a instância existente; <see langword="false" /> se <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> criará uma nova instância de um tipo. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances%2A> é de propriedade `false`, o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> método sempre criará uma nova instância de um tipo. Se <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances%2A> é `true`, <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> pesquisará primeiro a tabela de nome e o contêiner para um objeto do mesmo nome. Se tal objeto exista e seja do mesmo tipo, <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> retornará a instância existente. Essa segunda é útil para implementar um serializador que aplica o estado de serialização para um conjunto de objetos existentes, em vez de criar sempre uma nova árvore. O **desfazer** comando geralmente usa esse tipo de serializador.  
+  
+ No caso em que o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances%2A> é de propriedade `true`, o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes%2A> propriedade mais irá modificar o comportamento de <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> dependendo dos tipos de dois objetos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O Gerenciador de serialização tem uma sessão de serialização ativa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler SessionCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SessionCreated" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.Serialization.DesignerSerializationManager.SessionCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma sessão é criada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionDisposed">
+      <MemberSignature Language="C#" Value="public event EventHandler SessionDisposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SessionDisposed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.Serialization.DesignerSerializationManager.SessionDisposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma sessão é descartada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider">
+      <MemberSignature Language="C#" Value="void IDesignerSerializationManager.AddSerializationProvider (System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.Serialization.IDesignerSerializationManager.AddSerializationProvider(class System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#AddSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O provedor de serialização para adicionar.</param>
+        <summary>Adiciona um provedor de serialização personalizada para o Gerenciador de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.GetSerializer%2A> método é usado para solicitar um provedor de serialização, o Gerenciador de serialização consulta os provedores de serialização personalizada primeiro antes procurando nos metadados do tipo de serializador adequado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context">
+      <MemberSignature Language="C#" Value="System.ComponentModel.Design.Serialization.ContextStack System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.Serialization.ContextStack System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Context" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Serialization.ContextStack</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a pilha de contexto para esta sessão de serialização.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.Serialization.ContextStack" /> que armazena dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pilha de contexto fornece uma área de armazenamento definida pelo usuário, implementada como uma pilha. Essa área de armazenamento é uma maneira útil para fornecer comunicação entre serializadores, como a serialização é um processo geralmente hierárquico.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi acessada fora de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance">
+      <MemberSignature Language="C#" Value="object IDesignerSerializationManager.CreateInstance (Type type, System.Collections.ICollection arguments, string name, bool addToContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance(class System.Type type, class System.Collections.ICollection arguments, string name, bool addToContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="arguments" Type="System.Collections.ICollection" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="addToContainer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de dados para criar.</param>
+        <param name="arguments">Os argumentos para passar para o construtor para este tipo.</param>
+        <param name="name">O nome do objeto. Esse nome pode ser usado para acessar o objeto mais tarde por meio <see cref="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(System.String)" />. Se <see langword="null" /> for passado, o objeto ainda será criado, mas não pode ser acessado pelo nome.</param>
+        <param name="addToContainer">
+          <see langword="true" />Para adicionar esse objeto para o contêiner de design. O objeto deve implementar <see cref="T:System.ComponentModel.IComponent" /> para que isso tenha efeito.</param>
+        <summary>Implementa o <see cref="M:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> método.</summary>
+        <returns>A instância do objeto recém-criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance">
+      <MemberSignature Language="C#" Value="object IDesignerSerializationManager.GetInstance (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetInstance(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#GetInstance(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto a ser recuperada.</param>
+        <summary>Recupera uma instância de um objeto criado do nome especificado.</summary>
+        <returns>Uma instância do objeto com o nome fornecido, ou <see langword="null" /> se nenhum objeto com esse nome pode ser encontrado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi acessada fora de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetName">
+      <MemberSignature Language="C#" Value="string IDesignerSerializationManager.GetName (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetName(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#GetName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para o qual recuperar o nome.</param>
+        <summary>Recupera um nome para o objeto especificado.</summary>
+        <returns>O nome do objeto, ou <see langword="null" /> se o objeto for sem nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System%23ComponentModel%23Design%23Serialization%23IDesignerSerializationManager%23GetName%2A> método não é possível localizar um nome correspondente para o `value` parâmetro, ele gera o <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ResolveName> evento antes de retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi acessada fora de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer">
+      <MemberSignature Language="C#" Value="object IDesignerSerializationManager.GetSerializer (Type objectType, Type serializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetSerializer(class System.Type objectType, class System.Type serializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#GetSerializer(System.Type,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+        <Parameter Name="serializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">O tipo do objeto para obter o serializador para.</param>
+        <param name="serializerType">O tipo de serializador para recuperar.</param>
+        <summary>Obtém um serializador do tipo solicitado para o tipo de objeto especificado.</summary>
+        <returns>Uma instância do serializador solicitado, ou <see langword="null" /> se nenhum serializador adequado pode ser localizado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetType">
+      <MemberSignature Language="C#" Value="Type IDesignerSerializationManager.GetType (string typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.ComponentModel.Design.Serialization.IDesignerSerializationManager.GetType(string typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#GetType(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome totalmente qualificado do tipo de carga.</param>
+        <summary>Obtém um tipo do nome especificado.</summary>
+        <returns>Uma instância do tipo, ou <see langword="null" /> se o tipo não pode ser carregado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi acessada fora de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties">
+      <MemberSignature Language="C#" Value="System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptorCollection System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementa o <see cref="P:System.ComponentModel.Design.Serialization.IDesignerSerializationManager.Properties" /> propriedade.</summary>
+        <value>Um <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que contém as propriedades a serem serializados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.RemoveSerializationProvider">
+      <MemberSignature Language="C#" Value="void IDesignerSerializationManager.RemoveSerializationProvider (System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.Serialization.IDesignerSerializationManager.RemoveSerializationProvider(class System.ComponentModel.Design.Serialization.IDesignerSerializationProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#RemoveSerializationProvider(System.ComponentModel.Design.Serialization.IDesignerSerializationProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">O <see cref="T:System.ComponentModel.Design.Serialization.IDesignerSerializationProvider" /> a ser removido.</param>
+        <summary>Remove um provedor de serialização adicionado anteriormente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System%23ComponentModel%23Design%23Serialization%23IDesignerSerializationManager%23RemoveSerializationProvider%2A> método Remove um provedor de serialização personalizada que foi adicionado anteriormente por uma chamada para o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System%23ComponentModel%23Design%23Serialization%23IDesignerSerializationManager%23AddSerializationProvider%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ReportError">
+      <MemberSignature Language="C#" Value="void IDesignerSerializationManager.ReportError (object errorInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.Serialization.IDesignerSerializationManager.ReportError(object errorInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#ReportError(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorInformation" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="errorInformation">Um objeto que contém as informações de erro, geralmente do tipo <see cref="T:System.String" /> ou <see cref="T:System.Exception" />.</param>
+        <summary>Usado para relatar um erro recuperável na serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serializadores podem ser escritos para manipular erros recuperáveis normalmente chamando o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System%23ComponentModel%23Design%23Serialization%23IDesignerSerializationManager%23ReportError%2A> método com as informações de erro. O Gerenciador de serialização pode oferecer suporte a uma lista de erros de emissão de relatórios depois que ela é concluída, ou pode lançar uma exceção desse método e anular o processo de serialização. O serializador deve continuar depois de chamar essa função.  
+  
+ <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System%23ComponentModel%23Design%23Serialization%23IDesignerSerializationManager%23ReportError%2A>Adiciona o `errorInformation` parâmetro para o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.Errors%2A> coleção. Se `errorInformation` é `null`, nenhuma ação será tomada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi acessada fora de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SetName">
+      <MemberSignature Language="C#" Value="void IDesignerSerializationManager.SetName (object instance, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.Design.Serialization.IDesignerSerializationManager.SetName(object instance, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#ComponentModel#Design#Serialization#IDesignerSerializationManager#SetName(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instance">O objeto para definir o nome.</param>
+        <param name="name">Um <see cref="T:System.String" /> usado como o nome do objeto.</param>
+        <summary>Define o nome do objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System%23ComponentModel%23Design%23Serialization%23IDesignerSerializationManager%23SetName%2A> método fornece uma maneira de definir o nome de um objeto existente. Isso permite a criação de uma instância do objeto por meio de uma chamada para o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System%23ComponentModel%23Design%23Serialization%23IDesignerSerializationManager%23GetInstance%2A> método, evitando a sobrecarga do <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou ambos os parâmetros são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O objeto especificado por instância já tem um nome, ou <paramref name="name" /> já está em uso por outro objeto nomeado.</exception>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade foi acessada fora de uma sessão de serialização.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IServiceProvider.GetService">
+      <MemberSignature Language="C#" Value="object IServiceProvider.GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IServiceProvider.GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.System#IServiceProvider#GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Um objeto que especifica o tipo de objeto de serviço a ser obtido.</param>
+        <summary>Para obter uma descrição desse membro, consulte o método <see cref="M:System.IServiceProvider.GetService(System.Type)" />.</summary>
+        <returns>Um objeto de serviço do tipo <paramref name="serviceType" />.  
+  
+ -ou-  
+  
+ <see langword="null" /> se não houver nenhum objeto de serviço do tipo <paramref name="serviceType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager> é convertida em uma interface de <xref:System.IServiceProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateRecycledTypes">
+      <MemberSignature Language="C#" Value="public bool ValidateRecycledTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateRecycledTypes" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se o <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> método vai verificar que a correspondência de nomes referem-se para o mesmo tipo.</summary>
+        <value>
+          <see langword="true" />Se <see cref="M:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance(System.Type,System.Collections.ICollection,System.String,System.Boolean)" /> verifica tipos; caso contrário, <see langword="false" /> se não existir. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes%2A> propriedade modifica o comportamento do <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.CreateInstance%2A> método quando o <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.RecycleInstances%2A> é de propriedade `true`, conforme detalhado na tabela a seguir.  
+  
+|`RecycleInstances`|`ValidateRecycledTypes`|Comportamento de`CreateInstance`|  
+|------------------------|-----------------------------|----------------------------------|  
+|`false`|`true` ou `false`|Sempre crie uma nova instância do tipo especificado|  
+|`true`|`false`|Se uma instância correspondente for encontrada, que será retornado, independentemente de seu tipo.|  
+|`true`|`true`|Se uma instância correspondente for encontrada, ele é retornado somente se seu tipo for a mesma especificada na chamada do método.|  
+  
+ <xref:System.ComponentModel.Design.Serialization.DesignerSerializationManager.ValidateRecycledTypes%2A>é útil para metamorfose um tipo de objeto para outro se eles têm propriedades semelhantes, mas não compartilham nenhum pai comum ou interface.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O Gerenciador de serialização tem uma sessão de serialização ativa.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

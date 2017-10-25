@@ -1,0 +1,684 @@
+<Type Name="PipeSecurity" FullName="System.IO.Pipes.PipeSecurity">
+  <TypeSignature Language="C#" Value="public class PipeSecurity : System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PipeSecurity extends System.Security.AccessControl.NativeObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Pipes.PipeSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.NativeObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o controle de acesso e a segurança de auditoria de um pipe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity> classe especifica os direitos de acesso para um pipe e como as tentativas de acesso são auditadas.  Essa classe representa os direitos de acesso e auditoria como um conjunto de regras. Cada regra de acesso é representada por um <xref:System.IO.Pipes.PipeAccessRule> do objeto, enquanto cada regra de auditoria é representada por um <xref:System.IO.Pipes.PipeAuditRule> objeto.  
+  
+ O <xref:System.IO.Pipes.PipeSecurity> classe é uma abstração do sistema de segurança de arquivo do Microsoft Windows subjacente. Nesse sistema, cada conexão tem uma lista de controle de acesso discricionário (DACL) que controla o acesso ao pipe e uma lista de controle de acesso sistema (SACL), que especifica as tentativas de controle de acesso são auditadas.  O <xref:System.IO.Pipes.PipeAccessRule> e <xref:System.IO.Pipes.PipeAuditRule> classes são abstrações das entradas de controle de acesso (ACEs) que compõem as DACLs e SACLs.  
+  
+ O <xref:System.IO.Pipes.PipeSecurity> classe oculta muitos dos detalhes de DACLs e SACLs; você não precisa se preocupar sobre ACE ordenação ou DACLS null.  
+  
+ Use o <xref:System.IO.Pipes.PipeSecurity> classe para recuperar, adicionar ou alterar as regras de acesso que representam a DACL e SACL de um pipe.  
+  
+ Para manter o acesso de novo ou alterado ou regras a um pipe de auditoria, use o <xref:System.IO.Pipes.PipeStream.SetAccessControl%2A> método. Para recuperar o acesso ou regras de um arquivo existente de auditoria, use o <xref:System.IO.Pipes.PipeStream.GetAccessControl%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PipeSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Pipes.PipeSecurity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria vazio <xref:System.IO.Pipes.PipeSecurity> objeto que não seja baseado em um pipe existente. Em seguida, você pode preencher o objeto com informações de controle de acesso e aplicá-la a um pipe.  
+  
+ Você pode adicionar acesso ou auditoria regras para o <xref:System.IO.Pipes.PipeSecurity> objeto usando o <xref:System.IO.Pipes.PipeSecurity.AddAccessRule%2A> método. Você pode remover o acesso ou auditoria regras usando o <xref:System.IO.Pipes.PipeSecurity.RemoveAccessRule%2A> método.  
+  
+ Para manter o acesso de novo ou alterado ou regras a um pipe de auditoria, use o <xref:System.IO.Pipes.PipeStream.SetAccessControl%2A> método. Para recuperar o acesso ou regras de um arquivo existente de auditoria, use o <xref:System.IO.Pipes.PipeStream.GetAccessControl%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRightType">
+      <MemberSignature Language="C#" Value="public override Type AccessRightType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRightType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeSecurity.AccessRightType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do objeto protegível que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <value>O tipo do objeto protegível que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Security.AccessControl.ObjectSecurity> classe substituição de <xref:System.Security.AccessControl.ObjectSecurity.AccessRightType%2A> propriedade e retornar o tipo que eles usam para representar os direitos de acesso. Quando você trabalha com matrizes ou coleções que contêm vários tipos de objetos de segurança, use essa propriedade para determinar o tipo de enumeração correto a ser usado com cada objeto de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleFactory">
+      <MemberSignature Language="C#" Value="public override System.Security.AccessControl.AccessRule AccessRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AccessRule AccessRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.AccessRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AccessRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">A identidade que a regra de acesso se aplica. Ele deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" /> objeto.</param>
+        <param name="accessMask">A máscara de acesso dessa regra. A máscara de acesso é uma coleção de 32 bits de bits anônimas, o significado dos quais é definido pelos integradores individuais</param>
+        <param name="isInherited">
+          <see langword="true" />Se essa regra é herdada de um contêiner pai; Caso contrário, false.</param>
+        <param name="inheritanceFlags">Uma da <see cref="T:System.Security.AccessControl.InheritanceFlags" /> valores que especifica as propriedades de herança da regra de acesso.</param>
+        <param name="propagationFlags">Uma da <see cref="T:System.Security.AccessControl.PropagationFlags" /> valores que especifica se as regras de acesso herdado são propagadas automaticamente. Os sinalizadores de propagação serão ignorados se <c>inheritanceFlags</c> é definido como <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</param>
+        <param name="type">Especifica o tipo de controle de acesso válido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.AccessRule" /> classe com os valores especificados.</summary>
+        <returns>O <see cref="T:System.Security.AccessControl.AccessRule" /> objeto criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maneira recomendada para criação de regras de controle de acesso é usar os construtores de <xref:System.IO.Pipes.PipeAccessRule> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="accessMask" />, <paramref name="inheritanceFlags" />, <paramref name="propagationFlags" />, ou <paramref name="type" /> Especifica um valor inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="identityReference" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="accessMask" /> é zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="identityReference" />não é nem do tipo <see cref="T:System.Security.Principal.SecurityIdentifier" /> nem de um tipo, como <see cref="T:System.Security.Principal.NTAccount" />, que pode ser convertido no tipo <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessRuleType">
+      <MemberSignature Language="C#" Value="public override Type AccessRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AccessRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeSecurity.AccessRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> do objeto que está associado com as regras de acesso do atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <value>O tipo do objeto que está associado com as regras de acesso do atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Security.AccessControl.ObjectSecurity> classe substituição de <xref:System.Security.AccessControl.ObjectSecurity.AccessRuleType%2A> propriedade e retornar o tipo que eles usam para representar os direitos de acesso. Quando você trabalha com matrizes ou coleções que contêm vários tipos de objetos de segurança, use essa propriedade para determinar o tipo de enumeração correto a ser usado com cada objeto de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccessRule">
+      <MemberSignature Language="C#" Value="public void AddAccessRule (System.IO.Pipes.PipeAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAccessRule(class System.IO.Pipes.PipeAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.AddAccessRule(System.IO.Pipes.PipeAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a adicionar.</param>
+        <summary>Adiciona uma regra de acesso para o acesso controle DACL (lista discricionário) associado atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.AddAccessRule%2A> método adiciona uma nova regra à lista de regras que um <xref:System.IO.Pipes.PipeSecurity> objeto contém. Se já existir uma lista de controle de acesso (ACL) para a regra especificada, o <xref:System.IO.Pipes.PipeSecurity.AddAccessRule%2A> método ainda irá adicionar a regra, com uma exceção: um <xref:System.IO.Pipes.PipeAccessRule> objeto que é criado usando o <xref:System.Security.AccessControl.AccessControlType.Deny> valor substitui um objeto que é criado usando o <xref:System.Security.AccessControl.AccessControlType.Allow> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuditRule">
+      <MemberSignature Language="C#" Value="public void AddAuditRule (System.IO.Pipes.PipeAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAuditRule(class System.IO.Pipes.PipeAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.AddAuditRule(System.IO.Pipes.PipeAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para adicionar.</param>
+        <summary>Adiciona uma regra de auditoria para o acesso controle lista SACL (sistema) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.AddAuditRule%2A> método adiciona uma nova regra de auditoria para a lista de regras que um <xref:System.IO.Pipes.PipeSecurity> objeto contém.  
+  
+ Se já existe uma regra de auditoria para a regra especificada, o <xref:System.IO.Pipes.PipeSecurity.AddAuditRule%2A> método ainda irá adicionar a regra.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleFactory">
+      <MemberSignature Language="C#" Value="public override sealed System.Security.AccessControl.AuditRule AuditRuleFactory (System.Security.Principal.IdentityReference identityReference, int accessMask, bool isInherited, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AuditFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.AccessControl.AuditRule AuditRuleFactory(class System.Security.Principal.IdentityReference identityReference, int32 accessMask, bool isInherited, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AuditFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.AuditRuleFactory(System.Security.Principal.IdentityReference,System.Int32,System.Boolean,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AuditFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuditRule</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identityReference" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="accessMask" Type="System.Int32" />
+        <Parameter Name="isInherited" Type="System.Boolean" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="flags" Type="System.Security.AccessControl.AuditFlags" />
+      </Parameters>
+      <Docs>
+        <param name="identityReference">A identidade que a regra de acesso se aplica. Ele deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" /> objeto.</param>
+        <param name="accessMask">A máscara de acesso dessa regra. A máscara de acesso é uma coleção de 32 bits de bits anônimas, o significado dos quais é definido pelos integradores individuais</param>
+        <param name="isInherited">
+          <see langword="true" />Se essa regra é herdada de um contêiner pai; Caso contrário, false.</param>
+        <param name="inheritanceFlags">Uma da <see cref="T:System.Security.AccessControl.InheritanceFlags" /> valores que especifica as propriedades de herança da regra de acesso.</param>
+        <param name="propagationFlags">Uma da <see cref="T:System.Security.AccessControl.PropagationFlags" /> valores que especifica se as regras de acesso herdado são propagadas automaticamente. Os sinalizadores de propagação serão ignorados se <c>inheritanceFlags</c> é definido como <see cref="F:System.Security.AccessControl.InheritanceFlags.None" />.</param>
+        <param name="flags">Uma da <see cref="T:System.Security.AccessControl.AuditFlags" /> tipo de controle de valores que especifica o acesso válido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.AccessControl.AuditRule" /> classe com os valores especificados.</summary>
+        <returns>O <see cref="T:System.Security.AccessControl.AuditRule" /> objeto criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maneira recomendada para criar regras de auditoria é usar os construtores de <xref:System.IO.Pipes.PipeAuditRule> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="accessMask" />, <paramref name="inheritanceFlags" />, <paramref name="propagationFlags" />, ou <paramref name="flags" /> propriedades especificam um valor inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">A propriedade <paramref name="identityReference" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="accessMask" /> propriedade é zero.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="identityReference" /> propriedade não é nem do tipo <see cref="T:System.Security.Principal.SecurityIdentifier" /> nem de um tipo, como <see cref="T:System.Security.Principal.NTAccount" />, que pode ser convertido no tipo <see cref="T:System.Security.Principal.SecurityIdentifier" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuditRuleType">
+      <MemberSignature Language="C#" Value="public override Type AuditRuleType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AuditRuleType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Pipes.PipeSecurity.AuditRuleType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> objeto associado com as regras de auditoria do atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <value>O tipo do objeto que está associado com as regras de auditoria do atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Security.AccessControl.ObjectSecurity> classe substituição de <xref:System.Security.AccessControl.ObjectSecurity.AuditRuleType%2A> propriedade e retornar o tipo que eles usam para representar os direitos de acesso. Quando você trabalha com matrizes ou coleções que contêm vários tipos de objetos de segurança, use essa propriedade para determinar o tipo de enumeração correto a ser usado com cada objeto de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected void Persist (System.Runtime.InteropServices.SafeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void Persist(class System.Runtime.InteropServices.SafeHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.Persist(System.Runtime.InteropServices.SafeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.Runtime.InteropServices.SafeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">O identificador do protegível o objeto atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto está associado.</param>
+        <summary>Salva as seções especificadas do descritor de segurança associado atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto no armazenamento permanente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="protected void Persist (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void Persist(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.Persist(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do protegível o objeto atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto está associado.</param>
+        <summary>Salva as seções especificadas do descritor de segurança associado atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto no armazenamento permanente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAccessRule (System.IO.Pipes.PipeAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAccessRule(class System.IO.Pipes.PipeAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.RemoveAccessRule(System.IO.Pipes.PipeAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove uma regra de acesso do discricionário acesso controle DACL (lista) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <returns>
+          <see langword="true" /> se a operação for bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.RemoveAccessRule%2A> método remove ou toda a correspondência <xref:System.Security.AccessControl.AccessControlType.Deny> regras de acesso ou toda a correspondência <xref:System.Security.AccessControl.AccessControlType.Allow> regras de acesso do atual <xref:System.IO.Pipes.PipeSecurity> objeto. Por exemplo, você pode usar esse método para remover todos os <xref:System.Security.AccessControl.AccessControlType.Deny> regras de acesso para um usuário, passando um <xref:System.IO.Pipes.PipeAccessRule> objeto criado usando o <xref:System.Security.AccessControl.AccessControlType.Deny> valor, o <xref:System.IO.Pipes.PipeAccessRights.Read> valor e uma conta de usuário. O <xref:System.IO.Pipes.PipeSecurity.RemoveAccessRule%2A> método remove quaisquer regras de negação que especificam o <xref:System.IO.Pipes.PipeAccessRights.Read> valor ou o <xref:System.IO.Pipes.PipeAccessRights.Write> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAccessRuleSpecific (System.IO.Pipes.PipeAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAccessRuleSpecific(class System.IO.Pipes.PipeAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.RemoveAccessRuleSpecific(System.IO.Pipes.PipeAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove a regra de acesso especificado do discricionário acesso controle DACL (lista) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.RemoveAccessRule%2A> método remove ou toda a correspondência <xref:System.Security.AccessControl.AccessControlType.Deny> regras de acesso ou toda a correspondência <xref:System.Security.AccessControl.AccessControlType.Allow> regras de acesso do atual <xref:System.IO.Pipes.PipeSecurity> objeto. Por exemplo, você pode usar esse método para remover todos os <xref:System.Security.AccessControl.AccessControlType.Deny> regras de acesso para um usuário, passando um <xref:System.IO.Pipes.PipeAccessRule> objeto criado usando o <xref:System.Security.AccessControl.AccessControlType.Deny> valor, o <xref:System.IO.Pipes.PipeAccessRights.Read> valor e uma conta de usuário. O <xref:System.IO.Pipes.PipeSecurity.RemoveAccessRule%2A> método remove quaisquer regras de negação que especificam o <xref:System.IO.Pipes.PipeAccessRights.Read> valor ou o <xref:System.IO.Pipes.PipeAccessRights.Write> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRule">
+      <MemberSignature Language="C#" Value="public bool RemoveAuditRule (System.IO.Pipes.PipeAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAuditRule(class System.IO.Pipes.PipeAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.RemoveAuditRule(System.IO.Pipes.PipeAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove uma regra de auditoria da SACL do sistema acesso controle lista () que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se a regra de auditoria foi removida; Caso contrário,<see langword="false" /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.RemoveAuditRule%2A> método remove ou toda a correspondência <xref:System.Security.AccessControl.AccessControlType.Deny> as regras de auditoria ou toda a correspondência <xref:System.Security.AccessControl.AccessControlType.Allow> auditar regras do atual <xref:System.IO.Pipes.PipeSecurity> objeto.  Por exemplo, você pode usar esse método para remover todos os <xref:System.Security.AccessControl.AccessControlType.Deny> regras para um usuário de auditoria, passando um <xref:System.Security.AccessControl.FileSystemAuditRule> objeto criado usando o <xref:System.Security.AccessControl.AccessControlType.Deny> valor, o <xref:System.Security.AccessControl.AuditFlags.Failure> valor e uma conta de usuário.  Quando você fizer isso, o <xref:System.IO.Pipes.PipeSecurity.RemoveAuditRule%2A> método remove quaisquer regras de negação que especificam o <xref:System.Security.AccessControl.AuditFlags.Failure> valor ou o <xref:System.Security.AccessControl.AuditFlags.Success> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleAll">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleAll (System.IO.Pipes.PipeAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleAll(class System.IO.Pipes.PipeAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.RemoveAuditRuleAll(System.IO.Pipes.PipeAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove todas as regras de auditoria que têm o mesmo identificador de segurança que a regra de auditoria do acesso controle lista SACL (sistema) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.RemoveAuditRuleAll%2A> método Remove todas as regras de auditoria para o usuário especificado.  Ele ignora todos os valores de <xref:System.IO.Pipes.PipeAuditRule> objeto, exceto a conta de usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleSpecific">
+      <MemberSignature Language="C#" Value="public void RemoveAuditRuleSpecific (System.IO.Pipes.PipeAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuditRuleSpecific(class System.IO.Pipes.PipeAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.RemoveAuditRuleSpecific(System.IO.Pipes.PipeAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove a regra de auditoria do acesso controle lista SACL (sistema) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.RemoveAuditRuleSpecific%2A> método Remove da correspondência especificada <xref:System.Security.AccessControl.AccessControlType.Deny> auditoria regra ou a correspondência especificada <xref:System.Security.AccessControl.AccessControlType.Allow> regra de auditoria do atual <xref:System.IO.Pipes.PipeSecurity> objeto.  Por exemplo, você pode usar esse método para remover um especificado <xref:System.Security.AccessControl.AccessControlType.Deny> regra de auditoria para um usuário, passando um <xref:System.Security.AccessControl.FileSystemAuditRule> objeto criado usando o <xref:System.Security.AccessControl.AccessControlType.Deny> valor, o <xref:System.Security.AccessControl.AuditFlags.Failure> valor e uma conta de usuário.  Quando você fizer isso, o <xref:System.IO.Pipes.PipeSecurity.RemoveAuditRuleSpecific%2A> método remove somente uma regra de negação que especifica o <xref:System.Security.AccessControl.AuditFlags.Failure> valor.  Ele não remove quaisquer regras de negação que especificam o <xref:System.Security.AccessControl.AuditFlags.Success> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAccessRule">
+      <MemberSignature Language="C#" Value="public void ResetAccessRule (System.IO.Pipes.PipeAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAccessRule(class System.IO.Pipes.PipeAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.ResetAccessRule(System.IO.Pipes.PipeAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a adicionar.</param>
+        <summary>Remove todas as regras de acesso no discricionário acesso controle DACL (lista) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> de objeto e, em seguida, adiciona a regra de acesso especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.ResetAccessRule%2A> método adiciona a regra ACL (lista) de controle de acesso especificado ou substitui quaisquer regras ACL idênticas que correspondem a `rule` parâmetro.  Por exemplo, se o `rule` parâmetro especifica um <xref:System.IO.Pipes.PipeAccessRights.Read> valor e o <xref:System.IO.Pipes.PipeSecurity.ResetAccessRule%2A> método localiza uma regra ACL idêntica que especifica o <xref:System.IO.Pipes.PipeAccessRights.Read> valor, a regra idêntica será substituída.  Se o <xref:System.IO.Pipes.PipeSecurity.ResetAccessRule%2A> método localiza uma regra ACL idêntica que especifica o <xref:System.IO.Pipes.PipeAccessRights.Write> valor, a regra idêntica também será substituída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessRule">
+      <MemberSignature Language="C#" Value="public void SetAccessRule (System.IO.Pipes.PipeAccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessRule(class System.IO.Pipes.PipeAccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.SetAccessRule(System.IO.Pipes.PipeAccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra para definir.</param>
+        <summary>Define uma regra de acesso no discricionário acesso controle DACL (lista) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.SetAccessRule%2A> método adiciona a regra ACL (lista) de controle de acesso especificado ou substitui quaisquer regras ACL idênticas que correspondem a <xref:System.IO.Pipes.PipeAccessRights> valor o `rule` parâmetro.  Por exemplo, se o `rule` parâmetro especifica um <xref:System.IO.Pipes.PipeAccessRights.Read> valor e o <xref:System.IO.Pipes.PipeSecurity.SetAccessRule%2A> método localiza uma regra ACL idêntica que especifica o <xref:System.IO.Pipes.PipeAccessRights.Read> valor, a regra idêntica será substituída.  Se o <xref:System.IO.Pipes.PipeSecurity.SetAccessRule%2A> método localiza uma regra ACL idêntica que especifica o <xref:System.IO.Pipes.PipeAccessRights.Write> valor, a regra idêntica não será substituída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuditRule">
+      <MemberSignature Language="C#" Value="public void SetAuditRule (System.IO.Pipes.PipeAuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAuditRule(class System.IO.Pipes.PipeAuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Pipes.PipeSecurity.SetAuditRule(System.IO.Pipes.PipeAuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Pipes.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.IO.Pipes.PipeAuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra para definir.</param>
+        <summary>Define uma regra de auditoria no acesso controle lista SACL (sistema) que está associado com a atual <see cref="T:System.IO.Pipes.PipeSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Pipes.PipeSecurity.SetAuditRule%2A> método adiciona a regra de auditoria ou substitui quaisquer regras de auditoria idênticos que correspondem a <xref:System.IO.Pipes.PipeAccessRights> valor o `rule` parâmetro.  Por exemplo, se o `rule` parâmetro especifica um <xref:System.IO.Pipes.PipeAccessRights.Read> valor e o <xref:System.IO.Pipes.PipeSecurity.SetAuditRule%2A> método localiza uma regra de auditoria idênticos que especifica o <xref:System.IO.Pipes.PipeAccessRights.Read> valor, a regra idêntica será substituída.  Se o <xref:System.IO.Pipes.PipeSecurity.SetAuditRule%2A> método localiza uma regra de auditoria idênticos que especifica o <xref:System.IO.Pipes.PipeAccessRights.Write> valor, a regra idêntica não será substituída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="rule" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

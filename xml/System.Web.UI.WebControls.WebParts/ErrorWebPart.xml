@@ -1,0 +1,293 @@
+<Type Name="ErrorWebPart" FullName="System.Web.UI.WebControls.WebParts.ErrorWebPart">
+  <TypeSignature Language="C#" Value="public class ErrorWebPart : System.Web.UI.WebControls.WebParts.ProxyWebPart, System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ErrorWebPart extends System.Web.UI.WebControls.WebParts.ProxyWebPart implements class System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.ProxyWebPart</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.WebParts.ITrackingPersonalizable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Inserido em uma página da Web como um espaço reservado quando a tentativa de carregar ou criar uma nova instância de um controle dinâmico <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> falha.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> classe é usada pelo controle Web Parts definido como um espaço reservado para um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle não pôde ser adicionado à página. Se o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle tenta carregar ou criar uma nova instância de um dinâmico <xref:System.Web.UI.WebControls.WebParts.WebPart> controle em uma zona e o tentativa falhar por algum motivo, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> , em seguida, chama o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart%2A> método e insere um <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle no lugar do controle que falhou.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle é inserido para preservar preexistentes personalização informações de estado que podem ter existido em um controle para os usuários. Por exemplo, suponha que haja um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle que tem uma propriedade personalizable, para que os usuários possam salvar seus próprios código postal e, em seguida, o controle pode exibir automaticamente informações sobre o tempo para que o código postal sempre que o usuário visita a página. Se em algum momento ocorrer um problema com o controle de tempo para que ele não pode ser carregado durante uma solicitação específica e ainda o restante da página carregado com êxito, os dados de personalização personalizado que um usuário tiver salvo para que controle seriam perdido na próxima vez em que os dados de personalização para a página é salva. Inserindo o <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle no lugar do controle com falha, você pode notificar o usuário que ocorreu um problema e também fornecem um mecanismo para o controle de Web Parts definido para preservar os dados de personalização do usuário no controle com falha até que o problema pode ser corrigido.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> classe deriva o <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> da classe, como um dos vários tipos projetados para ser temporários espaços reservados para outros tipos. Para criar uma instância da classe, o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle usa seu público <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.%23ctor%2A> construtor. O construtor requer vários detalhes do controle a ser passado a ele, como a ID, o tipo original do controle com falha (se o controle de falhas é um servidor ou controle de usuário é encapsulado em um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> objeto), o caminho original para o arquivo de origem para o controle (se o controle de falhas é um controle de usuário) e a ID de um <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> objeto se estiver presente.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> classe tem uma única propriedade pública chamada <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A>. Os desenvolvedores podem atribuir um valor para essa propriedade que será exibida em uma página da Web quando o controle é inserido.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> classe tem três métodos protegidos. O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.AddAttributesToRender%2A> método usa as características de estilo do <xref:System.Web.UI.WebControls.WebParts.WebZone.ErrorStyle%2A> de objeto para a <xref:System.Web.UI.WebControls.WebParts.WebZone> zona que contém o controle que não pôde ser carregado. Se as configurações de estilo existirem neste objeto, o método se aplica a eles o <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle. O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization%2A> método define várias propriedades herdadas importantes sobre o <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle, para impedir que usuários Personalizando o controle ocultando, minimizando, editar, ou exportá-lo ou alterando seu <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> valor. Por fim, o <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.RenderContents%2A> método codifica o valor da cadeia de caracteres de <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A> propriedade, para evitar problemas de processamento ou ataques de script.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>As condições em que um <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle realmente é inserido em uma página são relativamente rara e, embora a classe pode ser herdada de e estendida, alguns desenvolvedores encontrará esse seja de grande importância. Um motivo, talvez você queira estender essa classe é se você deseja personalizar a aparência e comportamento do <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle. Por exemplo, você pode substituir o <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" /> método e estilo adicionais do conjunto ou outras propriedades de <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, além das que já estão definidas.  
+  
+ Para exigir a <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle para usar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, você também deve herdar do <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> classe e substituir seu <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> método. Nesse método, você deve atribuir o valor do método <paramref name="errorMessage" /> parâmetro para o <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> propriedade personalizados <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, porque o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle chama esse método em vários outros locais e geralmente passa em uma valor de mensagem de erro diferente.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorWebPart (string originalID, string originalTypeName, string originalPath, string genericWebPartID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string originalID, string originalTypeName, string originalPath, string genericWebPartID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.#ctor(System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="originalID" Type="System.String" />
+        <Parameter Name="originalTypeName" Type="System.String" />
+        <Parameter Name="originalPath" Type="System.String" />
+        <Parameter Name="genericWebPartID" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="originalID">Uma cadeia de caracteres que é a ID de controle (não a ID exclusiva) do controle com falha. Se um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle está envolvido em falha, a ID é a ID do controle de servidor seu filho.</param>
+        <param name="originalTypeName">Uma cadeia de caracteres que é o nome do <see cref="T:System.Type" /> do controle com falha. Se um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle está envolvido na falha, o nome do tipo é o tipo de controle de servidor seu filho.</param>
+        <param name="originalPath">Uma cadeia de caracteres que contém o caminho para um controle de usuário, se um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controle que contém um controle de usuário filho está envolvida em falha.</param>
+        <param name="genericWebPartID">Uma cadeia de caracteres que retorna a ID de um <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> controlar, se esse tipo de controle foi envolvido em uma falha ao carregar ou criar um controle. Isso é necessário para controles que não herdam a <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> classe base.</param>
+        <summary>Inicializa uma nova instância do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle cria uma nova instância do <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controlar quando ele falha na tentativa de carregar ou criar uma instância de um dinâmico <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Controles dinâmicos são controles que são adicionados a uma página programaticamente ou por um usuário que adiciona o controle de um catálogo de controles, em vez de controles estáticos que são declarados na marcação de uma página da Web.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.%23ctor%2A> método simplesmente cria uma instância da classe base, transmitindo a ele os quatro parâmetros que contêm informações sobre o controle com falha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém o HTML de saída a ser processado.</param>
+        <summary>Aplica atributos de estilo de erro especial para um <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> objeto que é inserido em uma página no lugar de outro controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.AddAttributesToRender%2A> método usa as características de estilo (se houver) que são definidos no <xref:System.Web.UI.WebControls.WebParts.WebZone.ErrorStyle%2A> de objeto para o <xref:System.Web.UI.WebControls.WebParts.WebZone> zona que contém um <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle. Os estilos são aplicados para a <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle antes da renderização.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Este método pode ser substituído em uma derivada <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> de classe, se quiser que os desenvolvedores personalizar as características de estilo que são aplicadas a um <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle.  
+  
+ Para exigir a <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle para usar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, você também deve herdar do <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> classe e substituir seu <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> método. Nesse método, você deve atribuir o valor do método <paramref name="errorMessage" /> parâmetro para o <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> propriedade personalizados <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, porque o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle chama esse método em vários outros locais e geralmente passa em uma mensagem de erro específica.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLoadPersonalization">
+      <MemberSignature Language="C#" Value="protected virtual void EndLoadPersonalization ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndLoadPersonalization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define várias propriedades importantes sobre o <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle antes da renderização, para impedir que usuários personalizem o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization%2A> método define propriedades em um <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle antes de ser processada. Essas propriedades impedir que os usuários ocultem, minimizando, edição, ou exportando o controle ou alterando seu <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> valor. No entanto, os usuários podem fechar ou excluir um <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> instância do controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Este método pode ser substituído em uma herdadas <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle. Os desenvolvedores talvez queira substituir o método para definir propriedades adicionais sobre o controle, como um padrão <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> valor da propriedade.  
+  
+ Para exigir a <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle para usar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, você também deve herdar do <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> classe e substituir seu <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> método. Nesse método, você deve atribuir o valor do método <paramref name="errorMessage" /> parâmetro para o <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> propriedade personalizados <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, porque o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle chama esse método em vários outros locais e geralmente passa em uma mensagem de erro específica.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="public string ErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a mensagem de erro é exibida em uma página da Web no lugar de um controle que não puderam ser adicionado com êxito para a página.</summary>
+        <value>Uma cadeia de caracteres que contém o texto da mensagem de erro. O valor padrão é uma mensagem de erro específica da cultura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A> propriedade pode receber um valor por um desenvolvedor, para que seja exibida uma mensagem de erro personalizada no ponto em que o <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart> controle é inserido em uma página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os desenvolvedores podem atribuir um valor padrão para o <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> propriedade estendendo o <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> classe e, no <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.#ctor(System.String,System.String,System.String,System.String)" /> construtor ou em uma substituição <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" /> método, atribuindo um valor padrão para a propriedade.  
+  
+ Para exigir a <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle para usar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, você também deve herdar do <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> classe e substituir seu <see cref="M:System.Web.UI.WebControls.WebParts.WebPartManager.CreateErrorWebPart(System.String,System.String,System.String,System.String,System.String)" /> método. Nesse método, você deve atribuir o valor do método <paramref name="errorMessage" /> parâmetro para o <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> propriedade personalizados <see cref="T:System.Web.UI.WebControls.WebParts.ErrorWebPart" /> controle, porque o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle chama esse método em vários outros locais e geralmente passa em uma mensagem de erro específica.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que codifica a mensagem de erro.</param>
+        <summary>Codifica o valor de cadeia de caracteres da <see cref="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.RenderContents%2A> método codifica a cadeia de caracteres atribuída para o <xref:System.Web.UI.WebControls.WebParts.ErrorWebPart.ErrorMessage%2A> propriedade para garantir que ele renderiza corretamente e para proteger contra ataques de injeção de script.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.BeginLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#BeginLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método é adicionado somente para implementar o <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> interface.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.BeginSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#BeginSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método é adicionado somente para implementar o <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> interface.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.EndLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#EndLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementa o <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> interface e chama o <see cref="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.EndLoadPersonalization" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave">
+      <MemberSignature Language="C#" Value="void ITrackingPersonalizable.EndSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#EndSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método é adicionado somente para implementar o <see cref="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" /> interface.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ErrorWebPart.System#Web#UI#WebControls#WebParts#ITrackingPersonalizable#TracksChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle rastreia o status de suas alterações.</summary>
+        <value>
+          <see langword="true" />Se o controle de Web Parts é responsável por determinar quando o controle é considerado alterado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

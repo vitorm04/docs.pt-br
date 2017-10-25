@@ -1,0 +1,149 @@
+<Type Name="ResolveInfo" FullName="System.ServiceModel.PeerResolvers.ResolveInfo">
+  <TypeSignature Language="C#" Value="public class ResolveInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResolveInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerResolvers.ResolveInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.MessageContract(IsWrapped=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as informações para a resolução de ponto de extremidade de uma entrada de registro por um serviço resolvedor de pares.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa as informações enviadas de um nó ponto a ponto para um serviço resolvedor de pares ao solicitar pontos de extremidade de um nó ponto específico registrado com o serviço.  
+  
+ As instâncias dessa classe são usadas principalmente para transmitir informações de resolução do ponto de extremidade para o serviço de resolução de um cliente de rede desse serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.ServiceModel.PeerResolvers.ResolveInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResolveInfo (Guid clientId, string meshId, int maxAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid clientId, string meshId, int32 maxAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveInfo.#ctor(System.Guid,System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clientId" Type="System.Guid" />
+        <Parameter Name="meshId" Type="System.String" />
+        <Parameter Name="maxAddresses" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="clientId">
+          <see cref="T:System.Guid" />que contém uma ID exclusiva para o cliente para o qual os pontos de extremidade devem ser resolvidos.</param>
+        <param name="meshId">
+          <see cref="T:System.String" />que contém a ID da malha na qual o cliente está participando.</param>
+        <param name="maxAddresses">
+          <see cref="T:System.Int32" />que contém o número máximo de endereços de ponto de extremidade de cliente a ser retornado pela operação de resolução.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.PeerResolvers.ResolveInfo" /> classe fornecido com o ID do cliente e ID de malha, bem como o número máximo de endereços de ponto de extremidade para retornar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientId">
+      <MemberSignature Language="C#" Value="public Guid ClientId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid ClientId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.ResolveInfo.ClientId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID da entrada de registro para resolver.</summary>
+        <value>
+          <see cref="T:System.Guid" />que contém a ID exclusiva de uma entrada de registro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBody">
+      <MemberSignature Language="C#" Value="public bool HasBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerResolvers.ResolveInfo.HasBody" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o corpo da mensagem que contém uma instância serializada desse tipo é formado corretamente.</summary>
+        <returns>True se o corpo da mensagem resolver solicitação informações está formado corretamente pelo remetente (o cliente do serviço); False se não for.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAddresses">
+      <MemberSignature Language="C#" Value="public int MaxAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.ResolveInfo.MaxAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo de endereços de ponto de extremidade de cliente a ser retornado pela operação de resolução.</summary>
+        <value>
+          <see cref="T:System.Int32" />que contém o número máximo de endereços de ponto de extremidade de cliente a ser retornado pela operação de resolução.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeshId">
+      <MemberSignature Language="C#" Value="public string MeshId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeshId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerResolvers.ResolveInfo.MeshId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de malha para a entrada serão resolvidos cujos endereços de ponto de extremidade.</summary>
+        <value>
+          <see cref="T:System.String" />que contém a ID da malha na qual o cliente está participando.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

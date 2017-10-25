@@ -1,0 +1,711 @@
+<Type Name="PagedDataSource" FullName="System.Web.UI.WebControls.PagedDataSource">
+  <TypeSignature Language="C#" Value="public sealed class PagedDataSource : System.Collections.ICollection, System.ComponentModel.ITypedList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PagedDataSource extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.ComponentModel.ITypedList" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PagedDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ITypedList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Encapsula as propriedades relacionadas a paginação de um controle associado a dados (como <see cref="T:System.Web.UI.WebControls.DataGrid" />, <see cref="T:System.Web.UI.WebControls.GridView" />, <see cref="T:System.Web.UI.WebControls.DetailsView" />, e <see cref="T:System.Web.UI.WebControls.FormView" />) que lhe permite executar paginação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PagedDataSource> classe encapsula as propriedades que permitem que os controles de fonte de dados, como o <xref:System.Web.UI.WebControls.DataGrid>, <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.FormView>, para realizar a paginação. Essa classe é usada por desenvolvedores de controle ao fornecer suporte a paginação a um controle associado a dados personalizado.  
+  
+ Essa classe usa o método melhor para enumerar os dados pertencentes à página atual. Se a fonte de dados subjacente oferece suporte ao acesso indexado (como <xref:System.Array?displayProperty=nameWithType> e <xref:System.Collections.IList?displayProperty=nameWithType>), essa classe usa a ele. Caso contrário, ele usa o enumerador criado pelo <xref:System.Collections.IEnumerable.GetEnumerator%2A> método.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.PagedDataSource>, consulte o <xref:System.Web.UI.WebControls.PagedDataSource.%23ctor%2A> construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PagedDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.PagedDataSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.PagedDataSource> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.PagedDataSource>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A>|`false`|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex%2A>|0|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A>|10|  
+|<xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A>|0|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCustomPaging">
+      <MemberSignature Language="C#" Value="public bool AllowCustomPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCustomPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a paginação personalizada está habilitada em um controle associado a dados.</summary>
+        <value>
+          <see langword="true" /> se a paginação personalizada estiver habilitada, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> propriedade para indicar se a paginação personalizada está habilitada. Paginação personalizada é um tipo opcional de paginação fornecida especificamente pelo <xref:System.Web.UI.WebControls.DataGrid> controle. Controle de associação de dados do ASP.NET versão 2.0 (como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.FormView>) usa paginação de servidor e não oferece suporte para paginação personalizada. Paginação personalizada e paginação de servidor são mutuamente exclusivos. Se você definir <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> para `true`, certifique-se de que <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> é definido como `false`.  
+  
+ Para obter mais informações sobre paginação personalizada, consulte <xref:System.Web.UI.WebControls.DataGrid.AllowCustomPaging%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPaging">
+      <MemberSignature Language="C#" Value="public bool AllowPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.AllowPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a paginação está habilitada em um controle associado a dados.</summary>
+        <value>
+          <see langword="true" /> se a paginação estiver habilitada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A> propriedade para especificar se um controle associado a dados tem paginação habilitada. Controles de associação de dados do ASP.NET versão 2.0 (como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.FormView>) também usar a paginação de servidor para fornecer a funcionalidade de paginação automática. Para obter mais informações sobre paginação de servidor, consulte <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A>. Ao usar o <xref:System.Web.UI.WebControls.DataGrid> controle, você também pode fornecer sua própria lógica de paginação personalizada. Para obter mais informações sobre paginação personalizada, consulte <xref:System.Web.UI.WebControls.DataGrid.AllowCustomPaging%2A?displayProperty=nameWithType> e <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A?displayProperty=nameWithType>.  
+  
+ Para obter mais informações sobre o suporte de paginação para controles associados a dados, consulte o `AllowPaging` propriedade do controle associado a dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowServerPaging">
+      <MemberSignature Language="C#" Value="public bool AllowServerPaging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowServerPaging" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a paginação d lado do servidor está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a paginação do lado do servidor estiver habilitada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles de associação de dados do ASP.NET versão 2.0 (como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.FormView>) fornecem funcionalidade de paginação automática por meio de paginação de servidor. Ao usar um controle de associação de dados do ASP.NET 2.0, defina essa propriedade como `true`.  
+  
+> [!NOTE]
+>  Paginação de servidor e de paginação personalizada são mutuamente exclusivos. Se você definir <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> para `true`, certifique-se de que <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> é definido como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma base zero <see cref="T:System.Array" /> que recebe os itens copiados da fonte de dados.</param>
+        <param name="index">A primeira posição no <see cref="T:System.Array" /> especificada para receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens da fonte de dados especificado <see cref="T:System.Array" />, começando no índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para copiar o conteúdo da fonte de dados especificado <xref:System.Array?displayProperty=nameWithType>, começando no índice especificado. O <xref:System.Array?displayProperty=nameWithType> é frequentemente usado para percorrer os itens na fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens a ser usado da fonte de dados.</summary>
+        <value>O número de itens a ser usado da fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.Count%2A> para determinar o número de itens a ser usado da fonte de dados. O valor retornado depende se a paginação está habilitada e se a paginação personalizada for usada.  
+  
+-   Se a paginação está desabilitada (definindo o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> propriedade `false`), o valor da <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A> propriedade é retornada.  
+  
+-   Se a paginação está habilitada (definindo o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> propriedade `true`) e paginação personalizada está habilitada (definindo o <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> propriedade definida como `true`), o valor da <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> propriedade é retornada.  
+  
+-   Se a paginação está habilitada (definindo o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> propriedade `true`) e o <xref:System.Web.UI.WebControls.PagedDataSource.IsLastPage%2A> está definida como `false`, o valor da <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> propriedade é retornada.  
+  
+-   Se a paginação está habilitada (definindo o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> propriedade `true`), paginação personalizada está desabilitada (definindo o <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> propriedade `false`) e o <xref:System.Web.UI.WebControls.PagedDataSource.IsLastPage%2A> está definida como `true`, o valor do <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A> propriedade é subtraída do valor da <xref:System.Web.UI.WebControls.PagedDataSource.FirstIndexInPage%2A> propriedade antes de ser retornado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> propriedade contém `null`, será retornado 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPageIndex">
+      <MemberSignature Language="C#" Value="public int CurrentPageIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentPageIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da página atual.</summary>
+        <value>O índice da página atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.CurrentPageIndex%2A> para especificar ou determinar o índice da página atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte de dados.</summary>
+        <value>Um <see cref="T:System.Collections.IEnumerable" /> implementado o objeto que representa a fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> para especificar ou determinar a origem de dados sendo enviada via pager.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceCount">
+      <MemberSignature Language="C#" Value="public int DataSourceCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataSourceCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.DataSourceCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na fonte de dados.</summary>
+        <value>O número de itens na fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A> para determinar o número de itens na fonte de dados. Se a paginação personalizada ou paginação de servidor é usada, o valor da <xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A> propriedade é retornada; caso contrário, o número total de itens na fonte de dados é retornado.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> propriedade contém `null`, será retornado 0.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A fonte de dados não é um <see cref="T:System.Collections.ICollection" /> implementado o objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstIndexInPage">
+      <MemberSignature Language="C#" Value="public int FirstIndexInPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstIndexInPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.FirstIndexInPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do primeiro registro exibido na página.</summary>
+        <value>O índice do primeiro registro exibido na página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.FirstIndexInPage%2A> propriedade para determinar o índice do primeiro item na página atual.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> está definida como `false`, ou o <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> ou <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> propriedades são definidas como `true`, ou o <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> propriedade contém `null`, será retornado 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" /> implementado o objeto que contém todos os itens na fonte de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> implementado o objeto que contém todos os itens na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para criar um <xref:System.Collections.IEnumerator?displayProperty=nameWithType> que pode ser iterado por meio de colocar cada item na fonte de dados. Para acessar o item na posição atual do enumerador, use o <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade. Use o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método para mover para o próximo item na coleção. Para mover o enumerador como sua posição inicial, use o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método.  
+  
+> [!NOTE]
+>  Quando você inicialmente obter o enumerador ou usar o <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método para mover o enumerador para o primeiro item na coleção, você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A?displayProperty=nameWithType> método. Caso contrário, o item é representado pelo <xref:System.Collections.IEnumerator.Current%2A?displayProperty=nameWithType> propriedade está definida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemProperties">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyDescriptorCollection GetItemProperties (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.PropertyDescriptorCollection GetItemProperties(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.GetItemProperties(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptorCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Uma matriz de <see cref="T:System.ComponentModel.PropertyDescriptor" /> que contém o nome da lista de objetos retornados. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna o <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que representa as propriedades em cada item usado para associar os dados.</summary>
+        <returns>O <see cref="T:System.ComponentModel.PropertyDescriptorCollection" /> que representa as propriedades em cada item usado para associar os dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.GetItemProperties%2A> método para criar um <xref:System.ComponentModel.PropertyDescriptorCollection?displayProperty=nameWithType> que representa as propriedades em cada item usado para associar dados. Se o <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> é de propriedade `null` ou não é um <xref:System.ComponentModel.ITypedList?displayProperty=nameWithType> implementado objeto `null` é retornado. Para obter mais informações sobre o <xref:System.Web.UI.WebControls.PagedDataSource.GetItemProperties%2A> método, consulte <xref:System.ComponentModel.ITypedList.GetItemProperties%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListName">
+      <MemberSignature Language="C#" Value="public string GetListName (System.ComponentModel.PropertyDescriptor[] listAccessors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetListName(class System.ComponentModel.PropertyDescriptor[] listAccessors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagedDataSource.GetListName(System.ComponentModel.PropertyDescriptor[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="listAccessors" Type="System.ComponentModel.PropertyDescriptor[]" />
+      </Parameters>
+      <Docs>
+        <param name="listAccessors">Uma matriz de <see cref="T:System.ComponentModel.PropertyDescriptor" /> que contém o nome da lista de objetos retornados. Ele pode ser <see langword="null" />.</param>
+        <summary>Retorna o nome da lista. Esse método não se aplica a essa classe.</summary>
+        <returns>
+          <see cref="F:System.String.Empty" />para todos os casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é herdado do <xref:System.ComponentModel.ITypedList?displayProperty=nameWithType> e não é aplicável a essa classe. Ela foi implementada para retornar <xref:System.String.Empty?displayProperty=nameWithType> para todos os casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCustomPagingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsCustomPagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCustomPagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a paginação personalizada está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a paginação personalizada estiver habilitada, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.IsCustomPagingEnabled%2A> propriedade para determinar se a paginação personalizada está habilitada.  
+  
+> [!NOTE]
+>  Tanto o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> e <xref:System.Web.UI.WebControls.PagedDataSource.AllowCustomPaging%2A> propriedades devem ser `true` para essa propriedade retornar `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFirstPage">
+      <MemberSignature Language="C#" Value="public bool IsFirstPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFirstPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsFirstPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a página atual for a primeira página.</summary>
+        <value>
+          <see langword="true" />Se a página atual for a primeira página; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.IsFirstPage%2A> propriedade para determinar se a página atual for a primeira página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastPage">
+      <MemberSignature Language="C#" Value="public bool IsLastPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsLastPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a página atual for a última página.</summary>
+        <value>
+          <see langword="true" />Se a página atual for a última página; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.IsLastPage%2A> propriedade para determinar se a página atual for a última página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPagingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsPagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a paginação está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a paginação estiver habilitada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> propriedade para determinar se a paginação está habilitada.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A> propriedade deve ser `true` e <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> propriedade não pode ser definida como 0 para essa propriedade retornar `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a fonte de dados é somente leitura.</summary>
+        <value>
+          <see langword="false" />para todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é implementada para sempre retornar `false`, que indica que a fonte de dados pode ser modificada em todos os casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsServerPagingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsServerPagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsServerPagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsServerPagingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o suporte a paginação do lado do servidor está habilitado.</summary>
+        <value>
+          <see langword="true" />Se a paginação está habilitada e a paginação do lado do servidor é indicada usando o <see cref="P:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging" /> propriedade; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Paginação de servidor é habilitada quando o <xref:System.Web.UI.WebControls.PagedDataSource.AllowPaging%2A> e <xref:System.Web.UI.WebControls.PagedDataSource.AllowServerPaging%2A> propriedades são definidas como `true`, e a quantidade de dados recuperados pela fonte de dados não pode ser exibida em uma única página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à fonte de dados for sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" />para todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é derivada de <xref:System.Collections.ICollection?displayProperty=nameWithType> classe e é substituído para retornar sempre `false` para indicar que esta classe não é thread-safe.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.PagedDataSource.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageCount">
+      <MemberSignature Language="C#" Value="public int PageCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.PageCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de páginas necessário para exibir todos os itens na fonte de dados.</summary>
+        <value>O número de páginas necessários para exibir todos os itens na fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.PageCount%2A> para determinar o número de páginas necessários para exibir todos os itens na fonte de dados.  
+  
+> [!NOTE]
+>  Se o <xref:System.Web.UI.WebControls.PagedDataSource.DataSource%2A> é de propriedade `null`, será retornado 0. Se o <xref:System.Web.UI.WebControls.PagedDataSource.IsPagingEnabled%2A> está definida como `false` ou <xref:System.Web.UI.WebControls.PagedDataSource.DataSourceCount%2A> propriedade estiver definida como 0 ou menos, 1 é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSize">
+      <MemberSignature Language="C#" Value="public int PageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.PageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de itens a serem exibidos em uma única página.</summary>
+        <value>O número de itens a serem exibidos em uma única página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.PageSize%2A> para especificar ou determinar o número de itens a serem exibidos em uma única página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado nesta implementação é o <xref:System.Web.UI.WebControls.PagedDataSource> objeto propriamente dito.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.DataGridColumnCollection.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A?displayProperty=nameWithType> propriedade o <xref:System.Collections.ICollection?displayProperty=nameWithType> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualCount">
+      <MemberSignature Language="C#" Value="public int VirtualCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VirtualCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagedDataSource.VirtualCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de virtual de itens na fonte de dados quando a paginação personalizada é usada.</summary>
+        <value>O virtual número de itens na fonte de dados quando a paginação personalizada é usada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A> propriedade quando a paginação personalizada ou paginação de servidor é usada para determinar o número de virtual de itens na fonte de dados. Para obter mais informações sobre o <xref:System.Web.UI.WebControls.PagedDataSource.VirtualCount%2A> propriedade, consulte <xref:System.Web.UI.WebControls.DataGrid.VirtualItemCount%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

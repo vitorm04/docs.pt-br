@@ -1,0 +1,316 @@
+<Type Name="DesignerGlyph" FullName="System.Workflow.ComponentModel.Design.DesignerGlyph">
+  <TypeSignature Language="C#" Value="public abstract class DesignerGlyph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerGlyph extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.DesignerGlyph" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Desenha um glifo na posição de ordem Z do mais alto em um designer de atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O <xref:System.Workflow.ComponentModel.Design.DesignerGlyph> classe é a classe base para todos os glifos de designer usada em uma superfície de design do fluxo de trabalho.  
+  
+ Os desenvolvedores de designer de atividade podem usar classes que herdam de <xref:System.Workflow.ComponentModel.Design.DesignerGlyph> para desenhar glifos personalizados para a superfície de um <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>. <xref:System.Workflow.ComponentModel.Design.DesignerGlyph>classes desenhar a ordem Z de nível superior, que coloca os glifos personalizados visualmente sobre todos os outros glifos no designer com base em tais glifos de <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> valor do glifo personalizado. Um valor mais baixo para o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> propriedade indica uma prioridade mais alta e, portanto, desenha o glifo na posição de ordem Z do mais alto em um designer de atividade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma classe de glifo que deriva de <xref:System.Workflow.ComponentModel.Design.DesignerGlyph> classe.  O código substitui o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.GetBounds%2A> e <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.OnPaint%2A> métodos.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo DesignerGlyphProvider.cs. Para obter mais informações, consulte [o Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#132](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#132)]
+ [!code-vb[WF_Samples#132](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#132)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" />, você deve substituir os seguintes membros: <see cref="M:System.Workflow.ComponentModel.Design.DesignerGlyph.OnPaint(System.Drawing.Graphics,System.Boolean,System.Workflow.ComponentModel.Design.AmbientTheme,System.Workflow.ComponentModel.Design.ActivityDesigner)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerGlyph ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerGlyph.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBeActivated">
+      <MemberSignature Language="C#" Value="public virtual bool CanBeActivated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanBeActivated" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerGlyph.CanBeActivated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" /> pode ter o foco na <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> à qual ele está associado.</summary>
+        <value>
+          <see langword="true" />Se o glifo designer pode ser ativado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra uma implementação da propriedade CanBeActivated.  Este exemplo é um exemplo de controle SDK do criador de perfil de.  Para obter mais informações, consulte [exemplo criador de perfil do controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#119](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#119)]
+ [!code-vb[WF_Samples#119](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#119)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBounds">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Rectangle GetBounds (System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Drawing.Rectangle GetBounds(class System.Workflow.ComponentModel.Design.ActivityDesigner designer, bool activated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerGlyph.GetBounds(System.Workflow.ComponentModel.Design.ActivityDesigner,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+        <Parameter Name="activated" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> à qual o glifo está associado.</param>
+        <param name="activated">
+          <see langword="true" />para indicar se o glifo aparece na superfície do designer de atividade; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna os limites do glifo no especificado <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" />.</summary>
+        <returns>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do glifo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que substituída em uma classe derivada, <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.GetBounds%2A> retorna os limites do designer de atividade ao qual o glifo está associado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode substituir o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.GetBounds%2A> método. O código define o tamanho e o local do objeto glifos personalizado.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo DesignerGlyphProvider.cs. Para obter mais informações, consulte [o Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#133](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#133)]
+ [!code-vb[WF_Samples#133](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#133)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="designer" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HighestPriority">
+      <MemberSignature Language="C#" Value="public const int HighestPriority = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 HighestPriority = (0)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.DesignerGlyph.HighestPriority" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Representa a prioridade mais alta possível para um <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" />. Esse valor é uma constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor mais baixo para o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> propriedade indica uma prioridade mais alta e, portanto, desenha o glifo na posição de ordem Z do mais alto em um designer de atividade. O valor de <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.HighestPriority> campo é 0.  
+  
+> [!NOTE]
+>  Esse valor de constante serve como uma diretriz durante a criação de glifos personalizados. Você é livre para usar valores diferentes para o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> propriedade durante a criação de seu glifo personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowestPriority">
+      <MemberSignature Language="C#" Value="public const int LowestPriority = 1000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 LowestPriority = (1000000)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.DesignerGlyph.LowestPriority" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1000000</MemberValue>
+      <Docs>
+        <summary>Representa a prioridade mais baixa possível para um <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" />. Esse valor é uma constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor alto para o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> propriedade indica uma prioridade mais baixa e, portanto, desenha o glifo na posição de ordem Z de mais inferior em um designer de atividade. O valor de <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.LowestPriority> campo é 1000000.  
+  
+> [!NOTE]
+>  Esse valor de constante serve como uma diretriz durante a criação de glifos personalizados. Você é livre para usar valores diferentes para o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> propriedade durante a criação de seu glifo personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalPriority">
+      <MemberSignature Language="C#" Value="public const int NormalPriority = 10000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 NormalPriority = (10000)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.DesignerGlyph.NormalPriority" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>10000</MemberValue>
+      <Docs>
+        <summary>Representa a prioridade normal para um <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" />. Esse valor é uma constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um valor mais baixo para o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> propriedade indica uma prioridade mais alta, enquanto um valor mais alto indica uma prioridade mais baixa. O valor de <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.NormalPriority> campo é 10000.  
+  
+> [!NOTE]
+>  Esse valor de constante serve como uma diretriz durante a criação de glifos personalizados. Você é livre para usar valores diferentes para o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority%2A> propriedade durante a criação de seu glifo personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivate">
+      <MemberSignature Language="C#" Value="protected virtual void OnActivate (System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnActivate(class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerGlyph.OnActivate(System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> no qual o glifo é desenhado.</param>
+        <summary>Indica para o glifos que uma ação foi executada que ativou o glifo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra uma implementação do método AoAtivar.  Este exemplo é um exemplo de controle SDK do criador de perfil de.  Para obter mais informações, consulte [exemplo criador de perfil do controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#119](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#119)]
+ [!code-vb[WF_Samples#119](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#119)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected abstract void OnPaint (System.Drawing.Graphics graphics, bool activated, System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, System.Workflow.ComponentModel.Design.ActivityDesigner designer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPaint(class System.Drawing.Graphics graphics, bool activated, class System.Workflow.ComponentModel.Design.AmbientTheme ambientTheme, class System.Workflow.ComponentModel.Design.ActivityDesigner designer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.DesignerGlyph.OnPaint(System.Drawing.Graphics,System.Boolean,System.Workflow.ComponentModel.Design.AmbientTheme,System.Workflow.ComponentModel.Design.ActivityDesigner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="activated" Type="System.Boolean" />
+        <Parameter Name="ambientTheme" Type="System.Workflow.ComponentModel.Design.AmbientTheme" />
+        <Parameter Name="designer" Type="System.Workflow.ComponentModel.Design.ActivityDesigner" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> para executar tarefas de desenho e preenchimento.</param>
+        <param name="activated">
+          <see langword="true" />para indicar que o símbolo aparece na superfície de design; Caso contrário, <see langword="false" />.</param>
+        <param name="ambientTheme">O <see cref="T:System.Workflow.ComponentModel.Design.AmbientTheme" /> para usar para acessar configurações de propriedade de ambiente.</param>
+        <param name="designer">O <see cref="T:System.Workflow.ComponentModel.Design.ActivityDesigner" /> do qual obter informações sobre ações do usuário.</param>
+        <summary>Quando substituído em uma classe derivada, executa as tarefas necessárias para renderizar o glifo na superfície do designer de atividade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.OnPaint%2A>usa <xref:System.Workflow.ComponentModel.Design.AmbientTheme.CommentIndicatorPen%2A> para desenhar os limites do glifo comentário e <xref:System.Workflow.ComponentModel.Design.AmbientTheme.CommentIndicatorBrush%2A> para preenchê-lo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode substituir o <xref:System.Workflow.ComponentModel.Design.DesignerGlyph.OnPaint%2A> método. O código personaliza como desenhar o objeto de glifo no designer de atividade ao qual o glifo está associado.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo DesignerGlyphProvider.cs. Para obter mais informações, consulte [o Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#134](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#134)]
+ [!code-vb[WF_Samples#134](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#134)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public virtual int Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.DesignerGlyph.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a configuração de prioridade para o designer glifo na superfície de design de atividade.</summary>
+        <value>Um valor inteiro que representa a configuração de prioridade para a <see cref="T:System.Workflow.ComponentModel.Design.DesignerGlyph" /> na superfície do designer de atividade. Um valor mais baixo indica uma prioridade mais alta e, portanto, desenha o glifo na posição de ordem Z do mais alto em um designer de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

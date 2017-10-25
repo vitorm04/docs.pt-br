@@ -1,0 +1,194 @@
+<Type Name="CustomTrackingRecord" FullName="System.Activities.Tracking.CustomTrackingRecord">
+  <TypeSignature Language="C#" Value="public class CustomTrackingRecord : System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomTrackingRecord extends System.Activities.Tracking.TrackingRecord" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Tracking.CustomTrackingRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Tracking.TrackingRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém os dados enviados para um participante de acompanhamento pela infraestrutura de acompanhamento de tempo de execução quando um registro de acompanhamento personalizado é acionado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomTrackingRecord (System.Activities.Tracking.CustomTrackingRecord record);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Activities.Tracking.CustomTrackingRecord record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CustomTrackingRecord.#ctor(System.Activities.Tracking.CustomTrackingRecord)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="record" Type="System.Activities.Tracking.CustomTrackingRecord" />
+      </Parameters>
+      <Docs>
+        <param name="record">A instância de registro personalizado de controle a ser usado.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Tracking.CustomTrackingRecord" /> classe com base nas informações especificado <see cref="T:System.Activities.Tracking.CustomTrackingRecord" /> instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomTrackingRecord (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CustomTrackingRecord.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do registro de controle personalizado.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Tracking.CustomTrackingRecord" /> classe com o nome do registro de acompanhamento personalizado especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomTrackingRecord (string name, System.Diagnostics.TraceLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Diagnostics.TraceLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CustomTrackingRecord.#ctor(System.String,System.Diagnostics.TraceLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="level" Type="System.Diagnostics.TraceLevel" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do registro de controle personalizado.</param>
+        <param name="level">O nível de rastreamento usado pelo registro de controle.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Tracking.CustomTrackingRecord" /> classe com o nível de nome e o rastreamento de registro do controle personalizado especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomTrackingRecord (Guid instanceId, string name, System.Diagnostics.TraceLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, string name, valuetype System.Diagnostics.TraceLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CustomTrackingRecord.#ctor(System.Guid,System.String,System.Diagnostics.TraceLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="level" Type="System.Diagnostics.TraceLevel" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">A ID da atividade.</param>
+        <param name="name">O nome do registro de controle personalizado.</param>
+        <param name="level">O nível de rastreamento usado pelo registro de controle.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Tracking.CustomTrackingRecord" /> classe com a ID de instância especificada, o nome do registro de controle personalizado e o nível de rastreamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public System.Activities.Tracking.ActivityInfo Activity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Tracking.ActivityInfo Activity" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.CustomTrackingRecord.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.ActivityInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o <see cref="T:System.Activities.Tracking.ActivityInfo" /> da atividade associada com esse registro.</summary>
+        <value>As informações de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Tracking.TrackingRecord Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Activities.Tracking.TrackingRecord Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CustomTrackingRecord.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingRecord</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do <see cref="T:System.Activities.Tracking.CustomTrackingRecord" />.</summary>
+        <returns>Uma cópia do <see cref="T:System.Activities.Tracking.CustomTrackingRecord" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Data" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.CustomTrackingRecord.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados definidos pelo usuário associados a este registro de controle.</summary>
+        <value>Os dados definidos pelo usuário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Tracking.CustomTrackingRecord.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome que distingue esse registro de controle.</summary>
+        <value>O nome que distingue esse registro de rastreamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Tracking.CustomTrackingRecord.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que contém os dados de registro de controle.</summary>
+        <returns>Os dados de registro de controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

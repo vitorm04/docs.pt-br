@@ -1,0 +1,288 @@
+<Type Name="StandardToolWindows" FullName="System.ComponentModel.Design.StandardToolWindows">
+  <TypeSignature Language="C#" Value="public class StandardToolWindows" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StandardToolWindows extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.StandardToolWindows" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define os identificadores GUID que correspondem ao conjunto padrão de janelas de ferramentas que estão disponíveis no ambiente de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses GUIDs podem ser usados para acessar as janelas de ferramenta padrão que estão disponíveis para o ambiente de tempo de design.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.ComponentModel.Design.StandardToolWindows> para exibir uma janela de ferramentas padrão. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.Design.IUIService> interface.  
+  
+ [!code-cpp[IUIServiceExample#5](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#5)]
+ [!code-csharp[IUIServiceExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#5)]
+ [!code-vb[IUIServiceExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />, <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StandardToolWindows ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.StandardToolWindows.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.StandardToolWindows" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectBrowser">
+      <MemberSignature Language="C#" Value="public static readonly Guid ObjectBrowser;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid ObjectBrowser" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.ObjectBrowser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para o Pesquisador de objetos. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputWindow">
+      <MemberSignature Language="C#" Value="public static readonly Guid OutputWindow;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid OutputWindow" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.OutputWindow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para a janela de saída. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectExplorer">
+      <MemberSignature Language="C#" Value="public static readonly Guid ProjectExplorer;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid ProjectExplorer" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.ProjectExplorer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para o Gerenciador de soluções. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyBrowser">
+      <MemberSignature Language="C#" Value="public static readonly Guid PropertyBrowser;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid PropertyBrowser" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.PropertyBrowser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para a janela Propriedades. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedLinks">
+      <MemberSignature Language="C#" Value="public static readonly Guid RelatedLinks;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid RelatedLinks" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.RelatedLinks" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para o quadro de links relacionados. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerExplorer">
+      <MemberSignature Language="C#" Value="public static readonly Guid ServerExplorer;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid ServerExplorer" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.ServerExplorer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para o Gerenciador de servidores. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskList">
+      <MemberSignature Language="C#" Value="public static readonly Guid TaskList;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid TaskList" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.TaskList" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID da lista de tarefas. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.ComponentModel.Design.StandardToolWindows> para exibir uma janela de ferramentas padrão. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.Design.IUIService> interface.  
+  
+ [!code-cpp[IUIServiceExample#5](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#5)]
+ [!code-csharp[IUIServiceExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#5)]
+ [!code-vb[IUIServiceExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toolbox">
+      <MemberSignature Language="C#" Value="public static readonly Guid Toolbox;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid Toolbox" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.StandardToolWindows.Toolbox" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para a caixa de ferramentas. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

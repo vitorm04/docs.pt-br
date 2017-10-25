@@ -1,0 +1,53 @@
+<Type Name="DbUnaryExpression" FullName="System.Data.Common.CommandTrees.DbUnaryExpression">
+  <TypeSignature Language="C#" Value="public abstract class DbUnaryExpression : System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DbUnaryExpression extends System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbUnaryExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.CommandTrees.DbExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa a funcionalidade básica necessária por expressões que aceitam um argumento de expressão única.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é uma classe base auxiliar em que muitas das classes subsequentes são criadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Argument">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Argument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Argument" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbUnaryExpression.Argument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> que define o argumento.</summary>
+        <value>O <see cref="T:System.Data.Common.CommandTrees.DbExpression" /> que define o argumento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de expressão derivada podem realizar mais rígido tipo verifica quando o <xref:System.Data.Common.CommandTrees.DbUnaryExpression.Argument%2A> está definida. Por exemplo, <xref:System.Data.Common.CommandTrees.DbDistinctExpression> requer que sua expressão de argumento tem um tipo de resultado de coleção. Normalmente, os tipos derivados de expressão não permitirá que <xref:System.Data.Common.CommandTrees.DbUnaryExpression.Argument%2A> seja definida como uma expressão com um tipo de resultado que não seja igual ou passível de promoção para o tipo de resultado do valor atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A expressão é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A expressão não está associada com a árvore de comandos de um <see cref="T:System.Data.Common.CommandTrees.DbUnaryExpression" />, ou seu tipo de resultado não é passível de promoção ou igual ao tipo necessário para o argumento.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

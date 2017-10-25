@@ -1,0 +1,165 @@
+<Type Name="StylusPointProperty" FullName="System.Windows.Input.StylusPointProperty">
+  <TypeSignature Language="C#" Value="public class StylusPointProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StylusPointProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPointProperty" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma propriedade armazenada em um <see cref="T:System.Windows.Input.StylusPoint" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Input.StylusPointProperty> representa as propriedades no <xref:System.Windows.Input.StylusPoint> como (x, y) coordenadas, pressão e assim por diante. É possível herdar a <xref:System.Windows.Input.StylusPointProperty> classe para personalizar as informações armazenadas para cada propriedade. O Windows Presentation Framework acompanha o <xref:System.Windows.Input.StylusPointPropertyInfo> classe que herda de <xref:System.Windows.Input.StylusPointProperty> e especifica os valores mínimo e máximo, a resolução e a unidade usada para cada propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria o <xref:System.Windows.Input.StylusPointDescription> de objeto um <xref:System.Windows.Input.StylusPointCollection> e obtém as informações para cada <xref:System.Windows.Input.StylusPointPropertyInfo> no <xref:System.Windows.Input.StylusPointDescription>.  
+  
+ [!code-csharp[PacketSpy#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[PacketSpy#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#2)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected StylusPointProperty (System.Windows.Input.StylusPointProperty stylusPointProperty);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.StylusPointProperty stylusPointProperty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointProperty.#ctor(System.Windows.Input.StylusPointProperty)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stylusPointProperty" Type="System.Windows.Input.StylusPointProperty" />
+      </Parameters>
+      <Docs>
+        <param name="stylusPointProperty">O <see cref="T:System.Windows.Input.StylusPointProperty" /> para cópia.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.StylusPointProperty" /> classe, copiando especificado <see cref="T:System.Windows.Input.StylusPointProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StylusPointProperty (Guid identifier, bool isButton);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid identifier, bool isButton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointProperty.#ctor(System.Guid,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identifier" Type="System.Guid" />
+        <Parameter Name="isButton" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="identifier">O <see cref="T:System.Guid" /> que identifica exclusivamente o <see cref="T:System.Windows.Input.StylusPointProperty" />.</param>
+        <param name="isButton">
+          <see langword="true" />para indicar que a propriedade representa um botão de caneta; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.StylusPointProperty" /> classe usando o GUID especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um novo <xref:System.Windows.Input.StylusPointProperty>.  
+  
+ [!code-csharp[PacketSpy#25](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#25)]
+ [!code-vb[PacketSpy#25](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Guid Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPointProperty.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID para a atual <see cref="T:System.Windows.Input.StylusPointProperty" />.</summary>
+        <value>O GUID para a atual <see cref="T:System.Windows.Input.StylusPointProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria o <xref:System.Windows.Input.StylusPointDescription> de um <xref:System.Windows.Input.StylusPointCollection> e obtém as informações para cada <xref:System.Windows.Input.StylusPointPropertyInfo> no <xref:System.Windows.Input.StylusPointDescription>.  
+  
+ [!code-csharp[PacketSpy#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[PacketSpy#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#2)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsButton">
+      <MemberSignature Language="C#" Value="public bool IsButton { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsButton" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StylusPointProperty.IsButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o <see cref="T:System.Windows.Input.StylusPointProperty" /> representa um botão de caneta.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Input.StylusPointProperty" /> representa um botão de caneta; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria o <xref:System.Windows.Input.StylusPointDescription> de objeto um <xref:System.Windows.Input.StylusPointCollection> e obtém as informações para cada <xref:System.Windows.Input.StylusPointPropertyInfo> no <xref:System.Windows.Input.StylusPointDescription>.  
+  
+ [!code-csharp[PacketSpy#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[PacketSpy#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#2)]  
+[!code-csharp[PacketSpy#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PacketSpy/CSharp/Window1.xaml.cs#4)]
+[!code-vb[PacketSpy#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PacketSpy/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPointProperty.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

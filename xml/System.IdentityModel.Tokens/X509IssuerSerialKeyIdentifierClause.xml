@@ -1,0 +1,259 @@
+<Type Name="X509IssuerSerialKeyIdentifierClause" FullName="System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class X509IssuerSerialKeyIdentifierClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509IssuerSerialKeyIdentifierClause extends System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma cláusula de identificador de chave que identifica um <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> tokens de segurança usando o nome diferenciado do emissor do certificado e o número de série do certificado x. 509.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause> não for usado, diferente de quando um serviço de token de segurança personalizada é criado. Quando um serviço de token de segurança retorna um token de segurança, o token de segurança emitido contém referências a anexado e segurança desanexada. Consultem referências associadas aos tokens de segurança que estão contidos dentro do cabeçalho de segurança de uma mensagem SOAP e referências não são tokens de segurança que não estão incluídas no cabeçalho de segurança de uma mensagem SOAP. Normalmente, essas referências confirmar a autenticidade do token de segurança emitido. Use o <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause> a referência de classe um <xref:System.IdentityModel.Tokens.X509SecurityToken> usando o nome diferenciado do emissor do certificado e o número de série do certificado x. 509 de token de segurança. O <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName%2A> e <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerSerialNumber%2A> propriedades representam o nome diferenciado do emissor do certificado e o número de série do certificado x. 509, respectivamente.  
+  
+ [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)]suporta os seguintes tipos de referências de token de segurança do <xref:System.IdentityModel.Tokens.X509SecurityToken> tokens de segurança.  
+  
+-   <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>  
+  
+-   <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>  
+  
+ <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509IssuerSerialKeyIdentifierClause (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que contém o certificado X.509.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause" />, usando o certificado X.509 especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse construtor define o <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName%2A> e <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerSerialNumber%2A> para o valor da <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName%2A> propriedade e o número de série do emissor retornado do <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber%2A> método, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509IssuerSerialKeyIdentifierClause (string issuerName, string issuerSerialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string issuerName, string issuerSerialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+        <Parameter Name="issuerSerialNumber" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">O nome distinto da autoridade de certificação que emitiu o certificado x. 509. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName" />.</param>
+        <param name="issuerSerialNumber">O número de série do certificado x. 509. Define o valor da propriedade <see cref="P:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerSerialNumber" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause" /> classe usando o nome distinto do emissor do certificado e o número de série do certificado x. 509.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `issuerSerialNumber` parâmetro deve estar no formato inteiro grande.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="issuerName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="issuerSerialNumber" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerName">
+      <MemberSignature Language="C#" Value="public string IssuerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IssuerName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome distinto da autoridade de certificação que emitiu o certificado x. 509.</summary>
+        <value>O nome distinto da autoridade de certificação que emitiu o certificado x. 509.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName%2A> propriedade contém o nome da autoridade de certificação (CA) que emitiu o certificado.  
+  
+ O nome diferenciado do certificado é uma representação textual do emissor ou assunto do certificado. Essa representação consiste nos atributos de nome de x. 500 (por exemplo, "CN = MyName, UO = MyOrgUnit, C = US").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerSerialNumber">
+      <MemberSignature Language="C#" Value="public string IssuerSerialNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IssuerSerialNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerSerialNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de série do certificado x. 509.</summary>
+        <value>O número de série do certificado x. 509.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número de série do emissor está no formato de inteiro grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="clause">To be added.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para essa instância coincide com o identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="clause" /> é um <see cref="T:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause" /> tipo e as cláusulas de identificador de chave corresponder; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause> classe, os valores das cláusulas de identificador de chave são comparados para determinar se há uma correspondência são os valores de <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName%2A> e <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerSerialNumber%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.Matches(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que contém o certificado x. 509 a ser comparado.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para essa instância coincide com o certificado x. 509 especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="certificate" /> tem o mesmo nome de emissor e número de série do emissor que a instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do emissor e número de série do emissor são obtidos do `certificate` parâmetro, fazendo com que o valor da <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName%2A> propriedade e chamar o <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber%2A> método, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (string issuerName, string issuerSerialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(string issuerName, string issuerSerialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.Matches(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="issuerName" Type="System.String" />
+        <Parameter Name="issuerSerialNumber" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="issuerName">O nome distinto da autoridade de certificação que emitiu o certificado x. 509.</param>
+        <param name="issuerSerialNumber">O número de série do certificado x. 509.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para essa instância é equivalente para o nome do emissor especificado e o número de série do emissor.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="issuerName" /> e <paramref name="issuerSerialNumber" /> parâmetros correspondem a <see cref="P:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName" /> e <see cref="P:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerSerialNumber" /> propriedades; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o objeto atual.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o objeto atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.Matches%2A> método retorna os valores de <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerName%2A> e <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause.IssuerSerialNumber%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

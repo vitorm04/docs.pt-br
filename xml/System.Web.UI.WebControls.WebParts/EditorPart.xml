@@ -1,0 +1,423 @@
+<Type Name="EditorPart" FullName="System.Web.UI.WebControls.WebParts.EditorPart">
+  <TypeSignature Language="C#" Value="public abstract class EditorPart : System.Web.UI.WebControls.WebParts.Part" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EditorPart extends System.Web.UI.WebControls.WebParts.Part" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.EditorPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.Part</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.WebParts.EditorPartDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base para controles que residem em zonas <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> e que são usados para editar controles <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe fornece um conjunto básico de propriedades e métodos que são usados por derivada <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles fornecidos com o conjunto de controles de Web Parts e por personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles. Um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle permite que um usuário editar um associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle modificando seu layout, aparência, propriedades, comportamento ou outras características.  
+  
+ A edição interface do usuário (IU), que consiste em <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zonas que contêm <xref:System.Web.UI.WebControls.WebParts.EditorPart> controla, é exibida depois que uma página da Web entra em modo de edição.  
+  
+> [!NOTE]
+>  Um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle pode ser usado somente dentro de uma zona que deriva de <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> classe, como o <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle.  
+  
+ Depois que uma página entrou no modo de edição, um usuário pode selecionar um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle para editar clicando em um verbo de edição no menu de verbos do controle selecionado. Apenas um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle pode ser editado por vez.  
+  
+ Vários derivado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles são fornecidos com o conjunto de controles de Web Parts, conforme listado na tabela a seguir. Esses controles fornecem todos os recursos de edição que são necessários para a maioria dos aplicativos. A abordagem típica para usar esses controles em uma página de Web Parts é declará-los no formato de persistência de página dentro de um `<zonetemplate>` elemento, onde `<zonetemplate>` é o elemento filho de um `<asp:editorzone>` elemento. Para obter um exemplo de código, consulte a seção exemplo deste tópico.  
+  
+|Tipo de controle|Descrição|  
+|---------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart>|Edita a aparência do controle associado, incluindo propriedades como o texto do título, altura, largura e atributos de borda.|  
+|<xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart>|Edita determinados comportamentos do controle associado, como se ele pode ser editado, se ele pode ser fechado ou se ela pode ser movida para outra zona. Este controle só é visível em uma página quando um controle está sendo editado no escopo de personalização compartilhado.|  
+|<xref:System.Web.UI.WebControls.WebParts.LayoutEditorPart>|Edições de atributos de layout para o controle associado, como se ele está em estado normal ou minimizado (recolhido) e qual zona ele é colocado no.|  
+|<xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart>|Edita as propriedades do controle associado, se essas propriedades foram declaradas no código-fonte com um `WebBrowsable` atributo.|  
+  
+> [!NOTE]
+>  Para melhorar a acessibilidade, todos o <xref:System.Web.UI.WebControls.WebParts.EditorPart> controla fornecido em Web Parts, o conjunto de controle são renderizadas dentro de um `<fieldset>` elemento. O `<fieldset>` elemento grupos conjunto relacionado de controles usados para edição em um determinado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle e facilita a navegação com guias entre esses controles para os agentes do usuário visual (como navegadores comuns) e os agentes de usuário orientada a fala (como o software de leitura de tela).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso programático e declarativo de <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles. Este exemplo de código tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle com várias o <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles do controle de Web Parts definir declarado na zona e uma referência a um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+-   Uma classe que contém a custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controle e um personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle para editar uma propriedade no <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite aos usuários alterar modos de exibição em uma página da Web. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_EditorPart_Overview#14](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/displaymodecs.ascx#14)]
+ [!code-aspx-vb[WebParts_EditorPart_Overview#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/displaymodevb.ascx#14)]  
+  
+ A segunda parte do exemplo de código é a página da Web. Ele contém uma referência declarativa para um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle, com um filho `<zonetemplate>` elemento que contém referências declarativas para dois o conjunto de controles de Web Parts <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles. A página também faz referência a um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar, usando um `Register` diretiva para o assembly e o `<aspSample:TextDisplayWebPart>` elemento para o controle.  
+  
+ [!code-aspx-csharp[WebParts_EditorPart_Overview#12](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/editorpart_overview_cs.aspx#12)]
+ [!code-aspx-vb[WebParts_EditorPart_Overview#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/editorpart_overview_vb.aspx#12)]  
+  
+ A terceira parte do exemplo de código é um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> classe denominada `TextDisplayWebPart`. A classe implementa o <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface. Dentro dessa classe é uma classe privada aninhada que contém o código para uma particular <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe associada a `TextDisplayWebPart` classe e denominado `TextDisplayEditorPart`. No tempo de execução, como o `TextDisplayWebPart` controle entra em modo de edição, no seu `TextDisplayWebPart.CreateEditorParts` método, ele cria uma instância do `TextDisplayEditorPart` classe e o exibe no <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle, juntamente com outros <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#1)]
+ [!code-vb[WebParts_EditorPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#1)]  
+  
+ Carregar a página em um navegador e no **modo de exibição** controle, selecione **modo de edição** para alternar para modo de edição. Clique no menu de verbos (seta para baixo) na barra de título do `TextDisplayWebPart` de controle e, em seguida, clique em **editar** para o controle de edição. Quando a interface do usuário de edição estiver visível, você pode ver três <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles, inclusive o personalizado que permite que você edite o `TextDisplayWebPart.FontStyle` propriedade. Se você fizer alterações a edição da interface do usuário e clique no **aplicar** botão, você pode usar o controle de lista suspensa para retornar a página para o modo de procura e ver o efeito total das alterações de edição.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Para criar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle, você deve substituir os dois métodos importantes. O <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges" /> método se aplica as alterações feitas no controle de editor para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controlar o que está sendo editado. O <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges" /> método obtém os valores atuais do <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controlar o que está sendo editado, para que o controle de editor pode editá-los. Usando esses dois métodos críticos, obter e definir valores entre personalizados <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle e o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle está editando.  
+  
+ Se você derivar do <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> da classe para criar controles de edição personalizados, você pode adicionar os controles personalizados para um <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> zona Implementando o <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> interface em um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle, um controle de usuário ou um controle de servidor. Para obter mais detalhes e um exemplo de código, consulte o <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> visão geral da classe. Além disso, o exemplo de código na seção de exemplo demonstra como implementar <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> em um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EditorPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Este construtor pode ser chamado somente por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyChanges">
+      <MemberSignature Language="C#" Value="public abstract bool ApplyChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ApplyChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva os valores em uma <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle para as propriedades correspondentes na associado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</summary>
+        <returns>
+          <see langword="true" />Se a ação de salvar os valores do <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> o controle para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle for bem-sucedida; caso contrário (se ocorrer um erro), <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> é um método crítico em um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle. Ele é definido como um método abstrato no <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe e deve ser implementado por controles herdados. Finalidade do método é salvar os valores que um usuário tiver inserido em uma <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle para as propriedades correspondentes no <xref:System.Web.UI.WebControls.WebParts.WebPart> controle que é referenciado no <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> método é chamado quando o usuário clica em um botão que representa um Okey ou um verbo aplicar na interface do usuário edição (IU).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar a <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> método em um personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.EditorPart> visão geral da classe.  
+  
+ A primeira parte do exemplo de código demonstra a implementação do <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> método personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe denominada `TextDisplayEditorPart`. Esse método obtém uma referência associados `TextDisplayWebPart` controlar usando o <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade. Em seguida, atualiza o valor da `TextDisplayWebPart.FontStyle` propriedade.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#5)]
+ [!code-vb[WebParts_EditorPart_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#5)]  
+  
+ A segunda parte do exemplo de código mostra como associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, `TextDisplayWebPart`, cria uma coleção de associado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles (nesse caso, há apenas um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle chamado `TextDisplayEditorPart` na coleção) em sua implementação do <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método. Esse método é executado quando o `TextDisplayWebPart` controle entra em modo de edição.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#4)]
+ [!code-vb[WebParts_EditorPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Uma classe que deriva de <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> classe deve implementar o <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges" /> método. O método implementado obtém uma referência para o controle associado usando o <see cref="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit" /> propriedade e, em seguida, atualiza as propriedades do controle com os valores atuais de <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public virtual bool Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Display" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um controle deve ser exibido quando seus associados <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle está no modo de edição.</summary>
+        <value>Um valor booliano que indica se o controle deve ser exibido. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em determinados pontos a edição process, a zona que contém um <xref:System.Web.UI.WebControls.WebParts.EditorPart> verificações de controle de <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> propriedade para determinar se deve exibir o controle.  
+  
+ Há dois cenários em que o <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> propriedade retorna `false` e <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle não é exibido. O primeiro cenário ocorre quando o controle que está sendo editado um <xref:System.Web.UI.WebControls.WebParts.ProxyWebPart> controle. O segundo cenário ocorre quando o controle que está sendo editado tem seu <xref:System.Web.UI.WebControls.WebParts.WebPart.AllowEdit%2A> e <xref:System.Web.UI.WebControls.WebParts.WebPart.IsShared%2A> propriedades definidas como `true`, enquanto o escopo de personalização da página é definido no nível do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayTitle">
+      <MemberSignature Language="C#" Value="public string DisplayTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que contém o texto do título exibido na barra de título de um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</summary>
+        <value>Uma cadeia de caracteres que representa o título completo, visível do controle. O valor padrão é uma cadeia de caracteres calculada, específicos de cultura fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle%2A> propriedade retorna o valor atual da base de <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> propriedade ou, se o controle não tem um título, um valor calculado. O valor calculado consiste em uma cadeia de caracteres de recurso localizável para controles sem título. Nos casos em que nenhum valor é atribuído para o <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> propriedade, o valor da <xref:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle%2A> propriedade difere do <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> propriedade.  
+  
+ Porque o <xref:System.Web.UI.WebControls.WebParts.EditorPart.DisplayTitle%2A> propriedade foi projetada para ser somente leitura propriedade calculada para obter o valor real atual do título exibido em tempo de execução, não tente usar esta propriedade para definir um título para um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle. Para definir um título, use a base de <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IDictionary GetDesignModeState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.IDictionary GetDesignModeState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.GetDesignModeState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o estado atual de um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> zona do pai do controle.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionary" /> com o estado atual de <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> zona que contém um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorPart.GetDesignModeState%2A> método retorna informações sobre o estado da zona que contém um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle. As informações de estado são retornadas na forma de um dicionário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Além de chamar a base de <xref:System.Web.UI.Control.OnPreRender%2A> método, o <xref:System.Web.UI.WebControls.WebParts.EditorPart.OnPreRender%2A> método também verifica a <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> propriedade. Se o valor for `false`, que significa que o controle não deve ser exibido, em seguida, o <xref:System.Web.UI.Control.Visible%2A> propriedade também é definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> que contém o <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um <see cref="T:System.Collections.IDictionary" /> que contém os dados de estado para exibir a zona.</param>
+        <summary>Aplica-se as características do estado modo de design para atual <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> zona que contém um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncChanges">
+      <MemberSignature Language="C#" Value="public abstract void SyncChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SyncChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os valores de propriedade de um controle <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> para o controle <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> é um método crítico em um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle. Ele é definido como um método abstrato no <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe e deve ser implementado por controles herdados. A finalidade do método é recuperar os valores atuais do <xref:System.Web.UI.WebControls.WebParts.WebPart> controle referenciado no <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade e atualizar os campos a <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle com esses valores para um usuário pode editá-los.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> método é chamado sempre que os valores associados <xref:System.Web.UI.WebControls.WebParts.WebPart> controle pode ter alterado. Para cada <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle, o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zona que contém as chamadas de controle de <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> método imediatamente após a chamada a <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> método, para que os valores no <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle sempre são sincronizados com os valores associados <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Outro caso em que o <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> método é chamado quando um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle está no modo de edição.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> método não é chamado após o <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> método se esse método retornar `false`, pois, nesse caso, um erro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar a <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> método em um personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.EditorPart> visão geral da classe.  
+  
+ A primeira parte do exemplo de código demonstra a implementação do <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A> método personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe denominada `TextDisplayEditorPart`. Esse método obtém uma referência associados `TextDisplayWebPart` controlar usando o <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade. Então obtém o valor da `TextDisplayWebPart.FontStyle` propriedade e atualizações de qual item está selecionado no controle de lista suspensa (referenciado pelo `TextDisplayEditorPart.PartContentFontStyle` propriedade) em personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#6)]
+ [!code-vb[WebParts_EditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#6)]  
+  
+ A segunda parte do exemplo de código mostra como associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, `TextDisplayWebPart`, cria uma coleção de associado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles (nesse caso, há apenas um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle chamado `TextDisplayEditorPart` na coleção) em sua implementação do <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método. Esse método é executado quando o `TextDisplayWebPart` controle entra em modo de edição.  
+  
+ [!code-csharp[WebParts_EditorPart_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_EditorPart_Overview/CS/textdisplaywebpart.cs#4)]
+ [!code-vb[WebParts_EditorPart_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_EditorPart_Overview/VB/textdisplaywebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Uma classe que deriva de <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> classe deve implementar o <see cref="M:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges" /> método. O método implementado obtém uma referência para o controle associado usando o <see cref="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit" /> propriedade e, em seguida, as atualizações de <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle com os valores de propriedade da associado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartManager">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartManager WebPartManager" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> controle associado à página da Web atual.</summary>
+        <value>Uma referência para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartManager" /> na página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle precisa de uma referência para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> instância porque ele deve verificar o escopo atual de personalização da página para determinar o valor da <xref:System.Web.UI.WebControls.WebParts.EditorPart.Display%2A> propriedade. Escopo de personalização é determinado pela verificação de <xref:System.Web.UI.WebControls.WebParts.WebPartPersonalization.Scope%2A> propriedade, que é acessada por meio de <xref:System.Web.UI.WebControls.WebParts.WebPartManager.Personalization%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebPartToEdit">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.WebPart WebPartToEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPart WebPartToEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle que está sendo editado.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> que está atualmente em modo de edição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPart> controle (ou outro controle de servidor ou usuário) que está sendo editado corresponde ao valor da <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SelectedWebPart%2A> propriedade. Apenas uma <xref:System.Web.UI.WebControls.WebParts.WebPart> controle pode ser editado por vez e quando um controle está no modo de edição, o <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade fornece uma referência para esse controle.  
+  
+ Após o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zona adicionou o <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle à sua coleção de controles, em seguida, atribui o valor de seu próprio <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.WebPartToEdit%2A> propriedade para o <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade no <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle.  
+  
+ Um <xref:System.Web.UI.WebControls.WebParts.EditorPart> controlar usa o <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade especialmente em seus dois métodos críticos –<xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> e <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A>– para obter e definir os valores de propriedade para o controle associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zone">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebParts.EditorZoneBase Zone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.EditorZoneBase Zone" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.EditorPart.Zone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorZoneBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> zona que contém um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.EditorZoneBase" /> que contém o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Web.UI.WebControls.WebParts.EditorPart.Zone%2A> é somente leitura, ele fornece uma referência para o objeto de zona que contém o <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle e você pode alterar os valores de propriedade sobre a zona programaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

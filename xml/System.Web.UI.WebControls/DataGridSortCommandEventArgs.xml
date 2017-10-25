@@ -1,0 +1,141 @@
+<Type Name="DataGridSortCommandEventArgs" FullName="System.Web.UI.WebControls.DataGridSortCommandEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridSortCommandEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridSortCommandEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataGridSortCommandEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Web.UI.WebControls.DataGrid.SortCommand" /> do controle <see cref="T:System.Web.UI.WebControls.DataGrid" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a classificação está ativada, definindo o <xref:System.Web.UI.WebControls.DataGrid.AllowSorting%2A> propriedade do <xref:System.Web.UI.WebControls.DataGrid> controle `true`, <xref:System.Web.UI.WebControls.LinkButton> controles são processados no cabeçalho de cada coluna que tenha o <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> conjunto de propriedades. (Para colunas geradas automaticamente, o <xref:System.Web.UI.WebControls.DataGridColumn.SortExpression%2A> propriedade contém o mesmo valor que o campo de dados.) Esses links permitem que você classifique o <xref:System.Web.UI.WebControls.DataGrid> controle pela coluna selecionada. O <xref:System.Web.UI.WebControls.DataGrid.SortCommand> é gerado quando um <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs>, consulte o <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.DataGrid.SortCommand> evento para classificar um <xref:System.Web.UI.WebControls.DataGrid> controle.  
+  
+ [!code-aspx-csharp[DataGridAllowSorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridAllowSorting/CS/datagridallowsortingcs.aspx#1)]
+ [!code-aspx-vb[DataGridAllowSorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridAllowSorting/VB/datagridallowsortingvb.aspx#1)]  
+  
+ [!code-aspx-csharp[DataGridSortCommand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridSortCommand/CS/datagridsortcommandcs.aspx#1)]
+ [!code-aspx-vb[DataGridSortCommand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridSortCommand/VB/datagridsortcommandvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridSortCommandEventArgs (object commandSource, System.Web.UI.WebControls.DataGridCommandEventArgs dce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandSource, class System.Web.UI.WebControls.DataGridCommandEventArgs dce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataGridSortCommandEventArgs.#ctor(System.Object,System.Web.UI.WebControls.DataGridCommandEventArgs)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandSource" Type="System.Object" />
+        <Parameter Name="dce" Type="System.Web.UI.WebControls.DataGridCommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="commandSource">A origem do comando.</param>
+        <param name="dce">Um <see cref="T:System.Web.UI.WebControls.DataGridCommandEventArgs" /> que contém os dados do evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DataGridSortCommandEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs> classe.  
+  
+ Quando uma instância de <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs> é criado por uma chamada para o construtor, as seguintes propriedades são inicializadas com os valores especificados.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs.CommandSource%2A>|O valor de `commandSource` parâmetro.|  
+|<xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs.SortExpression%2A>|O valor de `dce.CommandArgument` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandSource">
+      <MemberSignature Language="C#" Value="public object CommandSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridSortCommandEventArgs.CommandSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fonte do comando.</summary>
+        <value>A origem do comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs.CommandSource%2A> para alterar a fonte de comando que gera o <xref:System.Web.UI.WebControls.DataGrid.SortCommand> evento. Porque esse evento é gerado somente quando você clica no cabeçalho de um link de <xref:System.Web.UI.WebControls.DataGrid> controle, a fonte retornada é um <xref:System.Web.UI.WebControls.DataGridItem> objeto que representa o cabeçalho. Essa propriedade pode ser usada para controlar programaticamente o cabeçalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs.CommandSource%2A> propriedade para controlar programaticamente o cabeçalho de <xref:System.Web.UI.WebControls.DataGrid> controle.  
+  
+ [!code-aspx-csharp[DataGridAllowSorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridAllowSorting/CS/datagridallowsortingcs.aspx#1)]
+ [!code-aspx-vb[DataGridAllowSorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridAllowSorting/VB/datagridallowsortingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortExpression">
+      <MemberSignature Language="C#" Value="public string SortExpression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataGridSortCommandEventArgs.SortExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a expressão usada para classificar o <see cref="T:System.Web.UI.WebControls.DataGrid" /> controle.</summary>
+        <value>A expressão usada para classificar o <see cref="T:System.Web.UI.WebControls.DataGrid" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs.SortExpression%2A> propriedade para determinar qual coluna o usuário selecionado para classificar o <xref:System.Web.UI.WebControls.DataGrid> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataGridSortCommandEventArgs.SortExpression%2A> propriedade para determinar qual coluna o usuário selecionado para classificar o <xref:System.Web.UI.WebControls.DataGrid> controlar.  
+  
+ [!code-aspx-csharp[DataGridAllowSorting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DataGridAllowSorting/CS/datagridallowsortingcs.aspx#1)]
+ [!code-aspx-vb[DataGridAllowSorting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DataGridAllowSorting/VB/datagridallowsortingvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

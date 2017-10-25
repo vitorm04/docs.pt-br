@@ -1,0 +1,93 @@
+<Type Name="SamlAccessDecision" FullName="System.IdentityModel.Tokens.SamlAccessDecision">
+  <TypeSignature Language="C#" Value="public enum SamlAccessDecision" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SamlAccessDecision extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlAccessDecision" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se a entidade de um <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> token de segurança é concedido acesso a um determinado recurso.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.SamlAccessDecision> às permissões de acesso express para um recurso em um <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> dentro de um <xref:System.IdentityModel.Tokens.SamlSecurityToken> token de segurança.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Deny">
+      <MemberSignature Language="C#" Value="Deny" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SamlAccessDecision Deny = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SamlAccessDecision.Deny" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o acesso a um recurso é negado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SamlAccessDecision Indeterminate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SamlAccessDecision.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o token de segurança do serviço que emitiu o <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> token de segurança não tem informações suficientes para determinar as permissões de acesso para um recurso específico. Um destinatário de <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> token de segurança deve usar outros meios para determinar as permissões de acesso do usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Permit">
+      <MemberSignature Language="C#" Value="Permit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IdentityModel.Tokens.SamlAccessDecision Permit = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IdentityModel.Tokens.SamlAccessDecision.Permit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.EnumMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o acesso a um recurso é concedido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,222 @@
+<Type Name="FormViewUpdateEventArgs" FullName="System.Web.UI.WebControls.FormViewUpdateEventArgs">
+  <TypeSignature Language="C#" Value="public class FormViewUpdateEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormViewUpdateEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FormViewUpdateEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.FormView.ItemUpdating" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FormView> controlar gera o <xref:System.Web.UI.WebControls.FormView.ItemUpdating> evento quando um botão de atualização (um botão com seu `CommandName` propriedade definida como "Update") dentro do controle é clicado, mas antes de <xref:System.Web.UI.WebControls.FormView> controle atualiza o registro. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada, como HTML codificação ou validar os valores de um registro antes de atualizá-lo na fonte de dados, sempre que esse evento ocorre.  
+  
+ Um <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você determine o valor de um argumento opcional comando enviado para o <xref:System.Web.UI.WebControls.FormView> controlar e para indicar se a operação de atualização deve ser cancelada. Para determinar o valor do argumento de comando, use o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.CommandArgument%2A> propriedade. Para cancelar a operação de atualização, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`. Se você precisar acessar os valores originais do campo de chave do registro que está sendo atualizado, use o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade. Os valores originais do campo de chave não podem ser acessados usando o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.OldValues%2A> propriedade. Valores atualizados (que incluem valores de campo de chave atualizado, se você permitir que o usuário edite os campos de chave) são acessados usando o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues%2A> propriedade.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs> objeto passado para o método de manipulação de eventos para o <xref:System.Web.UI.WebControls.FormView.ItemUpdating> evento para validar valores inseridos pelo usuário.  
+  
+ [!code-aspx-csharp[FormViewUpdateEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewUpdateEventArgs/CS/formviewupdateeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewUpdateEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewUpdateEventArgs/VB/formviewupdateeventargsvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormViewUpdateEventArgs (object commandArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object commandArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FormViewUpdateEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="commandArgument" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="commandArgument">Um argumento de comando opcional passado para o <see cref="T:System.Web.UI.WebControls.FormView" /> controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FormViewUpdateEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs> classe.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.CommandArgument%2A>|O valor de `commandArgument` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public object CommandArgument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewUpdateEventArgs.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o argumento de comando para a operação de atualização é passado para o <see cref="T:System.Web.UI.WebControls.FormView" /> controle.</summary>
+        <value>O argumento de comando para a operação de atualização é passado para o <see cref="T:System.Web.UI.WebControls.FormView" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um botão de atualização para um dos modelos em um <xref:System.Web.UI.WebControls.FormView> controle, opcionalmente, você pode especificar um argumento para o botão de comando usando o <xref:System.Web.UI.WebControls.IButtonControl.CommandArgument%2A?displayProperty=nameWithType> propriedade. O argumento de comando geralmente contém informações opcionais que você deseja acompanhar o comando de atualização, como o valor para o campo de chave. O <xref:System.Web.UI.WebControls.FormViewInsertEventArgs.CommandArgument%2A> é fornecida como uma maneira conveniente para determinar o valor do argumento de comando do botão de atualização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém os pares de nome/valor de campo de chave original para o registro para atualizar.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> que contém um dicionário de pares de nome/valor de campo de chave original para o registro para atualizar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade contém os valores originais dos campos de chave listados no <xref:System.Web.UI.WebControls.FormView.DataKeyNames%2A> propriedade de um <xref:System.Web.UI.WebControls.FormView> controle. Use o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade para acessar os valores originais dos campos de chave do registro atualizar. Por exemplo, você pode usar esses valores para manter um registro de registros atualizados.  
+  
+> [!NOTE]
+>  Se você permitir que o usuário atualizar os valores dos campos de chave, o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade contém os valores de campo de chave original. Os valores atualizados são armazenados no <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade retorna um <xref:System.Collections.Specialized.OrderedDictionary> objeto que implementa o <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> interface. O <xref:System.Collections.Specialized.OrderedDictionary> objeto contém <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> objetos que representam os campos de registro atualizado. Para acessar os nomes de campo, use o <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> propriedade o <xref:System.Collections.Specialized.OrderedDictionary> objeto. Da mesma forma, você pode acessar os valores do campo usando o <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> propriedade.  
+  
+> [!NOTE]
+>  Como um atalho, você também pode usar o indexador de <xref:System.Collections.Specialized.OrderedDictionary> objeto para acessar o campo valores diretamente. Controles que contam com a ordem dos campos da fonte de dados (como <xref:System.Web.UI.WebControls.AccessDataSource>) pode acessar os valores do campo somente por índice.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade para acessar o valor do campo da chave do registro que está sendo atualizado.  
+  
+ [!code-aspx-csharp[FormViewUpdateEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewUpdateEventArgs/CS/formviewupdateeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewUpdateEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewUpdateEventArgs/VB/formviewupdateeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary NewValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary NewValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém os novos pares de nome/valor de campo para o registro para atualizar.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> que contém um dicionário de pares de nome/valor de campo novo para o registro para atualizar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues%2A> propriedade para acessar os novos valores de campo para o registro a ser atualizado. Por exemplo, você pode usar esses valores para manter um registro de registros atualizados.  
+  
+> [!NOTE]
+>  Se você permitir que o usuário atualizar os valores dos campos de chave, o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade contém os valores de campo de chave original. Os valores atualizados são armazenados no <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues%2A> propriedade retorna um <xref:System.Collections.Specialized.OrderedDictionary> objeto que implementa o <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> interface. O <xref:System.Collections.Specialized.OrderedDictionary> objeto contém <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> objetos que representam os campos de registro atualizado. Para acessar os nomes de campo, use o <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> propriedade o <xref:System.Collections.Specialized.OrderedDictionary> objeto. Da mesma forma, você pode acessar os valores do campo usando o <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> propriedade.  
+  
+> [!NOTE]
+>  Como um atalho, você também pode usar o indexador de <xref:System.Collections.Specialized.OrderedDictionary> objeto para acessar o campo valores diretamente. Controles que contam com a ordem dos campos da fonte de dados (como <xref:System.Web.UI.WebControls.AccessDataSource>) pode acessar os valores do campo somente por índice.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues%2A> propriedade para acessar os novos valores inseridos pelo usuário para os campos de não-chave do registro que está sendo atualizado.  
+  
+ [!code-aspx-csharp[FormViewUpdatedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewUpdatedEventArgs/CS/formviewupdatedeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewUpdatedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewUpdatedEventArgs/VB/formviewupdatedeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary OldValues { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary OldValues" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FormViewUpdateEventArgs.OldValues" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém os pares de nome/valor de campo não-chave original para o registro para atualizar.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> que contém um dicionário de pares de nome/valor de campo não-chave original para o registro para atualizar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.OldValues%2A> propriedade para acessar os valores originais do campo de não-chave de registro atualizado. Por exemplo, você pode usar esses valores para manter um registro de registros atualizados. Alguns dados da fonte de controles, como o <xref:System.Web.UI.WebControls.SqlDataSource> e <xref:System.Web.UI.WebControls.ObjectDataSource> controla a detecção de conflito de suporte (verificação de simultaneidade otimista). Quando o <xref:System.Web.UI.WebControls.SqlDataSource.ConflictDetection%2A> propriedade de um desses controles é definida como `ConflictOptions.CompareAllValues`, os valores originais do registro são comparados com os valores na fonte de dados antes de uma operação de atualização é executada. Se um registro foi modificado por outro usuário ao mesmo tempo, o registro não será atualizado.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.OldValues%2A> a propriedade não contém campos de chave. Se você permitir que o usuário atualizar os valores dos campos de chave, os valores originais do campo de chave são armazenados no <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.Keys%2A> propriedade. Os valores atualizados são armazenados no <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.NewValues%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.FormViewUpdatedEventArgs.NewValues%2A> propriedade retorna um <xref:System.Collections.Specialized.OrderedDictionary> objeto que implementa o <xref:System.Collections.Specialized.IOrderedDictionary?displayProperty=nameWithType> interface. O <xref:System.Collections.Specialized.OrderedDictionary> objeto contém <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> objetos que representam os campos de registro atualizado. Para acessar os nomes de campo, use o <xref:System.Collections.Specialized.OrderedDictionary.Keys%2A> propriedade o <xref:System.Collections.Specialized.OrderedDictionary> objeto. Da mesma forma, você pode acessar os valores do campo usando o <xref:System.Collections.Specialized.OrderedDictionary.Values%2A> propriedade.  
+  
+> [!NOTE]
+>  Como um atalho, você também pode usar o indexador de <xref:System.Collections.Specialized.OrderedDictionary> objeto para acessar o campo valores diretamente. Controles que contam com a ordem dos campos da fonte de dados (como <xref:System.Web.UI.WebControls.AccessDataSource>) pode acessar os valores do campo somente por índice.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.FormViewUpdateEventArgs.OldValues%2A> propriedade para acessar os valores originais dos campos de não-chave do registro que está sendo atualizado.  
+  
+ [!code-aspx-csharp[FormViewUpdateEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/FormViewUpdateEventArgs/CS/formviewupdateeventargscs.aspx#1)]
+ [!code-aspx-vb[FormViewUpdateEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/FormViewUpdateEventArgs/VB/formviewupdateeventargsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

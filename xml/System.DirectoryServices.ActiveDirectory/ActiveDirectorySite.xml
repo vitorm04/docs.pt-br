@@ -1,0 +1,545 @@
+<Type Name="ActiveDirectorySite" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectorySite">
+  <TypeSignature Language="C#" Value="public class ActiveDirectorySite : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectorySite extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> define um conjunto de controladores de domínio que estão bem conectados em termos de velocidade e custo. Um objeto de site consiste em um conjunto de uma ou mais sub-redes de IP.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectorySite (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto para criar este site.</param>
+        <param name="siteName">O nome para o novo site.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> classe usando especificado <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">Essa exceção ocorrerá para qualquer um dos seguintes motivos:  
+  
+-   O destino de <paramref name="context" /> parâmetro não é uma floresta, o conjunto de configurações, o controlador de domínio ou um servidor AD LDS.  
+  
+-   <paramref name="siteName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ou <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Authentication.AuthenticationException">As credenciais fornecidas não são válidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjacentSites">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection AdjacentSites { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection AdjacentSites" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.AdjacentSites" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de sites são conectados por meio de um link de site comum com esse objeto de site.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection" /> coleção que contém uma coleção somente leitura de sites são conectados por meio de um link de site comum com este site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BridgeheadServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection BridgeheadServers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection BridgeheadServers" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.BridgeheadServers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de servidores de pontes para este site.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> coleção que contém uma coleção somente leitura dos servidores de diretório neste site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui o site atual.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Se os recursos gerenciados devem ser liberados; <see langword="false" /> se apenas os recursos não gerenciados devem ser liberados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domains">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainCollection Domains { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DomainCollection Domains" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Domains" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os domínios no site.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainCollection" /> objeto que contém todos os domínios no site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByName">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ActiveDirectorySite FindByName (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ActiveDirectorySite FindByName(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.FindByName(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que é válido para este site.</param>
+        <param name="siteName">O nome do site para localizar.</param>
+        <summary>Retorna um site com base em um nome de site.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> objeto para o site solicitado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">O site não pôde ser encontrado para o determinado <paramref name="siteName" /> no <paramref name="context" /> especificado.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">Essa exceção ocorrerá para qualquer um dos seguintes motivos:  
+  
+-   O destino de <paramref name="context" /> parâmetro não é uma floresta, o conjunto de configurações, o controlador de domínio ou um servidor AD LDS.  
+  
+-   <paramref name="siteName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ou <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Authentication.AuthenticationException">As credenciais fornecidas não são válidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetComputerSite">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ActiveDirectorySite GetComputerSite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ActiveDirectorySite GetComputerSite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.GetComputerSite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySite</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o site de que este computador é membro.</summary>
+        <returns>Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> que contém o site atual do chamador.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">O computador do chamador não pertence a um site.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço do diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.DirectoryEntry" /> objeto para este site.</summary>
+        <returns>O <see cref="T:System.DirectoryServices.DirectoryEntry" /> objeto para este site.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InterSiteTopologyGenerator">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServer InterSiteTopologyGenerator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DirectoryServer InterSiteTopologyGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.InterSiteTopologyGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o servidor de diretório que serve como o gerador de topologia entre sites.</summary>
+        <value>Uma leitura/gravação <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServer" /> objeto que representa o servidor de diretório que serve como o gerador de topologia entre sites.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir que a modificação de um objeto de conexão entre sites não será substituída pelo Knowledge Consistency Checker (KCC), você deve fazer a modificação no computador que possui a função ISTG (gerador de topologia entre sites) no site do objeto de conexão modificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o tipo de transporte.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IntraSiteReplicationSchedule">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule IntraSiteReplicationSchedule { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule IntraSiteReplicationSchedule" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.IntraSiteReplicationSchedule" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a configuração padrão para a agenda de replicação para o site.</summary>
+        <value>Uma leitura/gravação <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule" /> que representa a configuração padrão para a agenda de replicação para o site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public string Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do site.</summary>
+        <value>Um valor de cadeia de caracteres que obtém ou define o local do site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do site.</summary>
+        <value>Um valor de cadeia de caracteres que contém o nome do site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as opções de site.</summary>
+        <value>Uma leitura/gravação <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions" /> valor que obtém ou define as opções de site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRpcBridgeheadServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServerCollection PreferredRpcBridgeheadServers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DirectoryServerCollection PreferredRpcBridgeheadServers" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.PreferredRpcBridgeheadServers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma coleção de servidores de diretório que são designados como servidores de pontes preferenciais para o transporte RPC.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServerCollection" /> objeto que contém os servidores de diretório que são designados como servidores de pontes preferenciais para o transporte RPC.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredSmtpBridgeheadServers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DirectoryServerCollection PreferredSmtpBridgeheadServers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.DirectoryServerCollection PreferredSmtpBridgeheadServers" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.PreferredSmtpBridgeheadServers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma coleção de servidores de diretório que são designados como servidores de pontes preferenciais para o transporte SMTP.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryServerCollection" /> objeto que contém uma coleção de servidores de diretório que são designados como servidores de pontes preferenciais para o transporte SMTP.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava as alterações para o objeto para o repositório de serviços de domínio do Active Directory.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">O objeto de site já existe.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o tipo de transporte.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Servers">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection Servers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection Servers" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Servers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma coleção de servidores de diretório somente leitura no site.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection" /> que contém uma coleção somente leitura dos servidores de diretório do site.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteLinks">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection SiteLinks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection SiteLinks" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.SiteLinks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de links de site que envolvem a este site.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection" /> objeto que contém uma coleção de links de site que este site está em somente leitura.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subnets">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnetCollection Subnets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnetCollection Subnets" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Subnets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnetCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma coleção gravável de sub-redes no site.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnetCollection" /> objeto que contém uma coleção gravável de sub-redes no site.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnetCollection> objeto é gravável. Depois da modificação, o <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.Save%2A?displayProperty=nameWithType> método deve ser chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome do site.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o nome do site.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

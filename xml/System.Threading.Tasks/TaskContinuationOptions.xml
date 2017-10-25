@@ -1,0 +1,496 @@
+<Type Name="TaskContinuationOptions" FullName="System.Threading.Tasks.TaskContinuationOptions">
+  <TypeSignature Language="C#" Value="public enum TaskContinuationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TaskContinuationOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskContinuationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o comportamento de uma tarefa criada com o método <see cref="M:System.Threading.Tasks.Task.ContinueWith(System.Action{System.Threading.Tasks.Task},System.Threading.CancellationToken,System.Threading.Tasks.TaskContinuationOptions,System.Threading.Tasks.TaskScheduler)" /> ou <see cref="M:System.Threading.Tasks.Task`1.ContinueWith(System.Action{System.Threading.Tasks.Task{`0}},System.Threading.Tasks.TaskContinuationOptions)" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttachedToParent">
+      <MemberSignature Language="C#" Value="AttachedToParent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions AttachedToParent = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a continuação, se for uma tarefa filho, será anexada a um pai na hierarquia de tarefas. A continuação pode ser uma tarefa filho somente se seu antecessor também é uma tarefa filho. Por padrão, uma tarefa de filho (ou seja, uma interna tarefa criada por uma tarefa externa) é executada independentemente de seu pai. Você pode usar o <see cref="F:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent" /> opção para que as tarefas pai e filho sejam sincronizadas.  
+  
+ Observe que, se uma tarefa pai estiver configurada com a opção <see cref="F:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach" />, a opção <see cref="F:System.Threading.Tasks.TaskCreationOptions.AttachedToParent" /> na tarefa filho não terá efeito, e a tarefa filho será executada como uma tarefa filho desanexada.  
+  
+ Para obter mais informações, consulte [Tarefas filho anexadas e desanexadas](~/docs/standard/parallel-programming/attached-and-detached-child-tasks.md).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DenyChildAttach">
+      <MemberSignature Language="C#" Value="DenyChildAttach" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions DenyChildAttach = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.DenyChildAttach" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que qualquer tarefa filho (ou seja, qualquer tarefa interna aninhada criada por essa continuação) criada com a opção <see cref="F:System.Threading.Tasks.TaskCreationOptions.AttachedToParent" /> e que tenta ser executada como uma tarefa filho anexada não poderá ser anexada à tarefa pai e será executada como uma tarefa filho desanexada. Para obter mais informações, consulte [Tarefas filho anexadas e desanexadas](~/docs/standard/parallel-programming/attached-and-detached-child-tasks.md).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSynchronously">
+      <MemberSignature Language="C#" Value="ExecuteSynchronously" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions ExecuteSynchronously = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.ExecuteSynchronously" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a tarefa de continuação deve ser executada de forma síncrona. Com essa opção especificada, a continuação é executada no mesmo thread que faz a transição para o estado final da tarefa antecedente. Se o antecessor já foi concluída quando a continuação é criada, a continuação será executado no thread que cria a continuação. Se o antecessor <see cref="T:System.Threading.CancellationTokenSource" /> é descartado em um <see langword="finally" /> bloco (<see langword="Finally" /> no Visual Basic), uma continuação com essa opção será executado em que <see langword="finally" /> bloco. Somente continuações de curta execução devem ser executadas de forma síncrona.  
+  
+ Como a tarefa é executada de forma síncrona, não é necessário chamar um método como <see cref="M:System.Threading.Tasks.Task.Wait" /> para garantir que o thread de chamada aguarda até que a tarefa seja concluída.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HideScheduler">
+      <MemberSignature Language="C#" Value="HideScheduler" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions HideScheduler = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.HideScheduler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as tarefas criadas pela continuação com a chamada de métodos como <see cref="M:System.Threading.Tasks.Task.Run(System.Action)" /> ou <see cref="M:System.Threading.Tasks.Task.ContinueWith(System.Action{System.Threading.Tasks.Task})" /> observem o agendador padrão (<see cref="P:System.Threading.Tasks.TaskScheduler.Default" />) em vez do agendador no qual essa continuação está sendo executada como o agendador atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LazyCancellation">
+      <MemberSignature Language="C#" Value="LazyCancellation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions LazyCancellation = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.LazyCancellation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Em caso de cancelamento da continuação, impede a conclusão da continuação até que o antecessor seja concluído.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LongRunning">
+      <MemberSignature Language="C#" Value="LongRunning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions LongRunning = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.LongRunning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma continuação será uma operação de execução longa e de alta granularidade. Fornece uma dica para o <see cref="T:System.Threading.Tasks.TaskScheduler" /> de que podem ser necessárias assinaturas em excesso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando nenhuma opção de continuação é especificada, especifica que o comportamento padrão deve ser usado ao executar uma continuação. A continuação executa de forma assíncrona quando a tarefa antecedente for concluído, independentemente do final do antecessor <see cref="P:System.Threading.Tasks.Task.Status" /> valor da propriedade. Se a continuação for uma tarefa filho, ela será criada como uma tarefa aninhada desanexada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotOnCanceled">
+      <MemberSignature Language="C#" Value="NotOnCanceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions NotOnCanceled = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a tarefa de continuação não deve ser agendada se seu antecessor foi cancelado. Um antecessor será cancelada se seu <see cref="P:System.Threading.Tasks.Task.Status" /> propriedade após a conclusão é <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />. Essa opção não é válida para continuações de várias tarefas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotOnFaulted">
+      <MemberSignature Language="C#" Value="NotOnFaulted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions NotOnFaulted = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a tarefa de continuação não deve ser agendada se seu antecessor gerou uma exceção sem tratamento. Um antecessor gerará uma exceção sem tratamento se a propriedade <see cref="P:System.Threading.Tasks.Task.Status" /> após a conclusão for <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" />. Essa opção não é válida para continuações de várias tarefas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotOnRanToCompletion">
+      <MemberSignature Language="C#" Value="NotOnRanToCompletion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions NotOnRanToCompletion = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.NotOnRanToCompletion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a tarefa de continuação não deve ser agendada se seu antecessor foi executado até a conclusão. Um antecessor é executado até a conclusão, se seu <see cref="P:System.Threading.Tasks.Task.Status" /> propriedade após a conclusão é <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />. Essa opção não é válida para continuações de várias tarefas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyOnCanceled">
+      <MemberSignature Language="C#" Value="OnlyOnCanceled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions OnlyOnCanceled = int32(196608)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnCanceled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a continuação deve ser agendada somente se seu antecessor foi cancelado.  Um antecessor será cancelada se seu <see cref="P:System.Threading.Tasks.Task.Status" /> propriedade após a conclusão é <see cref="F:System.Threading.Tasks.TaskStatus.Canceled" />. Essa opção não é válida para continuações de várias tarefas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyOnFaulted">
+      <MemberSignature Language="C#" Value="OnlyOnFaulted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions OnlyOnFaulted = int32(327680)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a tarefa de continuação deve ser agendada somente se seu antecessor gerou uma exceção sem tratamento. Um antecessor gerará uma exceção sem tratamento se a propriedade <see cref="P:System.Threading.Tasks.Task.Status" /> após a conclusão for <see cref="F:System.Threading.Tasks.TaskStatus.Faulted" />.  
+  
+ O <see cref="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnFaulted" /> opção garante que o <see cref="P:System.Threading.Tasks.Task.Exception" /> propriedade no antecessor não é <see langword="null" />. Use essa propriedade para capturar a exceção e ver qual exceção causou a falha na tarefa. Se você não tem acesso a <see cref="P:System.Threading.Tasks.Task.Exception" /> propriedade, a exceção é sem tratamento. Além disso, se você tentar acessar o <see cref="P:System.Threading.Tasks.Task`1.Result" /> propriedade de uma tarefa que foi cancelada ou apresentou falha, uma nova exceção é gerada.  
+  
+ Essa opção não é válida para continuações de várias tarefas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlyOnRanToCompletion">
+      <MemberSignature Language="C#" Value="OnlyOnRanToCompletion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions OnlyOnRanToCompletion = int32(393216)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.OnlyOnRanToCompletion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a continuação deve ser agendada somente se seu antecessor foi executado até a conclusão. Um antecessor é executado até a conclusão, se seu <see cref="P:System.Threading.Tasks.Task.Status" /> propriedade após a conclusão é <see cref="F:System.Threading.Tasks.TaskStatus.RanToCompletion" />. Essa opção não é válida para continuações de várias tarefas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferFairness">
+      <MemberSignature Language="C#" Value="PreferFairness" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions PreferFairness = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.PreferFairness" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma dica para um <see cref="T:System.Threading.Tasks.TaskScheduler" /> para agendar a tarefa na ordem em que as tarefas foram agendadas, para que seja mais provável que as tarefas agendadas anteriormente sejam executadas antes e as tarefas agendadas posteriormente sejam executadas depois.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RunContinuationsAsynchronously">
+      <MemberSignature Language="C#" Value="RunContinuationsAsynchronously" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.Tasks.TaskContinuationOptions RunContinuationsAsynchronously = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.Tasks.TaskContinuationOptions.RunContinuationsAsynchronously" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.TaskContinuationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a tarefa de continuação deve ser executada de forma assíncrona.  Essa opção tem precedência sobre <see cref="F:System.Threading.Tasks.TaskContinuationOptions.ExecuteSynchronously" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

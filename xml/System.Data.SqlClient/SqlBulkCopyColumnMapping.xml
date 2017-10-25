@@ -1,0 +1,452 @@
+<Type Name="SqlBulkCopyColumnMapping" FullName="System.Data.SqlClient.SqlBulkCopyColumnMapping">
+  <TypeSignature Language="C#" Value="public sealed class SqlBulkCopyColumnMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SqlBulkCopyColumnMapping extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlClient</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define o mapeamento entre uma coluna em uma fonte de dados da instância de <see cref="T:System.Data.SqlClient.SqlBulkCopy" /> e uma coluna na tabela de destino da instância.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mapeamentos de coluna definem o mapeamento entre a fonte de dados e a tabela de destino.  
+  
+ Se mapeamentos não forem definidos — ou seja, o <xref:System.Data.SqlClient.SqlBulkCopy.ColumnMappings%2A> coleção está vazia, as colunas serão mapeadas implicitamente com base na posição ordinal. Para que isso funcione, os esquemas de origem e destino devem corresponder. Se não, um <xref:System.InvalidOperationException> será lançada.  
+  
+ Se o <xref:System.Data.SqlClient.SqlBulkCopy.ColumnMappings%2A> coleção não está vazia, nem todas as colunas presentes na fonte de dados deve ser especificado. Aquelas não mapeadas pela coleção são ignoradas.  
+  
+ Você pode consultar as colunas de origem e de destino por nome ou ordinal. Você também pode combinar por nome e referências de coluna por ordinal na mesma coleção de mapeamentos.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, e cada coluna de destino está na mesma posição ordinal como sua coluna de origem correspondente, os nomes de coluna não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlBulkCopyColumnMapping ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMapping.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Construtor padrão que inicializa uma nova <see cref="T:System.Data.SqlClient.SqlBulkCopyColumnMapping" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar esse construtor, em seguida, você deve definir a fonte para o mapeamento usando o <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceColumn%2A> propriedade ou o <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceOrdinal%2A> propriedade e defina o destino para o mapeamento usando o <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationColumn%2A> propriedade ou o <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationOrdinal%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlBulkCopyColumnMapping (int sourceColumnOrdinal, int destinationOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 sourceColumnOrdinal, int32 destinationOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMapping.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceColumnOrdinal" Type="System.Int32" />
+        <Parameter Name="destinationOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnOrdinal">A posição ordinal da coluna de origem na fonte de dados.</param>
+        <param name="destinationOrdinal">A posição ordinal da coluna de destino dentro da tabela de destino.</param>
+        <summary>Cria uma nova coluna de mapeamento, usando números ordinais de coluna para se referir a colunas de origem e de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa com base nas posições ordinais das colunas.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdinal/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlBulkCopyColumnMapping (int sourceColumnOrdinal, string destinationColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 sourceColumnOrdinal, string destinationColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMapping.#ctor(System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceColumnOrdinal" Type="System.Int32" />
+        <Parameter Name="destinationColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumnOrdinal">A posição ordinal da coluna de origem na fonte de dados.</param>
+        <param name="destinationColumn">O nome da coluna de destino na tabela de destino.</param>
+        <summary>Cria um novo mapeamento de coluna, usando um ordinal de coluna para referir-se a coluna de origem e um nome de coluna para a coluna de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingOrdinalName#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdinalName/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingOrdinalName#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdinalName/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlBulkCopyColumnMapping (string sourceColumn, int destinationOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceColumn, int32 destinationOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMapping.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="destinationOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumn">O nome da coluna de origem na fonte de dados.</param>
+        <param name="destinationOrdinal">A posição ordinal da coluna de destino dentro da tabela de destino.</param>
+        <summary>Cria um novo mapeamento de coluna, usando um nome de coluna para referir-se a coluna de origem e uma coluna ordinal da coluna de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingNameOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingNameOrdinal/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingNameOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingNameOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlBulkCopyColumnMapping (string sourceColumn, string destinationColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceColumn, string destinationColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlBulkCopyColumnMapping.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceColumn" Type="System.String" />
+        <Parameter Name="destinationColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceColumn">O nome da coluna de origem na fonte de dados.</param>
+        <param name="destinationColumn">O nome da coluna de destino na tabela de destino.</param>
+        <summary>Cria um novo mapeamento de colunas, usando nomes de coluna para se referir a colunas de origem e de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMapping#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMapping/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationColumn">
+      <MemberSignature Language="C#" Value="public string DestinationColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DestinationColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nome da coluna mapeado na tabela do banco de dados de destino.</summary>
+        <value>O valor da cadeia de caracteres da propriedade <see cref="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationColumn" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationColumn%2A> e <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationOrdinal%2A> propriedades são mutuamente exclusivas. O último valor definido terá precedência.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingDestinationColumn#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationColumn/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingDestinationColumn#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationColumn/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationOrdinal">
+      <MemberSignature Language="C#" Value="public int DestinationOrdinal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DestinationOrdinal" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationOrdinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Valor ordinal da coluna de destino dentro da tabela de destino.</summary>
+        <value>O valor inteiro da propriedade <see cref="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationOrdinal" /> ou -1, se a propriedade não tiver sido definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationColumn%2A> e <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.DestinationOrdinal%2A> propriedades são mutuamente exclusivas. O último valor definido terá precedência.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceColumn">
+      <MemberSignature Language="C#" Value="public string SourceColumn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceColumn" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nome da coluna que está sendo mapeada na fonte de dados.</summary>
+        <value>O valor da cadeia de caracteres da propriedade <see cref="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceColumn" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceColumn%2A> e <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceOrdinal%2A> propriedades são mutuamente exclusivas. O último valor definido terá precedência.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingDestinationColumn#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationColumn/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingDestinationColumn#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationColumn/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceOrdinal">
+      <MemberSignature Language="C#" Value="public int SourceOrdinal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SourceOrdinal" />
+      <MemberSignature Language="DocId" Value="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceOrdinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlClient</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição ordinal da coluna de origem na fonte de dados.</summary>
+        <value>O valor inteiro da propriedade <see cref="P:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceOrdinal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceColumn%2A> e <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping.SourceOrdinal%2A> propriedades são mutuamente exclusivas. O último valor definido terá precedência.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo copia em massa dados de uma tabela de origem no **AdventureWorks** banco de dados de exemplo para uma tabela de destino no mesmo banco de dados. Embora o número de colunas no destino corresponde ao número de colunas na fonte, os nomes de coluna e posições ordinais não coincidem. <xref:System.Data.SqlClient.SqlBulkCopyColumnMapping>objetos são usados para criar um mapa de coluna para a cópia em massa.  
+  
+> [!IMPORTANT]
+>  Este exemplo não funcionará a menos que você criou as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](~/docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe para usar **SqlBulkCopy** somente. Se as tabelas de origem e destino estiverem na mesma instância do SQL Server, é mais fácil e rápido para usar um Transact-SQL `INSERT … SELECT` instrução para copiar os dados.  
+  
+ [!code-csharp[DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingDestinationOrdinal/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,178 @@
+<Type Name="WellKnownClientTypeEntry" FullName="System.Runtime.Remoting.WellKnownClientTypeEntry">
+  <TypeSignature Language="C#" Value="public class WellKnownClientTypeEntry : System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WellKnownClientTypeEntry extends System.Runtime.Remoting.TypeEntry" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.WellKnownClientTypeEntry" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.TypeEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém os valores para um tipo de objeto registrado no cliente como um tipo ativado por servidor (chamada única ou singleton).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de servidor ativado podem ser chamada único ou singleton. Se uma classe é registrada como um única chamada tipo, uma nova instância é criada toda vez que chega de uma chamada do cliente. Todas as chamadas para um objeto de singleton são tratadas por uma instância do objeto, a menos que esse objeto foi coletado.  
+  
+ Qualquer cliente que saiba o URI de um objeto de servidor ativado registrado pode obter um proxy para este objeto registrando o canal que ele prefere com <xref:System.Runtime.Remoting.Channels.ChannelServices> e ativar o objeto chamando `new` ou <xref:System.Activator.GetObject%2A?displayProperty=nameWithType>. Para ativar um objeto de servidor ativado com `new`, você deve primeiro registrar o tipo de objeto de servidor ativado no cliente usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método. Chamando <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A>, você permitirá que a infra-estrutura de comunicação remota do local do objeto remoto, que permite que o `new` palavra-chave para criá-lo. Se, por outro lado, você usa o <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> método para ativar um objeto de servidor ativado, você deve fornecê-lo com a URL do objeto como um argumento, portanto, nenhum registro anterior no cliente é necessário.  
+  
+ Para obter uma descrição detalhada de objetos de servidor ativado e ativação de objeto remoto, consulte [&#91;\< Topic://cpconActivation > &#93; ](http://msdn.microsoft.com/en-us/e90d0c64-00da-4080-ae78-a6c558825c25).  
+  
+   
+  
+## Examples  
+ [!code-cpp[WellKnownClientTypeEntry_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WellKnownClientTypeEntry_Client/CPP/wellknownclienttypeentry_client.cpp#1)]
+ [!code-csharp[WellKnownClientTypeEntry_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WellKnownClientTypeEntry_Client/CS/wellknownclienttypeentry_client.cs#1)]
+ [!code-vb[WellKnownClientTypeEntry_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WellKnownClientTypeEntry_Client/VB/wellknownclienttypeentry_client.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WellKnownClientTypeEntry (Type type, string objectUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string objectUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownClientTypeEntry.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="objectUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do tipo de servidor ativado.</param>
+        <param name="objectUrl">A URL do tipo de servidor ativado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" /> classe com o tipo de dado e a URL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WellKnownClientTypeEntry (string typeName, string assemblyName, string objectUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string typeName, string assemblyName, string objectUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownClientTypeEntry.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+        <Parameter Name="objectUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo do tipo de servidor ativado.</param>
+        <param name="assemblyName">O nome do assembly do tipo de servidor ativado.</param>
+        <param name="objectUrl">A URL do tipo de servidor ativado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" /> classe com o tipo fornecido, o nome do assembly e a URL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationUrl">
+      <MemberSignature Language="C#" Value="public string ApplicationUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownClientTypeEntry.ApplicationUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL do aplicativo para ativar o tipo no.</summary>
+        <value>A URL do aplicativo para ativar o tipo no.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A URL do aplicativo é opcional e deve ser definida como a URL do aplicativo correspondente ao objeto de servidor ativado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownClientTypeEntry.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> o servidor ativado do tipo de cliente.</summary>
+        <value>Obtém o <see cref="T:System.Type" /> o servidor ativado do tipo de cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectUrl">
+      <MemberSignature Language="C#" Value="public string ObjectUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ObjectUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.WellKnownClientTypeEntry.ObjectUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL do objeto cliente servidor ativado.</summary>
+        <value>A URL do objeto cliente servidor ativado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.WellKnownClientTypeEntry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome de tipo completo, o nome do assembly e a URL do objeto de servidor ativado do tipo de cliente como um <see cref="T:System.String" />.</summary>
+        <returns>O nome de tipo completo, o nome do assembly e a URL do objeto do cliente do servidor ativado tipo como um <see cref="T:System.String" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Runtime.Remoting.WellKnownClientTypeEntry.ApplicationUrl%2A> não é `null`, ele é retornado no final da cadeia de caracteres.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

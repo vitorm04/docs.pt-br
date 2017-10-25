@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Proxies">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Proxies" /> namespace contém classes que controlam e fornecem funcionalidade para proxies. Um proxy é um objeto local é uma imagem de um objeto remoto. Proxies habilitar clientes acessar objetos entre limites de comunicação remota.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma das classes mais importantes do <xref:System.Runtime.Remoting.Proxies> namespace é o <xref:System.Runtime.Remoting.Proxies.RealProxy> de classe, que fornece a funcionalidade básica para todos os proxies de comunicação remota e pode ser usado para criar proxies personalizados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

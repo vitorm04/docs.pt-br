@@ -1,0 +1,100 @@
+<Type Name="GeoPositionStatus" FullName="System.Device.Location.GeoPositionStatus">
+  <TypeSignature Language="C#" Value="public enum GeoPositionStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GeoPositionStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Location.GeoPositionStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica a capacidade do localizador do Windows em fornecer atualizações de localização.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Device.Location.GeoCoordinateWatcher.StatusChanged> eventos e imprima atual <xref:System.Device.Location.GeoPositionStatus>.  
+  
+ [!code-csharp[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.showstatusupdates/cs/showstatusupdates.cs#1)]
+ [!code-vb[System.Device.Location.ShowStatusUpdates#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.showstatusupdates/vb/ShowStatusUpdates.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus Disabled = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O localizador do Windows está desabilitado. No Windows 7, esse é o caso quando a plataforma de Sensor e localização foi desabilitada pela política de grupo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Initializing">
+      <MemberSignature Language="C#" Value="Initializing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus Initializing = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.Initializing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O localizador do Windows está inicializando.  Por exemplo, GPS que ainda está obtendo uma correção tem esse status.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoData">
+      <MemberSignature Language="C#" Value="NoData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus NoData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.NoData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum dado de localização está disponível nos localizadores.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não se aplicam as condições para desabilitado, <xref:System.Device.Location.GeoCoordinateWatcher> tiver esse status antes que ele foi iniciado e depois que ele foi interrompido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ready">
+      <MemberSignature Language="C#" Value="Ready" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Location.GeoPositionStatus Ready = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoPositionStatus.Ready" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoPositionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um localizador do Windows está pronto para fornecer novos dados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,184 @@
+<Type Name="WebFormsReferenceManager" FullName="System.Web.UI.Design.WebFormsReferenceManager">
+  <TypeSignature Language="C#" Value="public abstract class WebFormsReferenceManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebFormsReferenceManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebFormsReferenceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base para acessar os tipos, diretivas e controles no documento do projeto da Web atual. Essa classe deve ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebFormsReferenceManager> classe base é implementada por hosts designers para fornecer acesso a tipos, diretivas e controles de usuário definidos em um documento de projeto da Web. Uma classe do designer de controle pode usar o <xref:System.Web.UI.Design.WebFormsReferenceManager> para acessar as definições no documento atual e adicionar um novo prefixo de marca para o documento atual.  
+  
+ Você acessar o <xref:System.Web.UI.Design.WebFormsReferenceManager> serviços fornecidos pelo designer host por meio de <xref:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager%2A> propriedade de um <xref:System.Web.UI.Design.WebFormsRootDesigner> implementação. O <xref:System.Web.UI.Design.WebFormsRootDesigner> implementação pode ser acessada de duas maneiras:  
+  
+-   Classes derivadas de <xref:System.Web.UI.Design.ControlDesigner> pode usar o <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> propriedade para acessar um <xref:System.Web.UI.Design.WebFormsRootDesigner> implementação fornecida pelo host do designer. O <xref:System.Web.UI.Design.WebFormsReferenceManager> implementação é fornecida por meio de <xref:System.Web.UI.Design.WebFormsRootDesigner.ReferenceManager%2A> propriedade <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> propriedade.  
+  
+-   Outras classes de designer podem acessar o <xref:System.Web.UI.Design.WebFormsRootDesigner> implementação primeiro obtendo o <xref:System.ComponentModel.Design.IDesignerHost> implementação por meio do designer do componente de serviços <xref:System.ComponentModel.Component.Site%2A>e, em seguida, chamar o <xref:System.ComponentModel.Design.IDesignerHost.GetDesigner%2A> método usando o designer host <xref:System.ComponentModel.Design.IDesignerHost.RootComponent%2A> propriedade.  
+  
+    > [!NOTE]
+    >  <xref:System.Web.UI.Design.WebFormsReferenceManager>substitui a interface obsoleta <xref:System.Web.UI.Design.IWebFormReferenceManager>. Hosts mais antigos de designer só podem oferecer suporte a <xref:System.Web.UI.Design.IWebFormReferenceManager> implementação de interface. Verifique se o <xref:System.Web.UI.Design.WebFormsRootDesigner> e <xref:System.Web.UI.Design.WebFormsReferenceManager> implementações fornecidas pelo host do designer não são `null` garantir que o designer host implementa o <xref:System.Web.UI.Design.WebFormsRootDesigner> e <xref:System.Web.UI.Design.WebFormsReferenceManager> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebFormsReferenceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsReferenceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebFormsReferenceManager" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.Design.WebFormsReferenceManager> classe é abstrata, não é possível criar uma instância de <xref:System.Web.UI.Design.WebFormsReferenceManager> diretamente usando o construtor.  
+  
+ Ao derivar do <xref:System.Web.UI.Design.WebFormsReferenceManager> classe, substitua o construtor para implementar as ações de inicialização personalizada para sua implementação da referência do Gerenciador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegisterDirectives">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ICollection GetRegisterDirectives ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ICollection GetRegisterDirectives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsReferenceManager.GetRegisterDirectives" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as diretivas do registro para o documento do projeto atual.</summary>
+        <returns>Uma coleção de cadeias de caracteres que representa as diretivas do registro definidas no documento atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTagPrefix">
+      <MemberSignature Language="C#" Value="public abstract string GetTagPrefix (Type objectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetTagPrefix(class System.Type objectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsReferenceManager.GetTagPrefix(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">O tipo do objeto.</param>
+        <summary>Obtém o prefixo de marca para o tipo de objeto especificado.</summary>
+        <returns>A marca de prefixo para o tipo de objeto especificado, se encontrado; Caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetType">
+      <MemberSignature Language="C#" Value="public abstract Type GetType (string tagPrefix, string tagName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetType(string tagPrefix, string tagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsReferenceManager.GetType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagPrefix" Type="System.String" />
+        <Parameter Name="tagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefix">O prefixo da marca do tipo para recuperar.</param>
+        <param name="tagName">O nome da marca do tipo para recuperar.</param>
+        <summary>Obtém o tipo de objeto com o prefixo especificado e o nome de marca.</summary>
+        <returns>O <see cref="T:System.Type" /> do objeto com o prefixo especificado e o nome, se encontrado; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUserControlPath">
+      <MemberSignature Language="C#" Value="public abstract string GetUserControlPath (string tagPrefix, string tagName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetUserControlPath(string tagPrefix, string tagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsReferenceManager.GetUserControlPath(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagPrefix" Type="System.String" />
+        <Parameter Name="tagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefix">O prefixo da marca do controle de usuário para recuperar.</param>
+        <param name="tagName">O nome da marca do controle de usuário para recuperar.</param>
+        <summary>Obtém o caminho de URL relativo para o controle de usuário com o prefixo especificado e o nome de marca.</summary>
+        <returns>Uma cadeia de caracteres que representa o caminho de URL relativo para o controle de usuário especificada, se encontrado; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebFormsReferenceManager.GetUserControlPath%2A>usa o prefixo de marca e o nome para localizar a diretiva de registro de controle de usuário no documento atual e retorna o `src` definido na diretiva register do valor do atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterTagPrefix">
+      <MemberSignature Language="C#" Value="public abstract string RegisterTagPrefix (Type objectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string RegisterTagPrefix(class System.Type objectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebFormsReferenceManager.RegisterTagPrefix(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="objectType">O tipo para adicionar um prefixo de marca para o documento atual.</param>
+        <summary>Adiciona um prefixo de marca para o tipo especificado.</summary>
+        <returns>A cadeia de caracteres de prefixo de marca.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o prefixo de marca já existir, uma nova diretiva de registro não é adicionada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

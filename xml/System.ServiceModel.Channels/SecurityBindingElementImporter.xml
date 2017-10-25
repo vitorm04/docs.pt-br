@@ -1,0 +1,86 @@
+<Type Name="SecurityBindingElementImporter" FullName="System.ServiceModel.Channels.SecurityBindingElementImporter">
+  <TypeSignature Language="C#" Value="public class SecurityBindingElementImporter : System.ServiceModel.Description.IPolicyImportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityBindingElementImporter extends System.Object implements class System.ServiceModel.Description.IPolicyImportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.SecurityBindingElementImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IPolicyImportExtension</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um ponto de extensibilidade para estender a importação da política de segurança padrão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityBindingElementImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElementImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.SecurityBindingElementImporter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPolicyRedirections">
+      <MemberSignature Language="C#" Value="public int MaxPolicyRedirections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxPolicyRedirections" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.SecurityBindingElementImporter.MaxPolicyRedirections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo permitido de redirecionamentos de política.</summary>
+        <value>O número máximo permitido de redirecionamentos de política.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cota é útil ao importar a política de segurança que envolve um token emitido. A política de token emitida pode conter um link para a política da parte emissão, que em si pode envolver um token emitido. Para importar a política de segurança para um serviço que requer autenticação do token emitida pode envolver a importação de política dos serviços de emissão de token. Os serviços estão configurados incorretamente podem resultar em um ciclo nesses redirecionamentos de política. Essa configuração impede que o cliente entrar em um loop infinito devido a serviços configurados incorretamente, limitando o número máximo de redirecionamentos (10) que importação da política do cliente ao obter emitido a política de token.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy">
+      <MemberSignature Language="C#" Value="void IPolicyImportExtension.ImportPolicy (System.ServiceModel.Description.MetadataImporter importer, System.ServiceModel.Description.PolicyConversionContext policyContext);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy(class System.ServiceModel.Description.MetadataImporter importer, class System.ServiceModel.Description.PolicyConversionContext policyContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.SecurityBindingElementImporter.System#ServiceModel#Description#IPolicyImportExtension#ImportPolicy(System.ServiceModel.Description.MetadataImporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.MetadataImporter" />
+        <Parameter Name="policyContext" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer">O <see cref="T:System.ServiceModel.Description.MetadataImporter" /> que você pode usar para modificar o processo de importação.</param>
+        <param name="policyContext">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que você pode usar para inserir a declaração de política personalizada.</param>
+        <summary>Importa uma declaração de política personalizadas sobre associações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,139 @@
+<Type Name="StrictAndMessageFilter" FullName="System.ServiceModel.Dispatcher.StrictAndMessageFilter">
+  <TypeSignature Language="C#" Value="public class StrictAndMessageFilter : System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StrictAndMessageFilter extends System.ServiceModel.Dispatcher.MessageFilter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.StrictAndMessageFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Dispatcher.MessageFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma consulta que testa se uma mensagem satisfaz ambos especificados <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Correspondências executadas por esse filtro serão sempre avaliada ambos <xref:System.ServiceModel.Dispatcher.MessageFilter> objetos antes de retornar um resultado.  
+  
+ Essa operação e faz não o circuito pequeno, se o primeiro <xref:System.ServiceModel.Dispatcher.MessageFilter> avaliado retornará false.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StrictAndMessageFilter (System.ServiceModel.Dispatcher.MessageFilter filter1, System.ServiceModel.Dispatcher.MessageFilter filter2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Dispatcher.MessageFilter filter1, class System.ServiceModel.Dispatcher.MessageFilter filter2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.StrictAndMessageFilter.#ctor(System.ServiceModel.Dispatcher.MessageFilter,System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter1" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+        <Parameter Name="filter2" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter1">O primeiro objeto <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />.</param>
+        <param name="filter2">O segundo objeto <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.StrictAndMessageFilter" /> classe usando especificado <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterTable&lt;TFilterData&gt;">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt; CreateFilterTable&lt;TFilterData&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!!TFilterData&gt; CreateFilterTable&lt;TFilterData&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.StrictAndMessageFilter.CreateFilterTable``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TFilterData" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TFilterData">O tipo de dados associados ao filtro.</typeparam>
+        <summary>Cria um novo <see cref="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" />.</summary>
+        <returns>Criada uma nova <see cref="T:System.ServiceModel.Dispatcher.IMessageFilterTable`1" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Match">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Testa se uma mensagem ou um buffer corresponde ao filtro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao testar uma condição de correspondência, ambos <xref:System.ServiceModel.Dispatcher.MessageFilter> objetos são avaliados antes de retornar um resultado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.StrictAndMessageFilter.Match(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> a ser testado.</param>
+        <summary>Testa se uma mensagem corresponde a ambos os <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos especificados nesse filtro.</summary>
+        <returns>**True** se corresponder a mensagem contida no buffer de ambos os filtros de mensagem; caso contrário, **false**.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (System.ServiceModel.Channels.MessageBuffer buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(class System.ServiceModel.Channels.MessageBuffer buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.StrictAndMessageFilter.Match(System.ServiceModel.Channels.MessageBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> a ser testado.</param>
+        <summary>Testa se uma mensagem em buffer coincide com os dois o <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos especificados nesse filtro.</summary>
+        <returns>**True** se corresponder a mensagem contida no buffer de ambos os filtros de mensagem; caso contrário, **false**.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao testar uma condição de correspondência, ambos <xref:System.ServiceModel.Dispatcher.MessageFilter> objetos são avaliados antes de retornar um resultado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

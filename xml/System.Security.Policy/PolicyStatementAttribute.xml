@@ -1,0 +1,122 @@
+<Type Name="PolicyStatementAttribute" FullName="System.Security.Policy.PolicyStatementAttribute">
+  <TypeSignature Language="C#" Value="public enum PolicyStatementAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed PolicyStatementAttribute extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.PolicyStatementAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os sinalizadores especiais de atributo para a política de segurança em grupos de códigos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sinalizadores de atributo definido em declarações de política controlam como os grupos de códigos de mesclagem com outros grupos de código e outros níveis de política.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Policy.PolicyStatementAttribute All = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.PolicyStatementAttribute.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatementAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todos os sinalizadores de atributo são definidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclusive">
+      <MemberSignature Language="C#" Value="Exclusive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Policy.PolicyStatementAttribute Exclusive = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.PolicyStatementAttribute.Exclusive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatementAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sinalizador de grupo de código exclusivo. Quando um grupo de códigos tem esse sinalizador definido, somente as permissões associadas a esse grupo de código são concedidas ao código que pertencem ao grupo de códigos. No máximo, um grupo de código, correspondência de uma determinada parte do código pode ser definido como exclusivo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LevelFinal">
+      <MemberSignature Language="C#" Value="LevelFinal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Policy.PolicyStatementAttribute LevelFinal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.PolicyStatementAttribute.LevelFinal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatementAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O sinalizador que representa uma instrução de política que faz com que os níveis inferiores de política não será avaliado como parte da operação de resolução, permitindo efetivamente o nível de política substituir os níveis inferiores.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Nothing">
+      <MemberSignature Language="C#" Value="Nothing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Policy.PolicyStatementAttribute Nothing = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Policy.PolicyStatementAttribute.Nothing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatementAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum sinalizador está definido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

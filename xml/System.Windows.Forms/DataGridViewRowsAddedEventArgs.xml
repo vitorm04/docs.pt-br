@@ -1,0 +1,122 @@
+<Type Name="DataGridViewRowsAddedEventArgs" FullName="System.Windows.Forms.DataGridViewRowsAddedEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewRowsAddedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewRowsAddedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowsAddedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.DataGridView.RowsAdded" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.RowsAdded> evento ocorre quando linhas são adicionadas a um <xref:System.Windows.Forms.DataGridView> controle. Quando o usuário adiciona uma nova linha usando a linha para novos registros, o <xref:System.Windows.Forms.DataGridViewRowsAddedEventArgs.RowIndex%2A> valor no manipulador para esse evento é igual para o índice do novo local da linha para novos registros, que é maior do que a linha que acabou de adicionar. Quando você adicionar linhas programaticamente, no entanto, o <xref:System.Windows.Forms.DataGridViewRowsAddedEventArgs.RowIndex%2A> valor é o índice da primeira linha adicionada.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.DataGridView.RowsAdded> evento usado para incrementar o número de linhas em uma máquina virtual <xref:System.Windows.Forms.DataGridView>. O número de linhas é usado no <xref:System.Windows.Forms.DataGridView.CellValueNeeded> manipulador de modo que ele saiba quando mostrar uma célula em branco em vez de uma célula inicializada para uma nova linha. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> tópico de referência.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView._Virtual#20](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CPP/virtual.cpp#20)]
+ [!code-csharp[System.Windows.Forms.DataGridView._Virtual#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CS/virtual.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridView._Virtual#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/VB/virtual.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewRowsAddedEventArgs (int rowIndex, int rowCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex, int32 rowCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowsAddedEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="rowCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da primeira linha adicionada.</param>
+        <param name="rowCount">O número de linhas que foram adicionados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewRowsAddedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowsAddedEventArgs.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas que foram adicionados.</summary>
+        <value>O número de linhas que foram adicionados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.RowsAdded?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.RowsAdded?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#357](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#357)]
+ [!code-vb[System.Windows.Forms.EventExamples#357](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#357)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowsAddedEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice da primeira linha adicionada.</summary>
+        <value>O índice da primeira linha adicionada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o usuário adiciona uma nova linha usando a linha para novos registros, o valor dessa propriedade é igual para o índice do novo local da linha para novos registros, o que é maior do que a linha que acabou de adicionar. Quando você adicionar linhas programaticamente, no entanto, o valor dessa propriedade é o índice da primeira linha adicionada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridView.RowsAdded?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridView> chamado `DataGridView1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridView.RowsAdded?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#357](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#357)]
+ [!code-vb[System.Windows.Forms.EventExamples#357](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#357)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

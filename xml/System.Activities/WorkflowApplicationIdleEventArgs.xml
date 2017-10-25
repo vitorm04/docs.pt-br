@@ -1,0 +1,63 @@
+<Type Name="WorkflowApplicationIdleEventArgs" FullName="System.Activities.WorkflowApplicationIdleEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationIdleEventArgs : System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowApplicationIdleEventArgs extends System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationIdleEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.WorkflowApplicationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre a instância de fluxo de trabalho ficou ociosa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código inspeciona <xref:System.Activities.WorkflowApplicationIdleEventArgs> passado para o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> de uma instância de <xref:System.Activities.WorkflowApplication> . Nesse exemplo a ociosa indo de fluxo de trabalho tem um <xref:System.Activities.Bookmark> com um nome de `EnterGuess`, possuídas por uma atividade chamada `ReadInt`. Este exemplo de código baseia-se da [como: executar um fluxo de trabalho](~/docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), que faz parte do [Tutorial de Introdução &#91;. NET Framework 4.5 &#93; ](~/docs/framework/windows-workflow-foundation/getting-started-tutorial.md). Se o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> nessa etapa é alterado para conter o código deste exemplo, a seguinte saída são exibidas.  
+  
+```Output  
+BookmarkName: EnterGuess - OwnerDisplayName: ReadInt  
+```  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bookmarks">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.Hosting.BookmarkInfo&gt; Bookmarks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Activities.Hosting.BookmarkInfo&gt; Bookmarks" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.Hosting.BookmarkInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção somente leitura de indicadores para a instância de fluxo de trabalho.</summary>
+        <value>Uma coleção somente leitura de indicadores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código inspeciona <xref:System.Activities.WorkflowApplicationIdleEventArgs> passado para o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> de uma instância de <xref:System.Activities.WorkflowApplication> . Nesse exemplo a ociosa indo de fluxo de trabalho tem um <xref:System.Activities.Bookmark> com um nome de `EnterGuess`, possuídas por uma atividade chamada `ReadInt`. Este exemplo de código baseia-se da [como: executar um fluxo de trabalho](~/docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), que faz parte do [Tutorial de Introdução &#91;. NET Framework 4.5 &#93; ](~/docs/framework/windows-workflow-foundation/getting-started-tutorial.md). Se o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> nessa etapa é alterado para conter o código deste exemplo, a seguinte saída são exibidas.  
+  
+```Output  
+BookmarkName: EnterGuess - OwnerDisplayName: ReadInt  
+```  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

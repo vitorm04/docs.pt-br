@@ -1,0 +1,96 @@
+<Type Name="ForestTrustRelationshipCollision" FullName="System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision">
+  <TypeSignature Language="C#" Value="public class ForestTrustRelationshipCollision" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ForestTrustRelationshipCollision extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um registro de colisão resultantes de um conflito entre os registros de relação de confiança de floresta.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CollisionRecord">
+      <MemberSignature Language="C#" Value="public string CollisionRecord { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CollisionRecord" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.CollisionRecord" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o registro de colisão do serviço do Active Directory Domain Services subjacente.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o registro de colisão resultantes de um conflito entre os registros de relação de confiança de floresta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollisionType">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType CollisionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType CollisionType" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.CollisionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType" /> valor para o conflito de confiança de floresta.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType" /> valor que indica o tipo de colisão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainCollisionOption">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.DomainCollisionOptions DomainCollisionOption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.DomainCollisionOptions DomainCollisionOption" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.DomainCollisionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.DomainCollisionOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.ActiveDirectory.DomainCollisionOptions" /> valor para o conflito de confiança de floresta.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.DomainCollisionOptions" /> valor que fornece informações sobre a colisão quando o <see cref="P:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.CollisionType" /> é do tipo <see cref="T:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLevelNameCollisionOption">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions TopLevelNameCollisionOption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions TopLevelNameCollisionOption" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.TopLevelNameCollisionOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions" /> valor para o conflito de confiança de floresta.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions" /> valor que fornece informações sobre a colisão quando o <see cref="P:System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision.CollisionType" /> é do tipo <see cref="T:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,351 @@
+<Type Name="SerializerWriterCollator" FullName="System.Windows.Documents.Serialization.SerializerWriterCollator">
+  <TypeSignature Language="C#" Value="public abstract class SerializerWriterCollator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SerializerWriterCollator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Serialization.SerializerWriterCollator" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define os métodos abstratos necessários para implementar uma serialização de plug-in do documento <see cref="T:System.Windows.Media.Visual" /> agrupamento.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Um <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> é criado com o <see cref="Overload:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator" /> método o <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> classe.  
+  
+ O <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> grava no mesmo fluxo de saída, conforme são gravados pelo <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> que criou o <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SerializerWriterCollator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" />.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Um <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> é criado com o <see cref="Overload:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator" /> método o <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> classe.  
+  
+ O <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" /> grava no mesmo fluxo de saída, conforme são gravados pelo <see cref="T:System.Windows.Documents.Serialization.SerializerWriter" /> que criou o <see cref="T:System.Windows.Documents.Serialization.SerializerWriterCollator" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginBatchWrite">
+      <MemberSignature Language="C#" Value="public abstract void BeginBatchWrite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginBatchWrite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.BeginBatchWrite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, inicia o início de uma operação de gravação em lote.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public abstract void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cancela uma síncrona <see cref="Overload:System.Windows.Documents.Serialization.SerializerWriterCollator.Write" /> operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public abstract void CancelAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.CancelAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cancela uma assíncrona <see cref="Overload:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync" /> operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndBatchWrite">
+      <MemberSignature Language="C#" Value="public abstract void EndBatchWrite ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndBatchWrite() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.EndBatchWrite" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, conclui uma operação de gravação em lote.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Write">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, grava de maneira síncrona uma determinada <see cref="T:System.Windows.Media.Visual" /> elemento para o fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.Write%2A> métodos gravados no fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.Write(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O elemento visual para gravar a serialização <see cref="T:System.IO.Stream" />.</param>
+        <summary>Quando substituído em uma classe derivada, grava de maneira síncrona uma determinada <see cref="T:System.Windows.Media.Visual" /> elemento para o fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.Write%2A> método grava o fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.Write(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">Um <see cref="T:System.Windows.Media.Visual" /> que é gravado no fluxo.</param>
+        <param name="printTicket">Um objeto que especifica as preferências de como o material deve ser impresso.</param>
+        <summary>Quando substituído em uma classe derivada, grava de maneira síncrona uma determinada <see cref="T:System.Windows.Media.Visual" /> elemento junto com um tíquete de impressão associado ao fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.Write%2A> método grava o fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteAsync">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, grava de maneira assíncrona um determinado <see cref="T:System.Windows.Media.Visual" /> elemento para o fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync%2A> métodos gravados no fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O elemento visual para gravar a serialização <see cref="T:System.IO.Stream" />.</param>
+        <summary>Quando substituído em uma classe derivada, grava de maneira assíncrona um determinado <see cref="T:System.Windows.Media.Visual" /> elemento para o fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync%2A> métodos gravados no fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync(System.Windows.Media.Visual,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O elemento visual para gravar a serialização <see cref="T:System.IO.Stream" />.</param>
+        <param name="userState">Um objeto especificado pelo chamador para identificar a operação de gravação assíncrona.</param>
+        <summary>Quando substituído em uma classe derivada, grava de maneira assíncrona um determinado <see cref="T:System.Windows.Media.Visual" /> elemento com um identificador de evento especificado para o fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync%2A> métodos gravados no fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ `userState`é passado para o <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> quando o <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> evento ocorre.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O elemento visual para gravar a serialização <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">O padrão de impressão preferências para o <c>visual</c> elemento.</param>
+        <summary>Quando substituído em uma classe derivada, grava de maneira assíncrona um determinado <see cref="T:System.Windows.Media.Visual" /> elemento junto com um tíquete de impressão associado ao fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync%2A> método grava o fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ `printTicket`pode ser `null` se não houver nenhuma configuração de impressão preferencial.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public abstract void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O elemento visual para gravar a serialização <see cref="T:System.IO.Stream" />.</param>
+        <param name="printTicket">O padrão de impressão preferências para o <c>visual</c> elemento.</param>
+        <param name="userState">Um objeto especificado pelo chamador para identificar a operação de gravação assíncrona.</param>
+        <summary>Quando substituído em uma classe derivada, grava de maneira assíncrona um determinado <see cref="T:System.Windows.Media.Visual" /> elemento junto com um tíquete de impressão associado e um identificador para o fluxo de serialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.Serialization.SerializerWriterCollator.WriteAsync%2A> método grava o fluxo associado a <xref:System.Windows.Documents.Serialization.SerializerWriter> que criou o <xref:System.Windows.Documents.Serialization.SerializerWriterCollator> da chamada para <xref:System.Windows.Documents.Serialization.SerializerWriter.CreateVisualsCollator%2A>.  
+  
+ `printTicket`pode ser `null` se não houver nenhuma configuração de impressão preferencial.  
+  
+ `userState`é passado para o <xref:System.Windows.Documents.Serialization.WritingCompletedEventHandler> quando o <xref:System.Windows.Documents.Serialization.SerializerWriter.WritingCompleted> evento ocorre.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

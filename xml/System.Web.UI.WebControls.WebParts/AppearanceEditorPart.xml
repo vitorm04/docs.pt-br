@@ -1,0 +1,309 @@
+<Type Name="AppearanceEditorPart" FullName="System.Web.UI.WebControls.WebParts.AppearanceEditorPart">
+  <TypeSignature Language="C#" Value="public sealed class AppearanceEditorPart : System.Web.UI.WebControls.WebParts.EditorPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AppearanceEditorPart extends System.Web.UI.WebControls.WebParts.EditorPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.AppearanceEditorPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.EditorPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um controle de editor que permite aos usuários finais editar várias propriedades de interface de usuário em um associado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> classe é um controle de editor que deriva de <xref:System.Web.UI.WebControls.WebParts.EditorPart> de classe e é usado para editar as propriedades que afetam a aparência de um associado <xref:System.Web.UI.WebControls.WebParts.WebPart> ou outro controle de servidor.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle permite que os usuários finais editar várias propriedades de interface do usuário de um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. O tipo de controle que aparece na página para editar o valor de cada propriedade é listado na célula adjacente da tabela a seguir.  
+  
+|Propriedade|Usado para editar a propriedade de controle|  
+|--------------|-----------------------------------|  
+|<xref:System.Web.UI.WebControls.WebParts.Part.Title%2A>|Um <xref:System.Web.UI.WebControls.TextBox> controle é usado para definir o texto do título.|  
+|<xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A>|Um <xref:System.Web.UI.WebControls.DropDownList> controle é usado para selecionar o tipo de opção de título e borda é usado.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPart.Direction%2A>|Um <xref:System.Web.UI.WebControls.DropDownList> controle é usado para selecionar a direção do fluxo de conteúdo na página.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPart.Height%2A>|Um <xref:System.Web.UI.WebControls.TextBox> controle é usado para definir um número para a altura e um <xref:System.Web.UI.WebControls.DropDownList> controle é usado para selecionar as unidades.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPart.Width%2A>|Um <xref:System.Web.UI.WebControls.TextBox> controle é usado para definir um número para a altura e um <xref:System.Web.UI.WebControls.DropDownList> controle é usado para selecionar as unidades.|  
+|<xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A>|Um <xref:System.Web.UI.WebControls.CheckBox> controle é usado para indicar se o controle está oculto.|  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle se torna visível apenas quando uma página de Web Parts está em modo de edição e quando um determinado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle foi selecionado para edição. O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle, como todos os outros <xref:System.Web.UI.WebControls.WebParts.EditorPart> controla, reside em um <xref:System.Web.UI.WebControls.WebParts.EditorZone> zona.  
+  
+> [!IMPORTANT]
+>  Um <xref:System.Web.UI.WebControls.WebParts.EditorZone> zona só pode conter <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles, e <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles não podem ser colocados em qualquer outro tipo de zona.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> classe tem um conjunto mínimo de propriedades. O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.Title%2A> propriedade é usada para obter ou definir uma cadeia de caracteres que é exibida como título quando o controle está visível. O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.DefaultButton%2A> propriedade define a propriedade herdada do <xref:System.Web.UI.WebControls.Panel> controlar, de forma que o padrão de controle que recebe o foco definido dentro de <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle é o mesmo que o padrão na base de <xref:System.Web.UI.WebControls.Panel> controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> classe também tem dois métodos importantes. O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges%2A> método substitui o método base a partir de <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe. Esse método é fundamental, porque ele permite obter os valores de propriedade de <xref:System.Web.UI.WebControls.WebParts.WebPart> controle é edição e atribuindo-os para os campos de controle de editor. O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.ApplyChanges%2A> método também é importante, porque usa os valores definidos pelo usuário nos controles de edição e atualiza os valores de propriedade do controle que está sendo editado.  
+  
+ Na maioria dos casos o <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle deve ser usado em formato de persistência da página, declarando um `<asp:appearanceditorpart>` elemento dentro de um `<zonetemplate>` elemento, que por sua vez, está contido por um `<asp:editorzone>` elemento em uma página da Web.  
+  
+ Para editar outras propriedades e o comportamento de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, você pode usar outros <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles fornecidos com o conjunto de controles de Web Parts. Esses controles incluem o <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart>, o <xref:System.Web.UI.WebControls.WebParts.LayoutEditorPart>e o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart>. Fornecido <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles devem fornecer a maioria dos recursos de edição necessárias para editar <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, mas você também pode criar um controle editor personalizado herdando do <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe. Para obter um exemplo de código, consulte o <xref:System.Web.UI.WebControls.WebParts.EditorPart> tópico de visão geral da classe.  
+  
+> [!NOTE]
+>  Para melhorar a acessibilidade, a <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle é processado em um `<fieldset>` elemento. O `<fieldset>` elemento agrupa um conjunto relacionado de controles usados para edição no <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle e facilita a navegação com guias entre esses controles para visual (como navegadores comuns) e agentes de usuário orientada a fala (como o software de leitura de tela).  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ A marcação processada por padrão para este controle pode não estar de acordo com os padrões de acessibilidade, como as diretrizes de prioridade 1 conteúdo WCAG Web Accessibility Guidelines 1.0 (). Para obter detalhes sobre o suporte de acessibilidade para este controle, consulte [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como declarar uma <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> control em uma página da Web e habilitá-lo editar várias propriedades de interface do usuário de um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. O exemplo de código tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle e um <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle, juntamente com uma referência a um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+-   Uma classe que contém um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ O código-fonte para o controle de usuário proveniente de outro tópico. Para este exemplo de código funcione, você precisa obter o arquivo. ascx para o controle de usuário da [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) tópico e coloque o arquivo na mesma pasta que a página. aspx neste exemplo de código.  
+  
+ A segunda parte do exemplo de código é a página da Web. Ele contém uma referência declarativa para um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle, com um filho `<zonetemplate>` elemento que contém referências declarativas para um <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle. Além disso, a página faz referência à personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar, usando um `Register` diretiva para o assembly e o `<aspSample:TextDisplayWebPart>` elemento para o controle.  
+  
+ [!code-aspx-csharp[WebParts_AppearanceEditorPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_AppearanceEditorPart_Overview/CS/appearanceeditorpartcs.aspx#1)]
+ [!code-aspx-vb[WebParts_AppearanceEditorPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_AppearanceEditorPart_Overview/VB/appearanceeditorpartvb.aspx#1)]  
+  
+ A terceira parte do exemplo de código é um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> classe denominada `TextDisplayWebPart`, que é referenciado na página da Web. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_AppearanceEditorPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_AppearanceEditorPart_Overview/CS/textdisplaywebpart.cs#3)]
+ [!code-vb[WebParts_AppearanceEditorPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_AppearanceEditorPart_Overview/VB/textdisplaywebpart.vb#3)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **modo de edição** no **modo de exibição** controle de lista suspensa para alternar para modo de edição. Você pode clicar no menu de verbos (seta para baixo) na barra de título do `TextDisplayWebPart` de controle e, em seguida, clique em **editar** para o controle de edição. Quando a interface do usuário de edição estiver visível, você pode ver o <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle. Se você fizer alterações a edição da interface do usuário e clique no **aplicar** botão, você pode usar o **modo de exibição** lista suspensa para retornar a página para o modo de procura e ver o efeito total das alterações de edição.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppearanceEditorPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.AppearanceEditorPart" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyChanges">
+      <MemberSignature Language="C#" Value="public override bool ApplyChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ApplyChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.ApplyChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva os valores de uma <see cref="T:System.Web.UI.WebControls.WebParts.AppearanceEditorPart" /> controle para as propriedades correspondentes na associado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</summary>
+        <returns>
+          <see langword="true" />Se a ação de salvar os valores do <see cref="T:System.Web.UI.WebControls.WebParts.AppearanceEditorPart" /> o controle para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle for bem-sucedida; caso contrário (se ocorrer um erro), <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.ApplyChanges%2A> é um método crítico em um <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle. Ele é chamado quando o usuário clica em um botão que representa um Okey ou um verbo aplicar na interface do usuário edição (IU).  
+  
+ Finalidade do método é salvar os valores que um usuário tiver definido em um <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle para as propriedades correspondentes na associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. O controle associado é referenciado no herdadas <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.ApplyChanges%2A> método tenta definir as propriedades a seguir em associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle:  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.Part.Title%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.Part.ChromeType%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.WebPart.Direction%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.WebPart.Height%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.WebPart.Width%2A>  
+  
+-   <xref:System.Web.UI.WebControls.WebParts.WebPart.Hidden%2A>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Ocorre um erro ao definir o valor de qualquer uma das seguintes propriedades no <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle que está sendo editada:  
+  
+ <see cref="P:System.Web.UI.WebControls.WebParts.Part.Title" /><see cref="P:System.Web.UI.WebControls.WebParts.Part.ChromeType" /><see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Direction" /><see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Height" /><see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Width" /><see cref="P:System.Web.UI.WebControls.WebParts.WebPart.Hidden" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public override string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui a propriedade base herdada da <see cref="T:System.Web.UI.WebControls.Panel" /> controle para ocultar a propriedade de designers e impedir que sejam afetados por temas. Embora seja público, essa propriedade é usada para a renderização padrão deste controle e não se destina a ser chamado no código do desenvolvedor.</summary>
+        <value>Uma cadeia de caracteres que contém a ID do <see cref="T:System.Web.UI.WebControls.Button" /> controle que recebe o foco padrão em um <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncChanges">
+      <MemberSignature Language="C#" Value="public override void SyncChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SyncChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os valores de propriedade de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> de controle e os atribui associados <see cref="T:System.Web.UI.WebControls.WebParts.AppearanceEditorPart" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges%2A> é um método crítico em um <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle. Ele implementa o <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A?displayProperty=nameWithType> método da classe base, recupera os valores atuais de associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar e atualiza os controles de <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle com esses valores para um usuário pode editá-los.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges%2A> método é chamado sempre que os valores associados <xref:System.Web.UI.WebControls.WebParts.WebPart> controle pode ter alterado. Para uma <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle, o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zona que contém as chamadas de controle de <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges%2A> método, para que os valores no <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controle sempre são sincronizados com os valores associados <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Outro caso em que o <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges%2A> método é chamado quando um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle está no modo de edição.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Chamadas de conjunto de controle de Web Parts a <see cref="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges" /> método dentro de herdadas <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> método, para que se qualquer alteração ocorreu depois que o usuário último modo de exibição de controle antes da edição (por exemplo, um usuário administrativo compartilhado fez alterações para o controle que afetaria todos os usuários), essas alterações seria evidentes durante o processo de edição.  
+  
+ Se você criar um controle personalizado, você pode seguir a mesma abordagem e chamar o <see cref="M:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.SyncChanges" /> método a partir de herdadas <see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)" /> método para garantir que as alterações intermediárias são sincronizadas, mas não é necessário fazer isso.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um título para o controle de editor.</summary>
+        <value>Uma cadeia de caracteres que é usada como o título do controle. O valor padrão é um nome de controle calculado fornecidas pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.Title%2A> o valor da propriedade é exibido na barra de título de um <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controlar quando o controle está visível no modo de edição. Quando o controle for declarado em uma página, você pode definir um valor para o `Title` atributo. Se você não fornecer um valor para o título, um valor específico da cultura padrão é usado para descrever os tipos de propriedades que esse controle permite que os usuários editem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart.Title%2A> propriedade. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> tópico de visão geral da classe.  
+  
+ O exemplo de código mostra como definir o título na persistência de página Formatar quando o `<asp:appearanceeditorpart>` elemento é declarado em uma página.  
+  
+ [!code-aspx-csharp[WebParts_AppearanceEditorPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_AppearanceEditorPart_Overview/CS/appearanceeditorpartcs.aspx#2)]
+ [!code-aspx-vb[WebParts_AppearanceEditorPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_AppearanceEditorPart_Overview/VB/appearanceeditorpartvb.aspx#2)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **modo de edição** no **modo de exibição** controle de lista suspensa para alternar para modo de edição. Você pode clicar no menu de verbos (seta para baixo) na barra de título do `TextDisplayWebPart` de controle e, em seguida, clique em **editar** para o controle de edição. Quando a interface do usuário (UI) edição estiver visível, você pode ver o <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> título personalizado do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,103 @@
+<Type Name="SelectionMode" FullName="System.Windows.Forms.SelectionMode">
+  <TypeSignature Language="C#" Value="public enum SelectionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SelectionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SelectionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o comportamento de seleção de uma caixa de listagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelas classes como <xref:System.Windows.Forms.ListBox> e <xref:System.Windows.Forms.CheckedListBox>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Forms.ListBox.GetSelected%2A> método para determinar quais itens em uma <xref:System.Windows.Forms.ListBox> são selecionadas para selecionar os itens que não estão selecionados e desmarque os itens que são selecionados. O exemplo também demonstra como usar o <xref:System.Windows.Forms.ListBox.SelectionMode%2A> propriedade para habilitar um <xref:System.Windows.Forms.ListBox> ter mais de um item e usa selecionados a <xref:System.Windows.Forms.ListBox.Sorted%2A> propriedade para demonstrar como classificar itens em uma <xref:System.Windows.Forms.ListBox> automaticamente. Este exemplo supõe que um <xref:System.Windows.Forms.ListBox>, denominado `listBox1`, foi adicionado a um formulário e que o `InitializeMyListBox` definido no exemplo do método é chamado da <xref:System.Windows.Forms.Form.Load> evento do formulário.  
+  
+ [!code-cpp[ListBox.GetSelected#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ListBox.GetSelected/CPP/form1.cpp#1)]
+ [!code-csharp[ListBox.GetSelected#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ListBox.GetSelected/CS/form1.cs#1)]
+ [!code-vb[ListBox.GetSelected#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ListBox.GetSelected/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MultiExtended">
+      <MemberSignature Language="C#" Value="MultiExtended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SelectionMode MultiExtended = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SelectionMode.MultiExtended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É possível selecionar vários itens e o usuário pode usar SHIFT, CTRL e as teclas de seta para fazer seleções</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiSimple">
+      <MemberSignature Language="C#" Value="MultiSimple" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SelectionMode MultiSimple = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SelectionMode.MultiSimple" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É possível selecionar vários itens.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SelectionMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SelectionMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é possível selecionar nenhum item.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="One">
+      <MemberSignature Language="C#" Value="One" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.SelectionMode One = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.SelectionMode.One" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.SelectionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>É possível selecionar apenas um item.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

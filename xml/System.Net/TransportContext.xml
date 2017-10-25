@@ -1,0 +1,131 @@
+<Type Name="TransportContext" FullName="System.Net.TransportContext">
+  <TypeSignature Language="C#" Value="public abstract class TransportContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TransportContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.TransportContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.Net.TransportContext" /> fornece contexto adicional sobre a camada de transporte subjacente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.TransportContext> classe é usada com classes de <xref:System.Security.Authentication.ExtendedProtection> namespace para oferecer suporte à autenticação usando proteção estendida para aplicativos.  
+  
+ O design da autenticação integrada do Windows permite que algumas respostas de desafio de credencial sejam universais, o que significa que elas podem ser reutilizadas ou encaminhadas. Se esse recurso de design específico não for necessária, em seguida, o desafio respostas devem ser construído com, no mínimo, informações específicas do destino e, na melhor das hipóteses, também algumas canal informações específicas. Serviços, em seguida, podem fornecer proteção estendida para garantir que as respostas de desafio de credencial contêm informações específicas do serviço (um nome de provedor de serviço ou SPN) e, se necessário, canal específicas informações (um token de associação de canal ou CBT). Com essas informações em trocas de credencial, os serviços são capazes de melhor proteção contra o uso de respostas de desafio de credencial que pode ter sido obtido incorretamente.  
+  
+ <xref:System.Net.HttpWebRequest>é a única classe derivada de <xref:System.Net.WebRequest> classe que pode potencialmente usar IWA. O <xref:System.Net.FtpWebRequest> classe faz somente autenticação de texto não criptografado de FTP. O <xref:System.Net.FileWebRequest> classe não executa nenhuma autenticação.  
+  
+ Há várias maneiras que um aplicativo pode obter um <xref:System.Net.TransportContext> instância. Um aplicativo que usa <xref:System.Net.Security.SslStream> pode obter o <xref:System.Net.TransportContext> usando o <xref:System.Net.Security.SslStream.TransportContext%2A> propriedade. Um aplicativo que usa <xref:System.Net.HttpWebRequest> pode obter um <xref:System.Net.TransportContext> usando o <xref:System.Net.HttpWebRequest.GetRequestStream%2A> ou <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TransportContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.TransportContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Net.TransportContext" /> classe</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannelBinding">
+      <MemberSignature Language="C#" Value="public abstract System.Security.Authentication.ExtendedProtection.ChannelBinding GetChannelBinding (System.Security.Authentication.ExtendedProtection.ChannelBindingKind kind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Authentication.ExtendedProtection.ChannelBinding GetChannelBinding(valuetype System.Security.Authentication.ExtendedProtection.ChannelBindingKind kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.TransportContext.GetChannelBinding(System.Security.Authentication.ExtendedProtection.ChannelBindingKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.ExtendedProtection.ChannelBinding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.Security.Authentication.ExtendedProtection.ChannelBindingKind" />
+      </Parameters>
+      <Docs>
+        <param name="kind">O tipo de associação de canal a ser recuperada.</param>
+        <summary>Recupera a associação de canal exigida.</summary>
+        <returns>A solicitação <see cref="T:System.Security.Authentication.ExtendedProtection.ChannelBinding" />, ou <see langword="null" /> se a associação de canal não é suportada pelo transporte atual ou pelo sistema operacional.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores possíveis para a `kind` parâmetro são <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> ou <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Unique>.  
+  
+ Se um aplicativo tenta recuperar o token de associação de canal (CBT) da <xref:System.Net.HttpListenerRequest.TransportContext%2A> propriedade usando o <xref:System.Net.TransportContext.GetChannelBinding%2A> método e o <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind> não é <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>, em seguida, o <xref:System.Net.HttpListenerRequest> lançará <xref:System.NotSupportedException>. O <xref:System.Net.HttpListenerRequest> substitui o <xref:System.Net.TransportContext.GetChannelBinding%2A> método com uma implementação interna  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="kind" />é deve ser <see cref="F:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint" /> para uso com o <see cref="T:System.Net.TransportContext" /> obtida a <see cref="P:System.Net.HttpListenerRequest.TransportContext" /> propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTlsTokenBindings">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Security.Authentication.ExtendedProtection.TokenBinding&gt; GetTlsTokenBindings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Authentication.ExtendedProtection.TokenBinding&gt; GetTlsTokenBindings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.TransportContext.GetTlsTokenBindings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Authentication.ExtendedProtection.TokenBinding&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o transporte de associações de token de camada de segurança.</summary>
+        <returns>As transporte camada token vinculações de segurança.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

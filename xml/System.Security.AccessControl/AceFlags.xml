@@ -1,0 +1,249 @@
+<Type Name="AceFlags" FullName="System.Security.AccessControl.AceFlags">
+  <TypeSignature Language="C#" Value="public enum AceFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AceFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.AceFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a herança e o comportamento de auditoria de uma ACE (entrada de controle de acesso).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AuditFlags">
+      <MemberSignature Language="C#" Value="AuditFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags AuditFlags = unsigned int8(192)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.AuditFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as tentativas de acesso são auditadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerInherit">
+      <MemberSignature Language="C#" Value="ContainerInherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags ContainerInherit = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.ContainerInherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A máscara de acesso é propagada para objetos de contêiner filho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FailedAccess">
+      <MemberSignature Language="C#" Value="FailedAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags FailedAccess = unsigned int8(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.FailedAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As tentativas de acesso com falha são auditadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritanceFlags">
+      <MemberSignature Language="C#" Value="InheritanceFlags" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags InheritanceFlags = unsigned int8(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.InheritanceFlags" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see langword="OR" /> lógico de <see cref="F:System.Security.AccessControl.AceFlags.ObjectInherit" />, <see cref="F:System.Security.AccessControl.AceFlags.ContainerInherit" />, <see cref="F:System.Security.AccessControl.AceFlags.NoPropagateInherit" /> e <see cref="F:System.Security.AccessControl.AceFlags.InheritOnly" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherited">
+      <MemberSignature Language="C#" Value="Inherited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags Inherited = unsigned int8(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.Inherited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma ACE é herdada de um contêiner pai, em vez de ser definida explicitamente para um objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritOnly">
+      <MemberSignature Language="C#" Value="InheritOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags InheritOnly = unsigned int8(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.InheritOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A máscara de acesso é propagada apenas para objetos filho. Isso inclui o contêiner e os objetos filho de folha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há sinalizadores da ACE definidos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoPropagateInherit">
+      <MemberSignature Language="C#" Value="NoPropagateInherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags NoPropagateInherit = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.NoPropagateInherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As verificações de acesso não se aplicam ao objeto, elas se aplicam somente aos seus filhos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInherit">
+      <MemberSignature Language="C#" Value="ObjectInherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags ObjectInherit = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.ObjectInherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A máscara de acesso é propagada para objetos de folha filho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SuccessfulAccess">
+      <MemberSignature Language="C#" Value="SuccessfulAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.AccessControl.AceFlags SuccessfulAccess = unsigned int8(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.AccessControl.AceFlags.SuccessfulAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As tentativas de acesso com êxito são auditadas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

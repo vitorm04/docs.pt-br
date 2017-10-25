@@ -1,0 +1,130 @@
+<Type Name="HelpEventArgs" FullName="System.Windows.Forms.HelpEventArgs">
+  <TypeSignature Language="C#" Value="public class HelpEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HelpEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HelpEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.Control.HelpRequested" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Control.HelpRequested> evento ocorre quando o usuário solicita ajuda para um controle. Um <xref:System.Windows.Forms.HelpEventArgs> objeto Especifica as coordenadas de tela de ponteiro do mouse e se o evento foi tratado.  
+  
+ Para obter informações sobre o modelo de evento, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a manipulação de <xref:System.Windows.Forms.Control.HelpRequested> evento para exibir o conteúdo da Ajuda personalizado em um formulário que contém quatro campos de endereço. O <xref:System.Windows.Forms.Control.HelpRequested> é gerado, pressionando a tecla F1 com foco em um campo de endereço ou usando o botão de ajuda contextual e clicando em Ajuda cursor em um campo de endereço. O <xref:System.Windows.Forms.HelpEventArgs.Handled%2A> propriedade é definida como true para indicar que o `HelpRequested` evento é manipulado. O exemplo também demonstra a armazenar o texto de Ajuda no <xref:System.Windows.Forms.Control.Tag%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-cpp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CPP/helpevent.cpp#1)]
+ [!code-csharp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CS/helpevent.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/VB/helpevent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HelpEventArgs (System.Drawing.Point mousePos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Point mousePos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HelpEventArgs.#ctor(System.Drawing.Point)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mousePos" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="mousePos">As coordenadas do ponteiro do mouse.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.HelpEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HelpEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o evento de Ajuda foi tratado.</summary>
+        <value>
+          <see langword="true" /> se o evento for tratado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não definir essa propriedade como `true` o evento será passado para o Windows para processamento adicional.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a manipulação de <xref:System.Windows.Forms.Control.HelpRequested> evento para exibir o conteúdo da Ajuda personalizado em um formulário que contém quatro campos de endereço. O <xref:System.Windows.Forms.Control.HelpRequested> é gerado, pressionando a tecla F1 com foco em um campo de endereço ou usando o botão de ajuda contextual e clicando em Ajuda cursor em um campo de endereço. O <xref:System.Windows.Forms.HelpEventArgs.Handled%2A> propriedade é definida como true para indicar que o `HelpRequested` evento é manipulado. O exemplo também demonstra a armazenar o texto de Ajuda no <xref:System.Windows.Forms.Control.Tag%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-cpp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CPP/helpevent.cpp#1)]
+ [!code-csharp[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/CS/helpevent.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpEventHandler/VB/helpevent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MousePos">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point MousePos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point MousePos" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HelpEventArgs.MousePos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as coordenadas de tela do ponteiro do mouse.</summary>
+        <value>Um <see cref="T:System.Drawing.Point" /> que representam as coordenadas de tela do ponteiro do mouse.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essas informações para fornecer ajuda com base na posição do ponteiro do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Control.HelpRequested?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.Control>, como um <xref:System.Windows.Forms.Button> ou <xref:System.Windows.Forms.ComboBox>. Em seguida, nomear a instância `Control1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Control.HelpRequested?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#39](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#39)]
+ [!code-vb[System.Windows.Forms.EventExamples#39](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

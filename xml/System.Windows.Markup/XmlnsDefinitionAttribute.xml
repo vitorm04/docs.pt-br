@@ -1,0 +1,125 @@
+<Type Name="XmlnsDefinitionAttribute" FullName="System.Windows.Markup.XmlnsDefinitionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlnsDefinitionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlnsDefinitionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XmlnsDefinitionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica um mapeamento em uma base por assembly entre um namespace XAML e um namespace CLR, que é usado para resolução de tipo por um gravador de XAML do objeto ou o contexto do esquema XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicar uma ou mais <xref:System.Windows.Markup.XmlnsDefinitionAttribute> atributos para assemblies para identificar os tipos de dentro do assembly para uso em XAML.  
+  
+ Para localizar os tipos apropriados que faça referências de objeto em um arquivo XAML ou de usos de elemento de objeto, um processador XAML procura cada assembly referenciado para <xref:System.Windows.Markup.XmlnsDefinitionAttribute> aplicativos. Geralmente, o contexto do esquema XAML fornecerá essas informações.  
+  
+ Em um arquivo XAML, se o `xmlns` atributo para um elemento de objeto ou um elemento de propriedade corresponde a <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> no <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, usa o processador XAML o <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> e <xref:System.Windows.Markup.XmlnsDefinitionAttribute.AssemblyName%2A> armazenados no <xref:System.Windows.Markup.XmlnsDefinitionAttribute> para resolução de tipo em relação a tipos no assembly.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.XmlnsDefinitionAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+<a name="xamlTextUsage_XmlnsDefinitionAttribute"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlnsDefinitionAttribute (string xmlNamespace, string clrNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xmlNamespace, string clrNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XmlnsDefinitionAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlNamespace" Type="System.String" />
+        <Parameter Name="clrNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNamespace">O identificador do namespace XAML.</param>
+        <param name="clrNamespace">Uma cadeia de caracteres que faz referência a um [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] nome do namespace.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.XmlnsDefinitionAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlNamespace" />or <paramref name="clrNamespace" /> are <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDefinitionAttribute.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do assembly associado ao atributo.</summary>
+        <value>O nome do assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o nome do assembly não está definido no atributo em si, você deve determinar as informações com base no assembly que o atributo é aplicado a. Isso pode ser feito usando APIs de reflexão ou potencialmente por acessando o contexto do esquema XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClrNamespace">
+      <MemberSignature Language="C#" Value="public string ClrNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClrNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de cadeia de caracteres do [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] especificada neste atributo de namespace</summary>
+        <value>O namespace CLR, especificado como uma cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlNamespace">
+      <MemberSignature Language="C#" Value="public string XmlNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador do namespace XAML especificado neste atributo.</summary>
+        <value>O identificador do namespace XAML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

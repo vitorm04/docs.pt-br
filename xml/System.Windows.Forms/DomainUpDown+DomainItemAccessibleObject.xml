@@ -1,0 +1,159 @@
+<Type Name="DomainUpDown+DomainItemAccessibleObject" FullName="System.Windows.Forms.DomainUpDown+DomainItemAccessibleObject">
+  <TypeSignature Language="C#" Value="public class DomainUpDown.DomainItemAccessibleObject : System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit DomainUpDown/DomainItemAccessibleObject extends System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.AccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre os itens a <see cref="T:System.Windows.Forms.DomainUpDown" /> controle para aplicativos cliente de acessibilidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms tem suporte de acessibilidade interno e fornece informações sobre o aplicativo que lhe permite trabalhar com aplicativos cliente de acessibilidade. Exemplos de aplicativos cliente de acessibilidade tela utilitários ampliador e revisor, utilitários de entrada de voz, teclados na tela, dispositivos de entrada alternativos e os utilitários de aprimoramento de teclado. O <xref:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject> classe herda o <xref:System.Windows.Forms.AccessibleObject> classe para fornecer informações sobre os itens na <xref:System.Windows.Forms.DomainUpDown> controle para aplicativos cliente de acessibilidade.  
+  
+ Há instâncias quando você deve fornecer informações personalizadas, como nome ou descrição, para aplicativos cliente de acessibilidade de um controle. Há duas maneiras de fornecer essas informações. Para fornecer informações de acessibilidade limitada para controles existentes, defina o controle <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, e <xref:System.Windows.Forms.Control.AccessibleRole%2A> valores de propriedade, que serão relatados para aplicativos cliente de acessibilidade.  
+  
+ Se você precisar de mais informações sobre acessibilidade para ser incluído no seu controle, você pode escrever sua própria classe que deriva de <xref:System.Windows.Forms.AccessibleObject> ou <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes. Por exemplo, se você estiver escrevendo seu próprio controle que não é derivado de controles comuns, ou exigem operações como teste de clique dentro do controle, você deve criar um <xref:System.Windows.Forms.Control.ControlAccessibleObject> para seu controle chamando o <xref:System.Windows.Forms.DomainUpDown.CreateAccessibilityInstance%2A> método.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DomainItemAccessibleObject (string name, System.Windows.Forms.AccessibleObject parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Windows.Forms.AccessibleObject parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject.#ctor(System.String,System.Windows.Forms.AccessibleObject)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="parent" Type="System.Windows.Forms.AccessibleObject" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject" />.</param>
+        <param name="parent">O <see cref="T:System.Windows.Forms.AccessibleObject" /> que contém os itens a <see cref="T:System.Windows.Forms.DomainUpDown" /> controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do <xref:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject> é a cadeia de caracteres que representa um item no <xref:System.Windows.Forms.DomainUpDown> controle.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto.</summary>
+        <value>O nome do objeto, ou <see langword="null" /> se a propriedade não tiver sido definida.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai de um objeto acessível.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> que representa o pai de um objeto acessível, ou <see langword="null" /> se não houver nenhum objeto pai.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a função deste objeto acessível.</summary>
+        <value>O valor <see cref="F:System.Windows.Forms.AccessibleRole.ListItem" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado do <see cref="T:System.Windows.Forms.RadioButton" /> controle.</summary>
+        <value>Se o <see cref="P:System.Windows.Forms.RadioButton.Checked" /> está definida como true, retorna <see cref="F:System.Windows.Forms.AccessibleStates.Checked" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de um objeto acessível.</summary>
+        <value>A propriedade Name do <see cref="T:System.Windows.Forms.DomainUpDown.DomainItemAccessibleObject" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

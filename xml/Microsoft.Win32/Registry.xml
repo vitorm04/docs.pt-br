@@ -1,0 +1,654 @@
+<Type Name="Registry" FullName="Microsoft.Win32.Registry">
+  <TypeSignature Language="C#" Value="public static class Registry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Registry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.Registry" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece objetos <see cref="T:Microsoft.Win32.RegistryKey" /> que representam as chaves raiz no Registro do Windows e os métodos <see langword="static" /> para acessar os pares chave/valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece o conjunto de chaves de raiz padrão encontrado no registro em computadores que executam o Windows. O registro é um recurso de armazenamento para obter informações sobre aplicativos, usuários e configurações padrão do sistema. Por exemplo, os aplicativos podem usar o registro para armazenar informações que precisam ser preservadas quando o aplicativo for fechado e acessar as mesmas informações quando o aplicativo é recarregado. Por exemplo, você pode armazenar as preferências de cor, locais de tela ou o tamanho da janela. Você pode controlar esses dados para cada usuário, armazenando as informações em um local diferente no registro.  
+  
+ A base ou raiz <xref:Microsoft.Win32.RegistryKey> instâncias que são expostas pelo `Registry` classe delinear o mecanismo de armazenamento básico para subchaves e valores no registro. Todas as chaves são somente leitura porque o registro depende de sua existência. As chaves expostas pela `Registry` são:  
+  
+ <xref:Microsoft.Win32.Registry.CurrentUser>  
+ Armazena informações sobre as preferências do usuário.  
+  
+ <xref:Microsoft.Win32.Registry.LocalMachine>  
+ Armazena informações de configuração para a máquina local.  
+  
+ <xref:Microsoft.Win32.Registry.ClassesRoot>  
+ Armazena informações sobre os tipos (e classes) e suas propriedades.  
+  
+ <xref:Microsoft.Win32.Registry.Users>  
+ Armazena informações sobre a configuração de usuário padrão.  
+  
+ <xref:Microsoft.Win32.Registry.PerformanceData>  
+ Armazena informações de desempenho para componentes de software.  
+  
+ <xref:Microsoft.Win32.Registry.CurrentConfig>  
+ Armazena informações de hardware específico não-usuário.  
+  
+ <xref:Microsoft.Win32.Registry.DynData>  
+ Armazena dados dinâmicos.  
+  
+ Depois de ter identificado a chave de raiz sob a qual você deseja armazenar/recuperar informações do registro, você pode usar o <xref:Microsoft.Win32.RegistryKey> de classe para adicionar ou remover as subchaves e manipular os valores para uma determinada chave.  
+  
+ Dispositivos de hardware podem colocar as informações no registro automaticamente usando a interface de Plug and Play. Software para instalar os drivers de dispositivo pode colocar informações no registro, gravando para APIs padrão.  
+  
+## <a name="static-methods-for-getting-and-setting-values"></a>Métodos estáticos para obter e definir valores  
+ No .NET Framework versão 2.0, o <xref:Microsoft.Win32.Registry> classe também contém `static` <xref:Microsoft.Win32.Registry.GetValue%2A> e <xref:Microsoft.Win32.Registry.SetValue%2A> métodos para definir e recuperar valores de chaves do registro. Esses métodos abrem e chaves de registro fechar cada hora que são usados, para que eles não executar, bem como métodos análogos no <xref:Microsoft.Win32.RegistryKey> classe, quando você acessa um grande número de valores.  
+  
+ O <xref:Microsoft.Win32.RegistryKey> classe também fornece métodos que permitem que você defina a segurança de controle de acesso do Windows para chaves do registro, para testar o tipo de dados de um valor antes de recuperá-lo e excluir chaves.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo demonstra as chaves de raiz e o segundo exemplo demonstra o `static` <xref:Microsoft.Win32.Registry.GetValue%2A> e <xref:Microsoft.Win32.Registry.SetValue%2A> métodos.  
+  
+ Exemplo 1  
+  
+ O exemplo de código a seguir demonstra como recuperar as subchaves da chave HKEY_USERS e seus nomes para a tela de impressão. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em `RegistryKey` para manipular a essa chave.  
+  
+ [!code-cpp[Classic Registry.Users Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.Users Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.Users Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.Users Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.Users Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.Users Example/VB/source.vb#1)]  
+  
+ Exemplo 2  
+  
+ O exemplo de código a seguir armazena valores de diversos tipos de dados em uma chave de exemplo, criar a chave como ele faz isso e, em seguida, recupera e exibe os valores. O exemplo demonstra como armazenar e recuperar o par de nome/valor (sem nome) padrão e o uso de `defaultValue` quando um par nome/valor não existe.  
+  
+ [!code-cpp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClassesRoot">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Win32.RegistryKey ClassesRoot;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.Win32.RegistryKey ClassesRoot" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.Registry.ClassesRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define os tipos (ou classes) de documentos e as propriedades associadas a esses tipos. Este campo lê a chave base do Registro HKEY_CLASSES_ROOT do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos convencionais e aplicativos OLE usam dados armazenados sob essa chave. Essa chave também fornece compatibilidade com versões anteriores com o banco de dados de registro do Windows 3.1 armazenando informações de suporte DDE e OLE. Visualizadores de arquivo e extensões de interface do usuário armazenam seus identificadores de classe OLE nessa chave e processamento de servidores é registrado nessa chave.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar as subchaves dessa chave e imprime seus nomes para a tela. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em <xref:Microsoft.Win32.RegistryKey> para manipular a essa chave.  
+  
+ [!code-cpp[Classic Registry.ClassesRoot Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.ClassesRoot Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.ClassesRoot Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.ClassesRoot Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.ClassesRoot Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.ClassesRoot Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentConfig">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Win32.RegistryKey CurrentConfig;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.Win32.RegistryKey CurrentConfig" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.Registry.CurrentConfig" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém informações de configuração relacionadas ao hardware que não é específico para o usuário. Este campo lê a chave de base de registro HKEY_CURRENT_CONFIG do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é mapeado para uma subchave no <xref:Microsoft.Win32.Registry.LocalMachine>.  
+  
+ Um exemplo de como usar esse membro é um aplicativo que armazena um nome de servidor diferente para seus dados dependendo se o sistema estiver conectado a uma rede.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar as subchaves dessa chave e imprime seus nomes para a tela. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em <xref:Microsoft.Win32.RegistryKey> para manipular a essa chave.  
+  
+ [!code-cpp[Classic Registry.CurrentConfig Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.CurrentConfig Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.CurrentConfig Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.CurrentConfig Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.CurrentConfig Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.CurrentConfig Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentUser">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Win32.RegistryKey CurrentUser;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.Win32.RegistryKey CurrentUser" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.Registry.CurrentUser" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém informações sobre as preferências do usuário atual. Este campo lê a chave base de Registro HKEY_CLASSES_ROOT do Windows</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações armazenadas nesta chave incluem as configurações de variáveis de ambiente e dados sobre os grupos de programa, cores, impressoras, conexões de rede e preferências de aplicativo. Essa chave torna mais fácil estabelecer as configurações do usuário atual. Nessa chave, fornecedores de software armazenam as preferências específicas do usuário atuais a ser usado dentro de seus aplicativos. Microsoft, por exemplo, cria a chave HKEY_CURRENT_USER\Software\Microsoft. para seus aplicativos usar, com cada aplicativo criando sua própria subchave sob a chave da Microsoft.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar as subchaves dessa chave e imprime seus nomes para a tela. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em <xref:Microsoft.Win32.RegistryKey> para manipular a essa chave.  
+  
+ [!code-cpp[Classic Registry.CurrentUser Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.CurrentUser Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.CurrentUser Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.CurrentUser Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.CurrentUser Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.CurrentUser Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DynData">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Win32.RegistryKey DynData;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.Win32.RegistryKey DynData" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.Registry.DynData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use PerformanceData instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém dados de registro dinâmico. Este campo lê a chave de base de registro HKEY_DYN_DATA do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O registro do Windows 98/Windows Me dá suporte a dados estáticos (que são armazenados em disco no registro) e dados dinâmicos (que mudam frequentemente, como as estatísticas de desempenho). Essa área de dados dinâmicos é o mecanismo que permite que os Drivers de dispositivo Virtual (VxDs) para fornecer dados em tempo real para aplicativos Win32 que podem ser executados remotamente, assim como localmente. Ele também permite que o monitor do sistema fornecer estatísticas de desempenho no Windows 98/Windows Me sistemas remotos.  
+  
+ VxDs não está limitados aos dados de desempenho. Podem fornecer todos os dados que desejam passar de anel 0 para 3 de anel com eficiência sem monopolize a CPU. O registro suporta dados dinâmicos ao armazenar um ponteiro para uma função que retorna um valor (ou muitos valores). Quando valores de consultas de chamada de um registro associado com uma chave dinâmica, que a função é chamada para retornar o valor desejado ou valores.  
+  
+> [!NOTE]
+>  Chaves dinâmicas foram introduzidas no Microsoft Windows 95 para lidar com dados de registro dinâmicos. Elas têm suporte apenas no Windows 98/Windows Me.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar as subchaves dessa chave e imprime seus nomes para a tela. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em <xref:Microsoft.Win32.RegistryKey> para manipular a essa chave. Observe que este exemplo não pode retornar nenhum resultado, desde que não haja dados dinâmicos disponível ou você pode não estar executando o Windows 98 / Me. Usando essa chave pode causar um erro em outros sistemas.  
+  
+ [!code-cpp[Classic Registry.DynData Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.DynData Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.DynData Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.DynData Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.DynData Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.DynData Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O sistema operacional não suporta dados dinâmicos; ou seja, não é Windows 98, Windows 98 Segunda edição ou Windows Millennium Edition (Windows Me).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public static object GetValue (string keyName, string valueName, object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetValue(string keyName, string valueName, object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.Registry.GetValue(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">O caminho do Registro completo da chave, começando com uma raiz do Registro válida, como “HKEY_CURRENT_USER”.</param>
+        <param name="valueName">O nome do par nome-valor.</param>
+        <param name="defaultValue">O valor a ser retornado se <c>valueName</c> não existe.</param>
+        <summary>Recupera o valor associado ao nome especificado, na chave do Registro especificada. Se o nome não for encontrado na chave especificada, retornará um valor padrão que você fornecer, ou <see langword="null" /> se a chave especificada não existir.</summary>
+        <returns>
+          <see langword="null" /> se a subchave especificada por <paramref name="keyName" /> não existir; caso contrário, o valor associado a <paramref name="valueName" /> ou <paramref name="defaultValue" /> se <paramref name="valueName" /> não for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres `valueName` não diferencia maiusculas de minúsculas.  
+  
+> [!NOTE]
+>  Uma chave do registro pode conter um valor que não está associado com qualquer nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para recuperar esse sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `valuName`.  
+  
+ Nomes válidos de raiz são HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT, HKEY_USERS, HKEY_PERFORMANCE_DATA, HKEY_CURRENT_CONFIG e HKEY_DYN_DATA. Por exemplo, no Visual Basic, a cadeia de caracteres "HKEY_CURRENT_USER\MyTestKey" acessa pares chave/valor para a subchave "MyTestKey" na raiz HKEY_CURRENT_USER.  
+  
+ Quando o <xref:Microsoft.Win32.RegistryKey.GetValue%2A> método recupera valores de cadeia de caracteres expansível (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), ele expande as cadeias de caracteres de ambiente usando dados do ambiente local. Se um valor que contém expansíveis referências a variáveis de ambiente foi armazenado como uma cadeia de caracteres (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), em vez de como uma cadeia de caracteres expansível (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), <xref:Microsoft.Win32.RegistryKey.GetValue%2A> não expandi-lo. Você pode expandir uma cadeia de caracteres depois que forem recuperado chamando o <xref:System.Environment.ExpandEnvironmentVariables%2A?displayProperty=nameWithType> método.  
+  
+> [!NOTE]
+>  A maneira recomendada para recuperar dados de HKEY_PERFORMANCE_DATA é usar o <xref:System.Diagnostics.PerformanceCounter> classe em vez de <xref:Microsoft.Win32.RegistryKey.GetValue%2A?displayProperty=nameWithType> método.  
+  
+ O <xref:Microsoft.Win32.Registry.GetValue%2A> e <xref:Microsoft.Win32.Registry.SetValue%2A> métodos abrem e chaves de registro fechar cada vez que eles são usados, para que eles não executar, bem como os métodos do <xref:Microsoft.Win32.RegistryKey> classe se você acessar um grande número de valores.  
+  
+ <xref:Microsoft.Win32.RegistryKey>também fornece métodos que permitem que você adicione uma lista de controle de acesso (ACL) para uma chave do registro, para testar o tipo de dados de um valor antes de recuperá-lo e excluir chaves.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir armazena valores de diversos tipos de dados em uma chave de exemplo, criar a chave como ele faz isso e, em seguida, recupera e exibe os valores. O exemplo demonstra como armazenar e recuperar o par de nome/valor (sem nome) padrão e o uso de `defaultValue` quando um par nome/valor não existe.  
+  
+ [!code-cpp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas na chave do Registro.</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado foi marcado para exclusão.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keyName" /> não começa com uma raiz do Registro válida.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para ler do Registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para ler uma chave do registro do tipo REG_EXPAND_SZ. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalMachine">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Win32.RegistryKey LocalMachine;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.Win32.RegistryKey LocalMachine" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.Registry.LocalMachine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém os dados de configuração para o computador local. Este campo lê a chave de base de Registro HKEY_LOCAL_MACHINE do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `LocalMachine`contém cinco chaves:  
+  
+ Hardware  
+ Descreve o hardware físico do computador, como drivers de dispositivo usam esse hardware e mapeamentos e dados relacionados que vinculam os drivers do modo kernel com o código de modo de usuário. Todos os dados nessa chave é recriado cada vez que o sistema é iniciado. A subchave descrição descreve o hardware do computador real. A subchave DeviceMap contém diversos dados em formatos específicos para classes específicas de drivers. A subchave ResourceMap descreve os drivers de dispositivo de declaração de quais recursos de hardware. O programa de diagnóstico do Windows NT (Winmsdp.exe) pode relatar seu conteúdo em um formato de fácil leitura.  
+  
+ SAM  
+ O banco de dados de serviços de diretório de informações de segurança para contas de usuário e grupo e para os domínios no Windows 2000 Server (SAM é o gerente de contas de segurança, conhecido como o banco de dados de serviços de diretório).  
+  
+ Segurança  
+ Contém a política de segurança local, como direitos de usuário específico. Essa chave é usada apenas pelo subsistema de segurança do Windows 2000.  
+  
+ Software  
+ O banco de dados de software por computador. Esta chave contém dados sobre o software instalado no computador local, juntamente com vários itens de dados de configuração diversos.  
+  
+ Sistema  
+ Controla o comportamento do sistema operacional, carregamento do driver de dispositivo, serviços do Windows 2000 e inicialização do sistema.  
+  
+ Por convenção, se houver dados semelhantes em <xref:Microsoft.Win32.Registry.CurrentUser> e, em <xref:Microsoft.Win32.Registry.LocalMachine>, os dados <xref:Microsoft.Win32.Registry.CurrentUser> terá precedência. No entanto, valores nessa chave também podem estender (em vez de substituir) dados em Registry.LocalMachine. Além disso, alguns itens (como entradas de carregar um driver de dispositivo) são sem sentido se ocorrerem fora Registry.LocalMachine.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar as subchaves dessa chave e imprime seus nomes para a tela. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em <xref:Microsoft.Win32.RegistryKey> para manipular a essa chave.  
+  
+ [!code-cpp[Classic Registry.LocalMachine Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.LocalMachine Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.LocalMachine Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.LocalMachine Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.LocalMachine Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.LocalMachine Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformanceData">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Win32.RegistryKey PerformanceData;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.Win32.RegistryKey PerformanceData" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.Registry.PerformanceData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém informações de desempenho de componentes de software. Esse campo lê a chave base do Registro HKEY_PERFORMANCE_DATA do Windows.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada componente de software cria chaves para seus objetos, contadores quando ele é instalado e grava dados do contador durante sua execução. Você pode acessar esses dados como você acessaria quaisquer outros dados de registro, usando o <xref:Microsoft.Win32.RegistryKey> funções.  
+  
+ Apesar de você usa o registro para coletar dados de desempenho, os dados não são armazenados no banco de dados do registro. Em vez disso, ao acessar o registro com esta chave faz com que o sistema coletar os dados de gerenciadores de objetos de sistema apropriado.  
+  
+ Para obter dados de desempenho do sistema local, use o <xref:Microsoft.Win32.RegistryKey.GetValue%2A> método, com a chave Registry.PerformanceData. A primeira chamada abre a chave (não é necessário abrir a chave explicitamente primeiro). No entanto, certifique-se de usar o <xref:Microsoft.Win32.RegistryKey.Close%2A> método para fechar o identificador para a chave quando tiver terminado de obtenção de dados de desempenho. O usuário não pode instalar ou remover um componente de software, enquanto os dados de desempenho estão em uso.  
+  
+ Para obter dados de desempenho de um sistema remoto, você deve usar o <xref:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey%2A> método com o nome do computador do sistema remoto e a chave de Registry.PerformanceData. Essa chamada recupera uma chave que representa os dados de desempenho para o sistema remoto. Para recuperar os dados, chame <xref:Microsoft.Win32.RegistryKey.GetValue%2A> usando essa chave, em vez da chave Registry.PerformanceData.  
+  
+> [!NOTE]
+>  No Windows Server 2003, um usuário pelo menos deve pertencer ao grupo de usuários de Monitor de desempenho para acessar subchaves dessa chave base.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar as subchaves dessa chave e imprime seus nomes para a tela. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em <xref:Microsoft.Win32.RegistryKey> para manipular a essa chave. Observe que este exemplo geralmente não pode retornar nenhum resultado, já que não pode haver nenhum dado de desempenho.  
+  
+ [!code-cpp[Classic Registry.PerformanceData Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.PerformanceData Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.PerformanceData Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.PerformanceData Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.PerformanceData Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.PerformanceData Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SetValue">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Define o valor de um par nome/valor em uma chave do registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir armazena valores de diversos tipos de dados em uma chave de exemplo, criar a chave como ele faz isso e, em seguida, recupera e exibe os valores. O exemplo demonstra como armazenar e recuperar o par de nome/valor (sem nome) padrão e o uso de `defaultValue` quando um par nome/valor não existe.  
+  
+ [!code-cpp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public static void SetValue (string keyName, string valueName, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetValue(string keyName, string valueName, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.Registry.SetValue(System.String,System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">O caminho do Registro completo da chave, começando com uma raiz do Registro válida, como “HKEY_CURRENT_USER”.</param>
+        <param name="valueName">O nome do par nome-valor.</param>
+        <param name="value">O valor a ser armazenado.</param>
+        <summary>Define o par nome-valor especificado na chave do Registro especificada. Se a chave especificada não existir, ela será criada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o `valueName` parâmetro não é mais restrito a um máximo de 255 caracteres; no entanto, o `keyName` parâmetro continua com a restrição de 255 caracteres.  
+  
+ Como muitos valores podem ser armazenados em cada chave do registro, você deve usar o `valueName` para especificar o valor específico que você deseja definir.  
+  
+> [!NOTE]
+>  Uma chave do registro pode conter um valor que não está associado com qualquer nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para definir isso sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `valueName`.  
+  
+ Se `valueName` não existe na chave, ele é criado e o valor associado é definido como `value`.  
+  
+ Se `keyName` Especifica uma subchave que não existe, a subchave é criada na raiz especificada. Por exemplo, no Visual Basic, a cadeia de caracteres "HKEY_CURRENT_USER\MyTestKey" cria a subchave "MyTestKey" na raiz HKEY_CURRENT_USER. A cadeia de caracteres "HKEY_CURRENT_USER\MyTestKey\Key2\Key3" cria as subchaves aninhadas "MyTestKey", "MyTestKey\Key2" e "MyTestKey\Key2\Key3".  
+  
+ Nomes de raiz válido incluem HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT, HKEY_USERS, HKEY_PERFORMANCE_DATA, HKEY_CURRENT_CONFIG e HKEY_DYN_DATA.  
+  
+> [!NOTE]
+>  O <xref:Microsoft.Win32.Registry.SetValue%2A> método abre uma chave do registro, define o valor e fecha a chave de cada vez que ele é chamado. Se você precisar modificar um grande número de valores, o <xref:Microsoft.Win32.RegistryKey.SetValue%2A?displayProperty=nameWithType> método pode oferecer melhor desempenho. O <xref:Microsoft.Win32.RegistryKey> classe também fornece métodos que permitem que você adicione uma lista de controle de acesso (ACL) para uma chave do registro, para testar o tipo de dados de um valor antes de recuperá-lo e excluir chaves.  
+  
+ Esta sobrecarga do <xref:Microsoft.Win32.Registry.SetValue%2A> armazena inteiros de 64 bits como cadeias de caracteres (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>). Para armazenar números de 64 bits como <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType> valores, use o <xref:Microsoft.Win32.Registry.SetValue%28System.String%2CSystem.String%2CSystem.Object%2CMicrosoft.Win32.RegistryValueKind%29> sobrecarga do método.  
+  
+ Esta sobrecarga do <xref:Microsoft.Win32.Registry.SetValue%2A> armazena todos os valores de cadeia de caracteres como <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType> objetos, mesmo se eles contiverem expansíveis referências a variáveis de ambiente. Para salvar os valores de cadeia de caracteres expansíveis como cadeias de caracteres (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), use o <xref:Microsoft.Win32.Registry.SetValue%28System.String%2CSystem.String%2CSystem.Object%2CMicrosoft.Win32.RegistryValueKind%29> sobrecarga do método.  
+  
+ Essa sobrecarga é equivalente a chamar o <xref:Microsoft.Win32.Registry.SetValue%28System.String%2CSystem.String%2CSystem.Object%2CMicrosoft.Win32.RegistryValueKind%29> sobrecarga de método com <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  No Windows 98 e Windows Millennium Edition (Windows Me), o registro não for Unicode e não todos os caracteres Unicode são válidos para todas as páginas de código. Um caractere Unicode inválido para a página de código atual é substituído por melhor correspondência disponível. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir armazena valores de diversos tipos de dados em uma chave de exemplo, criar a chave como ele faz isso e, em seguida, recupera e exibe os valores. O exemplo demonstra como armazenar e recuperar o par de nome/valor (sem nome) padrão e o uso de `defaultValue` quando um par nome/valor não existe.  
+  
+ [!code-cpp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keyName" /> não começa com uma raiz do Registro válida.  
+  
+ -ou-  
+  
+ <paramref name="keyName" /> é maior que o tamanho máximo permitido (255 caracteres).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é somente leitura e, portanto, não pode ser usado para gravação; por exemplo, é um nó de nível raiz.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou modificar chaves do Registro.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Para modificar a chave do registro especificado se ele existir, ou para criar a chave do registro se ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public static void SetValue (string keyName, string valueName, object value, Microsoft.Win32.RegistryValueKind valueKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetValue(string keyName, string valueName, object value, valuetype Microsoft.Win32.RegistryValueKind valueKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.Registry.SetValue(System.String,System.String,System.Object,Microsoft.Win32.RegistryValueKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyName" Type="System.String" />
+        <Parameter Name="valueName" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="valueKind" Type="Microsoft.Win32.RegistryValueKind" />
+      </Parameters>
+      <Docs>
+        <param name="keyName">O caminho do Registro completo da chave, começando com uma raiz do Registro válida, como “HKEY_CURRENT_USER”.</param>
+        <param name="valueName">O nome do par nome-valor.</param>
+        <param name="value">O valor a ser armazenado.</param>
+        <param name="valueKind">O tipo de dados do Registro a ser usado ao armazenar os dados.</param>
+        <summary>Define o par nome-valor na chave do Registro especificada, usando o tipo de dados do Registro especificado. Se a chave especificada não existir, ela será criada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o `valueName` parâmetro não é mais restrito a um máximo de 255 caracteres; no entanto, o `keyName` parâmetro continua a ter a restrição de 255 caracteres.  
+  
+ Como muitos valores podem ser armazenados em cada chave do registro, você deve usar o `valueName` para especificar o valor específico que você deseja definir.  
+  
+> [!NOTE]
+>  Uma chave do registro pode conter um valor que não está associado com qualquer nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para definir isso sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `valueName`.  
+  
+ Se `valueName` não existe na chave, ele é criado e o valor associado é definido como `value`.  
+  
+ Se `keyName` Especifica uma subchave que não existe, a subchave é criada na raiz especificada. Por exemplo, no Visual Basic, a cadeia de caracteres "HKEY_CURRENT_USER\MyTestKey" cria a subchave "MyTestKey" na raiz HKEY_CURRENT_USER. A cadeia de caracteres "HKEY_CURRENT_USER\MyTestKey\Key2\Key3" cria as subchaves aninhadas "MyTestKey", "MyTestKey\Key2" e "MyTestKey\Key2\Key3".  
+  
+ Nomes de raiz válido incluem HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, HKEY_CLASSES_ROOT, HKEY_USERS, HKEY_PERFORMANCE_DATA, HKEY_CURRENT_CONFIG e HKEY_DYN_DATA.  
+  
+> [!NOTE]
+>  O <xref:Microsoft.Win32.Registry.SetValue%2A> método abre uma chave do registro, define o valor e fecha a chave de cada vez que ele é chamado. Se você precisar modificar um grande número de valores, o <xref:Microsoft.Win32.RegistryKey.SetValue%2A?displayProperty=nameWithType> método pode oferecer melhor desempenho. O <xref:Microsoft.Win32.RegistryKey> classe também fornece métodos que permitem que você adicione uma lista de controle de acesso (ACL) para uma chave do registro, para testar o tipo de dados de um valor antes de recuperá-lo e excluir chaves.  
+  
+ Se o tipo especificado `value` não coincide com a especificada `valueKind`, e os dados não podem ser convertido, <xref:System.ArgumentException> é gerada. Por exemplo, você pode armazenar um <xref:System.Int64?displayProperty=nameWithType> como um <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>, mas somente se o valor for menor que o valor máximo de um <xref:System.Int32?displayProperty=nameWithType>. Você não pode armazenar um valor de cadeia de caracteres única como um <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Se valores boxed são passados para <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType> ou <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>, a conversão é feita usando a cultura invariável.  
+  
+> [!NOTE]
+>  No Windows 98 e Windows Millennium Edition (Windows Me), o registro não for Unicode e não todos os caracteres Unicode são válidos para todas as páginas de código. Um caractere Unicode inválido para a página de código atual é substituído por melhor correspondência disponível. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir armazena valores de diversos tipos de dados em uma chave de exemplo, criar a chave como ele faz isso e, em seguida, recupera e exibe os valores. O exemplo demonstra como armazenar e recuperar o par de nome/valor (sem nome) padrão e o uso de `defaultValue` quando um par nome/valor não existe.  
+  
+ [!code-cpp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.Registry.GetSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.Registry.GetSet/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="keyName" /> não começa com uma raiz do Registro válida.  
+  
+ -ou-  
+  
+ <paramref name="keyName" /> é maior que o tamanho máximo permitido (255 caracteres).  
+  
+ -ou-  
+  
+ O tipo de <paramref name="value" /> não correspondia ao tipo de dados do Registro especificado pelo <paramref name="valueKind" /> e, portanto, não foi possível converter os dados corretamente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é somente leitura e, portanto, não pode ser usado para gravação; por exemplo, ele é um nó de nível raiz, ou a chave não foi aberta com acesso de gravação.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou modificar chaves do Registro.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Para modificar a chave do registro especificado se ele existir, ou para criar a chave do registro se ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Users">
+      <MemberSignature Language="C#" Value="public static readonly Microsoft.Win32.RegistryKey Users;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class Microsoft.Win32.RegistryKey Users" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Win32.Registry.Users" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém informações sobre a configuração de usuário padrão. Este campo lê a chave base do Registro do Windows HKEY_USERS.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta chave contém uma ramificação para cada usuário do computador. A configuração padrão é fornecida para novos usuários no computador local e para o usuário atual padrão se o usuário não tiver sido alterada preferências. Porque o Windows 98 / ME também dá suporte a Registry.Users, os aplicativos podem acessar as informações específicas do usuário da mesma forma que com o Windows 2000. Informações de cada usuário são armazenadas em um arquivo separado, que pode ser armazenado localmente ou em um servidor de rede. Windows 98 / ME pode copiar esse arquivo para o sistema do usuário atual para que as configurações podem mover de um computador para outro com o usuário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar as subchaves dessa chave e imprime seus nomes para a tela. Use o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método para criar uma instância da subchave específica de interesse. Você pode usar outras operações em <xref:Microsoft.Win32.RegistryKey> para manipular a essa chave.  
+  
+ [!code-cpp[Classic Registry.Users Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Registry.Users Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Registry.Users Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Registry.Users Example/CS/source.cs#1)]
+ [!code-vb[Classic Registry.Users Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Registry.Users Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

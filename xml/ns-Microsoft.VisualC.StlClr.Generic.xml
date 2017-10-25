@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.VisualC.StlClr.Generic">
+  <Docs>
+    <summary>Contém classes, interfaces e iteradores que são usados para implementar a interface genérica para o. Usando esta interface genérica, outras linguagens .NET, como c# e Visual Basic, podem chamar código escrito usando STL/CLR.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

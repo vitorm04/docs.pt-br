@@ -1,0 +1,210 @@
+<Type Name="AnnouncementService" FullName="System.ServiceModel.Discovery.AnnouncementService">
+  <TypeSignature Language="C#" Value="public class AnnouncementService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnnouncementService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.AnnouncementService" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceBehavior(ConcurrencyMode=System.ServiceModel.ConcurrencyMode.Multiple, InstanceContextMode=System.ServiceModel.InstanceContextMode.Single)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Uma implementação auto-hospedado do serviço de notificação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe escuta mensagens de entrada em um ponto de extremidade padrão do anúncio (<xref:System.ServiceModel.Discovery.AnnouncementEndpoint>) e fornece a notificação de eventos quando chegam mensagens de aviso de saudação ou Bye. Você pode fornecer uma implementação de serviço personalizado de lançamento por esta classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Discovery.AnnouncementService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnouncementService (int duplicateMessageHistoryLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 duplicateMessageHistoryLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="duplicateMessageHistoryLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="duplicateMessageHistoryLength">O número máximo de mensagens de hash usado pelo transporte para identificar mensagens duplicadas. O valor padrão é 0.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Discovery.AnnouncementService" /> classe com o comprimento especificado do histórico de mensagens duplicadas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfflineAnnouncementReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OfflineAnnouncementReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OfflineAnnouncementReceived" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma mensagem de aviso offline (Bye) é recebida,</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOfflineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginOfflineAnnouncement (System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginOfflineAnnouncement(class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, class System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnBeginOfflineAnnouncement(System.ServiceModel.Discovery.DiscoveryMessageSequence,System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageSequence" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+        <Parameter Name="endpointDiscoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageSequence">A posição dessa mensagem na sequência para a notificação atual.</param>
+        <param name="endpointDiscoveryMetadata">Um objeto que fornece o ponto de extremidade metadados, para escopos de exemplo, escutar o URI, nomes de contrato e endereço de ponto de extremidade.</param>
+        <param name="callback">Método a ser chamado quando a operação assíncrona for concluída.</param>
+        <param name="state">Dados de estado definido de infraestrutura.</param>
+        <summary>Inicia o processamento de recebimento de mensagens de aviso offline (Bye).</summary>
+        <returns>O status da solicitação assíncrona pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam de <xref:System.ServiceModel.Discovery.AnnouncementService> para implementar um anúncio personalizado serviço de escuta deve substituir este método e começar a processar mensagens de entrada Bye.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeginOnlineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual IAsyncResult OnBeginOnlineAnnouncement (System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult OnBeginOnlineAnnouncement(class System.ServiceModel.Discovery.DiscoveryMessageSequence messageSequence, class System.ServiceModel.Discovery.EndpointDiscoveryMetadata endpointDiscoveryMetadata, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnBeginOnlineAnnouncement(System.ServiceModel.Discovery.DiscoveryMessageSequence,System.ServiceModel.Discovery.EndpointDiscoveryMetadata,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageSequence" Type="System.ServiceModel.Discovery.DiscoveryMessageSequence" />
+        <Parameter Name="endpointDiscoveryMetadata" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageSequence">A posição dessa mensagem na sequência para a notificação atual.</param>
+        <param name="endpointDiscoveryMetadata">Um objeto que fornece o ponto de extremidade metadados, para escopos de exemplo, escutar o URI, nomes de contrato e endereço de ponto de extremidade.</param>
+        <param name="callback">Método a ser chamado quando a operação assíncrona for concluída.</param>
+        <param name="state">Dados de estado definido de infraestrutura.</param>
+        <summary>Inicia o processamento de recebimento de mensagens de anúncio online (Olá).</summary>
+        <returns>O status da solicitação assíncrona pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam de <xref:System.ServiceModel.Discovery.AnnouncementService> para implementar um anúncio personalizado serviço de escuta deve substituir este método e começar a processar mensagens de entrada Hello.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOfflineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndOfflineAnnouncement (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndOfflineAnnouncement(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnEndOfflineAnnouncement(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Um resultado assíncrono retornado pelo correspondente <see cref="M:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOnlineAnnouncement(System.ServiceModel.Discovery.AnnouncementMessage,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Os usuários que herdam de <see cref="T:System.ServiceModel.Discovery.AnnouncementService" /> para implementar um anúncio personalizado serviço de escuta deve substituir este método e começar a processar a entrada comunicado offline (Bye) mensagens aqui.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEndOnlineAnnouncement">
+      <MemberSignature Language="C#" Value="protected virtual void OnEndOnlineAnnouncement (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnEndOnlineAnnouncement(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.AnnouncementService.OnEndOnlineAnnouncement(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Um resultado assíncrono retornado pelo correspondente <see cref="M:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOnlineAnnouncement(System.ServiceModel.Discovery.AnnouncementMessage,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Os usuários que herdam de <see cref="T:System.ServiceModel.Discovery.AnnouncementService" /> para implementar um anúncio personalizado serviço de escuta deve substituir este método e começar a processar a entrada comunicado offline (Bye) mensagens aqui.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnlineAnnouncementReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OnlineAnnouncementReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.ServiceModel.Discovery.AnnouncementEventArgs&gt; OnlineAnnouncementReceived" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.ServiceModel.Discovery.AnnouncementEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um anúncio online (Olá) é recebido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

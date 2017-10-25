@@ -1,0 +1,61 @@
+<Namespace Name="System.ComponentModel.Design">
+  <Docs>
+    <summary>O <see cref="N:System.ComponentModel.Design" /> namespace contém classes que os desenvolvedores podem usar para criar o comportamento de tempo de design personalizado para componentes e interfaces do usuário para configurar os componentes em tempo de design. O ambiente de tempo de design fornece sistemas que permitem aos desenvolvedores organizar os componentes e configurar suas propriedades. Alguns componentes podem exigir comportamento específico de somente em tempo de design para funcionar corretamente em um ambiente de tempo de design. Também pode ser importante para fornecer interfaces do usuário personalizadas que auxiliam desenvolvedores na configuração de componentes ou os valores de tipos de dados complexos. As classes e interfaces definidas dentro desse namespace podem ser usados para criar o comportamento de tempo de design de componentes, serviços de tempo de design de acesso e implementar personalizadas interfaces de configuração de tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes nesse namespace incluem:  
+  
+-   Básico <xref:System.ComponentModel.Design.IDesigner> interface que você pode usar para personalizar o comportamento de tempo de design para tipos específicos de componentes.  
+  
+-   Um <xref:System.ComponentModel.Design.ComponentDesigner> classe que fornece uma classe base de designer mais sofisticada que implementa o <xref:System.ComponentModel.Design.IDesigner>, <xref:System.IDisposable>, e <xref:System.ComponentModel.Design.IDesignerFilter> interfaces.  
+  
+-   Interfaces de Designer e serviços que permitem que um designer dar suporte a funcionalidades adicionais, incluindo:  
+  
+    -   <xref:System.ComponentModel.Design.IComponentChangeService>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerEventService>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerFilter>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerHost>  
+  
+    -   <xref:System.ComponentModel.Design.IDesignerOptionService>  
+  
+    -   <xref:System.ComponentModel.Design.IDictionaryService>  
+  
+    -   <xref:System.ComponentModel.Design.IEventBindingService>  
+  
+    -   <xref:System.ComponentModel.Design.IExtenderListService>  
+  
+    -   <xref:System.ComponentModel.Design.IExtenderProviderService>  
+  
+    -   <xref:System.ComponentModel.Design.IHelpService>  
+  
+    -   <xref:System.ComponentModel.Design.IInheritanceService>  
+  
+    -   <xref:System.ComponentModel.Design.IMenuCommandService>  
+  
+    -   <xref:System.ComponentModel.Design.IReferenceService>  
+  
+    -   <xref:System.ComponentModel.Design.IResourceService>  
+  
+    -   <xref:System.ComponentModel.Design.IRootDesigner>  
+  
+    -   <xref:System.ComponentModel.Design.ISelectionService>  
+  
+    -   <xref:System.ComponentModel.Design.IServiceContainer>  
+  
+    -   <xref:System.ComponentModel.Design.ITypeDescriptorFilterService>  
+  
+    -   <xref:System.ComponentModel.Design.ITypeResolutionService>  
+  
+-   Gerenciamento de contexto e serialização de licença de classes que podem ser usadas para personalizar o tempo de design: <xref:System.ComponentModel.Design.DesigntimeLicenseContext> e <xref:System.ComponentModel.Design.DesigntimeLicenseContextSerializer>.  
+  
+-   Editores de coleção simples que podem ser estendidos: <xref:System.ComponentModel.Design.ArrayEditor> e <xref:System.ComponentModel.Design.CollectionEditor>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,240 @@
+<Type Name="PanelContainerDesigner" FullName="System.Web.UI.Design.WebControls.PanelContainerDesigner">
+  <TypeSignature Language="C#" Value="public class PanelContainerDesigner : System.Web.UI.Design.ContainerControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PanelContainerDesigner extends System.Web.UI.Design.ContainerControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.PanelContainerDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ContainerControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Panel> controle é usado como um contêiner para outros controles, especialmente quando os controles são gerados por meio de programação.  
+  
+ Em um designer visual, quando você alternar de origem para o modo de Design, a marcação de código-fonte que descreve o associado <xref:System.Web.UI.WebControls.Panel> controle é analisado e uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar de volta à exibição da fonte, o controle de tempo de design é persistido no código-fonte marcação e editado na marcação da página da Web. O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe fornece suporte de tempo de design para <xref:System.Web.UI.WebControls.Panel> controles em um designer visual.  
+  
+ O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> propriedade obtém a legenda exibida no associado <xref:System.Web.UI.WebControls.Panel> controle. O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> propriedade obtém os estilos do controle associado.  
+  
+ O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl%2A> propriedade sempre retorna `true`, indicando que o designer cria uma cópia temporária do associado <xref:System.Web.UI.WebControls.Panel> para gerar a marcação de tempo de design.  
+  
+ O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> método prepara o designer para exibir, editar e criar associado <xref:System.Web.UI.WebControls.Panel> controle. O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes%2A> método define elementos da coleção de representações de cadeia de caracteres de vários atributos de estilo do controle associado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como estender o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe para alterar a aparência e comportamento de controles que são derivados do <xref:System.Web.UI.WebControls.Panel> controle em tempo de design.  
+  
+ O exemplo deriva o `MyPanelContainer` classe o <xref:System.Web.UI.WebControls.Panel> controle. O exemplo também deriva o `MyPanelContainerDesigner` classe o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe e aplica um <xref:System.ComponentModel.DesignerAttribute> atributo para o `MyPanelContainerDesigner` no `MyPanelContainer` classe.  
+  
+ O `MyPanelContainerDesigner` substitui o seguinte <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> membros:  
+  
+-   O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> propriedade para definir um estilo de borda de tempo de design para o `MyPanelContainer` controle.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> propriedade para fornecer uma legenda padrão para o `MyPanelContainer` controlar, se nenhum tiver sido definida.  
+  
+-   O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> método para lançar uma <xref:System.ArgumentException> exceção, se o controle associado não é um `MyPanelContainer` objeto.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PanelContainerDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelContainerDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.PanelContainerDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe quando ele cria associado <xref:System.Web.UI.WebControls.Panel> controle ou uma cópia desse controle na superfície de design visual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDesignTimeCssAttributes">
+      <MemberSignature Language="C#" Value="protected override void AddDesignTimeCssAttributes (System.Collections.IDictionary styleAttributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddDesignTimeCssAttributes(class System.Collections.IDictionary styleAttributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="styleAttributes" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="styleAttributes">Uma coleção de estilo atributos Implementando a <see cref="T:System.Collections.IDictionary" />.</param>
+        <summary>Adiciona as representações de cadeia de caracteres de atributos de estilo para uma coleção a ser usada no processamento de tempo de design do controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes%2A> chamadas de método de <xref:System.Web.UI.Design.ContainerControlDesigner.AddDesignTimeCssAttributes%2A?displayProperty=nameWithType> base do método, que adiciona representações de cadeia de caracteres de atributos de estilo para o `styleAttributes` coleção. Esses atributos são com base nas propriedades de estilo de associado <xref:System.Web.UI.WebControls.Panel> controle.  
+  
+ O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.AddDesignTimeCssAttributes%2A> define a direção do `styleAttribute` para um código que indica a esquerda para a direita ou da direita para esquerda, com base no valor da <xref:System.Web.UI.WebControls.Panel.Direction%2A> propriedade do controle associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameCaption">
+      <MemberSignature Language="C#" Value="public override string FrameCaption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FrameCaption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a legenda exibida no associado <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</summary>
+        <value>Uma cadeia de caracteres que contém a legenda do painel.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> propriedade retorna o <xref:System.Web.UI.WebControls.Panel.GroupingText%2A> propriedade associado <xref:System.Web.UI.WebControls.Panel> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> propriedade em uma classe herdada do <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe para alterar a aparência de um controle que é derivado do <xref:System.Web.UI.WebControls.Panel> classe em tempo de design. O exemplo fornece uma legenda padrão para o controle associado, se nenhum tiver sido definida.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#3)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameStyle">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.Style FrameStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style FrameStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os estilos de associado <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> objeto que contém os estilos de tempo de design para o associado <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameCaption%2A> propriedade é uma cadeia de caracteres vazia (""), o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> propriedade retorna vazio <xref:System.Web.UI.WebControls.Style> objeto. Caso contrário, o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> propriedade retorna um padrão <xref:System.Web.UI.WebControls.Style> objeto que é gerado pelo <xref:System.Web.UI.Design.ContainerControlDesigner.FrameStyle%2A?displayProperty=nameWithType> base da propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.FrameStyle%2A> propriedade em uma classe herdada do <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe para alterar a aparência de um controle que é derivado do <xref:System.Web.UI.WebControls.Panel> classe em tempo de design. O exemplo define um estilo de borda de tempo de design para o controle associado.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#4)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Um <see cref="T:System.Web.UI.WebControls.Panel" />, que implementa um <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Prepara o designer para exibir, editar e criar o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O visual designer chama o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> método quando ele estiver pronto para usar o designer para renderizar o <xref:System.Web.UI.WebControls.Panel> controle. O <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> e seus métodos base configurar propriedades e os eventos que são necessários para a operação do designer.  
+  
+ O `component` parâmetro é o <xref:System.Web.UI.WebControls.Panel> controle associado este designer ou uma cópia do <xref:System.Web.UI.WebControls.Panel> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.Initialize%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner> classe para alterar o comportamento de um controle que é derivado do <xref:System.Web.UI.WebControls.Panel> classe em tempo de design. O exemplo gera um <xref:System.ArgumentException> exceção, se o controle associado não é um `MyPanelContainer` objeto.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.PanelContainerDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/CS/PanelContainerDesigner.cs#5)]
+ [!code-vb[System.Web.UI.Design.WebControls.PanelContainerDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.PanelContainerDesigner/VB/PanelContainerDesigner.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="component" />não é um <see cref="T:System.Web.UI.WebControls.Panel" /> ou de uma classe derivada de <see cref="T:System.Web.UI.WebControls.Panel" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer deve usar uma cópia temporária em vez do controle real que está associado com o designer para gerar a marcação de tempo de design.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl%2A> propriedade é sempre `true`, o designer usa um <xref:System.Web.UI.WebControls.View> controle que contém uma cópia do associado <xref:System.Web.UI.WebControls.Panel> controle para gerar a marcação de tempo de design. O <xref:System.Web.UI.WebControls.View> controle não afeta qualquer persistência para o <xref:System.Web.UI.WebControls.Panel>.  
+  
+ Se o <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl%2A> propriedade foi substituída para retornar `false`, o designer usará associado <xref:System.Web.UI.WebControls.Panel> para gerar a marcação de tempo de design e alterações em tempo de design para o controle será mantido para a origem de marcação da página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl" /> propriedade para retornar <see langword="false" /> ou para determinar seu valor com base em se o controle está marcado com um nível de classe <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> atributo. Se o <see cref="P:System.Web.UI.Design.WebControls.PanelContainerDesigner.UsePreviewControl" /> não for substituído, o <see cref="T:System.Web.UI.WebControls.Panel" /> controle ignorará o <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> atributo.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

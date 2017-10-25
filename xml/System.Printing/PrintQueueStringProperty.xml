@@ -1,0 +1,96 @@
+<Type Name="PrintQueueStringProperty" FullName="System.Printing.PrintQueueStringProperty">
+  <TypeSignature Language="C#" Value="public class PrintQueueStringProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintQueueStringProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintQueueStringProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um e somente um dos três propriedades possíveis de uma fila de impressão: <see cref="P:System.Printing.PrintQueue.Location" />, <see cref="P:System.Printing.PrintQueue.Comment" />, ou <see cref="P:System.Printing.PrintQueue.ShareName" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto dessa classe é usado principalmente como um parâmetro para um dos sobrecarregados <xref:System.Printing.PrintServer.InstallPrintQueue%2A> métodos de um <xref:System.Printing.PrintServer>. Esse método torna possível instalar uma fila de impressão durante a inicialização, apenas um dos seus três principais <xref:System.String> propriedades. Não é possível ter três sobrecargas do método, separadas porque eles teriam a mesma assinatura e não há duas sobrecargas de um método podem ter a mesma assinatura. Se você quiser instalar uma fila de impressão e inicializar duas ou mais de suas propriedades de cadeia de caracteres grandes, há outra sobrecarga, <xref:System.Printing.PrintServer.InstallPrintQueue%2A>, que substitui três <xref:System.String> parâmetros para o <xref:System.Printing.PrintQueueStringProperty> parâmetro. Esses parâmetros são usados para definir as propriedades de cadeia de caracteres principais nesta ordem: <xref:System.Printing.PrintQueue.ShareName%2A>, <xref:System.Printing.PrintQueue.Comment%2A>, e <xref:System.Printing.PrintQueue.Location%2A>. Use uma cadeia de caracteres vazia para um parâmetro que corresponde a uma propriedade que você não deseja inicializar.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueStringProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStringProperty.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Printing.PrintQueueStringProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStringProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da propriedade de fila de impressão é representado.</summary>
+        <value>Um <see cref="T:System.String" /> com o valor da propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, se o <xref:System.Printing.PrintQueueStringProperty.Type%2A> é <xref:System.Printing.PrintQueueStringPropertyType.Location>, o <xref:System.Printing.PrintQueueStringProperty.Name%2A> pode ser "Departamento fornecer espaço"; Porém, se o <xref:System.Printing.PrintQueueStringProperty.Type%2A> é <xref:System.Printing.PrintQueueStringPropertyType.Comment>, o <xref:System.Printing.PrintQueueStringProperty.Name%2A> pode ser "Use somente tamanho a4 com esta impressora."  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintQueueStringPropertyType Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Printing.PrintQueueStringPropertyType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStringProperty.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintQueueStringPropertyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que identifica quais as três propriedades possíveis de uma fila de impressão está sendo representado.</summary>
+        <value>Um <see cref="T:System.Printing.PrintQueueStringPropertyType" /> que especifica o tipo de propriedade de fila de impressão que está sendo representado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Printing.PrintServer.InstallPrintQueue%2A> método de um <xref:System.Printing.PrintServer> usa essas informações para garantir que o <xref:System.Printing.PrintQueueStringProperty.Name%2A> valor é atribuído à propriedade correta do <xref:System.Printing.PrintQueue> que está sendo instalado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,138 @@
+<Type Name="ScaffoldTableAttribute" FullName="System.ComponentModel.DataAnnotations.ScaffoldTableAttribute">
+  <TypeSignature Language="C#" Value="public class ScaffoldTableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScaffoldTableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se uma classe ou tabela de dados usa scaffolding.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Scaffolding é o mecanismo para gerar modelos de página da web com base nos esquemas de banco de dados. Dados dinâmicos do ASP.NET usam scaffolding para gerar a interface de usuário baseada na Web que permite que um usuário para exibir e atualizar um banco de dados. Essa classe usa a <xref:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold%2A> propriedade para habilitar o scaffolding de tabelas individuais em um dados de Site dinâmico. Scaffolding aprimora a estrutura de página ASP.NET dinamicamente exibindo páginas com base no modelo de dados com nenhuma páginas físicas necessárias.  
+  
+ Scaffolding fornece o seguinte:  
+  
+-   Mínimo ou nenhum código para criar um aplicativo de Web controladas por dados.  
+  
+-   Tempo de desenvolvimento rápido.  
+  
+-   Páginas são completamente funcionais, incluindo a exibição, inserir, editar, excluir, classificação e as funcionalidades de paginação.  
+  
+-   Validação de dados interna com base no esquema de banco de dados.  
+  
+-   Filtros que são criados para cada chave estrangeira ou campos boolianos.  
+  
+ Essa classe pode ser usada para habilitar ou desabilitar a estrutura das tabelas de dados em um modelo de dados aplicando esse atributo para a classe parcial que representa a tabela.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir oculta a tabela de log de erros no banco de dados AdventureWorksLT aplicando o atributo scaffold na classe parcial do ErrorLog que representa a tabela de log de erros. A propriedade scaffold é definida como`false.`  
+  
+```csharp  
+[MetadataType (typeof(ErrorLogMetada))]  
+[ScaffoldTable(false)]  
+public partial class ErrorLog  
+{  
+  
+}  
+  
+public class ErrorLogMetada  
+{  
+  
+}  
+```  
+
+```vb  
+<MetadataType(GetType(ErrorLogMetada))> _   
+<ScaffoldTable(False)>   
+Public Partial Class ErrorLog   
+  
+End Class   
+  
+Public Class ErrorLogMetada  
+  
+End Class   
+```  
+  
+ Para compilar o código de exemplo, você precisará do seguinte:  
+  
+-   Visual Studio 2008 Service Pack 1 ou Visual Developer 2008 Express Edition Service Pack 1.  
+  
+-   O banco de dados de exemplo AdventureWorksLT. Para obter informações sobre como baixar e instalar o banco de dados de exemplo do SQL Server, consulte [Microsoft SQL Server Product Samples: banco de dados](http://go.microsoft.com/fwlink/?LinkId=117483) no site da CodePlex. Certifique-se de que você instale a versão correta do banco de dados de exemplo para a versão do SQL Server que você está executando (SQL Server 2005 ou SQL Server 2008).  
+  
+-   Um site da Web dinâmico de dados. Isso permite que você crie um contexto de dados para o banco de dados e a classe que contém o campo de dados para personalizar e os métodos para substituir. Além disso, ele cria o ambiente no qual deseja usar a página descrita antes. Para obter mais informações, consulte [passo a passo: Criando um novo dinâmico dados de Site da Web usando o Scaffolding](http://msdn.microsoft.com/library/1564aef2-9103-436a-9806-c8ad7abd616a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaffoldTableAttribute (bool scaffold);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool scaffold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scaffold" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="scaffold">O valor que especifica se o scaffolding está habilitado.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute" /> usando o <see cref="P:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir `scaffold` para `true` para o modelo de dados inteiro para expor todas as tabelas de dados no banco de dados para operações CRUD (criar, ler, atualizar e excluir) ou expor tabelas individuais para operações CRUD definindo `scaffold` para tabelas individuais para `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scaffold">
+      <MemberSignature Language="C#" Value="public bool Scaffold { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Scaffold" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute.Scaffold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor que especifica se o scaffolding está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o scaffolding estiver habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Scaffolding é o mecanismo de geração de modelos de página da web com base nos esquemas de banco de dados. Dados dinâmicos do ASP.NET usam scaffolding para gerar a interface de usuário baseada na Web que permite que um usuário para exibir e atualizar um banco de dados. Para obter mais informações sobre o atributo Scaffold, consulte <xref:System.ComponentModel.DataAnnotations.ScaffoldTableAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Permissions">
+  <Docs>
+    <summary>O <see cref="N:System.Security.Permissions" /> namespace define classes que controlam o acesso a operações e recursos com base na política.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

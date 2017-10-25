@@ -1,0 +1,74 @@
+<Type Name="EntitySetAttribute" FullName="System.Data.Services.Common.EntitySetAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EntitySetAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EntitySetAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Common.EntitySetAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica a entidade definida ao qual pertence a uma classe de serviço de dados do cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Common.EntitySetAttribute> classe é usada pelo cliente durante a associação de dados para determinar o nome do conjunto ao qual pertence a uma classe de entidades. Esse atributo é gerado pelo `Add Service Reference` caixa de diálogo quando a opção de associação é usada e pela ferramenta quando o `/binding` opção é fornecida.  
+  
+ Você deve aplicar o <xref:System.Data.Services.Common.EntitySetAttribute> a qualquer classe de serviço de dados cliente fornecido pelo usuário que é usado com associação de dados.  
+  
+ <xref:System.Data.Services.Common.EntitySetAttribute>é suportado apenas quando há um conjunto de entidades associado com o tipo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntitySetAttribute (string entitySet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string entitySet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Common.EntitySetAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="entitySet" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entitySet">O conjunto ao qual pertence a classe de entidades.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Data.Services.Common.EntitySetAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySet">
+      <MemberSignature Language="C#" Value="public string EntitySet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySet" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Common.EntitySetAttribute.EntitySet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto ao qual pertence a classe de entidades.</summary>
+        <value>A entidade definida como valor de cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

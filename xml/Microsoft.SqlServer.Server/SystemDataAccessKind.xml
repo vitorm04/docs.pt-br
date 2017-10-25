@@ -1,0 +1,64 @@
+<Type Name="SystemDataAccessKind" FullName="Microsoft.SqlServer.Server.SystemDataAccessKind">
+  <TypeSignature Language="C#" Value="public enum SystemDataAccessKind" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed SystemDataAccessKind extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SystemDataAccessKind" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o tipo de acesso a dados do sistema para uma função ou um método definido pelo usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Descreve o tipo de acesso a dados do sistema para uma função ou um método definido pelo usuário.  
+  
+ Essa enumeração é usada no <xref:Microsoft.SqlServer.Server.SqlMethodAttribute> e <xref:Microsoft.SqlServer.Server.SqlFunctionAttribute> para indicar que tem o tipo de acesso a dados de sistema, o método ou função.  
+  
+ Observe que métodos e as funções não são permitidas para fazer alterações no banco de dados, portanto, as opções para essa enumeração são `None` (ou seja, nenhum acesso a dados executado pelo método ou função) e `Read` (o que significa que o método ou a função executa operações de acesso a dados somente leitura, como a execução de instruções SELECT).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.SqlServer.Server.SystemDataAccessKind None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.SqlServer.Server.SystemDataAccessKind.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.SystemDataAccessKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O método ou função não acessar dados do sistema.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.SqlServer.Server.SystemDataAccessKind Read = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.SqlServer.Server.SystemDataAccessKind.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.SqlServer.Server.SystemDataAccessKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O método ou função lê dados do sistema.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,58 @@
+<Type Name="IAppDomainFactory" FullName="System.Web.Hosting.IAppDomainFactory">
+  <TypeSignature Language="C#" Value="public interface IAppDomainFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAppDomainFactory" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IAppDomainFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("e6e21054-a7dc-4378-877d-b7f4a2d7e8ba")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um único método para criar um novo <see cref="T:System.AppDomain" /> instância para um aplicativo Web. Essa interface foi usada por versões do .NET Framework anteriores à 2.0; versão 2.0 usa o <see cref="T:System.Web.Hosting.IAppManagerAppDomainFactory" /> interface em vez disso.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public object Create (string module, string typeName, string appId, string appPath, string strUrlOfAppOrigin, int iZone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Create([in]string module, [in]string typeName, [in]string appId, [in]string appPath, [in]string strUrlOfAppOrigin, [in]int32 iZone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IAppDomainFactory.Create(System.String,System.String,System.String,System.String,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="module" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="appPath" Type="System.String" />
+        <Parameter Name="strUrlOfAppOrigin" Type="System.String" />
+        <Parameter Name="iZone" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="module">O módulo que contém o aplicativo Web.</param>
+        <param name="typeName">O tipo de aplicativo da Web.</param>
+        <param name="appId">O identificador exclusivo para o aplicativo Web.</param>
+        <param name="appPath">O caminho para os arquivos do aplicativo da Web.</param>
+        <param name="strUrlOfAppOrigin">A URL de origem para o aplicativo Web.</param>
+        <param name="iZone">A zona de origem para o aplicativo Web.</param>
+        <summary>Cria um novo domínio de aplicativo para o aplicativo Web especificado. Essa interface foi usada por versões do .NET Framework anteriores à 2.0; versão 2.0 usa o <see cref="T:System.Web.Hosting.IAppManagerAppDomainFactory" /> interface em vez disso.</summary>
+        <returns>Um novo domínio de aplicativo para o aplicativo Web especificado.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

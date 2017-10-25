@@ -1,0 +1,89 @@
+<Type Name="TickStyle" FullName="System.Windows.Forms.TickStyle">
+  <TypeSignature Language="C#" Value="public enum TickStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TickStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TickStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o local das marcas de escala em um <see cref="T:System.Windows.Forms.TrackBar" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração para definir o valor da <xref:System.Windows.Forms.TrackBar.TickStyle%2A> propriedade o <xref:System.Windows.Forms.TrackBar> controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TickStyle Both = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TickStyle.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TickStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As marcas de escala estão localizadas em ambos os lados do controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TickStyle BottomRight = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TickStyle.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TickStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As marcas de escala estão localizadas na parte inferior de um controle horizontal ou à direita de um controle vertical.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TickStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TickStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TickStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma marca de escala aparecem no controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TickStyle TopLeft = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TickStyle.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TickStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As marcas de escala estão localizadas na parte superior de um controle horizontal ou à esquerda de um controle vertical.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

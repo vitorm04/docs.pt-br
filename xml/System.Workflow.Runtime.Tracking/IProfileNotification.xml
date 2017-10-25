@@ -1,0 +1,80 @@
+<Type Name="IProfileNotification" FullName="System.Workflow.Runtime.Tracking.IProfileNotification">
+  <TypeSignature Language="C#" Value="public interface IProfileNotification" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IProfileNotification" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.IProfileNotification" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um mecanismo de notificação para um serviço de acompanhamento informar a infra-estrutura de controle de tempo de execução sobre as alterações para o <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> para um determinado fluxo de trabalho <see cref="T:System.Type" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Serviços de controle de gerenciar os perfis de rastreamento disponíveis para o infra-estrutura de controle de tempo de execução. Um serviço de acompanhamento que implementa <xref:System.Workflow.Runtime.Tracking.IProfileNotification> pode fornecer notificações para a infra-estrutura de controle de tempo de execução quando uma <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para um determinado fluxo de trabalho <xref:System.Type> altera ou não é mais válido. A infra-estrutura de controle de tempo de execução assina o <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated> e <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved> eventos e atualiza o cache quando esses eventos são gerados. Isso diminui o número de solicitações de perfis que faz com que a infra-estrutura de controle de tempo de execução para um serviço de controle de controle. Observação: a infra-estrutura de controle de tempo de execução ainda usa o sobrecarregado <xref:System.Workflow.Runtime.Tracking.TrackingService.GetProfile%2A> métodos do serviço de acompanhamento, mas não chamá-los como com frequência.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ProfileRemoved">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs&gt; ProfileRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs&gt; ProfileRemoved" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> para um fluxo de trabalho específico tipo é removido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço de controle pode gerar o <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved> eventos para informar a infra-estrutura de controle de tempo de execução que novas instâncias do fluxo de trabalho <xref:System.Type> especificado em <xref:System.Workflow.Runtime.Tracking.ProfileRemovedEventArgs> não devem ser controladas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProfileUpdated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs&gt; ProfileUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs&gt; ProfileUpdated" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> para um fluxo de trabalho específico <see cref="T:System.Type" /> é atualizada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço de controle pode gerar o <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated> eventos para informar a infra-estrutura de controle de tempo de execução que um novo <xref:System.Workflow.Runtime.Tracking.TrackingProfile> está disponível para o fluxo de trabalho indicado <xref:System.Type>. O fluxo de trabalho <xref:System.Type> e <xref:System.Workflow.Runtime.Tracking.TrackingProfile> são passadas em um <xref:System.Workflow.Runtime.Tracking.ProfileUpdatedEventArgs>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,131 @@
+<Type Name="ProcessorArchitecture" FullName="Microsoft.Build.Utilities.ProcessorArchitecture">
+  <TypeSignature Language="C#" Value="public static class ProcessorArchitecture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ProcessorArchitecture extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.ProcessorArchitecture" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Determina a ferramenta correta no conjunto de ferramentas que o MSBuild deve usar, com base na arquitetura do processador do sistema atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conjunto de ferramentas contém várias ferramentas, como compiladores, que são usados em situações diferentes. <xref:System.Reflection.ProcessorArchitecture>Determina quais dessas ferramentas devem ser usadas com base na arquitetura do sistema atual ou o CPU, como x86, AMD64 e assim por diante.  
+  
+ Para obter mais informações sobre conjuntos de ferramentas, consulte [padrão e configurações do conjunto de ferramentas personalizadas](http://msdn.microsoft.com/library/15a048c8-5ad3-448e-b6e9-e3c5d7147ed2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AMD64">
+      <MemberSignature Language="C#" Value="public const string AMD64;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string AMD64" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.ProcessorArchitecture.AMD64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o processador AMD64.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ARM">
+      <MemberSignature Language="C#" Value="public const string ARM;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ARM" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.ProcessorArchitecture.ARM" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um processador ARM.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentProcessArchitecture">
+      <MemberSignature Language="C#" Value="public static string CurrentProcessArchitecture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string CurrentProcessArchitecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ProcessorArchitecture.CurrentProcessArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a arquitetura do processador do sistema.</summary>
+        <value>Uma cadeia de caracteres que contém o valor de arquitetura do processador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IA64">
+      <MemberSignature Language="C#" Value="public const string IA64;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string IA64" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.ProcessorArchitecture.IA64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o processador IA64.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSIL">
+      <MemberSignature Language="C#" Value="public const string MSIL;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string MSIL" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.ProcessorArchitecture.MSIL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa MSIL.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X86">
+      <MemberSignature Language="C#" Value="public const string X86;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string X86" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Build.Utilities.ProcessorArchitecture.X86" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um x86 processador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

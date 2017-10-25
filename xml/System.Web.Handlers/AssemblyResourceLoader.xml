@@ -1,0 +1,120 @@
+<Type Name="AssemblyResourceLoader" FullName="System.Web.Handlers.AssemblyResourceLoader">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyResourceLoader : System.Web.IHttpHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyResourceLoader extends System.Object implements class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Handlers.AssemblyResourceLoader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um manipulador HTTP usado para carregar recursos inseridos de assemblies. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Handlers.AssemblyResourceLoader> classe é um manipulador HTTP que permite que uma página ASP.NET ou um controle para carregar os recursos incorporados, como arquivos de script, imagens e dados do cliente, de um assembly .NET compilado. Para obter mais informações sobre como incorporar recursos em um assembly .NET, consulte a documentação para o compilador que você usa.  
+  
+ O <xref:System.Web.Handlers.AssemblyResourceLoader> manipulador responde a solicitações feitas para URLs geradas pelo <xref:System.Web.UI.ClientScriptManager.GetWebResourceUrl%2A> método. Antes de responder à solicitação, o <xref:System.Web.Handlers.AssemblyResourceLoader> manipulador garante que o recurso deve estar disponível diretamente pela Web.  
+  
+ O manipulador responde às solicitações do formulário  
+  
+```  
+WebResource.axd?d=<encrypted identifier>&t=<time stamp value>  
+```  
+  
+ onde `<encryped identifier>` identifica o recurso da Web solicitado e `<time stamp value>` é o carimbo de hora para o assembly solicitado para que as alterações para o assembly podem ser detectadas e o recurso de cache é invalidado.  
+  
+ Esta classe dá suporte à infraestrutura do ASP.NET e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyResourceLoader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.AssemblyResourceLoader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Handlers.AssemblyResourceLoader" />. Este construtor dá suporte à infraestrutura do ASP.NET e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.IsReusable">
+      <MemberSignature Language="C#" Value="bool System.Web.IHttpHandler.IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.IHttpHandler.IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Handlers.AssemblyResourceLoader.System#Web#IHttpHandler#IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se outra solicitação pode reutilizar o <see cref="T:System.Web.IHttpHandler" /> instância.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Handlers.AssemblyResourceLoader> é convertida em uma interface de <xref:System.Web.IHttpHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.ProcessRequest">
+      <MemberSignature Language="C#" Value="void IHttpHandler.ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpHandler.ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.AssemblyResourceLoader.System#Web#IHttpHandler#ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto da solicitação.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.IHttpHandler.ProcessRequest(System.Web.HttpContext)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Handlers.AssemblyResourceLoader> é convertida em uma interface de <xref:System.Web.IHttpHandler>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A solicitação de recurso da Web é inválida.  
+  
+ \- ou -  
+  
+ O nome do assembly não pôde ser encontrado.  
+  
+ \- ou -  
+  
+ O nome do recurso não pôde ser encontrado no assembly.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

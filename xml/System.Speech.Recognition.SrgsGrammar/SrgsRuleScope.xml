@@ -1,0 +1,50 @@
+<Type Name="SrgsRuleScope" FullName="System.Speech.Recognition.SrgsGrammar.SrgsRuleScope">
+  <TypeSignature Language="C#" Value="public enum SrgsRuleScope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SrgsRuleScope extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os valores para o escopo de um <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsRule" /> objeto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="Private" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsRuleScope Private = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Private" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A regra não pode ser o destino de uma referência de regra de uma gramática externa, a menos que é a regra raiz de seu recipiente gramática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Public">
+      <MemberSignature Language="C#" Value="Public" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Recognition.SrgsGrammar.SrgsRuleScope Public = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Recognition.SrgsGrammar.SrgsRuleScope.Public" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.SrgsGrammar.SrgsRuleScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A regra pode ser o destino de uma referência de regra de uma gramática externa, que pode usar a regra para executar o reconhecimento. Uma regra pública sempre pode ser ativada para o reconhecimento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

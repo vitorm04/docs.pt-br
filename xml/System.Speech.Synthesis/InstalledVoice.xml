@@ -1,0 +1,199 @@
+<Type Name="InstalledVoice" FullName="System.Speech.Synthesis.InstalledVoice">
+  <TypeSignature Language="C#" Value="public class InstalledVoice" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstalledVoice extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.InstalledVoice" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{VoiceInfo.Name} [{Enabled ? "Enabled" : "Disabled"}]")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações sobre uma voz de síntese de fala instalada no Windows.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta classe para obter informações sobre uma voz instalada, incluindo sua cultura, o nome, sexo, idade, e se ele está habilitado.  
+  
+ Para executar o texto em fala, usando o idioma especificado no <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade, um mecanismo de síntese de fala que dá suporte a que o código do país de idioma deve ser instalado. Os mecanismos de síntese de fala fornecido com o Microsoft Windows 7 trabalhar com os seguintes códigos de país de idioma:  
+  
+-   en-US. Inglês (Estados Unidos)  
+  
+-   zh-CN. Chinês (China)  
+  
+-   zh-TW. Chinês (Taiwan)  
+  
+ Códigos de idioma de duas letras, como "en" também são permitidos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir faz parte de um aplicativo de console que inicia um <xref:System.Speech.Synthesis.SpeechSynthesizer> do objeto e saídas para o console de uma lista das vozes instaladas (mecanismos de síntese de fala) e demonstra as informações que estão disponíveis para cada tipo de voz.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+using System.Speech.AudioFormat;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Output information about all of the installed voices.   
+        Console.WriteLine("Installed voices -");  
+        foreach (InstalledVoice voice in synth.GetInstalledVoices())  
+        {  
+          VoiceInfo info = voice.VoiceInfo;  
+          string AudioFormats = "";  
+          foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)  
+          {  
+            AudioFormats += String.Format("{0}\n",  
+            fmt.EncodingFormat.ToString());  
+          }  
+  
+          Console.WriteLine(" Name:          " + info.Name);  
+          Console.WriteLine(" Culture:       " + info.Culture);  
+          Console.WriteLine(" Age:           " + info.Age);  
+          Console.WriteLine(" Gender:        " + info.Gender);  
+          Console.WriteLine(" Description:   " + info.Description);  
+          Console.WriteLine(" ID:            " + info.Id);  
+          Console.WriteLine(" Enabled:       " + voice.Enabled);  
+          if (info.SupportedAudioFormats.Count != 0)  
+          {  
+            Console.WriteLine( " Audio formats: " + AudioFormats);  
+          }  
+          else  
+          {  
+            Console.WriteLine(" No supported audio formats found");  
+          }  
+  
+          string AdditionalInfo = "";  
+          foreach (string key in info.AdditionalInfo.Keys)  
+          {  
+            AdditionalInfo += String.Format("  {0}: {1}\n", key, info.AdditionalInfo[key]);  
+          }  
+  
+          Console.WriteLine(" Additional Info - " + AdditionalInfo);  
+          Console.WriteLine();  
+        }  
+      }  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.InstalledVoice.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se uma voz pode ser usada para gerar a fala.</summary>
+        <value>Retorna um <see langword="bool" /> que representa o estado habilitado da voz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Speech.Synthesis.InstalledVoice.Enabled%2A> é de propriedade `true` por padrão. Quando um aplicativo chama <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A>, o método verifica que cada uma das vozes encontrar no registro atenda a certos critérios mínimo. Para qualquer falha de verificação, voz <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> define seu <xref:System.Speech.Synthesis.InstalledVoice.Enabled%2A> propriedade `false`. Um aplicativo não é possível selecionar uma voz cujo <xref:System.Speech.Synthesis.InstalledVoice.Enabled%2A> é de propriedade `false`. Normalmente, os aplicativos não configuram uma voz <xref:System.Speech.Synthesis.InstalledVoice.Enabled%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.InstalledVoice.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto que pode ser convertido em uma instância de <see cref="T:System.Speech.Synthesis.InstalledVoice" />.</param>
+        <summary>Determina se um determinado objeto é uma instância de <see cref="T:System.Speech.Synthesis.InstalledVoice" /> e igual à instância atual do <see cref="T:System.Speech.Synthesis.InstalledVoice" />.</summary>
+        <returns>Retorna <see langword="true" /> se a instância atual do <see cref="T:System.Speech.Synthesis.InstalledVoice" /> e que obtido o <paramref name="obj" /> argumento forem igual, caso contrário, retornará <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método retornará false se o <xref:System.Object> fornecidos pelo `obj` argumento não pode ser convertido em <xref:System.Speech.Synthesis.InstalledVoice>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.InstalledVoice.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um código hash para um <c>InstalledVoice</c> objeto.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Speech.Synthesis.InstalledVoice" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VoiceInfo">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.VoiceInfo VoiceInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Speech.Synthesis.VoiceInfo VoiceInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.InstalledVoice.VoiceInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.VoiceInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações sobre uma voz, como a cultura, nome, sexo e idade.</summary>
+        <value>As informações sobre uma voz instalada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

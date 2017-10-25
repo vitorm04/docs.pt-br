@@ -1,0 +1,57 @@
+<Type Name="CoerceValueCallback" FullName="System.Windows.CoerceValueCallback">
+  <TypeSignature Language="C#" Value="public delegate object CoerceValueCallback(DependencyObject d, object baseValue);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CoerceValueCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.CoerceValueCallback" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="d" Type="System.Windows.DependencyObject" />
+    <Parameter Name="baseValue" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Object</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="d">O objeto na qual a propriedade existe. Quando o retorno de chamada for invocado, o sistema de propriedade passará esse valor.</param>
+    <param name="baseValue">O novo valor da propriedade, antes de qualquer tentativa de coerção.</param>
+    <summary>Fornece um modelo para um método que é chamado sempre que um valor da propriedade de dependência está sendo reavaliado ou a coerção é especificamente solicitada.</summary>
+    <returns>O valor imposto (com o tipo apropriado).</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornos de chamada com base em <xref:System.Windows.CoerceValueCallback> pode ser atribuído a uma propriedade de dependência por meio de várias técnicas diferentes. Cada uma dessas técnicas requer que você primeiro crie um novo objeto de metadados de propriedade (<xref:System.Windows.PropertyMetadata>, ou uma classe derivada como <xref:System.Windows.FrameworkPropertyMetadata>). Criar o objeto de metadados usando uma assinatura de construtor que recebe o `coerceValueCallback` parâmetro e atribuir esse parâmetro para o manipulador de retorno de chamada. Ou criar os metadados por qualquer assinatura e o conjunto de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> propriedade antes de colocar os metadados em uso.  
+  
+ Quando você tiver esses metadados, você pode:  
+  
+-   Definir uma nova propriedade de dependência em uma nova classe, usando qualquer uma das assinaturas de <xref:System.Windows.DependencyProperty.Register%2A>, fornecendo os metadados, como o `typeMetadata` valor.  
+  
+-   Substituir os metadados (chamar <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29>) para uma propriedade de dependência existente, quando você derivar da classe que possui a propriedade de dependência.  
+  
+-   Adicionar uma propriedade de dependência existente para um novo <xref:System.Windows.DependencyObject> de classe, usando os novos metadados, chamando <xref:System.Windows.DependencyProperty.AddOwner%28System.Type%2CSystem.Windows.PropertyMetadata%29>.  
+  
+ Implementações desse retorno de chamada devem verificar o valor `baseValue` e determinar com base no valor ou o tipo, se este é um valor que precisa ser forçado adicional.  
+  
+ O <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> de uma dependência de propriedade é invocada sempre que o sistema de propriedade ou qualquer outro chamador chama <xref:System.Windows.DependencyObject.CoerceValue%2A> em uma <xref:System.Windows.DependencyObject> instância, especificando o identificador da propriedade como o `dp`.  
+  
+ As alterações para o valor da propriedade podem ter vindo de qualquer participante possíveis no sistema de propriedade. Isso inclui estilos, invalidação genérica, gatilhos, herança de valor de propriedade e configuração do valor local.  
+  
+ Geralmente você deve evitar a especificação de mais de um <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> para qualquer dado propriedade de dependência (substituindo ou adição de novos metadados para uma propriedade de dependência que já tinha um <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>). Somente um dos retornos de chamada poderá agir. O retorno de chamada de ação será aquele que foi aplicado à classe mais derivado na herança, em comparação com o <xref:System.Windows.DependencyObject> chamador. Outras chamadas de retorno conforme são atribuídos a metadados para a propriedade de dependência que existia superior na hierarquia de proprietário são substituídas quando os metadados é substituído.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inclui uma implementação desse retorno de chamada para forçar o valor armazenado da propriedade de dependência com base em outras entradas, como o valor da propriedade da outra. Nesse caso, o retorno de chamada verifica se o `ShirtType` propriedade corresponde a um tipo de camisa com botões; nesse caso, ele estabelece uma cor inicial do padrão para o `ButtonColor`, se o tipo de camisa botões não força o `ButtonColor` valor como um valor inicial, que faz com que o [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] (não mostrado) para remover essa lista suspensa com as opções de efetivas.  
+  
+ [!code-csharp[DPCustom#CoerceValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCustom/CSharp/default.xaml.cs#coercevaluecallback)]
+ [!code-vb[DPCustom#CoerceValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCustom/visualbasic/default.xaml.vb#coercevaluecallback)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

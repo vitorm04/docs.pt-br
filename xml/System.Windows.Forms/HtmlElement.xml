@@ -1,0 +1,2137 @@
+<Type Name="HtmlElement" FullName="System.Windows.Forms.HtmlElement">
+  <TypeSignature Language="C#" Value="public sealed class HtmlElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HtmlElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.HtmlElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento HTML em uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement>representa qualquer tipo possíveis de elemento em um documento HTML, como `BODY`, `TABLE`, e `FORM`, entre outros. A classe expõe as propriedades mais comuns que você pode esperar encontrar em todos os elementos.  
+  
+ A maioria dos elementos podem ter *elementos filho*: outros elementos HTML que são colocados sob eles. Use o <xref:System.Windows.Forms.HtmlElement.CanHaveChildren%2A> propriedade para testar se um determinado elemento tiver filhos e o <xref:System.Windows.Forms.HtmlElement.Children%2A> coleção percorrê-los. O <xref:System.Windows.Forms.HtmlElement.Parent%2A> propriedade retorna o <xref:System.Windows.Forms.HtmlElement> no qual o elemento atual está aninhado.  
+  
+ Muitas vezes, é preciso acesso a atributos, propriedades e métodos do elemento subjacente que não são diretamente expostos por <xref:System.Windows.Forms.HtmlElement>, como o `SRC` de atributo em uma `IMG` elemento ou o `Submit` método em um `FORM`. O <xref:System.Windows.Forms.HtmlElement.GetAttribute%2A> e <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A> métodos permitem que você recupere e alterar qualquer atributo ou propriedade em um elemento específico, enquanto <xref:System.Windows.Forms.HtmlElement.InvokeMember%2A> fornece acesso a todos os métodos não expostos no gerenciado modelo DOM (Document Object). Se seu aplicativo não gerenciado permissão de código, você também pode acessar não expostas propriedades e métodos com o <xref:System.Windows.Forms.HtmlElement.DomElement%2A> atributo.  
+  
+ Use o <xref:System.Windows.Forms.HtmlElement.TagName%2A> propriedade para testar se um elemento é de um tipo específico.  
+  
+ Qualquer documento HTML pode ser modificado no tempo de execução. Você pode criar novos <xref:System.Windows.Forms.HtmlElement> objetos com o <xref:System.Windows.Forms.HtmlDocument.CreateElement%2A> método <xref:System.Windows.Forms.HtmlDocument>e adicioná-los para outro elemento usando o <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> ou <xref:System.Windows.Forms.HtmlElement.InsertAdjacentElement%2A> métodos. Você também pode criar os elementos como marcas HTML e atribuí-los a um elemento existente <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como examinar um documento HTML arbitrário e derivar uma cadeia de caracteres que descreve os elementos HTML, com recuo e números de nível usados para indicar como profundamente aninhados os elementos no documento. Este exemplo de código requer que os hosts de aplicativo um <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.HtmlElement#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElementCollection All { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElementCollection All" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.All" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.HtmlElementCollection" /> de todos os elementos sob o elemento atual.</summary>
+        <value>Uma coleção de todos os elementos que são filhos diretos ou indiretos do elemento atual. Se o elemento atual for um <c>tabela</c>, por exemplo, <see cref="P:System.Windows.Forms.HtmlElement.All" /> retornará cada <c>TH</c>, <c>TR</c>, e <c>TD</c> elemento dentro da tabela Assim como quaisquer outros elementos, como <c>DIV</c> e <c>alcance</c> elementos, contidos dentro das células.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para acessar apenas os elementos que têm o elemento atual como seu pai direto, use o <xref:System.Windows.Forms.HtmlElement.Children%2A> coleção em vez disso.  
+  
+ Elementos nesta coleção não serão necessariamente retornados em ordem de origem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement AppendChild (System.Windows.Forms.HtmlElement newElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.HtmlElement AppendChild(class System.Windows.Forms.HtmlElement newElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.AppendChild(System.Windows.Forms.HtmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newElement" Type="System.Windows.Forms.HtmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="newElement">O <see cref="T:System.Windows.Forms.HtmlElement" /> para acrescentar a esse local na árvore.</param>
+        <summary>Adiciona um elemento a outra subárvore do elemento.</summary>
+        <returns>O elemento depois que ele foi adicionado à árvore.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo de objeto de documento (DOM) HTML permite que você altere o conteúdo de tempo de execução de um arquivo HTML de várias maneiras. Use <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> para adicionar novos elementos para um documento existente, ou para mover um elemento na página.  
+  
+ Se um elemento já tiver sido pai, acrescentar um elemento para outro elemento removerá automaticamente esse elemento de seu pai anterior.  
+  
+ As inclusões feitas em um documento em tempo de execução usando <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> não serão mantidos quando você chama o <xref:System.Windows.Forms.WebBrowser.ShowSaveAsDialog%2A> método o <xref:System.Windows.Forms.WebBrowser> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo hiperlink usando o <xref:System.Windows.Forms.HtmlDocument.CreateElement%2A> método e o adiciona ao final de uma página usando `AppendChild` no `BODY` elemento. O exemplo requer que seu aplicativo contém um <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.HtmlElement#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachEventHandler">
+      <MemberSignature Language="C#" Value="public void AttachEventHandler (string eventName, EventHandler eventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachEventHandler(string eventName, class System.EventHandler eventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.AttachEventHandler(System.String,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="eventHandler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventName">O nome do evento que você deseja manipular.</param>
+        <param name="eventHandler">O código gerenciado que manipula o evento.</param>
+        <summary>Adiciona um manipulador de eventos para um evento nomeado no DOM (Modelo de Objeto do Documento) HTML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo gerenciado objeto de documento (DOM) expõe apenas selecionar um número de eventos. A maioria dos eventos não expostos é definida somente para tipos específicos de elementos; como o `submit` evento, que só é válido em `FORM` elementos. Use <xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A> para adicionar um manipulador de eventos para esses eventos não expostos.  
+  
+ Você não deve anexar um evento para o documento ou um de seus objetos até que o documento for carregado. É o mais recente que você deve chamar esse método no <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> evento o <xref:System.Windows.Forms.WebBrowser> controle.  
+  
+ Para obter mais informações sobre os eventos não gerenciados disponíveis, consulte [acessando membros não expostos no modelo de objeto de documento HTML gerenciado](~/docs/framework/winforms/controls/accessing-unexposed-members-on-the-managed-html-document-object-model.md) e as interfaces IHTMLElement: [IHTMLElement](http://go.microsoft.com/fwlink/?LinkId=104876), [IHTMLElement2](http://go.microsoft.com/fwlink/?LinkId=104877), [IHTMLElement3](http://go.microsoft.com/fwlink/?LinkId=104878), [IHTMLElement4](http://go.microsoft.com/fwlink/?LinkId=104879).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanHaveChildren">
+      <MemberSignature Language="C#" Value="public bool CanHaveChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHaveChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.CanHaveChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este elemento pode ter elementos filho.</summary>
+        <value>
+          <see langword="true" />Se o elemento pode ter elementos filho; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns elementos, como `IMG` e `SCRIPT`, não pode ter nenhum filho. Use essa propriedade antes de chamar <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> ou <xref:System.Windows.Forms.HtmlElement.InsertAdjacentElement%2A> em um elemento arbitrário.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.HtmlElement.Click> evento em <xref:System.Windows.Forms.HtmlDocument>. Se um elemento não era anterior selecionado com um clique do mouse, o código atribui o elemento a uma variável de classe privada chamada `MoveElement`. Se um elemento foi selecionado, o código tenta acrescentá-lo ao elemento que acabou de ser clicado. Este exemplo de código requer que os hosts de aplicativo um <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`, e que você já tiver adicionado um manipulador de eventos para o <xref:System.Windows.Forms.HtmlElement.Click> evento em <xref:System.Windows.Forms.HtmlDocument>.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HtmlElement#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElementCollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElementCollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.HtmlElementCollection" /> de todos os filhos do elemento atual.</summary>
+        <value>Uma coleção de todos os objetos <see cref="T:System.Windows.Forms.HtmlElement" /> que têm o elemento atual como um pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitos dos elementos dentro de um arquivo HTML podem ter outros elementos HTML sob eles. O <xref:System.Windows.Forms.HtmlElement.Children%2A> coleção fornece um mecanismo simples para explorar a estrutura de árvore de um documento.  
+  
+ <xref:System.Windows.Forms.HtmlElement.Children%2A>expõe apenas os elementos cujo pai direto é o elemento atual. Se você tiver um <xref:System.Windows.Forms.HtmlElement> para um `TABLE` elemento, <xref:System.Windows.Forms.HtmlElement.Children%2A> fornecerá todos os `TR` elementos (linha) dentro do `TABLE`. Para recuperar o `TD` elementos (célula) contidos dentro do `TR` elementos, você precisará usar o a <xref:System.Windows.Forms.HtmlElement.Children%2A> coleção em cada indivíduo `TR` elemento ou use o <xref:System.Windows.Forms.HtmlElement.All%2A> coleção em <xref:System.Windows.Forms.HtmlElement>.  
+  
+ Não há garantia de elementos nesta coleção em ordem de origem.  
+  
+ Se <xref:System.Windows.Forms.HtmlElement.CanHaveChildren%2A> é `false`, `Children` sempre estará vazia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir examina um documento HTML arbitrário e derivar uma cadeia de caracteres que descreve os elementos, com recuo e números de nível usados para indicar como profundamente aninhadas os elementos no documento. Ele faz isso pesquisando o `Children` coleção de todos os elementos de forma recursiva, começando com o elemento HTML na parte superior do documento. Este exemplo de código requer que o aplicativo tem um <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.HtmlElement#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no elemento com o botão esquerdo do mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.Click> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.Click> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Se o usuário clica em um elemento não atualmente com entrada foco, o <xref:System.Windows.Forms.HtmlElement.Click> evento ocorrerá após o <xref:System.Windows.Forms.HtmlElement.Focusing> evento, mas antes de <xref:System.Windows.Forms.HtmlElement.LostFocus> evento para esse elemento.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.Click> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.Click> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#432](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#432)]
+ [!code-vb[System.Windows.Forms.EventExamples#432](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#432)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ClientRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ClientRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.ClientRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os limites da área de cliente do elemento no documento HTML.</summary>
+        <value>A área de cliente ocupada pelo elemento, menos qualquer área ocupada pelas bordas e barras de rolagem. Use <see cref="P:System.Windows.Forms.HtmlElement.OffsetRectangle" /> em seu lugar para obter a posição e dimensões do elemento, inclusive seus ornamentos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement.ClientRectangle%2A>retorna dados de posição somente para elementos que receberam um explícita de altura e largura ou elementos que usam o posicionamento absoluto. Um documento é posicionado absolutamente se seu estilo de posição é definido como `absolute`, depois que ele pode ser posicionado em qualquer coordenada na página HTML.  
+  
+   
+  
+## Examples  
+ Suponha que você carregou a seguinte página HTML em uma instância do hospedada o <xref:System.Windows.Forms.WebBrowser> controle.  
+  
+```  
+<HTML>  
+  
+    <BODY>  
+  
+        <DIV id="div1" style="position:absolute;top:100px;left:100px;border-      style:solid;border-width:1px;">  
+            Edit this text.  
+        </DIV>  
+  
+    </BODY>  
+  
+</HTML>  
+```  
+  
+ O exemplo de código a seguir demonstra esse elemento de recuperação e expandindo suas dimensões se a área do cliente é menor que 400 pixels de largura por 50 pixels de altura e também define o `DIV` para o `contentEditable` de estado para que o usuário pode inserir texto.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#3)]
+ [!code-vb[System.Windows.Forms.HtmlElement#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachEventHandler">
+      <MemberSignature Language="C#" Value="public void DetachEventHandler (string eventName, EventHandler eventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetachEventHandler(string eventName, class System.EventHandler eventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.DetachEventHandler(System.String,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="eventHandler" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="eventName">O nome do evento que você deseja manipular.</param>
+        <param name="eventHandler">O código gerenciado que manipula o evento.</param>
+        <summary>Remove um manipulador de eventos de um evento nomeado no HTML DOM Document Object Model ().</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlDocument Document { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.HtmlDocument" /> ao qual esse elemento pertence.</summary>
+        <value>O documento pai desse elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas páginas HTML podem hospedar quadros usando o `FRAMESET` marcas. Nesse caso, cada indivíduo `FRAME` elemento conterá sua própria instância do <xref:System.Windows.Forms.HtmlDocument>. Essa propriedade é mais útil quando você recebeu uma referência a um elemento em um manipulador de eventos do <xref:System.Windows.Forms.HtmlElementEventArgs>e precisa executar alguma ação no documento no qual reside o elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomElement">
+      <MemberSignature Language="C#" Value="public object DomElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DomElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.DomElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o ponteiro da interface não gerenciada deste elemento.</summary>
+        <value>O COM <c>IUnknown</c> interfaces de ponteiro para o elemento, que pode ser convertido para um elemento HTML, como <c>IHTMLElement</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement>é um wrapper para o Internet Explorer DOM Document Object Model (), que está escrito usando o modelo de objeto de componente (COM). Se você precisar acessar não expostas propriedades ou métodos em interfaces de COM subjacentes, como `IHTMLElement`, você pode usar esse objeto de consulta para eles.  
+  
+ Para usar as interfaces não gerenciadas, você precisará importar biblioteca MSHTML (Mshtml. dll) para seu aplicativo. No entanto, você também pode executar não expostas propriedades e métodos usando o `Invoke` método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa interfaces não gerenciadas para tirar o texto selecionado no momento e convertê-la em um hiperlink, com a URL escolhida pelo usuário. Esse código foi escrito com a suposição de que o formulário tem uma <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`, e que você adicionou a biblioteca MSHTML não gerenciada como uma referência ao seu projeto.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#4)]
+ [!code-vb[System.Windows.Forms.HtmlElement#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário clica no botão esquerdo do mouse sobre um elemento duas vezes em sucessão rápida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O clique duplo é determinado pelas configurações do mouse do sistema operacional do usuário. O usuário pode definir o tempo entre cliques de um botão do mouse que deve ser considerada um clique duplo em vez de dois cliques.  
+  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.DoubleClick> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.DoubleClick> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.DoubleClick> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.DoubleClick> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#433](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#433)]
+ [!code-vb[System.Windows.Forms.EventExamples#433](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#433)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Drag">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler Drag;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler Drag" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.Drag" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário arrasta o texto em vários locais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre quando o texto é arrastado para os seguintes locais:  
+  
+-   Dentro ou entre páginas HTML hospedadas no <xref:System.Windows.Forms.WebBrowser> controle ou o Internet Explorer  
+  
+-   Para outro aplicativo  
+  
+-   Na área de trabalho do Windows  
+  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.Drag> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.Drag> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.Drag> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.Drag> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#434](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#434)]
+ [!code-vb[System.Windows.Forms.EventExamples#434](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#434)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragEnd">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler DragEnd;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler DragEnd" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.DragEnd" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário termina uma operação de arrastar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.DragEnd> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.DragEnd> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.DragEnd> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.DragEnd> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#435](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#435)]
+ [!code-vb[System.Windows.Forms.EventExamples#435](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#435)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragLeave">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler DragLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler DragLeave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.DragLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário não está arrastando um item sobre este elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.DragLeave> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.DragLeave> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#436](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#436)]
+ [!code-vb[System.Windows.Forms.EventExamples#436](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#436)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragOver">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler DragOver;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler DragOver" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.DragOver" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário arrasta o texto sobre o elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.DragOver> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.DragOver> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.DragOver> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.DragOver> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#437](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#437)]
+ [!code-vb[System.Windows.Forms.EventExamples#437](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#437)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o usuário pode inserir dados nesse elemento.</summary>
+        <value>
+          <see langword="true" /> se o elemento permitir a entrada do usuário; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para `FORM` elementos, como caixas de texto e botões de opção, definindo <xref:System.Windows.Forms.HtmlElement.Enabled%2A> para `false` impedirá que o usuário usando esses campos de formulário. Para outros elementos, como `DIV` ou `SPAN`, configuração <xref:System.Windows.Forms.HtmlElement.Enabled%2A> para `false` fará com que todo o texto dentro do elemento pareça sombreada; no entanto, o texto ainda poderão ser selecionado. Para cancelar a seleção, adicione um manipulador de eventos para o não exposta `onselectstart` evento usando o <xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto para testar a igualdade.</param>
+        <summary>Testa se o objeto fornecido é igual ao elemento atual.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é um <see cref="T:System.Windows.Forms.HtmlElement" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstChild">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement FirstChild { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElement FirstChild" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.FirstChild" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o próximo elemento abaixo desse elemento na árvore de documentos.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.HtmlElement" /> que representa o primeiro elemento contido sob o elemento atual, na ordem de origem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Windows.Forms.HtmlElement.FirstChild%2A> em conjunto com <xref:System.Windows.Forms.HtmlElement.NextSibling%2A> para percorrer a árvore do documento para um documento HTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public void Focus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Focus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.Focus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Coloca o foco de entrada do usuário no elemento atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o foco em um elemento coloca o foco desse elemento tanto torna o elemento ativo; Por exemplo, o elemento que tem o foco será retornado pelo <xref:System.Windows.Forms.HtmlDocument.ActiveElement%2A> propriedade <xref:System.Windows.Forms.HtmlDocument>.  
+  
+ Qualquer pressionamentos de tecla digitados por um usuário após <xref:System.Windows.Forms.HtmlElement.Focus%2A> foi chamada será enviado a esse elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focusing">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler Focusing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler Focusing" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.Focusing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o elemento primeiro recebe foco de entrada do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um elemento que tinha o foco para o usuário alternar para outro aplicativo usando a barra de tarefas ou as teclas ALT + TAB receberá o <xref:System.Windows.Forms.HtmlElement.Focusing> e <xref:System.Windows.Forms.HtmlElement.GotFocus> eventos novamente quando o usuário alterna para o aplicativo.  
+  
+ Você não pode cancelar o comportamento padrão desse evento. Para remover o foco de um elemento, chame <xref:System.Windows.Forms.HtmlElement.Focus%2A> em um elemento diferente de dentro do <xref:System.Windows.Forms.HtmlElement.GotFocus> evento.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.Focusing> evento em um elemento também ocorrerá no pai do elemento e no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.Focusing> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.Focusing> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#438](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#438)]
+ [!code-vb[System.Windows.Forms.EventExamples#438](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#438)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttribute">
+      <MemberSignature Language="C#" Value="public string GetAttribute (string attributeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetAttribute(string attributeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">O nome do atributo. Esse argumento diferencia maiusculas de minúsculas.</param>
+        <summary>Recupera o valor do atributo nomeado no elemento.</summary>
+        <returns>O valor desse atributo no elemento, como um <see cref="T:System.String" /> valor. Se o atributo especificado não existir nesse elemento, será retornada uma cadeia de caracteres vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um atributo em HTML é qualquer par de nome/valor válido para esse elemento. <xref:System.Windows.Forms.HtmlElement>expõe apenas os atributos que são comuns a todos os elementos, deixando as que se aplicam somente a determinados tipos de elementos; `SRC` é um atributo predefinido para a `IMG` marca, por exemplo, mas não para o `DIV` marca. Use <xref:System.Windows.Forms.HtmlElement.GetAttribute%2A> e <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A> para manipular os atributos não são expostos no gerenciado modelo DOM (Document Object).  
+  
+ <xref:System.Windows.Forms.HtmlElement.GetAttribute%2A>e <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A> diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir recupera todos os `META` marcas dentro de uma marca HTML de documento, usando <xref:System.Windows.Forms.HtmlElement.GetAttribute%2A> para localizar o `META` marca com o nome `Description`. O exemplo requer que seu aplicativo tenha um <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlDocument#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlDocument/CS/Form1.cs#6)]
+ [!code-vb[System.Windows.Forms.HtmlDocument#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlDocument/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementsByTagName">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElementCollection GetElementsByTagName (string tagName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.HtmlElementCollection GetElementsByTagName(string tagName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.GetElementsByTagName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">O nome da marca cujos objetos <see cref="T:System.Windows.Forms.HtmlElement" /> você deseja recuperar.</param>
+        <summary>Recupera uma coleção de elementos representada em HTML pelo <c>HTML</c> marca.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.HtmlElementCollection" /> que contém todos os elementos cujo <c>HTML</c> o nome da marca é igual a <paramref name="tagName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um tipo específico.</summary>
+        <returns>Um código hash do <see cref="T:System.Object" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler GotFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler GotFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.GotFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o elemento tiver recebido o foco de entrada do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível cancelar o comportamento padrão desse evento, nem impedi-lo de bolha. Para remover o foco de um elemento, chame <xref:System.Windows.Forms.HtmlElement.Focus%2A> em um elemento diferente de dentro do <xref:System.Windows.Forms.HtmlElement.GotFocus> evento.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ Salve o código HTML a seguir em um arquivo e carregue o arquivo em um <xref:System.Windows.Forms.WebBrowser> controle em um projeto de formulários do Windows.  
+  
+```  
+<HTML>  
+    <BODY>  
+        <FORM name="form1">  
+            <INPUT type="text" size=20 name="text1">  
+            <INPUT type="text" size=20 name="text2">  
+            <INPUT type="text" size=20 name="text3">  
+        </FORM>  
+    </BODY>  
+</HTML>  
+```  
+  
+ O exemplo de código a seguir impede que o próximo `INPUT` elemento na ordem de tabulação de receber o foco de entrada do usuário se o elemento anterior contém menos de cinco caracteres. O exemplo requer que o arquivo HTML mencionado anteriormente seja carregado em uma instância de <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#15)]
+ [!code-vb[System.Windows.Forms.HtmlElement#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um rótulo pelo qual o elemento é identificado.</summary>
+        <value>O identificador exclusivo do elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement.Id%2A>deve ser exclusiva. Você não pode ter dois elementos com o mesmo <xref:System.Windows.Forms.HtmlElement.Id%2A> dentro do mesmo documento. Use o <xref:System.Windows.Forms.HtmlElement.Name%2A> propriedade para fornecer o mesmo identificador a um grupo de elementos logicamente relacionados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerHtml">
+      <MemberSignature Language="C#" Value="public string InnerHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.InnerHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a marcação HTML embaixo desse elemento.</summary>
+        <value>A marcação HTML que define os elementos filho do elemento atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há várias maneiras de adicionar novos elementos a uma página HTML existente, como o <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> e <xref:System.Windows.Forms.HtmlElement.InsertAdjacentElement%2A> métodos. Usando <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> geralmente é a maneira mais rápida para adicionar o novo conteúdo quando você precisa definir vários atributos ou estilos em seus novos elementos.  
+  
+ <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>difere <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> que <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> não incluirá o HTML que representa o objeto que está chamando. Consulte <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> para obter mais informações sobre a diferença entre essas duas propriedades.  
+  
+ Configuração <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> destrói todos os filhos anteriormente anexados ao elemento. Se você recuperar um elemento DOM e, em seguida, atribuir novo HTML para seus pais <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> propriedade, sua referência para esse elemento será inútil e seu comportamento quando chama seus métodos e propriedades é indefinido.  
+  
+ Para alguns elementos, definindo <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> não é uma operação válida. Algumas marcas HTML não têm nenhuma marca de fechamento, como o `IMG` marca e, portanto, não pode conter elementos aninhados. Algumas marcas, como o `SCRIPT` marca, só pode conter texto conteúdo; configuração <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> resultará em erro. Os dois tipos de marcas, o <xref:System.Windows.Forms.HtmlElement.CanHaveChildren%2A> propriedade retornará `false`. No entanto, você também não é possível definir <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> na `TABLE` e `TR` elementos, como atribuindo HTML malformado a esses elementos podem corromper o processamento do documento. Use <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> ou `insertRow` e `insertCell` métodos não gerenciado `IHTMLTable` interface para adicionar linhas e células para um `TABLE`.  
+  
+ Se você somente precisa atribuir texto a um elemento e não uma marcação HTML, use o <xref:System.Windows.Forms.HtmlElement.InnerText%2A> propriedade em vez disso.  
+  
+ Atribuindo um valor para <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> destruirá quaisquer valores de texto anteriormente atribuídos usando <xref:System.Windows.Forms.HtmlElement.InnerText%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não é permitida a criação de elementos filho neste elemento.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto atribuído ao elemento.</summary>
+        <value>O texto do elemento, com qualquer marcação HTML ausente. Se o elemento contiver elementos filho, apenas o texto nesses elementos filho será preservado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tentar atribuir HTML para um elemento com <xref:System.Windows.Forms.HtmlElement.InnerText%2A>, o código HTML será exibido como literais no documento, como se você estava exibindo HTML dentro de um arquivo de texto. Se você atribuir o HTML para um elemento usando o <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> propriedade <xref:System.Windows.Forms.HtmlElement.InnerText%2A> retornará todo o texto em que o HTML com a marcação é removida.  
+  
+ Atribuindo um valor para <xref:System.Windows.Forms.HtmlElement.InnerText%2A> destruirá quaisquer elementos-filho que pertencem ao elemento.  
+  
+   
+  
+## Examples  
+ O código a seguir cria um novo hiperlink usando <xref:System.Windows.Forms.HtmlDocument.CreateElement%2A>e atribui o texto para o link usando o <xref:System.Windows.Forms.HtmlElement.InnerText%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.HtmlElement#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O elemento especificado não pode conter texto (por exemplo, um <c>IMG</c> elemento).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAdjacentElement">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement InsertAdjacentElement (System.Windows.Forms.HtmlElementInsertionOrientation orient, System.Windows.Forms.HtmlElement newElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.HtmlElement InsertAdjacentElement(valuetype System.Windows.Forms.HtmlElementInsertionOrientation orient, class System.Windows.Forms.HtmlElement newElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.InsertAdjacentElement(System.Windows.Forms.HtmlElementInsertionOrientation,System.Windows.Forms.HtmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="orient" Type="System.Windows.Forms.HtmlElementInsertionOrientation" />
+        <Parameter Name="newElement" Type="System.Windows.Forms.HtmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="orient">Onde inserir esse elemento em relação ao elemento atual.</param>
+        <param name="newElement">O novo elemento a ser inserido.</param>
+        <summary>Insira um novo elemento no DOM (Modelo de Objeto do Documento).</summary>
+        <returns>O <see cref="T:System.Windows.Forms.HtmlElement" /> que foi inserida. Se a inserção tiver falhado, isso retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não chame este método até após o <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> evento no <xref:System.Windows.Forms.WebBrowser> ocorreu controle. Chamar esse método antes, em seguida, pode resultar em uma exceção, como o documento será não terminar de carregar.  
+  
+ Se um valor de <xref:System.Windows.Forms.HtmlElementInsertionOrientation> é válido dependem do tipo do elemento. Por exemplo, <xref:System.Windows.Forms.HtmlElementInsertionOrientation.AfterBegin> será válido se o elemento é um `DIV`, mas não se trata de um `SCRIPT` ou `IMG` elemento, nenhum deles pode conter elementos filho.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo insere um `DIV` elemento na parte superior de cada página que os usuários exibir fora do servidor ADatum.com. O exemplo requer que o formulário contém um <xref:System.Windows.Forms.WebBrowser> controle chamado `WebBrowser1`. O exemplo também deve importar o namespace <xref:System.Text.RegularExpressions>.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#9)]
+ [!code-vb[System.Windows.Forms.HtmlElement#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public object InvokeMember (string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object InvokeMember(string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.InvokeMember(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome da propriedade ou método a ser invocado.</param>
+        <summary>Executa um método não exposto no elemento DOM subjacente desse elemento.</summary>
+        <returns>O elemento retornado por esse método, representado como um <see cref="T:System.Object" />. Se este <see cref="T:System.Object" /> for outro elemento HTML e você tiver uma referência à biblioteca MSHTML não gerenciada adicionada ao projeto, será possível convertê-lo para sua interface não gerenciada apropriada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para chamar os métodos do modelo DOM (Document Object) que não têm equivalentes no código gerenciado. Usar esta versão do <xref:System.Windows.Forms.HtmlElement.InvokeMember%2A> para executar métodos não expostos que não usam argumentos. Para ver um exemplo, consulte <xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public object InvokeMember (string methodName, params object[] parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object InvokeMember(string methodName, object[] parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.InvokeMember(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="parameter" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome da propriedade ou método a ser invocado.</param>
+        <param name="parameter">Uma lista de parâmetros passados.</param>
+        <summary>Executa uma função definida na página HTML atual por uma linguagem de script.</summary>
+        <returns>O elemento retornado pela função, representado como um <see cref="T:System.Object" />. Se este <see cref="T:System.Object" /> for outro elemento HTML e você tiver uma referência à biblioteca MSHTML não gerenciada adicionada ao projeto, será possível convertê-lo para sua interface não gerenciada apropriada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para chamar os métodos do modelo DOM (Document Object) que não têm equivalentes no código gerenciado. Todos os argumentos fornecidos para <xref:System.Windows.Forms.HtmlElement.InvokeMember%2A> será convertido em Win32 `VARIANT` tipos de dados antes que eles são passados para a função de script nomeada.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém uma `TABLE` chamado `dataTable` e usa o não exposta `moveRow` método para mover uma linha do final da tabela para o início.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#11)]
+ [!code-vb[System.Windows.Forms.HtmlElement#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler KeyDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler KeyDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.KeyDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário pressiona uma tecla no teclado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement.KeyDown>Ocorre antes de <xref:System.Windows.Forms.HtmlElement.KeyPress>, que por sua vez ocorre antes de <xref:System.Windows.Forms.HtmlElement.KeyUp>.  
+  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.KeyDown> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.KeyDown> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.KeyDown> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.KeyDown> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#442](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#442)]
+ [!code-vb[System.Windows.Forms.EventExamples#442](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#442)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler KeyPress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler KeyPress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.KeyPress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário pressiona e libera uma tecla no teclado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement.KeyPress>ocorre após <xref:System.Windows.Forms.HtmlElement.KeyDown> e antes de <xref:System.Windows.Forms.HtmlElement.KeyUp>.  
+  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.KeyPress> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.KeyPress> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.KeyPress> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.KeyPress> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#443](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#443)]
+ [!code-vb[System.Windows.Forms.EventExamples#443](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#443)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler KeyUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler KeyUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.KeyUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário solta uma tecla no teclado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement.KeyUp>ocorre após <xref:System.Windows.Forms.HtmlElement.KeyPress>, que ocorre após <xref:System.Windows.Forms.HtmlElement.KeyDown>.  
+  
+ Você não pode cancelar este evento.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.KeyUp> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.KeyUp> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.KeyUp> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#444](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#444)]
+ [!code-vb[System.Windows.Forms.EventExamples#444](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#444)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LosingFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler LosingFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler LosingFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.LosingFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o elemento está perdendo o foco de entrada do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.LosingFocus> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.LosingFocus> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#440](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#440)]
+ [!code-vb[System.Windows.Forms.EventExamples#440](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#440)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LostFocus">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler LostFocus;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler LostFocus" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.LostFocus" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o elemento perdeu o foco de entrada do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um elemento não receberá mais eventos de teclas após <xref:System.Windows.Forms.HtmlElement.LostFocus> ocorre até que ele recebe foco novamente pelo usuário selecionando-a na página ou pelo aplicativo que chama o <xref:System.Windows.Forms.HtmlElement.Focus%2A> método no elemento.  
+  
+ Você não pode cancelar este evento.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.LostFocus> evento em um elemento também ocorrerá no pai do elemento e no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.LostFocus> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.LostFocus> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#441](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#441)]
+ [!code-vb[System.Windows.Forms.EventExamples#441](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#441)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDown">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler MouseDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler MouseDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.MouseDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário pressiona um botão do mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.MouseDown> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.MouseDown> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.MouseDown> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.MouseDown> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#446](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#446)]
+ [!code-vb[System.Windows.Forms.EventExamples#446](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#446)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseEnter">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler MouseEnter;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler MouseEnter" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.MouseEnter" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário primeiro move o cursor do mouse sobre o elemento atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.MouseEnter> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.MouseEnter> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#449](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#449)]
+ [!code-vb[System.Windows.Forms.EventExamples#449](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#449)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeave">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler MouseLeave;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler MouseLeave" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.MouseLeave" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário move o cursor do mouse fora do elemento atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.MouseLeave> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.MouseLeave> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#450](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#450)]
+ [!code-vb[System.Windows.Forms.EventExamples#450](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#450)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseMove">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler MouseMove;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler MouseMove" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.MouseMove" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário move o cursor do mouse em um elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não pode cancelar este evento.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.MouseMove> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.MouseMove> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.MouseMove> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#445](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#445)]
+ [!code-vb[System.Windows.Forms.EventExamples#445](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#445)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseOver">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler MouseOver;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler MouseOver" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.MouseOver" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o cursor do mouse entra nos limites do elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.MouseOver> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.MouseOver> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.MouseOver> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.MouseOver> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#447](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#447)]
+ [!code-vb[System.Windows.Forms.EventExamples#447](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#447)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseUp">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.HtmlElementEventHandler MouseUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.HtmlElementEventHandler MouseUp" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.HtmlElement.MouseUp" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário libera um botão do mouse.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode cancelar a ação padrão para um <xref:System.Windows.Forms.HtmlElement.MouseUp> evento em um elemento, definindo o <xref:System.Windows.Forms.HtmlElementEventArgs.ReturnValue%2A> propriedade do <xref:System.Windows.Forms.HtmlElementEventArgs> de classe para `true`.  
+  
+ Um <xref:System.Windows.Forms.HtmlElement.MouseUp> evento em um elemento também ocorrerá em elementos do pai do elemento e, no <xref:System.Windows.Forms.HtmlDocument> classe em si, a menos que você defina o <xref:System.Windows.Forms.HtmlElementEventArgs.BubbleEvent%2A> propriedade o <xref:System.Windows.Forms.HtmlElementEventArgs> classe para `true`.  
+  
+ Para obter mais informações sobre a diferença entre o cancelamento de propagação de eventos e cancelar a ação padrão em um evento, consulte [sobre o modelo de objeto DHTML](http://msdn.microsoft.com/library/ms533022.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.HtmlElement.MouseUp> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.HtmlElement> chamado `HtmlElement1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.HtmlElement.MouseUp> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#448](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#448)]
+ [!code-vb[System.Windows.Forms.EventExamples#448](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#448)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o nome do elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.HtmlElement.Name%2A> propriedade para recuperar os elementos de um documento usando o <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> método no <xref:System.Windows.Forms.HtmlElement.All%2A> propriedade <xref:System.Windows.Forms.HtmlDocument>.  
+  
+ Quando aplicado a `INPUT` elementos, <xref:System.Windows.Forms.HtmlElement.Name%2A> define o nome da variável de dados desse elemento quando o formulário é enviado ao servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextSibling">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement NextSibling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElement NextSibling" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.NextSibling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o próximo elemento no mesmo nível que esse elemento na árvore de documentos.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.HtmlElement" /> que representa o elemento à direita do elemento atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Windows.Forms.HtmlElement.NextSibling%2A> em conjunto com <xref:System.Windows.Forms.HtmlElement.FirstChild%2A> para percorrer a árvore do documento para um elemento HTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetParent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement OffsetParent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElement OffsetParent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.OffsetParent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento do qual <see cref="P:System.Windows.Forms.HtmlElement.OffsetRectangle" /> é calculado.</summary>
+        <value>O elemento do qual os deslocamentos são calculados.  
+  
+ Se o pai de um elemento ou outro elemento na hierarquia do elemento usar posicionamento absoluto ou relativo, <see langword="OffsetParent" /> será o primeiro elemento posicionado de forma relativa ou absoluta no qual o elemento atual está aninhado. Se nenhum dos elementos acima do elemento atual são absolutamente ou relativamente posicionado, <see langword="OffsetParent" /> será o <c>corpo</c> marca do documento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementos podem ser posicionados em uma página HTML em um dos três modos: padrão de posicionamento de fluxo; posicionamento relativo, em que o elemento tem um deslocamento de um valor fixo em relação ao seu pai; e o posicionamento absoluto, no qual o elemento é fornecido um fixa coordenar posição em relação ao canto superior esquerdo do documento.  
+  
+ Quando os elementos de um documento usam o posicionamento absoluto ou relativo, você pode usar `OffsetParent` para calcular a posição de coordenadas de um elemento na área do cliente.  
+  
+ Para obter mais informações sobre o elemento de posicionamento no HTML, consulte [sobre posicionamento de elementos](http://msdn.microsoft.com/library/ms533005.aspx).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como <xref:System.Windows.Forms.HtmlElement.OffsetParent%2A> e <xref:System.Windows.Forms.HtmlElement.OffsetRectangle%2A> são diferentes para `span1`, `span2` e `span3`:  
+  
+```  
+<HTML>  
+    <BODY id="documentBody">  
+  
+        <DIV id="div1">  
+            <SPAN id="span1">Placeholder text 1.</SPAN>  
+        </DIV>  
+  
+        <DIV id="div2" style="position:relative;top:100px;left:100px;">  
+            <SPAN id="span2">Placeholder text 2.</SPAN>  
+        </DIV>  
+  
+        <DIV id="div3" style="position:absolute;top:200px;left:200px;">  
+            <DIV id="div4" style="position:relative;top:100px;left:100px;">  
+                <SPAN id="span3">Placeholder text 3.</SPAN>  
+            </DIV>  
+        </DIV>  
+  
+    </BODY>  
+</HTML>  
+```  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#6)]
+ [!code-vb[System.Windows.Forms.HtmlElement#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle OffsetRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle OffsetRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.OffsetRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local de um elemento em relação a seu pai.</summary>
+        <value>As posições das coordenadas X e Y do elemento e sua largura e altura, em relação ao seu pai.  
+  
+ Se o pai de um elemento é posicionado relativo ou absoluto, <see cref="P:System.Windows.Forms.HtmlElement.OffsetRectangle" /> retornará o deslocamento do elemento pai. Se o próprio elemento estiver posicionado de forma relativa em relação a seu pai, <see cref="P:System.Windows.Forms.HtmlElement.OffsetRectangle" /> retornará o deslocamento em relação ao pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementos podem ser posicionados em uma página HTML em uma das três maneiras:  
+  
+-   Padrão de fluxo de posicionamento.  
+  
+-   Posicionamento relativo, em que o elemento tem um deslocamento de um valor fixo em relação ao seu pai.  
+  
+-   O posicionamento absoluto, no qual o elemento é fornecido um fixa coordenar posição em relação ao canto superior esquerdo do documento.  
+  
+ Para obter mais informações sobre o elemento de posicionamento no HTML, consulte [sobre posicionamento de elementos](http://msdn.microsoft.com/library/ms533005.aspx).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como <xref:System.Windows.Forms.HtmlElement.OffsetParent%2A> e <xref:System.Windows.Forms.HtmlElement.OffsetRectangle%2A> são diferentes para `span1`, `span2` e `span3`:  
+  
+```  
+<HTML>  
+    <BODY id="documentBody">  
+  
+        <DIV id="div1">  
+            <SPAN id="span1">Placeholder text 1.</SPAN>  
+        </DIV>  
+  
+        <DIV id="div2" style="position:relative;top:100px;left:100px;">  
+            <SPAN id="span2">Placeholder text 2.</SPAN>  
+        </DIV>  
+  
+        <DIV id="div3" style="position:absolute;top:200px;left:200px;">  
+            <DIV id="div4" style="position:relative;top:100px;left:100px;">  
+                <SPAN id="span3">Placeholder text 3.</SPAN>  
+            </DIV>  
+        </DIV>  
+  
+    </BODY>  
+</HTML>  
+```  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#6)]
+ [!code-vb[System.Windows.Forms.HtmlElement#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Forms.HtmlElement left, System.Windows.Forms.HtmlElement right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Windows.Forms.HtmlElement left, class System.Windows.Forms.HtmlElement right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.op_Equality(System.Windows.Forms.HtmlElement,System.Windows.Forms.HtmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Forms.HtmlElement" />
+        <Parameter Name="right" Type="System.Windows.Forms.HtmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro <see cref="T:System.Windows.Forms.HtmlElement" />.</param>
+        <param name="right">O segundo <see cref="T:System.Windows.Forms.HtmlElement" />.</param>
+        <summary>Compara dois elementos de igualdade.</summary>
+        <returns>
+          <see langword="true" />Se ambos os parâmetros forem <see langword="null" />, ou se ambos os elementos têm a mesma interface de COM subjacentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os testes de operador de igualdade de `IUnknown` ponteiros dos objetos subjacentes COM encapsulados pelo fornecido <xref:System.Windows.Forms.HtmlElement> classes.  
+  
+ O método equivalente para esse operador é<xref:System.Windows.Forms.HtmlElement.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Forms.HtmlElement left, System.Windows.Forms.HtmlElement right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Windows.Forms.HtmlElement left, class System.Windows.Forms.HtmlElement right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.op_Inequality(System.Windows.Forms.HtmlElement,System.Windows.Forms.HtmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Forms.HtmlElement" />
+        <Parameter Name="right" Type="System.Windows.Forms.HtmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro <see cref="T:System.Windows.Forms.HtmlElement" />.</param>
+        <param name="right">O segundo <see cref="T:System.Windows.Forms.HtmlElement" />.</param>
+        <summary>Compara dois objetos <see cref="T:System.Windows.Forms.HtmlElement" /> quanto à desigualdade.</summary>
+        <returns>
+          <see langword="true" />é apenas um elemento <see langword="null" />, ou os dois objetos não forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é a negação de<xref:System.Windows.Forms.HtmlElement.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterHtml">
+      <MemberSignature Language="C#" Value="public string OuterHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OuterHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.OuterHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código HTML do elemento atual.</summary>
+        <value>O código HTML para o elemento atual e seus filhos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enquanto <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> retornará contido no elemento atual, exceto as marcas ao redor do elemento atual, todo o HTML <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> inclui a marca do elemento atual, bem como o HTML que marca contém, por exemplo:  
+  
+ `<HTML>`  
+  
+ `<BODY>`  
+  
+ `<DIV id="div1">`  
+  
+ `Hello`  
+  
+ `<DIV id="div2">`  
+  
+ `World`  
+  
+ `<DIV id="div3">`  
+  
+ `How are you?`  
+  
+ `</DIV>`  
+  
+ `</DIV>`  
+  
+ `</DIV>`  
+  
+ `</BODY>`  
+  
+ `</HTML>`  
+  
+ Neste exemplo, chamar <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> em `div2` retornará:  
+  
+ `<DIV id="div2">`  
+  
+ `World`  
+  
+ `<DIV id="div3">`  
+  
+ `How are you?`  
+  
+ `</DIV>`  
+  
+ `</DIV>`  
+  
+ Chamando <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> retornará:  
+  
+ `World`  
+  
+ `<DIV id="div3">`  
+  
+ `How are you?`  
+  
+ `</DIV>`  
+  
+ Se você atribuir um novo valor para <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A>, a referência do elemento atual se tornarão inválida; não refletirá o nome, propriedades e o filho de conteúdo do HTML apenas atribuídos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OuterText">
+      <MemberSignature Language="C#" Value="public string OuterText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OuterText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.OuterText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto do elemento atual.</summary>
+        <value>O texto no elemento atual e nos filhos do elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tentar atribuir HTML para um elemento com <xref:System.Windows.Forms.HtmlElement.OuterText%2A>, o código HTML será exibido como literais no documento, como se você estava exibindo HTML dentro de um arquivo de texto. Se você atribuir o HTML para um elemento usando o <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> propriedade <xref:System.Windows.Forms.HtmlElement.OuterText%2A> retornará todo o texto em que o HTML com a marcação é removida.  
+  
+ Atribuindo um valor para <xref:System.Windows.Forms.HtmlElement.OuterText%2A> destruirá quaisquer elementos-filho que pertencem ao elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não é possível definir o texto fora desse elemento.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.HtmlElement Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.HtmlElement Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HtmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento do pai do elemento atual.</summary>
+        <value>O elemento acima do elemento atual na hierarquia do documento HTML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.HtmlElement.Parent%2A> propriedade permite que a descoberta do contexto de um elemento. É mais útil dentro de manipuladores de eventos, como <xref:System.Windows.Forms.HtmlElement.Click>, que pode ser acionado para qualquer elemento em qualquer lugar na hierarquia de objeto do documento.  
+  
+ O <xref:System.Windows.Forms.HtmlElement.Parent%2A> propriedade do elemento HTML (parte superior de um documento HTML) aponta para si mesmo. Se você chamar <xref:System.Windows.Forms.HtmlElement.Parent%2A> dentro de um loop, verifique se que a condição de interrupção do loop compara o tipo do elemento atual e o tipo do `Parent` propriedade, caso contrário, seu código pode executar um loop infinito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir localiza todas a `IMG` marcas em um documento e usa o <xref:System.Windows.Forms.HtmlElement.Parent%2A> propriedade para testar se o `IMG` é vinculado por hiperlink para outra página; se for, o código atribui a URL para o `ALT` atributo do `IMG`marca, para que os usuários podem passar o mouse sobre a imagem para ver onde ele vai levá-los.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#7)]
+ [!code-vb[System.Windows.Forms.HtmlElement#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseEvent">
+      <MemberSignature Language="C#" Value="public void RaiseEvent (string eventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseEvent(string eventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.RaiseEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventName">O nome do evento a ser gerado.</param>
+        <summary>Faz com que o evento nomeado chame todos os manipuladores de eventos registrados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para acessar os eventos do modelo de objeto de documento (DOM) HTML. Chama diretamente o [IHTMLElement3::fireEvent](http://go.microsoft.com/fwlink/?LinkId=103189) método. Para obter mais informações sobre como usar o DOM por meio de <xref:System.Windows.Forms.HtmlElement> de classe, consulte [acessando membros não expostos no modelo de objeto de documento HTML gerenciado](~/docs/framework/winforms/controls/accessing-unexposed-members-on-the-managed-html-document-object-model.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFocus">
+      <MemberSignature Language="C#" Value="public void RemoveFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.RemoveFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o foco do elemento atual, se esse elemento tem foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método gera o <xref:System.Windows.Forms.HtmlElement.LostFocus> evento para o elemento.  
+  
+ Quando o foco estiver desmarcado de um elemento usando esse método, ele recebe o documento que contém o elemento, não para o próximo elemento na ordem de tabulação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollIntoView">
+      <MemberSignature Language="C#" Value="public void ScrollIntoView (bool alignWithTop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollIntoView(bool alignWithTop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.ScrollIntoView(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="alignWithTop" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="alignWithTop">Se <see langword="true" />, a parte superior do objeto será exibido na parte superior da janela. Se <see langword="false" />, a parte inferior do objeto será exibida na parte inferior da janela.</param>
+        <summary>Rola pelo documento que contém esse elemento até que a borda superior ou inferior desse elemento esteja alinhada à janela do documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir localiza um elemento por nome e rola a página para que a parte superior do elemento é alinhada com a parte superior da página visível.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#12)]
+ [!code-vb[System.Windows.Forms.HtmlElement#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollLeft">
+      <MemberSignature Language="C#" Value="public int ScrollLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScrollLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.ScrollLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância entre a borda do elemento e a borda esquerda de seu conteúdo.</summary>
+        <value>A distância em pixels entre a borda esquerda do elemento e a borda esquerda de seu conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As dimensões completas da área de rolagem estão disponíveis usando <xref:System.Windows.Forms.HtmlElement.ScrollRectangle%2A>; `ScrollLeft` e <xref:System.Windows.Forms.HtmlElement.ScrollTop%2A> são expostos independentemente, pois elas são apenas duas propriedades da área de rolagem que os desenvolvedores podem definir.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollRectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ScrollRectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle ScrollRectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.ScrollRectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as dimensões da região de rolagem do elemento.</summary>
+        <value>O local de tamanho e coordenado da área rolável de um elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um elemento terá uma região de rolagem se seu conteúdo excede o tamanho de suas dimensões, a menos que o estilo de estouro no elemento proíbe barras de rolagem de renderização.  
+  
+ Você não pode modificar o tamanho da área de rolagem diretamente, mas você pode modificar a distância entre as bordas da área de rolagem e as bordas do elemento. Use o <xref:System.Windows.Forms.HtmlElement.ScrollLeft%2A> e <xref:System.Windows.Forms.HtmlElement.ScrollTop%2A> propriedades para fazer isso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollTop">
+      <MemberSignature Language="C#" Value="public int ScrollTop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScrollTop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.ScrollTop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância entre a borda do elemento e a borda superior do seu conteúdo.</summary>
+        <value>A distância, em pixels, entre a borda superior do elemento e a borda superior do seu conteúdo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As dimensões completas da área de rolagem estão disponíveis usando <xref:System.Windows.Forms.HtmlElement.ScrollRectangle%2A>; <xref:System.Windows.Forms.HtmlElement.ScrollLeft%2A> e `ScrollTop` são expostos independentemente, pois elas são apenas duas propriedades da área de rolagem que os desenvolvedores podem definir.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAttribute">
+      <MemberSignature Language="C#" Value="public void SetAttribute (string attributeName, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAttribute(string attributeName, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.HtmlElement.SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeName" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="attributeName">O nome do atributo a ser definido.</param>
+        <param name="value">O novo valor desse atributo.</param>
+        <summary>Define o valor do atributo nomeado no elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um atributo em HTML é qualquer par de nome-valor válido para esse elemento. <xref:System.Windows.Forms.HtmlElement>expõe apenas os atributos que são comuns a todos os elementos, deixando as que se aplicam somente a determinados tipos de elementos; `SRC` é um atributo predefinido para a `IMG` marca, por exemplo, mas não para o `DIV` marca. Use <xref:System.Windows.Forms.HtmlElement.GetAttribute%2A> e <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A> para manipular os atributos não são expostos no gerenciado modelo DOM (Document Object).  
+  
+ Se `attributeName` não é um atributo definido em um elemento, <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A> definirá o elemento como um novo atributo.  
+  
+ <xref:System.Windows.Forms.HtmlElement.GetAttribute%2A>e <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A> diferenciam maiusculas de minúsculas.  
+  
+ Para definir o `class` de atributo em uma <xref:System.Windows.Forms.HtmlElement> , você deve se referir ao atributo como `className` ao especificar o primeiro argumento para<xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona um novo `IMG` elemento atual de documentos, usando <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A> para definir o `SRC` atributo para a imagem.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#13)]
+ [!code-vb[System.Windows.Forms.HtmlElement#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public string Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista delimitada por ponto e vírgula de estilos para o elemento atual.</summary>
+        <value>Uma cadeia de caracteres que consiste em todos os estilos do elemento</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O modelo de objeto de documento (DOM) HTML usa estilos conforme definido na especificação de folhas de estilo em cascata do World Wide Web Consortiums para controlar a exibição de um elemento. Estilos no <xref:System.Windows.Forms.HtmlElement.Style%2A> propriedade assumem a forma de pares nome-valor delimitado por vírgula, com cada par separados por ponto e vírgula, da seguinte maneira:  
+  
+ `style-name1:value1;...;[style-nameN:valueN;]`  
+  
+ Para definir a fonte para um `DIV` elemento para 14 pontos Times New Roman Negrito, por exemplo, atribua a cadeia de caracteres a seguir:  
+  
+ `font-face:Times New Roman;font-size:14px;font-weight:bold;`  
+  
+ Para obter uma lista completa de todos os estilos disponíveis no DOM HTML, consulte [atributo de estilo](http://msdn.microsoft.com/library/ms534651.aspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabIndex">
+      <MemberSignature Language="C#" Value="public short TabIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 TabIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.TabIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local do elemento na ordem de tabulação.</summary>
+        <value>O índice numérico do elemento na ordem de tabulação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.HtmlElement.TabIndex%2A>determina qual elemento em um documento HTML em seguida receber foco quando o usuário pressiona a tecla TAB. Por padrão, os únicos elementos incluídos na ordem de tabulação são `INPUT` elementos, o `SELECT` controle e qualquer elemento cujo `contentEditable` está definida como `true`. Você pode incluir qualquer elemento HTML na ordem de tabulação, como um `DIV`, atribuindo um explícita <xref:System.Windows.Forms.HtmlElement.TabIndex%2A>.  
+  
+ Os valores válidos para <xref:System.Windows.Forms.HtmlElement.TabIndex%2A> variam de-32767 a 32767.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="public string TagName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.HtmlElement.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da marca HTML.</summary>
+        <value>O nome usado para criar este elemento usando marcação HTML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitos elementos no modelo de objeto de documento HTML têm atributos, propriedades e métodos que são exclusivos para esses elementos; como o `HREF` atributo no `A` elemento, ou o `Submit` método `FORM`. Use <xref:System.Windows.Forms.HtmlElement.TagName%2A> quando você tem um elemento de um tipo potencialmente arbitrário e precisa executar uma operação de um tipo específico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir localiza todas a `IMG` marcas em um documento e usa o `TagName` propriedade para testar se o `IMG` é vinculado por hiperlink para outra página; se for, o código atribui a URL para o `ALT` atributo do `IMG`marca, para que os usuários podem passar o mouse sobre a imagem para ver onde ele vai levá-los.  
+  
+ [!code-csharp[System.Windows.Forms.HtmlElement#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#7)]
+ [!code-vb[System.Windows.Forms.HtmlElement#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

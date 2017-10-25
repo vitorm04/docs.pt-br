@@ -1,0 +1,486 @@
+<Type Name="PropertyTabAttribute" FullName="System.ComponentModel.PropertyTabAttribute">
+  <TypeSignature Language="C#" Value="public class PropertyTabAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyTabAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.PropertyTabAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica o guia de propriedade de guias para exibir para a classe especificada ou classes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.PropertyTabAttribute> permite que você adicione uma nova página de propriedade para um <xref:System.Windows.Forms.PropertyGrid> controle. O <xref:System.ComponentModel.PropertyTabAttribute> pode adicionar guias de propriedades adicionais para expor informações de propriedade que não seja o conjunto de propriedades padrão de um componente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.PropertyTabAttribute> para especificar uma guia de propriedade. O exemplo de código define um componente que expõe as propriedades de outro componente selecionado por tipo.  
+  
+ [!code-cpp[PropertyTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[PropertyTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyTabExample/CS/class1.cs#1)]
+ [!code-vb[PropertyTabExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyTabExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.PropertyTabAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um construtor padrão que cria um não inicializado <xref:System.ComponentModel.PropertyTabAttribute>. Este construtor pode ser usado para derivar desse atributo e especificar vários tipos de guia chamando <xref:System.ComponentModel.PropertyTabAttribute.InitializeArrays%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (string tabClassName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tabClassName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClassName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tabClassName">O nome qualificado do assembly do tipo de guia para criar. Para obter um exemplo dessa convenção de formato, consulte <see cref="P:System.Type.AssemblyQualifiedName" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.PropertyTabAttribute" /> classe usando o nome de classe de guia especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (Type tabClass);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type tabClass) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClass" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="tabClass">O tipo de guia para criar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.PropertyTabAttribute" /> classe usando o tipo de guia especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (string tabClassName, System.ComponentModel.PropertyTabScope tabScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tabClassName, valuetype System.ComponentModel.PropertyTabScope tabScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.String,System.ComponentModel.PropertyTabScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClassName" Type="System.String" />
+        <Parameter Name="tabScope" Type="System.ComponentModel.PropertyTabScope" />
+      </Parameters>
+      <Docs>
+        <param name="tabClassName">O nome qualificado do assembly do tipo de guia para criar. Para obter um exemplo dessa convenção de formato, consulte <see cref="P:System.Type.AssemblyQualifiedName" />.</param>
+        <param name="tabScope">Um <see cref="T:System.ComponentModel.PropertyTabScope" /> que indica o escopo dessa guia. Se o escopo é <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, ele é mostrado apenas para componentes com a correspondente <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Se for <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, ele é exibido para todos os componentes no documento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.PropertyTabAttribute" /> classe usando o nome da classe de guia especificado e o escopo do guia.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="tabScope" /> não é <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> ou <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyTabAttribute (Type tabClass, System.ComponentModel.PropertyTabScope tabScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type tabClass, valuetype System.ComponentModel.PropertyTabScope tabScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.#ctor(System.Type,System.ComponentModel.PropertyTabScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tabClass" Type="System.Type" />
+        <Parameter Name="tabScope" Type="System.ComponentModel.PropertyTabScope" />
+      </Parameters>
+      <Docs>
+        <param name="tabClass">O tipo de guia para criar.</param>
+        <param name="tabScope">Um <see cref="T:System.ComponentModel.PropertyTabScope" /> que indica o escopo dessa guia. Se o escopo é <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, ele é mostrado apenas para componentes com a correspondente <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Se for <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, ele é exibido para todos os componentes no documento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.PropertyTabAttribute" /> classe usando o tipo de guia e o guia escopo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.ComponentModel.PropertyTabAttribute> para especificar uma guia de propriedade.  
+  
+ [!code-cpp[PropertyTabExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/PropertyTabExample/CPP/class1.cpp#1)]
+ [!code-csharp[PropertyTabExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/PropertyTabExample/CS/class1.cs#1)]
+ [!code-vb[PropertyTabExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/PropertyTabExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="tabScope" /> não é <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> ou <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.ComponentModel.PropertyTabAttribute other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class System.ComponentModel.PropertyTabAttribute other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.Equals(System.ComponentModel.PropertyTabAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.ComponentModel.PropertyTabAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um <see cref="T:System.ComponentModel.PropertyTabAttribute" /> para comparar a esta instância, ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se esta instância é igual a um atributo especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ComponentModel.PropertyTabAttribute" /> instâncias forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">Os tipos especificados pelo <see cref="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" /> propriedade o <paramref name="other" /> parâmetro não pode ser encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">Um objeto a ser comparado com essa instância ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="other" /> refere-se à mesma <see cref="T:System.ComponentModel.PropertyTabAttribute" /> instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">Os tipos especificados pelo <see cref="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" /> propriedade o <paramref name="other" /> parâmetro não pôde ser encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash para este objeto.</summary>
+        <returns>O código hash para o objeto de atributo pertence.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeArrays">
+      <MemberSignature Language="C#" Value="protected void InitializeArrays (string[] tabClassNames, System.ComponentModel.PropertyTabScope[] tabScopes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeArrays(string[] tabClassNames, valuetype System.ComponentModel.PropertyTabScope[] tabScopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.InitializeArrays(System.String[],System.ComponentModel.PropertyTabScope[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tabClassNames" Type="System.String[]" />
+        <Parameter Name="tabScopes" Type="System.ComponentModel.PropertyTabScope[]" />
+      </Parameters>
+      <Docs>
+        <param name="tabClassNames">Uma matriz de nomes de tipo totalmente qualificado dos tipos para criar guias na janela Propriedades.</param>
+        <param name="tabScopes">O escopo de cada guia. Se o escopo é <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, ele é mostrado apenas para componentes com a correspondente <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Se for <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, ele é exibido para todos os componentes no documento.</param>
+        <summary>Inicializa o atributo usando os nomes especificados de classes de guia e a matriz de escopos de guia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.PropertyTabAttribute.InitializeArrays%2A>fornece classes de uma função de utilitário que pode ser usada para definir os tipos de guia que isso <xref:System.ComponentModel.PropertyTabAttribute> especifica.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais dos valores em <paramref name="tabScopes" /> não é <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> ou <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.  
+  
+ -ou-  
+  
+ O comprimento do <paramref name="tabClassNames" /> e <paramref name="tabScopes" /> matrizes não coincidem.  
+  
+ -ou-  
+  
+ <paramref name="tabClassNames" /> ou <paramref name="tabScopes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeArrays">
+      <MemberSignature Language="C#" Value="protected void InitializeArrays (Type[] tabClasses, System.ComponentModel.PropertyTabScope[] tabScopes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InitializeArrays(class System.Type[] tabClasses, valuetype System.ComponentModel.PropertyTabScope[] tabScopes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyTabAttribute.InitializeArrays(System.Type[],System.ComponentModel.PropertyTabScope[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tabClasses" Type="System.Type[]" />
+        <Parameter Name="tabScopes" Type="System.ComponentModel.PropertyTabScope[]" />
+      </Parameters>
+      <Docs>
+        <param name="tabClasses">Os tipos de guias para criar.</param>
+        <param name="tabScopes">O escopo de cada guia. Se o escopo é <see cref="F:System.ComponentModel.PropertyTabScope.Component" />, ele é mostrado apenas para componentes com a correspondente <see cref="T:System.ComponentModel.PropertyTabAttribute" />. Se for <see cref="F:System.ComponentModel.PropertyTabScope.Document" />, ele é exibido para todos os componentes no documento.</param>
+        <summary>Inicializa o atributo usando os nomes especificados de classes de guia e a matriz de escopos de guia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.PropertyTabAttribute.InitializeArrays%2A>fornece classes de uma função de utilitário que pode ser usada para definir os tipos de guia que isso <xref:System.ComponentModel.PropertyTabAttribute> especifica.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais dos valores em <paramref name="tabScopes" /> não é <see cref="F:System.ComponentModel.PropertyTabScope.Document" /> ou <see cref="F:System.ComponentModel.PropertyTabScope.Component" />.  
+  
+ -ou-  
+  
+ O comprimento do <paramref name="tabClassNames" /> e <paramref name="tabScopes" /> matrizes não coincidem.  
+  
+ -ou-  
+  
+ <paramref name="tabClassNames" /> ou <paramref name="tabScopes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabClasses">
+      <MemberSignature Language="C#" Value="public Type[] TabClasses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] TabClasses" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyTabAttribute.TabClasses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os tipos de guias que usa esse atributo.</summary>
+        <value>Uma matriz de tipos que indica os tipos de guias que usa esse atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos especificados tipos devem ser capazes de ser atribuído a um <xref:System.Windows.Forms.Design.PropertyTab>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.TypeLoadException">Os tipos especificados pelo <see cref="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" /> não foi possível localizar a propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TabClassNames">
+      <MemberSignature Language="C#" Value="protected string[] TabClassNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] TabClassNames" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyTabAttribute.TabClassNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os nomes das classes de guia que usa esse atributo.</summary>
+        <value>Os nomes das classes de guia que usa esse atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabScopes">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyTabScope[] TabScopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.PropertyTabScope[] TabScopes" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyTabAttribute.TabScopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyTabScope[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de escopos de guia de cada guia deste <see cref="T:System.ComponentModel.PropertyTabAttribute" />.</summary>
+        <value>Uma matriz de <see cref="T:System.ComponentModel.PropertyTabScope" /> objetos que indicam os escopos das guias.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

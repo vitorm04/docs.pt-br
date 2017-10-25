@@ -1,0 +1,774 @@
+<Type Name="Random" FullName="System.Random">
+  <TypeSignature Language="C#" Value="public class Random" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Random extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Random" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um gerador de número pseudoaleatório, que é um dispositivo que produz uma sequência de números que atendem a certos requisitos estatísticos de aleatoriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/random.cs#bb77e610694e64ca). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ Números aleatórios pseudo são escolhidos com a mesma probabilidade de um conjunto finito de números. Os números escolhidos não são aleatórios completamente porque um algoritmo matemático é usado para selecioná-los, mas eles são suficientemente aleatórios para fins práticos. A implementação atual do <xref:System.Random> classe se baseia em uma versão modificada do subtrativas gerador algoritmo de números aleatórios de Donald E. Knuth. Para obter mais informações, consulte e d. Knuth. *A arte do computador de programação, o Volume 2: algoritmos Seminumerical*. Addison-Wesley, leitura, MA, terceira edição, 1997.  
+  
+ Para gerar um número aleatório criptograficamente seguro, como aquele que é adequado para a criação de uma senha aleatória, use o <xref:System.Security.Cryptography.RNGCryptoServiceProvider> classe ou derivar uma classe de <xref:System.Security.Cryptography.RandomNumberGenerator?displayProperty=nameWithType>.  
+  
+ Neste tópico:  
+  
+ [Criando o gerador de número aleatório](#Instantiate)   
+ [Evitando várias instâncias](#Multiple)   
+ [A segurança de thread e a classe Random](#ThreadSafety)   
+ [Gerando diferentes tipos de números aleatórios](#Functionality)   
+ [Substituindo seu próprio algoritmo](#Overriding)   
+ [Como usar Random para...](#Operations)   
+ [Recuperar a mesma sequência de valores aleatórios](#Same)  
+ [Recuperar sequências exclusivas de valores aleatórios](#Unique)  
+ [Recuperar inteiros em um intervalo especificado](#Range)  
+ [Recuperar inteiros com um número especificado de dígitos](#Digits)  
+ [Recuperar valores de ponto flutuante em um intervalo especificado](#Floats)  
+ [Gerar valores booleanos aleatórios](#Boolean)  
+ [Gerar aleatórios inteiros de 64 bits](#Long)  
+ [Recuperar bytes em um intervalo especificado](#Bytes)  
+ [Recuperar um elemento de uma matriz ou coleção aleatório](#Array)  
+ [Recuperar um único elemento de uma matriz ou coleção](#UniqueArray)  
+  
+<a name="Instantiate"></a>   
+## <a name="instantiating-the-random-number-generator"></a>Criando o gerador de número aleatório  
+ Instanciar o gerador de número aleatório, fornecendo um valor de semente (um valor inicial para o algoritmo de geração de número pseudoaleatório) para um <xref:System.Random.%23ctor%2A> construtor de classe.  Você pode fornecer o valor de semente explícita ou implícita:  
+  
+-   O <xref:System.Random.%23ctor%28System.Int32%29> construtor usa um valor de semente explícita que você fornecer.  
+  
+-   O <xref:System.Random.%23ctor> construtor usa o relógio do sistema para fornecer um valor de semente. Essa é a maneira mais comum de criar uma instância do gerador de número aleatório.  
+  
+ Se a mesma semente é usada para separar <xref:System.Random> objetos, que irá gerar a mesma série de números aleatórios. Isso pode ser útil para a criação de um conjunto de testes que processa valores aleatórios, ou para reproduzir jogos que derivam seus dados de números aleatórios. No entanto, observe que <xref:System.Random> objetos em processos em execução em diferentes versões do .NET Framework podem retornar outra série de números aleatórios, mesmo se eles são instanciados com valores de semente idênticos.  
+  
+ Para produzir diferentes sequências de números aleatórios, você pode fazer o valor de semente dependentes de tempo, portanto, produzindo uma série diferente com cada nova instância da <xref:System.Random>. Com os parâmetros <xref:System.Random.%23ctor%28System.Int32%29> construtor pode levar uma <xref:System.Int32> valor com base no número de tiques no momento, enquanto o sem parâmetros <xref:System.Random.%23ctor> construtor usa o relógio do sistema para gerar o valor de semente. No entanto, como o relógio tem resolução finita, usando o construtor sem parâmetros para criar diferentes <xref:System.Random> objetos em sucessão fechar cria geradores de números aleatórios que produzem idênticas sequências de números aleatórios. O exemplo a seguir ilustra como duas <xref:System.Random> objetos são instanciados em sucessão fechar geram uma série idêntica de números aleatórios. Na maioria dos sistemas Windows, <xref:System.Random> objetos criados em 15 milissegundos uma da outra serão prováveis que valores de semente idênticos.  
+  
+ [!code-cpp[System.Random#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/random1.cpp#1)]
+ [!code-csharp[System.Random#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/Random1.cs#1)]
+ [!code-vb[System.Random#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/Random1.vb#1)]  
+  
+ Para evitar esse problema, crie um único <xref:System.Random> objeto em vez de vários objetos.  
+  
+<a name="Multiple"></a>   
+## <a name="avoiding-multiple-instantiations"></a>Evitando várias instâncias  
+ Inicializar dois geradores de números aleatórios em um loop estreito, ou em sucessão rápida cria dois geradores de números aleatórios que podem produzir idênticas sequências de números aleatórios. Na maioria dos casos, isso não é intenção do desenvolvedor e pode levar a problemas de desempenho, pois criando e inicializando um gerador de número aleatório é um processo relativamente caro.  
+  
+ Para melhorar o desempenho e evitar a criação inadvertidamente separados geradores de números aleatórios que geram idênticas sequências numéricas, recomendamos que você crie um <xref:System.Random> objeto para gerar números aleatórios muitos ao longo do tempo, em vez de criar novos <xref:System.Random> objetos para gerar um número aleatório.  
+  
+ No entanto, a <xref:System.Random> classe não é thread-safe. Se você chamar <xref:System.Random> métodos de vários threads, siga as diretrizes discutidas na próxima seção.  
+  
+<a name="ThreadSafety"></a>   
+## <a name="the-systemrandom-class-and-thread-safety"></a>A segurança de thread e a classe Random  
+ Em vez de criar uma instância individual <xref:System.Random> objetos, é recomendável que você crie um único <xref:System.Random> instância para gerar todos os números aleatórios necessários para seu aplicativo. No entanto, <xref:System.Random> objetos não são thread-safe. Se seu aplicativo chamar <xref:System.Random> métodos de vários threads, você deve usar um objeto de sincronização para garantir que apenas um thread pode acessar o gerador de número aleatório por vez. Se você não garante que o <xref:System.Random> objeto é acessado de uma forma thread-safe, chamadas para métodos que retornam números aleatórios retornam 0.  
+  
+ O exemplo a seguir usa o c# [instrução lock](~/docs/csharp/language-reference/keywords/lock-statement.md) e Visual Basic [Instrução SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) para garantir que um único número aleatório é acessado por 11 threads de uma forma thread-safe. Cada thread gera números aleatórios de 2 milhões, conta o número de números aleatórios gerados e calcula a soma e atualiza os totais de todos os threads quando terminar de executar.  
+  
+ [!code-cpp[System.Random#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/threadsafeex1.cpp#3)]
+ [!code-csharp[System.Random#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/threadsafeex1.cs#3)]
+ [!code-vb[System.Random#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/threadsafeex1.vb#3)]  
+  
+ O exemplo garante a segurança do thread das seguintes maneiras:  
+  
+-   O <xref:System.ThreadStaticAttribute> atributo é usado para definir variáveis locais de thread que controlam o número total de números aleatórios gerados e soma para cada thread.  
+  
+-   Um bloqueio (o `lock` instrução em c# e o `SyncLock` instrução no Visual Basic) protege o acesso às variáveis para a contagem total e a soma de todos os números aleatórios gerados em todos os threads.  
+  
+-   Um semáforo (o <xref:System.Threading.CountdownEvent> objeto) é usado para garantir que os blocos do thread principal até que todos os outros threads concluir a execução.  
+  
+-   O exemplo verifica se o gerador de número aleatório tiver sido corrompido, determinando se duas chamadas consecutivas para métodos de geração de número aleatório retornam 0. Se o dano é detectado, o exemplo usa o <xref:System.Threading.CancellationTokenSource> objeto para indicar que todos os threads devem ser cancelados.  
+  
+-   Antes de gerar cada número aleatório, cada thread verifica o estado do <xref:System.Threading.CancellationToken> objeto. Se cancelamento for solicitado, o exemplo chama o <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> método para cancelar o thread.  
+  
+ O exemplo a seguir é idêntico ao primeiro, exceto que ele usa um <xref:System.Threading.Tasks.Task> objeto e uma expressão lambda em vez de <xref:System.Threading.Thread> objetos.  
+  
+ [!code-csharp[System.Random#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/threadsafeex2.cs#4)]
+ [!code-vb[System.Random#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/threadsafeex2.vb#4)]  
+  
+ O primeiro exemplo ele difere das seguintes maneiras:  
+  
+-   As variáveis para controlar o número de números aleatórios gerados e soma em cada tarefa são locais para a tarefa, portanto, não há necessidade de usar o <xref:System.ThreadStaticAttribute> atributo.  
+  
+-   Estático <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> método é usado para garantir que o thread principal não for concluída antes de concluir todas as tarefas. Não é necessário para o <xref:System.Threading.CountdownEvent> objeto.  
+  
+-   A exceção que é o resultado do cancelamento da tarefa é exposta no <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> método. No exemplo anterior, ela será manipulada por cada thread.  
+  
+<a name="Functionality"></a>   
+## <a name="generating-different-types-of-random-numbers"></a>Gerando diferentes tipos de números aleatórios  
+ O gerador de número aleatório fornece métodos que permitem gerar os seguintes tipos de números aleatórios:  
+  
+-   Uma série de <xref:System.Byte> valores. Determinar o número de valores de byte ao passar uma matriz inicializada para o número de elementos que você deseja que o método para retornar para o <xref:System.Random.NextBytes%2A> método. O exemplo a seguir gera 20 bytes.  
+  
+     [!code-cpp[System.Random#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/nextbytes1.cpp#5)]
+     [!code-csharp[System.Random#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/nextbytes1.cs#5)]
+     [!code-vb[System.Random#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/nextbytes1.vb#5)]  
+  
+-   Um único inteiro. Você pode escolher se deseja que um inteiro de 0 até um valor máximo (<xref:System.Int32.MaxValue?displayProperty=nameWithType> – 1) chamando o <xref:System.Random.Next> método, um número inteiro entre 0 e um valor específico ao chamar o <xref:System.Random.Next%28System.Int32%29> método ou um número inteiro dentro do intervalo de valores, chamando o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método. As sobrecargas com parâmetros, o valor máximo especificado é exclusivo; ou seja, o número real de máximo gerado é um menor do que o valor especificado.  
+  
+     A exemplo a seguir chama o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método para gerar números aleatórios 10 entre -10 e 10. Observe que o segundo argumento para o método Especifica o limite superior exclusivo do intervalo de valores aleatórios retornado pelo método. Em outras palavras, o maior inteiro que o método pode retornar é menor do que esse valor.  
+  
+     [!code-cpp[System.Random#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/nextex1.cpp#6)]
+     [!code-csharp[System.Random#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/nextex1.cs#6)]
+     [!code-vb[System.Random#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/nextex1.vb#6)]  
+  
+-   Um valor único de ponto flutuante de 0,0 para menor que 1.0 chamando o <xref:System.Random.NextDouble%2A> método. O limite superior exclusivo do número aleatório retornado pelo método é 1, portanto, seu limite superior real é 0.99999999999999978. O exemplo a seguir gera os 10 números de ponto flutuante aleatórios.  
+  
+     [!code-cpp[System.Random#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/nextdoubleex1.cpp#7)]
+     [!code-csharp[System.Random#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/nextdoubleex1.cs#7)]
+     [!code-vb[System.Random#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/nextdoubleex1.vb#7)]  
+  
+> [!IMPORTANT]
+>  O <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método permite que você especifique o intervalo do número aleatório retornado. No entanto, o `maxValue` parâmetro, que especifica o intervalo superior retornado número, é um recurso exclusivo, não um inclusive, valor. Isso significa que a chamada do método `Next(0, 100)` retorna um valor entre 0 e 99 e não entre 0 e 100.  
+  
+ Você também pode usar o <xref:System.Random> classe para tarefas como geração [valores aleatórios do T:System.Boolean](#Boolean), gerando [valores de ponto flutuante aleatório com um intervalo diferente de 0 a 1](#Floats), gerando [inteiros de 64 bits aleatórios](#Long), e [aleatoriamente recuperar um único elemento de uma matriz ou coleção](#UniqueArray). Para essas e outras tarefas comuns, consulte o [como usar Random para...](#Operations) seção.  
+  
+<a name="Overriding"></a>   
+## <a name="substituting-your-own-algorithm"></a>Substituindo seu próprio algoritmo  
+ Você pode implementar seu próprio gerador de número aleatório, herdando a <xref:System.Random> classe e fornecendo o algoritmo de geração de números aleatórios. Para fornecer seu próprio algoritmo, você deve substituir o <xref:System.Random.Sample%2A> método, que implementa o algoritmo de geração de números aleatórios. Você também deve substituir o <xref:System.Random.Next>, <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29>, e <xref:System.Random.NextBytes%2A> métodos para garantir que eles chamam o substituído <xref:System.Random.Sample%2A> método. Você não precisa substituir o <xref:System.Random.Next%28System.Int32%29> e <xref:System.Random.NextDouble%2A> métodos.  
+  
+ Para obter um exemplo que deriva de <xref:System.Random> classe e modifica o gerador de número pseudoaleatório do padrão, consulte o <xref:System.Random.Sample%2A> página de referência.  
+  
+<a name="Operations"></a>   
+## <a name="how-do-you-use-systemrandom-to"></a>Como usar Random para...  
+ As seções a seguir abordam e fornecem código de exemplo para algumas das maneiras em que você talvez queira usar números aleatórios em seu aplicativo.  
+  
+<a name="Same"></a>   
+### <a name="retrieve-the-same-sequence-of-random-values"></a>Recuperar a mesma sequência de valores aleatórios  
+ Às vezes você deseja gerar a mesma sequência de números aleatórios em cenários de teste de software em jogos. Teste com a mesma sequência de números aleatórios permite detectar regressões e confirmar as correções de bugs. Usando a mesma sequência de número aleatório em jogos permite reproduzir jogos anteriores.  
+  
+ Você pode gerar a mesma sequência de números aleatórios, fornecendo o mesmo valor de semente para a <xref:System.Random.%23ctor%28System.Int32%29> construtor. O valor de semente fornece um valor inicial para o algoritmo de geração de número pseudoaleatório. O exemplo a seguir usa 100100 como um valor de semente arbitrário para instanciar o <xref:System.Random> objeto exibe 20 valores de ponto flutuantes aleatórios e persistir o valor de semente. Em seguida, restaura o valor de semente, cria um novo gerador de número aleatório e exibe os mesmos valores de ponto flutuantes aleatórios 20.  Observe que o exemplo pode produzir diferentes sequências de números aleatórios se executados em diferentes versões do .NET Framework.  
+  
+ [!code-cpp[System.Random#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/same1.cpp#12)]
+ [!code-csharp[System.Random#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/same1.cs#12)]
+ [!code-vb[System.Random#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/same1.vb#12)]  
+  
+<a name="Unique"></a>   
+### <a name="retrieve-unique-sequences-of-random-numbers"></a>Recuperar exclusivas sequências de números aleatórios  
+ Fornecer valores de semente diferentes instâncias do <xref:System.Random> classe faz com que cada gerador de número aleatório produzir uma sequência diferente de valores. Você pode fornecer um valor de semente explicitamente chamando o <xref:System.Random.%23ctor%28System.Int32%29> construtor, ou implicitamente chamando o <xref:System.Random.%23ctor> construtor. A maioria dos desenvolvedores chamar o construtor sem parâmetros, que usa o relógio do sistema. O exemplo a seguir usa essa abordagem para instanciar dois <xref:System.Random> instâncias. Cada instância exibe uma série de 10 inteiros aleatórios.  
+  
+ [!code-cpp[System.Random#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/unique.cpp#13)]
+ [!code-csharp[System.Random#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/unique.cs#13)]
+ [!code-vb[System.Random#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/unique.vb#13)]  
+  
+ No entanto, devido a sua resolução finita, o relógio do sistema não detecta diferenças de horários que são menos de aproximadamente 15 milissegundos. Portanto, se seu código chama o <xref:System.Random.%23ctor> sobrecarga para instanciar dois <xref:System.Random> objetos em sucessão, talvez você inadvertidamente estar fornecendo os objetos com valores de semente idênticos. Para ver isso no exemplo anterior, comente a <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> chamada de método e compilar e executar o exemplo novamente.  
+  
+ Para evitar que isso aconteça, é recomendável que você criar uma instância de um único <xref:System.Random> do objeto, em vez de várias. No entanto, como <xref:System.Random> não é thread-safe, você deve usar um dispositivo de sincronização se você acessar uma <xref:System.Random> da instância de vários threads; para obter mais informações, consulte [aleatória a segurança de classe e thread](#ThreadSafety) anteriormente neste tópico. Como alternativa, você pode usar um mecanismo de atraso, como o <xref:System.Threading.Thread.Sleep%2A> método usado no exemplo anterior, para garantir que o instanciações ocorram distância de mais de 15 milissegundos.  
+  
+<a name="Range"></a>   
+### <a name="retrieve-integers-in-a-specified-range"></a>Recuperar inteiros em um intervalo especificado  
+ Você pode recuperar inteiros em um intervalo especificado ao chamar o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método, que permite que você especifique o inferior e o limite superior de números que você deseja que o gerador de número aleatório para retornar. O limite superior é um recurso exclusivo, não um inclusive, valor. Ou seja, ele não está incluído no intervalo de valores retornados pelo método. O exemplo a seguir usa esse método para gerar números aleatórios inteiros entre -10 e 10. Observe que ela especifica 11, que é maior do que o valor desejado, como o valor da `maxValue` argumento na chamada do método.  
+  
+ [!code-cpp[System.Random#15](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/range1.cpp#15)]
+ [!code-csharp[System.Random#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/range1.cs#15)]
+ [!code-vb[System.Random#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/range1.vb#15)]  
+  
+<a name="Digits"></a>   
+### <a name="retrieve-integers-with-a-specified-number-of-digits"></a>Recuperar inteiros com um número especificado de dígitos  
+ Você pode chamar o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método para recuperar os números com um número especificado de dígitos. Por exemplo, para recuperar os números com quatro dígitos (ou seja, números que variam de 1000 a 9999), você chama o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método com um `minValue` valor 1000 e um `maxValue` valor de 10000, como mostra o exemplo a seguir.  
+  
+ [!code-cpp[System.Random#16](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/range2.cpp#16)]
+ [!code-csharp[System.Random#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/range2.cs#16)]
+ [!code-vb[System.Random#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/range2.vb#16)]  
+  
+<a name="Floats"></a>   
+### <a name="retrieve-floating-point-values-in-a-specified-range"></a>Recuperar valores de ponto flutuante em um intervalo especificado  
+ O <xref:System.Random.NextDouble%2A> método retorna valores de ponto flutuante aleatórios que variam de 0 a menor que 1. No entanto, você geralmente deseja gerar valores aleatórios em algum outro intervalo.  
+  
+ Se o intervalo entre os valores mínimo e máximo desejados for 1, você pode adicionar a diferença entre o intervalo de início desejado e 0 para o número retornado pelo <xref:System.Random.NextDouble%2A> método. O exemplo a seguir faz isso para gerar números aleatórios 10 entre -1 e 0.  
+  
+ [!code-cpp[System.Random#17](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/doublerange2.cpp#17)]
+ [!code-csharp[System.Random#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/doublerange2.cs#17)]
+ [!code-vb[System.Random#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/doublerange2.vb#17)]  
+  
+ Para gerar números de ponto flutuante aleatórios cujo limite inferior é 0, mas limite superior é maior que 1 (ou, no caso de números negativos, cujo limite inferior é menor que -1 e limite superior é 0), multiplicar o número aleatório, o limite diferente de zero. O exemplo a seguir faz isso para gerar números de ponto flutuante aleatórios de 20 milhões que variam de 0 a <xref:System.Int64.MaxValue?displayProperty=nameWithType>. Em também exibe a distribuição dos valores aleatórios gerados pelo método.  
+  
+ [!code-cpp[System.Random#18](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/doublerange1.cpp#18)]
+ [!code-csharp[System.Random#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/doublerange1.cs#18)]
+ [!code-vb[System.Random#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/doublerange1.vb#18)]  
+  
+ Para gerar números de ponto flutuante aleatórios entre dois valores arbitrários, como o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método não para inteiros, use a seguinte fórmula:  
+  
+```  
+Random.NextDouble() * (maxValue – minValue) + minValue  
+```  
+  
+ O exemplo a seguir gera números aleatórios de 1 milhão que variam de 10.0 para 11.0 e exibe sua distribuição.  
+  
+ [!code-cpp[System.Random#19](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/doublerange3.cpp#19)]
+ [!code-csharp[System.Random#19](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/doublerange3.cs#19)]
+ [!code-vb[System.Random#19](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/doublerange3.vb#19)]  
+  
+<a name="Boolean"></a>   
+### <a name="generate-random-boolean-values"></a>Gerar valores booleanos aleatórios  
+ O <xref:System.Random> classe não fornece métodos que geram <xref:System.Boolean> valores. No entanto, você pode definir sua própria classe ou método para fazer isso. O exemplo a seguir define uma classe, `BooleanGenerator`, com um único método, `NextBoolean`. O `BooleanGenerator` classe armazena uma <xref:System.Random> objeto como uma variável particular. O `NextBoolean` chamadas de método de <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> método e passa o resultado para o <xref:System.Convert.ToBoolean%28System.Int32%29?displayProperty=nameWithType> método. Observe que 2 é usada como argumento para especificar o limite superior do número aleatório. Como esse é um valor exclusivo, a chamada do método retorna 0 ou 1.  
+  
+ [!code-cpp[System.Random#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/booleans1.cpp#8)]
+ [!code-csharp[System.Random#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/booleans1.cs#8)]
+ [!code-vb[System.Random#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/booleans1.vb#8)]  
+  
+ Em vez de criar uma classe separada para gerar aleatório <xref:System.Boolean> valores, o exemplo simplesmente podem ter definido um único método. Nesse caso, no entanto, o <xref:System.Random> objeto deve ter sido definido como uma variável de nível de classe para evitar criando um novo <xref:System.Random> instância em cada chamada de método. No Visual Basic, a instância de Random pode ser definida como um [estático](~/docs/visual-basic/language-reference/modifiers/static.md) variável o `NextBoolean` método.  O exemplo a seguir fornece uma implementação.  
+  
+ [!code-cpp[System.Random#20](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/booleans2.cpp#20)]
+ [!code-csharp[System.Random#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/booleans2.cs#20)]
+ [!code-vb[System.Random#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/booleans2.vb#20)]  
+  
+<a name="Long"></a>   
+### <a name="generate-random-64-bit-integers"></a>Gerar aleatórios inteiros de 64 bits  
+ As sobrecargas do <xref:System.Random.Next%2A> método retornam inteiros de 32 bits. No entanto, em alguns casos, convém trabalhar com números inteiros de 64 bits. Você pode fazer isso da seguinte maneira:  
+  
+1.  Chamar o <xref:System.Random.NextDouble%2A> método para recuperar um flutuante de precisão dupla de ponto.  
+  
+2.  Multiplicar esse valor <xref:System.Int64.MaxValue?displayProperty=nameWithType>.  
+  
+ O exemplo a seguir usa essa técnica para gerar inteiros longos aleatórios de 20 milhões e classifica em 10 grupos iguais. Em seguida, avaliar a distribuição de números aleatórios contando o número de cada grupo de 0 a <xref:System.Int64.MaxValue?displayProperty=nameWithType>. Como mostra a saída do exemplo, os números são mais ou menos igualmente distribuídos por meio do intervalo de um inteiro longo.  
+  
+ [!code-cpp[System.Random#14](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/long1.cpp#14)]
+ [!code-csharp[System.Random#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/long1.cs#14)]
+ [!code-vb[System.Random#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/long1.vb#14)]  
+  
+ Uma técnica alternativa que usa a manipulação de bits não gerar números aleatórios verdadeiros. Essa técnica chama <xref:System.Random.Next> para gerar números inteiros, esquerda-turnos um 32 bits e ORs-los juntos. Essa técnica tem duas limitações:  
+  
+1.  Como bit 31 é o bit de sinal, o valor de bit 31 do inteiro longo resultante é sempre 0.  Isso pode ser resolvido por meio da geração aleatória 0 ou 1, deslocamento à esquerda de 31 bits e o uso de or com inteiro longo aleatório original.  
+  
+2.  Mais seriamente, porque a probabilidade de que o valor retornado por <xref:System.Random.Next> será 0, haverá alguns números aleatórios no intervalo 0x00000000FFFFFFFF 0x0.  
+  
+<a name="Bytes"></a>   
+### <a name="retrieve-bytes-in-a-specified-range"></a>Recuperar bytes em um intervalo especificado  
+ As sobrecargas do <xref:System.Random.Next%2A> método permite que você especifique o intervalo de números aleatórios, mas o <xref:System.Random.NextBytes%2A> método não. O exemplo a seguir implementa um `NextBytes` método que permite que você especifique o intervalo de bytes retornados. Define uma `Random2` classe que deriva de <xref:System.Random> e sobrecargas seu `NextBytes` método.  
+  
+ [!code-cpp[System.Random#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/bytes1.cpp#9)]
+ [!code-csharp[System.Random#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/bytes1.cs#9)]
+ [!code-vb[System.Random#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/bytes1.vb#9)]  
+  
+ O `NextBytes(Byte[], Byte, Byte)` método ajusta uma chamada para o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método e especifica o valor mínimo e um maior que o valor máximo (nesse caso, 0 e 101) que desejamos retornados na matriz de bytes. Como estamos-se de que os valores de inteiro retornado pelo <xref:System.Random.Next%2A> método estão dentro do intervalo da <xref:System.Byte> tipo de dados, podemos pode com segurança converta-os (em c#) ou convertê-los (no Visual Basic) de inteiros em bytes.  
+  
+<a name="Array"></a>   
+### <a name="retrieve-an-element-from-an-array-or-collection-at-random"></a>Recuperar um elemento de uma matriz ou coleção aleatório  
+ Números aleatórios servem frequentemente como índices para recuperar valores de matrizes ou coleções. Para recuperar um valor de índice aleatório, você pode chamar o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> método e use o limite inferior da matriz como o valor do seu `minValue` argumento e um número maior que o limite superior da matriz como o valor do seu `maxValue` argumento. Para uma matriz com base em zero, isso é equivalente ao seu <xref:System.Array.Length%2A> propriedade ou um número maior que o valor retornado pelo <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> método. O exemplo a seguir recupera aleatoriamente o nome de uma cidade nos Estados Unidos de uma matriz de cidades.  
+  
+ [!code-cpp[System.Random#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/array1.cpp#10)]
+ [!code-csharp[System.Random#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/array1.cs#10)]
+ [!code-vb[System.Random#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/array1.vb#10)]  
+  
+<a name="UniqueArray"></a>   
+### <a name="retrieve-a-unique-element-from-an-array-or-collection"></a>Recuperar um único elemento de uma matriz ou coleção  
+ Um gerador de número aleatório sempre pode retornar valores duplicados. Como o intervalo de números se torna menor, ou o número de valores gerados se torna maior, aumenta a probabilidade de duplicatas. Se valores aleatórios devem ser exclusivos, mais números são gerados para compensar duplicatas, resultando em cada vez mais baixo desempenho.  
+  
+ Há várias técnicas para lidar com esse cenário. Uma solução comum é criar uma matriz ou coleção que contém os valores a serem recuperados e uma matriz paralela que contém números de ponto flutuante aleatórios. A segunda matriz é preenchida com números aleatórios no momento em que a primeira matriz é criada, e o <xref:System.Array.Sort%28System.Array%2CSystem.Array%29?displayProperty=nameWithType> método é usado para classificar a primeira matriz usando os valores na matriz paralela.  
+  
+ Por exemplo, se você estiver desenvolvendo um jogo de Paciência, você deseja garantir que cada cartão é usado apenas uma vez. Em vez de gerar números aleatórios para recuperar um cartão e controlar se o cartão já foi distribuído, você pode criar uma matriz paralela de números aleatórios que podem ser usados para classificar o conjunto. Depois que o plano é classificado, seu aplicativo pode manter um ponteiro para indicar que o índice do próximo cartão na mesa.  
+  
+ O exemplo a seguir ilustra esta abordagem. Define uma `Card` classe que representa uma carta de jogo e uma `Dealer` classe que trata de um conjunto de cartões embaralhados. O `Dealer` construtor da classe preenche duas matrizes: um `deck` matriz que tem o escopo de classe e que representa todas as cartas na mesa; e um local `order` matriz que tem o mesmo número de elementos como o `deck` de matriz e é populada com gerado aleatoriamente <xref:System.Double> valores.  O <xref:System.Array.Sort%28System.Array%2CSystem.Array%29?displayProperty=nameWithType> método é chamado para classificar o `deck` matriz com base nos valores de `order` matriz.  
+  
+ [!code-cpp[System.Random#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/uniquearray1.cpp#11)]
+ [!code-csharp[System.Random#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/uniquearray1.cs#11)]
+ [!code-vb[System.Random#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/uniquearray1.vb#11)]  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um único número aleatório e chama seu <xref:System.Random.NextBytes%2A>, <xref:System.Random.Next%2A>, e <xref:System.Random.NextDouble%2A> métodos para gerar sequências de números aleatórios dentro de intervalos diferentes.  
+  
+ [!code-cpp[System.Random#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random/cpp/random2.cpp#2)]
+ [!code-csharp[System.Random#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random/cs/Random2.cs#2)]
+ [!code-vb[System.Random#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random/vb/Random2.vb#2)]  
+  
+ O exemplo a seguir gera um número aleatório usado como um índice para recuperar um valor de cadeia de caracteres de uma matriz.  
+  
+ [!code-cpp[System.Random.Next#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next1.cpp#3)]
+ [!code-csharp[System.Random.Next#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next1.cs#3)]
+ [!code-vb[System.Random.Next#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>No .NET Framework 1.0 e 1.1, uma implementação mínima de uma classe derivada do <see cref="T:System.Random" /> necessário a substituindo o <see cref="M:System.Random.Sample" /> método para definir um algoritmo novo ou modificado para gerar números aleatórios. A classe derivada pode dependem, em seguida, a implementação da classe base a <see cref="M:System.Random.Next" />, <see cref="M:System.Random.Next(System.Int32)" />, <see cref="M:System.Random.Next(System.Int32,System.Int32)" />, <see cref="M:System.Random.NextBytes(System.Byte[])" />, e <see cref="M:System.Random.NextDouble" /> métodos para chamar a implementação da classe derivada de <see cref="M:System.Random.Sample" /> método.  
+  
+ No .NET Framework 2.0 e versões posterior, o comportamento do <see cref="M:System.Random.Next" />, <see cref="M:System.Random.Next(System.Int32,System.Int32)" />, e <see cref="M:System.Random.NextBytes(System.Byte[])" /> métodos foram alterados para que esses métodos não necessariamente chamar a implementação da classe derivada de <see cref="M:System.Random.Sample" /> método. Como resultado, as classes derivadas de <see cref="T:System.Random" /> de destino do .NET Framework 2.0 e posterior, também deverá substituir esses três métodos.</para>
+    </block>
+    <block subset="none" type="usage">
+      <para>A implementação do gerador de número aleatório no <see cref="T:System.Random" /> classe não é garantida para permanecer o mesmo nas versões principais do .NET Framework. Como resultado, você não deve presumir que a mesma semente resultará na mesma sequência pseudo-aleatório em diferentes versões do .NET Framework.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Random ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Random" />, usando um valor de semente padrão dependente de tempo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de semente padrão é derivado do relógio do sistema e com resolução finita. Como resultado, diferente <xref:System.Random> objetos criados por uma chamada para o construtor padrão em sucessão fechar terão valores de semente padrão idênticos e, portanto, produzirão conjuntos idênticos de números aleatórios. Esse problema pode ser evitado por meio de um único <xref:System.Random> objeto para gerar todos os números aleatórios. Você também pode trabalhar em torno dele, modificando o valor de semente retornado pelo relógio do sistema e, em seguida, fornecer explicitamente esse novo valor de semente para a <xref:System.Random.%23ctor%28System.Int32%29> construtor. Para obter mais informações, consulte o <xref:System.Random.%23ctor%28System.Int32%29> construtor.  
+  
+ Se você quiser que o gerador de número aleatório para gerar uma sequência aleatória de números, chame este construtor. Para gerar uma sequência fixa de números aleatórios que serão o mesmo para diferentes geradores de números aleatórios, chame o <xref:System.Random.%23ctor%28System.Int32%29> construtor com um valor de semente fixa. Isso <xref:System.Random> sobrecarga de construtor é usada com frequência ao testar aplicativos que usam números aleatórios.  
+  
+ Após instanciar o gerador de número aleatório, você pode chamar individuais <xref:System.Random> métodos, como <xref:System.Random.Next> ou <xref:System.Random.NextDouble>para gerar números aleatórios.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o construtor padrão para criar uma instância de três <xref:System.Random> objetos e exibe uma sequência de cinco inteiros aleatórios para cada um. Porque as duas primeiras <xref:System.Random> objetos são criados em sucessão fechar, eles são instanciados usando valores de semente idêntico com base no relógio do sistema e, portanto, eles produzem uma sequência idêntica de números aleatórios. Por outro lado, o construtor padrão da terceira <xref:System.Random> objeto é chamado após um atraso de dois segundos causado por chamar o <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> método. Como isso produz um valor de semente diferentes para o terceiro <xref:System.Random> do objeto, ele produz uma sequência diferente de números aleatórios.  
+  
+ [!code-csharp[System.Random.Ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor1.cs#2)]
+ [!code-vb[System.Random.Ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Random (int Seed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 Seed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Seed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Seed">Um número usado para calcular um valor inicial para a sequência numérica pseudoaleatória. Se um número negativo for especificado, o valor absoluto do número será usado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Random" />, usando o valor de semente especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecer um valor de semente idênticos para diferentes <xref:System.Random> objetos faz com que cada instância produzir idênticas sequências de números aleatórios. Isso geralmente é feito ao testar aplicativos que dependem de geradores de números aleatórios.  
+  
+ Se seu aplicativo exigir sequências de números aleatórias diferentes, invoque esse construtor várias vezes com valores de semente diferentes. É uma maneira de produzir um valor de semente exclusivo para torná-lo dependentes de tempo. Por exemplo, derivar o valor de semente do relógio do sistema, como o <xref:System.Random.%23ctor> sobrecarga. No entanto, o relógio do sistema pode não ter resolução suficiente para fornecer diferentes invocações desse construtor com um valor de semente diferentes. Isso resulta em geradores de números aleatórios que geram idênticas sequências de números pseudo-aleatório, conforme ilustrado pelas duas primeiras <xref:System.Random> objetos no exemplo a seguir. Para evitar isso, aplica um algoritmo para diferenciar o valor de semente em cada invocação ou chamada de <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> método para garantir que você forneça cada construtor com um valor de semente diferentes.  
+  
+ [!code-csharp[System.Random.Ctor#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor4.cs#4)]
+ [!code-vb[System.Random.Ctor#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor4.vb#4)]  
+  
+ Outra opção é criar uma instância de um único <xref:System.Random> do objeto que você usar para gerar todos os números aleatórios em seu aplicativo. Isso resulta em um pouco melhor desempenho, como instanciar um gerador de número aleatório é relativamente cara.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria <xref:System.Random> objetos com o construtor da classe que usa um parâmetro de semente e gera uma sequência de inteiros aleatórios e duplicatas. O exemplo ilustra que a mesma sequência é gerada quando o <xref:System.Random> objeto é criado novamente com o parâmetro de construtor e a propagação.  
+  
+ [!code-cpp[System.Random.Ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Ctor/CPP/ctor.cpp#1)]
+ [!code-csharp[System.Random.Ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor.cs#1)]
+ [!code-vb[System.Random.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public virtual int Next ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Next() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Next" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um inteiro aleatório não negativo.</summary>
+        <returns>Um inteiro com sinal de 32 bits maior ou igual a 0 e menor que <see cref="F:System.Int32.MaxValue" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Random.Next%2A?displayProperty=nameWithType>gera um número aleatório cujo valor varia de 0 a menos de <xref:System.Int32?displayProperty=nameWithType>. Para gerar um número aleatório cujo valor varia de 0 a algum outro número positivo, use o <xref:System.Random.Next%28System.Int32%29?displayProperty=nameWithType> sobrecarga do método. Para gerar um número aleatório dentro de um intervalo diferente, use o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> sobrecarga do método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir faz chamadas repetidas para o <xref:System.Random.Next%2A> método para gerar um número específico de números aleatórios solicitados pelo usuário. O <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> método é usado para obter a entrada do cliente.  
+  
+ [!code-cpp[System.Random.Next#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next3.cpp#5)]
+ [!code-csharp[System.Random.Next#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next3.cs#5)]
+ [!code-vb[System.Random.Next#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next3.vb#5)]  
+  
+ O exemplo a seguir deriva de uma classe de <xref:System.Random> para gerar uma sequência de números aleatórios cuja distribuição é diferente da distribuição uniforme gerada pelo <xref:System.Random.Sample%2A> método da classe base. Ela substitui o <xref:System.Random.Sample%2A> método para fornecer a distribuição de números aleatórios e substituições de <xref:System.Random.Next%2A?displayProperty=nameWithType> método para usar a série de números aleatórios.  
+  
+ [!code-cpp[System.Random.Sample#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Sample/cpp/sampleex.cpp#1)]
+ [!code-csharp[System.Random.Sample#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Sample/CS/sample.cs#1)]
+ [!code-vb[System.Random.Sample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Sample/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Começando com o .NET Framework versão 2.0, se você derivar uma classe de <see cref="T:System.Random" /> e substituir o <see cref="M:System.Random.Sample" /> método, a distribuição fornecida pela implementação de classe derivada de <see cref="M:System.Random.Sample" /> método não é usado em chamadas para a classe base implementação de <see cref="M:System.Random.Next" /> método. Em vez disso, a distribuição uniforme retornado por base de <see cref="T:System.Random" /> classe é usada. Esse comportamento melhora o desempenho geral da classe <see cref="T:System.Random" />. Para modificar esse comportamento para chamar o <see cref="M:System.Random.Sample" /> método na classe derivada, você também deve substituir o <see cref="M:System.Random.Next" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public virtual int Next (int maxValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Next(int32 maxValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Next(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxValue">O limite superior exclusivo do número aleatório a ser gerado. <c>maxValue</c> deve ser maior que ou igual a 0.</param>
+        <summary>Retorna um número inteiro aleatório não negativo menor que o máximo especificado.</summary>
+        <returns>Um inteiro com sinal de 32 bits maior ou igual a 0 e menor que <paramref name="maxValue" />; ou seja, o intervalo de valores retornados inclui 0, mas não <paramref name="maxValue" />. No entanto, se <paramref name="maxValue" /> for igual a 0, <paramref name="maxValue" /> será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Random.Next%28System.Int32%29> sobrecarga retorna inteiros aleatórios que variam de 0 a `maxValue` – 1. No entanto, se `maxValue` for 0, o método retornará 0.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir gera inteiros aleatórios com várias sobrecargas do <xref:System.Random.Next%2A> método.  
+  
+ [!code-cpp[System.Random.Next#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next.cpp#1)]
+ [!code-csharp[System.Random.Next#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next.cs#1)]
+ [!code-vb[System.Random.Next#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next.vb#1)]  
+  
+ O exemplo a seguir gera um número aleatório usado como um índice para recuperar um valor de cadeia de caracteres de uma matriz. Como o maior índice da matriz é um menor do que seu tamanho, o valor da <xref:System.Array.Length%2A?displayProperty=nameWithType> propriedade é fornecida como um a `maxValue` parâmetro.  
+  
+ [!code-cpp[System.Random.Next#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next1.cpp#3)]
+ [!code-csharp[System.Random.Next#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next1.cs#3)]
+ [!code-vb[System.Random.Next#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="maxValue" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public virtual int Next (int minValue, int maxValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Next(int32 minValue, int32 maxValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Next(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="minValue" Type="System.Int32" />
+        <Parameter Name="maxValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minValue">O limite inferior inclusivo do número aleatório retornado.</param>
+        <param name="maxValue">O limite superior exclusivo do número aleatório retornado. <c>maxValue</c> deve ser maior que ou igual a <c>minValue</c>.</param>
+        <summary>Retorna um inteiro aleatório que está dentro do intervalo especificado.</summary>
+        <returns>Um inteiro com sinal de 32 bits maior ou igual a <paramref name="minValue" /> e menor que <paramref name="maxValue" />; ou seja, o intervalo de valores retornados inclui <paramref name="minValue" />, mas não <paramref name="maxValue" />. Se <paramref name="minValue" /> for igual a <paramref name="maxValue" />, <paramref name="minValue" /> será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29> sobrecarga retorna inteiros aleatórios que variam de `minValue` para `maxValue` – 1. No entanto, se `maxValue` é igual a `minValue`, o método retornará `minValue`.  
+  
+ Ao contrário de outras sobrecargas do <xref:System.Random.Next%2A> método, que retornam apenas valores não negativos, esse método pode retornar um inteiro aleatório negativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Random.Next%28System.Int32%2CSystem.Int32%29?displayProperty=nameWithType> método para gerar valores inteiros aleatórios com três intervalos diferentes. Observe que a saída exata do exemplo depende do valor de semente fornecido pelo sistema passado para o <xref:System.Random> construtor de classe.  
+  
+ [!code-cpp[System.Random.Next#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next2.cpp#2)]
+ [!code-csharp[System.Random.Next#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/Next2.cs#2)]
+ [!code-vb[System.Random.Next#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next2.vb#2)]  
+  
+ O exemplo a seguir gera um número aleatório usado como um índice para recuperar um valor de cadeia de caracteres de uma matriz. Como o maior índice da matriz é um menor do que seu tamanho, o valor da <xref:System.Array.Length%2A?displayProperty=nameWithType> propriedade é fornecida como um a `maxValue` parâmetro.  
+  
+ [!code-cpp[System.Random.Next#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Next/CPP/next4.cpp#4)]
+ [!code-csharp[System.Random.Next#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Next/CS/next4.cs#4)]
+ [!code-vb[System.Random.Next#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Next/VB/next4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="minValue" /> é maior que <paramref name="maxValue" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Começando com o .NET Framework versão 2.0, se você derivar uma classe de <see cref="T:System.Random" /> e substituir o <see cref="M:System.Random.Sample" /> método, a distribuição fornecida pela implementação de classe derivada de <see cref="M:System.Random.Sample" /> método não é usado em chamadas para a classe base implementação do <see cref="M:System.Random.Next(System.Int32,System.Int32)" /> sobrecarga do método se a diferença entre o <paramref name="minValue" /> e <paramref name="maxValue" /> parâmetros é maior do que <see cref="F:System.Int32.MaxValue" />. Em vez disso, a distribuição uniforme retornado por base de <see cref="T:System.Random" /> classe é usada. Esse comportamento melhora o desempenho geral da classe <see cref="T:System.Random" />. Para modificar esse comportamento para chamar o <see cref="M:System.Random.Sample" /> método na classe derivada, você também deve substituir o <see cref="M:System.Random.Next(System.Int32,System.Int32)" /> sobrecarga do método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="NextBytes">
+      <MemberSignature Language="C#" Value="public virtual void NextBytes (byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NextBytes(unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.NextBytes(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes que deverá conter números aleatórios.</param>
+        <summary>Preenche os elementos de uma matriz de bytes especificada com números aleatórios.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada elemento da matriz de bytes é definido como um número aleatório maior ou igual a 0 e menor ou igual a <xref:System.Byte.MaxValue>.  
+  
+ Por exemplo, para gerar um número aleatório adequado para a criação de uma senha aleatória criptograficamente seguro, use um método como <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Random.NextBytes%2A> método para preencher uma matriz de bytes com valores de byte aleatórios.  
+  
+ [!code-cpp[Classic Random.NextBytes Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Random.NextBytes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Random.NextBytes Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Random.NextBytes Example/CS/source.cs#1)]
+ [!code-vb[Classic Random.NextBytes Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Random.NextBytes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Começando com o .NET Framework versão 2.0, se você derivar uma classe de <see cref="T:System.Random" /> e substituir o <see cref="M:System.Random.Sample" /> método, a distribuição fornecida pela implementação de classe derivada de <see cref="M:System.Random.Sample" /> método não é usado em chamadas para a classe base implementação de <see cref="M:System.Random.NextBytes(System.Byte[])" /> método. Em vez disso, a distribuição uniforme retornado por base de <see cref="T:System.Random" /> classe é usada. Esse comportamento melhora o desempenho geral da classe <see cref="T:System.Random" />. Para modificar esse comportamento para chamar o <see cref="M:System.Random.Sample" /> método na classe derivada, você também deve substituir o <see cref="M:System.Random.NextBytes(System.Byte[])" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="NextDouble">
+      <MemberSignature Language="C#" Value="public virtual double NextDouble ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 NextDouble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.NextDouble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um número de ponto flutuante aleatório maior ou igual a 0,0 e menor que 1.0.</summary>
+        <returns>Um número de ponto flutuante de precisão dupla maior ou igual a 0,0 e menor que 1,0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite superior real do número aleatório retornado por esse método é 0.99999999999999978.  
+  
+ Para recuperar valores de ponto flutuante aleatórios dentro de um intervalo diferente de 0.0 e 1.0, consulte a seção "Recuperar valores de ponto flutuante em um intervalo especificado" o <xref:System.Random> tópico sobre a classe.  
+  
+ Esse método é a versão pública do método protegido, <xref:System.Random.Sample%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Random.NextDouble%2A> método para gerar sequências de doubles aleatórios.  
+  
+ [!code-cpp[System.Random.Ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Ctor/CPP/ctor.cpp#1)]
+ [!code-csharp[System.Random.Ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Ctor/CS/ctor.cs#1)]
+ [!code-vb[System.Random.Ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Ctor/VB/ctor.vb#1)]  
+  
+ A exemplo a seguir chama o <xref:System.Random.NextDouble%2A> método para gerar 100 aleatório números e exibe sua frequência de distribuição.  
+  
+ [!code-csharp[System.Random.NextDouble#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.random.nextdouble/cs/nextdouble1.cs#2)]
+ [!code-vb[System.Random.NextDouble#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.random.nextdouble/vb/nextdouble1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sample">
+      <MemberSignature Language="C#" Value="protected virtual double Sample ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance float64 Sample() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Random.Sample" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um número de ponto flutuante aleatório entre 0.0 e 1.0.</summary>
+        <returns>Um número de ponto flutuante de precisão dupla maior ou igual a 0,0 e menor que 1,0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para produzir uma distribuição aleatória diferente ou um princípio de gerador de número de aleatórios diferentes, derive uma classe do <xref:System.Random> classe e substituir o <xref:System.Random.Sample%2A> método.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Random.Sample%2A> método `protected`, que significa que ele é acessível somente dentro de <xref:System.Random> classe e suas classes derivadas. Para gerar um número aleatório entre 0 e 1 de um <xref:System.Random> instância, chame o <xref:System.Random.NextDouble%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir deriva de uma classe de <xref:System.Random> e substitui o <xref:System.Random.Sample%2A> método para gerar uma distribuição de números aleatórios. Essa distribuição é diferente da distribuição uniforme gerada pelo <xref:System.Random.Sample%2A> método da classe base.  
+  
+ [!code-cpp[System.Random.Sample#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Random.Sample/cpp/sampleex.cpp#1)]
+ [!code-csharp[System.Random.Sample#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Random.Sample/CS/sample.cs#1)]
+ [!code-vb[System.Random.Sample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Random.Sample/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Começando com o .NET Framework versão 2.0, se você derivar uma classe de <see cref="T:System.Random" /> e substituir o <see cref="M:System.Random.Sample" /> método, a distribuição fornecida pela implementação de classe derivada de <see cref="M:System.Random.Sample" /> método não é usado em chamadas para a classe base implementação dos métodos a seguir:  
+  
+-   O método <see cref="M:System.Random.NextBytes(System.Byte[])" />.  
+  
+-   O método <see cref="M:System.Random.Next" />.  
+  
+-   O <see cref="M:System.Random.Next(System.Int32,System.Int32)" /> método, se (<paramref name="maxValue" /> - <paramref name="minValue" />) é maior do que <see cref="F:System.Int32.MaxValue" />.  
+  
+ Em vez disso, a distribuição uniforme fornecida com a base <see cref="T:System.Random" /> classe é usada. Esse comportamento melhora o desempenho geral da classe <see cref="T:System.Random" />. Para modificar esse comportamento para chamar a implementação do <see cref="M:System.Random.Sample" /> método na classe derivada, você também deve substituir o comportamento desses três membros. O exemplo fornece uma ilustração.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

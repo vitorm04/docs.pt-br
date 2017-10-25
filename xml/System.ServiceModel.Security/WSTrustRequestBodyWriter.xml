@@ -1,0 +1,86 @@
+<Type Name="WSTrustRequestBodyWriter" FullName="System.ServiceModel.Security.WSTrustRequestBodyWriter">
+  <TypeSignature Language="C#" Value="public class WSTrustRequestBodyWriter : System.ServiceModel.Channels.BodyWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WSTrustRequestBodyWriter extends System.ServiceModel.Channels.BodyWriter" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.WSTrustRequestBodyWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BodyWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um gravador de corpo de mensagem que grava uma primeira em uma mensagem de saída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Security.WSTrustRequestBodyWriter> classe é uma implementação do <xref:System.ServiceModel.Channels.BodyWriter> classe que dá suporte a <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSTrustRequestBodyWriter (System.IdentityModel.Protocols.WSTrust.RequestSecurityToken requestSecurityToken, System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer serializer, System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext serializationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken requestSecurityToken, class System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer serializer, class System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext serializationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustRequestBodyWriter.#ctor(System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer,System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="requestSecurityToken" Type="System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />
+        <Parameter Name="serializer" Type="System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer" />
+        <Parameter Name="serializationContext" Type="System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="requestSecurityToken">O <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" /> (primeira) a ser serializado na mensagem de saída do objeto.</param>
+        <param name="serializer">O <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustRequestSerializer" /> objeto a ser usado para serializar a primeira.</param>
+        <param name="serializationContext">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustSerializationContext" /> que contém o contexto de serialização.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.WSTrustRequestBodyWriter" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="requestSecurityToken" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="serializer" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="serializationContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnWriteBodyContents">
+      <MemberSignature Language="C#" Value="protected override void OnWriteBodyContents (System.Xml.XmlDictionaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnWriteBodyContents(class System.Xml.XmlDictionaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.WSTrustRequestBodyWriter.OnWriteBodyContents(System.Xml.XmlDictionaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlDictionaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlDictionaryWriter" /> do objeto ao qual a primeira deve ser gravada.</param>
+        <summary>Substituição do método da classe base. Serializa a primeira para o fluxo de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serializa o <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> objeto associado a essa instância para o fluxo de saída.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

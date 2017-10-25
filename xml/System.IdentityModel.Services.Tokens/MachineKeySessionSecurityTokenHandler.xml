@@ -1,0 +1,83 @@
+<Type Name="MachineKeySessionSecurityTokenHandler" FullName="System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler">
+  <TypeSignature Language="C#" Value="public class MachineKeySessionSecurityTokenHandler : System.IdentityModel.Tokens.SessionSecurityTokenHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MachineKeySessionSecurityTokenHandler extends System.IdentityModel.Tokens.SessionSecurityTokenHandler" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SessionSecurityTokenHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Processa tokens de sessão usando chaves de criptografia e de assinatura especificadas no elemento <see langword="&lt;machineKey&gt;" /> ASP.NET em um arquivo de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> classe usa a <xref:System.IdentityModel.ProtectedDataCookieTransform> classe, que usa a API de proteção de dados (DPAPI), para proteger o token de sessão. A DPAPI fornece proteção usando as credenciais do usuário ou do computador e armazena os dados de chave no perfil do usuário. Isso significa que um token de sessão assinado e criptografado em um computador não pode ser validada ou descriptografada em um computador diferente.  
+  
+ Por outro lado, o <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> classe usa a <xref:System.IdentityModel.Services.MachineKeyTransform> classe, que protege os dados do cookie de sessão usando o material criptográfico especificado no `<machineKey>` elemento no arquivo de configuração. Isso significa que as mesmas chaves (e tokens de sessão) podem ser usados em vários computadores. Isso é particularmente importante quando um aplicativo é implantado em um web farm. Para obter mais informações sobre como usar o Windows Identity Foundation para proteger os aplicativos que são implantados em um web farm, consulte [WIF e Web Farms](~/docs/framework/security/wif-and-web-farms.md).  
+  
+ Configure o aplicativo para usar o <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> adicionando-o à coleção de manipuladores de token. Primeiro você deverá remover o <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (ou qualquer manipulador derivado da classe <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>) da coleção de manipuladores de token se um manipulador desse tipo estiver presente. Isso ocorre porque <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> deriva <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> e uma coleção de manipulador de token não pode conter vários manipuladores de qualquer tipo determinado.  
+  
+   
+  
+## Examples  
+ O XML a seguir mostra como usar o ASP.NET `<machineKey>` elemento na configuração para especificar explicitamente as chaves de assinatura e criptografia. O `<machineKey>` especificado no elemento de `<system.web>` elemento em um arquivo de configuração.  
+  
+```xml  
+<machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
+```  
+  
+ O XML a seguir mostra como adicionar o <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> a uma coleção de manipuladores de token. O padrão <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> primeiro é removido da coleção. Manipuladores de token são configurados sob o [ &lt;securityTokenHandlers&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md) elemento.  
+  
+```xml  
+<securityTokenHandlers>  
+  <remove type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
+  <add type="System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
+</securityTokenHandlers>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MachineKeySessionSecurityTokenHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MachineKeySessionSecurityTokenHandler (TimeSpan tokenLifetime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan tokenLifetime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler.#ctor(System.TimeSpan)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenLifetime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="tokenLifetime">O tempo de vida padrão para um token.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler" /> classe que tem a vida útil do token padrão especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="tokenLifetime" />é menor que ou igual a<see cref="F:System.TimeSpan.Zero" /></exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

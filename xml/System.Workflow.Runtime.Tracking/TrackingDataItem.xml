@@ -1,0 +1,125 @@
+<Type Name="TrackingDataItem" FullName="System.Workflow.Runtime.Tracking.TrackingDataItem">
+  <TypeSignature Language="C#" Value="public class TrackingDataItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrackingDataItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingDataItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um único item de dados extraídos de um fluxo de trabalho e todas as suas anotações associadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Quando a infra-estrutura de controle de tempo de execução corresponde a um ponto de controle, ele envia um registro de controle para o serviço de acompanhamento. Um <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> ou um <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> pode conter <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> ou <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> objetos que especificam os dados a ser extraído do fluxo de trabalho e retornados no <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord>. Um <xref:System.Workflow.Runtime.Tracking.TrackingDataItem> representa um único item desses dados extraídos de uma <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord.Body%2A?displayProperty=nameWithType> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord.Body%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackingDataItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingDataItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.TrackingDataItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingDataItem.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a lista de anotações associadas com os dados extraídos.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" /> que contém as anotações associadas com os dados extraídos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> ou <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract> pode especificar as anotações para ser enviada com os dados extraídos. Estão contidos no <xref:System.Workflow.Runtime.Tracking.TrackingDataItem.Annotations%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public object Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Data" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingDataItem.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os dados extraídos associados a <see cref="T:System.Workflow.Runtime.Tracking.TrackingDataItem" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa os dados extraídos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingDataItem.Data%2A>contém os dados de membro especificados por uma <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract> ou <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract>, que foi extraído da instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FieldName">
+      <MemberSignature Language="C#" Value="public string FieldName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FieldName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.TrackingDataItem.FieldName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade ou campo associado com os dados extraídos.</summary>
+        <value>O ponto delineadas nome da propriedade ou campo que foi extraído.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A infra-estrutura de controle de tempo de execução oferece suporte a extração de dados em campos e propriedades de classes que herdam de <xref:System.Workflow.ComponentModel.Activity>; um membro de tal campo ou propriedade; e um único item de um campo ou uma propriedade (ou um membro da) que implementa o <xref:System.Collections.IEnumerable> interface, por exemplo um único elemento em uma coleção. <xref:System.Workflow.Runtime.Tracking.TrackingDataItem.FieldName%2A>contém o nome de ponto delineado do item extraído e é equivalente a <xref:System.Workflow.Runtime.Tracking.ActivityDataTrackingExtract.Member%2A> ou <xref:System.Workflow.Runtime.Tracking.WorkflowDataTrackingExtract.Member%2A> dependendo do tipo de extração especificado os dados contidos pelo <xref:System.Workflow.Runtime.Tracking.TrackingDataItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

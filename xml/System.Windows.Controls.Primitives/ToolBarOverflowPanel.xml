@@ -1,0 +1,178 @@
+<Type Name="ToolBarOverflowPanel" FullName="System.Windows.Controls.Primitives.ToolBarOverflowPanel">
+  <TypeSignature Language="C#" Value="public class ToolBarOverflowPanel : System.Windows.Controls.Panel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolBarOverflowPanel extends System.Windows.Controls.Panel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ToolBarOverflowPanel" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Panel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para organizar itens <see cref="T:System.Windows.Controls.ToolBar" /> de estouro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.ToolBar> pode não ter espaço suficiente para mostrar todos os seus itens.  Quando isso acontece, os itens em uma <xref:System.Windows.Controls.ToolBar> pode ser colocado no <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>, que é especificado no <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.ToolBar>.  Para obter um exemplo de como usar um <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> no <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.ToolBar>, consulte [estilos de barra de ferramentas e modelos](~/docs/framework/wpf/controls/toolbar-styles-and-templates.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBarOverflowPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToolBarOverflowPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.ToolBarOverflowPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToolBarOverflowPanel.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeBounds" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeBounds">Tamanho que assume um painel de excedentes da barra de ferramentas para posicionar elementos filho.</param>
+        <summary>Organiza e dimensiona o conteúdo de um <see cref="T:System.Windows.Controls.Primitives.ToolBarOverflowPanel" /> objeto.</summary>
+        <returns>O tamanho do <see cref="T:System.Windows.Controls.Primitives.ToolBarOverflowPanel" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateUIElementCollection">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Controls.UIElementCollection CreateUIElementCollection (System.Windows.FrameworkElement logicalParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Controls.UIElementCollection CreateUIElementCollection(class System.Windows.FrameworkElement logicalParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToolBarOverflowPanel.CreateUIElementCollection(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.UIElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logicalParent" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="logicalParent">Pai lógico da nova coleção.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Controls.UIElementCollection" />.</summary>
+        <returns>Uma nova coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A nova coleção é usada para adicionar informações armazenadas em cache para cada filho ou de interceptar ações como as atualizações de layout.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToolBarOverflowPanel.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">Tamanho de restrição é um limite superior. O valor de retorno não deve exceder esse tamanho.</param>
+        <summary>Remeasures a <see cref="T:System.Windows.Controls.Primitives.ToolBarOverflowPanel" />.</summary>
+        <returns>O tamanho desejado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapWidth">
+      <MemberSignature Language="C#" Value="public double WrapWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 WrapWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.ToolBarOverflowPanel.WrapWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura recomendada para um estouro <see cref="T:System.Windows.Controls.ToolBar" /> antes de itens de fluam para a próxima linha.</summary>
+        <value>Um valor duplo que representa a largura recomendada do <see cref="T:System.Windows.Controls.ToolBar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel.WrapWidth%2A> a 100, a largura do estouro <xref:System.Windows.Controls.ToolBar> é 100 e todos os itens que podem se ajustar em uma área de tamanho são no principal <xref:System.Windows.Controls.ToolBar>. Se houver apenas um item, e requer um tamanho de 120, a largura da barra de ferramentas se expande automaticamente de 100 a 120.  
+  
+<a name="dependencyPropertyInfo_WrapWidth"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel.WrapWidthProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel.WrapWidth%2A> propriedade com um <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>.  
+  
+ [!code-xaml[ToolBarOverflowPanel_snip#ToolBarOverflowPanelWrapWidth](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarOverflowPanel_snip/CS/pane1.xaml#toolbaroverflowpanelwrapwidth)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WrapWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WrapWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ToolBarOverflowPanel.WrapWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.ToolBarOverflowPanel.WrapWidth" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel.WrapWidth%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

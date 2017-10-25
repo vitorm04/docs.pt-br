@@ -1,0 +1,154 @@
+<Type Name="VirtualPathExtension" FullName="System.ServiceModel.Activation.VirtualPathExtension">
+  <TypeSignature Language="C#" Value="public sealed class VirtualPathExtension : System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit VirtualPathExtension extends System.Object implements class System.ServiceModel.IExtension`1&lt;class System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.VirtualPathExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém o caminho virtual do serviço quando o serviço é hospedado no Internet Information Services (IIS) ou o serviço de ativação de processos do Windows (WAS).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa extensão está presente somente para serviços hospedados no IIS ou do WAS. Services pode determinar se eles estiverem hospedados em IIS ou do WAS recuperando essa extensão de seus <xref:System.ServiceModel.ServiceHostBase>, conforme mostrado no exemplo a seguir.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar o <xref:System.ServiceModel.Activation.VirtualPathExtension> do host de serviço e retornam um valor que está hospedado no IIS ou do WAS.  
+  
+```csharp  
+bool isHosted = false;  
+ServiceHostBase host = OperationContext.Current.Host;  
+VirtualPathExtension vpe = host.Extentions.Find<VirtualPathExtension>();  
+  
+if( vpe != null )  
+Console.WriteLine("The virtualPath of the hosted Service is  {0}", vpe.VirtualPath);  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationVirtualPath">
+      <MemberSignature Language="C#" Value="public string ApplicationVirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationVirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.VirtualPathExtension.ApplicationVirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual do aplicativo IIS ou do WAS que hospeda o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] service.</summary>
+        <value>O caminho virtual do aplicativo IIS ou do WAS que hospeda o serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Attach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.VirtualPathExtension.Attach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.ServiceModel.ServiceHostBase" /> usando o caminho virtual.</param>
+        <summary>Este método é fornecido para dar suporte a [!INCLUDE[indigo1](~/includes/indigo1-md.md)] infraestrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece suporte a [!INCLUDE[indigo2](~/includes/indigo2-md.md)] infraestrutura e não se destina a ser chamado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detach">
+      <MemberSignature Language="C#" Value="public void Detach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Detach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.VirtualPathExtension.Detach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.ServiceModel.ServiceHostBase" /> usando o caminho virtual.</param>
+        <summary>Este método é fornecido para dar suporte a [!INCLUDE[indigo2](~/includes/indigo2-md.md)] infraestrutura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método oferece suporte a [!INCLUDE[indigo2](~/includes/indigo2-md.md)] infraestrutura e não se destina a ser chamado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteName">
+      <MemberSignature Language="C#" Value="public string SiteName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SiteName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.VirtualPathExtension.SiteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do site do aplicativo IIS ou do WAS que hospeda o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] service.</summary>
+        <value>O nome do site do IIS ou do WAS aplicativo que hospeda o serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activation.VirtualPathExtension.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual usado por um serviço.</summary>
+        <value>O caminho virtual usado por um serviço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

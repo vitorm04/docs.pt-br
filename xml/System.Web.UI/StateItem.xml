@@ -1,0 +1,73 @@
+<Type Name="StateItem" FullName="System.Web.UI.StateItem">
+  <TypeSignature Language="C#" Value="public sealed class StateItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StateItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.StateItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um item salvo na classe <see cref="T:System.Web.UI.StateBag" /> quando informações de estado de exibição são persistidas entre as solicitações da Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estado de exibição é o acúmulo dos valores de propriedade de uma página ou um controle de servidor ASP.NET e é enviado para o navegador solicitante em um campo oculto.  
+  
+ Você pode adicionar explicitamente <xref:System.Web.UI.StateItem> objetos para um controle de servidor ASP.NET <xref:System.Web.UI.StateBag> objeto usando o <xref:System.Web.UI.StateBag.Item%2A> propriedade ou o <xref:System.Web.UI.StateBag.Add%2A> método. O <xref:System.Web.UI.StateBag> , em seguida, rastreia as alterações para todos os itens que ele armazena. As alterações para um <xref:System.Web.UI.StateItem> objeto são refletidos no seu <xref:System.Web.UI.StateItem.IsDirty%2A> propriedade. Essas alterações são salvas por uma chamada para o <xref:System.Web.UI.Control.SaveViewState%2A> fase de estado de controle processamento do servidor, antes do controle é processado para a página de exibição de método durante a gravação. Para obter mais informações, consulte [NIB: ASP.NET Web Server Controls](http://msdn.microsoft.com/en-us/e18eb2f2-cf00-47ae-b1a1-dfc188a6dea1).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.StateItem.Value%2A> e <xref:System.Web.UI.StateItem.IsDirty%2A> propriedades do <xref:System.Web.UI.StateItem> classe para salvar o estado de uma simples ASP.NET server controle classe personalizada, `StateBagSample`. Quando a página foi lançado para o servidor, o <xref:System.Web.UI.StateItem.IsDirty%2A> propriedade verifica se o item foi modificado. Os valores de estado são exibidos, acessando o <xref:System.Web.UI.StateItem.Value%2A> propriedade.  
+  
+ [!code-csharp[StateBag_IStateManager_Sample1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/CS/ism_statebag_samples.cs#1)]
+ [!code-vb[StateBag_IStateManager_Sample1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StateBag_IStateManager_Sample1/VB/ism_statebag_samples.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsDirty">
+      <MemberSignature Language="C#" Value="public bool IsDirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateItem.IsDirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.StateItem" /> objeto foi modificado.</summary>
+        <value>
+          <see langword="true" />Se o armazenado <see cref="T:System.Web.UI.StateItem" /> objeto foi modificada; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.StateItem.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da <see cref="T:System.Web.UI.StateItem" /> objeto armazenado na <see cref="T:System.Web.UI.StateBag" /> objeto.</summary>
+        <value>O valor da <see cref="T:System.Web.UI.StateItem" /> armazenados no <see cref="T:System.Web.UI.StateBag" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

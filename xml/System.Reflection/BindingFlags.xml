@@ -1,0 +1,706 @@
+<Type Name="BindingFlags" FullName="System.Reflection.BindingFlags">
+  <TypeSignature Language="C#" Value="public enum BindingFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed BindingFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.BindingFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica sinalizadores que controlam a ligação e a maneira na qual a pesquisa por tipos e membros é realizada por reflexão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas `BindingFlags` ligação para um ótimo muitas classes de controle de `System`, `System.Reflection`, e `System.Runtime` namespaces que invocar, criar, obter, definir e localizar tipos e membros.  
+  
+ `BindingFlags`são usados no seguinte <xref:System.Type> métodos e em outros lugares, como <xref:System.Reflection.MethodBase.Invoke%2A?displayProperty=nameWithType> :  
+  
+-   <xref:System.Reflection.MethodBase.Invoke%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Type.GetMembers%2A>  
+  
+-   <xref:System.Type.GetEvents%2A>  
+  
+-   <xref:System.Type.InvokeMember%2A>  
+  
+-   <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Type.GetConstructor%2A>  
+  
+-   <xref:System.Type.GetConstructors%2A>  
+  
+-   <xref:System.Type.GetMethod%2A>  
+  
+-   <xref:System.Type.GetMethods%2A>  
+  
+-   <xref:System.Type.GetField%2A>  
+  
+-   <xref:System.Type.GetFields%2A>  
+  
+-   <xref:System.Type.GetEvent%2A>  
+  
+-   <xref:System.Type.GetProperty%2A>  
+  
+-   <xref:System.Type.GetProperties%2A>  
+  
+-   <xref:System.Type.GetMember%2A>  
+  
+-   <xref:System.Type.FindMembers%2A>  
+  
+ `InvokeMember`e `GetMethod` são especialmente importantes.  
+  
+ Os sinalizadores de associação podem ser classificados por identificam como um membro de tipo, conforme listado na tabela a seguir.  
+  
+|Identificado pela acessibilidade|Identificada pelo argumento de associação|Identificado pela operação|  
+|---------------------------------|------------------------------------|-----------------------------|  
+|DeclaredOnly<br /><br /> flattenHierarchy<br /><br /> IgnoreCase<br /><br /> IgnoreReturn<br /><br /> Instância<br /><br /> Confidenciais<br /><br /> Público<br /><br /> Estático|ExactBinding<br /><br /> OptionalParamBinding|CreateInstance<br /><br /> GetField<br /><br /> SetField<br /><br /> GetProperty<br /><br /> SetProperty<br /><br /> InvokeMethod<br /><br /> PutDispProperty<br /><br /> PutRefDispProperty|  
+  
+> [!NOTE]
+>  Você deve especificar `Instance` ou `Static` juntamente com `Public` ou `NonPublic` ou nenhum membro será retornado.  
+  
+ A tabela a seguir lista as coerções executadas pelo padrão <xref:System.Reflection.Binder.ChangeType%2A?displayProperty=nameWithType>. Esta tabela se aplica especialmente para o `ExactBinding` sinalizador de associação.  
+  
+|Tipo de fonte|Tipo de destino|  
+|-----------------|-----------------|  
+|Qualquer tipo|Seu tipo base.|  
+|Qualquer tipo|A interface que ele implementa.|  
+|`Char`|`UInt16`, `UInt32`, `Int32`, `UInt64`, `Int64`, `Single`, `Double`|  
+|`Byte`|`Char`, `UInt16`, `Int16`, `UInt32`, `Int32`, `UInt64`, `Int64`, `Single`, `Double`|  
+|`SByte`|`Int16`, `Int32`, `Int64`, `Single`, `Double`|  
+|`UInt16`|`UInt32`, `Int32`, `UInt64`, `Int64`, `Single`, `Double`|  
+|`Int16`|`Int32`, `Int64`, `Single`, `Double`|  
+|`UInt32`|`UInt64`, `Int64`, `Single`, `Double`|  
+|`Int32`|`Int64`, `Single`, `Double`|  
+|`UInt64`|`Single`, `Double`|  
+|`Int64`|`Single`, `Double`|  
+|`Single`|`Double`|  
+|Não referência|Por referência.|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a muitos dos sinalizadores de associação.  
+  
+ [!code-cpp[BindingFlags#1](~/samples/snippets/cpp/VS_Snippets_CLR/BindingFlags/CPP/bindingflagssample.cpp#1)]
+ [!code-csharp[BindingFlags#1](~/samples/snippets/csharp/VS_Snippets_CLR/BindingFlags/CS/bindingflagssample.cs#1)]
+ [!code-vb[BindingFlags#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/BindingFlags/VB/bindingflagssample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="CreateInstance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags CreateInstance = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.CreateInstance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a reflexão deve criar uma instância do tipo especificado. Chama o construtor que corresponde aos argumentos fornecidos. O nome de membro fornecido é ignorado. Se o tipo de pesquisa não for especificado, (Instance | Public) será aplicado. Não é possível chamar um inicializador de tipo.  
+  
+ Este sinalizador é passado para um método <see langword="InvokeMember" /> para invocar um construtor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaredOnly">
+      <MemberSignature Language="C#" Value="DeclaredOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags DeclaredOnly = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.DeclaredOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que somente os membros declarados no nível da hierarquia do tipo fornecido devem ser considerados. Membros herdados não são considerados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que nenhum sinalizador de associação é definido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExactBinding">
+      <MemberSignature Language="C#" Value="ExactBinding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags ExactBinding = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.ExactBinding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os tipos dos argumentos fornecidos devem corresponder exatamente aos tipos dos parâmetros formais correspondentes. A reflexão gerará uma exceção se o chamador fornecer um objeto <see langword="Binder" /> não nulo, já que isso implica que o chamador está fornecendo implementações <see langword="BindToXXX" /> que selecionarão o método apropriado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Reflexão de modelos de regras de acessibilidade do sistema de tipo comum. Por exemplo, se o chamador estiver no mesmo assembly, o chamador não precisa de permissões especiais para membros internos. Caso contrário, o chamador precisa <xref:System.Security.Permissions.ReflectionPermission>. Isso é consistente com a pesquisa de membros que são protegidas, privadas e assim por diante.  
+  
+ O princípio geral é que <xref:System.Reflection.Binder.ChangeType%2A> devem ser executadas somente widening coerções, que nunca perderem dados. Um exemplo de uma coerção de ampliação é forçar o uso de um valor que é um inteiro assinado de 32 bits para um valor que é um inteiro assinado de 64 bits. Isso é diferenciado de uma restrição coerção, que pode perder dados. Um exemplo de uma restrição coerção é forçar o uso de um inteiro assinado de 64 bits em um inteiro assinado de 32 bits.  
+  
+ O associador padrão ignora esse sinalizador, enquanto associadores personalizados podem implementar a semântica do sinalizador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlattenHierarchy">
+      <MemberSignature Language="C#" Value="FlattenHierarchy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags FlattenHierarchy = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.FlattenHierarchy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os membros estáticos públicos e protegidos da hierarquia devem ser retornados. Membros estáticos privados em classes herdadas não são retornados. Membros estáticos incluem campos, métodos, eventos e propriedades. Tipos aninhados não são retornados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetField">
+      <MemberSignature Language="C#" Value="GetField" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags GetField = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.GetField" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o valor do campo especificado deve ser retornado.  
+  
+ Este sinalizador é passado para um método <see langword="InvokeMember" /> para obter um valor de campo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty">
+      <MemberSignature Language="C#" Value="GetProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags GetProperty = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.GetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o valor da propriedade especificada deve ser retornado.  
+  
+ Este sinalizador é passado para um método <see langword="InvokeMember" /> para invocar um getter de propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="IgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags IgnoreCase = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.IgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as maiúsculas e minúsculas do nome do membro não devem ser consideradas durante a associação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreReturn">
+      <MemberSignature Language="C#" Value="IgnoreReturn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags IgnoreReturn = int32(16777216)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.IgnoreReturn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado na interoperabilidade COM para especificar que o valor retornado do membro pode ser ignorado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="Instance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags Instance = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.Instance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os membros da instância devem ser incluídos na pesquisa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMethod">
+      <MemberSignature Language="C#" Value="InvokeMethod" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags InvokeMethod = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.InvokeMethod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um método deve ser invocado. Isso não deve ser um construtor nem um inicializador de tipo.  
+  
+ Este sinalizador é passado para um método <see langword="InvokeMember" /> para invocar um método.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonPublic">
+      <MemberSignature Language="C#" Value="NonPublic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags NonPublic = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.NonPublic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os membros não públicos devem ser incluídos na pesquisa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OptionalParamBinding">
+      <MemberSignature Language="C#" Value="OptionalParamBinding" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags OptionalParamBinding = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.OptionalParamBinding" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o conjunto de membros cuja contagem de parâmetros corresponde ao número de argumentos fornecidos. Este sinalizador de associação é usado para métodos com parâmetros que têm valores padrão e métodos com argumentos variáveis (varargs). Este sinalizador deve ser usado somente com <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros com valores padrão são usados somente em chamadas em que os argumentos à direita são omitidos. Eles devem ser os últimos argumentos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Public">
+      <MemberSignature Language="C#" Value="Public" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags Public = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.Public" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os membros públicos devem ser incluídos na pesquisa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PutDispProperty">
+      <MemberSignature Language="C#" Value="PutDispProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags PutDispProperty = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.PutDispProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o membro <see langword="PROPPUT" /> em um objeto COM deve ser invocado. <see langword="PROPPUT" /> especifica uma função de definição de propriedade que usa um valor. Use <see langword="PutDispProperty" /> se uma propriedade tiver <see langword="PROPPUT" /> e <see langword="PROPPUTREF" /> e você precisar distinguir qual delas foi chamada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PutRefDispProperty">
+      <MemberSignature Language="C#" Value="PutRefDispProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags PutRefDispProperty = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.PutRefDispProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o membro <see langword="PROPPUTREF" /> em um objeto COM deve ser invocado. <see langword="PROPPUTREF" /> especifica uma função de definição de propriedade que usa uma referência em vez de um valor. Use <see langword="PutRefDispProperty" /> se uma propriedade tiver <see langword="PROPPUT" /> e <see langword="PROPPUTREF" /> e você precisar distinguir qual delas foi chamada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetField">
+      <MemberSignature Language="C#" Value="SetField" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags SetField = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.SetField" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o valor do campo especificado deve ser definido.  
+  
+ Este sinalizador é passado para um método <see langword="InvokeMember" /> para definir um valor de campo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="SetProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags SetProperty = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.SetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o valor da propriedade especificada deve ser definido. Para propriedades COM, especificar esse sinalizador de associação é equivalente a especificar <see langword="PutDispProperty" /> e <see langword="PutRefDispProperty" />.  
+  
+ Este sinalizador é passado para um método <see langword="InvokeMember" /> para invocar um setter de propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Static">
+      <MemberSignature Language="C#" Value="Static" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags Static = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.Static" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que os membros estáticos devem ser incluídos na pesquisa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressChangeType">
+      <MemberSignature Language="C#" Value="SuppressChangeType" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.BindingFlags SuppressChangeType = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.BindingFlags.SuppressChangeType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.BindingFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não implementado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

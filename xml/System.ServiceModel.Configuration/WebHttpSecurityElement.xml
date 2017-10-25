@@ -1,0 +1,113 @@
+<Type Name="WebHttpSecurityElement" FullName="System.ServiceModel.Configuration.WebHttpSecurityElement">
+  <TypeSignature Language="C#" Value="public sealed class WebHttpSecurityElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebHttpSecurityElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.WebHttpSecurityElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um elemento XML que configura a segurança para um serviço com pontos de extremidade que recebem solicitações HTTP. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpSecurityElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.WebHttpSecurityElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.WebHttpSecurityElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.WebHttpSecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.WebHttpSecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WebHttpSecurityElement.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WebHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento XML que especifica o modo de segurança para um serviço básico de HTTP.</summary>
+        <value>Um valor de <see cref="T:System.ServiceModel.WebHttpSecurityMode" /> que indica se a segurança em nível de transporte ou nenhuma segurança é usada por um ponto de extremidade. O valor padrão é <see cref="F:System.ServiceModel.WebHttpSecurityMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina se as configurações de <xref:System.ServiceModel.WebHttpSecurity.Transport%2A> propriedade entra em vigor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor não é um <see cref="T:System.ServiceModel.WebHttpSecurityMode" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WebHttpSecurityElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.HttpTransportSecurityElement Transport { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.HttpTransportSecurityElement Transport" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("transport")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.HttpTransportSecurityElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um elemento XML que indica as configurações de segurança de nível de transporte para um ponto de extremidade de serviço configurado para receber solicitações HTTP.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Configuration.WebHttpSecurityElement" /> que especifica as configurações de segurança de nível de transporte. O conjunto de valores padrão são um <see cref="P:System.ServiceModel.HttpTransportSecurity.ClientCredentialType" /> de <see cref="F:System.ServiceModel.HttpClientCredentialType.None" />, um <see cref="P:System.ServiceModel.HttpTransportSecurity.ProxyCredentialType" /> de <see cref="F:System.ServiceModel.HttpProxyCredentialType.None" />, e <see cref="P:System.ServiceModel.HttpTransportSecurity.Realm" /> = "".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Configuration.WebHttpSecurityElement> objeto retornado por essa propriedade para definir parâmetros de segurança de transporte. O <xref:System.ServiceModel.WebHttpSecurityMode> deve ser definido como o <xref:System.ServiceModel.WebHttpSecurityMode.Transport> ou <xref:System.ServiceModel.WebHttpSecurityMode.TransportCredentialOnly> valor para as configurações fornecidas pelo <xref:System.ServiceModel.WebHttpSecurity.Transport%2A> propriedade se torne efetiva para o ponto de extremidade de serviço. Esse valor pode ser definido na configuração ou no <xref:System.ServiceModel.WebHttpBinding.%23ctor%28System.ServiceModel.WebHttpSecurityMode%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,80 @@
+<Type Name="SiteMapDesignerHierarchicalDataSourceView" FullName="System.Web.UI.Design.WebControls.SiteMapDesignerHierarchicalDataSourceView">
+  <TypeSignature Language="C#" Value="public class SiteMapDesignerHierarchicalDataSourceView : System.Web.UI.Design.DesignerHierarchicalDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapDesignerHierarchicalDataSourceView extends System.Web.UI.Design.DesignerHierarchicalDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.SiteMapDesignerHierarchicalDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DesignerHierarchicalDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma exibição de tempo de design de dados hierárquicas para o <see cref="T:System.Web.SiteMap" /> classe.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapDesignerHierarchicalDataSourceView (System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner owner, string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner owner, string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDesignerHierarchicalDataSourceView.#ctor(System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" />
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Web.UI.Design.WebControls.SiteMapDataSourceDesigner" /> que é o designer associado <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" />.</param>
+        <param name="viewPath">Uma consulta XPath que define o bloco de dados a ser usado para o modo de exibição.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.SiteMapDesignerHierarchicalDataSourceView" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeData">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.IHierarchicalEnumerable GetDesignTimeData (out bool isSampleData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.IHierarchicalEnumerable GetDesignTimeData([out] bool&amp; isSampleData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.SiteMapDesignerHierarchicalDataSourceView.GetDesignTimeData(System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isSampleData" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="isSampleData">
+          <see langword="true" />para indicar que os dados retornados são os dados de exemplo; <see langword="false" /> para indicar que os dados retornados são dados reais.</param>
+        <summary>Gera dados de tempo de design que coincide com o esquema do controle de fonte de dados associados e retorna um valor que indica se os dados são dados reais ou dados de exemplo.</summary>
+        <returns>Controle de fonte de dados de tempo de design que corresponde ao esquema dos dados associados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.IDataSourceSchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IDataSourceSchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.SiteMapDesignerHierarchicalDataSourceView.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceSchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um esquema que descreve a exibição da fonte de dados que é representada por esse objeto de exibição.</summary>
+        <value>Um esquema que descreve a exibição da fonte de dados que é representada por esse objeto de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

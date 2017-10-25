@@ -1,0 +1,96 @@
+<Type Name="GetChildAtPointSkip" FullName="System.Windows.Forms.GetChildAtPointSkip">
+  <TypeSignature Language="C#" Value="public enum GetChildAtPointSkip" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GetChildAtPointSkip extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.GetChildAtPointSkip" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica qual filho controla a ignorar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema mantém uma lista interna que contém os controles filho associados a uma janela pai. A ordem dos controles na lista depende da ordem z de controles filho. Se mais de uma janela filho contém o ponto especificado, o sistema retorna o primeiro controle na lista que contém o ponto e atende aos critérios especificados pela <xref:System.Windows.Forms.GetChildAtPointSkip>.  
+  
+ Para obter mais informações, consulte `ChildWindowFromPointEx` na documentação do Platform SDK.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip Disabled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignora desabilitado janelas filho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invisible">
+      <MemberSignature Language="C#" Value="Invisible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip Invisible = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.Invisible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignora as janelas filho invisível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não ignore todas as janelas filho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Transparent">
+      <MemberSignature Language="C#" Value="Transparent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.GetChildAtPointSkip Transparent = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.GetChildAtPointSkip.Transparent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GetChildAtPointSkip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignora as janelas filho transparente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

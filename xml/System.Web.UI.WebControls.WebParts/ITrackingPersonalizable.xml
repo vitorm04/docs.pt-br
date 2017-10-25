@@ -1,0 +1,212 @@
+<Type Name="ITrackingPersonalizable" FullName="System.Web.UI.WebControls.WebParts.ITrackingPersonalizable">
+  <TypeSignature Language="C#" Value="public interface ITrackingPersonalizable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITrackingPersonalizable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que os controles de Web Parts rastrear as fases específicas da carga de personalização e processo de salvamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que os desenvolvedores de controle controlar diferentes fases do ciclo de vida de personalização, incluindo o carregamento e salvamento de dados de personalização. Na maioria dos casos, usar esta interface você criaria um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> ou <xref:System.Web.UI.WebControls.WebParts.WebPartManager> e implementar essa interface. Além disso, os controles que precisam gerenciar seu próprio controle de alterações ("sujos") devem implementar essa interface. Controles que gerencia seu próprio controle de alterações devem retornar `true` do <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges%2A> propriedade.  
+  
+ Se `false` for retornado, em seguida, o ASP.NET é responsável por determinar alterações comparando as informações de propriedade carregados com as informações da propriedade que foi salvo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable> métodos e propriedades para controlar o carregamento e salvamento de informações de personalização. O exemplo consiste em duas partes, uma página. aspx e um arquivo que deve ser colocado em uma subpasta de App_Code.  
+  
+ O exemplo de código a seguir cria um controle de Web Parts que permite que um usuário insira informações de URL e salva essas informações para o usuário.  
+  
+ [!code-csharp[WebParts_IPersonalizable#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#9)]
+ [!code-vb[WebParts_IPersonalizable#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#9)]  
+  
+ A página. aspx a seguir cria uma zona de Web Parts e adiciona o controle para a zona. A página também faz referência a um controle de logon que você deve usar para fazer logon de usuários individuais para que possa ser aplicada a personalização.  
+  
+ [!code-aspx-csharp[WebParts_IPersonalizable#10](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/defaultcs.aspx#10)]
+ [!code-aspx-vb[WebParts_IPersonalizable#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/Defaultvb.aspx#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginLoad">
+      <MemberSignature Language="C#" Value="public void BeginLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa o início da fase de carregamento de informações de personalização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conjunto de controles de Web Parts chama esse método antes de aplicar os dados de personalização. Um controle que acompanha o seu próprio estado de alteração deve usar esse método para definir um sinalizador interno que indica que as propriedades não devem chamar <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A>. Isso ocorre porque os métodos de configuração de propriedade podem ser chamados durante a aplicação de dados de personalização, após a chamada para <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad%2A>. Na maioria dos cenários, um controle não deve ser considerado alterado ("sujos") só porque suas propriedades personalizáveis foram definidas com base em dados carregados do armazenamento de dados subjacente.  
+  
+> [!NOTE]
+>  Esse método também é chamado quando os dados de personalização são aplicados após a importação de um controle de Web Parts.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginLoad%2A> método. Para obter um exemplo de código completo, trabalhar que consiste em um controle e uma página. aspx, consulte o <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> tópico de visão geral da classe.  
+  
+ [!code-csharp[WebParts_IPersonalizable#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#4)]
+ [!code-vb[WebParts_IPersonalizable#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSave">
+      <MemberSignature Language="C#" Value="public void BeginSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa a fase antes da extração de dados de personalização de um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conjunto de controles de Web Parts chama esse método antes de extrair os dados de personalização do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.BeginSave%2A> método. Para obter um exemplo de código completo, trabalhar que consiste em um controle e uma página. aspx, consulte o <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> tópico de visão geral da classe.  
+  
+ [!code-csharp[WebParts_IPersonalizable#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#5)]
+ [!code-vb[WebParts_IPersonalizable#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLoad">
+      <MemberSignature Language="C#" Value="public void EndLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa a fase depois que os dados de personalização foi aplicados a um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle de Web Parts definido chama esse método após os dados de personalização foi aplicado ao controle. Um controle que rastreia o estado de alteração deve usar esse método para redefinir seu estado interno para indicar que os métodos de configuração de propriedade subsequentes devem chamar <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A>. No momento o <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad%2A> método é chamado, o conjunto de controles de Web Parts concluiu a qualquer aplicativo de dados de personalização para o controle. Como resultado, as alterações subsequentes para o estado do controle devem ser consideradas válidos indicadores que o controle foi alterado (é "sujos").  
+  
+> [!NOTE]
+>  Esse método também é chamado quando os dados de personalização são aplicados após a importação de um controle de Web Parts.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndLoad%2A> método. Para obter um exemplo de código completo, trabalhar que consiste em um controle e uma página. aspx, consulte o <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> tópico de visão geral da classe.  
+  
+ [!code-csharp[WebParts_IPersonalizable#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#6)]
+ [!code-vb[WebParts_IPersonalizable#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSave">
+      <MemberSignature Language="C#" Value="public void EndSave ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSave() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa a fase depois que os dados de personalização foi extraídos de um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle de Web Parts definido chama esse método após os dados de personalização foi extraído do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.EndSave%2A> método. Para obter um exemplo de código completo, trabalhar que consiste em um controle e uma página. aspx, consulte o <xref:System.Web.UI.WebControls.WebParts.IPersonalizable> tópico de visão geral da classe.  
+  
+ [!code-csharp[WebParts_IPersonalizable#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#7)]
+ [!code-vb[WebParts_IPersonalizable#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TracksChanges">
+      <MemberSignature Language="C#" Value="public bool TracksChanges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TracksChanges" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o controle rastreia o status de suas alterações.</summary>
+        <value>
+          <see langword="true" />Se o controle de Web Parts é responsável por determinar quando o controle é considerado alterado ("sujos"); Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um controle retorna `true` dessa propriedade, em seguida, é responsabilidade do controle de Web Parts para determinar quando ele se considera "sujos". Se um controle determina que ele foi alterado (é "sujos"), que o controle deve chamar <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> em si mesmo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a configuração de <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable.TracksChanges%2A> propriedade. Para obter um exemplo de código completo, trabalhar que consiste em um controle e uma página. aspx, consulte o <xref:System.Web.UI.WebControls.WebParts.ITrackingPersonalizable> tópico de visão geral da classe.  
+  
+ [!code-csharp[WebParts_IPersonalizable#8](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IPersonalizable/CS/persdict.cs#8)]
+ [!code-vb[WebParts_IPersonalizable#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IPersonalizable/VB/persdict.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

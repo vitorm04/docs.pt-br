@@ -1,0 +1,107 @@
+<Type Name="HostNameComparisonMode" FullName="System.ServiceModel.HostNameComparisonMode">
+  <TypeSignature Language="C#" Value="public enum HostNameComparisonMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HostNameComparisonMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.HostNameComparisonMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como o nome do host deve ser usado em comparações URI ao distribuir uma mensagem de entrada para um ponto de extremidade de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor é usado para especificar as regras de correspondência de URI usadas pelo transportes, como HTTP, Net.Tcp e NET. pipe ao expedir mensagens de entrada. Configurar o valor da <xref:System.ServiceModel.HostNameComparisonMode> para uma associação padrão usando um dos transportes, tais como <xref:System.ServiceModel.BasicHttpBinding>, usando o correspondente <xref:System.ServiceModel.BasicHttpBinding.HostNameComparisonMode%2A> propriedade. Configurar o valor da <xref:System.ServiceModel.HostNameComparisonMode> para um elemento de associação usando um dos transportes, tais como <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, usando o correspondente <xref:System.ServiceModel.Channels.HttpTransportBindingElement.HostNameComparisonMode%2A> propriedade.  
+  
+ Cada valor da <xref:System.ServiceModel.HostNameComparisonMode> corresponde a um tipo específico de regra de correspondência. A sequência de tentativa de regras de correspondência é sempre ordenada da seguinte maneira:  
+  
+1.  StrongWildcard  
+  
+2.  Exact  
+  
+3.  WeakWildcard  
+  
+ O primeiro valor, StrongWildcard, ignora o nome do host durante a correspondência e ele tem a maior precedência dos três modos diferentes de correspondência. É o valor padrão para um [!INCLUDE[indigo2](~/includes/indigo2-md.md)] associação fornecida pelo sistema ou elemento de associação. Isso indica que um ponto de extremidade de serviço pode ser alcançado usando qualquer nome de host válido. Por exemplo, se MyService é hospedado usando http://localhost/MyService, é ainda pode ser acessado usando http://www.adatum.com/MyService porque o nome de host (supostamente inválido), "adatum.com" será ignorado. Observe que a porta é um curinga aqui também.  
+  
+ O segundo valor exato, requer que uma correspondência exata foi encontrada com o URI especificado, incluindo o nome do host, se não houver correspondência de alta segurança. Nesse modo, por exemplo, não executa equivalência entre os nomes de host curtos e nomes de domínio totalmente qualificado. Isso permite que os nomes de host a ser usado como critério de correspondência em cenários onde vários hosts são atribuídos a um único endereço IP e permite que serviços diferentes para ser hospedado no mesmo computador com pontos de extremidade distintos. Observe que a porta é um curinga aqui também.  
+  
+ O terceiro valor, WeakWildcard, faz a correspondência por ignorando o nome do host, se nenhuma correspondência exata ou forte foi encontrada. O comportamento é igual à StrongWildcard distinta da ordem de correspondência: ele é executado depois que as associações de alta seguras e exatas tentou.  
+  
+> [!NOTE]
+>  Esses valores não têm efeito quando usado dentro do ambiente de hospedagem de serviços de informações da Internet (IIS) ou o serviço de ativação de processos do Windows (WAS). Nesses casos, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] usa o modo de comparação de nome de host é fornecido pelo Site do IIS hospeda o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] serviços.  
+  
+   
+  
+## Examples  
+ Este é um exemplo de como definir o valor de StrongWildcard em um arquivo de configuração do lado de serviço.  
+  
+  
+  
+ Este é um serviço básico e o cliente que usam o arquivo de configuração anterior.  
+  
+ [!code-csharp[S_UEHostnameComparisonMode#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uehostnamecomparisonmode/cs/service.cs#2)]  
+  
+ [!code-csharp[S_UEHostnameComparisonMode#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uehostnamecomparisonmode/cs/snippets.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exact">
+      <MemberSignature Language="C#" Value="Exact" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.HostNameComparisonMode Exact = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.HostNameComparisonMode.Exact" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usa o nome do host ao distribuir as mensagens de entrada para esse ponto de extremidade, se nenhuma correspondência forte for encontrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StrongWildcard">
+      <MemberSignature Language="C#" Value="StrongWildcard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.HostNameComparisonMode StrongWildcard = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.HostNameComparisonMode.StrongWildcard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ignora o nome do host ao distribuir as mensagens de entrada para esse ponto de extremidade. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WeakWildcard">
+      <MemberSignature Language="C#" Value="WeakWildcard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.HostNameComparisonMode WeakWildcard = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.HostNameComparisonMode.WeakWildcard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.HostNameComparisonMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se nenhuma correspondência exata ou forte for encontrada, ignora o nome do host ao fazer a correspondência.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

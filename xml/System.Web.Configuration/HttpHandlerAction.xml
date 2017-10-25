@@ -1,0 +1,294 @@
+<Type Name="HttpHandlerAction" FullName="System.Web.Configuration.HttpHandlerAction">
+  <TypeSignature Language="C#" Value="public sealed class HttpHandlerAction : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HttpHandlerAction extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpHandlerAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura um <see cref="T:System.Web.Configuration.HttpHandlersSection" /> seção de configuração. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpHandlerAction> classe fornece uma maneira de acessar e modificar programaticamente o `add` elemento o `httpHandlers` seção de configuração.  
+  
+ Esse tipo é parte de um grupo que inclui o <xref:System.Web.Configuration.HttpHandlerActionCollection> e <xref:System.Web.Configuration.HttpHandlersSection> tipos.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.HttpHandlerAction> pode ler e gravar informações de e para a seção correspondente do arquivo de configuração de acordo com a propriedade de seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.Everywhere>.  
+  
+ ASP.NET procura a DLL do assembly de manipulador em particular do aplicativo no diretório \bin primeiro e, em seguida, ele procura no cache de assembly do sistema.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.HttpModuleAction> tipo.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#2)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#2)]  
+  
+ O trecho de configuração a seguir mostra como especificar valores declarativamente para o `httpHandlers` seção.  
+  
+```  
+<httpHandlers>  
+  <add path="Calculator.custom"  
+    type="Samples.Aspnet.SystemWebConfiguration.Calculator, CalculatorHandler"  
+    verb="GET" validate="false" />  
+</httpHandlers>   
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpHandlerAction (string path, string type, string verb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string type, string verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerAction.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="verb" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Web.Configuration.HttpHandlerAction" /> caminho da URL.</param>
+        <param name="type">Uma combinação de classe/montagem separada por vírgulas que consiste de versão, cultura e tokens de chave pública.</param>
+        <param name="verb">Uma lista separada por vírgulas de verbos HTTP (por exemplo, "GET, PUT, POST").</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.HttpHandlerAction" /> classe usando os parâmetros passados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpHandlerAction.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.HttpHandlerAction> classe usando o <xref:System.Web.Configuration.HttpHandlersSection.Handlers%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpHandlerAction (string path, string type, string verb, bool validate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string type, string verb, bool validate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpHandlerAction.#ctor(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="verb" Type="System.String" />
+        <Parameter Name="validate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Web.Configuration.HttpHandlerAction" /> caminho da URL.</param>
+        <param name="type">Uma combinação de classe/montagem separada por vírgulas que consiste de versão, cultura e tokens de chave pública.</param>
+        <param name="verb">Uma lista separada por vírgulas de verbos HTTP (por exemplo, "GET, PUT, POST").</param>
+        <param name="validate">
+          <see langword="true" />para permitir a validação; Caso contrário, <see langword="false" />. Se <see langword="false" />, ASP.NET não tentará carregar a classe até que a solicitação correspondente real é fornecido, potencialmente, atrasando o erro mas melhorando o tempo de inicialização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.HttpHandlerAction" /> classe usando os parâmetros passados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpHandlerAction.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.HttpHandlerAction> classe usando o <xref:System.Web.Configuration.HttpHandlersSection.Handlers%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Web.Configuration.HttpHandlerAction> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#3)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerAction.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("path", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.HttpHandlerAction" /> caminho.</summary>
+        <value>O <see cref="T:System.Web.Configuration.HttpHandlerAction" /> caminho da URL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpHandlerAction.Path%2A> propriedade pode conter uma única URL ou uma cadeia de caracteres curinga.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.HttpHandlerAction.Path%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#5)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerAction.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerAction.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("type", IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo <see cref="T:System.Web.Configuration.HttpHandlerAction" />.</summary>
+        <value>O <see cref="T:System.Web.Configuration.HttpHandlerAction" /> tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.HttpHandlerAction.Type%2A> propriedade é uma combinação de classe/montagem separada por vírgulas que consiste de versão, cultura e tokens de chave pública.  
+  
+> [!NOTE]
+>  ASP.NET procura a DLL do assembly de manipulador em particular do aplicativo no diretório \bin primeiro e, em seguida, ele procura no cache de assembly do sistema.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.HttpHandlerAction.Type%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#6)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public bool Validate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Validate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerAction.Validate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("validate", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.HttpHandlerAction" /> validação.</summary>
+        <value>
+          <see langword="true" />Se a validação é permitida. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Configuration.HttpHandlerAction.Validate%2A> é de propriedade `false`, ASP.NET não tentará carregar a classe até que a solicitação correspondente real é fornecido, potencialmente, atrasando o erro mas melhorando o tempo de inicialização.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.HttpHandlerAction.Validate%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#8)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public string Verb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Verb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpHandlerAction.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("verb", IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o verbo permitido pelo <see cref="T:System.Web.Configuration.HttpHandlerAction" /> objeto.</summary>
+        <value>O verbo permitido pelo objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Web.Configuration.HttpHandlerAction.Verb%2A> propriedade pode ser uma lista separada por vírgulas de verbos HTTP (por exemplo, "GET, PUT, POST").  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.HttpHandlerAction.Verb%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.HttpHandlers#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/CS/httphandlers.cs#7)]
+ [!code-vb[System.Web.Configuration.HttpHandlers#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.HttpHandlers/VB/httphandlers.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,50 @@
+<Type Name="ICommandExecutor" FullName="System.Windows.Forms.ICommandExecutor">
+  <TypeSignature Language="C#" Value="public interface ICommandExecutor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICommandExecutor" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ICommandExecutor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um método que executa uma determinada ação no tipo que implementa essa interface.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método na interface não é chamado em classes que existem fora do .NET Framework.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public void Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ICommandExecutor.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa uma tarefa que é determinada pelo tipo que implementa este método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ICommandExecutor.Execute%2A> método não for chamado em classes que existem fora do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

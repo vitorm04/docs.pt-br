@@ -1,0 +1,129 @@
+<Type Name="TableLayoutControlCollection" FullName="System.Windows.Forms.TableLayoutControlCollection">
+  <TypeSignature Language="C#" Value="public class TableLayoutControlCollection : System.Windows.Forms.Control.ControlCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableLayoutControlCollection extends System.Windows.Forms.Control/ControlCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutControlCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control+ControlCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer("System.Windows.Forms.Design.TableLayoutControlCollectionCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.ComponentModel.Design.Serialization.CodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de controles filho em um contêiner de layout de tabela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutControlCollection> classe representa a coleção de todos os controles filho em um <xref:System.Windows.Forms.TableLayoutPanel> controle. Essa coleção é exposta pelo <xref:System.Windows.Forms.TableLayoutPanel.Controls%2A> propriedade o <xref:System.Windows.Forms.TableLayoutPanel> classe. Você pode gerenciar e manipular individualmente os membros do painel de layout de tabela por meio de <xref:System.Windows.Forms.TableLayoutControlCollection> exposto pelo <xref:System.Windows.Forms.TableLayoutPanel.Controls%2A>.  
+  
+ O <xref:System.Windows.Forms.TableLayoutControlCollection> classe é uma especialização secundária do <xref:System.Windows.Forms.Control.ControlCollection> classe base.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableLayoutControlCollection (System.Windows.Forms.TableLayoutPanel container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TableLayoutPanel container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutControlCollection.#ctor(System.Windows.Forms.TableLayoutPanel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.Forms.TableLayoutPanel" />
+      </Parameters>
+      <Docs>
+        <param name="container">O <see cref="T:System.Windows.Forms.TableLayoutPanel" /> controle que contém a coleção de controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TableLayoutControlCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em geral, o programador de aplicativo não diretamente criará instâncias de <xref:System.Windows.Forms.TableLayoutControlCollection> classe. Em vez disso, uma referência a um existente <xref:System.Windows.Forms.TableLayoutControlCollection> é retornado pelo <xref:System.Windows.Forms.TableLayoutPanel.Controls%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (System.Windows.Forms.Control control, int column, int row);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Windows.Forms.Control control, int32 column, int32 row) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutControlCollection.Add(System.Windows.Forms.Control,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="column" Type="System.Int32" />
+        <Parameter Name="row" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle a se adicionar.</param>
+        <param name="column">A coluna na qual <c>controle</c> será colocado.</param>
+        <param name="row">A linha na qual <c>controle</c> será colocado.</param>
+        <summary>Adiciona o controle especificado à coleção e o posiciona na célula especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com <xref:System.Windows.Forms.TableLayoutControlCollection.Add%2A>, você pode especificar a posição da célula de `control`. Você pode atribuir `control` a uma célula específica, fornecendo ambos o `column` e `row` parâmetros, ou você pode especificar somente o valor de coluna ou linha e permitir que o <xref:System.Windows.Forms.TableLayoutPanel.LayoutEngine%2A> colocar `control` na próxima célula aberta. Isso é conhecido como permitir que o controle *fluxo* para sua posição no <xref:System.Windows.Forms.TableLayoutPanel> controle.  
+  
+ Definir `column` como -1 se você quiser `control` ocupar uma posição de linha fixa.  
+  
+ Definir `row` como -1 se você quiser `control` ocupar uma posição de coluna fixa.  
+  
+ Se nem `column` nem `row` é -1, `control` será adicionado na posição absoluta fornecida pelo (`column`, `row`).  
+  
+ Se você definir ambos `column` e `row` como -1, `control` fluirá para a primeira posição aberta, com o comportamento específico de fluxo definido pelo <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A?displayProperty=nameWithType> valor. Isso é equivalente a usar o <xref:System.Windows.Forms.Control.ControlCollection.Add%2A?displayProperty=nameWithType> método.  
+  
+ Para obter a posição atual real de um controle, use o <xref:System.Windows.Forms.TableLayoutPanel.GetPositionFromControl%2A?displayProperty=nameWithType> método. Esse método leva em conta todo o <xref:System.Windows.Forms.TableLayoutPanel> estado de controle, incluindo a coluna ou linha abrangência e quando o <xref:System.Windows.Forms.TableLayoutPanel.LayoutEngine%2A?displayProperty=nameWithType> colocou um controle com seu `Column` e `Row` propriedades definidas como -1.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="column" /> ou <paramref name="row" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Container">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TableLayoutPanel Container { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TableLayoutPanel Container" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutControlCollection.Container" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TableLayoutPanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai <see cref="T:System.Windows.Forms.TableLayoutPanel" /> que contém os controles na coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TableLayoutPanel" /> que contém os controles na coleção atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida pelo <xref:System.Windows.Forms.TableLayoutControlCollection.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

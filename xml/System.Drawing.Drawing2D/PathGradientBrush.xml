@@ -1,0 +1,847 @@
+<Type Name="PathGradientBrush" FullName="System.Drawing.Drawing2D.PathGradientBrush">
+  <TypeSignature Language="C#" Value="public sealed class PathGradientBrush : System.Drawing.Brush" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PathGradientBrush extends System.Drawing.Brush" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.PathGradientBrush" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Brush</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula um objeto <see cref="T:System.Drawing.Brush" /> que preenche o interior de um objeto <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> com um gradiente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gradiente de cores é um sombreamento suave de cores do ponto central do caminho para a borda de fora do limite do caminho. Blend fatores, posições e afetam estilo onde a gradação inicia e termina, e a velocidade muda sombreamento.  
+  
+ Pincéis de gradiente do caminho não obedecer a <xref:System.Drawing.Graphics.SmoothingMode%2A> propriedade o <xref:System.Drawing.Graphics> objeto usado para fazer o desenho. Áreas preenchidas usando um <xref:System.Drawing.Drawing2D.PathGradientBrush> são renderizados da mesma forma (alias) do objeto independentemente do modo de suavização.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Drawing.Drawing2D.PathGradientBrush>. Este exemplo é projetado para uso com o Windows Forms e requer o <xref:System.Windows.Forms.PaintEventArgs> e, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+  
+ [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGradientBrush (System.Drawing.Drawing2D.GraphicsPath path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Drawing2D.GraphicsPath path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Drawing2D.GraphicsPath)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.Drawing.Drawing2D.GraphicsPath" />
+      </Parameters>
+      <Docs>
+        <param name="path">O <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> que define a área preenchida por este <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> classe com o caminho especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGradientBrush (System.Drawing.Point[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Point[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Point[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="points" Type="System.Drawing.Point[]" />
+      </Parameters>
+      <Docs>
+        <param name="points">Uma matriz de <see cref="T:System.Drawing.Point" /> estruturas que representa os pontos que compõem os vértices do caminho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> classe com pontos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGradientBrush (System.Drawing.PointF[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.PointF[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.PointF[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="points" Type="System.Drawing.PointF[]" />
+      </Parameters>
+      <Docs>
+        <param name="points">Uma matriz de <see cref="T:System.Drawing.PointF" /> estruturas que representa os pontos que compõem os vértices do caminho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> classe com pontos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGradientBrush (System.Drawing.Point[] points, System.Drawing.Drawing2D.WrapMode wrapMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Point[] points, valuetype System.Drawing.Drawing2D.WrapMode wrapMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Point[],System.Drawing.Drawing2D.WrapMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="points" Type="System.Drawing.Point[]" />
+        <Parameter Name="wrapMode" Type="System.Drawing.Drawing2D.WrapMode" />
+      </Parameters>
+      <Docs>
+        <param name="points">Uma matriz de <see cref="T:System.Drawing.Point" /> estruturas que representa os pontos que compõem os vértices do caminho.</param>
+        <param name="wrapMode">Um <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que especifica como preenchimentos desenhados com essa <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> colocadas lado a lado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> classe com pontos especificados e encapsular modo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PathGradientBrush (System.Drawing.PointF[] points, System.Drawing.Drawing2D.WrapMode wrapMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.PointF[] points, valuetype System.Drawing.Drawing2D.WrapMode wrapMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.PointF[],System.Drawing.Drawing2D.WrapMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="points" Type="System.Drawing.PointF[]" />
+        <Parameter Name="wrapMode" Type="System.Drawing.Drawing2D.WrapMode" />
+      </Parameters>
+      <Docs>
+        <param name="points">Uma matriz de <see cref="T:System.Drawing.PointF" /> estruturas que representa os pontos que compõem os vértices do caminho.</param>
+        <param name="wrapMode">Um <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que especifica como preenchimentos desenhados com essa <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> colocadas lado a lado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> classe com pontos especificados e encapsular modo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Blend">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Blend Blend { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.Blend Blend" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.Blend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Blend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Drawing.Drawing2D.Blend" /> que especifica posições e os fatores que definem uma queda personalizada para o gradiente.</summary>
+        <value>Um <see cref="T:System.Drawing.Drawing2D.Blend" /> que representa uma queda personalizada para o gradiente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Drawing2D.Blend> contém matrizes correspondentes de posições e fatores de mesclagem. Os fatores blend especificam as porcentagens da cor inicial e final a cor a ser usada na posição correspondente. As posições são fornecidas como uma porcentagem da distância ao longo do caminho de gradiente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color CenterColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CenterColor" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.CenterColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor no centro do gradiente de caminho.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor no centro do gradiente de caminho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.PointF CenterPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.PointF CenterPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto central do gradiente de caminho.</summary>
+        <value>Um <see cref="T:System.Drawing.PointF" /> que representa o ponto central do gradiente de caminho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata deste <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</summary>
+        <returns>O <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> que esse método cria, convertido como um objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusScales">
+      <MemberSignature Language="C#" Value="public System.Drawing.PointF FocusScales { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.PointF FocusScales" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.FocusScales" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ponto de foco para a queda de gradiente.</summary>
+        <value>Um <see cref="T:System.Drawing.PointF" /> que representa o ponto de foco para a queda de gradiente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolationColors">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.ColorBlend InterpolationColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.ColorBlend InterpolationColors" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.ColorBlend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Drawing.Drawing2D.ColorBlend" /> que define um gradiente linear multicolorido.</summary>
+        <value>Um <see cref="T:System.Drawing.Drawing2D.ColorBlend" /> que define um gradiente linear multicolorido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Drawing2D.ColorBlend> contém matrizes correspondentes de cores e de posições. As posições são valores entre 0 e 1 que especifica a porcentagem da distância ao longo do caminho de gradiente onde se encontra a cor correspondente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">O <see cref="T:System.Drawing.Drawing2D.Matrix" /> que será multiplicado por matriz de transformação atual do pincel.</param>
+        <summary>Matriz de transformação do pincel de atualizações com o produto de matriz de transformação do pincel multiplicado por outra matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.PathGradientBrush.MultiplyTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiplyTransform">
+      <MemberSignature Language="C#" Value="public void MultiplyTransform (System.Drawing.Drawing2D.Matrix matrix, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MultiplyTransform(class System.Drawing.Drawing2D.Matrix matrix, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Drawing.Drawing2D.Matrix" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">O <see cref="T:System.Drawing.Drawing2D.Matrix" /> que será multiplicado por matriz de transformação atual do pincel.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica a ordem na qual multiplicar duas matrizes.</param>
+        <summary>Matriz de transformação do pincel de atualizações com o produto de matriz de transformação do pincel multiplicado por outra matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um caminho de gráficos e adiciona um retângulo a ele.  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.PathGradientBrush> dos pontos de caminho (neste exemplo, os pontos de formarem um retângulo, mas pode ser mais qualquer forma).  
+  
+-   Define a cor do centro para vermelho e a cor ao redor como azul.  
+  
+-   Desenha o <xref:System.Drawing.Drawing2D.PathGradientBrush> na tela antes de aplicar a transformação de multiplicação.  
+  
+-   Cria a matriz de s que gira 90 graus de pincel e converte-o por 100 em ambos os eixos.  
+  
+-   Aplica esta matriz ao pincel usando o <xref:System.Drawing.Drawing2D.PathGradientBrush.MultiplyTransform%2A> método.  
+  
+-   Desenha um pincel para a tela.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicPathGradientBrush#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicPathGradientBrush#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicPathGradientBrush#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF Rectangle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.RectangleF Rectangle" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.Rectangle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um retângulo para este <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</summary>
+        <value>Um <see cref="T:System.Drawing.RectangleF" /> que isso representa uma região retangular que circunda o caminho <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> preenchido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetTransform">
+      <MemberSignature Language="C#" Value="public void ResetTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetTransform() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.ResetTransform" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o <see cref="P:System.Drawing.Drawing2D.PathGradientBrush.Transform" /> propriedade de identidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir redefine a transformação geométrica de `pgBrush` a identidade. Supõe-se que `myPath` seja um existente <xref:System.Drawing.Drawing2D.GraphicsPath>.  
+  
+```csharp  
+PathGradientBrush pgBrush = new PathGradientBrush(myPath);  
+ pgBrush.ResetTransform();  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.RotateTransform(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo (extensão) de rotação.</param>
+        <summary>Gira a transformação geométrica local pelo valor especificado. Esse método precede a rotação à transformação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.PathGradientBrush.RotateTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotateTransform">
+      <MemberSignature Language="C#" Value="public void RotateTransform (float angle, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RotateTransform(float32 angle, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="angle">O ângulo (extensão) de rotação.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica se deve ser acrescentam ou precedem a matriz de rotação.</param>
+        <summary>Gira a transformação geométrica local a quantidade especificada na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um caminho de gráficos e adiciona um retângulo a ele.  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.PathGradientBrush> dos pontos de caminho (neste exemplo, os pontos de formarem um retângulo, mas pode ser mais qualquer forma).  
+  
+-   Define a cor do centro para vermelho e a cor ao redor como azul.  
+  
+-   Desenha o <xref:System.Drawing.Drawing2D.PathGradientBrush> na tela antes de aplicar a rotação de transformação.  
+  
+-   Aplica a transformação de rotação para o pincel usando seu <xref:System.Drawing.Drawing2D.PathGradientBrush.RotateTransform%2A> método.  
+  
+-   Desenha o pincel girado (retângulo) para a tela.  
+  
+ Observe que o retângulo inferior é girada 45 graus em comparação com um desenhada antes da conversão.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicPathGradientBrush#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicPathGradientBrush#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicPathGradientBrush#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.ScaleTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="sx">O fator de escala de transformação na direção do eixo x.</param>
+        <param name="sy">O fator de escala de transformação na direção y.</param>
+        <summary>Escalas local Geométrico transform os valores especificados. Esse método precede a matriz de dimensionamento para a transformação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.PathGradientBrush.ScaleTransform%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleTransform">
+      <MemberSignature Language="C#" Value="public void ScaleTransform (float sx, float sy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScaleTransform(float32 sx, float32 sy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sx" Type="System.Single" />
+        <Parameter Name="sy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="sx">O fator de escala de transformação na direção do eixo x.</param>
+        <param name="sy">O fator de escala de transformação na direção y.</param>
+        <param name="order">Um <see cref="T:System.Drawing.Drawing2D.MatrixOrder" /> que especifica se deve ser acrescentam ou precedem a matriz de escala.</param>
+        <summary>Escalas local Geométrico transform os valores especificados na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código  
+  
+-   Cria um caminho de gráficos e adiciona um retângulo a ele.  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.PathGradientBrush> dos pontos de caminho (neste exemplo, os pontos de formarem um retângulo, mas pode ser mais qualquer forma).  
+  
+-   Define a cor do centro para vermelho e a cor ao redor como azul.  
+  
+-   Desenha o <xref:System.Drawing.Drawing2D.PathGradientBrush> na tela antes de aplicar a transformação de escala.  
+  
+-   Aplica a transformação de escala para o pincel usando seu <xref:System.Drawing.Drawing2D.PathGradientBrush.ScaleTransform%2A> método.  
+  
+-   Chama o <xref:System.Drawing.Drawing2D.PathGradientBrush.TranslateTransform%2A> método para mover o retângulo de pincel, de modo que ele não sobrepor um desenhada na tela anterior.  
+  
+-   Desenha o retângulo de pincel traduzidas para a tela.  
+  
+ Observe que o retângulo inferior é duas vezes como tempo no eixo x como é um desenho antes da conversão.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicPathGradientBrush#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicPathGradientBrush#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicPathGradientBrush#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBlendTriangularShape">
+      <MemberSignature Language="C#" Value="public void SetBlendTriangularShape (float focus);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBlendTriangularShape(float32 focus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.SetBlendTriangularShape(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica onde, ao longo de qualquer radial do centro do caminho para o limite do caminho, a cor central estarão em sua intensidade mais alta. Um valor de 1 (o padrão) coloca a intensidade mais alta no centro do caminho.</param>
+        <summary>Cria um gradiente com uma cor central e uma queda linear para uma cor ao redor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver mais de uma cor no <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> matriz, a primeira cor na matriz é usada para a cor final. As cores especificadas nessa matriz são usadas para pontos distintos no caminho de limite do pincel.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo, consulte<xref:System.Drawing.Drawing2D.PathGradientBrush.SetBlendTriangularShape%2A>`.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBlendTriangularShape">
+      <MemberSignature Language="C#" Value="public void SetBlendTriangularShape (float focus, float scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBlendTriangularShape(float32 focus, float32 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.SetBlendTriangularShape(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+        <Parameter Name="scale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica onde, ao longo de qualquer radial do centro do caminho para o limite do caminho, a cor central estarão em sua intensidade mais alta. Um valor de 1 (o padrão) coloca a intensidade mais alta no centro do caminho.</param>
+        <param name="scale">Um valor entre 0 e 1 que especifica a máximo intensidade da cor central que é combinada com a cor do limite. Um valor de 1 faz com que a intensidade mais alta possível da cor central, e é o valor padrão.</param>
+        <summary>Cria um gradiente com uma cor central e uma queda linear para cada cor ao redor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver mais de uma cor no <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> matriz, a primeira cor na matriz é usada para a cor final. As cores especificadas nessa matriz são usadas para pontos distintos no caminho de limite do pincel de cores.  
+  
+ Por padrão, quando você vai de limite de um gradiente de caminho para o ponto central, a cor muda gradualmente da cor de limite para a cor central. Você pode personalizar o posicionamento e das cores do limite e o Centro de mesclagem ao chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um caminho de gráficos e adiciona um retângulo a ele.  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.PathGradientBrush> dos pontos de caminho (neste exemplo, os pontos de formarem um retângulo, mas pode ser mais qualquer forma).  
+  
+-   Define a cor do centro para vermelho e a cor ao redor como azul.  
+  
+-   Desenha o <xref:System.Drawing.Drawing2D.PathGradientBrush> na tela antes de aplicar a transformação de mesclagem.  
+  
+-   Aplica a transformação mesclagem ao pincel usando seu <xref:System.Drawing.Drawing2D.PathGradientBrush.SetBlendTriangularShape%2A> método.  
+  
+-   Chama o <xref:System.Drawing.Drawing2D.PathGradientBrush.TranslateTransform%2A> método para mover o retângulo de pincel, de modo que ele não sobrepor um desenhada na tela anterior.  
+  
+-   Desenha o pincel transformado retângulo é desenhado na tela.  
+  
+ Observe que a cor máxima center (vermelho) é localizado metade do caminho do centro do caminho para o limite de caminho.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicPathGradientBrush#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicPathGradientBrush#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicPathGradientBrush#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSigmaBellShape">
+      <MemberSignature Language="C#" Value="public void SetSigmaBellShape (float focus);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSigmaBellShape(float32 focus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.SetSigmaBellShape(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica onde, ao longo de qualquer radial do centro do caminho para o limite do caminho, a cor central estarão em sua intensidade mais alta. Um valor de 1 (o padrão) coloca a intensidade mais alta no centro do caminho.</param>
+        <summary>Cria um pincel de gradiente que muda de cor, a partir do centro do caminho para fora de limite do caminho. A transição de uma cor para outro se baseia em uma curva em forma de sino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver mais de uma cor no <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> matriz, a primeira cor na matriz é usada para a cor final. As cores especificadas nessa matriz são usadas para pontos distintos no caminho de limite do pincel de cores.  
+  
+ Por padrão, quando você vai de limite de um gradiente de caminho para o ponto central, a cor muda gradualmente da cor de limite para a cor central. Você pode personalizar o posicionamento e das cores do limite e o Centro de mesclagem ao chamar esse método.  
+  
+   
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.PathGradientBrush.SetSigmaBellShape%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSigmaBellShape">
+      <MemberSignature Language="C#" Value="public void SetSigmaBellShape (float focus, float scale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSigmaBellShape(float32 focus, float32 scale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.SetSigmaBellShape(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="focus" Type="System.Single" />
+        <Parameter Name="scale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="focus">Um valor entre 0 e 1 que especifica onde, ao longo de qualquer radial do centro do caminho para o limite do caminho, a cor central estarão em sua intensidade mais alta. Um valor de 1 (o padrão) coloca a intensidade mais alta no centro do caminho.</param>
+        <param name="scale">Um valor entre 0 e 1 que especifica a máximo intensidade da cor central que é combinada com a cor do limite. Um valor de 1 faz com que a intensidade mais alta possível da cor central, e é o valor padrão.</param>
+        <summary>Cria um pincel de gradiente que muda de cor, a partir do centro do caminho para fora de limite do caminho. A transição de uma cor para outro se baseia em uma curva em forma de sino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver mais de uma cor no <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> matriz, a primeira cor na matriz é usada para a cor final. As cores especificadas nessa matriz são usadas para pontos distintos no caminho de limite do pincel de cores.  
+  
+ Por padrão, quando você vai de limite de um gradiente de caminho para o ponto central, a cor muda gradualmente da cor de limite para a cor central. Você pode personalizar o posicionamento e das cores do limite e o Centro de mesclagem ao chamar esse método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, uma <xref:System.Windows.Forms.Form.OnPaint%2A> objeto de evento. O código executa as seguintes ações:  
+  
+-   Cria um caminho de gráficos e adiciona um retângulo a ele.  
+  
+-   Cria um <xref:System.Drawing.Drawing2D.PathGradientBrush> dos pontos de caminho (neste exemplo, os pontos de formarem um retângulo, mas pode ser mais qualquer forma).  
+  
+-   Define a cor do centro para vermelho e a cor ao redor como azul.  
+  
+-   Desenha o <xref:System.Drawing.Drawing2D.PathGradientBrush> na tela antes de aplicar a transformação de mesclagem.  
+  
+-   Aplica a transformação mesclagem ao pincel usando seu <xref:System.Drawing.Drawing2D.PathGradientBrush.SetSigmaBellShape%2A> método.  
+  
+-   Chama o <xref:System.Drawing.Drawing2D.PathGradientBrush.TranslateTransform%2A> método para mover o retângulo de pincel, de modo que ele não sobrepor um desenhada na tela anterior.  
+  
+-   Desenha o retângulo de pincel transformado na tela.  
+  
+ Observe que a cor máxima center (vermelho) é localizado metade do caminho do centro do caminho para o limite de caminho.  
+  
+ [!code-cpp[System.Drawing.Drawing2D.ClassicPathGradientBrush#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.Drawing2D.ClassicPathGradientBrush#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.Drawing2D.ClassicPathGradientBrush#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Drawing2D.ClassicPathGradientBrush/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SurroundColors">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color[] SurroundColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color[] SurroundColors" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma matriz de cores que correspondem aos pontos no caminho isso <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> preenchido.</summary>
+        <value>Uma matriz de <see cref="T:System.Drawing.Color" /> estruturas que representa as cores associadas a cada ponto no caminho isso <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> preenchido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Drawing.Color> no <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> matriz corresponde a um ponto no caminho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.Matrix Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Drawing2D.Matrix Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cópia do <see cref="T:System.Drawing.Drawing2D.Matrix" /> que define uma transformação geométrica local para este <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</summary>
+        <value>Uma cópia do <see cref="T:System.Drawing.Drawing2D.Matrix" /> que define uma transformação geométrica que só se aplica a preenchimentos desenhados com isso <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma transformação geométrica pode ser usada para traduzir, dimensionar, girar ou inclinar o preenchimento de gradiente. Porque a matriz retornada e pela <xref:System.Drawing.Drawing2D.PathGradientBrush.Transform%2A> é uma cópia da transformação geométrica do pincel, descarte da matriz quando você não precisa mais dela.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.TranslateTransform(System.Single,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="dx">O valor da conversão em x.</param>
+        <param name="dy">O valor da conversão em y.</param>
+        <summary>Aplica-se a conversão especificada para a transformação geométrica local. Esse método precede a tradução para a transformação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.PathGradientBrush.SetBlendTriangularShape%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TranslateTransform">
+      <MemberSignature Language="C#" Value="public void TranslateTransform (float dx, float dy, System.Drawing.Drawing2D.MatrixOrder order);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TranslateTransform(float32 dx, float32 dy, valuetype System.Drawing.Drawing2D.MatrixOrder order) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Drawing2D.PathGradientBrush.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dx" Type="System.Single" />
+        <Parameter Name="dy" Type="System.Single" />
+        <Parameter Name="order" Type="System.Drawing.Drawing2D.MatrixOrder" />
+      </Parameters>
+      <Docs>
+        <param name="dx">O valor da conversão em x.</param>
+        <param name="dy">O valor da conversão em y.</param>
+        <param name="order">A ordem (preceda ou acrescentar) na qual aplicar a conversão.</param>
+        <summary>Aplica-se a conversão especificada para a transformação geométrica local na ordem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para ver um exemplo, consulte <xref:System.Drawing.Drawing2D.PathGradientBrush.SetBlendTriangularShape%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapMode">
+      <MemberSignature Language="C#" Value="public System.Drawing.Drawing2D.WrapMode WrapMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Drawing2D.WrapMode WrapMode" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Drawing2D.PathGradientBrush.WrapMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.WrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que indica o modo de quebra para este <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que especifica como preenchimentos desenhados com essa <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> colocadas lado a lado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

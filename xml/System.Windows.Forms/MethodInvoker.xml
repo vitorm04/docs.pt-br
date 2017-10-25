@@ -1,0 +1,35 @@
+<Type Name="MethodInvoker" FullName="System.Windows.Forms.MethodInvoker">
+  <TypeSignature Language="C#" Value="public delegate void MethodInvoker();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MethodInvoker extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.MethodInvoker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Representa um delegado que pode executar qualquer método no código gerenciado declarado nulo e sem parâmetros.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.MethodInvoker>Fornece um delegado simple que é usado para invocar um método com uma lista de parâmetros void. Este delegado pode ser usado ao fazer chamadas para um controle <xref:System.Windows.Forms.Control.Invoke%2A> método, ou quando você precisa de um simples delegar, mas não quiser definir um por conta própria.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Windows.Forms.MethodInvoker> para chamar um método que atualiza a barra de título do formulário de aplicativo.  
+  
+ [!code-csharp[System.Windows.Forms.MethodInvoker#1](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.methodinvoker/cs/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.MethodInvoker#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.methodinvoker/vb/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

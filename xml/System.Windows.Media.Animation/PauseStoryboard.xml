@@ -1,0 +1,48 @@
+<Type Name="PauseStoryboard" FullName="System.Windows.Media.Animation.PauseStoryboard">
+  <TypeSignature Language="C#" Value="public sealed class PauseStoryboard : System.Windows.Media.Animation.ControllableStoryboardAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PauseStoryboard extends System.Windows.Media.Animation.ControllableStoryboardAction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.PauseStoryboard" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.ControllableStoryboardAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma ação de gatilho que faz uma pausa uma <see cref="T:System.Windows.Media.Animation.Storyboard" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.Windows.Media.Animation.PauseStoryboard> com um <xref:System.Windows.EventTrigger> ou <xref:System.Windows.Trigger> para pausar um Storyboard.  
+  
+ <xref:System.Windows.Media.Animation.PauseStoryboard>afeta somente uma <xref:System.Windows.Media.Animation.Storyboard> quando ele estiver ativo (depois que o <xref:System.Windows.Media.Animation.Storyboard> é iniciado).  
+  
+ Para controlar um <xref:System.Windows.Media.Animation.Storyboard>, o <xref:System.Windows.Media.Animation.PauseStoryboard> deve fazer referência a <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> do <xref:System.Windows.Media.Animation.BeginStoryboard> que controla que <xref:System.Windows.Media.Animation.Storyboard>. Consulte [como: usar gatilhos de eventos para controlar um Storyboard após iniciar](~/docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md) para obter um exemplo.  
+  
+## <a name="beginning-a-paused-animation"></a>A partir de uma animação pausada  
+ Quando um <xref:System.Windows.Media.Animation.BeginStoryboard> ação é disparada depois que ele foi pausado, ele aparece para retomar e reinicie. Que não é o que realmente acontece, no entanto: o <xref:System.Windows.Media.Animation.BeginStoryboard> ação substitui em si, na verdade, com uma versão de sair da pausa. Cada vez que um <xref:System.Windows.Media.Animation.BeginStoryboard> ação é disparada, relógio objetos são criados para o storyboard. Esses relógios são distribuídos para as propriedades que eles animam. Portanto, quando um <xref:System.Windows.Media.Animation.BeginStoryboard> é disparado novamente, ele não reiniciar seus relógios, ele substitui-los com os relógios dos novos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PauseStoryboard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.PauseStoryboard.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.PauseStoryboard" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

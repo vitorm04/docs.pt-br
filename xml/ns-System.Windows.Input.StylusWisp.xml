@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input.StylusWisp">
+  <Docs>
+    <summary>Fornece classes que dão suporte à manipulação de dados de uma caneta de dispositivo de tablet WISP na plataforma Windows Presentation Foundation (WPF).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

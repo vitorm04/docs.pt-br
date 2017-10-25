@@ -1,0 +1,196 @@
+<Type Name="SaveFileDialog" FullName="System.Windows.Forms.SaveFileDialog">
+  <TypeSignature Language="C#" Value="public sealed class SaveFileDialog : System.Windows.Forms.FileDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SaveFileDialog extends System.Windows.Forms.FileDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.SaveFileDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.FileDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.SaveFileDialogDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Solicita que o usuário selecione um local para salvar um arquivo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe pode abrir e substituir um arquivo existente ou criar um novo arquivo.  
+  
+ A maioria da funcionalidade para essa classe é encontrada no <xref:System.Windows.Forms.FileDialog> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra a criação de um <xref:System.Windows.Forms.SaveFileDialog>, definindo membros, chamar a caixa de diálogo usando o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método e salvar o arquivo atual. O exemplo requer um formulário com um botão colocado nela.  
+  
+ [!code-cpp[Classic SaveFileDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic SaveFileDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SaveFileDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic SaveFileDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic SaveFileDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic SaveFileDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SaveFileDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SaveFileDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância desta classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é segura criar uma instância em uma zona de segurança; demandas de permissão apropriadas são colocadas nos métodos e propriedades individuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePrompt">
+      <MemberSignature Language="C#" Value="public bool CreatePrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreatePrompt" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SaveFileDialog.CreatePrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo solicitará permissão ao usuário para criar um arquivo se o usuário especificar um arquivo que não existe.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo solicita que o usuário antes de criar um arquivo, se o usuário Especifica um nome de arquivo que não existe; <see langword="false" /> se a caixa de diálogo cria automaticamente o novo arquivo sem solicitar a permissão do usuário. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType> métodos com fluxos. Ele também demonstra como usar o <xref:System.Windows.Forms.FileDialog.FileName%2A>, <xref:System.Windows.Forms.FileDialog.DefaultExt%2A>, <xref:System.Windows.Forms.SaveFileDialog.CreatePrompt%2A>, e <xref:System.Windows.Forms.SaveFileDialog.OverwritePrompt%2A> membros.  
+  
+ Este é um exemplo completo que está pronto para ser executado quando você copiá-lo ao seu projeto.  
+  
+ [!code-cpp[System.Windows.Forms.RichTextBoxSaveFile#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.RichTextBoxSaveFile/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.RichTextBoxSaveFile#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.RichTextBoxSaveFile/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.RichTextBoxSaveFile#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.RichTextBoxSaveFile/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para definir a propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFile">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream OpenFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SaveFileDialog.OpenFile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre o arquivo com permissão de leitura/gravação selecionada pelo usuário.</summary>
+        <returns>O arquivo de leitura/gravação selecionado pelo usuário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Para fins de segurança, esse método cria um novo arquivo com o nome selecionado e abre-o com permissões de leitura/gravação. Isso pode causar a perda acidental de dados se você selecionar para salvar um arquivo existente. Para salvar dados em um arquivo existente enquanto mantém os dados existentes, use o <xref:System.IO.File> classe para abrir o arquivo usando o nome de arquivo retornado no <xref:System.Windows.Forms.FileDialog.FileName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra a criação de um <xref:System.Windows.Forms.SaveFileDialog>, definindo membros, chamar a caixa de diálogo usando o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método e abrir o arquivo selecionado. O exemplo requer um formulário com um botão colocado nela.  
+  
+ [!code-cpp[Classic SaveFileDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic SaveFileDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SaveFileDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic SaveFileDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic SaveFileDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic SaveFileDialog Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileDialogPermission">Para salvar um arquivo. Enumeração associada: <see cref="F:System.Security.Permissions.FileDialogPermissionAccess.Save" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwritePrompt">
+      <MemberSignature Language="C#" Value="public bool OverwritePrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OverwritePrompt" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.SaveFileDialog.OverwritePrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo <see langword="Save As" /> exibe um aviso se o usuário especificar um nome de arquivo que já existe.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo solicita que o usuário antes de substituir um arquivo existente, se o usuário Especifica um nome de arquivo já existe; <see langword="false" /> se a caixa de diálogo Substituir automaticamente o arquivo existente sem solicitar a permissão do usuário. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType> métodos com fluxos. Ele também demonstra como usar o <xref:System.Windows.Forms.FileDialog.FileName%2A>, <xref:System.Windows.Forms.FileDialog.DefaultExt%2A>, <xref:System.Windows.Forms.SaveFileDialog.CreatePrompt%2A>, e <xref:System.Windows.Forms.SaveFileDialog.OverwritePrompt%2A> membros.  
+  
+ Este é um exemplo completo que está pronto para ser executado quando você copiá-lo ao seu projeto.  
+  
+ [!code-cpp[System.Windows.Forms.RichTextBoxSaveFile#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.RichTextBoxSaveFile/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.RichTextBoxSaveFile#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.RichTextBoxSaveFile/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.RichTextBoxSaveFile#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.RichTextBoxSaveFile/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para definir a propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.SaveFileDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todas as opções da caixa de diálogo para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

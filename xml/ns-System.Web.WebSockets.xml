@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.WebSockets">
+  <Docs>
+    <summary>O <see cref="N:System.Web.WebSockets" /> namespace contém classes que suportam a funcionalidade de WebSocket adicionando a aplicativos Web Forms do ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

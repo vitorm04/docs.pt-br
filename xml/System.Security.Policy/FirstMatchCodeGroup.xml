@@ -1,0 +1,268 @@
+<Type Name="FirstMatchCodeGroup" FullName="System.Security.Policy.FirstMatchCodeGroup">
+  <TypeSignature Language="C#" Value="public sealed class FirstMatchCodeGroup : System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit FirstMatchCodeGroup extends System.Security.Policy.CodeGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.FirstMatchCodeGroup" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Policy.CodeGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que a política de segurança a ser definido pela União de declaração de diretiva de um grupo de código e que o primeiro grupo de códigos filho que corresponda. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Grupos de código são blocos de construção de política de segurança de acesso do código. Cada nível de política consiste em um grupo de códigos de raiz que pode ter grupos de códigos filho. Cada grupo de códigos filho pode ter seus próprios grupos de códigos filho; Esse comportamento se estende para qualquer número de níveis, formando uma árvore. Cada grupo de código tem uma condição de associação que determina se um determinado assembly pertence a ele com base na evidência de assembly. Somente os grupos de códigos cujas condições de associação correspondem a um determinado assembly e seus grupos de códigos filho aplicam a política.  
+  
+ Como qualquer grupo de códigos, <xref:System.Security.Policy.FirstMatchCodeGroup> se aplica somente quando a condição de associação corresponde a evidência de um assembly. Se houver uma correspondência, ele testa a condição de associação de cada filho em ordem, parando quando ocorre a primeira correspondência. O resultado de <xref:System.Security.Policy.FirstMatchCodeGroup> é a união de declaração de diretiva de grupo de códigos de raiz e a declaração da política do primeiro grupo filho desse grupo de código que faz a correspondência.  
+  
+ <xref:System.Security.Policy.FirstMatchCodeGroup>destina-se para uso programático por hosts de domínio de aplicativo para definir a diretiva de domínio.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso de membros de <xref:System.Security.Policy.FirstMatchCodeGroup> classe.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#1)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#1)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FirstMatchCodeGroup (System.Security.Policy.IMembershipCondition membershipCondition, System.Security.Policy.PolicyStatement policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Policy.IMembershipCondition membershipCondition, class System.Security.Policy.PolicyStatement policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.#ctor(System.Security.Policy.IMembershipCondition,System.Security.Policy.PolicyStatement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="membershipCondition" Type="System.Security.Policy.IMembershipCondition" />
+        <Parameter Name="policy" Type="System.Security.Policy.PolicyStatement" />
+      </Parameters>
+      <Docs>
+        <param name="membershipCondition">Uma condição de associação que testa a evidência para determinar se este grupo de códigos se aplica a política.</param>
+        <param name="policy">A declaração de política para o grupo de códigos na forma de um conjunto de permissões e os atributos conceder ao código que corresponde à condição de associação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.FirstMatchCodeGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um grupo de código básico e deve ser chamado a partir de construtores de grupos de código personalizado. Grupos de códigos filho podem ser adicionados usando o <xref:System.Security.Policy.CodeGroup.AddChild%2A> método.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra o uso do <xref:System.Security.Policy.FirstMatchCodeGroup.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para <xref:System.Security.Policy.FirstMatchCodeGroup> classe.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#2)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#2)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tipo do <paramref name="membershipCondition" /> parâmetro não é válido.  
+  
+ -ou-  
+  
+ O tipo do <paramref name="policy" /> parâmetro não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz uma cópia em profundidade do grupo de código.</summary>
+        <returns>Uma cópia equivalente do grupo de código, incluindo suas condições de associação e os grupos de códigos filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz uma cópia em profundidade do grupo de código, que significa que são feitas cópias de todos os objetos que ela contém, também.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra o uso de <xref:System.Security.Policy.FirstMatchCodeGroup.Copy%2A> método para fazer uma cópia em profundidade do grupo de código. Este exemplo de código é parte de um exemplo maior fornecido para <xref:System.Security.Policy.FirstMatchCodeGroup> classe.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#18](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#18)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#18)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeLogic">
+      <MemberSignature Language="C#" Value="public override string MergeLogic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MergeLogic" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.FirstMatchCodeGroup.MergeLogic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lógica de mesclagem.</summary>
+        <value>A cadeia de caracteres "Primeira correspondência".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra o uso do <xref:System.Security.Policy.FirstMatchCodeGroup.MergeLogic%2A> propriedade para obter a lógica de mesclagem para este grupo de códigos. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.FirstMatchCodeGroup> classe.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#15](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#15)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#15)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.PolicyStatement Resolve (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.PolicyStatement Resolve(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.Resolve(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.PolicyStatement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do assembly.</param>
+        <summary>Resolve a política para o grupo de códigos e seus descendentes de um conjunto de evidência.</summary>
+        <returns>Uma instrução de política consiste as permissões concedidas pelo grupo de código com atributos opcionais, ou <see langword="null" /> se o grupo de códigos não se aplica (a condição de associação não corresponde a evidência especificada).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dada a evidência para um assembly a ser carregado, esse método avalia o grupo de códigos verificando a condição de associação em relação a evidência especificada. Se houver uma correspondência, esse método retorna uma instrução de política para o grupo de código, incluindo avaliação do filho de grupos de código.  
+  
+ Para grupos de códigos de primeira correspondência, condição de associação do grupo de códigos cada filho é testada em relação a evidência na ordem na qual eles foram adicionados; apenas a primeira correspondência é resolvida com o conjunto de evidência. Se não houver nenhuma correspondência, a instrução de política do grupo de código da primeira correspondência pai se aplica. Determina o tipo de grupo de códigos filho correspondentes como todos os grupos filho abaixo dele são aplicados, dependendo de como a <xref:System.Security.Policy.CodeGroup.Resolve%2A> métodos desses grupos filho de trabalho.  
+  
+ O sistema de segurança do .NET Framework usa <xref:System.Security.Policy.CodeGroup.Resolve%2A> nos níveis de política para determinar quais permissões conceder ao código carregado das instruções de políticas resultante e o código de solicitação no assembly.  
+  
+ Esta operação desse método é o seguinte:  
+  
+ Se a condição de associação não coincide com a evidência especificada, retornar `null`; caso contrário, defina o conjunto de permissões a ser retornado (P) igual a declaração da política do grupo de códigos e continuar. Para cada grupo de códigos filho, resolver o grupo de códigos com a mesma evidência; Se o resultado não é `null`, essa política instrução return. Se nenhum grupo de códigos filho correspondentes, retorne P (declaração de política do pai).  
+  
+   
+  
+## Examples  
+ O código a seguir mostra o uso do <xref:System.Security.Policy.FirstMatchCodeGroup.Resolve%2A> método para resolver a política para o grupo de códigos. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.FirstMatchCodeGroup> classe.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#19](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#19)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#19](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#19)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#19](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="evidence" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Policy.PolicyException">Mais de um grupo de código (incluindo o grupo de códigos pai e os grupos de código filhos) está marcado como <see cref="F:System.Security.Policy.PolicyStatementAttribute.Exclusive" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveMatchingCodeGroups">
+      <MemberSignature Language="C#" Value="public override System.Security.Policy.CodeGroup ResolveMatchingCodeGroups (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.Policy.CodeGroup ResolveMatchingCodeGroups(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.FirstMatchCodeGroup.ResolveMatchingCodeGroups(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.CodeGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">A evidência do assembly.</param>
+        <summary>Resolve os grupos de códigos de correspondência.</summary>
+        <returns>Um <see cref="T:System.Security.Policy.CodeGroup" /> que é a raiz da árvore de grupos de código correspondentes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dada a evidência para um assembly a ser carregado, esse método avalia o grupo de códigos verificando a condição de associação em relação a evidência especificada. Se houver uma correspondência, esse método retorna um código de grupo raiz. O grupo de códigos que é retornado contém grupos de códigos filho, que por sua vez, podem ter grupos de códigos filho conforme necessário para refletir o conjunto completo de grupos de códigos que corresponderam a evidência fornecida.  
+  
+ Para grupos de códigos de primeira correspondência, condição de associação do grupo de códigos cada filho é testada em relação a evidência na ordem na qual eles foram adicionados; apenas a primeira correspondência é resolvida com o conjunto de evidência. Se não houver nenhuma correspondência, a instrução de política do grupo de código da primeira correspondência pai se aplica. Determina o tipo de grupo de códigos filho correspondentes como todos os grupos filho abaixo dele são aplicados, dependendo de como a <xref:System.Security.Policy.CodeGroup.ResolveMatchingCodeGroups%2A> métodos desses grupos filho de trabalho.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra o uso do <xref:System.Security.Policy.FirstMatchCodeGroup.ResolveMatchingCodeGroups%2A> método para resolver os grupos de código correspondentes. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.FirstMatchCodeGroup> classe.  
+  
+ [!code-cpp[System.Security.Policy.FirstMatchCodeGroup_Evt#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CPP/members.cpp#9)]
+ [!code-csharp[System.Security.Policy.FirstMatchCodeGroup_Evt#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/CS/members.cs#9)]
+ [!code-vb[System.Security.Policy.FirstMatchCodeGroup_Evt#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.FirstMatchCodeGroup_Evt/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="evidence" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

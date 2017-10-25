@@ -1,0 +1,126 @@
+<Type Name="ZoomPercentageConverter" FullName="System.Windows.Documents.ZoomPercentageConverter">
+  <TypeSignature Language="C#" Value="public sealed class ZoomPercentageConverter : System.Windows.Data.IValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ZoomPercentageConverter extends System.Object implements class System.Windows.Data.IValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.ZoomPercentageConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Data.IValueConverter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementa um conversor de tipo para converter <see cref="T:System.Double" /> (usado como o valor de <see cref="P:System.Windows.Controls.DocumentViewer.Zoom" />) para e de outros tipos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ZoomPercentageConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.ZoomPercentageConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.ZoomPercentageConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object value, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.ZoomPercentageConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor atual de <see cref="P:System.Windows.Controls.DocumentViewer.Zoom" />.</param>
+        <param name="targetType">O tipo para o qual <c>valor</c> deve ser convertido. Isso deve ser <see cref="T:System.Double" /> ou <see cref="T:System.String" />.</param>
+        <param name="parameter">
+          <see langword="null" />.</param>
+        <param name="culture">O idioma e cultura considerado durante a conversão.</param>
+        <summary>Converte o <see cref="T:System.Double" /> (usado como o valor de <see cref="P:System.Windows.Controls.DocumentViewer.Zoom" />) a um objeto do tipo especificado.</summary>
+        <returns>
+          <see cref="F:System.Windows.DependencyProperty.UnsetValue" />Quando o conversor não pode produzir um valor; Por exemplo, quando <paramref name="value" /> é <see langword="null" /> ou quando <paramref name="targetType" /> não é <see cref="T:System.Double" /> ou <see cref="T:System.String" />.  
+  
+ \- ou -  
+  
+ O novo <see cref="T:System.Object" /> do tipo designado. Conforme implementado nesta classe, isso deve ser um <see cref="T:System.Double" /> ou <see cref="T:System.String" />. Se for uma cadeia de caracteres, ele será formatado corretamente para o <paramref name="culture" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyProperty.UnsetValue>pode ser retornada para indicar que o conversor produzidos nenhum valor e que o fallback (se disponível) ou o padrão valor deve ser usado em vez disso.  
+  
+ Passar `null` para `parameter`. Esse parâmetro é necessário para a assinatura de <xref:System.Windows.Data.IValueConverter.Convert%2A>e é usado por algumas implementações para fornecer informações contextuais para o conversor; mas ele não é usado nessa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object ConvertBack (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertBack(object value, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.ZoomPercentageConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser convertida em um <see cref="T:System.Double" />.</param>
+        <param name="targetType">O tipo de <c>valor</c>. Isso deve ser <see cref="T:System.Double" /> ou <see cref="T:System.String" />.</param>
+        <param name="parameter">
+          <see langword="null" />.</param>
+        <param name="culture">O idioma e cultura considerado durante a conversão.</param>
+        <summary>Retorna um valor convertido anteriormente do <see cref="P:System.Windows.Controls.DocumentViewer.Zoom" /> para um <see cref="T:System.Double" /> que podem ser atribuídos a <see cref="P:System.Windows.Controls.DocumentViewer.Zoom" />.</summary>
+        <returns>
+          <see cref="F:System.Windows.DependencyProperty.UnsetValue" />Quando o conversor não pode produzir um valor; Por exemplo, quando <paramref name="value" /> não é uma porcentagem válida quando <paramref name="targetType" /> não é <see cref="T:System.Double" /> ou <see cref="T:System.String" />.  
+  
+ \- ou -  
+  
+ Um <see cref="T:System.Double" /> que representa a porcentagem de zoom de um <see cref="T:System.Windows.Controls.DocumentViewer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de associação de dados chama esse método quando ele move um valor de destino da associação para a fonte da associação.  
+  
+ <xref:System.Windows.DependencyProperty.UnsetValue>pode ser retornada para indicar que o conversor produzidos nenhum valor e que o fallback (se disponível) ou o padrão valor deve ser usado em vez disso.  
+  
+ Passar `null` para `parameter`. Esse parâmetro é necessário para a assinatura de <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>e é usado por algumas implementações para fornecer informações contextuais para o conversor; mas ele não é usado nessa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

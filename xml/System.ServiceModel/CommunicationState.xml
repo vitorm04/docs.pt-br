@@ -1,0 +1,206 @@
+<Type Name="CommunicationState" FullName="System.ServiceModel.CommunicationState">
+  <TypeSignature Language="C#" Value="public enum CommunicationState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CommunicationState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.CommunicationState" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os estados nos quais um <see cref="T:System.ServiceModel.ICommunicationObject" /> pode existir.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração define os estados que são válidos para todos os objetos de comunicação no sistema, incluindo canais, ouvintes, fábricas, distribuidores e hosts de serviço.  
+  
+ Os métodos que gerenciam as transições entre esses estados e os eventos que podem ser associados eles são definidos no <xref:System.ServiceModel.ICommunicationObject> interface. O estado de um objeto pode ser obtido usando o <xref:System.ServiceModel.ICommunicationObject.State%2A> propriedade.  
+  
+ Há quatro estados principais e dois estados transitórios que um objeto de comunicação pode ocupar. Os estados principais são:  
+  
+-   Criado  
+  
+-   Aberto  
+  
+-   Closed  
+  
+-   Com defeito  
+  
+ Os dois estados transitórios que um objeto de comunicação pode ocupar ao realizar a transição entre esses estados principais são:  
+  
+-   Abertura  
+  
+-   Fechando  
+  
+ O objeto de comunicação pode ser configurado no estado criado. Por exemplo, suas propriedades podem ser alteradas, e seus eventos podem ser registrados. Nenhuma entrada ou saída pode ocorrer nesse estado. Para que mensagens, por exemplo, não podem ser enviadas ou recebidas de um canal nesse estado.  
+  
+ A abertura é um estado temporário que o objeto de comunicação insere quando o <xref:System.ServiceModel.ICommunicationObject.Open%2A> método é invocado. Salvo indicação em contrário em classes derivadas, objetos no estado inicial não podem ser configurados. Só pode ser inserido nesse estado de transição de estado criado.  
+  
+ Transição de objetos para o estado aberto quando o processo de abertura é concluída. Essa transição para o estado aberto é válida somente do estado de abertura. Salvo indicação em contrário em classes derivadas, a configuração do objeto está desabilitada agora. Neste ponto, o objeto é totalmente pode ser usado para transferências de mensagem.  
+  
+ O fechamento é um estado temporário que o objeto insere quando o <xref:System.ServiceModel.ICommunicationObject.Close%2A> método é invocado para um desligamento normal ou o objeto foi anulado. Neste ponto, o objeto se torna (se ainda não estiver) inutilizável. Esta transição é válida de qualquer estado exceto o estado fechado.  
+  
+ O estado fechado é equivalente à que está sendo descartado e a configuração do objeto ainda pode ser inspecionada.  
+  
+ Estado com falha é usado para indicar que o objeto tiver feito a transição para um estado em que ele não pode mais ser usado. Há dois principais cenários em que isso pode ocorrer:  
+  
+-   Se o <xref:System.ServiceModel.ICommunicationObject.Open%2A> método falha por algum motivo, as transições de objeto para o estado de falha.  
+  
+-   Se um canal de sessão detecta um erro que ele não pode se recuperar, ela fará a transição para o estado de falha. Isso pode acontecer por exemplo se houver um erro de protocolo (ou seja, ele recebe uma mensagem de protocolo em um horário inválido) ou se o ponto de extremidade remoto anula a sessão.  
+  
+ Um objeto no estado com falha não será fechado e pode manter os recursos. O <xref:System.ServiceModel.ICommunicationObject.Abort%2A> método deve ser usado para fechar um objeto que apresentou falha. Se <xref:System.ServiceModel.ICommunicationObject.Close%2A> é chamado em um objeto no estado com falha, um <xref:System.ServiceModel.CommunicationObjectFaultedException> foi lançado porque o objeto não pode ser fechado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="Closed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.CommunicationState Closed = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.CommunicationState.Closed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o objeto de comunicação foi fechado e não é mais utilizável.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Closing">
+      <MemberSignature Language="C#" Value="Closing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.CommunicationState Closing = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.CommunicationState.Closing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o objeto de comunicação está fazendo a transição para o estado <see cref="F:System.ServiceModel.CommunicationState.Closed" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Created">
+      <MemberSignature Language="C#" Value="Created" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.CommunicationState Created = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.CommunicationState.Created" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o objeto de comunicação foi instanciado e é configurável, mas ainda não está aberto ou pronto para uso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Faulted">
+      <MemberSignature Language="C#" Value="Faulted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.CommunicationState Faulted = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.CommunicationState.Faulted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o objeto de comunicação apresentou um erro ou uma falha da qual não pode se recuperar e não é mais utilizável.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Opened">
+      <MemberSignature Language="C#" Value="Opened" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.CommunicationState Opened = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.CommunicationState.Opened" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o objeto de comunicação agora está aberto e pronto para ser usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Opening">
+      <MemberSignature Language="C#" Value="Opening" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.CommunicationState Opening = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.CommunicationState.Opening" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.CommunicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o objeto de comunicação está fazendo a transição do estado <see cref="F:System.ServiceModel.CommunicationState.Created" /> para o estado <see cref="F:System.ServiceModel.CommunicationState.Opened" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

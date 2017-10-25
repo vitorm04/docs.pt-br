@@ -1,0 +1,904 @@
+<Type Name="ServiceBase" FullName="System.ServiceProcess.ServiceBase">
+  <TypeSignature Language="C#" Value="public class ServiceBase : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceBase extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.ServiceBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.InstallerType(typeof(System.ServiceProcess.ServiceProcessInstaller))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma classe base para um serviço que exista como parte de um aplicativo de serviço. <see cref="T:System.ServiceProcess.ServiceBase" /> deve ser derivado do momento da criação de uma nova classe de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivam <xref:System.ServiceProcess.ServiceBase> ao definir sua classe de serviço em um aplicativo de serviço. Serviço útil substituições de <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> métodos. Para obter funcionalidade adicional, você pode substituir <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> com comportamento específico em resposta a alterações no estado de serviço.  
+  
+ Um serviço é um executável de longa execução que não oferece suporte a uma interface do usuário, e que não pode ser executado sob a conta de logon do usuário. O serviço pode ser executado sem qualquer usuário que está sendo conectado ao computador.  
+  
+ Por padrão, os serviços executados na conta do sistema, que não é o mesmo que a conta de administrador. Você não pode alterar os direitos da conta do sistema. Como alternativa, você pode usar um <xref:System.ServiceProcess.ServiceProcessInstaller> para especificar uma conta de usuário sob a qual o serviço será executado.  
+  
+ Um executável pode conter mais de um serviço, mas deve conter um separado <xref:System.ServiceProcess.ServiceInstaller> para cada serviço. O <xref:System.ServiceProcess.ServiceInstaller> instância registra o serviço com o sistema. O instalador também associa cada serviço de um log de eventos que você pode usar para gravar comandos de serviço. O `main()` função no executável define quais serviços devem ser executados. O diretório de trabalho atual do serviço é o diretório do sistema, não o diretório em que o executável está localizado.  
+  
+ Quando você iniciar um serviço, o sistema localiza o executável e executa o <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método para o serviço, contido dentro do executável. No entanto, que executa o serviço não é o mesmo que o executável. O executável carrega apenas o serviço. O serviço é acessado através do Gerenciador de controle de serviço (por exemplo, iniciado e interrompido).  
+  
+ O executável chama o <xref:System.ServiceProcess.ServiceBase> derivado de tempo de primeiro do construtor da classe chamar o início do serviço. O <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método manipulador de comando é chamado imediatamente depois que o construtor é executado. O construtor não é executado novamente depois da primeira vez em que o serviço tiver sido carregado, é necessário separar o processamento executado pelo construtor daquele executadas pelo <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. Todos os recursos que podem ser liberados por <xref:System.ServiceProcess.ServiceBase.OnStop%2A> devem ser criados no <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. Criar recursos do construtor impede que eles sejam criadas corretamente se o serviço é iniciado novamente após <xref:System.ServiceProcess.ServiceBase.OnStop%2A> lançou os recursos.  
+  
+ O Gerenciador de controle de serviços (SCM) fornece uma maneira de interagir com o serviço. Você pode usar o SCM para passar a iniciar, parar, pausar, continuar ou comandos personalizados para o serviço. O SCM usa os valores de <xref:System.ServiceProcess.ServiceBase.CanStop%2A> e <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> para determinar se o serviço aceita parar, pausar ou continuar comandos. Parar, pausar e continuar estão habilitados no somente se do SCM contexto menus a propriedade correspondente <xref:System.ServiceProcess.ServiceBase.CanStop%2A> ou <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `true` na classe de serviço. Se habilitada, o comando é passado para o serviço, e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, ou <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> é chamado. Se <xref:System.ServiceProcess.ServiceBase.CanStop%2A>, <xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>, ou <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `false`, o método de manipulação de comandos correspondente (como <xref:System.ServiceProcess.ServiceBase.OnStop%2A>) não serão processadas, mesmo se você implementou o método.  
+  
+ Você pode usar o <xref:System.ServiceProcess.ServiceController> classe fazer por meio de programação que o SCM faz usando uma interface do usuário. Você pode automatizar as tarefas disponíveis no console do. Se <xref:System.ServiceProcess.ServiceBase.CanStop%2A>, <xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>, ou <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `true` , mas você não tiver implementado um método de manipulação de comandos correspondente (como <xref:System.ServiceProcess.ServiceBase.OnStop%2A>) o sistema gerará uma exceção e ignora o comando.  
+  
+ Você não precisa implementar <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, <xref:System.ServiceProcess.ServiceBase.OnStop%2A>, ou qualquer outro método em <xref:System.ServiceProcess.ServiceBase>. No entanto, o comportamento do serviço é descrito em <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, portanto, no mínimo, esse membro deve ser substituído. O `main()` função do executável registra o serviço no executável com o Gerenciador de controle de serviço chamando o <xref:System.ServiceProcess.ServiceBase.Run%2A> método. O <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> propriedade o <xref:System.ServiceProcess.ServiceBase> objeto passado para o <xref:System.ServiceProcess.ServiceBase.Run%2A> método deve corresponder a <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> propriedade do instalador do serviço para o serviço.  
+  
+ Você pode usar `InstallUtil.exe` para instalar os serviços em seu sistema.  
+  
+> [!NOTE]
+>  Você pode especificar um log que não sejam o log de eventos do aplicativo para receber uma notificação de chamadas de serviço, mas não o <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> nem o <xref:System.ServiceProcess.ServiceBase.EventLog%2A> propriedade pode gravar em um log personalizado. Definir <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para `false` se você não deseja usar o registro em log automático.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.ServiceProcess.ServiceBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não crie uma instância do <xref:System.ServiceProcess.ServiceBase> classe. Em vez disso, derivam <xref:System.ServiceProcess.ServiceBase> e criar uma instância de sua classe derivada. O mínimo necessário implementar no construtor para uma classe herdada de <xref:System.ServiceProcess.ServiceBase> é definir o <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> no seu componente. Nenhum outro processamento é necessário no construtor. Você deve tratar a maioria dos inicialização em <xref:System.ServiceProcess.ServiceBase.OnStart%2A> em vez de no construtor. Caso contrário, não há nenhuma garantia que os objetos serão reinicializados quando você reinicia um serviço depois que ele foi interrompido.  
+  
+ Se você substituir o construtor em sua classe derivada, chame o construtor de classe base em seu código.  
+  
+ O <xref:System.ServiceProcess.ServiceBase> conjuntos de construtor <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para `true`. Se você não deseja fazer logon automaticamente chamadas para o serviço do Gerenciador de controle de serviços (SCM), defina <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para `false`.  
+  
+ Se o arquivo executável contiver um único serviço, o sistema chama construtor do serviço quando iniciar é selecionado do SCM e executa o destruidor se Stop for chamado.  
+  
+ Se o arquivo executável contiver vários serviços, chamar Start em um serviço faz com que os construtores a ser chamado para todos os serviços no executável, mas apenas o serviço especificado é iniciado. Destruidores para os serviços são executados juntos quando todos os serviços foram interrompidos, não individualmente quando cada serviço é interrompido.  
+  
+> [!NOTE]
+>  Se você substituir o construtor da classe base, você deve chamá-lo explicitamente no construtor de classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoLog">
+      <MemberSignature Language="C#" Value="public bool AutoLog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoLog" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.AutoLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("SBAutoLog")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se os comandos Start, Stop, Pause e Continue devem ser relatados no log de eventos.</summary>
+        <value>
+          <see langword="true" /> para relatar informações no log de eventos; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para `true` instrui o serviço para usar o log de eventos do aplicativo para falhas de comando do relatório, bem como informações de alteração de estado para iniciar, parar, pausar e continuar eventos no serviço. O nome do serviço é usado como o log <xref:System.Diagnostics.EventLog.Source%2A?displayProperty=nameWithType>.  
+  
+ Para relatar informações para um log de eventos personalizado em vez de log do aplicativo, defina <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para `false` e escrever instruções dentro do método de manipulação de comandos <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, ou <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para enviar para o log adequado.  
+  
+> [!NOTE]
+>  O <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>, que fornece a cadeia de caracteres de origem para o log de eventos deve ser definido antes do serviço tenta gravar no log de eventos. Tentativa de acessar o log de eventos antes que o nome de origem é definido gera uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanHandlePowerEvent">
+      <MemberSignature Language="C#" Value="public bool CanHandlePowerEvent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHandlePowerEvent" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.CanHandlePowerEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o serviço pode manipular notificações de alterações de status de energia do computador.</summary>
+        <value>
+          <see langword="true" /> se o serviço manipular as alterações de status de energia do computador indicadas na classe <see cref="T:System.ServiceProcess.PowerBroadcastStatus" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando as alterações de status de energia do computador, o Gerenciador de controle de serviços (SCM) verifica se o serviço aceita comandos de evento de energia usando o valor de <xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A> é `true`, o comando é passado para o serviço e o <xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A> método é chamado, se definido. Se <xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A> não está implementado na classe derivada, o SCM manipula o evento de energia por meio da classe base vazio <xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade é modificada depois que o serviço é iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanHandleSessionChangeEvent">
+      <MemberSignature Language="C#" Value="public bool CanHandleSessionChangeEvent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanHandleSessionChangeEvent" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.CanHandleSessionChangeEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o serviço pode manipular eventos de alteração de sessão recebidos de uma sessão do servidor Host da Sessão da Área de Trabalho Remota.</summary>
+        <value>
+          <see langword="true" />Se o serviço pode manipular eventos de alteração de sessão do Terminal Server; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade é modificada depois que o serviço é iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanPauseAndContinue">
+      <MemberSignature Language="C#" Value="public bool CanPauseAndContinue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanPauseAndContinue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.CanPauseAndContinue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o serviço pode estar em pausa e retomado.</summary>
+        <value>
+          <see langword="true" /> se o serviço pode estar em pausa; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o valor de <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> propriedade no construtor para o serviço.  
+  
+ Quando um serviço for pausado, ele interrompe o que está fazendo. Quando você continuar o serviço (ou através do Gerenciador de controle de serviço por meio de programação), <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> é executado.  
+  
+ Enviar uma solicitação de pausa o serviço pode conservar recursos do sistema. Pausar não pode liberar todos os recursos do sistema, mas não de parada. <xref:System.ServiceProcess.ServiceBase.OnPause%2A>e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> geralmente são implementadas para executar a menos que o processamento <xref:System.ServiceProcess.ServiceBase.OnStop%2A> e <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  
+  
+ Quando <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `true`, substituir <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> para especificar o processamento que deve ocorrer quando o Gerenciador de controle de serviços (SCM) transmite uma solicitação para pausar ou continuar para seu serviço. <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>deve ser implementado para desfazer o processamento do <xref:System.ServiceProcess.ServiceBase.OnPause%2A>.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `false`, o SCM não passará pausar ou continuar solicitações para o serviço, então o <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> métodos não serão chamados mesmo que eles são implementados. No SCM, o `Pause` e `Continue` controles são desabilitados quando <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O serviço já foi iniciado. A propriedade <see cref="P:System.ServiceProcess.ServiceBase.CanPauseAndContinue" /> não pode ser alterada depois que o serviço é iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanShutdown">
+      <MemberSignature Language="C#" Value="public bool CanShutdown { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanShutdown" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.CanShutdown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o serviço deve ser notificado quando o sistema está sendo desligado.</summary>
+        <value>
+          <see langword="true" /> se o serviço precisar ser notificado quando o sistema estiver sendo desligado; caso contrário, <see langword="false" />.  O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.ServiceProcess.ServiceBase.CanShutdown%2A> é `true`, o serviço seja notificado quando o sistema está sendo desligado. Durante o desligamento, o <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> método é chamado se ele tiver sido implementado na classe derivada.  
+  
+> [!NOTE]
+>  Somente o sistema deve fazer com que o <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> método seja executado; o serviço pode chamá-lo, mas isso não é recomendado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O serviço já foi iniciado. A propriedade <see cref="P:System.ServiceProcess.ServiceBase.CanShutdown" /> não pode ser alterada depois que o serviço é iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanStop">
+      <MemberSignature Language="C#" Value="public bool CanStop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanStop" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.CanStop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o serviço pode ser interrompido depois de ser iniciado.</summary>
+        <value>
+          <see langword="true" /> se o serviço puder ser interrompido e o método <see cref="M:System.ServiceProcess.ServiceBase.OnStop" /> chamado, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando a interrupção for chamada em um serviço, o Gerenciador de controle de serviços (SCM) verifica se o serviço aceita comandos Stop usando o valor de <xref:System.ServiceProcess.ServiceBase.CanStop%2A>. Na maioria dos serviços, o valor de <xref:System.ServiceProcess.ServiceBase.CanStop%2A> é `true`, mas alguns serviços do sistema operacional, por exemplo, não permitir que o usuário interrompê-los.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.CanStop%2A> é `true`, o comando de parada é passado para o serviço e o <xref:System.ServiceProcess.ServiceBase.OnStop%2A> método é chamado se ela está definida. Se <xref:System.ServiceProcess.ServiceBase.OnStop%2A> não está implementado na classe derivada, os identificadores SCM a interrupção de comando por meio da classe base vazia <xref:System.ServiceProcess.ServiceBase.OnStop%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O serviço já foi iniciado. A propriedade <see cref="P:System.ServiceProcess.ServiceBase.CanStop" /> não pode ser alterada depois que o serviço é iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Descarta os recursos (exceto a memória) usados pelo <see cref="T:System.ServiceProcess.ServiceBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.ServiceProcess.ServiceBase.Dispose%2A> em sua classe derivada (e, no <xref:System.ServiceProcess.ServiceBase> classe) quando terminar de usar a classe derivada. O <xref:System.ServiceProcess.ServiceBase.Dispose%2A> método deixa a classe derivada em um estado inutilizável. Depois de chamar <xref:System.ServiceProcess.ServiceBase.Dispose%2A>, você deve liberar todas as referências à classe derivada e <xref:System.ServiceProcess.ServiceBase> para a memória que eles foram ocupando pode ser recuperada pela coleta de lixo.  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.ServiceProcess.ServiceBase.Dispose%2A> antes de liberar sua última referência para a classe derivada de <xref:System.ServiceProcess.ServiceBase>. Caso contrário, os recursos <xref:System.ServiceProcess.ServiceBase> e a classe derivada são usando será não ser liberado até que a coleta de lixo chama destruidores os objetos.  
+  
+ <xref:System.ServiceProcess.ServiceBase.OnStop%2A>geralmente é implementado para processar o código em <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, combinado com uma chamada para <xref:System.ServiceProcess.ServiceBase.Dispose%2A>. Se você optar por fazer isso em sua classe derivada, é comum implementar <xref:System.ServiceProcess.ServiceBase.OnStart%2A> alocar qualquer <xref:System.ServiceProcess.ServiceBase.Dispose%2A> liberado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventLog">
+      <MemberSignature Language="C#" Value="public virtual System.Diagnostics.EventLog EventLog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.EventLog EventLog" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.EventLog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLog</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um log de eventos que você pode usar para gravar a notificação de chamadas de comando de serviço, como iniciar e parar, no log de eventos do aplicativo.</summary>
+        <value>Uma instância de <see cref="T:System.Diagnostics.EventLog" /> cuja origem é registrada no log de aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor inicializa o <xref:System.ServiceProcess.ServiceBase.EventLog%2A> propriedade a uma instância com o <xref:System.Diagnostics.EventLog.Source%2A?displayProperty=nameWithType> e <xref:System.Diagnostics.EventLog.Log%2A?displayProperty=nameWithType> conjunto de propriedades. A fonte é o <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> do serviço, e o log é o log de aplicativo do computador. Esses valores são definidas automaticamente e não podem ser alterados para registro automático de comandos de serviço.  
+  
+ Quando <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é `true`, iniciar, parar, pausar, continuar e comandos personalizados são registrados automaticamente no log de eventos do aplicativo. Você pode usar o <xref:System.ServiceProcess.ServiceBase.EventLog%2A> propriedade para gravar mensagens adicionais que também o log. As chamadas de componente <xref:System.Diagnostics.EventLog.WriteEntry%2A?displayProperty=nameWithType> usando esse <xref:System.ServiceProcess.ServiceBase.EventLog%2A> membro.  
+  
+ Para relatar informações para um log de eventos personalizado em vez de log do aplicativo, defina <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para `false` e escrever instruções dentro do método de manipulação de comandos <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, ou <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para enviar para o log adequado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitCode">
+      <MemberSignature Language="C#" Value="public int ExitCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExitCode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.ExitCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código de saída do serviço.</summary>
+        <value>O código de saída do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.ServiceProcess.ServiceBase.ExitCode%2A> propriedade para um valor diferente de zero antes de parar o serviço para indicar um erro com o Gerenciador de controle de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNameLength">
+      <MemberSignature Language="C#" Value="public const int MaxNameLength = 80;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaxNameLength = (80)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceBase.MaxNameLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>80</MemberValue>
+      <Docs>
+        <summary>Indica o tamanho máximo para um nome de serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ServiceName e DisplayName têm restrições de tamanho que devem ser observadas ao definir as propriedades em sua classe de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContinue">
+      <MemberSignature Language="C#" Value="protected virtual void OnContinue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContinue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnContinue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, <see cref="M:System.ServiceProcess.ServiceBase.OnContinue" /> é executado quando o comando Continuar é enviado para o serviço pelo SCM (Gerenciador de Controle de Serviço). Especifica as ações a serem tomadas quando um serviço retoma o funcionamento normal após estar em pausa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> para espelhar a resposta do aplicativo para <xref:System.ServiceProcess.ServiceBase.OnPause%2A>. Quando você continuar o serviço (ou por meio do console de serviços por meio de programação), o <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> processamento é executado e o serviço fica ativo novamente.  
+  
+ <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>deve ser substituído quando o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é de propriedade `true`.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `false`, o SCM não passará pausar ou continuar solicitações para o serviço, então o <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> métodos não serão chamados mesmo que eles são implementados. No SCM, o `Pause` e `Continue` controles são desabilitados quando <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCustomCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnCustomCommand (int command);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCustomCommand(int32 command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnCustomCommand(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="command">A mensagem de comando enviada ao serviço.</param>
+        <summary>Quando implementado em uma classe derivada, <see cref="M:System.ServiceProcess.ServiceBase.OnCustomCommand(System.Int32)" /> é executado quando o SCM (Gerenciador de Controle de Serviço) passa um comando personalizado para o serviço. Especifica as ações a serem aditadas quando ocorrer um comando com o valor do parâmetro especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A>permite que você especifique funcionalidade adicional além de iniciar, parar, pausando e continuando serviços.  
+  
+ O SCM não examina o comando personalizado para verificar se o serviço oferece suporte a `command` parâmetro passado. Ele passa o comando personalizado diretamente ao serviço. Se o serviço não reconhece o `command` parâmetro, ele não faz nada.  
+  
+ Comandos personalizados são gerados por um <xref:System.ServiceProcess.ServiceController.ExecuteCommand%2A> instrução em um <xref:System.ServiceProcess.ServiceController> componente. Use uma instrução switch ou se... em seguida, condição para lidar com os comandos personalizados que definem em seu serviço.  
+  
+ Os únicos valores para um comando personalizado que você pode definir em seu aplicativo ou use <xref:System.ServiceProcess.ServiceBase.OnCustomCommand%2A> são aqueles entre 128 e 255. Números inteiros abaixo 128 correspondem aos valores reservado pelo sistema.  
+  
+ Se o <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é de propriedade `true`, comandos personalizados, como todos os outros comandos, gravam entradas de log de eventos para relatar se a execução do método teve êxito ou falhou.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPause">
+      <MemberSignature Language="C#" Value="protected virtual void OnPause ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnPause" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, é executado quando o comando Pausar é enviado para o serviço pelo SCM (Gerenciador de Controle de Serviço). Especifica ações a serem tomadas quando a execução for colocada em pausa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceProcess.ServiceBase.OnPause%2A> para especificar o processamento que ocorre quando o serviço recebe um comando Pausar. <xref:System.ServiceProcess.ServiceBase.OnPause%2A>deve ser substituído quando o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é de propriedade `true`.  
+  
+ Quando você continuar um serviço pausado (ou por meio do console de serviços por meio de programação), o <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> processamento é executado, e o serviço fica ativo novamente.  
+  
+ O comando Pause só permite que seu aplicativo para reagir a um evento específico. <xref:System.ServiceProcess.ServiceBase.OnPause%2A>não faz nada para o serviço que você não defini-lo para fazer.  
+  
+ Enviar uma solicitação de pausa o serviço pode conservar recursos do sistema porque pausar não precisa liberar todos os recursos do sistema. Por exemplo, se os threads foram abertos pelo processo de pausar um serviço em vez de interrompê-lo pode permitir que os threads permanecerá aberta, dispensando a necessidade de realocá-las quando o serviço continua. Se você definir pausar para liberar todos os recursos do sistema, ele se comporta como um comando de parada.  
+  
+ Definir <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> para `true`e substituir <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> para especificar o processamento que deve ocorrer quando o SCM transmite uma solicitação para pausar ou continuar para seu serviço. <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>deve ser implementado para desfazer o processamento do <xref:System.ServiceProcess.ServiceBase.OnPause%2A>.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `false`, o SCM não passará pausar ou continuar solicitações para o serviço, então o <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> métodos não serão chamados mesmo se implementado. No SCM, o `Pause` e `Continue` controles são desabilitados quando <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> é `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPowerEvent">
+      <MemberSignature Language="C#" Value="protected virtual bool OnPowerEvent (System.ServiceProcess.PowerBroadcastStatus powerStatus);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnPowerEvent(valuetype System.ServiceProcess.PowerBroadcastStatus powerStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnPowerEvent(System.ServiceProcess.PowerBroadcastStatus)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="powerStatus" Type="System.ServiceProcess.PowerBroadcastStatus" />
+      </Parameters>
+      <Docs>
+        <param name="powerStatus">Um <see cref="T:System.ServiceProcess.PowerBroadcastStatus" /> que indica uma notificação do sistema sobre seu status de energia.</param>
+        <summary>Quando implementada em uma classe derivada, será executada quando o status de energia do computador for alterado. Isso se aplica a computadores laptop quando entram no modo suspenso, que não é o mesmo que um desligamento do sistema.</summary>
+        <returns>Quando implementada em uma classe derivada, as necessidades do seu aplicativo determinam o valor a ser retornado. Por exemplo, se um status de difusão <see langword="QuerySuspend" /> for passado, você poderá fazer com que seu aplicativo rejeite a consulta retornando <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A> para especificar o processamento que ocorre quando o evento do sistema indicado no <xref:System.ServiceProcess.PowerBroadcastStatus> enumeração ocorre – por exemplo, quando o computador é colocado no modo suspenso ou indica pouca bateria.  
+  
+ <xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>deve ser substituído quando o <xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSessionChange">
+      <MemberSignature Language="C#" Value="protected virtual void OnSessionChange (System.ServiceProcess.SessionChangeDescription changeDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSessionChange(valuetype System.ServiceProcess.SessionChangeDescription changeDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnSessionChange(System.ServiceProcess.SessionChangeDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changeDescription" Type="System.ServiceProcess.SessionChangeDescription" />
+      </Parameters>
+      <Docs>
+        <param name="changeDescription">Uma estrutura que identifica o tipo de alteração.</param>
+        <summary>Executa quando um evento de alteração é proveniente de uma sessão do servidor Host da Sessão da Área de Trabalho Remota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir o <xref:System.ServiceProcess.ServiceBase.CanHandleSessionChangeEvent%2A> propriedade `true` para habilitar a execução deste método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnShutdown">
+      <MemberSignature Language="C#" Value="protected virtual void OnShutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnShutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnShutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, é executado quando o sistema é desligado. Especifica o que deve ocorrer imediatamente antes do desligamento do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> para especificar o processamento que ocorre quando o sistema é desligado.  
+  
+ Esse evento ocorre somente quando o sistema operacional for desligado, não quando o computador é desligado.  
+  
+ <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>deve ser substituído quando o <xref:System.ServiceProcess.ServiceBase.CanShutdown%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStart">
+      <MemberSignature Language="C#" Value="protected virtual void OnStart (string[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStart(string[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnStart(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="args">Dados passados pelo comando de início.</param>
+        <summary>Quando implementado em uma classe derivada, é executado quando um comando Iniciar é enviado para o serviço pelo SCM (Gerenciador de Controle de Serviço) ou quando o sistema operacional é iniciado (para um serviço que inicia automaticamente). Especifica ações a serem tomadas quando o serviço for iniciado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceProcess.ServiceBase.OnStart%2A> para especificar o processamento que ocorre quando o serviço recebe um comando de início. <xref:System.ServiceProcess.ServiceBase.OnStart%2A>é o método em que você especificar o comportamento do serviço. <xref:System.ServiceProcess.ServiceBase.OnStart%2A>pode ter argumentos como uma maneira de transmitir dados, mas esse uso é raro.  
+  
+> [!CAUTION]
+>  Não use o construtor para executar o processamento deve estar no <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. Use <xref:System.ServiceProcess.ServiceBase.OnStart%2A> para lidar com todas as inicializações de seu serviço. O construtor é chamado quando o executável da aplicação é executado, não quando o serviço é executado. O executável será executado antes de <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. Quando você continuar, por exemplo, o construtor não é chamado novamente porque o SCM já contém o objeto na memória. Se <xref:System.ServiceProcess.ServiceBase.OnStop%2A> libera os recursos alocados no construtor, em vez de em <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, os recursos necessários não pode ser criados novamente na segunda vez que o serviço é chamado.  
+  
+ Serviços podem ser definidos para iniciar automaticamente quando o computador é reinicializado, definindo o <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> no instalador do serviço <xref:System.ServiceProcess.ServiceStartMode.Automatic>. Em tal situação, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> deve ser chamado na inicialização do sistema.  
+  
+ <xref:System.ServiceProcess.ServiceBase.OnStart%2A>deve ser substituído na classe derivada. O serviço deve ser útil, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> devem ser implementadas em sua classe de serviço.  
+  
+ Argumentos de inicialização para o serviço de processar o <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método, não no método Main. Os argumentos a `args` matriz de parâmetro pode ser definido manualmente na janela Propriedades para o serviço no console de serviços. Os argumentos inseridos no console não são salvas; eles são passados para o serviço de uma única vez quando o serviço é iniciado no painel de controle. Argumentos que devem estar presente quando o serviço é iniciado automaticamente podem ser colocados no valor de cadeia de caracteres de ImagePath para chave de registro do serviço (HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome do serviço >*). Você pode obter os argumentos do registro usando o <xref:System.Environment.GetCommandLineArgs%2A> método, por exemplo: `string[] imagePathArgs = Environment.GetCommandLineArgs();`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStop">
+      <MemberSignature Language="C#" Value="protected virtual void OnStop ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.OnStop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, é executado quando o comando Parar é enviado para o serviço pelo SCM (Gerenciador de Controle de Serviço). Especifica ações a serem tomadas quando a execução do serviço parar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para especificar o processamento que ocorre quando o serviço recebe um comando de parada.  
+  
+ Quando o SCM recebe um comando de parada, ele usa o valor de <xref:System.ServiceProcess.ServiceBase.CanStop%2A> para verificar se o serviço aceita comandos de parada. Se <xref:System.ServiceProcess.ServiceBase.CanStop%2A> é `true`, o comando de parada é passado para o serviço e o <xref:System.ServiceProcess.ServiceBase.OnStop%2A> método é chamado se ela está definida. Se <xref:System.ServiceProcess.ServiceBase.OnStop%2A> não está implementado no serviço, o SCM lida com o comando de parada.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.CanStop%2A> é `false`, o SCM ignora o comando de parada. Ela não é passada para o serviço. O comando parar retorna e lançará uma exceção.  
+  
+ <xref:System.ServiceProcess.ServiceBase.OnStop%2A>deve ser substituído na classe derivada. O serviço deve ser útil, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A> devem ser implementadas em sua classe de serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestAdditionalTime">
+      <MemberSignature Language="C#" Value="public void RequestAdditionalTime (int milliseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RequestAdditionalTime(int32 milliseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.RequestAdditionalTime(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="milliseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="milliseconds">O tempo solicitado em milissegundos.</param>
+        <summary>Solicita tempo adicional para uma operação pendente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceProcess.ServiceBase.RequestAdditionalTime%2A> método destina-se a ser chamado por substituído <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, ou <xref:System.ServiceProcess.ServiceBase.OnStop%2A> métodos para solicitar mais tempo para uma operação pendente, para impedir que o Gerenciador de controle de serviços (SCM) marcando o serviço como não está respondendo.  Se a operação pendente não é um continuar, pausar, iniciar ou parar, um <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O serviço não está em um estado pendente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run (System.ServiceProcess.ServiceBase service);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run(class System.ServiceProcess.ServiceBase service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.ServiceProcess.ServiceBase" />
+      </Parameters>
+      <Docs>
+        <param name="service">Um <see cref="T:System.ServiceProcess.ServiceBase" /> que indica um serviço para iniciar.</param>
+        <summary>Registra o executável para um serviço com o Gerenciador de Controle de Serviço (SCM).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar essa sobrecarga de `main()` função do serviço executável para registrar o serviço com o Gerenciador de controle de serviço. Depois de chamar <xref:System.ServiceProcess.ServiceBase.Run%28System.ServiceProcess.ServiceBase%29>, o Gerenciador de controle de serviço emite um comando de início, o que resulta em uma chamada para o <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método no serviço. O serviço não é iniciado até que o comando de início é executado.  
+  
+ O <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> método é chamado da mesma maneira como <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> para aplicativos de formulários do Windows.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é `true`, uma entrada é gravada no log de eventos se o serviço especificado pelo `service` parâmetro não pode ser iniciado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="service" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run (System.ServiceProcess.ServiceBase[] services);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run(class System.ServiceProcess.ServiceBase[] services) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="services" Type="System.ServiceProcess.ServiceBase[]" />
+      </Parameters>
+      <Docs>
+        <param name="services">Uma matriz de instâncias ServiceBase que indicam os serviços a iniciar.</param>
+        <summary>Registra o executável para vários serviços com o SCM (Gerenciador de Controle de Serviço).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar essa sobrecarga de `main()` função do serviço executável para registrar os serviços com o Gerenciador de controle de serviço. Depois de chamar <xref:System.ServiceProcess.ServiceBase.Run%28System.ServiceProcess.ServiceBase%5B%5D%29>, o Gerenciador de controle de serviço emite comandos de início, o que resultam em chamadas para o <xref:System.ServiceProcess.ServiceBase.OnStart%2A> métodos nos serviços. Os serviços não são iniciados até que os comandos de início são executados.  
+  
+ O <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> método é chamado da mesma maneira como o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método para aplicativos de formulários do Windows.  
+  
+ Se <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é `true`, uma entrada é gravada no log de eventos se qualquer serviço na matriz não for iniciado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Você não forneceu um serviço para iniciar. A matriz pode ser <see langword="null" /> ou vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceHandle">
+      <MemberSignature Language="C#" Value="protected IntPtr ServiceHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int ServiceHandle" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.ServiceHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a alça de controle de serviço para o serviço.</summary>
+        <value>Uma estrutura <see cref="T:System.IntPtr" /> que contém a alça de controle de serviço para o serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador de controle de serviço é usado para se comunicar com o Gerenciador de controle de serviços (SCM).  O identificador pode ser usado para atualizar as informações de status do Gerenciador de controle de serviço para o serviço de chamada usando não gerenciado `SetServiceStatus` função.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceMainCallback">
+      <MemberSignature Language="C#" Value="public void ServiceMainCallback (int argCount, IntPtr argPointer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ServiceMainCallback(int32 argCount, native int argPointer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.ServiceMainCallback(System.Int32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argCount" Type="System.Int32" />
+        <Parameter Name="argPointer" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="argCount">O número de argumentos na matriz de argumento.</param>
+        <param name="argPointer">Uma estrutura <see cref="T:System.IntPtr" /> que aponta para uma matriz de argumentos.</param>
+        <summary>Registra o manipulador de comandos e inicia o serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceName">
+      <MemberSignature Language="C#" Value="public string ServiceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServiceName" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceProcess.ServiceBase.ServiceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ServiceProcess.ServiceProcessDescription("SBServiceName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome curto usado para identificar o serviço no sistema.</summary>
+        <value>O nome do serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> identifica o serviço para o Gerenciador de controle de serviço. O valor dessa propriedade deve ser idêntico ao nome registrado para o serviço de <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A?displayProperty=nameWithType> propriedade da classe do instalador correspondente. No código, o <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> do serviço geralmente é definido `main()` função do executável.  
+  
+ O <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> também é usado para especificar o <xref:System.Diagnostics.EventLog.Source%2A?displayProperty=nameWithType> associados a <xref:System.ServiceProcess.ServiceBase.EventLog%2A> propriedade. Isso <xref:System.ServiceProcess.ServiceBase.EventLog%2A> é uma instância que grava informações de comando de serviço no log de aplicativo.  
+  
+ O <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>, que fornece a cadeia de caracteres de origem para o log de eventos deve ser definido antes do serviço grava o log de eventos. Tentativa de acessar o log de eventos antes que o nome de origem é definido faz com que uma exceção seja lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O serviço já foi iniciado. A propriedade <see cref="P:System.ServiceProcess.ServiceBase.ServiceName" /> não pode ser alterada depois que o serviço é iniciado.</exception>
+        <exception cref="T:System.ArgumentException">O nome especificado é uma cadeia de caracteres de tamanho zero ou é maior que <see cref="F:System.ServiceProcess.ServiceBase.MaxNameLength" /> ou o nome especificado contém caracteres de barra ou barra invertida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceProcess.ServiceBase.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o serviço em execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceProcess.ServiceBase.Stop%2A> método define o estado do serviço para indicar uma parada está pendente e chama o <xref:System.ServiceProcess.ServiceBase.OnStop%2A> método.  Depois que o aplicativo for interrompido, o estado do serviço é definido como parado. Se o aplicativo é um serviço hospedado, o domínio de aplicativo será descarregado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

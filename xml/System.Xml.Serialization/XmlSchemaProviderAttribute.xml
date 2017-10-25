@@ -1,0 +1,157 @@
+<Type Name="XmlSchemaProviderAttribute" FullName="System.Xml.Serialization.XmlSchemaProviderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlSchemaProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlSchemaProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSchemaProviderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Interface)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Quando aplicado a um tipo, armazena o nome de um método estático do tipo que retorna um esquema XML e um <see cref="T:System.Xml.XmlQualifiedName" /> (ou <see cref="T:System.Xml.Schema.XmlSchemaType" /> para tipos anônimos) que controla a serialização do tipo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O principal objetivo do <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> é habilitar o <xref:System.Xml.Serialization.XmlSchemaExporter> classe para retornar um esquema quando consultado pela ferramenta Web Services Description Language (WSDL.exe) ou ao usar o **adicionar referência Web** recurso de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Você pode controlar o esquema real para o tipo no método estático.  
+  
+> [!NOTE]
+>  A classe de destino do atributo deve implementar o <xref:System.Xml.Serialization.IXmlSerializable> interface.  
+  
+ O <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.MethodName%2A> propriedade retorna o nome de um método estático por meio de reflexão. O método, que deve ser implementado, deve receber um único parâmetro, um <xref:System.Xml.Schema.XmlSchemaSet> objeto, que preenche o método com um <xref:System.Xml.Schema.XmlSchema> objeto. O método também deve retornar um <xref:System.Xml.XmlQualifiedName> objeto que identifica o tipo de dados.  
+  
+## <a name="returning-anonymous-types"></a>Retornando tipos anônimos  
+ Um tipo complexo anônimo não pode ser criado usando um método que retorna <xref:System.Xml.XmlQualifiedName>. Como um tipo anônimo não tem nome, e você não pode adicionar um tipo anônimo para um esquema, o tipo anônimo deve ser retornado como um <xref:System.Xml.Schema.XmlSchemaType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir aplica-se a <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> a uma classe do lado do servidor. Quando chamado, o método é chamado pelo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.MethodName%2A> propriedade cria o esquema. Essa implementação simple lê um esquema existente do disco. No entanto, você também pode criar um esquema personalizado, se necessário, usando os tipos encontrados no <xref:System.Xml.Schema> namespace.  
+  
+ [!code-csharp[HowToChunkSerializedData#2](~/samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#2)]
+ [!code-vb[HowToChunkSerializedData#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HowToChunkSerializedData/VB/SerializationChunk.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaProviderAttribute (string methodName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string methodName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSchemaProviderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="methodName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="methodName">O nome do método estático que deve ser implementado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlSchemaProviderAttribute" /> classe, levando o nome do método estático que fornece o esquema do XML do tipo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAny">
+      <MemberSignature Language="C#" Value="public bool IsAny { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAny" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se a classe de destino é um curinga, ou que tem o esquema para a classe contém apenas um <see langword="xs:any" /> elemento.</summary>
+        <value>
+          <see langword="true" />, se a classe é um caractere curinga, ou se o esquema contém apenas o <see langword="xs:any" /> elemento; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe de destino do atributo pode ser qualquer classe. Isso pode ser obtido das seguintes maneiras:  
+  
+-   O método chamado pelo atributo pode retornar `null`.  
+  
+-   Definir o valor dessa propriedade como `true` para impedir que o método que está sendo chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlSchemaProviderAttribute.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do método estático que fornece o esquema do XML do tipo e o nome do seu tipo de dados de esquema XML.</summary>
+        <value>O nome do método que é invocado pela infraestrutura de XML para retornar um esquema XML.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

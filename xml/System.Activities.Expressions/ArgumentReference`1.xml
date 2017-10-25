@@ -1,0 +1,135 @@
+<Type Name="ArgumentReference&lt;T&gt;" FullName="System.Activities.Expressions.ArgumentReference&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ArgumentReference&lt;T&gt; : System.Activities.Expressions.EnvironmentLocationReference&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ArgumentReference`1&lt;T&gt; extends System.Activities.Expressions.EnvironmentLocationReference`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Expressions.ArgumentReference`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.Expressions.EnvironmentLocationReference&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">T</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo do argumento retornado pelo <see cref="T:System.Activities.Expressions.ArgumentReference`1" />.</typeparam>
+    <summary>Representa um <see cref="T:System.Activities.Argument" /> usado como um l-value em uma expressão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ArgumentReference`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Expressions.ArgumentReference`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentReference (string argumentName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string argumentName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ArgumentReference`1.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argumentName">O nome do argumento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.Expressions.ArgumentReference`1" /> classe com o nome do argumento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentName">
+      <MemberSignature Language="C#" Value="public string ArgumentName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ArgumentName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.ArgumentReference`1.ArgumentName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do argumento para o qual uma referência é retornada.</summary>
+        <value>O nome do argumento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.CodeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.CodeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ArgumentReference`1.CacheMetadata(System.Activities.CodeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.CodeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationReference">
+      <MemberSignature Language="C#" Value="public override System.Activities.LocationReference LocationReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.LocationReference LocationReference" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.ArgumentReference`1.LocationReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.LocationReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a referência ao local.</summary>
+        <value>A referência ao local.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.ArgumentReference`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> representação do <see cref="T:System.Activities.Expressions.ArgumentReference`1" />.</summary>
+        <returns>O argumento de nome, se o <see cref="P:System.Activities.Expressions.ArgumentReference`1.ArgumentName" /> tiver sido definido, caso contrário, a ID de atividade e nome.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

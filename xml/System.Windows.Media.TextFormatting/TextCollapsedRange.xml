@@ -1,0 +1,80 @@
+<Type Name="TextCollapsedRange" FullName="System.Windows.Media.TextFormatting.TextCollapsedRange">
+  <TypeSignature Language="C#" Value="public sealed class TextCollapsedRange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextCollapsedRange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextCollapsedRange" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o intervalo de caracteres e suas medidas de largura para texto recolhido dentro de uma linha.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recolhimento de linha é a capacidade de reduzir o espaço de exibição para uma linha, mostrando não faz parte do texto da linha. Dependendo do estilo recolhido, um símbolo de recolhimento pode ser mostrado no local em que ocorreu o texto recolhido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextCollapsedRange.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de caracteres para o texto recolhido.</summary>
+        <value>Um <see cref="T:System.Int32" /> recolhido de valor que representa o número de caracteres de texto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSourceCharacterIndex">
+      <MemberSignature Language="C#" Value="public int TextSourceCharacterIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextSourceCharacterIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextCollapsedRange.TextSourceCharacterIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do primeiro caractere no <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> representa recolhido caracteres de texto.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que representa o índice do primeiro caractere do texto recolhido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextCollapsedRange.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A largura total dos caracteres de texto recolhido.</summary>
+        <value>Um <see cref="T:System.Double" /> valor que representa a largura dos caracteres de texto recolhido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

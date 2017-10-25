@@ -1,0 +1,116 @@
+<Type Name="BaseDataListComponentEditor" FullName="System.Web.UI.Design.WebControls.BaseDataListComponentEditor">
+  <TypeSignature Language="C#" Value="public abstract class BaseDataListComponentEditor : System.Windows.Forms.Design.WindowsFormsComponentEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BaseDataListComponentEditor extends System.Windows.Forms.Design.WindowsFormsComponentEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.BaseDataListComponentEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Design.WindowsFormsComponentEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um editor de componente a classe base para controles de servidor Web que derivam de <see cref="T:System.Web.UI.WebControls.BaseDataList" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um editor de componente fornece uma interface de usuário para editar as propriedades de um controle. Editores de componente são chamados de designers de controle usando o **propriedade construtor** item de menu no menu de contexto do controle. Editores de componente que são derivados do <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor> classe são chamados de designers derivados de <xref:System.Web.UI.Design.WebControls.BaseDataListDesigner> classe e são usados para editar as propriedades de controles que são derivados do <xref:System.Web.UI.WebControls.BaseDataList> classe. Para obter exemplos de tais controles, consulte <xref:System.Web.UI.WebControls.DataGrid> e <xref:System.Web.UI.WebControls.DataList>.  
+  
+ O <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent%2A> método exibe um editor de componente para o controle associado, se ele pode ser criado. O <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.GetInitialComponentEditorPageIndex%2A> método retorna o índice da página inicial a ser exibida no editor de componente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BaseDataListComponentEditor (int initialPage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialPage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialPage" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialPage">O índice na matriz de tipos de controle de página da página inicial para exibir.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.BaseDataListComponentEditor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer que é derivado do <xref:System.Web.UI.Design.WebControls.BaseDataListDesigner> classe cria um editor de componente que é derivado do <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor> classe, quando o usuário seleciona **propriedade construtor** no menu de contexto dentro do designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditComponent">
+      <MemberSignature Language="C#" Value="public override bool EditComponent (System.ComponentModel.ITypeDescriptorContext context, object obj, System.Windows.Forms.IWin32Window parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool EditComponent(class System.ComponentModel.ITypeDescriptorContext context, object obj, class System.Windows.Forms.IWin32Window parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="parent" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> objeto que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="obj">Um <see cref="T:System.Object" /> Implementando o <see cref="T:System.ComponentModel.IComponent" />, que representa o componente para editar.</param>
+        <param name="parent">O <see cref="T:System.Windows.Forms.IWin32Window" /> que representa a janela pai.</param>
+        <summary>Edita o componente especificado usando a janela pai e o descritor de contexto especificado.</summary>
+        <returns>
+          <see langword="true" />o componente foi editado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent%2A> método obtém um <xref:System.Type> matriz de tipos de controle de página usando o <xref:System.Windows.Forms.Design.WindowsFormsComponentEditor.GetComponentEditorPages%2A> método. Ele cria um <xref:System.Windows.Forms.Design.ComponentEditorForm> objeto e, em seguida, chama seus <xref:System.Windows.Forms.Design.ComponentEditorForm.ShowForm%2A> método para exibir o editor do componente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Windows.Forms.Design.WindowsFormsComponentEditor.GetComponentEditorPages" /> método deve ter sido substituído para retornar um <see cref="T:System.Type" /> matriz de tipos de controle de página. Essa matriz deve existir para que o <see cref="Overload:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.EditComponent" /> método tenha êxito.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInitialComponentEditorPageIndex">
+      <MemberSignature Language="C#" Value="protected override int GetInitialComponentEditorPageIndex ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 GetInitialComponentEditorPageIndex() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.BaseDataListComponentEditor.GetInitialComponentEditorPageIndex" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o índice da página inicial para exibir no editor do componente.</summary>
+        <returns>O índice da página inicial na matriz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página inicial é especificada quando o <xref:System.Web.UI.Design.WebControls.BaseDataListComponentEditor> objeto é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

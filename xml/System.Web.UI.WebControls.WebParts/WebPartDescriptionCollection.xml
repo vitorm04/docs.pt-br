@@ -1,0 +1,232 @@
+<Type Name="WebPartDescriptionCollection" FullName="System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartDescriptionCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartDescriptionCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Consiste em uma coleção de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> objetos a ser usado com catálogos de <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> classe é criada pelas várias <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles em suas implementações do <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> método. Para cada <xref:System.Web.UI.WebControls.WebParts.WebPart> controle que está contido em um <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle, um <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto é criado. Esse objeto mantém as informações básicas sobre um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, incluindo sua ID, título, sua descrição e um caminho para um ícone associado. As várias <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles podem usar um <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto para exibir um <xref:System.Web.UI.WebControls.WebParts.WebPart> informações do controle no catálogo, sem a necessidade de criar uma instância do <xref:System.Web.UI.WebControls.WebParts.WebPart> próprio controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> classe é usada internamente pelo controle Web Parts definido para manter uma coleção de todos os <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objetos usados em um catálogo. O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> coleção é usada somente quando uma página está no modo de exibição de catálogo. Quando um <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle está sendo processado, percorre o <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> coleção, adicionar as informações de cada <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto no catálogo exibido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDescriptionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância vazia do <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.%23ctor%2A> construtor pode ser usado para criar uma coleção vazia. Por exemplo, o <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart> controle cria vazio <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> objeto se o conteúdo de um arquivo de descrição importado é `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebPartDescriptionCollection (System.Collections.ICollection webPartDescriptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection webPartDescriptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="webPartDescriptions" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="webPartDescriptions">Uma coleção de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> objetos que correspondem do <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles em um catálogo.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" /> objeto passando um <see cref="T:System.Collections.ICollection" /> coleção de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.%23ctor%28System.Collections.ICollection%29> construtor é usado pelo <xref:System.Web.UI.WebControls.WebParts.CatalogPart.GetAvailableWebPartDescriptions%2A> implementações de método em vários <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles para criar uma coleção de <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objetos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="webPartDescriptions" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um membro de <paramref name="webPartDescriptions" /> é<see langword="null" />  
+  
+ -ou-  
+  
+ Um membro de <paramref name="webPartDescriptions" /> não é um objeto do tipo<see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" />  
+  
+ -ou-  
+  
+ Um membro de <paramref name="webPartDescriptions" /> tem uma duplicata <see cref="P:System.Web.UI.WebControls.WebParts.WebPartDescription.ID" /> propriedade</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.WebPartDescription value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.WebPartDescription value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Contains(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" />.</param>
+        <summary>Retorna um valor que indica se um determinado controle existe na coleção.</summary>
+        <returns>Um valor booliano que indica se um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> existe em um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Contains%2A> método permite que você determine se um determinado <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objeto faz parte de um <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.WebPartDescription[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.WebPartDescription[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.CopyTo(System.Web.UI.WebControls.WebParts.WebPartDescription[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.WebPartDescription[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> objetos para conter a coleção copiada.</param>
+        <param name="index">O ponto inicial na matriz na qual o conteúdo da coleção será colocado.</param>
+        <summary>Copia a coleção para uma matriz de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.CopyTo%2A> método é útil quando você deseja montar uma matriz personalizada que contém o <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objetos no <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.WebPartDescription value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.WebPartDescription value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.IndexOf(System.Web.UI.WebControls.WebParts.WebPartDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDescription" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> que é um membro da coleção.</param>
+        <summary>Retorna a posição de um membro específico da coleção.</summary>
+        <returns>Um inteiro que indica a posição de um objeto específico da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.IndexOf%2A> método será útil se você tiver vários <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objetos e você precisa saber a posição ordinal de um objeto em relação a outras pessoas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDescription this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDescription Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> em uma coleção.</param>
+        <summary>Obtém um membro da coleção com base em seu índice na coleção.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item%2A> indexador permite que você acesse subjacente <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> objetos em um <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> coleção por índice.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDescription this[string id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDescription Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">A cadeia de caracteres que serve como um identificador exclusivo para um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> em uma coleção.</param>
+        <summary>Obtém um membro da coleção com base em um identificador de cadeia de caracteres exclusiva.</summary>
+        <value>A primeira <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDescription" /> na coleção cuja ID igual ao valor de <paramref name="id" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection.Item%2A> indexador permite que você acesse um <xref:System.Web.UI.WebControls.WebParts.WebPartDescription> do objeto em um <xref:System.Web.UI.WebControls.WebParts.WebPartDescriptionCollection> coleta de acordo com um identificador exclusivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

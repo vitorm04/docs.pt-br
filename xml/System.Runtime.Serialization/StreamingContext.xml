@@ -1,0 +1,275 @@
+<Type Name="StreamingContext" FullName="System.Runtime.Serialization.StreamingContext">
+  <TypeSignature Language="C#" Value="public struct StreamingContext" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit StreamingContext extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.StreamingContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve a origem e o destino de um determinado fluxo serializado e fornece um contexto adicional definido pelo chamador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Indica a origem ou destino os bits que usa o formatador. Classes com substitutos ou que implementam <xref:System.Runtime.Serialization.ISerializable> pode serializar ou ignorar campos e valores com base em informações armazenadas no contexto de streaming. Por exemplo, um identificador de janela ainda é válido se o <xref:System.Runtime.Serialization.StreamingContext.State%2A> está definida como `System.Runtime.Serialization.StreamingContextStates.CrossProcess`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Runtime.Serialization.StreamingContext> estrutura.  
+  
+ [!code-csharp[StreamingContext Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/StreamingContext Example/CS/streamingcontext.cs#1)]
+ [!code-vb[StreamingContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/StreamingContext Example/VB/streamingcontext.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamingContext (System.Runtime.Serialization.StreamingContextStates state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Serialization.StreamingContextStates state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.StreamingContext.#ctor(System.Runtime.Serialization.StreamingContextStates)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Runtime.Serialization.StreamingContextStates" />
+      </Parameters>
+      <Docs>
+        <param name="state">Uma combinação bit a bit dos valores <see cref="T:System.Runtime.Serialization.StreamingContextStates" /> que especificam o contexto de origem ou de destino para deste <see cref="T:System.Runtime.Serialization.StreamingContext" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.StreamingContext" /> com determinado estado de contexto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamingContext (System.Runtime.Serialization.StreamingContextStates state, object additional);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Serialization.StreamingContextStates state, object additional) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.StreamingContext.#ctor(System.Runtime.Serialization.StreamingContextStates,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Runtime.Serialization.StreamingContextStates" />
+        <Parameter Name="additional" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Uma combinação bit a bit dos valores <see cref="T:System.Runtime.Serialization.StreamingContextStates" /> que especificam o contexto de origem ou de destino para deste <see cref="T:System.Runtime.Serialization.StreamingContext" />.</param>
+        <param name="additional">Qualquer informação adicional a ser associado com o <see cref="T:System.Runtime.Serialization.StreamingContext" />. Essas informações estão disponíveis para qualquer objeto que implementa <see cref="T:System.Runtime.Serialization.ISerializable" /> ou qualquer substituto de serialização. A maioria dos usuários não precisa definir esse parâmetro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Serialization.StreamingContext" /> classe com um estado de contexto fornecido e algumas informações adicionais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma instância do <xref:System.Runtime.Serialization.StreamingContext> classe usando o `state` e `additional` parâmetros.  
+  
+ [!code-csharp[StreamingContext_Context#0](~/samples/snippets/csharp/VS_Snippets_Remoting/StreamingContext_Context/CS/StreamingContext_Context.cs#0)]
+ [!code-vb[StreamingContext_Context#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/StreamingContext_Context/VB/StreamingContext_Context.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public object Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Context" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.StreamingContext.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contexto especificado como parte do contexto adicional.</summary>
+        <value>O contexto especificado como parte do contexto adicional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pode ser `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma instância do <xref:System.Runtime.Serialization.StreamingContext> classe usando o `state` e `additional` parâmetros. O código também mostra a desserialização de um objeto e recuperar o valor da <xref:System.Runtime.Serialization.StreamingContext.Context%2A> propriedade.  
+  
+ [!code-csharp[StreamingContext_Context#0](~/samples/snippets/csharp/VS_Snippets_Remoting/StreamingContext_Context/CS/StreamingContext_Context.cs#0)]
+ [!code-vb[StreamingContext_Context#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/StreamingContext_Context/VB/StreamingContext_Context.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.StreamingContext.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com a instância atual.</param>
+        <summary>Determina se dois <see cref="T:System.Runtime.Serialization.StreamingContext" /> instâncias contêm os mesmos valores.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for uma instância de <see cref="T:System.Runtime.Serialization.StreamingContext" /> e é igual ao valor da instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois grupos de código são equivalentes, se eles tiverem o mesmo <xref:System.Runtime.Serialization.StreamingContext.Context%2A> e <xref:System.Runtime.Serialization.StreamingContext.State%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.StreamingContext.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash deste objeto.</summary>
+        <returns>O <see cref="T:System.Runtime.Serialization.StreamingContextStates" /> valor que contém a origem ou destino de serialização para este <see cref="T:System.Runtime.Serialization.StreamingContext" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.StreamingContextStates State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Serialization.StreamingContextStates State" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.StreamingContext.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.StreamingContextStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a origem ou o destino dos dados transmitidos.</summary>
+        <value>Durante a serialização, o destino dos dados transmitidos. Durante a desserialização, a fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a serialização, a propriedade atual Especifica o destino dos dados transmitidos. Por exemplo, ao serializar os dados de cross-AppDomain remotamente, o <xref:System.Runtime.Serialization.StreamingContextStates> é <xref:System.Runtime.Serialization.StreamingContextStates.CrossProcess>. Durante a desserialização, o estado indica a origem do fluxo desserializado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[StreamingContext Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/StreamingContext Example/CS/streamingcontext.cs#1)]
+ [!code-vb[StreamingContext Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/StreamingContext Example/VB/streamingcontext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

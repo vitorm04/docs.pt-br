@@ -1,0 +1,92 @@
+<Type Name="SqlProcedureAttribute" FullName="Microsoft.SqlServer.Server.SqlProcedureAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SqlProcedureAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SqlProcedureAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.SqlServer.Server.SqlProcedureAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Usado para marcar uma definição de método em um assembly como um procedimento armazenado. As propriedades do atributo refletem as características físicas usadas quando o tipo é registrado no SQL Server. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:Microsoft.SqlServer.Server.SqlProcedureAttribute>é usado somente pelo Microsoft Visual Studio para se registrar automaticamente o método especificado como um procedimento armazenado. Ele não é usado pelo SQL Server.  
+  
+ Consulte exemplos e os procedimentos de "Procedimentos armazenados CLR" no SQL Server 2005 Books Online para obter mais informações sobre CLR armazenado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma declaração de método em um assembly que foi atribuído como um procedimento armazenado. O <xref:Microsoft.SqlServer.Server.SqlProcedureAttribute> propriedade foi definida para o nome do procedimento armazenado.  
+  
+ [!code-csharp[DataWorks SqlProcedureAttribute#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlProcedureAttribute/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlProcedureAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlProcedureAttribute/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlProcedureAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.SqlServer.Server.SqlProcedureAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Um atributo em uma definição de método em um assembly, usado para indicar que o método em questão deve ser registrado como um procedimento armazenado no SQL Server.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.SqlServer.Server.SqlProcedureAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do procedimento armazenado.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o nome do procedimento armazenado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade é opcional.  
+  
+ O exemplo a seguir especifica que o procedimento armazenado é referenciado usando o nome `sp_sqlName`.  
+  
+   
+  
+## Examples  
+ [!code-csharp[VbRaddataSQLObjects#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSQLObjects/CS/InsertCurrency.cs#7)]
+ [!code-vb[VbRaddataSQLObjects#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSQLObjects/VB/InsertCurrency.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

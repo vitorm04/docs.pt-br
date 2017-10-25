@@ -1,0 +1,98 @@
+<Type Name="UIPermissionClipboard" FullName="System.Security.Permissions.UIPermissionClipboard">
+  <TypeSignature Language="C#" Value="public enum UIPermissionClipboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed UIPermissionClipboard extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.UIPermissionClipboard" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de acesso de área de transferência que é permitido para o código de chamada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por <xref:System.Security.Permissions.UIPermission>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllClipboard">
+      <MemberSignature Language="C#" Value="AllClipboard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionClipboard AllClipboard = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionClipboard.AllClipboard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionClipboard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A Área de Transferência pode ser usada sem restrição.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoClipboard">
+      <MemberSignature Language="C#" Value="NoClipboard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionClipboard NoClipboard = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionClipboard.NoClipboard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionClipboard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não é possível usar a Área de Transferência.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnClipboard">
+      <MemberSignature Language="C#" Value="OwnClipboard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Permissions.UIPermissionClipboard OwnClipboard = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Permissions.UIPermissionClipboard.OwnClipboard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.UIPermissionClipboard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A capacidade de colocar dados na área de transferência (<see langword="Copy" />, <see langword="Cut" />) é irrestrita. Controles intrínsecos que aceitam <see langword="Paste" />, como uma caixa de texto, podem aceitar os dados da área de transferência, mas os controles de usuário que devem ler programaticamente a área de transferência não podem.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

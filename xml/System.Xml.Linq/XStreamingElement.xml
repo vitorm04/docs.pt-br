@@ -1,0 +1,1954 @@
+<Type Name="XStreamingElement" FullName="System.Xml.Linq.XStreamingElement">
+  <TypeSignature Language="C#" Value="public class XStreamingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XStreamingElement extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XStreamingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os elementos em uma árvore XML que dá suporte à saída de transmissão adiada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe permite que você crie uma árvore XML que dá suporte à saída de transmissão adiada. Use essa classe para criar uma árvore XML de maneira muito semelhante à criação de uma árvore XML com <xref:System.Xml.Linq.XElement>. No entanto, há uma diferença fundamental. Quando você usa uma consulta LINQ para especificar o conteúdo ao criar um XML de árvore usando <xref:System.Xml.Linq.XElement>, a variável de consulta é iterada no momento da construção da árvore XML e os resultados da consulta são adicionados à árvore XML. Por outro lado, ao criar uma árvore XML com <xref:System.Xml.Linq.XStreamingElement>, uma referência à variável de consulta é armazenada na árvore XML sem iterado. Consultas são iteradas somente após a serialização. Isso permite que você crie maior árvores XML, mantendo um menor volume de memória.  
+  
+ Se você estiver realizando o streaming de uma fonte de entrada, como um arquivo de texto, você pode ler um arquivo de texto muito grandes e gerar um documento XML muito grande, mantendo um espaço de memória pequenos.  
+  
+ Outro cenário é que você tem uma grande árvore XML que tenha sido carregada na memória, e você deseja criar uma versão transformada do documento. Se você criar um novo documento usando <xref:System.Xml.Linq.XElement>, em seguida, você terá duas árvores XML grandes na memória após a conclusão da transformação. No entanto, se você criar a nova árvore XML com <xref:System.Xml.Linq.XStreamingElement>, em seguida, o conjunto de trabalho será retirado efetivamente na metade.  
+  
+ Observe que durante a depuração de um programa que usa <xref:System.Xml.Linq.XStreamingElement>, exibir o valor de um objeto faz com que seu <xref:System.Xml.Linq.XStreamingElement.ToString%2A> método a ser chamado. Isso faz com que o XML a ser serializado. Se a semântica da consulta elemento streaming, de modo que o elemento de streaming só pode ser transmitido uma vez, isso pode causar comportamento indesejado na sua experiência de depuração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma árvore XML de origem. Ele cria uma transformação de origem XML árvore usando <xref:System.Xml.Linq.XElement>. Essa transformação cria uma nova árvore na memória. Ele cria uma transformação de origem XML árvore usando <xref:System.Xml.Linq.XStreamingElement>. Essa transformação não executa a consulta até que a árvore transformada é serializada no console. O uso de memória é menor.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XElement dstTree1 = new XElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el >= 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+XStreamingElement dstTree2 = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el >= 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+Console.WriteLine(dstTree1);  
+Console.WriteLine("------");  
+Console.WriteLine(dstTree2);  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+        <Root>  
+            <Child>1</Child>  
+            <Child>2</Child>  
+            <Child>3</Child>  
+            <Child>4</Child>  
+            <Child>5</Child>  
+        </Root>  
+  
+Dim dstTree1 As XElement = _  
+    <NewRoot>  
+        <%= From el In srcTree.Elements _  
+            Where (el.Value >= 3) _  
+            Select <DifferentChild><%= el.Value %></DifferentChild> %>  
+    </NewRoot>  
+  
+Dim dstTree2 As XStreamingElement = New XStreamingElement("NewRoot", _  
+                From el In srcTree.Elements _  
+                Where el.Value >= 3 _  
+                Select <DifferentChild><%= el.Value %></DifferentChild> _  
+            )  
+  
+Console.WriteLine(dstTree1)  
+Console.WriteLine("------")  
+Console.WriteLine(dstTree2)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+                <NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+  <DifferentChild>4</DifferentChild>  
+  <DifferentChild>5</DifferentChild>  
+</NewRoot>  
+------  
+<NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+  <DifferentChild>4</DifferentChild>  
+  <DifferentChild>5</DifferentChild>  
+</NewRoot>  
+```  
+  
+ Uma abordagem para processar um arquivo de texto é escrever um método de extensão que passa o arquivo de texto uma linha em uma hora usando a compilação de `yield return` . Você então pode escrever uma consulta LINQ que processa o arquivo de texto em uma forma adiada lazy. Se você usar o <xref:System.Xml.Linq.XStreamingElement> para saída de fluxo, você pode criar uma transformação do arquivo de texto para XML que usa uma quantidade mínima de memória, independentemente do tamanho do arquivo de texto de origem.  
+  
+ O seguinte arquivo de texto, People.txt, é a fonte para esse exemplo.  
+  
+```  
+  
+                #This is a comment  
+1,Tai,Yee,Writer  
+2,Nikolay,Grachev,Programmer  
+3,David,Wright,Inventor  
+```  
+  
+ O código a seguir contém um método de extensão que passa as linhas do arquivo de texto em uma forma adiada.  
+  
+```csharp  
+  
+                public static class StreamReaderSequence  
+{  
+    public static IEnumerable<string> Lines(this StreamReader source)  
+    {  
+        String line;  
+  
+        if (source == null)  
+            throw new ArgumentNullException("source");  
+        while ((line = source.ReadLine()) != null)  
+        {  
+            yield return line;  
+        }  
+    }  
+}  
+  
+class Program  
+{  
+    static void Main(string[] args)  
+    {  
+        StreamReader sr = new StreamReader("People.txt");  
+        XStreamingElement xmlTree = new XStreamingElement("Root",  
+            from line in sr.Lines()  
+            let items = line.Split(',')  
+            where !line.StartsWith("#")  
+            select new XElement("Person",  
+                       new XAttribute("ID", items[0]),  
+                       new XElement("First", items[1]),  
+                       new XElement("Last", items[2]),  
+                       new XElement("Occupation", items[3])  
+                   )  
+        );  
+        Console.WriteLine(xmlTree);  
+        sr.Close();  
+    }  
+}  
+```  
+  
+```vb  
+Module StreamReaderSequence  
+  
+    <Runtime.CompilerServices.Extension>  
+    Public Iterator Function Lines(source As IO.StreamReader) As IEnumerable(Of String)  
+        If source Is Nothing Then Throw New ArgumentNullException("source")  
+        Dim line As String = source.ReadLine()  
+        While (line <> Nothing)  
+            Yield line  
+            line = source.ReadLine()  
+        End While  
+    End Function  
+  
+End Module  
+  
+Module Module1  
+    Sub Main()  
+        Dim sr As New IO.StreamReader("People.txt")  
+        Dim xmlTree As New XStreamingElement("Root",  
+            From line In sr.Lines()  
+            Let items = line.Split(","c)  
+            Where Not line.StartsWith("#")  
+            Select <Person ID=<%= items(0) %>>  
+                       <First><%= items(1) %></First>  
+                       <Last><%= items(2) %></Last>  
+                       <Occupation><%= items(3) %></Occupation>  
+                   </Person>)  
+        Console.WriteLine(xmlTree)  
+        sr.Close()  
+    End Sub  
+End Module  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <Root>  
+  <Person ID="1">  
+    <First>Tai</First>  
+    <Last>Yee</Last>  
+    <Occupation>Writer</Occupation>  
+  </Person>  
+  <Person ID="2">  
+    <First>Nikolay</First>  
+    <Last>Grachev</Last>  
+    <Occupation>Programmer</Occupation>  
+  </Person>  
+  <Person ID="3">  
+    <First>David</First>  
+    <Last>Wright</Last>  
+    <Occupation>Inventor</Occupation>  
+  </Person>  
+</Root>  
+```  
+  
+ Às vezes você precisa transformar grandes arquivos XML e escrever seu aplicativo de modo que os requisitos de memória do aplicativo sejam previsíveis. Se você tentar preencher uma árvore XML com um arquivo XML muito grande, seu uso de memória será proporcional ao tamanho do arquivo (isto é, excessivo). Portanto, você deve usar uma técnica de streaming em vez disso.  
+  
+ Determinados operadores de consulta padrão, como <xref:System.Linq.Enumerable.OrderBy%2A>, iteram sua origem, coletam todos os dados, classificam e, em seguida, geram finalmente o primeiro item na sequência. Observe que se você usar um operador de consulta que materializa sua origem antes de gerar o primeiro item, você não manterá um requisito pequeno de memória para seu aplicativo.  
+  
+ Mesmo se você usar a técnica descrita, se você tentar montar uma árvore XML que contém o documento transformado, uso de memória pode ser muito grande.  
+  
+ O exemplo a seguir cria o exemplo na [como: fragmentos XML de fluxo com acesso a informações de cabeçalho](http://msdn.microsoft.com/library/01311522-9d03-4977-8641-2932c6f56092).  
+  
+ Este exemplo usa os recursos de execução adiada de <xref:System.Xml.Linq.XStreamingElement> para transmitir a saída.  
+  
+ Observe que o eixo personalizado (`StreamCustomerItem`) é escrito especificamente para esperar um documento que tem os elementos `Customer`, `Name` e `Item`, e que esses elementos serão organizados como no documento Source.xml a seguir. Uma implementação mais robusta, no entanto, validaria o documento de origem com um XSD ou seria preparada para analisar um documento inválido.  
+  
+ Veja a seguir o documento de origem, Source.xml:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-8" ?>   
+<Root>  
+  <Customer>  
+    <Name>A. Datum Corporation</Name>  
+    <Item>  
+      <Key>0001</Key>  
+    </Item>  
+    <Item>  
+      <Key>0002</Key>  
+    </Item>  
+    <Item>  
+      <Key>0003</Key>  
+    </Item>  
+    <Item>  
+      <Key>0004</Key>  
+    </Item>  
+  </Customer>  
+  <Customer>  
+    <Name>Fabrikam, Inc.</Name>  
+    <Item>  
+      <Key>0005</Key>  
+    </Item>  
+    <Item>  
+      <Key>0006</Key>  
+    </Item>  
+    <Item>  
+      <Key>0007</Key>  
+    </Item>  
+    <Item>  
+      <Key>0008</Key>  
+    </Item>  
+  </Customer>  
+  <Customer>  
+    <Name>Southridge Video</Name>  
+    <Item>  
+      <Key>0009</Key>  
+    </Item>  
+    <Item>  
+      <Key>0010</Key>  
+    </Item>  
+  </Customer>  
+</Root>  
+```  
+  
+ O código a seguir contém um método que usa um <xref:System.Xml.XmlReader> para transmitir o XML de origem. Ele usa <xref:System.Xml.Linq.XStreamingElement> para transmitir o novo XML.  
+  
+```csharp  
+  
+                static IEnumerable<XElement> StreamCustomerItem(string uri)  
+{  
+    using (XmlReader reader = XmlReader.Create(uri))  
+    {  
+        XElement name = null;  
+        XElement item = null;  
+  
+        reader.MoveToContent();  
+  
+        // Parse the file, save header information when encountered, and yield the  
+        // Item XElement objects as they are created.  
+  
+        // loop through Customer elements  
+        while (reader.Read())  
+        {  
+            if (reader.NodeType == XmlNodeType.Element  
+                && reader.Name == "Customer")  
+            {  
+                // move to Name element  
+                while (reader.Read())  
+                {  
+                    if (reader.NodeType == XmlNodeType.Element &&  
+                        reader.Name == "Name")  
+                    {  
+                        name = XElement.ReadFrom(reader) as XElement;  
+                        break;  
+                    }  
+                }  
+  
+                // loop through Item elements  
+                while (reader.Read())  
+                {  
+                    if (reader.NodeType == XmlNodeType.EndElement)  
+                        break;  
+                    if (reader.NodeType == XmlNodeType.Element  
+                        && reader.Name == "Item")  
+                    {  
+                        item = XElement.ReadFrom(reader) as XElement;  
+                        if (item != null)  
+                        {  
+                            XElement tempRoot = new XElement("Root",  
+                                new XElement(name)  
+                            );  
+                            tempRoot.Add(item);  
+                            yield return item;  
+                        }  
+                    }  
+                }  
+            }  
+        }  
+    }  
+}  
+  
+static void Main(string[] args)  
+{  
+    XStreamingElement root = new XStreamingElement("Root",  
+        from el in StreamCustomerItem("Source.xml")  
+        select new XElement("Item",  
+            new XElement("Customer", (string)el.Parent.Element("Name")),  
+            new XElement(el.Element("Key"))  
+        )  
+    );  
+    root.Save("Test.xml");  
+    Console.WriteLine(File.ReadAllText("Test.xml"));  
+}  
+```  
+  
+```vb  
+Iterator Function StreamCustomerItem(uri As String) As IEnumerable(Of XElement)  
+  
+    Dim name As XElement = Nothing  
+    Dim item As XElement = Nothing  
+  
+    Dim reader As XmlReader = XmlReader.Create(uri)  
+    reader.MoveToContent()  
+  
+    ' Parse the file, save header information when encountered, and yield the  
+    ' Item XElement objects as they are created.  
+  
+    ' Loop through Customer elements.  
+    While (reader.Read())  
+        If (reader.NodeType = XmlNodeType.Element And reader.Name = "Customer") Then  
+            While (reader.Read())  
+                ' Move to Name element  
+                If (reader.NodeType = XmlNodeType.Element And reader.Name = "Name") Then  
+                    name = CType(XElement.ReadFrom(reader), XElement)  
+                    Exit While  
+                End If  
+            End While  
+  
+            ' Loop through Item elements  
+            While (reader.Read())  
+                If (reader.NodeType = XmlNodeType.EndElement) Then  
+                    Exit While  
+                End If  
+  
+                If (reader.NodeType = XmlNodeType.Element And reader.Name = "Item") Then  
+                    item = CType(XElement.ReadFrom(reader), XElement)  
+                    If (Not (item Is Nothing)) Then  
+                        Dim tempRoot = New XElement("Root",  
+                            New XElement(name)  
+                        )  
+                        tempRoot.Add(item)  
+                        Yield item  
+                     End If  
+                End If  
+            End While  
+        End If  
+     End While  
+    reader.Close()  
+End Function  
+  
+Sub Main()  
+    Dim root As New XStreamingElement("Root",  
+        From el In StreamCustomerItem("c:\trash\Source.xml")  
+        Select New XElement("Item",  
+            New XElement("Customer", CStr(el.Parent.Element("Name"))),  
+            New XElement(el.Element("Key"))))  
+    root.Save("c:\trash\Test.xml")  
+    Console.WriteLine(System.IO.File.ReadAllText("c:\trash\Test.xml"))  
+End Sub  
+  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-8"?>  
+<Root>  
+  <Item>  
+    <Customer>A. Datum Corporation</Customer>  
+    <Key>0001</Key>  
+  </Item>  
+  <Item>  
+    <Customer>A. Datum Corporation</Customer>  
+    <Key>0002</Key>  
+  </Item>  
+  <Item>  
+    <Customer>A. Datum Corporation</Customer>  
+    <Key>0003</Key>  
+  </Item>  
+  <Item>  
+    <Customer>A. Datum Corporation</Customer>  
+    <Key>0004</Key>  
+  </Item>  
+  <Item>  
+    <Customer>Fabrikam, Inc.</Customer>  
+    <Key>0005</Key>  
+  </Item>  
+  <Item>  
+    <Customer>Fabrikam, Inc.</Customer>  
+    <Key>0006</Key>  
+  </Item>  
+  <Item>  
+    <Customer>Fabrikam, Inc.</Customer>  
+    <Key>0007</Key>  
+  </Item>  
+  <Item>  
+    <Customer>Fabrikam, Inc.</Customer>  
+    <Key>0008</Key>  
+  </Item>  
+  <Item>  
+    <Customer>Southridge Video</Customer>  
+    <Key>0009</Key>  
+  </Item>  
+  <Item>  
+    <Customer>Southridge Video</Customer>  
+    <Key>0010</Key>  
+  </Item>  
+</Root>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Linq.XStreamingElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consultas não são iteradas até que o <xref:System.Xml.Linq.XStreamingElement> é serializado. Isso está em contraste com o uso de consultas para o conteúdo para um <xref:System.Xml.Linq.XElement>, onde consultas são iteradas no momento da construção do novo <xref:System.Xml.Linq.XElement>.  
+  
+ Para obter detalhes sobre o conteúdo válido que pode ser passado para o construtor, consulte [conteúdo válido de XElement e XDocument objetos](http://msdn.microsoft.com/library/aee2d319-5c5f-4b99-9bb4-2f58232577ae).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XStreamingElement (System.Xml.Linq.XName name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.#ctor(System.Xml.Linq.XName)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um <see cref="T:System.Xml.Linq.XName" /> que contém o nome do elemento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Linq.XElement" /> classe especificado <see cref="T:System.Xml.Linq.XName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um elemento de streaming com nenhum conteúdo e sem atributos.  
+  
+ Há uma conversão implícita de cadeia de caracteres para <xref:System.Xml.Linq.XName>. Um uso comum desse construtor é para especificar uma cadeia de caracteres como o parâmetro em vez de criar um novo <xref:System.Xml.Linq.XName>.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el >= 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+Console.WriteLine(dstTree);  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+        <Root>  
+            <Child>1</Child>  
+            <Child>2</Child>  
+            <Child>3</Child>  
+            <Child>4</Child>  
+            <Child>5</Child>  
+        </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                From el In srcTree.Elements _  
+                Where el.Value >= 3 _  
+                Select <DifferentChild><%= el.Value %></DifferentChild> _  
+            )  
+  
+Console.WriteLine(dstTree)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+                <NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+  <DifferentChild>4</DifferentChild>  
+  <DifferentChild>5</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XStreamingElement (System.Xml.Linq.XName name, object content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName name, object content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.#ctor(System.Xml.Linq.XName,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+        <Parameter Name="content" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um <see cref="T:System.Xml.Linq.XName" /> que contém o nome do elemento.</param>
+        <param name="content">O conteúdo do elemento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Linq.XStreamingElement" /> com o nome e conteúdo especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um elemento de streaming com os atributos e o conteúdo especificado.  
+  
+ Há uma conversão implícita de cadeia de caracteres para <xref:System.Xml.Linq.XName>. Um uso comum desse construtor é para especificar uma cadeia de caracteres como o parâmetro em vez de criar um novo <xref:System.Xml.Linq.XName>.  
+  
+ Consultas não são iteradas até que o <xref:System.Xml.Linq.XStreamingElement> é serializado. Isso está em contraste com o uso de consultas para o conteúdo para um <xref:System.Xml.Linq.XElement>, onde consultas são iteradas no momento da construção do novo <xref:System.Xml.Linq.XElement>.  
+  
+ Para obter detalhes sobre o conteúdo válido que pode ser passado para o construtor, consulte [conteúdo válido de XElement e XDocument objetos](http://msdn.microsoft.com/library/aee2d319-5c5f-4b99-9bb4-2f58232577ae).  
+  
+   
+  
+## Examples  
+ Este exemplo usa o arquivo XML a seguir, denominado Source.xml:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-8" ?>   
+<Root>  
+  <Child Key="01">  
+    <GrandChild>aaa</GrandChild>  
+  </Child>  
+  <Child Key="02">  
+    <GrandChild>bbb</GrandChild>  
+  </Child>  
+  <Child Key="03">  
+    <GrandChild>ccc</GrandChild>  
+  </Child>  
+</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XStreamingElement (System.Xml.Linq.XName name, params object[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XName name, object[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.#ctor(System.Xml.Linq.XName,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.Xml.Linq.XName" />
+        <Parameter Name="content" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Um <see cref="T:System.Xml.Linq.XName" /> que contém o nome do elemento.</param>
+        <param name="content">O conteúdo do elemento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Linq.XStreamingElement" /> com o nome e conteúdo especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um elemento de streaming com os atributos e o conteúdo especificado.  
+  
+ Há uma conversão implícita de cadeia de caracteres para <xref:System.Xml.Linq.XName>. Um uso comum desse construtor é para especificar uma cadeia de caracteres como o parâmetro em vez de criar um novo <xref:System.Xml.Linq.XName>.  
+  
+ Consultas não são iteradas até que o <xref:System.Xml.Linq.XStreamingElement> é serializado. Isso está em contraste com o uso de consultas para o conteúdo para um <xref:System.Xml.Linq.XElement>, onde consultas são iteradas no momento da construção do novo <xref:System.Xml.Linq.XElement>.  
+  
+ Para obter detalhes sobre o conteúdo válido que pode ser passado para esta função, consulte [conteúdo válido de XElement e XDocument objetos](http://msdn.microsoft.com/library/aee2d319-5c5f-4b99-9bb4-2f58232577ae).  
+  
+   
+  
+## Examples  
+ Este exemplo usa o arquivo XML a seguir, denominado Source.xml:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-8" ?>   
+<Root>  
+  <Child Key="01">  
+    <GrandChild>aaa</GrandChild>  
+  </Child>  
+  <Child Key="02">  
+    <GrandChild>bbb</GrandChild>  
+  </Child>  
+  <Child Key="03">  
+    <GrandChild>ccc</GrandChild>  
+  </Child>  
+</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(object content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="content">Conteúdo a ser adicionado ao elemento de streaming.</param>
+        <summary>Adiciona o conteúdo especificado como filhos a este <see cref="T:System.Xml.Linq.XStreamingElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor adiciona o conteúdo especificado e atributos para o <xref:System.Xml.Linq.XStreamingElement>. Embora muitas vezes é possível construir o <xref:System.Xml.Linq.XStreamingElement> em uma única instrução, às vezes é mais conveniente adicionar conteúdo ao elemento streaming incrementalmente.  
+  
+ Consultas não são iteradas até que o <xref:System.Xml.Linq.XStreamingElement> é serializado. Isso está em contraste com o uso de consultas para o conteúdo para um <xref:System.Xml.Linq.XElement>, onde consultas são iteradas no momento da construção do novo <xref:System.Xml.Linq.XElement>.  
+  
+ Para obter detalhes sobre o conteúdo válido que pode ser passado para esta função, consulte [conteúdo válido de XElement e XDocument objetos](http://msdn.microsoft.com/library/aee2d319-5c5f-4b99-9bb4-2f58232577ae).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Xml.Linq.XStreamingElement>. Em seguida, ele adiciona duas consultas para o elemento de fluxo. As consultas não são iteradas até que o elemento de fluxo contínuo é serializado.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot");  
+  
+dstTree.Add(  
+    from el in srcTree.Elements()  
+    where (int)el <= 1  
+    select new XElement("Child", (int)el)  
+);  
+  
+dstTree.Add(  
+    from el in srcTree.Elements()  
+    where (int)el >= 3  
+    select new XElement("DifferentChild", (int)el)  
+);  
+  
+Console.WriteLine(dstTree);  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot")  
+  
+dstTree.Add( _  
+    From el In srcTree.Elements() _  
+    Where el.Value <= 1 _  
+    Select <Child><%= el.Value %></Child> _  
+)  
+  
+dstTree.Add( _  
+    From el In srcTree.Elements() _  
+    Where el.Value >= 3 _  
+    Select <DifferentChild><%= el.Value %></DifferentChild> _  
+)  
+  
+Console.WriteLine(dstTree)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <NewRoot>  
+  <Child>1</Child>  
+  <DifferentChild>3</DifferentChild>  
+  <DifferentChild>4</DifferentChild>  
+  <DifferentChild>5</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (params object[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(object[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Add(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="content" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="content">Conteúdo a ser adicionado ao elemento de streaming.</param>
+        <summary>Adiciona o conteúdo especificado como filhos a este <see cref="T:System.Xml.Linq.XStreamingElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor adiciona o conteúdo especificado e atributos para o <xref:System.Xml.Linq.XStreamingElement>. Embora muitas vezes é possível construir o <xref:System.Xml.Linq.XStreamingElement> em uma única instrução, às vezes é mais conveniente adicionar conteúdo ao elemento streaming incrementalmente.  
+  
+ Consultas não são iteradas até que o <xref:System.Xml.Linq.XStreamingElement> é serializado. Isso está em contraste com o uso de consultas para o conteúdo para um <xref:System.Xml.Linq.XElement>, onde consultas são iteradas no momento da construção do novo <xref:System.Xml.Linq.XElement>.  
+  
+ Para obter detalhes sobre o conteúdo válido que pode ser passado para esta função, consulte [conteúdo válido de XElement e XDocument objetos](http://msdn.microsoft.com/library/aee2d319-5c5f-4b99-9bb4-2f58232577ae).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Xml.Linq.XStreamingElement>. Em seguida, ele adiciona duas consultas para o elemento de fluxo. As consultas não são iteradas até que o elemento de fluxo contínuo é serializado.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot");  
+  
+dstTree.Add(  
+    from el in srcTree.Elements()  
+    where (int)el <= 1  
+    select new XElement("Child", (int)el)  
+);  
+  
+dstTree.Add(  
+    from el in srcTree.Elements()  
+    where (int)el >= 3  
+    select new XElement("DifferentChild", (int)el)  
+);  
+  
+Console.WriteLine(dstTree);  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot")  
+  
+dstTree.Add( _  
+    From el In srcTree.Elements() _  
+    Where el.Value <= 1 _  
+    Select <Child><%= el.Value %></Child> _  
+)  
+  
+dstTree.Add( _  
+    From el In srcTree.Elements() _  
+    Where el.Value >= 3 _  
+    Select <DifferentChild><%= el.Value %></DifferentChild> _  
+)  
+  
+Console.WriteLine(dstTree)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <NewRoot>  
+  <Child>1</Child>  
+  <DifferentChild>3</DifferentChild>  
+  <DifferentChild>4</DifferentChild>  
+  <DifferentChild>5</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XName Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Linq.XName Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XStreamingElement.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome deste elemento de fluxo contínuo.</summary>
+        <value>Um <see cref="T:System.Xml.Linq.XName" /> que contém o nome deste elemento de fluxo contínuo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo cria um novo elemento de streaming e imprime o nome do elemento.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el >= 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+Console.WriteLine(dstTree.Name);  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+        <Root>  
+            <Child>1</Child>  
+            <Child>2</Child>  
+            <Child>3</Child>  
+            <Child>4</Child>  
+            <Child>5</Child>  
+        </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                From el In srcTree.Elements _  
+                Where el.Value >= 3 _  
+                Select <DifferentChild><%= el.Value %></DifferentChild> _  
+            )  
+  
+Console.WriteLine(dstTree.Name)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+NewRoot  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Save(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para o qual este <see cref="T:System.Xml.Linq.XDocument" /> será gerado.</param>
+        <summary>Gera este <see cref="T:System.Xml.Linq.XStreamingElement" /> para o <see cref="T:System.IO.Stream" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O XML serializado será recuado. Todos os espaço em branco insignificante será removido e o espaço em branco adicional será adicionado para que o XML seja recuado corretamente. O comportamento desse método é que espaço em branco insignificante não será preservado.  
+  
+ Se você quiser controlar o espaço em branco, use a sobrecarga do <xref:System.Xml.Linq.XStreamingElement.Save%2A> que usa <xref:System.Xml.Linq.SaveOptions> como um parâmetro. Use o <xref:System.Xml.Linq.SaveOptions.DisableFormatting> opção para salvar ou XML. Isso fará com que o gravador gravar todos os espaços em branco exatamente conforme representado na árvore XML.  
+  
+ Use <xref:System.Xml.Linq.SaveOptions.OmitDuplicateNamespaces> opção se você quiser remover declarações de namespace duplicados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.TextWriter textWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.TextWriter textWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Save(System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textWriter" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="textWriter">Um <see cref="T:System.IO.TextWriter" /> no qual o <see cref="T:System.Xml.Linq.XStreamingElement" /> será gravado.</param>
+        <summary>Serializar este elemento de fluxo para um <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O XML serializado será recuado. Todos os espaço em branco insignificante será removido e o espaço em branco adicional será adicionado para que o XML seja recuado corretamente. O comportamento desse método é que espaço em branco insignificante não serão preservados nós na árvore XML.  
+  
+ Se você quiser controlar o espaço em branco, use uma das sobrecargas do <xref:System.Xml.Linq.XStreamingElement.Save%2A> que usam <xref:System.Xml.Linq.SaveOptions> como um parâmetro. Para obter mais informações, consulte [preservar espaço em branco durante a análise de XML ou carregamento](http://msdn.microsoft.com/library/093a7169-a04e-4638-b08c-d1cb98aa650d) e [preservar espaço em branco ao serializar](http://msdn.microsoft.com/library/fb146217-0a49-4efc-ac84-7265b91d3939).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma árvore XML de origem, em seguida, cria um <xref:System.Xml.Linq.XStreamingElement> usando uma consulta em árvore XML de origem. Ele grava o elemento de fluxo para um <xref:System.IO.StringWriter>.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el >= 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+StringBuilder sb = new StringBuilder();  
+dstTree.Save(new StringWriter(sb));  
+Console.WriteLine(sb.ToString());  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                        From el In srcTree.Elements() _  
+                        Where el.Value >= 3 _  
+                        Select <DifferentChild><%= el.Value %></DifferentChild> _  
+                    )  
+  
+Dim sb As StringBuilder = New StringBuilder()  
+dstTree.Save(New StringWriter(sb))  
+Console.WriteLine(sb.ToString())  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-16"?>  
+<NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+  <DifferentChild>4</DifferentChild>  
+  <DifferentChild>5</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Save(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que contém o nome do arquivo.</param>
+        <summary>Serialize este elemento de fluxo para um arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O XML serializado será recuado. Todos os espaço em branco insignificante será removido e o espaço em branco adicional será adicionado para que o XML seja recuado corretamente. O comportamento desse método é que espaço em branco insignificante não serão preservados nós na árvore XML.  
+  
+ Se você quiser controlar o espaço em branco, use uma das sobrecargas do <xref:System.Xml.Linq.XStreamingElement.Save%2A> que usam <xref:System.Xml.Linq.SaveOptions> como um parâmetro. Para obter mais informações, consulte [preservar espaço em branco durante a análise de XML ou carregamento](http://msdn.microsoft.com/library/093a7169-a04e-4638-b08c-d1cb98aa650d) e [preservar espaço em branco ao serializar](http://msdn.microsoft.com/library/fb146217-0a49-4efc-ac84-7265b91d3939).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma árvore XML de streaming. Ele, em seguida, serializa a árvore XML streaming em um arquivo.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el >= 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+dstTree.Save("Test.xml");  
+Console.WriteLine(File.ReadAllText("Test.xml"));  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                        From el In srcTree.Elements() _  
+                        Where el.Value >= 3 _  
+                        Select <DifferentChild><%= el.Value %></DifferentChild> _  
+                    )  
+  
+dstTree.Save("Test.xml")  
+Console.WriteLine(File.ReadAllText("Test.xml"))  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-8"?>  
+<NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+  <DifferentChild>4</DifferentChild>  
+  <DifferentChild>5</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Save(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> no qual o <see cref="T:System.Xml.Linq.XElement" /> será gravado.</param>
+        <summary>Serializar este elemento de fluxo para um <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Linq.XStreamingElement> e grava-o para um <xref:System.Xml.XmlWriter>.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+StringBuilder sb = new StringBuilder();  
+XmlWriterSettings xws = new XmlWriterSettings();  
+xws.OmitXmlDeclaration = true;  
+using (XmlWriter xw = XmlWriter.Create(sb, xws))  
+{  
+    XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                            from el in srcTree.Elements()  
+                            where (int)el == 5  
+                            select new XElement("DifferentChild", (int)el)  
+                        );  
+  
+    dstTree.Save(xw);  
+}  
+Console.WriteLine(sb.ToString());  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim sb As StringBuilder = New StringBuilder()  
+Dim xws As XmlWriterSettings = New XmlWriterSettings()  
+xws.OmitXmlDeclaration = True  
+Using xw As XmlWriter = XmlWriter.Create(sb, xws)  
+    Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                            From el In srcTree.Elements() _  
+                            Where el.Value = 5 _  
+                            Select <DifferentChild><%= el.Value %></DifferentChild> _  
+                        )  
+    dstTree.Save(xw)  
+End Using  
+Console.WriteLine(sb.ToString())  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+<NewRoot><DifferentChild>5</DifferentChild></NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.Stream stream, System.Xml.Linq.SaveOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.Stream stream, valuetype System.Xml.Linq.SaveOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Save(System.IO.Stream,System.Xml.Linq.SaveOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="options" Type="System.Xml.Linq.SaveOptions" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para o qual este <see cref="T:System.Xml.Linq.XDocument" /> será gerado.</param>
+        <param name="options">Um <see cref="T:System.Xml.Linq.SaveOptions" /> objeto que especifica o comportamento da formatação.</param>
+        <summary>Gera esse <see cref="T:System.Xml.Linq.XStreamingElement" /> para o <see cref="T:System.IO.Stream" /> especificado, com a opção de especificar o comportamento de formatação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão o `options` são definidos como <xref:System.Xml.Linq.SaveOptions.None>. Esta opção removerá todos os espaços em branco insignificante externos e adicionar espaço em branco insignificante apropriado para que o XML é recuado corretamente.  
+  
+ Se você deseja salvar ou XML, especifique o <xref:System.Xml.Linq.SaveOptions.DisableFormatting> sinalizador para `options`. Isso fará com que o gravador gravar todos os espaços em branco exatamente conforme representado na árvore XML.  
+  
+ Use <xref:System.Xml.Linq.SaveOptions.OmitDuplicateNamespaces> opção se você quiser remover declarações de namespace duplicados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.TextWriter textWriter, System.Xml.Linq.SaveOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.TextWriter textWriter, valuetype System.Xml.Linq.SaveOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Save(System.IO.TextWriter,System.Xml.Linq.SaveOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textWriter" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.Xml.Linq.SaveOptions" />
+      </Parameters>
+      <Docs>
+        <param name="textWriter">O <see cref="T:System.IO.TextWriter" /> para a saída do XML.</param>
+        <param name="options">Um <see cref="T:System.Xml.Linq.SaveOptions" /> que especifica o comportamento de formatação.</param>
+        <summary>Serializar este elemento de fluxo para um <see cref="T:System.IO.TextWriter" />, se desejar desabilitar formatação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você deseja salvar ou XML, especifique o <xref:System.Xml.Linq.SaveOptions.DisableFormatting> sinalizador para `options`. Isso fará com que o gravador gravar todos os espaços em branco exatamente conforme representado na árvore XML.  
+  
+ Se você deseja salvar o XML recuado, não especifique o <xref:System.Xml.Linq.SaveOptions.DisableFormatting> sinalizador para `options`. Isso removerá todos os espaços em branco insignificante externos e adicionar espaço em branco insignificante apropriado para que o XML é recuado corretamente. Este é o comportamento padrão e o comportamento das sobrecargas do <xref:System.Xml.Linq.XElement.Save%2A> métodos que não têm `options` como um parâmetro.  
+  
+ Para obter mais informações, consulte [preservar espaço em branco durante a análise de XML ou carregamento](http://msdn.microsoft.com/library/093a7169-a04e-4638-b08c-d1cb98aa650d) e [preservar espaço em branco ao serializar](http://msdn.microsoft.com/library/fb146217-0a49-4efc-ac84-7265b91d3939).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra dois usos desse método. O primeiro uso preserva espaço em branco. Segunda serializa o <xref:System.Xml.Linq.XStreamingElement> com formatação.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el == 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+StringBuilder sb = new StringBuilder();  
+dstTree.Save(new StringWriter(sb), SaveOptions.DisableFormatting);  
+Console.WriteLine(sb.ToString());  
+Console.WriteLine("------");  
+sb = new StringBuilder();  
+dstTree.Save(new StringWriter(sb), SaveOptions.None);  
+Console.WriteLine(sb.ToString());  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                        From el In srcTree.Elements() _  
+                        Where el.Value = 3 _  
+                        Select <DifferentChild><%= el.Value %></DifferentChild> _  
+                    )  
+  
+Dim sb As StringBuilder = New StringBuilder()  
+dstTree.Save(New StringWriter(sb), SaveOptions.DisableFormatting)  
+Console.WriteLine(sb.ToString())  
+Console.WriteLine("------")  
+sb = New StringBuilder()  
+dstTree.Save(New StringWriter(sb), SaveOptions.None)  
+Console.WriteLine(sb.ToString())  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <?xml version="1.0" encoding="utf-16"?><NewRoot><DifferentChild>3</DifferentChild></NewRoot>  
+------  
+<?xml version="1.0" encoding="utf-16"?>  
+<NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string fileName, System.Xml.Linq.SaveOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string fileName, valuetype System.Xml.Linq.SaveOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.Save(System.String,System.Xml.Linq.SaveOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="options" Type="System.Xml.Linq.SaveOptions" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Um <see cref="T:System.String" /> que contém o nome do arquivo.</param>
+        <param name="options">Um <see cref="T:System.Xml.Linq.SaveOptions" /> objeto que especifica o comportamento da formatação.</param>
+        <summary>Serialize este elemento de fluxo em um arquivo, opcionalmente, desabilitando a formatação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você deseja salvar ou XML, especifique o <xref:System.Xml.Linq.SaveOptions.DisableFormatting> sinalizador para `options`. Isso fará com que o gravador gravar todos os espaços em branco exatamente conforme representado na árvore XML.  
+  
+ Se você deseja salvar o XML recuado, não especifique o <xref:System.Xml.Linq.SaveOptions.DisableFormatting> sinalizador para `options`. Isso removerá todos os espaços em branco insignificante externos e adicionar espaço em branco insignificante apropriado para que o XML é recuado corretamente. Este é o comportamento padrão e o comportamento das sobrecargas do <xref:System.Xml.Linq.XElement.Save%2A> métodos que não têm `options` como um parâmetro.  
+  
+ Para obter mais informações, consulte [preservar espaço em branco durante a análise de XML ou carregamento](http://msdn.microsoft.com/library/093a7169-a04e-4638-b08c-d1cb98aa650d) e [preservar espaço em branco ao serializar](http://msdn.microsoft.com/library/fb146217-0a49-4efc-ac84-7265b91d3939).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra dois usos desse método. O primeiro uso preserva espaço em branco. Segunda serializa o <xref:System.Xml.Linq.XStreamingElement> com formatação.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el == 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+dstTree.Save("Test1.xml", SaveOptions.DisableFormatting);  
+dstTree.Save("Test2.xml", SaveOptions.None);  
+Console.WriteLine(File.ReadAllText("Test1.xml"));  
+Console.WriteLine("------");  
+Console.WriteLine(File.ReadAllText("Test2.xml"));  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                        From el In srcTree.Elements() _  
+                        Where el.Value = 3 _  
+                        Select <DifferentChild><%= el.Value %></DifferentChild> _  
+                    )  
+  
+dstTree.Save("Test1.xml", SaveOptions.DisableFormatting)  
+dstTree.Save("Test2.xml", SaveOptions.None)  
+Console.WriteLine(File.ReadAllText("Test1.xml"))  
+Console.WriteLine("------")  
+Console.WriteLine(File.ReadAllText("Test2.xml"))  
+  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+                <?xml version="1.0" encoding="utf-8"?><NewRoot><DifferentChild>3</DifferentChild></NewRoot>  
+------  
+<?xml version="1.0" encoding="utf-8"?>  
+<NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ToString">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna o XML para este elemento de fluxo, opcionalmente, desabilitando a formatação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que durante a depuração de um programa que usa <xref:System.Xml.Linq.XStreamingElement>, exibir o valor de um objeto faz com que seu <xref:System.Xml.Linq.XStreamingElement.ToString%2A> método a ser chamado. Isso faz com que o XML a ser serializado. Se a semântica da consulta elemento streaming, de modo que o elemento de streaming só pode ser transmitido uma vez, isso pode causar comportamento indesejado na sua experiência de depuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o XML formatado (recuado) para este elemento de fluxo contínuo.</summary>
+        <returns>Uma <see cref="T:System.String" /> que contém o XML recuado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que durante a depuração de um programa que usa <xref:System.Xml.Linq.XStreamingElement>, exibir o valor de um objeto faz com que seu <xref:System.Xml.Linq.XStreamingElement.ToString%2A> método a ser chamado. Isso faz com que o XML a ser serializado. Se a semântica da consulta elemento streaming, de modo que o elemento de streaming só pode ser transmitido uma vez, isso pode causar comportamento indesejado na sua experiência de depuração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra dois usos do <xref:System.Xml.Linq.XStreamingElement.ToString%2A>. O primeiro uso preserva espaço em branco. Segunda serializa o <xref:System.Xml.Linq.XStreamingElement> com formatação.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el == 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+Console.WriteLine(dstTree.ToString(SaveOptions.DisableFormatting));  
+Console.WriteLine("------");  
+Console.WriteLine(dstTree.ToString());  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                        From el In srcTree.Elements() _  
+                        Where el.Value = 3 _  
+                        Select <DifferentChild><%= el.Value %></DifferentChild> _  
+                    )  
+  
+Console.WriteLine(dstTree.ToString(SaveOptions.DisableFormatting))  
+Console.WriteLine("------")  
+Console.WriteLine(dstTree.ToString())  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+                <NewRoot><DifferentChild>3</DifferentChild></NewRoot>  
+------  
+<NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (System.Xml.Linq.SaveOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(valuetype System.Xml.Linq.SaveOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.ToString(System.Xml.Linq.SaveOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="System.Xml.Linq.SaveOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Um <see cref="T:System.Xml.Linq.SaveOptions" /> que especifica o comportamento de formatação.</param>
+        <summary>Retorna o XML para este elemento de fluxo, opcionalmente, desabilitando a formatação.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que durante a depuração de um programa que usa <xref:System.Xml.Linq.XStreamingElement>, exibir o valor de um objeto faz com que seu <xref:System.Xml.Linq.XStreamingElement.ToString%2A> método a ser chamado. Isso faz com que o XML a ser serializado. Se a semântica da consulta elemento streaming, de modo que o elemento de streaming só pode ser transmitido uma vez, isso pode causar comportamento indesejado na sua experiência de depuração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra dois usos do <xref:System.Xml.Linq.XStreamingElement.ToString%2A>. O primeiro uso preserva espaço em branco. Segunda serializa o <xref:System.Xml.Linq.XStreamingElement> com formatação.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el == 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+Console.WriteLine(dstTree.ToString(SaveOptions.DisableFormatting));  
+Console.WriteLine("------");  
+Console.WriteLine(dstTree.ToString());  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = New XStreamingElement("NewRoot", _  
+                        From el In srcTree.Elements() _  
+                        Where el.Value = 3 _  
+                        Select <DifferentChild><%= el.Value %></DifferentChild> _  
+                    )  
+  
+Console.WriteLine(dstTree.ToString(SaveOptions.DisableFormatting))  
+Console.WriteLine("------")  
+Console.WriteLine(dstTree.ToString())  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+                <NewRoot><DifferentChild>3</DifferentChild></NewRoot>  
+------  
+<NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XStreamingElement.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> no qual esse método gravará.</param>
+        <summary>Grava este elemento de fluxo para um <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria uma árvore XML com <xref:System.Xml.Linq.XStreamingElement>. Ele grava o elemento de fluxo para um <xref:System.Xml.XmlWriter>.  
+  
+```csharp  
+  
+                XElement srcTree = new XElement("Root",  
+                       new XElement("Child", 1),  
+                       new XElement("Child", 2),  
+                       new XElement("Child", 3),  
+                       new XElement("Child", 4),  
+                       new XElement("Child", 5)  
+                   );  
+  
+XStreamingElement dstTree = new XStreamingElement("NewRoot",  
+                        from el in srcTree.Elements()  
+                        where (int)el == 3  
+                        select new XElement("DifferentChild", (int)el)  
+                    );  
+  
+StringBuilder sb = new StringBuilder();  
+XmlWriterSettings xws = new XmlWriterSettings();  
+xws.OmitXmlDeclaration = true;  
+xws.Indent = true;  
+  
+using (XmlWriter xw = XmlWriter.Create(sb, xws))  
+{  
+    dstTree.WriteTo(xw);  
+}  
+Console.WriteLine(sb.ToString());  
+```  
+  
+```vb  
+  
+                Dim srcTree As XElement = _  
+    <Root>  
+        <Child>1</Child>  
+        <Child>2</Child>  
+        <Child>3</Child>  
+        <Child>4</Child>  
+        <Child>5</Child>  
+    </Root>  
+  
+Dim dstTree As XStreamingElement = _   
+    New XStreamingElement("NewRoot", _  
+        From el In srcTree.Elements() _  
+        Where el.Value = 3 _  
+        Select <DifferentChild><%= el.Value %></DifferentChild> )  
+  
+Dim sb As StringBuilder = New StringBuilder()  
+Dim xws As XmlWriterSettings = New XmlWriterSettings()  
+xws.OmitXmlDeclaration = True  
+xws.Indent = True  
+  
+Using xw As XmlWriter = XmlWriter.Create(sb, xws)  
+    dstTree.WriteTo(xw)  
+End Using  
+Console.WriteLine(sb.ToString())  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+                <NewRoot>  
+  <DifferentChild>3</DifferentChild>  
+</NewRoot>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,128 @@
+<Type Name="LogArchiveSnapshot" FullName="System.IO.Log.LogArchiveSnapshot">
+  <TypeSignature Language="C#" Value="public sealed class LogArchiveSnapshot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogArchiveSnapshot extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogArchiveSnapshot" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um instantâneo do <see cref="T:System.IO.Log.LogStore" /> instância pode ser usada para gerar um arquivo morto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Log.LogArchiveSnapshot> objeto contém as informações necessárias para gerar um backup consistente dos dados em um <xref:System.IO.Log.LogStore>. Os dados reais estão contidos na coleção enumerável de <xref:System.IO.Log.FileRegion> objetos retornados pelo <xref:System.IO.Log.LogArchiveSnapshot.ArchiveRegions%2A> propriedade. Cada <xref:System.IO.Log.FileRegion> instância representa uma sequência de bytes em um arquivo que devem ser arquivados.  
+  
+ O <xref:System.IO.Log.LogArchiveSnapshot.ArchiveTail%2A>, <xref:System.IO.Log.LogArchiveSnapshot.BaseSequenceNumber%2A>, e <xref:System.IO.Log.LogArchiveSnapshot.LastSequenceNumber%2A> propriedades são apenas para fins informativos. Eles podem ser registrados junto com os dados de arquivamento para fornecer informações opcionais, mas não são necessários para restaurar os dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Log.LogArchiveSnapshot> classe arquivar um <xref:System.IO.Log.LogStore> para um documento XML.  
+  
+ [!code-csharp[logarchievesnapshot#0](~/samples/snippets/csharp/VS_Snippets_CFX/logarchievesnapshot/cs/logarchievesnapshot.cs#0)]
+ [!code-vb[logarchievesnapshot#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/logarchievesnapshot/vb/logarchievesnapshot.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArchiveRegions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.Log.FileRegion&gt; ArchiveRegions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Log.FileRegion&gt; ArchiveRegions" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogArchiveSnapshot.ArchiveRegions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.Log.FileRegion&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção enumerável de <see cref="T:System.IO.Log.FileRegion" /> instâncias que contém os dados reais de arquivamento.</summary>
+        <value>Uma coleção enumerável de <see cref="T:System.IO.Log.FileRegion" /> instâncias que contém os dados reais de arquivamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Log.LogArchiveSnapshot> classe arquivar um <xref:System.IO.Log.LogStore> para um documento XML.  
+  
+ [!code-csharp[logarchievesnapshot#0](~/samples/snippets/csharp/VS_Snippets_CFX/logarchievesnapshot/cs/logarchievesnapshot.cs#0)]
+ [!code-vb[logarchievesnapshot#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/logarchievesnapshot/vb/logarchievesnapshot.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArchiveTail">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber ArchiveTail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber ArchiveTail" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogArchiveSnapshot.ArchiveTail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de sequência de <see cref="T:System.IO.Log.LogStore" /> arquivar final no momento em que o instantâneo foi tirado.</summary>
+        <value>O número de sequência de <see cref="T:System.IO.Log.LogStore" /> arquivar final no momento em que o instantâneo foi tirado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSequenceNumber">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber BaseSequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber BaseSequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogArchiveSnapshot.BaseSequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de sequência de base a <see cref="T:System.IO.Log.LogStore" /> no momento em que o instantâneo foi tirado.</summary>
+        <value>O número de sequência de base a <see cref="T:System.IO.Log.LogStore" /> no momento em que o instantâneo foi tirado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSequenceNumber">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber LastSequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber LastSequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogArchiveSnapshot.LastSequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de sequência da última a <see cref="T:System.IO.Log.LogStore" /> no momento em que o instantâneo foi tirado.</summary>
+        <value>O último número de sequência de <see cref="T:System.IO.Log.LogStore" /> no momento em que o instantâneo foi tirado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Log.LogArchiveSnapshot> classe arquivar um <xref:System.IO.Log.LogStore> para um documento XML.  
+  
+ [!code-csharp[logarchievesnapshot#0](~/samples/snippets/csharp/VS_Snippets_CFX/logarchievesnapshot/cs/logarchievesnapshot.cs#0)]
+ [!code-vb[logarchievesnapshot#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/logarchievesnapshot/vb/logarchievesnapshot.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

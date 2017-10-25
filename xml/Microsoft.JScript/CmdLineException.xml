@@ -1,0 +1,212 @@
+<Type Name="CmdLineException" FullName="Microsoft.JScript.CmdLineException">
+  <TypeSignature Language="C#" Value="public class CmdLineException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CmdLineException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.CmdLineException" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa erros que ocorrem quando você executa jsc.exe o compilador de linha de comando.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmdLineException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.JScript.CmdLineException" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmdLineException (string m);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="m">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.CmdLineException" /> de classe, a mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmdLineException (Microsoft.JScript.CmdLineError errorCode, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.JScript.CmdLineError errorCode, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.#ctor(Microsoft.JScript.CmdLineError,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="Microsoft.JScript.CmdLineError" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Um dos valores de enumeração. Especifica qual é o erro.</param>
+        <param name="culture">Informações específicas de cultura.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.CmdLineException" /> de classe, usando as informações de cultura e de código de erro especificado.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CmdLineException (System.Runtime.Serialization.SerializationInfo s, System.Runtime.Serialization.StreamingContext c);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo s, valuetype System.Runtime.Serialization.StreamingContext c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="s" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="c" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="s">Os dados do objeto serializado sobre a exceção que está sendo gerada.</param>
+        <param name="c">Informações contextuais sobre a origem ou destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.CmdLineException" /> de classe, usando os dados serializados.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmdLineException (string m, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="m">A mensagem que descreve o erro.</param>
+        <param name="e">A exceção que é a causa da exceção atual ou nulo se nenhuma exceção interna é especificada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.CmdLineException" /> de classe, usando a mensagem de erro especificada e uma referência à exceção interna que é a causa dessa exceção.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CmdLineException (Microsoft.JScript.CmdLineError errorCode, string context, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.JScript.CmdLineError errorCode, string context, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.#ctor(Microsoft.JScript.CmdLineError,System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="Microsoft.JScript.CmdLineError" />
+        <Parameter Name="context" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Um dos valores de enumeração. Especifica qual é o erro.</param>
+        <param name="context">O contexto no qual ocorreu o erro.</param>
+        <param name="culture">Informações específicas de cultura.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.CmdLineException" /> de classe, usando o código de erro especificado, contexto e informações de cultura.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo s, System.Runtime.Serialization.StreamingContext c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo s, valuetype System.Runtime.Serialization.StreamingContext c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="c" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="s">Dados do objeto serializado sobre a exceção que está sendo gerada.</param>
+        <param name="c">Informações contextuais sobre a origem ou destino</param>
+        <summary>Armazena serializadas dados do objeto sobre a exceção que está sendo gerada.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.CmdLineException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma mensagem que descreve a exceção atual.</summary>
+        <value>A mensagem de erro que explica a razão da exceção.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceKey">
+      <MemberSignature Language="C#" Value="public string ResourceKey (Microsoft.JScript.CmdLineError errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ResourceKey(valuetype Microsoft.JScript.CmdLineError errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.CmdLineException.ResourceKey(Microsoft.JScript.CmdLineError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorCode" Type="Microsoft.JScript.CmdLineError" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">Um dos valores de enumeração. Especifica o erro para obter a chave.</param>
+        <summary>Retorna a chave para o erro especificado em um arquivo de recurso.</summary>
+        <returns>A chave para <paramref name="errorCode" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

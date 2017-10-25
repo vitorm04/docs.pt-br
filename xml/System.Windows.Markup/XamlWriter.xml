@@ -1,0 +1,251 @@
+<Type Name="XamlWriter" FullName="System.Windows.Markup.XamlWriter">
+  <TypeSignature Language="C#" Value="public static class XamlWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit XamlWriter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.XamlWriter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um único método estático <see cref="Overload:System.Windows.Markup.XamlWriter.Save" /> (várias sobrecargas) que pode ser usado para serialização limitada de XAML de objetos de tempo de execução fornecidos na marcação XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A serialização ativada por esse método tem uma série de limitações. Isso ocorre porque a serialização habilitada é explicitamente tempo de execução e não tem acesso às informações de tempo de design possíveis no XAML original (se houver). Para obter detalhes, consulte [limitações de serialização de XamlWriter](~/docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md).  
+  
+ Chamando <xref:System.Windows.Markup.XamlWriter.Save%2A> não é permitida durante a execução em confiança parcial. Isso inclui de XBAPs.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um <xref:System.Windows.Controls.Button> em uma cadeia de caracteres usando o <xref:System.Windows.Markup.XamlWriter> classe.  A cadeia de caracteres é desserializada, em seguida, de volta para um <xref:System.Windows.Controls.Button> usando estático <xref:System.Windows.Markup.XamlReader.Load%2A> método sobre o <xref:System.Windows.Markup.XamlReader> classe.  
+  
+ [!code-csharp[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/csharp/VS_Snippets_Wpf/XamlReaderWriterSnippets/CSharp/Window1.xaml.cs#xamlreaderloadxmlreader)]
+ [!code-vb[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XamlReaderWriterSnippets/visualbasic/window1.xaml.vb#xamlreaderloadxmlreader)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static string Save (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Save(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlWriter.Save(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O elemento a ser serializado. Normalmente, esse é o elemento raiz de uma página ou de um aplicativo.</param>
+        <summary>Retorna uma cadeia de caracteres XAML que serializa o objeto especificado e suas propriedades.</summary>
+        <returns>Uma cadeia de caracteres XAML que pode ser gravada em um fluxo ou arquivo. A árvore lógica de todos os elementos que se enquadram no elemento <paramref name="obj" /> fornecido será serializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A serialização ativada por esse método tem uma série de limitações. Isso ocorre porque a serialização habilitada é explicitamente tempo de execução e não tem acesso às informações de tempo de design possíveis no XAML original (se houver). Para obter detalhes, consulte [limitações de serialização de XamlWriter](~/docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md).  
+  
+ Chamando <xref:System.Windows.Markup.XamlWriter.Save%2A> não é permitida durante a execução em confiança parcial.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um <xref:System.Windows.Controls.Button> em uma cadeia de caracteres usando o <xref:System.Windows.Markup.XamlWriter> classe.  A cadeia de caracteres é desserializada, em seguida, de volta para um <xref:System.Windows.Controls.Button> usando estático <xref:System.Windows.Markup.XamlReader.Load%2A> método sobre o <xref:System.Windows.Markup.XamlReader> classe.  
+  
+ [!code-csharp[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/csharp/VS_Snippets_Wpf/XamlReaderWriterSnippets/CSharp/Window1.xaml.cs#xamlreaderloadxmlreader)]
+ [!code-vb[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XamlReaderWriterSnippets/visualbasic/window1.xaml.vb#xamlreaderloadxmlreader)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O aplicativo não está sendo executado em confiança total.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (object obj, System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(object obj, class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlWriter.Save(System.Object,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O elemento a ser serializado. Normalmente, esse é o elemento raiz de uma página ou de um aplicativo.</param>
+        <param name="stream">Fluxo de destino para as informações sobre XAML serializadas.</param>
+        <summary>Salva as informações sobre XAML em um fluxo especificado para serializar o objeto especificado e suas propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A serialização ativada por esse método tem uma série de limitações. Isso ocorre porque a serialização habilitada é explicitamente tempo de execução e não tem acesso às informações de tempo de design possíveis no XAML original (se houver). Para obter detalhes, consulte [limitações de serialização de XamlWriter](~/docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md).  
+  
+ Chamando <xref:System.Windows.Markup.XamlWriter.Save%2A> não é permitida durante a execução em confiança parcial.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um <xref:System.Windows.Controls.Button> em uma <xref:System.IO.MemoryStream> usando o <xref:System.Windows.Markup.XamlWriter> classe. O fluxo é desserializado, em seguida, de volta para um <xref:System.Windows.Controls.Button> usando estático <xref:System.Windows.Markup.XamlReader.Load%2A> método o <xref:System.Windows.Markup.XamlReader> classe.  
+  
+ [!code-csharp[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/csharp/VS_Snippets_Wpf/XamlReaderWriterSnippets/CSharp/Window1.xaml.cs#xamlreaderloadxmlreader)]
+ [!code-vb[XamlReaderWriterSnippets#XamlReaderLoadXmlReader](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XamlReaderWriterSnippets/visualbasic/window1.xaml.vb#xamlreaderloadxmlreader)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> ou <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O aplicativo não está sendo executado em confiança total.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (object obj, System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(object obj, class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlWriter.Save(System.Object,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O elemento a ser serializado. Normalmente, esse é o elemento raiz de uma página ou de um aplicativo.</param>
+        <param name="writer">Um <see cref="T:System.IO.TextWriter" /> instância como o destino onde as informações serializadas de XAML são gravadas.</param>
+        <summary>Salva informações de XAML como a origem para um fornecido <see cref="T:System.IO.TextWriter" /> objeto. A saída de <see cref="T:System.IO.TextWriter" /> pode ser usado para serializar o objeto fornecido e suas propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A serialização ativada por esse método tem uma série de limitações. Isso ocorre porque a serialização habilitada é explicitamente tempo de execução e não tem acesso às informações de tempo de design possíveis no XAML original (se houver). Para obter detalhes, consulte [limitações de serialização de XamlWriter](~/docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md).  
+  
+ Chamando <xref:System.Windows.Markup.XamlWriter.Save%2A> não é permitida durante a execução em confiança parcial.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> ou <paramref name="writer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O aplicativo não está sendo executado em confiança total.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (object obj, System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(object obj, class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlWriter.Save(System.Object,System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O elemento a ser serializado. Normalmente, esse é o elemento raiz de uma página ou de um aplicativo.</param>
+        <param name="manager">Uma implementação de serialização personalizada.</param>
+        <summary>Salva informações de XAML em um serializador personalizado. A saída do serializador, em seguida, pode ser usada para serializar o objeto fornecido e suas propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A serialização ativada por esse método tem uma série de limitações. Isso ocorre porque a serialização habilitada é explicitamente tempo de execução e não tem acesso às informações de tempo de design possíveis no XAML original (se houver). Para obter detalhes, consulte [limitações de serialização de XamlWriter](~/docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md).  
+  
+ Chamando <xref:System.Windows.Markup.XamlWriter.Save%2A> não é permitida durante a execução em confiança parcial.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> ou <paramref name="manager" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O aplicativo não está sendo executado em confiança total.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static void Save (object obj, System.Xml.XmlWriter xmlWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Save(object obj, class System.Xml.XmlWriter xmlWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.XamlWriter.Save(System.Object,System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="xmlWriter" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O elemento a ser serializado. Normalmente, esse é o elemento raiz de uma página ou de um aplicativo.</param>
+        <param name="xmlWriter">Gravador a ser usado para gravar as informações serializadas de XAML.</param>
+        <summary>Salva informações de XAML como a origem para um fornecido <see cref="T:System.Xml.XmlWriter" /> objeto. A saída de <see cref="T:System.Xml.XmlWriter" /> pode ser usado para serializar o objeto fornecido e suas propriedades.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A serialização ativada por esse método tem uma série de limitações. Isso ocorre porque a serialização habilitada é explicitamente tempo de execução e não tem acesso às informações de tempo de design possíveis no XAML original (se houver). Para obter detalhes, consulte [limitações de serialização de XamlWriter](~/docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md).  
+  
+ Chamando <xref:System.Windows.Markup.XamlWriter.Save%2A> não é permitida durante a execução em confiança parcial.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> ou <paramref name="xmlWriter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O aplicativo não está sendo executado em confiança total.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,491 @@
+<Type Name="IpcChannel" FullName="System.Runtime.Remoting.Channels.Ipc.IpcChannel">
+  <TypeSignature Language="C#" Value="public class IpcChannel : System.Runtime.Remoting.Channels.IChannelReceiver, System.Runtime.Remoting.Channels.IChannelSender, System.Runtime.Remoting.Channels.ISecurableChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IpcChannel extends System.Object implements class System.Runtime.Remoting.Channels.IChannel, class System.Runtime.Remoting.Channels.IChannelReceiver, class System.Runtime.Remoting.Channels.IChannelSender, class System.Runtime.Remoting.Channels.ISecurableChannel" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelReceiver</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IChannelSender</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.ISecurableChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma implementação de canal que usa o protocolo IPC para transmitir mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Canais são usados pela infraestrutura de comunicação remota do.NET Framework para chamadas remotas de transporte. Quando um cliente chama um objeto remoto, a chamada é serializada em uma mensagem que é enviada por um canal do cliente e recebida por um canal do servidor. Depois que a mensagem é recebida, ela é desserializada e processada. Os valores retornados são transmitidos pelo canal de servidor e recebidos pelo canal de cliente.  
+  
+ O <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe é uma classe de conveniência, combinando a funcionalidade do <xref:System.Runtime.Remoting.Channels.Ipc.IpcClientChannel> classe e o <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel> classe.  
+  
+> [!CAUTION]
+>  Ao definir o `exclusiveAddressUse` propriedade `false` no `properties` argumento, várias <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel> objetos podem ser registrados para o mesmo pipe nomeado. Nesse caso solicitações podem ir para qualquer um dos canais registrados. Essa configuração é considerada segura somente se ALCs também são usadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar um <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> para configurar um servidor remoto e o seu cliente. O exemplo contém três partes:  
+  
+-   Um servidor  
+  
+-   Um cliente  
+  
+-   Um objeto remoto usado pelo servidor e o cliente.  
+  
+ O exemplo de código a seguir mostra um servidor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#10](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server.cpp#10)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#10](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server.cs#10)]  
+  
+ O exemplo de código a seguir mostra um cliente para esse servidor.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#20](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/client.cpp#20)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#20](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/client.cs#20)]  
+  
+ O exemplo de código a seguir mostra o objeto remoto usado pelo servidor e o cliente.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#30](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/common.cpp#30)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#30](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/common.cs#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IpcChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> classe, ativando um canal de cliente e não um canal do servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar este construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#21](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/client.cpp#21)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#21](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/client.cs#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IpcChannel (string portName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string portName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="portName">O nome da porta de IPC.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> classe com um canal de servidor que escuta na porta IPC especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar este construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#11](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server.cpp#11)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#11](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server.cs#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IpcChannel (System.Collections.IDictionary properties, System.Runtime.Remoting.Channels.IClientChannelSinkProvider clientSinkProvider, System.Runtime.Remoting.Channels.IServerChannelSinkProvider serverSinkProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IDictionary properties, class System.Runtime.Remoting.Channels.IClientChannelSinkProvider clientSinkProvider, class System.Runtime.Remoting.Channels.IServerChannelSinkProvider serverSinkProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+        <Parameter Name="clientSinkProvider" Type="System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+        <Parameter Name="serverSinkProvider" Type="System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Um <see cref="T:System.Collections.IDictionary" /> coleta especificando valores para propriedades de configuração a ser usado pelos canais de cliente e servidor.</param>
+        <param name="clientSinkProvider">O <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> implementação a ser usado pelo canal de cliente.</param>
+        <param name="serverSinkProvider">A implementação <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> a ser usada pelo canal do servidor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> com as propriedades de configuração e os coletores especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre propriedades de configuração de canal, consulte [Channel e propriedades de configuração do formatador](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe).  
+  
+ Coletores de canal fornecem um ponto de plug-in que permite o acesso às mensagens subjacentes que fluem através do canal, bem como o fluxo usado pelo mecanismo de transporte para enviar mensagens para um objeto remoto. Coletores de canal também são responsáveis pelo transporte de mensagens entre o cliente e o servidor. Coletores de canal vinculadas em uma cadeia e todos os canais fluxo de mensagens por meio dessa cadeia de Coletores antes da mensagem é finalmente serializada e transportada. Se não precisar da funcionalidade do coletor, defina o `clientSinkProvider` e `serverSinkProvider` parâmetros para `null`.  
+  
+> [!CAUTION]
+>  Ao definir o `exclusiveAddressUse` propriedade `false` no `properties` argumento, várias <xref:System.Runtime.Remoting.Channels.Ipc.IpcServerChannel> objetos podem ser registrados para o mesmo pipe nomeado. Nesse caso solicitações podem ir para qualquer um dos canais registrados. Essa configuração é considerada segura somente se ALCs também são usadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar este construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#41](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server2.cpp#41)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#41](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server2.cs#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IpcChannel (System.Collections.IDictionary properties, System.Runtime.Remoting.Channels.IClientChannelSinkProvider clientSinkProvider, System.Runtime.Remoting.Channels.IServerChannelSinkProvider serverSinkProvider, System.Security.AccessControl.CommonSecurityDescriptor securityDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.IDictionary properties, class System.Runtime.Remoting.Channels.IClientChannelSinkProvider clientSinkProvider, class System.Runtime.Remoting.Channels.IServerChannelSinkProvider serverSinkProvider, class System.Security.AccessControl.CommonSecurityDescriptor securityDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.#ctor(System.Collections.IDictionary,System.Runtime.Remoting.Channels.IClientChannelSinkProvider,System.Runtime.Remoting.Channels.IServerChannelSinkProvider,System.Security.AccessControl.CommonSecurityDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+        <Parameter Name="clientSinkProvider" Type="System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+        <Parameter Name="serverSinkProvider" Type="System.Runtime.Remoting.Channels.IServerChannelSinkProvider" />
+        <Parameter Name="securityDescriptor" Type="System.Security.AccessControl.CommonSecurityDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Um <see cref="T:System.Collections.IDictionary" /> coleta especificando valores para propriedades de configuração a ser usado pelos canais de cliente e servidor.</param>
+        <param name="clientSinkProvider">O <see cref="T:System.Runtime.Remoting.Channels.IClientChannelSinkProvider" /> implementação a ser usado pelo canal de cliente.</param>
+        <param name="serverSinkProvider">A implementação <see cref="T:System.Runtime.Remoting.Channels.IServerChannelSinkProvider" /> a ser usada pelo canal do servidor.</param>
+        <param name="securityDescriptor">O descritor de segurança.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" /> com as propriedades de configuração e os coletores especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelData">
+      <MemberSignature Language="C#" Value="public object ChannelData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ChannelData" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados específicos do canal.</summary>
+        <value>Um <see cref="T:System.Runtime.Remoting.Channels.ChannelDataStore" /> instância que contém dados específicos do canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora retornado como uma instância de <xref:System.Object?displayProperty=nameWithType>, o valor dessa propriedade pode ser convertido em uma instância de <xref:System.Runtime.Remoting.Channels.ChannelDataStore> descrevendo o canal ao qual o <xref:System.Runtime.Remoting.Channels.Http.HttpServerChannel> escuta do objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelData%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#15](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server.cpp#15)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#15](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelName">
+      <MemberSignature Language="C#" Value="public string ChannelName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChannelName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do canal atual.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome do canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada canal registrado tem um nome exclusivo. O nome é usado para recuperar um canal específico ao chamar <xref:System.Runtime.Remoting.Channels.ChannelServices.GetChannel%2A>. O nome padrão é "ipc".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelName%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#12](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server.cpp#12)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#12](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server.cs#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelPriority">
+      <MemberSignature Language="C#" Value="public int ChannelPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChannelPriority" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a prioridade do canal atual.</summary>
+        <value>Um inteiro que representa a prioridade atribuída ao canal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A prioridade padrão é 20.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.ChannelPriority%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#13](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server.cpp#13)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#13](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server.cs#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMessageSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink (string url, object remoteChannelData, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink CreateMessageSink(string url, object remoteChannelData, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.CreateMessageSink(System.String,System.Object,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="remoteChannelData" Type="System.Object" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL à qual o novo coletor deve entregar mensagens. Pode ser <see langword="null" />.</param>
+        <param name="remoteChannelData">O objeto de dados de canal do host remoto para o qual o novo coletor deve entregar mensagens. Pode ser <see langword="null" />.</param>
+        <param name="objectURI">Quando este método retorna, contém um URI do novo coletor de mensagem de canal que envia mensagens para a URL especificada ou o objeto de dados de canal. Este parâmetro é passado não inicializado.</param>
+        <summary>Retorna um coletor de mensagem de canal que entrega mensagens para o objeto de dados de URL ou canal especificado.</summary>
+        <returns>Um coletor de mensagem de canal que entrega mensagens para o objeto de dados de URL ou canal especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.CreateMessageSink%2A> método retorna um coletor de mensagem de canal que entrega mensagens para uma URL ou o canal de dados objeto especificado. Se o `uri` parâmetro é `null`, `remoteChannelData` é usado como um destino para o coletor. Tanto o `url` ou `remoteChannelData` parâmetros podem ser `null`, mas não ambos.  
+  
+ Coletores de canal fornecem um ponto de plug-in que permite o acesso às mensagens subjacentes que fluem através do canal, bem como o fluxo usado pelo mecanismo de transporte para enviar mensagens para um objeto remoto. Coletores de canal vinculadas em uma cadeia de `ChannelSinkProviders` e todos os fluxo de mensagens por meio dessa cadeia de Coletores de canal antes da mensagem é finalmente serializada e transportada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.CreateMessageSink%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#22](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/client.cpp#22)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#22](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/client.cs#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUrlsForUri">
+      <MemberSignature Language="C#" Value="public string[] GetUrlsForUri (string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetUrlsForUri(string objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.GetUrlsForUri(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="objectURI" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="objectURI">O URI do objeto para o qual as URLs são necessários.</param>
+        <summary>Retorna uma matriz de todas as URLs de um objeto com o URI especificado, hospedado em atual <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" />.</summary>
+        <returns>Uma matriz de URLs para um objeto com o URI especificado, hospedado em atual <see cref="T:System.Runtime.Remoting.Channels.Ipc.IpcChannel" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado pelo <xref:System.Runtime.Remoting.Channels.ChannelServices.GetUrlsForObject%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.GetUrlsForUri%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#19](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server.cpp#19)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#19](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecured">
+      <MemberSignature Language="C#" Value="public bool IsSecured { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecured" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Channels.Ipc.IpcChannel.IsSecured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o canal atual é seguro.</summary>
+        <value>Um valor booliano que indica se a instância atual é segura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não precisa ser definida explicitamente, conforme é suficiente definir o parâmetro ensureSecurity de <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%28System.String%2CSystem.Boolean%29>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public string Parse (string url, out string objectURI);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Parse(string url, [out] string&amp; objectURI) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.Parse(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="objectURI" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL do qual extrair o URI do objeto remoto conhecido.</param>
+        <param name="objectURI">Quando este método retorna, contém um <see cref="T:System.String" /> que contém o URI do objeto remoto conhecido. Este parâmetro é passado não inicializado.</param>
+        <summary>Extrai o URI do canal e o objeto remoto conhecido URI da URL especificada.</summary>
+        <returns>O URI do canal atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um URI de um objeto é um valor que identifica exclusivamente uma instância de objeto específico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.Parse%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel> classe.  
+  
+ [!code-cpp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#19](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CPP/server.cpp#19)]
+ [!code-csharp[System.Runtime.Remoting.Channels.Ipc.IpcChannel#19](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Channels.Ipc.IpcChannel/CS/server.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartListening">
+      <MemberSignature Language="C#" Value="public void StartListening (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartListening(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StartListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Informações de inicialização opcional.</param>
+        <summary>Instrui o canal atual a iniciar a escuta de solicitações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar este método para começar a escutar em um canal recentemente inicializado.  
+  
+ Use esse método para reiniciar a escuta em um canal após o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StopListening%2A> método foi chamado.  
+  
+ O `data` parâmetro pode ser usado para passar um estado de inicialização específico para o canal. Se você não deseja transmitir um estado específico para o canal, defina `data` para `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListening">
+      <MemberSignature Language="C#" Value="public void StopListening (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopListening(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StopListening(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Informações de estado opcional para o canal.</param>
+        <summary>Instrui o canal atual para parar a escuta de solicitações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para parar um canal de escuta. Para reiniciar a escuta, use o <xref:System.Runtime.Remoting.Channels.Ipc.IpcChannel.StartListening%2A> método.  
+  
+ O `data` parâmetro pode ser usado para passar um estado de inicialização específico para o canal. Se você não deseja transmitir um estado específico para o canal, defina `data` para `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

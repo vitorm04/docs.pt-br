@@ -1,0 +1,232 @@
+<Type Name="EntityViewGenerator" FullName="System.Data.Entity.Design.EntityViewGenerator">
+  <TypeSignature Language="C#" Value="public class EntityViewGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityViewGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Entity.Design.EntityViewGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera as exibições para as extensões no <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> e cria um arquivo do código-fonte para um tipo que armazenará essas exibições em cache.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityViewGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityViewGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.Entity.Design.EntityViewGenerator" /> classe com um <see cref="F:System.Data.Entity.Design.LanguageOption.GenerateCSharpCode" /> opção de idioma.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityViewGenerator (System.Data.Entity.Design.LanguageOption languageOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Data.Entity.Design.LanguageOption languageOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityViewGenerator.#ctor(System.Data.Entity.Design.LanguageOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="languageOption" Type="System.Data.Entity.Design.LanguageOption" />
+      </Parameters>
+      <Docs>
+        <param name="languageOption">Uma da <see cref="T:System.Data.Entity.Design.LanguageOption" /> valores que especifica a linguagem do código gerado. O idioma padrão é c#.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Entity.Design.EntityViewGenerator" /> com o <see cref="T:System.Data.Entity.Design.LanguageOption" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GenerateViews">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gera os modos de exibição em tempo de compilação para as extensões em um <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />e cria um arquivo de código fonte que faz com que esses modos de exibição disponíveis em tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, modos de exibição são gerados em tempo de execução sempre que uma consulta ou atualização é executada em uma extensão. Gerando modos de exibição em tempo de compilação pode melhorar o desempenho do aplicativo, eliminando a despesa de geração de modos de exibição em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GenerateViews">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateViews (System.Data.Mapping.StorageMappingItemCollection mappingCollection, System.IO.TextWriter outputWriter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateViews(class System.Data.Mapping.StorageMappingItemCollection mappingCollection, class System.IO.TextWriter outputWriter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityViewGenerator.GenerateViews(System.Data.Mapping.StorageMappingItemCollection,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappingCollection" Type="System.Data.Mapping.StorageMappingItemCollection" />
+        <Parameter Name="outputWriter" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="mappingCollection">O <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> de quais modos de exibição serão gerados.</param>
+        <param name="outputWriter">O <see cref="T:System.IO.TextWriter" /> para que o código gerado será enviado.</param>
+        <summary>Gera os modos de exibição em tempo de compilação para as extensões em um <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />. Envia um arquivo de código fonte para um <see cref="T:System.IO.TextWriter" /> para disponibilizar esses modos de exibição em tempo de execução.</summary>
+        <returns>Uma lista que contém qualquer gerou erros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateViews">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateViews (System.Data.Mapping.StorageMappingItemCollection mappingCollection, string outputPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateViews(class System.Data.Mapping.StorageMappingItemCollection mappingCollection, string outputPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityViewGenerator.GenerateViews(System.Data.Mapping.StorageMappingItemCollection,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappingCollection" Type="System.Data.Mapping.StorageMappingItemCollection" />
+        <Parameter Name="outputPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mappingCollection">O <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> de quais modos de exibição serão gerados.</param>
+        <param name="outputPath">O <see cref="T:System.String" /> que especifica o local no qual o arquivo de código fonte será gravado.</param>
+        <summary>Gera os modos de exibição em tempo de compilação para as extensões em um <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />. Grava um arquivo de código de origem para um local especificado que disponibiliza os modos de exibição em tempo de execução.</summary>
+        <returns>Uma lista que contém qualquer gerou erros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateViews">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateViews (System.Data.Mapping.StorageMappingItemCollection mappingCollection, System.IO.TextWriter outputWriter, Version targetEntityFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; GenerateViews(class System.Data.Mapping.StorageMappingItemCollection mappingCollection, class System.IO.TextWriter outputWriter, class System.Version targetEntityFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityViewGenerator.GenerateViews(System.Data.Mapping.StorageMappingItemCollection,System.IO.TextWriter,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappingCollection" Type="System.Data.Mapping.StorageMappingItemCollection" />
+        <Parameter Name="outputWriter" Type="System.IO.TextWriter" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="mappingCollection">O <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> a ser validado.</param>
+        <param name="outputWriter">O <see cref="T:System.IO.TextWriter" /> para que a saída é gravada.</param>
+        <param name="targetEntityFrameworkVersion">A propriedade de <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> que corresponde à versão do destino do Entity Framework.</param>
+        <summary>Gera os modos de exibição em tempo de compilação para as extensões em um <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />. Envia um arquivo de código fonte para um <see cref="T:System.IO.TextWriter" /> para disponibilizar esses modos de exibição em tempo de execução.</summary>
+        <returns>Uma lista que contém qualquer gerou erros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LanguageOption">
+      <MemberSignature Language="C#" Value="public System.Data.Entity.Design.LanguageOption LanguageOption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Entity.Design.LanguageOption LanguageOption" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Entity.Design.EntityViewGenerator.LanguageOption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Entity.Design.LanguageOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Data.Entity.Design.LanguageOption" /> valor que indica a linguagem do código gerado.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.Entity.Design.LanguageOption" />. O padrão é <see cref="F:System.Data.Entity.Design.LanguageOption.GenerateCSharpCode" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; Validate (System.Data.Mapping.StorageMappingItemCollection mappingCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; Validate(class System.Data.Mapping.StorageMappingItemCollection mappingCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityViewGenerator.Validate(System.Data.Mapping.StorageMappingItemCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappingCollection" Type="System.Data.Mapping.StorageMappingItemCollection" />
+      </Parameters>
+      <Docs>
+        <param name="mappingCollection">O <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> a ser validado.</param>
+        <summary>Valida um <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />.</summary>
+        <returns>Uma lista que contém qualquer gerou erros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt; Validate (System.Data.Mapping.StorageMappingItemCollection mappingCollection, Version targetEntityFrameworkVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Data.Metadata.Edm.EdmSchemaError&gt; Validate(class System.Data.Mapping.StorageMappingItemCollection mappingCollection, class System.Version targetEntityFrameworkVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Entity.Design.EntityViewGenerator.Validate(System.Data.Mapping.StorageMappingItemCollection,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Data.Metadata.Edm.EdmSchemaError&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappingCollection" Type="System.Data.Mapping.StorageMappingItemCollection" />
+        <Parameter Name="targetEntityFrameworkVersion" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="mappingCollection">O <see cref="T:System.Data.Mapping.StorageMappingItemCollection" /> a ser validado.</param>
+        <param name="targetEntityFrameworkVersion">A propriedade de <see cref="T:System.Data.Entity.Design.EntityFrameworkVersions" /> que corresponde à versão do destino do Entity Framework.</param>
+        <summary>Valida um <see cref="T:System.Data.Mapping.StorageMappingItemCollection" />.</summary>
+        <returns>Uma lista que contém erros de validação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

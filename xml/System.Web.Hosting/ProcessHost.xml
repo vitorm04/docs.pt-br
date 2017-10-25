@@ -1,0 +1,463 @@
+<Type Name="ProcessHost" FullName="System.Web.Hosting.ProcessHost">
+  <TypeSignature Language="C#" Value="public sealed class ProcessHost : MarshalByRefObject, System.Web.Hosting.IAdphManager, System.Web.Hosting.IApplicationPreloadManager, System.Web.Hosting.IPphManager, System.Web.Hosting.IProcessHost, System.Web.Hosting.IProcessHostIdleAndHealthCheck" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProcessHost extends System.MarshalByRefObject implements class System.Web.Hosting.IAdphManager, class System.Web.Hosting.IApplicationPreloadManager, class System.Web.Hosting.IPphManager, class System.Web.Hosting.IProcessHost, class System.Web.Hosting.IProcessHostIdleAndHealthCheck" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.ProcessHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.Hosting.IAdphManager</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.Hosting.IApplicationPreloadManager</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.Hosting.IPphManager</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.Hosting.IProcessHost</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.Hosting.IProcessHostIdleAndHealthCheck</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um host de processos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ProcessHost>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="EnumerateAppDomains">
+      <MemberSignature Language="C#" Value="public void EnumerateAppDomains (out System.Web.Hosting.IAppDomainInfoEnum appDomainInfoEnum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnumerateAppDomains([out] class System.Web.Hosting.IAppDomainInfoEnum&amp; appDomainInfoEnum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.EnumerateAppDomains(System.Web.Hosting.IAppDomainInfoEnum@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appDomainInfoEnum" Type="System.Web.Hosting.IAppDomainInfoEnum&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="appDomainInfoEnum">Informações sobre os domínios de aplicativo.</param>
+        <summary>Fornece acesso a um conjunto enumerável de domínios de aplicativo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.InitializeLifetimeService" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece o host do processo um tempo de vida infinito, impedindo que uma concessão que está sendo criado.</summary>
+        <returns>Retorna um <see langword="null" /> valor para indicar que a concessão nunca expira.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ProcessHost.InitializeLifetimeService%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsIdle">
+      <MemberSignature Language="C#" Value="public bool IsIdle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsIdle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.IsIdle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o estado de um processo.</summary>
+        <returns>
+          <see langword="true" />Se o host do processo ocioso; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ProcessHost.IsIdle%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Ping">
+      <MemberSignature Language="C#" Value="public void Ping (System.Web.Hosting.IProcessPingCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Ping(class System.Web.Hosting.IProcessPingCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.Ping(System.Web.Hosting.IProcessPingCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.Hosting.IProcessPingCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O retorno de chamada para lidar com a resposta de ping.</param>
+        <summary>Executa ping em um processo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ProcessHost.Ping%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetApplicationPreloadState">
+      <MemberSignature Language="C#" Value="public void SetApplicationPreloadState (string context, string appId, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetApplicationPreloadState(string context, string appId, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.SetApplicationPreloadState(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.String" />
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto do aplicativo.</param>
+        <param name="appId">A ID exclusiva do aplicativo.</param>
+        <param name="enabled">
+          <see langword="true" />para indicar o aplicativo deve ser pré-carregada; Caso contrário, <see langword="false" />.</param>
+        <summary>Notifica o ASP.NET que um aplicativo específico que está sendo executado no [!INCLUDE[iisver](~/includes/iisver-md.md)] está configurado para ser pré-carregados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa o <xref:System.Web.Hosting.IApplicationPreloadManager.SetApplicationPreloadState%2A> método o <xref:System.Web.Hosting.IApplicationPreloadManager> interface. [!INCLUDE[iisver](~/includes/iisver-md.md)]chama o <xref:System.Web.Hosting.IApplicationPreloadManager.SetApplicationPreloadState%2A> método para notificar o ASP.NET se o aplicativo que está sendo carregado dá suporte ao pré-carregamento.  
+  
+> [!NOTE]
+>  Esse método se aplica apenas a aplicativos executados em [!INCLUDE[iisver](~/includes/iisver-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="enabled" />é definido como <see langword="true" /> e o host do processo não foi passado anteriormente um <see cref="T:System.Web.Hosting.IApplicationPreloadUtil" /> interface para seu <see cref="M:System.Web.Hosting.IApplicationPreloadManager.SetApplicationPreloadUtil(System.Web.Hosting.IApplicationPreloadUtil)" /> método</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SetApplicationPreloadUtil">
+      <MemberSignature Language="C#" Value="public void SetApplicationPreloadUtil (System.Web.Hosting.IApplicationPreloadUtil applicationPreloadUtil);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetApplicationPreloadUtil(class System.Web.Hosting.IApplicationPreloadUtil applicationPreloadUtil) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.SetApplicationPreloadUtil(System.Web.Hosting.IApplicationPreloadUtil)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationPreloadUtil" Type="System.Web.Hosting.IApplicationPreloadUtil" />
+      </Parameters>
+      <Docs>
+        <param name="applicationPreloadUtil">O identificador para uma interface não gerenciado em [!INCLUDE[iisver](~/includes/iisver-md.md)] que o ASP.NET chamadas para obter informações.</param>
+        <summary>Cria um tipo que chama [!INCLUDE[iisver](~/includes/iisver-md.md)] para obter as informações necessárias para pré-carregar um aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa o <xref:System.Web.Hosting.IApplicationPreloadManager.SetApplicationPreloadUtil%2A> método o <xref:System.Web.Hosting.IApplicationPreloadManager> interface. O método cria uma instância do <xref:System.Web.Hosting.IApplicationPreloadUtil> tipo, que chama [!INCLUDE[iisver](~/includes/iisver-md.md)] para obter informações de pré-carregamento.  
+  
+> [!NOTE]
+>  Esse método se aplica apenas a aplicativos executados em [!INCLUDE[iisver](~/includes/iisver-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Web.Hosting.IApplicationPreloadUtil" /> instância que contém informações para pré-carregamento do aplicativo não é <see langword="null" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarrega o host do processo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShutdownApplication">
+      <MemberSignature Language="C#" Value="public void ShutdownApplication (string appId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShutdownApplication(string appId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.ShutdownApplication(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="appId">O identificador exclusivo do aplicativo a ser desligado.</param>
+        <summary>Fecha o aplicativo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ProcessHost.ShutdownApplication%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartAppDomainProtocolListenerChannel">
+      <MemberSignature Language="C#" Value="public void StartAppDomainProtocolListenerChannel (string appId, string protocolId, System.Web.Hosting.IListenerChannelCallback listenerChannelCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartAppDomainProtocolListenerChannel(string appId, string protocolId, class System.Web.Hosting.IListenerChannelCallback listenerChannelCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.StartAppDomainProtocolListenerChannel(System.String,System.String,System.Web.Hosting.IListenerChannelCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="listenerChannelCallback" Type="System.Web.Hosting.IListenerChannelCallback" />
+      </Parameters>
+      <Docs>
+        <param name="appId">A ID do aplicativo.</param>
+        <param name="protocolId">A ID do protocolo.</param>
+        <param name="listenerChannelCallback">O retorno de chamada de canal ouvinte protocolo.</param>
+        <summary>Inicia um canal de escuta do protocolo de domínio do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartApplication">
+      <MemberSignature Language="C#" Value="public void StartApplication (string appId, string appPath, out object runtimeInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartApplication(string appId, string appPath, [out] object&amp; runtimeInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.StartApplication(System.String,System.String,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="appPath" Type="System.String" />
+        <Parameter Name="runtimeInterface" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="appId">A ID do aplicativo.</param>
+        <param name="appPath">O caminho virtual para o aplicativo.</param>
+        <param name="runtimeInterface">Uma interface do Gerenciador de tempo de execução.</param>
+        <summary>Inicia o aplicativo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StartProcessProtocolListenerChannel">
+      <MemberSignature Language="C#" Value="public void StartProcessProtocolListenerChannel (string protocolId, System.Web.Hosting.IListenerChannelCallback listenerChannelCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartProcessProtocolListenerChannel(string protocolId, class System.Web.Hosting.IListenerChannelCallback listenerChannelCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.StartProcessProtocolListenerChannel(System.String,System.Web.Hosting.IListenerChannelCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="listenerChannelCallback" Type="System.Web.Hosting.IListenerChannelCallback" />
+      </Parameters>
+      <Docs>
+        <param name="protocolId">A ID do protocolo.</param>
+        <param name="listenerChannelCallback">O retorno de chamada de canal ouvinte protocolo.</param>
+        <summary>Inicia um canal de escuta do protocolo de processo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StopAppDomainProtocol">
+      <MemberSignature Language="C#" Value="public void StopAppDomainProtocol (string appId, string protocolId, bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopAppDomainProtocol(string appId, string protocolId, bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.StopAppDomainProtocol(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="appId">A ID do aplicativo.</param>
+        <param name="protocolId">A ID do protocolo.</param>
+        <param name="immediate">Se parar o protocolo imediatamente.</param>
+        <summary>Interrompe um canal de escuta do protocolo de domínio do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ProcessHost.StopAppDomainProtocol%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StopAppDomainProtocolListenerChannel">
+      <MemberSignature Language="C#" Value="public void StopAppDomainProtocolListenerChannel (string appId, string protocolId, int listenerChannelId, bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopAppDomainProtocolListenerChannel(string appId, string protocolId, int32 listenerChannelId, bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.StopAppDomainProtocolListenerChannel(System.String,System.String,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.String" />
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="listenerChannelId" Type="System.Int32" />
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="appId">A ID do aplicativo</param>
+        <param name="protocolId">A ID do protocolo.</param>
+        <param name="listenerChannelId">O ouvinte de protocolo do canal ID.</param>
+        <param name="immediate">Se parar o canal de escuta do protocolo imediatamente.</param>
+        <summary>Interrompe um canal de escuta do protocolo de domínio do aplicativo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessProtocol">
+      <MemberSignature Language="C#" Value="public void StopProcessProtocol (string protocolId, bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopProcessProtocol(string protocolId, bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.StopProcessProtocol(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="protocolId">A ID do protocolo.</param>
+        <param name="immediate">Se parar o protocolo imediatamente.</param>
+        <summary>Interrompe um protocolo de processo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ProcessHost.StopProcessProtocol%2A>é introduzido no [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)]. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StopProcessProtocolListenerChannel">
+      <MemberSignature Language="C#" Value="public void StopProcessProtocolListenerChannel (string protocolId, int listenerChannelId, bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopProcessProtocolListenerChannel(string protocolId, int32 listenerChannelId, bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ProcessHost.StopProcessProtocolListenerChannel(System.String,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="protocolId" Type="System.String" />
+        <Parameter Name="listenerChannelId" Type="System.Int32" />
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="protocolId">A ID do protocolo.</param>
+        <param name="listenerChannelId">O retorno de chamada de canal ouvinte protocolo.</param>
+        <param name="immediate">Se parar o canal de escuta do protocolo imediatamente.</param>
+        <summary>Interrompe um canal de escuta do protocolo.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

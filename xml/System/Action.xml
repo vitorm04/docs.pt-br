@@ -1,0 +1,69 @@
+<Type Name="Action" FullName="System.Action">
+  <TypeSignature Language="C#" Value="public delegate void Action();" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Action extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Action" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters />
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <summary>Encapsula um método que não tem parâmetros e não retorna um valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar este delegado para passar um método como um parâmetro sem declarar explicitamente um delegado personalizado. O método encapsulado deve corresponder à assinatura do método que é definida por este delegado. Isso significa que o método encapsulado deve ter nenhum parâmetro e nenhum valor de retorno. (Em c#, o método deve retornar `void`. No Visual Basic, ele deverá ser definido pelo `Sub`...`End Sub` Construa. Ele também pode ser um método que retorna um valor que é ignorado.) Normalmente, esse é um método é usado para executar uma operação.  
+  
+> [!NOTE]
+>  Para fazer referência a um método que não tem parâmetros e retorna um valor, use genérica <xref:System.Func%601> delegado em vez disso.  
+  
+ Quando você usa o <xref:System.Action> delegado, você não precisa definir explicitamente um delegado que encapsula um procedimento sem parâmetros. Por exemplo, o código a seguir declara explicitamente um delegado chamado `ShowValue` e atribui uma referência para o `Name.DisplayToWindow` método para sua instância de delegado de instância.  
+  
+ [!code-cpp[System.Action.Delegate#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.action.delegate/cpp/delegate.cpp#1)]
+ [!code-csharp[System.Action.Delegate#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.action.delegate/cs/delegate.cs#1)]
+ [!code-vb[System.Action.Delegate#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.action.delegate/vb/delegate.vb#1)]  
+  
+ O exemplo a seguir simplifica esse código instanciando a <xref:System.Action> delegado em vez de definir um novo delegado explicitamente e atribuí-lo um método nomeado.  
+  
+ [!code-cpp[System.Action#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Action/cpp/action.cpp#2)]
+ [!code-csharp[System.Action#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action/cs/Action.cs#2)]
+ [!code-vb[System.Action#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action/vb/Action.vb#2)]  
+  
+ Você também pode usar o <xref:System.Action> delegar com métodos anônimos em c#, como mostra o exemplo a seguir. (Para obter uma introdução aos métodos anônimos, consulte [métodos anônimos](~/docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).)  
+  
+ [!code-csharp[System.Action#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action/cs/Anon.cs#3)]  
+  
+ Você também pode atribuir uma expressão lambda para uma <xref:System.Action> delegar a instância, como mostra o exemplo a seguir. (Para obter uma introdução a expressões lambda, consulte [expressões Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).)  
+  
+ [!code-csharp[System.Action#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action/cs/Lambda.cs#4)]
+ [!code-vb[System.Action#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action/vb/lambda.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

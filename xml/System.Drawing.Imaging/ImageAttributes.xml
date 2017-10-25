@@ -1,0 +1,1675 @@
+<Type Name="ImageAttributes" FullName="System.Drawing.Imaging.ImageAttributes">
+  <TypeSignature Language="C#" Value="public sealed class ImageAttributes : ICloneable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ImageAttributes extends System.Object implements class System.ICloneable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.ImageAttributes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém informações sobre como as cores do bitmap e do metarquivo são manipuladas durante a renderização.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém várias configurações de ajuste de cor, incluindo matrizes de ajuste de cor, matrizes de ajuste de escala de cinza, valores de correção gama, tabelas de mapa de cor e valores de limite de cor. Durante o processamento, cores podem ser corrigidas, escurecidas, ficará mais clara e removidas. Para aplicar essas manipulações, inicializar um <xref:System.Drawing.Imaging.ImageAttributes> de objeto e passe o caminho do que <xref:System.Drawing.Imaging.ImageAttributes> objeto (junto com o caminho de um <xref:System.Drawing.Image>) para o <xref:System.Drawing.Graphics.DrawImage%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa uma imagem que é uma cor (0.2, 0,0, 0,4, 1.0) e duplicatas de componente vermelho adiciona 0,2 para os componentes vermelhos, verdes e azuis  
+  
+ A ilustração a seguir mostra a imagem original à esquerda e a imagem transformada à direita.  
+  
+ ![Cores](~/add/media/colortrans1.png "cores")  
+  
+ O código no exemplo a seguir usa as seguintes etapas para recolorir:  
+  
+1.  Inicializar um <xref:System.Drawing.Imaging.ColorMatrix> objeto.  
+  
+2.  Criar um <xref:System.Drawing.Imaging.ImageAttributes> do objeto e passar o <xref:System.Drawing.Imaging.ColorMatrix> do objeto para o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+3.  Passar o <xref:System.Drawing.Imaging.ImageAttributes> o objeto para o <xref:System.Drawing.Graphics.DrawImage%2A> método de um <xref:System.Drawing.Graphics> objeto.  
+  
+ [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Imaging.ImageAttributes" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearBrushRemapTable">
+      <MemberSignature Language="C#" Value="public void ClearBrushRemapTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearBrushRemapTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearBrushRemapTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a tabela de remapeamento de cores do pincel deste <see cref="T:System.Drawing.Imaging.ImageAttributes" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma tabela de remapeamento de cores para a categoria padrão, uma tabela de remapeamento de cores diferentes para a categoria de bitmap e ainda uma tabela de remapeamento de cores diferentes para a categoria de pincel.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de pincel, as configurações padrão se aplicam a categoria de pincel.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar uma tabela de remapeamento padrão que converte vermelho, verde, e você especificar um valor padrão gama 1.8. Se você chamar o <xref:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable%2A> método, a tabela de remapeamento padrão (vermelha, verde) e o valor de gama padrão (1.8) não serão aplicada aos pincéis. Se você depois de chamar o <xref:System.Drawing.Imaging.ImageAttributes.ClearBrushRemapTable%2A> método, a categoria de pincel não será revertido para a tabela de remapeamento padrão; em vez disso, a categoria de pincel não terá nenhuma tabela de remapeamento. Da mesma forma, a categoria de pincel não será revertido para o valor de gama padrão; em vez disso, a categoria de pincel não terá nenhum valor gama.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorKey">
+      <MemberSignature Language="C#" Value="public void ClearColorKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorKey" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a chave de cor (intervalo de transparência) para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma chave de cor para a categoria padrão, uma chave de cor diferente para a categoria de bitmap e ainda uma chave de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorKey">
+      <MemberSignature Language="C#" Value="public void ClearColorKey (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorKey(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorKey(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual a chave de cor está desmarcada.</param>
+        <summary>Limpa a chave de cor (intervalo de transparência) para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma chave de cor para a categoria padrão, uma chave de cor diferente para a categoria de bitmap e ainda uma chave de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar uma chave de cor padrão que faz com que todas as cores com um componente vermelho de 200 a 255 transparente e você especificar um valor padrão gama 1.8. Se você definir a chave de cor da categoria de caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%2A> método, a chave de cor padrão e o valor de gama padrão não serão aplicada aos canetas. Se você desmarcar posteriormente a chave de cor da caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearColorKey%2A> método, a categoria de caneta não será revertido para a chave de cor padrão; em vez disso, a categoria de caneta não terão nenhuma chave de cor. Da mesma forma, a categoria de caneta não será revertido para o valor de gama padrão; em vez disso, a categoria de caneta não terá nenhum valor gama.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorMatrix">
+      <MemberSignature Language="C#" Value="public void ClearColorMatrix ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorMatrix() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorMatrix" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a matriz de ajuste de cor para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma matriz de ajuste de cor para a categoria padrão, uma matriz de ajuste de cor diferente para a categoria de bitmap e ainda uma matriz de ajuste de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão aplicam a categoria de caneta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColorMatrix">
+      <MemberSignature Language="C#" Value="public void ClearColorMatrix (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearColorMatrix(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearColorMatrix(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria da qual a matriz de ajuste de cores está desmarcada.</param>
+        <summary>Limpa a matriz de ajuste de cores de uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma matriz de ajuste de cor para a categoria padrão, uma matriz de ajuste de cor diferente para a categoria de bitmap e ainda uma matriz de ajuste de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar uma matriz de ajuste de cor e um valor de gama para a categoria padrão. Se você definir uma matriz de ajuste de cor para a categoria de caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método, a matriz de ajuste de cor padrão não será aplicada aos canetas. Se você desmarcar uma matriz de ajuste de cor da caneta posteriormente ao chamar o <xref:System.Drawing.Imaging.ImageAttributes.ClearColorMatrix%2A> método, a categoria de caneta não será revertido para a matriz de ajuste padrão; em vez disso, a categoria de caneta não terá nenhuma matriz de ajuste. Da mesma forma, a categoria de caneta não será revertido para o valor de gama padrão; em vez disso, a categoria de caneta não terá nenhum valor gama.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearGamma">
+      <MemberSignature Language="C#" Value="public void ClearGamma ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearGamma() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearGamma" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desabilita a correção gama para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearGamma">
+      <MemberSignature Language="C#" Value="public void ClearGamma (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearGamma(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearGamma(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual gama correção está desabilitada.</param>
+        <summary>Desabilita a correção gama para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um valor de gama e uma matriz de ajuste de cor para a categoria padrão. Se você definir o valor para a categoria de caneta gama chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%2A> método, o valor de gama padrão não será aplicada aos canetas. Se você desmarcar posteriormente o valor de gama caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearGamma%2A> método, a categoria de caneta não será revertido para o valor de gama padrão; em vez disso, a categoria de caneta não terá nenhum valor gama. Da mesma forma, a categoria de caneta não será revertido para a matriz de ajuste de cor padrão; em vez disso, a categoria de caneta não terá nenhuma matriz de ajuste de cor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearNoOp">
+      <MemberSignature Language="C#" Value="public void ClearNoOp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearNoOp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearNoOp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o <see langword="NoOp" /> configuração para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+ Você pode desativar o ajuste de cor para a categoria padrão chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> método. Posteriormente, você pode restabelecer o ajuste de cor para a categoria padrão chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearNoOp%2A> método. O ajuste de cor, em seguida, retorna às que estavam em vigor antes da chamada para <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearNoOp">
+      <MemberSignature Language="C#" Value="public void ClearNoOp (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearNoOp(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearNoOp(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual o <see langword="NoOp" /> configuração está desmarcada.</param>
+        <summary>Limpa o <see langword="NoOp" /> configuração para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+ Você pode desativar o ajuste de cor para uma determinada categoria chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> método. Posteriormente, você pode restabelecer o ajuste de cor para aquela categoria chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearNoOp%2A> método. O ajuste de cor, em seguida, retorna às que estavam em vigor antes da chamada para <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannel">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a configuração de canal de saída (ciano-magenta-amarelo-preto) CMYK para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um canal de saída para a categoria padrão e um canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannel">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannel (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannel(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannel(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual a configuração do canal de saída está desmarcada.</param>
+        <summary>Limpa a configuração do canal de saída (ciano-magenta-amarelo-preto) para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um canal de saída para a categoria padrão e um canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um canal de saída e uma matriz de ajuste para a categoria padrão. Se você definir o canal de saída para a categoria de bitmap chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método, o padrão do canal de saída não será aplicada aos bitmaps. Se você desmarcar posteriormente o bitmap de canal de saída chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearOutputChannel%2A> método, a categoria de bitmap não será revertido para o canal de saída padrão; em vez disso, a categoria de bitmap não terá nenhuma configuração de canal de saída. Da mesma forma, a categoria de bitmap não será revertido para a matriz de ajuste de cor padrão; em vez disso, a categoria de bitmap não terá nenhuma matriz de ajuste de cor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannelColorProfile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannelColorProfile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannelColorProfile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a configuração do perfil de cor do canal de saída para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um perfil de canal de saída para a categoria padrão e um perfil de canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void ClearOutputChannelColorProfile (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearOutputChannelColorProfile(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearOutputChannelColorProfile(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual a configuração de perfil do canal de saída está desmarcada.</param>
+        <summary>Limpa a configuração do perfil de cor do canal de saída para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um perfil de canal de saída para a categoria padrão e um perfil de canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um perfil de canal de saída e uma matriz de ajuste para a categoria padrão. Se você definir o perfil do canal de saída para a categoria de bitmap chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> método, o padrão do perfil do canal de saída não será aplicada aos bitmaps. Se você desmarcar posteriormente o bitmap perfil do canal de saída chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearOutputChannelColorProfile%2A> método, a categoria de bitmap não será revertido para o perfil do canal de saída padrão; em vez disso, a categoria de bitmap não terá nenhuma configuração de perfil do canal de saída. Da mesma forma, a categoria de bitmap não será revertido para a matriz de ajuste de cor padrão; em vez disso, a categoria de bitmap não terá nenhuma matriz de ajuste de cor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearRemapTable">
+      <MemberSignature Language="C#" Value="public void ClearRemapTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearRemapTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearRemapTable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a tabela de remapeamento de cores para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma tabela de remapeamento para a categoria padrão, uma tabela de remapeamento diferente para a categoria de bitmap e ainda uma tabela de remapeamento diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearRemapTable">
+      <MemberSignature Language="C#" Value="public void ClearRemapTable (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearRemapTable(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearRemapTable(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual a tabela de remapeamento está desmarcada.</param>
+        <summary>Limpa a tabela de remapeamento de cores para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma tabela de remapeamento para a categoria padrão, uma tabela de remapeamento diferente para a categoria de bitmap e ainda uma tabela de remapeamento diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar uma tabela de remapeamento e um valor de gama para a categoria padrão. Se você definir a tabela de remapeamento para a categoria de caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> método, a tabela de remapeamento padrão não será aplicada aos canetas. Se você desmarcar posteriormente a tabela de remapeamento de caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearRemapTable%2A> método, a categoria de caneta não será revertido para a tabela de remapeamento padrão; em vez disso, a categoria de caneta não terá nenhuma tabela de remapeamento. Da mesma forma, a categoria de caneta não será revertido para o valor de gama padrão; em vez disso, a categoria de caneta não terá nenhum valor gama.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearThreshold">
+      <MemberSignature Language="C#" Value="public void ClearThreshold ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearThreshold() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearThreshold" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o valor de limite para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite é um valor entre 0 e 1 que especifica um ponto de corte para cada componente de cor. Por exemplo, suponha que o limite é definido como 0,7 e suponha que você estiver processando uma cor cujo vermelho, verdes e azuis componentes são 230, 50 e 220, respectivamente. O componente vermelho (230) é maior que 0.7x255, para que o componente vermelho será alterado para 255 (intensidade completa). O componente verde (50) é menor que 0.7x255, para que o componente verde será alterado para 0. O componente azul (220) é maior que 0.7x255, para que o componente azul será alterado para 255.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um limite para a categoria padrão, um limite diferente para a categoria de bitmap e ainda um limite diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearThreshold">
+      <MemberSignature Language="C#" Value="public void ClearThreshold (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearThreshold(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.ClearThreshold(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual o limite está desmarcado.</param>
+        <summary>Limpa o valor de limite para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite é um valor entre 0 e 1 que especifica um ponto de corte para cada componente de cor. Por exemplo, suponha que o limite é definido como 0,7 e suponha que você estiver processando uma cor cujo vermelho, verdes e azuis componentes são 230, 50 e 220, respectivamente. O componente vermelho (230) é maior que 0.7x55, para que o componente vermelho será alterado para 255 (intensidade completa). O componente verde (50) é menor que 0.7x255, para que o componente verde será alterado para 0. O componente azul (220) é maior que 0.7x255, para que o componente azul será alterado para 255.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um limite para a categoria padrão, um limite diferente para a categoria de bitmap e ainda um limite diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um limite e um valor de gama para a categoria padrão. Se você definir o limite para a categoria de caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%2A> método, o limite padrão não será aplicada aos canetas. Se você desmarcar posteriormente o limite de caneta chamando o <xref:System.Drawing.Imaging.ImageAttributes.ClearThreshold%2A> método, a categoria de caneta não será revertido para o limite padrão; em vez disso, a categoria de caneta não terá nenhum limite. Da mesma forma, a categoria de caneta não será revertido para o valor de gama padrão; em vez disso, a categoria de caneta não terá nenhum valor gama.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata desta <see cref="T:System.Drawing.Imaging.ImageAttributes" /> objeto.</summary>
+        <returns>O <see cref="T:System.Drawing.Imaging.ImageAttributes" /> converter objeto cria essa classe, como um objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este <see cref="T:System.Drawing.Imaging.ImageAttributes" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A> quando tiver terminado de usar o <xref:System.Drawing.Imaging.ImageAttributes>. O <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A> método deixa o <xref:System.Drawing.Imaging.ImageAttributes> em um estado inutilizável. Depois de chamar <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Drawing.Imaging.ImageAttributes> para o coletor de lixo possa recuperar a memória que o <xref:System.Drawing.Imaging.ImageAttributes> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Drawing.Imaging.ImageAttributes.Dispose%2A> antes de liberar sua última referência para o <xref:System.Drawing.Imaging.ImageAttributes>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Drawing.Imaging.ImageAttributes> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ImageAttributes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAdjustedPalette">
+      <MemberSignature Language="C#" Value="public void GetAdjustedPalette (System.Drawing.Imaging.ColorPalette palette, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetAdjustedPalette(class System.Drawing.Imaging.ColorPalette palette, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.GetAdjustedPalette(System.Drawing.Imaging.ColorPalette,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="palette" Type="System.Drawing.Imaging.ColorPalette" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="palette">Um <see cref="T:System.Drawing.Imaging.ColorPalette" /> que na entrada contém a paleta a ser ajustado e na saída contém a paleta ajustada.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria cujas configurações de ajuste serão aplicadas à paleta.</param>
+        <summary>Ajusta as cores em uma paleta de acordo com as configurações de ajuste de uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma tabela de remapeamento de cores para a categoria padrão, uma tabela de remapeamento de cores diferentes para a categoria de bitmap e ainda uma tabela de remapeamento de cores diferentes para a categoria de caneta.  
+  
+ Quando você chama o <xref:System.Drawing.Imaging.ImageAttributes.GetAdjustedPalette%2A> método, você pode especificar a categoria de ajuste que é usada para ajustar as cores da paleta. Por exemplo, se você passar <xref:System.Drawing.Imaging.ColorAdjustType.Bitmap> para o <xref:System.Drawing.Imaging.ImageAttributes.GetAdjustedPalette%2A> método, o ajuste as configurações da categoria de bitmap são usadas para ajustar as cores da paleta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBrushRemapTable">
+      <MemberSignature Language="C#" Value="public void SetBrushRemapTable (System.Drawing.Imaging.ColorMap[] map);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBrushRemapTable(class System.Drawing.Imaging.ColorMap[] map) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable(System.Drawing.Imaging.ColorMap[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="map" Type="System.Drawing.Imaging.ColorMap[]" />
+      </Parameters>
+      <Docs>
+        <param name="map">Uma matriz de objetos de <see cref="T:System.Drawing.Imaging.ColorMap" />.</param>
+        <summary>Define a tabela de remapeamento de cores para a categoria de pincel.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma tabela de remapeamento de cores é uma matriz de <xref:System.Drawing.Imaging.ColorMap> estruturas. Cada <xref:System.Drawing.Imaging.ColorMap> estrutura tem duas <xref:System.Drawing.Color> objetos: um que especifica uma cor antiga e um que especifica uma nova cor correspondente. Durante o processamento, todas as cores que corresponde a uma das cores na tabela de remapeamento antigas é alterada para a nova cor correspondente.  
+  
+ Chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable%2A> método tem o mesmo efeito que passando <xref:System.Drawing.Imaging.ColorAdjustType.Brush> para o <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> método. A tabela de remapeamento especificado se aplica a itens metarquivos são preenchidos com um pincel.  
+  
+ Este método destina-se a ser usada somente com metarquivos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+1.  Cria um único elemento <xref:System.Drawing.Imaging.ColorMap> matriz que contém vermelho como a cor antiga e verde como a nova cor.  
+  
+2.  Passa essa matriz recém-criado para um <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorKey">
+      <MemberSignature Language="C#" Value="public void SetColorKey (System.Drawing.Color colorLow, System.Drawing.Color colorHigh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorKey(valuetype System.Drawing.Color colorLow, valuetype System.Drawing.Color colorHigh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorKey(System.Drawing.Color,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorLow" Type="System.Drawing.Color" />
+        <Parameter Name="colorHigh" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="colorLow">O valor baixo da chave de cores.</param>
+        <param name="colorHigh">O valor superior da chave de cores.</param>
+        <summary>Define o valor de cor para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define os valores mínimo e máximo da chave de cor para que um intervalo de cores pode ser transparentes. Todas as cores com cada um dos seus três componentes (vermelho, verde, azul) entre os componentes correspondentes das chaves de alta e baixa a cor é transparentes.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma chave de cor para a categoria padrão, uma chave de cor diferente para a categoria de bitmap e ainda uma chave de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%28System.Drawing.Color%2CSystem.Drawing.Color%2CSystem.Drawing.Imaging.ColorAdjustType%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorKey">
+      <MemberSignature Language="C#" Value="public void SetColorKey (System.Drawing.Color colorLow, System.Drawing.Color colorHigh, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorKey(valuetype System.Drawing.Color colorLow, valuetype System.Drawing.Color colorHigh, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorKey(System.Drawing.Color,System.Drawing.Color,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorLow" Type="System.Drawing.Color" />
+        <Parameter Name="colorHigh" Type="System.Drawing.Color" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="colorLow">O valor baixo da chave de cores.</param>
+        <param name="colorHigh">O valor superior da chave de cores.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual a chave de cores é definida.</param>
+        <summary>Define a chave de cores (intervalo de transparência) para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define os valores mínimo e máximo da chave de cor para que um intervalo de cores pode ser transparentes. Todas as cores com cada um dos seus três componentes (vermelho, verde, azul) entre os componentes correspondentes das chaves de alta e baixa a cor é transparentes.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma chave de cor para a categoria padrão, uma chave de cor diferente para a categoria de bitmap e ainda uma chave de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir a chave de cor para a categoria de caneta passando <xref:System.Drawing.Imaging.ColorAdjustType.Pen> para o <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a canetas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+1.  Abre um <xref:System.Drawing.Image> que usa o arquivo Circle.bmp e desenha na tela.  
+  
+2.  Cria um <xref:System.Drawing.Imaging.ImageAttributes> de objeto e define sua chave de cor ao chamar o <xref:System.Drawing.Imaging.ImageAttributes.SetColorKey%2A> método.  
+  
+3.  Desenha a imagem usando a chave de cor da tela de <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrices">
+      <MemberSignature Language="C#" Value="public void SetColorMatrices (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrix grayMatrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrices(class System.Drawing.Imaging.ColorMatrix newColorMatrix, class System.Drawing.Imaging.ColorMatrix grayMatrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrices(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="grayMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">A matriz de ajuste de cores.</param>
+        <param name="grayMatrix">A matriz de ajuste de escala de cinza.</param>
+        <summary>Define a matriz de ajuste de cor e a matriz de ajuste de escala de cinza para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar as matrizes de ajuste para a categoria padrão, as matrizes de ajuste diferente para a categoria de bitmap e matrizes de ajuste ainda diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrices%28System.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrix%29?displayProperty=nameWithType> método é equivalente a chamar o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrices%28System.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrixFlag%29?displayProperty=nameWithType> método e passando <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType> para o `flags` parâmetro. <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType>Especifica que todas as cores (inclusive cinza) são ajustadas para a matriz de ajuste de cor, não a matriz de ajuste de escala de cinza. Portanto, a matriz de ajuste de escala de cinza passada para este método não tem efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrices">
+      <MemberSignature Language="C#" Value="public void SetColorMatrices (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrix grayMatrix, System.Drawing.Imaging.ColorMatrixFlag flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrices(class System.Drawing.Imaging.ColorMatrix newColorMatrix, class System.Drawing.Imaging.ColorMatrix grayMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrices(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="grayMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">A matriz de ajuste de cores.</param>
+        <param name="grayMatrix">A matriz de ajuste de escala de cinza.</param>
+        <param name="flags">Um elemento de <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" /> que especifica o tipo de imagem e cores que serão afetados pelas matrizes de ajuste de cor e o ajuste de escala de cinza.</param>
+        <summary>Define a matriz de ajuste de cor e a matriz de ajuste de escala de cinza para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar as matrizes de ajuste para a categoria padrão, as matrizes de ajuste diferente para a categoria de bitmap e matrizes de ajuste ainda diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrices">
+      <MemberSignature Language="C#" Value="public void SetColorMatrices (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrix grayMatrix, System.Drawing.Imaging.ColorMatrixFlag mode, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrices(class System.Drawing.Imaging.ColorMatrix newColorMatrix, class System.Drawing.Imaging.ColorMatrix grayMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag mode, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrices(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="grayMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="mode" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">A matriz de ajuste de cores.</param>
+        <param name="grayMatrix">A matriz de ajuste de escala de cinza.</param>
+        <param name="mode">Um elemento de <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" /> que especifica o tipo de imagem e cores que serão afetados pelas matrizes de ajuste de cor e o ajuste de escala de cinza.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual as matrizes de ajuste de cor e o ajuste de escala de cinza são definidas.</param>
+        <summary>Define a matriz de ajuste de cor e a matriz de ajuste de escala de cinza para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar as matrizes de ajuste para a categoria padrão, as matrizes de ajuste diferente para a categoria de bitmap e matrizes de ajuste ainda diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir as matrizes de ajuste de cor e o ajuste de escala de cinza para a categoria de caneta passando <xref:System.Drawing.Imaging.ColorAdjustType.Pen> para o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrices%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a canetas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrix">
+      <MemberSignature Language="C#" Value="public void SetColorMatrix (System.Drawing.Imaging.ColorMatrix newColorMatrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrix(class System.Drawing.Imaging.ColorMatrix newColorMatrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrix(System.Drawing.Imaging.ColorMatrix)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">A matriz de ajuste de cores.</param>
+        <summary>Define a matriz de ajuste de cores para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma matriz de ajuste de cor para a categoria padrão, uma matriz de ajuste de cor diferente para a categoria de bitmap e ainda uma matriz de ajuste de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%28System.Drawing.Imaging.ColorMatrix%29?displayProperty=nameWithType> método é equivalente a chamar o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%28System.Drawing.Imaging.ColorMatrix%2CSystem.Drawing.Imaging.ColorMatrixFlag%29?displayProperty=nameWithType> método e passando <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType> para o `flags` parâmetro. <xref:System.Drawing.Imaging.ColorMatrixFlag?displayProperty=nameWithType>Especifica que todas as cores (inclusive cinza) são ajustadas para a matriz de ajuste de cor  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+1.  Cria uma imagem de retângulo que tenha todas a cor valores definidos como 128, produzindo um retângulo que é preenchido com uma cor sólida de cinza médio. O código, em seguida, desenha esta imagem de retângulo para a tela.  
+  
+2.  Cria um <xref:System.Drawing.Imaging.ColorMatrix> e define seu <xref:System.Drawing.Drawing2D.Matrix> local para 1,75, que enfatiza o componente vermelho da imagem.  
+  
+3.  Cria um <xref:System.Drawing.Imaging.ImageAttributes> objeto e chama o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método.  
+  
+4.  Desenha a imagem (um segundo retângulo) à tela usando o <xref:System.Drawing.Imaging.ColorMatrix> apenas definido no <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+ Observe que o segundo retângulo tem a cor vermelha enfatizada.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#3)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#3)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrix">
+      <MemberSignature Language="C#" Value="public void SetColorMatrix (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrixFlag flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrix(class System.Drawing.Imaging.ColorMatrix newColorMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrix(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">A matriz de ajuste de cores.</param>
+        <param name="flags">Um elemento de <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" /> que especifica o tipo de imagem e a cor que serão afetados pela matriz de ajuste de cores.</param>
+        <summary>Define a matriz de ajuste de cores para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma matriz de ajuste de cor para a categoria padrão, uma matriz de ajuste de cor diferente para a categoria de bitmap e ainda uma matriz de ajuste de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%28System.Drawing.Imaging.ColorMatrix%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColorMatrix">
+      <MemberSignature Language="C#" Value="public void SetColorMatrix (System.Drawing.Imaging.ColorMatrix newColorMatrix, System.Drawing.Imaging.ColorMatrixFlag mode, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColorMatrix(class System.Drawing.Imaging.ColorMatrix newColorMatrix, valuetype System.Drawing.Imaging.ColorMatrixFlag mode, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetColorMatrix(System.Drawing.Imaging.ColorMatrix,System.Drawing.Imaging.ColorMatrixFlag,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newColorMatrix" Type="System.Drawing.Imaging.ColorMatrix" />
+        <Parameter Name="mode" Type="System.Drawing.Imaging.ColorMatrixFlag" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="newColorMatrix">A matriz de ajuste de cores.</param>
+        <param name="mode">Um elemento de <see cref="T:System.Drawing.Imaging.ColorMatrixFlag" /> que especifica o tipo de imagem e a cor que serão afetados pela matriz de ajuste de cores.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria com a qual a matriz de ajuste de cores é definida.</param>
+        <summary>Define a matriz de ajuste de cores de uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar uma matriz de ajuste de cor para a categoria padrão, uma matriz de ajuste de cor diferente para a categoria de bitmap e ainda uma matriz de ajuste de cor diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir a matriz de ajuste de cor para a categoria de caneta passando <xref:System.Drawing.Imaging.ColorAdjustType.Pen> para o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a canetas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método. Para executar este exemplo, cole o código em um formulário do Windows e a chamada `RotateColors` do formulário de <xref:System.Windows.Forms.Control.Paint> método de manipulação de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGamma">
+      <MemberSignature Language="C#" Value="public void SetGamma (float gamma);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGamma(float32 gamma) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetGamma(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gamma" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="gamma">O valor de correção gama.</param>
+        <summary>Define o valor de gama para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores típicos para o `gamma` parâmetro são de 1.0 para 2.2; no entanto, os valores de 0,1 5.0 poderá ser útil em algumas circunstâncias.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Valores de gama fora do intervalo normal podem ser útil para os monitores CRT antigos ou monitores que estiverem em condições de iluminação incomuns, como ambientes industriais ou janela exibe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Além disso, você precisa alterar o caminho do arquivo de imagem para um nome de caminho e de imagem válido no seu sistema. O código executa as seguintes ações:  
+  
+1.  Abre um <xref:System.Drawing.Image> que usa o arquivo Camera.jpg e desenha a tela usando o valor padrão para gama.  
+  
+2.  Cria um <xref:System.Drawing.Imaging.ImageAttributes> de objeto e define seu gama para 2.2 chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%2A> método.  
+  
+3.  Desenha a imagem (uma câmera segundo) para a tela usando o valor de gama definido apenas o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#4)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#4)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGamma">
+      <MemberSignature Language="C#" Value="public void SetGamma (float gamma, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGamma(float32 gamma, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetGamma(System.Single,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gamma" Type="System.Single" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="gamma">O valor de correção gama.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> enumeração que especifica a categoria para a qual o valor de gama é definido.</param>
+        <summary>Define o valor de gama para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores típicos para o `gamma` parâmetro são de 1.0 para 2.2; no entanto, os valores de 0,1 5.0 poderá ser útil em algumas circunstâncias.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir o valor para a categoria de caneta gama passando <xref:System.Drawing.Imaging.ColorAdjustType.Pen> para o <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a canetas.  
+  
+ Valores de gama fora do intervalo normal podem ser útil para os monitores CRT antigos ou monitores que estiverem em condições de iluminação incomuns, como ambientes industriais ou janela exibe.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetGamma%28System.Single%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoOp">
+      <MemberSignature Language="C#" Value="public void SetNoOp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetNoOp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetNoOp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desativa o ajuste de cor para a categoria padrão. Você pode chamar o <see cref="Overload:System.Drawing.Imaging.ImageAttributes.ClearNoOp" /> método para reaplicar as configurações de ajuste de cor que estavam em vigor antes da chamada para o <see cref="Overload:System.Drawing.Imaging.ImageAttributes.SetNoOp" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+1.  Abre um <xref:System.Drawing.Image> que usa o arquivo Camera.jpg.  
+  
+2.  Define o valor de gama do <xref:System.Drawing.Imaging.ImageAttributes> objeto como 0,25.  
+  
+3.  Desenha a imagem para a tela.  
+  
+4.  Chama o <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> método.  
+  
+5.  Desenha a imagem (uma câmera segundo) para a tela; No entanto, como o <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp%2A> método foi chamado, o gama definir padrões para um valor de 1,0 e a imagem é desenhado na tela com a configuração de gama padrão.  
+  
+ Observe que a imagem à esquerda é muito clara out (gama de 0,25) e a imagem à direita tem mais contraste (gama 1,0).  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNoOp">
+      <MemberSignature Language="C#" Value="public void SetNoOp (System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetNoOp(valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetNoOp(System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual cor correção está desativada.</param>
+        <summary>Desativa o ajuste de cor para uma categoria especificada. Você pode chamar o <see cref="Overload:System.Drawing.Imaging.ImageAttributes.ClearNoOp" /> método para reaplicar as configurações de ajuste de cor que estavam em vigor antes da chamada para o <see cref="Overload:System.Drawing.Imaging.ImageAttributes.SetNoOp" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um valor de gama para a categoria padrão, um valor de gama diferente para a categoria de bitmap e ainda um valor de gama diferente para a categoria de caneta.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetNoOp> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannel">
+      <MemberSignature Language="C#" Value="public void SetOutputChannel (System.Drawing.Imaging.ColorChannelFlag flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannel(valuetype System.Drawing.Imaging.ColorChannelFlag flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannel(System.Drawing.Imaging.ColorChannelFlag)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorChannelFlag" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Um elemento de <see cref="T:System.Drawing.Imaging.ColorChannelFlag" /> que especifica o canal de saída.</param>
+        <summary>Define o canal de saída CMYK (ciano-magenta-amarelo-preto) para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método para converter uma imagem em um espaço de cor CMYK e examinar as quantidades de um dos canais de cor CMYK. Por exemplo, suponha que você crie um <xref:System.Drawing.Imaging.ImageAttributes> do objeto e defina seu canal de saída de bitmap para <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC>. Se você passar o caminho daquela <xref:System.Drawing.Imaging.ImageAttributes> o objeto para o <xref:System.Drawing.Graphics.DrawImage%2A> método, o componente ciano de cada pixel é calculado, e cada pixel da imagem renderizada é um tom de cinza que indica a intensidade de seu canal ciano. Da mesma forma, você pode renderizar imagens que indicam as intensidades canais magenta, amarelo e preto.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um canal de saída para a categoria padrão e um canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `ShowOutputChannels`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#4)]
+ [!code-vb[System.Drawing.Misc3#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannel">
+      <MemberSignature Language="C#" Value="public void SetOutputChannel (System.Drawing.Imaging.ColorChannelFlag flags, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannel(valuetype System.Drawing.Imaging.ColorChannelFlag flags, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannel(System.Drawing.Imaging.ColorChannelFlag,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flags" Type="System.Drawing.Imaging.ColorChannelFlag" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Um elemento de <see cref="T:System.Drawing.Imaging.ColorChannelFlag" /> que especifica o canal de saída.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual o canal de saída é definido.</param>
+        <summary>Define o canal de saída CMYK (ciano-magenta-amarelo-preto) para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método para converter uma imagem em um espaço de cor CMYK e examinar as quantidades de um dos canais de cor CMYK. Por exemplo, suponha que você crie um <xref:System.Drawing.Imaging.ImageAttributes> do objeto e defina seu canal de saída de bitmap para <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC>. Se você passar o caminho daquela <xref:System.Drawing.Imaging.ImageAttributes> o objeto para o <xref:System.Drawing.Graphics.DrawImage%2A> método, o componente ciano de cada pixel é calculado, e cada pixel da imagem renderizada é um tom de cinza que indica a intensidade de seu canal ciano. Da mesma forma, você pode renderizar imagens que indicam as intensidades canais magenta, amarelo e preto.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um canal de saída para a categoria padrão e um canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir o canal de saída para a categoria de bitmap, passando <xref:System.Drawing.Imaging.ColorAdjustType.Bitmap> para o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a bitmaps.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método. Para executar este exemplo, cole o código a seguir em um formulário do Windows. Controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos e chamadas `ShowOutputChannels`, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#4)]
+ [!code-vb[System.Drawing.Misc3#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void SetOutputChannelColorProfile (string colorProfileFilename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannelColorProfile(string colorProfileFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorProfileFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="colorProfileFilename">O nome do caminho de um arquivo de perfil de cor. Se o arquivo de perfil de cor está no diretório %SystemRoot%\System32\Spool\Drivers\Color, esse parâmetro pode ser o nome do arquivo. Caso contrário, esse parâmetro deve ser o nome de caminho totalmente qualificado.</param>
+        <summary>Define o arquivo de perfil de cor do canal de saída para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> e <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> métodos para converter uma imagem em um espaço de cor CMYK (ciano-magenta-amarelo-preto) e examinar as quantidades de um o CMYK canais de cores. Por exemplo, suponha que você escrever código que executa as seguintes etapas:  
+  
+1.  Criar um <xref:System.Drawing.Image>.  
+  
+2.  Criar um <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+3.  Passar <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC> para o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+4.  Passe o nome do caminho de um arquivo de perfil de cor para o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> método o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+5.  Passe os caminhos do <xref:System.Drawing.Image> e <xref:System.Drawing.Imaging.ImageAttributes> objetos para o <xref:System.Drawing.Graphics.DrawImage%2A> método.  
+  
+ [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]usará o arquivo de perfil de cor para calcular o componente ciano de cada pixel da imagem, e cada pixel da imagem renderizada será uma sombra de cinza que indica a intensidade de seu canal ciano.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um arquivo de perfil de cor do canal de saída para a categoria padrão e um arquivo de perfil de cor do canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOutputChannelColorProfile">
+      <MemberSignature Language="C#" Value="public void SetOutputChannelColorProfile (string colorProfileFilename, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOutputChannelColorProfile(string colorProfileFilename, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile(System.String,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colorProfileFilename" Type="System.String" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="colorProfileFilename">O nome do caminho de um arquivo de perfil de cor. Se o arquivo de perfil de cor está no diretório %SystemRoot%\System32\Spool\Drivers\Color, esse parâmetro pode ser o nome do arquivo. Caso contrário, esse parâmetro deve ser o nome de caminho totalmente qualificado.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual o arquivo de perfil de cor de canal de saída é definido.</param>
+        <summary>Define o arquivo de perfil de cor do canal de saída para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> e <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> métodos para converter uma imagem em um espaço de cor CMYK (ciano-magenta-amarelo-preto) e examinar as quantidades de um o CMYK canais de cores. Por exemplo, suponha que você escrever código que executa as seguintes etapas:  
+  
+1.  Criar um <xref:System.Drawing.Image>.  
+  
+2.  Criar um <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+3.  Passar <xref:System.Drawing.Imaging.ColorChannelFlag.ColorChannelC> para o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannel%2A> método o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+4.  Passe o nome do caminho de um arquivo de perfil de cor para o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> método o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+5.  Passe os caminhos do <xref:System.Drawing.Image> e <xref:System.Drawing.Imaging.ImageAttributes> objetos para o <xref:System.Drawing.Graphics.DrawImage%2A> método.  
+  
+ [!INCLUDE[ndptecgdiplus](~/includes/ndptecgdiplus-md.md)]usará o arquivo de perfil de cor para calcular o componente ciano de cada pixel da imagem, e cada pixel da imagem renderizada será uma sombra de cinza que indica a intensidade de seu canal ciano.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um arquivo de perfil de cor do canal de saída para a categoria padrão e um arquivo de perfil de cor do canal de saída diferente para a categoria de bitmap.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de bitmap, as configurações padrão se aplicam a categoria de bitmap.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir o arquivo de perfil de cor do canal de saída para a categoria de bitmap, passando <xref:System.Drawing.Imaging.ColorAdjustType.Bitmap> para o <xref:System.Drawing.Imaging.ImageAttributes.SetOutputChannelColorProfile%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a bitmaps.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRemapTable">
+      <MemberSignature Language="C#" Value="public void SetRemapTable (System.Drawing.Imaging.ColorMap[] map);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRemapTable(class System.Drawing.Imaging.ColorMap[] map) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="map" Type="System.Drawing.Imaging.ColorMap[]" />
+      </Parameters>
+      <Docs>
+        <param name="map">Uma matriz de pares de cor do tipo <see cref="T:System.Drawing.Imaging.ColorMap" />. Cada par de cor contém uma cor existente (o primeiro valor) e a cor para a qual ela será mapeada (o segundo valor).</param>
+        <summary>Define a tabela de remapeamento de cores para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma tabela de remapeamento de cores é uma matriz de <xref:System.Drawing.Imaging.ColorMap> estruturas. Cada <xref:System.Drawing.Imaging.ColorMap> estrutura tem duas <xref:System.Drawing.Color> objetos: um que especifica uma cor antiga e um que especifica uma nova cor correspondente. Durante o processamento, todas as cores que corresponde a uma das cores na tabela de remapeamento antigas é alterada para a nova cor correspondente.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um remapeamento de cores para a categoria padrão, uma tabela de remapeamento de cores para a categoria de bitmap e ainda uma tabela de remapeamento de cores diferentes para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+1.  Cria uma imagem (um círculo vermelho), salve-o como Circle2.jpg, abre essa imagem e desenha na tela.  
+  
+2.  Cria um mapa de cor que mapeia a cor vermelha, verde a cor.  
+  
+3.  Desenha a imagem criada anteriormente para a tela novamente, mas desta vez usando o mapa de cores.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRemapTable">
+      <MemberSignature Language="C#" Value="public void SetRemapTable (System.Drawing.Imaging.ColorMap[] map, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRemapTable(class System.Drawing.Imaging.ColorMap[] map, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[],System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="map" Type="System.Drawing.Imaging.ColorMap[]" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="map">Uma matriz de pares de cor do tipo <see cref="T:System.Drawing.Imaging.ColorMap" />. Cada par de cor contém uma cor existente (o primeiro valor) e a cor para a qual ela será mapeada (o segundo valor).</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual a tabela de remapeamento de cores é definida.</param>
+        <summary>Define a tabela de remapeamento de cores para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma tabela de remapeamento de cores é uma matriz de <xref:System.Drawing.Imaging.ColorMap> estruturas. Cada <xref:System.Drawing.Imaging.ColorMap> estrutura tem duas <xref:System.Drawing.Color> objetos: um que especifica uma cor antiga e um que especifica uma nova cor correspondente. Durante o processamento, todas as cores que corresponde a uma das cores na tabela de remapeamento antigas é alterada para a nova cor correspondente.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um remapeamento de cores para a categoria padrão, uma tabela de remapeamento de cores para a categoria de bitmap e ainda uma tabela de remapeamento de cores diferentes para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir a tabela de remapeamento de cores para a categoria de caneta passando <xref:System.Drawing.Imaging.ColorAdjustType.Pen> para o <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a canetas.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%28System.Drawing.Imaging.ColorMap%5B%5D%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreshold">
+      <MemberSignature Language="C#" Value="public void SetThreshold (float threshold);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetThreshold(float32 threshold) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetThreshold(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threshold" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="threshold">Um número real que especifica o valor limite.</param>
+        <summary>Define o limite (intervalo de transparência) para a categoria padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite é um valor entre 0 e 1 que especifica um ponto de corte para cada componente de cor. Por exemplo, suponha que o limite é definido como 0,7 e suponha que você estiver processando uma cor cujo vermelho, verdes e azuis componentes são 230, 50 e 220, respectivamente. O componente vermelho (230) é maior que 0.7x255, para que o componente vermelho será alterado para 255 (intensidade completa). O componente verde (50) é menor que 0.7x255, para que o componente verde será alterado para 0. O componente azul (220) é maior que 0.7x255, para que o componente azul será alterado para 255.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um limite para a categoria padrão, um limite para a categoria de bitmap e ainda um limite diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+1.  Abre um <xref:System.Drawing.Image> e desenha na tela.  
+  
+2.  Cria um <xref:System.Drawing.Imaging.ImageAttributes> de objeto e define seu limite usando o <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%2A> método.  
+  
+3.  Desenha a imagem para a tela usando o limite do <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#7)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#7)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreshold">
+      <MemberSignature Language="C#" Value="public void SetThreshold (float threshold, System.Drawing.Imaging.ColorAdjustType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetThreshold(float32 threshold, valuetype System.Drawing.Imaging.ColorAdjustType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetThreshold(System.Single,System.Drawing.Imaging.ColorAdjustType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="threshold" Type="System.Single" />
+        <Parameter Name="type" Type="System.Drawing.Imaging.ColorAdjustType" />
+      </Parameters>
+      <Docs>
+        <param name="threshold">Um valor de limite de 0.0 a 1.0 que é usado como um ponto de interrupção para cores de classificação que será mapeado para um valor mínimo ou máximo.</param>
+        <param name="type">Um elemento de <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> que especifica a categoria para a qual o limite de cor é definido.</param>
+        <summary>Define o limite (intervalo de transparência) para uma categoria especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite é um valor entre 0 e 1 que especifica um ponto de corte para cada componente de cor. Por exemplo, suponha que o limite é definido como 0,7 e suponha que você estiver processando uma cor cujo vermelho, verdes e azuis componentes são 230, 50 e 220, respectivamente. O componente vermelho (230) é maior que 0.7x255, para que o componente vermelho será alterado para 255 (intensidade completa). O componente verde (50) é menor que 0.7x255, para que o componente verde será alterado para 0. O componente azul (220) é maior que 0.7x255, para que o componente azul será alterado para 255.  
+  
+ Um <xref:System.Drawing.Imaging.ImageAttributes> objeto mantém as configurações de cor e escala de cinza para cinco categorias de ajuste: padrão, bitmap, pincel, caneta e texto. Por exemplo, você pode especificar um limite para a categoria padrão, um limite para a categoria de bitmap e ainda um limite diferente para a categoria de caneta.  
+  
+ As configurações padrão de ajuste de cor e o ajuste de escala de cinza se aplicam a todas as categorias que não têm configurações de ajuste de seus próprios. Por exemplo, se você nunca Especifica as configurações de ajuste para a categoria de caneta, as configurações padrão se aplicam a categoria de caneta.  
+  
+ Assim que você especificar um ajuste de cor ou configuração de ajuste de escala de cinza para uma determinada categoria, as configurações de ajuste padrão não se aplicam a essa categoria. Por exemplo, suponha que você especificar um conjunto de configurações de ajuste para a categoria padrão. Se você definir o limite para a categoria de caneta passando <xref:System.Drawing.Imaging.ColorAdjustType.Pen> para o <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%2A> método, nenhuma das configurações de ajuste padrão serão aplicadas a canetas.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetThreshold%28System.Single%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWrapMode">
+      <MemberSignature Language="C#" Value="public void SetWrapMode (System.Drawing.Drawing2D.WrapMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetWrapMode(valuetype System.Drawing.Drawing2D.WrapMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetWrapMode(System.Drawing.Drawing2D.WrapMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Drawing.Drawing2D.WrapMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um elemento de <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que especifica como cópias repetidas de uma imagem são usadas para organizar uma área lado a lado.</param>
+        <summary>Define o modo de quebra automática de linha que é usado para decidir como organizar lado a lado uma textura em uma forma ou nos limites da forma. Uma textura organizada lado a lado em uma forma para preenchê-la quando a textura é menor do que a forma que está preenchendo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%29> método é equivalente a chamar <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%2CSystem.Drawing.Color%29> e passando <xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType> para o `color` parâmetro. <xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType>Especifica a cor de pixels fora de uma imagem renderizada. Essa cor é visível se o parâmetro modo é definido como <xref:System.Drawing.Drawing2D.WrapMode.Clamp> e o retângulo de origem passado para o <xref:System.Drawing.Graphics.DrawImage%2A> método é maior do que a própria imagem.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+1.  Abre um <xref:System.Drawing.Image> do Circle3.jpg de arquivos (um círculo pequeno, vermelho) e desenha na tela.  
+  
+2.  Cria um <xref:System.Drawing.Imaging.ImageAttributes> objeto e define o <xref:System.Drawing.Drawing2D.WrapMode> enumeração para <xref:System.Drawing.Drawing2D.WrapMode.Tile>.  
+  
+3.  Cria um <xref:System.Drawing.TextureBrush> usando a imagem do arquivo Circle3.jpg.  
+  
+4.  Desenha um retângulo para a tela que é preenchida com os círculos pequenos e vermelho.  
+  
+ [!code-cpp[System.Drawing.ClassicImaging.ImageAttributes#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CPP/form1.cpp#8)]
+ [!code-csharp[System.Drawing.ClassicImaging.ImageAttributes#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/CS/form1.cs#8)]
+ [!code-vb[System.Drawing.ClassicImaging.ImageAttributes#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicImaging.ImageAttributes/VB/form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWrapMode">
+      <MemberSignature Language="C#" Value="public void SetWrapMode (System.Drawing.Drawing2D.WrapMode mode, System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetWrapMode(valuetype System.Drawing.Drawing2D.WrapMode mode, valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetWrapMode(System.Drawing.Drawing2D.WrapMode,System.Drawing.Color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Drawing.Drawing2D.WrapMode" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um elemento de <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que especifica como cópias repetidas de uma imagem são usadas para organizar uma área lado a lado.</param>
+        <param name="color">Um <see cref="T:System.Drawing.Imaging.ImageAttributes" /> objeto que especifica a cor de pixels fora de uma imagem renderizada. Essa cor é visível se o parâmetro modo é definido como <see cref="F:System.Drawing.Drawing2D.WrapMode.Clamp" /> e o retângulo de origem passado para <see cref="Overload:System.Drawing.Graphics.DrawImage" /> é maior do que a própria imagem.</param>
+        <summary>Define o modo de quebra automática e a cor usada para decidir como bloco de uma textura em uma forma ou em limites de forma. Uma textura organizada lado a lado em uma forma para preenchê-la quando a textura é menor do que a forma que está preenchendo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWrapMode">
+      <MemberSignature Language="C#" Value="public void SetWrapMode (System.Drawing.Drawing2D.WrapMode mode, System.Drawing.Color color, bool clamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetWrapMode(valuetype System.Drawing.Drawing2D.WrapMode mode, valuetype System.Drawing.Color color, bool clamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Imaging.ImageAttributes.SetWrapMode(System.Drawing.Drawing2D.WrapMode,System.Drawing.Color,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Drawing.Drawing2D.WrapMode" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="clamp" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um elemento de <see cref="T:System.Drawing.Drawing2D.WrapMode" /> que especifica como cópias repetidas de uma imagem são usadas para organizar uma área lado a lado.</param>
+        <param name="color">Um objeto de cor que especifica a cor de pixels fora de uma imagem renderizada. Essa cor é visível se o parâmetro modo é definido como <see cref="F:System.Drawing.Drawing2D.WrapMode.Clamp" /> e o retângulo de origem passado para <see cref="Overload:System.Drawing.Graphics.DrawImage" /> é maior do que a própria imagem.</param>
+        <param name="clamp">Esse parâmetro não tem nenhum efeito. Defina-a como <see langword="false" />.</param>
+        <summary>Define o modo de quebra automática e a cor usada para decidir como bloco de uma textura em uma forma ou em limites de forma. Uma textura organizada lado a lado em uma forma para preenchê-la quando a textura é menor do que a forma que está preenchendo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Para obter um exemplo de código, consulte o <xref:System.Drawing.Imaging.ImageAttributes.SetWrapMode%28System.Drawing.Drawing2D.WrapMode%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

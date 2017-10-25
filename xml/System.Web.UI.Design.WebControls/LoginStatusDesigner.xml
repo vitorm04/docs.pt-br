@@ -1,0 +1,188 @@
+<Type Name="LoginStatusDesigner" FullName="System.Web.UI.Design.WebControls.LoginStatusDesigner">
+  <TypeSignature Language="C#" Value="public class LoginStatusDesigner : System.Web.UI.Design.WebControls.CompositeControlDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoginStatusDesigner extends System.Web.UI.Design.WebControls.CompositeControlDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.LoginStatusDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.CompositeControlDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.LoginStatus" /> controle de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus> controle apresenta um botão que automaticamente verifica o status de autenticação do usuário e exibe a opção apropriada de logon ou logoff.  
+  
+ Em um designer visual, quando você alternar de origem para o modo de Design, o código-fonte marcação que descreve o <xref:System.Web.UI.WebControls.LoginStatus> controle é analisado e uma versão de tempo de design do controle é criada na superfície de design. Quando você alternar de volta à exibição da fonte, o controle de tempo de design é persistente para o código-fonte marcação e editado na marcação da página da Web. O <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner> classe fornece suporte de tempo de design para o <xref:System.Web.UI.WebControls.LoginStatus> controle.  
+  
+ O <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.ActionLists%2A> propriedade retorna um <xref:System.ComponentModel.Design.DesignerActionListCollection> objeto, que normalmente contém um objeto que é derivado do <xref:System.ComponentModel.Design.DesignerActionList> classe para cada nível na árvore de herança do designer. O <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.UsePreviewControl%2A> propriedade sempre retorna `true`, indicando que o designer cria uma cópia temporária do associado <xref:System.Web.UI.WebControls.LoginStatus> para gerar a marcação de tempo de design, porque o status de autenticação de usuário não está disponível em tempo de design.  
+  
+ O <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.GetDesignTimeHtml%2A> método retorna a marcação que é usada para renderizar associado <xref:System.Web.UI.WebControls.LoginStatus> em tempo de design. O <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.Initialize%2A> método prepara o designer para exibir, editar e criar associado <xref:System.Web.UI.WebControls.LoginStatus>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como estender o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner> classe para alterar a aparência dos controles que são derivados do <xref:System.Web.UI.WebControls.LoginStatus> controle em tempo de design.  
+  
+ O exemplo deriva o `MyLoginStatus` controlar do <xref:System.Web.UI.WebControls.LoginStatus>. O `MyLoginStatus` é uma cópia do <xref:System.Web.UI.WebControls.LoginStatus> controle. O exemplo também deriva o `MyLoginStatusDesigner` classe <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner>e, em seguida, aplica um <xref:System.ComponentModel.DesignerAttribute> de atributo para o `MyLoginStatusDesigner` no `MyLoginStatus` controle.  
+  
+ O `MyLoginStatusDesigner` substitui o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.GetDesignTimeHtml%2A> método para desenhar uma borda tracejada azul ao redor do controle para torná-lo mais visível, se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> propriedade o `MyLoginStatus` é o <xref:System.Web.UI.WebControls.BorderStyle.NotSet> ou <xref:System.Web.UI.WebControls.BorderStyle.None> valor.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginStatusDesigner#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginStatusDesigner/CS/LoginStatusDesigner.cs#1)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginStatusDesigner#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginStatusDesigner/VB/LoginStatusDesigner.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoginStatusDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginStatusDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.LoginStatusDesigner" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner> classe quando ele cria associado <xref:System.Web.UI.WebControls.LoginStatus> controle ou uma cópia desse controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionLists">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.Design.DesignerActionListCollection ActionLists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerActionListCollection ActionLists" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LoginStatusDesigner.ActionLists" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de lista de ação de designer para este designer.</summary>
+        <value>O <see cref="T:System.ComponentModel.Design.DesignerActionListCollection" /> associado a este designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.ActionLists%2A> propriedade cria um <xref:System.ComponentModel.Design.DesignerActionList> de objeto para o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner> classe, adiciona-o para o <xref:System.ComponentModel.Design.DesignerActionListCollection> que é obtido o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.ActionLists%2A> propriedade base e, em seguida, retorna o <xref:System.ComponentModel.Design.DesignerActionListCollection> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginStatusDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação que é usada para renderizar o controle associado em tempo de design.</summary>
+        <returns>Uma cadeia de caracteres contendo a marcação usada para renderizar o <see cref="T:System.Web.UI.WebControls.LoginStatus" /> em tempo de design.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> ou <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> (dependendo se o usuário estiver conectado), a propriedade é `null`, uma cadeia de caracteres vazia (""), ou um único espaço (""), o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.GetDesignTimeHtml%2A> método define o <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> ou <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> propriedade, conforme apropriado para o <xref:System.Web.UI.Control.ID%2A> propriedade, entre colchetes ("[]"). Em seguida, independentemente da configuração do <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> ou <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A>, o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.GetDesignTimeHtml%2A> chamadas de método a <xref:System.Web.UI.Design.WebControls.CompositeControlDesigner.GetDesignTimeHtml%2A> base do método para gerar a marcação para o processamento de tempo de design do <xref:System.Web.UI.WebControls.LoginStatus> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.GetDesignTimeHtml%2A> método em uma classe herdada do <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner> classe para alterar a aparência de um controle que é derivado do <xref:System.Web.UI.WebControls.LoginStatus> classe em tempo de design. O exemplo desenha uma borda tracejada azul ao redor do controle para tornar sua extensão mais visível, se o <xref:System.Web.UI.WebControls.WebControl.BorderStyle%2A> é de propriedade do controle de <xref:System.Web.UI.WebControls.BorderStyle.NotSet> ou <xref:System.Web.UI.WebControls.BorderStyle.None> valor.  
+  
+ [!code-csharp[System.Web.UI.Design.WebControls.LoginStatusDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginStatusDesigner/CS/LoginStatusDesigner.cs#2)]
+ [!code-vb[System.Web.UI.Design.WebControls.LoginStatusDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Design.WebControls.LoginStatusDesigner/VB/LoginStatusDesigner.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir o <see cref="M:System.Web.UI.Design.WebControls.LoginStatusDesigner.GetDesignTimeHtml" /> método, certifique-se de chamar o <see cref="M:System.Web.UI.Design.WebControls.CompositeControlDesigner.GetDesignTimeHtml" /> método base porque eventualmente, por meio de várias substitui níveis, chama o <see cref="T:System.Web.UI.WebControls.LoginStatus" /> controle ou uma cópia do controle para gerar a marcação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.LoginStatusDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">Um <see cref="T:System.Web.UI.WebControls.LoginStatus" />, que implementa um <see cref="T:System.ComponentModel.IComponent" />.</param>
+        <summary>Prepara o designer para exibir, editar e criar o controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O visual designer chama o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.Initialize%2A> método quando ele estiver pronto para usar o designer para renderizar o <xref:System.Web.UI.WebControls.LoginStatus> controle. O <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.Initialize%2A> e seus métodos base configurar propriedades e os eventos que são necessários para a operação do designer.  
+  
+ O `component` parâmetro é o <xref:System.Web.UI.WebControls.LoginStatus> controle associado este designer ou uma cópia do <xref:System.Web.UI.WebControls.LoginStatus> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePreviewControl">
+      <MemberSignature Language="C#" Value="protected override bool UsePreviewControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsePreviewControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.LoginStatusDesigner.UsePreviewControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o designer deve usar uma cópia temporária em vez do controle real que está associado com o designer para gerar a marcação de tempo de design.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.UsePreviewControl%2A> propriedade é sempre `true`, o designer <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade retorna uma cópia do associado <xref:System.Web.UI.WebControls.LoginStatus> controle para gerar a marcação de tempo de design. O <xref:System.Web.UI.Design.ControlDesigner.ViewControl%2A> propriedade cria a cópia, persistindo real <xref:System.Web.UI.WebControls.LoginStatus> controle, em seguida, analisar a cadeia de caracteres de controle persistente. O controle copiado não afeta qualquer persistência para real <xref:System.Web.UI.WebControls.LoginStatus>.  
+  
+ Se o <xref:System.Web.UI.Design.WebControls.LoginStatusDesigner.UsePreviewControl%2A> propriedade foi substituída para retornar `false`, o designer usará associado <xref:System.Web.UI.WebControls.LoginStatus> para gerar a marcação de tempo de design e alterações em tempo de design para o controle será mantido para a origem de marcação da página.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="P:System.Web.UI.Design.WebControls.LoginStatusDesigner.UsePreviewControl" /> propriedade para retornar <see langword="false" /> ou para determinar seu valor com base em se o controle está marcado com um nível de classe <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" /> atributo. Se o <see cref="P:System.Web.UI.Design.WebControls.LoginStatusDesigner.UsePreviewControl" /> não for substituído, o <see cref="T:System.Web.UI.WebControls.LoginStatus" /> ignora o <see cref="T:System.Web.UI.Design.SupportsPreviewControlAttribute" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

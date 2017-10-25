@@ -1,0 +1,250 @@
+<Type Name="ProfileParameter" FullName="System.Web.UI.WebControls.ProfileParameter">
+  <TypeSignature Language="C#" Value="public class ProfileParameter : System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProfileParameter extends System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ProfileParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Parameter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("PropertyName")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa o valor de uma propriedade de perfil do ASP.NET a um objeto de parâmetro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.ProfileParameter> classe para associar o valor de um parâmetro de perfil do ASP.NET para um parâmetro usado em uma consulta SQL parametrizada, o método do objeto comercial ou a expressão de filtragem.  
+  
+ O <xref:System.Web.UI.WebControls.ProfileParameter> classe fornece a <xref:System.Web.UI.WebControls.ProfileParameter.PropertyName%2A> propriedade além daqueles herdado da <xref:System.Web.UI.WebControls.Parameter> classe. O <xref:System.Web.UI.WebControls.ProfileParameter.PropertyName%2A> propriedade identifica a propriedade de perfil do ASP.NET do qual o <xref:System.Web.UI.WebControls.ProfileParameter> recupera um valor.  
+  
+> [!NOTE]
+>  Controles que associam os dados para o parâmetro podem lançar uma exceção se uma <xref:System.Web.UI.WebControls.ProfileParameter> objeto for especificado, mas nenhuma propriedade de perfil correspondente é definida. Da mesma forma, eles podem não exibe dados se a propriedade de perfil está definida com `null`. Definir o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade para evitar essas situações onde apropriado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ProfileParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ProfileParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ProfileParameter> objeto criado com o <xref:System.Web.UI.WebControls.ProfileParameter.%23ctor%2A> construtor é inicializada com valores padrão para todas as suas propriedades. O <xref:System.Web.UI.WebControls.ProfileParameter.PropertyName%2A> propriedades são inicializadas para <xref:System.String.Empty?displayProperty=nameWithType>. Além disso, o <xref:System.Web.UI.WebControls.Parameter.Name%2A> propriedade é inicializada para <xref:System.String.Empty?displayProperty=nameWithType>, o <xref:System.Web.UI.WebControls.Parameter.Type%2A> propriedade é inicializada para <xref:System.TypeCode?displayProperty=nameWithType>, o <xref:System.Web.UI.WebControls.Parameter.Direction%2A> propriedade é inicializada para <xref:System.Data.ParameterDirection.Input>e o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade é inicializada como null (`Nothing` no Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProfileParameter (System.Web.UI.WebControls.ProfileParameter original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.ProfileParameter original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ProfileParameter.#ctor(System.Web.UI.WebControls.ProfileParameter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Web.UI.WebControls.ProfileParameter" />
+      </Parameters>
+      <Docs>
+        <param name="original">Um <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> instância na qual a instância atual é inicializada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> classe com os valores da instância especificada pelo <paramref name="original" /> parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ProfileParameter.%23ctor%2A> construtor é um `protected` construtor usado para clonar um <xref:System.Web.UI.WebControls.ProfileParameter> instância. Os valores de <xref:System.Web.UI.WebControls.ProfileParameter>, incluindo <xref:System.Web.UI.WebControls.ProfileParameter.PropertyName%2A>, <xref:System.Web.UI.WebControls.Parameter.Name%2A>, e <xref:System.Web.UI.WebControls.Parameter.Type%2A> são transferidos para a nova instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileParameter (string name, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ProfileParameter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="propertyName">O nome da propriedade do perfil do ASP.NET associada ao objeto do parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> de classe, usando o nome da propriedade especificado para identificar qual propriedade do perfil do ASP.NET para vincular a.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ProfileParameter> objeto criado com o <xref:System.Web.UI.WebControls.ProfileParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado e <xref:System.Web.UI.WebControls.ProfileParameter.PropertyName%2A>, que identifica a propriedade de perfil do ASP.NET que associa o parâmetro para. Outras propriedades, incluindo <xref:System.Web.UI.WebControls.Parameter.Type%2A>, <xref:System.Web.UI.WebControls.Parameter.Direction%2A>, e <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A> são inicializadas com valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileParameter (string name, System.Data.DbType dbType, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.DbType dbType, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ProfileParameter.#ctor(System.String,System.Data.DbType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="dbType">O tipo de banco de dados que representa o parâmetro.</param>
+        <param name="propertyName">O nome da propriedade do perfil do ASP.NET associada ao objeto do parâmetro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> de classe, usando o nome da propriedade especificado para identificar qual propriedade do perfil do ASP.NET para vincular a.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProfileParameter (string name, TypeCode type, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.TypeCode type, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ProfileParameter.#ctor(System.String,System.TypeCode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.TypeCode" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">O tipo que representa o parâmetro. O padrão é <see cref="F:System.TypeCode.Object" />.</param>
+        <param name="propertyName">O nome da propriedade do perfil do ASP.NET associada ao objeto do parâmetro. O padrão é <see cref="F:System.String.Empty" />.</param>
+        <summary>Inicializa uma nova instância nomeada e fortemente tipada do <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> de classe, usando o nome da propriedade especificado para identificar qual propriedade do perfil do ASP.NET para vincular a.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.ProfileParameter> objeto criado com o <xref:System.Web.UI.WebControls.ProfileParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado, <xref:System.Web.UI.WebControls.Parameter.Type%2A>, e <xref:System.Web.UI.WebControls.ProfileParameter.PropertyName%2A>. Somente o <xref:System.Web.UI.WebControls.Parameter.Direction%2A> e <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A> propriedades são inicializadas com os valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Parameter Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Parameter Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ProfileParameter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma duplicata do atual <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> instância.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> objeto que é uma cópia exata do atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ProfileParameter.Clone%2A> chamadas de método de <xref:System.Web.UI.WebControls.ProfileParameter.%23ctor%2A> construtor cópia para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ProfileParameter> classe com os valores da instância atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="protected override object Evaluate (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object Evaluate(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ProfileParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">Atual <see cref="T:System.Web.HttpContext" /> da solicitação.</param>
+        <param name="control">Um <see cref="T:System.Web.UI.Control" /> que está associado com o formulário da Web onde o <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> é usado.</param>
+        <summary>Atualiza e retorna o valor da <see cref="T:System.Web.UI.WebControls.ProfileParameter" /> objeto.</summary>
+        <returns>Um objeto que representa o valor atualizado do parâmetro. Se o contexto ou o perfil do ASP.NET é nulo (<see langword="Nothing" /> no Visual Basic), o <see cref="M:System.Web.UI.WebControls.ProfileParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" /> método retornará nulo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ProfileParameter> tenta vínculo com o valor da propriedade do perfil sempre o <xref:System.Web.UI.WebControls.ProfileParameter.Evaluate%2A> método é chamado.  
+  
+ O `context` parâmetro é usado pelo <xref:System.Web.UI.WebControls.ProfileParameter.Evaluate%2A> método para recuperar o ASP.NET perfil que o <xref:System.Web.UI.WebControls.ProfileParameter> associa a. O `control` parâmetro é ignorado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ProfileParameter.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade do perfil do ASP.NET que associa o parâmetro para.</summary>
+        <value>Uma cadeia de caracteres que identifica a propriedade de perfil do ASP.NET que associa o parâmetro para.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ProfileParameter.PropertyName%2A> propriedade identifica uma propriedade de perfil do ASP.NET atual disponível por meio do atual <xref:System.Web.HttpContext> objeto. Se a propriedade não existe para o perfil, o <xref:System.Web.UI.WebControls.ProfileParameter.Evaluate%2A> método falhar associar o parâmetro para um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

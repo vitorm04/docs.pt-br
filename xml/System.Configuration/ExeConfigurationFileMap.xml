@@ -1,0 +1,172 @@
+<Type Name="ExeConfigurationFileMap" FullName="System.Configuration.ExeConfigurationFileMap">
+  <TypeSignature Language="C#" Value="public sealed class ExeConfigurationFileMap : System.Configuration.ConfigurationFileMap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExeConfigurationFileMap extends System.Configuration.ConfigurationFileMap" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ExeConfigurationFileMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationFileMap</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define o mapeamento do arquivo de configuração para um aplicativo .exe. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ExeConfigurationFileMap> classe fornece um meio para definir uma hierarquia de arquivos de configuração personalizada de aplicativos .exe. O <xref:System.Configuration.ExeConfigurationFileMap> classe pode especificar um caminho único ou vários caminhos relacionados aos arquivos de configuração.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que mostra como usar essa classe, consulte o <xref:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExeConfigurationFileMap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ExeConfigurationFileMap.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ExeConfigurationFileMap" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExeConfigurationFileMap (string machineConfigFileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string machineConfigFileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ExeConfigurationFileMap.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="machineConfigFileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="machineConfigFileName">O nome do arquivo de configuração de máquina que inclui o caminho físico completo (por exemplo, <c>c:\Windows\Microsoft.NET\Framework\v2.0.50727\CONFIG\machine.config</c>).</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ExeConfigurationFileMap" /> usando o nome de arquivo de configuração do computador especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando você direcionar uma versão do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] que seja anterior na última vez em que está instalada no computador. Este construtor permite que você especifique um arquivo de configuração de máquina é apropriado para a versão do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ExeConfigurationFileMap.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do existente <see cref="T:System.Configuration.ExeConfigurationFileMap" /> objeto.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.ExeConfigurationFileMap" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExeConfigFilename">
+      <MemberSignature Language="C#" Value="public string ExeConfigFilename { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExeConfigFilename" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ExeConfigurationFileMap.ExeConfigFilename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo de configuração.</summary>
+        <value>O nome do arquivo de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalUserConfigFilename">
+      <MemberSignature Language="C#" Value="public string LocalUserConfigFilename { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalUserConfigFilename" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ExeConfigurationFileMap.LocalUserConfigFilename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo de configuração para o usuário local.</summary>
+        <value>O nome do arquivo de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoamingUserConfigFilename">
+      <MemberSignature Language="C#" Value="public string RoamingUserConfigFilename { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RoamingUserConfigFilename" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ExeConfigurationFileMap.RoamingUserConfigFilename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo de configuração para o usuário móvel.</summary>
+        <value>O nome do arquivo de configuração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,163 @@
+<Type Name="ManifestSignatureInformation" FullName="System.Security.Cryptography.ManifestSignatureInformation">
+  <TypeSignature Language="C#" Value="public sealed class ManifestSignatureInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManifestSignatureInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ManifestSignatureInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações para uma assinatura de manifesto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> método para obter um <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> objeto que pode ser usada para examinar as informações de assinatura.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AuthenticodeSignature">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation AuthenticodeSignature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation AuthenticodeSignature" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ManifestSignatureInformation.AuthenticodeSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de assinatura Authenticode de um manifesto.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation" /> objeto que contém informações de assinatura de Authenticode para o manifesto, ou <see langword="null" /> se não houver nenhuma assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manifest">
+      <MemberSignature Language="C#" Value="public System.Security.ManifestKinds Manifest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.ManifestKinds Manifest" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ManifestSignatureInformation.Manifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.ManifestKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de um manifesto.</summary>
+        <value>Um dos valores de <see cref="T:System.Security.ManifestKinds" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrongNameSignature">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.StrongNameSignatureInformation StrongNameSignature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.StrongNameSignatureInformation StrongNameSignature" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.ManifestSignatureInformation.StrongNameSignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.StrongNameSignatureInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os detalhes da assinatura de nome forte de um manifesto.</summary>
+        <value>Um <see cref="P:System.Security.Cryptography.ManifestSignatureInformation.StrongNameSignature" /> objeto que contém a assinatura ou <see langword="null" /> se não houver nenhuma assinatura de nome forte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ManifestSignatureInformationCollection VerifySignature (ActivationContext application);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ManifestSignatureInformationCollection VerifySignature(class System.ActivationContext application) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature(System.ActivationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ManifestSignatureInformationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="application">O contexto de ativação do manifesto. Contextos de ativação pertencem a um aplicativo e contenham vários manifestos.</param>
+        <summary>Coleta e verifica as informações sobre as assinaturas de manifestos que pertencem a um contexto de ativação especificado.</summary>
+        <returns>Uma coleção que contém um <see cref="T:System.Security.Cryptography.ManifestSignatureInformation" /> objeto para cada manifesto que é verificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="application" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ManifestSignatureInformationCollection VerifySignature (ActivationContext application, System.Security.ManifestKinds manifests);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ManifestSignatureInformationCollection VerifySignature(class System.ActivationContext application, valuetype System.Security.ManifestKinds manifests) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature(System.ActivationContext,System.Security.ManifestKinds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ManifestSignatureInformationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.ActivationContext" />
+        <Parameter Name="manifests" Type="System.Security.ManifestKinds" />
+      </Parameters>
+      <Docs>
+        <param name="application">O contexto de ativação do manifesto. Contextos de ativação pertencem a um aplicativo e contenham vários manifestos.</param>
+        <param name="manifests">O tipo de manifesto. Esse parâmetro especifica qual manifestos no contexto de ativação que você deseja verificar.</param>
+        <summary>Coleta e verifica as informações sobre as assinaturas de manifestos que pertencem a um contexto de ativação especificado e tipo de manifesto.</summary>
+        <returns>Uma coleção que contém um <see cref="T:System.Security.Cryptography.ManifestSignatureInformation" /> objeto para cada manifesto que é verificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="application" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.ManifestSignatureInformationCollection VerifySignature (ActivationContext application, System.Security.ManifestKinds manifests, System.Security.Cryptography.X509Certificates.X509RevocationFlag revocationFlag, System.Security.Cryptography.X509Certificates.X509RevocationMode revocationMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.ManifestSignatureInformationCollection VerifySignature(class System.ActivationContext application, valuetype System.Security.ManifestKinds manifests, valuetype System.Security.Cryptography.X509Certificates.X509RevocationFlag revocationFlag, valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode revocationMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature(System.ActivationContext,System.Security.ManifestKinds,System.Security.Cryptography.X509Certificates.X509RevocationFlag,System.Security.Cryptography.X509Certificates.X509RevocationMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ManifestSignatureInformationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.ActivationContext" />
+        <Parameter Name="manifests" Type="System.Security.ManifestKinds" />
+        <Parameter Name="revocationFlag" Type="System.Security.Cryptography.X509Certificates.X509RevocationFlag" />
+        <Parameter Name="revocationMode" Type="System.Security.Cryptography.X509Certificates.X509RevocationMode" />
+      </Parameters>
+      <Docs>
+        <param name="application">O contexto de aplicativo dos manifestos. Contextos de ativação pertencem a um aplicativo e contenham vários manifestos.</param>
+        <param name="manifests">O tipo de manifesto. Esse parâmetro especifica qual manifestos no contexto de ativação que você deseja verificar.</param>
+        <param name="revocationFlag">Um dos valores de enumeração que especifica quais certificados na cadeia são verificados para revogação. O padrão é <see cref="F:System.Security.Cryptography.X509Certificates.X509RevocationFlag.ExcludeRoot" />.</param>
+        <param name="revocationMode">Determina se a verificação de x. 509 deve ser on-line para listas de revogação.</param>
+        <summary>Coleta e verifica as informações sobre as assinaturas de manifestos que pertencem a um contexto de ativação especificado e o tipo de manifesto e permite que os certificados a serem selecionadas para revogação.</summary>
+        <returns>Uma coleção que contém um <see cref="T:System.Security.Cryptography.ManifestSignatureInformation" /> objeto para cada manifesto que é verificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="application" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um valor especificado para o <paramref name="revocationFlag" /> ou <paramref name="revocationMode" /> parâmetro é inválido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

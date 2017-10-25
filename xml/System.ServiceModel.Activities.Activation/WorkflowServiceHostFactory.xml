@@ -1,0 +1,106 @@
+<Type Name="WorkflowServiceHostFactory" FullName="System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory">
+  <TypeSignature Language="C#" Value="public class WorkflowServiceHostFactory : System.ServiceModel.Activation.ServiceHostFactoryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowServiceHostFactory extends System.ServiceModel.Activation.ServiceHostFactoryBase" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activation.ServiceHostFactoryBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma fábrica que fornece instâncias do <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> em ambientes de hospedagem gerenciados em que a instância do host é criada dinamicamente em resposta às mensagens de entrada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowServiceHostFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="public override System.ServiceModel.ServiceHostBase CreateServiceHost (string constructorString, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ServiceModel.ServiceHostBase CreateServiceHost(string constructorString, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.CreateServiceHost(System.String,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHostBase</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constructorString" Type="System.String" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="constructorString">O nome do arquivo XAML que define o serviço de fluxo de trabalho ou o tipo de serviço.</param>
+        <param name="baseAddresses">Uma lista de endereços que serve como um ponto de referência para outros endereços.</param>
+        <summary>Cria um novo host de serviço.</summary>
+        <returns>Uma instância de base de host de serviço.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWorkflowServiceHost">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Activities.WorkflowServiceHost CreateWorkflowServiceHost (System.Activities.Activity activity, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Activities.WorkflowServiceHost CreateWorkflowServiceHost(class System.Activities.Activity activity, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.CreateWorkflowServiceHost(System.Activities.Activity,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.WorkflowServiceHost</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Activities.Activity" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="activity">A definição de fluxo de trabalho.</param>
+        <param name="baseAddresses">Uma lista de endereços que serve como um ponto de referência para outros endereços.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> classe usando especificado <see cref="T:System.Activities.Activity" /> e endereços de base.</summary>
+        <returns>Uma instância de host do serviço de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWorkflowServiceHost">
+      <MemberSignature Language="C#" Value="protected virtual System.ServiceModel.Activities.WorkflowServiceHost CreateWorkflowServiceHost (System.ServiceModel.Activities.WorkflowService service, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ServiceModel.Activities.WorkflowServiceHost CreateWorkflowServiceHost(class System.ServiceModel.Activities.WorkflowService service, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.CreateWorkflowServiceHost(System.ServiceModel.Activities.WorkflowService,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.WorkflowServiceHost</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.ServiceModel.Activities.WorkflowService" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de fluxo de trabalho que se torna o host.</param>
+        <param name="baseAddresses">Uma lista de endereços que serve como um ponto de referência para outros endereços.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Activities.WorkflowServiceHost" /> classe com especificado <see cref="T:System.ServiceModel.Activities.WorkflowService" /> e endereços de base.</summary>
+        <returns>Uma instância de host do serviço de fluxo de trabalho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

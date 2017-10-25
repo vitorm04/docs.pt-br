@@ -1,0 +1,283 @@
+<Type Name="CompositeDataBoundControl" FullName="System.Web.UI.WebControls.CompositeDataBoundControl">
+  <TypeSignature Language="C#" Value="public abstract class CompositeDataBoundControl : System.Web.UI.WebControls.DataBoundControl, System.Web.UI.INamingContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CompositeDataBoundControl extends System.Web.UI.WebControls.DataBoundControl implements class System.Web.UI.INamingContainer" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CompositeDataBoundControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.DataBoundControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a classe base para um controle associado a dados tabular composto de outros controles de servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classe serve como a classe base para um controle de servidor composto que associa dados de uma fonte de dados. Um controle composto de servidor é um controle que é criado a partir de uma combinação de outros controles de servidor. Os desenvolvedores de página não usar o <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classe diretamente; em vez disso, eles usam os controles que derivam dessa classe. Exemplos de controles de associação de dados compostos a <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.FormView>, e <xref:System.Web.UI.WebControls.GridView> controles.  
+  
+ Classes que herdam o <xref:System.Web.UI.WebControls.CompositeDataBoundControl> controle deve substituir o <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls%28System.Collections.IEnumerable%2CSystem.Boolean%29> método para criar a hierarquia de controle. Para acessar os controles filho de um controle composto de associação de dados, use o <xref:System.Web.UI.WebControls.CompositeDataBoundControl.Controls%2A> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle de associação de dados composto personalizado que exibe os valores de uma fonte de dados em uma tabela.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#2)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Web.UI.WebControls.CompositeDataBoundControl" /> classe, você deve substituir o membro a seguir: <see cref="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CompositeDataBoundControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CompositeDataBoundControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classe é uma classe abstrata. Não é possível criar uma nova instância dessa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos controles filho no controle com limite de dados de composição.</summary>
+        <value>Um <see cref="T:System.Web.UI.ControlCollection" /> que representa os controles filho no controle com limite de dados de composição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle composto de associação de dados é uma combinação de um ou mais controles de servidor. Use o <xref:System.Web.UI.WebControls.CompositeDataBoundControl.Controls%2A> propriedade para gerenciar esses controles filho. Você pode adicionar, remover ou percorrer os controles do servidor na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a hierarquia de controle que é usada para renderizar um controle composto de associação de dados com base nos valores que são armazenados no estado de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls> é um método auxiliar que é usado por classes que derivam de <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classe para criar a hierarquia de controle para um controle composto de associação de dados. Esta sobrecarga do método cria a hierarquia de controle com base nos valores do estado de exibição, em vez de diretamente da fonte de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected abstract int CreateChildControls (System.Collections.IEnumerable dataSource, bool dataBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 CreateChildControls(class System.Collections.IEnumerable dataSource, bool dataBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+        <Parameter Name="dataBinding" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Um <see cref="T:System.Collections.IEnumerable" /> que contém os valores para associar ao controle.</param>
+        <param name="dataBinding">
+          <see langword="true" />para indicar que o <see cref="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" /> é chamado durante a associação de dados; caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe abstrata, cria a hierarquia de controle que é usada para renderizar o controle de associação de dados composto com base nos valores da fonte de dados especificado.</summary>
+        <returns>O número de itens criados pelo <see cref="M:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls(System.Collections.IEnumerable,System.Boolean)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls> é um método auxiliar que é usado por classes que derivam de <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classe para criar a hierarquia de controle para um controle composto de associação de dados. Ao estender o <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classe, você deve substituir o <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls> controlar o método para criar sua própria hierarquia. Para obter mais informações sobre como criar um controle composto, consulte [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.CompositeDataBoundControl.CreateChildControls%28System.Collections.IEnumerable%2CSystem.Boolean%29> método em um controle personalizado para criar a hierarquia de controle.  
+  
+ [!code-csharp[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/CS/idataitemcontainersample.cs#2)]
+ [!code-vb[System.Web.UI.IDataItemContainer_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDataItemContainer_1/VB/idataitemcontainersample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMethod">
+      <MemberSignature Language="C#" Value="protected string DeleteMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeleteMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.DeleteMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método a ser chamado para excluir dados.</summary>
+        <value>O nome do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade faz com que a associação de modelo a ser usado como o método de associação de dados.  
+  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertMethod">
+      <MemberSignature Language="C#" Value="protected string InsertMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InsertMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.InsertMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método a ser chamado para inserir dados.</summary>
+        <value>O nome do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade faz com que a associação de modelo a ser usado como o método de associação de dados.  
+  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUsingModelBinders">
+      <MemberSignature Language="C#" Value="protected override bool IsUsingModelBinders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUsingModelBinders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.IsUsingModelBinders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação de modelo está em uso.</summary>
+        <value>
+          <see langword="true" />Se a associação de modelo está em uso; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected override void PerformDataBinding (System.Collections.IEnumerable data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void PerformDataBinding(class System.Collections.IEnumerable data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um <see cref="T:System.Collections.IEnumerable" /> que contém os valores para associar o controle de associação de dados compostos.</param>
+        <summary>Associa os dados da fonte de dados para o controle de associação de dados composto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding%2A> é um método auxiliar que é usado por classes que derivam de <xref:System.Web.UI.WebControls.CompositeDataBoundControl> classe para associar os dados da fonte de dados para o controle de associação de dados composto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateMethod">
+      <MemberSignature Language="C#" Value="protected string UpdateMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UpdateMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompositeDataBoundControl.UpdateMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método a ser chamado para atualizar dados.</summary>
+        <value>O nome do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade faz com que a associação de modelo a ser usado como o método de associação de dados.  
+  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

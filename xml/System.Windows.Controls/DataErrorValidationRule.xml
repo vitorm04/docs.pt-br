@@ -1,0 +1,85 @@
+<Type Name="DataErrorValidationRule" FullName="System.Windows.Controls.DataErrorValidationRule">
+  <TypeSignature Language="C#" Value="public sealed class DataErrorValidationRule : System.Windows.Controls.ValidationRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataErrorValidationRule extends System.Windows.Controls.ValidationRule" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataErrorValidationRule" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ValidationRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma regra que verifica se há erros gerados pela implementação <see cref="T:System.ComponentModel.IDataErrorInfo" /> do objeto de origem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] modelo de associação de dados permite que você associe <xref:System.Windows.Data.Binding.ValidationRules%2A> com um <xref:System.Windows.Data.Binding> objeto. Se o objeto de origem implementa o <xref:System.ComponentModel.IDataErrorInfo> interface, você pode usar a regra interna <xref:System.Windows.Controls.DataErrorValidationRule> para verificar se há erros gerados pelo <xref:System.ComponentModel.IDataErrorInfo> implementação.  
+  
+ Uma sintaxe alternativa à configuração o <xref:System.Windows.Controls.DataErrorValidationRule> explicitamente é definir o <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> propriedade `true` em seu <xref:System.Windows.Data.Binding> ou <xref:System.Windows.Data.MultiBinding> objeto.  
+  
+ Você pode criar uma regra personalizada, criando uma classe que deriva de <xref:System.Windows.Controls.ValidationRule>. Para obter mais informações e uma discussão detalhada da validação de dados, consulte [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ <xref:System.Windows.Controls.DataErrorValidationRule>é introduzido no .NET Framework versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataErrorValidationRule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataErrorValidationRule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataErrorValidationRule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DataErrorValidationRule.%23ctor%2A>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Controls.ValidationResult Validate (object value, System.Globalization.CultureInfo cultureInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Controls.ValidationResult Validate(object value, class System.Globalization.CultureInfo cultureInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataErrorValidationRule.Validate(System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="cultureInfo" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor para verificar.</param>
+        <param name="cultureInfo">A cultura a ser usada nesta regra.</param>
+        <summary>Executa verificações de validação em um valor.</summary>
+        <returns>O resultado da validação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.DataErrorValidationRule.Validate%2A>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

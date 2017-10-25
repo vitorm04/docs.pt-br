@@ -1,0 +1,85 @@
+<Type Name="IXmlMtomReaderInitializer" FullName="System.Xml.IXmlMtomReaderInitializer">
+  <TypeSignature Language="C#" Value="public interface IXmlMtomReaderInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXmlMtomReaderInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.IXmlMtomReaderInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica os requisitos de implementação para os leitores de XML MTOM derivam dessa interface.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetInput">
+      <MemberSignature Language="C#" Value="public void SetInput (System.IO.Stream stream, System.Text.Encoding[] encodings, string contentType, System.Xml.XmlDictionaryReaderQuotas quotas, int maxBufferSize, System.Xml.OnXmlDictionaryReaderClose onClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInput(class System.IO.Stream stream, class System.Text.Encoding[] encodings, string contentType, class System.Xml.XmlDictionaryReaderQuotas quotas, int32 maxBufferSize, class System.Xml.OnXmlDictionaryReaderClose onClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlMtomReaderInitializer.SetInput(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encodings" Type="System.Text.Encoding[]" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+        <Parameter Name="onClose" Type="System.Xml.OnXmlDictionaryReaderClose" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo do qual ler.</param>
+        <param name="encodings">As codificações de caracteres possíveis do fluxo.</param>
+        <param name="contentType">O tipo de conteúdo da mensagem. Pode ser <see langword="null" /> se o tipo MIME está presente no documento que está sendo lido.</param>
+        <param name="quotas">O <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> para aplicar ao leitor.</param>
+        <param name="maxBufferSize">O tamanho máximo permitido do buffer.</param>
+        <param name="onClose">O delegado a ser usada quando um <see langword="onClose" /> evento ocorrer.</param>
+        <summary>Especifica os requisitos de inicialização para os leitores de XML MTOM que ler um fluxo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetInput">
+      <MemberSignature Language="C#" Value="public void SetInput (byte[] buffer, int offset, int count, System.Text.Encoding[] encodings, string contentType, System.Xml.XmlDictionaryReaderQuotas quotas, int maxBufferSize, System.Xml.OnXmlDictionaryReaderClose onClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetInput(unsigned int8[] buffer, int32 offset, int32 count, class System.Text.Encoding[] encodings, string contentType, class System.Xml.XmlDictionaryReaderQuotas quotas, int32 maxBufferSize, class System.Xml.OnXmlDictionaryReaderClose onClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.IXmlMtomReaderInitializer.SetInput(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="encodings" Type="System.Text.Encoding[]" />
+        <Parameter Name="contentType" Type="System.String" />
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+        <Parameter Name="maxBufferSize" Type="System.Int32" />
+        <Parameter Name="onClose" Type="System.Xml.OnXmlDictionaryReaderClose" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer do qual ler.</param>
+        <param name="offset">A posição inicial do qual ler em <c>buffer</c>.</param>
+        <param name="count">O número de bytes que podem ser lidos da <c>buffer</c>.</param>
+        <param name="encodings">As codificações de caracteres possíveis da entrada.</param>
+        <param name="contentType">O tipo de conteúdo da mensagem. Pode ser <see langword="null" /> se o tipo MIME está presente no documento que está sendo lido.</param>
+        <param name="quotas">O <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> para aplicar ao leitor.</param>
+        <param name="maxBufferSize">O tamanho máximo permitido do buffer.</param>
+        <param name="onClose">O delegado a ser usada quando um <see langword="onClose" /> evento ocorrer.</param>
+        <summary>Especifica os requisitos de inicialização para os leitores de XML MTOM que um buffer de leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

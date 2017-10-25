@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.HtmlControls">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.HtmlControls" /> namespace contém classes que permitem a criação de controles de servidor HTML em uma página de Web Forms. Controles de servidor HTML executam no servidor e mapeiam diretamente para a maioria dos navegadores com suporte de marcas HTML padrão. Isso permite que você controle programaticamente os elementos HTML em uma página de Web Forms.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

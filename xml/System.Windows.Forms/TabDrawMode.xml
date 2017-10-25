@@ -1,0 +1,59 @@
+<Type Name="TabDrawMode" FullName="System.Windows.Forms.TabDrawMode">
+  <TypeSignature Language="C#" Value="public enum TabDrawMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TabDrawMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabDrawMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se as guias em um controle guia são desenhadas pelo proprietário (desenhadas pela janela pai) ou pelo sistema operacional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por membros como <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>.  
+  
+ O <xref:System.Windows.Forms.TabControl> classe e suas classes derivadas que dão suporte à funcionalidade de desenho do proprietário, mas apenas um tipo, no qual desenhar as guias individualmente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabDrawMode Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabDrawMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As guias são desenhadas pelo sistema operacional e são do mesmo tamanho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDrawFixed">
+      <MemberSignature Language="C#" Value="OwnerDrawFixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.TabDrawMode OwnerDrawFixed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.TabDrawMode.OwnerDrawFixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TabDrawMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As guias são desenhadas pela janela pai e são do mesmo tamanho.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography.Pkcs">
+  <Docs>
+    <summary>O <see cref="N:System.Security.Cryptography.Pkcs" /> namespace fornece elementos de programação para chave de criptografia públicas padrões (PKCS), incluindo métodos para assinar dados, troca de chaves, solicitando criptografia de chave pública, certificados e descriptografia e outras funções de segurança.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.DynamicData.ModelProviders">
+  <Docs>
+    <summary>O <see cref="N:System.Web.DynamicData.ModelProviders" /> namespace contém classes que definem a funcionalidade básica para provedores de dados dinâmicos do ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

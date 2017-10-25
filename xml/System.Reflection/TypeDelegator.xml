@@ -1,0 +1,1740 @@
+<Type Name="TypeDelegator" FullName="System.Reflection.TypeDelegator">
+  <TypeSignature Language="C#" Value="public class TypeDelegator : System.Reflection.TypeInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TypeDelegator extends System.Reflection.TypeInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.TypeDelegator" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.TypeInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula um objeto <see cref="T:System.Type" /> e delega métodos a este <see langword="Type" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivar desse tipo e substituir somente os membros que você precisa fornecer personalização no, além de todos os membros que são exigidos pelo seu programa e ainda não implementados por <xref:System.Reflection.TypeDelegator>.  
+  
+ <xref:System.Reflection.TypeDelegator>deriva <xref:System.Type?displayProperty=nameWithType> e implementa a maioria das propriedades e métodos de <xref:System.Type>. Para cada membro que ele implementa, <xref:System.Reflection.TypeDelegator> automaticamente delega para o membro correspondente de interno <xref:System.Type> objeto, que é fornecido como um argumento para o construtor. Nesse interno <xref:System.Type> objeto é exposto para derivar classes pelo `protected` <xref:System.Reflection.TypeDelegator.typeImpl> campo.  
+  
+> [!NOTE]
+>  Alguns membros do <xref:System.Reflection.TypeDelegator> têm implementações apesar dos próprios membros simplesmente são herdados de <xref:System.Type>. Nesses casos, a implementação é fornecida por um substituído `protected` método que tem um nome que termina em "Implementação". Por exemplo, a implementação para todas as sobrecargas do <xref:System.Reflection.TypeDelegator.GetMethods%2A> método é fornecido pelo substituído <xref:System.Reflection.TypeDelegator.GetMethodImpl%2A> método. A implementação para herdada propriedades, como <xref:System.Type.IsPublic%2A> e <xref:System.Type.IsNestedAssembly%2A> é fornecido pelo substituído <xref:System.Reflection.TypeDelegator.GetAttributeFlagsImpl%2A> método.  
+  
+ Derivando de classes pode fornecer um construtor público que leva um <xref:System.Type> objeto como seu parâmetro e simplesmente passa esse objeto para o <xref:System.Reflection.TypeDelegator.%23ctor%28System.Type%29> construtor, ou pode definir interno <xref:System.Type> objeto de outra forma.  
+  
+ Se uma classe derivada usa um membro que não é implementado pelo <xref:System.Reflection.TypeDelegator>, ele deve substituir esse membro e fornecer uma implementação. A implementação mais simples é chamar o membro correspondente no interno <xref:System.Type> objeto exposto pelo <xref:System.Reflection.TypeDelegator.typeImpl> campo, mas você pode fornecer qualquer implementação de seu aplicativo requer. Não é necessário substituir esses membros se eles não são usados pelo seu aplicativo ou pela biblioteca de funções chamadas seu aplicativo (por exemplo, o <xref:System.CodeDom.CodeTypeReference.%23ctor%28System.Type%29?displayProperty=nameWithType> construtor).  
+  
+ Os seguintes métodos virtuais (`Overridable` métodos no Visual Basic) de <xref:System.Type> não são implementados por <xref:System.Reflection.TypeDelegator>: <xref:System.Type.MakeGenericType%2A>, <xref:System.Type.GetGenericTypeDefinition%2A>, <xref:System.Type.GetGenericArguments%2A>, <xref:System.Type.GetGenericParameterConstraints%2A>, <xref:System.Type.MakeArrayType%2A>, <xref:System.Type.MakeByRefType%2A>, <xref:System.Type.MakePointerType%2A> , <xref:System.Type.GetEnumNames%2A>, <xref:System.Type.GetEnumValues%2A>, <xref:System.Type.GetEnumUnderlyingType%2A>, <xref:System.Type.GetTypeCodeImpl%2A>, <xref:System.Type.IsEnumDefined%2A>, <xref:System.Type.IsEquivalentTo%2A>.  
+  
+ As seguintes propriedades virtuais (`Overridable` propriedades no Visual Basic) de <xref:System.Type> não são implementados por <xref:System.Reflection.TypeDelegator>: <xref:System.Type.IsGenericType%2A>, <xref:System.Type.IsGenericTypeDefinition%2A>, <xref:System.Type.IsGenericParameter%2A>, <xref:System.Type.ContainsGenericParameters%2A>, <xref:System.Type.DeclaringMethod%2A>, <xref:System.Type.GenericParameterAttributes%2A>, <xref:System.Type.GenericParameterPosition%2A>, <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A>, <xref:System.Type.IsSecurityTransparent%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypeDelegator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.TypeDelegator" /> com propriedades padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeDelegator (Type delegatingType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type delegatingType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="delegatingType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="delegatingType">A instância da classe <see cref="T:System.Type" /> que encapsula a chamada ao método de um objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Reflection.TypeDelegator" /> classe especifica a instância do encapsulamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado de uma classe para gerar um delegado com base no `Type` objeto para a classe que define o método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="delegatingType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Assembly Assembly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Assembly Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o assembly do tipo implementado.</summary>
+        <value>Um <see cref="T:System.Reflection.Assembly" /> objeto que representa o assembly do tipo implementado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assemblies são as unidades de implantação no common language runtime. Assemblies de estabelecer o namespace para resolver solicitações e determinam quais recursos são expostos externamente e que são acessível a partir de dentro do assembly. O common language runtime pode determinar e localizar o assembly para qualquer objeto em execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyQualifiedName">
+      <MemberSignature Language="C#" Value="public override string AssemblyQualifiedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyQualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.AssemblyQualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome totalmente qualificado do assembly.</summary>
+        <value>Um <see langword="String" /> que contém o nome totalmente qualificado do assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseType">
+      <MemberSignature Language="C#" Value="public override Type BaseType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type BaseType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.BaseType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo base para o tipo atual.</summary>
+        <value>O tipo base para um tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo base é o tipo do qual esse tipo herda diretamente. Desde o <xref:System.Object> tipo de classe é a classe base definitiva de todos os outros tipos, é o único tipo que não tem um tipo base. Nesse caso, `null` é retornado como o tipo base do `Object` tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public override string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome totalmente qualificado do tipo implementado.</summary>
+        <value>Um <see langword="String" /> que contém o nome totalmente qualificado do tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cadeia de caracteres que contém o nome totalmente qualificado do atual `TypeDelegator`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttributeFlagsImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.TypeAttributes GetAttributeFlagsImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Reflection.TypeAttributes GetAttributeFlagsImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetAttributeFlagsImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.TypeAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os atributos com o <see langword="TypeDelegator" />.</summary>
+        <returns>Um <see langword="TypeAttributes" /> objeto que representa os sinalizadores de atributo de implementação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para determinar se o `TypeDelegator` é abstrato, público e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConstructorImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.ConstructorInfo GetConstructorImpl (System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.ConstructorInfo GetConstructorImpl(valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, valuetype System.Reflection.CallingConventions callConvention, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetConstructorImpl(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ConstructorInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="callConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <param name="binder">Um objeto que permite a associação, a coerção de tipos de argumento, a invocação de membros e a recuperação de objetos <see langword="MemberInfo" /> usando reflexão. Se <c>associador</c> é <see langword="null" />, o associador padrão é usado.</param>
+        <param name="callConvention">As convenções de chamada.</param>
+        <param name="types">Uma matriz do tipo <see langword="Type" /> contendo uma lista de tipos, o número do parâmetro e ordem. Tipos não podem ser <see langword="null" />; use adequados <see langword="GetMethod" /> método ou uma matriz vazia para procurar um método sem parâmetros.</param>
+        <param name="modifiers">Uma matriz do tipo <see langword="ParameterModifier" /> ter o mesmo tamanho que o <c>tipos</c> matriz cujos elementos representam os atributos associados com os parâmetros do método para obter.</param>
+        <summary>Obtém o construtor implementado o <see langword="TypeDelegator" />.</summary>
+        <returns>Um <see langword="ConstructorInfo" /> objeto para o método que corresponde aos critérios especificados, ou <see langword="null" /> se não for encontrada uma correspondência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `callConvention` parâmetro indica a convenção de chamada para o ponto de entrada. Se nenhum convenção de chamada for especificada, um padrão <xref:System.Reflection.CallingConventions> valor `Standard` é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConstructors">
+      <MemberSignature Language="C#" Value="public override System.Reflection.ConstructorInfo[] GetConstructors (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.ConstructorInfo[] GetConstructors(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetConstructors(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ConstructorInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna uma matriz de <see cref="T:System.Reflection.ConstructorInfo" /> objetos que representam os construtores definidos para o tipo encapsulado pelo atual <see cref="T:System.Reflection.TypeDelegator" />.</summary>
+        <returns>Uma matriz do tipo <see langword="ConstructorInfo" /> que contém os construtores especificados definidos para esta classe. Se nenhum construtor for definida, uma matriz vazia será retornada. Dependendo do valor de um parâmetro especificado, somente os construtores públicos ou construtores públicos e não público serão retornados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicializadores de classe estão disponíveis apenas por meio de `GetMember`, `GetMembers`, `FindMembers`, e `GetConstructors`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">Especifica se deve pesquisar a cadeia de herança desse tipo para encontrar os atributos.</param>
+        <summary>Retorna todos os atributos personalizados definidos para esse tipo, especificar se deseja pesquisar a cadeia de herança do tipo.</summary>
+        <returns>Uma matriz de objetos que contém todos os atributos personalizados definidos para esse tipo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Uma matriz de atributos personalizados identificado por tipo.</param>
+        <param name="inherit">Especifica se deve pesquisar a cadeia de herança desse tipo para encontrar os atributos.</param>
+        <summary>Retorna uma matriz de atributos personalizados identificado por tipo.</summary>
+        <returns>Uma matriz de objetos que contém os atributos personalizados definidos neste tipo que correspondem a <paramref name="attributeType" /> parâmetro, especificar se deseja pesquisar a cadeia de herança do tipo, ou <see langword="null" /> se nenhum atributo personalizado é definido nesse tipo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementType">
+      <MemberSignature Language="C#" Value="public override Type GetElementType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetElementType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetElementType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o <see cref="T:System.Type" /> do objeto englobados ou referenciada pela matriz atual, ponteiro ou ByRef.</summary>
+        <returns>O <see cref="T:System.Type" /> do objeto englobados ou à qual a matriz atual, ponteiro ou <see langword="ByRef" />, ou <see langword="null" /> se atual <see cref="T:System.Type" /> não é uma matriz, um ponteiro ou <see langword="ByRef" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvent">
+      <MemberSignature Language="C#" Value="public override System.Reflection.EventInfo GetEvent (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.EventInfo GetEvent(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetEvent(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do evento para obter.</param>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna o evento especificado.</summary>
+        <returns>Um <see cref="T:System.Reflection.EventInfo" /> de objeto que representa o evento declarado ou herdada por esse tipo com o nome especificado. Este método retorna <see langword="null" /> se nenhum evento desse tipo é encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `bindingAttr` é <xref:System.Reflection.BindingFlags>.`IgnoreCase`, o caso do `name` parâmetro é ignorado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public override System.Reflection.EventInfo[] GetEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.EventInfo[] GetEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetEvents" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz de <see cref="T:System.Reflection.EventInfo" /> objetos que representam todos os eventos públicos declarado ou herdada por atual <see langword="TypeDelegator" />.</summary>
+        <returns>Retorna uma matriz do tipo <see langword="EventInfo" /> que contém todos os eventos declarados ou herdada pelo tipo atual. Se não houver nenhum evento, uma matriz vazia será retornada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEvents">
+      <MemberSignature Language="C#" Value="public override System.Reflection.EventInfo[] GetEvents (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.EventInfo[] GetEvents(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetEvents(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna os eventos especificados em <paramref name="bindingAttr" /> que são declarados ou herdada por atual <see langword="TypeDelegator" />.</summary>
+        <returns>Uma matriz do tipo <see langword="EventInfo" /> que contém os eventos especificados em <paramref name="bindingAttr" />. Se não houver nenhum evento, uma matriz vazia será retornada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetField">
+      <MemberSignature Language="C#" Value="public override System.Reflection.FieldInfo GetField (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.FieldInfo GetField(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetField(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do campo a ser localizado.</param>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna um <see cref="T:System.Reflection.FieldInfo" /> objeto que representa o campo com o nome especificado.</summary>
+        <returns>Um <see langword="FieldInfo" /> de objeto que representa o campo declarado ou herdada por esta <see langword="TypeDelegator" /> com o nome especificado. Retorna <see langword="null" /> se esse campo não for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use a `bindingAttr` of <xref:System.Reflection.BindingFlags>. Confidenciais para retornar todos os campos públicos e confidenciais. Use `BindingFlags.IgnoreCase` para ignorar o caso de campos, como a pesquisa diferencia maiusculas de minúsculas por padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFields">
+      <MemberSignature Language="C#" Value="public override System.Reflection.FieldInfo[] GetFields (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.FieldInfo[] GetFields(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetFields(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.FieldInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna uma matriz de <see cref="T:System.Reflection.FieldInfo" /> objetos que representa os campos de dados definidos para o tipo encapsulado pelo atual <see cref="T:System.Reflection.TypeDelegator" />.</summary>
+        <returns>Uma matriz do tipo <see langword="FieldInfo" /> que contém os campos declarados ou herdada por atual <see langword="TypeDelegator" />. Uma matriz vazia é retornada se houver campos correspondentes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Reflection.TypeDelegator.GetFields%2A> método não retornar campos em uma ordem específica, como em ordem alfabética ou ordem de declaração. Seu código deve não dependam da ordem na qual os campos são retornados, como ordem pode variar.  
+  
+ Use a `bindingAttr` of <xref:System.Reflection.BindingFlags>. Confidenciais para retornar todos os campos públicos e confidenciais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterface">
+      <MemberSignature Language="C#" Value="public override Type GetInterface (string name, bool ignoreCase);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetInterface(string name, bool ignoreCase) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetInterface(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ignoreCase" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome totalmente qualificado da interface implementada pela classe atual.</param>
+        <param name="ignoreCase">
+          <see langword="true" />Se o caso for ignorado; Caso contrário, <see langword="false" />.</param>
+        <summary>Retorna a interface especificada implementada pelo tipo encapsulado pelo atual <see cref="T:System.Reflection.TypeDelegator" />.</summary>
+        <returns>Um <see langword="Type" /> objeto que representa a interface implementada (direta ou indiretamente) pela classe atual com o nome totalmente qualificado correspondente ao nome especificado. Se nenhuma interface que coincide com o nome for encontrado, null será retornado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterfaceMap">
+      <MemberSignature Language="C#" Value="public override System.Reflection.InterfaceMapping GetInterfaceMap (Type interfaceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Reflection.InterfaceMapping GetInterfaceMap(class System.Type interfaceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetInterfaceMap(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.InterfaceMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interfaceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceType">O <see cref="T:System.Type" /> da interface para recuperar um mapeamento de.</param>
+        <summary>Retorna um mapeamento de interface para o tipo de interface especificado.</summary>
+        <returns>Um <see cref="T:System.Reflection.InterfaceMapping" /> objeto que representa o mapeamento de interface para <paramref name="interfaceType" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mapa de interface indica como uma interface é mapeada para os reais métodos em uma classe que implementa essa interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterfaces">
+      <MemberSignature Language="C#" Value="public override Type[] GetInterfaces ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetInterfaces() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetInterfaces" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna todas as interfaces implementadas na classe atual e suas classes base.</summary>
+        <returns>Uma matriz do tipo <see langword="Type" /> que contém todas as interfaces implementadas na classe atual e suas classes base. Se nenhum for definida, uma matriz vazia será retornada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMember">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberInfo[] GetMember (string name, System.Reflection.MemberTypes type, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MemberInfo[] GetMember(string name, valuetype System.Reflection.MemberTypes type, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetMember(System.String,System.Reflection.MemberTypes,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Reflection.MemberTypes" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro a ser obtido.</param>
+        <param name="type">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <param name="bindingAttr">O tipo de membros a serem obtidos.</param>
+        <summary>Retorna membros (propriedades, métodos, construtores, campos, eventos e tipos aninhados) especificados pela determinado <paramref name="name" />, <paramref name="type" />, e <paramref name="bindingAttr" />.</summary>
+        <returns>Uma matriz do tipo <see langword="MemberInfo" /> que contém todos os membros da classe atual e sua classe base que atendem aos critérios especificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If `bindingAttr` is <xref:System.Reflection.BindingFlags>. Confidenciais, todos os membros serão considerados. Se não houver nenhuma correspondência, uma matriz vazia será retornada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMembers">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberInfo[] GetMembers (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MemberInfo[] GetMembers(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetMembers(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna os membros especificados por <paramref name="bindingAttr" />.</summary>
+        <returns>Uma matriz do tipo <see langword="MemberInfo" /> que contém todos os membros da classe atual e suas classes base que atendem a <paramref name="bindingAttr" /> filtro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ If `bindingAttr` is <xref:System.Reflection.BindingFlags>. Confidenciais, todos os membros serão considerados. Se não houver nenhuma correspondência, uma matriz vazia será retornada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.MethodInfo GetMethodImpl (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, System.Reflection.CallingConventions callConvention, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.MethodInfo GetMethodImpl(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, valuetype System.Reflection.CallingConventions callConvention, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetMethodImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="callConvention" Type="System.Reflection.CallingConventions" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do método.</param>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <param name="binder">Um objeto que permite a associação, a coerção de tipos de argumento, a invocação de membros e a recuperação de objetos <see langword="MemberInfo" /> usando reflexão. Se <c>associador</c> é <see langword="null" />, o associador padrão é usado.</param>
+        <param name="callConvention">As convenções de chamada.</param>
+        <param name="types">Uma matriz do tipo <see langword="Type" /> contendo uma lista de tipos, o número do parâmetro e ordem. Tipos não podem ser <see langword="null" />; use adequados <see langword="GetMethod" /> método ou uma matriz vazia para procurar um método sem parâmetros.</param>
+        <param name="modifiers">Uma matriz do tipo <see langword="ParameterModifier" /> ter o mesmo tamanho que o <c>tipos</c> matriz cujos elementos representam os atributos associados com os parâmetros do método para obter.</param>
+        <summary>Pesquisa o método especificado cujos parâmetros correspondem aos tipos de argumento e modificadores especificados, usando as restrições de associação especificadas e a convenção de chamada especificada.</summary>
+        <returns>Um <see langword="MethodInfoInfo" /> objeto para o método de implementação que corresponde aos critérios especificados, ou <see langword="null" /> se não for encontrada uma correspondência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `callConvention` parâmetro indica a convenção de chamada para o ponto de entrada. Se nenhum <xref:System.Reflection.CallingConventions> for especificado, um padrão `CallingConventions` valor `Standard` é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethods">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo[] GetMethods (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo[] GetMethods(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetMethods(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna uma matriz de <see cref="T:System.Reflection.MethodInfo" /> objetos que representam métodos especificados do tipo encapsulados pelo atual <see cref="T:System.Reflection.TypeDelegator" />.</summary>
+        <returns>Uma matriz de <see langword="MethodInfo" /> objetos que representam os métodos definidos neste <see langword="TypeDelegator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNestedType">
+      <MemberSignature Language="C#" Value="public override Type GetNestedType (string name, System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetNestedType(string name, valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetNestedType(System.String,System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome do tipo aninhado.</param>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna um tipo aninhado especificado por <paramref name="name" /> e em <paramref name="bindingAttr" /> que são declarados ou herdada por tipo representado pela atual <see cref="T:System.Reflection.TypeDelegator" />.</summary>
+        <returns>Um <see langword="Type" /> objeto que representa o tipo aninhado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNestedTypes">
+      <MemberSignature Language="C#" Value="public override Type[] GetNestedTypes (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type[] GetNestedTypes(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetNestedTypes(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna os tipos aninhados especificados em <paramref name="bindingAttr" /> que são declarados ou herdada pelo tipo encapsulado pelo atual <see cref="T:System.Reflection.TypeDelegator" />.</summary>
+        <returns>Uma matriz do tipo <see langword="Type" /> que contém os tipos aninhados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperties">
+      <MemberSignature Language="C#" Value="public override System.Reflection.PropertyInfo[] GetProperties (System.Reflection.BindingFlags bindingAttr);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.PropertyInfo[] GetProperties(valuetype System.Reflection.BindingFlags bindingAttr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetProperties(System.Reflection.BindingFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+      </Parameters>
+      <Docs>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <summary>Retorna uma matriz de <see cref="T:System.Reflection.PropertyInfo" /> objetos que representam as propriedades do tipo encapsulados pelo atual <see cref="T:System.Reflection.TypeDelegator" />.</summary>
+        <returns>Uma matriz de <see langword="PropertyInfo" /> objetos que representam propriedades definidas neste <see langword="TypeDelegator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.PropertyInfo GetPropertyImpl (string name, System.Reflection.BindingFlags bindingAttr, System.Reflection.Binder binder, Type returnType, Type[] types, System.Reflection.ParameterModifier[] modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.PropertyInfo GetPropertyImpl(string name, valuetype System.Reflection.BindingFlags bindingAttr, class System.Reflection.Binder binder, class System.Type returnType, class System.Type[] types, valuetype System.Reflection.ParameterModifier[] modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.GetPropertyImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.PropertyInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="bindingAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="returnType" Type="System.Type" />
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">A propriedade a ser obtida.</param>
+        <param name="bindingAttr">Um bitmask que afeta a maneira pela qual a pesquisa é realizada. O valor é uma combinação de zero ou mais sinalizadores de bit de <see cref="T:System.Reflection.BindingFlags" />.</param>
+        <param name="binder">Um objeto que permite a associação, a coerção de tipos de argumentos, invocação de membros e a recuperação de objetos <see langword="MemberInfo" /> por meio de reflexão. Se <c>associador</c> é <see langword="null" />, o associador padrão é usado. Consulte <see cref="T:System.Reflection.Binder" />.</param>
+        <param name="returnType">O tipo de retorno da propriedade.</param>
+        <param name="types">Uma lista dos tipos de parâmetro. A lista representa o número, ordem e tipos dos parâmetros. Tipos não podem ser nulos. Use um apropriado <see langword="GetMethod" /> método ou uma matriz vazia para procurar um método sem parâmetros.</param>
+        <param name="modifiers">Uma matriz de tipos de elementos que representam os atributos associados com os parâmetros do método para obter o mesmo comprimento.</param>
+        <summary>Quando substituído em uma classe derivada, procura a propriedade especificada cujos parâmetros correspondem a tipos de argumento especificados e os modificadores, usando as restrições de associação especificada.</summary>
+        <returns>Um <see cref="T:System.Reflection.PropertyInfo" /> de objeto para a propriedade que corresponde aos critérios especificados, ou nulo se não for encontrada uma correspondência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GUID">
+      <MemberSignature Language="C#" Value="public override Guid GUID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid GUID" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.GUID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o GUID (identificador global exclusivo) do tipo implementado.</summary>
+        <value>Uma GUID.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O GUID (identificador global exclusivo) é uma cadeia de caracteres de identificação exclusivo de 128 bits usada para identificar uma classe ou uma interface. É útil principalmente para fins de interoperabilidade entre o Microsoft .NET Framework e COM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasElementTypeImpl">
+      <MemberSignature Language="C#" Value="protected override bool HasElementTypeImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HasElementTypeImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.HasElementTypeImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o atual <see cref="T:System.Type" /> abrange ou se refere a outro tipo; se atual <see cref="T:System.Type" /> é uma matriz, um ponteiro ou um ByRef.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Type" /> é uma matriz, um ponteiro ou um ByRef; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeMember">
+      <MemberSignature Language="C#" Value="public override object InvokeMember (string name, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object target, object[] args, System.Reflection.ParameterModifier[] modifiers, System.Globalization.CultureInfo culture, string[] namedParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InvokeMember(string name, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object target, object[] args, valuetype System.Reflection.ParameterModifier[] modifiers, class System.Globalization.CultureInfo culture, string[] namedParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="modifiers" Type="System.Reflection.ParameterModifier[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="namedParameters" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do membro para invocar. Isso pode ser um construtor, método, propriedade ou campo. Se uma cadeia de caracteres vazia ("") for passado, o padrão é invocado membro.</param>
+        <param name="invokeAttr">O atributo de invocação. Isso deve ser um dos seguintes <see cref="T:System.Reflection.BindingFlags" /> : <see langword="InvokeMethod" />, <see langword="CreateInstance" />, <see langword="Static" />, <see langword="GetField" />, <see langword="SetField" />, <see langword="GetProperty" />, ou <see langword="SetProperty" />. Um atributo de invocação adequado deve ser especificado. Se for um membro estático seja chamado, o <see langword="Static" /> sinalizador deve ser definido.</param>
+        <param name="binder">Um objeto que permite a associação, a coerção de tipos de argumentos, invocação de membros e a recuperação de objetos <see langword="MemberInfo" /> por meio de reflexão. Se <c>associador</c> é <see langword="null" />, o associador padrão é usado. Consulte <see cref="T:System.Reflection.Binder" />.</param>
+        <param name="target">O objeto no qual invocar o membro especificado.</param>
+        <param name="args">Uma matriz do tipo <see langword="Object" /> que contém o número, ordem e tipo dos parâmetros do membro a ser invocado. Se <c>args</c> contém um não inicializada <see langword="Object" />, ele será tratado como vazio, que, com o associador de padrão pode ser ampliado para 0, 0,0 ou uma cadeia de caracteres.</param>
+        <param name="modifiers">Uma matriz do tipo <see langword="ParameterModifer" /> que é o mesmo comprimento que <c>args</c>, com elementos que representam os atributos associados com os argumentos do membro a ser invocado. Um parâmetro com atributos associados a ele na assinatura do membro. Para ByRef, use <see langword="ParameterModifer.ByRef" />e para none, use <see langword="ParameterModifer.None" />. O associador padrão exata correspondência neles. Atributos como <see langword="In" /> e <see langword="InOut" /> não são usados na associação e podem ser exibidos usando <see langword="ParameterInfo" />.</param>
+        <param name="culture">Uma instância de <see langword="CultureInfo" /> usada para determinar a coerção de tipos. Isso é necessário, por exemplo, para converter uma cadeia de caracteres que representa a 1000 para um <see langword="Double" /> valor, desde que 1000 é representado de forma diferente por diferentes culturas. Se <c>cultura</c> é <see langword="null" />, o <see langword="CultureInfo" /> para o thread atual <see langword="CultureInfo" /> é usado.</param>
+        <param name="namedParameters">Uma matriz do tipo <see langword="String" /> que contém os nomes de parâmetros correspondentes, começando no elemento zero, com o <c>args</c> matriz. Não deve haver nenhum buracos na matriz. Se <c>args</c>. <see langword="Length" />é maior do que <c>namedParameters</c>. <see langword="Length" />, os parâmetros restantes são preenchidos na ordem.</param>
+        <summary>Invoca o membro especificado. O método a ser invocado deve ser acessível e forneça a correspondência mais específica com a lista de argumento especificado, sob as restrições de atributos especificados de fichário e invocação.</summary>
+        <returns>Um <see langword="Object" /> que representa o valor de retorno do membro chamado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um método será chamado se as seguintes condições forem verdadeiras:  
+  
+-   O número de parâmetros na declaração de método é igual ao número de argumentos na lista de argumentos especificados (a menos que os argumentos padrão são definidos no membro).  
+  
+-   O tipo de cada argumentos pode ser convertido pelo associador para o tipo do parâmetro.  
+  
+ O associador encontrará todos os métodos correspondentes. Esses métodos são encontrados com base no tipo de associação solicitada (`BindingFlags.MethodInvoke`, `BindingFlags.GetProperties`e assim por diante). O conjunto de métodos é filtrado pelo nome, número de argumentos e um conjunto de modificadores de pesquisa definidos associador.  
+  
+ Depois que o método for selecionado, ele será invocado. Acessibilidade é verificada nesse ponto. A pesquisa pode controlar qual conjunto de métodos são pesquisadas com base no atributo acessibilidade associado com o método. O <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType> método é responsável para selecionar o método a ser invocado. O associador padrão seleciona a correspondência mais específica.  
+  
+> [!NOTE]
+>  Restrições de acesso são ignoradas por código totalmente confiável. Ou seja, propriedades, métodos, campos e construtores privados podem ser acessadas e invocados usando reflexão sempre que o código é totalmente confiável.  
+  
+ Atualmente, `InvokeMember` executa a semântica de reflexão do Microsoft .NET Framework para cada tipo de objeto.  
+  
+ Se o membro especificado por nome é uma matriz e o `BindingFlags.GetField` sinalizador é definido em `invokeAttr`, o `args` matriz Especifica os elementos cujos valores serão retornados. Por exemplo, a seguinte chamada por meio de `Type` objeto `t` retorna o valor do primeiro elemento da matriz de cadeia de caracteres MyArray, que é um membro do objeto de chamada:  
+  
+ `String ret = (String) t.InvokeMember ("MyArray", BindingFlags.GetField, null, this, new Variant[]{0});`  
+  
+ Você pode usar `InvokeMember` para definir um ou mais elementos de uma matriz de membros. Todos os elementos são definidos com o mesmo valor. O `args` matriz deve ser formatada da seguinte maneira:  
+  
+```  
+{index1,  
+    index2,, value}  
+```  
+  
+ Por exemplo, para definir o primeiro membro do MyArray do exemplo anterior, a sintaxe é a seguinte:  
+  
+```  
+t.InvokeMember ("MyArray", BindingFlags.SetField, null, this, new  
+    Variant[]{0,"Updated"});  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsArrayImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsArrayImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsArrayImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsArrayImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="T:System.Type" /> é uma matriz.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Type" /> é uma matriz; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssignableFrom">
+      <MemberSignature Language="C#" Value="public override bool IsAssignableFrom (System.Reflection.TypeInfo typeInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsAssignableFrom(class System.Reflection.TypeInfo typeInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsAssignableFrom(System.Reflection.TypeInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeInfo" Type="System.Reflection.TypeInfo" />
+      </Parameters>
+      <Docs>
+        <param name="typeInfo">O tipo a ser verificado.</param>
+        <summary>Retorna um valor que indica se o tipo especificado pode ser atribuído a esse tipo.</summary>
+        <returns>
+          <see langword="true" />Se o tipo especificado pode ser atribuído a este tipo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsByRefImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsByRefImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsByRefImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsByRefImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="T:System.Type" /> é passada por referência.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Type" /> for aprovado por referência; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCOMObjectImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsCOMObjectImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsCOMObjectImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsCOMObjectImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="T:System.Type" /> é um objeto COM.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Type" /> for um objeto COM; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConstructedGenericType">
+      <MemberSignature Language="C#" Value="public override bool IsConstructedGenericType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConstructedGenericType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.IsConstructedGenericType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este objeto representa um tipo genérico construído.</summary>
+        <value>
+          <see langword="true" /> se este objeto representar um tipo genérico construído; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">Especifica se deve pesquisar a cadeia de herança desse tipo para encontrar os atributos.</param>
+        <param name="inherit">Uma matriz de atributos personalizados identificado por tipo.</param>
+        <summary>Indica se um atributo personalizado identificado por <paramref name="attributeType" /> está definido.</summary>
+        <returns>
+          <see langword="true" />Se um atributo personalizado identificado por <paramref name="attributeType" /> for definido; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Reflection.ReflectionTypeLoadException">Não é possível carregar o tipo de atributo personalizado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPointerImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsPointerImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPointerImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsPointerImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="T:System.Type" /> é um ponteiro.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Type" /> for um ponteiro; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimitiveImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsPrimitiveImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPrimitiveImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsPrimitiveImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="T:System.Type" /> é um dos tipos primitivos.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Type" /> for um dos tipos primitivos; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSZArray">
+      <MemberSignature Language="C#" Value="public override bool IsSZArray { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSZArray" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.IsSZArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeDefinition">
+      <MemberSignature Language="C#" Value="public override bool IsTypeDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTypeDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.IsTypeDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValueTypeImpl">
+      <MemberSignature Language="C#" Value="protected override bool IsValueTypeImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValueTypeImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.TypeDelegator.IsValueTypeImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o tipo é um tipo de valor. ou seja, não uma classe ou uma interface.</summary>
+        <returns>
+          <see langword="true" />Se o tipo for um tipo de valor. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVariableBoundArray">
+      <MemberSignature Language="C#" Value="public override bool IsVariableBoundArray { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVariableBoundArray" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.IsVariableBoundArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataToken">
+      <MemberSignature Language="C#" Value="public override int MetadataToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetadataToken" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.MetadataToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que identifica essa entidade em metadados.</summary>
+        <value>Um valor que, em combinação com o módulo identifica exclusivamente essa entidade em metadados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os símbolos obtidos usando essa propriedade podem ser passados para a API de reflexão não gerenciada. Para obter mais informações, consulte [API não gerenciada de reflexão](http://msdn.microsoft.com/en-us/0c5bb9de-0cf6-438d-ba47-134e6c775fb8).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Module">
+      <MemberSignature Language="C#" Value="public override System.Reflection.Module Module { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.Module Module" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.Module" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Module</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o módulo que contém o tipo implementado.</summary>
+        <value>Um <see cref="T:System.Reflection.Module" /> objeto que representa o módulo do tipo implementado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um módulo é uma unidade pode ser carregada que pode conter declarações de tipo e implementações. Módulos contêm informações suficientes para permitir o common language runtime para localizar todos os bits de implementação, quando o módulo é carregado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tipo implementado, com o caminho removido.</summary>
+        <value>Um <see langword="String" /> que contém o nome do tipo não qualificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cadeia de caracteres que contém o nome do `TypeDelegator` atual. Somente o nome simple, não o nome totalmente qualificado, é retornado. Para obter o nome e o caminho, use <xref:System.Reflection.TypeDelegator.FullName%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public override string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace do tipo implementado.</summary>
+        <value>Um <see langword="String" /> que contém o namespace do tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém uma cadeia de caracteres que contém o namespace do atual `TypeDelegator`. Por exemplo, se o `TypeDelegator` é <xref:System.Reflection.TypeFilter>, o namespace retornado é <xref:System.Reflection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeHandle">
+      <MemberSignature Language="C#" Value="public override RuntimeTypeHandle TypeHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.RuntimeTypeHandle TypeHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.TypeHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeTypeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador para a representação interna de metadados de um tipo implementado.</summary>
+        <value>Um objeto <see langword="RuntimeTypeHandle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um identificador de tipo é um valor inteiro exclusivo associado com cada tipo. O identificador é exclusivo durante o tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="typeImpl">
+      <MemberSignature Language="C#" Value="protected Type typeImpl;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Type typeImpl" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.TypeDelegator.typeImpl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Informações de tipo que indica um valor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlyingSystemType">
+      <MemberSignature Language="C#" Value="public override Type UnderlyingSystemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type UnderlyingSystemType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.TypeDelegator.UnderlyingSystemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o subjacente <see cref="T:System.Type" /> que representa o tipo implementado.</summary>
+        <value>O tipo subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

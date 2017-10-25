@@ -1,0 +1,508 @@
+<Type Name="PeerName" FullName="System.Net.PeerToPeer.PeerName">
+  <TypeSignature Language="C#" Value="public class PeerName : IEquatable&lt;System.Net.PeerToPeer.PeerName&gt;, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable PeerName extends System.Object implements class System.IEquatable`1&lt;class System.Net.PeerToPeer.PeerName&gt;, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.PeerToPeer.PeerName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Net.PeerToPeer.PeerName&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Especifica os valores que definem um objeto <see cref="T:System.Net.PeerToPeer.PeerName" /> ponto a ponto. Um nome par normalmente é uma cadeia de caracteres usada para identificar um recurso par.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerName (string remotePeerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string remotePeerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="remotePeerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="remotePeerName">Contém o nome de ponto a ponto para codificar como um <see cref="T:System.Net.PeerToPeer.PeerName" /> instância.</param>
+        <summary>Inicializa um novo objeto do tipo <see cref="T:System.Net.PeerToPeer.PeerName" /> com o nome totalmente qualificado do ponto fornecido <see cref="T:System.String" /> valor.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.String" /> fornecido não é válido <see cref="T:System.Net.PeerToPeer.PeerName" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="remotePeerName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PeerName (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Referência para o objeto que contém os dados necessários para desserializar a essa instância.</param>
+        <param name="context">Contexto que fornece os meios para desserializar os dados. Também conhecido como a fonte de dados serializados.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com os dados necessários para serializar o <see cref="T:System.Net.PeerToPeer.PeerName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é necessário para desserialização desse tipo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou mais parâmetros são <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PeerName (string classifier, System.Net.PeerToPeer.PeerNameType peerNameType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string classifier, valuetype System.Net.PeerToPeer.PeerNameType peerNameType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.#ctor(System.String,System.Net.PeerToPeer.PeerNameType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="classifier" Type="System.String" />
+        <Parameter Name="peerNameType" Type="System.Net.PeerToPeer.PeerNameType" />
+      </Parameters>
+      <Docs>
+        <param name="classifier">
+          <see cref="T:System.String" />que contém o nome de ponto a ponto para codificar como um <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <param name="peerNameType">
+          <see cref="T:System.Net.PeerToPeer.PeerNameType" />valor de enumeração que especifica o tipo de nome de ponto a ponto para criar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.PeerToPeer.PeerName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor retorna um objeto do tipo <xref:System.Net.PeerToPeer.PeerName> que contém o nome totalmente qualificado do ponto. Ela também especifica se o nome do par é protegido ou não protegido.  
+  
+ Esta instância usa a identidade de ponto padrão para o usuário atual e especificado <xref:System.Net.PeerToPeer.PeerName.Classifier%2A>, além do tipo de nome de ponto a ponto para criar com o classificador especificado e o tipo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Net.PeerToPeer.PeerName.Classifier" /> inclui um ou mais caracteres inválidos.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais parâmetros são <see langword="null" />.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">-   A identidade padrão usado como base para o <see cref="T:System.Net.PeerToPeer.PeerName" /> não pôde ser recuperado.  
+  
+-   O <see cref="T:System.Net.PeerToPeer.PeerName" /> não pôde ser criado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Authority">
+      <MemberSignature Language="C#" Value="public string Authority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Authority" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerName.Authority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que especifica o <see cref="P:System.Net.PeerToPeer.PeerName.Authority" /> usado por este <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto.</summary>
+        <value>A cadeia de caracteres que contém a parte de autenticação especificado <see cref="T:System.Net.PeerToPeer.PeerName" />. Para nomes de ponto a ponto segura, esta propriedade contém a chave pública como uma cadeia de caracteres hexadecimal do caractere quarenta. Para nomes de ponto a ponto segura, essa propriedade é definida como zero (0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o proprietário ou host de ponto a ponto, pode registrar um nome de ponto a ponto segura. Um nome de ponto a ponto é considerado protegido se for sustentada por um certificado autoassinado.  
+  
+ Nomes de mesmo nível diferenciam maiusculas de minúsculas e o formato de um nome de ponto a ponto é: *Authority.Classifier*. Por exemplo, "0.MyPeerName" é um nome de ponto a ponto bem formado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Usando um nome de ponto a ponto segura não garante a segurança geral do aplicativo de rede. A segurança do aplicativo depende de implementação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Classifier">
+      <MemberSignature Language="C#" Value="public string Classifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Classifier" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerName.Classifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que contém o classificador de uma ponto a ponto <see cref="T:System.Net.PeerToPeer.PeerName" />.</summary>
+        <value>A cadeia de caracteres que contém a parte de classificação usada para identificar um nome de ponto a ponto para <see cref="T:System.Net.PeerToPeer.PeerNameRegistration" /> ou resolução de dentro de um PNRP <see cref="T:System.Net.PeerToPeer.Cloud" />.  
+  
+ A menos que explicitamente especificado, o valor padrão para todas as propriedades é <see langword="null" /> para tipos de referência e zero (0) para propriedades do tipo <see langword="int" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formato de um nome de ponto a ponto é: *Authority.Classifier*. O nome do par *classificador* componente pode ser definido como qualquer cadeia de caracteres que contém caracteres Unicode 149 ou menos, incluindo o `null` terminador ("\0"). Cadeias de caracteres de nome de ponto a ponto diferenciam maiusculas de minúsculas.  
+  
+ Para nomes de ponto a ponto segura, a classificação e o ponto após a autoridade são opcionais. Para nomes de ponto a ponto segura, o classificador não é opcional.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromPeerHostName">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.PeerName CreateFromPeerHostName (string peerHostName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.PeerName CreateFromPeerHostName(string peerHostName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.CreateFromPeerHostName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerHostName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="peerHostName">Uma cadeia de caracteres que contém o nome de host DNS qualificado.</param>
+        <summary>Cria uma nova instância da especificado <see cref="P:System.Net.PeerToPeer.PeerName.PeerHostName" /> objeto com o nome de host especificado ponto a ponto.</summary>
+        <returns>Um <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto que representa o nome do host especificado ponto a ponto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host de ponto a ponto é o nó"semente" responsável por iniciar a sessão de rede ponto a ponto, convidar colegas para participar de aplicativos para os quais esse tipo de conectividade de rede é mais apropriado para comunicações como grupos de bate-papo ou sessões do jogos.  
+  
+ Esse método pode ser usado para criar um <xref:System.Net.PeerToPeer.PeerName> objeto com base no <xref:System.Net.PeerToPeer.PeerName.PeerHostName%2A> propriedade. Esse nome de ponto a ponto não está associado com a identidade do nó de chamada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.String" /> fornecido não é uma cadeia de caracteres de nome de host válido ponto a ponto.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Net.PeerToPeer.PeerName.PeerHostName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Um <see cref="T:System.Net.PeerToPeer.PeerName" /> não pôde ser criado do fornecido<see cref="P:System.Net.PeerToPeer.PeerName.PeerHostName" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRelativePeerName">
+      <MemberSignature Language="C#" Value="public static System.Net.PeerToPeer.PeerName CreateRelativePeerName (System.Net.PeerToPeer.PeerName peerName, string classifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.PeerToPeer.PeerName CreateRelativePeerName(class System.Net.PeerToPeer.PeerName peerName, string classifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.CreateRelativePeerName(System.Net.PeerToPeer.PeerName,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.PeerToPeer.PeerName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerName" Type="System.Net.PeerToPeer.PeerName" />
+        <Parameter Name="classifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="peerName">O <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto no qual definir o novo valor de cadeia de caracteres de classificação.</param>
+        <param name="classifier">O <see cref="P:System.Net.PeerToPeer.PeerName.Classifier" /> para definir no <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <summary>Cria um novo <see cref="T:System.Net.PeerToPeer.PeerName" /> , substituindo o <see cref="P:System.Net.PeerToPeer.PeerName.Classifier" /> campo definido em fornecido <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto com o valor de cadeia de caracteres de classificação especificado.</summary>
+        <returns>O novo <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto que contém o classificador atualizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.PeerToPeer.PeerName.Classifier%2A> é acrescentado ao existente <xref:System.Net.PeerToPeer.PeerName.Authority%2A> parte do <xref:System.Net.PeerToPeer.PeerName>. Essa cadeia de caracteres é não mais de 149 caracteres, incluindo o `null` terminador. Especifique `null` para retornar o nome do par de identidade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.String" /> fornecido não é um classificador de nome do par válido.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais parâmetros são <see langword="null" />.</exception>
+        <exception cref="T:System.Net.PeerToPeer.PeerToPeerException">Um <see cref="T:System.Net.PeerToPeer.PeerName" /> não pôde ser criado do fornecido<see cref="P:System.Net.PeerToPeer.PeerName.PeerHostName" /></exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Equals">
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Determina se o conteúdo desta <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto é equivalente ao conteúdo de outro objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação de Equals é definida por IEquatable\<T >.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Net.PeerToPeer.PeerName other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Net.PeerToPeer.PeerName other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.Equals(System.Net.PeerToPeer.PeerName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Net.PeerToPeer.PeerName" />
+      </Parameters>
+      <Docs>
+        <param name="other">O nome do par para comparar com essa <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <summary>Executa uma comparação diferencia maiusculas e minúsculas do atual <see cref="T:System.Net.PeerToPeer.PeerName" /> e o nome do par especificado.</summary>
+        <returns>Retorna <see langword="True" /> se especificado <see cref="T:System.Net.PeerToPeer.PeerName" /> identifica o recurso mesmo como o par nome do objeto atual; caso contrário, esse método retorna <see langword="False" />.  
+  
+ Esse método também retorna <see langword="False" /> se <paramref name="other" /> é definido como <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois nomes de ponto a ponto são considerados iguais se eles contêm caracteres idênticos em seus <xref:System.Net.PeerToPeer.PeerName.Authority%2A> e <xref:System.Net.PeerToPeer.PeerName.Classifier%2A> componentes.  
+  
+ Nenhum normalizations são executadas em cadeias de caracteres antes da comparação.  Normalização de todos os deve foram concluída durante ou antes de criar os objetos de nome de ponto a ponto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Net.PeerToPeer.PeerName" />.</param>
+        <summary>Determina se o conteúdo desta <see cref="T:System.Net.PeerToPeer.PeerName" /> é igual ao conteúdo de outro objeto.</summary>
+        <returns>
+          <see langword="True" />Se o <see cref="T:System.Net.PeerToPeer.PeerName" /> e o objeto de comparação contêm as mesmas informações; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método herda a assinatura padrão e o comportamento de <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.Object.GetHashCode" />.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Object" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois objetos são considerados iguais se esse método retorna o mesmo código de hash para ambos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Contém os dados serializados associados a <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto.</param>
+        <param name="context">Contém o destino para o fluxo serializado associado a <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto.</param>
+        <summary>Popula um objeto de informações de serialização com os dados necessários para serializar o <see cref="T:System.Net.PeerToPeer.PeerName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tipo derivado deve chamar o tipo base <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSecured">
+      <MemberSignature Language="C#" Value="public bool IsSecured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSecured" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerName.IsSecured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booleano que especifica se este é um nome de ponto a ponto segura.</summary>
+        <value>Se <see langword="true" />, esse nome de ponto a ponto é protegida com uma particular par de chaves pública / chave. Seu nome contém o hash do algoritmo de Hash seguro (SHA) da chave pública do certificado do usuário dessa máquina de ponto a ponto. Caso contrário, se <see langword="false" />, o nome do par não tem nenhuma identidade associado.  
+  
+ A menos que explicitamente especificado, o valor padrão para todas as propriedades é <see langword="null" /> para tipos de referência e zero (0) para propriedades do tipo <see langword="int" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nome de ponto a ponto é considerado protegido se for sustentada por um certificado autoassinado.  
+  
+ Somente o proprietário pode registrar um nome de ponto a ponto segura em PNRP.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Usando um nome de ponto a ponto segura não garante a segurança geral do aplicativo de rede. A segurança do aplicativo depende de implementação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerHostName">
+      <MemberSignature Language="C#" Value="public string PeerHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PeerHostName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.PeerToPeer.PeerName.PeerHostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do host do ponto a ponto. Esta é uma versão codificada em DNS do <see cref="T:System.Net.PeerToPeer.PeerName" /> que é equivalente a um <see cref="P:System.Net.PeerToPeer.PeerName.PeerHostName" /> em que eles são os dois identificadores.  A diferença entre os dois é a representação visual.</summary>
+        <value>Um <see cref="T:System.String" /> valor que é o nome do host do ponto a ponto. A menos que explicitamente especificado, o valor padrão para todas as propriedades é <see langword="null" /> para tipos de referência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host de ponto a ponto é o nó"semente" responsável por iniciar a sessão de rede ponto a ponto, convidar colegas para participar de aplicativos para os quais esse tipo de conectividade de rede é mais apropriado para comunicações como grupos de bate-papo ou sessões do jogos.  
+  
+ O <xref:System.Net.PeerToPeer.PeerName.PeerHostName%2A> propriedade especifica o nome de um par que criou a sessão de rede ponto a ponto, e que é considerado o host da sessão.  O host de uma sessão de rede ponto a ponto pode coletar pares em mais de um <xref:System.Net.PeerToPeer.Cloud>. Além disso, um par simultaneamente pode ser hospedado por mais de um host de ponto a ponto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Contém os dados serializados associados a <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto.</param>
+        <param name="context">Contém o destino para o fluxo serializado associado a <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto.</param>
+        <summary>Implementa a interface <see cref="T:System.Runtime.Serialization.ISerializable" /> e retorna os dados necessários para serializar a instância <see cref="T:System.Net.PeerToPeer.PeerName" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.PeerToPeer.PeerName.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres do atual <see cref="T:System.Net.PeerToPeer.PeerName" /> objeto.</summary>
+        <returns>Uma cadeia de caracteres que representa o atual <see cref="T:System.Net.PeerToPeer.PeerName" />e especificado no seguinte formato: *Authority.Classifier*. Por exemplo, "0.MyInternetPeer".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método herda a assinatura padrão e o comportamento de <xref:System.Object>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

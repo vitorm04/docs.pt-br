@@ -1,0 +1,272 @@
+<Type Name="GridViewCellAutomationPeer" FullName="System.Windows.Automation.Peers.GridViewCellAutomationPeer">
+  <TypeSignature Language="C#" Value="public class GridViewCellAutomationPeer : System.Windows.Automation.Peers.FrameworkElementAutomationPeer, System.Windows.Automation.Provider.ITableItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewCellAutomationPeer extends System.Windows.Automation.Peers.FrameworkElementAutomationPeer implements class System.Windows.Automation.Provider.IGridItemProvider, class System.Windows.Automation.Provider.ITableItemProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.Peers.FrameworkElementAutomationPeer</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Automation.Provider.ITableItemProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Expõe as células em uma <see cref="T:System.Windows.Controls.GridView" /> à automação de interface do usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAutomationControlTypeCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Automation.Peers.AutomationControlType GetAutomationControlTypeCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.GridViewCellAutomationPeer.GetAutomationControlTypeCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationControlType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o tipo de controle para o elemento que está associado a essa <see cref="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlType" />.</summary>
+        <returns>Se este <see cref="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" /> está associado com um <see cref="T:System.Windows.Controls.TextBlock" /> elemento, esse método retorna <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Text" />; caso contrário, esse método retornará <see cref="F:System.Windows.Automation.Peers.AutomationControlType.Custom" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClassNameCore">
+      <MemberSignature Language="C#" Value="protected override string GetClassNameCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetClassNameCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.GridViewCellAutomationPeer.GetClassNameCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o nome do elemento que é associado a essa <see cref="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" />. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.GetClassName" />.</summary>
+        <returns>O nome do elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPattern">
+      <MemberSignature Language="C#" Value="public override object GetPattern (System.Windows.Automation.Peers.PatternInterface patternInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetPattern(valuetype System.Windows.Automation.Peers.PatternInterface patternInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.GridViewCellAutomationPeer.GetPattern(System.Windows.Automation.Peers.PatternInterface)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="patternInterface" Type="System.Windows.Automation.Peers.PatternInterface" />
+      </Parameters>
+      <Docs>
+        <param name="patternInterface">Um dos valores de enumeração.</param>
+        <summary>Obtém o padrão de controle para o elemento que está associado a essa <see cref="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" />.</summary>
+        <returns>Se <paramref name="patternInterface" /> é <see cref="F:System.Windows.Automation.Peers.PatternInterface.GridItem" /> ou <see cref="F:System.Windows.Automation.Peers.PatternInterface.TableItem" />, esse método retorna atual <see cref="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsControlElementCore">
+      <MemberSignature Language="C#" Value="protected override bool IsControlElementCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsControlElementCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.GridViewCellAutomationPeer.IsControlElementCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o elemento que está associado a essa <see cref="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" /> é compreendido pelo usuário final como interativo ou o usuário pode entender o elemento que contribuem para a estrutura lógica do controle de [!INCLUDE[TLA2#tla_gui](~/includes/tla2sharptla-gui-md.md)]. Este método é chamado por <see cref="M:System.Windows.Automation.Peers.AutomationPeer.IsControlElement" />.</summary>
+        <returns>Se este <see cref="T:System.Windows.Automation.Peers.GridViewCellAutomationPeer" /> está associado com um <see cref="T:System.Windows.Controls.TextBlock" /> elemento, esse método retorna <see langword="true" />; caso contrário, esse método retorna uma lista de elementos filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IGridItemProvider.Column">
+      <MemberSignature Language="C#" Value="int System.Windows.Automation.Provider.IGridItemProvider.Column { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Windows.Automation.Provider.IGridItemProvider.Column" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.GridViewCellAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#Column" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número ordinal da coluna que contém a célula ou item.</summary>
+        <value>Um número ordinal com base em zero que identifica a coluna que contém a célula ou item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.GridViewCellAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan">
+      <MemberSignature Language="C#" Value="int System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.GridViewCellAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#ColumnSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de colunas ocupadas por uma célula ou item.</summary>
+        <value>O número de colunas incluídas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.GridViewCellAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid">
+      <MemberSignature Language="C#" Value="System.Windows.Automation.Provider.IRawElementProviderSimple System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Automation.Provider.IRawElementProviderSimple System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.GridViewCellAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#ContainingGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um provedor de automação de interface do usuário implementa <see cref="T:System.Windows.Automation.GridPattern" /> e representa o contêiner da célula ou do item.</summary>
+        <value>Um provedor de automação de interface do usuário que implementa o <see cref="T:System.Windows.Automation.GridPattern" /> e representa a célula ou item de contêiner.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.GridViewCellAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IGridItemProvider.Row">
+      <MemberSignature Language="C#" Value="int System.Windows.Automation.Provider.IGridItemProvider.Row { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Windows.Automation.Provider.IGridItemProvider.Row" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.GridViewCellAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#Row" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número ordinal da linha que contém a célula ou item.</summary>
+        <value>Um número ordinal com base em zero que identifica a linha que contém a célula ou item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.GridViewCellAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.IGridItemProvider.RowSpan">
+      <MemberSignature Language="C#" Value="int System.Windows.Automation.Provider.IGridItemProvider.RowSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Windows.Automation.Provider.IGridItemProvider.RowSpan" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Peers.GridViewCellAutomationPeer.System#Windows#Automation#Provider#IGridItemProvider#RowSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas incluídas por uma célula ou item.</summary>
+        <value>O número de linhas incluídas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.GridViewCellAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems">
+      <MemberSignature Language="C#" Value="System.Windows.Automation.Provider.IRawElementProviderSimple[] ITableItemProvider.GetColumnHeaderItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.GridViewCellAutomationPeer.System#Windows#Automation#Provider#ITableItemProvider#GetColumnHeaderItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de provedores de automação de interface do usuário que representam todos os cabeçalhos de coluna associados a um item de tabela ou célula.</summary>
+        <returns>Uma coleção de provedores de automação de interface do usuário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems">
+      <MemberSignature Language="C#" Value="System.Windows.Automation.Provider.IRawElementProviderSimple[] ITableItemProvider.GetRowHeaderItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple[] System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Peers.GridViewCellAutomationPeer.System#Windows#Automation#Provider#ITableItemProvider#GetRowHeaderItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma coleção de provedores de automação de interface do usuário que representam todos os cabeçalhos de linha associados a um item de tabela ou célula.</summary>
+        <returns>Uma coleção de provedores de automação de interface do usuário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Automation.Peers.GridViewCellAutomationPeer> é convertida em uma interface de <xref:System.Windows.Automation.Provider.ITableItemProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

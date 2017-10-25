@@ -1,0 +1,116 @@
+<Type Name="NamespaceDeclaration" FullName="System.Xaml.NamespaceDeclaration">
+  <TypeSignature Language="C#" Value="public class NamespaceDeclaration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NamespaceDeclaration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.NamespaceDeclaration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Prefix={Prefix} Namespace={Namespace}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Declara o identificador e o prefixo de namespace do XAML, armazenando estes valores de cadeia de caracteres como propriedades separadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xaml.NamespaceDeclaration>representa as informações do namespace XAML como parte de um fluxo do nó XAML. O <xref:System.Xaml.NamespaceDeclaration> classe é um tipo de nó não é realmente um objeto ou membro; em vez disso, ele é um tipo de nó discretos.  
+  
+ No fluxo do nó XAML, uma <xref:System.Xaml.NamespaceDeclaration> é encontrado apenas antes do objeto ou membro ao qual se aplica a esse namespace XAML.  
+  
+ Por convenção, o identificador de um namespace XAML é semelhante a um identificador de recurso uniforme (URI). No entanto, o <xref:System.Xaml.NamespaceDeclaration.Namespace%2A> propriedade <xref:System.Xaml.NamespaceDeclaration> é do tipo <xref:System.String>. As APIs do .NET Framework serviços XAML geralmente tratar identificadores do namespace XAML como cadeias de caracteres. Relativa versus distinções absolutas no verdadeiro <xref:System.Uri> tipo são irrelevantes para identificar um namespace XAML (ou XML). A convenção de URI como namespace também é comum em XML.  
+  
+ Objetos desse tipo são usados como entrada para o <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A?displayProperty=nameWithType> método ao gravar informações de fluxo do nó XAML em um gráfico de objeto. Objetos desse tipo são usados como entrada para o <xref:System.Xaml.XamlXmlWriter.WriteNamespace%2A?displayProperty=nameWithType> método ao gravar informações de fluxo de nó XAML como XML para serialização.  
+  
+ Uma declaração de namespace pode ter um <xref:System.String.Empty?displayProperty=nameWithType> valor para o prefixo. Um <xref:System.String.Empty?displayProperty=nameWithType> prefixo representa uma declaração de namespace XAML padrão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NamespaceDeclaration (string ns, string prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ns, string prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.NamespaceDeclaration.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="prefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ns">O identificador do namespace XAML, como uma cadeia de caracteres.</param>
+        <param name="prefix">O prefixo de cadeia de caracteres que é usado para o namespace em mapeamentos de prefixo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.NamespaceDeclaration" /> usando valores de propriedade inicial de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicialização de <xref:System.Xaml.NamespaceDeclaration> não tenta validar os valores. Para usar corretamente um gravador XAML, não use valores nulos. Uma declaração de namespace pode ter um <xref:System.String?displayProperty=nameWithType> valor para o prefixo. Um <xref:System.String?displayProperty=nameWithType> prefixo representa uma declaração de namespace XAML padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.NamespaceDeclaration.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o componente de identificador de um <see cref="T:System.Xaml.NamespaceDeclaration" />.</summary>
+        <value>O identificador da declaração do namespace XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por convenção, o identificador para um namespace XAML é semelhante a um identificador de recurso uniforme (URI). As APIs do .NET Framework serviços XAML geralmente tratar identificadores do namespace XAML como cadeias de caracteres. Relativa versus distinções absolutas no verdadeiro <xref:System.Uri> tipo são irrelevantes para identificar um namespace XAML (ou XML). A convenção de URI como namespace também é comum em XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="public string Prefix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Prefix" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.NamespaceDeclaration.Prefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o prefixo que é usado como o prefixo de mapeamento do namespace XAML para um <see cref="T:System.Xaml.NamespaceDeclaration" />.</summary>
+        <value>A cadeia de caracteres de prefixo de <see cref="T:System.Xaml.NamespaceDeclaration" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma declaração de namespace pode ter um <xref:System.String?displayProperty=nameWithType> valor para o prefixo. Um <xref:System.String?displayProperty=nameWithType> prefixo representa uma declaração de namespace XAML padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

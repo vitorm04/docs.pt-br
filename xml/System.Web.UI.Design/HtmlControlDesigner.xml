@@ -1,0 +1,429 @@
+<Type Name="HtmlControlDesigner" FullName="System.Web.UI.Design.HtmlControlDesigner">
+  <TypeSignature Language="C#" Value="public class HtmlControlDesigner : System.ComponentModel.Design.ComponentDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlControlDesigner extends System.ComponentModel.Design.ComponentDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.HtmlControlDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.ComponentDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a funcionalidade básica de tempo de design para controles de servidor ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlControlDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.HtmlControlDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Behavior">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IHtmlControlDesignerBehavior Behavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.IHtmlControlDesignerBehavior Behavior" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.HtmlControlDesigner.Behavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is ControlDesigner.Tag. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IHtmlControlDesignerBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento DHTML associado com o designer.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.IHtmlControlDesignerBehavior" /> que está associado com o designer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  A propriedade <xref:System.Web.UI.Design.HtmlControlDesigner.Behavior%2A> está obsoleta. Use o <xref:System.Web.UI.Design.IControlDesignerTag.SetAttribute%2A> e <xref:System.Web.UI.Design.IControlDesignerTag.GetAttribute%2A> métodos no <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> propriedade para mapear propriedades de estilos. Use o <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes%2A> método sobre o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para definir estilos para o controle em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindings">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataBindingCollection DataBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataBindingCollection DataBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.HtmlControlDesigner.DataBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de associações de dados para o controle atual.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataBindingCollection" /> que contém as associações de dados para o controle atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignTimeElement">
+      <MemberSignature Language="C#" Value="protected object DesignTimeElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DesignTimeElement" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Error: This property can no longer be referenced, and is included to support existing compiled applications. The design-time element may not always provide access to the element in the markup. There are alternate methods on WebFormsRootDesigner for handling client script and controls. http://go.microsoft.com/fwlink/?linkid=14202", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de tempo de design que representa o controle que está associado com o <see cref="T:System.Web.UI.Design.HtmlControlDesigner" /> objeto na superfície de design.</summary>
+        <value>O objeto de tempo de design que representa o controle associado a <see cref="T:System.Web.UI.Design.HtmlControlDesigner" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A> pelo designer, a propriedade é usada para recuperar o objeto de tempo de design que representa o controle que está associado com o <xref:System.Web.UI.Design.HtmlControlDesigner> objeto na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Web.UI.Design.HtmlControlDesigner" /> de objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Web.UI.Design.HtmlControlDesigner> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Expressions">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ExpressionBindingCollection Expressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ExpressionBindingCollection Expressions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.HtmlControlDesigner.Expressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ExpressionBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as associações de expressão para o controle atual em tempo de design.</summary>
+        <value>Um <see cref="T:System.Web.UI.ExpressionBindingCollection" /> que contém as expressões de cadeias de caracteres definidas para propriedades no controle atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O design de host, tais como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.Compilation.ExpressionBuilder> classe para obter o <xref:System.Web.UI.Design.ExpressionEditor> classe para obter o <xref:System.Web.UI.Design.ExpressionEditorSheet> para definir as expressões de propriedades de controle em tempo de design. Cadeias de caracteres de expressão fazem referência a um recurso localizável, uma configuração de aplicativo, uma cadeia de caracteres de conexão ou um tipo de expressão personalizada.  
+  
+ O <xref:System.Web.UI.Design.HtmlControlDesigner.Expressions%2A> coleção contém um <xref:System.Web.UI.ExpressionBinding> elemento para cada propriedade de controle que tem uma cadeia de caracteres de expressão associada. Cada <xref:System.Web.UI.ExpressionBinding.ExpressionPrefix%2A> propriedade para cada elemento indica a implementação do construtor de expressão associada. A cadeia de caracteres de expressão é analisada e avaliada pelo seu associado <xref:System.Web.Compilation.ExpressionBuilder> para determinar o valor da propriedade de controle em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O elemento de controle de design.</param>
+        <summary>Inicializa o designer e define o componente de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlDesigner.Initialize%2A> método deve ser chamado pelo host de designer para inicializar o designer.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Durante a inicialização, use o <see cref="M:System.Web.UI.Design.IControlDesignerTag.SetAttribute(System.String,System.String)" /> e <see cref="M:System.Web.UI.Design.IControlDesignerTag.GetAttribute(System.String)" /> métodos no <see cref="P:System.Web.UI.Design.ControlDesigner.Tag" /> propriedade para mapear propriedades de estilos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehaviorAttached">
+      <MemberSignature Language="C#" Value="protected virtual void OnBehaviorAttached ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBehaviorAttached() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is ControlDesigner.Tag. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando um comportamento está associado com o elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached%2A> método está obsoleto. Use o <xref:System.Web.UI.Design.IControlDesignerTag.SetAttribute%2A> e <xref:System.Web.UI.Design.IControlDesignerTag.GetAttribute%2A> métodos no <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> propriedade para mapear propriedades de estilos. Use o <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes%2A> método sobre o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para definir estilos para o controle em tempo de design. Substituir o <xref:System.Web.UI.Design.HtmlControlDesigner.Initialize%2A> método para manipular os estilos inicias para o controle em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached" /> método pode ser substituído e implementado para executar processamento adicional quando um comportamento está anexado ao designer.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehaviorDetaching">
+      <MemberSignature Language="C#" Value="protected virtual void OnBehaviorDetaching ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBehaviorDetaching() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is ControlDesigner.Tag. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando um comportamento desassocia do elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A> método está obsoleto. Use o <xref:System.Web.UI.Design.IControlDesignerTag.SetAttribute%2A> e <xref:System.Web.UI.Design.IControlDesignerTag.GetAttribute%2A> métodos no <xref:System.Web.UI.Design.ControlDesigner.Tag%2A> propriedade para mapear propriedades de estilos. Use o <xref:System.Web.UI.Design.ContainerControlDesigner.GetDesignTimeCssAttributes%2A> método sobre o <xref:System.Web.UI.Design.ContainerControlDesigner> classe para definir estilos para o controle em tempo de design. Substituir o <xref:System.Web.UI.Design.HtmlControlDesigner.Dispose%2A> método para o designer de controle executar ações antes de liberar o objeto de designer.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O método M:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching pode ser substituído e implementado para executar processamento adicional quando um comportamento está desanexado do designer.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBindingsCollectionChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnBindingsCollectionChanged (string propName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBindingsCollectionChanged(string propName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("The recommended alternative is to handle the Changed event on the DataBindings collection. The DataBindings collection allows more control of the databindings associated with the control. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propName">O nome da propriedade que foi alterada.</param>
+        <summary>Fornece um método que pode ser usado para indicar quando uma associação de dados foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A> método deve ser chamado por um designer de controle depois que o designer de controle fez uma alteração para as associações de dados para o controle.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A> método está obsoleto. Use o <xref:System.Web.UI.DataBindingCollection.Changed> evento no <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A> coleção para a funcionalidade de designer de controle equivalente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged(System.String)" /> método pode ser substituído e implementado para executar processamento adicional quando a coleção de associações de dados para o controle é alterado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetParent">
+      <MemberSignature Language="C#" Value="public virtual void OnSetParent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnSetParent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.OnSetParent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma maneira de realizar processamento adicional quando o controle associado é anexado a um controle pai.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.Design.HtmlControlDesigner.OnSetParent" /> método pode ser substituído e implementado para executar processamento adicional quando o designer é anexado a um controle pai.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterEvents">
+      <MemberSignature Language="C#" Value="protected override void PreFilterEvents (System.Collections.IDictionary events);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterEvents(class System.Collections.IDictionary events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.PreFilterEvents(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="events" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="events">Um <see cref="T:System.Collections.IDictionary" /> que contém os nomes dos eventos do componente para expor.</param>
+        <summary>Define a lista de eventos que são expostos em tempo de design para o <see cref="T:System.ComponentModel.TypeDescriptor" /> objeto para o componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.HtmlControlDesigner.PreFilterEvents%2A> método fornece uma maneira de adicionar ou remover itens de um dicionário de eventos que expõe um designer por meio de um <xref:System.ComponentModel.TypeDescriptor> objeto.  
+  
+ As chaves no dicionário de eventos são os nomes dos eventos. Os objetos são do tipo <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode modificar diretamente o dicionário que pode ser acessado por meio de <paramref name="events" /> ou você pode deixar o dicionário inalterado. Se você está substituindo o <see cref="M:System.Web.UI.Design.HtmlControlDesigner.PreFilterEvents(System.Collections.IDictionary)" /> método, chame a implementação base antes de executar seu próprio processo de filtragem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HtmlControlDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">O conjunto de propriedades para filtrar o componente.</param>
+        <summary>Permite que o designer para expor um conjunto específico de propriedades por meio de um <see cref="T:System.ComponentModel.TypeDescriptor" /> objeto em tempo de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.HtmlControlDesigner.PreFilterProperties%2A> método fornece uma maneira de adicionar ou remover itens de um dicionário de propriedades que expõe um designer por meio de um <xref:System.ComponentModel.TypeDescriptor> objeto.  
+  
+ As chaves no dicionário de propriedades são os nomes das propriedades. Os objetos são do tipo <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode modificar diretamente o dicionário que pode ser acessado por meio de <paramref name="properties" /> ou você pode deixar o dicionário inalterado. Se você está substituindo o <see cref="M:System.Web.UI.Design.HtmlControlDesigner.PreFilterProperties(System.Collections.IDictionary)" /> método, chame a implementação base antes de executar seu próprio processo de filtragem.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldCodeSerialize">
+      <MemberSignature Language="C#" Value="public virtual bool ShouldCodeSerialize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldCodeSerialize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.HtmlControlDesigner.ShouldCodeSerialize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use of this property is not recommended because code serialization is not supported. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é necessário criar uma declaração de campo para o controle no arquivo code-behind para o documento de design atual durante a serialização.</summary>
+        <value>
+          <see langword="true" />, se uma declaração deve ser criada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

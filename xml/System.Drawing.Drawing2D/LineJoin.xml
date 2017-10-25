@@ -1,0 +1,82 @@
+<Type Name="LineJoin" FullName="System.Drawing.Drawing2D.LineJoin">
+  <TypeSignature Language="C#" Value="public enum LineJoin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LineJoin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.LineJoin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como unir segmentos de linha ou curva consecutivos em uma figura (subcaminho) contida em um objeto <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bevel">
+      <MemberSignature Language="C#" Value="Bevel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin Bevel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.Bevel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma junção de bisel. Isso produz um canto diagonal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Miter">
+      <MemberSignature Language="C#" Value="Miter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin Miter = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.Miter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma junção de malhete. Isso produz um canto agudo ou um canto recortado, dependendo se o tamanho do malhete excede o limite de malhete.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiterClipped">
+      <MemberSignature Language="C#" Value="MiterClipped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin MiterClipped = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.MiterClipped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma junção de malhete. Isso produz um canto agudo ou um canto de bisel, dependendo se o tamanho do malhete excede o limite de malhete.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="Round" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.LineJoin Round = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.LineJoin.Round" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.LineJoin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica uma junção circular. Isso produz um arco circular e suave entre as linhas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

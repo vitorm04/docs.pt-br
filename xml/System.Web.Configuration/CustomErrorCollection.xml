@@ -1,0 +1,523 @@
+<Type Name="CustomErrorCollection" FullName="System.Web.Configuration.CustomErrorCollection">
+  <TypeSignature Language="C#" Value="public sealed class CustomErrorCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CustomErrorCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.CustomErrorCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.CustomError), AddItemName="error", CollectionType=System.Configuration.ConfigurationElementCollectionType.BasicMap)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.Configuration.CustomError" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CustomErrorCollection> tipo permite o acesso para o `error` elementos do `customErrors` seção coleção de elementos.  
+  
+ Ele pertence a um grupo que inclui o <xref:System.Web.Configuration.CustomError>, <xref:System.Web.Configuration.CustomErrorsMode>, e <xref:System.Web.Configuration.CustomErrorsSection>.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como especificar valores declarativamente para o `error` elementos do `customErrors` seção, que também pode ser acessada como elementos o <xref:System.Web.Configuration.CustomErrorCollection> coleção.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar valores declarativamente para o `error` elementos.  
+  
+```  
+<customErrors mode="RemoteOnly"  
+  defaultRedirect="customerror.htm">  
+    <error statusCode="404" redirect="customerror404.htm"/>  
+</customErrors>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.CustomErrorCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#1)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomErrorCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.CustomErrorCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CustomErrorCollection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.CustomErrorCollection> classe usando o <xref:System.Web.Configuration.CustomErrorsSection.Errors%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.CustomError customError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.CustomError customError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.Add(System.Web.Configuration.CustomError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customError" Type="System.Web.Configuration.CustomError" />
+      </Parameters>
+      <Docs>
+        <param name="customError">O <see cref="T:System.Web.Configuration.CustomError" /> objeto a ser adicionado já existe na coleção ou a coleção é somente leitura.</param>
+        <summary>Adiciona um objeto de <see cref="T:System.Web.Configuration.CustomError" /> à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de adicionar um erro personalizado à coleção, você deve criar um <xref:System.Web.Configuration.CustomError> objeto de erro e inicializar o <xref:System.Web.Configuration.CustomError.Redirect%2A> e <xref:System.Web.Configuration.CustomError.StatusCode%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona uma <xref:System.Web.Configuration.CustomError> o objeto para o <xref:System.Web.Configuration.CustomErrorCollection> coleção.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.CustomErrorCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#5)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma matriz das chaves para todos os elementos de configuração contidos neste <see cref="T:System.Web.Configuration.CustomErrorCollection" />.</summary>
+        <value>Uma matriz que contém as chaves de todos os <see cref="T:System.Web.Configuration.CustomError" /> objetos contidos neste <see cref="T:System.Web.Configuration.CustomErrorCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Configuration.CustomError" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de atualizar o arquivo de configuração depois de chamar o <xref:System.Web.Configuration.CustomErrorCollection.Clear%2A> método depende de <xref:System.Configuration.ConfigurationSaveMode> escolhido. Para atualizar o arquivo de configuração, use uma das sobrecargas dois: <xref:System.Configuration.Configuration.Save%2A> e <xref:System.Configuration.Configuration.Save%2A>.  
+  
+> [!NOTE]
+>  Chamando <xref:System.Configuration.Configuration.Save%2A> é equivalente a chamar <xref:System.Configuration.Configuration.Save%2A>.  
+  
+ Se você usar o <xref:System.Configuration.Configuration.Save%2A>.method, as seguintes condições se aplicam.  
+  
+-   Se você passar um <xref:System.Configuration.ConfigurationSaveMode.Full> ou <xref:System.Configuration.ConfigurationSaveMode.Modified> valor de parâmetro, uma `clear` elemento é inserido no `clientTarget` seção do arquivo de configuração no nível de hierarquia atual.  
+  
+-   Se você passar o <xref:System.Configuration.ConfigurationSaveMode.Minimal> o valor do parâmetro, uma série de `remove` elementos são adicionados para o [clientTarget Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/17a0fa6e-a065-49cc-b900-ef73eda6a922) do arquivo de configuração no nível de hierarquia atual. Cada remove todas as referências a um `add` elemento definido em um arquivo de configuração pai em um nível superior na hierarquia. Quando você usa <xref:System.Configuration.ConfigurationSaveMode.Minimal>, há uma propriedade adicional na coleção que afeta o que é serializado para o arquivo de configuração: <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A>, que é `false` por padrão. As seguintes condições se aplicam.  
+  
+    -   Se o <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A> definida como `true`, `clear` elemento é inserido no `clientTarget` seção do arquivo de configuração no nível de hierarquia atual. Isso removerá todas as referências para o `add` elementos definidos nos arquivos de configuração pai em níveis mais altos na hierarquia.  
+  
+    -   Se o <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A> sinalizador é definido como `false`, o `clear` elemento seja removido do `clientTarget` seção do arquivo de configuração no nível de hierarquia atual, se ele existir.  
+  
+ O <xref:System.Web.Configuration.CustomErrorCollection.Clear%2A> método realmente excluirá o `add` elementos definidos a `clientTarget` seção do arquivo de configuração no nível de hierarquia atual. Ela também remove todas as referências para adicionar elementos definidos nos arquivos de configuração pai em níveis mais altos na hierarquia.  
+  
+> [!NOTE]
+>  O `add` elementos não são excluídos do `clientTarget` seção dos arquivos de configuração pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove todos os <xref:System.Web.Configuration.CustomError> objetos do <xref:System.Web.Configuration.CustomErrorCollection> coleção. Consulte o exemplo de código a <xref:System.Web.Configuration.CustomErrorCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#6)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorCollection.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo do <see cref="T:System.Web.Configuration.CustomErrorCollection" />.</summary>
+        <value>O <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> dessa coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="protected override string ElementName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorCollection.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CustomError Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.CustomError Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CustomError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção de <see cref="T:System.Web.Configuration.CustomError" /> objeto.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.CustomError" /> objeto com o índice especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.CustomError" /> com o índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter um <xref:System.Web.Configuration.CustomError> objeto no índice de coleção especificada.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.CustomErrorCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#10)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CustomError Get (string statusCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.CustomError Get(string statusCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CustomError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">O código de status HTTP associado ao erro personalizado.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.CustomError" /> objeto com o código de status especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.CustomError" /> objeto com o código de status especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter um <xref:System.Web.Configuration.CustomError> objeto com o código de status especificado.  
+  
+ Consulte o exemplo de código a <xref:System.Web.Configuration.CustomErrorCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#11)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Índice de chave da coleção.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.CustomErrorCollection" /> chave no índice especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.CustomErrorCollection" /> chave no índice especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CustomError this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.CustomError Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CustomError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Índice do erro de coleção.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.CustomError" /> com o índice especificado.</summary>
+        <value>O <see cref="T:System.Web.Configuration.CustomError" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.CustomError this[string statusCode] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.CustomError Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.CustomError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">O código de status HTTP.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.CustomError" /> com o código de status especificado.</summary>
+        <value>O <see cref="T:System.Web.Configuration.CustomError" /> com o código de status especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CustomErrorCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string statusCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string statusCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">O código de status HTTP associado ao erro personalizado.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.CustomError" /> objeto da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CustomErrorCollection.Remove%2A> método insere um `remove` elemento no `customErrors` seção do arquivo de configuração no nível de hierarquia atual. Isso remove a referência para o `add` elemento definido nos arquivos de configuração pai em níveis mais altos na hierarquia.  
+  
+> [!NOTE]
+>  O `add` elementos não são excluídos dos arquivos de configuração pai. O `remove` elemento simplesmente desativa-los. No entanto, o <xref:System.Web.Configuration.CustomErrorCollection.Remove%2A> método excluí-los, na verdade, o nível de hierarquia atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como remover o <xref:System.Web.Configuration.CustomError> objeto com o código de status especificado. Consulte o exemplo de código a <xref:System.Web.Configuration.CustomErrorCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#7)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção de <see cref="T:System.Web.Configuration.CustomError" /> objeto a ser removido.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.CustomError" /> objeto no local do índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.CustomErrorCollection.RemoveAt%2A> método insere um `remove` elemento no `customErrors` seção do arquivo de configuração no nível de hierarquia atual. Isso é para remover a referência para o `add` elemento definido nos arquivos de configuração pai no nível mais alto na hierarquia.  
+  
+ **Observação** o `add` elementos não são excluídos dos arquivos de configuração pai. Eles apenas são desativados. No entanto, o <xref:System.Web.Configuration.CustomErrorCollection.RemoveAt%2A> método excluí-los, na verdade, o nível de hierarquia atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como remover o <xref:System.Web.Configuration.CustomError> objeto no índice especificado. Consulte o exemplo de código a <xref:System.Web.Configuration.CustomErrorCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#8)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (System.Web.Configuration.CustomError customError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(class System.Web.Configuration.CustomError customError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CustomErrorCollection.Set(System.Web.Configuration.CustomError)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="customError" Type="System.Web.Configuration.CustomError" />
+      </Parameters>
+      <Docs>
+        <param name="customError">O <see cref="T:System.Web.Configuration.CustomError" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Configuration.CustomError" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse erro especificado substitui o elemento de erro de configuração atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir especificado <xref:System.Web.Configuration.CustomError> objeto. Consulte o exemplo de código a <xref:System.Web.Configuration.CustomErrorCollection> tópico para saber como obter a coleção da classe.  
+  
+ [!code-csharp[System.Web.Configuration.CustomErrorsSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/CS/customerrorssection.cs#4)]
+ [!code-vb[System.Web.Configuration.CustomErrorsSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.CustomErrorsSection/VB/customerrorssection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

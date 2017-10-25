@@ -1,0 +1,77 @@
+<Type Name="WaitCallback" FullName="System.Threading.WaitCallback">
+  <TypeSignature Language="C#" Value="public delegate void WaitCallback(object state);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WaitCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.WaitCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.ThreadPool</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="state" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="state">Um objeto que contém informações a serem usadas pelo método de retorno de chamada.</param>
+    <summary>Representa um método de retorno de chamada a ser executado por um thread do pool de threads.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitCallback>representa um método de retorno de chamada que você deseja executar em um <xref:System.Threading.ThreadPool> thread. Criar o representante, passando o seu método de retorno de chamada para o <xref:System.Threading.WaitCallback> construtor. O método deve ter a assinatura mostrada aqui.  
+  
+ Enfileirar a tarefa para execução, passando o <xref:System.Threading.WaitCallback> delegar para <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>. O método de retorno de chamada é executado quando um thread do pool se torna disponível.  
+  
+> [!NOTE]
+>  Usuários do Visual Basic podem omitir o <xref:System.Threading.WaitCallback> construtor e simplesmente usar a `AddressOf` operador ao passar o método de retorno de chamada para <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Visual Basic automaticamente chama construtor delegado correto.  
+  
+ Se você quiser passar informações para o seu método de retorno de chamada, crie um objeto que contém as informações necessárias e passá-lo para <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> quando você enfileirar a tarefa para execução. Cada vez que seu método de retorno de chamada é executado, o `state` parâmetro contém este objeto.  
+  
+ Para obter mais informações sobre o uso de retornos de chamada para sincronizar threads do pool, consulte [o Pool de threads gerenciados](~/docs/standard/threading/the-managed-thread-pool.md).  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos. O primeiro exemplo demonstra como é possível enfileirar uma tarefa simples para execução pelo pool de threads.  
+  
+ O segundo exemplo demonstra como você pode enfileirar uma tarefa e passá-lo para obter informações.  
+  
+ **Exemplo 1**  
+  
+ Este exemplo mostra como usar o <xref:System.Threading.WaitCallback> delegado ao enfileirar uma tarefa para execução pelo pool de threads. O exemplo de código usa o <xref:System.Threading.ThreadPool.QueueUserWorkItem%28System.Threading.WaitCallback%29?displayProperty=nameWithType> sobrecarga do método para enfileirar uma tarefa, que é representado por um <xref:System.Threading.WaitCallback> que encapsula o `ThreadProc` método para executar quando um thread estiver disponível. Nenhuma informação de tarefa é fornecida com essa sobrecarga. Portanto, as informações que está disponíveis para o `ThreadProc` método é limitado para o objeto ao qual o método pertence.  
+  
+ [!code-cpp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool QueueUserWorkItem0#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem0/VB/source.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ Este exemplo mostra como criar um objeto que contém informações sobre a tarefa. Ele também demonstra como transmitir esse objeto para uma tarefa que está na fila para execução pelo pool de thread.  
+  
+ [!code-cpp[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/CS/source.cs#1)]
+ [!code-vb[System.Threading.ThreadPool QueueUserWorkItem1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadPool QueueUserWorkItem1/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

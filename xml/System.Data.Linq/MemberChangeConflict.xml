@@ -1,0 +1,230 @@
+<Type Name="MemberChangeConflict" FullName="System.Data.Linq.MemberChangeConflict">
+  <TypeSignature Language="C#" Value="public sealed class MemberChangeConflict" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MemberChangeConflict extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.MemberChangeConflict" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma situação em que uma tentativa de atualização falha porque os valores de membro tem sido atualizados desde o último, o cliente lê-los.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como recuperar informações sobre membros em conflito.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.MemberChangeConflict#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.memberchangeconflict/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.MemberChangeConflict#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.memberchangeconflict/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentValue">
+      <MemberSignature Language="C#" Value="public object CurrentValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CurrentValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.MemberChangeConflict.CurrentValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atual do membro em conflito.</summary>
+        <value>O objeto em conflito.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DatabaseValue">
+      <MemberSignature Language="C#" Value="public object DatabaseValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DatabaseValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.MemberChangeConflict.DatabaseValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do banco de dados do membro em conflito.</summary>
+        <value>O valor do objeto em conflito.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsModified">
+      <MemberSignature Language="C#" Value="public bool IsModified { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsModified" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.MemberChangeConflict.IsModified" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os dados de membro foi alterados desde o último banco de dados de leitura ou atualização.</summary>
+        <value>
+          <see langword="True" />Se os dados de membro tem sido alterados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use a propriedade novos valores de mesclagem sem substituir atualizações pendentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsResolved">
+      <MemberSignature Language="C#" Value="public bool IsResolved { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsResolved" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.MemberChangeConflict.IsResolved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o conflito foi resolvido.</summary>
+        <value>
+          <see langword="True" />Se o conflito foi resolvido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é somente leitura e é atualizada automaticamente conforme os conflitos são resolvidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public System.Reflection.MemberInfo Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.MemberInfo Member" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.MemberChangeConflict.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações de metadados sobre o membro em conflito.</summary>
+        <value>Informações sobre o membro em conflito.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalValue">
+      <MemberSignature Language="C#" Value="public object OriginalValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OriginalValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.MemberChangeConflict.OriginalValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor original do membro em conflito.</summary>
+        <value>O valor original do membro em conflito.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public void Resolve (System.Data.Linq.RefreshMode refreshMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resolve(valuetype System.Data.Linq.RefreshMode refreshMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.MemberChangeConflict.Resolve(System.Data.Linq.RefreshMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refreshMode" Type="System.Data.Linq.RefreshMode" />
+      </Parameters>
+      <Docs>
+        <param name="refreshMode">Consulte <see cref="T:System.Data.Linq.RefreshMode" />.</param>
+        <summary>Usa um <see cref="T:System.Data.Linq.RefreshMode" /> para especificar automaticamente o valor a ser definido como o valor atual para o membro em conflito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os seguintes exemplos mostram quais resultados são produzidos por meio de vários valores para <xref:System.Data.Linq.RefreshMode>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir substitui os valores atuais com valores do banco de dados.  
+  
+ [!code-csharp[System.Data.Linq.RefreshMode#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.RefreshMode#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
+  
+ O exemplo a seguir mostra como alternar o valor original com os valores recuperados do banco de dados. Nenhum valor atual é modificado.  
+  
+ [!code-csharp[System.Data.Linq.RefreshMode#2](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#2)]
+ [!code-vb[System.Data.Linq.RefreshMode#2](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
+  
+ O exemplo a seguir mantém os valores atuais que foram alterados, mas os outros valores de atualizações com valores do banco de dados.  
+  
+ [!code-csharp[System.Data.Linq.RefreshMode#3](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#3)]
+ [!code-vb[System.Data.Linq.RefreshMode#3](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public void Resolve (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resolve(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.MemberChangeConflict.Resolve(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser definido como o valor atual.</param>
+        <summary>Especifica o valor a ser definido como o valor atual para o membro em conflito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor definido aqui é o valor a ser usado em um subsequente <xref:System.Data.Linq.DataContext.SubmitChanges%2A> operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,24 @@
+<Namespace Name="System.Runtime.Caching">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Caching" /> namespace contém tipos que permitem que você implementa o cache em aplicativos do .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes nesse namespace fornecem uma maneira de usar recursos de cache como aqueles no ASP.NET, mas sem uma dependência no `System.Web` assembly.  
+  
+> [!NOTE]
+>  A saída de cache de funcionalidade e tipos no <xref:System.Runtime.Caching> namespace foram introduzidos no [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)].  
+  
+ Os tipos de cache que são fornecidos neste namespace oferecem os seguintes recursos:  
+  
+-   O cache é acessível a todos os aplicativos do .NET Framework (não apenas ASP.NET).  
+  
+-   O cache é extensível.  
+  
+-   Você pode criar provedores personalizados de cache. Por exemplo, em vez de usar o mecanismo de cache de memória padrão, você pode criar provedores personalizados que armazenam dados em cache em bancos de dados, em objetos personalizados ou no sistema de arquivos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

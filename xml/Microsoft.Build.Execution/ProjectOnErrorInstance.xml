@@ -1,0 +1,128 @@
+<Type Name="ProjectOnErrorInstance" FullName="Microsoft.Build.Execution.ProjectOnErrorInstance">
+  <TypeSignature Language="C#" Value="public sealed class ProjectOnErrorInstance : Microsoft.Build.Execution.ProjectTargetInstanceChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProjectOnErrorInstance extends Microsoft.Build.Execution.ProjectTargetInstanceChild" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.ProjectOnErrorInstance" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Execution.ProjectTargetInstanceChild</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("ExecuteTargets={executeTargets} Condition={condition}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula um [elemento OnError (MSBuild)](http://msdn.microsoft.com/library/765767d3-ecb7-4cd9-ba1e-d9468964dddc).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe imutável.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public override string Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectOnErrorInstance.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de atributo de condição não avaliado desse elemento OnError.</summary>
+        <value>Retorna o valor de atributo de condição não avaliado. Retorna uma cadeia de caracteres vazia caso o atributo não esteja presente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionLocation">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ConditionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectOnErrorInstance.ConditionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local da condição, se houver algum</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteTargets">
+      <MemberSignature Language="C#" Value="public string ExecuteTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExecuteTargets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectOnErrorInstance.ExecuteTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do atributo ExecuteTargets não avaliado desse elemento OnError.</summary>
+        <value>Retorna o valor do atributo ExecuteTargets não avaliado, que pode ser uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os destinos que serão executados se uma tarefa falhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteTargetsLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ExecuteTargetsLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ExecuteTargetsLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectOnErrorInstance.ExecuteTargetsLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local de execução tem como alvo o atributo, se houver</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Construction.ElementLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectOnErrorInstance.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do elemento</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,187 @@
+<Type Name="DataServiceQuery" FullName="System.Data.Services.Client.DataServiceQuery">
+  <TypeSignature Language="C#" Value="public abstract class DataServiceQuery : System.Data.Services.Client.DataServiceRequest, System.Collections.IEnumerable, System.Linq.IQueryable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataServiceQuery extends System.Data.Services.Client.DataServiceRequest implements class System.Collections.IEnumerable, class System.Linq.IQueryable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.DataServiceQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Services.Client.DataServiceRequest</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Uma classe abstrata que representa uma solicitação de consulta simples para o WCF Data Services.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhum construtor público é definido nessa classe. Instâncias de objetos são criadas usando <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> ou <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> no <xref:System.Data.Services.Client.DataServiceContext> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginExecute">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginExecute (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginExecute(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceQuery.BeginExecute(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Delegado a ser invocado quando os resultados estão disponíveis para consumo do cliente.</param>
+        <param name="state">Objeto de estado definido pelo usuário passado ao retorno de chamada.</param>
+        <summary>Envia uma solicitação para executar a consulta do serviço de dados de forma assíncrona.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> objeto que é usado para acompanhar o status da operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornado <xref:System.IAsyncResult> objeto é usado para determinar quando a operação assíncrona foi concluída. Para obter mais informações, consulte [operações assíncronas](~/docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+  
+ O <xref:System.Data.Services.Client.DataServiceQuery.BeginExecute%2A> método usa a mesma semântica de <xref:System.Data.Services.Client.DataServiceQuery.Execute%2A> método, porém <xref:System.Data.Services.Client.DataServiceQuery.BeginExecute%2A> envia a solicitação de forma assíncrona, para que a chamada não bloqueia o processamento enquanto aguarda os resultados do serviço. Acordo com o padrão assíncrono padrão begin-end, o retorno de chamada fornecido é invocado quando os resultados da consulta são recuperados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndExecute">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable EndExecute (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable EndExecute(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceQuery.EndExecute(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">O resultado a partir de <see cref="M:System.Data.Services.Client.DataServiceQuery.BeginExecute(System.AsyncCallback,System.Object)" /> operação que contém os resultados da consulta.</param>
+        <summary>Chamado para concluir a operação assíncrona da execução de uma consulta de serviço de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> que contém os resultados da operação de consulta.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Data.Services.Client.DataServiceQueryException">Quando o serviço de dados retorna um HTTP 404: erro de recurso não encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceQuery.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a consulta em relação ao serviço de dados.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> que contém os resultados da operação de consulta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Client.DataServiceQuery.Execute%2A> método é usado para executar a consulta do serviço de dados fornecido.  
+  
+ O <xref:System.Data.Services.Client.DataServiceQuery.Execute%2A> método gera uma solicitação HTTP GET que é definida para o serviço de dados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.Services.Client.DataServiceQueryException">Quando o serviço de dados retorna um HTTP 404: erro de recurso não encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public abstract System.Linq.Expressions.Expression Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceQuery.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma expressão que contém a consulta para o serviço de dados.</summary>
+        <value>Um <see cref="T:System.Linq.Expressions.Expression" /> objeto que representa a consulta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public abstract System.Linq.IQueryProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.IQueryProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceQuery.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a instância do provedor de consulta.</summary>
+        <value>Um <see cref="T:System.Linq.IQueryProvider" /> que representa o provedor de fonte de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceQuery.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Collections.IEnumerator" /> objeto que pode ser usado para iterar na coleção retornada pela consulta.</summary>
+        <returns>Um enumerador sobre os resultados da consulta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,68 @@
+<Type Name="DirectoryAttributeModification" FullName="System.DirectoryServices.Protocols.DirectoryAttributeModification">
+  <TypeSignature Language="C#" Value="public class DirectoryAttributeModification : System.DirectoryServices.Protocols.DirectoryAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectoryAttributeModification extends System.DirectoryServices.Protocols.DirectoryAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DirectoryAttributeModification" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeModification" /> permite a modificação dos valores <see cref="T:System.DirectoryServices.Protocols.DirectoryAttribute" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryAttributeModification ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryAttributeModification.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor <see cref="M:System.DirectoryServices.Protocols.DirectoryAttributeModification.#ctor" /> cria uma instância da classe <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeModification" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryAttributeOperation Operation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DirectoryServices.Protocols.DirectoryAttributeOperation Operation" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryAttributeModification.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryAttributeOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DirectoryAttributeModification.Operation" /> propriedade especifica uma das <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeOperation" /> modificações para executar.</summary>
+        <value>O <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeOperation" /> modificação para executar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão <xref:System.DirectoryServices.Protocols.DirectoryAttributeModification.Operation%2A> é <xref:System.DirectoryServices.Protocols.DirectoryAttributeOperation>.  
+  
+## <a name="exceptions"></a>Exceções  
+  
+|Exceções|Condição|  
+|----------------|---------------|  
+|InvalidEnumArgumentException|O valor da propriedade não é um do <xref:System.DirectoryServices.Protocols.DirectoryAttributeOperation> valores.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

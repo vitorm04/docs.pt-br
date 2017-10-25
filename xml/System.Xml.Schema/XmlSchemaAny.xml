@@ -1,0 +1,156 @@
+<Type Name="XmlSchemaAny" FullName="System.Xml.Schema.XmlSchemaAny">
+  <TypeSignature Language="C#" Value="public class XmlSchemaAny : System.Xml.Schema.XmlSchemaParticle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaAny extends System.Xml.Schema.XmlSchemaParticle" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaAny" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaParticle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento <see langword="any" /> W3C (World Wide Web Consortium).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `any` elemento permite que qualquer elemento do espaço para nome especificado ou namespaces apareça com a `complexType` elemento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria o `any` elemento.  
+  
+ [!code-cpp[Classic WebData XmlSchemaAny Example#1](~/samples/snippets/cpp/VS_Snippets_Data/Classic WebData XmlSchemaAny Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic WebData XmlSchemaAny Example#1](~/samples/snippets/csharp/VS_Snippets_Data/Classic WebData XmlSchemaAny Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData XmlSchemaAny Example#1](~/samples/snippets/visualbasic/VS_Snippets_Data/Classic WebData XmlSchemaAny Example/VB/source.vb#1)]  
+  
+ O seguinte arquivo XML é gerado para o exemplo de código anterior.  
+  
+ [!code-xml[Classic WebData XmlSchemaAny Example#2](~/samples/snippets/xml/VS_Snippets_Data/Classic WebData XmlSchemaAny Example/XML/source.xml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaAny ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaAny.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaAny" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAny.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("namespace")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os namespaces que contém os elementos que podem ser usados.</summary>
+        <value>Namespaces para os elementos que estão disponíveis para uso. O padrão é <see langword="##any" />.  
+  
+ Opcional.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum namespace for especificado, `##any` é o padrão. Se o namespace for especificado, ele deve ser um dos valores mostrados na tabela a seguir.  
+  
+|Valor de Namespace|Descrição|  
+|---------------------|-----------------|  
+|`##any`|Os elementos de qualquer namespace podem estar presentes.|  
+|`##other`|Elementos de qualquer namespace que não seja o `targetNamespace` do elemento pai que contém o `any` elemento pode estar presente.|  
+|`##local`|Os elementos que não estão qualificados com um namespace podem estar presentes.|  
+|`##targetNamespace`|Elementos do `targetNamespace` do elemento pai que contém o `any` elemento pode estar presente.|  
+|`List of {URIs, ##targetNamespace, ##local}`|Elementos de uma lista delimitada por espaço de namespaces podem estar presentes. A lista pode conter o seguinte: referências do identificador de recurso uniforme (URI) de namespaces, `##targetNamespace`, e `##local`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessContents">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaContentProcessing ProcessContents { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaContentProcessing ProcessContents" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaAny.ProcessContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("processContents")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaContentProcessing</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações sobre como um aplicativo ou o processador XML deve lidar com a validação de documentos XML para os elementos especificados pelo <see langword="any" /> elemento.</summary>
+        <value>Um dos valores de <see cref="T:System.Xml.Schema.XmlSchemaContentProcessing" />. Se nenhum <see langword="processContents" /> atributo for especificado, o padrão é <see langword="Strict" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

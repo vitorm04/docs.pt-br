@@ -1,0 +1,81 @@
+<Type Name="RecordAppendOptions" FullName="System.IO.Log.RecordAppendOptions">
+  <TypeSignature Language="C#" Value="public enum RecordAppendOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecordAppendOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.RecordAppendOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica como os registros são adicionados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa enumeração com o <xref:System.IO.Log.LogRecordSequence.Append%2A> método acrescentar um registro a uma sequência de log.  
+  
+ [!code-csharp[S_UELogRecordSequence#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#5)]
+ [!code-vb[S_UELogRecordSequence#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ForceAppend">
+      <MemberSignature Language="C#" Value="ForceAppend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.RecordAppendOptions ForceAppend = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.RecordAppendOptions.ForceAppend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.RecordAppendOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A sequência de registro deve começar o processo de eliminação de buffers internos depois que este registro é anexado. Isso não indica que o registro deve ser gravado muito tempo antes de concluir a operação de acréscimo. Para obter esse comportamento, especifique o <see cref="F:System.IO.Log.RecordAppendOptions.ForceFlush" /> sinalizador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceFlush">
+      <MemberSignature Language="C#" Value="ForceFlush" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.RecordAppendOptions ForceFlush = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.RecordAppendOptions.ForceFlush" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.RecordAppendOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A sequência de registro deve liberar qualquer buffers internos depois que este registro é anexado. Quando a operação de acréscimo é concluída, o registro especificado foi gravado muito tempo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Log.RecordAppendOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Log.RecordAppendOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.RecordAppendOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dados são gravados lentamente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

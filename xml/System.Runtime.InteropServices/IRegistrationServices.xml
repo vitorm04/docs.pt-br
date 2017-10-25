@@ -1,0 +1,309 @@
+<Type Name="IRegistrationServices" FullName="System.Runtime.InteropServices.IRegistrationServices">
+  <TypeSignature Language="C#" Value="public interface IRegistrationServices" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRegistrationServices" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.IRegistrationServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("CCBD682C-73A5-4568-B8B0-C7007E11ABA2")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um conjunto de serviços para registrar e cancelar o registro de assemblies gerenciados para uso do COM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Registro é necessária quando os objetos dentro de um assembly estão sendo usados por clientes COM.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetManagedCategoryGuid">
+      <MemberSignature Language="C#" Value="public Guid GetManagedCategoryGuid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Guid GetManagedCategoryGuid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.GetManagedCategoryGuid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o GUID da categoria COM que contém as classes gerenciadas.</summary>
+        <returns>O GUID da categoria COM que contém as classes gerenciadas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProgIdForType">
+      <MemberSignature Language="C#" Value="public string GetProgIdForType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetProgIdForType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.GetProgIdForType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo cujo ProgID está sendo solicitado.</param>
+        <summary>Recupera o ProgID de COM para um tipo especificado.</summary>
+        <returns>O ProgID para o tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegistrableTypesInAssembly">
+      <MemberSignature Language="C#" Value="public Type[] GetRegistrableTypesInAssembly (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type[] GetRegistrableTypesInAssembly(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.GetRegistrableTypesInAssembly(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O assembly para procurar classes.</param>
+        <summary>Recupera uma lista de classes em um assembly que deve ser registrado por uma chamada para <see cref="M:System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly(System.Reflection.Assembly,System.Runtime.InteropServices.AssemblyRegistrationFlags)" />.</summary>
+        <returns>Um <see cref="T:System.Type" /> matriz que contém uma lista de classes em <paramref name="assembly" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAssembly">
+      <MemberSignature Language="C#" Value="public bool RegisterAssembly (System.Reflection.Assembly assembly, System.Runtime.InteropServices.AssemblyRegistrationFlags flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool RegisterAssembly(class System.Reflection.Assembly assembly, valuetype System.Runtime.InteropServices.AssemblyRegistrationFlags flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly(System.Reflection.Assembly,System.Runtime.InteropServices.AssemblyRegistrationFlags)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+        <Parameter Name="flags" Type="System.Runtime.InteropServices.AssemblyRegistrationFlags" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O assembly a ser registrado.</param>
+        <param name="flags">Um <see cref="T:System.Runtime.InteropServices.AssemblyRegistrationFlags" /> valor que indica as configurações especiais necessárias ao registrar <c>assembly</c>.</param>
+        <summary>Registra as classes em um assembly gerenciado para habilitar a criação de COM.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="assembly" /> contiver tipos que foram registrados com êxito; caso contrário, <see langword="false" /> se o assembly contiver tipos não elegíveis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `RegisterAssembly`Adiciona as entradas de registro apropriados para os tipos no assembly especificado. Este método também chama nenhuma função de registro encontrada no assembly.  
+  
+ Use <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> para obter um assembly.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assembly" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O nome completo de <paramref name="assembly" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um método marcado com <see cref="T:System.Runtime.InteropServices.ComRegisterFunctionAttribute" /> não é <see langword="static" />.  
+  
+ -ou-  
+  
+ Não há mais de um método marcado com <see cref="T:System.Runtime.InteropServices.ComRegisterFunctionAttribute" /> em um determinado nível da hierarquia.  
+  
+ -ou-  
+  
+ A assinatura do método marcado com <see cref="T:System.Runtime.InteropServices.ComRegisterFunctionAttribute" /> não é válido.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterTypeForComClients">
+      <MemberSignature Language="C#" Value="public void RegisterTypeForComClients (Type type, ref Guid g);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterTypeForComClients(class System.Type type, valuetype System.Guid&amp; g) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.RegisterTypeForComClients(System.Type,System.Guid@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="g" Type="System.Guid&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo a ser registrado para uso de COM.</param>
+        <param name="g">GUID usado para registrar o tipo especificado.</param>
+        <summary>Registra o tipo especificado com usando o GUID especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é equivalente a chamar `CoRegisterClassObject` em COM.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeRepresentsComType">
+      <MemberSignature Language="C#" Value="public bool TypeRepresentsComType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TypeRepresentsComType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.TypeRepresentsComType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para determinar se ele é um tipo de COM.</param>
+        <summary>Determina se o tipo especificado é um tipo COM.</summary>
+        <returns>
+          <see langword="true" />Se o tipo especificado for um tipo COM; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeRequiresRegistration">
+      <MemberSignature Language="C#" Value="public bool TypeRequiresRegistration (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TypeRequiresRegistration(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.TypeRequiresRegistration(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para verificar os requisitos de registro COM.</param>
+        <summary>Determina se o tipo especificado requer registro.</summary>
+        <returns>
+          <see langword="true" />Se o tipo deve ser registrado para uso do COM; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterAssembly">
+      <MemberSignature Language="C#" Value="public bool UnregisterAssembly (System.Reflection.Assembly assembly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool UnregisterAssembly(class System.Reflection.Assembly assembly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.IRegistrationServices.UnregisterAssembly(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assembly" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="assembly">O assembly a ser cancelado.</param>
+        <summary>Cancela o registro de classes em um assembly gerenciado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="assembly" /> contém tipos que foram com êxito registrado; caso contrário <see langword="false" /> se o assembly contém tipos não qualificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `UnregisterAssembly`Remove as entradas do registro para os tipos no assembly especificado anteriormente adicionado pelo <xref:System.Runtime.InteropServices.IRegistrationServices.RegisterAssembly%2A>. Este método também chama nenhuma função de cancelamento de registro encontrada no assembly.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assembly" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O nome completo de <paramref name="assembly" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> não é <see langword="static" />.  
+  
+ -ou-  
+  
+ Não há mais de um método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> em um determinado nível da hierarquia.  
+  
+ -ou-  
+  
+ A assinatura do método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> não é válido.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,730 @@
+<Type Name="ObjectType" FullName="Microsoft.VisualBasic.CompilerServices.ObjectType">
+  <TypeSignature Language="C#" Value="public sealed class ObjectType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.ObjectType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Essa classe foi preterida a partir do Visual Basic 2005.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.CompilerServices.ObjectType" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddObj">
+      <MemberSignature Language="C#" Value="public static object AddObj (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object AddObj(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.AddObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Qualquer expressão numérica.</param>
+        <param name="o2">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma operação de adição (+).</summary>
+        <returns>A soma de <paramref name="o1" /> e <paramref name="o2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BitAndObj">
+      <MemberSignature Language="C#" Value="public static object BitAndObj (object obj1, object obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object BitAndObj(object obj1, object obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.BitAndObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="System.Object" />
+        <Parameter Name="obj2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <param name="obj2">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <summary>Executa um bit a bit <see langword="And" /> operação.</summary>
+        <returns>1 se os dois <paramref name="obj1" /> e <paramref name="obj2" /> são avaliadas como 1; caso contrário, 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BitOrObj">
+      <MemberSignature Language="C#" Value="public static object BitOrObj (object obj1, object obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object BitOrObj(object obj1, object obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.BitOrObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="System.Object" />
+        <Parameter Name="obj2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <param name="obj2">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <summary>Executa um bit a bit <see langword="Or" /> operação.</summary>
+        <returns>0 se <paramref name="obj1" /> e <paramref name="obj2" /> são avaliadas como 0; caso contrário, 1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BitXorObj">
+      <MemberSignature Language="C#" Value="public static object BitXorObj (object obj1, object obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object BitXorObj(object obj1, object obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.BitXorObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="System.Object" />
+        <Parameter Name="obj2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <param name="obj2">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <summary>Executa um <see langword="Xor" /> operação.</summary>
+        <returns>Um valor numérico que representa a exclusão bit a bit (disjunção bit a bit exclusiva) dos dois padrões numéricos de bits. Para obter mais informações, consulte [operador Xor](~/docs/visual-basic/language-reference/operators/xor-operator.md).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DivObj">
+      <MemberSignature Language="C#" Value="public static object DivObj (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object DivObj(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.DivObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Qualquer expressão numérica.</param>
+        <param name="o2">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma operação de divisão (/).</summary>
+        <returns>O quociente total de <paramref name="o1" /> dividido por <paramref name="o2" />, incluindo qualquer restante.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectValuePrimitive">
+      <MemberSignature Language="C#" Value="public static object GetObjectValuePrimitive (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object GetObjectValuePrimitive(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.GetObjectValuePrimitive(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">Necessário. Qualquer expressão.</param>
+        <summary>Retorna um valor primitivo Demarcado. Esse método é usado para evitar a cópia estruturas várias vezes.</summary>
+        <returns>O valor primitivo do <paramref name="o" /> digitado como um objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IDivObj">
+      <MemberSignature Language="C#" Value="public static object IDivObj (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object IDivObj(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.IDivObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Qualquer expressão numérica.</param>
+        <param name="o2">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma divisão de inteiro (\\) operação.</summary>
+        <returns>O quociente de inteiro de <paramref name="o1" /> dividido por <paramref name="o2" />, que descarta qualquer resto e retém apenas a parte inteira.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LikeObj">
+      <MemberSignature Language="C#" Value="public static bool LikeObj (object vLeft, object vRight, Microsoft.VisualBasic.CompareMethod CompareOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool LikeObj(object vLeft, object vRight, valuetype Microsoft.VisualBasic.CompareMethod CompareOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.LikeObj(System.Object,System.Object,Microsoft.VisualBasic.CompareMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vLeft" Type="System.Object" />
+        <Parameter Name="vRight" Type="System.Object" />
+        <Parameter Name="CompareOption" Type="Microsoft.VisualBasic.CompareMethod" />
+      </Parameters>
+      <Docs>
+        <param name="vLeft">Necessário. Qualquer expressão.</param>
+        <param name="vRight">Necessário. Qualquer expressão de cadeia de caracteres em conformidade com as convenções de correspondência de padrão descritas no operador Like.</param>
+        <param name="CompareOption">Necessário. Um valor <see cref="T:Microsoft.VisualBasic.CompareMethod" /> que especifica que a operação usa a comparação de texto ou binária.</param>
+        <summary>Executa um <see langword="Like" /> comparação.</summary>
+        <returns>
+          <see langword="True" />Se a representação de cadeia de caracteres do valor em <paramref name="vLeft" /> satisfaz o padrão que está contido no <paramref name="vRight" />; caso contrário, <see langword="False" />. <see langword="True" />Se ambos os <paramref name="vLeft" /> e <paramref name="vRight" /> são <see langword="Nothing" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ModObj">
+      <MemberSignature Language="C#" Value="public static object ModObj (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object ModObj(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.ModObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Qualquer expressão numérica.</param>
+        <param name="o2">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa um módulo (<see langword="Mod" />) operação.</summary>
+        <returns>O restante após <paramref name="o1" /> é dividida por <paramref name="o2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MulObj">
+      <MemberSignature Language="C#" Value="public static object MulObj (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object MulObj(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.MulObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Qualquer expressão numérica.</param>
+        <param name="o2">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma operação de multiplicação (*).</summary>
+        <returns>O produto de <paramref name="o1" /> e <paramref name="o2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NegObj">
+      <MemberSignature Language="C#" Value="public static object NegObj (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object NegObj(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.NegObj(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma operação unária de subtração (-).</summary>
+        <returns>O valor negativo de <paramref name="obj" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NotObj">
+      <MemberSignature Language="C#" Value="public static object NotObj (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object NotObj(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.NotObj(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <summary>Executa um <see langword="Not" /> operação.</summary>
+        <returns>Para <see langword="Boolean" /> operações, <see langword="False" /> se <paramref name="obj" /> é <see langword="True" />; caso contrário, <see langword="True" />. Para operações bit a bit, 1 se <paramref name="obj" /> for 0; caso contrário, 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ObjTst">
+      <MemberSignature Language="C#" Value="public static int ObjTst (object o1, object o2, bool TextCompare);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 ObjTst(object o1, object o2, bool TextCompare) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.ObjTst(System.Object,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+        <Parameter Name="TextCompare" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Qualquer expressão.</param>
+        <param name="o2">Necessário. Qualquer expressão.</param>
+        <param name="TextCompare">Necessário. <see langword="True" /> para executar uma comparação de cadeias de caracteres que diferencia maiúsculas de minúsculas; caso contrário, <see langword="False" />.</param>
+        <summary>Executa a comparação de cadeia de caracteres de texto ou binário quando recebe dois objetos.</summary>
+        <returns>
+          <list type="table">
+            <listheader>
+              <term> Valor  
+  
+ </term>
+              <description> Condição  
+  
+ </description>
+            </listheader>
+            <item>
+              <term> -1  
+  
+ </term>
+              <description>
+                <paramref name="o1" /> é menor que <paramref name="o2" />.  
+  
+ </description>
+            </item>
+            <item>
+              <term> 0  
+  
+ </term>
+              <description>
+                <paramref name="o1" /> é igual a <paramref name="o2" />.  
+  
+ </description>
+            </item>
+            <item>
+              <term> 1  
+  
+ </term>
+              <description>
+                <paramref name="o1" /> é maior que <paramref name="o2" />.  
+  
+ </description>
+            </item>
+          </list>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PlusObj">
+      <MemberSignature Language="C#" Value="public static object PlusObj (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object PlusObj(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.PlusObj(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma operação unária mais (+).</summary>
+        <returns>O valor de <paramref name="obj" />. (O sinal do <paramref name="obj" /> é alterada.)</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PowObj">
+      <MemberSignature Language="C#" Value="public static object PowObj (object obj1, object obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object PowObj(object obj1, object obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.PowObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="System.Object" />
+        <Parameter Name="obj2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">Necessário. Qualquer expressão numérica.</param>
+        <param name="obj2">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma operação de expoente (^).</summary>
+        <returns>O resultado de <paramref name="obj1" /> elevado à potência de <paramref name="obj2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftLeftObj">
+      <MemberSignature Language="C#" Value="public static object ShiftLeftObj (object o1, int amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object ShiftLeftObj(object o1, int32 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.ShiftLeftObj(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="amount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Expressão numérica integral. O padrão de bits a ser deslocado. O tipo de dados deve ser um tipo integral (<see langword="SByte" />, <see langword="Byte" />, <see langword="Short" />, <see langword="UShort" />, <see langword="Integer" />, <see langword="UInteger" />, <see langword="Long" />, ou <see langword="ULong" />).</param>
+        <param name="amount">Necessário. Expressão numérica. O número de bits para deslocar o padrão de bits. O tipo de dados deve ser <see langword="Integer" /> ou ampliar a <see langword="Integer" />.</param>
+        <summary>Executa um deslocamento aritmético à esquerda (&lt;&lt;) operação.</summary>
+        <returns>Um valor numérico inteiro. O resultado do deslocamento o padrão de bits. O tipo de dados é o mesmo de <paramref name="o1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftRightObj">
+      <MemberSignature Language="C#" Value="public static object ShiftRightObj (object o1, int amount);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object ShiftRightObj(object o1, int32 amount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.ShiftRightObj(System.Object,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="amount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Expressão numérica integral. O padrão de bits a ser deslocado. O tipo de dados deve ser um tipo integral (<see langword="SByte" />, <see langword="Byte" />, <see langword="Short" />, <see langword="UShort" />, <see langword="Integer" />, <see langword="UInteger" />, <see langword="Long" />, ou <see langword="ULong" />).</param>
+        <param name="amount">Necessário. Expressão numérica. O número de bits para deslocar o padrão de bits. O tipo de dados deve ser <see langword="Integer" /> ou ampliar a <see langword="Integer" />.</param>
+        <summary>Executa um deslocamento aritmético para a direita (&gt;&gt;) operação.</summary>
+        <returns>Um valor numérico inteiro. O resultado do deslocamento o padrão de bits. O tipo de dados é o mesmo de <paramref name="o1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StrCatObj">
+      <MemberSignature Language="C#" Value="public static object StrCatObj (object vLeft, object vRight);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object StrCatObj(object vLeft, object vRight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.StrCatObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vLeft" Type="System.Object" />
+        <Parameter Name="vRight" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="vLeft">Necessário. Qualquer expressão.</param>
+        <param name="vRight">Necessário. Qualquer expressão.</param>
+        <summary>Executa uma concatenação de cadeia de caracteres (&amp;) operação.</summary>
+        <returns>Uma cadeia de caracteres que representa a concatenação de <paramref name="vLeft" /> e <paramref name="vRight" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SubObj">
+      <MemberSignature Language="C#" Value="public static object SubObj (object o1, object o2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object SubObj(object o1, object o2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.SubObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o1" Type="System.Object" />
+        <Parameter Name="o2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o1">Necessário. Qualquer expressão numérica.</param>
+        <param name="o2">Necessário. Qualquer expressão numérica.</param>
+        <summary>Executa uma operação de subtração (-).</summary>
+        <returns>A diferença entre <paramref name="o1" /> e <paramref name="o2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="XorObj">
+      <MemberSignature Language="C#" Value="public static object XorObj (object obj1, object obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object XorObj(object obj1, object obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.ObjectType.XorObj(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="System.Object" />
+        <Parameter Name="obj2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <param name="obj2">Necessário. Qualquer <see langword="Boolean" /> ou expressão numérica.</param>
+        <summary>Executa um <see langword="Xor" /> comparação.</summary>
+        <returns>Um <see langword="Boolean" /> ou valor numérico. Para uma <see langword="Boolean" /> comparação, o valor de retorno é a exclusão lógica (disjunção lógica exclusiva) de dois <see langword="Boolean" /> valores. Para operações bit a bit de (numéricas), o valor de retorno é um valor numérico que representa a exclusão bit a bit (disjunção bit a bit exclusiva) dos dois padrões numéricos de bits. Para obter mais informações, consulte [operador Xor](~/docs/visual-basic/language-reference/operators/xor-operator.md).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,170 @@
+<Type Name="IXpsFixedDocumentSequenceWriter" FullName="System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter">
+  <TypeSignature Language="C#" Value="public interface IXpsFixedDocumentSequenceWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXpsFixedDocumentSequenceWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos e propriedades para gravar um <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.XpsDocument.AddFixedDocumentSequence%2A> método para obter um <xref:System.Windows.Documents.FixedDocumentSequence> gravador para adicionar <xref:System.Windows.Documents.FixedDocument> conteúdo para um <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpkgcontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpkgcontent)]
+ [!code-vb[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpkgcontent)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddFixedDocument">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.IXpsFixedDocumentWriter AddFixedDocument ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.IXpsFixedDocumentWriter AddFixedDocument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddFixedDocument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.IXpsFixedDocumentWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Documents.FixedDocument" /> para o <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+        <returns>Um gravador de saída nova <see cref="T:System.Windows.Documents.FixedDocument" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddFixedDocument%2A>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpkgcontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpkgcontent)]
+ [!code-vb[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpkgcontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddThumbnail">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsThumbnail AddThumbnail (System.Windows.Xps.Packaging.XpsImageType imageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsThumbnail AddThumbnail(valuetype System.Windows.Xps.Packaging.XpsImageType imageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddThumbnail(System.Windows.Xps.Packaging.XpsImageType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsThumbnail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageType" Type="System.Windows.Xps.Packaging.XpsImageType" />
+      </Parameters>
+      <Docs>
+        <param name="imageType">O tipo de imagem para gravação.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Xps.Packaging.XpsThumbnail" /> a imagem para o <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+        <returns>O novo <see cref="T:System.Windows.Xps.Packaging.XpsThumbnail" /> para o <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, o `imageType` podem ser <xref:System.Windows.Xps.Packaging.XpsImageType.JpegImageType> ou <xref:System.Windows.Xps.Packaging.XpsImageType.PngImageType>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Apenas uma imagem em miniatura pode representar a sequência de documento como um todo (embora páginas e documentos individuais podem ter suas próprias imagens em miniatura). Um <see cref="T:System.InvalidOperationException" /> é gerada se <see cref="M:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddThumbnail(System.Windows.Xps.Packaging.XpsImageType)" /> é chamado quando o <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> já tem uma miniatura.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera e fecha o <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> gravador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.Commit%2A> método para liberar e fechar o <xref:System.Windows.Documents.FixedDocumentSequence> gravador.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpkgcontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpkgcontent)]
+ [!code-vb[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpkgcontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket PrintTicket { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define uma <see cref="T:System.Printing.PrintTicket" /> para o <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> que está sendo gravado.</summary>
+        <value>Um <see cref="T:System.Printing.PrintTicket" /> que representa uma configuração de impressão padrão para a sequência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade não validar ou modificar especificado <xref:System.Printing.PrintTicket> para um determinado <xref:System.Printing.PrintQueue>.  Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintQueue>-específico <xref:System.Printing.PrintTicket> que é válido para uma impressora especificada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.PrintTicket%2A> propriedade para associar um <xref:System.Printing.PrintTicket> com o <xref:System.Windows.Documents.FixedDocumentSequence>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpkgcontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpkgcontent)]
+ [!code-vb[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpkgcontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> que está sendo gravado.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> que está sendo gravado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

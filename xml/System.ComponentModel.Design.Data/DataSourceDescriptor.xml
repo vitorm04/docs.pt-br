@@ -1,0 +1,128 @@
+<Type Name="DataSourceDescriptor" FullName="System.ComponentModel.Design.Data.DataSourceDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class DataSourceDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataSourceDescriptor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa a funcionalidade básica necessária por uma fonte de dados único no <see langword="EnvDTE.Project" /> nível.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataSourceDescriptor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DataSourceDescriptor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Data.DataSourceDescriptor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public abstract System.Drawing.Bitmap Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Bitmap Image" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DataSourceDescriptor.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este fluxo e o fluxo subjacente é fechada quando substituído em uma classe derivada, obtém o <see cref="T:System.Drawing.Bitmap" /> imagem que representa a fonte de dados.</summary>
+        <value>Um <see cref="T:System.Drawing.Bitmap" /> imagem que representa a fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Bitmap> imagem que representa a fonte de dados é usada normalmente em seletores de tempo de design. A imagem pode ser `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDesignable">
+      <MemberSignature Language="C#" Value="public abstract bool IsDesignable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDesignable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DataSourceDescriptor.IsDesignable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o valor que indica se a fonte de dados é projetáveis.</summary>
+        <value>
+          <see langword="true" />Se a fonte de dados for projetáveis; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Indica se a fonte de dados é projetáveis, o que significa que uma instância desse tipo será adicionada à superfície de design quando a associação. Fontes de dados projetáveis são associados por instância em vez de tipo. Fontes de dados do tipo <xref:System.ComponentModel.IComponent> são projetáveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DataSourceDescriptor.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome da fonte de dados.</summary>
+        <value>O nome da fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da fonte de dados deve ser exclusivo entre todas as fontes de dados de `EnvDTE.Project` nível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public abstract string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DataSourceDescriptor.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome de tipo totalmente qualificado da fonte de dados.</summary>
+        <value>O nome totalmente qualificado do tipo da fonte de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,625 @@
+<Type Name="DependencyObject" FullName="System.Windows.DependencyObject">
+  <TypeSignature Language="C#" Value="public class DependencyObject : System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DependencyObject extends System.Windows.Threading.DispatcherObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DependencyObject" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Threading.DispatcherObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeDescriptionProvider(typeof(MS.Internal.ComponentModel.DependencyObjectProvider))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.NameScopeProperty("NameScope", typeof(System.Windows.NameScope))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um objeto que participa do sistema de propriedade de dependência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DependencyObject> classe habilita [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] serviços do sistema de propriedade em suas classes derivadas muitos.  
+  
+ Função primária do sistema de propriedade é para calcular os valores das propriedades e para fornecer a notificação do sistema sobre os valores que foram alterados. Outra classe de chave que participa do sistema de propriedade é <xref:System.Windows.DependencyProperty>. <xref:System.Windows.DependencyProperty>Habilita o registro das propriedades de dependência para o sistema de propriedade e fornece informações sobre cada propriedade de dependência e identificação enquanto <xref:System.Windows.DependencyObject> como uma classe base permite que os objetos para usar as propriedades de dependência.  
+  
+ <xref:System.Windows.DependencyObject>serviços e as características incluem o seguinte:  
+  
+-   Suporte à hospedagem de uma propriedade de dependência. Registrar uma propriedade de dependência chamando o <xref:System.Windows.DependencyProperty.Register%2A> método e armazenar o valor de retorno do método como um campo estático público na sua classe.  
+  
+-   Suporte à hospedagem de propriedade anexada. Registrar uma propriedade anexada ao chamar o <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método e armazenar o valor de retorno do método como um campo estático público somente leitura em sua classe. (Também há requisitos adicionais de membro; Observe que isso representa um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] implementação específica para propriedades anexadas. Para obter detalhes, consulte [visão geral de propriedades anexado](~/docs/framework/wpf/advanced/attached-properties-overview.md).) A propriedade anexada, em seguida, pode ser definida em qualquer classe que deriva de <xref:System.Windows.DependencyObject>.  
+  
+-   Get, set e desmarque os métodos de utilitário para valores de qualquer propriedade de dependência que existe no <xref:System.Windows.DependencyObject>.  
+  
+-   Metadados, forçar o suporte de valor, notificação de alteração de propriedade e retornos de chamada de substituição para propriedades de dependência ou propriedades anexadas. Além disso, a <xref:System.Windows.DependencyObject> classe facilita os metadados de propriedade por proprietário de uma propriedade de dependência.  
+  
+-   Uma classe base comum para classes derivadas de <xref:System.Windows.ContentElement>, <xref:System.Windows.Freezable>, ou <xref:System.Windows.Media.Visual>. (<xref:System.Windows.UIElement>, outra classe de base do elemento, tem uma hierarquia de classe inclui <xref:System.Windows.Media.Visual>.)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir é derivado de <xref:System.Windows.DependencyObject> para criar uma nova classe abstrata. A classe, em seguida, registra uma propriedade anexada e inclui membros de suporte para essa propriedade anexada.  
+  
+ [!code-csharp[WPFAquariumSln#DOMain](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#domain)]
+ [!code-vb[WPFAquariumSln#DOMain](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#domain)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DependencyObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearValue">
+      <MemberSignature Language="C#" Value="public void ClearValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">A propriedade de dependência a ser limpa, identificada por uma referência de objeto <see cref="T:System.Windows.DependencyProperty" />.</param>
+        <summary>Limpa o valor local de uma propriedade. A propriedade a ser limpa é especificada por um identificador <see cref="T:System.Windows.DependencyProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Limpar o valor da propriedade chamando <xref:System.Windows.DependencyObject.ClearValue%2A> não necessariamente dá uma propriedade de dependência o valor padrão especificado nos metadados de propriedade de dependência. Limpando a propriedade somente especificamente limpa qualquer valor local pode ter sido aplicada. Para obter mais informações, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir itera todas as propriedades que têm valores locais definidas em um objeto, em seguida, chama <xref:System.Windows.DependencyObject.ClearValue%2A> para limpar os valores de cada propriedade.  
+  
+ [!code-csharp[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/csharp/VS_Snippets_Wpf/DPClearValue/CSharp/default.xaml.cs#iteratelocalvaluesandclear)]
+ [!code-vb[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPClearValue/VisualBasic/default.xaml.vb#iteratelocalvaluesandclear)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentativa de chamar <see cref="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)" /> em um <see cref="T:System.Windows.DependencyObject" /> lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearValue">
+      <MemberSignature Language="C#" Value="public void ClearValue (System.Windows.DependencyPropertyKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearValue(class System.Windows.DependencyPropertyKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyPropertyKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.DependencyPropertyKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave para a propriedade de dependência a ser limpa.</param>
+        <summary>Limpa o valor local de uma propriedade somente leitura. A propriedade a ser limpa é especificada por um <see cref="T:System.Windows.DependencyPropertyKey" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.DependencyPropertyKey> identifica uma propriedade de dependência somente leitura para operações do sistema de propriedade. Classes que definem as propriedades de dependência somente leitura não devem expor essa chave com acesso público. Uma chave exposta publicamente deve fornecer um caminho de código público que negadas o caractere de somente leitura da propriedade, se métodos como <xref:System.Windows.DependencyObject.ClearValue%2A> ou <xref:System.Windows.DependencyObject.SetValue%2A> poderia ser chamado de fora da classe ou assembly, a chave de referência.  
+  
+ Limpar o valor da propriedade chamando <xref:System.Windows.DependencyObject.ClearValue%2A> não necessariamente dá uma propriedade de dependência o valor padrão especificado nos metadados de propriedade de dependência. O valor de compensação somente especificamente limpa qualquer valor local pode ter sido aplicada. Para obter mais informações, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentativa de chamar <see cref="M:System.Windows.DependencyObject.ClearValue(System.Windows.DependencyProperty)" /> em um <see cref="T:System.Windows.DependencyObject" /> lacrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CoerceValue">
+      <MemberSignature Language="C#" Value="public void CoerceValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CoerceValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O identificador para a propriedade de dependência impor.</param>
+        <summary>Converte o valor da propriedade de dependência especificada. Isso é feito invocando qualquer função <see cref="T:System.Windows.CoerceValueCallback" /> especificada nos metadados de propriedade para a propriedade de dependência, visto que ela existe na chamada a <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Além do que está sendo invocada explicitamente chamando <xref:System.Windows.DependencyObject.CoerceValue%2A>, o <xref:System.Windows.CoerceValueCallback> de uma dependência de propriedade é também chamada internamente sempre que o valor da propriedade de dependência está sendo avaliado novamente pelo [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade.  
+  
+ Quando você invoca o <xref:System.Windows.DependencyObject.CoerceValue%2A> método, você está invocando, por fim, o retorno de chamada de valor forçados para a propriedade que você especificar. Normalmente você vai invocar <xref:System.Windows.DependencyObject.CoerceValue%2A> somente se você souber que um retorno de chamada de valor forçados existe e se você souber os critérios do retorno de chamada de coerção.  
+  
+ O cenário mais comum para chamar <xref:System.Windows.DependencyObject.CoerceValue%2A> está dentro da classe tratamento propriedade alteração retornos de chamada ou de propriedades relacionadas que influenciam uns dos outros valores de uma maneira de dependente. Para obter mais informações, consulte [Retornos de chamada da propriedade de dependência e validação](~/docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.DependencyObject.CoerceValue%2A> dentro de um <xref:System.Windows.PropertyChangedCallback> implementação que é usada como o <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> de uma propriedade de dependência diferentes na mesma classe. Este é um padrão comum para introduzir dependências do valor true entre propriedades de dependência.  
+  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="dp" /> especificado ou seu valor eram inválido ou não existem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DependencyObjectType">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyObjectType DependencyObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyObjectType DependencyObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObject.DependencyObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObjectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.DependencyObjectType" /> que encapsula o tipo [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] dessa instância.</summary>
+        <value>Um <see cref="T:System.Windows.DependencyObjectType" /> que encapsula o tipo [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] dessa instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é útil se um objeto que é retornado de um método tem um tipo de valor de retorno de <xref:System.Windows.DependencyObject> e você deseja executar a propriedade sistema operações específicas nele dependendo de seu tipo. Por exemplo é mais eficiente chamar <xref:System.Windows.DependencyProperty.GetMetadata%28System.Windows.DependencyObjectType%29> usando o <xref:System.Windows.DependencyObjectType> em vez de [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] tipo. <xref:System.Windows.DependencyObjectType>facilita a pesquisa mais rápida.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir pseudocódigo, `MySubClass` prevê que classes derivadas adicionais podem mudar o valor padrão de `MyCustom` propriedade de dependência. A classe implementa um construtor padrão que pode determinar a classe derivada real aproveitando polimorfismo <xref:System.Windows.DependencyObjectType> valor sempre que esse construtor é usado como um instantiator de classe derivada.  
+  
+ `public DOClass() : base()`  
+  
+ `{`  
+  
+ `__customPropertyCache = (CustomDP)`  
+  
+ `CustomDPProperty.GetMetadata(DependencyObjectType).DefaultValue;`  
+  
+ `}`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override sealed bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Windows.DependencyObject" /> para comparar com a instância atual.</param>
+        <summary>Determina se um <see cref="T:System.Windows.DependencyObject" /> fornecido é equivalente ao <see cref="T:System.Windows.DependencyObject" /> atual.</summary>
+        <returns>
+          <see langword="true" /> se as duas instâncias forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação é apenas a igualdade de referência e não tenta avaliar a igualdade de valor das propriedades contidas.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="T:System.Windows.DependencyObject" />substituições e, em seguida, lacra basic dois <see cref="T:System.Object" /> métodos: <see cref="M:System.Windows.DependencyObject.Equals(System.Object)" /> e <see cref="M:System.Windows.DependencyObject.GetHashCode" />. A chamada de substituições de <see cref="T:System.Object" /> implementações, resultando em um comportamento de igualdade do objeto. A finalidade dessas substituições deliberadas é medidas que impeçam que classes derivadas definir uma igualdade de valor para um <see cref="T:System.Windows.DependencyObject" />. Valor igualdades para <see cref="T:System.Windows.DependencyObject" /> nunca será preciso devido os recursos de propriedade inata alterando o valor de um <see cref="T:System.Windows.DependencyObject" /> e suas propriedades de dependência. Isso inclui fundamentais [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] recursos como associação de dados e o [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override sealed int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash para esse <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>Um código hash do inteiro com sinal de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="T:System.Windows.DependencyObject" />substituições e, em seguida, lacra dois <see cref="T:System.Object" /> métodos: <see cref="M:System.Windows.DependencyObject.Equals(System.Object)" /> e <see cref="M:System.Windows.DependencyObject.GetHashCode" />. A chamada de substituições de <see cref="T:System.Object" /> implementações, resultando em um comportamento de igualdade do objeto. A finalidade dessas substituições deliberadas é medidas que impeçam que classes derivadas definir uma igualdade de valor para um <see cref="T:System.Windows.DependencyObject" />. Valor igualdades para <see cref="T:System.Windows.DependencyObject" /> nunca será preciso devido os recursos de propriedade inata alterando o valor de um <see cref="T:System.Windows.DependencyObject" /> e suas propriedades de dependência. Isso inclui fundamentais [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] recursos como associação de dados e o [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalValueEnumerator">
+      <MemberSignature Language="C#" Value="public System.Windows.LocalValueEnumerator GetLocalValueEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.LocalValueEnumerator GetLocalValueEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.GetLocalValueEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LocalValueEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um enumerador especializado para determinar quais propriedades de dependência têm valores definidos localmente nessa <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>Um enumerador do valor de local especializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um *valor local* é qualquer valor de propriedade de dependência que foi definido por <xref:System.Windows.DependencyObject.SetValue%2A>, ao contrário de outros aspectos do sistema de propriedades.  
+  
+ O <xref:System.Windows.LocalValueEnumerator> obtida chamando <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A> pode ser usado para enumerar as propriedades que têm definidos localmente valor em uma <xref:System.Windows.DependencyObject> instância. Cada uma dessas propriedades é representada no enumerador por um <xref:System.Windows.LocalValueEntry> objeto, que tem propriedades que fazem referência a específica <xref:System.Windows.DependencyProperty> e seus valores. Essa técnica de enumeração pelo definido localmente valores podem ser usados para a otimização ou para outros tratamento de valores locais, por exemplo, para determinar quais valores de propriedade de um <xref:System.Windows.DependencyObject> alteraria se eles foram limpas.  
+  
+> [!IMPORTANT]
+>  Retornado <xref:System.Windows.LocalValueEnumerator> pode conter <xref:System.Windows.LocalValueEntry> registros de propriedade de dependência que é somente leitura ou propriedades de dependência em que os valores são calculados pelo sistema de propriedades. Por exemplo, um elemento de estrutura visual que tem uma largura estabelecida por meio de layout relatará um valor local para <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Se você estiver obtendo valores locais para redefini-los, verifique o <xref:System.Windows.DependencyProperty.ReadOnly%2A> valor o identificador de propriedade de cada <xref:System.Windows.LocalValueEntry> para verificar se o <xref:System.Windows.DependencyProperty> em questão não é somente leitura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir itera todas as propriedades que têm valores locais definidas em um objeto, em seguida, chama <xref:System.Windows.DependencyObject.ClearValue%2A> para limpar os valores de cada propriedade.  
+  
+ [!code-csharp[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/csharp/VS_Snippets_Wpf/DPClearValue/CSharp/default.xaml.cs#iteratelocalvaluesandclear)]
+ [!code-vb[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPClearValue/VisualBasic/default.xaml.vb#iteratelocalvaluesandclear)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.GetValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O identificador <see cref="T:System.Windows.DependencyProperty" /> da propriedade para o qual o valor será recuperado.</param>
+        <summary>Retorna o valor efetivo atual de uma propriedade de dependência nessa instância de um <see cref="T:System.Windows.DependencyObject" />.</summary>
+        <returns>Retorna o valor efetivo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O *valor efetivo* é o valor da propriedade que é retornado pelo sistema de propriedades para qualquer chamador que está solicitando o valor. O valor efetivo é o resultado do sistema propriedade tendo avaliada todas as entradas possíveis que integram a precedência de valor do sistema de propriedade. Isso inclui a coerção e animação. Para obter mais informações, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ Esse método retornará nunca <xref:System.Windows.DependencyProperty.UnsetValue>. O <xref:System.Windows.DependencyProperty.UnsetValue> é um valor de sentinela para o sistema de propriedade que é usado em várias capacidades internamente e ocasionalmente também expostas por meio de retornos de chamada de coerção.  
+  
+ Se você não tiver certeza qual deve ser o tipo da propriedade, você pode consultar o identificador da propriedade de dependência solicitado para determinar se há um determinado mais <xref:System.Windows.DependencyProperty.PropertyType%2A> que o valor de retorno pode ser convertido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="dp" /> especificado ou seu valor era inválido ou o <paramref name="dp" /> especificado não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidateProperty">
+      <MemberSignature Language="C#" Value="public void InvalidateProperty (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvalidateProperty(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.InvalidateProperty(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O <see cref="T:System.Windows.DependencyProperty" /> identificador exclusivo da propriedade a invalidar.</param>
+        <summary>Reavalia o valor efetivo para a propriedade de dependência especificada</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama <xref:System.Windows.DependencyObject.InvalidateProperty%2A>, qualquer associado e aplicáveis <xref:System.Windows.CoerceValueCallback> ou <xref:System.Windows.PropertyChangedCallback> funções registrado para essa propriedade de dependência pode ser invocada.  
+  
+ Chamando <xref:System.Windows.DependencyObject.InvalidateProperty%2A> em uma propriedade que tem seu valor local definido não terá efeito, porque o valor local tem precedência sobre outras entradas de sistema de propriedade, com exceção de animações. No entanto, você poderia chamar <xref:System.Windows.DependencyObject.ClearValue%2A>, em seguida, chame <xref:System.Windows.DependencyObject.InvalidateProperty%2A>. Para obter mais informações, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ Chamando <xref:System.Windows.DependencyObject.InvalidateProperty%2A> não é necessariamente aplicável para muitos cenários de propriedade de dependência. Se uma propriedade de dependência se torna invalidada devido a alterações de valor em qualquer um dos constituintes, o sistema de propriedade invalida e reavalia a propriedade de dependência automaticamente. No entanto, ainda existem alguns cenários apropriados onde <xref:System.Windows.DependencyObject.InvalidateProperty%2A> é útil. Em particular, você pode usar <xref:System.Windows.DependencyObject.InvalidateProperty%2A> dentro do valor forçados ou da propriedade alterada retorno de chamada para uma propriedade de dependência diferentes. Você também pode usar <xref:System.Windows.DependencyObject.InvalidateProperty%2A> para forçar a reavaliação de uma associação em uma fonte de dados que não é capaz de implementar recomendada <xref:System.ComponentModel.INotifyPropertyChanged> mecanismo de notificação (talvez se o consumo de classes de dados que não pode ser derivado, ou onde os dados são um membro estático).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama <xref:System.Windows.DependencyObject.InvalidateProperty%2A> em uma propriedade personalizada, sempre que as propriedades que estão envolvidas nos cálculos da propriedade invalidada alterar. Isso é uma técnica alternativa à chamada de <xref:System.Windows.DependencyObject.CoerceValue%2A> método, porque invalidar a propriedade também chamará qualquer registrado <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>.  
+  
+ [!code-csharp[PropertySystemEsoterics#InvalidateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#invalidateproperty)]
+ [!code-vb[PropertySystemEsoterics#InvalidateProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#invalidateproperty)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSealed">
+      <MemberSignature Language="C#" Value="public bool IsSealed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSealed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DependencyObject.IsSealed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se essa instância está validada no momento (somente leitura).</summary>
+        <value>
+          <see langword="true" /> se essa instância estiver selada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é definido internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento conterão o identificador de propriedade de dependência de interesse, os metadados para o tipo de propriedade e valores novos e antigos.</param>
+        <summary>Invocado sempre que o valor efetivo de qualquer propriedade de dependência nesse <see cref="T:System.Windows.DependencyObject" /> for atualizada. A propriedade de dependência específica que mudou é relatada os dados do evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não deve geralmente detectar alterações de propriedade individuais ou executar invalidações de propriedades em uma base por caso. <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>em vez disso, deve ser modificações do padrão de invalidação geral, se for conhecidas certas informações sobre classificações de largura de propriedades. Por exemplo, alterações em um <xref:System.Windows.Freezable> alterações nos tipos de valor de <xref:System.Windows.Freezable>, ou pode ser subpropriedades, onde as alterações são dentro de outras <xref:System.Windows.Freezable> referências. O <xref:System.Windows.Freezable> substituir a implementação de <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> usa informações internas para determinar se as propriedades são subpropriedades e fornece lógica de classe base apropriada para ambos os casos.  
+  
+ <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>potencialmente é chamado várias vezes durante a vida de um objeto. Portanto, você pode obter um melhor desempenho para o sistema de propriedade geral se você substituir os metadados de propriedades específicas e, em seguida, anexa <xref:System.Windows.CoerceValueCallback> ou <xref:System.Windows.PropertyChangedCallback> funções de propriedades individuais. No entanto, você usaria esse método se um <xref:System.Windows.DependencyObject> inclui um número significativo de propriedades de dependência inter-relacionados de valor, ou se ele inclui lógica, como o comportamento de renderização que deve ser executado novamente para vários casos de invalidações de propriedade de relacionados.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Sempre chame a implementação base. Falha ao fazer isso significativamente desabilitará toda a [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade, fazendo com que valores incorretos a serem relatados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLocalValue">
+      <MemberSignature Language="C#" Value="public object ReadLocalValue (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object ReadLocalValue(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ReadLocalValue(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O identificador <see cref="T:System.Windows.DependencyProperty" /> da propriedade para o qual o valor será recuperado.</param>
+        <summary>Retorna o valor local de uma propriedade de dependência, local, se houver.</summary>
+        <returns>Retorna o valor local ou o valor de sentinela <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> se nenhum valor local é definido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve usar <xref:System.Windows.DependencyObject.GetValue%2A> para operações mais comuns de "get" para uma propriedade de dependência. <xref:System.Windows.DependencyObject.ReadLocalValue%2A>retornar o valor efetivo para uma variedade de circunstâncias em que o valor localmente não foi definido.  
+  
+ Os valores que são definidos por estilos, temas, modelos, o valor padrão de metadados ou herança de valor de propriedade não são considerados valores local. No entanto, associações e outras expressões são considerados valores locais, depois que eles tenham sido avaliados.  
+  
+ Quando nenhum valor local é definido, esse método retorna <xref:System.Windows.DependencyProperty.UnsetValue>.  
+  
+ Se o valor retornado for diferente de <xref:System.Windows.DependencyProperty.UnsetValue>, você pode consultar os metadados da propriedade de dependência solicitado para determinar se há um tipo mais específico que o valor de retorno pode ser convertido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCurrentValue">
+      <MemberSignature Language="C#" Value="public void SetCurrentValue (System.Windows.DependencyProperty dp, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCurrentValue(class System.Windows.DependencyProperty dp, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.SetCurrentValue(System.Windows.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O identificador da propriedade de dependência a ser definida.</param>
+        <param name="value">O novo valor local.</param>
+        <summary>Define o valor da propriedade de dependência sem alterar a origem do valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado por um componente que define programaticamente o valor de uma de suas próprias propriedades sem desabilitar o uso de um aplicativo declarado da propriedade. O <xref:System.Windows.DependencyObject.SetCurrentValue%2A> método altera o valor efetivo de associação de dados de propriedade, mas os gatilhos existentes, e estilos continuarão a funcionar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Houve uma tentativa de modificar uma propriedade de dependência somente leitura ou uma propriedade em um <see cref="T:System.Windows.DependencyObject" /> lacrado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não era do tipo correto conforme registrado para a propriedade <paramref name="dp" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (System.Windows.DependencyProperty dp, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(class System.Windows.DependencyProperty dp, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.SetValue(System.Windows.DependencyProperty,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O identificador da propriedade de dependência a ser definida.</param>
+        <param name="value">O novo valor local.</param>
+        <summary>Define o valor local de uma propriedade de dependência, especificada pelo identificador da propriedade de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tipo fornecido não coincide com o tipo que é declarado para a propriedade de dependência conforme ela foi originalmente registrada, uma exceção será lançada. O `value` parâmetro sempre deve ser fornecido como o tipo apropriado.  
+  
+ As condições de exceção potencialmente são influenciadas pelo <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> retorno de chamada que existe no identificador de propriedade de dependência da propriedade de dependência que está sendo definido. Caso contrário, o valor fornecido poderia estar falhando condições gerais de verificação de tipo (por exemplo, passando uma cadeia de caracteres quando o tipo nativo é Double).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Houve uma tentativa de modificar uma propriedade de dependência somente leitura ou uma propriedade em um <see cref="T:System.Windows.DependencyObject" /> lacrado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não era do tipo correto conforme registrado para a propriedade <paramref name="dp" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (System.Windows.DependencyPropertyKey key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(class System.Windows.DependencyPropertyKey key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.SetValue(System.Windows.DependencyPropertyKey,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.DependencyPropertyKey" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">O identificador <see cref="T:System.Windows.DependencyPropertyKey" /> da propriedade a ser definido.</param>
+        <param name="value">O novo valor local.</param>
+        <summary>Define o valor de uma propriedade de dependência somente leitura, especificada pelo identificador <see cref="T:System.Windows.DependencyPropertyKey" /> da propriedade de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta assinatura geralmente é usada quando você definir valores para propriedades de dependência somente leitura que são definidos por suas classes personalizadas. Em geral, <xref:System.Windows.DependencyObject.SetValue%2A> é chamado apenas do tipo registrado a propriedade de dependência, que implementa a lógica interna que fornece o valor determinado para a propriedade de dependência. Para obter mais informações, consulte [Propriedades de dependência somente leitura](~/docs/framework/wpf/advanced/read-only-dependency-properties.md).  
+  
+ Se o tipo fornecido não coincide com o tipo que é declarado para a propriedade de dependência conforme ela foi originalmente registrada, uma exceção será lançada. O `value` parâmetro sempre deve ser fornecido como o tipo apropriado. As condições de exceção potencialmente são influenciadas pelo <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> retorno de chamada que existe no identificador de propriedade de dependência da propriedade de dependência que está sendo definido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma propriedade de dependência somente leitura, juntamente com um `public static readonly` <xref:System.Windows.DependencyProperty> necessário exposição de somente leitura para os consumidores de propriedade e o acessador get, que fornece o [!INCLUDE[TLA2#tla_clr](~/includes/tla2sharptla-clr-md.md)] wrapper.  
+  
+ [!code-csharp[WPFAquariumSln#RODP](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#rodp)]
+ [!code-vb[WPFAquariumSln#RODP](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#rodp)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeProperty">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeProperty (System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ShouldSerializeProperty(class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DependencyObject.ShouldSerializeProperty(System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="dp">O identificador para a propriedade de dependência deve ser serializado.</param>
+        <summary>Retorna um valor que indica se os processos de serialização devem serializar o valor da propriedade de dependência fornecido.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade de dependência que é fornecida deve ser serializado valor; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão retorna `true` para todos os casos em que uma propriedade de dependência tinha um valor local estabelecido no <xref:System.Windows.DependencyObject>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituições para este método podem manipular as propriedades de dependência específicas diferente.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,97 @@
+<Type Name="CodeSubDirectory" FullName="System.Web.Configuration.CodeSubDirectory">
+  <TypeSignature Language="C#" Value="public sealed class CodeSubDirectory : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CodeSubDirectory extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.CodeSubDirectory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Faz referência a um local de diretório que é usado durante a compilação de um recurso dinâmico. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Configuration.CodeSubDirectory> é referenciado como um atributo do `Add` elemento dentro a `codeSubDirectories` nó do `compilation` seção da configuração.  
+  
+ A ordem de compilação é inferida da ordem de cima para baixo o `codeSubDirectories` na configuração. O `\App_Code` diretório é criado pela última. No entanto, não há nenhuma dependência de ordem de compilação, que significa que a ordem de compilação não importa aqui.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeSubDirectory (string directoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string directoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.CodeSubDirectory.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="directoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="directoryName">Um valor de cadeia de caracteres especificando o <see cref="T:System.Web.Configuration.CodeSubDirectory" /> referência.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.CodeSubDirectory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryName">
+      <MemberSignature Language="C#" Value="public string DirectoryName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DirectoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CodeSubDirectory.DirectoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.WhiteSpaceTrimStringConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("directoryName", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsKey=true, IsRequired=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do diretório que contém os arquivos compilados em tempo de execução.</summary>
+        <value>Um valor de cadeia de caracteres especificando o nome da referência do diretório usado durante a compilação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um `directoryName` atributo de um `add` elemento da configuração será pesquisado apenas a `\App_Code` path; portanto, adicionando `directoryName="\App_Code\Applogic"` não é válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.CodeSubDirectory.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

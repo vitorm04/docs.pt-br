@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection.Emit">
+  <Docs>
+    <summary>O <see cref="N:System.Reflection.Emit" /> namespace contém classes que permitem que um compilador ou uma ferramenta emitir metadados e Microsoft intermediate language (MSIL) e, opcionalmente, gerar um arquivo PE no disco. Os clientes primários dessas classes são compiladores e mecanismos de script.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

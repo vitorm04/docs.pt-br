@@ -1,0 +1,1706 @@
+<Type Name="ToolStripComboBox" FullName="System.Windows.Forms.ToolStripComboBox">
+  <TypeSignature Language="C#" Value="public class ToolStripComboBox : System.Windows.Forms.ToolStripControlHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolStripComboBox extends System.Windows.Forms.ToolStripControlHost" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripComboBox" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ToolStripControlHost</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Items")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Forms.Design.ToolStripItemDesignerAvailability(System.Windows.Forms.Design.ToolStripItemDesignerAvailability.ToolStrip | System.Windows.Forms.Design.ToolStripItemDesignerAvailability.MenuStrip | System.Windows.Forms.Design.ToolStripItemDesignerAvailability.ContextMenuStrip)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um <see cref="T:System.Windows.Forms.ToolStripComboBox" /> que é renderizado corretamente em um <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripComboBox>é o <xref:System.Windows.Forms.ComboBox> otimizado para hospedagem em um <xref:System.Windows.Forms.ToolStrip>. Um subconjunto de eventos e propriedades do controle hospedado são expostos no <xref:System.Windows.Forms.ToolStripComboBox> nível, mas subjacente <xref:System.Windows.Forms.ComboBox> controle é totalmente acessível por meio de <xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A> propriedade.  
+  
+ Um <xref:System.Windows.Forms.ToolStripComboBox> exibe um campo de edição combinado com um <xref:System.Windows.Forms.ListBox>, permitindo que o usuário para selecionar na lista ou digite o novo texto. Por padrão, um <xref:System.Windows.Forms.ToolStripComboBox> exibe um campo de edição com uma lista suspensa oculta. O <xref:System.Windows.Forms.ToolStripComboBox.DropDownStyle%2A> propriedade determina o estilo da caixa de combinação para exibir. Você pode inserir um valor que permite uma suspensa simple, onde a lista exibe sempre, uma caixa de listagem suspensa, onde a parte do texto não é editável e você deve selecionar uma seta para exibir a caixa de listagem suspensa, ou a caixa de listagem suspensa padrão, onde o texto é editável e o usuário devem pressionar a tecla de seta para exibir a lista. Para sempre exibir uma lista que o usuário não pode editar, use um <xref:System.Windows.Forms.ListBox> controle.  
+  
+ Para adicionar objetos à lista de tempo de execução, atribuir uma matriz de referências de objeto com o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> método. A lista, em seguida, exibe o valor de cadeia de caracteres padrão para cada objeto. Você pode adicionar objetos individuais com o <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método.  
+  
+ Além da funcionalidade de exibição e seleção, o <xref:System.Windows.Forms.ToolStripComboBox> também fornece recursos que permitem adicionar com eficiência os itens para o <xref:System.Windows.Forms.ToolStripComboBox> e para localizar texto dentro de itens da lista. O <xref:System.Windows.Forms.ToolStripComboBox.BeginUpdate%2A> e <xref:System.Windows.Forms.ToolStripComboBox.EndUpdate%2A> métodos permitem que você adicionar um grande número de itens para o <xref:System.Windows.Forms.ToolStripComboBox> sem o controle que está sendo pintada novamente cada vez que um item é adicionado à lista. O <xref:System.Windows.Forms.ToolStripComboBox.FindString%2A> e <xref:System.Windows.Forms.ToolStripComboBox.FindStringExact%2A> métodos permitem que você procurar um item na lista que contém uma cadeia de caracteres de pesquisa específico.  
+  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndex%2A> propriedade para obter ou definir o item atual na lista suspensa e, em seguida, use o <xref:System.Windows.Forms.ToolStripComboBox.SelectedItem%2A> propriedade para obter ou definir uma referência para o item atual na lista suspensa.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.Windows.Forms.ToolStripComboBox> com várias configurações de propriedade, incluindo o preenchimento automático.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripComboBox ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripComboBox (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolStripComboBox" /> com o nome especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripComboBox (System.Windows.Forms.Control c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Control c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.#ctor(System.Windows.Forms.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="c" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="c">O controle base.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ToolStripComboBox" /> classe derivada de um controle base.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para a operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteCustomSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteStringCollection AutoCompleteCustomSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AutoCompleteStringCollection AutoCompleteCustomSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.AutoCompleteCustomSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteStringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de cadeia de caracteres personalizada a ser usada quando o <see cref="P:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource" /> está definida como <see cref="F:System.Windows.Forms.AutoCompleteSource.CustomSource" />.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.AutoCompleteStringCollection" /> que contém as cadeias de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteCustomSource%2A>, <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>, e <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A> propriedades para criar um <xref:System.Windows.Forms.ToolStripComboBox> que preenche automaticamente cadeias de caracteres de entrada, comparando o prefixo que está sendo inserido para os prefixos de todas as cadeias de caracteres em uma fonte de manutenção. Isso é útil para <xref:System.Windows.Forms.ToolStripComboBox> controles no qual URLs, endereços, nomes de arquivos ou comandos serão frequentemente inseridos.  
+  
+ O uso do <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteCustomSource%2A> propriedade é opcional, mas você deve definir o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A> propriedade <xref:System.Windows.Forms.AutoCompleteSource.CustomSource> para usar <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteCustomSource%2A>.  
+  
+ Você deve usar o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A> e <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A> propriedades juntas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteCustomSource%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteMode AutoCompleteMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoCompleteMode AutoCompleteMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o comportamento de conclusão de <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.AutoCompleteMode" />. O padrão é <see cref="F:System.Windows.Forms.AutoCompleteMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A> propriedade para obter ou definir o comportamento de preenchimento automático.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoCompleteSource">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoCompleteSource AutoCompleteSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoCompleteSource AutoCompleteSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoCompleteSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a origem de strings completas usadas para conclusão automática.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.AutoCompleteSource" />. O padrão é <see cref="F:System.Windows.Forms.AutoCompleteSource.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A> propriedade para obter ou definir as cadeias de caracteres de preenchimento automático.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImage">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Image BackgroundImage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Image BackgroundImage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.BackgroundImage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>A imagem de tela de fundo exibida no controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundImageLayout">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ImageLayout BackgroundImageLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ImageLayout BackgroundImageLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.BackgroundImageLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ImageLayout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é relevante para essa classe.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ImageLayout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdate">
+      <MemberSignature Language="C#" Value="public void BeginUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.BeginUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Mantém o desempenho quando itens são adicionados ao <see cref="T:System.Windows.Forms.ToolStripComboBox" />, um de cada vez.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método impede que o controle de pintura até que o <xref:System.Windows.Forms.ToolStripComboBox.EndUpdate%2A> método é chamado.  
+  
+ A melhor maneira de adicionar itens ao <xref:System.Windows.Forms.ToolStripComboBox> é usar o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> método por meio de <xref:System.Windows.Forms.ToolStripComboBox.Items%2A> propriedade do <xref:System.Windows.Forms.ToolStripComboBox>. Isso permite que você adicione uma matriz de itens à lista de uma só vez. No entanto, se você deseja adicionar itens de um a um momento usando o <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método, você pode usar o <xref:System.Windows.Forms.ToolStripComboBox.BeginUpdate%2A> método para impedir que o controle redesenho o <xref:System.Windows.Forms.ToolStripComboBox> cada vez que um item é adicionado à lista. Depois de concluir a tarefa de adicionar itens à lista, chame o <xref:System.Windows.Forms.ToolStripComboBox.EndUpdate%2A> método para habilitar o <xref:System.Windows.Forms.ToolStripComboBox> seja redesenhado. Essa maneira de adicionar itens pode impedir a cintilação durante o desenho do <xref:System.Windows.Forms.ToolStripComboBox> quando um grande número de itens está sendo adicionado à lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComboBox">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ComboBox ComboBox { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ComboBox ComboBox" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.ComboBox" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ComboBox</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.ComboBox" /> no qual o usuário pode digitar texto, juntamente com uma lista da qual o usuário pode selecionar.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ComboBox" /> para um <see cref="T:System.Windows.Forms.ToolStrip" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A> propriedade obter <xref:System.Windows.Forms.ComboBox> propriedades, métodos e eventos que não foram encapsulados em <xref:System.Windows.Forms.ToolStripComboBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMargin">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.Padding DefaultMargin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Padding DefaultMargin" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.DefaultMargin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Padding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o espaçamento padrão, em pixels, entre a <see cref="T:System.Windows.Forms.ToolStripComboBox" /> e um item adjacente.</summary>
+        <value>Um valor <see cref="T:System.Windows.Forms.Padding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Windows.Forms.ToolStripComboBox.DefaultMargin%2A> propriedade para definir um tamanho padrão para o <xref:System.Windows.Forms.ToolStripComboBox>. Isso é mais eficiente do que a definição do tamanho do construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size DefaultSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size DefaultSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.DefaultSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho padrão do <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>O padrão <see cref="T:System.Drawing.Size" /> da <see cref="T:System.Windows.Forms.ToolStripTextBox" /> em pixels. O tamanho padrão é 20 x 100 pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para manter o melhor desempenho, você não deve definir o <xref:System.Drawing.Size> de um <xref:System.Windows.Forms.ToolStripComboBox> em seu construtor. É o método preferido substituir o <xref:System.Windows.Forms.ToolStripComboBox.DefaultSize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir o <see cref="P:System.Windows.Forms.ToolStripComboBox.DefaultSize" /> propriedade em uma classe derivada, é preferível para retornar um <see cref="T:System.Drawing.Size" /> do objeto com as dimensões desejadas, em vez de substituir todos os a implementação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DoubleClick">
+      <MemberSignature Language="C#" Value="public event EventHandler DoubleClick;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DoubleClick" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripComboBox.DoubleClick" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse evento não é relevante para essa classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não é relevante para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDown">
+      <MemberSignature Language="C#" Value="public event EventHandler DropDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DropDown" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripComboBox.DropDown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a parte suspensa de um <see cref="T:System.Windows.Forms.ToolStripComboBox" /> é mostrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripComboBox.DropDown> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripComboBox> chamado `ToolStripComboBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripComboBox.DropDown> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#578](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#578)]
+ [!code-vb[System.Windows.Forms.EventExamples#578](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#578)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownClosed">
+      <MemberSignature Language="C#" Value="public event EventHandler DropDownClosed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DropDownClosed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripComboBox.DropDownClosed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a parte suspensa do <see cref="T:System.Windows.Forms.ToolStripComboBox" /> foi fechada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripComboBox.DropDownClosed> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripComboBox> chamado `ToolStripComboBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripComboBox.DropDownClosed> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#579](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#579)]
+ [!code-vb[System.Windows.Forms.EventExamples#579](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#579)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownHeight">
+      <MemberSignature Language="C#" Value="public int DropDownHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DropDownHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.DropDownHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(106)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura, em pixels, da caixa de lista suspensa de um <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>A altura, em pixels, da caixa suspensa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Forms.ToolStripComboBox.DropDownHeight%2A> propriedade redefine o <xref:System.Windows.Forms.ToolStripComboBox.IntegralHeight%2A> propriedade `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.DropDownHeight%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ComboBoxStyle DropDownStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ComboBoxStyle DropDownStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.DropDownStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.Repaint)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ComboBoxStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o estilo de <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ComboBoxStyle" />. O padrão é <see cref="F:System.Windows.Forms.ComboBoxStyle.DropDown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripComboBox.DropDownStyle%2A> propriedade controla a interface que é apresentada ao usuário. Você pode inserir um valor que permite uma lista suspensa simples caixa, onde a lista sempre exibe, uma caixa de listagem suspensa, em que a parte do texto não é editável e você deve selecionar uma seta para exibir a lista suspensa ou caixa de listagem suspensa padrão, em que a parte do texto é editável e o usuário deve pressionar a tecla de seta para exibir a lista. Para sempre exibir uma lista que o usuário não pode editar, use um <xref:System.Windows.Forms.ListBox> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.DropDownStyle%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownStyleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler DropDownStyleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DropDownStyleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripComboBox.DropDownStyleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.ToolStripComboBox.DropDownStyle" /> é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripComboBox.DropDownStyleChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripComboBox> chamado `ToolStripComboBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripComboBox.DropDownStyleChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#580](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#580)]
+ [!code-vb[System.Windows.Forms.EventExamples#580](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#580)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DropDownWidth">
+      <MemberSignature Language="C#" Value="public int DropDownWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DropDownWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.DropDownWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura, em pixels, da parte da lista suspensa de um <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>A largura, em pixels, da caixa suspensa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.DropDownWidth%2A> propriedade para obter ou definir a largura da parte da lista suspensa de um <xref:System.Windows.Forms.ToolStripComboBox>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.DropDownWidth%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DroppedDown">
+      <MemberSignature Language="C#" Value="public bool DroppedDown { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DroppedDown" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.DroppedDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.ToolStripComboBox" /> exibe no momento de sua parte da lista suspensa.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Forms.ToolStripComboBox" /> atualmente exibe sua parte suspensa; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdate">
+      <MemberSignature Language="C#" Value="public void EndUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.EndUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Continua a pintura do controle <see cref="T:System.Windows.Forms.ToolStripComboBox" /> depois que a pintura é suspensa pelo método <see cref="M:System.Windows.Forms.ToolStripComboBox.BeginUpdate" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A melhor maneira de adicionar itens ao <xref:System.Windows.Forms.ToolStripComboBox> é usar o <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> método por meio de <xref:System.Windows.Forms.ToolStripComboBox.Items%2A> propriedade do <xref:System.Windows.Forms.ToolStripComboBox>. Isso permite que você adicione uma matriz de itens à lista de uma só vez. No entanto, se você deseja adicionar itens de um a um momento usando o <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método, você pode usar o <xref:System.Windows.Forms.ToolStripComboBox.BeginUpdate%2A> método para impedir que o controle redesenho o <xref:System.Windows.Forms.ToolStripComboBox> cada vez que um item é adicionado à lista. Depois de concluir a tarefa de adicionar itens à lista, chame o <xref:System.Windows.Forms.ToolStripComboBox.EndUpdate%2A> método para habilitar o <xref:System.Windows.Forms.ToolStripComboBox> seja redesenhado. Essa maneira de adicionar itens pode impedir a cintilação durante o desenho do <xref:System.Windows.Forms.ToolStripComboBox> quando um grande número de itens está sendo adicionado à lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindString">
+      <MemberSignature Language="C#" Value="public int FindString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindString(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.FindString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">O <see cref="T:System.String" /> a ser pesquisado.</param>
+        <summary>Encontra o primeiro item no <see cref="T:System.Windows.Forms.ToolStripComboBox" /> que começa com a cadeia de caracteres especificada.</summary>
+        <returns>O índice baseado em zero do primeiro item encontrado; retornará -1 se nenhuma correspondência for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pesquisa executada por esse método não diferencia maiusculas de minúsculas. O `s` parâmetro é uma subcadeia de caracteres a ser comparada com o texto associado aos itens na lista da caixa de combinação. A pesquisa executa uma correspondência parcial desde o início do texto e retornar o primeiro item na lista que corresponde a subcadeia de caracteres especificada. Em seguida, você pode executar tarefas, como remover o item que contém o texto de pesquisa ou alterar o texto do item. Após localizar o texto especificado, se você quiser pesquisar por outras instâncias do texto no <xref:System.Windows.Forms.ToolStripComboBox>, use <xref:System.Windows.Forms.ToolStripComboBox.FindString%2A> método para especificar um valor inicial de índice dentro do <xref:System.Windows.Forms.ToolStripComboBox>. Se você quiser realizar uma pesquisa uma correspondência exata do word em vez de uma correspondência parcial, use o <xref:System.Windows.Forms.ToolStripComboBox.FindStringExact%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindString">
+      <MemberSignature Language="C#" Value="public int FindString (string s, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindString(string s, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.FindString(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">O <see cref="T:System.String" /> a ser pesquisado.</param>
+        <param name="startIndex">O índice de base zero do item antes do primeiro item a ser pesquisada. Defina como -1 para pesquisar desde o início do controle.</param>
+        <summary>Localiza o primeiro item após o índice fornecido que começa com a cadeia de caracteres especificada.</summary>
+        <returns>O índice baseado em zero do primeiro item encontrado; retornará -1 se nenhuma correspondência for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pesquisa executada por esse método não diferencia maiusculas de minúsculas. O `s` parâmetro é uma subcadeia de caracteres a ser comparada com o texto associado aos itens na lista da caixa de combinação. A pesquisa executa uma correspondência parcial desde o início do texto no índice especificado e retorna o primeiro item na lista que corresponde a subcadeia de caracteres especificada. Em seguida, você pode executar tarefas, como remover o item que contém o texto de pesquisa ou alterar o texto do item. Após localizar o texto especificado, se você quiser pesquisar por outras instâncias do texto no <xref:System.Windows.Forms.ToolStripComboBox>, use este método para especificar um índice inicial dentro do <xref:System.Windows.Forms.ToolStripComboBox>. Se você quiser realizar uma pesquisa uma correspondência exata do word em vez de uma correspondência parcial, use o <xref:System.Windows.Forms.ToolStripComboBox.FindStringExact%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindStringExact">
+      <MemberSignature Language="C#" Value="public int FindStringExact (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindStringExact(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.FindStringExact(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">O <see cref="T:System.String" /> a ser pesquisado.</param>
+        <summary>Encontra o primeiro item no <see cref="T:System.Windows.Forms.ToolStripComboBox" /> que corresponde à cadeia de caracteres especificada.</summary>
+        <returns>O índice de base zero do primeiro item encontrado; -1 se nenhuma correspondência for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pesquisa executada por esse método não diferencia maiusculas de minúsculas. O `s` parâmetro é uma subcadeia de caracteres a ser comparada com o texto associado aos itens na lista da caixa de combinação. A pesquisa executa uma correspondência parcial desde o início do texto no índice especificado e retorna o primeiro item na lista que corresponde a subcadeia de caracteres especificada. Em seguida, você pode executar tarefas, como remover o item que contém o texto de pesquisa ou alterar o texto do item. Após localizar o texto especificado, se você quiser pesquisar por outras instâncias do texto no <xref:System.Windows.Forms.ToolStripComboBox>, use <xref:System.Windows.Forms.ToolStripComboBox.FindString%2A> método para especificar um valor inicial de índice dentro do <xref:System.Windows.Forms.ToolStripComboBox>. Se você deseja procurar uma correspondência parcial em vez da palavra exata, use o <xref:System.Windows.Forms.ToolStripComboBox.FindString%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindStringExact">
+      <MemberSignature Language="C#" Value="public int FindStringExact (string s, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 FindStringExact(string s, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.FindStringExact(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="s">O <see cref="T:System.String" /> a ser pesquisado.</param>
+        <param name="startIndex">O índice de base zero do item antes do primeiro item a ser pesquisada. Defina como -1 para pesquisar desde o início do controle.</param>
+        <summary>Localiza o primeiro item após o índice especificado que coincide com a cadeia de caracteres especificada.</summary>
+        <returns>O índice baseado em zero do primeiro item encontrado; retornará -1 se nenhuma correspondência for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A pesquisa executada por esse método não diferencia maiusculas de minúsculas. O `s` parâmetro é uma subcadeia de caracteres a ser comparada com o texto associado aos itens na lista da caixa de combinação. A pesquisa executa uma correspondência parcial desde o início do texto no índice especificado e retorna o primeiro item na lista que corresponde a subcadeia de caracteres especificada. Em seguida, você pode executar tarefas, como remover o item que contém o texto de pesquisa ou alterar o texto do item. Após localizar o texto especificado, se você deseja procurar por outras instâncias do texto exato no <xref:System.Windows.Forms.ToolStripComboBox>, use este método para especificar um índice inicial dentro do <xref:System.Windows.Forms.ToolStripComboBox>. Se você deseja procurar uma correspondência parcial em vez da palavra exata, use o <xref:System.Windows.Forms.ToolStripComboBox.FindString%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlatStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.FlatStyle FlatStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.FlatStyle FlatStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.FlatStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FlatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a aparência de <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.FlatStyle" />. As opções são <see cref="F:System.Windows.Forms.FlatStyle.Flat" />, <see cref="F:System.Windows.Forms.FlatStyle.Popup" />, <see cref="F:System.Windows.Forms.FlatStyle.Standard" /> e <see cref="F:System.Windows.Forms.FlatStyle.System" />. O padrão é <see cref="F:System.Windows.Forms.FlatStyle.Popup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.FlatStyle%2A> propriedade para obter ou definir o estilo de exibição da <xref:System.Windows.Forms.ToolStripComboBox>.  
+  
+ Começando com o .NET Framework 4.5.2, se o <xref:System.Windows.Forms.ToolStripComboBox.FlatStyle%2A> está definida como <xref:System.Windows.Forms.FlatStyle.Flat> ou <xref:System.Windows.Forms.FlatStyle.Popup>, a seta suspensa pode ser redimensionada. Redimensionando é determinado pela configuração de DPI do sistema quando o arquivo App. config contém a seguinte entrada:  
+  
+```  
+<appSettings>  
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />  
+</appSettings>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.FlatStyle%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemHeight">
+      <MemberSignature Language="C#" Value="public int GetItemHeight (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetItemHeight(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.GetItemHeight(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item a retornar a altura do.</param>
+        <summary>Retorna a altura, em pixels, de um item de <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <returns>A altura, em pixels, do item no índice especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Size GetPreferredSize (System.Drawing.Size constrainingSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Size GetPreferredSize(valuetype System.Drawing.Size constrainingSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.GetPreferredSize(System.Drawing.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constrainingSize" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constrainingSize">A área tamanho personalizado para um controle.</param>
+        <summary>Recupera o tamanho de uma área retangular na qual um controle pode ser ajustado.</summary>
+        <returns>Um par ordenado de tipo <see cref="T:System.Drawing.Size" /> que representa a largura e a altura de um retângulo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegralHeight">
+      <MemberSignature Language="C#" Value="public bool IntegralHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IntegralHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.IntegralHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Forms.ToolStripComboBox" /> deve ser redimensionada para evitar a exibição de itens parciais.</summary>
+        <value>
+          <see langword="true" /> se a lista pode conter somente itens completos; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, o controle é redimensionado automaticamente para garantir que um item parcial não será exibido. Se você quiser manter o tamanho original do <xref:System.Windows.Forms.ToolStripComboBox> com base nos requisitos de espaço do formulário, defina essa propriedade como `false`. Se o <xref:System.Windows.Forms.ToolStripComboBox> não contém todos os itens, essa propriedade não tem nenhum efeito.  
+  
+ Definindo o <xref:System.Windows.Forms.ToolStripComboBox.DropDownHeight%2A> propriedade redefine o <xref:System.Windows.Forms.ToolStripComboBox.IntegralHeight%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ComboBox.ObjectCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ComboBox/ObjectCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ComboBox+ObjectCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de itens contidos neste <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>Uma coleção de itens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDropDownItems">
+      <MemberSignature Language="C#" Value="public int MaxDropDownItems { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxDropDownItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.MaxDropDownItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de itens a serem mostrados na parte da lista suspensa do <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>O número máximo de itens na parte da lista suspensa. O mínimo para essa propriedade é 1 e o máximo é 100.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripComboBox.MaxDropDownItems%2A> propriedade para obter ou definir o número máximo de itens a serem mostrados na parte do menu suspenso de <xref:System.Windows.Forms.ToolStripComboBox>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.MaxDropDownItems%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLength">
+      <MemberSignature Language="C#" Value="public int MaxLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.MaxLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de caracteres permitido na parte de uma caixa de combinação editável.</summary>
+        <value>O número máximo de caracteres que o usuário pode inserir. Valores menores que zero são redefinidos como zero, que é o valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDropDown">
+      <MemberSignature Language="C#" Value="protected virtual void OnDropDown (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDropDown(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnDropDown(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripComboBox.DropDown" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnDropDown%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnDropDown(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnDropDown(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDropDownClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnDropDownClosed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDropDownClosed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnDropDownClosed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripComboBox.DropDownClosed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnDropDownClosed%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnDropDownClosed(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnDropDownClosed(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDropDownStyleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDropDownStyleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDropDownStyleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnDropDownStyleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripComboBox.DropDownStyleChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnDropDownStyleChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnDropDownStyleChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnDropDownStyleChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedIndexChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectedIndexChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectedIndexChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnSelectedIndexChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripComboBox.SelectedIndexChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnSelectedIndexChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnSelectedIndexChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnSelectedIndexChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChangeCommitted">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionChangeCommitted (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionChangeCommitted(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnSelectionChangeCommitted(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ComboBox.SelectionChangeCommitted" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ComboBox.SelectionChangeCommitted>é gerado apenas quando o usuário altera a seleção da caixa de combinação. Não use <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndexChanged> ou <xref:System.Windows.Forms.ListControl.SelectedValueChanged> para capturar as alterações do usuário, como esses eventos também são gerados quando a seleção é alterada por meio de programação. Esse evento também é gerado quando você definir <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndex%2A>.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnSelectionChangeCommitted%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnSelectionChangeCommitted(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnSelectionChangeCommitted(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubscribeControlEvents">
+      <MemberSignature Language="C#" Value="protected override void OnSubscribeControlEvents (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSubscribeControlEvents(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnSubscribeControlEvents(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de qual assinar eventos.</param>
+        <summary>Assina os eventos do controle especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Windows.Forms.ToolStripComboBox.OnSubscribeControlEvents%2A> método para adicionar ou impedir a sincronização de eventos de controle.  
+  
+ Se você substituir e conectar eventos aqui, solte-los usando o <xref:System.Windows.Forms.ToolStripComboBox.OnUnsubscribeControlEvents%2A> método.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnSubscribeControlEvents%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnSubscribeControlEvents(System.Windows.Forms.Control)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnSubscribeControlEvents(System.Windows.Forms.Control)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextUpdate">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextUpdate (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextUpdate(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnTextUpdate(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripComboBox.TextUpdate" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnTextUpdate%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnTextUpdate(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnTextUpdate(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnsubscribeControlEvents">
+      <MemberSignature Language="C#" Value="protected override void OnUnsubscribeControlEvents (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnUnsubscribeControlEvents(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.OnUnsubscribeControlEvents(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle dos quais cancelar a assinatura de eventos.</param>
+        <summary>Cancela a inscrição eventos de controle especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Windows.Forms.ToolStripComboBox.OnSubscribeControlEvents%2A> método para cancelar a assinatura de eventos assinadas em <xref:System.Windows.Forms.ToolStripComboBox.OnSubscribeControlEvents%2A>.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripComboBox.OnUnsubscribeControlEvents%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripComboBox.OnUnsubscribeControlEvents(System.Windows.Forms.Control)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripComboBox.OnUnsubscribeControlEvents(System.Windows.Forms.Control)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public void Select (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Select(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.Select(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">A posição do primeiro caractere na seleção de texto atual na caixa de texto.</param>
+        <param name="length">O número de caracteres a serem selecionados.</param>
+        <summary>Seleciona um intervalo de texto na parte de editável da <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você deseja definir a posição inicial para o primeiro caractere no texto do controle, defina o `start` parâmetro como zero. Você pode usar esse método para selecionar uma subcadeia de caracteres de texto, por exemplo, ao pesquisar o texto do controle e informações de substituição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="start" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="start" />menos <paramref name="length" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public void SelectAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.SelectAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Seleciona todo o texto na parte de editável do <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice que especifica o item selecionado no momento.</summary>
+        <value>O índice baseado em zero do item selecionado no momento. Um valor de um negativo (-1) é retornado se nenhum item é selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica o índice com base em zero do item atualmente selecionado na lista da caixa de combinação. Definindo um novo índice gera o <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndexChanged> evento.  
+  
+ **Observação** para desmarcar o item selecionado no momento, definir o <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndex%2A> como -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndexChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectedIndexChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectedIndexChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripComboBox.SelectedIndexChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.ToolStripComboBox.SelectedIndex" /> foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndexChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripComboBox> chamado `ToolStripComboBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndexChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#581](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#581)]
+ [!code-vb[System.Windows.Forms.EventExamples#581](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#581)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItem">
+      <MemberSignature Language="C#" Value="public object SelectedItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SelectedItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.SelectedItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o item selecionado no momento no <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>O objeto que é o item selecionado no momento, ou <see langword="null" />, se não houver nenhum item selecionado no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Windows.Forms.ToolStripComboBox.SelectedItem%2A> propriedade a um objeto, o <xref:System.Windows.Forms.ToolStripComboBox> tentativas de que aquele selecionado no momento na lista do objeto. Se o objeto for encontrado na lista, ele será exibido na parte de editar o <xref:System.Windows.Forms.ToolStripComboBox> e <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndex%2A> está definida como o índice correspondente. Se o objeto não existe na lista, o <xref:System.Windows.Forms.ToolStripComboBox.SelectedIndex%2A> propriedade for deixada em seu valor atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedText">
+      <MemberSignature Language="C#" Value="public string SelectedText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.SelectedText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto selecionado na parte editável de um <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>Uma cadeia de caracteres que representa o texto selecionado no momento na caixa de combinação. Se <see cref="P:System.Windows.Forms.ToolStripComboBox.DropDownStyle" /> for definido como <see langword="DropDownList" />, o valor retornado será uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode atribuir o texto para esta propriedade para alterar o texto atualmente selecionado na caixa de combinação. Se nenhum texto atualmente selecionado na caixa de combinação, esta propriedade retorna uma cadeia de caracteres de comprimento zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionLength">
+      <MemberSignature Language="C#" Value="public int SelectionLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectionLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.SelectionLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de caracteres selecionada na parte editável a <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>O número de caracteres selecionados no <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para determinar se todos os caracteres estão selecionados atualmente no controle de caixa de combinação antes de executar operações no texto selecionado. Quando o valor da <xref:System.Windows.Forms.ToolStripComboBox.SelectionLength%2A> propriedade é definida como um valor maior que o número de caracteres dentro do texto do controle, o valor da <xref:System.Windows.Forms.ToolStripComboBox.SelectionLength%2A> propriedade é definida para toda a duração do texto dentro do controle menos o valor da <xref:System.Windows.Forms.ToolStripComboBox.SelectionStart%2A> propriedade (se nenhum valor for especificado para o <xref:System.Windows.Forms.ToolStripComboBox.SelectionStart%2A> propriedade).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionStart">
+      <MemberSignature Language="C#" Value="public int SelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.SelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice inicial do texto selecionado no <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <value>O índice baseado em zero do primeiro caractere na cadeia de caracteres da seleção de texto atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum texto selecionado no controle, essa propriedade indica o ponto de inserção para o novo texto. Se você definir essa propriedade para um local além do comprimento do texto no controle, a posição inicial da seleção é posicionada após o último caractere. Quando o texto selecionado no controle de caixa de texto, a alteração dessa propriedade pode liberar o valor de <xref:System.Windows.Forms.ToolStripComboBox.SelectionLength%2A> propriedade. Se o texto restante no controle após a posição indicada pelo <xref:System.Windows.Forms.ToolStripComboBox.SelectionStart%2A> propriedade é menor que o valor da <xref:System.Windows.Forms.ToolStripComboBox.SelectionLength%2A> propriedade, o valor da <xref:System.Windows.Forms.ToolStripComboBox.SelectionLength%2A> propriedade é reduzida automaticamente. O valor de <xref:System.Windows.Forms.ToolStripComboBox.SelectionStart%2A> propriedade nunca faz com que um aumento no <xref:System.Windows.Forms.ToolStripComboBox.SelectionLength%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sorted">
+      <MemberSignature Language="C#" Value="public bool Sorted { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sorted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolStripComboBox.Sorted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os itens no <see cref="T:System.Windows.Forms.ToolStripComboBox" /> estão classificados.</summary>
+        <value>
+          <see langword="true" /> se a caixa de combinação for classificada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica se o <xref:System.Windows.Forms.ToolStripComboBox> classifica as entradas existentes e adicionar novas entradas à posição classificada apropriada na lista. Você pode usar essa propriedade para classificar automaticamente os itens em um <xref:System.Windows.Forms.ToolStripComboBox>. Como os itens são adicionados a um classificada <xref:System.Windows.Forms.ToolStripComboBox>, os itens são movidos para o local apropriado na lista classificada. Quando você define a propriedade como `false`, novos itens são adicionados ao final da lista existente. A classificação é maiusculas de minúsculas e, em ordem alfabética crescente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a sintaxe para definir vários <xref:System.Windows.Forms.ToolStripComboBox> propriedades, incluindo o <xref:System.Windows.Forms.ToolStripComboBox.Sorted%2A> propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripComboBox.CommonProps#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripComboBox.CommonProps/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextUpdate">
+      <MemberSignature Language="C#" Value="public event EventHandler TextUpdate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextUpdate" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripComboBox.TextUpdate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Forms.ToolStripComboBox" /> texto foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripComboBox.TextUpdate> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolStripComboBox> chamado `ToolStripComboBox1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripComboBox.TextUpdate> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#582](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#582)]
+ [!code-vb[System.Windows.Forms.EventExamples#582](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#582)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripComboBox.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres da <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</summary>
+        <returns>Uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.ToolStripComboBox" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

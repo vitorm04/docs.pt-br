@@ -1,0 +1,370 @@
+<Type Name="CheckBoxRenderer" FullName="System.Windows.Forms.CheckBoxRenderer">
+  <TypeSignature Language="C#" Value="public sealed class CheckBoxRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CheckBoxRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.CheckBoxRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece os métodos usados para renderizar um controle de caixa de seleção com ou sem estilos visuais. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.CheckBoxRenderer> classe fornece um conjunto de `static` métodos que podem ser usados para renderizar um controle de caixa de seleção. Renderizar um controle refere-se a desenhar a interface do usuário de um controle. Para desenhar uma caixa de seleção, use uma da <xref:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox%2A> métodos. Esses métodos fornecem uma variedade de opções, como desenhando texto ou uma imagem com a caixa de seleção.  
+  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, <xref:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox%2A> desenhará a caixa de seleção com o estilo visual atual. Caso contrário, <xref:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox%2A> desenhará a caixa de seleção com o estilo clássico do Windows. Isso é útil se você estiver desenhando um controle personalizado que automaticamente deve corresponder a configuração de estilo visual atual do sistema operacional.  
+  
+ Essa classe encapsula a funcionalidade de um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> está definido como um dos elementos expostos pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Button.CheckBox?displayProperty=nameWithType> classe. Para obter mais informações, consulte [renderização de controles com estilos visuais](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como escrever um controle personalizado que usa o <xref:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox%2A> método para desenhar uma caixa de seleção que responde aos cliques do mouse.  
+  
+ [!code-cpp[System.Windows.Forms.CheckBoxRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.CheckBoxRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.CheckBoxRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawCheckBox (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Windows.Forms.VisualStyles.CheckBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCheckBox(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Windows.Forms.VisualStyles.CheckBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox(System.Drawing.Graphics,System.Drawing.Point,System.Windows.Forms.VisualStyles.CheckBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.CheckBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de seleção.</param>
+        <param name="glyphLocation">O <see cref="T:System.Drawing.Point" /> em que o glifo da caixa de seleção será desenhado.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.CheckBoxState" /> que especifica o estado visual da caixa de seleção.</param>
+        <summary>Desenha um controle de caixa de seleção no estado especificado e local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de seleção com o estilo visual atual. Caso contrário, ele utilizará a caixa de seleção com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawCheckBox (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string checkBoxText, System.Drawing.Font font, bool focused, System.Windows.Forms.VisualStyles.CheckBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCheckBox(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string checkBoxText, class System.Drawing.Font font, bool focused, valuetype System.Windows.Forms.VisualStyles.CheckBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Boolean,System.Windows.Forms.VisualStyles.CheckBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="checkBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.CheckBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de seleção.</param>
+        <param name="glyphLocation">O <see cref="T:System.Drawing.Point" /> em que o glifo da caixa de seleção será desenhado.</param>
+        <param name="textBounds">O <see cref="T:System.Drawing.Rectangle" /> para desenhar <c>checkBoxText</c> no.</param>
+        <param name="checkBoxText">O <see cref="T:System.String" /> para desenhar com a caixa de seleção.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>checkBoxText</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.CheckBoxState" /> que especifica o estado visual da caixa de seleção.</param>
+        <summary>Desenha um controle de caixa de seleção no estado especificado e local, com o texto especificado e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de seleção com o estilo visual atual. Caso contrário, ele utilizará a caixa de seleção com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawCheckBox (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string checkBoxText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, bool focused, System.Windows.Forms.VisualStyles.CheckBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCheckBox(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string checkBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, bool focused, valuetype System.Windows.Forms.VisualStyles.CheckBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Boolean,System.Windows.Forms.VisualStyles.CheckBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="checkBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.CheckBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de seleção.</param>
+        <param name="glyphLocation">O <see cref="T:System.Drawing.Point" /> em que o glifo da caixa de seleção será desenhado.</param>
+        <param name="textBounds">O <see cref="T:System.Drawing.Rectangle" /> para desenhar <c>checkBoxText</c> no.</param>
+        <param name="checkBoxText">O <see cref="T:System.String" /> para desenhar com a caixa de seleção.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>checkBoxText</c>.</param>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.CheckBoxState" /> que especifica o estado visual da caixa de seleção.</param>
+        <summary>Desenha um controle de caixa de seleção no estado e local especificados, com o texto e formatação de texto especificados e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de seleção com o estilo visual atual. Caso contrário, ele utilizará a caixa de seleção com o estilo clássico do Windows.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox%28System.Drawing.Graphics%2CSystem.Drawing.Point%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Windows.Forms.TextFormatFlags%2CSystem.Boolean%2CSystem.Windows.Forms.VisualStyles.CheckBoxState%29> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar uma caixa de seleção em um estado determinado pelo local do ponteiro do mouse. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.CheckBoxRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.CheckBoxRenderer#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/cpp/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.CheckBoxRenderer#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.CheckBoxRenderer#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/VB/form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawCheckBox (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string checkBoxText, System.Drawing.Font font, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.CheckBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCheckBox(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string checkBoxText, class System.Drawing.Font font, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.CheckBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.CheckBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="checkBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.CheckBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de seleção.</param>
+        <param name="glyphLocation">O <see cref="T:System.Drawing.Point" /> em que o glifo da caixa de seleção será desenhado.</param>
+        <param name="textBounds">O <see cref="T:System.Drawing.Rectangle" /> para desenhar <c>checkBoxText</c> no.</param>
+        <param name="checkBoxText">O <see cref="T:System.String" /> para desenhar com a caixa de seleção.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>checkBoxText</c>.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> para desenhar com a caixa de seleção.</param>
+        <param name="imageBounds">O <see cref="T:System.Drawing.Rectangle" /> que representa as dimensões de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.CheckBoxState" /> que especifica o estado visual da caixa de seleção.</param>
+        <summary>Desenha um controle de caixa de seleção no estado especificado e local, com o texto especificado e a imagem e um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de seleção com o estilo visual atual. Caso contrário, ele utilizará a caixa de seleção com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCheckBox">
+      <MemberSignature Language="C#" Value="public static void DrawCheckBox (System.Drawing.Graphics g, System.Drawing.Point glyphLocation, System.Drawing.Rectangle textBounds, string checkBoxText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Drawing.Image image, System.Drawing.Rectangle imageBounds, bool focused, System.Windows.Forms.VisualStyles.CheckBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawCheckBox(class System.Drawing.Graphics g, valuetype System.Drawing.Point glyphLocation, valuetype System.Drawing.Rectangle textBounds, string checkBoxText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageBounds, bool focused, valuetype System.Windows.Forms.VisualStyles.CheckBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.DrawCheckBox(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.CheckBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="glyphLocation" Type="System.Drawing.Point" />
+        <Parameter Name="textBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="checkBoxText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.CheckBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a caixa de seleção.</param>
+        <param name="glyphLocation">O <see cref="T:System.Drawing.Point" /> em que o glifo da caixa de seleção será desenhado.</param>
+        <param name="textBounds">O <see cref="T:System.Drawing.Rectangle" /> para desenhar <c>checkBoxText</c> no.</param>
+        <param name="checkBoxText">O <see cref="T:System.String" /> para desenhar com a caixa de seleção.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>checkBoxText</c>.</param>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> para desenhar com a caixa de seleção.</param>
+        <param name="imageBounds">O <see cref="T:System.Drawing.Rectangle" /> que representa as dimensões de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.CheckBoxState" /> que especifica o estado visual da caixa de seleção.</param>
+        <summary>Desenha um controle de caixa de seleção no estado especificado e local. com o texto especificado, a formatação de texto e imagem. e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados ao aplicativo atual, este método desenhará a caixa de seleção com o estilo visual atual. Caso contrário, ele utilizará a caixa de seleção com o estilo clássico do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawParentBackground">
+      <MemberSignature Language="C#" Value="public static void DrawParentBackground (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.Control childControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawParentBackground(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.Control childControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.DrawParentBackground(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="childControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar o plano de fundo do pai do <c>childControl</c>.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual desenhar a tela de fundo do controle pai. Esse retângulo deve ser dentro dos limites do controle filho.</param>
+        <param name="childControl">O controle cuja tela de fundo pai será desenhada.</param>
+        <summary>Desenha a tela de fundo do pai de um controle na área especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGlyphSize">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Size GetGlyphSize (System.Drawing.Graphics g, System.Windows.Forms.VisualStyles.CheckBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Size GetGlyphSize(class System.Drawing.Graphics g, valuetype System.Windows.Forms.VisualStyles.CheckBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.GetGlyphSize(System.Drawing.Graphics,System.Windows.Forms.VisualStyles.CheckBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.CheckBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usará essa operação.</param>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.CheckBoxState" /> que especifica o estado visual da caixa de seleção.</param>
+        <summary>Retorna o tamanho de glifo a caixa de seleção.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que representa o tamanho de glifo a caixa de seleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho de glifo a caixa de seleção é determinado pelo estilo visual atual do sistema operacional.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.CheckBoxRenderer.GetGlyphSize%2A> método para determinar os limites da caixa de texto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.CheckBoxRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.CheckBoxRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.CheckBoxRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.CheckBoxRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CheckBoxRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBackgroundPartiallyTransparent">
+      <MemberSignature Language="C#" Value="public static bool IsBackgroundPartiallyTransparent (System.Windows.Forms.VisualStyles.CheckBoxState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsBackgroundPartiallyTransparent(valuetype System.Windows.Forms.VisualStyles.CheckBoxState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.CheckBoxRenderer.IsBackgroundPartiallyTransparent(System.Windows.Forms.VisualStyles.CheckBoxState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.CheckBoxState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores de <see cref="T:System.Windows.Forms.VisualStyles.CheckBoxState" /> que especifica o estado visual da caixa de seleção.</param>
+        <summary>Indica se o plano de fundo da caixa de seleção tem partes semitransparentes ou combinação alfa.</summary>
+        <returns>
+          <see langword="true" />Se o plano de fundo da caixa de seleção tem partes semitransparentes ou combinação alfa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMatchingApplicationState">
+      <MemberSignature Language="C#" Value="public static bool RenderMatchingApplicationState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool RenderMatchingApplicationState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.CheckBoxRenderer.RenderMatchingApplicationState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o renderizador usa o estado do aplicativo para determinar o estilo de renderização.</summary>
+        <value>
+          <see langword="true" />Se o estado do aplicativo é usado para determinar o estilo de renderização; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.CheckBoxRenderer.RenderMatchingApplicationState%2A> é de propriedade `true`, o <xref:System.Windows.Forms.CheckBoxRenderer> usa a configuração do <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> propriedade para determinar o estilo de renderização. Se <xref:System.Windows.Forms.CheckBoxRenderer.RenderMatchingApplicationState%2A> é `false`, o renderizador sempre será renderizado com estilos visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

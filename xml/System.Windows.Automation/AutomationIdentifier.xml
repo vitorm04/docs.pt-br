@@ -1,0 +1,156 @@
+<Type Name="AutomationIdentifier" FullName="System.Windows.Automation.AutomationIdentifier">
+  <TypeSignature Language="C#" Value="public class AutomationIdentifier : IComparable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AutomationIdentifier extends System.Object implements class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.AutomationIdentifier" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Classe base para tipos que identificam tipos de controle, eventos, padrões, propriedades e atributos de texto em automação de interface do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Automation.AutomationIdentifier> classe é efetivamente abstrata, porque ele não possui construtor e não pode ser instanciado por aplicativos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AutomationIdentifier.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a comparar esse um com.</param>
+        <summary>Compara este <see cref="T:System.Windows.Automation.AutomationIdentifier" /> com outro <see cref="T:System.Windows.Automation.AutomationIdentifier" />.</summary>
+        <returns>O código hash deste objeto a menos que o código hash de <paramref name="obj" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="obj" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AutomationIdentifier.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Windows.Automation.AutomationIdentifier" /> objeto a ser comparado com este identificador.</param>
+        <summary>Retorna um valor que indica se o fornecido <see cref="T:System.Windows.Automation.AutomationIdentifier" /> é equivalente a este <see cref="T:System.Windows.Automation.AutomationIdentifier" />.</summary>
+        <returns>
+          <see langword="true" />Se os objetos forem equivalentes; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.AutomationIdentifier.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] identificador.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationIdentifier.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador numérico subjacente.</summary>
+        <value>O identificador subjacente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgrammaticName">
+      <MemberSignature Language="C#" Value="public string ProgrammaticName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProgrammaticName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.AutomationIdentifier.ProgrammaticName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome programático registrado.</summary>
+        <value>O nome programático.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A>é destinado apenas para fins de depuração e diagnóstico. A cadeia de caracteres não está localizada.  
+  
+ Essa propriedade não deve ser usada em comparações de cadeia de caracteres. Para determinar se duas propriedades são os mesmos, compare os identificadores de propriedade diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nome programático de cada propriedade tem suportada por um <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIAClient_snip#115](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#115)]
+ [!code-vb[UIAClient_snip#115](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#115)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

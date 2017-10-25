@@ -1,0 +1,2309 @@
+<Type Name="ScrollViewer" FullName="System.Windows.Controls.ScrollViewer">
+  <TypeSignature Language="C#" Value="public class ScrollViewer : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ScrollViewer extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ScrollViewer" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ScrollChangedEvent")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_HorizontalScrollBar", Type=typeof(System.Windows.Controls.Primitives.ScrollBar))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_VerticalScrollBar", Type=typeof(System.Windows.Controls.Primitives.ScrollBar))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ScrollContentPresenter", Type=typeof(System.Windows.Controls.ScrollContentPresenter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma área rolável que pode conter outros elementos visíveis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.ScrollViewer> permite que o conteúdo a ser exibido em uma área menor que o tamanho real.  Quando o conteúdo a <xref:System.Windows.Controls.ScrollViewer> não está completamente visível, o <xref:System.Windows.Controls.ScrollViewer> exibe barras de rolagem que o usuário pode usar para mover as áreas de conteúdo que é visível.  A área que inclui todo o conteúdo do <xref:System.Windows.Controls.ScrollViewer> é a extensão.  A área visível do conteúdo é o visor.  
+  
+ Rolagem física é usada para rolar conteúdo por um incremento físico predeterminado, geralmente por um valor declarado em pixels. Rolagem lógica é usada para rolar para o próximo item na árvore lógica. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`. Rolagem física é o comportamento padrão de rolagem para a maioria dos <xref:System.Windows.Controls.Panel> elementos.  
+  
+ Se seu <xref:System.Windows.Controls.ScrollViewer> contiver um grande número de itens, o desempenho de rolagem pode ser afetado.  Nesse caso, defina <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> para `true`.  Isso faz com que a exibição de conteúdo permaneça estático enquanto arrasta o <xref:System.Windows.Controls.Primitives.Thumb> e atualizar somente quando o <xref:System.Windows.Controls.Primitives.Thumb> é liberado.  
+  
+ Como as barras de rolagem para um <xref:System.Windows.Controls.ScrollViewer> elemento são definidas no estilo padrão do elemento, barras de rolagem não aparecerá se você aplicar um estilo personalizado para um <xref:System.Windows.Controls.ScrollViewer>. Barras de rolagem devem ser definidas no estilo personalizado para que elas apareçam.  
+  
+## <a name="customizing-the-scrollviewer-control"></a>Personalizando o controle ScrollViewer  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.ScrollViewer> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.ScrollViewer>, consulte [ScrollViewer estilos e modelos](~/docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.ScrollViewer> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ScrollViewer> que contém algum texto e um retângulo. As barras de rolagem aparecem somente quando eles são necessários. Quando você redimensiona a janela, as barras de rolagem aparecem e desaparecem.  
+  
+ [!code-cpp[ScrollViewer#1](~/samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
+ [!code-csharp[ScrollViewer#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
+ [!code-vb[ScrollViewer#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
+ [!code-xaml[ScrollViewer#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollViewer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">A área final no pai que esse elemento deve usar para organizar a si próprio e seus filhos.</param>
+        <summary>Organiza o conteúdo a <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Controls.ScrollViewer.ArrangeOverride(System.Windows.Size)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Controls.ScrollViewer.ArrangeOverride(System.Windows.Size)" /> método</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CanContentScroll">
+      <MemberSignature Language="C#" Value="public bool CanContentScroll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanContentScroll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.CanContentScroll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os elementos que dão suporte à interface <see cref="T:System.Windows.Controls.Primitives.IScrollInfo" /> tem permissão para rolagem.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.ScrollViewer" /> rolar em termos de unidades lógicas; <see langword="false" /> se o <see cref="T:System.Windows.Controls.ScrollViewer" /> rolar em termos de unidades físicas. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conteúdo em um <xref:System.Windows.Controls.ScrollViewer> pode ser rolado em termos de unidades físicas ou unidades lógicas. Unidades físicas são pixels independentes de dispositivo. Unidades lógicas são usadas para rolar os itens dentro de um <xref:System.Windows.Controls.ItemsControl>. O comportamento padrão da <xref:System.Windows.Controls.ScrollViewer> é usar unidades físicas para rolar o conteúdo. No entanto, em casos onde o <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é definido como `true`, o conteúdo pode usar unidades lógicas para rolar. Por exemplo, <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListView>e outros controles que herdam de <xref:System.Windows.Controls.ItemsControl> usar unidades lógicas para rolar. Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `true`, os valores de <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ScrollableHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>, e <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> propriedades serão o números de itens, em vez de unidades físicas.  
+  
+ Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`. Rolagem física é o comportamento padrão de rolagem para a maioria dos <xref:System.Windows.Controls.Panel> elementos.  
+  
+<a name="dependencyPropertyInfo_CanContentScroll"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.CanContentScrollProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como definir a <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade por meio de código.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#4](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[scrollchangedeventargsLayout#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanContentScrollProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanContentScrollProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanContentScrollProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.CanContentScrollProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.CanContentScroll" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputedHorizontalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility ComputedHorizontalScrollBarVisibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility ComputedHorizontalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal está visível.</summary>
+        <value>Um <see cref="T:System.Windows.Visibility" /> que indica se a barra de rolagem horizontal está visível. O padrão é <see cref="F:System.Windows.Controls.ScrollBarVisibility.Hidden" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ComputedHorizontalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibilityProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputedHorizontalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ComputedHorizontalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ComputedHorizontalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputedVerticalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility ComputedVerticalScrollBarVisibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility ComputedVerticalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> está visível.</summary>
+        <value>Um <see cref="T:System.Windows.Visibility" /> que indica se a barra de rolagem vertical está visível. O padrão é <see cref="F:System.Windows.Controls.ScrollBarVisibility.Visible" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ComputedVerticalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibilityProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputedVerticalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ComputedVerticalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ComputedVerticalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentHorizontalOffset">
+      <MemberSignature Language="C#" Value="public double ContentHorizontalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ContentHorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ContentHorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento horizontal do conteúdo visível.</summary>
+        <value>O deslocamento horizontal do conteúdo visível.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> é `true`, o conteúdo é rolado quando o usuário libera o <xref:System.Windows.Controls.Primitives.Thumb> do <xref:System.Windows.Controls.Primitives.ScrollBar>.  Quando o usuário arrasta a <xref:System.Windows.Controls.Primitives.Thumb>, o <xref:System.Windows.Controls.ScrollViewer.ContentHorizontalOffset%2A> valor não é alterado.   Quando o usuário libera o <xref:System.Windows.Controls.Primitives.Thumb>, <xref:System.Windows.Controls.ScrollViewer.ContentHorizontalOffset%2A> atualizações atual <xref:System.Windows.Controls.ScrollViewer.HorizontalOffset%2A> valor.  
+  
+ Quando <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> é `false`, o conteúdo é rolado quando o usuário arrasta a <xref:System.Windows.Controls.Primitives.Thumb>.  Nesse caso, <xref:System.Windows.Controls.ScrollViewer.ContentVerticalOffset%2A> é sempre igual à <xref:System.Windows.Controls.ScrollViewer.HorizontalOffset%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentHorizontalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContentHorizontalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContentHorizontalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ContentHorizontalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ContentHorizontalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentVerticalOffset">
+      <MemberSignature Language="C#" Value="public double ContentVerticalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ContentVerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ContentVerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento vertical do conteúdo visível.</summary>
+        <value>O deslocamento vertical do conteúdo visível.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> é `true`, o conteúdo é rolado quando o usuário libera o <xref:System.Windows.Controls.Primitives.Thumb> do <xref:System.Windows.Controls.Primitives.ScrollBar>.  Quando o usuário arrasta a <xref:System.Windows.Controls.Primitives.Thumb>, o <xref:System.Windows.Controls.ScrollViewer.ContentVerticalOffset%2A> não é alterado.  Quando o usuário libera o <xref:System.Windows.Controls.Primitives.Thumb>, <xref:System.Windows.Controls.ScrollViewer.ContentVerticalOffset%2A> atualizações atual <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> valor.  
+  
+ Quando <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> é `false`, o conteúdo é rolado quando o usuário arrasta a <xref:System.Windows.Controls.Primitives.Thumb>.  Nesse caso, <xref:System.Windows.Controls.ScrollViewer.ContentVerticalOffset%2A> é sempre igual à <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentVerticalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContentVerticalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContentVerticalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ContentVerticalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ContentVerticalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeight">
+      <MemberSignature Language="C#" Value="public double ExtentHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ExtentHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que contém o tamanho vertical da extensão.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho vertical da extensão. O padrão é 0.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A>é apenas uma propriedade de saída; pode ser definido com eficiência, especificando o <xref:System.Windows.FrameworkElement.Height%2A> do elemento de conteúdo.  
+  
+ Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `true`, os valores de <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ScrollableHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>, e <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> propriedades serão o números de itens. Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `false`, os valores dessas propriedades são Pixels independentes de dispositivo.  
+  
+<a name="dependencyPropertyInfo_ExtentHeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ExtentHeightProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ExtentHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ExtentHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ExtentHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ExtentHeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidth">
+      <MemberSignature Language="C#" Value="public double ExtentWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ExtentWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que contém o tamanho horizontal da extensão.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho horizontal da extensão. O padrão é 0.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ScrollViewer.ExtentWidth%2A>é apenas uma propriedade de saída; pode ser definido com eficiência, especificando o <xref:System.Windows.FrameworkElement.Width%2A> do elemento de conteúdo.  
+  
+ O valor retornado é descrito em Pixels independentes de dispositivo.  
+  
+<a name="dependencyPropertyInfo_ExtentWidth"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ExtentWidthProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ExtentWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ExtentWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ExtentWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ExtentWidth" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCanContentScroll">
+      <MemberSignature Language="C#" Value="public static bool GetCanContentScroll (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetCanContentScroll(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.GetCanContentScroll(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o valor da propriedade é lido.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.ScrollViewer.CanContentScroll" /> propriedade de dependência de um determinado elemento.</summary>
+        <returns>
+          <see langword="true" />Se esse elemento pode rolar; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHorizontalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ScrollBarVisibility GetHorizontalScrollBarVisibility (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.ScrollBarVisibility GetHorizontalScrollBarVisibility(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.GetHorizontalScrollBarVisibility(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o valor da propriedade é lido.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.ScrollViewer.HorizontalScrollBarVisibility" /> propriedade de dependência de um determinado elemento.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Controls.ScrollViewer.HorizontalScrollBarVisibility" /> propriedade de dependência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsDeferredScrollingEnabled">
+      <MemberSignature Language="C#" Value="public static bool GetIsDeferredScrollingEnabled (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsDeferredScrollingEnabled(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.GetIsDeferredScrollingEnabled(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto do qual obter <see cref="P:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled" />.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled" /> propriedade para o objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se o conteúdo estiver parado quando o usuário arrasta o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> de um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPanningDeceleration">
+      <MemberSignature Language="C#" Value="public static double GetPanningDeceleration (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetPanningDeceleration(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.GetPanningDeceleration(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o valor da propriedade é lido.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.ScrollViewer.PanningDeceleration" /> propriedade para o objeto especificado.</summary>
+        <returns>A taxa <see cref="T:System.Windows.Controls.ScrollViewer" /> desacelera em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] por milissegundo quadrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPanningMode">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.PanningMode GetPanningMode (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.PanningMode GetPanningMode(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.GetPanningMode(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.PanningMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o valor da propriedade é lido.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.ScrollViewer.PanningMode" /> propriedade para o objeto especificado.</summary>
+        <returns>Um valor que especifica como <see cref="T:System.Windows.Controls.ScrollViewer" /> reage a manipulação de toque.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPanningRatio">
+      <MemberSignature Language="C#" Value="public static double GetPanningRatio (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 GetPanningRatio(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.GetPanningRatio(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o valor da propriedade é lido.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.ScrollViewer.PanningRatio" /> propriedade para o objeto especificado.</summary>
+        <returns>O índice de deslocamento para traduzir o deslocamento de manipulação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVerticalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public static System.Windows.Controls.ScrollBarVisibility GetVerticalScrollBarVisibility (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Controls.ScrollBarVisibility GetVerticalScrollBarVisibility(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.GetVerticalScrollBarVisibility(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o valor da propriedade é lido.</param>
+        <summary>Obtém o valor de <see cref="P:System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibility" /> propriedade de dependência de um determinado elemento.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibility" /> propriedade de dependência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlesScrolling">
+      <MemberSignature Language="C#" Value="protected override bool HandlesScrolling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HandlesScrolling" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.HandlesScrolling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um controle tiver um <see cref="T:System.Windows.Controls.ScrollViewer" /> definidas em seu estilo que define o comportamento de rolagem de teclado personalizado.</summary>
+        <value>
+          <see langword="true" />Se este controle define teclado personalizado rolagem comportamento; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade retorna `true`, entrada do teclado não lida com a <xref:System.Windows.Controls.ScrollViewer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HitTestCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Media.HitTestResult HitTestCore (System.Windows.Media.PointHitTestParameters hitTestParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Media.HitTestResult HitTestCore(class System.Windows.Media.PointHitTestParameters hitTestParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.HitTestCore(System.Windows.Media.PointHitTestParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitTestParameters" Type="System.Windows.Media.PointHitTestParameters" />
+      </Parameters>
+      <Docs>
+        <param name="hitTestParameters">Os parâmetros para teste de clique dentro de um objeto visual.</param>
+        <summary>Executa um teste de clique para determinar se os pontos especificados estão dentro dos limites deste <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <returns>O resultado do teste de clique.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que contém o deslocamento horizontal do conteúdo rolado.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o deslocamento horizontal do conteúdo rolado. O padrão é 0.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um positivo <xref:System.Windows.Controls.ScrollViewer.HorizontalOffset%2A> valor corresponde ao conteúdo que está sendo deslocado à esquerda.  
+  
+ Os valores válidos são entre zero e o <xref:System.Windows.Controls.ScrollViewer.ExtentWidth%2A> menos o <xref:System.Windows.Controls.ScrollViewer.ViewportWidth%2A>.  
+  
+ O valor retornado é descrito em Pixels independentes de dispositivo.  
+  
+ A partir do .NET Framework versão 3.5 SP1, quando <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> é `true`, <xref:System.Windows.Controls.ScrollViewer.HorizontalOffset%2A> continua a ser alterada enquanto a usuário arrasta a <xref:System.Windows.Controls.Primitives.Thumb>, mas não altera o modo de exibição de conteúdo até o <xref:System.Windows.Controls.Primitives.Thumb> é liberado.  Nesse caso, <xref:System.Windows.Controls.ScrollViewer.ContentHorizontalOffset%2A> representa o deslocamento de conteúdo visível e <xref:System.Windows.Controls.ScrollViewer.HorizontalOffset%2A> representa o deslocamento de conteúdo com base no <xref:System.Windows.Controls.Primitives.Thumb> posição.  
+  
+<a name="dependencyPropertyInfo_HorizontalOffset"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.HorizontalOffsetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.HorizontalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.HorizontalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollBarVisibility HorizontalScrollBarVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ScrollBarVisibility HorizontalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.HorizontalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal deve ser exibido.</summary>
+        <value>Um valor <see cref="T:System.Windows.Controls.ScrollBarVisibility" /> que indica se um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal deve ser exibido. O padrão é <see cref="F:System.Windows.Controls.ScrollBarVisibility.Hidden" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade também tem um uso de propriedades anexadas.  
+  
+<a name="dependencyPropertyInfo_HorizontalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.HorizontalScrollBarVisibilityProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.HorizontalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.HorizontalScrollBarVisibility" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidateScrollInfo">
+      <MemberSignature Language="C#" Value="public void InvalidateScrollInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvalidateScrollInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.InvalidateScrollInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado por um <see cref="T:System.Windows.Controls.Primitives.IScrollInfo" /> interface que é anexado a um <see cref="T:System.Windows.Controls.ScrollViewer" /> quando o valor de qualquer propriedade de rolagem tamanho alterações. Propriedades de rolagem incluem visor, extensão ou deslocamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método trata invalidação de outros elementos, como barras de rolagem, que dependem das propriedades de rolagem deste <xref:System.Windows.Controls.ScrollViewer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeferredScrollingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsDeferredScrollingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDeferredScrollingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o conteúdo está parado quando o usuário arrasta o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> de um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+        <value>
+          <see langword="true" /> se o conteúdo estiver parado quando o usuário arrasta o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> de um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exibir um grande número de itens pode causar problemas de desempenho.  Nesse caso, pode ser útil usar rolagem adiada.  Para obter mais informações, consulte [otimizando o desempenho: controles](~/docs/framework/wpf/advanced/optimizing-performance-controls.md).  
+  
+ Essa propriedade pode ser usada como uma propriedade de instância e uma propriedade anexada.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Windows.Controls.ScrollViewer> com o <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> propriedade definida como `true`.  
+  
+ [!code-xaml[DeferredScrolling#DeferredScrolling](~/samples/snippets/xaml/VS_Snippets_Wpf/DeferredScrolling/xaml/window1.xaml#deferredscrolling)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDeferredScrollingEnabledProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDeferredScrollingEnabledProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDeferredScrollingEnabledProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabledProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDown">
+      <MemberSignature Language="C#" Value="public void LineDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.LineDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o conteúdo <see cref="T:System.Windows.Controls.ScrollViewer" /> para baixo em uma linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineLeft">
+      <MemberSignature Language="C#" Value="public void LineLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.LineLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo para a esquerda por uma quantidade predeterminada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineRight">
+      <MemberSignature Language="C#" Value="public void LineRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.LineRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo para a direita em uma quantidade predeterminada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineUp">
+      <MemberSignature Language="C#" Value="public void LineUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LineUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.LineUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo para cima em uma linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">O limite superior <see cref="T:System.Windows.Size" /> que não devem ser ultrapassados.</param>
+        <summary>Mede o conteúdo de um <see cref="T:System.Windows.Controls.ScrollViewer" /> elemento.</summary>
+        <returns>O limite desejado computado <see cref="T:System.Windows.Size" /> do <see cref="T:System.Windows.Controls.ScrollViewer" /> elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando um aplicativo ou processo interno chama <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />, que é usado para criar a árvore visual do modelo atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um apropriado <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementação para este controle, como parte do [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infra-estrutura de automação.</summary>
+        <returns>Apropriada <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> implementação para este controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos necessários para este evento.</param>
+        <summary>Responde à entrada do teclado específicos e invoca o comportamento de rolagem associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seguinte entrada do teclado é reconhecida:  
+  
+-   A tecla de seta para a esquerda: Rola uma linha à esquerda de conteúdo.  
+  
+-   A tecla de seta para a direita: Rola uma linha à direita de conteúdo.  
+  
+-   A tecla de seta para cima: rolar o conteúdo para cima em uma linha.  
+  
+-   A tecla de seta para baixo: rola para baixo de conteúdo em uma linha.  
+  
+-   PAGE UP: Rolar o conteúdo para a parte superior da página atual.  
+  
+-   PAGE DOWN: Rolar o conteúdo para a parte inferior da página atual.  
+  
+-   Página inicial: Rola o conteúdo na parte superior da primeira página.  
+  
+-   FIM: Rolar o conteúdo para a parte inferior da última página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnManipulationCompleted">
+      <MemberSignature Language="C#" Value="protected override void OnManipulationCompleted (System.Windows.Input.ManipulationCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnManipulationCompleted(class System.Windows.Input.ManipulationCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ManipulationCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o evento <see cref="E:System.Windows.UIElement.ManipulationCompleted" /> ocorre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ScrollViewer.OnManipulationCompleted%2A> método define o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnManipulationDelta">
+      <MemberSignature Language="C#" Value="protected override void OnManipulationDelta (System.Windows.Input.ManipulationDeltaEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnManipulationDelta(class System.Windows.Input.ManipulationDeltaEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ManipulationDeltaEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o evento <see cref="E:System.Windows.UIElement.ManipulationDelta" /> ocorre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ScrollViewer.OnManipulationDelta%2A> método define o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnManipulationInertiaStarting">
+      <MemberSignature Language="C#" Value="protected override void OnManipulationInertiaStarting (System.Windows.Input.ManipulationInertiaStartingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnManipulationInertiaStarting(class System.Windows.Input.ManipulationInertiaStartingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ManipulationInertiaStartingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o evento <see cref="E:System.Windows.UIElement.ManipulationInertiaStarting" /> ocorre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ScrollViewer.OnManipulationInertiaStarting%2A> método define o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnManipulationStarting">
+      <MemberSignature Language="C#" Value="protected override void OnManipulationStarting (System.Windows.Input.ManipulationStartingEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnManipulationStarting(class System.Windows.Input.ManipulationStartingEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ManipulationStartingEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o evento <see cref="E:System.Windows.UIElement.ManipulationStarting" /> ocorre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ScrollViewer.OnManipulationInertiaStarting%2A> método define o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos necessários que descrevem a esse evento.</param>
+        <summary>Responde a um clique do botão esquerdo do mouse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnMouseWheel (System.Windows.Input.MouseWheelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseWheel(class System.Windows.Input.MouseWheelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Argumentos necessários que descrevem a esse evento.</param>
+        <summary>Responde a um clique da roda do mouse.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnScrollChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnScrollChanged (System.Windows.Controls.ScrollChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnScrollChanged(class System.Windows.Controls.ScrollChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnScrollChanged(System.Windows.Controls.ScrollChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.ScrollChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Controls.ScrollChangedEventArgs" /> que contêm informações sobre a alteração do estado de rolagem.</param>
+        <summary>Chamado quando uma alteração no estado de rolagem é detectada, como uma alteração na posição de rolagem, extensão ou tamanho do visor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você substituir esse método, chame `base.OnScrollChanged(ScrollChangedEventArgs)` para garantir que esse evento é gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStylusSystemGesture">
+      <MemberSignature Language="C#" Value="protected override void OnStylusSystemGesture (System.Windows.Input.StylusSystemGestureEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStylusSystemGesture(class System.Windows.Input.StylusSystemGestureEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.StylusSystemGestureEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Input.StylusSystemGestureEventArgs" /> que contém informações sobre o gesto.</param>
+        <summary>Chamado quando um gesto de tocar iniciado por uma caneta é detectado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usada internamente para tomar decisões sobre panorâmica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageDown">
+      <MemberSignature Language="C#" Value="public void PageDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.PageDown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o <see cref="T:System.Windows.Controls.ScrollViewer" /> para baixo de conteúdo em uma página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLeft">
+      <MemberSignature Language="C#" Value="public void PageLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.PageLeft" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo para a esquerda em uma página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageRight">
+      <MemberSignature Language="C#" Value="public void PageRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.PageRight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo para a direita em uma página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageUp">
+      <MemberSignature Language="C#" Value="public void PageUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PageUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.PageUp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola o <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo para cima em uma página.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanningDeceleration">
+      <MemberSignature Language="C#" Value="public double PanningDeceleration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PanningDeceleration" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.PanningDeceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define, a taxa de <see cref="T:System.Windows.Controls.ScrollViewer" /> desacelera em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] por milissegundo ao quadrado em inércia.</summary>
+        <value>A taxa <see cref="T:System.Windows.Controls.ScrollViewer" /> desacelera em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] por milissegundo quadrado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um usuário rolar a <xref:System.Windows.Controls.ScrollViewer> usando o toque, o usuário coloca um dedo no <xref:System.Windows.Controls.ScrollViewer>, passa o dedo na tela para uma pequena distância e, em seguida, comparações de precisão o dedo enquanto ele está se movendo.  O resultado disso é que o <xref:System.Windows.Controls.ScrollViewer> continuará a se mover depois que o usuário levante o dedo. O <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A> propriedade especifica a taxa de rolagem reduz depois que o usuário levante o dedo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanningDecelerationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PanningDecelerationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PanningDecelerationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.PanningDecelerationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.PanningDeceleration" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanningMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.PanningMode PanningMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.PanningMode PanningMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.PanningMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.PanningMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a maneira como <see cref="T:System.Windows.Controls.ScrollViewer" /> reage a manipulação de toque.</summary>
+        <value>Um valor que especifica como <see cref="T:System.Windows.Controls.ScrollViewer" /> reage a manipulação de toque.  O padrão é <see cref="F:System.Windows.Controls.PanningMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A> propriedade especifica se o <xref:System.Windows.Controls.ScrollViewer> rolar horizontalmente, verticalmente, ou ambos. O <xref:System.Windows.Controls.ScrollViewer> rolará quando um usuário arrasta um dedo no controle em um dispositivo de toque que dá suporte ao Windows Touch.  
+  
+ <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A>pode ser definido diretamente em um <xref:System.Windows.Controls.ScrollViewer> ou usado como uma propriedade anexada.  Quando um controle contém um <xref:System.Windows.Controls.ScrollViewer> no seu <xref:System.Windows.Controls.ControlTemplate>, usar <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> como uma propriedade anexada para especificar o comportamento do <xref:System.Windows.Controls.ScrollViewer> no <xref:System.Windows.Controls.ControlTemplate>. Quando você usa um <xref:System.Windows.Controls.ScrollViewer> fora de um <xref:System.Windows.Controls.ControlTemplate>, defina <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A> diretamente no <xref:System.Windows.Controls.ScrollViewer>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ScrollViewer> e adiciona vários elementos a ele.  Neste exemplo, quando o tamanho da janela muda, o tamanho de `textblock1` também será alterado.  Quando o <xref:System.Windows.Controls.TextBlock> é muito pequeno para exibir todo o conteúdo, o <xref:System.Windows.Controls.ScrollViewer> se torna rolável. O exemplo define <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A> para <xref:System.Windows.Controls.PanningMode.Both> para que o usuário pode rolar o <xref:System.Windows.Controls.ScrollViewer> horizontalmente e verticalmente, usando um dedo.  
+  
+ [!code-xaml[ScrollViewerPanning#PanningModeDirect](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollviewerpanning/CS/mainwindow.xaml#panningmodedirect)]   
+  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.TextBox> e usa <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> como uma propriedade anexada. Por padrão o <xref:System.Windows.Controls.ScrollViewer> no <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.TextBox> tem seu <xref:System.Windows.Controls.PanningMode> para <xref:System.Windows.Controls.PanningMode.VerticalFirst>.  Isso é para que quando o usuário move um dedo horizontalmente antes de movê-lo verticalmente, o usuário realça o texto.  O exemplo define <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A> para <xref:System.Windows.Controls.PanningMode.VerticalOnly> para que o usuário não é possível selecionar o texto usando o dedo.  Observe que a configuração <xref:System.Windows.Controls.PanningMode> para <xref:System.Windows.Controls.PanningMode.Both> também impede que o usuário seleciona o texto.  O exemplo define o <xref:System.Windows.TextWrapping> propriedade <xref:System.Windows.TextWrapping.Wrap>, portanto, não é necessária a rolagem horizontal.  
+  
+ [!code-xaml[ScrollViewerPanning#PanningModeAttached](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollviewerpanning/CS/mainwindow.xaml#panningmodeattached)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanningModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PanningModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PanningModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.PanningModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.PanningMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanningRatio">
+      <MemberSignature Language="C#" Value="public double PanningRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PanningRatio" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.PanningRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice de deslocamento de rolagem para traduzir o deslocamento de manipulação.</summary>
+        <value>O índice de deslocamento para traduzir o deslocamento de manipulação. O padrão é 1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um usuário arrasta um dedo em um objeto, ele é considerado uma manipulação de conversão.  O <xref:System.Windows.Controls.ScrollViewer> usa essa manipulação rolar. O <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A> propriedade especifica o quanto o <xref:System.Windows.Controls.ScrollViewer> rola para cada unidade de tradução.  Por exemplo, se <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A> é 2, o <xref:System.Windows.Controls.ScrollViewer> rolará 2 [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] para cada [!INCLUDE[TLA#tla_dipixel](~/includes/tlasharptla-dipixel-md.md)] da manipulação de conversão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanningRatioProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PanningRatioProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PanningRatioProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.PanningRatioProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.PanningRatio" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollableHeight">
+      <MemberSignature Language="C#" Value="public double ScrollableHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ScrollableHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ScrollableHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o tamanho vertical do elemento de conteúdo que pode ser rolado.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho vertical do elemento de conteúdo que pode ser rolado. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `true`, os valores de <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ScrollableHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>, e <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> propriedades serão o números de itens. Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `false`, os valores dessas propriedades são Pixels independentes de dispositivo.  
+  
+<a name="dependencyPropertyInfo_ScrollableHeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ScrollableHeightProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollableHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ScrollableHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ScrollableHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ScrollableHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ScrollableHeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollableWidth">
+      <MemberSignature Language="C#" Value="public double ScrollableWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ScrollableWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ScrollableWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o tamanho horizontal do elemento de conteúdo que pode ser rolado.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho horizontal do elemento de conteúdo que pode ser rolado. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ScrollableWidth"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ScrollableWidthProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollableWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ScrollableWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ScrollableWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ScrollableWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ScrollableWidth" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.Controls.ScrollChangedEventHandler ScrollChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Controls.ScrollChangedEventHandler ScrollChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.ScrollViewer.ScrollChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando são detectadas alterações na posição de rolagem, extensão ou tamanho do visor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_ScrollChanged"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ScrollChangedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.Controls.ScrollChangedEventHandler>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ScrollChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ScrollChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ScrollChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.ScrollViewer.ScrollChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollInfo">
+      <MemberSignature Language="C#" Value="protected System.Windows.Controls.Primitives.IScrollInfo ScrollInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Primitives.IScrollInfo ScrollInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ScrollInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.IScrollInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento que implementa a interface <see cref="T:System.Windows.Controls.Primitives.IScrollInfo" /> e fornece valores para as propriedades de rolagem deste <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>O elemento que controla as propriedades de rolagem, como extensão, deslocamento ou visor. Esta propriedade não tem valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToBottom">
+      <MemberSignature Language="C#" Value="public void ScrollToBottom ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToBottom() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToBottom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola verticalmente para o final do conteúdo <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToEnd">
+      <MemberSignature Language="C#" Value="public void ScrollToEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToEnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToEnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola verticalmente para o final do conteúdo <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método rola para ambos os pontos de extremidade verticais e horizontais do conteúdo.  
+  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToHome">
+      <MemberSignature Language="C#" Value="public void ScrollToHome ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToHome() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToHome" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola vertical para o início do conteúdo <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToHorizontalOffset">
+      <MemberSignature Language="C#" Value="public void ScrollToHorizontalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToHorizontalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToHorizontalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">A posição até a qual o conteúdo é rolado.</param>
+        <summary>Rola o conteúdo dentro do <see cref="T:System.Windows.Controls.ScrollViewer" /> até a posição de deslocamento horizontal especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToLeftEnd">
+      <MemberSignature Language="C#" Value="public void ScrollToLeftEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToLeftEnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToLeftEnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola horizontalmente até o início do <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToRightEnd">
+      <MemberSignature Language="C#" Value="public void ScrollToRightEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToRightEnd() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToRightEnd" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola horizontalmente ao final de <see cref="T:System.Windows.Controls.ScrollViewer" /> conteúdo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToTop">
+      <MemberSignature Language="C#" Value="public void ScrollToTop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToTop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToTop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rola vertical para o início do conteúdo <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não induz qualquer comportamento de rolagem se <xref:System.Windows.Controls.ScrollViewer.ScrollInfo%2A> é `null`.  
+  
+ Rolagem lógica é usada para rolar para o próximo elemento na árvore lógica. Isso é diferente da rolagem física, que rolar o conteúdo por um incremento físico definido em determinada direção. Se você precisar de rolagem física, em vez de rolagem lógica, encapsule o host <xref:System.Windows.Controls.Panel> elemento em um <xref:System.Windows.Controls.ScrollViewer> e defina seu <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollToVerticalOffset">
+      <MemberSignature Language="C#" Value="public void ScrollToVerticalOffset (double offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScrollToVerticalOffset(float64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.ScrollToVerticalOffset(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offset">A posição até a qual o conteúdo é rolado.</param>
+        <summary>Rola o conteúdo dentro do <see cref="T:System.Windows.Controls.ScrollViewer" /> até a posição de deslocamento vertical especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCanContentScroll">
+      <MemberSignature Language="C#" Value="public static void SetCanContentScroll (System.Windows.DependencyObject element, bool canContentScroll);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetCanContentScroll(class System.Windows.DependencyObject element, bool canContentScroll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.SetCanContentScroll(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="canContentScroll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento no qual definir o valor da propriedade.</param>
+        <param name="canContentScroll">O valor da propriedade a ser definido.</param>
+        <summary>Define o valor de <see cref="P:System.Windows.Controls.ScrollViewer.CanContentScroll" /> propriedade de dependência para um determinado elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHorizontalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public static void SetHorizontalScrollBarVisibility (System.Windows.DependencyObject element, System.Windows.Controls.ScrollBarVisibility horizontalScrollBarVisibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetHorizontalScrollBarVisibility(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.ScrollBarVisibility horizontalScrollBarVisibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.SetHorizontalScrollBarVisibility(System.Windows.DependencyObject,System.Windows.Controls.ScrollBarVisibility)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="horizontalScrollBarVisibility" Type="System.Windows.Controls.ScrollBarVisibility" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento no qual definir o valor da propriedade.</param>
+        <param name="horizontalScrollBarVisibility">O valor da propriedade a ser definido.</param>
+        <summary>Define o valor de <see cref="P:System.Windows.Controls.ScrollViewer.HorizontalScrollBarVisibility" /> propriedade de dependência para um determinado elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsDeferredScrollingEnabled">
+      <MemberSignature Language="C#" Value="public static void SetIsDeferredScrollingEnabled (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsDeferredScrollingEnabled(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.SetIsDeferredScrollingEnabled(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto no qual definir o <see cref="P:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled" /> propriedade.</param>
+        <param name="value">
+          <see langword="true" />para que o conteúdo permanecer parado quando o usuário arrasta a <see cref="T:System.Windows.Controls.Primitives.Thumb" /> de um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />; caso contrário, <see langword="false" />.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled" /> propriedade para o objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exibir um grande número de itens pode causar problemas de desempenho.  Nesse caso, pode ser útil usar rolagem adiada.  Para obter mais informações, consulte [otimizando o desempenho: controles](~/docs/framework/wpf/advanced/optimizing-performance-controls.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPanningDeceleration">
+      <MemberSignature Language="C#" Value="public static void SetPanningDeceleration (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPanningDeceleration(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.SetPanningDeceleration(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto no qual definir o <see cref="P:System.Windows.Controls.ScrollViewer.PanningDeceleration" /> propriedade.</param>
+        <param name="value">A taxa <see cref="T:System.Windows.Controls.ScrollViewer" /> desacelera em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)] por milissegundo quadrado.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.ScrollViewer.PanningDeceleration" /> propriedade para o objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPanningMode">
+      <MemberSignature Language="C#" Value="public static void SetPanningMode (System.Windows.DependencyObject element, System.Windows.Controls.PanningMode panningMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPanningMode(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.PanningMode panningMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.SetPanningMode(System.Windows.DependencyObject,System.Windows.Controls.PanningMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="panningMode" Type="System.Windows.Controls.PanningMode" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto no qual definir o <see cref="P:System.Windows.Controls.ScrollViewer.PanningMode" /> propriedade.</param>
+        <param name="panningMode">Um valor que especifica como <see cref="T:System.Windows.Controls.ScrollViewer" /> reage a manipulação de toque.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.ScrollViewer.PanningMode" /> propriedade para o objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPanningRatio">
+      <MemberSignature Language="C#" Value="public static void SetPanningRatio (System.Windows.DependencyObject element, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetPanningRatio(class System.Windows.DependencyObject element, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.SetPanningRatio(System.Windows.DependencyObject,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="element">O objeto no qual definir o <see cref="P:System.Windows.Controls.ScrollViewer.PanningRatio" /> propriedade.</param>
+        <param name="value">O índice de deslocamento para traduzir o deslocamento de manipulação.</param>
+        <summary>Conjuntos de <see cref="P:System.Windows.Controls.ScrollViewer.PanningRatio" /> propriedade para o objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVerticalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public static void SetVerticalScrollBarVisibility (System.Windows.DependencyObject element, System.Windows.Controls.ScrollBarVisibility verticalScrollBarVisibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetVerticalScrollBarVisibility(class System.Windows.DependencyObject element, valuetype System.Windows.Controls.ScrollBarVisibility verticalScrollBarVisibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollViewer.SetVerticalScrollBarVisibility(System.Windows.DependencyObject,System.Windows.Controls.ScrollBarVisibility)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="verticalScrollBarVisibility" Type="System.Windows.Controls.ScrollBarVisibility" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento no qual definir o valor da propriedade.</param>
+        <param name="verticalScrollBarVisibility">O valor da propriedade a ser definido.</param>
+        <summary>Define o valor de <see cref="P:System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibility" /> propriedade de dependência para um determinado elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que contém o deslocamento vertical do conteúdo rolado.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o deslocamento vertical do conteúdo rolado. O padrão é 0.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um positivo <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> valor corresponde ao conteúdo que está sendo deslocado à parte superior.  
+  
+ Os valores válidos são entre zero e o <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A> menos o <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>.  
+  
+ Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `true`, os valores de <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ScrollableHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>, e <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> propriedades serão o números de itens. Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `false`, os valores dessas propriedades são Pixels independentes de dispositivo.  
+  
+ A partir do .NET Framework versão 3.5 SP1, quando <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> é `true`, <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> continua a ser alterada enquanto a usuário arrasta a <xref:System.Windows.Controls.Primitives.Thumb>, mas não altera o modo de exibição de conteúdo até o <xref:System.Windows.Controls.Primitives.Thumb> é liberado.  Nesse caso, <xref:System.Windows.Controls.ScrollViewer.ContentVerticalOffset%2A> representa o deslocamento de conteúdo visível e <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> representa o deslocamento de conteúdo com base no <xref:System.Windows.Controls.Primitives.Thumb> posição.  
+  
+<a name="dependencyPropertyInfo_VerticalOffset"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.VerticalOffsetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffsetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalOffsetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalOffsetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.VerticalOffsetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.VerticalOffset" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollBarVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ScrollBarVisibility VerticalScrollBarVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.ScrollBarVisibility VerticalScrollBarVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ScrollBarVisibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical deve ser exibida.</summary>
+        <value>Um valor <see cref="T:System.Windows.Controls.ScrollBarVisibility" /> que indica se uma <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical deve ser exibida. O padrão é <see cref="F:System.Windows.Controls.ScrollBarVisibility.Visible" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_VerticalScrollBarVisibility"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibilityProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalScrollBarVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty VerticalScrollBarVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty VerticalScrollBarVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibility" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeight">
+      <MemberSignature Language="C#" Value="public double ViewportHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ViewportHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que contém o tamanho vertical do visor do conteúdo.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho vertical do visor do conteúdo. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O visor é a área visível do conteúdo.  
+  
+ <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>é apenas uma propriedade de saída; pode ser definido com eficiência, especificando o <xref:System.Windows.FrameworkElement.Height%2A> do elemento de conteúdo.  
+  
+ Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `true`, os valores de <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ScrollableHeight%2A>, <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>, e <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A> propriedades serão o números de itens. Se <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> é `false`, os valores dessas propriedades são Pixels independentes de dispositivo.  
+  
+<a name="dependencyPropertyInfo_ViewportHeight"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ViewportHeightProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeightProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportHeightProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportHeightProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ViewportHeightProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ViewportHeight" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidth">
+      <MemberSignature Language="C#" Value="public double ViewportWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollViewer.ViewportWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Layout")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que contém o tamanho horizontal do visor do conteúdo.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o tamanho horizontal do visor do conteúdo. O padrão é 0.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O visor é a área visível do conteúdo.  
+  
+<a name="dependencyPropertyInfo_ViewportWidth"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.ScrollViewer.ViewportWidthProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ViewportWidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ViewportWidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.ScrollViewer.ViewportWidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.ScrollViewer.ViewportWidth" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,96 @@
+<Type Name="SettingsGroupDescriptionAttribute" FullName="System.Configuration.SettingsGroupDescriptionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsGroupDescriptionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsGroupDescriptionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsGroupDescriptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma cadeia de caracteres que descreve um grupo de propriedades de configurações do aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivado de uma classe de configurações do aplicativo, <xref:System.Configuration.ApplicationSettingsBase>, define uma ou mais propriedades que pertencem ao mesmo grupo de propriedade do aplicativo. <xref:System.Configuration.SettingsGroupDescriptionAttribute>é um atributo opcional que você pode usar para fornecer um texto descritivo para um grupo de propriedade de configurações. Esse texto destina-se a ajudar ferramentas de tempo de design e ferramentas administrativas de tempo de execução na identificação e descrição do grupo de propriedades associado.  
+  
+> [!NOTE]
+>  Esse atributo só pode ser aplicado no nível de classe wrapper.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsGroupDescriptionAttribute (string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsGroupDescriptionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">Um <see cref="T:System.String" /> que contém o texto descritivo para o grupo de configurações do aplicativo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SettingsGroupDescriptionAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o comprimento máximo teórico do `description` parâmetro é restrita por limites superiores de um <xref:System.Int32>, limites práticos, determinados pelo uso e limitações de cota impostas pelo provedor de configurações, será muito menores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsGroupDescriptionAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O texto descritivo para o grupo de propriedades de configurações do aplicativo.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o texto descritivo para o grupo de configurações do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsGroupDescriptionAttribute.Description%2A> valor da propriedade é definido <xref:System.Configuration.SettingsGroupDescriptionAttribute.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

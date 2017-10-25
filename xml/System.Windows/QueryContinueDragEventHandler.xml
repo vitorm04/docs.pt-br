@@ -1,0 +1,50 @@
+<Type Name="QueryContinueDragEventHandler" FullName="System.Windows.QueryContinueDragEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void QueryContinueDragEventHandler(object sender, QueryContinueDragEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QueryContinueDragEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.QueryContinueDragEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.QueryContinueDragEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa um método que tratará os eventos roteados que permite que uma operação do tipo "arrastar e soltar" seja cancelada pela fonte de arrastar, por exemplo, <see cref="E:System.Windows.UIElement.QueryContinueDrag" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado com os seguintes eventos anexados:  
+  
+-   <xref:System.Windows.DragDrop.QueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DragDrop.PreviewQueryContinueDrag?displayProperty=nameWithType>  
+  
+ Este delegado também é usado com os seguintes eventos roteados em elementos de base. Esses eventos roteados encaminham os eventos anexados listados anteriormente para torná-las mais acessível para o modelo de elemento geral em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.QueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewQueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.QueryContinueDrag?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewQueryContinueDrag?displayProperty=nameWithType>  
+  
+ Os eventos anexados e os eventos roteado de elemento base compartilham seus dados de evento e bolha e túnel versões dos eventos roteados também compartilham dados de evento. Isso pode afetar as características manipuladas do evento conforme ela se desloca a rota de evento. Para obter detalhes, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ O <xref:System.Windows.DragDrop.QueryContinueDrag?displayProperty=nameWithType> evento anexado ocorre durante uma operação de arrastar e soltar e permite que a fonte determinar se a operação de arrastar e soltar deve ser cancelada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

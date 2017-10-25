@@ -1,0 +1,162 @@
+<Type Name="SharedConnectionWorkflowCommitWorkBatchService" FullName="System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService">
+  <TypeSignature Language="C#" Value="public class SharedConnectionWorkflowCommitWorkBatchService : System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SharedConnectionWorkflowCommitWorkBatchService extends System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a versão da conexão compartilhada do <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService" /> serviço usado pelo tempo de execução. Nesse contexto, a conexão compartilhada significa que o serviço usa a mesma conexão de SQL para o controle e a persistência de serviços.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> serviço é usado para transações de banco de dados que usam uma conexão compartilhada entre diferentes objetos. Para usar o <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> em vez do <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> no seu <xref:System.Workflow.Runtime.WorkflowRuntime> instância, use o <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> método.  
+  
+> [!IMPORTANT]
+>  Se o SQL server usado pelo <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> é baixo como causada por failovers de cluster SQL ou problemas intermitentes de rede, o <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> tentará novamente o processo de confirmação até 20 vezes antes de gerar um <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SharedConnectionWorkflowCommitWorkBatchService (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">
+          <see cref="T:System.Collections.Specialized.NameValueCollection" />. O construtor é invocado quando o mecanismo de tempo de execução do fluxo de trabalho carrega os serviços de um arquivo de configuração do aplicativo. A chave válida é <c>EnableRetries</c>. Isso solicita que o <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> novas tentativas no caso de uma conexão de banco de dados com falha.</param>
+        <summary>Inicializa um <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SharedConnectionWorkflowCommitWorkBatchService (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Cadeia de caracteres de conexão de banco de dados.</param>
+        <summary>Inicializa um <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> classe usando uma cadeia de caracteres de conexão do banco de dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitWorkBatch">
+      <MemberSignature Language="C#" Value="protected override void CommitWorkBatch (System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback commitWorkBatchCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CommitWorkBatch(class System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService/CommitWorkBatchCallback commitWorkBatchCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.CommitWorkBatch(System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commitWorkBatchCallback" Type="System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService+CommitWorkBatchCallback" />
+      </Parameters>
+      <Docs>
+        <param name="commitWorkBatchCallback">O <see cref="T:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback" /> delegado para chamar a confirmar o lote de trabalho.</param>
+        <summary>Cria uma transação, se ainda não existir.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableRetries">
+      <MemberSignature Language="C#" Value="public bool EnableRetries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableRetries" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.EnableRetries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define um valor que especifica se o <see cref="T:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService" /> repetirá a confirmação de um lote de trabalho.</summary>
+        <value>
+          <see langword="true" />Se o serviço deverá repetir a confirmar o lote de trabalho; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tentativas de trabalho em lotes confirmações <xref:System.Workflow.ComponentModel.TransactionScopeActivity> atividades devem ser modeladas no fluxo de trabalho (normalmente usando um pouco manipulador de loop e a exceção fora do <xref:System.Workflow.ComponentModel.TransactionScopeActivity>). O <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> não é possível fazer tentativas neste caso porque ele não foi iniciado (e, portanto, não possuir) a transação.  
+  
+ Além do que está sendo definido programaticamente, essa funcionalidade pode ser habilitada por meio de um arquivo de configuração. Para obter mais informações sobre como definir essa propriedade através de um arquivo de configuração, consulte [arquivos de configuração do fluxo de trabalho](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+  
+ Para obter informações gerais sobre repetindo as transações do trabalho em lotes, consulte [informações de estado de processamento em lotes em fluxos de trabalho](http://msdn.microsoft.com/en-us/ecda18ba-9140-4bd7-b13d-6787fdf5959d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStopped">
+      <MemberSignature Language="C#" Value="protected override void OnStopped ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStopped() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.OnStopped" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa o método chamado quando o tempo de execução do fluxo de trabalho gera o <see cref="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected override void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Representa o método chamado para iniciar o serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

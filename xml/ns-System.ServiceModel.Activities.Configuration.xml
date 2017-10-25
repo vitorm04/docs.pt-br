@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities.Configuration">
+  <Docs>
+    <summary>O namespace System.ServiceModel.Activities.Configuration contém classes usadas para configurar os serviços de fluxo de trabalho. Essas classes permitem que você aplicar comportamentos de serviço e o ponto de extremidade e configurar o controle.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

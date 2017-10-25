@@ -1,0 +1,228 @@
+<Type Name="AuthenticationSection" FullName="System.Web.Configuration.AuthenticationSection">
+  <TypeSignature Language="C#" Value="public sealed class AuthenticationSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthenticationSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.AuthenticationSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura a autenticação para um aplicativo Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthenticationSection> classe fornece uma maneira de acessar e modificar programaticamente o `authentication` seção de um arquivo de configuração.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.AuthenticationSection> pode gravar informações para a seção correspondente do arquivo de configuração de acordo com as restrições definidas pela propriedade seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.MachineToApplication>. Qualquer tentativa de gravar em um arquivo de configuração em um nível não é permitido na hierarquia resulta em uma mensagem de erro gerada pelo analisador. No entanto, você pode usar essa classe para ler informações de configuração em qualquer nível na hierarquia. Para escalabilidade e segurança, é recomendável que você usar um repositório externo, como um banco de dados para manter as credenciais dos usuários.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira demonstra como especificar valores declarativamente para vários atributos do `authentication` seção, que também pode ser acessada como membros a <xref:System.Web.Configuration.AuthenticationSection> classe. O segundo demonstra como usar o <xref:System.Web.Configuration.AuthenticationSection> classe.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar valores declarativamente para o `authentication` seção.  
+  
+> [!NOTE]
+>  Se você usar o `credentials` seção, certifique-se de seguir as diretrizes explicadas em [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Escalabilidade e melhor segurança, é recomendável o uso de um banco de dados externo para armazenar as credenciais dos usuários. Para obter mais informações sobre como criar ASP.NET seguros aplicativos pesquisar o site da Microsoft MSDN (http://msdn.microsoft.com) "Protegendo seu aplicativo ASP.NET," e "aplicativos ASP.NET seguros de construção: autenticação, autorização e seguro Comunicação".  
+  
+```  
+<authentication mode="Forms">  
+  <forms name="MyAppCookieName" loginUrl="login.aspx">  
+    <credentials passwordFormat="SHA1">  
+      <user name="Kim"  
+         password="07B7F3EE06F278DB966BE960E7CBBD103DF30CA6"/>  
+      <user name="John"  
+         password="BA56E5E0366D003E98EA1C7F04ABF8FCB3753889"/>  
+    </credentials>  
+  </forms>  
+</authentication>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.AuthenticationSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.AuthenticationSection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/CS/authenticationsection.cs#1)]
+ [!code-vb[System.Web.Configuration.AuthenticationSection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/VB/authenticationsection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticationSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthenticationSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.AuthenticationSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.AuthenticationSection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.AuthenticationSection> classe usando o <xref:System.Configuration.Configuration.GetSection%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter um <xref:System.Web.Configuration.AuthenticationSection> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.AuthenticationSection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/CS/authenticationsection.cs#2)]
+ [!code-vb[System.Web.Configuration.AuthenticationSection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/VB/authenticationsection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forms">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.FormsAuthenticationConfiguration Forms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.FormsAuthenticationConfiguration Forms" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthenticationSection.Forms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("forms")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsAuthenticationConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Web.Configuration.AuthenticationSection.Forms" /> propriedade do elemento.</summary>
+        <value>Um <see cref="P:System.Web.Configuration.AuthenticationSection.Forms" /> propriedade de elemento que contém informações usadas durante a autenticação baseada em formulários.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.AuthenticationSection.Forms%2A> propriedade do elemento.  
+  
+ [!code-csharp[System.Web.Configuration.AuthenticationSection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/CS/authenticationsection.cs#5)]
+ [!code-vb[System.Web.Configuration.AuthenticationSection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/VB/authenticationsection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.AuthenticationMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.AuthenticationMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthenticationSection.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("mode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.AuthenticationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a modalidade de autenticação.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Configuration.AuthenticationMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.AuthenticationSection.Mode%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Configuration.AuthenticationSection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/CS/authenticationsection.cs#4)]
+ [!code-vb[System.Web.Configuration.AuthenticationSection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/VB/authenticationsection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Passport">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.PassportAuthentication Passport { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.PassportAuthentication Passport" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthenticationSection.Passport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("passport")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property is obsolete. The Passport authentication product is no longer supported and has been superseded by Live ID.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.PassportAuthentication</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Web.Configuration.AuthenticationSection.Passport" /> propriedade do elemento.</summary>
+        <value>Um <see cref="P:System.Web.Configuration.AuthenticationSection.Passport" /> propriedade de elemento que contém informações usadas durante a autenticação do passport.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.AuthenticationSection.Passport%2A> propriedade do elemento.  
+  
+ [!code-csharp[System.Web.Configuration.AuthenticationSection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/CS/authenticationsection.cs#3)]
+ [!code-vb[System.Web.Configuration.AuthenticationSection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.AuthenticationSection/VB/authenticationsection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.AuthenticationSection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="protected override void Reset (System.Configuration.ConfigurationElement parentElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Reset(class System.Configuration.ConfigurationElement parentElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.AuthenticationSection.Reset(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentElement" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="parentElement">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

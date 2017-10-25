@@ -1,0 +1,285 @@
+<Type Name="KeyedByTypeCollection&lt;TItem&gt;" FullName="System.Collections.Generic.KeyedByTypeCollection&lt;TItem&gt;">
+  <TypeSignature Language="C#" Value="public class KeyedByTypeCollection&lt;TItem&gt; : System.Collections.ObjectModel.KeyedCollection&lt;Type,TItem&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyedByTypeCollection`1&lt;TItem&gt; extends System.Collections.ObjectModel.KeyedCollection`2&lt;class System.Type, !TItem&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.KeyedByTypeCollection`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TItem" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.KeyedCollection&lt;System.Type,TItem&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Type</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="!1">TItem</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TItem">Os tipos de itens contidos na coleção que também funcionam como as chaves da coleção.</typeparam>
+    <summary>Fornece uma coleção cujos itens são tipos que funcionam como chaves.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Apenas um objeto de cada tipo é permitido na coleção porque o tipo é a chave e cada chave deve ser exclusivo. Mas você pode encontrar objetos de tipos diferentes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyedByTypeCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.KeyedByTypeCollection`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyedByTypeCollection (System.Collections.Generic.IEnumerable&lt;TItem&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!TItem&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;TItem&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">O <see cref="T:System.Collections.Generic.IEnumerable`1" /> de tipo genérico <see cref="T:System.Object" /> usado para inicializar a coleção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.KeyedByTypeCollection`1" /> classe para uma enumeração especificada de objetos.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="items" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Find&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Find&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Find&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.Find``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de item na coleção de localizar.</typeparam>
+        <summary>Retorna o primeiro item na coleção de um tipo especificado.</summary>
+        <returns>O objeto do tipo <paramref name="T" /> se é um tipo de referência e o valor do tipo <paramref name="T" /> se ele é um tipo de valor. O valor padrão do tipo será retornado se nenhum objeto do tipo <paramref name="T" /> está contido na coleção: <see langword="null" /> se for um tipo de referência e 0 se for um tipo de valor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;T&gt; FindAll&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;!!T&gt; FindAll&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.FindAll``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de item na coleção de localizar.</typeparam>
+        <summary>Retorna uma coleção de objetos do tipo <paramref name="T" /> que estão contidos no <see cref="T:System.Collections.Generic.KeyedByTypeCollection`1" />.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.Collection`1" /> do tipo <paramref name="T" /> que contém os objetos do tipo <paramref name="T" /> da coleção original.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyForItem">
+      <MemberSignature Language="C#" Value="protected override Type GetKeyForItem (TItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type GetKeyForItem(!TItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.GetKeyForItem(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="TItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item na coleção cujo tipo é a ser recuperado.</param>
+        <summary>Obtém o tipo de um item contido na coleção.</summary>
+        <returns>O tipo especificado <paramref name="item" /> na coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, TItem kind);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, !TItem kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.InsertItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="TItem" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>item</c> devem ser inseridos.</param>
+        <param name="kind">To be added.</param>
+        <summary>Insere um elemento na coleção em um local específico.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T Remove&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T Remove&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.Remove``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de item na coleção a ser removida.</typeparam>
+        <summary>Remove um objeto de um tipo especificado da coleção.</summary>
+        <returns>O objeto foi removido da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;T&gt; RemoveAll&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;!!T&gt; RemoveAll&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.RemoveAll``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de item na coleção a ser removida.</typeparam>
+        <summary>Remove todos os elementos de um tipo especificado da coleção.</summary>
+        <returns>O <see cref="T:System.Collections.ObjectModel.Collection`1" /> que contém os objetos do tipo <paramref name="T" /> da coleção original.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, TItem kind);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, !TItem kind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.KeyedByTypeCollection`1.SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="TItem" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <c>item</c> a ser substituído.</param>
+        <param name="kind">To be added.</param>
+        <summary>Substitui o item no índice especificado com um novo objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

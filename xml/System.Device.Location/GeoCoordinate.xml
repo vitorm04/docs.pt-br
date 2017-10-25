@@ -1,0 +1,618 @@
+<Type Name="GeoCoordinate" FullName="System.Device.Location.GeoCoordinate">
+  <TypeSignature Language="C#" Value="public class GeoCoordinate : IEquatable&lt;System.Device.Location.GeoCoordinate&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeoCoordinate extends System.Object implements class System.IEquatable`1&lt;class System.Device.Location.GeoCoordinate&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Location.GeoCoordinate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Device.Location.GeoCoordinate&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma localização geográfica determinada por coordenadas de latitude e longitude. Também pode incluir informações sobre a altitude, a precisão, a velocidade e o curso.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoCoordinate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Device.Location.GeoCoordinate" /> que não tem nenhum campo de dados definido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os campos de dados são definidos como <xref:System.Double.NaN>.  A nova instância do <xref:System.Device.Location.GeoCoordinate> é equivalente a <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+ Este construtor deve ser usado para serialização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoCoordinate (double latitude, double longitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 latitude, float64 longitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="latitude" Type="System.Double" />
+        <Parameter Name="longitude" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="latitude">A latitude da localização. Pode variar de -90,0 a 90,0.</param>
+        <param name="longitude">A longitude da localização. Pode variar de -180,0 a 180,0.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Device.Location.GeoCoordinate" /> dos dados de latitude e longitude.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores de latitude e longitude devem corresponder a um local real em todo o mundo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A latitude ou a longitude está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoCoordinate (double latitude, double longitude, double altitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 latitude, float64 longitude, float64 altitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.#ctor(System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="latitude" Type="System.Double" />
+        <Parameter Name="longitude" Type="System.Double" />
+        <Parameter Name="altitude" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="latitude">Latitude. Pode variar de -90,0 a 90,0.</param>
+        <param name="longitude">Longitude. Pode variar de -180,0 a 180,0</param>
+        <param name="altitude">A altitude em metros. Poderá ser negativo, 0, positivo ou <see cref="F:System.Double.NaN" />, se for desconhecido.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Device.Location.GeoCoordinate" /> com base nos dados de latitude, longitude e altitude.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores de latitude e longitude devem corresponder a um local real em todo o mundo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="latitude" />, <paramref name="longitude" /> ou <paramref name="altitude" /> está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoCoordinate (double latitude, double longitude, double altitude, double horizontalAccuracy, double verticalAccuracy, double speed, double course);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 latitude, float64 longitude, float64 altitude, float64 horizontalAccuracy, float64 verticalAccuracy, float64 speed, float64 course) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="latitude" Type="System.Double" />
+        <Parameter Name="longitude" Type="System.Double" />
+        <Parameter Name="altitude" Type="System.Double" />
+        <Parameter Name="horizontalAccuracy" Type="System.Double" />
+        <Parameter Name="verticalAccuracy" Type="System.Double" />
+        <Parameter Name="speed" Type="System.Double" />
+        <Parameter Name="course" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="latitude">A latitude da localização. Pode variar de -90,0 a 90,0.</param>
+        <param name="longitude">A longitude da localização. Pode variar de -180,0 a 180,0.</param>
+        <param name="altitude">A altitude em metros. Poderá ser negativo, 0, positivo ou <see cref="F:System.Double.NaN" />, se for desconhecido.</param>
+        <param name="horizontalAccuracy">A precisão das coordenadas de latitude e longitude, em metros. Deve ser maior ou igual a 0. Se um valor igual a 0 for fornecido para esse construtor, a propriedade <see cref="P:System.Device.Location.GeoCoordinate.HorizontalAccuracy" /> será definida como <see cref="F:System.Double.NaN" />.</param>
+        <param name="verticalAccuracy">A precisão da altitude, em metros. Deve ser maior ou igual a 0. Se um valor igual a 0 for fornecido para esse construtor, a propriedade <see cref="P:System.Device.Location.GeoCoordinate.VerticalAccuracy" /> será definida como <see cref="F:System.Double.NaN" />.</param>
+        <param name="speed">A velocidade é medida em metros por segundo. Poderá ser negativo, 0, positivo ou <see cref="F:System.Double.NaN" />, se for desconhecido.  Uma velocidade negativa pode indicar uma movimentação em ordem inversa.</param>
+        <param name="course">A direção do percurso, em vez da orientação. Esse parâmetro é medido em graus em relação ao norte verdadeiro. Deve variar de 0 a 360,0 ou ser <see cref="F:System.Double.NaN" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Device.Location.GeoCoordinate" /> com base na latitude, longitude, altitude, precisão horizontal, precisão vertical, velocidade e curso.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="latitude" />, <paramref name="longitude" />, <paramref name="horizontalAccuracy" />, <paramref name="verticalAccuracy," /> ou <paramref name="course" /> está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Altitude">
+      <MemberSignature Language="C#" Value="public double Altitude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Altitude" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.Altitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altitude da <see cref="T:System.Device.Location.GeoCoordinate" />, em metros.</summary>
+        <value>A altitude, em metros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A altitude é fornecida em relação ao nível do mar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Course">
+      <MemberSignature Language="C#" Value="public double Course { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Course" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.Course" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título em graus, em relação ao norte verdadeiro.</summary>
+        <value>O título em graus, em relação ao norte verdadeiro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O intervalo válido inclui valores de 0,0 a 360,0, e `Double.NaN` se o cabeçalho não está definido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime o <xref:System.Device.Location.GeoCoordinate.Course%2A> e <xref:System.Device.Location.GeoCoordinate.Speed%2A> propriedades do local atual <xref:System.Device.Location.GeoCoordinate>.  
+  
+ [!code-csharp[System.Device.Location.CourseAndSpeed#2](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.courseandspeed/cs/courseandspeed.cs#2)]
+ [!code-vb[System.Device.Location.CourseAndSpeed#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.courseandspeed/vb/courseandspeed.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Device.Location.GeoCoordinate.Course" /> está definido fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Device.Location.GeoCoordinate other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Device.Location.GeoCoordinate other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.Equals(System.Device.Location.GeoCoordinate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Device.Location.GeoCoordinate" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Device.Location.GeoCoordinate" /> objeto a ser comparado com o objeto de chamada.</param>
+        <summary>Determina se o <see cref="T:System.Device.Location.GeoCoordinate" /> objeto é equivalente ao parâmetro, com base apenas em latitude e longitude.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Device.Location.GeoCoordinate" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Equivalente <xref:System.Device.Location.GeoCoordinate> objetos têm o mesmo <xref:System.Device.Location.GeoCoordinate.Latitude%2A> e <xref:System.Device.Location.GeoCoordinate.Longitude%2A> propriedades. O <xref:System.Device.Location.GeoCoordinate.Altitude%2A>, <xref:System.Device.Location.GeoCoordinate.HorizontalAccuracy%2A>, e <xref:System.Device.Location.GeoCoordinate.VerticalAccuracy%2A> propriedades não são usadas para determinar a equivalência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado a <see cref="T:System.Device.Location.GeoCoordinate" /> para.</param>
+        <summary>Determina se um especificado <see cref="T:System.Device.Location.GeoCoordinate" /> é igual à atual <see cref="T:System.Device.Location.GeoCoordinate" />, com base apenas em latitude e longitude.</summary>
+        <returns>
+          <see langword="true" />, se o <see cref="T:System.Device.Location.GeoCoordinate" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Equivalente <xref:System.Device.Location.GeoCoordinate> objetos têm o mesmo <xref:System.Device.Location.GeoCoordinate.Latitude%2A> e <xref:System.Device.Location.GeoCoordinate.Longitude%2A> propriedades. O <xref:System.Device.Location.GeoCoordinate.Altitude%2A>, <xref:System.Device.Location.GeoCoordinate.HorizontalAccuracy%2A>, e <xref:System.Device.Location.GeoCoordinate.VerticalAccuracy%2A> propriedades não são usadas para determinar a equivalência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDistanceTo">
+      <MemberSignature Language="C#" Value="public double GetDistanceTo (System.Device.Location.GeoCoordinate other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetDistanceTo(class System.Device.Location.GeoCoordinate other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.GetDistanceTo(System.Device.Location.GeoCoordinate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Device.Location.GeoCoordinate" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Device.Location.GeoCoordinate" /> do local para calcular a distância.</param>
+        <summary>Retorna a distância entre as coordenadas de latitude e longitude especificadas por este <see cref="T:System.Device.Location.GeoCoordinate" /> e outro <see cref="T:System.Device.Location.GeoCoordinate" /> especificado.</summary>
+        <returns>A distância entre duas coordenadas, em metros.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fórmula Haverseno é usada para calcular a distância.  A fórmula Haverseno contas para curvatura da Terra, mas presume uma Terra esférica em vez de um elipsoide. Para longas distâncias, a fórmula Haverseno apresenta um erro de menos de 0,1 por cento.  
+  
+ Altitude não é usada para calcular a distância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para o <see cref="T:System.Device.Location.GeoCoordinate" />.</summary>
+        <returns>Um código hash do <see cref="T:System.Device.Location.GeoCoordinate" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Device.Location.GeoCoordinate>objetos que são equivalentes têm o mesmo código de hash. Equivalente <xref:System.Device.Location.GeoCoordinate> objetos têm o mesmo <xref:System.Device.Location.GeoCoordinate.Latitude%2A> e <xref:System.Device.Location.GeoCoordinate.Longitude%2A> propriedades. O <xref:System.Device.Location.GeoCoordinate.Altitude%2A>, <xref:System.Device.Location.GeoCoordinate.HorizontalAccuracy%2A>, e <xref:System.Device.Location.GeoCoordinate.VerticalAccuracy%2A> propriedades não são usadas para determinar a equivalência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAccuracy">
+      <MemberSignature Language="C#" Value="public double HorizontalAccuracy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalAccuracy" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.HorizontalAccuracy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a precisão da latitude e longitude determinadas pelo <see cref="T:System.Device.Location.GeoCoordinate" />, em metros.</summary>
+        <value>A precisão da latitude e longitude, em metros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A precisão pode ser considerada o raio de certeza de que os dados de latitude e longitude.  Uma área circular que é formada com precisão como as coordenadas de radius e a latitude e longitude como o centro contém o local real.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Device.Location.GeoCoordinate.HorizontalAccuracy" /> está definido fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnknown">
+      <MemberSignature Language="C#" Value="public bool IsUnknown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnknown" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.IsUnknown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Device.Location.GeoCoordinate" /> não contém dados de latitude ou longitude.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Device.Location.GeoCoordinate" /> não contiver dados de latitude ou longitude; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Device.Location.GeoCoordinate> que não contêm latitude ou dados de longitude são iguais a <xref:System.Device.Location.GeoCoordinate.Unknown>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir verifica se o <xref:System.Device.Location.GeoCoordinate> que corresponde a um local é <xref:System.Device.Location.GeoCoordinate.Unknown> antes de imprimir seu latitude e longitude.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataSyncHandleUnknown#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdatasynchandleunknown/cs/getlocationdatasynchandleunknown.cs#1)]
+ [!code-vb[System.Device.Location.GetLocationDataSyncHandleUnknown#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdatasynchandleunknown/vb/GetLocationDataSyncHandleUnknown.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Latitude">
+      <MemberSignature Language="C#" Value="public double Latitude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Latitude" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.Latitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a latitude do <see cref="T:System.Device.Location.GeoCoordinate" />.</summary>
+        <value>Latitude do local.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Latitude pode variar de -90,0 a 90.0. Latitude é medida em graus Norte ou Sul, do Equador. Valores positivos são ao norte Equador e valores negativos são Sul, do Equador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime os valores de latitude e longitude são obtidos de um <xref:System.Device.Location.GeoCoordinate>.  
+  
+ [!code-csharp[System.Device.Location.LocationEvent1#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.locationevent1/cs/locationevent.cs#1)]
+ [!code-vb[System.Device.Location.LocationEvent1#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.locationevent1/vb/locationevent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Device.Location.GeoCoordinate.Latitude" /> está definido fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Longitude">
+      <MemberSignature Language="C#" Value="public double Longitude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Longitude" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.Longitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a longitude do <see cref="T:System.Device.Location.GeoCoordinate" />.</summary>
+        <value>A longitude.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A longitude pode variar de -180,0 a 180.0. Longitude é medida em graus Leste ou oeste do Meridiano. Valores negativos são Oeste do Meridiano e valores positivos são Leste do Meridiano.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime os valores de latitude e longitude são obtidos de um <xref:System.Device.Location.GeoCoordinate>.  
+  
+ [!code-csharp[System.Device.Location.LocationEvent1#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.locationevent1/cs/locationevent.cs#1)]
+ [!code-vb[System.Device.Location.LocationEvent1#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.locationevent1/vb/locationevent.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Device.Location.GeoCoordinate.Longitude" /> está definido fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Device.Location.GeoCoordinate left, System.Device.Location.GeoCoordinate right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Device.Location.GeoCoordinate left, class System.Device.Location.GeoCoordinate right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.op_Equality(System.Device.Location.GeoCoordinate,System.Device.Location.GeoCoordinate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Device.Location.GeoCoordinate" />
+        <Parameter Name="right" Type="System.Device.Location.GeoCoordinate" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro <see cref="T:System.Device.Location.GeoCoordinate" /> a ser comparado.</param>
+        <param name="right">O segundo <see cref="T:System.Device.Location.GeoCoordinate" /> a ser comparado.</param>
+        <summary>Determina se dois objetos <see cref="T:System.Device.Location.GeoCoordinate" /> consultam o mesmo local.</summary>
+        <returns>
+          <see langword="true" /> se os objetos <see cref="T:System.Device.Location.GeoCoordinate" /> forem determinados como equivalentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Equivalente <xref:System.Device.Location.GeoCoordinate> objetos têm o mesmo <xref:System.Device.Location.GeoCoordinate.Latitude%2A> e <xref:System.Device.Location.GeoCoordinate.Longitude%2A> propriedades. O <xref:System.Device.Location.GeoCoordinate.Altitude%2A>, <xref:System.Device.Location.GeoCoordinate.HorizontalAccuracy%2A>, e <xref:System.Device.Location.GeoCoordinate.VerticalAccuracy%2A> propriedades não são usadas para determinar a equivalência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Device.Location.GeoCoordinate left, System.Device.Location.GeoCoordinate right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Device.Location.GeoCoordinate left, class System.Device.Location.GeoCoordinate right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.op_Inequality(System.Device.Location.GeoCoordinate,System.Device.Location.GeoCoordinate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Device.Location.GeoCoordinate" />
+        <Parameter Name="right" Type="System.Device.Location.GeoCoordinate" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro <see cref="T:System.Device.Location.GeoCoordinate" /> a ser comparado.</param>
+        <param name="right">O segundo <see cref="T:System.Device.Location.GeoCoordinate" /> a ser comparado.</param>
+        <summary>Determina se dois <see cref="T:System.Device.Location.GeoCoordinate" /> objetos correspondem aos locais diferentes.</summary>
+        <returns>
+          <see langword="true" />, se o <see cref="T:System.Device.Location.GeoCoordinate" /> são determinados objetos diferentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Equivalente <xref:System.Device.Location.GeoCoordinate> objetos têm o mesmo <xref:System.Device.Location.GeoCoordinate.Latitude%2A> e <xref:System.Device.Location.GeoCoordinate.Longitude%2A> propriedades. O <xref:System.Device.Location.GeoCoordinate.Altitude%2A>, <xref:System.Device.Location.GeoCoordinate.HorizontalAccuracy%2A>, e <xref:System.Device.Location.GeoCoordinate.VerticalAccuracy%2A> propriedades não são usadas para determinar a equivalência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Speed">
+      <MemberSignature Language="C#" Value="public double Speed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Speed" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.Speed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a velocidade em metros por segundo.</summary>
+        <value>A velocidade em metros por segundo. A velocidade deve ser maior ou igual a zero ou <see cref="F:System.Double.NaN" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir imprime o <xref:System.Device.Location.GeoCoordinate.Course%2A> e <xref:System.Device.Location.GeoCoordinate.Speed%2A> propriedades do local atual <xref:System.Device.Location.GeoCoordinate>.  
+  
+ [!code-csharp[System.Device.Location.CourseAndSpeed#2](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.courseandspeed/cs/courseandspeed.cs#2)]
+ [!code-vb[System.Device.Location.CourseAndSpeed#2](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.courseandspeed/vb/courseandspeed.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="System.ArgumentOutOfRangeException">
+          <see cref="P:System.Device.Location.GeoCoordinate.Speed" /> está definido fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Location.GeoCoordinate.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que contém a latitude e longitude.</summary>
+        <returns>Uma cadeia de caracteres que contém a latitude e longitude, separados por uma vírgula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de cadeia de caracteres retornada por este método destina-se somente para uso de depuração. Este método não retorna qualquer formatação específica de localidade de latitude e longitude.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="public static readonly System.Device.Location.GeoCoordinate Unknown;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Device.Location.GeoCoordinate Unknown" />
+      <MemberSignature Language="DocId" Value="F:System.Device.Location.GeoCoordinate.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Location.GeoCoordinate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma <see cref="T:System.Device.Location.GeoCoordinate" /> objeto que tem desconhecido campos de latitude e longitude.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Device.Location.GeoCoordinate.IsUnknown%2A> propriedade pode ser usada para verificar se um <xref:System.Device.Location.GeoCoordinate> não contém dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir verifica se o <xref:System.Device.Location.GeoCoordinate> que corresponde a um local é <xref:System.Device.Location.GeoCoordinate.Unknown> antes de printingout sua latitude e longitude.  
+  
+ [!code-csharp[System.Device.Location.GetLocationDataSyncHandleUnknown#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.device.location.getlocationdatasynchandleunknown/cs/getlocationdatasynchandleunknown.cs#1)]
+ [!code-vb[System.Device.Location.GetLocationDataSyncHandleUnknown#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/system.device.location.getlocationdatasynchandleunknown/vb/GetLocationDataSyncHandleUnknown.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalAccuracy">
+      <MemberSignature Language="C#" Value="public double VerticalAccuracy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalAccuracy" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Location.GeoCoordinate.VerticalAccuracy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a precisão da altitude fornecida pelo <see cref="T:System.Device.Location.GeoCoordinate" />, em metros.</summary>
+        <value>A precisão da altitude, em metros.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="P:System.Device.Location.GeoCoordinate.VerticalAccuracy" /> está definido fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

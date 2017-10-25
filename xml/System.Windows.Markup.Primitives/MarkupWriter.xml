@@ -1,0 +1,98 @@
+<Type Name="MarkupWriter" FullName="System.Windows.Markup.Primitives.MarkupWriter">
+  <TypeSignature Language="C#" Value="public sealed class MarkupWriter : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MarkupWriter extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.Primitives.MarkupWriter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece métodos para gravar um objeto em formato XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.Primitives.MarkupWriter.GetMarkupObjectFor%2A>pode ser usado para instanciar um <xref:System.Windows.Markup.Primitives.MarkupObject>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Primitives.MarkupWriter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pelo <see cref="T:System.Windows.Markup.Primitives.MarkupWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMarkupObjectFor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.Primitives.MarkupObject GetMarkupObjectFor (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Markup.Primitives.MarkupObject GetMarkupObjectFor(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Primitives.MarkupWriter.GetMarkupObjectFor(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Primitives.MarkupObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um objeto que será a raiz da árvore serializado.</param>
+        <summary>Cria uma instância de um <see cref="T:System.Windows.Markup.Primitives.MarkupObject" /> do objeto especificado.</summary>
+        <returns>Um objeto de marcação que permite navegar pela árvore de objetos.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMarkupObjectFor">
+      <MemberSignature Language="C#" Value="public static System.Windows.Markup.Primitives.MarkupObject GetMarkupObjectFor (object instance, System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Markup.Primitives.MarkupObject GetMarkupObjectFor(object instance, class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.Primitives.MarkupWriter.GetMarkupObjectFor(System.Object,System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.Primitives.MarkupObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um objeto que será a raiz da árvore serializado.</param>
+        <param name="manager">O Gerenciador de serialização.</param>
+        <summary>Cria uma instância de um <see cref="T:System.Windows.Markup.Primitives.MarkupObject" /> do objeto especificado e o Gerenciador de serialização especificada.</summary>
+        <returns>Um objeto de marcação que permite navegar pela árvore de objetos.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="instance" /> ou <paramref name="manager" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

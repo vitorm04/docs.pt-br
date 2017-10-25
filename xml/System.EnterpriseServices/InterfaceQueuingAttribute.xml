@@ -1,0 +1,177 @@
+<Type Name="InterfaceQueuingAttribute" FullName="System.EnterpriseServices.InterfaceQueuingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class InterfaceQueuingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InterfaceQueuingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.InterfaceQueuingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Habilita o suporte para a interface marcada de enfileiramento de mensagens. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamadas na interface em questão serão ser enfileiradas usando o enfileiramento de mensagens.  
+  
+ Para marcar uma interface como enfileirado, aplicar esse atributo para a interface usando a seguinte sintaxe: `[InterfaceQueuing]`.  
+  
+ Os métodos de membro de uma interface em fila devem cumprir os requisitos para chamadas de método em fila, como tendo não `out` ou `ref` parâmetros.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o `InterfaceQueuingAttribute` atributo.  
+  
+ [!code-cpp[System.EnterpriseServices.QueuedComponents#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.EnterpriseServices.QueuedComponents/CPP/queuedcomponent.cpp#2)]
+ [!code-csharp[System.EnterpriseServices.QueuedComponents#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.EnterpriseServices.QueuedComponents/CS/queuedcomponent.cs#2)]  
+  
+ O exemplo de código a seguir mostra como marcar um aplicativo COM+, como em fila no tempo de compilação usando o `ApplicationQueuing` de atributos e habilitar a escuta do COM+, definindo o `QueueListenerEnabled` como true  
+  
+ [!code-cpp[System.EnterpriseServices.QueuedComponents#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.EnterpriseServices.QueuedComponents/CPP/queuedcomponent.cpp#1)]
+ [!code-csharp[System.EnterpriseServices.QueuedComponents#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.EnterpriseServices.QueuedComponents/CS/queuedcomponent.cs#1)]  
+  
+ O exemplo de código a seguir mostra como usar `BindToMoniker` para executar o moniker em fila, para obter uma instância de gravador, chame o método que será registrado e força a versão do objeto gravador, para enviar a mensagem para a fila.  
+  
+ [!code-cpp[System.EnterpriseServices.QueuedComponents#0](~/samples/snippets/cpp/VS_Snippets_Remoting/System.EnterpriseServices.QueuedComponents/CPP/queuedcomponentclientclass.cpp#0)]
+ [!code-csharp[System.EnterpriseServices.QueuedComponents#0](~/samples/snippets/csharp/VS_Snippets_Remoting/System.EnterpriseServices.QueuedComponents/CS/queuedcomponentclientclass.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.InterfaceQueuingAttribute" /> classe, permitindo o enfileiramento de mensagens.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InterfaceQueuingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.InterfaceQueuingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.InterfaceQueuingAttribute" /> classe configuração o <see cref="P:System.EnterpriseServices.InterfaceQueuingAttribute.Enabled" /> e <see cref="P:System.EnterpriseServices.InterfaceQueuingAttribute.Interface" /> propriedades com seus valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.EnterpriseServices.InterfaceQueuingAttribute>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|Habilitada|`true`|  
+|Interface|`null`|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.EnterpriseServices.InterfaceQueuingAttribute>.  
+  
+ [!code-cpp[EnterpriseServicesInterfaceQueuingAttribute#1](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesInterfaceQueuingAttribute/CPP/class1.cpp#1)]
+ [!code-csharp[EnterpriseServicesInterfaceQueuingAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesInterfaceQueuingAttribute/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServicesInterfaceQueuingAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesInterfaceQueuingAttribute/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InterfaceQueuingAttribute (bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.InterfaceQueuingAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enabled">
+          <see langword="true" />Para habilitar o suporte de enfileiramento de mensagens; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.InterfaceQueuingAttribute" /> classe, se desejar desabilitar suporte enfileiramento de mensagens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.EnterpriseServices.InterfaceQueuingAttribute>.  
+  
+ [!code-cpp[EnterpriseServicesInterfaceQueuingAttribute#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServicesInterfaceQueuingAttribute/CPP/class1.cpp#2)]
+ [!code-csharp[EnterpriseServicesInterfaceQueuingAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesInterfaceQueuingAttribute/CS/class1.cs#2)]
+ [!code-vb[EnterpriseServicesInterfaceQueuingAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesInterfaceQueuingAttribute/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.InterfaceQueuingAttribute.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o suporte de enfileiramento de mensagens está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o suporte ao enfileiramento de mensagens está habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do `Queuing-Enabled` propriedade no COM+.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interface">
+      <MemberSignature Language="C#" Value="public string Interface { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Interface" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.InterfaceQueuingAttribute.Interface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da interface em que o enfileiramento de mensagens está habilitado.</summary>
+        <value>O nome da interface em que o enfileiramento de mensagens está habilitado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

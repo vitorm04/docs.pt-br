@@ -1,0 +1,175 @@
+<Type Name="GenericPrincipal" FullName="System.Security.Principal.GenericPrincipal">
+  <TypeSignature Language="C#" Value="public class GenericPrincipal : System.Security.Claims.ClaimsPrincipal" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit GenericPrincipal extends System.Security.Claims.ClaimsPrincipal" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Principal.GenericPrincipal" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Claims</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Claims.ClaimsPrincipal</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma entidade de segurança genérica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa as funções do usuário atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso de membros de <xref:System.Security.Principal.GenericPrincipal> classe.  
+  
+ [!code-cpp[System.Security.Principal.GenericPrincipal2#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CPP/genericprincipalmembers.cpp#1)]
+ [!code-csharp[System.Security.Principal.GenericPrincipal2#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CS/genericprincipalmembers.cs#1)]
+ [!code-vb[System.Security.Principal.GenericPrincipal2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/VB/genericprincipalmembers.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericPrincipal (System.Security.Principal.IIdentity identity, string[] roles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IIdentity identity, string[] roles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.GenericPrincipal.#ctor(System.Security.Principal.IIdentity,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+        <Parameter Name="roles" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Uma implementação básica de <see cref="T:System.Security.Principal.IIdentity" /> que representa qualquer usuário.</param>
+        <param name="roles">Uma matriz de nomes de função à qual o usuário representado pelo <c>identidade</c> parâmetro pertence.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Principal.GenericPrincipal" /> de uma identidade de usuário e uma matriz de nomes de função à qual pertence o usuário representado por essa identidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra o uso do <xref:System.Security.Principal.GenericPrincipal.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Principal.GenericPrincipal> classe.  
+  
+ [!code-cpp[System.Security.Principal.GenericPrincipal2#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CPP/genericprincipalmembers.cpp#2)]
+ [!code-csharp[System.Security.Principal.GenericPrincipal2#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CS/genericprincipalmembers.cs#2)]
+ [!code-vb[System.Security.Principal.GenericPrincipal2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/VB/genericprincipalmembers.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="identity" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public override System.Security.Principal.IIdentity Identity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IIdentity Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Principal.GenericPrincipal.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Security.Principal.GenericIdentity" /> do usuário representado pelo atual <see cref="T:System.Security.Principal.GenericPrincipal" />.</summary>
+        <value>O <see cref="T:System.Security.Principal.GenericIdentity" /> do usuário representado pelo <see cref="T:System.Security.Principal.GenericPrincipal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra o uso do <xref:System.Security.Principal.GenericPrincipal.Identity%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Principal.GenericPrincipal> classe.  
+  
+ [!code-cpp[System.Security.Principal.GenericPrincipal2#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CPP/genericprincipalmembers.cpp#3)]
+ [!code-csharp[System.Security.Principal.GenericPrincipal2#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CS/genericprincipalmembers.cs#3)]
+ [!code-vb[System.Security.Principal.GenericPrincipal2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/VB/genericprincipalmembers.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInRole">
+      <MemberSignature Language="C#" Value="public override bool IsInRole (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsInRole(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Principal.GenericPrincipal.IsInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">O nome da função cuja associação será verificada.</param>
+        <summary>Determina se o <see cref="T:System.Security.Principal.GenericPrincipal" /> atual pertence à função especificada.</summary>
+        <returns>
+          <see langword="true" />Se o atual <see cref="T:System.Security.Principal.GenericPrincipal" /> é um membro da função especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra o uso do <xref:System.Security.Principal.GenericPrincipal.IsInRole%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Principal.GenericPrincipal> classe.  
+  
+ [!code-cpp[System.Security.Principal.GenericPrincipal2#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CPP/genericprincipalmembers.cpp#4)]
+ [!code-csharp[System.Security.Principal.GenericPrincipal2#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/CS/genericprincipalmembers.cs#4)]
+ [!code-vb[System.Security.Principal.GenericPrincipal2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.GenericPrincipal2/VB/genericprincipalmembers.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

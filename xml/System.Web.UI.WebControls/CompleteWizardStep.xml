@@ -1,0 +1,121 @@
+<Type Name="CompleteWizardStep" FullName="System.Web.UI.WebControls.CompleteWizardStep">
+  <TypeSignature Language="C#" Value="public sealed class CompleteWizardStep : System.Web.UI.WebControls.TemplatedWizardStep" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CompleteWizardStep extends System.Web.UI.WebControls.TemplatedWizardStep" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CompleteWizardStep" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TemplatedWizardStep</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o modelo da etapa final para a criação de uma conta de usuário com o <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompleteWizardStep> classe é derivada de <xref:System.Web.UI.WebControls.TemplatedWizardStep> e usado pelo <xref:System.Web.UI.WebControls.CreateUserWizard> controle. Por padrão o <xref:System.Web.UI.WebControls.CompleteWizardStep> etapa é exibida após o <xref:System.Web.UI.WebControls.CreateUserWizardStep> etapa. O <xref:System.Web.UI.WebControls.CompleteWizardStep> etapa é uma etapa necessária do <xref:System.Web.UI.WebControls.CreateUserWizard> controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompleteWizardStep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompleteWizardStep.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CompleteWizardStep" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StepType">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.WebControls.WizardStepType StepType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.WizardStepType StepType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompleteWizardStep.StepType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Filterable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WizardStepType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de interface do usuário (IU) a ser exibida para o <see cref="T:System.Web.UI.WebControls.CompleteWizardStep" /> página de um <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> controle.</summary>
+        <value>O <see cref="F:System.Web.UI.WebControls.WizardStepType.Complete" /> valor de enumeração para o <see cref="T:System.Web.UI.WebControls.WizardStepType" /> enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CompleteWizardStep.StepType%2A> propriedade especifica o tipo de navegação da interface do usuário a ser exibida para a etapa de criação de conta de usuário final (o <xref:System.Web.UI.WebControls.CreateUserWizardStep> etapa) da <xref:System.Web.UI.WebControls.CreateUserWizard> controle.  
+  
+> [!CAUTION]
+>  O <xref:System.Web.UI.WebControls.CompleteWizardStep.StepType%2A> substituições de propriedade a <xref:System.Web.UI.WebControls.WizardStepBase.StepType%2A?displayProperty=nameWithType> propriedade para garantir que <xref:System.Web.UI.WebControls.CompleteWizardStep> é sempre definido como o <xref:System.Web.UI.WebControls.WizardStepType.Complete> valor o <xref:System.Web.UI.WebControls.WizardStepType> enumeração. Tentativa de definir o <xref:System.Web.UI.WebControls.CompleteWizardStep.StepType%2A> propriedade para um valor diferente resultará em um <xref:System.InvalidOperationException>.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa de definir a propriedade <see cref="P:System.Web.UI.WebControls.CompleteWizardStep.StepType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompleteWizardStep.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título a ser exibida para a etapa de criação de conta do usuário final do <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> controle.</summary>
+        <value>O título a ser usado para a etapa de criação de conta do usuário final do <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> controle. O valor padrão é "Completo".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

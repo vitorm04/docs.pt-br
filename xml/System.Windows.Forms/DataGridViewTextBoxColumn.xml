@@ -1,0 +1,215 @@
+<Type Name="DataGridViewTextBoxColumn" FullName="System.Windows.Forms.DataGridViewTextBoxColumn">
+  <TypeSignature Language="C#" Value="public class DataGridViewTextBoxColumn : System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewTextBoxColumn extends System.Windows.Forms.DataGridViewColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewTextBoxColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Windows.Forms.DataGridViewTextBoxColumn), "DataGridViewTextBoxColumn.bmp")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Hospeda uma coleção de células <see cref="T:System.Windows.Forms.DataGridViewTextBoxCell" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewTextBoxColumn> classe é um tipo especializado de <xref:System.Windows.Forms.DataGridViewColumn> classe usada para hospedar logicamente células que permitem exibir e editar de cadeias de caracteres de texto. Um <xref:System.Windows.Forms.DataGridViewTextBoxColumn> possui um tipo de <xref:System.Windows.Forms.DataGridViewTextBoxCell> do objeto em cada <xref:System.Windows.Forms.DataGridViewRow> que faz interseção com ele. Quando um <xref:System.Windows.Forms.DataGridViewTextBoxCell> torna-se ativado, ele fornece um <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl> controle para manipular a entrada do usuário.  
+  
+ O modo de classificação para este tipo de coluna padrão é <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso desse tipo.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#20)]
+ [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#20)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você deriva de <see cref="T:System.Windows.Forms.DataGridViewTextBoxColumn" /> e adicionar novas propriedades para a classe derivada, certifique-se de substituir o <see cref="M:System.Windows.Forms.DataGridViewColumn.Clone" /> método para copiar as novas propriedades durante operações de clonagem. Você também deve chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewColumn.Clone" /> método para que as propriedades da classe base são copiadas para a nova célula.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewTextBoxColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewTextBoxColumn" /> com o estado padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa a coluna, definindo as propriedades a seguir.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn.CellTemplate%2A>|Criada uma nova <xref:System.Windows.Forms.DataGridViewTextBoxCell>.|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn.SortMode%2A>|<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellTemplate">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewCell CellTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCell CellTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxColumn.CellTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo usado para a aparência de célula do modelo.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewCell" /> depois do qual todas as outras células na coluna são modeladas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor para o <xref:System.Windows.Forms.DataGridViewTextBoxColumn> classe inicializa essa propriedade recém-criado para um <xref:System.Windows.Forms.DataGridViewTextBoxCell>.  
+  
+> [!CAUTION]
+>  Alterar as propriedades do modelo de célula não afetará imediatamente a interface do usuário (UI) de células existentes da coluna. Essas alterações são aparentes somente depois que a coluna for gerado novamente (por exemplo, ao classificar a coluna ou por meio de uma chamada para o <xref:System.Windows.Forms.DataGridView.InvalidateColumn%2A?displayProperty=nameWithType> método).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A?displayProperty=nameWithType> propriedade, que é semelhante a esta propriedade. Este exemplo é parte de um exemplo maior disponível em [como: manipular colunas no controle DataGridView de formulários do Windows](~/docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#120)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#120)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidCastException">O tipo de conjunto não é compatível com o tipo <see cref="T:System.Windows.Forms.DataGridViewTextBoxCell" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxInputLength">
+      <MemberSignature Language="C#" Value="public int MaxInputLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxInputLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxColumn.MaxInputLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(32767)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de caracteres que podem ser inseridos na caixa de texto.</summary>
+        <value>O número máximo de caracteres que podem ser inseridos na caixa de texto; o valor padrão é de 32.767.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewTextBoxColumn.MaxInputLength%2A> propriedade não afeta o tamanho do texto inserido programaticamente o valor da célula ou através de formatação da célula. Ele afeta somente o que o usuário pode de entrada e editar.  
+  
+ Obter ou definir esta propriedade obtém ou define o <xref:System.Windows.Forms.DataGridViewTextBoxCell.MaxInputLength%2A> propriedade do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewTextBoxColumn.CellTemplate%2A> propriedade. Definir esta propriedade também define o <xref:System.Windows.Forms.DataGridViewTextBoxCell.MaxInputLength%2A> a propriedade de cada célula na coluna. Para substituir o valor especificado para células individuais, defina os valores de célula depois de definir o valor da coluna.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade <see cref="P:System.Windows.Forms.DataGridViewTextBoxColumn.CellTemplate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SortMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridViewColumnSortMode SortMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewColumnSortMode SortMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewTextBoxColumn.SortMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewColumnSortMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de classificação da coluna.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewColumnSortMode" /> que especifica os critérios usados para ordenar as linhas com base nos valores da célula em uma coluna.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.DataGridView> controle é classificado por meio de uma coluna com um <xref:System.Windows.Forms.DataGridViewTextBoxColumn.SortMode%2A> valor da propriedade <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>, um glifo de classificação é exibido automaticamente no cabeçalho da coluna.  
+  
+ Quando o controle é classificado por meio de uma coluna com um <xref:System.Windows.Forms.DataGridViewTextBoxColumn.SortMode%2A> valor da propriedade <xref:System.Windows.Forms.DataGridViewColumnSortMode.Programmatic>, deve exibir o glifo de classificação por meio de <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A> propriedade.  
+  
+ O modo de classificação padrão de um <xref:System.Windows.Forms.DataGridViewTextBoxColumn> é <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>. O modo de classificação padrão para outros tipos de coluna é <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>.  
+  
+ O <xref:System.Windows.Forms.DataGridViewTextBoxColumn.SortMode%2A> valor não impede você de uma coluna de classificação por meio de programação, embora outras restrições aplicáveis. Para obter mais informações, consulte o método <xref:System.Windows.Forms.DataGridView.Sort%2A>.  
+  
+ Um <xref:System.Windows.Forms.DataGridViewTextBoxColumn.SortMode%2A> valor da propriedade <xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable> não impedirá o <xref:System.Windows.Forms.DataGridView.ColumnHeaderMouseClick?displayProperty=nameWithType> evento ocorrer, mas ele impedirá que o cabeçalho de alterar sua aparência quando ele for clicado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#066)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#066)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewTextBoxColumn.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que descreve a coluna.</summary>
+        <returns>Um <see cref="T:System.String" /> que descreve a coluna.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

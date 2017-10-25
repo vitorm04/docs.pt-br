@@ -1,0 +1,169 @@
+<Type Name="SiteMapDataSourceView" FullName="System.Web.UI.WebControls.SiteMapDataSourceView">
+  <TypeSignature Language="C#" Value="public class SiteMapDataSourceView : System.Web.UI.DataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapDataSourceView extends System.Web.UI.DataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SiteMapDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um fortemente tipada <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> de objeto para o <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource> controle permite que os controles de associação de dados ASP.NET, como o <xref:System.Web.UI.WebControls.TreeView> e <xref:System.Web.UI.WebControls.Menu> controles para associar aos dados de mapa de site. O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> classe é usada por desenvolvedores de controles, mas ele não é usado por desenvolvedores de página nem no código da página.  
+  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource> retorna um <xref:System.Web.UI.WebControls.SiteMapDataSourceView> para um caminho hierárquico especificado quando o <xref:System.Web.UI.HierarchicalDataSourceView.Select%2A> método é chamado. Como todos os objetos de exibição de fonte de dados hierárquicos, o <xref:System.Web.UI.WebControls.SiteMapDataSourceView> não nomeados; em vez disso, seu é identificado por seu caminho hierárquico exclusivo.  
+  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> é uma classe wrapper em uma <xref:System.Web.SiteMapNodeCollection> coleção. O <xref:System.Web.SiteMapNodeCollection> classe implementa o <xref:System.Web.UI.IHierarchicalEnumerable> interface, que o <xref:System.Web.UI.WebControls.SiteMapDataSourceView> classe retorna de uma chamada para `Select` método. Porque o <xref:System.Web.UI.WebControls.SiteMapDataSource> e <xref:System.Web.UI.WebControls.SiteMapDataSourceView> funcionam com <xref:System.Web.SiteMapNode> objetos, a exibição mantém interno <xref:System.Web.SiteMapNodeCollection> para contê-los. A coleção foi inicializada usando construtores do modo de exibição e acessados com o <xref:System.Web.UI.WebControls.SiteMapDataSourceView.Select%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapDataSourceView (System.Web.UI.WebControls.SiteMapDataSource owner, string name, System.Web.SiteMapNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.SiteMapDataSource owner, string name, class System.Web.SiteMapNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSourceView.#ctor(System.Web.UI.WebControls.SiteMapDataSource,System.String,System.Web.SiteMapNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.SiteMapDataSource" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="node" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> que o <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> está associado.</param>
+        <param name="name">O nome da exibição.</param>
+        <param name="node">O <see cref="T:System.Web.SiteMapNode" /> para adicionar a interno <see cref="T:System.Web.SiteMapNodeCollection" />.</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> classe, adicionando o único nó especificado à coleção interna de nós.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> classe é uma classe wrapper em uma <xref:System.Web.SiteMapNodeCollection> objeto. Criando um <xref:System.Web.UI.WebControls.SiteMapDataSourceView> usando o <xref:System.Web.UI.WebControls.SiteMapDataSourceView.%23ctor%2A> construtor inicializa a coleção de nó interno com uma única <xref:System.Web.SiteMapNode> objeto. A estrutura de mapa de site é direcionada usando o nó como um ponto de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapDataSourceView (System.Web.UI.WebControls.SiteMapDataSource owner, string name, System.Web.SiteMapNodeCollection collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.SiteMapDataSource owner, string name, class System.Web.SiteMapNodeCollection collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSourceView.#ctor(System.Web.UI.WebControls.SiteMapDataSource,System.String,System.Web.SiteMapNodeCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.SiteMapDataSource" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="collection" Type="System.Web.SiteMapNodeCollection" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> que o <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> está associado.</param>
+        <param name="name">O nome da exibição.</param>
+        <param name="collection">Um <see cref="T:System.Web.SiteMapNodeCollection" /> de nós que o <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> fornece uma exibição de.</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.SiteMapDataSourceView" /> classe, definindo a coleção interna de nós para a coleção de nó especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> classe é uma classe wrapper em uma <xref:System.Web.SiteMapNodeCollection> objeto. Criando um <xref:System.Web.UI.WebControls.SiteMapDataSourceView> usando o <xref:System.Web.UI.WebControls.SiteMapDataSourceView.%23ctor%2A> construtor inicializa a coleção de nó interno com o <xref:System.Web.SiteMapNodeCollection> que é transmitido ao construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSelect">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerable ExecuteSelect (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Collections.IEnumerable ExecuteSelect(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> que é usado para solicitar operações nos dados além da recuperação de dados básico.</param>
+        <summary>Obtém a coleção do <see cref="T:System.Web.SiteMapNode" /> objetos que representa a estrutura de navegação do site para o usuário atual.</summary>
+        <returns>Um <see cref="T:System.Web.SiteMapNodeCollection" /> que representa a estrutura de navegação do site para o usuário atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> classe implementa o herdadas <xref:System.Web.UI.WebControls.SiteMapDataSourceView.ExecuteSelect%2A> método para recuperar um conjunto de nós que representa a estrutura de navegação do site para o aplicativo ASP.NET atual. Os desenvolvedores de páginas e autores de controle associado a dados não chamar o <xref:System.Web.UI.WebControls.SiteMapDataSourceView.ExecuteSelect%2A> método diretamente; em vez disso, use o exposto publicamente <xref:System.Web.UI.WebControls.SiteMapDataSourceView.Select%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <paramref name="arguments" /> passado para o <see cref="M:System.Web.UI.WebControls.SiteMapDataSourceView.Select(System.Web.UI.DataSourceSelectArguments)" /> especificar que a fonte de dados deve realizar algum trabalho adicional ao recuperar dados para habilitar a paginação ou classificar os dados recuperados, mas o controle de fonte de dados não suporta o recurso solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceViewChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDataSourceViewChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataSourceViewChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSourceView.OnDataSourceViewChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.DataSourceView.DataSourceViewChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Select (System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable Select(class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapDataSourceView.Select(System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> que é usado para solicitar operações nos dados além da recuperação de dados básico.</param>
+        <summary>Obtém a coleção do <see cref="T:System.Web.SiteMapNode" /> objetos que representa a estrutura de navegação do site para o usuário atual.</summary>
+        <returns>Um <see cref="T:System.Web.SiteMapNodeCollection" /> que representa a estrutura de navegação do site para o usuário atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSourceView.Select%2A> chamadas de método de <xref:System.Web.UI.WebControls.SiteMapDataSourceView.ExecuteSelect%2A> método, passando o `arguments` parâmetro. O <xref:System.Web.UI.WebControls.SiteMapDataSourceView.Select%2A> método é usado por desenvolvedores de controles, mas ele não é usado por desenvolvedores de página nem no código da página.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O <paramref name="arguments" /> passado para o <see cref="M:System.Web.UI.WebControls.SiteMapDataSourceView.Select(System.Web.UI.DataSourceSelectArguments)" /> especificar que a fonte de dados deve realizar algum trabalho adicional ao recuperar dados para habilitar a paginação ou classificar os dados recuperados, mas o controle de fonte de dados não suporta o recurso solicitado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

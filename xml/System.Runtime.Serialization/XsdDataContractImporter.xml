@@ -1,0 +1,489 @@
+<Type Name="XsdDataContractImporter" FullName="System.Runtime.Serialization.XsdDataContractImporter">
+  <TypeSignature Language="C#" Value="public class XsdDataContractImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XsdDataContractImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.XsdDataContractImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite a transformação de um conjunto de arquivos de esquema XML (.xsd) em tipos CLR (Common Language Runtime).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.Serialization.XsdDataContractImporter> se você estiver criando um serviço Web que deve interoperar com um serviço da Web existente ou criar um contrato de dados, tipos de esquemas XML. <xref:System.Runtime.Serialization.XsdDataContractImporter>será transformar um conjunto de esquemas XML e criar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] de contrato de tipos que representam os dados em uma linguagem de programação selecionada. Para criar o código, use as classes de <xref:System.CodeDom> namespace.  
+  
+ Por outro lado, use o <xref:System.Runtime.Serialization.XsdDataContractExporter> classe quando você criou um serviço Web que incorpora dados representados pelos tipos CLR e quando você precisa exportar esquemas XML para cada tipo de dados a serem consumidos por outros serviços da Web. Ou seja, <xref:System.Runtime.Serialization.XsdDataContractExporter> transforma um conjunto de tipos CLR em um conjunto de esquemas XML.  
+  
+> [!NOTE]
+>  Para gerar tipos CLR de esquemas XML no tempo de design, use o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Código gerado a partir de arquivos XSD, usar o `/dataContractOnly` switch da ferramenta. Você também pode usar o <xref:System.Runtime.Serialization.XsdDataContractImporter> se você precisa de mais controle sobre o processo de ou precisa ser feito por meio de programação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Schema.XmlSchemaSet> e chama o <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%2A> método para criar um <xref:System.CodeDom.CodeCompileUnit>. O <xref:System.CodeDom.CodeCompileUnit> é usado para criar arquivos de código do Visual c# e Visual Basic.  
+  
+ [!code-csharp[XsdDataContractImporter#0](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs#0)]
+ [!code-vb[XsdDataContractImporter#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XsdDataContractImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.XsdDataContractImporter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XsdDataContractImporter (System.CodeDom.CodeCompileUnit codeCompileUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeCompileUnit codeCompileUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.#ctor(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="codeCompileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> que será usado para armazenar o código.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Serialization.XsdDataContractImporter" /> classe com o <see cref="T:System.CodeDom.CodeCompileUnit" /> que será usado para gerar o código CLR.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para adicionar mais código em um <xref:System.CodeDom.CodeCompileUnit> que já foi gerado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Schema.XmlSchemaSet> e chama o <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%2A> método para criar um <xref:System.CodeDom.CodeCompileUnit>. O <xref:System.CodeDom.CodeCompileUnit> é usado para criar arquivos de código do Visual c# e Visual Basic.  
+  
+ [!code-csharp[XsdDataContractImporter#1](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs#1)]
+ [!code-vb[XsdDataContractImporter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CanImport">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém um valor que indica se os esquemas podem ser transformados em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre os tipos que podem ser importados, consulte [tipos suportados pelo serializador de contrato de dados](~/docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CanImport">
+      <MemberSignature Language="C#" Value="public bool CanImport (System.Xml.Schema.XmlSchemaSet schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanImport(class System.Xml.Schema.XmlSchemaSet schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.CanImport(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém os esquemas para transformar.</param>
+        <summary>Obtém um valor que indica se os esquemas contidos em um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> podem ser transformados em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <returns>
+          <see langword="true" />Se os esquemas podem ser transformados em tipos de contrato de dados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> método para determinar se o <xref:System.CodeDom.CodeCompileUnit> pode ser gerado.  
+  
+ [!code-csharp[XsdDataContractImporter#2](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs#2)]
+ [!code-vb[XsdDataContractImporter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="schemas" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">Um contrato de dados envolvido na importação é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanImport">
+      <MemberSignature Language="C#" Value="public bool CanImport (System.Xml.Schema.XmlSchemaSet schemas, System.Collections.Generic.ICollection&lt;System.Xml.XmlQualifiedName&gt; typeNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanImport(class System.Xml.Schema.XmlSchemaSet schemas, class System.Collections.Generic.ICollection`1&lt;class System.Xml.XmlQualifiedName&gt; typeNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.CanImport(System.Xml.Schema.XmlSchemaSet,System.Collections.Generic.ICollection{System.Xml.XmlQualifiedName})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="typeNames" Type="System.Collections.Generic.ICollection&lt;System.Xml.XmlQualifiedName&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém os esquemas para transformar.</param>
+        <param name="typeNames">Um <see cref="T:System.Collections.Generic.ICollection`1" /> de <see cref="T:System.Xml.XmlQualifiedName" /> que representa o conjunto de tipos de esquema para importar.</param>
+        <summary>Obtém um valor que indica se o conjunto especificado de tipos contidos em um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> podem ser transformados em tipos CLR gerados em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <returns>
+          <see langword="true" />Se os esquemas podem ser transformados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="schemas" /> ou <paramref name="typeNames" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">Um contrato de dados envolvido na importação é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanImport">
+      <MemberSignature Language="C#" Value="public bool CanImport (System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.XmlSchemaElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanImport(class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.XmlSchemaElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.CanImport(System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.XmlSchemaElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="element" Type="System.Xml.Schema.XmlSchemaElement" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> para importar.</param>
+        <param name="element">Um determinado <see cref="T:System.Xml.Schema.XmlSchemaElement" /> fazer check-in do conjunto de esquemas.</param>
+        <summary>Obtém um valor que indica se um elemento de esquema específica contida em um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> pode ser importado.</summary>
+        <returns>
+          <see langword="true" />Se o elemento pode ser importado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método verifica o tipo e todos os tipos de esquema referenciados dele.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="schemas" /> ou <paramref name="element" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">Um contrato de dados envolvido na importação é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanImport">
+      <MemberSignature Language="C#" Value="public bool CanImport (System.Xml.Schema.XmlSchemaSet schemas, System.Xml.XmlQualifiedName typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanImport(class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.XmlQualifiedName typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.CanImport(System.Xml.Schema.XmlSchemaSet,System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém as representações de esquema.</param>
+        <param name="typeName">Um <see cref="T:System.Collections.IList" /> de <see cref="T:System.Xml.XmlQualifiedName" /> que especifica os nomes dos tipos de esquema que precisam ser importadas do <see cref="T:System.Xml.Schema.XmlSchemaSet" />.</param>
+        <summary>Obtém um valor que indica se os esquemas contidos em um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> podem ser transformados em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <returns>
+          <see langword="true" />Se os esquemas podem ser transformados em tipos de contrato de dados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre os tipos que podem ser importados, consulte [tipos suportados pelo serializador de contrato de dados](~/docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="schemas" /> ou <paramref name="typeName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.InvalidDataContractException">Um contrato de dados envolvido na importação é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeCompileUnit">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeCompileUnit CodeCompileUnit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeCompileUnit CodeCompileUnit" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.CodeDom.CodeCompileUnit" /> usado para armazenar os tipos CLR gerados.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeCompileUnit" /> usado para armazenar os tipos CLR gerados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esta propriedade depois de importar esquemas usando o <xref:System.Runtime.Serialization.XsdDataContractImporter> para acessar o <xref:System.CodeDom.CodeCompileUnit> em que todos o código gerado é armazenado.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir usa cria um <xref:System.CodeDom.CodeCompileUnit>. O <xref:System.CodeDom.CodeCompileUnit> é usado para criar o arquivo de código de um Visual c# e Visual Basic.  
+  
+ [!code-csharp[XsdDataContractImporter#1](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs#1)]
+ [!code-vb[XsdDataContractImporter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeTypeReference">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference GetCodeTypeReference (System.Xml.XmlQualifiedName typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.CodeTypeReference GetCodeTypeReference(class System.Xml.XmlQualifiedName typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.GetCodeTypeReference(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o tipo de esquema a ser procurada.</param>
+        <summary>Retorna um <see cref="T:System.CodeDom.CodeTypeReference" /> para o tipo CLR gerado para o tipo de esquema com especificado <see cref="T:System.Xml.XmlQualifiedName" />.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeTypeReference" /> referência ao tipo CLR gerado para o tipo de esquema com o <paramref name="typeName" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para pesquisar a referência a um tipo CLR gerado depois de chamar o <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%2A> método. O <xref:System.CodeDom.CodeTypeReference> contém o nome do tipo gerado e pode ser usado para pesquisar o correspondente <xref:System.CodeDom.CodeTypeDeclaration> no <xref:System.CodeDom.CodeCompileUnit>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeTypeReference">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference GetCodeTypeReference (System.Xml.XmlQualifiedName typeName, System.Xml.Schema.XmlSchemaElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.CodeDom.CodeTypeReference GetCodeTypeReference(class System.Xml.XmlQualifiedName typeName, class System.Xml.Schema.XmlSchemaElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.GetCodeTypeReference(System.Xml.XmlQualifiedName,System.Xml.Schema.XmlSchemaElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+        <Parameter Name="element" Type="System.Xml.Schema.XmlSchemaElement" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Um <see cref="T:System.Xml.XmlQualifiedName" /> que especifica o nome qualificado XML do tipo de esquema para pesquisar.</param>
+        <param name="element">Um <see cref="T:System.Xml.Schema.XmlSchemaElement" /> que especifica um elemento em um esquema XML.</param>
+        <summary>Retorna um <see cref="T:System.CodeDom.CodeTypeReference" /> para o XML especificado qualificado elemento e elemento de esquema.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeTypeReference" /> que representa o tipo que foi gerado para o tipo de esquema especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento de esquema é necessária para dados sobre o tipo especificado no escopo do elemento. O exemplo principal é o atributo XSD `nillable`. No esquema, configuração `nillable` para `true` é especificado no elemento do esquema que contém enquanto o conceito de null é expresso no tipo CLR <xref:System.Nullable%601>. O elemento é passado de modo que este importador pode consultar as informações de nível de elemento e retornar a referência do tipo correto adequadamente.  
+  
+ Ao importar WSDL, cada parâmetro é importado separadamente e, portanto, os elementos do parâmetro precisam ser passados separadamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKnownTypeReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.CodeDom.CodeTypeReference&gt; GetKnownTypeReferences (System.Xml.XmlQualifiedName typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;class System.CodeDom.CodeTypeReference&gt; GetKnownTypeReferences(class System.Xml.XmlQualifiedName typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.GetKnownTypeReferences(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.CodeDom.CodeTypeReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa o tipo de esquema para tipos conhecidos para pesquisar.</param>
+        <summary>Retorna uma lista de <see cref="T:System.CodeDom.CodeTypeReference" /> objetos que representam os tipos conhecidos gerados durante a geração de código para o tipo de esquema especificado.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IList`1" /> do tipo <see cref="T:System.CodeDom.CodeTypeReference" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao gerar tipos CLR para tipos de esquema, tipos conhecidos são também gerados para todos os tipos derivados que estão presentes no esquema. Em muitos casos, esses tipos conhecidos são adicionados usando atributos para o código gerado. (Por exemplo, consulte o <xref:System.Runtime.Serialization.KnownTypeAttribute> classe. ) No entanto, para o tipo de nível superior, deve ser uma maneira de retornar o conjunto de tipos conhecidos gerado. Esse método retorna o <xref:System.CodeDom.CodeTypeReference> de tipos conhecidos que foram gerados para um tipo de esquema específico.  
+  
+ Para obter mais informações, consulte [tipos conhecidos de contrato de dados](~/docs/framework/wcf/feature-details/data-contract-known-types.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public void Import (System.Xml.Schema.XmlSchemaSet schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Import(class System.Xml.Schema.XmlSchemaSet schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.Import(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém as representações de esquema para gerar tipos CLR para.</param>
+        <summary>Transforma o conjunto especificado de esquemas XML contidos em um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> método para testar se um conjunto de esquemas pode ser importado. Se o <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> método `true`, o código invoca o <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%2A> método.  
+  
+ [!code-csharp[XsdDataContractImporter#2](~/samples/snippets/csharp/VS_Snippets_CFX/xsddatacontractimporter/cs/xsddatacontractimporterexample.cs#2)]
+ [!code-vb[XsdDataContractImporter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/xsddatacontractimporter/vb/xsddatacontractimporterexample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="schemas" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public void Import (System.Xml.Schema.XmlSchemaSet schemas, System.Collections.Generic.ICollection&lt;System.Xml.XmlQualifiedName&gt; typeNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Import(class System.Xml.Schema.XmlSchemaSet schemas, class System.Collections.Generic.ICollection`1&lt;class System.Xml.XmlQualifiedName&gt; typeNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.Import(System.Xml.Schema.XmlSchemaSet,System.Collections.Generic.ICollection{System.Xml.XmlQualifiedName})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="typeNames" Type="System.Collections.Generic.ICollection&lt;System.Xml.XmlQualifiedName&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém as representações de esquema.</param>
+        <param name="typeNames">Um <see cref="T:System.Collections.Generic.ICollection`1" /> (de <see cref="T:System.Xml.XmlQualifiedName" />) que representa o conjunto de tipos de esquema para importar.</param>
+        <summary>Transforma o conjunto especificado de tipos de esquema contido em um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em tipos CLR gerados em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Import (System.Xml.Schema.XmlSchemaSet schemas, System.Xml.Schema.XmlSchemaElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlQualifiedName Import(class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.Schema.XmlSchemaElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.Import(System.Xml.Schema.XmlSchemaSet,System.Xml.Schema.XmlSchemaElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="element" Type="System.Xml.Schema.XmlSchemaElement" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém os esquemas para transformar.</param>
+        <param name="element">Um <see cref="T:System.Xml.Schema.XmlSchemaElement" /> que representa o elemento de esquema específico para transformar.</param>
+        <summary>Transforma o elemento de esquema especificado no conjunto de esquemas XML especificados em uma <see cref="T:System.CodeDom.CodeCompileUnit" /> e retorna um <see cref="T:System.Xml.XmlQualifiedName" /> que representa o nome de contrato de dados para o elemento especificado.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa o elemento especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="schemas" /> ou <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public void Import (System.Xml.Schema.XmlSchemaSet schemas, System.Xml.XmlQualifiedName typeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Import(class System.Xml.Schema.XmlSchemaSet schemas, class System.Xml.XmlQualifiedName typeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XsdDataContractImporter.Import(System.Xml.Schema.XmlSchemaSet,System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Schema.XmlSchemaSet" />
+        <Parameter Name="typeName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> que contém as representações de esquema.</param>
+        <param name="typeName">Um <see cref="T:System.Xml.XmlQualifiedName" /> que representa um tipo de esquema específico para importar.</param>
+        <summary>Transforma o tipo de esquema XML especificado contido em um <see cref="T:System.Xml.Schema.XmlSchemaSet" /> em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="schemas" /> ou <paramref name="typeName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ImportOptions Options { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ImportOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.XsdDataContractImporter.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ImportOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Runtime.Serialization.ImportOptions" /> que contém opções configuráveis para a operação de importação.</summary>
+        <value>Um <see cref="T:System.Runtime.Serialization.ImportOptions" /> que contém opções configuráveis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Runtime.Serialization.ImportOptions> classe para personalizar como os tipos CLR são gerados durante a importação de esquema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

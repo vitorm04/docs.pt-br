@@ -1,0 +1,8 @@
+<Namespace Name="System.Runtime.Serialization.Configuration">
+  <Docs>
+    <summary>O namespace System.Runtime.Serialization.Configuration contém classes usadas para ler os valores encontrados na configuração do aplicativo na seção Serialization.  
+  
+ As classes neste namespace são usadas pela infraestrutura de serialização para lidar com os elementos de configuração e não podem ser usadas diretamente. Em vez disso, para configurar o DataContractSerializer, crie um arquivo de configuração do aplicativo e usar os seguintes elementos XML. &lt;Serialization&gt;&lt;dataContractSerializer&gt;&lt;declaredTypes&gt;&lt;adicionar&gt; elemento para &lt;declaredTypes&gt; &lt;knownType&gt; elemento</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

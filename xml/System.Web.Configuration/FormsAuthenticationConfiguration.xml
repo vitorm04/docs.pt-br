@@ -1,0 +1,633 @@
+<Type Name="FormsAuthenticationConfiguration" FullName="System.Web.Configuration.FormsAuthenticationConfiguration">
+  <TypeSignature Language="C#" Value="public sealed class FormsAuthenticationConfiguration : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormsAuthenticationConfiguration extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.FormsAuthenticationConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura um aplicativo ASP.NET para usar a modalidade de formas <see cref="T:System.Web.Configuration.AuthenticationMode" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration> classe fornece uma maneira de acessar e modificar programaticamente o `forms` elemento de uma configuração de `authentication` seção.  
+  
+ Esse tipo é parte de um grupo que inclui o <xref:System.Web.Configuration.FormsAuthenticationCredentials>, o <xref:System.Web.Configuration.FormsAuthenticationUserCollection>e o <xref:System.Web.Configuration.FormsAuthenticationUser> tipos. Os tipos que não seja o tipo de coleção afetam diretamente as marcas de configuração subjacentes.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.FormsAuthenticationConfiguration> pode gravar informações para a seção correspondente do arquivo de configuração de acordo com as restrições definidas pela propriedade seção <xref:System.Configuration.SectionInformation.AllowDefinition%2A> cujo valor é <xref:System.Configuration.ConfigurationAllowDefinition.MachineToApplication>. Qualquer tentativa de gravar em um arquivo de configuração em um nível não é permitido na hierarquia resulta em uma mensagem de erro gerada pelo analisador. No entanto, você pode usar essa classe para ler informações de configuração em qualquer nível na hierarquia. Para escalabilidade e segurança, é recomendável que você usar um repositório externo, como um banco de dados para manter as credenciais dos usuários.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.FormsAuthenticationConfiguration> objeto do arquivo de configuração de um aplicativo Web existente. Você pode usar esse objeto para acessar seus membros. O arquivo de configuração contém uma configuração semelhante à seguinte.  
+  
+ **Observação** se você usar o `credentials` seção, certifique-se de seguir as diretrizes explicadas em [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Escalabilidade e melhor segurança, é recomendável que você use um banco de dados externo para armazenar as credenciais dos usuários. Para obter mais informações sobre como criar ASP.NET seguros aplicativos pesquisar o site da Microsoft MSDN (msdn.microsoft.com) "Protegendo seu aplicativo ASP.NET" e "aplicativos ASP.NET seguros de construção: autenticação, autorização e seguro Comunicação".  
+  
+```  
+<authentication mode="Forms">  
+  <forms name="MyAppCookie" loginUrl="login.aspx"  
+    defaultUrl="default.aspx"  
+    protection="Encryption" timeout="5" path="aspnetTest"  
+    slidingExpiration="false"  
+    cookieless="UseCookies" domain="domainName">  
+    <credentials passwordFormat="SHA1">  
+      <user name="aspnetuser1"  
+        password="5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8"/>  
+       <user name="aspnetuser2"  
+         password="E38AD214943DAAD1D64C102FAEC29DE4AFE9DA3D"/>  
+    </credentials>            
+  </forms>  
+</authentication>   
+```  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#1)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormsAuthenticationConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.FormsAuthenticationConfiguration.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.FormsAuthenticationConfiguration" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Web.Configuration.FormsAuthenticationConfiguration> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#2)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookieless">
+      <MemberSignature Language="C#" Value="public System.Web.HttpCookieMode Cookieless { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.HttpCookieMode Cookieless" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Cookieless" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("cookieless", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpCookieMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a autenticação baseada em formulários deve usar cookies.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.HttpCookieMode" />. O valor padrão é <see cref="F:System.Web.HttpCookieMode.UseDeviceProfile" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Cookieless%2A> propriedade define se a autenticação baseada em formulários deve usar um cookie para trocar informações de usuário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Cookieless%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#5)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.FormsAuthenticationCredentials Credentials { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.FormsAuthenticationCredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("credentials")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsAuthenticationCredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.FormsAuthenticationCredentials" /> coleção de nomes de usuário e senhas.</summary>
+        <value>Um <see cref="T:System.Web.Configuration.FormsAuthenticationCredentials" /> coleção que contém os nomes de usuário e senhas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Credentials%2A> propriedade obtém os nomes de usuário e senhas para usar durante a autenticação baseada em formulários.  
+  
+> [!NOTE]
+>  Quando a segurança é necessária, você deve usar modos alternativos de armazenar os nomes de usuário e senhas. Por exemplo, em um armazenamento de banco de dados. Se você decidir usar essa coleção, você deve usar o recurso de criptografia fornecida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Credentials%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#14](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#14)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultUrl">
+      <MemberSignature Language="C#" Value="public string DefaultUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.DefaultUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultUrl", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL padrão.</summary>
+        <value>A URL para o qual a solicitação de redirecionamento após a autenticação. O valor padrão é default. aspx.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.DefaultUrl%2A> é usado quando o usuário acessa a página de logon diretamente ou se um retorno de URL não for fornecida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.DefaultUrl%2A>. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#4)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("domain", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de domínio para ser enviada com os cookies de autenticação de formulários.</summary>
+        <value>O nome do domínio para a saída de cookies de autenticação de formulários. Padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Domain%2A> é usado para os cookies de autenticação.  
+  
+ Essa propriedade corresponde ao valor de <xref:System.Web.HttpCookie.Domain%2A?displayProperty=nameWithType>.  
+  
+ Essa configuração terá precedência sobre o `domain` atributo da seção de cookies de autenticação de formulários.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Domain%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#6)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCrossAppRedirects">
+      <MemberSignature Language="C#" Value="public bool EnableCrossAppRedirects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableCrossAppRedirects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.EnableCrossAppRedirects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableCrossAppRedirects", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os usuários autenticados podem ser redirecionados para URLS em outros aplicativos.</summary>
+        <value>True se os usuários autenticados podem ser redirecionados para URLs em outros aplicativos. Caso contrário, false. O padrão é falso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.EnableCrossAppRedirects%2A> o valor da propriedade define o atributo enableCrossAppRedirects do `forms` na autenticação de seção de configuração.  
+  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.EnableCrossAppRedirects%2A> propriedade é verificada pelo <xref:System.Web.Configuration.FormsAuthenticationConfiguration.EnableCrossAppRedirects%2A> método quando o redirecionamento para uma URL que não está no aplicativo atual. Se <xref:System.Web.Configuration.FormsAuthenticationConfiguration.EnableCrossAppRedirects%2A> for true, em seguida, o redirecionamento é executado; caso contrário, o navegador é redirecionado para a página definida no <xref:System.Web.Security.FormsAuthentication.DefaultUrl%2A> propriedade.  
+  
+> [!NOTE]
+>  Quando realizar redirecionamentos em aplicativos, você deve assegurar que vários atributos no `form` seção de configuração são duplicados em todos os aplicativos autenticados. Para obter mais informações e um exemplo, consulte [autenticação de formulários em aplicativos](http://msdn.microsoft.com/library/99e2f9e8-5b97-4a4d-a4ed-5f93276053b7).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.EnableCrossAppRedirects%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#8)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginUrl">
+      <MemberSignature Language="C#" Value="public string LoginUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoginUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.LoginUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("loginUrl", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL de redirecionamento para a solicitação.</summary>
+        <value>A URL para a qual a solicitação é redirecionada quando o usuário não é autenticado. O valor padrão é login.aspx.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.LoginUrl%2A> propriedade especifica a URL de redirecionamento para a solicitação quando o usuário não está autenticado ou quando nenhum cookie de autenticação válido existe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.LoginUrl%2A>. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#3)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("name", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do cookie.</summary>
+        <value>O nome do cookie HTTP a ser usado para autenticação de solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Name%2A> propriedade consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.aspx.cs#21)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.aspx.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("path", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do cookie.</summary>
+        <value>O caminho do cookie HTTP a ser usado para autenticação. O valor padrão é uma barra (/), que representa a raiz do aplicativo Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Path%2A> propriedade indica onde o cookie de autenticação reside e é transmitido junto com o cookie de autenticação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Path%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#9)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Protection">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.FormsProtectionEnum Protection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.FormsProtectionEnum Protection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Protection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("protection", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.FormsProtectionEnum</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de criptografia usado para criptografar o cookie.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.Configuration.FormsProtectionEnum" />. O valor padrão é <see langword="All" />.  
+  
+ **Observação** Certifique-se de usar o valor padrão para essa propriedade se desejar que a validação de dados e criptografia para ajudar a proteger o cookie. Essa opção usa o algoritmo de validação de dados configurado com base no <see langword="machineKey" />. DES triplo (3DES) é usado para criptografia, se disponível e se a chave for longa o bastante (48 bytes ou mais).  
+  
+ Para melhorar a proteção de seus cookies, você talvez queira definir o <see cref="P:System.Web.Configuration.FormsAuthenticationConfiguration.RequireSSL" /> para <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Protection%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#11)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSSL">
+      <MemberSignature Language="C#" Value="public bool RequireSSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSSL" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.RequireSSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requireSSL", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma conexão Secure Sockets Layer (SSL) é necessária durante a transmissão de informações de autenticação.</summary>
+        <value>
+          <see langword="true" />Se uma conexão SSL é obrigatória. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.FormsAuthenticationConfiguration.RequireSSL%2A> é `true`, um aplicativo Web rejeita todas as solicitações de autenticação de formulários que não usam uma conexão SSL.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.RequireSSL%2A> propriedade consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#2)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SlidingExpiration">
+      <MemberSignature Language="C#" Value="public bool SlidingExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SlidingExpiration" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.SlidingExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("slidingExpiration", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expiração deslizante da autenticação.</summary>
+        <value>
+          <see langword="true" /> se a expiração deslizante estiver habilitada; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.SlidingExpiration%2A> é definido como `true`o tempo de intervalo durante o qual o cookie de autenticação é válido é redefinido para a expiração de <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Timeout%2A> valor da propriedade. Isso ocorre se o usuário navega depois metade do tempo limite expirou. Por exemplo, se você definir uma expiração de 20 minutos usando a expiração deslizante, um usuário pode visitar o site às 2:00 e receber um cookie que é definido para expirar às 14:20:00. A expiração é atualizada apenas se o usuário acessa o site após 2:10 horas. Se o usuário acessa o site às 14:09:00, o cookie não é atualizado porque a metade do tempo de expiração não passou. Se o usuário, em seguida, aguarda 12 minutos, visitando o site às 14:21:00, o cookie expirará.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.SlidingExpiration%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#7)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TicketCompatibilityMode">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TicketCompatibilityMode TicketCompatibilityMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.TicketCompatibilityMode TicketCompatibilityMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.TicketCompatibilityMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("ticketCompatibilityMode", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TicketCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor que indica se UTC (Tempo Universal Coordenado) ou o horário local deve ser usado para a data de validade de tíquetes.</summary>
+        <value>O modo de compatibilidade de data de expiração de tíquetes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é a hora local conforme expresso pelo <xref:System.Web.Configuration.TicketCompatibilityMode.Framework20> valor de enumeração.  
+  
+   
+  
+## Examples  
+ <xref:System.Web.Configuration.TicketCompatibilityMode>  
+  
+ [Elemento de formulários para autenticação (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public TimeSpan Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.FormsAuthenticationConfiguration.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Configuration.TimeSpanMinutesConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("timeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.TimeSpanValidator(MaxValueString="10675199.02:48:05.4775807", MinValueString="00:01:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite de autenticação.</summary>
+        <value>A quantidade de tempo, em minutos, após a autenticação expirar. O valor padrão é 30 minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como acessar o <xref:System.Web.Configuration.FormsAuthenticationConfiguration.Timeout%2A> propriedade. Consulte o exemplo de código a <xref:System.Web.Configuration.FormsAuthenticationConfiguration> tópico para saber como obter a seção sobre a classe.  
+  
+ [!code-csharp[System.Web.Configuration.FormsAuthenticationConfiguration#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/CS/formsauthenticationconfiguration.cs#10)]
+ [!code-vb[System.Web.Configuration.FormsAuthenticationConfiguration#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.FormsAuthenticationConfiguration/VB/formsauthenticationconfiguration.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

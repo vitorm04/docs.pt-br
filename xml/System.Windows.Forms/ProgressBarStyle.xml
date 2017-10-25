@@ -1,0 +1,73 @@
+<Type Name="ProgressBarStyle" FullName="System.Windows.Forms.ProgressBarStyle">
+  <TypeSignature Language="C#" Value="public enum ProgressBarStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ProgressBarStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ProgressBarStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estilo que um <see cref="T:System.Windows.Forms.ProgressBar" /> usa para indicar o andamento de uma operação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o estilo da marca de seleção quando você precisa indicar progresso está sendo feito, mas você não pode indicar a quantidade de progresso. O estilo da marca de seleção é válido somente quando os estilos visuais estão habilitados. O estilo contínuo é válido somente quando os estilos visuais não estão habilitados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Blocks">
+      <MemberSignature Language="C#" Value="Blocks" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ProgressBarStyle Blocks = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ProgressBarStyle.Blocks" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ProgressBarStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o andamento, aumentando o número de blocos segmentados em um <see cref="T:System.Windows.Forms.ProgressBar" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Continuous">
+      <MemberSignature Language="C#" Value="Continuous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ProgressBarStyle Continuous = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ProgressBarStyle.Continuous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ProgressBarStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o andamento, aumentando o tamanho de uma barra simples e contínua em um <see cref="T:System.Windows.Forms.ProgressBar" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Marquee">
+      <MemberSignature Language="C#" Value="Marquee" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ProgressBarStyle Marquee = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ProgressBarStyle.Marquee" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ProgressBarStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o andamento ao rolar continuamente um bloco em um <see cref="T:System.Windows.Forms.ProgressBar" /> em um estilo letreiro.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,369 @@
+<Type Name="InvalidProjectFileException" FullName="Microsoft.Build.Exceptions.InvalidProjectFileException">
+  <TypeSignature Language="C#" Value="public sealed class InvalidProjectFileException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit InvalidProjectFileException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Exceptions.InvalidProjectFileException" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa exceção é gerada sempre que há um problema com o arquivo de projeto XML do usuário. O problema pode ser semântico ou sintático. A última opção seria de um tipo normalmente capturado pela validação XSD (se ela foi executada pelo gravador do projeto).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ AVISO: a marcação de um tipo [Serializable] sem implementar ISerializable impõe um contrato de serialização -- trata-se uma promessa de nunca alterar os campos do tipo, ou seja, o tipo é imutável; a adição de novos campos na próxima versão do tipo sem seguir determinadas diretrizes especiais de FX pode afetar a compatibilidade com versões anteriores e posteriores  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InvalidProjectFileException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor só existe para atender às diretrizes de codificação do .NET. Use um construtor avançado sempre que possível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InvalidProjectFileException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro.</param>
+        <summary>Cria uma instância desta exceção usando a mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor só existe para atender às diretrizes de codificação do .NET. Use um construtor avançado sempre que possível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InvalidProjectFileException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro.</param>
+        <param name="innerException">A exceção interna.</param>
+        <summary>Cria uma instância dessa exceção usando a mensagem de erro especificada e a exceção interna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor só existe para atender às diretrizes de codificação do .NET. Use um construtor avançado sempre que possível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidProjectFileException (string projectFile, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, string message, string errorSubcategory, string errorCode, string helpKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string projectFile, int32 lineNumber, int32 columnNumber, int32 endLineNumber, int32 endColumnNumber, string message, string errorSubcategory, string errorCode, string helpKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InvalidProjectFileException.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="projectFile" Type="System.String" />
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="columnNumber" Type="System.Int32" />
+        <Parameter Name="endLineNumber" Type="System.Int32" />
+        <Parameter Name="endColumnNumber" Type="System.Int32" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorSubcategory" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.String" />
+        <Parameter Name="helpKeyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="projectFile">O arquivo de projeto inválido (pode ser a cadeia de caracteres vazia).</param>
+        <param name="lineNumber">O número de linha inválido no projeto (definido como zero se não estiver disponível).</param>
+        <param name="columnNumber">O número de coluna inválido no projeto (definido como zero se não estiver disponível).</param>
+        <param name="endLineNumber">O final de um intervalo de linhas inválidos no projeto (definido como zero se não estiver disponível).</param>
+        <param name="endColumnNumber">O final de um intervalo de colunas inválidas no projeto (definido como zero se não estiver disponível).</param>
+        <param name="message">Mensagem de erro de exceção.</param>
+        <param name="errorSubcategory">Erro subcategoria que descreve o erro (pode ser nulo).</param>
+        <param name="errorCode">O código de erro (pode ser nulo).</param>
+        <param name="helpKeyword">A Ajuda de F1 palavra-chave para o host IDE (pode ser nulo).</param>
+        <summary>Cria uma instância dessa exceção usando as informações de erros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é preferível a construtores básico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseMessage">
+      <MemberSignature Language="C#" Value="public string BaseMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.BaseMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de exceção não incluindo o arquivo de projeto.</summary>
+        <value>A erro mensagem somente cadeia de caracteres.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnNumber">
+      <MemberSignature Language="C#" Value="public int ColumnNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.ColumnNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de coluna inválido (se houver) no projeto.</summary>
+        <value>O número de coluna inválido, ou zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndColumnNumber">
+      <MemberSignature Language="C#" Value="public int EndColumnNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndColumnNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.EndColumnNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o última coluna número (se houver) de um intervalo de colunas inválidas do projeto.</summary>
+        <value>O último número de coluna inválido, ou zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLineNumber">
+      <MemberSignature Language="C#" Value="public int EndLineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndLineNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.EndLineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da última linha (se houver) um intervalo de linhas inválidos no projeto.</summary>
+        <value>O último número de linha inválido, ou zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public string ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de erro (se houver) associado com a mensagem de exceção.</summary>
+        <value>Cadeia de caracteres de código de erro, ou nulo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorSubcategory">
+      <MemberSignature Language="C#" Value="public string ErrorSubcategory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorSubcategory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.ErrorSubcategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a subcategoria de erro (se houver) que descreve o tipo do erro.</summary>
+        <value>A cadeia de caracteres de subcategoria, ou nulo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Exceptions.InvalidProjectFileException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">As informações de erro.</param>
+        <param name="context">O contexto de erro.</param>
+        <summary>Método iSerializable que podemos deve substituir desde exceção implementa essa interface se nós nunca adicionar novos membros a esta classe, vamos precisar atualizá-lo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasBeenLogged">
+      <MemberSignature Language="C#" Value="public bool HasBeenLogged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasBeenLogged" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.HasBeenLogged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um sinalizador que determina se a exceção já foi registrada. Permite que a exceção a ser registrada no local mais adequado, mas continuarão a ser propagada.</summary>
+        <value>Retorna um sinalizador que determina se a exceção já foi registrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpKeyword">
+      <MemberSignature Language="C#" Value="public string HelpKeyword { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpKeyword" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.HelpKeyword" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a F1-palavra-chave ajuda (se houver) associada a este erro, o IDE do host.</summary>
+        <value>A cadeia de caracteres de palavra-chave, ou nulo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineNumber">
+      <MemberSignature Language="C#" Value="public int LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linha inválido (se houver) no projeto.</summary>
+        <value>O número de linha inválido, ou zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de exceção, incluindo o arquivo de projeto afetado (se houver).</summary>
+        <value>A cadeia de caracteres de mensagem completa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFile">
+      <MemberSignature Language="C#" Value="public string ProjectFile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProjectFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Exceptions.InvalidProjectFileException.ProjectFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o arquivo (se houver) associado a essa exceção. Isso pode ser um arquivo importado.</summary>
+        <value>Cadeia de caracteres de nome de arquivo/caminho de projeto, ou nulo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome mal será escolhido, pois isso pode ser um arquivo de destino, mas o nome tiver sido enviado agora.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

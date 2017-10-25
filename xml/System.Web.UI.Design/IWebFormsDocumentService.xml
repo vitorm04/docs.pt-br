@@ -1,0 +1,221 @@
+<Type Name="IWebFormsDocumentService" FullName="System.Web.UI.Design.IWebFormsDocumentService">
+  <TypeSignature Language="C#" Value="public interface IWebFormsDocumentService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebFormsDocumentService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IWebFormsDocumentService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is System.Web.UI.Design.WebFormsRootDesigner. The WebFormsRootDesigner contains additional functionality and allows for more extensibility. To get the WebFormsRootDesigner use the RootDesigner property from your ControlDesigner. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos para acessar os serviços de rastreamento do estado de carregamento de um documento de Web Forms, manipulação de eventos em tempo de carregamento, acessar o local do documento, gerenciamento de serviço de desfazer do documento e definindo uma nova seleção dentro do documento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.IWebFormsDocumentService> interface está obsoleta. Use o <xref:System.Web.UI.Design.WebFormsRootDesigner> classe para a funcionalidade equivalente de designer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateDiscardableUndoUnit">
+      <MemberSignature Language="C#" Value="public object CreateDiscardableUndoUnit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateDiscardableUndoUnit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.CreateDiscardableUndoUnit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma unidade de desfazer descartáveis.</summary>
+        <returns>A nova unidade de desfazer descartáveis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método está obsoleto e não há nenhuma funcionalidade equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscardUndoUnit">
+      <MemberSignature Language="C#" Value="public void DiscardUndoUnit (object discardableUndoUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DiscardUndoUnit(object discardableUndoUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.DiscardUndoUnit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="discardableUndoUnit" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="discardableUndoUnit">A unidade de desfazer para descartar.</param>
+        <summary>Descarta a unidade de desfazer especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método está obsoleto e não há nenhuma funcionalidade equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentUrl">
+      <MemberSignature Language="C#" Value="public string DocumentUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IWebFormsDocumentService.DocumentUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL na qual o documento está localizado.</summary>
+        <value>A URL na qual o documento está localizado, ou <see langword="null" /> se o documento não tem nenhuma URL associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.IWebFormsDocumentService.DocumentUrl%2A> propriedade interface está obsoleta. Use o <xref:System.Web.UI.Design.WebFormsRootDesigner.DocumentUrl%2A> propriedade o <xref:System.Web.UI.Design.WebFormsRootDesigner> classe para a funcionalidade equivalente de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUndo">
+      <MemberSignature Language="C#" Value="public void EnableUndo (bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableUndo(bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.EnableUndo(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enable">
+          <see langword="true" />Se as ações devem ser executadas; Caso contrário, <see langword="false" />.</param>
+        <summary>Habilita a capacidade de desfazer ações que ocorrem dentro de transações ou unidades de ação pode ser desfeita.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método está obsoleto e não há nenhuma funcionalidade equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoading">
+      <MemberSignature Language="C#" Value="public bool IsLoading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLoading" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IWebFormsDocumentService.IsLoading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o serviço do documento está carregando no momento.</summary>
+        <value>
+          <see langword="true" />Se o serviço do documento estiver carregando; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.IWebFormsDocumentService.IsLoading%2A> propriedade interface está obsoleta. Use o <xref:System.Web.UI.Design.WebFormsRootDesigner.IsLoading%2A> propriedade o <xref:System.Web.UI.Design.WebFormsRootDesigner> classe para a funcionalidade equivalente de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadComplete">
+      <MemberSignature Language="C#" Value="public event EventHandler LoadComplete;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LoadComplete" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.Design.IWebFormsDocumentService.LoadComplete" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o serviço concluiu o carregamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.IWebFormsDocumentService.LoadComplete> interface evento está obsoleto. Use o <xref:System.Web.UI.Design.WebFormsRootDesigner.LoadComplete> evento no <xref:System.Web.UI.Design.WebFormsRootDesigner> classe para a funcionalidade equivalente de designer.  
+  
+ Esse evento fornece uma oportunidade para executar operações imediatamente após o carregamento for concluído. Os eventos que devem ocorrer em tempo de carregamento podem ser registrados como manipuladores de eventos para esse evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSelection">
+      <MemberSignature Language="C#" Value="public void UpdateSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsDocumentService.UpdateSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, atualiza a seleção atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método está obsoleto e não há nenhuma funcionalidade equivalente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

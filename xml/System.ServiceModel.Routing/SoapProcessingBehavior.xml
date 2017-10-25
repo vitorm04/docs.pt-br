@@ -1,0 +1,166 @@
+<Type Name="SoapProcessingBehavior" FullName="System.ServiceModel.Routing.SoapProcessingBehavior">
+  <TypeSignature Language="C#" Value="public class SoapProcessingBehavior : System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapProcessingBehavior extends System.Object implements class System.ServiceModel.Description.IEndpointBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Routing.SoapProcessingBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IEndpointBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define o comportamento de ponto de extremidade de cliente usado para realizar marshaling de mensagens entre tipos de associação diferentes e versões de mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Processamento de SOAP é o processo em que as mensagens são convertidas entre as versões de mensagem.  
+  
+ Processamento de mensagens de um <xref:System.ServiceModel.Channels.MessageVersion> para outro é feito criando uma nova mensagem WCF que contém a parte do corpo e os cabeçalhos relevantes da mensagem recebida do WCF. Cabeçalhos específicos de endereçamento, ou que são entendidas no nível do roteador, não são usados durante a construção da nova mensagem WCF porque esses cabeçalhos são de uma versão diferente (no caso de cabeçalhos de endereçamento) ou tem sido processados como parte da comunicação entre o cliente e o roteador.  
+  
+ Se um cabeçalho é colocado na mensagem de saída é determinado pelo ou não foi marcado como compreender quando transmitidas por meio da camada de canal de entrada. Cabeçalhos que não são compreendidos (como cabeçalhos personalizados) não são removidos e passam para o serviço de roteamento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapProcessingBehavior ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.SoapProcessingBehavior.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.ServiceModel.Routing.SoapProcessingBehavior" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.SoapProcessingBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço para aplicar os elementos de associação.</param>
+        <param name="bindingParameters">A coleção de parâmetros de associação para aplicar ao ponto de extremidade.</param>
+        <summary>Adiciona novos elementos de associação a um ponto de extremidade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyClientBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyClientBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.SoapProcessingBehavior.ApplyClientBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço para aplicar ao cliente.</param>
+        <param name="clientRuntime">O tempo de execução no cliente.</param>
+        <summary>Aplica o comportamento de ponto de extremidade especificado para o cliente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.EndpointDispatcher endpointDispatcher) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.SoapProcessingBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.EndpointDispatcher)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="endpointDispatcher" Type="System.ServiceModel.Dispatcher.EndpointDispatcher" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço para aplicar ao cliente.</param>
+        <param name="endpointDispatcher">O dispatcher do ponto de extremidade.</param>
+        <summary>Aplica o comportamento de ponto de extremidade especificado para o distribuidor do ponto de extremidade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMessages">
+      <MemberSignature Language="C#" Value="public bool ProcessMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProcessMessages" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Routing.SoapProcessingBehavior.ProcessMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as mensagens devem ser processadas.</summary>
+        <value>**True** se as mensagens devem ser empacotado; caso contrário, **false**. O valor padrão é **true**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.ServiceModel.Routing.RoutingBehavior> cria e anexa um novo <xref:System.ServiceModel.Routing.SoapProcessingBehavior> com <xref:System.ServiceModel.Routing.SoapProcessingBehavior.ProcessMessages%2A> definida como `true` para cada ponto de extremidade do cliente. Se você não quiser usar o <xref:System.ServiceModel.Routing.SoapProcessingBehavior> em um ponto de extremidade específico, crie um novo <xref:System.ServiceModel.Routing.SoapProcessingBehavior> com esse valor é definido `false`e, em seguida, anexá-lo para o ponto de extremidade no qual você deseja não processamento ocorra. Se o <xref:System.ServiceModel.Routing.RoutingBehavior> observa que um cliente já tem um <xref:System.ServiceModel.Routing.SoapProcessingBehavior>, ele não tentará anexar outro.  
+  
+ Para desabilitar o aplicativo de <xref:System.ServiceModel.Routing.SoapProcessingBehavior> em qualquer ponto de extremidade, desabilitar SOAP no processamento de <xref:System.ServiceModel.Routing.RoutingBehavior> e <xref:System.ServiceModel.Routing.RoutingConfiguration>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.SoapProcessingBehavior.Validate(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço para validar.</param>
+        <summary>Valida o ponto de extremidade de serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

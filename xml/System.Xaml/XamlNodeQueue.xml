@@ -1,0 +1,129 @@
+<Type Name="XamlNodeQueue" FullName="System.Xaml.XamlNodeQueue">
+  <TypeSignature Language="C#" Value="public class XamlNodeQueue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlNodeQueue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlNodeQueue" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um buffer para gravar nós e lê-los novamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nós são consumidos do <xref:System.Xaml.XamlNodeQueue> quando eles são lidos pelo leitor de XAML. Se você precisar de uma lista de nós XAML que podem ser reproduzidos ou um modelo de lista que dá suporte ao acesso aleatório, consulte <xref:System.Xaml.XamlNodeList>.  
+  
+ Quando você cria um <xref:System.Xaml.XamlNodeQueue>, você cria um delegado de gravador existente como o <xref:System.Xaml.XamlNodeQueue.Writer%2A> valor. O representante de gravador baseia-se em uma classe interna de gravador XAML que é específico para nós XAML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlNodeQueue (System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlNodeQueue.#ctor(System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">O contexto do esquema a ser usado para operações de nó.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlNodeQueue" /> classe usando um contexto de esquema XAML fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto do esquema é aplicado para o gravador XAML que existe como o <xref:System.Xaml.XamlNodeQueue.Writer%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlSchemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de nós no <see cref="T:System.Xaml.XamlNodeQueue" />.</summary>
+        <value>O número de nós no <see cref="T:System.Xaml.XamlNodeQueue" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se este <see cref="T:System.Xaml.XamlNodeQueue" /> não tem nós.</summary>
+        <value>
+          <see langword="true" />Se esta <see cref="T:System.Xaml.XamlNodeQueue" /> não tem nós. <see langword="false" /> se este <see cref="T:System.Xaml.XamlNodeQueue" /> contém nós.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reader">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlReader Reader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlReader Reader" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.Reader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um leitor XAML delegado de implementação.</summary>
+        <value>Um delegado de implementação de leitor XAML.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlException">O gravador XAML que é usado para a lista de nós tem nenhum contexto de esquema XAML válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Writer">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlWriter Writer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlWriter Writer" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeQueue.Writer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o gravador XAML associado.</summary>
+        <value>O gravador XAML associado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

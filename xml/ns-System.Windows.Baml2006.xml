@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Baml2006">
+  <Docs>
+    <summary>Contém classes de leitor e gravador que podem consumir XAML no formulário BAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

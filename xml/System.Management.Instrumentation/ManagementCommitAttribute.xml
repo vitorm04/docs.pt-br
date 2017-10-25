@@ -1,0 +1,79 @@
+<Type Name="ManagementCommitAttribute" FullName="System.Management.Instrumentation.ManagementCommitAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementCommitAttribute : System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementCommitAttribute extends System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementCommitAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O atributo ManagementCommit marca um método que é chamado quando é necessário atualizar um conjunto de propriedades de leitura / gravação em uma operação atômica.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As propriedades de leitura-gravação de uma classe são marcadas com o <xref:System.Management.Instrumentation.ManagementConfigurationAttribute> atributo. Além disso, cada propriedade de leitura / gravação pode ser um destes dois tipos: <xref:System.Management.Instrumentation.ManagementConfigurationType.Apply> ou <xref:System.Management.Instrumentation.ManagementConfigurationType.OnCommit>. Se uma classe tiver propriedades de leitura / gravação que são configuradas como OnCommit, a classe deve ter um método marcado com o atributo ManagementCommit. O método associado será ser chamado quando todas as propriedades de OnCommit tiverem sido definidas.  
+  
+ O método marcado como não é thread-safe.  
+  
+ Se nenhum método está marcado com o atributo ManagementCommit, a classe gerencia as atualizações de configuração por si só, sem nenhuma indicação de que a atualização foi concluída.  
+  
+ O método marcado com o atributo ManagementCommit não usa nenhum parâmetro e tem um tipo de retorno void.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+public class Process  
+{  
+    /// Key attribute marks a key property. Keys are not changeable.  
+    /// Keys have to be unique information.  
+    [ManagementKey]  
+    public int Id   
+    {  
+        get {    }  
+    }  
+  
+    /// ManagementConfiguration stands for read/write manageable  
+    /// property from a read/write field.  
+    [ManagementConfiguration]  
+    public string UserDefinedString;  
+  
+    [ManagementCommit]  
+    void SaveOnDevice();  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementCommitAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementCommitAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementCommitAttribute" />. Esse é o construtor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

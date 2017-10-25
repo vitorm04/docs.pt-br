@@ -1,0 +1,91 @@
+<Type Name="TextRunCache" FullName="System.Windows.Media.TextFormatting.TextRunCache">
+  <TypeSignature Language="C#" Value="public sealed class TextRunCache" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TextRunCache extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextRunCache" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece serviços de armazenamento em cache para o <see cref="T:System.Windows.Media.TextFormatting.TextFormatter" /> objeto para melhorar o desempenho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos que usam este mecanismo de cache são responsáveis por invalidar o conteúdo no cache, quando ele foi alterado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextRunCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunCache.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.TextFormatting.TextRunCache" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Change">
+      <MemberSignature Language="C#" Value="public void Change (int textSourceCharacterIndex, int addition, int removal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Change(int32 textSourceCharacterIndex, int32 addition, int32 removal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunCache.Change(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textSourceCharacterIndex" Type="System.Int32" />
+        <Parameter Name="addition" Type="System.Int32" />
+        <Parameter Name="removal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="textSourceCharacterIndex">Especifica o <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> posição de índice do início da alteração de caracteres.</param>
+        <param name="addition">Indica o número de <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> caracteres a ser adicionado.</param>
+        <param name="removal">Indica o número de <see cref="T:System.Windows.Media.TextFormatting.TextSource" /> caracteres a ser removido.</param>
+        <summary>Notifica o cliente do mecanismo de texto de uma alteração para o cache quando o conteúdo de texto ou texto executar as propriedades de <see cref="T:System.Windows.Media.TextFormatting.TextRun" /> adicionado, removido ou substituído.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextRunCache.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinaliza o cliente do mecanismo de texto para invalidar todo o conteúdo do <see cref="T:System.Windows.Media.TextFormatting.TextFormatter" /> cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Invalidar todo o cache tem o efeito de esvaziar o cache. Torna a encher o cache com as chamadas subsequentes para o <xref:System.Windows.Media.TextFormatting> APIs.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

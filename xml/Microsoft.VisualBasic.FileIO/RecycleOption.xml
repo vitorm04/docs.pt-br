@@ -1,0 +1,61 @@
+<Type Name="RecycleOption" FullName="Microsoft.VisualBasic.FileIO.RecycleOption">
+  <TypeSignature Language="C#" Value="public enum RecycleOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RecycleOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.FileIO.RecycleOption" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se um arquivo deve ser excluído permanentemente ou colocado na **Lixeira**.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada com a <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory%2A> e <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A> métodos.  
+  
+ Para proteger os usuários contra exclusão acidental de arquivos importantes, o **Lixeira** coleta excluídas arquivos e fornece um método para restaurar esses arquivos. Você deve excluir explicitamente os arquivos a partir o **Lixeira** para tornar a exclusão permanente. Até que os arquivos são excluídos do **Lixeira**, o espaço em disco ocupado por esses arquivos não está disponível para outros usos.  
+  
+ Às vezes é útil ignorar o **Lixeira**, especialmente se você estiver excluindo um grande número de arquivos (ou um número menor de arquivos muito grandes) que você tem certeza que não são necessários e você deseja recuperar o espaço em disco.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeletePermanently">
+      <MemberSignature Language="C#" Value="DeletePermanently" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileIO.RecycleOption DeletePermanently = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.FileIO.RecycleOption.DeletePermanently" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileIO.RecycleOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Exclua permanentemente o arquivo ou o diretório. Padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendToRecycleBin">
+      <MemberSignature Language="C#" Value="SendToRecycleBin" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.FileIO.RecycleOption SendToRecycleBin = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.FileIO.RecycleOption.SendToRecycleBin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.FileIO.RecycleOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Envie o arquivo ou o diretório para a **Lixeira**.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

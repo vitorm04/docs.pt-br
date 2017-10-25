@@ -1,0 +1,110 @@
+<Type Name="LenientRegExpPrototype" FullName="Microsoft.JScript.LenientRegExpPrototype">
+  <TypeSignature Language="C#" Value="public sealed class LenientRegExpPrototype : Microsoft.JScript.RegExpPrototype" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LenientRegExpPrototype extends Microsoft.JScript.RegExpPrototype" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.LenientRegExpPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.RegExpPrototype</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena objetos que representam os métodos estáticos do <see cref="T:Microsoft.JScript.RegExpPrototype" /> classe. O <see cref="T:Microsoft.JScript.LenientRegExpPrototype" /> classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="compile">
+      <MemberSignature Language="C#" Value="public object compile;" />
+      <MemberSignature Language="ILAsm" Value=".field public object compile" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientRegExpPrototype.compile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.RegExpPrototype.compile(System.Object,System.Object,System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.RegExpPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public object constructor;" />
+      <MemberSignature Language="ILAsm" Value=".field public object constructor" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientRegExpPrototype.constructor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena uma referência a um <see cref="T:Microsoft.JScript.RegExpConstructor" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="exec">
+      <MemberSignature Language="C#" Value="public object exec;" />
+      <MemberSignature Language="ILAsm" Value=".field public object exec" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientRegExpPrototype.exec" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.RegExpPrototype.exec(System.Object,System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.RegExpPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="test">
+      <MemberSignature Language="C#" Value="public object test;" />
+      <MemberSignature Language="ILAsm" Value=".field public object test" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientRegExpPrototype.test" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.RegExpPrototype.test(System.Object,System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.RegExpPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public object toString;" />
+      <MemberSignature Language="ILAsm" Value=".field public object toString" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientRegExpPrototype.toString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.RegExpPrototype.toString(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.RegExpPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

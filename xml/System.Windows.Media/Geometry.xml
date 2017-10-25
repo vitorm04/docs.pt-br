@@ -1,0 +1,1144 @@
+<Type Name="Geometry" FullName="System.Windows.Media.Geometry">
+  <TypeSignature Language="C#" Value="public abstract class Geometry : System.Windows.Media.Animation.Animatable, IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract Geometry extends System.Windows.Media.Animation.Animatable implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Geometry" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.GeometryConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Converters.GeometryValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Classes que derivam dessa classe base abstrata definem formas geométricas. Os objetos <see cref="T:System.Windows.Media.Geometry" /> podem ser usados para recorte, teste de clique e renderização de dados gráficos 2D.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="geometry-compared-to-shape"></a>Em comparação comparada a forma de geometria  
+ O <xref:System.Windows.Shapes.Shape?displayProperty=nameWithType> classe tiver um <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>e outras propriedades de processamento <xref:System.Windows.Media.Geometry> e a falta de suas classes derivadas. O <xref:System.Windows.Shapes.Shape> classe é um <xref:System.Windows.FrameworkElement> e, portanto, participa do sistema de layout; suas classes derivadas podem ser usados como o conteúdo de qualquer elemento que dá suporte a <xref:System.Windows.UIElement> filhos.  
+  
+ O <xref:System.Windows.Media.Geometry> classe, por outro lado, simplesmente define a geometria de uma forma e não é possível processar a mesmo. Devido à sua simplicidade, ele tem uma grande variedade de usos.  
+  
+ **Recursos Freezable:** porque ele herda o <xref:System.Windows.Freezable> classe, o <xref:System.Windows.Media.Geometry> classe fornece vários recursos especiais: <xref:System.Windows.Media.Geometry> objetos podem ser declarados como, compartilhados entre vários objetos, somente leitura para melhorar o desempenho, clonados e tornados thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Embora essa classe é abstrata, não é extensível publicamente.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Rect Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Rect" /> que especifica a caixa delimitadora alinhada por eixo do <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <value>A caixa delimitadora alinhada por eixo do <see cref="T:System.Windows.Media.Geometry" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não leva em conta a área potencialmente adicionada por um traço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável do <see cref="T:System.Windows.Media.Geometry" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Geometry CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Geometry CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável de <see cref="T:System.Windows.Media.Geometry" /> objeto, cópia profunda dos valores atuais do objeto. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.PathGeometry Combine (System.Windows.Media.Geometry geometry1, System.Windows.Media.Geometry geometry2, System.Windows.Media.GeometryCombineMode mode, System.Windows.Media.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.PathGeometry Combine(class System.Windows.Media.Geometry geometry1, class System.Windows.Media.Geometry geometry2, valuetype System.Windows.Media.GeometryCombineMode mode, class System.Windows.Media.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Combine(System.Windows.Media.Geometry,System.Windows.Media.Geometry,System.Windows.Media.GeometryCombineMode,System.Windows.Media.Transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry1" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="geometry2" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="mode" Type="System.Windows.Media.GeometryCombineMode" />
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="geometry1">A primeira geometria a combinar.</param>
+        <param name="geometry2">A geometria segundo combinar.</param>
+        <param name="mode">Um dos valores de enumeração que especifica como as geometrias são combinadas.</param>
+        <param name="transform">Uma transformação a ser aplicada para geometria combinada, ou <see langword="null" />.</param>
+        <summary>Combina as duas geometrias usando o <see cref="T:System.Windows.Media.GeometryCombineMode" /> especificado e aplica a transformação especificada à geometria resultante.</summary>
+        <returns>A geometria combinada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa o fator de tolerância padrão (descrito pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) ao combinar geometrias. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.Combine%2A> método.  
+  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.Combine%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ Deve ser envolvido cuidadosamente ao usar <xref:System.Windows.Media.Geometry.Combine%2A> para executar uma união, como ele pode ser muito caro de CPU. Na maioria dos casos, um <xref:System.Windows.Media.GeometryGroup> ou <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> funcionará melhor.  
+  
+ Use <xref:System.Windows.Media.Geometry.Combine%2A> somente quando qualquer uma das seguintes opções for aplicável:  
+  
+-   A operação geométrica não é uma união.  
+  
+-   Qualquer um dos geometrias tem um <xref:System.Windows.Media.FillRule> valor <xref:System.Windows.Media.FillRule.EvenOdd> e as geometrias são interseção consigo mesmo (ou seja, o <xref:System.Windows.Media.FillRule> , na verdade, é importante).  
+  
+-   Tempo não é uma preocupação, mas é de espaço (por exemplo, se a geometria é criada uma vez e, em seguida, armazenado em cache). Normalmente, <xref:System.Windows.Media.Geometry.Combine%2A> produz saída de menor que <xref:System.Windows.Media.PathGeometry.AddGeometry%2A>.  
+  
+-   A geometria resultante será traçada ou usada em uma animação de caminho e <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> não fornece a estrutura de tópicos desejada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Combine">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.PathGeometry Combine (System.Windows.Media.Geometry geometry1, System.Windows.Media.Geometry geometry2, System.Windows.Media.GeometryCombineMode mode, System.Windows.Media.Transform transform, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.PathGeometry Combine(class System.Windows.Media.Geometry geometry1, class System.Windows.Media.Geometry geometry2, valuetype System.Windows.Media.GeometryCombineMode mode, class System.Windows.Media.Transform transform, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Combine(System.Windows.Media.Geometry,System.Windows.Media.Geometry,System.Windows.Media.GeometryCombineMode,System.Windows.Media.Transform,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry1" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="geometry2" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="mode" Type="System.Windows.Media.GeometryCombineMode" />
+        <Parameter Name="transform" Type="System.Windows.Media.Transform" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="geometry1">A primeira geometria a combinar.</param>
+        <param name="geometry2">A geometria segundo combinar.</param>
+        <param name="mode">Um dos valores de enumeração que especifica como as geometrias são combinadas.</param>
+        <param name="transform">Uma transformação a ser aplicada para geometria combinada, ou <see langword="null" />.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometrias. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Combina duas geometrias usando especificado <see cref="T:System.Windows.Media.GeometryCombineMode" /> e o fator de tolerância e se aplica a transformação especificada à geometria resultante.</summary>
+        <returns>A geometria combinada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.Combine%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ Deve ser envolvido cuidadosamente ao usar <xref:System.Windows.Media.Geometry.Combine%2A> para executar uma união, como ele pode ser muito caro de CPU. Na maioria dos casos, um <xref:System.Windows.Media.GeometryGroup> ou <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> funcionará melhor.  
+  
+ Use <xref:System.Windows.Media.Geometry.Combine%2A> somente quando qualquer uma das seguintes opções for aplicável:  
+  
+-   A operação geométrica não é uma união.  
+  
+-   Qualquer um dos geometrias tem um <xref:System.Windows.Media.FillRule> valor <xref:System.Windows.Media.FillRule.EvenOdd> e as geometrias são interseção consigo mesmo (ou seja, o <xref:System.Windows.Media.FillRule> , na verdade, é importante).  
+  
+-   Tempo não é uma preocupação, mas é de espaço (por exemplo, se a geometria é criada uma vez e, em seguida, armazenado em cache). Normalmente, <xref:System.Windows.Media.Geometry.Combine%2A> produz saída de menor que <xref:System.Windows.Media.PathGeometry.AddGeometry%2A>.  
+  
+-   A geometria resultante será traçada ou usada em uma animação de caminho e <xref:System.Windows.Media.PathGeometry.AddGeometry%2A> não fornece a estrutura de tópicos desejada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Geometry Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Media.Geometry Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto vazio.</summary>
+        <value>O objeto de geometria vazio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">A geometria a ser testada quanto ao confinamento.</param>
+        <summary>Indica se a geometria atual contém completamente especificado <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>
+          <see langword="true" />Se a geometria atual contém completamente <paramref name="geometry" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A margem de padrão de erro (descrito pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) é usado para determinar se a geometria atual contém a geometria especificada. Para especificar sua própria margem de erro, use o <xref:System.Windows.Media.Geometry.FillContains%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Point hitPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(valuetype System.Windows.Point hitPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="hitPoint">O ponto a ser testado quanto ao confinamento.</param>
+        <summary>Indica se a geometria contém o <see cref="T:System.Windows.Point" /> especificado.</summary>
+        <returns>
+          <see langword="true" /> se a geometria contiver o <paramref name="hitPoint" />, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fator de tolerância padrão (descrito pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) é usado para determinar se a geometria contém o ponto especificado. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.FillContains%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(class System.Windows.Media.Geometry geometry, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Media.Geometry,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">A geometria a ser testada quanto ao confinamento.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometrias. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Indica se a geometria atual contém especificado <see cref="T:System.Windows.Media.Geometry" />, considerando a margem especificada de erro.</summary>
+        <returns>
+          <see langword="true" />Se a geometria atual contém <paramref name="geometry" />, considerando a margem especificada de erro; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.FillContains%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContains">
+      <MemberSignature Language="C#" Value="public bool FillContains (System.Windows.Point hitPoint, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FillContains(valuetype System.Windows.Point hitPoint, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContains(System.Windows.Point,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="hitPoint">O ponto a ser testado quanto ao confinamento.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Indica se a geometria contém especificado <see cref="T:System.Windows.Point" />, considerando a margem especificada de erro.</summary>
+        <returns>
+          <see langword="true" />Se a geometria contém <paramref name="hitPoint" />, considerando a margem especificada de erro; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.FillContains%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContainsWithDetail">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.IntersectionDetail FillContainsWithDetail (System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.IntersectionDetail FillContainsWithDetail(class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContainsWithDetail(System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">A geometria a ser testada quanto ao confinamento.</param>
+        <summary>Retorna um valor que descreve a interseção entre a geometria atual e a geometria especificada.</summary>
+        <returns>Um dos valores de enumeração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fator de tolerância padrão (definido pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) é usado para determinar se a geometria atual contém a geometria especificada. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A> método.  
+  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillContainsWithDetail">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.IntersectionDetail FillContainsWithDetail (System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Media.IntersectionDetail FillContainsWithDetail(class System.Windows.Media.Geometry geometry, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.FillContainsWithDetail(System.Windows.Media.Geometry,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="geometry">A geometria a ser testada quanto ao confinamento.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometrias. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Retorna um valor que descreve a interseção entre a geometria atual e a geometria especificada, considerando a margem especificada de erro.</summary>
+        <returns>Um dos valores de enumeração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.FillContainsWithDetail%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArea">
+      <MemberSignature Language="C#" Value="public double GetArea ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetArea() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetArea" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a área da região preenchida do objeto <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>A área da região preenchida da geometria.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetArea%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArea">
+      <MemberSignature Language="C#" Value="public virtual double GetArea (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance float64 GetArea(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetArea(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Obtém a área, dentro da tolerância especificada, da região de preenchimento a <see cref="T:System.Windows.Media.Geometry" /> objeto.</summary>
+        <returns>A área da região preenchida da geometria.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetArea%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFlattenedPathGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry GetFlattenedPathGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry GetFlattenedPathGeometry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetFlattenedPathGeometry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.PathGeometry" /> que é uma aproximação poligonal do objeto <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>A aproximação poligonal do <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa o fator de tolerância padrão (descrito pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) durante o processamento da geometria. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A> método.  
+  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFlattenedPathGeometry">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.PathGeometry GetFlattenedPathGeometry (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.PathGeometry GetFlattenedPathGeometry(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetFlattenedPathGeometry(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Media.PathGeometry" />, dentro da tolerância especificada, que é uma aproximação poligonal do <see cref="T:System.Windows.Media.Geometry" /> objeto.</summary>
+        <returns>A aproximação poligonal do <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetFlattenedPathGeometry%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutlinedPathGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry GetOutlinedPathGeometry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry GetOutlinedPathGeometry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetOutlinedPathGeometry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.PathGeometry" /> que é uma estrutura de tópicos simplificada da região de preenchimento a <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>Uma estrutura de tópicos simplificada da região de preenchimento a <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa o fator de tolerância padrão (descrito pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) durante o processamento da geometria. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A> método.  
+  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutlinedPathGeometry">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.PathGeometry GetOutlinedPathGeometry (double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.PathGeometry GetOutlinedPathGeometry(float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetOutlinedPathGeometry(System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Media.PathGeometry" />, dentro da tolerância especificada, que é uma estrutura de tópicos simplificada da região de preenchimento a <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <returns>Uma estrutura de tópicos simplificada da região de preenchimento a <see cref="T:System.Windows.Media.Geometry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetOutlinedPathGeometry%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRenderBounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect GetRenderBounds (System.Windows.Media.Pen pen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Rect GetRenderBounds(class System.Windows.Media.Pen pen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetRenderBounds(System.Windows.Media.Pen)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Um objeto que descreve a área de traço da geometria.</param>
+        <summary>Retorna um retângulo alinhado por eixo exatamente grande o suficiente para conter a geometria depois que ele descreveu com especificado <see cref="T:System.Windows.Media.Pen" />.</summary>
+        <returns>Um eixo alinhado retângulo que é exatamente grande o suficiente para conter o contorno geometry.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa o fator de tolerância padrão (descrito pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) durante o processamento da geometria. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.GetRenderBounds%2A> método.  
+  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetRenderBounds%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRenderBounds">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Rect GetRenderBounds (System.Windows.Media.Pen pen, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Rect GetRenderBounds(class System.Windows.Media.Pen pen, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetRenderBounds(System.Windows.Media.Pen,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Um objeto que descreve a área de traço da geometria.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Retorna um retângulo alinhado por eixo exatamente grande o suficiente para conter a geometria depois que ele descreveu com especificado <see cref="T:System.Windows.Media.Pen" />, considerando o fator de tolerância especificada.</summary>
+        <returns>Um eixo alinhado retângulo que é exatamente grande o suficiente para conter o contorno geometry.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetRenderBounds%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWidenedPathGeometry">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.PathGeometry GetWidenedPathGeometry (System.Windows.Media.Pen pen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.PathGeometry GetWidenedPathGeometry(class System.Windows.Media.Pen pen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetWidenedPathGeometry(System.Windows.Media.Pen)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Um objeto que descreve a área de traço da geometria.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Media.PathGeometry" /> que é a forma definida por um traço no <see cref="T:System.Windows.Media.Geometry" /> produzido pelo especificado <see cref="T:System.Windows.Media.Pen" />.</summary>
+        <returns>A geometria do contornada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWidenedPathGeometry">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.PathGeometry GetWidenedPathGeometry (System.Windows.Media.Pen pen, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.PathGeometry GetWidenedPathGeometry(class System.Windows.Media.Pen pen, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.GetWidenedPathGeometry(System.Windows.Media.Pen,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PathGeometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">O objeto usado para definir a área de traço da geometria.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Obtém um <see cref="T:System.Windows.Media.PathGeometry" /> que é a forma definida por um traço no <see cref="T:System.Windows.Media.Geometry" /> produzido pelo especificado <see cref="T:System.Windows.Media.Pen" />, considerando o fator de tolerância especificada.</summary>
+        <returns>A geometria, ampliada por <paramref name="pen" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.GetWidenedPathGeometry%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public abstract bool IsEmpty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEmpty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.IsEmpty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o objeto está vazio.</summary>
+        <returns>
+          <see langword="true" />Se a geometria está vazia. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MayHaveCurves">
+      <MemberSignature Language="C#" Value="public abstract bool MayHaveCurves ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MayHaveCurves() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.MayHaveCurves" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o objeto pode ter curva segmentos.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de geometria pode ter curvo segmentos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Geometry Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Geometry Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Geometry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Uma cadeia de caracteres que descreve a geometria a ser criada.</param>
+        <summary>Cria um nova instância <see cref="T:System.Windows.Media.Geometry" /> na cadeia de caracteres especificada usando a cultura atual.</summary>
+        <returns>Um nova instância <see cref="T:System.Windows.Media.Geometry" /> criada na cadeia de caracteres especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte [sintaxe de marcação de caminho](~/docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) para obter informações sobre como essa cadeia de caracteres é formatada  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeTransform">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeTransform() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.ShouldSerializeTransform" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o valor de <see cref="P:System.Windows.Media.Geometry.Transform" /> propriedade deve ser serializada.</summary>
+        <returns>
+          <see langword="true" />Se o valor da geometria <see cref="P:System.Windows.Media.Geometry.Transform" /> propriedade deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardFlatteningTolerance">
+      <MemberSignature Language="C#" Value="public static double StandardFlatteningTolerance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property float64 StandardFlatteningTolerance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.StandardFlatteningTolerance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a tolerância padrão usada para a aproximação poligonal.</summary>
+        <value>A tolerância padrão 0,25.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContains">
+      <MemberSignature Language="C#" Value="public bool StrokeContains (System.Windows.Media.Pen pen, System.Windows.Point hitPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool StrokeContains(class System.Windows.Media.Pen pen, valuetype System.Windows.Point hitPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContains(System.Windows.Media.Pen,System.Windows.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Um objeto que determina a área do traço da geometria.</param>
+        <param name="hitPoint">O ponto a ser testado quanto ao confinamento.</param>
+        <summary>Determina se o <see cref="T:System.Windows.Point" /> especificado está contido no traço produzido aplicando o <see cref="T:System.Windows.Media.Pen" /> especificado à geometria.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="hitPoint" /> estiver contido no traço produzido aplicando o <see cref="T:System.Windows.Media.Pen" /> especificado à geometria; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fator de tolerância padrão (especificado pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) é usado para determinar se o ponto especificado está localizado em traço da geometria. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.StrokeContains%2A> de sobrecarga.  
+  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.StrokeContains%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContains">
+      <MemberSignature Language="C#" Value="public bool StrokeContains (System.Windows.Media.Pen pen, System.Windows.Point hitPoint, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool StrokeContains(class System.Windows.Media.Pen pen, valuetype System.Windows.Point hitPoint, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContains(System.Windows.Media.Pen,System.Windows.Point,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="hitPoint" Type="System.Windows.Point" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Um objeto que define o traço de uma geometria.</param>
+        <param name="hitPoint">O ponto a ser testado quanto ao confinamento.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometria. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Determina se o especificado <see cref="T:System.Windows.Point" /> está contida no traço produzido pela aplicação especificado <see cref="T:System.Windows.Media.Pen" /> à geometria, considerando a margem especificada de erro.</summary>
+        <returns>
+          <see langword="true" />Se o traço criado aplicando especificado <see cref="T:System.Windows.Media.Pen" /> à geometria contém o ponto especificado, dado o fator de tolerância especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.StrokeContains%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContainsWithDetail">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.IntersectionDetail StrokeContainsWithDetail (System.Windows.Media.Pen pen, System.Windows.Media.Geometry geometry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.IntersectionDetail StrokeContainsWithDetail(class System.Windows.Media.Pen pen, class System.Windows.Media.Geometry geometry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContainsWithDetail(System.Windows.Media.Pen,System.Windows.Media.Geometry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Um objeto que determina a área de traço da geometria atual.</param>
+        <param name="geometry">A geometria a ser testada quanto ao confinamento.</param>
+        <summary>Retorna um valor que descreve a interseção entre especificado <see cref="T:System.Windows.Media.Geometry" /> e traço criado aplicando especificado <see cref="T:System.Windows.Media.Pen" /> à geometria atual.</summary>
+        <returns>Um dos valores de enumeração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fator de tolerância padrão (definido pelo <xref:System.Windows.Media.Geometry.StandardFlatteningTolerance%2A> propriedade) é usado para determinar se a geometria especificada está localizada em traço da geometria atual. Para especificar sua própria fator de tolerância, use o <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A> método.  
+  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrokeContainsWithDetail">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.IntersectionDetail StrokeContainsWithDetail (System.Windows.Media.Pen pen, System.Windows.Media.Geometry geometry, double tolerance, System.Windows.Media.ToleranceType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Media.IntersectionDetail StrokeContainsWithDetail(class System.Windows.Media.Pen pen, class System.Windows.Media.Geometry geometry, float64 tolerance, valuetype System.Windows.Media.ToleranceType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.StrokeContainsWithDetail(System.Windows.Media.Pen,System.Windows.Media.Geometry,System.Double,System.Windows.Media.ToleranceType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.IntersectionDetail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pen" Type="System.Windows.Media.Pen" />
+        <Parameter Name="geometry" Type="System.Windows.Media.Geometry" />
+        <Parameter Name="tolerance" Type="System.Double" />
+        <Parameter Name="type" Type="System.Windows.Media.ToleranceType" />
+      </Parameters>
+      <Docs>
+        <param name="pen">Um objeto que determina a área de traço da geometria atual.</param>
+        <param name="geometry">A geometria a ser testada quanto ao confinamento.</param>
+        <param name="tolerance">Os limites máximo na distância entre pontos na aproximação poligonal de geometrias. Valores menores produzirem resultados mais precisos, mas fazem a execução mais lenta. Se <c>tolerância</c> é menor que.000001,.000001 é usado em vez disso.</param>
+        <param name="type">Uma da <see cref="T:System.Windows.Media.ToleranceType" /> valores que especifica se o fator de tolerância é um valor absoluto ou relativo para a área da geometria.</param>
+        <summary>Obtém um valor que descreve a interseção entre especificado <see cref="T:System.Windows.Media.Geometry" /> e traço criado aplicando especificado <see cref="T:System.Windows.Media.Pen" /> à geometria atual, considerando a margem especificada de erro.</summary>
+        <returns>Um dos valores de enumeração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns <xref:System.Windows.Media.Geometry> métodos (como <xref:System.Windows.Media.Geometry.StrokeContainsWithDetail%2A>) produzir ou use uma aproximação poligonal de geometria. O fator de tolerância Especifica a distância máxima entre pontos nessa aproximação poligonal. Valores menores de tolerância produzem aproximações melhor, mas requerem mais processamento de uma aproximação com um fator de tolerância grande.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato a ser usado.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para usar o formato padrão definido para o tipo do <see cref="T:System.IFormattable" /> implementação.</param>
+        <param name="provider">O provedor a ser usado para formatar o valor.  
+  
+ -ou-  
+  
+ Uma referência nula (<see langword="Nothing" /> no Visual Basic) para obter as informações de formato numérico da configuração de localidade atual do sistema operacional.</param>
+        <summary>Formata o valor da instância atual usando o formato especificado.</summary>
+        <returns>O valor da instância atual no formato especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma representação de cadeia de caracteres do objeto com base na cultura atual.</summary>
+        <returns>Uma representação de cadeia de caracteres do objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Geometry.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Informações de formatação específica da cultura ou <see langword="null" /> para usar a cultura atual.</param>
+        <summary>Cria uma representação de cadeia de caracteres do objeto usando as informações de formatação específica da cultura especificadas.</summary>
+        <returns>Uma representação de cadeia de caracteres do objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Transform Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Transform Transform" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Geometry.Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Transform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto <see cref="T:System.Windows.Media.Transform" /> aplicado a um <see cref="T:System.Windows.Media.Geometry" />.</summary>
+        <value>A transformação aplicada ao <see cref="T:System.Windows.Media.Geometry" />. Observe que esse valor pode ser um único <see cref="T:System.Windows.Media.Transform" /> ou um <see cref="T:System.Windows.Media.TransformCollection" /> convertido em um <see cref="T:System.Windows.Media.Transform" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna a transformação de identidade, se o objeto atual não tiver nenhum valor de transformação. Caso contrário, retornará o <xref:System.Windows.Media.Transform> aplicadas ao objeto atual.  
+  
+<a name="dependencyPropertyInfo_Transform"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Geometry.TransformProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Media.Geometry.Transform%2A> aplicar um <xref:System.Windows.Media.RotateTransform> para um <xref:System.Windows.Media.Geometry> objeto.  
+  
+ O exemplo usa um <xref:System.Windows.Media.GeometryGroup> para criar uma forma composta de três <xref:System.Windows.Media.Geometry> objetos e, em seguida, gira a geometria 45 graus usando o <xref:System.Windows.Media.Geometry.Transform%2A> propriedade.  
+  
+ [!code-xaml[Transforms_snip#GeometryTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/GeometryTransformExample.xaml#geometrytransformexamplewholepage)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TransformProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TransformProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Geometry.TransformProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Geometry.Transform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

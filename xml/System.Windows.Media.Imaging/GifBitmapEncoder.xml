@@ -1,0 +1,61 @@
+<Type Name="GifBitmapEncoder" FullName="System.Windows.Media.Imaging.GifBitmapEncoder">
+  <TypeSignature Language="C#" Value="public sealed class GifBitmapEncoder : System.Windows.Media.Imaging.BitmapEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GifBitmapEncoder extends System.Windows.Media.Imaging.BitmapEncoder" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.GifBitmapEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapEncoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um codificador que é usado para codificar imagens formato GIF (Graphics Interchange).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)]imagens não dão suporte a visualização global, miniaturas globais, global de metadados, miniaturas de nível de quadro ou metadados de nível de quadro. [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)]imagens dão suporte a várias estruturas.  
+  
+ Codificação não funciona em confiança parcial. Consulte [segurança de confiança parcial do WPF](~/docs/framework/wpf/wpf-partial-trust-security.md) para obter informações sobre a relação de confiança parcial.  
+  
+<a name="xamlTextUsage_No"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GifBitmapEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.GifBitmapEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Imaging.GifBitmapEncoder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como inicializar um <xref:System.Windows.Media.Imaging.GifBitmapEncoder> para codificar uma nova imagem de bitmap.  
+  
+ [!code-cpp[gifbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CPP/GifEncoderDecoder.cpp#3)]
+ [!code-csharp[gifbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/GifBitmapDecoderEncoder/CSharp/GifEncoderDecoder.cs#3)]
+ [!code-vb[gifbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GifBitmapDecoderEncoder/VB/GifEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

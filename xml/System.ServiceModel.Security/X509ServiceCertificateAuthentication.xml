@@ -1,0 +1,237 @@
+<Type Name="X509ServiceCertificateAuthentication" FullName="System.ServiceModel.Security.X509ServiceCertificateAuthentication">
+  <TypeSignature Language="C#" Value="public class X509ServiceCertificateAuthentication" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509ServiceCertificateAuthentication extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.X509ServiceCertificateAuthentication" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as configurações usadas pelo proxy do cliente para autenticar certificados de serviço obtidos usando negociação SSL/TLS.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa classe.  
+  
+ [!code-csharp[S_UEX509ServiceCertificateAuthentication#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_uex509servicecertificateauthentication/cs/client.cs#4)]
+ [!code-vb[S_UEX509ServiceCertificateAuthentication#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uex509servicecertificateauthentication/vb/client.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509ServiceCertificateAuthentication ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.X509ServiceCertificateAuthentication.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Security.X509ServiceCertificateAuthentication" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateValidationMode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Security.X509CertificateValidationMode CertificateValidationMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.X509CertificateValidationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de validação de certificado.</summary>
+        <value>Um valor da enumeração em <see cref="T:System.ServiceModel.Security.X509CertificateValidationMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração captura as opções para determinar a validade do certificado de serviço obtido usando negociação SSL/TLS. Para obter uma lista dos membros de enumeração, consulte <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[S_UEX509ServiceCertificateAuthentication#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uex509servicecertificateauthentication/cs/client.cs#0)]
+ [!code-vb[S_UEX509ServiceCertificateAuthentication#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uex509servicecertificateauthentication/vb/client.vb#0)]  
+  
+ A propriedade também pode ser definida em um arquivo de configuração.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomCertificateValidator">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Selectors.X509CertificateValidator CustomCertificateValidator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Selectors.X509CertificateValidator CustomCertificateValidator" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um validador de certificado do cliente personalizado.</summary>
+        <value>O validador de certificado do cliente personalizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)]Fornece um cliente padrão validador de certificado que verifica o certificado do cliente em relação ao armazenamento de pessoas confiáveis e também verifica se o certificado é parte de uma cadeia que se conecta a uma raiz válida. Um validador personalizado pode ser implementado para obter um comportamento diferente. Esta propriedade permite que um validador personalizado seja especificada.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[S_UEX509ServiceCertificateAuthentication#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uex509servicecertificateauthentication/cs/client.cs#1)]
+ [!code-vb[S_UEX509ServiceCertificateAuthentication#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uex509servicecertificateauthentication/vb/client.vb#1)]  
+  
+ A propriedade também pode ser definida em um arquivo de configuração.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentativa de definir quando a credencial é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RevocationMode">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.X509RevocationMode RevocationMode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509RevocationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de revogação de certificado para ChainTrust e o modo de validação de certificado X.509 para PeerOrChainTrust.</summary>
+        <value>Um dos valores em <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationMode" />: <see langword="NoCheck" />, <see langword="Online" /> ou <see langword="Offline" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar certificados, o sistema valida que o certificado do cliente não foi revogado, observando se o certificado do cliente não está na lista de certificados revogados. Essa verificação pode ser executada através da verificação online ou verificando em relação a uma lista de revogação em cache. Verificação de revogação pode ser desativado, definindo essa propriedade como `NoCheck`.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[S_UEX509ServiceCertificateAuthentication#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uex509servicecertificateauthentication/cs/client.cs#2)]
+ [!code-vb[S_UEX509ServiceCertificateAuthentication#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uex509servicecertificateauthentication/vb/client.vb#2)]  
+  
+ A propriedade também pode ser definida em um arquivo de configuração.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentativa de definir quando a credencial é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedStoreLocation">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Cryptography.X509Certificates.StoreLocation TrustedStoreLocation" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.X509ServiceCertificateAuthentication.TrustedStoreLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.StoreLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local de armazenamento confiável na qual o contexto a cadeia de certificados de cliente é validada.</summary>
+        <value>O local de armazenamento confiável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica se o contexto de usuário ou computador será usado para verificar a cadeia de certificados x. 509.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[S_UEX509ServiceCertificateAuthentication#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uex509servicecertificateauthentication/cs/client.cs#3)]
+ [!code-vb[S_UEX509ServiceCertificateAuthentication#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uex509servicecertificateauthentication/vb/client.vb#3)]  
+  
+ A propriedade também pode ser definida em um arquivo de configuração.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentativa de definir quando a credencial é somente leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

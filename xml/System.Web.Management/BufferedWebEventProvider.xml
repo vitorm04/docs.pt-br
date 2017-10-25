@@ -1,0 +1,356 @@
+<Type Name="BufferedWebEventProvider" FullName="System.Web.Management.BufferedWebEventProvider">
+  <TypeSignature Language="C#" Value="public abstract class BufferedWebEventProvider : System.Web.Management.WebEventProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BufferedWebEventProvider extends System.Web.Management.WebEventProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.BufferedWebEventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.WebEventProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a funcionalidade básica para a criação de provedores de eventos que requerem armazenamento em buffer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ Se você deseja personalizar o processamento de evento de integridade, você pode derivar o <xref:System.Web.Management.BufferedWebEventProvider> classe para criar seu próprio provedor personalizado de buffer.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de criação de um provedor personalizado, consulte [como: implementar a integridade de monitoramento personalizado provedor exemplo](http://msdn.microsoft.com/library/bbb1c959-e6e4-42b2-be62-49b7ca5ab72c).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como derivar o <xref:System.Web.Management.BufferedWebEventProvider> classe para criar um provedor personalizado que grava os eventos configurados em um arquivo local para o qual os direitos de acesso apropriados devem ser concedidos.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#1)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#1)]  
+  
+ O arquivo de configuração a seguir trecho mostra um `healthMonitoring` seção de configuração que permite que o ASP.NET usar o provedor personalizado definido acima para processar todos os eventos de monitoramento de integridade.  
+  
+```  
+<healthMonitoring    
+  heartBeatInterval="0" enabled="true">  
+  
+  <bufferModes>  
+    <add name ="Custom Notification"  
+      maxBufferSize="10"  
+      maxFlushSize="5"  
+      urgentFlushThreshold="10"  
+      regularFlushInterval="Infinite"  
+      urgentFlushInterval="00:00:30"  
+      maxBufferThreads="1"  
+/>  
+  </bufferModes>  
+  
+  <providers>  
+    <clear/>  
+    <add name="SampleBufferedWebEventProvider"   
+      type="SamplesAspNet.SampleBufferedWebEventProvider, bufferedwebeventprovider, Version=1.0.1785.14700, Culture=neutral, PublicKeyToken=d31491bf33b55954, processorArchitecture=MSIL"   
+      buffer="true"  
+      bufferMode="Custom Notification"  
+/>  
+  </providers>  
+  
+  <profiles>  
+    <add name="Custom"   
+      minInstances="1"   
+      maxLimit="Infinite"   
+      minInterval="00:00:00" />  
+  </profiles>  
+  
+  <rules>  
+    <clear />  
+      <add name="Custom Buffered Web Event Provider"   
+        eventName="All Events"  
+        provider="SampleBufferedWebEventProvider"   
+        profile="Custom" />  
+  </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BufferedWebEventProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.BufferedWebEventProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Management.BufferedWebEventProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado internamente pelo sistema de monitoramento de integridade do ASP.NET. Você nunca usará para criar uma instância de um <xref:System.Web.Management.TraceWebEventProvider> objeto, mas você pode chamar esse construtor ao implementar seu próprio tipo de provedor que herda dessa classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar esse construtor em um provedor de evento personalizado.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#8)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferMode">
+      <MemberSignature Language="C#" Value="public string BufferMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BufferMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.BufferedWebEventProvider.BufferMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o modo de buffer usado pelo provedor.</summary>
+        <value>O nome do modo de buffer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.BufferedWebEventProvider.BufferMode%2A> propriedade contém o valor definido pelo `bufferMode` atributo o `providers` elemento do `healthMonitoring` seção.  
+  
+ O trecho de arquivo de configuração a seguir mostra como o nome do modo de buffer deve ser definido na `healthMonitoring` seção.  
+  
+```  
+<bufferModes>  
+  <add name ="Custom Notification" />  
+</bufferModes>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.BufferedWebEventProvider.BufferMode%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#4)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.BufferedWebEventProvider.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move os eventos de buffer do provedor para o log de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando este método é chamado, todos os eventos no buffer imediatamente são movidos do buffer de log, independentemente de quanto tempo decorrido desde a última gravação ou quantos eventos no buffer. A hora da última gravação é redefinida para o tempo da ação de liberação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.BufferedWebEventProvider.Flush%2A> método.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#9)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.BufferedWebEventProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome usado no arquivo de configuração para identificar esse provedor.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> que especifica os atributos atribuídos para esse provedor no arquivo de configuração.</param>
+        <summary>Define os valores iniciais para este objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET chama o <xref:System.Web.Management.BufferedWebEventProvider.Initialize%2A> método depois de chamar o <xref:System.Web.Management.BufferedWebEventProvider.%23ctor%2A> construtor. Este método é chamado para inicializar o <xref:System.Web.Management.BufferedWebEventProvider> com o nome especificado no arquivo de configuração e definições de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.BufferedWebEventProvider.Initialize%2A> método.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#2)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEvent">
+      <MemberSignature Language="C#" Value="public override void ProcessEvent (System.Web.Management.WebBaseEvent eventRaised);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessEvent(class System.Web.Management.WebBaseEvent eventRaised) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.BufferedWebEventProvider.ProcessEvent(System.Web.Management.WebBaseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventRaised" Type="System.Web.Management.WebBaseEvent" />
+      </Parameters>
+      <Docs>
+        <param name="eventRaised">O <see cref="T:System.Web.Management.WebBaseEvent" /> do objeto de processo.</param>
+        <summary>Processa o evento passado para o provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse é o método que o monitoramento de integridade do ASP.NET chama para iniciar o processamento do evento. Se o buffer está habilitado, as informações do evento é armazenado em buffer; Caso contrário, ele é enviado para o mecanismo de registro em log atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como implementar o <xref:System.Web.Management.BufferedWebEventProvider.ProcessEvent%2A> método.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#5)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEventFlush">
+      <MemberSignature Language="C#" Value="public abstract void ProcessEventFlush (System.Web.Management.WebEventBufferFlushInfo flushInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessEventFlush(class System.Web.Management.WebEventBufferFlushInfo flushInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.BufferedWebEventProvider.ProcessEventFlush(System.Web.Management.WebEventBufferFlushInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flushInfo" Type="System.Web.Management.WebEventBufferFlushInfo" />
+      </Parameters>
+      <Docs>
+        <param name="flushInfo">Um <see cref="T:System.Web.Management.WebEventBufferFlushInfo" /> que contém informações de buffer.</param>
+        <summary>Processa os eventos em buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.BufferedWebEventProvider.ProcessEventFlush%2A> método processa as mensagens que tiveram sido armazenado em buffer. Monitoramento de integridade do ASP.NET chama o método quando a liberação do buffer é necessária. Os intervalos em eliminação do que é necessário é determinado pelo valor do parâmetro do `bufferMode` atributo no `providers` elemento o `healthMonitoring` seção de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como implementar o <xref:System.Web.Management.BufferedWebEventProvider.ProcessEventFlush%2A> método.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#6)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public override void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.BufferedWebEventProvider.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa tarefas associadas ao desligamento do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET chama o <xref:System.Web.Management.BufferedWebEventProvider.Shutdown%2A> método quando o domínio de aplicativo que hospeda o aplicativo Web é encerrado. O método é chamado para executar tarefas que permitirá que o aplicativo encerrar normalmente, como recursos de fechamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseBuffering">
+      <MemberSignature Language="C#" Value="public bool UseBuffering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseBuffering" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.BufferedWebEventProvider.UseBuffering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o provedor está no modo de buffer.</summary>
+        <value>
+          <see langword="true" />Se o provedor estiver no modo de buffer. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.BufferedWebEventProvider.UseBuffering%2A> propriedade contém o valor definido pelo `buffer` atributo o `providers` elemento do `healthMonitoring` seção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Management.BufferedWebEventProvider.UseBuffering%2A> propriedade.  
+  
+ [!code-csharp[System.Web.Management.BufferedWebEventProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/CS/bufferedwebeventprovider.cs#3)]
+ [!code-vb[System.Web.Management.BufferedWebEventProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.BufferedWebEventProvider/VB/bufferedwebeventprovider.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

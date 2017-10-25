@@ -1,0 +1,110 @@
+<Type Name="WorkflowRole" FullName="System.Workflow.Activities.WorkflowRole">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowRole" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit WorkflowRole extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.WorkflowRole" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A classe base abstrata da qual fluxo de trabalho funções são derivadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ É possível derivar as classes a partir de <xref:System.Workflow.Activities.WorkflowRole> classe para implementar o acesso baseado em função para seus fluxos de trabalho e suas atividades. O <xref:System.Workflow.Activities.WebWorkflowRole> classe e o <xref:System.Workflow.Activities.ActiveDirectoryRole> classe derivam de <xref:System.Workflow.Activities.WorkflowRole> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowRole ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowRole.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Activities.WorkflowRole" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIdentities">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IList&lt;string&gt; GetIdentities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IList`1&lt;string&gt; GetIdentities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowRole.GetIdentities" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado em uma classe derivada obtém as identidades contidas <see cref="T:System.Workflow.Activities.WorkflowRole" />.</summary>
+        <returns>Uma lista dos nomes das identidades contidas por essa <see cref="T:System.Workflow.Activities.WorkflowRole" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludesIdentity">
+      <MemberSignature Language="C#" Value="public abstract bool IncludesIdentity (string identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IncludesIdentity(string identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.WorkflowRole.IncludesIdentity(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O nome da identidade para o qual o teste.</param>
+        <summary>Quando implementada em uma classe derivada, retorna um valor que indica se essa função contém a identidade especificada.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="identity" /> está incluído neste <see cref="T:System.Workflow.Activities.WorkflowRole" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.WorkflowRole.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, obtém ou define o nome deste <see cref="T:System.Workflow.Activities.WorkflowRole" />.</summary>
+        <value>O nome do <see cref="T:System.Workflow.Activities.WorkflowRole" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

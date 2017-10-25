@@ -1,0 +1,341 @@
+<Type Name="PixelShader" FullName="System.Windows.Media.Effects.PixelShader">
+  <TypeSignature Language="C#" Value="public sealed class PixelShader : System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PixelShader extends System.Windows.Media.Animation.Animatable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Effects.PixelShader" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Animatable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um wrapper gerenciado em um sombreador de pixel HLSL (High Level Shading Language).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Effects.PixelShader> classe para acessar o código de bytes HLSL pré-compiladas em um aplicativo do Windows Presentation Foundation (WPF). Você pode criar um <xref:System.Windows.Media.Effects.PixelShader> de uma referência de URI de pacote ou de um <xref:System.IO.Stream>.  
+  
+ Definir o <xref:System.Windows.Media.Effects.PixelShader.UriSource%2A> propriedade ou chamada de <xref:System.Windows.Media.Effects.PixelShader.SetStreamSource%2A> método para carregar o código de bytes do sombreador.  
+  
+ Para criar um efeito personalizado, atribua o <xref:System.Windows.Media.Effects.PixelShader> para o <xref:System.Windows.Media.Effects.ShaderEffect.PixelShader%2A> propriedade de um <xref:System.Windows.Media.Effects.ShaderEffect>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PixelShader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Effects.PixelShader" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.PixelShader Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.PixelShader Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.PixelShader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável <see cref="T:System.Windows.Media.Effects.PixelShader" /> objeto, fazendo cópias profundas dos valores do objeto. Ao copiar as propriedades do objeto de dependência, esse método copia dados e referências de ligações de recurso (que não podem resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável desta instância. O clone retornado é efetivamente uma cópia em profundidade do objeto atual. O clone <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Effects.PixelShader.Clone%2A> método pode ser usado para gerar cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos. Para sua conveniência, este método sombreia a herdadas <xref:System.Windows.Freezable.Clone%2A> método para fornecer uma implementação fortemente tipada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.PixelShader CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Effects.PixelShader CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.PixelShader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.Effects.PixelShader" />, fazendo cópias em profundidade dos valores do objeto atual. Referências de recurso, associações de dados e animações não são copiadas, mas seus valores atuais serão copiados.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidPixelShaderEncountered">
+      <MemberSignature Language="C#" Value="public static event EventHandler InvalidPixelShaderEncountered;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler InvalidPixelShaderEncountered" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Effects.PixelShader.InvalidPixelShaderEncountered" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o thread de processamento não é possível processar o sombreador de pixel.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStreamSource">
+      <MemberSignature Language="C#" Value="public void SetStreamSource (System.IO.Stream source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetStreamSource(class System.IO.Stream source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Effects.PixelShader.SetStreamSource(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="source">O fluxo para ler o código de bytes de HLSL.</param>
+        <summary>Atribui o <see cref="T:System.IO.Stream" /> para usar como a origem do código de bytes HLSL.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="source" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShaderRenderMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Effects.ShaderRenderMode ShaderRenderMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Effects.ShaderRenderMode ShaderRenderMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.PixelShader.ShaderRenderMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Effects.ShaderRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve usar a renderização de hardware ou software.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Effects.ShaderRenderMode" /> valor que indica se deve forçar o uso de renderização de hardware ou software para o efeito.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um <xref:System.Windows.Media.Effects.ShaderEffect> renderiza em hardware quando há um acelerador de hardware habilitado; caso contrário, ele é renderizado no software. O <xref:System.Windows.Media.Effects.PixelShader.ShaderRenderMode%2A> propriedade altera esse comportamento, com base em seu valor.  
+  
+ Se definido como <xref:System.Windows.Media.Effects.ShaderRenderMode.HardwareOnly>, e não há nenhum hardware com capacidade disponível, todo o <xref:System.Windows.Media.Effects.ShaderEffect> será ignorado.  
+  
+ Se definido como <xref:System.Windows.Media.Effects.ShaderRenderMode.SoftwareOnly>, o <xref:System.Windows.Media.Effects.ShaderEffect> sempre renderiza usando renderização por software.  
+  
+ Se definido como <xref:System.Windows.Media.Effects.ShaderRenderMode.Auto>, o <xref:System.Windows.Media.Effects.ShaderEffect> tem o comportamento padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShaderRenderModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShaderRenderModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShaderRenderModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.PixelShader.ShaderRenderModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Effects.PixelShader.ShaderRenderMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriSource">
+      <MemberSignature Language="C#" Value="public Uri UriSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri UriSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Effects.PixelShader.UriSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência de URI de pacote para o código de bytes HLSL no assembly.</summary>
+        <value>A referência de URI de pacote para o código de bytes HLSL no assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Uri> é uma referência de URI de pacote para um arquivo de assembly.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar a sintaxe de URI de pacote para carregar um sombreador de pixel denominado "sepiaShader.fx.ps" do executável de local do aplicativo.  
+  
+```  
+pack://application:,,,/myEffects;component/sepiaShader.fx.ps  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UriSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UriSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Effects.PixelShader.UriSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Effects.PixelShader.UriSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

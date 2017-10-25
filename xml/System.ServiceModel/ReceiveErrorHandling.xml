@@ -1,0 +1,133 @@
+<Type Name="ReceiveErrorHandling" FullName="System.ServiceModel.ReceiveErrorHandling">
+  <TypeSignature Language="C#" Value="public enum ReceiveErrorHandling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReceiveErrorHandling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.ReceiveErrorHandling" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Uma enumeração que especifica o tratamento para uma mensagem suspeita.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem suspeita é uma mensagem que falha repetidas tentativas de entrega para o aplicativo. Isso é aplicável somente ao usar uma associação de serviço de enfileiramento de mensagens MSMQ. O valor padrão é `Fault`, falhas de que o ouvinte e, portanto, o ServiceHost. No caso em que o serviço foi a falha devido a uma mensagem suspeita, um <xref:System.ServiceModel.MsmqPoisonMessageException> é gerada. A exceção contém o `LookupId` da mensagem do MSMQ que pode ser usada para mover a mensagem do caminho usando a API de System. Messaging. Certos valores da <xref:System.ServiceModel.ReceiveErrorHandling> enumeração como `Reject` e `Move` só estão disponíveis em [!INCLUDE[wv](~/includes/wv-md.md)]. Controle de mensagens suspeitas tratamento definindo o <xref:System.ServiceModel.Channels.MsmqBindingElementBase.ReceiveErrorHandling%2A> propriedade para um dos valores da enumeração.  
+  
+   
+  
+## Examples  
+ O código de configuração a seguir ilustra como definir essa propriedade no arquivo de configuração de serviço:  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Drop">
+      <MemberSignature Language="C#" Value="Drop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Drop = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Drop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa opção descarta a mensagem suspeita. A mensagem nunca é entregues ao aplicativo. Se o TTL da mensagem já expirou neste ponto, a mensagem pode aparecer na fila de mensagens mortas do remetente. Caso contrário, a mensagem não aparece em qualquer lugar. Esta opção indica que o usuário não se importa realmente se a mensagem for perdida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plataformas aplicáveis: [!INCLUDE[wxp](~/includes/wxp-md.md)], [!INCLUDE[ws2003](~/includes/ws2003-md.md)], e [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fault">
+      <MemberSignature Language="C#" Value="Fault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Fault = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Fault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa opção envia uma falha para o ouvinte que causou a falha do ServiceHost. A mensagem deve ser removida da fila de aplicativos por algum mecanismo externo antes que o aplicativo possa continuar a processar mensagens da fila.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plataformas aplicáveis: Windows XP, Windows Server 2003 e Windows Vista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="Move" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Move = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Move" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Isso move a mensagem suspeita para uma Fila de Mensagens Suspeitas para processamento posterior por um aplicativo de tratamento de mensagens suspeitas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plataformas aplicáveis: [!INCLUDE[wv](~/includes/wv-md.md)] somente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reject">
+      <MemberSignature Language="C#" Value="Reject" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.ReceiveErrorHandling Reject = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.ReceiveErrorHandling.Reject" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Isso instrui o MSMQ a enviar uma confirmação negativa para o gerenciador de fila de envio de que a mensagem não pode ser recebida pelo aplicativo. A mensagem é colocada na Fila de Mensagens Mortas do gerenciador da fila de envio.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plataformas aplicáveis: [!INCLUDE[wv](~/includes/wv-md.md)] somente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

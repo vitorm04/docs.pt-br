@@ -1,0 +1,77 @@
+<Type Name="AmbientAttribute" FullName="System.Windows.Markup.AmbientAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AmbientAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AmbientAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.AmbientAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Property, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que uma propriedade ou tipo deve ser tratado como ambiente. O conceito de ambiente está relacionado a como os processadores XAML determinam os proprietários do tipo dos membros.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma propriedade de ambiente é uma propriedade em que o valor deve estar disponível no contexto do analisador ao criar um gráfico de objeto, mas em que a pesquisa de membro de tipo típico é suspenso para fins do nó XAML imediato conjunto que está sendo criado. Há dois cenários principais para o conceito de ambiente:  
+  
+-   Outra propriedade do mesmo objeto influencia e qualifica como essa pesquisa de propriedade do objeto deve funcionar.  
+  
+-   A propriedade representa um mecanismo de adiamento maior e estendem os recursos de ambiente para pesquisar um valor do membro a todos os objetos contidos no objeto atual.  
+  
+ Esse atributo pode ser aplicado a propriedades específicas que têm esperado contêineres que permitem que um comportamento de pesquisa de propriedade de ambiente, ou pode ser aplicado a uma classe para habilitar o comportamento de propriedade de ambiente em todos os casos desse tipo de valor para uma propriedade.  
+  
+ <xref:System.Windows.Markup.AmbientAttribute>também pode ser aplicado a um método CLR, para dar suporte a atribuição de uma propriedade anexável XAML como o ambiente. Isso é necessário potencialmente porque uma implementação de CLR XAML propriedade anexada é implementado/representado para reflexão como um padrão de acessador com `get` e `set` métodos. Nenhuma propriedade CLR real ao atributo existe, para restringir o uso de <xref:System.AttributeTargets> para `Property` não habilitará especificando um anexável como o ambiente. Para um membro anexável que você deseja relatar como ambiente, o atributo de `get` acessador. Você não deve tentar métodos de atributo que não sejam especificamente suporte a métodos de membros anexáveis.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.AmbientAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+ Tipos de ambiente (tipos onde <xref:System.Windows.Markup.AmbientAttribute> é aplicada no nível do tipo) pode ser usado para determinadas situações de processamento de XAML onde o tipo de uma propriedade deve ser resolvido fora de ordem.  
+  
+## <a name="object-writer-scenarios"></a>Cenários de gravador de objeto  
+ Se você está definindo um gravador de objeto XAML, e você encontrar uma propriedade, método ou tipo onde <xref:System.Windows.Markup.AmbientAttribute> é aplicado, você normalmente deve acessar um serviço para determinar o comportamento de pesquisa de propriedade de ambiente pretendido que é necessário para gravar os objetos. Para obter mais informações, consulte <xref:System.Xaml.IAmbientProvider>.  
+  
+## <a name="value-converters"></a>Conversores de valor  
+ Conversores de tipo ou extensões de marcação talvez precise saber as informações de ambiente para processar as propriedades que representam os mapeamentos de tipo indireta, como as propriedades que especificam tipos ou membros por nomes de cadeia de caracteres com ou sem qualificação. Nesse cenário, <xref:System.Windows.Markup.AmbientAttribute> não se destina a ser usado diretamente para a lógica de código do conversor de valor. Em vez disso, o conversor de valor deve confiar no comportamento de processamento do gravador de XAML, que passará <xref:System.Xaml.IAmbientProvider> em seus contextos de serviço para seus métodos de conversor de valor quando chamado.  
+  
+## <a name="wpf-scenarios-for-ambientattribute"></a>Cenários do WPF para AmbientAttribute  
+  
+-   Uma propriedade de um <xref:System.Windows.Style> (<xref:System.Windows.Style.TargetType%2A>) pode qualificar as pesquisas de nome de propriedade necessários que são necessárias para localizar as referências de backup para nomes de propriedade no <xref:System.Windows.Setter.Property%2A?displayProperty=nameWithType> valores.  
+  
+-   Todo o conteúdo dentro de um `Resources` propriedade (itens de um <xref:System.Windows.ResourceDictionary>), bem como o conteúdo do modelo, deve ser capaz de acessar outros pares de valores. Declarando todo o `Resources` a propriedade como o ambiente chama lógica que permite que isso no analisador de WPF XAML.  
+  
+ Consulte <xref:System.Windows.ResourceDictionary> para obter um exemplo de um cenário de configuração <xref:System.Windows.Markup.AmbientAttribute> no nível do tipo.  
+  
+<a name="xamlTextUsage_AmbientAttribute"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AmbientAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.AmbientAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.AmbientAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

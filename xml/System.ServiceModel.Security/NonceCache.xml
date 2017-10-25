@@ -1,0 +1,125 @@
+<Type Name="NonceCache" FullName="System.ServiceModel.Security.NonceCache">
+  <TypeSignature Language="C#" Value="public abstract class NonceCache" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit NonceCache extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.NonceCache" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe base abstrata que representa um cache de valores de uso único.</summary>
+    <remarks>To be added.</remarks>
+    <block subset="none" type="overrides">
+      <para>Você deve substituir o <see cref="M:System.ServiceModel.Security.NonceCache.CheckNonce(System.Byte[])" /> e <see cref="M:System.ServiceModel.Security.NonceCache.TryAddNonce(System.Byte[])" /> métodos.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NonceCache ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.NonceCache.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Chamado de construtores em classes derivadas para inicializar a classe <see cref="T:System.ServiceModel.Security.NonceCache" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheSize">
+      <MemberSignature Language="C#" Value="public int CacheSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CacheSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.NonceCache.CacheSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo do cache especificado como o número de valores de uso único que o cache pode conter.</summary>
+        <value>O tamanho máximo do cache é especificado como o número de valores de uso único que o cache pode conter.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ocorre uma tentativa de definir um valor que é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CachingTimeSpan">
+      <MemberSignature Language="C#" Value="public TimeSpan CachingTimeSpan { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CachingTimeSpan" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Security.NonceCache.CachingTimeSpan" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo máximo após o qual um nonce é excluído do cache.</summary>
+        <value>O período de tempo máximo após o qual um nonce é excluído do cache. Esse valor deve ser pelo menos duas vezes a máxima do relógio distorção adicionada ao tamanho da janela de reprodução.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Tentativa de definir um valor que é menor que <see cref="F:System.TimeSpan.Zero" /> ocorre.  
+  
+ -ou-  
+  
+ Ocorre uma tentativa de definir um valor maior que o máximo permitido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckNonce">
+      <MemberSignature Language="C#" Value="public abstract bool CheckNonce (byte[] nonce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CheckNonce(unsigned int8[] nonce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.NonceCache.CheckNonce(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonce" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="nonce">O nonce para verificar.</param>
+        <summary>Quando substituído em uma classe derivada, retorna um valor que indica se o nonce especificado já está no cache.</summary>
+        <returns>
+          <see langword="true" />Se o nonce especificado já está em cache; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAddNonce">
+      <MemberSignature Language="C#" Value="public abstract bool TryAddNonce (byte[] nonce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryAddNonce(unsigned int8[] nonce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.NonceCache.TryAddNonce(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonce" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="nonce">O nonce para adicionar ao cache.</param>
+        <summary>Quando substituído em uma classe derivada, as tentativas de adicionar o nonce especificado para o cache.</summary>
+        <returns>
+          <see langword="true" />Se o valor de uso único foi adicionado ao cache; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

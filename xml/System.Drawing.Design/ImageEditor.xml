@@ -1,0 +1,306 @@
+<Type Name="ImageEditor" FullName="System.Drawing.Design.ImageEditor">
+  <TypeSignature Language="C#" Value="public class ImageEditor : System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageEditor extends System.Drawing.Design.UITypeEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.ImageEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Drawing.Design.UITypeEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface do usuário para selecionar uma imagem para uma propriedade na grade de propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Drawing.Design.ImageEditor> é um <xref:System.Drawing.Design.UITypeEditor> que fornece uma interface de usuário para o usuário selecionar uma imagem de uma propriedade. Quando o usuário inicia o editor, ele exibe um **abrir arquivo** caixa de diálogo que permite que o usuário navegue até um diretório e selecione um arquivo. Inicialmente, a lista de arquivos é filtrada pelas extensões de nome de arquivo padrão para o editor.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.ComponentModel.EditorAttribute> para associar o <xref:System.Drawing.Design.ImageEditor> com uma propriedade.  
+  
+ [!code-cpp[EditorAttributesExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/EditorAttributesExample/CPP/class1.cpp#3)]
+ [!code-csharp[EditorAttributesExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/EditorAttributesExample/CS/class1.cs#3)]
+ [!code-vb[EditorAttributesExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EditorAttributesExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Design.ImageEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExtensionsString">
+      <MemberSignature Language="C#" Value="protected static string CreateExtensionsString (string[] extensions, string sep);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string CreateExtensionsString(string[] extensions, string sep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.CreateExtensionsString(System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extensions" Type="System.String[]" />
+        <Parameter Name="sep" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extensions">As extensões para filtrar.</param>
+        <param name="sep">O separador a ser usado.</param>
+        <summary>Cria uma cadeia de caracteres do arquivo de extensões de nome usando a matriz de extensões de arquivo especificada e o separador especificado.</summary>
+        <returns>Uma cadeia de caracteres que contém as extensões de nome de arquivo especificado, cada um separado por um separador especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As extensões especificadas indicam os tipos de arquivo para a caixa de diálogo Abrir arquivo para filtrar a lista de arquivos por padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterEntry">
+      <MemberSignature Language="C#" Value="protected static string CreateFilterEntry (System.Drawing.Design.ImageEditor e);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string CreateFilterEntry(class System.Drawing.Design.ImageEditor e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.CreateFilterEntry(System.Drawing.Design.ImageEditor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Drawing.Design.ImageEditor" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Drawing.Design.ImageEditor" /> para obter a entrada de filtro do.</param>
+        <summary>Cria uma entrada de filtro para a lista de arquivos de uma caixa de diálogo.</summary>
+        <returns>A nova cadeia de entrada de filtro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditValue">
+      <MemberSignature Language="C#" Value="public override object EditValue (System.ComponentModel.ITypeDescriptorContext context, IServiceProvider provider, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EditValue(class System.ComponentModel.ITypeDescriptorContext context, class System.IServiceProvider provider, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="provider">Um <see cref="T:System.IServiceProvider" /> por meio do qual edição services pode ser obtido.</param>
+        <param name="value">Um <see cref="T:System.Object" /> que está sendo editado.</param>
+        <summary>Edita o valor do objeto especificado usando o estilo de edição fornecido pelo <see cref="M:System.Drawing.Design.ImageEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" /> método.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o novo valor. Se o valor do objeto não foi alterado, <see cref="M:System.Drawing.Design.ImageEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> retorna o objeto que foi passado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este editor usa um provedor de serviços para obter qualquer edição os serviços necessários.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditStyle">
+      <MemberSignature Language="C#" Value="public override System.Drawing.Design.UITypeEditorEditStyle GetEditStyle (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Drawing.Design.UITypeEditorEditStyle GetEditStyle(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.GetEditStyle(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.UITypeEditorEditStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Obtém o estilo de edição do <see cref="M:System.Drawing.Design.ImageEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)" /> método.</summary>
+        <returns>Uma da <see cref="T:System.Drawing.Design.UITypeEditorEditStyle" /> valores que indica a edição com suporte de estilo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Drawing.Design.ImageEditor.EditValue%2A> método não é suportado, esse método retornará <xref:System.Drawing.Design.UITypeEditorEditStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensions">
+      <MemberSignature Language="C#" Value="protected virtual string[] GetExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string[] GetExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.GetExtensions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as extensões para o filtro de lista de arquivos que inicialmente usa este editor para filtrar a lista de arquivos.</summary>
+        <returns>Um conjunto de extensões de arquivo usado para filtrar a lista de arquivos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDialogDescription">
+      <MemberSignature Language="C#" Value="protected virtual string GetFileDialogDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetFileDialogDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.GetFileDialogDescription" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a descrição para o filtro de lista de arquivos padrão fornecida por este editor.</summary>
+        <returns>A descrição para o filtro da lista de arquivos padrão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A descrição de caixa de diálogo de arquivo é exibido na caixa de lista suspensa de filtro de lista de arquivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImageExtenders">
+      <MemberSignature Language="C#" Value="protected virtual Type[] GetImageExtenders ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Type[] GetImageExtenders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.GetImageExtenders" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz de tipos de imagem com suporte.</summary>
+        <returns>Uma matriz de <see cref="T:System.Type" /> que representa os tipos de imagem aceitos.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Classes derivadas podem substituir essa propriedade para implementar uma lista diferente dos tipos de imagem com suporte.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPaintValueSupported">
+      <MemberSignature Language="C#" Value="public override bool GetPaintValueSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetPaintValueSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <summary>Obtém um valor que indica se este editor dá suporte a uma representação do valor de um objeto de pintura.</summary>
+        <returns>
+          <see langword="true" />Se <see cref="M:System.Drawing.Design.ImageEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)" /> estiver implementada; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromStream">
+      <MemberSignature Language="C#" Value="protected virtual System.Drawing.Image LoadFromStream (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Drawing.Image LoadFromStream(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.LoadFromStream(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> que contém a imagem a ser carregado.</param>
+        <summary>Carrega uma imagem do fluxo especificado.</summary>
+        <returns>O <see cref="T:System.Drawing.Image" /> que tenha sido carregado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PaintValue">
+      <MemberSignature Language="C#" Value="public override void PaintValue (System.Drawing.Design.PaintValueEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void PaintValue(class System.Drawing.Design.PaintValueEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.ImageEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Drawing.Design.PaintValueEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Drawing.Design.PaintValueEventArgs" /> indicando que pintar e onde pintar a ele.</param>
+        <summary>Pinta um valor indicado pelo especificado <see cref="T:System.Drawing.Design.PaintValueEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para exibir a representação do valor em um formato de folha de propriedade típica, pintar dentro dos limites do <xref:System.Drawing.Rectangle> contidos especificado <xref:System.Drawing.Design.PaintValueEventArgs>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

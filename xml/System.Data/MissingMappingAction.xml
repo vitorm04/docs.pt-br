@@ -1,0 +1,109 @@
+<Type Name="MissingMappingAction" FullName="System.Data.MissingMappingAction">
+  <TypeSignature Language="C#" Value="public enum MissingMappingAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MissingMappingAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.MissingMappingAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina a ação que ocorre quando um mapeamento está faltando em uma tabela de origem ou uma coluna de origem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.MissingMappingAction> valores são usados como argumentos a <xref:System.Data.Common.DataColumnMappingCollection.GetColumnMappingBySchemaAction%2A> método e o <xref:System.Data.Common.DataTableMappingCollection.GetTableMappingBySchemaAction%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.MissingMappingAction Error = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.MissingMappingAction.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingMappingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.InvalidOperationException" /> será gerado se o mapeamento de coluna especificado estiver ausente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ignore">
+      <MemberSignature Language="C#" Value="Ignore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.MissingMappingAction Ignore = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.MissingMappingAction.Ignore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingMappingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A coluna ou tabela que não tem um mapeamento será ignorada. Retorna <see langword="null" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Passthrough">
+      <MemberSignature Language="C#" Value="Passthrough" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.MissingMappingAction Passthrough = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.MissingMappingAction.Passthrough" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingMappingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A coluna de origem ou a tabela de origem é criada e adicionada para o <see cref="T:System.Data.DataSet" /> usando seu nome original.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

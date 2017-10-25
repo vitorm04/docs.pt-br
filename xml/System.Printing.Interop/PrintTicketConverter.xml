@@ -1,0 +1,292 @@
+<Type Name="PrintTicketConverter" FullName="System.Printing.Interop.PrintTicketConverter">
+  <TypeSignature Language="C#" Value="public sealed class PrintTicketConverter : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PrintTicketConverter extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.Interop.PrintTicketConverter" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Converte gerenciado <see cref="T:System.Printing.PrintTicket" /> objetos para não gerenciado Interface GDI (Graphics Device) [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estruturas e vice-versa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhum dos métodos dessa classe validará o <xref:System.Printing.PrintTicket>. Para validá-la, use <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintTicketConverter (string deviceName, int clientPrintSchemaVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string deviceName, int32 clientPrintSchemaVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.Interop.PrintTicketConverter.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="deviceName" Type="System.String" />
+        <Parameter Name="clientPrintSchemaVersion" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceName">O nome da impressora que está associado ao novo <see cref="T:System.Printing.Interop.PrintTicketConverter" /> instância.</param>
+        <param name="clientPrintSchemaVersion">A versão do esquema de impressão para usar o <see cref="T:System.Printing.PrintTicket" /> e conversão de DEVMODE.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.Interop.PrintTicketConverter" /> classe para a impressora especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a estrutura DEVMODE, consulte [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="deviceName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="clientPrintSchemaVersion" />é 0 ou menos.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">Não foi possível vincular a <paramref name="deviceName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertDevModeToPrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket ConvertDevModeToPrintTicket (byte[] devMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintTicket ConvertDevModeToPrintTicket(unsigned int8[] devMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.Interop.PrintTicketConverter.ConvertDevModeToPrintTicket(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="devMode" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="devMode">A <see cref="T:System.Byte" /> matriz que contém a estrutura DEVMODE.</param>
+        <summary>Converte especificado [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura para um código gerenciado <see cref="T:System.Printing.PrintTicket" />.</summary>
+        <returns>O novo gerenciado <see cref="T:System.Printing.PrintTicket" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a estrutura DEVMODE, consulte [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565).  
+  
+ O escopo de retornado <xref:System.Printing.PrintTicket> é todo o trabalho de impressão.  
+  
+ Esse método não valida o <xref:System.Printing.PrintTicket>. Para validá-la, use <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Printing.Interop.PrintTicketConverter" /> já foi descartada.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="devMode" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O conteúdo de <paramref name="devMode" /> não está bem formado.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">Falha na conversão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertDevModeToPrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket ConvertDevModeToPrintTicket (byte[] devMode, System.Printing.PrintTicketScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Printing.PrintTicket ConvertDevModeToPrintTicket(unsigned int8[] devMode, valuetype System.Printing.PrintTicketScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.Interop.PrintTicketConverter.ConvertDevModeToPrintTicket(System.Byte[],System.Printing.PrintTicketScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="devMode" Type="System.Byte[]" />
+        <Parameter Name="scope" Type="System.Printing.PrintTicketScope" />
+      </Parameters>
+      <Docs>
+        <param name="devMode">Um <see cref="T:System.Byte" /> buffer que contém o DEVMODE estrutura para converter.</param>
+        <param name="scope">Um <see cref="T:System.Printing.PrintTicketScope" /> valor que especifica se o novo <see cref="T:System.Printing.PrintTicket" /> aplica-se a uma página, um documento ou um trabalho de impressão inteiro.</param>
+        <summary>Converte especificado [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura para um código gerenciado <see cref="T:System.Printing.PrintTicket" /> que tem o escopo especificado.</summary>
+        <returns>O novo <see cref="T:System.Printing.PrintTicket" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não valida o <xref:System.Printing.PrintTicket>. Para validá-la, use <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>.  
+  
+ Para obter mais informações sobre a estrutura DEVMODE, consulte [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Printing.Interop.PrintTicketConverter" /> já foi descartada.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="devMode" /> é nulo (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">O conteúdo de <paramref name="devMode" /> não está bem formado.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">Falha na conversão.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="scope" /> não é válido <see cref="T:System.Printing.PrintTicketScope" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPrintTicketToDevMode">
+      <MemberSignature Language="C#" Value="public byte[] ConvertPrintTicketToDevMode (System.Printing.PrintTicket printTicket, System.Printing.Interop.BaseDevModeType baseType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ConvertPrintTicketToDevMode(class System.Printing.PrintTicket printTicket, valuetype System.Printing.Interop.BaseDevModeType baseType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.Interop.PrintTicketConverter.ConvertPrintTicketToDevMode(System.Printing.PrintTicket,System.Printing.Interop.BaseDevModeType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="baseType" Type="System.Printing.Interop.BaseDevModeType" />
+      </Parameters>
+      <Docs>
+        <param name="printTicket">O <see cref="T:System.Printing.PrintTicket" /> a ser convertido.</param>
+        <param name="baseType">Um valor que identifica se deseja usar o padrão do usuário ou a impressora padrão DEVMODE como o base DEVMODE.</param>
+        <summary>Converte especificado gerenciado <see cref="T:System.Printing.PrintTicket" /> um gerenciado para [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura se baseia o [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura identificada pelo <see cref="T:System.Printing.Interop.BaseDevModeType" />.</summary>
+        <returns>Um <see cref="T:System.Byte" /> matriz que contém o novo [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo de <xref:System.Printing.PrintTicket> parâmetro deve ser todo o trabalho de impressão.  
+  
+ Esse método não valida o <xref:System.Printing.PrintTicket>. Para validá-la, use <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>.  
+  
+ Para obter mais informações sobre a estrutura DEVMODE, consulte [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Printing.Interop.PrintTicketConverter" /> já foi descartada.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="printTicket" /> é nulo (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">O conteúdo de <paramref name="printTicket" /> não está bem formado.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">Falha na conversão.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="baseType" /> não é válido <see cref="T:System.Printing.Interop.BaseDevModeType" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPrintTicketToDevMode">
+      <MemberSignature Language="C#" Value="public byte[] ConvertPrintTicketToDevMode (System.Printing.PrintTicket printTicket, System.Printing.Interop.BaseDevModeType baseType, System.Printing.PrintTicketScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ConvertPrintTicketToDevMode(class System.Printing.PrintTicket printTicket, valuetype System.Printing.Interop.BaseDevModeType baseType, valuetype System.Printing.PrintTicketScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.Interop.PrintTicketConverter.ConvertPrintTicketToDevMode(System.Printing.PrintTicket,System.Printing.Interop.BaseDevModeType,System.Printing.PrintTicketScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="baseType" Type="System.Printing.Interop.BaseDevModeType" />
+        <Parameter Name="scope" Type="System.Printing.PrintTicketScope" />
+      </Parameters>
+      <Docs>
+        <param name="printTicket">O <see cref="T:System.Printing.PrintTicket" /> a ser convertido.</param>
+        <param name="baseType">Um valor que identifica se deseja usar o padrão do usuário ou a impressora padrão DEVMODE como o base DEVMODE.</param>
+        <param name="scope">Um <see cref="T:System.Printing.PrintTicketScope" /> valor que especifica se a conversão do <see cref="T:System.Printing.PrintTicket" /> deve ser feito no escopo de uma página, um documento ou um trabalho de impressão inteiro.</param>
+        <summary>Converte o código gerenciado especificado <see cref="T:System.Printing.PrintTicket" /> com o escopo especificado em uma não gerenciado [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura se baseia o [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura identificada pelo <see cref="T:System.Printing.Interop.BaseDevModeType" />.</summary>
+        <returns>Um <see cref="T:System.Byte" /> buffer que representa o novo [DEVMODE](http://go.microsoft.com/fwlink/?LinkId=89844) estrutura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não valida o <xref:System.Printing.PrintTicket>. Para validá-la, use <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A>.  
+  
+ Para obter mais informações sobre a estrutura DEVMODE, consulte [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Isso <see cref="T:System.Printing.Interop.PrintTicketConverter" /> já foi descartada.</exception>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="printTicket" /> é nulo (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">O conteúdo de <paramref name="printTicket" /> não está bem formado.</exception>
+        <exception cref="T:System.Printing.PrintQueueException">Falha na conversão.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="baseType" /> não é válido <see cref="T:System.Printing.Interop.BaseDevModeType" /> valor.  
+  
+ -ou-  
+  
+ O <paramref name="scope" /> não é válido <see cref="T:System.Printing.PrintTicketScope" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.Interop.PrintTicketConverter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pelo <see cref="T:System.Printing.Interop.PrintTicketConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxPrintSchemaVersion">
+      <MemberSignature Language="C#" Value="public static int MaxPrintSchemaVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxPrintSchemaVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.Interop.PrintTicketConverter.MaxPrintSchemaVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor máximo [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) versão que <see cref="T:System.Printing.Interop.PrintTicketConverter" /> pode dar suporte.</summary>
+        <value>O máximo [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397) versão que <see cref="T:System.Printing.Interop.PrintTicketConverter" /> pode dar suporte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.Interop.PrintTicketConverter.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Printing.Interop.PrintTicketConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Printing.Interop.PrintTicketConverter>. O `Dispose` método deixa o <xref:System.Printing.Interop.PrintTicketConverter> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Printing.Interop.PrintTicketConverter> para o coletor de lixo possa recuperar a memória que o <xref:System.Printing.Interop.PrintTicketConverter> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Printing.Interop.PrintTicketConverter>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Printing.Interop.PrintTicketConverter> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

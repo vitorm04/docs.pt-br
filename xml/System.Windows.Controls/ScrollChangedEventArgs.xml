@@ -1,0 +1,385 @@
+<Type Name="ScrollChangedEventArgs" FullName="System.Windows.Controls.ScrollChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ScrollChangedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollChangedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ScrollChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve uma alteração no estado de rolagem e contém os argumentos necessários para um evento <see cref="E:System.Windows.Controls.ScrollViewer.ScrollChanged" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtentHeight">
+      <MemberSignature Language="C#" Value="public double ExtentHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ExtentHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura atualizada do <see cref="T:System.Windows.Controls.ScrollViewer" /> extensão.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a altura de extensão atualizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ExtentHeight%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentHeightChange">
+      <MemberSignature Language="C#" Value="public double ExtentHeightChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentHeightChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ExtentHeightChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a alteração na altura do <see cref="T:System.Windows.Controls.ScrollViewer" /> extensão.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a alteração de altura de extensão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ExtentHeightChange%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidth">
+      <MemberSignature Language="C#" Value="public double ExtentWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ExtentWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura atualizada do <see cref="T:System.Windows.Controls.ScrollViewer" /> extensão.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a largura da extensão atualizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ExtentWidth%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtentWidthChange">
+      <MemberSignature Language="C#" Value="public double ExtentWidthChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ExtentWidthChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ExtentWidthChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a alteração na largura do <see cref="T:System.Windows.Controls.ScrollViewer" /> extensão.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a alteração na largura da extensão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ExtentWidthChange%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalChange">
+      <MemberSignature Language="C#" Value="public double HorizontalChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.HorizontalChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a alteração no deslocamento horizontal para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a alteração no deslocamento horizontal para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.HorizontalChange%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalOffset">
+      <MemberSignature Language="C#" Value="public double HorizontalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 HorizontalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.HorizontalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de deslocamento horizontal atualizado para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o valor atualizado do deslocamento horizontal para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.HorizontalOffset%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ScrollChangedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador de eventos para invocar, nesse caso o <see cref="T:System.Windows.Controls.ScrollChangedEventHandler" /> delegate.</param>
+        <param name="genericTarget">O destino no qual o <c>genericHandler</c> é invocado.</param>
+        <summary>Executa a conversão de tipo apropriado antes de invocar a segurança de tipo <see cref="T:System.Windows.Controls.ScrollChangedEventHandler" /> delegar</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você fornecer o `genericHandler` ou `genericTarget` como uma referência nula (`Nothing` no Visual Basic), as exceções são geradas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalChange">
+      <MemberSignature Language="C#" Value="public double VerticalChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.VerticalChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a alteração no deslocamento vertical de um <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a alteração no deslocamento vertical de um <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.VerticalChange%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalOffset">
+      <MemberSignature Language="C#" Value="public double VerticalOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 VerticalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.VerticalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atualizado do deslocamento vertical para uma <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o deslocamento vertical atualizado de um <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.VerticalOffset%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeight">
+      <MemberSignature Language="C#" Value="public double ViewportHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ViewportHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atualizado da altura do visor para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a altura do visor atualizada de um <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ViewportHeight%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportHeightChange">
+      <MemberSignature Language="C#" Value="public double ViewportHeightChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportHeightChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ViewportHeightChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a alteração no valor da altura do visor para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a alteração de altura do visor vertical para uma <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ViewportHeightChange%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidth">
+      <MemberSignature Language="C#" Value="public double ViewportWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ViewportWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atualizado da largura do visor para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa o valor atualizado da largura do visor para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ViewportWidth%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewportWidthChange">
+      <MemberSignature Language="C#" Value="public double ViewportWidthChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ViewportWidthChange" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ScrollChangedEventArgs.ViewportWidthChange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a alteração no visor de largura de um <see cref="T:System.Windows.Controls.ScrollViewer" />.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a alteração na largura do visor para um <see cref="T:System.Windows.Controls.ScrollViewer" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.ScrollChangedEventArgs.ViewportWidthChange%2A> propriedade.  
+  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,98 @@
+<Type Name="VisualStyleState" FullName="System.Windows.Forms.VisualStyles.VisualStyleState">
+  <TypeSignature Language="C#" Value="public enum VisualStyleState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VisualStyleState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como os estilos visuais são aplicados ao aplicativo atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.Application.VisualStyleState%2A?displayProperty=nameWithType> propriedade para especificar se os estilos visuais são aplicados às áreas de cliente ou não cliente de aplicativo windows.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um programa simple que aplica os estilos visuais em cada uma das quatro áreas especificadas pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleState> valores. Para habilitar estilos visuais em uma determinada área, clique no botão de opção (também conhecido como um botão de opção) que representa a área que você deseja habilitar e clique no **VisualStyleState atualização** botão para observar as alterações na janela.  
+  
+ [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleState#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleState/cpp/visualstylestate.cpp#0)]
+ [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleState#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleState/CS/visualstylestate.cs#0)]
+ [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleState#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleState/VB/visualstylestate.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClientAndNonClientAreasEnabled">
+      <MemberSignature Language="C#" Value="ClientAndNonClientAreasEnabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.VisualStyleState ClientAndNonClientAreasEnabled = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAndNonClientAreasEnabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estilos visuais são aplicados às áreas de cliente e não cliente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientAreaEnabled">
+      <MemberSignature Language="C#" Value="ClientAreaEnabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.VisualStyleState ClientAreaEnabled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAreaEnabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estilos visuais são aplicados somente à área de cliente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NonClientAreaEnabled">
+      <MemberSignature Language="C#" Value="NonClientAreaEnabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.VisualStyleState NonClientAreaEnabled = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.VisualStyleState.NonClientAreaEnabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estilos visuais são aplicados somente à área de não cliente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoneEnabled">
+      <MemberSignature Language="C#" Value="NoneEnabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.VisualStyleState NoneEnabled = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.VisualStyleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estilos visuais não são aplicados ao aplicativo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

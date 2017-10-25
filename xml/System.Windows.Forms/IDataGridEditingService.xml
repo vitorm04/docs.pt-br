@@ -1,0 +1,78 @@
+<Type Name="IDataGridEditingService" FullName="System.Windows.Forms.IDataGridEditingService">
+  <TypeSignature Language="C#" Value="public interface IDataGridEditingService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataGridEditingService" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IDataGridEditingService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa métodos que processam solicitações de edição.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public bool BeginEdit (System.Windows.Forms.DataGridColumnStyle gridColumn, int rowNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BeginEdit(class System.Windows.Forms.DataGridColumnStyle gridColumn, int32 rowNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridEditingService.BeginEdit(System.Windows.Forms.DataGridColumnStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gridColumn" Type="System.Windows.Forms.DataGridColumnStyle" />
+        <Parameter Name="rowNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="gridColumn">O <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> para editar.</param>
+        <param name="rowNumber">O índice da linha para editar</param>
+        <summary>Começa uma operação de edição.</summary>
+        <returns>
+          <see langword="true" />Se a operação pode ser executada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="EndEdit">
+      <MemberSignature Language="C#" Value="public bool EndEdit (System.Windows.Forms.DataGridColumnStyle gridColumn, int rowNumber, bool shouldAbort);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndEdit(class System.Windows.Forms.DataGridColumnStyle gridColumn, int32 rowNumber, bool shouldAbort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridEditingService.EndEdit(System.Windows.Forms.DataGridColumnStyle,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gridColumn" Type="System.Windows.Forms.DataGridColumnStyle" />
+        <Parameter Name="rowNumber" Type="System.Int32" />
+        <Parameter Name="shouldAbort" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="gridColumn">O <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> para editar.</param>
+        <param name="rowNumber">O número da linha para editar</param>
+        <param name="shouldAbort">True se for solicitada uma operação de anulação</param>
+        <summary>Termina a operação de edição.</summary>
+        <returns>
+          <see langword="true" />Se o valor é confirmada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor não pode ser confirmado, o <xref:System.Windows.Forms.DataGridColumnStyle> permanece editável.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

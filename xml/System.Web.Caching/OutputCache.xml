@@ -1,0 +1,144 @@
+<Type Name="OutputCache" FullName="System.Web.Caching.OutputCache">
+  <TypeSignature Language="C#" Value="public static class OutputCache" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit OutputCache extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.OutputCache" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso programático aos provedores de cache de saída especificados no arquivo de configuração para um site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cache de saída armazena a saída gerada de páginas, controles e respostas HTTP na memória. Cache de saída permite armazenar em cache versões diferentes de conteúdo, dependendo da cadeia de caracteres de consulta e em parâmetros de postagem de formulário para uma página, no tipo de navegador ou no idioma do usuário. Você pode configurar o ASP.NET para armazenar em cache uma entrada de cache de saída para um período específico. Você também pode configurar o ASP.NET para remover uma entrada de cache automaticamente com base em um evento externo, como as alterações no banco de dados depende do cache.  
+  
+ O <xref:System.Web.Caching.OutputCache> classe permite que você estenda o cache de saída. Por exemplo, você pode configurar um ou mais personalizada cache de saída provedores que outros dispositivos de armazenamento como discos locais ou remotos e mecanismos de cache distribuído, armazenamento em nuvem e bancos de dados de destino.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DefaultProviderName">
+      <MemberSignature Language="C#" Value="public static string DefaultProviderName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string DefaultProviderName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.OutputCache.DefaultProviderName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do provedor padrão que é configurado para o cache de saída.</summary>
+        <value>O nome do provedor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, todas as respostas HTTP, renderizado páginas e controles usam `AspNetInternalProvider`, o provedor de cache de saída na memória. Para usar um provedor diferente, defina o `defaultProvider` de atributo para o nome do provedor alternativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public static object Deserialize (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Deserialize(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.OutputCache.Deserialize(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Os dados a ser desserializado.</param>
+        <summary>Desserializa um objeto binário em dados de cache de saída.</summary>
+        <returns>Um objeto que contém dados desserializados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado por provedores de cache de saída que estejam operando em confiança parcial.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O objeto desserializado que é retornado pelo método não é um tipo de cache de saída válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Web.Caching.OutputCacheProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Caching.OutputCacheProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.OutputCache.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.OutputCacheProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de provedores de cache de saída que são especificadas no arquivo de configuração para um site da Web.</summary>
+        <value>A coleção de provedores configurados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você configurar um ou mais cache de saída provedores personalizados que se destinam a outros dispositivos de armazenamento, como discos locais ou remotos, bancos de dados, o armazenamento em nuvem e mecanismos de cache distribuído. Para configurar os provedores de cache de saída personalizados, você deve adicionar um provedor à coleção que é representada pelo <xref:System.Web.Caching.OutputCache.Providers%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public static void Serialize (System.IO.Stream stream, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Serialize(class System.IO.Stream stream, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.OutputCache.Serialize(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O objeto que contém os dados binários serializados.</param>
+        <param name="data">Os dados de cache de saída para serializar.</param>
+        <summary>Serializa os dados de cache de saída em dados binários.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado por provedores de cache de saída que estejam operando em confiança parcial.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="data" />não é um dos tipos de cache de saída especificados.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          O <paramref name="data" /> é <see langword="null" /> ou o <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

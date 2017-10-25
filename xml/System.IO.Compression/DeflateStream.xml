@@ -1,0 +1,1022 @@
+<Type Name="DeflateStream" FullName="System.IO.Compression.DeflateStream">
+  <TypeSignature Language="C#" Value="public class DeflateStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeflateStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Compression.DeflateStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Compression</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos e propriedades para compactar e descompactar fluxos usando o algoritmo Deflate.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa o algoritmo Deflate, que é um algoritmo de padrão da indústria para o arquivo sem perdas compactação e descompactação. Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], o <xref:System.IO.Compression.DeflateStream> classe usa a biblioteca zlib. Como resultado, ele fornece um melhor algoritmo de compactação e, na maioria dos casos, um arquivo compactado menor do que fornece em versões anteriores do .NET Framework.  
+  
+ Essa classe não inerentemente fornece funcionalidade para adicionar arquivos ao extrair arquivos ou de arquivos zip. Para trabalhar com arquivos zip, use o <xref:System.IO.Compression.ZipArchive> e <xref:System.IO.Compression.ZipArchiveEntry> classes.  
+  
+ O <xref:System.IO.Compression.DeflateStream> classe usa o mesmo algoritmo de compactação como o formato de dados gzip usado pelo <xref:System.IO.Compression.GZipStream> classe.  
+  
+ A funcionalidade de compactação no <xref:System.IO.Compression.DeflateStream> e <xref:System.IO.Compression.GZipStream> é exposto como um fluxo. Dados são lidos em uma base de byte por byte, portanto, não é possível executar várias passagens para determinar o melhor método para compactar arquivos inteiros ou blocos grandes de dados. O <xref:System.IO.Compression.DeflateStream> e <xref:System.IO.Compression.GZipStream> classes são melhor usadas em descompactados fontes de dados. Se os dados de origem já estiver compactados, a usar essas classes, na verdade, pode aumentar o tamanho do fluxo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Compression.DeflateStream> classe para compactar e descompactar um diretório de arquivos.  
+  
+ [!code-csharp[IO.Compression.Deflate1#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.Deflate1/CS/deflatetest.cs#1)]
+ [!code-vb[IO.Compression.Deflate1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.Deflate1/VB/deflatetest.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.DeflateStream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando o <xref:System.IO.Compression.DeflateStream> classe compactar um arquivo maior do que 4 GB fará com que uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeflateStream (System.IO.Stream stream, System.IO.Compression.CompressionLevel compressionLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.IO.Compression.CompressionLevel compressionLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.#ctor(System.IO.Stream,System.IO.Compression.CompressionLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="compressionLevel" Type="System.IO.Compression.CompressionLevel" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo a ser compactado.</param>
+        <param name="compressionLevel">Um dos valores de enumeração que indica se deve ser enfatizada a velocidade ou a eficiência da compactação ao compactar o fluxo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.DeflateStream" /> usando o nível de compactação e o fluxo especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando quiser especificar se a eficiência da compactação ou velocidade é mais importante para uma instância do <xref:System.IO.Compression.DeflateStream> classe.  
+  
+ Essa sobrecarga de construtor usa o modo de compactação <xref:System.IO.Compression.CompressionMode.Compress>. Para definir o modo de compactação para outro valor, use o <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionMode%29> ou <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionMode%2CSystem.Boolean%29> de sobrecarga.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o nível de compactação durante a criação de um <xref:System.IO.Compression.DeflateStream> objeto.  
+  
+ [!code-csharp[System.IO.Compression.DeflateStream#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.deflatestream/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.DeflateStream#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.deflatestream/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O fluxo não dá suporte a operações de gravação, como compactação. (A propriedade <see cref="P:System.IO.Stream.CanWrite" /> no objeto de fluxo é <see langword="false" />.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeflateStream (System.IO.Stream stream, System.IO.Compression.CompressionMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.IO.Compression.CompressionMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.#ctor(System.IO.Stream,System.IO.Compression.CompressionMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="mode" Type="System.IO.Compression.CompressionMode" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para compactar ou descompactar.</param>
+        <param name="mode">Um dos valores de enumeração que indica se o fluxo deve ser compactado ou descompactado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.DeflateStream" /> usando o fluxo e o modo de compactação especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, <xref:System.IO.Compression.DeflateStream> possui o fluxo subjacente, para fechar o fluxo também fecha o fluxo subjacente. Observe que o estado do fluxo subjacente pode afetar a usabilidade do fluxo. Além disso, nenhuma verificação explícita é executada, para que nenhuma exceção adicional é lançada quando a nova instância é criada.  
+  
+ Se uma instância do <xref:System.IO.Compression.DeflateStream> classe é criada com o `mode` parâmetro igual a `Compress`, informações de cabeçalho são inseridas imediatamente. Se nenhuma ação ocorre, o fluxo de aparece como um arquivo válido, vazio, compactado.  
+  
+ Usando o <xref:System.IO.Compression.DeflateStream> classe compactar um arquivo maior do que 4 GB gera uma exceção.  
+  
+ Por padrão, o nível de compactação é definido como <xref:System.IO.Compression.CompressionLevel.Optimal> quando o modo de compactação é <xref:System.IO.Compression.CompressionMode.Compress>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Compression.DeflateStream> classe para compactar e descompactar um arquivo.  
+  
+ [!code-csharp[IO.Compression.Deflate1#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.Deflate1/CS/deflatetest.cs#1)]
+ [!code-vb[IO.Compression.Deflate1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.Deflate1/VB/deflatetest.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mode" /> não é um valor <see cref="T:System.IO.Compression.CompressionMode" /> válido.  
+  
+ -ou-  
+  
+ <see cref="T:System.IO.Compression.CompressionMode" /> é <see cref="F:System.IO.Compression.CompressionMode.Compress" /> e <see cref="P:System.IO.Stream.CanWrite" /> é <see langword="false" />.  
+  
+ -ou-  
+  
+ <see cref="T:System.IO.Compression.CompressionMode" /> é <see cref="F:System.IO.Compression.CompressionMode.Decompress" /> e <see cref="P:System.IO.Stream.CanRead" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeflateStream (System.IO.Stream stream, System.IO.Compression.CompressionLevel compressionLevel, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.IO.Compression.CompressionLevel compressionLevel, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.#ctor(System.IO.Stream,System.IO.Compression.CompressionLevel,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="compressionLevel" Type="System.IO.Compression.CompressionLevel" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo a ser compactado.</param>
+        <param name="compressionLevel">Um dos valores de enumeração que indica se deve ser enfatizada a velocidade ou a eficiência da compactação ao compactar o fluxo.</param>
+        <param name="leaveOpen">
+          <see langword="true" /> para deixar o objeto de fluxo aberto depois de descartar o objeto <see cref="T:System.IO.Compression.DeflateStream" />, caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.DeflateStream" /> usando o fluxo e o nível de compactação especificados e, opcionalmente, deixa o fluxo aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando quiser especificar se a eficiência da compactação ou velocidade é mais importante para uma instância do <xref:System.IO.Compression.DeflateStream> classe e se deseja deixar o objeto de fluxo aberto depois de descartar o <xref:System.IO.Compression.DeflateStream> objeto.  
+  
+ Essa sobrecarga de construtor usa o modo de compactação <xref:System.IO.Compression.CompressionMode.Compress>. Para definir o modo de compactação para outro valor, use o <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionMode%29> ou <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionMode%2CSystem.Boolean%29> de sobrecarga.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o nível de compactação durante a criação de um <xref:System.IO.Compression.DeflateStream> objeto e como deixar o fluxo aberto.  
+  
+ [!code-csharp[System.IO.Compression.DeflateStream#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.deflatestream/cs/program2.cs#2)]
+ [!code-vb[System.IO.Compression.DeflateStream#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.deflatestream/vb/program2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O fluxo não dá suporte a operações de gravação, como compactação. (A propriedade <see cref="P:System.IO.Stream.CanWrite" /> no objeto de fluxo é <see langword="false" />.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeflateStream (System.IO.Stream stream, System.IO.Compression.CompressionMode mode, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.IO.Compression.CompressionMode mode, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.#ctor(System.IO.Stream,System.IO.Compression.CompressionMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="mode" Type="System.IO.Compression.CompressionMode" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para compactar ou descompactar.</param>
+        <param name="mode">Um dos valores de enumeração que indica se o fluxo deve ser compactado ou descompactado.</param>
+        <param name="leaveOpen">
+          <see langword="true" /> para deixar o fluxo aberto depois de descartar o objeto <see cref="T:System.IO.Compression.DeflateStream" />, caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.DeflateStream" /> usando o fluxo e o modo de compactação especificados e, opcionalmente, deixa o fluxo aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, <xref:System.IO.Compression.DeflateStream> possui o fluxo subjacente, para fechar o fluxo também fecha o fluxo subjacente. Observe que o estado do fluxo subjacente pode afetar a usabilidade do fluxo. Além disso, nenhuma verificação explícita é executada, para que nenhuma exceção adicional é lançada quando a nova instância é criada.  
+  
+ Se uma instância do <xref:System.IO.Compression.DeflateStream> classe é criada com o `mode` parâmetro igual a `Compress`, informações de cabeçalho são inseridas imediatamente. Se nenhuma ação ocorre, o fluxo de aparece como um arquivo válido, vazio, compactado.  
+  
+ Usando o <xref:System.IO.Compression.DeflateStream> classe compactar um arquivo maior do que 4 GB gera uma exceção.  
+  
+ Por padrão, o nível de compactação é definido como <xref:System.IO.Compression.CompressionLevel.Optimal> quando o modo de compactação é <xref:System.IO.Compression.CompressionMode.Compress>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.IO.Compression.DeflateStream> classe para compactar e descompactar um arquivo.  
+  
+ [!code-csharp[IO.Compression.Deflate1#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.Compression.Deflate1/CS/deflatetest.cs#1)]
+ [!code-vb[IO.Compression.Deflate1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.Compression.Deflate1/VB/deflatetest.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="mode" /> não é um valor <see cref="T:System.IO.Compression.CompressionMode" /> válido.  
+  
+ -ou-  
+  
+ <see cref="T:System.IO.Compression.CompressionMode" /> é <see cref="F:System.IO.Compression.CompressionMode.Compress" /> e <see cref="P:System.IO.Stream.CanWrite" /> é <see langword="false" />.  
+  
+ -ou-  
+  
+ <see cref="T:System.IO.Compression.CompressionMode" /> é <see cref="F:System.IO.Compression.CompressionMode.Decompress" /> e <see cref="P:System.IO.Stream.CanRead" /> é <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream BaseStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BaseStream" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.DeflateStream.BaseStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o fluxo subjacente.</summary>
+        <value>Um objeto de fluxo que representa o fluxo subjacente.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O fluxo subjacente é fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRead">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback cback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginRead(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback cback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="asyncCallback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">O deslocamento de byte no <c>matriz</c> no qual começar a ler dados do fluxo.</param>
+        <param name="count">O número máximo de bytes a serem lidos.</param>
+        <param name="cback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>Inicia uma operação de leitura assíncrona. (Considere o uso de <see cref="M:System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)" /> método em vez disso.)</summary>
+        <returns>Um objeto que representa o assíncrona ler operação, que pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], você pode executar operações de leitura assíncronas usando o <xref:System.IO.Stream.ReadAsync%2A> método. O <xref:System.IO.Compression.DeflateStream.BeginRead%2A> método ainda está disponível na [!INCLUDE[net_v45](~/includes/net-v45-md.md)] para dar suporte a código herdado; no entanto, você pode implementar operações de e/s assíncronas mais facilmente usando os novos métodos assíncronos. Para obter mais informações, consulte.  
+  
+ Passar o <xref:System.IAsyncResult> retornar o valor para o <xref:System.IO.Compression.DeflateStream.EndRead%2A> método do fluxo para determinar o número de bytes foram lidas e para liberar recursos do sistema operacional usados para leitura. Você pode fazer isso usando o mesmo código que chamou <xref:System.IO.Compression.DeflateStream.BeginRead%2A> ou em um retorno de chamada transmitido para <xref:System.IO.Compression.DeflateStream.BeginRead%2A>.  
+  
+ A posição atual no fluxo é atualizada quando uma leitura assíncrona ou operação de gravação é emitida, não quando a operação de e/s é concluída.  
+  
+ Várias solicitações assíncronas simultâneas renderizam a ordem de conclusão de solicitação indefinido.  
+  
+ Use o <xref:System.IO.Compression.DeflateStream.CanRead%2A> propriedade para determinar se o atual <xref:System.IO.Compression.DeflateStream> objeto oferece suporte à leitura.  
+  
+ Se um fluxo está fechado ou se você passar um argumento inválido, as exceções são geradas imediatamente de <xref:System.IO.Compression.DeflateStream.BeginRead%2A>. Erros que ocorrem durante uma solicitação de leitura assíncrona, como uma falha de disco durante a solicitação de e/s, ocorrer no thread de pool de thread e lançam exceções ao chamar <xref:System.IO.Compression.DeflateStream.EndRead%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">O método de tentativa de leitura assíncrona após o fim do fluxo ou ocorreu um erro de disco.</exception>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.ObjectDisposedException">Foram chamados métodos depois que o fluxo foi fechado.</exception>
+        <exception cref="T:System.NotSupportedException">A implementação <see cref="T:System.IO.Compression.DeflateStream" /> atual não dá suporte à operação de leitura.</exception>
+        <exception cref="T:System.InvalidOperationException">Essa chamada não pode ser concluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWrite">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback cback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginWrite(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback cback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="asyncCallback" Type="System.AsyncCallback" />
+        <Parameter Name="asyncState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">O deslocamento de byte no <c>buffer</c> para começar a escrever do.</param>
+        <param name="count">O número máximo de bytes a serem gravados.</param>
+        <param name="cback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>Inicia uma operação de gravação assíncrona. (Considere o uso de <see cref="M:System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)" /> método em vez disso.)</summary>
+        <returns>Um objeto que representa a operação de gravação assíncrona, o que poderia estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], você pode executar operações de gravação assíncrona usando o <xref:System.IO.Stream.WriteAsync%2A> método. O <xref:System.IO.Compression.DeflateStream.BeginWrite%2A> método ainda está disponível na [!INCLUDE[net_v45](~/includes/net-v45-md.md)] para dar suporte a código herdado; no entanto, você pode implementar operações de e/s assíncronas mais facilmente usando os novos métodos assíncronos. Para obter mais informações, consulte.  
+  
+ Passar o <xref:System.IAsyncResult> objeto retornado pelo método atual para <xref:System.IO.Compression.DeflateStream.EndWrite%2A> para garantir que a gravação é concluída e libera recursos adequadamente. Você pode fazer isso usando o mesmo código que chamou <xref:System.IO.Compression.DeflateStream.BeginWrite%2A> ou em um retorno de chamada transmitido para <xref:System.IO.Compression.DeflateStream.BeginWrite%2A>. Se ocorrer um erro durante uma operação de gravação assíncrona, uma exceção será lançada não até <xref:System.IO.Compression.DeflateStream.EndWrite%2A> é chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Se um fluxo gravável, gravando no final do fluxo expande o fluxo.  
+  
+ A posição atual no fluxo é atualizada quando você emite a leitura assíncrona ou gravar a operação, não quando a operação de e/s é concluída. Várias solicitações assíncronas simultâneas renderizam a ordem de conclusão de solicitação indefinido.  
+  
+ Use o <xref:System.IO.Compression.DeflateStream.CanWrite%2A> propriedade para determinar se o atual <xref:System.IO.Compression.DeflateStream> objeto oferece suporte à gravação.  
+  
+ Se um fluxo está fechado ou se você passar um argumento inválido, as exceções são geradas imediatamente de <xref:System.IO.Compression.DeflateStream.BeginWrite%2A>. Erros que ocorrem durante uma solicitação de gravação assíncrona, como uma falha de disco durante a solicitação de e/s, ocorrer no thread de pool de thread e lançam exceções ao chamar <xref:System.IO.Compression.DeflateStream.EndWrite%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">O método tentou gravar após o término do fluxo de forma assíncrona, ou ocorreu um erro de disco.</exception>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.ObjectDisposedException">Foram chamados métodos depois que o fluxo foi fechado.</exception>
+        <exception cref="T:System.NotSupportedException">A implementação <see cref="T:System.IO.Compression.DeflateStream" /> atual não dá suporte à operação de gravação.</exception>
+        <exception cref="T:System.InvalidOperationException">A operação de gravação não pode ser realizada porque o fluxo está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.DeflateStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo oferece suporte à leitura ao descompactar um arquivo.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.IO.Compression.CompressionMode" /> valor é <see langword="Decompress" />, e o fluxo subjacente é aberto e oferece suporte à leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.DeflateStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo oferece suporte à busca.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.DeflateStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo oferece suporte à gravação.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.IO.Compression.CompressionMode" /> valor é <see langword="Compress" />, e o fluxo subjacente oferece suporte à gravação e não está fechada; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.IO.Compression.DeflateStream" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.ComponentModel.Component.Dispose%2A> e pelo método <xref:System.Object.Finalize%2A>. <xref:System.ComponentModel.Component.Dispose%2A> invoca o método <xref:System.IO.Compression.DeflateStream.Dispose%2A> protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca <xref:System.IO.Compression.DeflateStream.Dispose%2A> com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.IO.Compression.DeflateStream> referências. Este método invoca o método <xref:System.ComponentModel.Component.Dispose%2A> de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.ComponentModel.Component.Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see cref="M:System.IO.Compression.DeflateStream.Dispose(System.Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see cref="M:System.ComponentModel.Component.Dispose" />. Para obter mais informações sobre como implementar <see cref="M:System.IO.Compression.DeflateStream.Dispose(System.Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see cref="M:System.ComponentModel.Component.Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRead">
+      <MemberSignature Language="C#" Value="public override int EndRead (IAsyncResult async_result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 EndRead(class System.IAsyncResult async_result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.EndRead(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="async_result">To be added.</param>
+        <summary>Espera a leitura assíncrona pendente ser concluída. (Considere o uso de <see cref="M:System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)" /> método em vez disso.)</summary>
+        <returns>O número de bytes lidos do fluxo, entre 0 (zero) e o número de bytes solicitado. <see cref="T:System.IO.Compression.DeflateStream" />Retorna 0 somente no final do fluxo; Caso contrário, ele bloqueia até que pelo menos um byte esteja disponível.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], você pode executar operações de leitura assíncronas usando o <xref:System.IO.Stream.ReadAsync%2A> método. O <xref:System.IO.Compression.DeflateStream.EndRead%2A> método ainda está disponível na [!INCLUDE[net_v45](~/includes/net-v45-md.md)] para dar suporte a código herdado; no entanto, você pode implementar operações de e/s assíncronas mais facilmente usando os novos métodos assíncronos. Para obter mais informações, consulte.  
+  
+ Chame este método para determinar o número de bytes que foram lidos do fluxo. Esse método pode ser chamado uma vez para retornar a quantidade de bytes de leitura entre as chamadas para <xref:System.IO.Compression.DeflateStream.BeginRead%2A> e <xref:System.IO.Compression.DeflateStream.EndRead%2A>.  
+  
+ Esse método bloqueia até que a operação de e/s foi concluída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="async_result" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="async_result" /> não é proveniente de um método <see cref="M:System.IO.Compression.DeflateStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> no fluxo atual.</exception>
+        <exception cref="T:System.SystemException">Ocorreu uma exceção durante uma chamada para <see cref="M:System.Threading.WaitHandle.WaitOne" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O fluxo é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWrite">
+      <MemberSignature Language="C#" Value="public override void EndWrite (IAsyncResult async_result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndWrite(class System.IAsyncResult async_result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.EndWrite(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="async_result">To be added.</param>
+        <summary>Encerra uma operação de gravação assíncrona. (Considere o uso de <see cref="M:System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)" /> método em vez disso.)</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], você pode executar operações de gravação assíncrona usando o <xref:System.IO.Stream.WriteAsync%2A> método. O <xref:System.IO.Compression.DeflateStream.EndWrite%2A> método ainda está disponível na [!INCLUDE[net_v45](~/includes/net-v45-md.md)] para dar suporte a código herdado; no entanto, você pode implementar operações de e/s assíncronas mais facilmente usando os novos métodos assíncronos. Para obter mais informações, consulte.  
+  
+ <xref:System.IO.Compression.DeflateStream.EndWrite%2A>deve ser chamado apenas uma vez para cada chamada para o <xref:System.IO.Compression.DeflateStream.BeginWrite%2A> método.  
+  
+ Esse método bloqueia até que a operação de e/s foi concluída. Erros que ocorrem durante uma solicitação de gravação assíncrona, como uma falha de disco durante a solicitação de e/s, ocorrem no thread do pool e ficam visíveis após uma chamada para <xref:System.IO.Compression.DeflateStream.EndWrite%2A>. Exceções geradas pelo thread do pool não estarão visíveis ao chamar <xref:System.IO.Compression.DeflateStream.EndWrite%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="async_result" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="async_result" /> não é proveniente de um método <see cref="M:System.IO.Compression.DeflateStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" /> no fluxo atual.</exception>
+        <exception cref="T:System.Exception">Ocorreu uma exceção durante uma chamada para <see cref="M:System.Threading.WaitHandle.WaitOne" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A chamada de gravação final é inválida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>A implementação atual desse método não tem nenhuma funcionalidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação atual deste método não liberar o buffer interno. O buffer interno é liberado quando o objeto é descartado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.DeflateStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é suportada e sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <value>Um valor longo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa propriedade nesse fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.DeflateStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é suportada e sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <value>Um valor longo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa propriedade nesse fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] array, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read(unsigned int8[] array, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz para armazenar bytes descompactados.</param>
+        <param name="offset">O deslocamento de byte no <c>matriz</c> no qual os bytes de leitura serão colocados.</param>
+        <param name="count">O número máximo de bytes descompactados a serem lidos.</param>
+        <summary>Lê um número de bytes descompactados na matriz de bytes especificada.</summary>
+        <returns>O número de bytes que foram lidos na matriz de bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como compactar e descompactar bytes usando o <xref:System.IO.Compression.DeflateStream.Read%2A> e <xref:System.IO.Compression.DeflateStream.Write%2A> métodos.  
+  
+ [!code-csharp[System.IO.Compression.DeflateStream#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.deflatestream/cs/program3.cs#3)]
+ [!code-vb[System.IO.Compression.DeflateStream#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.deflatestream/vb/program3.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O valor <see cref="T:System.IO.Compression.CompressionMode" /> era <see langword="Compress" /> quando o objeto foi criado.  
+  
+ \- ou -  
+  
+ Não há suporte para leitura no fluxo subjacente.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é menor que zero.  
+  
+ -ou-  
+  
+ O comprimento de <paramref name="array" /> menos o ponto inicial do índice é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.IO.InvalidDataException">Os dados estão em um formato inválido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] array, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(unsigned int8[] array, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">O local no fluxo.</param>
+        <param name="origin">Um dos valores de <see cref="T:System.IO.SeekOrigin" />.</param>
+        <summary>Esta operação não tem suporte e sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <returns>Um valor longo.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa propriedade nesse fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O comprimento do fluxo.</param>
+        <summary>Esta operação não tem suporte e sempre gera um <see cref="T:System.NotSupportedException" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para essa propriedade nesse fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] array, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] array, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O buffer que contém os dados a serem compactados.</param>
+        <param name="offset">O deslocamento de byte no <c>matriz</c> do qual os bytes serão lidos.</param>
+        <param name="count">O número máximo de bytes a serem gravados.</param>
+        <summary>Grava bytes compactados no fluxo subjacente da matriz de bytes especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como compactar e descompactar bytes usando o <xref:System.IO.Compression.DeflateStream.Read%2A> e <xref:System.IO.Compression.DeflateStream.Write%2A> métodos.  
+  
+ [!code-csharp[System.IO.Compression.DeflateStream#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.deflatestream/cs/program3.cs#3)]
+ [!code-vb[System.IO.Compression.DeflateStream#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.deflatestream/vb/program3.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (byte[] array, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(unsigned int8[] array, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.DeflateStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,50 @@
+<Type Name="TimeSeekOrigin" FullName="System.Windows.Media.Animation.TimeSeekOrigin">
+  <TypeSignature Language="C#" Value="public enum TimeSeekOrigin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TimeSeekOrigin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.TimeSeekOrigin" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica a origem de uma operação de busca. O deslocamento da operação de busca é em relação a essa origem.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginTime">
+      <MemberSignature Language="C#" Value="BeginTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.TimeSeekOrigin BeginTime = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.TimeSeekOrigin.BeginTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.TimeSeekOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é relativo ao início do período de ativação do <see cref="T:System.Windows.Media.Animation.Timeline" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="Duration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Animation.TimeSeekOrigin Duration = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.TimeSeekOrigin.Duration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.TimeSeekOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é relativo a <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> do <see cref="T:System.Windows.Media.Animation.Timeline" />, o comprimento de uma única iteração. Esse valor não tem nenhum significado se o <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> do <see cref="T:System.Windows.Media.Animation.Timeline" /> não for resolvido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

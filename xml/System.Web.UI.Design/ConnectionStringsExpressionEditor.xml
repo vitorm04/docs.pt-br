@@ -1,0 +1,113 @@
+<Type Name="ConnectionStringsExpressionEditor" FullName="System.Web.UI.Design.ConnectionStringsExpressionEditor">
+  <TypeSignature Language="C#" Value="public class ConnectionStringsExpressionEditor : System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionStringsExpressionEditor extends System.Web.UI.Design.ExpressionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ConnectionStringsExpressionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.ExpressionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos de seleção de uma expressão de conexão de dados que está associada uma propriedade de controle em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hospedar um designer visual, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor> classe para selecionar uma cadeia de caracteres de conexão do `connectionStrings` seção de configuração.  
+  
+ O <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor> classe é derivada do <xref:System.Web.UI.Design.ExpressionEditor> classe, e embora ele é público por motivos técnicos, não há nenhuma vantagem em derivados dele.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionStringsExpressionEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ConnectionStringsExpressionEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ConnectionStringsExpressionEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (string expression, object parseTimeData, Type propertyType, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(string expression, object parseTimeData, class System.Type propertyType, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression(System.String,System.Object,System.Type,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="parseTimeData" Type="System.Object" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Uma expressão de cadeia de caracteres de conexão para avaliar. A expressão não inclui o <see langword="ConnectionStrings" /> prefixo de expressão.</param>
+        <param name="parseTimeData">Um objeto que contém informações de análise adicionais para avaliar a expressão.</param>
+        <param name="propertyType">O tipo da propriedade de controle.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Avalia uma expressão de cadeia de caracteres de conexão e fornece o valor de tempo de design para uma propriedade de controle.</summary>
+        <returns>O objeto referenciado pela cadeia de caracteres da expressão avaliada se a avaliação da expressão for bem-sucedida; Caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression%2A> método procura o nome de conexão e o tipo especificado pelo `expression`e, em seguida, retorna a conexão.  
+  
+ O designer visual usa o <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression%2A> método para avaliar uma expressão de cadeia de caracteres de conexão e fornecer o valor de tempo de design para uma propriedade do controle associado. O designer visual usa o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression%2A?displayProperty=nameWithType> método para analisar a cadeia de caracteres de expressão em tempo de design e, em seguida, chama o <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.EvaluateExpression%2A> método com os dados da expressão analisada. O designer visual usa o resultado da expressão avaliada para atribuir valores de propriedade são renderizados na superfície de design de controle.  
+  
+ Em tempo de execução, o analisador de página usa o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A> e <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetCodeExpression%2A> métodos do <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> implementação para avaliar uma expressão e forneça o valor de tempo de execução para uma propriedade do controle associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExpressionEditorSheet">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet (string expression, IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Design.ExpressionEditorSheet GetExpressionEditorSheet(string expression, class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ConnectionStringsExpressionEditor.GetExpressionEditorSheet(System.String,System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.ExpressionEditorSheet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A cadeia de caracteres de expressão definida para uma propriedade de controle, usada para inicializar a folha de editor de expressão. A expressão não inclui o <see langword="ConnectionStrings" /> prefixo de expressão.</param>
+        <param name="serviceProvider">Uma implementação de provedor de serviço fornecida pelo host do designer, usado para obter os serviços de tempo de design adicionais.</param>
+        <summary>Retorna uma folha de editor de expressão para uma expressão de cadeia de caracteres de conexão.</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.ExpressionEditorSheet" /> instância que define as propriedades de expressão de cadeia de caracteres de conexão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ConnectionStringsExpressionEditor.GetExpressionEditorSheet%2A> método retorna um editor de implementação de folha para expressões de cadeia de caracteres de conexão. A folha de editor de expressões de cadeia de caracteres de conexão permite aos usuários selecionar um nome de conexão e o tipo, com base nas cadeias de caracteres de conexão atual que estão definidas no [connectionStrings Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b6ffbb2e-a4d1-410e-8f7e-9755e92c65de) seção do arquivo de configuração da Web. Depois que o usuário seleciona as propriedades de expressão de conexão, a implementação do editor de folha combina o nome da conexão e o tipo em uma expressão de cadeia de caracteres de conexão, que é retornada para o designer visual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,350 @@
+<Type Name="QueryStringParameter" FullName="System.Web.UI.WebControls.QueryStringParameter">
+  <TypeSignature Language="C#" Value="public class QueryStringParameter : System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryStringParameter extends System.Web.UI.WebControls.Parameter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.QueryStringParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Parameter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("QueryStringField")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa o valor de um campo de cadeia de consulta da solicitação HTTP a um objeto de parâmetro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.QueryStringParameter> classe para associar o valor de um campo que é passado como parte de uma cadeia de caracteres de consulta de solicitação HTTP para um parâmetro que é usado em uma consulta parametrizada ou comando. O campo é recuperado do <xref:System.Web.HttpRequest.QueryString%2A> coleção.  
+  
+ Controles que associam os dados para o parâmetro podem lançar uma exceção se um <xref:System.Web.UI.WebControls.QueryStringParameter> o objeto é referenciado, mas nenhum par de nome/valor de cadeia de caracteres de consulta correspondente é passado. Da mesma forma, eles podem não exibe dados se o nome do campo de cadeia de caracteres de consulta é passado sem um valor correspondente. Para evitar essas situações, defina o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade onde apropriado.  
+  
+ O <xref:System.Web.UI.WebControls.QueryStringParameter> classe fornece a <xref:System.Web.UI.WebControls.QueryStringParameter.QueryStringField%2A> propriedade, que identifica o nome do valor de cadeia de caracteres de consulta para associar a. Ele também fornece as propriedades que são herdadas de <xref:System.Web.UI.WebControls.Parameter> classe.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Web.UI.WebControls.QueryStringParameter> classe não valida o valor que é passado; ele fornece o valor bruto. No entanto, você pode validar o valor de uma <xref:System.Web.UI.WebControls.QueryStringParameter> objeto em um controle de fonte de dados. Para fazer isso, manipule o `Selecting`, `Updating`, `Inserting`, ou `Deleting` eventos dos dados de controle de origem e verifique o valor do parâmetro no manipulador de eventos. Se o valor do parâmetro não passar nos testes de validação, você pode cancelar a operação de dados definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade associado <xref:System.ComponentModel.CancelEventArgs> de classe para `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto a ser usado como um filtro quando você exibir dados em um <xref:System.Web.UI.WebControls.GridView> controle. Adicionar o <xref:System.Web.UI.WebControls.QueryStringParameter> o objeto para o <xref:System.Web.UI.WebControls.AccessDataSource> do controle <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A> coleção. O objeto de parâmetro associa o valor do campo de cadeia de caracteres de consulta chamado `country` para sua <xref:System.Web.UI.WebControls.SqlDataSource.FilterExpression%2A> cadeia de caracteres. Porque nenhum <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade for especificada para o parâmetro, se nenhum campo denominado `country` é passado com a cadeia de caracteres de consulta, o <xref:System.Web.UI.WebControls.AccessDataSource> controlar lança um <xref:System.NullReferenceException> exceção. Se um campo chamado `country` , mas não tem nenhum valor é passado a <xref:System.Web.UI.WebControls.GridView> controle não exibe nenhum dado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_4/CS/qsp4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_4/VB/qsp4vb.aspx#1)]  
+  
+ O exemplo a seguir mostra como criar um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto para exibir dados de um banco de dados usando uma consulta SQL parametrizada. O <xref:System.Web.UI.WebControls.AccessDataSource> objeto recupera os registros que são exibidos em um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.GridView> controle também é editável e permite que os usuários a atualizar o status de pedidos na tabela Orders do Northwind Traders.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_22sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_22sql/CS/sql22cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_22sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_22sql/VB/sql22vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryStringParameter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryStringParameter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância não nomeada da classe <see cref="T:System.Web.UI.WebControls.QueryStringParameter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto que é criado usando o <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor é inicializada com valores padrão para todas as suas propriedades. As propriedades são inicializadas como segue:  
+  
+-   <xref:System.Web.UI.WebControls.QueryStringParameter.QueryStringField%2A>é inicializado em uma cadeia de caracteres vazia ("").  
+  
+-   <xref:System.Web.UI.WebControls.Parameter.Name%2A>é inicializado em uma cadeia de caracteres vazia ("").  
+  
+-   <xref:System.Web.UI.WebControls.Parameter.Type%2A>é inicializado como <xref:System.TypeCode?displayProperty=nameWithType>.  
+  
+-   <xref:System.Web.UI.WebControls.Parameter.Direction%2A>é inicializado como <xref:System.Data.ParameterDirection.Input>.  
+  
+-   <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A>é inicializado como `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor para criar um novo <xref:System.Web.UI.WebControls.QueryStringParameter> parâmetro e adicioná-lo para o <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção de um <xref:System.Web.UI.WebControls.AccessDataSource> controle.  
+  
+ [!code-csharp[System.Web.UI.WebControls.QueryStringParameter_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_1/CS/querystrparam1cs.aspx.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.QueryStringParameter_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_1/VB/querystrparam1vb.aspx.vb#2)]  
+  
+ O <xref:System.Web.UI.WebControls.QueryStringParameter> objeto é adicionado para o <xref:System.Web.UI.WebControls.AccessDataSource> controlar e é declarado em uma página da Web do ASP.NET. O <xref:System.Web.UI.WebControls.ListBox> controlar usa o <xref:System.Web.UI.WebControls.AccessDataSource> controle associar e exibir dados sempre que a página é solicitada com uma cadeia de caracteres de consulta que contém um campo denominado `empId` e que tem um valor correspondente.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_1#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_1/CS/querystrparam1cs.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_1#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_1/VB/querystrparam1vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected QueryStringParameter (System.Web.UI.WebControls.QueryStringParameter original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.QueryStringParameter original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryStringParameter.#ctor(System.Web.UI.WebControls.QueryStringParameter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Web.UI.WebControls.QueryStringParameter" />
+      </Parameters>
+      <Docs>
+        <param name="original">Um <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> instância na qual a instância atual é inicializada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> de classe, usando os valores da instância que é especificado pelo <paramref name="original" /> parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor é um construtor de cópia protegida que é usado para clonar um <xref:System.Web.UI.WebControls.QueryStringParameter> instância. Os valores de <xref:System.Web.UI.WebControls.QueryStringParameter.QueryStringField%2A>, <xref:System.Web.UI.WebControls.Parameter.Name%2A>, e <xref:System.Web.UI.WebControls.Parameter.Type%2A> propriedades são transferidas para a nova instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryStringParameter (string name, string queryStringField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string queryStringField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryStringParameter.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="queryStringField" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="queryStringField">O nome do campo de cadeia de caracteres de consulta associado para o objeto de parâmetro. O padrão é uma cadeia de caracteres vazia ("").</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> de classe, usando a cadeia de caracteres especificada para identificar qual campo de cadeia de caracteres de consulta para associar a.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto que é criado usando o <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado que identifica o campo de cadeia de caracteres de consulta que o parâmetro associa a. O <xref:System.Web.UI.WebControls.Parameter.Type%2A> e <xref:System.Web.UI.WebControls.Parameter.Direction%2A> propriedades são inicializadas com os valores padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar duas <xref:System.Web.UI.WebControls.QueryStringParameter> objetos usando o <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor e adicioná-los para um <xref:System.Web.UI.WebControls.AccessDataSource> do controle <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção. Um <xref:System.Web.UI.WebControls.GridView> controle exibe dados se o `employee` e `country` campos de cadeia de caracteres de consulta são passados com a solicitação e se eles têm valores válidos.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_2/CS/qsp2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_2/VB/qsp2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryStringParameter (string name, System.Data.DbType dbType, string queryStringField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.DbType dbType, string queryStringField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryStringParameter.#ctor(System.String,System.Data.DbType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dbType" Type="System.Data.DbType" />
+        <Parameter Name="queryStringField" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="dbType">O tipo de dados do parâmetro.</param>
+        <param name="queryStringField">O nome do campo de cadeia de caracteres de consulta associado para o objeto de parâmetro. O padrão é uma cadeia de caracteres vazia ("").</param>
+        <summary>Inicializa uma nova instância nomeada do <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> de classe, usando o campo de cadeia de consulta especificada e o tipo de dados do parâmetro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryStringParameter (string name, TypeCode type, string queryStringField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.TypeCode type, string queryStringField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryStringParameter.#ctor(System.String,System.TypeCode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.TypeCode" />
+        <Parameter Name="queryStringField" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="type">O tipo que representa o parâmetro. O padrão é <see cref="F:System.TypeCode.Object" />.</param>
+        <param name="queryStringField">O nome do campo de cadeia de caracteres de consulta associado para o objeto de parâmetro. O padrão é uma cadeia de caracteres vazia ("").</param>
+        <summary>Inicializa uma nova instância nomeada e fortemente tipada do <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> de classe, usando a cadeia de caracteres especificada para identificar qual campo de cadeia de caracteres de consulta para associar a.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto que é criado usando o <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor é inicializada com o nome do parâmetro especificado, o tipo de parâmetro e uma cadeia de caracteres que identifica o campo de cadeia de caracteres de consulta que o parâmetro associa a. O <xref:System.Web.UI.WebControls.Parameter.Direction%2A> e <xref:System.Web.UI.WebControls.Parameter.ConvertEmptyStringToNull%2A> propriedades são inicializadas com os valores padrão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto usando o <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor e adicioná-lo para um <xref:System.Web.UI.WebControls.AccessDataSource> do controle <xref:System.Web.UI.WebControls.SqlDataSource.FilterParameters%2A> coleção. Um <xref:System.Web.UI.WebControls.GridView> controle exibe dados se o `employee` e `country` campos de cadeia de caracteres de consulta são passados com a solicitação e se eles têm valores válidos.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_3/CS/qsp3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_3/VB/qsp3vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.Parameter Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.Parameter Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryStringParameter.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma duplicata do atual <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> instância.</summary>
+        <returns>Uma cópia da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.QueryStringParameter.Clone%2A> chamadas de método de <xref:System.Web.UI.WebControls.QueryStringParameter.%23ctor%2A> construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.QueryStringParameter> classe usando os valores da instância atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="protected override object Evaluate (System.Web.HttpContext context, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object Evaluate(class System.Web.HttpContext context, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.QueryStringParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="context">Atual <see cref="T:System.Web.HttpContext" /> instância da solicitação.</param>
+        <param name="control">Um controle de servidor Web que está associado com o ASP.NET Web página onde o <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> objeto é usado.  
+  
+ **Observação** esse parâmetro não for usado.</param>
+        <summary>Atualiza e retorna o valor da <see cref="T:System.Web.UI.WebControls.QueryStringParameter" /> objeto.</summary>
+        <returns>Um objeto que representa o valor atual do parâmetro. Se o contexto ou a solicitação é <see langword="null" />, o <see cref="M:System.Web.UI.WebControls.QueryStringParameter.Evaluate(System.Web.HttpContext,System.Web.UI.Control)" /> método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.QueryStringParameter> objeto tentar associar ao campo de cadeia de caracteres de consulta toda vez que o <xref:System.Web.UI.WebControls.QueryStringParameter.Evaluate%2A> método é chamado.  
+  
+ O `context` parâmetro é usado pelo <xref:System.Web.UI.WebControls.QueryStringParameter.Evaluate%2A> método para recuperar o valor do campo de cadeia de consulta especificada da cadeia de caracteres de consulta. O `control` parâmetro é ignorado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryStringField">
+      <MemberSignature Language="C#" Value="public string QueryStringField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string QueryStringField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryStringParameter.QueryStringField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do campo da cadeia de caracteres de consulta ao qual o parâmetro está associado.</summary>
+        <value>O nome do campo da cadeia de caracteres de consulta ao qual o parâmetro está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.QueryStringParameter.QueryStringField%2A> propriedade identifica um par de nome/valor que é transmitido com a cadeia de caracteres de consulta. O <xref:System.Web.UI.WebControls.QueryStringParameter.QueryStringField%2A> propriedade identifica o nome do par, enquanto o <xref:System.Web.UI.WebControls.QueryStringParameter> propriedade associa a seu valor correspondente em tempo de execução. Se o par de nome/valor de cadeia de consulta esperado não for passado para a página com a cadeia de caracteres de consulta, o <xref:System.Web.UI.WebControls.QueryStringParameter.Evaluate%2A> método tenta associar o parâmetro para o valor da <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade. Se o <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> propriedade não for definida, o <xref:System.Web.UI.WebControls.QueryStringParameter.Evaluate%2A> método falhar associar o parâmetro para um valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto junto com um <xref:System.Web.UI.WebControls.SqlDataSource> controle para exibir dados em um <xref:System.Web.UI.WebControls.ListBox> controle. O <xref:System.Web.UI.WebControls.QueryStringParameter.QueryStringField%2A> propriedade é definida como o nome do campo de cadeia de consulta esperado e o parâmetro é adicionado para o <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção. Um <xref:System.Web.UI.WebControls.Parameter.DefaultValue%2A> é fornecida no caso do par nome/valor não for passado com a cadeia de caracteres de consulta.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.QueryStringParameter_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_1/CS/querystrparam1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.QueryStringParameter_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.QueryStringParameter_1/VB/querystrparam1vb.aspx#1)]  
+  
+ O exemplo a seguir mostra como usar um <xref:System.Web.UI.WebControls.QueryStringParameter> objeto junto com um <xref:System.Web.UI.WebControls.SqlDataSource> controle para exibir dados em um <xref:System.Web.UI.WebControls.GridView> controle. O <xref:System.Web.UI.WebControls.QueryStringParameter> objeto é adicionado para o <xref:System.Web.UI.WebControls.SqlDataSource.SelectParameters%2A> coleção, junto com outros objetos de parâmetro que são usados para o valor de retorno e de parâmetro de saída. Para recuperar dados, lidar com os valores que são retornados pelo procedimento armazenado. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs> classe.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1/CS/sql21cs.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSourceStatusEventArgs_1/VB/sql21vb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateInput">
+      <MemberSignature Language="C#" Value="public bool ValidateInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateInput" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.QueryStringParameter.ValidateInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o valor do parâmetro de cadeia de caracteres de consulta está sendo validado ou não.</summary>
+        <value>
+          <see langword="true" /> se o valor do parâmetro de consulta está sendo validado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade page <xref:System.Web.UI.Page.SkipFormActionValidation%2A> é definido como `true`e o <xref:System.Web.UI.WebControls.QueryStringParameter.ValidateInput%2A> está definida como `false`, o parâmetro de cadeia de caracteres de consulta não será validado. No entanto, se a propriedade page <xref:System.Web.UI.Page.SkipFormActionValidation%2A> é definido como `true`e o <xref:System.Web.UI.WebControls.QueryStringParameter.ValidateInput%2A> está definida como `true`, o parâmetro de cadeia de caracteres de consulta será validado. Se a propriedade page <xref:System.Web.UI.Page.SkipFormActionValidation%2A> é definido como `false`, o parâmetro de cadeia de caracteres de consulta será validado independentemente se o <xref:System.Web.UI.WebControls.QueryStringParameter.ValidateInput%2A> está definida como `true` ou `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

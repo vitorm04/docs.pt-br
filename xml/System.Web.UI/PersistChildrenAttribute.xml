@@ -1,0 +1,312 @@
+<Type Name="PersistChildrenAttribute" FullName="System.Web.UI.PersistChildrenAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PersistChildrenAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PersistChildrenAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.PersistChildrenAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um atributo que é usado por controles de servidor ASP.NET para indicar em tempo de design se conteúdo aninhado que está dentro de um controle de servidor corresponde a controles ou a propriedades do controle do servidor. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.PersistChildrenAttribute> é usado em combinação com o <xref:System.Web.UI.ParseChildrenAttribute> determinar o conteúdo como aninhado de um controle é interpretada. Se <xref:System.Web.UI.PersistChildrenAttribute> é `true` e <xref:System.Web.UI.ParseChildrenAttribute> é `false`, o conteúdo aninhado dentro de um controle de servidor ASP.NET é persistentes como controles. Se <xref:System.Web.UI.PersistChildrenAttribute> é `false` e <xref:System.Web.UI.ParseChildrenAttribute> é `true`, o conteúdo aninhado é mantido como propriedades do controle do servidor. Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código nesta seção contém duas partes. O primeiro exemplo de código demonstra como definir os metadados de um controle personalizado para que em tempo de design, seu conteúdo aninhado é mantido como propriedades do controle. O segundo exemplo de código demonstra como usar classes em uma página ASP.NET.  
+  
+ O exemplo de código a seguir demonstra como aplicar o <xref:System.Web.UI.PersistChildrenAttribute> atributo para que nenhum dos controles aninhados de um controle de servidor personalizado são persistidas como controles aninhados. O controle de servidor personalizado chamado `CollectionPropertyControl` tem o <xref:System.Web.UI.PersistChildrenAttribute> atributo definido como `false` para que o `Employee` objetos que são adicionados são persistidos como elementos aninhados.  
+  
+ [!code-csharp[PersistChildrenAttribute_Sample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren_1.cs#1)]
+ [!code-vb[PersistChildrenAttribute_Sample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren_1.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como usar o `CollectionPropertyControl` e `Employee` classes em uma página ASP.NET.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersistChildrenAttribute (bool persist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool persist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="persist" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="persist">
+          <see langword="true" />para manter o conteúdo aninhado como controles aninhados; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.PersistChildrenAttribute" /> classe usando um valor booliano que indica se persiste conteúdo aninhado como controles aninhados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como aplicar o <xref:System.Web.UI.PersistChildrenAttribute> atributo para um controle de servidor personalizado chamado `CollectionPropertyControl`.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.PersistChildrenAttribute> classe.  
+  
+ [!code-csharp[PersistChildrenAttribute_Sample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren_1.cs#2)]
+ [!code-vb[PersistChildrenAttribute_Sample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren_1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PersistChildrenAttribute (bool persist, bool usesCustomPersistence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool persist, bool usesCustomPersistence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.#ctor(System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="persist" Type="System.Boolean" />
+        <Parameter Name="usesCustomPersistence" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="persist">
+          <see langword="true" />para manter o conteúdo aninhado como controles aninhados; Caso contrário, <see langword="false" />.</param>
+        <param name="usesCustomPersistence">
+          <see langword="true" />Para usar a persistência personalizada; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.PersistChildrenAttribute" /> classe usando dois valores Boolean. Um que indica se persiste conteúdo aninhado como controles aninhados e outra que indica se deve usar um método personalizado de persistência.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistChildrenAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistChildrenAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistChildrenAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistChildrenAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o estado de atributo padrão. O campo <see cref="F:System.Web.UI.PersistChildrenAttribute.Default" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Web.UI.PersistChildrenAttribute.Default> campo é `Yes`, indicando que o conteúdo aninhado é persistido em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Determina se o objeto especificado é igual ao objeto atual.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao objeto atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para o <see cref="T:System.Web.UI.PersistChildrenAttribute" /> classe.</summary>
+        <returns>Um código hash para o <see cref="T:System.Web.UI.PersistChildrenAttribute" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.PersistChildrenAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o valor da instância atual do <see cref="T:System.Web.UI.PersistChildrenAttribute" /> classe é o valor padrão de clss derivada.</summary>
+        <returns>
+          <see langword="true" />Se o valor da instância atual do <see cref="T:System.Web.UI.PersistChildrenAttribute" /> for a instância padrão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.PersistChildrenAttribute.IsDefaultAttribute%2A> método para determinar se a instância atual do <xref:System.Web.UI.PersistChildrenAttribute> classe é o mesmo que a instância padrão.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.PersistChildrenAttribute> classe.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistChildrenAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistChildrenAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistChildrenAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistChildrenAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o conteúdo aninhado não deve manter como controles aninhados em tempo de design. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.PersistChildrenAttribute.No> campo é chamado, o conteúdo interno de um controle de servidor é mantido como propriedades, e não como servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="public bool Persist { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Persist" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PersistChildrenAttribute.Persist" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o conteúdo aninhado é persistentes como controles aninhados em tempo de design.</summary>
+        <value>
+          <see langword="true" />para manter o conteúdo aninhado como controles aninhados; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o valor de <xref:System.Web.UI.PersistChildrenAttribute.Persist%2A> propriedade.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.PersistChildrenAttribute> classe.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesCustomPersistence">
+      <MemberSignature Language="C#" Value="public bool UsesCustomPersistence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesCustomPersistence" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.PersistChildrenAttribute.UsesCustomPersistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle de servidor fornece personalizado de persistência de controles aninhados em tempo de design.</summary>
+        <value>
+          <see langword="true" />para fornecer a persistência personalizada de conteúdo aninhado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para configurar conteúdo aninhado de persistência personalizado, use o <xref:System.Web.UI.PersistChildrenAttribute> sobrecarga que utiliza um `usesCustomPersistence` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter o valor de <xref:System.Web.UI.PersistChildrenAttribute.UsesCustomPersistence%2A> propriedade.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.PersistChildrenAttribute> classe.  
+  
+ [!code-aspx-csharp[PersistChildrenAttribute_Sample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/CS/persistchildren.aspx#3)]
+ [!code-aspx-vb[PersistChildrenAttribute_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PersistChildrenAttribute_Sample/VB/persistchildren.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.PersistChildrenAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.PersistChildrenAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.PersistChildrenAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PersistChildrenAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o conteúdo aninhado deve manter como controles em tempo de design. O campo <see cref="F:System.Web.UI.PersistChildrenAttribute.Yes" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.PersistChildrenAttribute.Yes> campo é chamado, o conteúdo aninhado é mantido como controles.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

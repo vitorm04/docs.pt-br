@@ -1,0 +1,139 @@
+<Type Name="SettingsProviderCollection" FullName="System.Configuration.SettingsProviderCollection">
+  <TypeSignature Language="C#" Value="public class SettingsProviderCollection : System.Configuration.Provider.ProviderCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SettingsProviderCollection extends System.Configuration.Provider.ProviderCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsProviderCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de provedores de configurações do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsProviderCollection> classe é uma extensão simples do <xref:System.Configuration.Provider.ProviderCollection> classe para fornecer armazenamento de <xref:System.Configuration.SettingsProvider> objetos.  
+  
+ O <xref:System.Configuration.ApplicationSettingsBase> classe usa essa coleção para gerenciar os provedores de configurações associada a cada uma de suas propriedades de configurações do aplicativo por meio de <xref:System.Configuration.SettingsProviderAttribute>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProviderCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProviderCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SettingsProviderCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o construtor padrão que é fornecido implicitamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override void Add (System.Configuration.Provider.ProviderBase provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Add(class System.Configuration.Provider.ProviderBase provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProviderCollection.Add(System.Configuration.Provider.ProviderBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Configuration.Provider.ProviderBase" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um <see cref="T:System.Configuration.Provider.ProviderBase" /> para adicionar à coleção.</param>
+        <summary>Adiciona um novo provedor de configurações para a coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.Provider.ProviderBase.Name%2A> propriedade o <xref:System.Configuration.SettingsProvider> é usado como a chave de armazenamento.  
+  
+> [!CAUTION]
+>  Embora o <xref:System.Configuration.SettingsProviderCollection.Add%2A> método tem um único <xref:System.Configuration.Provider.ProviderBase> parâmetro para corresponder a assinatura desse mesmo método na classe base <xref:System.Configuration.Provider.ProviderCollection>, esse método lançará uma exceção se o `provider` parâmetro não é do tipo <xref:System.Configuration.SettingsProvider>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="provider" /> parâmetro não é do tipo <see cref="T:System.Configuration.SettingsProvider" />.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Configuration.Provider.ProviderBase.Name" /> propriedade do parâmetro de provedor é nulo ou uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ Um provedor de configurações com o mesmo <see cref="P:System.Configuration.Provider.ProviderBase.Name" /> já existe na coleção.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="provider" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsProvider this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.SettingsProvider Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProviderCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um <see cref="T:System.String" /> que contém o nome amigável do provedor de configurações.</param>
+        <summary>Obtém o provedor de configurações da coleção que corresponde ao nome especificado.</summary>
+        <value>Se encontrado, o <see cref="T:System.Configuration.SettingsProvider" /> cujo nome corresponde ao especificado pelo parâmetro nome; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode fazer uma <xref:System.Configuration.SettingsProviderCollection> somente leitura usando o <xref:System.Configuration.Provider.ProviderCollection.SetReadOnly%2A> método. No entanto, é inválido para métodos como <xref:System.Configuration.SettingsProviderCollection.Add%2A>, <xref:System.Configuration.Provider.ProviderCollection.Remove%2A>, e <xref:System.Configuration.Provider.ProviderCollection.Clear%2A> dessa coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção é somente leitura ao definir esse valor.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

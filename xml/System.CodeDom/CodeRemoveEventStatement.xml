@@ -1,0 +1,162 @@
+<Type Name="CodeRemoveEventStatement" FullName="System.CodeDom.CodeRemoveEventStatement">
+  <TypeSignature Language="C#" Value="public class CodeRemoveEventStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeRemoveEventStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeRemoveEventStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma instrução que remove um manipulador de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeRemoveEventStatement>pode ser usado para representar uma instrução que remove um manipulador de eventos para um evento.  
+  
+ O <xref:System.CodeDom.CodeRemoveEventStatement.Event%2A> propriedade especifica o evento para remover o manipulador de eventos do. O <xref:System.CodeDom.CodeRemoveEventStatement.Listener%2A> propriedade especifica o manipulador de eventos a ser removido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de um <xref:System.CodeDom.CodeRemoveEventStatement> para remover um delegado de um evento.  
+  
+ [!code-cpp[CodeRemoveEventExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeRemoveEventExample/CPP/coderemoveeventexample.cpp#2)]
+ [!code-csharp[CodeRemoveEventExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeRemoveEventExample/CS/coderemoveeventexample.cs#2)]
+ [!code-vb[CodeRemoveEventExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeRemoveEventExample/VB/coderemoveeventexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeRemoveEventStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeRemoveEventStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeRemoveEventStatement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeRemoveEventStatement (System.CodeDom.CodeEventReferenceExpression eventRef, System.CodeDom.CodeExpression listener);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeEventReferenceExpression eventRef, class System.CodeDom.CodeExpression listener) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeRemoveEventStatement.#ctor(System.CodeDom.CodeEventReferenceExpression,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventRef" Type="System.CodeDom.CodeEventReferenceExpression" />
+        <Parameter Name="listener" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="eventRef">Um <see cref="T:System.CodeDom.CodeEventReferenceExpression" /> que indica que o evento para desanexar o manipulador de eventos do.</param>
+        <param name="listener">Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o manipulador de eventos a ser removido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeRemoveEventStatement" /> classe com o evento especificado e o manipulador de eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeRemoveEventStatement (System.CodeDom.CodeExpression targetObject, string eventName, System.CodeDom.CodeExpression listener);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression targetObject, string eventName, class System.CodeDom.CodeExpression listener) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeRemoveEventStatement.#ctor(System.CodeDom.CodeExpression,System.String,System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="eventName" Type="System.String" />
+        <Parameter Name="listener" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o objeto que contém o evento.</param>
+        <param name="eventName">O nome do evento.</param>
+        <param name="listener">Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o manipulador de eventos a ser removido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeRemoveEventStatement" /> classe usando o objeto de destino especificado, o nome do evento e o manipulador de eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Event">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeEventReferenceExpression Event { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeEventReferenceExpression Event" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeRemoveEventStatement.Event" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeEventReferenceExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o evento para remover um ouvinte de.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeEventReferenceExpression" /> que indica para remover um ouvinte de evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Listener">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Listener { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Listener" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeRemoveEventStatement.Listener" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o manipulador de eventos a ser removido.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o manipulador de eventos a ser removido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

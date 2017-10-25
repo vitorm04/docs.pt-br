@@ -1,0 +1,13 @@
+<Namespace Name="System.Diagnostics.Tracing">
+  <Docs>
+    <summary>O <see cref="N:System.Diagnostics.Tracing" /> namespace fornece tipos e membros que permitem que você crie fortemente tipado eventos a serem capturados pelo rastreamento de eventos para Windows (ETW).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um evento fortemente tipado é identificado pelo nome e contém descrições de carga. Você pode descobrir a lista de eventos que pode produzir um programa por meio de reflexão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

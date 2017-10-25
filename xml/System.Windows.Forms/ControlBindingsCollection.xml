@@ -1,0 +1,673 @@
+<Type Name="ControlBindingsCollection" FullName="System.Windows.Forms.ControlBindingsCollection">
+  <TypeSignature Language="C#" Value="public class ControlBindingsCollection : System.Windows.Forms.BindingsCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ControlBindingsCollection extends System.Windows.Forms.BindingsCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ControlBindingsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.BindingsCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("CollectionChanged")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter("System.Windows.Forms.Design.ControlBindingsConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção de associações de dados para um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Associação de dados simples é feita adicionando <xref:System.Windows.Forms.Binding> objetos para um <xref:System.Windows.Forms.ControlBindingsCollection>. Qualquer objeto que herda do <xref:System.Windows.Forms.Control> classe pode acessar o <xref:System.Windows.Forms.ControlBindingsCollection> por meio de <xref:System.Windows.Forms.Control.DataBindings%2A> propriedade. Para uma lista de janelas de controles que suportam associação de dados, consulte o <xref:System.Windows.Forms.Binding> classe.  
+  
+ O <xref:System.Windows.Forms.ControlBindingsCollection> contém métodos de coleção padrão como <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A>, <xref:System.Windows.Forms.ControlBindingsCollection.Clear%2A>, e <xref:System.Windows.Forms.ControlBindingsCollection.Remove%2A>.  
+  
+ Para obter o controle que o <xref:System.Windows.Forms.ControlBindingsCollection> pertence, use o <xref:System.Windows.Forms.ControlBindingsCollection.Control%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona <xref:System.Windows.Forms.Binding> objetos para um <xref:System.Windows.Forms.ControlBindingsCollection> de cinco controles: quatro <xref:System.Windows.Forms.TextBox> controles e um <xref:System.Windows.Forms.DateTimePicker> controle. O <xref:System.Windows.Forms.ControlBindingsCollection> é acessada por meio de <xref:System.Windows.Forms.Control.DataBindings%2A> propriedade do <xref:System.Windows.Forms.Control> classe.  
+  
+ [!code-cpp[Classic ControlBindingsCollection Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlBindingsCollection Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlBindingsCollection Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlBindingsCollection Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlBindingsCollection Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlBindingsCollection Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlBindingsCollection (System.Windows.Forms.IBindableComponent control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.IBindableComponent control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.#ctor(System.Windows.Forms.IBindableComponent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.IBindableComponent" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Windows.Forms.IBindableComponent" /> pertence a coleção de associação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ControlBindingsCollection" /> classe com o controle associável especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.Forms.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.Forms.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Add(System.Windows.Forms.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Windows.Forms.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">O <see cref="T:System.Windows.Forms.Binding" /> a ser adicionado.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.Forms.Binding" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A> propriedade o <xref:System.Windows.Forms.Binding> criados por essa sobrecarga do <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método está definido como o valor do <xref:System.Windows.Forms.ControlBindingsCollection.DefaultDataSourceUpdateMode%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento ocorre quando a alteração for concluída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.Binding> instância e usa o <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método para adicionar a instância para o <xref:System.Windows.Forms.ControlBindingsCollection> de um <xref:System.Windows.Forms.TextBox> controle.  
+  
+ [!code-cpp[Classic ControlBindingsCollection.Add Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Add Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlBindingsCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlBindingsCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlBindingsCollection.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="binding" /> é nulo.</exception>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Windows.Forms.Binding" /> não especificar uma coluna válida do <see cref="P:System.Windows.Forms.Binding.DataSource" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding Add (string propertyName, object dataSource, string dataMember);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Binding Add(string propertyName, object dataSource, string dataMember) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Add(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <summary>Cria um <see cref="T:System.Windows.Forms.Binding" /> usando o nome de propriedade do controle especificado, a fonte de dados e o membro de dados e o adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Binding" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A> propriedade o <xref:System.Windows.Forms.Binding> criados por essa sobrecarga do <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método está definido como o valor do <xref:System.Windows.Forms.ControlBindingsCollection.DefaultDataSourceUpdateMode%2A> propriedade.  
+  
+ Adicionando um <xref:System.Windows.Forms.Binding> faz com que o <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento ocorra.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método para adicionar três <xref:System.Windows.Forms.Binding> objetos para o <xref:System.Windows.Forms.ControlBindingsCollection> de um <xref:System.Windows.Forms.TextBox> controle. O <xref:System.Windows.Forms.ControlBindingsCollection> é acessada por meio de <xref:System.Windows.Forms.Control.DataBindings%2A> propriedade do <xref:System.Windows.Forms.Control> classe.  
+  
+ [!code-cpp[Classic ControlBindingsCollection.Add1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Add1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlBindingsCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlBindingsCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlBindingsCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="binding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Exception">O <paramref name="dataMember" /> não especifica um membro válido do <paramref name="dataSource" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding Add (string propertyName, object dataSource, string dataMember, bool formattingEnabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Add(System.String,System.Object,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" /></param>
+        <summary>Cria uma associação ao nome da propriedade de controle, à fonte de dados, ao membro de dados especificados e informações sobre se a formatação está habilitada e adiciona a associação à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Binding" /> recém-criado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle.  
+  
+ - ou -  
+  
+ A propriedade especificada é uma propriedade somente leitura.</exception>
+        <exception cref="T:System.Exception">Se a formatação estiver desabilitada e <paramref name="propertyName" /> não for uma propriedade válida de um controle nem uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding Add (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode updateMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode updateMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Add(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="updateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="updateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <summary>Cria uma associação que associa a propriedade de controle especificada ao membro de dados especificado da fonte de dados especificada, opcionalmente habilitando a formatação, propagando os valores para a fonte de dados com base na configuração de atualização especificada e adicionando a associação à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Binding" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método gera o <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle ou é somente leitura.  
+  
+ -ou-  
+  
+ O membro de dados especificado não existe na fonte de dados.  
+  
+ -ou-  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificada está associada a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding Add (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode updateMode, object nullValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode updateMode, object nullValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Add(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="updateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="updateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <param name="nullValue">Quando a fonte de dados tem esse valor, a propriedade associada é definida como <see cref="T:System.DBNull" />.</param>
+        <summary>Cria uma associação que associa a propriedade de controle especificada ao membro de dados especificado da fonte de dados especificada, opcionalmente, habilitando a formatação, propagando os valores para a fonte de dados com base na configuração de atualização especificada, configurando a propriedade com o valor especificado quando <see cref="T:System.DBNull" /> é retornado da fonte de dados e adicionando a associação à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Binding" /> recém-criado</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método gera o <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle ou é somente leitura.  
+  
+ -ou-  
+  
+ O membro de dados especificado não existe na fonte de dados.  
+  
+ -ou-  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificada está associada a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding Add (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode updateMode, object nullValue, string formatString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode updateMode, object nullValue, string formatString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Add(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="updateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+        <Parameter Name="formatString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="updateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <param name="nullValue">Quando a fonte de dados tem esse valor, a propriedade associada é definida como <see cref="T:System.DBNull" />.</param>
+        <param name="formatString">Um ou mais caracteres especificadores de formato que indicam como um valor deve ser exibido.</param>
+        <summary>Cria uma associação que associa a propriedade de controle especificada ao membro de dados especificado da fonte de dados especificada, opcionalmente, habilitando a formatação com a cadeia de formato especificada, propagando os valores para a fonte de dados com base na configuração de atualização especificada, definindo a propriedade com o valor especificado quando <see cref="T:System.DBNull" /> é retornado da fonte de dados e adicionando a associação à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Binding" /> recém-criado</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método gera o <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle ou é somente leitura.  
+  
+ -ou-  
+  
+ O membro de dados especificado não existe na fonte de dados.  
+  
+ -ou-  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificada está associada a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding Add (string propertyName, object dataSource, string dataMember, bool formattingEnabled, System.Windows.Forms.DataSourceUpdateMode updateMode, object nullValue, string formatString, IFormatProvider formatInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Binding Add(string propertyName, object dataSource, string dataMember, bool formattingEnabled, valuetype System.Windows.Forms.DataSourceUpdateMode updateMode, object nullValue, string formatString, class System.IFormatProvider formatInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Add(System.String,System.Object,System.String,System.Boolean,System.Windows.Forms.DataSourceUpdateMode,System.Object,System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.Object" />
+        <Parameter Name="dataMember" Type="System.String" />
+        <Parameter Name="formattingEnabled" Type="System.Boolean" />
+        <Parameter Name="updateMode" Type="System.Windows.Forms.DataSourceUpdateMode" />
+        <Parameter Name="nullValue" Type="System.Object" />
+        <Parameter Name="formatString" Type="System.String" />
+        <Parameter Name="formatInfo" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade do controle a ser associada.</param>
+        <param name="dataSource">Um <see cref="T:System.Object" /> que representa a fonte de dados.</param>
+        <param name="dataMember">A propriedade ou lista à qual associar.</param>
+        <param name="formattingEnabled">
+          <see langword="true" /> para formatar os dados exibidos; caso contrário, <see langword="false" />.</param>
+        <param name="updateMode">Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</param>
+        <param name="nullValue">Quando a fonte de dados tem esse valor, a propriedade associada é definida como <see cref="T:System.DBNull" />.</param>
+        <param name="formatString">Um ou mais caracteres especificadores de formato que indicam como um valor deve ser exibido</param>
+        <param name="formatInfo">Uma implementação de <see cref="T:System.IFormatProvider" /> para substituir o comportamento de formatação padrão.</param>
+        <summary>Cria uma associação que associa a propriedade de controle especificada ao membro de dados especificado da fonte de dados especificada, opcionalmente, habilitando a formatação com a cadeia de formato especificada, propagando os valores para a fonte de dados com base na configuração de atualização especificada, definindo a propriedade com o valor especificado quando <see cref="T:System.DBNull" /> é retornado da fonte de dados, definindo o provedor de formato especificado e adicionando a associação à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Binding" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> método gera o <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade especificada por <paramref name="propertyName" /> não existe no controle ou é somente leitura.  
+  
+ -ou-  
+  
+ O membro de dados especificado não existe na fonte de dados.  
+  
+ -ou-  
+  
+ A fonte de dados, o membro de dados ou a propriedade de controle especificada está associada a outra associação na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCore">
+      <MemberSignature Language="C#" Value="protected override void AddCore (System.Windows.Forms.Binding dataBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddCore(class System.Windows.Forms.Binding dataBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.AddCore(System.Windows.Forms.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBinding" Type="System.Windows.Forms.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="dataBinding">O <see cref="T:System.Windows.Forms.Binding" /> a ser adicionado.</param>
+        <summary>Adiciona uma associação à coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindableComponent">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IBindableComponent BindableComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.IBindableComponent BindableComponent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ControlBindingsCollection.BindableComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IBindableComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.IBindableComponent" /> pertence a coleção de associação.</summary>
+        <value>O <see cref="T:System.Windows.Forms.IBindableComponent" /> pertence a coleção de associação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ControlBindingsCollection.BindableComponent%2A> propriedade retorna o mesmo objeto de <xref:System.Windows.Forms.ControlBindingsCollection.Control%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção de todas as associações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento ocorre quando a coleção está desmarcada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.ControlBindingsCollection.Clear%2A> método para limpar o <xref:System.Windows.Forms.ControlBindingsCollection> para cada controle em um formulário.  
+  
+ [!code-cpp[Classic ControlBindingsCollection.Clear Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Clear Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlBindingsCollection.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlBindingsCollection.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlBindingsCollection.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearCore">
+      <MemberSignature Language="C#" Value="protected override void ClearCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.ClearCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa as associações na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ControlBindingsCollection.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle ao qual pertence a coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Control" /> que pertence a coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir imprime as informações sobre o controle que um <xref:System.Windows.Forms.ControlBindingsCollection> pertence.  
+  
+ [!code-cpp[Classic ControlBindingsCollection.Control Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Control Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlBindingsCollection.Control Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Control Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlBindingsCollection.Control Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlBindingsCollection.Control Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDataSourceUpdateMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataSourceUpdateMode DefaultDataSourceUpdateMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataSourceUpdateMode DefaultDataSourceUpdateMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ControlBindingsCollection.DefaultDataSourceUpdateMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataSourceUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o padrão <see cref="P:System.Windows.Forms.Binding.DataSourceUpdateMode" /> para um <see cref="T:System.Windows.Forms.Binding" /> na coleção.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DataSourceUpdateMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ControlBindingsCollection.DefaultDataSourceUpdateMode%2A> propriedade é usada em casos onde um <xref:System.Windows.Forms.Binding> sem um <xref:System.Windows.Forms.Binding.DataSourceUpdateMode%2A> especificado é adicionado à coleção. É o valor padrão para controles de Windows Forms<xref:System.Windows.Forms.DataSourceUpdateMode.OnValidation>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Binding this[string propertyName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Binding Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ControlBindingsCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Binding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade no controle associado a dados.</param>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.Binding" /> especificado pelo nome da propriedade do controle.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Binding" /> que associa a propriedade do controle especificado para uma fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade especificada não corresponde a uma associação da coleção, <xref:System.Windows.Forms.ControlBindingsCollection.Item%2A> retorna `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir retorna um único <xref:System.Windows.Forms.Binding> de um <xref:System.Windows.Forms.ControlBindingsCollection>.  
+  
+ [!code-cpp[BindingsCollectionItem Property#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BindingsCollectionItem Property/CPP/bindingscollectionthis.cpp#1)]
+ [!code-csharp[BindingsCollectionItem Property#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BindingsCollectionItem Property/CS/bindingscollectionthis.cs#1)]
+ [!code-vb[BindingsCollectionItem Property#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BindingsCollectionItem Property/VB/bindingscollectionthis.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.Binding binding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.Binding binding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.Remove(System.Windows.Forms.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="binding" Type="System.Windows.Forms.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="binding">O <see cref="T:System.Windows.Forms.Binding" /> a ser removido.</param>
+        <summary>Exclui o <see cref="T:System.Windows.Forms.Binding" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir remove um determinado <xref:System.Windows.Forms.Binding> de um <xref:System.Windows.Forms.TextBox> do controle <xref:System.Windows.Forms.ControlBindingsCollection>. O exemplo obtém necessários <xref:System.Windows.Forms.Binding> usando o <xref:System.Windows.Forms.ControlBindingsCollection.Item%2A> propriedade e remove o <xref:System.Windows.Forms.Binding> com o <xref:System.Windows.Forms.ControlBindingsCollection.Remove%2A> método.  
+  
+ [!code-cpp[Classic ControlBindingsCollection.Remove Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Remove Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlBindingsCollection.Remove Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlBindingsCollection.Remove Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlBindingsCollection.Remove Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlBindingsCollection.Remove Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NullReferenceException">O <paramref name="binding" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do item a ser removido.</param>
+        <summary>Exclui o <see cref="T:System.Windows.Forms.Binding" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.BindingsCollection.CollectionChanged> evento ocorrerá se a remoção for bem-sucedida.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.BaseCollection.Count%2A> propriedade para determinar se o índice está dentro do intervalo da coleção. Nesse caso, a terceira <xref:System.Windows.Forms.Binding> é removido.  
+  
+ [!code-cpp[Classic ControlBindingsCollection.RemoveAt Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ControlBindingsCollection.RemoveAt Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ControlBindingsCollection.RemoveAt Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ControlBindingsCollection.RemoveAt Example/CS/source.cs#1)]
+ [!code-vb[Classic ControlBindingsCollection.RemoveAt Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ControlBindingsCollection.RemoveAt Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> valor é menor que 0 ou for maior que o número de associações na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCore">
+      <MemberSignature Language="C#" Value="protected override void RemoveCore (System.Windows.Forms.Binding dataBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveCore(class System.Windows.Forms.Binding dataBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ControlBindingsCollection.RemoveCore(System.Windows.Forms.Binding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataBinding" Type="System.Windows.Forms.Binding" />
+      </Parameters>
+      <Docs>
+        <param name="dataBinding">O <see cref="T:System.Windows.Forms.Binding" /> a ser removido da coleção.</param>
+        <summary>Remove a associação especificada da coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">A associação pertence a outro <see cref="T:System.Windows.Forms.ControlBindingsCollection" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

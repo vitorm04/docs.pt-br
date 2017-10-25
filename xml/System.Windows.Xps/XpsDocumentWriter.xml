@@ -1,0 +1,1524 @@
+<Type Name="XpsDocumentWriter" FullName="System.Windows.Xps.XpsDocumentWriter">
+  <TypeSignature Language="C#" Value="public class XpsDocumentWriter : System.Windows.Documents.Serialization.SerializerWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsDocumentWriter extends System.Windows.Documents.Serialization.SerializerWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.XpsDocumentWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.Serialization.SerializerWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para gravar um documento XPS ou fila de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.XpsDocumentWriter>não possui construtor. Para criar um <xref:System.Windows.Xps.XpsDocumentWriter>, use estático <xref:System.Windows.Xps.Packaging.XpsDocument.CreateXpsDocumentWriter%2A> método o <xref:System.Windows.Xps.Packaging.XpsDocument> classe ou use um estático <xref:System.Printing.PrintQueue.CreateXpsDocumentWriter%2A> métodos do <xref:System.Printing.PrintQueue> classe. O documento ou a fila que cria o <xref:System.Windows.Xps.XpsDocumentWriter> se torna o destino ao qual ele grava.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância do <xref:System.Windows.Xps.XpsDocumentWriter> classe.  
+  
+ [!code-csharp[XpsSave#CreateXpsDocumentWriter](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createxpsdocumentwriter)]
+ [!code-vb[XpsSave#CreateXpsDocumentWriter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createxpsdocumentwriter)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CancelAsync">
+      <MemberSignature Language="C#" Value="public override void CancelAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CancelAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.CancelAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela o atual <see cref="Overload:System.Windows.Xps.XpsDocumentWriter.WriteAsync" /> operação.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Windows.Xps.XpsWriterException">Nenhuma operação de gravação assíncrona está em andamento.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateVisualsCollator">
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Windows.Xps.VisualsToXpsDocument" /> que pode gravar <see cref="T:System.Windows.Media.Visual" /> objetos para um documento ou a fila de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.VisualsToXpsDocument> grava para o mesmo destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue> como o <xref:System.Windows.Xps.XpsDocumentWriter> que cria o <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Windows.Xps.XpsDocumentWriter.CreateVisualsCollator%2A>.  
+  
+ [!code-csharp[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createandwritetovisualscollator)]
+ [!code-vb[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createandwritetovisualscollator)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateVisualsCollator">
+      <MemberSignature Language="C#" Value="public override System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.CreateVisualsCollator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.SerializerWriterCollator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Windows.Xps.VisualsToXpsDocument" /> que pode gravar <see cref="T:System.Windows.Media.Visual" /> objetos para um documento ou a fila de impressão.</summary>
+        <returns>O novo <see cref="T:System.Windows.Xps.VisualsToXpsDocument" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.VisualsToXpsDocument> grava para o mesmo destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue> como o <xref:System.Windows.Xps.XpsDocumentWriter> que cria o <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Windows.Xps.XpsDocumentWriter.CreateVisualsCollator%2A>.  
+  
+ [!code-csharp[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#createandwritetovisualscollator)]
+ [!code-vb[XpsSave#CreateAndWriteToVisualsCollator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#createandwritetovisualscollator)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVisualsCollator">
+      <MemberSignature Language="C#" Value="public override System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator (System.Printing.PrintTicket documentSequencePrintTicket, System.Printing.PrintTicket documentPrintTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Documents.Serialization.SerializerWriterCollator CreateVisualsCollator(class System.Printing.PrintTicket documentSequencePrintTicket, class System.Printing.PrintTicket documentPrintTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.CreateVisualsCollator(System.Printing.PrintTicket,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.SerializerWriterCollator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentSequencePrintTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="documentPrintTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="documentSequencePrintTicket">Um <see cref="T:System.Printing.PrintTicket" /> que especifica as preferências de impressão padrão para a sequência de documento.</param>
+        <param name="documentPrintTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para cada documento.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Xps.VisualsToXpsDocument" /> que pode gravar <see cref="T:System.Windows.Media.Visual" /> objetos com <see cref="T:System.Printing.PrintTicket" /> configurações para um documento XPS ou fila de impressão.</summary>
+        <returns>O novo <see cref="T:System.Windows.Xps.VisualsToXpsDocument" /> que grava <see cref="T:System.Windows.Media.Visual" /> elementos com <see cref="T:System.Printing.PrintTicket" /> configurações para o <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.VisualsToXpsDocument> grava para o mesmo destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue> como o <xref:System.Windows.Xps.XpsDocumentWriter> que cria o <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+ Esse método não validar ou modificar especificado `documentPrintTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string documentPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string documentPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="documentPath">O caminho do documento de origem.</param>
+        <summary>Grava de forma síncrona um especificado [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona o <xref:System.Windows.Documents.FixedDocument> elementos na origem ao conjunto de <xref:System.Windows.Documents.FixedDocument> elementos no destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue>.  
+  
+ Isso <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> método será reserialize especificado [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento que removerá todo o conteúdo de <xref:System.IO.Packaging.Package> que não é necessária a serem mantidos pelo [XML Paper Specification](http://go.microsoft.com/fwlink/?LinkID=65761).  O reserialization também removerá todas as extensões do <xref:System.Windows.Documents.FixedPage> marcação, incluindo estendidos [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] conteúdo.  
+  
+ Por design <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> não chama o método de <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.DocumentPaginator documentPaginator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.DocumentPaginator documentPaginator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.DocumentPaginator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Um objeto que contém um ponteiro para material de origem não-paginada e também contém métodos para paginação o material.</param>
+        <summary>Grava o conteúdo de forma síncrona paginado de um <see cref="T:System.Windows.Documents.DocumentPaginator" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> método para gravar um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  
+  
+ [!code-csharp[XpsSave#WriteToXpsWithDocumentPaginator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writetoxpswithdocumentpaginator)]
+ [!code-vb[XpsSave#WriteToXpsWithDocumentPaginator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writetoxpswithdocumentpaginator)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.FixedDocument fixedDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.FixedDocument fixedDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.FixedDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">Um documento gravado no <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</param>
+        <summary>Grava de forma síncrona um <see cref="T:System.Windows.Documents.FixedDocument" /> especificado no <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou no <see cref="T:System.Printing.PrintQueue" /> de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ao conjunto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para gravar um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  
+  
+ [!code-csharp[XpsSave#WriteToXpsWithFixedDocument](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writetoxpswithfixeddocument)]
+ [!code-vb[XpsSave#WriteToXpsWithFixedDocument](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writetoxpswithfixeddocument)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.FixedDocumentSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">Um conjunto de documentos que é gravado o <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</param>
+        <summary>Grava de forma síncrona um <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> especificado no <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou no <see cref="T:System.Printing.PrintQueue" /> de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ou um conjunto de <xref:System.Windows.Documents.FixedDocument> elementos para o conjunto existente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> método grave uma sequência de [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documentos.  
+  
+ [!code-csharp[XpsSave#WriteToXpsWithFixedDocumentSequence](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writetoxpswithfixeddocumentsequence)]
+ [!code-vb[XpsSave#WriteToXpsWithFixedDocumentSequence](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writetoxpswithfixeddocumentsequence)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.FixedPage fixedPage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.FixedPage fixedPage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.FixedPage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">Uma página que é gravada o <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</param>
+        <summary>Grava de forma síncrona um <see cref="T:System.Windows.Documents.FixedPage" /> especificado no <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou no <see cref="T:System.Printing.PrintQueue" /> de destino.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O <see cref="T:System.Windows.Media.Visual" /> que é gravado.</param>
+        <summary>Grava de forma síncrona um <see cref="T:System.Windows.Media.Visual" /> especificado no <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou no <see cref="T:System.Printing.PrintQueue" /> de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A gravação em lote um <xref:System.Windows.Media.Visual>, use <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> método grave um <xref:System.Windows.Media.Visual> para um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  
+  
+ [!code-csharp[XpsSave#WriteToXpsWithVisual](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writetoxpswithvisual)]
+ [!code-vb[XpsSave#WriteToXpsWithVisual](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writetoxpswithvisual)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string documentPath, System.Windows.Xps.XpsDocumentNotificationLevel notificationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string documentPath, valuetype System.Windows.Xps.XpsDocumentNotificationLevel notificationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.String,System.Windows.Xps.XpsDocumentNotificationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPath" Type="System.String" />
+        <Parameter Name="notificationLevel" Type="System.Windows.Xps.XpsDocumentNotificationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="documentPath">O caminho do documento de origem.</param>
+        <param name="notificationLevel">Uma indicação de se a notificação está habilitada.</param>
+        <summary>Grava de forma síncrona um especificado [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `notificationLevel` estiver desabilitado, o <xref:System.Windows.Xps.XpsDocumentWriter> copia a serializada[!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento para o destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue> que criou o <xref:System.Windows.Xps.XpsDocumentWriter>. Quando `notificationLevel` estiver habilitado, o <xref:System.Windows.Xps.XpsDocumentWriter> primeiro desserializa o documento, seguida reserializes-lo e, em seguida, grava no destino com notificações de andamento como cada página é a saída.  
+  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona o <xref:System.Windows.Documents.FixedDocument> elementos na origem para a sequência de <xref:System.Windows.Documents.FixedDocument> elementos no destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue>.  
+  
+ Se `notificationLevel` é especificado como <xref:System.Windows.Xps.XpsDocumentNotificationLevel.ReceiveNotificationEnabled>, notificações são produzidas somente quando o documento é serializado não impresso.  O documento deve ser reserialized para receber notificações.  Quando um documento é reserialized todo o conteúdo do <xref:System.IO.Packaging.Package> que não é necessária a serem mantidos pelo [XML Paper Specification (XPS)](http://go.microsoft.com/fwlink/?LinkID=65761) é removido.  O reserialization também removerá todas as extensões do <xref:System.Windows.Documents.FixedPage> marcação, incluindo estendidos [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] conteúdo.  
+  
+ Se `notificationLevel` é especificado como <xref:System.Windows.Xps.XpsDocumentNotificationLevel.ReceiveNotificationDisabled> o documento não será possível reserialized e qualquer conteúdo estendido será preservado, mesmo quando impresso.  
+  
+ Por design <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> não chama o método de <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.DocumentPaginator documentPaginator, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.DocumentPaginator documentPaginator, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.DocumentPaginator,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Um objeto que contém um ponteiro para material de origem não-paginada e também contém métodos para paginação o material.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o material.</param>
+        <summary>Grava o conteúdo de forma síncrona paginado de um <see cref="T:System.Windows.Documents.DocumentPaginator" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.FixedDocument fixedDocument, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.FixedDocument fixedDocument, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.FixedDocument,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">O documento que é gravado.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o documento.</param>
+        <summary>Grava de forma síncrona um <see cref="T:System.Windows.Documents.FixedDocument" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ao conjunto.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.FixedDocumentSequence,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">O conjunto de documentos que são gravados.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o conjunto de documentos.</param>
+        <summary>Grava de forma síncrona um especificado <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ou um conjunto de <xref:System.Windows.Documents.FixedDocument> elementos para o conjunto existente.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Documents.FixedPage fixedPage, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Documents.FixedPage fixedPage, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Documents.FixedPage,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">A página é gravada.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para a página.</param>
+        <summary>Grava de forma síncrona um especificado <see cref="T:System.Windows.Documents.FixedPage" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.Write(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O <see cref="T:System.Windows.Media.Visual" /> que é gravado.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o documento.</param>
+        <summary>Grava de forma síncrona um especificado <see cref="T:System.Windows.Media.Visual" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A gravação em lote um <xref:System.Windows.Media.Visual>, use <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public void WriteAsync (string documentPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteAsync(string documentPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="documentPath">O caminho do documento de origem.</param>
+        <summary>Grava de maneira assíncrona um especificado [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona o <xref:System.Windows.Documents.FixedDocument> elementos na origem ao conjunto de <xref:System.Windows.Documents.FixedDocument> elementos no destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue>.  
+  
+ Isso <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> método será reserialize especificado [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento que removerá todo o conteúdo de <xref:System.IO.Packaging.Package> que não é necessária a serem mantidos pelo [XML Paper Specification](http://go.microsoft.com/fwlink/?LinkID=65761).  O reserialization também removerá todas as extensões do <xref:System.Windows.Documents.FixedPage> marcação, incluindo estendidos [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] conteúdo.  
+  
+ Por design <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> não chama o método de <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.DocumentPaginator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Um objeto que contém um ponteiro para material de origem não-paginada e também contém métodos para paginação o material.</param>
+        <summary>Grava o conteúdo paginado de forma assíncrona de um <see cref="T:System.Windows.Documents.DocumentPaginator" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para gravar um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  
+  
+ [!code-csharp[XpsSave#WriteAsyncToXpsWithDocumentPaginator](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writeasynctoxpswithdocumentpaginator)]
+ [!code-vb[XpsSave#WriteAsyncToXpsWithDocumentPaginator](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writeasynctoxpswithdocumentpaginator)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">O documento que é gravado.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocument" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ao conjunto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para gravar um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  
+  
+ [!code-csharp[XpsSave#WriteAsyncToXpsWithFixedDocument](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writeasynctoxpswithfixeddocument)]
+ [!code-vb[XpsSave#WriteAsyncToXpsWithFixedDocument](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writeasynctoxpswithfixeddocument)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">O conjunto de documentos que é gravado.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ou um conjunto de <xref:System.Windows.Documents.FixedDocument> elementos para o conjunto existente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para gravar um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  
+  
+ [!code-csharp[XpsSave#WriteAsyncToXpsWithFixedDocumentSequence](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writeasynctoxpswithfixeddocumentsequence)]
+ [!code-vb[XpsSave#WriteAsyncToXpsWithFixedDocumentSequence](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writeasynctoxpswithfixeddocumentsequence)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedPage fixedPage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedPage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">A página é gravada.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedPage" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Media.Visual)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O <see cref="T:System.Windows.Media.Visual" /> que é gravado.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Media.Visual" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A gravação em lote um <xref:System.Windows.Media.Visual>, use <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para gravar um <xref:System.Windows.Media.Visual> para um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  
+  
+ [!code-csharp[XpsSave#WriteAsyncToXpsWithVisual](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writeasynctoxpswithvisual)]
+ [!code-vb[XpsSave#WriteAsyncToXpsWithVisual](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writeasynctoxpswithvisual)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public void WriteAsync (string documentPath, System.Windows.Xps.XpsDocumentNotificationLevel notificationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteAsync(string documentPath, valuetype System.Windows.Xps.XpsDocumentNotificationLevel notificationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.String,System.Windows.Xps.XpsDocumentNotificationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPath" Type="System.String" />
+        <Parameter Name="notificationLevel" Type="System.Windows.Xps.XpsDocumentNotificationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="documentPath">O caminho do documento de origem.</param>
+        <param name="notificationLevel">Uma indicação de se a notificação está habilitada.</param>
+        <summary>Grava de maneira assíncrona um especificado [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento com a opção de notificação para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `notificationLevel` estiver desabilitado, o <xref:System.Windows.Xps.XpsDocumentWriter> copia a serializada [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento para o destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue> que criou o <xref:System.Windows.Xps.XpsDocumentWriter>. Quando `notificationLevel` estiver habilitado, o <xref:System.Windows.Xps.XpsDocumentWriter> primeiro desserializa o documento, seguida reserializes-lo e, em seguida, grava no destino com notificações de andamento como cada página é a saída.  
+  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona o <xref:System.Windows.Documents.FixedDocument> elementos na origem para a sequência de <xref:System.Windows.Documents.FixedDocument> elementos no destino <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue>.  
+  
+ Se `notificationLevel` é especificado como <xref:System.Windows.Xps.XpsDocumentNotificationLevel.ReceiveNotificationEnabled>, notificações são produzidas somente quando o documento é serializado não impresso.  O documento deve ser reserialized para receber notificações.  Quando um documento é reserialized todo o conteúdo do <xref:System.IO.Packaging.Package> que não é necessária a serem mantidos pelo [XML Paper Specification](http://go.microsoft.com/fwlink/?LinkID=65761) é removido.  O reserialization também removerá todas as extensões do <xref:System.Windows.Documents.FixedPage> marcação, incluindo estendidos [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] conteúdo.  
+  
+ Se `notificationLevel` é especificado como <xref:System.Windows.Xps.XpsDocumentNotificationLevel.ReceiveNotificationDisabled> o documento não será possível reserialized e qualquer conteúdo estendido será preservado, mesmo quando impresso.  
+  
+ Por design <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> não chama o método de <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.DocumentPaginator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Um objeto que contém um ponteiro para material de origem não-paginada; também contém métodos para paginação o material.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava o conteúdo paginado de forma assíncrona de um <see cref="T:System.Windows.Documents.DocumentPaginator" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.DocumentPaginator,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Um objeto que contém um ponteiro para material de origem não-paginada e também contém métodos para paginação o material.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o material.</param>
+        <summary>Grava o conteúdo paginado de forma assíncrona de um <see cref="T:System.Windows.Documents.DocumentPaginator" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocument,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">O documento que é gravado.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocument" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ao conjunto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocument,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">O documento que é gravado.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o documento.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocument" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ao conjunto.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">O conjunto de documentos que são gravados.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ou um conjunto de <xref:System.Windows.Documents.FixedDocument> elementos para o conjunto existente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">O conjunto de documentos que são gravados.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o conjunto de documentos.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ou um conjunto de <xref:System.Windows.Documents.FixedDocument> elementos para o conjunto existente.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedPage fixedPage, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedPage,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">A página é gravada.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedPage" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedPage fixedPage, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedPage,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">A página é gravada.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para a página.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedPage" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Media.Visual,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O <see cref="T:System.Windows.Media.Visual" /> que é gravado.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Media.Visual" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A gravação em lote um <xref:System.Windows.Media.Visual>, use <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O <see cref="T:System.Windows.Media.Visual" /> que é gravado.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o documento.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Media.Visual" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A gravação em lote um <xref:System.Windows.Media.Visual>, use <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.DocumentPaginator documentPaginator, System.Printing.PrintTicket printTicket, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.DocumentPaginator documentPaginator, class System.Printing.PrintTicket printTicket, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.DocumentPaginator,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="documentPaginator" Type="System.Windows.Documents.DocumentPaginator" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="documentPaginator">Um objeto que contém um ponteiro para material de origem não-paginada; também contém métodos para paginação o material.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o material.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava o conteúdo paginado de forma assíncrona de um <see cref="T:System.Windows.Documents.DocumentPaginator" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocument fixedDocument, System.Printing.PrintTicket printTicket, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocument fixedDocument, class System.Printing.PrintTicket printTicket, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocument,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocument" Type="System.Windows.Documents.FixedDocument" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocument">O documento que é gravado.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o documento.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocument" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ao conjunto.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, System.Printing.PrintTicket printTicket, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedDocumentSequence fixedDocumentSequence, class System.Printing.PrintTicket printTicket, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedDocumentSequence,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedDocumentSequence" Type="System.Windows.Documents.FixedDocumentSequence" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedDocumentSequence">O conjunto de documentos a serem gravados.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o conjunto de documentos.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedDocumentSequence" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>grava um conjunto de documentos de forma assíncrona para o <xref:System.Windows.Xps.Packaging.XpsDocument> ou <xref:System.Printing.PrintQueue> que criou o <xref:System.Windows.Xps.XpsDocumentWriter>. Os dados que são gravados incluem um <xref:System.Printing.PrintTicket> e informações adicionais que o chamador deseja passar para um manipulador de eventos.  
+  
+ Embora o <xref:System.Windows.Xps.Packaging.XpsDocument> classe tiver um nome único, um <xref:System.Windows.Xps.Packaging.XpsDocument> pode ser um <xref:System.Windows.Documents.FixedDocument> ou um conjunto de vários documentos. Este método adiciona uma <xref:System.Windows.Documents.FixedDocument> ou um conjunto de <xref:System.Windows.Documents.FixedDocument> elementos para a sequência existente.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Documents.FixedPage fixedPage, System.Printing.PrintTicket printTicket, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Documents.FixedPage fixedPage, class System.Printing.PrintTicket printTicket, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Documents.FixedPage,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fixedPage" Type="System.Windows.Documents.FixedPage" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="fixedPage">A página é gravada.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para a página.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Documents.FixedPage" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override void WriteAsync (System.Windows.Media.Visual visual, System.Printing.PrintTicket printTicket, object userSuppliedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteAsync(class System.Windows.Media.Visual visual, class System.Printing.PrintTicket printTicket, object userSuppliedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.XpsDocumentWriter.WriteAsync(System.Windows.Media.Visual,System.Printing.PrintTicket,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visual" Type="System.Windows.Media.Visual" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+        <Parameter Name="userSuppliedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="visual">O <see cref="T:System.Windows.Media.Visual" /> que é gravado.</param>
+        <param name="printTicket">Um <see cref="T:System.Printing.PrintTicket" /> que representa as preferências de impressão padrão para o documento.</param>
+        <param name="userSuppliedState">Um objeto especificado pelo usuário para identificar e associar com a operação assíncrona.</param>
+        <summary>Grava de maneira assíncrona um especificado <see cref="T:System.Windows.Media.Visual" /> junto com um <see cref="T:System.Printing.PrintTicket" /> para o destino <see cref="T:System.Windows.Xps.Packaging.XpsDocument" /> ou <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para gravar vários <xref:System.Windows.Media.Visual> elementos, use <xref:System.Windows.Xps.VisualsToXpsDocument>.  
+  
+ Esse método não validar ou modificar especificado `printTicket` para um determinado <xref:System.Printing.PrintQueue>. Se necessário, use o <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para criar um <xref:System.Printing.PrintTicket> que é específico para o <xref:System.Printing.PrintQueue> e é válido para uma impressora especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingCancelled">
+      <MemberSignature Language="C#" Value="public override event System.Windows.Documents.Serialization.WritingCancelledEventHandler WritingCancelled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingCancelledEventHandler WritingCancelled" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.XpsDocumentWriter.WritingCancelled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingCancelledEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="Overload:System.Windows.Xps.XpsDocumentWriter.Write" /> ou <see cref="Overload:System.Windows.Xps.XpsDocumentWriter.WriteAsync" /> operação foi cancelada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingCompleted">
+      <MemberSignature Language="C#" Value="public override event System.Windows.Documents.Serialization.WritingCompletedEventHandler WritingCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingCompletedEventHandler WritingCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.XpsDocumentWriter.WritingCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação de gravação é concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted> evento.  
+  
+ [!code-csharp[XpsSave#WritingEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writingevents)]
+ [!code-vb[XpsSave#WritingEvents](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writingevents)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingPrintTicketRequired">
+      <MemberSignature Language="C#" Value="public override event System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler WritingPrintTicketRequired;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler WritingPrintTicketRequired" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre imediatamente antes um <see cref="Overload:System.Windows.Xps.XpsDocumentWriter.Write" /> ou <see cref="Overload:System.Windows.Xps.XpsDocumentWriter.WriteAsync" /> método adiciona uma <see cref="T:System.Printing.PrintTicket" /> para um documento ou a fila de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired>permite que um manipulador de eventos substituir um novo <xref:System.Printing.PrintTicket> para aquele que é passado para a operação de gravação.  
+  
+ Os seguintes quatro <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos não chamar o <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> evento:  
+  
+-   <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>(String)  
+  
+-   <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>(Cadeia de caracteres, XpsDocumentNotificationLevel)  
+  
+-   <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>(String)  
+  
+-   <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>(Cadeia de caracteres, XpsDocumentNotificationLevel)  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> evento.  
+  
+ [!code-csharp[XpsPrint#PrintMultipleFixedContentDocuments](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printmultiplefixedcontentdocuments)]
+ [!code-vb[XpsPrint#PrintMultipleFixedContentDocuments](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printmultiplefixedcontentdocuments)]  
+  
+ O manipulador de eventos é criado no exemplo a seguir.  
+  
+ [!code-csharp[XpsPrint#MultipleFixedContentDocuments_WritingPrintTicketRequired](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#multiplefixedcontentdocuments_writingprintticketrequired)]
+ [!code-vb[XpsPrint#MultipleFixedContentDocuments_WritingPrintTicketRequired](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#multiplefixedcontentdocuments_writingprintticketrequired)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritingProgressChanged">
+      <MemberSignature Language="C#" Value="public override event System.Windows.Documents.Serialization.WritingProgressChangedEventHandler WritingProgressChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.Serialization.WritingProgressChangedEventHandler WritingProgressChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Serialization.WritingProgressChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Xps.XpsDocumentWriter" /> atualiza seu progresso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar e usar um <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged> manipulador de eventos.  
+  
+ [!code-csharp[XpsSave#WritingEvents](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpsSaveHelper.cs#writingevents)]
+ [!code-vb[XpsSave#WritingEvents](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpssavehelper.vb#writingevents)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

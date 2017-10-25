@@ -1,0 +1,186 @@
+<Type Name="DateTimeValueSerializer" FullName="System.Windows.Markup.DateTimeValueSerializer">
+  <TypeSignature Language="C#" Value="public class DateTimeValueSerializer : System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DateTimeValueSerializer extends System.Windows.Markup.ValueSerializer" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.DateTimeValueSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Markup.ValueSerializer</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Converte as instâncias do <see cref="T:System.String" /> para e de instâncias do <see cref="T:System.DateTime" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Markup.ValueSerializer>é usado em vez de <xref:System.ComponentModel.TypeConverter> para casos em que a conversão de tipo requer estado adicionais. <xref:System.Windows.Markup.DateTimeValueSerializer>não é atribuído a um tipo com <xref:System.Windows.Markup.ValueSerializerAttribute>. Isso ocorre porque <xref:System.DateTime> está em mscorlib, e mscorlib não pode ter dependências em classes de atributos que não define em si. Em vez disso, o uso de <xref:System.Windows.Markup.DateTimeValueSerializer> é especial de maiusculas e minúsculas no comportamento do processador de XAML no comportamento de serviços XAML do .NET Framework.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.DateTimeValueSerializer> está no assembly System. XAML. Consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+<a name="xamlTextUsage_DateTimeValueSerializer"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DateTimeValueSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DateTimeValueSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.DateTimeValueSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertFromString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DateTimeValueSerializer.CanConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser avaliada para conversão.</param>
+        <param name="context">Informações de contexto que são usadas para conversão.</param>
+        <summary>Determina se o especificado <see cref="T:System.String" /> é possível converter a uma instância de <see cref="T:System.DateTime" />.</summary>
+        <returns>
+          <see langword="true" />Se o valor pode ser convertido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvertToString">
+      <MemberSignature Language="C#" Value="public override bool CanConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DateTimeValueSerializer.CanConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser avaliada para conversão.</param>
+        <param name="context">Informações de contexto que são usadas para conversão.</param>
+        <summary>Determina se o objeto especificado pode ser convertido em um <see cref="T:System.String" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> pode ser convertido em um <see cref="T:System.String" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação retorna `true` somente se passado `value` é do tipo <xref:System.DateTime>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFromString">
+      <MemberSignature Language="C#" Value="public override object ConvertFromString (string value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFromString(string value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DateTimeValueSerializer.ConvertFromString(System.String,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para converter em um <see cref="T:System.DateTime" />.</param>
+        <param name="context">Informações de contexto que são usadas para conversão.</param>
+        <summary>Converte um <see cref="T:System.String" /> em um <see cref="T:System.DateTime" />.</summary>
+        <returns>Uma nova instância da <see cref="T:System.DateTime" /> com base em fornecido <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna uma cadeia de caracteres vazia <xref:System.DateTime?displayProperty=nameWithType>.  
+  
+ A implementação atual usa <xref:System.DateTime.Parse%2A> internamente e também usa os seguintes <xref:System.Globalization.DateTimeStyles>: `DateTimeStyles.RoundtripKind | DateTimeStyles.NoCurrentDateDefault | DateTimeStyles.AllowLeadingWhite | DateTimeStyles.AllowTrailingWhite`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToString">
+      <MemberSignature Language="C#" Value="public override string ConvertToString (object value, System.Windows.Markup.IValueSerializerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ConvertToString(object value, class System.Windows.Markup.IValueSerializerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DateTimeValueSerializer.ConvertToString(System.Object,System.Windows.Markup.IValueSerializerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="context" Type="System.Windows.Markup.IValueSerializerContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para converter uma cadeia de caracteres.</param>
+        <param name="context">Informações de contexto que são usadas para conversão.</param>
+        <summary>Converte uma instância de <see cref="T:System.DateTime" /> para um <see cref="T:System.String" />.</summary>
+        <returns>Uma representação de cadeia de caracteres especificada <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `context`não é usado por esta implementação.  
+  
+ Representações de cadeia de caracteres para datas como encontrado em processamento de valor XAML são baseadas no `en-US` cultura. Isso ocorre porque o XAML para obter informações de cultura de processamento é dividido conceitualmente entre as fases de tempo de compilação e tempo de execução e deve usar uma representação de cadeia de caracteres conhecidos em todo. Para obter mais informações, consulte [visão de geral de localização e globalização de WPF](~/docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+  
+ A implementação atual usa uma cadeia de caracteres de formato que é ajustada dependendo se aspectos de fornecido <xref:System.DateTime> têm valores. Por exemplo, se não houver nenhum valor em <xref:System.TimeSpan.TotalSeconds%2A>, a cadeia de caracteres de formato está no formato `yyyy-MM-dd` , em vez de gravar valores zero para o componente de tempo de detalhamento completo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="value" />não é um <see cref="T:System.DateTime" /> ou <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

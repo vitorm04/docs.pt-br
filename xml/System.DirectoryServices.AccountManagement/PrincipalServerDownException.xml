@@ -1,0 +1,246 @@
+<Type Name="PrincipalServerDownException" FullName="System.DirectoryServices.AccountManagement.PrincipalServerDownException">
+  <TypeSignature Language="C#" Value="public class PrincipalServerDownException : System.DirectoryServices.AccountManagement.PrincipalException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PrincipalServerDownException extends System.DirectoryServices.AccountManagement.PrincipalException" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.AccountManagement.PrincipalException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa exceção é gerada quando a API não consegue se conectar ao servidor.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrincipalServerDownException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa uma nova instância do <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException> classe. O <xref:System.Exception.Message%2A> propriedade é inicializada para uma mensagem fornecida pelo sistema que descreve o erro. Esta mensagem leva em conta a cultura do sistema atual. A propriedade <xref:System.Exception.InnerException%2A> é inicializada com `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrincipalServerDownException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem de erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /> classe com a mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException> instância é inicializada com o <xref:System.Exception.Message%2A> propriedade definida como o valor de `message`. Se `message` é `null`, o <xref:System.Exception.Message%2A> propriedade é inicializada para uma mensagem fornecida pelo sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PrincipalServerDownException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém as informações necessárias para serializar o novo<see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /></param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém a origem do fluxo serializado que está associado com o novo<see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /></param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /> classe especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> e <see cref="T:System.Runtime.Serialization.StreamingContext" /> instâncias.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrincipalServerDownException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto da mensagem.</param>
+        <param name="innerException">Uma exceção aninhada.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /> classe com a mensagem de erro especificada e a exceção aninhada especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException> instância é inicializada com o <xref:System.Exception.Message%2A> propriedade definida como o valor de `message` e <xref:System.Exception.InnerException%2A> propriedade definida como o valor de `innerException`. Se `message` é `null`, o <xref:System.Exception.Message%2A> propriedade é inicializada para uma mensagem fornecida pelo sistema. O <xref:System.Exception.InnerException%2A> é inicializado como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrincipalServerDownException (string message, int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto da mensagem.</param>
+        <param name="errorCode">Um código de erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /> classe com a mensagem de erro especificada e o código de erro especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException> instância é inicializada com o <xref:System.Exception.Message%2A> propriedade definida como o valor de `message` e <xref:System.DirectoryServices.AccountManagement.PrincipalOperationException.ErrorCode*> propriedade definida como o valor de `errorCode`. Se `message` é `null`, o <xref:System.Exception.Message%2A> propriedade é inicializada para uma mensagem fornecida pelo sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrincipalServerDownException (string message, Exception innerException, int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException, int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.#ctor(System.String,System.Exception,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto da mensagem de erro.</param>
+        <param name="innerException">Uma exceção aninhada.</param>
+        <param name="errorCode">Um código de erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /> classe com a mensagem de erro especificada, a exceção aninhada especificada e o código de erro especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException> instância é inicializada com o <xref:System.Exception.Message%2A> propriedade definida como o valor de `message` e <xref:System.Exception.InnerException%2A> propriedade definida como o valor de `innerException`e particular `errorCode` está definida como `errorCode`.  Se `message` é `null`, o <xref:System.Exception.Message%2A> propriedade é inicializada para uma mensagem fornecida pelo sistema. O <xref:System.Exception.InnerException%2A> é inicializado como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrincipalServerDownException (string message, Exception innerException, int errorCode, string serverName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException, int32 errorCode, string serverName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.#ctor(System.String,System.Exception,System.Int32,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="serverName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">O texto da mensagem.</param>
+        <param name="innerException">Uma exceção aninhada.</param>
+        <param name="errorCode">Um código de erro.</param>
+        <param name="serverName">Um nome de servidor.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.DirectoryServices.AccountManagement.PrincipalServerDownException" /> classe com a mensagem de erro especificada, a exceção aninhada especificada, o código de erro especificada e o nome do servidor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException> instância é inicializada com o <xref:System.Exception.Message%2A> propriedade definida como o valor de `message` e o <xref:System.Exception.InnerException%2A> propriedade definida como o valor de `innerException`, particular `errorCode` está definida como `errorCode`e particular `serverName` está definida como `serverName`. Se `message` é `null`, o <xref:System.Exception.Message%2A> propriedade é inicializada para uma mensagem fornecida pelo sistema. O <xref:System.Exception.InnerException%2A> é inicializado como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.AccountManagement.PrincipalServerDownException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.AccountManagement</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto que armazenará os dados do objeto serializado.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> objeto que conterá as informações contextuais sobre a origem ou destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com o nome de parâmetro e informações adicionais de exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException.GetObjectData%2A>define um <xref:System.Runtime.Serialization.SerializationInfo> com todos os dados do objeto de exceção destinados para a serialização. Durante a desserialização, o objeto de exceção é reconstituído a partir do <xref:System.Runtime.Serialization.SerializationInfo> transmitido pelo fluxo.  
+  
+ Para obter mais informações, consulte <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,107 @@
+<Type Name="FileLevelPageControlBuilder" FullName="System.Web.UI.FileLevelPageControlBuilder">
+  <TypeSignature Language="C#" Value="public class FileLevelPageControlBuilder : System.Web.UI.RootBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileLevelPageControlBuilder extends System.Web.UI.RootBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.FileLevelPageControlBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.RootBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Analisa os arquivos de paginação e é o padrão <see cref="T:System.Web.UI.ControlBuilder" /> classe para analisar arquivos de paginação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Construtores de controle suportam o analisador de página na criação de um controle e o filho controles que contém o controle. O <xref:System.Web.UI.FileLevelPageControlBuilder> classe é o padrão <xref:System.Web.UI.ControlBuilder> classe para arquivos individuais de página. Substituir o <xref:System.Web.UI.FileLevelPageControlBuilder> métodos para fornecer a análise de página personalizada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileLevelPageControlBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelPageControlBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.FileLevelPageControlBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.FileLevelPageControlBuilder.%23ctor%2A> construtor é usado pelo ASP.NET quando a página de análise e não é destinado para uso em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendLiteralString">
+      <MemberSignature Language="C#" Value="public override void AppendLiteralString (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendLiteralString(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelPageControlBuilder.AppendLiteralString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O conteúdo para adicionar ao controle.</param>
+        <summary>Adiciona o conteúdo literal especificado para um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.FileLevelPageControlBuilder.AppendLiteralString%2A> método para adicionar conteúdo literal para o controle. Conteúdo literal pode ser qualquer texto que é passado pelo navegador para o controle de servidor. Por exemplo, quaisquer elementos HTML e texto entre suas marcas de abertura e fechamento, são conteúdo literal.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O <see cref="M:System.Web.UI.FileLevelPageControlBuilder.AppendLiteralString(System.String)" /> método não é possível anexar a cadeia de caracteres literal a uma página de conteúdo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSubBuilder">
+      <MemberSignature Language="C#" Value="public override void AppendSubBuilder (System.Web.UI.ControlBuilder subBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AppendSubBuilder(class System.Web.UI.ControlBuilder subBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.FileLevelPageControlBuilder.AppendSubBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="subBuilder">O <see cref="T:System.Web.UI.ControlBuilder" /> atribuído ao controle filho.</param>
+        <summary>Adiciona um <see cref="T:System.Web.UI.ControlBuilder" /> o objeto para o <see cref="T:System.Web.UI.FileLevelPageControlBuilder" /> objeto para os controles filho que pertencem ao controle de contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.FileLevelPageControlBuilder.AppendSubBuilder%2A> substituições de método de <xref:System.Web.UI.ControlBuilder.AppendSubBuilder%2A?displayProperty=nameWithType> método para fornecer lógica personalizada quando páginas mestras e páginas de conteúdo estão sendo usadas. Em uma página de conteúdo, qualquer coisa que não está dentro do <xref:System.Web.UI.WebControls.Content> controle (exceto blocos de script para código do servidor) gera um <xref:System.Web.HttpParseException> exceção. Adicionando um <xref:System.Web.UI.ControlBuilder> objeto para um controle filho que é um <xref:System.Web.UI.WebControls.Content> controlar gera um <xref:System.Web.HttpException> exceção. Para obter mais informações sobre páginas mestras e de conteúdo, consulte [páginas mestras ASP.NET](http://msdn.microsoft.com/library/4e53eedf-8304-4e7a-aed1-691a2623b28b).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O <see cref="T:System.Web.UI.ControlBuilder" /> que foi adicionado está associado com um <see cref="T:System.Web.UI.WebControls.Content" /> controlar e só é permitida nas páginas que contêm <see cref="T:System.Web.UI.WebControls.Content" /> controles.</exception>
+        <exception cref="T:System.Web.HttpParseException">A página de conteúdo contido em um literal que um <see cref="T:System.Web.UI.WebControls.Content" /> controle.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

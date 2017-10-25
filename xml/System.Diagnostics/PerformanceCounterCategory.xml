@@ -1,0 +1,1376 @@
+<Type Name="PerformanceCounterCategory" FullName="System.Diagnostics.PerformanceCounterCategory">
+  <TypeSignature Language="C#" Value="public sealed class PerformanceCounterCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PerformanceCounterCategory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterCategory" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um objeto de desempenho, que define uma categoria de contadores de desempenho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Criar ou excluir um contador de desempenho requer sincronização de código subjacente usando um mutex nomeado. Se um aplicativo altamente privilegiado bloqueia o mutex nomeado, tenta criar ou excluir um contador de desempenho faz com que o aplicativo pare de responder até que o bloqueio seja liberado. Para evitar esse problema, conceda nunca <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão para código não confiável. Além disso, <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão permite que outras permissões para ser ignorada potencialmente e só devem ser concedida para código altamente confiável.  
+  
+ O <xref:System.Diagnostics.PerformanceCounterCategory> da instância <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> propriedade é exibida no campo objeto de desempenho da caixa de diálogo Adicionar contador do aplicativo do Visualizador de desempenho.  
+  
+ O <xref:System.Diagnostics.PerformanceCounterCategory> classe fornece vários métodos para interagir com os contadores e categorias no computador. O <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> métodos permitem que você defina categorias personalizadas. O <xref:System.Diagnostics.PerformanceCounterCategory.Delete%2A> método fornece uma maneira de remover categorias do computador. O <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> método permite que você exiba a lista de categorias, enquanto <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A> recupera todos os dados de contador e instância associados a uma única categoria.  
+  
+ Um contador de desempenho publica dados de desempenho sobre um aplicativo. As categorias incluem componentes físicos (como processadores, discos e memória) e objetos do sistema (por exemplo, processos e threads). Contadores do sistema que estão relacionadas ao mesmo objeto de desempenho são agrupadas em uma categoria que indica o foco comuns. Quando você cria uma instância do <xref:System.Diagnostics.PerformanceCounter> classe, você primeiro indicar a categoria à qual o componente irá interagir e, em seguida, escolha um contador dessa categoria.  
+  
+ Por exemplo, uma categoria de contador do Windows é a categoria de memória. Contadores do sistema dessa categoria rastreiam dados de memória, como o número de bytes disponíveis e o número de bytes armazenados em cache. Se você quiser trabalhar com os bytes armazenados em cache em seu aplicativo, você precisará criar uma instância do <xref:System.Diagnostics.PerformanceCounter> componente, conecte-se a categoria de memória e, em seguida, selecione o contador apropriado (nesse caso, os Bytes armazenados em cache) dessa categoria.  
+  
+ Embora o sistema torna muitos mais categorias de contadores disponíveis, as categorias que você provavelmente irá interagir com mais frequência são as categorias de Cache, memória, objetos, PhysicalDisk, processo, processador, servidor, sistema e Thread.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Diagnostics.PerformanceCounter.RemoveInstance%2A> método o <xref:System.Diagnostics.PerformanceCounter> classe liberará o contador e, se a opção de reutilização é selecionada para essa categoria, a instância do contador será reutilizada. Isso pode causar uma condição de corrida se outro processo ou até mesmo outra parte do código está tentando gravar a instância do contador.  
+  
+> [!NOTE]
+>  É altamente recomendável que as novas categorias de contador de desempenho ser criado durante a instalação do aplicativo, não durante a execução do aplicativo. Isso permite que o tempo para o sistema operacional atualizar sua lista de categorias de contador de desempenho registrados. Se a lista não tenha sido atualizada, a tentativa de usar a categoria falhará.  
+  
+> [!NOTE]
+>  Categorias de contador de desempenho instaladas com o [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] usar memória compartilhada separada, com cada categoria de contador de desempenho com sua própria memória. Você pode especificar o tamanho da memória compartilhada separado, criando um DWORD chamado FileMappingSize na chave do registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome da categoria >*\Performance. O valor de FileMappingSize é definido como o tamanho de memória compartilhada da categoria. O tamanho padrão é 131072 decimal. Se o valor de FileMappingSize não estiver presente, o `fileMappingSize` atributo de valor para o `performanceCounters` elemento especificado no arquivo Machine. config é usado, causando uma sobrecarga adicional para o processamento do arquivo de configuração. Você pode obter uma melhoria de desempenho de inicialização do aplicativo, definindo o tamanho de arquivo de mapeamento no registro. Para obter mais informações sobre o tamanho de arquivo de mapeamento, consulte [ &lt;performanceCounters&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um <xref:System.Diagnostics.PerformanceCounter> e sua <xref:System.Diagnostics.PerformanceCounterCategory> existe no computador local ou em outro computador. Se esses objetos não existirem no computador local, o exemplo, opcionalmente, cria-los. Ele usa o <xref:System.Diagnostics.PerformanceCounterCategory.Exists%2A> método para determinar se o <xref:System.Diagnostics.PerformanceCounterCategory> existe.  Se o <xref:System.Diagnostics.PerformanceCounterCategory> não existir e nenhum nome de contador for especificado ou se o computador for um computador remoto, o exemplo será encerrado.  
+  
+ Se um <xref:System.Diagnostics.PerformanceCounter> nome for fornecido, o exemplo usa o <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%2A> método e exibe o resultado para o usuário. Se o <xref:System.Diagnostics.PerformanceCounter> não existir, o usuário pode excluir e recriar o <xref:System.Diagnostics.PerformanceCounterCategory> com o novo <xref:System.Diagnostics.PerformanceCounter>. Se o usuário faz isso, a categoria é excluída usando o <xref:System.Diagnostics.PerformanceCounterCategory.Delete%2A> método.  
+  
+ Se solicitado, o exemplo cria o novo <xref:System.Diagnostics.PerformanceCounterCategory> e <xref:System.Diagnostics.PerformanceCounter> usando o <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> método. Se for especificado um nome de instância, o exemplo usa o <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> método e exibe o resultado.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.Class#27](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.Class/CS/perfcountercatcreateexist.cs#27)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.Class#27](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.Class/VB/perfcountercatcreateexist.vb#27)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterCategory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> classe deixa o <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> propriedade vazia e configura o <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> propriedade para o computador local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> propriedade deve ser definida antes de associá-isso <xref:System.Diagnostics.PerformanceCounterCategory> instância com um objeto de desempenho no servidor. Caso contrário, uma exceção será gerada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir aceita um <xref:System.Diagnostics.PerformanceCounterCategory> nome e um nome de computador na linha de comando.  Ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> usando a sobrecarga de construtor apropriada para o número de parâmetros fornecidos, em seguida, exibe suas propriedades.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatctor.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatctor.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterCategory (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria de contador de desempenho ou de objeto de desempenho, a ser associada a esta instância <see cref="T:System.Diagnostics.PerformanceCounterCategory" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> classe define o <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> propriedade como o valor especificado e define o <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> propriedade para o computador local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir aceita um <xref:System.Diagnostics.PerformanceCounterCategory> nome e um nome de computador na linha de comando. Ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> usando a sobrecarga de construtor apropriado para o número de parâmetros fornecidos, em seguida, exibe suas propriedades.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatctor.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatctor.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as informações de categoria, como o nome da categoria. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterCategory (string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria de contador de desempenho ou de objeto de desempenho, a ser associada a esta instância <see cref="T:System.Diagnostics.PerformanceCounterCategory" />.</param>
+        <param name="machineName">O computador no qual existem a categoria do contador de desempenho e seus contadores associados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> classe e define o <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> e <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> propriedades para os valores especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir aceita um <xref:System.Diagnostics.PerformanceCounterCategory> nome e um nome de computador na linha de comando. Ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> usando a sobrecarga de construtor apropriado para o número de parâmetros fornecidos, em seguida, exibe suas propriedades.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatctor.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatctor.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ A sintaxe <paramref name="machineName" /> é inválida.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as informações de categoria, como o nome do computador e categoria. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryHelp">
+      <MemberSignature Language="C#" Value="public string CategoryHelp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.CategoryHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto de Ajuda da categoria.</summary>
+        <value>Uma descrição do objeto de desempenho que mede a essa categoria.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.PerformanceCounterCategory> com o <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor>. Solicita ao usuário para o <xref:System.Diagnostics.PerformanceCounterCategory> e nomes de computador, em seguida, define o <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> e <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> propriedades dos valores inseridos. Em seguida, exibe os valores da <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A>, e <xref:System.Diagnostics.PerformanceCounterCategory.CategoryHelp%2A> propriedades ou exibe uma mensagem de erro se o <xref:System.Diagnostics.PerformanceCounterCategory> não pode ser acessado.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatProps.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatprops.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> é <see langword="null" />. O nome da categoria deve ser definido antes de obter a Ajuda de categoria.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryName">
+      <MemberSignature Language="C#" Value="public string CategoryName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto de desempenho que define essa categoria.</summary>
+        <value>O nome da categoria de contador de desempenho ou de objeto de desempenho, a ser associada a esta instância <see cref="T:System.Diagnostics.PerformanceCounterCategory" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.PerformanceCounterCategory> com o <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor>. Solicita ao usuário para o <xref:System.Diagnostics.PerformanceCounterCategory> e nomes de computador, em seguida, define o <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> e <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> propriedades dos valores inseridos. Em seguida, exibe os valores da <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A>, e <xref:System.Diagnostics.PerformanceCounterCategory.CategoryHelp%2A> propriedades ou exibe uma mensagem de erro se o <xref:System.Diagnostics.PerformanceCounterCategory> não pode ser acessado.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatProps.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatprops.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentNullException">O <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterCategoryType CategoryType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterCategoryType CategoryType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.CategoryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de categoria de contador de desempenho.</summary>
+        <value>Um dos valores de <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.PerformanceCounterCategory.CategoryType%2A> propriedade indica se o <xref:System.Diagnostics.PerformanceCounterCategory> objeto pode ter várias instâncias. Os valores possíveis são <xref:System.Diagnostics.PerformanceCounterCategoryType.MultiInstance>, <xref:System.Diagnostics.PerformanceCounterCategoryType.SingleInstance>, ou <xref:System.Diagnostics.PerformanceCounterCategoryType.Unknown>.  
+  
+ Há dois tipos de categorias de contador de desempenho: instância única e várias instâncias. Por padrão, uma categoria é uma instância única quando ele é criado e torna-se várias instâncias quando é adicionada a outra instância. Categorias são criadas quando um aplicativo está configurado e instâncias são adicionadas em tempo de execução. Nas versões do .NET Framework 1.0 e 1.1, não é necessário saber se uma categoria de contador de desempenho tem várias instâncias ou de instância única. No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], o <xref:System.Diagnostics.PerformanceCounterCategoryType> enumeração é usada para indicar se um contador de desempenho pode ter várias instâncias.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterExists">
+      <MemberSignature Language="C#" Value="public bool CounterExists (string counterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CounterExists(string counterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.CounterExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">O nome do contador de desempenho a ser pesquisada.</param>
+        <summary>Determina se o contador especificado está registrado para essa categoria, que é indicada pelo <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> e <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> propriedades.</summary>
+        <returns>
+          <see langword="true" />Se o contador está registrado para a categoria especificada pelo <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> e <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> propriedades; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir o <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> propriedade antes de chamar esse método. Caso contrário, uma exceção será gerada.  
+  
+ Se você não tiver configurado o <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> propriedade, esse método usa o computador local (".").  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um <xref:System.Diagnostics.PerformanceCounter> existe. Obtém um nome de categoria, o nome do contador e o nome do computador da linha de comando, se eles forem fornecidos. Ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> usando apropriada do objeto <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor%2A>. Ele usa o <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%28System.String%29> método para determinar se especificado <xref:System.Diagnostics.PerformanceCounter> existe e informa ao usuário.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatobjexists.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatobjcountexists.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="counterName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> não foi definida.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterExists">
+      <MemberSignature Language="C#" Value="public static bool CounterExists (string counterName, string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CounterExists(string counterName, string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.CounterExists(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">O nome do contador de desempenho a ser pesquisada.</param>
+        <param name="categoryName">O nome da categoria do contador de desempenho ou objeto de desempenho, ao qual o contador de desempenho especificado está associado.</param>
+        <summary>Determina se o contador especificado está registrado para a categoria especificada no computador local.</summary>
+        <returns>
+          <see langword="true" />, se o contador é registrado para a categoria especificada no computador local. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um <xref:System.Diagnostics.PerformanceCounter> existe. Obtém um nome de categoria, o nome do contador e o nome do computador da linha de comando, se eles forem fornecidos. Ele usa as sobrecargas estáticas do <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%2A> método para determinar se especificado <xref:System.Diagnostics.PerformanceCounter> nome existe no <xref:System.Diagnostics.PerformanceCounterCategory>. A sobrecarga é selecionada com base em se um nome de computador é fornecido.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatcounterexists.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatcountexists.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="categoryName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="counterName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.InvalidOperationException">O nome da categoria não existe.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterExists">
+      <MemberSignature Language="C#" Value="public static bool CounterExists (string counterName, string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CounterExists(string counterName, string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.CounterExists(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">O nome do contador de desempenho a ser pesquisada.</param>
+        <param name="categoryName">O nome da categoria do contador de desempenho ou objeto de desempenho, ao qual o contador de desempenho especificado está associado.</param>
+        <param name="machineName">O nome do computador no qual existem a categoria do contador de desempenho e seus contadores associados.</param>
+        <summary>Determina se o contador especificado está registrado para a categoria especificada em um computador remoto.</summary>
+        <returns>
+          <see langword="true" />, se o contador é registrado para a categoria especificada no computador especificado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um <xref:System.Diagnostics.PerformanceCounter> existe. Obtém um nome de categoria, o nome do contador e o nome do computador da linha de comando, se eles forem fornecidos. Ele usa as sobrecargas estáticas do <xref:System.Diagnostics.PerformanceCounterCategory.CounterExists%2A> método para determinar se especificado <xref:System.Diagnostics.PerformanceCounter> nome existe no <xref:System.Diagnostics.PerformanceCounterCategory>. A sobrecarga é selecionada com base em se um nome de computador é fornecido.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatcounterexists.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatcountexists.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="categoryName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="counterName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ O <paramref name="machineName" /> é inválido.</exception>
+        <exception cref="T:System.InvalidOperationException">O nome da categoria não existe.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, System.Diagnostics.CounterCreationDataCollection counterData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, class System.Diagnostics.CounterCreationDataCollection counterData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.Diagnostics.CounterCreationDataCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use another overload that uses PerformanceCounterCategoryType instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="counterData" Type="System.Diagnostics.CounterCreationDataCollection" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria do contador de desempenho personalizado a ser criada e registrada no sistema.</param>
+        <param name="categoryHelp">Uma descrição da categoria personalizada.</param>
+        <param name="counterData">Um <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> que especifica os contadores a serem criados como parte da nova categoria.</param>
+        <summary>Registra a categoria do contador de desempenho personalizado que contém os contadores especificados no computador local.</summary>
+        <returns>Um <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> associado à nova categoria personalizada ou ao objeto de desempenho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um <xref:System.Diagnostics.PerformanceCounterCategory> objeto chamado "orders" existe. Se não, ele cria o <xref:System.Diagnostics.PerformanceCounterCategory> objeto usando um <xref:System.Diagnostics.CounterCreationDataCollection> objeto que contém dois contadores de desempenho.  
+  
+ [!code-cpp[PerfCounter_ccd#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter_ccd/CPP/ccd.cpp#1)]
+ [!code-csharp[PerfCounter_ccd#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter_ccd/CS/ccd.cs#1)]
+ [!code-vb[PerfCounter_ccd#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter_ccd/VB/ccd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um nome de contador especificado na coleção <paramref name="counterData" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ Um contador especificado na coleção <paramref name="counterData" /> já existe.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="counterName" /> tem uma sintaxe inválida. Ele pode conter caracteres de barra invertida ("\\") ou tem mais de 80 caracteres.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A categoria já existe no computador local.  
+  
+ -ou-  
+  
+ O layout da coleção <paramref name="counterData" /> está incorreto em relação aos contadores base. Um contador do tipo <see langword="AverageCount64" />, <see langword="AverageTimer32" />, <see langword="CounterMultiTimer" />, <see langword="CounterMultiTimerInverse" />, <see langword="CounterMultiTimer100Ns" />, <see langword="CounterMultiTimer100NsInverse" />, <see langword="RawFraction" />, <see langword="SampleFraction" /> ou <see langword="SampleCounter" /> deve ser seguido imediatamente por um dos tipos de contador base (<see langword="AverageBase" />, <see langword="MultiBase" />, <see langword="RawBase" /> ou <see langword="SampleBase" />).</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para executar tarefas administrativas em categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, System.Diagnostics.PerformanceCounterCategoryType categoryType, System.Diagnostics.CounterCreationDataCollection counterData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, valuetype System.Diagnostics.PerformanceCounterCategoryType categoryType, class System.Diagnostics.CounterCreationDataCollection counterData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.Diagnostics.PerformanceCounterCategoryType,System.Diagnostics.CounterCreationDataCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="categoryType" Type="System.Diagnostics.PerformanceCounterCategoryType" />
+        <Parameter Name="counterData" Type="System.Diagnostics.CounterCreationDataCollection" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria do contador de desempenho personalizado a ser criada e registrada no sistema.</param>
+        <param name="categoryHelp">Uma descrição da categoria personalizada.</param>
+        <param name="categoryType">Um dos valores de <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />.</param>
+        <param name="counterData">Um <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> que especifica os contadores a serem criados como parte da nova categoria.</param>
+        <summary>Registra a categoria do contador de desempenho personalizado que contém os contadores especificados no computador local.</summary>
+        <returns>Um <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> associado à nova categoria personalizada ou ao objeto de desempenho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `categoryType` parâmetro especifica se a categoria do contador de desempenho é uma instância única ou várias instâncias. Por padrão, uma categoria é uma instância única quando ele é criado e torna-se várias instâncias quando é adicionada a outra instância. Categorias são criadas quando um aplicativo está configurado e instâncias são adicionadas em tempo de execução. Nas versões do .NET Framework 1.0 e 1.1, não é necessário saber se uma categoria de contador de desempenho tem várias instâncias ou de instância única. No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], o <xref:System.Diagnostics.PerformanceCounterCategoryType> enumeração é usada para indicar se um contador de desempenho pode ter várias instâncias.  
+  
+ Categorias de contador de desempenho instaladas com o [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] usar memória compartilhada separada, com cada categoria de contador de desempenho com sua própria memória.  Você pode especificar o tamanho da memória compartilhada separado, criando um DWORD chamado FileMappingSize na chave do registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome da categoria >*\Performance. O valor de FileMappingSize é definido como o tamanho de memória compartilhada da categoria. O tamanho padrão é 131072 decimal. Se o valor de FileMappingSize não estiver presente, o `fileMappingSize` atributo de valor para o `performanceCounters` elemento especificado no arquivo Machine. config é usado, causando uma sobrecarga adicional para o processamento do arquivo de configuração. Você pode obter uma melhoria de desempenho de inicialização do aplicativo, definindo o tamanho de arquivo de mapeamento no registro.  
+  
+> [!NOTE]
+>  É altamente recomendável que as novas categorias de contador de desempenho ser criado durante a instalação do aplicativo, não durante a execução do aplicativo. Isso permite que o tempo para o sistema operacional atualizar sua lista de categorias de contador de desempenho registrados. Se a lista não tenha sido atualizada, a tentativa de usar a categoria falhará.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> método. O exemplo mostra como criar um personalizado, a categoria do contador de desempenho de várias instâncias para o número de pedidos por segundo.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategoryType#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/CS/program.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategoryType#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/VB/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um nome de contador especificado na coleção <paramref name="counterData" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ Um contador especificado na coleção <paramref name="counterData" /> já existe.  
+  
+ -ou-  
+  
+ O <paramref name="counterName" /> tem uma sintaxe inválida. Ele pode conter caracteres de barra invertida ("\\") ou tem mais de 80 caracteres.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="counterData" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          O valor <paramref name="categoryType" /> está fora do intervalo dos seguintes valores: <see langword="MultiInstance" />, <see langword="SingleInstance" /> ou <see langword="Unknown" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A categoria já existe no computador local.  
+  
+ -ou-  
+  
+ O layout da coleção <paramref name="counterData" /> está incorreto em relação aos contadores base. Um contador do tipo <see langword="AverageCount64" />, <see langword="AverageTimer32" />, <see langword="CounterMultiTimer" />, <see langword="CounterMultiTimerInverse" />, <see langword="CounterMultiTimer100Ns" />, <see langword="CounterMultiTimer100NsInverse" />, <see langword="RawFraction" />, <see langword="SampleFraction" /> ou <see langword="SampleCounter" /> deve ser seguido imediatamente por um dos tipos de contador base (<see langword="AverageBase" />, <see langword="MultiBase" />, <see langword="RawBase" /> ou <see langword="SampleBase" />).</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para executar tarefas administrativas em categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, string counterName, string counterHelp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, string counterName, string counterHelp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use another overload that uses PerformanceCounterCategoryType instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="counterHelp" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria do contador de desempenho personalizado a ser criada e registrada no sistema.</param>
+        <param name="categoryHelp">Uma descrição da categoria personalizada.</param>
+        <param name="counterName">O nome de um novo contador, do tipo <see langword="NumberOfItems32" />, a ser criado como parte da nova categoria.</param>
+        <param name="counterHelp">Uma descrição do contador associado à nova categoria personalizada.</param>
+        <summary>Registra uma categoria de contador de desempenho personalizado que contém um único contador do tipo <see langword="NumberOfItems32" /> no computador local.</summary>
+        <returns>Um <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> associado à nova categoria do sistema ou ao objeto de desempenho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.PerformanceCounterCategory> e único <xref:System.Diagnostics.PerformanceCounter> com texto de ajuda para cada um, usando o <xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29> método.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfcountercatcreate.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatcreate.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="counterName" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ O contador especificado por <paramref name="counterName" /> já existe.  
+  
+ -ou-  
+  
+ O <paramref name="counterName" /> tem uma sintaxe inválida. Ele pode conter caracteres de barra invertida ("\\") ou tem mais de 80 caracteres.</exception>
+        <exception cref="T:System.InvalidOperationException">A categoria já existe no computador local.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="counterHelp" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para executar tarefas administrativas em categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory Create (string categoryName, string categoryHelp, System.Diagnostics.PerformanceCounterCategoryType categoryType, string counterName, string counterHelp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory Create(string categoryName, string categoryHelp, valuetype System.Diagnostics.PerformanceCounterCategoryType categoryType, string counterName, string counterHelp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Create(System.String,System.String,System.Diagnostics.PerformanceCounterCategoryType,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="categoryHelp" Type="System.String" />
+        <Parameter Name="categoryType" Type="System.Diagnostics.PerformanceCounterCategoryType" />
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="counterHelp" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria do contador de desempenho personalizado a ser criada e registrada no sistema.</param>
+        <param name="categoryHelp">Uma descrição da categoria personalizada.</param>
+        <param name="categoryType">Uma da <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" /> valores que especificam se a categoria é <see cref="F:System.Diagnostics.PerformanceCounterCategoryType.MultiInstance" />, <see cref="F:System.Diagnostics.PerformanceCounterCategoryType.SingleInstance" />, ou <see cref="F:System.Diagnostics.PerformanceCounterCategoryType.Unknown" />.</param>
+        <param name="counterName">O nome de um novo contador a ser criado como parte da nova categoria.</param>
+        <param name="counterHelp">Uma descrição do contador associado à nova categoria personalizada.</param>
+        <summary>Registra a categoria do contador de desempenho personalizado que contém um único contador do tipo <see cref="F:System.Diagnostics.PerformanceCounterType.NumberOfItems32" /> no computador local.</summary>
+        <returns>Um <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> associado à nova categoria do sistema ou ao objeto de desempenho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `categoryType` parâmetro especifica se a categoria do contador de desempenho é uma instância única ou várias instâncias. Por padrão, uma categoria é uma instância única quando ele é criado e torna-se várias instâncias quando é adicionada a outra instância. Categorias são criadas quando um aplicativo está configurado e instâncias são adicionadas em tempo de execução. Nas versões do .NET Framework 1.0 e 1.1, não é necessário saber se uma categoria de contador de desempenho tem várias instâncias ou de instância única. No [!INCLUDE[dnprdnext](~/includes/dnprdnext-md.md)], o <xref:System.Diagnostics.PerformanceCounterCategoryType> enumeração é usada para indicar se um contador de desempenho pode ter várias instâncias.  
+  
+ Categorias de contador de desempenho instaladas com o [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] usar memória compartilhada separada, com cada categoria de contador de desempenho com sua própria memória. Você pode especificar o tamanho da memória compartilhada separado, criando um DWORD chamado FileMappingSize na chave do registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome da categoria >*\Performance. O valor de FileMappingSize é definido como o tamanho de memória compartilhada da categoria. O tamanho padrão é 131072 decimal. Se o valor de FileMappingSize não estiver presente, o `fileMappingSize` atributo de valor para o `performanceCounters` elemento especificado no arquivo Machine. config é usado, causando uma sobrecarga adicional para o processamento do arquivo de configuração. Você pode obter uma melhoria de desempenho de inicialização do aplicativo, definindo o tamanho de arquivo de mapeamento no registro.  
+  
+> [!NOTE]
+>  É altamente recomendável que as novas categorias de contador de desempenho ser criado durante a instalação do aplicativo, não durante a execução do aplicativo. Isso permite que o tempo para o sistema operacional atualizar sua lista de categorias de contador de desempenho registrados. Se a lista não tenha sido atualizada, a tentativa de usar a categoria falhará.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Diagnostics.PerformanceCounterCategory.Create%2A> método. O exemplo mostra como criar uma categoria de contador de desempenho personalizados de instância única.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategoryType#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/CS/program.cs#3)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategoryType#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategoryType/VB/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="counterName" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ O contador especificado por <paramref name="counterName" /> já existe.  
+  
+ -ou-  
+  
+ O <paramref name="counterName" /> tem uma sintaxe inválida. Ele pode conter caracteres de barra invertida ("\\") ou tem mais de 80 caracteres.</exception>
+        <exception cref="T:System.InvalidOperationException">A categoria já existe no computador local.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="categoryName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="counterHelp" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para executar tarefas administrativas em categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static void Delete (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Delete(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Delete(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria de contador de desempenho personalizado a ser excluída.</param>
+        <summary>Remove a categoria e seus contadores associados do computador local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode excluir categorias de contador de desempenho personalizados somente do sistema. Você não pode excluir um contador de uma categoria. Para fazer isso, exclua a categoria e recriar a categoria com os contadores que você deseja manter. Para evitar uma exceção, confirme se a categoria existe antes de tentar excluí-lo.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Diagnostics.PerformanceCounterCategory.Delete%2A> método para excluir um <xref:System.Diagnostics.PerformanceCounterCategory> e <xref:System.Diagnostics.PerformanceCounter> objetos que ele contém.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatDelete.cs#6)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatdelete.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="categoryName" /> tem uma sintaxe inválida. Ele pode conter caracteres de barra invertida ("\\") ou tem mais de 80 caracteres.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.InvalidOperationException">A categoria não pode ser excluída porque não é uma categoria personalizada.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Administer" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Exists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria do contador de desempenho a ser pesquisada.</param>
+        <summary>Determina se a categoria é registrada no computador local.</summary>
+        <returns>
+          <see langword="true" />Se a categoria estiver registrada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar o <xref:System.Diagnostics.PerformanceCounterCategory.Exists%2A> método pode resultar em uma penalidade de desempenho perceptível enquanto todos os contadores de desempenho no computador são verificados quanto à disponibilidade. Se você estiver escrevendo apenas para um contador de desempenho, você pode evitar a pesquisa global para contadores de desempenho ao criar o contador de desempenho quando o aplicativo está instalado e supondo que a categoria existe ao acessar o contador. Não há nenhuma maneira de evitar a pesquisa de contador de desempenho durante a leitura de contadores de desempenho.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um <xref:System.Diagnostics.PerformanceCounterCategory> objeto chamado "orders" existe. Se não, ele cria o <xref:System.Diagnostics.PerformanceCounterCategory> objeto usando um <xref:System.Diagnostics.CounterCreationDataCollection> objeto que contém dois contadores de desempenho.  
+  
+ [!code-cpp[PerfCounter_ccd#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter_ccd/CPP/ccd.cpp#1)]
+ [!code-csharp[PerfCounter_ccd#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter_ccd/CS/ccd.cs#1)]
+ [!code-vb[PerfCounter_ccd#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter_ccd/VB/ccd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Exists">
+      <MemberSignature Language="C#" Value="public static bool Exists (string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Exists(string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.Exists(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">O nome da categoria do contador de desempenho a ser pesquisada.</param>
+        <param name="machineName">O nome do computador para examinar para a categoria.</param>
+        <summary>Determina se a categoria é registrada no computador especificado.</summary>
+        <returns>
+          <see langword="true" />Se a categoria estiver registrada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar o <xref:System.Diagnostics.PerformanceCounterCategory.Exists%2A> método pode resultar em uma penalidade de desempenho perceptível enquanto todos os contadores de desempenho no computador são verificados quanto à disponibilidade. Se você estiver escrevendo apenas para um contador de desempenho, você pode evitar a pesquisa global para contadores de desempenho ao criar o contador de desempenho quando o aplicativo está instalado e supondo que a categoria existe ao acessar o contador. Não há nenhuma maneira de evitar a pesquisa de contador de desempenho durante a leitura de contadores de desempenho.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir determina se um <xref:System.Diagnostics.PerformanceCounterCategory> objeto chamado `Orders` existe. Se não existir, o exemplo cria o <xref:System.Diagnostics.PerformanceCounterCategory> objeto usando um <xref:System.Diagnostics.CounterCreationDataCollection> objeto que contém dois contadores de desempenho.  
+  
+ [!code-cpp[PerfCounter_ccd#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerfCounter_ccd/CPP/ccd.cpp#1)]
+ [!code-csharp[PerfCounter_ccd#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerfCounter_ccd/CS/ccd.cs#1)]
+ [!code-vb[PerfCounter_ccd#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerfCounter_ccd/VB/ccd.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="machineName" /> é inválido.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.IO.IOException">O caminho de rede não foi encontrado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O chamador não tem a permissão necessária.  
+  
+ -ou-  
+  
+ Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategories">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory[] GetCategories ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory[] GetCategories() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCategories" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma lista das categorias de contador de desempenho registradas no computador local.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> indicando as categorias registradas no computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> método para retornar uma matriz de <xref:System.Diagnostics.PerformanceCounterCategory> objetos do computador local ou em um computador especificado. Ele converte o <xref:System.Diagnostics.PerformanceCounterCategory> matriz em uma matriz de nomes de categoria, que ele classifica e exibe para o usuário. O <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> sobrecarga é selecionada com base em se um nome de computador foi especificado.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountergetcat.cpp#2)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountergetcat.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcat.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategories">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.PerformanceCounterCategory[] GetCategories (string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Diagnostics.PerformanceCounterCategory[] GetCategories(string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCategories(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategory[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="machineName">O computador para verificar.</param>
+        <summary>Recupera uma lista de categorias de contador de desempenho que são registrados no computador especificado.</summary>
+        <returns>Uma matriz de <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> objetos indicando as categorias que estão registradas no computador especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para recuperar as categorias no computador local, use outra sobrecarga ou passe "." como o `machineName` parâmetro.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> método para retornar uma matriz de <xref:System.Diagnostics.PerformanceCounterCategory> objetos do computador local ou em um computador especificado. Ele converte o <xref:System.Diagnostics.PerformanceCounterCategory> matriz em uma matriz de nomes de categoria, que ele classifica e exibe para o usuário. O <xref:System.Diagnostics.PerformanceCounterCategory.GetCategories%2A> sobrecarga é selecionada com base em se um nome de computador foi especificado.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountergetcat.cpp#2)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountergetcat.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcat.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="machineName" /> é inválido.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCounters">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounter[] GetCounters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.PerformanceCounter[] GetCounters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCounters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounter[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma lista dos contadores em uma categoria de contador de desempenho que contém exatamente uma instância.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Diagnostics.PerformanceCounter" /> indicando os contadores que estão associados essa categoria de contador de desempenho de instância única.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre as instâncias de objeto de desempenho, consulte o <xref:System.Diagnostics.PerformanceCounter> visão geral da classe.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém uma lista da <xref:System.Diagnostics.PerformanceCounter> objetos em um <xref:System.Diagnostics.PerformanceCounterCategory>. Primeiro, ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> com o construtor apropriado, com base em se um nome de computador foi especificado. Ele usa o <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> método para retornar uma matriz de <xref:System.Diagnostics.PerformanceCounter> objetos, selecionando o <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> sobrecarga com base em se um nome de instância foi especificado.  
+  
+ Isso <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters> sobrecarga falhará a menos que ele é usado com uma categoria de instância única.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountercatgetcount.cpp#4)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountercatgetcount.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcount.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A categoria não é uma instância única.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.InvalidOperationException">A categoria não tem uma instância associada.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCounters">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounter[] GetCounters (string instanceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.PerformanceCounter[] GetCounters(string instanceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetCounters(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounter[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">A instância do objeto de desempenho para o qual recuperar a lista de contadores associados.</param>
+        <summary>Recupera uma lista de contadores em uma categoria de contador de desempenho que contém uma ou mais instâncias.</summary>
+        <returns>Uma matriz de <see cref="T:System.Diagnostics.PerformanceCounter" /> objetos indicando os contadores que estão associados com a instância do objeto especificado dessa categoria de contador de desempenho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para representar uma categoria de instância única, passar uma cadeia de caracteres vazia ("") para o `instanceName` parâmetro.  
+  
+ Para obter mais informações sobre as instâncias de objeto de desempenho, consulte o <xref:System.Diagnostics.PerformanceCounter> visão geral da classe.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém uma lista da <xref:System.Diagnostics.PerformanceCounter> objetos em um <xref:System.Diagnostics.PerformanceCounterCategory>. Primeiro, ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> com o construtor apropriado, com base em se um nome de computador foi especificado. Ele usa o <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> método para retornar uma matriz de <xref:System.Diagnostics.PerformanceCounter> objetos, selecionando o <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%2A> sobrecarga com base em se um nome de instância foi especificado.  
+  
+ Isso <xref:System.Diagnostics.PerformanceCounterCategory.GetCounters%28System.String%29> sobrecarga falhará a menos que ele é usado com uma categoria que contém as instâncias.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountercatgetcount.cpp#4)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountercatgetcount.cs#4)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetcount.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="instanceName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> propriedade para este <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> instância não foi definida.  
+  
+ -ou-  
+  
+ A categoria não contém a instância que é especificada pelo <paramref name="instanceName" /> parâmetro.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstanceNames">
+      <MemberSignature Language="C#" Value="public string[] GetInstanceNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetInstanceNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.GetInstanceNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a lista de instâncias de objetos de desempenho associados essa categoria.</summary>
+        <returns>Uma matriz de cadeias de caracteres que representa os nomes de instância do objeto de desempenho associados a essa categoria ou, se a categoria contiver apenas uma instância do objeto de desempenho, uma entrada única a matriz que contém uma cadeia de caracteres vazia ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém uma lista da <xref:System.Diagnostics.PerformanceCounter> objetos em um <xref:System.Diagnostics.PerformanceCounterCategory>. Primeiro, ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> do objeto, usando o construtor apropriado com base em se um nome de computador foi especificado. Ele então usa <xref:System.Diagnostics.PerformanceCounterCategory.GetInstanceNames%2A> para retornar os nomes de instância como uma matriz de <xref:System.String>, que ele classifica e o exibe.  
+  
+ [!code-cpp[System.Diagnostics.PerformanceCounterCategory.GetMembers#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/cpp/perfcountercatgetinst.cpp#6)]
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.GetMembers#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/CS/perfcountercatgetinst.cs#6)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.GetMembers#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.GetMembers/VB/perfcountercatgetinst.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> é <see langword="null" />. A propriedade pode não ter sido definida.  
+  
+ -ou-  
+  
+ A categoria não tem uma instância associada.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceExists">
+      <MemberSignature Language="C#" Value="public bool InstanceExists (string instanceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool InstanceExists(string instanceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.InstanceExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">A instância do objeto de desempenho nesta categoria de contador de desempenho a ser pesquisado.</param>
+        <summary>Determina se a instância do objeto de desempenho especificado existe na categoria que é identificada por esse <see cref="T:System.Diagnostics.PerformanceCounterCategory" /> do objeto <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> propriedade.</summary>
+        <returns>
+          <see langword="true" /> se a categoria contém a instância do objeto de desempenho especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta sobrecarga do <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> não é `static`. Você deve criar um <xref:System.Diagnostics.PerformanceCounterCategory> objeto e definir o <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> propriedade.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um <xref:System.Diagnostics.PerformanceCounter> instância existe dentro de um <xref:System.Diagnostics.PerformanceCounterCategory>. Primeiro, ele cria um <xref:System.Diagnostics.PerformanceCounterCategory> do objeto, usando o construtor apropriado com base em se um nome de computador foi especificado. Ele então usa <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%28System.String%29> para determinar se a instância especificada existe e, em seguida, informa ao usuário. Se nenhum nome de instância é especificado, o exemplo usa o nome de instância única do padrão.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcounterobjinstexists.cs#2)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatobjinstexists.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> é <see langword="null" />. A propriedade pode não ter sido definida.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="instanceName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceExists">
+      <MemberSignature Language="C#" Value="public static bool InstanceExists (string instanceName, string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool InstanceExists(string instanceName, string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.InstanceExists(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">A instância do objeto de desempenho pela qual pesquisar.</param>
+        <param name="categoryName">A categoria de contador de desempenho pela qual pesquisar.</param>
+        <summary>Determina se uma categoria especificada no computador local contém a instância do objeto de desempenho especificado.</summary>
+        <returns>
+          <see langword="true" /> se a categoria contém a instância do objeto de desempenho especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível determinar se uma instância do objeto de desempenho existe em um computador sem especificar uma categoria específica para examinar.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa as sobrecargas estáticas de <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> para determinar se o determinado <xref:System.Diagnostics.PerformanceCounter> instância existe no <xref:System.Diagnostics.PerformanceCounterCategory>. A sobrecarga é selecionada com base em se um nome de computador é especificado. Se nenhum nome de instância é especificado, o exemplo usa o nome de instância única do padrão.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatinstexists.cs#10)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatinstexists.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="instanceName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceExists">
+      <MemberSignature Language="C#" Value="public static bool InstanceExists (string instanceName, string categoryName, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool InstanceExists(string instanceName, string categoryName, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.InstanceExists(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceName" Type="System.String" />
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instanceName">A instância do objeto de desempenho pela qual pesquisar.</param>
+        <param name="categoryName">A categoria de contador de desempenho pela qual pesquisar.</param>
+        <param name="machineName">O nome do computador no qual procurar o par de instância de categoria.</param>
+        <summary>Determina se uma categoria especificada em um computador especificado contém a instância do objeto de desempenho especificado.</summary>
+        <returns>
+          <see langword="true" /> se a categoria contém a instância do objeto de desempenho especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível determinar se uma instância do objeto de desempenho existe em um computador sem especificar uma categoria específica para examinar.  
+  
+ Você pode usar "." para especificar o computador local.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa as sobrecargas estáticas de <xref:System.Diagnostics.PerformanceCounterCategory.InstanceExists%2A> para determinar se o determinado <xref:System.Diagnostics.PerformanceCounter> instância existe no <xref:System.Diagnostics.PerformanceCounterCategory>. A sobrecarga é selecionada com base em se um nome de computador é especificado. Se nenhum nome de instância é especificado, o exemplo usa o nome de instância única do padrão.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/CS/perfcountercatstatinstexists.cs#10)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.ExistMembers#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.ExistMembers/VB/perfcountercatstatinstexists.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="instanceName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="categoryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="categoryName" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="machineName" /> é inválido.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterCategory.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do computador no qual essa categoria existente.</summary>
+        <value>O nome do computador no qual existem a categoria do contador de desempenho e seus contadores associados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.PerformanceCounterCategory> com o <xref:System.Diagnostics.PerformanceCounterCategory.%23ctor> construtor. Solicita ao usuário para o <xref:System.Diagnostics.PerformanceCounterCategory> e os nomes de computador, em seguida, define o <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> e <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A> propriedades dos valores inseridos. Em seguida, exibe os valores da <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A>, <xref:System.Diagnostics.PerformanceCounterCategory.MachineName%2A>, e <xref:System.Diagnostics.PerformanceCounterCategory.CategoryHelp%2A> propriedades ou exibe uma mensagem de erro se o <xref:System.Diagnostics.PerformanceCounterCategory> não pode ser acessado.  
+  
+ [!code-csharp[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/CS/perfCounterCatProps.cs#8)]
+ [!code-vb[System.Diagnostics.PerformanceCounterCategory.OtherMembers#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.PerformanceCounterCategory.OtherMembers/VB/perfcountercatprops.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A sintaxe <see cref="P:System.Diagnostics.PerformanceCounterCategory.MachineName" /> é inválida.</exception>
+        <permission cref="T:System.Diagnostics.PerformanceCounterPermission">para ler as categorias de contador de desempenho. Enumeração associada: <see cref="F:System.Diagnostics.PerformanceCounterPermissionAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadCategory">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.InstanceDataCollectionCollection ReadCategory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.InstanceDataCollectionCollection ReadCategory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterCategory.ReadCategory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.InstanceDataCollectionCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê todos os contadores e desempenho objeto instância dados que está associados essa categoria de contador de desempenho.</summary>
+        <returns>Um <see cref="T:System.Diagnostics.InstanceDataCollectionCollection" /> que contém os dados de instância de objeto de contador e desempenho para a categoria.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir o <xref:System.Diagnostics.PerformanceCounterCategory.CategoryName%2A> propriedade antes de chamar <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A>.  
+  
+ A categoria inteira de leitura ao mesmo tempo pode ser tão eficiente quanto a leitura de um único contador por causa da forma que o sistema permite que os dados.  
+  
+> [!NOTE]
+>  Para ler os contadores de desempenho no Windows Vista e posterior, Windows XP Professional x64 Edition ou Windows Server 2003, você deve ser um membro do grupo usuários de Monitor de desempenho ou ter privilégios administrativos.  
+>   
+>  Para evitar a elevar seus privilégios para acessar os contadores de desempenho no Windows Vista e versões posteriores, se adicione ao grupo usuários de Monitor de desempenho.  
+>   
+>  No Windows Vista e posterior, UAC (Controle de Conta de Usuário) determina os privilégios de um usuário. Se for um membro do grupo Administradores Internos, você receberá dois tokens de acesso do tempo de execução: um token de acesso do usuário padrão e um token de acesso do administrador. Por padrão, você está na função de usuário padrão. Para executar o código que acessa os contadores de desempenho, primeiro elevar seus privilégios de usuário padrão para o administrador. Você pode fazer isso quando você iniciar um aplicativo clicando duas vezes no ícone do aplicativo e que indica que você deseja executar como administrador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Diagnostics.PerformanceCounterCategory> para um <xref:System.Diagnostics.PerformanceCounterCategory> nome. Ele então usa <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A> para retornar um <xref:System.Diagnostics.InstanceDataCollectionCollection> que contém dados de instância para todas as instâncias da <xref:System.Diagnostics.PerformanceCounter> objetos dentro de <xref:System.Diagnostics.PerformanceCounterCategory>.  
+  
+ [!code-csharp[System.Diagnostics.InstanceData.CopyTo#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/CS/instdatacopyto.cs#6)]
+ [!code-vb[System.Diagnostics.InstanceData.CopyTo#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.InstanceData.CopyTo/VB/instdatacopyto.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.Diagnostics.PerformanceCounterCategory.CategoryName" /> é <see langword="null" />. A propriedade pode não ter sido definida.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">Falha ao chamar uma API do sistema subjacente.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Um código em execução sem privilégios administrativos tentou ler um contador de desempenho.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

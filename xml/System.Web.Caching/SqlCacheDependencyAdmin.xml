@@ -1,0 +1,407 @@
+<Type Name="SqlCacheDependencyAdmin" FullName="System.Web.Caching.SqlCacheDependencyAdmin">
+  <TypeSignature Language="C#" Value="public static class SqlCacheDependencyAdmin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SqlCacheDependencyAdmin extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.SqlCacheDependencyAdmin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Executa tarefas administrativas necessárias em um banco de dados do SQL Server para dar suporte a <see cref="T:System.Web.Caching.SqlCacheDependency" /> classe ao usar dependências de sondagem. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar os métodos dessa classe para habilitar e desabilitar um banco de dados do SQL Server e suas tabelas para programaticamente <xref:System.Web.Caching.SqlCacheDependency> notificações de alteração do objeto. Além disso, esta classe obtém informações sobre quais tabelas em um banco de dados são habilitadas para notificações de alteração usando o <xref:System.Web.Caching.SqlCacheDependencyAdmin.GetTablesEnabledForNotifications%2A> método. No entanto, você também pode usar a ferramenta de linha de comando Aspnet_regsql para gerenciar notificações de alteração para um banco de dados do SQL Server e suas tabelas.  
+  
+> [!NOTE]
+>  Para chamar qualquer um dos métodos nessa classe, a conta usada para acessar o banco de dados do SQL Server deve ter permissões para criar tabelas e procedimentos armazenados. Para habilitar as notificações em uma tabela específica, você deve ter permissões para criar um gatilho SQL Server nessa tabela. Para obter mais informações sobre como definir permissões em um banco de dados, consulte a documentação do SQL Server. Para obter mais informações sobre a conta usada pelo processo do ASP.NET, consulte [representação do ASP.NET](http://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma página ASP.NET simples para habilitar e desabilitar as notificações de alteração nas tabelas de banco de dados do SQL Server. Ele usa o <xref:System.Web.Caching.SqlCacheDependencyAdmin> objeto para gerenciar notificações de alteração no banco de dados especificado em uma cadeia de caracteres de conexão chamada `MyConnectionString`. O exemplo inclui dois arquivos, um arquivo. aspx que define a interface do usuário e um arquivo de code-behind que contém o código-fonte para os eventos do ASP.NET.  
+  
+ O primeiro exemplo é o arquivo. aspx que define a interface do usuário.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Caching.SqlCacheDependencyAdmin#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/CS/cacheDependencyAdmincs.aspx#10)]
+ [!code-aspx-vb[System.Web.Caching.SqlCacheDependencyAdmin#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/VB/cacheDependencyAdminvb.aspx#10)]
+  
+ O segundo exemplo é o arquivo de code-behind que contém o código-fonte para os eventos de página.  
+  
+ [!code-csharp[System.Web.Caching.SqlCacheDependencyAdmin#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/CS/cacheDependencyAdmincs.aspx.cs#1)]
+ [!code-vb[System.Web.Caching.SqlCacheDependencyAdmin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/VB/cacheDependencyAdminvb.aspx.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisableNotifications">
+      <MemberSignature Language="C#" Value="public static void DisableNotifications (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DisableNotifications(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependencyAdmin.DisableNotifications(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão usada para se conectar ao banco de dados do SQL Server.</param>
+        <summary>Desabilita <see cref="T:System.Web.Caching.SqlCacheDependency" /> notificações de alteração para o banco de dados especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableNotifications%2A> método Remove o suporte para notificações de alteração do banco de dados especificado no `connectionString` parâmetro. Depois que você executou o <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableNotifications%2A> método, você deve executar o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableNotifications%2A> notificações para um banco de dados de alteração do método se você deseja reativar.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableNotifications%2A> método para desabilitar notificações de alteração para o banco de dados especificado pela cadeia de conexão `MyConnectionString`.  
+  
+ Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Caching.SqlCacheDependencyAdmin> tópico de visão geral da classe.  
+  
+ [!code-vb[CachingSamples_SqlCacheDependencyAdmin#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CachingSamples_SqlCacheDependencyAdmin/VB/sqlcachedep2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não foi possível estabelecer uma conexão ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para se conectar ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para desabilitar notificações para o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableTableForNotifications">
+      <MemberSignature Language="C#" Value="public static void DisableTableForNotifications (string connectionString, string table);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DisableTableForNotifications(string connectionString, string table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="table" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão usada para se conectar ao banco de dados do SQL Server.</param>
+        <param name="table">A tabela de banco de dados na qual desabilitar notificações de alteração.</param>
+        <summary>Desabilita <see cref="T:System.Web.Caching.SqlCacheDependency" /> alterar notificações em uma tabela de banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications%2A> método desabilita notificações de alteração para a tabela especificada no `table` parâmetro, que deve estar no banco de dados especificado no `connectionString` parâmetro.  
+  
+ Depois que você usou o <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications%2A> método para desabilitar notificações de alteração para uma tabela, você deve usar uma da <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> sobrecargas se você quiser habilitar novamente as notificações de alteração.  
+  
+   
+  
+## Examples  
+ O código a seguir desabilita a alteração notificação em uma tabela especificada na cadeia de conexão de exemplo `MyConnectionString`.  
+  
+ Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Caching.SqlCacheDependencyAdmin> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Caching.SqlCacheDependencyAdmin#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/CS/cacheDependencyAdmincs.aspx.cs#7)]
+ [!code-vb[System.Web.Caching.SqlCacheDependencyAdmin#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/VB/cacheDependencyAdminvb.aspx.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Caching.DatabaseNotEnabledForNotificationException">O banco de dados não está habilitado para notificações de alteração.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="table" /> é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="table" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">Não foi possível estabelecer uma conexão ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para se conectar ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para desabilitar notificações para o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableTableForNotifications">
+      <MemberSignature Language="C#" Value="public static void DisableTableForNotifications (string connectionString, string[] tables);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DisableTableForNotifications(string connectionString, string[] tables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="tables" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão usada para se conectar ao banco de dados do SQL Server.</param>
+        <param name="tables">A matriz de tabelas de banco de dados do SQL Server na qual deseja desabilitar as notificações de alteração.</param>
+        <summary>Desabilita <see cref="T:System.Web.Caching.SqlCacheDependency" /> alterar notificações em uma matriz de tabelas de banco de dados do SQL Server.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications%2A> método remove as notificações de alteração das tabelas especificadas no `tables` parâmetro. Essas tabelas devem estar no banco de dados especificado no `connectionString` parâmetro.  
+  
+ Depois que você usou o <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications%2A> método para desabilitar notificações de alteração para uma lista das tabelas, você deve usar uma da <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> sobrecargas se você quiser habilitar novamente as notificações de alteração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Caching.DatabaseNotEnabledForNotificationException">O banco de dados não está habilitado para notificações de alteração.</exception>
+        <exception cref="T:System.ArgumentException">Um dos valores a <paramref name="tables" /> parâmetro é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos valores a <paramref name="tables" /> parâmetro é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tables" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">Não foi possível estabelecer uma conexão ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para se conectar ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para desabilitar notificações para o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableNotifications">
+      <MemberSignature Language="C#" Value="public static void EnableNotifications (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableNotifications(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependencyAdmin.EnableNotifications(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão usada para se conectar ao banco de dados do SQL Server.</param>
+        <summary>Permite <see cref="T:System.Web.Caching.SqlCacheDependency" /> alterar notificações no banco de dados especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableNotifications%2A> método adiciona suporte para notificações de alteração do banco de dados especificado no `connectionString` parâmetro. Depois que você executou o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableNotifications%2A> método, você deve executar o <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableNotifications%2A> método se você desejar desabilitar notificações de alteração para um banco de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableNotifications%2A> método para habilitar notificações de alteração para o banco de dados especificado pela cadeia de conexão `MyConnectionString`.  
+  
+ Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Caching.SqlCacheDependencyAdmin> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Caching.SqlCacheDependencyAdmin#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/CS/cacheDependencyAdmincs.aspx.cs#3)]
+ [!code-vb[System.Web.Caching.SqlCacheDependencyAdmin#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/VB/cacheDependencyAdminvb.aspx.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Não foi possível estabelecer uma conexão ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para se conectar ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para desabilitar notificações para o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTableForNotifications">
+      <MemberSignature Language="C#" Value="public static void EnableTableForNotifications (string connectionString, string table);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableTableForNotifications(string connectionString, string table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="table" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão usada para se conectar ao banco de dados do SQL Server.</param>
+        <param name="table">A tabela de banco de dados no qual habilitar notificações de alteração.</param>
+        <summary>Conecta-se ao banco de dados do SQL Server especificado e permite que a tabela de banco de dados especificado para <see cref="T:System.Web.Caching.SqlCacheDependency" /> notificações de alteração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> método adiciona as notificações de alteração para a tabela especificada no `table` parâmetro, que deve estar no banco de dados especificado no `connectionString` parâmetro.  
+  
+ Depois que você usou o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> notificações de alteração de método para adicionar a uma tabela, você deve usar uma da <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications%2A> sobrecargas se você desejar desabilitar notificações de alteração.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> notificações na tabela especificada no banco de dados especificado na cadeia de conexão de alteração de método para habilitar `MyConnectionString`.  
+  
+ Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Caching.SqlCacheDependencyAdmin> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Caching.SqlCacheDependencyAdmin#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/CS/cacheDependencyAdmincs.aspx.cs#7)]
+ [!code-vb[System.Web.Caching.SqlCacheDependencyAdmin#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/VB/cacheDependencyAdminvb.aspx.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Caching.DatabaseNotEnabledForNotificationException">O banco de dados não está habilitado para notificações de alteração.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="table" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">Não foi possível estabelecer uma conexão ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para se conectar ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para desabilitar notificações para o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTableForNotifications">
+      <MemberSignature Language="C#" Value="public static void EnableTableForNotifications (string connectionString, string[] tables);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EnableTableForNotifications(string connectionString, string[] tables) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+        <Parameter Name="tables" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão usada para se conectar ao banco de dados do SQL Server.</param>
+        <param name="tables">A matriz de tabelas de banco de dados do SQL Server na qual habilitar notificações de alteração.</param>
+        <summary>Conecta-se ao banco de dados do SQL Server especificado e permite que a matriz especificada das tabelas de banco de dados para <see cref="T:System.Web.Caching.SqlCacheDependency" /> notificação de alteração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> método adiciona as notificações de alteração para as tabelas especificadas no `tables` parâmetro. Essas tabelas devem estar no banco de dados especificado no `connectionString` parâmetro.  
+  
+ Depois que você usou o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> notificações de alteração de método para adicionar a um grupo de tabelas, você deve usar uma da <xref:System.Web.Caching.SqlCacheDependencyAdmin.DisableTableForNotifications%2A> sobrecargas se você desejar desabilitar notificações de alteração.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Caching.SqlCacheDependencyAdmin.EnableTableForNotifications%2A> notificações nas tabelas especificadas em uma lista separada por ponto-e-vírgula no banco de dados especificado na cadeia de conexão de alteração de método para habilitar `MyConnectionString`.  
+  
+ Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Caching.SqlCacheDependencyAdmin> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Caching.SqlCacheDependencyAdmin#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/CS/cacheDependencyAdmincs.aspx.cs#7)]
+ [!code-vb[System.Web.Caching.SqlCacheDependencyAdmin#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/VB/cacheDependencyAdminvb.aspx.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Caching.DatabaseNotEnabledForNotificationException">O banco de dados não está habilitado para notificações de alteração.</exception>
+        <exception cref="T:System.ArgumentException">Um dos valores a <paramref name="tables" /> parâmetro é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos valores a <paramref name="tables" /> parâmetro é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tables" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Web.HttpException">Não foi possível estabelecer uma conexão ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para se conectar ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para desabilitar notificações para o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTablesEnabledForNotifications">
+      <MemberSignature Language="C#" Value="public static string[] GetTablesEnabledForNotifications (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] GetTablesEnabledForNotifications(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.SqlCacheDependencyAdmin.GetTablesEnabledForNotifications(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">Uma cadeia de caracteres de conexão usada para se conectar ao banco de dados do SQL Server.</param>
+        <summary>Recupera uma matriz de cadeia de caracteres que contém o nome de cada tabela que está habilitado para notificações de alteração em um banco de dados do SQL Server.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes das tabelas de banco de dados do SQL Server.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Caching.SqlCacheDependencyAdmin.GetTablesEnabledForNotifications%2A> método retorna uma matriz de cadeia de caracteres que contém os nomes de todas as tabelas no banco de dados especificado no `connectionString` parâmetro que são habilitados para notificações de alteração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma matriz de cadeia de caracteres das tabelas habilitadas para notificações de alteração no banco de dados especificado na cadeia de conexão `MyConnectionString`.  
+  
+ Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.Caching.SqlCacheDependencyAdmin> tópico de visão geral da classe.  
+  
+ [!code-csharp[System.Web.Caching.SqlCacheDependencyAdmin#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/CS/cacheDependencyAdmincs.aspx.cs#2)]
+ [!code-vb[System.Web.Caching.SqlCacheDependencyAdmin#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Caching.SqlCacheDependencyAdmin/VB/cacheDependencyAdminvb.aspx.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.Caching.DatabaseNotEnabledForNotificationException">O banco de dados não está habilitado para notificações de alteração</exception>
+        <exception cref="T:System.Web.HttpException">Não foi possível estabelecer uma conexão ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para se conectar ao banco de dados.  
+  
+ -ou-  
+  
+ O contexto de segurança do aplicativo ASP.NET não tem permissão para desabilitar notificações para o banco de dados.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

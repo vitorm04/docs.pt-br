@@ -1,0 +1,17 @@
+<Namespace Name="System.Configuration.Install">
+  <Docs>
+    <summary>O <see cref="N:System.Configuration.Install" /> namespace fornece classes que permitem a você escrever instaladores personalizados para seus próprios componentes. O <see cref="T:System.Configuration.Install.Installer" /> classe é a classe base para todos os instaladores personalizados no.NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por meio de <xref:System.Configuration.Install.Installer.Installers%2A> propriedade, um instalador contém uma coleção de outros instaladores como filhos. Como o instalador é executado, ele percorre seus filhos e chamadas <xref:System.Configuration.Install.Installer.Install%2A>, <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, ou <xref:System.Configuration.Install.Installer.Uninstall%2A>. Para obter um exemplo de um objeto de <xref:System.Configuration.Install.Installer.Installers%2A> coleta, consulte <xref:System.Diagnostics.EventLogInstaller>.  
+  
+ O <xref:System.Configuration.Install.Installer.Context%2A> propriedade contém informações sobre a instalação. Por exemplo, informações sobre o local do arquivo de log para a instalação, o local do arquivo que salva as informações necessárias para o <xref:System.Configuration.Install.Installer.Uninstall%2A> método e a linha de comando que foi digitada quando o executável de instalação foi executado. Para obter um exemplo de um executável de instalação, consulte [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md).  
+  
+ O <xref:System.Configuration.Install.Installer.Install%2A>, <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, e <xref:System.Configuration.Install.Installer.Uninstall%2A> métodos não forem chamados sempre na mesma instância de <xref:System.Configuration.Install.Installer>. Por exemplo, você pode usar um <xref:System.Configuration.Install.Installer> para instalar e confirmar um aplicativo e, em seguida, liberar a referência ao <xref:System.Configuration.Install.Installer>. Posteriormente, a desinstalação do aplicativo cria uma nova referência para um <xref:System.Configuration.Install.Installer>, o que significa que o <xref:System.Configuration.Install.Installer.Uninstall%2A> método é chamado em uma instância diferente do <xref:System.Configuration.Install.Installer>. Por esse motivo, não salve o estado de um computador em um instalador. Em vez disso, use um <xref:System.Collections.IDictionary> que é preservado em chamadas e passado para o <xref:System.Configuration.Install.Installer.Install%2A>, <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, e <xref:System.Configuration.Install.Installer.Uninstall%2A> métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

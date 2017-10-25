@@ -1,0 +1,80 @@
+<Type Name="Manipulation2DStartedEventArgs" FullName="System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class Manipulation2DStartedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Manipulation2DStartedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os dados que são enviados com um <see cref="E:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ No exemplo a seguir, um manipulador de eventos para o <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> evento verifica se o processamento de inércia está em execução e, nesse caso, interrompe-lo.  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_OnManipulationStarted](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_onmanipulationstarted)]  
+  
+ [!code-csharp[ManipulationAPI#_ManipulationItem_Timestamp](~/samples/snippets/csharp/VS_Snippets_Misc/manipulationapi/cs/manipulationitem.xaml.cs#_manipulationitem_timestamp)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OriginX">
+      <MemberSignature Language="C#" Value="public float OriginX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 OriginX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada x da origem.</summary>
+        <value>A coordenada x da origem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto de origem representado pelo <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginX%2A> e <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginY%2A> propriedades é a posição de média de todos os manipuladores associado a um elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginY">
+      <MemberSignature Language="C#" Value="public float OriginY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 OriginY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Input.Manipulations</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coordenada y da origem.</summary>
+        <value>A coordenada y da origem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto de origem representado pelo <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginX%2A> e <xref:System.Windows.Input.Manipulations.Manipulation2DStartedEventArgs.OriginY%2A> propriedades é a posição de média de todos os manipuladores associado a um elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

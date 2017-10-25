@@ -1,0 +1,460 @@
+<Type Name="ColorDialog" FullName="System.Windows.Forms.ColorDialog">
+  <TypeSignature Language="C#" Value="public class ColorDialog : System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ColorDialog extends System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ColorDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.CommonDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Color")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma caixa de diálogo comum que exibe as cores disponíveis, em conjunto com os controles que permitem que o usuário defina cores personalizadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O membro herdado <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> deve ser invocada para criar essa caixa de diálogo comuns específicos. <xref:System.Windows.Forms.CommonDialog.HookProc%2A>pode ser substituído para implementar a funcionalidade de gancho de caixa de diálogo específicas. Use <xref:System.Windows.Forms.ColorDialog.Color%2A> para recuperar a cor selecionada pelo usuário.  
+  
+ Quando você cria uma instância de <xref:System.Windows.Forms.ColorDialog>, algumas das propriedades de leitura/gravação são definidas para valores iniciais. Para obter uma lista desses valores, consulte o <xref:System.Windows.Forms.ColorDialog.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra a criação de novos <xref:System.Windows.Forms.ColorDialog>. Este exemplo requer que o método é chamado de dentro de um formulário existente que tenha uma <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Button> colocada nela.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ColorDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColorDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ColorDialog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância de <xref:System.Windows.Forms.ColorDialog>, as seguintes propriedades de leitura/gravação são definidas com valores iniciais.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>|`true`|  
+|<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>|`false`|  
+|<xref:System.Windows.Forms.ColorDialog.Color%2A>|`Color.Black`|  
+|<xref:System.Windows.Forms.ColorDialog.CustomColors%2A>|`null`|  
+|<xref:System.Windows.Forms.ColorDialog.FullOpen%2A>|`false`|  
+|<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>|`false`|  
+|<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>|`false`|  
+  
+ Você pode alterar o valor de qualquer uma dessas propriedades por meio de uma chamada separada para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowFullOpen">
+      <MemberSignature Language="C#" Value="public virtual bool AllowFullOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowFullOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.AllowFullOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode usar a caixa de diálogo para definir cores personalizadas.</summary>
+        <value>
+          <see langword="true" /> se o usuário puder definir cores personalizadas; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando definido como `false`, o botão associado na caixa de diálogo será desabilitado e o usuário não pode acessar o controle de cores personalizadas na caixa de diálogo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra a criação de novos <xref:System.Windows.Forms.ColorDialog>. Este exemplo requer que o método é chamado de dentro de um formulário existente que tenha uma <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Button> colocada nela.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnyColor">
+      <MemberSignature Language="C#" Value="public virtual bool AnyColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AnyColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.AnyColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo exibe todas as cores disponíveis no conjunto de cores básicas.</summary>
+        <value>
+          <see langword="true" /> se a caixa de diálogo exibir todas as cores disponíveis no conjunto de cores básicas; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra a inicializar um <xref:System.Windows.Forms.ColorDialog> configuração o <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> propriedades. O <xref:System.Windows.Forms.ColorDialog> não habilitar o usuário para definir uma cor personalizada, mas permite que o conjunto completo de cores básicas ser exibido. Quando você define o <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> propriedade `false`, ela permite que a exibição de cores que são combinações de outras cores em sistemas com 256 ou menos cores. O exemplo também mostra a configuração de <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> propriedade e tratamento de um <xref:System.Windows.Forms.CommonDialog.HelpRequest> evento para uma caixa de diálogo. Para executar o exemplo, cole o seguinte código em um formulário e a chamada a `InitializeColorDialog` método no construtor do formulário ou `Load` método. Este exemplo requer que o `Click` eventos do botão está conectado para o método de manipulador de eventos definido no exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Color" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor selecionada pelo usuário.</summary>
+        <value>A cor selecionada pelo usuário. Se uma cor não for selecionada, o valor padrão será preto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cor selecionada pelo usuário na caixa de diálogo em tempo de execução, conforme definido em <xref:System.Drawing.Color> estrutura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra a criação de novos <xref:System.Windows.Forms.ColorDialog>. Este exemplo requer que o método é chamado de dentro de um formulário existente que tenha uma <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Button> colocada nela.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomColors">
+      <MemberSignature Language="C#" Value="public int[] CustomColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] CustomColors" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.CustomColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto personalizado de cores mostrado na caixa de diálogo.</summary>
+        <value>O conjunto personalizado de cores mostrado na caixa de diálogo. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os usuários podem criar seu próprio conjunto de cores personalizadas. Essas cores estão contidas em um <xref:System.Int32> composto dos valores necessários para criar a cor BGR (azul, verde, vermelho). Para obter mais informações sobre a estrutura de dados, consulte <xref:System.Drawing.Color>.  
+  
+ Cores personalizadas podem ser definidas apenas se <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> é definido como `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como adicionar uma matriz do tipo <xref:System.Int32> representando cores personalizadas para <xref:System.Windows.Forms.ColorDialog.CustomColors%2A>. Este exemplo requer que o código é executado de dentro de um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[System.Windows.Forms.ColorDialog CustomColors Property Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialog CustomColors Property Example/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ColorDialog CustomColors Property Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialog CustomColors Property Example/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ColorDialog CustomColors Property Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ColorDialog CustomColors Property Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullOpen">
+      <MemberSignature Language="C#" Value="public virtual bool FullOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FullOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.FullOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os controles usados para criar cores personalizadas são visíveis quando a caixa de diálogo é aberta</summary>
+        <value>
+          <see langword="true" />Se os controles de cores personalizadas estão disponíveis quando a caixa de diálogo é aberta; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, os controles de cores personalizadas não são visíveis quando a caixa de diálogo é aberta pela primeira vez. Você deve clicar no `Custom Colors` botão para exibi-los.  
+  
+> [!NOTE]
+>  Se <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> é `false`, em seguida, <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="protected virtual IntPtr Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Instance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.Instance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de instância de janela subjacente (HINSTANCE).</summary>
+        <value>Um <see cref="T:System.IntPtr" /> que contém o valor HINSTANCE do identificador de janela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse método usa <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> impedir que ele está sendo chamado de código não confiável; apenas o chamador imediato é necessário ter <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> permissão. Se seu código pode ser chamado de código parcialmente confiável, não passe a entrada do usuário para <xref:System.Runtime.InteropServices.Marshal> métodos sem validação de classe. Para limitações importantes sobre como usar o `LinkDemand` membro, consulte [exigem vs. LinkDemand](http://msdn.microsoft.com/en-us/1ab877f2-70f4-4e0d-8116-943999dfe8f5).  
+  
+ Essa propriedade também usa o <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> atributo de segurança; para substituir esse membro, a classe derivada deve ter o `CustomPermission` permissão.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="protected virtual int Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Options" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores para inicializar o <see cref="T:System.Windows.Forms.ColorDialog" />.</summary>
+        <value>Uma combinação bit a bit de valores internos que inicializam o <see cref="T:System.Windows.Forms.ColorDialog" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ColorDialog.Options%2A> propriedade corresponde aos sinalizadores usados para inicializar uma caixa de diálogo de cor usando Win32. Use as propriedades do <xref:System.Windows.Forms.ColorDialog> classe para obter e definir as opções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColorDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todas as opções para seus valores padrão, a última cor selecionada para preto e as cores personalizadas para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hwndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hwndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColorDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwndOwner">Um valor que representa o identificador de janela da janela do proprietário da caixa de diálogo comum.</param>
+        <summary>Quando substituído em uma classe derivada, especifica uma caixa de diálogo comum.</summary>
+        <returns>
+          <see langword="true" /> se a caixa de diálogo tiver sido executada com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public virtual bool ShowHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.ShowHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um botão de Ajuda é exibido na caixa de diálogo de cor.</summary>
+        <value>
+          <see langword="true" />Se o botão Ajuda é mostrado na caixa de diálogo. Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir ilustra a criação de novos <xref:System.Windows.Forms.ColorDialog>. Este exemplo requer que o método é chamado de dentro de um formulário existente que tenha uma <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.Button> colocada nela.  
+  
+ [!code-cpp[Classic ColorDialog Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ColorDialog Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ColorDialog Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ColorDialog Example/CS/source.cs#1)]
+ [!code-vb[Classic ColorDialog Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ColorDialog Example/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SolidColorOnly">
+      <MemberSignature Language="C#" Value="public virtual bool SolidColorOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SolidColorOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ColorDialog.SolidColorOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo restringirá os usuários a selecionar apenas cores sólidas.</summary>
+        <value>
+          <see langword="true" /> se os usuários puderem selecionar apenas cores sólidas; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é aplicável a sistemas com 256 cores ou menos. Esses tipos de sistemas, algumas cores são compostos de outras pessoas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a inicializar um <xref:System.Windows.Forms.ColorDialog> configuração o <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> propriedades. O <xref:System.Windows.Forms.ColorDialog> não habilitar o usuário para definir uma cor personalizada, mas permite que o conjunto completo de cores básicas ser exibido. Quando você define o <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> propriedade `false`, ela permite que a exibição de cores que são combinações de outras cores em sistemas com 256 ou menos cores. O exemplo também mostra a configuração de <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> propriedade e tratamento de um <xref:System.Windows.Forms.CommonDialog.HelpRequest> evento para uma caixa de diálogo. Para executar o exemplo, cole o seguinte código em um formulário e a chamada a `InitializeColorDialog` método no construtor do formulário ou `Load` método. Este exemplo requer o `Click` eventos do botão está conectado para o método de manipulador de eventos definido no exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ColorDialogHelp#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ColorDialogHelp/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ColorDialog.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o <see cref="T:System.Windows.Forms.ColorDialog" />.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Windows.Forms.ColorDialog" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres de retorno inclui o tipo e o valor para o <xref:System.Windows.Forms.ColorDialog.Color%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

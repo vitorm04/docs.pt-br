@@ -1,0 +1,470 @@
+<Type Name="GacMembershipCondition" FullName="System.Security.Policy.GacMembershipCondition">
+  <TypeSignature Language="C#" Value="public sealed class GacMembershipCondition : System.Security.Policy.IMembershipCondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit GacMembershipCondition extends System.Object implements class System.Security.ISecurityEncodable, class System.Security.ISecurityPolicyEncodable, class System.Security.Policy.IMembershipCondition" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.GacMembershipCondition" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Policy.IMembershipCondition</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Determina se um assembly pertence a um grupo de códigos testando sua associação de cache de assembly global. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os assemblies instalados no cache de assembly global recebem o `FullTrust` conjunto de permissões.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso da <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#1)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#1)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GacMembershipCondition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.GacMembershipCondition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código satisfaz essa condição se ele estiver instalado no cache de assembly global.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.%23ctor%2A> construtor. Este exemplo é parte de um exemplo maior fornecido para o <xref:System.Security.Policy.GacMembershipCondition> tópico sobre a classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#4)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#4)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Check">
+      <MemberSignature Language="C#" Value="public bool Check (System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Check(class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.Check(System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="evidence">O <see cref="T:System.Security.Policy.Evidence" /> com o qual fazer o teste.</param>
+        <summary>Indica se a evidência especificada satisfaz a condição de associação.</summary>
+        <returns>
+          <see langword="true" />Se a evidência especificada atende a condição de associação; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa condição testa <xref:System.Security.Policy.GacInstalled> evidência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.Check%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#3)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#3)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.IMembershipCondition Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.IMembershipCondition Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.IMembershipCondition</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia equivalente da condição de associação.</summary>
+        <returns>Um novo objeto <see cref="T:System.Security.Policy.GacMembershipCondition" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de uma condição de associação é idêntica para a condição de associação original.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.Copy%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#2)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#2)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com o objeto atual.</param>
+        <summary>Indica se o objeto atual é equivalente ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="o" /> é um <see cref="T:System.Security.Policy.GacMembershipCondition" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há nenhum graus de associação do cache de assembly global. Um assembly está no cache ou não. Se o objeto identificado por `o` é um <xref:System.Security.Policy.GacMembershipCondition>, em seguida, os objetos que estão sendo comparados são iguais. Este método retorna `false` somente se `o` é `null` ou se `o` não é um <xref:System.Security.Policy.GacMembershipCondition>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.Equals%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#5)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#5)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Security.SecurityElement" /> que contém o XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <summary>Usa o codificação para reconstruir um objeto de segurança XML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Policy.GacMembershipCondition.FromXml%2A> método reconstrói um <xref:System.Security.Policy.GacMembershipCondition> de uma codificação de XML definido pelo <xref:System.Security.SecurityElement> classe. Use o <xref:System.Security.Policy.GacMembershipCondition.ToXml%2A> método para codificar o XML de <xref:System.Security.Policy.GacMembershipCondition> incluindo informações de estado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.FromXml%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#5)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#5)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="e" />não é um elemento de condição de associação válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public void FromXml (System.Security.SecurityElement e, System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FromXml(class System.Security.SecurityElement e, class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.FromXml(System.Security.SecurityElement,System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Security.SecurityElement" />
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Security.SecurityElement" /> que contém o XML de codificação a ser usada para reconstruir o objeto de segurança.</param>
+        <param name="level">O <see cref="T:System.Security.Policy.PolicyLevel" /> contexto para resolver <see cref="T:System.Security.NamedPermissionSet" /> referências.</param>
+        <summary>Usa o XML especificado codificação para reconstruir um objeto de segurança, usando o contexto do nível de política especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto do nível de política é fornecido para resolução de referências de conjunto de permissões nomeadas. Por exemplo, grupos de código usam o nível de política para localizar os conjuntos de permissões nomeadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.FromXml%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#6)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#6)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="e" />não é um elemento de condição de associação válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para a condição de associação atual.</summary>
+        <returns>0 (zero).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Policy.GacMembershipCondition.GetHashCode%2A> método retornará 0 (zero) porque <xref:System.Security.Policy.GacMembershipCondition> objetos não têm nenhuma propriedade para distinguir uma da outra.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.GetHashCode%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#4)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#4)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres da condição de associação.</summary>
+        <returns>Uma representação de cadeia de caracteres da condição de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A representação de cadeia de caracteres para <xref:System.Security.Policy.GacMembershipCondition> é "GAC".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.ToString%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#5)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#5)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML do objeto de segurança e seu estado atual.</summary>
+        <returns>Um <see cref="T:System.Security.SecurityElement" /> que contém a codificação XML do objeto de segurança, incluindo quaisquer informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Policy.GacMembershipCondition.FromXml%2A> método para restaurar as informações de estado de um <xref:System.Security.SecurityElement>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.ToXml%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#5)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#5)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityElement ToXml (System.Security.Policy.PolicyLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.SecurityElement ToXml(class System.Security.Policy.PolicyLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.GacMembershipCondition.ToXml(System.Security.Policy.PolicyLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="level" Type="System.Security.Policy.PolicyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="level">O <see cref="T:System.Security.Policy.PolicyLevel" /> contexto para resolver <see cref="T:System.Security.NamedPermissionSet" /> referências.</param>
+        <summary>Cria uma codificação de XML do objeto de segurança e seu estado atual, usando o contexto do nível de política especificada.</summary>
+        <returns>Um <see cref="T:System.Security.SecurityElement" /> que contém a codificação XML do objeto de segurança, incluindo quaisquer informações de estado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto do nível de política é fornecido para resolução de referências de conjunto de permissões nomeadas. Por exemplo, grupos de código usam o nível de política para localizar os conjuntos de permissões nomeadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Policy.GacMembershipCondition.ToXml%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Policy.GacMembershipCondition> classe.  
+  
+ [!code-cpp[System.Security.Policy.GacMembershipCondition#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CPP/gacmembershipcondition.cpp#6)]
+ [!code-csharp[System.Security.Policy.GacMembershipCondition#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/CS/gacmembershipcondition.cs#6)]
+ [!code-vb[System.Security.Policy.GacMembershipCondition#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.GacMembershipCondition/VB/gacmembershipcondition.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

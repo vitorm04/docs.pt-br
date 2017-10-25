@@ -1,0 +1,70 @@
+<Type Name="IndexedString" FullName="System.Web.UI.IndexedString">
+  <TypeSignature Language="C#" Value="public sealed class IndexedString" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit IndexedString extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IndexedString" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe de cadeia de caracteres de utilitário que é usada pelo <see cref="T:System.Web.UI.ObjectStateFormatter" /> classe para otimizar a serialização do objeto gráfico. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IndexedString> classe é usada pelo <xref:System.Web.UI.ObjectStateFormatter> classe para criar tabelas de cadeia de caracteres e otimizar a serialização do objeto gráfico. <xref:System.Web.UI.IndexedString>fornece otimização que permite que o armazenamento eficiente de informações de estado da página que contém uma cadeia de caracteres repetida. O <xref:System.Web.UI.IndexedString> classe não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IndexedString (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IndexedString.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.IndexedString" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IndexedString> construtor garante que a cadeia de caracteres passada não é `null` ou <xref:System.String.Empty>e, em seguida, atribui-lo para o <xref:System.Web.UI.IndexedString.Value%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro de cadeia de caracteres passado para o construtor é <see langword="null" /> ou <see cref="F:System.String.Empty" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IndexedString.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres associada a <see cref="T:System.Web.UI.IndexedString" /> objeto.</summary>
+        <value>Uma cadeia de caracteres foi inicializada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

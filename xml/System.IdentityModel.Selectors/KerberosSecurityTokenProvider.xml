@@ -1,0 +1,209 @@
+<Type Name="KerberosSecurityTokenProvider" FullName="System.IdentityModel.Selectors.KerberosSecurityTokenProvider">
+  <TypeSignature Language="C#" Value="public class KerberosSecurityTokenProvider : System.IdentityModel.Selectors.SecurityTokenProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KerberosSecurityTokenProvider extends System.IdentityModel.Selectors.SecurityTokenProvider" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.KerberosSecurityTokenProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um provedor de token de segurança que fornece tokens de segurança <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> para um remetente de mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos o <xref:System.IdentityModel.Selectors.KerberosSecurityTokenProvider> classe não precisa ser chamado diretamente, como ele é chamado quando um cliente envia uma mensagem SOAP que requer um <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> token de segurança. Especificamente, um cliente especifica o tipo de segurança token necessário usando o <xref:System.ServiceModel.Description.ClientCredentials> classe e o <xref:System.ServiceModel.Description.ClientCredentials> classe chama o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método para obter um token de segurança. Quando o token de segurança necessário é uma <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> token de segurança, o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosSecurityTokenProvider (string servicePrincipalName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string servicePrincipalName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="servicePrincipalName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="servicePrincipalName">O nome principal do serviço para obter um <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.KerberosSecurityTokenProvider" /> classe usando o nome da entidade de serviço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor define o nível de representação que é permitido por um cliente para <xref:System.Security.Principal.TokenImpersonationLevel> `Identification`. O contexto atual do thread de chamada (<xref:System.Net.CredentialCache.DefaultNetworkCredentials%2A>) é usado como uma identidade de cliente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="servicePrincipalName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosSecurityTokenProvider (string servicePrincipalName, System.Security.Principal.TokenImpersonationLevel tokenImpersonationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string servicePrincipalName, valuetype System.Security.Principal.TokenImpersonationLevel tokenImpersonationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.#ctor(System.String,System.Security.Principal.TokenImpersonationLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="servicePrincipalName" Type="System.String" />
+        <Parameter Name="tokenImpersonationLevel" Type="System.Security.Principal.TokenImpersonationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="servicePrincipalName">O nome principal do serviço para obter um <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para.</param>
+        <param name="tokenImpersonationLevel">Um <see cref="T:System.Security.Principal.TokenImpersonationLevel" /> que especifica o grau ao qual um destinatário de <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança pode agir em nome do cliente.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.KerberosSecurityTokenProvider" /> classe usando o nome da entidade de serviço especificado e se um cliente permite que um destinatário de <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para representar as credenciais do cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto atual do thread de chamada (<xref:System.Net.CredentialCache.DefaultNetworkCredentials%2A>) é usado como uma identidade de cliente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="tokenImpersonationLevel" /> não é <see langword="Identification" /> ou <see langword="Impersonation" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="servicePrincipalName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KerberosSecurityTokenProvider (string servicePrincipalName, System.Security.Principal.TokenImpersonationLevel tokenImpersonationLevel, System.Net.NetworkCredential credential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string servicePrincipalName, valuetype System.Security.Principal.TokenImpersonationLevel tokenImpersonationLevel, class System.Net.NetworkCredential credential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.#ctor(System.String,System.Security.Principal.TokenImpersonationLevel,System.Net.NetworkCredential)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="servicePrincipalName" Type="System.String" />
+        <Parameter Name="tokenImpersonationLevel" Type="System.Security.Principal.TokenImpersonationLevel" />
+        <Parameter Name="networkCredential" Type="System.Net.NetworkCredential" />
+      </Parameters>
+      <Docs>
+        <param name="servicePrincipalName">O nome principal do serviço para obter um <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para.</param>
+        <param name="tokenImpersonationLevel">Um <see cref="T:System.Security.Principal.TokenImpersonationLevel" /> que especifica o grau ao qual um destinatário de <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança pode agir em nome do processo de cliente.</param>
+        <param name="credential">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.KerberosSecurityTokenProvider" /> classe usando o nome principal do serviço especificado, a identidade do cliente, e se um cliente permite que um destinatário de <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para representar as credenciais do cliente.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="tokenImpersonationLevel" /> não é <see langword="Identification" /> ou <see langword="Impersonation" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="servicePrincipalName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityToken GetTokenCore (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken GetTokenCore(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.GetTokenCore(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que obtém o token de segurança.</param>
+        <summary>Obtém um <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para obter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método é chamado pelo <xref:System.ServiceModel.Description.ClientCredentials> classe quando um cliente envia uma mensagem SOAP e um <xref:System.IdentityModel.Tokens.KerberosRequestorSecurityToken> token de segurança é necessária.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.GetTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkCredential">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkCredential NetworkCredential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkCredential NetworkCredential" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.NetworkCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade do <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança.</summary>
+        <value>Um <see cref="T:System.Net.NetworkCredential" /> que representa a identidade do <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o valor da <xref:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.NetworkCredential%2A> é de propriedade `null` e <xref:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.GetTokenCore%2A> método é chamado, o contexto atual do thread de chamada (<xref:System.Net.CredentialCache.DefaultNetworkCredentials%2A>) é usado como uma identidade de cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServicePrincipalName">
+      <MemberSignature Language="C#" Value="public string ServicePrincipalName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServicePrincipalName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.ServicePrincipalName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome principal do serviço do <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para obter.</summary>
+        <value>O nome principal do serviço do <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança para obter.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenImpersonationLevel">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.TokenImpersonationLevel TokenImpersonationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Principal.TokenImpersonationLevel TokenImpersonationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.TokenImpersonationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.TokenImpersonationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica o grau ao qual um destinatário de <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança pode agir em nome do cliente.</summary>
+        <value>Um <see cref="T:System.Security.Principal.TokenImpersonationLevel" /> que especifica o grau ao qual um destinatário de <see cref="T:System.IdentityModel.Tokens.KerberosRequestorSecurityToken" /> token de segurança pode agir em nome do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.KerberosSecurityTokenProvider.TokenImpersonationLevel%2A> propriedade deve ser `Identification` ou `Impersonation`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

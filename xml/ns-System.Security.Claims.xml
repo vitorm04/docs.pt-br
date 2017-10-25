@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Claims">
+  <Docs>
+    <summary>Contém classes que implementam a identidade baseada em declarações no .NET Framework, incluindo classes que representam declarações, identidades baseadas em declarações e entidades baseadas em declarações.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

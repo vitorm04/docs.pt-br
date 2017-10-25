@@ -1,0 +1,208 @@
+<Type Name="GenerateMetadata" FullName="System.EnterpriseServices.Internal.GenerateMetadata">
+  <TypeSignature Language="C#" Value="public class GenerateMetadata : System.EnterpriseServices.Internal.IComSoapMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GenerateMetadata extends System.Object implements class System.EnterpriseServices.Internal.IComSoapMetadata" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.GenerateMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.Internal.IComSoapMetadata</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d8013ff1-730b-45e2-ba24-874b7242c425")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Gera metadados comuns de runtime (CLR) do idioma para um componente COM+.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se necessário, a <xref:System.EnterpriseServices.Internal.GenerateMetadata> classe gera um assembly que contém metadados do CLR para uma biblioteca de tipo especificado.  
+  
+ <xref:System.EnterpriseServices.Internal.GenerateMetadata>é usado internamente pelo .NET Framework. Você não precisa usar a classe diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenerateMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.GenerateMetadata.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.Internal.GenerateMetadata" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public string Generate (string strSrcTypeLib, string outPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Generate(string strSrcTypeLib, string outPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.GenerateMetadata.Generate(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strSrcTypeLib" Type="System.String" />
+        <Parameter Name="outPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strSrcTypeLib">O nome da biblioteca de tipos para o qual gerar um assembly.</param>
+        <param name="outPath">A pasta na qual para gerar um assembly ou para localizar um assembly já existente.</param>
+        <summary>Gera ou localiza um assembly que contém metadados de runtime (CLR) de linguagem comum para um componente COM+ representado pela biblioteca de tipo especificado.</summary>
+        <returns>O nome do assembly gerado; Caso contrário, vazio de cadeia de caracteres se as entradas são inválidas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se necessário, o <xref:System.EnterpriseServices.Internal.GenerateMetadata.Generate%2A> método gera um assembly que contém metadados do CLR para uma biblioteca de tipo especificado. Para fazer esse processamento, ele chama o <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateMetaData%2A> método.  
+  
+ Esses métodos não precisa ser chamado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMetaData">
+      <MemberSignature Language="C#" Value="public string GenerateMetaData (string strSrcTypeLib, string outPath, byte[] PublicKey, System.Reflection.StrongNameKeyPair KeyPair);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GenerateMetaData(string strSrcTypeLib, string outPath, unsigned int8[] PublicKey, class System.Reflection.StrongNameKeyPair KeyPair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.GenerateMetadata.GenerateMetaData(System.String,System.String,System.Byte[],System.Reflection.StrongNameKeyPair)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strSrcTypeLib" Type="System.String" />
+        <Parameter Name="outPath" Type="System.String" />
+        <Parameter Name="PublicKey" Type="System.Byte[]" />
+        <Parameter Name="KeyPair" Type="System.Reflection.StrongNameKeyPair" />
+      </Parameters>
+      <Docs>
+        <param name="strSrcTypeLib">O nome da biblioteca de tipos para o qual gerar um assembly.</param>
+        <param name="outPath">A pasta na qual para gerar um assembly ou para localizar um assembly já existente.</param>
+        <param name="PublicKey">Uma chave pública usada para importar informações de biblioteca de tipo em um assembly.</param>
+        <param name="KeyPair">Um nome forte par de chaves usado para assinar o assembly gerado.</param>
+        <summary>Gera ou localiza um assembly que contém metadados comuns de runtime (CLR) do idioma para um componente COM+ representado pela biblioteca de tipo especificado, assina o assembly com um par de chaves de nome forte e instala-o no cache de assembly global.</summary>
+        <returns>O nome do assembly gerado; Caso contrário, vazio de cadeia de caracteres se as entradas são inválidas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se necessário, o <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateMetaData%2A> método gera um assembly que contém metadados do CLR para uma biblioteca de tipo especificado. Ele não gera um assembly se um assembly de nome gerado já existe na cadeia de caracteres `outPath` pasta.  
+  
+ <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateMetaData%2A>não precisa ser chamado diretamente no seu código. Ele é chamado por ambos os <xref:System.EnterpriseServices.Internal.GenerateMetadata.Generate%2A> e <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateSigned%2A> métodos.  
+  
+ Se chamado por <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateSigned%2A>, <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateMetaData%2A> também gera um par de chaves de nome forte, assina o assembly e instala-o no cache de assembly global.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSigned">
+      <MemberSignature Language="C#" Value="public string GenerateSigned (string strSrcTypeLib, string outPath, bool InstallGac, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GenerateSigned(string strSrcTypeLib, string outPath, bool InstallGac, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.GenerateMetadata.GenerateSigned(System.String,System.String,System.Boolean,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strSrcTypeLib" Type="System.String" />
+        <Parameter Name="outPath" Type="System.String" />
+        <Parameter Name="InstallGac" Type="System.Boolean" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="strSrcTypeLib">O nome da biblioteca de tipos para o qual gerar um assembly.</param>
+        <param name="outPath">A pasta na qual para gerar um assembly ou para localizar um assembly já existente.</param>
+        <param name="InstallGac">Ignorado.</param>
+        <param name="Error">Uma cadeia de caracteres no qual uma mensagem de erro pode ser gravada.</param>
+        <summary>Gera ou localiza um assembly que contém metadados comuns de runtime (CLR) do idioma para um componente COM+ representado pela biblioteca de tipo especificado, assina o assembly com um par de chaves de nome forte e instala-o no cache de assembly global.</summary>
+        <returns>O nome do assembly gerado; Caso contrário, vazio de cadeia de caracteres se as entradas são inválidas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se necessário, o <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateSigned%2A> método gera um assembly que contém metadados do CLR para uma biblioteca de tipo especificado. Ele também gera um par de chaves de nome forte e assina o assembly.  
+  
+ Para fazer esse processamento, ele chama o <xref:System.EnterpriseServices.Internal.GenerateMetadata.GenerateMetaData%2A> método. Esses métodos não precisa ser chamado diretamente no seu código.  
+  
+ O `InstallGac` parâmetro indica se é necessário instalar o assembly no cache de assembly global. No entanto, a implementação ignora esse valor e sempre tenta instalar o assembly assinado no cache de assembly global.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SearchPath">
+      <MemberSignature Language="C#" Value="public static int SearchPath (string path, string fileName, string extension, int numBufferChars, string buffer, int[] filePart);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig pinvokeimpl (&quot;kernel32.dll&quot; as &quot;SearchPath&quot; unicode winapi lasterr)int32 SearchPath(string path, string fileName, string extension, int32 numBufferChars, string buffer, int32[] filePart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.GenerateMetadata.SearchPath(System.String,System.String,System.String,System.Int32,System.String,System.Int32[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="extension" Type="System.String" />
+        <Parameter Name="numBufferChars" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.String" />
+        <Parameter Name="filePart" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho a ser pesquisada para o arquivo.</param>
+        <param name="fileName">O nome do arquivo que deseja pesquisar.</param>
+        <param name="extension">Uma extensão a ser adicionado ao nome do arquivo ao procurar o arquivo.</param>
+        <param name="numBufferChars">O tamanho do buffer que recebe o nome de arquivo e caminho válido.</param>
+        <param name="buffer">O buffer que recebe o nome de arquivo e caminho do arquivo encontrado.</param>
+        <param name="filePart">A variável que recebe o endereço do último componente do nome do arquivo e caminho válido.</param>
+        <summary>Procura um arquivo especificado em um caminho especificado.</summary>
+        <returns>Se a pesquisa tiver êxito, o valor de retorno é o comprimento da cadeia de caracteres copiado <paramref name="buffer" />. Se a pesquisa falhar, o valor de retorno será 0.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação do Platform SDK sobre SearchPath em [http://msdn.microsoft.com/library/default.asp?url=/library/fileio/base/searchpath.asp](http://msdn.microsoft.com/library/default.asp?url=/library/fileio/base/searchpath.asp).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

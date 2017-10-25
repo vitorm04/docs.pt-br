@@ -1,0 +1,993 @@
+<Type Name="FontUnit" FullName="System.Web.UI.WebControls.FontUnit">
+  <TypeSignature Language="C#" Value="public struct FontUnit" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit FontUnit extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FontUnit" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.FontUnitConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o tamanho de uma fonte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FontUnit>, consulte o <xref:System.Web.UI.WebControls.FontUnit.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.Style> objeto para alterar as propriedades de estilo para vários controles ao mesmo tempo. Sempre que uma da `Style` alterações de valores de propriedade, cada controle deve chamar o <xref:System.Web.UI.WebControls.WebControl.ApplyStyle%2A> método. Nem todos os controles incluídos neste exemplo oferecem suporte a todas as propriedades que são demonstradas. Se um controle não dá suporte a uma propriedade em particular, a aparência do controle não será alterado quando o valor da propriedade é alterado.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[StyleClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#1)]
+ [!code-aspx-vb[StyleClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#1)]  
+[!code-aspx-csharp[StyleClass#3](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#3)]
+[!code-aspx-vb[StyleClass#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnit (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Double" /> que especifica o tamanho da fonte.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.FontUnit" /> classe com o tamanho de fonte especificados em pontos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.%23ctor%2A> construtor para criar e inicializar uma instância do <xref:System.Web.UI.WebControls.FontUnit> classe usando o tamanho da fonte especificada. A tabela a seguir mostra os valores de propriedade inicial para o <xref:System.Web.UI.WebControls.FontUnit> objeto que é criado.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|O valor <xref:System.Web.UI.WebControls.FontSize.AsUnit>.|  
+|`Unit`|Um <xref:System.Web.UI.WebControls.Unit> com o <xref:System.Web.UI.WebControls.Unit.Value%2A> propriedade igual a `value` e <xref:System.Web.UI.WebControls.Unit.Type%2A> propriedade igual ao <xref:System.Web.UI.WebControls.UnitType.Point> valor.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" />está fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnit (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Tamanho da fonte.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.FontUnit" /> classe com o tamanho da fonte especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.FontUnit> classe usando o tamanho da fonte especificada.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.AsUnit`|  
+|`Unit`|Um <xref:System.Web.UI.WebControls.Unit> com seus <xref:System.Web.UI.WebControls.Unit.Value%2A> propriedade definida como o tamanho da fonte especificado pelo `value` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnit (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para especificar o tamanho da fonte.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FontUnit" /> com a cadeia de caracteres especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FontUnit.%23ctor%2A> construtor chama o <xref:System.Web.UI.WebControls.FontUnit.%23ctor%2A> construtor, usando o <xref:System.Globalization.CultureInfo.CurrentCulture%2A> propriedade para o <xref:System.Globalization.CultureInfo> parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnit (System.Web.UI.WebControls.FontSize type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.WebControls.FontSize type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.#ctor(System.Web.UI.WebControls.FontSize)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Web.UI.WebControls.FontSize" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um dos valores de <see cref="T:System.Web.UI.WebControls.FontSize" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FontUnit" /> com o <see cref="T:System.Web.UI.WebControls.FontSize" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.FontUnit> classe usando especificado <xref:System.Web.UI.WebControls.FontSize> objeto.  
+  
+ Se o `type` parâmetro contém o valor `FontSize.AsUnit`, a tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.AsUnit`|  
+|`Unit`|Um <xref:System.Web.UI.WebControls.Unit> do objeto com seu <xref:System.Web.UI.WebControls.Unit.Value%2A> propriedade definida como `10`.|  
+  
+ Se o `type` parâmetro contiver qualquer outra <xref:System.Web.UI.WebControls.FontSize> valor, a tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|O valor de `type` parâmetro.|  
+|`Unit`|<xref:System.Web.UI.WebControls.Unit.Empty>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho da fonte especificado não é um do <see cref="T:System.Web.UI.WebControls.FontSize" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnit (System.Web.UI.WebControls.Unit value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.WebControls.Unit value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.#ctor(System.Web.UI.WebControls.Unit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.Unit" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.Unit" /> que especifica o tamanho da fonte.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.FontUnit" /> com o <see cref="T:System.Web.UI.WebControls.Unit" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.FontUnit> classe usando especificado <xref:System.Web.UI.WebControls.Unit>.  
+  
+ Se o <xref:System.Web.UI.WebControls.Unit.IsEmpty%2A> propriedade o <xref:System.Web.UI.WebControls.Unit> passado a `value` parâmetro é `true`, a tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.NotSet`|  
+|`Unit`|<xref:System.Web.UI.WebControls.Unit.Empty>|  
+  
+ Se o <xref:System.Web.UI.WebControls.Unit.IsEmpty%2A> propriedade o <xref:System.Web.UI.WebControls.Unit> passado a `value` parâmetro é `false`, a tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.AsUnit`|  
+|`Unit`|O valor de `value` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnit (double value, System.Web.UI.WebControls.UnitType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value, valuetype System.Web.UI.WebControls.UnitType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.#ctor(System.Double,System.Web.UI.WebControls.UnitType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="type" Type="System.Web.UI.WebControls.UnitType" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Double" /> que especifica o tamanho da fonte.</param>
+        <param name="type">Um <see cref="T:System.Web.UI.WebControls.UnitType" /> para especificar as unidades de tamanho.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.FontUnit" /> classe com o tamanho da fonte especificado e <see cref="T:System.Web.UI.WebControls.UnitType" /> valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.%23ctor%2A> construtor para criar e inicializar uma instância do <xref:System.Web.UI.WebControls.FontUnit> classe usando o tamanho da fonte especificado e medir a unidade, como o ponto de pixel.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma <xref:System.Web.UI.WebControls.FontUnit> objeto.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|O valor <xref:System.Web.UI.WebControls.FontSize.AsUnit>.|  
+|`Unit`|Um <xref:System.Web.UI.WebControls.Unit> com o <xref:System.Web.UI.WebControls.Unit.Value%2A> propriedade igual a `value` e <xref:System.Web.UI.WebControls.Unit.Type%2A> igual da propriedade `type`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" />está fora do intervalo válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FontUnit (string value, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.#ctor(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para especificar o tamanho da fonte.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> usado para fazer comparações de cadeia de caracteres.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.FontUnit" /> classe com a cadeia de caracteres especificada usando especificado <see cref="T:System.Globalization.CultureInfo" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FontUnit.%23ctor%2A> construtor reconhece as cadeias de caracteres para `value` que são mostrados na tabela a seguir para criar uma nova instância do <xref:System.Web.UI.WebControls.FontUnit> classe.  
+  
+|Valor da cadeia de caracteres|<xref:System.Web.UI.WebControls.FontUnit>|  
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|  
+|`xx-small`, `xxsmall`|<xref:System.Web.UI.WebControls.FontUnit.XXSmall>|  
+|`x-small`, `xsmall`|<xref:System.Web.UI.WebControls.FontUnit.XSmall>|  
+|`x-large`, `xlarge`|<xref:System.Web.UI.WebControls.FontUnit.XLarge>|  
+|`xx-large`, `xxlarge`|<xref:System.Web.UI.WebControls.FontUnit.XXLarge>|  
+|`small`|<xref:System.Web.UI.WebControls.FontUnit.Small>|  
+|`smaller`|<xref:System.Web.UI.WebControls.FontUnit.Smaller>|  
+|`large`|<xref:System.Web.UI.WebControls.FontUnit.Large>|  
+|`larger`|<xref:System.Web.UI.WebControls.FontUnit.Larger>|  
+|`medium`|<xref:System.Web.UI.WebControls.FontUnit.Medium>|  
+  
+ Em todos os casos, o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade possui o valor <xref:System.Web.UI.WebControls.FontSize.NotSet>. A comparação de cadeia de caracteres diferencia maiusculas de minúsculas.  
+  
+ Para todos os outros valores de `value`, uma nova instância do <xref:System.Web.UI.WebControls.FontUnit> classe é criada, tratando `value` como um tamanho de fonte e a configuração de <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade <xref:System.Web.UI.WebControls.UnitType.Point>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um vazio <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Empty> campo para representar vazio <xref:System.Web.UI.WebControls.FontUnit> objeto. Nenhuma saída renderizada de HTML é criado quando esse campo é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> que contém o objeto a ser comparado com esta instância.</param>
+        <summary>Determina se especificado <see cref="T:System.Object" /> é equivalente à instância das <see cref="T:System.Web.UI.WebControls.FontUnit" /> que este método é chamado de classe.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Object" /> é equivalente à instância do <see cref="T:System.Web.UI.WebControls.FontUnit" /> classe esse método é chamado de; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Equals%2A> método para determinar se especificado <xref:System.Object?displayProperty=nameWithType> é equivalente à instância do <xref:System.Web.UI.WebControls.FontUnit> que este método é chamado de classe. Especificado <xref:System.Object?displayProperty=nameWithType> para ser equivalentes, o objeto deve ser um <xref:System.Web.UI.WebControls.FontUnit> que contém os mesmos valores para o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> e <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedades da instância do <xref:System.Web.UI.WebControls.FontUnit> que este método é chamado de classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um inteiro assinado de 32 bits que representa o código de hash.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontUnit.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o tamanho da fonte foi definido.</summary>
+        <value>
+          <see langword="true" />Se o tamanho da fonte não foi definido; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.IsEmpty%2A> propriedade para determinar se o tamanho da fonte foi definido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Large">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit Large;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit Large" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.Large" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.Large" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Large> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.Large`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:Large"`. Em navegadores anteriores ao Internet Explorer 4.0, o HTML saída renderizado é `<font size="5">`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Larger">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit Larger;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit Larger" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.Larger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.Larger" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Larger> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.Larger`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:Larger"`. Em navegadores anteriores ao Internet Explorer 4.0, nenhuma saída renderizada de HTML é criado.  
+  
+> [!NOTE]
+>  Alguns navegadores não reconhecem o <xref:System.Web.UI.WebControls.FontSize.Larger> tamanho da fonte. Verifique se seu navegador para compatibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit Medium;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit Medium" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.Medium" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Medium> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.Medium`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:Medium"`. Em navegadores anteriores ao Internet Explorer 4.0, o HTML saída renderizado é `<font size="4">`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Web.UI.WebControls.FontUnit left, System.Web.UI.WebControls.FontUnit right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Web.UI.WebControls.FontUnit left, valuetype System.Web.UI.WebControls.FontUnit right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.op_Equality(System.Web.UI.WebControls.FontUnit,System.Web.UI.WebControls.FontUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Web.UI.WebControls.FontUnit" />
+        <Parameter Name="right" Type="System.Web.UI.WebControls.FontUnit" />
+      </Parameters>
+      <Docs>
+        <param name="left">Um <see cref="T:System.Web.UI.WebControls.FontUnit" /> à esquerda do operador que contém as propriedades de fonte.</param>
+        <param name="right">Um <see cref="T:System.Web.UI.WebControls.FontUnit" /> à direita do operador que contém as propriedades de fonte.</param>
+        <summary>Compara dois objetos <see cref="T:System.Web.UI.WebControls.FontUnit" /> quanto à igualdade.</summary>
+        <returns>
+          <see langword="true" />Se ambos os <see cref="T:System.Web.UI.WebControls.FontUnit" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o <xref:System.Web.UI.WebControls.FontUnit> objetos sejam equivalentes, cada objeto devem ter os mesmos valores para o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> e <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedades.  
+  
+ O método equivalente para esse operador é<xref:System.Web.UI.WebControls.FontUnit.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator System.Web.UI.WebControls.FontUnit (int n);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype System.Web.UI.WebControls.FontUnit op_Implicit(int32 n) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.op_Implicit(System.Int32)~System.Web.UI.WebControls.FontUnit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="n">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Web.UI.WebControls.FontUnit left, System.Web.UI.WebControls.FontUnit right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Web.UI.WebControls.FontUnit left, valuetype System.Web.UI.WebControls.FontUnit right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.op_Inequality(System.Web.UI.WebControls.FontUnit,System.Web.UI.WebControls.FontUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Web.UI.WebControls.FontUnit" />
+        <Parameter Name="right" Type="System.Web.UI.WebControls.FontUnit" />
+      </Parameters>
+      <Docs>
+        <param name="left">Um <see cref="T:System.Web.UI.WebControls.FontUnit" /> que contém as propriedades da fonte à esquerda do operador.</param>
+        <param name="right">Um <see cref="T:System.Web.UI.WebControls.FontUnit" /> que contém as propriedades da fonte à direita do operador.</param>
+        <summary>Compara dois objetos <see cref="T:System.Web.UI.WebControls.FontUnit" /> quanto à desigualdade.</summary>
+        <returns>
+          <see langword="true" />Se ambos os <see cref="T:System.Web.UI.WebControls.FontUnit" /> objetos não forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o <xref:System.Web.UI.WebControls.FontUnit> objetos a serem não é igual ao outro, cada objeto deve ter valores diferentes para o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade ou o <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedade.  
+  
+ O método equivalente para esse operador é<xref:System.Web.UI.WebControls.FontUnit.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.FontUnit Parse (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.FontUnit Parse(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Uma representação de cadeia de caracteres de um a <see cref="T:System.Web.UI.WebControls.FontSize" /> valores.</param>
+        <summary>Converte a cadeia de caracteres especificada em seu <see cref="T:System.Web.UI.WebControls.FontUnit" /> equivalente.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.FontUnit" /> que representa o tamanho da fonte especificado pelo <paramref name="s" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use estático <xref:System.Web.UI.WebControls.FontUnit.Parse%2A> método para converter a cadeia de caracteres especificada em seu <xref:System.Web.UI.WebControls.FontUnit> equivalente.  
+  
+ Se o valor da `s` parâmetro não é `null`, não <xref:System.String?displayProperty=nameWithType>, uma opção válida <xref:System.Web.UI.WebControls.FontSize> valor, a tabela a seguir mostra os valores de propriedade inicial para a nova instância de <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|O <xref:System.Web.UI.WebControls.FontSize> equivalente a enumeração de `s` parâmetro.|  
+|`Unit`|<xref:System.Web.UI.WebControls.Unit.Empty>|  
+  
+ Se o valor da `s` parâmetro não é `null`, não <xref:System.String.Empty?displayProperty=nameWithType>e um inválido <xref:System.Web.UI.WebControls.FontSize> valor, a tabela a seguir mostra os valores de propriedade inicial para a nova instância de <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.AsUnit`|  
+|`Unit`|Um <xref:System.Web.UI.WebControls.Unit> do objeto com seu <xref:System.Web.UI.WebControls.Unit.Value%2A> propriedade é inicializada com o `s` parâmetro na cultura do thread atual.|  
+  
+ Se o valor de `s` parâmetro é `null` ou <xref:System.String.Empty?displayProperty=nameWithType>, a tabela a seguir mostra os valores de propriedade inicial para a nova instância de <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.NotSet`|  
+|`Unit`|<xref:System.Web.UI.WebControls.Unit.Empty>|  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[StyleClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#1)]
+ [!code-aspx-vb[StyleClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#1)]  
+[!code-aspx-csharp[StyleClass#3](~/samples/snippets/csharp/VS_Snippets_WebNet/StyleClass/CS/styleclasscs.aspx#3)]
+[!code-aspx-vb[StyleClass#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/StyleClass/VB/styleclassvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.FontUnit Parse (string s, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.FontUnit Parse(string s, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.Parse(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="s">Uma representação de cadeia de caracteres de um a <see cref="T:System.Web.UI.WebControls.FontSize" /> valores.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> que representa a cultura do <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto.</param>
+        <summary>Converte a cadeia de caracteres especificada em seu <see cref="T:System.Web.UI.WebControls.FontUnit" /> equivalentes a cultura especificada.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.FontUnit" /> que representa o tamanho da fonte especificado pelo <paramref name="s" /> a cultura especificada pelo parâmetro de <paramref name="culture" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use estático <xref:System.Web.UI.WebControls.FontUnit.Parse%2A> método para converter a cadeia de caracteres especificada e a cultura para seus <xref:System.Web.UI.WebControls.FontUnit> equivalente.  
+  
+ Se o valor da `s` parâmetro não é `null`, não <xref:System.String.Empty?displayProperty=nameWithType>, uma opção válida <xref:System.Web.UI.WebControls.FontSize> valor, a tabela a seguir mostra os valores de propriedade inicial para a nova instância de <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|O <xref:System.Web.UI.WebControls.FontSize> equivalente a enumeração de `s` parâmetro.|  
+|`Unit`|<xref:System.Web.UI.WebControls.Unit.Empty>|  
+  
+ Se o valor da `s` parâmetro não é `null`, não <xref:System.String.Empty?displayProperty=nameWithType>e um inválido <xref:System.Web.UI.WebControls.FontSize> valor, a tabela a seguir mostra os valores de propriedade inicial para a nova instância de <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.AsUnit`|  
+|`Unit`|Um <xref:System.Web.UI.WebControls.Unit> do objeto com seu <xref:System.Web.UI.WebControls.Unit.Value%2A> propriedade é inicializada com o `s` parâmetro na cultura especificada.|  
+  
+ Se o valor de `s` parâmetro é `null` ou <xref:System.String.Empty?displayProperty=nameWithType>, a tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.FontUnit>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|`Type`|`FontSize.NotSet`|  
+|`Unit`|<xref:System.Web.UI.WebControls.Unit.Empty>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="public static System.Web.UI.WebControls.FontUnit Point (int n);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Web.UI.WebControls.FontUnit Point(int32 n) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.Point(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="n">Um inteiro que representa o <see cref="T:System.Drawing.Point" /> valor a ser convertido para um <see cref="T:System.Web.UI.WebControls.FontUnit" />.</param>
+        <summary>Cria um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do tipo <see cref="T:System.Drawing.Point" /> de um valor inteiro.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.FontUnit" /> que representa o tamanho da fonte especificado pelo <paramref name="n" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use estático <xref:System.Web.UI.WebControls.FontUnit.Point%2A> método para criar um <xref:System.Web.UI.WebControls.FontUnit> que representa o tamanho da fonte especificado pelo `n` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Small">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit Small;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit Small" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.Small" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.Small" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Small> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.Small`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:Small"`. Em navegadores anteriores ao Internet Explorer 4.0, o HTML saída renderizado é `<font size="3">`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Smaller">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit Smaller;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit Smaller" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.Smaller" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.Smaller" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Smaller> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.Smaller`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:Smaller"`. Em navegadores anteriores ao Internet Explorer 4.0, nenhuma saída renderizada de HTML é criado.  
+  
+> [!NOTE]
+>  Alguns navegadores não reconhecem o <xref:System.Web.UI.WebControls.FontSize.Smaller> tamanho da fonte. Verifique se seu navegador para compatibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte o <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto para a representação de cadeia de caracteres padrão.</summary>
+        <returns>A representação de cadeia de caracteres da <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.ToString%2A> método para recuperar a representação de cadeia de caracteres da <xref:System.Web.UI.WebControls.FontUnit>. Se o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> está definida como `FontSize.AsUnit`, a cadeia de caracteres retornada é o equivalente a cadeia de caracteres a <xref:System.Web.UI.WebControls.Unit> contidos no <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedade. Se o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> está definida como qualquer outro <xref:System.Web.UI.WebControls.FontSize> valor, a cadeia de caracteres retornada é o equivalente a cadeia de caracteres de <xref:System.Web.UI.WebControls.FontSize> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.ToString(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> que contém a cultura para representar o <see cref="T:System.Web.UI.WebControls.FontUnit" />.</param>
+        <summary>Converte o <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto em uma representação de cadeia de caracteres, usando especificado <see cref="T:System.Globalization.CultureInfo" />.</summary>
+        <returns>A representação de cadeia de caracteres da <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto cultura especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.ToString%2A> método para recuperar a representação de cadeia de caracteres da <xref:System.Web.UI.WebControls.FontUnit> na cultura especificada. Se o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> está definida como `FontSize.AsUnit`, a cadeia de caracteres retornada é o equivalente a cadeia de caracteres a <xref:System.Web.UI.WebControls.Unit> contidos no <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedade. Se o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> está definida como qualquer outro <xref:System.Web.UI.WebControls.FontSize> valor, a cadeia de caracteres retornada é o equivalente a cadeia de caracteres de <xref:System.Web.UI.WebControls.FontSize> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider formatProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider formatProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.FontUnit.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatProvider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="formatProvider">Um <see cref="T:System.IFormatProvider" /> que fornece informações de formatação específica da cultura, que são usadas se o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> está definida como o <see cref="F:System.Web.UI.WebControls.FontSize.AsUnit" /> valor; caso contrário, ele será ignorado.</param>
+        <summary>Converte um <see cref="T:System.Web.UI.WebControls.FontUnit" /> objeto para um equivalente de cadeia de caracteres usando o provedor de formato especificado.</summary>
+        <returns>Uma cadeia de caracteres que representa esta <see cref="T:System.Web.UI.WebControls.FontUnit" />, com qualquer valor numérico de unidade no formato especificado pelo <paramref name="formatProvider" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.ToString%2A> método para recuperar a representação de cadeia de caracteres da <xref:System.Web.UI.WebControls.FontUnit> usando um provedor de formato específicos de cultura para valores numéricos que estão na cadeia de caracteres do objeto.  
+  
+ Se o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> está definida como o <xref:System.Web.UI.WebControls.FontSize.AsUnit> valor, a cadeia de caracteres retornada é o equivalente a cadeia de caracteres o valor da unidade que está contido no <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedade. A porção numérica do <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> valor é formatado usando especificado `formatProvider`. Em outras palavras, quando o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> está definida como o <xref:System.Web.UI.WebControls.FontSize.AsUnit> valor, a representação de cadeia de caracteres retornada é gerado usando o <xref:System.Web.UI.WebControls.Unit.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> método no objeto de unidade é armazenado no <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedade.  
+  
+ Se o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> está definida como qualquer outro <xref:System.Web.UI.WebControls.FontSize> valor, a cadeia de caracteres retornada é o equivalente a cadeia de caracteres de <xref:System.Web.UI.WebControls.FontSize> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.FontSize Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.FontSize Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontUnit.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.FontSize" /> valor de enumeração que representa o tamanho da fonte.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.FontSize" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade para recuperar um <xref:System.Web.UI.WebControls.FontSize> valor de enumeração que representa o tamanho da fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unit">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Unit Unit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.Unit Unit" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.FontUnit.Unit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Unit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.Unit" /> que representa o tamanho da fonte.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Unit" /> objeto que especifica o tamanho da fonte.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.Unit%2A> propriedade para recuperar um <xref:System.Web.UI.WebControls.Unit> que representa o tamanho da fonte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XLarge">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit XLarge;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit XLarge" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.XLarge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.XLarge" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.XLarge> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.XLarge`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:X-Large"`. Em navegadores anteriores ao Internet Explorer 4.0, o HTML saída renderizado é `<font size="6">`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XSmall">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit XSmall;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit XSmall" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.XSmall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.XSmall" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.XSmall> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.XSmall`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:X-Small"`. Em navegadores anteriores ao Internet Explorer 4.0, o HTML saída renderizado é `<font size="2">`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XXLarge">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit XXLarge;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit XXLarge" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.XXLarge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.XXLarge" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.XXLarge> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.XXLarge`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:XX-Large"`. Em navegadores anteriores ao Internet Explorer 4.0, o HTML saída renderizado é `<font size="7">`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XXSmall">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.FontUnit XXSmall;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Web.UI.WebControls.FontUnit XXSmall" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontUnit.XXSmall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontUnit</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um <see cref="T:System.Web.UI.WebControls.FontUnit" /> do objeto com o <see cref="P:System.Web.UI.WebControls.FontUnit.Type" /> propriedade definida como <see langword="FontSize.XXSmall" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.FontUnit.XXSmall> campo para representar um <xref:System.Web.UI.WebControls.FontUnit> do objeto com o <xref:System.Web.UI.WebControls.FontUnit.Type%2A> propriedade definida como `FontSize.XXSmall`.  
+  
+ No Internet Explorer 4.0 e posterior, o HTML renderizado saída de um controle com o <xref:System.Web.UI.WebControls.FontInfo.Size%2A> propriedade definida para esse campo é `style= "font-size:XX-Small"`. Em navegadores anteriores ao Internet Explorer 4.0, o HTML saída renderizado é `<font size="1">`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

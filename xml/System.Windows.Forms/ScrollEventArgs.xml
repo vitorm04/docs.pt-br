@@ -1,0 +1,254 @@
+<Type Name="ScrollEventArgs" FullName="System.Windows.Forms.ScrollEventArgs">
+  <TypeSignature Language="C#" Value="public class ScrollEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScrollEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de <see langword="Scroll" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Scroll` evento ocorre quando o usuário altera o valor da barra de rolagem. Esse evento pode resultar de uma variedade de ações, como clicar em uma seta de barra de rolagem, pressionando a seta para cima ou seta para baixo ou arrastando a caixa de rolagem. O <xref:System.Windows.Forms.ScrollEventArgs> Especifica o tipo de evento de rolagem que ocorreu e o novo valor da barra de rolagem. Use o <xref:System.Windows.Forms.ScrollEventArgs.ScrollOrientation%2A> propriedade para determinar a orientação da barra de rolagem para o `Scroll` evento.  
+  
+ O `Scroll` evento ocorre para o <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ScrollableControl>, <xref:System.Windows.Forms.ScrollBar>, e <xref:System.Windows.Forms.DataGrid> controles.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="newValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um dos valores de <see cref="T:System.Windows.Forms.ScrollEventType" />.</param>
+        <param name="newValue">O novo valor para a barra de rolagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ScrollEventArgs" /> classe usando os valores fornecidos para o <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" /> e <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int oldValue, int newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 oldValue, int32 newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="oldValue" Type="System.Int32" />
+        <Parameter Name="newValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um dos valores de <see cref="T:System.Windows.Forms.ScrollEventType" />.</param>
+        <param name="oldValue">O valor antigo para a barra de rolagem.</param>
+        <param name="newValue">O novo valor para a barra de rolagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ScrollEventArgs" /> classe usando os valores fornecidos para o <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.OldValue" />, e <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int newValue, System.Windows.Forms.ScrollOrientation scroll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 newValue, valuetype System.Windows.Forms.ScrollOrientation scroll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32,System.Windows.Forms.ScrollOrientation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="newValue" Type="System.Int32" />
+        <Parameter Name="scroll" Type="System.Windows.Forms.ScrollOrientation" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um dos valores de <see cref="T:System.Windows.Forms.ScrollEventType" />.</param>
+        <param name="newValue">O novo valor para a barra de rolagem.</param>
+        <param name="scroll">Um dos valores de <see cref="T:System.Windows.Forms.ScrollOrientation" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ScrollEventArgs" /> classe usando os valores fornecidos para o <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" />, e <see cref="P:System.Windows.Forms.ScrollEventArgs.ScrollOrientation" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScrollEventArgs (System.Windows.Forms.ScrollEventType type, int oldValue, int newValue, System.Windows.Forms.ScrollOrientation scroll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.ScrollEventType type, int32 oldValue, int32 newValue, valuetype System.Windows.Forms.ScrollOrientation scroll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32,System.Int32,System.Windows.Forms.ScrollOrientation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Windows.Forms.ScrollEventType" />
+        <Parameter Name="oldValue" Type="System.Int32" />
+        <Parameter Name="newValue" Type="System.Int32" />
+        <Parameter Name="scroll" Type="System.Windows.Forms.ScrollOrientation" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um dos valores de <see cref="T:System.Windows.Forms.ScrollEventType" />.</param>
+        <param name="oldValue">O valor antigo para a barra de rolagem.</param>
+        <param name="newValue">O novo valor para a barra de rolagem.</param>
+        <param name="scroll">Um dos valores de <see cref="T:System.Windows.Forms.ScrollOrientation" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.ScrollEventArgs" /> classe usando os valores fornecidos para o <see cref="P:System.Windows.Forms.ScrollEventArgs.Type" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.OldValue" />, <see cref="P:System.Windows.Forms.ScrollEventArgs.NewValue" />, e <see cref="P:System.Windows.Forms.ScrollEventArgs.ScrollOrientation" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public int NewValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o novo <see cref="P:System.Windows.Forms.ScrollBar.Value" /> da barra de rolagem.</summary>
+        <value>O valor numérico para o qual a <see cref="P:System.Windows.Forms.ScrollBar.Value" /> propriedade será alterada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollBar.OnScroll Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollBar.OnScroll Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public int OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o antigo <see cref="P:System.Windows.Forms.ScrollBar.Value" /> da barra de rolagem.</summary>
+        <value>O valor numérico que o <see cref="P:System.Windows.Forms.ScrollBar.Value" /> propriedade contida antes de alterá-lo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ScrollableControl>, como um <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.ContainerControl>. Em seguida, nomear a instância `ScrollableControl1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#74](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#74)]
+ [!code-vb[System.Windows.Forms.EventExamples#74](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollOrientation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollOrientation ScrollOrientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ScrollOrientation ScrollOrientation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.ScrollOrientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollOrientation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a orientação da barra de rolagem que acionou o evento <see langword="Scroll" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ScrollOrientation" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente você usaria o <xref:System.Windows.Forms.ScrollEventArgs.ScrollOrientation%2A> propriedade para determinar a orientação da barra de rolagem que gerou o `Scroll` evento, como com o <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ScrollableControl>, como um <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.ContainerControl>. Em seguida, nomear a instância `ScrollableControl1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#74](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#74)]
+ [!code-vb[System.Windows.Forms.EventExamples#74](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ScrollEventType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ScrollEventType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollEventArgs.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de evento de rolagem que ocorreu.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.ScrollEventType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ScrollableControl>, como um <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.ContainerControl>. Em seguida, nomear a instância `ScrollableControl1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ScrollableControl.Scroll?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#74](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#74)]
+ [!code-vb[System.Windows.Forms.EventExamples#74](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#74)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

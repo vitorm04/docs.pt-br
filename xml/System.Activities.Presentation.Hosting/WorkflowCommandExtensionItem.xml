@@ -1,0 +1,70 @@
+<Type Name="WorkflowCommandExtensionItem" FullName="System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowCommandExtensionItem : System.Activities.Presentation.ContextItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowCommandExtensionItem extends System.Activities.Presentation.ContextItem" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.ContextItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece funções para atualizar o comando de designer de cada fluxo de trabalho (ou seja, a coleta de gestos de entrada). Você deve fornecer um <see cref="T:System.Activities.Presentation.Hosting.IWorkflowCommandExtensionCallback" /> implementação para receber notificações.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowCommandExtensionItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowCommandExtensionItem (System.Activities.Presentation.Hosting.IWorkflowCommandExtensionCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.Hosting.IWorkflowCommandExtensionCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem.#ctor(System.Activities.Presentation.Hosting.IWorkflowCommandExtensionCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Activities.Presentation.Hosting.IWorkflowCommandExtensionCallback" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Um <see cref="T:System.Activities.Presentation.Hosting.IWorkflowCommandExtensionCallback" /> implementação para receber notificações.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem" /> classe com especificado <see cref="T:System.Activities.Presentation.Hosting.IWorkflowCommandExtensionCallback" /> implementação para receber notificações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public override Type ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o tipo deste item de extensão.</summary>
+        <value>Retorna <see cref="T:System.Type" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

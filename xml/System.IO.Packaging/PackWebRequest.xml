@@ -1,0 +1,434 @@
+<Type Name="PackWebRequest" FullName="System.IO.Packaging.PackWebRequest">
+  <TypeSignature Language="C#" Value="public sealed class PackWebRequest : System.Net.WebRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PackWebRequest extends System.Net.WebRequest" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackWebRequest" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.WebRequest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Faz uma solicitação para um <see cref="T:System.IO.Packaging.PackagePart" /> inteiro ou um <see cref="T:System.IO.Packaging.PackagePart" /> em um pacote, identificado por um URI de pacote.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging>[!INCLUDE[TLA2#tla_api#plural](~/includes/tla2sharptla-apisharpplural-md.md)] usar uma sintaxe de uri de pacote definida para se referir a partes que estão contidos em um pacote.  
+  
+ Para obter mais informações sobre a classe abstrata da qual essa classe deriva e a operação de solicitações e respostas, consulte <xref:System.Net.WebRequest>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CachePolicy">
+      <MemberSignature Language="C#" Value="public override System.Net.Cache.RequestCachePolicy CachePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Cache.RequestCachePolicy CachePolicy" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.CachePolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Cache.RequestCachePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Net.Cache.RequestCachePolicy" />.</summary>
+        <value>O <see cref="T:System.Net.Cache.RequestCachePolicy" /> para usar com a solicitação de web URI de pacote.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackWebRequest.CachePolicy%2A> propriedade é diferente de <xref:System.Net.WebRequest.CachePolicy%2A> de interna <xref:System.Net.WebRequest> retornado pelo <xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">Especificado <see cref="T:System.Net.Cache.RequestCachePolicy" /> ao definir não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionGroupName">
+      <MemberSignature Language="C#" Value="public override string ConnectionGroupName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionGroupName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.ConnectionGroupName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do grupo de conexão.</summary>
+        <value>O nome do grupo de conexão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackWebRequest.ConnectionGroupName%2A> propriedade permite que a solicitação a ser associado um grupo de conexão.  Um grupo de conexão é útil quando o aplicativo faz solicitações para o mesmo servidor para usuários diferentes.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.ConnectionGroupName%2A> propriedade é uma cadeia de caracteres vazia se a solicitação converte o <xref:System.IO.Packaging.PackageStore> cache.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.ConnectionGroupName%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public override long ContentLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <c>Content-length</c> [!INCLUDE[TLA#tla_http](~/includes/tlasharptla-http-md.md)] cabeçalho.</summary>
+        <value>O comprimento de conteúdo, em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que o pacote de protocolo de URI não processar informações na solicitação que o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].  Para fins de mais tradicionais (por exemplo, estimando o tamanho das informações de POST), não é necessário para essa propriedade.  
+  
+ <xref:System.IO.Packaging.PackWebRequest.ContentLength%2A>Retorna 0 se a solicitação converte o <xref:System.IO.Packaging.PackageStore> cache.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.ContentLength%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para o conjunto, <see cref="T:System.IO.Packaging.PackWebRequest" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public override string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <c>Content-type</c> [!INCLUDE[TLA#tla_http](~/includes/tlasharptla-http-md.md)] cabeçalho.</summary>
+        <value>O conteúdo do cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que o pacote de protocolo de URI não processar informações na solicitação que o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].  Geral (como determinar o tipo de informação de POST), não há nenhum uso para essa propriedade.  
+  
+ <xref:System.IO.Packaging.PackWebRequest.ContentType%2A>Retorna uma cadeia de caracteres vazia se a solicitação converte o <xref:System.IO.Packaging.PackageStore> cache.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.ContentType%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public override System.Net.ICredentials Credentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as credenciais de autenticação.</summary>
+        <value>As credenciais de autenticação para usar com a solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As solicitações para o cache do pacote usam suas próprias credenciais armazenadas em cache.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.Credentials%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerRequest">
+      <MemberSignature Language="C#" Value="public System.Net.WebRequest GetInnerRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.WebRequest GetInnerRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebRequest.GetInnerRequest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o interno <see cref="T:System.Net.WebRequest" />.</summary>
+        <returns>Um <see cref="T:System.Net.WebRequest" /> criado do URI interna se resolve a solicitação para um transporte válido do protocolo http ou ftp; ou um <see cref="T:System.Net.WebRequest" /> criado com um URI de null se a solicitação converte o <see cref="T:System.IO.Packaging.PackageStore" /> cache.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A> é fornecido para cenários avançados somente e não é necessária para a operação normal.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Interna URI não é resolvido para um protocolo de transporte válido, como http, FTP, nem pode a solicitação ser resolvida a partir de <see cref="T:System.IO.Packaging.PackageStore" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequestStream">
+      <MemberSignature Language="C#" Value="public override System.IO.Stream GetRequestStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IO.Stream GetRequestStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebRequest.GetRequestStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Não use —<see cref="M:System.IO.Packaging.PackWebRequest.GetRequestStream" /> não é suportado pelo <see cref="T:System.IO.Packaging.PackWebRequest" />.</summary>
+        <returns>Se <see cref="M:System.IO.Packaging.PackWebRequest.GetRequestStream" /> é chamado, um <see cref="T:System.NotSupportedException" /> é gerada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.PackWebRequest.GetRequestStream%2A>existe para implementar o contrato necessário para a classe base abstrata.  O pacote de protocolo de URI não dá suporte para gravação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Ocorre em qualquer chamada para <see cref="M:System.IO.Packaging.PackWebRequest.GetRequestStream" />.  O pacote de protocolo de URI não dá suporte para gravação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponse">
+      <MemberSignature Language="C#" Value="public override System.Net.WebResponse GetResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Net.WebResponse GetResponse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebRequest.GetResponse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o fluxo de resposta para a solicitação.</summary>
+        <returns>O fluxo de resposta para a solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por que a assinatura de classe base, <xref:System.IO.Packaging.PackWebRequest.GetResponse%2A> retorna o valor do tipo <xref:System.Net.WebResponse>.  O valor de retorno é realmente do tipo <xref:System.IO.Packaging.PackWebResponse> específico para a resposta do pacote de protocolo de URI.  
+  
+ O <xref:System.Net.WebResponse.Close%2A> método deve ser chamado quando o aplicativo é concluído com o <xref:System.Net.WebResponse> fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public override System.Net.WebHeaderCollection Headers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coleção de pares de nome/valor de cabeçalho associado à solicitação.</summary>
+        <value>Um objeto de coleção do cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Solicitações de cache do pacote incluem uma opção válida mas vazia caso contrário, a coleção de cabeçalhos em suas solicitações.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.Headers%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public override string Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Method" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método de protocolo a ser usado com a solicitação URI de pacote.</summary>
+        <value>O nome do método de protocolo que executa esta solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackWebRequest.Method%2A> propriedade retorna uma cadeia de caracteres vazia se a solicitação converte o <xref:System.IO.Packaging.PackageStore> cache.  O <xref:System.IO.Packaging.PackWebRequest.Method%2A> propriedade só é definida quando a solicitação faz referência a uma solicitação da Web externa, como http ou ftp.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.Method%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreAuthenticate">
+      <MemberSignature Language="C#" Value="public override bool PreAuthenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.PreAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve ser pré-autenticam a solicitação.</summary>
+        <value>
+          <see langword="true" />para enviar um <c>WWW-authenticate</c> [!INCLUDE[TLA#tla_http](~/includes/tlasharptla-http-md.md)] cabeçalho com a solicitação inicial; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackWebRequest.PreAuthenticate%2A> propriedade retorna `false` para solicitações resolvido a partir de <xref:System.IO.Packaging.PackageStore> cache; não há nenhum esquema de pré-autenticação para o pacote de protocolo de URI.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.PreAuthenticate%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Proxy">
+      <MemberSignature Language="C#" Value="public override System.Net.IWebProxy Proxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IWebProxy Proxy" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.Proxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o proxy de rede para acesso à Internet.</summary>
+        <value>O <see cref="T:System.Net.WebProxy" /> a ser usado para acesso à Internet.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Packaging.PackWebRequest.Proxy%2A> propriedade é compartilhada com interna <xref:System.Net.WebRequest> (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public override Uri RequestUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri RequestUri" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.RequestUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do recurso associado à solicitação.</summary>
+        <value>O [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do recurso associado à solicitação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public override int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo antes que a solicitação expire.</summary>
+        <value>O número de milissegundos de espera antes que a solicitação atinja o tempo limite.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Solicitações para o cache do pacote não atingirão o tempo limite.  Para solicitações de resolução de <xref:System.IO.Packaging.PackageStore> cache, <xref:System.IO.Packaging.PackWebRequest.Timeout%2A> retorna um valor igual a-1.  
+  
+ O <xref:System.IO.Packaging.PackWebRequest.Timeout%2A> propriedade é compartilhada com a solicitação interna (<xref:System.IO.Packaging.PackWebRequest.GetInnerRequest%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultCredentials">
+      <MemberSignature Language="C#" Value="public override bool UseDefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Packaging.PackWebRequest.UseDefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o padrão de credenciais de autenticação.</summary>
+        <value>As credenciais de autenticação padrão para usar com a solicitação URI de pacote.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

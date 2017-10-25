@@ -1,0 +1,1323 @@
+<Type Name="XPathMessageFilterTable&lt;TFilterData&gt;" FullName="System.ServiceModel.Dispatcher.XPathMessageFilterTable&lt;TFilterData&gt;">
+  <TypeSignature Language="C#" Value="public class XPathMessageFilterTable&lt;TFilterData&gt; : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;, System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;, System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XPathMessageFilterTable`1&lt;TFilterData&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt;, class System.Collections.Generic.IDictionary`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt;, class System.Collections.IEnumerable, class System.ServiceModel.Dispatcher.IMessageFilterTable`1&lt;!TFilterData&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TFilterData" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IDictionary&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Dispatcher.IMessageFilterTable&lt;TFilterData&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TFilterData">O tipo dos dados de filtro associados a cada filtro na tabela.</typeparam>
+    <summary>Contém uma coleção de pares de dados do filtro para correspondência eficiente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> implementa o <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601> interface. Essa tabela de filtro é otimizada para filtros de XPath declarativos, para que a chave de tabela é um <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.  
+  
+ O <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> otimiza a classe correspondente para um subconjunto de XPath que aborda a maioria dos cenários de mensagens e também oferece suporte à gramática XPath 1.0 completa. Ele tem otimização de algoritmos para correspondência paralela eficiente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XPathMessageFilterTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XPathMessageFilterTable (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">Capacidade inicial da tabela.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Add(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt;filtro, <c>FilterData</c> &gt; para adicionar à tabela.</param>
+        <summary>Adiciona um filtro /<paramref name="FilterData" /> par (chave/valor) para o <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa o <xref:System.Collections.Generic.ICollection%601.Add%2A> método o <xref:System.Collections.Generic.ICollection%601> classe.  Conversão implícita do `filter` parâmetro do tipo <xref:System.ServiceModel.Dispatcher.MessageFilter> para o <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> pode ser evitada usando-se a sobrecarga fortemente tipada, <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.Add%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XPath.XPathException">Ocorreu um erro de compilador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Dispatcher.MessageFilter filter, TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.ServiceModel.Dispatcher.MessageFilter filter, !TFilterData data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Add(System.ServiceModel.Dispatcher.MessageFilter,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+        <Parameter Name="data" Type="TFilterData" />
+      </Parameters>
+      <Docs>
+        <param name="filter">O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> usado como a chave do par adicionado. Deve ser uma instância de <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" />.</param>
+        <param name="data">O <c>FilterData</c> associada com o filtro usado como o valor do par adicionado.</param>
+        <summary>Adiciona um par de dados do filtro na tabela de filtro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A conversão interna do `filter` parâmetro de <xref:System.ServiceModel.Dispatcher.MessageFilter> para o <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> pode ser evitada usando-se a sobrecarga fortemente tipada, <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.Add%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="filter" /> não é um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" />.</exception>
+        <exception cref="T:System.Xml.XPath.XPathException">Ocorreu um erro de compilador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.ServiceModel.Dispatcher.XPathMessageFilter filter, TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.ServiceModel.Dispatcher.XPathMessageFilter filter, !TFilterData data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Add(System.ServiceModel.Dispatcher.XPathMessageFilter,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.XPathMessageFilter" />
+        <Parameter Name="data" Type="TFilterData" />
+      </Parameters>
+      <Docs>
+        <param name="filter">O <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> usado como a chave do par adicionado.</param>
+        <param name="data">O <c>FilterData</c> associados ao filtro; usado como o valor do par adicionado.</param>
+        <summary>Adiciona um par de dados do filtro na tabela de filtro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso fornece uma sobrecarga fortemente tipado para adicionar um <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> para a tabela de filtro que é melhor do que a sobrecarga de tipo fraco porque ela evita a conversão implícita do `filter` parâmetro do tipo <xref:System.ServiceModel.Dispatcher.MessageFilter> para o <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XPath.XPathException">Ocorreu um erro de compilador.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os pares de dados do filtro da tabela de filtro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Contains(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt; <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" />, <c>FilterData</c> &gt; localizar na tabela.</param>
+        <summary>Determina se a tabela de filtro contém um filtro especificado e seus associados <paramref name="FilterData" />.</summary>
+        <returns>
+          <see langword="true" />Se o filtro /*FilterData* par estiver contido na tabela de filtro; caso contrário <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `false` se o filtro é encontrado, mas corresponde a dados diferentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(class System.ServiceModel.Dispatcher.MessageFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.ContainsKey(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> que está sendo testado para.</param>
+        <summary>Determina se a tabela de filtro contém um filtro especificado.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="filter" /> estiver contido na tabela de filtro; caso contrário <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa o `ContainsKey` método <xref:System.Collections.Generic.IDictionary%602>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.CopyTo(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz do tipo <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt;filtro, <c>FilterData</c> &gt; para que os pares estão sendo copiados.</param>
+        <param name="arrayIndex">O índice no qual começar a copiar.</param>
+        <summary>Copia o filtro /<paramref name="FilterData" /> pares para uma matriz que começa em um índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pares de dados do filtro atualmente na tabela de filtros.</summary>
+        <value>O número de pares de dados do filtro atualmente na tabela de filtros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode iterar por meio da tabela de filtros.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> &lt;KeyValuePair&lt;filtro, FilterData&gt; &gt; que pode ser usado para iterar por meio da tabela de filtros.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa <xref:System.Collections.Generic.SynchronizedCollection%601.GetEnumerator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingFilter">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um filtro na tabela for atendido, a mensagem especificada ou em buffer de mensagem e retorna filtrar em um <see langword="out" /> parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Testa se uma mensagem atende exatamente um dos filtros na tabela de filtros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.ServiceModel.Channels.Message message, out System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilter(class System.ServiceModel.Channels.Message message, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilter(System.ServiceModel.Channels.Message,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> a ser testado.</param>
+        <param name="filter">O <see langword="out" /> parâmetro que armazena o filtro for satisfeito pelo <c>mensagem</c>. Se nenhum filtro foi encontrado, o parâmetro é definido como seu valor padrão.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um filtro na tabela for atendido, a mensagem especificada e retorna o filtro em um <see langword="out" /> parâmetro.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> cujos critérios de consulta são atendidos pela mensagem; ou <see langword="null" /> se nenhum filtro for encontrado para corresponder.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando um único filtro deve corresponder à mensagem e o filtro de correspondência é necessário.  
+  
+ Este método testa uma correspondência de filtro simples no bucket de prioridade mais alta de filtros. Os filtros da tabela não tem permissão para inspecionar o corpo da mensagem.  
+  
+ Se mais de um filtro deve corresponder à mensagem, use o <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="message" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException">Um filtro tentou examinar o conteúdo do corpo da mensagem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.ServiceModel.Channels.MessageBuffer messageBuffer, out System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilter(class System.ServiceModel.Channels.MessageBuffer messageBuffer, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilter(System.ServiceModel.Channels.MessageBuffer,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="messageBuffer">O <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> a ser testado.</param>
+        <param name="filter">O <see langword="out" /> parâmetro que armazena o filtro for satisfeito pelo <c>mensagem</c>. Se nenhum filtro foi encontrado, o parâmetro é definido como seu valor padrão.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um filtro na tabela for atendido, a mensagem especificada ou em buffer de mensagem e retorna filtrar em um <see langword="out" /> parâmetro.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> cujos critérios de consulta são atendidos pela mensagem em buffer; ou <see langword="null" /> se nenhum filtro for encontrado para corresponder.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando um único filtro deve corresponder à mensagem em buffer e o filtro de correspondência é necessário.  
+  
+ Os filtros na tabela são permitidos para inspecionar o corpo da mensagem.  
+  
+ Se mais de um filtro deve corresponder à mensagem, use o <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="messageBuffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="messageBuffer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, out System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingFilter(class System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilter(System.ServiceModel.Dispatcher.SeekableXPathNavigator,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.ServiceModel.Dispatcher.SeekableXPathNavigator" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> a ser testado.</param>
+        <param name="filter">O <see langword="out" /> parâmetro que armazena o filtro for satisfeito pelo <c>mensagem</c>. Se nenhum filtro foi encontrado, o parâmetro é definido como seu valor padrão.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> na tabela for atendida, a mensagem especificada ou em buffer de mensagem e retorna filtrar em um <see langword="out" /> parâmetro.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> cujos critérios de consulta são atendidos pelo navegador; ou <see langword="null" /> se nenhum filtro for encontrado para corresponder.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando um único filtro deve corresponder à mensagem especificada pelo <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> e o filtro de correspondência é necessário.  
+  
+ Se mais de um filtro deve corresponder à mensagem, use o <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="navigator" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="navigator" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilter">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilter (System.Xml.XPath.XPathNavigator navigator, out System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingFilter(class System.Xml.XPath.XPathNavigator navigator, [out] class System.ServiceModel.Dispatcher.MessageFilter&amp; filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilter(System.Xml.XPath.XPathNavigator,System.ServiceModel.Dispatcher.MessageFilter@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.Xml.XPath.XPathNavigator" /> a ser testado.</param>
+        <param name="filter">O <see langword="out" /> parâmetro que armazena o filtro for satisfeito pelo <c>navegador</c>. Se nenhum filtro foi encontrado, o parâmetro é definido como seu valor padrão.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um <see cref="T:System.Xml.XPath.XPathNavigator" /> na tabela for atendida, a mensagem especificada ou em buffer de mensagem e retorna filtrar em um <see langword="out" /> parâmetro.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> cujos critérios de consulta são atendidos pelo navegador; ou <see langword="null" /> se nenhum filtro for encontrado para corresponder.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando um único filtro deve corresponder à mensagem especificada pelo <xref:System.Xml.XPath.XPathNavigator> e o filtro de correspondência é necessário.  
+  
+ Se mais de um filtro deve corresponder à mensagem, use o <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="navigator" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="navigator" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingFilters">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um valor que indica se o critério de correspondência de um filtro na tabela é atendido pelo documento XML especificado e adiciona os filtros de correspondência a uma coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando mais de um filtro deve corresponder à mensagem e os filtros de correspondência são necessários.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.ServiceModel.Channels.Message message, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilters(class System.ServiceModel.Channels.Message message, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilters(System.ServiceModel.Channels.Message,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena o <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos que correspondem à <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;filtro&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de pelo menos um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> na tabela for atendida, a mensagem especificada e adiciona filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela é atendido pelo <paramref name="message" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando mais de um filtro deve corresponder à mensagem e os filtros de correspondência são necessários.  
+  
+ Os filtros da tabela não tem permissão para inspecionar o corpo da mensagem.  
+  
+ A correspondência <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> são armazenados no `results` parâmetro <xref:System.Collections.Generic.ICollection%601>. O `FilterData` pode ser recuperado da tabela de filtro usando esses filtros como chaves com os métodos fornecidos pelo <xref:System.Collections.Generic.IDictionary%602>.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException">Um filtro tentou examinar o conteúdo do corpo da mensagem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.ServiceModel.Channels.MessageBuffer messageBuffer, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingFilters(class System.ServiceModel.Channels.MessageBuffer messageBuffer, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilters(System.ServiceModel.Channels.MessageBuffer,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="messageBuffer">O <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena o <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos que correspondem à <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;filtro&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de pelo menos um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> na tabela é atendida pela mensagem de buffer especificada e adiciona os filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela é atendido pelo <paramref name="messageBuffer" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando mais de um filtro deve corresponder à mensagem em buffer e filtros de correspondência são necessários.  
+  
+ Os filtros na tabela são permitidos para inspecionar o corpo da mensagem.  
+  
+ A correspondência <xref:System.ServiceModel.Dispatcher.MessageFilter> são armazenados no `results` parâmetro <xref:System.Collections.Generic.ICollection%601>. O `FilterData` pode ser recuperado da tabela de filtro usando esses filtros como chaves com os métodos fornecidos pelo <xref:System.Collections.Generic.IDictionary%602>.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601.GetMatchingFilters%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingFilters(class System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilters(System.ServiceModel.Dispatcher.SeekableXPathNavigator,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.ServiceModel.Dispatcher.SeekableXPathNavigator" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena o <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos que correspondem à <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;filtro&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de pelo menos um <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> na tabela é atendida pela mensagem de buffer especificada e adiciona os filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela é atendido pelo <paramref name="messageBuffer" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando mais de um filtro deve coincidir com o navegador e filtros de correspondência são necessários.  
+  
+ Se apenas um filtro deve corresponder à mensagem, use o <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingFilter%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingFilters">
+      <MemberSignature Language="C#" Value="public bool GetMatchingFilters (System.Xml.XPath.XPathNavigator navigator, System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingFilters(class System.Xml.XPath.XPathNavigator navigator, class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingFilters(System.Xml.XPath.XPathNavigator,System.Collections.Generic.ICollection{System.ServiceModel.Dispatcher.MessageFilter})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.Xml.XPath.XPathNavigator" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena o <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> objetos que correspondem à <see cref="T:System.Collections.Generic.ICollection`1" /> &lt;filtro&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de pelo menos um <see cref="T:System.Xml.XPath.XPathNavigator" /> na tabela é atendida pela mensagem de buffer especificada e adiciona os filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela é atendido pelo <paramref name="messageBuffer" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando vários filtros podem ser esperados para corresponder a mensagem especificada pelo <xref:System.Xml.XPath.XPathNavigator> e filtros de correspondência são necessários.  
+  
+ Se apenas um filtro deve corresponder à mensagem, use o <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingFilter%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="matches" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingValue">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> na tabela é atendida pelo objeto do documento especificado e adiciona os dados de filtro correspondente a uma coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um dos seguintes quatro métodos quando um único filtro é esperado para corresponder ao objeto de documento e somente o `FilterData` da correspondência de filtro deve ser recuperado.  
+  
+ Os primeiros dois métodos são implementações de <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingValue%2A>.  
+  
+ Use <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingValue%2A> se o conteúdo do corpo não requer o exame. Use <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingValue%2A> se o conteúdo do corpo da mensagem pode exigir o exame.  
+  
+ Os dois métodos restantes são específicos de sobrecargas <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601>. Para filtrar em um documento fornecido por meio de um navegador, use <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingValue%2A> ou <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingValue%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.ServiceModel.Channels.Message message, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValue(class System.ServiceModel.Channels.Message message, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValue(System.ServiceModel.Channels.Message,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> a ser testado.</param>
+        <param name="data">O <see langword="out" /> parâmetro que armazena a <c>FilterData</c> para o filtro que corresponde a <c>mensagem</c>.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> na tabela for atendida, a mensagem especificada e retorna os dados de filtro correspondente.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência de um filtro na tabela for atendido por mensagem; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando um único filtro é esperado para corresponder a mensagem e somente o `FilterData` da correspondência de filtro deve ser recuperado.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValue%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="message" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.ServiceModel.Channels.MessageBuffer messageBuffer, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValue(class System.ServiceModel.Channels.MessageBuffer messageBuffer, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValue(System.ServiceModel.Channels.MessageBuffer,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="messageBuffer">O <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> a ser testado.</param>
+        <param name="data">O <see langword="out" /> parâmetro que armazena a <c>FilterData</c> para o filtro que corresponde a <c>messageBuffer</c>.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> na tabela é atendida pela mensagem de buffer especificada e retorna os dados de filtro correspondente.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência de um filtro na tabela for atendido por mensagem em buffer; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando um único filtro é esperado para corresponder a mensagem em buffer e somente o `FilterData` da correspondência de filtro deve ser recuperado.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingFilter%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="messageBuffer" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingValue(class System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValue(System.ServiceModel.Dispatcher.SeekableXPathNavigator,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.ServiceModel.Dispatcher.SeekableXPathNavigator" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> a ser testado.</param>
+        <param name="data">O <see langword="out" /> parâmetro que armazena a <c>FilterData</c> que corresponde a <c>navegador</c>.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> na tabela é atendida pelo <paramref name="navigator" /> e retorna os dados de filtro do filtro correspondente em um <see langword="out" /> parâmetro.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência de exatamente um filtro na tabela for atendido pelo <paramref name="navigator" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para especificar uma condição de XPath deve atender a mensagem.  
+  
+ Esse método é semelhante ao <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.GetMatchingValue%2A>, exceto que ele usa um <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>, que estende a funcionalidade do <xref:System.Xml.XPath.XPathNavigator> para incluir os métodos que permitem que várias otimizações.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="navigator" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="navigator" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValue">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValue (System.Xml.XPath.XPathNavigator navigator, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingValue(class System.Xml.XPath.XPathNavigator navigator, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValue(System.Xml.XPath.XPathNavigator,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.Xml.XPath.XPathNavigator" /> a ser testado.</param>
+        <param name="data">O <see langword="out" /> parâmetro que armazena a <c>FilterData</c> que corresponde a <c>navegador</c>.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de exatamente um <see cref="T:System.Xml.XPath.XPathNavigator" /> na tabela é atendida pelo <paramref name="navigator" /> e retorna os dados de filtro do filtro correspondente em um <see langword="out" /> parâmetro.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência de exatamente um filtro na tabela for atendido pelo <paramref name="navigator" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para especificar uma condição de XPath deve atender a mensagem.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="navigator" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.MultipleFilterMatchesException">Corresponde a mais de um filtro a <paramref name="navigator" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetMatchingValues">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um valor que indica se o critério de correspondência pelo menos um filtro na tabela é atendido, a mensagem especificada ou em buffer de mensagem e adiciona o <paramref name="FilterData" /> de filtros de correspondência a uma coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando mais de um filtro é esperado para corresponder a mensagem ou o buffer de mensagem e somente o `FilterData` é necessária.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.ServiceModel.Channels.Message message, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValues(class System.ServiceModel.Channels.Message message, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValues(System.ServiceModel.Channels.Message,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena os dados de filtro da correspondência filtros em um genérico <see cref="T:System.Collections.Generic.ICollection`1" /> &lt; <c>FilterData</c>&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência pelo menos um filtro na tabela for atendido, a mensagem especificada e adiciona os dados do filtro de filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela for atendido por <paramref name="message" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando mais de um filtro deve corresponder à mensagem, apenas os dados de filtro são necessários, e o corpo da mensagem não é inspecionado.  
+  
+ Os dados de filtro da correspondência <xref:System.ServiceModel.Dispatcher.MessageFilter> são armazenados no `results` parâmetro <xref:System.Collections.Generic.ICollection%601>.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ServiceModel.Dispatcher.InvalidBodyAccessException">Um filtro tentou examinar o conteúdo do corpo da mensagem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.ServiceModel.Channels.MessageBuffer messageBuffer, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetMatchingValues(class System.ServiceModel.Channels.MessageBuffer messageBuffer, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValues(System.ServiceModel.Channels.MessageBuffer,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageBuffer" Type="System.ServiceModel.Channels.MessageBuffer" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="messageBuffer">O <see cref="T:System.ServiceModel.Channels.MessageBuffer" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena os dados de filtro da correspondência filtros em um genérico <see cref="T:System.Collections.Generic.ICollection`1" /> &lt; <c>FilterData</c>&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência pelo menos um filtro na tabela é atendido pela mensagem de buffer especificada e adiciona os dados do filtro de filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela é atendido pelo <paramref name="message" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando mais de um filtro deve corresponder à mensagem em buffer e apenas os dados do filtro são necessários.  
+  
+ Os dados de filtro da correspondência <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> são armazenados no `results` <xref:System.Collections.Generic.ICollection%601>.  
+  
+ Esse método implementa <xref:System.ServiceModel.Dispatcher.IMessageFilterTable%601.GetMatchingValues%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingValues(class System.ServiceModel.Dispatcher.SeekableXPathNavigator navigator, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValues(System.ServiceModel.Dispatcher.SeekableXPathNavigator,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.ServiceModel.Dispatcher.SeekableXPathNavigator" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena os dados de filtro da correspondência filtros em um genérico <see cref="T:System.Collections.Generic.ICollection`1" /> &lt; <c>FilterData</c>&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de pelo menos um <see cref="T:System.ServiceModel.Dispatcher.SeekableXPathNavigator" /> na tabela é atendida pelo <paramref name="navigator" /> e adiciona os dados do filtro de filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela for atendido pelo <paramref name="navigator" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando mais de um filtro deve corresponder aos critérios de consulta do documento XML derivado do navegador de XPath otimizado <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> e apenas os dados do filtro são necessários.  
+  
+ Os dados de filtro da correspondência <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> são armazenados no `results` parâmetro <xref:System.Collections.Generic.ICollection%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingValues">
+      <MemberSignature Language="C#" Value="public bool GetMatchingValues (System.Xml.XPath.XPathNavigator navigator, System.Collections.Generic.ICollection&lt;TFilterData&gt; results);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetMatchingValues(class System.Xml.XPath.XPathNavigator navigator, class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; results) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.GetMatchingValues(System.Xml.XPath.XPathNavigator,System.Collections.Generic.ICollection{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="results" Type="System.Collections.Generic.ICollection&lt;TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">O <see cref="T:System.Xml.XPath.XPathNavigator" /> a ser testado.</param>
+        <param name="results">O parâmetro de referência que armazena os dados de filtro da correspondência filtros em um genérico <see cref="T:System.Collections.Generic.ICollection`1" /> &lt; <c>FilterData</c>&gt;.</param>
+        <summary>Retorna um valor que indica se o critério de correspondência de pelo menos um <see cref="T:System.Xml.XPath.XPathNavigator" /> na tabela é atendida pelo <paramref name="navigator" /> e adiciona os dados do filtro de filtros de correspondência a uma coleção.</summary>
+        <returns>
+          <see langword="true" />Se o critério de correspondência pelo menos um filtro na tabela for atendido pelo <paramref name="navigator" />; <see langword="false" /> se nenhum filtro for satisfeito.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método quando mais de um filtro deve corresponder aos critérios de consulta do documento XML derivado do navegador de XPath otimizado <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> e apenas os dados do filtro são necessários.  
+  
+ Os dados de filtro da correspondência <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> são armazenados no `results` parâmetro <xref:System.Collections.Generic.ICollection%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="results" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1" /> não é somente leitura.</summary>
+        <value>Sempre retorna <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TFilterData this[System.ServiceModel.Dispatcher.MessageFilter filter] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TFilterData Item(class System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Item(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TFilterData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> associado aos dados de filtro para obter ou definir.</param>
+        <summary>Obtém ou define os dados de filtro associados ao <paramref name="filter" />.</summary>
+        <value>Os dados de filtro associados a <paramref name="filter" />. Se especificado <paramref name="filter" /> não for encontrado, uma operação get lança um <see cref="T:System.Collections.Generic.KeyNotFoundException" /> e uma operação definida criará um novo elemento de dados do filtro com especificado <paramref name="filter" /> como chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Item` propriedade (indexador em c#) fornece a capacidade de acessar os dados do filtro associados com um `filter` na coleção de filtros da tabela usando a sintaxe a seguir.  
+  
+```csharp  
+myFilters[filter]  
+```  
+  
+```vb  
+myFilters(filter)  
+```  
+  
+ Você também pode usar o `Item` propriedade para adicionar novos elementos ao definir os valores de uma  `filter` /par de dados que não existe na tabela de filtro de ação de filtro. No entanto se `filter` já está na tabela, definir o `Item` propriedade substitui o valor antigo. Em contraste, o <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.Add%2A> método não modifica os dados de filtro de um objeto existente `filter`.  
+  
+ O dicionário `Item` é um `filter`/filtro par de dados no caso de <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XPath.XPathException">Ocorreu um erro de compilador.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">A propriedade é recuperada e o <paramref name="filter" /> não está na tabela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Dispatcher.MessageFilter&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Dispatcher.MessageFilter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todos os filtros contidos no <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1" />.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de todos os <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" />s contidos na tabela de filtros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade implementa <xref:System.Collections.Generic.IDictionary%602.Keys%2A>. O <xref:System.Collections.Generic.IDictionary%602> a tabela de filtro implementa usa o <xref:System.ServiceModel.Dispatcher.MessageFilter> como a chave e o `FilterData` como o valor do par.  
+  
+ A ordem dos filtros retornado da coleção não for especificada, mas é garantido para ser a mesma ordem correspondente `FilterData` na coleção retornada pelo <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.Values%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeQuota">
+      <MemberSignature Language="C#" Value="public int NodeQuota { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeQuota" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.NodeQuota" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de nós do documento XML que pode ser examinado por filtros individuais durante uma única chamada para um <see langword="Match" /> método. Esse valor se aplica para cada filtro.</summary>
+        <value>O número de nós que podem ser examinadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser usada para minimizar uma ameaça à segurança. Alguns filtros podem ser muito caros avaliar ou são muito longas. <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>s geralmente são avaliadas em relação a um documento de origem não confiável (mensagem SOAP na rede), que pode ser mal-intencionado. Como filtros operam em documentos XML, a melhor maneira de definir limites computacionais em tabelas de filtro é especificar o número máximo de nós que são examinadas durante a avaliação de um filtro nesta tabela.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt; item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.ServiceModel.Dispatcher.MessageFilter, !TFilterData&gt; item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Remove(System.Collections.Generic.KeyValuePair{System.ServiceModel.Dispatcher.MessageFilter,`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Collections.Generic.KeyValuePair&lt;System.ServiceModel.Dispatcher.MessageFilter,TFilterData&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Collections.Generic.KeyValuePair`2" /> &lt;filtro, <c>FilterData</c> &gt; para remover da tabela.</param>
+        <summary>Remove um filtro e seus dados de filtro associada da tabela de filtro.</summary>
+        <returns>
+          <see langword="true" />Se o filtro /<paramref name="FilterData" /> par foi encontrado e removido; <see langword="false" /> se ele não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a chave de filtro do `item` está presente, mas está associado a dados que difere do `FilterData`, o método falhar ao remover o filtro e retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.ServiceModel.Dispatcher.MessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.ServiceModel.Dispatcher.MessageFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Remove(System.ServiceModel.Dispatcher.MessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">O <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> a ser removido.</param>
+        <summary>Remove um filtro e seus dados de filtro associada da tabela de filtro.</summary>
+        <returns>
+          <see langword="true" />Se o filtro foi encontrado e removido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="filter" /> não é um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.ServiceModel.Dispatcher.XPathMessageFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(class System.ServiceModel.Dispatcher.XPathMessageFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Remove(System.ServiceModel.Dispatcher.XPathMessageFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.XPathMessageFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">O <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> a ser removido.</param>
+        <summary>Remove um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> e seus dados de filtro associada da tabela de filtro.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" /> foi encontrado e removido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método lançará uma exceção se o filtro especificado não existe na tabela de filtros.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="filter" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="filter" /> não é um <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilter" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode iterar por meio da tabela de filtros.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> &lt;KeyValuePair&lt;filtro, FilterData&gt; &gt; que pode ser usado para iterar por meio da tabela de filtros.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método implementa <xref:System.Collections.Generic.SynchronizedCollection%601.GetEnumerator%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrimToSize">
+      <MemberSignature Language="C#" Value="public void TrimToSize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrimToSize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.TrimToSize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>A tabela de filtro, limpando todas as alocações em excesso ou buffers de compactação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é conceitualmente equivalente a definir a capacidade da coleção à sua contagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (System.ServiceModel.Dispatcher.MessageFilter filter, out TFilterData data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(class System.ServiceModel.Dispatcher.MessageFilter filter, [out] !TFilterData&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.TryGetValue(System.ServiceModel.Dispatcher.MessageFilter,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ServiceModel.Dispatcher.MessageFilter" />
+        <Parameter Name="data" Type="TFilterData&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Uma chave para recuperar os dados.</param>
+        <param name="data">O <c>dados</c> associados a <c>filtro</c> quando este método retorna <see langword="true" />; caso contrário, o valor padrão para o tipo do <c>dados</c> parâmetro.</param>
+        <summary>Verifica se um filtro está armazenado na tabela de filtros.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="filter" /> está presente na tabela de filtro; <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma maneira eficiente para verificar se é um filtro na tabela de filtros, porque quando o filtro não estiver presente, ele retorna `false` em vez de gerar uma exceção. Se você tentar recuperar o filtro da tabela usando seu `Item` propriedade (indexador em c#) e ele não estiver lá, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;TFilterData&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TFilterData&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TFilterData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todos os <paramref name="FilterData" /> contidos no <see cref="T:System.ServiceModel.Dispatcher.XPathMessageFilterTable`1" />.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.ICollection`1" /> de todos os <paramref name="FilterData" /> contidas na tabela de filtros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade implementa <xref:System.Collections.Generic.IDictionary%602.Values%2A>. O <xref:System.Collections.Generic.IDictionary%602>< filtro, `FilterData`> que a tabela de filtro implementa usa o <xref:System.ServiceModel.Dispatcher.MessageFilter> como a chave e o `FilterData` como o valor do par.  
+  
+ A ordem do `FilterData` retornado na coleção não for especificada, mas é garantido para ser a mesma ordem que os filtros correspondentes na coleção retornada pelo <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601.Keys%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

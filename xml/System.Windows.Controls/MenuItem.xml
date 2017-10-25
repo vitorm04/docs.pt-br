@@ -1,0 +1,2196 @@
+<Type Name="MenuItem" FullName="System.Windows.Controls.MenuItem">
+  <TypeSignature Language="C#" Value="public class MenuItem : System.Windows.Controls.HeaderedItemsControl, System.Windows.Input.ICommandSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi MenuItem extends System.Windows.Controls.HeaderedItemsControl implements class System.Windows.Input.ICommandSource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.MenuItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.HeaderedItemsControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Input.ICommandSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Menu)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.Controls.MenuItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Popup", Type=typeof(System.Windows.Controls.Primitives.Popup))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um item selecionável em um <see cref="T:System.Windows.Controls.Menu" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.MenuItem>é um <xref:System.Windows.Controls.HeaderedItemsControl>, que significa que seu cabeçalho e a coleção de objetos pode ser de qualquer tipo (como cadeia de caracteres, imagem ou painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.HeaderedItemsControl>.  
+  
+ Um <xref:System.Windows.Controls.MenuItem> pode ter submenus. O submenu de <xref:System.Windows.Controls.MenuItem> é composto dos objetos no <xref:System.Windows.Controls.ItemCollection> de um <xref:System.Windows.Controls.MenuItem>.  É comum para um <xref:System.Windows.Controls.MenuItem> para conter outros <xref:System.Windows.Controls.MenuItem> objetos para criar submenus aninhadas.  
+  
+ Um <xref:System.Windows.Controls.MenuItem> pode ter uma das várias funções:  
+  
+-   Pode ser selecionado para invocar um comando.  
+  
+-   Pode ser um separador de outros itens de menu.  
+  
+-   Pode ser um cabeçalho para um submenu.  
+  
+-   Ele pode ser marcada ou desmarcada.  
+  
+> [!NOTE]
+>  Por padrão, o <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> de um <xref:System.Windows.Controls.MenuItem> é definido como <xref:System.Windows.HorizontalAlignment?displayProperty=nameWithType>. A posição horizontal padrão de um <xref:System.Windows.Controls.StackPanel> é <xref:System.Windows.HorizontalAlignment?displayProperty=nameWithType>. Se você definir o <xref:System.Windows.FrameworkElement.Width%2A> propriedade de um <xref:System.Windows.Controls.MenuItem> por meio de um <xref:System.Windows.Controls.StackPanel>, padrão do painel pilha é aplicada e o item é centralizado.  
+  
+ O <xref:System.Windows.Controls.MenuItem> identificadores de <xref:System.Windows.UIElement.MouseDown> eventos, portanto, se você anexar um manipulador de eventos para <xref:System.Windows.UIElement.MouseDown>, o manipulador nunca será chamado.  Para adicionar seu próprio manipulador, assinar o <xref:System.Windows.UIElement.PreviewMouseDown> evento ou assinar <xref:System.Windows.UIElement.MouseDown> chamando <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> com `handledEventsToo` definido como `true`.  
+  
+## <a name="customizing-the-menuitem-control"></a>Personalizando o controle MenuItem  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.MenuItem> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.MenuItem>, consulte [modelos e estilos de Menu](~/docs/framework/wpf/controls/menu-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.MenuItem> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.Menu> para manipular texto em um <xref:System.Windows.Controls.TextBox>. O <xref:System.Windows.Controls.Menu> contém <xref:System.Windows.Controls.MenuItem> objetos que usam o <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, e <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> propriedades e o <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, e <xref:System.Windows.Controls.MenuItem.Click> eventos.  
+  
+ [!code-xaml[MenuItemCommandsAndEvents#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
+  
+ [!code-csharp[MenuItemCommandsAndEvents#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[MenuItemCommandsAndEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Checked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Checked" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MenuItem.Checked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um item de menu é marcado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Checked"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.CheckedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a manipulação de <xref:System.Windows.Controls.MenuItem.Checked> eventos.  
+  
+ [!code-xaml[MenuItemCommandsAndEvents#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#3)]  
+  
+ [!code-csharp[MenuItemCommandsAndEvents#4](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[MenuItemCommandsAndEvents#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent CheckedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent CheckedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.CheckedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.MenuItem.Checked" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MenuItem.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Controls.MenuItem" /> é clicado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.MenuItem.Click> evento não ocorrerá se o <xref:System.Windows.Controls.MenuItem> tem um submenu.  
+  
+<a name="routedEventInfo_Click"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.ClickEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.Menu> para manipular texto em um <xref:System.Windows.Controls.TextBox>. O <xref:System.Windows.Controls.Menu> contém <xref:System.Windows.Controls.MenuItem> objetos que usam o <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, e <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> propriedades e o <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, e <xref:System.Windows.Controls.MenuItem.Click> eventos.  
+  
+ [!code-xaml[MenuItemCommandsAndEvents#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
+  
+ [!code-csharp[MenuItemCommandsAndEvents#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[MenuItemCommandsAndEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClickEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ClickEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ClickEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.ClickEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.MenuItem.Click" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento corresponde a um clique de botão esquerdo do mouse.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ICommand Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ICommand Command" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comando associado ao item de menu.</summary>
+        <value>O comando associado ao <see cref="T:System.Windows.Controls.MenuItem" />.  O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para associar um comando com um determinado <xref:System.Windows.Controls.MenuItem> instância. O exemplo a seguir associa o **cópia** com um <xref:System.Windows.Controls.MenuItem> e fornece automaticamente o gesto de entrada de texto **Ctrl + C**. O exemplo não define o <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> propriedade, mas o <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> para o <xref:System.Windows.Controls.MenuItem> é "Cópia" em tempo de execução.  Você pode especificar outro cabeçalho para o <xref:System.Windows.Controls.MenuItem> se você quiser que ele seja diferente. Para obter informações sobre como associar o comando desejado, consulte [adicionar um comando a um MenuItem](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370).  
+  
+ [!code-xaml[MenuItems_snip#MenuItemCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml#menuitemcommand)]  
+  
+ Um comando é gerado quando um <xref:System.Windows.Controls.MenuItem> é clicado, logo após o <xref:System.Windows.Controls.MenuItem.Click> evento. O comando é gerado no elemento de acordo com as prioridades a seguir:  
+  
+1.  Se <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> é ativada a <xref:System.Windows.Controls.MenuItem>, esse elemento é usado.  
+  
+2.  O <xref:System.Windows.Controls.ContextMenu.PlacementTarget%2A> de um <xref:System.Windows.Controls.ContextMenu> que contém o <xref:System.Windows.Controls.MenuItem>.  
+  
+3.  O destino do foco da janela principal que contém um <xref:System.Windows.Controls.Menu>.  
+  
+4.  O <xref:System.Windows.Controls.MenuItem> que foi clicado.  
+  
+<a name="dependencyPropertyInfo_Command"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.CommandProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram como usar a propriedade do comando para associar a itens de menu de comandos.  
+  
+ [!code-xaml[MenuEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
+  
+ [!code-csharp[MenuEvent#9](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameter">
+      <MemberSignature Language="C#" Value="public object CommandParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CommandParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.CommandParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.NeverLocalize)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o parâmetro a ser passado para a propriedade <see cref="P:System.Windows.Controls.MenuItem.Command" /> de um <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+        <value>O parâmetro a ser passado para a propriedade <see cref="P:System.Windows.Controls.MenuItem.Command" /> de um <see cref="T:System.Windows.Controls.MenuItem" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CommandParameter"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.CommandParameterProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandParameterProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandParameterProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandParameterProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.CommandParameterProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.CommandParameter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.CommandProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.Command" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTarget">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement CommandTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement CommandTarget" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.CommandTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Action")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento de destino no qual gerar o comando especificado.</summary>
+        <value>O elemento no qual gerar o comando especificado. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> propriedade especifica o elemento no qual o comando ocorre. Se <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> não estiver definido, o elemento que tem o foco do teclado recebe o comando.  
+  
+<a name="dependencyPropertyInfo_CommandTarget"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.CommandTargetProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTargetProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CommandTargetProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CommandTargetProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.CommandTargetProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.CommandTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria ou identifica o elemento usado para exibir um item especificado.</summary>
+        <returns>O elemento usado para exibir um item especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlesScrolling">
+      <MemberSignature Language="C#" Value="protected override bool HandlesScrolling { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HandlesScrolling" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.HandlesScrolling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o controle oferece suporte a rolagem.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle tiver um <xref:System.Windows.Controls.ScrollViewer> no seu estilo e tem um teclado personalizado rolagem comportamento, <xref:System.Windows.Controls.ListBox.HandlesScrolling%2A> deve retornar `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public object Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ícone que aparece em um <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+        <value>O ícone que aparece em um <see cref="T:System.Windows.Controls.MenuItem" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muitos <xref:System.Windows.Controls.Menu> controles com mais do que apenas o texto no <xref:System.Windows.Controls.MenuItem> elementos. Geralmente há ícones, marcas de seleção, aceleradores e setas para indicar submenus.  
+  
+<a name="dependencyPropertyInfo_Icon"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.IconProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um item de menu com um ícone.  
+  
+ [!code-xaml[MenuItems_snip#MenuItemIcon](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml#menuitemicon)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IconProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IconProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.IconProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.Icon" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputGestureText">
+      <MemberSignature Language="C#" Value="public string InputGestureText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InputGestureText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.InputGestureText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define o texto que descreve um gesto de entrada que chamará o comando associado ao item especificado.</summary>
+        <value>O texto que descreve o gesto de entrada, como **Ctrl + C** para o **cópia** comando. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não associa o gesto de entrada com o item de menu; ele simplesmente adiciona texto para o item de menu. O aplicativo deve manipular a entrada do usuário para executar a ação.  Para obter informações sobre como associar um comando com um item de menu, consulte <xref:System.Windows.Controls.MenuItem.Command%2A>.  
+  
+<a name="dependencyPropertyInfo_InputGestureText"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.InputGestureTextProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram como usar o <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> propriedade para atribuir o texto de atalhos de teclado para itens de menu.  
+  
+ [!code-xaml[MenuEvent#6](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
+  
+ [!code-csharp[MenuEvent#7](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputGestureTextProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty InputGestureTextProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty InputGestureTextProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.InputGestureTextProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.InputGestureText" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCheckable">
+      <MemberSignature Language="C#" Value="public bool IsCheckable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCheckable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.IsCheckable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Windows.Controls.MenuItem" /> pode ser selecionado.</summary>
+        <value>
+          <see langword="true" /> se o item de menu puder ser selecionado; caso contrário, <see langword="false" />.  O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsCheckable"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.IsCheckableProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como fazer <xref:System.Windows.Controls.MenuItem> controles que são verificadas quando um usuário clica neles.  
+  
+ [!code-xaml[MenuEvent#11](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCheckableProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsCheckableProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsCheckableProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.IsCheckableProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.IsCheckable" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsChecked">
+      <MemberSignature Language="C#" Value="public bool IsChecked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsChecked" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.IsChecked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.MenuItem" /> está marcado.</summary>
+        <value>
+          <see langword="true" /> se um <see cref="T:System.Windows.Controls.MenuItem" /> estiver marcado, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsChecked"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.IsCheckedProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>, <xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>|  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra como o <xref:System.Windows.Controls.MenuItem.IsChecked%2A> propriedade pode ser usada para colocar uma marca de seleção na frente de um item de menu.  
+  
+ [!code-xaml[MenuStylesSnippet#6](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/pane1.xaml#6)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCheckedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsCheckedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsCheckedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.IsCheckedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.IsChecked" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabledCore">
+      <MemberSignature Language="C#" Value="protected override bool IsEnabledCore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabledCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.IsEnabledCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.ContentElement.IsEnabled" /> é de propriedade <see langword="true" /> para o item de menu atual.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Controls.MenuItem" /> pode ser selecionado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHighlighted">
+      <MemberSignature Language="C#" Value="public bool IsHighlighted { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHighlighted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.IsHighlighted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Windows.Controls.MenuItem" /> é realçado.</summary>
+        <value>
+          <see langword="true" /> se um <see cref="T:System.Windows.Controls.MenuItem" /> estiver realçado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o .NET Framework versão 3.0 Service Pack 1, o <xref:System.Windows.Controls.MenuItem.IsHighlighted%2A> propriedade tem um setter protegido. Para usar essa funcionalidade, seu aplicativo deve ter como destino o .NET Framework versão 3.5.  Para obter mais informações, confira [Versões e dependências do .NET Framework](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+<a name="dependencyPropertyInfo_IsHighlighted"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.IsHighlightedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como determinar se um item de menu é realçado.  
+  
+ [!code-csharp[MenuItems_snip#MenuItemIsHighlighted](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml.cs#menuitemishighlighted)]
+ [!code-vb[MenuItems_snip#MenuItemIsHighlighted](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItems_snip/visualbasic/pane1.xaml.vb#menuitemishighlighted)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHighlightedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsHighlightedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsHighlightedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.IsHighlightedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.IsHighlighted" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Item especificado.</param>
+        <summary>Determina se o item especificado for (ou é elegível para ser) seu próprio <c>ItemContainer</c>.</summary>
+        <returns>
+          <see langword="true" />Se o item for sua própria <c>ItemContainer</c>; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPressed">
+      <MemberSignature Language="C#" Value="public bool IsPressed { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPressed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.IsPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica um <see cref="T:System.Windows.Controls.MenuItem" /> está pressionado.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.MenuItem" /> estiver pressionado, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Começando com o .NET Framework versão 3.0 Service Pack 1, o <xref:System.Windows.Controls.MenuItem.IsPressed%2A> propriedade tem um setter protegido. Para usar essa funcionalidade, seu aplicativo deve ter como destino o .NET Framework versão 3.5.  Para obter mais informações, confira [Versões e dependências do .NET Framework](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+<a name="dependencyPropertyInfo_IsPressed"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.IsPressedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Controls.MenuItem.IsPressed%2A> propriedade em um estilo de item de menu. Quando o item de menu for pressionado, o estilo de seu primeiro plano, o tamanho do texto e a alteração do estilo de texto.  
+  
+ [!code-xaml[MenuItemsStyle_snip#MenuItemsIsPressed](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemsStyle_snip/CSharp/MyApp.xaml#menuitemsispressed)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPressedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsPressedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsPressedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.IsPressedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.IsPressed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubmenuOpen">
+      <MemberSignature Language="C#" Value="public bool IsSubmenuOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSubmenuOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.IsSubmenuOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o submenu do <see cref="T:System.Windows.Controls.MenuItem" /> está aberto.</summary>
+        <value>
+          <see langword="true" /> se o submenu do <see cref="T:System.Windows.Controls.MenuItem" /> estiver aberto; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> é definido como `true`, captura do mouse está definida como o <xref:System.Windows.Controls.MenuItem> e sua subárvore.  
+  
+<a name="dependencyPropertyInfo_IsSubmenuOpen"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.IsSubmenuOpenProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como abrir um submenu de um <xref:System.Windows.Controls.MenuItem>.  Neste exemplo, o <xref:System.Windows.Controls.MenuItem> chamado `fileMenu` contém um <xref:System.Windows.Controls.MenuItem> chamado `recentFiles` que tem um submenu. Quando `fileMenu` é aberto, o <xref:System.Windows.Controls.MenuItem.SubmenuOpened> é gerado e o `FileMenu_Opened` manipulador de eventos abre o submenu `recentFiles`.  
+  
+ [!code-xaml[MenuItems_snip#IsSubMenuOpenMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml#issubmenuopenmenu)]  
+  
+ [!code-csharp[MenuItems_snip#IsSubMenuOpen](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml.cs#issubmenuopen)]
+ [!code-vb[MenuItems_snip#IsSubMenuOpen](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItems_snip/visualbasic/pane1.xaml.vb#issubmenuopen)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubmenuOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSubmenuOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSubmenuOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.IsSubmenuOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.IsSubmenuOpen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSuspendingPopupAnimation">
+      <MemberSignature Language="C#" Value="public bool IsSuspendingPopupAnimation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSuspendingPopupAnimation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.IsSuspendingPopupAnimation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se um menu suspende animações no seu <see cref="T:System.Windows.Controls.Primitives.Popup" /> controle.</summary>
+        <value>
+          <see langword="true" />Se o menu deve ser suspensa animações no seu pop-up; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsSuspendingPopupAnimation"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.IsSuspendingPopupAnimationProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSuspendingPopupAnimationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSuspendingPopupAnimationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSuspendingPopupAnimationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.IsSuspendingPopupAnimationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.IsSuspendingPopupAnimation" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerTemplateSelector">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.ItemContainerTemplateSelector ItemContainerTemplateSelector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.ItemContainerTemplateSelector ItemContainerTemplateSelector" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.ItemContainerTemplateSelector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.ItemContainerTemplateSelector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lógica personalizada para escolher um modelo usado para exibir cada item.</summary>
+        <value>Um objeto personalizado que fornece a lógica e retorna um contêiner de itens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.Windows.Controls.ItemContainerTemplateSelector> escolher contêineres de itens diferentes, se os itens na coleção são do mesmo tipo e você precisa fornecer lógica personalizada para escolher o contêiner do item.  
+  
+<a name="dependencyPropertyInfo_ItemContainerTemplateSelector"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.ItemContainerTemplateSelectorProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemContainerTemplateSelectorProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemContainerTemplateSelectorProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemContainerTemplateSelectorProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.ItemContainerTemplateSelectorProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.ItemContainerTemplateSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAccessKey">
+      <MemberSignature Language="C#" Value="protected override void OnAccessKey (System.Windows.Input.AccessKeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnAccessKey(class System.Windows.Input.AccessKeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.AccessKeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.AccessKeyManager.AccessKeyPressed" />.</param>
+        <summary>Responde quando a <see cref="P:System.Windows.Controls.AccessText.AccessKey" /> para este controle é invocado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando a árvore do modelo é gerado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChecked">
+      <MemberSignature Language="C#" Value="protected virtual void OnChecked (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChecked(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnChecked(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.MenuItem.Checked" />.</param>
+        <summary>Chamado quando o <see cref="P:System.Windows.Controls.MenuItem.IsChecked" /> propriedade torna-se <see langword="true" />. Este método gera o <see cref="E:System.Windows.Controls.MenuItem.Checked" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle gera o <xref:System.Windows.Controls.MenuItem.Checked> evento chamando <xref:System.Windows.UIElement.RaiseEvent%2A>. Para obter mais informações, consulte [Visão geral de eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Controls.MenuItem.OnChecked(System.Windows.RoutedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Controls.MenuItem.OnChecked(System.Windows.RoutedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnClick" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando um <see cref="T:System.Windows.Controls.MenuItem" /> é clicado e gera um <see cref="E:System.Windows.Controls.Primitives.ButtonBase.Click" /> eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você herdar de <xref:System.Windows.Controls.MenuItem>, certifique-se de chamar a classe base para obter o comportamento a seguir.  
+  
+-   Alternância do <xref:System.Windows.Controls.MenuItem.IsChecked%2A> propriedade.  
+  
+-   Concentre-se de que está sendo definido como o item de menu.  
+  
+-   Automação de invocação de eventos.  
+  
+-   <xref:System.Windows.Controls.MenuItem.Click>evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um apropriado <see cref="T:System.Windows.Automation.Peers.MenuItemAutomationPeer" /> implementação para este controle, como parte do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] infra-estrutura de automação.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.MenuItemAutomationPeer" /> para este <see cref="T:System.Windows.Controls.MenuItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotKeyboardFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotKeyboardFocus (System.Windows.Input.KeyboardFocusChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotKeyboardFocus(class System.Windows.Input.KeyboardFocusChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyboardFocusChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.GotFocus" />.</param>
+        <summary>Anunciar que o teclado está focalizado neste elemento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialized">
+      <MemberSignature Language="C#" Value="protected override void OnInitialized (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitialized(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnInitialized(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.FrameworkElement.Initialized" />.</param>
+        <summary>Chamado quando o <see cref="P:System.Windows.FrameworkElement.IsInitialized" /> está definida como <see langword="true" /> e gera um <see cref="E:System.Windows.FrameworkElement.Initialized" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnIsKeyboardFocusWithinChanged">
+      <MemberSignature Language="C#" Value="protected override void OnIsKeyboardFocusWithinChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnIsKeyboardFocusWithinChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.ContentElement.IsKeyboardFocusWithinChanged" />.</param>
+        <summary>Chamado quando o foco não está em ou em um <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.ItemContainerGenerator.ItemsChanged" />.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.ItemsControl.Items" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.KeyDown" />.</param>
+        <summary>Responde a <see cref="E:System.Windows.UIElement.KeyDown" /> eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.Mouse.MouseEnter" />.</param>
+        <summary>Chamado sempre que o mouse entra em um <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.Mouse.MouseLeave" />.</param>
+        <summary>Chamado sempre que o mouse sai um <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.MouseLeftButtonDown" />.</param>
+        <summary>Chamado quando o botão esquerdo do mouse é pressionado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.MouseLeftButtonUp" />.</param>
+        <summary>Chamado quando o botão esquerdo do mouse é liberado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseMove">
+      <MemberSignature Language="C#" Value="protected override void OnMouseMove (System.Windows.Input.MouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseMove(class System.Windows.Input.MouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnMouseMove(System.Windows.Input.MouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Input.Mouse.MouseMove" />.</param>
+        <summary>Chamado quando o mouse é movido sobre um item de menu.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseRightButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseRightButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseRightButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.MouseRightButtonDown" />.</param>
+        <summary>Chamado quando o botão direito do mouse é pressionado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseRightButtonUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseRightButtonUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseRightButtonUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.UIElement.MouseRightButtonUp" />.</param>
+        <summary>Chamado quando o botão direito do mouse é liberado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmenuClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnSubmenuClosed (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSubmenuClosed(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnSubmenuClosed(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.MenuItem.SubmenuClosed" />.</param>
+        <summary>Chamado quando o submenu um <see cref="T:System.Windows.Controls.MenuItem" /> está fechado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.Windows.Controls.MenuItem.OnSubmenuClosed%2A> método.  
+  
+ [!code-csharp[MenuItems_snip#SubmenuEventClosed2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml.cs#submenueventclosed2)]
+ [!code-vb[MenuItems_snip#SubmenuEventClosed2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItems_snip/visualbasic/pane1.xaml.vb#submenueventclosed2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSubmenuOpened">
+      <MemberSignature Language="C#" Value="protected virtual void OnSubmenuOpened (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSubmenuOpened(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnSubmenuOpened(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.MenuItem.SubmenuOpened" />.</param>
+        <summary>Chamado quando o submenu um <see cref="T:System.Windows.Controls.MenuItem" /> é aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.Windows.Controls.MenuItem.OnSubmenuOpened%2A> método.  
+  
+ [!code-csharp[MenuItems_snip#SubmenuEventOpened2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml.cs#submenueventopened2)]
+ [!code-vb[MenuItems_snip#SubmenuEventOpened2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItems_snip/visualbasic/pane1.xaml.vb#submenueventopened2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnchecked">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnchecked (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnchecked(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnUnchecked(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados de evento do evento <see cref="E:System.Windows.Controls.MenuItem.Unchecked" />.</param>
+        <summary>Chamado quando o <see cref="P:System.Windows.Controls.MenuItem.IsChecked" /> propriedade torna-se <see langword="false" />. Este método gera o <see cref="E:System.Windows.Controls.MenuItem.Unchecked" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle gera o <xref:System.Windows.Controls.MenuItem.Unchecked> evento chamando <xref:System.Windows.UIElement.RaiseEvent%2A>. Para obter mais informações, consulte [Visão geral de eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Controls.MenuItem.OnUnchecked(System.Windows.RoutedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Controls.MenuItem.OnUnchecked(System.Windows.RoutedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">Valor antigo do pai do visual, ou nulo se o visual não tem um pai.</param>
+        <summary>Chamado quando o pai do visual <see cref="T:System.Windows.Controls.MenuItem" /> alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">Elemento usado para exibir o item especificado.</param>
+        <param name="item">Item especificado.</param>
+        <summary>Prepara o elemento especificado para exibir o item especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Preparar o elemento pode envolver a aplicação de estilos, associações, de configuração e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.MenuItemRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.MenuItemRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.MenuItemRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica a função de um <see cref="T:System.Windows.Controls.MenuItem" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Controls.MenuItemRole" />. O padrão é <see cref="F:System.Windows.Controls.MenuItemRole.TopLevelItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Controls.MenuItem.Role%2A> depende a relação com o <xref:System.Windows.Controls.Menu> e outros <xref:System.Windows.Controls.MenuItem> objetos.  
+  
+<a name="dependencyPropertyInfo_Role"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.RoleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty RoleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty RoleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.RoleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.Role" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeparatorStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey SeparatorStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey SeparatorStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.SeparatorStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um <see cref="T:System.Windows.Controls.Separator" />.</summary>
+        <value>A chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um <see cref="T:System.Windows.Controls.Separator" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para alterar o estilo de um <xref:System.Windows.Controls.Separator> em um menu.  
+  
+<a name="xamlAttributeUsage_SeparatorStyleKey"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*objeto* *propriedade*= { **MenuItem.SeparatorStyleKey**}`"`/>  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar essa propriedade para o estilo de um <xref:System.Windows.Controls.Separator> em um <xref:System.Windows.Controls.Menu>.  
+  
+ [!code-xaml[MenuStylesSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldApplyItemContainerStyle">
+      <MemberSignature Language="C#" Value="protected override bool ShouldApplyItemContainerStyle (System.Windows.DependencyObject container, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ShouldApplyItemContainerStyle(class System.Windows.DependencyObject container, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuItem.ShouldApplyItemContainerStyle(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="container">Contêiner para o qual o estilo será aplicado.</param>
+        <param name="item">Item ao qual pertence o contêiner.</param>
+        <summary>Usado para determinar se deseja aplicar um estilo para o contêiner do item.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Windows.Controls.MenuItem" /> não é um <see cref="T:System.Windows.Controls.Separator" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpenOnClick">
+      <MemberSignature Language="C#" Value="public bool StaysOpenOnClick { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StaysOpenOnClick" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.StaysOpenOnClick" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica que o submenu no qual este <see cref="T:System.Windows.Controls.MenuItem" /> está localizado não deve fechar quando esse item é clicado.</summary>
+        <value>
+          <see langword="true" />Se o submenu no qual este <see cref="T:System.Windows.Controls.MenuItem" /> está localizado não deve fechar quando esse item é clicado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_StaysOpenOnClick"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.StaysOpenOnClickProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Controls.MenuItem.StaysOpenOnClick%2A> propriedade para criar um item em um submenu que não será fechado quando o item é clicado.  
+  
+ [!code-xaml[MenuItems_snip#SubmenuStaysOpen](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml#submenustaysopen)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StaysOpenOnClickProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty StaysOpenOnClickProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty StaysOpenOnClickProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.StaysOpenOnClickProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.StaysOpenOnClick" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmenuClosed">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler SubmenuClosed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler SubmenuClosed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MenuItem.SubmenuClosed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o estado do <see cref="P:System.Windows.Controls.MenuItem.IsSubmenuOpen" /> alteração na propriedade <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_SubmenuClosed"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.SubmenuClosedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir demonstram tratamento e chamar o <xref:System.Windows.Controls.MenuItem.SubmenuClosed> evento.  
+  
+ [!code-xaml[MenuItems_snip#SubmenuEvents1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml#submenuevents1)]  
+  
+ [!code-csharp[MenuItems_snip#SubmenuEventClosed2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml.cs#submenueventclosed2)]
+ [!code-vb[MenuItems_snip#SubmenuEventClosed2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItems_snip/visualbasic/pane1.xaml.vb#submenueventclosed2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmenuClosedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SubmenuClosedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SubmenuClosedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.SubmenuClosedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.MenuItem.SubmenuClosed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmenuHeaderTemplateKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey SubmenuHeaderTemplateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey SubmenuHeaderTemplateKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.SubmenuHeaderTemplateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um cabeçalho de um submenu.</summary>
+        <value>A chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um cabeçalho de um submenu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para alterar o estilo de um <xref:System.Windows.Controls.MenuItem> cujo <xref:System.Windows.Controls.MenuItem.Role%2A> está definida como <xref:System.Windows.Controls.MenuItemRole?displayProperty=nameWithType>.  
+  
+<a name="xamlAttributeUsage_SubmenuHeaderTemplateKey"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*objeto* *propriedade*= { **MenuItem.SubmenuHeaderTemplateKey**}`"`/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmenuItemTemplateKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey SubmenuItemTemplateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey SubmenuItemTemplateKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.SubmenuItemTemplateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um submenu.</summary>
+        <value>A chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um submenu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para alterar o estilo de um <xref:System.Windows.Controls.MenuItem> cujo <xref:System.Windows.Controls.MenuItem.Role%2A> está definida como <xref:System.Windows.Controls.MenuItemRole?displayProperty=nameWithType>.  
+  
+<a name="xamlAttributeUsage_SubmenuItemTemplateKey"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*objeto* *propriedade*= { **MenuItem.SubmenuItemTemplateKey**}`"`/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmenuOpened">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler SubmenuOpened;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler SubmenuOpened" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MenuItem.SubmenuOpened" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o estado do <see cref="P:System.Windows.Controls.MenuItem.IsSubmenuOpen" /> alteração na propriedade <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_SubmenuOpened"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.SubmenuOpenedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir demonstram tratamento e chamar o <xref:System.Windows.Controls.MenuItem.SubmenuOpened> evento.  
+  
+ [!code-xaml[MenuItems_snip#SubmenuEvents1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml#submenuevents1)]  
+  
+ [!code-csharp[MenuItems_snip#SubmenuEventOpened2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItems_snip/CSharp/Pane1.xaml.cs#submenueventopened2)]
+ [!code-vb[MenuItems_snip#SubmenuEventOpened2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItems_snip/visualbasic/pane1.xaml.vb#submenueventopened2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmenuOpenedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SubmenuOpenedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SubmenuOpenedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.SubmenuOpenedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.MenuItem.SubmenuOpened" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLevelHeaderTemplateKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey TopLevelHeaderTemplateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey TopLevelHeaderTemplateKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.TopLevelHeaderTemplateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um cabeçalho de um menu de nível superior.</summary>
+        <value>A chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando o <see cref="T:System.Windows.Controls.MenuItem" /> é um cabeçalho de um menu de nível superior.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para alterar o estilo de um <xref:System.Windows.Controls.MenuItem> cujo <xref:System.Windows.Controls.MenuItem.Role%2A> está definida como <xref:System.Windows.Controls.MenuItemRole?displayProperty=nameWithType>.  
+  
+<a name="xamlAttributeUsage_TopLevelHeaderTemplateKey"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*objeto* *propriedade*= { **MenuItem.TopLevelHeaderTemplateKey**}`"`/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLevelItemTemplateKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ResourceKey TopLevelItemTemplateKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ResourceKey TopLevelItemTemplateKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.TopLevelItemTemplateKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando ele é de nível superior <see cref="T:System.Windows.Controls.MenuItem" /> que pode invocar comandos.</summary>
+        <value>A chave de recurso para um estilo aplicado a um <see cref="T:System.Windows.Controls.MenuItem" /> quando ele é de nível superior <see cref="T:System.Windows.Controls.MenuItem" /> que pode invocar comandos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para alterar o estilo de um <xref:System.Windows.Controls.MenuItem> cujo <xref:System.Windows.Controls.MenuItem.Role%2A> está definida como <xref:System.Windows.Controls.MenuItemRole?displayProperty=nameWithType>.  
+  
+<a name="xamlAttributeUsage_TopLevelItemTemplateKey"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*objeto* *propriedade*= { **MenuItem.TopLevelItemTemplateKey**}`"`/>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unchecked">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Unchecked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Unchecked" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.MenuItem.Unchecked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Controls.MenuItem" /> está desmarcado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="routedEventInfo_Unchecked"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.UncheckedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a manipulação de <xref:System.Windows.Controls.MenuItem.Unchecked> eventos.  
+  
+ [!code-xaml[MenuItemCommandsAndEvents#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#3)]  
+  
+ [!code-csharp[MenuItemCommandsAndEvents#4](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#4)]
+ [!code-vb[MenuItemCommandsAndEvents#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UncheckedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UncheckedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UncheckedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.UncheckedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.MenuItem.Unchecked" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesItemContainerTemplate">
+      <MemberSignature Language="C#" Value="public bool UsesItemContainerTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesItemContainerTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.MenuItem.UsesItemContainerTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o menu seleciona os contêineres de itens diferentes, dependendo do tipo do item na coleção subjacente ou alguns outros heurística.</summary>
+        <value>
+          <see langword="true" />o menu seleciona itens diferentes contêineres; Caso contrário, <see langword="false" />.  
+  
+ O padrão registrado é <see langword="false" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é útil se você quiser criar um menu por associação a uma coleção.  O contêiner do item é o elemento de interface do usuário que exibe o objeto em uma coleção. Se você deseja associar a uma coleção para criar um menu que contém <xref:System.Windows.Controls.MenuItem> objetos e <xref:System.Windows.Controls.Separator> objetos, defina o <xref:System.Windows.Controls.Primitives.MenuBase.UsesItemContainerTemplate%2A> propriedade como true e criar um <xref:System.Windows.Controls.ItemContainerTemplate> para cada tipo de objeto em sua coleção.  Cada <xref:System.Windows.Controls.ItemContainerTemplate> deve conter um <xref:System.Windows.Controls.MenuItem> ou <xref:System.Windows.Controls.Separator>.  
+  
+<a name="dependencyPropertyInfo_UsesItemContainerTemplate"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.MenuItem.UsesItemContainerTemplateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesItemContainerTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty UsesItemContainerTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty UsesItemContainerTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.MenuItem.UsesItemContainerTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.MenuItem.UsesItemContainerTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

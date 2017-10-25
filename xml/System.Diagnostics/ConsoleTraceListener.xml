@@ -1,0 +1,168 @@
+<Type Name="ConsoleTraceListener" FullName="System.Diagnostics.ConsoleTraceListener">
+  <TypeSignature Language="C#" Value="public class ConsoleTraceListener : System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConsoleTraceListener extends System.Diagnostics.TextWriterTraceListener" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.ConsoleTraceListener" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TextWriterTraceListener</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Direciona a saída do rastreamento ou depuração para a saída padrão ou para o fluxo de erro padrão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.ConsoleTraceListener> classe para gravar o rastreamento e depuração de mensagens para o console. Você pode inicializar um <xref:System.Diagnostics.ConsoleTraceListener> objeto para gravar mensagens de rastreamento para o <xref:System.Console.Out%2A?displayProperty=nameWithType> fluxo ou o <xref:System.Console.Error%2A?displayProperty=nameWithType> fluxo.  
+  
+> [!IMPORTANT]
+>  <xref:System.IDisposable>interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um`try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Quando o rastreamento e depuração de saída estiver habilitado, o <xref:System.Diagnostics.ConsoleTraceListener> as mensagens são gravadas especificado <xref:System.Console?displayProperty=nameWithType> fluxo, que é semelhante à forma como as mensagens são gravadas com o <xref:System.Console.Write%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> métodos. Em um aplicativo de console, o <xref:System.Console?displayProperty=nameWithType> fluxos de saída e erro gravar mensagens na janela de console existente, ou você pode redirecionar os fluxos para gravar um <xref:System.IO.TextWriter?displayProperty=nameWithType> instância.  
+  
+> [!NOTE]
+>  Se o console não existir, como em um aplicativo baseado em Windows, não são exibidas mensagens gravadas no console.  
+  
+ Adicionar um <xref:System.Diagnostics.ConsoleTraceListener> objeto apropriado <xref:System.Diagnostics.Trace.Listeners%2A> coleção se quiser que as mensagens gravadas por meio de <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.TraceSource>, ou <xref:System.Diagnostics.Debug> para ser gravada no console. Além disso, você pode gravar mensagens diretamente para o console usando o <xref:System.Diagnostics.Trace.Write%2A?displayProperty=nameWithType> ou <xref:System.Diagnostics.Trace.WriteLine%2A?displayProperty=nameWithType> métodos.  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes compartilham o mesmo <xref:System.Diagnostics.TraceListenerCollection> coleção, acessada por meio de suas respectivas `Listeners` propriedades. Se você adicionar um <xref:System.Diagnostics.ConsoleTraceListener> objeto à coleção usando uma dessas classes, de outra classe automaticamente usa o mesmo ouvinte.  
+  
+ A maioria dos compiladores habilitar o rastreamento e depuração de saída por meio de sinalizadores de compilação condicional. Se você não habilitar o rastreamento ou a depuração, as mensagens gravadas por meio de <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> classes efetivamente são ignoradas. A sintaxe para habilitar o rastreamento e saída de depuração é compilador específico; Se você usar compiladores que não seja o c# ou Visual Basic, consulte a documentação para o compilador.  
+  
+-   Para habilitar a depuração em c#, adicione o **/d:DEBUG**sinalizador para a linha de comando do compilador quando você compila o código, ou você pode adicionar **#define depuração** à parte superior do seu arquivo. No Visual Basic, adicione o **/d:DEBUG = True** sinalizador para a linha de comando do compilador.  
+  
+-   Para habilitar o rastreamento em c#, adicione o **/d: Trace** sinalizador para a linha de comando do compilador quando você compila o código ou adiciona **#define rastreamento** à parte superior do seu arquivo. No Visual Basic, adicione o **/d: Trace = True** sinalizador para a linha de comando do compilador.  
+  
+ Você pode adicionar uma <xref:System.Diagnostics.ConsoleTraceListener> do objeto para o <xref:System.Diagnostics.Trace.Listeners%2A> coleção em seu código, ou você pode adicionar uma <xref:System.Diagnostics.ConsoleTraceListener> do objeto para o <xref:System.Diagnostics.Trace.Listeners%2A> coleção por meio do arquivo de configuração do aplicativo. Adicionar o <xref:System.Diagnostics.ConsoleTraceListener> objeto em seu código para escrever mensagens para um caminho de seção ou de execução de código específico. Adicionar o <xref:System.Diagnostics.ConsoleTraceListener> objeto em seu arquivo de configuração do aplicativo para direcionar todas as rastreamento e depuração mensagens para o console, enquanto o aplicativo está sendo executado.  
+  
+ Para gravar o rastreamento e depurará mensagens no console para uma seção de código, inicializar um <xref:System.Diagnostics.ConsoleTraceListener> de objeto e adicioná-lo para o <xref:System.Diagnostics.Trace.Listeners%2A> coleção. Instrumentar a seção de código que contém mensagens usando o <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> classes. No final da seção de código, remova o <xref:System.Diagnostics.ConsoleTraceListener> de objeto o <xref:System.Diagnostics.Trace.Listeners%2A> coleção e chame o <xref:System.Diagnostics.TextWriterTraceListener.Close%2A> método no <xref:System.Diagnostics.ConsoleTraceListener>.  
+  
+ Para direcionar o rastreamento de todas as e mensagens para o console de depuração, enquanto o aplicativo executa, adicione um <xref:System.Diagnostics.ConsoleTraceListener> objeto para o arquivo de configuração do aplicativo. Editar o arquivo de configuração que corresponde ao nome do seu aplicativo, ou o arquivo App. config em um [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] projeto. Nesse arquivo, insira um elemento para uma <xref:System.Diagnostics.ConsoleTraceListener>.  
+  
+ O exemplo a seguir adiciona uma <xref:System.Diagnostics.ConsoleTraceListener> objeto chamado `configConsoleListener` para o <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="4">  
+      <listeners>  
+        <add name="configConsoleListener"            type="System.Diagnostics.ConsoleTraceListener" />  
+      </listeners>  
+    </trace>  
+  </system.diagnostics>  
+ </configuration>  
+```  
+  
+ Para obter detalhes sobre como adicionar ouvintes de rastreamento no arquivo de configuração do aplicativo, consulte [ &lt;ouvintes&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir implementa um aplicativo de console que consiste em uma classe com dois métodos públicos.  
+  
+ O `Main` método examina os argumentos de linha de comando e determina se a saída de rastreamento deve ser direcionada para o fluxo de erro padrão ou o fluxo de saída padrão. `Main`cria e inicializa um <xref:System.Diagnostics.ConsoleTraceListener> objeto especificado <xref:System.Console> fluxo de saída e adiciona esse objeto à coleção de ouvinte de rastreamento. Depois, ele chama o `WriteEnvironmentInfoToTrace` método, que grava os detalhes sobre o ambiente de execução e a configuração de ouvinte de rastreamento para a saída de rastreamento.  
+  
+ Quando o aplicativo de exemplo é executado, os detalhes de configuração do ambiente e de rastreamento são gravados para o fluxo de saída de console especificada por meio de <xref:System.Diagnostics.ConsoleTraceListener> objeto.  
+  
+ [!code-csharp[Diagnostics_ConsoleTraceListener#1](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/CS/program.cs#1)]
+ [!code-vb[Diagnostics_ConsoleTraceListener#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/VB/consoletrace.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleTraceListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ConsoleTraceListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.ConsoleTraceListener" /> classe com saída de rastreamento gravada para o fluxo de saída padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Diagnostics.ConsoleTraceListener> objeto para gravar mensagens para o <xref:System.Console.Out%2A?displayProperty=nameWithType> fluxo. Seu <xref:System.Diagnostics.TraceListener.Name%2A> propriedade é inicializada para uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo inicializa um <xref:System.Diagnostics.ConsoleTraceListener> objeto especificado <xref:System.Console> fluxo de saída e o adiciona à coleção de ouvinte de rastreamento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.ConsoleTraceListener> classe.  
+  
+ [!code-csharp[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/CS/program.cs#2)]
+ [!code-vb[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/VB/consoletrace.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleTraceListener (bool useErrorStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useErrorStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ConsoleTraceListener.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useErrorStream" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useErrorStream">
+          <see langword="true" />para gravar o rastreamento e depuração de saída para o fluxo de erro padrão; <see langword="false" /> para gravar o rastreamento e depuração de saída para o fluxo de saída padrão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.ConsoleTraceListener" /> classe com uma opção para gravar a saída de rastreamento para o fluxo de saída padrão ou o fluxo de erro padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Diagnostics.ConsoleTraceListener> objeto para gravar mensagens no <xref:System.Console.Out%2A?displayProperty=nameWithType> ou <xref:System.Console.Error%2A?displayProperty=nameWithType> fluxo. Seu <xref:System.Diagnostics.TraceListener.Name%2A> propriedade é inicializada para uma cadeia de caracteres vazia ("").  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo inicializa um <xref:System.Diagnostics.ConsoleTraceListener> objeto especificado <xref:System.Console> fluxo de saída e o adiciona à coleção de ouvinte de rastreamento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.ConsoleTraceListener> classe.  
+  
+ [!code-csharp[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/CS/program.cs#2)]
+ [!code-vb[Diagnostics_ConsoleTraceListener#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_ConsoleTraceListener/VB/consoletrace.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.ConsoleTraceListener.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha a saída para o fluxo especificado para este ouvinte de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fluxo especificado para este <xref:System.Diagnostics.ConsoleTraceListener> instância (ou o <xref:System.Console.Out%2A?displayProperty=nameWithType> fluxo ou <xref:System.Console.Error%2A?displayProperty=nameWithType> fluxo) está fechado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

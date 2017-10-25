@@ -1,0 +1,48 @@
+<Type Name="StopStoryboard" FullName="System.Windows.Media.Animation.StopStoryboard">
+  <TypeSignature Language="C#" Value="public sealed class StopStoryboard : System.Windows.Media.Animation.ControllableStoryboardAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StopStoryboard extends System.Windows.Media.Animation.ControllableStoryboardAction" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.StopStoryboard" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.ControllableStoryboardAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma ação de gatilho que interrompe um <see cref="T:System.Windows.Media.Animation.Storyboard" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.Windows.Media.Animation.StopStoryboard> ação com um <xref:System.Windows.EventTrigger> ou <xref:System.Windows.Trigger> interativamente parar um <xref:System.Windows.Media.Animation.Storyboard>.  
+  
+ <xref:System.Windows.Media.Animation.StopStoryboard>afeta somente uma <xref:System.Windows.Media.Animation.Storyboard> quando ele estiver ativo (depois que o <xref:System.Windows.Media.Animation.Storyboard> é iniciado). Interrompendo um gatilhos de storyboard a <xref:System.Windows.Media.Animation.Timeline.CurrentGlobalSpeedInvalidated> e <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> eventos, mas não o <xref:System.Windows.Media.Animation.Timeline.Completed> evento.  
+  
+ <xref:System.Windows.Media.Animation.PauseStoryboard>não faz referência a um <xref:System.Windows.Media.Animation.Storyboard> diretamente. Em vez disso, <xref:System.Windows.Media.Animation.PauseStoryboard> deve fazer referência a <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> do <xref:System.Windows.Media.Animation.BeginStoryboard> que controla o <xref:System.Windows.Media.Animation.Storyboard>. Consulte [como: usar gatilhos de eventos para controlar um Storyboard após iniciar](~/docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md) para obter um exemplo.  
+  
+## <a name="pause-resume-stop-or-otherwise-control-a-storyboard-interactively"></a>Pausar, retomar, parar ou controlar um Storyboard interativamente  
+ Para pausar, retomar ou controlar um <xref:System.Windows.Media.Animation.BeginStoryboard.Storyboard%2A> interativamente, defina o <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propriedade do seu <xref:System.Windows.Media.Animation.BeginStoryboard> e usar um <xref:System.Windows.Media.Animation.ControllableStoryboardAction> objeto (como <xref:System.Windows.Media.Animation.PauseStoryboard>, <xref:System.Windows.Media.Animation.ResumeStoryboard>, ou <xref:System.Windows.Media.Animation.StopStoryboard>) controlá-lo fazendo referência a seu <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>. Se o <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> de <xref:System.Windows.Media.Animation.BeginStoryboard> não for especificado, o <xref:System.Windows.Media.Animation.BeginStoryboard.Storyboard%2A> não pode ser controlado interativamente depois que ele é iniciado. Consulte [como: usar gatilhos de eventos para controlar um Storyboard após iniciar](~/docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md) para obter mais informações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StopStoryboard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.StopStoryboard.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.StopStoryboard" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

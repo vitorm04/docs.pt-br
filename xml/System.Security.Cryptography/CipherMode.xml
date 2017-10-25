@@ -1,0 +1,170 @@
+<Type Name="CipherMode" FullName="System.Security.Cryptography.CipherMode">
+  <TypeSignature Language="C#" Value="public enum CipherMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CipherMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CipherMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o modo de codificação de bloco a ser usado para criptografia.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algoritmos de criptografia do bloco criptografam dados em unidades de bloco, em vez de um único byte por vez. O tamanho do bloco mais comum é de 8 bytes. Como cada bloco é processado muito, codificações em bloco fornecem um nível mais alto de segurança que codificações em fluxo. No entanto, os algoritmos de criptografia do bloco tendem a executar mais lentamente do que codificações em fluxo.  
+  
+ Codificações em bloco usam o mesmo algoritmo de criptografia para cada bloco. Por isso, um bloco de texto sem formatação sempre retornará o mesmo texto de codificação quando criptografada com a mesma chave e algoritmo. Como esse comportamento pode ser usado para descobrir uma codificação, modos de criptografia são introduzidos que modificam o processo de criptografia com base nos comentários de criptografias de bloco anteriores. A criptografia resultante fornece um nível mais alto de segurança que a criptografia de um bloco simples.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CBC">
+      <MemberSignature Language="C#" Value="CBC" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode CBC = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.CBC" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo Encadeamento de Blocos de Criptografia (<see langword="CBC" />) apresenta comentários. Antes de cada bloco de texto sem formatação é criptografado, ele é combinado com o texto cifrado do bloco anterior por uma operação OR exclusiva bit a bit. Isso garante que mesmo se o texto sem formatação contém muitos blocos idênticos, eles cada criptografará para um bloco de texto cifrado diferente. O vetor de inicialização é combinado com o primeiro bloco de texto sem formatação por uma operação OR exclusiva bit a bit antes do bloco é criptografado. Se um único bit do bloco de texto cifrado é desconfigurado, o bloco de texto sem formatação correspondente também será desconfigurado. Além disso, um bit no bloco subsequente, na mesma posição que o bit danificado original, será danificado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CFB">
+      <MemberSignature Language="C#" Value="CFB" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode CFB = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.CFB" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo Comentários de Criptografia (<see langword="CFB" />) processa pequenos incrementos de texto sem formatação em texto criptografado, em vez de processar um bloco inteiro por vez. Esse modo usa um registro de turno que é um bloco de comprimento e é dividido em seções. Por exemplo, se o tamanho do bloco é de 8 bytes, com um byte processado ao mesmo tempo, o registro de turno é dividido em seções de oito. Se um bit na codificação de texto é desconfigurado, um bit de texto sem formatação é desconfigurado e o registro de turno está corrompido. Isso resulta nos incrementos de texto sem formatação várias Avançar sendo desconfigurados até que o bit incorreto é deslocado fora o registro de turno. O tamanho do comentário padrão pode variar de acordo com o algoritmo, mas normalmente é 8 bits ou o número de bits do tamanho do bloco. Você pode alterar o número de bits de comentários usando o <see cref="P:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize" /> propriedade. Os algoritmos que dão suporte a CFB usam essa propriedade para definir os comentários.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CTS">
+      <MemberSignature Language="C#" Value="CTS" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode CTS = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.CTS" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo Roubo de Texto Criptografado (<see langword="CTS" />) trata qualquer tamanho de texto sem formatação e produz texto criptografado cujo tamanho corresponde ao tamanho do texto sem formatação. Esse modo se comporta como o modo <see langword="CBC" /> para todos, exceto para os dois últimos blocos do texto sem formatação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ECB">
+      <MemberSignature Language="C#" Value="ECB" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode ECB = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.ECB" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo Livro de Códigos Eletrônico (<see langword="ECB" />) criptografa cada bloco individualmente. Todos os blocos de texto sem formatação que são idênticos e estão na mesma mensagem ou que estão em uma mensagem criptografada diferente com a mesma chave, serão transformados em blocos de texto criptografado idênticos. **Importante**: este modo não é recomendado porque ela abre as portas para várias explorações de segurança. Se o texto sem formatação a ser criptografado contiver repetição substancial, é provável que o texto criptografado será dividido em um bloco por vez. Também é possível usar a análise de bloco para determinar a chave de criptografia. Além disso, um adversário ativo pode substituir e trocar blocos individuais sem detecção, o que permite que os blocos sejam salvos e inseridos no fluxo em outros pontos sem detecção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OFB">
+      <MemberSignature Language="C#" Value="OFB" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CipherMode OFB = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CipherMode.OFB" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CipherMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O modo Comentários de Saída (<see langword="OFB" />) processa pequenos incrementos de texto sem formatação em texto criptografado em vez de processar um bloco inteiro por vez. Esse modo é semelhante ao <see langword="CFB" />; o somente a diferença entre os dois modos é a maneira que registram o turno é preenchido. Se um bit na codificação de texto é desconfigurado, o bit correspondente de texto sem formatação será desconfigurado. No entanto, se houver bits extras ou ausentes do texto criptografado, o texto sem formatação será danificado desse ponto.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

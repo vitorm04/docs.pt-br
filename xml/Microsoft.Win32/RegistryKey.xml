@@ -1,0 +1,2298 @@
+<Type Name="RegistryKey" FullName="Microsoft.Win32.RegistryKey">
+  <TypeSignature Language="C#" Value="public sealed class RegistryKey : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RegistryKey extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.RegistryKey" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um nó de nível de chave no Registro do Windows. Essa classe é um encapsulamento de Registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+ O registro atua como um repositório central de informações para o sistema operacional e os aplicativos em um computador. O registro é organizado em um formato hierárquico, com base em uma ordem lógica dos elementos armazenados nele (consulte <xref:Microsoft.Win32.Registry> para os itens de nível básico nesta hierarquia). Ao armazenar informações no registro, selecione o local apropriado com base no tipo de informações que estão sendo armazenados. Certifique-se de evitar destruir informações criadas por outros aplicativos, pois isso pode fazer com que esses aplicativos exibem um comportamento inesperado e também pode ter um efeito adverso em seu próprio aplicativo.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Chaves do registro são a unidade básica de organização no registro e podem ser comparadas com pastas no Explorador de arquivos. Uma determinada chave pode ter subchaves, assim como uma pasta pode ter subpastas. Cada chave pode ser excluído, contanto que o usuário tem as permissões apropriadas para fazer isso, e a chave não é uma chave de base ou no nível de diretamente sob as chaves de base. Cada chave também pode ter vários valores associados a ele (um valor pode ser comparado a um arquivo), que são usados para armazenar as informações — por exemplo, informações sobre um aplicativo instalado no computador. Cada valor contém um elemento específico de informação, que pode ser recuperado ou atualizada quando necessário. Por exemplo, você pode criar um <xref:Microsoft.Win32.RegistryKey> para sua empresa, sob a chave HKEY_LOCAL_MACHINE\Software e, em seguida, uma subchave para cada aplicativo que cria sua empresa. Cada subchave armazena as informações específicas para esse aplicativo, como configurações de cor, tamanho e local na tela ou extensões de arquivo reconhecidas.  
+  
+ Observe que informações armazenadas no registro estão disponíveis para outros usuários e aplicativos e, portanto, não devem ser usadas para armazenar informações de aplicativos críticos ou dados de segurança.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+ A partir de [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o comprimento de uma chave do registro não está mais limitado a 255 caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma subchave em HKEY_CURRENT_USER, manipular seu conteúdo e, em seguida, exclua a subchave.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha a chave e libera-a no disco se o conteúdo foi modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar este método em chaves do sistema não terá efeito, como as chaves do sistema nunca são fechadas.  
+  
+ Esse método não fará nada se chamá-lo em uma instância de `RegistryKey` que já está fechado.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#4)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#4)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CreateSubKey (string subkey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey CreateSubKey(string subkey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.CreateSubKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome ou o caminho da subchave a ser criado ou aberto. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <summary>Cria uma nova subchave ou abre uma subchave existente para acesso de gravação.</summary>
+        <returns>A subchave recém-criada ou <see langword="null" /> caso a operação tenha falhado. Se uma cadeia de caracteres de comprimento zero for especificada para <paramref name="subkey" />, o objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para executar esta ação, o usuário deve ter permissão neste nível e abaixo na hierarquia do registro.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma subchave em HKEY_CURRENT_USER, manipular seu conteúdo e, em seguida, exclua a subchave.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou abrir a chave do Registro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> no qual esse método é invocado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Não é possível gravar no <see cref="T:Microsoft.Win32.RegistryKey" />; por exemplo, ele não foi aberto como uma chave gravável ou o usuário não tem os direitos de acesso necessários.</exception>
+        <exception cref="T:System.IO.IOException">O nível de aninhamento excede 510.  
+  
+ -ou-  
+  
+ Ocorreu um erro de sistema, como a exclusão da chave ou uma tentativa de criar uma chave na raiz do <see cref="F:Microsoft.Win32.Registry.LocalMachine" />.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de modificar a chave de registro especificado se ele existir, ou para a capacidade de criar a chave do registro em caso de ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CreateSubKey (string subkey, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey CreateSubKey(string subkey, valuetype Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.CreateSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="permissionCheck" Type="Microsoft.Win32.RegistryKeyPermissionCheck" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome ou o caminho da subchave a ser criado ou aberto. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="permissionCheck">Um dos valores de enumeração que especifica se a chave é aberta para acesso de leitura ou de leitura/gravação.</param>
+        <summary>Cria uma nova subchave ou abre uma subchave existente para acesso de gravação, usando a opção de verificação de permissão especificada.</summary>
+        <returns>A subchave recém-criada ou <see langword="null" /> caso a operação tenha falhado. Se uma cadeia de caracteres de comprimento zero for especificada para <paramref name="subkey" />, o objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para executar esta ação, o usuário deve ter permissão neste nível e abaixo na hierarquia do registro.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+ Para usar o método <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>, você deve ter uma instância da classe <xref:Microsoft.Win32.RegistryKey>. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou abrir a chave do Registro.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="permissionCheck" /> contém um valor inválido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> no qual esse método é invocado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Não é possível gravar no <see cref="T:Microsoft.Win32.RegistryKey" />; por exemplo, ele não foi aberto como uma chave gravável ou o usuário não tem os direitos de acesso necessários.</exception>
+        <exception cref="T:System.IO.IOException">O nível de aninhamento excede 510.  
+  
+ -ou-  
+  
+ Ocorreu um erro de sistema, como a exclusão da chave ou uma tentativa de criar uma chave na raiz do <see cref="F:Microsoft.Win32.Registry.LocalMachine" />.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de modificar a chave de registro especificado se ele existir, ou para a capacidade de criar a chave do registro em caso de ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CreateSubKey (string subkey, bool writable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey CreateSubKey(string subkey, bool writable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.CreateSubKey(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="writable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome ou o caminho da subchave a ser criado ou aberto. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="writable">
+          <see langword="true" /> para indicar que a nova subchave é gravável; caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma nova subchave ou abre uma subchave existente com o acesso especificado.  
+  
+ Disponível a partir do [!INCLUDE[net_v46](~/includes/net-v46-md.md)]</summary>
+        <returns>A subchave recém-criada ou <see langword="null" /> caso a operação tenha falhado. Se uma cadeia de caracteres de comprimento zero for especificada para <paramref name="subkey" />, o objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para executar esta ação, o usuário deve ter permissão neste nível e abaixo na hierarquia do registro.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+ Para usar o método <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>, você deve ter uma instância da classe <xref:Microsoft.Win32.RegistryKey>. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou abrir a chave do Registro.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Não é possível gravar no <see cref="T:Microsoft.Win32.RegistryKey" /> atual; por exemplo, ele não foi aberto como uma chave gravável ou o usuário não tem os direitos de acesso necessários.</exception>
+        <exception cref="T:System.IO.IOException">O nível de aninhamento excede 510.  
+  
+ -ou-  
+  
+ Ocorreu um erro de sistema, como a exclusão da chave ou uma tentativa de criar uma chave na raiz do <see cref="F:Microsoft.Win32.Registry.LocalMachine" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CreateSubKey (string subkey, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, Microsoft.Win32.RegistryOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey CreateSubKey(string subkey, valuetype Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, valuetype Microsoft.Win32.RegistryOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.CreateSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,Microsoft.Win32.RegistryOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="permissionCheck" Type="Microsoft.Win32.RegistryKeyPermissionCheck" />
+        <Parameter Name="options" Type="Microsoft.Win32.RegistryOptions" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome ou o caminho da subchave a ser criado ou aberto.</param>
+        <param name="permissionCheck">Um dos valores de enumeração que especifica se a chave é aberta para acesso de leitura ou de leitura/gravação.</param>
+        <param name="options">A opção de Registro a ser usada, por exemplo, que cria uma chave volátil.</param>
+        <summary>Cria uma subchave ou abre uma subchave para acesso de gravação, usando as opções de verificação e Registro de permissão especificadas.</summary>
+        <returns>A subchave recém-criada ou <see langword="null" /> caso a operação tenha falhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter atual <xref:Microsoft.Win32.RegistryKey> de objeto, especifique uma cadeia de caracteres vazia ("") para `subkey`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Não é possível gravar no objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual; por exemplo, ele não foi aberto como uma chave gravável ou o usuário não tem os direitos de acesso necessários.</exception>
+        <exception cref="T:System.IO.IOException">O nível de aninhamento excede 510.  
+  
+ -ou-  
+  
+ Ocorreu um erro de sistema, como a exclusão da chave ou uma tentativa de criar uma chave na raiz do <see cref="F:Microsoft.Win32.Registry.LocalMachine" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou abrir a chave do Registro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CreateSubKey (string subkey, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, System.Security.AccessControl.RegistrySecurity registrySecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey CreateSubKey(string subkey, valuetype Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, class System.Security.AccessControl.RegistrySecurity registrySecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.CreateSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,System.Security.AccessControl.RegistrySecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="permissionCheck" Type="Microsoft.Win32.RegistryKeyPermissionCheck" />
+        <Parameter Name="registrySecurity" Type="System.Security.AccessControl.RegistrySecurity" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome ou o caminho da subchave a ser criado ou aberto. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="permissionCheck">Um dos valores de enumeração que especifica se a chave é aberta para acesso de leitura ou de leitura/gravação.</param>
+        <param name="registrySecurity">A segurança de controle de acesso para a nova chave.</param>
+        <summary>Cria uma nova subchave ou abre uma subchave existente para acesso de gravação, usando a segurança do Registro e a opção de verificação de permissão especificada.</summary>
+        <returns>A subchave recém-criada ou <see langword="null" /> caso a operação tenha falhado. Se uma cadeia de caracteres de comprimento zero for especificada para <paramref name="subkey" />, o objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> método cria uma chave do registro que contém o controle de acesso especificado pelo `registrySecurity` parâmetro. O <xref:Microsoft.Win32.RegistryKey> objeto retornado representa a chave do registro, mas esse objeto não é restrito pelo controle de acesso especificado no `registrySecurity` parâmetro.  
+  
+ Se `permissionCheck` é <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>, a chave é aberta para acesso de leitura/gravação. Se `permissionCheck` é <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>, a chave é aberta para acesso de leitura.  
+  
+ Para compatibilidade com versões anteriores, a chave é aberta para leitura e gravação se `permissionCheck` é <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType> e também tem a chave pai <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>. Se a chave pai tiver qualquer outra configuração, o status de leitura/gravação é controlado pela configuração da chave pai.  
+  
+ Para executar esta ação, o usuário deve ter permissões neste nível e abaixo na hierarquia do registro.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+ Para usar o método <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>, você deve ter uma instância da classe <xref:Microsoft.Win32.RegistryKey>. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou abrir a chave do Registro.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="permissionCheck" /> contém um valor inválido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> no qual esse método é invocado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Não é possível gravar no <see cref="T:Microsoft.Win32.RegistryKey" /> atual; por exemplo, ele não foi aberto como uma chave gravável ou o usuário não tem os direitos de acesso necessários.</exception>
+        <exception cref="T:System.IO.IOException">O nível de aninhamento excede 510.  
+  
+ -ou-  
+  
+ Ocorreu um erro de sistema, como a exclusão da chave ou uma tentativa de criar uma chave na raiz do <see cref="F:Microsoft.Win32.Registry.LocalMachine" />.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de modificar a chave de registro especificado se ele existir, ou para a capacidade de criar a chave do registro em caso de ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CreateSubKey (string subkey, bool writable, Microsoft.Win32.RegistryOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey CreateSubKey(string subkey, bool writable, valuetype Microsoft.Win32.RegistryOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.CreateSubKey(System.String,System.Boolean,Microsoft.Win32.RegistryOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="writable" Type="System.Boolean" />
+        <Parameter Name="options" Type="Microsoft.Win32.RegistryOptions" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome ou o caminho da subchave a ser criado ou aberto. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="writable">
+          <see langword="true" /> para indicar que a nova subchave é gravável; caso contrário, <see langword="false" />.</param>
+        <param name="options">A opção de Registro a ser usada.</param>
+        <summary>Cria uma nova subchave ou abre uma subchave existente com o acesso especificado.  
+  
+ Disponível a partir do [!INCLUDE[net_v46](~/includes/net-v46-md.md)]</summary>
+        <returns>A subchave recém-criada ou <see langword="null" /> caso a operação tenha falhado. Se uma cadeia de caracteres de comprimento zero for especificada para <paramref name="subkey" />, o objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para executar esta ação, o usuário deve ter permissão neste nível e abaixo na hierarquia do registro.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+ Para usar o método <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>, você deve ter uma instância da classe <xref:Microsoft.Win32.RegistryKey>. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" /> não especifica uma Opção válida</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou abrir a chave do Registro.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Não é possível gravar no <see cref="T:Microsoft.Win32.RegistryKey" /> atual; por exemplo, ele não foi aberto como uma chave gravável ou o usuário não tem os direitos de acesso necessários.</exception>
+        <exception cref="T:System.IO.IOException">O nível de aninhamento excede 510.  
+  
+ -ou-  
+  
+ Ocorreu um erro de sistema, como a exclusão da chave ou uma tentativa de criar uma chave na raiz do <see cref="F:Microsoft.Win32.Registry.LocalMachine" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey CreateSubKey (string subkey, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, Microsoft.Win32.RegistryOptions registryOptions, System.Security.AccessControl.RegistrySecurity registrySecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey CreateSubKey(string subkey, valuetype Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, valuetype Microsoft.Win32.RegistryOptions registryOptions, class System.Security.AccessControl.RegistrySecurity registrySecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.CreateSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,Microsoft.Win32.RegistryOptions,System.Security.AccessControl.RegistrySecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="permissionCheck" Type="Microsoft.Win32.RegistryKeyPermissionCheck" />
+        <Parameter Name="registryOptions" Type="Microsoft.Win32.RegistryOptions" />
+        <Parameter Name="registrySecurity" Type="System.Security.AccessControl.RegistrySecurity" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome ou o caminho da subchave a ser criado ou aberto.</param>
+        <param name="permissionCheck">Um dos valores de enumeração que especifica se a chave é aberta para acesso de leitura ou de leitura/gravação.</param>
+        <param name="registryOptions">A opção de Registro a ser usada.</param>
+        <param name="registrySecurity">A segurança de controle de acesso para a nova subchave.</param>
+        <summary>Cria uma subchave ou abre uma subchave para acesso de gravação, usando a opção de verificação de permissão, opção de Registro e a segurança de Registro especificadas.</summary>
+        <returns>A subchave recém-criada ou <see langword="null" /> caso a operação tenha falhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter atual <xref:Microsoft.Win32.RegistryKey> de objeto, especifique uma cadeia de caracteres vazia ("") para `subkey`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual está fechado. Chaves fechadas não podem ser acessadas.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">Não é possível gravar no objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual; por exemplo, ele não foi aberto como uma chave gravável ou o usuário não tem os direitos de acesso necessários.</exception>
+        <exception cref="T:System.IO.IOException">O nível de aninhamento excede 510.  
+  
+ -ou-  
+  
+ Ocorreu um erro de sistema, como a exclusão da chave ou uma tentativa de criar uma chave na raiz do <see cref="F:Microsoft.Win32.Registry.LocalMachine" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou abrir a chave do Registro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSubKey">
+      <MemberSignature Language="C#" Value="public void DeleteSubKey (string subkey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteSubKey(string subkey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.DeleteSubKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome da subchave a ser excluída. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <summary>Exclui a subchave especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para excluir as subchaves filho, use <xref:Microsoft.Win32.RegistryKey.DeleteSubKeyTree%2A>.  
+  
+ Tenha cuidado ao excluir chaves do registro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#5](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source2.cpp#5)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#5](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source2.cs#5)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source2.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="subkey" /> tem subchaves filhas</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="subkey" /> não especifica uma chave do Registro válida</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" /></exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para excluir a chave.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de modificar a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSubKey">
+      <MemberSignature Language="C#" Value="public void DeleteSubKey (string subkey, bool throwOnMissingSubKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteSubKey(string subkey, bool throwOnMissingSubKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.DeleteSubKey(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="throwOnMissingSubKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome da subchave a ser excluída. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="throwOnMissingSubKey">Indica se uma exceção deverá ser gerada se a subchave especificada não puder ser encontrada. Se esse argumento for <see langword="true" /> e a subchave especificada não existir, uma exceção será gerada. Se esse argumento for <see langword="false" /> e a subchave especificada não existir, nenhuma ação será gerada.</param>
+        <summary>Exclui a subchave especificada e define se uma exceção será gerada se a subchave não for encontrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para excluir as subchaves filho, use <xref:Microsoft.Win32.RegistryKey.DeleteSubKeyTree%2A>.  
+  
+ Tenha cuidado ao excluir chaves do registro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          O <paramref name="subkey" /> tem subchaves filho.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subkey" /> não especifica uma chave do Registro válida e <paramref name="throwOnMissingSubKey" /> é <see langword="true" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para excluir a chave.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de modificar a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSubKeyTree">
+      <MemberSignature Language="C#" Value="public void DeleteSubKeyTree (string subkey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteSubKeyTree(string subkey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.DeleteSubKeyTree(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">A subchave a ser excluída. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <summary>Exclui uma subchave e as subchaves filho recursivamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve ter permissões adequadas para excluir a subchave e sua árvore.  
+  
+> [!CAUTION]
+>  Excluir uma determinada chave removerá todas as entradas abaixo da chave na árvore. Nenhum aviso será fornecido. Se você quiser excluir uma subchave somente quando ele tem subchaves nenhum filho, use o <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A> método.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#4)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#4)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Tentativa de exclusão de um hive raiz.  
+  
+ -ou-  
+  
+ O <paramref name="subkey" /> não especifica uma subchave do Registro válida.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para excluir a chave.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de modificar a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSubKeyTree">
+      <MemberSignature Language="C#" Value="public void DeleteSubKeyTree (string subkey, bool throwOnMissingSubKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteSubKeyTree(string subkey, bool throwOnMissingSubKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.DeleteSubKeyTree(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subkey" Type="System.String" />
+        <Parameter Name="throwOnMissingSubKey" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="subkey">O nome da subchave a ser excluída. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="throwOnMissingSubKey">Indica se uma exceção deverá ser gerada se a subchave especificada não puder ser encontrada. Se esse argumento for <see langword="true" /> e a subchave especificada não existir, uma exceção será gerada. Se esse argumento for <see langword="false" /> e a subchave especificada não existir, nenhuma ação será gerada.</param>
+        <summary>Exclui a subchave especificada e qualquer subchave filho recursivamente, bem como especifica se uma exceção será gerada se a subchave não for encontrada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Foi feita uma tentativa de excluir o hive raiz da árvore.  
+  
+ -ou-  
+  
+ O <paramref name="subkey" /> não especifica uma subchave do Registro válida e <paramref name="throwOnMissingSubKey" /> é <see langword="true" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="subkey" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para excluir a chave.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de modificar a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteValue">
+      <MemberSignature Language="C#" Value="public void DeleteValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.DeleteValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser excluído.</param>
+        <summary>Exclui o valor especificado dessa chave.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No Windows 95, Windows 98, Windows 98 Segunda edição e Windows Millennium Edition, especificando uma cadeia de caracteres vazia para o `name` parâmetro não exclui o valor padrão.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#3](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#3)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#3](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#3)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="name" /> não é uma referência válida para um valor.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para excluir o valor.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> manipulado é somente leitura.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de excluir a chave do Registro especificada. Enumerações associadas:<see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteValue">
+      <MemberSignature Language="C#" Value="public void DeleteValue (string name, bool throwOnMissingValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteValue(string name, bool throwOnMissingValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.DeleteValue(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="throwOnMissingValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser excluído.</param>
+        <param name="throwOnMissingValue">Indica se uma exceção deverá ser gerada se o valor especificado não puder ser encontrado. Se esse argumento for <see langword="true" /> e o valor especificado não existir, uma exceção será gerada. Se esse argumento for <see langword="false" /> e o valor especificado não existir, nenhuma ação será tomada.</param>
+        <summary>Exclui o valor especificado dessa chave e especifica se uma exceção será gerada se o valor não for encontrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `throwOnMissingValue` é `false`, não é possível saber se a exclusão foi bem-sucedida, sem tentar acessar o valor excluído apenas posteriormente. Portanto, tenha cuidado ao excluir os valores do registro dessa maneira.  
+  
+ No Windows 95, Windows 98, Windows 98 Segunda edição e Windows Millennium Edition, especificando uma cadeia de caracteres vazia para o `name` parâmetro não exclui o valor padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> não é uma referência válida para um valor e <paramref name="throwOnMissingValue" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para excluir o valor.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> manipulado é somente leitura.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de excluir a chave do Registro especificada. Enumerações associadas:<see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:Microsoft.Win32.RegistryKey" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:Microsoft.Win32.RegistryKey>. O `Dispose` método deixa o <xref:Microsoft.Win32.RegistryKey> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:Microsoft.Win32.RegistryKey> para o coletor de lixo possa recuperar a memória que o <xref:Microsoft.Win32.RegistryKey> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:Microsoft.Win32.RegistryKey>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:Microsoft.Win32.RegistryKey> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava no Registro todos os atributos da chave do Registro aberta especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é necessário chamar `Flush` para gravar as alterações para uma chave. Alterações no registro são liberadas para disco quando o liberador lento do usa o registro. Liberando lento ocorre regularmente e automaticamente após um intervalo de tempo especificado pelo sistema. Alterações no registro também são liberadas para o disco no desligamento do sistema.  
+  
+ Ao contrário de <xref:Microsoft.Win32.RegistryKey.Close%2A>, o `Flush` função retorna somente quando todos os dados foram gravadas no registro.  
+  
+ O `Flush` função também pode gravar partes de ou todas as outras chaves. Chamar essa função excessivamente pode ter um efeito negativo no desempenho de um aplicativo.  
+  
+ Um aplicativo só deve chamar `Flush` se ele deve ser absoluto determinados que alterações de registro são gravadas no disco. Em geral, `Flush` raramente, ou nunca, precisa ser usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHandle">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.RegistryKey FromHandle (Microsoft.Win32.SafeHandles.SafeRegistryHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Win32.RegistryKey FromHandle(class Microsoft.Win32.SafeHandles.SafeRegistryHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.FromHandle(Microsoft.Win32.SafeHandles.SafeRegistryHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="Microsoft.Win32.SafeHandles.SafeRegistryHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">O identificador da chave do Registro.</param>
+        <summary>Cria uma chave do Registro com base em um identificador especificado.</summary>
+        <returns>Um chave do Registro.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="handle" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para realizar essa ação.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHandle">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.RegistryKey FromHandle (Microsoft.Win32.SafeHandles.SafeRegistryHandle handle, Microsoft.Win32.RegistryView view);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Win32.RegistryKey FromHandle(class Microsoft.Win32.SafeHandles.SafeRegistryHandle handle, valuetype Microsoft.Win32.RegistryView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.FromHandle(Microsoft.Win32.SafeHandles.SafeRegistryHandle,Microsoft.Win32.RegistryView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="Microsoft.Win32.SafeHandles.SafeRegistryHandle" />
+        <Parameter Name="view" Type="Microsoft.Win32.RegistryView" />
+      </Parameters>
+      <Docs>
+        <param name="handle">O identificador da chave do Registro.</param>
+        <param name="view">A exibição do Registro a ser usado.</param>
+        <summary>Cria uma chave do registro de um identificador especificado e a configuração da exibição do registro.</summary>
+        <returns>Um chave do Registro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `view` parâmetro para este método é usado em operações subsequentes, como abrir subchaves.  
+  
+ Se `view` é <xref:Microsoft.Win32.RegistryView.Registry64> , mas o computador está executando um sistema operacional de 32 bits, a chave retornada usará o <xref:Microsoft.Win32.RegistryView.Registry32> exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="view" /> é inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="handle" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para realizar essa ação.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.RegistrySecurity GetAccessControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.RegistrySecurity GetAccessControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetAccessControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistrySecurity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a segurança de controle de acesso à chave do Registro atual.</summary>
+        <returns>Um objeto que descreve as permissões de controle de acesso na chave do Registro representada pelo <see cref="T:Microsoft.Win32.RegistryKey" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método é equivalente a chamar o <xref:Microsoft.Win32.RegistryKey.GetAccessControl%28System.Security.AccessControl.AccessControlSections%29> sobrecarga de método com a combinação de bit a bit dos sinalizadores a seguir: <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, e <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>. Você pode usar essa sobrecarga para procurar outras permissões.  
+  
+ O usuário deve ter <xref:System.Security.AccessControl.RegistryRights?displayProperty=nameWithType> direitos para chamar esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.InvalidOperationException">A chave atual foi excluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessControl">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.RegistrySecurity GetAccessControl (System.Security.AccessControl.AccessControlSections includeSections);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.RegistrySecurity GetAccessControl(valuetype System.Security.AccessControl.AccessControlSections includeSections) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetAccessControl(System.Security.AccessControl.AccessControlSections)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.RegistrySecurity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeSections" Type="System.Security.AccessControl.AccessControlSections" />
+      </Parameters>
+      <Docs>
+        <param name="includeSections">Uma combinação bit a bit dos valores de enumeração que especifica o tipo de informações de segurança a serem obtidas.</param>
+        <summary>Retorna as seções de segurança de controle de acesso especificadas para a chave do Registro atual.</summary>
+        <returns>Um objeto que descreve as permissões de controle de acesso na chave do Registro representada pelo <see cref="T:Microsoft.Win32.RegistryKey" /> atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para solicitar as permissões de acesso concedidas atualmente para os usuários, especifique a combinação bit a bit dos sinalizadores a seguir: <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>, e <xref:System.Security.AccessControl.AccessControlSections?displayProperty=nameWithType>. Como alternativa, você pode usar o <xref:Microsoft.Win32.RegistryKey.GetAccessControl> sobrecarga de método, que especifica exatamente essa combinação de valores.  
+  
+ O usuário deve ter <xref:System.Security.AccessControl.RegistryRights?displayProperty=nameWithType> direitos para chamar esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.InvalidOperationException">A chave atual foi excluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSubKeyNames">
+      <MemberSignature Language="C#" Value="public string[] GetSubKeyNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetSubKeyNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetSubKeyNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de cadeias de caracteres que contém todos os nomes da subchave.</summary>
+        <returns>Uma matriz de cadeias de caracteres que contém os nomes das subchaves para a chave atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não localizar nomes que não recursivamente. Ele retorna os nomes de nível base do qual ele foi chamado.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#2)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#2)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas da chave.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de sistema, por exemplo, a chave atual foi excluída.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de ler a partir do registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser recuperado. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <summary>Recupera o valor associado ao nome especificado. Retorna <see langword="null" /> se o par nome/valor não existir no Registro.</summary>
+        <returns>O valor associado a <paramref name="name" /> ou <see langword="null" /> se <paramref name="name" /> não for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Uma chave do Registro pode ter um valor que não está associado a nenhum nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para recuperar esse sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `name`.  
+  
+ Quando o <xref:Microsoft.Win32.RegistryKey.GetValue%2A> método recupera valores de cadeia de caracteres expansível (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), ele expande as cadeias de caracteres de ambiente usando dados do ambiente local. Para recuperar valores de cadeia de caracteres expansível do registro em um computador remoto, use o <xref:Microsoft.Win32.RegistryKey.GetValue%28System.String%2CSystem.Object%2CMicrosoft.Win32.RegistryValueOptions%29> sobrecarga do método para especificar que você não quer que cadeias de caracteres de ambiente expandidas.  
+  
+> [!NOTE]
+>  Se um valor que contém expansíveis referências a variáveis de ambiente foi armazenado como uma cadeia de caracteres (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), em vez de como uma cadeia de caracteres expansível (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), <xref:Microsoft.Win32.RegistryKey.GetValue%2A> não expandi-lo. Você pode expandir uma cadeia de caracteres depois que forem recuperado chamando o <xref:System.Environment.ExpandEnvironmentVariables%2A> método.  
+  
+> [!NOTE]
+>  A maneira recomendada para recuperar dados de <xref:Microsoft.Win32.Registry.PerformanceData> chave é usar o <xref:System.Diagnostics.PerformanceCounter> classe em vez de <xref:Microsoft.Win32.RegistryKey.GetValue%2A?displayProperty=nameWithType> método.  
+>   
+>  <xref:Microsoft.Win32.RegistryKey.GetValue%2A>não oferece suporte ao ler valores do tipo REG_NONE ou REG_LINK.  Em ambos os casos, o valor padrão (`null`) é retornado em vez do valor real.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste e adiciona valores de diferentes tipos de dados para a chave. O exemplo, em seguida, lê os pares nome/valor e exibe-as no console usando o <xref:Microsoft.Win32.RegistryKey.GetValueKind%2A> método para recuperar os tipos de dados de registro correspondentes.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas na chave do Registro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado foi marcado para exclusão.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para ler do Registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para ler uma chave do registro do tipo REG_EXPAND_SZ. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (string name, object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(string name, object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser recuperado. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="defaultValue">O valor a ser retornado se <c>nome</c> não existe.</param>
+        <summary>Recupera o valor associado ao nome especificado. Se o nome não for encontrado, retornará o valor padrão que você fornecer.</summary>
+        <returns>O valor associado a <paramref name="name" />, com quaisquer variáveis de ambiente integradas deixadas não expandidas ou <paramref name="defaultValue" /> se <paramref name="name" /> não for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga de <xref:Microsoft.Win32.RegistryKey.GetValue%2A> para lidar com o caso em que um nome ainda não existir, por exemplo, a primeira vez que seu aplicativo é executado. Sempre que você chamar essa sobrecarga, use o `defaultValue` parâmetro para especificar o valor a ser retornado se `name` não existe.  
+  
+> [!NOTE]
+>  Uma chave do Registro pode ter um valor que não está associado a nenhum nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para recuperar esse sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `name`.  
+  
+ Quando o <xref:Microsoft.Win32.RegistryKey.GetValue%2A> método recupera valores de cadeia de caracteres expansível (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), ele expande as cadeias de caracteres de ambiente usando dados do ambiente local. Para recuperar valores de cadeia de caracteres expansível do registro em um computador remoto, use o <xref:Microsoft.Win32.RegistryKey.GetValue%2A> sobrecarga para especificar que você não quer que cadeias de caracteres de ambiente expandidas.  
+  
+> [!NOTE]
+>  Se um valor que contém expansíveis referências a variáveis de ambiente foi armazenado como uma cadeia de caracteres (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), em vez de como uma cadeia de caracteres expansível (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), o <xref:Microsoft.Win32.RegistryKey.GetValue%2A> método não expandi-lo. Você pode expandir uma cadeia de caracteres depois que forem recuperado chamando o <xref:System.Environment.ExpandEnvironmentVariables%2A> método.  
+  
+> [!NOTE]
+>  A maneira recomendada para recuperar dados de <xref:Microsoft.Win32.Registry.PerformanceData> chave é usar o <xref:System.Diagnostics.PerformanceCounter> classe em vez de <xref:Microsoft.Win32.RegistryKey.GetValue%2A?displayProperty=nameWithType> método.  
+>   
+>  <xref:Microsoft.Win32.RegistryKey.GetValue%2A>não oferece suporte ao ler valores do tipo REG_NONE ou REG_LINK.  Em ambos os casos, o valor padrão (`null`) é retornado em vez do valor real.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste com um valor e recupera o valor. O exemplo, em seguida, tenta recuperar um valor inexistente da chave; Nesse caso o <xref:Microsoft.Win32.RegistryKey.GetValue%2A> método retornará o valor padrão especificado.  
+  
+ [!code-cpp[Classic RegistryKey.GetValue Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic RegistryKey.GetValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RegistryKey.GetValue Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic RegistryKey.GetValue Example/CS/source.cs#1)]
+ [!code-vb[Classic RegistryKey.GetValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic RegistryKey.GetValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas na chave do Registro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado foi marcado para exclusão.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para ler do Registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para ler uma chave do registro do tipo REG_EXPAND_SZ. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (string name, object defaultValue, Microsoft.Win32.RegistryValueOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(string name, object defaultValue, valuetype Microsoft.Win32.RegistryValueOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetValue(System.String,System.Object,Microsoft.Win32.RegistryValueOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="options" Type="Microsoft.Win32.RegistryValueOptions" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser recuperado. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <param name="defaultValue">O valor a ser retornado se <c>nome</c> não existe.</param>
+        <param name="options">Um dos valores de enumeração que especifica o processamento opcional do valor recuperado.</param>
+        <summary>Recupera o valor associado ao nome especificado e às operações de recuperação. Se o nome não for encontrado, retornará o valor padrão que você fornecer.</summary>
+        <returns>O valor associado ao <paramref name="name" />, processado de acordo com o <paramref name="options" /> especificado ou <paramref name="defaultValue" /> se <paramref name="name" /> não for encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para especificar um processamento especial, o valor a ser recuperado. Por exemplo, você pode especificar <xref:Microsoft.Win32.RegistryValueOptions?displayProperty=nameWithType> ao recuperar um valor de registro do tipo <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType> para recuperar a cadeia de caracteres sem expandir inserido variáveis de ambiente.  
+  
+ Use o `defaultValue` parâmetro para especificar o valor a ser retornado se `name` não existe.  
+  
+> [!NOTE]
+>  Uma chave do Registro pode ter um valor que não está associado a nenhum nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para recuperar esse sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `name`.  
+>   
+>  <xref:Microsoft.Win32.RegistryKey.GetValue%2A>não oferece suporte ao ler valores do tipo REG_NONE ou REG_LINK.  Em ambos os casos, o valor padrão (`null`) é retornado em vez do valor real.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste, adiciona um valor com uma variável de ambiente inseridos e recupera o valor em formulários expandidos e não expandidos.  
+  
+ [!code-cpp[RegistryValueOptions#1](~/samples/snippets/cpp/VS_Snippets_CLR/RegistryValueOptions/CPP/RegistryValueOptions.cpp#1)]
+ [!code-csharp[RegistryValueOptions#1](~/samples/snippets/csharp/VS_Snippets_CLR/RegistryValueOptions/CS/source.cs#1)]
+ [!code-vb[RegistryValueOptions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RegistryValueOptions/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas na chave do Registro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.IO.IOException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado foi marcado para exclusão.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="options" /> não é um valor <see cref="T:Microsoft.Win32.RegistryValueOptions" /> válido; por exemplo, um valor inválido é convertido em <see cref="T:Microsoft.Win32.RegistryValueOptions" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para ler do Registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para ler uma chave do registro do tipo REG_EXPAND_SZ. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueKind">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryValueKind GetValueKind (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Win32.RegistryValueKind GetValueKind(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetValueKind(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryValueKind</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor cujo tipo de dados de Registro deve ser recuperado. Esta cadeia de caracteres não diferencia maiúsculas de minúsculas.</param>
+        <summary>Recupera o tipo de dados de Registro do valor associado com o nome especificado.</summary>
+        <returns>O tipo de dados de Registro do valor associado com <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Uma chave do Registro pode ter um valor que não está associado a nenhum nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para recuperar o tipo de dados de registro sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `name`.  
+  
+ Para obter uma descrição dos tipos de dados de registro com suporte, consulte o <xref:Microsoft.Win32.RegistryValueKind> enumeração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste e adiciona valores de diferentes tipos de dados para a chave. O exemplo, em seguida, lê os pares nome/valor e exibe-as no console usando o <xref:Microsoft.Win32.RegistryKey.GetValueKind%2A> método para recuperar os tipos de dados de registro correspondentes.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas na chave do Registro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.IO.IOException">Na subchave que contém o valor especificado não existe.  
+  
+ -ou-  
+  
+ O par nome/valor especificado pelo <paramref name="name" /> não existe.  
+  
+ Essa exceção não é lançada no Windows 95, Windows 98 ou Windows Millennium Edition.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para ler do Registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueNames">
+      <MemberSignature Language="C#" Value="public string[] GetValueNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetValueNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.GetValueNames" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de cadeias de caracteres que contém todos os nomes de valor associados a essa chave.</summary>
+        <returns>Uma matriz de cadeias de caracteres que contém os nomes de valores da chave atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se nenhum nome de valor para a chave for encontrado, uma matriz vazia será retornada.  
+  
+ Uma chave do registro pode ter um valor padrão — ou seja, um par de nome/valor no qual o nome é a cadeia de caracteres vazia (""). Se um valor padrão tiver sido definido para uma chave do registro, a matriz retornada pelo <xref:Microsoft.Win32.RegistryKey.GetValueNames%2A> método inclui a cadeia de caracteres vazia.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#2)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#2)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias a serem lidas na chave do Registro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de sistema. Por exemplo, a chave atual foi excluída.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de ler a partir do registro. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SafeHandles.SafeRegistryHandle Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Win32.SafeHandles.SafeRegistryHandle Handle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.RegistryKey.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeRegistryHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:Microsoft.Win32.SafeHandles.SafeRegistryHandle" /> que representa a chave do Registro que o objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual encapsula.</summary>
+        <value>O identificador da chave do Registro.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A chave do Registro está fechada. Chaves fechadas não podem ser acessadas.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro do sistema, como a exclusão da chave atual.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para ler a chave.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.RegistryKey.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera o nome da chave.</summary>
+        <value>O nome absoluto (qualificado) da chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da chave inclui o caminho absoluto dessa chave no registro, sempre começando em uma chave de base, por exemplo, HKEY_LOCAL_MACHINE.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#4)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#4)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é fechado (chaves fechadas não podem ser acessadas).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenBaseKey">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.RegistryKey OpenBaseKey (Microsoft.Win32.RegistryHive hKey, Microsoft.Win32.RegistryView view);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Win32.RegistryKey OpenBaseKey(valuetype Microsoft.Win32.RegistryHive hKey, valuetype Microsoft.Win32.RegistryView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive,Microsoft.Win32.RegistryView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hKey" Type="Microsoft.Win32.RegistryHive" />
+        <Parameter Name="view" Type="Microsoft.Win32.RegistryView" />
+      </Parameters>
+      <Docs>
+        <param name="hKey">O HKEY para abrir.</param>
+        <param name="view">A exibição do Registro a ser usado.</param>
+        <summary>Abre um novo <see cref="T:Microsoft.Win32.RegistryKey" /> que representa a chave solicitada no computador local com o modo de exibição especificado.</summary>
+        <returns>A chave do Registro solicitada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="hKey" /> ou <paramref name="view" /> é inválido.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para realizar essa ação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenRemoteBaseKey">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.RegistryKey OpenRemoteBaseKey (Microsoft.Win32.RegistryHive hKey, string machineName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Win32.RegistryKey OpenRemoteBaseKey(valuetype Microsoft.Win32.RegistryHive hKey, string machineName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hKey" Type="Microsoft.Win32.RegistryHive" />
+        <Parameter Name="machineName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hKey">O HKEY a abrir, da enumeração <see cref="T:Microsoft.Win32.RegistryHive" />.</param>
+        <param name="machineName">O computador remoto.</param>
+        <summary>Abre um novo <see cref="T:Microsoft.Win32.RegistryKey" /> que representa a chave solicitada em um computador remoto.</summary>
+        <returns>A chave do Registro solicitada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O registro do computador local é aberto se `machineName` é <xref:System.String?displayProperty=nameWithType>. A chave solicitada deve ser uma chave de raiz no computador remoto e é identificada pelo apropriada <xref:Microsoft.Win32.RegistryHive> valor.  
+  
+ Em ordem para uma chave a ser aberto remotamente, máquinas cliente e servidor devem estar executando o serviço Registro remoto e tiver habilitada a administração remota.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como abrir uma chave do registro em um computador remoto e enumerar os valores da chave. O computador remoto deve estar executando o serviço Registro remoto. Especifique o nome do computador remoto como um argumento de linha de comando ao invocar o programa.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey.OpenRemoteBaseKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.OpenRemoteBaseKey/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryKey.OpenRemoteBaseKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.OpenRemoteBaseKey/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryKey.OpenRemoteBaseKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.OpenRemoteBaseKey/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hKey" /> é inválido.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="machineName" /> não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="machineName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões adequadas para executar esta operação.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenRemoteBaseKey">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.RegistryKey OpenRemoteBaseKey (Microsoft.Win32.RegistryHive hKey, string machineName, Microsoft.Win32.RegistryView view);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Win32.RegistryKey OpenRemoteBaseKey(valuetype Microsoft.Win32.RegistryHive hKey, string machineName, valuetype Microsoft.Win32.RegistryView view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(Microsoft.Win32.RegistryHive,System.String,Microsoft.Win32.RegistryView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hKey" Type="Microsoft.Win32.RegistryHive" />
+        <Parameter Name="machineName" Type="System.String" />
+        <Parameter Name="view" Type="Microsoft.Win32.RegistryView" />
+      </Parameters>
+      <Docs>
+        <param name="hKey">O HKEY a ser aberto na enumeração <see cref="T:Microsoft.Win32.RegistryHive" />.</param>
+        <param name="machineName">O computador remoto.</param>
+        <param name="view">A exibição do Registro a ser usado.</param>
+        <summary>Abre uma nova chave do Registro que representa a chave solicitada em um computador remoto com a exibição especificada.</summary>
+        <returns>A chave do Registro solicitada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O registro do computador local é aberto se `machineName` é <xref:System.String?displayProperty=nameWithType>. A chave solicitada deve ser uma chave de raiz no computador remoto e é identificada pelo apropriada <xref:Microsoft.Win32.RegistryHive> valor.  
+  
+ Em ordem para uma chave a ser aberto remotamente, máquinas cliente e servidor devem estar executando o serviço Registro remoto e tiver habilitada a administração remota.  
+  
+ Nas versões de 64 bits do Windows, as partes do registro são armazenadas separadamente para aplicativos de 32 bits e 64 bits. Há um modo de exibição de 32 bits para aplicativos de 32 bits e um modo de exibição de 64 bits para aplicativos de 64 bits. Se `view` é <xref:Microsoft.Win32.RegistryView.Registry64> , mas o computador remoto está executando um sistema operacional de 32 bits, a chave retornada usará o <xref:Microsoft.Win32.RegistryView.Registry32> exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hKey" /> ou <paramref name="view" /> é inválido.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="machineName" /> não foi encontrado.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="machineName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem a permissão necessária para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey OpenSubKey (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey OpenSubKey(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenSubKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome ou caminho da subchave a ser aberta como somente leitura.</param>
+        <summary>Recupera uma subchave como somente leitura.</summary>
+        <returns>A subchave solicitada ou <see langword="null" /> caso a operação tenha falhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve abrir uma chave antes que ele pode ser manipulado com outros métodos e propriedades. Para modificar uma chave, você deve abri-lo com uma sobrecarga do <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método que permite que você especifique o acesso de gravação, como o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%28System.String%2CMicrosoft.Win32.RegistryKeyPermissionCheck%29> sobrecarregar ou <xref:Microsoft.Win32.RegistryKey.OpenSubKey%28System.String%2CSystem.Boolean%29> de sobrecarga.  
+  
+ Se a subchave especificada não pode ser encontrada, `null` será retornado.  
+  
+ Para usar o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método, você deve ter uma instância de <xref:Microsoft.Win32.RegistryKey>. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos de <xref:Microsoft.Win32.Registry> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste e usa o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método abri-lo, demonstrando as duas sobrecargas do método.  
+  
+ [!code-cpp[RegistryKey.OpenSubKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/RegistryKey.OpenSubKey/CPP/opensubkey.cpp#1)]
+ [!code-csharp[RegistryKey.OpenSubKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/RegistryKey.OpenSubKey/CS/opensubkey.cs#1)]
+ [!code-vb[RegistryKey.OpenSubKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RegistryKey.OpenSubKey/VB/opensubkey.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" /></exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para ler a chave do Registro.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de ler a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey OpenSubKey (string name, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey OpenSubKey(string name, valuetype Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="permissionCheck" Type="Microsoft.Win32.RegistryKeyPermissionCheck" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome ou o caminho da subchave a ser criado ou aberto.</param>
+        <param name="permissionCheck">Um dos valores de enumeração que especifica se a chave é aberta para acesso de leitura ou de leitura/gravação.</param>
+        <summary>Recupera a subchave especificada para acesso de leitura ou de leitura/gravação.</summary>
+        <returns>A subchave solicitada ou <see langword="null" /> caso a operação tenha falhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de gerar uma exceção, este método retorna `null` se a chave solicitada não existe.  
+  
+ Se `permissionCheck` é <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>, a chave é aberta para leitura e gravação; se `permissionCheck` é <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType> ou <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>, a chave é aberta para leitura, a menos que a chave pai foi aberta com <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>.  
+  
+ Para usar o método <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>, você deve ter uma instância da classe <xref:Microsoft.Win32.RegistryKey>. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma subchave que contém pares de chave/valor de 100 e fechá-lo. O exemplo abre a subchave com <xref:Microsoft.Win32.RegistryKeyPermissionCheck.Default>, registra o tempo que leva para ler todos os valores e fecha a subchave. O exemplo abre a subchave com <xref:Microsoft.Win32.RegistryKeyPermissionCheck.ReadSubTree> e registra o tempo necessário para ler todos os valores. Por fim, o exemplo calcula e exibe a porcentagem de aperfeiçoamento.  
+  
+ [!code-csharp[RegistryKey.OpenSubKey_PermCheck#1](~/samples/snippets/csharp/VS_Snippets_CLR/RegistryKey.OpenSubKey_PermCheck/cs/source.cs#1)]
+ [!code-vb[RegistryKey.OpenSubKey_PermCheck#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RegistryKey.OpenSubKey_PermCheck/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="permissionCheck" /> contém um valor inválido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para ler a chave do Registro.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de ler a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey OpenSubKey (string name, bool writable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey OpenSubKey(string name, bool writable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenSubKey(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="writable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome ou caminho da subchave a ser aberto.</param>
+        <param name="writable">Defina como <see langword="true" /> se precisar de acesso de gravação para a chave.</param>
+        <summary>Recupera uma subchave especificada e especifica se o acesso de gravação deve ser aplicado à chave.</summary>
+        <returns>A subchave solicitada ou <see langword="null" /> caso a operação tenha falhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a chave solicitada não existe, esse método retorna `null` em vez de gerar uma exceção.  
+  
+ Se `writable` é `true`, a chave será aberta para leitura e gravação, caso contrário, a chave será aberta como somente leitura.  
+  
+ Para usar o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método, você deve ter uma instância do <xref:Microsoft.Win32.RegistryKey> método. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste e usa o <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método abri-lo, demonstrando as duas sobrecargas do método.  
+  
+ [!code-cpp[RegistryKey.OpenSubKey#1](~/samples/snippets/cpp/VS_Snippets_CLR/RegistryKey.OpenSubKey/CPP/opensubkey.cpp#1)]
+ [!code-csharp[RegistryKey.OpenSubKey#1](~/samples/snippets/csharp/VS_Snippets_CLR/RegistryKey.OpenSubKey/CS/opensubkey.cs#1)]
+ [!code-vb[RegistryKey.OpenSubKey#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RegistryKey.OpenSubKey/VB/opensubkey.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para acessar a chave do Registro no modo especificado.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de ler a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey OpenSubKey (string name, System.Security.AccessControl.RegistryRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey OpenSubKey(string name, valuetype System.Security.AccessControl.RegistryRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenSubKey(System.String,System.Security.AccessControl.RegistryRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="rights" Type="System.Security.AccessControl.RegistryRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome ou o caminho da subchave a ser criado ou aberto.</param>
+        <param name="rights">Os direitos para a chave do Registro.</param>
+        <summary>Recupera uma subchave com o nome especificado e .  
+  
+ Disponível a partir do [!INCLUDE[net_2015](~/includes/net-2015-md.md)]</summary>
+        <returns>A subchave solicitada ou <see langword="null" /> caso a operação tenha falhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve abrir uma chave antes que ele pode ser manipulado com outros métodos e propriedades. Para modificar uma chave, você deve abri-lo com uma sobrecarga de <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método que permite que você especifique o acesso de gravação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para acessar a chave do Registro no modo especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSubKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryKey OpenSubKey (string name, Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, System.Security.AccessControl.RegistryRights rights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Win32.RegistryKey OpenSubKey(string name, valuetype Microsoft.Win32.RegistryKeyPermissionCheck permissionCheck, valuetype System.Security.AccessControl.RegistryRights rights) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.OpenSubKey(System.String,Microsoft.Win32.RegistryKeyPermissionCheck,System.Security.AccessControl.RegistryRights)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryKey</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="permissionCheck" Type="Microsoft.Win32.RegistryKeyPermissionCheck" />
+        <Parameter Name="rights" Type="System.Security.AccessControl.RegistryRights" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome ou o caminho da subchave a ser criado ou aberto.</param>
+        <param name="permissionCheck">Um dos valores de enumeração que especifica se a chave é aberta para acesso de leitura ou de leitura/gravação.</param>
+        <param name="rights">Uma combinação bit a bit dos valores de enumeração que especifica o acesso de segurança desejado.</param>
+        <summary>Recupera a subchave especificada para acesso de leitura ou leitura/gravação, solicitando direitos de acesso especificados.</summary>
+        <returns>A subchave solicitada ou <see langword="null" /> caso a operação tenha falhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em vez de gerar uma exceção, este método retorna `null` se a chave solicitada não existe.  
+  
+ Se `permissionCheck` é <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>, a chave é aberta para leitura e gravação; se `permissionCheck` é <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType> ou <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>, a chave é aberta para leitura, a menos que a chave pai foi aberta com <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType>.  
+  
+ O acesso especificado para `permissionCheck` tem precedência sobre o acesso especificado para `rights`. Por exemplo, se você especificar <xref:Microsoft.Win32.RegistryKeyPermissionCheck?displayProperty=nameWithType> para `permissionCheck` e <xref:System.Security.AccessControl.RegistryRights?displayProperty=nameWithType> para `rights`, uma tentativa de gravar na subchave lança uma exceção.  
+  
+ Para usar o método <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>, você deve ter uma instância da classe <xref:Microsoft.Win32.RegistryKey>. Para obter uma instância de <xref:Microsoft.Win32.RegistryKey>, use um dos membros estáticos da classe <xref:Microsoft.Win32.Registry>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="permissionCheck" /> contém um valor inválido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.Security.SecurityException">
+          <paramref name="rights" /> inclui valores de direitos de Registro inválidos.  
+  
+ -ou-  
+  
+ O usuário não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de ler a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessControl">
+      <MemberSignature Language="C#" Value="public void SetAccessControl (System.Security.AccessControl.RegistrySecurity registrySecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccessControl(class System.Security.AccessControl.RegistrySecurity registrySecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.SetAccessControl(System.Security.AccessControl.RegistrySecurity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registrySecurity" Type="System.Security.AccessControl.RegistrySecurity" />
+      </Parameters>
+      <Docs>
+        <param name="registrySecurity">A segurança de controle de acesso para aplicar à subchave atual.</param>
+        <summary>Aplica a segurança de controle de acesso do Windows a uma chave do Registro existente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para modificar permissões para uma chave do registro, use o <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A> método para obter um <xref:System.Security.AccessControl.RegistrySecurity> objeto representando a segurança de controle de acesso existente do Windows, modifique que <xref:System.Security.AccessControl.RegistrySecurity> objeto e, em seguida, use o <xref:Microsoft.Win32.RegistryKey.SetAccessControl%2A> método de atualização de segurança para a chave.  
+  
+> [!CAUTION]
+>  O <xref:System.Security.AccessControl.RegistrySecurity> o objeto especificado para `registrySecurity` substitui a segurança existente para a chave do registro. Para adicionar permissões para um novo usuário, use o <xref:Microsoft.Win32.RegistryKey.GetAccessControl%2A> método para obter o acesso existente controlar a segurança e, em seguida, modificá-lo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste. O usuário atual tem permissão <xref:System.Security.AccessControl.RegistryRights.ReadKey> e <xref:System.Security.AccessControl.RegistryRights.Delete> direitos mas negado <xref:System.Security.AccessControl.RegistryRights.ChangePermissions> e <xref:System.Security.AccessControl.RegistryRights.WriteKey> direitos. Tentativas subsequentes manipular o chave êxito ou falhar dependendo essas permissões.  
+  
+ Antes da chave é excluída, o código faz uma pausa. Você pode alternar para o editor do registro e verifique se os mesmos direitos de acesso se aplicam quando a chave for acessada usando o editor do registro. (Isso funciona melhor se você usar **RunAs** da linha de comando para executar o editor do registro e o código de exemplo como um usuário local sem direitos de administrador. O editor do registro sempre permite que um administrador alterar permissões, mesmo que o administrador específico foi negado esses direitos. Se você tiver definido um usuário local chamado TestUser, o comando `runas /user:TestUser cmd` abre uma janela de comando do qual você pode executar o editor do registro e, em seguida, o código de exemplo.)  
+  
+ [!code-cpp[RegistrySecurity101#1](~/samples/snippets/cpp/VS_Snippets_CLR/RegistrySecurity101/cpp/source.cpp#1)]
+ [!code-csharp[RegistrySecurity101#1](~/samples/snippets/csharp/VS_Snippets_CLR/RegistrySecurity101/CS/source.cs#1)]
+ [!code-vb[RegistrySecurity101#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RegistrySecurity101/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O objeto <see cref="T:Microsoft.Win32.RegistryKey" /> atual representa uma chave com segurança de controle de acesso, e o chamador não tem direitos <see cref="F:System.Security.AccessControl.RegistryRights.ChangePermissions" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="registrySecurity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.SetValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser armazenado.</param>
+        <param name="value">Os dados a serem armazenados.</param>
+        <summary>Define o par nome-valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como muitos valores podem ser armazenados em cada chave do registro, você deve usar o `name` para especificar o valor específico que você deseja definir.  
+  
+> [!NOTE]
+>  Uma chave do Registro pode ter um valor que não está associado a nenhum nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para definir isso sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `name`.  
+  
+ Para definir valores em uma chave, você deve abrir a chave com acesso de gravação. Depois de abrir uma chave com acesso de gravação, você pode alterar os pares de nome/valor na chave.  
+  
+ Se especificado `name` não existe na chave, ele é criado e o valor associado é definido como `value`.  
+  
+ Esta sobrecarga do <xref:Microsoft.Win32.RegistryKey.SetValue%2A> armazena inteiros de 64 bits como cadeias de caracteres (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>). Para armazenar números de 64 bits como <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType> valores, use o <xref:Microsoft.Win32.RegistryKey.SetValue%28System.String%2CSystem.Object%2CMicrosoft.Win32.RegistryValueKind%29> sobrecarga especifica <xref:Microsoft.Win32.RegistryValueKind>.  
+  
+ Esta sobrecarga do <xref:Microsoft.Win32.RegistryKey.SetValue%2A> armazena todos os valores de cadeia de caracteres como <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>, mesmo que eles contêm expansíveis referências a variáveis de ambiente. Para salvar os valores de cadeia de caracteres expansíveis como cadeias de caracteres (<xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>), use o <xref:Microsoft.Win32.RegistryKey.SetValue%28System.String%2CSystem.Object%2CMicrosoft.Win32.RegistryValueKind%29> sobrecarga especifica <xref:Microsoft.Win32.RegistryValueKind>.  
+  
+ Tipos numéricos que não sejam números inteiros de 32 bits são armazenados como cadeias de caracteres por essa sobrecarga de método. Enumeração elementos são armazenados como cadeias de caracteres que contém os nomes de elemento.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+> [!NOTE]
+>  No Windows 98 e Windows Millennium Edition no registro não for Unicode e não todos os caracteres Unicode são válidos para todas as páginas de código. Um caractere Unicode inválido para a página de código atual é substituído por melhor correspondência disponível. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código mostra como o <xref:Microsoft.Win32.RegistryKey.SetValue%2A> método determina o tipo de dados do registro quando ele define valores. O exemplo cria uma chave de teste e adiciona valores de diferentes tipos de dados para a chave. O exemplo, em seguida, lê os pares nome/valor e exibe-as no console usando o <xref:Microsoft.Win32.RegistryKey.GetValueKind%2A> método para exibir os tipos de dados de registro correspondentes.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey.SetValue1#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.SetValue1/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryKey.SetValue1#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.SetValue1/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryKey.SetValue1#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey.SetValue1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="value" /> é um tipo de dados sem suporte.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é somente leitura e não pode ser usado para gravação, por exemplo, a chave não foi aberta com acesso de gravação.  
+  
+ -ou-  
+  
+ O objeto <see cref="T:Microsoft.Win32.RegistryKey" /> representa um nó de nível raiz e o sistema operacional é o Windows Millennium Edition ou o Windows 98.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou modificar chaves do Registro.</exception>
+        <exception cref="T:System.IO.IOException">O objeto <see cref="T:Microsoft.Win32.RegistryKey" /> representa um nó de nível raiz e o sistema operacional é o Windows 2000, Windows XP ou Windows Server 2003.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Para modificar a chave do registro especificado se ele existir, ou para criar a chave do registro se ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string name, object value, Microsoft.Win32.RegistryValueKind valueKind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetValue(string name, object value, valuetype Microsoft.Win32.RegistryValueKind valueKind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.SetValue(System.String,System.Object,Microsoft.Win32.RegistryValueKind)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="valueKind" Type="Microsoft.Win32.RegistryValueKind" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser armazenado.</param>
+        <param name="value">Os dados a serem armazenados.</param>
+        <param name="valueKind">O tipo de dados do Registro a ser usado ao armazenar os dados.</param>
+        <summary>Define o valor de um par nome-valor na chave do Registro, usando o tipo de dados do Registro especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como muitos valores podem ser armazenados em cada chave do registro, você deve usar o `name` para especificar o valor específico que você deseja definir.  
+  
+> [!NOTE]
+>  Uma chave do Registro pode ter um valor que não está associado a nenhum nome. Quando esse valor sem nome é exibido no Editor do Registro, a cadeia de caracteres "(Default)" é exibida em vez de um nome. Para definir isso sem nome de valor, especifique `null` ou cadeia de caracteres vazia ("") para `name`.  
+  
+ Para definir valores em uma chave, você deve abrir a chave com acesso de gravação. Depois de abrir uma chave com acesso de gravação, você pode alterar os pares de nome/valor na chave.  
+  
+ Se especificado `name` não existe na chave, ele é criado e o valor associado é definido como `value`.  
+  
+> [!NOTE]
+>  Especifica o tipo de dados do registro <xref:Microsoft.Win32.RegistryValueKind.Unknown> é o mesmo que usar o <xref:Microsoft.Win32.RegistryKey.SetValue%2A> de sobrecarga.  
+  
+ Se o tipo especificado `value` não coincide com a especificada `valueKind`, e os dados não podem ser convertido, <xref:System.ArgumentException> é gerada. Por exemplo, você pode armazenar um <xref:System.Int64?displayProperty=nameWithType> como um <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>, mas somente se o valor for menor que o valor máximo de um <xref:System.Int32?displayProperty=nameWithType>. Você não pode armazenar um valor de cadeia de caracteres única como um <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Se valores boxed são passados para <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType> ou <xref:Microsoft.Win32.RegistryValueKind?displayProperty=nameWithType>, a conversão é feita usando a cultura invariável.  
+  
+> [!CAUTION]
+>  Não exponha objetos <xref:Microsoft.Win32.RegistryKey> de maneira que um programa mal-intencionado possa criar milhares de subchaves sem sentido ou os pares de chave/valor. Por exemplo, não permita que chamadores insiram chaves ou valores arbitrários.  
+  
+> [!NOTE]
+>  No Windows 98 e Windows Millennium Edition no registro não for Unicode e não todos os caracteres Unicode são válidos para todas as páginas de código. Um caractere Unicode inválido para a página de código atual é substituído por melhor correspondência disponível. Nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma chave de teste e usa o <xref:Microsoft.Win32.RegistryKey.SetValue%2A> método para armazenar vários valores, especificando o tipo de dados de registro para cada valor. O exemplo, em seguida, lê os pares nome/valor e exibe-as no console usando o <xref:Microsoft.Win32.RegistryKey.GetValueKind%2A> método para exibir os tipos de dados de registro correspondentes.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/CPP/source.cpp#1)]
+ [!code-csharp[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/CS/source.cs#1)]
+ [!code-vb[Microsoft.Win32.RegistryValueKind#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryValueKind/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tipo de <paramref name="value" /> não correspondia ao tipo de dados do Registro especificado pelo <paramref name="valueKind" /> e, portanto, não foi possível converter os dados corretamente.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que contém o valor especificado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O <see cref="T:Microsoft.Win32.RegistryKey" /> é somente leitura e não pode ser usado para gravação, por exemplo, a chave não foi aberta com acesso de gravação.  
+  
+ -ou-  
+  
+ O objeto <see cref="T:Microsoft.Win32.RegistryKey" /> representa um nó de nível raiz e o sistema operacional é o Windows Millennium Edition ou o Windows 98.</exception>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem as permissões necessárias para criar ou modificar chaves do Registro.</exception>
+        <exception cref="T:System.IO.IOException">O objeto <see cref="T:Microsoft.Win32.RegistryKey" /> representa um nó de nível raiz e o sistema operacional é o Windows 2000, Windows XP ou Windows Server 2003.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">Para modificar a chave do registro especificado se ele existir, ou para criar a chave do registro se ele ainda não existir. Enumerações associadas: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Write" />, <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Create" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de acessar a chave do Registro especificada caso ela seja uma chave remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SubKeyCount">
+      <MemberSignature Language="C#" Value="public int SubKeyCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SubKeyCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.RegistryKey.SubKeyCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera a contagem de subchaves da chave atual.</summary>
+        <value>O número de subchaves da chave atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não não nomes de contagem de forma recursiva. Ele retorna somente a contagem de nomes no nível de base do qual ele foi chamado.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#2)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#2)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem permissão de leitura para a chave.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de sistema, por exemplo, a chave atual foi excluída.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de ler a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.RegistryKey.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma representação de cadeia de caracteres dessa chave.</summary>
+        <returns>Uma cadeia de caracteres que representa a chave. Se a chave especificada for inválida (não puder ser encontrada), <see langword="null" /> será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno inclui o caminho do registro da chave especificada e o valor hexadecimal para a chave. O caminho do registro inclui a raiz absoluta da chave especificada, sempre inicia em uma das chaves de base para o registro, por exemplo, HKEY_LOCAL_MACHINE.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#4)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#4)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> sendo acessado está fechado (chaves fechadas não podem ser acessadas).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueCount">
+      <MemberSignature Language="C#" Value="public int ValueCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ValueCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.RegistryKey.ValueCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera a contagem de valores na chave.</summary>
+        <value>O número de pares nome/valor na chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada chave do registro tem um valor padrão que não está associado com qualquer nome. Isso sem nome de valor pode ser definido usando o <xref:Microsoft.Win32.RegistryKey.SetValue%2A> método e especificando o `null` ou cadeia de caracteres vazia ("") para `name`. Se o valor padrão nunca tiver sido definido, ele não contribuem para a contagem total retornada pelo <xref:Microsoft.Win32.RegistryKey.ValueCount%2A> propriedade; depois que ele tiver sido definido, no entanto, ele sempre é contado.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.RegistryKey> classe.  
+  
+ [!code-cpp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/cpp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CPP/source.cpp#2)]
+ [!code-csharp[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/csharp/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/CS/source.cs#2)]
+ [!code-vb[Microsoft.Win32.RegistryKey2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Microsoft.Win32.RegistryKey2/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O usuário não tem permissão de leitura para a chave.</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:Microsoft.Win32.RegistryKey" /> que está sendo manipulado é fechado (chaves fechadas não podem ser acessadas).</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O usuário não tem os direitos do Registro necessários.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de sistema, por exemplo, a chave atual foi excluída.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">para a capacidade de ler a chave do Registro especificada. Enumeração associada: <see cref="F:System.Security.Permissions.RegistryPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.RegistryView View { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Win32.RegistryView View" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.RegistryKey.View" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Win32.Registry</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.RegistryView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exibição que foi usada para criar a chave do Registro.</summary>
+        <value>A exibição que foi usada para criar a chave do Registro.  
+  
+ -ou-  
+  
+ <see cref="F:Microsoft.Win32.RegistryView.Default" /> se nenhuma exibição foi usada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nas versões de 64 bits do Windows, as partes do registro são armazenadas separadamente para aplicativos de 32 bits e 64 bits. Há um modo de exibição de 32 bits para aplicativos de 32 bits e um modo de exibição de 64 bits para aplicativos de 64 bits.  
+  
+ Não suponha que a exibição sempre corresponde à exibição real do <xref:Microsoft.Win32.RegistryKey>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

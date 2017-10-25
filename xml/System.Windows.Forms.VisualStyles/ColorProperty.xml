@@ -1,0 +1,393 @@
+<Type Name="ColorProperty" FullName="System.Windows.Forms.VisualStyles.ColorProperty">
+  <TypeSignature Language="C#" Value="public enum ColorProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ColorProperty extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.ColorProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica as propriedades de cor de um elemento de estilo visual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.ColorProperty> enumeração representa um conjunto de propriedades de cor que descrevem os elementos de estilo visual. O <xref:System.Windows.Forms.VisualStyles.ColorProperty> valores são usados como um argumento no <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetColor%2A?displayProperty=nameWithType> método para especificar qual valor de propriedade para recuperar para o elemento que o <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> representa atualmente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccentColorHint">
+      <MemberSignature Language="C#" Value="AccentColorHint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty AccentColorHint = int32(3823)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.AccentColorHint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cor complementar recomendada para a cor de destaque do estilo visual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColor">
+      <MemberSignature Language="C#" Value="BorderColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty BorderColor = int32(3801)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.BorderColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor da borda de um elemento com um plano de fundo da borda preenchido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BorderColorHint">
+      <MemberSignature Language="C#" Value="BorderColorHint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty BorderColorHint = int32(3822)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.BorderColorHint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cor complementar recomendada para a cor da borda do estilo visual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EdgeDarkShadowColor">
+      <MemberSignature Language="C#" Value="EdgeDarkShadowColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty EdgeDarkShadowColor = int32(3807)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.EdgeDarkShadowColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor da Sombra escura para bordas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EdgeFillColor">
+      <MemberSignature Language="C#" Value="EdgeFillColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty EdgeFillColor = int32(3808)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.EdgeFillColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor de preenchimento para bordas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EdgeHighlightColor">
+      <MemberSignature Language="C#" Value="EdgeHighlightColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty EdgeHighlightColor = int32(3805)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.EdgeHighlightColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor de realce de bordas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EdgeLightColor">
+      <MemberSignature Language="C#" Value="EdgeLightColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty EdgeLightColor = int32(3804)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.EdgeLightColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor clara para bordas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EdgeShadowColor">
+      <MemberSignature Language="C#" Value="EdgeShadowColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty EdgeShadowColor = int32(3806)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.EdgeShadowColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor da sombra para bordas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FillColor">
+      <MemberSignature Language="C#" Value="FillColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty FillColor = int32(3802)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.FillColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor de preenchimento de um elemento com um plano de fundo da borda preenchido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FillColorHint">
+      <MemberSignature Language="C#" Value="FillColorHint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty FillColorHint = int32(3821)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.FillColorHint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cor complementar recomendada para a cor de preenchimento do estilo visual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlowColor">
+      <MemberSignature Language="C#" Value="GlowColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GlowColor = int32(3816)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GlowColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor do brilho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphTextColor">
+      <MemberSignature Language="C#" Value="GlyphTextColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GlyphTextColor = int32(3819)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GlyphTextColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor desenhada com um glifo de fonte.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlyphTransparentColor">
+      <MemberSignature Language="C#" Value="GlyphTransparentColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GlyphTransparentColor = int32(3820)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GlyphTransparentColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor de pixels em um glifo que são tratados como transparente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientColor1">
+      <MemberSignature Language="C#" Value="GradientColor1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GradientColor1 = int32(3810)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GradientColor1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A primeira cor em um gradiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientColor2">
+      <MemberSignature Language="C#" Value="GradientColor2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GradientColor2 = int32(3811)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GradientColor2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A segunda cor em um gradiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientColor3">
+      <MemberSignature Language="C#" Value="GradientColor3" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GradientColor3 = int32(3812)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GradientColor3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A terceira cor em um gradiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientColor4">
+      <MemberSignature Language="C#" Value="GradientColor4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GradientColor4 = int32(3813)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GradientColor4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A quarta cor em um gradiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GradientColor5">
+      <MemberSignature Language="C#" Value="GradientColor5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty GradientColor5 = int32(3814)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.GradientColor5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A quinta cor em um gradiente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadowColor">
+      <MemberSignature Language="C#" Value="ShadowColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty ShadowColor = int32(3815)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.ShadowColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor da sombra.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBorderColor">
+      <MemberSignature Language="C#" Value="TextBorderColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty TextBorderColor = int32(3817)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.TextBorderColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor da borda do texto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TextColor">
+      <MemberSignature Language="C#" Value="TextColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty TextColor = int32(3803)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.TextColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor do texto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TextShadowColor">
+      <MemberSignature Language="C#" Value="TextShadowColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty TextShadowColor = int32(3818)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.TextShadowColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor da sombra do texto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransparentColor">
+      <MemberSignature Language="C#" Value="TransparentColor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ColorProperty TransparentColor = int32(3809)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ColorProperty.TransparentColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ColorProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cor dos pixels que são tratados como transparente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

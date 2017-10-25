@@ -1,0 +1,81 @@
+<Type Name="TextWrapping" FullName="System.Windows.TextWrapping">
+  <TypeSignature Language="C#" Value="public enum TextWrapping" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextWrapping extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.TextWrapping" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se o texto é encapsulado quando atinge a borda da caixa</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como definir o valor de <xref:System.Windows.TextWrapping> propriedade de um <xref:System.Windows.Controls.TextBox>.  
+  
+ [!code-csharp[TextBoxBase_Samp#TextBoxBase12](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxBase_Samp/CSharp/Window1.xaml.cs#textboxbase12)]
+ [!code-vb[TextBoxBase_Samp#TextBoxBase12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxBase_Samp/VisualBasic/Window1.xaml.vb#textboxbase12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NoWrap">
+      <MemberSignature Language="C#" Value="NoWrap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextWrapping NoWrap = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextWrapping.NoWrap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextWrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma disposição de linha é executada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="Wrap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextWrapping Wrap = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextWrapping.Wrap" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextWrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma quebra de linha ocorrerá se a linha estourar além da largura do bloco disponível, mesmo se o algoritmo de quebra de linha padrão não puder determinar uma oportunidade de quebra de linha, como no caso de uma palavra muito longa restrita em um contêiner de largura fixa sem rolagem permitida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapWithOverflow">
+      <MemberSignature Language="C#" Value="WrapWithOverflow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.TextWrapping WrapWithOverflow = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.TextWrapping.WrapWithOverflow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.TextWrapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma quebra de linha ocorrerá se a linha estourar além da largura de bloco disponível. No entanto, uma linha poderá estourar além da largura do bloco se o algoritmo de quebra de linha não puder determinar uma oportunidade de quebra de linha, como no caso de uma palavra muito longa restrita em um contêiner de largura fixa sem rolagem permitida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

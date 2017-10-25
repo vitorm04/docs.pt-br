@@ -1,0 +1,391 @@
+<Type Name="ServicedComponent" FullName="System.EnterpriseServices.ServicedComponent">
+  <TypeSignature Language="C#" Value="public abstract class ServicedComponent : ContextBoundObject, IDisposable, System.EnterpriseServices.IRemoteDispatch, System.EnterpriseServices.IServicedComponentInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable ServicedComponent extends System.ContextBoundObject implements class System.EnterpriseServices.IRemoteDispatch, class System.EnterpriseServices.IServicedComponentInfo, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ServicedComponent" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ContextBoundObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.IRemoteDispatch</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.IServicedComponentInfo</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a classe base de todas as classes usando serviços COM+.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em determinadas condições, uma classe derivada de <xref:System.EnterpriseServices.ServicedComponent> que é executado em um aplicativo COM+ pode parar de responder. Esse problema é causado por um deadlock de atividade. As atividades podem fazer um deadlock em aplicativos multissegmentados devido a uma limpeza assíncrona de referências de componentes. Para contornar esse problema, chame o <xref:System.EnterpriseServices.ServicedComponent.Dispose%2A> método quando você concluir o trabalho com objetos derivados de <xref:System.EnterpriseServices.ServicedComponent>. Para obter mais informações, consulte [http://support.microsoft.com/default.aspx?scid=kb;en-us;327443](http://support.microsoft.com/default.aspx?scid=kb;en-us;327443).  
+  
+> [!NOTE]
+>  Código do cliente deve chamar `Dispose` em componentes para garantir a operação correta de serviço.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como expor uma classe como um componente COM configurado.  
+  
+ [!code-cpp[EnterpriseServices_Basic#1](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Basic/CPP/calculator.cpp#1)]
+ [!code-csharp[EnterpriseServices_Basic#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Basic/CS/calculator.cs#1)]  
+  
+ Para implantar essa classe como um componente COM configurado, gerar uma chave forte, compile a classe como uma biblioteca e registrar a biblioteca. Essas três etapas são realizadas pelos seguintes três comandos.  
+  
+```  
+sn -k Calculator.snk  
+csc /t:library Calculator.cs  
+regsvcs Calculator.dll  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServicedComponent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.ServicedComponent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado pelos construtores de classe derivada para inicializar o estado nesse tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate">
+      <MemberSignature Language="C#" Value="protected virtual void Activate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Activate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.Activate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado pela infraestrutura quando o objeto é criado ou alocado de um pool. Substitua este método para adicionar o código de inicialização personalizadas a objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso deste método.  
+  
+ [!code-cpp[EnterpriseServices_Pooling#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CPP/inspector.cpp#3)]
+ [!code-csharp[EnterpriseServices_Pooling#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CS/inspector.cs#3)]
+ [!code-vb[EnterpriseServices_Pooling#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Pooling/VB/inspector.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBePooled">
+      <MemberSignature Language="C#" Value="protected virtual bool CanBePooled ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool CanBePooled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.CanBePooled" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Este método é chamado pela infraestrutura antes do objeto é colocado de volta para o pool. Substitua este método para votar em se o objeto é colocado de volta para o pool.</summary>
+        <returns>
+          <see langword="true" />Se o componente de serviço pode ser agrupado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso deste método.  
+  
+ [!code-cpp[EnterpriseServices_Pooling#5](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CPP/inspector.cpp#5)]
+ [!code-csharp[EnterpriseServices_Pooling#5](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CS/inspector.cs#5)]
+ [!code-vb[EnterpriseServices_Pooling#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Pooling/VB/inspector.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Construct">
+      <MemberSignature Language="C#" Value="protected virtual void Construct (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Construct(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.Construct(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">A cadeia de caracteres de construção.</param>
+        <summary>Chamado pela infraestrutura logo após o construtor é chamado, passando a cadeia de caracteres do construtor. Substitua este método para fazer uso do valor de cadeia de caracteres de construção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deactivate">
+      <MemberSignature Language="C#" Value="protected virtual void Deactivate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Deactivate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.Deactivate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado pela infraestrutura quando o objeto está prestes a ser desativado. Substitua este método para adicionar o código de finalização personalizadas a objetos quando o código de compilado just-in-time (JIT) ou pool de objetos é usado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso deste método.  
+  
+ [!code-cpp[EnterpriseServices_Pooling#4](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CPP/inspector.cpp#4)]
+ [!code-csharp[EnterpriseServices_Pooling#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Pooling/CS/inspector.cs#4)]
+ [!code-vb[EnterpriseServices_Pooling#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Pooling/VB/inspector.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Dispose">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Libera os recursos usados pelo <see cref="T:System.EnterpriseServices.ServicedComponent" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.EnterpriseServices.ServicedComponent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Finaliza o objeto e remove o contexto COM+ associado.  
+  
+ É recomendável liberar explicitamente COM+ objetos e recursos externos antes do coletor de lixo libera o objeto. Se o recurso externo é caro ou escassos, melhorar o desempenho pode ser obtido explicitamente liberando recursos COM+ quando eles não são mais necessários. Controle explícito é fornecido pelo <xref:System.EnterpriseServices.ServicedComponent.Dispose%2A> método.  
+  
+ Chamando <xref:System.EnterpriseServices.ServicedComponent.Dispose%2A> permite que os recursos usados pelo <xref:System.EnterpriseServices.ServicedComponent> para ser realocada para outros fins. Para obter mais informações sobre <xref:System.EnterpriseServices.ServicedComponent.Dispose%2A>, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.EnterpriseServices.ServicedComponent.Dispose(System.Boolean)" /> método para personalizar a lógica de descarte para esta classe.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar recursos gerenciados e não gerenciados; Caso contrário, <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.EnterpriseServices.ServicedComponent" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose` e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.EnterpriseServices.ServicedComponent> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="DisposeObject">
+      <MemberSignature Language="C#" Value="public static void DisposeObject (System.EnterpriseServices.ServicedComponent sc);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DisposeObject(class System.EnterpriseServices.ServicedComponent sc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.DisposeObject(System.EnterpriseServices.ServicedComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sc" Type="System.EnterpriseServices.ServicedComponent" />
+      </Parameters>
+      <Docs>
+        <param name="sc">Objeto a ser descartado.</param>
+        <summary>Finaliza o objeto e remove a referência de COM+ associada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É preferível usar o `Dispose` padrão de design em vez de <xref:System.EnterpriseServices.ServicedComponent.DisposeObject%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone">
+      <MemberSignature Language="C#" Value="string IRemoteDispatch.RemoteDispatchAutoDone (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.System#EnterpriseServices#IRemoteDispatch#RemoteDispatchAutoDone(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.EnterpriseServices.AutoComplete(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">To be added.</param>
+        <summary>Garante que, no contexto COM+, o <see cref="T:System.EnterpriseServices.ServicedComponent" /> do objeto de classe <see langword="done" /> bit é definido como <see langword="true" /> depois de uma invocação de método remoto.</summary>
+        <returns>Uma cadeia de caracteres convertida de um objeto de resposta que implementa o <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> interface.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchAutoDone%2A> método não pertence à interface publicada do <xref:System.EnterpriseServices.ServicedComponent> de classe e não precisa ser implementado em outro lugar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone">
+      <MemberSignature Language="C#" Value="string IRemoteDispatch.RemoteDispatchNotAutoDone (string s);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone(string s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.System#EnterpriseServices#IRemoteDispatch#RemoteDispatchNotAutoDone(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.EnterpriseServices.AutoComplete(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="s">Uma cadeia de caracteres a ser convertido em um objeto de solicitação que implementa o <see cref="T:System.Runtime.Remoting.Messaging.IMessage" /> interface.</param>
+        <summary>Não garante que, no contexto COM+, o <see cref="T:System.EnterpriseServices.ServicedComponent" /> do objeto de classe <see langword="done" /> bit é definido como <see langword="true" /> depois de uma invocação de método remoto.</summary>
+        <returns>Uma cadeia de caracteres convertida de um objeto de resposta que implementa o <see cref="T:System.Runtime.Remoting.Messaging.IMethodReturnMessage" /> interface.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IRemoteDispatch.RemoteDispatchNotAutoDone%2A> método não pertence à interface publicada do <xref:System.EnterpriseServices.ServicedComponent> de classe e não precisa ser implementado em outro lugar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo">
+      <MemberSignature Language="C#" Value="void IServicedComponentInfo.GetComponentInfo (ref int infoMask, out string[] infoArray);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo(int32&amp; infoMask, [out] string[]&amp; infoArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ServicedComponent.System#EnterpriseServices#IServicedComponentInfo#GetComponentInfo(System.Int32@,System.String[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="infoMask" Type="System.Int32&amp;" RefType="ref" />
+        <Parameter Name="infoArray" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="infoMask">Um bitmask onde 0x00000001 é uma chave para a ID de processo do componente de serviço, 0x00000002 é uma chave para a ID de domínio de aplicativo e 0x00000004 é uma chave para o URI do componente de serviço remoto.</param>
+        <param name="infoArray">Uma matriz de cadeia de caracteres que pode conter qualquer ou todos os seguintes, em ordem: o componente de serviço processar ID, a ID de domínio de aplicativo e URI do componente de serviço remoto.</param>
+        <summary>Obtém a certas informações sobre o <see cref="T:System.EnterpriseServices.ServicedComponent" /> instância da classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.EnterpriseServices.IServicedComponentInfo.GetComponentInfo%2A> método não pertence à interface publicada do <xref:System.EnterpriseServices.ServicedComponent> de classe e não precisa ser implementado em outro lugar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

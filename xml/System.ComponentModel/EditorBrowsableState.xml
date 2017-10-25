@@ -1,0 +1,130 @@
+<Type Name="EditorBrowsableState" FullName="System.ComponentModel.EditorBrowsableState">
+  <TypeSignature Language="C#" Value="public enum EditorBrowsableState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EditorBrowsableState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EditorBrowsableState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estado navegável de uma propriedade ou método de dentro de um editor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada por um designer visual para determinar o que é visível para o usuário. Por exemplo, o mecanismo IntelliSense no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] nunca mostra métodos ou propriedades que são marcadas como nunca. Use <xref:System.ComponentModel.EditorBrowsableAttribute> para especificar o <xref:System.ComponentModel.EditorBrowsableState> para um membro.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de como usar o <xref:System.ComponentModel.EditorBrowsableState> enumerador, consulte o código de exemplo <xref:System.ComponentModel.EditorBrowsableAttribute> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Advanced">
+      <MemberSignature Language="C#" Value="Advanced" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.EditorBrowsableState Advanced = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.EditorBrowsableState.Advanced" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade ou método é um recurso que apenas usuários avançados devem ver. Um editor pode mostrar ou ocultar essas propriedades.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.EditorBrowsableState Always = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.EditorBrowsableState.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade ou método sempre é navegável de dentro de um editor.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.EditorBrowsableState Never = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.EditorBrowsableState.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.EditorBrowsableState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade ou método nunca é navegável de dentro de um editor.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

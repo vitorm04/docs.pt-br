@@ -1,0 +1,170 @@
+<Type Name="HttpMethodConstraint" FullName="System.Web.Routing.HttpMethodConstraint">
+  <TypeSignature Language="C#" Value="public class HttpMethodConstraint : System.Web.Routing.IRouteConstraint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpMethodConstraint extends System.Object implements class System.Web.Routing.IRouteConstraint" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Routing.HttpMethodConstraint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.Routing.IRouteConstraint</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Routing, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que você defina quais verbos HTTP são permitidos quando o roteamento do ASP.NET determina se uma URL corresponde a uma rota.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Routing.HttpMethodConstraint> classe permite que você limite a rota correspondente a determinados verbos HTTP. Por exemplo, você pode especificar que uma rota é considerada uma correspondência para uma URL somente quando o verbo HTTP para a solicitação é `POST`.  
+  
+ Para definir restrições para correspondência de rota, você deve definir o <xref:System.Web.Routing.Route.Constraints%2A> propriedade o <xref:System.Web.Routing.Route> classe para uma instância do <xref:System.Web.Routing.RouteValueDictionary> classe. Para definir uma restrição de verbo HTTP, você definir o valor do elemento de um dicionário para uma <xref:System.Web.Routing.HttpMethodConstraint> objeto e a chave para qualquer nome.  
+  
+ No <xref:System.Web.Routing.HttpMethodConstraint.%23ctor%2A> método, você incluir todos os verbos HTTP que são permitidos para a rota ao roteamento ASP.NET determina se a rota corresponde a uma URL.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.Routing.Route> objeto cujo <xref:System.Web.Routing.Route.Constraints%2A> propriedade contém um item que tem uma chave chamada `httpMethod` e que tem um valor que seja uma ocorrência da <xref:System.Web.Routing.HttpMethodConstraint> classe.  
+  
+ [!code-csharp[System.Web.Routing.Route.Constraints#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.Route.Constraints/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.Route.Constraints#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.Route.Constraints/vb/Global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpMethodConstraint (params string[] allowedMethods);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string[] allowedMethods) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.HttpMethodConstraint.#ctor(System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="allowedMethods" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="allowedMethods">Os verbos HTTP que são válidos para a rota.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Routing.HttpMethodConstraint" /> classe usando os verbos HTTP que são permitidos para a rota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.Routing.Route> objeto cujo <xref:System.Web.Routing.Route.Constraints%2A> propriedade contém um item que tem uma chave chamada `httpMethod` e que tem um valor que seja uma ocorrência da <xref:System.Web.Routing.HttpMethodConstraint> classe.  
+  
+ [!code-csharp[System.Web.Routing.Route.Constraints#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Routing.Route.Constraints/cs/Global.asax#1)]
+ [!code-vb[System.Web.Routing.Route.Constraints#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Routing.Route.Constraints/vb/Global.asax#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="allowedMethods" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedMethods">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; AllowedMethods { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; AllowedMethods" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Routing.HttpMethodConstraint.AllowedMethods" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de verbos HTTP permitidos para a rota.</summary>
+        <value>Uma coleção de verbos HTTP permitidos para a rota.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="protected virtual bool Match (System.Web.HttpContextBase httpContext, System.Web.Routing.Route route, string parameterName, System.Web.Routing.RouteValueDictionary values, System.Web.Routing.RouteDirection routeDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool Match(class System.Web.HttpContextBase httpContext, class System.Web.Routing.Route route, string parameterName, class System.Web.Routing.RouteValueDictionary values, valuetype System.Web.Routing.RouteDirection routeDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.HttpMethodConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContextBase" />
+        <Parameter Name="route" Type="System.Web.Routing.Route" />
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="values" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="routeDirection" Type="System.Web.Routing.RouteDirection" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Um objeto que encapsula informações sobre a solicitação HTTP.</param>
+        <param name="route">O objeto que está sendo verificado para determinar se ela corresponde à URL.</param>
+        <param name="parameterName">O nome do parâmetro que está sendo verificado.</param>
+        <param name="values">Um objeto que contém os parâmetros para uma rota.</param>
+        <param name="routeDirection">Um objeto que indica se a verificação de restrição está sendo executada quando uma solicitação de entrada é processada ou quando uma URL é gerada.</param>
+        <summary>Determina se a solicitação foi feita com um verbo HTTP que é um dos verbos permitidos para a rota.</summary>
+        <returns>Quando o roteamento ASP.NET está processando uma solicitação, <see langword="true" /> se a solicitação foi feita usando um verbo HTTP permitido; caso contrário, <see langword="false" />. Quando o roteamento ASP.NET está construindo uma URL, <see langword="true" /> se os valores fornecidos contiverem um verbo HTTP que corresponde a um dos verbos HTTP permitidos; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou mais dos parâmetros a seguir é <see langword="null" />: <paramref name="httpContext" />, <paramref name="route" />, <paramref name="parameterName" />, ou <paramref name="values" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.Routing.IRouteConstraint.Match">
+      <MemberSignature Language="C#" Value="bool IRouteConstraint.Match (System.Web.HttpContextBase httpContext, System.Web.Routing.Route route, string parameterName, System.Web.Routing.RouteValueDictionary values, System.Web.Routing.RouteDirection routeDirection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Web.Routing.IRouteConstraint.Match(class System.Web.HttpContextBase httpContext, class System.Web.Routing.Route route, string parameterName, class System.Web.Routing.RouteValueDictionary values, valuetype System.Web.Routing.RouteDirection routeDirection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Routing.HttpMethodConstraint.System#Web#Routing#IRouteConstraint#Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContextBase" />
+        <Parameter Name="route" Type="System.Web.Routing.Route" />
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="values" Type="System.Web.Routing.RouteValueDictionary" />
+        <Parameter Name="routeDirection" Type="System.Web.Routing.RouteDirection" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Um objeto que encapsula informações sobre a solicitação HTTP.</param>
+        <param name="route">O objeto que está sendo verificado para determinar se ela corresponde à URL.</param>
+        <param name="parameterName">O nome do parâmetro que está sendo verificado.</param>
+        <param name="values">Um objeto que contém os parâmetros para uma rota.</param>
+        <param name="routeDirection">Um objeto que indica se a verificação de restrição está sendo executada quando uma solicitação de entrada é manipulada, ou quando uma URL é gerada.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.Routing.IRouteConstraint.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)" />.</summary>
+        <returns>
+          <see langword="true" />Se a solicitação foi feita por meio de um verbo HTTP permitido; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Routing.HttpMethodConstraint> é convertida em uma interface de <xref:System.Web.Routing.IRouteConstraint>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um ou mais dos parâmetros a seguir é <see langword="null" />: <paramref name="httpContext" />, <paramref name="route" />, <paramref name="parameterName" />, ou <paramref name="values" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

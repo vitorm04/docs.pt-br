@@ -1,0 +1,138 @@
+<Type Name="EdmRelationshipNavigationPropertyAttribute" FullName="System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class EdmRelationshipNavigationPropertyAttribute : System.Data.Objects.DataClasses.EdmPropertyAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmRelationshipNavigationPropertyAttribute extends System.Data.Objects.DataClasses.EdmPropertyAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.EdmPropertyAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Atributo que indica que a propriedade representa uma propriedade de navegação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute> vincula a propriedade de navegação de uma classe para a propriedade de navegação de um tipo de entidade que está definido no modelo conceitual.  
+  
+ Esse atributo é aplicado aos seguintes tipos de propriedades de navegação:  
+  
+-   Propriedades que retornam um <xref:System.Data.Objects.DataClasses.EntityCollection%601> de objetos relacionados.  
+  
+-   Propriedades que retornam o valor da <xref:System.Data.Objects.DataClasses.EntityReference%601> de um objeto relacionado, como no exemplo a seguir do `SalesOrderDetail` tipo.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EdmRelationshipNavigationPropertyAttribute (string relationshipNamespaceName, string relationshipName, string targetRoleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string relationshipNamespaceName, string relationshipName, string targetRoleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relationshipNamespaceName" Type="System.String" />
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="targetRoleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationshipNamespaceName">O nome do namespace da propriedade de relação.</param>
+        <param name="relationshipName">O nome da relação. O nome da relação não é qualificado de namespace.</param>
+        <param name="targetRoleName">O nome da função na outra extremidade da relação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da relação não deve conter um namespace. Se você adicionar o namespace para o nome da relação, por exemplo '*MyNamespace*.* MyRelationship*', ocorrerá um erro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipName">
+      <MemberSignature Language="C#" Value="public string RelationshipName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelationshipName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.RelationshipName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da relação não qualificado.</summary>
+        <value>O nome da relação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da relação não é qualificado de namespace.  
+  
+ O nome da relação é especificado pelo `Name` atributo o `Association` elemento que define essa relação no modelo conceitual. Para obter mais informações, consulte [elemento Association (CSDL)](http://msdn.microsoft.com/en-us/c305169a-8af7-432f-9ba7-800a163aed41).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelationshipNamespaceName">
+      <MemberSignature Language="C#" Value="public string RelationshipNamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelationshipNamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.RelationshipNamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do namespace da propriedade de navegação.</summary>
+        <value>Um <see cref="T:System.String" /> que é o nome do namespace.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O namespace da relação for especificado o `Namespace` atributo do `Schema` elemento que contém a associação que define essa relação no modelo conceitual. Para obter mais informações, consulte [elemento Association (CSDL)](http://msdn.microsoft.com/en-us/c305169a-8af7-432f-9ba7-800a163aed41).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetRoleName">
+      <MemberSignature Language="C#" Value="public string TargetRoleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetRoleName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute.TargetRoleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da função na outra extremidade da relação.</summary>
+        <value>O nome da função de destino for especificado o <see langword="Role" /> atributo dos outros <see langword="End" /> elemento na associação que define essa relação no modelo conceitual. Para obter mais informações, consulte [elemento Association (CSDL)](http://msdn.microsoft.com/en-us/c305169a-8af7-432f-9ba7-800a163aed41).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

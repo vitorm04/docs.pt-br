@@ -1,0 +1,130 @@
+<Type Name="IChannelFactory&lt;TChannel&gt;" FullName="System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;">
+  <TypeSignature Language="C#" Value="public interface IChannelFactory&lt;TChannel&gt; : System.ServiceModel.Channels.IChannelFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannelFactory`1&lt;TChannel&gt; implements class System.ServiceModel.Channels.IChannelFactory, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IChannelFactory`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TChannel" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannelFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TChannel">O tipo de canal criado pela fábrica de canais.</typeparam>
+    <summary>Define a interface que deve ser implementada por fábricas de canais que criam canais de um tipo específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementando o <xref:System.ServiceModel.Channels.IChannelFactory%601> contrato permite aos usuários criar diversos canais de um determinado tipo sem ter que especificar o tipo de canal de cada vez. Em outras palavras, a definição do tipo de canal como um parâmetro genérico para a implementação de fábrica de canal de <xref:System.ServiceModel.Channels.IChannelFactory%601> interface significa que não é necessário passar o tipo para o <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%2A> métodos. Se os usuários desejam criar tipos diferentes de canal, eles podem criar as fábricas de canal adicional para cada tipo de canal Obrigado. O <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29> sobrecarga permite diferenciar o endereço para o qual a mensagem é enviada inicialmente do destino final. Para obter uma discussão de endereçamento, consulte o [endereços](~/docs/framework/wcf/feature-details/endpoint-addresses.md) tópico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="CreateChannel">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria um canal de um tipo especificado para um endereço do ponto de extremidade especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29> sobrecarga para distinguir o endereço para o qual a mensagem é enviada inicialmente do destino final quando quiser fazer roteamento manual. Observe que todos os canais criados por essa fábrica de canais são fechados quando a fábrica de canais é fechada. Para obter uma discussão de endereçamento, consulte o [endereços](~/docs/framework/wcf/feature-details/endpoint-addresses.md) tópico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateChannel">
+      <MemberSignature Language="C#" Value="public TChannel CreateChannel (System.ServiceModel.EndpointAddress to);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel CreateChannel(class System.ServiceModel.EndpointAddress to) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelFactory`1.CreateChannel(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="to" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="to">O <see cref="T:System.ServiceModel.EndpointAddress" /> que fornece o local do serviço.</param>
+        <summary>Cria um canal de um tipo especificado para um endereço do ponto de extremidade especificado.</summary>
+        <returns>Um canal do tipo <paramref name="TChannel" /> para o endereço do ponto de extremidade especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%2CSystem.Uri%29> sobrecarga para distinguir o endereço para o qual a mensagem é enviada inicialmente do destino final quando quiser fazer roteamento manual. Observe que todos os canais criados por essa fábrica de canais são fechados quando a fábrica de canais é fechada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChannel">
+      <MemberSignature Language="C#" Value="public TChannel CreateChannel (System.ServiceModel.EndpointAddress to, Uri via);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TChannel CreateChannel(class System.ServiceModel.EndpointAddress to, class System.Uri via) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannelFactory`1.CreateChannel(System.ServiceModel.EndpointAddress,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="to" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="via" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="to">O <see cref="T:System.ServiceModel.EndpointAddress" /> que fornece o local do serviço.</param>
+        <param name="via">O <see cref="T:System.Uri" /> que contém o endereço de transporte para o qual a mensagem é enviada.</param>
+        <summary>Cria um canal de um tipo especificado para um endereço de ponto de extremidade especificado e o endereço de transporte para o qual as mensagens são enviadas.</summary>
+        <returns>Um canal do tipo <paramref name="TChannel" /> para o endereço do ponto de extremidade especificado e o endereço de transporte.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O endereço de transporte especificado pelo `via` é o local para o qual uma mensagem deve ser enviada inicialmente até chegar a um outro endereço remoto especificado pelo `to` no qual o serviço está localizado. Na maioria dos cenários de Internet, o `via` URI é igual a <xref:System.ServiceModel.EndpointAddress.Uri%2A> de final `to` endereço do serviço. Você só pode distinguir entre esses dois endereços quando você deseja fazer algum tipo de roteamento manual. Observe que todos os canais criados por essa fábrica de canais são fechados quando a fábrica de canais é fechada. Para obter uma discussão de endereçamento, consulte o [endereços](~/docs/framework/wcf/feature-details/endpoint-addresses.md) tópico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

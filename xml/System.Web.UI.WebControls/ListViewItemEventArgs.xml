@@ -1,0 +1,107 @@
+<Type Name="ListViewItemEventArgs" FullName="System.Web.UI.WebControls.ListViewItemEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewItemEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewItemEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewItemEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Web.UI.WebControls.ListView.ItemCreated" /> e de <see cref="E:System.Web.UI.WebControls.ListView.ItemDataBound" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes do <xref:System.Web.UI.WebControls.ListView> controle pode ser processado, uma <xref:System.Web.UI.WebControls.ListViewItem> objeto deve ser criado para cada item no controle. O <xref:System.Web.UI.WebControls.ListView.ItemCreated> é gerado sempre que um item no <xref:System.Web.UI.WebControls.ListView> controle é criado. Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada sempre que um item é criado, como adicionar conteúdo personalizado a um item.  
+  
+ Da mesma forma, antes do <xref:System.Web.UI.WebControls.ListView> controle pode ser processado, cada item no controle deve ser vinculado a um registro na fonte de dados. O <xref:System.Web.UI.WebControls.ListView.ItemDataBound> evento é gerado quando um item (representado por um <xref:System.Web.UI.WebControls.ListViewItem> objeto) está associada aos dados no <xref:System.Web.UI.WebControls.ListView> controle. Isso permite que você execute uma rotina personalizada sempre que um item está associado a dados, como modificar os valores dos dados antes de eles serem exibidos.  
+  
+ Um <xref:System.Web.UI.WebControls.ListViewItemEventArgs> objeto é passado para o método de manipulação de eventos, que permite que você acesse as propriedades do item que disparou o evento. Para determinar qual tipo de item (item de dados, item vazio ou item de inserção) está sendo criado, use o <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> propriedade o <xref:System.Web.UI.WebControls.ListViewItem> objeto.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewItemEventArgs>, consulte o <xref:System.Web.UI.WebControls.ListViewItemEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewItemEventArgs> objeto para acessar as propriedades do item que está sendo associada aos dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemDataBound#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/CS/ListViewItemDataBoundCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemDataBound#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/VB/ListViewItemDataBoundVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewItemEventArgs (System.Web.UI.WebControls.ListViewItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.ListViewItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewItemEventArgs.#ctor(System.Web.UI.WebControls.ListViewItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="item" Type="System.Web.UI.WebControls.ListViewItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item que está sendo criada ou associada a dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewItemEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListViewItemEventArgs> classe.  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando elas geram eventos.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.ListViewItemEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewItemEventArgs.Item%2A>|O <xref:System.Web.UI.WebControls.ListViewItem> que está contido no objeto de `item` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListViewItem Item { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ListViewItem Item" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewItemEventArgs.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListViewItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item que está sendo criados ou associados a dados.</summary>
+        <value>O item que está sendo criados ou associados a dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewItemEventArgs.Item%2A> propriedade para acessar as propriedades do item que está sendo criados ou associados a dados. Para determinar qual tipo de item (item de dados, item vazio ou item de inserção) está sendo criado, use o <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> propriedade o <xref:System.Web.UI.WebControls.ListViewItem> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewItemEventArgs.Item%2A> propriedade para acessar as propriedades do item que está sendo associada aos dados. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.ListViewItemEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemDataBound#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/CS/ListViewItemDataBoundCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemDataBound#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemDataBound/VB/ListViewItemDataBoundVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

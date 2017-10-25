@@ -1,0 +1,249 @@
+<Type Name="RuleUpdateAction" FullName="System.Workflow.Activities.Rules.RuleUpdateAction">
+  <TypeSignature Language="C#" Value="public class RuleUpdateAction : System.Workflow.Activities.Rules.RuleAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit RuleUpdateAction extends System.Workflow.Activities.Rules.RuleAction" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleUpdateAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.Rules.RuleAction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Indica que uma regra está atualizando uma variável, para fazer com que a reavaliação de regras afetadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada para indicar ao mecanismo de regras que a execução do conjunto dessa regra de ações faz com que uma alteração para o campo ou propriedade que é especificada (ou todos os campos e propriedades em um objeto), para que quaisquer regras que são dependentes nesse campo ou propriedade podem ser reavaliadas.  
+  
+ Um `Update` chamada não impede outras ações no bloco de ação de execução. O conjunto de campos/propriedades que são modificadas (especificado por meio de `Update` ou usando <xref:System.Workflow.Activities.Rules.RuleWriteAttribute>s em métodos invocados) é usado para determinar quando o conjunto de ações para essa regra específica conclui a execução de encadeamento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleUpdateAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleUpdateAction (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Uma cadeia de caracteres que representa o nome do campo ou propriedade alterada. O caractere "/" é usado como separador.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para indicar que a propriedade `this.SomeProperty` tiver sido modificado, o `path` parâmetro seria `this/SomeProperty`. Você pode especificar o valor alterado especificamente preferir (por exemplo, se você modificou apenas `this.SomeProperty/SomeOtherProperty`, você pode especificar `this/SomeProperty/SomeOtherProperty`). No último caso, outras regras usadas `this.SomeProperty/AnyOtherProperty` não deve ser reavaliado.  
+  
+ Para especificar que todos os campos e propriedades são modificadas, acrescente "*" ao final do caminho. Por exemplo, `this/SomeProperty/*` indica que todos os campos e propriedades em `this.SomeProperty` foram modificadas. Portanto, todas as regras que usam qualquer campo ou propriedade em `this.SomeProperty` deve ser reavaliado.  
+  
+> [!NOTE]
+>  Se o conjunto de regras for executado com <xref:System.Workflow.Activities.Rules.RuleSet.ChainingBehavior%2A> definida como <xref:System.Workflow.Activities.Rules.RuleChainingBehavior.None>, essa ação é ignorada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override System.Workflow.Activities.Rules.RuleAction Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Workflow.Activities.Rules.RuleAction Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleAction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia profunda da atual <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
+        <returns>Um <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> que é idêntica a esta instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Object" />.</param>
+        <summary>Determina se duas instâncias de objeto são iguais.</summary>
+        <returns>
+          <see langword="true" /> se os objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override void Execute (System.Workflow.Activities.Rules.RuleExecution context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Execute(class System.Workflow.Activities.Rules.RuleExecution context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.Execute(System.Workflow.Activities.Rules.RuleExecution)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Workflow.Activities.Rules.RuleExecution" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Workflow.Activities.Rules.RuleExecution" /> contexto usado para executar o <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</param>
+        <summary>Executa o <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> usando especificado <see cref="T:System.Workflow.Activities.Rules.RuleExecution" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>O código hash para essa instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSideEffects">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.ICollection&lt;string&gt; GetSideEffects (System.Workflow.Activities.Rules.RuleValidation validation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.ICollection`1&lt;string&gt; GetSideEffects(class System.Workflow.Activities.Rules.RuleValidation validation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.GetSideEffects(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validation">O <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> para gerenciar o processo de validação.</param>
+        <summary>Retorna os campos e propriedades atualizadas por um <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</summary>
+        <returns>Uma lista de campos e propriedades alteradas por um <see cref="T:System.Workflow.Activities.Rules.RuleAction" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleUpdateAction.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" />.</summary>
+        <value>O caminho do <see cref="T:System.Workflow.Activities.Rules.RuleUpdateAction" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Rules.RuleUpdateAction.Path%2A>é uma cadeia de caracteres que representa o nome do campo ou propriedade é alterada. "/" é usado como separador. Para indicar que a propriedade `this.SomeProperty` tiver sido modificado, a propriedade seria "`this/SomeProperty`". Você pode especificar o valor alterado especificamente preferir (por exemplo, se você modificou apenas `this.SomeProperty/SomeOtherProperty`, você pode especificar "`this/SomeProperty/SomeOtherProperty`"). No último caso, outras regras usadas `this.SomeProperty/AnyOtherProperty` não deve ser reavaliado.  
+  
+ Para especificar que todos os campos e propriedades são modificadas, acrescente "*" ao final do caminho. Por exemplo, "`this/SomeProperty/*`" indica que todos os campos e propriedades em `this.SomeProperty` foram modificadas. Portanto, todas as regras que usam qualquer campo ou propriedade em `this.SomeProperty` deve ser reavaliado.  
+  
+> [!NOTE]
+>  Se o conjunto de regras for executado com <xref:System.Workflow.Activities.Rules.RuleSet.ChainingBehavior%2A> definida como <xref:System.Workflow.Activities.Rules.RuleChainingBehavior.None>, essa ação é ignorada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que indica o campo ou propriedade que o <see cref="T:System.Workflow.Activities.Rules.Rule" /> está atualizando.</summary>
+        <returns>A cadeia de caracteres "atualização &lt; <see cref="P:System.Workflow.Activities.Rules.RuleUpdateAction.Path" /> &gt;".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override bool Validate (System.Workflow.Activities.Rules.RuleValidation validator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Validate(class System.Workflow.Activities.Rules.RuleValidation validator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleUpdateAction.Validate(System.Workflow.Activities.Rules.RuleValidation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validator" Type="System.Workflow.Activities.Rules.RuleValidation" />
+      </Parameters>
+      <Docs>
+        <param name="validator">O <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> para gerenciar o processo de validação.</param>
+        <summary>Verifica se o <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> está configurado corretamente e não tem erros.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> não tem erros; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

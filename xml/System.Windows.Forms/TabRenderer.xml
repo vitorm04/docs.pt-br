@@ -1,0 +1,513 @@
+<Type Name="TabRenderer" FullName="System.Windows.Forms.TabRenderer">
+  <TypeSignature Language="C#" Value="public sealed class TabRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TabRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TabRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos usados para renderizar um controle guia com estilos visuais. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TabRenderer> classe fornece um conjunto de `static` métodos que podem ser usados para renderizar um controle guia com o estilo visual atual do sistema operacional. Renderizar um controle refere-se a desenhar a interface do usuário de um controle. Isso é útil se você estiver desenhando um controle personalizado que deve ter a aparência do estilo visual atual. Para desenhar um controle guia, use o <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> método para desenhar a página e use o <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> método para desenhar cada guia.  
+  
+ Se esses estilos estejam habilitados no sistema operacional e estilos visuais são aplicados à área de cliente do aplicativo windows, os métodos dessa classe desenhará o controle de guia com o estilo visual atual. Caso contrário, os métodos e as propriedades dessa classe lançará um <xref:System.InvalidOperationException>. Para determinar se os membros dessa classe podem ser usados, verifique o valor de <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade.  
+  
+ Essa classe encapsula a funcionalidade de um <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer?displayProperty=nameWithType> está definido como um dos elementos expostos pelo <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Tab?displayProperty=nameWithType> classe. Para obter mais informações, consulte [renderização de controles com estilos visuais](~/docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle personalizado que usa o <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> e <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> métodos para desenhar um controle guia básico com duas guias.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.TabRenderer#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="tabItemText">O <see cref="T:System.String" /> para desenhar na guia.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>tabItemText</c>.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites e com o texto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Drawing.Image image, System.Drawing.Rectangle imageRectangle, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageRectangle, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> para desenhar na guia.</param>
+        <param name="imageRectangle">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites, com a imagem especificada e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="tabItemText">O <see cref="T:System.String" /> para desenhar na guia.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>tabItemText</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites, com o texto especificado e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.TabRenderer.DrawTabItem%28System.Drawing.Graphics%2CSystem.Drawing.Rectangle%2CSystem.String%2CSystem.Drawing.Font%2CSystem.Boolean%2CSystem.Windows.Forms.VisualStyles.TabItemState%29> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar um item de guia. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.TabRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TabRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="tabItemText">O <see cref="T:System.String" /> para desenhar na guia.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>tabItemText</c>.</param>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites, com o texto especificado e a formatação de texto e um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Drawing.Image image, System.Drawing.Rectangle imageRectangle, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageRectangle, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="tabItemText">O <see cref="T:System.String" /> para desenhar na guia.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>tabItemText</c>.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> para desenhar na guia.</param>
+        <param name="imageRectangle">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites, com o texto especificado e a imagem e um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabItem">
+      <MemberSignature Language="C#" Value="public static void DrawTabItem (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, string tabItemText, System.Drawing.Font font, System.Windows.Forms.TextFormatFlags flags, System.Drawing.Image image, System.Drawing.Rectangle imageRectangle, bool focused, System.Windows.Forms.VisualStyles.TabItemState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabItem(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, string tabItemText, class System.Drawing.Font font, valuetype System.Windows.Forms.TextFormatFlags flags, class System.Drawing.Image image, valuetype System.Drawing.Rectangle imageRectangle, bool focused, valuetype System.Windows.Forms.VisualStyles.TabItemState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabItem(System.Drawing.Graphics,System.Drawing.Rectangle,System.String,System.Drawing.Font,System.Windows.Forms.TextFormatFlags,System.Drawing.Image,System.Drawing.Rectangle,System.Boolean,System.Windows.Forms.VisualStyles.TabItemState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="tabItemText" Type="System.String" />
+        <Parameter Name="font" Type="System.Drawing.Font" />
+        <Parameter Name="flags" Type="System.Windows.Forms.TextFormatFlags" />
+        <Parameter Name="image" Type="System.Drawing.Image" />
+        <Parameter Name="imageRectangle" Type="System.Drawing.Rectangle" />
+        <Parameter Name="focused" Type="System.Boolean" />
+        <Parameter Name="state" Type="System.Windows.Forms.VisualStyles.TabItemState" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da guia.</param>
+        <param name="tabItemText">O <see cref="T:System.String" /> para desenhar na guia.</param>
+        <param name="font">O <see cref="T:System.Drawing.Font" /> para aplicar a <c>tabItemText</c>.</param>
+        <param name="flags">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.TextFormatFlags" />.</param>
+        <param name="image">O <see cref="T:System.Drawing.Image" /> para desenhar na guia.</param>
+        <param name="imageRectangle">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites de <c>imagem</c>.</param>
+        <param name="focused">
+          <see langword="true" /> para desenhar um retângulo de foco; caso contrário, <see langword="false" />.</param>
+        <param name="state">Uma da <see cref="T:System.Windows.Forms.VisualStyles.TabItemState" /> valores que especifica o estado visual da guia.</param>
+        <summary>Desenha uma guia no estado especificado e limites; com o texto especificado, a formatação de texto e imagem. e com um retângulo de foco opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawTabPage">
+      <MemberSignature Language="C#" Value="public static void DrawTabPage (System.Drawing.Graphics g, System.Drawing.Rectangle bounds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DrawTabPage(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TabRenderer.DrawTabPage(System.Drawing.Graphics,System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> usado para desenhar a página da guia.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> que especifica os limites da página da guia.</param>
+        <summary>Desenha uma página da guia em que os limites especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar esse método, você deve verificar se o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade retorna `true`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> método em um controle personalizado <xref:System.Windows.Forms.Control.OnPaint%2A> método para desenhar uma página da guia. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.TabRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TabRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O sistema operacional não dá suporte a estilos visuais.  
+  
+ -ou-  
+  
+ Estilos visuais estão desabilitados pelo usuário no sistema operacional.  
+  
+ -ou-  
+  
+ Os estilos visuais não são aplicados à área de cliente das janelas de aplicativos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSupported">
+      <MemberSignature Language="C#" Value="public static bool IsSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TabRenderer.IsSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Forms.TabRenderer" /> classe pode ser usada para desenhar um controle guia com estilos visuais.</summary>
+        <value>
+          <see langword="true" />Se o usuário habilitou estilos visuais no sistema operacional e estilos visuais são aplicados à área de cliente do windows do aplicativo. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade for `false`, o <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> e <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> métodos lançará um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.TabRenderer.IsSupported%2A> propriedade para determinar se deve usar o <xref:System.Windows.Forms.TabRenderer.DrawTabPage%2A> e <xref:System.Windows.Forms.TabRenderer.DrawTabItem%2A> métodos. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.TabRenderer> classe.  
+  
+ [!code-cpp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.TabRenderer#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.TabRenderer#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TabRenderer/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

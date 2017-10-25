@@ -1,0 +1,146 @@
+<Type Name="HttpPostedFileBase" FullName="System.Web.HttpPostedFileBase">
+  <TypeSignature Language="C#" Value="public abstract class HttpPostedFileBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpPostedFileBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpPostedFileBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Web.Abstractions, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base para classes que fornecem acesso a arquivos individuais carregados por um cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpPostedFileBase> classe é uma classe abstrata que contém os mesmos membros como o <xref:System.Web.HttpPostedFile> classe. O <xref:System.Web.HttpPostedFileBase> classe permite que você crie classes derivadas que são semelhantes a <xref:System.Web.HttpPostedFile> classe, mas que você pode personalizar e que trabalham fora o pipeline do ASP.NET. Quando você executa testes de unidade, você normalmente usar uma classe derivada para implementar membros que tem personalizado o comportamento que atende o cenário que você está testando.  
+  
+ O <xref:System.Web.HttpPostedFileWrapper> classe deriva de <xref:System.Web.HttpPostedFileBase> classe. O <xref:System.Web.HttpPostedFileWrapper> classe serve como um wrapper para o <xref:System.Web.HttpPostedFile> classe. Em tempo de execução, você normalmente usa uma instância do <xref:System.Web.HttpPostedFileWrapper> classe para chamar membros de <xref:System.Web.HttpPostedFile> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpPostedFileBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpPostedFileBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentLength">
+      <MemberSignature Language="C#" Value="public virtual int ContentLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFileBase.ContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tamanho de um arquivo carregado em bytes.</summary>
+        <value>O tamanho do arquivo em bytes.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public virtual string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFileBase.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo de conteúdo MIME de um arquivo carregado.</summary>
+        <value>O tipo de conteúdo MIME do arquivo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FileName">
+      <MemberSignature Language="C#" Value="public virtual string FileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFileBase.FileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o nome totalmente qualificado do arquivo no cliente.</summary>
+        <value>O nome do arquivo no cliente, que inclui o caminho do diretório.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream InputStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream InputStream" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpPostedFileBase.InputStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um objeto <see cref="T:System.IO.Stream" /> que aponta para um arquivo carregado para preparar a leitura do conteúdo do arquivo.</summary>
+        <value>Um objeto para a leitura de um arquivo.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public virtual void SaveAs (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveAs(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpPostedFileBase.SaveAs(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo a ser salvo.</param>
+        <summary>Quando substituído em uma classe derivada, salva o conteúdo de um arquivo carregado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Sempre.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

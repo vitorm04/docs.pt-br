@@ -1,0 +1,13 @@
+<Namespace Name="System.Resources">
+  <Docs>
+    <summary>O <see cref="N:System.Resources" /> namespace fornece classes e interfaces que permitem aos desenvolvedores criar, armazenar e gerenciar vários recursos específicos de cultura usados em um aplicativo. Uma das classes mais importantes do <see cref="N:System.Resources" /> namespace é o <see cref="T:System.Resources.ResourceManager" /> classe.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceManager> classe permite que o usuário a recursos de controle de acesso e armazenado no assembly principal ou em assemblies de satélite de recursos. Use o <xref:System.Resources.ResourceManager.GetObject%2A> e <xref:System.Resources.ResourceManager.GetString%2A> métodos para recuperar objetos específicos de cultura e cadeias de caracteres.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,98 @@
+<Type Name="BindingMode" FullName="System.Windows.Data.BindingMode">
+  <TypeSignature Language="C#" Value="public enum BindingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BindingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.BindingMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve a direção do fluxo de dados em uma associação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode Default = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usa o valor padrão de <see cref="P:System.Windows.Data.Binding.Mode" /> do destino de associação. O valor padrão varia de acordo com a propriedade de cada dependência. Em geral, as propriedades de controle editáveis pelo usuário, como caixas de texto e caixas de seleção, usam vinculações bidirecionais como padrão, enquanto a maioria das outras propriedades usa vinculações unidirecionais como padrão. Uma maneira programática de determinar se uma propriedade de dependência é associada de forma unidirecional ou bidirecional por padrão é obter os metadados de propriedade da propriedade usando <see cref="M:System.Windows.DependencyProperty.GetMetadata(System.Type)" /> e verificar o valor booliano da propriedade <see cref="P:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneTime">
+      <MemberSignature Language="C#" Value="OneTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode OneTime = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.OneTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atualiza o destino de associação quando o aplicativo é iniciado ou quando o contexto de dados é alterado. Esse tipo de associação será apropriado se você estiver usando dados em que um instantâneo do estado atual é apropriado para uso ou os dados forem realmente estáticos. Esse tipo de associação também é útil se você deseja inicializar a propriedade de destino com um valor de uma propriedade de origem e o contexto de dados não é conhecido com antecedência. Este é basicamente uma forma mais simples de associação do <see cref="F:System.Windows.Data.BindingMode.OneWay" />, que fornece um melhor desempenho em casos em que o valor de origem não é alterado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="OneWay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode OneWay = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.OneWay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atualiza a propriedade de destino de associação (destino) quando a origem da associação (origem) é alterada. Esse tipo de associação será apropriado se o controle associado for somente leitura de forma implícita. Por exemplo, associe a uma fonte, como uma cotação da bolsa. Ou talvez a propriedade de destino não tenha nenhuma interface de controle disponível para fazer alterações, como uma cor da tela de fundo com limite de dados de uma tabela. Se não houver necessidade de monitorar as alterações da propriedade de destino, o uso do modo de associação <see cref="F:System.Windows.Data.BindingMode.OneWay" /> evitará a sobrecarga do modo de associação <see cref="F:System.Windows.Data.BindingMode.TwoWay" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWayToSource">
+      <MemberSignature Language="C#" Value="OneWayToSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode OneWayToSource = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.OneWayToSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Atualiza a propriedade de origem quando a propriedade de destino é alterada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoWay">
+      <MemberSignature Language="C#" Value="TwoWay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.BindingMode TwoWay = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.BindingMode.TwoWay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Causa alterações à propriedade de origem ou de destino para atualizar a outra automaticamente. Esse tipo de associação é apropriado para formulários editáveis ou outros cenários [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] totalmente interativos.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

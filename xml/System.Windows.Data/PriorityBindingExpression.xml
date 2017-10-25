@@ -1,0 +1,158 @@
+<Type Name="PriorityBindingExpression" FullName="System.Windows.Data.PriorityBindingExpression">
+  <TypeSignature Language="C#" Value="public sealed class PriorityBindingExpression : System.Windows.Data.BindingExpressionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PriorityBindingExpression extends System.Windows.Data.BindingExpressionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.PriorityBindingExpression" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Data.BindingExpressionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações de instância sobre uma instância única de uma <see cref="T:System.Windows.Data.PriorityBinding" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Data.PriorityBinding>uma única instância de tempo de execução de um <xref:System.Windows.Data.PriorityBindingExpression>. Portanto, ela descreve uma coleção de <xref:System.Windows.Data.BindingExpression> objetos que estão anexados a uma propriedade de destino de associação simples, que recebe o valor do primeiro <xref:System.Windows.Data.BindingExpression> objeto da coleção que retorna um valor com êxito. Para obter informações sobre expressões de associação, consulte a seção de associação e BindingExpression no [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ O mecanismo de associação determina qual o <xref:System.Windows.Data.BindingExpression> objetos é o <xref:System.Windows.Data.PriorityBindingExpression.ActiveBindingExpression%2A> com base na prioridade. Para obter mais informações, consulte <xref:System.Windows.Data.PriorityBinding>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveBindingExpression">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.BindingExpressionBase ActiveBindingExpression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingExpressionBase ActiveBindingExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.PriorityBindingExpression.ActiveBindingExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingExpressionBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Windows.Data.BindingExpression" /> ativo.</summary>
+        <value>O objeto <see cref="T:System.Windows.Data.BindingExpression" /> ativo; ou <see langword="null" /> se nenhum objeto <see cref="T:System.Windows.Data.BindingExpression" /> estiver ativo. Embora o tipo de retorno seja <see cref="T:System.Windows.Data.BindingExpressionBase" />, o objeto retornado é apenas um objeto <see cref="T:System.Windows.Data.BindingExpression" /> porque, no momento, a classe <see cref="T:System.Windows.Data.PriorityBinding" /> dá suporte apenas a objetos <see cref="T:System.Windows.Data.Binding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de associação determina qual o <xref:System.Windows.Data.BindingExpression> objetos é o <xref:System.Windows.Data.PriorityBindingExpression.ActiveBindingExpression%2A> com base na prioridade. Para obter mais informações, consulte <xref:System.Windows.Data.PriorityBinding>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingExpressions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Data.BindingExpressionBase&gt; BindingExpressions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Data.BindingExpressionBase&gt; BindingExpressions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.PriorityBindingExpression.BindingExpressions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Data.BindingExpressionBase&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.Windows.Data.BindingExpression" /> objetos dentro desta instância do <see cref="T:System.Windows.Data.PriorityBindingExpression" />.</summary>
+        <value>Uma coleção somente leitura do <see cref="T:System.Windows.Data.BindingExpression" /> objetos. Embora o tipo de retorno é uma coleção de <see cref="T:System.Windows.Data.BindingExpressionBase" /> objetos, a coleção retornada contém somente <see cref="T:System.Windows.Data.BindingExpression" /> objetos porque o <see cref="T:System.Windows.Data.PriorityBinding" /> classe atualmente suporta apenas <see cref="T:System.Windows.Data.Binding" /> objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValidationError">
+      <MemberSignature Language="C#" Value="public override bool HasValidationError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValidationError" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.PriorityBindingExpression.HasValidationError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação pai tem uma regra de validação com falha.</summary>
+        <value>
+          <see langword="true" />Se o pai de associação tem uma regra de validação com falha; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentPriorityBinding">
+      <MemberSignature Language="C#" Value="public System.Windows.Data.PriorityBinding ParentPriorityBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.PriorityBinding ParentPriorityBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Data.PriorityBindingExpression.ParentPriorityBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.PriorityBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Data.PriorityBinding" /> objeto do qual este <see cref="T:System.Windows.Data.PriorityBindingExpression" /> é criado.</summary>
+        <value>O <see cref="T:System.Windows.Data.PriorityBinding" /> objeto do qual este <see cref="T:System.Windows.Data.PriorityBindingExpression" /> é criado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSource">
+      <MemberSignature Language="C#" Value="public override void UpdateSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpdateSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.PriorityBindingExpression.UpdateSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza a fonte na associação de ativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> método sobre o <xref:System.Windows.Data.PriorityBindingExpression.ActiveBindingExpression%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateTarget">
+      <MemberSignature Language="C#" Value="public override void UpdateTarget ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void UpdateTarget() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.PriorityBindingExpression.UpdateTarget" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza o destino na associação de ativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> método sobre o <xref:System.Windows.Data.PriorityBindingExpression.ActiveBindingExpression%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,181 @@
+<Type Name="CodeMethodInvokeExpression" FullName="System.CodeDom.CodeMethodInvokeExpression">
+  <TypeSignature Language="C#" Value="public class CodeMethodInvokeExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeMethodInvokeExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeMethodInvokeExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma expressão que invoca um método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeMethodInvokeExpression>pode ser usado para representar uma expressão que invoca um método.  
+  
+ O <xref:System.CodeDom.CodeMethodInvokeExpression.Method%2A> propriedade especifica o método a ser invocado. O <xref:System.CodeDom.CodeMethodInvokeExpression.Parameters%2A> propriedade indica os parâmetros para passar para o método. Use um <xref:System.CodeDom.CodeDirectionExpression> para especificar a direção de campo de um parâmetro.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como usar um <xref:System.CodeDom.CodeMethodInvokeExpression> para invocar um método.  
+  
+ [!code-cpp[CodeMethodInvokeExpression#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeMethodInvokeExpression/CPP/codemethodinvokeexpressionexample.cpp#2)]
+ [!code-csharp[CodeMethodInvokeExpression#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeMethodInvokeExpression/CS/codemethodinvokeexpressionexample.cs#2)]
+ [!code-vb[CodeMethodInvokeExpression#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeMethodInvokeExpression/VB/codemethodinvokeexpressionexample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMethodInvokeExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMethodInvokeExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeMethodInvokeExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMethodInvokeExpression (System.CodeDom.CodeMethodReferenceExpression method, params System.CodeDom.CodeExpression[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeMethodReferenceExpression method, class System.CodeDom.CodeExpression[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMethodInvokeExpression.#ctor(System.CodeDom.CodeMethodReferenceExpression,System.CodeDom.CodeExpression[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="method" Type="System.CodeDom.CodeMethodReferenceExpression" />
+        <Parameter Name="parameters" Type="System.CodeDom.CodeExpression[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="method">Um <see cref="T:System.CodeDom.CodeMethodReferenceExpression" /> que indica o método a ser invocado.</param>
+        <param name="parameters">Uma matriz de <see cref="T:System.CodeDom.CodeExpression" /> objetos que indicam os parâmetros com a qual invocar o método.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeMethodInvokeExpression" /> usando o método especificado e os parâmetros de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeMethodInvokeExpression (System.CodeDom.CodeExpression targetObject, string methodName, params System.CodeDom.CodeExpression[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression targetObject, string methodName, class System.CodeDom.CodeExpression[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeMethodInvokeExpression.#ctor(System.CodeDom.CodeExpression,System.String,System.CodeDom.CodeExpression[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="methodName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.CodeDom.CodeExpression[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="targetObject">Um <see cref="T:System.CodeDom.CodeExpression" /> que indica o objeto de destino com o método a ser invocado.</param>
+        <param name="methodName">O nome do método que será invocado.</param>
+        <param name="parameters">Uma matriz de <see cref="T:System.CodeDom.CodeExpression" /> objetos que indicam os parâmetros para chamar o método com.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeMethodInvokeExpression" /> classe usando o objeto de destino especificado, o nome do método e parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeMethodReferenceExpression Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeMethodReferenceExpression Method" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMethodInvokeExpression.Method" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMethodReferenceExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método a ser invocado.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeMethodReferenceExpression" /> que indica o método a ser invocado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpressionCollection Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpressionCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeMethodInvokeExpression.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpressionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros para invocar o método com.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpressionCollection" /> que indica os parâmetros para invocar o método com.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.CodeDom.CodeDirectionExpression> para especificar a direção de campo para o parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

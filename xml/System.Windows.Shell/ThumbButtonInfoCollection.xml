@@ -1,0 +1,65 @@
+<Type Name="ThumbButtonInfoCollection" FullName="System.Windows.Shell.ThumbButtonInfoCollection">
+  <TypeSignature Language="C#" Value="public class ThumbButtonInfoCollection : System.Windows.FreezableCollection&lt;System.Windows.Shell.ThumbButtonInfo&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThumbButtonInfoCollection extends System.Windows.FreezableCollection`1&lt;class System.Windows.Shell.ThumbButtonInfo&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.ThumbButtonInfoCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FreezableCollection&lt;System.Windows.Shell.ThumbButtonInfo&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Windows.Shell.ThumbButtonInfo</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de <see cref="T:System.Windows.Shell.ThumbButtonInfo" /> objetos que estão associados um <see cref="T:System.Windows.Window" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Shell.ThumbButtonInfoCollection>é fortemente tipado <xref:System.Windows.FreezableCollection%601> que é usado para dar suporte a declarações em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)].  
+  
+ O [!INCLUDE[win7](~/includes/win7-md.md)] shell permite um máximo de sete botões na visualização da barra de tarefas. Se mais de sete <xref:System.Windows.Shell.ThumbButtonInfo> objetos são adicionados para o <xref:System.Windows.Shell.ThumbButtonInfoCollection>, os objetos adicionais são tratados como estouro. Quando um botão é <xref:System.Windows.Visibility.Collapsed>, ele não tem elementos visíveis e nenhum espaço é reservado para ele. Neste botões adicionais, caso do <xref:System.Windows.Shell.ThumbButtonInfoCollection> estouro são exibidos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThumbButtonInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.ThumbButtonInfoCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Shell.ThumbButtonInfoCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Shell.ThumbButtonInfoCollection.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da coleção.</summary>
+        <returns>A nova instância da coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

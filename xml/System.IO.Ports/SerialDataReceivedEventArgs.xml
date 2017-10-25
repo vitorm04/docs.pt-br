@@ -1,0 +1,59 @@
+<Type Name="SerialDataReceivedEventArgs" FullName="System.IO.Ports.SerialDataReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class SerialDataReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SerialDataReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.SerialDataReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.IO.Ports.SerialPort.DataReceived" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada com a <xref:System.IO.Ports.SerialPort.DataReceived> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialData EventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Ports.SerialData EventType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialDataReceivedEventArgs.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de evento.</summary>
+        <value>Um dos valores de <see cref="T:System.IO.Ports.SerialData" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece informações sobre o tipo de evento que causou o <xref:System.IO.Ports.SerialPort.DataReceived> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

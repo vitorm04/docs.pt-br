@@ -1,0 +1,803 @@
+<Type Name="BitmapSource" FullName="System.Windows.Media.Imaging.BitmapSource">
+  <TypeSignature Language="C#" Value="public abstract class BitmapSource : System.Windows.Media.ImageSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BitmapSource extends System.Windows.Media.ImageSource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.BitmapSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.ImageSource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um único e constante conjunto de pixels em um determinado tamanho e resolução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapSource>é o bloco de construção básico de [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] pipeline de geração de imagens, conceitualmente que representa um único e constante conjunto de pixels em um determinado tamanho e resolução. Um <xref:System.Windows.Media.Imaging.BitmapSource> pode ser uma única estrutura em um arquivo de imagem que fornece um decodificador, ou pode ser o resultado de uma transformação que opera em um <xref:System.Windows.Media.Imaging.BitmapSource> de seu próprio. <xref:System.Windows.Media.Imaging.BitmapSource>não é usado para representar uma imagem em vários quadros ou uma animação.  
+  
+ [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)]modo nativo oferece suporte à compactação e descompactação de [!INCLUDE[TLA#tla_bmp](~/includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)], [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](~/includes/tlasharptla-png-md.md)], e [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] imagens.  
+  
+ Bitmap decodificação cenários, <xref:System.Windows.Media.Imaging.BitmapSource> usa a detecção automática de codec, com base nos codecs instalados no sistema do usuário.  
+  
+ A altura máxima e largura de uma imagem é 2 ^ 16 pixels em 32 bits por canal * 4 canais. O tamanho máximo de um <xref:System.Windows.Media.Imaging.BitmapSource> é 2 ^ 32 bytes (64 gigabytes) e o tamanho máximo da imagem é quatro gigapixels. O tamanho da imagem mínimo é 1 x 1.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Windows.Media.Imaging.BitmapSource> e usá-lo como a fonte de um <xref:System.Windows.Controls.Image> controle.  
+  
+ [!code-csharp[imagingsnippetgallery_procedural_snip#BitmapSourceCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/BitmapSourceExample.cs#bitmapsourcecreate)]
+ [!code-vb[imagingsnippetgallery_procedural_snip#BitmapSourceCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/BitmapSourceExample.vb#bitmapsourcecreate)]  
+  
+ O seguinte exemplo de código usa um <xref:System.Windows.Media.Imaging.BitmapSource> derivado da classe <xref:System.Windows.Media.Imaging.BitmapImage>, para criar um bitmap de um arquivo de imagem e usá-lo como a fonte de um <xref:System.Windows.Controls.Image> controle.  
+  
+ [!code-csharp[imageelementexample#SimpleCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/SimpleImageExample.xaml.cs#simplecsharp1)]
+ [!code-vb[imageelementexample#SimpleCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/SimpleImageExample.xaml.vb#simplecsharp1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BitmapSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckIfSiteOfOrigin">
+      <MemberSignature Language="C#" Value="protected void CheckIfSiteOfOrigin ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckIfSiteOfOrigin() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.CheckIfSiteOfOrigin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica se o conteúdo de origem de bitmap é de um site conhecido de origem. Esse método é usado para certificar-se de que as operações de cópia de pixel são seguras.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só terá êxito se ele é passado um <xref:System.Uri> que é de um site de origem ou que está definido em um `pack:`. Em todas as outras condições, esse método irá falhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapSource Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.BitmapSource Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.Imaging.BitmapSource" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> para clonar.</param>
+        <summary>Isso faz com que uma cópia profunda de especificado da instância <see cref="T:System.Windows.Media.Imaging.BitmapSource" />. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.Clone%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.Clone%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapSource CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Imaging.BitmapSource CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse objeto <see cref="T:System.Windows.Media.Imaging.BitmapSource" />, fazendo cópias em profundidade dos valores do objeto atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade era <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> para clonar.</param>
+        <summary>Torna essa instância de uma cópia em profundidade modificável especificada <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> usando os valores da propriedade atual. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.CloneCurrentValue%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.CloneCurrentValue%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.CloneCurrentValueCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyPixels">
+      <MemberSignature Language="C#" Value="public virtual void CopyPixels (Array pixels, int stride, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyPixels(class System.Array pixels, int32 stride, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.CopyPixels(System.Array,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixels" Type="System.Array" />
+        <Parameter Name="stride" Type="System.Int32" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pixels">A matriz de destino.</param>
+        <param name="stride">A distância do bitmap.</param>
+        <param name="offset">O local de pixel em que a cópia é iniciada.</param>
+        <summary>Copia os dados de pixel de bitmap para a matriz de pixes que tem a distância especificada, começando no deslocamento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyPixels">
+      <MemberSignature Language="C#" Value="public virtual void CopyPixels (System.Windows.Int32Rect sourceRect, Array pixels, int stride, int offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyPixels(valuetype System.Windows.Int32Rect sourceRect, class System.Array pixels, int32 stride, int32 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.CopyPixels(System.Windows.Int32Rect,System.Array,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceRect" Type="System.Windows.Int32Rect" />
+        <Parameter Name="pixels" Type="System.Array" />
+        <Parameter Name="stride" Type="System.Int32" />
+        <Parameter Name="offset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sourceRect">O retângulo de origem a ser copiado. Um <see cref="P:System.Windows.Int32Rect.Empty" /> valor Especifica o bitmap inteiro.</param>
+        <param name="pixels">A matriz de destino.</param>
+        <param name="stride">A distância do bitmap.</param>
+        <param name="offset">O local de pixel em que a cópia é iniciada.</param>
+        <summary>Copia os dados de pixel de bitmap no retângulo especificado em uma matriz de pixels que tem a distância especificada começando no deslocamento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vazio `sourceRect` valor (especificado como zeros) copia o bitmap inteiro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyPixels">
+      <MemberSignature Language="C#" Value="public virtual void CopyPixels (System.Windows.Int32Rect sourceRect, IntPtr buffer, int bufferSize, int stride);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyPixels(valuetype System.Windows.Int32Rect sourceRect, native int buffer, int32 bufferSize, int32 stride) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.CopyPixels(System.Windows.Int32Rect,System.IntPtr,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceRect" Type="System.Windows.Int32Rect" />
+        <Parameter Name="buffer" Type="System.IntPtr" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="stride" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sourceRect">O retângulo de origem a ser copiado. Um <see cref="P:System.Windows.Int32Rect.Empty" /> valor Especifica o bitmap inteiro.</param>
+        <param name="buffer">Um ponteiro para o buffer.</param>
+        <param name="bufferSize">O tamanho do buffer.</param>
+        <param name="stride">A distância do bitmap.</param>
+        <summary>Copia os dados de pixel do bitmap dentro do retângulo especificado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vazio `sourceRect` valor (especificado como zeros) copia o bitmap inteiro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource Create (int pixelWidth, int pixelHeight, double dpiX, double dpiY, System.Windows.Media.PixelFormat pixelFormat, System.Windows.Media.Imaging.BitmapPalette palette, Array pixels, int stride);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapSource Create(int32 pixelWidth, int32 pixelHeight, float64 dpiX, float64 dpiY, valuetype System.Windows.Media.PixelFormat pixelFormat, class System.Windows.Media.Imaging.BitmapPalette palette, class System.Array pixels, int32 stride) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.Create(System.Int32,System.Int32,System.Double,System.Double,System.Windows.Media.PixelFormat,System.Windows.Media.Imaging.BitmapPalette,System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixelWidth" Type="System.Int32" />
+        <Parameter Name="pixelHeight" Type="System.Int32" />
+        <Parameter Name="dpiX" Type="System.Double" />
+        <Parameter Name="dpiY" Type="System.Double" />
+        <Parameter Name="pixelFormat" Type="System.Windows.Media.PixelFormat" />
+        <Parameter Name="palette" Type="System.Windows.Media.Imaging.BitmapPalette" />
+        <Parameter Name="pixels" Type="System.Array" />
+        <Parameter Name="stride" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pixelWidth">A largura do bitmap.</param>
+        <param name="pixelHeight">A altura do bitmap.</param>
+        <param name="dpiX">Horizontal [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] do bitmap.</param>
+        <param name="dpiY">Vertical [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] do bitmap.</param>
+        <param name="pixelFormat">O formato de pixel do bitmap.</param>
+        <param name="palette">A paleta do bitmap.</param>
+        <param name="pixels">Uma matriz de bytes que representa o conteúdo de uma imagem de bitmap.</param>
+        <param name="stride">A distância do bitmap.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> de uma matriz de pixels.</summary>
+        <returns>O <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que é criado com base na matriz de pixels especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar esse método para criar um novo <xref:System.Windows.Media.Imaging.BitmapSource>.  
+  
+ [!code-csharp[bitmapframeexample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#1)]
+ [!code-vb[bitmapframeexample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource Create (int pixelWidth, int pixelHeight, double dpiX, double dpiY, System.Windows.Media.PixelFormat pixelFormat, System.Windows.Media.Imaging.BitmapPalette palette, IntPtr buffer, int bufferSize, int stride);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapSource Create(int32 pixelWidth, int32 pixelHeight, float64 dpiX, float64 dpiY, valuetype System.Windows.Media.PixelFormat pixelFormat, class System.Windows.Media.Imaging.BitmapPalette palette, native int buffer, int32 bufferSize, int32 stride) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.Create(System.Int32,System.Int32,System.Double,System.Double,System.Windows.Media.PixelFormat,System.Windows.Media.Imaging.BitmapPalette,System.IntPtr,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixelWidth" Type="System.Int32" />
+        <Parameter Name="pixelHeight" Type="System.Int32" />
+        <Parameter Name="dpiX" Type="System.Double" />
+        <Parameter Name="dpiY" Type="System.Double" />
+        <Parameter Name="pixelFormat" Type="System.Windows.Media.PixelFormat" />
+        <Parameter Name="palette" Type="System.Windows.Media.Imaging.BitmapPalette" />
+        <Parameter Name="buffer" Type="System.IntPtr" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="stride" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pixelWidth">A largura do bitmap.</param>
+        <param name="pixelHeight">A altura do bitmap.</param>
+        <param name="dpiX">Horizontal [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] do bitmap.</param>
+        <param name="dpiY">Vertical [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] do bitmap.</param>
+        <param name="pixelFormat">O formato de pixel do bitmap.</param>
+        <param name="palette">A paleta do bitmap.</param>
+        <param name="buffer">Um ponteiro para o buffer que contém os dados do bitmap na memória.</param>
+        <param name="bufferSize">O tamanho do buffer.</param>
+        <param name="stride">A distância do bitmap.</param>
+        <summary>Cria um novo <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> com base em uma matriz de pixels armazenados na memória não gerenciada.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> criado com base na matriz de pixels na memória não gerenciada.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Os chamadores devem ter <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> permissão para chamar essa [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] porque esse código acessa um buffer de memória por meio de uma referência de ponteiro. Consulte <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /> para obter mais informações.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeFailed">
+      <MemberSignature Language="C#" Value="public virtual event EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt; DecodeFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Media.ExceptionEventArgs&gt; DecodeFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Imaging.BitmapSource.DecodeFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre há uma falha de carregamento da imagem devido a um cabeçalho da imagem corrompido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Imaging.BitmapSource.DecodeFailed>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+<a name="xamlTextUsage_DecodeFailed"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ \<*objeto* DecodeFailed = "*EventHandler*"... / >  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadCompleted">
+      <MemberSignature Language="C#" Value="public virtual event EventHandler DownloadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DownloadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Imaging.BitmapSource.DownloadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre após o download completo do conteúdo do bitmap.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não pode ser gerado para todos os tipos de conteúdo do bitmap.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadFailed">
+      <MemberSignature Language="C#" Value="public virtual event EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt; DownloadFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Media.ExceptionEventArgs&gt; DownloadFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Imaging.BitmapSource.DownloadFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Media.ExceptionEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando há falha no download do conteúdo do bitmap.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não pode ser gerado para todos os tipos de conteúdo do bitmap.  
+  
+<a name="xamlTextUsage_DownloadFailed"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ \<*objeto* DownloadFailed = "*EventHandler*"... / >  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DownloadProgress">
+      <MemberSignature Language="C#" Value="public virtual event EventHandler&lt;System.Windows.Media.Imaging.DownloadProgressEventArgs&gt; DownloadProgress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Windows.Media.Imaging.DownloadProgressEventArgs&gt; DownloadProgress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Media.Imaging.BitmapSource.DownloadProgress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Windows.Media.Imaging.DownloadProgressEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando há alteração no andamento do download do conteúdo do bitmap.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não pode ser gerado para todos os tipos de conteúdo do bitmap.  
+  
+<a name="xamlTextUsage_DownloadProgress"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ \<*objeto* DownloadProgress = "*EventHandler*"... / >  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiX">
+      <MemberSignature Language="C#" Value="public virtual double DpiX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DpiX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.DpiX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] horizontal da imagem.</summary>
+        <value>O [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] horizontal da imagem, isto é, o [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] ao longo do eixo x.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiY">
+      <MemberSignature Language="C#" Value="public virtual double DpiY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DpiY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.DpiY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] vertical da imagem.</summary>
+        <value>O [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] vertical da imagem, isto é, o [!INCLUDE[TLA#tla_dpi](~/includes/tlasharptla-dpi-md.md)] ao longo do eixo y.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.PixelFormat Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.PixelFormat Format" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Media.PixelFormat" /> nativo dos dados de bitmap.</summary>
+        <value>O formato de pixel dos dados de bitmap.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Media.Imaging.BitmapSource> é diretamente legíveis, este é o formato de pixels estará em quando elas são de leitura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreezeCore">
+      <MemberSignature Language="C#" Value="protected override bool FreezeCore (bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool FreezeCore(bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.FreezeCore(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isChecking">
+          <see langword="true" />Se esta instância, na verdade, deve congelar-se quando este método é chamado; Caso contrário, <see langword="false" />.</param>
+        <summary>Faz com que uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> ou uma classe derivada imutável.</summary>
+        <returns>Se <paramref name="isChecking" /> é <see langword="true" />, esse método retorna <see langword="true" /> se este <see cref="T:System.Windows.Media.Animation.Animatable" /> podem ser feitas não modificável, ou <see langword="false" /> se ele não pode se tornar não modificável.  
+  
+ Se <paramref name="isChecking" /> é <see langword="false" />, esse método retorna <see langword="true" /> se se isso <see cref="T:System.Windows.Media.Animation.Animatable" /> agora é não modificável, ou <see langword="false" /> se não pode se tornar não modificável, com o efeito colateral de ter iniciado alterar o status de congelamento deste objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> objeto clonar e congelar.</param>
+        <summary>Isso torna a instância um clone do <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais. Observe que, se essas propriedades contêm referências de recurso ou associações de dados, <xref:System.Windows.Freezable.GetAsFrozen%2A> falhará quando tentar congelar o objeto e lançará um <xref:System.InvalidOperationException>.  
+  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.BitmapSource.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> para copiar e congelar.</param>
+        <summary>Torna isso um clone congelado especificada da instância <see cref="T:System.Windows.Media.Imaging.BitmapSource" />. Referências a recursos, vinculações de dados e animações não são copiadas, mas seus valores atuais são.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public override double Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura do bitmap na origem [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</summary>
+        <value>A altura do bitmap na [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDownloading">
+      <MemberSignature Language="C#" Value="public virtual bool IsDownloading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDownloading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.IsDownloading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o conteúdo <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> está sendo baixado no momento.</summary>
+        <value>
+          <see langword="true" /> se a fonte de bitmap está sendo baixada no momento; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.ImageMetadata Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageMetadata Metadata" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageMetadata</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os metadados associados a esta imagem de bitmap.</summary>
+        <value>Os metadados associados à imagem de bitmap.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Media.Imaging.BitmapPalette Palette { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapPalette Palette" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.Palette" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapPalette</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a paleta de cores do bitmap, se especificada.</summary>
+        <value>A paleta de cores do bitmap.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelHeight">
+      <MemberSignature Language="C#" Value="public virtual int PixelHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PixelHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.PixelHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura do bitmap em pixels.</summary>
+        <value>A altura do bitmap em pixels.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelWidth">
+      <MemberSignature Language="C#" Value="public virtual int PixelWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PixelWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.PixelWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura do bitmap em pixels.</summary>
+        <value>A largura do bitmap em pixels.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public override double Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.BitmapSource.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura de bitmap na [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</summary>
+        <value>A largura de bitmap na [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)].</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

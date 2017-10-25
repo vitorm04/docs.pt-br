@@ -1,0 +1,212 @@
+<Type Name="LingerOption" FullName="System.Net.Sockets.LingerOption">
+  <TypeSignature Language="C#" Value="public class LingerOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LingerOption extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.LingerOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica se um <see cref="T:System.Net.Sockets.Socket" /> permanecerá conectado após chamar os métodos <see cref="M:System.Net.Sockets.Socket.Close" /> ou <see cref="M:System.Net.Sockets.TcpClient.Close" /> e o período de tempo que ele permanecerá conectado, se ainda houver dados para serem enviados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pode ainda haver dados disponível no buffer de saída de rede depois que um aplicativo chama o <xref:System.Net.Sockets.Socket> ou <xref:System.Net.Sockets.TcpClient> método. Se você deseja especificar a quantidade de tempo que o <xref:System.Net.Sockets.Socket> tenta transmitir dados não enviados depois de fechamento, crie um <xref:System.Net.Sockets.LingerOption> com o `enable` parâmetro definido como `true`e o `seconds` parâmetro definido para a quantidade de tempo desejada. O `seconds` parâmetro é usado para indicar quanto tempo você deseja que o <xref:System.Net.Sockets.Socket> permanecer conectado antes do tempo limite. Se você não quiser que o <xref:System.Net.Sockets.Socket> para permanecer conectado por qualquer período de tempo após o fechamento, criar um <xref:System.Net.Sockets.LingerOption> instância com o `enable` parâmetro definido como `true` e `seconds` parâmetro definido como zero. Nesse caso, o <xref:System.Net.Sockets.Socket> será fechado imediatamente e qualquer não enviados dados serão perdidos. Depois de criado, passar o <xref:System.Net.Sockets.LingerOption> para o <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> método. Se você estiver enviando e recebendo dados com um <xref:System.Net.Sockets.TcpClient>, em seguida, defina o <xref:System.Net.Sockets.LingerOption> de instância de <xref:System.Net.Sockets.TcpClient.LingerState%2A?displayProperty=nameWithType> propriedade.  
+  
+ A pilha de IP calcula o período de tempo limite de protocolo IP padrão para usar com base no tempo de ida e volta da conexão. Na maioria dos casos, o tempo de limite calculado pela pilha é mais relevante do que um definido por um aplicativo. Esse é o comportamento padrão para um <xref:System.Net.Sockets.Socket> quando o <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade não está definida e uma <xref:System.Net.Sockets.TcpClient> quando o <xref:System.Net.Sockets.TcpClient.LingerState%2A> propriedade não está definida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define criado anteriormente <xref:System.Net.Sockets.Socket> para durar um segundo após a chamada a <xref:System.Net.Sockets.Socket.Close%2A> método.  
+  
+ [!code-cpp[Classic LingerOption Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic LingerOption Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LingerOption Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic LingerOption Example/CS/source.cs#1)]
+ [!code-vb[Classic LingerOption Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic LingerOption Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LingerOption (bool enable, int seconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool enable, int32 seconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Sockets.LingerOption.#ctor(System.Boolean,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="enable" Type="System.Boolean" />
+        <Parameter Name="seconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="enable">
+          <see langword="true" />permanecer conectado após a <see cref="M:System.Net.Sockets.Socket.Close" /> método é chamado; caso contrário, <see langword="false" />.</param>
+        <param name="seconds">O número de segundos a permanecer conectado após a <see cref="M:System.Net.Sockets.Socket.Close" /> método é chamado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Sockets.LingerOption" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pode ainda haver dados disponível no buffer de saída de rede depois de fechar o <xref:System.Net.Sockets.Socket>. Use o `enable` parâmetro para especificar se deseja que o <xref:System.Net.Sockets.Socket> para continuar a transmissão de dados não enviados depois que o método close for chamado. Use o `seconds` parâmetro para indicar quanto tempo você deseja que o <xref:System.Net.Sockets.Socket> para tentar a transferência de dados não enviados antes do tempo limite. Se você especificar `true` para o `enable` parâmetro e 0 para o `seconds` parâmetro, o <xref:System.Net.Sockets.Socket> tentará enviar dados até que não haja nenhum esquerda de dados no buffer de saída de rede. Se você especificar `false` para o `enable` parâmetro, o <xref:System.Net.Sockets.Socket> será fechado imediatamente e qualquer não enviados dados serão perdidos.  
+  
+ A tabela a seguir descreve o comportamento no <xref:System.Net.Sockets.Socket.Close%2A?displayProperty=nameWithType> e <xref:System.Net.Sockets.TcpClient.Close%2A?displayProperty=nameWithType> métodos com base nos valores possíveis do `enable` e `seconds` parâmetros quando uma instância de T:System.Net.Sockets.LingerOption é criada e definida <xref:System.Net.Sockets.Socket.LingerState%2A?displayProperty=nameWithType> ou <xref:System.Net.Sockets.TcpClient.LingerState%2A?displayProperty=nameWithType> propriedade.  
+  
+|`enable`|`seconds`|Comportamento|  
+|--------------|---------------|--------------|  
+|`false`(desabilitado), o valor padrão|O tempo limite não é aplicável, (padrão).|Tentativas de enviar dados para um soquete orientado a conexão (por exemplo, TCP) pendente até que o padrão tempo limite do protocolo IP expira.|  
+|`true`(habilitado)|Um tempo limite diferente de zero|Tentativas de enviar dados pendentes até expira o tempo limite especificado, e se a tentativa falhar, o Winsock redefine a conexão.|  
+|`true`(habilitado)|Um zero tempo limite.|Descarta qualquer dados pendentes. Para o soquete orientado a conexão (por exemplo, TCP), Winsock redefine a conexão.|  
+  
+ A pilha de IP calcula o período de tempo limite de protocolo IP padrão para usar com base no tempo de ida e volta da conexão. Na maioria dos casos, o tempo de limite calculado pela pilha é mais relevante do que um definido por um aplicativo. Esse é o comportamento padrão para um soquete quando o <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade não está definida.  
+  
+ Quando o <xref:System.Net.Sockets.LingerOption.LingerTime%2A> propriedade armazenada no <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade é definida maior que o tempo limite de protocolo IP padrão, o tempo limite de protocolo IP padrão ainda se aplicam e substituir.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define criado anteriormente <xref:System.Net.Sockets.Socket> para durar um segundo após a chamada a <xref:System.Net.Sockets.Socket.Close%2A> método.  
+  
+ [!code-cpp[Classic LingerOption Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic LingerOption Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LingerOption Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic LingerOption Example/CS/source.cs#1)]
+ [!code-vb[Classic LingerOption Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic LingerOption Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.LingerOption.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve durar após o <see cref="T:System.Net.Sockets.Socket" /> está fechado.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Net.Sockets.Socket" /> deve ficar depois <see cref="M:System.Net.Sockets.Socket.Close" /> chamado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Net.Sockets.LingerOption.Enabled%2A> propriedade para determinar se o <xref:System.Net.Sockets.Socket> permanecerá após fechar. Alterar esse valor para `true` ou `false` e passar o alterado <xref:System.Net.Sockets.LingerOption> para o <xref:System.Net.Sockets.Socket.SetSocketOption%2A> método ou conjunto de <xref:System.Net.Sockets.TcpClient.LingerState%2A> ou <xref:System.Net.Sockets.Socket.LingerState%2A> property.to desabilitar ou habilitar remanescentes.  
+  
+ A tabela a seguir descreve o comportamento para os valores possíveis do <xref:System.Net.Sockets.LingerOption.Enabled%2A> propriedade e o <xref:System.Net.Sockets.LingerOption.LingerTime%2A> propriedade armazenada no <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade.  
+  
+|`enable`|`seconds`|Comportamento|  
+|--------------|---------------|--------------|  
+|`false`(desabilitado), o valor padrão|O tempo limite não é aplicável, (padrão).|Tentativas de enviar dados para um soquete orientado a conexão (por exemplo, TCP) pendente até que o padrão tempo limite do protocolo IP expira.|  
+|`true`(habilitado)|Um tempo limite diferente de zero|Tentativas de enviar dados pendentes até expira o tempo limite especificado, e se a tentativa falhar, o Winsock redefine a conexão.|  
+|`true`(habilitado)|Um zero tempo limite.|Descarta qualquer dados pendentes. Para o soquete orientado a conexão (por exemplo, TCP), Winsock redefine a conexão.|  
+  
+ A pilha de IP calcula o período de tempo limite de protocolo IP padrão para usar com base no tempo de ida e volta da conexão. Na maioria dos casos, o tempo de limite calculado pela pilha é mais relevante do que um definido por um aplicativo. Esse é o comportamento padrão para um soquete quando o <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade não está definida.  
+  
+ Quando o <xref:System.Net.Sockets.LingerOption.LingerTime%2A> propriedade armazenada no <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade é definida maior que o tempo limite de protocolo IP padrão, o tempo limite de protocolo IP padrão ainda se aplicam e substituir.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LingerTime">
+      <MemberSignature Language="C#" Value="public int LingerTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LingerTime" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Sockets.LingerOption.LingerTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo para permanecer conectado após a chamada ao método <see cref="M:System.Net.Sockets.Socket.Close" /> se os dados ainda precisam ser enviados.</summary>
+        <value>O tempo, em segundos, para permanecer conectado depois de chamar <see cref="M:System.Net.Sockets.Socket.Close" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse valor se você deseja determinar como tempo um fechado <xref:System.Net.Sockets.Socket> tentará transferir os dados não enviados antes do tempo limite. Você também pode definir esse valor para o período de tempo limite desejado, em segundos.  
+  
+ Se o <xref:System.Net.Sockets.LingerOption.Enabled%2A> é de propriedade `true`, e você definir <xref:System.Net.Sockets.LingerOption.LingerTime%2A> como 0, o <xref:System.Net.Sockets.Socket> descarta qualquer pendente dados a serem enviados no buffer de saída de rede. Se você alterar esse valor, você deve passar o alterado <xref:System.Net.Sockets.LingerOption> instância para o <xref:System.Net.Sockets.Socket.SetSocketOption%2A> método ou conjunto de <xref:System.Net.Sockets.TcpClient.LingerState%2A> ou <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade.  
+  
+ A tabela a seguir descreve o comportamento para os valores possíveis do <xref:System.Net.Sockets.LingerOption.Enabled%2A> propriedade e o <xref:System.Net.Sockets.LingerOption.LingerTime%2A> propriedade armazenada no <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade.  
+  
+|`enable`|`seconds`|Comportamento|  
+|--------------|---------------|--------------|  
+|`false`(desabilitado), o valor padrão|O tempo limite não é aplicável, (padrão).|Tentativas de enviar dados para um soquete orientado a conexão (por exemplo, TCP) pendente até que o padrão tempo limite do protocolo IP expira.|  
+|`true`(habilitado)|Um tempo limite diferente de zero|Tentativas de enviar dados pendentes até expira o tempo limite especificado, e se a tentativa falhar, o Winsock redefine a conexão.|  
+|`true`(habilitado)|Um zero tempo limite.|Descarta qualquer dados pendentes. Para o soquete orientado a conexão (por exemplo, TCP), Winsock redefine a conexão.|  
+  
+ A pilha de IP calcula o período de tempo limite de protocolo IP padrão para usar com base no tempo de ida e volta da conexão. Na maioria dos casos, o tempo de limite calculado pela pilha é mais relevante do que um definido por um aplicativo. Esse é o comportamento padrão para um soquete quando o <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade não está definida.  
+  
+ Quando o <xref:System.Net.Sockets.LingerOption.LingerTime%2A> propriedade armazenada no <xref:System.Net.Sockets.Socket.LingerState%2A> propriedade é definida maior que o tempo limite de protocolo IP padrão, o tempo limite de protocolo IP padrão ainda se aplicam e substituir.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[Socket_Socket_Options#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Socket_Socket_Options/CPP/source.cpp#2)]
+ [!code-csharp[Socket_Socket_Options#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Socket_Socket_Options/CS/source.cs#2)]
+ [!code-vb[Socket_Socket_Options#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Socket_Socket_Options/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

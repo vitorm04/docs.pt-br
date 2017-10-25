@@ -1,0 +1,99 @@
+<Type Name="IArgumentProvider" FullName="System.Linq.Expressions.IArgumentProvider">
+  <TypeSignature Language="C#" Value="public interface IArgumentProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IArgumentProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.Expressions.IArgumentProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface interna para acessar os argumentos de vários nós de árvore (DynamicExpression, ElementInit, MethodCallExpression, InvocationExpression, NewExpression e InexExpression).  Você não deve usar essa API.  Só é pública devido a DLL de refatoração e existe somente para otimizações de desempenho internos.  
+  
+ Isso habilita duas otimizações que reduzem o tamanho de árvores de expressão.  A primeira permite que os nós de árvore manter uma IList&lt;T&gt; em vez de uma ReadOnlyCollection.  IList&lt;T&gt; economiza o custo de alocar o ReadOnlyCollection para cada nó.  A segunda permite a criação de subclasses especializadas que mantenha um número específico de argumentos (por exemplo, Block2, Block3, Block4).  Portanto, esses nós evitar alocar uma ReadOnlyCollection e uma matriz para armazenar seus elementos, salvando 32 bytes por nó.  
+  
+ Os nós de árvore de expressão continuam para expor as propriedades originais do LINQ de ReadOnlyCollections.  Os nós de fazer isso, novamente usando um campo para o armazenamento de matriz ou um elemento que normalmente seria armazenado na matriz.  
+  
+ Para o caso de matriz, a coleção é digitada para IList&lt;T&gt; em vez de ReadOnlyCollection&lt;T&gt;.  Quando o nó é construído inicialmente é uma matriz.  Quando o compilador acessa os membros, ele usa essa interface.  Acessar elementos da matriz promove a matriz a uma ReadOnlyCollection.  
+  
+ Para o caso de objeto, armazenamos o primeiro argumento em um campo de tipo de objeto.  Quando o nó é construído inicialmente, o campo contém a expressão.  O compilador acessa argumentos por meio dessa interface e o acessador para o primeiro argumento usa Expression.ReturnObject para retornar o objeto que manipula o caso de expressão ou ReadOnlyCollection.  Quando o usuário acessa o ReadOnlyCollection, o campo de objeto é atualizado para conter diretamente para o ReadOnlyCollection.  
+  
+ É importante que as expressões retornam consistentemente o mesmo ReadOnlyCollection.  Caso contrário, o movimentador de árvore de gravador nova será interrompido.  É uma alteração significativa de LINQ v1 para retornar diferentes ReadOnlyCollections formam o mesmo nó de expressão.  No momento os usuários podem confiar na identidade do objeto para saber se o nó foi alterada.  Armazenando o ReadOnlyCollection em um campo sobrecarregado tanto reduz o uso de memória e mantém a compatibilidade para a API pública.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ArgumentCount">
+      <MemberSignature Language="C#" Value="public int ArgumentCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ArgumentCount" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.Expressions.IArgumentProvider.ArgumentCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o número de argumentos para o nó de árvore de expressão.  Você não deve usar esse tipo.  Ela só é pública devido a refatoração de assembly e ela é usada internamente para otimizações de desempenho.</summary>
+        <value>O número de argumentos para o nó de árvore de expressão como <see cref="T:System.Int32" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArgument">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression GetArgument (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Linq.Expressions.Expression GetArgument(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Linq.Expressions.IArgumentProvider.GetArgument(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do argumento.</param>
+        <summary>Retorna o argumento lançando se o índice está fora dos limites do índice.  Você não deve usar esse tipo.  Ela só é pública devido a refatoração de assembly e ela é usada internamente para otimizações de desempenho.</summary>
+        <returns>O argumento do índice lançando se o índice está fora dos limites como <see cref="T:System.Linq.Expressions.Expression" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

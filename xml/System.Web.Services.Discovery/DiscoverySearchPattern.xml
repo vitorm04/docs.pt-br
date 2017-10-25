@@ -1,0 +1,103 @@
+<Type Name="DiscoverySearchPattern" FullName="System.Web.Services.Discovery.DiscoverySearchPattern">
+  <TypeSignature Language="C#" Value="public abstract class DiscoverySearchPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DiscoverySearchPattern extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.DiscoverySearchPattern" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Estabelece uma interface para padrões de pesquisa de extensão de arquivo para tipos de arquivo podem ser descobertos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.Services.Discovery.DiscoveryDocument.References%2A?displayProperty=nameWithType> propriedade para adicionar um tipo de arquivo de descoberta para um documento de serviços da Web. Enquanto um documento de descoberta geralmente é serializado como um arquivo usando uma extensão. disco, você pode adicionar vários arquivos para o <xref:System.Web.Services.Discovery.DiscoveryDocument.References%2A> propriedade e esses arquivos podem ter outras extensões, representados por implementações de <xref:System.Web.Services.Discovery.DiscoverySearchPattern> .  
+  
+ O <xref:System.Web.Services.Discovery.DiscoverySearchPattern> classe e seu concreto classes derivadas são usadas pelo <xref:System.Web.Services.Discovery.DiscoveryRequestHandler> da classe <xref:System.Web.Services.Discovery.DiscoveryRequestHandler.ProcessRequest%2A> método, que manipula uma solicitação HTTP para um documento de descoberta. Normalmente, nenhuma dessas classes precisa ser usada diretamente por um desenvolvedor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DiscoverySearchPattern ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoverySearchPattern.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Discovery.DiscoverySearchPattern" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDiscoveryReference">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Services.Discovery.DiscoveryReference GetDiscoveryReference (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.Services.Discovery.DiscoveryReference GetDiscoveryReference(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoverySearchPattern.GetDiscoveryReference(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryReference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome de um arquivo de descoberta ou um arquivo que é exibido em um documento de descoberta gerados dinamicamente. Por exemplo, um arquivo. asmx ou. xsd.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o <see cref="T:System.Web.Services.Discovery.DiscoveryReference" /> objeto para um nome de arquivo fornecido.</summary>
+        <returns>Um nome de arquivo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe derivada de <xref:System.Web.Services.Discovery.DiscoverySearchPattern> implementa o <xref:System.Web.Services.Discovery.DiscoverySearchPattern.GetDiscoveryReference%2A> método retornando sua classe concreta associada derivado da <xref:System.Web.Services.Discovery.DiscoveryReference>.  
+  
+ Por exemplo, o <xref:System.Web.Services.Discovery.ContractSearchPattern> classe retorna uma <xref:System.Web.Services.Discovery.ContractReference> instância que contém o local de um arquivo de serviço Web. asmx e correspondente dinamicamente gerados documento WSDL Web Services Description Language ().  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public abstract string Pattern { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Pattern" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoverySearchPattern.Pattern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão de nome de arquivo a ser usado como um destino de pesquisa.</summary>
+        <value>Um padrão de nome de arquivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o padrão especifica uma extensão de nome de arquivo, por exemplo,. disco ou. asmx.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

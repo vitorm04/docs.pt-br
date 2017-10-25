@@ -1,0 +1,69 @@
+<Type Name="CachingHint" FullName="System.Windows.Media.CachingHint">
+  <TypeSignature Language="C#" Value="public enum CachingHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CachingHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.CachingHint" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se deve armazenar em cache objetos de pincel lado a lado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] não armazena em cache o conteúdo renderizado de <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush> objetos. Em cenários estáticos onde nem o conteúdo nem o uso do pincel na cena está mudando, o cache não fornece um benefício porque ele economiza memória de vídeo. Quando um pincel com conteúdo estático é usado de forma não-estático, o comportamento padrão do [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] é renderizar novamente todo o conteúdo do pincel cada quadro, mesmo que o conteúdo é imutável. Por exemplo, isso acontece quando um estático <xref:System.Windows.Media.DrawingBrush> ou <xref:System.Windows.Media.VisualBrush> é mapeado para a superfície de um objeto de rotação 3D. Renderizar novamente o conteúdo estático pode ter um impacto negativo no desempenho.  
+  
+ Definindo o <xref:System.Windows.Media.RenderOptions.CachingHint%2A> propriedade anexada no pincel para Cache, você pode aumentar o desempenho usando versões em cache dos objetos de pincel lado a lado.  
+  
+ O <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> e <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> valores de propriedade são valores de tamanho relativo que determinam quando o <xref:System.Windows.Media.TileBrush> objeto deve ser regenerado devido a alterações na escala. Por exemplo, definindo o <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> propriedade 2.0, o cache para o <xref:System.Windows.Media.TileBrush> somente precisa ser regenerado quando seu tamanho excede duas vezes o tamanho do cache atual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar a opção de dica de cache para um <xref:System.Windows.Media.DrawingBrush>.  
+  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cache">
+      <MemberSignature Language="C#" Value="Cache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.CachingHint Cache = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.CachingHint.Cache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CachingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazenar em cache os objetos de pincel lado a lado em um buffer fora da tela, usando as dicas de cache especificadas pelo <see cref="T:System.Windows.Media.RenderOptions" /> configurações.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unspecified">
+      <MemberSignature Language="C#" Value="Unspecified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.CachingHint Unspecified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.CachingHint.Unspecified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.CachingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum cache dicas são especificadas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

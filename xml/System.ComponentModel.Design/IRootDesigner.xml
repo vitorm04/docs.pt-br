@@ -1,0 +1,134 @@
+<Type Name="IRootDesigner" FullName="System.ComponentModel.Design.IRootDesigner">
+  <TypeSignature Language="C#" Value="public interface IRootDesigner : IDisposable, System.ComponentModel.Design.IDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRootDesigner implements class System.ComponentModel.Design.IDesigner, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IRootDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IDesigner</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece suporte para as tecnologias de modo de exibição de designer do nível raiz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer raiz é o designer que está na posição superior ou raiz da hierarquia de objetos de documento de tempo de design atual. Um designer raiz deve implementar o <xref:System.ComponentModel.Design.IRootDesigner> interface. Um designer raiz normalmente gerencia a exibição do plano de fundo no modo de exibição designer e geralmente exibe os controles no contêiner de base do projeto atual de tempo de design.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um <xref:System.ComponentModel.Design.IRootDesigner> associada a um controle de usuário de exemplo de implementação. Isso <xref:System.ComponentModel.Design.IRootDesigner> implementação exibe um controle para o modo de exibição do plano de fundo no modo de exibição designer, substituindo o <xref:System.ComponentModel.Design.IRootDesigner.GetView%2A> método. Você precisa adicionar uma referência ao assembly System para compilar o exemplo.  
+  
+ Para usar este exemplo, adicione o código-fonte para um projeto e mostrar o `RootViewSampleComponent` no designer de exibição para mostrar a exibição de designer raiz personalizado.  
+  
+ [!code-cpp[IRootDesigner Sample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IRootDesigner Sample/CPP/class1.cpp#1)]
+ [!code-csharp[IRootDesigner Sample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IRootDesigner Sample/CS/class1.cs#1)]
+ [!code-vb[IRootDesigner Sample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IRootDesigner Sample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetView">
+      <MemberSignature Language="C#" Value="public object GetView (System.ComponentModel.Design.ViewTechnology technology);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetView(valuetype System.ComponentModel.Design.ViewTechnology technology) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IRootDesigner.GetView(System.ComponentModel.Design.ViewTechnology)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="technology" Type="System.ComponentModel.Design.ViewTechnology" />
+      </Parameters>
+      <Docs>
+        <param name="technology">Um <see cref="T:System.ComponentModel.Design.ViewTechnology" /> que indica uma tecnologia de exibição específica.</param>
+        <summary>Obtém um objeto de exibição para a tecnologia de exibição especificado.</summary>
+        <returns>Um objeto que representa o modo de exibição para este designer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna um objeto de exibição que pode apresentar uma interface do usuário para o usuário. O tipo de dados retornado é um <xref:System.Object>, pois pode haver uma variedade de tecnologias de interface de usuário diferente. Ambientes de desenvolvimento geralmente oferecem suporte a mais de uma tecnologia.  
+  
+> [!NOTE]
+>  O <xref:System.ComponentModel.Design.ViewTechnology?displayProperty=nameWithType> e <xref:System.ComponentModel.Design.ViewTechnology?displayProperty=nameWithType> campos estão obsoletos. Use <xref:System.ComponentModel.Design.ViewTechnology?displayProperty=nameWithType> para novas implementações do designers.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A tecnologia de exibição especificado não tem suporte ou não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedTechnologies">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.ViewTechnology[] SupportedTechnologies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.Design.ViewTechnology[] SupportedTechnologies" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IRootDesigner.SupportedTechnologies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ViewTechnology[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de tecnologias que esse designer pode dar suporte para a exibição.</summary>
+        <value>Uma matriz de suporte <see cref="T:System.ComponentModel.Design.ViewTechnology" /> valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.ViewTechnology> enumeração indica as tecnologias com suporte do modo de exibição.  
+  
+> [!NOTE]
+>  O <xref:System.ComponentModel.Design.ViewTechnology?displayProperty=nameWithType> e <xref:System.ComponentModel.Design.ViewTechnology?displayProperty=nameWithType> campos estão obsoletos. Use <xref:System.ComponentModel.Design.ViewTechnology?displayProperty=nameWithType> para novas implementações do designers.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

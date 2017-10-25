@@ -1,0 +1,329 @@
+<Type Name="TableItemStyle" FullName="System.Web.UI.WebControls.TableItemStyle">
+  <TypeSignature Language="C#" Value="public class TableItemStyle : System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableItemStyle extends System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TableItemStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as propriedades de estilo para um elemento de um controle que renderiza como um <see cref="T:System.Web.UI.WebControls.TableRow" /> ou <see cref="T:System.Web.UI.WebControls.TableCell" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TableItemStyle> classe representa as propriedades de estilo para um elemento de um controle que processa como um <xref:System.Web.UI.WebControls.TableRow> ou <xref:System.Web.UI.WebControls.TableCell>. Você pode controlar o alinhamento horizontal e vertical do conteúdo em um item da tabela definindo a <xref:System.Web.UI.WebControls.TableItemStyle.HorizontalAlign%2A> e <xref:System.Web.UI.WebControls.TableItemStyle.VerticalAlign%2A> propriedades, respectivamente. Você também pode especificar se o conteúdo da célula continuar automaticamente na próxima linha quando é atingido o fim da célula, definindo o <xref:System.Web.UI.WebControls.TableItemStyle.Wrap%2A> propriedade.  
+  
+ Essa classe fornece métodos que são úteis para a criação de um estilo de um item no <xref:System.Web.UI.WebControls.Table> controle. Você pode usar o <xref:System.Web.UI.WebControls.TableItemStyle.CopyFrom%2A> e <xref:System.Web.UI.WebControls.TableItemStyle.MergeWith%2A> métodos para copiar ou mesclar as propriedades de estilo de outro <xref:System.Web.UI.WebControls.TableItemStyle> com a instância do <xref:System.Web.UI.WebControls.TableItemStyle> que o método é chamado de.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria várias linhas em uma <xref:System.Web.UI.WebControls.Table> controlar e aplica um <xref:System.Web.UI.WebControls.TableItemStyle> objeto para cada linha.  
+  
+ [!code-aspx-csharp[TableCell#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#1)]
+ [!code-aspx-vb[TableCell#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#1)]  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableItemStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableItemStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> classe usando valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.TableItemStyle> classe.  
+  
+   
+  
+## Examples  
+ [!code-aspx-csharp[TableCell#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TableCell/CS/tablecellcs.aspx#1)]
+ [!code-aspx-vb[TableCell#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TableCell/VB/tablecellvb.aspx#1)]  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TableItemStyle (System.Web.UI.StateBag bag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.StateBag bag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableItemStyle.#ctor(System.Web.UI.StateBag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bag" Type="System.Web.UI.StateBag" />
+      </Parameters>
+      <Docs>
+        <param name="bag">Um <see cref="T:System.Web.UI.StateBag" /> que representa o recipiente de estado para armazenar informações de estilo.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> classe com o recipiente de estado especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.TableItemStyle> classe usando especificado <xref:System.Web.UI.StateBag?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="public override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer, System.Web.UI.WebControls.WebControl owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer, class System.Web.UI.WebControls.WebControl owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableItemStyle.AddAttributesToRender(System.Web.UI.HtmlTextWriter,System.Web.UI.WebControls.WebControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.WebControl" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O fluxo de saída que renderiza o conteúdo HTML para o cliente.</param>
+        <param name="owner">O controle que o estilo refere-se a.</param>
+        <summary>Adiciona informações sobre o alinhamento horizontal, alinhamento vertical e ajuste à lista de atributos a serem renderizados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TableItemStyle.AddAttributesToRender%2A> método é usado principalmente por desenvolvedores de controle para inserir atributos adicionais e estilos no <xref:System.Web.UI.HtmlTextWriter> fluxo de saída para o <xref:System.Web.UI.WebControls.TableItemStyle>. O <xref:System.Web.UI.WebControls.TableItemStyle.AddAttributesToRender%2A> substituições de método de <xref:System.Web.UI.WebControls.Style.AddAttributesToRender%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableItemStyle.CopyFrom(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Um <see cref="T:System.Web.UI.WebControls.Style" /> que representa o estilo para copiar.</param>
+        <summary>Duplica as propriedades de estilo não vazio de especificado <see cref="T:System.Web.UI.WebControls.Style" /> na instância do <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que este método é chamado de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableItemStyle.CopyFrom%2A> método para duplicar as propriedades de estilo não vazio de especificado <xref:System.Web.UI.WebControls.Style> na instância do <xref:System.Web.UI.WebControls.TableItemStyle> classe que este método é chamado de.  
+  
+> [!CAUTION]
+>  Todas as propriedades na instância atual do <xref:System.Web.UI.WebControls.TableItemStyle> classe são substituídos por propriedade associada no `s` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.HorizontalAlign HorizontalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.HorizontalAlign HorizontalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableItemStyle.HorizontalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HorizontalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento horizontal do conteúdo em uma célula.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.HorizontalAlign" />. O padrão é <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableItemStyle.HorizontalAlign%2A> propriedade para especificar o alinhamento horizontal do controle de lista de dados dentro do respectivo contêiner. Essa propriedade é definida com uma da <xref:System.Web.UI.WebControls.HorizontalAlign> valores de enumeração. A tabela a seguir lista os valores possíveis.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.NotSet>|O alinhamento horizontal não foi definido.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Left>|O conteúdo de uma célula é justificados à esquerda dentro da célula.|  
+|<xref:System.Web.UI.MobileControls.Alignment.Center>|O conteúdo de uma célula é centralizado dentro da célula.|  
+|<xref:System.Web.UI.WebControls.HorizontalAlign.Right>|O conteúdo de uma célula é justificado à direita da célula.|  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O alinhamento horizontal especificado não é um do <see cref="T:System.Web.UI.WebControls.HorizontalAlign" /> valores de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeWith">
+      <MemberSignature Language="C#" Value="public override void MergeWith (System.Web.UI.WebControls.Style s);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MergeWith(class System.Web.UI.WebControls.Style s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableItemStyle.MergeWith(System.Web.UI.WebControls.Style)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Web.UI.WebControls.Style" />
+      </Parameters>
+      <Docs>
+        <param name="s">Um <see cref="T:System.Web.UI.WebControls.Style" /> que representa o estilo de combinar.</param>
+        <summary>Combina as propriedades de estilo do <see cref="T:System.Web.UI.WebControls.Style" /> na instância do <see cref="T:System.Web.UI.WebControls.TableItemStyle" /> que este método é chamado de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableItemStyle.MergeWith%2A> método para combinar as propriedades de estilo do <xref:System.Web.UI.WebControls.Style> na instância do <xref:System.Web.UI.WebControls.TableItemStyle> classe que este método é chamado de.  
+  
+ Esse método une as propriedades do <xref:System.Web.UI.WebControls.Style> objeto e a instância atual do <xref:System.Web.UI.WebControls.TableItemStyle> classe. Isso é feito definindo cada propriedade que não está definida na instância atual do <xref:System.Web.UI.WebControls.TableItemStyle> classe com o valor na propriedade correspondente a `s` parâmetro. Apenas as propriedades que não foram definidas serão substituídas. Se uma propriedade no `s` parâmetro não for definido, ele não substitui a propriedade correspondente na instância atual do <xref:System.Web.UI.WebControls.TableItemStyle> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TableItemStyle.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove os elementos de estilo definidas do estilo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover os elementos de estilo definidas de estilo, deixando o estilo em sua configuração padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalAlign">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.VerticalAlign VerticalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.VerticalAlign VerticalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableItemStyle.VerticalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.VerticalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento vertical do conteúdo em uma célula.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.VerticalAlign" />. O padrão é <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableItemStyle.VerticalAlign%2A> propriedade para especificar o alinhamento vertical do conteúdo da célula. A tabela a seguir lista os valores possíveis.  
+  
+|Alinhamento vertical|Descrição|  
+|------------------------|-----------------|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.NotSet>|O alinhamento vertical não está definido.|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.Top>|O conteúdo da célula é alinhado com a borda superior da célula.|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.Middle>|O conteúdo da célula é alinhado com o centro da célula.|  
+|<xref:System.Web.UI.WebControls.VerticalAlign.Bottom>|O conteúdo da célula é alinhado com a borda inferior da célula.|  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O alinhamento vertical especificado não era um do <see cref="T:System.Web.UI.WebControls.VerticalAlign" /> valores de enumeração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Wrap">
+      <MemberSignature Language="C#" Value="public virtual bool Wrap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Wrap" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TableItemStyle.Wrap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o conteúdo de uma célula de quebra na célula.</summary>
+        <value>
+          <see langword="true" /> se o conteúdo da célula quebra na célula; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TableItemStyle.Wrap%2A> para especificar ou determinar se o conteúdo da célula quebra.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

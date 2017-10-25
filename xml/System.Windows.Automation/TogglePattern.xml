@@ -1,0 +1,177 @@
+<Type Name="TogglePattern" FullName="System.Windows.Automation.TogglePattern">
+  <TypeSignature Language="C#" Value="public class TogglePattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TogglePattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TogglePattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um controle que pode percorrer um conjunto de estados e manter um estado após sua definição.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TogglePattern.TogglePatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TogglePattern/TogglePatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TogglePattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TogglePattern+TogglePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.TogglePattern" />.</summary>
+        <value>Uma estrutura que contém o cache [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade em cache devem ser anteriormente solicitados usando um <xref:System.Windows.Automation.CacheRequest>. Use <xref:System.Windows.Automation.TogglePattern.Current%2A> para obter o valor atual de uma propriedade.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade solicitada não está no cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TogglePattern.TogglePatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TogglePattern/TogglePatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TogglePattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TogglePattern+TogglePatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para este <see cref="T:System.Windows.Automation.TogglePattern" />.</summary>
+        <value>Uma estrutura que contém atual [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] valores de propriedade para o padrão de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão deve ser de um <xref:System.Windows.Automation.AutomationElement> com um <xref:System.Windows.Automation.AutomationElementMode.Full> referência para obter os valores atuais. Se o <xref:System.Windows.Automation.AutomationElement> foi obtida usando <xref:System.Windows.Automation.AutomationElementMode.None>, ele contém somente dados armazenados em cache e tentar obter o valor atual de qualquer propriedade gera uma exceção. Use <xref:System.Windows.Automation.TogglePattern.Cached%2A> para obter o valor armazenado em cache de uma propriedade que tenha sido especificado usando um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TogglePattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.TogglePattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TogglePatternIdentifiers>.  
+  
+ O identificador padrão é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TogglePattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATogglePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATogglePattern_snip/CSharp/UIATogglePattern_snippets.cs#101)]
+ [!code-vb[UIATogglePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATogglePattern_snip/VisualBasic/UIATogglePattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggle">
+      <MemberSignature Language="C#" Value="public void Toggle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Toggle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.TogglePattern.Toggle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Percorre os estados de alternância de um <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle para percorrer seu <xref:System.Windows.Automation.ToggleState> nesta ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> e, se suportado, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TogglePattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement> e subsequentemente é usada para alternar o <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATogglePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATogglePattern_snip/CSharp/UIATogglePattern_snippets.cs#101)]
+ [!code-vb[UIATogglePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATogglePattern_snip/VisualBasic/UIATogglePattern_snippets.vb#101)]  
+[!code-csharp[UIATogglePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATogglePattern_snip/CSharp/UIATogglePattern_snippets.cs#102)]
+[!code-vb[UIATogglePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATogglePattern_snip/VisualBasic/UIATogglePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleStateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ToggleStateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ToggleStateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TogglePattern.ToggleStateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see cref="P:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TogglePatternIdentifiers>.  
+  
+ Um <xref:System.Windows.Automation.AutomationElement> deve percorrer seu <xref:System.Windows.Automation.ToggleState> nesta ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> e, se suportado, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um elemento raiz é passado para uma função que retorna uma coleção de elementos de automação que são descendentes da raiz e atender a um conjunto de condições de propriedade.  
+  
+ [!code-csharp[UIATogglePattern_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATogglePattern_snip/CSharp/UIATogglePattern_snippets.cs#100)]
+ [!code-vb[UIATogglePattern_snip#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATogglePattern_snip/VisualBasic/UIATogglePattern_snippets.vb#100)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

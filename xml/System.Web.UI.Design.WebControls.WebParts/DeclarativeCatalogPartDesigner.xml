@@ -1,0 +1,142 @@
+<Type Name="DeclarativeCatalogPartDesigner" FullName="System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner">
+  <TypeSignature Language="C#" Value="public class DeclarativeCatalogPartDesigner : System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeclarativeCatalogPartDesigner extends System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design para <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> controles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner>fornece suporte de tempo de design para <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> controles. Ele estende sua classe pai, <xref:System.Web.UI.Design.WebControls.WebParts.CatalogPartDesigner>, adicionando um controle específico <xref:System.Web.UI.Design.TemplateGroup> para o <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.TemplateGroups%2A> coleção. <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner>não processar associado <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> controle na superfície de design.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>O controle associado, <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" />, é um <see langword="sealed" /> de classe e não pode ser herdada. Portanto, há pouco valor na derivação de <see cref="T:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner" /> porque ele não pode ser substituído para aplicar a qualquer outro controle.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeclarativeCatalogPartDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDesignTimeHtml">
+      <MemberSignature Language="C#" Value="public override string GetDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.GetDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método pai para evitar o processamento do controle.</summary>
+        <returns>Uma cadeia vazia ("") ou o valor de <see cref="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.GetEmptyDesignTimeHtml" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart.WebPartsTemplate%2A> associado ao controle, o designer exibe a caixa cinza padrão com o nome de classe e o nome da instância do controle. Caso contrário, nenhum processamento de tempo de design em todos os ocorre porque as caixas de seleção e títulos de Web Parts são renderizados pelo <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> em vez do <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> em si.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyDesignTimeHtml">
+      <MemberSignature Language="C#" Value="protected override string GetEmptyDesignTimeHtml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetEmptyDesignTimeHtml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.GetEmptyDesignTimeHtml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a marcação para representar um controle vazio na superfície de design.</summary>
+        <returns>Uma cadeia de caracteres de marcação vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação renderiza o controle como uma caixa cinza que indica o nome da classe e o nome da instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> controle associado com o designer.</param>
+        <summary>Associa o designer associados <see cref="T:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart" /> controle e define o <see cref="F:System.Web.UI.Design.ViewFlags.TemplateEditing" /> exibir sinalizador para <see langword="true" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateGroups">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Design.TemplateGroupCollection TemplateGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateGroupCollection TemplateGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.TemplateGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateGroupCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de grupos de modelos, cada um contendo uma ou mais definições de modelo.</summary>
+        <value>O acrescentados <see cref="T:System.Web.UI.Design.TemplateGroupCollection" /> associados a essa classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.WebParts.DeclarativeCatalogPartDesigner.TemplateGroups%2A> propriedade substitui a sua implementação base para adicionar um <xref:System.Web.UI.Design.TemplateGroup> objeto que é específico para essa classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

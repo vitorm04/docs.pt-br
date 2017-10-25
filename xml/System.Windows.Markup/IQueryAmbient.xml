@@ -1,0 +1,65 @@
+<Type Name="IQueryAmbient" FullName="System.Windows.Markup.IQueryAmbient">
+  <TypeSignature Language="C#" Value="public interface IQueryAmbient" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IQueryAmbient" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.IQueryAmbient" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Consulta se uma propriedade especificada deve ser tratada como ambiente no escopo atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade de um mecanismo de propriedade de ambiente é melhorar o tempo de análise informando um gravador de objeto XAML para evitar a instanciação de determinados objetos, em casos onde ele é conhecido se os objetos são valores que são temporários e não são úteis para um aplicativo típico de tempo de execução. Normalmente, as pesquisas XAML ou processamento de XAML de um acessador get de propriedade precisa instanciar esses objetos para preencher a representação de gráfico de objeto com valores prontos para uso.  
+  
+ <xref:System.Windows.Markup.IQueryAmbient>tem um membro: <xref:System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable%2A>.  
+  
+ <xref:System.Windows.Markup.IQueryAmbient>é um mecanismo paralelo para <xref:System.Windows.Markup.AmbientAttribute>. <xref:System.Windows.Markup.IQueryAmbient>é o mecanismo especializado que evita o uso de reflexão para determinar as informações e também pode atuar circunstancialmente (um determinado objeto pode optar por relatório `true` ou `false` para <xref:System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable%2A>), enquanto que o atributo é essencialmente análise estática). <xref:System.Windows.Markup.AmbientAttribute>é o mecanismo geral que pode ser usado por criadores de objeto XAML, e que geralmente se correlaciona com as propriedades do sistema de tipo XAML dedicadas <xref:System.Xaml.XamlMember.IsAmbient%2A> e <xref:System.Xaml.XamlType.IsAmbient%2A>.  
+  
+## <a name="wpf-implementations-of-iqueryambient"></a>Implementações de WPF de IQueryAmbient  
+ No WPF, <xref:System.Windows.Markup.IQueryAmbient> é usado para o processo de pesquisa de dicionário de recursos. O processo de pesquisa obtém sucessivo `Resources` valores ao longo da árvore lógica do WPF, trabalhando na direção da raiz do escopo do recurso até que uma chave é encontrada ou for determinada que a chave não existir no escopo. Normalmente, isso exigiria criando um <xref:System.Windows.ResourceDictionary> cada vez para receber os resultados. Declarando o conteúdo de `Resources` como ambiente contanto que `Resources` existe otimiza esse processo de pesquisa. No WPF, essa interface é implementada nos seguintes casos:  
+  
+-   <xref:System.Windows.FrameworkElement>implementa <xref:System.Windows.FrameworkElement.System%23Windows%23Markup%23IQueryAmbient%23IsAmbientPropertyAvailable%2A> para retornar `true` para todos os nomes de propriedade se ela contiver um existente <xref:System.Windows.ResourceDictionary> para <xref:System.Windows.FrameworkElement.Resources%2A>, e desde que a consulta não é para o <xref:System.Windows.FrameworkElement.Resources%2A> própria propriedade.  
+  
+-   <xref:System.Windows.Style>implementa o mesmo padrão para seu <xref:System.Windows.Style.Resources%2A>.  
+  
+-   <xref:System.Windows.Application>implementa o mesmo padrão para seu <xref:System.Windows.Application.Resources%2A>.  
+  
+-   <xref:System.Windows.FrameworkContentElement>implementa o mesmo padrão para seu <xref:System.Windows.FrameworkContentElement.Resources%2A>.  
+  
+-   <xref:System.Windows.FrameworkTemplate>implementa o mesmo padrão para seu <xref:System.Windows.FrameworkTemplate.Resources%2A>. Ele também relata <xref:System.Windows.FrameworkTemplate.Template%2A> conteúdo como ambiente mas retorna `false` se consultar <xref:System.Windows.FrameworkTemplate.Template%2A> em si.  
+  
+-   Em cada um desses casos, o relevantes `Resources` propriedade (e <xref:System.Windows.FrameworkTemplate.Template%2A>) são atribuídas como <xref:System.Windows.Markup.AmbientAttribute>. O uso típico é para consultar as propriedades que não são o <xref:System.Windows.Markup.AmbientAttribute> propriedades do objeto que define a interface atribuídas. Em outras palavras, desde que exista um dicionário de recursos para fornecer o valor de tempo de execução potencial quando o gráfico de objeto é criado, qualquer outra propriedade, além de recipiente de propriedade do dicionário de recursos pode ser tratada como ambiente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsAmbientPropertyAvailable">
+      <MemberSignature Language="C#" Value="public bool IsAmbientPropertyAvailable (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsAmbientPropertyAvailable(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.IQueryAmbient.IsAmbientPropertyAvailable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade a ser verificada quanto ao estado do ambiente.</param>
+        <summary>Consulta se uma propriedade nomeada especificada pode ser considerada ambiente no escopo atual.</summary>
+        <returns>
+          <see langword="true" /> se a propriedade solicitada puder ser considerada ambiente; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,136 @@
+<Type Name="TraceFilter" FullName="System.Diagnostics.TraceFilter">
+  <TypeSignature Language="C#" Value="public abstract class TraceFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TraceFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.TraceFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base para implementações de filtro de rastreamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Filtros de rastreamento podem ser usados por ouvintes de rastreamento para fornecer uma camada extra de filtragem além do fornecido por opções de rastreamento. O filtro de rastreamento para um ouvinte de rastreamento pode ser encontrado no ouvinte de <xref:System.Diagnostics.TraceListener.Filter%2A> propriedade. Opções de rastreamento determinam se um rastreamento deve ser enviado para os ouvintes de rastreamento. Filtros de rastreamento permitem que os ouvintes de rastreamento individuais determinar se é ou não o rastreamento a ser gravado na mídia de saída associadas. Por exemplo, conforme determinado por cada filtro de rastreamento, um rastreamento pode ser gravado no console por um <xref:System.Diagnostics.ConsoleTraceListener>, mas não para o log de eventos por um <xref:System.Diagnostics.EventLogTraceListener>.  
+  
+ Filtros que herdam o <xref:System.Diagnostics.TraceFilter> classe pode ser usada por ouvintes de rastreamento que herdam o <xref:System.Diagnostics.TraceListener> classe para executar a filtragem de eventos que está sendo rastreados. <xref:System.Diagnostics.TraceFilter>contém um único método, <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A>, que usa dados de eventos e retorna um sinalizador que indica se o evento deve ser rastreado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TraceFilter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceFilter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.TraceFilter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrace">
+      <MemberSignature Language="C#" Value="public abstract bool ShouldTrace (System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShouldTrace(class System.Diagnostics.TraceEventCache cache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string formatOrMessage, object[] args, object data1, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.TraceFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="formatOrMessage" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="data1" Type="System.Object" />
+        <Parameter Name="data" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="cache">O <see cref="T:System.Diagnostics.TraceEventCache" /> que contém informações sobre o evento de rastreamento.</param>
+        <param name="source">O nome da fonte.</param>
+        <param name="eventType">Um dos valores <see cref="T:System.Diagnostics.TraceEventType" /> que especifica o tipo de evento que causou o rastreamento.</param>
+        <param name="id">Um número de identificador de rastreamento.</param>
+        <param name="formatOrMessage">O formato a ser usado para gravar uma matriz de argumentos especificados pelo <c>args</c> parâmetro ou uma mensagem a ser gravada.</param>
+        <param name="args">Uma matriz de objetos de argumento.</param>
+        <param name="data1">Um objeto de dados de rastreamento.</param>
+        <param name="data">Uma matriz de objetos de dados de rastreamento.</param>
+        <summary>Quando substituído em uma classe derivada, determina se o ouvinte de rastreamento deve rastrear o evento.</summary>
+        <returns>
+          <see langword="true" /> para rastrear o evento especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> método para indicar o rastreamento deve ocorrer quando o tipo de evento de rastreamento do evento é igual a <xref:System.Diagnostics.TraceEventType?displayProperty=nameWithType>.  
+  
+ [!code-cpp[System.Diagnostics.TraceFilter#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.diagnostics.tracefilter/cpp/source.cpp#2)]
+ [!code-csharp[System.Diagnostics.TraceFilter#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.diagnostics.tracefilter/cs/source.cs#2)]
+ [!code-vb[System.Diagnostics.TraceFilter#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.diagnostics.tracefilter/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>As implementações desse método devem retornar <see langword="true" /> se o evento especificado pelos parâmetros passados deve ser rastreado. Caso contrário, o método deve retornar <see langword="false" />. Por exemplo, um filtro que permite que os eventos de erro somente passar para o ouvinte deve inspecionar o <paramref name="eventType" /> parâmetro e retornar <see langword="true" /> se o nível de tipo de evento de rastreamento está definido como <see cref="F:System.Diagnostics.TraceEventType.Error" /> ou maior; caso contrário, ele deverá retornar <see langword="false" />.  
+  
+ Implementações do método devem ser preparadas para lidar com <see langword="null" /> os seguintes parâmetros: <paramref name="args" />, <paramref name="data1" />, <paramref name="data" />, <paramref name="formatOrMessage" />, e <paramref name="cache" />. Se o valor do parâmetro for <see langword="null" />, o parâmetro não é parte do evento. Por exemplo, se o <paramref name="args" /> parâmetro é <see langword="null" />, isso significa que o evento não tem nenhum argumento. Se o <paramref name="data" /> parâmetro é <see langword="null" />, em seguida, há objetos de dados de um ou nenhum. Se houver um objeto de dados, ela será localizada no <paramref name="data1" /> parâmetro. É o motivo para a diferença entre um único objeto de dados e uma matriz de objetos de dados de desempenho. Não há nenhum motivo para criar uma matriz de objetos se apenas um objeto é rastreado, como normalmente é o caso. Se o <paramref name="data" /> parâmetro não é <see langword="null" />, o <paramref name="data1" /> parâmetro também não deve ser <see langword="null" />.  
+  
+ Há garantia de que o <paramref name="source" /> parâmetro não é <see langword="null" /> e não uma cadeia de caracteres vazia ("").  
+  
+ Implementações do método podem opcionalmente gerar as seguintes exceções:  
+  
+-   <see cref="T:System.ArgumentNullException" />if <paramref name="source" /> is <see langword="null" />.  
+  
+-   <see cref="T:System.ArgumentException" />Se <paramref name="eventType" /> não é um do <see cref="T:System.Diagnostics.TraceEventType" /> valores.  
+  
+-   Exceções não relacionadas à implementação do método. Por exemplo, um <see cref="T:System.Threading.ThreadAbortException" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

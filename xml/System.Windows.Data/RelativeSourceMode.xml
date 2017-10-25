@@ -1,0 +1,97 @@
+<Type Name="RelativeSourceMode" FullName="System.Windows.Data.RelativeSourceMode">
+  <TypeSignature Language="C#" Value="public enum RelativeSourceMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RelativeSourceMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.RelativeSourceMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o local da origem da associação com relação à posição do destino da associação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlTextUsage_RelativeSource"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Para [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] informações, consulte [RelativeSource MarkupExtension](~/docs/framework/wpf/advanced/relativesource-markupextension.md).  
+  
+   
+  
+## Examples  
+ Consulte <xref:System.Windows.Data.RelativeSource> para obter exemplos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindAncestor">
+      <MemberSignature Language="C#" Value="FindAncestor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.RelativeSourceMode FindAncestor = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.RelativeSourceMode.FindAncestor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSourceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se ao ancestral na cadeia pai do elemento com associação de dados. Você pode usar isso para se associar a um ancestral de um tipo específico ou suas subclasses. Esse é o modo usado para especificar <see cref="P:System.Windows.Data.RelativeSource.AncestorType" /> e/ou <see cref="P:System.Windows.Data.RelativeSource.AncestorLevel" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousData">
+      <MemberSignature Language="C#" Value="PreviousData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.RelativeSourceMode PreviousData = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.RelativeSourceMode.PreviousData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSourceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Permite que você associe o item de dados anterior (não o controle que contém o item de dados) na lista de itens de dados que está sendo exibida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Self">
+      <MemberSignature Language="C#" Value="Self" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.RelativeSourceMode Self = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.RelativeSourceMode.Self" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSourceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se ao elemento no qual você está definindo a associação e permite que você vincule uma propriedade desse elemento a outra propriedade no mesmo elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplatedParent">
+      <MemberSignature Language="C#" Value="TemplatedParent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Data.RelativeSourceMode TemplatedParent = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Data.RelativeSourceMode.TemplatedParent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.RelativeSourceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se ao elemento ao qual o modelo (em que o elemento com associação de dados existente) é aplicado. Isso é semelhante à configuração de um <see cref="T:System.Windows.TemplateBindingExtension" /> e só é aplicável se o <see cref="T:System.Windows.Data.Binding" /> está dentro de um modelo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

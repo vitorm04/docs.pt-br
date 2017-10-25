@@ -1,0 +1,25 @@
+<Namespace Name="System.Text">
+  <Docs>
+    <summary>O <see cref="N:System.Text" /> namespace contém classes que representam codificações de caracteres ASCII e Unicode; classes base abstratas para conversão de blocos de caracteres para e de blocos de bytes e uma classe auxiliar que manipula e formata <see cref="T:System.String" /> objetos sem criar instâncias intermediárias de <see cref="T:System.String" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes de codificação são principalmente para converter entre codificações diferentes ou páginas de código e uma codificação Unicode. <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>A codificação (UTF-16) é usado internamente pelo .NET Framework, e <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> codificação é geralmente usada para armazenar dados de caractere para garantir a portabilidade em máquinas e culturas.  
+  
+ As classes derivadas de <xref:System.Text.Encoding> permitem que você escolha uma estratégia de fallback, que determina como os caracteres que não podem ser codificados em uma sequência de bytes ou bytes, que não podem ser decodificados em caracteres, são tratados. Você pode escolher um destes procedimentos:  
+  
+-   Exceção de fallback. Você pode optar por gerar exceções em erros de dados usando um `throwonerror` sinalizador está disponível em alguns construtores de classe ou usando o <xref:System.Text.EncoderExceptionFallback> e <xref:System.Text.DecoderExceptionFallback> classes. Se você estiver preocupado com a integridade do fluxo de dados, recomenda-se o lançamento em uma exceção.  
+  
+-   Substituição de fallback. Você pode usar o <xref:System.Text.EncoderFallback> e <xref:System.Text.DecoderFallback> classes silenciosamente alterar um caractere "?" ou o caractere de substituição Unicode (U + FFFD).  
+  
+-   Fallback de melhor ajuste. Esta opção mapeia um caractere em uma codificação para um caractere em outra codificação. Fallback se ajuste melhor geralmente não é recomendável porque isso pode causar confusão e perda de dados e é mais lenta que simples "?" caracteres substitutos. No entanto, para páginas de código ANSI o comportamento de melhor ajuste é o padrão.  
+  
+ O <xref:System.Text.StringBuilder> foi criado para operações que realizar manipulações extensivas em uma única cadeia de caracteres. Ao contrário de <xref:System.String> classe, o <xref:System.Text.StringBuilder> é mutável de classe e fornece um desempenho melhor ao concatenar ou excluindo cadeias de caracteres.  
+  
+ Para obter mais informações sobre <xref:System.Text?displayProperty=nameWithType>, consulte [codificação de caracteres no .NET Framework](~/docs/standard/base-types/character-encoding.md) .  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

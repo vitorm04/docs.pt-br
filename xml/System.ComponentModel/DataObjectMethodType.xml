@@ -1,0 +1,162 @@
+<Type Name="DataObjectMethodType" FullName="System.ComponentModel.DataObjectMethodType">
+  <TypeSignature Language="C#" Value="public enum DataObjectMethodType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataObjectMethodType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataObjectMethodType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica o tipo de operação de dados executada por um método, conforme especificado pelo <see cref="T:System.ComponentModel.DataObjectMethodAttribute" /> aplicados ao método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode aplicar o <xref:System.ComponentModel.DataObjectMethodAttribute> para um método exposto publicamente e identificar o tipo de operação de dados, ele executa, bem como se ele é o método padrão do tipo de dados. Neste exemplo o `NorthwindEmployee` tipo apresenta dois métodos diferentes de dados: um para recuperar um conjunto de dados chamados `GetAllEmployees`e outra para excluir dados chamados `DeleteEmployeeByID`. O <xref:System.ComponentModel.DataObjectMethodAttribute> é aplicada a ambos os métodos.  
+  
+ [!code-csharp[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/CS/dataobjectmethodattribute.cs#3)]
+ [!code-vb[System.ComponentModel.DataObjectMethodAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataObjectMethodAttribute/VB/dataobjectmethodattribute.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Delete = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um método é usado para uma operação de dados que exclui dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="Fill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Fill = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Fill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um método é usado para uma operação de dados que preenche um <see cref="T:System.Data.DataSet" /> objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Insert = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Insert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um método é usado para uma operação de dados que insere dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="Select" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Select = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Select" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um método é usado para uma operação de dados que recupera os dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="Update" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.DataObjectMethodType Update = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.DataObjectMethodType.Update" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataObjectMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um método é usado para uma operação de dados que atualiza dados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,58 @@
+<Type Name="SecurityContext" FullName="System.Messaging.SecurityContext">
+  <TypeSignature Language="C#" Value="public sealed class SecurityContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.SecurityContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o contexto de segurança para uma mensagem em uma fila.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto de segurança contém informações de segurança armazenadas em cache como um certificado interno, a chave privada correspondente, o SID do usuário, necessária para anexar um certificado e o identificador de remetente para uma mensagem ao solicitar a autenticação.  
+  
+ Se um cliente, como um aplicativo ASP.NET, representa um usuário para enviar uma mensagem para uma fila, a identidade do usuário é usada para acessar a fila. Se a fila for remota, essas credenciais são armazenadas em cache e usadas para mensagens enviadas para a fila subsequentemente. Portanto, o SID nas mensagens subsequentes será a identidade armazenada em cache do primeiro usuário que enviou uma mensagem à fila. A identidade armazenada em cache do primeiro usuário que enviou uma mensagem à fila será usada para os usuários subsequentes.  
+  
+ Para contornar esse problema, defina o contexto de segurança usando <xref:System.Messaging.Message.SecurityContext%2A> antes de enviar uma mensagem para uma fila remota para assegurar que credenciais do usuário atual são usadas para acessar a fila. No entanto, é a prática recomendada sugerida:  
+  
+1.  Verifique a fila de uma fila autenticada.  
+  
+2.  Execute o aplicativo ASP.NET como uma identidade de domínio e autorizar esse aplicativo para gravar na fila.  
+  
+3.  Não represente o usuário ao usar a fila. Em vez disso, obtenha a identidade do chamador e executar a verificação no aplicativo ASP.NET de autorização ou incluir a identidade do chamador como parte da mensagem e executar a verificação do aplicativo receptor de autorização.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.SecurityContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Messaging.SecurityContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

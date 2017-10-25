@@ -1,0 +1,25 @@
+<Type Name="SpeakCompletedEventArgs" FullName="System.Speech.Synthesis.SpeakCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class SpeakCompletedEventArgs : System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpeakCompletedEventArgs extends System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.SpeakCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Synthesis.PromptEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Retorna a notificação do evento <see cref="E:System.Speech.Synthesis.SpeechSynthesizer.SpeakCompleted" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.SpeakCompletedEventArgs> classe não tem propriedades e não retorna dados a partir de <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakCompleted> eventos. Ele é fornecido para habilitar os autores de aplicativos escrever manipuladores de eventos para o <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakCompleted> evento. O <xref:System.Speech.Synthesis.SpeechSynthesizer> gera o <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakCompleted> evento após a conclusão de qualquer um do <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakAsync%2A> ou <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsmlAsync%2A> métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

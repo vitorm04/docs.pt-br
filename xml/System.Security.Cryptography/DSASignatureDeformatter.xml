@@ -1,0 +1,229 @@
+<Type Name="DSASignatureDeformatter" FullName="System.Security.Cryptography.DSASignatureDeformatter">
+  <TypeSignature Language="C#" Value="public class DSASignatureDeformatter : System.Security.Cryptography.AsymmetricSignatureDeformatter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DSASignatureDeformatter extends System.Security.Cryptography.AsymmetricSignatureDeformatter" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.DSASignatureDeformatter" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.AsymmetricSignatureDeformatter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Verifica um algoritmo de Assinatura Digital (<see cref="T:System.Security.Cryptography.DSA" />) PKCS #1 v 1.5 assinatura.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CPP/sample.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CS/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DSASignatureDeformatter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSASignatureDeformatter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.DSASignatureDeformatter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CPP/sample.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CS/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DSASignatureDeformatter (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSASignatureDeformatter.#ctor(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A instância do algoritmo de Assinatura Digital (<see cref="T:System.Security.Cryptography.DSA" />) que contém a chave.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.DSASignatureDeformatter" /> com a chave especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHashAlgorithm">
+      <MemberSignature Language="C#" Value="public override void SetHashAlgorithm (string strName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetHashAlgorithm(string strName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSASignatureDeformatter.SetHashAlgorithm(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strName">O nome do algoritmo de hash a ser usado para o desformatador de assinatura.</param>
+        <summary>Especifica o algoritmo de hash para o algoritmo de Assinatura Digital (<see cref="T:System.Security.Cryptography.DSA" />) desformatador de assinatura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CPP/sample.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CS/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">O <paramref name="strName" /> parâmetro não é mapeado para o <see cref="T:System.Security.Cryptography.SHA1" /> algoritmo de hash.</exception>
+        <block subset="none" type="overrides">
+          <para>Esse método não é usado. O <see cref="T:System.Security.Cryptography.DSA" /> algoritmo exige o <see cref="T:System.Security.Cryptography.SHA1" /> algoritmo de hash.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public override void SetKey (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetKey(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSASignatureDeformatter.SetKey(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A instância de <see cref="T:System.Security.Cryptography.DSA" /> que contém a chave.</param>
+        <summary>Especifica a chave a ser usado para o algoritmo de Assinatura Digital (<see cref="T:System.Security.Cryptography.DSA" />) desformatador de assinatura.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifySignature">
+      <MemberSignature Language="C#" Value="public override bool VerifySignature (byte[] rgbHash, byte[] rgbSignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool VerifySignature(unsigned int8[] rgbHash, unsigned int8[] rgbSignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.DSASignatureDeformatter.VerifySignature(System.Byte[],System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgbHash" Type="System.Byte[]" />
+        <Parameter Name="rgbSignature" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rgbHash">Os dados assinados com <c>rgbSignature</c>.</param>
+        <param name="rgbSignature">A assinatura a ser verificado para <c>rgbHash</c>.</param>
+        <summary>Verifica o algoritmo de Assinatura Digital (<see cref="T:System.Security.Cryptography.DSA" />) assinatura nos dados.</summary>
+        <returns>
+          <see langword="true" />Se a assinatura é válida para os dados. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CPP/sample.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/CS/sample.cs#1)]
+ [!code-vb[System.Security.Cryptography.DSASignatureDeformatter#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.DSASignatureDeformatter/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="rgbHash" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="rgbSignature" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">A chave DSA está ausente.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

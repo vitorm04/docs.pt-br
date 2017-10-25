@@ -1,0 +1,77 @@
+<Type Name="INormalizeForIsolatedStorage" FullName="System.IO.IsolatedStorage.INormalizeForIsolatedStorage">
+  <TypeSignature Language="C#" Value="public interface INormalizeForIsolatedStorage" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INormalizeForIsolatedStorage" />
+  <TypeSignature Language="DocId" Value="T:System.IO.IsolatedStorage.INormalizeForIsolatedStorage" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as comparações entre um armazenamento isolado e um domínio de aplicativo e evidência do assembly.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Armazenamento isolado usa a evidência sobre um assembly para identificá-lo e fornecê-la com um local de armazenamento de arquivo exclusivo. Quando um assembly solicita um repositório, seu evidência (conforme apresentado pelo host que carregou) é processada e comparada com a evidência usada para criar os repositórios existentes. Isso determina se você precisa criar um novo repositório ou se já existir para o assembly em questão. Devido à técnica de comparação usada, partes de evidência são funcionalmente equivalentes não podem resultar em uma comparação true se os formulários serializados não são idênticos. Ao implementar a evidência personalizada, considere se esse for o caso para sua classe de evidência e, nesse caso, implementar <xref:System.IO.IsolatedStorage.INormalizeForIsolatedStorage>. Para obter evidências de que implementa essa interface, o <xref:System.IO.IsolatedStorage.INormalizeForIsolatedStorage.Normalize%2A> método é chamado e comparações são baseadas na cópia do objeto retornado pelo método normalizada.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Implemente esta interface quando você estiver implementando evidência personalizada e precisa determinar se um repositório já existe. Objetos serializados não devem ser usados para comparações em alguns casos, como cadeias de caracteres de maiusculas e minúsculas. Por exemplo, www.MSN.com é igual a WWW.msn.com e retornará um <see langword="true" /> quando comparados. Para criar um <see cref="T:System.IO.IsolatedStorage.INormalizeForIsolatedStorage" /> do objeto, você precisa implementar o <see cref="M:System.IO.IsolatedStorage.INormalizeForIsolatedStorage.Normalize" /> método.</para>
+    </block>
+    <block subset="none" type="usage">
+      <para>Chame os métodos dessa interface para normalizar a instância antes de fazer comparações entre evidência de um assembly e atualmente existente armazenamentos isolados.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public object Normalize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Normalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.IsolatedStorage.INormalizeForIsolatedStorage.Normalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.IsolatedStorage</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna uma cópia normalizada do objeto no qual ele é chamado.</summary>
+        <returns>Um objeto normalizado que representa a instância em que esse método foi chamado. Esta instância pode ser uma cadeia de caracteres, fluxo ou qualquer objeto serializável.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você substituir esse método e o objeto retornado é um fluxo, ele deve ser serializado e é comparado diretamente para o formato serializado da evidência usado para criar repositórios existentes. Se o objeto retornado será uma cadeia de caracteres, ele é considerado o nome de um armazenamento isolado e em comparação com os nomes dos repositórios de existente.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Normalmente, você chamar este método se você estiver escrevendo uma classe derivada de armazenamento isolado e você precisa verificar se o armazenamento isolado já existe para o assembly atual.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,688 @@
+<Type Name="XmlSchemaType" FullName="System.Xml.Schema.XmlSchemaType">
+  <TypeSignature Language="C#" Value="public class XmlSchemaType : System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSchemaType extends System.Xml.Schema.XmlSchemaAnnotated" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSchemaType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Schema.XmlSchemaAnnotated</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe base para todos os tipos simples e tipos complexos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Consulte o <xref:System.Xml.Schema.XmlSchemaSimpleType> classe e o <xref:System.Xml.Schema.XmlSchemaComplexType> classe para um exemplo de uso dessa classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSchemaType ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaType.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Schema.XmlSchemaType" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSchemaType">
+      <MemberSignature Language="C#" Value="public object BaseSchemaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object BaseSchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.BaseSchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property has been deprecated. Please use BaseXmlSchemaType property that returns a strongly typed base schema type. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de objeto de pós-compilação ou o tipo de dados interno do idioma de definição de esquema XML (XSD), elemento simpleType ou complexType elemento. Esta é uma propriedade de post-schema-compilação infoset.</summary>
+        <value>O tipo de dados XSD interno, elemento simpleType ou complexType elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O complexType é derivado do tipo especificado pelo valor de base. O valor base deve ser um QName.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Xml.Schema.XmlSchemaType.BaseSchemaType%2A> propriedade está obsoleta e foi substituída pelo <xref:System.Xml.Schema.XmlSchemaType.BaseXmlSchemaType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseXmlSchemaType">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaType BaseXmlSchemaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaType BaseXmlSchemaType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.BaseXmlSchemaType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de pós-compilação para o tipo base deste tipo de esquema.</summary>
+        <value>Um <see cref="T:System.Xml.Schema.XmlSchemaType" /> objeto que representa o tipo base deste tipo de esquema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Schema.XmlSchemaType.BaseXmlSchemaType%2A> propriedade sempre tem um valor, porque todos os tipos de esquema tem um tipo base. Esse valor é definido na compilação de esquema, tornando-a como uma parte do infoset post-schema-compilação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Datatype">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDatatype Datatype { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Schema.XmlSchemaDatatype Datatype" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.Datatype" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDatatype</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de pós-compilação para o tipo de dados do tipo complexo.</summary>
+        <value>O <see cref="T:System.Xml.Schema.XmlSchemaDatatype" /> valor post-schema-compilação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DerivedBy">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod DerivedBy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod DerivedBy" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.DerivedBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações de pós-compilação em como esse elemento foi derivado de seu tipo base.</summary>
+        <value>Um dos válidos <see cref="T:System.Xml.Schema.XmlSchemaDerivationMethod" /> valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores que essa propriedade pode conter.  
+  
+|Valor <xref:System.Xml.Schema.XmlSchemaDerivationMethod>|Descrição|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.None>|Nenhum método de derivação especificado.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Substitution>|Proveniente da substituição.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Extension>|Derivado por extensão.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Restriction>|Derivados por restrição.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.List>|Proveniente da lista.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Union>|Derivado por união.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Final">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod Final { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod Final" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.Final" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("final")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atributo final da derivação de tipo que indica se mais derivações são permitidas.</summary>
+        <value>Um dos válidos <see cref="T:System.Xml.Schema.XmlSchemaDerivationMethod" /> valores. O padrão é <see cref="F:System.Xml.Schema.XmlSchemaDerivationMethod.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores que essa propriedade pode conter para tipo simples.  
+  
+|Valor <xref:System.Xml.Schema.XmlSchemaDerivationMethod>|Descrição|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Empty>|Substitui o esquema `blockDefault` configuração Permitir qualquer derivações por restrição, extensão ou substituição ocorra.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.None>|Nenhum método de derivação é especificado. Esse é o padrão. Regras de derivação são tiradas da configuração de blockDefault do esquema.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Substitution>|Não pode ser substituído por um tipo derivado de substituição.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Extension>|Não pode ser substituído por um tipo derivado por extensão.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Restriction>|Não pode ser substituído por um tipo derivado por restrição.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.All>|`#all`. Não pode ser substituído por um tipo derivado por qualquer método de derivação.|  
+  
+ A tabela a seguir mostra os valores que essa propriedade pode conter para tipo complexo.  
+  
+|Valor <xref:System.Xml.Schema.XmlSchemaDerivationMethod>|Descrição|  
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Empty>|Substitui o esquema `blockDefault` configuração Permitir qualquer derivações por restrição, extensão ou substituição ocorra.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.None>|Nenhum método de derivação é especificado. Esse é o padrão. Regras de derivação são obtidas de esquema `blockDefault` configuração.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Substitution>|Não pode ser substituído por um tipo derivado de substituição.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Extension>|Não pode ser substituído por um tipo derivado por extensão.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.Restriction>|Não pode ser substituído por um tipo derivado por restrição.|  
+|<xref:System.Xml.Schema.XmlSchemaDerivationMethod.All>|`#all`. Não pode ser substituído por um tipo derivado por qualquer método de derivação.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinalResolved">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlSchemaDerivationMethod FinalResolved { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlSchemaDerivationMethod FinalResolved" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.FinalResolved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaDerivationMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de pós-compilação do <see cref="P:System.Xml.Schema.XmlSchemaType.Final" /> propriedade.</summary>
+        <value>O valor de pós-compilação do <see cref="P:System.Xml.Schema.XmlSchemaType.Final" /> propriedade. O padrão é o <see langword="finalDefault" /> valor de atributo de <see langword="schema" /> elemento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor indica como o tipo é restrito quando o tipo é estendido por meio de restrição. Se o tipo está marcado como `final`, esse tipo não pode ser estendido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBuiltInComplexType">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlSchemaComplexType GetBuiltInComplexType (System.Xml.Schema.XmlTypeCode typeCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlSchemaComplexType GetBuiltInComplexType(valuetype System.Xml.Schema.XmlTypeCode typeCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaType.GetBuiltInComplexType(System.Xml.Schema.XmlTypeCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaComplexType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeCode" Type="System.Xml.Schema.XmlTypeCode" />
+      </Parameters>
+      <Docs>
+        <param name="typeCode">Uma da <see cref="T:System.Xml.Schema.XmlTypeCode" /> valores que representam o tipo complexo.</param>
+        <summary>Retorna um <see cref="T:System.Xml.Schema.XmlSchemaComplexType" /> que representa o tipo complexo interna do tipo complexo especificado.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlSchemaComplexType" /> que representa o tipo complexo interno.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBuiltInComplexType">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlSchemaComplexType GetBuiltInComplexType (System.Xml.XmlQualifiedName qualifiedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlSchemaComplexType GetBuiltInComplexType(class System.Xml.XmlQualifiedName qualifiedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaType.GetBuiltInComplexType(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaComplexType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifiedName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedName">O <see cref="T:System.Xml.XmlQualifiedName" /> do tipo complexo.</param>
+        <summary>Retorna um <see cref="T:System.Xml.Schema.XmlSchemaComplexType" /> que representa o tipo complexo interna do tipo complexo especificado pelo nome qualificado.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlSchemaComplexType" /> que representa o tipo complexo interno.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <see cref="T:System.Xml.XmlQualifiedName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBuiltInSimpleType">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlSchemaSimpleType GetBuiltInSimpleType (System.Xml.Schema.XmlTypeCode typeCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlSchemaSimpleType GetBuiltInSimpleType(valuetype System.Xml.Schema.XmlTypeCode typeCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaType.GetBuiltInSimpleType(System.Xml.Schema.XmlTypeCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeCode" Type="System.Xml.Schema.XmlTypeCode" />
+      </Parameters>
+      <Docs>
+        <param name="typeCode">Uma da <see cref="T:System.Xml.Schema.XmlTypeCode" /> valores que representam o tipo simples.</param>
+        <summary>Retorna um <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> que representa o tipo simple interno do tipo simple especificado.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> que representa o tipo simple interno.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diretamente, você não é possível serializar o tipo interno. Se você precisa serializar o tipo, criar um novo tipo simple que deriva do tipo interno e serializar o tipo simples.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o tipo e adicioná-lo para o esquema.  
+  
+ [!code-csharp[XmlSchemaType#1](~/samples/snippets/csharp/VS_Snippets_Data/xmlschematype/cs/xmlschematype.cs#1)]
+ [!code-vb[XmlSchemaType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/xmlschematype/vb/getbuiltinsimpletype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBuiltInSimpleType">
+      <MemberSignature Language="C#" Value="public static System.Xml.Schema.XmlSchemaSimpleType GetBuiltInSimpleType (System.Xml.XmlQualifiedName qualifiedName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Schema.XmlSchemaSimpleType GetBuiltInSimpleType(class System.Xml.XmlQualifiedName qualifiedName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaType.GetBuiltInSimpleType(System.Xml.XmlQualifiedName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchemaSimpleType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="qualifiedName" Type="System.Xml.XmlQualifiedName" />
+      </Parameters>
+      <Docs>
+        <param name="qualifiedName">O <see cref="T:System.Xml.XmlQualifiedName" /> do tipo simples.</param>
+        <summary>Retorna um <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> que representa o tipo simple interno do tipo simples que é especificado pelo nome qualificado.</summary>
+        <returns>O <see cref="T:System.Xml.Schema.XmlSchemaSimpleType" /> que representa o tipo simple interno.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diretamente, você não é possível serializar o tipo interno. Se você precisa serializar o tipo, criar um novo tipo simple que deriva do tipo interno e serializar o tipo simples.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o tipo e adicioná-lo para o esquema.  
+  
+ [!code-csharp[XmlSchemaType#1](~/samples/snippets/csharp/VS_Snippets_Data/xmlschematype/cs/xmlschematype.cs#1)]
+ [!code-vb[XmlSchemaType#1](~/samples/snippets/visualbasic/VS_Snippets_Data/xmlschematype/vb/getbuiltinsimpletype.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <see cref="T:System.Xml.XmlQualifiedName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDerivedFrom">
+      <MemberSignature Language="C#" Value="public static bool IsDerivedFrom (System.Xml.Schema.XmlSchemaType derivedType, System.Xml.Schema.XmlSchemaType baseType, System.Xml.Schema.XmlSchemaDerivationMethod except);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsDerivedFrom(class System.Xml.Schema.XmlSchemaType derivedType, class System.Xml.Schema.XmlSchemaType baseType, valuetype System.Xml.Schema.XmlSchemaDerivationMethod except) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Schema.XmlSchemaType.IsDerivedFrom(System.Xml.Schema.XmlSchemaType,System.Xml.Schema.XmlSchemaType,System.Xml.Schema.XmlSchemaDerivationMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="derivedType" Type="System.Xml.Schema.XmlSchemaType" />
+        <Parameter Name="baseType" Type="System.Xml.Schema.XmlSchemaType" />
+        <Parameter Name="except" Type="System.Xml.Schema.XmlSchemaDerivationMethod" />
+      </Parameters>
+      <Docs>
+        <param name="derivedType">Derivada <see cref="T:System.Xml.Schema.XmlSchemaType" /> para testar.</param>
+        <param name="baseType">A base de <see cref="T:System.Xml.Schema.XmlSchemaType" /> para testar derivada <see cref="T:System.Xml.Schema.XmlSchemaType" /> contra.</param>
+        <param name="except">Uma da <see cref="T:System.Xml.Schema.XmlSchemaDerivationMethod" /> valores que representam um método de derivação de tipo a ser excluído do teste.</param>
+        <summary>Retorna um valor que indica se o tipo de esquema derivada especificado é derivado do tipo de esquema de base especificado</summary>
+        <returns>
+          <see langword="true" />Se o tipo derivado é derivado do tipo base; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A seguir está um exemplo de como o <xref:System.Xml.Schema.XmlSchemaType.IsDerivedFrom%2A> método.  
+  
+```csharp  
+XmlSchemaType xsdInteger = XmlSchemaType.GetBuiltInSimpleType(XmlTypeCode.Integer);  
+XmlSchemaType xsdPositiveInteger = XmlSchemaType.GetBuiltInSimpleType(XmlTypeCode.PositiveInteger);  
+  
+// true  
+Console.WriteLine(XmlSchemaType.IsDerivedFrom(xsdPositiveInteger, xsdInteger, XmlSchemaDerivationMethod.None));  
+  
+// false  
+Console.WriteLine(XmlSchemaType.IsDerivedFrom(xsdPositiveInteger, xsdInteger, XmlSchemaDerivationMethod.Restriction));  
+```  
+  
+```vb  
+Dim xsdInteger As XmlSchemaType = XmlSchemaType.GetBuiltInSimpleType(XmlTypeCode.Integer)  
+Dim xsdPositiveInteger As XmlSchemaType = XmlSchemaType.GetBuiltInSimpleType(XmlTypeCode.PositiveInteger)  
+  
+' True  
+Console.WriteLine(XmlSchemaType.IsDerivedFrom(xsdPositiveInteger, xsdInteger, XmlSchemaDerivationMethod.None))  
+  
+' False  
+Console.WriteLine(XmlSchemaType.IsDerivedFrom(xsdPositiveInteger, xsdInteger, XmlSchemaDerivationMethod.Restriction))  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMixed">
+      <MemberSignature Language="C#" Value="public virtual bool IsMixed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMixed" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.IsMixed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se esse tipo tem um modelo de conteúdo misto. Essa propriedade só é válida em um tipo complexo.</summary>
+        <value>
+          <see langword="true" />Se o tipo tem um modelo de conteúdo misto; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método virtual for substituído em classes derivadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo.</summary>
+        <value>O nome do tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome deve ser um nome de nenhum-dois-pontos (NCName), conforme definido na especificação de Namespaces de XML do World Wide Web Consortium (W3C). Se especificado, o nome deve ser exclusivo entre todos os `simpleType` e `complexType` elementos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QualifiedName">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName QualifiedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName QualifiedName" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.QualifiedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome qualificado para o tipo construído a partir de <see langword="Name" /> atributo desse tipo. Esta é uma propriedade de compilação post-schema.</summary>
+        <value>O <see cref="T:System.Xml.XmlQualifiedName" /> para o tipo construído a partir de <see langword="Name" /> atributo desse tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeCode">
+      <MemberSignature Language="C#" Value="public System.Xml.Schema.XmlTypeCode TypeCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Schema.XmlTypeCode TypeCode" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Schema.XmlSchemaType.TypeCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlTypeCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.Schema.XmlTypeCode" /> do tipo.</summary>
+        <value>Um dos valores de <see cref="T:System.Xml.Schema.XmlTypeCode" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

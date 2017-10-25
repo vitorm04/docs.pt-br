@@ -1,0 +1,549 @@
+<Type Name="MenuCommandService" FullName="System.ComponentModel.Design.MenuCommandService">
+  <TypeSignature Language="C#" Value="public class MenuCommandService : IDisposable, System.ComponentModel.Design.IMenuCommandService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MenuCommandService extends System.Object implements class System.ComponentModel.Design.IMenuCommandService, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.MenuCommandService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IMenuCommandService</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementa o <see cref="T:System.ComponentModel.Design.IMenuCommandService" /> interface.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.MenuCommandService> classe implementa o <xref:System.ComponentModel.Design.IMenuCommandService> interface, que é a interface gerenciada usada para adicionar manipuladores de comandos de menu e para definir os verbos.  
+  
+ O <xref:System.ComponentModel.Design.MenuCommandService> classe automaticamente é oferecida pela classe de pacote para oferecer comandos globais para um pacote inteiro, e também é oferecido pelo `Microsoft.VisualStudio.Shell.WindowPane` classe oferecer comandos para a janela atual. Esta oferta sempre é feita por meio do contêiner de serviço, portanto qualquer pessoa derivando de pacote ou classes de painel de janela podem remover ou substituir a implementação padrão da <xref:System.ComponentModel.Design.IMenuCommandService> interface.  
+  
+ O <xref:System.ComponentModel.Design.MenuCommandService> classe utiliza vários outros serviços. Todos esses serviços são opcionais, portanto, o comportamento do <xref:System.ComponentModel.Design.MenuCommandService> classe afeta se um ou mais serviços não estão presentes. A tabela a seguir mostra quais serviços são usados e para cada finalidade.  
+  
+|Serviço|Finalidade|  
+|-------------|-------------|  
+|<xref:System.ComponentModel.Design.ISelectionService>|Usado para descobrir a seleção atual para obter os verbos oferecidos pelo designer selecionado no momento.|  
+|<xref:System.ComponentModel.Design.IDesignerHost>|Usado para obter o designer do componente selecionado no momento, se houver.|  
+|`Microsoft.VisualStudio.Shell.Interop.IVsUIShell`|Usado para notificar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] que o status do comando foi alterado.|  
+|`Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager`|Usado para mostrar os menus de contexto.|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuCommandService (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">O provedor de serviço que usa esse serviço para obter outros serviços.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.MenuCommandService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o serviço está sendo usado com um designer, o `serviceProvider` parâmetro deve ser o provedor de serviços para o designer, como é o caso com <xref:System.ComponentModel.Design.DesignSurface>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public virtual void AddCommand (System.ComponentModel.Design.MenuCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddCommand(class System.ComponentModel.Design.MenuCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.AddCommand(System.ComponentModel.Design.MenuCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.ComponentModel.Design.MenuCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">O <see cref="T:System.ComponentModel.Design.MenuCommand" /> a ser adicionado.</param>
+        <summary>Adiciona um manipulador de comandos para o serviço de comando de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.MenuCommandService.AddCommand%2A> método adiciona um manipulador de comandos para o serviço de comando de menu. Manipuladores de comandos não definem o texto, o atalho ou a colocação de um item de menu. Em vez disso, eles definem o comportamento do item de menu se o item é clicado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="command" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um manipulador de comandos <paramref name="command" /> já existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVerb">
+      <MemberSignature Language="C#" Value="public virtual void AddVerb (System.ComponentModel.Design.DesignerVerb verb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddVerb(class System.ComponentModel.Design.DesignerVerb verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.AddVerb(System.ComponentModel.Design.DesignerVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.ComponentModel.Design.DesignerVerb" />
+      </Parameters>
+      <Docs>
+        <param name="verb">O <see cref="T:System.ComponentModel.Design.DesignerVerb" /> a ser adicionado.</param>
+        <summary>Adiciona um verbo à tabela de verbo a <see cref="T:System.ComponentModel.Design.MenuCommandService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este verbo está disponível, independentemente de qual designer está selecionado no momento. Diferentemente dos comandos de menu, verbos podem definir o texto que é exibido para o usuário, mas eles não definem o posicionamento do comando no menu real.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="verb" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.ComponentModel.Design.MenuCommandService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.ComponentModel.Design.MenuCommandService.Dispose%2A> quando tiver terminado de usar o <xref:System.ComponentModel.Design.MenuCommandService>. O <xref:System.ComponentModel.Design.MenuCommandService.Dispose%2A> método deixa o <xref:System.ComponentModel.Design.MenuCommandService> em um estado inutilizável. Depois de chamar <xref:System.ComponentModel.Design.MenuCommandService.Dispose%2A>, você deve liberar todas as referências para o <xref:System.ComponentModel.Design.MenuCommandService> para o coletor de lixo possa recuperar a memória que o <xref:System.ComponentModel.Design.MenuCommandService> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.ComponentModel.Design.MenuCommandService.Dispose%2A> antes de liberar sua última referência para o <xref:System.ComponentModel.Design.MenuCommandService>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.ComponentModel.Design.MenuCommandService> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.ComponentModel.Design.MenuCommandService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.ComponentModel.Design.MenuCommandService> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureVerbs">
+      <MemberSignature Language="C#" Value="protected void EnsureVerbs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EnsureVerbs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.EnsureVerbs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Garante que a lista de verbos foi criada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.MenuCommandService.EnsureVerbs%2A> método cria a lista de verbos se ele já não tiver sido criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindCommand">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.MenuCommand FindCommand (System.ComponentModel.Design.CommandID commandID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.MenuCommand FindCommand(class System.ComponentModel.Design.CommandID commandID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.FindCommand(System.ComponentModel.Design.CommandID)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.MenuCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandID" Type="System.ComponentModel.Design.CommandID" />
+      </Parameters>
+      <Docs>
+        <param name="commandID">O <see cref="T:System.ComponentModel.Design.CommandID" /> para localizar.</param>
+        <summary>Procura o <see cref="T:System.ComponentModel.Design.MenuCommand" /> associado com a ID de comando especificada.</summary>
+        <returns>O <see cref="T:System.ComponentModel.Design.MenuCommand" /> associado com o comando fornecido; caso contrário, <see langword="null" /> se o comando não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindCommand">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.Design.MenuCommand FindCommand (Guid guid, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.ComponentModel.Design.MenuCommand FindCommand(valuetype System.Guid guid, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.FindCommand(System.Guid,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.MenuCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="guid">O GUID do comando.</param>
+        <param name="id">A ID do comando.</param>
+        <summary>Procura o <see cref="T:System.ComponentModel.Design.MenuCommand" /> associado com o comando fornecido.</summary>
+        <returns>O <see cref="T:System.ComponentModel.Design.MenuCommand" /> associado com o comando fornecido; caso contrário, <see langword="null" /> se o comando não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommandList">
+      <MemberSignature Language="C#" Value="protected System.Collections.ICollection GetCommandList (Guid guid);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Collections.ICollection GetCommandList(valuetype System.Guid guid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.GetCommandList(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="guid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="guid">O GUID da lista de comando.</param>
+        <summary>Obtém a lista de comandos para um GUID específico.</summary>
+        <returns>Um <see cref="T:System.Collections.ICollection" /> de comandos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O <see cref="T:System.Type" /> do serviço a ser recuperado.</param>
+        <summary>Obtém uma referência para o serviço solicitado.</summary>
+        <returns>Uma referência a <paramref name="serviceType" />; caso contrário, <see langword="null" /> se o serviço não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalInvoke">
+      <MemberSignature Language="C#" Value="public virtual bool GlobalInvoke (System.ComponentModel.Design.CommandID commandID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GlobalInvoke(class System.ComponentModel.Design.CommandID commandID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.GlobalInvoke(System.ComponentModel.Design.CommandID)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandID" Type="System.ComponentModel.Design.CommandID" />
+      </Parameters>
+      <Docs>
+        <param name="commandID">O comando a ser invocado.</param>
+        <summary>Invoca o comando fornecido no formulário local ou no ambiente global.</summary>
+        <returns>
+          <see langword="true" />, se o comando foi encontrado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formulário local é pesquisado pela primeira vez para a ID de comando especificada. Se for encontrado, ele é invocado. Caso contrário, a ID de comando é passada para o manipulador de comando de ambiente global, se houver um disponível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalInvoke">
+      <MemberSignature Language="C#" Value="public virtual bool GlobalInvoke (System.ComponentModel.Design.CommandID commandId, object arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GlobalInvoke(class System.ComponentModel.Design.CommandID commandId, object arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.GlobalInvoke(System.ComponentModel.Design.CommandID,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandId" Type="System.ComponentModel.Design.CommandID" />
+        <Parameter Name="arg" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="commandId">O comando a ser invocado.</param>
+        <param name="arg">Um parâmetro para a chamada.</param>
+        <summary>Invoca o comando fornecido com o parâmetro especificado no formulário local ou no ambiente global.</summary>
+        <returns>
+          <see langword="true" />, se o comando foi encontrado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O formulário local é pesquisado pela primeira vez para a ID de comando especificada. Se for encontrado, ele é invocado. Caso contrário, a ID de comando é passada para o manipulador de comando de ambiente global, se houver um disponível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuCommandsChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.MenuCommandsChangedEventHandler MenuCommandsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.MenuCommandsChangedEventHandler MenuCommandsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.MenuCommandService.MenuCommandsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.MenuCommandsChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o status de um comando de menu é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCommandsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnCommandsChanged (System.ComponentModel.Design.MenuCommandsChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCommandsChanged(class System.ComponentModel.Design.MenuCommandsChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.OnCommandsChanged(System.ComponentModel.Design.MenuCommandsChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.Design.MenuCommandsChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.Design.MenuCommandsChangedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.ComponentModel.Design.MenuCommandService.MenuCommandsChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.MenuCommandService.OnCommandsChanged%2A> método é chamado por um comando de menu quando seu status é alterado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.ComponentModel.Design.MenuCommandService.OnCommandsChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.ComponentModel.Design.MenuCommandService.OnCommandsChanged(System.ComponentModel.Design.MenuCommandsChangedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.ComponentModel.Design.MenuCommandService.OnCommandsChanged(System.ComponentModel.Design.MenuCommandsChangedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCommand">
+      <MemberSignature Language="C#" Value="public virtual void RemoveCommand (System.ComponentModel.Design.MenuCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveCommand(class System.ComponentModel.Design.MenuCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.RemoveCommand(System.ComponentModel.Design.MenuCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.ComponentModel.Design.MenuCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando para remover.</param>
+        <summary>Remove o comando de menu especificado do documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se não houver nenhum outro comando no grupo de comando, o grupo é removido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="command" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveVerb">
+      <MemberSignature Language="C#" Value="public virtual void RemoveVerb (System.ComponentModel.Design.DesignerVerb verb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveVerb(class System.ComponentModel.Design.DesignerVerb verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.RemoveVerb(System.ComponentModel.Design.DesignerVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.ComponentModel.Design.DesignerVerb" />
+      </Parameters>
+      <Docs>
+        <param name="verb">O verbo a ser removido.</param>
+        <summary>Remove o verbo especificado do documento.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="verb" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowContextMenu">
+      <MemberSignature Language="C#" Value="public virtual void ShowContextMenu (System.ComponentModel.Design.CommandID menuID, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowContextMenu(class System.ComponentModel.Design.CommandID menuID, int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.MenuCommandService.ShowContextMenu(System.ComponentModel.Design.CommandID,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="menuID" Type="System.ComponentModel.Design.CommandID" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="menuID">O menu de atalho para exibir.</param>
+        <param name="x">A coordenada x do local do menu de atalho.</param>
+        <param name="y">A coordenada y do local do menu de atalho.</param>
+        <summary>Mostra o menu de atalho com a ID de comando especificado no local especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.Design.DesignerVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.MenuCommandService.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos verbos do designer que estão disponíveis no momento.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.DesignerVerbCollection" /> dos verbos do designer que estão disponíveis no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.MenuCommandService.Verbs%2A> propriedade fornece um conjunto de verbos. Esses verbos vir de dois locais:  
+  
+-   Verbos adicionados por meio de <xref:System.ComponentModel.Design.MenuCommandService.AddVerb%2A> método <xref:System.ComponentModel.Design.MenuCommandService.Verbs%2A>.  
+  
+-   Verbos oferecidos pelo designer selecionado no momento.  
+  
+ Verbos adicionados para esse serviço por meio de <xref:System.ComponentModel.Design.MenuCommandService.AddVerb%2A> método são chamados de verbos global porque eles são globais para esse serviço, mas geralmente há uma instância desse serviço para cada janela de ferramenta ou documento. Verbos do Designer são obtidos consultando o provedor de serviços para <xref:System.ComponentModel.Design.IDesignerHost> e <xref:System.ComponentModel.Design.ISelectionService>. Se o serviço de seleção oferece uma seleção principal e um designer pode ser obtido para seleção de <xref:System.ComponentModel.Design.IDesignerHost>, verbos do designer são adicionados a essa lista. Se o nome de um verbo global está em conflito com o nome de um verbo do designer, o verbo do designer fornecida pelo designer terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

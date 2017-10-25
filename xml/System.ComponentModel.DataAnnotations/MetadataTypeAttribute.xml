@@ -1,0 +1,108 @@
+<Type Name="MetadataTypeAttribute" FullName="System.ComponentModel.DataAnnotations.MetadataTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MetadataTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MetadataTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.MetadataTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a classe de metadados para associar a uma classe de modelo de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> atributo permite que você associe uma classe com uma classe parcial de modelo de dados. Essa classe associada, você fornece as informações de metadados adicionais que não estão no modelo de dados.  
+  
+ Por exemplo, na classe associada você pode aplicar o <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> de atributo para um campo de dados. Isso impõe que um valor é fornecido para o campo, mesmo se essa restrição não for necessária para o esquema de banco de dados.  
+  
+ Você usa o <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> atributo da seguinte maneira:  
+  
+-   Em seu aplicativo, crie um arquivo no qual você cria a classe parcial de modelo de dados que você deseja modificar.  
+  
+-   Crie a classe de metadados associados.  
+  
+-   Aplicar o <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> de atributo para a classe da entidade parcial, especificando a classe associada.  
+  
+ Quando você aplica esse atributo, você deve cumprir as seguintes restrições de uso:  
+  
+-   O atributo só pode ser aplicado a uma classe.  
+  
+-   O atributo não pode ser herdado por classes derivadas.  
+  
+-   O atributo pode ser aplicado a apenas uma vez.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> para associar uma classe de metadados de uma classe parcial de entidade. O exemplo aplica o <xref:System.ComponentModel.DataAnnotations.RequiredAttribute> de atributo para um campo de dados para mostrar como fornecer informações adicionais na classe de metadados associados.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/CS/Customer.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/VB/Customer.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MetadataTypeAttribute (Type metadataClassType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type metadataClassType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.MetadataTypeAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadataClassType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="metadataClassType">A classe de metadados a ser referenciada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DataAnnotations.MetadataTypeAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ComponentModel.DataAnnotations.MetadataTypeAttribute> para associar uma classe de metadados de uma classe parcial de entidade.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/CS/Customer.cs#2)]
+ [!code-vb[System.ComponentModel.DataAnnotations.MetadataTypeAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.MetadataTypeAttribute/VB/Customer.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="metadataClassType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataClassType">
+      <MemberSignature Language="C#" Value="public Type MetadataClassType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type MetadataClassType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.MetadataTypeAttribute.MetadataClassType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a classe de metadados que está associada uma classe parcial de modelo de dados.</summary>
+        <value>O valor do tipo que representa a classe de metadados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

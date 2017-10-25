@@ -1,0 +1,108 @@
+<Type Name="QueryInterceptorAttribute" FullName="System.Data.Services.QueryInterceptorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class QueryInterceptorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QueryInterceptorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.QueryInterceptorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see cref="T:System.Data.Services.QueryInterceptorAttribute" /> em um método anota-lo como um interceptador de consulta no conjunto de entidades especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Autorização em nível de conjunto de entidade e a validação é implementado pelos métodos anotados com o <xref:System.Data.Services.QueryInterceptorAttribute>. [!INCLUDE[ssAstoria](~/includes/ssastoria-md.md)]s não implementar políticas de segurança mas de fornecer a infraestrutura necessária para desenvolvedores de serviço escrever suas próprias regras de segurança e a validação de negócios.  
+  
+ Controle de acesso do conjunto de entidades e a validação está habilitada por meio de operações de consulta usando a composição de consulta. Para controlar o acesso com base em entidade, implemente uma método-por-entidade definida de acordo com as regras a seguir:  
+  
+ O método deve possuir um escopo público e ser anotado com a <xref:System.Data.Services.QueryInterceptorAttribute>, levando o nome de uma entidade definida como um parâmetro.  
+  
+ O método deve aceitar sem parâmetros.  
+  
+ O método deve retornar uma expressão do tipo `Expression<Func<T, bool>>` que é o filtro a ser composto para o conjunto de entidades.  
+  
+   
+  
+## Examples  
+ Os seguintes controles de exemplo de acesso para o `Customers` conjunto de entidades. Cada `Customer` só poderá ver `Orders` associados a esse `Customer`.  
+  
+```  
+[QueryInterceptor("Orders")]  
+public Expression<Func<Order, bool>> FilterOrders()   
+{  
+    return o => o.Customer.Name == /* Current principal name. */;  
+}   
+  
+// Insures that the user accessing the customer(s) has the appropriate  
+// rights as defined in the QueryRules object to access the customer  
+// resource(s).  
+  
+[QueryInterceptor ("Customers")]  
+public Expression<Func<Customer, bool>> FilterCustomers()   
+{  
+  return c => c.Name == /* Current principal name. */ &&  
+              this.CurrentDataSource.QueryRules.Contains(  
+                rule => rule.Name == c.Name &&  
+                        rule.CustomerAllowedToQuery == true  
+              );  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryInterceptorAttribute (string entitySetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string entitySetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.QueryInterceptorAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">O nome do conjunto de entidade que contém a entidade à qual se aplica o interceptador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.Services.QueryInterceptorAttribute" /> classe para o conjunto especificada de entidades de <paramref name="entitySetName" /> parâmetro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntitySetName">
+      <MemberSignature Language="C#" Value="public string EntitySetName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.QueryInterceptorAttribute.EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do conjunto de entidade que contém a entidade à qual se aplica o interceptador.</summary>
+        <value>Uma cadeia de caracteres que indica o nome do conjunto de entidade que contém a entidade à qual se aplica o interceptador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

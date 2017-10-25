@@ -1,0 +1,579 @@
+<Type Name="ObjectStateManager" FullName="System.Data.Objects.ObjectStateManager">
+  <TypeSignature Language="C#" Value="public class ObjectStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectStateManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ObjectStateManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Mantém o estado de objeto e o gerenciamento de identidade para instâncias de relação e instâncias de tipo de entidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.ObjectStateManager>rastreia os resultados da consulta e fornece a lógica para mesclar vários resultados de consulta sobrepostos. Ele também executa quando um usuário insere, exclui ou modifica objetos e fornece um conjunto de atualizações de alterações de controle de alterações na memória. Esse conjunto de alterações é usado pelo processador de alteração para manter as modificações.  
+  
+ Essa classe é normalmente usada por <xref:System.Data.Objects.ObjectContext> e não diretamente em aplicativos.  
+  
+   
+  
+## Examples  
+ Estes exemplos se baseiam o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ O exemplo a seguir obtém o <xref:System.Data.Objects.ObjectStateManager> do <xref:System.Data.Objects.ObjectContext> e usa o Gerenciador de estado para acessar um objeto no contexto.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectStateManager](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectstatemanager)]
+ [!code-vb[DP ObjectServices Concepts#ObjectStateManager](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectstatemanager)]  
+  
+ O exemplo a seguir usa o <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%28System.Data.EntityKey%2CSystem.Data.Objects.ObjectStateEntry%40%29> método retornado <xref:System.Data.Objects.ObjectStateManager> para obter um objeto com base em sua chave de entidade.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ApplyItemUpdates](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#applyitemupdates)]
+ [!code-vb[DP ObjectServices Concepts#ApplyItemUpdates](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#applyitemupdates)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectStateManager (System.Data.Metadata.Edm.MetadataWorkspace metadataWorkspace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Metadata.Edm.MetadataWorkspace metadataWorkspace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.#ctor(System.Data.Metadata.Edm.MetadataWorkspace)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="metadataWorkspace" Type="System.Data.Metadata.Edm.MetadataWorkspace" />
+      </Parameters>
+      <Docs>
+        <param name="metadataWorkspace">O <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" />, que fornece informações de mapeamento e de metadados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Objects.ObjectStateManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeObjectState">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectStateEntry ChangeObjectState (object entity, System.Data.EntityState entityState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectStateEntry ChangeObjectState(object entity, valuetype System.Data.EntityState entityState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.ChangeObjectState(System.Object,System.Data.EntityState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectStateEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="entityState" Type="System.Data.EntityState" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O objeto para o qual o estado deve ser alterado.</param>
+        <param name="entityState">O novo estado do objeto.</param>
+        <summary>Altera o estado do <see cref="T:System.Data.Objects.ObjectStateEntry" /> para um objeto específico para o <paramref name="entityState" /> especificado.</summary>
+        <returns>O <see cref="T:System.Data.Objects.ObjectStateEntry" /> para o <paramref name="entity" /> fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Data.Objects.ObjectStateManager.ChangeObjectState%2A> método para alterar o estado de um objeto <xref:System.Data.EntityState.Deleted> não faz com que os objetos relacionados em uma relação restrita a ser excluído.  
+  
+ Alterar o estado de um objeto não afeta os objetos relacionados no gráfico de objeto.  
+  
+ Quando você altera o <xref:System.Data.EntityState> de uma entrada de objeto de entidade para <xref:System.Data.EntityState.Modified>, todas as propriedades do objeto são marcadas como modificada, independentemente dos valores atuais ou originais.  
+  
+ Quando o <xref:System.Data.EntityState> de um objeto de entidade entrada é alterada para <xref:System.Data.EntityState.Added>, <xref:System.Data.EntityState.Deleted>, ou <xref:System.Data.EntityState.Detached>, as entradas de relação para o objeto também são atualizadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Quando <paramref name="entity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Quando o objeto não é desanexado e não tem uma entrada no gerenciador de estado.  
+  
+ -ou-  
+  
+ Quando você tenta alterar o estado para <see cref="F:System.Data.EntityState.Detached" /> de qualquer outro <see cref="T:System.Data.EntityState." />  
+  
+ -ou-  
+  
+ Quando <paramref name="state" /> não é um valor <see cref="T:System.Data.EntityState" /> válido.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="ChangeRelationshipState">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Altera o estado da relação entre dois objetos de entidade especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não tem suporte para relações com base em uma associação de chave estrangeira.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="ChangeRelationshipState">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectStateEntry ChangeRelationshipState (object sourceEntity, object targetEntity, string navigationProperty, System.Data.EntityState relationshipState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectStateEntry ChangeRelationshipState(object sourceEntity, object targetEntity, string navigationProperty, valuetype System.Data.EntityState relationshipState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.ChangeRelationshipState(System.Object,System.Object,System.String,System.Data.EntityState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectStateEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEntity" Type="System.Object" />
+        <Parameter Name="targetEntity" Type="System.Object" />
+        <Parameter Name="navigationProperty" Type="System.String" />
+        <Parameter Name="relationshipState" Type="System.Data.EntityState" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEntity">A instância do objeto ou <see cref="T:System.Data.EntityKey" /> da entidade de origem em uma extremidade da relação.</param>
+        <param name="targetEntity">A instância do objeto ou <see cref="T:System.Data.EntityKey" /> da entidade de destino na outra extremidade da relação.</param>
+        <param name="navigationProperty">O nome da propriedade de navegação em <c>fonte</c> que retorna a <c>destino</c>.</param>
+        <param name="relationshipState">A solicitação <see cref="T:System.Data.EntityState" /> da relação especificada.</param>
+        <summary>Alterações de estado da relação entre dois objetos de entidade especificado com base em dois objetos relacionados e o nome da propriedade de navegação.</summary>
+        <returns>O <see cref="T:System.Data.Objects.ObjectStateEntry" /> para a relação que foi alterada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As entradas para os objetos em ambas as extremidades da relação especificada devem existir no <xref:System.Data.Objects.ObjectStateManager>.  
+  
+> [!NOTE]
+>  Esse método não tem suporte para relações com base em uma associação de chave estrangeira.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Quando <paramref name="source" /> ou <paramref name="target" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Ao tentar alterar o estado da relação para um estado diferente de <see cref="F:System.Data.EntityState.Deleted" /> ou <see cref="F:System.Data.EntityState.Detached" /> quando o <paramref name="source" /> ou <paramref name="target" /> está em um <see cref="F:System.Data.EntityState.Deleted" /> estado.  
+  
+ -ou-  
+  
+ Quando você tenta alterar o estado da relação para um estado diferente de <see cref="F:System.Data.EntityState.Added" /> ou <see cref="F:System.Data.EntityState.Detached" /> quando o <paramref name="source" /> ou <paramref name="target" /> está em um <see cref="F:System.Data.EntityState.Added" /> estado.  
+  
+ -ou-  
+  
+ Quando <paramref name="state" /> não é um valor <see cref="T:System.Data.EntityState" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeRelationshipState">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectStateEntry ChangeRelationshipState (object sourceEntity, object targetEntity, string relationshipName, string targetRoleName, System.Data.EntityState relationshipState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectStateEntry ChangeRelationshipState(object sourceEntity, object targetEntity, string relationshipName, string targetRoleName, valuetype System.Data.EntityState relationshipState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.ChangeRelationshipState(System.Object,System.Object,System.String,System.String,System.Data.EntityState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectStateEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceEntity" Type="System.Object" />
+        <Parameter Name="targetEntity" Type="System.Object" />
+        <Parameter Name="relationshipName" Type="System.String" />
+        <Parameter Name="targetRoleName" Type="System.String" />
+        <Parameter Name="relationshipState" Type="System.Data.EntityState" />
+      </Parameters>
+      <Docs>
+        <param name="sourceEntity">A instância do objeto ou <see cref="T:System.Data.EntityKey" /> da entidade de origem em uma extremidade da relação.</param>
+        <param name="targetEntity">A instância do objeto ou <see cref="T:System.Data.EntityKey" /> da entidade de destino na outra extremidade da relação.</param>
+        <param name="relationshipName">O nome da relação.</param>
+        <param name="targetRoleName">O nome da função no <c>destino</c> end da relação.</param>
+        <param name="relationshipState">A solicitação <see cref="T:System.Data.EntityState" /> da relação especificada.</param>
+        <summary>Alterações do estado da relação entre dois objetos de entidade especificado com base em dois objetos relacionados e as propriedades da relação.</summary>
+        <returns>O <see cref="T:System.Data.Objects.ObjectStateEntry" /> para a relação que foi alterada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As entradas para os objetos em ambas as extremidades da relação especificada devem existir no <xref:System.Data.Objects.ObjectStateManager>.  
+  
+> [!NOTE]
+>  Esse método não tem suporte para relações se baseiam em uma associação de chave estrangeira. Para obter mais informações, consulte [definindo e gerenciar relações](http://msdn.microsoft.com/en-us/2c92c097-56bd-4145-989e-16d92475ecda)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Quando <paramref name="source" /> ou <paramref name="target" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Quando você tenta alterar o estado da relação para um estado diferente de <see cref="F:System.Data.EntityState.Deleted" /> ou <see cref="F:System.Data.EntityState.Detached" /> quando o <paramref name="source" /> ou <paramref name="target" /> está em um <see cref="F:System.Data.EntityState.Deleted" /> estado.  
+  
+ -ou-  
+  
+ Quando você tenta alterar o estado da relação para um estado diferente de <see cref="F:System.Data.EntityState.Added" /> ou <see cref="F:System.Data.EntityState.Detached" /> quando o <paramref name="source" /> ou <paramref name="target" /> está em um <see cref="F:System.Data.EntityState.Added" /> estado.  
+  
+ -ou-  
+  
+ Quando <paramref name="state" /> não é um valor <see cref="T:System.Data.EntityState" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeRelationshipState&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectStateEntry ChangeRelationshipState&lt;TEntity&gt; (TEntity sourceEntity, object targetEntity, System.Linq.Expressions.Expression&lt;Func&lt;TEntity,object&gt;&gt; navigationPropertySelector, System.Data.EntityState relationshipState) where TEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectStateEntry ChangeRelationshipState&lt;class TEntity&gt;(!!TEntity sourceEntity, object targetEntity, class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;!!TEntity, object&gt;&gt; navigationPropertySelector, valuetype System.Data.EntityState relationshipState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.ChangeRelationshipState``1(``0,System.Object,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Data.EntityState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectStateEntry</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="sourceEntity" Type="TEntity" />
+        <Parameter Name="targetEntity" Type="System.Object" />
+        <Parameter Name="navigationPropertySelector" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;TEntity,System.Object&gt;&gt;" />
+        <Parameter Name="relationshipState" Type="System.Data.EntityState" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEntity">O tipo de entidade de <c>fonte</c> objeto.</typeparam>
+        <param name="sourceEntity">A instância do objeto ou <see cref="T:System.Data.EntityKey" /> da entidade de origem em uma extremidade da relação.</param>
+        <param name="targetEntity">A instância do objeto ou <see cref="T:System.Data.EntityKey" /> da entidade de destino na outra extremidade da relação.</param>
+        <param name="navigationPropertySelector">Uma expressão LINQ que seleciona a propriedade de navegação em <c>fonte</c> que retorna a <c>destino</c>.</param>
+        <param name="relationshipState">A solicitação <see cref="T:System.Data.EntityState" /> da relação especificada.</param>
+        <summary>Altera o estado da relação entre dois objetos de entidade especificada com base em dois objetos relacionados e uma expressão LINQ que define a propriedade de navegação.</summary>
+        <returns>O <see cref="T:System.Data.Objects.ObjectStateEntry" /> para a relação que foi alterada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As entradas para os objetos em ambas as extremidades da relação especificada devem existir no <xref:System.Data.Objects.ObjectStateManager>.  
+  
+> [!NOTE]
+>  Esse método não tem suporte para relações se baseiam em uma associação de chave estrangeira.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Quando <paramref name="source" />, <paramref name="target" />, ou <paramref name="selector" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="selector" />está mal formado ou não é possível retornar uma propriedade de navegação.</exception>
+        <exception cref="T:System.InvalidOperationException">Quando você tenta alterar o estado da relação para um estado diferente de <see cref="F:System.Data.EntityState.Deleted" /> ou <see cref="F:System.Data.EntityState.Detached" /> quando o <paramref name="source" /> ou <paramref name="target" /> está em um <see cref="F:System.Data.EntityState.Deleted" /> estado.  
+  
+ -ou-  
+  
+ Quando você tenta alterar o estado da relação para um estado diferente de <see cref="F:System.Data.EntityState.Added" /> ou <see cref="F:System.Data.EntityState.Detached" /> quando o <paramref name="source" /> ou <paramref name="target" /> está em um <see cref="F:System.Data.EntityState.Added" /> estado.  
+  
+ -ou-  
+  
+ Quando <paramref name="state" /> não é um valor <see cref="T:System.Data.EntityState" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectStateEntries">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectStateEntry&gt; GetObjectStateEntries (System.Data.EntityState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class System.Data.Objects.ObjectStateEntry&gt; GetObjectStateEntries(valuetype System.Data.EntityState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.GetObjectStateEntries(System.Data.EntityState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Data.Objects.ObjectStateEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Data.EntityState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Data.EntityState" /> usado para filtrar os objetos <see cref="T:System.Data.Objects.ObjectStateEntry" /> retornados.</param>
+        <summary>Retorna uma coleção de objetos <see cref="T:System.Data.Objects.ObjectStateEntry" /> para objetos ou relacionamentos com o estado determinado.</summary>
+        <returns>Uma coleção de objetos <see cref="T:System.Data.Objects.ObjectStateEntry" /> no <see cref="T:System.Data.EntityState" /> determinado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.EntityState> é um campo de bits para entradas de estado de vários estados podem ser recuperadas em uma chamada seguindo um bit a bit ou de mais de um <xref:System.Data.EntityState> valores.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Quando <paramref name="state" /> é <see cref="F:System.Data.EntityState.Detached" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectStateEntry">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectStateEntry GetObjectStateEntry (System.Data.EntityKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectStateEntry GetObjectStateEntry(class System.Data.EntityKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.GetObjectStateEntry(System.Data.EntityKey)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectStateEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Data.EntityKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">O <see cref="T:System.Data.EntityKey" />.</param>
+        <summary>Retorna um <see cref="T:System.Data.Objects.ObjectStateEntry" /> para o objeto ou para a entrada de relação com a chave especificada.</summary>
+        <returns>O <see cref="T:System.Data.Objects.ObjectStateEntry" /> correspondente para o <see cref="T:System.Data.EntityKey" /> fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%28System.Data.EntityKey%2CSystem.Data.Objects.ObjectStateEntry%40%29> método para retornar um <xref:System.Data.Objects.ObjectStateEntry> objeto sem ter que lidar com o <xref:System.InvalidOperationException> gerado pelo <xref:System.Data.Objects.ObjectStateManager.GetObjectStateEntry%28System.Data.EntityKey%29> método.  
+  
+   
+  
+## Examples  
+ O exemplo neste tópico se baseia o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832). O exemplo obtém o <xref:System.Data.Objects.ObjectStateEntry> para o determinado <xref:System.Data.EntityKey> do <xref:System.Data.Objects.ObjectStateManager>. Em seguida, ele obtém o valor atual do `SalesOrderHeader.PurchaseOrderNumber` propriedade altera o valor da propriedade e enumera através da coleção de propriedades modificadas.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectStateEntry](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectstateentry)]
+ [!code-vb[DP ObjectServices Concepts#ObjectStateEntry](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectstateentry)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Quando <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Quando o <paramref name="key" /> especificado não pode ser encontrado no gerenciador de estado.</exception>
+        <exception cref="T:System.InvalidOperationException">Nenhuma entidade com o <see cref="T:System.Data.EntityKey" /> especificado existe no <see cref="T:System.Data.Objects.ObjectStateManager" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectStateEntry">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.ObjectStateEntry GetObjectStateEntry (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.ObjectStateEntry GetObjectStateEntry(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.GetObjectStateEntry(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.ObjectStateEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O <see cref="T:System.Object" /> ao qual recuperada <see cref="T:System.Data.Objects.ObjectStateEntry" /> pertence.</param>
+        <summary>Retorna um <see cref="T:System.Data.Objects.ObjectStateEntry" /> para o objeto especificado.</summary>
+        <returns>O <see cref="T:System.Data.Objects.ObjectStateEntry" /> correspondente para o <see cref="T:System.Object" /> fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%28System.Object%2CSystem.Data.Objects.ObjectStateEntry%40%29> método para retornar um <xref:System.Data.Objects.ObjectStateEntry> objeto sem ter que lidar com o <xref:System.InvalidOperationException> gerado pelo <xref:System.Data.Objects.ObjectStateManager.GetObjectStateEntry%28System.Object%29> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhuma entidade especificado <see cref="T:System.Object" /> existe o <see cref="T:System.Data.Objects.ObjectStateManager" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelationshipManager">
+      <MemberSignature Language="C#" Value="public System.Data.Objects.DataClasses.RelationshipManager GetRelationshipManager (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Objects.DataClasses.RelationshipManager GetRelationshipManager(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.GetRelationshipManager(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Objects.DataClasses.RelationshipManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O objeto para o qual retornar o <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" />.</param>
+        <summary>Retorna o <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" /> que é usado pelo objeto especificado.</summary>
+        <returns>O <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" /> para o objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Data.Objects.ObjectStateManager.GetRelationshipManager%2A> método é o mesmo que chamar o <xref:System.Data.Objects.ObjectStateManager.TryGetRelationshipManager%2A> método, exceto que este método gera uma exceção em vez de retornar `false`.  
+  
+ Chamar o <xref:System.Data.Objects.ObjectStateManager.TryGetRelationshipManager%2A> método para evitar o tratamento de <xref:System.InvalidOperationException> que ocorre quando um <xref:System.Data.Objects.DataClasses.RelationshipManager> não pode ser retornado para a entidade fornecida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Quando um <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" /> não pode ser retornado para o <paramref name="entity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataWorkspace">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.MetadataWorkspace MetadataWorkspace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.MetadataWorkspace MetadataWorkspace" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.ObjectStateManager.MetadataWorkspace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.MetadataWorkspace</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> associado a este Gerenciador de estado.</summary>
+        <value>O <see cref="T:System.Data.Metadata.Edm.MetadataWorkspace" /> associado a este <see cref="T:System.Data.Objects.ObjectStateManager" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Metadata.Edm.MetadataWorkspace> classe é uma interface de programação central que você pode usar para interagir com os metadados do modelo de dados de entidade (EDM) em tempo de execução e o contexto de um aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectStateManagerChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CollectionChangeEventHandler ObjectStateManagerChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CollectionChangeEventHandler ObjectStateManagerChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Objects.ObjectStateManager.ObjectStateManagerChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CollectionChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando entidades são adicionadas ou removidas do Gerenciador de estado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetObjectStateEntry">
+      <MemberSignature Language="C#" Value="public bool TryGetObjectStateEntry (System.Data.EntityKey key, out System.Data.Objects.ObjectStateEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetObjectStateEntry(class System.Data.EntityKey key, [out] class System.Data.Objects.ObjectStateEntry&amp; entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry(System.Data.EntityKey,System.Data.Objects.ObjectStateEntry@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Data.EntityKey" />
+        <Parameter Name="entry" Type="System.Data.Objects.ObjectStateEntry&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">O <see cref="T:System.Data.EntityKey" /> determinado.</param>
+        <param name="entry">Quando este método retorna, contém um <see cref="T:System.Data.Objects.ObjectStateEntry" /> para o <see cref="T:System.Data.EntityKey" /> determinado Esse parâmetro é passado como não inicializado.</param>
+        <summary>Tenta recuperar o <see cref="T:System.Data.Objects.ObjectStateEntry" /> correspondente para o objeto ou a relação com o <see cref="T:System.Data.EntityKey" /> especificado.</summary>
+        <returns>Um valor booliano que é <see langword="true" /> se houver um <see cref="T:System.Data.Objects.ObjectStateEntry" /> correspondente para o <see cref="T:System.Data.EntityKey" /> determinado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%28System.Data.EntityKey%2CSystem.Data.Objects.ObjectStateEntry%40%29> para retornar um <xref:System.Data.Objects.ObjectStateEntry> sem ter que lidar com o <xref:System.InvalidOperationException> gerado pelo <xref:System.Data.Objects.ObjectStateManager.GetObjectStateEntry%28System.Data.EntityKey%29> método.  
+  
+   
+  
+## Examples  
+ Os exemplos neste tópico se baseiam o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).  
+  
+ O exemplo tenta recuperar correspondente <xref:System.Data.Objects.ObjectStateEntry> para o determinado <xref:System.Data.EntityKey>.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ObjectStateManager](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#objectstatemanager)]
+ [!code-vb[DP ObjectServices Concepts#ObjectStateManager](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#objectstatemanager)]  
+  
+ O exemplo a seguir usa o <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%28System.Data.EntityKey%2CSystem.Data.Objects.ObjectStateEntry%40%29> método retornado <xref:System.Data.Objects.ObjectStateManager> para obter um objeto com base em sua chave de entidade.  
+  
+ [!code-csharp[DP ObjectServices Concepts#ApplyItemUpdates](~/samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#applyitemupdates)]
+ [!code-vb[DP ObjectServices Concepts#ApplyItemUpdates](~/samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#applyitemupdates)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um valor de <see langword="null" /> (<see langword="Nothing" /> no Visual Basic) é fornecido para <paramref name="key" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetObjectStateEntry">
+      <MemberSignature Language="C#" Value="public bool TryGetObjectStateEntry (object entity, out System.Data.Objects.ObjectStateEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetObjectStateEntry(object entity, [out] class System.Data.Objects.ObjectStateEntry&amp; entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry(System.Object,System.Data.Objects.ObjectStateEntry@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="entry" Type="System.Data.Objects.ObjectStateEntry&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O <see cref="T:System.Object" /> ao qual recuperada <see cref="T:System.Data.Objects.ObjectStateEntry" /> pertence.</param>
+        <param name="entry">Quando este método retorna, contém o <see cref="T:System.Data.Objects.ObjectStateEntry" /> para o determinado <see cref="T:System.Data.EntityKey" /> esse parâmetro é passado não inicializado.</param>
+        <summary>Tenta recuperar correspondente <see cref="T:System.Data.Objects.ObjectStateEntry" /> especificado <see cref="T:System.Object" />.</summary>
+        <returns>Um valor booliano que é <see langword="true" /> se não houver um correspondente <see cref="T:System.Data.Objects.ObjectStateEntry" /> para o objeto fornecido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.Objects.ObjectStateManager.TryGetObjectStateEntry%28System.Object%2CSystem.Data.Objects.ObjectStateEntry%40%29> método para retornar um <xref:System.Data.Objects.ObjectStateEntry> sem ter que lidar com o <xref:System.InvalidOperationException> gerado pelo <xref:System.Data.Objects.ObjectStateManager.GetObjectStateEntry%28System.Object%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetRelationshipManager">
+      <MemberSignature Language="C#" Value="public bool TryGetRelationshipManager (object entity, out System.Data.Objects.DataClasses.RelationshipManager relationshipManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetRelationshipManager(object entity, [out] class System.Data.Objects.DataClasses.RelationshipManager&amp; relationshipManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ObjectStateManager.TryGetRelationshipManager(System.Object,System.Data.Objects.DataClasses.RelationshipManager@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="relationshipManager" Type="System.Data.Objects.DataClasses.RelationshipManager&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O objeto para o qual retornar o <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" />.</param>
+        <param name="relationshipManager">Quando este método retorna, contém o <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" /> para o <c>entidade</c>.</param>
+        <summary>Retorna o <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" /> que é usado pelo objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se um <see cref="T:System.Data.Objects.DataClasses.RelationshipManager" /> instância foi retornada para fornecido <paramref name="entity" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.ObjectStateManager.GetRelationshipManager%2A> método é usado para obter o <xref:System.Data.Objects.DataClasses.RelationshipManager> para objetos com ignorância de persistência. Quando objetos implementam <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> ou herdar de <xref:System.Data.Objects.DataClasses.EntityObject>, o <xref:System.Data.Objects.DataClasses.RelationshipManager> é acessado a partir do <xref:System.Data.Objects.DataClasses.IEntityWithRelationships.RelationshipManager%2A> propriedade.  
+  
+ O <xref:System.Data.Objects.DataClasses.RelationshipManager> não pode ser retornada quando o objeto está em um <xref:System.Data.EntityState.Detached> estado.  
+  
+ Chamando o <xref:System.Data.Objects.ObjectStateManager.TryGetRelationshipManager%2A> método é o mesmo que chamar o <xref:System.Data.Objects.ObjectStateManager.GetRelationshipManager%2A> método, exceto que este método retorna `false` em vez de gerar uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

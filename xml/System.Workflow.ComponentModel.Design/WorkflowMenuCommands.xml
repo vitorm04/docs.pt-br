@@ -1,0 +1,1743 @@
+<Type Name="WorkflowMenuCommands" FullName="System.Workflow.ComponentModel.Design.WorkflowMenuCommands">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowMenuCommands : System.ComponentModel.Design.StandardCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowMenuCommands extends System.ComponentModel.Design.StandardCommands" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.WorkflowMenuCommands" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.StandardCommands</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um conjunto de <see cref="T:System.ComponentModel.Design.CommandID" /> campos que cada corresponde a uma função de comando fornecida pelos designers de fluxo de trabalho. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands>contém um conjunto de <xref:System.ComponentModel.Design.CommandID> campos que podem ser usados para especificar um comando para vincular ao adicionar um comando usando o <xref:System.ComponentModel.Design.MenuCommandService.AddCommand%2A> método o <xref:System.ComponentModel.Design.IMenuCommandService>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um personalizado <xref:System.ComponentModel.Design.MenuCommandService>. Neste exemplo, um menu de contexto é criado quando o `ShowContextMenu` é chamado. No `GetSelectionMenuItems` método, o <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands> classe utilizada para associar os comandos de menu adequada fornecidos pelo designer de fluxo de trabalho com o texto correspondente. Quando isso for concluído, um manipulador de eventos é associado a cada comando para que quando o comando é selecionado, as `MenuCommand` é invocado.  
+  
+ [!code-csharp[WF_Samples#44](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#44)]
+ [!code-vb[WF_Samples#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#44)]  
+  
+ Para habilitar esse serviço, chame o `AddService` método o <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> propriedade em um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowMenuCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Design.WorkflowMenuCommands" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um personalizado <xref:System.ComponentModel.Design.MenuCommandService>. Neste exemplo, um menu de contexto é criado quando o `ShowContextMenu` é chamado. No `GetSelectionMenuItems` método, o <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands> classe utilizada para associar os comandos de menu adequada fornecidos pelo designer de fluxo de trabalho com o texto correspondente. Quando isso for concluído, um manipulador de eventos é associado a cada comando para que quando o comando é selecionado, as `MenuCommand` é invocado.  
+  
+ [!code-csharp[WF_Samples#44](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#44)]
+ [!code-vb[WF_Samples#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#44)]  
+  
+ Para habilitar esse serviço, chame o `AddService` método o <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> propriedade em um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakpointActionMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID BreakpointActionMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID BreakpointActionMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.BreakpointActionMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.CommandID" /> para o menu de ação de ponto de interrupção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de ação de ponto de interrupção normalmente é usado para definir, remover ou alterar os pontos de interrupção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakpointConditionMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID BreakpointConditionMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID BreakpointConditionMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.BreakpointConditionMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.CommandID" /> para o menu de condição de ponto de interrupção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de condição de ponto de interrupção normalmente é usado para definir, remover ou alterar os pontos de interrupção condicionais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakpointConstraintsMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID BreakpointConstraintsMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID BreakpointConstraintsMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.BreakpointConstraintsMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.CommandID" /> para o menu de restrições de ponto de interrupção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de restrições de ponto de interrupção normalmente é usado para definir, remover ou alterar as restrições sobre pontos de interrupção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakpointHitCountMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID BreakpointHitCountMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID BreakpointHitCountMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.BreakpointHitCountMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.CommandID" /> para menu de contagem de ocorrências de ponto de interrupção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o menu de contagem de ocorrências de ponto de interrupção exibe a contagem de ocorrências de pontos de interrupção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakpointLocationMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID BreakpointLocationMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID BreakpointLocationMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.BreakpointLocationMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.CommandID" /> para o menu de local de ponto de interrupção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No menu de local de ponto de interrupção é normalmente usado para modificar o local dos pontos de interrupção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeTheme">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ChangeTheme;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ChangeTheme" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ChangeTheme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.Design.CommandID" /> para o menu de tema de alteração. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de alterações de tema normalmente é usado para alterar o tema para o designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearBreakpointsMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ClearBreakpointsMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ClearBreakpointsMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ClearBreakpointsMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu limpar pontos de interrupção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de pontos de interrupção limpar normalmente é usado para limpar todos os pontos de interrupção definidos no depurador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapse">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Collapse;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Collapse" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Collapse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de recolher. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de recolher normalmente é usado para recolher atividades compostas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um personalizado <xref:System.ComponentModel.Design.MenuCommandService>. Neste exemplo, um menu de contexto é criado quando o `ShowContextMenu` é chamado. No `GetSelectionMenuItems` método, o <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands> classe utilizada para associar os comandos de menu adequada fornecidos pelo designer de fluxo de trabalho com o texto correspondente. Quando isso for concluído, um manipulador de eventos é associado a cada comando para que quando o comando é selecionado, as `MenuCommand` é invocado.  
+  
+ [!code-csharp[WF_Samples#44](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#44)]
+ [!code-vb[WF_Samples#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#44)]  
+  
+ Para habilitar esse serviço, chame o `AddService` método o <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> propriedade em um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToClipboard">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID CopyToClipboard;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID CopyToClipboard" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.CopyToClipboard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de cópia. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTheme">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID CreateTheme;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID CreateTheme" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.CreateTheme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de tema de criar. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Menu de tema criar normalmente é usado para criar um novo tema para o designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugCommandSetId">
+      <MemberSignature Language="C#" Value="public static readonly Guid DebugCommandSetId;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid DebugCommandSetId" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DebugCommandSetId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um identificador exclusivo para o conjunto de comandos de depuração. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugStepBranchMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID DebugStepBranchMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID DebugStepBranchMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DebugStepBranchMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ramificação de etapa de depuração. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de ramificação de etapa de depuração é normalmente usado para a etapa em uma ramificação no depurador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugStepInstanceMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID DebugStepInstanceMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID DebugStepInstanceMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DebugStepInstanceMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de instância de etapa de depuração. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de instância de etapa de depuração é normalmente usado para a etapa em uma instância de um objeto no depurador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DebugWorkflowGroupId">
+      <MemberSignature Language="C#" Value="public static readonly Guid DebugWorkflowGroupId;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid DebugWorkflowGroupId" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DebugWorkflowGroupId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um identificador exclusivo para o grupo de fluxo de trabalho de depuração de menus. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFilter">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID DefaultFilter;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID DefaultFilter" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DefaultFilter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de filtro padrão. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de filtro padrão normalmente é usado para definir ou modificar o filtro padrão para o fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPage">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID DefaultPage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID DefaultPage" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DefaultPage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de página padrão. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Menu de página padrão normalmente é usado para definir ou modificar a página padrão para o fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerActionsMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID DesignerActionsMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID DesignerActionsMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DesignerActionsMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ações de designer. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de ações de designer normalmente é usado para acessar as ações disponíveis para o designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerProperties">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID DesignerProperties;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID DesignerProperties" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.DesignerProperties" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de propriedades do designer. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o menu de propriedades do designer fornece uma caixa de diálogo para definir propriedades do designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disable">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Disable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Disable" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Disable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu disable. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Disable menu normalmente desabilita uma atividade em um fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um personalizado <xref:System.ComponentModel.Design.MenuCommandService>. Neste exemplo, um menu de contexto é criado quando o `ShowContextMenu` é chamado. No `GetSelectionMenuItems` método, o <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands> classe utilizada para associar os comandos de menu adequada fornecidos pelo designer de fluxo de trabalho com o texto correspondente. Quando isso for concluído, um manipulador de eventos é associado a cada comando para que quando o comando é selecionado, as `MenuCommand` é invocado.  
+  
+ [!code-csharp[WF_Samples#44](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#44)]
+ [!code-vb[WF_Samples#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#44)]  
+  
+ Para habilitar esse serviço, chame o `AddService` método o <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> propriedade em um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enable">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Enable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Enable" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Enable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de habilitar. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Habilitar menu normalmente permite que uma atividade em um fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um personalizado <xref:System.ComponentModel.Design.MenuCommandService>. Neste exemplo, um menu de contexto é criado quando o `ShowContextMenu` é chamado. No `GetSelectionMenuItems` método, o <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands> classe utilizada para associar os comandos de menu adequada fornecidos pelo designer de fluxo de trabalho com o texto correspondente. Quando isso for concluído, um manipulador de eventos é associado a cada comando para que quando o comando é selecionado, as `MenuCommand` é invocado.  
+  
+ [!code-csharp[WF_Samples#44](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#44)]
+ [!code-vb[WF_Samples#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#44)]  
+  
+ Para habilitar esse serviço, chame o `AddService` método o <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> propriedade em um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableBreakpointMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID EnableBreakpointMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID EnableBreakpointMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.EnableBreakpointMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ponto de interrupção habilitar. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o menu de ponto de interrupção de habilitar permite definido anteriormente ponto de interrupção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionStateMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ExecutionStateMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ExecutionStateMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ExecutionStateMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu do estado de execução. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o menu do estado de execução indica o estado do fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expand">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Expand;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Expand" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Expand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de expansão. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Expandir o menu normalmente faz com que as seções recolhidas de código para expandir.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um personalizado <xref:System.ComponentModel.Design.MenuCommandService>. Neste exemplo, um menu de contexto é criado quando o `ShowContextMenu` é chamado. No `GetSelectionMenuItems` método, o <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands> classe utilizada para associar os comandos de menu adequada fornecidos pelo designer de fluxo de trabalho com o texto correspondente. Quando isso for concluído, um manipulador de eventos é associado a cada comando para que quando o comando é selecionado, as `MenuCommand` é invocado.  
+  
+ [!code-csharp[WF_Samples#44](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#44)]
+ [!code-vb[WF_Samples#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#44)]  
+  
+ Para habilitar esse serviço, chame o `AddService` método o <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> propriedade em um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstZoomCommand">
+      <MemberSignature Language="C#" Value="public const int FirstZoomCommand = 12544;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 FirstZoomCommand = (12544)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.FirstZoomCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>12544</MemberValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de primeiro do zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O primeiro comando zoom normalmente restaura o modo de exibição do fluxo de trabalho para o primeiro nível de zoom.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GotoDisassemblyMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID GotoDisassemblyMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID GotoDisassemblyMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.GotoDisassemblyMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de desmontagem goto. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de desmontagem goto normalmente é usado para navegar até o código desmontado no depurador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertBreakpointMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID InsertBreakpointMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID InsertBreakpointMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.InsertBreakpointMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ponto de interrupção de inserção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de ponto de interrupção de inserção normalmente é usado para inserir um ponto de interrupção no fluxo de trabalho na posição do cursor ou antes da seleção atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertTracePointMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID InsertTracePointMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID InsertTracePointMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.InsertTracePointMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de tracepoint insert. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Menu Inserir tracepoint normalmente é usado para inserir um tracepoint na posição do cursor ou antes da seleção atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastZoomCommand">
+      <MemberSignature Language="C#" Value="public const int LastZoomCommand = 12551;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 LastZoomCommand = (12551)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.LastZoomCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>12551</MemberValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de último zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O último comando zoom normalmente restaura o modo de exibição do fluxo de trabalho para o último nível de zoom.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MenuGuid">
+      <MemberSignature Language="C#" Value="public static readonly Guid MenuGuid;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid MenuGuid" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.MenuGuid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um identificador exclusivo para o menu. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewDataBreakpointMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID NewDataBreakpointMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID NewDataBreakpointMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.NewDataBreakpointMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ponto de interrupção de dados novos. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo menu de ponto de interrupção de dados normalmente insere um ponto de interrupção novo controladas por dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewFileTracePointMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID NewFileTracePointMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID NewFileTracePointMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.NewFileTracePointMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de tracepoint arquivo novo. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O novo menu tracepoint arquivo normalmente insere um novo tracepoint.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageDown">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID PageDown;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID PageDown" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.PageDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de página para baixo. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página de menu suspenso normalmente é usada para rolar o fluxo de trabalho de uma página para baixo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageLayoutMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID PageLayoutMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID PageLayoutMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.PageLayoutMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de layout de página. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No menu de layout de página é normalmente usado para ajustar as opções de layout de página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageSetup">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID PageSetup;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID PageSetup" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.PageSetup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de configuração de página. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de configuração de página normalmente é usado para trazer para frente a caixa de diálogo de configuração de página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageUp">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID PageUp;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID PageUp" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.PageUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de página para cima. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página de menu normalmente é usada para rolar o fluxo de trabalho de uma página para cima.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pan">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Pan;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Pan" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Pan" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de panorâmica. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de panorâmica normalmente é usado para rolar a área visível do fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PanMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID PanMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID PanMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.PanMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de panorâmica. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de panorâmica normalmente é usado para rolar a área visível do fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Print;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Print" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Print" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de impressão. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de impressão normalmente é usado para imprimir o fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintPreview">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID PrintPreview;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID PrintPreview" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.PrintPreview" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de visualização de impressão. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de visualização de impressão normalmente é usado para visualizar a impressão de um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintPreviewPage">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID PrintPreviewPage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID PrintPreviewPage" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.PrintPreviewPage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de página de visualização de impressão. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No menu de página de visualização de impressão normalmente é usado para percorrer uma visualização de impressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunToCursorMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID RunToCursorMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID RunToCursorMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.RunToCursorMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar a executar até o menu de cursor. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A execução de menu do cursor normalmente é usada para colocar um ponto de interrupção no fluxo de trabalho no local do cursor e retomar a execução até que o ponto de interrupção é atingido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAsImage">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID SaveAsImage;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID SaveAsImage" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.SaveAsImage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o salvar como menu imagem. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Salvar como menu imagem salva o fluxo de trabalho como uma imagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID SelectionMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID SelectionMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.SelectionMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de seleção. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No menu seleção normalmente é usado para gerenciar uma seleção dentro do fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um personalizado <xref:System.ComponentModel.Design.MenuCommandService>. Neste exemplo, um menu de contexto é criado quando o `ShowContextMenu` é chamado. No `GetSelectionMenuItems` método, o <xref:System.Workflow.ComponentModel.Design.WorkflowMenuCommands> classe utilizada para associar os comandos de menu adequada fornecidos pelo designer de fluxo de trabalho com o texto correspondente. Quando isso for concluído, um manipulador de eventos é associado a cada comando para que quando o comando é selecionado, as `MenuCommand` é invocado.  
+  
+ [!code-csharp[WF_Samples#44](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#44)]
+ [!code-vb[WF_Samples#44](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#44)]  
+  
+ Para habilitar esse serviço, chame o `AddService` método o <xref:System.ComponentModel.Design.Serialization.BasicDesignerLoader.LoaderHost%2A> propriedade em um <xref:System.Workflow.ComponentModel.Design.WorkflowDesignerLoader> classe conforme mostrado no exemplo a seguir.  
+  
+ [!code-csharp[WF_Samples#31](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#31)]
+ [!code-vb[WF_Samples#31](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNextStatementMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID SetNextStatementMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID SetNextStatementMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.SetNextStatementMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu do conjunto próximo instrução. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir próxima instrução menu normalmente é usado para definir a próxima instrução executar ao mesmo tempo, percorrendo a execução de um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowAll">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ShowAll;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ShowAll" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ShowAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar a mostrar todos os menus. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mostrar que todos os menus normalmente é usado para mostrar todos os objetos filho no fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowNextStatementMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ShowNextStatementMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ShowNextStatementMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ShowNextStatementMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu do Mostrar próximo instrução. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mostrar próxima instrução menu normalmente é usado para realçar a próxima instrução a ser executada durante o processo por meio da execução de um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToggleBreakpointMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ToggleBreakpointMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ToggleBreakpointMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ToggleBreakpointMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ponto de interrupção de alternância. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de ponto de interrupção de alternância normalmente é usado para ativar ou desativar um ponto de interrupção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbGroupActions">
+      <MemberSignature Language="C#" Value="public static readonly int VerbGroupActions;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 VerbGroupActions" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.VerbGroupActions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ações de grupo do verbo. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de ações de grupo do verbo normalmente é usado para acessar ações organizadas por grupo de verbo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbGroupDesignerActions">
+      <MemberSignature Language="C#" Value="public static readonly int VerbGroupDesignerActions;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 VerbGroupDesignerActions" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.VerbGroupDesignerActions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de ações de designer de grupo do verbo. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de ações de designer de grupo do verbo normalmente é usado para acessar as ações de designer organizadas por grupo de verbo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbGroupEdit">
+      <MemberSignature Language="C#" Value="public static readonly int VerbGroupEdit;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 VerbGroupEdit" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.VerbGroupEdit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de grupo do verbo de edição. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O grupo do verbo Editar normalmente é usado para acessar os verbos em Editar grupo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbGroupGeneral">
+      <MemberSignature Language="C#" Value="public static readonly int VerbGroupGeneral;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 VerbGroupGeneral" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.VerbGroupGeneral" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de grupo do verbo geral. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de grupo do verbo geral normalmente é usado para acessar verbos no grupo geral.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbGroupMisc">
+      <MemberSignature Language="C#" Value="public static readonly int VerbGroupMisc;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 VerbGroupMisc" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.VerbGroupMisc" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de grupo do verbo diversos. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de grupo do verbo diversos normalmente é usado para acessar verbos no grupo de diversos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbGroupOptions">
+      <MemberSignature Language="C#" Value="public static readonly int VerbGroupOptions;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 VerbGroupOptions" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.VerbGroupOptions" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de grupo do verbo de opções. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de opções grupo muito normalmente é usado para acessar verbos no grupo de opções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbGroupView">
+      <MemberSignature Language="C#" Value="public static readonly int VerbGroupView;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 VerbGroupView" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.VerbGroupView" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de grupo do verbo de exibição. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de grupo do verbo de exibição normalmente é usado para acessar verbos no grupo de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowCommandSetId">
+      <MemberSignature Language="C#" Value="public static readonly Guid WorkflowCommandSetId;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.Guid WorkflowCommandSetId" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.WorkflowCommandSetId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um identificador exclusivo para o conjunto de comandos de fluxo de trabalho. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowToolBar">
+      <MemberSignature Language="C#" Value="public const int WorkflowToolBar = 1292;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 WorkflowToolBar = (1292)" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.WorkflowToolBar" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1292</MemberValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu da barra de ferramentas de fluxo de trabalho. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No menu da barra de ferramentas de fluxo de trabalho é exibida na parte inferior da superfície de design de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom100Mode">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Zoom100Mode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Zoom100Mode" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Zoom100Mode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de 100% de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de 100% de zoom normalmente é usado para definir o nível de zoom para 100% em um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom150Mode">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Zoom150Mode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Zoom150Mode" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Zoom150Mode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de 150% de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de 150% de zoom normalmente é usado para definir o nível de zoom para 150% em um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom200Mode">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Zoom200Mode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Zoom200Mode" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Zoom200Mode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de 200% de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de 200% zoom normalmente é usado para definir o nível de zoom para 200% em um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom300Mode">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Zoom300Mode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Zoom300Mode" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Zoom300Mode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de 300% de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de 300% zoom normalmente é usado para definir o nível de zoom para 300% em um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom400Mode">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Zoom400Mode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Zoom400Mode" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Zoom400Mode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de 400% de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de 400% de zoom normalmente é usado para definir o nível de zoom 400% em um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom50Mode">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Zoom50Mode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Zoom50Mode" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Zoom50Mode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de 50% de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de 50% de zoom normalmente é usado para definir o nível de zoom para 50% em um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom75Mode">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID Zoom75Mode;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID Zoom75Mode" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.Zoom75Mode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de 75% de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de 75% de zoom normalmente é usado para definir o nível de zoom para 75% em um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomIn">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ZoomIn;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ZoomIn" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ZoomIn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o zoom no menu. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O zoom no menu normalmente é usado para aumentar a ampliação de um fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomLevelCombo">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ZoomLevelCombo;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ZoomLevelCombo" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ZoomLevelCombo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de seleção do nível de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No menu seleção do nível de zoom normalmente é usado para trazer para frente uma caixa de diálogo na qual o usuário pode selecionar um nível de zoom em uma caixa de combinação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomLevelListHandler">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ZoomLevelListHandler;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ZoomLevelListHandler" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ZoomLevelListHandler" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de manipulador de lista de nível de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O manipulador da lista de nível de zoom normalmente fornece um mecanismo para alternar entre exibir diferentes níveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomMenu">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ZoomMenu;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ZoomMenu" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ZoomMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de zoom. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de zoom normalmente fornece uma variedade de níveis de zoom para o modo de exibição do fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZoomOut">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.Design.CommandID ZoomOut;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.Design.CommandID ZoomOut" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.ComponentModel.Design.WorkflowMenuCommands.ZoomOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.CommandID</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.ComponentModel.Design.CommandID" /> que pode ser usado para acessar o menu de reduzir. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de reduzir normalmente é usado para diminuir a ampliação do fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,85 @@
+<Type Name="IServiceContractGenerationExtension" FullName="System.ServiceModel.Description.IServiceContractGenerationExtension">
+  <TypeSignature Language="C#" Value="public interface IServiceContractGenerationExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IServiceContractGenerationExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IServiceContractGenerationExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define os métodos chamados durante a geração de contrato que pode ser usada para modificar o código gerado para um contrato de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> interface em um comportamento de contrato (um <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> tipo) para que você possa modificar o código gerado quando um contrato ou o ponto de extremidade é compilado em código.  
+  
+ Normalmente, um personalizado <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> insere um comportamento de contrato personalizados para o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A?displayProperty=nameWithType> coleção durante a chamada para <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> ou <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como adicionar um <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> para o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A?displayProperty=nameWithType> propriedade durante a chamada para <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A>.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#4)]  
+  
+ Os exemplos de código a seguir mostram a implementação de <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%2A> que adiciona comentários no código gerado para um contrato de serviço.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#12](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#12)]  
+  
+ O exemplo de código a seguir mostra os comentários gerados no contrato de serviço.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#3)]
+ [!code-vb[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GenerateContract">
+      <MemberSignature Language="C#" Value="public void GenerateContract (System.ServiceModel.Description.ServiceContractGenerationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateContract(class System.ServiceModel.Description.ServiceContractGenerationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract(System.ServiceModel.Description.ServiceContractGenerationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ServiceModel.Description.ServiceContractGenerationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O código gerado contexto a ser usado para modificar o documento de código antes da geração.</param>
+        <summary>Implemente para modificar o modelo de objeto de documento de código antes do processo de geração de contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.Description.ServiceContractGenerationContext?displayProperty=nameWithType> para modificar o contrato, operações, ou o <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> antes da geração de código.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como adicionar um <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> para o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A?displayProperty=nameWithType> propriedade durante a chamada para <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A>.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#4](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#4)]  
+  
+ Os exemplos de código a seguir mostram a implementação de <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%2A> que adiciona comentários no código gerado para um contrato de serviço.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#12](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/wsdldocumentationimporter.cs#12)]  
+  
+ O exemplo de código a seguir mostra os comentários gerados no contrato de serviço.  
+  
+ [!code-csharp[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.cs#3)]
+ [!code-vb[C_CustomWSDLExtensions#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_customwsdlextensions/cs/newgeneratedcontract.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

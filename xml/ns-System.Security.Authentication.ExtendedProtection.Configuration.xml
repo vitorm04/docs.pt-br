@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Authentication.ExtendedProtection.Configuration">
+  <Docs>
+    <summary>O namespace <see cref="N:System.Security.Authentication.ExtendedProtection.Configuration" /> dá suporte à configuração da autenticação usando proteção estendida para aplicativos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

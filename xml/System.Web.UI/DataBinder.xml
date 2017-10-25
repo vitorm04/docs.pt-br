@@ -1,0 +1,493 @@
+<Type Name="DataBinder" FullName="System.Web.UI.DataBinder">
+  <TypeSignature Language="C#" Value="public sealed class DataBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataBinder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataBinder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte para o desenvolvimento rápido de aplicativos designers (RAD) para gerar e analisar a sintaxe de expressão de associação de dados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o static sobrecarregado <xref:System.Web.UI.DataBinder.Eval%2A> método desta classe na sintaxe de associação de dados em uma página da Web do ASP.NET. Isso fornece uma sintaxe mais fácil trabalhar com que a associação de dados padrão. No entanto, como `DataBinder.Eval` fornece conversão automática de tipo, isso pode resultar em desempenho mais lento.  
+  
+ Para obter mais informações sobre associação de dados, expressões e sintaxe do ASP.NET, consulte [para bancos de dados de associação](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742) e [visão geral de expressões de associação de dados](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+  
+ A partir do .NET Framework 4.5, você pode usar associação de modelos para simplificar a algumas das tarefas que você tinha por meio de associação de dados em versões anteriores. Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa estático <xref:System.Web.UI.DataBinder.GetPropertyValue%2A> método para preencher os campos de um <xref:System.Web.UI.WebControls.Repeater> controlar usando um <xref:System.Collections.ArrayList> de `Product` objetos. O <xref:System.Web.UI.DataBinder.Eval%2A> método pode ser aplicado com a mesma sintaxe, mas ele não executa mais rapidamente.  
+  
+ Este exemplo usa um personalizado `Product` classe que expõe uma cadeia de caracteres `Model` propriedade e um numérico `UnitPrice` propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.DataBinder#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.DataBinder/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.DataBinder#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.DataBinder/VB/Default.aspx#1)]  
+  
+ O código a seguir é personalizado `Product` classe. Esse código deve ser incluído em um arquivo de classe separada no diretório App_Code, como Product.cs ou VB.  
+  
+ [!code-csharp[System.Web.UI.DataBinder#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.DataBinder/CS/App_Code/Product.cs#2)]
+ [!code-vb[System.Web.UI.DataBinder#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.DataBinder/VB/App_Code/Product.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataBinder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataBinder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableCaching">
+      <MemberSignature Language="C#" Value="public static bool EnableCaching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool EnableCaching" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataBinder.EnableCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cache de dados está habilitado em tempo de execução.</summary>
+        <value>
+          <see langword="true" />Se o cache está habilitado para o <see cref="T:System.Web.UI.DataBinder" /> classe; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Eval">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Usa reflexão para analisar e avaliar uma expressão de associação de dados em um objeto em tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A partir do .NET Framework 4.5, você pode usar associação de modelos para simplificar a algumas das tarefas que você tinha por meio de associação de dados em versões anteriores. Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public static object Eval (object container, string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Eval(object container, string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.Eval(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="expression">O caminho de navegação do <c>contêiner</c> objeto para o valor de propriedade pública a ser colocada na propriedade do controle associado. Isso deve ser uma cadeia de caracteres de propriedade ou campo de nomes separados por pontos, como <c>tabelas [0]. Modo padrão. [0]. Preço</c> em c# ou <c>Tables(0). Modo padrão. (0). Preço</c> no Visual Basic.</param>
+        <summary>Avalia as expressões de associação de dados em tempo de execução.</summary>
+        <returns>Uma instância <see cref="T:System.Object" /> que resulta da avaliação da expressão de associação de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de `expression` parâmetro deve ser avaliada como uma propriedade pública.  
+  
+ Esse método é chamado automaticamente quando você criar associações de dados em um designer de (RAD) desenvolvimento rápido de aplicativos como o Visual Studio. Você também pode usar isso declarativamente para simplificar a conversão para uma cadeia de caracteres de texto. Para fazer isso, use o `<%#  %>` sintaxe de expressão, conforme usado em associação de dados padrão do ASP.NET.  
+  
+ Esse método é particularmente útil ao associar dados a controles que estão em uma lista de modelos.  
+  
+> [!NOTE]
+>  Como esse método executa a avaliação de associação tardia, usando a reflexão em tempo de execução, ele pode causar desempenho visivelmente lento comparado com a sintaxe de associação de dados padrão do ASP.NET.  
+  
+ Para qualquer lista de controles da Web, como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.DataList>, ou <xref:System.Web.UI.WebControls.Repeater>, `container` devem ser `Container.DataItem`. Se você estiver associando a página `container` devem ser `Page`.  
+  
+ A partir do .NET Framework 4.5, você pode usar associação de modelos para simplificar a algumas das tarefas que você tinha por meio de associação de dados em versões anteriores. Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram como usar o `Eval` método para associar dados ao <xref:System.Web.UI.WebControls.Repeater> controle. Ele requer uma classe de dados chamada Product.  
+  
+ [!code-csharp[System.Web.UI.DataBinder.Eval#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/product.cs#1)]
+ [!code-vb[System.Web.UI.DataBinder.Eval#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/product.vb#1)]  
+  
+ O arquivo code-behind carrega dados de teste e associa esses dados para um <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-csharp[System.Web.UI.DataBinder.Eval#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/showproducts.aspx.cs#2)]
+ [!code-vb[System.Web.UI.DataBinder.Eval#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/showproducts.aspx.vb#2)]  
+  
+ Na sintaxe declarativa de <xref:System.Web.UI.WebControls.Repeater> controle, use o <xref:System.Web.UI.DataBinder.Eval%2A> método com `Container.DataItem` para o `container` parâmetro.  
+  
+ [!code-aspx-csharp[System.Web.UI.DataBinder.Eval#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/showproducts3.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.DataBinder.Eval#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/showproducts3.aspx#3)]  
+  
+ Ou, você pode chamar `Eval` de função e não incluem o `container` parâmetro.  
+  
+ [!code-aspx-csharp[System.Web.UI.DataBinder.Eval#4](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/showproducts4.aspx#4)]
+ [!code-aspx-vb[System.Web.UI.DataBinder.Eval#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/showproducts4.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="expression" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia após a filtragem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public static string Eval (object container, string expression, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Eval(object container, string expression, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.Eval(System.Object,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="expression">O caminho de navegação do <c>contêiner</c> objeto para o valor de propriedade pública a ser colocada na propriedade do controle associado. Isso deve ser uma cadeia de caracteres de propriedade ou campo de nomes separados por pontos, como <c>tabelas [0]. Modo padrão. [0]. Preço</c> em c# ou <c>Tables(0). Modo padrão. (0). Preço</c> no Visual Basic.</param>
+        <param name="format">Uma cadeia de caracteres de formato do .NET Framework (como aquelas usadas pelo <see cref="M:System.String.Format(System.String,System.Object)" />) que converte a instância <see cref="T:System.Object" /> retornada pela expressão de associação de dados em um objeto <see cref="T:System.String" />.</param>
+        <summary>Avalia as expressões de associação de dados em tempo de execução e formata o resultado como uma cadeia de caracteres.</summary>
+        <returns>Um objeto <see cref="T:System.String" /> que resulta da avaliação da expressão de associação de dados e a converte em um tipo de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de `expression` devem ser avaliadas como uma propriedade pública.  
+  
+ Para obter mais informações sobre cadeias de caracteres de formato do .NET Framework, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ Esse método é chamado automaticamente quando você criar associações de dados em um designer de (RAD) desenvolvimento rápido de aplicativos como o Visual Studio. Você também pode usar isso declarativamente para converter o <xref:System.Object> resultante da expressão de associação de dados para um <xref:System.String>.  Para usar o método declarativamente, use o `<%#   %>` sintaxe de expressão, conforme usado em associação de dados padrão do ASP.NET.  
+  
+ Esse método é particularmente útil ao associar dados a controles que estão em uma lista de modelos.  
+  
+> [!NOTE]
+>  Como esse método executa a avaliação de associação tardia, usando a reflexão em tempo de execução, ele pode causar desempenho visivelmente lento comparado com a sintaxe de associação de dados padrão do ASP.NET. Use esse método criteriosamente, particularmente quando a cadeia de caracteres de formatação não é necessária.  
+  
+ Para qualquer lista de controles da Web, como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.DataList>, ou <xref:System.Web.UI.WebControls.Repeater>, `container` devem ser `Container.DataItem`. Se você estiver associando a página `container` devem ser `Page`.  
+  
+ A partir do .NET Framework 4.5, você pode usar associação de modelos para simplificar a algumas das tarefas que você tinha por meio de associação de dados em versões anteriores. Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram como usar o `Eval` método para associar dados ao <xref:System.Web.UI.WebControls.Repeater> controle. Ele requer uma classe de dados chamada Product.  
+  
+ [!code-csharp[System.Web.UI.DataBinder.Eval#1](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/product.cs#1)]
+ [!code-vb[System.Web.UI.DataBinder.Eval#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/product.vb#1)]  
+  
+ O arquivo code-behind carrega dados de teste e associa esses dados para um <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-csharp[System.Web.UI.DataBinder.Eval#2](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/showproducts.aspx.cs#2)]
+ [!code-vb[System.Web.UI.DataBinder.Eval#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/showproducts.aspx.vb#2)]  
+  
+ Na sintaxe declarativa de <xref:System.Web.UI.WebControls.Repeater> controle, use o <xref:System.Web.UI.DataBinder.Eval%2A> método com `Container.DataItem` para o `container` parâmetro.  
+  
+ [!code-aspx-csharp[System.Web.UI.DataBinder.Eval#3](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/showproducts3.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.DataBinder.Eval#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/showproducts3.aspx#3)]  
+  
+ Ou, você pode chamar `Eval` de função e não incluem o `container` parâmetro.  
+  
+ [!code-aspx-csharp[System.Web.UI.DataBinder.Eval#4](~/samples/snippets/csharp/VS_Snippets_WebNet/system.web.ui.databinder.eval/cs/showproducts4.aspx#4)]
+ [!code-aspx-vb[System.Web.UI.DataBinder.Eval#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/system.web.ui.databinder.eval/vb/showproducts4.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataItem">
+      <MemberSignature Language="C#" Value="public static object GetDataItem (object container);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetDataItem(object container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetDataItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <summary>Recupera o item de dados declarado do objeto.</summary>
+        <returns>Um objeto que representa o item de dados declarado do contêiner. Retorna <see langword="null" /> se nenhum item de dados for encontrado ou se o contêiner for avaliado como <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Web.UI.DataBinder.GetDataItem%28System.Object%2CSystem.Boolean%40%29> método, ignorando o `foundDataItem` parâmetro ao retornar o resultado.  
+  
+ Item de dados de um objeto é identificado em uma das duas maneiras. Se o objeto de contêiner implementa o <xref:System.Web.UI.IDataItemContainer> interface, o <xref:System.Web.UI.IDataItemContainer.DataItem%2A> propriedade identifica o item de dados e seu valor será retornado. Caso contrário, o método tentará resolver e retornar uma propriedade de contêiner chamada "DataItem".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataItem">
+      <MemberSignature Language="C#" Value="public static object GetDataItem (object container, out bool foundDataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetDataItem(object container, [out] bool&amp; foundDataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetDataItem(System.Object,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="foundDataItem" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="foundDataItem">Um valor booliano que indica se o item de dados foi resolvido com êxito e foi retornado. Este parâmetro é passado não inicializado.</param>
+        <summary>Recupera o item de dados declarado como um objeto, indicando êxito ou falha.</summary>
+        <returns>Um objeto que representa o item de dados declarado do contêiner. Retorna <see langword="null" /> se nenhum item de dados for encontrado ou se o contêiner for avaliado como <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Item de dados de um objeto é identificado de duas maneiras. Se o objeto de contêiner implementa o <xref:System.Web.UI.IDataItemContainer> interface, o <xref:System.Web.UI.IDataItemContainer.DataItem%2A> propriedade identifica o item de dados e é retornada. Caso contrário, o método tentará resolver e retornar uma propriedade de contêiner chamada "DataItem".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIndexedPropertyValue">
+      <MemberSignature Language="C#" Value="public static object GetIndexedPropertyValue (object container, string expr);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetIndexedPropertyValue(object container, string expr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetIndexedPropertyValue(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="expr" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto no qual <c>expr</c> é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="expr">O caminho de navegação do <c>contêiner</c> objeto para o valor da propriedade pública para colocar na propriedade do controle associado. Isso deve ser uma cadeia de caracteres de propriedade ou campo de nomes separados por pontos, como <c>tabelas [0]. Modo padrão. [0]. Preço</c> em c# ou <c>Tables(0). Modo padrão. (0). Preço</c> no Visual Basic.</param>
+        <summary>Recupera o valor de uma propriedade do caminho de navegação e do contêiner especificados.</summary>
+        <returns>Um objeto que resulta da avaliação da expressão de associação de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de `expr` devem ser avaliadas como uma propriedade pública.  
+  
+ Para qualquer lista de controles da Web, como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, <xref:System.Web.UI.WebControls.DataList>, ou <xref:System.Web.UI.WebControls.Repeater>, `container` devem ser `Container.DataItem`. Se você estiver associando a página `container` devem ser `Page`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="container" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="expr" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="expr" /> não é uma expressão indexada válida.  
+  
+ \- ou -  
+  
+ <paramref name="expr" /> não permite acesso indexado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIndexedPropertyValue">
+      <MemberSignature Language="C#" Value="public static string GetIndexedPropertyValue (object container, string propName, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetIndexedPropertyValue(object container, string propName, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetIndexedPropertyValue(System.Object,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="propName" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="propName">O nome da propriedade que contém o valor a ser recuperado.</param>
+        <param name="format">Uma cadeia de caracteres que especifica o formato no qual a exibição dos resultados.</param>
+        <summary>Recupera o valor da propriedade especificada para o contêiner especificado e, em seguida, formata os resultados.</summary>
+        <returns>O valor da propriedade especificada no formato especificado pelo <paramref name="format" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataBinder.GetIndexedPropertyValue%2A> método invoca o <xref:System.Web.UI.DataBinder.GetIndexedPropertyValue%2A> método e, em seguida, usa o <xref:System.String.Format%2A?displayProperty=nameWithType> método para formatar o resultado como especificado no `format` parâmetro. Uma cadeia de caracteres de formato do .NET Framework (como aqueles usados por <xref:System.String.Format%2A?displayProperty=nameWithType>) converte o <xref:System.Object> instância retornada pela expressão de associação de dados para um <xref:System.String> objeto.  
+  
+ Exceções que são geradas para a <xref:System.Web.UI.DataBinder.GetIndexedPropertyValue%2A> método se aplica ao <xref:System.Web.UI.DataBinder.GetIndexedPropertyValue%2A> método também.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.DataBinder.GetIndexedPropertyValue%2A> método declarativamente para vincular a um valor indexado.  
+  
+ [!code-aspx-csharp[Classic DataBinder.Eval Example#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic DataBinder.Eval Example/CS/sourcecs.aspx#2)]
+ [!code-aspx-vb[Classic DataBinder.Eval Example#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic DataBinder.Eval Example/VB/sourcevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public static object GetPropertyValue (object container, string propName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetPropertyValue(object container, string propName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetPropertyValue(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="propName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">O objeto que contém a propriedade.</param>
+        <param name="propName">O nome da propriedade que contém o valor a ser recuperado.</param>
+        <summary>Recupera o valor da propriedade especificada do objeto especificado.</summary>
+        <returns>O valor da propriedade especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataBinder.GetPropertyValue%2A> método é usado para recuperar o valor de uma propriedade em um objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de <xref:System.Web.UI.DataBinder> demonstra o uso deste método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="container" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="propName" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.Web.HttpException">O objeto em <paramref name="container" /> não tem a propriedade especificada por <paramref name="propName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyValue">
+      <MemberSignature Language="C#" Value="public static string GetPropertyValue (object container, string propName, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetPropertyValue(object container, string propName, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.GetPropertyValue(System.Object,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="propName" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">O objeto que contém a propriedade.</param>
+        <param name="propName">O nome da propriedade que contém o valor a ser recuperado.</param>
+        <param name="format">Uma cadeia de caracteres que especifica o formato no qual a exibição dos resultados.</param>
+        <summary>Recupera o valor da propriedade especificada do objeto especificado e, em seguida, formata os resultados.</summary>
+        <returns>O valor da propriedade especificada no formato especificado pelo <paramref name="format" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do <xref:System.Web.UI.DataBinder.GetPropertyValue%2A> método é usado para recuperar e formatar o valor de uma propriedade em um objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de <xref:System.Web.UI.DataBinder> demonstra o uso deste método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="container" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="propName" /> é <see langword="null" /> ou uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.Web.HttpException">O objeto em <paramref name="container" /> não tem a propriedade especificada por <paramref name="propName" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBindableType">
+      <MemberSignature Language="C#" Value="public static bool IsBindableType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsBindableType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataBinder.IsBindableType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que representa o tipo de dados para testar.</param>
+        <summary>Determina se o tipo de dados especificado pode ser associado.</summary>
+        <returns>
+          <see langword="true" />para tipos que podem ser automaticamente os dados associados em controles. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

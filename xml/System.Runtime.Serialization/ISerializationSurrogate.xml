@@ -1,0 +1,133 @@
+<Type Name="ISerializationSurrogate" FullName="System.Runtime.Serialization.ISerializationSurrogate">
+  <TypeSignature Language="C#" Value="public interface ISerializationSurrogate" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISerializationSurrogate" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.ISerializationSurrogate" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa um seletor de substitutos de serialização que permite que um objeto realize a serialização e a desserialização de outro.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public void GetObjectData (object obj, System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(object obj, class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ISerializationSurrogate.GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser serializado.</param>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) desta serialização.</param>
+        <summary>Popula fornecido <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar o objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extrai dados de objeto `obj` e armazena no <xref:System.Runtime.Serialization.SerializationInfo> `info` parâmetro.  
+  
+ Após ter localizado do substituto, esse método armazena informações sobre o objeto `obj` no <xref:System.Runtime.Serialization.SerializationInfo> `info` parâmetro. Essas informações descrevem a exibição do objeto, incluindo campos, propriedades e valores atuais do objeto. O <xref:System.Runtime.Serialization.SerializationInfo> deve corresponder ao objeto real, ou pode ser uma exibição sintetizada do substituto.  
+  
+ Esse método é protegido por um <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> para o <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetObjectData">
+      <MemberSignature Language="C#" Value="public object SetObjectData (object obj, System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context, System.Runtime.Serialization.ISurrogateSelector selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object SetObjectData(object obj, class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context, class System.Runtime.Serialization.ISurrogateSelector selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+        <Parameter Name="selector" Type="System.Runtime.Serialization.ISurrogateSelector" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a popular.</param>
+        <param name="info">As informações para preencher o objeto.</param>
+        <param name="context">A origem da qual o objeto é desserializado.</param>
+        <param name="selector">O seletor de substitutos onde começa a procurar um substituto compatível.</param>
+        <summary>Popula o objeto usando as informações no <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <returns>O objeto desserializado preenchido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> método é chamado durante a desserialização. Com esse método, você pode fazer o vazio <xref:System.Object> `obj` que já foi criado e digite <xref:System.Runtime.Serialization.SerializationInfo> `info` dados para esse objeto. Construtores não serão chamados durante a desserialização de informações e a reconstrução do objeto.  
+  
+ Esse método é protegido por um <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> para o <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

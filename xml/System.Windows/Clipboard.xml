@@ -1,0 +1,832 @@
+<Type Name="Clipboard" FullName="System.Windows.Clipboard">
+  <TypeSignature Language="C#" Value="public static class Clipboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Clipboard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Clipboard" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos estáticos que facilitam a transferência de dados de e para a Área de Transferência do sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os aplicativos para [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)] compartilhar o área de transferência do sistema para o conteúdo está sujeitos a alterações quando você alternar para outro aplicativo.  
+  
+ Para obter uma lista dos formatos predefinidos disponíveis para uso com o <xref:System.Windows.Clipboard> de classe, consulte o <xref:System.Windows.DataFormats> classe.  
+  
+ **Alerta de segurança:** para fins de segurança, os seguintes pontos devem ser mantidos em mente.  
+  
+-   Operações de colagem precisam ser iniciada pelo usuário (Ctrl-V, Menu Colar).  
+  
+-   Copiar só puder ser selecionado pelo usuário conteúdo.  
+  
+-   Em Recortar ou copiar, código de confiança parcial coloca em texto sem formatação e [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] para a área de transferência. Texto sem formatação inclui o texto, texto Unicode, texto OEM (modelo de objeto Exchange) e CSV (valores separados por vírgula).  
+  
+-   Ao colar, [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] colará em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] se a fonte do conteúdo é de um site confiável igualmente ou mais confiável. Especificamente:  
+  
+    -   Um aplicativo parcialmente confiável pode colar [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] de um aplicativo de confiança total.  
+  
+    -   Um aplicativo parcialmente confiável pode colar [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] de um aplicativo de confiança parcial.  
+  
+    -   Um aplicativo de confiança total pode colar XAML somente a partir de outro aplicativo totalmente confiável.  
+  
+    -   Não[!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] total confiança aplicativo pode examinar o formato ApplicationTrust na área de transferência e limpar o XAML, se apropriado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar dados para a área de transferência do sistema.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdata)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public static void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os dados da área de transferência do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método é equivalente a chamar **OleSetClipboard**(**nulo**).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsAudio">
+      <MemberSignature Language="C#" Value="public static bool ContainsAudio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsAudio() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsAudio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Consultas a Área de Transferência quanto à presença de dados no formato de dados <see cref="F:System.Windows.DataFormats.WaveAudio" />.</summary>
+        <returns>
+          <see langword="true" /> se a Área de Transferência contiver dados no formato <see cref="F:System.Windows.DataFormats.WaveAudio" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` somente se o formato de dados especificado existir nativamente na área de transferência; este método não verifica a presença de formatos de dados auto conversíveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsData">
+      <MemberSignature Language="C#" Value="public static bool ContainsData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">O formato dos dados a serem procurados. Consulte <see cref="T:System.Windows.DataFormats" /> para obter os formatos predefinidos.</param>
+        <summary>Consulta a Área de Transferência quanto à presença de dados no formato de dados especificado.</summary>
+        <returns>
+          <see langword="true" /> se os dados no formato especificado estiverem disponíveis na Área de Transferência; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma consulta para o formato de dados <xref:System.Windows.DataFormats.Bitmap> ou <xref:System.Windows.DataFormats.FileDrop> retornará `true` se os dados podem ser convertidos automaticamente para o formato de dados especificado.  Para outros formatos de dados, esse método retorna `true` somente se o formato especificado está disponível nativamente na área de transferência.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso deste método.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_containsdatagetdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_containsdatagetdata)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsFileDropList">
+      <MemberSignature Language="C#" Value="public static bool ContainsFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Consultas a Área de Transferência quanto à presença de dados no formato de dados <see cref="F:System.Windows.DataFormats.FileDrop" />.</summary>
+        <returns>
+          <see langword="true" /> se a Área de Transferência contiver dados no formato <see cref="F:System.Windows.DataFormats.FileDrop" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` somente se o formato de dados especificado existe nativamente ou está disponível como um formato de dados auto conversíveis na área de transferência; este método não verifica a presença de formatos de dados auto conversíveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsImage">
+      <MemberSignature Language="C#" Value="public static bool ContainsImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Consultas a Área de Transferência quanto à presença de dados no formato de dados <see cref="F:System.Windows.DataFormats.Bitmap" />.</summary>
+        <returns>
+          <see langword="true" /> se a Área de Transferência contiver dados no formato <see cref="F:System.Windows.DataFormats.Bitmap" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` somente se o formato de dados especificado existe nativamente ou está disponível como um formato de dados auto conversíveis na área de transferência; este método não verifica a presença de formatos de dados auto conversíveis.  
+  
+ Um bitmap representa um gráfico de computador como uma matriz de bits na memória, e esses bits representam os atributos dos pixels individuais em uma imagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Consultas a Área de Transferência quanto à presença de dados no formato <see cref="F:System.Windows.DataFormats.UnicodeText" />.</summary>
+        <returns>
+          <see langword="true" /> se a Área de Transferência contiver dados no formato <see cref="F:System.Windows.DataFormats.UnicodeText" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` somente se o formato de dados especificado existir nativamente na área de transferência; este método não verifica a presença de formatos de dados auto conversíveis.  
+  
+ O <xref:System.Windows.DataFormats.UnicodeText> formato de dados indica o caractere de 16 bits codificado em Unicode, também conhecido como UTF-16 e USC-2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsText">
+      <MemberSignature Language="C#" Value="public static bool ContainsText (System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContainsText(valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.ContainsText(System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Membro de <see cref="T:System.Windows.TextDataFormat" /> enumeração que especifica o formato de dados de texto para consultar.</param>
+        <summary>Consultas a área de transferência, a presença de dados em um formato de dados de texto.</summary>
+        <returns>
+          <see langword="true" />Se a área de transferência contém dados no formato de dados de texto especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `true` somente se o formato de dados especificado existir nativamente no objeto de dados; esse método não verifica a presença de formatos de dados auto conversíveis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="format" />não especifique um membro válido da <see cref="T:System.Windows.TextDataFormat" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public static void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona permanentemente os dados que estão no <see cref="T:System.Windows.Clipboard" /> para que ela esteja disponível depois fecha de aplicativo original dos dados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAudioStream">
+      <MemberSignature Language="C#" Value="public static System.IO.Stream GetAudioStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Stream GetAudioStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetAudioStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um fluxo de dados de área de transferência no <see cref="F:System.Windows.DataFormats.WaveAudio" /> formato de dados.</summary>
+        <returns>Um fluxo que contém os dados a <see cref="F:System.Windows.DataFormats.WaveAudio" /> formato, ou <see langword="null" /> se a área de transferência não contém dados nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna a um fluxo apenas se especificado formato nativamente existe no objeto de dados; Este método não retorna dados auto conversíveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public static object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato dos dados a serem recuperados. Para um conjunto de formatos de dados predefinidos, consulte a classe <see cref="T:System.Windows.DataFormats" />.</param>
+        <summary>Recupera dados em um formato especificado da Área de transferência.</summary>
+        <returns>Um objeto que contém os dados no formato especificado, ou <see langword="null" /> se os dados não estão disponíveis no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso deste método.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_containsdatagetdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_ContainsDataGetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_containsdatagetdata)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="format" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataObject">
+      <MemberSignature Language="C#" Value="public static System.Windows.IDataObject GetDataObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.IDataObject GetDataObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetDataObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IDataObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto de dados que representa todo o conteúdo da Área de Transferência.</summary>
+        <returns>Um objeto de dados que permite acessar todo o conteúdo da Área de Transferência do sistema ou <see langword="null" />, se não houver dados na Área de Transferência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Acesso a dados no sistema de área de transferência é habilitado por meio de um *objeto dados*, ou seja, um objeto que implementa o <xref:System.Windows.IDataObject> interface. Uma lista dos formatos predefinidos é definida pelo <xref:System.Windows.DataFormats> classe.  Use os métodos especificados por <xref:System.Windows.IDataObject> e campos <xref:System.Windows.DataFormats> para examinar e extrair os dados do objeto de dados.  
+  
+ Para examinar os formatos de dados no sistema de área de transferência, chame <xref:System.Windows.IDataObject.GetFormats%2A> no objeto de dados retornado por esse método.  Para recuperar dados do sistema de área de transferência, chame <xref:System.Windows.IDataObject.GetData%2A> e especificar o formato de dados desejado.  
+  
+ O sistema de que área de transferência é compartilhada por todos os aplicativos, dados de caso na área de transferência estão sujeita a alterações por outros aplicativos.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão acessar dados no sistema de área de transferência.  Enumeração associada: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFileDropList">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.StringCollection GetFileDropList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Specialized.StringCollection GetFileDropList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetFileDropList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de cadeia de caracteres que contém uma lista de arquivos ignorados na área de transferência.</summary>
+        <returns>Uma coleção de cadeias de caracteres, onde cada cadeia de caracteres Especifica o nome de um arquivo na lista de arquivos ignorados na área de transferência, ou <see langword="null" /> se os dados não estão disponíveis neste formato.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetImage">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Imaging.BitmapSource GetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Media.Imaging.BitmapSource GetImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetImage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> da Área de Transferência que contém dados no formato <see cref="F:System.Windows.DataFormats.Bitmap" />.</summary>
+        <returns>Um objeto <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que contém dados no formato <see cref="F:System.Windows.DataFormats.Bitmap" /> ou <see langword="null" />, se os dados estiverem indisponíveis nesse formato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna um <xref:System.Windows.Media.Imaging.BitmapSource> do objeto, quando dados nativamente estão disponíveis ou quando os dados podem ser convertidos automaticamente para o <xref:System.Windows.DataFormats.Bitmap> formato de dados.  
+  
+ Um bitmap representa um gráfico de computador como uma matriz de bits na memória, e esses bits representam os atributos dos pixels individuais em uma imagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que contém os dados <see cref="F:System.Windows.DataFormats.UnicodeText" /> na Área de Transferência.</summary>
+        <returns>Uma cadeia de caracteres que contém os dados <see cref="F:System.Windows.DataFormats.UnicodeText" /> ou uma cadeia de caracteres vazia se nenhum dado <see cref="F:System.Windows.DataFormats.UnicodeText" /> estiver disponível na Área de Transferência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.DataFormats.UnicodeText> formato de dados indica o caractere de 16 bits codificado em Unicode, também conhecido como UTF-16 e UCS-2.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetText">
+      <MemberSignature Language="C#" Value="public static string GetText (System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetText(valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.GetText(System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um membro de <see cref="T:System.Windows.TextDataFormat" /> que especifica o formato de dados de texto para recuperar.</param>
+        <summary>Retorna uma cadeia de caracteres que contém os dados de texto na Área de Transferência.</summary>
+        <returns>Uma cadeia de caracteres que contém dados de texto no formato de dados especificado ou uma cadeia de caracteres vazia se nenhum dado de texto correspondente estiver disponível.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrent">
+      <MemberSignature Language="C#" Value="public static bool IsCurrent (System.Windows.IDataObject data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsCurrent(class System.Windows.IDataObject data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.IsCurrent(System.Windows.IDataObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Windows.IDataObject" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um objeto de dados a ser comparado com o conteúdo da área de transferência do sistema.</param>
+        <summary>Compara a um objeto de dados especificado para o conteúdo da área de transferência.</summary>
+        <returns>
+          <see langword="true" />Se o objeto de dados especificado corresponde ao que está no sistema de área de transferência; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar se um objeto de dados que anteriormente era colocado na área de transferência ainda estiver presente e não modificado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso deste método.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdataobjectiscurrent)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdataobjectiscurrent)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Ocorreu um erro ao acessar a área de transferência. Os detalhes da exceção incluirão um <see langword="HResult" /> que identifica o erro específico, consulte <see cref="P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (byte[] audioBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(unsigned int8[] audioBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetAudio(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioBytes" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="audioBytes">Uma matriz de bytes que contém dados de áudio para armazenar na área de transferência.</param>
+        <summary>Armazena dados de áudio (<see cref="F:System.Windows.DataFormats.WaveAudio" /> formato de dados) na área de transferência.  Os dados de áudio são especificados como uma matriz de bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona dados com a conversão automática desabilitada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioBytes" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAudio">
+      <MemberSignature Language="C#" Value="public static void SetAudio (System.IO.Stream audioStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAudio(class System.IO.Stream audioStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetAudio(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="audioStream">Um fluxo que contém dados de áudio para armazenar na área de transferência.</param>
+        <summary>Armazena dados de áudio (<see cref="F:System.Windows.DataFormats.WaveAudio" /> formato de dados) na área de transferência.  Os dados de áudio são especificados como um fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona dados com a conversão automática desabilitada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="audioStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public static void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato a ser usado para armazenar os dados. Consulte a classe <see cref="T:System.Windows.DataFormats" /> para obter um conjunto de formatos de dados predefinidos.</param>
+        <param name="data">Um objeto que representa os dados a serem armazenados na Área de Transferência.</param>
+        <summary>Armazena os dados especificados na Área de Transferência no formato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona dados com a conversão automática habilitada se o formato de dados correspondente é <xref:System.Windows.DataFormats.FileDrop> ou <xref:System.Windows.DataFormats.Bitmap>.  Caso contrário, a conversão automática está desabilitada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso deste método.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdata)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdata)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetDataObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um objeto de dados (um objeto que implementa <see cref="T:System.Windows.IDataObject" />) para colocar na área de transferência do sistema.</param>
+        <summary>Insere um objeto de dados não persistentes especificado na área de transferência do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, os dados são colocados no sistema de área de transferência com <xref:System.Windows.Clipboard.SetDataObject%2A> será desmarcado automaticamente da área de transferência quando o aplicativo termina.  
+  
+> [!NOTE]
+>  O comportamento padrão de limpar a área de transferência na saída do aplicativo pode diferir em outras implementações, o que podem deixar os dados na área de transferência na saída do aplicativo em vez de limpá-lo por padrão.  Use o <xref:System.Windows.Clipboard.SetDataObject%2A> de sobrecarga e especifique o `copy` parâmetro como `true` se você não quiser que os dados limpos da área de transferência ao sair do aplicativo.  
+>   
+>  <xref:System.Windows.DataObject>Fornece uma implementação básica do <xref:System.Windows.IDataObject> interface.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Ocorreu um erro ao acessar a área de transferência. Os detalhes da exceção incluirão um <see langword="HResult" /> que identifica o erro específico, consulte <see cref="P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão acessar dados no sistema de área de transferência.  Enumeração associada: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataObject">
+      <MemberSignature Language="C#" Value="public static void SetDataObject (object data, bool copy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetDataObject(object data, bool copy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetDataObject(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="copy" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um objeto de dados (um objeto que implementa <see cref="T:System.Windows.IDataObject" />) para colocar na área de transferência do sistema.</param>
+        <param name="copy">
+          <see langword="true" />Para deixar os dados na área de transferência da sistema quando o aplicativo termina; <see langword="false" /> para limpar os dados do sistema de área de transferência quando o aplicativo será encerrado.</param>
+        <summary>Coloca um objeto de dados especificado na área de transferência do sistema e aceita um parâmetro booliano que indica se o objeto de dados deve ser deixado na área de transferência quando o aplicativo é encerrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DataObject>Fornece uma implementação básica do <xref:System.Windows.IDataObject> interface. <xref:System.Windows.Clipboard.IsCurrent%2A>Determina o objeto de dados previamente colocado na área de transferência por último <xref:System.Windows.Clipboard.SetDataObject%2A> chamar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso deste método.  
+  
+ [!code-csharp[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_setdataobjectiscurrent)]
+ [!code-vb[DragDrop_DragDropMiscCode#_SetDataObjectIsCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_setdataobjectiscurrent)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">Ocorreu um erro ao acessar a área de transferência.  Os detalhes da exceção incluirão um <see langword="HResult" /> que identifica o erro específico, consulte <see cref="P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão acessar dados no sistema de área de transferência.  Enumeração associada: **AllClipboard**.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFileDropList">
+      <MemberSignature Language="C#" Value="public static void SetFileDropList (System.Collections.Specialized.StringCollection fileDropList);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetFileDropList(class System.Collections.Specialized.StringCollection fileDropList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetFileDropList(System.Collections.Specialized.StringCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileDropList" Type="System.Collections.Specialized.StringCollection" />
+      </Parameters>
+      <Docs>
+        <param name="fileDropList">Uma coleção de cadeia de caracteres que contém a lista de arquivos ignorados para armazenar no objeto de dados.</param>
+        <summary>Armazena dados <see cref="F:System.Windows.DataFormats.FileDrop" /> na área de transferência.  A lista de arquivos ignorados é especificada como uma coleção de cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona dados com a conversão automática habilitada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileDropList" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="fileDropList" />contém zero cadeias de caracteres, ou o caminho completo para o arquivo especificado na lista não pode ser resolvido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetImage">
+      <MemberSignature Language="C#" Value="public static void SetImage (System.Windows.Media.Imaging.BitmapSource image);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetImage(class System.Windows.Media.Imaging.BitmapSource image) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetImage(System.Windows.Media.Imaging.BitmapSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="System.Windows.Media.Imaging.BitmapSource" />
+      </Parameters>
+      <Docs>
+        <param name="image">Um objeto <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que contém os dados de imagem a armazenar na Área de Transferência.</param>
+        <summary>Armazena dados <see cref="F:System.Windows.DataFormats.Bitmap" /> na área de transferência.  Os dados da imagem são especificados como um <see cref="T:System.Windows.Media.Imaging.BitmapSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um bitmap representa um gráfico de computador como uma matriz de bits na memória, e esses bits representam os atributos dos pixels individuais em uma imagem.  
+  
+ Este método adiciona dados com a conversão automática habilitada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres que contém os dados <see cref="F:System.Windows.DataFormats.UnicodeText" /> a serem armazenados na área de transferência.</param>
+        <summary>Armazena dados <see cref="F:System.Windows.DataFormats.UnicodeText" /> na área de transferência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse formato de dados indica o caractere de 16 bits codificado em Unicode, também conhecido como UTF-16 e UCS-2.  
+  
+ Este método adiciona dados com a conversão automática desabilitada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetText">
+      <MemberSignature Language="C#" Value="public static void SetText (string text, System.Windows.TextDataFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetText(string text, valuetype System.Windows.TextDataFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Clipboard.SetText(System.String,System.Windows.TextDataFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="format" Type="System.Windows.TextDataFormat" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres que contém os dados de texto a serem armazenados na área de transferência.</param>
+        <param name="format">Um membro de <see cref="T:System.Windows.TextDataFormat" /> que especifica o formato de dados de texto específicos para armazenar.</param>
+        <summary>Armazena dados de texto na área de transferência em um formato de dados de texto especificado.  Os dados <see cref="F:System.Windows.DataFormats.UnicodeText" /> a serem armazenados são especificados como uma cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona dados com a conversão automática desabilitada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

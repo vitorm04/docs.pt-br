@@ -1,0 +1,1789 @@
+<Type Name="ObjectList" FullName="System.Web.UI.MobileControls.ObjectList">
+  <TypeSignature Language="C#" Value="public class ObjectList : System.Web.UI.MobileControls.PagedControl, System.Web.UI.INamingContainer, System.Web.UI.IPostBackEventHandler, System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectList extends System.Web.UI.MobileControls.PagedControl implements class System.Web.UI.INamingContainer, class System.Web.UI.IPostBackEventHandler, class System.Web.UI.MobileControls.ITemplateable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ObjectList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.MobileControls.PagedControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.INamingContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.MobileControls.ITemplateable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ItemCommand")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("DataSource")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Web.UI.Design.MobileControls.ObjectListDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.MobileControls.ObjectListComponentEditor), typeof(System.ComponentModel.ComponentEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem("System.Web.UI.Design.WebControlToolboxItem, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.MobileControls.ObjectListControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.MobileControls.DesignerAdapter(typeof(System.Web.UI.Design.MobileControls.Adapters.DesignerObjectListAdapter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:ObjectList runat="server" LabelStyle-StyleReference="title" CommandStyle-StyleReference="subcommand"&gt;&lt;/{0}:ObjectList&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que você especifique vários campos para exibição, por item em uma lista de objetos. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Muito do comportamento de <xref:System.Web.UI.MobileControls.ObjectList>, incluindo suporte para renderização de modelo por meio de conjuntos de modelo do dispositivo e a paginação interna, que é semelhante ao comportamento do <xref:System.Web.UI.MobileControls.List>. Para obter mais informações, consulte o [Introdução ao controle ObjectList](http://msdn.microsoft.com/en-us/527ca783-0ff9-4247-b407-8e58d093faa9) ou [paginação](http://msdn.microsoft.com/en-us/b4f4c4bc-226b-46ec-ae46-00497a32f4f2) documentação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma matriz de uma classe definida pelo usuário e, em seguida, associá-lo para um <xref:System.Web.UI.MobileControls.ObjectList> objeto quando a página for carregada. Ele também mostra como os modos de exibição de lista e detalhes de exibem os comandos. Neste exemplo, há também um botão que exibe um formulário com uma lista de todos os campos usando a <xref:System.Web.UI.MobileControls.ObjectList.AllFields%2A> propriedade.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileObjectListSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileObjectListSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default.aspx#1)]  
+  
+ Este é um arquivo de Web. config de exemplo com vários filtros de dispositivo específico.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.UI.MobileControls.ObjectList" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">nenhuma.</param>
+        <summary>Notifica o controle de servidor que um elemento XML ou HTML, foi analisado e adiciona o elemento para o controle de servidor <see cref="P:System.Web.UI.Control.Controls" /> propriedade. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllFields">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.IObjectListFieldCollection AllFields { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.IObjectListFieldCollection AllFields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.AllFields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.IObjectListFieldCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a coleção de todos os campos da <see cref="T:System.Web.UI.MobileControls.ObjectList" /> classe se explícita ou gerado automaticamente. O valor padrão é a coleção de campos gerados automaticamente. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.MobileControls.IObjectListFieldCollection" /> objeto que contém todos os campos de <see cref="T:System.Web.UI.MobileControls.ObjectList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa coleção está disponível somente depois de associação de dados. Ao contrário de <xref:System.Web.UI.MobileControls.ObjectList.Fields%2A> coleção, você não pode adicionar ou remover itens na coleção. Por padrão, essa coleção é o conjunto de campos gerados automaticamente. Se todos os campos são definidos explicitamente, elas são contidas após todos os campos gerados automaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.ObjectList.AllFields%2A> propriedade para listar todos os campos do <xref:System.Web.UI.MobileControls.ObjectList>. Este exemplo é parte de um exemplo maior para o <xref:System.Web.UI.MobileControls.ObjectList> visão geral.  
+  
+ [!code-csharp[MobileObjectListSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default.aspx#2)]
+ [!code-vb[MobileObjectListSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateFields">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateFields { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateFields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.AutoGenerateFields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se os campos devem ser gerados automaticamente de dados. Quando habilitada, cada propriedade pública de dados torna-se um campo do controle. O valor padrão é <see langword="true" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se os campos gerados automaticamente de dados. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `true`, a lista de objeto controla a ordem de campos no <xref:System.Web.UI.MobileControls.ObjectListFieldCollection> coleção. Quando `false`, você deve especificar a ordem dos campos e definir o <xref:System.Web.UI.MobileControls.MobileListItem.DataItem%2A> propriedade para associar a uma fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.ObjectList.AutoGenerateFields%2A> propriedade para associar estaticamente os campos com seu coleta no modo de exibição de detalhes de um <xref:System.Web.UI.MobileControls.ObjectList> controle.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileObjectListSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default2.aspx#5)]
+ [!code-aspx-vb[MobileObjectListSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default2.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackCommandText">
+      <MemberSignature Language="C#" Value="public string BackCommandText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackCommandText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.BackCommandText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto usado para o comando para retornar a partir de <see langword="Details" /> exibição (acessada por meio de uma tecla de função ou um link). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O texto usado para o comando para retornar a partir de <see langword="Details" /> exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O texto padrão é "Voltar".  
+  
+> [!NOTE]
+>  Este rótulo é exibido em navegadores WAP e no modo de exibição HTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commands">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.MobileControls.ObjectListCommandCollection Commands { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListCommandCollection Commands" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.Commands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.MobileControls.CommandCollectionEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListCommandCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de comandos de <see cref="T:System.Web.UI.MobileControls.ObjectList" /> objeto. Inicialmente, a coleção está vazia. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A coleção de comandos na lista de objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Style CommandStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Style CommandStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.CommandStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo usado para os comandos de lista do objeto. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O estilo usado para os comandos de lista do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade é definida por meio de programação, ela não é persistente, a menos que a propriedade é definida dinamicamente em cada solicitação. Se a propriedade é definida declarativamente, a propriedade é definida em cada solicitação. Não há nenhum padrão.  
+  
+ Como diferentes dispositivos tem diferentes requisitos de estilos. Talvez você queira vários <xref:System.Web.UI.MobileControls.MobileControl.DeviceSpecific%2A> configurações para o <xref:System.Web.UI.MobileControls.ObjectList.CommandStyle%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.ObjectList.CommandStyle%2A> propriedade para definir o estilo de um <xref:System.Web.UI.MobileControls.ObjectList> usando um declarativa <xref:System.Web.UI.MobileControls.DeviceSpecific> seção para especificar diferentes <xref:System.Web.UI.MobileControls.ObjectList.CommandStyle%2A> configurações para diferentes dispositivos.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileObjectListSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default.aspx#1)]
+ [!code-aspx-vb[MobileObjectListSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default.aspx#1)]  
+  
+ Este é um arquivo de Web. config de exemplo com vários filtros de dispositivo específico.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateAutoGeneratedFields">
+      <MemberSignature Language="C#" Value="protected void CreateAutoGeneratedFields (System.Collections.IEnumerable dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CreateAutoGeneratedFields(class System.Collections.IEnumerable dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.CreateAutoGeneratedFields(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A origem especificada dos dados.</param>
+        <summary>Gera automaticamente os campos para os dados fornecidos. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica os controles de servidor para criar os controles filho em preparação para postagem ou processamento. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItem">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.MobileControls.ObjectListItem CreateItem (object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.MobileControls.ObjectListItem CreateItem(object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.CreateItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataItem">O item de lista para vincular.</param>
+        <summary>Cria um item de lista para conter o objeto e o associa ao objeto especificado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um item de lista do objeto criado a partir do objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de herança podem substituir este método para fornecer uma maneira diferente de criação de um item, ou podem chamar esse método para criar um item.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateItems">
+      <MemberSignature Language="C#" Value="protected virtual void CreateItems (System.Collections.IEnumerable dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CreateItems(class System.Collections.IEnumerable dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.CreateItems(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">A origem da qual os itens na coleção são criados.</param>
+        <summary>Cria os itens em uma coleção de itens especificado <paramref name="dataSource" /> parâmetro. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de herança pode substituir este método para o comportamento de associação de dados personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTemplatedItemDetails">
+      <MemberSignature Language="C#" Value="public void CreateTemplatedItemDetails (bool doDataBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateTemplatedItemDetails(bool doDataBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.CreateTemplatedItemDetails(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doDataBind" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doDataBind">Retorna <see langword="true" /> se os modelos instanciados associe a dados disponíveis (o que geralmente ocorre na primeira solicitação). Retorna <see langword="false" /> se os modelos devem não associar dados e em vez disso, contam com estado de exibição foram preenchidos (que geralmente ocorre em postagens subsequentes).</param>
+        <summary>Construções os detalhes da exibição para o item atual usando o <see langword="ItemDetailsTemplate" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado por adaptadores de dispositivo durante a renderização de modelos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTemplatedItemsList">
+      <MemberSignature Language="C#" Value="public void CreateTemplatedItemsList (bool doDataBind);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateTemplatedItemsList(bool doDataBind) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.CreateTemplatedItemsList(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doDataBind" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doDataBind">Retorna <see langword="true" /> se os modelos instanciados associe a dados disponíveis (o que geralmente ocorre na primeira solicitação). Retorna <see langword="false" /> se os modelos devem não associar dados e em vez disso, contam com estado de exibição foram preenchidos (que geralmente ocorre em postagens subsequentes).</param>
+        <summary>Constrói o modo de exibição de lista com a criação de modelos. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado por adaptadores de dispositivo durante a renderização de modelos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBind">
+      <MemberSignature Language="C#" Value="public override void DataBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBind() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.DataBind" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa uma fonte de dados para o <see cref="T:System.Web.UI.MobileControls.ObjectList" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public virtual string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.DataMemberConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o membro de dados para extrair quando a associação de dados para uma fonte de dados de lista. O valor padrão é uma cadeia de caracteres vazia (""). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O membro de dados para extrair os dados de origem quando a associação de dados para um <see cref="T:System.Web.UI.MobileControls.ObjectList" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada somente se o valor da <xref:System.Web.UI.MobileControls.ObjectList.DataSource%2A> é de propriedade do tipo <xref:System.ComponentModel.IListSource>, em vez do tipo <xref:System.Collections.IEnumerable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public virtual object DataSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte de dados da lista que está sendo associada. O valor padrão é null. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A fonte de dados da lista que está sendo associada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para vincular a uma fonte de dados a uma lista, primeiro você deve usar o controle <xref:System.Web.UI.MobileControls.ObjectList.DataBind%2A> método para garantir a associação de dados. A fonte de dados pode ser do tipo <xref:System.Collections.IEnumerable> ou do tipo <xref:System.ComponentModel.IListSource>. Se a fonte de dados é do tipo <xref:System.ComponentModel.IListSource>, você pode usar o <xref:System.Web.UI.MobileControls.ObjectList.DataMember%2A> campo para especificar qual membro deve extrair.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCommand">
+      <MemberSignature Language="C#" Value="public string DefaultCommand { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.DefaultCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.DefaultCommandConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do comando padrão. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O nome do comando padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando definido, o <xref:System.Web.UI.MobileControls.ObjectList> controle tenta processar um atalho para invocar o comando padrão. Em HTML, o processamento padrão na exibição de lista exibe o primeiro campo como um link para o modo de exibição de detalhes de <xref:System.Web.UI.MobileControls.ObjectList>. Quando o <xref:System.Web.UI.MobileControls.ObjectList.DefaultCommand%2A> estiver definida, clique no link invoca o comando padrão. Invocar o comando padrão gera o <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> evento. O <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> do <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs> objeto é definido como o valor da <xref:System.Web.UI.MobileControls.ObjectList.DefaultCommand%2A> propriedade.  
+  
+ Mesmo se um comando padrão for definido, você deve incluir um comando com o mesmo nome na coleção de comandos. Se o controle não pode processar um elemento gráfico que inclui um atalho para o comando padrão, o comando padrão ainda estará disponível por meio do processamento do <xref:System.Web.UI.MobileControls.ObjectList> coleção de comandos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Details">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Panel Details { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Panel Details" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.Details" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Panel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o painel que contém uma exibição de detalhes específicos do dispositivo. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um painel que contém um modo de exibição de detalhes específicos do dispositivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A exibição de detalhes possui uma tabela que lista cada título de campo e o valor. Além disso, ela lista todos os comandos associados a um item. Para alguns dispositivos, essa exibição também contém um link que retorna o usuário para o modo de exibição de lista.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">o modo de exibição atual não é o modo de exibição de detalhes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailsCommandText">
+      <MemberSignature Language="C#" Value="public string DetailsCommandText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DetailsCommandText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.DetailsCommandText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto usado para o item de menu que mostra a exibição de detalhes. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O texto usado para o item de menu que mostra a exibição de detalhes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tentar definir uma cadeia de caracteres que é maior do que podem ser exibidos, o valor padrão é exibido. O texto padrão é "Go".  
+  
+> [!NOTE]
+>  Este rótulo é exibido apenas em navegadores WAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureChildControls">
+      <MemberSignature Language="C#" Value="protected override void EnsureChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EnsureChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.EnsureChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determinará se o controle de servidor contiver controles filho. Se ele não contiver, ele criará controles filho. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureTemplatedUI">
+      <MemberSignature Language="C#" Value="public override void EnsureTemplatedUI ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnsureTemplatedUI() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.EnsureTemplatedUI" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Use esse método para garantir que os modelos são instanciados para permitir o acesso programático ao conteúdo de um modelo instanciado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fields">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.MobileControls.ObjectListFieldCollection Fields { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListFieldCollection Fields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.Fields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.MobileControls.FieldCollectionEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListFieldCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de campos definidos explicitamente o <see cref="T:System.Web.UI.MobileControls.ObjectListFieldCollection" /> classe. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A coleção de campos definidos explicitamente para o controle de lista do objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar ou remover campos da coleção usando o <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.Add%2A>, <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.AddAt%2A>, <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.Remove%2A>, e <xref:System.Web.UI.MobileControls.ObjectListFieldCollection.RemoveAt%2A> métodos de <xref:System.Web.UI.MobileControls.ObjectListFieldCollection> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasItemCommandHandler">
+      <MemberSignature Language="C#" Value="public bool HasItemCommandHandler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasItemCommandHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.HasItemCommandHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.MobileControls.ObjectList" /> controle tem um manipulador de eventos registrado para apropriada <see cref="E:System.Web.UI.MobileControls.ObjectList.ItemCommand" /> eventos. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>
+          <see langword="true" />Se o controle de lista do objeto tem um manipulador de eventos registrado para apropriada <see cref="E:System.Web.UI.MobileControls.ObjectList.ItemCommand" /> evento; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalItemCount">
+      <MemberSignature Language="C#" Value="protected override int InternalItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InternalItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.InternalItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens no controle. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>nenhuma.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCommand">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.ObjectListCommandEventHandler ItemCommand;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.ObjectListCommandEventHandler ItemCommand" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.ObjectList.ItemCommand" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListCommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário seleciona um comando que está associado com um <see cref="T:System.Web.UI.MobileControls.ObjectList" /> item. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> manipulador de eventos é definido, o <xref:System.Web.UI.MobileControls.ObjectList> notifica o manipulador quando um item de evento é gerado por meio da interação do usuário.  
+  
+ Quando você processa uma lista de objetos usando modelos, o <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> manipulador de eventos é chamado pelo mecanismo de propagação de eventos do ASP.NET. O manipulador de eventos é passado um argumento de tipo <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs>, que contém informações sobre o item de origem e o <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> propriedade do controle que gerou o evento. Isso permite processar um único item com várias interações associados.  
+  
+ No processamento padrão, o controle processa cada um dos comandos definidos para a lista de objetos, como um link. Quando o usuário clica em um link, o <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> manipulador de eventos é chamado com um argumento de tipo <xref:System.Web.UI.MobileControls.ObjectListCommandEventArgs>, que contém informações sobre o item de origem. O valor de <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> propriedade é o nome do comando que o usuário acionasse.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como interceptar o <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> evento. O <xref:System.Web.UI.WebControls.CommandEventArgs.CommandName%2A> propriedade especifica a ação para executar.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileObjectListSample#10](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default3.aspx#10)]
+ [!code-aspx-vb[MobileObjectListSample#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default3.aspx#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemDataBind">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.ObjectListDataBindEventHandler ItemDataBind;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.ObjectListDataBindEventHandler ItemDataBind" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.ObjectList.ItemDataBind" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListDataBindEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um item em uma <see cref="T:System.Web.UI.MobileControls.ObjectList" /> está associada aos dados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um item em uma <xref:System.Web.UI.MobileControls.ObjectList> é criado e associado a dados, esse manipulador de eventos define as propriedades do item da lista de expressões arbitrárias. Um item em uma <xref:System.Web.UI.MobileControls.ObjectList> controle é do tipo <xref:System.Web.UI.MobileControls.ObjectListItem>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Web.UI.MobileControls.ObjectList.ItemDataBind> eventos. Você pode usar o <xref:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.ListItem%2A> ou <xref:System.Web.UI.MobileControls.ObjectListDataBindEventArgs.DataItem%2A> propriedade o <xref:System.Web.UI.MobileControls.ObjectListDataBindEventArgs> coleção para determinar a ação. Este exemplo é parte de um exemplo maior para o <xref:System.Web.UI.MobileControls.ObjectList> visão geral.  
+  
+ [!code-csharp[MobileObjectListSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default.aspx#4)]
+ [!code-vb[MobileObjectListSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Items">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.MobileControls.ObjectListItemCollection Items { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListItemCollection Items" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.Items" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListItemCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de itens em uma <see cref="T:System.Web.UI.MobileControls.ObjectListItemCollection" /> lista. O valor padrão é uma coleção vazia. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A coleção de itens na lista de objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode inspecionar os itens a <xref:System.Web.UI.MobileControls.ObjectListItemCollection> coleção, mas não é possível modificar a coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemSelect">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.ObjectListSelectEventHandler ItemSelect;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.ObjectListSelectEventHandler ItemSelect" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.ObjectList.ItemSelect" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListSelectEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário seleciona um item em uma exibição de lista. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este evento é chamado antes do <xref:System.Web.UI.MobileControls.ObjectList.ShowItemCommands> é chamado de evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelField">
+      <MemberSignature Language="C#" Value="public string LabelField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LabelField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.LabelField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.Design.MobileControls.Converters.DataFieldConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor (o nome ou campo de dados) que identifica o campo a ser usado como um rótulo para cada item. O valor padrão é vazio, que faz com que o primeiro campo de <see cref="P:System.Web.UI.MobileControls.ObjectList.AllFields" /> coleção a ser usada como um rótulo para cada item. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O campo de dados ou o nome que identifica o campo a ser usado como um rótulo para cada item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade será ignorada se o modo de exibição de lista é mostrado como uma tabela.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código, consulte o exemplo em <xref:System.Web.UI.MobileControls.ObjectList?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelFieldIndex">
+      <MemberSignature Language="C#" Value="public int LabelFieldIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LabelFieldIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.LabelFieldIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice de <see cref="P:System.Web.UI.MobileControls.ObjectList.AllFields" /> coleção do campo que foi definido pelo <see cref="P:System.Web.UI.MobileControls.ObjectList.LabelField" /> propriedade. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O índice dentro de <see cref="P:System.Web.UI.MobileControls.ObjectList.AllFields" /> coleção do campo que é usado como o rótulo. O valor padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.MobileControls.ObjectList.LabelField%2A> propriedade não foi definida, <xref:System.Web.UI.MobileControls.ObjectList.LabelFieldIndex%2A> retorna zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LabelStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.Style LabelStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.Style LabelStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.LabelStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo usado para o rótulo de cabeçalho. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O estilo usado para o rótulo de cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo essa propriedade no código não é persistente entre as solicitações, portanto, se desejar que o estilo a ser definido de forma consistente, você deve definir a propriedade em cada solicitação. Se a propriedade é definida declarativamente, a propriedade é persistente entre as solicitações. Além disso, definir a propriedade declarativamente permite que você use um <xref:System.Web.UI.MobileControls.DeviceSpecific> / `Choice` estrutura para definir a propriedade para vários dispositivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPrivateViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadPrivateViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadPrivateViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.LoadPrivateViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">nenhuma.</param>
+        <summary>Carrega o estado de exibição particular. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">nenhuma.</param>
+        <summary>Restaura informações de estado de exibição de uma solicitação de página anterior salva pelo método <see cref="M:System.Web.UI.MobileControls.ObjectList.SaveViewState" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoreText">
+      <MemberSignature Language="C#" Value="public string MoreText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MoreText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.MoreText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de texto usada para o <see langword="More" /> link usado em navegadores HTML para navegar até a exibição de detalhes. O padrão é <see langword="More" /> ou o equivalente localizado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>A cadeia de caracteres de texto usada para o <see langword="More" /> link usado em navegadores HTML para navegar até a exibição de detalhes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `More` vínculo será renderizado para fornecer um link do `ListView` do <xref:System.Web.UI.MobileControls.ObjectList> para o `DetailsView` do <xref:System.Web.UI.MobileControls.ObjectList>. As seguintes condições devem ser atendidas para a `More` link a ser renderizado:  
+  
+-   O <xref:System.Web.UI.MobileControls.ObjectList.DefaultCommand%2A> propriedade deve ser definida.  
+  
+-   Deve haver campos adicionais ou comandos a serem renderizados na exibição de detalhes.  
+  
+ O processamento padrão da <xref:System.Web.UI.MobileControls.ObjectList> exibe o primeiro campo de `ListView` como um link para o `DetailsView` página. Definindo o <xref:System.Web.UI.MobileControls.ObjectList.DefaultCommand%2A> propriedade substitui esse link e faz com que ele acionar o <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> evento. Como resultado, o `More` vínculo será renderizado para fornecer um link para o `DetailsView`.  
+  
+> [!NOTE]
+>  Essa propriedade não é igual a <xref:System.Web.UI.MobileControls.ObjectList.DetailsCommandText%2A> propriedade, que é usada em navegadores WAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">nenhuma.</param>
+        <param name="e">nenhuma.</param>
+        <summary>Determina se o evento do controle de servidor é passado um nível acima da hierarquia de controle de servidor da interface do usuário da página. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>nenhuma.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBinding">
+      <MemberSignature Language="C#" Value="protected override void OnDataBinding (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBinding(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnDataBinding(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.DataBinding" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método notifica um controle de servidor para executar qualquer lógica de associação de dados que está associados ele.  
+  
+ Se você desejar tratar o <xref:System.Web.UI.Control.DataBinding> evento, você deve substituir esse método de manipulação de eventos. Isso garante que todos os delegados anexado para o <xref:System.Web.UI.Control.DataBinding> evento são invocados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">a fonte de dados não fornecido nenhum dado para associar a.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemCommand (System.Web.UI.MobileControls.ObjectListCommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemCommand(class System.Web.UI.MobileControls.ObjectListCommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnItemCommand(System.Web.UI.MobileControls.ObjectListCommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.ObjectListCommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto (definido por <see cref="T:System.Web.UI.MobileControls.ObjectListCommandEventArgs" />) que contém dados do evento.</param>
+        <summary>Chamado quando um item de lista gera um evento como resultado da interação do usuário. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A padrão implementação gera o <xref:System.Web.UI.MobileControls.ObjectList.ItemCommand> evento. Classes de herança pode substituir este método para executar outras tarefas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemDataBind">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemDataBind (System.Web.UI.MobileControls.ObjectListDataBindEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemDataBind(class System.Web.UI.MobileControls.ObjectListDataBindEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnItemDataBind(System.Web.UI.MobileControls.ObjectListDataBindEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.ObjectListDataBindEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto (definido por <see cref="T:System.Web.UI.MobileControls.ObjectListDataBindEventArgs" />) que contém dados do evento.</param>
+        <summary>Chamado quando um item de lista está associado a dados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A padrão implementação gera o <xref:System.Web.UI.MobileControls.ObjectList.ItemDataBind> evento. Classes de herança pode substituir este método para executar outras tarefas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemSelect">
+      <MemberSignature Language="C#" Value="protected virtual void OnItemSelect (System.Web.UI.MobileControls.ObjectListSelectEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnItemSelect(class System.Web.UI.MobileControls.ObjectListSelectEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnItemSelect(System.Web.UI.MobileControls.ObjectListSelectEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.ObjectListSelectEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.Web.UI.MobileControls.ObjectListSelectEventArgs" /> que contém dados do evento.</param>
+        <summary>Chamado depois que o usuário seleciona um item. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A padrão implementação gera o <xref:System.Web.UI.MobileControls.ObjectList.ItemSelect> evento. Classes de herança pode substituir este método para recuperar os dados necessários.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoadItems">
+      <MemberSignature Language="C#" Value="protected override void OnLoadItems (System.Web.UI.MobileControls.LoadItemsEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLoadItems(class System.Web.UI.MobileControls.LoadItemsEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnLoadItems(System.Web.UI.MobileControls.LoadItemsEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.LoadItemsEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">nenhuma.</param>
+        <summary>Chamado quando o controle for personalizado paginado e precisa de mais dados. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">nenhuma.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnShowItemCommands">
+      <MemberSignature Language="C#" Value="protected virtual void OnShowItemCommands (System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnShowItemCommands(class System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.OnShowItemCommands(System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.MobileControls.ObjectListShowCommandsEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto definido por um <see cref="T:System.EventArgs" /> objeto que contém dados do evento.</param>
+        <summary>Chamado antes de mostrar o conjunto de comandos para um item de lista. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A padrão implementação gera o <xref:System.Web.UI.MobileControls.ObjectList.ShowItemCommands> evento. Classes de herança pode substituir este método para executar outras tarefas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreShowItemCommands">
+      <MemberSignature Language="C#" Value="public void PreShowItemCommands (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PreShowItemCommands(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.PreShowItemCommands(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">A referência de índice do item.</param>
+        <summary>Prepara o conjunto de comandos para um item especificado antes de mostrá-lo, chamando os manipuladores de evento que podem ser definidos no <see cref="E:System.Web.UI.MobileControls.ObjectList.ShowItemCommands" /> evento. Chamado internamente pelo ASP.NET. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usaria esse método apenas durante a gravação de novos adaptadores de dispositivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseDefaultItemEvent">
+      <MemberSignature Language="C#" Value="public void RaiseDefaultItemEvent (int itemIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RaiseDefaultItemEvent(int32 itemIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.RaiseDefaultItemEvent(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">A referência de índice do item.</param>
+        <summary>Chamado para gerar um evento para o comando padrão associado ao item especificado. Chamado internamente pelo ASP.NET. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado por adaptadores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Um <see cref="T:System.String" /> que representa um argumento opcional de eventos que será passado para o manipulador de eventos.</param>
+        <summary>Notifica o <see cref="T:System.Web.UI.MobileControls.ObjectList" /> objeto de um evento de postback. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SavePrivateViewState">
+      <MemberSignature Language="C#" Value="protected override object SavePrivateViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SavePrivateViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.SavePrivateViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações de estado de exibição privadas que ocorreram desde que a página foi carregada de persistência. Se nenhuma alteração foi feita, este método retorna <see langword="null" /> (<see langword="Nothing" /> no Visual Basic). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>nenhuma.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva alterações de estado de exibição do controle de servidor que ocorreram desde a hora em que ocorreu o postback da página no servidor. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>nenhuma.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o índice do item selecionado. O valor padrão é <see langword="-1" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O índice do item selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há suporte para várias seleções. Defina essa propriedade como `-1` para limpar a seleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">foi feita uma tentativa para limpar esta propriedade enquanto o <see cref="P:System.Web.UI.MobileControls.ObjectList.ViewMode" /> propriedade não foi definida para <see cref="F:System.Web.UI.MobileControls.ObjectListViewMode.List" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">o valor é menor que zero ou maior que ou igual ao número de itens na lista.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Selection">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListItem Selection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.MobileControls.ObjectListItem Selection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.Selection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o item selecionado ou <see langword="null" /> se não houver nenhuma seleção. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O item selecionado ou <see langword="null" /> se não houver nenhuma seleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não há suporte para várias seleções.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectListItem">
+      <MemberSignature Language="C#" Value="public bool SelectListItem (int itemIndex, bool selectMore);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SelectListItem(int32 itemIndex, bool selectMore) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.SelectListItem(System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="selectMore" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">Especifica o item para testar.</param>
+        <param name="selectMore">Contém <see langword="true" /> se mais de um item pode ser selecionado. Caso contrário, ele contém <see langword="false" />.</param>
+        <summary>Testa se um item em uma <see cref="T:System.Web.UI.MobileControls.ObjectList" /> está selecionado. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o item está selecionada. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMoreCommand">
+      <MemberSignature Language="C#" Value="public static string SelectMoreCommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SelectMoreCommand" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.SelectMoreCommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o texto usado para o comando para selecionar mais itens em um <see cref="T:System.Web.UI.MobileControls.ObjectList" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>O texto usado para o comando para selecionar mais itens em uma lista de objetos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowItemCommands">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.MobileControls.ObjectListShowCommandsEventHandler ShowItemCommands;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.MobileControls.ObjectListShowCommandsEventHandler ShowItemCommands" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.MobileControls.ObjectList.ShowItemCommands" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListShowCommandsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes dos comandos relacionados a um item em uma <see cref="T:System.Web.UI.MobileControls.ObjectList" /> são mostradas. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O argumento do evento contém uma referência para o item e a coleção de comandos. Um manipulador de eventos pode personalizar a coleta de acordo com o item. Os aplicativos podem usar o <xref:System.Web.UI.MobileControls.ObjectList.ShowItemCommands> evento para fornecer funcionalidade de menus de atalho equivalente a item específico. As alterações feitas na coleção de comandos durante esse evento não são persistentes.  
+  
+ Esse evento é chamado após o <xref:System.Web.UI.MobileControls.ObjectList.ItemSelect> é chamado de evento. Você pode usar esse evento para realizar outras tarefas antes de mostrar o modo de exibição de detalhes. Você pode adicionar, remover ou reorganizar os campos, dependendo do item selecionado na exibição de lista.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.MobileControls.ObjectList.ShowItemCommands> evento para remover um item do <xref:System.Web.UI.MobileControls.ObjectListCommandCollection> da exibição de detalhes de um <xref:System.Web.UI.MobileControls.ObjectList>. Para remover o item é selecionado na exibição de lista.  
+  
+> [!NOTE]
+>  O exemplo de código a seguir usa o modelo de código de arquivo único e pode não funcionar corretamente se copiados diretamente para um arquivo code-behind. Este exemplo de código deve ser copiado para um arquivo de texto vazio que tem uma extensão. aspx. Para obter mais informações, consulte [o modelo de código de página do ASP.NET Web Forms](http://msdn.microsoft.com/library/81b13e7a-b95b-4285-906f-d2dd77411417).  
+  
+ [!code-aspx-csharp[MobileObjectListSample#10](~/samples/snippets/csharp/VS_Snippets_WebNet/MobileObjectListSample/cs/Default3.aspx#10)]
+ [!code-aspx-vb[MobileObjectListSample#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MobileObjectListSample/vb/Default3.aspx#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">O argumento do evento opcional a ser passado para o manipulador de eventos.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.MobileControls.ObjectList> é convertida em uma interface de <xref:System.Web.UI.IPostBackEventHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableFieldIndices">
+      <MemberSignature Language="C#" Value="public int[] TableFieldIndices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] TableFieldIndices" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.TableFieldIndices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de índices dentro de <see cref="P:System.Web.UI.MobileControls.ObjectList.AllFields" /> coleção de campos a <see cref="P:System.Web.UI.MobileControls.ObjectList.TableFields" /> propriedade. O valor padrão é <see langword="null" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Uma matriz de inteiros que representa os índices do <see cref="P:System.Web.UI.MobileControls.ObjectList.AllFields" /> coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.UI.MobileControls.ObjectList> controle não foi associado a uma fonte de dados ou nenhum item foi adicionado, o <xref:System.Web.UI.MobileControls.ObjectList.TableFieldIndices%2A> propriedade retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableFields">
+      <MemberSignature Language="C#" Value="public string TableFields { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TableFields" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.TableFields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Web.UI.Design.MobileControls.TableFieldsEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define quais campos são visíveis quando a exibição de lista é mostrada no modo de tabela. O valor padrão é uma cadeia de caracteres vazia (""). Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Uma lista separada por ponto-e-vírgula de campos a ser exibida quando o modo de exibição de lista é mostrado no modo de tabela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cadeia de caracteres deve ser um conjunto de identificadores, separada por ponto e vírgula. Cada identificador indica que o campo de dados ou o nome do campo que será exibido. Por padrão, o modo de exibição de lista nunca é mostrado no modo de tabela, a menos que essa propriedade não está vazia.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código completo, consulte o exemplo para o <xref:System.Web.UI.MobileControls.ObjectList> visão geral.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.MobileControls.ObjectList.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Causa o acompanhamento das alterações de estado de exibição para o controle de servidor, para que elas possam ser armazenadas no objeto <see cref="T:System.Web.UI.StateBag" /> do controle de servidor. Esse objeto é acessível por meio da propriedade <see cref="P:System.Web.UI.Control.ViewState" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.MobileControls.ObjectListViewMode ViewMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.MobileControls.ObjectListViewMode ViewMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.MobileControls.ObjectList.ViewMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ObjectListViewMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de exibição de um <see cref="T:System.Web.UI.MobileControls.ObjectList" />. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <value>Um <see cref="T:System.Web.UI.MobileControls.ObjectListViewMode" /> valor que representa o modo de exibição da lista de objetos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As seguintes opções estão disponíveis para essa propriedade através de <xref:System.Web.UI.MobileControls.ObjectListViewMode> enumeração.  
+  
+|Nome do Membro|Descrição|  
+|-----------------|-----------------|  
+|<xref:System.Web.UI.MobileControls.ObjectListViewMode.List>|Esta é a exibição padrão exibida quando a página que contém a lista de objetos é renderizada pela primeira vez. Consiste em campos de rótulo dos itens, ou se o <xref:System.Web.UI.MobileControls.ObjectList.TableFields%2A> propriedade não está vazia, uma tabela com colunas correspondentes para os campos de tabela e as linhas para os itens. Em HTML, essa exibição é combinada com o modo de comandos, com os comandos que aparecem como hiperlinks abaixo da lista. Quando há mais informações na exibição de detalhes, um hiperlink para cada item exibindo a exibição de detalhes é processado.|  
+|<xref:System.Web.UI.MobileControls.ObjectListViewMode.Details>|Em HTML, essa exibição é combinada com o modo de comandos, com os comandos que aparecem como hiperlinks abaixo os detalhes.|  
+|<xref:System.Web.UI.MobileControls.ObjectListViewMode.Commands>|Essa exibição é processada separadamente somente para dispositivos WML. Ele consiste em um menu com os comandos do <xref:System.Web.UI.MobileControls.ObjectList>. Para dispositivos HTML, o modo de exibição de lista e a exibição de detalhes são cada combinados com esse modo de exibição, com os comandos que aparecem como hiperlinks abaixo os detalhes ou lista.|  
+  
+> [!NOTE]
+>  Para definir essa propriedade no código, um item na lista deve ser selecionado antes de definir essa propriedade como <xref:System.Web.UI.MobileControls.ObjectListViewMode.Commands> ou <xref:System.Web.UI.MobileControls.ObjectListViewMode.Details> exibição. Tentativa de definir a propriedade antes de selecionar um item gera uma exceção.  
+  
+ Um modo de exibição é mantido em um estado de exibição particular, assim que, independentemente se o <xref:System.Web.UI.Control.EnableViewState%2A> propriedade o <xref:System.Web.UI.MobileControls.ObjectList> objeto é `true`, o modo de exibição é mantido como um campo particular. No entanto, se o <xref:System.Web.UI.Control.EnableViewState%2A> é de propriedade `false`, a coleção de itens não é persistente entre as solicitações, exigindo uma ligação de dados a ser repetido para cada solicitação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Foi feita uma tentativa de definir esta propriedade como um valor diferente de <see cref="F:System.Web.UI.MobileControls.ObjectListViewMode.List" /> enquanto nenhum item foi selecionado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2191 @@
+<Type Name="XmlSerializer" FullName="System.Xml.Serialization.XmlSerializer">
+  <TypeSignature Language="C#" Value="public class XmlSerializer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlSerializer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlSerializer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serializa e desserializa objetos de e para documentos XML. O <see cref="T:System.Xml.Serialization.XmlSerializer" /> permite controlar como os objetos são codificados em XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serialização de XML é o processo de conversão de campos e propriedades públicas de um objeto em um formato serial (nesse caso, XML) para armazenamento e transporte. Desserialização recria o objeto em seu estado original da saída XML. Você pode pensar serialização como uma maneira de salvar o estado de um objeto em um fluxo ou um buffer. Por exemplo, o ASP.NET usa a <xref:System.Xml.Serialization.XmlSerializer> classe para codificar mensagens do serviço da Web em XML.  
+  
+ Os dados em seus objetos são descritos com o uso de construções de linguagem de programação, como classes, campos, propriedades, tipos primitivos, matrizes e até mesmo XML inserido na forma de objetos <xref:System.Xml.XmlElement> ou <xref:System.Xml.XmlAttribute>. Você tem a opção de criar suas próprias classes anotados com atributos ou usando o [ferramenta de definição de esquema XML (Xsd.exe)](http://msdn.microsoft.com/en-us/a6e6e65c-347f-4494-9457-653bf29baac2) para gerar as classes com base em um documento XSD (definição) de esquema XML existente. Se você tiver um esquema XML, você pode executar o Xsd.exe para produzir um conjunto de classes que são de tipo forte para o esquema e anotado com atributos de acordo com o esquema quando serializado.  
+  
+ Para transferir dados entre objetos e XML requer um mapeamento das construções de linguagem de programação para o esquema XML e de esquema XML para as construções de linguagem de programação. O <xref:System.Xml.Serialization.XmlSerializer> e ferramentas relacionadas como Xsd.exe fornecem a ponte entre essas duas tecnologias em tanto tempo de design e tempo de execução. Em tempo de design, use o Xsd.exe para produzir um documento de esquema XML (. xsd) de suas classes personalizadas ou para gerar classes de um determinado esquema. Em ambos os casos, as classes são anotadas com atributos personalizados para instruir o <xref:System.Xml.Serialization.XmlSerializer> como mapear entre o sistema de esquema XML e o common language runtime. Em tempo de execução, as instâncias das classes podem ser serializadas em documentos XML que seguem o esquema fornecido. Da mesma forma, esses documentos XML podem ser desserializados em objetos de tempo de execução. Observe que o esquema XML é opcional e não é necessária no tempo de design ou tempo de execução.  
+  
+## <a name="controlling-generated-xml"></a>Controlando o XML gerado  
+ Para controlar o XML gerado, você pode aplicar atributos especiais para classes e membros. Por exemplo, para especificar um nome diferente do elemento XML, aplicar um <xref:System.Xml.Serialization.XmlElementAttribute> para um campo público ou propriedade e conjunto de <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> propriedade. Para obter uma lista completa de atributos semelhantes, consulte [atributos que controle a serialização XML](http://msdn.microsoft.com/en-us/414b820f-a696-4206-b576-2711d85490c7). Você também pode implementar o <xref:System.Xml.Serialization.IXmlSerializable> interface para controlar a saída XML.  
+  
+ Se o XML gerado deve estar de acordo com a seção 5 do documento World Wide Consortium (www.w3.org), "Simple Object Access Protocol (SOAP) 1.1", você deve construir o <xref:System.Xml.Serialization.XmlSerializer> com um <xref:System.Xml.Serialization.XmlTypeMapping>. Para obter mais controle XML codificado em SOAP, use os atributos listados no [atributos que controle codificado serialização SOAP](http://msdn.microsoft.com/en-us/93ee258c-9c0f-4a08-897c-c10db7a00f91).  
+  
+ Com o <xref:System.Xml.Serialization.XmlSerializer> você pode tirar proveito de trabalhar com classes digitadas e ainda tem a flexibilidade de XML. Usando campos ou propriedades de tipo <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute> ou <xref:System.Xml.XmlNode> em suas classes com rigidez de tipos, você pode ler partes do documento XML diretamente em objetos XML.  
+  
+ Se você trabalhar com os esquemas XML extensíveis, você também pode usar o <xref:System.Xml.Serialization.XmlAnyElementAttribute> e <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> atributos para serializar e desserializar elementos ou atributos que não são encontrados no esquema original. Para usar os objetos, aplicar um <xref:System.Xml.Serialization.XmlAnyElementAttribute> para um campo que retorna uma matriz de <xref:System.Xml.XmlElement> objetos ou aplicar um <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> para um campo que retorna uma matriz de <xref:System.Xml.XmlAttribute> objetos.  
+  
+ Se uma propriedade ou um campo retornar um objeto complexo (como uma matriz ou uma instância da classe), <xref:System.Xml.Serialization.XmlSerializer> o converterá em elemento aninhado dentro do documento XML principal. Por exemplo, a primeira classe no código a seguir retorna uma instância da classe de segundo.  
+  
+```vb  
+Public Class MyClass  
+    Public MyObjectProperty As MyObject  
+End Class  
+  
+Public Class MyObject  
+    Public ObjectName As String  
+End Class  
+```  
+  
+```csharp  
+public class MyClass  
+{  
+    public MyObject MyObjectProperty;  
+}  
+public class MyObject  
+{  
+    public string ObjectName;  
+}  
+```  
+  
+ O serializado, saída XML tem esta aparência:  
+  
+```  
+<MyClass>  
+  <MyObjectProperty>  
+  <ObjectName>My String</ObjectName>  
+  </MyObjectProperty>  
+</MyClass>  
+```  
+  
+ Se um esquema inclui um elemento que é opcional (minOccurs = '0'), ou se o esquema inclui um valor padrão, você tem duas opções. Uma opção é usar <xref:System.ComponentModel.DefaultValueAttribute?displayProperty=nameWithType> para especificar o valor padrão, conforme mostrado no código a seguir.  
+  
+```vb  
+Public Class PurchaseOrder  
+    <System.ComponentModel.DefaultValueAttribute ("2002")> _  
+    Public Year As String  
+End Class  
+```  
+  
+```csharp  
+public class PurchaseOrder  
+{  
+    [System.ComponentModel.DefaultValueAttribute ("2002")]  
+    public string Year;  
+}  
+```  
+  
+ Outra opção é usar um padrão especial para criar um campo booleano reconhecido pelo <xref:System.Xml.Serialization.XmlSerializer>e aplicar o <xref:System.Xml.Serialization.XmlIgnoreAttribute> ao campo. O padrão é criado na forma de `propertyNameSpecified`. Por exemplo, se houver um campo chamado "MyFirstName", você também deve criar um campo chamado "MyFirstNameSpecified" que instrui o <xref:System.Xml.Serialization.XmlSerializer> se deseja gerar o elemento XML chamado "MyFirstName". Isso é mostrado no exemplo a seguir.  
+  
+```vb  
+Public Class OptionalOrder  
+    ' This field's value should not be serialized   
+    ' if it is uninitialized.  
+    Public FirstOrder As String  
+  
+    ' Use the XmlIgnoreAttribute to ignore the   
+    ' special field named "FirstOrderSpecified".  
+    <System.Xml.Serialization.XmlIgnoreAttribute> _  
+    Public FirstOrderSpecified As Boolean  
+End Class  
+```  
+  
+```csharp  
+public class OptionalOrder  
+{  
+    // This field should not be serialized   
+    // if it is uninitialized.  
+    public string FirstOrder;  
+  
+    // Use the XmlIgnoreAttribute to ignore the   
+    // special field named "FirstOrderSpecified".  
+    [System.Xml.Serialization.XmlIgnoreAttribute]  
+    public bool FirstOrderSpecified;  
+}  
+```  
+  
+## <a name="overriding-default-serialization"></a>Substituir a serialização padrão  
+ Você também pode substituir a serialização de qualquer conjunto de objetos e suas propriedades e campos criando um dos atributos apropriados e adicioná-la a uma instância do <xref:System.Xml.Serialization.XmlAttributes> classe. Substituir a serialização dessa maneira tem dois usos: primeiro, você pode controlar e aumentar a serialização de objetos encontrados em uma DLL, mesmo se você não tiver acesso à fonte de; em seguida, você pode criar um conjunto de classes serializáveis, mas serializar os objetos de várias maneiras. Para obter mais detalhes, consulte o <xref:System.Xml.Serialization.XmlAttributeOverrides> classe e [como: serialização de controle de Classes derivadas de](http://msdn.microsoft.com/en-us/caa92596-9e15-4d91-acbe-56911ef47a84).  
+  
+ Para serializar um objeto, chame o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método. Para desserializar um objeto, chame o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método.  
+  
+ Para adicionar namespaces XML para um documento XML, consulte <xref:System.Xml.Serialization.XmlSerializerNamespaces>.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> fornece tratamento especial para as classes que implementam <xref:System.Collections.IEnumerable> ou <xref:System.Collections.ICollection>. Uma classe que implementa <xref:System.Collections.IEnumerable> deve implementar um método `Add` público que aceita um único parâmetro. O `Add` parâmetro do método deve ser do mesmo tipo que é retornado o `Current` o valor retornado da propriedade `GetEnumerator`, ou uma das bases de dados do tipo. Uma classe que implementa <xref:System.Collections.ICollection> (como <xref:System.Collections.CollectionBase>) além <xref:System.Collections.IEnumerable> deve ter um `Item` indexado propriedade (indexador em c#) que utiliza um número inteiro, e ele deve ter um público `Count` propriedade do tipo inteiro. O parâmetro para o `Add` método deve ser do mesmo tipo que é retornado a partir de `Item` propriedade ou uma das bases de dados do tipo. Para classes que implementam <xref:System.Collections.ICollection>, valores a serem serializados são recuperados do indexada `Item` propriedade não chamando `GetEnumerator`.  
+  
+ Você deve ter permissão para gravar no diretório temporário (conforme definido pela variável de ambiente TEMP) desserializar um objeto.  
+  
+## <a name="dynamically-generated-assemblies"></a>Assemblies gerados dinamicamente  
+ Para aumentar o desempenho, a infraestrutura de serialização XML gera dinamicamente os assemblies para serializar e desserializar os tipos especificados. A infraestrutura localiza e reutiliza os assemblies. Esse comportamento ocorre apenas ao usar construtores a seguir:  
+  
+ <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%29?displayProperty=nameWithType>  
+  
+ <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
+  
+ Se você usar qualquer um dos outros construtores, várias versões do mesmo assembly são geradas e nunca descarregadas, que resulta em um vazamento de memória e um baixo desempenho. A solução mais fácil é usar um dos dois construtores mencionados anteriormente. Caso contrário, você deve armazenar em cache os assemblies em um <xref:System.Collections.Hashtable>, conforme mostrado no exemplo a seguir.  
+  
+```csharp  
+Hashtable serializers = new Hashtable();  
+  
+// Use the constructor that takes a type and XmlRootAttribute.  
+XmlSerializer s = new XmlSerializer(typeof(MyClass), myRoot);  
+  
+// Implement a method named GenerateKey that creates unique keys   
+// for each instance of the XmlSerializer. The code should take   
+// into account all parameters passed to the XmlSerializer   
+// constructor.  
+object key = GenerateKey(typeof(MyClass), myRoot);  
+  
+// Check the local cache for a matching serializer.  
+XmlSerializer ser = (XmlSerializer)serializers[key];  
+if (ser == null)   
+{  
+    ser = new XmlSerializer(typeof(MyClass), myRoot);  
+    // Cache the serializer.  
+    serializers[key] = ser;  
+}  
+else  
+{  
+    // Use the serializer to serialize, or deserialize.  
+}  
+```  
+  
+```vb  
+Dim serializers As New Hashtable()  
+  
+' Use the constructor that takes a type and XmlRootAttribute.  
+Dim s As New XmlSerializer(GetType([MyClass]), myRoot)  
+  
+' Implement a method named GenerateKey that creates unique keys   
+' for each instance of the XmlSerializer. The code should take   
+' into account all parameters passed to the XmlSerializer   
+' constructor.  
+Dim key As Object = GenerateKey(GetType([MyClass]), myRoot)  
+  
+' Check the local cache for a matching serializer.  
+Dim ser As XmlSerializer = CType(serializers(key), XmlSerializer)  
+  
+If ser Is Nothing Then  
+    ser = New XmlSerializer(GetType([MyClass]), myRoot)  
+    ' Cache the serializer.  
+    serializers(key) = ser  
+Else   
+    ' Use the serializer to serialize, or deserialize.  
+End If  
+```  
+  
+## <a name="serialization-of-arraylist-and-generic-list"></a>Serialização ArrayList e lista genérica  
+ O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar ou desserializar o seguinte:  
+  
+-   Matrizes de<xref:System.Collections.ArrayList>  
+  
+-   Matrizes de<xref:System.Collections.Generic.List%601>  
+  
+## <a name="serialization-of-enumerations-of-unsigned-long"></a>Serialização de enumerações do tempo Unsigned  
+ O <xref:System.Xml.Serialization.XmlSerializer> não pode ser instanciado para serializar uma enumeração, se as seguintes condições forem verdadeiras: A enumeração é do tipo unsigned long (`ulong` em c#) e a enumeração contém qualquer membro com um valor maior que 9.223.372.036.854.775.807. Por exemplo, a seguir não pode ser serializado.  
+  
+```  
+public enum LargeNumbers: ulong  
+{  
+    a = 9223372036854775808  
+}  
+// At runtime, the following code will fail.  
+xmlSerializer mySerializer=new XmlSerializer(typeof(LargeNumbers));  
+```  
+  
+## <a name="objects-marked-with-the-obsolete-attribute-no-longer-serialized"></a>Objetos marcados com o atributo obsoleto não serializado  
+ No [!INCLUDE[netfx35_short](~/includes/netfx35-short-md.md)] o <xref:System.Xml.Serialization.XmlSerializer> classe não serializa objetos marcados como `[Obsolete]`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir contém duas classes principais: `PurchaseOrder` e `Test`. O `PurchaseOrder` classe contém informações sobre uma compra único. O `Test` classe contém métodos que criar a ordem de compra e que ler a ordem de compra criada.  
+  
+ [!code-cpp[Classic XmlSerializer Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+    <altmember cref="T:System.Xml.Serialization.XmlAttributeOverrides" />
+    <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+    <altmember cref="T:System.Xml.Serialization.XmlSerializer" />
+    <altmember cref="P:System.Xml.Serialization.XmlAttributes.XmlText" />
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlSerializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto que este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode serializar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> que pode serializar objetos do tipo especificado em documentos XML e desserializar documentos XML em objetos de um tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um aplicativo define várias classes que o <xref:System.Xml.Serialization.XmlSerializer> converte em um único documento de instância XML. No entanto, o <xref:System.Xml.Serialization.XmlSerializer> deve saber apenas um tipo – o tipo da classe que representa o elemento raiz XML. O <xref:System.Xml.Serialization.XmlSerializer> serializa automaticamente todas as instâncias de classe subordinada. Da mesma forma, somente o tipo do elemento raiz XML é necessário para desserialização.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir constrói um <xref:System.Xml.Serialization.XmlSerializer> que serializa um objeto chamado `Widget`. O exemplo define várias propriedades do objeto antes de chamar o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método.  
+  
+ [!code-cpp[Classic XmlSerializer.XmlSerializer6 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer6 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.XmlSerializer6 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer6 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.XmlSerializer6 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer6 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <altmember cref="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)" />
+        <altmember cref="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.IO.Stream)" />
+        <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (System.Xml.Serialization.XmlTypeMapping xmlTypeMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlTypeMapping xmlTypeMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Xml.Serialization.XmlTypeMapping)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlTypeMapping" Type="System.Xml.Serialization.XmlTypeMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlTypeMapping">Um <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> que mapeia um tipo para outro.</param>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> usando um objeto que mapeia um tipo para outro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é usado para criar um <xref:System.Xml.Serialization.XmlSerializer> ao serializar um objeto em uma mensagem SOAP. Para controlar as mensagens SOAP geradas, use os atributos especiais (começando com a palavra "Soap") encontrados no <xref:System.Xml.Serialization> namespace.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Group`. A serialização do `GroupName`, `IgnoreThis` campos e os membros do `GroupType` enumeração são substituídas. No `CreateOverrideSerializer` método, uma <xref:System.Xml.Serialization.SoapAttributeOverrides> objeto é criado e para cada membro substituído ou de enumeração, uma <xref:System.Xml.Serialization.SoapAttributes> objeto é criado com a propriedade apropriada definido e adicionados ao <xref:System.Xml.Serialization.SoapAttributeOverrides> objeto. Um <xref:System.Xml.Serialization.XmlMapping> objeto é criado usando o <xref:System.Xml.Serialization.SoapAttributeOverrides> objeto e que <xref:System.Xml.Serialization.XmlMapping> objeto é usado para criar o <xref:System.Xml.Serialization.XmlSerializer> que substitui a serialização padrão.  
+  
+ [!code-cpp[SoapAttributesOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributesOverrides/CPP/soapover.cpp#1)]
+ [!code-csharp[SoapAttributesOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributesOverrides/CS/soapover.cs#1)]
+ [!code-vb[SoapAttributesOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributesOverrides/VB/SoapOver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type, string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto que este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode serializar.</param>
+        <param name="defaultNamespace">O namespace padrão a ser usado para todos os elementos XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> que pode serializar objetos do tipo especificado em documentos XML e desserializar documentos XML em objetos de um tipo especificado. Especifica o namespace padrão para todos os elementos XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir constrói um <xref:System.Xml.Serialization.XmlSerializer> que serializa um objeto chamado `Widget`. O exemplo define várias propriedades do objeto antes de chamar o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método.  
+  
+ [!code-cpp[Classic XmlSerializer.XmlSerializer1 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.XmlSerializer1 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer1 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.XmlSerializer1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type, Type[] extraTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Type[] extraTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type,System.Type[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="extraTypes" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto que este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode serializar.</param>
+        <param name="extraTypes">Uma matriz <see cref="T:System.Type" /> de tipos de objeto adicionais a serem serializados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> que pode serializar objetos do tipo especificado em documentos XML e desserializar documentos XML em um objeto de um tipo especificado. Se uma propriedade ou um campo retornar uma matriz, o parâmetro <paramref name="extraTypes" /> especificará os objetos que podem ser inseridos na matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, se um campo ou propriedade pública retorna um objeto, ou uma matriz de objetos, os tipos de objeto automaticamente são serializados. No entanto, se uma classe contém um campo ou propriedade que retorna uma matriz do tipo <xref:System.Object>, qualquer objeto pode ser inserido nessa matriz. Nesse caso, o <xref:System.Xml.Serialization.XmlSerializer> deve ser instruído a espera que todos os tipos de objeto possíveis que são inseridos a <xref:System.Object> matriz. Para fazer isso, use o `extraTypes` parâmetro para especificar os tipos de objeto extra para serializar ou desserializar.  
+  
+ Você também pode usar o `extraTypes` para especificar os tipos derivados de uma classe base. Por exemplo, suponha que uma classe base chamada `Phone` existir e uma classe denominada `InternationalPhone` dele derivado. Use o `extraTypes` parâmetro para especificar o tipo derivado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma instância de uma classe que contém um campo público que retorna uma matriz de objetos. O `extraTypes` parâmetro o <xref:System.Xml.Serialization.XmlSerializer> construtor Especifica os tipos de objetos que podem ser serializados na matriz.  
+  
+ [!code-cpp[Classic XmlSerializer.XmlSerializer3 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.XmlSerializer3 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer3 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.XmlSerializer3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type, System.Xml.Serialization.XmlAttributeOverrides overrides);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Xml.Serialization.XmlAttributeOverrides overrides) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type,System.Xml.Serialization.XmlAttributeOverrides)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="overrides" Type="System.Xml.Serialization.XmlAttributeOverrides" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto a serializar.</param>
+        <param name="overrides">Um <see cref="T:System.Xml.Serialization.XmlAttributeOverrides" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> que pode serializar objetos do tipo especificado em documentos XML e desserializar documentos XML em objetos de um tipo especificado. Cada objeto a ser serializado pode, ele mesmo, conter instâncias de classes, que essa sobrecarga pode substituir por outras classes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `overrides` parâmetro pode ser usado para controlar como os campos e propriedades são codificadas em XML. Essas configurações substituem todos os atributos que já existem nos objetos. Isso pode ser útil quando o código-fonte não pode ser modificado ou várias codificações são necessárias para as mesmas classes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma instância de uma classe que é definido em uma DLL e para fazer isso, substituirá os membros públicos encontrados na DLL.  
+  
+ [!code-cpp[Classic XmlSerializer.XmlSerializer4 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer4 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.XmlSerializer4 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer4 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.XmlSerializer4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type, System.Xml.Serialization.XmlRootAttribute root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Xml.Serialization.XmlRootAttribute root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type,System.Xml.Serialization.XmlRootAttribute)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="root" Type="System.Xml.Serialization.XmlRootAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto que este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode serializar.</param>
+        <param name="root">Um <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> que representa o elemento raiz de XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> que pode serializar objetos do tipo especificado em documentos XML e desserializar um documento XML no objeto do tipo especificado. Também especifica a classe a ser usado como o elemento raiz de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento raiz de um documento XML inclui todos os outros elementos. Por padrão, o objeto especificado pelo `type` parâmetro é serializado como o elemento raiz. Propriedades, como o nome do elemento XML do elemento raiz, são tiradas de `type` objeto. No entanto, o `root` parâmetro permite que você substitua as informações do objeto padrão especificando um <xref:System.Xml.Serialization.XmlRootAttribute>; o objeto permite que você defina um namespace diferente, o nome do elemento e assim por diante.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir constrói um <xref:System.Xml.Serialization.XmlSerializer> que usa um <xref:System.Xml.Serialization.XmlRootAttribute> que contém várias propriedades do elemento raiz XML, como seu nome de namespace e o elemento.  
+  
+ [!code-cpp[Classic XmlSerializer.XmlSerializer2 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.XmlSerializer2 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer2 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.XmlSerializer2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type, System.Xml.Serialization.XmlAttributeOverrides overrides, Type[] extraTypes, System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Xml.Serialization.XmlAttributeOverrides overrides, class System.Type[] extraTypes, class System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type,System.Xml.Serialization.XmlAttributeOverrides,System.Type[],System.Xml.Serialization.XmlRootAttribute,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="overrides" Type="System.Xml.Serialization.XmlAttributeOverrides" />
+        <Parameter Name="extraTypes" Type="System.Type[]" />
+        <Parameter Name="root" Type="System.Xml.Serialization.XmlRootAttribute" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto que este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode serializar.</param>
+        <param name="overrides">Um <see cref="T:System.Xml.Serialization.XmlAttributeOverrides" /> que estende ou substitui o comportamento da classe especificada no <c>tipo</c> parâmetro.</param>
+        <param name="extraTypes">Uma matriz <see cref="T:System.Type" /> de tipos de objeto adicionais a serem serializados.</param>
+        <param name="root">Um <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> que define as propriedades do elemento raiz XML.</param>
+        <param name="defaultNamespace">O namespace padrão de todos os elementos XML no documento XML.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> que pode serializar objetos do tipo <see cref="T:System.Object" /> em instâncias de documentos XML e desserializar instâncias de documentos XML em objetos do tipo <see cref="T:System.Object" />. Cada objeto a ser serializado pode conter instâncias de classes, que essa sobrecarga substitui por outras classes. Essa sobrecarga também especifica o namespace padrão para todos os elementos XML e a classe a ser usada como o elemento raiz XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `overrides` parâmetro permite a criação de um [construtor XmlSerializer (, XmlAttributeOverrides, tipo\<xref:System.Xml.Serialization.XmlSerializer > que serializa uma classe que estende ou substitui o comportamento de um classe base. Por exemplo, dada uma DLL, é possível criar uma classe que herda ou estende uma classe contida na DLL. Para serializar dessa classe, você deve usar uma instância da [construtor XmlSerializer (, XmlAttributeOverrides, tipo\<xref:System.Xml.Serialization.XmlAttributeOverrides > classe ao construir [construtor XmlSerializer ( Tipo de tipo, XmlAttributeOverrides,\<xref:System.Xml.Serialization.XmlSerializer >. Para obter mais detalhes, consulte [construtor XmlSerializer (tipo de tipo, XmlAttributeOverrides,\<xref:System.Xml.Serialization.XmlAttributeOverrides >.  
+  
+ Por padrão, se um campo ou propriedade pública retorna um objeto, ou uma matriz de objetos, os tipos de objeto automaticamente são serializados. No entanto, se uma classe contém um campo ou propriedade que retorna uma matriz do tipo [construtor XmlSerializer (tipo de tipo, XmlAttributeOverrides,\<xref:System.Object >, qualquer objeto pode ser inserido nessa matriz. Nesse caso, o [construtor XmlSerializer (tipo de tipo, XmlAttributeOverrides,\<xref:System.Xml.Serialization.XmlSerializer > deve ser instruído a espera que todos os tipos de objeto possíveis que são inseridos em [XmlSerializer Construtor (tipo de tipo, XmlAttributeOverrides,\<xref:System.Object > matriz. Para fazer isso, use o `extraTypes` parâmetro para especificar os tipos de objeto extra para serializar ou desserializar.  
+  
+ O elemento raiz de um documento XML inclui todos os outros elementos. Por padrão, o objeto especificado pelo `type` parâmetro é serializado como o elemento raiz. Propriedades, como o nome do elemento XML do elemento raiz são tiradas de `type` objeto. No entanto, o `root` parâmetro permite que você substitua as informações do objeto padrão especificando um [construtor XmlSerializer (Type, XmlAttributeOverrides, tipo\<xref:System.Xml.Serialization.XmlRootAttribute >; o objeto permite que você defina um namespace diferente, o nome do elemento e assim por diante.  
+  
+ Use o `defaultName` parâmetro para especificar o namespace padrão de todos os elementos XML gerados pelo [construtor XmlSerializer (, XmlAttributeOverrides, tipo\<xref:System.Xml.Serialization.XmlSerializer >.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma instância de uma classe que é definido em uma DLL e para fazer isso, substituirá os membros públicos localizados na classe. O exemplo também especifica uma matriz de tipos extras, o namespace padrão para todos os elementos XML e a classe usar que fornece as informações de elemento raiz XML. O exemplo supõe que o código no início tiver sido compilado em uma DLL denominada `HighSchool`.  
+  
+ [!code-cpp[Classic XmlSerializer.XmlSerializer Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.XmlSerializer Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.XmlSerializer Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.XmlSerializer Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type, System.Xml.Serialization.XmlAttributeOverrides overrides, Type[] extraTypes, System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace, string location);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Xml.Serialization.XmlAttributeOverrides overrides, class System.Type[] extraTypes, class System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace, string location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type,System.Xml.Serialization.XmlAttributeOverrides,System.Type[],System.Xml.Serialization.XmlRootAttribute,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="overrides" Type="System.Xml.Serialization.XmlAttributeOverrides" />
+        <Parameter Name="extraTypes" Type="System.Type[]" />
+        <Parameter Name="root" Type="System.Xml.Serialization.XmlRootAttribute" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+        <Parameter Name="location" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto que este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode serializar.</param>
+        <param name="overrides">Um <see cref="T:System.Xml.Serialization.XmlAttributeOverrides" /> que estende ou substitui o comportamento da classe especificada no <c>tipo</c> parâmetro.</param>
+        <param name="extraTypes">Uma matriz <see cref="T:System.Type" /> de tipos de objeto adicionais a serem serializados.</param>
+        <param name="root">Um <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> que define as propriedades do elemento raiz XML.</param>
+        <param name="defaultNamespace">O namespace padrão de todos os elementos XML no documento XML.</param>
+        <param name="location">O local dos tipos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" /> que pode serializar objetos do tipo <see cref="T:System.Object" /> em instâncias de documentos XML e desserializar instâncias de documentos XML em objetos do tipo <see cref="T:System.Object" />. Cada objeto a ser serializado pode conter instâncias de classes, que essa sobrecarga substitui por outras classes. Essa sobrecarga também especifica o namespace padrão para todos os elementos XML e a classe a ser usada como o elemento raiz XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlSerializer (Type type, System.Xml.Serialization.XmlAttributeOverrides overrides, Type[] extraTypes, System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace, string location, System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Xml.Serialization.XmlAttributeOverrides overrides, class System.Type[] extraTypes, class System.Xml.Serialization.XmlRootAttribute root, string defaultNamespace, string location, class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type,System.Xml.Serialization.XmlAttributeOverrides,System.Type[],System.Xml.Serialization.XmlRootAttribute,System.String,System.String,System.Security.Policy.Evidence)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete and will be removed in a future release of the .NET Framework. Please use a XmlSerializer constructor overload which does not take an Evidence parameter. See http://go2.microsoft.com/fwlink/?LinkId=131738 for more information.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="overrides" Type="System.Xml.Serialization.XmlAttributeOverrides" />
+        <Parameter Name="extraTypes" Type="System.Type[]" />
+        <Parameter Name="root" Type="System.Xml.Serialization.XmlRootAttribute" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+        <Parameter Name="location" Type="System.String" />
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto que este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode serializar.</param>
+        <param name="overrides">Um <see cref="T:System.Xml.Serialization.XmlAttributeOverrides" /> que estende ou substitui o comportamento da classe especificada no <c>tipo</c> parâmetro.</param>
+        <param name="extraTypes">Uma matriz <see cref="T:System.Type" /> de tipos de objeto adicionais a serem serializados.</param>
+        <param name="root">Um <see cref="T:System.Xml.Serialization.XmlRootAttribute" /> que define as propriedades do elemento raiz XML.</param>
+        <param name="defaultNamespace">O namespace padrão de todos os elementos XML no documento XML.</param>
+        <param name="location">O local dos tipos.</param>
+        <param name="evidence">Uma instância do <see cref="T:System.Security.Policy.Evidence" /> classe que contém as credenciais necessárias para acessar os tipos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.XmlSerializer" /> classe que pode serializar objetos do tipo especificado em instâncias do documento XML e desserializar instâncias de documento XML em objetos do tipo especificado. Essa sobrecarga permite que você forneça outros tipos que podem ser encontrados durante uma operação de serialização ou desserialização, bem como um namespace padrão para todos os elementos XML, a classe a ser usado como o elemento raiz XML, seu local e as credenciais necessárias para acesso .</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite um controle mais preciso sobre o acesso a um diretório temporário e impede a exploração e injeção de código. Para usar esse método, especifique um local e dar acesso somente a usuários específicos. Os administradores podem configurar políticas com listas de evidência que correspondem a evidência para permissões.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanDeserialize">
+      <MemberSignature Language="C#" Value="public virtual bool CanDeserialize (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanDeserialize(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.CanDeserialize(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Um <see cref="T:System.Xml.XmlReader" /> que aponta para o documento a ser desserializado.</param>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Xml.Serialization.XmlSerializer" /> pode desserializar um documento XML especificado.</summary>
+        <returns>
+          <see langword="true" /> se este <see cref="T:System.Xml.Serialization.XmlSerializer" /> puder desserializar o objeto ao qual o <see cref="T:System.Xml.XmlReader" /> aponta, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.Xml.Serialization.XmlSerializer.CanDeserialize%2A> método para verificar se um documento XML pode ser desserializado.  
+  
+ [!code-cpp[Classic XmlSerializer.CanDeserialize Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.CanDeserialize Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.CanDeserialize Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.CanDeserialize Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.CanDeserialize Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.CanDeserialize Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReader">
+      <MemberSignature Language="C#" Value="protected virtual System.Xml.Serialization.XmlSerializationReader CreateReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xml.Serialization.XmlSerializationReader CreateReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.CreateReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializationReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um objeto usado para ler o documento XML a ser serializado.</summary>
+        <returns>Um <see cref="T:System.Xml.Serialization.XmlSerializationReader" /> usado para ler o documento XML.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Qualquer tentativa de acessar o método será feita quando ele não for substituído em uma classe descendente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWriter">
+      <MemberSignature Language="C#" Value="protected virtual System.Xml.Serialization.XmlSerializationWriter CreateWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Xml.Serialization.XmlSerializationWriter CreateWriter() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.CreateWriter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializationWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, retorna um gravador usado para serializar o objeto.</summary>
+        <returns>Uma instância que implementa o <see cref="T:System.Xml.Serialization.XmlSerializationWriter" /> classe.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Qualquer tentativa de acessar o método será feita quando ele não for substituído em uma classe descendente.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Deserialize">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Desserializa um documento XML.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O <see cref="T:System.IO.Stream" /> que contém o documento XML a ser desserializado.</param>
+        <summary>Desserializa o documento XML contido pelo <see cref="T:System.IO.Stream" /> especificado.</summary>
+        <returns>O <see cref="T:System.Object" /> que está sendo desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desserialização é o processo de ler um documento XML e construir um objeto que terá rigidez de tipos para o esquema XML (XSD) do documento.  
+  
+ Antes de desserializá, um <xref:System.Xml.Serialization.XmlSerializer> deve ser criada usando o tipo do objeto que está sendo desserializado.  
+  
+ Use o `stream` parâmetro para especificar um objeto que deriva de <xref:System.IO.Stream> classe, que é projetado para gravar fluxos. Classes que derivam de <xref:System.IO.Stream> classe incluem:  
+  
+-   <xref:System.IO.BufferedStream>  
+  
+-   <xref:System.IO.FileStream>  
+  
+-   <xref:System.IO.MemoryStream>  
+  
+-   <xref:System.Net.Sockets.NetworkStream>  
+  
+-   <xref:System.Security.Cryptography.CryptoStream>  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível desserializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir desserializa um objeto usando um <xref:System.IO.Stream> objeto.  
+  
+ [!code-cpp[Classic XmlSerializer.Deserialize Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Deserialize Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Deserialize Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize Example/VB/source.vb#1)]
+ [!code-xml[Classic XmlSerializer.Deserialize Example#1](~/samples/snippets/common/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize Example/Common/simple.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.IO.TextReader textReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.IO.TextReader textReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.IO.TextReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textReader" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="textReader">O <see cref="T:System.IO.TextReader" /> que contém o documento XML a ser desserializado.</param>
+        <summary>Desserializa o documento XML contido pelo <see cref="T:System.IO.TextReader" /> especificado.</summary>
+        <returns>O <see cref="T:System.Object" /> que está sendo desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desserialização é o processo de leitura de uma instância de um documento XML e construir um objeto que terá rigidez de tipos para o esquema XML (XSD) do documento.  
+  
+ Antes de desserializá, um <xref:System.Xml.Serialization.XmlSerializer> deve ser criada usando o tipo do objeto que está sendo desserializado.  
+  
+ Classes que herdam de <xref:System.IO.TextReader> incluem <xref:System.IO.StringReader> e <xref:System.IO.StreamReader>. Se você estiver usando um <xref:System.IO.StreamReader> para desserializar um objeto, você deve construir o <xref:System.IO.StreamReader> com um número apropriado <xref:System.Text.Encoding>. A codificação especificada pelo documento XML será ignorada.  
+  
+> [!NOTE]
+>  Para usar a codificação especificada pelo documento XML, use o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> sobrecarga que utiliza um <xref:System.Xml.XmlReader> em vez disso. O <xref:System.Xml.XmlReader> automaticamente detecta e usa a codificação especificada pelo documento XML.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível desserializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir desserializa um objeto usando um <xref:System.IO.TextReader> objeto.  
+  
+ [!code-cpp[Classic XmlSerializer.Deserialize1 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Deserialize1 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize1 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Deserialize1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a desserialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+        <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+        <altmember cref="M:System.Xml.Serialization.XmlSerializer.CanDeserialize(System.Xml.XmlReader)" />
+        <altmember cref="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="protected virtual object Deserialize (System.Xml.Serialization.XmlSerializationReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance object Deserialize(class System.Xml.Serialization.XmlSerializationReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.Xml.Serialization.XmlSerializationReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.Serialization.XmlSerializationReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.Serialization.XmlSerializationReader" /> que contém o documento XML a ser desserializado.</param>
+        <summary>Desserializa o documento XML contido pelo <see cref="T:System.Xml.Serialization.XmlSerializationReader" /> especificado.</summary>
+        <returns>O objeto desserializado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Qualquer tentativa de acessar o método será feita quando ele não for substituído em uma classe descendente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.Xml.XmlReader xmlReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.Xml.XmlReader xmlReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> que contém o documento XML a ser desserializado.</param>
+        <summary>Desserializa o documento XML contido pelo <see cref="T:System.Xml.XmlReader" /> especificado.</summary>
+        <returns>O <see cref="T:System.Object" /> que está sendo desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desserialização é o processo de leitura de uma instância de um documento XML e construir um objeto que terá rigidez de tipos para o esquema XML (XSD) do documento.  
+  
+ Antes de desserializá, um <xref:System.Xml.Serialization.XmlSerializer> deve ser criada usando o tipo do objeto que está sendo desserializado.  
+  
+ O <xref:System.Xml.XmlReader> automaticamente detecta e usa a codificação especificada pelo documento XML.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível desserializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir desserializa um objeto usando um <xref:System.Xml.XmlReader>.  
+  
+ [!code-cpp[Classic XmlSerializer.Deserialize2 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Deserialize2 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize2 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Deserialize2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize2 Example/VB/source.vb#1)]
+ [!code-xml[Classic XmlSerializer.Deserialize2 Example#1](~/samples/snippets/common/VS_Snippets_Remoting/Classic XmlSerializer.Deserialize2 Example/Common/simple.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a desserialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.Xml.XmlReader xmlReader, string encodingStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.Xml.XmlReader xmlReader, string encodingStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.Xml.XmlReader,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="encodingStyle" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> que contém o documento XML a ser desserializado.</param>
+        <param name="encodingStyle">O estilo de codificação do XML serializado.</param>
+        <summary>Desserializa o documento XML contido pelo <see cref="T:System.Xml.XmlReader" /> e estilo de codificação especificados.</summary>
+        <returns>O objeto desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desserialização é o processo de leitura de uma instância de um documento XML e construir um objeto que terá rigidez de tipos para o esquema XML (XSD) do documento.  
+  
+ Antes de desserializá, um <xref:System.Xml.Serialization.XmlSerializer> deve ser criada usando o tipo do objeto que está sendo desserializado.  
+  
+ Definir o `encodingStyle` parâmetro para "http://schemas.xmlsoap.org/soap/encoding/" para a codificação do SOAP 1.1 de versão; Caso contrário, defina-o para "http://www.w3.org/2001/12/soap-encoding" para a codificação do SOAP versão 1.2.  
+  
+ **Observação** o <xref:System.Xml.Serialization.XmlSerializer> não é possível desserializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a desserialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.Xml.XmlReader xmlReader, System.Xml.Serialization.XmlDeserializationEvents events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.Xml.XmlReader xmlReader, valuetype System.Xml.Serialization.XmlDeserializationEvents events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.Xml.XmlReader,System.Xml.Serialization.XmlDeserializationEvents)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="events" Type="System.Xml.Serialization.XmlDeserializationEvents" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">O <see cref="T:System.Xml.XmlReader" /> que contém o documento a ser desserializado.</param>
+        <param name="events">Uma instância da classe <see cref="T:System.Xml.Serialization.XmlDeserializationEvents" />.</param>
+        <summary>Desserializa um documento XML contido pelo <see cref="T:System.Xml.XmlReader" /> especificado e permite a substituição de eventos que ocorrem durante a desserialização.</summary>
+        <returns>O <see cref="T:System.Object" /> que está sendo desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto que está sendo desserializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (System.Xml.XmlReader xmlReader, string encodingStyle, System.Xml.Serialization.XmlDeserializationEvents events);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Deserialize(class System.Xml.XmlReader xmlReader, string encodingStyle, valuetype System.Xml.Serialization.XmlDeserializationEvents events) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.Xml.XmlReader,System.String,System.Xml.Serialization.XmlDeserializationEvents)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="encodingStyle" Type="System.String" />
+        <Parameter Name="events" Type="System.Xml.Serialization.XmlDeserializationEvents" />
+      </Parameters>
+      <Docs>
+        <param name="xmlReader">Uma instância da classe <see cref="T:System.Xml.XmlReader" /> usada para ler o documento.</param>
+        <param name="encodingStyle">A codificação usada.</param>
+        <param name="events">Uma instância da classe <see cref="T:System.Xml.Serialization.XmlDeserializationEvents" />.</param>
+        <summary>Desserializa o objeto usando os dados contidos pelo <see cref="T:System.Xml.XmlReader" /> especificado.</summary>
+        <returns>O objeto que está sendo desserializado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é necessário para desserialização de cabeçalhos desconhecidos para cenários de serviço da Web somente. Esse método permite evitar a sincronização de evento nos métodos de serviço Web.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromMappings">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna uma instância do <see cref="T:System.Xml.Serialization.XmlSerializer" /> classe a partir de mapeamentos especificados.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromMappings">
+      <MemberSignature Language="C#" Value="public static System.Xml.Serialization.XmlSerializer[] FromMappings (System.Xml.Serialization.XmlMapping[] mappings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Serialization.XmlSerializer[] FromMappings(class System.Xml.Serialization.XmlMapping[] mappings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.FromMappings(System.Xml.Serialization.XmlMapping[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappings" Type="System.Xml.Serialization.XmlMapping[]" />
+      </Parameters>
+      <Docs>
+        <param name="mappings">Uma matriz de <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> que mapeia um tipo para outro.</param>
+        <summary>Retorna uma matriz de <see cref="T:System.Xml.Serialization.XmlSerializer" /> objetos criados a partir de uma matriz de <see cref="T:System.Xml.Serialization.XmlTypeMapping" /> objetos.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Xml.Serialization.XmlSerializer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromMappings">
+      <MemberSignature Language="C#" Value="public static System.Xml.Serialization.XmlSerializer[] FromMappings (System.Xml.Serialization.XmlMapping[] mappings, System.Security.Policy.Evidence evidence);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Serialization.XmlSerializer[] FromMappings(class System.Xml.Serialization.XmlMapping[] mappings, class System.Security.Policy.Evidence evidence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.FromMappings(System.Xml.Serialization.XmlMapping[],System.Security.Policy.Evidence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method is obsolete and will be removed in a future release of the .NET Framework. Please use an overload of FromMappings which does not take an Evidence parameter. See http://go2.microsoft.com/fwlink/?LinkId=131738 for more information.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappings" Type="System.Xml.Serialization.XmlMapping[]" />
+        <Parameter Name="evidence" Type="System.Security.Policy.Evidence" />
+      </Parameters>
+      <Docs>
+        <param name="mappings">Uma matriz de <see cref="T:System.Xml.Serialization.XmlMapping" /> objetos usados para mapear um tipo para outro.</param>
+        <param name="evidence">Uma instância do <see cref="T:System.Security.Policy.Evidence" /> classe que contém dados de host e o assembly apresentados para o sistema de diretiva de tempo de execução de linguagem comum.</param>
+        <summary>Retorna uma instância do <see cref="T:System.Xml.Serialization.XmlSerializer" /> classe criada a partir de mapeamentos de um tipo XML para outro.</summary>
+        <returns>Uma instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromMappings">
+      <MemberSignature Language="C#" Value="public static System.Xml.Serialization.XmlSerializer[] FromMappings (System.Xml.Serialization.XmlMapping[] mappings, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Serialization.XmlSerializer[] FromMappings(class System.Xml.Serialization.XmlMapping[] mappings, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.FromMappings(System.Xml.Serialization.XmlMapping[],System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mappings" Type="System.Xml.Serialization.XmlMapping[]" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="mappings">Uma matriz de objetos de <see cref="T:System.Xml.Serialization.XmlMapping" />.</param>
+        <param name="type">O <see cref="T:System.Type" /> do objeto desserializado.</param>
+        <summary>Retorna uma instância do <see cref="T:System.Xml.Serialization.XmlSerializer" /> classe a partir de mapeamentos especificados.</summary>
+        <returns>Uma instância da classe <see cref="T:System.Xml.Serialization.XmlSerializer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromTypes">
+      <MemberSignature Language="C#" Value="public static System.Xml.Serialization.XmlSerializer[] FromTypes (Type[] types);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.Serialization.XmlSerializer[] FromTypes(class System.Type[] types) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.FromTypes(System.Type[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSerializer[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="types">Uma matriz de objetos de <see cref="T:System.Type" />.</param>
+        <summary>Retorna uma matriz de objetos <see cref="T:System.Xml.Serialization.XmlSerializer" /> criados com base em uma matriz de tipos.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Xml.Serialization.XmlSerializer" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlSerializer.FromTypes%2A> método permite a criação eficiente de uma matriz de <xref:System.Xml.Serialization.XmlSerializer> objetos para o processamento de uma matriz de <xref:System.Type> objetos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Xml.Serialization.XmlSerializer.FromTypes%2A> método para retornar uma matriz de <xref:System.Xml.Serialization.XmlSerializer> objetos. O código inclui três definições de classe que cada um são usadas para criar uma matriz de <xref:System.Type> objetos.  
+  
+ [!code-cpp[Classic XmlSerializer.FromTypes Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.FromTypes Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.FromTypes Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.FromTypes Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.FromTypes Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.FromTypes Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GenerateSerializer">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um conjunto que contém os serializadores digitadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ferramenta XML Serializer Generator (Sgen.exe)](~/docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md) cria um assembly de serialização de XML para tipos em um assembly especificado para melhorar o desempenho de tempo de execução de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos do tipos especificados. Use o <xref:System.Xml.Serialization.XmlSerializer.GetXmlSerializerAssemblyName%2A> para retornar o nome de um assembly.  
+  
+ Se você estiver distribuindo um assembly como parte de um aplicativo cliente que chama um serviço Web, você pode aplicar o <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> para o tipo de cliente para especificar o local e o nome do assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GenerateSerializer">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Assembly GenerateSerializer (Type[] types, System.Xml.Serialization.XmlMapping[] mappings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Assembly GenerateSerializer(class System.Type[] types, class System.Xml.Serialization.XmlMapping[] mappings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.GenerateSerializer(System.Type[],System.Xml.Serialization.XmlMapping[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="mappings" Type="System.Xml.Serialization.XmlMapping[]" />
+      </Parameters>
+      <Docs>
+        <param name="types">Uma coleção de tipos.</param>
+        <param name="mappings">Uma coleção de <see cref="T:System.Xml.Serialization.XmlMapping" /> objetos usados para converter um tipo para outro.</param>
+        <summary>Retorna um conjunto que contém os serializadores personalizados usados para serializar ou desserializar o tipo especificado ou tipos, usando os mapeamentos especificados.</summary>
+        <returns>Um <see cref="T:System.Reflection.Assembly" /> objeto que contém os serializadores para os tipos fornecidos e mapeamentos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSerializer">
+      <MemberSignature Language="C#" Value="public static System.Reflection.Assembly GenerateSerializer (Type[] types, System.Xml.Serialization.XmlMapping[] mappings, System.CodeDom.Compiler.CompilerParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Reflection.Assembly GenerateSerializer(class System.Type[] types, class System.Xml.Serialization.XmlMapping[] mappings, class System.CodeDom.Compiler.CompilerParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.GenerateSerializer(System.Type[],System.Xml.Serialization.XmlMapping[],System.CodeDom.Compiler.CompilerParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Assembly</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="types" Type="System.Type[]" />
+        <Parameter Name="mappings" Type="System.Xml.Serialization.XmlMapping[]" />
+        <Parameter Name="parameters" Type="System.CodeDom.Compiler.CompilerParameters" />
+      </Parameters>
+      <Docs>
+        <param name="types">Uma matriz do tipo <see cref="T:System.Type" /> que contém objetos usados para serializar e desserializar dados.</param>
+        <param name="mappings">Uma matriz do tipo <see cref="T:System.Xml.Serialization.XmlMapping" /> que mapeia os dados XML para os dados de tipo.</param>
+        <param name="parameters">Uma instância do <see cref="T:System.CodeDom.Compiler.CompilerParameters" /> a classe que representa os parâmetros usados para chamar um compilador.</param>
+        <summary>Retorna um conjunto que contém os serializadores personalizados usados para serializar ou desserializar o tipo especificado ou tipos, usando as configurações do compilador e opções e mapeamentos especificados.</summary>
+        <returns>Um <see cref="T:System.Reflection.Assembly" /> que contém versões especiais do <see cref="T:System.Xml.Serialization.XmlSerializer" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetXmlSerializerAssemblyName">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna o nome do assembly que contém uma ou mais versões do <see cref="T:System.Xml.Serialization.XmlSerializer" /> criado especialmente para serializar ou desserializar tipos específicos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ferramenta XML Serializer Generator (Sgen.exe)](~/docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md) cria um assembly de serialização de XML para tipos em um assembly especificado para melhorar o desempenho de tempo de execução de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos do tipos especificados. Use o <xref:System.Xml.Serialization.XmlSerializer.GetXmlSerializerAssemblyName%2A> para retornar o nome de um assembly.  
+  
+ Se você estiver distribuindo um assembly como parte de um aplicativo cliente que chama um serviço Web, você pode aplicar o <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> para o tipo de cliente para especificar o local e o nome do assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetXmlSerializerAssemblyName">
+      <MemberSignature Language="C#" Value="public static string GetXmlSerializerAssemblyName (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetXmlSerializerAssemblyName(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.GetXmlSerializerAssemblyName(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> são desserialização.</param>
+        <summary>Retorna o nome do assembly que contém uma ou mais versões do <see cref="T:System.Xml.Serialization.XmlSerializer" /> criado especialmente para serializar ou desserializar o tipo especificado.</summary>
+        <returns>O nome do assembly que contém um <see cref="T:System.Xml.Serialization.XmlSerializer" /> para o tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ferramenta XML Serializer Generator (Sgen.exe)](~/docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md) cria um assembly de serialização de XML para tipos em um assembly especificado para melhorar o desempenho de tempo de execução de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos do tipos especificados. Use o <xref:System.Xml.Serialization.XmlSerializer.GetXmlSerializerAssemblyName%2A> para retornar o nome de um assembly.  
+  
+ Se você estiver distribuindo um assembly como parte de um aplicativo cliente que chama um serviço Web, você pode aplicar o <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> para o tipo de cliente para especificar o local e o nome do assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXmlSerializerAssemblyName">
+      <MemberSignature Language="C#" Value="public static string GetXmlSerializerAssemblyName (Type type, string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetXmlSerializerAssemblyName(class System.Type type, string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.GetXmlSerializerAssemblyName(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> que lhe interessam.</param>
+        <param name="defaultNamespace">O namespace do tipo.</param>
+        <summary>Retorna o nome do assembly que contém o serializador para o tipo especificado no namespace especificado.</summary>
+        <returns>O nome do assembly que contém os serializadores especialmente projetadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [ferramenta XML Serializer Generator (Sgen.exe)](~/docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md) cria um assembly de serialização de XML para tipos em um assembly especificado para melhorar o desempenho de tempo de execução de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos do tipos especificados. Use o <xref:System.Xml.Serialization.XmlSerializer.GetXmlSerializerAssemblyName%2A> para retornar o nome de um assembly.  
+  
+ Se você estiver distribuindo um assembly como parte de um aplicativo cliente que chama um serviço Web, você pode aplicar o <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> para o tipo de cliente para especificar o local e o nome do assembly.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Serialize">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Serializa um objeto em um documento XML.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream stream, object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.IO.Stream stream, object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O <see cref="T:System.IO.Stream" /> usado para gravar o documento XML.</param>
+        <param name="o">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <summary>Serializa o <see cref="T:System.Object" /> especificado e grava o documento XML em um arquivo usando o <see cref="T:System.IO.Stream" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método converte os campos públicos e as propriedades de leitura/gravação de um objeto em XML. Ele não converte indexadores, métodos, campos particulares ou propriedades somente leitura. Para serializar todos os campos e propriedades de um objeto, públicas e privadas, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ No `stream` parâmetro, especifique um objeto que deriva de abstrata <xref:System.IO.Stream> classe. Classes que derivam de <xref:System.IO.Stream> incluem:  
+  
+-   <xref:System.IO.BufferedStream>  
+  
+-   <xref:System.IO.FileStream>  
+  
+-   <xref:System.IO.MemoryStream>  
+  
+-   <xref:System.Net.Sockets.NetworkStream>  
+  
+-   <xref:System.Security.Cryptography.CryptoStream>  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um objeto usando um <xref:System.IO.Stream> objeto.  
+  
+ [!code-cpp[Classic XmlSerializer.Serialize2 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Serialize2 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize2 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Serialize2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Serialize2 Example/VB/source.vb#1)]
+ [!code-xml[Classic XmlSerializer.Serialize2 Example#1](~/samples/snippets/common/VS_Snippets_Remoting/Classic XmlSerializer.Serialize2 Example/Common/simple.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a serialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.TextWriter textWriter, object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.IO.TextWriter textWriter, object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textWriter" Type="System.IO.TextWriter" />
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="textWriter">O <see cref="T:System.IO.TextWriter" /> usado para gravar o documento XML.</param>
+        <param name="o">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <summary>Serializa o <see cref="T:System.Object" /> especificado e grava o documento XML em um arquivo usando o <see cref="T:System.IO.TextWriter" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método converte os campos públicos e as propriedades de leitura/gravação de um objeto em XML. Ele não converte indexadores, métodos, campos particulares ou propriedades somente leitura. Para serializar os campos e propriedades de todos os um objeto, públicas e privadas, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ No `textWriter` parâmetro, especifique um objeto que deriva de abstrata <xref:System.IO.TextWriter> classe. Classes que derivam de <xref:System.IO.TextWriter> incluem:  
+  
+-   <xref:System.IO.StreamWriter>  
+  
+-   <xref:System.IO.StringWriter>  
+  
+-   <xref:System.CodeDom.Compiler.IndentedTextWriter>  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um objeto usando um <xref:System.IO.TextWriter>.  
+  
+ [!code-cpp[Classic XmlSerializer.Serialize Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Serialize Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Serialize Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Serialize Example/VB/source.vb#1)]
+ [!code-xml[Classic XmlSerializer.Serialize Example#1](~/samples/snippets/common/VS_Snippets_Remoting/Classic XmlSerializer.Serialize Example/Common/simple.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="protected virtual void Serialize (object o, System.Xml.Serialization.XmlSerializationWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Serialize(object o, class System.Xml.Serialization.XmlSerializationWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.Object,System.Xml.Serialization.XmlSerializationWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="writer" Type="System.Xml.Serialization.XmlSerializationWriter" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <param name="writer">O <see cref="T:System.Xml.Serialization.XmlSerializationWriter" /> usado para gravar o documento XML.</param>
+        <summary>Serializa o <see cref="T:System.Object" /> especificado e grava o documento XML em um arquivo usando o <see cref="T:System.Xml.Serialization.XmlSerializationWriter" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Qualquer tentativa de acessar o método será feita quando ele não for substituído em uma classe descendente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.Xml.XmlWriter xmlWriter, object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.Xml.XmlWriter xmlWriter, object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlWriter" Type="System.Xml.XmlWriter" />
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="xmlWriter">O <see cref="T:System.Xml.XmlWriter" /> usado para gravar o documento XML.</param>
+        <param name="o">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <summary>Serializa o <see cref="T:System.Object" /> especificado e grava o documento XML em um arquivo usando o <see cref="T:System.Xml.XmlWriter" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método converte os campos públicos e as propriedades de leitura/gravação de um objeto em XML. Ele não converte indexadores, métodos, campos particulares ou propriedades somente leitura. Para serializar os campos e propriedades de todos os um objeto, públicas e privadas, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ No `xmlWriter` parâmetro, especifique um objeto que deriva de abstrata <xref:System.Xml.XmlWriter> classe. O <xref:System.Xml.XmlTextWriter> deriva de <xref:System.Xml.XmlWriter>.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um objeto usando um <xref:System.Xml.XmlWriter>.  
+  
+ [!code-cpp[Classic XmlSerializer.Serialize4 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize4 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Serialize4 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize4 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Serialize4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Serialize4 Example/VB/source.vb#1)]
+ [!code-xml[Classic XmlSerializer.Serialize4 Example#1](~/samples/snippets/common/VS_Snippets_Remoting/Classic XmlSerializer.Serialize4 Example/Common/simple.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a serialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+        <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+        <altmember cref="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.IO.Stream)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.Stream stream, object o, System.Xml.Serialization.XmlSerializerNamespaces namespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.IO.Stream stream, object o, class System.Xml.Serialization.XmlSerializerNamespaces namespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="namespaces" Type="System.Xml.Serialization.XmlSerializerNamespaces" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O <see cref="T:System.IO.Stream" /> usado para gravar o documento XML.</param>
+        <param name="o">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <param name="namespaces">O <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> referenciado pelo objeto.</param>
+        <summary>Serializa especificado <see cref="T:System.Object" /> e grava o documento XML em um arquivo usando especificado <see cref="T:System.IO.Stream" /> que faz referência os namespaces especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método é invocado, os campos públicos e as propriedades de leitura/gravação de um objeto são convertidas em XML. Métodos e propriedades somente leitura, campos particulares e indexadores não são serializadas. Para serializar todos os campos e propriedades, públicas e privadas, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ Use o `stream` parâmetro para especificar um objeto que deriva de abstrata <xref:System.IO.Stream> classe, que é projetado para gravar fluxos. Classes que derivam de <xref:System.IO.Stream> classe incluem:  
+  
+-   <xref:System.IO.BufferedStream>  
+  
+-   <xref:System.IO.FileStream>  
+  
+-   <xref:System.IO.MemoryStream>  
+  
+-   <xref:System.Net.Sockets.NetworkStream>  
+  
+-   <xref:System.Security.Cryptography.CryptoStream>  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um objeto com um <xref:System.IO.Stream> objeto. O exemplo também cria um <xref:System.Xml.Serialization.XmlSerializerNamespaces> e adiciona dois namespaces para o objeto. A classe que define o objeto serializado também é atribuída com <xref:System.Xml.Serialization.XmlElementAttribute> atributos para especificar o namespace para cada elemento.  
+  
+ [!code-cpp[Classic XmlSerializer.Serialize3 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Serialize3 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize3 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Serialize3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Serialize3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a serialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.IO.TextWriter textWriter, object o, System.Xml.Serialization.XmlSerializerNamespaces namespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.IO.TextWriter textWriter, object o, class System.Xml.Serialization.XmlSerializerNamespaces namespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textWriter" Type="System.IO.TextWriter" />
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="namespaces" Type="System.Xml.Serialization.XmlSerializerNamespaces" />
+      </Parameters>
+      <Docs>
+        <param name="textWriter">O <see cref="T:System.IO.TextWriter" /> usado para gravar o documento XML.</param>
+        <param name="o">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <param name="namespaces">O <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> que contém namespaces para o documento XML gerado.</param>
+        <summary>Serializa o <see cref="T:System.Object" /> especificado, grava o documento XML em um arquivo usando o <see cref="T:System.IO.TextWriter" /> especificado e referencia os namespaces especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método é invocado os campos públicos e as propriedades de leitura/gravação de um objeto são convertidas em XML. Métodos e propriedades somente leitura, campos particulares e indexadores não são serializadas. Para serializar todos os campos e propriedades, públicas e privadas, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ Use o `textWriter` parâmetro para especificar um objeto que deriva de abstrata <xref:System.IO.TextWriter> classe. Classes que derivam de <xref:System.IO.TextWriter> classe incluem:  
+  
+-   <xref:System.IO.StreamWriter>  
+  
+-   <xref:System.IO.StringWriter>  
+  
+-   <xref:System.CodeDom.Compiler.IndentedTextWriter>  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um objeto com um <xref:System.IO.TextWriter>. O exemplo também cria um <xref:System.Xml.Serialization.XmlSerializerNamespaces> e o adiciona dois namespaces para o objeto. A classe que define o objeto serializado também é atribuída com <xref:System.Xml.Serialization.XmlElementAttribute> atributos para especificar o namespace para cada elemento.  
+  
+ [!code-cpp[Classic XmlSerializer.Serialize1 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Serialize1 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize1 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Serialize1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Serialize1 Example/VB/source.vb#1)]
+ [!code-xml[Classic XmlSerializer.Serialize1 Example#1](~/samples/snippets/common/VS_Snippets_Remoting/Classic XmlSerializer.Serialize1 Example/Common/simple.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a serialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.Xml.XmlWriter xmlWriter, object o, System.Xml.Serialization.XmlSerializerNamespaces namespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.Xml.XmlWriter xmlWriter, object o, class System.Xml.Serialization.XmlSerializerNamespaces namespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlWriter" Type="System.Xml.XmlWriter" />
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="namespaces" Type="System.Xml.Serialization.XmlSerializerNamespaces" />
+      </Parameters>
+      <Docs>
+        <param name="xmlWriter">O <see cref="T:System.Xml.XmlWriter" /> usado para gravar o documento XML.</param>
+        <param name="o">O <see cref="T:System.Object" /> a ser serializado.</param>
+        <param name="namespaces">O <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> referenciado pelo objeto.</param>
+        <summary>Serializa o <see cref="T:System.Object" /> especificado, grava o documento XML em um arquivo usando o <see cref="T:System.Xml.XmlWriter" /> especificado e referencia os namespaces especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método é invocado, os campos públicos e as propriedades de leitura/gravação de um objeto são convertidas em XML. Métodos e propriedades somente leitura, campos particulares e indexadores não são serializadas. Para serializar todos os campos e propriedades, públicas e privadas, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ Use o `xmlWriter` parâmetro para especificar um objeto que deriva de abstrata <xref:System.Xml.XmlWriter> classe, que é projetado para gravar documentos XML. O <xref:System.Xml.XmlTextWriter> deriva de <xref:System.Xml.XmlWriter>.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa um objeto com um <xref:System.Xml.XmlWriter>. O exemplo também cria um <xref:System.Xml.Serialization.XmlSerializerNamespaces> e adiciona dois namespaces para o objeto. Várias instâncias do <xref:System.Xml.Serialization.XmlElementAttribute> classe são aplicadas aos membros da classe para especificar o namespace para cada elemento.  
+  
+ [!code-cpp[Classic XmlSerializer.Serialize5 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize5 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.Serialize5 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.Serialize5 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.Serialize5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.Serialize5 Example/VB/source.vb#1)]
+ [!code-xml[Classic XmlSerializer.Serialize5 Example#1](~/samples/snippets/common/VS_Snippets_Remoting/Classic XmlSerializer.Serialize5 Example/Common/simple.xml#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a serialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+        <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+        <altmember cref="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.IO.Stream)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.Xml.XmlWriter xmlWriter, object o, System.Xml.Serialization.XmlSerializerNamespaces namespaces, string encodingStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.Xml.XmlWriter xmlWriter, object o, class System.Xml.Serialization.XmlSerializerNamespaces namespaces, string encodingStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlWriter" Type="System.Xml.XmlWriter" />
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="namespaces" Type="System.Xml.Serialization.XmlSerializerNamespaces" />
+        <Parameter Name="encodingStyle" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlWriter">O <see cref="T:System.Xml.XmlWriter" /> usado para gravar o documento XML.</param>
+        <param name="o">O objeto a ser serializado.</param>
+        <param name="namespaces">O <see cref="T:System.Xml.Serialization.XmlSerializerNamespaces" /> referenciado pelo objeto.</param>
+        <param name="encodingStyle">O estilo de codificação do XML serializado.</param>
+        <summary>Serializa o objeto especificado, grava o documento XML em um arquivo usando o <see cref="T:System.Xml.XmlWriter" /> especificado e referencia os namespaces e o estilo de codificação especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> método é invocado, os campos públicos e as propriedades de leitura/gravação de um objeto são convertidas em XML. Métodos e propriedades somente leitura, campos particulares e indexadores não são serializadas. Para serializar todos os campos e propriedades, públicas e privadas, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+ Use o `xmlWriter` parâmetro para especificar um objeto que deriva de abstrata <xref:System.Xml.XmlWriter> classe, que é projetado para gravar documentos XML. O <xref:System.Xml.XmlTextWriter> deriva de <xref:System.Xml.XmlWriter>.  
+  
+ Definir o `encodingStyle` parâmetro para "http://schemas.xmlsoap.org/soap/encoding/" para SOAP versão 1.1 codificação; caso contrário, defina-o para "http://www.w3.org/2001/12/soap-encoding" para a codificação do SOAP versão 1.2.  
+  
+> [!NOTE]
+>  O <xref:System.Xml.Serialization.XmlSerializer> não é possível serializar o seguinte: matrizes de <xref:System.Collections.ArrayList> e matrizes de <xref:System.Collections.Generic.List%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorreu um erro durante a serialização. A exceção original está disponível com o uso da propriedade <see cref="P:System.Exception.InnerException" />.</exception>
+        <altmember cref="T:System.Xml.Serialization.XmlAttributes" />
+        <altmember cref="M:System.Xml.Serialization.XmlSerializer.Deserialize(System.IO.Stream)" />
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (System.Xml.XmlWriter xmlWriter, object o, System.Xml.Serialization.XmlSerializerNamespaces namespaces, string encodingStyle, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(class System.Xml.XmlWriter xmlWriter, object o, class System.Xml.Serialization.XmlSerializerNamespaces namespaces, string encodingStyle, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlWriter" Type="System.Xml.XmlWriter" />
+        <Parameter Name="o" Type="System.Object" />
+        <Parameter Name="namespaces" Type="System.Xml.Serialization.XmlSerializerNamespaces" />
+        <Parameter Name="encodingStyle" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlWriter">O <see cref="T:System.Xml.XmlWriter" /> usado para gravar o documento XML.</param>
+        <param name="o">O objeto a ser serializado.</param>
+        <param name="namespaces">Uma instância do <see langword="XmlSerializaerNamespaces" /> que contém namespaces e prefixos a serem usados.</param>
+        <param name="encodingStyle">A codificação usada no documento.</param>
+        <param name="id">Para mensagens codificadas em SOAP, a base usada para gerar atributos de ID.</param>
+        <summary>Serializa o <see cref="T:System.Object" /> especificado e grava o documento XML em um arquivo usando o <see cref="T:System.Xml.XmlWriter" />, namespaces XML e a codificação especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O *id* parâmetro fornece a cadeia de caracteres de base usada para criar ids SOAP. Por padrão, esses são "id1", "id2" e assim por diante. Mas se o parâmetro for definido para "myBase", os valores gerados é "myBaseid1", "myBaseid2" e assim por diante. Essa funcionalidade é usada para criar valores de id exclusiva em toda a mensagem SOAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownAttribute">
+      <MemberSignature Language="C#" Value="public event System.Xml.Serialization.XmlAttributeEventHandler UnknownAttribute;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Serialization.XmlAttributeEventHandler UnknownAttribute" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Serialization.XmlSerializer.UnknownAttribute" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlAttributeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Xml.Serialization.XmlSerializer" /> encontra um atributo XML de tipo desconhecido durante a desserialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, depois de chamar o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método, o <xref:System.Xml.Serialization.XmlSerializer> ignora os atributos XML de tipos desconhecidos. No entanto, você pode usar esse evento para lidar com esses tipos de nó.  
+  
+ Se a instância da classe que está sendo desserializada contém um campo que retorna uma matriz de <xref:System.Xml.XmlAttribute> objetos e um <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> foi aplicada ao campo, o <xref:System.Xml.Serialization.XmlSerializer.UnknownAttribute> evento não ocorrerá. Em vez disso, todos os atributos XML desconhecidos serão coletados para a matriz.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir imprime as informações sobre os atributos desconhecidos encontrado ao desserializar um documento XML.  
+  
+ [!code-cpp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownElement">
+      <MemberSignature Language="C#" Value="public event System.Xml.Serialization.XmlElementEventHandler UnknownElement;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Serialization.XmlElementEventHandler UnknownElement" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Serialization.XmlSerializer.UnknownElement" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlElementEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Xml.Serialization.XmlSerializer" /> encontra um elemento XML de tipo desconhecido durante a desserialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, depois de chamar o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método, o <xref:System.Xml.Serialization.XmlSerializer> ignora os atributos XML de tipos desconhecidos. No entanto, você pode usar esse evento para lidar com esses tipos de nó.  
+  
+> [!NOTE]
+>  Se o <xref:System.Xml.Serialization.XmlAnyElementAttribute> é aplicado a um campo que retorna uma matriz de <xref:System.Xml.XmlElement> objetos, todos os elementos desconhecidos são coletados na matriz. Nesse caso, o <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> evento não ocorrerá.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir desserializa uma classe denominada `Group` de um arquivo chamado UnknownElements.xml. Sempre que um elemento foi encontrado no arquivo que não tem nenhum membro correspondente na classe, o <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> evento ocorre. Para testar o exemplo, cole o seguinte código XML em um arquivo chamado UnknownElements.xml.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+  <GroupName>MyGroup</GroupName>  
+  <GroupSize>Large</GroupSize>  
+  <GroupNumber>444</GroupNumber>  
+  <GroupBase>West</GroupBase>  
+</Group>  
+```  
+  
+ [!code-cpp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CPP/unknownelement.cpp#1)]
+ [!code-csharp[XmlSerializer.UnknownElement Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/CS/unknownelement.cs#1)]
+ [!code-vb[XmlSerializer.UnknownElement Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlSerializer.UnknownElement Example/VB/unknownelement.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownNode">
+      <MemberSignature Language="C#" Value="public event System.Xml.Serialization.XmlNodeEventHandler UnknownNode;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Serialization.XmlNodeEventHandler UnknownNode" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Serialization.XmlSerializer.UnknownNode" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlNodeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Xml.Serialization.XmlSerializer" /> encontra um nó XML de tipo desconhecido durante a desserialização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, depois de chamar o <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> método, o <xref:System.Xml.Serialization.XmlSerializer> ignora nós XML de tipos desconhecidos. No entanto, você pode usar esse evento para lidar com esses tipos de nó.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o tipo de qualquer nó desconhecido encontrado.  
+  
+ [!code-cpp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlSerializer.UnknownNode Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlSerializer.UnknownNode Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnreferencedObject">
+      <MemberSignature Language="C#" Value="public event System.Xml.Serialization.UnreferencedObjectEventHandler UnreferencedObject;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Xml.Serialization.UnreferencedObjectEventHandler UnreferencedObject" />
+      <MemberSignature Language="DocId" Value="E:System.Xml.Serialization.XmlSerializer.UnreferencedObject" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.UnreferencedObjectEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre durante a desserialização de um fluxo XML codificado em SOAP, quando o <see cref="T:System.Xml.Serialization.XmlSerializer" /> encontra um tipo reconhecido que não é usado ou não está referenciado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlSerializer.UnreferencedObject> evento ocorre somente quando o <xref:System.Xml.Serialization.XmlSerializer> é usado para desserializar um documento XML que contém uma mensagem SOAP que está em conformidade com a seção 5 do documento na World Wide Web Consortium (www.w3.org), "Simple Object Access Protocol (SOAP) 1.1".  
+  
+ Documentos de acordo com a seção 5 estão em um formato especial. No mínimo, um documento inclui o corpo principal da mensagem SOAP. No entanto, em vez de ter todos os tipos definidos embutido no documento, algumas definições de tipo podem ser codificadas como referências a elementos de nível superior no documento. Portanto, para cada elemento encontrado no corpo principal que é uma referência, deve haver um elemento correspondente que contém a definição de tipo. Para correlacionar o elemento de referência e a definição de tipo, a definição de tipo tem um `id` atributo definido como uma ID de cadeia de caracteres exclusiva e o elemento de referência tem uma `href` atributo que referencia a mesma ID.  
+  
+```  
+<Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="id1" n1:GroupName=".NET" GroupNumber="ZDI=" CreationDate="2002-05-02" xmlns:n1="http:'www.cpandl.com">  
+    <PosInt xsi:type="xsd:nonNegativeInteger">10000</PosInt>  
+    <GroupVehicle href="#id2" />  
+  </Group>  
+  <Vehicle id="id2" n1:type="Vehicle" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance">  
+    <licenseNumber xmlns:q1="http://www.w3.org/2001/XMLSchema" n1:type="q1:string">1234</licenseNumber>  
+  </Vehicle>  
+```  
+  
+ O <xref:System.Xml.Serialization.XmlSerializer.UnreferencedObject> evento ocorre quando há uma definição de tipo localizada no documento, mas nenhum parâmetro no corpo principal faz referência a ele. Quando o evento ocorrer, você pode recuperar o tipo XML do objeto não referenciado examinando o <xref:System.Xml.Serialization.UnreferencedObjectEventArgs.UnreferencedObject%2A> propriedade o <xref:System.Xml.Serialization.UnreferencedObjectEventArgs> classe. A ID de XML do objeto é retornada pelo <xref:System.Xml.Serialization.UnreferencedObjectEventArgs.UnreferencedId%2A> propriedade.  
+  
+ O <xref:System.Xml.Serialization.XmlSerializer.UnreferencedObject> evento não deve ser confundido com o <xref:System.Xml.Serialization.XmlSerializer.UnknownElement> e <xref:System.Xml.Serialization.XmlSerializer.UnknownNode> eventos que ocorrem quando não há nenhum membro de classe que corresponde ao tipo de elemento ou nó de XML.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir adiciona uma <xref:System.Xml.Serialization.UnreferencedObjectEventHandler> para um <xref:System.Xml.Serialization.XmlSerializer>. O evento é manipulado pelo `Serializer``_``UnreferencedObject` método. Para executar o exemplo, recorte e cole o seguinte XML em um arquivo denominado "UnrefObj.xml".  
+  
+```  
+<wrapper>  
+  <Group xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="id1" n1:GroupName=".NET" xmlns:n1="http://www.cpandl.com">  
+   </Group>  
+<Vehicle id="id2" n1:type="Vehicle" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance">  
+    <licenseNumber xmlns:q1="http://www.w3.org/2001/XMLSchema" n1:type="q1:string">ABCD</licenseNumber>  
+  </Vehicle>  
+<Vehicle id="id3" n1:type="Vehicle" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance">  
+    <licenseNumber xmlns:q1="http://www.w3.org/2001/XMLSchema" n1:type="q1:string">1234</licenseNumber>  
+  </Vehicle>  
+</wrapper>  
+```  
+  
+ [!code-cpp[UnreferencedObject Event Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/UnreferencedObject Event Example/CPP/unrefobj.cpp#1)]
+ [!code-csharp[UnreferencedObject Event Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/UnreferencedObject Event Example/CS/unrefobj.cs#1)]
+ [!code-vb[UnreferencedObject Event Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/UnreferencedObject Event Example/VB/unrefobj.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

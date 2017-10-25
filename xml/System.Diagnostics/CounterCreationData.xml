@@ -1,0 +1,215 @@
+<Type Name="CounterCreationData" FullName="System.Diagnostics.CounterCreationData">
+  <TypeSignature Language="C#" Value="public class CounterCreationData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CounterCreationData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.CounterCreationData" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.CounterCreationDataConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o tipo de contador, o nome e a cadeia de caracteres de ajuda para um contador personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Diagnostics.CounterCreationData> classe para definir os contadores personalizados. Este exemplo cria os contadores que exibem quantos itens são processados em uma operação. O exemplo inicializa os contadores, coleta informações elas e, em seguida, calcula e exibe os resultados para o console.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterCreationData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.CounterCreationData" /> classe para um contador do tipo <see langword="NumberOfItems32" />e com vazias cadeias de caracteres de nome e a Ajuda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma instância vazia do <xref:System.Diagnostics.CounterCreationData> classe. Porque o exemplo não passar quaisquer parâmetros, o <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A>, <xref:System.Diagnostics.CounterCreationData.CounterName%2A>, e <xref:System.Diagnostics.CounterCreationData.CounterType%2A> propriedades não forem especificadas e deve ser definidas mais tarde.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#3](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#3)]
+ [!code-csharp[Diagnostics_CounterCreationData#3](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#3)]
+ [!code-vb[Diagnostics_CounterCreationData#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterCreationData (string counterName, string counterHelp, System.Diagnostics.PerformanceCounterType counterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string counterName, string counterHelp, valuetype System.Diagnostics.PerformanceCounterType counterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterCreationData.#ctor(System.String,System.String,System.Diagnostics.PerformanceCounterType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="counterName" Type="System.String" />
+        <Parameter Name="counterHelp" Type="System.String" />
+        <Parameter Name="counterType" Type="System.Diagnostics.PerformanceCounterType" />
+      </Parameters>
+      <Docs>
+        <param name="counterName">O nome do contador, que deve ser exclusivo dentro de sua categoria.</param>
+        <param name="counterHelp">O texto que descreve o comportamento do contador.</param>
+        <param name="counterType">Um <see cref="T:System.Diagnostics.PerformanceCounterType" /> que identifica o comportamento do contador.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.CounterCreationData" /> classe para um contador do tipo especificado, usando o nome do contador especificado e cadeias de caracteres de Ajuda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar uma instância do <xref:System.Diagnostics.CounterCreationData> classe e passar parâmetros para definir o <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A>, <xref:System.Diagnostics.CounterCreationData.CounterName%2A> e <xref:System.Diagnostics.CounterCreationData.CounterType%2A> propriedades do objeto quando ele é inicializado.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#2](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#2)]
+ [!code-csharp[Diagnostics_CounterCreationData#2](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#2)]
+ [!code-vb[Diagnostics_CounterCreationData#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Você especificou um valor para <paramref name="counterType" /> que é não um membro do <see cref="T:System.Diagnostics.PerformanceCounterType" /> enumeração.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="counterHelp" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterHelp">
+      <MemberSignature Language="C#" Value="public string CounterHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CounterHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterCreationData.CounterHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Description of this counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição do contador personalizado.</summary>
+        <value>O texto que descreve o comportamento do contador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter e definir o <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A> propriedade. Este exemplo cria dois contadores e define suas <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A> propriedade usando técnicas diferentes. Quando o primeiro contador é inicializado, o <xref:System.Diagnostics.CounterCreationData.CounterHelp%2A> dados são passados para o construtor, enquanto o segundo contador define a propriedade explicitamente.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#5](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#5)]
+ [!code-csharp[Diagnostics_CounterCreationData#5](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#5)]
+ [!code-vb[Diagnostics_CounterCreationData#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterName">
+      <MemberSignature Language="C#" Value="public string CounterName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CounterName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterCreationData.CounterName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Name of this counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do contador personalizado.</summary>
+        <value>Um nome para o contador, que é exclusivo em sua categoria.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter e definir o <xref:System.Diagnostics.CounterCreationData.CounterName%2A> propriedade. Este exemplo cria dois contadores e define suas <xref:System.Diagnostics.CounterCreationData.CounterName%2A> propriedade usando técnicas diferentes. Quando o primeiro contador é inicializado, o <xref:System.Diagnostics.CounterCreationData.CounterName%2A> dados são passados para o construtor, enquanto o segundo contador define a propriedade explicitamente.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#4](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#4)]
+ [!code-csharp[Diagnostics_CounterCreationData#4](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#4)]
+ [!code-vb[Diagnostics_CounterCreationData#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor especificado é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor especificado não está entre 1 e 80 caracteres ou contiver aspas duplas, caracteres de controle ou à esquerda ou à direita de espaços.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterType CounterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterType CounterType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterCreationData.CounterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Diagnostics.PerformanceCounterType), "NumberOfItems32")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.MonitoringDescription("Type of this counter.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de contador de desempenho do contador personalizado.</summary>
+        <value>Um <see cref="T:System.Diagnostics.PerformanceCounterType" /> que define o comportamento do contador de desempenho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter e definir o <xref:System.Diagnostics.CounterCreationData.CounterType%2A> propriedade. Este exemplo cria dois contadores e define suas <xref:System.Diagnostics.CounterCreationData.CounterType%2A> propriedade usando técnicas diferentes. Quando o primeiro contador é inicializado, o <xref:System.Diagnostics.CounterCreationData.CounterType%2A> dados são passados para o construtor, enquanto o segundo contador define a propriedade explicitamente.  
+  
+ [!code-cpp[Diagnostics_CounterCreationData#6](~/samples/snippets/cpp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CPP/diagnostics_countercreationdata.cpp#6)]
+ [!code-csharp[Diagnostics_CounterCreationData#6](~/samples/snippets/csharp/VS_Snippets_CLR/Diagnostics_CounterCreationData/CS/diagnostics_countercreationdata.cs#6)]
+ [!code-vb[Diagnostics_CounterCreationData#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Diagnostics_CounterCreationData/VB/diagnostics_countercreationdata.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Você especificou um tipo que não é um membro do <see cref="T:System.Diagnostics.PerformanceCounterType" /> enumeração.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

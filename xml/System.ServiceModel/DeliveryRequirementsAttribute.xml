@@ -1,0 +1,277 @@
+<Type Name="DeliveryRequirementsAttribute" FullName="System.ServiceModel.DeliveryRequirementsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DeliveryRequirementsAttribute : Attribute, System.ServiceModel.Description.IContractBehavior, System.ServiceModel.Description.IContractBehaviorAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DeliveryRequirementsAttribute extends System.Attribute implements class System.ServiceModel.Description.IContractBehavior, class System.ServiceModel.Description.IContractBehaviorAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.DeliveryRequirementsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IContractBehavior</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IContractBehaviorAttribute</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os requisitos de recurso associações devem fornecer para a implementação de serviço ou cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.DeliveryRequirementsAttribute> para instruir [!INCLUDE[indigo1](~/includes/indigo1-md.md)] para confirmar que a associação fornece os recursos necessários para a implementação de serviço ou cliente. Se um <xref:System.ServiceModel.DeliveryRequirementsAttribute> atributo é detectado quando uma descrição de serviço é carregada de um arquivo de configuração do aplicativo ou compilada programaticamente no código, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] valida a associação configurada e dá suporte a todos os recursos que especifica o atributo. Por exemplo, o serviço pode exigir as associações dar suporte ao enfileiramento de mensagens. Usando <xref:System.ServiceModel.DeliveryRequirementsAttribute> permite [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para confirmar que os seguintes requisitos sejam atendidos:  
+  
+-   O <xref:System.ServiceModel.DeliveryRequirementsAttribute.QueuedDeliveryRequirements%2A> propriedade especifica os requisitos de enfileiramento de mensagens que deve atender a uma associação.  
+  
+-   O <xref:System.ServiceModel.DeliveryRequirementsAttribute.RequireOrderedDelivery%2A> propriedade indica se a associação deve oferecer suporte a mensagens ordenadas.  
+  
+-   O <xref:System.ServiceModel.DeliveryRequirementsAttribute.TargetContract%2A> propriedade indica para qual tipo de requisitos se aplicam.  
+  
+ O <xref:System.ServiceModel.DeliveryRequirementsAttribute> atributo é aplicado a uma classe, que pode implementar qualquer número de interfaces de contrato de serviço. <xref:System.ServiceModel.DeliveryRequirementsAttribute>podem ser aplicadas a todos os contratos a classe implementa ou apenas um deles. O atributo pode ser aplicado a uma classe de mais de uma vez.  
+  
+   
+  
+## Examples  
+ [!code-csharp[UEDeliveryRequirementsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/uedeliveryrequirementsattribute/cs/snippet1.cs#1)]
+ [!code-vb[UEDeliveryRequirementsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uedeliveryrequirementsattribute/vb/snippet1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeliveryRequirementsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.DeliveryRequirementsAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.DeliveryRequirementsAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os padrões são:  
+  
+-   A propriedade <xref:System.ServiceModel.DeliveryRequirementsAttribute.QueuedDeliveryRequirements%2A> é definida como <xref:System.ServiceModel.QueuedDeliveryRequirementsMode.Allowed>.  
+  
+-   A propriedade <xref:System.ServiceModel.DeliveryRequirementsAttribute.RequireOrderedDelivery%2A> é definida como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuedDeliveryRequirements">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.QueuedDeliveryRequirementsMode QueuedDeliveryRequirements { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.QueuedDeliveryRequirementsMode QueuedDeliveryRequirements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.DeliveryRequirementsAttribute.QueuedDeliveryRequirements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.QueuedDeliveryRequirementsMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se a associação de um serviço deve oferecer suporte a contratos na fila.</summary>
+        <value>Um dos valores <see cref="T:System.ServiceModel.QueuedDeliveryRequirementsMode" />; o padrão é <see cref="F:System.ServiceModel.QueuedDeliveryRequirementsMode.Allowed" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.QueuedDeliveryRequirementsMode.Required> instrui [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para confirmar que a associação oferece suporte à entrega enfileirada. O <xref:System.ServiceModel.QueuedDeliveryRequirementsMode.NotAllowed> instrui o valor [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para confirmar que a associação não oferece suporte a entrega enfileirada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.ServiceModel.DeliveryRequirementsAttribute> atributo para instruir [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para confirmar em tempo de execução que a associação real não dá suporte a contratos em fila, mas oferece suporte a mensagens ordenadas.  
+  
+ [!code-csharp[UEDeliveryRequirementsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/uedeliveryrequirementsattribute/cs/snippet1.cs#1)]
+ [!code-vb[UEDeliveryRequirementsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uedeliveryrequirementsattribute/vb/snippet1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor não é um dos valores <see cref="T:System.ServiceModel.QueuedDeliveryRequirementsMode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireOrderedDelivery">
+      <MemberSignature Language="C#" Value="public bool RequireOrderedDelivery { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireOrderedDelivery" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.DeliveryRequirementsAttribute.RequireOrderedDelivery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se a associação deve oferecer suporte a mensagens ordenadas.</summary>
+        <value>
+          <see langword="true" />instrui o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] para confirmar que a associação deve oferecer suporte a ordenação de mensagens; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.ServiceModel.DeliveryRequirementsAttribute.RequireOrderedDelivery%2A> propriedade `false` instrui [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para não executar nenhuma validação.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.ServiceModel.DeliveryRequirementsAttribute> atributo para instruir [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para confirmar em tempo de execução que a associação real oferece suporte a mensagens ordenadas.  
+  
+ [!code-csharp[UEDeliveryRequirementsAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/uedeliveryrequirementsattribute/cs/snippet1.cs#1)]
+ [!code-vb[UEDeliveryRequirementsAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uedeliveryrequirementsattribute/vb/snippet1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IContractBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IContractBehavior.AddBindingParameters (System.ServiceModel.Description.ContractDescription description, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IContractBehavior.AddBindingParameters(class System.ServiceModel.Description.ContractDescription description, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.DeliveryRequirementsAttribute.System#ServiceModel#Description#IContractBehavior#AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição do contrato.</param>
+        <param name="endpoint">O ponto de extremidade de serviço para o contrato.</param>
+        <param name="parameters">Os parâmetros de associação.</param>
+        <summary>Implementa o <see cref="M:System.ServiceModel.DeliveryRequirementsAttribute.System#ServiceModel#Description#IContractBehavior#AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" /> método anexar parâmetros de ligação corretamente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IContractBehavior.ApplyClientBehavior (System.ServiceModel.Description.ContractDescription description, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior(class System.ServiceModel.Description.ContractDescription description, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime proxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.DeliveryRequirementsAttribute.System#ServiceModel#Description#IContractBehavior#ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="proxy" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição do contrato ao qual o comportamento está anexado.</param>
+        <param name="endpoint">O ponto de extremidade para o contrato.</param>
+        <param name="proxy">O tempo de execução de cliente em que o comportamento opera.</param>
+        <summary>Implementação de <see cref="M:System.ServiceModel.DeliveryRequirementsAttribute.System#ServiceModel#Description#IContractBehavior#ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" /> método para suporte ao cliente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IContractBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.ContractDescription description, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatch);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.ContractDescription description, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.DispatchRuntime dispatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.DeliveryRequirementsAttribute.System#ServiceModel#Description#IContractBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="dispatch" Type="System.ServiceModel.Dispatcher.DispatchRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição do contrato ao qual o comportamento está anexado.</param>
+        <param name="endpoint">O ponto de extremidade para o contrato.</param>
+        <param name="dispatch">O tempo de execução de despacho que suporta o ponto de extremidade.</param>
+        <summary>Implementação de <see cref="M:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)" /> método que habilita o suporte do serviço.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IContractBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IContractBehavior.Validate (System.ServiceModel.Description.ContractDescription description, System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IContractBehavior.Validate(class System.ServiceModel.Description.ContractDescription description, class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.DeliveryRequirementsAttribute.System#ServiceModel#Description#IContractBehavior#Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição do contrato.</param>
+        <param name="endpoint">O ponto de extremidade a ser validado.</param>
+        <summary>Implementa o <see cref="M:System.ServiceModel.DeliveryRequirementsAttribute.System#ServiceModel#Description#IContractBehavior#Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)" /> método para habilitar o suporte de validação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetContract">
+      <MemberSignature Language="C#" Value="public Type TargetContract { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TargetContract" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.DeliveryRequirementsAttribute.TargetContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo ao qual se aplica.</summary>
+        <value>O <see cref="T:System.Type" /> ao qual o atributo se aplica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma classe de serviço pode implementar qualquer número de interfaces de contrato de serviço. Use o <xref:System.ServiceModel.DeliveryRequirementsAttribute.TargetContract%2A> propriedade para validar que os pontos de extremidade com o <xref:System.ServiceModel.DeliveryRequirementsAttribute.TargetContract%2A> têm associações que dão suporte aos requisitos. Esse atributo pode ser usada várias vezes na mesma classe.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.ServiceModel.DeliveryRequirementsAttribute> atributo para instruir [!INCLUDE[indigo2](~/includes/indigo2-md.md)] para confirmar em tempo de execução que a associação real não dá suporte a contratos em fila, mas oferece suporte a mensagens ordenadas. Ela também especifica o contrato de destino ao qual essa restrição deve ser aplicada.  
+  
+ [!code-csharp[UEDeliveryRequirementsAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/uedeliveryrequirementsattribute/cs/snippet2.cs#2)]
+ [!code-vb[UEDeliveryRequirementsAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/uedeliveryrequirementsattribute/vb/snippet2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

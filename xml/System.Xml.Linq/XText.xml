@@ -1,0 +1,384 @@
+<Type Name="XText" FullName="System.Xml.Linq.XText">
+  <TypeSignature Language="C#" Value="public class XText : System.Xml.Linq.XNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XText extends System.Xml.Linq.XNode" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Linq.XText" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XDocument</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.Linq</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xml.Linq.XNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um nó de texto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Elementos XML podem ter conteúdo de texto. Às vezes, o conteúdo é simple (o elemento contém apenas o conteúdo de texto) e, às vezes, o conteúdo é misto (o conteúdo do elemento contém texto e outros elementos). Em ambos os casos, cada bloco de texto é representado como um <xref:System.Xml.Linq.XText> nó.  
+  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]os desenvolvedores geralmente precisa escrever código para trabalhar com arbitrário [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] árvores que não foram criados. Se você estiver escrevendo código que tem para trabalhar com [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] árvores que você não tem controle sobre a criação, você deve estar ciente de certos comportamentos de <xref:System.Xml.Linq.XText> nós.  
+  
+ Ao processar o conteúdo de uma árvore XML no nível de nó, você deve estar preparado para vários <xref:System.Xml.Linq.XText> nós adjacentes uns aos outros. Além disso, você deve estar preparado para <xref:System.Xml.Linq.XText> nós que não contenham texto. É possível por meio de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] métodos para remover o conteúdo de um nó de texto. No entanto, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] não exclui automaticamente o nó. O nó tem identidade e pode ter anotações, portanto [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite comprimento zero nós na árvore.  
+  
+ Para obter mais informações, consulte [programação conosco](http://msdn.microsoft.com/library/18680d1c-6e7c-4645-8d53-27b5a96f2d3f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XText (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.String" /> que contém o valor da <see cref="T:System.Xml.Linq.XText" /> nó.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Linq.XText" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente não criar nós de texto usando o <xref:System.Xml.Linq.XText> construtores. Quando você passa o conteúdo de texto ao construir um <xref:System.Xml.Linq.XElement>, nós de texto são criados automaticamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um elemento que contém um nó de texto.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "Some text");  
+Console.WriteLine(root);  
+```  
+  
+```vb  
+  
+                Dim root As XElement = <Root>Some text</Root>  
+Console.WriteLine(root)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```xml  
+  
+<Root>Some text</Root>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XText (System.Xml.Linq.XText other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Linq.XText other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.#ctor(System.Xml.Linq.XText)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Xml.Linq.XText" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Xml.Linq.XText" /> nó copiar de.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Linq.XText" /> de outro objeto <see cref="T:System.Xml.Linq.XText" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é utilizado principalmente para fazer uma cópia profunda de uma árvore XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XText.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de nó para este nó.</summary>
+        <value>O tipo de nó. Para objetos <see cref="T:System.Xml.Linq.XText" />, esse valor é <see cref="F:System.Xml.XmlNodeType.Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como todas as classes que derivam da <xref:System.Xml.Linq.XObject> contêm um <xref:System.Xml.Linq.XObject.NodeType%2A> propriedade, você pode escrever código que opera em coleções de subclasse concreta de <xref:System.Xml.Linq.XObject>. O tipo de nó de cada nó na coleção, em seguida, pode testar seu código.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma árvore XML que contém um número de tipos de nós. Ele itera através da árvore, gerando o tipo de nó de cada nó.  
+  
+ Observe que `Child2` contém um <xref:System.Xml.Linq.XText> nó, convertido implicitamente do conteúdo de cadeia de caracteres.  
+  
+```csharp  
+  
+                // Note that XNode uses XmlNodeType, which is in the System.Xml namespace.  
+XDocument xmlTree = new XDocument(  
+    new XComment("a comment"),  
+    new XProcessingInstruction("xml-stylesheet", "type=\"text/xsl\" href=\"hello.xsl\""),  
+    new XElement("Root",  
+        new XAttribute("Att", "attContent"),  
+        new XElement("Child1",  
+            new XCData("CDATA content")  
+        ),  
+        new XElement("Child2", "Text content")  
+    )  
+);  
+  
+foreach (XNode node in xmlTree.DescendantNodes())  
+{  
+    Console.WriteLine(node.NodeType);  
+    if (node.NodeType == XmlNodeType.Element)  
+    {  
+        foreach (XAttribute att in ((XElement)node).Attributes())  
+            Console.WriteLine(att.NodeType);  
+    }  
+}  
+```  
+  
+```vb  
+  
+                ' Note that XNode uses XmlNodeType, which is in the System.Xml namespace.  
+Dim xmlTree As XDocument = _  
+    <?xml version='1.0'?>  
+    <!-- a comment -->  
+    <?xml-stylesheet type='text/xsl' href='hello.xsl'?>  
+    <Root Att="attContent">  
+        <Child1>  
+            <![CDATA[CDATA content]]]><![CDATA[]>  
+        </Child1>  
+        <Child2>Text content</Child2>  
+    </Root>  
+  
+For Each node As XNode In xmlTree.DescendantNodes  
+    Console.WriteLine(node.NodeType.ToString())  
+    If node.NodeType = XmlNodeType.Element Then  
+        For Each att In DirectCast(node, XElement).Attributes  
+            Console.WriteLine(att.NodeType.ToString())  
+        Next  
+    End If  
+Next  
+  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Comment  
+ProcessingInstruction  
+Element  
+Attribute  
+Element  
+CDATA  
+Element  
+Text  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Linq.XText.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor deste nó.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor deste nó.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração para essa propriedade gerará o <xref:System.Xml.Linq.XObject.Changed> e <xref:System.Xml.Linq.XObject.Changing> eventos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra Obtendo e definindo essa propriedade.  
+  
+```csharp  
+  
+                XElement root = new XElement("Root", "Some text");  
+XText txtNode = root.Nodes().OfType<XText>().First();  
+Console.WriteLine(txtNode.Value);  
+txtNode.Value = "New text";  
+Console.WriteLine(txtNode.Value);  
+  
+root.Value = "Newer text";  
+txtNode = root.Nodes().OfType<XText>().First();  
+Console.WriteLine(txtNode.Value);  
+```  
+  
+```vb  
+  
+                Dim root As XElement = <Root>Some text</Root>  
+Dim txtNode As XText = root.Nodes().OfType(Of XText).First()  
+Console.WriteLine(txtNode.Value)  
+txtNode.Value = "New text"  
+Console.WriteLine(txtNode.Value)  
+  
+root.Value = "Newer text"  
+txtNode = root.Nodes().OfType(Of XText).First()  
+Console.WriteLine(txtNode.Value)  
+```  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+Some text  
+New text  
+Newer text  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public override void WriteTo (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteTo(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.WriteTo(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.Linq</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Xml.XmlWriter" /> no qual esse método gravará.</param>
+        <summary>Grava esse nó para um <see cref="T:System.Xml.XmlWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente internamente pelos métodos gravar uma árvore XML para uma <xref:System.Xml.XmlWriter>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteToAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteToAsync (System.Xml.XmlWriter writer, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteToAsync(class System.Xml.XmlWriter writer, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Linq.XText.WriteToAsync(System.Xml.XmlWriter,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XDocument</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

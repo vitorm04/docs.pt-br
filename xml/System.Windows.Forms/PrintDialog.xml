@@ -1,0 +1,430 @@
+<Type Name="PrintDialog" FullName="System.Windows.Forms.PrintDialog">
+  <TypeSignature Language="C#" Value="public sealed class PrintDialog : System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PrintDialog extends System.Windows.Forms.CommonDialog" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PrintDialog" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.CommonDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Document")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Windows.Forms.Design.PrintDialogDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que os usuários selecionem uma impressora e escolham quais seções do documento imprimir de um aplicativo Windows Forms.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância de <xref:System.Windows.Forms.PrintDialog>, as propriedades de leitura/gravação são definidas com valores iniciais. Para obter uma lista desses valores, consulte o <xref:System.Windows.Forms.PrintDialog.%23ctor%2A> construtor. Para obter configurações de impressora que são modificadas pelo usuário com o <xref:System.Windows.Forms.PrintDialog>, use o <xref:System.Windows.Forms.PrintDialog.PrinterSettings%2A> propriedade.  
+  
+ Para obter mais informações sobre como imprimir com formulários do Windows, consulte o <xref:System.Drawing.Printing> visão geral do namespace. Se você quiser imprimir a partir de um aplicativo do Windows Presentation Foundation, consulte o <xref:System.Printing> namespace.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.PrintDialog> controle para definir o <xref:System.Windows.Forms.PrintDialog.AllowSomePages%2A>, <xref:System.Windows.Forms.PrintDialog.ShowHelp%2A>, e <xref:System.Windows.Forms.PrintDialog.Document%2A> propriedades. Para executar este exemplo, cole o código a seguir em um formulário que contém um <xref:System.Windows.Forms.PrintDialog> controle chamado `PrintDialog1` e um botão chamado `Button1`. Este exemplo requer que o botão <xref:System.Windows.Forms.Control.Click> evento e o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento `docToPrint` foram conectados para os métodos de manipulação de eventos definidos neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.PrintDialog" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância de <xref:System.Windows.Forms.PrintDialog>, as seguintes propriedades de leitura/gravação são definidas com valores iniciais.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.PrintDialog.AllowSomePages%2A>|`false`|  
+|<xref:System.Windows.Forms.PrintDialog.AllowPrintToFile%2A>|`true`|  
+|<xref:System.Windows.Forms.PrintDialog.AllowSelection%2A>|`false`|  
+|<xref:System.Windows.Forms.PrintDialog.Document%2A>|`null`|  
+|<xref:System.Windows.Forms.PrintDialog.PrinterSettings%2A>|`null`|  
+|<xref:System.Windows.Forms.PrintDialog.PrintToFile%2A>|`false`|  
+|<xref:System.Windows.Forms.PrintDialog.ShowHelp%2A>|`false`|  
+|<xref:System.Windows.Forms.PrintDialog.ShowNetwork%2A>|`true`|  
+  
+ Você pode alterar o valor para qualquer uma dessas propriedades por meio de uma chamada separada para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowCurrentPage">
+      <MemberSignature Language="C#" Value="public bool AllowCurrentPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowCurrentPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.AllowCurrentPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o **página atual** botão de opção é exibida.</summary>
+        <value>
+          <see langword="true" />Se o **página atual** botão de opção é exibido; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é válida para o Windows 2000 e versões posteriores dos sistemas operacionais Windows. Em sistemas operacionais anteriores ao Windows 2000, o <xref:System.Windows.Forms.PrintDialog.AllowCurrentPage%2A> propriedade não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPrintToFile">
+      <MemberSignature Language="C#" Value="public bool AllowPrintToFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPrintToFile" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.AllowPrintToFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de seleção **Imprimir para arquivo** está habilitada.</summary>
+        <value>
+          <see langword="true" />Se o **imprimir em arquivo** caixa de seleção estiver habilitada; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSelection">
+      <MemberSignature Language="C#" Value="public bool AllowSelection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.AllowSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o **seleção** botão de opção é habilitada.</summary>
+        <value>
+          <see langword="true" />Se o **seleção** botão de opção estiver habilitada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSomePages">
+      <MemberSignature Language="C#" Value="public bool AllowSomePages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowSomePages" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.AllowSomePages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o botão de opção **Páginas** está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o **páginas** botão de opção estiver habilitada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.PrintDialog> controle para definir o <xref:System.Windows.Forms.PrintDialog.AllowSomePages%2A>, <xref:System.Windows.Forms.PrintDialog.ShowHelp%2A>, e <xref:System.Windows.Forms.PrintDialog.Document%2A> propriedades. Para executar este exemplo, cole o código a seguir em um formulário que contém um <xref:System.Windows.Forms.PrintDialog> controle chamado `PrintDialog1` e um botão chamado `Button1`. Este exemplo requer que o botão <xref:System.Windows.Forms.Control.Click> evento e o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento `docToPrint` foram conectados para os métodos de manipulação de eventos definidos neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrintDocument Document { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrintDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o <see cref="T:System.Drawing.Printing.PrintDocument" /> usado para obter <see cref="T:System.Drawing.Printing.PrinterSettings" />.</summary>
+        <value>O <see cref="T:System.Drawing.Printing.PrintDocument" /> usado para obter <see cref="T:System.Drawing.Printing.PrinterSettings" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.PrintDialog> controle para definir o <xref:System.Windows.Forms.PrintDialog.AllowSomePages%2A>, <xref:System.Windows.Forms.PrintDialog.ShowHelp%2A>, e <xref:System.Windows.Forms.PrintDialog.Document%2A> propriedades. Para executar este exemplo, cole o código a seguir em um formulário que contém um <xref:System.Windows.Forms.PrintDialog> controle chamado `PrintDialog1` e um botão chamado `Button1`. Este exemplo requer que o botão <xref:System.Windows.Forms.Control.Click> evento e o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento `docToPrint` foram conectados para os métodos de manipulação de eventos definidos neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrinterSettings">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrinterSettings PrinterSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrinterSettings PrinterSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.PrinterSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrinterSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as configurações de impressora modificadas pela caixa de diálogo.</summary>
+        <value>O <see cref="T:System.Drawing.Printing.PrinterSettings" /> modificado pela caixa de diálogo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.PrintDialog.PrinterSettings%2A> propriedade deve ser definida antes de chamar <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> ou ocorrerá uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintToFile">
+      <MemberSignature Language="C#" Value="public bool PrintToFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PrintToFile" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.PrintToFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de seleção **Imprimir para arquivo** está marcada.</summary>
+        <value>
+          <see langword="true" />Se o **imprimir em arquivo** caixa de seleção estiver selecionado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todas as opções, a última impressora selecionada e as configurações de página para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunDialog">
+      <MemberSignature Language="C#" Value="protected override bool RunDialog (IntPtr hwndOwner);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RunDialog(native int hwndOwner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintDialog.RunDialog(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hwndOwner" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwndOwner">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public bool ShowHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.ShowHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o **ajuda** botão é exibido.</summary>
+        <value>
+          <see langword="true" />Se o **ajuda** botão é exibido; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade foi marcado como obsoleta no Windows 2000 e não afeta a isso e versões posteriores do Windows.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Windows.Forms.PrintDialog> controlar a configuração de <xref:System.Windows.Forms.PrintDialog.AllowSomePages%2A>, <xref:System.Windows.Forms.PrintDialog.ShowHelp%2A>, e <xref:System.Windows.Forms.PrintDialog.Document%2A> propriedades. Para executar este exemplo colar o código a seguir em um formulário que contém um <xref:System.Windows.Forms.PrintDialog> controle chamado `PrintDialog1` e um botão chamado `Button1`. Este exemplo requer que o botão <xref:System.Windows.Forms.Control.Click> evento e o <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento `docToPrint` foram conectados para os métodos definidos neste exemplo de manipulação de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintDialogExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintDialogExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowNetwork">
+      <MemberSignature Language="C#" Value="public bool ShowNetwork { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowNetwork" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.ShowNetwork" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o **rede** botão é exibido.</summary>
+        <value>
+          <see langword="true" />Se o **rede** botão é exibido; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade foi marcado como obsoleta no Windows 2000 e não afeta a isso e versões posteriores do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseEXDialog">
+      <MemberSignature Language="C#" Value="public bool UseEXDialog { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseEXDialog" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintDialog.UseEXDialog" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a caixa de diálogo deve ser mostrada no estilo do Windows XP para sistemas executando [!INCLUDE[WinXpFamily](~/includes/winxpfamily-md.md)] ou posterior.</summary>
+        <value>
+          <see langword="true" /> para indicar que a caixa de diálogo deve ser exibida no estilo do Windows XP; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, <xref:System.Windows.Forms.PrintDialog.ShowHelp%2A> e <xref:System.Windows.Forms.PrintDialog.ShowNetwork%2A> será ignorado como essas propriedades foram feitas obsoletas para Windows 2000 e versões posteriores do Windows.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

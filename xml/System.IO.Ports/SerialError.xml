@@ -1,0 +1,129 @@
+<Type Name="SerialError" FullName="System.IO.Ports.SerialError">
+  <TypeSignature Language="C#" Value="public enum SerialError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SerialError extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.SerialError" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os erros que ocorrem no objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração pode ser útil ao lidar com o <xref:System.IO.Ports.SerialPort.ErrorReceived> eventos para detectar e responder a erros durante a comunicação de dados por meio de um <xref:System.IO.Ports.SerialPort>. Você pode examinar o tipo de erro ao recuperar a propriedade eceivedEventArgs.EventType da classe eceivedEventArgs. A propriedade eceivedEventArgs.EventType contém um dos valores a partir de <xref:System.IO.Ports.SerialErrorReceivedEventArgs.EventType%2A> enumeração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Frame">
+      <MemberSignature Language="C#" Value="Frame" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialError Frame = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialError.Frame" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O hardware detectou um erro de enquadramento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Overrun">
+      <MemberSignature Language="C#" Value="Overrun" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialError Overrun = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialError.Overrun" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorreu um estouro de buffer de caracteres. O próximo caractere foi perdido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RXOver">
+      <MemberSignature Language="C#" Value="RXOver" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialError RXOver = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialError.RXOver" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorreu um estouro de buffer de entrada. Não há nenhum espaço no buffer de entrada ou um caractere foi recebido após o caractere de EOF (fim do arquivo).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RXParity">
+      <MemberSignature Language="C#" Value="RXParity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialError RXParity = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialError.RXParity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O hardware detectou um erro de paridade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TXFull">
+      <MemberSignature Language="C#" Value="TXFull" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Ports.SerialError TXFull = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Ports.SerialError.TXFull" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialError</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo tentou transmitir um caractere, mas o buffer de saída estava cheio.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

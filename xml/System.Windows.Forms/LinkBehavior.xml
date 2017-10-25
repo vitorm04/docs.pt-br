@@ -1,0 +1,98 @@
+<Type Name="LinkBehavior" FullName="System.Windows.Forms.LinkBehavior">
+  <TypeSignature Language="C#" Value="public enum LinkBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LinkBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LinkBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os comportamentos de um link em um <see cref="T:System.Windows.Forms.LinkLabel" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração para definir o valor da <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> propriedade o <xref:System.Windows.Forms.LinkLabel>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a configuração de <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A?displayProperty=nameWithType> propriedade usando o <xref:System.Windows.Forms.LinkBehavior> enumeração. -Configuração alsodemonstrates o <xref:System.Windows.Forms.LinkLabel.LinkColor%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.LinkLabel.Text%2A> e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedades. Para executar este exemplo colocá-lo em um formulário em branco e chame o método InitializeLinkLabel do construtor ou método de carregamento do formulário.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabelExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabelExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlwaysUnderline">
+      <MemberSignature Language="C#" Value="AlwaysUnderline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.LinkBehavior AlwaysUnderline = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.LinkBehavior.AlwaysUnderline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sempre exibe o link com texto sublinhado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HoverUnderline">
+      <MemberSignature Language="C#" Value="HoverUnderline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.LinkBehavior HoverUnderline = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.LinkBehavior.HoverUnderline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O link exibe texto sublinhado somente quando o mouse passa sobre o texto do link.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NeverUnderline">
+      <MemberSignature Language="C#" Value="NeverUnderline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.LinkBehavior NeverUnderline = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.LinkBehavior.NeverUnderline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O texto do link nunca é sublinhado. O link ainda pode ser distinguido de outro texto usando o <see cref="P:System.Windows.Forms.LinkLabel.LinkColor" /> propriedade do <see cref="T:System.Windows.Forms.LinkLabel" /> controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDefault">
+      <MemberSignature Language="C#" Value="SystemDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.LinkBehavior SystemDefault = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.LinkBehavior.SystemDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O comportamento dessa configuração depende das opções definidas usando a caixa de diálogo Opções da Internet no painel de controle ou o Internet Explorer.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,89 @@
+<Type Name="ActivityFunc&lt;TResult&gt;" FullName="System.Activities.ActivityFunc&lt;TResult&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ActivityFunc&lt;TResult&gt; : System.Activities.ActivityDelegate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityFunc`1&lt;TResult&gt; extends System.Activities.ActivityDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityFunc`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TResult" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.ActivityDelegate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TResult">O tipo do argumento de saída do delegado de atividade.</typeparam>
+    <summary>Define um representante de atividade sem nenhum <see langword="in" /> argumentos e um <see langword="out" /> argumento de tipo <c>Tresult</c>.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.ActivityDelegate> permite que os autores de atividades para expor os retornos de chamada com assinaturas específicas que os usuários da atividade podem fornecer manipuladores baseado na atividade para. <xref:System.Activities.ActivityFunc%601>é um <xref:System.Activities.ActivityDelegate> que retorna um valor. A assinatura de <xref:System.Activities.ActivityFunc%601> é especificado como argumentos de tipo genérico.  
+  
+ Há várias versões desse tipo genéricas que levar de 1 a 16 nos argumentos, mais o `out` argumento da atividade que é chamado. Também há **ActivityAction** tipos para representantes de atividades que não retornam valores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityFunc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityFunc`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.ActivityFunc`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultArgument">
+      <MemberSignature Language="C#" Value="protected override System.Activities.DelegateOutArgument GetResultArgument ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Activities.DelegateOutArgument GetResultArgument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityFunc`1.GetResultArgument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateOutArgument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public System.Activities.DelegateOutArgument&lt;TResult&gt; Result { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.DelegateOutArgument`1&lt;!TResult&gt; Result" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityFunc`1.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateOutArgument&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o argumento de saída do representante de atividade.</summary>
+        <value>O argumento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

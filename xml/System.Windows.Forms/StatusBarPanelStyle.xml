@@ -1,0 +1,66 @@
+<Type Name="StatusBarPanelStyle" FullName="System.Windows.Forms.StatusBarPanelStyle">
+  <TypeSignature Language="C#" Value="public enum StatusBarPanelStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StatusBarPanelStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.StatusBarPanelStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se um <see cref="T:System.Windows.Forms.StatusBarPanel" /> do objeto em um <see cref="T:System.Windows.Forms.StatusBar" /> controle é desenhado pelo proprietário ou desenhadas pelo sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração para definir o valor da <xref:System.Windows.Forms.StatusBarPanel.Style%2A> propriedade o <xref:System.Windows.Forms.StatusBarPanel> classe. A propriedade de estilo determina o modo no qual o <xref:System.Windows.Forms.StatusBarPanel> será exibido. <xref:System.Windows.Forms.StatusBarPanel>objetos podem exibir texto simples ou ser desenhados pelo proprietário. Desenhadas pelo proprietário <xref:System.Windows.Forms.StatusBarPanel> objetos suporte exibindo imagens ou uma fonte diferente do restante do <xref:System.Windows.Forms.StatusBarPanel> objetos em um <xref:System.Windows.Forms.StatusBar> controle, enquanto desenhado pelo sistema <xref:System.Windows.Forms.StatusBarPanel> objetos são usados para exibir somente texto (ou texto e um ícone se um ícone é especificado no <xref:System.Windows.Forms.StatusBarPanel.Icon%2A> propriedade do <xref:System.Windows.Forms.StatusBarPanel>). Para executar as operações de desenho proprietário em um desenho proprietário <xref:System.Windows.Forms.StatusBarPanel>, use o <xref:System.Windows.Forms.StatusBar.DrawItem> eventos do <xref:System.Windows.Forms.StatusBar> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.StatusBarPanel.Style%2A> propriedade, o <xref:System.Windows.Forms.StatusBarDrawItemEventHandler> delegado, o <xref:System.Windows.Forms.StatusBarDrawItemEventArgs> classe, o <xref:System.Windows.Forms.StatusBarPanelStyle> enumeração e <xref:System.Windows.Forms.StatusBarDrawItemEventArgs.Panel%2A?displayProperty=nameWithType> propriedade. Para executar o exemplo, cole o seguinte codein um formulário. Chamar o `InitializeStatusBarPanels` método no construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.StatusBarDrawItemEventHandler#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.StatusBarDrawItemEventHandler#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.StatusBarDrawItemEventHandler#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.StatusBarDrawItemEventHandler/VB/form1.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OwnerDraw">
+      <MemberSignature Language="C#" Value="OwnerDraw" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.StatusBarPanelStyle OwnerDraw = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.StatusBarPanelStyle.OwnerDraw" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Forms.StatusBarPanel" /> é desenhado pelo proprietário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.StatusBarPanelStyle Text = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.StatusBarPanelStyle.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.StatusBarPanelStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Forms.StatusBarPanel" /> exibe o texto na fonte padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

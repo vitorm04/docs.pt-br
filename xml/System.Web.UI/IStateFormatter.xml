@@ -1,0 +1,107 @@
+<Type Name="IStateFormatter" FullName="System.Web.UI.IStateFormatter">
+  <TypeSignature Language="C#" Value="public interface IStateFormatter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStateFormatter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IStateFormatter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos que um tipo implementa para serializar e desserializar um gráfico de objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IStateFormatter> interface define os métodos que um tipo pode implementar para serializar e desserializar o estado que mantém um controle de servidor Web do ASP.NET em seu <xref:System.Web.UI.Control.ViewState%2A> propriedade. Essa infra-estrutura é usada por classes que derivam de <xref:System.Web.UI.PageStatePersister> classe para manter o estado de uma página ASP.NET entre solicitações. Por padrão, o estado da página ASP.NET é serializado e desserializado por uma instância do <xref:System.Web.UI.ObjectStateFormatter> classe; no entanto, os desenvolvedores de site e o adaptador podem implementar o <xref:System.Web.UI.IStateFormatter> interface em seus próprios tipos para executar esse trabalho.  
+  
+ Para obter mais informações sobre controle estado gerenciamento e exibição de estado do servidor Web, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce) e [controles do servidor Web dinâmicos e estado de exibição](http://msdn.microsoft.com/library/c1ea6a66-3307-4c98-8187-cad462e1c027).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Web.UI.PageStatePersister> objeto que salva o estado de exibição e o controle em um fluxo no servidor Web. O `StreamPageStatePersister` classe demonstra como substituir o <xref:System.Web.UI.PageStatePersister.Load%2A> e <xref:System.Web.UI.PageStatePersister.Save%2A> métodos para extrair e salvar informações de estado da página. Esses métodos usam o <xref:System.Web.UI.IStateFormatter> interface herdada do <xref:System.Web.UI.PageStatePersister> classe para serializar e desserializar o estado de exibição. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.PageStatePersister> classe.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_2/CS/textfilepagestatepersister.cs#1)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_2/VB/textfilepagestatepersister.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Deserialize">
+      <MemberSignature Language="C#" Value="public object Deserialize (string serializedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Deserialize(string serializedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IStateFormatter.Deserialize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedState" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serializedState">Uma cadeia de caracteres que o <see cref="T:System.Web.UI.IStateFormatter" /> desserializa em um objeto inicializado.</param>
+        <summary>Desserializa um gráfico de estado do objeto de forma de cadeia de caracteres serializada.</summary>
+        <returns>Um objeto que representa o estado de um controle de servidor ASP.NET.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.IStateFormatter.Deserialize%2A> método para reconstituir o objeto de estado para um controle de servidor ou de página do ASP.NET que foi serializado usando o <xref:System.Web.UI.IStateFormatter.Serialize%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.IStateFormatter.Deserialize%2A> método carrega informações do estado de exibição. O <xref:System.Web.UI.PageStatePersister.Load%2A> método do `StreamPageStatePersister` classe usa a <xref:System.Web.UI.IStateFormatter> interface herdada do <xref:System.Web.UI.PageStatePersister> classe ao desserializar o estado de exibição. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.UI.IStateFormatter> interface.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_2#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_2/CS/textfilepagestatepersister.cs#2)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_2#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_2/VB/textfilepagestatepersister.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public string Serialize (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Serialize(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IStateFormatter.Serialize(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">O objeto que representa o estado de exibição do controle do servidor Web para serializar a forma de cadeia de caracteres.</param>
+        <summary>Serializa o estado de controle de servidor Web do ASP.NET para o formulário de cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres que representa o estado de exibição de um controle servidor de Web.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.IStateFormatter.Serialize%2A> método para transformar um gráfico de estado do objeto para o formato de cadeia de caracteres. Reconstituir um objeto de estado da cadeia de caracteres usando o <xref:System.Web.UI.IStateFormatter.Deserialize%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.IStateFormatter.Serialize%2A> método persiste informações de estado de exibição para um arquivo. O <xref:System.Web.UI.PageStatePersister.Save%2A> método o `StreamPageStatePersister` classe usa a <xref:System.Web.UI.IStateFormatter> interface herdada do <xref:System.Web.UI.PageStatePersister> classe para serializar o estado de exibição. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.UI.IStateFormatter> interface.  
+  
+ [!code-csharp[Samples.AspNet.Alexkr.TextFilePageStatePersister_2#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_2/CS/textfilepagestatepersister.cs#3)]
+ [!code-vb[Samples.AspNet.Alexkr.TextFilePageStatePersister_2#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.Alexkr.TextFilePageStatePersister_2/VB/textfilepagestatepersister.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

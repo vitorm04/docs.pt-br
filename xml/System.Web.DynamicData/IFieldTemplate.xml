@@ -1,0 +1,37 @@
+<Type Name="IFieldTemplate" FullName="System.Web.DynamicData.IFieldTemplate">
+  <TypeSignature Language="C#" Value="public interface IFieldTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFieldTemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.IFieldTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define os membros que uma classe deve implementar para ser reconhecidos como um modelo de campo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SetHost">
+      <MemberSignature Language="C#" Value="public void SetHost (System.Web.DynamicData.IFieldTemplateHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetHost(class System.Web.DynamicData.IFieldTemplateHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.IFieldTemplate.SetHost(System.Web.DynamicData.IFieldTemplateHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="host" Type="System.Web.DynamicData.IFieldTemplateHost" />
+      </Parameters>
+      <Docs>
+        <param name="host">O objeto que controla o uso do modelo de campo.</param>
+        <summary>Associa o modelo de campo com o objeto que controla seu uso.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

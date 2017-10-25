@@ -1,0 +1,100 @@
+<Type Name="TreeNodeSelectAction" FullName="System.Web.UI.WebControls.TreeNodeSelectAction">
+  <TypeSignature Language="C#" Value="public enum TreeNodeSelectAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeNodeSelectAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNodeSelectAction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Representa o evento ou os eventos acionados quando um nó no controle <see cref="T:System.Web.UI.WebControls.TreeView" /> é selecionado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> propriedade para um <xref:System.Web.UI.WebControls.TreeNode> controle é definido como um valor diferente de uma cadeia de caracteres vazia (""), clique no nó navega para a URL especificada. Se o <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> estiver definida como uma cadeia de caracteres vazia, clicando nas causas de nó um postback. O <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> propriedade determina os eventos para gerar a postagem. Por padrão, o <xref:System.Web.UI.WebControls.TreeNode.Select%2A> é gerado. Nenhum evento é gerado se o <xref:System.Web.UI.WebControls.TreeNode.NavigateUrl%2A> está definida.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.TreeView.HoverNodeStyle%2A> propriedade não é processada para um nó com seu <xref:System.Web.UI.WebControls.TreeNode.SelectAction%2A> valor de propriedade definida como None.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TreeNodeSelectAction.None> enumeração para representar o evento que é gerado quando um nó é clicado no <xref:System.Web.UI.WebControls.TreeView> controle.  
+  
+ [!code-aspx-csharp[TreeViewPopulateNodesFromClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/CS/treeviewpopulatenodesfromclientcs.aspx#1)]
+ [!code-aspx-vb[TreeViewPopulateNodesFromClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/VB/treeviewpopulatenodesfromclientvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Expand">
+      <MemberSignature Language="C#" Value="Expand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeSelectAction Expand = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeSelectAction.Expand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeSelectAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeExpanded" /> quando um nó é selecionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeSelectAction None = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeSelectAction.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeSelectAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não aciona nenhum evento quando um nó é selecionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="Select" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeSelectAction Select = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeSelectAction.Select" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeSelectAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.TreeView.SelectedNodeChanged" /> quando um nó é selecionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectExpand">
+      <MemberSignature Language="C#" Value="SelectExpand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.TreeNodeSelectAction SelectExpand = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.TreeNodeSelectAction.SelectExpand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNodeSelectAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Aciona os eventos <see cref="E:System.Web.UI.WebControls.TreeView.SelectedNodeChanged" /> e <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeExpanded" /> quando um nó é selecionado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

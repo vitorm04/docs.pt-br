@@ -1,0 +1,584 @@
+<Type Name="ZipArchive" FullName="System.IO.Compression.ZipArchive">
+  <TypeSignature Language="C#" Value="public class ZipArchive : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ZipArchive extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Compression.ZipArchive" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Compression</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um pacote de arquivos compactados no formato de arquivo zip.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os métodos para manipular arquivos zip e suas entradas do arquivo estão espalhados em três classes: <xref:System.IO.Compression.ZipFile>, <xref:System.IO.Compression.ZipArchive>, e <xref:System.IO.Compression.ZipArchiveEntry>.  
+  
+|Para|Use|  
+|--------|---------|  
+|Criar um arquivo zip de um diretório|<xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>|  
+|Extraia o conteúdo de um arquivo zip para um diretório|<xref:System.IO.Compression.ZipFile.ExtractToDirectory%2A?displayProperty=nameWithType>|  
+|Adicionar novos arquivos em um arquivo zip existente|<xref:System.IO.Compression.ZipArchive.CreateEntry%2A?displayProperty=nameWithType>|  
+|Recuperar um arquivo de um arquivo zip|<xref:System.IO.Compression.ZipArchive.GetEntry%2A?displayProperty=nameWithType>|  
+|Recuperar todos os arquivos de um arquivo zip|<xref:System.IO.Compression.ZipArchive.Entries%2A?displayProperty=nameWithType>|  
+|Abrir um fluxo para um único arquivo contido em um arquivo zip|<xref:System.IO.Compression.ZipArchiveEntry.Open%2A?displayProperty=nameWithType>|  
+|Excluir um arquivo de um arquivo zip|<xref:System.IO.Compression.ZipArchiveEntry.Delete%2A?displayProperty=nameWithType>|  
+  
+ Quando você cria uma nova entrada, o arquivo é compactado e adicionado ao pacote zip. O <xref:System.IO.Compression.ZipArchive.CreateEntry%2A> método permite que você especifique uma hierarquia de diretórios ao adicionar a entrada. Você incluir o caminho relativo da nova entrada no pacote zip. Por exemplo, criar uma nova entrada com um caminho relativo do `AddedFolder\NewFile.txt` cria um arquivo de texto compactado em um diretório chamado AddedFolder.  
+  
+ Se você fizer referência a `System.IO.Compression.FileSystem` assembly em seu projeto, você pode acessar os três métodos de extensão (da <xref:System.IO.Compression.ZipFileExtensions> classe) para o <xref:System.IO.Compression.ZipArchive> classe: <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A>, <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A>, e <xref:System.IO.Compression.ZipFileExtensions.ExtractToDirectory%2A>. Esses métodos de extensão permitem compactar e descompactar o conteúdo da entrada em um arquivo. O `System.IO.Compression.FileSystem` assembly não está disponível para [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos. Em [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, você pode compactar e descompactar os arquivos usando o <xref:System.IO.Compression.DeflateStream> ou <xref:System.IO.Compression.GZipStream> classe, ou você pode usar o [!INCLUDE[wrt](~/includes/wrt-md.md)] tipos [compactador](http://go.microsoft.com/fwlink/p/?LinkID=246357) e [descompactador](http://go.microsoft.com/fwlink/p/?LinkID=246358).  
+  
+   
+  
+## Examples  
+ O primeiro exemplo mostra como criar uma nova entrada e gravar nele usando um fluxo.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
+  
+ O exemplo a seguir mostra como abrir um arquivo zip e iterar pela coleção de entradas.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]  
+  
+ O terceiro exemplo mostra como usar métodos de extensão para criar uma nova entrada em um arquivo zip de um arquivo existente e extrair o conteúdo do arquivo. Você deve fazer referência a `System.IO.Compression.FileSystem` assembly para executar o código.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchive#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program3.cs#3)]
+ [!code-vb[System.IO.Compression.ZipArchive#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program3.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ZipArchive (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo que contém o arquivo a ser lido.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.ZipArchive" /> do fluxo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O fluxo já está fechado ou não dá suporte à leitura.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.InvalidDataException">O conteúdo do fluxo não está no formato de arquivo zip.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ZipArchive (System.IO.Stream stream, System.IO.Compression.ZipArchiveMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.IO.Compression.ZipArchiveMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.#ctor(System.IO.Stream,System.IO.Compression.ZipArchiveMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="mode" Type="System.IO.Compression.ZipArchiveMode" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de entrada ou de saída.</param>
+        <param name="mode">Um dos valores de enumeração que indica se o arquivo zip é usado para ler, criar ou atualizar entradas.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.ZipArchive" /> no fluxo especificado e com o modo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Read>, o fluxo deve oferecer suporte à leitura. Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Create>, o fluxo deve oferecer suporte à gravação. Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Update>, o fluxo deve oferecer suporte a leitura, gravação e busca.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O fluxo já está fechado ou os recursos do fluxo não correspondem ao modo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> é um valor inválido.</exception>
+        <exception cref="T:System.IO.InvalidDataException">Não foi possível interpretar o conteúdo do fluxo como um arquivo zip.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> e uma entrada está ausente do arquivo ou está corrompida e não pode ser lida.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> e uma entrada é muito grande para caber na memória.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ZipArchive (System.IO.Stream stream, System.IO.Compression.ZipArchiveMode mode, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.IO.Compression.ZipArchiveMode mode, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.#ctor(System.IO.Stream,System.IO.Compression.ZipArchiveMode,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="mode" Type="System.IO.Compression.ZipArchiveMode" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de entrada ou de saída.</param>
+        <param name="mode">Um dos valores de enumeração que indica se o arquivo zip é usado para ler, criar ou atualizar entradas.</param>
+        <param name="leaveOpen">
+          <see langword="true" /> para deixar o fluxo aberto após o objeto <see cref="T:System.IO.Compression.ZipArchive" /> ser descartado; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.ZipArchive" /> no fluxo especificado para o modo especificado e, opcionalmente, deixa o fluxo aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Read>, o fluxo deve oferecer suporte à leitura. Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Create>, o fluxo deve oferecer suporte à gravação. Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Update>, o fluxo deve oferecer suporte a leitura, gravação e busca.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O fluxo já está fechado ou os recursos do fluxo não correspondem ao modo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> é um valor inválido.</exception>
+        <exception cref="T:System.IO.InvalidDataException">Não foi possível interpretar o conteúdo do fluxo como um arquivo zip.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> e uma entrada está ausente do arquivo ou está corrompida e não pode ser lida.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> e uma entrada é muito grande para caber na memória.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ZipArchive (System.IO.Stream stream, System.IO.Compression.ZipArchiveMode mode, bool leaveOpen, System.Text.Encoding entryNameEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.IO.Compression.ZipArchiveMode mode, bool leaveOpen, class System.Text.Encoding entryNameEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.#ctor(System.IO.Stream,System.IO.Compression.ZipArchiveMode,System.Boolean,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="mode" Type="System.IO.Compression.ZipArchiveMode" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+        <Parameter Name="entryNameEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de entrada ou de saída.</param>
+        <param name="mode">Um dos valores de enumeração que indica se o arquivo zip é usado para ler, criar ou atualizar entradas.</param>
+        <param name="leaveOpen">
+          <see langword="true" /> para deixar o fluxo aberto após o objeto <see cref="T:System.IO.Compression.ZipArchive" /> ser descartado; caso contrário, <see langword="false" />.</param>
+        <param name="entryNameEncoding">A codificação a ser usada ao ler ou gravar nomes de entrada nesse arquivo. Especifique um valor para esse parâmetro somente quando uma codificação for necessária para a interoperabilidade com ferramentas de arquivo zip e bibliotecas que não dão suporte à codificação UTF-8 para nomes de entrada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Compression.ZipArchive" /> no fluxo especificado para o modo especificado, usa a codificação especificada para nomes de entrada e, como opção, deixa o fluxo aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Read>, o fluxo deve oferecer suporte à leitura. Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Create>, o fluxo deve oferecer suporte à gravação. Se o `mode` parâmetro está definido como <xref:System.IO.Compression.ZipArchiveMode.Update>, o fluxo deve oferecer suporte a leitura, gravação e busca.  
+  
+ Quando você abre um arquivo zip para leitura e `entryNameEncoding` é definido como `null`, nomes de entrada são decodificados de acordo com as regras a seguir:  
+  
+-   Quando o sinalizador (no sinalizador de bit de uso geral do cabeçalho do arquivo local) de codificação de idioma não for definido, a página de código atual do sistema padrão é usada para decodificar o nome da entrada.  
+  
+-   Quando o sinalizador de codificação de idioma é definido, UTF-8 é usado para decodificar o nome da entrada.  
+  
+ Quando você abre um arquivo zip para leitura e `entryNameEncoding` é definida como um valor diferente de `null`, nomes de entrada são decodificados de acordo com as regras a seguir:  
+  
+-   Quando a sinalizador de codificação de linguagem não é definida, especificado `entryNameEncoding` é usado para decodificar o nome da entrada.  
+  
+-   Quando o sinalizador de codificação de idioma é definido, UTF-8 é usado para decodificar o nome da entrada.  
+  
+ Quando você gravar em arquivos e `entryNameEncoding` é definido como `null`, nomes de entrada são codificados de acordo com as regras a seguir:  
+  
+-   Para nomes de entrada que contêm caracteres fora do intervalo ASCII, o sinalizador de codificação de idioma é definido e nomes de entrada são codificados usando UTF-8.  
+  
+-   Para nomes de entrada que contêm apenas caracteres ASCII, o sinalizador de codificação de idioma não está definido e nomes de entrada são codificados usando a página de código atual do sistema padrão.  
+  
+ Quando você gravar em arquivos e `entryNameEncoding` é definida como um valor diferente de `null`, especificado `entryNameEncoding` é usado para codificar os nomes de entrada em bytes. O sinalizador (no sinalizador de bit de uso geral do cabeçalho do arquivo local) de codificação de idioma é definido somente quando a codificação especificada é uma codificação UTF-8.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O fluxo já está fechado ou os recursos do fluxo não correspondem ao modo.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> é um valor inválido.</exception>
+        <exception cref="T:System.IO.InvalidDataException">Não foi possível interpretar o conteúdo do fluxo como um arquivo zip.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> e uma entrada está ausente do arquivo ou está corrompida e não pode ser lida.  
+  
+ -ou-  
+  
+ <paramref name="mode" /> é <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> e uma entrada é muito grande para caber na memória.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEntry">
+      <MemberSignature Language="C#" Value="public System.IO.Compression.ZipArchiveEntry CreateEntry (string entryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Compression.ZipArchiveEntry CreateEntry(string entryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.CreateEntry(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchiveEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entryName">Um caminho relativo à raiz do arquivo-morto que especifica o nome da entrada a ser criada.</param>
+        <summary>Cria uma entrada vazia que tem o caminho especificado e nome de entrada no arquivo zip.</summary>
+        <returns>Uma entrada vazia do arquivo-morto zip.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `entryName` cadeia de caracteres deve refletir o caminho relativo da entrada que você deseja criar dentro do ZIP. Não há nenhuma restrição de cadeia de caracteres que você fornecer. No entanto, se ele não está formatado como um caminho relativo, a entrada é criada, mas você pode obter uma exceção ao extrair o conteúdo do arquivo morto zip. Se uma entrada com o nome e o caminho especificado já existe no arquivo morto, uma segunda entrada é criada com o mesmo nome e caminho.  
+  
+ O valor de <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> propriedade para a nova entrada está definida como a hora atual. A entrada é compactada usando o nível de compactação padrão do algoritmo de compactação subjacente. Se você quiser especificar um nível de compactação diferentes, use o <xref:System.IO.Compression.ZipArchive.CreateEntry%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma entrada e gravar nele usando um fluxo.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="entryName" /> é <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O arquivo zip não dá suporte à gravação.</exception>
+        <exception cref="T:System.ObjectDisposedException">O arquivo zip foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEntry">
+      <MemberSignature Language="C#" Value="public System.IO.Compression.ZipArchiveEntry CreateEntry (string entryName, System.IO.Compression.CompressionLevel compressionLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Compression.ZipArchiveEntry CreateEntry(string entryName, valuetype System.IO.Compression.CompressionLevel compressionLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.CreateEntry(System.String,System.IO.Compression.CompressionLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchiveEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entryName" Type="System.String" />
+        <Parameter Name="compressionLevel" Type="System.IO.Compression.CompressionLevel" />
+      </Parameters>
+      <Docs>
+        <param name="entryName">Um caminho relativo à raiz do arquivo-morto que especifica o nome da entrada a ser criada.</param>
+        <param name="compressionLevel">Um dos valores de enumeração que indica se é necessário enfatizar a eficiência de compactação ou velocidade ao criar a entrada.</param>
+        <summary>Cria uma entrada vazia que tem o nível de compactação e o nome de entrada especificados no arquivo-morto zip.</summary>
+        <returns>Uma entrada vazia do arquivo-morto zip.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `entryName` cadeia de caracteres deve refletir o caminho relativo da entrada que você deseja criar dentro do ZIP. Não há nenhuma restrição de cadeia de caracteres que você fornecer. No entanto, se ele não está formatado como um caminho relativo, a entrada é criada, mas você pode obter uma exceção ao extrair o conteúdo do arquivo morto zip. Se uma entrada com o nome especificado já existe no arquivo morto, uma segunda entrada é criada com o mesmo nome.  
+  
+ O valor de <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> propriedade para a nova entrada está definida como a hora atual. Definir o `compressionLevel` parâmetro <xref:System.IO.Compression.CompressionLevel.Optimal> se você quiser que o arquivo deve ser compactado tanto quanto possível. Definir o `compressionLevel` parâmetro <xref:System.IO.Compression.CompressionLevel.Fastest> somente se você estiver preocupado que a operação de compactação não será concluída rápido o suficiente para seu cenário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma entrada com o nível de compactação ideal. Ele também grava a nova entrada por meio de um fluxo.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program2.cs#2)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="entryName" /> é <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O arquivo zip não dá suporte à gravação.</exception>
+        <exception cref="T:System.ObjectDisposedException">O arquivo zip foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pela instância atual da classe <see cref="T:System.IO.Compression.ZipArchive" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método terminar de gravar o arquivo morto e libera todos os recursos usados pelo <xref:System.IO.Compression.ZipArchive> objeto. A menos que você construir o objeto usando o <xref:System.IO.Compression.ZipArchive.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.ZipArchiveMode%2CSystem.Boolean%29> sobrecarga de construtor e defina seu `leaveOpen` parâmetro para `true`, todos os fluxos subjacentes são fechadas e não está mais disponível para operações de gravação subsequente.  
+  
+ Quando terminar de usar essa instância do <xref:System.IO.Compression.ZipArchive>, chame <xref:System.IO.Compression.ZipArchive.Dispose> para liberar todos os recursos usados por esta instância. Você deve eliminar referências adicionais para este <xref:System.IO.Compression.ZipArchive> para que o coletor de lixo possa recuperar a memória da instância em vez de mantê-lo ativo para finalização da instância.  
+  
+ <xref:System.IO.Compression.ZipArchive.Dispose>chama o <xref:System.IO.Compression.ZipArchive.Dispose%28System.Boolean%29> método, que contém o código para liberar recursos gerenciados e não gerenciados. Para obter mais informações, consulte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Para encerrar a gravação de arquivo morto e liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Chamado pelo <see cref="M:System.IO.Compression.ZipArchive.Dispose" /> e <see cref="M:System.Object.Finalize" /> métodos para liberar os recursos não gerenciados usados pela instância atual do <see cref="T:System.IO.Compression.ZipArchive" /> de classe e opcionalmente terminar de gravar o arquivo morto e libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `disposing` é definido como `true`, todos os fluxos subjacentes são fechadas e não está disponível para operações de gravação subsequente, a menos que você construir o objeto usando o <xref:System.IO.Compression.ZipArchive.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.ZipArchiveMode%2CSystem.Boolean%29> sobrecarga de construtor e defina seu `leaveOpen` parâmetro para `true`.  
+  
+ Este método é chamado somente pelo público <xref:System.IO.Compression.ZipArchive.Dispose> e <xref:System.Object.Finalize> métodos; não chame este método diretamente.  
+  
+ Quando você implementa o padrão dispose, o parâmetro booliano do <xref:System.IO.Compression.ZipArchive.Dispose%28System.Boolean%29> método deve ser usado da seguinte maneira:  
+  
+-   O <xref:System.IO.Compression.ZipArchive.Dispose> deve chamar o método do objeto atual <xref:System.IO.Compression.ZipArchive.Dispose%28System.Boolean%29> com o parâmetro booliano definido como `true` para liberar recursos gerenciados e não gerenciados.  
+  
+-   O <xref:System.Object.Finalize> deve chamar o método do objeto atual <xref:System.IO.Compression.ZipArchive.Dispose%28System.Boolean%29> com o parâmetro booliano definido como `false` para liberar apenas recursos não gerenciados.  
+  
+ Para obter mais informações, consulte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Entries">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IO.Compression.ZipArchiveEntry&gt; Entries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IO.Compression.ZipArchiveEntry&gt; Entries" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchive.Entries" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IO.Compression.ZipArchiveEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de entradas que atualmente estão no arquivo zip.</summary>
+        <value>A coleção de entradas que atualmente estão no arquivo zip.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IO.Compression.ZipArchive.Entries%2A> propriedade para recuperar a coleção inteira de entradas. Use o <xref:System.IO.Compression.ZipArchive.GetEntry%2A> método para recuperar uma única entrada por nome.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como abrir um arquivo zip e iterar pela coleção de entradas.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O arquivo zip não dá suporte à leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O arquivo zip foi descartado.</exception>
+        <exception cref="T:System.IO.InvalidDataException">O arquivo zip está corrompido e as entradas não podem ser recuperadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEntry">
+      <MemberSignature Language="C#" Value="public System.IO.Compression.ZipArchiveEntry GetEntry (string entryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Compression.ZipArchiveEntry GetEntry(string entryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchive.GetEntry(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchiveEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entryName">Um caminho, relativo à raiz do arquivo, que identifica a entrada a ser recuperada.</param>
+        <summary>Recupera um wrapper para a entrada especificada no arquivo zip.</summary>
+        <returns>Um wrapper para a entrada especificada no arquivo; <see langword="null" /> se a entrada não existir no arquivo morto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se várias entradas que têm o nome especificado existirem no arquivo morto, primeiro será retornado. O nome da entrada é comparado ao `entryName` usando a comparação ordinal.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IO.Compression.ZipArchive.GetEntry%2A> método para recuperar uma entrada.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program2.cs#2)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="entryName" /> é <see cref="F:System.String.Empty" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="entryName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O arquivo zip não dá suporte à leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O arquivo zip foi descartado.</exception>
+        <exception cref="T:System.IO.InvalidDataException">O arquivo zip está corrompido e as entradas não podem ser recuperadas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.IO.Compression.ZipArchiveMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Compression.ZipArchiveMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchive.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchiveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que descreve o tipo de ação que o arquivo zip pode executar em entradas.</summary>
+        <value>Um dos valores de enumeração que descreve o tipo de ação (ler, criar ou atualizar) que o arquivo zip pode executar em entradas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Especifique um valor para o <xref:System.IO.Compression.ZipArchive> propriedade quando você cria uma instância do <xref:System.IO.Compression.ZipArchive> classe. Use o <xref:System.IO.Compression.ZipArchive.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.ZipArchiveMode%29> ou <xref:System.IO.Compression.ZipArchive.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.ZipArchiveMode%2CSystem.Boolean%29> construtor para fornecer um valor para o <xref:System.IO.Compression.ZipArchive.Mode%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

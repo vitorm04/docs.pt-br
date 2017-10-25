@@ -1,0 +1,473 @@
+<Type Name="ValidationAttribute" FullName="System.ComponentModel.DataAnnotations.ValidationAttribute">
+  <TypeSignature Language="C#" Value="public abstract class ValidationAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ValidationAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.ValidationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Serve como a classe base para todos os atributos de validação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe impõe validação, com base nos metadados que está associado com a tabela de dados. Você pode substituir essa classe para criar atributos de validação personalizada.  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">AS propriedades <see cref="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType" /> e <see cref="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName" /> para mensagem de erro localizada são definidas ao mesmo tempo que a mensagem de erro de propriedade <see cref="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage" /> não localizada é definida.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidationAttribute (Func&lt;string&gt; errorMessageAccessor);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Func`1&lt;string&gt; errorMessageAccessor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.#ctor(System.Func{System.String})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorMessageAccessor" Type="System.Func&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessageAccessor">A função que permite o acesso aos recursos de validação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" /> usando a função que permite o acesso aos recursos de validação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor fornece uma função de acessador de recurso que é usada pelo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageString%2A> propriedade para recuperar uma mensagem de erro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="errorMessageAccessor" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ValidationAttribute (string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">A mensagem de erro para associar um controle de validação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" /> classe usando a mensagem de erro para associar um controle de validação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="public string ErrorMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma mensagem de erro para associar a um controle de validação em caso de falha da validação.</summary>
+        <value>A mensagem de erro associada ao controle de validação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é a mensagem de erro que você associar o controle de validação. Ele é usado para mensagens de erro não localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessageResourceName">
+      <MemberSignature Language="C#" Value="public string ErrorMessageResourceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessageResourceName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do recurso de mensagem de erro a ser usado para pesquisar o valor da propriedade <see cref="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType" /> se a validação falhar.</summary>
+        <value>O recurso de mensagem de erro associado ao controle de validação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName%2A> propriedade junto com o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType%2A> propriedade para fornecer uma mensagem de erro localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessageResourceType">
+      <MemberSignature Language="C#" Value="public Type ErrorMessageResourceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ErrorMessageResourceType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de recurso a ser usado para a pesquisa de mensagens de erro se a validação falhar.</summary>
+        <value>O tipo de mensagem de erro associado a um controle de validação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType%2A> propriedade junto com o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName%2A> propriedade para fornecer uma mensagem de erro localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessageString">
+      <MemberSignature Language="C#" Value="protected string ErrorMessageString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessageString" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de erro de validação localizada.</summary>
+        <value>A mensagem de erro de validação localizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres de mensagem de erro é obtida avaliando a <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A> propriedade ou avaliando o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceType%2A> e <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageResourceName%2A> propriedades. Os dois casos são mutuamente exclusivos. O segundo caso é usado se você quiser exibir uma mensagem de erro localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatErrorMessage">
+      <MemberSignature Language="C#" Value="public virtual string FormatErrorMessage (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string FormatErrorMessage(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser incluído na mensagem formatada.</param>
+        <summary>Aplica formatação a uma mensagem de erro com base no campo de dados em que ocorreu o erro.</summary>
+        <returns>Uma instância da mensagem de erro formatada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método formata uma mensagem de erro usando o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessageString%2A> propriedade. Esse método anexa o nome do campo de dados que disparou o erro para a mensagem de erro formatada. Você pode personalizar como a mensagem de erro é formatada com a criação de uma classe derivada que substitui esse método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValidationResult">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.DataAnnotations.ValidationResult GetValidationResult (object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.DataAnnotations.ValidationResult GetValidationResult(object value, class System.ComponentModel.DataAnnotations.ValidationContext validationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="validationContext" Type="System.ComponentModel.DataAnnotations.ValidationContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser validado.</param>
+        <param name="validationContext">As informações de contexto sobre a operação de validação.</param>
+        <summary>Verifica se o valor especificado é válido em relação ao atributo de validação atual.</summary>
+        <returns>Uma instância da classe <see cref="T:System.ComponentModel.DataAnnotations.ValidationResult" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.GetValidationResult%2A> método verifica a validade sem lançar uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="public virtual bool IsValid (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsValid(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do objeto a ser validado.</param>
+        <summary>Determina se valor especificado do objeto é válido.</summary>
+        <returns>
+          <see langword="true" /> se o valor especificado for válido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você herdar o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute> classe, você deve implementar a lógica de validação neste método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValid">
+      <MemberSignature Language="C#" Value="protected virtual System.ComponentModel.DataAnnotations.ValidationResult IsValid (object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.ComponentModel.DataAnnotations.ValidationResult IsValid(object value, class System.ComponentModel.DataAnnotations.ValidationContext validationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.ValidationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="validationContext" Type="System.ComponentModel.DataAnnotations.ValidationContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser validado.</param>
+        <param name="validationContext">As informações de contexto sobre a operação de validação.</param>
+        <summary>Valida o valor especificado em relação ao atributo de validação atual.</summary>
+        <returns>Uma instância da classe <see cref="T:System.ComponentModel.DataAnnotations.ValidationResult" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequiresValidationContext">
+      <MemberSignature Language="C#" Value="public virtual bool RequiresValidationContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequiresValidationContext" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.ValidationAttribute.RequiresValidationContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o atributo requer contexto de validação.</summary>
+        <value>
+          <see langword="true" /> se o atributo exigir um contexto de validação; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (object value, System.ComponentModel.DataAnnotations.ValidationContext validationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Validate(object value, class System.ComponentModel.DataAnnotations.ValidationContext validationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="validationContext" Type="System.ComponentModel.DataAnnotations.ValidationContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser validado.</param>
+        <param name="validationContext">O objeto <see cref="T:System.ComponentModel.DataAnnotations.ValidationContext" /> que descreve o contexto em que as verificações de validação são executadas. O parâmetro não pode ser <see langword="null" />.</param>
+        <summary>Valida o objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid%2A> método para determinar se o objeto que é especificado pelo `value` parâmetro é válido. Se o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.Validate%2A> método `false`, este método chama o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.FormatErrorMessage%2A> método para obter a mensagem localizada que declara o problema. Em seguida, gera um <xref:System.ComponentModel.DataAnnotations.ValidationException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">Falha na validação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (object value, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Validate(object value, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.ValidationAttribute.Validate(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do objeto a ser validado.</param>
+        <param name="name">O nome a ser incluído na mensagem de erro.</param>
+        <summary>Valida o objeto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método valida o valor do objeto ou propriedade na qual o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute> atributo foi declarado. Ele chama o <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.IsValid%2A> método e passa `value` como um parâmetro. Se a validação falhar, um <xref:System.ComponentModel.DataAnnotations.ValidationException> exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.DataAnnotations.ValidationException">
+          <paramref name="value" /> não é válido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

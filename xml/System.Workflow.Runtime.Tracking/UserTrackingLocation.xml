@@ -1,0 +1,426 @@
+<Type Name="UserTrackingLocation" FullName="System.Workflow.Runtime.Tracking.UserTrackingLocation">
+  <TypeSignature Language="C#" Value="public sealed class UserTrackingLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit UserTrackingLocation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um local de qualificado de atividade que corresponde a um evento de usuário no caminho de execução potencial de uma instância de fluxo de trabalho raiz. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Um designer de atividade ou um designer de fluxo de trabalho pode usar qualquer um dos sobrecarregados <xref:System.Workflow.ComponentModel.Activity.TrackData%2A?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%2A?displayProperty=nameWithType> métodos para instrumentar o fluxo de trabalho para emitir os dados para o infraestrutura como um evento de usuário de controle de tempo de execução. Os dados emitidos são referidos como dados de usuário. Ao contrário dos eventos de status de atividade e eventos de status do fluxo de trabalho, que ocorrem apenas em atividade ou alterações de status do fluxo de trabalho, os eventos de usuário podem ocorrer em qualquer local que é instrumentada em um fluxo de trabalho. Um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> define os parâmetros correspondentes para tal um local especificando o tipo dos dados de usuário, o tipo da atividade do qual ele deve ser emitido, uma coleção de condições que mais precisamente pode qualificar uma instância ou instâncias dessa atividade, um nome de chave opcional com a qual os dados de usuário devem ser associados, se tipos derivados dos dados do usuário devem ser correspondidos , e se os dados de usuário emitidos de atividades derivadas do tipo da atividade especificada devem ser correspondidos.  
+  
+> [!NOTE]
+>  Um único <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> podem se referir a mais de um local real no caminho de execução potencial de uma instância de fluxo de trabalho.  
+  
+ Você pode adicionar uma <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> como <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.MatchingLocations%2A?displayProperty=nameWithType> ou <xref:System.Workflow.Runtime.Tracking.UserTrackPoint.ExcludedLocations%2A?displayProperty=nameWithType> para definir os parâmetros de correspondência para um <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> em um <xref:System.Workflow.Runtime.Tracking.TrackingProfile>.  
+  
+ Há três condições gerais que devem ser atendidas na seguinte ordem para o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> para correspondência com a infra-estrutura de controle de tempo de execução: a atividade que foi emitido um evento de usuário deve corresponder ao conjunto de atividades especificado por <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A>, <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A>, <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions%2A>, e <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedActivityTypes%2A>; a chave, se houver, associado ao usuário dados devem corresponder <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A>; e, o tipo de dados do usuário emitidos pelo evento de usuário deve corresponder ao conjunto de tipos de dados do usuário especificado por <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A> , <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A>, and <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedArgumentTypes%2A>. Somente se todos os três das seguintes condições forem atendidos, a infra-estrutura de controle de tempo de execução considera o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> correspondentes.  
+  
+ Para configurar um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>, você deve definir <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A> para especificar o tipo de dados de usuário a ser correspondido e o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> para especificar o tipo da atividade do qual os dados de usuário devem ser emitidos para ser correspondido. Você pode adicionar <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition> objetos <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions%2A> para qualificar completamente mais a atividade do qual os dados de usuário devem ser emitidos. Você pode definir <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedArgumentTypes%2A> para especificar que dados de usuário é derivado do tipo de dados de usuário especificado por <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A> devem ser correspondido, e você pode definir <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedActivityTypes%2A> para especificar os dados do usuário emitidos de atividades derivadas do tipo de atividade especificado por <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> devem corresponder.  
+  
+ Você pode definir <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A> para especificar que o usuário somente os dados associados com o nome da chave especificado devem corresponder para este <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>. Se <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A> é uma referência nula (`Nothing` no Visual Basic), o estrutura de controle de tempo de execução não tenta corresponder a chave associada com os dados do usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackingLocation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackingLocation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa vazio <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>. Você deve especificar o tipo de dados de usuário para corresponder e o tipo de atividade do qual ele deve ser emitido para corresponder. Portanto, para configurar o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> você deve definir explicitamente um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> especificar o tipo de uma atividade do qual os dados de usuário devem ser emitidos para ser correspondido, e você deve explicitamente definir <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A> para especificar o tipo de dados de usuário a ser correspondido. Você pode configurar o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> definindo suas outras propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackingLocation (string argumentTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string argumentTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackingLocation.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argumentTypeName">O nome não qualificado do tipo CLR dos dados de usuário a ser correspondido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> classe usando o nome não qualificado do tipo common language runtime (CLR) dos dados do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> que correspondem aos dados de usuário do tipo especificado emitido a partir do fluxo de trabalho. Você deve especificar o nome não qualificado do <xref:System.Type> dos dados do usuário a ser correspondido para `argumentTypeName`. Você deve definir explicitamente um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> em seu código para configurar corretamente o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>. Você pode qualificar ainda mais o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> definindo suas outras propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackingLocation (Type argumentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type argumentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackingLocation.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="argumentType">O <see cref="T:System.Type" /> dos dados do usuário a ser correspondido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> classe usando o tipo common language runtime (CLR) dos dados do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> que correspondem aos dados de usuário do tipo especificado emitido a partir do fluxo de trabalho. Você deve definir explicitamente um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> em seu código para configurar corretamente o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>. Você pode qualificar ainda mais o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> definindo suas outras propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackingLocation (string argumentTypeName, string activityTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string argumentTypeName, string activityTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackingLocation.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentTypeName" Type="System.String" />
+        <Parameter Name="activityTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argumentTypeName">O nome não qualificado do tipo CLR dos dados de usuário a ser correspondido.</param>
+        <param name="activityTypeName">O nome não qualificado do tipo CLR da atividade do qual os dados de usuário devem ser emitidos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> classe usando o nome qualificado do tipo common language runtime (CLR) dos dados do usuário e o nome não qualificado do tipo CLR da atividade do qual os dados de usuário devem ser emitidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> que corresponde a todos os dados de usuário do tipo especificado emitido de atividades do tipo especificado. Você deve especificar o nome não qualificado do <xref:System.Type> da atividade e os dados de usuário. Por exemplo, o nome não qualificado do <xref:System.Type> de um <xref:System.Workflow.Activities.CodeActivity> atividade for "Código". Você pode qualificar ainda mais o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> definindo suas outras propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackingLocation (string argumentTypeName, Type activityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string argumentTypeName, class System.Type activityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackingLocation.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentTypeName" Type="System.String" />
+        <Parameter Name="activityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="argumentTypeName">O nome não qualificado do tipo CLR dos dados de usuário a ser correspondido.</param>
+        <param name="activityType">O <see cref="T:System.Type" /> da atividade do qual os dados de usuário devem ser emitidos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> classe usando o nome não qualificado do tipo common language runtime (CLR) dos dados do usuário e o tipo CLR da atividade do qual os dados de usuário devem ser emitidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> que corresponde a todos os dados de usuário do tipo especificado emitido de atividades do tipo especificado. Você deve especificar o nome não qualificado do <xref:System.Type> dos dados do usuário. Você pode qualificar ainda mais o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> definindo suas outras propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackingLocation (Type argumentType, string activityTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type argumentType, string activityTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackingLocation.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentType" Type="System.Type" />
+        <Parameter Name="activityTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argumentType">O <see cref="T:System.Type" /> dos dados do usuário a ser correspondido.</param>
+        <param name="activityTypeName">O nome não qualificado do tipo CLR da atividade do qual os dados de usuário devem ser emitidos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> classe usando o tipo common language runtime (CLR) dos dados de usuário e nome não qualificado do tipo CLR da atividade do qual os dados de usuário devem ser emitidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> que corresponde a todos os dados de usuário do tipo especificado emitido de atividades do tipo especificado. Você deve especificar o nome não qualificado do <xref:System.Type> da atividade. Por exemplo, o nome não qualificado do <xref:System.Type> de um <xref:System.Workflow.Activities.CodeActivity> atividade for "Código". Você pode qualificar ainda mais o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> definindo suas outras propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserTrackingLocation (Type argumentType, Type activityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type argumentType, class System.Type activityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.UserTrackingLocation.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="argumentType" Type="System.Type" />
+        <Parameter Name="activityType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="argumentType">O <see cref="T:System.Type" /> dos dados do usuário a ser correspondido.</param>
+        <param name="activityType">O <see cref="T:System.Type" /> da atividade do qual os dados de usuário devem ser emitidos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> classe usando o tipo common language runtime (CLR) dos dados do usuário e o tipo CLR da atividade do qual os dados de usuário devem ser emitidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> que corresponde a todos os dados de usuário do tipo especificado emitido de atividades do tipo especificado. Você pode qualificar ainda mais o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> definindo suas outras propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityType">
+      <MemberSignature Language="C#" Value="public Type ActivityType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ActivityType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo common language runtime (CLR) da atividade do qual os dados de usuário devem ser emitidos para ser rastreada.</summary>
+        <value>O <see cref="T:System.Type" /> da atividade do qual os dados devem ser emitidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser especificar o tipo de atividade de maneira independente de versão, use <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A>.  
+  
+ Você deve especificar <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> para configurar corretamente o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivityTypeName">
+      <MemberSignature Language="C#" Value="public string ActivityTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActivityTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome não qualificado do tipo common language runtime (CLR) da atividade do qual os dados de usuário devem ser emitidos para ser rastreada.</summary>
+        <value>O nome não qualificado do <see cref="T:System.Type" /> da atividade do qual os dados devem ser emitidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve especificar o nome não qualificado do tipo da atividade. Por exemplo, para especificar o nome não qualificado de um <xref:System.Workflow.Activities.CodeActivity> de conjunto de atividades, <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> "Código".  
+  
+ <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A>Fornece uma maneira mais fácil para especificar o tipo da atividade que emite os dados de usuário quando você cria um perfil diretamente no XML. <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A>também fornece uma forma independente de versão de referência para o tipo de atividade.  
+  
+ Você deve especificar <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> para configurar corretamente o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentType">
+      <MemberSignature Language="C#" Value="public Type ArgumentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ArgumentType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo common language runtime (CLR) dos dados do usuário a ser rastreada.</summary>
+        <value>O <see cref="T:System.Type" /> dos dados do usuário a ser rastreada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser especificar o tipo de dados do usuário de maneira independente de versão, use <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A>.  
+  
+ Você deve especificar <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A> para configurar corretamente o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArgumentTypeName">
+      <MemberSignature Language="C#" Value="public string ArgumentTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ArgumentTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome não qualificado do tipo common language runtime (CLR) dos dados do usuário a ser rastreada.</summary>
+        <value>O nome não qualificado do <see cref="T:System.Type" /> dos dados do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A>Fornece uma maneira muito mais fácil para especificar o tipo de dados do usuário quando você cria um perfil diretamente no XML. <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A>também fornece uma forma independente de versão de referência para o tipo de dados do usuário.  
+  
+ Você deve especificar <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType%2A> para configurar corretamente o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conditions">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingConditionCollection Conditions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingConditionCollection Conditions" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingConditionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de condições que são usados para qualificar a atividade do qual os dados de usuário devem ser emitidos para ser rastreada.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.TrackingConditionCollection" /> que é usado para qualificar a atividade do qual os dados de usuário devem ser emitidos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions%2A> mais precisamente, defina a instância do tipo de atividade especificado por <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> ou <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType%2A> do qual o evento de usuário deve ser emitido para corresponder à localidade de controle. Por exemplo, se você deseja corresponder somente <xref:System.Workflow.Activities.CodeActivity> atividades com um <xref:System.Workflow.ComponentModel.Activity.Name%2A> igual a "MyCode", você pode definir <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName%2A> "Código" e adicione um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition> para <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions%2A> que especifica que a propriedade de ID da instância de atividade deve ser igual a "MyCode".  
+  
+ Cada <xref:System.Workflow.Runtime.Tracking.TrackingCondition> em <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.Conditions%2A> devem ser verdadeiras para a atividade a ser correspondido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyName">
+      <MemberSignature Language="C#" Value="public string KeyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome com o qual os dados de usuário devem ser associados para o <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> a ser correspondido.</summary>
+        <value>Um <see langword="string" /> chave com a qual os dados de usuário devem estar associados para o <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingLocation" /> a ser correspondido ou uma referência nula (<see langword="Nothing" /> no Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um designer de atividade ou um designer de fluxo de trabalho pode usar <xref:System.Workflow.ComponentModel.Activity.TrackData%28System.String%2CSystem.Object%29?displayProperty=nameWithType> ou <xref:System.Workflow.ComponentModel.ActivityExecutionContext.TrackData%28System.String%2CSystem.Object%29?displayProperty=nameWithType> para associar uma chave de cadeia de caracteres com os dados de usuário que são emitidos em um evento de usuário. Se <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A> não é uma referência nula (`Nothing`), a chave associada com os dados do usuário deve corresponder ao valor de <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A> para o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> a ser correspondido. Se <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation.KeyName%2A> é uma referência nula (`Nothing`), o controle de tempo de execução infraestrutura não verifica se uma chave correspondente determinar se o <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> for correspondida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchDerivedActivityTypes">
+      <MemberSignature Language="C#" Value="public bool MatchDerivedActivityTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MatchDerivedActivityTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedActivityTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os dados de usuário devem ser controlados quando ele é emitido de atividades derivadas do tipo de atividade especificado por <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType" /> ou <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName" />.</summary>
+        <value>
+          <see langword="true" />Se os dados de usuário devem ser controlados quando ele é emitido de atividades derivadas do tipo especificado pelo <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityType" /> ou <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ActivityTypeName" />; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchDerivedArgumentTypes">
+      <MemberSignature Language="C#" Value="public bool MatchDerivedArgumentTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MatchDerivedArgumentTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.MatchDerivedArgumentTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O usuário controle local é uma maneira de filtrar dados de usuário controlado. O usuário pode filtrar por tipo de dados do usuário controlado especificando o <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType" /> ou <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName" />. Definindo o <see langword="MatchDerrivedArgumentTypes" /> <see langword="Boolean" /> valor <see langword="true" /> Especifica que os dados de usuário controlado podem ser do tipo ArgumentType/ArgumentTypeName ou um tipo derivado de ArgumentType/ArgumentTypeName.</summary>
+        <value>
+          <see langword="true" />Se os dados de usuário é derivado do tipo dos dados do usuário especificados por <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentType" /> ou <see cref="P:System.Workflow.Runtime.Tracking.UserTrackingLocation.ArgumentTypeName" /> devem ser controladas; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

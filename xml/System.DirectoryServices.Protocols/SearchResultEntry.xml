@@ -1,0 +1,77 @@
+<Type Name="SearchResultEntry" FullName="System.DirectoryServices.Protocols.SearchResultEntry">
+  <TypeSignature Language="C#" Value="public class SearchResultEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchResultEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.SearchResultEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.Protocols.SearchResultEntry" /> contém um objeto retornado no conjunto de resultados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.SearchResultAttributeCollection Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.SearchResultAttributeCollection Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchResultEntry.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SearchResultAttributeCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade <see cref="P:System.DirectoryServices.Protocols.SearchResultEntry.Attributes" /> contém uma coleção de objetos <see cref="T:System.DirectoryServices.Protocols.DirectoryAttribute" />.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.DirectoryServices.Protocols.DirectoryAttribute" /> .</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryControl[] Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DirectoryControl[] Controls" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchResultEntry.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryControl[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.SearchResultEntry.Controls" /> propriedade contém uma matriz de <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" /> objetos.</summary>
+        <value>Uma matriz de objetos de <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinguishedName">
+      <MemberSignature Language="C#" Value="public string DistinguishedName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistinguishedName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchResultEntry.DistinguishedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.SearchResultEntry.DistinguishedName" /> propriedade contém o nome diferenciado da entrada retornada.</summary>
+        <value>O nome diferenciado da entrada retornada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

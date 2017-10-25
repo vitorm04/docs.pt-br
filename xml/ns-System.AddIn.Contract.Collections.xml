@@ -1,0 +1,21 @@
+<Namespace Name="System.AddIn.Contract.Collections">
+  <Docs>
+    <summary>O <see cref="N:System.AddIn.Contract.Collections" /> namespace contém interfaces que definem coleções de <see cref="T:System.AddIn.Contract.IContract" /> e <see cref="T:System.AddIn.Contract.RemoteArgument" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use as interfaces a <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> namespace para implementar a coleção de classes para <xref:System.AddIn.Contract.IContract> e <xref:System.AddIn.Contract.RemoteArgument> objetos.  
+  
+ Interfaces de <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> namespace também são chamados de contratos. Todos os contratos derivam o <xref:System.AddIn.Contract.IContract> interface.  
+  
+ O <xref:System.AddIn.Contract.Collections?displayProperty=nameWithType> namespace contém dois conjuntos de interfaces:  
+  
+-   Interfaces que definem coleções genéricas e enumeráveis de tipos que implementam o <xref:System.AddIn.Contract.IContract> interface.  
+  
+-   Interfaces que definem coleções enumeráveis de <xref:System.AddIn.Contract.RemoteArgument> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

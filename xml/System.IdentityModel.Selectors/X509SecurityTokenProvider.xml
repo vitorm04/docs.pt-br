@@ -1,0 +1,169 @@
+<Type Name="X509SecurityTokenProvider" FullName="System.IdentityModel.Selectors.X509SecurityTokenProvider">
+  <TypeSignature Language="C#" Value="public class X509SecurityTokenProvider : System.IdentityModel.Selectors.SecurityTokenProvider, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509SecurityTokenProvider extends System.IdentityModel.Selectors.SecurityTokenProvider implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.X509SecurityTokenProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.SecurityTokenProvider</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um provedor de token de segurança que fornece tokens de segurança <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> para um remetente de mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos, não é necessário chamar o <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> classe diretamente, como ele é chamado quando um cliente envia uma mensagem SOAP que requer um <xref:System.IdentityModel.Tokens.X509SecurityToken> token de segurança. Especificamente, um cliente especifica o tipo de token de segurança necessário, usando o <xref:System.ServiceModel.Description.ClientCredentials> classe e o <xref:System.ServiceModel.Description.ClientCredentials> classe chama o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método para obter um token de segurança. Quando o token de segurança necessário é uma <xref:System.IdentityModel.Tokens.X509SecurityToken> token de segurança, o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider.GetTokenCore%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenProvider (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenProvider.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> para obter token para um tipo de segurança.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenProvider" />, usando o certificado X.509 especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider.GetTokenCore%2A> método obtém uma segurança token com base no certificado especificado no `certificate` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityTokenProvider (System.Security.Cryptography.X509Certificates.StoreLocation storeLocation, System.Security.Cryptography.X509Certificates.StoreName storeName, System.Security.Cryptography.X509Certificates.X509FindType findType, object findValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Cryptography.X509Certificates.StoreLocation storeLocation, valuetype System.Security.Cryptography.X509Certificates.StoreName storeName, valuetype System.Security.Cryptography.X509Certificates.X509FindType findType, object findValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenProvider.#ctor(System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName,System.Security.Cryptography.X509Certificates.X509FindType,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="storeLocation" Type="System.Security.Cryptography.X509Certificates.StoreLocation" />
+        <Parameter Name="storeName" Type="System.Security.Cryptography.X509Certificates.StoreName" />
+        <Parameter Name="findType" Type="System.Security.Cryptography.X509Certificates.X509FindType" />
+        <Parameter Name="findValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="storeLocation">Uma da <see cref="T:System.Security.Cryptography.X509Certificates.StoreLocation" /> local de armazenamento de valores que especifica o certificado.</param>
+        <param name="storeName">Uma da <see cref="T:System.Security.Cryptography.X509Certificates.StoreName" /> nome do repositório de valores que especifica o certificado.</param>
+        <param name="findType">Uma da <see cref="T:System.Security.Cryptography.X509Certificates.X509FindType" /> valores que especifica como procurar o repositório de certificados.</param>
+        <param name="findValue">O valor usado para localizar o certificado x. 509 no repositório de certificados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenProvider" /> classe obtendo um certificado x. 509 do certificado especificado critérios de repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider.GetTokenCore%2A> método obtém um token de segurança com base no certificado que corresponde ao certificado especificado armazena critérios.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="findValue" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">Nenhum certificado correspondente aos critérios especificados.  
+  
+ -ou-  
+  
+ Mais de um certificado corresponde aos critérios especificados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.X509SecurityTokenProvider.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o certificado x. 509 associado a <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> token de segurança.</summary>
+        <value>Obtém um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que representa o certificado x. 509 de um token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider.GetTokenCore%2A> método obtém uma segurança token com base no certificado representado pelo <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider.Certificate%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenProvider.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.IdentityModel.Selectors.X509SecurityTokenProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTokenCore">
+      <MemberSignature Language="C#" Value="protected override System.IdentityModel.Tokens.SecurityToken GetTokenCore (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.IdentityModel.Tokens.SecurityToken GetTokenCore(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509SecurityTokenProvider.GetTokenCore(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">Um <see cref="T:System.TimeSpan" /> que especifica o valor de tempo limite para a mensagem que obtém o token de segurança.</param>
+        <summary>Obtém um token de segurança usando o certificado x. 509 especificado no construtor.</summary>
+        <returns>O <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança para obter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> método é chamado pelo <xref:System.ServiceModel.Description.ClientCredentials> classe quando um cliente envia uma mensagem SOAP e uma <xref:System.IdentityModel.Tokens.X509SecurityToken> token de segurança é necessário.  
+  
+ O <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetToken%2A> chamadas de método de <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider.GetTokenCore%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

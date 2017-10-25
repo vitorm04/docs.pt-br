@@ -1,0 +1,157 @@
+<Type Name="GCHandleType" FullName="System.Runtime.InteropServices.GCHandleType">
+  <TypeSignature Language="C#" Value="public enum GCHandleType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed GCHandleType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.GCHandleType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os tipos de identificadores que a classe <see cref="T:System.Runtime.InteropServices.GCHandle" /> pode alocar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType Normal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de identificador representa um identificador opaco, o que significa que não é possível resolver o endereço do objeto fixo por meio do identificador. Você pode usar este tipo para rastrear um objeto e evitar sua coleção pelo coletor de lixo. Este membro de enumeração é útil quando um cliente não gerenciado contém somente a referência, que é indetectável do coletor de lixo, para um objeto gerenciado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pinned">
+      <MemberSignature Language="C#" Value="Pinned" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType Pinned = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.Pinned" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de identificador é semelhante ao <see cref="F:System.Runtime.InteropServices.GCHandleType.Normal" />, mas permite que o endereço do objeto fixado seja coletado. Isso impede que o coletor de lixo mover o objeto e, portanto, distorcerem a eficiência do coletor de lixo. Usa o método <see cref="M:System.Runtime.InteropServices.GCHandle.Free" /> para liberar o identificador alocado, assim que possível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Weak">
+      <MemberSignature Language="C#" Value="Weak" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType Weak = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.Weak" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de identificador é usado para controlar um objeto, mas permite que ele seja coletado. Quando um objeto é coletado, o conteúdo do <see cref="T:System.Runtime.InteropServices.GCHandle" /> será zerado. Referências <see langword="Weak" /> são zeradas antes do finalizador ser executado, então mesmo que o finalizador levante o objeto, a referência <see langword="Weak" /> ainda é zerada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WeakTrackResurrection">
+      <MemberSignature Language="C#" Value="WeakTrackResurrection" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.InteropServices.GCHandleType WeakTrackResurrection = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.InteropServices.GCHandleType.WeakTrackResurrection" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.GCHandleType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de identificador é semelhante ao <see cref="F:System.Runtime.InteropServices.GCHandleType.Weak" />, mas o identificador não é zerado se o objeto é reativado durante a finalização.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

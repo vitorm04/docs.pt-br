@@ -1,0 +1,71 @@
+<Type Name="WriteOnlyArrayAttribute" FullName="System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WriteOnlyArrayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WriteOnlyArrayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Quando aplicado a um parâmetro de matriz em um componente de tempo de execução do Windows, especifica que o conteúdo de uma matriz que é passado para esse parâmetro é usado somente para saída. O chamador não garante que o conteúdo seja inicializado e o método chamado não deve ler o conteúdo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um parâmetro de matriz em seu [!INCLUDE[wrt](~/includes/wrt-md.md)] componente é transmitido por valor (`ByVal` no Visual Basic), você deve aplicar um dos seguintes atributos a ele:  
+  
+-   Aplicar o <xref:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute> se você pretende que o conteúdo da matriz a ser usado para entrada apenas de atributo.  
+  
+-   Aplicar o <xref:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute> se você pretende que o conteúdo da matriz a ser usada apenas de saída de atributo (ou seja, o método define o conteúdo da matriz, mas não lê-los).  
+  
+ Aplicar os atributos para um parâmetro causa um erro. Para obter mais informações, inclusive o padrão de fazer alterações em uma matriz, consulte [passando matrizes para um componente de tempo de execução do Windows](http://go.microsoft.com/fwlink/?LinkId=251026) no Centro de desenvolvimento do Windows.  
+  
+> [!IMPORTANT]
+>  Parâmetros que têm o <xref:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute> se comportam de maneira diferente dependendo se o chamador é escrito em código nativo ou em código gerenciado. Se o chamador é o código nativo (JavaScript ou [!INCLUDE[cppwrt](~/includes/cppwrt-md.md)]), o método chamado não pode fazer suposições sobre o conteúdo da matriz original. Por exemplo, a matriz que o método recebe pode não ser inicializada ou pode conter valores padrão. O método deve definir os valores de todos os elementos na matriz.  
+>   
+>  Se o chamador é gerenciado de código, o chamador matriz original é passado para o método chamado, como estaria em qualquer chamada de método no .NET Framework. O conteúdo da matriz é mutável no código gerenciado, o método seletivamente pode ler e alterar esses valores. Isso é importante lembrar porque ele afeta os testes de unidade escritos para um [!INCLUDE[wrt](~/includes/wrt-md.md)] componente. Se os testes forem escritos em código gerenciado, o conteúdo de uma matriz parecerá ser mutável durante o teste e os resultados são provavelmente será diferente se o método é chamado de código nativo mais tarde.  
+  
+ Aplicar esse atributo para um `out` parâmetro ou a um parâmetro que tem o <xref:System.Runtime.InteropServices.InAttribute> atributo causa um erro quando o módulo é exportado. Aplicando o atributo para um parâmetro que tem o <xref:System.Runtime.InteropServices.OutAttribute> atributo causa um erro, a menos que o parâmetro também tem o Visual Basic `ByRef` modificador. Nesse caso, o atributo é permitido mas redundantes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WriteOnlyArrayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,80 @@
+<Type Name="IFolderProjectItem" FullName="System.Web.UI.Design.IFolderProjectItem">
+  <TypeSignature Language="C#" Value="public interface IFolderProjectItem" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFolderProjectItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IFolderProjectItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para uma pasta de projeto em um host de design, como Visual Studio 2005.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDocument">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDocumentProjectItem AddDocument (string name, byte[] content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDocumentProjectItem AddDocument(string name, unsigned int8[] content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IFolderProjectItem.AddDocument(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDocumentProjectItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="content" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do documento.</param>
+        <param name="content">Uma matriz do tipo <see cref="T:System.Byte" /> que contém o conteúdo do documento.</param>
+        <summary>Adiciona um documento a uma pasta de projeto em um host de design, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.IDocumentProjectItem" /> que representa o documento adicionado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFolder">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IFolderProjectItem AddFolder (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IFolderProjectItem AddFolder(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IFolderProjectItem.AddFolder(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IFolderProjectItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da nova pasta.</param>
+        <summary>Cria uma nova pasta em uma pasta de projeto de um host de design, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].</summary>
+        <returns>Um <see cref="T:System.Web.UI.Design.IFolderProjectItem" /> que representa a nova pasta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Children" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.IFolderProjectItem.Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de itens em uma pasta de projeto em um host de design, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> que contém os itens na pasta do projeto de host de design.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

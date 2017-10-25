@@ -1,0 +1,75 @@
+<Type Name="ImageSelectType" FullName="System.Windows.Forms.VisualStyles.ImageSelectType">
+  <TypeSignature Language="C#" Value="public enum ImageSelectType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ImageSelectType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.ImageSelectType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica quando o estilo visual seleciona um arquivo diferente de várias imagens para desenhar um elemento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um estilo visual pode definir até cinco arquivos de várias imagens de um elemento. Esses arquivos de imagem são especificados pelo <xref:System.Windows.Forms.VisualStyles.FilenameProperty> valores <xref:System.Windows.Forms.VisualStyles.FilenameProperty.ImageFile1> por meio de <xref:System.Windows.Forms.VisualStyles.FilenameProperty.ImageFile5>. O <xref:System.Windows.Forms.VisualStyles.ImageSelectType> valores que indicam quando o estilo visual seleciona um arquivo de imagem diferente para desenhar o elemento.  
+  
+ O <xref:System.Windows.Forms.VisualStyles.ImageSelectType> valores representam os valores de retorno de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A?displayProperty=nameWithType> método quando ele é chamado com um valor de argumento de <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dpi">
+      <MemberSignature Language="C#" Value="Dpi" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageSelectType Dpi = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageSelectType.Dpi" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageSelectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alterações de arquivo de imagem são baseadas em pontos por polegada (DPI) configurações.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageSelectType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageSelectType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageSelectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O arquivo de imagem não é alterado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="Size" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.ImageSelectType Size = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.ImageSelectType.Size" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.ImageSelectType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Alterações de arquivo de imagem são baseadas nas configurações de tamanho.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

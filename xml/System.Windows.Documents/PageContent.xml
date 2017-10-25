@@ -1,0 +1,446 @@
+<Type Name="PageContent" FullName="System.Windows.Documents.PageContent">
+  <TypeSignature Language="C#" Value="public sealed class PageContent : System.Windows.FrameworkElement, System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PageContent extends System.Windows.FrameworkElement implements class System.Windows.Markup.IAddChild, class System.Windows.Markup.IUriContext" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.PageContent" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.FrameworkElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IUriContext</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Child")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre os elementos <see cref="T:System.Windows.Documents.FixedPage" /> em um <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.PageContent>elementos são os elementos filhos permitido somente de um <xref:System.Windows.Documents.FixedDocument>. A ordem do <xref:System.Windows.Documents.PageContent> elementos dentro de <xref:System.Windows.Documents.FixedDocument> define a ordem da página.  
+  
+ <xref:System.Windows.Documents.PageContent>Fornece informações sobre o <xref:System.Windows.Documents.FixedPage> elementos dentro de um <xref:System.Windows.Documents.FixedDocument> sem a necessidade do aplicativo ao carregar as páginas individuais.  
+  
+ O <xref:System.Windows.Documents.PageContent.Source%2A> Especifica uma propriedade de dependência de [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do <xref:System.Windows.Documents.FixedPage>.  
+  
+ Para obter mais informações sobre o <xref:System.Windows.Documents.PageContent> elemento, consulte o capítulo 3 do XPS *Open XML Paper Specification* disponível para download em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o processo de adição de <xref:System.Windows.Documents.PageContent> para um <xref:System.Windows.Documents.FixedDocument>.  
+  
+ [!code-csharp[XpsSave#XpsSaveCreateFixedDocPages](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#xpssavecreatefixeddocpages)]
+ [!code-vb[XpsSave#XpsSaveCreateFixedDocPages](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#xpssavecreatefixeddocpages)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContent.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.PageContent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.Windows.Documents.PageContent.%23ctor%2A> construtor.  
+  
+ [!code-csharp[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsSave/CSharp/XpfContent.cs#xpssavecreatefixedpage5)]
+ [!code-vb[XpsSave#XpsSaveCreateFixedPage5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsSave/visualbasic/xpfcontent.vb#xpssavecreatefixedpage5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Child">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.FixedPage Child { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.FixedPage Child" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PageContent.Child" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.FixedPage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Documents.FixedPage" /> associado a esse <see cref="T:System.Windows.Documents.PageContent" />.</summary>
+        <value>O <see cref="T:System.Windows.Documents.FixedPage" /> associado a esta <see cref="T:System.Windows.Documents.PageContent" />, ou **nulo** quando o <see cref="T:System.Windows.Documents.FixedPage" /> é definido pelo <see cref="P:System.Windows.Documents.PageContent.Source" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.PageContent.Child%2A> propriedade retorna um <xref:System.Windows.Documents.FixedPage> quando:  
+  
+1.  <xref:System.Windows.Documents.PageContent>tem imediato <xref:System.Windows.Documents.FixedPage> filho definido em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] marcação.  
+  
+2.  O <xref:System.Windows.Documents.PageContent.System%23Windows%23Markup%23IAddChild%23AddChild%2A> foi chamado para definir o <xref:System.Windows.Documents.FixedPage> como o filho de <xref:System.Windows.Documents.PageContent>.  
+  
+ O <xref:System.Windows.Documents.PageContent.Child%2A> propriedade retorna **nulo** quando:  
+  
+1.  O <xref:System.Windows.Documents.FixedPage> é definido pelo <xref:System.Windows.Documents.PageContent.Source%2A> propriedade (quando especificado pelo <xref:System.Windows.Documents.PageContent.Source%2A> propriedade, o <xref:System.Windows.Documents.FixedPage> não é armazenado em cache).  Use <xref:System.Windows.Documents.PageContent.GetPageRoot%2A> ou <xref:System.Windows.Documents.PageContent.GetPageRootAsync%2A> para retornar o <xref:System.Windows.Documents.FixedPage> quando definido o <xref:System.Windows.Documents.PageContent.Source%2A> propriedade.  
+  
+ Para obter mais informações sobre o <xref:System.Windows.Documents.PageContent> elemento, consulte o capítulo 3 do XPS *XML Paper Specification* disponível para download em [http://www.microsoft.com/whdc/xps/xpsspec.mspx](http://www.microsoft.com/whdc/xps/xpsspec.mspx).  
+  
+<a name="xamlTextUsage_Child"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode usar essa propriedade em XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageRoot">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.FixedPage GetPageRoot (bool forceReload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Documents.FixedPage GetPageRoot(bool forceReload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContent.GetPageRoot(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.FixedPage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forceReload" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forceReload">
+          <see langword="true" />sempre recarregue o <see cref="T:System.Windows.Documents.FixedPage" /> mesmo se ele foi previamente carregado e armazenados em cache; <see langword="false" /> para carregar o <see cref="T:System.Windows.Documents.FixedPage" /> somente se não houver nenhuma versão armazenada em cache.</param>
+        <summary>Carrega e retorna o <see cref="T:System.Windows.Documents.FixedPage" /> elemento de conteúdo.</summary>
+        <returns>O elemento raiz da árvore visual da página.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.PageContent.GetPageRoot%2A>executa síncrona carregar e analisar o <xref:System.Windows.Documents.FixedPage>.  
+  
+> [!NOTE]
+>  Use o <xref:System.Windows.Documents.PageContent.GetPageRootAsync%2A> em vez de <xref:System.Windows.Documents.PageContent.GetPageRoot%2A> para evitar o thread de bloqueio durante a <xref:System.Windows.Documents.FixedPage> carrega.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageRootAsync">
+      <MemberSignature Language="C#" Value="public void GetPageRootAsync (bool forceReload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetPageRootAsync(bool forceReload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContent.GetPageRootAsync(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forceReload" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forceReload">
+          <see langword="true" />sempre recarregue o <see cref="T:System.Windows.Documents.FixedPage" /> mesmo se ele foi previamente carregado e armazenados em cache; <see langword="false" /> para carregar o <see cref="T:System.Windows.Documents.FixedPage" /> somente se não houver nenhuma versão armazenada em cache.</param>
+        <summary>Carrega e retorna de forma assíncrona o <see cref="T:System.Windows.Documents.FixedPage" /> elemento de conteúdo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.PageContent.GetPageRootAsync%2A>carrega e analisa de maneira assíncrona o <xref:System.Windows.Documents.FixedPage> fluxo de dados associado a esta <xref:System.Windows.Documents.PageContent>.  Outros threads continuará a ser executado enquanto <xref:System.Windows.Documents.PageContent.GetPageRootAsync%2A> é concluída.  
+  
+ As etapas a seguir ilustram como carregar o <xref:System.Windows.Documents.FixedPage> conteúdo de forma assíncrona:  
+  
+1.  Criar um <xref:System.Windows.Documents.GetPageRootCompletedEventHandler> delegar e adicioná-lo para ser notificado sobre <xref:System.Windows.Documents.PageContent.GetPageRootCompleted> eventos.  
+  
+2.  Call <xref:System.Windows.Documents.PageContent.GetPageRootAsync%2A>.  
+  
+3.  Quando o <xref:System.Windows.Documents.PageContent.GetPageRootCompleted> eventos ocorre e o representante é chamado, o <xref:System.Windows.Documents.FixedPage> conteúdo for carregado.  O carregador <xref:System.Windows.Documents.FixedPage> elemento será retornado por meio de <xref:System.Windows.Documents.GetPageRootCompletedEventArgs>.<xref:System.Windows.Documents.GetPageRootCompletedEventArgs.Result%2A> propriedade.  
+  
+ Para obter mais informações sobre o `<PageContent>` elemento, consulte o capítulo 3 da especificação de XPS, que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageRootAsyncCancel">
+      <MemberSignature Language="C#" Value="public void GetPageRootAsyncCancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetPageRootAsyncCancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContent.GetPageRootAsyncCancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela qualquer atual <see cref="M:System.Windows.Documents.PageContent.GetPageRootAsync(System.Boolean)" /> operação em andamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.PageContent.GetPageRootAsyncCancel%2A>cancela qualquer <xref:System.Windows.Documents.PageContent.GetPageRootAsync%2A> operação que ainda não tiver terminado com um <xref:System.Windows.Documents.PageContent.GetPageRootCompleted> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageRootCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Documents.GetPageRootCompletedEventHandler GetPageRootCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Documents.GetPageRootCompletedEventHandler GetPageRootCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Documents.PageContent.GetPageRootCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.GetPageRootCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando <see cref="M:System.Windows.Documents.PageContent.GetPageRootAsync(System.Boolean)" /> é concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Documents.PageContent.GetPageRootCompleted> evento é manipulado por métodos de acordo com o <xref:System.Windows.Documents.GetPageRootCompletedEventHandler> delegate.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkTargets">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.LinkTargetCollection LinkTargets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.LinkTargetCollection LinkTargets" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PageContent.LinkTargets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.LinkTargetCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Windows.Documents.LinkTarget" /> elementos que identificam os locais endereçáveis de hiperlink na página.</summary>
+        <value>O <see cref="T:System.Windows.Documents.LinkTargetCollection" /> de <see cref="T:System.Windows.Documents.LinkTarget" /> elementos que identificam os locais endereçáveis de hiperlink na página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.PageContent.LinkTargets%2A>nunca retornarão `null`, mas a coleção pode conter zero elementos.  
+  
+ Para obter mais informações sobre o `<PageContent>` elemento, consulte o capítulo 3 da especificação de XPS, que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PageContent.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeChild">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeChild (System.Windows.Markup.XamlDesignerSerializationManager manager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeChild(class System.Windows.Markup.XamlDesignerSerializationManager manager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContent.ShouldSerializeChild(System.Windows.Markup.XamlDesignerSerializationManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="manager" Type="System.Windows.Markup.XamlDesignerSerializationManager" />
+      </Parameters>
+      <Docs>
+        <param name="manager">O provedor de serviços de serialização.</param>
+        <summary>Obtém um valor que indica se o valor de <see cref="P:System.Windows.Documents.PageContent.Child" /> propriedade deve ser serializado quando isso <see cref="T:System.Windows.Documents.PageContent" /> é serializado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="manager" /> não é <see langword="null" /> e não tem um XmlWriter; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PageContent.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para o <see cref="T:System.Windows.Documents.FixedPage" /> fluxo de dados de conteúdo.</summary>
+        <value>O <see cref="T:System.Uri" /> do <see cref="T:System.Windows.Documents.FixedPage" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `<PageContent>` elemento e seu `Source` atributo, consulte o capítulo 3 da especificação de XPS, que pode ser obtido em [XPS: especificação e Downloads de licença](http://www.microsoft.com/whdc/xps/downloads.mspx).  
+  
+<a name="dependencyPropertyInfo_Source"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.PageContent.SourceProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.PageContent.SourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.PageContent.Source" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContent.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O filho <see cref="T:System.Object" /> para adicionar.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Markup.IAddChild.AddChild(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.PageContent> é convertida em uma interface de <xref:System.Windows.Markup.IAddChild>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.PageContent.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado ao objeto.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Windows.Markup.IAddChild.AddText(System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.PageContent> é convertida em uma interface de <xref:System.Windows.Markup.IAddChild>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IUriContext.BaseUri">
+      <MemberSignature Language="C#" Value="Uri System.Windows.Markup.IUriContext.BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri System.Windows.Markup.IUriContext.BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.PageContent.System#Windows#Markup#IUriContext#BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Windows.Markup.IUriContext.BaseUri" />.</summary>
+        <value>O URI de base do contexto atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Documents.PageContent> é convertida em uma interface de <xref:System.Windows.Markup.IUriContext>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

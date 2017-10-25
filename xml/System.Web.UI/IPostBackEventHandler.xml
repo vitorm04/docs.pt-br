@@ -1,0 +1,69 @@
+<Type Name="IPostBackEventHandler" FullName="System.Web.UI.IPostBackEventHandler">
+  <TypeSignature Language="C#" Value="public interface IPostBackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPostBackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IPostBackEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define o método que os controles do servidor ASP.NET devem implementar para tratar eventos de postback.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um controle de servidor que captura as informações de envio de formulário do navegador, você deve implementar essa interface. Para obter mais informações sobre como usar essa interface, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um controle de servidor de botão personalizado que faz com que o postback, captura o evento de postback usando o <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> método e gera um `Click` eventos no servidor.  
+  
+ [!code-csharp[Classic IPostBackEventHandler Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackEventHandler Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackEventHandler Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackEventHandler Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="public void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Um <see cref="T:System.String" /> que representa um argumento opcional de eventos que será passado para o manipulador de eventos.</param>
+        <summary>Quando implementado por uma classe, permite que um controle de servidor processe um evento gerado quando um formulário for enviado ao servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página passa o valor da `eventArgument` parâmetro para o `RaisePostBackEvent` método do controle que implementa o <xref:System.Web.UI.IPostBackEventHandler> interface. Esse controle também renderiza o elemento HTML que faz com que o postback ocorra. Se o controle processa o script do lado do cliente para postagem, o argumento do script é passado a `eventArgument` parâmetro. Se a postagem é causada por um simples enviar a operação, o `eventArgument` parâmetro é `null`.  
+  
+ Esse método fornece a funcionalidade para muitos eventos implementado por controles de servidor Web e HTML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define um controle de servidor de botão personalizado que faz com que o postback, captura o evento de postback usando o <xref:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent%2A> método e gera um `Click` eventos no servidor.  
+  
+ [!code-csharp[Classic IPostBackEventHandler Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic IPostBackEventHandler Example/CS/source.cs#1)]
+ [!code-vb[Classic IPostBackEventHandler Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic IPostBackEventHandler Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

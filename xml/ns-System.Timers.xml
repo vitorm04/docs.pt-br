@@ -1,0 +1,15 @@
+<Namespace Name="System.Timers">
+  <Docs>
+    <summary>O <see cref="N:System.Timers" /> namespace fornece o <see cref="T:System.Timers.Timer" /> componente, que permite a você acionar um evento em um intervalo especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Timers.Timer> componente é um temporizador com base em servidor, que permite que você especifique um intervalo recorrente no qual o <xref:System.Timers.Timer.Elapsed> é gerado em seu aplicativo. Em seguida, você pode manipular esse evento para fornecer processamento regular. Por exemplo, suponha que você tem um servidor crítico que deve ser mantido em execução 24 horas por dia, 7 dias por semana. Você pode criar um serviço que usa um <xref:System.Timers.Timer> periodicamente Verifique o servidor e verifique se o sistema está em execução. Se o sistema não está respondendo, o serviço pode tentar reiniciar o servidor ou notificar um administrador.  
+  
+ O servidor com base em <xref:System.Timers.Timer> é projetado para uso com os threads de trabalho em um ambiente multithreaded. Timers de servidor podem mover entre threads para lidar com a elevação <xref:System.Timers.Timer.Elapsed> evento, resultando em mais precisão de temporizadores do Windows em gera o evento no tempo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

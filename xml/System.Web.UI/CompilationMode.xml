@@ -1,0 +1,87 @@
+<Type Name="CompilationMode" FullName="System.Web.UI.CompilationMode">
+  <TypeSignature Language="C#" Value="public enum CompilationMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompilationMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.CompilationMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define constantes que especificam como o ASP.NET deve compilar páginas .aspx e controles .ascx.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.CompilationMode> valores de enumeração que indica se uma página ou um controle deve ser compilada em tempo de execução. Quando nenhum modo de compilação é especificado, o valor padrão é sempre. Definir uma página nunca compilar usando o atributo nunca aumentarão o desempenho por desqualificação a página especificada no processo de compilação. Para definir uma determinada página <xref:System.Web.UI.CompilationMode.Always> atributo que especifica um arquivo. aspx,. ascx ou. master não deve ser compilado no nível da página, você pode usar uma diretiva semelhante à seguinte:  
+  
+ `<%@ page compilationMode="never" %>`  
+  
+ O modo de compilação também pode ser especificado em arquivos de configuração. O <xref:System.Web.Configuration.PagesSection> objeto da seção de configuração identifica configurações específicas da página. O elemento da seção de configuração pode ser declarado no computador, site, aplicativo e no subdiretório dos arquivos de configuração.  
+  
+ Se o <xref:System.Web.UI.CompilationMode> for definida para nunca e uma página contém uma construção de código ou bloco de script que requer compilação, o ASP.NET será retornada com um erro e a página não será executado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.CompilationMode> diretiva de página para indicar que uma página nunca deve ser compilada.  
+  
+ [!code-aspx-csharp[CompilationMode#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CompilationMode/CS/compilationmode_cs.aspx#1)]
+ [!code-aspx-vb[CompilationMode#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CompilationMode/VB/compilationmode_vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.CompilationMode Always = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.CompilationMode.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.CompilationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A página sempre deve ser compilada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.CompilationMode Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.CompilationMode.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.CompilationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>ASP.NET não compilará a página, se possível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.CompilationMode Never = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.CompilationMode.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.CompilationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A página ou o controle nunca deve ser compilado dinamicamente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

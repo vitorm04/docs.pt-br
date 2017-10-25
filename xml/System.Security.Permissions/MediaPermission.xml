@@ -1,0 +1,470 @@
+<Type Name="MediaPermission" FullName="System.Security.Permissions.MediaPermission">
+  <TypeSignature Language="C#" Value="public sealed class MediaPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit MediaPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.MediaPermission" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O <see cref="T:System.Security.Permissions.MediaPermission" /> descreve um conjunto de permissões de segurança que controla a capacidade de áudio, imagens e mídia de vídeo de trabalhar em um aplicativo do Windows Presentation Foundation (WPF) de confiança parcial.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa permissão usa os valores da <xref:System.Security.Permissions.MediaPermissionAudio>, <xref:System.Security.Permissions.MediaPermissionImage>, e <xref:System.Security.Permissions.MediaPermissionVideo> enumerações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.MediaPermission" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaPermission (System.Security.Permissions.MediaPermissionAudio permissionAudio);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.MediaPermissionAudio permissionAudio) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.#ctor(System.Security.Permissions.MediaPermissionAudio)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAudio" Type="System.Security.Permissions.MediaPermissionAudio" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAudio">Um valor enumerado de <see cref="T:System.Security.Permissions.MediaPermissionAudio" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.MediaPermission" /> classe especificando o nível de permissão de áudio.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores padrão para permissões de imagem e vídeo são <xref:System.Security.Permissions.MediaPermissionImage.SafeImage> e <xref:System.Security.Permissions.MediaPermissionVideo.SafeVideo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Security.Permissions.MediaPermission> com um <xref:System.Security.Permissions.MediaPermissionAudio> valor.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission1](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission1)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaPermission (System.Security.Permissions.MediaPermissionImage permissionImage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.MediaPermissionImage permissionImage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.#ctor(System.Security.Permissions.MediaPermissionImage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionImage" Type="System.Security.Permissions.MediaPermissionImage" />
+      </Parameters>
+      <Docs>
+        <param name="permissionImage">Um valor enumerado de <see cref="T:System.Security.Permissions.MediaPermissionImage" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.MediaPermission" /> classe especificando o nível de permissão de imagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores padrão para permissões de áudio e vídeo são <xref:System.Security.Permissions.MediaPermissionAudio.SafeAudio> e <xref:System.Security.Permissions.MediaPermissionVideo.SafeVideo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Security.Permissions.MediaPermission> com um <xref:System.Security.Permissions.MediaPermissionImage> valor.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission2](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission2)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaPermission (System.Security.Permissions.MediaPermissionVideo permissionVideo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.MediaPermissionVideo permissionVideo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.#ctor(System.Security.Permissions.MediaPermissionVideo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionVideo" Type="System.Security.Permissions.MediaPermissionVideo" />
+      </Parameters>
+      <Docs>
+        <param name="permissionVideo">Um valor enumerado de <see cref="T:System.Security.Permissions.MediaPermissionVideo" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.MediaPermission" /> classe especificando o nível de permissão de vídeo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores padrão para permissões de áudio e imagem são <xref:System.Security.Permissions.MediaPermissionAudio.SafeAudio> e <xref:System.Security.Permissions.MediaPermissionImage.SafeImage>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Security.Permissions.MediaPermission> com um <xref:System.Security.Permissions.MediaPermissionVideo> valor.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission3](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission3)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um valor enumerado de <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.MediaPermission" /> classe especificando um estado de permissão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `state` é definido como <xref:System.Security.Permissions.PermissionState.Unrestricted>, todos os tipos de mídia recebem permissão total para executar ou exibir sem restrições. Se `state` é definido como <xref:System.Security.Permissions.PermissionState.None>, todos os tipos de mídia são restritos para execução ou exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Security.Permissions.MediaPermission> com um <xref:System.Security.Permissions.PermissionState> valor.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission4](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission4)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaPermission (System.Security.Permissions.MediaPermissionAudio permissionAudio, System.Security.Permissions.MediaPermissionVideo permissionVideo, System.Security.Permissions.MediaPermissionImage permissionImage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.MediaPermissionAudio permissionAudio, valuetype System.Security.Permissions.MediaPermissionVideo permissionVideo, valuetype System.Security.Permissions.MediaPermissionImage permissionImage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.#ctor(System.Security.Permissions.MediaPermissionAudio,System.Security.Permissions.MediaPermissionVideo,System.Security.Permissions.MediaPermissionImage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAudio" Type="System.Security.Permissions.MediaPermissionAudio" />
+        <Parameter Name="permissionVideo" Type="System.Security.Permissions.MediaPermissionVideo" />
+        <Parameter Name="permissionImage" Type="System.Security.Permissions.MediaPermissionImage" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAudio">Um valor enumerado de <see cref="T:System.Security.Permissions.MediaPermissionAudio" />.</param>
+        <param name="permissionVideo">Um valor enumerado de <see cref="T:System.Security.Permissions.MediaPermissionVideo" />.</param>
+        <param name="permissionImage">Um valor enumerado de <see cref="T:System.Security.Permissions.MediaPermissionImage" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.MediaPermission" /> classe especificando níveis de permissão de imagem, áudio e vídeo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um <xref:System.Security.Permissions.MediaPermission> com <xref:System.Security.Permissions.MediaPermissionAudio>, <xref:System.Security.Permissions.MediaPermissionVideo>, e <xref:System.Security.Permissions.MediaPermissionImage> valores  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission5](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission5)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Audio">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.MediaPermissionAudio Audio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.MediaPermissionAudio Audio" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.MediaPermission.Audio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.MediaPermissionAudio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atual do nível de permissão de áudio.</summary>
+        <value>O nível de permissão de áudio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.Security.Permissions.MediaPermissionAudio> valor para o <xref:System.Security.Permissions.MediaPermission>.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission6](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission6)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica da permissão atual.</summary>
+        <returns>Uma cópia da permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia de uma permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement securityElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement securityElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityElement" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="securityElement">O XML de codificação a ser usada para reconstruir a permissão.</param>
+        <summary>Reconstrói uma permissão com um estado especificado de uma codificação de XML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.MediaPermissionImage Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.MediaPermissionImage Image" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.MediaPermission.Image" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.MediaPermissionImage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atual do nível de permissão de imagem.</summary>
+        <value>O nível de permissão de imagem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.Security.Permissions.MediaPermissionImage> valor para o <xref:System.Security.Permissions.MediaPermission>.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission7](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission7)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a interseção com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção de permissão atual e da permissão especificada.</summary>
+        <returns>A interseção de duas permissões é uma permissão que descreve o estado que ambas descrevem em comum. Somente uma demanda que passa as permissões originais serão válida para a permissão cruzada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a ser testado para a relação de subconjunto. Essa permissão deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto de permissão especificada se a permissão atual especifica um conjunto de operações é totalmente contido pelo conjunto de permissões especificado. Por exemplo, uma permissão que representa acesso à C:\example.txt é um subconjunto de uma permissão que representa acesso na unidade c:\\.  
+  
+ Se esse método retornar `true`, a permissão atual não representa nenhum mais acesso ao recurso protegido que a permissão especificada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se a permissão atual é irrestrita.</summary>
+        <returns>
+          <see langword="true" />Se a imagem, áudio e vídeos permissões são todos irrestritas; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno é `true` quando os valores de permissão de mídia são <xref:System.Security.Permissions.MediaPermissionAudio.AllAudio>, <xref:System.Security.Permissions.MediaPermissionImage.AllImage>, e <xref:System.Security.Permissions.MediaPermissionVideo.SafeVideo>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como determinar se o <xref:System.Security.Permissions.MediaPermission> é irrestrita.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission16](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission16)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission16)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML de permissão e seu estado atual.</summary>
+        <returns>Uma codificação de XML de permissão, incluindo quaisquer informações de estado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.MediaPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo da permissão atual.</param>
+        <summary>Cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Video">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.MediaPermissionVideo Video { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.MediaPermissionVideo Video" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.MediaPermission.Video" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.MediaPermissionVideo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor atual do nível de permissão de vídeo.</summary>
+        <value>O nível de permissão de mídia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar o <xref:System.Security.Permissions.MediaPermissionVideo> valor para o <xref:System.Security.Permissions.MediaPermission>.  
+  
+ [!code-csharp[SecurityPermissionsSnippets#MediaPermission8](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityPermissionsSnippets/CSharp/Window1.xaml.cs#mediapermission8)]
+ [!code-vb[SecurityPermissionsSnippets#MediaPermission8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SecurityPermissionsSnippets/visualbasic/window1.xaml.vb#mediapermission8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

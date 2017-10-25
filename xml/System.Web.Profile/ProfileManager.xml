@@ -1,0 +1,1050 @@
+<Type Name="ProfileManager" FullName="System.Web.Profile.ProfileManager">
+  <TypeSignature Language="C#" Value="public static class ProfileManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ProfileManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.ProfileManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia os dados e as configurações do perfil do usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O perfil do ASP.NET é usado para armazenar e recuperar configurações de usuário de uma fonte de dados como um banco de dados. O perfil de usuário é acessado usando o <xref:System.Web.HttpContext.Profile%2A> propriedade <xref:System.Web.HttpContext>. Valores de propriedade e informações de perfil são gerenciados usando um provedor de perfil.  
+  
+ O <xref:System.Web.Profile.ProfileManager> classe é usada para gerenciar configurações de perfil, procure os perfis de usuário e excluir perfis de usuário que não estão mais em uso. O <xref:System.Web.Profile.ProfileManager> classe fornece métodos estáticos e propriedades que podem ser acessadas referenciando o <xref:System.Web.Profile.ProfileManager> classe no código do aplicativo. Para obter um exemplo, consulte a seção de exemplo neste tópico e outros exemplos nos tópicos para membros de <xref:System.Web.Profile.ProfileManager> classe.  
+  
+ Por padrão, o perfil de usuário está desabilitado para todos os aplicativos ASP.NET. Para habilitar o perfil de usuário, defina o `enabled` atributo do elemento de configuração como true, conforme mostrado no exemplo a seguir.  
+  
+```  
+<configuration>  
+  <system.web>  
+    <profile enabled="true" />  
+  </system.web>  
+</configuration>  
+```  
+  
+ Para obter mais informações sobre o perfil de usuário, consulte [visão geral de propriedades de perfil ASP.NET](http://msdn.microsoft.com/library/89439440-92ea-48c3-a4bd-dea40307899d).  
+  
+ Um provedor de perfil é usado para armazenar e recuperar as propriedades no perfil do usuário. O .NET Framework inclui uma <xref:System.Web.Profile.SqlProfileProvider> classe que armazena as propriedades de perfil de usuário em um banco de dados do SQL Server. Um <xref:System.Web.Profile.SqlProfileProvider> instância nomeada `AspNetSqlProvider` é especificado na configuração do computador como o provedor de perfil padrão. O `AspNetSqlProvider` instância se conecta ao banco de dados do SQL Server no servidor Web local. Você pode especificar um <xref:System.Web.Profile.SqlProfileProvider> que conecta-se para outro SQL Server como o provedor de perfil padrão usando o elemento de configuração e o `defaultProvider` atributo do elemento de configuração, conforme mostrado no exemplo a seguir.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString=  
+      "Data Source=MySqlServer;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  <system.web>  
+    <profile defaultProvider="SqlProvider">  
+      <providers>  
+        <clear />  
+        <add name="SqlProvider"  
+          type="System.Web.Profile.SqlProfileProvider"  
+          connectionStringName="SqlServices"  
+          applicationName="MyApplication" />  
+      </providers>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página ASP.NET que usa o <xref:System.Web.Profile.ProfileManager> classe para gerenciar perfis inativos.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/DeleteInactiveProfilescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/DeleteInactiveProfilesvb.aspx#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddDynamicProfileProperty">
+      <MemberSignature Language="C#" Value="public static void AddDynamicProfileProperty (System.Web.Configuration.ProfilePropertySettings property);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDynamicProfileProperty(class System.Web.Configuration.ProfilePropertySettings property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.AddDynamicProfileProperty(System.Web.Configuration.ProfilePropertySettings)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Web.Configuration.ProfilePropertySettings" />
+      </Parameters>
+      <Docs>
+        <param name="property">As configurações de propriedade a ser adicionado.</param>
+        <summary>Adiciona uma propriedade de perfil por meio de programação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é funcionalmente equivalente à adição da propriedade para o `profile` seção do arquivo de configuração. Para chamar esse método para adicionar a propriedade de perfil, você deve fazer a chamada em um método marcado com o <xref:System.Web.PreApplicationStartMethodAttribute> atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public static string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileManager.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo para armazenar e recuperar informações de perfil.</summary>
+        <value>O nome do aplicativo para armazenar e recuperar informações de perfil.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager> usa o <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade para associar informações de perfil de aplicativos diferentes. Isso permite que vários aplicativos usar o mesmo banco de dados para armazenar informações do usuário sem exibir conflitos entre os usuários duplicados. Vários aplicativos ASP.NET podem usar o mesmo banco de dados de usuário, especificando o mesmo valor no <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade. O <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade pode ser definida programaticamente, ou ele pode ser definido declarativamente no arquivo de configuração para o aplicativo Web usando o `applicationName` atributo.  
+  
+ Se um valor não for especificado para o `applicationName` atributo no arquivo de configuração para o aplicativo Web, em seguida, usam os provedores de perfil incluídos com o .NET Framework a <xref:System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath%2A> valor de propriedade para aplicativos ASP.NET. Para aplicativos não-ASP.NET, o valor padrão é o <xref:System.Diagnostics.ProcessModule.ModuleName%2A> valor de propriedade, sem a extensão de arquivo.  
+  
+ O <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade expõe o <xref:System.Configuration.SettingsProvider.ApplicationName%2A?displayProperty=nameWithType> propriedade do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, eles podem ser configurados com um nome de aplicativo diferente. Para acessar o nome do aplicativo de um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e o acesso a <xref:System.Configuration.SettingsProvider.ApplicationName%2A> propriedade do provedor diretamente.  
+  
+> [!CAUTION]
+>  Como uma instância do provedor de perfil padrão único é usada para todas as solicitações atendidas por um <xref:System.Web.HttpApplication> do objeto, você pode ter várias solicitações de execução simultaneamente e a tentativa de definir o <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> o valor da propriedade. O <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade não é thread safe para várias gravações e alterando o <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> o valor da propriedade pode resultar em comportamento inesperado para vários usuários de um aplicativo. É recomendável que você evite escrever código que permite aos usuários definir o <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade, a menos que necessário. Um exemplo de um aplicativo em que a configuração de <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade pode ser necessária é um aplicativo administrativo que gerencia os dados de perfil para vários aplicativos. Esse aplicativo deve ser um aplicativo de usuário único e não é um aplicativo Web.  
+  
+   
+  
+## Examples  
+ O trecho de arquivo de configuração a seguir mostra o elemento na seção do arquivo Web. config para um aplicativo ASP.NET. Ele define o provedor de perfil padrão do aplicativo um <xref:System.Web.Profile.SqlProfileProvider> instância e conjuntos de <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> para `MyApplication`.  
+  
+```  
+<profile enabled="true" defaultProvider="SqlProvider">  
+  <providers>  
+  <add name="SqlProvider"  
+    type="System.Web.Profile.SqlProfileProvider"  
+    connectionStringName="SqlServices"  
+    applicationName="MyApplication" />  
+  </providers>  
+</profile>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticSaveEnabled">
+      <MemberSignature Language="C#" Value="public static bool AutomaticSaveEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AutomaticSaveEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileManager.AutomaticSaveEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o perfil de usuário serão salvas automaticamente no final da execução de uma página ASP.NET.</summary>
+        <value>
+          <see langword="true" />Se o perfil de usuário serão salvas automaticamente no final da execução de uma página ASP.NET. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.AutomaticSaveEnabled%2A> propriedade indica se o salvamento automático do perfil de usuário está habilitado para o aplicativo. Se o salvamento automático estiver habilitado, o <xref:System.Web.Profile.ProfileModule> objeto gera o <xref:System.Web.Profile.ProfileModule.ProfileAutoSaving> eventos e chamadas de <xref:System.Web.Profile.ProfileBase.Save%2A> método durante o <xref:System.Web.HttpApplication.EndRequest> evento no final da execução de uma página ASP.NET.  
+  
+ O <xref:System.Web.Profile.ProfileManager.AutomaticSaveEnabled%2A> propriedade é definida usando o `automaticSaveEnabled` atributo do elemento no arquivo Web. config para um aplicativo ASP.NET.  
+  
+   
+  
+## Examples  
+ O trecho de arquivo de configuração a seguir mostra o elemento na seção do arquivo Web. config para um aplicativo ASP.NET. Especifica o provedor de perfil padrão do aplicativo para um <xref:System.Web.Profile.SqlProfileProvider> instância e conjuntos de `automaticSaveEnabled` atributo `true`.  
+  
+```  
+<profile enabled="true"  
+  automaticSaveEnabled="true"  
+  defaultProvider="SqlProvider">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Profile.SqlProfileProvider"  
+      connectionStringName="SqlServices"  
+      applicationName="MyApplication" />  
+  </providers>  
+</profile>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Foi feita uma tentativa de obter o <see cref="P:System.Web.Profile.ProfileManager.AutomaticSaveEnabled" /> um valor de propriedade pelo menos <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> permissão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteInactiveProfiles">
+      <MemberSignature Language="C#" Value="public static int DeleteInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 DeleteInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.DeleteInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são excluídos.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <summary>Exclui os dados de perfil de usuário para o qual a última data de atividade e hora ocorreram antes da data e hora especificadas.</summary>
+        <returns>O número de perfis excluídos da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.DeleteInactiveProfiles%2A> método é usado para remover dados de perfil não usados da fonte de dados para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas. Perfis pesquisados, de qualquer perfil com um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro é excluído.  
+  
+ O <xref:System.Web.Profile.ProfileManager.DeleteInactiveProfiles%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.DeleteInactiveProfiles%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, as informações de perfil na fonte de dados não serão excluídas. Para excluir perfis inativos que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.DeleteInactiveProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página ASP.NET que gerencia os perfis inativos. Um botão é fornecido para excluir todos os perfis que foram não utilizados para o número de dias especificado e, portanto, são considerados inativas.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/DeleteInactiveProfilescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/DeleteInactiveProfilesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteProfile">
+      <MemberSignature Language="C#" Value="public static bool DeleteProfile (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool DeleteProfile(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.DeleteProfile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário para o perfil a ser excluído.</param>
+        <summary>Exclui o perfil para o nome de usuário especificado da fonte de dados.</summary>
+        <returns>
+          <see langword="true" />Se o perfil de usuário foi encontrado e excluído; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.DeleteProfile%2A> método exclui todas as informações de perfil e propriedades para o perfil de usuário especificado `username` da fonte de dados especificado <xref:System.Web.Profile.ProfileManager.ApplicationName%2A>.  
+  
+ O <xref:System.Web.Profile.ProfileManager.DeleteProfile%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método do provedor de perfil padrão para executar a operação de exclusão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, eles não são excluídos. Para excluir propriedades de perfil que são gerenciadas por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página ASP.NET que gerencia os perfis inativos. O <xref:System.Web.Profile.ProfileManager.DeleteProfile%2A> método é chamado quando um único perfil estiver selecionado para ser excluído. Se um perfil é considerado inativo é baseado na data especificada para o `userInactiveSinceDate` valor do parâmetro passado para o <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> método.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/DeleteProfilecs.aspx#10)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/DeleteProfilevb.aspx#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" />é uma cadeia de caracteres vazia ("") ou contiver uma vírgula.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteProfiles">
+      <MemberSignature Language="C#" Value="public static int DeleteProfiles (string[] usernames);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 DeleteProfiles(string[] usernames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.DeleteProfiles(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeia de caracteres de nomes de usuário para os perfis a serem excluídos.</param>
+        <summary>Exclui as informações para a lista fornecida de nomes de usuário e propriedades de perfil.</summary>
+        <returns>O número de perfis excluídos da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.DeleteProfiles%2A> método exclui todas as informações de perfil e propriedades para os perfis específicos de fonte de dados para o aplicativo especificado pelo <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade. A lista de perfis a serem excluídos é especificada como uma matriz de cadeia de caracteres de nomes de usuário. Se as propriedades de perfil e as informações existem na fonte de dados para um nome de usuário na `usernames` parâmetro, eles são excluídos.  
+  
+ O valor de retorno pode ser diferente do que o comprimento da matriz especificada de `usernames`. Isso indica que alguns dos perfis na matriz especificada de `usernames` já foram excluídos do armazenamento de dados.  
+  
+ O <xref:System.Web.Profile.ProfileManager.DeleteProfiles%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, eles não são excluídos. Para excluir propriedades de perfil que são gerenciadas por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página ASP.NET que gerencia os perfis inativos. Um <xref:System.Web.UI.WebControls.GridView> controle exibe os perfis inativos retornados. Cada linha do <xref:System.Web.UI.WebControls.GridView> controle inclui um botão que exclui o perfil para que a linha da fonte de dados com uma chamada para o <xref:System.Web.Profile.ProfileManager.DeleteProfiles%2A> método.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/DeleteInactiveProfilescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/DeleteInactiveProfilesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O comprimento de <paramref name="usernames" /> é zero.  
+  
+ \- ou -  
+  
+ Um dos itens no <paramref name="usernames" /> é uma cadeia de caracteres vazia ("") ou contiver uma vírgula.  
+  
+ \- ou -  
+  
+ Dois ou mais itens no <paramref name="usernames" /> têm o mesmo valor.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernames" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ Um dos itens no <paramref name="usernames" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteProfiles">
+      <MemberSignature Language="C#" Value="public static int DeleteProfiles (System.Web.Profile.ProfileInfoCollection profiles);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 DeleteProfiles(class System.Web.Profile.ProfileInfoCollection profiles) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.DeleteProfiles(System.Web.Profile.ProfileInfoCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="profiles" Type="System.Web.Profile.ProfileInfoCollection" />
+      </Parameters>
+      <Docs>
+        <param name="profiles">Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil de perfis a serem excluídos.</param>
+        <summary>Exclui as propriedades de perfil e as informações da fonte de dados para a lista de perfis fornecida.</summary>
+        <returns>O número de perfis excluídos da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.DeleteProfiles%2A> método exclui todas as informações de perfil e propriedades para os perfis específicos de fonte de dados para o aplicativo especificado pelo <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> propriedade. A lista de perfis a serem excluídos é especificada usando um <xref:System.Web.Profile.ProfileInfoCollection> que é passado como o `profiles` parâmetro. Um <xref:System.Web.Profile.ProfileInfoCollection> podem ser retornados do <xref:System.Web.Profile.ProfileManager.GetAllProfiles%2A>, <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A>, <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A>, e <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> métodos.  
+  
+ Observe que o valor de retorno pode diferir de <xref:System.Web.Profile.ProfileInfoCollection.Count%2A> valor fornecido <xref:System.Web.Profile.ProfileInfoCollection>. Isso indica que alguns dos perfis do <xref:System.Web.Profile.ProfileInfoCollection> já foram excluídos do armazenamento de dados.  
+  
+ O <xref:System.Web.Profile.ProfileManager.DeleteProfiles%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A?displayProperty=nameWithType> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, eles não são excluídos. Para excluir propriedades de perfil que são gerenciadas por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.DeleteProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que um usuário procure perfis usando o <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> e <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> métodos. O usuário pode excluir os perfis retornados com uma chamada para o <xref:System.Web.Profile.ProfileManager.DeleteProfiles%2A> método.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="profiles" />tem um <see cref="P:System.Web.Profile.ProfileInfoCollection.Count" /> valor igual a zero.  
+  
+ \- ou -  
+  
+ Uma da <see cref="T:System.Web.Profile.ProfileInfo" /> objetos no <paramref name="profiles" /> tem um <see cref="P:System.Web.Profile.ProfileInfo.UserName" /> que é uma cadeia de caracteres vazia ("") ou contiver uma vírgula.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="profiles" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ Uma da <see cref="T:System.Web.Profile.ProfileInfo" /> objetos no <paramref name="profiles" /> tem um <see cref="P:System.Web.Profile.ProfileInfo.UserName" /> que é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public static bool Enabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileManager.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o perfil de usuário está habilitado para o aplicativo.</summary>
+        <value>
+          <see langword="true" />Se o perfil de usuário estiver habilitado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O perfil de usuário está habilitado para um aplicativo usando o `enabled` atributo do elemento de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o elemento na seção do arquivo Web. config para um aplicativo ASP.NET em que o perfil do usuário foi habilitado.  
+  
+```  
+<profile enabled="true" defaultProvider="SqlProvider">  
+  <providers>  
+    <add name="SqlProvider"  
+      type="System.Web.Profile.SqlProfileProvider"  
+      connectionStringName="SqlServices"  
+      applicationName="MyApplication" />  
+  </providers>  
+</profile>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindInactiveProfilesByUserName">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="usernameToMatch">O nome de usuário que deseja pesquisar.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <summary>Recupera as informações de perfil para todos os perfis, em que a data da última atividade ocorreu em ou antes da data especificada e hora e o nome de usuário para o perfil corresponde ao nome especificado.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil de usuário de perfis inativos na qual o nome de usuário corresponde fornecido <paramref name="usernameToMatch" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> método é usado para recuperar as informações de perfil para todos os perfis de usuário não utilizados para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Esse método só irá recuperar perfis para o qual o nome de usuário de perfil corresponde fornecido `usernameToMatch` o valor do parâmetro. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas. Perfis pesquisados, de qualquer perfil com um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro será retornado.  
+  
+ Você pode recuperar essas informações nas páginas de dados usando a sobrecarga para o <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%28System.Web.Profile.ProfileAuthenticationOption%2CSystem.String%2CSystem.DateTime%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%40%29> método que utiliza adicional `pageIndex` e `pageSize` parâmetros.  
+  
+> [!NOTE]
+>  O provedor de perfil pode oferecer suporte a caracteres curinga no `usernameToMatch` parâmetro. Por exemplo, o <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> método o <xref:System.Web.Profile.SqlProfileProvider> classe oferece suporte a caracteres curinga no `usernameToMatch` parâmetro.  
+  
+ O <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A?displayProperty=nameWithType> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis inativos que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que um usuário fornecer uma `usernameToMatch` valor e um <xref:System.Web.Profile.ProfileAuthenticationOption> valor de enumeração e recupera informações para os perfis de correspondência de perfil. O exemplo permite ao usuário especificar se deve retornar os perfis inativos apenas. Se o usuário especifica apenas perfis inativos, o <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> método é chamado; caso contrário, o <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> método é chamado.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/FindProfilesByUserName2cs.aspx#8)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/FindProfilesByUserName2vb.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" /> é uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindInactiveProfilesByUserName">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection FindInactiveProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String,System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="usernameToMatch">O nome de usuário que deseja pesquisar.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados. <c>pageIndex</c> é baseado em zero.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém um número inteiro que identifica o número total de perfis. Este parâmetro é passado não inicializado.</param>
+        <summary>Recupera informações de perfil em páginas de dados de perfis em que a data da última atividade ocorreu em ou antes da data especificada e a hora e o nome de usuário para o perfil corresponde ao nome especificado.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil de usuário de perfis inativos em que o nome de usuário corresponde fornecido <paramref name="usernameToMatch" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> método é usado para recuperar as informações de perfil não usados para perfis de usuário para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Esse método só irá recuperar perfis para o qual o nome de usuário corresponde fornecido `usernameToMatch` o valor do parâmetro. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas. Dos perfis de pesquisa, nenhum perfil é retornado, que tem um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection> coleção. O `pageIndex` parâmetro identifica qual página de resultados para retornar; 0 identifica a primeira página. O `totalRecords` parâmetro é um `out` parâmetro que é definido como o número total de perfis de usuário inativo configurado `applicationName`, com base no `authenticationOption` e `userInactiveSinceDate` parâmetros. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é 1, com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado será contêm o sexto até os décimo perfis inativos. O `totalRecords` parâmetro será definido como 13.  
+  
+ Observe que o provedor de perfil pode oferecer suporte a caracteres curinga no `usernameToMatch` parâmetro. Por exemplo, o <xref:System.Web.Profile.SqlProfileProvider.FindInactiveProfilesByUserName%2A> método o <xref:System.Web.Profile.SqlProfileProvider> classe oferece suporte a caracteres curinga no `usernameToMatch` parâmetro.  
+  
+ O <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis inativos que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que um usuário fornecer uma `usernameToMatch` valor e um <xref:System.Web.Profile.ProfileAuthenticationOption> valor e recupera informações de perfil para qualquer perfil correspondente. O exemplo permite ao usuário especificar se deve retornar os perfis inativos exclusivamente. Se o usuário especifica apenas perfis inativos, o <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> método é chamado; caso contrário, o <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> método é chamado.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" /> é uma cadeia de caracteres vazia ("").  
+  
+ \- ou -  
+  
+ <paramref name="pageIndex" /> é menor que zero.  
+  
+ \- ou -  
+  
+ <paramref name="pageSize" /> é menor que 1.  
+  
+ \- ou -  
+  
+ <paramref name="pageIndex" />multiplicado por <paramref name="pageSize" /> é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindProfilesByUserName">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection FindProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection FindProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.FindProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="usernameToMatch">O nome de usuário que deseja pesquisar.</param>
+        <summary>Recupera todas as informações de perfil para perfis de que o nome de usuário corresponde ao nome especificado.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> contendo informações de perfil de usuário para perfis de onde o nome de usuário corresponde fornecido <paramref name="usernameToMatch" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> método retorna uma lista de todas as informações de perfil para o qual o nome de usuário corresponde fornecido `usernameToMatch` valor do parâmetro configurado <xref:System.Web.Profile.ProfileManager.ApplicationName%2A> valor da propriedade. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas.  
+  
+ Você pode recuperar informações de perfil para perfis de usuário em páginas de dados usando a sobrecarga para o <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> método que utiliza adicional `pageIndex` e `pageSize` parâmetros.  
+  
+ Observe que o provedor de perfil pode oferecer suporte a caracteres curinga no `usernameToMatch` parâmetro. Por exemplo, o <xref:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName%2A> método o <xref:System.Web.Profile.SqlProfileProvider> classe oferece suporte a caracteres curinga no `usernameToMatch` parâmetro.  
+  
+ O <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.FindProfilesByUserName%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.FindProfilesByUserName%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que um usuário fornecer uma `usernameToMatch` valor e um <xref:System.Web.Profile.ProfileAuthenticationOption> valor de enumeração e recupera informações para os perfis de correspondência de perfil. O exemplo permite ao usuário especificar se deve retornar os perfis inativos exclusivamente. Se o usuário especifica apenas perfis inativos, o <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> método é chamado; caso contrário, o <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> método é chamado.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/FindProfilesByUserName2cs.aspx#8)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/FindProfilesByUserName2vb.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" /> é uma cadeia de caracteres vazia ("").</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindProfilesByUserName">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection FindProfilesByUserName (System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection FindProfilesByUserName(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, string usernameToMatch, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.FindProfilesByUserName(System.Web.Profile.ProfileAuthenticationOption,System.String,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="usernameToMatch">O nome de usuário que deseja pesquisar.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados. <c>pageIndex</c> é baseado em zero.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém um número inteiro que identifica o número total de perfis. Este parâmetro é passado não inicializado.</param>
+        <summary>Recupera informações de perfil em páginas de dados para os perfis na qual o nome de usuário corresponde o nome especificado.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> contendo informações de perfil de usuário para perfis de onde o nome de usuário corresponde fornecido <paramref name="usernameToMatch" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> método retorna uma lista de informações de perfil para o qual o nome de usuário de perfil corresponde fornecido `usernameToMatch` valor de parâmetro de configurado <xref:System.Web.Profile.ProfileManager.ApplicationName%2A>. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas.  
+  
+ Observe que o provedor de perfil pode oferecer suporte a caracteres curinga no `usernameToMatch` parâmetro. Por exemplo, o <xref:System.Web.Profile.SqlProfileProvider.FindProfilesByUserName%2A> método o <xref:System.Web.Profile.SqlProfileProvider> classe oferece suporte a caracteres curinga no `usernameToMatch` parâmetro.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection>. O `pageIndex` parâmetro identifica qual página de resultados para retornar; zero identifica a primeira página. O `totalRecords` parâmetro é um `out` que é definido como o número total de perfis de usuário inativo para o aplicativo especificado pelo parâmetro de `applicationName` atributo no arquivo de configuração, com base em fornecido `authenticationOption`. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é 1, com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado será contêm o perfis sexto até os décimo. O `totalRecords` parâmetro será definido como 13.  
+  
+ O <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.FindInactiveProfilesByUserName%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que um usuário fornecer uma `usernameToMatch` valor e um <xref:System.Web.Profile.ProfileAuthenticationOption> e recupera informações para os perfis de correspondência de perfil. O exemplo permite ao usuário especificar se deve retornar os perfis inativos exclusivamente. Se o usuário especifica apenas perfis inativos, o <xref:System.Web.Profile.ProfileManager.FindInactiveProfilesByUserName%2A> método é chamado; caso contrário, o <xref:System.Web.Profile.ProfileManager.FindProfilesByUserName%2A> método é chamado.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="usernameToMatch" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="usernameToMatch" /> é uma cadeia de caracteres vazia ("").  
+  
+ \- ou -  
+  
+ <paramref name="pageIndex" /> é menor que zero.  
+  
+ \- ou -  
+  
+ <paramref name="pageSize" /> é menor que 1.  
+  
+ \- ou -  
+  
+ <paramref name="pageIndex" />multiplicado por <paramref name="pageSize" /> é maior do que <see cref="F:System.Int32.MaxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllInactiveProfiles">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.GetAllInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <summary>Recupera todos os dados de perfil de usuário para os perfis em que a data da última atividade ocorreu em ou antes da data e hora especificadas.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil do usuário sobre os perfis inativos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> método é usado para recuperar informações de perfil da fonte de dados para todos os perfis de usuário não utilizados para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas. Dos perfis de pesquisa, nenhum perfil é retornado, que tem um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro.  
+  
+ Você pode recuperar informações de perfil para perfis de usuário inativo em páginas de dados usando a sobrecarga para o <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> método que utiliza adicional `pageIndex` e `pageSize` parâmetros.  
+  
+ O <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis não utilizados que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página ASP.NET que gerencia os perfis inativos. Um botão é fornecido para excluir todos os perfis inativos. Se um perfil é considerado inativo é baseado na data especificada para o `userInactiveSinceDate` parâmetro.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/DeleteInactiveProfiles2cs.aspx#7)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/DeleteInactiveProfiles2vb.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllInactiveProfiles">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection GetAllInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.GetAllInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados. <c>pageIndex</c> é baseado em zero.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém um número inteiro que identifica o número total de perfis. Este parâmetro é passado não inicializado.</param>
+        <summary>Recupera uma página de <see cref="T:System.Web.Profile.ProfileInfo" /> objetos para perfis de usuário em que a data da última atividade ocorreu em ou antes da data e hora especificadas.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> que contém informações de perfil do usuário sobre os perfis inativos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> método é usado para recuperar informações de perfil da fonte de dados não utilizados para perfis de usuário para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas. Dos perfis de pesquisa, nenhum perfil é retornado, que tem um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre antes do especificado `userInactiveSinceDate` o valor do parâmetro.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection>. O `pageIndex` parâmetro identifica qual página de resultados para retornar; zero identifica a primeira página. O `totalRecords` parâmetro é um `out` parâmetro que é definido como o número total de perfis de usuário inativo configurado `applicationName`, com base no `authenticationOption` e `userInactiveSinceDate` parâmetros. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é uma com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado será contêm o sexto até os décimo perfis inativos. O `totalRecords` parâmetro será definido como 13.  
+  
+ O <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.GetAllInactiveProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma página da Web do ASP.NET que gerencia os perfis inativos. Um botão é fornecido para excluir todos os perfis inativos. Se um perfil é considerado inativo é baseado na data especificada para o `userInactiveSinceDate` parâmetro.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/DeleteInactiveProfilescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/DeleteInactiveProfilesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllProfiles">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection GetAllProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection GetAllProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.GetAllProfiles(System.Web.Profile.ProfileAuthenticationOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <summary>Recupera dados de perfil de usuário para os perfis na fonte de dados.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> contendo informações de perfil de usuário para todos os perfis na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.GetAllProfiles%2A> método é usado para recuperar informações de perfil da fonte de dados para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas.  
+  
+ Você pode recuperar as páginas de <xref:System.Web.Profile.ProfileInfo> objetos para perfis de usuário usando a sobrecarga para o <xref:System.Web.Profile.ProfileManager.GetAllProfiles%2A> método que utiliza adicional `pageIndex` e `pageSize` parâmetros.  
+  
+ O <xref:System.Web.Profile.ProfileManager.GetAllProfiles%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.GetAllProfiles%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.GetAllProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de perfil para todos os perfis para configurado `applicationName`.  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/ShowProfiles2cs.aspx#6)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/ShowProfiles2vb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllProfiles">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileInfoCollection GetAllProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, out int totalRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.Profile.ProfileInfoCollection GetAllProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, int32 pageIndex, int32 pageSize, [out] int32&amp; totalRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.GetAllProfiles(System.Web.Profile.ProfileAuthenticationOption,System.Int32,System.Int32,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileInfoCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="pageIndex" Type="System.Int32" />
+        <Parameter Name="pageSize" Type="System.Int32" />
+        <Parameter Name="totalRecords" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="pageIndex">O índice da página de resultados a serem retornados. <c>pageIndex</c> é baseado em zero.</param>
+        <param name="pageSize">O tamanho da página de resultados a ser retornada.</param>
+        <param name="totalRecords">Quando este método retorna, contém um número inteiro que identifica o número total de perfis. Este parâmetro é passado não inicializado.</param>
+        <summary>Recupera as páginas de dados de perfil de usuário.</summary>
+        <returns>Um <see cref="T:System.Web.Profile.ProfileInfoCollection" /> contendo informações de perfil de usuário para todos os perfis na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.GetAllProfiles%2A> método é usado para recuperar informações de perfil da fonte de dados para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas.  
+  
+ Os resultados retornados por <xref:System.Web.Profile.ProfileManager.GetAllInactiveProfiles%2A> são restritas pelo `pageIndex` e `pageSize` parâmetros. O `pageSize` parâmetro identifica o número máximo de <xref:System.Web.Profile.ProfileInfo> objetos para retornar o <xref:System.Web.Profile.ProfileInfoCollection>. O `pageIndex` parâmetro identifica qual página de resultados para retornar; zero identifica a primeira página. O `totalRecords` parâmetro é um `out` parâmetro que é definido como o número total de perfis de usuário inativo configurado `applicationName`, com base no fornecido `authenticationOption`. Por exemplo, se houver 13 usuários configurado `applicationName`e o `pageIndex` valor é uma com um `pageSize` de 5, o <xref:System.Web.Profile.ProfileInfoCollection> retornado será contêm o perfis sexto até os décimo. O `totalRecords` parâmetro será definido como 13.  
+  
+ O <xref:System.Web.Profile.ProfileManager.GetAllProfiles%2A> chamadas de método de <xref:System.Web.Profile.ProfileProvider.GetAllProfiles%2A> método do provedor de perfil padrão. O provedor de perfil padrão é especificado usando o `defaultProvider` atributo do elemento de configuração. Se o perfil de usuário contém propriedades que são gerenciadas por um provedor de perfil que não seja o provedor padrão, a fonte de dados para outro provedor de perfil não é pesquisada. Para localizar os perfis que são gerenciados por um provedor de perfil que não seja o provedor padrão, obtenha uma referência para o provedor de perfil usando o <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade e chame o <xref:System.Web.Profile.ProfileProvider.GetAllProfiles%2A> método do provedor diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de perfil para todos os perfis para configurado `applicationName` em páginas de dados.  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/ShowProfilescs.aspx#3)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/ShowProfilesvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberOfInactiveProfiles">
+      <MemberSignature Language="C#" Value="public static int GetNumberOfInactiveProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetNumberOfInactiveProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption, valuetype System.DateTime userInactiveSinceDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.GetNumberOfInactiveProfiles(System.Web.Profile.ProfileAuthenticationOption,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+        <Parameter Name="userInactiveSinceDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <param name="userInactiveSinceDate">Um <see cref="T:System.DateTime" /> objeto que identifica quais perfis de usuário são consideradas inativas. Se o <see cref="P:System.Web.Profile.ProfileInfo.LastActivityDate" /> de um usuário de perfil ocorre em ou antes dessa data e hora, o perfil será considerado inativo.</param>
+        <summary>Obtém o número de perfis no qual ocorreu a última data de atividade em ou antes da data especificada.</summary>
+        <returns>O número de perfis na fonte de dados para o qual a data da última atividade ocorreu antes da data e hora especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.GetNumberOfInactiveProfiles%2A> método é usado para recuperar a contagem de todos os perfis de usuário não utilizados da fonte de dados para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas. Perfis pesquisados, de todos os perfis são contados que têm um <xref:System.Web.Profile.ProfileInfo.LastActivityDate%2A> que ocorre em ou antes especificado `userInactiveSinceDate` o valor do parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que um usuário exibir e excluir informações de perfis de ativos e inativos com base em critérios de pesquisa. Uma contagem de perfis inativos é exibida usando os resultados do <xref:System.Web.Profile.ProfileManager.GetNumberOfInactiveProfiles%2A> método.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/FindProfilesByUserNamecs.aspx#5)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/FindProfilesByUserNamevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberOfProfiles">
+      <MemberSignature Language="C#" Value="public static int GetNumberOfProfiles (System.Web.Profile.ProfileAuthenticationOption authenticationOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetNumberOfProfiles(valuetype System.Web.Profile.ProfileAuthenticationOption authenticationOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.ProfileManager.GetNumberOfProfiles(System.Web.Profile.ProfileAuthenticationOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="authenticationOption" Type="System.Web.Profile.ProfileAuthenticationOption" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationOption">Uma da <see cref="T:System.Web.Profile.ProfileAuthenticationOption" /> valores de enumeração, especificando se anônimo, autenticado ou ambos os tipos de perfis são retornados.</param>
+        <summary>Obtém o número de perfis na fonte de dados.</summary>
+        <returns>O número de perfis na fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.GetNumberOfProfiles%2A> método é usado para recuperar a contagem de todos os perfis de usuário da fonte de dados para o aplicativo especificado pelo `applicationName` atributo no arquivo de configuração. Use o `authenticationOption` para especificar se deseja somente perfis anônimos, apenas autenticados perfis, ou todos os perfis a serem pesquisadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de perfil para todos os perfis para configurado `applicationName` e também retorna o número de perfis.  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/ShowProfiles2cs.aspx#6)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/ShowProfiles2vb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Profile.ProfileProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileManager.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o provedor de perfil padrão para o aplicativo.</summary>
+        <value>O provedor de perfil padrão para o aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.Provider%2A> propriedade permite que você referenciar o provedor de perfil padrão para um aplicativo diretamente. Isso é normalmente usado para acessar membros personalizados do provedor de perfil que não são parte do <xref:System.Web.Profile.ProfileProvider> classe base abstrata.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir lista as propriedades do provedor de perfil padrão.  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/Providercs.aspx#2)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/Providervb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Foi feita uma tentativa de obter o <see cref="P:System.Web.Profile.ProfileManager.Provider" /> um valor de propriedade pelo menos <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> permissão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Web.Profile.ProfileProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.Profile.ProfileProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.ProfileManager.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Profile.ProfileProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de provedores de perfil para o aplicativo ASP.NET.</summary>
+        <value>Um <see cref="T:System.Web.Profile.ProfileProviderCollection" /> dos provedores de perfil configurados para o aplicativo ASP.NET.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.ProfileManager.Providers%2A> propriedade faz referência a todos os provedores de perfil habilitados para um aplicativo, incluindo provedores adicionado na configuração do computador e provedores em todos os arquivos Web. config. Você pode controlar qual perfil provedores estão disponíveis para um aplicativo usando o elemento da seção no arquivo de configuração. Por exemplo, o arquivo Web. config a seguir remove os provedores de perfil especificados nos arquivos de configuração pai e adiciona um <xref:System.Web.Profile.SqlProfileProvider> instância como o provedor de perfil para o aplicativo.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString=  
+      "Data Source=MySqlServer;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  <system.web>  
+    <profile enabled="true" defaultProvider="SqlProvider">  
+      <providers>  
+        <clear />  
+        <add name="SqlProvider"  
+          type="System.Web.Profile.SqlProfileProvider"  
+          connectionStringName="SqlServices"  
+          applicationName="MyApplication" />  
+      </providers>  
+    </profile>  
+  </system.web>  
+</configuration>  
+```  
+  
+ Ao especificar a seção, você deve especificar um provedor padrão definindo o `defaultProvider` atributo. Se você não especificar uma seção no arquivo Web. config, os valores de configuração do computador são usados e o <xref:System.Web.Profile.SqlProfileProvider> instância nomeada AspNetSqlProvider for estabelecida como o provedor padrão.  
+  
+ Você pode obter uma referência para um provedor de digitada o <xref:System.Web.Profile.ProfileManager.Providers%2A> coleção por indexação o provedor de perfil por nome e convertê-la como o tipo desejado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir lista os provedores habilitados para um aplicativo e seus respectivos tipos.  
+  
+ [!code-aspx-csharp[System.Web.Profile.ProfileManager#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/CS/Providerscs.aspx#9)]
+ [!code-aspx-vb[System.Web.Profile.ProfileManager#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Profile.ProfileManager/VB/Providersvb.aspx#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Foi feita uma tentativa de obter o <see cref="P:System.Web.Profile.ProfileManager.Providers" /> um valor de propriedade pelo menos <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> permissão.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

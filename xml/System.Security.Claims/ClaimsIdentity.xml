@@ -1,0 +1,1698 @@
+<Type Name="ClaimsIdentity" FullName="System.Security.Claims.ClaimsIdentity">
+  <TypeSignature Language="C#" Value="public class ClaimsIdentity : System.Security.Principal.IIdentity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ClaimsIdentity extends System.Object implements class System.Security.Principal.IIdentity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Claims.ClaimsIdentity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Claims</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Principal.IIdentity</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma identidade baseada em declarações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Claims.ClaimsIdentity> classe é uma implementação concreta de uma identidade baseada em declarações; ou seja, uma identidade descrita por um conjunto de declarações. Uma declaração é uma instrução de uma entidade feita por um emissor que descreve uma propriedade, à direita, ou alguma outra qualidade da entidade. Essa entidade deve ser o assunto da declaração. Uma declaração é representada pela <xref:System.Security.Claims.Claim> classe. As declarações contidas em um <xref:System.Security.Claims.ClaimsIdentity> descrevem a entidade que representa a identidade correspondente e pode ser usado para tomar decisões de autorização e autenticação. Um modelo de acesso baseado em declarações tem muitas vantagens em relação a modelos de acesso mais tradicionais que dependem exclusivamente em funções. Por exemplo, declarações podem fornecer muito mais ricas informações sobre a identidade que eles representam e podem ser avaliados para a autorização ou autenticação de forma muito mais específica.  
+  
+ A partir do .NET Framework 4.5, Windows Identity Foundation (WIF) e identidade baseada em declarações foram totalmente integrados ao .NET Framework. Isso significa que muitas classes que representam uma identidade no .NET Framework agora derivam <xref:System.Security.Claims.ClaimsIdentity> e descrevem suas propriedades por meio de um conjunto de declarações. Isso é diferente de versões anteriores do .NET Framework, no qual, essas classes implementados o <xref:System.Security.Principal.IIdentity> interface diretamente. A coleção de declarações que descrevem a identidade pode ser acessada por meio de <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> propriedade. O <xref:System.Security.Claims.ClaimsIdentity> classe fornece vários métodos para encontrar e modificando declarações e totalmente dá suporte a consultas de integrada à linguagem (LINQ). No código do aplicativo, <xref:System.Security.Claims.ClaimsIdentity> objetos geralmente são acessados por meio de <xref:System.Security.Claims.ClaimsPrincipal> objetos; por exemplo, o objeto retornado por <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  O <xref:System.Security.Claims.ClaimsPrincipal> classe tiver um <xref:System.Security.Claims.ClaimsPrincipal.Claims%2A> propriedade também. Na maioria dos casos, você deve acessar declarações do usuário por meio de <xref:System.Security.Claims.ClaimsPrincipal.Claims%2A?displayProperty=nameWithType> coleção em vez de por meio de <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção. Você precisará acessar as declarações de um indivíduo <xref:System.Security.Claims.ClaimsIdentity> somente nos casos em que a entidade de segurança contém mais de um <xref:System.Security.Claims.ClaimsIdentity> e você precisa avaliar ou modificar uma identidade específica.  
+  
+> [!IMPORTANT]
+>  Para adicionar ou remover declarações de <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção, um chamador deve ter a confiança total.  
+  
+ No modelo baseado em declarações, o <xref:System.Security.Principal.IIdentity.Name%2A?displayProperty=nameWithType> propriedade e o <xref:System.Security.Principal.IPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> método são implementados pela avaliação de declarações contidas por uma identidade. Implementações de base no modelo baseado em declarações são fornecidas pelo <xref:System.Security.Claims.ClaimsIdentity.Name%2A?displayProperty=nameWithType> propriedade e o <xref:System.Security.Claims.ClaimsPrincipal.IsInRole%2A?displayProperty=nameWithType> método. O <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A> propriedades permitem que você especifique um tipo de declaração que deve ser usado para avaliar as declarações contidas pela identidade ao executar essas operações.  
+  
+ Cenários de delegação têm suporte por meio de <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> e <xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A> propriedades.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Claims.ClaimsIdentity" /> com uma coleção de declarações vazias.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Uma coleção vazia.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType>.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="claims">As declarações com as quais popular a identidade baseada em declarações.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.ClaimsIdentity" /> classe usando uma coleção enumerada de <see cref="T:System.Security.Claims.Claim" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Inicializado a partir de `claims` parâmetro.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType>.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (System.IO.BinaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.BinaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.IO.BinaryReader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">Um <see cref="T:System.IO.BinaryReader" /> apontando para um <see cref="T:System.Security.Claims.ClaimsIdentity" />.</param>
+        <summary>Inicializa uma instância de <see cref="T:System.Security.Claims.ClaimsIdentity" /> com especificado <see cref="T:System.IO.BinaryReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o leitor é construído a partir de bytes retornados da <xref:System.Security.Claims.ClaimsIdentity.WriteTo%2A>. 
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClaimsIdentity (System.Runtime.Serialization.SerializationInfo info);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Runtime.Serialization.SerializationInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+      </Parameters>
+      <Docs>
+        <param name="info">Os dados serializados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.ClaimsIdentity" /> classe a partir de um fluxo serializado criado usando <see cref="T:System.Runtime.Serialization.ISerializable" />.</summary>
+        <remarks>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClaimsIdentity (System.Security.Claims.ClaimsIdentity other);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Security.Claims.ClaimsIdentity other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Claims.ClaimsIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.Claims.ClaimsIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="other">O <see cref="T:System.Security.Claims.ClaimsIdentity" /> para cópia.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.ClaimsIdentity" /> classe a partir de um existente <see cref="T:System.Security.Claims.ClaimsIdentity" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra as atribuições de valor de propriedade para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe o <xref:System.Security.Claims.ClaimsIdentity> fornecidas pelo construtor.  
+  
+| Propriedade | Valor |
+| -------- | ----- |
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|Se o valor da `other.Actor` propriedade não está `null`, o `other.Actor` <xref:System.Security.Claims.ClaimsIdentity> clonado e atribuído; caso contrário, `null`.|
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O valor da propriedade `other.AuthenticationType`.|
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|O valor da propriedade `other.BootstrapContext`.|
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|O `List<Claim>` de declarações, se houver, no `other.Claims` propriedade.|
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|O valor da propriedade `other.Label`.|
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|O valor da propriedade `other.NameClaimType`.|
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|O valor da propriedade `other.RoleClaimType`.|
+|<xref:System.Security.Claims.ClaimsIdentity.CustomSerializationData%2A>|Se `other.CustomSerializationData` não `null`, `other.CustomSerializationData` clonado e atribuído; caso contrário, `null`.|
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="other" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (System.Security.Principal.IIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">A identidade na qual basear a nova identidade baseada em declarações.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.ClaimsIdentity" /> classe usando o tipo de autenticação especificado <see cref="T:System.Security.Principal.IIdentity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.Actor` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O valor de `identity.AuthenticationType` (<xref:System.Security.Principal.IIdentity.AuthenticationType%2A?displayProperty=nameWithType>) propriedade é usada.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.BootStrapContext` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, as declarações de `identity` são adicionados para a nova instância; caso contrário, uma coleção vazia.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.Label` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|Se `identity` não é atribuível da <xref:System.Security.Claims.ClaimsIdentity>, não é `null`e tem um <xref:System.Security.Principal.IIdentity.Name%2A?displayProperty=nameWithType> propriedade que não é `null`; uma declaração de nome é adicionada para a nova instância usando o valor da <xref:System.Security.Principal.IIdentity.Name%2A?displayProperty=nameWithType> propriedade. **Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.NameClaimType` propriedade for usada; caso contrário, <xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType> é usado.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.RoleClaimType` propriedade for usada; caso contrário, <xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType> é usado.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (string authenticationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string authenticationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="authenticationType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationType">O tipo de autenticação usado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Claims.ClaimsIdentity" /> com uma coleção de declarações vazias e o tipo de autenticação especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O valor de `authenticationType` parâmetro. Se o `authenticationType` parâmetro é `null` ou uma cadeia de caracteres vazia, a propriedade é definida como `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Uma coleção vazia.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType>.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims, string authenticationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims, string authenticationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+        <Parameter Name="authenticationType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claims">As declarações com as quais popular a identidade baseada em declarações.</param>
+        <param name="authenticationType">O tipo de autenticação usado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Claims.ClaimsIdentity" /> com as declarações e o tipo de autenticação especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O valor de `authenticationType` parâmetro. Se o `authenticationType` parâmetro é `null` ou uma cadeia de caracteres vazia, a propriedade é definida como `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Inicializado a partir de `claims` parâmetro.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType>.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|<xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClaimsIdentity (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Os dados serializados.</param>
+        <param name="context">O contexto de serialização.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.ClaimsIdentity" /> classe a partir de um fluxo serializado criado usando <see cref="T:System.Runtime.Serialization.ISerializable" />.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é **nulo**.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (System.Security.Principal.IIdentity identity, System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IIdentity identity, class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="identity">A identidade na qual basear a nova identidade baseada em declarações.</param>
+        <param name="claims">As declarações com as quais popular a identidade baseada em declarações.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.ClaimsIdentity" /> classe usando as declarações especificadas e especificado <see cref="T:System.Security.Principal.IIdentity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.Actor` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O `authenticationType` parâmetro. Se o `authenticationType` parâmetro é `null` ou uma cadeia de caracteres vazia, o valor de `identity.AuthenticationType` (<xref:System.Security.Principal.IIdentity.AuthenticationType%2A?displayProperty=nameWithType>) propriedade é usada.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.BootStrapContext` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Inicializado a partir de `claims` parâmetro. Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, as declarações de `identity` são adicionados para a nova instância antes de os especificados pelo `claims` parâmetro.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.Label` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|Se `identity` não é atribuível da <xref:System.Security.Claims.ClaimsIdentity>, não é `null`e tem um <xref:System.Security.Principal.IIdentity.Name%2A?displayProperty=nameWithType> propriedade que não é `null`; uma declaração de nome é adicionada para a nova instância usando o valor da <xref:System.Security.Principal.IIdentity.Name%2A?displayProperty=nameWithType> propriedade. **Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.NameClaimType` propriedade for usada; caso contrário, <xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType> é usado.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.RoleClaimType` propriedade for usada; caso contrário, <xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType> é usado.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (string authenticationType, string nameType, string roleType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string authenticationType, string nameType, string roleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="nameType" Type="System.String" />
+        <Parameter Name="roleType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="authenticationType">O tipo de autenticação usado.</param>
+        <param name="nameType">O tipo de declaração a ser usado para as declarações de nome.</param>
+        <param name="roleType">O tipo de declaração a ser usada para declarações de função.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Claims.ClaimsIdentity" /> com o tipo de autenticação, tipo de declaração de nome e tipo de declaração de função especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O valor de `authenticationType` parâmetro. Se o `authenticationType` parâmetro é `null` ou uma cadeia de caracteres vazia, a propriedade é definida como `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Uma coleção vazia.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|O valor de `nameType` parâmetro. Se o `nameType` parâmetro é nulo ou uma cadeia de caracteres vazia, a propriedade é definida como <xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType>.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|O valor de `roleType` parâmetro. Se o `roleType` parâmetro é nulo ou uma cadeia de caracteres vazia, a propriedade é definida como <xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims, string authenticationType, string nameType, string roleType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims, string authenticationType, string nameType, string roleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="nameType" Type="System.String" />
+        <Parameter Name="roleType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="claims">As declarações com as quais popular a identidade baseada em declarações.</param>
+        <param name="authenticationType">O tipo de autenticação usado.</param>
+        <param name="nameType">O tipo de declaração a ser usado para as declarações de nome.</param>
+        <param name="roleType">O tipo de declaração a ser usada para declarações de função.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Claims.ClaimsIdentity" /> com as declarações, o tipo de autenticação, tipo de declaração de nome e tipo de declaração de função especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O valor de `authenticationType` parâmetro. Se o `authenticationType` parâmetro é `null` ou uma cadeia de caracteres vazia, a propriedade é definida como `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Inicializado a partir de `claims` parâmetro.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|`null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|O valor de `nameType` parâmetro. No entanto, se o `nameType` parâmetro é `null` ou uma cadeia de caracteres vazia, a propriedade é definida como <xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType>.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|O valor de `roleClaimType` parâmetro. No entanto, se o `roleClaimType` parâmetro é `null` ou uma cadeia de caracteres vazia, a propriedade é definida como <xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClaimsIdentity (System.Security.Principal.IIdentity identity, System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims, string authenticationType, string nameType, string roleType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IIdentity identity, class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims, string authenticationType, string nameType, string roleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.#ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+        <Parameter Name="authenticationType" Type="System.String" />
+        <Parameter Name="nameType" Type="System.String" />
+        <Parameter Name="roleType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="identity">A identidade na qual basear a nova identidade baseada em declarações.</param>
+        <param name="claims">As declarações com o qual preencher a nova identidade baseada em declarações.</param>
+        <param name="authenticationType">O tipo de autenticação usado.</param>
+        <param name="nameType">O tipo de declaração a ser usado para as declarações de nome.</param>
+        <param name="roleType">O tipo de declaração a ser usada para declarações de função.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.ClaimsIdentity" /> classe especificado <see cref="T:System.Security.Principal.IIdentity" /> usando as declarações especificadas, tipo de autenticação, o tipo de declaração de nome e função de tipo de declaração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Security.Claims.ClaimsIdentity> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Security.Claims.ClaimsIdentity.Actor%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.Actor` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A>|O `authenticationType` parâmetro. Se o `authenticationType` parâmetro é `null` ou uma cadeia de caracteres vazia, o valor de `identity.AuthenticationType` (<xref:System.Security.Principal.IIdentity.AuthenticationType%2A?displayProperty=nameWithType>) propriedade é usada.|  
+|<xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.BootStrapContext` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Claims%2A>|Inicializado a partir de `claims` parâmetro. Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, as declarações de `identity` são adicionados para a nova instância antes de os especificados pelo `claims` parâmetro.|  
+|<xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A>|**Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.IsAuthenticated%2A> propriedade é retornada com base no valor da <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Label%2A>|Se `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor de `identity.Label` propriedade; caso contrário, `null`.|  
+|<xref:System.Security.Claims.ClaimsIdentity.Name%2A>|Se `identity` não é atribuível da <xref:System.Security.Claims.ClaimsIdentity>, não é `null`e tem um <xref:System.Security.Principal.IIdentity.Name%2A?displayProperty=nameWithType> propriedade que não é `null`; uma declaração de nome é adicionada para a nova instância usando o valor da <xref:System.Security.Principal.IIdentity.Name%2A?displayProperty=nameWithType> propriedade. **Observação:** quando acessado, o valor da <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade é retornada com base no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> e <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.|  
+|<xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A>|O valor de `nameType` parâmetro. No entanto, se o valor da `nameType` parâmetro é `null` ou uma cadeia de caracteres vazia e `identity` pode ser atribuído de <xref:System.Security.Claims.ClaimsIdentity>, o valor da `identity.NameClaimType` propriedade for usada; caso contrário, <xref:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType> é usado.|  
+|<xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A>|O valor de `roleClaimType` parâmetro. No entanto, se o valor da `roleClaimType` parâmetro é `null` ou uma cadeia de caracteres vazia e identidade é atribuível da <xref:System.Security.Claims.ClaimsIdentity>, o valor da `identity.RoleClaimType` propriedade for usada; caso contrário, <xref:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType> é usado.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Actor">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsIdentity Actor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsIdentity Actor" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.Actor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a identidade da parte que realiza a chamada e que recebeu direitos de delegação.</summary>
+        <value>A parte que realiza a chamada e que recebeu direitos de delegação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode acessar a cadeia de delegação que levou para a chamada atual, examinando recursivamente a <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> propriedade. O token em nome do qual a chamada está sendo delegada pode ser acessado por meio de <xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ocorre uma tentativa de definir a propriedade para a instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddClaim">
+      <MemberSignature Language="C#" Value="public virtual void AddClaim (System.Security.Claims.Claim claim);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddClaim(class System.Security.Claims.Claim claim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.AddClaim(System.Security.Claims.Claim)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claim" Type="System.Security.Claims.Claim" />
+      </Parameters>
+      <Docs>
+        <param name="claim">A declaração a ser adicionada.</param>
+        <summary>Adiciona uma única declaração a esta identidade baseada em declarações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A declaração é examinada e se a entidade for diferente de essa identidade baseada em declarações, o <xref:System.Security.Claims.Claim.Clone%28System.Security.Claims.ClaimsIdentity%29?displayProperty=nameWithType> método é invocado com esta identidade baseada em declarações como o parâmetro para criar uma nova declaração com o assunto correto.  
+  
+ Esse método tem a `SecurityCritical` atributo aplicado ao controle quais entidades podem adicionar declarações para a identidade. Ainda mais para baixo o pipe, decisões de autorização são feitas com base em declarações que estão presentes no <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="claim" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AddClaims">
+      <MemberSignature Language="C#" Value="public virtual void AddClaims (System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; claims);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddClaims(class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; claims) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.AddClaims(System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claims" Type="System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="claims">As declarações para adicionar.</param>
+        <summary>Adiciona que uma lista de declarações a essa identidade baseada em declarações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada declaração é examinada e se a entidade for diferente de essa identidade baseada em declarações, o <xref:System.Security.Claims.Claim.Clone%28System.Security.Claims.ClaimsIdentity%29?displayProperty=nameWithType> método é invocado com esta identidade baseada em declarações como o parâmetro para criar uma nova declaração com o assunto correto.  
+  
+ Esse método tem a `SecurityCritical` atributo aplicado ao controle quais entidades podem adicionar declarações para a identidade. Ainda mais para baixo o pipe, decisões de autorização são feitas com base em declarações que estão presentes no <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="claims" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationType">
+      <MemberSignature Language="C#" Value="public virtual string AuthenticationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.AuthenticationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de autenticação.</summary>
+        <value>O tipo de autenticação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um dos valores definidos pelo <xref:System.Security.Claims.AuthenticationTypes> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BootstrapContext">
+      <MemberSignature Language="C#" Value="public object BootstrapContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object BootstrapContext" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.BootstrapContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o token usado para criar esta identidade de declarações.</summary>
+        <value>O contexto de inicialização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto subjacente é uma instância do <xref:System.IdentityModel.Tokens.BootstrapContext?displayProperty=nameWithType> classe.  
+  
+ Definir o `saveBootstrapContext` atributo em uma a [ &lt;identityConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) ou [ &lt;securityTokenHandlerConfiguration&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elemento em um arquivo de configuração para especificar se o token usado para gerar o <xref:System.Security.Claims.ClaimsIdentity> devem ser preservadas no <xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A> propriedade.  
+  
+ Se o <xref:System.Security.Claims.ClaimsIdentity.BootstrapContext%2A> propriedade não é `null`, aplicativos podem acessar o token original e as declarações que ele produzido pelas propriedades e métodos do <xref:System.IdentityModel.Tokens.BootstrapContext?displayProperty=nameWithType> classe.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Operação de definição requer confiança total para o chamador imediato. Este membro não pode ser definido por código parcialmente confiável ou transparente.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Claims">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; Claims { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; Claims" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.Claims" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as declarações associadas com esta identidade baseada em declarações.</summary>
+        <value>A coleção de declarações associadas com esta identidade baseada em declarações.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção pode conter entradas que são `null`.  
+  
+ Declarações contidas no <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção essencialmente descrevem a entidade que é representada pelo <xref:System.Security.Claims.ClaimsIdentity>. As declarações de descrevem as propriedades e os direitos de entidade e podem ser examinadas por aplicativos para tomar decisões sobre a autenticação e autorização.  
+  
+> [!NOTE]
+>  O <xref:System.Security.Claims.ClaimsPrincipal> classe tiver um <xref:System.Security.Claims.ClaimsPrincipal.Claims%2A> propriedade também. Na maioria dos casos, você deve acessar declarações do usuário por meio de <xref:System.Security.Claims.ClaimsPrincipal.Claims%2A?displayProperty=nameWithType> coleção em vez de por meio de <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção. Você precisará acessar as declarações de um indivíduo <xref:System.Security.Claims.ClaimsIdentity> somente nos casos em que a entidade de segurança contém mais de um <xref:System.Security.Claims.ClaimsIdentity> e você precisa avaliar ou modificar uma identidade específica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Claims.ClaimsIdentity Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Claims.ClaimsIdentity Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um novo <see cref="T:System.Security.Claims.ClaimsIdentity" /> copiados dessa identidade baseada em declarações.</summary>
+        <returns>Uma cópia da instância atual.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateClaim">
+      <MemberSignature Language="C#" Value="protected virtual System.Security.Claims.Claim CreateClaim (System.IO.BinaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Security.Claims.Claim CreateClaim(class System.IO.BinaryReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.CreateClaim(System.IO.BinaryReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.IO.BinaryReader" /> que aponta para a declaração.</param>
+        <summary>Fornece um ponto de extensibilidade para tipos derivados criar um personalizado <see cref="T:System.Security.Claims.Claim" />.</summary>
+        <returns>Um novo <see cref="T:System.Security.Claims.Claim" />.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomSerializationData">
+      <MemberSignature Language="C#" Value="protected virtual byte[] CustomSerializationData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] CustomSerializationData" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.CustomSerializationData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Contém dados adicionais fornecidos por um tipo derivado. Normalmente definido ao chamar <see cref="M:System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])" />.</summary>
+        <value>A <see cref="T:System.Byte" /> matriz que representa adicional dos dados serializados.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIssuer">
+      <MemberSignature Language="C#" Value="public const string DefaultIssuer;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DefaultIssuer" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimsIdentity.DefaultIssuer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O emissor padrão; "LOCAL AUTHORITY".</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultNameClaimType">
+      <MemberSignature Language="C#" Value="public const string DefaultNameClaimType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DefaultNameClaimType" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimsIdentity.DefaultNameClaimType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome padrão de declaração de tipo. <see cref="F:System.Security.Claims.ClaimTypes.Name" />.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRoleClaimType">
+      <MemberSignature Language="C#" Value="public const string DefaultRoleClaimType;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DefaultRoleClaimType" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Claims.ClaimsIdentity.DefaultRoleClaimType" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A função padrão de declaração de tipo; <see cref="F:System.Security.Claims.ClaimTypes.Role" />.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; FindAll (Predicate&lt;System.Security.Claims.Claim&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; FindAll(class System.Predicate`1&lt;class System.Security.Claims.Claim&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.FindAll(System.Predicate{System.Security.Claims.Claim})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">A função que executa a lógica de correspondência.</param>
+        <summary>Recupera todas as declarações que correspondem ao predicado especificado.</summary>
+        <returns>Declarações correspondentes. A lista é somente leitura.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="match" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAll">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt; FindAll (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Security.Claims.Claim&gt; FindAll(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.FindAll(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de declaração com o qual corresponder declarações.</param>
+        <summary>Recupera todas as declarações que têm o tipo de declaração especificado.</summary>
+        <returns>Declarações correspondentes. A lista é somente leitura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A comparação é feita usando Ordinal maiusculas em minúsculas em `type`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindFirst">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Claims.Claim FindFirst (Predicate&lt;System.Security.Claims.Claim&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Claims.Claim FindFirst(class System.Predicate`1&lt;class System.Security.Claims.Claim&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.FindFirst(System.Predicate{System.Security.Claims.Claim})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">A função que executa a lógica de correspondência.</param>
+        <summary>Recupera a primeira declaração correspondente ao predicado especificado.</summary>
+        <returns>A primeira correspondência de declaração ou <see langword="null" /> se nenhuma correspondência for encontrada.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="match" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindFirst">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Claims.Claim FindFirst (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Claims.Claim FindFirst(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.FindFirst(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.Claim</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de declaração para corresponder.</param>
+        <summary>Recupera a primeira declaração com o tipo de declaração especificado.</summary>
+        <returns>A primeira correspondência de declaração ou <see langword="null" /> se nenhuma correspondência for encontrada.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="protected virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto a ser preenchido com dados.</param>
+        <param name="context">O destino dessa serialização. Pode ser <see langword="null" />.</param>
+        <summary>Preenche o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar atual <see cref="T:System.Security.Claims.ClaimsIdentity" /> objeto.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HasClaim">
+      <MemberSignature Language="C#" Value="public virtual bool HasClaim (Predicate&lt;System.Security.Claims.Claim&gt; match);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasClaim(class System.Predicate`1&lt;class System.Security.Claims.Claim&gt; match) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.HasClaim(System.Predicate{System.Security.Claims.Claim})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="match" Type="System.Predicate&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="match">A função que executa a lógica de correspondência.</param>
+        <summary>Determina se essa identidade de declarações tem uma declaração que é correspondida pelo predicado especificado.</summary>
+        <returns>
+          <see langword="true" />Se existir uma declaração correspondente. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="match" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasClaim">
+      <MemberSignature Language="C#" Value="public virtual bool HasClaim (string type, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool HasClaim(string type, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.HasClaim(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de declaração para correspondência.</param>
+        <param name="value">O valor da declaração para corresponder.</param>
+        <summary>Determina se essa identidade de declarações tem uma declaração com o tipo e o valor de declaração especificados.</summary>
+        <returns>
+          <see langword="true" />Se uma correspondência for encontrada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não verifica a <xref:System.Security.Claims.Claim.Issuer%2A> ou <xref:System.Security.Claims.Claim.OriginalIssuer%2A> propriedades. A comparação é feita usando o Ordinal de maiusculas e minúsculas no valor; maiusculas em minúsculas no tipo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é **nulo**.  
+  
+ -ou-  
+  
+ <paramref name="value" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAuthenticated">
+      <MemberSignature Language="C#" Value="public virtual bool IsAuthenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAuthenticated" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.IsAuthenticated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a identidade foi autenticada.</summary>
+        <value>
+          <see langword="true" /> se a identidade tiver sido autenticada; caso contrário, **false**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `true`Se o <xref:System.Security.Claims.ClaimsIdentity.AuthenticationType%2A> propriedade não é `null` ou uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o rótulo para essa identidade de declarações.</summary>
+        <value>O rótulo.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome dessa identidade baseada em declarações.</summary>
+        <value>O nome ou <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna o valor da primeira declaração com um tipo que corresponde ao nome de declaração de tipo definido no <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> propriedade. Se nenhuma declaração for encontrada que corresponde ao tipo de declaração de nome, retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NameClaimType">
+      <MemberSignature Language="C#" Value="public string NameClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NameClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.NameClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de declaração que é usado para determinar quais declarações fornecem o valor para a propriedade <see cref="P:System.Security.Claims.ClaimsIdentity.Name" /> dessa identidade baseada em declarações.</summary>
+        <value>O nome do tipo de declaração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Claims.ClaimsIdentity.NameClaimType%2A> propriedade especifica o tipo de declaração (<xref:System.Security.Claims.Claim.Type%2A?displayProperty=nameWithType>) que é usado para fornecer o nome para essa identidade. O nome é acessado por meio de <xref:System.Security.Claims.ClaimsIdentity.Name%2A> propriedade.  
+  
+ Essa propriedade é definida pelo construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveClaim">
+      <MemberSignature Language="C#" Value="public virtual void RemoveClaim (System.Security.Claims.Claim claim);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveClaim(class System.Security.Claims.Claim claim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.RemoveClaim(System.Security.Claims.Claim)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claim" Type="System.Security.Claims.Claim" />
+      </Parameters>
+      <Docs>
+        <param name="claim">A declaração a ser removida.</param>
+        <summary>Tenta remover uma declaração da identidade de declarações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível que a declaração não pode ser removida porque ele não pertence a identidade. Por exemplo, isso seria o caso para declarações de função que pertencem a entidade de segurança. Ao contrário de <xref:System.Security.Claims.ClaimsIdentity.TryRemoveClaim%2A> método, que retorna um valor booliano que indica se a declaração foi removida, <xref:System.Security.Claims.ClaimsIdentity.RemoveClaim%2A> lança uma exceção se a declaração não pode ser removida  
+  
+ A declaração especificada corresponde à referência de objeto (<xref:System.Object.ReferenceEquals%2A>).  
+  
+ Esse método tem a `SecurityCritical` atributo aplicado ao controle quais entidades podem remover declarações de identidade. Ainda mais para baixo o pipe, decisões de autorização são feitas com base em declarações que estão presentes no <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A declaração não pode ser removida.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleClaimType">
+      <MemberSignature Language="C#" Value="public string RoleClaimType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RoleClaimType" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.ClaimsIdentity.RoleClaimType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de declaração que será interpretado como uma função do .NET Framework entre as declarações nesta identidade de declarações.</summary>
+        <value>Tipo de declaração de função.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de declaração de função é o tipo de declaração (<xref:System.Security.Claims.Claim.Type%2A?displayProperty=nameWithType>) que é usado ao avaliar essa identidade para o <xref:System.Security.Claims.ClaimsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> método. O <xref:System.Security.Claims.ClaimsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> método é chamado para determinar se o servidor principal atual está em uma função especificada. O modelo baseado em declarações estende essa seleção para usar declarações apresentadas pela entidade de segurança. Um <xref:System.Security.Claims.ClaimsPrincipal> objeto pode conter um ou mais <xref:System.Security.Claims.ClaimsIdentity> objetos e cada objeto de identidade podem conter vários <xref:System.Security.Claims.Claim> objetos. O <xref:System.Security.Claims.ClaimsIdentity.RoleClaimType%2A> propriedade especifica o tipo de declaração da declaração que deve ser usado para fornecer o valor para a função ao avaliar isso <xref:System.Security.Claims.ClaimsIdentity> objeto. A propriedade é definida pelo construtor. Um valor comum é <xref:System.Security.Claims.ClaimTypes.Role?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryRemoveClaim">
+      <MemberSignature Language="C#" Value="public virtual bool TryRemoveClaim (System.Security.Claims.Claim claim);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryRemoveClaim(class System.Security.Claims.Claim claim) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.TryRemoveClaim(System.Security.Claims.Claim)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="claim" Type="System.Security.Claims.Claim" />
+      </Parameters>
+      <Docs>
+        <param name="claim">A declaração a ser removida.</param>
+        <summary>Tenta remover uma declaração da identidade de declarações.</summary>
+        <returns>
+          <see langword="true" /> se a declaração for removida com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível que a declaração não pode ser removida porque ele não pertence a identidade. Por exemplo, isso seria o caso para declarações de função que pertencem a entidade de segurança.  
+  
+ A declaração especificada corresponde à referência de objeto (<xref:System.Object.ReferenceEquals%2A>).  
+  
+ Esse método tem a `SecurityCritical` atributo aplicado ao controle quais entidades podem remover declarações de identidade. Ainda mais para baixo o pipe, decisões de autorização são feitas com base em declarações que estão presentes no <xref:System.Security.Claims.ClaimsIdentity.Claims%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public virtual void WriteTo (System.IO.BinaryWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteTo(class System.IO.BinaryWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.BinaryWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador a ser usado para armazenamento de dados.</param>
+        <summary>Serializa usando um <see cref="T:System.IO.BinaryWriter" />.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="protected virtual void WriteTo (System.IO.BinaryWriter writer, byte[] userData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteTo(class System.IO.BinaryWriter writer, unsigned int8[] userData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.ClaimsIdentity.WriteTo(System.IO.BinaryWriter,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Claims</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.BinaryWriter" />
+        <Parameter Name="userData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O gravador a ser usado para armazenamento de dados.</param>
+        <param name="userData">Dados adicionais fornecidos pelo tipo derivado.</param>
+        <summary>Serializa usando um <see cref="T:System.IO.BinaryWriter" />.</summary>
+        <remarks>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="writer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,293 @@
+<Type Name="IImmutableDictionary&lt;TKey,TValue&gt;" FullName="System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IImmutableDictionary&lt;TKey,TValue&gt; : System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IImmutableDictionary`2&lt;TKey, TValue&gt; implements class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IReadOnlyDictionary`2&lt;!TKey, !TValue&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.IImmutableDictionary`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyDictionary&lt;TKey,TValue&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">O tipo de chaves no dicionário.</typeparam>
+    <typeparam name="TValue">O tipo de valores no dicionário.</typeparam>
+    <summary>Representa uma coleção de pares chave/valor imutável.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A <xref:System.Collections.Immutable.IImmutableDictionary%602> requer uma implementação de comparação de igualdade para determinar se duas chaves são iguais.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; Add (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; Add(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Add(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser adicionada.</param>
+        <param name="value">O valor do elemento a ser adicionado.</param>
+        <summary>Adiciona um elemento com a chave especificada e o valor ao dicionário.</summary>
+        <returns>Um novo dicionário imutável que contém o par chave/valor adicionais.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par chave/valor especificado já existe no dicionário, este método retorna a instância existente do dicionário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A chave especificada já existe no dicionário, mas tem um valor diferente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; AddRange (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; pairs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; AddRange(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; pairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.AddRange(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pairs" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pairs">Os pares de chave/valor para adicionar.</param>
+        <summary>Adiciona os pares chave/valor especificado ao dicionário.</summary>
+        <returns>Um novo dicionário imutável que contém os pares chave/valor adicionais.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Uma das chaves fornecidos já existe no dicionário mas tem um valor diferente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um dicionário vazio que tem a mesma ordenação e regras de comparação de chave/valor que esta instância do dicionário.</summary>
+        <returns>Um dicionário vazio com regras de comparação de pedidos e a chave/valor equivalentes.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt; pair);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt; pair) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Contains(System.Collections.Generic.KeyValuePair{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pair" Type="System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pair">O par chave/valor a ser localizado.</param>
+        <summary>Determina se o dicionário imutável contém o par chave/valor especificado.</summary>
+        <returns>
+          <see langword="true" />Se o par chave/valor especificado for encontrado no dicionário. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; Remove (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; Remove(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser removido.</param>
+        <summary>Remove o elemento com a chave especificada do dicionário imutável.</summary>
+        <returns>Um novo dicionário imutável com o elemento especificado removido; ou esta instância, se a chave especificada não pode ser encontrada no dicionário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveRange">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; RemoveRange (System.Collections.Generic.IEnumerable&lt;TKey&gt; keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; RemoveRange(class System.Collections.Generic.IEnumerable`1&lt;!TKey&gt; keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.RemoveRange(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.Generic.IEnumerable&lt;TKey&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keys">As chaves dos elementos a serem removidos.</param>
+        <summary>Remove os elementos com as chaves especificadas do dicionário imutável.</summary>
+        <returns>Um novo dicionário imutável com as chaves especificadas removido; ou esta instância, se as chaves especificadas não podem ser encontradas no dicionário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; SetItem (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; SetItem(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.SetItem(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave da entrada a ser adicionada.</param>
+        <param name="value">O valor da chave para definir.</param>
+        <summary>Define a chave especificada e o valor no dicionário imutável, possivelmente substituindo um valor existente para a chave.</summary>
+        <returns>Um novo dicionário imutável que contém o par chave/valor especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o par chave/valor especificado já existe no dicionário, este método retorna a instância existente. Se a chave já existe, mas tem um valor diferente, esse método retorna uma nova instância do dicionário com o valor substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItems">
+      <MemberSignature Language="C#" Value="public System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt; SetItems (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Immutable.IImmutableDictionary`2&lt;!TKey, !TValue&gt; SetItems(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.SetItems(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.IImmutableDictionary&lt;TKey,TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="items">Os pares chave/valor para definir no dicionário. Se qualquer uma das chaves já existir no dicionário, este método substituirá os valores anteriores.</param>
+        <summary>Define os pares chave/valor especificado no dicionário imutável, possivelmente substitui os valores existentes para as chaves.</summary>
+        <returns>Um novo dicionário imutável que contém os pares chave/valor especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetKey">
+      <MemberSignature Language="C#" Value="public bool TryGetKey (TKey equalKey, out TKey actualKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetKey(!TKey equalKey, [out] !TKey&amp; actualKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.IImmutableDictionary`2.TryGetKey(`0,`0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equalKey" Type="TKey" />
+        <Parameter Name="actualKey" Type="TKey&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equalKey">A chave para pesquisar.</param>
+        <param name="actualKey">A chave correspondente localizada no dicionário se encontrado, ou <c>equalkey</c> se nenhuma correspondência for encontrada.</param>
+        <summary>Determina se este dicionário contém uma chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se houver uma correspondência para <paramref name="equalKey" /> for encontrado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Estes são alguns cenários onde <xref:System.Collections.Immutable.IImmutableDictionary%602.TryGetKey%2A> podem ser úteis:  
+  
+-   Você deseja reutilizar uma referência de objeto armazenada anteriormente em vez de criar uma nova referência.  
+  
+-   Você deseja pesquisar o valor canônico de um objeto  
+  
+-   Você deseja recuperar os dados mais completos sobre um objeto  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

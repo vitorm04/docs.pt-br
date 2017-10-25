@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.RegularExpressions">
+  <Docs>
+    <summary>O <see cref="N:System.Web.RegularExpressions" /> namespace fornece pré-compilado expressões regulares que podem ser usadas para analisar arquivos ASP.NET. Todos os membros de <see cref="N:System.Web.RegularExpressions" /> namespace são descendentes do <see cref="T:System.Text.RegularExpressions.Regex" /> classe.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

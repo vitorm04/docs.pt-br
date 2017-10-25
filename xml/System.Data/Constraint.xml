@@ -1,0 +1,347 @@
+<Type Name="Constraint" FullName="System.Data.Constraint">
+  <TypeSignature Language="C#" Value="public abstract class Constraint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Constraint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Constraint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ConstraintName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Data.ConstraintConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma restrição que pode ser aplicada em um ou mais objetos <see cref="T:System.Data.DataColumn" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma restrição é uma regra usada para manter a integridade dos dados de <xref:System.Data.DataTable>. Por exemplo, quando você excluir um valor que é usado em uma ou mais tabelas relacionadas, uma <xref:System.Data.ForeignKeyConstraint> determina se os valores nas tabelas relacionadas também serão excluídos, definido como valores nulos, definido como padrão os valores, ou se nenhuma ação ocorre. Um <xref:System.Data.UniqueConstraint>, por outro lado, apenas garante que todos os valores em uma determinada tabela sejam exclusivos. Para obter mais informações, consulte [restrições de DataTable](~/docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+  
+ Uma base de <xref:System.Data.Constraint> construtor não é usado. Restrições de chave primárias ou exclusivas são criadas usando o <xref:System.Data.UniqueConstraint> construtor e restrições de chave estrangeira são criadas usando o <xref:System.Data.ForeignKeyConstraint> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir examina a coleção de restrições para uma <xref:System.Data.DataTable> e determina se cada restrição é um <xref:System.Data.UniqueConstraint> ou <xref:System.Data.ForeignKeyConstraint>. As propriedades da restrição são exibidas.  
+  
+ [!code-csharp[Classic WebData Constraint Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData Constraint Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData Constraint Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData Constraint Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é seguro para operações de leitura e multithread. Você deve sincronizar todas as operações de gravação.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Constraint ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Constraint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Constraint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado pelos construtores de classe derivada para inicializar o estado nesse tipo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_DataSet">
+      <MemberSignature Language="C#" Value="protected virtual System.Data.DataSet _DataSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataSet _DataSet" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Constraint._DataSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.DataSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.DataSet" /> ao qual esta restrição pertence.</summary>
+        <value>O <see cref="T:System.Data.DataSet" /> ao qual a restrição pertence.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckStateForProperty">
+      <MemberSignature Language="C#" Value="protected void CheckStateForProperty ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckStateForProperty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Constraint.CheckStateForProperty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.DataSet" /> ao qual esta restrição pertence.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstraintName">
+      <MemberSignature Language="C#" Value="public virtual string ConstraintName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConstraintName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Constraint.ConstraintName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome de uma restrição no <see cref="T:System.Data.ConstraintCollection" />.</summary>
+        <value>O nome do <see cref="T:System.Data.Constraint" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.ConstraintCollection> é retornado pelo <xref:System.Data.DataTable.Constraints%2A> propriedade o <xref:System.Data.DataTable> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir itera por meio de <xref:System.Data.ConstraintCollection> de um <xref:System.Data.DataTable> e imprime cada <xref:System.Data.Constraint.ConstraintName%2A>.  
+  
+ [!code-csharp[Classic WebData Constraint.ConstraintName Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData Constraint.ConstraintName Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData Constraint.ConstraintName Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData Constraint.ConstraintName Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Data.Constraint" /> nome é um valor nulo ou cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.Data.DuplicateNameException">O <see cref="T:System.Data.ConstraintCollection" /> já contém um <see cref="T:System.Data.Constraint" /> com o mesmo nome (a comparação não diferencia maiusculas de minúsculas.).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedProperties">
+      <MemberSignature Language="C#" Value="public System.Data.PropertyCollection ExtendedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.PropertyCollection ExtendedProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Constraint.ExtendedProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.PropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de propriedades de restrição definida pelo usuário.</summary>
+        <value>Um <see cref="T:System.Data.PropertyCollection" /> das informações personalizadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades estendidas devem ser do tipo <xref:System.String>. Propriedades que não são do tipo <xref:System.String> não são mantidos quando o <xref:System.Data.Constraint> é gravada como XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataSet">
+      <MemberSignature Language="C#" Value="protected void SetDataSet (System.Data.DataSet dataSet);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void SetDataSet(class System.Data.DataSet dataSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Constraint.SetDataSet(System.Data.DataSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">O <see cref="T:System.Data.DataSet" /> ao qual pertence essa restrição.</param>
+        <summary>Define a restrição <see cref="T:System.Data.DataSet" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.Constraint.SetDataSet%2A> método para definir o <xref:System.Data.DataSet> para uma restrição.  
+  
+ [!code-csharp[Classic WebData Constraint.SetDataSet Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData Constraint.SetDataSet Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData Constraint.SetDataSet Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData Constraint.SetDataSet Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public abstract System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Constraint.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.DataTable" /> ao qual a restrição se aplica.</summary>
+        <value>Um <see cref="T:System.Data.DataTable" /> ao qual a restrição se aplica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir retorna o <xref:System.Data.DataTable> de um <xref:System.Data.Constraint>.  
+  
+ [!code-csharp[Classic WebData Constraint.Table Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData Constraint.Table Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData Constraint.Table Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData Constraint.Table Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Constraint.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="P:System.Data.Constraint.ConstraintName" />, se houver, como uma cadeia de caracteres.</summary>
+        <returns>O valor da cadeia de <see cref="P:System.Data.Constraint.ConstraintName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir retorna o <xref:System.Data.Constraint.ConstraintName%2A> usando o <xref:System.Data.Constraint.ToString%2A> método.  
+  
+ [!code-csharp[Classic WebData Constraint.ToString Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData Constraint.ToString Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData Constraint.ToString Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData Constraint.ToString Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

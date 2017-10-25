@@ -1,0 +1,148 @@
+<Type Name="IApplicationSettingsProvider" FullName="System.Configuration.IApplicationSettingsProvider">
+  <TypeSignature Language="C#" Value="public interface IApplicationSettingsProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationSettingsProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IApplicationSettingsProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define os recursos estendidos para provedores de configurações de aplicativo baseados no cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A arquitetura de configurações do aplicativo permite que você forneça um mecanismo de armazenamento personalizado para as configurações de aplicativo, criando um provedor de configurações personalizadas, que é uma classe derivam de <xref:System.Configuration.SettingsProvider>. Essa classe contém a funcionalidade básica para armazenar e recuperar propriedades. No entanto, você pode adicionar funcionalidade adicional de padronizado Implementando o <xref:System.Configuration.IApplicationSettingsProvider> interface no provedor de configurações personalizadas. Essa interface contém três métodos que permitem principalmente o provedor de configurações mais inteligente identificador alterações de versão de aplicativo. Normalmente, o provedor de configurações armazenará as configurações de aplicativo para diferentes versões de um aplicativo separadamente para prever as seguintes circunstâncias:  
+  
+-   Execução lado a lado de diferentes versões de um aplicativo.  
+  
+-   Ao atualizar um aplicativo, mantendo as configurações do aplicativo.  
+  
+-   Redefinir as configurações de aplicativo para seus valores padrão para a versão usada atualmente.  
+  
+ A classe <xref:System.Configuration.LocalFileSettingsProvider> implementa a interface <xref:System.Configuration.IApplicationSettingsProvider>. O mesmo conjunto de métodos contidos por <xref:System.Configuration.IApplicationSettingsProvider> também podem ser encontrados no <xref:System.Configuration.ApplicationSettingsBase> classe, habilitando o estabelecimento de um canal de comunicação predefinidas entre um wrapper de configurações do aplicativo e o seu provedor de configurações.  
+  
+> [!NOTE]
+>  Essa interface é opcional. Se um provedor não implementa essa interface, a infraestrutura de configurações falhará sem notificação se ele tenta acessar qualquer um dos métodos definidos por esta interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPreviousVersion">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsPropertyValue GetPreviousVersion (System.Configuration.SettingsContext context, System.Configuration.SettingsProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Configuration.SettingsPropertyValue GetPreviousVersion(class System.Configuration.SettingsContext context, class System.Configuration.SettingsProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IApplicationSettingsProvider.GetPreviousVersion(System.Configuration.SettingsContext,System.Configuration.SettingsProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsPropertyValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Configuration.SettingsContext" /> que descreve o uso do aplicativo atual.</param>
+        <param name="property">O <see cref="T:System.Configuration.SettingsProperty" /> cujo valor será retornado.</param>
+        <summary>Retorna o valor da propriedade de configurações especificadas para a versão anterior do mesmo aplicativo.</summary>
+        <returns>Um <see cref="T:System.Configuration.SettingsPropertyValue" /> que contém o valor da configuração da propriedade especificada como última foi definida na versão anterior do aplicativo; ou <see langword="null" /> se a configuração não pode ser encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Configuration.IApplicationSettingsProvider.GetPreviousVersion%2A> método junto com o <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A> método para migrar as configurações do aplicativo durante ou após a instalação de uma nova versão de um aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityException">Para <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (System.Configuration.SettingsContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset(class System.Configuration.SettingsContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IApplicationSettingsProvider.Reset(System.Configuration.SettingsContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Configuration.SettingsContext" /> que descreve o uso do aplicativo atual.</param>
+        <summary>Redefine as configurações do aplicativo associadas ao aplicativo especificado com seus valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.IApplicationSettingsProvider.Reset%2A> método reinicializa os valores armazenados do grupo de configurações do aplicativo especificado. Por outro lado, <xref:System.Configuration.DefaultSettingValueAttribute> fornece um valor padrão para uma única propriedade durante a inicialização de propriedade, se ele não tem nenhum valor armazenado.  
+  
+ O provedor de configurações determina quais são os padrões razoáveis para o grupo especificado das configurações de aplicativo. Por exemplo, a implementação em <xref:System.Configuration.LocalFileSettingsProvider> redefine as configurações do escopo do usuário aos respectivos valores compartilhados no `application.exe.config` arquivo; por outro lado, deixa as configurações no escopo do aplicativo inalteradas.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityException">Para <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Upgrade">
+      <MemberSignature Language="C#" Value="public void Upgrade (System.Configuration.SettingsContext context, System.Configuration.SettingsPropertyCollection properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Upgrade(class System.Configuration.SettingsContext context, class System.Configuration.SettingsPropertyCollection properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IApplicationSettingsProvider.Upgrade(System.Configuration.SettingsContext,System.Configuration.SettingsPropertyCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Configuration.SettingsContext" />
+        <Parameter Name="properties" Type="System.Configuration.SettingsPropertyCollection" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Configuration.SettingsContext" /> que descreve o uso do aplicativo atual.</param>
+        <param name="properties">Um <see cref="T:System.Configuration.SettingsPropertyCollection" /> que contém o grupo de propriedade de configurações cujos valores devem ser recuperados.</param>
+        <summary>Indica ao provedor que o aplicativo foi atualizado. Isso oferece o provedor a oportunidade de atualizar suas configurações armazenadas conforme apropriado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework permite que a instalação lado a lado e execução de diferentes versões do mesmo aplicativo. O provedor de configurações do aplicativo armazena as configurações do aplicativo para cada versão de um aplicativo separadamente para garantir o isolamento. No entanto, convém migrar as configurações da versão anterior de um aplicativo para a atual. Para fornecer essa funcionalidade de migração, use o <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A> método, implementado em uma classe derivada de <xref:System.Configuration.SettingsProvider>.  
+  
+ Você pode usar o <xref:System.Configuration.IApplicationSettingsProvider.Upgrade%2A> método junto com o <xref:System.Configuration.IApplicationSettingsProvider.GetPreviousVersion%2A> método para migrar as configurações do aplicativo durante ou após a instalação de uma nova versão de um aplicativo.  
+  
+ Esse método deve ser suprimido para cada configuração de aplicativo tem o <xref:System.Configuration.NoSettingsVersionUpgradeAttribute> é aplicada a ele, ou a classe de invólucro configurações inteira, derivada de <xref:System.Configuration.ApplicationSettingsBase>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityException">Para <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /> permissão.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

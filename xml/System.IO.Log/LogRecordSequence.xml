@@ -1,0 +1,2561 @@
+<Type Name="LogRecordSequence" FullName="System.IO.Log.LogRecordSequence">
+  <TypeSignature Language="C#" Value="public sealed class LogRecordSequence : IDisposable, System.IO.Log.IRecordSequence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LogRecordSequence extends System.Object implements class System.IDisposable, class System.IO.Log.IRecordSequence" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.LogRecordSequence" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IO.Log.IRecordSequence</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma sequência de registros armazenada em um <see cref="T:System.IO.Log.LogStore" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Log.LogRecordSequence> classe fornece uma implementação da interface de sequência do registro na parte superior de um log de sistema de arquivos de Log comuns (CLFS). Além dos recursos orientados a registros padrão, ele fornece um modelo de política para evitar condições de log completo e multiplexação de clientes no mesmo arquivo físico. Ele funciona com o <xref:System.IO.Log.LogStore> classe, que fornece uma interface para diretamente manipular e gerenciando um CLFS o arquivo de log. A relação entre o <xref:System.IO.Log.LogStore> classe e o <xref:System.IO.Log.LogRecordSequence> classe é semelhante à relação entre um arquivo de disco e um <xref:System.IO.FileStream> objeto. O arquivo de disco fornece armazenamento concreto e tem atributos como comprimento e a hora do último acesso; enquanto o <xref:System.IO.FileStream> objeto fornece uma exibição no arquivo que pode ser usado para lê-lo e gravar nele. Da mesma forma, o <xref:System.IO.Log.LogStore> classe tem atributos como uma diretiva e uma coleção de extensões do disco; e o <xref:System.IO.Log.LogRecordSequence> classe fornece um mecanismo orientado por registro para ler e gravar dados.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogRecordSequence> classe:  
+  
+ [!code-csharp[S_UELogRecordSequence#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#0)]
+ [!code-vb[S_UELogRecordSequence#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogRecordSequence (System.IO.Log.LogStore logStore);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Log.LogStore logStore) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.#ctor(System.IO.Log.LogStore)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="logStore" Type="System.IO.Log.LogStore" />
+      </Parameters>
+      <Docs>
+        <param name="logStore">O <see cref="T:System.IO.Log.LogStore" /> que esta sequência de registro deve usar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Log.LogRecordSequence" /> classe com o armazenamento de log especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do buffer determina o tamanho máximo do registro que pode ser anexado ou ler. Este construtor, um valor padrão de 64 é definido. O número desejado de buffers é definido como 10.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="logStore" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogRecordSequence (string path, System.IO.FileMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.#ctor(System.String,System.IO.FileMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho relativo ou absoluto para o arquivo de base de armazenamento de log para abrir.</param>
+        <param name="mode">Uma da <see cref="T:System.IO.FileMode" /> valores que determina como abrir ou criar o repositório.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Log.LogRecordSequence" /> classe com um caminho especificado para o armazenamento de log e o modo de acesso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um novo <xref:System.IO.Log.LogRecordSequence> em um novo <xref:System.IO.Log.LogStore> objeto que ele abre com o caminho especificado e o modo. Tem acesso de leitura/gravação para o armazenamento e o armazenamento é aberto para acesso de leitura de compartilhamento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="path" />contém somente espaços em branco.  
+  
+ -ou-  
+  
+ <paramref name="path" />contém um ou mais caracteres inválidos.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> contém um valor inválido.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo não pode ser encontrado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorrerá um erro de e/s ao abrir o armazenamento de log.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para esta operação.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogRecordSequence" />não pode ser usado porque o componente necessário do sistema de arquivos de Log comuns (CLFS) não está instalado. Instale o componente CLFS se ele está disponível para sua plataforma ou use o <see cref="T:System.IO.Log.FileRecordSequence" /> classe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogRecordSequence (System.IO.Log.LogStore logStore, int bufferSize, int bufferCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Log.LogStore logStore, int32 bufferSize, int32 bufferCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.#ctor(System.IO.Log.LogStore,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="logStore" Type="System.IO.Log.LogStore" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="bufferCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="logStore">O <see cref="T:System.IO.Log.LogStore" /> que esta sequência de registro deve usar.</param>
+        <param name="bufferSize">O tamanho do buffer desejado em bytes. O tamanho do buffer determina o tamanho máximo do registro que pode ser anexado ou ler.</param>
+        <param name="bufferCount">O número desejado de buffers.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Log.LogRecordSequence" /> classe com o armazenamento de log especificado, o tamanho do buffer para cada registro e o número de buffers.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor se desejar especificar valores para `bufferSize` e `bufferCount` e não quiser usar o valor padrão de 64 para `bufferSize` e 10 para `bufferCount`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="logStore" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> é negativo ou zero.  
+  
+ -ou-  
+  
+ <paramref name="bufferCount" /> é negativo ou zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogRecordSequence (string path, System.IO.FileMode mode, System.IO.FileAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho relativo ou absoluto para o arquivo de base de armazenamento de log para abrir.</param>
+        <param name="mode">Uma da <see cref="T:System.IO.FileMode" /> valores que determina como abrir ou criar o repositório.</param>
+        <param name="access">Uma da <see cref="T:System.IO.FileAccess" /> valores que determina como o arquivo pode ser acessado pelo <see cref="T:System.IO.Log.LogStore" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Log.LogRecordSequence" /> classe com um caminho especificado para o armazenamento de log e os modos de acesso e compartilhamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um novo <xref:System.IO.Log.LogRecordSequence> em um novo <xref:System.IO.Log.LogStore> objeto que ele é aberto com o caminho especificado, o modo e o acesso. O armazenamento é aberto com o compartilhamento de acesso de leitura.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="path" />contém somente espaços em branco.  
+  
+ -ou-  
+  
+ <paramref name="path" />contém um ou mais caracteres inválidos.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> contém um valor inválido.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo não pode ser encontrado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorrerá um erro de e/s ao abrir o armazenamento de log.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para esta operação.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogRecordSequence" />não pode ser usado porque o componente necessário do sistema de arquivos de Log comuns (CLFS) não está instalado. Instale o componente CLFS se ele está disponível para sua plataforma ou use o <see cref="T:System.IO.Log.FileRecordSequence" /> classe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogRecordSequence (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho relativo ou absoluto para o arquivo de base de armazenamento de log para abrir.</param>
+        <param name="mode">Uma da <see cref="T:System.IO.FileMode" /> valores que determina como abrir ou criar o repositório.</param>
+        <param name="access">Uma da <see cref="T:System.IO.FileAccess" /> valores que determina como o arquivo pode ser acessado pelo <see cref="T:System.IO.Log.LogStore" />.</param>
+        <param name="share">Uma da <see cref="T:System.IO.FileShare" /> valores que determina como o armazenamento de log será compartilhado entre processos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Log.LogRecordSequence" /> classe com um caminho especificado para o armazenamento de log e o modo de acesso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um novo <xref:System.IO.Log.LogRecordSequence> em um novo <xref:System.IO.Log.LogStore> objeto que ele é aberto com o caminho especificado, o modo e o acesso. O armazenamento é aberto com o compartilhamento de acesso especificado.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar este <xref:System.IO.Log.LogRecordSequence> construtor:  
+  
+ [!code-csharp[S_UELogRecordSequence#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#1)]
+ [!code-vb[S_UELogRecordSequence#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="path" />contém somente espaços em branco.  
+  
+ -ou-  
+  
+ <paramref name="path" />contém um ou mais caracteres inválidos.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> contém um valor inválido.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo não pode ser encontrado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorrerá um erro de e/s ao abrir o armazenamento de log.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para esta operação.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogRecordSequence" />não pode ser usado porque o componente necessário do sistema de arquivos de Log comuns (CLFS) não está instalado. Instale o componente CLFS se ele está disponível para sua plataforma ou use o <see cref="T:System.IO.Log.FileRecordSequence" /> classe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogRecordSequence (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, int bufferCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share, int32 bufferSize, int32 bufferCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="bufferCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho relativo ou absoluto para o arquivo de base de armazenamento de log para abrir.</param>
+        <param name="mode">Uma da <see cref="T:System.IO.FileMode" /> valores que determina como abrir ou criar o repositório.</param>
+        <param name="access">Uma da <see cref="T:System.IO.FileAccess" /> valores que determina como o arquivo pode ser acessado pelo <see cref="T:System.IO.Log.LogStore" />.</param>
+        <param name="share">Uma da <see cref="T:System.IO.FileShare" /> valores que determina como o armazenamento de log será compartilhado entre processos.</param>
+        <param name="bufferSize">O tamanho do buffer desejado em bytes. O tamanho do buffer determina o tamanho máximo do registro que pode ser anexado ou ler.</param>
+        <param name="bufferCount">O número desejado de buffers.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IO.Log.LogRecordSequence" /> classe com um caminho especificado para o armazenamento de log, permissão de arquivo, modos de acesso e compartilhamento e o tamanho do buffer e a contagem de registros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa um novo <xref:System.IO.Log.LogRecordSequence> em um novo <xref:System.IO.Log.LogStore> objeto que ele é aberto com o caminho especificado, o modo e o acesso. O armazenamento é aberto com o compartilhamento de acesso especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="path" />contém somente espaços em branco.  
+  
+ -ou-  
+  
+ <paramref name="path" />contém um ou mais caracteres inválidos.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="mode" /> contém um valor inválido.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo não pode ser encontrado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorrerá um erro de e/s ao abrir o armazenamento de log.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para esta operação.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogRecordSequence" />não pode ser usado porque o componente necessário do sistema de arquivos de Log comuns (CLFS) não está instalado. Instale o componente CLFS se ele está disponível para sua plataforma ou use o <see cref="T:System.IO.Log.FileRecordSequence" /> classe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LogRecordSequence (string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, int bufferCount, System.Security.AccessControl.FileSecurity fileSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access, valuetype System.IO.FileShare share, int32 bufferSize, int32 bufferCount, class System.Security.AccessControl.FileSecurity fileSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.Int32,System.Security.AccessControl.FileSecurity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+        <Parameter Name="share" Type="System.IO.FileShare" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="bufferCount" Type="System.Int32" />
+        <Parameter Name="fileSecurity" Type="System.Security.AccessControl.FileSecurity" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho relativo ou absoluto para o arquivo de base de armazenamento de log para abrir.</param>
+        <param name="mode">Uma opção válida <see cref="T:System.IO.FileMode" /> valor que determina como abrir ou criar o repositório.</param>
+        <param name="access">Uma opção válida <see cref="T:System.IO.FileAccess" /> valor que determina como o armazenamento de log pode ser acessado.</param>
+        <param name="share">Uma opção válida <see cref="T:System.IO.FileShare" /> valor que determina como o armazenamento de log será compartilhado entre processos.</param>
+        <param name="bufferSize">O tamanho do buffer desejado em bytes. O tamanho do buffer determina o tamanho máximo do registro que pode ser anexado ou ler.</param>
+        <param name="bufferCount">O número desejado de buffers.</param>
+        <param name="fileSecurity">Uma opção válida <see cref="T:System.Security.AccessControl.FileSecurity" /> valor que especifica a segurança definida no repositório de recém-criado se o repositório deve ser criado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Log.LogRecordSequence" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O arquivo especificado por <paramref name="path" /> não é válido.  
+  
+ -ou-  
+  
+ O nome do arquivo de armazenamento de log especificado não é válido.  
+  
+ -ou-  
+  
+ <paramref name="mode" />tem um valor de <see cref="F:System.IO.FileMode.CreateNew" />e não pode ser usado sem acesso de gravação.  
+  
+ -ou-  
+  
+ <paramref name="mode" />tem um valor de <see cref="F:System.IO.FileMode.OpenOrCreate" />e não pode ser usado sem acesso de gravação.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um ou mais argumentos estão fora do intervalo.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O arquivo especificado por <paramref name="path" /> não foi encontrado.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ O arquivo especificado por <paramref name="path" /> não pode ser acessado porque está em uso por outro processo.  
+  
+ -ou-  
+  
+ O arquivo especificado por <paramref name="path" /> não pode ser criado porque o arquivo ou diretório já existe.  
+  
+ -ou-  
+  
+ O identificador do log não pôde ser associado ao pool de threads.  
+  
+ -ou-  
+  
+ A versão ou o formato de arquivo de log especificado é inválido.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para esta operação.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.IO.Log.LogRecordSequence" />não pode ser usado porque o componente necessário do sistema de arquivos de Log comuns (CLFS) não está instalado. Instale o componente CLFS se ele está disponível para sua plataforma ou use o <see cref="T:System.IO.Log.FileRecordSequence" /> classe.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AdvanceBaseSequenceNumber">
+      <MemberSignature Language="C#" Value="public void AdvanceBaseSequenceNumber (System.IO.Log.SequenceNumber newBaseSequenceNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AdvanceBaseSequenceNumber(valuetype System.IO.Log.SequenceNumber newBaseSequenceNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.AdvanceBaseSequenceNumber(System.IO.Log.SequenceNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newBaseSequenceNumber" Type="System.IO.Log.SequenceNumber" />
+      </Parameters>
+      <Docs>
+        <param name="newBaseSequenceNumber">Especifica a nova base de <see cref="T:System.IO.Log.SequenceNumber" /> para o log. Isso deve estar no intervalo entre o número de sequência de base atual e o último número de sequência do log de modo inclusivo.</param>
+        <summary>Avança o número de sequência de base do log. Esse método não pode ser herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é geralmente usado com o <xref:System.IO.Log.LogRecordSequence.TailPinned> evento para liberar espaço em um registro. O <xref:System.IO.Log.LogRecordSequence.TailPinned> evento indica que o final da sequência (ou seja, o número de sequência de base) precisa ser movido para frente para liberar espaço. Liberando espaço pode ser feito por qualquer gravação reiniciar áreas usando o <xref:System.IO.Log.LogRecordSequence.WriteRestartArea%2A> truncar o log ou método e usando o <xref:System.IO.Log.LogRecordSequence.AdvanceBaseSequenceNumber%2A> método para avançar o número de sequência de base de um log para especificado pelo `newBaseSequenceNumber` parâmetro. O exemplo de código na seção de exemplo demonstra a segunda abordagem.  
+  
+ Observe que chamar esse método é o mesmo que definir uma nova sequência de base numérica usando o <xref:System.IO.Log.LogRecordSequence.WriteRestartArea%2A> método, exceto que nenhum registro de reinicialização é gravado no log.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogRecordSequence.AdvanceBaseSequenceNumber%2A> método com o <xref:System.IO.Log.LogRecordSequence.TailPinned> evento para liberar espaço em uma sequência de log.  
+  
+```  
+recordSequence.RetryAppend = true;  
+recordSequence.TailPinned += new EventHandler<TailPinnedEventArgs>(HandleTailPinned);  
+  
+void HandleTailPinned(object sender, TailPinnedEventArgs tailPinnedEventArgs)  
+{  
+   // tailPinnedEventArgs.TargetSequenceNumber is the target   
+   // sequence number to free up space to.    
+   // However, this sequence number is not necessarily valid.  We have  
+   // to use this sequence number as a starting point for finding a  
+   // valid point within the log to advance toward. You need to  
+   // identify a record with a sequence number equal to, or greater  
+   // than TargetSequenceNumber; let's call this   
+   // realTargetSequenceNumber. Once found, move the base  
+  
+   recordSequence.AdvanceBaseSequenceNumber(realTargetSequenceNumber);  
+  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="newBaseSequenceNumber" />não é válido para essa sequência.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um arquivo novo ou existente final ou uma base do log ativo é inválido.  
+  
+ -ou-  
+  
+ <paramref name="newBaseSequenceNumber" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.InvalidOperationException">O log especificado não tem nenhuma extensão. Uma ou mais extensões devem ser criados antes de uma sequência de registro pode ser usada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Append">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Grava um registro de log para o <see cref="T:System.IO.Log.IRecordSequence" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogRecordSequence.Append%2A> membro  
+  
+ [!code-csharp[S_UELogRecordSequence#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#5)]
+ [!code-vb[S_UELogRecordSequence#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber Append (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber nextUndoRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber Append(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber nextUndoRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.Append(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="nextUndoRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="nextUndoRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <summary>Grava um registro de log para o <see cref="T:System.IO.Log.LogRecordSequence" />. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar esse método para acrescentar um registro de log para a sequência.  
+  
+ [!code-csharp[S_UELogRecordSequence#13](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mymultiplexlog.cs#13)]
+ [!code-vb[S_UELogRecordSequence#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mymultiplexlog.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber Append (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber userRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber Append(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber userRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.Append(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="userRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="userRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <summary>Acrescenta um registro de log para o <see cref="T:System.IO.Log.IRecordSequence" />. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber Append (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber nextUndoRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber Append(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber nextUndoRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.Append(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="nextUndoRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservations" Type="System.IO.Log.ReservationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="nextUndoRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservations">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para este registro.</param>
+        <summary>Acrescenta um registro de log para o <see cref="T:System.IO.Log.IRecordSequence" />, usando o espaço reservado anteriormente na sequência. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ O registro acrescentado consumirá espaço que foi anteriormente reservado, usando uma reserva especificada pelo `reservations` parâmetro. Se a acrescentar for bem-sucedida, ela consumirá menor área de reserva que pode manter os dados e área de reserva será removida da coleção.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.ReservationNotFoundException">Nenhuma reserva grande o suficiente para <paramref name="data" /> podem ser encontradas em <paramref name="reservations" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber Append (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber userRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber Append(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber userRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.Append(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="userRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservations" Type="System.IO.Log.ReservationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="userRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservations">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para este registro.</param>
+        <summary>Acrescenta um registro de log para o <see cref="T:System.IO.Log.IRecordSequence" />, usando o espaço reservado anteriormente na sequência. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ O registro acrescentado consumirá espaço que foi anteriormente reservado, usando uma reserva especificada pelo `reservations` parâmetro. Se a acrescentar for bem-sucedida, ela consumirá menor área de reserva que pode manter os dados e área de reserva será removida da coleção.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.IRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.ReservationNotFoundException">Nenhuma reserva grande o suficiente para <paramref name="data" /> podem ser encontradas em <paramref name="reservations" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseSequenceNumber">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber BaseSequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber BaseSequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecordSequence.BaseSequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de sequência do primeiro registro válido no atual <see cref="T:System.IO.Log.LogRecordSequence" />.</summary>
+        <value>O número de sequência mais baixo que corresponde a um registro válido no <see cref="T:System.IO.Log.LogRecordSequence" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Números de sequência são maiores que ou igual a <xref:System.IO.Log.LogRecordSequence.BaseSequenceNumber%2A> e menor que <xref:System.IO.Log.LogRecordSequence.LastSequenceNumber%2A>.  
+  
+ O valor dessa propriedade pode ser alterado, chamando o <xref:System.IO.Log.LogRecordSequence.WriteRestartArea%2A> método ou <xref:System.IO.Log.LogRecordSequence.AdvanceBaseSequenceNumber%2A> método.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogRecordSequence.BaseSequenceNumber%2A> membro em um loop.  
+  
+ [!code-csharp[S_UELogRecordSequence#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mymultiplexlog.cs#10)]
+ [!code-vb[S_UELogRecordSequence#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mymultiplexlog.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A propriedade foi acessada depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAppend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAppend (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber nextUndoRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAppend(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber nextUndoRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginAppend(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="nextUndoRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="nextUndoRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a acrescentar for concluída.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esse determinado assíncrona acrescentar uma solicitação de outras solicitações.</param>
+        <summary>Assíncrona começa a operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa a acrescentar assíncrona, que ainda pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método para garantir que a operação de acréscimo foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante um acréscimo assíncrono, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="nextUndoRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="nextUndoRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAppend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAppend (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber userRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAppend(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber userRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginAppend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="userRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="userRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a acrescentar for concluída.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esse determinado assíncrona acrescentar uma solicitação de outras solicitações.</param>
+        <summary>Assíncrona começa a operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa a acrescentar assíncrona, que ainda pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método para garantir que a operação de acréscimo foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante um acréscimo assíncrono, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAppend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAppend (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber nextUndoRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservations, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAppend(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber nextUndoRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservations, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginAppend(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="nextUndoRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservations" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="nextUndoRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservations">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para este registro.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a acrescentar for concluída.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esse determinado assíncrona acrescentar uma solicitação de outras solicitações.</param>
+        <summary>Assíncrona começa a operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa a acrescentar assíncrona, que ainda pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método para garantir que a operação de acréscimo foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante um acréscimo assíncrono, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ O registro acrescentado consumirá espaço que foi anteriormente reservado, usando uma reserva especificada pelo `reservations` parâmetro. Se a acrescentar for bem-sucedida, ela consumirá menor área de reserva que pode manter os dados e área de reserva será removida da coleção.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.ReservationNotFoundException">Nenhuma reserva grande o suficiente para <paramref name="data" /> podem ser encontradas em <paramref name="reservations" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAppend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAppend (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber userRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservations, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginAppend(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber userRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservations, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginAppend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="userRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservations" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="userRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservations">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para este registro.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a acrescentar for concluída.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esse determinado assíncrona acrescentar uma solicitação de outras solicitações.</param>
+        <summary>Assíncrona começa a operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa a acrescentar assíncrona, que ainda pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método para garantir que a operação de acréscimo foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante um acréscimo assíncrono, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ O registro acrescentado consumirá espaço que foi anteriormente reservado, usando uma reserva especificada pelo `reservations` parâmetro. Se a acrescentar for bem-sucedida, ela consumirá menor área de reserva que pode manter os dados e área de reserva será removida da coleção.  
+  
+ Normalmente, esse método é concluído antes do registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.ReservationNotFoundException">Nenhuma reserva grande o suficiente para <paramref name="data" /> podem ser encontradas em <paramref name="reservations" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginFlush">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginFlush (System.IO.Log.SequenceNumber sequenceNumber, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginFlush(valuetype System.IO.Log.SequenceNumber sequenceNumber, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginFlush(System.IO.Log.SequenceNumber,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sequenceNumber" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sequenceNumber">O número de sequência do registro mais recente que deve ser gravado. Se este <see cref="T:System.IO.Log.SequenceNumber" /> é inválido, em seguida, todos os registros devem ser gravados.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a limpeza é concluída.</param>
+        <param name="state">Um objeto definido pelo usuário que distingue esta solicitação de liberação assíncrona específica de outras solicitações.</param>
+        <summary>Inicia uma operação assíncrona de liberação, usando o espaço reservado anteriormente na sequência. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa o assíncrona operação de liberação, que ainda pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado pelo método atual para o <xref:System.IO.Log.LogRecordSequence.EndFlush%2A> método para garantir que a liberação é concluída e os recursos são liberados adequadamente. Se ocorrer um erro durante um movimento assíncrono, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndFlush%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Chamar esse método garante que todos os registros que foram acrescentados ao <xref:System.IO.Log.LogRecordSequence> são gravados de maneira durável.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação de liberação assíncrona, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndFlush%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="sequenceNumber" />não é válido para essa sequência.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="sequenceNumber" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.</exception>
+        <exception cref="T:System.InvalidOperationException">O log especificado não tem nenhuma extensão. Uma ou mais extensões devem ser criados antes de uma sequência de registro pode ser usada.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginReserveAndAppend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginReserveAndAppend (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber nextUndoRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservationCollection, long[] reservations, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginReserveAndAppend(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber nextUndoRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservationCollection, int64[] reservations, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginReserveAndAppend(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection,System.Int64[],System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="nextUndoRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservationCollection" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="reservations" Type="System.Int64[]" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="nextUndoRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservationCollection">A coleção de reserva para fazer reservas no.</param>
+        <param name="reservations">As reservas de fazer, em bytes.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a acrescentar for concluída.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esse determinado assíncrona acrescentar uma solicitação de outras solicitações.</param>
+        <summary>Começa uma reserva assíncrona e operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa essa operação assíncrona, o que poderia estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método para garantir que a operação de acréscimo foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante um acréscimo assíncrono, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ As reservas especificadas são adicionadas para a reserva fornecida coleção em uma operação atômica com um registro de operação de acréscimo. Se a acrescentar falhar, nenhum espaço é reservado.  
+  
+ Normalmente, esse método pode ser concluída antes que o registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.ReservationNotFoundException">Nenhuma reserva grande o suficiente para <paramref name="data" /> podem ser encontradas em <paramref name="reservations" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginReserveAndAppend">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginReserveAndAppend (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber userRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservationCollection, long[] reservations, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginReserveAndAppend(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber userRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservationCollection, int64[] reservations, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginReserveAndAppend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection,System.Int64[],System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="userRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservationCollection" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="reservations" Type="System.Int64[]" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="userRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservationCollection">A coleção de reserva para fazer reservas no.</param>
+        <param name="reservations">As reservas de fazer, em bytes.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a acrescentar for concluída.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esse determinado assíncrona acrescentar uma solicitação de outras solicitações.</param>
+        <summary>Começa uma reserva assíncrona e operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa essa operação assíncrona, o que poderia estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método para garantir que a operação de acréscimo foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante um acréscimo assíncrono, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ As reservas especificadas são adicionadas para a reserva fornecida coleção em uma operação atômica com um registro de operação de acréscimo. Se a acrescentar falhar, nenhum espaço é reservado.  
+  
+ Normalmente, esse método pode ser concluída antes que o registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao anexar o registro.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter o novo registro, ou fazer a reserva.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWriteRestartArea">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWriteRestartArea (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber newBaseSeqNum, System.IO.Log.ReservationCollection reservation, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginWriteRestartArea(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber newBaseSeqNum, class System.IO.Log.ReservationCollection reservation, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginWriteRestartArea(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.ReservationCollection,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="newBaseSeqNum" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="reservation" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Segmentos de matriz de bytes concatenados, que serão anexados como o registro.</param>
+        <param name="newBaseSeqNum">O novo número de sequência de base. O número de sequência especificado deve ser maior ou igual ao número de sequência de base atual.</param>
+        <param name="reservation">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para a área de reinicialização.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a gravação de área de reinicialização é concluída.</param>
+        <param name="state">Um objeto definido pelo usuário que distingue esta solicitação de gravação de área de reinicialização assíncrona específica de outras solicitações.</param>
+        <summary>Inicia uma operação de gravação de área assíncrona de reinicialização, usando o espaço reservado anteriormente na sequência. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa o assíncrona reiniciar operação de gravação de área, que ainda pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndWriteRestartArea%2A> método para garantir que a operação de gravação de área de reinicialização foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante uma operação de gravação assíncrona reinicialização área, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndWriteRestartArea%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ Quando a operação for concluída com êxito, o número de sequência de base foi atualizado. Todos os registros de log com números de sequência menor que o novo número de sequência de base não estão acessíveis.  
+  
+ Se um <xref:System.IO.Log.ReservationCollection> for especificado, a área de reinicialização escrito consumirá espaço que foi anteriormente reservado, usando uma reserva contida na coleção. Se o método for bem-sucedido, ele consumirá a reserva de menor que pode manter os dados e reserva será removida da coleção.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndWriteRestartArea%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="newBaseSeqNum" />não é válido para essa sequência.  
+  
+ -ou-  
+  
+ O número de sequência de início de enumeração de log especificado é inválido.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservation" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais dos parâmetros é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um arquivo novo ou existente final ou uma base do log ativo é inválido.  
+  
+ -ou-  
+  
+ <paramref name="newBaseSeqNum" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWriteRestartArea">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginWriteRestartArea (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber newBaseSeqNum, System.IO.Log.ReservationCollection reservationCollection, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginWriteRestartArea(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber newBaseSeqNum, class System.IO.Log.ReservationCollection reservationCollection, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.BeginWriteRestartArea(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.ReservationCollection,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="newBaseSeqNum" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="reservationCollection" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="newBaseSeqNum">O novo número de sequência de base. O número de sequência especificado deve ser maior ou igual ao número de sequência de base atual.</param>
+        <param name="reservationCollection">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para a área de reinicialização.</param>
+        <param name="callback">Um opcional retorno de chamada assíncrono, a ser chamado quando a gravação de área de reinicialização é concluída.</param>
+        <param name="state">Um objeto definido pelo usuário que distingue esta solicitação de gravação de área de reinicialização assíncrona específica de outras solicitações.</param>
+        <summary>Inicia uma operação de gravação de área assíncrona de reinicialização, usando o espaço reservado anteriormente na sequência. Esse método não pode ser herdado.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa o assíncrona reiniciar operação de gravação de área, que ainda pode estar pendente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve transmitir o <xref:System.IAsyncResult> retornado por esse método para o <xref:System.IO.Log.LogRecordSequence.EndWriteRestartArea%2A> método para garantir que a operação de gravação de área de reinicialização foi concluída e recursos podem ser liberados adequadamente. Se ocorreu um erro durante uma operação de gravação assíncrona reinicialização área, uma exceção não é lançada até que o <xref:System.IO.Log.LogRecordSequence.EndWriteRestartArea%2A> método for chamado com o <xref:System.IAsyncResult> retornado por esse método.  
+  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ Quando a operação for concluída com êxito, o número de sequência de base foi atualizado. Todos os registros de log com números de sequência menor que o novo número de sequência de base não estão acessíveis.  
+  
+ Se um <xref:System.IO.Log.ReservationCollection> for especificado, a área de reinicialização escrito consumirá espaço que foi anteriormente reservado, usando uma reserva contida na coleção. Se o método for bem-sucedido, ele consumirá a reserva de menor que pode manter os dados e reserva será removida da coleção.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndWriteRestartArea%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="newBaseSeqNum" />não é válido para essa sequência.  
+  
+ -ou-  
+  
+ O número de sequência de início de enumeração de log especificado é inválido.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservationCollection" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais dos parâmetros é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um arquivo novo ou existente final ou uma base do log ativo é inválido.  
+  
+ -ou-  
+  
+ <paramref name="newBaseSeqNum" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateReservationCollection">
+      <MemberSignature Language="C#" Value="public System.IO.Log.ReservationCollection CreateReservationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Log.ReservationCollection CreateReservationCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.CreateReservationCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.ReservationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.IO.Log.ReservationCollection" />. Esse método não pode ser herdado.</summary>
+        <returns>O <see cref="T:System.IO.Log.ReservationCollection" /> recém-criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ As reservas de podem ser executadas de duas maneiras, conforme mostrado nos exemplos a seguir. Você pode adotar as práticas nos exemplos para processamento eficiente. Observe que essa tarefa só pode ser executada ao usar o CLFS baseado em <xref:System.IO.Log.LogRecordSequence> classe.  
+  
+```  
+//Using the ReserveAndAppend Method  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+long[] lengthOfUndoRecords = new long[] { 1000 };  
+recordSequence.ReserveAndAppend(recordData,  
+                                                     userSqn,  
+                                                     previousSqn,  
+                                                     RecordSequenceAppendOptions.None,  
+                                                     reservations,  
+                                                     lengthOfUndoRecords);  
+recordSequence.Append(undoRecordData,    // If necessary …  
+                                    userSqn,  
+                                    previousSqn,  
+                                    RecordSequenceAppendOptions.ForceFlush,  
+                                    reservations);  
+  
+// Using the Manual Approach  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+reservations.Add(lengthOfUndoRecord);  
+try  
+{  
+   recordSequence.Append(recordData, userSqn, previousSqn, RecordAppendOptions.None);  
+}  
+catch (Exception)  
+{  
+   reservations.Remove(lengthOfUndoRecord);  
+   throw;  
+}  
+  
+recordSequence.Append(undoRecordData, userSqn, previousSqn, RecordAppendOptions.ForceFlush, reservations);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pelo componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar <xref:System.IO.Log.LogRecordSequence.Dispose%2A> para liberar recursos:  
+  
+ [!code-csharp[S_UELogRecordSequence#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mymultiplexlog.cs#11)]
+ [!code-vb[S_UELogRecordSequence#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mymultiplexlog.vb#11)]  
+  
+ [!code-csharp[S_UELogRecordSequence#12](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mymultiplexlog.cs#12)] 
+ [!code-vb[S_UELogRecordSequence#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mymultiplexlog.vb#12)]   
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAppend">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber EndAppend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber EndAppend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.EndAppend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Uma referência à solicitação de E/S assíncrona pendente.</param>
+        <summary>Conclui uma assíncrona a operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método bloqueia até que a operação de e/s foi concluída. Erros que ocorrem durante uma solicitação de gravação assíncrona, como uma falha de disco durante a solicitação de e/s, se tornarão visíveis quando <xref:System.IO.Log.LogRecordSequence.EndAppend%2A> é chamado.  
+  
+ Esse método deve ser chamado apenas uma vez em cada <xref:System.IAsyncResult> retornado pelo <xref:System.IO.Log.LogRecordSequence.BeginAppend%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="result" /> é inválido.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see langword="End" />já foi chamado para essa operação assíncrona.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndFlush">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber EndFlush (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber EndFlush(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.EndFlush(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Uma referência à solicitação de E/S assíncrona pendente.</param>
+        <summary>Termina uma operação assíncrona de liberação. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do último registro gravado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método bloqueia até que a operação de e/s foi concluída. Erros que ocorrem durante uma solicitação de liberação assíncrona, como uma falha de disco durante a solicitação de e/s, se tornarão visíveis quando <xref:System.IO.Log.LogRecordSequence.EndFlush%2A> é chamado.  
+  
+ Esse método deve ser chamado apenas uma vez em cada <xref:System.IAsyncResult> retornado pelo <xref:System.IO.Log.LogRecordSequence.BeginFlush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="result" /> é inválido.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see langword="End" />já foi chamado para essa operação assíncrona.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndReserveAndAppend">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber EndReserveAndAppend (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber EndReserveAndAppend(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.EndReserveAndAppend(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Uma referência à solicitação de E/S assíncrona pendente.</param>
+        <summary>Conclui uma assíncrona reserva e operação de acréscimo. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método bloqueia até que a operação de e/s foi concluída. Erros que ocorrem durante uma solicitação de gravação assíncrona, como uma falha de disco durante a solicitação de e/s, se tornarão visíveis quando <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> é chamado.  
+  
+ Esse método deve ser chamado apenas uma vez em cada <xref:System.IAsyncResult> retornado pelo <xref:System.IO.Log.LogRecordSequence.BeginReserveAndAppend%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="result" /> é inválido.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see langword="End" />já foi chamado para essa operação assíncrona.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWriteRestartArea">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber EndWriteRestartArea (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber EndWriteRestartArea(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.EndWriteRestartArea(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Uma referência à solicitação de E/S assíncrona pendente.</param>
+        <summary>Termina uma operação de gravação assíncrona reinicialização área. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log gravado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método bloqueia até que a operação de e/s foi concluída. Erros que ocorrem durante uma solicitação de gravação assíncrona, como uma falha de disco durante a solicitação de e/s, se tornarão visíveis quando <xref:System.IO.Log.LogRecordSequence.EndWriteRestartArea%2A> é chamado.  
+  
+ Esse método deve ser chamado apenas uma vez em cada <xref:System.IAsyncResult> retornado pelo <xref:System.IO.Log.LogRecordSequence.BeginWriteRestartArea%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="result" /> não é válido.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um arquivo novo ou existente final ou uma base do log ativo é inválido.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <see langword="End" />já foi chamado para essa operação assíncrona.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Garante que todos os registros acrescentados foram gravados. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do último registro gravado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método garante que todos os registros que foi acrescentada ao <xref:System.IO.Log.LogRecordSequence> tiverem sido gravados de maneira durável.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao liberar os dados.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para esta operação.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter a nova área de reinicialização.</exception>
+        <exception cref="T:System.InvalidOperationException">O log especificado não tem nenhuma extensão. Uma ou mais extensões devem ser criados antes de uma sequência de registro pode ser usada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber Flush (System.IO.Log.SequenceNumber sequenceNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber Flush(valuetype System.IO.Log.SequenceNumber sequenceNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.Flush(System.IO.Log.SequenceNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sequenceNumber" Type="System.IO.Log.SequenceNumber" />
+      </Parameters>
+      <Docs>
+        <param name="sequenceNumber">O número de sequência do registro mais recente que deve ser gravado. Se este <see cref="T:System.IO.Log.SequenceNumber" /> é inválido, em seguida, todos os registros devem ser gravados.</param>
+        <summary>Garante que todos os registros anexados até e incluindo o registro com o número de sequência especificado foram gravados muito tempo. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do último registro gravado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar que esse método garante que todos os registros com sequência de números até e incluindo o número de sequência especificado foram gravados muito tempo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="sequenceNumber" />não é válido para essa sequência.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="sequenceNumber" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.</exception>
+        <exception cref="T:System.InvalidOperationException">O log especificado não tem nenhuma extensão. Uma ou mais extensões devem ser criados antes de uma sequência de registro pode ser usada.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LastSequenceNumber">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber LastSequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber LastSequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecordSequence.LastSequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de sequência que é maior que o último registro anexado</summary>
+        <value>Uma sequência numérica que é maior que o último registro anexado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade contém um número de sequência é garantido para ser maior do que o número de sequência do último registro de anexado. Números de sequência são maiores que ou igual a <xref:System.IO.Log.LogRecordSequence.BaseSequenceNumber%2A> e menor que <xref:System.IO.Log.LogRecordSequence.LastSequenceNumber%2A>. Todos os outros números de sequência são inválidos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A propriedade foi acessada depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogStore">
+      <MemberSignature Language="C#" Value="public System.IO.Log.LogStore LogStore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Log.LogStore LogStore" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecordSequence.LogStore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.LogStore</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.IO.Log.LogStore" /> que contém os dados para esta sequência de registro. Esse método não pode ser herdado.</summary>
+        <value>O <see cref="T:System.IO.Log.LogStore" /> que contém os dados para esta sequência de registro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogRecordSequence.LogStore%2A> membro para adicionar extensões.  
+  
+ [!code-csharp[S_UELogRecordSequence#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mymultiplexlog.cs#11)]
+ [!code-vb[S_UELogRecordSequence#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mymultiplexlog.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRecordLength">
+      <MemberSignature Language="C#" Value="public long MaximumRecordLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumRecordLength" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecordSequence.MaximumRecordLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho máximo de um registro que pode ser adicionado a esta sequência de registro.</summary>
+        <value>O tamanho máximo de um registro que pode ser adicionado a esta sequência de registro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadLogRecords">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogRecord&gt; ReadLogRecords (System.IO.Log.SequenceNumber start, System.IO.Log.LogRecordEnumeratorType logRecordEnum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Log.LogRecord&gt; ReadLogRecords(valuetype System.IO.Log.SequenceNumber start, valuetype System.IO.Log.LogRecordEnumeratorType logRecordEnum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.ReadLogRecords(System.IO.Log.SequenceNumber,System.IO.Log.LogRecordEnumeratorType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="logRecordEnum" Type="System.IO.Log.LogRecordEnumeratorType" />
+      </Parameters>
+      <Docs>
+        <param name="start">O número de sequência do primeiro registro de onde a leitura começa.</param>
+        <param name="logRecordEnum">Uma opção válida <see cref="T:System.IO.Log.LogRecordEnumeratorType" /> valor que especifica a maneira como (ou seja, para frente ou para trás) no qual os registros devem ser lidos de um <see cref="T:System.IO.Log.LogRecordSequence" />.</param>
+        <summary>Retorna uma coleção enumerável de registros na sequência. Esse método não pode ser herdado.</summary>
+        <returns>Uma coleção enumerável de registros na sequência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma coleção enumerável de registros na sequência. A ordem dos registros de enumerada depende do valor da `logRecordEnum` parâmetro.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar <xref:System.IO.Log.LogRecordSequence.ReadLogRecords%2A> em um loop.  
+  
+ [!code-csharp[S_UELogRecordSequence#10](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mymultiplexlog.cs#10)]
+ [!code-vb[S_UELogRecordSequence#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mymultiplexlog.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="start" />não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="logRecordEnum" /> é inválido.  
+  
+ -ou-  
+  
+ O elemento especificado não foi encontrado na coleção.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="start" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.  
+  
+ -ou  
+  
+ O tamanho do buffer usado para gravar que o registro de log é maior do que o tamanho do buffer usado para lê-lo.  
+  
+ -ou-  
+  
+ A sequência de registro está corrompida.  
+  
+ -ou-  
+  
+ A versão ou o formato de arquivo de log especificado é inválido.  
+  
+ -ou-  
+  
+ O registro foi gravado com uma versão incompatível da sequência de registro.</exception>
+        <exception cref="T:System.InvalidOperationException">A operação é inválida porque a enumeração não foi iniciada. Uma chamada para <see cref="M:System.Collections.IEnumerator.MoveNext" /> devem ser feitas.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRestartAreas">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogRecord&gt; ReadRestartAreas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.IO.Log.LogRecord&gt; ReadRestartAreas() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.ReadRestartAreas" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.IO.Log.LogRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção enumerável de áreas de reinicialização na sequência. Esse método não pode ser herdado.</summary>
+        <returns>Uma coleção enumerável das áreas de reinicialização na sequência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As áreas de reinicialização são enumeradas na ordem do número de sequência inversa, ou seja, do número de sequência mais alto para o menor número de sequência. Reiniciar somente áreas com números de sequência entre o último número de sequência e o número de sequência de base são enumeradas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="start" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.  
+  
+ -ou  
+  
+ O tamanho do buffer usado para gravar que o registro de log é maior do que o tamanho do buffer usado para lê-lo.  
+  
+ -ou-  
+  
+ A sequência de registro está corrompida.  
+  
+ -ou-  
+  
+ A versão ou o formato de arquivo de log especificado é inválido.  
+  
+ -ou-  
+  
+ O registro foi gravado com uma versão incompatível da sequência de registro.</exception>
+        <exception cref="T:System.InvalidOperationException">A operação é inválida porque a enumeração não foi iniciada. Uma chamada para <see cref="M:System.Collections.IEnumerator.MoveNext" /> devem ser feitas.  
+  
+ -ou  
+  
+ A enumeração terminou.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReserveAndAppend">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber ReserveAndAppend (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber nextUndoRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservationCollection, params long[] reservations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber ReserveAndAppend(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber nextUndoRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservationCollection, int64[] reservations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.ReserveAndAppend(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection,System.Int64[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="nextUndoRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservationCollection" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="reservations" Type="System.Int64[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="nextUndoRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservationCollection">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a coleção para fazer reservas no.</param>
+        <param name="reservations">As reservas de fazer, em bytes.</param>
+        <summary>Automaticamente faz com que uma única reserva e anexa um registro para a sequência. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ As reservas especificadas são adicionadas para a reserva fornecida coleção em uma operação atômica com um registro de operação de acréscimo. Se a acrescentar falhar, nenhum espaço é reservado.  
+  
+ Normalmente, esse método pode ser concluída antes que o registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método para fazer reservas. Observe que essa tarefa só pode ser executada ao usar o CLFS baseado em <xref:System.IO.Log.LogRecordSequence> classe.  
+  
+```  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+long[] lengthOfUndoRecords = new long[] { 1000 };  
+recordSequence.ReserveAndAppend(recordData,  
+                                                     userSqn,  
+                                                     previousSqn,  
+                                                     RecordSequenceAppendOptions.None,  
+                                                     reservations,  
+                                                     lengthOfUndoRecords);  
+recordSequence.Append(undoRecordData,    // If necessary …  
+                                    userSqn,  
+                                    previousSqn,  
+                                    RecordSequenceAppendOptions.ForceFlush,  
+                                    reservations);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="nextUndoRecord" />ou <paramref name="previousRecord" /> não é válido para essa sequência.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservations" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="nextUndoRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.ReservationNotFoundException">Nenhuma reserva grande o suficiente para <paramref name="data" /> podem ser encontradas em <paramref name="reservations" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReserveAndAppend">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber ReserveAndAppend (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber userRecord, System.IO.Log.SequenceNumber previousRecord, System.IO.Log.RecordAppendOptions recordAppendOptions, System.IO.Log.ReservationCollection reservationCollection, params long[] reservations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber ReserveAndAppend(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber userRecord, valuetype System.IO.Log.SequenceNumber previousRecord, valuetype System.IO.Log.RecordAppendOptions recordAppendOptions, class System.IO.Log.ReservationCollection reservationCollection, int64[] reservations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.ReserveAndAppend(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.SequenceNumber,System.IO.Log.RecordAppendOptions,System.IO.Log.ReservationCollection,System.Int64[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="userRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="previousRecord" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="recordAppendOptions" Type="System.IO.Log.RecordAppendOptions" />
+        <Parameter Name="reservationCollection" Type="System.IO.Log.ReservationCollection" />
+        <Parameter Name="reservations" Type="System.Int64[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="userRecord">O número de sequência do próximo registro na ordem especificada pelo usuário.</param>
+        <param name="previousRecord">O número de sequência do próximo registro na ordem anterior.</param>
+        <param name="recordAppendOptions">Um valor válido de <see cref="T:System.IO.Log.RecordAppendOptions" /> que especifica como os dados devem ser gravados.</param>
+        <param name="reservationCollection">A coleção de reserva para fazer reservas no.</param>
+        <param name="reservations">As reservas de fazer, em bytes.</param>
+        <summary>Automaticamente faz com que uma única reserva e anexa um registro para a sequência. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência do registro de log anexado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados contidos no `data` parâmetro será ser concatenado em uma matriz de byte único para acrescentar como o registro. No entanto, nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando o registro é lido.  
+  
+ As reservas especificadas são adicionadas para a reserva fornecida coleção em uma operação atômica com um registro de operação de acréscimo. Se a acrescentar falhar, nenhum espaço é reservado.  
+  
+ Normalmente, esse método pode ser concluída antes que o registro foi gravado. Para garantir que um registro foi gravado, especifique o <xref:System.IO.Log.RecordAppendOptions.ForceFlush> sinalizador usando o `recordAppendOptions` parâmetro ou chame o <xref:System.IO.Log.LogRecordSequence.Flush%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao anexar o registro.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter o novo registro, ou fazer a reserva.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="userRecord" />ou <paramref name="previousRecord" /> não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.NotSupportedException">A operação não pode ser executada porque a sequência de registro foi aberta com acesso somente leitura.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.ReservationNotFoundException">Nenhuma reserva grande o suficiente para <paramref name="data" /> podem ser encontradas em <paramref name="reservations" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservedBytes">
+      <MemberSignature Language="C#" Value="public long ReservedBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ReservedBytes" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecordSequence.ReservedBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de bytes que foram reservados.</summary>
+        <value>O tamanho total de todas as reservas feitas nessa sequência de registro.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">A propriedade foi acessada depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RestartSequenceNumber">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber RestartSequenceNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Log.SequenceNumber RestartSequenceNumber" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecordSequence.RestartSequenceNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de sequência da área de reinicialização mais próximo ao final do log.</summary>
+        <value>O número de sequência da área de reinicialização mais próximo ao final do log.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Usando o <xref:System.IO.Log.LogRecordSequence.SetLastRecord%2A> método, você pode remover o mais recentemente escrito reiniciar área.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A propriedade foi acessada depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryAppend">
+      <MemberSignature Language="C#" Value="public bool RetryAppend { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RetryAppend" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.LogRecordSequence.RetryAppend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se ou não acrescenta são repetidas automaticamente se o log está cheio.</summary>
+        <value>
+          <see langword="true" />se anexa são repetidas automaticamente se o log está cheio; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor dessa propriedade é `true`e um <xref:System.IO.Log.LogRecordSequence.Append%2A> chamada falha porque não há espaço suficiente na sequência, a sequência de registro tentará espaço livre e tente novamente a acrescentar.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogRecordSequence.RetryAppend%2A> propriedade.  
+  
+ [!code-csharp[S_UELogRecordSequence#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_uelogrecordsequence/cs/mylogrecordsequence.cs#3)]
+ [!code-vb[S_UELogRecordSequence#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uelogrecordsequence/vb/mylogrecordsequence.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A propriedade foi acessada depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLastRecord">
+      <MemberSignature Language="C#" Value="public void SetLastRecord (System.IO.Log.SequenceNumber sequenceNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLastRecord(valuetype System.IO.Log.SequenceNumber sequenceNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.SetLastRecord(System.IO.Log.SequenceNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sequenceNumber" Type="System.IO.Log.SequenceNumber" />
+      </Parameters>
+      <Docs>
+        <param name="sequenceNumber">A última sequência novo número no <see cref="T:System.IO.Log.LogRecordSequence" />.  
+  
+ Isso deve consultar um registro atual válido no momento no log.</param>
+        <summary>Define o último registro de <see cref="T:System.IO.Log.LogRecordSequence" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número de sequência especificado deve ser maior que o número de sequência de base.  
+  
+ Quando esse método é concluído, todos os registros que anteriormente tinham foi acrescentados com números de sequência maiores que o número de sequência especificado não estão acessíveis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="sequenceNumber" />não é válido para essa sequência.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um arquivo novo ou existente final ou uma base do log ativo é inválido.  
+  
+ -ou-  
+  
+ <paramref name="sequenceNumber" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ O final do log foi atingido.  
+  
+ -ou-  
+  
+ A versão ou o formato de arquivo de log especificado é inválido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TailPinned">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.IO.Log.TailPinnedEventArgs&gt; TailPinned;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.IO.Log.TailPinnedEventArgs&gt; TailPinned" />
+      <MemberSignature Language="DocId" Value="E:System.IO.Log.LogRecordSequence.TailPinned" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.IO.Log.TailPinnedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a necessidade de mover a parte final da sequência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento quando a sequência de registro ficou sem espaço pode ser acionado. Quando esse evento é acionado, o final da sequência (ou seja, o número de sequência de base) é movido para frente para liberar espaço.  
+  
+ O evento pode ser acionado a qualquer momento quando a sequência de registro decide que ele deve liberar espaço, por qualquer motivo. Por exemplo, o mecanismo de políticas CLFS poderá acionar o evento quando ele determina as caudas dois clientes de log, compartilhando o mesmo arquivo de log estão muito distantes. Liberando espaço pode ser feito pelo escrever áreas de reinicialização ou truncar o log e usar o <xref:System.IO.Log.LogRecordSequence.AdvanceBaseSequenceNumber%2A> método para liberar espaço. O exemplo de código na seção de exemplo demonstra a segunda abordagem.  
+  
+ Você também pode chamar o <xref:System.IO.Log.FileRecordSequence.WriteRestartArea%2A> método fora do <xref:System.IO.Log.LogRecordSequence.TailPinned> evento para liberar espaço. Uma área de reinicialização é semelhante a um ponto de verificação em outros sistemas de processamento de log. Chamar este método indica que o aplicativo considera todos os registros anteriores antes da área de reinicialização como totalmente concluída e acrescenta pode ser usado para registro futuro. Semelhante a quaisquer outros registros, o registro gravado por este método requer espaço livre no log de função.  
+  
+   
+  
+## Examples  
+ Este exemplo mostra como usar o <xref:System.IO.Log.LogRecordSequence.TailPinned> evento.  
+  
+```  
+recordSequence.RetryAppend = true;  
+recordSequence.TailPinned += new EventHandler<TailPinnedEventArgs>(HandleTailPinned);  
+  
+void HandleTailPinned(object sender, TailPinnedEventArgs tailPinnedEventArgs)  
+{  
+   // tailPinnedEventArgs.TargetSequenceNumber is the target   
+   // sequence number to free up space to.    
+   // However, this sequence number is not necessarily valid.  We have  
+   // to use this sequence number as a starting point for finding a  
+   // valid point within the log to advance toward. You need to  
+   // identify a record with a sequence number equal to, or greater  
+   // than TargetSequenceNumber; let's call this   
+   // realTargetSequenceNumber. Once found, move the base  
+  
+   recordSequence.AdvanceBaseSequenceNumber(realTargetSequenceNumber);  
+  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="WriteRestartArea">
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Grava uma área de reinício para o <see cref="T:System.IO.Log.LogRecordSequence" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Uma área de reinicialização pode ser lida usando o <xref:System.IO.Log.LogRecordSequence.ReadRestartAreas%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="WriteRestartArea">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber WriteRestartArea (ArraySegment&lt;byte&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber WriteRestartArea(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.WriteRestartArea(System.ArraySegment{System.Byte})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um segmento da matriz concatenado, que será anexado como o registro.</param>
+        <summary>Grava uma área de reinício para o <see cref="T:System.IO.Log.LogRecordSequence" />. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência da escrita reinicialização área.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Uma área de reinicialização pode ser lida usando o <xref:System.IO.Log.LogRecordSequence.ReadRestartAreas%2A> método.  
+  
+ Os dados nos segmentos de matriz de bytes serão ser concatenados em uma matriz de byte único para acrescentar como o registro. Nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando a área de reinicialização é lida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao gravar a área de reinicialização.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter a nova área de reinicialização.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRestartArea">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber WriteRestartArea (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber WriteRestartArea(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.WriteRestartArea(System.Collections.Generic.IList{System.ArraySegment{System.Byte}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <summary>Grava uma área de reinício para o <see cref="T:System.IO.Log.LogRecordSequence" />. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência da escrita reinicialização área.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Uma área de reinicialização pode ser lida usando o <xref:System.IO.Log.LogRecordSequence.ReadRestartAreas%2A> método.  
+  
+ Os dados nos segmentos de matriz de bytes serão ser concatenados em uma matriz de byte único para acrescentar como o registro. Nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando a área de reinicialização é lida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao gravar a área de reinicialização.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter a nova área de reinicialização.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais argumentos são <see langword="null" />.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRestartArea">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber WriteRestartArea (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber newBaseSeqNum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber WriteRestartArea(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber newBaseSeqNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.WriteRestartArea(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="newBaseSeqNum" Type="System.IO.Log.SequenceNumber" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="newBaseSeqNum">O novo número de sequência de base. O número de sequência especificado deve ser maior ou igual ao número de sequência de base atual.</param>
+        <summary>Grava uma área de reinício para o <see cref="T:System.IO.Log.LogRecordSequence" /> e atualiza o número de sequência de base. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência da escrita reinicialização área.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Uma área de reinicialização pode ser lida usando o <xref:System.IO.Log.LogRecordSequence.ReadRestartAreas%2A> método.  
+  
+ Quando uma área de reinicialização é gravada, os dados nos segmentos de matriz de bytes são concatenados em uma matriz de byte único para acréscimo como o registro. Nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando a área de reinicialização é lida.  
+  
+ Quando esse método é concluído com êxito, o número de sequência de base foi atualizado. Todos os registros de log com números de sequência menor que o novo número de sequência de base não estão acessíveis.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao gravar a área de reinicialização.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter a nova área de reinicialização.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRestartArea">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber WriteRestartArea (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber newBaseSeqNum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber WriteRestartArea(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber newBaseSeqNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.WriteRestartArea(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="newBaseSeqNum" Type="System.IO.Log.SequenceNumber" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="newBaseSeqNum">O novo número de sequência de base. O número de sequência especificado deve ser maior ou igual ao número de sequência de base atual.</param>
+        <summary>Grava uma área de reinício para o <see cref="T:System.IO.Log.LogRecordSequence" /> e atualiza o número de sequência de base. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência da escrita reinicialização área.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Uma área de reinicialização pode ser lida usando o <xref:System.IO.Log.LogRecordSequence.ReadRestartAreas%2A> método.  
+  
+ Quando uma área de reinicialização é gravada, os dados nos segmentos de matriz de bytes são concatenados em uma matriz de byte único para acréscimo como o registro. Nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando a área de reinicialização é lida.  
+  
+ Quando esse método é concluído com êxito, o número de sequência de base foi atualizado. Todos os registros de log com números de sequência menor que o novo número de sequência de base não estão acessíveis.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao gravar a área de reinicialização.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter a nova área de reinicialização.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRestartArea">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber WriteRestartArea (ArraySegment&lt;byte&gt; data, System.IO.Log.SequenceNumber newBaseSeqNum, System.IO.Log.ReservationCollection reservations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber WriteRestartArea(valuetype System.ArraySegment`1&lt;unsigned int8&gt; data, valuetype System.IO.Log.SequenceNumber newBaseSeqNum, class System.IO.Log.ReservationCollection reservations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.WriteRestartArea(System.ArraySegment{System.Byte},System.IO.Log.SequenceNumber,System.IO.Log.ReservationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ArraySegment&lt;System.Byte&gt;" />
+        <Parameter Name="newBaseSeqNum" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="reservations" Type="System.IO.Log.ReservationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="newBaseSeqNum">O novo número de sequência de base. O número de sequência especificado deve ser maior ou igual ao número de sequência de base atual.</param>
+        <param name="reservations">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para a área de reinicialização.</param>
+        <summary>Grava uma área de reinício para o <see cref="T:System.IO.Log.LogRecordSequence" /> usando uma reserva e atualiza o número de sequência de base. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência da escrita reinicialização área.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Uma área de reinicialização pode ser lida usando o <xref:System.IO.Log.LogRecordSequence.ReadRestartAreas%2A> método.  
+  
+ Quando uma área de reinicialização é gravada, os dados nos segmentos de matriz de bytes são concatenados em uma matriz de byte único para acréscimo como o registro. Nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando a área de reinicialização é lida.  
+  
+ Se uma reserva for especificada, a área de reinicialização escrito consumirá espaço que foi anteriormente reservado, usando uma reserva contida na coleção. Se o método for bem-sucedido, ele consumirá a reserva de menor que pode conter os dados e reserva será removida da coleção.  
+  
+ Quando esse método é concluído com êxito, o número de sequência de base foi atualizado. Todos os registros de log com números de sequência menor que o novo número de sequência de base não estão acessíveis.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos são inválidos.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de e/s ao gravar a área de reinicialização.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro não foi possível tornar o espaço livre suficiente para conter a nova área de reinicialização.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRestartArea">
+      <MemberSignature Language="C#" Value="public System.IO.Log.SequenceNumber WriteRestartArea (System.Collections.Generic.IList&lt;ArraySegment&lt;byte&gt;&gt; data, System.IO.Log.SequenceNumber newBaseSeqNum, System.IO.Log.ReservationCollection reservationCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.IO.Log.SequenceNumber WriteRestartArea(class System.Collections.Generic.IList`1&lt;valuetype System.ArraySegment`1&lt;unsigned int8&gt;&gt; data, valuetype System.IO.Log.SequenceNumber newBaseSeqNum, class System.IO.Log.ReservationCollection reservationCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.LogRecordSequence.WriteRestartArea(System.Collections.Generic.IList{System.ArraySegment{System.Byte}},System.IO.Log.SequenceNumber,System.IO.Log.ReservationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Log.SequenceNumber</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IList&lt;System.ArraySegment&lt;System.Byte&gt;&gt;" />
+        <Parameter Name="newBaseSeqNum" Type="System.IO.Log.SequenceNumber" />
+        <Parameter Name="reservationCollection" Type="System.IO.Log.ReservationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="data">Uma lista de segmentos de matriz de bytes concatenado, que será anexado como o registro.</param>
+        <param name="newBaseSeqNum">O novo número de sequência de base. O número de sequência especificado deve ser maior ou igual ao número de sequência de base atual.</param>
+        <param name="reservationCollection">Um <see cref="T:System.IO.Log.ReservationCollection" /> que contém a reserva que deve ser usada para a área de reinicialização.</param>
+        <summary>Grava uma área de reinício para o <see cref="T:System.IO.Log.LogRecordSequence" /> usando uma reserva e atualiza o número de sequência de base. Esse método não pode ser herdado.</summary>
+        <returns>O número de sequência da escrita reinicialização área.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma área de reinicialização é usada para armazenar temporariamente informações que contém a última operação de ponto de verificação do cliente. O Common Log arquivo CLFS (sistema) mantém que dois reiniciar áreas para garantir que pelo menos uma área válida está sempre disponível. Quando a recuperação é necessária, o CLFS lê sua área de reinicialização e todos os dados da última operação de ponto de verificação. Esses dados inicializa a tabela de transação, a tabela de páginas sujas e a tabela de arquivos abertos para que possam ser usados no processo de recuperação.  
+  
+ Uma área de reinicialização pode ser lida usando o <xref:System.IO.Log.LogRecordSequence.ReadRestartAreas%2A> método.  
+  
+ Quando uma área de reinicialização é gravada, os dados nos segmentos de matriz de bytes são concatenados em uma matriz de byte único para acréscimo como o registro. Nenhum provisionamento é feito para dividir os dados novamente em segmentos de matriz quando a área de reinicialização é lida.  
+  
+ Se uma reserva for especificada, a área de reinicialização escrito consumirá espaço que foi anteriormente reservado, usando uma reserva contida na coleção. Se o método for bem-sucedido, ele consumirá a reserva de menor que pode conter os dados e reserva será removida da coleção.  
+  
+ Quando esse método é concluído com êxito, o número de sequência de base foi atualizado. Todos os registros de log com números de sequência menor que o novo número de sequência de base não estão acessíveis.  
+  
+ Se uma sequência de registro foi descartada, ou se você passar um argumento inválido, as exceções são geradas imediatamente nessa operação. Erros ocorridos durante uma solicitação assíncrona acréscimo, por exemplo, uma falha durante a solicitação de e/s de disco resulta em exceções que está sendo geradas quando o <xref:System.IO.Log.LogRecordSequence.EndReserveAndAppend%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="newBaseSeqNum" />não é válido para essa sequência.  
+  
+ -ou-  
+  
+ O número de sequência de início de enumeração de log especificado é inválido.  
+  
+ -ou-  
+  
+ <paramref name="data" />não pode ser anexado porque ele é maior que o tamanho máximo do registro.  
+  
+ -ou-  
+  
+ <paramref name="reservationCollection" />não foi criado por essa sequência de registro.</exception>
+        <exception cref="T:System.ArgumentNullException">Um ou mais dos parâmetros é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um arquivo novo ou existente final ou uma base do log ativo é inválido.  
+  
+ -ou-  
+  
+ <paramref name="newBaseSeqNum" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.  
+  
+ -ou-  
+  
+ A solicitação não pôde ser executada devido a um erro de dispositivo de e/s.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para a sequência de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

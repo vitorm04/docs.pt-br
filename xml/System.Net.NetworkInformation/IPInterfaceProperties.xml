@@ -1,0 +1,588 @@
+<Type Name="IPInterfaceProperties" FullName="System.Net.NetworkInformation.IPInterfaceProperties">
+  <TypeSignature Language="C#" Value="public abstract class IPInterfaceProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IPInterfaceProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IPInterfaceProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre as interfaces de rede que dão suporte ao IPv4 (protocolo IP versão 4) ou IPv6 (protocolo IP versão 6).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece acesso às informações de endereço e configuração para interfaces de rede que oferecem suporte a IPv4 ou IPv6. Você não criar instâncias dessa classe; eles são retornados pelo <xref:System.Net.NetworkInformation.NetworkInterface.GetIPProperties%2A> método.  
+  
+ Para acessar propriedades específicas do IPv4, use o objeto retornado pelo <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv4Properties%2A> método. Para acessar propriedades específicas de IPv6, use o objeto retornado pelo <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv6Properties%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de endereço.  
+  
+ [!code-cpp[NclNetInfoReport#8](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#8)]
+ [!code-csharp[NclNetInfoReport#8](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IPInterfaceProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPInterfaceProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.IPInterfaceProperties" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado apenas de classes que derivam de <xref:System.Net.NetworkInformation.IPInterfaceProperties>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnycastAddresses">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPAddressInformationCollection AnycastAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.IPAddressInformationCollection AnycastAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.AnycastAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPAddressInformationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os endereços IP anycast atribuídos a esta interface.</summary>
+        <value>Um <see cref="T:System.Net.NetworkInformation.IPAddressInformationCollection" /> que contém os endereços anycast para essa interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um endereço de difusão identifica vários computadores. Pacotes enviados para um endereço de difusão são enviados para um dos computadores identificados pelo endereço. Endereçamento de difusão é um recurso de IPv6 usado para atualizar tabelas do roteador para um grupo de hosts.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os endereços de difusão para interfaces de rede no computador local.  
+  
+ [!code-cpp[NclNetInfo2#43](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#43)]
+ [!code-csharp[NclNetInfo2#43](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#43)]
+ [!code-vb[NclNetInfo2#43](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#43)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DhcpServerAddresses">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPAddressCollection DhcpServerAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.IPAddressCollection DhcpServerAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.DhcpServerAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPAddressCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os endereços dos servidores de protocolo DHCP para essa interface.</summary>
+        <value>Um <see cref="T:System.Net.NetworkInformation.IPAddressCollection" /> que contém as informações de endereço servidores DHCP ou uma matriz vazia se nenhum servidor for encontrado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Protocolo de configuração de Host dinâmico (DHCP) permite que um computador obter um endereço de rede de um endereço de rede do servidor, em vez de usar um static (fixo) de DHCP. Um servidor DHCP não atribui permanentemente endereços; em vez disso, temporariamente ele usa um de um número de endereços disponíveis para o computador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as informações de endereço DHCP para as interfaces de rede no computador local.  
+  
+ [!code-cpp[NclNetInfo2#46](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#46)]
+ [!code-csharp[NclNetInfo2#46](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#46)]
+ [!code-vb[NclNetInfo2#46](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#46)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsAddresses">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPAddressCollection DnsAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.IPAddressCollection DnsAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.DnsAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPAddressCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os endereços dos servidores DNS (Sistema de Nomes de Domínio) para essa interface.</summary>
+        <value>Um <see cref="T:System.Net.NetworkInformation.IPAddressCollection" /> que contém os endereços do servidor DNS.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O DNS é um sistema de nomeação hierárquico usado para mapear nomes de host para endereços IP.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os endereços DNS para as interfaces de rede no computador local.  
+  
+ [!code-cpp[NclNetInfo2#42](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#42)]
+ [!code-csharp[NclNetInfo2#42](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#42)]
+ [!code-vb[NclNetInfo2#42](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#42)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsSuffix">
+      <MemberSignature Language="C#" Value="public abstract string DnsSuffix { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DnsSuffix" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.DnsSuffix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o sufixo do DNS (Sistema de Nomes de Domínio) associado a esta interface.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o sufixo DNS desta interface ou <see cref="F:System.String.Empty" /> se não houver nenhum sufixo DNS para a interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sufixo DNS identifica o nome de domínio (por exemplo, "contoso.com") que é anexado a um nome de host não qualificado para obter um nome de domínio totalmente qualificado (FQDN) adequado para uma consulta de nome DNS. Por exemplo, se o computador local possui "contoso.com" como seu <xref:System.Net.NetworkInformation.IPInterfaceProperties.DnsSuffix%2A>e deve resolver o nome de host não qualificado "www", o FQDN para a consulta é "www.contoso.com".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o sufixo DNS.  
+  
+ [!code-cpp[NclNetInfo2#41](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#41)]
+ [!code-csharp[NclNetInfo2#41](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#41)]
+ [!code-vb[NclNetInfo2#41](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">Esta propriedade não é válida em computadores que executam sistemas operacionais anteriores ao Windows 2000.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GatewayAddresses">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.GatewayIPAddressInformationCollection GatewayAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.GatewayIPAddressInformationCollection GatewayAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.GatewayAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.GatewayIPAddressInformationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém endereços de gateway de rede IPv4 dessa interface.</summary>
+        <value>Um <see cref="T:System.Net.NetworkInformation.GatewayIPAddressInformationCollection" /> que contém as informações de endereço dos gateways de rede ou uma matriz vazia se nenhum gateway for encontrado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gateways que implementam o Internet Protocol versão 4 (IPv4) para encaminhar pacotes entre as redes são retornados por essa propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os endereços de gateway para as interfaces de rede no computador local.  
+  
+ [!code-cpp[NclNetInfo2#47](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#47)]
+ [!code-csharp[NclNetInfo2#47](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#47)]
+ [!code-vb[NclNetInfo2#47](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#47)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIPv4Properties">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPv4InterfaceProperties GetIPv4Properties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.IPv4InterfaceProperties GetIPv4Properties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv4Properties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPv4InterfaceProperties</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece dados de configuração IPv4 (protocolo IP versão 4) para esse adaptador de rede.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.IPv4InterfaceProperties" /> que contém dados de configuração IPv4 ou <see langword="null" /> se não houver dados disponíveis para a interface.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna `null` para <xref:System.Net.NetworkInformation.NetworkInterfaceType.Loopback> interfaces.  
+  
+ Para obter uma descrição detalhada das informações disponíveis para uma interface que oferece suporte a IPv4, consulte o <xref:System.Net.NetworkInformation.IPv4InterfaceProperties> documentação de classe. Observe que o objeto retornado pelo <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv4Properties%2A> método reflete a configuração a partir da hora em que o objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A interface não dá suporte ao protocolo IPv4.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIPv6Properties">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPv6InterfaceProperties GetIPv6Properties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.IPv6InterfaceProperties GetIPv6Properties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv6Properties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPv6InterfaceProperties</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece dados de configuração 6 (IPv6) de Internet Protocol versão para essa interface de rede.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.IPv6InterfaceProperties" /> objeto que contém dados de configuração de IPv6.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma descrição detalhada das informações disponíveis para uma interface que dá suporte a IPv6, consulte o <xref:System.Net.NetworkInformation.IPv6InterfaceProperties> documentação. Observe que o objeto retornado pelo <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv6Properties%2A> método reflete a configuração a partir da hora em que o objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A interface não suporta o protocolo IPv6.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDnsEnabled">
+      <MemberSignature Language="C#" Value="public abstract bool IsDnsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDnsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.IsDnsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Boolean" /> valor que indica se o NetBt está configurado para usar a resolução de nomes DNS nesta interface.</summary>
+        <value>
+          <see langword="true" />Se NetBt está configurado para usar a resolução de nomes DNS nessa interface; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O DNS é um sistema de nomeação hierárquico usado para mapear nomes de host para endereços IP.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NclNetInfo2#41](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#41)]
+ [!code-csharp[NclNetInfo2#41](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#41)]
+ [!code-vb[NclNetInfo2#41](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDynamicDnsEnabled">
+      <MemberSignature Language="C#" Value="public abstract bool IsDynamicDnsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDynamicDnsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.IsDynamicDnsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Boolean" /> valor que indica se esta interface está configurada para registrar automaticamente suas informações de endereço IP com o sistema de nome de domínio (DNS).</summary>
+        <value>
+          <see langword="true" />Se essa interface é configurada para registrar automaticamente um mapeamento entre seu endereço IP dinâmico e nomes de domínio estático; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DNS dinâmico permite que um cliente informar os servidores DNS que seu endereço IP dinâmico é mapeado para seu nome de host estático.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NclNetInfo2#41](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#41)]
+ [!code-csharp[NclNetInfo2#41](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#41)]
+ [!code-vb[NclNetInfo2#41](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#41)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastAddresses">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.MulticastIPAddressInformationCollection MulticastAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.MulticastIPAddressInformationCollection MulticastAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.MulticastAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.MulticastIPAddressInformationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os endereços multicast atribuídos a esta interface.</summary>
+        <value>Um <see cref="T:System.Net.NetworkInformation.MulticastIPAddressInformationCollection" /> que contém os endereços de multicast para essa interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um endereço de multicast identifica vários computadores. Pacotes enviados para um endereço de multicast são enviados a todos os computadores identificados pelo endereço.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os endereços de multicast para as interfaces de rede no computador local.  
+  
+ [!code-cpp[NclNetInfo2#44](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#44)]
+ [!code-csharp[NclNetInfo2#44](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#44)]
+ [!code-vb[NclNetInfo2#44](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#44)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnicastAddresses">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.UnicastIPAddressInformationCollection UnicastAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.UnicastIPAddressInformationCollection UnicastAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.UnicastAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.UnicastIPAddressInformationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os endereços unicast atribuídos a esta interface.</summary>
+        <value>Um <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformationCollection" /> que contém os endereços unicast para essa interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um endereço de unicast identifica um único computador. Pacotes enviados para um endereço de unicast são enviados para o computador identificado pelo endereço.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o endereço de unicast para as interfaces de rede no computador local.  
+  
+ [!code-cpp[NclNetInfo2#45](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#45)]
+ [!code-csharp[NclNetInfo2#45](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#45)]
+ [!code-vb[NclNetInfo2#45](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#45)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WinsServersAddresses">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPAddressCollection WinsServersAddresses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkInformation.IPAddressCollection WinsServersAddresses" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceProperties.WinsServersAddresses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPAddressCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os endereços dos servidores do Windows Internet Name Service (WINS).</summary>
+        <value>Um <see cref="T:System.Net.NetworkInformation.IPAddressCollection" /> que contém as informações de endereço para servidores WINS, ou uma matriz vazia se nenhum servidor foram encontrados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O WINS fornece um banco de dados distribuído para registrar e consultar os nomes de NetBIOS dinâmicos para mapeamentos de endereço IP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

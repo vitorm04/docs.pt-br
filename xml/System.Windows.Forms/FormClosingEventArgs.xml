@@ -1,0 +1,103 @@
+<Type Name="FormClosingEventArgs" FullName="System.Windows.Forms.FormClosingEventArgs">
+  <TypeSignature Language="C#" Value="public class FormClosingEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FormClosingEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FormClosingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.Form.FormClosing" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Form.FormClosing> evento ocorre somente antes de um formulário é fechado, por usuário, por meio da interface do usuário (IU), ou programaticamente, por meio de chamadas para métodos como <xref:System.Windows.Forms.Form.Close%2A> no <xref:System.Windows.Forms.Form> classe, ou <xref:System.Windows.Forms.Application.Exit%2A> no <xref:System.Windows.Forms.Application> classe.  
+  
+ Se um formulário tem qualquer filho ou formulários de propriedade, um <xref:System.Windows.Forms.Form.FormClosing> evento também é criado para cada um. Se qualquer uma das formas de cancelar o evento, nenhum dos formulários são fechados. Portanto o correspondente <xref:System.Windows.Forms.Form.FormClosed> eventos não são enviados para qualquer uma das formas.  
+  
+ O <xref:System.Windows.Forms.FormClosingEventArgs> classe fornece dados para esse evento. Dois membros importantes são o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> e <xref:System.Windows.Forms.FormClosingEventArgs.CloseReason%2A> propriedades. O evento pode ser cancelado, definindo a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade como true. O <xref:System.Windows.Forms.FormClosingEventArgs.CloseReason%2A> propriedade fornece um motivo por que o formulário está sendo fechado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse tipo. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Form.FormClosing> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Form> chamado `Form1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Form.FormClosing> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#394](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#394)]
+ [!code-vb[System.Windows.Forms.EventExamples#394](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#394)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FormClosingEventArgs (System.Windows.Forms.CloseReason closeReason, bool cancel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.CloseReason closeReason, bool cancel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FormClosingEventArgs.#ctor(System.Windows.Forms.CloseReason,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="closeReason" Type="System.Windows.Forms.CloseReason" />
+        <Parameter Name="cancel" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="closeReason">Um <see cref="T:System.Windows.Forms.CloseReason" /> valor que representa o motivo por que o formulário está sendo fechado.</param>
+        <param name="cancel">
+          <see langword="true" />Para cancelar o evento; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.FormClosingEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `closeReason` e `cancel` parâmetros são usados para inicializar o <xref:System.Windows.Forms.FormClosingEventArgs.CloseReason%2A> e <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedades, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseReason">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.CloseReason CloseReason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.CloseReason CloseReason" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FormClosingEventArgs.CloseReason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CloseReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica por que o formulário está sendo fechado.</summary>
+        <value>Um dos valores enumerados <see cref="T:System.Windows.Forms.CloseReason" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.Form> pode ser fechada devido a uma variedade de razões, iniciado pelo usuário e através de programação. O <xref:System.Windows.Forms.FormClosingEventArgs.CloseReason%2A> propriedade indica um motivo para o encerramento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.Form> chamado `Form1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#394](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#394)]
+ [!code-vb[System.Windows.Forms.EventExamples#394](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#394)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,187 @@
+<Type Name="MessagePart" FullName="System.Web.Services.Description.MessagePart">
+  <TypeSignature Language="C#" Value="public sealed class MessagePart : System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessagePart extends System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.MessagePart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.NamedItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPoint("Extensions")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa as mensagens a ser dividida em suas unidades lógicas com informações específicas de abstratas para cada parte. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.MessagePart> classe corresponde a um WSDL Web Services Description Language () `part` elemento delimitados pelo `message` elemento, que por sua vez colocado entre o `definitions` elemento raiz. Para obter mais informações sobre WSDL, consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de <xref:System.Web.Services.Description.MessagePart> classe. O `element` e `targetNamespace` parâmetros são cadeias de caracteres definida pelo usuário passadas para esta chamada de método.  
+  
+ [!code-cpp[DescriptionNamespaceSample1#10](~/samples/snippets/cpp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CPP/descriptionnamespacesample1.cpp#10)]
+ [!code-csharp[DescriptionNamespaceSample1#10](~/samples/snippets/csharp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CS/descriptionnamespacesample1.cs#10)]
+ [!code-vb[DescriptionNamespaceSample1#10](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DescriptionNamespaceSample1/VB/descriptionnamespacesample1.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessagePart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.MessagePart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.MessagePart" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Element { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Element" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MessagePart.Element" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("element")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento XML que corresponde ao atual <see cref="T:System.Web.Services.Description.MessagePart" />.</summary>
+        <value>O nome do elemento XML que corresponde à atual <see cref="T:System.Web.Services.Description.MessagePart" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do `element` atributo do `part` elemento para o qual o <xref:System.Web.Services.Description.MessagePart> classe serve como um wrapper.  
+  
+   
+  
+## Examples  
+ [!code-cpp[DescriptionNamespaceSample1#11](~/samples/snippets/cpp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CPP/descriptionnamespacesample1.cpp#11)]
+ [!code-csharp[DescriptionNamespaceSample1#11](~/samples/snippets/csharp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CS/descriptionnamespacesample1.cs#11)]
+ [!code-vb[DescriptionNamespaceSample1#11](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DescriptionNamespaceSample1/VB/descriptionnamespacesample1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MessagePart.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.MessagePart" />.</summary>
+        <value>O <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.MessagePart" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.Message Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.Message Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MessagePart.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.Message</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.Message" /> dos quais o <see cref="T:System.Web.Services.Description.MessagePart" /> é um membro.</summary>
+        <value>A mensagem de que o <see cref="T:System.Web.Services.Description.MessagePart" /> é um membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra um uso de <xref:System.Web.Services.Description.Message> propriedade.  
+  
+ [!code-cpp[MessagePartCollection#2](~/samples/snippets/cpp/VS_Snippets_Remoting/MessagePartCollection/CPP/messagepartcollection.cpp#2)]
+ [!code-csharp[MessagePartCollection#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MessagePartCollection/CS/messagepartcollection.cs#2)]
+ [!code-vb[MessagePartCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessagePartCollection/VB/messagepartcollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.MessagePart.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados XML de <see cref="T:System.Web.Services.Description.MessagePart" />.</summary>
+        <value>Um <see cref="T:System.Xml.XmlQualifiedName" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do `type` atributo do `part` elemento para o qual o <xref:System.Web.Services.Description.MessagePart> classe serve como um wrapper. Em geral, ele se refere a um tipo de dados definido no esquema XSD, mas ele também pode ser estendido, desde que o namespace XML usado é diferente de WSDL Web Services Description Language ().  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um uso de <xref:System.Web.Services.Description.MessagePart.Type%2A> propriedade.  
+  
+ MessagePart_Type n º 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

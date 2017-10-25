@@ -1,0 +1,87 @@
+<Type Name="IndexedGlyphRun" FullName="System.Windows.Media.TextFormatting.IndexedGlyphRun">
+  <TypeSignature Language="C#" Value="public sealed class IndexedGlyphRun" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IndexedGlyphRun extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.IndexedGlyphRun" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que o texto clientes mecanismo mapear um índice de caracteres de origem de texto correspondente <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.TextFormatting.IndexedGlyphRun> objeto permite que um cliente de mecanismo de texto obter informações de glifo de um caractere de fonte do texto, como o tipo de glifo, índices de glyph e mapa de cluster do glifo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GlyphRun">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.GlyphRun GlyphRun { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.GlyphRun GlyphRun" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.IndexedGlyphRun.GlyphRun" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.GlyphRun</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Media.GlyphRun" /> que corresponde do <see cref="T:System.Windows.Media.TextFormatting.IndexedGlyphRun" /> objeto.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Media.GlyphRun" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSourceCharacterIndex">
+      <MemberSignature Language="C#" Value="public int TextSourceCharacterIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextSourceCharacterIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.IndexedGlyphRun.TextSourceCharacterIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice de caracteres de origem de texto que corresponde ao início do <see cref="T:System.Windows.Media.GlyphRun" />.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que representa o índice de caracteres de origem do texto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextSourceLength">
+      <MemberSignature Language="C#" Value="public int TextSourceLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TextSourceLength" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.IndexedGlyphRun.TextSourceLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento de caracteres de origem de texto que corresponde do <see cref="T:System.Windows.Media.TextFormatting.IndexedGlyphRun" /> objeto.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que representa o comprimento do caractere de fonte do texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Media.TextFormatting.IndexedGlyphRun.TextSourceLength%2A> propriedade não é necessariamente igual à contagem de caracteres do <xref:System.Windows.Media.GlyphRun>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

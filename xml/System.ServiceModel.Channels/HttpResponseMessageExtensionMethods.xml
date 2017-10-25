@@ -1,0 +1,48 @@
+<Type Name="HttpResponseMessageExtensionMethods" FullName="System.ServiceModel.Channels.HttpResponseMessageExtensionMethods">
+  <TypeSignature Language="C#" Value="public static class HttpResponseMessageExtensionMethods" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit HttpResponseMessageExtensionMethods extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.HttpResponseMessageExtensionMethods" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe de métodos de extensão estático para obter um <see cref="T:System.ServiceModel.Channels.Message" /> da instância de um <see cref="T:System.Net.Http.HttpResponseMessage" /> instância.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ToMessage">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Channels.Message ToMessage (this System.Net.Http.HttpResponseMessage httpResponseMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Channels.Message ToMessage(class System.Net.Http.HttpResponseMessage httpResponseMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.HttpResponseMessageExtensionMethods.ToMessage(System.Net.Http.HttpResponseMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Channels</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpResponseMessage" Type="System.Net.Http.HttpResponseMessage" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="httpResponseMessage">O <see cref="T:System.Net.Http.HttpResponseMessage" /> do qual criar o <see cref="T:System.ServiceModel.Channels.Message" /> instância.</param>
+        <summary>Cria um <see cref="T:System.ServiceModel.Channels.Message" /> da instância de um <see cref="T:System.Net.Http.HttpResponseMessage" /> instância.</summary>
+        <returns>A nova instância <see cref="T:System.ServiceModel.Channels.Message" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.Message> instância pode ser lido, escrita e copiada apenas como um tradicional <xref:System.ServiceModel.Channels.ByteStreamMessage> instância. O <xref:System.ServiceModel.Channels.Message> instância também pode "ler" para recuperar o original <xref:System.Net.Http.HttpResponseMessage> instância chamando o <xref:System.ServiceModel.Channels.MessageExtensionMethods.ToHttpResponseMessage%2A> método de extensão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,26 @@
+<Type Name="SuperTypeMembersSorter" FullName="Microsoft.JScript.SuperTypeMembersSorter">
+  <TypeSignature Language="C#" Value="public sealed class SuperTypeMembersSorter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SuperTypeMembersSorter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.SuperTypeMembersSorter" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena os membros de classes e interfaces base.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Membros que têm o mesmo nome são contíguos e membros de classes derivadas mais preceder membros de menos classes derivadas.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members />
+</Type>

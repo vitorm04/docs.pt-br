@@ -1,0 +1,392 @@
+<Type Name="XmlDictionaryReaderQuotas" FullName="System.Xml.XmlDictionaryReaderQuotas">
+  <TypeSignature Language="C#" Value="public sealed class XmlDictionaryReaderQuotas" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlDictionaryReaderQuotas extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.XmlDictionaryReaderQuotas" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém valores de cota configuráveis para XmlDictionaryReaders.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlDictionary>instâncias são usadas pelo WCF quando a serialização e desserialização de mensagens SOAP. O <xref:System.Xml.XmlDictionary> contém pares de cadeia de caracteres/valor que são usados para diminuir o tamanho da mensagem SOAP. Ao serializar uma mensagem, o valor é gravado no lugar da cadeia de caracteres. Ao desserializar a mensagem, o valor é lido, mas a cadeia de caracteres é gravada para o objeto de mensagem.  <xref:System.Xml.XmlDictionaryReaderQuotas>é uma classe que contém um número de cotas usado pelo <xref:System.Xml.XmlDictionaryReader> classe. O recurso de segurança mais importante dos leitores de dicionário é cotas. Uma instância de cotas deve receber para os métodos de fábrica do leitor de dicionário. O construtor padrão cria padrões "seguros" (o mesmo que os padrões codificados) e a classe tiver um estático `Max` propriedade para a criação de um leitor sem cotas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDictionaryReaderQuotas ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionaryReaderQuotas.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância dessa classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa as propriedades para os padrões "seguras":  
+  
+ MaxDepth = 32;  
+  
+ MaxStringContentLength = 8192;  
+  
+ MaxArrayLength = 16384;  
+  
+ MaxBytesPerRead = 4096;  
+  
+ MaxNameTableCharCount = 16384.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Xml.XmlDictionaryReaderQuotas quotas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Xml.XmlDictionaryReaderQuotas quotas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.XmlDictionaryReaderQuotas.CopyTo(System.Xml.XmlDictionaryReaderQuotas)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quotas" Type="System.Xml.XmlDictionaryReaderQuotas" />
+      </Parameters>
+      <Docs>
+        <param name="quotas">O <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> valores de instância para o qual copiar.</param>
+        <summary>Define as propriedades em uma instância de cotas no passado, com base nos valores nesta instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Tentando <see langword="set" /> o valor, mas valores de cota são somente leitura para a instância passada.</exception>
+        <exception cref="T:System.ArgumentNullException">Passado no destino <paramref name="quotas" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Max">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlDictionaryReaderQuotas Max { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Xml.XmlDictionaryReaderQuotas Max" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.Max" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância dessa classe com todas as propriedades definidas com valores máximos.</summary>
+        <value>Uma instância de <see cref="T:System.Xml.XmlDictionaryReaderQuotas" /> com as propriedades definidas como <see cref="F:System.Int32.MaxValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância retornada é somente leitura. Use a propriedade para criar um leitor sem cotas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxArrayLength">
+      <MemberSignature Language="C#" Value="public int MaxArrayLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxArrayLength" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(16384)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a extensão máxima permitida da matriz.</summary>
+        <value>A extensão máxima permitida da matriz. O padrão é 16384.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cota rege o comprimento máximo da matriz que é criado e retornado por várias chamadas de API. Ele afeta a matriz especial APIs, bem como matrizes de bytes retornados de ReadContentAsBase64(). Esse limite não afeta a substituição de ReadContentAsBase64() que usa uma matriz a ser preenchido com dados.  
+  
+ Observe que o valor da propriedade se aplica a cada etapa do processamento da mensagem. Isso inclui algumas etapas que podem expandir o tamanho de uma mensagem ou parte da mensagem. Em particular, a criptografia pode aumentar significativamente o tamanho de uma mensagem. Ao definir esse valor, você deve levar isso em conta.  
+  
+ Instâncias criadas com o construtor público têm propriedades que podem ser `set`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentando <see langword="set" /> o valor, mas valores de cota são somente leitura para esta instância.</exception>
+        <exception cref="T:System.ArgumentException">Tentando <see langword="set" /> o valor para menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBytesPerRead">
+      <MemberSignature Language="C#" Value="public int MaxBytesPerRead { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxBytesPerRead" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(4096)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o máximo permitido de bytes retornados para cada leitura.</summary>
+        <value>O máximo de bytes permitidos retornados para cada leitura. O padrão é 4096.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cota limita o número de bytes que podem ser consumidos pelo leitor durante uma única chamada para `Read`().  
+  
+ Essa cota é uma aproximação transformações na camada de codificação ocorrer antes que essa cota é aplicada. Essa cota é ligada ao número de bytes recebidos na conexão no nível de transporte, mas sua finalidade é controlar a quantidade de dados que recebemos para cada leitura. Na prática, ele é usado para limitar o tamanho das marcas de início. Como a marca de início inteiro deve ser armazenada em buffer ser processado (atributos exclusividade deve ser verificada), o tamanho deve ser limitado a reduzir ataques DOS.  
+  
+ Instâncias criadas com o construtor público têm propriedades que podem ser `set`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentando <see langword="set" /> o valor, mas valores de cota são somente leitura para esta instância.</exception>
+        <exception cref="T:System.ArgumentException">Tentando <see langword="set" /> o valor para menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDepth">
+      <MemberSignature Language="C#" Value="public int MaxDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxDepth" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(32)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a profundidade máxima do nó aninhado.</summary>
+        <value>A profundidade máxima do nó aninhado. O padrão é 32;</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cota define um limite para a profundidade do nó aninhado para o XML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentando <see langword="set" /> o valor e os valores de cota são somente leitura para esta instância.</exception>
+        <exception cref="T:System.ArgumentException">Tentando <see langword="set" /> o valor é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNameTableCharCount">
+      <MemberSignature Language="C#" Value="public int MaxNameTableCharCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxNameTableCharCount" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(16384)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o máximo de caracteres permitido em um nome de tabela.</summary>
+        <value>O máximo de caracteres permitidos no nome da tabela. O padrão é 16384.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cota limita o número total de caracteres em cadeias de caracteres que atomizado em que a tabela de nomes para o leitor. Quando cadeias de caracteres são atomizadas são inseridos em uma tabela de nomes e nunca foi removidos. Isso pode causar o acúmulo de grandes quantidades de dados de caractere em uma tabela de nomes. Essa cota impõe um limite a quantidade de dados pode ser armazenados em buffer na tabela de nomes do leitor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentando <see langword="set" /> o valor, mas valores de cota são somente leitura para esta instância.</exception>
+        <exception cref="T:System.ArgumentException">Tentando <see langword="set" /> o valor para menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxStringContentLength">
+      <MemberSignature Language="C#" Value="public int MaxStringContentLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxStringContentLength" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(8192)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o tamanho máximo da cadeia de caracteres retornada pelo leitor.</summary>
+        <value>O tamanho máximo da cadeia de caracteres retornado pelo leitor. O padrão é 8192.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa cota limita o comprimento de cadeias de caracteres que são criados e retornado por várias APIs. Ao chamar `Read`() e a verificação de `Value` propriedade, o leitor de blocos valores de cadeia de caracteres em partes gerenciáveis (quando no modo contínuo). No entanto, chamar `ReadContentAsString`() concatena todos esses componentes e retornar uma cadeia de caracteres grande. O formato binário, se o valor de um nó de elemento é uma sequência de cadeia de caracteres de dicionário IDs, em seguida, os valores dessas cadeias de caracteres são concatenados. Isso pode ser uma expansão muito grande e é reduzido por esse limite.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentando <see langword="set" /> o valor, mas valores de cota são somente leitura para esta instância.</exception>
+        <exception cref="T:System.ArgumentException">Tentando <see langword="set" /> o valor para menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifiedQuotas">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlDictionaryReaderQuotaTypes ModifiedQuotas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.XmlDictionaryReaderQuotaTypes ModifiedQuotas" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.XmlDictionaryReaderQuotas.ModifiedQuotas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlDictionaryReaderQuotaTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as cotas modificadas para o <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />.</summary>
+        <value>As cotas modificadas para o <see cref="T:System.Xml.XmlDictionaryReaderQuotas" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

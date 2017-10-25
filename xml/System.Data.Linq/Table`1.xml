@@ -1,0 +1,1298 @@
+<Type Name="Table&lt;TEntity&gt;" FullName="System.Data.Linq.Table&lt;TEntity&gt;">
+  <TypeSignature Language="C#" Value="public sealed class Table&lt;TEntity&gt; : System.Collections.Generic.IEnumerable&lt;TEntity&gt;, System.ComponentModel.IListSource, System.Data.Linq.ITable, System.Linq.IQueryable&lt;TEntity&gt;, System.Linq.IQueryProvider where TEntity : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Table`1&lt;class TEntity&gt; extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;!TEntity&gt;, class System.Collections.IEnumerable, class System.ComponentModel.IListSource, class System.Data.Linq.ITable, class System.Linq.IQueryable, class System.Linq.IQueryable`1&lt;!TEntity&gt;, class System.Linq.IQueryProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Table`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TEntity">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;TEntity&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IListSource</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Data.Linq.ITable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryable&lt;TEntity&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Linq.IQueryProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TEntity">O tipo de dados na tabela.</typeparam>
+    <summary>Representa uma tabela para determinado tipo no banco de dados subjacente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe permite que você consultar a tabela e adicionar, remover e anexar objetos.  
+  
+ Um aplicativo pode acessar uma <xref:System.Data.Linq.Table%601> instância <xref:System.Data.Linq.DataContext.GetTable%2A> ou usando uma propriedade com rigidez de tipos para fortemente tipada <xref:System.Data.Linq.DataContext>. Ou seja, quando o designer gera um objeto DataContext, ele gera propriedades para representar cada tabela. Por exemplo:  
+  
+```  
+[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SignOffTool")]  
+public partial class DataClasses1DataContext : System.Data.Linq.DataContext {  
+   public System.Data.Linq.Table<User> Users {  
+      get {  
+         return this.GetTable<User>();  
+      }  
+   }  
+}  
+```  
+  
+ Para este DataContext com rigidez de tipos, você pode acessar a propriedade de usuários para obter `Table<User>`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName="Attach">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Anexa uma entidade para o <see cref="T:System.Data.Linq.DataContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `Attach` métodos com entidades que foram criados em um <xref:System.Data.Linq.DataContext>serializado para um cliente e desserializado (com a intenção de executar uma atualização ou operação de exclusão). Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ Não tente `Attach` uma entidade que não foi desanexada por meio de serialização. Entidades que não foi serializadas ainda mantenham as associações com carregadores adiadas que podem causar resultados inesperados se a entidade se tornará acompanhada por um segundo contexto de dados.  
+  
+ Quando uma nova entidade é anexada, adiada carregadores de todas as coleções filho (por exemplo, `EntitySet` coleções de entidades de tabelas associadas) são inicializados. Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, os membros do filho coleções são colocadas em um `Unmodified` estado. Para atualizar os membros de uma coleção de filhos, você deve chamar explicitamente `Attach` e especifique essa entidade.  
+  
+ `Attach`anexa a todas as entidades no gráfico de objeto do objeto fornecido. Por exemplo, o código c# a seguir:  
+  
+```  
+using (SampleDataContext db = new SampleDataContext()) {  
+    Employee employee = new Employee { employeeId = 1 };  
+  
+    Master master = new Master();  
+    master.Employee = employee;  
+  
+    Child child = new Child();  
+    child.Employee = employee;  
+  
+    db.Employees.Attach(employee);  
+  
+    master.Child = child;  
+  
+    db.Masters.InsertOnSubmit(master);  
+  
+    db.SubmitChanges();  
+}  
+  
+```  
+  
+ O código do Visual Basic equivalente é:  
+  
+```  
+Using db As New SampleDataContext()    Dim employee As New Employee With { .employeeId = 1 }  
+  
+    Dim master As New Master()  
+    master.Employee = employee  
+  
+    Dim child As New Child()  
+    child.Employee = employee  
+  
+    db.Employees.Attach(employee)  
+  
+    master.Child = child  
+  
+    db.Masters.InsertOnSubmit(master)  
+  
+    db.SubmitChanges()  
+  
+End Using  
+```  
+  
+ Chamando `Attach` na `Employee` anexa o funcionário, master e filho, porque o `Employee` tem relações para master e filho. Você deve chamar explicitamente `InsertOnSubmit` alterar o estado de anexado ao inserido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Attach(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.Attach(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">Os valores originais da entidade a ser anexada.</param>
+        <summary>Anexa uma entidade desconectada ou “desanexada” a um novo <see cref="T:System.Data.Linq.DataContext" /> quando os valores originais são necessários para verificações de simultaneidade otimista.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `Attach` métodos com entidades que foram criados em um <xref:System.Data.Linq.DataContext>serializado para um cliente e desserializado voltar para executar uma atualização ou operação de exclusão. Porque o novo <xref:System.Data.Linq.DataContext> dispõe de nenhuma forma de controlar quais foram os valores originais para uma entidade desconectada, o cliente é responsável por fornecer esses valores. Nesta versão do <xref:System.Data.Linq.Table%601.Attach%2A>, a entidade deve para estar no estado de valor original. Depois de chamar esse método, você pode atualizar seus campos, por exemplo com dados adicionais enviados do cliente.  
+  
+ Quando uma nova entidade é anexada, adiada carregadores de todas as coleções filho (por exemplo, `EntitySet` coleções de entidades de tabelas associadas) são inicializados. Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, os membros do filho coleções são colocadas em um `Unmodified` estado. Para atualizar os membros de uma coleção de filhos, você deve chamar explicitamente `Attach` e especifique essa entidade.  
+  
+ Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ Não tente `Attach` uma entidade que não foi desanexada por meio de serialização. Entidades que não foi serializadas ainda mantenham as associações com carregadores adiadas que podem causar resultados inesperados se a entidade se tornará acompanhada por um segundo contexto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (TEntity entity, bool asModified);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Attach(!TEntity entity, bool asModified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.Attach(`0,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+        <Parameter Name="asModified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser anexada.</param>
+        <param name="asModified">
+          <see langword="true" />Para anexar a entidade como modificada; <see langword="false" /> anexar a entidade como sem modificações.</param>
+        <summary>Anexa uma entidade para o <see cref="T:System.Data.Linq.DataContext" /> em um estado modificado ou inalterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se anexar *como modificado*, a entidade ou deve declarar um membro de versão ou não deve fazer parte de verificação de conflitos de atualização. Quando uma nova entidade é anexada, adiada carregadores de todas as coleções filho (por exemplo, `EntitySet` coleções de entidades de tabelas associadas) são inicializados. Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, os membros do filho coleções são colocadas em um `Unmodified` estado. Para atualizar os membros de uma coleção de filhos, você deve chamar explicitamente `Attach` e especifique essa entidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attach">
+      <MemberSignature Language="C#" Value="public void Attach (TEntity entity, TEntity original);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Attach(!TEntity entity, !TEntity original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.Attach(`0,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+        <Parameter Name="original" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser anexada.</param>
+        <param name="original">Uma instância do mesmo tipo de entidade com membros de dados que contém os valores originais.</param>
+        <summary>Anexa uma entidade para o <see cref="T:System.Data.Linq.DataContext" /> em um estado modificado ou não modificado especificando a entidade e seu estado original.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No exemplo a seguir, o `Customer` objeto corretamente já está configurado. Você pode chamar `Attach` sem a necessidade de repetir as atualizações.  
+  
+ Quando uma nova entidade é anexada, adiada carregadores de todas as coleções filho (por exemplo, `EntitySet` coleções de entidades de tabelas associadas) são inicializados. Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, os membros do filho coleções são colocadas em um `Unmodified` estado. Para atualizar os membros de uma coleção de filhos, você deve chamar explicitamente `Attach` e especifique essa entidade.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DLinqNTier#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqNTier/cs/Program.cs#4)]
+ [!code-vb[DLinqNTier#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqNTier/vb/Module1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AttachAll&lt;TSubEntity&gt;">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Anexa todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado inalterado ou modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se anexar como modificada, a entidade ou deve declarar um membro de versão ou não deve fazer parte de verificação de conflitos de atualização.  
+  
+ Quando uma nova entidade é anexada, adiada carregadores de todas as coleções filho (por exemplo, `EntitySet` coleções de entidades de tabelas associadas) são inicializados. Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, os membros do filho coleções são colocadas em um `Unmodified` estado. Para atualizar os membros de uma coleção de filhos, você deve chamar explicitamente `Attach` e especifique essa entidade.  
+  
+ Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AttachAll&lt;TSubEntity&gt;">
+      <MemberSignature Language="C#" Value="public void AttachAll&lt;TSubEntity&gt; (System.Collections.Generic.IEnumerable&lt;TSubEntity&gt; entities) where TSubEntity : TEntity;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachAll&lt;(!TEntity) TSubEntity&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSubEntity&gt; entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.AttachAll``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSubEntity">
+          <Constraints>
+            <BaseTypeName>TEntity</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.Generic.IEnumerable&lt;TSubEntity&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSubEntity">O tipo de entidade a serem anexadas.</typeparam>
+        <param name="entities">A coleção de entidades.</param>
+        <summary>Anexa todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado inalterado ou modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método anexa todas as entidades de uma coleção para um novo <xref:System.Data.Linq.DataContext>. Quando uma nova entidade é anexada, adiada carregadores de todas as coleções filho (por exemplo, `EntitySet` coleções de entidades de tabelas associadas) são inicializados. Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, os membros do filho coleções são colocadas em um `Unmodified` estado. Para atualizar os membros de uma coleção de filhos, você deve chamar explicitamente `Attach` e especifique essa entidade.  
+  
+ Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachAll&lt;TSubEntity&gt;">
+      <MemberSignature Language="C#" Value="public void AttachAll&lt;TSubEntity&gt; (System.Collections.Generic.IEnumerable&lt;TSubEntity&gt; entities, bool asModified) where TSubEntity : TEntity;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachAll&lt;(!TEntity) TSubEntity&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSubEntity&gt; entities, bool asModified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.AttachAll``1(System.Collections.Generic.IEnumerable{``0},System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSubEntity">
+          <Constraints>
+            <BaseTypeName>TEntity</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.Generic.IEnumerable&lt;TSubEntity&gt;" />
+        <Parameter Name="asModified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSubEntity">O tipo de entidade a serem anexadas.</typeparam>
+        <param name="entities">A coleção de entidades.</param>
+        <param name="asModified">
+          <see langword="true" /> se o objeto tiver um membro RowVersion ou um carimbo de data/hora, <see langword="false" /> se os valores estiverem sendo usados para a verificação de simultaneidade otimista.</param>
+        <summary>Anexa todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado inalterado ou modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método anexa todas as entidades de uma coleção para o <xref:System.Data.Linq.DataContext> em um *modificado* ou *inalterado* estado. Se anexar como modificada, a entidade ou deve declarar um membro de versão ou não deve fazer parte de verificação de conflitos de atualização. Se anexar como não modificado, a entidade será assumida para representar o valor original. Depois de chamar esse método, os campos da entidade podem ser modificados com outras informações do cliente antes de <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado. Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ Quando uma nova entidade é anexada, adiada carregadores de todas as coleções filho (por exemplo, `EntitySet` coleções de entidades de tabelas associadas) são inicializados. Quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado, os membros do filho coleções são colocadas em um `Unmodified` estado. Para atualizar os membros de uma coleção de filhos, você deve chamar explicitamente `Attach` e especifique essa entidade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como você pode atualizar um `Order` objeto em outro <xref:System.Data.Linq.DataContext> instância. O exemplo supõe que você tem uma conexão para um banco de dados e fazer uma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] arquivo para ele (nesse caso, o banco de dados de exemplo Northwind).  
+  
+ [!code-csharp[DLinqNTier#1](~/samples/snippets/csharp/VS_Snippets_Data/DLinqNTier/cs/Program.cs#1)]
+ [!code-vb[DLinqNTier#1](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqNTier/vb/Module1.vb#1)]  
+  
+ No exemplo a seguir, um objeto de entidade a ser anexado tem uma relação de chave estrangeira com outro objeto e é armazenado no cache, mas não anexado. Quando você chama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, o `ChangeProcessor` adiciona um `Insert` operação para todos os objetos de chave estrangeiras. Este é um efeito colateral, quando uma instância de entidade é reutilizada em outro <xref:System.Data.Linq.DataContext> instância. Por esse motivo, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] não oferece suporte a reutilização de objetos.  
+  
+ [!code-csharp[DlinqNTier#7](~/samples/snippets/csharp/VS_Snippets_Data/DLinqNTier/cs/Program.cs#7)]
+ [!code-vb[DlinqNTier#7](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqNTier/vb/Module1.vb#7)]  
+  
+ O exemplo a seguir mostra um cenário em que o cliente cancelou a todos os pedidos e cliente B tem assumir a propriedade deles. Você pode anexar todos os pedidos do cliente ao mesmo tempo.  
+  
+ [!code-csharp[DlinqNTier#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqNTier/cs/Program.cs#3)]
+ [!code-vb[DlinqNTier#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqNTier/vb/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.DataContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.DataContext Context" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Table`1.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.DataContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.Linq.DataContext" /> que foi usado para recuperar esse <see cref="T:System.Data.Linq.Table`1" />.</summary>
+        <value>O contexto de dados que foi usado para recuperar essa tabela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAllOnSubmit&lt;TSubEntity&gt;">
+      <MemberSignature Language="C#" Value="public void DeleteAllOnSubmit&lt;TSubEntity&gt; (System.Collections.Generic.IEnumerable&lt;TSubEntity&gt; entities) where TSubEntity : TEntity;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteAllOnSubmit&lt;(!TEntity) TSubEntity&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSubEntity&gt; entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.DeleteAllOnSubmit``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSubEntity">
+          <Constraints>
+            <BaseTypeName>TEntity</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.Generic.IEnumerable&lt;TSubEntity&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSubEntity">O tipo dos elementos a serem excluídos.</typeparam>
+        <param name="entities">As entidades a serem excluídas.</param>
+        <summary>Coloca todas as entidades da coleção em um estado <see langword="pending delete" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Entidades que são colocadas no estado de exclusão pendente com esse método não desaparecem dos resultados de consulta até depois <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado. Entidades desconectadas devem ser conectadas antes de serem excluídos. Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ O trecho c# a seguir mostra um uso para este método:  
+  
+```  
+IEnumerable<Customer> customersWithoutOrders = (from c in db.Customers  
+   where c.Orders.Count == 0  
+   select c).ToList();  
+  
+db.Customers.DeleteAllOnSubmit(customersWithoutOrders);  
+db.SubmitChanges();  
+```  
+  
+ No Visual Basic:  
+  
+```  
+Dim customersWithoutOrders As IEnumerable(Of Customer) = (From c In db.Customers _   
+    Where c.Orders.Count = 0 _   
+    Select c).ToList()  
+  
+db.Customers.DeleteAllOnSubmit(customersWithoutOrders)  
+db.SubmitChanges()  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteOnSubmit">
+      <MemberSignature Language="C#" Value="public void DeleteOnSubmit (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteOnSubmit(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.DeleteOnSubmit(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser excluída.</param>
+        <summary>Coloca uma entidade desta tabela em um estado de <see langword="pending delete" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A entidade removida não desaparecerá dos resultados da consulta até depois <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado. Entidades desconectadas primeiro devem ser anexadas antes de serem excluídos. Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+> [!NOTE]
+>  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]não dá suporte ou reconhece as operações de exclusão em cascata. Se você quiser excluir uma linha em uma tabela que tem restrições em relação a ela, você deve definir o `ON DELETE CASCADE` regra na restrição de chave estrangeira no banco de dados ou usar seu próprio código primeiro excluir os objetos filho que impedem que o objeto pai que está sendo excluído. Caso contrário, uma exceção será gerada.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Table#3](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.table/cs/program.cs#3)]
+ [!code-vb[System.Data.Linq.Table#3](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;TEntity&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerator`1&lt;!TEntity&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um enumerador que itera por meio da coleção.</summary>
+        <returns>Um enumerador que pode ser usado para iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetModifiedMembers">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.ModifiedMemberInfo[] GetModifiedMembers (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Data.Linq.ModifiedMemberInfo[] GetModifiedMembers(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.GetModifiedMembers(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ModifiedMemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade da qual obter a matriz.</param>
+        <summary>Retorna uma matriz de membros modificados que contêm os valores atuais e originais.</summary>
+        <returns>Uma matriz de membros modificados que contêm os valores atuais e originais.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNewBindingList">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IBindingList GetNewBindingList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ComponentModel.IBindingList GetNewBindingList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.GetNewBindingList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IBindingList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova lista de associação a uma fonte de dados.</summary>
+        <returns>Um novo <see cref="T:System.ComponentModel.IBindingList" /> para associação a uma fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista retornada dá suporte a operações padrão, como adições, exclusões, inserções e atualizações, mas salva deve ser explicitamente gerenciada pelo programador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOriginalEntityState">
+      <MemberSignature Language="C#" Value="public TEntity GetOriginalEntityState (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TEntity GetOriginalEntityState(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.GetOriginalEntityState(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TEntity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade cujo estado original deve ser retornado.</param>
+        <summary>Retorna um <see cref="T:System.Data.Linq.Table`1" /> instância que contém o estado original da entidade.</summary>
+        <returns>Um <see cref="T:System.Data.Linq.Table`1" /> instância que contém o estado original da entidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o estado original de uma entidade, desde que ele foi criado ou anexado a atual <xref:System.Data.Linq.DataContext>. O estado original de uma entidade que serializados e desserializado deve ser fornecido por um mecanismo de controle independente e fornecido quando a entidade é anexada a um novo <xref:System.Data.Linq.DataContext>. Para obter mais informações, consulte [recuperação de dados e operações de comida RUMINADA em aplicativos de N camadas (LINQ to SQL)](~/docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertAllOnSubmit&lt;TSubEntity&gt;">
+      <MemberSignature Language="C#" Value="public void InsertAllOnSubmit&lt;TSubEntity&gt; (System.Collections.Generic.IEnumerable&lt;TSubEntity&gt; entities) where TSubEntity : TEntity;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertAllOnSubmit&lt;(!TEntity) TSubEntity&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSubEntity&gt; entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.InsertAllOnSubmit``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSubEntity">
+          <Constraints>
+            <BaseTypeName>TEntity</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.Generic.IEnumerable&lt;TSubEntity&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSubEntity">O tipo dos elementos a ser inserido.</typeparam>
+        <param name="entities">As entidades a serem adicionadas.</param>
+        <summary>Adiciona todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado <see langword="pending insert" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não será adicionadas entidades nos resultados da consulta até depois <xref:System.Data.Linq.DataContext.SubmitChanges%2A> foi chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertOnSubmit">
+      <MemberSignature Language="C#" Value="public void InsertOnSubmit (TEntity entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InsertOnSubmit(!TEntity entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.InsertOnSubmit(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="TEntity" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser adicionada.</param>
+        <summary>Adiciona uma entidade em um estado <see langword="pending insert" /> a esse <see cref="T:System.Data.Linq.Table`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A entidade adicionada não aparecerá nos resultados da consulta dessa tabela até depois <xref:System.Data.Linq.DataContext.SubmitChanges%2A> foi chamado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.Table#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.table/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.Table#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Table`1.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o tipo das entidades contidas neste <see cref="T:System.Data.Linq.Table`1" /> instância tem uma chave primária.</summary>
+        <value>
+          <see langword="true" />Se o tipo de entidade não tem uma chave primária; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;TEntity&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;TEntity&gt; IEnumerable&lt;TEntity&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!TEntity&gt; System.Collections.Generic.IEnumerable&lt;TEntity&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Collections#Generic#IEnumerable&lt;TEntity&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela coleção.</summary>
+        <returns>Um enumerador que pode ser usado para iterar pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela coleção.</summary>
+        <returns>Um enumerador que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.ContainsListCollection">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IListSource.ContainsListCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IListSource.ContainsListCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Table`1.System#ComponentModel#IListSource#ContainsListCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é uma coleção de <see cref="T:System.Collections.IList" /> objetos.</summary>
+        <value>
+          <see langword="true" /> se a coleção for uma coleção de objetos <see cref="T:System.Collections.IList" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.ComponentModel.IListSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IListSource.GetList">
+      <MemberSignature Language="C#" Value="System.Collections.IList IListSource.GetList ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IList System.ComponentModel.IListSource.GetList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#ComponentModel#IListSource#GetList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IList" /> que pode ser associado a uma fonte de dados de um objeto que não implementa um <see cref="T:System.Collections.IList" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IList" /> que pode ser associado a uma fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.ComponentModel.IListSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.Attach">
+      <MemberSignature Language="C#" Value="void ITable.Attach (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.Attach(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#Attach(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser anexada.</param>
+        <summary>Anexa uma entidade para o <see cref="T:System.Data.Linq.DataContext" /> em um estado inalterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.Attach">
+      <MemberSignature Language="C#" Value="void ITable.Attach (object entity, bool asModified);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.Attach(object entity, bool asModified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#Attach(System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="asModified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser anexada.</param>
+        <param name="asModified">
+          <see langword="true" />Para anexar a entidade como modificada; <see langword="false" /> anexado a entidade como sem modificações.</param>
+        <summary>Anexa todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado inalterado ou modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.Attach">
+      <MemberSignature Language="C#" Value="void ITable.Attach (object entity, object original);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.Attach(object entity, object original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#Attach(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="original" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser anexada.</param>
+        <param name="original">Uma instância do mesmo tipo de entidade com membros de dados que contém os valores originais.</param>
+        <summary>Anexa uma entidade para o <see cref="T:System.Data.Linq.DataContext" /> em um estado modificado ou não modificado especificando a entidade e seu estado original.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.AttachAll">
+      <MemberSignature Language="C#" Value="void ITable.AttachAll (System.Collections.IEnumerable entities);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.AttachAll(class System.Collections.IEnumerable entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#AttachAll(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="entities">A coleção de entidades a serem anexados.</param>
+        <summary>Anexa todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado inalterado ou modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.AttachAll">
+      <MemberSignature Language="C#" Value="void ITable.AttachAll (System.Collections.IEnumerable entities, bool asModified);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.AttachAll(class System.Collections.IEnumerable entities, bool asModified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#AttachAll(System.Collections.IEnumerable,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+        <Parameter Name="asModified" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="entities">A coleção de entidades a ser anexado.</param>
+        <param name="asModified">
+          <see langword="true" />Para anexar entidades como modificada; <see langword="false" /> anexar entidades como sem modificações.</param>
+        <summary>Anexa todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado inalterado ou modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.DeleteAllOnSubmit">
+      <MemberSignature Language="C#" Value="void ITable.DeleteAllOnSubmit (System.Collections.IEnumerable entities);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.DeleteAllOnSubmit(class System.Collections.IEnumerable entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#DeleteAllOnSubmit(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="entities">As entidades que está sendo removidas.</param>
+        <summary>Coloca todas as entidades da coleção em um estado <see langword="pending delete" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.DeleteOnSubmit">
+      <MemberSignature Language="C#" Value="void ITable.DeleteOnSubmit (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.DeleteOnSubmit(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#DeleteOnSubmit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser removido.</param>
+        <summary>Coloca uma entidade desta tabela em um estado de <see langword="pending delete" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+> [!NOTE]
+>  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]não dá suporte ou reconhece as operações de exclusão em cascata. Se você quiser excluir uma linha em uma tabela que tem restrições em relação a ela, você deve definir o `ON DELETE CASCADE` regra na restrição de chave estrangeira no banco de dados ou usar seu próprio código primeiro excluir os objetos filho que impedem que o objeto pai que está sendo excluído. Caso contrário, uma exceção será gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.GetModifiedMembers">
+      <MemberSignature Language="C#" Value="System.Data.Linq.ModifiedMemberInfo[] ITable.GetModifiedMembers (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.Data.Linq.ModifiedMemberInfo[] System.Data.Linq.ITable.GetModifiedMembers(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#GetModifiedMembers(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("NOT IMPLEMENTED YET")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ModifiedMemberInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade da qual obter os membros modificados.</param>
+        <summary>Retorna uma matriz de membros modificados que contêm os valores atuais e originais.</summary>
+        <returns>Uma matriz de membros modificados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.GetOriginalEntityState">
+      <MemberSignature Language="C#" Value="object ITable.GetOriginalEntityState (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Data.Linq.ITable.GetOriginalEntityState(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#GetOriginalEntityState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("NOT IMPLEMENTED YET")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade cujo estado original deve ser acessado.</param>
+        <summary>Recupera os valores originais de uma determinada entidade.</summary>
+        <returns>Uma cópia da entidade original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.InsertAllOnSubmit">
+      <MemberSignature Language="C#" Value="void ITable.InsertAllOnSubmit (System.Collections.IEnumerable entities);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.InsertAllOnSubmit(class System.Collections.IEnumerable entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#InsertAllOnSubmit(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="entities">A coleção de entidades a ser adicionada.</param>
+        <summary>Adiciona todas as entidades de uma coleção ao <see cref="T:System.Data.Linq.DataContext" /> em um estado <see langword="pending insert" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Data.Linq.ITable.InsertOnSubmit">
+      <MemberSignature Language="C#" Value="void ITable.InsertOnSubmit (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Data.Linq.ITable.InsertOnSubmit(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Data#Linq#ITable#InsertOnSubmit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser adicionada.</param>
+        <summary>Adiciona uma entidade em um <see langword="pending insert" /> estado para essa tabela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Data.Linq.ITable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.IQueryable.ElementType">
+      <MemberSignature Language="C#" Value="Type System.Linq.IQueryable.ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type System.Linq.IQueryable.ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Table`1.System#Linq#IQueryable#ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de elemento (s) que é retornadas quando a árvore de expressão associada a esse objeto é executada.</summary>
+        <value>O tipo de elemento (s) que é retornadas quando a árvore de expressão associada a esse objeto é executada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Linq.IQueryable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.IQueryable.Expression">
+      <MemberSignature Language="C#" Value="System.Linq.Expressions.Expression System.Linq.IQueryable.Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression System.Linq.IQueryable.Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Table`1.System#Linq#IQueryable#Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a árvore de expressão que está associada esta instância do <see cref="T:System.Linq.IQueryable" />.</summary>
+        <value>A <see cref="T:System.Linq.Expressions.Expression" /> associada a essa instância de <see cref="T:System.Linq.IQueryable" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Linq.IQueryable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.IQueryable.Provider">
+      <MemberSignature Language="C#" Value="System.Linq.IQueryProvider System.Linq.IQueryable.Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.IQueryProvider System.Linq.IQueryable.Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Table`1.System#Linq#IQueryable#Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o provedor de consulta associado esta fonte de dados.</summary>
+        <value>A <see cref="T:System.Linq.IQueryProvider" /> associado a essa fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Linq.IQueryable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.IQueryProvider.CreateQuery">
+      <MemberSignature Language="C#" Value="System.Linq.IQueryable IQueryProvider.CreateQuery (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Linq.IQueryable System.Linq.IQueryProvider.CreateQuery(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#CreateQuery(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A expressão de consulta do qual a avaliação é executada.</param>
+        <summary>Constrói um objeto <see cref="T:System.Linq.IQueryable" /> que pode avaliar a consulta representada por uma árvore de expressão especificada.</summary>
+        <returns>Um objeto <see cref="T:System.Linq.IQueryable" /> que pode avaliar a consulta representada pela árvore de expressão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Linq.IQueryProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.IQueryProvider.CreateQuery&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="System.Linq.IQueryable&lt;TResult&gt; IQueryProvider.CreateQuery&lt;TResult&gt; (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Linq.IQueryable`1&lt;!!TResult&gt; System.Linq.IQueryProvider.CreateQuery&lt;TResult&gt;(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#CreateQuery``1(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo de dados na tabela.</typeparam>
+        <param name="expression">A expressão de consulta do qual a avaliação é executada.</param>
+        <summary>Constrói um objeto <see cref="T:System.Linq.IQueryable`1" /> que pode avaliar a consulta representada por uma árvore de expressão especificada.</summary>
+        <returns>Um objeto <see cref="T:System.Linq.IQueryable`1" /> que pode avaliar a consulta representada pela árvore de expressão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Linq.IQueryProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.IQueryProvider.Execute">
+      <MemberSignature Language="C#" Value="object IQueryProvider.Execute (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Linq.IQueryProvider.Execute(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#Execute(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">A expressão de consulta a executar.</param>
+        <summary>Executa a consulta representada por uma árvore de expressão especificada.</summary>
+        <returns>O valor resultante da execução da consulta especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Linq.IQueryProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Linq.IQueryProvider.Execute&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="TResult IQueryProvider.Execute&lt;TResult&gt; (System.Linq.Expressions.Expression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance !!TResult System.Linq.IQueryProvider.Execute&lt;TResult&gt;(class System.Linq.Expressions.Expression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.System#Linq#IQueryProvider#Execute``1(System.Linq.Expressions.Expression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResult</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="expression" Type="System.Linq.Expressions.Expression" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo de dados na tabela.</typeparam>
+        <param name="expression">A expressão de consulta a executar.</param>
+        <summary>Executa a consulta fortemente tipada representada por uma árvore de expressão especificada.</summary>
+        <returns>O valor resultante da execução da consulta especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Linq.Table%601> é convertida em uma interface de <xref:System.Linq.IQueryProvider>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Table`1.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa a tabela.</summary>
+        <returns>Uma representação de cadeia de caracteres da tabela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

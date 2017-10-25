@@ -1,0 +1,265 @@
+<Type Name="LinkedListNode&lt;T&gt;" FullName="System.Collections.Generic.LinkedListNode&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class LinkedListNode&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LinkedListNode`1&lt;T&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.LinkedListNode`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Especifica o tipo de elemento da lista vinculada.</typeparam>
+    <summary>Representa um nó em um <see cref="T:System.Collections.Generic.LinkedList`1" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada elemento do <xref:System.Collections.Generic.LinkedList%601> coleção é um <xref:System.Collections.Generic.LinkedListNode%601>.  O <xref:System.Collections.Generic.LinkedListNode%601> contém um valor, uma referência para o <xref:System.Collections.Generic.LinkedList%601> que pertence a uma referência para o próximo nó e uma referência para o nó anterior.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Generic.LinkedListNode%601>, adiciona-o a um <xref:System.Collections.Generic.LinkedList%601>e rastreia os valores de suas propriedades como o <xref:System.Collections.Generic.LinkedList%601> alterações.  
+  
+ [!code-cpp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp#1)]
+ [!code-csharp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/CS/llnctor.cs#1)]
+ [!code-vb[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedListNode (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedListNode`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser contido no <see cref="T:System.Collections.Generic.LinkedListNode`1" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.LinkedListNode`1" />, que contém o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.LinkedListNode%601.List%2A>, <xref:System.Collections.Generic.LinkedListNode%601.Next%2A>, e <xref:System.Collections.Generic.LinkedListNode%601.Previous%2A> propriedades são definidas como `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Generic.LinkedListNode%601>, adiciona-o a um <xref:System.Collections.Generic.LinkedList%601>e rastreia os valores de suas propriedades como o <xref:System.Collections.Generic.LinkedList%601> alterações.  
+  
+ [!code-cpp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp#1)]
+ [!code-csharp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/CS/llnctor.cs#1)]
+ [!code-vb[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedList&lt;T&gt; List { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.LinkedList`1&lt;!T&gt; List" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedListNode`1.List" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedList&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Collections.Generic.LinkedList`1" /> ao qual o <see cref="T:System.Collections.Generic.LinkedListNode`1" /> pertence.</summary>
+        <value>Uma referência ao <see cref="T:System.Collections.Generic.LinkedList`1" /> ao qual o <see cref="T:System.Collections.Generic.LinkedListNode`1" /> pertence ou <see langword="null" /> se o <see cref="T:System.Collections.Generic.LinkedListNode`1" /> não estiver vinculado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Generic.LinkedListNode%601>, adiciona-o a um <xref:System.Collections.Generic.LinkedList%601>e rastreia os valores de suas propriedades como o <xref:System.Collections.Generic.LinkedList%601> alterações.  
+  
+ [!code-cpp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp#1)]
+ [!code-csharp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/CS/llnctor.cs#1)]
+ [!code-vb[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; Next { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; Next" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedListNode`1.Next" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o próximo nó em <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <value>Uma referência para o próximo nó no <see cref="T:System.Collections.Generic.LinkedList`1" /> ou <see langword="null" /> se o nó atual é o último elemento (<see cref="P:System.Collections.Generic.LinkedList`1.Last" />) da <see cref="T:System.Collections.Generic.LinkedList`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Generic.LinkedListNode%601>, adiciona-o a um <xref:System.Collections.Generic.LinkedList%601>e rastreia os valores de suas propriedades como o <xref:System.Collections.Generic.LinkedList%601> alterações.  
+  
+ [!code-cpp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp#1)]
+ [!code-csharp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/CS/llnctor.cs#1)]
+ [!code-vb[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Previous">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; Previous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; Previous" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedListNode`1.Previous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó anterior no <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <value>Uma referência ao nó anterior no <see cref="T:System.Collections.Generic.LinkedList`1" /> ou <see langword="null" />, se o nó atual for o primeiro elemento (<see cref="P:System.Collections.Generic.LinkedList`1.First" />) da <see cref="T:System.Collections.Generic.LinkedList`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Generic.LinkedListNode%601>, adiciona-o a um <xref:System.Collections.Generic.LinkedList%601>e rastreia os valores de suas propriedades como o <xref:System.Collections.Generic.LinkedList%601> alterações.  
+  
+ [!code-cpp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp#1)]
+ [!code-csharp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/CS/llnctor.cs#1)]
+ [!code-vb[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedListNode`1.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor contido no nó.</summary>
+        <value>O valor contido no nó.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida no <xref:System.Collections.Generic.LinkedListNode%601.%23ctor%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Generic.LinkedListNode%601>, adiciona-o a um <xref:System.Collections.Generic.LinkedList%601>e rastreia os valores de suas propriedades como o <xref:System.Collections.Generic.LinkedList%601> alterações.  
+  
+ [!code-cpp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/cpp/llnctor.cpp#1)]
+ [!code-csharp[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/CS/llnctor.cs#1)]
+ [!code-vb[System.Collections.Generic.LinkedListNode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedListNode/VB/llnctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,278 @@
+<Type Name="CipherReference" FullName="System.Security.Cryptography.Xml.CipherReference">
+  <TypeSignature Language="C#" Value="public sealed class CipherReference : System.Security.Cryptography.Xml.EncryptedReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CipherReference extends System.Security.Cryptography.Xml.EncryptedReference" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.CipherReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.EncryptedReference</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o <see langword="&lt;CipherReference&gt;" /> elemento na criptografia de XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa o `<CipherReference>` elemento na criptografia de XML. Ele identifica uma fonte que, quando processado, produz os dados criptografados.  
+  
+ Real criptografado dados referenciados pelo `<CipherReference>` é obtido pelo seguinte processo. O `<CipherReference> URI` propriedade contém um identificador de recurso uniforme (URI) que está referenciado. Se o `<CipherReference>` elemento também contém uma cadeia de transformação, os dados resultantes de URI de referência são transformados conforme especificado para produzir os dados criptografados. Por exemplo, se os dados criptografados forem codificado na base64 em um documento XML, as transformações deverá especificar uma expressão XPath seguida por uma decodificação de base64 para que os dados criptografados podem ser extraídos.  
+  
+ A sintaxe do URI e transformações é semelhante de assinaturas digitais XML.  No entanto, em assinaturas digitais XML, geração e processamento de validação começam com os mesmos dados de origem em realizar essa transformação na mesma ordem. Na criptografia de XML, o aplicativo de descriptografia tem apenas os dados criptografados e as transformações especificadas. As transformações são enumeradas na ordem necessária obter os dados criptografados.  
+  
+ **Observação** por padrão, você não pode cancelar as referências de codificação de documentos com fontes desconhecidas, como arquivos de um site, porque o <xref:System.Security.Cryptography.Xml.EncryptedXml.DocumentEvidence%2A> é de propriedade **nulo**. Por exemplo, quando você tenta descriptografar um arquivo que contém um `<CipherReference>` elemento que faz referência a um arquivo na Web, um <xref:System.Security.SecurityException> é gerada, mesmo se a solicitação é feita por um assembly totalmente confiável.  
+  
+ Se tiver certeza de que os documentos que são descriptografia podem ser confiáveis, você pode alterar esse comportamento para aplicativos totalmente confiáveis usando o código a seguir:  
+  
+```  
+Evidence ev = new Evidence();  
+ev.AddHost (new Zone(SecurityZone.MyComputer));  
+EncryptedXml exml = new EncryptedXml(doc, ev);  
+```  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de <xref:System.Security.Cryptography.Xml.CipherReference>.  
+  
+ [!code-cpp[cryptography.Xml.CipherReference#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CPP/example.cpp#1)]
+ [!code-csharp[cryptography.Xml.CipherReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CS/example.cs#1)]
+ [!code-vb[cryptography.Xml.CipherReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.CipherReference/VB/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.CipherReference" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Cryptography.Xml.CipherReference> objeto que fornece informações de referência para um <xref:System.Security.Cryptography.Xml.CipherData> objeto. As informações de referência fornecem a localização dos dados criptografados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CipherReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherReference.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.CipherReference" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Cryptography.Xml.CipherReference> objeto que fornece informações de referência para um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de <xref:System.Security.Cryptography.Xml.CipherReference>.  
+  
+ [!code-cpp[cryptography.Xml.CipherReference#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CPP/example.cpp#1)]
+ [!code-csharp[cryptography.Xml.CipherReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CS/example.cs#1)]
+ [!code-vb[cryptography.Xml.CipherReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.CipherReference/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CipherReference (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherReference.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Um URI Uniform Resource Identifier () apontando para os dados criptografados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.CipherReference" /> classe usando o Uniform Resource identificador (URI especificado).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Cryptography.Xml.CipherReference> objeto usando um identificador de recurso uniforme (URI) que aponta para os dados criptografados. O objeto é usado para fornecer informações de referência para um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+ Você pode usar um URI para designar um arquivo XML que contém dados criptografados. Por exemplo:  
+  
+ `String uri = "http://www.woodgrovebank.com/document.xml";`  
+  
+ Você também pode usar um URI parcial para designar que apenas uma parte de um documento XML é sejam criptografados. Por exemplo, suponha que um documento XML chamado Document contém duas `MyForm` elementos conforme mostrado no exemplo de código XML a seguir:  
+  
+ `<MyForm Id='Form1'>`  
+  
+ `<! -- Form data here -->`  
+  
+ `</MyForm>`  
+  
+ `<MyForm Id='Form2'>`  
+  
+ `<! -- Form data here -->`  
+  
+ `</MyForm>`  
+  
+ Você pode criptografar somente o conteúdo no `Form2` usando um URI, como o seguinte:  
+  
+ `String uri = "http://www.woodgrovebank.com/document.xml#Form2";`  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de <xref:System.Security.Cryptography.Xml.CipherReference>.  
+  
+ [!code-cpp[cryptography.Xml.CipherReference#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CPP/example.cpp#1)]
+ [!code-csharp[cryptography.Xml.CipherReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CS/example.cs#1)]
+ [!code-vb[cryptography.Xml.CipherReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.CipherReference/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CipherReference (string uri, System.Security.Cryptography.Xml.TransformChain tc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri, class System.Security.Cryptography.Xml.TransformChain tc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherReference.#ctor(System.String,System.Security.Cryptography.Xml.TransformChain)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="transformChain" Type="System.Security.Cryptography.Xml.TransformChain" />
+      </Parameters>
+      <Docs>
+        <param name="uri">Um URI Uniform Resource Identifier () apontando para os dados criptografados.</param>
+        <param name="tc">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.CipherReference" /> usando as informações de cadeia especificadas do identificador de recurso uniforme (URI) e a transformação de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Security.Cryptography.Xml.CipherReference> objeto usando uma cadeia de identificador de recurso uniforme (URI) e a transformação para indicar os dados criptografados. O objeto é usado para fornecer informações de referência para um <xref:System.Security.Cryptography.Xml.CipherData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de <xref:System.Security.Cryptography.Xml.CipherReference>.  
+  
+ [!code-cpp[cryptography.Xml.CipherReference#1](~/samples/snippets/cpp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CPP/example.cpp#1)]
+ [!code-csharp[cryptography.Xml.CipherReference#1](~/samples/snippets/csharp/VS_Snippets_CLR/cryptography.Xml.CipherReference/CS/example.cs#1)]
+ [!code-vb[cryptography.Xml.CipherReference#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/cryptography.Xml.CipherReference/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public override System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherReference.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a representação XML de um <see cref="T:System.Security.Cryptography.Xml.CipherReference" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlElement" /> que representa o <see langword="&lt;CipherReference&gt;" /> elemento na criptografia de XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para produzir o `<CipherReference>` elemento no XML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma maneira de usar o <xref:System.Security.Cryptography.Xml.CipherReference.GetXml%2A> método.  
+  
+ [!code-cpp[CipherReference2#1](~/samples/snippets/cpp/VS_Snippets_CLR/CipherReference2/CPP/example.cpp#1)]
+ [!code-csharp[CipherReference2#1](~/samples/snippets/csharp/VS_Snippets_CLR/CipherReference2/CS/example.cs#1)]
+ [!code-vb[CipherReference2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CipherReference2/VB/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O valor de <see cref="T:System.Security.Cryptography.Xml.CipherReference" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public override void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.CipherReference.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Xml.XmlElement" /> objeto que representa um elemento XML a ser usado como referência.</param>
+        <summary>Carrega informações de XML no <see langword="&lt;CipherReference&gt;" /> elemento na criptografia de XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para carregar um elemento XML existente para o <xref:System.Security.Cryptography.Xml.CipherReference> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="value" /> fornecido é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

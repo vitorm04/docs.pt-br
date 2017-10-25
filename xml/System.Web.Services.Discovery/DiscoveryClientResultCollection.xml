@@ -1,0 +1,183 @@
+<Type Name="DiscoveryClientResultCollection" FullName="System.Web.Services.Discovery.DiscoveryClientResultCollection">
+  <TypeSignature Language="C#" Value="public sealed class DiscoveryClientResultCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DiscoveryClientResultCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção de objetos <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryClientResultCollection#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientResultCollection/CPP/discoveryclientresultcollection.cpp#1)]
+ [!code-csharp[DiscoveryClientResultCollection#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientResultCollection/CS/discoveryclientresultcollection.cs#1)]
+ [!code-vb[DiscoveryClientResultCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientResultCollection/VB/discoveryclientresultcollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryClientResultCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientResultCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.Services.Discovery.DiscoveryClientResult value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.Services.Discovery.DiscoveryClientResult value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientResultCollection.Add(System.Web.Services.Discovery.DiscoveryClientResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.Services.Discovery.DiscoveryClientResult" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> para adicionar ao <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</param>
+        <summary>Adiciona um <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> para o <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</summary>
+        <returns>A posição na qual a <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryClientResult_Filename#6](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientResult_Filename/CPP/discoveryclientresult_filename.cpp#6)]
+ [!code-csharp[DiscoveryClientResult_Filename#6](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientResult_Filename/CS/discoveryclientresult_filename.cs#6)]
+ [!code-vb[DiscoveryClientResult_Filename#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientResult_Filename/VB/discoveryclientresult_filename.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.Services.Discovery.DiscoveryClientResult value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.Services.Discovery.DiscoveryClientResult value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientResultCollection.Contains(System.Web.Services.Discovery.DiscoveryClientResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.Services.Discovery.DiscoveryClientResult" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> a ser localizado no <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</param>
+        <summary>Determina se o <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" /> contém um determinado <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" />.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> for encontrado no <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryClientResult_Filename#7](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientResult_Filename/CPP/discoveryclientresult_filename.cpp#7)]
+ [!code-csharp[DiscoveryClientResult_Filename#7](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientResult_Filename/CS/discoveryclientresult_filename.cs#7)]
+ [!code-vb[DiscoveryClientResult_Filename#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientResult_Filename/VB/discoveryclientresult_filename.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryClientResult this[int i] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Discovery.DiscoveryClientResult Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientResultCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryClientResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i">O índice de base zero de <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> para obter ou definir.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> na posição <paramref name="i" /> do <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</summary>
+        <value>O <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[index]`.  
+  
+   
+  
+## Examples  
+ [!code-cpp[DiscoveryClientResult_Filename#8](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientResult_Filename/CPP/discoveryclientresult_filename.cpp#8)]
+ [!code-csharp[DiscoveryClientResult_Filename#8](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientResult_Filename/CS/discoveryclientresult_filename.cs#8)]
+ [!code-vb[DiscoveryClientResult_Filename#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientResult_Filename/VB/discoveryclientresult_filename.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="i" /> não é um índice válido no <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Discovery.DiscoveryClientResult value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Discovery.DiscoveryClientResult value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientResultCollection.Remove(System.Web.Services.Discovery.DiscoveryClientResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.Services.Discovery.DiscoveryClientResult" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> a ser removido de <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</param>
+        <summary>Remove a primeira ocorrência de um determinado <see cref="T:System.Web.Services.Discovery.DiscoveryClientResult" /> do <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientResult> elementos que seguem o removido <xref:System.Web.Services.Discovery.DiscoveryClientResult> mover para cima para ocupar o ponto vagas.  
+  
+   
+  
+## Examples  
+ DiscoveryClientResult_Filename n º 1  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

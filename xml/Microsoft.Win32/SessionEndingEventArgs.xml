@@ -1,0 +1,90 @@
+<Type Name="SessionEndingEventArgs" FullName="Microsoft.Win32.SessionEndingEventArgs">
+  <TypeSignature Language="C#" Value="public class SessionEndingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SessionEndingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SessionEndingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:Microsoft.Win32.SystemEvents.SessionEnding" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:Microsoft.Win32.SystemEvents.SessionEnding> evento é gerado quando o usuário está tentando fazer logoff ou desligar o sistema.  
+  
+ Isso <xref:Microsoft.Win32.SystemEvents.SessionEnding> evento às vezes pode ser cancelado. Definindo o <xref:Microsoft.Win32.SessionEndingEventArgs.Cancel%2A> propriedade de um <xref:Microsoft.Win32.SessionEndingEventArgs> para `false` solicitará que a sessão continuar em vez de final. Fazer essa solicitação não fornece nenhuma garantia de que a sessão não será finalizada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SessionEndingEventArgs (Microsoft.Win32.SessionEndReasons reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Win32.SessionEndReasons reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SessionEndingEventArgs.#ctor(Microsoft.Win32.SessionEndReasons)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reason" Type="Microsoft.Win32.SessionEndReasons" />
+      </Parameters>
+      <Docs>
+        <param name="reason">Uma da <see cref="T:Microsoft.Win32.SessionEndReasons" /> que especifica como a sessão termina.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Win32.SessionEndingEventArgs" /> classe usando o valor especificado, que indica o tipo de evento de fechamento de sessão que está ocorrendo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SessionEndingEventArgs.Cancel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja cancelar a solicitação do usuário para encerrar a sessão.</summary>
+        <value>
+          <see langword="true" />Para cancelar a solicitação do usuário para encerrar a sessão; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando definido como `true`, essa propriedade solicita que a sessão continuar a executar. Ele fornece nenhuma garantia de que a sessão não será finalizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Microsoft.Win32.SessionEndReasons Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Win32.SessionEndReasons Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SessionEndingEventArgs.Reason" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionEndReasons</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o motivo pelo qual que a sessão está terminando.</summary>
+        <value>Uma da <see cref="T:Microsoft.Win32.SessionEndReasons" /> valores que especifica como a sessão está terminando.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

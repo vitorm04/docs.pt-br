@@ -1,0 +1,193 @@
+<Type Name="Clock" FullName="Microsoft.VisualBasic.Devices.Clock">
+  <TypeSignature Language="C#" Value="public class Clock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Clock extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.Clock" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades para acessar a hora local atual e o Tempo Universal Coordenado (equivalente ao Horário do Meridiano de Greenwich) no relógio do sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Clock` objeto fornece propriedades para localizar a hora local atual para o computador e a hora UTC. Ele também expõe a contagem de milissegundos do timer do sistema do computador.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Clock.LocalTime` propriedade para exibir a hora local do computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#21)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Clock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Clock.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.Devices.Clock" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GmtTime">
+      <MemberSignature Language="C#" Value="public DateTime GmtTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime GmtTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Clock.GmtTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="Date" /> objeto que contém a data local atual e a hora no computador, expressada como UTC (GMT).</summary>
+        <value>Um <see langword="Date" /> objeto que contém a data e hora atuais expressada como hora UTC (GMT).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Clock.GmtTime` propriedade tem o mesmo comportamento que o <xref:System.DateTime.UtcNow%2A?displayProperty=nameWithType> propriedade.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Clock.GmtTime` propriedade para exibir a hora GMT do computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalTime">
+      <MemberSignature Language="C#" Value="public DateTime LocalTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LocalTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Clock.LocalTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see langword="Date" /> que contém a data e hora locais atuais nesse computador.</summary>
+        <value>Um objeto <see langword="Date" /> que contém a data e hora locais atuais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Clock.LocalTime` propriedade tem o mesmo comportamento que o <xref:System.DateTime.Now%2A?displayProperty=nameWithType> propriedade.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Clock.LocalTime` propriedade para exibir a hora local do computador no qual o código é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TickCount">
+      <MemberSignature Language="C#" Value="public int TickCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TickCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Clock.TickCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a contagem de milissegundos do timer do sistema do computador.</summary>
+        <value>Um <see langword="Integer" /> que contém a contagem de milissegundos do timer do sistema do computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `TickCount` propriedade fornece acesso ao timer do sistema do computador, que é executado quando o computador está ativo. A resolução do timer não é menor que 500 milissegundos.  
+  
+ Você pode usar essa propriedade para tornar o comportamento do aplicativo dependente no período de tempo que ele está em execução, ou você pode usá-lo para rotular eventos, que são independentes do relógio do computador.  
+  
+> [!CAUTION]
+>  Quando o valor da `TickCount` propriedade atinge o máximo valor inteiro (<xref:System.Int32.MaxValue>), ele vai para o valor mínimo inteiro (<xref:System.Int32.MinValue>), um número negativo e continua a incrementar.  
+  
+ Se o computador é executado continuamente, `TickCount` incrementos de zero até o máximo valor inteiro em aproximadamente 24.9 dias.  
+  
+ O `TickCount` propriedade incrementa somente quando o sistema operacional está em execução; ele pausa quando o computador entra em alguns modos de economia de energia, como em espera ou hibernação. O `TickCount` propriedade não está relacionada à configuração do relógio do computador.  
+  
+ Use o <xref:Microsoft.VisualBasic.Devices.Clock.LocalTime%2A> propriedade ou <xref:Microsoft.VisualBasic.Devices.Clock.GmtTime%2A> propriedade para obter a data local atual e a hora neste computador.  
+  
+ O `My.Computer.Clock.TickCount` propriedade tem o mesmo comportamento que o <xref:System.Environment.TickCount%2A?displayProperty=nameWithType> propriedade.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|**Sim**|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|**Sim**|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `My.Computer.Clock.TickCount` propriedade para executar uma tarefa em um loop para um determinado número de segundos, mesmo se a hora do sistema for alterada enquanto ele é executado.  
+  
+ [!code-vb[VbVbalrMyComputer#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,496 @@
+<Type Name="Audio" FullName="Microsoft.VisualBasic.Devices.Audio">
+  <TypeSignature Language="C#" Value="public class Audio" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Audio extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.Audio" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para reproduzir sons.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `My.Computer.Audio.Play` e `My.Computer.Audio.PlaySystemSound` métodos para reproduzir arquivos de som. wav e sons do sistema.  
+  
+ Para obter mais informações, consulte [sons de jogo](~/docs/visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ O `My.Computer.Audio.Play` método toca o som especificado em segundo plano quando `AudioPlayMode.Background` for especificado.  
+  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
+  
+ Esse código pode ser executado somente em um aplicativo do Windows Forms.  
+  
+ O nome do arquivo deve fazer referência a um arquivo de som em seu sistema.  
+  
+ Para simplificar o gerenciamento de seus arquivos de som, considere armazenar os arquivos como recursos do aplicativo. Os arquivos possam ser acessados por meio de `My.Resources` objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Audio ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Audio.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.Devices.Audio" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [Objetos](http://msdn.microsoft.com/library/651c73e4-dca8-402b-9c6b-e3902b3a3f4b)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public void Play (string location);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Play(string location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Audio.Play(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="location">Um <see langword="String" /> que contém o nome do arquivo de som</param>
+        <summary>Reproduz um arquivo de som .wav.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Play` método reproduz o arquivo de som armazenado como um arquivo em `location`, como uma matriz de bytes em `data`, ou como um fluxo no `stream`.  
+  
+ Se a sobrecarga que usa apenas o `location` parâmetro for usado, o `Play` método toca o som em segundo plano. Caso contrário, o `playMode` parâmetro determina como o som será reproduzido.  
+  
+|`playMode`|Descrição|  
+|-|-|  
+|`AudioPlayMode.Background`|Toca o som em segundo plano. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.BackgroundLoop`|Toca o som no plano de fundo até que o <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A> método é chamado. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.WaitToComplete`|Reproduz o som e aguarda até que ele seja concluída antes de continua o código de chamada.|  
+  
+ A reprodução em segundo plano permite que o aplicativo execute outro código enquanto o som é reproduzido.  
+  
+ Para obter mais informações, consulte [sons de jogo](~/docs/visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ O `My.Computer.Audio.Play` método toca o som especificado em segundo plano quando `PlayMode.Background` for especificado.  
+  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
+  
+ Este exemplo de código só pode ser executado em um aplicativo Windows Forms.  
+  
+ O nome do arquivo deve fazer referência a um arquivo de som em seu sistema.  
+  
+ Para simplificar o gerenciamento de seus arquivos de som, considere armazenar os arquivos como recursos do aplicativo. Eles podem ser acessados por meio de `My.Resources` objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="location" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.IO.IOException">O usuário não tem permissões suficientes para acessar o arquivo nomeado por <paramref name="location" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho do arquivo está mal formado em <paramref name="location" />.</exception>
+        <exception cref="T:System.IO.PathTooLongException">O nome do caminho em <paramref name="location" /> é muito longo.</exception>
+        <exception cref="T:System.Security.SecurityException">Existe uma situação de confiança parcial na qual o usuário não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Controla a capacidade de acessar arquivos e pastas. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlThread" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public void Play (byte[] data, Microsoft.VisualBasic.AudioPlayMode playMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Play(unsigned int8[] data, valuetype Microsoft.VisualBasic.AudioPlayMode playMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Audio.Play(System.Byte[],Microsoft.VisualBasic.AudioPlayMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="playMode" Type="Microsoft.VisualBasic.AudioPlayMode" />
+      </Parameters>
+      <Docs>
+        <param name="data">
+          Matriz <see langword="Byte" /> que representa o arquivo de som.</param>
+        <param name="playMode">
+          O modo <see cref="T:Microsoft.VisualBasic.AudioPlayMode" /> de reprodução do som. Por padrão, <see langword="AudioPlayMode.Background" />.</param>
+        <summary>Reproduz um arquivo de som .wav.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Play` método reproduz o arquivo de som armazenado como um arquivo em `location`, como uma matriz de bytes em `data`, ou como um fluxo no `stream`.  
+  
+ Se a sobrecarga que usa apenas o `location` parâmetro for usado, o `Play` método toca o som em segundo plano. Caso contrário, o `playMode` parâmetro determina como o som será reproduzido.  
+  
+|`playMode`|Descrição|  
+|-|-|  
+|`AudioPlayMode.Background`|Toca o som em segundo plano. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.BackgroundLoop`|Toca o som no plano de fundo até que o <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A> método é chamado. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.WaitToComplete`|Reproduz o som e aguarda até que ele seja concluída antes de continua o código de chamada.|  
+  
+ A reprodução em segundo plano permite que o aplicativo execute outro código enquanto o som é reproduzido.  
+  
+ Para obter mais informações, consulte [sons de jogo](~/docs/visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ O `My.Computer.Audio.Play` método toca o som especificado em segundo plano quando `PlayMode.Background` for especificado.  
+  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
+  
+ Este exemplo de código só pode ser executado em um aplicativo Windows Forms.  
+  
+ O nome do arquivo deve fazer referência a um arquivo de som em seu sistema.  
+  
+ Para simplificar o gerenciamento de seus arquivos de som, considere armazenar os arquivos como recursos do aplicativo. Eles podem ser acessados por meio de `My.Resources` objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="data" /> é <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="playMode" /> não é um dos valores de enumeração <see cref="T:Microsoft.VisualBasic.AudioPlayMode" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Existe uma situação de confiança parcial na qual o usuário não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlThread" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public void Play (System.IO.Stream stream, Microsoft.VisualBasic.AudioPlayMode playMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Play(class System.IO.Stream stream, valuetype Microsoft.VisualBasic.AudioPlayMode playMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Audio.Play(System.IO.Stream,Microsoft.VisualBasic.AudioPlayMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="playMode" Type="Microsoft.VisualBasic.AudioPlayMode" />
+      </Parameters>
+      <Docs>
+        <param name="stream">
+          <see cref="T:System.IO.Stream" /> que representa o arquivo de som.</param>
+        <param name="playMode">
+          O modo <see cref="T:Microsoft.VisualBasic.AudioPlayMode" /> de reprodução do som. Por padrão, <see langword="AudioPlayMode.Background" />.</param>
+        <summary>Reproduz um arquivo de som .wav.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Play` método reproduz o arquivo de som armazenado como um arquivo em `location`, como uma matriz de bytes em `data`, ou como um fluxo no `stream`.  
+  
+ Se a sobrecarga que usa apenas o `location` parâmetro for usado, o `Play` método toca o som em segundo plano. Caso contrário, o `playMode` parâmetro determina como o som será reproduzido.  
+  
+|`playMode`|Descrição|  
+|-|-|  
+|`AudioPlayMode.Background`|Toca o som em segundo plano. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.BackgroundLoop`|Toca o som no plano de fundo até que o <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A> método é chamado. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.WaitToComplete`|Reproduz o som e aguarda até que ele seja concluída antes de continua o código de chamada.|  
+  
+ A reprodução em segundo plano permite que o aplicativo execute outro código enquanto o som é reproduzido.  
+  
+ Para obter mais informações, consulte [sons de jogo](~/docs/visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ O `My.Computer.Audio.Play` método toca o som especificado em segundo plano quando `PlayMode.Background` for especificado.  
+  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
+  
+ Este exemplo de código só pode ser executado em um aplicativo Windows Forms.  
+  
+ O nome do arquivo deve fazer referência a um arquivo de som em seu sistema.  
+  
+ Para simplificar o gerenciamento de seus arquivos de som, considere armazenar os arquivos como recursos do aplicativo. Eles podem ser acessados por meio de `My.Resources` objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="Nothing" />.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="playMode" /> não é um dos valores de enumeração <see cref="T:Microsoft.VisualBasic.AudioPlayMode" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Existe uma situação de confiança parcial na qual o usuário não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlThread" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public void Play (string location, Microsoft.VisualBasic.AudioPlayMode playMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Play(string location, valuetype Microsoft.VisualBasic.AudioPlayMode playMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Audio.Play(System.String,Microsoft.VisualBasic.AudioPlayMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.String" />
+        <Parameter Name="playMode" Type="Microsoft.VisualBasic.AudioPlayMode" />
+      </Parameters>
+      <Docs>
+        <param name="location">Um <see langword="String" /> que contém o nome do arquivo de som</param>
+        <param name="playMode">
+          O modo <see cref="T:Microsoft.VisualBasic.AudioPlayMode" /> de reprodução do som. Por padrão, <see langword="AudioPlayMode.Background" />.</param>
+        <summary>Reproduz um arquivo de som .wav.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Play` método reproduz o arquivo de som armazenado como um arquivo em `location`, como uma matriz de bytes em `data`, ou como um fluxo no `stream`.  
+  
+ Se a sobrecarga que usa apenas o `location` parâmetro for usado, o `Play` método toca o som em segundo plano. Caso contrário, o `playMode` parâmetro determina como o som será reproduzido.  
+  
+|`playMode`|Descrição|  
+|-|-|  
+|`AudioPlayMode.Background`|Toca o som em segundo plano. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.BackgroundLoop`|Toca o som no plano de fundo até que o <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A> método é chamado. O código de chamada continua a ser executado.|  
+|`AudioPlayMode.WaitToComplete`|Reproduz o som e aguarda até que ele seja concluída antes de continua o código de chamada.|  
+  
+ A reprodução em segundo plano permite que o aplicativo execute outro código enquanto o som é reproduzido.  
+  
+ Para obter mais informações, consulte [sons de jogo](~/docs/visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ O `My.Computer.Audio.Play` método toca o som especificado em segundo plano quando `PlayMode.Background` for especificado.  
+  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
+  
+ Este exemplo de código só pode ser executado em um aplicativo Windows Forms.  
+  
+ O nome do arquivo deve fazer referência a um arquivo de som em seu sistema.  
+  
+ Para simplificar o gerenciamento de seus arquivos de som, considere armazenar os arquivos como recursos do aplicativo. Eles podem ser acessados por meio de `My.Resources` objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="location" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.IO.IOException">O usuário não tem permissões suficientes para acessar o arquivo nomeado por <paramref name="location" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho do arquivo está mal formado em <paramref name="location" />.</exception>
+        <exception cref="T:System.IO.PathTooLongException">O nome do caminho em <paramref name="location" /> é muito longo.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="playMode" /> não é um dos valores de enumeração <see cref="T:Microsoft.VisualBasic.AudioPlayMode" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Existe uma situação de confiança parcial na qual o usuário não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Controla a capacidade de acessar arquivos e pastas. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Descreve um conjunto de permissões de segurança aplicadas ao código. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlThread" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaySystemSound">
+      <MemberSignature Language="C#" Value="public void PlaySystemSound (System.Media.SystemSound systemSound);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void PlaySystemSound(class System.Media.SystemSound systemSound) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound(System.Media.SystemSound)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="systemSound" Type="System.Media.SystemSound" />
+      </Parameters>
+      <Docs>
+        <param name="systemSound">
+          Objeto <see cref="T:System.Media.SystemSound" /> que representa o som do sistema a ser reproduzido.</param>
+        <summary>Reproduz um som do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `PlaySystemSound` método reproduz o som de sistema descrito por `systemSound`; o som é reproduzido uma vez, em segundo plano.  
+  
+ O valor de `systemSound` deve ser um dos membros compartilhados do <xref:System.Media.SystemSounds> classe:  
+  
+-   <xref:System.Media.SystemSounds.Asterisk%2A>  
+  
+-   <xref:System.Media.SystemSounds.Beep%2A>  
+  
+-   <xref:System.Media.SystemSounds.Exclamation%2A>  
+  
+-   <xref:System.Media.SystemSounds.Hand%2A>  
+  
+-   <xref:System.Media.SystemSounds.Question%2A>  
+  
+ Para obter mais informações, consulte [sons de jogo](~/docs/visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Audio.PlaySystemSound` método para executar um sistema de som.  
+  
+ [!code-vb[VbVbalrMyComputer#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#17)]  
+  
+ Este exemplo de código pode executar somente em um aplicativo do Windows Forms.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="systemSound" /> é <see langword="Nothing" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Audio.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para a reprodução de um som em segundo plano.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Audio.Stop` método interrompe um som em segundo plano que foi iniciado pelo `My.Computer.Audio.Play` método.  
+  
+ Em geral, quando um aplicativo reproduz um som em loop, ele deve interromper o som em algum momento.  
+  
+ Para obter mais informações, consulte [sons de jogo](~/docs/visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Audio.Stop` método para interromper o aplicativo em execução em segundo plano ou som em loop e usa o `My.Computer.Audio.Play` método para executar um som em loop em segundo plano.  
+  
+ [!code-vb[VbVbalrMyComputer#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#19)]  
+  
+ Este exemplo de código pode executar somente em um aplicativo do Windows Forms.  
+  
+ O nome do arquivo deve fazer referência a um arquivo de som em seu sistema.  
+  
+ Para simplificar o gerenciamento de seus arquivos de som, considere armazenar os arquivos como recursos do aplicativo. Esses arquivos possam ser acessados por meio de `My.Resources` objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

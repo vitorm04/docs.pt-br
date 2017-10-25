@@ -1,0 +1,1090 @@
+<Type Name="ApplicationCommands" FullName="System.Windows.Input.ApplicationCommands">
+  <TypeSignature Language="C#" Value="public static class ApplicationCommands" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ApplicationCommands extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ApplicationCommands" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto padrão de comandos relacionados ao aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os comandos de <xref:System.Windows.Input.ApplicationCommands> classe e comandos no outro comando classes de biblioteca, tais como <xref:System.Windows.Input.ComponentCommands> e <xref:System.Windows.Input.NavigationCommands>, serve para representar um conjunto de comandos comuns que os programadores de aplicativos com frequência encontram.  Os comandos representam apenas a instância das <xref:System.Windows.Input.RoutedCommand> e não a lógica de implementação do comando. A lógica de implementação está associada ao comando com um <xref:System.Windows.Input.CommandBinding>. Por exemplo, se o <xref:System.Windows.Input.ApplicationCommands.Close%2A> comando é executado em um controle, a lógica que executa o <xref:System.Windows.Input.ApplicationCommands.Close%2A> comando não pode ser fornecida pelo controle, então o gravador de aplicativos será responsável por gravar a lógica que determina como o controle tratará o comando.  
+  
+ Muitos controles fornecer lógica de implementação para muitos dos comandos na biblioteca de comandos.  Por exemplo, o <xref:System.Windows.Controls.TextBox> classe fornece lógica para o <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Undo%2A>, e <xref:System.Windows.Input.ApplicationCommands.Redo%2A> comandos.  
+  
+ Para obter mais informações sobre comandos e comando, consulte o [visão geral do comando](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CancelPrint">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand CancelPrint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand CancelPrint" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.CancelPrint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Cancelar a impressão.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Nenhum gesto definido.  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Cancelar a impressão  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de cancelar um trabalho de impressão.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_CancelPrint"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="CancelPrint"/>>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Close { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Close" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Close" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Fechar.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Nenhum gesto definido.  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Fechar  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de fechar um item (geralmente um arquivo).  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Close"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Close"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenu">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand ContextMenu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand ContextMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.ContextMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando de Menu de contexto.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>SHIFT + F10.  
+  
+ Aplicativos  
+  
+ </description></item><item><term>Gestos do mouse  
+  
+ </term><description>Um gesto de Mouse não está anexado a esse comando, mas a maioria dos aplicativos seguem a convenção de usar o gesto de botão direito do mouse para invocar o menu de contexto.  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Menu de contexto  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir o menu de contexto.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_ContextMenu"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="ContextMenu"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Copy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Copy" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Copy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Copy.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + C  
+  
+ Ctrl+Insert  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Cópia  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de copiar a seleção para a área de transferência.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Copy"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Copy"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrectionList">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand CorrectionList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand CorrectionList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.CorrectionList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando de lista de correção.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Nenhum gesto definido.  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Lista de correções  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir a lista de correção.  
+  
+ A lista de correção é diferente dependendo do contexto. Por exemplo, com [!INCLUDE[TLA#tla_ime](~/includes/tlasharptla-ime-md.md)] a lista de correção identifica opções esse tipo de entrada.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_CorrectionList"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="CorrectionList"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Cut { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Cut" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Cut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Cut.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + X  
+  
+ Shift+Delete  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Recortar  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de recortar a seleção na área de transferência.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Cut"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Cut"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Delete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Delete" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Delete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Delete.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>DEL  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Excluir  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de excluir a seleção.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Delete"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Delete"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Find { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Find" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Find" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Find.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + F  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Localizar  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir a caixa de diálogo dedicada.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Find"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Find"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Help { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Help" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Help" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Help.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>F1  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description> Ajuda  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir a caixa de diálogo de Ajuda (janela).  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Help"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Help"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand New { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand New" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.New" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando New.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + N  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Novo  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de criar um novo item.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_New"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="New"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotACommand">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand NotACommand { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand NotACommand" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.NotACommand" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um comando que é sempre ignorado.</summary>
+        <value>O comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse comando é sempre ignorado e não processa o evento de entrada que o causou.  Isso fornece uma maneira para desativar uma associação de entrada incorporada a um controle existente.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_NotACommand"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="NotACommand"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Open { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Open" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Open" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Open.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + O  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Abrir  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir um item (geralmente um arquivo).  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Open"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Open"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Paste { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Paste" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Paste" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Paste.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + V  
+  
+ Shift+Insert  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Colar  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de colar a seleção na área de transferência.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Paste"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Paste"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Print { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Print" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Print" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Print.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + P  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Impressão  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de imprime o item atual.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Print"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Print"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintPreview">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand PrintPreview { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand PrintPreview" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.PrintPreview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Visualizar impressão.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + F2  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Visualizar impressão  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir a caixa de diálogo Visualizar impressão.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_PrintPreview"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="PrintPreview"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Propriedades.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>F4  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description> Propriedades  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir uma caixa de diálogo de propriedades.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Properties"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Properties"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redo">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Redo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Redo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Redo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Refazer.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + Y  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Refazer  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de refazer a última ação.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Redo"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Redo"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Replace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Replace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Replace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Substituir.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + H  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Substituir  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir a caixa de diálogo Substituir.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Replace"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Replace"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Save { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Save" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Save" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Save.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + S  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Salvar  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de salvar o item atual.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Save"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Save"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SaveAs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SaveAs" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.SaveAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Salvar como.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>Nenhum gesto definido.  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Salvar como  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de abrir a caixa de diálogo Salvar como.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_SaveAs"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SaveAs"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAll">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand SelectAll { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand SelectAll" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.SelectAll" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Select All.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL + T  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Selecionar tudo  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de selecionar todos os itens.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_SelectAll"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="SelectAll"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Stop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Stop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Stop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando de parada.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>ESC  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Parar  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de parar o processamento.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Stop"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Stop"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public static System.Windows.Input.RoutedUICommand Undo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Input.RoutedUICommand Undo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ApplicationCommands.Undo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RoutedUICommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor que representa o comando Desfazer.</summary>
+        <value>O comando.  
+  
+ <list type="table"><listheader><term>Valores padrão  
+  
+ </term><description></description></listheader><item><term>Gesto de chave  
+  
+ </term><description>CTRL-Z  
+  
+ </description></item><item><term>Texto de interface do usuário  
+  
+ </term><description>Desfazer  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este comando indica a intenção de desfazer a última ação.  
+  
+ Não há necessariamente uma implementação para o comando de qualquer objeto especificado; em muitos casos, a implementação do comando é responsabilidade do gravador de aplicativos.  
+  
+<a name="xamlAttributeUsage_Undo"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="Undo"/>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

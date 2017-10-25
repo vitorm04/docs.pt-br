@@ -1,0 +1,75 @@
+<Type Name="ManagementRemoveAttribute" FullName="System.Management.Instrumentation.ManagementRemoveAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ManagementRemoveAttribute : System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementRemoveAttribute extends System.Management.Instrumentation.ManagementMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.ManagementRemoveAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Management.Instrumentation.ManagementMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O ManagementRemoveAttribute é usado para indicar que um método limpa uma instância de uma entidade gerenciada.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método não deve ter nenhum parâmetro e deve retornar um tipo void.  
+  
+ Usar esse atributo não tem nenhum efeito no registro da classe WMI no repositório. Ele é usado somente em tempo de execução.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ManagementRemoveAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.ManagementRemoveAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Management.ManagementRemoveAttribute" />. Esse é o construtor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public Type Schema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Schema" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.ManagementRemoveAttribute.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que define o tipo de saída do objeto que está marcado com o atributo ManagementRemove de saída.</summary>
+        <value>Um <see cref="T:System.Type" /> produzirá o valor que indica o tipo de saída que o objeto é marcado com o atributo de remover.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o tipo retornado é <xref:System.Object?displayProperty=nameWithType>, em seguida, a saída deve ser tratada como um valor do tipo <xref:System.Object?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

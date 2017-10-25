@@ -1,0 +1,171 @@
+<Type Name="PropertyGeneratedEventArgs" FullName="System.Data.Services.Design.PropertyGeneratedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class PropertyGeneratedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyGeneratedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Design.PropertyGeneratedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado pela ferramentas de linha de comando de geração de código e ferramentas no Visual Studio para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não se destina para uso público e é usada pelas ferramentas de linha de comando geração de código e ferramentas no Visual Studio para gerar fortemente tipado objetos de cliente para se comunicar com os serviços de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyGeneratedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Design.PropertyGeneratedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Services.Design.PropertyGeneratedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyGeneratedEventArgs (System.Data.Metadata.Edm.MetadataItem propertySource, string backingFieldName, System.CodeDom.CodeTypeReference returnType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Metadata.Edm.MetadataItem propertySource, string backingFieldName, class System.CodeDom.CodeTypeReference returnType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Design.PropertyGeneratedEventArgs.#ctor(System.Data.Metadata.Edm.MetadataItem,System.String,System.CodeDom.CodeTypeReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertySource" Type="System.Data.Metadata.Edm.MetadataItem" />
+        <Parameter Name="backingFieldName" Type="System.String" />
+        <Parameter Name="returnType" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="propertySource">Origem da propriedade.</param>
+        <param name="backingFieldName">Nome do campo de backup.</param>
+        <param name="returnType">Tipo de retorno.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Services.Design.PropertyGeneratedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalAttributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.CodeDom.CodeAttributeDeclaration&gt; AdditionalAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.CodeDom.CodeAttributeDeclaration&gt; AdditionalAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.PropertyGeneratedEventArgs.AdditionalAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.CodeDom.CodeAttributeDeclaration&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta classe não é destinado para uso público e é usado para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+        <value>Atributos adicionais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalGetStatements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.CodeDom.CodeStatement&gt; AdditionalGetStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.CodeDom.CodeStatement&gt; AdditionalGetStatements" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.PropertyGeneratedEventArgs.AdditionalGetStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.CodeDom.CodeStatement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta classe não é destinado para uso público e é usado para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+        <value>Instruções Get adicionais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalSetStatements">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.CodeDom.CodeStatement&gt; AdditionalSetStatements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.CodeDom.CodeStatement&gt; AdditionalSetStatements" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.PropertyGeneratedEventArgs.AdditionalSetStatements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.CodeDom.CodeStatement&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta classe não é destinado para uso público e é usado para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+        <value>Instruções de conjunto adicionais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackingFieldName">
+      <MemberSignature Language="C#" Value="public string BackingFieldName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BackingFieldName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.PropertyGeneratedEventArgs.BackingFieldName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta classe não é destinado para uso público e é usado para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+        <value>Nome do campo de backup.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertySource">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.MetadataItem PropertySource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.MetadataItem PropertySource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.PropertyGeneratedEventArgs.PropertySource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.MetadataItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta classe não é destinado para uso público e é usado para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+        <value>Origem da propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnType">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeTypeReference ReturnType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeReference ReturnType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.PropertyGeneratedEventArgs.ReturnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta classe não é destinado para uso público e é usado para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+        <value>Tipo de retorno.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

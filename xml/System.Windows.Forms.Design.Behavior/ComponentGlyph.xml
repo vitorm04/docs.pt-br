@@ -1,0 +1,139 @@
+<Type Name="ComponentGlyph" FullName="System.Windows.Forms.Design.Behavior.ComponentGlyph">
+  <TypeSignature Language="C#" Value="public class ComponentGlyph : System.Windows.Forms.Design.Behavior.Glyph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentGlyph extends System.Windows.Forms.Design.Behavior.Glyph" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.ComponentGlyph" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Design.Behavior.Glyph</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Associa um <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> com seu componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.ComponentGlyph> classe contém o <xref:System.Windows.Forms.Design.Behavior.ComponentGlyph.RelatedComponent%2A> propriedade, que aponta de volta para o componente relacionado do glifo. Essa propriedade pode ser usada para rastrear <xref:System.Windows.Forms.Design.Behavior.Glyph> objetos de volta para seu componente, como durante as operações de arrastar.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentGlyph (System.ComponentModel.IComponent relatedComponent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent relatedComponent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.ComponentGlyph.#ctor(System.ComponentModel.IComponent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relatedComponent" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="relatedComponent">O componente com que o <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> está associado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.Behavior.ComponentGlyph" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentGlyph (System.ComponentModel.IComponent relatedComponent, System.Windows.Forms.Design.Behavior.Behavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IComponent relatedComponent, class System.Windows.Forms.Design.Behavior.Behavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.ComponentGlyph.#ctor(System.ComponentModel.IComponent,System.Windows.Forms.Design.Behavior.Behavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relatedComponent" Type="System.ComponentModel.IComponent" />
+        <Parameter Name="behavior" Type="System.Windows.Forms.Design.Behavior.Behavior" />
+      </Parameters>
+      <Docs>
+        <param name="relatedComponent">O componente com que o <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> está associado.</param>
+        <param name="behavior">O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> com a qual o <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> está associado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.Behavior.ComponentGlyph" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHitTest">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.Cursor GetHitTest (System.Drawing.Point p);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.Cursor GetHitTest(valuetype System.Drawing.Point p) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.ComponentGlyph.GetHitTest(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="p">Um ponto de teste de hit.</param>
+        <summary>Indica se um clique do mouse no ponto especificado deve ser tratado pelo <see cref="T:System.Windows.Forms.Design.Behavior.ComponentGlyph" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.Cursor" /> se o <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> associado <paramref name="p" />; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão não faz nada e retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public override void Paint (System.Windows.Forms.PaintEventArgs pe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Paint(class System.Windows.Forms.PaintEventArgs pe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.ComponentGlyph.Paint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pe" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pe">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém o <see cref="P:System.Windows.Forms.Design.Behavior.BehaviorService.AdornerWindowGraphics" /> do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</param>
+        <summary>Fornece lógica de pintura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedComponent">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent RelatedComponent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent RelatedComponent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.ComponentGlyph.RelatedComponent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o componente que está associado com o <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> .</summary>
+        <value>Um <see cref="T:System.ComponentModel.IComponent" /> associado a <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

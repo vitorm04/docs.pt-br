@@ -1,0 +1,328 @@
+<Type Name="X509SubjectKeyIdentifierExtension" FullName="System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension">
+  <TypeSignature Language="C#" Value="public sealed class X509SubjectKeyIdentifierExtension : System.Security.Cryptography.X509Certificates.X509Extension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit X509SubjectKeyIdentifierExtension extends System.Security.Cryptography.X509Certificates.X509Extension" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.X509Certificates.X509Extension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma cadeia de caracteres que identifica um SKI (Identificador de Chave da Entidade) de um certificado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para identificar um certificado de várias maneiras: pelo hash do certificado, o emissor e número de série e pelo identificador de chave de assunto (SKI). O SKI fornece um identificador exclusivo para o assunto do certificado e geralmente é usada ao trabalhar com a assinatura digital XML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como abrir o repositório de certificados pessoais do usuário e exibir informações sobre cada certificado no repositório.  Este exemplo usa o <xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension> classe para exibir as informações.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SubjectKeyIdentifierExtension ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como abrir o repositório de certificados pessoais do usuário e exibir informações sobre cada certificado no repositório.  Este exemplo usa o <xref:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension> classe para exibir as informações.  
+  
+ [!code-cpp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/CS/sample.cs#1)]
+ [!code-vb[Cryptography.X509Certificates.X509Extensions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.X509Certificates.X509Extensions/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SubjectKeyIdentifierExtension (byte[] subjectKeyIdentifier, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] subjectKeyIdentifier, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.#ctor(System.Byte[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subjectKeyIdentifier" Type="System.Byte[]" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="subjectKeyIdentifier">Uma matriz de bytes que representa os dados a serem usados para criar a extensão.</param>
+        <param name="critical">
+          <see langword="true" />Se a extensão é importante; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" /> classe usando uma matriz de bytes e um valor que indica se a extensão é crítica.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SubjectKeyIdentifierExtension (System.Security.Cryptography.AsnEncodedData encodedSubjectKeyIdentifier, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsnEncodedData encodedSubjectKeyIdentifier, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.#ctor(System.Security.Cryptography.AsnEncodedData,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="encodedSubjectKeyIdentifier" Type="System.Security.Cryptography.AsnEncodedData" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="encodedSubjectKeyIdentifier">O <see cref="T:System.Security.Cryptography.AsnEncodedData" /> objeto a ser usado para criar a extensão.</param>
+        <param name="critical">
+          <see langword="true" />Se a extensão é importante; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" /> classe usando dados codificados e um valor que indica se a extensão é crítica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor se as informações para criar a extensão já estão em um <xref:System.Security.Cryptography.AsnEncodedData> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SubjectKeyIdentifierExtension (System.Security.Cryptography.X509Certificates.PublicKey key, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.PublicKey key, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.#ctor(System.Security.Cryptography.X509Certificates.PublicKey,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.X509Certificates.PublicKey" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um <see cref="T:System.Security.Cryptography.X509Certificates.PublicKey" /> objeto para criar um identificador de chave de assunto (SKI) do.</param>
+        <param name="critical">
+          <see langword="true" />Se a extensão é importante; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" /> classe usando uma chave pública e um valor que indica se a extensão é crítica.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SubjectKeyIdentifierExtension (string subjectKeyIdentifier, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string subjectKeyIdentifier, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subjectKeyIdentifier" Type="System.String" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="subjectKeyIdentifier">Uma cadeia de caracteres codificada em formato hexadecimal, que representa o identificador de chave de assunto (SKI) para um certificado.</param>
+        <param name="critical">
+          <see langword="true" />Se a extensão é importante; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" /> classe usando uma cadeia de caracteres e um valor que indica se a extensão é crítica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador de chave de assunto (SKI) pode ser usado para identificar o certificado e geralmente é usado ao trabalhar com a assinatura digital XML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SubjectKeyIdentifierExtension (System.Security.Cryptography.X509Certificates.PublicKey key, System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm algorithm, bool critical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.PublicKey key, valuetype System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm algorithm, bool critical) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.#ctor(System.Security.Cryptography.X509Certificates.PublicKey,System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.X509Certificates.PublicKey" />
+        <Parameter Name="algorithm" Type="System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm" />
+        <Parameter Name="critical" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um <see cref="T:System.Security.Cryptography.X509Certificates.PublicKey" /> objeto para criar um identificador de chave de assunto (SKI) do.</param>
+        <param name="algorithm">Uma da <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierHashAlgorithm" /> valores que identifica qual algoritmo de hash a ser usado.</param>
+        <param name="critical">
+          <see langword="true" />Se a extensão é importante; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" /> classe usando uma chave pública, um identificador de algoritmo de hash e um valor que indica se a extensão é crítica.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public override void CopyFrom (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFrom(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">O <see cref="T:System.Security.Cryptography.AsnEncodedData" /> objeto a ser usado para criar a extensão.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" /> classe copiando as informações de dados codificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubjectKeyIdentifier">
+      <MemberSignature Language="C#" Value="public string SubjectKeyIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SubjectKeyIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension.SubjectKeyIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.X509Certificates</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa o identificador de chave de assunto (SKI) para um certificado.</summary>
+        <value>Uma cadeia de caracteres codificada em formato hexadecimal, que representa o identificador de chave de assunto (SKI).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador de chave de assunto (SKI) pode ser usado para identificar o certificado e geralmente é usado ao trabalhar com a assinatura digital XML.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">A extensão não pode ser decodificada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

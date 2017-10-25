@@ -1,0 +1,167 @@
+<Type Name="XamlNodeList" FullName="System.Xaml.XamlNodeList">
+  <TypeSignature Language="C#" Value="public class XamlNodeList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlNodeList extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlNodeList" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma lista de nós XAML, que pode ser usado para cenários como gravar nós XAML de forma adiada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Xaml.XamlNodeList>, você cria um delegado de gravador existente como o <xref:System.Xaml.XamlNodeList.Writer%2A> valor. O representante de gravador baseia-se em uma classe interna de gravador XAML que é específico para nós XAML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlNodeList (System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlNodeList.#ctor(System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">O contexto do esquema a ser usado para operações de nó.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlNodeList" /> classe usando um contexto de esquema fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto do esquema é aplicado para o gravador XAML que existe como o <xref:System.Xaml.XamlNodeList.Writer%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlNodeList (System.Xaml.XamlSchemaContext schemaContext, int size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext, int32 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlNodeList.#ctor(System.Xaml.XamlSchemaContext,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="size" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">O contexto do esquema a ser usado para operações de nó.</param>
+        <param name="size">A contagem de item desejado da lista.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlNodeList" /> classe usando um tamanho de contexto e a lista de esquema fornecido.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlNodeList.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa os itens nessa lista.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama `Clear` na implementação lista subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeList.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de nós na <see cref="T:System.Xaml.XamlNodeList" />.</summary>
+        <value>O número de nós neste <see cref="T:System.Xaml.XamlNodeList" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReader">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlReader GetReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xaml.XamlReader GetReader() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlNodeList.GetReader" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlReader</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um leitor XAML delegado de implementação.</summary>
+        <returns>Um delegado de implementação de leitor XAML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora não seja especificamente um provedor de serviços, você pode usar o <xref:System.Xaml.XamlReader> representante que é retornado de <xref:System.Xaml.XamlNodeList.GetReader%2A?displayProperty=nameWithType> em um modo de serviço, onde você converter para <xref:System.Xaml.IXamlIndexingReader>. Nesse modo, você pode obter e definir os valores de índice para <xref:System.Xaml.IXamlIndexingReader.CurrentIndex%2A?displayProperty=nameWithType>. Dessa maneira, o modo do conjunto permite ignorar nós sem usar o padrão `Read` e `Skip`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xaml.XamlException">O <see cref="T:System.Xaml.XamlNodeList" /> ainda estiver no modo de gravação.  
+  
+ -ou-  
+  
+ O gravador usado para a lista de nós tem nenhum contexto de esquema.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Writer">
+      <MemberSignature Language="C#" Value="public System.Xaml.XamlWriter Writer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlWriter Writer" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlNodeList.Writer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o gravador XAML associado.</summary>
+        <value>O gravador XAML associado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

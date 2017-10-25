@@ -1,0 +1,421 @@
+<Type Name="HttpListenerContext" FullName="System.Net.HttpListenerContext">
+  <TypeSignature Language="C#" Value="public sealed class HttpListenerContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpListenerContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.HttpListenerContext" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso a objetos de solicitação e de resposta usados pela classe <see cref="T:System.Net.HttpListener" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece as informações relacionadas à solicitação do protocolo HTTP (Hypertext Transfer) do cliente sendo processada por um <xref:System.Net.HttpListener> objeto. Essa classe também tem métodos que permitem que um <xref:System.Net.HttpListener> objeto para aceitar uma conexão WebSocket.  
+  
+ O <xref:System.Net.HttpListener.GetContext%2A> método retorna instâncias de <xref:System.Net.HttpListenerContext> classe. Para obter o objeto que representa a solicitação do cliente, use o <xref:System.Net.HttpListenerContext.Request%2A> propriedade. Para obter o objeto que representa a resposta será enviada ao cliente através de <xref:System.Net.HttpListener>, use o <xref:System.Net.HttpListenerContext.Response%2A> propriedade. Para obter informações do usuário sobre o cliente que envia a solicitação, como seu nome de logon e se ele tiver sido autenticado, você pode consultar as propriedades de <xref:System.Security.Principal.IPrincipal> objeto retornado pelo <xref:System.Net.HttpListenerContext.User%2A> propriedade.  
+  
+ Fechando uma <xref:System.Net.HttpListenerContext> objeto envia a resposta ao cliente e libera todos os recursos usados pelo <xref:System.Net.HttpListenerContext>. Anular uma <xref:System.Net.HttpListenerContext> objeto descarta a resposta ao cliente se ele já não foi enviado e libera todos os recursos usados pelo <xref:System.Net.HttpListenerContext>. Depois de fechar ou anular um <xref:System.Net.HttpListenerContext> do objeto, você não pode referenciar seus métodos ou propriedades. Se você fizer isso, você receberá um <xref:System.ObjectDisposedException> exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as informações de usuário para uma solicitação de cliente.  
+  
+ [!code-csharp[Net_Listener_Basic#8](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#8)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptWebSocketAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync (string subProtocol);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync(string subProtocol) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subProtocol" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subProtocol">O subprotocolo WebSocket com suporte.</param>
+        <summary>Aceita uma conexão de WebSocket como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto da tarefa retorna um objeto <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após a conexão WebSocket foi aceita.  
+  
+ O tamanho do buffer de recebimento é 16,385 bytes. O intervalo de manutenção de funcionamento do WebSocket é definido como o valor padrão de 30.000 (30 segundos).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subProtocol" /> é uma cadeia de caracteres vazia  
+  
+ -ou-  
+  
+ <paramref name="subProtocol" /> contém caracteres ilegais.</exception>
+        <exception cref="T:System.Net.WebSockets.WebSocketException">Ocorreu um erro ao enviar a resposta para concluir o handshake do WebSocket.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptWebSocketAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync (string subProtocol, TimeSpan keepAliveInterval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync(string subProtocol, valuetype System.TimeSpan keepAliveInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subProtocol" Type="System.String" />
+        <Parameter Name="keepAliveInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="subProtocol">O subprotocolo WebSocket com suporte.</param>
+        <param name="keepAliveInterval">O intervalo keep-alive do protocolo WebSocket em milissegundos.</param>
+        <summary>Aceite uma conexão WebSocket especificando o com suporte subprotocolo WebSocket e o intervalo de manutenção de funcionamento do WebSocket como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto da tarefa retorna um objeto <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após a conexão WebSocket foi aceita.  
+  
+ O tamanho do buffer de recebimento é 16,385 bytes.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subProtocol" /> é uma cadeia de caracteres vazia  
+  
+ -ou-  
+  
+ <paramref name="subProtocol" /> contém caracteres ilegais.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="keepAliveInterval" />é muito pequeno.</exception>
+        <exception cref="T:System.Net.WebSockets.WebSocketException">Ocorreu um erro ao enviar a resposta para concluir o handshake do WebSocket.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptWebSocketAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync (string subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync(string subProtocol, int32 receiveBufferSize, valuetype System.TimeSpan keepAliveInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String,System.Int32,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subProtocol" Type="System.String" />
+        <Parameter Name="receiveBufferSize" Type="System.Int32" />
+        <Parameter Name="keepAliveInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="subProtocol">O subprotocolo WebSocket com suporte.</param>
+        <param name="receiveBufferSize">O tamanho do buffer de recebimento em bytes.</param>
+        <param name="keepAliveInterval">O intervalo keep-alive do protocolo WebSocket em milissegundos.</param>
+        <summary>Aceitar uma conexão WebSocket especificando o subprotocolo com suporte de WebSocket, recebem o tamanho do buffer e WebSocket intervalo como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto da tarefa retorna um objeto <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> > objeto será concluída após a conexão WebSocket foi aceita.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subProtocol" /> é uma cadeia de caracteres vazia  
+  
+ -ou-  
+  
+ <paramref name="subProtocol" /> contém caracteres ilegais.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="keepAliveInterval" />é muito pequeno.  
+  
+ -ou-  
+  
+ <paramref name="receiveBufferSize" />é menor que 16 bytes  
+  
+ -ou-  
+  
+ <paramref name="receiveBufferSize" />é maior que 64 KB.</exception>
+        <exception cref="T:System.Net.WebSockets.WebSocketException">Ocorreu um erro ao enviar a resposta para concluir o handshake do WebSocket.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptWebSocketAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync (string subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval, ArraySegment&lt;byte&gt; internalBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.WebSockets.HttpListenerWebSocketContext&gt; AcceptWebSocketAsync(string subProtocol, int32 receiveBufferSize, valuetype System.TimeSpan keepAliveInterval, valuetype System.ArraySegment`1&lt;unsigned int8&gt; internalBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.HttpListenerContext.AcceptWebSocketAsync(System.String,System.Int32,System.TimeSpan,System.ArraySegment{System.Byte})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.WebSockets.HttpListenerWebSocketContext&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subProtocol" Type="System.String" />
+        <Parameter Name="receiveBufferSize" Type="System.Int32" />
+        <Parameter Name="keepAliveInterval" Type="System.TimeSpan" />
+        <Parameter Name="internalBuffer" Type="System.ArraySegment&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="subProtocol">O subprotocolo WebSocket com suporte.</param>
+        <param name="receiveBufferSize">O tamanho do buffer de recebimento em bytes.</param>
+        <param name="keepAliveInterval">O intervalo keep-alive do protocolo WebSocket em milissegundos.</param>
+        <param name="internalBuffer">Um buffer interno para esta operação.</param>
+        <summary>Aceitar uma conexão WebSocket especificando o subprotocolo com suporte de WebSocket, recebem o tamanho do buffer, intervalo de manutenção de funcionamento do WebSocket e o buffer interno como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto da tarefa retorna um objeto <see cref="T:System.Net.WebSockets.HttpListenerWebSocketContext" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após a conexão WebSocket foi aceita.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="subProtocol" /> é uma cadeia de caracteres vazia  
+  
+ -ou-  
+  
+ <paramref name="subProtocol" /> contém caracteres ilegais.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="keepAliveInterval" />é muito pequeno.  
+  
+ -ou-  
+  
+ <paramref name="receiveBufferSize" />é menor que 16 bytes  
+  
+ -ou-  
+  
+ <paramref name="receiveBufferSize" />é maior que 64 KB.</exception>
+        <exception cref="T:System.Net.WebSockets.WebSocketException">Ocorreu um erro ao enviar a resposta para concluir o handshake do WebSocket.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.Net.HttpListenerRequest Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.HttpListenerRequest Request" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerContext.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpListenerRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Net.HttpListenerRequest" /> que representa uma solicitação do cliente para um recurso.</summary>
+        <value>Um objeto <see cref="T:System.Net.HttpListenerRequest" /> que representa a solicitação do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você fechar esta <xref:System.Net.HttpListenerContext>, ele enviará a resposta ao cliente, feche o <xref:System.Net.HttpListenerResponse> que contém a resposta e fechar o <xref:System.Net.HttpListenerRequest> objeto retornado por essa propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método. O `listener` a variável contém um <xref:System.Net.HttpListener> objeto.  
+  
+ [!code-csharp[Net_Listener_Basic#3](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public System.Net.HttpListenerResponse Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.HttpListenerResponse Response" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerContext.Response" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.HttpListenerResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Net.HttpListenerResponse" /> que será enviado ao cliente em resposta à sua solicitação.</summary>
+        <value>Um objeto <see cref="T:System.Net.HttpListenerResponse" /> usado para retornar uma resposta ao cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seu aplicativo define a resposta definindo propriedades de <xref:System.Net.HttpListenerResponse> objeto retornado por essa propriedade. Depois de configurar a resposta, você enviá-lo para o cliente, fechando a resposta ou fechando isso <xref:System.Net.HttpListenerContext> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a obter a resposta a uma solicitação do cliente e adicionar o corpo da resposta.  
+  
+ [!code-csharp[Net_Listener_Basic#3](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="usage">
+          <para>Observação: Este membro gera informações de rastreamento quando você habilita o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal User" />
+      <MemberSignature Language="DocId" Value="P:System.Net.HttpListenerContext.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.HttpListener</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto usado para obter a identidade, informações de autenticação e funções de segurança para o cliente cuja solicitação é representada por este objeto <see cref="T:System.Net.HttpListenerContext" />.</summary>
+        <value>Um objeto <see cref="T:System.Security.Principal.IPrincipal" /> que descreve o cliente ou <see langword="null" />, se o <see cref="T:System.Net.HttpListener" /> que forneceu este <see cref="T:System.Net.HttpListenerContext" /> não exigir autenticação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Net.HttpListener> indica que ela requer autenticação usando o <xref:System.Net.HttpListener.AuthenticationSchemes%2A> propriedade ou especificando um <xref:System.Net.AuthenticationSchemeSelector> delegar usando o <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate%2A> propriedade.  
+  
+ Para determinar o nome de logon do cliente e informações de autenticação, verifique o <xref:System.Security.Principal.IPrincipal.Identity%2A?displayProperty=nameWithType> propriedade no objeto retornado por essa propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra acessa informações de autenticação e identidade sobre o cliente e retorná-lo para o cliente na resposta.  
+  
+ [!code-csharp[Net_Listener_Basic#8](~/samples/snippets/csharp/VS_Snippets_Remoting/Net_Listener_Basic/CS/test.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Enumeração associada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" /><see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

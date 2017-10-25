@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Linq.Mapping">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Linq.Mapping" /> namespace contém classes que são usadas para gerar um LINQ no modelo de objeto do SQL que representa a estrutura e conteúdo de um banco de dados relacional.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

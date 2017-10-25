@@ -1,0 +1,344 @@
+<Type Name="SelectionTypes" FullName="System.ComponentModel.Design.SelectionTypes">
+  <TypeSignature Language="C#" Value="public enum SelectionTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SelectionTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.SelectionTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os identificadores que indicam o tipo de uma seleção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Componentes de um documento designer podem ser selecionados por meio de <xref:System.ComponentModel.Design.ISelectionService.SetSelectedComponents%2A> método o <xref:System.ComponentModel.Design.ISelectionService>. Alguns tipos de ações podem operar em um componente selecionado ou o grupo de componentes selecionados. O <xref:System.ComponentModel.Design.ISelectionService> mantém controle sobre o tipo de seleção da seleção atual. Esse tipo de seleção identificadores indicam se a seleção foi concluída com um único clique, mouse para baixo o mouse ou a seleção, se a seleção deve substituir a seleção anterior ou use o modo de seleção padrão.  
+  
+ Use o <xref:System.ComponentModel.Design.SelectionTypes> enumeração para especificar o tipo de uma seleção, ao definir uma nova seleção usando o <xref:System.ComponentModel.Design.ISelectionService.SetSelectedComponents%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Add = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Add" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção de adicionar que adiciona os componentes selecionados para a seleção atual, mantendo o conjunto atual de componentes selecionados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Auto = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção regular. O serviço de seleção responde às teclas CTRL e SHIFT para dar suporte a adição ou remoção de componentes de ou para a seleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="Click" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Click = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Click" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated. Use SelectionTypes.Primary instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção que ocorre quando um usuário clica em um componente. Se o componente recentemente selecionado já está selecionado, ele é promovido para ser que o principal selecionado componente, em vez de cancelamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDown">
+      <MemberSignature Language="C#" Value="MouseDown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes MouseDown = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.MouseDown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated.  It is no longer supported. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção que ocorre quando o usuário pressiona o botão do mouse enquanto o ponteiro do mouse está sobre um componente. Se o componente sob o ponteiro ainda estiver selecionado, ele é promovido para se tornar o principal selecionado componente, em vez de cancelamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseUp">
+      <MemberSignature Language="C#" Value="MouseUp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes MouseUp = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.MouseUp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated.  It is no longer supported. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção que ocorre quando o usuário libera o botão do mouse imediatamente depois que um componente foi selecionado. Se o componente recentemente selecionado já está selecionado, ele é promovido para ser que o principal selecionado componente, em vez de cancelamento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Normal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated. Use SelectionTypes.Auto instead.  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção regular. O serviço de seleção responde às teclas CTRL e SHIFT para dar suporte a adição ou remoção de componentes de ou para a seleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Primary">
+      <MemberSignature Language="C#" Value="Primary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Primary = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Primary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção principal que ocorre quando um usuário clica em um componente. Se um componente na lista de seleção já estiver selecionado, o componente é promovido a seleção principal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="Remove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Remove = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Remove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção Remover que remove os componentes selecionados da seleção atual, mantendo o conjunto atual de componentes selecionados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="Replace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Replace = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Replace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção que ocorre quando o conteúdo de uma seleção é substituído. O serviço de seleção substitui a seleção atual com a substituição.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggle">
+      <MemberSignature Language="C#" Value="Toggle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Toggle = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Toggle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma seleção de alternância que alterna entre a seleção atual e a seleção fornecida. Se um componente já está selecionado e é passado para <see cref="Overload:System.ComponentModel.Design.ISelectionService.SetSelectedComponents" /> com um tipo de seleção de <see cref="F:System.ComponentModel.Design.SelectionTypes.Toggle" />, a seleção de componente será cancelada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Valid">
+      <MemberSignature Language="C#" Value="Valid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.SelectionTypes Valid = int32(31)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.SelectionTypes.Valid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value has been deprecated. Use Enum class methods to determine valid values, or use a type converter. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.SelectionTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os tipos de seleção válida como <see cref="F:System.ComponentModel.Design.SelectionTypes.Normal" />, <see cref="F:System.ComponentModel.Design.SelectionTypes.Replace" />, <see cref="F:System.ComponentModel.Design.SelectionTypes.MouseDown" />, <see cref="F:System.ComponentModel.Design.SelectionTypes.MouseUp" />, ou <see cref="F:System.ComponentModel.Design.SelectionTypes.Click" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

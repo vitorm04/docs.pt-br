@@ -1,0 +1,48 @@
+<Type Name="IDataSourceViewSchemaAccessor" FullName="System.Web.UI.IDataSourceViewSchemaAccessor">
+  <TypeSignature Language="C#" Value="public interface IDataSourceViewSchemaAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataSourceViewSchemaAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataSourceViewSchemaAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que um conversor de tipo acessar informações de esquema armazenadas em um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada pelo <xref:System.Web.UI.WebControls.TreeNodeBinding>, <xref:System.Web.UI.WebControls.MenuItemBinding>, e <xref:System.Web.UI.WebControls.DataControlField> classes. Essas implementações são usadas pelo .NET Framework e não se destina para uso em seu código.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataSourceViewSchema">
+      <MemberSignature Language="C#" Value="public object DataSourceViewSchema { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSourceViewSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataSourceViewSchemaAccessor.DataSourceViewSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém ou define o esquema associado ao objeto.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o esquema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada pelo <xref:System.Web.UI.WebControls.TreeNodeBinding>, <xref:System.Web.UI.WebControls.MenuItemBinding>, e <xref:System.Web.UI.WebControls.DataControlField> classes. Essas implementações são usadas pelo .NET Framework e não se destina para uso em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

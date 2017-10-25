@@ -1,0 +1,173 @@
+<Type Name="CodeRegionDirective" FullName="System.CodeDom.CodeRegionDirective">
+  <TypeSignature Language="C#" Value="public class CodeRegionDirective : System.CodeDom.CodeDirective" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeRegionDirective extends System.CodeDom.CodeDirective" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeRegionDirective" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeDirective</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o nome e o modo de uma região de código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.CodeDom.CodeRegionDirective.RegionMode%2A> propriedade especifica se uma instância representa o início ou fim da região.  
+  
+> [!NOTE]
+>  Nem todos os compiladores suportam diretivas de região de código. Para evitar erros de compilador, provedores de código normalmente não incluem as diretivas de região de código na saída do provedor para compiladores que dão suporte a eles.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.CodeRegionDirective> na criação de um gráfico que é usado para gerar o código que também é compilado.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#1)]
+ [!code-vb[System.CodeDom.CodeDirectives#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeRegionDirective ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeRegionDirective.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeRegionDirective" /> com valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar esse construtor, você também deve definir o <xref:System.CodeDom.CodeRegionDirective.RegionMode%2A> e <xref:System.CodeDom.CodeRegionDirective.RegionText%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeRegionDirective (System.CodeDom.CodeRegionMode regionMode, string regionText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.CodeDom.CodeRegionMode regionMode, string regionText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeRegionDirective.#ctor(System.CodeDom.CodeRegionMode,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="regionMode" Type="System.CodeDom.CodeRegionMode" />
+        <Parameter Name="regionText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="regionMode">Um dos valores de <see cref="T:System.CodeDom.CodeRegionMode" />.</param>
+        <param name="regionText">O nome para a região.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeRegionDirective" /> classe, especificando o modo e o nome.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.CodeRegionDirective.%23ctor%28System.CodeDom.CodeRegionMode%2CSystem.String%29> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.CodeDom.CodeRegionDirective> classe.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#9)]
+ [!code-vb[System.CodeDom.CodeDirectives#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionMode">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeRegionMode RegionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.CodeDom.CodeRegionMode RegionMode" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeRegionDirective.RegionMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeRegionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo para a diretiva de região.</summary>
+        <value>Um dos valores de <see cref="T:System.CodeDom.CodeRegionMode" />. O padrão é <see cref="F:System.CodeDom.CodeRegionMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.CodeRegionDirective.RegionMode%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.CodeDom.CodeRegionDirective> classe.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#11)]
+ [!code-vb[System.CodeDom.CodeDirectives#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegionText">
+      <MemberSignature Language="C#" Value="public string RegionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegionText" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeRegionDirective.RegionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da região.</summary>
+        <value>O nome da região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.CodeRegionDirective.RegionText%2A> propriedade. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.CodeDom.CodeRegionDirective> classe.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#12)]
+ [!code-vb[System.CodeDom.CodeDirectives#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

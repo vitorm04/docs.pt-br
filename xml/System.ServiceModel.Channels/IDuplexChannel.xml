@@ -1,0 +1,36 @@
+<Type Name="IDuplexChannel" FullName="System.ServiceModel.Channels.IDuplexChannel">
+  <TypeSignature Language="C#" Value="public interface IDuplexChannel : System.ServiceModel.Channels.IInputChannel, System.ServiceModel.Channels.IOutputChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDuplexChannel implements class System.ServiceModel.Channels.IChannel, class System.ServiceModel.Channels.IInputChannel, class System.ServiceModel.Channels.IOutputChannel, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IDuplexChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IInputChannel</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IOutputChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define a interface que um canal deve implementar para enviar e receber mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IDuplexChannel> interface é a união do <xref:System.ServiceModel.Channels.IInputChannel> e <xref:System.ServiceModel.Channels.IOutputChannel> interfaces. O <xref:System.ServiceModel.Channels.IDuplexChannel> interface não exigem a correlação entre o <xref:System.ServiceModel.Channels.IInputChannel> e <xref:System.ServiceModel.Channels.IOutputChannel> quando implementada. Isso significa, em particular, se o contrato não exige que o remetente de mensagens que foram recebidas através de <xref:System.ServiceModel.Channels.IInputChannel> é igual ao destinatário de mensagens enviadas por meio de <xref:System.ServiceModel.Channels.IOutputChannel>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

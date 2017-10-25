@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.Activities.Rules.Design">
+  <Docs>
+    <summary>Contém um conjunto de classes que gerenciam o Editor de conjunto de regras e as caixas de diálogo do Editor de condição de regra.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

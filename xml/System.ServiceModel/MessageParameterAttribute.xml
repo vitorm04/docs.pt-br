@@ -1,0 +1,135 @@
+<Type Name="MessageParameterAttribute" FullName="System.ServiceModel.MessageParameterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MessageParameterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageParameterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageParameterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla os nomes de parâmetro de solicitação e resposta. Não pode ser usado com <see cref="T:System.ServiceModel.Channels.Message" /> ou com contratos de mensagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.MessageParameterAttribute> para controlar o nome do parâmetro ou o valor de retorno. Esse atributo não tem nenhum efeito se os parâmetros são marcados pelo <xref:System.ServiceModel.MessageContractAttribute> atributo.  
+  
+> [!NOTE]
+>  O valor dos nomes de parâmetro na assinatura de operação são parte do contrato e diferenciam maiusculas de minúsculas. Use esse atributo quando você precisa distinguir entre o nome do parâmetro de local e os metadados que descrevem a operação para aplicativos cliente.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Controlando a serialização do conteúdo de um corpo SOAP sem modificar o envelope SOAP de padrão em si, consulte <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>, [especificando a transferência de dados em contratos de serviço](~/docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md), e [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]criar contratos de mensagem, consulte [usando contratos de mensagem](~/docs/framework/wcf/feature-details/using-message-contracts.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.MessageParameterAttribute> para definir o nome do parâmetro e o valor de retorno nos metadados.  
+  
+ [!code-csharp[MessageParameterAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/messageparameterattribute/cs/services.cs#1)]
+ [!code-vb[MessageParameterAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageparameterattribute/vb/services.vb#1)]  
+  
+ O exemplo a seguir mostra o contrato de serviço gerado para o serviço anterior. Observe que o nome do parâmetro agora é `Input`.  
+  
+ [!code-csharp[MessageParameterAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/messageparameterattribute/cs/proxycode.cs#2)]
+ [!code-vb[MessageParameterAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageparameterattribute/vb/proxycode.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageParameterAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageParameterAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MessageParameterAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.MessageParameterAttribute> para definir o nome do parâmetro e o valor de retorno nos metadados.  
+  
+ [!code-csharp[MessageParameterAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/messageparameterattribute/cs/services.cs#1)]
+ [!code-vb[MessageParameterAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageparameterattribute/vb/services.vb#1)]  
+  
+ O exemplo a seguir mostra o contrato de serviço gerado para o serviço anterior. Observe que o nome do parâmetro agora é `Input`.  
+  
+ [!code-csharp[MessageParameterAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/messageparameterattribute/cs/proxycode.cs#2)]
+ [!code-vb[MessageParameterAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageparameterattribute/vb/proxycode.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageParameterAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atributo de nome do parâmetro no esquema XML (XSD).</summary>
+        <value>O atributo de nome do parâmetro no XSD.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso de <xref:System.ServiceModel.MessageParameterAttribute> para definir o nome do parâmetro e o valor de retorno nos metadados.  
+  
+ [!code-csharp[MessageParameterAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/messageparameterattribute/cs/services.cs#1)]
+ [!code-vb[MessageParameterAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageparameterattribute/vb/services.vb#1)]  
+  
+ O exemplo a seguir mostra o contrato de serviço gerado para o serviço anterior. Observe que o nome do parâmetro agora é `Input`.  
+  
+ [!code-csharp[MessageParameterAttribute#2](~/samples/snippets/csharp/VS_Snippets_CFX/messageparameterattribute/cs/proxycode.cs#2)]
+ [!code-vb[MessageParameterAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageparameterattribute/vb/proxycode.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

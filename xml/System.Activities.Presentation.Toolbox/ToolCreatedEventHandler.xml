@@ -1,0 +1,32 @@
+<Type Name="ToolCreatedEventHandler" FullName="System.Activities.Presentation.Toolbox.ToolCreatedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ToolCreatedEventHandler(object sender, ToolCreatedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolCreatedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Toolbox.ToolCreatedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Activities.Presentation.Toolbox.ToolCreatedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A origem do evento ferramenta criado.</param>
+    <param name="e">O <see cref="T:System.Activities.Presentation.Toolbox.ToolCreatedEventArgs" /> que contém dados para o evento de ferramenta criado.</param>
+    <summary>Representa o método que manipulará o <see cref="E:System.Activities.Presentation.Toolbox.ToolboxControl.ToolCreated" /> evento para a caixa de ferramentas hospedado novamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa a assinatura do método do representante para a ferramenta que criou o evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

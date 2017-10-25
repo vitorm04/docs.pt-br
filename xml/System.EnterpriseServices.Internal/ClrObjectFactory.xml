@@ -1,0 +1,187 @@
+<Type Name="ClrObjectFactory" FullName="System.EnterpriseServices.Internal.ClrObjectFactory">
+  <TypeSignature Language="C#" Value="public class ClrObjectFactory : System.EnterpriseServices.Internal.IClrObjectFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClrObjectFactory extends System.Object implements class System.EnterpriseServices.Internal.IClrObjectFactory" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.ClrObjectFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.Internal.IClrObjectFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("ecabafd1-7f19-11d2-978e-0000f8757e2a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Ativa a proxies do aplicativo habilitado para SOAP COM+ de um cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Internal.ClrObjectFactory>é usado internamente pelo .NET Framework. Você não precisa usar a classe diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClrObjectFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.ClrObjectFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.Internal.ClrObjectFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromAssembly">
+      <MemberSignature Language="C#" Value="public object CreateFromAssembly (string AssemblyName, string TypeName, string Mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateFromAssembly(string AssemblyName, string TypeName, string Mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromAssembly(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AssemblyName" Type="System.String" />
+        <Parameter Name="TypeName" Type="System.String" />
+        <Parameter Name="Mode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AssemblyName">O nome do assembly para ativar.</param>
+        <param name="TypeName">O nome do tipo para ativar.</param>
+        <param name="Mode">Não usado.</param>
+        <summary>Ativa um assembly remoto por meio de comunicação remota do .NET, usando o arquivo de configuração do assembly.</summary>
+        <returns>Uma instância do <see cref="T:System.Object" /> que representa o tipo, com a cultura, argumentos, e os atributos de associação e ativação definem como <see langword="null" />, ou <see langword="null" /> se o <paramref name="TypeName" /> parâmetro não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">A classe não está registrada.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromMailbox">
+      <MemberSignature Language="C#" Value="public object CreateFromMailbox (string Mailbox, string Mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateFromMailbox(string Mailbox, string Mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromMailbox(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Mailbox" Type="System.String" />
+        <Parameter Name="Mode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Mailbox">Uma caixa de correio no serviço da Web.</param>
+        <param name="Mode">Não usado.</param>
+        <summary>Ativa um assembly remoto por meio de comunicação remota do .NET, usando a caixa de correio do assembly remoto. Ainda não foi implementado; gera um <see cref="T:System.Runtime.InteropServices.COMException" /> se for chamado.</summary>
+        <returns>Este método lança uma exceção se for chamado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gera uma exceção se for chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.InteropServices.COMException">SMTP Simple Mail Transfer Protocol () não está implementado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromVroot">
+      <MemberSignature Language="C#" Value="public object CreateFromVroot (string VrootUrl, string Mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateFromVroot(string VrootUrl, string Mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromVroot(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="VrootUrl" Type="System.String" />
+        <Parameter Name="Mode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="VrootUrl">A URL da raiz virtual do objeto a ser ativado.</param>
+        <param name="Mode">Não usado.</param>
+        <summary>Ativa um assembly remoto por meio de comunicação remota do .NET usando a URL da raiz virtual do assembly remoto.</summary>
+        <returns>Uma instância do <see cref="T:System.Object" /> que representa o tipo, com atributos de cultura, como argumentos e associação e ativação definida como <see langword="null" />, ou <see langword="null" /> se o assembly identificado pelo <paramref name="VrootUrl" /> parâmetro não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromVroot%2A>acrescenta a cadeia de caracteres "? wsdl" para `VrootUrl` e chamadas <xref:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromWsdl%2A> para ativar o objeto remoto.  
+  
+ A versão do SOAP usada pela comunicação remota do .NET é RPC/codificado, não/literal de documento, que é necessário para interoperabilidade SOAP. Portanto, <xref:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromVroot%2A> não funciona com a maioria dos serviços Web ASMX.  
+  
+ <xref:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromVroot%2A>exige privilégios administrativos no computador local a primeira vez que for executado, porque ele cria e instala um proxy do cliente para comunicação com o assembly remoto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não foi possível abrir o token de thread.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromWsdl">
+      <MemberSignature Language="C#" Value="public object CreateFromWsdl (string WsdlUrl, string Mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object CreateFromWsdl(string WsdlUrl, string Mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromWsdl(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="WsdlUrl" Type="System.String" />
+        <Parameter Name="Mode" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="WsdlUrl">A URL de WSDL do serviço Web.</param>
+        <param name="Mode">Não usado.</param>
+        <summary>Ativa um assembly remoto por meio de comunicação remota do .NET, usando o WSDL Web Services Description Language () do serviço da Web em XML.</summary>
+        <returns>Uma instância do <see cref="T:System.Object" /> que representa o tipo, com atributos de cultura, como argumentos e associação e ativação definida como <see langword="null" />, ou <see langword="null" /> se o assembly identificado pelo <paramref name="WsdlUrl" /> parâmetro não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Processa o WSDL passado e, se necessário, gerar um proxy, ativa o objeto remoto.  
+  
+ A versão do SOAP usada pela comunicação remota do .NET é RPC/codificado, não/literal de documento, que é necessário para interoperabilidade SOAP. Portanto, <xref:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromWsdl%2A> não funciona com a maioria dos serviços Web ASMX.  
+  
+ <xref:System.EnterpriseServices.Internal.ClrObjectFactory.CreateFromWsdl%2A>exige privilégios administrativos no computador local a primeira vez que for executado, porque ele cria e instala um proxy do cliente para comunicação com o assembly remoto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <exception cref="T:System.Runtime.InteropServices.COMException">Não foi possível abrir o token de thread.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,171 @@
+<Type Name="ScrollEventType" FullName="System.Windows.Controls.Primitives.ScrollEventType">
+  <TypeSignature Language="C#" Value="public enum ScrollEventType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollEventType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ScrollEventType" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o comportamento que causou um evento <see cref="E:System.Windows.Controls.Primitives.ScrollBar.Scroll" /> em um controle <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os botões de página não são visíveis como botões, mas eles ocupam espaço entre o <xref:System.Windows.Controls.Primitives.Thumb> e <xref:System.Windows.Controls.Primitives.RepeatButton> controles em ambas as extremidades do <xref:System.Windows.Controls.Primitives.ScrollBar>. O usuário clica em um botão de página ao clicar no botão esquerdo do mouse entre o <xref:System.Windows.Controls.Primitives.Thumb> e um <xref:System.Windows.Controls.Primitives.RepeatButton>. O resultado dessa ação é mover o <xref:System.Windows.Controls.Primitives.Thumb> na direção do botão de página. Para obter mais informações sobre o efeito dos botões de página, consulte as descrições dos membros LargeIncrement e LargeDecrement. A ilustração a seguir mostra os elementos de um <xref:System.Windows.Controls.Primitives.ScrollBar>, incluindo os botões da página.  
+  
+ ![As diferentes partes de uma barra de rolagem](~/add/media/scrollbarpagebutton.png "as diferentes partes de uma barra de rolagem")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EndScroll">
+      <MemberSignature Language="C#" Value="EndScroll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType EndScroll = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.EndScroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> foi arrastado para uma nova posição e não está mais sendo arrastado pelo usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="First" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType First = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.First" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> moveu para a posição <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> do <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />. Para um vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, essa movimentação ocorre quando pressionadas as teclas CTRL + HOME. Essa movimentação corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToTopCommand" /> em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical e um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToLeftEndCommand" /> em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeDecrement">
+      <MemberSignature Language="C#" Value="LargeDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType LargeDecrement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.LargeDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> moveu uma distância especificada, conforme determinado pelo valor de <see cref="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" />, para a esquerda em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal ou para cima em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical. Para vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, essa movimentação ocorre quando o botão de página que está acima do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> é pressionado, ou quando a chave de página anterior for pressionada e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.PageUpCommand" />. Para um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal, esse movimento ocorre quando o botão da página à esquerda do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> é pressionado e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.PageLeftCommand" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIncrement">
+      <MemberSignature Language="C#" Value="LargeIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType LargeIncrement = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.LargeIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> moveu uma distância especificada, conforme determinado pelo valor de <see cref="P:System.Windows.Controls.Primitives.RangeBase.LargeChange" />, para a direita em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal ou para baixo em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical. Para vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, essa movimentação ocorre quando o botão de página que está abaixo do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> é pressionado, ou quando a tecla PAGE DOWN é pressionada e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.PageDownCommand" />. Para um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal, esse movimento ocorre quando o botão da página à direita do <see cref="T:System.Windows.Controls.Primitives.Thumb" /> é pressionado e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.PageRightCommand" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Last">
+      <MemberSignature Language="C#" Value="Last" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType Last = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.Last" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> moveu para a posição <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> do <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />. Para um vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, essa movimentação ocorre quando pressionadas as teclas CTRL + END. Essa movimentação corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToEndCommand" /> em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical e um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.ScrollToRightEndCommand" /> em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDecrement">
+      <MemberSignature Language="C#" Value="SmallDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType SmallDecrement = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.SmallDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> moveu uma pequena distância, conforme determinado pelo valor de <see cref="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" />, para a esquerda em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal ou para cima em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical. Para vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, essa movimentação ocorre quando o superior <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> é pressionado ou quando a tecla de seta para cima é pressionada e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand" />. Para um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal, esse movimento ocorre quando o <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> esquerdo é pressionado e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.LineLeftCommand" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIncrement">
+      <MemberSignature Language="C#" Value="SmallIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType SmallIncrement = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.SmallIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> moveu uma pequena distância, conforme determinado pelo valor de <see cref="P:System.Windows.Controls.Primitives.RangeBase.SmallChange" />, para a direita em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal ou para baixo em um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> vertical. Para um vertical <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />, essa movimentação ocorre quando menor <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> é pressionado ou quando a tecla de seta para baixo é pressionada e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand" />. Para um <see cref="T:System.Windows.Controls.Primitives.ScrollBar" /> horizontal, esse movimento ocorre quando o <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> direito é pressionado e corresponde a um <see cref="F:System.Windows.Controls.Primitives.ScrollBar.LineRightCommand" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbPosition">
+      <MemberSignature Language="C#" Value="ThumbPosition" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType ThumbPosition = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.ThumbPosition" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> moveu para uma nova posição porque o usuário selecionou **Rolar Aqui** no menu de atalho do <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />. Essa movimentação corresponde do <see cref="F:System.Windows.Controls.Primitives.ScrollBar.ScrollHereCommand" />. Para exibir o menu de atalho, clique com o botão direito do mouse quando o ponteiro estiver sobre o <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ThumbTrack">
+      <MemberSignature Language="C#" Value="ThumbTrack" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.ScrollEventType ThumbTrack = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.ScrollEventType.ThumbTrack" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.ScrollEventType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Windows.Controls.Primitives.Thumb" /> foi arrastado e causou um evento <see cref="E:System.Windows.UIElement.MouseMove" />. Um evento <see cref="E:System.Windows.Controls.Primitives.ScrollBar.Scroll" /> deste <see cref="T:System.Windows.Controls.Primitives.ScrollEventType" /> pode ocorrer mais de uma vez quando o <see cref="T:System.Windows.Controls.Primitives.Thumb" /> é arrastado no <see cref="T:System.Windows.Controls.Primitives.ScrollBar" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

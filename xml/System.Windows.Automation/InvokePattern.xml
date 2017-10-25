@@ -1,0 +1,131 @@
+<Type Name="InvokePattern" FullName="System.Windows.Automation.InvokePattern">
+  <TypeSignature Language="C#" Value="public class InvokePattern : System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InvokePattern extends System.Windows.Automation.BasePattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.InvokePattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.BasePattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os controles que iniciam ou executam uma ação única não ambígua e não mantêm o estado quando ativado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controla o apoio ao <xref:System.Windows.Automation.InvokePattern> se o mesmo comportamento não é exposto por meio de outro padrão de controle. Por exemplo, se o <xref:System.Windows.Automation.InvokePattern.Invoke%2A> método em um controle executa a mesma ação que o <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> método, o controle não oferecerá suporte <xref:System.Windows.Automation.InvokePattern>.  
+  
+ [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)]suportam a elementos que representam os controles, como caixas de seleção e botões de opção, que mantêm o estado, em vez disso, <xref:System.Windows.Automation.TogglePattern> ou <xref:System.Windows.Automation.SelectionItemPattern>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public void Invoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.InvokePattern.Invoke" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Envia uma solicitação para ativar um controle e iniciar sua ação única não ambígua.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamadas para <xref:System.Windows.Automation.InvokePattern.Invoke%2A> deve retornar imediatamente sem bloqueio. No entanto, esse comportamento é totalmente dependente do [!INCLUDE[TLA#tla_uiautomation](~/includes/tlasharptla-uiautomation-md.md)] implementação de provedor. Em cenários onde chamando <xref:System.Windows.Automation.InvokePattern.Invoke%2A> faz com que um problema de bloqueio (como uma caixa de diálogo modal) um separado thread auxiliar que pode ser necessária para chamar o método.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir um <xref:System.Windows.Automation.InvokePattern> padrão de controle é obtido de um controle e o <xref:System.Windows.Automation.InvokePattern.Invoke%2A> método é chamado.  
+  
+ [!code-csharp[UIAInvokePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAInvokePattern_snip/CSharp/UIAInvokePattern_snippets.cs#101)]
+ [!code-vb[UIAInvokePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAInvokePattern_snip/VisualBasic/UIAInvokePattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O elemento não oferece suporte a <see cref="T:System.Windows.Automation.InvokePattern" /> padrão de controle está oculto ou bloqueado.</exception>
+        <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Elemento não habilitado. Poderá ser gerado quando um provedor de automação de interface do usuário tiver implementado seu próprio tratamento da propriedade <see cref="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationEvent InvokedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationEvent InvokedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.InvokePattern.InvokedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento gerado quando um controle é invocado ou ativado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.InvokePatternIdentifiers>.  
+  
+ O <xref:System.Windows.Automation.InvokePattern.InvokedEvent> identificador é transmitido como um parâmetro para <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, o manipulador de eventos identifica o evento como um evento Invoked comparando o <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> nos argumentos de evento com o <xref:System.Windows.Automation.InvokePattern.InvokedEvent> campo de identificador.  
+  
+ [!code-csharp[UIAClient_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#101)]
+ [!code-vb[UIAClient_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.InvokePattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.InvokePattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.InvokePatternIdentifiers>.  
+  
+ O identificador padrão é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir um <xref:System.Windows.Automation.InvokePattern> padrão de controle é obtido de um controle e o <xref:System.Windows.Automation.InvokePattern.Invoke%2A> método é chamado.  
+  
+ [!code-csharp[UIAInvokePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAInvokePattern_snip/CSharp/UIAInvokePattern_snippets.cs#101)]
+ [!code-vb[UIAInvokePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAInvokePattern_snip/VisualBasic/UIAInvokePattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

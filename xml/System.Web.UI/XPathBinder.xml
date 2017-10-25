@@ -1,0 +1,398 @@
+<Type Name="XPathBinder" FullName="System.Web.UI.XPathBinder">
+  <TypeSignature Language="C#" Value="public sealed class XPathBinder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XPathBinder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.XPathBinder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte para o desenvolvimento rápido de aplicativos designers (RAD) para analisar as expressões de associação de dados que usam expressões XPath. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o sobrecarregado <xref:System.Web.UI.XPathBinder.Eval%2A> método dessa classe para associar ao resultado de uma expressão XPath executado em um objeto que implementa o <xref:System.Xml.XPath.IXPathNavigable> interface, como um <xref:System.Xml.XmlNode>. Você pode usar o <xref:System.Web.UI.XPathBinder.Select%2A> método para recuperar os resultados de uma expressão XPath executada em um <xref:System.Xml.XPath.IXPathNavigable> de objeto como um <xref:System.Collections.IEnumerable> lista de nós. Pode ser enumerada diretamente ou atribuída a esta lista de nós a `DataSource` propriedade de uma lista de controle, como um <xref:System.Web.UI.WebControls.Repeater> ou <xref:System.Web.UI.WebControls.DataList>.  
+  
+ Você pode usar uma versão simplificada da sintaxe de associação de dados ao usar o <xref:System.Web.UI.XPathBinder> métodos declarativamente. Em vez de chamar `XPathBinder.Eval`(`Container.DataItem`, `xpath`) você pode usar `XPath`(`xpath`). Da mesma forma, em vez de chamar `XPathBinder.Select`(`Container.DataItem`,`xpath`), você pode usar `XPathSelect`(`xpath`) para recuperar um <xref:System.Collections.IEnumerable> conjunto de nós. Quando usando esse simplificado a sintaxe, o <xref:System.Web.UI.XPathBinder.Eval%2A> e <xref:System.Web.UI.XPathBinder.Select%2A> métodos presumem que um padrão `Container.DataItem` objeto de contexto.  
+  
+ Para obter mais informações sobre associação de dados a controles de servidor ASP.NET, consulte [sintaxe de expressão de associação de dados](http://msdn.microsoft.com/en-us/676beb1d-ddfa-4153-bba8-3c86dcb7ceca).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir dados XML. Este exemplo tem duas partes:  
+  
+-   Uma página de Web Forms que exibe dados XML.  
+  
+-   Um arquivo XML que contém os dados.  
+  
+ A primeira parte do exemplo mostra uma página de Web Forms que exibe dados XML acessados por meio de um <xref:System.Web.UI.WebControls.XmlDataSource> controle. Um <xref:System.Web.UI.WebControls.Repeater> controlar usa simplificada <xref:System.Web.UI.XPathBinder.Eval%28System.Object%2CSystem.String%29> sintaxe de método para vincular itens de dados dentro do XML de documentos que o <xref:System.Web.UI.WebControls.XmlDataSource> representa. Ele usa o <xref:System.Web.UI.XPathBinder.Select%28System.Object%2CSystem.String%29> método para recuperar um <xref:System.Collections.IEnumerable> lista e atribuí-la como uma associação tardia <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade para o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_14#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_14/CS/xmlds14cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_14#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_14/VB/xmlds14vb.aspx#1)]  
+  
+ O segundo exemplo fornece o arquivo XML, Order.xml, que é usado como a fonte dos dados exibidos na página de Web Forms definido acima.  
+  
+```  
+<?xml version="1.0" encoding="iso-8859-1"?>  
+  <orders>  
+    <order>  
+      <customer id="12345" />  
+      <customername>  
+        <firstn>John</firstn>  
+        <lastn>Doe</lastn>  
+      </customername>  
+      <transaction id="12345" />  
+      <shipaddress>  
+        <address1>1234 Tenth Avenue</address1>  
+        <city>Bellevue</city>  
+        <state>Washington</state>  
+        <zip>98001</zip>  
+      </shipaddress>  
+      <summary>  
+        <item dept="tools">screwdriver</item>  
+        <item dept="tools">hammer</item>  
+        <item dept="plumbing">fixture</item>  
+      </summary>  
+    </order>  
+ </orders>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public static object Eval (object container, string xPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Eval(object container, string xPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XPathBinder.Eval(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="xPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto <see cref="T:System.Xml.XPath.IXPathNavigable" /> na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="xPath">A consulta XPath do <c>contêiner</c> para o valor da propriedade que é colocado na propriedade do controle associado.</param>
+        <summary>Avalia as expressões de associação de dados XPath no tempo de execução.</summary>
+        <returns>Um <see cref="T:System.Object" /> que resulta da avaliação da expressão de associação de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.XPathBinder.Eval%2A> método declarativamente se você deseja simplificar a conversão de um nó XML para uma cadeia de caracteres de texto a ser exibido em um navegador. Para fazer isso, você deve colocar o \<% # e % > marcas, que também são usadas na associação de dados ASP.NET padrão, uma solução alternativa para a expressão de associação de dados.  
+  
+ Para qualquer um dos controles de servidor ASP.NET lista, como <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.DataGrid>, ou <xref:System.Web.UI.WebControls.Repeater>, o `container` parâmetro deve ser `Container.DataItem`. Se você estiver associando a página, o `container` parâmetro deve ser `Page`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir dados XML. Este exemplo tem duas partes:  
+  
+-   Uma página de Web Forms que exibe dados XML.  
+  
+-   Um arquivo XML que contém os dados.  
+  
+ A primeira parte do exemplo mostra uma página de Web Forms que exibe dados XML acessados por meio de um <xref:System.Web.UI.WebControls.XmlDataSource> controle. Um <xref:System.Web.UI.WebControls.Repeater> controle usa o simplificado <xref:System.Web.UI.XPathBinder.Eval%28System.Object%2CSystem.String%29> sintaxe de método para vincular itens de dados dentro do XML de documentos que o <xref:System.Web.UI.WebControls.XmlDataSource> representa. Ele usa o <xref:System.Web.UI.XPathBinder.Select%28System.Object%2CSystem.String%29> método para recuperar um <xref:System.Collections.IEnumerable> lista e atribuí-la como uma associação tardia <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade para o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_13#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_13/CS/xmlds13cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_13#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_13/VB/xmlds13vb.aspx#1)]  
+  
+ O segundo exemplo fornece o arquivo XML, Bookstore2, que é usado como a fonte dos dados exibidos na página de Web Forms definido acima.  
+  
+```  
+<?xml version="1.0" encoding="iso-8859-1"?>  
+  <bookstore>  
+    <genre name="fiction">  
+      <book ISBN="10-861003-324">  
+        <author>  
+          <firstname>test</firstname>  
+          <lastname>test2</lastname>  
+        </author>  
+        <title>The Handmaid's Tale</title>  
+        <price>12.95</price>  
+        <chapters>  
+          <chapter num="1" name="Introduction" />   
+          <chapter num="2" name="Body" />   
+          <chapter num="3" name="Conclusion" />  
+        </chapters>  
+      </book>  
+    </genre>  
+    <genre name="nonfiction">  
+      <book genre="nonfiction" ISBN="1-861001-57-5">  
+        <author>  
+          <firstname>test3</firstname>  
+          <lastname>test4</lastname>  
+        </author>      
+        <title>Pride And Prejudice</title>  
+        <price>24.95</price>  
+        <chapters>  
+          <chapter num="1" name="Introduction" />   
+          <chapter num="2" name="Body" />  
+          <chapter num="3" name="Conclusion" />  
+        </chapters>  
+      </book>  
+    </genre>  
+  </bookstore>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="container" /> ou <paramref name="xpath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O objeto especificado por <paramref name="container" /> não é um objeto <see cref="T:System.Xml.XPath.IXPathNavigable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public static string Eval (object container, string xPath, string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Eval(object container, string xPath, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XPathBinder.Eval(System.Object,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="xPath" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto <see cref="T:System.Xml.XPath.IXPathNavigable" /> na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="xPath">A consulta XPath do <c>contêiner</c> para o valor da propriedade a ser colocado na propriedade do controle associado.</param>
+        <param name="format">Uma cadeia de formato do .NET Framework, semelhante aos usados pelo <see cref="M:System.String.Format(System.String,System.Object)" />, que converte o <see cref="T:System.Xml.XPath.IXPathNavigable" /> objeto (o que resulta da avaliação da expressão de associação de dados) para um <see cref="T:System.String" /> que pode ser exibida pelo navegador solicitante.</param>
+        <summary>Avalia as expressões de associação de dados XPath em tempo de execução e formata o resultado como texto a ser exibido no navegador do solicitante.</summary>
+        <returns>Um <see cref="T:System.String" /> que resulta da avaliação da expressão de associação de dados e a conversão em um tipo de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para saber mais sobre cadeias de caracteres de formato do .NET Framework, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md).  
+  
+ Você pode usar o <xref:System.Web.UI.XPathBinder.Eval%28System.Object%2CSystem.String%29> método declarativamente se você deseja simplificar a conversão de um nó XML para uma cadeia de caracteres de texto a ser exibido em um navegador. Para fazer isso, você deve colocar o \<% # e % > marcas, que também são usadas na associação de dados ASP.NET padrão, uma solução alternativa para a expressão de associação de dados.  
+  
+ Para qualquer um dos controles de servidor ASP.NET lista, como <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.DataGrid>, ou <xref:System.Web.UI.WebControls.Repeater>, o `container` parâmetro deve ser `Container.DataItem`. Se você estiver associando a página, o `container` parâmetro deve ser `Page`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="container" /> ou <paramref name="xpath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O objeto especificado pelo <paramref name="container" /> não é um <see cref="T:System.Xml.XPath.IXPathNavigable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public static object Eval (object container, string xPath, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object Eval(object container, string xPath, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XPathBinder.Eval(System.Object,System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="xPath" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto <see cref="T:System.Xml.XPath.IXPathNavigable" /> na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="xPath">A consulta XPath do <c>contêiner</c> para o valor da propriedade a ser colocado na propriedade do controle associado.</param>
+        <param name="resolver">O <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto usado para resolver os prefixos de namespace na expressão XPath.</param>
+        <summary>Avalia as expressões de associação de dados XPath em tempo de execução e formata o resultado como texto a ser exibido no navegador solicitante, usando o <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto especificado para resolver os prefixos de namespace na expressão XPath.</summary>
+        <returns>Um <see cref="T:System.Object" /> que resulta da avaliação da expressão de associação de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.XPathBinder.Eval%2A> método declarativamente se você deseja simplificar a conversão de um nó XML para uma cadeia de caracteres de texto a ser exibido em um navegador. Para fazer isso, você deve colocar o \<% # e % > marcas, que também são usadas na associação de dados ASP.NET padrão, uma solução alternativa para a expressão de associação de dados. A expressão de associação de dados inclui a expressão XPath e um <xref:System.Xml.IXmlNamespaceResolver> objeto para resolver a referência ao namespace.  
+  
+ Para qualquer um dos controles de servidor ASP.NET lista, como <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.DataGrid>, ou <xref:System.Web.UI.WebControls.Repeater>, o `container` parâmetro deve ser `Container.DataItem`. Se você estiver associando a página, o `container` parâmetro deve ser `Page`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eval">
+      <MemberSignature Language="C#" Value="public static string Eval (object container, string xPath, string format, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Eval(object container, string xPath, string format, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XPathBinder.Eval(System.Object,System.String,System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="xPath" Type="System.String" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto <see cref="T:System.Xml.XPath.IXPathNavigable" /> na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="xPath">A consulta XPath do <c>contêiner</c> para o valor da propriedade a ser colocado na propriedade do controle associado.</param>
+        <param name="format">Uma cadeia de formato do .NET Framework, semelhante aos usados pelo <see cref="M:System.String.Format(System.String,System.Object)" />, que converte o <see cref="T:System.Xml.XPath.IXPathNavigable" /> objeto (o que resulta da avaliação da expressão de associação de dados) para um <see cref="T:System.String" /> que pode ser exibida pelo navegador solicitante.</param>
+        <param name="resolver">O <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto usado para resolver os prefixos de namespace na expressão XPath.</param>
+        <summary>Avalia as expressões de associação de dados XPath em tempo de execução e formata o resultado como texto a ser exibido no navegador solicitante, usando o <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto especificado para resolver os prefixos de namespace na expressão XPath.</summary>
+        <returns>Um <see cref="T:System.String" /> que resulta da avaliação da expressão de associação de dados e a conversão em um tipo de cadeia de caracteres.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.XPathBinder.Eval%2A> método declarativamente se você deseja simplificar a conversão de um nó XML para uma cadeia de caracteres de texto a ser exibido em um navegador. Para fazer isso, você deve colocar o \<% # e % > marcas, que também são usadas na associação de dados ASP.NET padrão, uma solução alternativa para a expressão de associação de dados. A expressão de associação de dados inclui a expressão XPath e um <xref:System.Xml.IXmlNamespaceResolver> objeto para resolver a referência ao namespace.  
+  
+ Para qualquer um dos controles de servidor ASP.NET lista, como <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.DataGrid>, ou <xref:System.Web.UI.WebControls.Repeater>, o `container` parâmetro deve ser `Container.DataItem`. Se você estiver associando a página, o `container` parâmetro deve ser `Page`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Select">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Usa uma expressão de associação de dados XPath em tempo de execução para retornar uma lista de nós.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o sobrecarregado <xref:System.Web.UI.XPathBinder.Select%2A> método declarativamente se você deseja simplificar a recuperação de um conjunto de nós usando uma consulta XPath. Para fazer isso, você deve colocar o \<% # e % > marcas, que também são usadas na associação de dados ASP.NET padrão, a consulta XPath.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable Select (object container, string xPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable Select(object container, string xPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XPathBinder.Select(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="xPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto <see cref="T:System.Xml.XPath.IXPathNavigable" /> na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="xPath">A consulta XPath que recupera uma lista de nós.</param>
+        <summary>Usa uma expressão de associação de dados XPath em tempo de execução para retornar uma lista de nós.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> lista de nós.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.XPathBinder.Select%28System.Object%2CSystem.String%29> método declarativamente se você deseja simplificar a recuperação de um conjunto de nós usando uma consulta XPath. Para fazer isso, você deve colocar o \<% # e % > marcas, que também são usadas na associação de dados ASP.NET padrão, a consulta XPath.  
+  
+ Para qualquer um dos controles de servidor ASP.NET lista, como <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.DataGrid>, ou <xref:System.Web.UI.WebControls.Repeater>, o `container` parâmetro deve ser `Container.DataItem`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.XmlDataSource> controle com um modelo <xref:System.Web.UI.WebControls.Repeater> controle para exibir dados XML. Este exemplo tem duas partes:  
+  
+-   Uma página de Web Forms que exibe dados XML.  
+  
+-   Um arquivo XML que contém os dados.  
+  
+ A primeira parte do exemplo mostra uma página de Web Forms que exibe dados XML acessados por meio de um <xref:System.Web.UI.WebControls.XmlDataSource> controle. Um <xref:System.Web.UI.WebControls.Repeater> controle usa o simplificado <xref:System.Web.UI.XPathBinder.Eval%28System.Object%2CSystem.String%29> sintaxe de método para vincular itens de dados dentro do XML de documentos que o <xref:System.Web.UI.WebControls.XmlDataSource> representa. Ele usa o <xref:System.Web.UI.XPathBinder.Select%28System.Object%2CSystem.String%29> método para recuperar um <xref:System.Collections.IEnumerable> lista e atribuí-la como uma associação tardia <xref:System.Web.UI.WebControls.Repeater.DataSource%2A> propriedade para o <xref:System.Web.UI.WebControls.Repeater> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.XmlDataSource_14#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_14/CS/xmlds14cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.XmlDataSource_14#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.XmlDataSource_14/VB/xmlds14vb.aspx#1)]  
+  
+ O segundo exemplo fornece o arquivo XML, Order.xml, que é usado como a fonte dos dados exibidos na página de Web Forms definido acima.  
+  
+```  
+<?xml version="1.0" encoding="iso-8859-1"?>  
+  <orders>  
+    <order>  
+      <customer id="12345" />  
+      <customername>  
+        <firstn>John</firstn>  
+        <lastn>Doe</lastn>  
+      </customername>  
+      <transaction id="12345" />  
+      <shipaddress>  
+        <address1>1234 Tenth Avenue</address1>  
+        <city>Bellevue</city>  
+        <state>Washington</state>  
+        <zip>98001</zip>  
+      </shipaddress>  
+      <summary>  
+        <item dept="tools">screwdriver</item>  
+        <item dept="tools">hammer</item>  
+        <item dept="plumbing">fixture</item>  
+      </summary>  
+    </order>  
+  </orders>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="container" /> ou <paramref name="xpath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O objeto especificado pelo <paramref name="container" /> não é um <see cref="T:System.Xml.XPath.IXPathNavigable" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O nó atual a <see cref="T:System.Xml.XPath.XPathNodeIterator" /> não tem um nó XML associado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public static System.Collections.IEnumerable Select (object container, string xPath, System.Xml.IXmlNamespaceResolver resolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IEnumerable Select(object container, string xPath, class System.Xml.IXmlNamespaceResolver resolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.XPathBinder.Select(System.Object,System.String,System.Xml.IXmlNamespaceResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+        <Parameter Name="xPath" Type="System.String" />
+        <Parameter Name="resolver" Type="System.Xml.IXmlNamespaceResolver" />
+      </Parameters>
+      <Docs>
+        <param name="container">A referência de objeto <see cref="T:System.Xml.XPath.IXPathNavigable" /> na qual a expressão é avaliada. Este valor deve ser um identificador de objeto válido no idioma especificado da página.</param>
+        <param name="xPath">A consulta XPath que recupera uma lista de nós.</param>
+        <param name="resolver">O <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto usado para resolver os prefixos de namespace na expressão XPath.</param>
+        <summary>Usa uma expressão de associação de dados XPath em tempo de execução para retornar uma lista de nós, usando o <see cref="T:System.Xml.IXmlNamespaceResolver" /> objeto especificado para resolver os prefixos de namespace na expressão XPath.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerable" /> lista de nós.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.XPathBinder.Select%2A> método declarativamente se você deseja simplificar a recuperação de um conjunto de nós usando uma consulta XPath. Para fazer isso, você deve colocar o \<% # e % > marcas, que também são usadas na associação de dados ASP.NET padrão, a consulta XPath e um <xref:System.Xml.IXmlNamespaceResolver> objeto para resolver a referência ao namespace.  
+  
+ Para qualquer um dos controles de servidor ASP.NET lista, como <xref:System.Web.UI.WebControls.DataList>, <xref:System.Web.UI.WebControls.DataGrid>, ou <xref:System.Web.UI.WebControls.Repeater>, o `container` parâmetro deve ser `Container.DataItem`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,76 @@
+<Type Name="TextDataBindingHandler" FullName="System.Web.UI.Design.TextDataBindingHandler">
+  <TypeSignature Language="C#" Value="public class TextDataBindingHandler : System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextDataBindingHandler extends System.Web.UI.Design.DataBindingHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TextDataBindingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DataBindingHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um manipulador de associação de dados para um controle associado a dados em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.TextDataBindingHandler> objeto é um manipulador de associação de dados que pode fornecer dados para uma propriedade de texto de associação de dados em tempo de design. Manipuladores de associação de dados são usados quando não houver nenhum designer para o controle presente que forneceria que os dados para os dados associados a propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextDataBindingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TextDataBindingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.TextDataBindingHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindControl">
+      <MemberSignature Language="C#" Value="public override void DataBindControl (System.ComponentModel.Design.IDesignerHost designerHost, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DataBindControl(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TextDataBindingHandler.DataBindControl(System.ComponentModel.Design.IDesignerHost,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">Um objeto que implementa <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para o documento que contém o controle.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> para associação de dados.</param>
+        <summary>O controle especificado de ligações de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.TextDataBindingHandler.DataBindControl%2A> método <xref:System.Web.UI.Design.TextDataBindingHandler> define o `Text` propriedade do controle, se ele existir, uma cadeia de caracteres de dados de exemplo.  
+  
+ Este método deve ser implementado em uma classe derivada para fornecer funcionalidade para um manipulador personalizado de associação de dados. A lógica para a associação de dados deve ser implementada dentro desse método e pode ser específica para o tipo ou tipos que o manipulador está associado a uma ou mais propriedades no.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A maioria dos manipuladores de associação de dados necessário examinar a coleção de associações de dados no controle usando o <see cref="T:System.Web.UI.IDataBindingsAccessor" /> interface para determinar se qualquer pode lidar com as propriedades específicas são associados a dados.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

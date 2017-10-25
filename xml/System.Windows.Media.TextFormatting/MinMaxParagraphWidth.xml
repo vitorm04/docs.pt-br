@@ -1,0 +1,206 @@
+<Type Name="MinMaxParagraphWidth" FullName="System.Windows.Media.TextFormatting.MinMaxParagraphWidth">
+  <TypeSignature Language="C#" Value="public struct MinMaxParagraphWidth : IEquatable&lt;System.Windows.Media.TextFormatting.MinMaxParagraphWidth&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MinMaxParagraphWidth extends System.ValueType implements class System.IEquatable`1&lt;valuetype System.Windows.Media.TextFormatting.MinMaxParagraphWidth&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.MinMaxParagraphWidth" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Windows.Media.TextFormatting.MinMaxParagraphWidth&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a largura de parágrafo possíveis menor e maior que totalmente pode conter o conteúdo de texto especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MinWidth%2A> propriedade para gerar a largura mínima do parágrafo para linhas de texto formatadas.  
+  
+ [!code-csharp[TextFormattingSnippets#TextFormattingSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormattingSnippets/CSharp/Window1.xaml.cs#textformattingsnippet3)]
+ [!code-vb[TextFormattingSnippets#TextFormattingSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormattingSnippets/visualbasic/window1.xaml.vb#textformattingsnippet3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objeto.</param>
+        <summary>Determina se o objeto especificado é igual ao atual <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é igual à atual <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objeto; caso contrário, <see langword="false" />. Se <paramref name="obj" /> não é um <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objeto <see langword="false" /> é retornado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.TextFormatting.MinMaxParagraphWidth value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype System.Windows.Media.TextFormatting.MinMaxParagraphWidth value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.Equals(System.Windows.Media.TextFormatting.MinMaxParagraphWidth)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.TextFormatting.MinMaxParagraphWidth" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> para comparar com a atual <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objeto.</param>
+        <summary>Determina se o <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> é igual à atual <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> é igual à atual <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" />. Ele é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um <see cref="T:System.Int32" /> valor que representa o código hash para o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxWidth">
+      <MemberSignature Language="C#" Value="public double MaxWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MaxWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a maior largura de parágrafo possíveis que podem conter completamente o conteúdo do texto especificado.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a maior largura de parágrafo possíveis.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinWidth">
+      <MemberSignature Language="C#" Value="public double MinWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MinWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura de parágrafo menor possíveis que podem conter completamente o conteúdo do texto especificado.</summary>
+        <value>Um <see cref="T:System.Double" /> que representa a largura de parágrafo menor possível.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura mínima de parágrafo corresponde à palavra que tem a maior largura no conteúdo do texto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MinWidth%2A> propriedade para gerar a largura mínima do parágrafo para linhas de texto formatadas.  
+  
+ [!code-csharp[TextFormattingSnippets#TextFormattingSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormattingSnippets/CSharp/Window1.xaml.cs#textformattingsnippet3)]
+ [!code-vb[TextFormattingSnippets#TextFormattingSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormattingSnippets/visualbasic/window1.xaml.vb#textformattingsnippet3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.TextFormatting.MinMaxParagraphWidth left, System.Windows.Media.TextFormatting.MinMaxParagraphWidth right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Media.TextFormatting.MinMaxParagraphWidth left, valuetype System.Windows.Media.TextFormatting.MinMaxParagraphWidth right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.op_Equality(System.Windows.Media.TextFormatting.MinMaxParagraphWidth,System.Windows.Media.TextFormatting.MinMaxParagraphWidth)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Media.TextFormatting.MinMaxParagraphWidth" />
+        <Parameter Name="right" Type="System.Windows.Media.TextFormatting.MinMaxParagraphWidth" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância do <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> para comparar.</param>
+        <param name="right">A segunda instância de <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> para comparar.</param>
+        <summary>Comparar dois <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> cadeias de caracteres para igualdade.</summary>
+        <returns>
+          <see langword="true" />para mostrar especificado <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.TextFormatting.MinMaxParagraphWidth left, System.Windows.Media.TextFormatting.MinMaxParagraphWidth right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Media.TextFormatting.MinMaxParagraphWidth left, valuetype System.Windows.Media.TextFormatting.MinMaxParagraphWidth right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.op_Inequality(System.Windows.Media.TextFormatting.MinMaxParagraphWidth,System.Windows.Media.TextFormatting.MinMaxParagraphWidth)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Windows.Media.TextFormatting.MinMaxParagraphWidth" />
+        <Parameter Name="right" Type="System.Windows.Media.TextFormatting.MinMaxParagraphWidth" />
+      </Parameters>
+      <Docs>
+        <param name="left">A primeira instância do <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> para comparar.</param>
+        <param name="right">A segunda instância de <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> para comparar.</param>
+        <summary>Comparar dois <see cref="T:System.Windows.Media.TextFormatting.CharacterBufferReference" /> objetos desigualdade.</summary>
+        <returns>
+          <see langword="false" />para mostrar <paramref name="left" /> é igual a <paramref name="right" />; caso contrário, <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os objetos são iguais se seus <xref:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MinWidth%2A> e <xref:System.Windows.Media.TextFormatting.MinMaxParagraphWidth.MaxWidth%2A> propriedades são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

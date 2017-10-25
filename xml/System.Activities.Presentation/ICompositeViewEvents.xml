@@ -1,0 +1,114 @@
+<Type Name="ICompositeViewEvents" FullName="System.Activities.Presentation.ICompositeViewEvents">
+  <TypeSignature Language="C#" Value="public interface ICompositeViewEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICompositeViewEvents" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.ICompositeViewEvents" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Trata os eventos que podem ocorrer durante a exibição de <see cref="T:System.Activities.Presentation.ICompositeView" /> itens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um modo de exibição geralmente é composto de vários componentes acoplados de forma flexível.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RegisterCompositeView">
+      <MemberSignature Language="C#" Value="public void RegisterCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.RegisterCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Um objeto que contém os controles personalizados a ser registrado.</param>
+        <summary>Registra os controles personalizados que são exibidos durante a execução de um aplicativo composto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Registro dos componentes do modo de exibição em uma tabela virtual fornece aos desenvolvedores uma maneira concisa para lidar com controles personalizados em um aplicativo composto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterDefaultCompositeView">
+      <MemberSignature Language="C#" Value="public void RegisterDefaultCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterDefaultCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.RegisterDefaultCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Um objeto que contém os controles padrão a ser registrado.</param>
+        <summary>Registra os controles padrão que são exibidos durante a execução de um aplicativo composto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterCompositeView">
+      <MemberSignature Language="C#" Value="public void UnregisterCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.UnregisterCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Um objeto que contém os controles personalizados para cancelar seu registro.</param>
+        <summary>Cancela o registro de controles personalizados que são exibidos durante a execução de um aplicativo composto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterDefaultCompositeView">
+      <MemberSignature Language="C#" Value="public void UnregisterDefaultCompositeView (System.Activities.Presentation.ICompositeView container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterDefaultCompositeView(class System.Activities.Presentation.ICompositeView container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ICompositeViewEvents.UnregisterDefaultCompositeView(System.Activities.Presentation.ICompositeView)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Activities.Presentation.ICompositeView" />
+      </Parameters>
+      <Docs>
+        <param name="container">Um objeto que contém os controles padrão para ter o registro cancelado.</param>
+        <summary>Cancela o registro de controles padrão são exibidos durante a execução de um aplicativo composto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

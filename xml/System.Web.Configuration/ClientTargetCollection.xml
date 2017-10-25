@@ -1,0 +1,422 @@
+<Type Name="ClientTargetCollection" FullName="System.Web.Configuration.ClientTargetCollection">
+  <TypeSignature Language="C#" Value="public sealed class ClientTargetCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClientTargetCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ClientTargetCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.ClientTarget))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.Configuration.ClientTarget" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ClientTargetCollection> tipo permite o acesso para o <xref:System.Web.Configuration.ClientTarget> elementos do <xref:System.Web.Configuration.ClientTargetSection> seção coleção de elementos.  
+  
+ Ele pertence a um grupo que inclui <xref:System.Web.Configuration.ClientTarget> e <xref:System.Web.Configuration.ClientTargetSection>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Web.Configuration.ClientTargetCollection> objeto do arquivo de configuração de um aplicativo Web existente.  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#1)]
+ [!code-vb[System.Web.Configuration.ClientTarget#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#1)]  
+  
+ O exemplo a seguir mostra um trecho do arquivo de configuração.  
+  
+```  
+<clientTarget>  
+  <add alias=  
+    "uplevel"   
+    userAgent="Mozilla/5.0 (compatible;MSIE 6.0;Windows NT 5.1)"/>  
+  <add alias="downlevel" userAgent="Generic Downlevel"/>  
+</clientTarget>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientTargetCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.ClientTargetCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ClientTargetCollection.%23ctor%2A> construtor não se destina a ser usado diretamente no seu código. Ele é chamado pelo sistema de configuração do ASP.NET. Obter uma instância de <xref:System.Web.Configuration.ClientTargetCollection> classe usando o <xref:System.Web.Configuration.ClientTargetSection.ClientTargets%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.ClientTarget clientTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.ClientTarget clientTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.Add(System.Web.Configuration.ClientTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientTarget" Type="System.Web.Configuration.ClientTarget" />
+      </Parameters>
+      <Docs>
+        <param name="clientTarget">O <see cref="T:System.Web.Configuration.ClientTarget" /> a adicionar à coleção.</param>
+        <summary>Adiciona o objeto <see cref="T:System.Web.Configuration.ClientTarget" /> especificado à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de adicionar um destino de cliente à coleção, você deve criar um <xref:System.Web.Configuration.ClientTarget> do objeto e inicializar suas <xref:System.Web.Configuration.ClientTarget.Alias%2A> e <xref:System.Web.Configuration.ClientTarget.UserAgent%2A> propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona uma <xref:System.Web.Configuration.ClientTarget> o objeto para o <xref:System.Web.Configuration.ClientTargetCollection> coleção.  
+  
+ Para obter informações sobre como obter a coleção, consulte o exemplo de código a <xref:System.Web.Configuration.ClientTargetCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#5)]
+ [!code-vb[System.Web.Configuration.ClientTarget#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ClientTargetCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma matriz das chaves para todos os elementos de configuração contidos no <see cref="T:System.Web.Configuration.ClientTargetCollection" /> coleção.</summary>
+        <value>A matriz das chaves de todos os <see cref="T:System.Web.Configuration.ClientTarget" /> objetos contidos no <see cref="T:System.Web.Configuration.ClientTargetCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Configuration.ClientTarget" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de atualizar o arquivo de configuração depois de chamar o <xref:System.Web.Configuration.ClientTargetCollection.Clear%2A> método depende de <xref:System.Configuration.ConfigurationSaveMode> valor escolhido. Para atualizar o arquivo de configuração usar um destes dois métodos: <xref:System.Configuration.Configuration.Save%2A?displayProperty=nameWithType> ou <xref:System.Configuration.Configuration.Save%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Chamando <xref:System.Configuration.Configuration.Save%2A?displayProperty=nameWithType> é equivalente a chamar <xref:System.Configuration.Configuration.Save%2A> quando o <xref:System.Configuration.ConfigurationSaveMode> valor é modificado.  
+  
+ Se você usar o <xref:System.Configuration.Configuration.Save%2A?displayProperty=nameWithType> método, as seguintes condições se aplicam:  
+  
+-   Se você passar o <xref:System.Configuration.ConfigurationSaveMode.Full> ou <xref:System.Configuration.ConfigurationSaveMode.Modified> valor de parâmetro, uma `clear` elemento é inserido no `clientTarget` seção do arquivo de configuração no nível de hierarquia atual.  
+  
+-   Se você passar o <xref:System.Configuration.ConfigurationSaveMode.Minimal> o valor do parâmetro, uma série de `remove` elementos são adicionados para o `clientTarget` seção do arquivo de configuração no nível de hierarquia atual. Isso removerá todas as referências para o `add` elementos definidos nos arquivos de configuração pai em níveis mais altos na hierarquia. Com o <xref:System.Configuration.ConfigurationSaveMode.Minimal> o valor de enumeração, uma propriedade adicional na coleção afeta o que é serializado para o arquivo de configuração. A propriedade é <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A> e é `false` por padrão. Uma das seguintes condições se aplicar:  
+  
+    -   Quando <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A> é definido como `true`, um `clear` elemento é inserido no `clientTarget` seção do arquivo de configuração no nível de hierarquia atual. Isso removerá todas as referências para o `add` elementos definidos nos arquivos de configuração pai em níveis mais altos na hierarquia.  
+  
+    -   Quando <xref:System.Configuration.ConfigurationElementCollection.EmitClear%2A> é definido como `false`, o `clear` elemento seja removido do `clientTarget` seção do arquivo de configuração no nível de hierarquia atual, se ele existir.  
+  
+ O <xref:System.Web.Configuration.ClientTargetCollection.Clear%2A> método realmente excluirá o `add` elementos definidos a `clientTarget` seção do arquivo de configuração no nível de hierarquia atual. Também remove todas as referências para o `add` elementos definidos nos arquivos de configuração pai em níveis mais altos na hierarquia.  
+  
+> [!NOTE]
+>  O `add` elementos não são excluídos do `clientTarget` seção dos arquivos de configuração pai.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove todos os <xref:System.Web.Configuration.ClientTarget> objetos do <xref:System.Web.Configuration.ClientTargetCollection> coleção.  
+  
+ Para obter informações sobre como obter a coleção, consulte o exemplo de código a <xref:System.Web.Configuration.ClientTargetCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#6)]
+ [!code-vb[System.Web.Configuration.ClientTarget#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção do elemento a ser obtido.</param>
+        <summary>Obtém a coleção de chave para o elemento especificado.</summary>
+        <returns>Uma cadeia de caracteres que contém o valor da chave.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ClientTarget this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ClientTarget Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ClientTargetCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ClientTarget</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção do objeto.</param>
+        <summary>Obtém o objeto <see cref="T:System.Web.Configuration.ClientTarget" /> no índice especificado.</summary>
+        <value>O objeto <see cref="T:System.Web.Configuration.ClientTarget" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ClientTarget this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ClientTarget Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ClientTargetCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ClientTarget</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome do agente do usuário.</param>
+        <summary>Obtém o objeto <see cref="T:System.Web.Configuration.ClientTarget" /> com o nome especificado.</summary>
+        <value>O <see cref="T:System.Web.Configuration.ClientTarget" /> objeto com o nome especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ClientTargetCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O alias do <see cref="T:System.Web.Configuration.ClientTarget" /> para remover.</param>
+        <summary>Remove o <see cref="T:System.Web.Configuration.ClientTarget" /> objeto com o alias especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ClientTargetCollection.Remove%2A> método exclusões a `add` elemento o `clientTarget` seção no nível de hierarquia atual e insere um `remove` elemento. O `remove` elemento efetivamente remove a referência para o `add` definido na configuração do pai do elemento em níveis mais altos na hierarquia de arquivos, mas não a exclui.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo remove o <xref:System.Web.Configuration.ClientTarget> de objeto o <xref:System.Web.Configuration.ClientTargetCollection> coleção.  
+  
+ Para obter informações sobre como obter a coleção, consulte o exemplo de código a <xref:System.Web.Configuration.ClientTargetCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#8)]
+ [!code-vb[System.Web.Configuration.ClientTarget#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Configuration.ClientTarget clientTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Configuration.ClientTarget clientTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.Remove(System.Web.Configuration.ClientTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="clientTarget" Type="System.Web.Configuration.ClientTarget" />
+      </Parameters>
+      <Docs>
+        <param name="clientTarget">O <see cref="T:System.Web.Configuration.ClientTarget" /> a ser removido.</param>
+        <summary>Remove o objeto <see cref="T:System.Web.Configuration.ClientTarget" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ClientTargetCollection.Remove%2A> método exclusões a `add` elemento o `clientTarget` seção no nível de hierarquia atual e insere um `remove` elemento. O `remove` elemento efetivamente remove a referência para o `add` definido na configuração do pai do elemento em níveis mais altos na hierarquia de arquivos, mas não a exclui.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo remove o <xref:System.Web.Configuration.ClientTarget> de objeto o <xref:System.Web.Configuration.ClientTargetCollection> coleção.  
+  
+ Para obter informações sobre como obter a coleção, consulte o exemplo de código a <xref:System.Web.Configuration.ClientTargetCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#7)]
+ [!code-vb[System.Web.Configuration.ClientTarget#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ClientTargetCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de coleção de <see cref="T:System.Web.Configuration.ClientTarget" /> para remover.</param>
+        <summary>Remove o <see cref="T:System.Web.Configuration.ClientTarget" /> objeto com o índice da coleção especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ClientTargetCollection.RemoveAt%2A> método exclusões a `add` elemento o `clientTarget` seção no nível de hierarquia atual e insere um `remove` elemento. O `remove` elemento efetivamente remove a referência para o `add` definido na configuração do pai do elemento em níveis mais altos na hierarquia de arquivos, mas não a exclui.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo remove o <xref:System.Web.Configuration.ClientTarget> de objeto o <xref:System.Web.Configuration.ClientTargetCollection> coleção.  
+  
+ Para obter informações sobre como obter a coleção, consulte o exemplo de código a <xref:System.Web.Configuration.ClientTargetCollection> visão geral da classe.  
+  
+ [!code-csharp[System.Web.Configuration.ClientTarget#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/CS/clienttarget.cs#9)]
+ [!code-vb[System.Web.Configuration.ClientTarget#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ClientTarget/VB/clienttarget.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,179 @@
+<Type Name="UnitType" FullName="System.Web.UI.WebControls.UnitType">
+  <TypeSignature Language="C#" Value="public enum UnitType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnitType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.UnitType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a unidade de medida.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.UnitType> enumeração representa as unidades de medida com suporte diferente. As medidas podem ser representadas em pixels, pontos, picas, polegadas, milímetros, centímetros, porcentagens, em ou ex.  
+  
+ Um ponto é uma unidade de medida que representa 1/72 de polegada.  
+  
+ Uma paica é uma unidade que é igual a 12 pontos.  
+  
+ Uma porcentagem é uma unidade de medida em relação a um elemento pai. Por exemplo, se o tamanho da fonte de um parágrafo é de 10 pixels, você pode colocar uma frase dentro do parágrafo com um tamanho de fonte especificado como 200%. O tamanho da fonte da frase torna-se duas vezes o tamanho da fonte de parágrafo ou 20 pixels.  
+  
+ Um Em é uma unidade de medida relativa à altura da fonte do elemento pai. Por exemplo, se o tamanho da fonte de um parágrafo é de 10 pixels, você pode colocar uma frase dentro do parágrafo com um tamanho de fonte especificado como em 2. O tamanho da fonte da frase torna-se duas vezes o tamanho da fonte de parágrafo ou 20 pixels.  
+  
+ Um exemplo é uma unidade de medida relativa à altura de letra x minúscula da fonte do elemento pai. Por exemplo se o tamanho da fonte de um parágrafo é de 10 pixels, você pode colocar uma frase dentro do parágrafo com um tamanho de fonte especificado como 2 ex. O tamanho da fonte da frase torna-se duas vezes o tamanho da fonte de uma letra minúscula x no parágrafo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cm">
+      <MemberSignature Language="C#" Value="Cm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Cm = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Cm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é em centímetros.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Em">
+      <MemberSignature Language="C#" Value="Em" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Em = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Em" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é relativa à altura da fonte do elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ex">
+      <MemberSignature Language="C#" Value="Ex" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Ex = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Ex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é relativa à altura da letra minúscula x da fonte do elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inch">
+      <MemberSignature Language="C#" Value="Inch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Inch = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Inch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é em polegadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mm">
+      <MemberSignature Language="C#" Value="Mm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Mm = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Mm" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é em milímetros.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Percentage">
+      <MemberSignature Language="C#" Value="Percentage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Percentage = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Percentage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é um percentual relativo ao elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pica">
+      <MemberSignature Language="C#" Value="Pica" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Pica = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Pica" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é em paicas. Uma paica representa 12 pontos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pixel">
+      <MemberSignature Language="C#" Value="Pixel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Pixel = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Pixel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é em pixels.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="Point" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.UnitType Point = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.UnitType.Point" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.UnitType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A medição é em pontos. Um ponto representa 1/72 de uma polegada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

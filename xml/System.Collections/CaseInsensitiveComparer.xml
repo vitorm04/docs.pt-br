@@ -1,0 +1,294 @@
+<Type Name="CaseInsensitiveComparer" FullName="System.Collections.CaseInsensitiveComparer">
+  <TypeSignature Language="C#" Value="public class CaseInsensitiveComparer : System.Collections.IComparer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CaseInsensitiveComparer extends System.Object implements class System.Collections.IComparer" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.CaseInsensitiveComparer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IComparer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Compara dois objetos quanto à equivalência, ignorando maiúsculas e minúsculas em cadeias de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.CaseInsensitiveComparer>implementa o <xref:System.Collections.IComparer> interface dando suporte a comparações de maiusculas e minúsculas em cadeias de caracteres, assim como <xref:System.Collections.CaseInsensitiveHashCodeProvider> implementa o <xref:System.Collections.IHashCodeProvider> interface com suporte a comparações de maiusculas e minúsculas em cadeias de caracteres.  
+  
+ O <xref:System.Collections.Comparer> classe é a implementação padrão da <xref:System.Collections.IComparer> de interface e executa comparações de cadeia de caracteres diferenciam maiusculas de minúsculas.  
+  
+ Os objetos usados como chaves por um <xref:System.Collections.Hashtable> são necessárias para substituir o <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> método (ou o <xref:System.Collections.IHashCodeProvider> interface) e o <xref:System.Object.Equals%2A?displayProperty=nameWithType> método (ou o <xref:System.Collections.IComparer> interface). A implementação de métodos ou interfaces deve lidar com diferenciação de maiusculas e minúsculas do mesmo modo; Caso contrário, o <xref:System.Collections.Hashtable> podem se comportar de forma incorreta. Por exemplo, ao criar um <xref:System.Collections.Hashtable>, você deve usar essa classe com o <xref:System.Collections.CaseInsensitiveHashCodeProvider> classe ou qualquer maiusculas de minúsculas <xref:System.Collections.IHashCodeProvider> implementação.  
+  
+ Comparações de cadeia de caracteres podem ter resultados diferentes dependendo da cultura. Para obter mais informações sobre as comparações de específicos de cultura, consulte o <xref:System.Globalization> namespace e [globalização e localização](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma tabela de hash diferencia maiusculas de minúsculas e uma tabela de hash de maiusculas e minúsculas e demonstra a diferença em seu comportamento, mesmo que contêm os mesmos elementos.  
+  
+ [!code-cpp[System.Collections.CaseInsensitive#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CPP/caseinsensitive.cpp#1)]
+ [!code-csharp[System.Collections.CaseInsensitive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CS/caseinsensitive.cs#1)]
+ [!code-vb[System.Collections.CaseInsensitive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/VB/caseinsensitive.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseInsensitiveComparer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CaseInsensitiveComparer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.CaseInsensitiveComparer" /> classe usando o <see cref="P:System.Threading.Thread.CurrentCulture" /> do thread atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Collections.CaseInsensitiveComparer> instância for criada usando este construtor o <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> do thread atual é salva. Procedimentos de comparação usam a cultura salva para determinar a ordem de classificação e regras de maiusculas e minúsculas; Portanto, as comparações de cadeia de caracteres podem ter resultados diferentes dependendo da cultura. Para obter mais informações sobre as comparações de específicos de cultura, consulte o <xref:System.Globalization> namespace e [globalização e localização](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma tabela de hash diferencia maiusculas de minúsculas e uma tabela de hash de maiusculas e minúsculas e demonstra a diferença em seu comportamento, mesmo que contêm os mesmos elementos.  
+  
+ [!code-cpp[System.Collections.CaseInsensitive#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CPP/caseinsensitive.cpp#1)]
+ [!code-csharp[System.Collections.CaseInsensitive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CS/caseinsensitive.cs#1)]
+ [!code-vb[System.Collections.CaseInsensitive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/VB/caseinsensitive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CaseInsensitiveComparer (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CaseInsensitiveComparer.#ctor(System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">O <see cref="T:System.Globalization.CultureInfo" /> a ser usado para o novo <see cref="T:System.Collections.CaseInsensitiveComparer" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.CaseInsensitiveComparer" /> usando o <see cref="T:System.Globalization.CultureInfo" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Procedimentos de comparação usam especificado <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> para determinar a ordem de classificação e regras de maiusculas e minúsculas. Comparações de cadeia de caracteres podem ter resultados diferentes dependendo da cultura. Para obter mais informações sobre as comparações de específicos de cultura, consulte o <xref:System.Globalization> namespace e [globalização e localização](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma tabela de hash diferencia maiusculas de minúsculas e uma tabela de hash de maiusculas e minúsculas e demonstra a diferença em seu comportamento, mesmo que contêm os mesmos elementos.  
+  
+ [!code-cpp[System.Collections.CaseInsensitive#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CPP/caseinsensitive.cpp#1)]
+ [!code-csharp[System.Collections.CaseInsensitive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CS/caseinsensitive.cs#1)]
+ [!code-vb[System.Collections.CaseInsensitive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/VB/caseinsensitive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="culture" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Compare">
+      <MemberSignature Language="C#" Value="public int Compare (object a, object b);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Compare(object a, object b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.CaseInsensitiveComparer.Compare(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Object" />
+        <Parameter Name="b" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="a">O primeiro objeto a ser comparado.</param>
+        <param name="b">O segundo objeto a ser comparado.</param>
+        <summary>Executa uma comparação que não diferencia maiúsculas de minúsculas de dois objetos do mesmo tipo e retorna um valor que indica se um é menor que, igual a ou maior que o outro.</summary>
+        <returns>Um inteiro assinado que indica os valores relativos de <paramref name="a" /> e <paramref name="b" />, conforme mostrado na tabela a seguir.  
+  
+ <list type="table"><listheader><term>Valor  
+  
+ </term><description>Significado  
+  
+ </description></listheader><item><term>Menor que zero  
+  
+ </term><description><paramref name="a" />é menor que <paramref name="b" />, com o uso de maiusculas e minúsculas ignorado.  
+  
+ </description></item><item><term>Zero  
+  
+ </term><description><paramref name="a" />é igual a <paramref name="b" />, com o uso de maiusculas e minúsculas ignorado.  
+  
+ </description></item><item><term>Maior que zero  
+  
+ </term><description><paramref name="a" />é maior do que <paramref name="b" />, com o uso de maiusculas e minúsculas ignorado.  
+  
+ </description></item></list></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `a` e `b` são ambas cadeias de caracteres, esse método usa <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> comparar cadeias de caracteres com o uso de maiusculas e minúsculas ignorado; caso contrário, ele usa o <xref:System.IComparable> implementação de um objeto. Ou seja, se `a` implementa <xref:System.IComparable>, em seguida, esse método retorna o resultado da `a`. `CompareTo`(`b`); caso contrário, se `b` implementa <xref:System.IComparable>, em seguida, retorna o resultado de negado de `b`. `CompareTo` (`a`).  
+  
+ Comparando `null` com qualquer tipo é permitida e não gerará uma exceção ao usar <xref:System.IComparable>. Durante a classificação, `null` é considerado menor que qualquer outro objeto.  
+  
+ Comparações de cadeia de caracteres podem ter resultados diferentes dependendo da cultura. Para obter mais informações sobre as comparações de específicos de cultura, consulte o <xref:System.Globalization> namespace e [globalização e localização](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Nem <paramref name="a" /> nem <paramref name="b" /> implementam a interface <see cref="T:System.IComparable" />.  
+  
+ -ou-  
+  
+ <paramref name="a" /> e <paramref name="b" /> são de tipos diferentes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Collections.CaseInsensitiveComparer Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.CaseInsensitiveComparer Default" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CaseInsensitiveComparer.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.CaseInsensitiveComparer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância de <see cref="T:System.Collections.CaseInsensitiveComparer" /> que está associado com o <see cref="P:System.Threading.Thread.CurrentCulture" /> do thread atual e que está sempre disponível.</summary>
+        <value>Uma instância de <see cref="T:System.Collections.CaseInsensitiveComparer" /> que está associado com o <see cref="P:System.Threading.Thread.CurrentCulture" /> do thread atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Collections.CaseInsensitiveComparer> instância é criada usando o construtor sem parâmetros, o <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> do thread atual é salva. Procedimentos de comparação usam a cultura salva para determinar a ordem de classificação e regras de maiusculas e minúsculas; Portanto, as comparações de cadeia de caracteres podem ter resultados diferentes dependendo da cultura. Para obter mais informações sobre as comparações de específicos de cultura, consulte o <xref:System.Globalization> namespace e [globalização e localização](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultInvariant">
+      <MemberSignature Language="C#" Value="public static System.Collections.CaseInsensitiveComparer DefaultInvariant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.CaseInsensitiveComparer DefaultInvariant" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.CaseInsensitiveComparer.DefaultInvariant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.CaseInsensitiveComparer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma instância de <see cref="T:System.Collections.CaseInsensitiveComparer" /> associado <see cref="P:System.Globalization.CultureInfo.InvariantCulture" /> e que está sempre disponível.</summary>
+        <value>Uma instância de <see cref="T:System.Collections.CaseInsensitiveComparer" /> associado <see cref="P:System.Globalization.CultureInfo.InvariantCulture" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usam os procedimentos de comparação de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para determinar a ordem de classificação e regras de maiusculas e minúsculas. Comparações de cadeia de caracteres podem ter resultados diferentes dependendo da cultura. Para obter mais informações sobre as comparações de específicos de cultura, consulte o <xref:System.Globalization> namespace e [globalização e localização](http://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma tabela de hash diferencia maiusculas de minúsculas e uma tabela de hash de maiusculas e minúsculas e demonstra a diferença em seu comportamento, mesmo que contêm os mesmos elementos.  
+  
+ [!code-cpp[System.Collections.CaseInsensitive#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CPP/caseinsensitive.cpp#1)]
+ [!code-csharp[System.Collections.CaseInsensitive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/CS/caseinsensitive.cs#1)]
+ [!code-vb[System.Collections.CaseInsensitive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.CaseInsensitive/VB/caseinsensitive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,150 @@
+<Type Name="BrowserInteropHelper" FullName="System.Windows.Interop.BrowserInteropHelper">
+  <TypeSignature Language="C#" Value="public static class BrowserInteropHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed BrowserInteropHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.BrowserInteropHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe auxiliar que fornece informações sobre o ambiente do navegador em que um aplicativo de navegador XAML (XBAP) está hospedado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClientSite">
+      <MemberSignature Language="C#" Value="public static object ClientSite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property object ClientSite" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.BrowserInteropHelper.ClientSite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma referência a um objeto que pode ser usado para acessar o navegador de host por meio de suas interfaces de contêiner OLE (por exemplo, IOleClientSite::GetContainer();).</summary>
+        <value>Um objeto que pode ser convertido em <see cref="T:Microsoft.VisualStudio.OLE.Interop.IOleClientSite" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">Para obter esse objeto. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HostScript">
+      <MemberSignature Language="C#" Value="public static dynamic HostScript { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property object HostScript" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.BrowserInteropHelper.HostScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto de script que concede acesso ao objeto de janela HTML, funções de script personalizado e variáveis globais para a página HTML, se o [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)] estiver hospedado em um quadro.</summary>
+        <value>Um objeto de script que concede acesso ao objeto de janela HTML, funções de script personalizado e variáveis globais para a página HTML, se o [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)] estiver hospedado em um quadro; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com retornado <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> do objeto, você pode acessar as propriedades, métodos e eventos de objeto da janela HTML, chamar uma função de script diretamente ou acessar uma variável global. A sintaxe de acesso a esses itens usa a notação de ponto familiar.  
+  
+ Para obter mais informações sobre o objeto de janela, consulte [objeto window](http://go.microsoft.com/fwlink/?LinkId=160274) na documentação do DHTML (HTML dinâmico).  
+  
+ O <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> propriedade retorna `null` se o quadro é acessado de um local de domínio cruzado.  
+  
+ Esse recurso pode ser desativado para o Internet Explorer, definindo o **ScriptInteropDisallow** o valor do registro. Para obter mais informações, consulte [segurança (WPF)](~/docs/framework/wpf/security-wpf.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> do objeto e feche a janela do navegador.  
+  
+ [!code-xaml[XbapBrowserInterop#1](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml#1)]  
+[!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
+[!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBrowserHosted">
+      <MemberSignature Language="C#" Value="public static bool IsBrowserHosted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsBrowserHosted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o atual [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] aplicativo está hospedado no navegador.</summary>
+        <value>
+          <see langword="true" />Se o aplicativo é hospedado; no navegador Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Page> pode ser independente de host e, consequentemente, pode ser carregado em vários tipos diferentes de hosts, incluindo uma <xref:System.Windows.Controls.Frame>, um <xref:System.Windows.Navigation.NavigationWindow>, ou um navegador. Isso pode acontecer quando você tem um assembly de biblioteca que contém uma ou mais páginas, e que é referenciado por várias autônomo e navegável ([!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)]) hospedar aplicativos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> para determinar se um <xref:System.Windows.Controls.Page> está hospedado em um navegador.  
+  
+ [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
+ [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public static Uri Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.BrowserInteropHelper.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para o local do qual um [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)] aplicativo foi iniciado.</summary>
+        <value>O <see cref="T:System.Uri" /> para o local do qual um [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)] aplicativo foi iniciado; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Interop.BrowserInteropHelper.Source%2A> propriedade contém apenas um <xref:System.Uri> para [!INCLUDE[TLA#tla_xbap](~/includes/tlasharptla-xbap-md.md)] aplicativos. Para obter um exemplo de <xref:System.Windows.Interop.BrowserInteropHelper.Source%2A> propriedade, consulte <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

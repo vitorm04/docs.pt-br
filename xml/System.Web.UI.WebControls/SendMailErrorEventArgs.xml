@@ -1,0 +1,168 @@
+<Type Name="SendMailErrorEventArgs" FullName="System.Web.UI.WebControls.SendMailErrorEventArgs">
+  <TypeSignature Language="C#" Value="public class SendMailErrorEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SendMailErrorEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SendMailErrorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see langword="SendMailError" /> eventos de controles, como o <see cref="T:System.Web.UI.WebControls.ChangePassword" /> controle, o <see cref="T:System.Web.UI.WebControls.CreateUserWizard" /> controle e o <see cref="T:System.Web.UI.WebControls.PasswordRecovery" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto contém uma mensagem de erro é gerada pelo provedor de email SMTP quando uma mensagem de email não pode ser enviada pelo <xref:System.Web.UI.WebControls.ChangePassword> controle, ou o <xref:System.Web.UI.WebControls.CreateUserWizard> controle. Nesse caso, o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> o objeto é enviado para o <xref:System.Web.UI.WebControls.SendMailErrorEventHandler>.  
+  
+ Criar um <xref:System.Web.UI.WebControls.SendMailErrorEventHandler> delegado para manipular o evento. Manipular o evento permite que seu aplicativo da Web continuar em execução mesmo que ocorreu uma exceção. Isso é útil quando não é crítico para enviar uma mensagem de email. Por exemplo, se a exceção ocorre quando um usuário está trabalhando por meio de um Assistente de várias etapa, pode ser vantajoso para log o erro, exiba uma mensagem informativa para o usuário e permitir que o usuário concluir o assistente.  
+  
+ Examine o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Exception%2A> propriedade para determinar a causa real da exceção. O motivo mais comum para a exceção é um erro de configuração no [ &lt;smtp&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md) do arquivo de configuração de máquina. Embora um erro, como isso normalmente é descoberto durante o desenvolvimento e depuração de um aplicativo, servidores de email podem falhar inesperadamente em um ambiente de produção e você deve determinar se deseja que o aplicativo inteiro falha nessa situação. Caso contrário, a manipulação de eventos permite que seu aplicativo continuar.  
+  
+ Você deve definir o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade `true` para sinalizar que a exceção foi tratada; caso contrário, a exceção é lançada novamente e incluirá a mensagem de erro e de pilha de chamada original.  
+  
+ Se você não criar um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendMailError> evento, ou se você criar um manipulador de eventos, mas deixe o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade definida como `false`, seu aplicativo Web interromperá a execução se ocorrer um erro ao enviar uma mensagem de email e ASP.NET exibirá uma mensagem de erro.  
+  
+ O <xref:System.Web.UI.WebControls.ChangePassword.OnSendMailError%2A> método também permite que classes derivadas manipular o evento, em vez desta sendo feita <xref:System.Web.UI.WebControls.SendMailErrorEventHandler>. Essa é a técnica preferida para manipular o evento em uma classe derivada de <xref:System.Web.UI.WebControls.ChangePassword> ou <xref:System.Web.UI.WebControls.CreateUserWizard>.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma página ASP.NET que usa um <xref:System.Web.UI.WebControls.ChangePassword> controle da Web e inclui um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendMailError> evento chamado SendMailError. O exemplo de código pressupõe que o site da Web do ASP.NET foi configurado para usar associação ASP.NET e autenticação de formulários e que um usuário foi criado com o nome e senha são conhecidos por você. Para obter mais informações, consulte [como: implementar a autenticação de formulários simples](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Se a alteração de senha for bem-sucedida, o código de `SendingMail` manipulador de eventos tenta enviar uma mensagem de email ao usuário para confirmar a alteração. SMTP já deve estar configurado no servidor para que este exemplo de código trabalhar. Para obter informações sobre como configurar um servidor SMTP, consulte [NIB: como: instalar e configurar servidores virtuais SMTP no IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Para os fins deste exemplo, não é necessário configurar um servidor SMTP; o exemplo é construído para testar uma falha ao enviar uma mensagem de email.  
+  
+ Se um servidor de email não está configurado corretamente ou algum outro erro ocorre e não é possível enviar a mensagem de email, o `SendMailError` função é chamada. Será exibida uma mensagem para o usuário. Além disso, um evento é registrado para o log de eventos do aplicativo do Windows com a suposição de que uma fonte de evento denominada MySamplesSite já existe. Consulte o exemplo de código abaixo para criar a origem do evento especificado. Para obter mais informações sobre como criar uma fonte de evento, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto é definido como `true` para indicar que o erro foi tratado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/VB/changepassword_vb.aspx#1)]  
+  
+ Use o exemplo de código a seguir se você precisar adicionar programaticamente a origem do evento chamada MySamplesSite para o log do aplicativo. Esta fonte de evento deve existir para que o primeiro exemplo de código funcione corretamente. O exemplo de código a seguir requer privilégios de administrador.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao substituir <see cref="M:System.Web.UI.WebControls.ChangePassword.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" /> em uma classe derivada, certifique-se de chamar o <see cref="M:System.Web.UI.WebControls.ChangePassword.OnSendMailError(System.Web.UI.WebControls.SendMailErrorEventArgs)" /> método da classe base para habilitar delegados registrados para receber o evento.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMailErrorEventArgs (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SendMailErrorEventArgs.#ctor(System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Exception" /> objeto que contém a exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.SendMailErrorEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SendMailErrorEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a exceção gerada por um serviço de email SMTP quando uma mensagem de email não pode ser enviada.</summary>
+        <value>Um <see cref="T:System.Exception" /> objeto que contém a exceção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Exception%2A> propriedade contém a exceção que é lançada pelo provedor de email SMTP quando uma mensagem de email não pode ser enviada pelo <xref:System.Web.UI.WebControls.ChangePassword> controle ou <xref:System.Web.UI.WebControls.CreateUserWizard>. O motivo mais comum para essa exceção é um erro de configuração no [ &lt;smtp&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md) do arquivo de configuração de máquina, que produz a seguinte mensagem de exceção:`The transport failed to connect to the server.`  
+  
+ Exceções não são geradas, se houver um erro na mensagem de email, ao incorporar um arquivo usando <xref:System.Web.UI.WebControls.MailDefinition.EmbeddedObjects%2A>. Em vez disso, o arquivo inserido aparece interrompido quando a mensagem de email é exibida.  
+  
+ Você deve definir o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> objeto, passado como o `e` parâmetro de <xref:System.Web.UI.WebControls.SendMailErrorEventArgs>para `true` para sinalizar que a exceção foi tratada; caso contrário, a exceção é lançada novamente e inclui a mensagem de erro e de pilha de chamada original.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma página ASP.NET que usa um <xref:System.Web.UI.WebControls.ChangePassword> controle da Web e inclui um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendMailError> evento chamado `SendMailError`. O exemplo de código pressupõe que o site da Web do ASP.NET foi configurado para usar associação ASP.NET e autenticação de formulários e que um usuário foi criado com o nome e senha são conhecidos por você. Para obter mais informações, consulte [como: implementar a autenticação de formulários simples](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Se a alteração de senha for bem-sucedida, o código de `SendingMail` manipulador de eventos tenta enviar uma mensagem de email ao usuário para confirmar a alteração. SMTP já deve estar configurado no servidor para que este exemplo de código trabalhar. Para obter informações sobre como configurar um servidor SMTP, consulte [NIB: como: instalar e configurar servidores virtuais SMTP no IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Para os fins deste exemplo, não é necessário configurar um servidor SMTP; o exemplo é construído para testar uma falha ao enviar uma mensagem de email.  
+  
+ Se um servidor de email não está configurado corretamente ou algum outro erro ocorre e não é possível enviar a mensagem de email, o `SendMailError` função é chamada. Será exibida uma mensagem para o usuário. Além disso, um evento é registrado para o log de eventos do aplicativo do Windows com a suposição de que uma fonte de evento denominada MySamplesSite já existe. Consulte o exemplo de código abaixo para criar a origem do evento especificado. Para obter mais informações sobre como criar uma fonte de evento, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto é definido como `true` para indicar que o erro foi tratado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/VB/changepassword_vb.aspx#1)]  
+  
+ Use o exemplo de código a seguir se você precisar adicionar programaticamente a origem do evento chamada MySamplesSite para o log do aplicativo. Esta fonte de evento deve existir para que o primeiro exemplo de código funcione corretamente. O exemplo de código a seguir requer privilégios de administrador.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a exceção de SMTP que está contida na propriedade <see cref="P:System.Web.UI.WebControls.SendMailErrorEventArgs.Exception" /> foi tratada.</summary>
+        <value>Se <see langword="true" />, a exceção será consumida e tratada pelo delegado <see cref="T:System.Web.UI.WebControls.SendMailErrorEventHandler" />. Se <see langword="false" />, a exceção é lançada novamente, incluindo a mensagem de erro e de pilha de chamada original.  
+  
+ O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade indica se o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Exception%2A> foi tratado. A exceção é gerada pelo provedor de email SMTP quando uma mensagem de email não pode ser enviada pelo <xref:System.Web.UI.WebControls.ChangePassword> controle ou <xref:System.Web.UI.WebControls.CreateUserWizard>. O motivo mais comum para a exceção é um erro de configuração no [ &lt;smtp&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md) do arquivo de configuração de máquina. Embora um erro, como isso normalmente é descoberto durante o desenvolvimento e depuração de um aplicativo, servidores de email podem falhar inesperadamente em um ambiente de produção e você deve determinar se deseja que o aplicativo inteiro falha nessa situação. Caso contrário, a manipulação de eventos permite que seu aplicativo continuar.  
+  
+ Se você não criar um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendMailError> evento, ou se você criar um manipulador de eventos, mas deixe o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade definida como `false`, seu aplicativo Web interromperá a execução se ocorrer um erro ao enviar uma mensagem de email e ASP.NET exibirá uma mensagem de erro. Manipular o evento permite que seu aplicativo da Web continuar em execução mesmo que ocorreu uma exceção. Isso é útil quando não é crítico para enviar uma mensagem de email. Por exemplo, se a exceção ocorre quando um usuário está trabalhando por meio de um Assistente de várias etapa, pode ser vantajoso para log o erro, exiba uma mensagem informativa para o usuário e permitir que o usuário concluir o assistente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma página ASP.NET que usa um <xref:System.Web.UI.WebControls.ChangePassword> controle da Web e inclui um manipulador de eventos para o <xref:System.Web.UI.WebControls.ChangePassword.SendMailError> evento chamado `SendMailError`. O exemplo de código pressupõe que o site da Web do ASP.NET foi configurado para usar associação ASP.NET e autenticação de formulários e que um usuário foi criado com o nome e senha são conhecidos por você. Para obter mais informações, consulte [como: implementar a autenticação de formulários simples](http://msdn.microsoft.com/library/9522bc8d-1a41-480a-aa11-c389a4ac2d2e).  
+  
+ Se a alteração de senha for bem-sucedida, o código de `SendingMail` manipulador de eventos tenta enviar uma mensagem de email ao usuário para confirmar a alteração. SMTP já deve estar configurado no servidor para que este exemplo de código trabalhar. Para obter informações sobre como configurar um servidor SMTP, consulte [NIB: como: instalar e configurar servidores virtuais SMTP no IIS 6.0](http://msdn.microsoft.com/en-us/ed204b58-24af-47d0-9687-60e5df5f17f8). Para os fins deste exemplo, não é necessário configurar um servidor SMTP; o exemplo é construído para testar uma falha ao enviar uma mensagem de email.  
+  
+ Se um servidor de email não está configurado corretamente ou algum outro erro ocorre e não é possível enviar a mensagem de email, o `SendMailError` função é chamada. Será exibida uma mensagem para o usuário. Além disso, um evento é registrado para o log de eventos do aplicativo do Windows com a suposição de que uma fonte de evento denominada MySamplesSite já existe. Consulte o exemplo de código abaixo para criar a origem do evento especificado. Para obter mais informações sobre como criar uma fonte de evento, consulte [manipulação de eventos do servidor em páginas Web Forms do ASP.NET](http://msdn.microsoft.com/library/765bfc89-33ee-4d0d-bbe6-3b172c06def9). O <xref:System.Web.UI.WebControls.SendMailErrorEventArgs.Handled%2A> propriedade o <xref:System.Web.UI.WebControls.SendMailErrorEventArgs> objeto é definido como `true` para indicar que o erro foi tratado.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/CS/changepassword_cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SendMailErrorEventHandler#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SendMailErrorEventHandler/VB/changepassword_vb.aspx#1)]  
+  
+ Use o exemplo de código a seguir se você precisar adicionar programaticamente a origem do evento chamada MySamplesSite para o log do aplicativo. Esta fonte de evento deve existir para que o primeiro exemplo de código funcione corretamente. O exemplo de código a seguir requer privilégios de administrador.  
+  
+ [!code-csharp[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/CS/createeventsource.cs#1)]
+ [!code-vb[System.Diagnostics.EventLog.CreateEventSource#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Diagnostics.EventLog.CreateEventSource/VB/createeventsource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

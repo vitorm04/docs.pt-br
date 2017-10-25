@@ -1,0 +1,114 @@
+<Type Name="View" FullName="System.Windows.Forms.View">
+  <TypeSignature Language="C#" Value="public enum View" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed View extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.View" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como os itens da lista são exibidos em um controle <see cref="T:System.Windows.Forms.ListView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os membros dessa enumeração para definir o valor da <xref:System.Windows.Forms.ListView.View%2A> propriedade o <xref:System.Windows.Forms.ListView> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra a configuração de <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> propriedade para um do <xref:System.Windows.Forms.View> valores de enumeração. Para executar o exemplo, cole o seguinte código em um formulário e a chamada a `InitializeListView` método no construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListViewItemStyle#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewItemStyle/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Details">
+      <MemberSignature Language="C#" Value="Details" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View Details = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.Details" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada item é exibido em uma linha separada com informações adicionais sobre cada item organizado em colunas. A coluna mais à esquerda contém um ícone pequeno e um rótulo e as colunas subsequentes contêm subitens conforme especificado pelo aplicativo. Uma coluna exibe um cabeçalho que pode exibir uma legenda para a coluna. O usuário pode redimensionar cada coluna em tempo de execução.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIcon">
+      <MemberSignature Language="C#" Value="LargeIcon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View LargeIcon = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.LargeIcon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada item é exibido como um ícone em tamanho normal com um rótulo abaixo dele.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="List">
+      <MemberSignature Language="C#" Value="List" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View List = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.List" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada item é exibido como um pequeno ícone com um rótulo à sua direita. Os itens são organizados em colunas sem cabeçalhos de coluna.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIcon">
+      <MemberSignature Language="C#" Value="SmallIcon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View SmallIcon = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.SmallIcon" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada item é exibido como um pequeno ícone com um rótulo à sua direita.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tile">
+      <MemberSignature Language="C#" Value="Tile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.View Tile = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.View.Tile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada item é exibido como um ícone em tamanho normal com as informações de rótulo e subitem do item à direita. As informações do subitem que aparece são especificadas pelo aplicativo. Essa exibição está disponível somente no Windows XP e a família Windows Server 2003. Em sistemas operacionais anteriores, esse valor é ignorado e o controle <see cref="T:System.Windows.Forms.ListView" /> aparece na exibição <see cref="F:System.Windows.Forms.View.LargeIcon" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

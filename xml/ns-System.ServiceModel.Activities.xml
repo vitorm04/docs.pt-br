@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.Activities">
+  <Docs>
+    <summary>O namespace System.ServiceModel.Activities contém classes que permitem que você enviar e receber mensagens de fluxos de trabalho. Essas atividades são usadas ao escrever serviços de fluxo de trabalho e permitem que você defina como as mensagens são enviadas e recebidas em um fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

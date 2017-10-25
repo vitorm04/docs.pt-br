@@ -1,0 +1,975 @@
+<Type Name="LinkButton" FullName="System.Web.UI.WebControls.LinkButton">
+  <TypeSignature Language="C#" Value="public class LinkButton : System.Web.UI.WebControls.WebControl, System.Web.UI.IPostBackEventHandler, System.Web.UI.WebControls.IButtonControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinkButton extends System.Web.UI.WebControls.WebControl implements class System.Web.UI.IPostBackEventHandler, class System.Web.UI.WebControls.IButtonControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinkButton" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackEventHandler</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.IButtonControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Click")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Text")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LinkButtonDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.WebControls.LinkButtonControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.DataBindingHandler("System.Web.UI.Design.TextDataBindingHandler, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.SupportsEventValidation</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:LinkButton runat="server"&gt;LinkButton&lt;/{0}:LinkButton&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Exibe um controle de botão com estilo de hiperlink em uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Validação e controles LinkButton](#ButtonControlsAndValidation)  
+  
+-   [Sintaxe declarativa](#DeclarativeSyntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ Use o <xref:System.Web.UI.WebControls.LinkButton> controle para criar um botão de estilo hiperlink na página da Web. O <xref:System.Web.UI.WebControls.LinkButton> controle tem a mesma aparência como um <xref:System.Web.UI.WebControls.HyperLink> controle, mas tem a mesma funcionalidade que um <xref:System.Web.UI.WebControls.Button> controle. Se você deseja vincular a outra página da Web quando o controle é clicado, considere o uso de <xref:System.Web.UI.WebControls.HyperLink> controle.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.LinkButton> controle processa JavaScript no navegador cliente. O navegador do cliente deve ter o JavaScript habilitado para este controle para funcionar corretamente. Para obter mais informações sobre o script de cliente, consulte [Script de cliente em páginas da Web do ASP.NET](http://msdn.microsoft.com/library/13edb6b9-2dea-43c6-b8c1-a47207de19aa).  
+  
+ Você pode criar um botão de envio ou um botão de comando. Um botão de envio não tem um nome de comando associado a ele. O botão simplesmente envia a página da Web para o servidor. Por padrão, um <xref:System.Web.UI.WebControls.LinkButton> controle é um botão de envio. Você pode fornecer um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinkButton.Click> eventos para controlar programaticamente as ações executadas quando clicar no botão Enviar. Por outro lado, um botão de comando tem um nome de comando associado ao botão, como `Sort`. Definir o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> propriedade para especificar o nome do comando. Isso permite que você crie várias <xref:System.Web.UI.WebControls.LinkButton> controles em uma Web página e determinar quais programaticamente <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Você também pode usar o <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade com um botão de comando para fornecer informações adicionais sobre o comando para executar, como especificar a ordem crescente. Você também pode fornecer um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinkButton.Command> eventos para controlar programaticamente a ação executada quando o botão de comando é clicado.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. O texto não é codificado em antes de ser exibido em HTML a <xref:System.Web.UI.WebControls.LinkButton> controle. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+<a name="ButtonControlsAndValidation"></a>   
+## <a name="linkbutton-controls-and-validation"></a>Validação e controles LinkButton  
+ Por padrão, a validação de página é executada quando um <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Validação de página determina se os controles de entrada associado com um controle de validação na página de que todos os passam as regras de validação especificadas pelo controle de validação. Para impedir a validação de página ocorra, defina o <xref:System.Web.UI.WebControls.LinkButton.CausesValidation%2A> propriedade `false`.  
+  
+<a name="DeclarativeSyntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:LinkButton  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+        Inset|Outset"  
+    BorderWidth="size"  
+    CausesValidation="True|False"  
+    CommandArgument="string"  
+    CommandName="string"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+        Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    OnClick="Click event handler"  
+    OnClientClick="string"  
+    OnCommand="Command event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    PostBackUrl="uri"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    Text="string"  
+    ToolTip="string"  
+    ValidationGroup="string"  
+    Visible="True|False"  
+    Width="size"  
+/>  
+```  
+  
+   
+  
+## Examples  
+ Um projeto de site da Web do Visual Studio com o código-fonte está disponível para acompanhar este tópico: [baixar](http://go.microsoft.com/fwlink/?LinkId=192872).  
+  
+ O exemplo a seguir demonstra como criar um <xref:System.Web.UI.WebControls.LinkButton> controle que exibe o texto em uma <xref:System.Web.UI.WebControls.Label> controlar quando o link é clicado.  
+  
+ [!code-aspx-csharp[Classic LinkButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra como criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+ [!code-aspx-csharp[Classic LinkButton.LinkButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton.LinkButton Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton.LinkButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton.LinkButton Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém o fluxo de saída para renderizar no cliente.</param>
+        <summary>Adiciona os atributos do <see cref="T:System.Web.UI.WebControls.LinkButton" /> controle o fluxo de saída para renderização no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.LinkButton.AddAttributesToRender%2A> método em um controle de servidor personalizado, para que o <xref:System.Web.UI.WebControls.LinkButton> texto do item de lista sempre aparece em negrito.  
+  
+ [!code-aspx-csharp[CustomLinkButtonAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonAddAttributesToRender/CS/custom_linkbutton_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomLinkButtonAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonAddAttributesToRender/VB/custom_linkbutton_addattributestorendervb.aspx#1)]  
+[!code-csharp[CustomLinkButtonAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonAddAttributesToRender/CS/custom_linkbutton_addattributestorender.cs#2)]
+[!code-vb[CustomLinkButtonAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonAddAttributesToRender/VB/custom_linkbutton_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParsedSubObject">
+      <MemberSignature Language="C#" Value="protected override void AddParsedSubObject (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddParsedSubObject(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.AddParsedSubObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> que representa o elemento analisado.</param>
+        <summary>Notifica o controle que um elemento XML ou HTML, foi analisado e adiciona o elemento para o controle <see cref="T:System.Web.UI.ControlCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.LinkButton.AddParsedSubObject%2A> método em um personalizado <xref:System.Web.UI.WebControls.LinkButton> controle de servidor para que ele define a propriedade de texto à propriedade de texto do objeto analisado, se o objeto analisado é uma <xref:System.Web.UI.WebControls.Literal> objeto, ou vazio cadeia de caracteres de outra forma.  
+  
+ [!code-aspx-csharp[CustomLinkButtonAddParsedSubObject#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonAddParsedSubObject/CS/custom_linkbutton_addparsedsubobjectcs.aspx#1)]
+ [!code-aspx-vb[CustomLinkButtonAddParsedSubObject#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonAddParsedSubObject/VB/custom_linkbutton_addparsedsubobjectvb.aspx#1)]  
+[!code-csharp[CustomLinkButtonAddParsedSubObject#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonAddParsedSubObject/CS/custom_linkbutton_addparsedsubobject.cs#2)]
+[!code-vb[CustomLinkButtonAddParsedSubObject#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonAddParsedSubObject/VB/custom_linkbutton_addparsedsubobject.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CausesValidation">
+      <MemberSignature Language="C#" Value="public virtual bool CausesValidation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CausesValidation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.CausesValidation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a validação é executada quando o controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> é acionado.</summary>
+        <value>
+          <see langword="true" /> se a validação for executada quando o controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> é acionado; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a validação de página é executada quando um <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Validação de página determina se os controles de entrada associado com um controle de validação na página de que todos os passam as regras de validação especificadas pelo controle de validação.  
+  
+ Você pode especificar (ou determinar) se a validação é executada no cliente e o servidor quando uma <xref:System.Web.UI.WebControls.LinkButton> controle é clicado, usando o <xref:System.Web.UI.WebControls.LinkButton.CausesValidation%2A> propriedade. Para impedir a validação do que está sendo executada, defina o <xref:System.Web.UI.WebControls.LinkButton.CausesValidation%2A> propriedade `false`.  
+  
+ Essa propriedade normalmente é definida como `false` para uma redefinição ou botão Limpar impedir que a validação do que está sendo executada quando o botão é clicado.  
+  
+ Quando o valor da <xref:System.Web.UI.WebControls.LinkButton.CausesValidation%2A> está definida como `true`, você também pode usar o <xref:System.Web.UI.WebControls.LinkButton.ValidationGroup%2A> propriedade para especificar o nome do grupo de validação para o qual o <xref:System.Web.UI.WebControls.LinkButton> controle aciona a validação.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LinkButton.CausesValidation%2A> propriedade para evitar a validação de página ocorra. Observe como o <xref:System.Web.UI.WebControls.BaseValidator.Validate%2A> método ativa cada controle de validação de forma independente.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LinkButtonCausesValidation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LinkButtonCausesValidation/CS/linkbuttoncausesvalidationcs.aspx#1)]
+ [!code-aspx-vb[LinkButtonCausesValidation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LinkButtonCausesValidation/VB/linkbuttoncausesvalidationvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public event EventHandler Click;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Click" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinkButton.Click" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário clica no controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinkButton.Click> é gerado quando o <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Esse evento é geralmente usado quando nenhum nome de comando é associado com o <xref:System.Web.UI.WebControls.LinkButton> controlar, como no caso de um botão de envio.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.LinkButton.Click> evento para exibir uma mensagem quando o <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+ [!code-aspx-csharp[Classic LinkButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CommandEventHandler Command;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CommandEventHandler Command" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinkButton.Command" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CommandEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um usuário clica no controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinkButton.Command> é gerado quando o <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Esse evento é geralmente usado quando um nome de comando, como `Sort`, está associado a <xref:System.Web.UI.WebControls.LinkButton> controle. Isso permite que você crie várias <xref:System.Web.UI.WebControls.LinkButton> controles em uma Web página e determinar quais programaticamente <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.LinkButton.Command> é gerado por meio da hierarquia de controle na forma do `BubbleEvent`.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.LinkButton.Click> evento para exibir uma mensagem quando o <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+ [!code-aspx-csharp[Classic LinkButton.CommandName Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton.CommandName Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandArgument">
+      <MemberSignature Language="C#" Value="public string CommandArgument { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandArgument" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.CommandArgument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um argumento opcional passado para o manipulador de eventos <see cref="E:System.Web.UI.WebControls.LinkButton.Command" /> em conjunto com a propriedade <see cref="P:System.Web.UI.WebControls.LinkButton.CommandName" /> associada.</summary>
+        <value>Um argumento opcional passado para o manipulador de eventos <see cref="E:System.Web.UI.WebControls.LinkButton.Command" /> em conjunto com a propriedade <see cref="P:System.Web.UI.WebControls.LinkButton.CommandName" /> associada. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade para especificar um argumento que complementa o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade normalmente é usada quando apenas o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> está definida.  
+  
+ O <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade complementa o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> propriedade, permitindo que você forneça informações adicionais sobre o comando para executar. Por exemplo, você pode definir o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> propriedade `Sort` e defina o <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade `Ascending` para especificar um comando para classificar em ordem crescente.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade para especificar um argumento opcional que complementa o nome do comando para um <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+ [!code-aspx-csharp[Classic LinkButton.CommandName Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton.CommandName Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandName">
+      <MemberSignature Language="C#" Value="public string CommandName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.CommandName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de comando associado ao controle <see cref="T:System.Web.UI.WebControls.LinkButton" />. Esse valor é passado para o manipulador de eventos <see cref="E:System.Web.UI.WebControls.LinkButton.Command" /> junto com a propriedade <see cref="P:System.Web.UI.WebControls.LinkButton.CommandArgument" />.</summary>
+        <value>O nome de comando do controle <see cref="T:System.Web.UI.WebControls.LinkButton" />. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você tiver vários <xref:System.Web.UI.WebControls.LinkButton> controles em uma página da Web, use o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> para especificar ou determinar o nome do comando associado a <xref:System.Web.UI.WebControls.LinkButton> controle clicado. Você pode definir o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> propriedade com qualquer cadeia de caracteres que identifica o comando para executar. Você pode determinar o nome do comando de programaticamente o <xref:System.Web.UI.WebControls.LinkButton> controlar e executar as ações adequadas.  
+  
+ Informações adicionais sobre o comando, como um `Ascending` ordem de classificação, podem ser especificados usando o <xref:System.Web.UI.WebControls.LinkButton.CommandArgument%2A> propriedade.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LinkButton.CommandName%2A> propriedade para especificar um nome de comando para um <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+ [!code-aspx-csharp[Classic LinkButton.CommandName Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton.CommandName Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPostBackOptions">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.PostBackOptions GetPostBackOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.PostBackOptions GetPostBackOptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.GetPostBackOptions" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.PostBackOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um objeto <see cref="T:System.Web.UI.PostBackOptions" /> que representa o comportamento de postback do controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <returns>Um <see cref="T:System.Web.UI.PostBackOptions" /> que representa o comportamento de postback do controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinkButton.GetPostBackOptions%2A> método cria um <xref:System.Web.UI.PostBackOptions> objeto que representa o <xref:System.Web.UI.WebControls.LinkButton> o comportamento de postback do controle. O <xref:System.Web.UI.PostBackOptions> objeto, em seguida, é normalmente passado para o <xref:System.Web.UI.ClientScriptManager.GetPostBackEventReference%28System.Web.UI.PostBackOptions%29?displayProperty=nameWithType> método, que é usado para obter uma referência a uma função de script do lado do cliente que, quando chamado, faz com que o servidor de volta para a página.  
+  
+ Esse método é usado principalmente por desenvolvedores de controle ao estender o <xref:System.Web.UI.WebControls.LinkButton> classe.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Web.UI.WebControls.LinkButton.GetPostBackOptions" /> método na classe derivada para modificar as opções para o controle de botão de postback ou chamar o script do lado do cliente quando o botão é clicado. Certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LinkButton.GetPostBackOptions" /> método para que as opções de postback padrão são definidas.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um objeto que representa o estado do controle a ser restaurado.</param>
+        <summary>Restaura informações de estado de exibição de uma solicitação anterior que foi salva com o método <see cref="M:System.Web.UI.WebControls.WebControl.SaveViewState" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClick">
+      <MemberSignature Language="C#" Value="protected virtual void OnClick (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClick(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.OnClick(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.LinkButton.Click" /> do controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinkButton.Click> é gerado quando o <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Esse evento é geralmente usado quando nenhum nome de comando é associado com o <xref:System.Web.UI.WebControls.LinkButton> controlar, como no caso de um botão de envio.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.LinkButton.OnClick%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.LinkButton.Click> evento para exibir quais <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+ [!code-aspx-csharp[Classic LinkButton Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LinkButton.OnClick(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LinkButton.OnClick(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClientClick">
+      <MemberSignature Language="C#" Value="public virtual string OnClientClick { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OnClientClick" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.OnClientClick" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o script do lado do cliente executado quando um evento <see cref="E:System.Web.UI.WebControls.LinkButton.Click" /> do controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> é gerado</summary>
+        <value>O script do lado do cliente executado quando um evento <see cref="E:System.Web.UI.WebControls.LinkButton.Click" /> do controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> é gerado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.LinkButton.OnClientClick%2A> propriedade para especificar o script do lado do cliente adicional que é executado quando o <xref:System.Web.UI.WebControls.LinkButton> do controle <xref:System.Web.UI.WebControls.LinkButton.Click> é gerado. O script que você especificar para esta propriedade é renderizada no <xref:System.Web.UI.WebControls.LinkButton> do controle `OnClick` predefinidos de atributo, além do controle de script do lado do cliente.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LinkButton.OnClientClick%2A> propriedade para especificar o script do lado do cliente adicional que é executado quando um <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+ [!code-aspx-csharp[LinkButton.OnClientClick#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LinkButton.OnClientClick/CS/linkbutton.onclientclickcs.aspx#1)]
+ [!code-aspx-vb[LinkButton.OnClientClick#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LinkButton.OnClientClick/VB/linkbutton.onclientclickvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnCommand (System.Web.UI.WebControls.CommandEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCommand(class System.Web.UI.WebControls.CommandEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CommandEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.WebControls.CommandEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.LinkButton.Command" /> do controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinkButton.Command> é gerado quando o <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Esse evento é geralmente usado quando um nome de comando, como `Sort`, está associado a <xref:System.Web.UI.WebControls.LinkButton> controle. Isso permite que você crie várias <xref:System.Web.UI.WebControls.LinkButton> controles em uma Web página e determinar quais programaticamente <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.LinkButton.Command> é gerado por meio da hierarquia de controle na forma do `BubbleEvent`.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.LinkButton.OnCommand%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como especificar e codificar um manipulador para o <xref:System.Web.UI.WebControls.LinkButton.Command> evento para exibir quais <xref:System.Web.UI.WebControls.LinkButton> controle é clicado.  
+  
+ [!code-aspx-csharp[Classic LinkButton.CommandName Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton.CommandName Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LinkButton.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LinkButton.OnCommand(System.Web.UI.WebControls.CommandEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinkButton.OnPreRender%2A> método notifica o <xref:System.Web.UI.WebControls.LinkButton> controle para executar as etapas necessárias de pré-processamento antes de salvar o estado de exibição e processar o conteúdo ao cliente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.LinkButton.OnPreRender%2A> método para que uma borda nunca seja exibida em um personalizado <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+ [!code-aspx-csharp[CustomLinkButtonOnPreRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonOnPreRender/CS/custom_linkbutton_onprerendercs.aspx#1)]
+ [!code-aspx-vb[CustomLinkButtonOnPreRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonOnPreRender/VB/custom_linkbutton_onprerendervb.aspx#1)]  
+[!code-csharp[CustomLinkButtonOnPreRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonOnPreRender/CS/custom_linkbutton_onprerender.cs#2)]
+[!code-vb[CustomLinkButtonOnPreRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonOnPreRender/VB/custom_linkbutton_onprerender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackUrl">
+      <MemberSignature Language="C#" Value="public virtual string PostBackUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.PostBackUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty("*.aspx")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página que será usada para postagem da página atual quando um usuário clicar no controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <value>A URL da página da Web que será usada para postagem da página atual quando o controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> for acionado. O valor padrão é uma cadeia de caracteres vazia (""), que faz com que a página execute postback para si mesma.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinkButton.PostBackUrl%2A> propriedade permite que você execute uma página post usando o <xref:System.Web.UI.WebControls.LinkButton> controle. Definir o <xref:System.Web.UI.WebControls.LinkButton.PostBackUrl%2A> propriedade para a URL da página da Web para postagem quando o <xref:System.Web.UI.WebControls.LinkButton> controle é clicado. Por exemplo, especificar Page2. aspx faz com que a página que contém o <xref:System.Web.UI.WebControls.LinkButton> controle a postar para `Page2.aspx`. Se você não especificar um valor para o <xref:System.Web.UI.WebControls.LinkButton.PostBackUrl%2A> propriedade, a página envia de volta para si mesmo.  
+  
+> [!IMPORTANT]
+>  Ao executar um postback entre páginas com controles de validação do lado do servidor, você deve verificar se a página <xref:System.Web.UI.Page.IsValid%2A> é de propriedade `true` antes de processar o postback. No caso de uma postagem entre páginas, a página para verificar se é o PreviousPage. O seguinte código do Visual Basic mostra como isso é feito:  
+  
+```  
+Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load  
+        If Page.PreviousPage.IsValid Then  
+            ' Handle the post back  
+        Else  
+            Response.Write("Invalid")  
+        End If  
+End Sub  
+```  
+  
+ Para obter mais informações sobre as técnicas de postagem entre páginas, consulte [entre páginas de lançamento em Web Forms do ASP.NET](http://msdn.microsoft.com/library/fedf234e-b7c4-4644-a9e8-c1c0870b043b).  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LinkButton.PostBackUrl%2A> propriedade para executar uma postagem entre páginas. Quando o usuário clica o <xref:System.Web.UI.WebControls.LinkButton> controle, a página envia o valor digitado na caixa de texto para a página de destino especificada pelo <xref:System.Web.UI.WebControls.LinkButton.PostBackUrl%2A> propriedade. Para executar este exemplo, você também deve criar um arquivo para a página de destino no mesmo diretório que este exemplo de código. O código para a página de destino é fornecido no exemplo a seguir.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LinkButton.PostBackUrlProperty#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LinkButton.PostBackUrlProperty/CS/linkbutton.postbackurlpropertycs.aspx#1)]
+ [!code-aspx-vb[LinkButton.PostBackUrlProperty#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LinkButton.PostBackUrlProperty/VB/linkbutton.postbackurlpropertyvb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.Page.PreviousPage%2A?displayProperty=nameWithType> propriedade para acessar um valor que foi lançado outra página usando o <xref:System.Web.UI.WebControls.LinkButton.PostBackUrl%2A> propriedade. Esta página obtém a cadeia de caracteres que foi lançada na página anterior e exibe para o usuário. Se você tentar executar este exemplo de código diretamente, você receberá um erro porque o valor de `text` campo será `null`. Em vez disso, use este código para criar uma página de destino e coloque o arquivo no mesmo diretório que o código no exemplo anterior. O nome do arquivo deve corresponder ao valor especificado para o <xref:System.Web.UI.WebControls.LinkButton.PostBackUrl%2A> propriedade no exemplo anterior. Quando você executar o código no exemplo anterior, essa página será executado automaticamente quando ocorre a postagem entre páginas.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LinkButton.PostBackUrlPage2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LinkButton.PostBackUrlPage2/CS/linkbutton.postbackurlpage2cs.aspx#1)]
+ [!code-aspx-vb[LinkButton.PostBackUrlPage2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LinkButton.PostBackUrlPage2/VB/linkbutton.postbackurlpage2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected virtual void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">O argumento para o evento.</param>
+        <summary>Aciona eventos para o controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> quando ele executa um postback para o servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é usado internamente pelo <xref:System.Web.UI.WebControls.LinkButton> controle, quando clicado, para gerar um <xref:System.Web.UI.WebControls.LinkButton.Click> evento e se definida, uma <xref:System.Web.UI.WebControls.LinkButton.Command> eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Renderiza o conteúdo do controle no gravador especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado principalmente por desenvolvedores de controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.LinkButton.RenderContents%2A> método em um servidor personalizado de controle para que o texto será anexado ao <xref:System.Web.UI.WebControls.LinkButton>.  
+  
+ [!code-aspx-csharp[CustomLinkButtonRenderContents#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonRenderContents/CS/custom_linkbutton_rendercontentscs.aspx#1)]
+ [!code-aspx-vb[CustomLinkButtonRenderContents#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonRenderContents/VB/custom_linkbutton_rendercontentsvb.aspx#1)]  
+[!code-csharp[CustomLinkButtonRenderContents#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomLinkButtonRenderContents/CS/custom_linkbutton_rendercontents.cs#2)]
+[!code-vb[CustomLinkButtonRenderContents#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomLinkButtonRenderContents/VB/custom_linkbutton_rendercontents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsDisabledAttribute">
+      <MemberSignature Language="C#" Value="public override bool SupportsDisabledAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsDisabledAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.SupportsDisabledAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle deve definir o atributo <see langword="disabled" /> do elemento HTML renderizado para "desabilitado" quando a propriedade do controle <see cref="P:System.Web.UI.WebControls.WebControl.IsEnabled" /> é <see langword="false" />.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Web.UI.Control.RenderingCompatibility" /> propriedade indica uma versão do ASP.NET inferior <c>4.0</c>; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica como ASP.NET devem renderizar HTML para um controle quando o controle está desabilitado. Se essa propriedade for `true`, o ASP.NET processa um `disabled` atributo quando um controle está desabilitado. Se essa propriedade for `false`, o ASP.NET processa um `class` atributo quando um controle está desabilitado. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebControl.SupportsDisabledAttribute%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackEventHandler.RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="void IPostBackEventHandler.RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinkButton.System#Web#UI#IPostBackEventHandler#RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">O argumento para o evento.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.LinkButton> é convertida em uma interface de <xref:System.Web.UI.IPostBackEventHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerDefaultProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a legenda do texto exibida no controle <see cref="T:System.Web.UI.WebControls.LinkButton" />.</summary>
+        <value>A legenda do texto exibida no controle <see cref="T:System.Web.UI.WebControls.LinkButton" />. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.LinkButton.Text%2A> para especificar ou determinar a legenda a ser exibida no <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+> [!CAUTION]
+>  Este controle pode ser usado para exibir a entrada do usuário, que pode incluir um script de cliente mal-intencionado. Verifique todas as informações que são enviadas de um cliente para o script executável, instruções SQL ou outro código antes de exibi-lo em seu aplicativo. O ASP.NET fornece um recurso de validação de solicitação de entrada para o bloco de script e HTML na entrada do usuário. Controles de servidor de validação também são fornecidos para avaliar a entrada do usuário. Para obter mais informações, consulte [sintaxe de controle de servidor de validação](http://msdn.microsoft.com/en-us/96d2c59e-693c-4079-9b53-b3ff0d9e9133).  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LinkButton.Text%2A> propriedade para especificar a que aparece na legenda a <xref:System.Web.UI.WebControls.LinkButton> controle.  
+  
+ [!code-aspx-csharp[Classic LinkButton.CommandName Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic LinkButton.CommandName Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic LinkButton.CommandName Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public virtual string ValidationGroup { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinkButton.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o grupo de controles para os quais o controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> aciona a validação quando posta de volta no servidor.</summary>
+        <value>O grupo de controles para os quais o controle <see cref="T:System.Web.UI.WebControls.LinkButton" /> aciona a validação quando posta de volta no servidor. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Grupos de validação permitem atribuir controles de validação em uma página a uma categoria específica. Cada grupo de validação pode ser validado independentemente de outros grupos de validação na página. Use o <xref:System.Web.UI.WebControls.LinkButton.ValidationGroup%2A> propriedade para especificar o nome do grupo de validação para o qual o <xref:System.Web.UI.WebControls.LinkButton> controle aciona a validação quando ele envia de volta para o servidor.  
+  
+ Essa propriedade tem um efeito somente quando o valor da <xref:System.Web.UI.WebControls.LinkButton.CausesValidation%2A> está definida como `true`. Quando você especificar um valor para o <xref:System.Web.UI.WebControls.LinkButton.ValidationGroup%2A> , somente os controles de validação que fazem parte do grupo especificado são validadas quando o <xref:System.Web.UI.WebControls.LinkButton> controle envia de volta para o servidor. Se você não especificar um valor para essa propriedade e o <xref:System.Web.UI.WebControls.LinkButton.CausesValidation%2A> está definida como `true`, todos os controles de validação na página que não estão atribuídos a um grupo de validação são validados quando o controle envia de volta para o servidor.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.LinkButton.ValidationGroup%2A> propriedade para especificar os controles que devem ser validadas quando um <xref:System.Web.UI.WebControls.LinkButton> controle envia de volta para o servidor. A página contém três caixas de texto para capturar dados de usuário e três <xref:System.Web.UI.WebControls.RequiredFieldValidator> controles para garantir que o usuário não deixe uma caixa de texto em branco. O <xref:System.Web.UI.WebControls.RequiredFieldValidator> controla para primeiro duas caixas de texto estão no `PersonalInfoGroup` grupo de validação e o <xref:System.Web.UI.WebControls.RequiredFieldValidator> controlar para a terceira caixa de texto está no `LocationInfoGroup` grupo de validação. Quando `LinkButton1` é clicado, somente os controles no grupo de validação `PersonalInfoGroup` são validados. Quando `LinkButton2` é clicado, somente o controle no grupo de validação `LocationInfoGroup` é validado.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[LinkButton.ValidationGroup#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LinkButton.ValidationGroup/CS/linkbutton.validationgroupcs.aspx#1)]
+ [!code-aspx-vb[LinkButton.ValidationGroup#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LinkButton.ValidationGroup/VB/linkbutton.validationgroupvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

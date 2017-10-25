@@ -1,0 +1,56 @@
+<Type Name="HostAdapterAttribute" FullName="System.AddIn.Pipeline.HostAdapterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class HostAdapterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HostAdapterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.HostAdapterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica um objeto como um segmento de adaptador do host do pipeline.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Hosting.AddInStore.Rebuild%2A> e <xref:System.AddIn.Hosting.AddInStore.Update%2A> métodos que mantêm o armazenamento de informações sobre segmentos de pipeline disponíveis, usam esse atributo para identificar um adaptador do lado do host.  
+  
+ Esse atributo deve ser usado somente em tipos de ativar os segmentos de pipeline. Tipos que representam objetos passados entre o host e o suplemento não é necessário para este atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir identifica um adaptador do lado do host.  
+  
+ [!code-csharp[AddInP1HostSideAdapters#2](~/samples/snippets/csharp/VS_Snippets_CLR/AddInP1HostSideAdapters/cs/Calc1ContractToViewHostSideAdapter.cs#2)]
+ [!code-vb[AddInP1HostSideAdapters#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1HostSideAdapters/vb/Calc1ContractToViewHostSideAdapter.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HostAdapterAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.HostAdapterAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.AddIn.Pipeline.HostAdapterAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

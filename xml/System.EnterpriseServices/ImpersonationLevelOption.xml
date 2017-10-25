@@ -1,0 +1,116 @@
+<Type Name="ImpersonationLevelOption" FullName="System.EnterpriseServices.ImpersonationLevelOption">
+  <TypeSignature Language="C#" Value="public enum ImpersonationLevelOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ImpersonationLevelOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ImpersonationLevelOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o nível de representação permitido ao chamar destinos de um aplicativo de servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a representação for bem-sucedida, o cliente permite que o servidor de representar o cliente até certo ponto. Vários níveis de representação são chamados de níveis de representação e elas indicam a quantidade autoridade é dado ao servidor quando ele está representando o cliente.  
+  
+ Para aplicativos de biblioteca (inproc), as configurações válidas somente são `Default` ou não há nenhuma especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso dessa enumeração em conjunto com o <xref:System.EnterpriseServices.ApplicationAccessControlAttribute> atributo.  
+  
+ [!code-cpp[EnterpriseServices_Security#2](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#2)]
+ [!code-csharp[EnterpriseServices_Security#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#2)]
+ [!code-vb[EnterpriseServices_Security#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Anonymous">
+      <MemberSignature Language="C#" Value="Anonymous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ImpersonationLevelOption Anonymous = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ImpersonationLevelOption.Anonymous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ImpersonationLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O cliente é anônimo para o servidor. O processo do servidor pode representar o cliente, mas o token de representação não contém todas as informações sobre o cliente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ImpersonationLevelOption Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ImpersonationLevelOption.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ImpersonationLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usa o nível de representação padrão para o serviço de autenticação especificado. Em COM+, essa configuração é fornecida pelo <see langword="DefaultImpersonationLevel" /> propriedade o <see langword="LocalComputer" /> coleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delegate">
+      <MemberSignature Language="C#" Value="Delegate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ImpersonationLevelOption Delegate = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ImpersonationLevelOption.Delegate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ImpersonationLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de representação mais eficiente. Quando esse nível é selecionado, o servidor (se local ou remoto) pode representar contexto de segurança do cliente ao atuar em nome do cliente</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Identify">
+      <MemberSignature Language="C#" Value="Identify" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ImpersonationLevelOption Identify = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ImpersonationLevelOption.Identify" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ImpersonationLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nível de sistema padrão. O servidor pode obter a identidade do cliente e o servidor pode representar o cliente para executar verificações ACL.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonate">
+      <MemberSignature Language="C#" Value="Impersonate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ImpersonationLevelOption Impersonate = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ImpersonationLevelOption.Impersonate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ImpersonationLevelOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O servidor pode representar o contexto de segurança do cliente ao atuar em nome do cliente. O servidor pode acessar recursos locais do cliente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

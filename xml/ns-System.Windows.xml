@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows">
+  <Docs>
+    <summary>Fornece várias classes de elemento base importantes do Windows Presentation Foundation (WPF), várias classes que oferecem suporte a sistema de propriedade de WPF e lógica de eventos e outros tipos que são mais amplamente consumidos por núcleo do WPF e do framework.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

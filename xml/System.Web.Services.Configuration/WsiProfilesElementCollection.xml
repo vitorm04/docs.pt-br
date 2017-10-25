@@ -1,0 +1,302 @@
+<Type Name="WsiProfilesElementCollection" FullName="System.Web.Services.Configuration.WsiProfilesElementCollection">
+  <TypeSignature Language="C#" Value="public sealed class WsiProfilesElementCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WsiProfilesElementCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Configuration.WsiProfilesElementCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Services.Configuration.WsiProfilesElement))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém uma coleção fortemente tipada de <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Configuration.WsiProfilesElementCollection> classe é usada para trabalhar com uma coleção de <xref:System.Web.Services.Configuration.WsiProfilesElement> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WsiProfilesElementCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Web.Services.Configuration.WsiProfilesElementCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Services.Configuration.WsiProfilesElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Services.Configuration.WsiProfilesElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.Add(System.Web.Services.Configuration.WsiProfilesElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Web.Services.Configuration.WsiProfilesElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> a ser adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> à coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> objetos da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsKey(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.ContainsKey(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> localizar na coleção.</param>
+        <summary>Retorna um <see cref="T:System.Boolean" /> que indica se um <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> com a chave especificada existe na coleção.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém um <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> com a chave; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Services.Configuration.WsiProfilesElement[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Services.Configuration.WsiProfilesElement[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.CopyTo(System.Web.Services.Configuration.WsiProfilesElement[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Services.Configuration.WsiProfilesElement[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz do tipo <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> no qual copiar o conteúdo da coleção.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos da coleção para uma matriz, começando em um índice especificado da matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.Services.Configuration.WsiProfilesElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.Services.Configuration.WsiProfilesElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.IndexOf(System.Web.Services.Configuration.WsiProfilesElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Web.Services.Configuration.WsiProfilesElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> localizar na coleção.</param>
+        <summary>Retorna o índice baseado em zero da especificada <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> na coleção.</summary>
+        <returns>O índice de base zero especificado <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" />, ou -1 se o elemento não foi encontrado na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Configuration.WsiProfilesElement this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Configuration.WsiProfilesElement Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.WsiProfilesElementCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Configuration.WsiProfilesElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero na coleção.</param>
+        <summary>Obtém ou define o elemento em um índice especificado na coleção.</summary>
+        <value>O <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> que existe no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Configuration.WsiProfilesElement this[object key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Configuration.WsiProfilesElement Item(object)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.WsiProfilesElementCollection.Item(System.Object)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Configuration.WsiProfilesElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> para obter ou definir na coleção.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> que tem a chave especificada na coleção.</summary>
+        <value>O <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> com a chave especificada.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">O <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> com a chave especificada não foi encontrado na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Services.Configuration.WsiProfilesElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Services.Configuration.WsiProfilesElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.Remove(System.Web.Services.Configuration.WsiProfilesElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Web.Services.Configuration.WsiProfilesElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">O <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> a ser removido da coleção.</param>
+        <summary>Remove um especificado <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> a ser removido da coleção.</param>
+        <summary>Remove o elemento no índice especificado na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.WsiProfilesElementCollection.RemoveAt(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Web.Services.Configuration.WsiProfilesElement" /> com a chave especificada da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

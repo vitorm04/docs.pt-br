@@ -1,0 +1,247 @@
+<Type Name="VersionMismatchException" FullName="System.Activities.VersionMismatchException">
+  <TypeSignature Language="C#" Value="public class VersionMismatchException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit VersionMismatchException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.VersionMismatchException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as informações sobre uma exceção de versão incompatível.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao controle de versão e à funcionalidade de atualização dinâmica do Windows Workflow Foundation. versão do fluxo de trabalho [!INCLUDE[crabout](~/includes/crabout-md.md)], identidade do fluxo de trabalho e atualização dinâmica, consulte os tópicos a seguir.  
+  
+ [Controle de versão de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=271561)  
+ Descreve a funcionalidade do controle de versão do fluxo de trabalho introduzida no [!INCLUDE[net_v45](~/includes/net-v45-md.md)].  
+  
+ [Atualização dinâmica](http://go.microsoft.com/fwlink/?LinkId=271563)  
+ Descreve como atualizar a definição de fluxo de trabalho de uma instância de fluxo de trabalho persistente usando a atualização dinâmica.  
+  
+ [Usando WorkflowApplication identidade e controle de versão](http://go.microsoft.com/fwlink/?LinkId=271564)  
+ Descreve como usar <xref:System.Activities.WorkflowIdentity> para hospedar várias versões de um fluxo de trabalho lado a lado.  
+  
+ [Controle de versão lado a lado no WorkflowServiceHost](http://go.microsoft.com/fwlink/?LinkId=271565)  
+ Descreve como hospedar várias versões de um fluxo de trabalho em um único ponto de extremidade.  
+  
+ [Como hospedar várias versões de um fluxo de trabalho lado a lado](http://go.microsoft.com/fwlink/?LinkId=271566)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra como atualizar uma definição de fluxo de trabalho e hospedagem de fluxos de trabalho usando a definição antiga e nova ao mesmo tempo.  
+  
+ [Como atualizar a definição de uma instância de fluxo de trabalho em execução](http://go.microsoft.com/fwlink/?LinkId=271567)  
+ Essa etapa de [Tutorial de Introdução](http://go.microsoft.com/fwlink/?LinkId=271570) demonstra a atualização de instâncias de fluxo de trabalho persistentes para usar uma nova definição de fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VersionMismatchException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.VersionMismatchException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VersionMismatchException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.VersionMismatchException" /> classe usando uma mensagem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VersionMismatchException (System.Activities.WorkflowIdentity expectedVersion, System.Activities.WorkflowIdentity actualVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.WorkflowIdentity expectedVersion, class System.Activities.WorkflowIdentity actualVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.#ctor(System.Activities.WorkflowIdentity,System.Activities.WorkflowIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expectedVersion" Type="System.Activities.WorkflowIdentity" />
+        <Parameter Name="actualVersion" Type="System.Activities.WorkflowIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="expectedVersion">A versão esperada.</param>
+        <param name="actualVersion">Versão real do arquivo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.VersionMismatchException" /> classe usando a versão esperado e reais.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VersionMismatchException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O SerializationInfo que contém os dados do objeto serializado sobre a exceção que está sendo gerada.</param>
+        <param name="context">O StreamingContext que contém informações contextuais sobre a origem ou destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.VersionMismatchException" /> usando o contexto e informações de classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VersionMismatchException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.VersionMismatchException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VersionMismatchException (string message, System.Activities.WorkflowIdentity expectedVersion, System.Activities.WorkflowIdentity actualVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Activities.WorkflowIdentity expectedVersion, class System.Activities.WorkflowIdentity actualVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.#ctor(System.String,System.Activities.WorkflowIdentity,System.Activities.WorkflowIdentity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="expectedVersion" Type="System.Activities.WorkflowIdentity" />
+        <Parameter Name="actualVersion" Type="System.Activities.WorkflowIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="expectedVersion">A versão esperada.</param>
+        <param name="actualVersion">Versão real do arquivo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Activities.VersionMismatchException" /> classe usando a mensagem, a versão esperada e a versão real.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VersionMismatchException (string message, System.Activities.WorkflowIdentity expectedVersion, System.Activities.WorkflowIdentity actualVersion, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Activities.WorkflowIdentity expectedVersion, class System.Activities.WorkflowIdentity actualVersion, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.#ctor(System.String,System.Activities.WorkflowIdentity,System.Activities.WorkflowIdentity,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="expectedVersion" Type="System.Activities.WorkflowIdentity" />
+        <Parameter Name="actualVersion" Type="System.Activities.WorkflowIdentity" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="expectedVersion">A versão esperada.</param>
+        <param name="actualVersion">Versão real do arquivo.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.VersionMismatchException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActualVersion">
+      <MemberSignature Language="C#" Value="public System.Activities.WorkflowIdentity ActualVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.WorkflowIdentity ActualVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.VersionMismatchException.ActualVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão real da exceção de incompatibilidade.</summary>
+        <value>A versão real da exceção de incompatibilidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpectedVersion">
+      <MemberSignature Language="C#" Value="public System.Activities.WorkflowIdentity ExpectedVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.WorkflowIdentity ExpectedVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.VersionMismatchException.ExpectedVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.WorkflowIdentity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão da exceção de incompatibilidade é esperada.</summary>
+        <value>A versão da exceção de incompatibilidade é esperada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.VersionMismatchException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O SerializationInfo que contém os dados do objeto serializado sobre a exceção que está sendo gerada.</param>
+        <param name="context">O StreamingContext que contém informações contextuais sobre a origem ou destino.</param>
+        <summary>Define o SerializationInfo com informações sobre a exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

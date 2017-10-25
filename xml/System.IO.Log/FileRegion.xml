@@ -1,0 +1,157 @@
+<Type Name="FileRegion" FullName="System.IO.Log.FileRegion">
+  <TypeSignature Language="C#" Value="public sealed class FileRegion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileRegion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.FileRegion" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma região de um arquivo a ser arquivado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Log.LogArchiveSnapshot> objeto contém as informações necessárias para gerar um backup consistente dos dados em um <xref:System.IO.Log.LogStore>. Os dados reais estão contidos na coleção enumerável de <xref:System.IO.Log.FileRegion> objetos retornados pelo <xref:System.IO.Log.LogArchiveSnapshot.ArchiveRegions%2A> propriedade. Cada <xref:System.IO.Log.FileRegion> instância representa uma sequência de bytes em um arquivo que devem ser arquivados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como arquivar um repositório de log para XML usando o <xref:System.IO.Log.LogStore> e <xref:System.IO.Log.FileRegion> classes.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FileLength">
+      <MemberSignature Language="C#" Value="public long FileLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 FileLength" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.FileRegion.FileLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento do arquivo em bytes.</summary>
+        <value>O comprimento do arquivo em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o comprimento do arquivo inteiro em vez de uma única região no arquivo. O comprimento da região em que o arquivo pode ser encontrado examinando o <xref:System.IO.Log.LogStore.Length%2A> propriedade do fluxo retornado pelo <xref:System.IO.Log.FileRegion.GetStream%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como arquivar um repositório de log para XML usando o <xref:System.IO.Log.LogStore> e <xref:System.IO.Log.FileRegion> classes.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream GetStream() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.FileRegion.GetStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um fluxo que pode ser usado para ler os dados a serem arquivados.</summary>
+        <returns>Um fluxo que contém os dados a serem arquivados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como arquivar um repositório de log para XML usando o <xref:System.IO.Log.LogStore> e <xref:System.IO.Log.FileRegion> classes.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">A solicitação não pôde ser executada devido a uma exceção de e/s inesperada.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para a operação.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public long Offset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Offset" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.FileRegion.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o deslocamento no arquivo onde os dados começam.</summary>
+        <value>O deslocamento no arquivo onde os dados começam.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como arquivar um repositório de log para XML usando o <xref:System.IO.Log.LogStore> e <xref:System.IO.Log.FileRegion> classes.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.FileRegion.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local totalmente qualificado do arquivo que contém essa região.</summary>
+        <value>O local totalmente qualificado do arquivo que contém essa região.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como arquivar um repositório de log para XML usando o <xref:System.IO.Log.LogStore> e <xref:System.IO.Log.FileRegion> classes.  
+  
+ [!code-csharp[FileRegion#0](~/samples/snippets/csharp/VS_Snippets_CFX/fileregion/cs/fileregion.cs#0)]
+ [!code-vb[FileRegion#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/fileregion/vb/fileregion.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,67 @@
+<Type Name="UpdatePanelRenderMode" FullName="System.Web.UI.UpdatePanelRenderMode">
+  <TypeSignature Language="C#" Value="public enum UpdatePanelRenderMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UpdatePanelRenderMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdatePanelRenderMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Representa as opções de renderização de layout possíveis para o conteúdo de um <see cref="T:System.Web.UI.UpdatePanel" /> controle em uma página.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.UpdatePanelRenderMode> enumeração define os elementos HTML a ser usado para colocar o conteúdo do <xref:System.Web.UI.UpdatePanel> controle. O <xref:System.Web.UI.UpdatePanel.RenderMode%2A> propriedade deve ser um dos valores da <xref:System.Web.UI.UpdatePanelRenderMode> enumeração. O conteúdo de um <xref:System.Web.UI.UpdatePanel> controle pode ser processado dentro um HTML `<div>` elemento ou um `<span>` elemento.  
+  
+ O padrão <xref:System.Web.UI.UpdatePanel.RenderMode%2A> valor da propriedade é o bloco.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir declarativamente o <xref:System.Web.UI.UpdatePanel.RenderMode%2A> propriedade de um <xref:System.Web.UI.UpdatePanel.RenderMode%2A> controle embutido. O <xref:System.Web.UI.UpdatePanel> controle contém uma cadeia de caracteres que representa o número de postback da página. O conteúdo é renderizado em linha com o texto ao redor.  
+  
+ [!code-aspx-csharp[System.Web.UI.UpdatePanel.RenderMode#1](~/samples/snippets/csharp/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.RenderMode/CS/UpdatePanelRenderModeCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.UpdatePanel.RenderMode#1](~/samples/snippets/visualbasic/VS_Snippets_Atlas/System.Web.UI.UpdatePanel.RenderMode/VB/UpdatePanelRenderModeVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Block">
+      <MemberSignature Language="C#" Value="Block" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.UpdatePanelRenderMode Block = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.UpdatePanelRenderMode.Block" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanelRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o conteúdo de <see cref="T:System.Web.UI.UpdatePanel" /> controle é renderizado dentro de uma marca HTML <see langword="&lt;div&gt;" /> elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inline">
+      <MemberSignature Language="C#" Value="Inline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.UpdatePanelRenderMode Inline = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.UpdatePanelRenderMode.Inline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanelRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o conteúdo de <see cref="T:System.Web.UI.UpdatePanel" /> controle é renderizado dentro de uma marca HTML <see langword="&lt;span&gt;" /> elemento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

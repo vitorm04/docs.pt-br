@@ -1,0 +1,200 @@
+<Type Name="KeyContainerPermissionAccessEntryEnumerator" FullName="System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator">
+  <TypeSignature Language="C#" Value="public sealed class KeyContainerPermissionAccessEntryEnumerator : System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit KeyContainerPermissionAccessEntryEnumerator extends System.Object implements class System.Collections.IEnumerator" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o enumerador para <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> objetos em um <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enumeradores permitem que os dados na coleção como somente leitura. Enumeradores não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. O método <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> também retorna o enumerador a essa posição. AT isso posicionar, chamando o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> propriedade gera uma exceção. Portanto, você deve chamar o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> método para avançar o enumerador para o primeiro elemento da coleção antes de ler o valor da <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> propriedade.  
+  
+ <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> ou <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> ser chamado. <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> define <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> como o próximo elemento.  
+  
+ Após o final da coleção for passado, o enumerador está posicionado após o último elemento da coleção e chamada <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> retorna `false`. Se a última chamada <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> retornou `false`, chamar <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> lança uma exceção. Para redefinir <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> para o primeiro elemento da coleção, chame <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> seguido por uma chamada para <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar, ou excluir elementos, o enumerador é invalidado invalidado e a próxima chamada para <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> ou <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> lança um <xref:System.InvalidOperationException>. Se a coleção é modificada entre chamar <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> e <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A>, <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> retorna o elemento ao qual ela está definida, mesmo se o enumerador já é invalidado.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyContainerPermissionAccessEntryEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.KeyContainerPermissionAccessEntry Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Permissions.KeyContainerPermissionAccessEntry Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.KeyContainerPermissionAccessEntry</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a entrada atual na coleção.</summary>
+        <value>Atual <see cref="T:System.Security.Permissions.KeyContainerPermissionAccessEntry" /> objeto na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o enumerador é criado, ele não aponta para um objeto, então o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> propriedade não é válida e lançará uma exceção se ele for acessado. Você deve primeiro chamar o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> método para posicionar o cursor no primeiro objeto na coleção.  
+  
+ Obtendo o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> propriedade várias vezes com nenhuma chamada intermediária para <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> retornará o mesmo <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> objeto cada vez.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current" /> propriedade for acessada antes de chamar primeiro o <see cref="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext" /> método. O cursor está localizado antes do primeiro objeto na coleção.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current" /> propriedade é acessada após uma chamada para o <see cref="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext" /> método <see langword="false" />, que indica que o cursor está localizado após o último objeto na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Move para o próximo elemento da coleção.</summary>
+        <returns>
+          <see langword="true" /> se o enumerador foi avançado com êxito para o próximo elemento; <see langword="false" /> se o enumerador passou o final da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> método retorna `false` imediatamente se não houver nenhum objeto na coleção.  
+  
+ <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A>Retorna `true` até que ele tenha atingido o final da coleção. Ele então retorna `false` para cada chamada sucessiva. No entanto, quando <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> retornou `false`, acessando o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> propriedade gera uma exceção.  
+  
+ Após a criação, um enumerador está posicionado antes da primeira <xref:System.Security.Permissions.KeyContainerPermissionAccessEntry> objeto na coleção e a primeira chamada para <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> posiciona o enumerador para o primeiro objeto na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o enumerador para o início da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um enumerador move em uma direção de somente avanço. Use esse método para retornar ao início da coleção.  
+  
+ O <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A> método posiciona o cursor no primeiro objeto na coleção. Depois de chamar <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Reset%2A>, você não precisa chamar <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.MoveNext%2A> para mover o cursor para frente para o primeiro objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto atual na coleção.</summary>
+        <value>O objeto atual na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não chame este método; Use o <xref:System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator.Current%2A> propriedade em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

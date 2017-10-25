@@ -1,0 +1,54 @@
+<Type Name="MapAreasCollection" FullName="System.Web.UI.DataVisualization.Charting.MapAreasCollection">
+  <TypeSignature Language="C#" Value="public class MapAreasCollection : System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.MapArea&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MapAreasCollection extends System.Web.UI.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Web.UI.DataVisualization.Charting.MapArea&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElementCollection&lt;System.Web.UI.DataVisualization.Charting.MapArea&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Web.UI.DataVisualization.Charting.MapArea</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.UI.DataVisualization.Charting.MapArea" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.MapAreasCollection> classe representa uma coleção de <xref:System.Web.UI.DataVisualization.Charting.MapArea> objetos, que por sua vez, representam áreas de mapa de um mapa de imagem do lado do cliente, como HTML \<área > marcas.  
+  
+ Essa classe é usada de duas maneiras:  
+  
+-   Como o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto, que é usado para as áreas de mapa personalizado. Essas áreas de mapa personalizado tem uma forma definida pelo usuário e as coordenadas e pode ser adicionadas pelo tempo de design ou em tempo de execução usando o sobrecarregado `M:System.Web.UI.DataVisualization.MapAreasCollection.Add` ou `M:System.Web.UI.DataVisualization.MapAreasCollection.Insert` métodos.  
+  
+-   No <xref:System.Web.UI.DataVisualization.Charting.Chart.CustomizeMapAreas> evento, como o <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A> propriedade o `CustomizeMapAreasEventArgs` parâmetro. Isso <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A> repositórios de propriedades <xref:System.Web.UI.DataVisualization.Charting.MapArea> objetos que foram criados automaticamente para um objeto de gráfico (áreas de mapa são criadas automaticamente quando um elemento de gráfico aplicável, como um ponto de dados, a série, o objeto de item ou a faixa de legenda, tem uma não-vazia `ToolTip`, `Url` ou `MapAreaAttributes` propriedade). Nesse caso as dimensões e o local de uma área do mapa são determinados pelo elemento gráfico. O <xref:System.Web.UI.DataVisualization.Charting.CustomizeMapAreasEventArgs.MapAreaItems%2A> propriedade permite que você excluir ou modificar esses gerado automaticamente áreas do mapa e também pode ser usado para adicionar áreas de mapa personalizado.  
+  
+ Um mapa de imagem do lado do cliente só será criado em tempo de execução se o <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto é `true`. Esse é o padrão.  
+  
+ **Importante** para criar um mapa de imagem usando o descrito anteriormente <xref:System.Web.UI.DataVisualization.Charting.MapArea> objetos, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas uma técnica especial deve ser usada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MapAreasCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.MapAreasCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.MapAreasCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

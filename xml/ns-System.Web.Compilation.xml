@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Compilation">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Compilation" /> namespace contém classes para ambiente de compilação gerando e compilando tipos de arquivo personalizado dentro do ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

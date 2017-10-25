@@ -1,0 +1,1492 @@
+<Type Name="IcmpV6Statistics" FullName="System.Net.NetworkInformation.IcmpV6Statistics">
+  <TypeSignature Language="C#" Value="public abstract class IcmpV6Statistics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IcmpV6Statistics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IcmpV6Statistics" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece o Internet Control Message Protocol Internet Protocol versão 6 dados estatísticos de (ICMPv6) para o computador local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMPV6 é um conjunto de erros e mensagens informativas para uso com o protocolo IP versão 6 (IPv6). Essa classe é usada pelo <xref:System.Net.NetworkInformation.IPGlobalProperties.GetIcmpV6Statistics%2A> método para retornar informações de tráfego ICMPV6.  
+  
+ Correlacionam as propriedades dessa classe para os objetos de Base de informações de gerenciamento para ICMPv6 definida em IETF RFC 2466. ICMPv6 é definido na RFC 2463.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as estatísticas de ICMPv6 atuais.  
+  
+ [!code-cpp[NCLNetInfoReport#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#7)]
+ [!code-csharp[NCLNetInfoReport#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IcmpV6Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IcmpV6Statistics.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.IcmpV6Statistics" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado somente por classes que derivam de <xref:System.Net.NetworkInformation.IcmpV6Statistics>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUnreachableMessagesReceived">
+      <MemberSignature Language="C#" Value="public abstract long DestinationUnreachableMessagesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DestinationUnreachableMessagesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.DestinationUnreachableMessagesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 (ICMPv6) as mensagens recebidas por causa de um pacote com um endereço inacessível em seu destino.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de destino inacessível recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem de destino inacessível pode ser enviada para o computador que é a origem de um pacote para qualquer um dos seguintes motivos:  
+  
+-   O computador não consegue encontrar uma rota para o endereço de destino.  
+  
+-   Comunicação com o endereço de destino é proibida administrativamente. Por exemplo, um firewall impede a entrega de pacotes para o destino.  
+  
+-   O endereço de destino está inacessível.  
+  
+-   A porta de destino está inacessível. Por exemplo, não há nenhum ouvinte disponível para o protocolo do pacote.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#32](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#32)]
+ [!code-csharp[NCLNetInfo2#32](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#32)]
+ [!code-vb[NCLNetInfo2#32](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUnreachableMessagesSent">
+      <MemberSignature Language="C#" Value="public abstract long DestinationUnreachableMessagesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DestinationUnreachableMessagesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.DestinationUnreachableMessagesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 (ICMPv6) as mensagens enviadas por causa de um pacote com um endereço inacessível em seu destino.</summary>
+        <value>Um <see cref="T:System.Int64" /> enviados de valor que especifica o número total de mensagens de destino inacessível.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem de destino inacessível pode ser enviada para o computador que é a origem de um pacote para qualquer um dos seguintes motivos:  
+  
+-   O computador não consegue encontrar uma rota para o endereço de destino.  
+  
+-   Comunicação com o endereço de destino é proibida administrativamente. Por exemplo, um firewall impede a entrega de pacotes para o destino.  
+  
+-   O endereço de destino está inacessível.  
+  
+-   A porta de destino está inacessível. Por exemplo, não há nenhum ouvinte disponível para o protocolo do pacote.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#32](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#32)]
+ [!code-csharp[NCLNetInfo2#32](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#32)]
+ [!code-vb[NCLNetInfo2#32](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRepliesReceived">
+      <MemberSignature Language="C#" Value="public abstract long EchoRepliesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRepliesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.EchoRepliesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de resposta de eco (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de número de mensagens de resposta de eco ICMP recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de solicitação de eco e resposta de eco permitem que um computador solicitar uma resposta ICMP de um computador remoto em uma rede. Essa funcionalidade é geralmente usada para determinar a validade de endereços remotos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#30](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#30)]
+ [!code-csharp[NCLNetInfo2#30](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#30)]
+ [!code-vb[NCLNetInfo2#30](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRepliesSent">
+      <MemberSignature Language="C#" Value="public abstract long EchoRepliesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRepliesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.EchoRepliesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens de resposta de eco (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de número de mensagens de resposta de eco ICMP enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de solicitação de eco e resposta de eco permitem que um computador solicitar uma resposta ICMP de um computador remoto em uma rede. Essa funcionalidade é geralmente usada para determinar a validade de endereços remotos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#30](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#30)]
+ [!code-csharp[NCLNetInfo2#30](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#30)]
+ [!code-vb[NCLNetInfo2#30](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRequestsReceived">
+      <MemberSignature Language="C#" Value="public abstract long EchoRequestsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRequestsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.EchoRequestsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão de Internet Control Message Protocol recebeu mensagens de solicitação de eco (ICMPv6) 6.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de número de mensagens de solicitação de eco ICMP recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de solicitação de eco e resposta de eco permitem que um computador solicitar uma resposta ICMP de um computador remoto em uma rede. Essa funcionalidade é geralmente usada para determinar a validade de endereços remotos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#30](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#30)]
+ [!code-csharp[NCLNetInfo2#30](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#30)]
+ [!code-vb[NCLNetInfo2#30](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoRequestsSent">
+      <MemberSignature Language="C#" Value="public abstract long EchoRequestsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 EchoRequestsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.EchoRequestsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens de solicitação de eco (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de número de mensagens de solicitação de eco ICMP enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de solicitação de eco e resposta de eco permitem que um computador solicitar uma resposta ICMP de um computador remoto em uma rede. Essa funcionalidade é geralmente usada para determinar a validade de endereços remotos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#30](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#30)]
+ [!code-csharp[NCLNetInfo2#30](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#30)]
+ [!code-vb[NCLNetInfo2#30](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorsReceived">
+      <MemberSignature Language="C#" Value="public abstract long ErrorsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ErrorsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.ErrorsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 (ICMPv6) de mensagens de erro recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de erro ICMP recebido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#31](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#31)]
+ [!code-csharp[NCLNetInfo2#31](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#31)]
+ [!code-vb[NCLNetInfo2#31](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorsSent">
+      <MemberSignature Language="C#" Value="public abstract long ErrorsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ErrorsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.ErrorsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 (ICMPv6) mensagens de erro enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de erro ICMP enviado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#31](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#31)]
+ [!code-csharp[NCLNetInfo2#31](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#31)]
+ [!code-vb[NCLNetInfo2#31](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipQueriesReceived">
+      <MemberSignature Language="C#" Value="public abstract long MembershipQueriesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MembershipQueriesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MembershipQueriesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de gerenciamento de grupo de Internet mensagens de consulta de associação de grupo do protocolo IGMP recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de consulta de associação de grupo recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Roteadores de difusão seletiva enviam mensagens de consulta de associação de grupo para saber quais grupos têm membros em cada uma das suas redes físicas anexados. Computadores host respondem a uma mensagem de consulta de associação de grupo, enviando um relatório de associação de grupo para cada grupo de difusão seletiva associado pelo host. Um computador host também pode enviar um relatório de associação de grupo quando ele ingressar um novo grupo de multicast. Mensagens de redução de associação de grupo são enviadas quando um computador host sai de um grupo de multicast.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#34](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#34)]
+ [!code-csharp[NCLNetInfo2#34](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#34)]
+ [!code-vb[NCLNetInfo2#34](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipQueriesSent">
+      <MemberSignature Language="C#" Value="public abstract long MembershipQueriesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MembershipQueriesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MembershipQueriesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de gerenciamento de grupo de Internet mensagens de consulta de associação de grupo do protocolo IGMP enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> enviados de valor que especifica o número total de mensagens de consulta de associação de grupo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Roteadores de difusão seletiva enviam mensagens de consulta de associação de grupo para saber quais grupos têm membros em cada uma das suas redes físicas anexados. Computadores host respondem a uma mensagem de consulta de associação de grupo, enviando um relatório de associação de grupo para cada grupo de difusão seletiva associado pelo host. Um computador host também pode enviar um relatório de associação de grupo quando ele ingressar um novo grupo de multicast. Mensagens de redução de associação de grupo são enviadas quando um computador host sai de um grupo de multicast.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#34](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#34)]
+ [!code-csharp[NCLNetInfo2#34](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#34)]
+ [!code-vb[NCLNetInfo2#34](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipReductionsReceived">
+      <MemberSignature Language="C#" Value="public abstract long MembershipReductionsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MembershipReductionsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MembershipReductionsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de mensagens de redução de associação de Internet gerenciamento protocolo IGMP grupo recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de redução de associação de grupo recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Roteadores de difusão seletiva enviam mensagens de consulta de associação de grupo para saber quais grupos têm membros em cada uma das suas redes físicas anexados. Computadores host respondem a uma mensagem de consulta de associação de grupo, enviando um relatório de associação de grupo para cada grupo de difusão seletiva associado pelo host. Um computador host também pode enviar um relatório de associação de grupo quando ele ingressar um novo grupo de multicast. Mensagens de redução de associação de grupo são enviadas quando um computador host sai de um grupo de multicast.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#34](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#34)]
+ [!code-csharp[NCLNetInfo2#34](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#34)]
+ [!code-vb[NCLNetInfo2#34](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipReductionsSent">
+      <MemberSignature Language="C#" Value="public abstract long MembershipReductionsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MembershipReductionsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MembershipReductionsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de mensagens de redução de associação de Internet gerenciamento protocolo IGMP grupo enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> enviados de valor que especifica o número total de mensagens de redução de associação de grupo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Roteadores de difusão seletiva enviam mensagens de consulta de associação de grupo para saber quais grupos têm membros em cada uma das suas redes físicas anexados. Computadores host respondem a uma mensagem de consulta de associação de grupo, enviando um relatório de associação de grupo para cada grupo de difusão seletiva associado pelo host. Um computador host também pode enviar um relatório de associação de grupo quando ele ingressar um novo grupo de multicast. Mensagens de redução de associação de grupo são enviadas quando um computador host sai de um grupo de multicast.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#34](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#34)]
+ [!code-csharp[NCLNetInfo2#34](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#34)]
+ [!code-vb[NCLNetInfo2#34](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipReportsReceived">
+      <MemberSignature Language="C#" Value="public abstract long MembershipReportsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MembershipReportsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MembershipReportsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de mensagens de relatório de membro de Internet gerenciamento protocolo IGMP grupo recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de relatório de associação de grupo recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Roteadores de difusão seletiva enviam mensagens de consulta de associação de grupo para saber quais grupos têm membros em cada uma das suas redes físicas anexados. Computadores host respondem a uma mensagem de consulta de associação de grupo, enviando um relatório de associação de grupo para cada grupo de difusão seletiva associado pelo host. Um computador host também pode enviar um relatório de associação de grupo quando ele ingressar um novo grupo de multicast. Mensagens de redução de associação de grupo são enviadas quando um computador host sai de um grupo de multicast.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#34](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#34)]
+ [!code-csharp[NCLNetInfo2#34](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#34)]
+ [!code-vb[NCLNetInfo2#34](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MembershipReportsSent">
+      <MemberSignature Language="C#" Value="public abstract long MembershipReportsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MembershipReportsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MembershipReportsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de mensagens de relatório de membro de Internet gerenciamento protocolo IGMP grupo enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> enviados de valor que especifica o número total de mensagens de relatório de associação de grupo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Roteadores de difusão seletiva enviam mensagens de consulta de associação de grupo para saber quais grupos têm membros em cada uma das suas redes físicas anexados. Computadores host respondem a uma mensagem de consulta de associação de grupo, enviando um relatório de associação de grupo para cada grupo de difusão seletiva associado pelo host. Um computador host também pode enviar um relatório de associação de grupo quando ele ingressar um novo grupo de multicast. Mensagens de redução de associação de grupo são enviadas quando um computador host sai de um grupo de multicast.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#34](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#34)]
+ [!code-csharp[NCLNetInfo2#34](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#34)]
+ [!code-vb[NCLNetInfo2#34](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagesReceived">
+      <MemberSignature Language="C#" Value="public abstract long MessagesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MessagesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MessagesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens ICMPv6 recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMPv6 mensagens são enviadas para se comunicar erros e informações sobre pacotes enviados usando o protocolo IP versão 6 (IPv6).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#33](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#33)]
+ [!code-csharp[NCLNetInfo2#33](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#33)]
+ [!code-vb[NCLNetInfo2#33](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagesSent">
+      <MemberSignature Language="C#" Value="public abstract long MessagesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MessagesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.MessagesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens ICMPv6 enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ICMPv6 mensagens são enviadas para se comunicar erros e informações sobre pacotes enviados usando o protocolo IP versão 6 (IPv6).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#33](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#33)]
+ [!code-csharp[NCLNetInfo2#33](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#33)]
+ [!code-vb[NCLNetInfo2#33](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#33)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeighborAdvertisementsReceived">
+      <MemberSignature Language="C#" Value="public abstract long NeighborAdvertisementsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 NeighborAdvertisementsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.NeighborAdvertisementsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de anúncio de vizinho (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de anúncio de vizinho de ICMP recebido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Descoberta de vizinho é um processo no qual computadores host e roteadores podem determinar os endereços para vizinhos conhecidos residam em links compartilhados. Parte desse processo de descoberta é realizada usando mensagens ICMP chamadas solicitações vizinhos e vizinho anúncios. Mensagens de solicitação de vizinho são enviadas para descobrir o endereço de camada de link de um vizinho ou para verificar se há um vizinho ainda pode ser acessado por meio de um endereço de camada de conexão armazenada em cache. Um anúncio de vizinho que contém informações de endereço é enviado em resposta a uma solicitação ou de anunciar uma alteração de endereço.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#35](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#35)]
+ [!code-csharp[NCLNetInfo2#35](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#35)]
+ [!code-vb[NCLNetInfo2#35](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeighborAdvertisementsSent">
+      <MemberSignature Language="C#" Value="public abstract long NeighborAdvertisementsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 NeighborAdvertisementsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.NeighborAdvertisementsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens de anúncio de vizinho (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de anúncio de vizinho enviado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Descoberta de vizinho é um processo no qual computadores host e roteadores podem determinar os endereços para vizinhos conhecidos residam em links compartilhados. Parte desse processo de descoberta é realizada usando mensagens ICMP chamadas solicitações vizinhos e vizinho anúncios. Mensagens de solicitação de vizinho são enviadas para descobrir o endereço de camada de link de um vizinho ou para verificar se há um vizinho ainda pode ser acessado por meio de um endereço de camada de conexão armazenada em cache. Um anúncio de vizinho que contém informações de endereço é enviado em resposta a uma solicitação ou de anunciar uma alteração de endereço.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#35](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#35)]
+ [!code-csharp[NCLNetInfo2#35](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#35)]
+ [!code-vb[NCLNetInfo2#35](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeighborSolicitsReceived">
+      <MemberSignature Language="C#" Value="public abstract long NeighborSolicitsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 NeighborSolicitsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.NeighborSolicitsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de solicitação de vizinho (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de solicitação de vizinho recebida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Descoberta de vizinho é um processo no qual computadores host e roteadores podem determinar os endereços para vizinhos conhecidos residam em links compartilhados. Parte desse processo de descoberta é realizada usando mensagens ICMP chamadas solicitações vizinhos e vizinho anúncios. Mensagens de solicitação de vizinho são enviadas para descobrir o endereço de camada de link de um vizinho ou para verificar se há um vizinho ainda pode ser acessado por meio de um endereço de camada de conexão armazenada em cache. Um anúncio de vizinho que contém informações de endereço é enviado em resposta a uma solicitação ou de anunciar uma alteração de endereço.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#35](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#35)]
+ [!code-csharp[NCLNetInfo2#35](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#35)]
+ [!code-vb[NCLNetInfo2#35](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeighborSolicitsSent">
+      <MemberSignature Language="C#" Value="public abstract long NeighborSolicitsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 NeighborSolicitsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.NeighborSolicitsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de solicitação de vizinho (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de solicitação de vizinho enviado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Descoberta de vizinho é um processo no qual computadores host e roteadores podem determinar os endereços para vizinhos conhecidos residam em links compartilhados. Parte desse processo de descoberta é realizada usando mensagens ICMP chamadas solicitações vizinhos e vizinho anúncios. Mensagens de solicitação de vizinho são enviadas para descobrir o endereço de camada de link de um vizinho ou para verificar se há um vizinho ainda pode ser acessado por meio de um endereço de camada de conexão armazenada em cache. Um anúncio de vizinho que contém informações de endereço é enviado em resposta a uma solicitação ou de anunciar uma alteração de endereço.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#35](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#35)]
+ [!code-csharp[NCLNetInfo2#35](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#35)]
+ [!code-vb[NCLNetInfo2#35](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#35)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketTooBigMessagesReceived">
+      <MemberSignature Language="C#" Value="public abstract long PacketTooBigMessagesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 PacketTooBigMessagesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.PacketTooBigMessagesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão de protocolo ICMP recebido 6 mensagens (ICMPv6) pacote muito grande.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens ICMP pacote muito grande recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um roteador envia uma mensagem de pacote muito grande quando um pacote não pode ser enviado porque ele é maior do que a unidade de transmissão máxima (MTU) do link de saída.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#36](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#36)]
+ [!code-csharp[NCLNetInfo2#36](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#36)]
+ [!code-vb[NCLNetInfo2#36](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketTooBigMessagesSent">
+      <MemberSignature Language="C#" Value="public abstract long PacketTooBigMessagesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 PacketTooBigMessagesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.PacketTooBigMessagesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 (ICMPv6) pacote muito grande as mensagens enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> enviados de valor que especifica o número total de mensagens ICMP pacote muito grande.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um roteador envia uma mensagem de pacote muito grande quando um pacote não pode ser enviado porque ele é maior do que a unidade de transmissão máxima (MTU) do link de saída.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#36](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#36)]
+ [!code-csharp[NCLNetInfo2#36](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#36)]
+ [!code-vb[NCLNetInfo2#36](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#36)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterProblemsReceived">
+      <MemberSignature Language="C#" Value="public abstract long ParameterProblemsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ParameterProblemsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.ParameterProblemsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de problema de parâmetro (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de problema de parâmetro ICMP recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de problema de parâmetro são enviadas quando um computador host ou roteador encontra problemas ao processar o conteúdo de um cabeçalho de pacote, como encontrar uma opção inválida de IPv6 ou um tipo de próximo cabeçalho inválido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#39](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#39)]
+ [!code-csharp[NCLNetInfo2#39](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#39)]
+ [!code-vb[NCLNetInfo2#39](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterProblemsSent">
+      <MemberSignature Language="C#" Value="public abstract long ParameterProblemsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ParameterProblemsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.ParameterProblemsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens de problema de parâmetro (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de problema de parâmetro ICMP enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de problema de parâmetro são enviadas quando um computador host ou roteador encontra problemas ao processar o conteúdo de um cabeçalho de pacote, como encontrar uma opção inválida de IPv6 ou um tipo de próximo cabeçalho inválido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#39](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#39)]
+ [!code-csharp[NCLNetInfo2#39](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#39)]
+ [!code-vb[NCLNetInfo2#39](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#39)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectsReceived">
+      <MemberSignature Language="C#" Value="public abstract long RedirectsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RedirectsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.RedirectsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens de redirecionamento (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de redirecionamento ICMP recebido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de redirecionamento são enviadas pelos roteadores para informar a um computador host de uma rota melhor para um endereço de destino.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#37](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#37)]
+ [!code-csharp[NCLNetInfo2#37](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#37)]
+ [!code-vb[NCLNetInfo2#37](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectsSent">
+      <MemberSignature Language="C#" Value="public abstract long RedirectsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RedirectsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.RedirectsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens de redirecionamento (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de redirecionamento ICMP enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mensagens de redirecionamento são enviadas pelos roteadores para informar a um computador host de uma rota melhor para um endereço de destino.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#37](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#37)]
+ [!code-csharp[NCLNetInfo2#37](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#37)]
+ [!code-vb[NCLNetInfo2#37](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#37)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterAdvertisementsReceived">
+      <MemberSignature Language="C#" Value="public abstract long RouterAdvertisementsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RouterAdvertisementsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.RouterAdvertisementsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de anúncio de roteador (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de anúncio de roteador recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um computador host pode enviar datagramas IP além da sua sub-rede conectado diretamente, ela deve descobrir o endereço de pelo menos um roteador na sub-rede. Essa descoberta pode ser realizada usando mensagens ICMP chamadas anúncios de roteador e solicitações do roteador. Uma mensagem de anúncio é enviada por um roteador periodicamente para anunciar sua presença e os endereços das interfaces. Quando um computador se conecta a uma rede, em vez de esperar para receber anúncios de roteador, ele pode enviar solicitações do roteador para solicitar que os roteadores enviam seus anúncios imediatamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#40](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#40)]
+ [!code-csharp[NCLNetInfo2#40](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#40)]
+ [!code-vb[NCLNetInfo2#40](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterAdvertisementsSent">
+      <MemberSignature Language="C#" Value="public abstract long RouterAdvertisementsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RouterAdvertisementsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.RouterAdvertisementsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens de anúncio de roteador (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de anúncio de roteador enviado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um computador host pode enviar datagramas IP além da sua sub-rede conectado diretamente, ela deve descobrir o endereço de pelo menos um roteador na sub-rede. Essa descoberta pode ser realizada usando mensagens ICMP chamadas anúncios de roteador e solicitações do roteador. Uma mensagem de anúncio é enviada por um roteador periodicamente para anunciar sua presença e os endereços das interfaces. Quando um computador se conecta a uma rede, em vez de esperar para receber anúncios de roteador, ele pode enviar solicitações do roteador para solicitar que os roteadores enviam seus anúncios imediatamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#40](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#40)]
+ [!code-csharp[NCLNetInfo2#40](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#40)]
+ [!code-vb[NCLNetInfo2#40](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterSolicitsReceived">
+      <MemberSignature Language="C#" Value="public abstract long RouterSolicitsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RouterSolicitsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.RouterSolicitsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de solicitação do roteador (ICMPv6) recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de solicitação de roteador recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um computador host pode enviar datagramas IP além da sua sub-rede conectado diretamente, ela deve descobrir o endereço de pelo menos um roteador na sub-rede. Essa descoberta pode ser realizada usando mensagens ICMP chamadas anúncios de roteador e solicitações do roteador. Uma mensagem de anúncio é enviada por um roteador periodicamente para anunciar sua presença e os endereços das interfaces. Quando um computador se conecta a uma rede, em vez de esperar para receber anúncios de roteador, ele pode enviar solicitações do roteador para solicitar que os roteadores enviam seus anúncios imediatamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#40](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#40)]
+ [!code-csharp[NCLNetInfo2#40](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#40)]
+ [!code-vb[NCLNetInfo2#40](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterSolicitsSent">
+      <MemberSignature Language="C#" Value="public abstract long RouterSolicitsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RouterSolicitsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.RouterSolicitsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 mensagens de solicitação do roteador (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de solicitação de roteador enviado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de um computador host pode enviar datagramas IP além da sua sub-rede conectado diretamente, ela deve descobrir o endereço de pelo menos um roteador na sub-rede. Essa descoberta pode ser realizada usando mensagens ICMP chamadas anúncios de roteador e solicitações do roteador. Uma mensagem de anúncio é enviada por um roteador periodicamente para anunciar sua presença e os endereços das interfaces. Quando um computador se conecta a uma rede, em vez de esperar para receber anúncios de roteador, ele pode enviar solicitações do roteador para solicitar que os roteadores enviam seus anúncios imediatamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#40](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#40)]
+ [!code-csharp[NCLNetInfo2#40](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#40)]
+ [!code-vb[NCLNetInfo2#40](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#40)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeExceededMessagesReceived">
+      <MemberSignature Language="C#" Value="public abstract long TimeExceededMessagesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimeExceededMessagesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.TimeExceededMessagesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de Internet Control Message Protocol versão 6 (ICMPv6) excedeu as mensagens recebidas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de tempo excedido ICMP recebidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite de saltos de um pacote determina quantas vezes podem ser enviado antes de ser descartada. Cada vez que um pacote é encaminhado, seu valor de limite de salto é reduzido por um. Quando o limite de saltos chegar a zero ou um roteador recebe um pacote com o conjunto de limite de salto para zero, o pacote será descartado e a origem do pacote recebe uma mensagem de tempo excedido indicando que o limite de salto inicial era muito pequeno ou se o pacote foi detectado em um loop de roteamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#38](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#38)]
+ [!code-csharp[NCLNetInfo2#38](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#38)]
+ [!code-vb[NCLNetInfo2#38](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeExceededMessagesSent">
+      <MemberSignature Language="C#" Value="public abstract long TimeExceededMessagesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimeExceededMessagesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IcmpV6Statistics.TimeExceededMessagesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de versão do protocolo ICMP 6 mensagens excedeu o tempo (ICMPv6) enviadas.</summary>
+        <value>Um <see cref="T:System.Int64" /> valor que especifica o número total de mensagens de tempo excedido ICMP enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O limite de saltos de um pacote determina quantas vezes podem ser enviado antes de ser descartada. Cada vez que um pacote é encaminhado, seu valor de limite de salto é reduzido por um. Quando o limite de saltos chegar a zero ou um roteador recebe um pacote com o conjunto de limite de salto para zero, o pacote será descartado e a origem do pacote recebe uma mensagem de tempo excedido indicando que o limite de salto inicial era muito pequeno ou se o pacote foi detectado em um loop de roteamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o valor dessa propriedade.  
+  
+ [!code-cpp[NCLNetInfo2#38](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#38)]
+ [!code-csharp[NCLNetInfo2#38](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#38)]
+ [!code-vb[NCLNetInfo2#38](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#38)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

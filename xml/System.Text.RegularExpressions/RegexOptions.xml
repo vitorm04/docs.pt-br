@@ -1,0 +1,358 @@
+<Type Name="RegexOptions" FullName="System.Text.RegularExpressions.RegexOptions">
+  <TypeSignature Language="C#" Value="public enum RegexOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RegexOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.RegexOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece valores enumerados para definir opções de expressão regular.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Text.RegularExpressions.RegexOptions> valor pode ser fornecido como um parâmetro para os seguintes membros de <xref:System.Text.RegularExpressions.Regex> classe:  
+  
+-   O <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> construtor de classe.  
+  
+-   O método <xref:System.Text.RegularExpressions.Regex.Split%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>.  
+  
+-   O método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>.  
+  
+-   O método <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>.  
+  
+-   O método <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>.  
+  
+-   O <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> métodos.  
+  
+ Um <xref:System.Text.RegularExpressions.RegexOptions> valor também pode ser fornecido como um parâmetro para o <xref:System.Text.RegularExpressions.RegexCompilationInfo.%23ctor%2A> construtor, ou ele pode ser atribuído diretamente para o <xref:System.Text.RegularExpressions.RegexCompilationInfo.Options%2A> propriedade. Resultante <xref:System.Text.RegularExpressions.RegexCompilationInfo> objeto é usado na chamada para o <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> método.  
+  
+ Várias opções fornecidas por membros do <xref:System.Text.RegularExpressions.RegexOptions> enumeração (em particular, por seus membros captura explícita, IgnoreCase, várias linhas e Singleline) em vez disso, pode ser fornecida por meio de um caractere de opção embutida no padrão de expressão regular. Para obter detalhes, consulte [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define duas expressões regulares que identificar palavras repetidas em texto, mas que são instanciados usando diferentes <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> valores. A primeira expressão regular diferencia maiusculas de minúsculas; caso é ignorado ao determinar se uma palavra é idêntica à palavra anterior. A segunda expressão regular diferencia maiusculas de minúsculas; uma palavra deve corresponder ao uso da palavra anterior exatamente a ser considerado uma duplicata.  
+  
+ [!code-csharp[System.Text.RegularExpressions.RegexOptions#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Text.RegularExpressions.RegexOptions/cs/RegexOptions.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.RegexOptions#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Text.RegularExpressions.RegexOptions/vb/RegexOptions.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compiled">
+      <MemberSignature Language="C#" Value="Compiled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions Compiled = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.Compiled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a expressão regular será compilada em um assembly. Isso gera uma execução mais rápida, mas aumenta o tempo de inicialização. Esse valor não deve ser atribuído à propriedade <see cref="P:System.Text.RegularExpressions.RegexCompilationInfo.Options" /> ao chamar o método <see cref="M:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName)" />. Para obter mais informações, consulte a seção "Compilado expressões regulares" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CultureInvariant">
+      <MemberSignature Language="C#" Value="CultureInvariant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions CultureInvariant = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.CultureInvariant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as diferenças culturais no idioma serão ignoradas. Para obter mais informações, consulte a seção "Comparação usando a cultura invariável" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ECMAScript">
+      <MemberSignature Language="C#" Value="ECMAScript" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions ECMAScript = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.ECMAScript" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Habilita o comportamento em conformidad com ECMAScript para a expressão. Esse valor pode ser usado somente em conjunto com o <see cref="F:System.Text.RegularExpressions.RegexOptions.IgnoreCase" />, <see cref="F:System.Text.RegularExpressions.RegexOptions.Multiline" />, e <see cref="F:System.Text.RegularExpressions.RegexOptions.Compiled" /> valores. O uso deste valor com qualquer outro valor resulta em uma exceção.  
+  
+ Para obter mais informações sobre o <see cref="F:System.Text.RegularExpressions.RegexOptions.ECMAScript" /> opção, consulte a seção "Comportamento de correspondência do ECMAScript" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExplicitCapture">
+      <MemberSignature Language="C#" Value="ExplicitCapture" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions ExplicitCapture = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.ExplicitCapture" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que as capturas válidas somente são explicitamente nomeadas ou numeradas grupos do formulário (?&lt; nome&gt;...). Isso permite que parênteses sem nome atuem como grupos que não são de captura, sem a confusão sintática da expressão (?:...). Para obter mais informações, consulte a seção "Explícita captura apenas" no [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="IgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions IgnoreCase = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.IgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a correspondência sem diferenciação de maiúsculas e minúsculas. Para obter mais informações, consulte a seção "Correspondência de Case-Insensitive" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnorePatternWhitespace">
+      <MemberSignature Language="C#" Value="IgnorePatternWhitespace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions IgnorePatternWhitespace = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Elimina um espaço em branco sem escape do padrão e habilita comentários marcados por #. No entanto, esse valor não afeta ou eliminar espaço em branco em [classes de caracteres](~/docs/standard/base-types/character-classes-in-regular-expressions.md)numérico [quantificadores](~/docs/standard/base-types/quantifiers-in-regular-expressions.md), ou os tokens que marca o início do indivíduo [linguagem de expressão regular elementos](~/docs/standard/base-types/regular-expression-language-quick-reference.md). Para obter mais informações, consulte a seção "Ignorar espaço em branco" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiline">
+      <MemberSignature Language="C#" Value="Multiline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions Multiline = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.Multiline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Modo multilinha. Altera o significado de ^ e $ de modo que eles correspondam ao início e ao final, respectivamente, de qualquer linha, e não apenas ao início e ao final da cadeia de caracteres inteira. Para obter mais informações, consulte a seção "Modo de várias linhas" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que nenhuma opção será definida. Para obter mais informações sobre o comportamento padrão do mecanismo de expressão regular, consulte a seção "Opções padrão" de [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="RightToLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions RightToLeft = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.RightToLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a pesquisa se moverá da direita para a esquerda, em vez de se mover da esquerda para a direita. Para obter mais informações, consulte a seção "Modo da direita para esquerda" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Singleline">
+      <MemberSignature Language="C#" Value="Singleline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.RegularExpressions.RegexOptions Singleline = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.RegularExpressions.RegexOptions.Singleline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.RegularExpressions.RegexOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o modo de linha única. Altera o significado do ponto (.) para que coincida com cada caractere (em vez de cada caractere, exceto \n). Para obter mais informações, consulte a seção "modo de linha única" o [opções de expressão Regular](~/docs/standard/base-types/regular-expression-options.md) tópico.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

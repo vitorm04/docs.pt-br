@@ -1,0 +1,253 @@
+<Type Name="DesignerAutoFormat" FullName="System.Web.UI.Design.DesignerAutoFormat">
+  <TypeSignature Language="C#" Value="public abstract class DesignerAutoFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DesignerAutoFormat extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignerAutoFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base abstrata para a criação de formatos que podem ser aplicados a um controle de servidor Web personalizado em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.DesignerAutoFormat>Fornece uma classe base que pode ser herdada de e estendida para exibir um controle de servidor Web personalizado formatado no tempo de design em uma ferramenta de designer visual, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+ Um desenvolvedor de controle oferece formatação automática para ajudar os desenvolvedores que usam o controle para selecionar uma exibição preferencial. Um personalizado <xref:System.Web.UI.Design.DesignerAutoFormat> objeto funciona com um designer personalizado de controle para fornecer formatação automática no tempo de design para um controle personalizado. Por exemplo, o <xref:System.Web.UI.WebControls.Calendar> controle fornece uma variedade de formatos que podem ser aplicadas por um desenvolvedor em tempo de design.  
+  
+ Para implementar a formatação automática para um controle personalizado:  
+  
+1.  Crie o controle personalizado.  
+  
+2.  Derivar uma classe do designer do <xref:System.Web.UI.Design.ControlDesigner> classe ou outra classe do designer que é apropriada para o controle, como o <xref:System.Web.UI.Design.TextControlDesigner>.  
+  
+3.  Derivar uma classe de formato da <xref:System.Web.UI.Design.DesignerAutoFormat> classe que formata o controle personalizado, substituindo o <xref:System.Web.UI.Design.DesignerAutoFormat.Apply%2A> método.  
+  
+4.  Na sua classe designer, preencha o <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> propriedade, que é uma <xref:System.Web.UI.Design.DesignerAutoFormatCollection> objeto, com uma instância da classe do formato para cada formato nomeado que o designer pode ser aplicadas.  
+  
+ O <xref:System.Web.UI.Design.DesignerAutoFormat> classe fornece os seguintes membros para oferecer suporte a formatação automática no tempo de design:  
+  
+-   O <xref:System.Web.UI.Design.DesignerAutoFormat.Apply%2A> método, que aplica o formato de nome para o controle especificado.  
+  
+-   O <xref:System.Web.UI.Design.DesignerAutoFormat.GetPreviewControl%2A> método, que fornece uma cópia do controle para visualização em um **AutoFormatação** caixa de diálogo de um designer visual, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].  
+  
+-   O <xref:System.Web.UI.Design.DesignerAutoFormat.Name%2A> propriedade, que fornece o texto a ser exibido em uma lista de formatos em um designer visual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar a formatação automática em um designer personalizado de controle. O implementa designer controle derivado de <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> propriedade adicionando três instâncias de um formato personalizado automática que são derivados do <xref:System.Web.UI.Design.DesignerAutoFormat> classe.  
+  
+ [!code-csharp[DesignerAutoFormat#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerAutoFormat/CS/DesignerAutoFormat.cs#1)]
+ [!code-vb[DesignerAutoFormat#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerAutoFormat/VB/DesignerAutoFormat.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar do <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> classe, você deve substituir o <see cref="M:System.Web.UI.Design.DesignerAutoFormat.Apply(System.Web.UI.Control)" /> método para visualizar um controle formatado e aplicar o formato selecionado para o controle.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DesignerAutoFormat (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormat.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que identifica um determinado <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> objeto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.DesignerAutoFormat" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.Design.DesignerAutoFormat.%23ctor%2A> construtor para criar um novo formato e adicioná-lo para um <xref:System.Web.UI.Design.DesignerAutoFormatCollection> coleção que é representada pelo <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> propriedade de um <xref:System.Web.UI.Design.ControlDesigner> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Apply">
+      <MemberSignature Language="C#" Value="public abstract void Apply (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Apply(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormat.Apply(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">Um controle de servidor Web para aplicar a formatação.</param>
+        <summary>Aplica-se a formatação associada ao controle especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerAutoFormat.Apply%2A> método aplica-se a formatação para o controle especificado com base no <xref:System.Web.UI.Design.DesignerAutoFormat.Name%2A> propriedade. Você pode aplicar os estilos diretamente para o controle ou definir o <xref:System.Web.UI.Design.DesignerAutoFormat.Style%2A> propriedade e, em seguida, use o <xref:System.Web.UI.WebControls.WebControl.MergeStyle%2A> método para o controle aplicar o estilo de alterações para o controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra como usar um <xref:System.Web.UI.Design.DesignerAutoFormat> objeto para aplicar formatação a um controle de servidor Web.  
+  
+ [!code-csharp[DesignerAutoFormat#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerAutoFormat/CS/DesignerAutoFormat.cs#3)]
+ [!code-vb[DesignerAutoFormat#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerAutoFormat/VB/DesignerAutoFormat.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você herda o <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> classe, você deve substituir o <see cref="M:System.Web.UI.Design.DesignerAutoFormat.Apply(System.Web.UI.Control)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreviewControl">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.Control GetPreviewControl (System.Web.UI.Control runtimeControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Control GetPreviewControl(class System.Web.UI.Control runtimeControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormat.GetPreviewControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runtimeControl" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="runtimeControl">Uma versão de tempo de execução do controle do servidor Web.</param>
+        <summary>Retorna uma cópia do controle associado para fornecer uma visualização antes de aplicar o formato para o controle.</summary>
+        <returns>O <see cref="M:System.Web.UI.Design.DesignerAutoFormat.GetPreviewControl(System.Web.UI.Control)" /> método retorna uma cópia do controle de servidor Web associado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerAutoFormat.GetPreviewControl%2A> método é usado por designers visuais, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], em um **AutoFormatação** caixa de diálogo para exibir uma visualização formatada de tempo de execução do controle em tempo de design antes de aplicar o formato para o controle real.  
+  
+ Independentemente da configuração do <xref:System.Web.UI.Design.SupportsPreviewControlAttribute> de atributo para o <xref:System.Web.UI.Design.ControlDesigner> objeto, o <xref:System.Web.UI.Design.DesignerAutoFormat.GetPreviewControl%2A> método retorna uma cópia do controle no `runtimeControl` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir o <see cref="M:System.Web.UI.Design.DesignerAutoFormat.GetPreviewControl(System.Web.UI.Control)" /> método nas seguintes situações:  
+  
+-   O tamanho do controle retornado será diferente do controle original.  
+  
+-   O controle deve ser preenchido com dados de exemplo para apresentar uma visualização suficiente.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormat.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de uma <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> objeto.</summary>
+        <value>O <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> nome.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um visual designer, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)], usa o <xref:System.Web.UI.Design.DesignerAutoFormat.Name%2A> propriedade de cada <xref:System.Web.UI.Design.DesignerAutoFormat> objeto o <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> coleção de um <xref:System.Web.UI.Design.ControlDesigner> para criar uma lista de formatos de estilo automático disponível.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A> propriedade de um <xref:System.Web.UI.Design.ControlDesigner> objeto para criar e adicionar três formatos nomeados à coleção.  
+  
+ [!code-csharp[DesignerAutoFormat#2](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerAutoFormat/CS/DesignerAutoFormat.cs#2)]
+ [!code-vb[DesignerAutoFormat#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerAutoFormat/VB/DesignerAutoFormat.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignerAutoFormatStyle Style { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.DesignerAutoFormatStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormat.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignerAutoFormatStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.Design.DesignerAutoFormatStyle" /> objeto que é usado pelo <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> objeto para processar uma visualização de tempo de design do controle associado.</summary>
+        <value>Um objeto que é usado pelo <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> objeto para processar uma visualização de tempo de design do controle associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o objeto retornado pelo <xref:System.Web.UI.Design.DesignerAutoFormat.Style%2A> propriedade é somente leitura, cada propriedade que ela contém pode ser definida. Por exemplo, você pode definir o <xref:System.Web.UI.WebControls.Style.ForeColor%2A> ou <xref:System.Web.UI.Design.DesignerAutoFormatStyle.VerticalAlign%2A> propriedade o <xref:System.Web.UI.Design.DesignerAutoFormatStyle> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra como aplicar formatação a um controle de servidor Web usando o <xref:System.Web.UI.Design.DesignerAutoFormat.Style%2A> propriedade.  
+  
+ [!code-csharp[DesignerAutoFormat#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerAutoFormat/CS/DesignerAutoFormat.cs#3)]
+ [!code-vb[DesignerAutoFormat#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerAutoFormat/VB/DesignerAutoFormat.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormat.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> atual.</summary>
+        <returns>O <see cref="P:System.Web.UI.Design.DesignerAutoFormat.Name" /> propriedade <see cref="T:System.Web.UI.Design.DesignerAutoFormat" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerAutoFormat.ToString%2A> método retorna uma cadeia de caracteres que contém o valor da <xref:System.Web.UI.Design.DesignerAutoFormat.Name%2A> propriedade o <xref:System.Web.UI.Design.DesignerAutoFormat> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

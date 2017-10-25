@@ -1,0 +1,281 @@
+<Type Name="ConnectionStringsExpressionBuilder" FullName="System.Web.Compilation.ConnectionStringsExpressionBuilder">
+  <TypeSignature Language="C#" Value="public class ConnectionStringsExpressionBuilder : System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionStringsExpressionBuilder extends System.Web.Compilation.ExpressionBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ConnectionStringsExpressionBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Compilation.ExpressionBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionEditor("System.Web.UI.Design.ConnectionStringsExpressionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Compilation.ExpressionPrefix("ConnectionStrings")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Recupera ou gera código para recuperar valores da &lt; <see langword="connectionStrings" /> &gt; seção do arquivo Web. config.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> classe fornece acesso a valores de <`connectionStrings`> seção do arquivo Web. config. O <`connectionStrings`> seção do arquivo Web. config contém valores de cadeia de conexão de pares nome/valor.  
+  
+ Um valor de cadeia de caracteres de conexão é recuperado por atribuir uma expressão de formato  
+  
+ `<%$ ConnectionStrings: secureConnectionString %>`  
+  
+ para uma propriedade de controle. A parte da expressão antes de dois-pontos (:) designa o tipo de expressão a ser recuperado e a parte após os dois-pontos significa o nome da cadeia de caracteres de conexão. A expressão anterior recuperaria o seguinte valor do arquivo Web. config.  
+  
+ `<connectionStrings>`  
+  
+ `<add name="secureConnectionString" connectionString="Data`  
+  
+ `Source=localhost;Integrated Security=SSPI;Initial`  
+  
+ `Catalog=Northwind;" providerName="System.Data.SqlClient" />`  
+  
+ `</connectionStrings>`  
+  
+ Quando o analisador de página encontra uma expressão com o prefixo `ConnectionStrings`, ele cria uma instância do <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> classe para lidar com a expressão.  
+  
+ Se a expressão for encontrada em uma página que será compilada, o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> objeto gera o código que recupera a cadeia de caracteres de conexão especificada do arquivo Web. config. Se a expressão for encontrada em uma página que não será compilada, o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder> objeto retorna o valor do arquivo Web. config quando a página é analisada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar declarativamente uma <xref:System.Web.UI.WebControls.SqlDataSource> controle para recuperar dados de um computador executando o Microsoft SQL Server e exibi-lo em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.SqlDataSource_3sql#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_3sql/CS/sql3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.SqlDataSource_3sql#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.SqlDataSource_3sql/VB/sql3vb.aspx#1)]
+  
+ O código recupera a seguinte cadeia de conexão do arquivo Web. config.  
+  
+ `<configuration   xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">`  
+  
+ `<connectionStrings>`  
+  
+ `<add name="MyNorthwind" connectionString="Data`  
+  
+ `Source=localhost;Integrated Security=SSPI;Initial`  
+  
+ `Catalog=Northwind;" providerName="System.Data.SqlClient" />`  
+  
+ `</connectionStrings>`  
+  
+ `</configuration>`  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionStringsExpressionBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Compilation.ConnectionStringsExpressionBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateExpression">
+      <MemberSignature Language="C#" Value="public override object EvaluateExpression (object target, System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object EvaluateExpression(object target, class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression(System.Object,System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto que contém a expressão.</param>
+        <param name="entry">A propriedade à qual a expressão está associada.</param>
+        <param name="parsedData">O objeto que representa a analisar dados como retornado por <see cref="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Propriedades de controle ou página.</param>
+        <summary>Retorna um valor da &lt; <see langword="connectionStrings" /> &gt; seção do arquivo Web. config.</summary>
+        <returns>O <see cref="T:System.Object" /> associados com uma chave de &lt; <see langword="connectionStrings" /> &gt; seção do arquivo Web. config.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando uma expressão de formato `<%$ ConnectionStrings: secureConnectionString %>` é encontrado em uma página que não está compilada. Recupera o valor adequado a partir de <`connectionStrings`> seção do arquivo Web. config. Esse método substitui o <xref:System.Web.Compilation.ExpressionBuilder.EvaluateExpression%2A> método chamando o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionString%2A> método se uma cadeia de caracteres de conexão está incluída no `parsedData` parâmetro, ou chamando o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionStringProviderName%2A> método se uma cadeia de caracteres de conexão não está incluída no `parsedData` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não foi possível encontrar o nome de cadeia de conexão no arquivo Web.config.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCodeExpression">
+      <MemberSignature Language="C#" Value="public override System.CodeDom.CodeExpression GetCodeExpression (System.Web.UI.BoundPropertyEntry entry, object parsedData, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.CodeDom.CodeExpression GetCodeExpression(class System.Web.UI.BoundPropertyEntry entry, object parsedData, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetCodeExpression(System.Web.UI.BoundPropertyEntry,System.Object,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Web.UI.BoundPropertyEntry" />
+        <Parameter Name="parsedData" Type="System.Object" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Um objeto que representa informações sobre a propriedade associada a pela expressão.</param>
+        <param name="parsedData">O objeto que representa a analisar dados como retornado por <see cref="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />.</param>
+        <param name="context">Propriedades de controle ou página.</param>
+        <summary>Retorna uma expressão de código a ser avaliada durante a análise da página.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeExpression" /> que invoca um método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado durante a criação de CodeDOM para uma página ou controle. O <xref:System.CodeDom.CodeExpression> objeto retornado é do tipo <xref:System.CodeDom.CodeMethodInvokeExpression> e representa o método de chamada ao recuperar um valor de cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectionString">
+      <MemberSignature Language="C#" Value="public static string GetConnectionString (string connectionStringName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetConnectionString(string connectionStringName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionStringName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionStringName">O nome da cadeia de conexão.</param>
+        <summary>Retorna uma cadeia de caracteres de conexão a &lt; <see langword="connectionStrings" /> &gt; seção do arquivo Web. config.</summary>
+        <returns>A cadeia de caracteres de conexão como um <see cref="T:System.String" /> para este nome de cadeia de caracteres de conexão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> propriedade retorna uma coleção de conexão valores de cadeia de caracteres. O <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionString%2A> método retornará o valor desta coleção que está associado com o nome da cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não foi possível encontrar o nome de cadeia de conexão no arquivo Web.config.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectionStringProviderName">
+      <MemberSignature Language="C#" Value="public static string GetConnectionStringProviderName (string connectionStringName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetConnectionStringProviderName(string connectionStringName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionStringProviderName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionStringName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionStringName">O nome da cadeia de conexão.</param>
+        <summary>Retorna o provedor de cadeia de caracteres de conexão do &lt; <see langword="connectionStrings" /> &gt; seção do arquivo Web. config.</summary>
+        <returns>O provedor como um <see cref="T:System.String" /> para este nome de cadeia de caracteres de conexão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A?displayProperty=nameWithType> propriedade retorna uma coleção de conexão valores de cadeia de caracteres. O <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetConnectionStringProviderName%2A> método retorna o provedor para o valor desta coleção que está associado com o nome da cadeia de caracteres de conexão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não foi possível encontrar o nome de cadeia de conexão no arquivo Web.config.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseExpression">
+      <MemberSignature Language="C#" Value="public override object ParseExpression (string expression, Type propertyType, System.Web.Compilation.ExpressionBuilderContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ParseExpression(string expression, class System.Type propertyType, class System.Web.Compilation.ExpressionBuilderContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ConnectionStringsExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expression" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="context" Type="System.Web.Compilation.ExpressionBuilderContext" />
+      </Parameters>
+      <Docs>
+        <param name="expression">O valor da expressão declarativa.</param>
+        <param name="propertyType">O tipo de destino para a expressão.</param>
+        <param name="context">Propriedades de controle ou página.</param>
+        <summary>Retorna um objeto que representa a expressão analisada.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém a representação analisada da expressão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retornado <xref:System.Object> é do tipo <xref:System.Web.UI.Pair>. Isso <xref:System.Web.UI.Pair> objeto pode ser passado para o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A> método e o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.GetCodeExpression%2A> método como `parsedData`. O <xref:System.Web.UI.Pair> objeto contém o nome e o valor da cadeia de conexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsEvaluate">
+      <MemberSignature Language="C#" Value="public override bool SupportsEvaluate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsEvaluate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ConnectionStringsExpressionBuilder.SupportsEvaluate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se uma expressão pode ser avaliada em uma página que não está compilada.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.SupportsEvaluate%2A> propriedade indica se o <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A> método foi implementado na classe. <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder.EvaluateExpression%2A>deve ser implementada em um construtor de expressão para uma expressão a ser avaliada em uma página que não está compilada. <xref:System.Web.Compilation.ConnectionStringsExpressionBuilder>oferece suporte a avaliação de não-compilação de cadeias de caracteres de conexão, portanto `true` sempre é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

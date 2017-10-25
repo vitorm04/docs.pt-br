@@ -1,0 +1,331 @@
+<Type Name="CacheStoreProvider" FullName="System.Web.Caching.CacheStoreProvider">
+  <TypeSignature Language="C#" Value="public abstract class CacheStoreProvider : System.Configuration.Provider.ProviderBase, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CacheStoreProvider extends System.Configuration.Provider.ProviderBase implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheStoreProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Provider.ProviderBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a interface base necessária de qualquer armazenamento de cache que queira ser conectado como a implementação de cache de objeto padrão usada por <see cref="T:System.Runtime.Caching.MemoryCache" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CacheStoreProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância desta classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract object Add (string key, object item, System.Web.Caching.CacheInsertOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Add(string key, object item, class System.Web.Caching.CacheInsertOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Add(System.String,System.Object,System.Web.Caching.CacheInsertOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="options" Type="System.Web.Caching.CacheInsertOptions" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave usada para referenciar o item.</param>
+        <param name="item">O item a ser adicionado ao cache.</param>
+        <param name="options">As opções de cache.</param>
+        <summary>Adiciona o item especificado ao cache com opções.</summary>
+        <returns>O objeto que foi adicionado ao cache.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDependent">
+      <MemberSignature Language="C#" Value="public abstract bool AddDependent (string key, System.Web.Caching.CacheDependency dependency, out DateTime utcLastUpdated);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool AddDependent(string key, class System.Web.Caching.CacheDependency dependency, [out] valuetype System.DateTime&amp; utcLastUpdated) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.AddDependent(System.String,System.Web.Caching.CacheDependency,System.DateTime@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="dependency" Type="System.Web.Caching.CacheDependency" />
+        <Parameter Name="utcLastUpdated" Type="System.DateTime&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave.</param>
+        <param name="dependency">O item dependente.</param>
+        <param name="utcLastUpdated">To be added.</param>
+        <summary>Adiciona uma entidade dependente para o cache.</summary>
+        <returns>A hora de criação da entrada pai, se ela existir; caso contrário, <see cref="T:System.DateTime" /><see cref="F:System.DateTime.MinValue" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public abstract void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual do objeto de cache.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public abstract object Get (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Get(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave.</param>
+        <summary>Recupera o item especificado do cache, caso ele exista.</summary>
+        <returns>O item especificado do cache, caso ele exista; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IDictionaryEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IDictionaryEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um enumerador de dicionário usado para iterar pelas configurações de chave e os valores contidos no cache.</summary>
+        <returns>Um enumerador de dicionário usado para iterar pelas configurações de chave e os valores contidos no cache.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public abstract void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser usado para pesquisar informações de configuração.</param>
+        <param name="config">Uma coleção de pares nome/valor das informações de configuração a serem usadas para configurar o cache.</param>
+        <summary>Inicializa o cache nomeado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public abstract void Insert (string key, object item, System.Web.Caching.CacheInsertOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(string key, object item, class System.Web.Caching.CacheInsertOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Insert(System.String,System.Object,System.Web.Caching.CacheInsertOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="options" Type="System.Web.Caching.CacheInsertOptions" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave usada para referenciar o objeto.</param>
+        <param name="item">O item a ser inserido no cache.</param>
+        <param name="options">As opções de cache.</param>
+        <summary>Insere um objeto e as dependências no cache.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemCount">
+      <MemberSignature Language="C#" Value="public abstract long ItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 ItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheStoreProvider.ItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens armazenados no cache.</summary>
+        <value>O número de itens armazenados no cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor pode ser útil ao monitorar o desempenho do aplicativo ou ao usar a funcionalidade de rastreamento do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public abstract object Remove (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Remove(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O identificador para o item de cache.</param>
+        <summary>Remove o item do cache.</summary>
+        <returns>O item, se ele existir; caso contrário <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public abstract object Remove (string key, System.Web.Caching.CacheItemRemovedReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Remove(string key, valuetype System.Web.Caching.CacheItemRemovedReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Remove(System.String,System.Web.Caching.CacheItemRemovedReason)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="reason" Type="System.Web.Caching.CacheItemRemovedReason" />
+      </Parameters>
+      <Docs>
+        <param name="key">O identificador para o item de cache a ser removido.</param>
+        <param name="reason">O motivo pelo qual o item foi removido.</param>
+        <summary>Remove o item especificado do cache, caso ele exista.</summary>
+        <returns>O item removido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDependent">
+      <MemberSignature Language="C#" Value="public abstract void RemoveDependent (string key, System.Web.Caching.CacheDependency dependency);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveDependent(string key, class System.Web.Caching.CacheDependency dependency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.RemoveDependent(System.String,System.Web.Caching.CacheDependency)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="dependency" Type="System.Web.Caching.CacheDependency" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave.</param>
+        <param name="dependency">A dependência.</param>
+        <summary>Remove a dependência especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeInBytes">
+      <MemberSignature Language="C#" Value="public abstract long SizeInBytes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SizeInBytes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Caching.CacheStoreProvider.SizeInBytes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho aproximado em bytes do cache.</summary>
+        <value>O tamanho aproximado em bytes do cache.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trim">
+      <MemberSignature Language="C#" Value="public abstract long Trim (int percent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 Trim(int32 percent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Caching.CacheStoreProvider.Trim(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="percent" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="percent">O percentual do total de entradas de cache a serem removidas.</param>
+        <summary>Remove uma porcentagem especificada de entradas de cache.</summary>
+        <returns>A porcentagem especificada de entradas de cache removidas do cache.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,99 @@
+<Type Name="Saml2SubjectLocality" FullName="System.IdentityModel.Tokens.Saml2SubjectLocality">
+  <TypeSignature Language="C#" Value="public class Saml2SubjectLocality" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Saml2SubjectLocality extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.Saml2SubjectLocality" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento SubjectLocality especificado em [Saml2Core 2.7.2.1].</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento deve ser considerado totalmente comunicado pois não há nenhuma garantia de que a validade das propriedades. [Saml2Core, 2.7.2.1]  
+  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a especificação principal do SAML v 2.0.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2SubjectLocality ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2SubjectLocality.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.Saml2SubjectLocality" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Saml2SubjectLocality (string address, string dnsName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string address, string dnsName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.Saml2SubjectLocality.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="dnsName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">Uma cadeia de caracteres que contém o endereço.</param>
+        <param name="dnsName">Uma cadeia de caracteres que contém o nome DNS.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.Saml2SubjectLocality" /> classe a partir de um endereço e o nome DNS.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public string Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Address" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2SubjectLocality.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de rede do sistema do qual a entidade identificada pelo assunto foi autenticada. [Saml2Core, 2.7.2.1]</summary>
+        <value>Uma cadeia de caracteres que contém o endereço.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsName">
+      <MemberSignature Language="C#" Value="public string DnsName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DnsName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.Saml2SubjectLocality.DnsName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome DNS do sistema do qual a entidade identificada pelo assunto foi autenticada. [Saml2Core, 2.7.2.1]</summary>
+        <value>Uma cadeia de caracteres que contém o nome DNS.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

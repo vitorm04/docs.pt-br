@@ -1,0 +1,96 @@
+<Type Name="WrapDirection" FullName="System.Windows.WrapDirection">
+  <TypeSignature Language="C#" Value="public enum WrapDirection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WrapDirection extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.WrapDirection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as instruções permitidas que o conteúdo pode encapsular ao redor do objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Figure.WrapDirection%2A> atributo de um <xref:System.Windows.Documents.Figure> elemento.  
+  
+ [!code-xaml[FloaterFigureSnippets#_FigurePropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml#_figurepropsxaml)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Figure.WrapDirection%2A> propriedade programaticamente.  
+  
+ [!code-csharp[FloaterFigureSnippets#_FigureProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml.cs#_figureprops)]
+ [!code-vb[FloaterFigureSnippets#_FigureProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb#_figureprops)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WrapDirection Both = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WrapDirection.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WrapDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conteúdo que só flui em torno dos dois lados do objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WrapDirection Left = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WrapDirection.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WrapDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conteúdo que só flui em torno do lado esquerdo do objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WrapDirection None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WrapDirection.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WrapDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conteúdo que não flui ao redor do objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.WrapDirection Right = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.WrapDirection.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WrapDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conteúdo que só flui em torno do lado direito do objeto.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,125 @@
+<Type Name="ArrayEditor" FullName="System.ComponentModel.Design.ArrayEditor">
+  <TypeSignature Language="C#" Value="public class ArrayEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArrayEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ArrayEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface do usuário para editar matrizes em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este editor pode ser usado para editar matrizes dentro do ambiente de tempo de design.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a aplicação de <xref:System.ComponentModel.EditorAttribute?displayProperty=nameWithType> a uma propriedade.  
+  
+ [!code-cpp[ArrayEditorExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ArrayEditorExample/CPP/class1.cpp#1)]
+ [!code-csharp[ArrayEditorExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ArrayEditorExample/CS/class1.cs#1)]
+ [!code-vb[ArrayEditorExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ArrayEditorExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArrayEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de dados dos itens na matriz.</param>
+        <summary>Inicializa uma nova instância da <see cref="T:System.ComponentModel.Design.ArrayEditor" /> usando o tipo de dados especificado para a matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCollectionItemType">
+      <MemberSignature Language="C#" Value="protected override Type CreateCollectionItemType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type CreateCollectionItemType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.CreateCollectionItemType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém que o tipo de dados que essa coleção é criada para conter.</summary>
+        <returns>Um <see cref="T:System.Type" /> que indica o tipo de dados que a coleção deve conter.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão retorna o tipo de item da matriz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItems">
+      <MemberSignature Language="C#" Value="protected override object[] GetItems (object editValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object[] GetItems(object editValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.GetItems(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="editValue">A matriz do qual recuperar os itens.</param>
+        <summary>Obtém os itens na matriz.</summary>
+        <returns>Uma matriz de itens dentro da matriz especificada. Se o objeto especificado no <paramref name="editValue" /> parâmetro não for uma matriz, um novo objeto vazio será retornado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItems">
+      <MemberSignature Language="C#" Value="protected override object SetItems (object editValue, object[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SetItems(object editValue, object[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ArrayEditor.SetItems(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editValue" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="editValue">Definir os itens a matriz.</param>
+        <param name="value">A matriz de objetos para definir como os itens da matriz.</param>
+        <summary>Define os itens na matriz.</summary>
+        <returns>Uma instância da nova matriz. Se o objeto especificado pelo <paramref name="editValue" /> parâmetro não é uma matriz, o objeto especificado pelo <paramref name="editValue" /> parâmetro será retornado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

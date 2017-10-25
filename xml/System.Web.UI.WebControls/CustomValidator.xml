@@ -1,0 +1,399 @@
+<Type Name="CustomValidator" FullName="System.Web.UI.WebControls.CustomValidator">
+  <TypeSignature Language="C#" Value="public class CustomValidator : System.Web.UI.WebControls.BaseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomValidator extends System.Web.UI.WebControls.BaseValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CustomValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BaseValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("ServerValidate")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:CustomValidator runat="server" ErrorMessage="CustomValidator"&gt;&lt;/{0}:CustomValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Realiza uma validação definida pelo usuário em um controle de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CustomValidator> controle para fornecer uma função definida pelo usuário de validação para um controle de entrada. O <xref:System.Web.UI.WebControls.CustomValidator> é um controle separado do controle de entrada valida, que permite que você controle onde a mensagem de validação é exibida.  
+  
+ Controles de validação sempre executam validação no servidor. Eles também têm implementação completa do lado do cliente que permite que navegadores habilitados para script (como o Microsoft Internet Explorer 4.0 e posterior) para executar a validação no cliente. Validação do lado do cliente melhora o processo de validação, verificando a entrada do usuário antes de serem enviado ao servidor. Isso permite que os erros sejam detectados no cliente antes que o formulário é enviado, evitando, assim, o processamento de informações necessárias para validação do lado do servidor.  
+  
+ Para criar uma função de validação do lado do servidor, fornecer um manipulador para o <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> eventos que executa a validação. Do controle de entrada para validar a cadeia de caracteres pode ser acessada usando o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> propriedade o <xref:System.Web.UI.WebControls.ServerValidateEventArgs> objeto passado para o manipulador de eventos como um parâmetro. O resultado da validação é então armazenado na <xref:System.Web.UI.WebControls.ServerValidateEventArgs.IsValid%2A> propriedade o <xref:System.Web.UI.WebControls.ServerValidateEventArgs> objeto.  
+  
+ Para criar uma função de validação do lado do cliente, primeiro adicione a função de validação do lado do servidor descrita anteriormente. Em seguida, adicione a função de script de validação do lado do cliente para a página ASP.NET (. aspx).  
+  
+ Se você estiver usando o Visual Basic Scripting Edition (VBScript), a função deve ser neste formulário:  
+  
+```  
+Sub ValidationFunctionName(source, arguments)  
+```  
+  
+ Se você estiver usando JScript, a função deve ser neste formulário:  
+  
+```  
+function ValidationFunctionName(source, arguments)  
+```  
+  
+ O `source` parâmetro é uma referência para o \<span > elemento renderizado para o <xref:System.Web.UI.WebControls.CustomValidator> controle. Isso permite que você controle programaticamente o \<span > marca, como modificar o <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> atributo. O `arguments` parâmetro é um objeto com duas propriedades: valor e IsValid. Esse parâmetro permite que você obtenha o valor do controle para validar e indicar se o valor é válido com base em sua rotina de validação personalizada.  
+  
+ Use o <xref:System.Web.UI.WebControls.CustomValidator.ClientValidationFunction%2A> propriedade para especificar o nome da função de script de validação do lado do cliente associada a <xref:System.Web.UI.WebControls.CustomValidator> controle. Como a função de script é executada no cliente, a função deve estar em um idioma que o navegador de destino dá suporte, como VBScript ou JScript.  
+  
+> [!NOTE]
+>  Quando você usa o <xref:System.Web.UI.WebControls.CustomValidator> controle dentro de um <xref:System.Web.UI.UpdatePanel> de controle, certifique-se de que o controle de validação e o controle está associado são do mesmo painel. Para obter mais informações sobre como usar o <xref:System.Web.UI.UpdatePanel> para atualizações parciais de página, consulte [visão geral de renderização de página parcial](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Como a validação do lado do servidor, a cadeia de caracteres do controle de entrada para validar é acessada usando o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> propriedade o `arguments` parâmetro. Retornar o resultado de validação, definindo a <xref:System.Web.UI.WebControls.ServerValidateEventArgs.IsValid%2A> propriedade o `arguments` parâmetro.  
+  
+> [!CAUTION]
+>  Ao usar os controles de validação, você sempre deve verificar os resultados da validação do lado do servidor antes de executar qualquer processamento. Após um postback mas antes de seus métodos de evento são chamados, a página chama os controles de validação e agrega os resultados para o <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> propriedade. (Você também pode chamar os controles de validação explicitamente usando o `Validate` método.) Em seu próprio código, você deve verificar se o <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> propriedade retorna `true` antes de processar a entrada. Embora os navegadores habilitados para script podem impedir que um postback ocorra no cliente se uma verificação de validação tiver falhado, você sempre também deve verificar <xref:System.Web.UI.Page.IsValid%2A?displayProperty=nameWithType> no código do servidor antes de processar dados validados.  
+  
+ Vários controles de validação podem ser usados com um controle de entrada individual para validar diferentes critérios. Por exemplo, você pode aplicar vários controles de validação em um <xref:System.Web.UI.WebControls.TextBox> controle que permite que o usuário insira a quantidade de itens a serem adicionados a um carrinho de compras. Você pode usar um <xref:System.Web.UI.WebControls.CustomValidator> controle para garantir que o valor especificado é menor que a quantidade em estoque e uma <xref:System.Web.UI.WebControls.RequiredFieldValidator> controle para garantir que o usuário insira um valor para o <xref:System.Web.UI.WebControls.TextBox> controle.  
+  
+> [!NOTE]
+>  Se o controle de entrada estiver vazio, nenhuma validação funções são chamadas e a validação for bem-sucedida. Use um <xref:System.Web.UI.WebControls.RequiredFieldValidator> controle para exigir que o usuário insira dados no controle de entrada.  
+  
+ É possível usar um <xref:System.Web.UI.WebControls.CustomValidator> controle sem definir o <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> propriedade. Isso geralmente é feito quando você estiver validando vários controles de entrada ou Validar controles de entrada que não podem ser usados com controles de validação, como o <xref:System.Web.UI.WebControls.CheckBox> controle. Nesse caso, o <xref:System.Web.UI.WebControls.ServerValidateEventArgs.Value%2A> propriedade o `arguments` parâmetro passado para o manipulador de eventos para o <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> eventos e à validação do lado do cliente a função sempre contém uma cadeia de caracteres vazia (""). No entanto, essas funções de validação ainda são chamadas, quando apropriado, para determinar a validade no servidor e no cliente. Para acessar o valor a ser validado, você deve referenciar programaticamente o controle de entrada que você deseja validar e, em seguida, recuperar o valor da propriedade apropriada. Por exemplo, para validar um <xref:System.Web.UI.WebControls.CheckBox> controle no servidor, não defina o <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> propriedade do controle de validação e use o código a seguir para o manipulador para o <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> evento.  
+  
+```vb  
+Sub ServerValidation (source As object, args As ServerValidateEventArgs)  
+    args.IsValid = (CheckBox1.Checked = True)  
+ End Sub  
+```  
+  
+```csharp  
+void ServerValidation (object source, ServerValidateEventArgs args)  
+ {  
+    args.IsValid = (CheckBox1.Checked == true);  
+ }  
+```  
+  
+ Para obter mais informações sobre controles de validação, consulte <xref:System.Web.UI.WebControls.BaseValidator>.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ Para obter informações sobre como configurar este controle para que ele gera marcação que está de acordo com os padrões de acessibilidade, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um controle <xref:System.Web.UI.WebControls.CustomValidator> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomValidatorServerValidate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorServerValidate/CS/customvalidatorservervalidatecs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorServerValidate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorServerValidate/VB/customvalidatorservervalidatevb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como criar um cliente <xref:System.Web.UI.WebControls.CustomValidator> controle.  
+  
+ [!code-aspx-csharp[CustomValidatorClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorClient/CS/customvalidatorclientcs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorClient/VB/customvalidatorclientvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CustomValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CustomValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CustomValidator.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém o fluxo de saída para renderização no cliente.</param>
+        <summary>Adiciona as propriedades do <see cref="T:System.Web.UI.WebControls.CustomValidator" /> controle o fluxo de saída para renderização no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.CustomValidator.AddAttributesToRender%2A> método em um controle de servidor personalizado para que o <xref:System.Web.UI.WebControls.CustomValidator> mensagem de erro sempre aparece em negrito.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomCustomValidatorAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCustomValidatorAddAttributesToRender/CS/custom_customvalidator_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomCustomValidatorAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCustomValidatorAddAttributesToRender/VB/custom_customvalidator_addattributestorendervb.aspx#1)]  
+[!code-csharp[CustomCustomValidatorAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCustomValidatorAddAttributesToRender/CS/custom_customvalidator_addattributestorender.cs#2)]
+[!code-vb[CustomCustomValidatorAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCustomValidatorAddAttributesToRender/VB/custom_customvalidator_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientValidationFunction">
+      <MemberSignature Language="C#" Value="public string ClientValidationFunction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientValidationFunction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CustomValidator.ClientValidationFunction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da função de script do lado do cliente personalizada usada para validação.</summary>
+        <value>O nome da função de script de cliente personalizada usada para validação. O valor padrão é <see cref="F:System.String.Empty" />, que indica que essa propriedade não está definida.  
+  
+ <block subset="none" type="note"><para>  
+ O nome da função não deve incluir nenhum parêntese ou parâmetro.  
+  
+</para></block></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como o nome da função que executa a validação do lado do cliente.  
+  
+ Como a função de validação do cliente é executado no navegador de destino, a função deve ser escrita usando uma linguagem de scripts com suporte pelo navegador, como VBScript ou JScript.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CustomValidator.ClientValidationFunction%2A> propriedade para especificar o nome da função que executa a validação do lado do cliente. A função de validação verifica os números pares. Para obter uma descrição dos parâmetros de função, consulte a seção comentários de <xref:System.Web.UI.WebControls.CustomValidator>.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomValidatorClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorClient/CS/customvalidatorclientcs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorClient/VB/customvalidatorclientvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected override bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CustomValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica as propriedades do controle para valores válidos.</summary>
+        <returns>
+          <see langword="true" />Se as propriedades de controle são válidas. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.CustomValidator.ControlPropertiesValid%2A> método em um servidor personalizado de controle para que ele sempre retorna o valor da propriedade visible, contanto que o <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> propriedade o <xref:System.Web.UI.WebControls.CustomValidator> controle está na página e contém Propriedades de validação.  
+  
+ [!code-aspx-csharp[CustomCustomValidatorControlPropertiesValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCustomValidatorControlPropertiesValid/CS/custom_customvalidator_controlpropertiesvalidcs.aspx#1)]
+ [!code-aspx-vb[CustomCustomValidatorControlPropertiesValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCustomValidatorControlPropertiesValid/VB/custom_customvalidator_controlpropertiesvalidvb.aspx#1)]  
+[!code-csharp[CustomCustomValidatorControlPropertiesValid#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCustomValidatorControlPropertiesValid/CS/custom_customvalidator_controlpropertiesvalid.cs#2)]
+[!code-vb[CustomCustomValidatorControlPropertiesValid#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCustomValidatorControlPropertiesValid/VB/custom_customvalidator_controlpropertiesvalid.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CustomValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.Web.UI.MobileControls.BaseValidator.EvaluateIsValid" />.</summary>
+        <returns>
+          <see langword="true" /> se o valor no controle de entrada for válido, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.CustomValidator.EvaluateIsValid%2A> método em um controle de servidor personalizado.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomCustomValidatorEvaluateIsValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCustomValidatorEvaluateIsValid/CS/custom_customvalidator_evaluateisvalidcs.aspx#1)]
+ [!code-aspx-vb[CustomCustomValidatorEvaluateIsValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCustomValidatorEvaluateIsValid/VB/custom_customvalidator_evaluateisvalidvb.aspx#1)]  
+[!code-csharp[CustomCustomValidatorEvaluateIsValid#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCustomValidatorEvaluateIsValid/CS/custom_customvalidator_evaluateisvalid.cs#2)]
+[!code-vb[CustomCustomValidatorEvaluateIsValid#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCustomValidatorEvaluateIsValid/VB/custom_customvalidator_evaluateisvalid.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnServerValidate">
+      <MemberSignature Language="C#" Value="protected virtual bool OnServerValidate (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnServerValidate(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CustomValidator.OnServerValidate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser validado.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.CustomValidator.ServerValidate" /> do controle <see cref="T:System.Web.UI.WebControls.CustomValidator" />.</summary>
+        <returns>
+          <see langword="true" /> se o valor especificado pelo parâmetro <paramref name="value" /> passa a validação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> evento é gerado quando a validação é executada no servidor.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ O <xref:System.Web.UI.WebControls.CustomValidator.OnServerValidate%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar e codificar um manipulador para um lado do servidor <xref:System.Web.UI.WebControls.CustomValidator> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomValidatorServerValidate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorServerValidate/CS/customvalidatorservervalidatecs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorServerValidate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorServerValidate/VB/customvalidatorservervalidatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.CustomValidator.OnServerValidate(System.String)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.CustomValidator.OnServerValidate(System.String)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerValidate">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.ServerValidateEventHandler ServerValidate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.ServerValidateEventHandler ServerValidate" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.CustomValidator.ServerValidate" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ServerValidateEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a validação é executada no servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.CustomValidator.ServerValidate> evento é gerado quando a validação é executada no servidor. Esse evento é usado para fornecer uma rotina de validação personalizada para um controle de entrada, como um <xref:System.Web.UI.WebControls.TextBox> controle.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar e codificar um manipulador para um lado do servidor <xref:System.Web.UI.WebControls.CustomValidator> controle. Ele cria uma rotina de validação personalizada, valida o valor de um <xref:System.Web.UI.WebControls.TextBox> controle para um número par e, em seguida, exibe o resultado da validação.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomValidatorServerValidate#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomValidatorServerValidate/CS/customvalidatorservervalidatecs.aspx#1)]
+ [!code-aspx-vb[CustomValidatorServerValidate#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomValidatorServerValidate/VB/customvalidatorservervalidatevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateEmptyText">
+      <MemberSignature Language="C#" Value="public bool ValidateEmptyText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateEmptyText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CustomValidator.ValidateEmptyText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano indicando se o texto vazio deve ser validado.</summary>
+        <value>
+          <see langword="true" /> se o texto vazio deve ser validado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada validador pode ser associado um controle de destino. Em versões anteriores do .NET Framework, se o controle de destino tiver um valor de cadeia de caracteres vazia, como um <xref:System.Web.UI.WebControls.TextBox.Text%2A> tiver o valor de propriedade <xref:System.String.Empty?displayProperty=nameWithType>, o validador (exceto para o <xref:System.Web.UI.WebControls.RequiredFieldValidator> validador) não seria avaliado o controle de destino e simplesmente retornaria o que passou a validação.  
+  
+ O <xref:System.Web.UI.WebControls.CustomValidator.ValidateEmptyText%2A> propriedade é nova para o .NET Framework versão 2.0.  Se <xref:System.Web.UI.WebControls.CustomValidator.ValidateEmptyText%2A> é definido como `true`, o validador avalia o valor do controle (usando os critérios especificados para o <xref:System.Web.UI.WebControls.CustomValidator> controle) e retorna os resultados da validação. Esta propriedade permite que os desenvolvedores avaliar os resultados de uma <xref:System.Web.UI.WebControls.CustomValidator> controle, independentemente do valor do controle de destino.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

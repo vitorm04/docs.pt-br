@@ -1,0 +1,200 @@
+<Type Name="RoleGroup" FullName="System.Web.UI.WebControls.RoleGroup">
+  <TypeSignature Language="C#" Value="public sealed class RoleGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RoleGroup extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RoleGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Associa um modelo de conteúdo em um <see cref="T:System.Web.UI.WebControls.LoginView" /> controle com uma ou mais funções definidas para o site da Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.LoginView> controle para definir um conjunto de modelos de conteúdo que contêm o conteúdo que é exibido aos usuários do site da Web com base na função atribuída pelos administradores do site da Web. O <xref:System.Web.UI.WebControls.RoleGroup> classe é usada pelo <xref:System.Web.UI.WebControls.LoginView> controle para associar um modelo de conteúdo de um conjunto de funções.  
+  
+ Para atribuir dinamicamente um modelo para o grupo de funções, defina o <xref:System.Web.UI.WebControls.RoleGroup.ContentTemplate%2A> propriedade para uma referência a um objeto que implementa o <xref:System.Web.UI.ITemplate> interface.  
+  
+ Você deve configurar o gerenciamento de função para usar o <xref:System.Web.UI.WebControls.RoleGroup> classe. Para obter mais informações, consulte [Noções básicas sobre gerenciamento de função](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir atribui um modelo personalizado para o <xref:System.Web.UI.WebControls.RoleGroup.ContentTemplate%2A> propriedade.  
+  
+ [!code-aspx-csharp[RoleGroupClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RoleGroupClass/CS/rolegroupclasscs.aspx#1)]
+ [!code-aspx-vb[RoleGroupClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RoleGroupClass/VB/rolegroupclassvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoleGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.RoleGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma nova instância do <xref:System.Web.UI.WebControls.RoleGroup> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsUser">
+      <MemberSignature Language="C#" Value="public bool ContainsUser (System.Security.Principal.IPrincipal user);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsUser(class System.Security.Principal.IPrincipal user) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroup.ContainsUser(System.Security.Principal.IPrincipal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="user" Type="System.Security.Principal.IPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="user">O nome de usuário para procurar no grupo de função.</param>
+        <summary>Indica se o usuário especificado é um membro de qualquer uma das funções do grupo de função.</summary>
+        <returns>
+          <see langword="true" />Se o usuário for membro de uma das funções associadas a esse grupo de função; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.RoleGroup.ContainsUser%2A> método retorna `true` se o usuário especificado é um membro de qualquer uma das funções associadas a esse grupo de função. Funções são pesquisadas na ordem em que eles estão listados no <xref:System.Web.UI.WebControls.RoleGroup.Roles%2A> propriedade e pesquisando será interrompido depois que a primeira correspondência for encontrada.  
+  
+ Esse método usa o <xref:System.Web.Security.Roles.IsUserInRole%2A> método para determinar se um usuário é um membro de uma função. Você deve configurar o gerenciamento de função para usar o <xref:System.Web.UI.WebControls.RoleGroup.ContainsUser%2A> método. Para obter mais informações, consulte [Noções básicas sobre gerenciamento de função](http://msdn.microsoft.com/library/a0d2f19d-a2a7-496d-88b6-30133f8ea3d6).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="User" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTemplate">
+      <MemberSignature Language="C#" Value="public System.Web.UI.ITemplate ContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ITemplate ContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RoleGroup.ContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.TemplateContainer(typeof(System.Web.UI.WebControls.LoginView))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo de conteúdo associado a esse grupo de função.</summary>
+        <value>O <see cref="T:System.Web.UI.ITemplate" /> associado a este grupo de funções. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.RoleGroup.ContentTemplate%2A> propriedade contém o conteúdo que é exibido aos usuários que são membros desse grupo de função.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um modelo de conteúdo dinamicamente.  
+  
+ [!code-aspx-csharp[RoleGroupClass#1](~/samples/snippets/csharp/VS_Snippets_WebNet/RoleGroupClass/CS/rolegroupclasscs.aspx#1)]
+ [!code-aspx-vb[RoleGroupClass#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RoleGroupClass/VB/rolegroupclassvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Roles">
+      <MemberSignature Language="C#" Value="public string[] Roles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Roles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RoleGroup.Roles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.StringArrayConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as funções associadas a esse grupo de função.</summary>
+        <value>Uma lista separada por vírgulas de funções associadas a esse grupo de função. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir atribui uma lista de funções para associar um grupo de funções. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.RoleGroup> classe.  
+  
+ [!code-csharp[RoleGroupClass#3](~/samples/snippets/csharp/VS_Snippets_WebNet/RoleGroupClass/CS/rolegroupclasscs.aspx#3)]
+ [!code-vb[RoleGroupClass#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/RoleGroupClass/VB/rolegroupclassvb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RoleGroup.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista separada por vírgulas das funções associadas a esse grupo de função.</summary>
+        <returns>Uma lista separada por vírgulas das funções associadas a esse grupo de função.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.RoleGroup.ToString%2A> método retorna o conteúdo do <xref:System.Web.UI.WebControls.RoleGroup.Roles%2A> a propriedade como uma lista separada por vírgulas de funções associadas ao grupo de função.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

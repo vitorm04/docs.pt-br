@@ -1,0 +1,186 @@
+<Type Name="ImplicitResourceKey" FullName="System.Web.Compilation.ImplicitResourceKey">
+  <TypeSignature Language="C#" Value="public sealed class ImplicitResourceKey" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ImplicitResourceKey extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ImplicitResourceKey" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém campos que identificam uma chave de recurso implícito.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.ImplicitResourceKey> classe contém campos que identificam uma chave de recurso implícito.  
+  
+ Um recurso implícito é atribuído a um controle no seguinte formato:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+    text="Welcome"   
+      ie:text="Welcome Internet Explorer User"    
+    forecolor="blue"/>    
+```  
+  
+ Durante a análise da página, um recurso implícito é convertido em chaves explícitas no formato [*filtro*:]*prefixo*.* property*[.* subpropriedade*]. Quaisquer valores de recursos com o prefixo especificado (no exemplo anterior, um prefixo de `Welcome`) são atribuídos às propriedades de controle correspondente. Por exemplo, suponha que existem valores no código de origem ou de arquivo de recursos para as seguintes chaves:  
+  
+ `Welcome.Text`  
+  
+ `Ie:Welcome.Text`  
+  
+ `Welcome.Forecolor`  
+  
+ Esses valores são atribuídos às suas propriedades de controle do respectivos.  
+  
+ Chaves de recurso implícita podem fazer referência apenas a recursos locais.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImplicitResourceKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ImplicitResourceKey.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Compilation.ImplicitResourceKey" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImplicitResourceKey (string filter, string keyPrefix, string property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filter, string keyPrefix, string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ImplicitResourceKey.#ctor(System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="keyPrefix" Type="System.String" />
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filter">O valor do filtro de uma chave de recurso implícito.</param>
+        <param name="keyPrefix">O prefixo para identificar um grupo de propriedades.</param>
+        <param name="property">Uma propriedade e subpropriedade, se fornecido, para uma chave de recurso implícito.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Compilation.ImplicitResourceKey" /> classe com os valores especificados para o <see cref="P:System.Web.Compilation.ImplicitResourceKey.Filter" />, <see cref="P:System.Web.Compilation.ImplicitResourceKey.KeyPrefix" /> e <see cref="P:System.Web.Compilation.ImplicitResourceKey.Property" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public string Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ImplicitResourceKey.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do filtro de uma chave de recurso implícito.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor do filtro para a expressão implícita de recursos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.ImplicitResourceKey.Filter%2A> propriedade se refere ao valor antes de dois-pontos (:) em uma expressão. Por exemplo, suponha que você tinha um recurso implícito no seguinte formato:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+        text="Welcome"   
+        ie:text="Welcome Internet Explorer User"    
+        forecolor="blue"/>    
+```  
+  
+ Este recurso contém três chaves que potencialmente valores de recursos para recuperar do código de origem ou de arquivo de recursos localizados. Uma dessas chaves é `Ie:Welcome.Text`, no qual "Ie" é o <xref:System.Web.Compilation.ImplicitResourceKey.Filter%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyPrefix">
+      <MemberSignature Language="C#" Value="public string KeyPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ImplicitResourceKey.KeyPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o prefixo para identificar um grupo de propriedades.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o prefixo de uma expressão implícita de recursos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.ImplicitResourceKey.KeyPrefix%2A> propriedade agrupa um conjunto de propriedades que podem ser atribuídos a um controle. O <xref:System.Web.Compilation.ImplicitResourceKey.KeyPrefix%2A> propriedade se refere ao valor após dois-pontos (:) em uma expressão, se presente e antes do primeiro ponto (.). Por exemplo, suponha que você tinha um recurso implícito no seguinte formato:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+        text="Welcome"   
+        ie:text="Welcome Internet Explorer User"    
+        forecolor="blue"/>    
+```  
+  
+ Este recurso contém três chaves, `Welcome.Text`, `Ie:Welcome.Text`, e `Welcome.Forecolor`, que potencialmente localizar valores de recursos para recuperar do código de origem ou de arquivo de recursos. Cada chave tem `"Welcome"` como o <xref:System.Web.Compilation.ImplicitResourceKey.KeyPrefix%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public string Property { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Property" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ImplicitResourceKey.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma propriedade e subpropriedade, se fornecido, para uma chave de recurso implícito.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a propriedade e subpropriedade para uma expressão implícita de recursos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.ImplicitResourceKey.Property%2A> propriedade especifica a propriedade de controle a ser localizada. O <xref:System.Web.Compilation.ImplicitResourceKey.Property%2A> propriedade se refere ao valor após o primeiro ponto (.) em uma expressão. Por exemplo, suponha que você tinha um recurso implícito no seguinte formato:  
+  
+```  
+<asp:label runat="server" id="label1" meta:resourcekey="Welcome"  
+        text="Welcome"   
+        ie:text="Welcome Internet Explorer User"    
+        forecolor="blue"/>    
+```  
+  
+ Este recurso contém três chaves, `Welcome.Text`, `Ie:Welcome.Text`, e `Welcome.Forecolor`, que potencialmente localizar valores de recursos para recuperar do código de origem ou de arquivo de recursos. As chaves têm <xref:System.Web.Compilation.ImplicitResourceKey.Property%2A> valores de `"Text"`, `"Text"`, e `"Forecolor"`, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

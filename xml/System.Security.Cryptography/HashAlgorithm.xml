@@ -1,0 +1,981 @@
+<Type Name="HashAlgorithm" FullName="System.Security.Cryptography.HashAlgorithm">
+  <TypeSignature Language="C#" Value="public abstract class HashAlgorithm : System.Security.Cryptography.ICryptoTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HashAlgorithm extends System.Object implements class System.IDisposable, class System.Security.Cryptography.ICryptoTransform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.HashAlgorithm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Cryptography.ICryptoTransform</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base abstrata da qual todas as implementações de algoritmo de hash criptográficos devem derivar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Funções de hash são fundamentais para a criptografia moderna. Essas funções são mapeados cadeias de caracteres binárias de um tamanho arbitrário para pequenas cadeias de caracteres binárias de comprimento fixo, conhecido como valores de hash. Uma função de hash criptográfico tem a propriedade que é impraticável para encontrar duas entradas distintas que usam o hash para o mesmo valor. Funções de hash são usadas com assinaturas digitais e integridade dos dados.  
+  
+ O hash é usado como um valor exclusivo de tamanho fixo que representa uma grande quantidade de dados. Hashes de dois conjuntos de dados devem corresponder se também correspondam os dados correspondentes. Pequenas alterações aos dados resultar em grandes alterações imprevisíveis no hash.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo calcula o <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> hash para uma matriz. Este exemplo assume que há uma matriz de bytes predefinido `dataArray[]`. <xref:System.Security.Cryptography.SHA1CryptoServiceProvider>é uma classe derivada de <xref:System.Security.Cryptography.HashAlgorithm>.  
+  
+ [!code-cpp[Classic HashAlgorithm Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic HashAlgorithm Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic HashAlgorithm Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic HashAlgorithm Example/CS/source.cs#1)]
+ [!code-vb[Classic HashAlgorithm Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic HashAlgorithm Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda o <see cref="T:System.Security.Cryptography.HashAlgorithm" /> classe, você deve substituir os seguintes membros: <see cref="M:System.Security.Cryptography.HashAlgorithm.HashCore(System.Byte[],System.Int32,System.Int32)" /> e <see cref="M:System.Security.Cryptography.HashAlgorithm.HashFinal" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HashAlgorithm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância de uma classe abstrata. Código do aplicativo cria uma nova instância de uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanReuseTransform">
+      <MemberSignature Language="C#" Value="public virtual bool CanReuseTransform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanReuseTransform" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HashAlgorithm.CanReuseTransform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a transformação atual pode ser reutilizada.</summary>
+        <value>Sempre <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanTransformMultipleBlocks">
+      <MemberSignature Language="C#" Value="public virtual bool CanTransformMultipleBlocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanTransformMultipleBlocks" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HashAlgorithm.CanTransformMultipleBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se vários blocos podem ser transformados.</summary>
+        <value>
+          <see langword="true" />Se vários blocos podem ser transformados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela classe <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é uma chamada simple para o <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> método.  
+  
+ Chamando `Dispose` permite que os recursos usados pelo <xref:System.Security.Cryptography.HashAlgorithm> classe a ser realocada para outros fins. Para obter mais informações sobre `Dispose`, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeHash">
+      <MemberSignature Language="C#" Value="public byte[] ComputeHash (byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ComputeHash(unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A entrada para a qual calcular o código hash.</param>
+        <summary>Calcula o valor do hash da matriz de bytes especificada.</summary>
+        <returns>O código hash calculado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir calcula o <xref:System.Security.Cryptography.MD5> o valor de uma cadeia de caracteres de hash e retorna o hash como uma cadeia de caracteres de 32 caracteres, em formato hexadecimal.  A cadeia de caracteres de hash criada por esse exemplo de código é compatível com qualquer função de hash MD5 (em qualquer plataforma) que cria uma cadeia de caracteres de hash de 32 caracteres, em formato hexadecimal.  
+  
+ [!code-csharp[Security.Cryptography.MD5#1](~/samples/snippets/csharp/VS_Snippets_CLR/Security.Cryptography.MD5/cs/example.cs#1)]
+ [!code-vb[Security.Cryptography.MD5#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Security.Cryptography.MD5/vb/example.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto já foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeHash">
+      <MemberSignature Language="C#" Value="public byte[] ComputeHash (System.IO.Stream inputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ComputeHash(class System.IO.Stream inputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="inputStream">A entrada para a qual calcular o código hash.</param>
+        <summary>Calcula o valor do hash do objeto <see cref="T:System.IO.Stream" /> especificado.</summary>
+        <returns>O código hash calculado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir calcula o <xref:System.Security.Cryptography.RIPEMD160> hash para todos os arquivos em um diretório.  
+  
+ [!code-cpp[RIPEMD160#1](~/samples/snippets/cpp/VS_Snippets_CLR/RIPEMD160/CPP/ripemd160.cpp#1)]
+ [!code-csharp[RIPEMD160#1](~/samples/snippets/csharp/VS_Snippets_CLR/RIPEMD160/CS/ripemd160.cs#1)]
+ [!code-vb[RIPEMD160#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/RIPEMD160/vb/ripemd160.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto já foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeHash">
+      <MemberSignature Language="C#" Value="public byte[] ComputeHash (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ComputeHash(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.ComputeHash(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A entrada para a qual calcular o código hash.</param>
+        <param name="offset">O deslocamento para a matriz de bytes com base na qual os dados começarão a ser usados.</param>
+        <param name="count">O número de bytes na matriz para usar como dados.</param>
+        <summary>Calcula o valor de hash para a região especificada da matriz de bytes especificada.</summary>
+        <returns>O código hash calculado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="count" /> é um valor inválido.  
+  
+ -ou-  
+  
+ <paramref name="buffer" />comprimento é inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> está fora do intervalo. Esse parâmetro requer um número não negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto já foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.HashAlgorithm Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.HashAlgorithm Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância da implementação padrão de um algoritmo de hash.</summary>
+        <returns>Uma nova instância de <see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" />, a menos que as configurações padrão tenham sido alteradas usando o.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, essa sobrecarga usa o <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> implementação de um algoritmo de hash. Se você deseja especificar uma implementação diferente, use o <xref:System.Security.Cryptography.HashAlgorithm.Create%28System.String%29> sobrecarga, que permite que você especifique um nome de algoritmo, em vez disso. O sistema de configuração de criptografia define a implementação padrão de <xref:System.Security.Cryptography.HashAlgorithm>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.HashAlgorithm Create (string hashName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.Cryptography.HashAlgorithm Create(string hashName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.Create(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hashName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hashName">A implementação do algoritmo de hash a ser usada. A tabela a seguir mostra os valores válidos para o <c>hashName</c> parâmetro e os algoritmos que são mapeados para.  
+  
+ <list type="table"><listheader><term>Valor do parâmetro  
+  
+ </term><description>Implementa  
+  
+ </description></listheader><item><term>SHA  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>SHA1  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>System.Security.Cryptography.SHA1  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>System.Security.Cryptography.HashAlgorithm  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>MD5  
+  
+ </term><description><see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" /></description></item><item><term>System.Security.Cryptography.MD5  
+  
+ </term><description><see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" /></description></item><item><term>SHA256  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term>SHA-256  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term>System.Security.Cryptography.SHA256  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term>SHA384  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term>SHA-384  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term>System.Security.Cryptography.SHA384  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term>SHA512  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item><item><term>SHA-512  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item><item><term>System.Security.Cryptography.SHA512  
+  
+ </term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item></list></param>
+        <summary>Cria uma instância da implementação especificada de um algoritmo de hash.</summary>
+        <returns>Uma nova instância do algoritmo de hash especificado ou <see langword="null" /> se <paramref name="hashName" /> não for um algoritmo de hash válido.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Security.Cryptography.HashAlgorithm>. O `Dispose` método deixa o <xref:System.Security.Cryptography.HashAlgorithm> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Security.Cryptography.HashAlgorithm> para o coletor de lixo possa recuperar a memória que o <xref:System.Security.Cryptography.HashAlgorithm> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Security.Cryptography.HashAlgorithm>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Security.Cryptography.HashAlgorithm> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Security.Cryptography.HashAlgorithm" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método `Finalize`. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. `Finalize` invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Security.Cryptography.HashAlgorithm> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tenha cuidado em não para referenciar objetos que foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Hash">
+      <MemberSignature Language="C#" Value="public virtual byte[] Hash { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Hash" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HashAlgorithm.Hash" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do código hash computado.</summary>
+        <value>Obtém o valor atual do código hash computado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.HashAlgorithm.Hash%2A> propriedade é uma matriz de bytes; o <xref:System.Security.Cryptography.HashAlgorithm.HashSize%2A> propriedade é um valor que representam o bits. Portanto, o número de elementos em <xref:System.Security.Cryptography.HashAlgorithm.Hash%2A> é um oitavo o tamanho de <xref:System.Security.Cryptography.HashAlgorithm.HashSize%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicUnexpectedOperationException">
+          <see cref="F:System.Security.Cryptography.HashAlgorithm.HashValue" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto já foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HashCore">
+      <MemberSignature Language="C#" Value="protected abstract void HashCore (byte[] array, int ibStart, int cbSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void HashCore(unsigned int8[] array, int32 ibStart, int32 cbSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.HashCore(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Byte[]" />
+        <Parameter Name="ibStart" Type="System.Int32" />
+        <Parameter Name="cbSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A entrada para a qual calcular o código hash.</param>
+        <param name="ibStart">O deslocamento para a matriz de bytes com base na qual os dados começarão a ser usados.</param>
+        <param name="cbSize">O número de bytes na matriz de bytes a ser usado como dados.</param>
+        <summary>Quando substituído em uma classe derivada, roteia os dados gravados no objeto para o algoritmo de hash para computar o hash.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não é chamado pelo código do aplicativo.  
+  
+ Esse método abstrato executa o cálculo de hash. Cada gravação no objeto de fluxo de criptografia transmite os dados este método. Para cada bloco de dados, este método atualizará o estado do objeto hash para que um valor de hash correto é retornado no final do fluxo de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashFinal">
+      <MemberSignature Language="C#" Value="protected abstract byte[] HashFinal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] HashFinal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.HashFinal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, finaliza o cálculo de hash depois que os últimos dados são processados pelo objeto de fluxo criptográfico.</summary>
+        <returns>O código hash calculado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método finaliza qualquer computação parcial e retorna o valor de hash correto para o fluxo de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashSize">
+      <MemberSignature Language="C#" Value="public virtual int HashSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 HashSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HashAlgorithm.HashSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho, em bits, do código hash computado.</summary>
+        <value>O tamanho, em bits, o código hash computado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashSizeValue">
+      <MemberSignature Language="C#" Value="protected int HashSizeValue;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 HashSizeValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.HashAlgorithm.HashSizeValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o tamanho, em bits, do código hash calculado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O algoritmo de hash Especifica o tamanho do código de hash. Por exemplo, <xref:System.Security.Cryptography.SHA1> usa um tamanho de hash de 160 bits.  
+  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.HashAlgorithm.HashSize%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashValue">
+      <MemberSignature Language="C#" Value="protected byte[] HashValue;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly unsigned int8[] HashValue" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.HashAlgorithm.HashValue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o valor do código hash computado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é acessado por meio de <xref:System.Security.Cryptography.HashAlgorithm.Hash%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public abstract void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma implementação da classe <see cref="T:System.Security.Cryptography.HashAlgorithm" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputBlockSize">
+      <MemberSignature Language="C#" Value="public virtual int InputBlockSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InputBlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HashAlgorithm.InputBlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tamanho do bloco de entrada.</summary>
+        <value>O tamanho do bloco de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que substituída, essa propriedade retorna o valor 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputBlockSize">
+      <MemberSignature Language="C#" Value="public virtual int OutputBlockSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OutputBlockSize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.HashAlgorithm.OutputBlockSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tamanho do bloco de saída.</summary>
+        <value>O tamanho do bloco de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que substituída, essa propriedade retorna o valor 1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="protected int State;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 State" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.HashAlgorithm.State" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o estado do cálculo de hash.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é usado para impedir que usuários alterem a chave de um algoritmo de hash com chave durante uma operação de hash. Quando uma alteração de chave é legítima, o valor desse campo é zero antes e após uma operação de hash. Quando uma alteração de chave não for legítima, o valor desse campo é diferente de zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformBlock">
+      <MemberSignature Language="C#" Value="public int TransformBlock (byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 TransformBlock(unsigned int8[] inputBuffer, int32 inputOffset, int32 inputCount, unsigned int8[] outputBuffer, int32 outputOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputBuffer" Type="System.Byte[]" />
+        <Parameter Name="inputOffset" Type="System.Int32" />
+        <Parameter Name="inputCount" Type="System.Int32" />
+        <Parameter Name="outputBuffer" Type="System.Byte[]" />
+        <Parameter Name="outputOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="inputBuffer">A entrada para a qual calcular o código hash.</param>
+        <param name="inputOffset">O deslocamento para a matriz de bytes de entrada da qual começar a usar os dados.</param>
+        <param name="inputCount">O número de bytes na matriz de bytes de entrada para usar como dados.</param>
+        <param name="outputBuffer">Uma cópia da parte da matriz de entrada usado para calcular o código hash.</param>
+        <param name="outputOffset">O deslocamento para a matriz de bytes de saída no qual iniciar a gravação de dados.</param>
+        <summary>Calcula o valor de hash para a região especificada da matriz de bytes de entrada e copia a região especificada da matriz de bytes de entrada para a região especificada da matriz de bytes de saída.</summary>
+        <returns>O número de bytes gravados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Security.Cryptography.HashAlgorithm.TransformBlock%2A> método antes de chamar o <xref:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock%2A> método. Você deve chamar os dois métodos antes de recuperar o valor de hash final.  
+  
+ Para recuperar o valor de hash final depois de chamar o <xref:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock%2A> método, obter a matriz de bytes contida o <xref:System.Security.Cryptography.HashAlgorithm.Hash%2A> propriedade.  
+  
+ Chamando o <xref:System.Security.Cryptography.HashAlgorithm.TransformBlock%2A> método com matrizes de saída e entrada diferente resulta em um <xref:System.IO.IOException>.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplos de uso de <xref:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock%2A> método com o <xref:System.Security.Cryptography.HashAlgorithm.TransformBlock%2A> método para uma cadeia de caracteres de hash.  
+  
+ [!code-csharp[Cryptography.HashAlgorithm.TransformFinalBlock#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.HashAlgorithm.TransformFinalBlock/CS/sample.cs#1)]
+ [!code-vb[Cryptography.HashAlgorithm.TransformFinalBlock#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.HashAlgorithm.TransformFinalBlock/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputCount" />usa um valor inválido.  
+  
+ -ou-  
+  
+ <paramref name="inputBuffer" />tem um comprimento inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputBuffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="inputOffset" /> está fora do intervalo. Esse parâmetro requer um número não negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto já foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFinalBlock">
+      <MemberSignature Language="C#" Value="public byte[] TransformFinalBlock (byte[] inputBuffer, int inputOffset, int inputCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] TransformFinalBlock(unsigned int8[] inputBuffer, int32 inputOffset, int32 inputCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputBuffer" Type="System.Byte[]" />
+        <Parameter Name="inputOffset" Type="System.Int32" />
+        <Parameter Name="inputCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="inputBuffer">A entrada para a qual calcular o código hash.</param>
+        <param name="inputOffset">O deslocamento para a matriz de bytes com base na qual os dados começarão a ser usados.</param>
+        <param name="inputCount">O número de bytes na matriz de bytes a ser usado como dados.</param>
+        <summary>Calcula o valor de hash para a região especificada da matriz de bytes especificada.</summary>
+        <returns>Uma matriz que é uma cópia da parte da entrada de hash.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock%2A> método depois de chamar o <xref:System.Security.Cryptography.HashAlgorithm.TransformBlock%2A> método, mas antes de recuperar o valor de hash final.  
+  
+ Observe que o valor de retorno deste método não é o valor de hash, mas apenas uma cópia da parte de hash dos dados de entrada.  Para recuperar o último valor com hash depois de chamar o <xref:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock%2A> método, get a matriz de bytes contida no <xref:System.Security.Cryptography.HashAlgorithm.Hash%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplos de uso de <xref:System.Security.Cryptography.HashAlgorithm.TransformFinalBlock%2A> método com o <xref:System.Security.Cryptography.HashAlgorithm.TransformBlock%2A> método para uma cadeia de caracteres de hash.  
+  
+ [!code-csharp[Cryptography.HashAlgorithm.TransformFinalBlock#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.HashAlgorithm.TransformFinalBlock/CS/sample.cs#1)]
+ [!code-vb[Cryptography.HashAlgorithm.TransformFinalBlock#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.HashAlgorithm.TransformFinalBlock/vb/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputCount" />usa um valor inválido.  
+  
+ -ou-  
+  
+ <paramref name="inputBuffer" />tem um comprimento de deslocamento inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputBuffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="inputOffset" /> está fora do intervalo. Esse parâmetro requer um número não negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto já foi descartado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

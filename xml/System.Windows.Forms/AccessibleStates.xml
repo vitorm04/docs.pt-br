@@ -1,0 +1,592 @@
+<Type Name="AccessibleStates" FullName="System.Windows.Forms.AccessibleStates">
+  <TypeSignature Language="C#" Value="public enum AccessibleStates" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AccessibleStates extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AccessibleStates" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica valores que representam os estados possíveis para um objeto acessível.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um objeto acessível pode ser associado um ou mais desses estados.  
+  
+ Para obter mais informações sobre o aplicativo de acessibilidade, consulte "Microsoft Active Accessibility" na biblioteca do Microsoft Developer Network (MSDN) em http://msdn.microsoft.com/library.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação de um gráfico com suporte a acessibilidade de controle, usando o <xref:System.Windows.Forms.AccessibleObject> e <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes para expor informações acessíveis. O controle plota duas curvas junto com uma legenda. O `ChartControlAccessibleObject` classe que deriva de `ControlAccessibleObject`, é usado no <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método para fornecer informações acessíveis personalizadas para o controle de gráfico. Porque a legenda do gráfico não é um controle real com base em <xref:System.Windows.Forms.Control>, mas em vez disso, é desenhado pelo controle do gráfico, ele não contém todas as informações internas acessíveis. Por isso, o `ChartControlAccessibleObject` substituições de classe a <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> método para retornar o `CurveLegendAccessibleObject` que representa informações acessíveis para cada parte da legenda. Quando um aplicativo acessível ciente usa esse controle, o controle pode fornecer as informações necessárias de acessíveis.  
+  
+ Esse trecho de código demonstra como usar o <xref:System.Windows.Forms.AccessibleStates> enumeração com o <xref:System.Windows.Forms.AccessibleObject.State%2A> propriedade. Consulte o <xref:System.Windows.Forms.AccessibleObject> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#4)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#4)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlertHigh">
+      <MemberSignature Language="C#" Value="AlertHigh" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates AlertHigh = int32(268435456)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.AlertHigh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As informações importantes que devem ser concedidas ao usuário imediatamente. Por exemplo, um indicador de nível de bateria atingir um nível baixo crítico seria transição para esse estado, nesse caso, um utilitário de acesso oculta seria anunciar essas informações imediatamente para o usuário, e um programa de ampliação de tela seria rolar a tela para que o indicador de bateria está no modo de exibição. Esse estado também é adequado para qualquer operação que deve ser concluída antes que o usuário pode continuar ou o prompt.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AlertLow">
+      <MemberSignature Language="C#" Value="AlertLow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates AlertLow = int32(67108864)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.AlertLow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As informações de baixa prioridade que podem não ser importantes para o usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AlertMedium">
+      <MemberSignature Language="C#" Value="AlertMedium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates AlertMedium = int32(134217728)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.AlertMedium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As informações importantes que não precisam ser concedidas ao usuário imediatamente. Por exemplo, quando um indicador de nível de bateria é iniciado alcançar um nível baixo, ele pode gerar um alerta de nível médio. Cegos acesso utilitários podem em seguida, gerar um som para informar o usuário que informações importantes estão disponíveis, sem realmente interromper o trabalho do usuário. Os usuários podem, em seguida, consultar as informações do alerta sempre que desejarem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Animated">
+      <MemberSignature Language="C#" Value="Animated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Animated = int32(16384)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Animated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto que constantemente ou rapidamente altera a aparência. Elementos gráficos que são animados ocasionalmente, mas não sempre, devem ser definidos como <see cref="F:System.Windows.Forms.AccessibleRole.Graphic" /> <see langword="OR" /> <see langword="Animated" />. Esse estado não deve ser usado para indicar que o local do objeto está sendo alterado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Busy">
+      <MemberSignature Language="C#" Value="Busy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Busy = int32(2048)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Busy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um controle que não pode aceitar a entrada em sua condição atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Checked">
+      <MemberSignature Language="C#" Value="Checked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Checked = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Checked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto com uma caixa de seleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapsed">
+      <MemberSignature Language="C#" Value="Collapsed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Collapsed = int32(1024)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Collapsed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os filhos ocultados do objeto que são itens em uma estrutura de árvore da estrutura de tópicos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Default = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O item de menu ou botão padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="Expanded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Expanded = int32(512)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Expanded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os filhos exibidos do objeto que são itens em uma estrutura de árvore da estrutura de tópicos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtSelectable">
+      <MemberSignature Language="C#" Value="ExtSelectable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates ExtSelectable = int32(33554432)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.ExtSelectable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A seleção alterada tal que todos os objetos entre a âncora de seleção, que é o objeto com o foco do teclado e esse objeto levar no estado de seleção do objeto de âncora. Se o objeto de âncora não for selecionado, os objetos serão removidos da seleção. Se o objeto de âncora for selecionado, a seleção é estendida para incluir este objeto e todos os objetos entre. Você pode definir o estado de seleção, combinar isso com <see cref="F:System.Windows.Forms.AccessibleSelection.AddSelection" /> ou <see cref="F:System.Windows.Forms.AccessibleSelection.RemoveSelection" />. Esse estado não altera o foco ou a âncora da seleção, a menos que ele é combinado com <see cref="F:System.Windows.Forms.AccessibleSelection.TakeFocus" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Floating">
+      <MemberSignature Language="C#" Value="Floating" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Floating = int32(4096)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Floating" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto que não é fixo para o limite do seu objeto pai e que não move automaticamente junto com o pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Focusable">
+      <MemberSignature Language="C#" Value="Focusable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Focusable = int32(1048576)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Focusable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto na janela ativa que pode receber o foco do teclado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Focused">
+      <MemberSignature Language="C#" Value="Focused" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Focused = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Focused" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto com o foco do teclado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPopup">
+      <MemberSignature Language="C#" Value="HasPopup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates HasPopup = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.HasPopup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto exibe um menu pop-up ou janela quando invocado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HotTracked">
+      <MemberSignature Language="C#" Value="HotTracked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates HotTracked = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.HotTracked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto hot controladas com o mouse, o que significa que sua aparência é realçada para indicar que o ponteiro do mouse está localizado por ele.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Indeterminate = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma caixa de seleção de três estados ou botão de barra de ferramentas cujo estado é indeterminado. A caixa de seleção é marcada, nem desmarcada e está em estado de terceiro ou misto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invisible">
+      <MemberSignature Language="C#" Value="Invisible" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Invisible = int32(32768)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Invisible" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto sem uma interface de usuário visível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Linked">
+      <MemberSignature Language="C#" Value="Linked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Linked = int32(4194304)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Linked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto vinculado não tiver sido selecionado anteriormente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Marqueed">
+      <MemberSignature Language="C#" Value="Marqueed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Marqueed = int32(8192)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Marqueed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto com rolando ou movendo texto ou elementos gráficos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mixed">
+      <MemberSignature Language="C#" Value="Mixed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Mixed = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Mixed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma caixa de seleção de três estados ou botão de barra de ferramentas cujo estado é indeterminado. A caixa de seleção é marcada, nem desmarcada e está em estado de terceiro ou misto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Moveable">
+      <MemberSignature Language="C#" Value="Moveable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Moveable = int32(262144)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Moveable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto podem ser movido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiSelectable">
+      <MemberSignature Language="C#" Value="MultiSelectable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates MultiSelectable = int32(16777216)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.MultiSelectable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto que aceita vários itens selecionados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum estado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Offscreen">
+      <MemberSignature Language="C#" Value="Offscreen" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Offscreen = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Offscreen" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não na tela representação. Um objeto de som ou alerta teria nesse estado, ou uma janela oculta nunca fica visível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="Pressed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Pressed = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Pressed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto pressionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Protected">
+      <MemberSignature Language="C#" Value="Protected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Protected = int32(536870912)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Protected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um controle de edição protegido por senha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="ReadOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates ReadOnly = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.ReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto somente leitura.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selectable">
+      <MemberSignature Language="C#" Value="Selectable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Selectable = int32(2097152)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Selectable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto que pode aceitar a seleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="Selected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Selected = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Selected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto selecionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfVoicing">
+      <MemberSignature Language="C#" Value="SelfVoicing" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates SelfVoicing = int32(524288)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.SelfVoicing" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto ou um filho pode usar texto em fala (TTS) para descrever a mesmo. Um auxílio de acessibilidade de fala deve não anunciar informações quando um objeto com esse estado tem o foco, porque o objeto anuncia automaticamente informações sobre si mesmo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sizeable">
+      <MemberSignature Language="C#" Value="Sizeable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Sizeable = int32(131072)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Sizeable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto dimensionável.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Traversed">
+      <MemberSignature Language="C#" Value="Traversed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Traversed = int32(8388608)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Traversed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto vinculado que foi selecionado anteriormente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unavailable">
+      <MemberSignature Language="C#" Value="Unavailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Unavailable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Unavailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto não está disponível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Valid">
+      <MemberSignature Language="C#" Value="Valid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleStates Valid = int32(1073741823)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleStates.Valid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This enumeration value has been deprecated. There is no replacement. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleStates</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um objeto válido. Essa propriedade é preterida no [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)].</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

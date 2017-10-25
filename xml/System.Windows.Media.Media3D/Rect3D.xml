@@ -1,0 +1,1146 @@
+<Type Name="Rect3D" FullName="System.Windows.Media.Media3D.Rect3D">
+  <TypeSignature Language="C#" Value="public struct Rect3D : IFormattable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit Rect3D extends System.ValueType implements class System.IFormattable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Media3D.Rect3D" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IFormattable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Media.Media3D.Rect3DConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Media.Media3D.Converters.Rect3DValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um retângulo 3D: por exemplo, um cubo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>é definido como um local (<xref:System.Windows.Media.Media3D.Point3D>) e uma estrutura de tamanho (<xref:System.Windows.Media.Media3D.Size3D>). Porque o <xref:System.Windows.Media.Media3D.Rect3D.X%2A>, <xref:System.Windows.Media.Media3D.Rect3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Rect3D.Z%2A> valores especificados para o tamanho magnitudes e não as coordenadas, eles não podem ser negativos, exceto no caso de um retângulo vazio. Um retângulo vazio é especificado pelo <xref:System.Windows.Media.Media3D.Rect3D.Empty%2A>, que tem <xref:System.Windows.Media.Media3D.Rect3D.X%2A>, <xref:System.Windows.Media.Media3D.Rect3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Rect3D.Z%2A> valores de - infinito.  
+  
+ Essa estrutura é normalmente usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_Rect3D"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect3D (System.Windows.Media.Media3D.Point3D location, System.Windows.Media.Media3D.Size3D size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Media.Media3D.Point3D location, valuetype System.Windows.Media.Media3D.Size3D size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.#ctor(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Size3D)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="location" Type="System.Windows.Media.Media3D.Point3D" />
+        <Parameter Name="size" Type="System.Windows.Media.Media3D.Size3D" />
+      </Parameters>
+      <Docs>
+        <param name="location">Local do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <param name="size">Tamanho do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <summary>Inicializa uma nova instância de uma estrutura <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rect3D (double x, double y, double z, double sizeX, double sizeY, double sizeZ);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 x, float64 y, float64 z, float64 sizeX, float64 sizeY, float64 sizeZ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="z" Type="System.Double" />
+        <Parameter Name="sizeX" Type="System.Double" />
+        <Parameter Name="sizeY" Type="System.Double" />
+        <Parameter Name="sizeZ" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Coordenadas do eixo x do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <param name="y">A coordenada y do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <param name="z">A coordenada z do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <param name="sizeX">Tamanho do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão de X.</param>
+        <param name="sizeY">Tamanho do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão de Y.</param>
+        <param name="sizeZ">Tamanho do novo <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão Z.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Media.Media3D.Point3D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Windows.Media.Media3D.Point3D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Contains(System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">Ponto a ser testada.</param>
+        <summary>Obtém um valor que indica se um especificado <see cref="T:System.Windows.Media.Media3D.Point3D" /> está dentro do <see cref="T:System.Windows.Media.Media3D.Rect3D" />, incluindo bordas.</summary>
+        <returns>True se o ponto especificado ou um retângulo está dentro do <see cref="T:System.Windows.Media.Media3D.Rect3D" />, incluindo suas bordas; FALSO caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rect3D normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Media.Media3D.Rect3D rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(valuetype System.Windows.Media.Media3D.Rect3D rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Contains(System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect">
+          <see cref="T:System.Windows.Media.Media3D.Rect3D" />a ser testada.</param>
+        <summary>Obtém um valor que indica se um especificado <see cref="T:System.Windows.Media.Media3D.Point3D" /> está dentro do <see cref="T:System.Windows.Media.Media3D.Rect3D" />, incluindo bordas.</summary>
+        <returns>True se o ponto especificado ou um retângulo está dentro do <see cref="T:System.Windows.Media.Media3D.Rect3D" />, incluindo suas bordas; FALSO caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (double x, double y, double z);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(float64 x, float64 y, float64 z) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Contains(System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="z" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="x">Coordenada do eixo x do <see cref="T:System.Windows.Media.Media3D.Point3D" /> a ser testada.</param>
+        <param name="y">A coordenada y do <see cref="T:System.Windows.Media.Media3D.Point3D" /> a ser testada.</param>
+        <param name="z">Coordenada Z do <see cref="T:System.Windows.Media.Media3D.Point3D" /> a ser testada.</param>
+        <summary>Obtém um valor que indica se um especificado <see cref="T:System.Windows.Media.Media3D.Point3D" /> está dentro do <see cref="T:System.Windows.Media.Media3D.Rect3D" />, incluindo bordas.</summary>
+        <returns>
+          <see langword="true" />Se o ponto especificado ou um retângulo está dentro do <see cref="T:System.Windows.Media.Media3D.Rect3D" />, incluindo suas bordas; <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Rect3D Empty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.Media.Media3D.Rect3D Empty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.Empty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um vazio <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna vazio <xref:System.Windows.Media.Media3D.Rect3D> cujo X, Y e Z valores são infinito positivo e cujos valores de tamanho são infinito negativo. Essa é a única situação na qual tamanho valores podem ser negativos.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Equals">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Compara duas instâncias de <see cref="T:System.Windows.Media.Media3D.Rect3D" /> quanto à igualdade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que os valores do tipo <xref:System.Double> pode adquirir um erro quando operado; uma comparação exata entre dois valores logicamente igual pode falhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Windows.Media.Media3D.Rect3D" /> quanto à igualdade.</summary>
+        <returns>
+          <see langword="true" />Se as duas <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instâncias são exatamente iguais; <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que os valores do tipo <xref:System.Double> pode adquirir um erro quando operado; uma comparação exata entre dois logicamente igual <xref:System.Windows.Media.Media3D.Rect3D> valores podem falhar.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Media.Media3D.Rect3D value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Media.Media3D.Rect3D value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Equals(System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instância a ser comparado com a instância atual.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Windows.Media.Media3D.Rect3D" /> quanto à igualdade.</summary>
+        <returns>
+          <see langword="true" />Se as duas <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instâncias são exatamente iguais; <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que os valores do tipo <xref:System.Double> pode adquirir um erro quando operado; uma comparação exata entre dois logicamente igual <xref:System.Windows.Media.Media3D.Rect3D> valores podem falhar.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public static bool Equals (System.Windows.Media.Media3D.Rect3D rect1, System.Windows.Media.Media3D.Rect3D rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool Equals(valuetype System.Windows.Media.Media3D.Rect3D rect1, valuetype System.Windows.Media.Media3D.Rect3D rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Equals(System.Windows.Media.Media3D.Rect3D,System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="rect2" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Primeiro <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para comparar.</param>
+        <param name="rect2">Segundo <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para comparar.</param>
+        <summary>Compara duas instâncias de <see cref="T:System.Windows.Media.Media3D.Rect3D" /> quanto à igualdade.</summary>
+        <returns>
+          <see langword="true" />Se as duas <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instâncias são exatamente iguais; <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que os valores do tipo <xref:System.Double> pode adquirir um erro quando operado; uma comparação exata entre dois logicamente igual <xref:System.Windows.Media.Media3D.Rect3D> valores podem falhar.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente usado para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o<see cref="T:System.Windows.Media.Media3D.Rect3D" /></summary>
+        <returns>Um código hash para este <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public void Intersect (System.Windows.Media.Media3D.Rect3D rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Intersect(valuetype System.Windows.Media.Media3D.Rect3D rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Intersect(System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Windows.Media.Media3D.Rect3D" /> a interseção com a atual <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <summary>Localiza a interseção do atual <see cref="T:System.Windows.Media.Media3D.Rect3D" /> e especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" />e armazena o resultado atual do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor de um retângulo especificado está vazio, este método retorna um valor vazio.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Rect3D Intersect (System.Windows.Media.Media3D.Rect3D rect1, System.Windows.Media.Media3D.Rect3D rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Rect3D Intersect(valuetype System.Windows.Media.Media3D.Rect3D rect1, valuetype System.Windows.Media.Media3D.Rect3D rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Intersect(System.Windows.Media.Media3D.Rect3D,System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="rect2" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Primeiro <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <param name="rect2">Segundo <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <summary>Retorna a interseção de especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" /> valores.</summary>
+        <returns>Resultado da interseção de <paramref name="rect1" /> e <paramref name="rect2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor de um retângulo especificado está vazio, este método retorna um valor vazio.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntersectsWith">
+      <MemberSignature Language="C#" Value="public bool IntersectsWith (System.Windows.Media.Media3D.Rect3D rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IntersectsWith(valuetype System.Windows.Media.Media3D.Rect3D rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.IntersectsWith(System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Retângulo para avaliar.</param>
+        <summary>Retorna um valor que indica se o especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" /> faz interseção com isso <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" /> faz interseção com isso <see cref="T:System.Windows.Media.Media3D.Rect3D" />; <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma borda de cada <xref:System.Windows.Media.Media3D.Rect3D> é Coincidentemente, é considerada uma interseção.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este <see cref="T:System.Windows.Media.Media3D.Rect3D" /> é o <see cref="P:System.Windows.Media.Media3D.Rect3D.Empty" /> <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <value>
+          <see langword="true" />Se este <see cref="T:System.Windows.Media.Media3D.Rect3D" /> é um retângulo vazio; <see langword="false" /> caso contrário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Media.Media3D.Rect3D.Size%2A> for zero, isso <xref:System.Windows.Media.Media3D.Rect3D> ainda contém um zero ou 1-dimensional de conjunto de pontos de; portanto, essa propriedade não deve ser usada para verificar se há zero área.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Point3D Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Point3D Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Point3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Media.Media3D.Point3D" /> que representa a origem do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Point3D" />que representa a origem do <see cref="T:System.Windows.Media.Media3D.Rect3D" />, normalmente o canto esquerdo inferior voltar.  O valor padrão é (0, 0,0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que, no sistema de coordenadas 3D, o eixo Y positivo aponta para cima (supondo que a câmera <xref:System.Windows.Media.Media3D.ProjectionCamera.UpDirection%2A> propriedade for positiva).  Portanto, essa propriedade normalmente representa o canto esquerdo inferior back do <xref:System.Windows.Media.Media3D.Rect3D> na cena.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_Location"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (System.Windows.Media.Media3D.Vector3D offsetVector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(valuetype System.Windows.Media.Media3D.Vector3D offsetVector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Offset(System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetVector" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="offsetVector">
+          <see cref="T:System.Windows.Media.Media3D.Vector3D" />que especifica a conversão de deslocamento.</param>
+        <summary>Define a deslocamento tradução do <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para o valor fornecido, especificado como um <see cref="T:System.Windows.Media.Media3D.Vector3D" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ Observe que a chamada a <xref:System.Windows.Media.Media3D.Rect3D.Offset%2A> método só terá efeito se você pode alterar o <xref:System.Windows.Media.Media3D.Rect3D.X%2A>, <xref:System.Windows.Media.Media3D.Rect3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Rect3D.Z%2A> propriedades diretamente. Porque <xref:System.Windows.Media.Media3D.Rect3D> é um tipo de valor, se você referenciar um <xref:System.Windows.Media.Media3D.Rect3D> objeto usando uma propriedade ou indexador, você obtém uma cópia do objeto, não uma referência ao objeto. Se você tentar alterar <xref:System.Windows.Media.Media3D.Rect3D.X%2A>, <xref:System.Windows.Media.Media3D.Rect3D.Y%2A>, ou <xref:System.Windows.Media.Media3D.Rect3D.Z%2A> em uma referência de propriedade ou indexador, ocorre um erro do compilador. Da mesma forma, chamar <xref:System.Windows.Media.Media3D.Rect3D.Offset%2A> na propriedade ou indexador não alterará o objeto subjacente.  Se você quiser alterar o valor de um <xref:System.Windows.Media.Media3D.Rect3D> que é referenciada como uma propriedade ou indexador, crie um novo <xref:System.Windows.Media.Media3D.Rect3D>, modificar seus campos e, em seguida, atribua o <xref:System.Windows.Media.Media3D.Rect3D> para a propriedade ou indexador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Rect3D Offset (System.Windows.Media.Media3D.Rect3D rect, System.Windows.Media.Media3D.Vector3D offsetVector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Rect3D Offset(valuetype System.Windows.Media.Media3D.Rect3D rect, valuetype System.Windows.Media.Media3D.Vector3D offsetVector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Offset(System.Windows.Media.Media3D.Rect3D,System.Windows.Media.Media3D.Vector3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="offsetVector" Type="System.Windows.Media.Media3D.Vector3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect">
+          <see cref="T:System.Windows.Media.Media3D.Rect3D" />para ser convertido.</param>
+        <param name="offsetVector">
+          <see cref="T:System.Windows.Media.Media3D.Vector3D" />que especifica a conversão de deslocamento.</param>
+        <summary>Obtém ou define um valor de deslocamento pelo qual o local de um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> é convertida.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> valor que representa o resultado do deslocamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public void Offset (double offsetX, double offsetY, double offsetZ);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Offset(float64 offsetX, float64 offsetY, float64 offsetZ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Offset(System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+        <Parameter Name="offsetZ" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="offsetX">Deslocamento ao longo do eixo X.</param>
+        <param name="offsetY">Deslocamento ao longo do eixo Y.</param>
+        <param name="offsetZ">Deslocamento ao longo do eixo Z.</param>
+        <summary>Obtém ou define um valor de deslocamento pelo qual o local de um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> é convertida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ Observe que a chamada a <xref:System.Windows.Media.Media3D.Rect3D.Offset%2A> método só terá efeito se você pode alterar o <xref:System.Windows.Media.Media3D.Rect3D.X%2A>, <xref:System.Windows.Media.Media3D.Rect3D.Y%2A>, e <xref:System.Windows.Media.Media3D.Rect3D.Z%2A> propriedades diretamente. Porque <xref:System.Windows.Media.Media3D.Rect3D> é um tipo de valor, se você referenciar um <xref:System.Windows.Media.Media3D.Rect3D> objeto usando uma propriedade ou indexador, você obtém uma cópia do objeto, não uma referência ao objeto. Se você tentar alterar <xref:System.Windows.Media.Media3D.Rect3D.X%2A>, <xref:System.Windows.Media.Media3D.Rect3D.Y%2A>, ou <xref:System.Windows.Media.Media3D.Rect3D.Z%2A> em uma referência de propriedade ou indexador, ocorre um erro do compilador. Da mesma forma, chamar <xref:System.Windows.Media.Media3D.Rect3D.Offset%2A> na propriedade ou indexador não alterará o objeto subjacente. Se você quiser alterar o valor de um <xref:System.Windows.Media.Media3D.Rect3D> que é referenciada como uma propriedade ou indexador, crie um novo <xref:System.Windows.Media.Media3D.Rect3D>, modificar seus campos e, em seguida, atribua o <xref:System.Windows.Media.Media3D.Rect3D> para a propriedade ou indexador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Rect3D Offset (System.Windows.Media.Media3D.Rect3D rect, double offsetX, double offsetY, double offsetZ);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Rect3D Offset(valuetype System.Windows.Media.Media3D.Rect3D rect, float64 offsetX, float64 offsetY, float64 offsetZ) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Offset(System.Windows.Media.Media3D.Rect3D,System.Double,System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="offsetX" Type="System.Double" />
+        <Parameter Name="offsetY" Type="System.Double" />
+        <Parameter Name="offsetZ" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Rect3D para ser convertido.</param>
+        <param name="offsetX">Deslocamento ao longo do eixo X.</param>
+        <param name="offsetY">Deslocamento ao longo do eixo Y.</param>
+        <param name="offsetZ">Deslocamento ao longo do eixo Z.</param>
+        <summary>Obtém ou define um valor de deslocamento pelo qual o local de um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> é convertida.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> valor que representa o resultado do deslocamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Media.Media3D.Rect3D rect1, System.Windows.Media.Media3D.Rect3D rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Media.Media3D.Rect3D rect1, valuetype System.Windows.Media.Media3D.Rect3D rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.op_Equality(System.Windows.Media.Media3D.Rect3D,System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="rect2" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Primeiro <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para avaliar.</param>
+        <param name="rect2">Segundo <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para avaliar.</param>
+        <summary>Compara dois <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instâncias para igualdade exata.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instâncias são exatamente iguais; <see langword="false" /> caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Media.Media3D.Rect3D rect1, System.Windows.Media.Media3D.Rect3D rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Media.Media3D.Rect3D rect1, valuetype System.Windows.Media.Media3D.Rect3D rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.op_Inequality(System.Windows.Media.Media3D.Rect3D,System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="rect2" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Primeiro <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para comparar.</param>
+        <param name="rect2">Segundo <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para comparar.</param>
+        <summary>Compara dois <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instâncias desigualdade exata.</summary>
+        <returns>True se os dois <see cref="T:System.Windows.Media.Media3D.Rect3D" /> instâncias forem diferentes, caso contrário, false.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que <xref:System.Double> valores podem adquirir um erro quando operado; uma comparação exata entre dois <xref:System.Windows.Media.Media3D.Rect3D> valores que são logicamente iguais podem falhar.  
+  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Rect3D Parse (string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Rect3D Parse(string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Parse(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">Cadeia de caracteres que representa um <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <summary>Converte uma representação de cadeia de caracteres de um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> em equivalente <see cref="T:System.Windows.Media.Media3D.Rect3D" /> estrutura.</summary>
+        <returns>Uma representação da cadeia de caracteres do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Media3D.Size3D Size { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Media3D.Size3D Size" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Size3D</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a área do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <value>
+          <see cref="T:System.Windows.Media.Media3D.Size3D" />que especifica a área do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_SizeX"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeX">
+      <MemberSignature Language="C#" Value="public double SizeX { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SizeX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.SizeX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão de X.</summary>
+        <value>Duplo que especifica o tamanho do <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão de X.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_SizeY"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeY">
+      <MemberSignature Language="C#" Value="public double SizeY { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SizeY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.SizeY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão de Y.</summary>
+        <value>Duplo que especifica o tamanho do <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão de Y.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_SizeZ"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeZ">
+      <MemberSignature Language="C#" Value="public double SizeZ { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 SizeZ" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.SizeZ" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do Rect3D na dimensão Z.</summary>
+        <value>Duplo que especifica o tamanho do <see cref="T:System.Windows.Media.Media3D.Rect3D" /> na dimensão Z.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Rect3D normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_Size3D"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IFormattable.ToString">
+      <MemberSignature Language="C#" Value="string IFormattable.ToString (string format, IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.IFormattable.ToString(string format, class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.System#IFormattable#ToString(System.String,System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="format">A cadeia de caracteres especificando o formato a ser usado.  
+  
+ -ou-  
+  
+ <see langword="null" />Para usar o formato padrão definido para o tipo do <see cref="T:System.IFormattable" /> implementação.</param>
+        <param name="provider">O <see langword="IFormatProvider" /> usado para formatar o valor.  
+  
+ -ou-  
+  
+ <see langword="null" />Para obter as informações de formato numérico da configuração de localidade atual do sistema operacional.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código. Para obter uma descrição desse membro, consulte <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+        <returns>Uma cadeia de caracteres que contém o valor da instância atual no formato especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma representação de cadeia de caracteres da Rect3D.</summary>
+        <returns>Uma representação da cadeia de caracteres do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public string ToString (IFormatProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToString(class System.IFormatProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.ToString(System.IFormatProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IFormatProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Informações de formatação de cultura específica.</param>
+        <summary>Cria uma representação de cadeia de caracteres da <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <returns>Uma representação da cadeia de caracteres do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Windows.Media.Media3D.Point3D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Windows.Media.Media3D.Point3D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Union(System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="point">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> cujo união com especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" /> a ser avaliada.</param>
+        <summary>Atualiza um especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para refletir a união de que <see cref="T:System.Windows.Media.Media3D.Rect3D" /> e um especificado <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public void Union (System.Windows.Media.Media3D.Rect3D rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Union(valuetype System.Windows.Media.Media3D.Rect3D rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Union(System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Windows.Media.Media3D.Rect3D" /> cujo união com a atual <see cref="T:System.Windows.Media.Media3D.Rect3D" /> a ser avaliada.</param>
+        <summary>Atualiza um especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" /> para refletir a união de que <see cref="T:System.Windows.Media.Media3D.Rect3D" /> e um segundo especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Rect3D Union (System.Windows.Media.Media3D.Rect3D rect, System.Windows.Media.Media3D.Point3D point);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Rect3D Union(valuetype System.Windows.Media.Media3D.Rect3D rect, valuetype System.Windows.Media.Media3D.Point3D point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Union(System.Windows.Media.Media3D.Rect3D,System.Windows.Media.Media3D.Point3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="point" Type="System.Windows.Media.Media3D.Point3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect">O <see cref="T:System.Windows.Media.Media3D.Rect3D" /> cujo união com a atual <see cref="T:System.Windows.Media.Media3D.Rect3D" /> a ser avaliada.</param>
+        <param name="point">O <see cref="T:System.Windows.Media.Media3D.Point3D" /> cujo união com especificado <see cref="T:System.Windows.Media.Media3D.Rect3D" /> a ser avaliada.</param>
+        <summary>Retorna um novo <see cref="T:System.Windows.Media.Media3D.Rect3D" /> que representa a união de uma <see cref="T:System.Windows.Media.Media3D.Rect3D" />e um especificado <see cref="T:System.Windows.Media.Media3D.Point3D" />.</summary>
+        <returns>Resultado da união de <paramref name="rect" /> e <paramref name="point" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public static System.Windows.Media.Media3D.Rect3D Union (System.Windows.Media.Media3D.Rect3D rect1, System.Windows.Media.Media3D.Rect3D rect2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Windows.Media.Media3D.Rect3D Union(valuetype System.Windows.Media.Media3D.Rect3D rect1, valuetype System.Windows.Media.Media3D.Rect3D rect2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Media3D.Rect3D.Union(System.Windows.Media.Media3D.Rect3D,System.Windows.Media.Media3D.Rect3D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Media3D.Rect3D</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect1" Type="System.Windows.Media.Media3D.Rect3D" />
+        <Parameter Name="rect2" Type="System.Windows.Media.Media3D.Rect3D" />
+      </Parameters>
+      <Docs>
+        <param name="rect1">Primeiro <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <param name="rect2">Segundo <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</param>
+        <summary>Retorna uma nova instância da <see cref="T:System.Windows.Media.Media3D.Rect3D" /> que representa a união de dois <see cref="T:System.Windows.Media.Media3D.Rect3D" /> objetos.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.Media3D.Rect3D" /> valor que representa o resultado da união de <paramref name="rect1" /> e <paramref name="rect2" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public double X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da coordenada X do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <value>A coordenada X do valor de <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_X"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public double Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da coordenada Y do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <value>A coordenada Y do valor de <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_Y"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="public double Z { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Z" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Media3D.Rect3D.Z" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da coordenada Z do <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</summary>
+        <value>A coordenada Z do valor de <see cref="T:System.Windows.Media.Media3D.Rect3D" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Media.Media3D.Rect3D>normalmente é usada para representar os limites de um <xref:System.Windows.Media.Media3D.MeshGeometry3D> ou <xref:System.Windows.Media.Media3D.Model3D>.  
+  
+ <xref:System.Windows.Media.Media3D.Size3D>e <xref:System.Windows.Media.Media3D.Rect3D> não são normalmente usados em XAML, porque não há propriedades configuráveis existem no modelo de objeto 3D WPF que usam esses tipos.  
+  
+<a name="xamlTextUsage_Z"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

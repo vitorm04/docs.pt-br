@@ -1,0 +1,844 @@
+<Type Name="AuthorizationStoreRoleProvider" FullName="System.Web.Security.AuthorizationStoreRoleProvider">
+  <TypeSignature Language="C#" Value="public class AuthorizationStoreRoleProvider : System.Web.Security.RoleProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthorizationStoreRoleProvider extends System.Web.Security.RoleProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.AuthorizationStoreRoleProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Security.RoleProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia o armazenamento de informações de associação de função para um aplicativo ASP.NET em um repositório de políticas do gerenciador de autorização, seja em um arquivo XML, em um Active Directory ou em um servidor do AD LDS.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada pelo <xref:System.Web.Security.Roles> e <xref:System.Web.Security.RolePrincipal> classes para fornecer serviços de gerenciamento de função para um aplicativo ASP.NET usando um repositório do Gerenciador de autorização. Você pode usar o gerenciamento de função para especificar diferentes níveis de autorização para seu aplicativo. O Gerenciador de autorização pode ser acessado usando o Console de gerenciamento Microsoft.  
+  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider> objeto funciona com autenticação do Windows e modos de autenticação de formulários.  
+  
+ Você pode configurar o <xref:System.Web.Security.AuthorizationStoreRoleProvider> objeto para usar um arquivo XML local ou em um servidor do Active Directory ou aplicativo modo ADAM (Active Directory). Ao usar um arquivo local, a cadeia de caracteres de conexão deve parecer com o exemplo a seguir.  
+  
+```  
+msxml://<path to xml file>  
+```  
+  
+ Se o arquivo local é armazenado na árvore de diretório de um aplicativo Web ASP.NET, você pode usar o til ("~") caractere para indicar o diretório raiz. Por exemplo, para indicar que o arquivo local é armazenado no diretório de dados do aplicativo da Web, você usaria uma cadeia de caracteres de conexão semelhante ao exemplo a seguir.  
+  
+ `msxml://~\App_Data\datafilename.xml`  
+  
+> [!IMPORTANT]
+>  Armazenar um arquivo de dados XML no diretório de aplicativo da Web é uma possível ameaça à segurança. Por padrão, o IIS servirá arquivos de dados XML para a Web. Para melhorar a segurança ao usar um arquivo de dados local em um aplicativo ASP.NET, você deve armazenar o arquivo de dados a `App_Data` directory. Arquivos armazenados no `App_Data` diretório não será servido na Web.  
+  
+ Se você estiver usando um servidor do Active Directory ou ADAM para o repositório de políticas, sua cadeia de caracteres de conexão deve ser semelhante ao exemplo a seguir.  
+  
+ `msldap://myserver/CN=MyAzManStore,OU=MyOU,DC=MyDomain,DC=MyDC,DC=Com`  
+  
+ As exceções listadas na documentação do <xref:System.Web.Security.AuthorizationStoreRoleProvider> métodos de objeto são as exceções que são geradas pelo <xref:System.Web.Security.AuthorizationStoreRoleProvider> objeto. Uma vez que o provedor depende do tempo de execução do Gerenciador de autenticação subjacente, um <xref:System.Runtime.InteropServices.COMException> exceção pode ser acionada sempre que o <xref:System.Web.Security.AuthorizationStoreRoleProvider> objeto encaminha uma chamada de método para o tempo de execução do Gerenciador de autenticação.  
+  
+> [!IMPORTANT]
+>  O <xref:System.Web.Security.AuthorizationStoreRoleProvider> objeto tem os seguintes requisitos para execução em ambientes de confiança parcial:  
+>   
+>  Quando usar um repositório de políticas com base em arquivo em um aplicativo ASP.NET, as permissões de arquivo e/s concedidas pelo nível de confiança atual determinar se ler e ações de gravação são permitidas pelo provedor. O aplicativo ASP.NET deve ter permissão de leitura no arquivo para ler dados do repositório de políticas e deve ter permissão de gravação para salvar as novas informações ou atualizar as informações existentes no repositório de políticas. O arquivo de política de confiança média padrão fornece um permissões de leitura/gravação de aplicativos ASP.NET em seu diretório de aplicativo. O arquivo de política de confiança baixa padrão fornece apenas um aplicativo ASP.NET permissão em seu diretório de aplicativo de leitura. Além disso, a identidade do processo em que o aplicativo ASP.NET é executado deve ter permissões de sistema de arquivos para leitura e/ou gravar o arquivo de política.  
+>   
+>  Ao usar um servidor do Active Directory ou ADAM, o aplicativo ASP.NET precisa de permissão de código não gerenciado porque o interno <xref:System.Web.Security.AuthorizationStoreRoleProvider> usa a interoperabilidade COM código de objeto.  
+>   
+>  Ao usar o <xref:System.Web.Security.AuthorizationStoreRoleProvider> objeto fora do ASP.NET, o código de chamada precisa de permissão de código não gerenciado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um arquivo Web. config configurado para usar o <xref:System.Web.Security.AuthorizationStoreRoleProvider> para gerenciamento de função.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="AuthorizationServices" connectionString="msxml://~\App_Data\SampleStore.xml" />  
+  </connectionStrings>  
+  
+  <system.web>  
+  
+    <authentication mode="Windows" />  
+    <identity impersonate="true" />  
+  
+    <roleManager defaultProvider="AuthorizationStoreRoleProvider"   
+      enabled="true"  
+      cacheRolesInCookie="true"  
+      cookieName=".ASPROLES"  
+      cookieTimeout="30"  
+      cookiePath="/"  
+      cookieRequireSSL="false"  
+      cookieSlidingExpiration="true"  
+      cookieProtection="All" >  
+      <providers>  
+        <clear />  
+          <add  
+            name="AuthorizationStoreRoleProvider"  
+            type="System.Web.Security.AuthorizationStoreRoleProvider"  
+            connectionStringName="AuthorizationServices"  
+            applicationName="SampleApplication"   
+            cacheRefreshInterval="60"  
+            scopeName="" />  
+      </providers>  
+    </roleManager>  
+  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationStoreRoleProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.%23ctor%2A> construtor é chamado pelo ASP.NET para criar uma instância do <xref:System.Web.Security.AuthorizationStoreRoleProvider> classe conforme especificado na configuração do aplicativo. Este construtor não se destina a ser usado em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUsersToRoles">
+      <MemberSignature Language="C#" Value="public override void AddUsersToRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddUsersToRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.AddUsersToRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeias de caracteres de nomes de usuário a serem adicionados às funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeia de caracteres de nomes de função à qual adicionar os nomes de usuário.</param>
+        <summary>Adiciona os nomes de usuário especificado para cada uma das funções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.AddUsersToRoles%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para associar um ou mais usuários uma ou mais funções no repositório de dados Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config). Este método é chamado pelo <xref:System.Web.Security.Roles.AddUserToRole%2A?displayProperty=nameWithType>, <xref:System.Web.Security.Roles.AddUserToRoles%2A?displayProperty=nameWithType>, <xref:System.Web.Security.Roles.AddUsersToRole%2A?displayProperty=nameWithType>, e <xref:System.Web.Security.Roles.AddUsersToRoles%2A?displayProperty=nameWithType> métodos de <xref:System.Web.Security.Roles> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona um ou mais usuários a uma função ou remove um usuário de uma função. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um dos nomes de usuário especificado é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos nomes de função especificada é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="usernames" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="roleNames" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um dos nomes de usuário especificado é uma cadeia de caracteres vazia ou contém uma vírgula (,).  
+  
+ -ou-  
+  
+ Um dos nomes de função especificada é uma cadeia de caracteres vazia ou contém uma vírgula (,).  
+  
+ -ou-  
+  
+ <paramref name="usernames" />contém um elemento duplicado.  
+  
+ -ou-  
+  
+ <paramref name="roleNames" />contém um elemento duplicado.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo de repositório de autorização para o qual armazenar e recuperar informações de função.</summary>
+        <value>O nome da autorização armazenar aplicativos para os quais armazenar e recuperar informações de função. O padrão é o <see cref="P:System.Web.HttpRequest.ApplicationPath" /> valor da propriedade atual <see cref="P:System.Web.HttpContext.Request" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> é usado pelo <xref:System.Web.Security.AuthorizationStoreRoleProvider> para associar usuários e funções de aplicativos do Gerenciador de autorização diferentes, que permite que vários aplicativos ASP.NET usar a mesma política do Gerenciador de autorização armazenamento para armazenamento de informações de função sem entrar em conflitos entre os nomes de função duplicada. Como alternativa, vários aplicativos ASP.NET podem usar o mesmo repositório de políticas especificando o mesmo valor no <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> propriedade. O <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> propriedade pode ser definida programaticamente, ou ele pode ser definido declarativamente na Web. config do aplicativo usando o `applicationName` atributo.  
+  
+ Se um valor não for especificado para o `applicationName` atributos no arquivo Web. config, o <xref:System.Web.HttpRequest.ApplicationPath%2A?displayProperty=nameWithType> valor da propriedade atual <xref:System.Web.HttpContext.Request%2A?displayProperty=nameWithType> objeto é usado.  
+  
+> [!NOTE]
+>  Nomes de aplicativos do Gerenciador de autorização não podem conter o caractere "/" que está incluído no <xref:System.Web.HttpRequest.ApplicationPath%2A?displayProperty=nameWithType> propriedade. Como resultado, o valor padrão para o <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> propriedade não pode ser usada como um nome de aplicativo do Gerenciador de autorização e no arquivo de Web. config do aplicativo, você sempre deve especificar um `applicationName` atributo o `provider` elemento para configurar seu <xref:System.Web.Security.AuthorizationStoreRoleProvider> instância.  
+  
+> [!CAUTION]
+>  Como uma instância do provedor de função única padrão é usada para todas as solicitações atendidas por um <xref:System.Web.HttpApplication> do objeto, você pode ter várias solicitações de execução simultaneamente e a tentativa de definir o <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> o valor da propriedade. O <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> propriedade não é thread safe para várias gravações e alterando o <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> valor da propriedade pode resultar em comportamento inesperado quando houver vários usuários de um aplicativo. É recomendável que você evite escrever código que permite aos usuários definir o <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> propriedade, a menos que você precisa. Um exemplo de um aplicativo em que a configuração de <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> propriedade pode ser necessária é um aplicativo administrativo que gerencia os dados de função para vários aplicativos. Esse aplicativo deve ser um aplicativo de usuário único e não é um aplicativo Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o elemento de `system.web` seção do arquivo Web. config para um aplicativo ASP.NET. Especifica o aplicativo <xref:System.Web.Security.AuthorizationStoreRoleProvider> instância e conjuntos de <xref:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName%2A> propriedade `MyApplication`.  
+  
+```  
+<roleManager defaultProvider="AuthorizationStoreProvider"   
+  enabled="true"  
+  cacheRolesInCookie="true"  
+  cookieName=".ASPROLES"  
+  cookieTimeout="30"  
+  cookiePath="/"  
+  cookieRequireSSL="false"  
+  cookieSlidingExpiration="true"  
+  cookieProtection="All" >  
+  <providers>  
+    <add  
+      name="SqlProvider"  
+      type="System.Web.Security.AuthorizationStoreRoleProvider"  
+      connectionStringName="AuthorizationStoreServices"   
+      scopeName="MyScope"  
+      applicationName="MyApplication" />  
+  </providers>  
+</roleManager>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Foi feita uma tentativa para definir o <see cref="P:System.Web.Security.AuthorizationStoreRoleProvider.ApplicationName" /> para uma cadeia de caracteres que é maior do que 256 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheRefreshInterval">
+      <MemberSignature Language="C#" Value="public int CacheRefreshInterval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CacheRefreshInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.AuthorizationStoreRoleProvider.CacheRefreshInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de minutos entre as atualizações do cache de dados do repositório de políticas.</summary>
+        <value>O número de minutos entre as atualizações de dados de repositório de políticas armazenadas em cache. O padrão é 60.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRole">
+      <MemberSignature Language="C#" Value="public override void CreateRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.CreateRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser criada.</param>
+        <summary>Adiciona uma nova função para o repositório de políticas do Gerenciador de autorização de função.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.CreateRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para criar uma função no repositório de dados Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+ Os nomes de função não diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova função no repositório de políticas do Gerenciador de autorização. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="roleName" /> contém uma vírgula.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRole">
+      <MemberSignature Language="C#" Value="public override bool DeleteRole (string roleName, bool throwOnPopulatedRole);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool DeleteRole(string roleName, bool throwOnPopulatedRole) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.DeleteRole(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="throwOnPopulatedRole" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser excluída.</param>
+        <param name="throwOnPopulatedRole">Se <see langword="true" />, lança uma exceção <c>roleName</c> tem um ou mais membros.</param>
+        <summary>Remove uma função de repositório de políticas do Gerenciador de autorização.</summary>
+        <returns>
+          <see langword="true" />Se a função foi excluída; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.DeleteRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para excluir uma função de repositório de políticas do Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config). Quando uma função é excluída, a lista de usuários associados a essa função também é excluída do repositório de políticas. As informações do usuário no banco de dados não são afetadas.  
+  
+ Se `throwOnPopulatedRole` é `true`, em seguida, uma exceção será lançada e a função não será excluída se a função identificado pelo `roleName` parâmetro tem um ou mais membros. Se `throwOnPopulatedRole` é `false`, em seguida, a função será excluída se ela estiver vazia ou não.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exclui uma função de repositório de políticas do Gerenciador de autorização. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/deleterolecs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/deleterolevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="roleName" /> contém uma vírgula.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="roleName" />tem um ou mais membros e <paramref name="throwOnPopulatedRole" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] FindUsersInRole (string roleName, string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] FindUsersInRole(string roleName, string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.FindUsersInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">A função a ser pesquisada.</param>
+        <param name="usernameToMatch">O nome de usuário a ser pesquisado.</param>
+        <summary>Este método não é suportado pelo provedor de função de repositório de autorização.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todos os usuários cujo nome de usuário corresponde a <paramref name="usernameToMatch" /> e que são membros da função especificada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">Um método sem suporte foi chamado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllRoles">
+      <MemberSignature Language="C#" Value="public override string[] GetAllRoles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetAllRoles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.GetAllRoles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma lista de todas as funções do aplicativo.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todas as funções armazenados no repositório de política do Gerenciador de autorização para um aplicativo específico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.GetAllRoles%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para recuperar uma lista de todas as funções no repositório de políticas de Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.GetAllRoles%2A> método para obter a lista de funções para um aplicativo e associar os resultados para um <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> controle. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRolesForUser">
+      <MemberSignature Language="C#" Value="public override string[] GetRolesForUser (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetRolesForUser(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.GetRolesForUser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O usuário para o qual será retornada uma lista de funções.</param>
+        <summary>Obtém uma lista das funções de que o usuário faz parte.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todas as funções que o usuário especificado está em.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.GetRolesForUser%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para recuperar uma lista de funções de usuário especificado do repositório de políticas de Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.GetRolesForUser%2A> método para recuperar uma lista de funções para um usuário especificado e o associa a um <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> controle. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/ViewRolescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/ViewRolesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" /> contém uma vírgula.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] GetUsersInRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetUsersInRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.GetUsersInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função para a qual a lista de usuários será obtida.</param>
+        <summary>Obtém uma lista de usuários na função especificada.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todos os usuários que são membros da função especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.GetUsersInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para recuperar a lista de usuários associados com a função especificada no repositório de políticas de Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.GetUsersInRole%2A> método só retorna os nomes de usuários que estão contidos diretamente na função de Gerenciador de autorização especificada pelo `roleName` parâmetro. O base-Gerenciador de autorização API chamada <xref:System.Web.Security.AuthorizationStoreRoleProvider.GetUsersInRole%2A> método não oferece suporte a expansão de grupo para usuários que estão contidos em grupos do NT aninhados, grupos aninhados do Gerenciador de autorização e grupos de consulta LDAP não serão retornados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.GetUsersInRole%2A> método para obter uma lista de usuários em uma função específica e associar os resultados para um <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> controle. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="roleName" /> contém uma vírgula.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da instância de <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> a ser inicializada.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> que contém os nomes e valores de opções de configuração para o provedor de função.</param>
+        <summary>Inicializa o provedor de função do Gerenciador de autorização com os valores de propriedade especificados no arquivo de configuração do aplicativo ASP.NET. Esse método não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.Initialize%2A> método inicializa a <xref:System.Web.Security.AuthorizationStoreRoleProvider> com a propriedade de valores especificados no arquivo de configuração do aplicativo ASP.NET (Web. config) e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="config" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">O <see langword="connectionStringName" /> atributo está vazio ou não existe no [connectionStrings Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/b6ffbb2e-a4d1-410e-8f7e-9755e92c65de) seção de configuração.  
+  
+ -ou-  
+  
+ Configurado <see langword="applicationName" /> tem mais de 256 caracteres.  
+  
+ -ou-  
+  
+ A configuração para este <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> instância contém um atributo não reconhecido.</exception>
+        <exception cref="T:System.Web.HttpException">O aplicativo ASP.NET não está em execução no <see cref="F:System.Web.AspNetHostingPermissionLevel.Low" /> confiança ou superior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInRole">
+      <MemberSignature Language="C#" Value="public override bool IsUserInRole (string username, string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsUserInRole(string username, string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.IsUserInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário a ser pesquisado.</param>
+        <param name="roleName">A função a ser pesquisada.</param>
+        <summary>Obtém um valor que indica se o usuário especificado está na função especificada para a função especificada.</summary>
+        <returns>
+          <see langword="true" />Se o nome de usuário especificado está na função especificada. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.IsUserInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe e o <xref:System.Security.Principal.IPrincipal.IsInRole%2A> método o <xref:System.Web.UI.Page.User%2A?displayProperty=nameWithType> propriedade para determinar se um usuário está associado uma função no repositório de dados Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir programaticamente verifica se o logon do usuário está na função de administradores antes de permitir que o usuário exibir as funções de usuário. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/ViewRolescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/ViewRolesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> é <see langword="null" />.  
+  
+ -ou  
+  
+ <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="roleName" /> contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="username" /> contém uma vírgula.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveUsersFromRoles">
+      <MemberSignature Language="C#" Value="public override void RemoveUsersFromRoles (string[] userNames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveUsersFromRoles(string[] userNames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.RemoveUsersFromRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userNames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="userNames">Uma matriz de cadeia de caracteres de nomes de usuário a ser removido das funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeia de caracteres de nomes de função para remover os nomes de usuários especificados.</param>
+        <summary>Remove os nomes de usuários especificados das funções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.RemoveUsersFromRoles%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para remover um ou mais usuários de uma ou mais funções no repositório de políticas de Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config). Este método é chamado pelo <xref:System.Web.Security.Roles.RemoveUserFromRole%2A>, <xref:System.Web.Security.Roles.RemoveUserFromRoles%2A>, <xref:System.Web.Security.Roles.RemoveUsersFromRole%2A>, e <xref:System.Web.Security.Roles.RemoveUsersFromRoles%2A> métodos de <xref:System.Web.Security.Roles> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona um ou mais usuários a uma função ou remove um usuário de uma função. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um dos nomes de usuário especificado é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos nomes de função especificada é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="userNames" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="roleNames" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um dos nomes de usuário especificado é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ Um dos nomes de função especificada é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="userNames" />contém um elemento duplicado.  
+  
+ -ou-  
+  
+ <paramref name="roleNames" />contém um elemento duplicado.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleExists">
+      <MemberSignature Language="C#" Value="public override bool RoleExists (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool RoleExists(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.AuthorizationStoreRoleProvider.RoleExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função para pesquisar no repositório de políticas do Gerenciador de autorização.</param>
+        <summary>Obtém um valor que indica se o nome da função especificada já existe no repositório de políticas do Gerenciador de autorização.</summary>
+        <returns>
+          <see langword="true" />Se o nome da função já existe no repositório de políticas do Gerenciador de autorização; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.RoleExists%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para determinar se um nome de função existe no repositório de dados Gerenciador de autorização especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.RoleExists%2A> método para determinar se um nome de função já existe antes de criar a função. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.AuthorizationStoreRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="roleName" /> contém uma vírgula.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Configurado <see langword="applicationName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ Configurado <see langword="scopeName" /> não foi encontrado.  
+  
+ -ou-  
+  
+ O tempo de execução do Gerenciador de autorização não está instalado no servidor.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">O <see langword="connectionStringName" /> atributo faz referência a uma cadeia de caracteres de conexão para um arquivo que não existe.</exception>
+        <exception cref="T:System.Web.HttpException">A instância <see cref="T:System.Web.Security.AuthorizationStoreRoleProvider" /> está configurada com um repositório de políticas com base em arquivo e o acesso de leitura para o arquivo não é permitido no nível de confiança atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScopeName">
+      <MemberSignature Language="C#" Value="public string ScopeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ScopeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.AuthorizationStoreRoleProvider.ScopeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do escopo para o repositório de autorização.</summary>
+        <value>O nome do escopo para o repositório de autorização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.AuthorizationStoreRoleProvider.ScopeName%2A> propriedade pode ser definida usando o `scopeName` atributo de configuração para a instância do provedor no `providers` seção da seção de configuração.  
+  
+> [!CAUTION]
+>  Como uma instância do provedor de função única padrão é usada para todas as solicitações atendidas por um <xref:System.Web.HttpApplication> do objeto, você pode ter várias solicitações de execução simultaneamente e a tentativa de definir o <xref:System.Web.Security.AuthorizationStoreRoleProvider.ScopeName%2A> o valor da propriedade. O <xref:System.Web.Security.AuthorizationStoreRoleProvider.ScopeName%2A> propriedade não é thread safe para várias gravações e alterando o <xref:System.Web.Security.AuthorizationStoreRoleProvider.ScopeName%2A> valor da propriedade pode resultar em comportamento inesperado quando houver vários usuários de um aplicativo. É recomendável que você evite escrever código que permite aos usuários definir o <xref:System.Web.Security.AuthorizationStoreRoleProvider.ScopeName%2A> propriedade, a menos que você precisa. Um exemplo de um aplicativo em que a configuração de <xref:System.Web.Security.AuthorizationStoreRoleProvider.ScopeName%2A> propriedade pode ser necessária é um aplicativo administrativo que gerencia os dados de função para vários aplicativos. Esse aplicativo deve ser um aplicativo de usuário único e não é um aplicativo Web.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

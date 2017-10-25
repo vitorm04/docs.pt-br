@@ -1,0 +1,744 @@
+<Type Name="ListViewGroupCollection" FullName="System.Windows.Forms.ListViewGroupCollection">
+  <TypeSignature Language="C#" Value="public class ListViewGroupCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewGroupCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ListViewGroupCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção de grupos em um controle <see cref="T:System.Windows.Forms.ListView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> propriedade para obter o <xref:System.Windows.Forms.ListViewGroupCollection> associado com um <xref:System.Windows.Forms.ListView> controle. Esta coleção contém o <xref:System.Windows.Forms.ListViewGroup> objetos que representam os grupos mostrados no controle quando o <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> propriedade é definida como um valor diferente de <xref:System.Windows.Forms.View?displayProperty=nameWithType>. Todos os itens que não estão atribuídos a um grupo aparecerá no grupo padrão, que tem o rótulo de cabeçalho "DefaultGroup {0}". O grupo padrão não está contido no <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> coleção e não pode ser alterada. É principalmente útil na depuração para garantir que todos os itens foram adicionados corretamente a grupos. Se houver grupos no <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> coleção, o recurso de agrupamento está desabilitada.  
+  
+ Use o <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> para adicionar um único grupo à coleção. Use o <xref:System.Windows.Forms.ListViewGroupCollection.Insert%2A> método para adicionar um grupo em um índice específico dentro da coleção. Para remover um grupo, use o <xref:System.Windows.Forms.ListViewGroupCollection.Remove%2A> método. Use o <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> método para remover o grupo em um índice específico.  
+  
+ Não é possível adicionar um <xref:System.Windows.Forms.ListViewGroup> à coleção de mais de uma vez. Para reposicionar um grupo dentro da coleção, ele primeiro deve ser removido da coleção e, em seguida, inserido no local desejado. Use o <xref:System.Windows.Forms.ListViewGroupCollection.Contains%2A> método para determinar se um determinado grupo já está na coleção. Para recuperar o índice de um grupo de dentro da coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.IndexOf%2A> método. Você pode obter ou definir o grupo em um índice específico com o <xref:System.Windows.Forms.ListViewGroupCollection.Item%2A> indexador.  
+  
+ Use o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> para adicionar vários grupos à coleção. Você pode adicionar vários grupos como uma matriz de grupos ou como um <xref:System.Windows.Forms.ListViewGroupCollection> que podem ser recuperadas por meio de <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> propriedade de outra pessoa <xref:System.Windows.Forms.ListView> controle. Use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método para remover todos os grupos da coleção.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.ListViewGroupCollection.Remove%2A>, <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A>, e <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> métodos remover grupos de coleção, mas não remover todos os itens do <xref:System.Windows.Forms.ListView> controle. Se houver grupos no <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> coleção, o recurso de agrupamento está desabilitado e todos os itens no controle são exibidos normalmente.  
+  
+ O <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> e <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> métodos são úteis quando você deseja fornecer várias maneiras de agrupar os itens em uma <xref:System.Windows.Forms.ListView> controle. Para fazer isso, crie várias matrizes de grupo. Para alterar o agrupamento, primeiro use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método para remover todos os grupos da coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método para adicionar a matriz próxima de grupos a serem exibidos.  
+  
+ Use o <xref:System.Windows.Forms.ListViewGroupCollection.CopyTo%2A> método para copiar os grupos em uma coleção para uma matriz compatível, começando em um índice especificado. Isso é útil, por exemplo, quando você deseja classificar os grupos na coleção usando o <xref:System.Array.Sort%2A?displayProperty=nameWithType> método. Para fazer isso, copie os grupos em uma matriz compatível e classificar a matriz. Em seguida, use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método para remover todos os grupos da coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método para adicionar a matriz classificada volta à coleção.  
+  
+ Use o <xref:System.Windows.Forms.ListViewGroupCollection.Count%2A> propriedade para determinar quantos grupos estão na coleção. Para iterar na coleção, use o <xref:System.Collections.IEnumerator> retornado do <xref:System.Windows.Forms.ListViewGroupCollection.GetEnumerator%2A> método.  
+  
+> [!NOTE]
+>  O recurso de agrupamento está disponível somente no Windows XP e a família Windows Server 2003, quando o aplicativo chama o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método. Em sistemas operacionais anteriores, qualquer código relacionadas a grupos será ignorado e os grupos não serão exibidos. Como resultado, qualquer código que depende do recurso de agrupamento pode não funcionar corretamente. Você pode incluir um teste que determina se o recurso de agrupamento está disponível e fornecer funcionalidade alternativa quando ele não está disponível. Por exemplo, você talvez queira fornecer classificação alternativo quando executados em sistemas operacionais que dão suporte a classificação por grupo.  
+>   
+>  O recurso de marca de inserção é fornecido pela mesma biblioteca que fornece o recurso de temas do sistema operacional. Para verificar a disponibilidade desta biblioteca, chame o <xref:System.Windows.Forms.FeatureSupport.IsPresent%28System.Object%29?displayProperty=nameWithType> sobrecarga de método e passar o <xref:System.Windows.Forms.OSFeature.Themes?displayProperty=nameWithType> valor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Forms.ListView> recurso de agrupamento para organizar os itens pelo valor subitem no modo de exibição de detalhes. Essa forma de agrupamento é semelhante ao agrupamento usado no Windows Explorer. No exemplo, os grupos são criados dinamicamente. Para cada coluna subitem, um grupo é criado para cada valor exclusivo do subitem. Para a coluna do item pai, um grupo é criado para cada letra inicial exclusiva. Clique no cabeçalho de uma coluna classifica os itens nos grupos criados para aquela coluna. Clicar no cabeçalho da coluna mesmo novamente inverte a ordem dos grupos.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.Groups#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CPP/listviewgroupsexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView.Groups#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CS/listviewgroupsexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView.Groups#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/VB/listviewgroupsexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Forms.ListViewGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Forms.ListViewGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.Add(System.Windows.Forms.ListViewGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Windows.Forms.ListViewGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">O <see cref="T:System.Windows.Forms.ListViewGroup" /> a adicionar à coleção.</param>
+        <summary>Adiciona o <see cref="T:System.Windows.Forms.ListViewGroup" /> especificado à coleção.</summary>
+        <returns>O índice do grupo dentro da coleção, ou -1 se o grupo já está presente na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para adicionar um existente <xref:System.Windows.Forms.ListViewGroup> à coleção. Não é possível adicionar um <xref:System.Windows.Forms.ListViewGroup> à coleção de mais de uma vez. Quando você chama o <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> usando o método um <xref:System.Windows.Forms.ListViewGroup> que já está na coleção, a adição falha e -1 será retornado.  
+  
+ Para adicionar vários grupos à coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="group" />contém pelo menos um <see cref="T:System.Windows.Forms.ListViewItem" /> que pertence a um <see cref="T:System.Windows.Forms.ListView" /> controle diferente daquele que é proprietária <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewGroup Add (string key, string headerText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.ListViewGroup Add(string key, string headerText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="headerText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O valor inicial de <see cref="P:System.Windows.Forms.ListViewGroup.Name" /> propriedade para o novo grupo.</param>
+        <param name="headerText">O valor inicial de <see cref="P:System.Windows.Forms.ListViewGroup.Header" /> propriedade para o novo grupo.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Forms.ListViewGroup" /> à coleção usando os valores especificados para inicializar o <see cref="P:System.Windows.Forms.ListViewGroup.Name" /> e <see cref="P:System.Windows.Forms.ListViewGroup.Header" /> propriedades</summary>
+        <returns>O novo <see cref="T:System.Windows.Forms.ListViewGroup" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Windows.Forms.ListViewGroup[] groups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Windows.Forms.ListViewGroup[] groups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.AddRange(System.Windows.Forms.ListViewGroup[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groups" Type="System.Windows.Forms.ListViewGroup[]" />
+      </Parameters>
+      <Docs>
+        <param name="groups">Uma matriz do tipo <see cref="T:System.Windows.Forms.ListViewGroup" /> que especifica os grupos a serem adicionados à coleção.</param>
+        <summary>Adiciona uma matriz de grupos à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar esta versão do <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método para adicionar uma matriz de grupos para a coleção de grupo. Esse método é útil quando você criar vários <xref:System.Windows.Forms.ListViewGroup> objetos e deseja adicioná-los à coleção com uma única chamada de método. Para adicionar grupos individuais na coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> método.  
+  
+ Esse método também é útil quando você deseja fornecer várias maneiras de agrupar os itens em uma <xref:System.Windows.Forms.ListView> controle. Para fazer isso, crie várias matrizes de grupo. Para alterar o agrupamento, primeiro use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método para remover todos os grupos da coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método para adicionar um conjunto diferente de grupos.  
+  
+ Ao contrário de <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> método, o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método não tem um valor de retorno pode ser usado para determinar se um grupo que está sendo adicionado já está na coleção. Se você precisará dessas informações, use o <xref:System.Windows.Forms.ListViewGroupCollection.Contains%2A> método antes de usar o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método pode ser usado em um aplicativo que organiza <xref:System.Windows.Forms.ListView> itens pelo valor subitem no modo de exibição de detalhes. Essa forma de agrupamento é semelhante ao agrupamento usado no Windows Explorer. No exemplo, os grupos são criados dinamicamente. Para cada coluna subitem, um grupo é criado para cada valor exclusivo do subitem. Para a coluna do item pai, um grupo é criado para cada letra inicial exclusiva. Os grupos criados para cada coluna são armazenados em uma tabela de hash junto com a letra inicial ou texto do subitem. Quando um cabeçalho de coluna é clicado, o <xref:System.Windows.Forms.ListViewGroupCollection> está desmarcada. A tabela de hash que corresponde à coluna clicada, em seguida, é recuperada e cada item é atribuído ao grupo apropriado. Por fim, uma matriz classificada dos grupos na tabela de hash é adicionado para o <xref:System.Windows.Forms.ListViewGroupCollection>.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.ListViewGroupCollection> tópico de referência de visão geral.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.Groups#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CPP/listviewgroupsexample.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ListView.Groups#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CS/listviewgroupsexample.cs#2)]
+ [!code-vb[System.Windows.Forms.ListView.Groups#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/VB/listviewgroupsexample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="groups" />contém pelo menos um grupo com pelo menos um <see cref="T:System.Windows.Forms.ListViewItem" /> que pertence a um <see cref="T:System.Windows.Forms.ListView" /> controle diferente daquele que é proprietária <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Windows.Forms.ListViewGroupCollection groups);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Windows.Forms.ListViewGroupCollection groups) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.AddRange(System.Windows.Forms.ListViewGroupCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groups" Type="System.Windows.Forms.ListViewGroupCollection" />
+      </Parameters>
+      <Docs>
+        <param name="groups">Um <see cref="T:System.Windows.Forms.ListViewGroupCollection" /> que contém os grupos a serem adicionados à coleção.</param>
+        <summary>Adiciona os grupos em existente <see cref="T:System.Windows.Forms.ListViewGroupCollection" /> à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar esta versão do <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> para adicionar os elementos de um <xref:System.Windows.Forms.ListViewGroupCollection> que podem ser recuperadas por meio de <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> propriedade de outro <xref:System.Windows.Forms.ListView> controle.  
+  
+ Ao contrário de <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> método, o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método não tem um valor de retorno pode ser usado para determinar se um grupo que está sendo adicionado já está na coleção. Se você precisará dessas informações, use o <xref:System.Windows.Forms.ListViewGroupCollection.Contains%2A> método antes de usar o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="groups" />contém pelo menos um grupo com pelo menos um <see cref="T:System.Windows.Forms.ListViewItem" /> que pertence a um <see cref="T:System.Windows.Forms.ListView" /> controle diferente daquele que é proprietária <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os grupos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover todos os grupos da coleção. Observe que remover grupos do <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> coleção não remover itens do <xref:System.Windows.Forms.ListView> controle.  
+  
+ Esse método é útil para desabilitar o recurso de agrupamento. Quando houver grupos em um <xref:System.Windows.Forms.ListView> controlar, os itens são exibidos normalmente. Para remover grupos individuais da coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.Remove%2A> ou <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> método.  
+  
+ Esse método também é útil quando você deseja fornecer várias maneiras de agrupar os itens. Para alterar o agrupamento, primeiro use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método para remover todos os grupos da coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método para adicionar um conjunto diferente de grupos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método pode ser usado em um aplicativo que organiza <xref:System.Windows.Forms.ListView> itens pelo valor subitem no modo de exibição de detalhes. Essa forma de agrupamento é semelhante ao agrupamento usado no Windows Explorer. No exemplo, os grupos são criados dinamicamente. Para cada coluna subitem, um grupo é criado para cada valor exclusivo do subitem. Para a coluna do item pai, um grupo é criado para cada letra inicial exclusiva. Os grupos criados para cada coluna são armazenados em uma tabela de hash junto com a letra inicial ou texto do subitem. Quando um cabeçalho de coluna é clicado, o <xref:System.Windows.Forms.ListViewGroupCollection> está desmarcada. A tabela de hash que corresponde à coluna clicada, em seguida, é recuperada e cada item é atribuído ao grupo apropriado. Por fim, uma matriz classificada dos grupos na tabela de hash é adicionado para o <xref:System.Windows.Forms.ListViewGroupCollection>.  
+  
+ Para o exemplo completo, consulte o <xref:System.Windows.Forms.ListViewGroupCollection> tópico de referência de visão geral.  
+  
+ [!code-cpp[System.Windows.Forms.ListView.Groups#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CPP/listviewgroupsexample.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ListView.Groups#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/CS/listviewgroupsexample.cs#2)]
+ [!code-vb[System.Windows.Forms.ListView.Groups#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Groups/VB/listviewgroupsexample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.ListViewGroup value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.ListViewGroup value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.Contains(System.Windows.Forms.ListViewGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.ListViewGroup" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.ListViewGroup" /> a ser localizado na coleção.</param>
+        <summary>Determina se o grupo especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" />Se o grupo estiver na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível adicionar um <xref:System.Windows.Forms.ListViewGroup> à coleção de mais de uma vez. No entanto, a tentativa de adicionar outra cópia não lançará uma exceção. Em vez disso, a adição simplesmente falhará. O <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> método retornará um valor igual a-1 nesse caso. O <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> e <xref:System.Windows.Forms.ListViewGroupCollection.Insert%2A> métodos, no entanto, não têm valores de retorno. Ao adicionar grupos usando um desses métodos, use o <xref:System.Windows.Forms.ListViewGroupCollection.Contains%2A> método para determinar se um determinado <xref:System.Windows.Forms.ListViewGroup> já está na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> para que os grupos são copiados.</param>
+        <param name="index">O primeiro índice dentro da matriz para o qual os grupos são copiados.</param>
+        <summary>Copia os grupos na coleção para um unidimensional compatível <see cref="T:System.Array" />, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ListViewGroupCollection.CopyTo%2A> método para copiar os grupos em uma coleção (incluindo as referências de item que eles contêm) em uma matriz compatível, começando em um índice especificado. Isso é útil, por exemplo, quando você deseja classificar os grupos na coleção usando o <xref:System.Array.Sort%2A?displayProperty=nameWithType> método. Para fazer isso, copie os grupos em uma matriz compatível e classificar a matriz. Em seguida, use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método para remover todos os grupos da coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.AddRange%2A> método para adicionar a matriz classificada volta à coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de grupos na coleção.</summary>
+        <value>O número de grupos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para determinar o número de grupos na coleção. Isso é útil quando você precisa executar um loop através da coleção e executar a mesma operação em cada grupo. Você também pode usar o <xref:System.Collections.IEnumerator> retornado pelo <xref:System.Windows.Forms.ListViewGroupCollection.GetEnumerator%2A> método para iterar pela coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador usado para iterar pela coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil quando você precisa iterar pela coleção para executar a mesma operação em cada grupo. Você também pode executar um loop pela coleção de uma vez para cada grupo, usando o <xref:System.Windows.Forms.ListViewGroupCollection.Count%2A> propriedade para determinar o número de loops.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.ListViewGroup value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.ListViewGroup value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.IndexOf(System.Windows.Forms.ListViewGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.ListViewGroup" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.ListViewGroup" /> a ser localizado na coleção.</param>
+        <summary>Retorna o índice especificado <see cref="T:System.Windows.Forms.ListViewGroup" /> dentro da coleção.</summary>
+        <returns>O índice de base zero do grupo dentro da coleção, ou -1 se o grupo não está na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar o índice de um grupo de dentro da coleção. Isso é útil, por exemplo, para determinar o índice de cada grupo quando você percorrer a coleção usando o <xref:System.Collections.IEnumerator> retornado pelo <xref:System.Windows.Forms.ListViewGroupCollection.GetEnumerator%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Windows.Forms.ListViewGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Windows.Forms.ListViewGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.Insert(System.Int32,System.Windows.Forms.ListViewGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="group" Type="System.Windows.Forms.ListViewGroup" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice dentro da coleção na qual inserir o grupo.</param>
+        <param name="group">O <see cref="T:System.Windows.Forms.ListViewGroup" /> a ser inserido na coleção.</param>
+        <summary>Insere especificado <see cref="T:System.Windows.Forms.ListViewGroup" /> na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para inserir uma existente <xref:System.Windows.Forms.ListViewGroup> em um índice específico dentro da coleção.  
+  
+ Não é possível adicionar um <xref:System.Windows.Forms.ListViewGroup> à coleção de mais de uma vez. Quando você chama o <xref:System.Windows.Forms.ListViewGroupCollection.Insert%2A> método usando um grupo que já está na coleção, a inserção simplesmente falha. Use o <xref:System.Windows.Forms.ListViewGroupCollection.Contains%2A> método antes da inserção para determinar se um determinado grupo já está na coleção. Para reposicionar um grupo dentro da coleção, primeiro remova-o e, em seguida, insira-o no índice desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewGroup this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewGroup Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice dentro da coleção do <see cref="T:System.Windows.Forms.ListViewGroup" /> para obter ou definir.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.ListViewGroup" /> no índice especificado na coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ListViewGroup" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para recuperar o grupo no índice especificado na coleção. Quando você tem uma referência ao objeto de grupo e o índice necessário, use o <xref:System.Windows.Forms.ListViewGroupCollection.IndexOf%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que 0 ou maior ou igual a <see cref="P:System.Windows.Forms.ListViewGroupCollection.Count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ListViewGroup this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ListViewGroup Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ListViewGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do grupo para obter ou definir.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.ListViewGroup" /> com especificado <see cref="P:System.Windows.Forms.ListViewGroup.Name" /> valor da propriedade.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ListViewGroup" /> com o nome especificado, ou <see langword="null" /> se não há tal <see cref="T:System.Windows.Forms.ListViewGroup" /> existe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.ListViewGroup group);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.ListViewGroup group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.Remove(System.Windows.Forms.ListViewGroup)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="System.Windows.Forms.ListViewGroup" />
+      </Parameters>
+      <Docs>
+        <param name="group">O <see cref="T:System.Windows.Forms.ListViewGroup" /> a ser removido da coleção.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.ListViewGroup" /> especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover um grupo de coleção quando você tem uma referência ao grupo. Observe que a remoção de um grupo de <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> coleção não remover itens do <xref:System.Windows.Forms.ListView> controle.  
+  
+ Para remover um grupo em um índice específico, use o <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> método em vez disso. Para remover todos os grupos de coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice dentro da coleção do <see cref="T:System.Windows.Forms.ListViewGroup" /> para remover.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.ListViewGroup" /> no índice especificado na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para remover um grupo de coleção quando você tem o índice do grupo dentro da coleção. Observe que remover grupos do <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType> coleção não remover itens do <xref:System.Windows.Forms.ListView> controle.  
+  
+ Para remover um grupo usando uma referência ao objeto, use o <xref:System.Windows.Forms.ListViewGroupCollection.Remove%2A> método em vez disso. Para remover todos os grupos de coleção, use o <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> método. Quando você remover um item da coleção, os índices alterar subsequentes itens na coleção. Todas as informações sobre o item removido são excluídas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>O objeto usado para sincronizar a coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.ListViewGroup" /> para adicionar ao <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Forms.ListViewGroup" /> para o <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</summary>
+        <returns>O índice no qual o <see cref="T:System.Windows.Forms.ListViewGroup" /> foi adicionado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" /> não é um <see cref="T:System.Windows.Forms.ListViewGroup" />.  
+  
+ -ou-  
+  
+ <paramref name="value" />contém pelo menos um <see cref="T:System.Windows.Forms.ListViewItem" /> que pertence a um <see cref="T:System.Windows.Forms.ListView" /> controle diferente daquele que é proprietária <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto que representa o <see cref="T:System.Windows.Forms.ListViewGroup" /> localizar na coleção.</param>
+        <summary>Determina se o valor especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="value" /> é um <see cref="T:System.Windows.Forms.ListViewGroup" /> contido na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.ListViewGroup" /> para localizar no <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</param>
+        <summary>Retorna o índice dentro da coleção do valor especificado.</summary>
+        <returns>O índice de base zero <paramref name="value" /> se ele estiver na coleção; caso contrário, -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição na qual o <see cref="T:System.Windows.Forms.ListViewGroup" /> é adicionado à coleção.</param>
+        <param name="value">O <see cref="T:System.Windows.Forms.ListViewGroup" /> a adicionar à coleção.</param>
+        <summary>Insere um <see cref="T:System.Windows.Forms.ListViewGroup" /> para o <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `value` não é um <xref:System.Windows.Forms.ListViewGroup>, ele não é adicionado à coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção tem um tamanho fixo.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do elemento a ser obtido ou definido.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.ListViewGroup" /> no índice especificado na coleção.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.ListViewGroup" /> que representa o item localizado no índice especificado na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ListViewGroupCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.ListViewGroup" /> a ser removido de <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.ListViewGroup" /> do <see cref="T:System.Windows.Forms.ListViewGroupCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

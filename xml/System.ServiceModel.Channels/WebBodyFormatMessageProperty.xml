@@ -1,0 +1,135 @@
+<Type Name="WebBodyFormatMessageProperty" FullName="System.ServiceModel.Channels.WebBodyFormatMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class WebBodyFormatMessageProperty : System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebBodyFormatMessageProperty extends System.Object implements class System.ServiceModel.Channels.IMessageProperty" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.WebBodyFormatMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IMessageProperty</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Armazena e recupera o formato de codificação de mensagem de mensagens de entrada e saídas para o codificador de mensagem da Web composto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade permite, por exemplo, o formatador de mensagem da Web composto saber como o codificador de mensagem da Web composto tenha codificado a mensagem. <xref:System.ServiceModel.Channels.WebBodyFormatMessageProperty>implementa <xref:System.ServiceModel.Channels.IMessageProperty>. Objetos que implementam esta interface são adicionados por valor para <xref:System.ServiceModel.Channels.Message.Properties%2A> com o <xref:System.ServiceModel.Channels.WebBodyFormatMessageProperty.Name> fornecendo a chave de acesso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBodyFormatMessageProperty (System.ServiceModel.Channels.WebContentFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.Channels.WebContentFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WebBodyFormatMessageProperty.#ctor(System.ServiceModel.Channels.WebContentFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="System.ServiceModel.Channels.WebContentFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">O <see cref="T:System.ServiceModel.Channels.WebContentFormat" /> do corpo da mensagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.WebBodyFormatMessageProperty" /> classe com um formato especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O formato não pode ser definido como o <see cref="F:System.ServiceModel.Channels.WebContentFormat.Default" /> valor no construtor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.IMessageProperty CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IMessageProperty CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WebBodyFormatMessageProperty.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IMessageProperty</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a instância atual da propriedade atual.</summary>
+        <returns>Uma instância do <see cref="T:System.ServiceModel.Channels.IMessageProperty" /> interface é uma cópia do atual <see cref="T:System.ServiceModel.Channels.WebBodyFormatMessageProperty" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.WebContentFormat Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.Channels.WebContentFormat Format" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.WebBodyFormatMessageProperty.Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.WebContentFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o formato usado para o corpo da mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.Channels.WebContentFormat" /> que especifica o formato usado para o corpo da mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public const string Name;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Name" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.WebBodyFormatMessageProperty.Name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o nome da propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.WebBodyFormatMessageProperty> objeto deve ter o nome "WebBodyFormatMessageProperty" como sua chave no <xref:System.ServiceModel.Channels.MessageProperties> coleta para o valor a ser acessados e usados como uma anotação de processamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.WebBodyFormatMessageProperty.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome da propriedade e o formato de codificação usado quando construído.</summary>
+        <returns>Retorna "WebBodyFormatMessageProperty: EncodingFormat = {0}", onde é {0} <see langword="WebContentFormat.ToString()" />, que especifica o formato de codificação usado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

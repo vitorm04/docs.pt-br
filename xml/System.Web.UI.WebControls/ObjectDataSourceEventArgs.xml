@@ -1,0 +1,108 @@
+<Type Name="ObjectDataSourceEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating" /> e <see cref="E:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated" /> do controle <see cref="T:System.Web.UI.WebControls.ObjectDataSource" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs> classe é usada no <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreating%2A> e <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreated%2A> métodos para fornecer acesso à instância do objeto de negócios antes de quaisquer operações de dados que estão usando o <xref:System.Web.UI.WebControls.ObjectDataSource> controle e objeto comercial são executadas. O objeto comercial é definido e acessados usando o <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> propriedade. Adicionando um delegado de manipulador de eventos para lidar com o <xref:System.Web.UI.WebControls.ObjectDataSourceView.ObjectCreating> eventos, você pode criar uma instância do objeto comercial no código personalizado em vez do <xref:System.Web.UI.WebControls.ObjectDataSource> executando a instanciação. Isso é útil quando você desejar uma instância não padrão do seu objeto de negócios ou chamar um construtor não padrão para criar a instância; o <xref:System.Web.UI.WebControls.ObjectDataSource> sempre chama o construtor padrão para criar uma instância do objeto comercial que funciona com. Você também pode adicionar um delegado de manipulador de eventos para lidar com o <xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated> evento, que permite que você acesse qualquer publicamente exposto aos membros do objeto comercial para executar qualquer inicialização adicional ou trabalho.  
+  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreating%2A> e <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnObjectCreated%2A> métodos não são chamados pelo <xref:System.Web.UI.WebControls.ObjectDataSource> de controle, se o método do objeto comercial que executa as operações de dados for `static`.  
+  
+ O <xref:System.Web.UI.WebControls.ObjectDataSource> controle expõe vários eventos que você pode manipular para trabalhar com o objeto comercial subjacente várias vezes durante o ciclo de vida. A tabela a seguir lista os eventos e associado <xref:System.EventArgs> classes e delegados de manipulador de eventos.  
+  
+|Evento|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating>.<br /><br /> Ocorre imediatamente antes que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated>.<br /><br /> Ocorre imediatamente depois que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>.<br /><br /> Ocorre antes que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating> e <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting>.<br /><br /> Ocorre antes de uma operação de inserção, atualização ou delete é executada.|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selected>.<br /><br /> Ocorre depois que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated>, <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted>.<br /><br /> Ocorre após a inserção, atualização ou operação de exclusão é concluída.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing>.<br /><br /> Ocorre antes de um objeto comercial é destruído.|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler>|  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para recuperar e exibir informações. O segundo exemplo de código fornece o objeto de negócios básico de exemplo que usa o primeiro exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para recuperar e exibir informações. Neste exemplo, como em muitos cenários do mundo real, talvez não seja possível nem apropriado para usar uma instância padrão do objeto comercial com o <xref:System.Web.UI.WebControls.ObjectDataSource> controle. Neste exemplo, o <xref:System.Web.UI.WebControls.ObjectDataSource> com êxito não é possível chamar o construtor padrão porque ela irá gerar uma exceção. Em alguns casos, o construtor padrão pode ser protegido e em outras ele não pode inicializar o objeto comercial para um estado desejado. Seja qual for o motivo, você pode criar uma instância do objeto comercial por conta própria e defina a instância o <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs> objeto que é passado para o manipulador. Este é o objeto de negócios da instância que o <xref:System.Web.UI.WebControls.ObjectDataSource> usará para executar seu trabalho.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/objds15cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/objds15vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra o objeto de negócios básico de exemplo que usa o exemplo de código anterior.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/northwindemployee15.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/northwindemployee15.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceEventArgs (object objectInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object objectInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceEventArgs.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="objectInstance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="objectInstance">O objeto de negócios com o qual o <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> interage para executar operações de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" /> classe usando o objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectInstance">
+      <MemberSignature Language="C#" Value="public object ObjectInstance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ObjectInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que representa o objeto de negócios com a qual o <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> controle executa operações de dados.</summary>
+        <value>O objeto comercial de <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> usa para executar operações de dados; caso contrário, <see langword="null" />, se <see langword="null" /> é passado para o <see cref="T:System.Web.UI.WebControls.ObjectDataSourceEventArgs" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para recuperar e exibir informações. O segundo exemplo de código fornece o objeto de negócios básico de exemplo que usa o primeiro exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.GridView> controle para recuperar e exibir informações. Neste exemplo, como em muitos cenários do mundo real, talvez não seja possível nem apropriado para usar uma instância padrão do objeto comercial com o <xref:System.Web.UI.WebControls.ObjectDataSource> controle. Neste exemplo, o <xref:System.Web.UI.WebControls.ObjectDataSource> com êxito não é possível chamar o construtor padrão porque ela irá gerar uma exceção. Em alguns casos, o construtor padrão pode ser protegido e em outras ele não pode inicializar o objeto comercial para um estado desejado. Seja qual for o motivo, você pode criar uma instância do objeto comercial por conta própria e defina a instância o <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs.ObjectInstance%2A> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs> objeto que é passado para o manipulador. Este é o objeto de negócios da instância que o <xref:System.Web.UI.WebControls.ObjectDataSource> usará para executar seu trabalho.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/objds15cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_15#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/objds15vb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra o objeto de negócios básico de exemplo que usa o exemplo de código anterior.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/CS/northwindemployee15.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_15#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_15/VB/northwindemployee15.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

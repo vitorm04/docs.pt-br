@@ -1,0 +1,13 @@
+<Namespace Name="System.Windows.Shell">
+  <Docs>
+    <summary>Contém tipos que fornecem acesso de código gerenciado para a funcionalidade avançada da barra de tarefas do Windows 7.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[win7](~/includes/win7-md.md)] na barra de tarefas oferece funcionalidade aprimorada que permite que você use o botão da barra de tarefas para comunicar o status para um usuário e expor as tarefas comuns, quando a janela é minimizada ou oculta. A funcionalidade exposta por tipos no <xref:System.Windows.Shell> namespace não está disponível em versões do Windows anteriores ao [!INCLUDE[win7](~/includes/win7-md.md)]. Em [!INCLUDE[win7](~/includes/win7-md.md)], algumas funcionalidades podem não estar disponíveis dependendo as configurações do usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

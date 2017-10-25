@@ -1,0 +1,108 @@
+<Type Name="ExecutionDataflowBlockOptions" FullName="System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions">
+  <TypeSignature Language="C#" Value="public class ExecutionDataflowBlockOptions : System.Threading.Tasks.Dataflow.DataflowBlockOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExecutionDataflowBlockOptions extends System.Threading.Tasks.Dataflow.DataflowBlockOptions" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Threading.Tasks.Dataflow.DataflowBlockOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece as opções usadas para configurar o processamento executado pelos blocos de fluxo de dados que processam cada mensagem por meio da invocação de um representante fornecido por um usuário. Esses são blocos de fluxo de dados, como <see cref="T:System.Threading.Tasks.Dataflow.ActionBlock`1" /> e <see cref="T:System.Threading.Tasks.Dataflow.TransformBlock`2" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  A biblioteca de fluxo de dados TPL (<xref:System.Threading.Tasks.Dataflow> namespace) não é distribuído com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)]. Para instalar o <xref:System.Threading.Tasks.Dataflow> namespace, abra seu projeto no [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], escolha **gerenciar pacotes NuGet** no menu projeto e pesquise online o `Microsoft.Tpl.Dataflow` pacote.  
+  
+ <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>é mutável e pode ser configurado por meio de suas propriedades.  
+  
+ Quando as opções de configuração específicos não forem definidas, os seguintes padrões são usados:  
+  
+|Opções|Padrão|  
+|-------------|-------------|  
+|TaskScheduler|<xref:System.Threading.Tasks.TaskScheduler.Default%2A>|  
+|CancellationToken|<xref:System.Threading.CancellationToken.None%2A>|  
+|MaxMessagesPerTask|DataflowBlockOptions.Unbounded (-1)|  
+|BoundedCapacity|DataflowBlockOptions.Unbounded (-1)|  
+|MaxDegreeOfParallelism|1|  
+  
+ Bloco de fluxo de dados capturar o estado das opções em sua construção. As alterações subsequentes fornecido <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> instância não deve afetar o comportamento de um bloco de fluxo de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExecutionDataflowBlockOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa um novo <see cref="T:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDegreeOfParallelism">
+      <MemberSignature Language="C#" Value="public int MaxDegreeOfParallelism { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxDegreeOfParallelism" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número máximo de mensagens que podem ser processadas simultaneamente pelo bloco.</summary>
+        <value>O número máximo de mensagens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleProducerConstrained">
+      <MemberSignature Language="C#" Value="public bool SingleProducerConstrained { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SingleProducerConstrained" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.SingleProducerConstrained" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o código usando o bloco de fluxo de dados é restrito a um operador por vez.</summary>
+        <value>Retorna <see cref="T:System.Boolean" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade padroniza como false, que o bloco pode ser usado por vários produtores simultaneamente. Essa propriedade só deve ser definida como true se o código usando o bloco pode garantir que ele só será usado por um operador (por exemplo, uma fonte de vinculado para o bloco) ao mesmo tempo, que significa que métodos, como Post, concluir, falhas e OfferMessage nunca serão chamados simultaneamente. Alguns blocos poderá aproveitar o conhecimento que haverá apenas um operador em um momento para oferecer melhor desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

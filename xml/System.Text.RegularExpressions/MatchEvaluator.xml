@@ -1,0 +1,53 @@
+<Type Name="MatchEvaluator" FullName="System.Text.RegularExpressions.MatchEvaluator">
+  <TypeSignature Language="C#" Value="public delegate string MatchEvaluator(Match match);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MatchEvaluator extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Text.RegularExpressions.MatchEvaluator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.RegularExpressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="match" Type="System.Text.RegularExpressions.Match" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.String</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="match">O objeto <see cref="T:System.Text.RegularExpressions.Match" /> que representa uma correspondência da expressão regular única durante uma operação do método de <see cref="Overload:System.Text.RegularExpressions.Regex.Replace" />.</param>
+    <summary>Representa o método que é chamado sempre que uma correspondência da expressão regular é encontrada durante uma operação de método de <see cref="Overload:System.Text.RegularExpressions.Regex.Replace" />.</summary>
+    <returns>Uma cadeia de caracteres retornada pelo método que é representada pelo delegado <see cref="T:System.Text.RegularExpressions.MatchEvaluator" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar um <xref:System.Text.RegularExpressions.MatchEvaluator> Delegar método para executar uma operação de verificação ou manipulação personalizada para cada correspondência encontrada por um método de substituição, como <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType>. Para cada correspondência na cadeia de caracteres, o <xref:System.Text.RegularExpressions.Regex.Replace%2A> chamadas de método de <xref:System.Text.RegularExpressions.MatchEvaluator> Delegar método com um <xref:System.Text.RegularExpressions.Match> objeto que representa a correspondência. O método delegado executa qualquer processamento que você preferir e retorna uma cadeia de caracteres que o <xref:System.Text.RegularExpressions.Regex.Replace%2A> método substitui a cadeia de caracteres correspondente.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Text.RegularExpressions.MatchEvaluator> delegado para substituir todos os grupos de correspondência de caracteres com o número de ocorrência de correspondência.  
+  
+ [!code-cpp[System.Text.RegularExpressions.MatchEvaluator#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.text.regularexpressions.MatchEvaluator/CPP/regexreplace.cpp#1)]
+ [!code-csharp[System.Text.RegularExpressions.MatchEvaluator#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.MatchEvaluator/CS/regexreplace.cs#1)]
+ [!code-vb[System.Text.RegularExpressions.MatchEvaluator#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.MatchEvaluator/VB/regexreplace.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,435 @@
+<Type Name="ElementPosition" FullName="System.Web.UI.DataVisualization.Charting.ElementPosition">
+  <TypeSignature Language="C#" Value="public class ElementPosition : System.Web.UI.DataVisualization.Charting.ChartElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ElementPosition extends System.Web.UI.DataVisualization.Charting.ChartElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.ElementPosition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Data")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a classe base para vários elementos visuais do gráfico, como a legenda, título e áreas de gráfico. Define a posição do elemento gráfico em coordenadas relativas, que varia de (0,0) a (100,100).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.ElementPosition> classe é usada para definir a posição de um elemento gráfico e representa um retângulo usando o <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.X%2A>, <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Y%2A>, <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Width%2A> e <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Height%2A> propriedades.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.ElementPosition> classe sempre é exposta como um `Position` propriedade, como <xref:System.Web.UI.DataVisualization.Charting.ChartArea.Position%2A>, <xref:System.Web.UI.DataVisualization.Charting.Legend.Position%2A>e assim por diante. Ele também é exposto no <xref:System.Web.UI.DataVisualization.Charting.Chart.PrePaint> e <xref:System.Web.UI.DataVisualization.Charting.Chart.PostPaint> eventos do <xref:System.Web.UI.DataVisualization.Charting.Chart> controle como uma propriedade do <xref:System.Web.UI.DataVisualization.Charting.ChartPaintEventArgs> objeto.  
+  
+ A posição dos elementos de gráfico aplicável pode ser definida automaticamente definindo o <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Auto%2A> propriedade `true`; elementos do gráfico também podem ser posicionados no tempo de design no modo de exibição de Design.  
+  
+ Há duas diferenças principais entre essa classe e um <xref:System.Drawing.RectangleF> estrutura:  
+  
+-   Essa classe pode usar o posicionamento automático.  
+  
+-   Essa classe usa apenas coordenadas variando de 0 a 100, caso contrário, uma exceção será lançada.  
+  
+ A posição dos elementos de gráfico é descrita usando coordenadas relativas, com o canto superior esquerdo de um elemento com as coordenadas (0,0) e o canto inferior direito de um elemento com coordenadas (100,100).  
+  
+ Elementos que são plotados em uma área do gráfico usam coordenadas relativas à área do gráfico, enquanto os elementos fora de uma área de gráfico usam coordenadas são em relação à imagem de gráfico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ElementPosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ElementPosition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ElementPosition (float x, float y, float width, float height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 x, float32 y, float32 width, float32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ElementPosition.#ctor(System.Single,System.Single,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="width" Type="System.Single" />
+        <Parameter Name="height" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">A relativa coordenada X do canto superior esquerdo de um elemento gráfico aplicável.</param>
+        <param name="y">A relativa coordenada Y do canto superior esquerdo de um elemento gráfico aplicável.</param>
+        <param name="width">A largura do elemento do gráfico.</param>
+        <param name="height">A altura do elemento do gráfico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> classe com especificado <paramref name="x" />, <paramref name="y" />, <paramref name="width" /> e <paramref name="height" /> parâmetros.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="public bool Auto { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Auto" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Auto" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se um elemento gráfico aplicáveis será posicionado automaticamente pelo <see cref="T:System.Web.UI.DataVisualization.Charting.Chart" /> controle.</summary>
+        <value>
+          <see langword="true" />Se o elemento de gráfico será posicionado automaticamente pelo controle do gráfico; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para posicionar automaticamente um elemento de gráfico. Por exemplo, para posicionar a legenda automaticamente, defina o <xref:System.Web.UI.DataVisualization.Charting.Legend.Position%2A> propriedade <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Auto%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public float Bottom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição inferior de um elemento gráfico, em coordenadas relativas.</summary>
+        <value>Um <see langword="float" /> valor que representa a posição inferior do elemento do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A parte inferior do elemento do gráfico é sempre expresso em coordenadas relativas e é relativo a um <xref:System.Web.UI.DataVisualization.Charting.ChartArea> se desenhada dentro de uma área do gráfico ou em relação à imagem de gráfico inteiro se desenhada fora de um elemento de área de gráfico do objeto.  
+  
+ Gráfico de coordenadas de uso (0,0) para o canto superior esquerdo e (100,100) de um canto inferior direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromRectangleF">
+      <MemberSignature Language="C#" Value="public void FromRectangleF (System.Drawing.RectangleF rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FromRectangleF(valuetype System.Drawing.RectangleF rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ElementPosition.FromRectangleF(System.Drawing.RectangleF)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.RectangleF" />
+      </Parameters>
+      <Docs>
+        <param name="rect">Um <see cref="T:System.Drawing.RectangleF" /> estrutura usada para inicializar o objeto de posição do elemento.</param>
+        <summary>Inicializa um <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> de objeto um <see cref="T:System.Drawing.RectangleF" /> estrutura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public float Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura de um elemento de gráfico.</summary>
+        <value>Um <see langword="float" /> valor que representa a altura do elemento do gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sempre usa coordenadas relativas. Se você definir um valor 0-100 fora do intervalo de pixel, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public float Right { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do lado direito de um elemento gráfico, em coordenadas relativas.</summary>
+        <value>Um <see langword="float" /> valor que representa a posição do lado direito de um elemento de gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna um valor que representa a posição relativa do lado direito de um elemento gráfico aplicável.  
+  
+ A posição direita sempre é expresso em coordenadas relativas e é relativo a um <xref:System.Web.UI.DataVisualization.Charting.ChartArea> se desenhada dentro de uma área do gráfico ou em relação à imagem de gráfico inteiro se desenhada fora de um elemento de área de gráfico do objeto.  
+  
+ Gráfico de coordenadas de uso (0,0) para o canto superior esquerdo e (100,100) de um canto inferior direito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.SizeF Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.SizeF Size" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho de um elemento de gráfico.</summary>
+        <value>Um <see cref="T:System.Drawing.SizeF" /> valor que representa o tamanho de um elemento de gráfico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToRectangleF">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF ToRectangleF ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.RectangleF ToRectangleF() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.ElementPosition.ToRectangleF" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Drawing.RectangleF" /> objeto que representa as coordenadas de um <see cref="T:System.Web.UI.DataVisualization.Charting.ElementPosition" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Drawing.RectangleF" /> estrutura que representa as coordenadas de um objeto de posição do elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método converte a posição de um elemento em um <xref:System.Drawing.RectangleF> estrutura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public float Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de um elemento de gráfico.</summary>
+        <value>Um <see langword="float" /> valor que representa a largura de um elemento de gráfico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre usa coordenadas relativas; Se você definir um valor fora de 0 a 100 intervalo de pixel, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada X relativa do canto superior esquerdo de um elemento gráfico aplicável.</summary>
+        <value>Um <see langword="float" /> valor que representa a coordenada X do canto superior esquerdo de um elemento gráfico aplicável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.X%2A> propriedade sempre é expresso em coordenadas relativas e é relativo a um <xref:System.Web.UI.DataVisualization.Charting.ChartArea> se desenhada dentro de uma área do gráfico ou em relação à imagem de gráfico inteiro se desenhada fora de um elemento de área de gráfico do objeto.  
+  
+ Essa propriedade sempre usa coordenadas relativas; Se você definir um valor fora de 0 a 100 intervalo de pixel, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.ElementPosition.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada Y relativa do canto superior esquerdo de um elemento gráfico aplicável.</summary>
+        <value>Um <see langword="float" /> valor que representa a coordenada Y do canto superior esquerdo de um elemento gráfico aplicável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.ElementPosition.Y%2A> propriedade sempre é expresso em coordenadas relativas e é relativo a um <xref:System.Web.UI.DataVisualization.Charting.ChartArea> se desenhada dentro de uma área do gráfico ou em relação à imagem de gráfico inteiro se desenhada fora de um elemento de área de gráfico do objeto.  
+  
+ Essa propriedade sempre usa coordenadas relativas; Se você definir um valor fora de 0 a 100 intervalo de pixel, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

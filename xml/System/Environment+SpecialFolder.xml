@@ -1,0 +1,1279 @@
+<Type Name="Environment+SpecialFolder" FullName="System.Environment+SpecialFolder">
+  <TypeSignature Language="C#" Value="public enum Environment.SpecialFolder" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed Environment/SpecialFolder extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Environment.SpecialFolder" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as constantes enumeradas usadas para recuperar os caminhos de diretório para pastas especiais do sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As pastas especiais do sistema são pastas como **arquivos de programa**, **programas**, **sistema**, ou **inicialização**, que contêm informações comuns. Pastas especiais são definidas por padrão pelo sistema ou explicitamente pelo usuário, ao instalar uma versão do Windows.  
+  
+ O <xref:System.Environment.GetFolderPath%2A> método retorna os locais associados a esta enumeração. Os locais das pastas podem ter valores diferentes em diferentes sistemas operacionais, o usuário pode alterar alguns dos locais e os locais são localizados.  
+  
+ Para obter mais informações sobre manipuladores de eventos, consulte o [KNOWNFOLDERID](http://msdn.microsoft.com/library/dd378457.aspx) constantes na documentação do Windows.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar <xref:System.Environment.SpecialFolder> com o <xref:System.Environment.GetFolderPath%2A> método para obter o diretório do sistema.  
+  
+ [!code-cpp[Environment.GetFolderPath#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.GetFolderPath/CPP/getfolderpath.cpp#1)]
+ [!code-csharp[Environment.GetFolderPath#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.GetFolderPath/CS/getfolderpath.cs#1)]
+ [!code-vb[Environment.GetFolderPath#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.GetFolderPath/VB/getfolderpath.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdminTools">
+      <MemberSignature Language="C#" Value="AdminTools" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder AdminTools = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.AdminTools" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório de sistema de arquivos que é usado para armazenar ferramentas administrativas para um usuário individual. O MMC (Console de Gerenciamento Microsoft) salvará consoles personalizados nesse diretório e será movido com o usuário. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationData">
+      <MemberSignature Language="C#" Value="ApplicationData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder ApplicationData = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.ApplicationData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para dados específicos do aplicativo para o usuário móvel atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um usuário móvel funciona em mais de um computador em uma rede. Perfil de usuário móvel é mantido em um servidor na rede e é carregado em um sistema quando o usuário fizer logon.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CDBurning">
+      <MemberSignature Language="C#" Value="CDBurning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CDBurning = int32(59)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CDBurning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que atua como uma área de preparo para os arquivos aguardando para serem gravados em um CD. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonAdminTools">
+      <MemberSignature Language="C#" Value="CommonAdminTools" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonAdminTools = int32(47)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonAdminTools" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém ferramentas administrativas para todos os usuários do computador. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonApplicationData">
+      <MemberSignature Language="C#" Value="CommonApplicationData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonApplicationData = int32(35)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonApplicationData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para dados específicos do aplicativo que são usados por todos os aplicativos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonDesktopDirectory">
+      <MemberSignature Language="C#" Value="CommonDesktopDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonDesktopDirectory = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonDesktopDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém os arquivos e pastas que aparecem na área de trabalho para todos os usuários. Esta pasta especial só é válida para sistemas Windows NT. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonDocuments">
+      <MemberSignature Language="C#" Value="CommonDocuments" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonDocuments = int32(46)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonDocuments" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém os documentos que são comuns para todos os usuários. Essa pasta especial é válida para sistemas Windows NT, Windows 95 e Windows 98 sistemas com Shfolder.dll instalado. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonMusic">
+      <MemberSignature Language="C#" Value="CommonMusic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonMusic = int32(53)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonMusic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que serve como um repositório para os arquivos de música comuns para todos os usuários. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonOemLinks">
+      <MemberSignature Language="C#" Value="CommonOemLinks" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonOemLinks = int32(58)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonOemLinks" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor é reconhecido no Windows Vista para compatibilidade com versões anteriores, mas a pasta especial em si não é mais usada. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonPictures">
+      <MemberSignature Language="C#" Value="CommonPictures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonPictures = int32(54)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonPictures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que serve como um repositório para os arquivos de imagem comuns para todos os usuários. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonProgramFiles">
+      <MemberSignature Language="C#" Value="CommonProgramFiles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonProgramFiles = int32(43)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonProgramFiles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório de componentes que são compartilhados entre aplicativos.  
+  
+ Para ter o diretório de arquivos de programas comum x86 em um sistema não x86, use o membro <see cref="F:System.Environment.SpecialFolder.ProgramFilesX86" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonProgramFilesX86">
+      <MemberSignature Language="C#" Value="CommonProgramFilesX86" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonProgramFilesX86 = int32(44)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonProgramFilesX86" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta **Arquivos de Programas**. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonPrograms">
+      <MemberSignature Language="C#" Value="CommonPrograms" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonPrograms = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonPrograms" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma pasta de componentes que são compartilhados entre aplicativos. Esta pasta especial é válida apenas para os sistemas Windows NT, Windows 2000 e Windows XP. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonStartMenu">
+      <MemberSignature Language="C#" Value="CommonStartMenu" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonStartMenu = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonStartMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém os programas e as pastas que aparecem no menu **Iniciar** para todos os usuários. Esta pasta especial só é válida para sistemas Windows NT. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonStartup">
+      <MemberSignature Language="C#" Value="CommonStartup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonStartup = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonStartup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém os programas que aparecem na pasta **Inicialização** para todos os usuários. Esta pasta especial só é válida para sistemas Windows NT. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonTemplates">
+      <MemberSignature Language="C#" Value="CommonTemplates" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonTemplates = int32(45)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonTemplates" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém os modelos que estão disponíveis para todos os usuários. Esta pasta especial só é válida para sistemas Windows NT.  Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonVideos">
+      <MemberSignature Language="C#" Value="CommonVideos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder CommonVideos = int32(55)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.CommonVideos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que serve como um repositório para os arquivos de vídeo comuns para todos os usuários. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cookies">
+      <MemberSignature Language="C#" Value="Cookies" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Cookies = int32(33)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Cookies" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para os cookies de Internet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Desktop">
+      <MemberSignature Language="C#" Value="Desktop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Desktop = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Desktop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A área de trabalho lógica em vez do local do sistema de arquivos físico.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DesktopDirectory">
+      <MemberSignature Language="C#" Value="DesktopDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder DesktopDirectory = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.DesktopDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório usado para armazenar fisicamente os objetos de arquivo na área de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não confunda esse diretório com a pasta da área de trabalho em si, que é uma pasta virtual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Favorites">
+      <MemberSignature Language="C#" Value="Favorites" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Favorites = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Favorites" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para os itens favoritos do usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fonts">
+      <MemberSignature Language="C#" Value="Fonts" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Fonts = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Fonts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma pasta virtual que contém fontes. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="History">
+      <MemberSignature Language="C#" Value="History" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder History = int32(34)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.History" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para os itens de histórico da Internet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InternetCache">
+      <MemberSignature Language="C#" Value="InternetCache" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder InternetCache = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.InternetCache" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para os arquivos temporários da Internet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalApplicationData">
+      <MemberSignature Language="C#" Value="LocalApplicationData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder LocalApplicationData = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.LocalApplicationData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para dados específicos do aplicativo que são usados pelo usuário que não é móvel atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalizedResources">
+      <MemberSignature Language="C#" Value="LocalizedResources" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder LocalizedResources = int32(57)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.LocalizedResources" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém dados do recurso localizados. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MyComputer">
+      <MemberSignature Language="C#" Value="MyComputer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder MyComputer = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.MyComputer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta **Meu Computador**.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A constante MyComputer sempre retorna a cadeia de caracteres vazia ("") porque nenhum caminho está definido para a pasta de Meu computador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MyDocuments">
+      <MemberSignature Language="C#" Value="MyDocuments" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder MyDocuments = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.MyDocuments" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta **Meus Documentos**.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é equivalente ao pessoal.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MyMusic">
+      <MemberSignature Language="C#" Value="MyMusic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder MyMusic = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.MyMusic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta **Músicas**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MyPictures">
+      <MemberSignature Language="C#" Value="MyPictures" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder MyPictures = int32(39)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.MyPictures" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta **Minhas Imagens**.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MyVideos">
+      <MemberSignature Language="C#" Value="MyVideos" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder MyVideos = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.MyVideos" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório de sistema de arquivos que serve como um repositório para vídeos que pertencem a um usuário.  Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkShortcuts">
+      <MemberSignature Language="C#" Value="NetworkShortcuts" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder NetworkShortcuts = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.NetworkShortcuts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um diretório do sistema de arquivos que contém os objetos de link que podem existir na pasta virtual **Meus Locais de Rede**. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Personal">
+      <MemberSignature Language="C#" Value="Personal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Personal = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Personal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é equivalente a Meus documentos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrinterShortcuts">
+      <MemberSignature Language="C#" Value="PrinterShortcuts" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder PrinterShortcuts = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.PrinterShortcuts" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém os objetos de link que podem existir na pasta virtual **Impressoras**. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgramFiles">
+      <MemberSignature Language="C#" Value="ProgramFiles" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder ProgramFiles = int32(38)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.ProgramFiles" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório de arquivos de programa.  
+  
+ Em um sistema não x86, passar <see cref="F:System.Environment.SpecialFolder.ProgramFiles" /> para o método <see cref="M:System.Environment.GetFolderPath(System.Environment.SpecialFolder)" /> retorna o caminho para programas não x86. Para ter o diretório de arquivos de programas x86 em um sistema não x86, use o membro <see cref="F:System.Environment.SpecialFolder.ProgramFilesX86" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ProgramFilesX86">
+      <MemberSignature Language="C#" Value="ProgramFilesX86" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder ProgramFilesX86 = int32(42)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.ProgramFilesX86" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta **Arquivos de Programas** x86. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Programs">
+      <MemberSignature Language="C#" Value="Programs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Programs = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Programs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que contém os grupos de programas do usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Recent">
+      <MemberSignature Language="C#" Value="Recent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Recent = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Recent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que contém os documentos usados mais recentemente do usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Resources">
+      <MemberSignature Language="C#" Value="Resources" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Resources = int32(56)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Resources" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do sistema de arquivos que contém dados do recurso. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SendTo">
+      <MemberSignature Language="C#" Value="SendTo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder SendTo = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.SendTo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que contém os itens de menu Enviar Para.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StartMenu">
+      <MemberSignature Language="C#" Value="StartMenu" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder StartMenu = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.StartMenu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que contém os itens de menu Iniciar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Startup">
+      <MemberSignature Language="C#" Value="Startup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Startup = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Startup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que corresponde ao grupo de programas de Inicialização do usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema esses programas é iniciado sempre que um usuário faz logon ou inicia o Windows NT ou posterior, ou Windows 98 é iniciado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder System = int32(37)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório System.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemX86">
+      <MemberSignature Language="C#" Value="SystemX86" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder SystemX86 = int32(41)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.SystemX86" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta **System** do Windows. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Templates">
+      <MemberSignature Language="C#" Value="Templates" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Templates = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Templates" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório que serve como um repositório comum para os modelos de documento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserProfile">
+      <MemberSignature Language="C#" Value="UserProfile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder UserProfile = int32(40)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.UserProfile" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pasta do perfil do usuário. Os aplicativos não devem criar arquivos ou pastas nesse nível, eles devem colocar seus dados nos locais referenciados por <see cref="F:System.Environment.SpecialFolder.ApplicationData" />. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Windows">
+      <MemberSignature Language="C#" Value="Windows" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Environment/SpecialFolder Windows = int32(36)" />
+      <MemberSignature Language="DocId" Value="F:System.Environment.SpecialFolder.Windows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Environment+SpecialFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório do Windows ou SYSROOT. Isso corresponde às variáveis de ambiente %windir% ou %SYSTEMROOT%. Adicionado no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)].</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

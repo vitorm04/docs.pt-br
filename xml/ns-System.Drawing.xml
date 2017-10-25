@@ -1,0 +1,16 @@
+<Namespace Name="System.Drawing">
+  <Docs>
+    <summary>O <see cref="N:System.Drawing" /> namespace fornece acesso à funcionalidade básica de gráficos da GDI+. Mais funcionalidade avançada é fornecida no <see cref="N:System.Drawing.Drawing2D" />, <see cref="N:System.Drawing.Imaging" />, e <see cref="N:System.Drawing.Text" /> namespaces.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.Graphics> classe fornece métodos para desenhar o dispositivo de vídeo. Classes como <xref:System.Drawing.Rectangle> e <xref:System.Drawing.Point> encapsular primitivos de GDI+. O <xref:System.Drawing.Pen> classe é usada para desenhar linhas e curvas ao classes derivadas da classe abstrata <xref:System.Drawing.Brush> são usados para preencher os interiores das formas.  
+  
+> [!CAUTION]
+>  Classes de dentro do <xref:System.Drawing> namespace não têm suporte para uso em um serviço do Windows ou do ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço. Para uma alternativa com suporte, consulte [componentes do Windows Imaging](http://msdn.microsoft.com/library/windows/desktop/ee719654\(v=vs.85\).aspx).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,326 @@
+<Type Name="ToolboxItemFilterAttribute" FullName="System.ComponentModel.ToolboxItemFilterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ToolboxItemFilterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ToolboxItemFilterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ToolboxItemFilterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a cadeia de caracteres de filtro e tipo de filtro para um item de caixa de ferramentas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.ToolboxItemFilterAttribute>Fornece um mecanismo pelo qual caixa de ferramentas itens podem ser marcados para uso apenas com designers que têm um atributo ou o código que determina se o item deve ser habilitado ou desabilitado na caixa de ferramentas correspondente.  
+  
+ Um <xref:System.ComponentModel.ToolboxItemFilterAttribute> pode ser aplicado a um <xref:System.Drawing.Design.ToolboxItem> para indicar um tipo de filtro e de cadeia de caracteres de filtro que especificam quando habilitar ou desabilitar o item. <xref:System.ComponentModel.ToolboxItemFilterAttribute>também podem ser aplicadas a um designer para indicar a seus requisitos para habilitar os itens na caixa de ferramentas. Esse tipo de atributo pode ser usado para indicar que um item de caixa de ferramentas só pode ser habilitado quando um designer com uma cadeia de caracteres de filtro correspondente está sendo usado. O tipo do filtro é indicado no <xref:System.ComponentModel.ToolboxItemFilterAttribute.FilterType%2A> propriedade por um <xref:System.ComponentModel.ToolboxItemFilterType> que indica se e como uma correspondência de cadeia de caracteres de filtro é usada, ou se deseja usar código personalizado para determinar se deseja habilitar um item.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como aplicar o <xref:System.ComponentModel.ToolboxItemFilterAttribute>.  
+  
+ [!code-cpp[IToolboxUserExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxUserExample/CPP/samplecontrol.cpp#1)]
+ [!code-csharp[IToolboxUserExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxUserExample/CS/samplecontrol.cs#1)]
+ [!code-vb[IToolboxUserExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxUserExample/VB/samplecontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxItemFilterAttribute (string filterString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filterString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ToolboxItemFilterAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filterString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filterString">A cadeia de caracteres de filtro para o item de caixa de ferramentas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> classe usando a cadeia de caracteres do filtro especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxItemFilterAttribute (string filterString, System.ComponentModel.ToolboxItemFilterType filterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filterString, valuetype System.ComponentModel.ToolboxItemFilterType filterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ToolboxItemFilterAttribute.#ctor(System.String,System.ComponentModel.ToolboxItemFilterType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filterString" Type="System.String" />
+        <Parameter Name="filterType" Type="System.ComponentModel.ToolboxItemFilterType" />
+      </Parameters>
+      <Docs>
+        <param name="filterString">A cadeia de caracteres de filtro para o item de caixa de ferramentas.</param>
+        <param name="filterType">Um <see cref="T:System.ComponentModel.ToolboxItemFilterType" /> que indica o tipo do filtro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> usando a cadeia de caracteres do filtro especificado e o tipo de classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como aplicar o <xref:System.ComponentModel.ToolboxItemFilterAttribute>.  
+  
+ [!code-cpp[IToolboxUserExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IToolboxUserExample/CPP/samplecontrol.cpp#1)]
+ [!code-csharp[IToolboxUserExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IToolboxUserExample/CS/samplecontrol.cs#1)]
+ [!code-vb[IToolboxUserExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IToolboxUserExample/VB/samplecontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ToolboxItemFilterAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância ou uma referência nula (<see langword="Nothing" /> no Visual Basic).</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterString">
+      <MemberSignature Language="C#" Value="public string FilterString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FilterString" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ToolboxItemFilterAttribute.FilterString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de filtro para o item de caixa de ferramentas.</summary>
+        <value>A cadeia de caracteres de filtro para o item de caixa de ferramentas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterType">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.ToolboxItemFilterType FilterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.ToolboxItemFilterType FilterType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ToolboxItemFilterAttribute.FilterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.ToolboxItemFilterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do filtro.</summary>
+        <value>Um <see cref="T:System.ComponentModel.ToolboxItemFilterType" /> que indica o tipo do filtro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de filtro, juntamente com quaisquer elementos <xref:System.ComponentModel.ToolboxItemFilterAttribute> no designer atual, indica as regras para usar para determinar se um item específico da caixa de ferramentas deve ser ativado na caixa de ferramentas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ToolboxItemFilterAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ToolboxItemFilterAttribute.Match(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto de teste para uma cadeia de caracteres de filtro correspondente.</param>
+        <summary>Indica se o objeto especificado tem uma cadeia de caracteres de filtro correspondente.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado tiver uma correspondência de filtro de cadeia de caracteres; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ToolboxItemFilterAttribute.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ToolboxItemFilterAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID de tipo para o atributo.</summary>
+        <value>A ID de tipo para este atributo. Todos os <see cref="T:System.ComponentModel.ToolboxItemFilterAttribute" /> objetos com a mesma cadeia de caracteres de filtro retornam a mesma ID de tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

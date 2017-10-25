@@ -1,0 +1,286 @@
+<Type Name="TypedMessageConverter" FullName="System.ServiceModel.Description.TypedMessageConverter">
+  <TypeSignature Language="C#" Value="public abstract class TypedMessageConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TypedMessageConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.TypedMessageConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte uma mensagem tipada em uma mensagem não tipada ou uma mensagem não tipada em uma mensagem tipada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece funcionalidades para converter uma mensagem tipada em uma mensagem sem tipo ou uma mensagem sem tipo para uma mensagem tipada. Uma mensagem tipada é uma instância de um tipo que tem o <xref:System.ServiceModel.MessageContractAttribute> atributo anotado. Uma mensagem sem tipo é aquele que é uma ocorrência da <xref:System.ServiceModel.Channels.Message> classe.  Você pode anotar um tipo com o <xref:System.ServiceModel.MessageContractAttribute> para criar um tipo de mensagem personalizado e, em seguida, usar os métodos fornecidos por esta classe para convertê-lo sem um tipo <xref:System.ServiceModel.Channels.Message> instância.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypedMessageConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Description.TypedMessageConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.TypedMessageConverter Create (Type messageContract, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.TypedMessageConverter Create(class System.Type messageContract, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.Create(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.TypedMessageConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageContract" Type="System.Type" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="messageContract">Um tipo de contrato de mensagem que é um <see cref="T:System.Type" /> anotado com um <see cref="T:System.ServiceModel.MessageContractAttribute" />.</param>
+        <param name="action">Uma cadeia de caracteres de ação.</param>
+        <summary>Representa um método estático que retorna um <see cref="T:System.ServiceModel.Description.TypedMessageConverter" /> instância.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Description.TypedMessageConverter" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Os argumentos são<see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">O tipo de contrato de mensagem especificada não tem MessageContractAttribute aplicado</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.TypedMessageConverter Create (Type messageContract, string action, System.ServiceModel.DataContractFormatAttribute formatterAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.TypedMessageConverter Create(class System.Type messageContract, string action, class System.ServiceModel.DataContractFormatAttribute formatterAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.Create(System.Type,System.String,System.ServiceModel.DataContractFormatAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.TypedMessageConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageContract" Type="System.Type" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="formatterAttribute" Type="System.ServiceModel.DataContractFormatAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="messageContract">Um tipo de contrato de mensagem que é um <see cref="T:System.Type" /> anotado com um <see cref="T:System.ServiceModel.MessageContractAttribute" />.</param>
+        <param name="action">Uma cadeia de caracteres de ação.</param>
+        <param name="formatterAttribute">Um <see cref="T:System.ServiceModel.DataContractFormatAttribute" /> que especifica o formatador a ser usado.</param>
+        <summary>Representa um método estático que retorna um <see cref="T:System.ServiceModel.Description.TypedMessageConverter" /> instância.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Description.TypedMessageConverter" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Os argumentos são<see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">O tipo de contrato de mensagem especificada não tem MessageContractAttribute aplicado</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.TypedMessageConverter Create (Type messageContract, string action, System.ServiceModel.XmlSerializerFormatAttribute formatterAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.TypedMessageConverter Create(class System.Type messageContract, string action, class System.ServiceModel.XmlSerializerFormatAttribute formatterAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.Create(System.Type,System.String,System.ServiceModel.XmlSerializerFormatAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.TypedMessageConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageContract" Type="System.Type" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="formatterAttribute" Type="System.ServiceModel.XmlSerializerFormatAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="messageContract">Um tipo de contrato de mensagem que é um <see cref="T:System.Type" /> anotado com um <see cref="T:System.ServiceModel.MessageContractAttribute" />.</param>
+        <param name="action">Uma cadeia de caracteres de ação.</param>
+        <param name="formatterAttribute">Um <see cref="T:System.ServiceModel.XmlSerializerFormatAttribute" /> que especifica o formatador a ser usado.</param>
+        <summary>Representa um método estático que retorna um <see cref="T:System.ServiceModel.Description.TypedMessageConverter" /> instância.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Description.TypedMessageConverter" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Os argumentos são<see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">O tipo de contrato de mensagem especificada não tem MessageContractAttribute aplicado</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.TypedMessageConverter Create (Type messageContract, string action, string defaultNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.TypedMessageConverter Create(class System.Type messageContract, string action, string defaultNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.Create(System.Type,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.TypedMessageConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageContract" Type="System.Type" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="messageContract">Um tipo de contrato de mensagem que é um <see cref="T:System.Type" /> anotado com um <see cref="T:System.ServiceModel.MessageContractAttribute" />.</param>
+        <param name="action">Uma cadeia de caracteres de ação.</param>
+        <param name="defaultNamespace">Um namespace.</param>
+        <summary>Representa um método estático que retorna um <see cref="T:System.ServiceModel.Description.TypedMessageConverter" /> instância.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Description.TypedMessageConverter" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Os argumentos são<see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">O tipo de contrato de mensagem especificada não tem MessageContractAttribute aplicado</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.TypedMessageConverter Create (Type messageContract, string action, string defaultNamespace, System.ServiceModel.DataContractFormatAttribute formatterAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.TypedMessageConverter Create(class System.Type messageContract, string action, string defaultNamespace, class System.ServiceModel.DataContractFormatAttribute formatterAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.Create(System.Type,System.String,System.String,System.ServiceModel.DataContractFormatAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.TypedMessageConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageContract" Type="System.Type" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+        <Parameter Name="formatterAttribute" Type="System.ServiceModel.DataContractFormatAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="messageContract">Um tipo de contrato de mensagem que é um <see cref="T:System.Type" /> anotado com um <see cref="T:System.ServiceModel.MessageContractAttribute" />.</param>
+        <param name="action">Uma cadeia de caracteres de ação.</param>
+        <param name="defaultNamespace">Um namespace.</param>
+        <param name="formatterAttribute">Um <see cref="T:System.ServiceModel.DataContractFormatAttribute" /> que especifica o formatador a ser usado.</param>
+        <summary>Representa um método estático que retorna um <see cref="T:System.ServiceModel.Description.TypedMessageConverter" /> instância.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Description.TypedMessageConverter" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Os argumentos são<see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">O tipo de contrato de mensagem especificada não tem MessageContractAttribute aplicado</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.Description.TypedMessageConverter Create (Type messageContract, string action, string defaultNamespace, System.ServiceModel.XmlSerializerFormatAttribute formatterAttribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.Description.TypedMessageConverter Create(class System.Type messageContract, string action, string defaultNamespace, class System.ServiceModel.XmlSerializerFormatAttribute formatterAttribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.Create(System.Type,System.String,System.String,System.ServiceModel.XmlSerializerFormatAttribute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.TypedMessageConverter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageContract" Type="System.Type" />
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="defaultNamespace" Type="System.String" />
+        <Parameter Name="formatterAttribute" Type="System.ServiceModel.XmlSerializerFormatAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="messageContract">Um tipo de contrato de mensagem que é um <see cref="T:System.Type" /> anotado com um <see cref="T:System.ServiceModel.MessageContractAttribute" />.</param>
+        <param name="action">Uma cadeia de caracteres de ação.</param>
+        <param name="defaultNamespace">Um namespace.</param>
+        <param name="formatterAttribute">Um <see cref="T:System.ServiceModel.XmlSerializerFormatAttribute" /> que especifica o formatador a ser usado.</param>
+        <summary>Representa um método estático que retorna um <see cref="T:System.ServiceModel.Description.TypedMessageConverter" /> instância.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Description.TypedMessageConverter" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Os argumentos são<see langword="null" /></exception>
+        <exception cref="T:System.ArgumentException">O tipo de contrato de mensagem especificada não tem MessageContractAttribute aplicado</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FromMessage">
+      <MemberSignature Language="C#" Value="public abstract object FromMessage (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object FromMessage(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.FromMessage(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem sem tipo.</param>
+        <summary>Cria uma mensagem tipada com base na instância <see cref="T:System.ServiceModel.Channels.Message" /> especificada.</summary>
+        <returns>Um objeto que é uma mensagem tipada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa um sem tipo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] mensagem, ou seja, uma instância do <xref:System.ServiceModel.Channels.Message>e os converte em uma mensagem tipada, ou seja, uma instância de um tipo que é anotado, a <xref:System.ServiceModel.MessageContractAttribute>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToMessage">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.Message ToMessage (object typedMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message ToMessage(object typedMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.ToMessage(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typedMessage" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="typedMessage">Uma mensagem tipada.</param>
+        <summary>Cria um <see cref="T:System.ServiceModel.Channels.Message" /> instância da mensagem de tipo especificada.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Channels.Message" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToMessage">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.Message ToMessage (object typedMessage, System.ServiceModel.Channels.MessageVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message ToMessage(object typedMessage, class System.ServiceModel.Channels.MessageVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.TypedMessageConverter.ToMessage(System.Object,System.ServiceModel.Channels.MessageVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typedMessage" Type="System.Object" />
+        <Parameter Name="version" Type="System.ServiceModel.Channels.MessageVersion" />
+      </Parameters>
+      <Docs>
+        <param name="typedMessage">Uma mensagem tipada.</param>
+        <param name="version">Um <see cref="T:System.ServiceModel.Channels.MessageVersion" /> que especifica as versões de SOAP e WS-Addressing associados a uma mensagem.</param>
+        <summary>Cria um <see cref="T:System.ServiceModel.Channels.Message" /> instância da mensagem de tipo especificada usando a versão especificada.</summary>
+        <returns>Uma instância de <see cref="T:System.ServiceModel.Channels.Message" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

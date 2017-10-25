@@ -1,0 +1,85 @@
+<Type Name="CodeParser" FullName="System.CodeDom.Compiler.CodeParser">
+  <TypeSignature Language="C#" Value="public abstract class CodeParser : System.CodeDom.Compiler.ICodeParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeParser extends System.Object implements class System.CodeDom.Compiler.ICodeParser" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CodeParser" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.CodeDom.Compiler.ICodeParser</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma implementação vazia da interface <see cref="T:System.CodeDom.Compiler.ICodeParser" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores que criam compiladores podem implementar esta interface para oferecer suporte a código para análise pelos designers.  
+  
+> [!NOTE]
+>  Esta classe contém uma demanda de link e uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é lançado quando o chamador imediato ou a classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeParser ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeParser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.Compiler.CodeParser" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Parse">
+      <MemberSignature Language="C#" Value="public abstract System.CodeDom.CodeCompileUnit Parse (System.IO.TextReader codeStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.CodeDom.CodeCompileUnit Parse(class System.IO.TextReader codeStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeParser.Parse(System.IO.TextReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeCompileUnit</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codeStream" Type="System.IO.TextReader" />
+      </Parameters>
+      <Docs>
+        <param name="codeStream">Um <see cref="T:System.IO.TextReader" /> que é usado para ler o código a ser analisada.</param>
+        <summary>Compila o fluxo de texto especificado em um <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <returns>Um <see cref="T:System.CodeDom.CodeCompileUnit" /> que contém o modelo de código gerado pela análise de código.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,152 @@
+<Type Name="Consistency" FullName="System.Runtime.ConstrainedExecution.Consistency">
+  <TypeSignature Language="C#" Value="public enum Consistency" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed Consistency extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ConstrainedExecution.Consistency" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica um contrato de confiabilidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.ConstrainedExecution.Consistency> enumeração é usada como um parâmetro para o <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> atributo para especificar a garantia de confiabilidade em um método específico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.ConstrainedExecution.Consistency> ao especificar uma região de execução restrita para um método de enumeração. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.%23ctor%2A> construtor.  
+  
+ [!code-csharp[System.Runtime.ConstrainedExecution#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.ConstrainedExecution/cs/program.cs#3)]
+ [!code-vb[System.Runtime.ConstrainedExecution#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.ConstrainedExecution/vb/program.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MayCorruptAppDomain">
+      <MemberSignature Language="C#" Value="MayCorruptAppDomain" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.ConstrainedExecution.Consistency MayCorruptAppDomain = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Consistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>No caso de condições excepcionais, o common language runtime (CLR) não garante em relação a consistência de estado no domínio do aplicativo atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MayCorruptInstance">
+      <MemberSignature Language="C#" Value="MayCorruptInstance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.ConstrainedExecution.Consistency MayCorruptInstance = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Consistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>No caso de condições excepcionais, o método é garantido para limitar o dano de estado para a instância atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MayCorruptProcess">
+      <MemberSignature Language="C#" Value="MayCorruptProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.ConstrainedExecution.Consistency MayCorruptProcess = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Consistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>No caso de condições excepcionais, o CLR não garante em relação a consistência de estado. ou seja, a condição pode corromper o processo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WillNotCorruptState">
+      <MemberSignature Language="C#" Value="WillNotCorruptState" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.ConstrainedExecution.Consistency WillNotCorruptState = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Consistency</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>No caso de condições excepcionais, o método é garantido não corromper o estado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Isso não garante que o método nunca falhará; No entanto, ele garante que uma falha nunca corromperá estado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

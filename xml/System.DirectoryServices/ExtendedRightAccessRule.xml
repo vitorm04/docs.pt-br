@@ -1,0 +1,185 @@
+<Type Name="ExtendedRightAccessRule" FullName="System.DirectoryServices.ExtendedRightAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class ExtendedRightAccessRule : System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExtendedRightAccessRule extends System.DirectoryServices.ActiveDirectoryAccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ExtendedRightAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.ActiveDirectoryAccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um tipo específico de regra de acesso que é usado para permitir ou negar um direito estendido a um objeto do Active Directory. Direitos estendidos são operações especiais que não são cobertas pelo conjunto padrão de direitos de acesso. Um exemplo de um direito [enviar-como](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/r_send_as.asp), que concede a um usuário o direito para enviar email para outro usuário. Para obter uma lista de possíveis direitos estendidas, consulte o tópico [direitos estendida](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/extended_rights.asp) na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  Para obter mais informações sobre direitos estendidas, consulte o tópico [direitos de acesso de controle](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_controlaccessrights.asp), também na biblioteca MSDN.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedRightAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ExtendedRightAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um <see cref="T:System.Security.Principal.IdentityReference" /> objeto que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ExtendedRightAccessRule" /> classe com o tipo de controle de acesso e referência de identidade especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma regra de acesso correto estendido que se aplica a todos os direitos estendidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedRightAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ExtendedRightAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.ActiveDirectorySecurityInheritance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ExtendedRightAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso e a herança de segurança do Active Directory.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar este construtor cria uma regra de acesso correto estendido que se aplica a todos os direitos estendidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedRightAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, Guid extendedRightType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.Guid extendedRightType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ExtendedRightAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="extendedRightType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="extendedRightType">O Guid de direitos do estendido que essa regra de acesso se aplica. Para obter mais informações, consulte o tópico direitos-Guid na biblioteca MSDN em http://msdn.microsoft.com/library.  Na documentação do esquema do Active Directory, essas informações podem ser encontradas no **direitos GUID** linha na página de referência para cada direito estendido. Se esse parâmetro for <see cref="F:System.Guid.Empty" />, a regra de acesso se aplica a todos os direitos estendidos. Para obter uma lista de direitos estendidas, consulte os direitos estendidos de tópico na biblioteca MSDN.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ExtendedRightAccessRule" /> classe com a referência de identidade especificado, o tipo de controle de acesso e o identificador de direito estendido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedRightAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ExtendedRightAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.DirectoryServices.ActiveDirectorySecurityInheritance,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <param name="inheritedObjectType">O GUID de esquema do tipo de objeto filho que pode herdar essa regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ExtendedRightAccessRule" /> classe com o referência de identidade especificado, o tipo de controle de acesso, a herança de segurança do Active Directory e o tipo de objeto herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma regra de acesso correto estendido que se aplica a todos os direitos estendidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedRightAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, Guid extendedRightType, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.Guid extendedRightType, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ExtendedRightAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.Guid,System.DirectoryServices.ActiveDirectorySecurityInheritance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="extendedRightType" Type="System.Guid" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="extendedRightType">O Guid de direitos do estendido que essa regra de acesso se aplica. Para obter mais informações, consulte o tópico direitos-Guid na biblioteca MSDN em http://msdn.microsoft.com/library.  Na documentação do esquema do Active Directory, essas informações podem ser encontradas no **direitos GUID** linha na página de referência para cada direito estendido. Se esse parâmetro for <see cref="F:System.Guid.Empty" />, a regra de acesso se aplica a todos os direitos estendidos. Para obter uma lista de direitos estendidas, consulte os direitos estendidos de tópico na biblioteca MSDN.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ExtendedRightAccessRule" /> classe com o referência de identidade especificado, o tipo de controle de acesso, o identificador de direito estendido e a herança de segurança do Active Directory.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExtendedRightAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.AccessControlType type, Guid extendedRightType, System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.AccessControlType type, valuetype System.Guid extendedRightType, valuetype System.DirectoryServices.ActiveDirectorySecurityInheritance inheritanceType, valuetype System.Guid inheritedObjectType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ExtendedRightAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.AccessControlType,System.Guid,System.DirectoryServices.ActiveDirectorySecurityInheritance,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+        <Parameter Name="extendedRightType" Type="System.Guid" />
+        <Parameter Name="inheritanceType" Type="System.DirectoryServices.ActiveDirectorySecurityInheritance" />
+        <Parameter Name="inheritedObjectType" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que identifica o objeto de confiança da regra de acesso.</param>
+        <param name="type">Um dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica o tipo de regra de acesso.</param>
+        <param name="extendedRightType">O atributo Guid de direitos de estendido que essa regra de acesso se aplica. Para obter mais informações, consulte o tópico direitos-Guid na biblioteca MSDN em http://msdn.microsoft.com/library. Na documentação do esquema do Active Directory, essas informações podem ser encontradas no **direitos GUID** linha na página de referência para cada direito estendido. Se esse parâmetro for <see cref="F:System.Guid.Empty" />, a regra de acesso se aplica a todos os direitos estendidos. Para obter uma lista de direitos estendidas, consulte os direitos estendidos de tópico na biblioteca MSDN.</param>
+        <param name="inheritanceType">Um dos valores de enumeração <see cref="T:System.DirectoryServices.ActiveDirectorySecurityInheritance" /> que especifica o tipo de herança da regra de acesso.</param>
+        <param name="inheritedObjectType">O GUID de esquema do tipo de objeto filho que pode herdar essa regra de acesso.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.DirectoryServices.ExtendedRightAccessRule" /> classe com referência de identidade especificado, o tipo de controle de acesso, identificador direito estendido, herança de segurança do Active Directory e o tipo de objeto herdado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

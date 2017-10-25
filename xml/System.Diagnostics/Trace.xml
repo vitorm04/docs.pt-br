@@ -1,0 +1,2376 @@
+<Type Name="Trace" FullName="System.Diagnostics.Trace">
+  <TypeSignature Language="C#" Value="public sealed class Trace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Trace extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Trace" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos e propriedades que ajudam a rastrear a execução do código. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar as propriedades e métodos de <xref:System.Diagnostics.Trace> compilações de classe para a versão de instrumento. Instrumentação permite monitorar a integridade de seu aplicativo em execução nas configurações da vida real. Rastreamento ajuda a isolar problemas e corrigi-los sem afetar um sistema em execução.  
+  
+ Essa classe fornece métodos para exibir um <xref:System.Diagnostics.Trace.Assert%2A> caixa de diálogo e para emitir uma declaração que será sempre <xref:System.Diagnostics.Trace.Fail%2A>. Essa classe fornece métodos de gravação em variações a seguir: <xref:System.Diagnostics.Trace.Write%2A>, <xref:System.Diagnostics.Trace.WriteLine%2A>, <xref:System.Diagnostics.Trace.WriteIf%2A>, e <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
+  
+ O <xref:System.Diagnostics.BooleanSwitch> e <xref:System.Diagnostics.TraceSwitch> classes fornecem meios para controlar dinamicamente a saída de rastreamento. Você pode modificar os valores dessas opções sem recompilar o aplicativo. Para obter informações sobre como usar o arquivo de configuração para definir uma opção, consulte o <xref:System.Diagnostics.Switch> classe e o [como: criar, inicializar e configurar opções de rastreamento](~/docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md) tópico.  
+  
+ Você pode personalizar o destino da saída de rastreamento adicionando <xref:System.Diagnostics.TraceListener> instâncias ou removendo instâncias da <xref:System.Diagnostics.Trace.Listeners%2A> coleção. O <xref:System.Diagnostics.Trace.Listeners%2A> coleção é compartilhada por ambos os <xref:System.Diagnostics.Debug> e o <xref:System.Diagnostics.Trace> classes; adicionando um ouvinte de rastreamento para qualquer classe adiciona o ouvinte a ambos. Por padrão, saída de rastreamento é emitida usando o <xref:System.Diagnostics.DefaultTraceListener> classe.  
+  
+> [!NOTE]
+>  Adicionar um ouvinte de rastreamento para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta pode causar uma exceção seja lançada durante um rastreamento, se um recurso usado pelo ouvinte de rastreamento não está disponível. As condições e a exceção lançada dependem o ouvinte de rastreamento e não podem ser enumerados neste tópico. Pode ser útil fazer chamadas para o <xref:System.Diagnostics.Trace> métodos em `try` / `catch` blocos para detectar e lidar com todas as exceções de ouvintes de rastreamento.  
+  
+> [!NOTE]
+>  Se você adicionar ouvintes de rastreamento ao código parcialmente confiável, você receberá um <xref:System.Security.SecurityException> exceção, como a adição de ouvintes de rastreamento requer <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> permissão. Para rastrear código parcialmente confiável está em execução em uma área restrita no Visual Studio, não adicione ouvintes de rastreamento. Em vez disso, exibir o <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> mensagens no **saída** janela.  
+  
+ O <xref:System.Diagnostics.Trace> classe fornece propriedades para obter ou definir o nível de <xref:System.Diagnostics.Trace.Indent%2A>, o <xref:System.Diagnostics.Trace.IndentSize%2A>e se deseja <xref:System.Diagnostics.Trace.AutoFlush%2A> após cada gravação.  
+  
+ Para definir o <xref:System.Diagnostics.Trace.AutoFlush%2A> e <xref:System.Diagnostics.Trace.IndentSize%2A> para <xref:System.Diagnostics.Trace>, você pode editar o arquivo de configuração que corresponde ao nome do seu aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="3" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ O <xref:System.Diagnostics.ConditionalAttribute> atributo é aplicado a métodos de <xref:System.Diagnostics.Trace>. Compiladores que suportem <xref:System.Diagnostics.ConditionalAttribute> ignorar chamadas para esses métodos, a menos que "TRACE" é definido como um símbolo de compilação condicional. Consulte a documentação do compilador para determinar se <xref:System.Diagnostics.ConditionalAttribute> tem suporte e a sintaxe para definir um símbolo de compilação condicional.  
+  
+> [!NOTE]
+>  Em projetos do Visual Studio, por padrão, o símbolo de compilação condicional "DEBUG" é definido para compilações de depuração e o símbolo de "TRACE" está definido para ambos depurar e compilações de versão. Para obter informações sobre como desativar esse comportamento, consulte a documentação do Visual Studio.  
+  
+ Para definir o símbolo de compilação condicional "TRACE" em c#, adicione o `/d:TRACE` opção de linha de comando do compilador quando você compila o código usando uma linha de comando ou adicionar `#define TRACE` à parte superior do seu arquivo. No Visual Basic, adicione o `/d:TRACE=True` opção de linha de comando do compilador ou adicionar `#Const TRACE=True` para o arquivo.  
+  
+ <xref:System.Diagnostics.ConditionalAttribute>Não há suporte para o compilador do C++. Para fornecer funcionalidade equivalente, é necessário colocar chamadas para os métodos de <xref:System.Diagnostics.Trace> em uma `#if defined(TRACE) ... #endif` bloquear e, em seguida, adicione o `/DTRACE` opção de linha de comando do compilador ou adicionar `#define TRACE` para o arquivo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Diagnostics.Trace> para indicar o início e o fim da execução do programa. O exemplo também usa o <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace.Unindent%2A?displayProperty=nameWithType> métodos para distinguir a saída de rastreamento. Para obter um exemplo mais completo do uso de <xref:System.Diagnostics.Trace>, consulte [como: adicionar instruções de rastreamento ao código do aplicativo](~/docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
+  
+ [!code-cpp[Classic Trace Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Assert(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="condition">A expressão condicional a ser avaliada. Se a condição for <see langword="true" />, uma mensagem de falha não será enviada e a caixa de mensagem não será exibida.</param>
+        <summary>Verifica uma condição; se a condição for <see langword="false" />, exibirá uma caixa de mensagem que mostra a pilha de chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> método se você quiser fazer asserções versão cria. O <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> método funciona apenas em compilações de depuração. Para obter mais informações, consulte [itens no código gerenciado](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+ Normalmente, o <xref:System.Diagnostics.Trace.Assert%28System.Boolean%29> método é usado para identificar erros de lógica durante o desenvolvimento de programa. <xref:System.Diagnostics.Trace.Assert%28System.Boolean%29>avalia a condição. Se o resultado for `false`, ele envia uma mensagem de falha para o <xref:System.Diagnostics.Trace.Listeners%2A> coleção. Você pode personalizar esse comportamento adicionando um <xref:System.Diagnostics.TraceListener> , ou remover uma, a <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+ Quando o aplicativo é executado no modo de interface do usuário, ele exibe uma caixa de mensagem que mostra a pilha de chamadas com arquivos e números de linha. A caixa de mensagem contém três botões: **anular**, **novamente**, e **ignorar**. Clique o **anular** botão encerra o aplicativo. Clicando em **novamente** envia para o código no depurador se seu aplicativo estiver sendo executado em um depurador ou oferece para abrir um depurador se não for. Clicando em **ignorar** continua com a próxima instrução no código.  
+  
+> [!NOTE]
+>  A exibição da caixa de mensagem depende da presença do <xref:System.Diagnostics.DefaultTraceListener>. Se o <xref:System.Diagnostics.DefaultTraceListener> não está no <xref:System.Diagnostics.Trace.Listeners%2A> coleção, a caixa de mensagem não é exibida. O <xref:System.Diagnostics.DefaultTraceListener> pode ser removido com o [ &lt;limpar&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), o [ &lt;remover&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), ou chamando o <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método sobre o <xref:System.Diagnostics.Trace.Listeners%2A> propriedade (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Você pode alterar o comportamento do <xref:System.Diagnostics.DefaultTraceListener> no arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode habilitar e desabilitar a caixa de mensagem assert ou definir o <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A?displayProperty=nameWithType> propriedade. O arquivo de configuração deve ser formatado da seguinte maneira:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="4"/>  
+    </switches>  
+    <trace autoflush="false" indentsize="4"/>  
+    <assert assertuienabled="true" logfilename=".\TraceLog.txt"/>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um índice para uma matriz. Em seguida, é executada alguma ação que define o valor do índice. Em seguida chama o código <xref:System.Diagnostics.Trace.Assert%2A> para verificar se o índice de valor é válido. Se não for válido, o <xref:System.Diagnostics.Trace.Assert%2A> gera a pilha de chamadas.  
+  
+ [!code-cpp[Classic Trace.Assert Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Assert Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Assert Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Assert Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Assert Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Assert Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Assert(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">A expressão condicional a ser avaliada. Se a condição for <see langword="true" />, a mensagem especificada não será enviada e a caixa de mensagem não será exibida.</param>
+        <param name="message">A mensagem a ser enviada para a coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</param>
+        <summary>Verifica uma condição, se a condição for <see langword="false" />, gerará uma mensagem especificada e exibirá uma caixa de mensagem que mostra a pilha de chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> método se você quiser fazer asserções versão cria. O <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> método funciona apenas em compilações de depuração. Para obter mais informações, consulte [itens no código gerenciado](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+ Normalmente, o <xref:System.Diagnostics.Trace.Assert%28System.Boolean%2CSystem.String%29> método é usado para identificar erros de lógica durante o desenvolvimento de programa. <xref:System.Diagnostics.Trace.Assert%28System.Boolean%2CSystem.String%29>avalia a condição. Se o resultado for `false`, ele envia a mensagem de diagnóstica especificada para o <xref:System.Diagnostics.Trace.Listeners%2A> coleção. Você pode personalizar esse comportamento adicionando um <xref:System.Diagnostics.TraceListener> , ou remover uma, a <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+ Quando o aplicativo é executado no modo de interface do usuário, ele exibe uma caixa de mensagem que mostra a pilha de chamadas com arquivos e números de linha. A caixa de mensagem contém três botões: **anular**, **novamente**, e **ignorar**. Clique o **anular** botão encerra o aplicativo. Clicando em **novamente** envia para o código no depurador se seu aplicativo estiver sendo executado em um depurador ou oferece para abrir um depurador se não for. Clicando em **ignorar** continua com a próxima instrução no código.  
+  
+> [!NOTE]
+>  A exibição da caixa de mensagem depende da presença do <xref:System.Diagnostics.DefaultTraceListener>. Se o <xref:System.Diagnostics.DefaultTraceListener> não está no <xref:System.Diagnostics.Trace.Listeners%2A> coleção, a caixa de mensagem não é exibida. O <xref:System.Diagnostics.DefaultTraceListener> pode ser removido com o [ &lt;limpar&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), o [ &lt;remover&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), ou chamando o <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método sobre o <xref:System.Diagnostics.Trace.Listeners%2A> propriedade (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Você pode alterar o comportamento do <xref:System.Diagnostics.DefaultTraceListener> no arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode habilitar e desabilitar a caixa de mensagem assert ou definir o <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A?displayProperty=nameWithType> propriedade. O arquivo de configuração deve ser formatado da seguinte maneira:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="4"/>  
+    </switches>  
+    <trace autoflush="false" indentsize="4"/>  
+    <assert assertuienabled="true" logfilename=".\TraceLog.txt"/>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir verifica que o `type` parâmetro é válido. Se o `type` transmitido é `null`, o <xref:System.Diagnostics.Trace.Assert%2A> gera uma mensagem.  
+  
+ [!code-cpp[Classic Trace.Assert1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Assert1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Assert1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Assert1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Assert1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Assert1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assert">
+      <MemberSignature Language="C#" Value="public static void Assert (bool condition, string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Assert(bool condition, string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Assert(System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">A expressão condicional a ser avaliada. Se a condição for <see langword="true" />, as mensagens especificadas não serão enviadas e a caixa de mensagem não será exibida.</param>
+        <param name="message">A mensagem a ser enviada para a coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</param>
+        <param name="detailMessage">A mensagem detalhada a ser enviada para a coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</param>
+        <summary>Verifica uma condição. Se a condição for <see langword="false" />, gerará duas mensagens especificadas e exibe uma caixa de mensagem que mostra a pilha de chamadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> método se você quiser fazer asserções versão cria. O <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> método funciona apenas em compilações de depuração. Para obter mais informações, consulte [itens no código gerenciado](http://msdn.microsoft.com/library/70ab2522-6486-4076-a1a9-e0f11cd0f3a1).  
+  
+ Normalmente, o <xref:System.Diagnostics.Trace.Assert%28System.Boolean%2CSystem.String%2CSystem.String%29> método é usado para identificar erros de lógica durante o desenvolvimento de programa. <xref:System.Diagnostics.Trace.Assert%2A>avalia a condição. Se o resultado for `false`, ele envia a mensagem de diagnóstico especificada e a mensagem detalhada para o <xref:System.Diagnostics.Trace.Listeners%2A> coleção. Você pode personalizar esse comportamento adicionando um <xref:System.Diagnostics.TraceListener> , ou remover uma, a <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+ Quando o aplicativo é executado no modo de interface do usuário, ele exibe uma caixa de mensagem que mostra a pilha de chamadas com arquivos e números de linha. A caixa de mensagem contém três botões: **anular**, **novamente**, e **ignorar**. Clique o **anular** botão encerra o aplicativo. Clicando em **novamente** envia para o código no depurador se seu aplicativo estiver sendo executado em um depurador ou oferece para abrir um depurador se não for. Clicando em **ignorar** continua com a próxima instrução no código.  
+  
+> [!NOTE]
+>  A exibição da caixa de mensagem depende da presença do <xref:System.Diagnostics.DefaultTraceListener>. Se o <xref:System.Diagnostics.DefaultTraceListener> não está no <xref:System.Diagnostics.Trace.Listeners%2A> coleção, a caixa de mensagem não é exibida. O <xref:System.Diagnostics.DefaultTraceListener> pode ser removido com o [ &lt;limpar&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), o [ &lt;remover&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), ou chamando o <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método sobre o <xref:System.Diagnostics.Trace.Listeners%2A> propriedade (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Você pode alterar o comportamento do <xref:System.Diagnostics.DefaultTraceListener> no arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, você pode habilitar e desabilitar a caixa de mensagem assert ou definir o <xref:System.Diagnostics.DefaultTraceListener.LogFileName%2A?displayProperty=nameWithType> propriedade. O arquivo de configuração deve ser formatado da seguinte maneira:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <switches>  
+      <add name="mySwitch" value="4"/>  
+    </switches>  
+    <trace autoflush="false" indentsize="4"/>  
+    <assert assertuienabled="true" logfilename=".\TraceLog.txt"/>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir verifica que o `type` parâmetro é válido. Se o `type` transmitido é `null`, o <xref:System.Diagnostics.Trace.Assert%2A> gera uma mensagem.  
+  
+ [!code-cpp[Classic Trace.Assert2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Assert2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Assert2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Assert2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Assert2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Assert2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="public static bool AutoFlush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool AutoFlush" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Trace.AutoFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o <see cref="M:System.Diagnostics.Trace.Flush" /> deve ser chamado no <see cref="P:System.Diagnostics.Trace.Listeners" /> após cada gravação.</summary>
+        <value>
+          <see langword="true" /> se <see cref="M:System.Diagnostics.Trace.Flush" /> for chamado no <see cref="P:System.Diagnostics.Trace.Listeners" /> após cada gravação; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão é `false`.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.Diagnostics.Trace.Flush%2A> ou <xref:System.Diagnostics.Trace.Close%2A>. Configuração <xref:System.Diagnostics.Trace.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+ Para definir o <xref:System.Diagnostics.Trace.AutoFlush%2A> e <xref:System.Diagnostics.Trace.IndentSize%2A> para <xref:System.Diagnostics.Trace>, você também pode editar o arquivo de configuração que corresponde ao nome do seu aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="3" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public static void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera o buffer de saída e, em seguida, fecha o <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método quando a saída vai para um arquivo, como o <xref:System.Diagnostics.TextWriterTraceListener>.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.Diagnostics.Trace.Flush%2A> ou <xref:System.Diagnostics.Trace.Close%2A>. Configuração <xref:System.Diagnostics.Trace.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> chamado `myTextListener`. `myTextListener`usa um <xref:System.IO.StreamWriter> chamado `myOutputWriter` para gravar um arquivo chamado `TestFile.txt`. O exemplo cria o gravador de arquivo, o fluxo e o texto, grava uma linha de texto para o arquivo e, em seguida, libera e fecha a saída.  
+  
+ [!code-cpp[Classic Trace.Flush Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Flush Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Flush Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Flush Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Flush Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Flush Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationManager">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.CorrelationManager CorrelationManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Diagnostics.CorrelationManager CorrelationManager" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Trace.CorrelationManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.CorrelationManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o gerenciador de correlação para o thread para esse rastreamento.</summary>
+        <value>O objeto <see cref="T:System.Diagnostics.CorrelationManager" /> associado ao thread para este rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Isso é uma propriedade avançada que a maioria dos aplicativos não devem ter a ocasião para usar.  
+  
+ O <xref:System.Diagnostics.CorrelationManager> classe fornece métodos usados para armazenar uma identidade de operação lógica em um contexto de thread associado e identificar automaticamente a cada evento de rastreamento gerado pelo thread com a identidade armazenado.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public static void Fail (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Fail(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Fail(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser emitida.</param>
+        <summary>Emite a mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O comportamento padrão para o ouvinte de rastreamento padrão é a saída a `message` parâmetro para uma caixa de mensagem quando o aplicativo é executado no modo de interface do usuário e para o <xref:System.Diagnostics.TraceListener> instâncias o <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+> [!NOTE]
+>  A exibição da caixa de mensagem depende da presença do <xref:System.Diagnostics.DefaultTraceListener>. Se o <xref:System.Diagnostics.DefaultTraceListener> não está no <xref:System.Diagnostics.Trace.Listeners%2A> coleção, a caixa de mensagem não é exibida. O <xref:System.Diagnostics.DefaultTraceListener> pode ser removido com o [ &lt;limpar&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), o [ &lt;remover&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), ou chamando o <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método sobre o <xref:System.Diagnostics.Trace.Listeners%2A> propriedade (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Você pode personalizar esse comportamento adicionando um <xref:System.Diagnostics.TraceListener> para ou removendo um, o <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Diagnostics.Trace.Fail%2A> método para imprimir uma mensagem durante a manipulação de exceção.  
+  
+ [!code-cpp[Classic Trace.Fail Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Fail Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Fail Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Fail Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Fail Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Fail Example/VB/source.vb#1)]  
+  
+ Você também pode usar o <xref:System.Diagnostics.Trace.Fail%2A> método em uma instrução switch.  
+  
+ [!code-cpp[Classic Trace.Fail Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Fail Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic Trace.Fail Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Fail Example/CS/source.cs#2)]
+ [!code-vb[Classic Trace.Fail Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Fail Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fail">
+      <MemberSignature Language="C#" Value="public static void Fail (string message, string detailMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Fail(string message, string detailMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Fail(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="detailMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser emitida.</param>
+        <param name="detailMessage">Uma mensagem detalhada de emissão.</param>
+        <summary>Emite uma mensagem de erro e uma mensagem de erro detalhada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É o comportamento padrão para o ouvinte de rastreamento padrão para a saída a `message` parâmetro e o `detailedMessage` parâmetro para uma caixa de mensagem quando o aplicativo é executado no modo de interface do usuário e para o <xref:System.Diagnostics.TraceListener> instâncias o <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+> [!NOTE]
+>  A exibição da caixa de mensagem depende da presença do <xref:System.Diagnostics.DefaultTraceListener>. Se o <xref:System.Diagnostics.DefaultTraceListener> não está no <xref:System.Diagnostics.Trace.Listeners%2A> coleção, a caixa de mensagem não é exibida. O <xref:System.Diagnostics.DefaultTraceListener> pode ser removido com o [ &lt;limpar&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md), o [ &lt;remover&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md), ou chamando o <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método sobre o <xref:System.Diagnostics.Trace.Listeners%2A> propriedade (`System.Diagnostics.Trace.Listeners.Clear()`).  
+  
+ Você pode personalizar esse comportamento adicionando um <xref:System.Diagnostics.TraceListener> para ou removendo um, o <xref:System.Diagnostics.Trace.Listeners%2A> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Diagnostics.Trace.Fail%2A> método para imprimir uma mensagem durante a manipulação de exceção.  
+  
+ [!code-cpp[Classic Trace.Fail1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Fail1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Fail1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Fail1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Fail1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Fail1 Example/VB/source.vb#1)]  
+  
+ Você também pode usar o <xref:System.Diagnostics.Trace.Fail%2A> método em uma instrução switch.  
+  
+ [!code-cpp[Classic Trace.Fail1 Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Fail1 Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic Trace.Fail1 Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Fail1 Example/CS/source.cs#2)]
+ [!code-vb[Classic Trace.Fail1 Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Fail1 Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public static void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera o buffer de saída e faz com que os dados armazenados em buffer sejam gravados no <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.Diagnostics.Trace.Flush%2A> ou <xref:System.Diagnostics.Trace.Close%2A>. Configuração <xref:System.Diagnostics.Trace.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TextWriterTraceListener> chamado `myTextListener`. `myTextListener`usa um <xref:System.IO.StreamWriter> chamado `myOutputWriter` para gravar um arquivo chamado `TestFile.txt`. O exemplo cria o gravador de arquivo, o fluxo e o texto, grava uma linha de texto para o arquivo e, em seguida, libera e fecha a saída.  
+  
+ [!code-cpp[Classic Trace.Flush Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Flush Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Flush Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Flush Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Flush Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Flush Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indent">
+      <MemberSignature Language="C#" Value="public static void Indent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Indent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Indent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aumenta o <see cref="P:System.Diagnostics.Trace.IndentLevel" /> atual em um.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A seguir incrementa de exemplo e diminui o nível de recuo e emite mensagens de rastreamento.  
+  
+ [!code-cpp[Classic Trace.IndentLevel Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.IndentLevel Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.IndentLevel Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/VB/source.vb#1)]  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+List of errors:  
+     Error 1: File not found  
+     Error 2: Directory not found  
+End of list of errors  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentLevel">
+      <MemberSignature Language="C#" Value="public static int IndentLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 IndentLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Trace.IndentLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de recuo.</summary>
+        <value>O nível de recuo. O padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.Trace.IndentLevel%2A> propriedade representa o número de vezes que o recuo de tamanho <xref:System.Diagnostics.Trace.IndentSize%2A> é aplicada. Essa propriedade é armazenada em cada thread/por-solicitação.  
+  
+   
+  
+## Examples  
+ A seguir incrementa de exemplo e diminui o nível de recuo e emite mensagens de rastreamento.  
+  
+ [!code-cpp[Classic Trace.IndentLevel Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.IndentLevel Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.IndentLevel Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/VB/source.vb#1)]  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+List of errors:  
+     Error 1: File not found  
+     Error 2: Directory not found  
+End of list of errors  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentSize">
+      <MemberSignature Language="C#" Value="public static int IndentSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 IndentSize" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Trace.IndentSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de espaços em um recuo.</summary>
+        <value>O número de espaços em um recuo. O padrão é de quatro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Diagnostics.TextWriterTraceListener> interpreta esse número como espaços. Um <xref:System.Diagnostics.EventLogTraceListener> ignora esse valor.  
+  
+ Essa propriedade é armazenada em cada thread/por-solicitação.  
+  
+ Para definir o <xref:System.Diagnostics.Trace.AutoFlush%2A> e <xref:System.Diagnostics.Trace.IndentSize%2A> para <xref:System.Diagnostics.Trace>, você também pode editar o arquivo de configuração que corresponde ao nome do seu aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace autoflush="false" indentsize="3" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Listeners">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.TraceListenerCollection Listeners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Diagnostics.TraceListenerCollection Listeners" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Trace.Listeners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.TraceListenerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de ouvintes monitorando a saída de rastreamento.</summary>
+        <value>Um <see cref="T:System.Diagnostics.TraceListenerCollection" /> que representa uma coleção do tipo <see cref="T:System.Diagnostics.TraceListener" /> que monitora a saída de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os ouvintes de produzem saída formatada da saída do rastreamento. Por padrão, a coleção contém uma instância do <xref:System.Diagnostics.DefaultTraceListener> classe. Se você quiser remover o ouvinte padrão, chame o <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> método e passe a instância do <xref:System.Diagnostics.DefaultTraceListener>. Para redirecionar a saída para a janela do console, adicione uma instância do <xref:System.Diagnostics.ConsoleTraceListener> classe.  
+  
+> [!NOTE]
+>  O <xref:System.Diagnostics.Trace.Listeners%2A> coleção é compartilhada por ambos os <xref:System.Diagnostics.Debug> e o <xref:System.Diagnostics.Trace> classes; adicionando um ouvinte de rastreamento para qualquer classe adiciona o ouvinte a ambos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.ConsoleTraceListener> que saídas para a tela do console. O código, em seguida, adiciona o novo ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A>.  
+  
+ [!code-cpp[Classic Trace.Listeners Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Listeners Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Listeners Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Listeners Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Listeners Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Listeners Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public static void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza os dados de configuração de rastreamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados de configuração de rastreamento são capturados quando o aplicativo é iniciado. Se os dados de configuração são alterados depois que o aplicativo é iniciado, chame o <xref:System.Diagnostics.Trace.Refresh%2A> método para atualizar os dados de configuração de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceError">
+      <MemberSignature Language="C#" Value="public static void TraceError (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void TraceError(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.TraceError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem informativa a ser gravada.</param>
+        <summary>Grava uma mensagem de erro para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.Trace.Listeners" /> usando a mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Trace.TraceError%2A>chamadas de `TraceEvent` método para cada ouvinte de rastreamento, com o tipo de evento de rastreamento <xref:System.Diagnostics.TraceEventType.Error>, passando a mensagem informativa como a cadeia de caracteres de mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceError">
+      <MemberSignature Language="C#" Value="public static void TraceError (string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void TraceError(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.TraceError(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato que contém zero ou mais itens de formato, que correspondem aos objetos no <c>args</c> matriz.</param>
+        <param name="args">Uma matriz <see langword="object" /> que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava uma mensagem de erro para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.Trace.Listeners" /> usando a matriz de objetos e as informações de formatação especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Trace.TraceError%2A>chamadas de `TraceEvent` métodos os ouvintes de rastreamento com o tipo de evento de rastreamento <xref:System.Diagnostics.TraceEventType.Error>, passando o conteúdo da mensagem como uma matriz de objetos com informações de formatação. Consulte o <xref:System.String.Format%2A> método para obter mais informações sobre o `format` e `args` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInformation">
+      <MemberSignature Language="C#" Value="public static void TraceInformation (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void TraceInformation(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.TraceInformation(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem informativa a ser gravada.</param>
+        <summary>Grava uma mensagem informativa para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.Trace.Listeners" /> usando a mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Trace.TraceInformation%2A>chamadas de `TraceEvent` método para cada ouvinte de rastreamento, com o tipo de evento de rastreamento <xref:System.Diagnostics.TraceEventType.Information>, passando a mensagem informativa como a cadeia de caracteres de mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceInformation">
+      <MemberSignature Language="C#" Value="public static void TraceInformation (string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void TraceInformation(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.TraceInformation(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato que contém zero ou mais itens de formato, que correspondem aos objetos no <c>args</c> matriz.</param>
+        <param name="args">Uma matriz <see langword="object" /> que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava uma mensagem informativa para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.Trace.Listeners" /> usando a matriz de objetos e as informações de formatação especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Trace.TraceInformation%2A>chamadas de `TraceEvent` métodos os ouvintes de rastreamento com o tipo de evento de rastreamento <xref:System.Diagnostics.TraceEventType.Information>, passando o conteúdo da mensagem como uma matriz de objetos com informações de formatação. Consulte o <xref:System.String.Format%2A> método para obter mais informações sobre o `format` e `args` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceWarning">
+      <MemberSignature Language="C#" Value="public static void TraceWarning (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void TraceWarning(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.TraceWarning(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem informativa a ser gravada.</param>
+        <summary>Grava uma mensagem de aviso para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção usando a mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Trace.TraceWarning%2A>chamadas de `TraceEvent` método para cada ouvinte de rastreamento com o tipo de evento de rastreamento <xref:System.Diagnostics.TraceEventType.Warning>, passando a mensagem informativa como a cadeia de caracteres de mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceWarning">
+      <MemberSignature Language="C#" Value="public static void TraceWarning (string format, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void TraceWarning(string format, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.TraceWarning(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres de formato que contém zero ou mais itens de formato, que correspondem aos objetos no <c>args</c> matriz.</param>
+        <param name="args">Uma matriz <see langword="object" /> que contém zero ou mais objetos a serem formatados.</param>
+        <summary>Grava uma mensagem de aviso para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção usando a matriz de objetos especificada e as informações de formatação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.Trace.TraceWarning%2A>chamadas de `TraceEvent` métodos os ouvintes de rastreamento com o tipo de evento de rastreamento <xref:System.Diagnostics.TraceEventType.Warning>, passando o conteúdo da mensagem como uma matriz de objetos com informações de formatação. Consulte o <xref:System.String.Format%2A> método para obter mais informações sobre o `format` e `args` parâmetros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unindent">
+      <MemberSignature Language="C#" Value="public static void Unindent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Unindent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Unindent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Diminui atual <see cref="P:System.Diagnostics.Trace.IndentLevel" /> por um.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A seguir incrementa de exemplo e diminui o nível de recuo e emite mensagens de rastreamento.  
+  
+ [!code-cpp[Classic Trace.IndentLevel Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.IndentLevel Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.IndentLevel Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.IndentLevel Example/VB/source.vb#1)]  
+  
+ Este exemplo gera a seguinte saída:  
+  
+```  
+  
+List of errors:  
+     Error 1: File not found  
+     Error 2: Directory not found  
+End of list of errors  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseGlobalLock">
+      <MemberSignature Language="C#" Value="public static bool UseGlobalLock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool UseGlobalLock" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Trace.UseGlobalLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o bloqueio global deve ser usado.</summary>
+        <value>
+          <see langword="true" /> se o bloqueio global deve ser usado, caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O bloqueio global sempre será usado se o ouvinte de rastreamento não é thread-safe, independentemente do valor <xref:System.Diagnostics.Trace.UseGlobalLock%2A>. O <xref:System.Diagnostics.TraceListener.IsThreadSafe%2A> propriedade é usada para determinar se o ouvinte é thread-safe. O bloqueio global não é usado somente se o valor de <xref:System.Diagnostics.Trace.UseGlobalLock%2A> é `false` e o valor de <xref:System.Diagnostics.TraceListener.IsThreadSafe%2A> é `true`. O comportamento padrão é usar o bloqueio global.  
+  
+ Para definir o <xref:System.Diagnostics.Trace.UseGlobalLock%2A> para <xref:System.Diagnostics.Trace>, você também pode editar o arquivo de configuração que corresponde ao nome do seu aplicativo. O arquivo de configuração deve ser formatado como o exemplo a seguir:  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <trace useGlobalLock="false" />  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Ação de segurança: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Enumeração associada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Write(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="P:System.Diagnostics.Trace.Listeners" /> cujo nome é enviado para o <see cref="T:System.Object" />.</param>
+        <summary>Grava o valor do método <see cref="M:System.Object.ToString" /> do objeto nos ouvintes de rastreamento da coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+> [!NOTE]
+>  ASP.NET fornece a funcionalidade de rastreamento personalizada para páginas da Web. Para gravar mensagens de rastreamento em páginas ASP.NET, use o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade.  
+  
+ Por padrão, no código associado a uma página da Web do ASP.NET, a instrução `Trace.Write("...")` é uma chamada para o <xref:System.Web.TraceContext.Write%2A> método o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade. Para usar o <xref:System.Diagnostics.Trace?displayProperty=nameWithType> classe em páginas da Web, você deve incluir o namespace, por exemplo, `System.Diagnostics.Trace.Write("...")`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera o nome a `value` parâmetro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera uma mensagem na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.Write1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Write1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Write1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Write1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Write1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Write1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+> [!NOTE]
+>  ASP.NET fornece a funcionalidade de rastreamento personalizada para páginas da Web. Para gravar mensagens de rastreamento em páginas ASP.NET, use o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade.  
+  
+ Por padrão, no código associado a uma página da Web do ASP.NET, a instrução `Trace.Write("...")` é uma chamada para o <xref:System.Web.TraceContext.Write%2A> método o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade. Para usar o <xref:System.Diagnostics.Trace?displayProperty=nameWithType> classe em páginas da Web, você deve incluir o namespace, por exemplo, `System.Diagnostics.Trace.Write("...")`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. Um terminador de linha segue a segunda mensagem.  
+  
+ [!code-cpp[Classic Trace.Write Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Write Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Write Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Write Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Write Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Write Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Write(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um nome <see cref="P:System.Diagnostics.Trace.Listeners" /> é enviado para o <see cref="T:System.Object" />.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e o valor do método <see cref="M:System.Object.ToString" /> do objeto nos ouvintes de rastreamento da coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+> [!NOTE]
+>  ASP.NET fornece a funcionalidade de rastreamento personalizada para páginas da Web. Para gravar mensagens de rastreamento em páginas ASP.NET, use o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade.  
+  
+ Por padrão, no código associado a uma página da Web do ASP.NET, a instrução `Trace.Write("...")` é uma chamada para o <xref:System.Web.TraceContext.Write%2A> método o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade. Para usar o <xref:System.Diagnostics.Trace?displayProperty=nameWithType> classe em páginas da Web, você deve incluir o namespace, por exemplo, `System.Diagnostics.Trace.Write("...")`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Verbose`, o exemplo gera o nome do `myObject` e `category` para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Error` ou superior, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.Write3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Write3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Write3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Write3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Write3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Write3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public static void Write (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Write(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.Write(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e uma mensagem para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+> [!NOTE]
+>  ASP.NET fornece a funcionalidade de rastreamento personalizada para páginas da Web. Para gravar mensagens de rastreamento em páginas ASP.NET, use o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade.  
+  
+ Por padrão, no código associado a uma página da Web do ASP.NET, a instrução `Trace.Write("...")` é uma chamada para o <xref:System.Web.TraceContext.Write%2A> método o <xref:System.Web.UI.Page.Trace%2A?displayProperty=nameWithType> propriedade. Para usar o <xref:System.Diagnostics.Trace?displayProperty=nameWithType> classe em páginas da Web, você deve incluir o namespace, por exemplo, `System.Diagnostics.Trace.Write("...")`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Verbose`, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Error` ou superior, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.Write2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Write2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Write2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Write2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Write2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Write2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="value">Um <see cref="P:System.Diagnostics.Trace.Listeners" /> cujo nome é enviado para o <see cref="T:System.Object" />.</param>
+        <summary>Grava o valor do objeto <see cref="M:System.Object.ToString" /> método para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera o nome do parâmetro value para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera uma mensagem na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteIf1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteIf1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteIf1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteIf1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteIf1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteIf1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.Write(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteIf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteIf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteIf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteIf Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteIf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteIf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.Write(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="value">Um <see cref="P:System.Diagnostics.Trace.Listeners" /> cujo nome é enviado para o <see cref="T:System.Object" />.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e o valor do objeto <see cref="M:System.Object.ToString" /> método para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Verbose`, o exemplo gera o nome do `myObject` e `category` para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Error` ou superior, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteIf3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteIf3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteIf3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteIf3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteIf3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteIf3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.Write(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteIf">
+      <MemberSignature Language="C#" Value="public static void WriteIf (bool condition, string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteIf(bool condition, string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava uma mensagem e o nome da categoria para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.Write%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Verbose`, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Error` ou superior, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteIf2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteIf2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteIf2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteIf2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteIf2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteIf2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.Write(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.Write("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLine(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="P:System.Diagnostics.Trace.Listeners" /> cujo nome é enviado para o <see cref="T:System.Object" />.</param>
+        <summary>Grava o valor do método <see cref="M:System.Object.ToString" /> do objeto nos ouvintes de rastreamento da coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera o nome do objeto na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteLine1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteLine1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteLine1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteLine1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteLine1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteLine1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem para os ouvintes de rastreamento na coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.Write Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.Write Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.Write Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.Write Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.Write Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.Write Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLine(System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="P:System.Diagnostics.Trace.Listeners" /> cujo nome é enviado para o <see cref="T:System.Object" />.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e o valor do método <see cref="M:System.Object.ToString" /> do objeto nos ouvintes de rastreamento da coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteLine3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteLine3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteLine3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteLine3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteLine3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteLine3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public static void WriteLine (string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLine(string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLine(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e mensagem nos ouvintes de rastreamento da coleção <see cref="P:System.Diagnostics.Trace.Listeners" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro e o `category` na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteLine2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteLine2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteLine2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteLine2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteLine2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteLine2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="value">Um <see cref="P:System.Diagnostics.Trace.Listeners" /> cujo nome é enviado para o <see cref="T:System.Object" />.</param>
+        <summary>Grava o valor do objeto <see cref="M:System.Object.ToString" /> método para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera o nome do objeto na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteLineIf1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteLineIf1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteLineIf1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.WriteLine(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <summary>Grava uma mensagem para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteIf Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteIf Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteIf Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteIf Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteIf Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteIf Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.WriteLine(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, object value, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, object value, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="value">Um <see cref="P:System.Diagnostics.Trace.Listeners" /> cujo nome é enviado para o <see cref="T:System.Object" />.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava um nome de categoria e o valor do objeto <see cref="M:System.Object.ToString" /> método para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteLineIf3 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf3 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteLineIf3 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf3 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteLineIf3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.WriteLine(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineIf">
+      <MemberSignature Language="C#" Value="public static void WriteLineIf (bool condition, string message, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WriteLineIf(bool condition, string message, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Conditional("TRACE")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="condition">
+          <see langword="true" />Para fazer com que uma mensagem a ser gravado; Caso contrário, <see langword="false" />.</param>
+        <param name="message">Uma mensagem a ser gravada.</param>
+        <param name="category">Um nome de categoria usado para organizar a saída.</param>
+        <summary>Grava uma mensagem e o nome da categoria para os ouvintes de rastreamento no <see cref="P:System.Diagnostics.Trace.Listeners" /> coleção se uma condição for <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída é gravada em uma instância de <xref:System.Diagnostics.DefaultTraceListener>.  
+  
+ O `category` parâmetro pode ser usado para agrupar mensagens de saída.  
+  
+ Este método chama o <xref:System.Diagnostics.TraceListener.WriteLine%2A> método do ouvinte de rastreamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Diagnostics.TraceSwitch> chamado `generalSwitch`. Essa opção é definida fora o exemplo de código.  
+  
+ Se a opção for definida como o <xref:System.Diagnostics.TraceLevel> `Error` ou superior, o exemplo gera a primeira mensagem de erro para o <xref:System.Diagnostics.Trace.Listeners%2A>. Para obter informações sobre como adicionar um ouvinte para o <xref:System.Diagnostics.Trace.Listeners%2A> coleta, consulte o <xref:System.Diagnostics.TraceListenerCollection> classe.  
+  
+ Em seguida, se o <xref:System.Diagnostics.TraceLevel> é definido como `Verbose`, o exemplo gera a segunda mensagem de erro e o `category` na mesma linha como a primeira mensagem. A segunda mensagem é seguida por um terminador de linha.  
+  
+ [!code-cpp[Classic Trace.WriteLineIf2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Trace.WriteLineIf2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf2 Example/CS/source.cs#1)]
+ [!code-vb[Classic Trace.WriteLineIf2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Trace.WriteLineIf2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode minimizar a degradação de desempenho de instrumentar seu aplicativo usando <see langword="If...Then" /> instruções em vez de usar <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" /> instruções. Os seguir dois exemplos de código enviem a mesma mensagem de depuração. No entanto, o primeiro exemplo é muito mais rápido quando o rastreamento está desativado, porque se <c>mySwitch.TraceError</c> é avaliada como <see langword="false" /> você não chama <see cref="M:System.Diagnostics.Trace.WriteLine(System.String)" />. O segundo exemplo sempre chama <see cref="M:System.Diagnostics.Trace.WriteLineIf(System.Boolean,System.String)" />, mesmo quando <c>mySwitch.TraceError</c> é <see langword="false" /> e nenhuma saída de rastreamento é gerada. Isso pode resultar na execução desnecessária do código arbitrariamente complexo.  
+  
+ **Primeiro exemplo**  
+  
+```  
+if(mySwitch.TraceError)   
+    Trace.WriteLine("aNumber = " + aNumber + " out of range");  
+```  
+  
+ **Segundo exemplo**  
+  
+```  
+Trace.WriteLineIf(mySwitch.TraceError, "aNumber = " + aNumber + " out of range");  
+```</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

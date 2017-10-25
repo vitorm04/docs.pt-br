@@ -1,0 +1,49 @@
+<Type Name="ECKeyXmlFormat" FullName="System.Security.Cryptography.ECKeyXmlFormat">
+  <TypeSignature Language="C#" Value="public enum ECKeyXmlFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ECKeyXmlFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECKeyXmlFormat" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os formatos de serialização de XML para chaves de curva elíptica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração contém apenas um membro, Rfc4050. Esse formato descreve como chaves de curva Digital assinatura ECDSA (algoritmo elíptica) são serializadas em XML.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Rfc4050">
+      <MemberSignature Language="C#" Value="Rfc4050" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECKeyXmlFormat Rfc4050 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECKeyXmlFormat.Rfc4050" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECKeyXmlFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um formato de serialização de XML descrito no RFC 4050, "Usando o algoritmo de assinatura de curva elíptica (ECDSA) para assinaturas digitais XML".</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

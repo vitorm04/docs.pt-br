@@ -1,0 +1,41 @@
+<Type Name="IPersistedSelector" FullName="System.Web.UI.WebControls.IPersistedSelector">
+  <TypeSignature Language="C#" Value="public interface IPersistedSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPersistedSelector" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IPersistedSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma propriedade que é usada pelo <see cref="T:System.Web.DynamicData.DynamicDataManager" /> controle para permitir que os dados selecionando em um controle associado a dados por meio da cadeia de caracteres de consulta.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataKey">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKey DataKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKey DataKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IPersistedSelector.DataKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de chave de dados para o registro selecionado em um controle associado a dados.</summary>
+        <value>O valor de chave de dados para o registro selecionado em um controle associado a dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.IPersistedSelector.DataKey%2A> propriedade diferente do padrão seleção feita pelo controle de associação de dados porque o item selecionado pode ser persistida em paginação e o item não pode estar na página atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

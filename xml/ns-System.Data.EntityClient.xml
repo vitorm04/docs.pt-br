@@ -1,0 +1,16 @@
+<Namespace Name="System.Data.EntityClient">
+  <Docs>
+    <summary>O <see cref="N:System.Data.EntityClient" /> namespace é o provedor de dados .NET Framework para o Entity Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `EntityClient` usa o provedor específico do armazenamento [!INCLUDE[vstecado](~/includes/vstecado-md.md)] metadados de mapeamento e classes de provedor de dados para interagir com modelos de dados de entidade. `EntityClient`Converte as operações executadas em entidades conceituais em operações executadas em fontes de dados físico. Ele converte os conjuntos de resultados retornados de fontes de dados físico em entidades conceituais.  
+  
+> [!NOTE]
+>  Para obter mais informações sobre como usar esse namespace em [!INCLUDE[adonet_ef](~/includes/adonet-ef-md.md)] aplicativos, consulte [ADO.NET Entity Framework](http://msdn.microsoft.com/library/a437041f-6899-4ae7-96ce-aabf528d7205).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

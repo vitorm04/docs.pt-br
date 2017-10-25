@@ -1,0 +1,62 @@
+<Type Name="ContentLocatorBase" FullName="System.Windows.Annotations.ContentLocatorBase">
+  <TypeSignature Language="C#" Value="public abstract class ContentLocatorBase : System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ContentLocatorBase extends System.Object implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.ContentLocatorBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um objeto que identifica um item de conteúdo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Derivado <xref:System.Windows.Annotations.ContentLocatorBase>, um <xref:System.Windows.Annotations.ContentLocator> identifica um item de dados por meio de uma lista ordenada de <xref:System.Windows.Annotations.ContentLocatorPart> elementos.  
+  
+ Derivado <xref:System.Windows.Annotations.ContentLocatorBase>, um <xref:System.Windows.Annotations.ContentLocatorGroup> identifica um item de dados por meio de um conjunto de <xref:System.Windows.Annotations.ContentLocator> elementos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public abstract object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.ContentLocatorBase.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone de cópia em profundidade modificável deste <see cref="T:System.Windows.Annotations.ContentLocatorBase" />.</summary>
+        <returns>Um clone de cópia em profundidade modificável deste <see cref="T:System.Windows.Annotations.ContentLocatorBase" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Windows.Annotations.ContentLocatorBase.Clone%2A> método cria cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos.  Para sua conveniência, <xref:System.Windows.Annotations.ContentLocatorBase.Clone%2A> sombreia a versão herdada com uma implementação fortemente tipada.  Para obter mais detalhes, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ O clonado <xref:System.Windows.Annotations.ContentLocatorBase>do <xref:System.Windows.Freezable.IsFrozen%2A> propriedade será `false` mesmo se essa fonte <xref:System.Windows.Annotations.ContentLocatorBase>do <xref:System.Windows.Freezable.IsFrozen%2A> é de propriedade`true.`  
+  
+ Ao copiar as propriedades de dependência, <xref:System.Windows.Annotations.ContentLocatorBase.Clone%2A> copia as ligações de dados e as referências de recurso (embora talvez não resolvido), mas não copiar não animações ou valores atuais de animação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

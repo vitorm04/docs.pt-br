@@ -1,0 +1,135 @@
+<Type Name="ResourceSet" FullName="System.Data.Services.Providers.ResourceSet">
+  <TypeSignature Language="C#" Value="public class ResourceSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResourceSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Providers.ResourceSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{Name}: {ResourceType}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de valores de tipo de entidade.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceSet (string name, System.Data.Services.Providers.ResourceType elementType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Data.Services.Providers.ResourceType elementType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceSet.#ctor(System.String,System.Data.Services.Providers.ResourceType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="elementType" Type="System.Data.Services.Providers.ResourceType" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do conjunto de itens como cadeia de caracteres.</param>
+        <param name="elementType">O <see cref="T:System.Data.Services.Providers.ResourceType" /> dos itens no conjunto.</param>
+        <summary>Cria uma nova coleção da entidade de valores de tipo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomState">
+      <MemberSignature Language="C#" Value="public object CustomState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CustomState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceSet.CustomState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de estado personalizado definido pelo desenvolvedor.</summary>
+        <value>As informações de estado personalizado definidas pelo desenvolvedor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceSet.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se o conjunto é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o conjunto é somente leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceSet.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da coleção.</summary>
+        <value>Definir valor de cadeia de caracteres que contém o nome do recurso.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceType">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Providers.ResourceType ResourceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Services.Providers.ResourceType ResourceType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.ResourceSet.ResourceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Providers.ResourceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo da coleção.</summary>
+        <value>O tipo da coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReadOnly">
+      <MemberSignature Language="C#" Value="public void SetReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.ResourceSet.SetReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o status de somente leitura da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,142 @@
+<Type Name="ContinueOutOfFinally" FullName="Microsoft.JScript.ContinueOutOfFinally">
+  <TypeSignature Language="C#" Value="public sealed class ContinueOutOfFinally : ApplicationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ContinueOutOfFinally extends System.ApplicationException" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.ContinueOutOfFinally" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ApplicationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o estado de exceção quando a execução de código continua fora de um <see langword="finally" /> bloco.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContinueOutOfFinally ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ContinueOutOfFinally.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.JScript.ContinueOutOfFinally" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContinueOutOfFinally (int target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ContinueOutOfFinally.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="target" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="target">O destino da exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.ContinueOutOfFinally" /> classe usando o destino especificado.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContinueOutOfFinally (string m);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ContinueOutOfFinally.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="m">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.ContinueOutOfFinally" /> de classe, a mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContinueOutOfFinally (string m, Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string m, class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ContinueOutOfFinally.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.String" />
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="m">A mensagem que descreve o erro.</param>
+        <param name="e">A exceção que é a causa da exceção atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.JScript.ContinueOutOfFinally" /> de classe, usando a mensagem de erro especificada e uma referência à exceção interna que é a causa dessa exceção.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo s, System.Runtime.Serialization.StreamingContext c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo s, valuetype System.Runtime.Serialization.StreamingContext c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.ContinueOutOfFinally.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="c" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="s">Os dados do objeto serializado sobre a exceção que está sendo gerada.</param>
+        <param name="c">Informações contextuais sobre a origem ou destino.</param>
+        <summary>Armazena informações sobre a exceção no <see cref="T:System.Runtime.Serialization.SerializationInfo" />. As informações armazenadas incluem o <see cref="F:Microsoft.JScript.ContinueOutOfFinally.target" /> valor.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="target">
+      <MemberSignature Language="C#" Value="public int target;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 target" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.ContinueOutOfFinally.target" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena o alvo da exceção.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

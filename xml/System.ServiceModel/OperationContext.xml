@@ -1,0 +1,721 @@
+<Type Name="OperationContext" FullName="System.ServiceModel.OperationContext">
+  <TypeSignature Language="C#" Value="public sealed class OperationContext : System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.OperationContext&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OperationContext extends System.Object implements class System.ServiceModel.IExtensibleObject`1&lt;class System.ServiceModel.OperationContext&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.OperationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtensibleObject&lt;System.ServiceModel.OperationContext&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece acesso ao contexto de execução de um método de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContext> de dentro de uma operação de serviço para acessar o ambiente de execução da operação atual. Em particular, o contexto de operação é usado para acessar os canais de retorno de chamada nos serviços de duplex, para armazenar dados de estado extra em partes de operações e para acessar propriedades e os cabeçalhos das mensagens recebidas, bem como adicionar propriedades e cabeçalhos de mensagem de saída.  
+  
+ Para obter mais informações sobre como usar extensões para armazenar dados de estado, consulte [objetos extensíveis](~/docs/framework/wcf/extending/extensible-objects.md).  
+  
+ O <xref:System.ServiceModel.OperationContext> tem as seguintes propriedades e métodos.  
+  
+-   O <xref:System.ServiceModel.OperationContext.Current%2A> propriedade retorna o <xref:System.ServiceModel.OperationContext> objeto que representa o contexto de execução atual.  
+  
+-   O <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> propriedade retorna o ambiente de segurança sob a qual o método é executado.  
+  
+-   O <xref:System.ServiceModel.OperationContext.EndpointDispatcher%2A> propriedade obtém a operação <xref:System.ServiceModel.Dispatcher.EndpointDispatcher?displayProperty=nameWithType>.  
+  
+-   O <xref:System.ServiceModel.OperationContext.Extensions%2A> propriedade retorna uma coleção de extensão atual <xref:System.ServiceModel.OperationContext>.  
+  
+-   O <xref:System.ServiceModel.OperationContext.Host%2A> propriedade retorna o <xref:System.ServiceModel.ServiceHostBase> objeto que gerencia o serviço.  
+  
+-   O <xref:System.ServiceModel.OperationContext.HasSupportingTokens%2A> propriedade retorna um valor que indica se o método tem suporte a tokens, nesse caso, o <xref:System.ServiceModel.OperationContext.SupportingTokens%2A> propriedade obtém-los.  
+  
+-   O <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>, <xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A>, e <xref:System.ServiceModel.OperationContext.IncomingMessageVersion%2A> esses itens de obtenção das propriedades da mensagem de entrada.  
+  
+-   O <xref:System.ServiceModel.OperationContext.OperationCompleted> evento é acionado quando a operação foi concluída.  
+  
+-   O <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e <xref:System.ServiceModel.OperationContext.OutgoingMessageProperties%2A> propriedades obtém esses itens para a mensagem de saída.  
+  
+-   O <xref:System.ServiceModel.OperationContext.RequestContext%2A> propriedade retorna o <xref:System.ServiceModel.Channels.RequestContext> implementação do método.  
+  
+-   O <xref:System.ServiceModel.OperationContext.InstanceContext%2A> propriedade retorna o <xref:System.ServiceModel.InstanceContext> associados à operação.  
+  
+-   O <xref:System.ServiceModel.OperationContext.SessionId%2A> propriedade retorna o identificador de sessão para o canal atual e o objeto.  
+  
+-   O <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> método retorna um canal de retorno de chamada para o chamador no caso de comunicação duplex.  
+  
+-   O <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> método confirma a transação atual.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.ServiceModel.OperationContext.Current%2A> propriedade e <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> método para obter o canal de volta para o chamador de dentro de um método. Todos os métodos neste exemplo são métodos unidirecionais, permitindo que o serviço e o cliente para se comunicar em ambas as direções de forma independente. Nesse caso, o aplicativo cliente de exemplo espera apenas uma chamada de retorno antes de sair, mas outro cliente, por exemplo, um cliente de formulários do Windows, pode receber qualquer número de chamadas do serviço.  
+  
+ [!code-csharp[SCA.CallbackContract#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/services.cs#1)]
+ [!code-vb[SCA.CallbackContract#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/services.vb#1)]  
+  
+ O cliente a seguir implementa a `SampleDuplexHelloCallback` para receber a mensagem de retorno de chamada. O contrato de retorno de chamada importado não é o mesmo nome no serviço, devido ao uso de <xref:System.ServiceModel.ServiceContractAttribute.Name%2A> propriedade no exemplo anterior. Observe que o cliente não faz nenhuma suposição sobre se ou quando ele pode receber um retorno de chamada; o retorno de chamada do servidor é completamente independente de chamada de saída do cliente.  
+  
+> [!NOTE]
+>  Para obter um exemplo que usa o <xref:System.ServiceModel.OperationContext> classe em um cenário de cliente, consulte <xref:System.ServiceModel.OperationContextScope>.  
+  
+ [!code-csharp[SCA.CallbackContract#3](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.cs#3)]
+ [!code-vb[SCA.CallbackContract#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OperationContext (System.ServiceModel.IContextChannel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.IContextChannel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationContext.#ctor(System.ServiceModel.IContextChannel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="channel" Type="System.ServiceModel.IContextChannel" />
+      </Parameters>
+      <Docs>
+        <param name="channel">O <see cref="T:System.ServiceModel.IContextChannel" /> usado para criar um novo cliente <see cref="T:System.ServiceModel.OperationContext" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.OperationContext" /> que usa o <see cref="T:System.ServiceModel.IContextChannel" /> especificado em um aplicativo cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContext.%23ctor%2A> construtor para criar um novo contexto de operação dentro do escopo do qual o proxy é associado para modificar os itens de saída como cabeçalhos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.OperationContextScope> para criar um novo contexto em um aplicativo cliente para adicionar um cabeçalho personalizado à mensagem de saída.  
+  
+ [!code-csharp[OperationContextScope#4](~/samples/snippets/csharp/VS_Snippets_CFX/operationcontextscope/cs/client.cs#4)]
+ [!code-vb[OperationContextScope#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationcontextscope/vb/client.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O canal é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Channel">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.IContextChannel Channel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IContextChannel Channel" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.Channel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IContextChannel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o canal associado ao objeto <see cref="T:System.ServiceModel.OperationContext" /> atual.</summary>
+        <value>Um <see cref="T:System.ServiceModel.IContextChannel" /> associado ao <see cref="T:System.ServiceModel.OperationContext" /> atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsPrincipal">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsPrincipal ClaimsPrincipal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsPrincipal ClaimsPrincipal" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.ClaimsPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a entidade de segurança baseada em declarações associada à operação.</summary>
+        <value>A entidade de declarações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.OperationContext Current { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.ServiceModel.OperationContext Current" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.OperationContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto de execução do thread atual.</summary>
+        <value>O <see cref="T:System.ServiceModel.OperationContext" /> que representa o contexto de mensagens e de execução do método atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContext.Current%2A> propriedade para obter o contexto de execução e a mensagem para o método atual.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.ServiceModel.OperationContext.Current%2A> propriedade e <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> método para criar um canal de volta para o chamador de dentro de um método. Todos os métodos neste exemplo são métodos unidirecionais, permitindo que o serviço e o cliente para se comunicar em ambas as direções de forma independente. Nesse caso, o aplicativo cliente de exemplo espera apenas uma chamada de retorno antes de sair, mas outro cliente, por exemplo, um cliente de formulários do Windows, pode receber qualquer número de chamadas do serviço.  
+  
+ [!code-csharp[SCA.CallbackContract#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/services.cs#1)]
+ [!code-vb[SCA.CallbackContract#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/services.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointDispatcher">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.EndpointDispatcher EndpointDispatcher { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.EndpointDispatcher EndpointDispatcher" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.EndpointDispatcher" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.EndpointDispatcher</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o dispatcher do ponto de extremidade para o ponto de extremidade para inspecionar ou modificar.</summary>
+        <value>O dispatcher do ponto de extremidade para o ponto de extremidade para inspecionar ou modificar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.OperationContext&gt; Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.IExtensionCollection`1&lt;class System.ServiceModel.OperationContext&gt; Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.IExtensionCollection&lt;System.ServiceModel.OperationContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de extensões de serviço do contexto da mensagem atual.</summary>
+        <value>Uma coleção de extensões de <see cref="T:System.ServiceModel.OperationContext" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContext.Extensions%2A> propriedade para obter uma coleção de todas as extensões a <xref:System.ServiceModel.OperationContext> usado para modificar o contexto ou adicionar estado personalizado. Para obter mais informações sobre extensões, consulte [objetos extensíveis](~/docs/framework/wcf/extending/extensible-objects.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCallbackChannel&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetCallbackChannel&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetCallbackChannel&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationContext.GetCallbackChannel``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de canal usado para retornar a chamada para o cliente.</typeparam>
+        <summary>Obtém um canal para a instância do cliente que chamou a operação atual.</summary>
+        <returns>Um canal para a instância do cliente que chamou a operação do tipo especificado na propriedade <see cref="P:System.ServiceModel.ServiceContractAttribute.CallbackContract" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> propriedade para obter um canal que você pode usar para chamar operações na instância do cliente que o serviço de chamada.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.ServiceModel.OperationContext.Current%2A> propriedade e <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> método para criar um canal de volta para o chamador de dentro de uma operação. Todas as operações neste exemplo são operações unidirecionais, permitindo que o serviço e o cliente para se comunicar em ambas as direções de forma independente. Nesse caso, o aplicativo cliente de exemplo espera apenas uma chamada de retorno antes de sair, mas outro cliente, por exemplo, um cliente de formulários do Windows, pode receber qualquer número de chamadas do serviço.  
+  
+ [!code-csharp[SCA.CallbackContract#1](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/services.cs#1)]
+ [!code-vb[SCA.CallbackContract#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/services.vb#1)]  
+  
+ O cliente a seguir implementa a `SampleDuplexHelloCallback` para receber a mensagem de retorno de chamada. O contrato de retorno de chamada importado não é o mesmo nome no serviço, devido ao uso de <xref:System.ServiceModel.ServiceContractAttribute.Name%2A> propriedade no exemplo anterior. Observe que o cliente não faz nenhuma suposição sobre se ou quando ele pode receber um retorno de chamada; o retorno de chamada do servidor é completamente independente de chamada de saída do cliente.  
+  
+> [!NOTE]
+>  Para obter um exemplo que usa o <xref:System.ServiceModel.OperationContext> classe em um cenário de cliente, consulte <xref:System.ServiceModel.OperationContextScope>.  
+  
+ [!code-csharp[SCA.CallbackContract#3](~/samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.cs#3)]
+ [!code-vb[SCA.CallbackContract#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasSupportingTokens">
+      <MemberSignature Language="C#" Value="public bool HasSupportingTokens { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasSupportingTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.HasSupportingTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a mensagem de entrada tem os tokens de suporte.</summary>
+        <value>
+          <see langword="true" />Se a mensagem de entrada tem a dar suporte a tokens; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ServiceHostBase Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ServiceHostBase Host" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHostBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.ServiceHost" /> do objeto de serviço atual.</summary>
+        <value>Um objeto <see cref="T:System.ServiceModel.ServiceHost" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingMessageHeaders">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageHeaders IncomingMessageHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageHeaders IncomingMessageHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.IncomingMessageHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os cabeçalhos de mensagem de entrada do <see cref="T:System.ServiceModel.OperationContext" />.</summary>
+        <value>Um objeto <see cref="T:System.ServiceModel.Channels.MessageHeaders" /> que contém os cabeçalhos de mensagens de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para inspecionar ou modificar os cabeçalhos de solicitação que chegam a uma operação de serviço ou cabeçalhos de resposta que chegam a um proxy do cliente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ler os cabeçalhos de mensagem de entrada em uma operação de serviço.  
+  
+ [!code-csharp[OperationContextScope#2](~/samples/snippets/csharp/VS_Snippets_CFX/operationcontextscope/cs/services.cs#2)]
+ [!code-vb[OperationContextScope#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationcontextscope/vb/services.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingMessageProperties">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageProperties IncomingMessageProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageProperties IncomingMessageProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.IncomingMessageProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades da mensagem para a mensagem de entrada no <see cref="T:System.ServiceModel.OperationContext" />.</summary>
+        <value>Um objeto <see cref="T:System.ServiceModel.Channels.MessageProperties" /> que contém as propriedades da mensagem na mensagem de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para inspecionar ou modificar as propriedades de mensagem para uma mensagem de solicitação em uma operação de serviço ou uma mensagem de resposta em um proxy de cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingMessageVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageVersion IncomingMessageVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion IncomingMessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.IncomingMessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem SOAP recebida para o <see cref="T:System.ServiceModel.OperationContext" />.</summary>
+        <value>A versão SOAP da mensagem de entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para inspecionar a versão SOAP da mensagem de solicitação chega em uma operação de serviço ou a versão SOAP da mensagem de resposta que chega em um proxy de cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceContext">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.InstanceContext InstanceContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.InstanceContext InstanceContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.InstanceContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.InstanceContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.ServiceModel.InstanceContext" /> que gerencia a instância de serviço atual.</summary>
+        <value>O objeto <see cref="T:System.ServiceModel.InstanceContext" /> do serviço atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContext.InstanceContext%2A> propriedade para acessar o objeto de tempo de execução que gerencia o objeto de serviço atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserContext">
+      <MemberSignature Language="C#" Value="public bool IsUserContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUserContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.IsUserContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade é destinada ao uso do sistema e não deve ser chamada pelos usuários.</summary>
+        <value>
+          <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler OperationCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler OperationCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.OperationContext.OperationCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a operação foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.OperationContext.OperationCompleted> evento descartar parâmetros ou um valor de retorno, se você definir <xref:System.ServiceModel.OperationBehaviorAttribute.AutoDisposeParameters%2A?displayProperty=nameWithType> para `false`. Normalmente você definir <xref:System.ServiceModel.OperationBehaviorAttribute.AutoDisposeParameters%2A?displayProperty=nameWithType> para `false` para evitar [!INCLUDE[indigo2](~/includes/indigo2-md.md)] chamar <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> nos objetos de valor de parâmetro e retornar.  No entanto, se precisam de alguns parâmetros a serem preservados, enquanto outras precisam ser descartado, esse evento é o melhor lugar para descartar esses parâmetros.  
+  
+ Além disso, com associações duplex, esse evento pode ser usado para enviar uma solicitação no canal de retorno de chamada depois que a resposta para a operação atual é enviada.  
+  
+> [!NOTE]
+>  Se um chamador está aguardando o <xref:System.ServiceModel.OperationContext.OperationCompleted?displayProperty=nameWithType> evento para um <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A?displayProperty=nameWithType> operação, é possível bloquear quando a resposta é recebida. O modo adequado para tratar essa situação é agendar trabalho em outro thread quando <xref:System.ServiceModel.OperationContext.OperationCompleted> é gerado e, em seguida, imediatamente retorno do manipulador de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingMessageHeaders">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageHeaders OutgoingMessageHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageHeaders OutgoingMessageHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.OutgoingMessageHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageHeaders</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os cabeçalhos de mensagem de entrada para o <see cref="T:System.ServiceModel.OperationContext" /> ativo.</summary>
+        <value>Um objeto <see cref="T:System.ServiceModel.Channels.MessageHeaders" /> que contém os cabeçalhos de mensagens de saída para o <see cref="T:System.ServiceModel.OperationContext" /> ativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para adicionar cabeçalhos de resposta são enviados por uma operação de serviço ou cabeçalhos de solicitação que são enviados por uma [!INCLUDE[indigo2](~/includes/indigo2-md.md)] objeto cliente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ServiceModel.OperationContextScope> para criar um novo contexto em um aplicativo cliente para adicionar um cabeçalho personalizado à mensagem de saída.  
+  
+ [!code-csharp[OperationContextScope#4](~/samples/snippets/csharp/VS_Snippets_CFX/operationcontextscope/cs/client.cs#4)]
+ [!code-vb[OperationContextScope#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationcontextscope/vb/client.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingMessageProperties">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageProperties OutgoingMessageProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageProperties OutgoingMessageProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.OutgoingMessageProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as propriedades de mensagem para a mensagem de saída no ativo <see cref="T:System.ServiceModel.OperationContext" />.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Channels.MessageProperties" /> objeto que contém as propriedades de mensagem na mensagem de saída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para adicionar propriedades de mensagem para uma mensagem de resposta de propriedades de mensagem ou operação de serviço para uma mensagem de solicitação de um proxy do cliente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestContext">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.RequestContext RequestContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.RequestContext RequestContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.RequestContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.RequestContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a implementação <see cref="T:System.ServiceModel.Channels.RequestContext" /> para esse método.</summary>
+        <value>Uma implementação <see cref="T:System.ServiceModel.Channels.RequestContext" /> ou null se não houver nenhum contexto de solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Operações unidirecionais são não tem um contexto de solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceSecurityContext">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ServiceSecurityContext ServiceSecurityContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.ServiceSecurityContext ServiceSecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.ServiceSecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceSecurityContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.ServiceSecurityContext" /> em que esse método é executado.</summary>
+        <value>Um objeto <see cref="T:System.ServiceModel.ServiceSecurityContext" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionId">
+      <MemberSignature Language="C#" Value="public string SessionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionId" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.SessionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.String" /> usado para identificar a sessão atual.</summary>
+        <value>O identificador da sessão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTransactionComplete">
+      <MemberSignature Language="C#" Value="public void SetTransactionComplete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTransactionComplete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.OperationContext.SetTransactionComplete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma a transação em execução no momento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é útil apenas em operações que definem <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A?displayProperty=nameWithType> para `false`. Normalmente, os serviços fazem isso em algumas, mas nem todas as operações. Quando <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A?displayProperty=nameWithType> for false, a transação seja concluída automaticamente. Use <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> em casos onde não é possível determinar o tempo de design se uma operação precisa concluir a transação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhuma transação no contexto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportingTokens">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;System.ServiceModel.Security.SupportingTokenSpecification&gt; SupportingTokens { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class System.ServiceModel.Security.SupportingTokenSpecification&gt; SupportingTokens" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.OperationContext.SupportingTokens" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.ServiceModel.Security.SupportingTokenSpecification&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Generic.ICollection`1" /> do tipo <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</summary>
+        <value>Uma coleção de tokens de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

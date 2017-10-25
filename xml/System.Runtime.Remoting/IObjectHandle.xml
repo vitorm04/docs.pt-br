@@ -1,0 +1,60 @@
+<Type Name="IObjectHandle" FullName="System.Runtime.Remoting.IObjectHandle">
+  <TypeSignature Language="C#" Value="public interface IObjectHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IObjectHandle" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.IObjectHandle" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("C460E2B4-E199-412a-8456-84DC3E4838C3")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define a interface para descodificar objetos marshal-by-value de indireção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos de marshaling por valor podem ser retornados por meio de uma inversão de controle, permitindo que o chamador para controlar quando o objeto é carregado em seu domínio. O chamador pode descompactar o objeto de inversão de controle por meio dessa interface.  
+  
+ A classe que implementa o <xref:System.Runtime.Remoting.IObjectHandle> interface pode ser usada para passar um objeto (em um estado encapsulado) entre vários domínios de aplicativo sem carregar os metadados para o objeto encapsulado em cada <xref:System.AppDomain> por meio do qual o <xref:System.Runtime.Remoting.IObjectHandle> viaja. Portanto, o <xref:System.Runtime.Remoting.IObjectHandle> classe permite o controle de chamador de quando o <xref:System.Type> do objeto remoto é carregado em seu domínio.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Unwrap">
+      <MemberSignature Language="C#" Value="public object Unwrap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Unwrap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.IObjectHandle.Unwrap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Ou não o objeto.</summary>
+        <returns>O objeto não encapsulado.</returns>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="usage">
+          <para>Um <see cref="T:System.Runtime.Remoting.ObjectHandle" /> é um remota <see cref="T:System.MarshalByRefObject" /> e é controlado pelo serviço de tempo de vida de comunicação remota. Uma chamada para o método atual poderá falhar se o tempo de vida da concessão no <see cref="T:System.Runtime.Remoting.ObjectHandle" /> expira.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

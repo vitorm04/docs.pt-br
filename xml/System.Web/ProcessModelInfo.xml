@@ -1,0 +1,117 @@
+<Type Name="ProcessModelInfo" FullName="System.Web.ProcessModelInfo">
+  <TypeSignature Language="C#" Value="public class ProcessModelInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProcessModelInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ProcessModelInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém métodos que retornam informações sobre os processos de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ProcessModelInfo> classe não se destina a ser instanciado em seu próprio código. Use estático <xref:System.Web.ProcessModelInfo.GetCurrentProcessInfo%2A> e <xref:System.Web.ProcessModelInfo.GetHistory%2A> métodos para popular <xref:System.Web.ProcessInfo> objetos e, em seguida, use as propriedades do <xref:System.Web.ProcessInfo> objetos para obter informações sobre os processos.  
+  
+> [!NOTE]
+>  O <xref:System.Web.ProcessModelInfo.GetCurrentProcessInfo%2A> e <xref:System.Web.ProcessModelInfo.GetHistory%2A> métodos podem ser usados somente com o Microsoft Internet Information Services (IIS) versão 5.0 no Microsoft Windows 2000 e Windows XP ou com o IIS 6.0 no Windows Server 2003 e usando o modo de isolamento do IIS 5.0. Para obter mais informações, consulte [NIB: como: configurar aplicativos ASP.NET para uma versão do ASP.NET](http://msdn.microsoft.com/en-us/3e2037d2-61aa-44f3-b84e-d4dab3572ad3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.ProcessModelInfo.GetCurrentProcessInfo%2A> método para exibir estatísticas sobre o processo do ASP.NET em execução no momento em uma página da Web. Este exemplo funciona com o Internet Information Services 5.0 no Windows 2000 e Windows XP ou com o IIS 6.0 no Windows Server 2003 e usando o modo de isolamento do IIS 5.0.  
+  
+ [!code-aspx-csharp[System.Web.ProcessModelInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ProcessModelInfo/CS/processinfo1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.ProcessModelInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ProcessModelInfo/VB/processinfo1vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessModelInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ProcessModelInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ProcessModelInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentProcessInfo">
+      <MemberSignature Language="C#" Value="public static System.Web.ProcessInfo GetCurrentProcessInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.ProcessInfo GetCurrentProcessInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ProcessModelInfo.GetCurrentProcessInfo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ProcessInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações sobre o processo de trabalho que está executando a solicitação atual.</summary>
+        <returns>Um <see cref="T:System.Web.ProcessInfo" /> que contém informações sobre o processo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ProcessModelInfo.GetCurrentProcessInfo%2A> método é aplicável somente para aplicativos que estejam executando sob o modelo de processo do ASP.NET.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Web.ProcessModelInfo.GetCurrentProcessInfo%2A> método para exibir estatísticas sobre o processo do ASP.NET em execução no momento em uma página da Web.  
+  
+ [!code-aspx-csharp[System.Web.ProcessModelInfo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.ProcessModelInfo/CS/processinfo1cs.aspx#1)]
+ [!code-aspx-vb[System.Web.ProcessModelInfo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.ProcessModelInfo/VB/processinfo1vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Informações de processo não estão disponíveis para a solicitação atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHistory">
+      <MemberSignature Language="C#" Value="public static System.Web.ProcessInfo[] GetHistory (int numRecords);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Web.ProcessInfo[] GetHistory(int32 numRecords) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ProcessModelInfo.GetHistory(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.ProcessInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numRecords" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numRecords">O número de processos para os quais informações são solicitadas.</param>
+        <summary>Retorna informações sobre os processos de trabalho recente.</summary>
+        <returns>Uma matriz de mais recente <see cref="T:System.Web.ProcessInfo" /> objetos (até 100); caso contrário, se o número de objetos disponíveis é menor que <paramref name="numRecords" />, todos os objetos disponíveis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ProcessModelInfo.GetHistory%2A> método é aplicável somente para aplicativos que estejam executando sob o modelo de processo do ASP.NET.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Informações de processo não estão disponíveis.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

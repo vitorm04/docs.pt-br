@@ -1,0 +1,174 @@
+<Type Name="ToolboxDataAttribute" FullName="System.Web.UI.ToolboxDataAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ToolboxDataAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ToolboxDataAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ToolboxDataAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a marca padrão gerada para um controle personalizado quando este é arrastado de uma caixa de ferramentas em uma ferramenta como o Microsoft Visual Studio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o designer visual de uma ferramenta como o Visual Studio cria uma marca vazia. Isso é uma marca que representa um controle em seu estado padrão, quando o controle é removido da caixa de ferramentas de um designer visual para a superfície de design. Para especificar valores padrão inicial, um controle pode fazer uso desse atributo. Você pode usar esse atributo para personalizar o conteúdo HTML inicial que é colocado no designer quando o controle é arrastado da caixa de ferramentas para o formulário.  
+  
+   
+  
+## Examples  
+  
+```  
+[ ToolboxData("<{0}:MyLabel runat= server Text=   
+       MyLabel><{0}:MyLabel>") ]public class MyLabel : Label {...}  
+```  
+  
+ No exemplo de código a seguir, o código anterior define várias propriedades específicas para `MyLabel`. Todas as ocorrências de `{0}` são substituídos, pelo designer, com o prefixo de marca associado a `MyLabel` classe.  
+  
+ [!code-csharp[SystemWebUI_ToolboxDataAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUI_ToolboxDataAttribute/CS/toolboxdataattribute.cs#1)]
+ [!code-vb[SystemWebUI_ToolboxDataAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUI_ToolboxDataAttribute/VB/toolboxdataattribute.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolboxDataAttribute (string data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ToolboxDataAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="data" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="data">A cadeia de caracteres a ser definido como o <see cref="P:System.Web.UI.ToolboxDataAttribute.Data" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ToolboxDataAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public string Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Data" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ToolboxDataAttribute.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres que representa os valores iniciais de propriedade do controle, que é usado em um designer visual para criar uma instância do controle.</summary>
+        <value>Uma cadeia de caracteres que representa os valores iniciais para este atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.ToolboxDataAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.ToolboxDataAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ToolboxDataAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ToolboxDataAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o padrão <see cref="T:System.Web.UI.ToolboxDataAttribute" /> valor para um controle personalizado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ToolboxDataAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado.</param>
+        <summary>Testes se o <see cref="T:System.Web.UI.ToolboxDataAttribute" /> objeto é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />, se o <see cref="T:System.Web.UI.ToolboxDataAttribute" /> objeto for igual ao objeto especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ToolboxDataAttribute.Equals%2A> método primeiro compara os objetos para igualdade.  Se a comparação retornar `false`, o <xref:System.Web.UI.ToolboxDataAttribute.Equals%2A> método compara os dados do <xref:System.Web.UI.ToolboxDataAttribute> objeto para os dados do objeto especificado após o primeiro teste o objeto fornecido para certificar-se de que o objeto fornecido não é `null` e também é digitado como <xref:System.Web.UI.ToolboxDataAttribute> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ToolboxDataAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash do controle personalizado.</summary>
+        <returns>32 bits assinado <see langword="integer" /> que representa o código de hash.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ToolboxDataAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Testes se o <see cref="T:System.Web.UI.ToolboxDataAttribute" /> objeto contém o valor padrão para o <see cref="P:System.Web.UI.ToolboxDataAttribute.Data" /> propriedade.</summary>
+        <returns>
+          <see langword="true" />, se o <see cref="T:System.Web.UI.ToolboxDataAttribute" /> contém o valor padrão para o <see cref="P:System.Web.UI.ToolboxDataAttribute.Data" /> propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão é uma cadeia de caracteres vazia ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,336 @@
+<Type Name="KeyboardDevice" FullName="System.Windows.Input.KeyboardDevice">
+  <TypeSignature Language="C#" Value="public abstract class KeyboardDevice : System.Windows.Input.InputDevice" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit KeyboardDevice extends System.Windows.Input.InputDevice" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyboardDevice" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputDevice</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe abstrata que representa um dispositivo de teclado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.KeyboardDevice> oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.  
+  
+ Para teclado relacionadas a entrada, use o <xref:System.Windows.Input.Keyboard> classe. O <xref:System.Windows.Input.Keyboard> classe representa o teclado para um aplicativo e fornece métodos, propriedades e eventos que refletem o estado do teclado.  
+  
+ O <xref:System.Windows.Input.Keyboard> classe delegados para apropriada <xref:System.Windows.Input.KeyboardDevice>.  
+  
+ Cada <xref:System.Windows.Input.InputDevice> objeto representa um determinado dispositivo de entrada.  Por exemplo, se houver dois mouses, haverá dois <xref:System.Windows.Input.InputDevice> objetos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected KeyboardDevice (System.Windows.Input.InputManager inputManager);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.InputManager inputManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.#ctor(System.Windows.Input.InputManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="inputManager" Type="System.Windows.Input.InputManager" />
+      </Parameters>
+      <Docs>
+        <param name="inputManager">O Gerenciador de entrada associado a esta <see cref="T:System.Windows.Input.KeyboardDevice" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.KeyboardDevice" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveSource">
+      <MemberSignature Language="C#" Value="public override System.Windows.PresentationSource ActiveSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PresentationSource ActiveSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyboardDevice.ActiveSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.PresentationSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.PresentationSource" /> que está relatando a entrada para este dispositivo.</summary>
+        <value>A fonte de entrada para este dispositivo.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para obter a origem ativa.  Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearFocus">
+      <MemberSignature Language="C#" Value="public void ClearFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.ClearFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o foco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.KeyboardDevice.ClearFocus%2A> método define o foco para `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRestoreFocusMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.RestoreFocusMode DefaultRestoreFocusMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.RestoreFocusMode DefaultRestoreFocusMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyboardDevice.DefaultRestoreFocusMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.RestoreFocusMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comportamento de [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] ao restaurar o foco.</summary>
+        <value>Um valor de enumeração que especifica o comportamento de [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] ao restaurar o foco. O padrão em <see cref="F:System.Windows.Input.RestoreFocusMode.Auto" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement Focus (System.Windows.IInputElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.IInputElement Focus(class System.Windows.IInputElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.Focus(System.Windows.IInputElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.IInputElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">Move o foco para o elemento.</param>
+        <summary>Define o foco do teclado no especificado <see cref="T:System.Windows.IInputElement" />.</summary>
+        <returns>O elemento que tem o foco do teclado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="element" /> não é um <see cref="T:System.Windows.UIElement" /> ou <see cref="T:System.Windows.ContentElement" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedElement">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement FocusedElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement FocusedElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyboardDevice.FocusedElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento que tem o foco do teclado.</summary>
+        <value>O elemento com foco do teclado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyStates">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.KeyStates GetKeyStates (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Input.KeyStates GetKeyStates(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.GetKeyStates(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">A tecla a ser verificada.</param>
+        <summary>Obtém o conjunto de estados de chave especificado <see cref="T:System.Windows.Input.Key" />.</summary>
+        <returns>O conjunto de estados principais para a chave especificada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="key" />não é uma chave válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyStatesFromSystem">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Input.KeyStates GetKeyStatesFromSystem (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype System.Windows.Input.KeyStates GetKeyStatesFromSystem(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.GetKeyStatesFromSystem(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.KeyStates</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">A tecla a ser verificada.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o <see cref="T:System.Windows.Input.KeyStates" /> especificado <see cref="T:System.Windows.Input.Key" />.</summary>
+        <returns>O conjunto de estados principais para a chave especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyDown">
+      <MemberSignature Language="C#" Value="public bool IsKeyDown (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsKeyDown(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.IsKeyDown(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">A tecla a ser verificada.</param>
+        <summary>Determina se o especificado <see cref="T:System.Windows.Input.Key" /> está no estado inativo.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="key" /> estiver no estado desativado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="key" />não é uma chave válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyToggled">
+      <MemberSignature Language="C#" Value="public bool IsKeyToggled (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsKeyToggled(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.IsKeyToggled(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">A tecla a ser verificada.</param>
+        <summary>Determina se o especificado <see cref="T:System.Windows.Input.Key" /> está no estado alternado.</summary>
+        <returns>
+          <see langword="true" /> se a <paramref name="key" /> estiver no estado ativado, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="key" />não é uma chave válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsKeyUp">
+      <MemberSignature Language="C#" Value="public bool IsKeyUp (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsKeyUp(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyboardDevice.IsKeyUp(System.Windows.Input.Key)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">A tecla a ser verificada.</param>
+        <summary>Determina se o especificado <see cref="T:System.Windows.Input.Key" /> está no estado de backup.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="key" /> estiver no estado ativado, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="key" />não é uma chave válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiers">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ModifierKeys Modifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.ModifierKeys Modifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyboardDevice.Modifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de <see cref="T:System.Windows.Input.ModifierKeys" /> que é pressionado no momento.</summary>
+        <value>O conjunto de chaves de modificador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public override System.Windows.IInputElement Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement Target" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyboardDevice.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o especificado <see cref="T:System.Windows.IInputElement" /> que a entrada do dispositivo é enviada para.</summary>
+        <value>O elemento que recebe entrada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O destino para um <xref:System.Windows.Input.KeyboardDevice> é o objeto que tem o foco do teclado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,254 @@
+<Type Name="FileSystemAccessRule" FullName="System.Security.AccessControl.FileSystemAccessRule">
+  <TypeSignature Language="C#" Value="public sealed class FileSystemAccessRule : System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FileSystemAccessRule extends System.Security.AccessControl.AccessRule" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.FileSystemAccessRule" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.AccessRule</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma abstração de uma entrada de controle de acesso (ACE) que define uma regra de acesso para um arquivo ou diretório. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.AccessControl.FileSystemAccessRule> classe representa uma abstração de uma base controle entrada de acesso (ACE) que especifica uma conta de usuário, o tipo de acesso para fornecer (leitura, gravação e assim por diante) e se deseja permitir ou negar esse direito.  Essa classe também pode especificar como as regras de acesso são propagadas para objetos filho.  
+  
+ Use o <xref:System.Security.AccessControl.FileSystemAccessRule> classe para criar uma nova regra de acesso.  Você pode manter a regra usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa a <xref:System.Security.AccessControl.FileSecurity> classe para adicionar e remover uma entrada de controle de acesso (ACE) de um arquivo.  Você deve fornecer uma conta de grupo ou de usuário válido para executar este exemplo.  
+  
+ [!code-cpp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que encapsula uma referência a uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica se a operação será permitida ou negada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.FileSystemAccessRule" /> usando uma referência a uma conta de usuário, um valor que especifica o tipo de operação associado à regra de acesso e um valor que especifica se a operação será permitida ou negada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de controle de acesso que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de controle de acesso definem direitos de conta de usuário que determinam quais ações são permitidas ou não permitidas em computadores que executam o Microsoft Windows.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="identity" /> não é um objeto <see cref="T:System.Security.Principal.IdentityReference" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="type" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAccessRule (string identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAccessRule.#ctor(System.String,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O nome de uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica se a operação será permitida ou negada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.FileSystemAccessRule" /> usando o nome de uma conta de usuário, um valor que especifica o tipo de operação associado à regra de acesso e um valor que descreve se a operação será permitida ou negada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de controle de acesso que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de controle de acesso definem direitos de conta de usuário que determinam quais ações são permitidas ou não permitidas em computadores que executam o Microsoft Windows.  
+  
+ O `identity` parâmetro deve identificar uma conta válida no domínio ou computador atual.  A cadeia de caracteres leva o seguinte formato, onde `DOMAIN` é o nome de um nome de computador ou de domínio válido e `account` é o nome de uma conta de usuário em um computador ou domínio: `DOMAIN\account`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa a <xref:System.Security.AccessControl.FileSecurity> classe para adicionar e remover uma entrada de controle de acesso (ACE) de um arquivo.  Você deve fornecer uma conta de grupo ou de usuário válido para executar este exemplo.  
+  
+ [!code-cpp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/cpp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
+ [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
+ [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="type" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAccessRule (System.Security.Principal.IdentityReference identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Principal.IdentityReference identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAccessRule.#ctor(System.Security.Principal.IdentityReference,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IdentityReference" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">Um objeto <see cref="T:System.Security.Principal.IdentityReference" /> que encapsula uma referência a uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="inheritanceFlags">Uma da <see cref="T:System.Security.AccessControl.InheritanceFlags" /> valores que especifica como as máscaras de acesso são propagadas para objetos filho.</param>
+        <param name="propagationFlags">Uma da <see cref="T:System.Security.AccessControl.PropagationFlags" /> valores que especifica como as entradas de controle de acesso (ACEs) são propagadas para objetos filho.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica se a operação será permitida ou negada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.FileSystemAccessRule" /> usando uma referência a uma conta de usuário, um valor que especifica o tipo de operação associado à regra de acesso, um valor que determina como os direitos são herdados, um valor que determina como os direitos são propagados e um valor que especifica se a operação será permitida ou negada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de controle de acesso que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de controle de acesso definem direitos de conta de usuário que determinam quais ações são permitidas ou não permitidas em computadores que executam o Microsoft Windows.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="identity" /> não é um objeto <see cref="T:System.Security.Principal.IdentityReference" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="type" /> parâmetro.  
+  
+ -ou-  
+  
+ Uma enumeração incorretova foi transmitida para o <paramref name="inheritanceFlags" /> parâmetro.  
+  
+ -ou-  
+  
+ Uma enumeração incorretova foi transmitida para o <paramref name="propagationFlags" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileSystemAccessRule (string identity, System.Security.AccessControl.FileSystemRights fileSystemRights, System.Security.AccessControl.InheritanceFlags inheritanceFlags, System.Security.AccessControl.PropagationFlags propagationFlags, System.Security.AccessControl.AccessControlType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string identity, valuetype System.Security.AccessControl.FileSystemRights fileSystemRights, valuetype System.Security.AccessControl.InheritanceFlags inheritanceFlags, valuetype System.Security.AccessControl.PropagationFlags propagationFlags, valuetype System.Security.AccessControl.AccessControlType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.FileSystemAccessRule.#ctor(System.String,System.Security.AccessControl.FileSystemRights,System.Security.AccessControl.InheritanceFlags,System.Security.AccessControl.PropagationFlags,System.Security.AccessControl.AccessControlType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="identity" Type="System.String" />
+        <Parameter Name="fileSystemRights" Type="System.Security.AccessControl.FileSystemRights" />
+        <Parameter Name="inheritanceFlags" Type="System.Security.AccessControl.InheritanceFlags" />
+        <Parameter Name="propagationFlags" Type="System.Security.AccessControl.PropagationFlags" />
+        <Parameter Name="type" Type="System.Security.AccessControl.AccessControlType" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O nome de uma conta de usuário.</param>
+        <param name="fileSystemRights">Uma da <see cref="T:System.Security.AccessControl.FileSystemRights" /> valores que especifica o tipo de operação associada à regra de acesso.</param>
+        <param name="inheritanceFlags">Uma da <see cref="T:System.Security.AccessControl.InheritanceFlags" /> valores que especifica como as máscaras de acesso são propagadas para objetos filho.</param>
+        <param name="propagationFlags">Uma da <see cref="T:System.Security.AccessControl.PropagationFlags" /> valores que especifica como as entradas de controle de acesso (ACEs) são propagadas para objetos filho.</param>
+        <param name="type">Um dos valores de <see cref="T:System.Security.AccessControl.AccessControlType" /> que especifica se a operação será permitida ou negada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.FileSystemAccessRule" /> usando um nome de uma conta de usuário, um valor que especifica o tipo de operação associado à regra de acesso, um valor que determina como os direitos são herdados, um valor que determina como os direitos são propagados e um valor que especifica se a operação será permitida ou negada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar uma regra de controle de acesso que você pode persistir usando o <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> classe.  As regras de controle de acesso definem direitos de conta de usuário que determinam quais ações são permitidas ou não permitidas em computadores que executam o Microsoft Windows.  
+  
+ O `identity` parâmetro deve identificar uma conta válida no domínio ou computador atual.  A cadeia de caracteres leva o seguinte formato, onde `DOMAIN` é o nome de um nome de computador ou de domínio válido e `account` é o nome de uma conta de usuário em um computador ou domínio: `DOMAIN\account`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="identity" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Uma enumeração incorretova foi transmitida para o <paramref name="type" /> parâmetro.  
+  
+ -ou-  
+  
+ Uma enumeração incorretova foi transmitida para o <paramref name="inheritanceFlags" /> parâmetro.  
+  
+ -ou-  
+  
+ Uma enumeração incorretova foi transmitida para o <paramref name="propagationFlags" /> parâmetro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FileSystemRights">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.FileSystemRights FileSystemRights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.FileSystemRights FileSystemRights" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.FileSystemAccessRule.FileSystemRights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.FileSystemRights</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os sinalizadores <see cref="T:System.Security.AccessControl.FileSystemRights" /> associados ao objeto <see cref="T:System.Security.AccessControl.FileSystemAccessRule" /> atual.</summary>
+        <value>O <see cref="T:System.Security.AccessControl.FileSystemRights" /> sinalizadores associados com a atual <see cref="T:System.Security.AccessControl.FileSystemAccessRule" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

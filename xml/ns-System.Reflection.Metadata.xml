@@ -1,0 +1,6 @@
+<Namespace Name="System.Reflection.Metadata">
+  <Docs>
+    <summary>O <see cref="N:System.Reflection.Metadata" /> namespace contém tipos que representam informações de metadados sobre assemblies, módulos, membros, parâmetros e outras entidades em código gerenciado.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

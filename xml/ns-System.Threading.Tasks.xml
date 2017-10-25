@@ -1,0 +1,6 @@
+<Namespace Name="System.Threading.Tasks">
+  <Docs>
+    <summary>O <see langword="System.Threading.Tasks" /> namespace fornece tipos que simplificam a tarefa de escrever código simultâneo e assíncrono. Os principais tipos são <see cref="T:System.Threading.Tasks.Task" /> que representa uma operação assíncrona que pode ser aguardada e cancelada, e <see cref="T:System.Threading.Tasks.Task`1" />, que é uma tarefa que pode retornar um valor. O <see cref="T:System.Threading.Tasks.TaskFactory" /> classe fornece métodos estáticos para criar e iniciar tarefas e o <see cref="T:System.Threading.Tasks.TaskScheduler" /> classe fornece a infraestrutura de agendamento de threads de padrão.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

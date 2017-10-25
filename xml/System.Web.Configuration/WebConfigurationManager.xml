@@ -1,0 +1,979 @@
+<Type Name="WebConfigurationManager" FullName="System.Web.Configuration.WebConfigurationManager">
+  <TypeSignature Language="C#" Value="public static class WebConfigurationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WebConfigurationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.WebConfigurationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso a arquivos de configuração que se aplicam a aplicativos da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.WebConfigurationManager> classe permite que você para acessar informações do computador e do aplicativo.  
+  
+ Usando <xref:System.Web.Configuration.WebConfigurationManager> é a melhor maneira de trabalhar com arquivos de configuração relacionados aos aplicativos da Web. Para aplicativos cliente, use o <xref:System.Configuration.ConfigurationManager> classe.  
+  
+ Seu aplicativo pode estender o <xref:System.Configuration> tipos ou usá-los diretamente para lidar com informações de configuração, conforme explicado na lista a seguir:  
+  
+-   `Handling configuration`. Para lidar com informações de configuração usando os tipos padrão, use uma das seguintes abordagens:  
+  
+    -   `Accessing a section`. Para acessar informações de configuração para seu aplicativo, você deve usar uma da `GetSection` métodos fornecidos pelo <xref:System.Web.Configuration.WebConfigurationManager>. Para `<appSettings>` e `<connectionStrings>`, você usa o <xref:System.Web.Configuration.WebConfigurationManager.AppSettings%2A> e <xref:System.Web.Configuration.WebConfigurationManager.ConnectionStrings%2A> propriedades. Esses métodos execute operações somente leitura, use uma única instância armazenada em cache da configuração e são multithread com suporte.  
+  
+    -   `Accessing configuration files`. Seu aplicativo pode ler e gravar configurações em qualquer nível para si mesmo ou para outros aplicativos ou computadores, localmente ou remotamente. Você usa uma da `open` métodos fornecidos pelo <xref:System.Web.Configuration.WebConfigurationManager>. Esses métodos retornarão um <xref:System.Configuration.Configuration> objeto, que por sua vez, fornece os métodos e propriedades necessários para lidar com os arquivos de configuração subjacentes. Esses métodos executam leitura ou operações de gravação e recrie os dados de configuração, sempre que um arquivo é aberto.  
+  
+    -   `Advanced configuration`. Mais avançados de tratamento de configuração é fornecido pelos tipos de <xref:System.Configuration.SectionInformation>, <xref:System.Configuration.PropertyInformation>, <xref:System.Configuration.PropertyInformationCollection>, <xref:System.Configuration.ElementInformation>, <xref:System.Configuration.ContextInformation>, <xref:System.Configuration.ConfigurationSectionGroup>, e <xref:System.Configuration.ConfigurationSectionGroupCollection>.  
+  
+-   `Extending configuration standard types`. Você também pode fornecer os elementos de configuração personalizada ao estender os tipos de configuração padrão, como <xref:System.Configuration.ConfigurationElement>, <xref:System.Configuration.ConfigurationElementCollection>, <xref:System.Configuration.ConfigurationProperty>, e <xref:System.Configuration.ConfigurationSection> usando uma programação ou em um modelo atribuído. Consulte o <xref:System.Configuration.ConfigurationSection> classe para obter um exemplo de como estender um tipo de configuração padrão por meio de programação. Consulte o <xref:System.Configuration.ConfigurationElement> classe para obter um exemplo de como estender um tipo de configuração padrão usando o modelo atribuída.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o  
+  
+ Método <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A>.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#2)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>O <see cref="T:System.Configuration.Configuration" /> classe permite o acesso programático para edição de arquivos de configuração. Você usar um dos métodos open fornecidos pelo <see cref="T:System.Web.Configuration.WebConfigurationManager" />. Esses métodos retornarão um <see cref="T:System.Configuration.Configuration" /> objeto, que por sua vez, fornece os métodos e propriedades necessários para lidar com os arquivos de configuração subjacentes. Você pode acessar esses arquivos para leitura ou gravação da seguinte maneira:  
+  
+ Você usa <see cref="M:System.Configuration.Configuration.GetSection(System.String)" /> ou <see cref="M:System.Configuration.Configuration.GetSectionGroup(System.String)" /> para ler informações de configuração. Observe que o usuário ou processo que lê deve ter as seguintes permissões:  
+  
+-   Permissão de leitura no arquivo de configuração no nível da hierarquia de configuração atual.  
+  
+-   Permissões de leitura no pai todos os arquivos de configuração.  
+  
+ Se seu aplicativo precisa de acesso somente leitura para sua própria configuração, é recomendável usar o <see cref="Overload:System.Web.Configuration.WebConfigurationManager.GetSection" /> métodos. Esses métodos fornecem acesso aos valores de configuração em cache para o aplicativo atual, que tem um desempenho melhor que o <see cref="T:System.Configuration.Configuration" /> classe.  
+  
+ <block subset="none" type="note"><para>  
+ Se você usar um estático <see langword="GetSection" /> método que utiliza um <paramref name="path" /> parâmetro, o parâmetro path deve se referir ao aplicativo no qual o código está sendo executado; caso contrário, o parâmetro será ignorado e informações de configuração no momento de execução o aplicativo é retornado.  
+  
+</para></block>  
+  
+ Você usa uma da <see cref="Overload:System.Configuration.Configuration.Save" /> métodos para gravar informações de configuração. Observe que o usuário ou processo que grava deve ter as seguintes permissões:  
+  
+-   Permissão de gravação no arquivo de configuração e do diretório no nível da hierarquia de configuração atual.  
+  
+-   Permissões de leitura em todos os arquivos de configuração.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="AppSettings">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.NameValueCollection AppSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Specialized.NameValueCollection AppSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebConfigurationManager.AppSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as configurações de aplicativo do site da Web.</summary>
+        <value>Um objeto <see cref="T:System.Collections.Specialized.NameValueCollection" /> que contém o objeto <see cref="T:System.Configuration.AppSettingsSection" /> referente à configuração padrão do aplicativo Web atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Configuration.AppSettingsSection> objeto contém o arquivo de configuração `<appSettings>` seção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.AppSettings%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#8)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível recuperar um objeto <see cref="T:System.Collections.Specialized.NameValueCollection" /> válido com os dados de configurações do aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionStrings">
+      <MemberSignature Language="C#" Value="public static System.Configuration.ConnectionStringSettingsCollection ConnectionStrings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Configuration.ConnectionStringSettingsCollection ConnectionStrings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebConfigurationManager.ConnectionStrings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConnectionStringSettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as cadeias de conexão do site da Web.</summary>
+        <value>Um objeto <see cref="T:System.Configuration.ConnectionStringSettingsCollection" /> que contém o conteúdo do objeto <see cref="T:System.Configuration.ConnectionStringsSection" /> para a configuração padrão do aplicativo Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.WebConfigurationManager.ConnectionStrings%2A> propriedade para acessar informações de configuração e enumerar os resultados. Para acessar uma cadeia de caracteres de conexão específica, use retornado <xref:System.Configuration.ConnectionStringSettingsCollection> com o nome da cadeia de conexão desejado, como um indexador.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#7)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível recuperar um objeto <see cref="T:System.Configuration.ConnectionStringSettingsCollection" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSection">
+      <MemberSignature Language="C#" Value="public static object GetSection (string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetSection(string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.GetSection(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">O nome da seção de configuração.</param>
+        <summary>Recupera a seção de configuração especificada do arquivo de configuração do aplicativo Web atual.</summary>
+        <returns>O objeto de seção de configuração especificado ou <see langword="null" /> se a seção não existir. Lembre-se de que as restrições de segurança existem ao usar <see cref="M:System.Web.Configuration.WebConfigurationManager.GetSection(System.String)" /> como uma operação de tempo de execução. Você não poderá acessar uma seção no tempo de execução para realizar modificações, por exemplo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> é chamado de dentro de um aplicativo Web, ele obtém a seção do arquivo de configuração selecionado pelo sistema de acordo com a hierarquia de configuração do aplicativo da Web.  
+  
+> [!CAUTION]
+>  Se seu aplicativo usa um protocolo diferente de HTTP, o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> sobrecarga que usa um nome de seção e um caminho na lista de parâmetros é usar. Você deve especificar o caminho do arquivo de configuração porque o sistema não pode fazer suposições sobre o nível de hierarquia de configuração. Se você usar o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> sobrecarga que usa apenas um nome de seção, o sistema sempre tenta retornar as definições de configuração no nível do aplicativo. No entanto, observe que, se o caminho especificado está fora do aplicativo atual, a sobrecarga que usa um caminho também retornará as definições de configuração de nível de aplicativo para o aplicativo em execução no momento.  
+  
+ Você poderia chamar <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> de dentro de um aplicativo cliente. Nesse caso, ele obtém a seção padrão do arquivo de configuração selecionado pelo sistema de acordo com a hierarquia de configuração do cliente. Geralmente, isso é o arquivo Machine. config, a menos que você tenha uma configuração mapeada em vigor. Para o mapeamento de arquivos de configuração, consulte os métodos de mapeamento descritos a seguir.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> é um método de tempo de execução que opera na seção de um arquivo de configuração no nível de hierarquia na qual o aplicativo é executado. Para uma operação de tempo de execução não, use <xref:System.Configuration.Configuration.GetSection%2A> em vez disso. Este método opera da seção especificada de um arquivo de configuração que você obter usando um dos métodos sobrecarregados para abrir um arquivo de configuração <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A>.  
+  
+   
+  
+## Examples  
+ Os exemplos nesta seção mostram como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> método.  
+  
+ O exemplo a seguir mostra uma seção que pode ser acessada de um aplicativo Web ou um aplicativo de console.  
+  
+> [!NOTE]
+>  Este exemplo demonstra como usar o <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A> método para obter um <xref:System.Configuration.ConfigurationSection> objeto a partir de um arquivo de configuração.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#2)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+        <block subset="none" type="overrides">
+          <para>O valor de retorno deve ser convertido para o tipo de configuração esperada antes do uso. Para evitar exceções de conversão possível, você deve usar uma operação de conversão condicional como o <see langword="as" /> operador em c# ou a função no Visual Basic.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSection">
+      <MemberSignature Language="C#" Value="public static object GetSection (string sectionName, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetSection(string sectionName, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.GetSection(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">O nome da seção de configuração.</param>
+        <param name="path">O caminho do arquivo de configuração virtual.</param>
+        <summary>Recupera a seção de configuração especificada do arquivo de configuração do aplicativo Web no local especificado.</summary>
+        <returns>O objeto de seção de configuração especificado ou <see langword="null" /> se a seção não existir. Lembre-se de que as restrições de segurança existem ao usar <see cref="M:System.Web.Configuration.WebConfigurationManager.GetSection(System.String,System.String)" /> como uma operação de tempo de execução. Você não poderá acessar uma seção no tempo de execução para realizar modificações, por exemplo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> é chamado de dentro de um aplicativo Web, ele obtém a seção do arquivo de configuração definido pelo caminho especificado na hierarquia de configuração.  
+  
+> [!CAUTION]
+>  Se seu aplicativo usa um protocolo diferente de HTTP, o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> sobrecarga que usa um nome de seção e um caminho na lista de parâmetros é usar. Você deve especificar o caminho do arquivo de configuração porque o sistema não pode fazer suposições sobre o nível de hierarquia de configuração. Se você usar o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> sobrecarga que usa apenas um nome de seção, o sistema sempre tenta retornar as definições de configuração no nível do aplicativo. No entanto, observe que, se o caminho especificado está fora do aplicativo atual, a sobrecarga que usa um caminho também retornará as definições de configuração de nível de aplicativo para o aplicativo em execução no momento.  
+  
+ Este método não pode ser chamado de dentro de um aplicativo cliente.  
+  
+ Se você deseja recuperar a seção de configuração do arquivo de configuração localizado no atual diretório nível do aplicativo Web, use o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> é um método de tempo de execução operacional na seção de um arquivo de configuração no nível de hierarquia na qual o aplicativo é executado. Para uma operação de tempo de execução não, use <xref:System.Configuration.Configuration.GetSection%2A> em vez disso. Este método opera da seção especificada de um arquivo de configuração que você obter usando um do `open` métodos de arquivo de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> método.  
+  
+> [!NOTE]
+>  Este exemplo demonstra como usar o <xref:System.Web.Configuration.WebConfigurationManager.GetSection%2A> método para obter um <xref:System.Configuration.ConfigurationSection> objeto a partir de um arquivo de configuração especificado.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#5)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método é chamado de fora de um aplicativo Web.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+        <block subset="none" type="overrides">
+          <para>O valor de retorno deve ser convertido para o tipo de configuração esperada antes do uso. Para evitar exceções de conversão possível, você deve usar uma operação de conversão condicional como o <see langword="as" /> operador em c# ou a função no Visual Basic.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWebApplicationSection">
+      <MemberSignature Language="C#" Value="public static object GetWebApplicationSection (string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetWebApplicationSection(string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">O nome da seção de configuração.</param>
+        <summary>Recupera a seção de configuração especificada do arquivo de configuração do aplicativo Web atual.</summary>
+        <returns>O objeto da seção da configuração especificado, <see langword="null" /> se a seção não existir ou ainda um objeto interno se a seção não estiver acessível no tempo de execução.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A> é chamado de dentro de um aplicativo Web, ele obtém a seção do arquivo de configuração selecionado pelo sistema de acordo com a hierarquia de configuração do aplicativo da Web.  
+  
+ Você poderia chamar <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A> de dentro de um aplicativo cliente. Nesse caso, ele obtém a seção padrão do arquivo de configuração selecionado pelo sistema de acordo com a hierarquia de configuração do cliente. Geralmente, isso é o arquivo Machine. config, a menos que você tenha uma configuração mapeada em vigor. Para o mapeamento de arquivos de configuração, consulte os métodos de mapeamento descritos a seguir.  
+  
+> [!NOTE]
+>  O <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A> método é uma operação de tempo de execução que atua na seção do arquivo de configuração do aplicativo localizado no nível atual. O <xref:System.Configuration.Configuration.GetSection%2A> método, no entanto, não é uma operação de tempo de execução, mas atua na seção especificada obtida por meio de um dos métodos para abrir os arquivos de configuração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A> método.  
+  
+> [!NOTE]
+>  Este exemplo demonstra como usar o <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A> método para obter um <xref:System.Configuration.ConfigurationSection> objeto do arquivo de configuração padrão.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#6)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+        <block subset="none" type="overrides">
+          <para>O valor de retorno deve ser convertido para o tipo de configuração esperada antes do uso. Para evitar exceções de conversão possível, você deve usar uma operação de conversão condicional como o <see langword="as" /> operador em c# ou a função no Visual Basic.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMachineConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMachineConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre o arquivo de configuração da máquina no computador atual como uma <see cref="T:System.Configuration.Configuration" /> objeto para permitir a leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationManager.OpenMachineConfiguration%2A> método abre o arquivo de configuração da máquina no computador em que o aplicativo é executado. Esse arquivo está localizado na compilação padrão diretório % windir%\Microsoft.NET\Framework\version\config.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#9)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMachineConfiguration (string locationSubPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMachineConfiguration(string locationSubPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="locationSubPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="locationSubPath">O caminho do aplicativo ao qual se aplica a configuração da máquina.</param>
+        <summary>Abre o arquivo de configuração da máquina no computador atual como uma <see cref="T:System.Configuration.Configuration" /> objeto para permitir a leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método abre o arquivo de configuração de máquina é aplicável para o diretório especificado pelo `locationSubPath` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#10)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMachineConfiguration (string locationSubPath, string server);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMachineConfiguration(string locationSubPath, string server) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="locationSubPath" Type="System.String" />
+        <Parameter Name="server" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="locationSubPath">O caminho do aplicativo ao qual a configuração se aplica.</param>
+        <param name="server">O nome totalmente qualificado do servidor para retornar a configuração.</param>
+        <summary>Abre o arquivo de configuração de máquina especificado no servidor especificado como um <see cref="T:System.Configuration.Configuration" /> objeto para permitir a leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método abre o arquivo de configuração de máquina que está localizado no diretório especificado o `locationSubPath` parâmetro e no computador especificado pelo `server` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#11)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMachineConfiguration (string locationSubPath, string server, IntPtr userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMachineConfiguration(string locationSubPath, string server, native int userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration(System.String,System.String,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="locationSubPath" Type="System.String" />
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="userToken" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="locationSubPath">O caminho do aplicativo ao qual a configuração se aplica.</param>
+        <param name="server">O nome totalmente qualificado do servidor para retornar a configuração.</param>
+        <param name="userToken">Um token de conta a ser usado.</param>
+        <summary>Abre o arquivo de configuração de máquina especificado no servidor especificado como um <see cref="T:System.Configuration.Configuration" /> do objeto, usando o contexto de segurança especificado para acesso de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para acessar um arquivo de configuração usando a representação.  
+  
+> [!NOTE]
+>  O token de conta geralmente é recuperado de uma instância do <xref:System.Security.Principal.WindowsIdentity> classe ou por meio de uma chamada para código não gerenciado, como uma chamada à API do Win32 `LogonUser`. Para obter mais informações sobre as chamadas para código não gerenciado, consulte [consumindo funções de DLL não gerenciadas](~/docs/framework/interop/consuming-unmanaged-dll-functions.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#12)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Não foram fornecidos valores válidos para o <paramref name="server" /> ou <paramref name="userToken" /> parâmetros.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMachineConfiguration (string locationSubPath, string server, string userName, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMachineConfiguration(string locationSubPath, string server, string userName, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="locationSubPath" Type="System.String" />
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="locationSubPath">O caminho do aplicativo ao qual a configuração se aplica.</param>
+        <param name="server">O nome totalmente qualificado do servidor para retornar a configuração.</param>
+        <param name="userName">O nome de usuário completo (Domínio\Usuário) a ser usado ao abrir o arquivo.</param>
+        <param name="password">A senha do nome de usuário.</param>
+        <summary>Abre o arquivo de configuração de máquina especificado no servidor especificado como um <see cref="T:System.Configuration.Configuration" /> do objeto, usando o contexto de segurança especificado para acesso de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para acessar um arquivo de configuração usando a representação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#13](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#13)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#13](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Os parâmetros <paramref name="server" /> ou <paramref name="userName" /> e <paramref name="password" /> eram inválidos.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMappedMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedMachineConfiguration (System.Configuration.ConfigurationFileMap fileMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedMachineConfiguration(class System.Configuration.ConfigurationFileMap fileMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMappedMachineConfiguration(System.Configuration.ConfigurationFileMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Configuration.ConfigurationFileMap" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">O <see cref="T:System.Configuration.ConfigurationFileMap" /> objeto a ser usado no lugar do arquivo de configuração de máquina padrão.</param>
+        <summary>Abre o arquivo de configuração de máquina como um <see cref="T:System.Configuration.Configuration" /> do objeto, usando o mapeamento de arquivo especificado para acesso de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMappedMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedMachineConfiguration (System.Configuration.ConfigurationFileMap fileMap, string locationSubPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedMachineConfiguration(class System.Configuration.ConfigurationFileMap fileMap, string locationSubPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMappedMachineConfiguration(System.Configuration.ConfigurationFileMap,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Configuration.ConfigurationFileMap" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">O <see cref="T:System.Configuration.ConfigurationFileMap" /> objeto a ser usado no lugar de um arquivo de configuração de máquina padrão.</param>
+        <param name="locationSubPath">O recurso específico ao qual a configuração se aplica.</param>
+        <summary>Abre o arquivo de configuração de máquina como um <see cref="T:System.Configuration.Configuration" /> usando o mapeamento de arquivo especificado e o local para permitir a leitura ou gravação do objeto.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="OpenMappedWebConfiguration">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Abre o arquivo de configuração de aplicativo da Web como um <see cref="T:System.Configuration.Configuration" /> usando o mapeamento de arquivo especificado para acesso de leitura ou gravação do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o mecanismo de mapeamento quando precisar mapear sua hierarquia de diretório virtual para um diretório físico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como mapear uma hierarquia de diretório virtual para um físico. O exemplo mostrado aqui é usado nos membros sobrecarregados.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#20](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#20)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#20](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="OpenMappedWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedWebConfiguration (System.Web.Configuration.WebConfigurationFileMap fileMap, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedWebConfiguration(class System.Web.Configuration.WebConfigurationFileMap fileMap, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMappedWebConfiguration(System.Web.Configuration.WebConfigurationFileMap,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Web.Configuration.WebConfigurationFileMap" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">O objeto <see cref="T:System.Web.Configuration.WebConfigurationFileMap" /> a ser usado no lugar de um arquivo de configuração de aplicativo Web padrão.</param>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web especificado como um objeto <see cref="T:System.Configuration.Configuration" /> usando o mapeamento de arquivo e o caminho virtual especificados para permitir operações de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter privilégios em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter privilégios de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Web.Configuration.WebConfigurationManager.OpenMappedWebConfiguration%2A>.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#21](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#21)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#21](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#21)]  
+  
+ O exemplo anterior usa o método personalizado a seguir para gerar um <xref:System.Configuration.ConfigurationFileMap> objeto.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#20](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#20)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#20](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#20)]  
+  
+ Consulte <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> para obter um exemplo que mostra como mapear uma hierarquia de diretório virtual para um físico.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMappedWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedWebConfiguration (System.Web.Configuration.WebConfigurationFileMap fileMap, string path, string site);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedWebConfiguration(class System.Web.Configuration.WebConfigurationFileMap fileMap, string path, string site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMappedWebConfiguration(System.Web.Configuration.WebConfigurationFileMap,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Web.Configuration.WebConfigurationFileMap" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">O <see cref="T:System.Web.Configuration.WebConfigurationFileMap" /> objeto a ser usado no lugar de um mapeamento de arquivo de configuração de aplicativo da Web padrão.</param>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <param name="site">O nome do site do aplicativo, conforme exibido na configuração do IIS (Serviços de Informações da Internet).</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web especificado como um <see cref="T:System.Configuration.Configuration" /> usando o mapeamento de arquivo especificado, o caminho virtual e o nome do site para permitir a leitura ou gravação do objeto.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter privilégios em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter privilégios de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Web.Configuration.WebConfigurationManager.OpenMappedWebConfiguration%2A>.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#22](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#22)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#22](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#22)]  
+  
+ Consulte <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> para obter um exemplo que mostra como mapear uma hierarquia de diretório virtual para um físico.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMappedWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedWebConfiguration (System.Web.Configuration.WebConfigurationFileMap fileMap, string path, string site, string locationSubPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedWebConfiguration(class System.Web.Configuration.WebConfigurationFileMap fileMap, string path, string site, string locationSubPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenMappedWebConfiguration(System.Web.Configuration.WebConfigurationFileMap,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Web.Configuration.WebConfigurationFileMap" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">O <see cref="T:System.Web.Configuration.WebConfigurationFileMap" /> objeto a ser usado no lugar de um mapeamento de arquivo de configuração de aplicativo da Web padrão.</param>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <param name="site">O nome do site do aplicativo, conforme exibido na configuração do IIS (Serviços de Informações da Internet).</param>
+        <param name="locationSubPath">O recurso específico ao qual a configuração se aplica.</param>
+        <summary>Abre o arquivo de configuração de aplicativo da Web especificado como um <see cref="T:System.Configuration.Configuration" /> usando o mapeamento de arquivo especificado, o caminho virtual, o nome do site e o local para permitir a leitura ou gravação do objeto.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter privilégios em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter privilégios de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Web.Configuration.WebConfigurationManager.OpenMappedWebConfiguration%2A>.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#23](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#23)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#23](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#23)]  
+  
+ Consulte <xref:System.Web.Configuration.WebConfigurationManager.OpenMachineConfiguration%2A> para obter um exemplo que mostra como mapear uma hierarquia de diretório virtual para um físico.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenWebConfiguration (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenWebConfiguration(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual para o arquivo de configuração. Se for <see langword="null" />, o arquivo Web.config raiz será aberto.</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web como um objeto <see cref="T:System.Configuration.Configuration" /> usando o caminho virtual especificado para permitir operações de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter privilégios em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter privilégios de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#14](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#14)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#14](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenWebConfiguration (string path, string site);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenWebConfiguration(string path, string site) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <param name="site">O nome do site do aplicativo, conforme exibido na configuração do IIS (Serviços de Informações da Internet).</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web como um objeto <see cref="T:System.Configuration.Configuration" /> usando o nome do site e o caminho virtual especificados para permitir operações de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter privilégios em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter privilégios de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#15](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#15)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#15](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenWebConfiguration (string path, string site, string locationSubPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenWebConfiguration(string path, string site, string locationSubPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <param name="site">O nome do site do aplicativo, conforme exibido na configuração do IIS (Serviços de Informações da Internet).</param>
+        <param name="locationSubPath">O recurso específico ao qual a configuração se aplica.</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web como um objeto <see cref="T:System.Configuration.Configuration" /> usando o caminho virtual, o nome do site e a localização especificados para permitir operações de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter privilégios em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter privilégios de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#16](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#16)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#16](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenWebConfiguration (string path, string site, string locationSubPath, string server);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenWebConfiguration(string path, string site, string locationSubPath, string server) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+        <Parameter Name="server" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <param name="site">O nome do site do aplicativo, conforme exibido na configuração do IIS (Serviços de Informações da Internet).</param>
+        <param name="locationSubPath">O recurso específico ao qual a configuração se aplica.</param>
+        <param name="server">O nome de rede do servidor no qual o aplicativo Web reside.</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web como um objeto <see cref="T:System.Configuration.Configuration" /> usando o caminho virtual, o nome do site, a localização e o servidor especificados para permitir operações de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter o <xref:System.Configuration.Configuration> de objeto para um recurso remoto, seu código deve ter privilégios administrativos no computador remoto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#17](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#17)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#17](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro do servidor era inválido.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenWebConfiguration (string path, string site, string locationSubPath, string server, IntPtr userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenWebConfiguration(string path, string site, string locationSubPath, string server, native int userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(System.String,System.String,System.String,System.String,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="userToken" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <param name="site">O nome do site do aplicativo, conforme exibido na configuração do IIS (Serviços de Informações da Internet).</param>
+        <param name="locationSubPath">O recurso específico ao qual a configuração se aplica.</param>
+        <param name="server">O nome de rede do servidor no qual o aplicativo Web reside.</param>
+        <param name="userToken">Um token de conta a ser usado.</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web como um objeto <see cref="T:System.Configuration.Configuration" /> usando o caminho virtual, nome do site, local, servidor e contexto de segurança especificados para permitir operações de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para acessar um arquivo de configuração usando a representação.  
+  
+> [!NOTE]
+>  O token de conta geralmente é recuperado de uma instância do <xref:System.Security.Principal.WindowsIdentity> classe ou por meio de uma chamada para código não gerenciado, como uma chamada à API do Win32 `LogonUser`. Para obter mais informações sobre as chamadas para código não gerenciado, consulte [consumindo funções de DLL não gerenciadas](~/docs/framework/interop/consuming-unmanaged-dll-functions.md).  
+  
+ Para obter o <xref:System.Configuration.Configuration> de objeto para um recurso remoto, seu código deve ter privilégios administrativos no computador remoto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> método para acessar informações de configuração.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#19](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#19)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#19](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Os parâmetros <paramref name="server" /> ou <paramref name="userToken" /> eram inválidos.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenWebConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenWebConfiguration (string path, string site, string locationSubPath, string server, string userName, string password);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenWebConfiguration(string path, string site, string locationSubPath, string server, string userName, string password) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration(System.String,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="site" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+        <Parameter Name="server" Type="System.String" />
+        <Parameter Name="userName" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho virtual para o arquivo de configuração.</param>
+        <param name="site">O nome do site do aplicativo, conforme exibido na configuração do IIS (Serviços de Informações da Internet).</param>
+        <param name="locationSubPath">O recurso específico ao qual a configuração se aplica.</param>
+        <param name="server">O nome de rede do servidor no qual o aplicativo Web reside.</param>
+        <param name="userName">O nome de usuário completo (Domínio\Usuário) a ser usado ao abrir o arquivo.</param>
+        <param name="password">A senha do nome de usuário.</param>
+        <summary>Abre o arquivo de configuração de aplicativo Web como um objeto <see cref="T:System.Configuration.Configuration" /> usando o caminho virtual, nome do site, local, servidor e contexto de segurança especificados para permitir operações de leitura ou gravação.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para acessar um arquivo de configuração usando a representação.  
+  
+ Para obter o <xref:System.Configuration.Configuration> de objeto para um recurso remoto, seu código deve ter privilégios administrativos no computador remoto.  
+  
+ Talvez seja necessário executar o [ferramenta de registro ASP.NET IIS (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) com o `-config+` opção para habilitar o acesso aos arquivos de configuração no computador remoto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar informações de configuração com o <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> método.  
+  
+ [!code-csharp[System.Web.Configuration.WebConfigurationManager#18](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/CS/WebConfigurationManager.cs#18)]
+ [!code-vb[System.Web.Configuration.WebConfigurationManager#18](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebConfigurationManager/VB/WebConfigurationManager.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Os parâmetros <paramref name="server" /> ou <paramref name="userName" /> e <paramref name="password" /> eram inválidos.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração válido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

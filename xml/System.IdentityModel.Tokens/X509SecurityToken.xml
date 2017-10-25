@@ -1,0 +1,354 @@
+<Type Name="X509SecurityToken" FullName="System.IdentityModel.Tokens.X509SecurityToken">
+  <TypeSignature Language="C#" Value="public class X509SecurityToken : System.IdentityModel.Tokens.SecurityToken, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509SecurityToken extends System.IdentityModel.Tokens.SecurityToken implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509SecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um token de segurança baseado em um certificado X.509.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter os detalhes do certificado x. 509, acessar o <xref:System.IdentityModel.Tokens.X509SecurityToken.Certificate%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityToken (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityToken.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que contém o certificado X.509. Define a propriedade <see cref="P:System.IdentityModel.Tokens.X509SecurityToken.Certificate" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />, usando o certificado X.509 especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um identificador exclusivo para o <xref:System.IdentityModel.Tokens.X509SecurityToken> token de segurança e atribui o valor para o <xref:System.IdentityModel.Tokens.X509SecurityToken.Id%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509SecurityToken (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityToken.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que contém o certificado X.509. Define a propriedade <see cref="P:System.IdentityModel.Tokens.X509SecurityToken.Certificate" />.</param>
+        <param name="id">Um identificador exclusivo do token de segurança. Define a propriedade <see cref="P:System.IdentityModel.Tokens.X509SecurityToken.Id" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" /> classe usando o certificado x. 509 especificado e o identificador exclusivo.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="id" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanCreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityToken.CanCreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Obtém um valor que indica se esse token de segurança é capaz de criar o identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="T" /> é do tipo <see cref="T:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause" />, <see cref="T:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause" />, <see cref="T:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause" />, ou <see cref="T:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador de chave para um certificado x. 509 pode ser expressado usando várias cláusulas de identificador de chave diferente. Essas cláusulas de identificador de chave são representadas pelo <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>, <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>, <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>, e <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 Certificate" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityToken.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o certificado x. 509 associado ao token de segurança.</summary>
+        <value>Um <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que contém o certificado X.509.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.X509SecurityToken.Certificate%2A> propriedade para obter os detalhes sobre o certificado x. 509 associada a <xref:System.IdentityModel.Tokens.X509SecurityToken> token de segurança. Por exemplo, a impressão digital do certificado x. 509 pode ser acessada usando o <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Thumbprint%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T CreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T CreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityToken.CreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Cria a cláusula de identificador de chave especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que é uma cláusula de identificador de chave para o token de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno para o <xref:System.IdentityModel.Tokens.X509SecurityToken.CreateKeyIdentifierClause%2A> método é um dos tipos de cláusula de identificador de chave que um identificador de chave do certificado x. 509 pode ser expressa em. Os possíveis tipos de retorno são representados pelo <xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>, <xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>, <xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>, e <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> classes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityToken.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.IdentityModel.Tokens.X509SecurityToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.IdentityModel.Tokens.X509SecurityToken.Dispose%2A> método quando tiver terminado de usar o <xref:System.IdentityModel.Tokens.X509SecurityToken>. O <xref:System.IdentityModel.Tokens.X509SecurityToken.Dispose%2A> método deixa o <xref:System.IdentityModel.Tokens.X509SecurityToken> em um estado inutilizável. Depois de chamar o <xref:System.IdentityModel.Tokens.X509SecurityToken.Dispose%2A> método, você deve liberar todas as referências para o <xref:System.IdentityModel.Tokens.X509SecurityToken> para o coletor de lixo possa recuperar a memória que o <xref:System.IdentityModel.Tokens.X509SecurityToken> estava ocupando.  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.IdentityModel.Tokens.X509SecurityToken.Dispose%2A> antes de liberar sua última referência para o <xref:System.IdentityModel.Tokens.X509SecurityToken>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.IdentityModel.Tokens.X509SecurityToken> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityToken.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo do token de segurança.</summary>
+        <value>Um identificador exclusivo do token de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool MatchesKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MatchesKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityToken.MatchesKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="skiClause">To be added.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para esta instância é igual ao identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="skiClause" /> é uma da <see cref="T:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause" />, <see cref="T:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause" />, <see cref="T:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause" />, ou <see cref="T:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause" /> tipos e as cláusulas de identificador de chave corresponder; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.X509SecurityToken.MatchesKeyIdentifierClause%2A> método corresponde aos critérios no certificado x. 509 no <xref:System.IdentityModel.Tokens.X509SecurityToken.Certificate%2A> propriedade com base no tipo do `keyIdentifierClause` parâmetro. A tabela a seguir fornece detalhes sobre o que for correspondido.  
+  
+|Tipo de cláusula de identificador de chave|O que é correspondido|  
+|--------------------------------|---------------------|  
+|<xref:System.IdentityModel.Tokens.X509IssuerSerialKeyIdentifierClause>|O valor da <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.IssuerName%2A> propriedade e o número de série do emissor retornado do <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetSerialNumber%2A> método.|  
+|<xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>|Os dados retornados do <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetRawCertData%2A> método.|  
+|<xref:System.IdentityModel.Tokens.X509SubjectKeyIdentifierClause>|A extensão do identificador de chave de assunto no <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Extensions%2A> corresponde à propriedade.|  
+|<xref:System.IdentityModel.Tokens.X509ThumbprintKeyIdentifierClause>|A impressão digital que é retornada pelo <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash%2A> método.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKeys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityToken.SecurityKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves criptográficas associadas ao token de segurança.</summary>
+        <value>Uma <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que contém o conjunto de chaves associadas com o token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.X509SecurityToken.SecurityKeys%2A> propriedade para definir as chaves de criptografia para este token de segurança proteger uma mensagem SOAP. As chaves podem ser usadas, entre outras coisas, para assinar digitalmente ou criptografar mensagens SOAP.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowIfDisposed">
+      <MemberSignature Language="C#" Value="protected void ThrowIfDisposed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ThrowIfDisposed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509SecurityToken.ThrowIfDisposed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera uma exceção se o <see cref="M:System.IdentityModel.Tokens.X509SecurityToken.ThrowIfDisposed" /> método foi chamado para essa instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">o <see cref="M:System.IdentityModel.Tokens.X509SecurityToken.ThrowIfDisposed" /> método foi chamado para essa instância.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public override DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityToken.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro instantâneo na hora em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o momento no tempo em que esse token de segurança primeiro é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.X509SecurityToken.ValidFrom%2A> propriedade é especificada em tempo Universal Coordenado (UTC) e o valor da <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.NotBefore%2A> propriedade do certificado x. 509 especificada no <xref:System.IdentityModel.Tokens.X509SecurityToken.Certificate%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidTo">
+      <MemberSignature Language="C#" Value="public override DateTime ValidTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.X509SecurityToken.ValidTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último no momento em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o último no momento em que esse token de segurança é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.X509SecurityToken.ValidFrom%2A> propriedade é especificada em tempo Universal Coordenado (UTC) e o valor da <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.NotAfter%2A> propriedade do certificado x. 509 especificada no <xref:System.IdentityModel.Tokens.X509SecurityToken.Certificate%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

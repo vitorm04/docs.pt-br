@@ -1,0 +1,299 @@
+<Type Name="LinqDataSourceSelectEventArgs" FullName="System.Web.UI.WebControls.LinqDataSourceSelectEventArgs">
+  <TypeSignature Language="C#" Value="public class LinqDataSourceSelectEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDataSourceSelectEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.LinqDataSource.Selecting" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto é passado para manipuladores de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento o <xref:System.Web.UI.WebControls.LinqDataSource> controle. Você usa o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto para especificar manualmente os dados que são retornados, e como os dados são classificados e paginável quando ele é retornado. Programaticamente, você pode adicionar ou remover parâmetros ao GroupBy, OrderBy, OrderGroupsBy, Select e onde as cláusulas usando o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.GroupByParameters%2A>, <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderByParameters%2A>, <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderGroupsByParameters%2A>, <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.SelectParameters%2A>, e <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.WhereParameters%2A> coleções.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade permite que você alterar o objeto de dados que é usado para a consulta. Se você atribuir um objeto para o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade, esse objeto será usado para consultas em vez do objeto especificado no <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade o <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Arguments%2A> propriedade permite que você personalize os dados retornados como é classificado e paginável. O controle de associação de dados passa a classificação e paginação propriedades por meio de <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Arguments%2A> propriedade. Se você precisar controlar manualmente a classificação ou paginação, defina a <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> propriedade ou <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> propriedade do <xref:System.Web.UI.WebControls.LinqDataSource> controle `false`. Você pode executar a consulta personalizada para classificação ou paginação em um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento.  
+  
+ Se o <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A> está definida como `true`, você deve retornar um valor para o <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para o resultado de uma pesquisa feita usando a consulta integrada à linguagem (LINQ).  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default2.aspx.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/default2.aspx.vb#2)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para uma matriz de valores de cadeia de caracteres que é definida na página da Web.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default3.aspx.cs#3)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/Default3.aspx.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSourceSelectEventArgs (System.Web.UI.DataSourceSelectArguments arguments, System.Collections.Generic.IDictionary&lt;string,object&gt; whereParameters, System.Collections.Specialized.IOrderedDictionary orderByParameters, System.Collections.Generic.IDictionary&lt;string,object&gt; groupByParameters, System.Collections.Generic.IDictionary&lt;string,object&gt; orderGroupsByParameters, System.Collections.Generic.IDictionary&lt;string,object&gt; selectParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.DataSourceSelectArguments arguments, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; whereParameters, class System.Collections.Specialized.IOrderedDictionary orderByParameters, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; groupByParameters, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; orderGroupsByParameters, class System.Collections.Generic.IDictionary`2&lt;string, object&gt; selectParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.#ctor(System.Web.UI.DataSourceSelectArguments,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Specialized.IOrderedDictionary,System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object},System.Collections.Generic.IDictionary{System.String,System.Object})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+        <Parameter Name="whereParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="orderByParameters" Type="System.Collections.Specialized.IOrderedDictionary" />
+        <Parameter Name="groupByParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="orderGroupsByParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="selectParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">Os valores que são passados do controle associado a dados que determinam como os dados são paginados e classificados. Para obter mais informações, consulte a propriedade <see cref="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Arguments" />.</param>
+        <param name="whereParameters">A coleção de parâmetros que é usada para criar o onde cláusula. Para obter mais informações, consulte a propriedade <see cref="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.WhereParameters" />.</param>
+        <param name="orderByParameters">A coleção de parâmetros que é usada para criar a cláusula Order By. Para obter mais informações, consulte a propriedade <see cref="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderByParameters" />.</param>
+        <param name="groupByParameters">A coleção de parâmetros que é usada para criar a cláusula Group By. Para obter mais informações, consulte a propriedade <see cref="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.GroupByParameters" />.</param>
+        <param name="orderGroupsByParameters">A coleção de parâmetro que é usado para criar a cláusula que é usada para classificar dados agrupados. Para obter mais informações, consulte a propriedade <see cref="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderGroupsByParameters" />.</param>
+        <param name="selectParameters">A coleção de parâmetros que é usada para criar a cláusula Select. Para obter mais informações, consulte a propriedade <see cref="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.SelectParameters" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceSelectArguments Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataSourceSelectArguments Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores que determinam como os dados são retornados.</summary>
+        <value>Um objeto que contém os valores para determinar como os dados são retornados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle associado a dados passa propriedades para o <xref:System.Web.UI.WebControls.LinqDataSource> controlar por meio de <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Arguments%2A> propriedade para especificar como paginação e a classificação devem ocorrer. Se o <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> propriedade ou o <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> está definida como `true`, o <xref:System.Web.UI.WebControls.LinqDataSource> controlar automaticamente classifica ou páginas com base nas propriedades do controle associado a dados.  
+  
+ Você pode personalizar como os dados são classificados e paginável de uma consulta, definindo o <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> e <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> propriedades `false` e, em seguida, criar um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. No manipulador de eventos, use o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Arguments%2A> propriedade para recuperar a classificação e as propriedades de paginação do controle associado a dados. Personalizar a consulta conforme necessário, com base nas propriedades do <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Arguments%2A> propriedade. Se o <xref:System.Web.UI.DataSourceSelectArguments.RetrieveTotalRowCount%2A> propriedade do <xref:System.Web.UI.DataSourceSelectArguments> objeto é definido como `true`, você deve retornar um valor para o <xref:System.Web.UI.DataSourceSelectArguments.TotalRowCount%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupByParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; GroupByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; GroupByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.GroupByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que é usada para criar a cláusula GroupBy.</summary>
+        <value>Um objeto que contém os parâmetros para a cláusula GroupBy.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.GroupByParameters%2A> propriedade para parâmetros de acesso para a cláusula GroupBy em um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. Você pode modificar a cláusula GroupBy adicionando ou removendo parâmetros desta coleção. Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.GroupByParameters%2A> propriedade do <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto contém os parâmetros que você adicionou ao <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> propriedade do <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderByParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary OrderByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary OrderByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que é usada para criar a cláusula OrderBy.</summary>
+        <value>Um objeto que contém os parâmetros para a cláusula OrderBy.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderByParameters%2A> propriedade para parâmetros de acesso para a cláusula OrderBy em um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. Você pode modificar a cláusula OrderBy adicionando ou removendo parâmetros desta coleção. Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderByParameters%2A> propriedade o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto contém os parâmetros que você adicionou ao <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> do <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+ Quando o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> está definida como `true`, parâmetros o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderByParameters%2A> coleção não precisa ser nomeado. Os dados serão ordenados com base na sequência de parâmetros no <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderByParameters%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderGroupsByParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; OrderGroupsByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; OrderGroupsByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderGroupsByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que são usados para criar a cláusula que especifica como os dados agrupados é classificada.</summary>
+        <value>Um objeto que contém os parâmetros para a cláusula que especifica como os dados agrupados é classificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você agrupa dados definindo o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade, você pode classificar os dados agrupados, definindo o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade para uma das propriedades usadas para agrupar os dados.  
+  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderGroupsByParameters%2A> propriedade para parâmetros de acesso para a cláusula de grupos de Order By em um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. Você pode modificar a cláusula de grupos de Order By, adicionando ou removendo parâmetros desta coleção.  
+  
+ Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.OrderGroupsByParameters%2A> propriedade o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto contém os parâmetros que você adicionou declarativamente como o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters%2A> do <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public object Result { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Result" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de dados que é usado na consulta de dados.</summary>
+        <value>Um objeto que representa os dados para a consulta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSource> controle aplica suas expressões de consulta para o objeto definido no <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade. Em um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> eventos, você pode alterar manualmente que o objeto é consultada, definindo o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade a um objeto. Por exemplo, você pode usar o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para consultar uma coleção de memória na página da Web ou para obter os resultados de uma expressão de consulta LINQ. Você pode definir o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para qualquer objeto. Se o objeto não implementa o <xref:System.Collections.Generic.IEnumerable%601> interface, o <xref:System.Web.UI.WebControls.LinqDataSource> controle envolve o objeto em um objeto que implementa o <xref:System.Collections.Generic.IEnumerable%601> interface.  
+  
+ Quando o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade é definida como qualquer valor diferente de `null`, o <xref:System.Web.UI.WebControls.LinqDataSource> controle não consultar o objeto definido no <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade. Em vez disso, ele consulta o objeto de <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade.  
+  
+> [!NOTE]
+>  Quando você define o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade a um objeto, não use `null` representar um objeto que não contém nenhum dado. O <xref:System.Web.UI.WebControls.LinqDataSource> controle interpreta `null` significa que o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade não for definida, e irá criar e consultar o objeto no <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade. Para representar um objeto que não contém dados, definir o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para um <xref:System.Collections.IList> ou <xref:System.Collections.Generic.IList%601> o objeto que contém todos os elementos.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating>, <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreated>, e <xref:System.Web.UI.WebControls.LinqDataSource.ContextDisposing> eventos não são gerados quando você define o <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Result%2A> propriedade a um objeto e, quando duas condições adicionais serão aplicadas. As condições são que ambos os valores originais não precisam ser armazenadas em estado de exibição, ou o objeto a <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Result%2A> propriedade implementa o <xref:System.Data.Linq.ITable> interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para o resultado de uma consulta LINQ.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default2.aspx.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/default2.aspx.vb#2)]  
+  
+ O exemplo a seguir mostra como definir o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para uma matriz de valores de cadeia de caracteres é definida na página da Web.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default3.aspx.cs#3)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/Default3.aspx.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; SelectParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; SelectParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.SelectParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que é usada para criar a cláusula Select.</summary>
+        <value>Um objeto que contém os parâmetros para a cláusula Select.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.SelectParameters%2A> propriedade para parâmetros de acesso para a cláusula Select em um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. Você pode modificar a cláusula Select, adicionando ou removendo parâmetros desta coleção. Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.SelectParameters%2A> propriedade o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto contém os parâmetros que você adicionou ao <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> do <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um parâmetro para o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.SelectParameters%2A> coleção. O parâmetro adicionado é usado para calcular um preço ajustado para um produto com base em se produtos estão em um desconto. A primeira parte do exemplo mostra o manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default5.aspx#5)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/Default5.aspx#5)]  
+  
+ A segunda parte do exemplo mostra a marcação que define a cláusula Select.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default5.aspx#6)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/Default5.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhereParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; WhereParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; WhereParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.WhereParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros usados para criar a cláusula Where.</summary>
+        <value>Um objeto que contém os parâmetros para onde cláusula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usar o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.WhereParameters%2A> propriedade para parâmetros de acesso onde cláusula em um manipulador para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. Você pode modificar o local em que a cláusula adicionando ou removendo parâmetros desta coleção. Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.WhereParameters%2A> propriedade o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto contém os parâmetros que você adicionou ao <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> do <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+ Quando você adiciona parâmetros por meio do <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.WhereParameters%2A> coleção do <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> do objeto, você deve incluir um espaço reservado para o parâmetro no <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade ou um conjunto a <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> propriedade `true`. Por exemplo, se você adicionar um parâmetro denominado `ProductName` no manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> eventos, você deve definir o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> propriedade `true` ou defina o <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade para `ProductName=@ProductName`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um parâmetro para o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.WhereParameters%2A> coleção. O parâmetro adicionado limitará os produtos retornados a apenas os produtos com um valor de "Bicicleta" no `Name` propriedade. O <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> está definida como `true` para que o parâmetro é incluído automaticamente no Where cláusula.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default4.aspx#4)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/Default4.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

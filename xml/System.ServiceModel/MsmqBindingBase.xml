@@ -1,0 +1,568 @@
+<Type Name="MsmqBindingBase" FullName="System.ServiceModel.MsmqBindingBase">
+  <TypeSignature Language="C#" Value="public abstract class MsmqBindingBase : System.ServiceModel.Channels.Binding, System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MsmqBindingBase extends System.ServiceModel.Channels.Binding implements class System.ServiceModel.Channels.IBindingRuntimePreferences" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MsmqBindingBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.Binding</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IBindingRuntimePreferences</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A classe base de <see cref="T:System.ServiceModel.NetMsmqBinding" /> e <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe abstrata contém propriedades comuns a <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Todos os conceitos fundamentais no enfileiramento de mensagens são exibidos na forma de propriedades.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MsmqBindingBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MsmqBindingBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MsmqBindingBase" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomDeadLetterQueue">
+      <MemberSignature Language="C#" Value="public Uri CustomDeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CustomDeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI que contém o local da fila de mensagens mortas de cada aplicativo, em que são colocadas as mensagens que expiraram ou que tiveram uma falha de transferência ou de entrega.</summary>
+        <value>O <see cref="T:System.Uri" /> que contém o local da fila de mensagens mortas de cada aplicativo. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fila de mensagens mortas é uma fila no Gerenciador de fila do aplicativo de envio para mensagens expiradas que não pôde ser entregue.  
+  
+ O URI que é especificado pelo <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> devem usar o esquema NET. MSMQ.  
+  
+ Se <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> é definido como <xref:System.ServiceModel.DeadLetterQueue.None> ou <xref:System.ServiceModel.DeadLetterQueue.System>, em seguida, <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> deve ser definido como `null`. Se <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> não é `null`, em seguida, <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> deve ser definido como <xref:System.ServiceModel.DeadLetterQueue.Custom>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeadLetterQueue">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.DeadLetterQueue DeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.DeadLetterQueue DeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.DeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.DeadLetterQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de enumeração que indica o tipo de fila de mensagens mortas a ser usado.</summary>
+        <value>Um valor de enumeração <see cref="T:System.ServiceModel.DeadLetterQueue" /> que indica o tipo de fila de mensagens mortas a ser usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fila de mensagens mortas é uma fila no Gerenciador de fila do aplicativo de envio para mensagens expiradas que falharam ao ser entregue. A enumeração de fila de mensagens mortas Especifica o tipo de fila de mensagens mortas a usar. Os valores são:  
+  
+-   `None`: Nenhuma fila de mensagens mortas é necessária. Se uma mensagem de falha de entrega, nenhum registro dele é mantido na fila de mensagens mortas. Esse é o padrão quando <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> é definido como `false`.  
+  
+-   `System`: A fila de mensagens mortas de todo o sistema é usada para registrar mensagens de falham de entrega. Mensagem de enfileiramento de mensagens (MSMQ) tem um transacional, sistema, fila de mensagens mortas e um não-transacional, o sistema, a fila de mensagens mortas para registrar mensagens entrega falha das filas transacionais e não transacionais, respectivamente. Esse é o padrão quando <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> é definido como `true`.  
+  
+-   `Custom`: A fila especificada no <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propriedade que é usado para mensagens de registro que não entrega.  
+  
+ Os motivos que uma mensagem pode não conseguir acessar o aplicativo de recebimento incluem:  
+  
+-   Uma mensagem transacional é enviada para uma fila não transacional.  
+  
+-   Uma mensagem não transacional é enviada para uma fila transacional.  
+  
+-   Uma mensagem não autenticada é enviada a uma fila que aceita apenas mensagens autenticadas.  
+  
+-   Uma mensagem não criptografada é enviada para uma fila que aceita somente mensagens criptografadas.  
+  
+-   A mensagem expira antes que a mensagem é entregue a um destinatário.  
+  
+-   A cota de armazenamento de mensagens do computador de destino ou a cota de armazenamento de fila de destino for excedida, ou há nenhum espaço de armazenamento disponível no computador de destino quando a mensagem chega.  
+  
+-   O remetente não tem o [direitos de acesso](http://go.microsoft.com/fwlink/?LinkID=96167) necessária para colocar a mensagem na fila de destino.  
+  
+-   A assinatura digital anexada à mensagem não é válida.  
+  
+-   Uma mensagem criptografada não pode ser descriptografada pelo Gerenciador de fila de destino.  
+  
+-   A fila de destino é limpo ou excluída antes da mensagem é recuperada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Durable">
+      <MemberSignature Language="C#" Value="public bool Durable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Durable" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.Durable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as mensagens processadas por essa associação são duráveis ou voláteis.</summary>
+        <value>
+          <see langword="true" />Se as mensagens processadas por essa associação são duráveis; <see langword="false" /> se eles são voláteis. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem durável sobrevive quando um Gerenciador de fila para de responder, enquanto uma mensagem volátil não. Mensagens voláteis são úteis quando os aplicativos podem tolerar mensagens perdidas ocasionais.  
+  
+ Se <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> é definido como `true`, as mensagens devem ser duráveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExactlyOnce">
+      <MemberSignature Language="C#" Value="public bool ExactlyOnce { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExactlyOnce" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ExactlyOnce" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as mensagens processadas por essa associação são recebidas exatamente uma vez.</summary>
+        <value>
+          <see langword="true" /> se as mensagens processadas por essa associação são recebidas exatamente uma vez; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem pode ser enviada com ou sem garantias. Uma garantia permite que um aplicativo garantir que a fila de recebimento de mensagem de repetição de uma mensagem enviada ou se não estiver, o aplicativo pode determinar isso lendo a fila de mensagens mortas.  
+  
+ As mensagens enviadas com <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> definida como `true` devem ser enviadas para uma fila transacional somente.  
+  
+ <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>, quando definido como `true`, indica que o enfileiramento de mensagens (MSMQ) garante que uma mensagem enviada é entregue para a fila de recebimento de mensagem somente uma vez. Se a entrega falhar, a mensagem é enviada para a fila de mensagens mortas.  
+  
+ Para mensagens que exigem <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> ser `false`, o <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriedade padroniza como `null`.  
+  
+ Para mensagens que exigem <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> ser `true`, o <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriedade padroniza como uma fila de mensagens mortas transacional todo o sistema em MSMQ.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxReceivedMessageSize">
+      <MemberSignature Language="C#" Value="public long MaxReceivedMessageSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxReceivedMessageSize" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.MaxReceivedMessageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(65536)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho máximo, em bytes, para uma mensagem que é processada por essa associação.</summary>
+        <value>O tamanho máximo (em bytes) de uma mensagem que é processada por essa associação. O valor padrão é 65.536 bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso associado ao tamanho da mensagem serve para limitar a exposição a ataques dos (negação de serviço).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRetryCycles">
+      <MemberSignature Language="C#" Value="public int MaxRetryCycles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRetryCycles" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.MaxRetryCycles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de ciclos de repetição para tentar entregar mensagens para o aplicativo receptor.</summary>
+        <value>O número máximo de ciclos de repetição para tentar entregar mensagens para o aplicativo. O valor padrão é 2.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um ciclo de repetição de único tenta entregar uma mensagem para um aplicativo um número de vezes especificado. O número de tentativas feitas é definido pelo <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> propriedade. Se o aplicativo não pode acessar a mensagem após o número especificado de tentativas de imediatos, a mensagem é enviada para uma fila de repetição. Consistem em ciclos de repetição subsequente da mensagem que está sendo retornada da fila de repetição para a fila de aplicativo para tentar entregar ao aplicativo novamente, após um atraso especificado pelo <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> propriedade. O <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> propriedade especifica o número de tentativas de ciclos de que o aplicativo usa para tentar entregar a mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveContextEnabled">
+      <MemberSignature Language="C#" Value="public bool ReceiveContextEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveContextEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ReceiveContextEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o comportamento de contexto de recebimento é solicitado.</summary>
+        <value>
+          <see langword="true" />Se o comportamento de contexto de recebimento for solicitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveErrorHandling">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.ReceiveErrorHandling ReceiveErrorHandling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.ReceiveErrorHandling ReceiveErrorHandling" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ReceiveErrorHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor de enumeração que especifica as mensagens suspeitas como são tratados.</summary>
+        <value>Um <see cref="T:System.ServiceModel.ReceiveErrorHandling" /> valor que especifica como são tratadas suspeitas e outras mensagens que não podem ser enviadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma mensagem na fila se torna adulterada se repetidas tentativas de entregar a mensagem de falha. Essa mensagem suspeita eventualmente é tratada com base na configuração desta propriedade. Quando essa propriedade é definida como <xref:System.ServiceModel.ReceiveErrorHandling.Fault>, o ouvinte está com defeito e um <xref:System.ServiceModel.MsmqPoisonMessageException> é rastreado e lançada. A mensagem suspeita é deixada na fila e deve ser removida antes que podem ser acessadas mais mensagens da fila. O <xref:System.ServiceModel.MsmqPoisonMessageException> contém um <xref:System.ServiceModel.MsmqPoisonMessageException.MessageLookupId%2A> que pode ser usado para identificar e remover manualmente a mensagem suspeita da fila.  
+  
+ Quando essa propriedade é definida como <xref:System.ServiceModel.ReceiveErrorHandling.Drop>, a mensagem suspeita é descartada.  
+  
+ Quando essa propriedade é definida como <xref:System.ServiceModel.ReceiveErrorHandling.Reject>, uma mensagem de confirmação negativa será enviada ao cliente e a mensagem suspeita é removida da fila. Essa opção está disponível somente no enfileiramento de mensagens 4.0 e requer [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ Quando definido como <xref:System.ServiceModel.ReceiveErrorHandling.Move>, a mensagem suspeita é movida para a subfila de inviabilização final. Essa opção só está disponível no enfileiramento de mensagens 4.0 e requer [!INCLUDE[wv](~/includes/wv-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveRetryCount">
+      <MemberSignature Language="C#" Value="public int ReceiveRetryCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReceiveRetryCount" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(5)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de tentativas de entrega imediata em uma mensagem que é lida da fila de aplicativos.</summary>
+        <value>O número máximo de tentativas de entrega imediata. O padrão é 5.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o número máximo de tentativas de entrega imediata para a mensagem é feito e a mensagem não é acessada pelo aplicativo, a mensagem é enviada para uma fila de repetição para tentar entregar em um momento posterior. Se nenhum ciclos de repetição for especificados, as mensagens ou é enviado para a fila de mensagens suspeitas ou uma confirmação negativa é enviada de volta ao remetente.  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)]<xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> and <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryCycleDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan RetryCycleDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RetryCycleDelay" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.RetryCycleDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.TimeSpan), "00:30:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o atraso de tempo entre os ciclos de tentativa ao entregar uma mensagem que não pode ser entregue imediatamente.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo de espera antes do início do próximo ciclo de tentativas de entrega para o aplicativo de recebimento. O valor padrão é 10 minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um ciclo de repetição de único tenta entregar uma mensagem para um aplicativo que recebe um número de vezes especificado. O número de tentativas feitas for especificado o <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> propriedade. Se o aplicativo não pode acessar a mensagem após o número especificado de tentativas de imediatos, a mensagem é enviada para uma fila de repetição. Consistem em ciclos de repetição subsequente da mensagem que está sendo retornada da fila de repetição para a fila de aplicativo para tentar entregar ao aplicativo novamente, após um atraso especificado pelo <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>. O número de ciclos de repetição é especificado pelo <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public override string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o esquema para esta associação.</summary>
+        <value>O esquema para esta associação. O esquema retornado depende da implementação de <see cref="T:System.ServiceModel.MsmqBindingBase" />. O <see cref="T:System.ServiceModel.NetMsmqBinding" /> implementação retorna "NET. MSMQ". O <see cref="T:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding" /> implementação retorna "FormatName".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Serviço de enfileiramento de mensagens (MSMQ) oferece suporte a mensagens de transporte entre os gerenciadores de fila usando o protocolo nativo do MSMQ e o protocolo SRMP. Aplicativos que usam a associação de transporte em fila podem usar ambos os protocolos. Os esquemas de protocolo com suporte por meio da associação de transporte em fila são NET. MSMQ para o protocolo nativo, net.srmp para o protocolo SRMP e net.srmps para SRMP via HTTPS.  
+  
+ O <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> oferece suporte a um único esquema, FormatName, com a qual o usuário pode especificar o nome do formato da fila diretamente no endereço da fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously">
+      <MemberSignature Language="C#" Value="bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ServiceModel.Channels.IBindingRuntimePreferences.ReceiveSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.System#ServiceModel#Channels#IBindingRuntimePreferences#ReceiveSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as solicitações de entrada podem ser tratadas mais eficientemente forma síncrona ou assíncrona.</summary>
+        <value>
+          <see langword="true" />Se as solicitações podem ser tratadas com mais eficiência de forma síncrona; Caso contrário, <see langword=" false" />. O padrão é <see langword="false" />, para manipular solicitações de forma assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MsmqBindingBase.System%23ServiceModel%23Channels%23IBindingRuntimePreferences%23ReceiveSynchronously%2A> está definida como `true` quando o <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToLive">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToLive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToLive" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.TimeToLive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.TimeSpan), "1.00:00:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo que indica quanto tempo as mensagens processadas por essa associação podem ficar na fila antes de expirarem.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que indica quanto tempo as mensagens podem ficar na fila antes de expirarem. O valor padrão é 1 dia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.MsmqBindingBase.TimeToLive%2A> propriedade é definida para garantir que as mensagens de detecção de hora não tornam-se obsoletos antes que elas são processadas pelos aplicativos de recebimento. Uma mensagem em uma fila que não é acessada pelo aplicativo de recebimento dentro do intervalo de tempo especificado tiver expirada. As mensagens expiradas são enviadas para uma fila especial chamada fila de mensagens mortas. O local da fila de mensagens mortas é definido com o <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propriedade ou o padrão apropriado, com base em garantia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseMsmqTracing">
+      <MemberSignature Language="C#" Value="public bool UseMsmqTracing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseMsmqTracing" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.UseMsmqTracing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as mensagens processadas por essa associação devem ser rastreadas.</summary>
+        <value>
+          <see langword="true" />Se as mensagens processadas por essa associação deve ser rastreada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o rastreamento estiver habilitado, mensagens de relatório são criadas e enviadas para a fila de relatórios sempre que a mensagem sai ou chega em um computador de enfileiramento de mensagens (MSMQ).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSourceJournal">
+      <MemberSignature Language="C#" Value="public bool UseSourceJournal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseSourceJournal" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.UseSourceJournal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se cópias de mensagens processadas por essa associação devem ser armazenadas na fila de diário de origem.</summary>
+        <value>
+          <see langword="true" />Se cópias de mensagens processadas por essa associação deve ser armazenada na fila do diário de origem; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos em fila que mantém um registro de mensagens que deixaram a fila de saída do computador podem copiar as mensagens para uma fila do diário. Depois que uma mensagem deixa a fila de saída e é recebida uma confirmação que a mensagem foi recebida no computador de destino, uma cópia da mensagem é mantida na fila de diário do sistema do computador de envio.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidityDuration">
+      <MemberSignature Language="C#" Value="public TimeSpan ValidityDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ValidityDuration" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MsmqBindingBase.ValidityDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.TimeSpan), "00:05:00")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica a duração de que uma mensagem será bloqueada pelo recurso de contexto de recebimento.</summary>
+        <value>Um objeto timespan.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Se <xref:System.ServiceModel.MsmqBindingBase.ValidityDuration%2A> expirar para uma mensagem, qualquer transação que pode ser usada para o processamento será anulada juntamente com a instância de fluxo de trabalho se a expiração ocorrer durante a transação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,117 @@
+<Type Name="SharedPersonalizationStateInfo" FullName="System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo">
+  <TypeSignature Language="C#" Value="public sealed class SharedPersonalizationStateInfo : System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit SharedPersonalizationStateInfo extends System.Web.UI.WebControls.WebParts.PersonalizationStateInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.PersonalizationStateInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma versão leve de informações de personalização compartilhado sobre uma página. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa informações estatísticas sobre o estado de personalização de uma página. Ele não retorna os dados de personalização (como dados de propriedade aplicados ou extraídos quando ocorre personalização) em si. Essa classe pode ser usada para determinar quantos usuários salvar configurações de personalização para uma página e o tamanho, em bytes, das informações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SharedPersonalizationStateInfo (string path, DateTime lastUpdatedDate, int size, int sizeOfPersonalizations, int countOfPersonalizations);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.DateTime lastUpdatedDate, int32 size, int32 sizeOfPersonalizations, int32 countOfPersonalizations) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.#ctor(System.String,System.DateTime,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="lastUpdatedDate" Type="System.DateTime" />
+        <Parameter Name="size" Type="System.Int32" />
+        <Parameter Name="sizeOfPersonalizations" Type="System.Int32" />
+        <Parameter Name="countOfPersonalizations" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="path">A página de informações se aplicam a. <c>caminho</c> é um relativo de aplicativo (usando sintaxe til) caminho virtual.</param>
+        <param name="lastUpdatedDate">Um <see cref="T:System.DateTime" /> indicando quando as informações compartilhadas para a página foram atualizada.</param>
+        <param name="size">O tamanho, em bytes, das informações de estado compartilhado para a página.</param>
+        <param name="sizeOfPersonalizations">O tamanho total, em bytes, de todas as informações de personalização por usuário que existe para a página.</param>
+        <param name="countOfPersonalizations">O número total de usuários que têm personalizado a página.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `countOfPersonalizations` parâmetro representa o número total de usuários que têm personalizados a uma página. Por exemplo, se 100 usuários personalizem uma página, em seguida, o valor de `countOfPersonalizations` para que a página for 100, 100 não multiplicado pelo número de propriedades personalizadas. Observe que essa contagem pode ou não pode coincidir com o número total de linhas usadas no repositório de dados subjacente para manter as informações do usuário, porque alguns provedores de armazenamento de dados usam várias linhas para armazenar informações de personalização por usuário para uma combinação de página e de usuário único.  
+  
+ Observe que `path` é cortado se não nulo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />, quando cortadas, é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="size" />, <paramref name="sizeOfPersonalizations" /> ou <paramref name="countOfPersonalizations" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CountOfPersonalizations">
+      <MemberSignature Language="C#" Value="public int CountOfPersonalizations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CountOfPersonalizations" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.CountOfPersonalizations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de usuários que têm personalizados a uma página.</summary>
+        <value>O número total de configurações de personalização por usuário que foram aplicadas a uma página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o número total de usuários que têm personalizados a uma página. Por exemplo, se 100 usuários personalizem uma página, em seguida, o valor de <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.CountOfPersonalizations%2A> para que a página for 100, 100 não multiplicado pelo número de propriedades personalizadas. Observe que essa contagem pode ou não pode coincidir com o número total de linhas usadas no repositório de dados subjacente para manter as informações do usuário, porque alguns provedores de armazenamento de dados usam várias linhas para armazenar informações de personalização por usuário para uma combinação de página e de usuário único.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeOfPersonalizations">
+      <MemberSignature Language="C#" Value="public int SizeOfPersonalizations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SizeOfPersonalizations" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.SizeOfPersonalizations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho total de todas as informações de personalização por usuário para uma página.</summary>
+        <value>O tamanho total, em bytes, de todas as informações de personalização de uma página.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o tamanho de todas as informações de personalização por usuário que existe para uma página. Esse será um valor diferente do valor retornado por <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Size%2A> porque <xref:System.Web.UI.WebControls.WebParts.SharedPersonalizationStateInfo.SizeOfPersonalizations%2A> é o tamanho em bytes de apenas o estado do usuário para uma página e não inclui o tamanho dos dados de estado compartilhado incluídos no <xref:System.Web.UI.WebControls.WebParts.PersonalizationStateInfo.Size%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

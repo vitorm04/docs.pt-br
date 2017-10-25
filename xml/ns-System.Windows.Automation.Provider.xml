@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Automation.Provider">
+  <Docs>
+    <summary>Fornece APIs para criar provedores de automação de interface do usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

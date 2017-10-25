@@ -1,0 +1,434 @@
+<Type Name="WebPartDisplayModeCollection" FullName="System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection">
+  <TypeSignature Language="C#" Value="public sealed class WebPartDisplayModeCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebPartDisplayModeCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção de objetos <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> classe é criada para conter uma coleção de <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objetos. Ele é usado principalmente pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle para gerenciar coleções de <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objetos.  
+  
+ Um modo de exibição é um modo de exibição especial de uma página da Web que é exibido quando ele está atribuído como o modo de exibição atual no <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayMode%2A?displayProperty=nameWithType> propriedade. Modos de exibição são usados no controle de Web Parts definido para criar exibições de página em que os usuários podem realizar tarefas especiais, como controles de edição ou reorganizando o layout de uma página. O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle define vários modos de exibição, inclusive <xref:System.Web.UI.WebControls.WebParts.WebPartManager.BrowseDisplayMode>, <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DesignDisplayMode>, <xref:System.Web.UI.WebControls.WebParts.WebPartManager.EditDisplayMode>, <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CatalogDisplayMode>, e <xref:System.Web.UI.WebControls.WebParts.WebPartManager.ConnectDisplayMode>. A coleção de modos de exibição é referenciada pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager.DisplayModes%2A?displayProperty=nameWithType> propriedade.  
+  
+ Uma página da Web específico que usa os controles de Web Parts, apenas alguns modos de exibição estão disponíveis. O modo de busca padrão e o modo de design quase sempre estão disponíveis, mas os outros modos de exibição estão disponíveis somente se seus tipos correspondentes de zona estão presentes na página. Para obter mais informações, consulte o <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> visão geral da classe.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle mantém o controle de modos de exibição disponíveis em uma página com seu <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SupportedDisplayModes%2A> propriedade. Essa propriedade faz referência a um <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> objeto que contém todos os modos de exibição com suporte.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> classe não tem um construtor exposto, portanto, não é possível criar sua própria instância nova dele. Se você criar um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> de objeto e quiser fazer parte da coleção de modos de exibição com suporte no <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle, você deve herdar do <xref:System.Web.UI.WebControls.WebParts.WebPartManager> classe, substitua o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDisplayModes%2A> método, chame o método base para criar a coleção e adicione qualquer modos de exibição personalizado à coleção usando seu <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Add%2A> método.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> classe tem duas propriedades públicas. O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.IsReadOnly%2A> propriedade é uma propriedade somente leitura que indica se a coleção é somente leitura. Sobrecarregados <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Item%2A> propriedade fornece acesso para os membros da coleção.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> classe também tem vários métodos. O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Add%2A> método, já mencionado, permite que você adicione <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objetos na coleção. O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Contains%2A> método determina se um modo de exibição específico existe na coleção. O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.CopyTo%2A> método copia a coleção para uma matriz de objetos. O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.IndexOf%2A> método retorna o índice de um modo de exibição específico dentro da coleção. Por fim, o <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Insert%2A> método permite que você insira um objeto de modo de exibição em um índice específico na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a trabalhar com o <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> classe. O ponto principal é que você deve herdar do <xref:System.Web.UI.WebControls.WebParts.WebPartManager> classe e substituir o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDisplayModes%2A> método para adicionar um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> o objeto para o <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> coleção criada pelo <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle.  
+  
+ Este exemplo de código tem cinco partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que hospeda outros controles.  
+  
+-   Um controle de usuário que reside em um <xref:System.Web.UI.WebControls.WebParts.WebPartZone> zona na página da Web e permite que você insira e exibir o texto do rótulo.  
+  
+-   Um arquivo de código fonte que contém dois controles. Um é um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controlar; a outra é um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objeto a ser adicionado para modos de exibição padrão da página.  
+  
+-   Obter uma explicação de como funciona o exemplo.  
+  
+ O código-fonte para a primeira parte do exemplo de código, o controle de usuário que permite que você altere os modos de exibição, provenientes de outro tópico. Para este exemplo de código funcione, você precisa obter o arquivo. ascx para o controle de usuário da [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) tópico e coloque o arquivo na mesma pasta que a página. aspx neste exemplo de código.  
+  
+ A segunda parte do exemplo é a página da Web. Ele contém dois <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controla, controles de usuário e personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle. Observe o `Register` diretivas na parte superior da página para fazer referência a controles de usuário e o namespace para os controles compilados.  
+  
+ [!code-aspx-csharp[Webparts_WebPartManager_CreateDisplayModes#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/CS/createDisplayModeCS.aspx#1)]
+ [!code-aspx-vb[Webparts_WebPartManager_CreateDisplayModes#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/VB/createDisplayModeVB.aspx#1)]  
+  
+ A terceira parte do exemplo é o controle de usuário para inserir e exibir texto. Observe que ele usa um <xref:System.Web.UI.WebControls.MultiView> controle para criar vários modos de exibição da interface do usuário (IU). Um modo de exibição é exibido com o botão, o outro sem. Observe que o em substituído `OnPreRender` método, o código verifica se a página está no modo de exibição personalizado e, se assim, ele exibe a primeira exibição do controle de usuário, que inclui o botão. Se a página não está no modo de exibição personalizado (por exemplo, se a página estiver no modo de procura ou design), o botão ficará oculta.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Webparts_WebPartManager_CreateDisplayModes#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/CS/TextDisplaycs.ascx#2)]
+ [!code-aspx-vb[Webparts_WebPartManager_CreateDisplayModes#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/VB/TextDisplayvb.ascx#2)]  
+  
+ A quarta parte do exemplo é o arquivo de origem para as duas classes personalizadas. Observe que personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> substituições de classe a <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDisplayModes%2A> método, chama o método base para adicionar todos os modos de exibição padrão e, em seguida, adiciona o modo de exibição personalizado. A classe de modo de exibição personalizado, `InLineEditDisplayMode`, simplesmente herda de <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode>, define o nome do modo de exibição no construtor e substitui um número de propriedades base para estabelecer as características de exibição personalizada.  
+  
+ Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[Webparts_WebPartManager_CreateDisplayModes#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/CS/CustomDisplayMode.cs#3)]
+ [!code-vb[Webparts_WebPartManager_CreateDisplayModes#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/VB/CustomDisplayMode.vb#3)]  
+  
+ Para executar o exemplo de código, carregue a página em um navegador. Observe que a página está no modo de procura e nenhum botão é visível. Usando o **modo de exibição** suspensa lista de controle, altere a página para **embutido Editar exibição** modo e observe que agora o botão é visível no controle de usuário inferior. Adicionar texto e clique no botão para atualizar o controle. Observe que a exibição da página é retornada ao modo de procura, o texto que você inseriu agora é exibido e o botão é oculto novamente porque a página não está no modo de exibição personalizado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Web.UI.WebControls.WebParts.WebPartDisplayMode value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Web.UI.WebControls.WebParts.WebPartDisplayMode value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Add(System.Web.UI.WebControls.WebParts.WebPartDisplayMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> para adicionar à coleção.</param>
+        <summary>Adiciona um objeto de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> à coleção.</summary>
+        <returns>Um valor inteiro que indica onde o <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Add%2A> método para adicionar novos <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objetos um existente <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> objeto.  
+  
+ Um exemplo de um cenário no qual você pode fazer isso é quando você criar um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> classe e você quiser adicioná-lo à coleção de modos de exibição com suporte em uma página. Para fazer isso, você deve herdar do <xref:System.Web.UI.WebControls.WebParts.WebPartManager> classe e substituir seu <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDisplayModes%2A> método, primeiro chamar o método base e, em seguida, usar o <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Add%2A> para adicionar o modo de exibição personalizado à coleção.  
+  
+   
+  
+## Examples  
+ Este exemplo de código demonstra o uso da <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> classe. Para o código completo e as instruções necessárias para executar o exemplo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> visão geral da classe.  
+  
+ A seção de código a seguir ocorre em um derivado <xref:System.Web.UI.WebControls.WebParts.WebPartManager> classe que substitui o <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CreateDisplayModes%2A> método e adiciona um modo de exibição personalizado à coleção.  
+  
+ [!code-csharp[Webparts_WebPartManager_CreateDisplayModes#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/CS/CustomDisplayMode.cs#3)]
+ [!code-vb[Webparts_WebPartManager_CreateDisplayModes#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_WebPartManager_CreateDisplayModes/VB/CustomDisplayMode.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.WebParts.WebPartDisplayMode value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.WebParts.WebPartDisplayMode value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Contains(System.Web.UI.WebControls.WebParts.WebPartDisplayMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="value">A <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> está sendo verificado sua existência de uma coleção.</param>
+        <summary>Retorna um valor que indica se um determinado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> objeto existe na coleção.</summary>
+        <returns>Um valor booliano que indica se <paramref name="value" /> existe na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Contains%2A> método permite que você verifique se um determinado <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> do objeto e determinar se ele está em um <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.WebParts.WebPartDisplayMode[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.WebParts.WebPartDisplayMode[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.CopyTo(System.Web.UI.WebControls.WebParts.WebPartDisplayMode[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> objetos para conter a coleção copiada.</param>
+        <param name="index">Um inteiro que indica o ponto de partida na matriz na qual colocar o conteúdo da coleção.</param>
+        <summary>Copia a coleção para uma matriz de <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.CopyTo%2A> método é útil quando você deseja criar uma matriz personalizada para manipular programaticamente um conjunto de <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.WebParts.WebPartDisplayMode value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.WebParts.WebPartDisplayMode value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.IndexOf(System.Web.UI.WebControls.WebParts.WebPartDisplayMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> que é um membro da coleção.</param>
+        <summary>Retorna a posição de um membro específico da coleção.</summary>
+        <returns>Um inteiro que indica a posição de um objeto específico da coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.IndexOf%2A> método será útil se você tiver vários <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objetos e você precisa saber a posição ordinal (índice) de um objeto em relação a outras pessoas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Web.UI.WebControls.WebParts.WebPartDisplayMode value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Web.UI.WebControls.WebParts.WebPartDisplayMode value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Insert(System.Int32,System.Web.UI.WebControls.WebParts.WebPartDisplayMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Web.UI.WebControls.WebParts.WebPartDisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um inteiro que indica a posição ordinal na coleção na qual um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> devem ser inseridos.</param>
+        <param name="value">Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> para inserido na coleção.</param>
+        <summary>Insere um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> objeto na coleção na posição de índice especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `index` é igual ao número de itens na coleção, em seguida, `value` é acrescentado ao final da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>Um valor booliano que indica se a coleção é somente leitura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.IsReadOnly%2A> valor da propriedade é alterado internamente pelo controle Web Parts definido como ele altera o conteúdo da coleção em pontos diferentes. Por exemplo, após o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle adicionado todos suporte para modos de exibição de para seus <xref:System.Web.UI.WebControls.WebParts.WebPartManager.SupportedDisplayModes%2A> , ele internamente conjuntos de coleta a <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> objeto como somente leitura para impedir que está sendo alterado.  
+  
+> [!NOTE]
+>  Não há nenhum mecanismo para alterar esse valor de propriedade do seu código, embora você possa ler seu valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDisplayMode this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDisplayMode Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDisplayMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um inteiro que indica o índice de um membro da coleção.</param>
+        <summary>Obtém um membro específico da coleção de acordo com seu índice.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Item%2A> propriedade permite que você acesse um <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objeto dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> coleção usando um número de índice que representa a posição ordinal na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.WebPartDisplayMode this[string modeName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartDisplayMode Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartDisplayMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="modeName">Uma cadeia de caracteres que contém o nome de um modo de exibição específico na coleção.</param>
+        <summary>Obtém um membro específico da coleção de acordo com um identificador exclusivo.</summary>
+        <value>A primeira <see cref="T:System.Web.UI.WebControls.WebParts.WebPartDisplayMode" /> cujo nome de modo corresponde ao valor do <paramref name="modeName" /> parâmetro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.Item%2A> propriedade permite que você acesse um <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> objeto dentro de um <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection> coleção usando um identificador de cadeia de caracteres para um modo de exibição específico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="oldValue">To be added.</param>
+        <param name="newValue">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnValidate">
+      <MemberSignature Language="C#" Value="protected override void OnValidate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnValidate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebPartDisplayModeCollection.OnValidate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

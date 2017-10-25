@@ -1,0 +1,283 @@
+<Type Name="DynamicDataRoute" FullName="System.Web.DynamicData.DynamicDataRoute">
+  <TypeSignature Language="C#" Value="public class DynamicDataRoute : System.Web.Routing.Route" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicDataRoute extends System.Web.Routing.Route" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicDataRoute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Routing.Route</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma rota usada por Dados Dinâmicos do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa rotas para configurar o comportamento de dados dinâmicos.  
+  
+ Estático <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade o <xref:System.Web.Routing.RouteTable> tipo contém uma coleção de rotas. Para dados dinâmicos, uma ou mais rotas normalmente são registradas (adicionados para o <xref:System.Web.Routing.RouteTable.Routes%2A> propriedade) no `Application_Start` eventos no arquivo global. asax. Por exemplo, rotas de determinam se os detalhes de uma linha de dados devem ser mostrados na mesma página como a lista de linhas. Eles também podem determinar se os detalhes devem aparecer na mesma página como a lista de linhas para algumas tabelas, mas outros não.  
+  
+ Definir o <xref:System.Web.DynamicData.DynamicDataRoute.Action%2A>, <xref:System.Web.DynamicData.DynamicDataRoute.ViewName%2A>, <xref:System.Web.DynamicData.DynamicDataRoute.Table%2A>, e <xref:System.Web.DynamicData.DynamicDataRoute.Model%2A> propriedades e fornecer um padrão para a URL no <xref:System.Web.Routing.Route.%23ctor%2A> construtor.  
+  
+ Dados dinâmicos usam o padrão de URL que você fornecer para correspondência de padrões de URL para solicitações de e para criar URLs. Para obter mais informações, consulte <xref:System.Web.DynamicData.DynamicDataRoute.%23ctor%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicDataRoute (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRoute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">O padrão para a URL.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.DynamicData.DynamicDataRoute" /> classe usando o padrão de URL especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você pode especificar as URLs que criará dados dinâmicos usando parâmetros de substituição. Por exemplo, se você passar a cadeia de caracteres "{table} / {action}", o resultado seria a URL "~ / Products/ListDetails.aspx" quando você exibir a tabela de produto usando a ação ListDetails.  
+  
+ Não é necessário usar parâmetros de substituição. Você poderia passar a cadeia de caracteres "Tabela/DynamicData", que pode produzir "~ / Table/DynamicData.aspx". Você poderia passar "MyPageName" para produzir "~ / MyPageName.aspx". Dados dinâmicos não confiar na URL para determinar as informações de tabela e ação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataRoute.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de uma ação para uma rota.</summary>
+        <value>O nome da ação para uma rota.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de nomes de ação possíveis, consulte <xref:System.Web.DynamicData.PageAction?displayProperty=nameWithType>. Se você não definir esta propriedade quando você cria uma instância de <xref:System.Web.DynamicData.DynamicDataRoute>, a rota serão aplicadas a todas as ações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActionFromRouteData">
+      <MemberSignature Language="C#" Value="public string GetActionFromRouteData (System.Web.Routing.RouteData routeData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetActionFromRouteData(class System.Web.Routing.RouteData routeData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRoute.GetActionFromRouteData(System.Web.Routing.RouteData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeData" Type="System.Web.Routing.RouteData" />
+      </Parameters>
+      <Docs>
+        <param name="routeData">Os dados da rota que se refere à solicitação atual. Para obter mais informações, consulte <see cref="M:System.Web.DynamicData.DynamicDataRoute.GetRouteData(System.Web.HttpContextBase)" />.</param>
+        <summary>Retorna a execução da ação de <see cref="T:System.Web.Routing.RouteData" /> objeto para a solicitação da Web dinâmico de dados atual.</summary>
+        <returns>A ação. Para obter uma lista de valores possíveis, consulte <see cref="T:System.Web.DynamicData.PageAction" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A ação não foi encontrada nas informações de roteamento de solicitação da Web.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRouteData">
+      <MemberSignature Language="C#" Value="public override System.Web.Routing.RouteData GetRouteData (System.Web.HttpContextBase httpContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Routing.RouteData GetRouteData(class System.Web.HttpContextBase httpContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRoute.GetRouteData(System.Web.HttpContextBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.RouteData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="httpContext" Type="System.Web.HttpContextBase" />
+      </Parameters>
+      <Docs>
+        <param name="httpContext">Contém informações sobre a solicitação da Web.</param>
+        <summary>Retorna informações para uma solicitação da Web específica de roteamento.</summary>
+        <returns>As informações de roteamento para a solicitação da Web.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `httpContext` parâmetro fornece informações de solicitação da Web que é necessárias para que a tabela solicitada e a ação podem ser identificados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTableFromRouteData">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable GetTableFromRouteData (System.Web.Routing.RouteData routeData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.DynamicData.MetaTable GetTableFromRouteData(class System.Web.Routing.RouteData routeData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRoute.GetTableFromRouteData(System.Web.Routing.RouteData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeData" Type="System.Web.Routing.RouteData" />
+      </Parameters>
+      <Docs>
+        <param name="routeData">Os dados da rota que se refere à solicitação atual. Para obter mais informações, consulte <see cref="M:System.Web.DynamicData.DynamicDataRoute.GetRouteData(System.Web.HttpContextBase)" />.</param>
+        <summary>Identifica a tabela que está associada uma solicitação de página da Web dinâmico de dados.</summary>
+        <returns>Os metadados que descrevem uma tabela que é exibida por dados dinâmicos.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A tabela não foi encontrada nas informações de roteamento de solicitação da Web.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVirtualPath">
+      <MemberSignature Language="C#" Value="public override System.Web.Routing.VirtualPathData GetVirtualPath (System.Web.Routing.RequestContext requestContext, System.Web.Routing.RouteValueDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.Routing.VirtualPathData GetVirtualPath(class System.Web.Routing.RequestContext requestContext, class System.Web.Routing.RouteValueDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicDataRoute.GetVirtualPath(System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Routing.VirtualPathData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestContext" Type="System.Web.Routing.RequestContext" />
+        <Parameter Name="values" Type="System.Web.Routing.RouteValueDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="requestContext">Contém informações sobre a solicitação da Web.</param>
+        <param name="values">A coleção de objetos de rota para o aplicativo atual.</param>
+        <summary>Retorna o caminho virtual de uma rota.</summary>
+        <returns>O caminho virtual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Model">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaModel Model { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaModel Model" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataRoute.Model" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo de dados ao qual se aplica a rota.</summary>
+        <value>Os metadados de modelo de dados que a rota é aplicada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não definir esta propriedade quando você cria uma instância de <xref:System.Web.DynamicData.DynamicDataRoute>, o modelo padrão para registrado <xref:System.Data.Linq.DataContext> instância é usada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteHandler">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.DynamicDataRouteHandler RouteHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.DynamicDataRouteHandler RouteHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataRoute.RouteHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.DynamicDataRouteHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que processa as solicitações para a rota.</summary>
+        <value>O manipulador é usado para processar solicitações para a rota.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.DynamicDataRoute.RouteHandler%2A> propriedade é idêntica de <xref:System.Web.Routing.Route.RouteHandler%2A?displayProperty=nameWithType> propriedade. Ele é fornecido como uma versão fortemente tipada do <xref:System.Web.Routing.Route.RouteHandler%2A?displayProperty=nameWithType> propriedade para a conveniência de codificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public string Table { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataRoute.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da tabela para a rota.</summary>
+        <value>O nome da tabela que está associado com a rota.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não definir esta propriedade quando você cria uma instância de <xref:System.Web.DynamicData.DynamicDataRoute>, a rota serão aplicadas a todas as tabelas no modelo de dados que são indicadas por <xref:System.Web.DynamicData.DynamicDataRoute.Model%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewName">
+      <MemberSignature Language="C#" Value="public string ViewName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ViewName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicDataRoute.ViewName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da página. aspx que está associado uma rota.</summary>
+        <value>O nome da página. aspx que está associado com a rota. Se nenhuma página for especificada para a rota, a propriedade retornará o valor da <see cref="P:System.Web.DynamicData.DynamicDataRoute.Action" /> propriedade com ". aspx" anexada a ele.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados dinâmicos usam vários nomes de página. aspx padrão para criar a interface do usuário para permitir que os usuários exibam, atualizar e excluir dados de uma determinada tabela. Esses nomes de página incluem List.aspx, Details.aspx, Edit.aspx, Insert.aspx e ListDetails.aspx. O <xref:System.Web.DynamicData.DynamicDataRoute.ViewName%2A> propriedade especifica qual essas páginas deve ser usado para uma determinada tabela e a ação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

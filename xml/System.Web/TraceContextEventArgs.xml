@@ -1,0 +1,87 @@
+<Type Name="TraceContextEventArgs" FullName="System.Web.TraceContextEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class TraceContextEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TraceContextEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.TraceContextEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de registros de rastreamento para qualquer método que manipula o <see cref="E:System.Web.TraceContext.TraceFinished" /> evento. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.TraceContextEventArgs> classe é usada pelo <xref:System.Web.TraceContext> classe para fornecer acesso a registros de rastreamento depois que todas as informações de rastreamento é coletada durante o processamento de solicitação HTTP. Adicionando um delegado de manipulador de eventos para lidar com o <xref:System.Web.TraceContext.TraceFinished> eventos, você pode processar os registros, registrá-los para seu próprio repositório de dados ou fornecê-los como entrada para uma ferramenta de criação de perfil.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode registrar um <xref:System.Web.TraceContextEventHandler> delegado para manipular o <xref:System.Web.TraceContext.TraceFinished> evento. Neste exemplo, o `OnTraceFinished` método acessa a coleção de <xref:System.Web.TraceContextRecord> objetos por meio de <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> propriedade, itera-los e os grava no fluxo de resposta.  
+  
+ [!code-aspx-csharp[System.Web.Trace_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_3/CS/form3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_3/VB/form3vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceContextEventArgs (System.Collections.ICollection records);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection records) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContextEventArgs.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="records" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="records">Uma coleção de <see cref="T:System.Web.TraceContextRecord" /> objetos que representam todos os registros de rastreamento registrados para a solicitação atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.TraceContextEventArgs" /> de classe, usando a coleção fornecida de registros de rastreamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceRecords">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection TraceRecords { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection TraceRecords" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextEventArgs.TraceRecords" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Web.TraceContextRecord" /> mensagens que estão associadas com a solicitação atual.</summary>
+        <value>Uma coleção de registros de rastreamento que estão associados com a solicitação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chamadas para o <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> e <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> métodos gera um <xref:System.Web.TraceContextRecord> objeto que é adicionado ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens de coleção. O <xref:System.Web.TraceContext.Warn%2A> conjuntos de chamada do método de <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade `true`, enquanto outras chamadas de método defini-lo como `false`.  
+  
+ Você pode iterar por meio de <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> mensagens e examinar os registros com categorias específicas ou mensagens, e se eles são avisos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode registrar um <xref:System.Web.TraceContextEventHandler> delegado para manipular o <xref:System.Web.TraceContext.TraceFinished> evento. Neste exemplo, o `OnTraceFinished` método acessa a coleção de <xref:System.Web.TraceContextRecord> objetos por meio de <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> propriedade, itera-los e os grava no fluxo de resposta.  
+  
+ [!code-aspx-csharp[System.Web.Trace_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_3/CS/form3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_3/VB/form3vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

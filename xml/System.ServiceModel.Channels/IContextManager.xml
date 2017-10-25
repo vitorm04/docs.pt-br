@@ -1,0 +1,157 @@
+<Type Name="IContextManager" FullName="System.ServiceModel.Channels.IContextManager">
+  <TypeSignature Language="C#" Value="public interface IContextManager" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContextManager" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IContextManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.WorkflowServices, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma interface que permite que você pode obter e definir o contexto no canal.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para canais que usam <xref:System.ServiceModel.WSHttpContextBinding> com o <xref:System.ServiceModel.SessionMode.NotAllowed> valor definido, o contexto não pode ser recuperado no cliente usando <xref:System.ServiceModel.Channels.IContextManager> porque um novo canal que estabelece uma sessão é criado toda vez <xref:System.ServiceModel.Channels.IChannelFactory.GetProperty%2A> é chamado para impor <xref:System.ServiceModel.SessionMode.NotAllowed> semântica em um canal. Isso significa que mesmo que o contexto é corretamente propagado de volta para o cliente nesse caso, ele não pode ser recuperado usando <xref:System.ServiceModel.Channels.IContextManager>. Você ainda poderá recuperá-lo usando <xref:System.ServiceModel.Channels.ContextMessageProperty> conforme mostrado no código a seguir.  
+  
+```csharp  
+using (new OperationContextScope((IContextChannel)channel))  
+{  
+    channel.MyChannel("Test");  
+    ContextMessageProperty context;  
+    if (ContextMessageProperty.TryGet(OperationContext.Current.IncomingMessageProperties, out context))  
+    {  
+        Console.WriteLine(context.Count);  
+    }  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IContextManager.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o gerenciamento de contexto está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o contexto estiver habilitado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o gerenciamento de contexto está habilitado o canal de contexto armazena o contexto no seu tempo de vida. Contexto pode ser recuperado do canal por meio de `IContextManager` canal propriedade chamando <xref:System.ServiceModel.Channels.IContextManager.GetContext%2A> método nele. O canal também pode ser inicializado previamente com contexto antes de serem abertas chamando o <xref:System.ServiceModel.Channels.IContextManager.SetContext%2A> método na propriedade de canal. Depois que o canal é inicializado com o contexto não pode ser redefinido.  
+  
+ A seguir é invariáveis nesse modo:  
+  
+-   Qualquer chamada para <xref:System.ServiceModel.Channels.IContextManager.SetContext%2A> depois de abrir o canal lança um `InvalidOperationException`.  
+  
+-   Qualquer tentativa de enviar o contexto usando o `ContextMessageProperty` em uma mensagem de saída gera `InvalidOperationException`.  
+  
+-   Se uma mensagem é recebida do servidor com o contexto, quando o canal já foi inicializado com um contexto de um `ProtocolException` é gerada. Observe que você pode receber o contexto inicial de um servidor se o canal é aberto sem definir explicitamente o contexto.  
+  
+-   O `ContextMessageProperty` em uma mensagem de entrada é sempre `null`.  
+  
+ Quando o gerenciamento de contexto não está habilitado, o canal de contexto não gerencia o contexto. É responsabilidade do aplicativo para recuperar, gerenciar e aplicar o contexto usando o `ContextMessageProperty`. Qualquer tentativa de chamar <xref:System.ServiceModel.Channels.IContextManager.GetContext%2A> ou <xref:System.ServiceModel.Channels.IContextManager.SetContext%2A> usando por meio de `IContextManager` canal resultado na propriedade `InvalidOperationException`.  
+  
+ Todos os cookies HTTP, exceto os cookies HTTP de contexto, são tratados no nível do canal. Os cookies do contexto HTTP são gerenciados no nível do aplicativo. Isso pode ter consequências inesperadas quando os canais são compartilhados para se comunicar com instâncias diferentes direcionadas por <xref:System.ServiceModel.Channels.ContextMessageProperty>. A tabela a seguir mostra como os cookies HTTP são afetados quando <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> está definida como `true` ou `false`.  
+  
+|Associação|Valor IContextManager|Escopo do contexto de Cookie HTTP|Outro escopo de Cookies HTTP|  
+|-------------|-----------------------------------|-------------------------------|------------------------------|  
+|BasicHttpBinding|N/D|ChannelFactory|ChannelFactory|  
+|BasicHttpContextBinding|true|Canal|Canal|  
+|BasicHttpContextBinding|false|Para cada mensagem (explicitamente gerenciada pelo aplicativo)|Canal|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContext">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; GetContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; GetContext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IContextManager.GetContext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o contexto.</summary>
+        <returns>O <see cref="T:System.Collections.Generic.IDictionary`2" /> de pares chave/valor com o namespace e o nome do contexto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como o contexto pode ser obtido de uma instância do tipo de proxy no cliente.  
+  
+```  
+IDictionary<string, string> context;  
+CalculatorProxy proxy;  
+IContextManager cm = proxy.InnerChannel.GetProperty<IContextManager>();  
+if (cm != null)  
+    context = cm.GetContext();  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContext">
+      <MemberSignature Language="C#" Value="public void SetContext (System.Collections.Generic.IDictionary&lt;string,string&gt; context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetContext(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IContextManager.SetContext(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Collections.Generic.IDictionary`2" /> de pares chave/valor com o namespace e o nome do contexto que é definido.</param>
+        <summary>Define o contexto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como o contexto pode ser definido no cliente.  
+  
+```  
+IDictionary<string, string> context;  
+CalculatorProxy proxy;  
+IContextManager cm = proxy.InnerChannel.GetProperty<IContextManager>();  
+if (cm != null)  
+    cm.SetContext(context);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

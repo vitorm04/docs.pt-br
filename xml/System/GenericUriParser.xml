@@ -1,0 +1,95 @@
+<Type Name="GenericUriParser" FullName="System.GenericUriParser">
+  <TypeSignature Language="C#" Value="public class GenericUriParser : UriParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GenericUriParser extends System.UriParser" />
+  <TypeSignature Language="DocId" Value="T:System.GenericUriParser" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.UriParser</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um analisador personalizável para um URI hierárquico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser criar um analisador com base em um esquema conhecido, use <xref:System.HttpStyleUriParser>, <xref:System.FtpStyleUriParser>, <xref:System.GopherStyleUriParser>, <xref:System.LdapStyleUriParser>, ou <xref:System.NewsStyleUriParser>.  
+  
+ Ao criar um analisador personalizável, o comportamento do analisador for especificado, passando uma combinação bit a bit dos valores disponíveis no <xref:System.GenericUriParserOptions?displayProperty=nameWithType> enumeração para o <xref:System.GenericUriParser> construtor.  
+  
+ Existente <xref:System.Uri?displayProperty=nameWithType> classe foi estendida para oferecer suporte a identificadores de recursos internacionais (IRI) e nomes de domínio internacionalizados (IDNS). Os usuários atuais não verão qualquer mudança do comportamento do .NET Framework 2.0, a menos que habilitem o IRI especificamente. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.  
+  
+ Todos os analisadores derivam <xref:System.GenericUriParser> não terá suporte IRI e IDN por padrão. O <xref:System.GenericUriParserOptions.Default> opção não inclui IRI e IDN suporte. Dois novos valores são adicionados para o <xref:System.GenericUriParserOptions?displayProperty=nameWithType> enumeração para indicar se um analisador personalizado oferece suporte a IRI e IDN.  
+  
+ Para obter mais informações sobre o suporte de IDN IRI, consulte a seção comentários para o <xref:System.Uri?displayProperty=nameWithType> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericUriParser (GenericUriParserOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.GenericUriParserOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.GenericUriParser.#ctor(System.GenericUriParserOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="options" Type="System.GenericUriParserOptions" />
+      </Parameters>
+      <Docs>
+        <param name="options">Especifique as opções para este <see cref="T:System.GenericUriParser" />.</param>
+        <summary>Crie um analisador personalizável para um URI hierárquico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor como um argumento para<xref:System.UriParser.Register%28System.UriParser%2CSystem.String%2CSystem.Int32%29?displayProperty=nameWithType>  
+  
+ Se você quiser criar um analisador com base em um esquema conhecido, use <xref:System.HttpStyleUriParser>, <xref:System.FtpStyleUriParser>, <xref:System.GopherStyleUriParser>, <xref:System.LdapStyleUriParser>, ou <xref:System.NewsStyleUriParser>.  
+  
+ Ao criar um analisador personalizável, o comportamento do analisador for especificado, passando uma combinação bit a bit dos valores disponíveis no <xref:System.GenericUriParserOptions?displayProperty=nameWithType> enumeração para o <xref:System.GenericUriParser> construtor.  
+  
+ Existente <xref:System.Uri?displayProperty=nameWithType> classe foi estendida para oferecer suporte a identificadores de recursos internacionais (IRI) e nomes de domínio internacionalizados (IDNS). Os usuários atuais não verão qualquer mudança do comportamento do .NET Framework 2.0, a menos que habilitem o IRI especificamente. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.  
+  
+ Todos os analisadores derivam <xref:System.GenericUriParser> não terá suporte IRI e IDN por padrão. O <xref:System.GenericUriParserOptions.Default> opção não inclui IRI e IDN suporte. Dois novos valores são adicionados para o <xref:System.GenericUriParserOptions?displayProperty=nameWithType> enumeração para indicar se um analisador personalizado oferece suporte a IRI e IDN.  
+  
+ O tipo <xref:System.GenericUriParserOptions.IriParsing> que indica que o analisador dá suporte às regras de análise especificadas na RFC 3987 para IRI (Identificadores de Recurso Internacional). Se o IRI é usado é determinado pelos valores de configuração.  
+  
+ O tipo <xref:System.GenericUriParserOptions.Idn> indica que o analisador dá suporte à análise de IDN (Nome de Domínio Internacionalizado) dos nomes de host. Se o IDN é usado é determinado pelos valores de configuração.  
+  
+ O parâmetro de configuração para o <xref:System.Configuration.IdnElement?displayProperty=nameWithType> indiretamente é controlado pelo <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> definição de configuração que controla IRI processamento no <xref:System.Uri?displayProperty=nameWithType> classe. O processamento de IRI deve estar habilitado para que o processamento de IDN seja possível. Se o processamento de IRI estiver desabilitado, o processamento de IDN será definido para a configuração padrão, na qual o comportamento do .NET Framework 2.0 será usado para fins de compatibilidade e nomes IDN não serão usados.  
+  
+ O atributo de nome de domínio internacionalizado (IDN) controla apenas o processamento de IDN. Todos os outros processamentos de IRI (normalização de caractere, por exemplo) é executado por padrão.  
+  
+ Para obter mais informações sobre o suporte de IDN IRI, consulte a seção comentários para o <xref:System.Uri?displayProperty=nameWithType> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

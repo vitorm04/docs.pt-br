@@ -1,0 +1,18 @@
+<Namespace Name="System.Xml.Schema">
+  <Docs>
+    <summary>O <see cref="N:System.Xml.Schema" /> namespace contém as classes XML que oferecem suporte baseado em padrões de definição de esquema XML esquemas XSD (linguagem).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  -   Não use esquemas de fontes desconhecidas ou não confiáveis ou locais. Isso comprometerá a segurança do seu código.  
+> -   Esquemas XML (incluindo esquemas embutidos) são inerentemente vulneráveis a ataques negação de serviço; não aceitá-los em cenários não confiáveis.  
+> -   Exceções e mensagens de erro de validação de esquema podem expor informações confidenciais sobre o modelo de conteúdo ou o caminho de URI para o arquivo de esquema. Tenha cuidado para não expor essas informações para chamadores não confiáveis.  
+> -   Considerações de segurança adicionais são abordadas na seção comentários das APIs no namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

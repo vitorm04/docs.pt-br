@@ -1,0 +1,129 @@
+<Type Name="HtmlFormParameterWriter" FullName="System.Web.Services.Protocols.HtmlFormParameterWriter">
+  <TypeSignature Language="C#" Value="public class HtmlFormParameterWriter : System.Web.Services.Protocols.UrlEncodedParameterWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlFormParameterWriter extends System.Web.Services.Protocols.UrlEncodedParameterWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.HtmlFormParameterWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.UrlEncodedParameterWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Grava a saída de parâmetros de solicitação de serviços da Web implementado usando HTTP com pares nome-valor codificados como um formulário HTML em vez de como uma mensagem SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Protocols.HtmlFormParameterWriter>e outras classes de <xref:System.Web.Services.Protocols> namespace oferece suporte às implementações do .NET Framework do Web services por meio de operações de HTTP GET e POST HTTP. Os leitores e gravadores de serviço web serializar e desserializar, respectivamente, entre os parâmetros ou objetos de retorno de métodos Web e os fluxos de solicitação ou resposta HTTP. Os leitores e gravadores de serviço da web usam o HTTP para o transporte, mas não trocam mensagens usando o padrão SOAP. O cliente <xref:System.Web.Services.Protocols.HtmlFormParameterWriter> classe fornece métodos para gravar pares nome-valor do parâmetro no corpo de um HTTP de solicitação com o tipo MIME `application/x-www-form-urlencoded`.  
+  
+ Você normalmente não precisará usar <xref:System.Web.Services.Protocols.HtmlFormParameterWriter> diretamente. Quando a ferramenta Wsdl.exe gera o código de proxy do cliente de acordo com a implementação de HTTP POST, ela se aplica a <xref:System.Web.Services.Protocols.HttpMethodAttribute> para cada método Web e define o atributo <xref:System.Web.Services.Protocols.HttpMethodAttribute.ParameterFormatter%2A> propriedade <xref:System.Web.Services.Protocols.HtmlFormParameterWriter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlFormParameterWriter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HtmlFormParameterWriter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Protocols.HtmlFormParameterWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRequest">
+      <MemberSignature Language="C#" Value="public override void InitializeRequest (System.Net.WebRequest request, object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InitializeRequest(class System.Net.WebRequest request, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HtmlFormParameterWriter.InitializeRequest(System.Net.WebRequest,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.WebRequest" />
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="request">A solicitação de saída.</param>
+        <param name="values">Os valores de parâmetro do método da Web.</param>
+        <summary>Inicializa a solicitação de HTTP de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite que a solicitação de saída HTTP e outros protocolos de transporte.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesWriteRequest">
+      <MemberSignature Language="C#" Value="public override bool UsesWriteRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesWriteRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.HtmlFormParameterWriter.UsesWriteRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se os valores de parâmetro de método da Web são serializados para o corpo da solicitação HTTP saído.</summary>
+        <value>
+          <see langword="true" />para indicar que os parâmetros do método da Web são serializados. Essa propriedade sempre retorna <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.HtmlFormParameterWriter.UsesWriteRequest%2A> propriedade determina se o <xref:System.Web.Services.Protocols.HtmlFormParameterWriter.WriteRequest%2A> método é invocado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRequest">
+      <MemberSignature Language="C#" Value="public override void WriteRequest (System.IO.Stream requestStream, object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteRequest(class System.IO.Stream requestStream, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.HtmlFormParameterWriter.WriteRequest(System.IO.Stream,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestStream" Type="System.IO.Stream" />
+        <Parameter Name="values" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="requestStream">Um fluxo de entrada para o corpo da solicitação de HTTP saída.</param>
+        <param name="values">Os valores de parâmetro do método da Web.</param>
+        <summary>Serializa os valores de parâmetro de método da Web em um fluxo que representa o corpo da solicitação HTTP saído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.HtmlFormParameterWriter.WriteRequest%2A> chamadas de método de <xref:System.Web.Services.Protocols.UrlEncodedParameterWriter.Encode%2A> gravador, os valores do objeto [])? qualifyHint = True & no upgrade automático = True método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

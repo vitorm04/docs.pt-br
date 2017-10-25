@@ -1,0 +1,305 @@
+<Type Name="ComSourceInterfacesAttribute" FullName="System.Runtime.InteropServices.ComSourceInterfacesAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComSourceInterfacesAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComSourceInterfacesAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica uma lista de interfaces que são expostas como origens de evento COM para a classe atribuída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para classes.  
+  
+ Esse atributo é aplicado a uma classe gerenciada para identificar as interfaces de evento que a classe expõe como pontos de conexão de COM. Uma interface de evento contém métodos que são mapeados para os membros de evento da classe. O nome de classe de evento e o nome do método de interface devem ser os mesmos. Esse atributo pode acomodar até quatro interfaces de origem para uma classe, passando o tipo de interface de origem para o construtor apropriado, o que levar entre um e quatro argumentos de tipo. Para classes que deseja expor mais de quatro interfaces de origem, a versão de cadeia de caracteres do construtor pode ser usada. Para obter informações adicionais sobre os eventos de exposing.NET para clientes COM, consulte [como: gerar eventos manipulados por um coletor COM](http://msdn.microsoft.com/en-us/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como aplicar o <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> para conectar-se a interface do coletor de eventos para uma classe, passando a interface do coletor de evento e de namespace.  
+  
+ [!code-cpp[Classic ComSourceInterfacesAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ComSourceInterfacesAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ComSourceInterfacesAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ComSourceInterfacesAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ComSourceInterfacesAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ComSourceInterfacesAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (string sourceInterfaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceInterfaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterfaces" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterfaces">Uma lista delimitada por null de nomes de interface de origem do evento totalmente qualificado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> classe com o nome da interface de origem do evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para expor mais de quatro interfaces de origem de evento para clientes COM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface">O <see cref="T:System.Type" /> da interface de origem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> classe com o tipo a ser usado como uma interface de origem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para expor uma interface de origem de evento único para clientes COM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface1, Type sourceInterface2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface1, class System.Type sourceInterface2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface1" Type="System.Type" />
+        <Parameter Name="sourceInterface2" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface1">O <see cref="T:System.Type" /> da interface de origem padrão.</param>
+        <param name="sourceInterface2">O <see cref="T:System.Type" /> de uma interface de origem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> classe com os tipos para usar como interfaces de origem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para expor duas interfaces de origem de evento para clientes COM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface1, Type sourceInterface2, Type sourceInterface3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface1, class System.Type sourceInterface2, class System.Type sourceInterface3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface1" Type="System.Type" />
+        <Parameter Name="sourceInterface2" Type="System.Type" />
+        <Parameter Name="sourceInterface3" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface1">O <see cref="T:System.Type" /> da interface de origem padrão.</param>
+        <param name="sourceInterface2">O <see cref="T:System.Type" /> de uma interface de origem.</param>
+        <param name="sourceInterface3">O <see cref="T:System.Type" /> de uma interface de origem.</param>
+        <summary>Inicializa uma nova instância do <see langword="ComSourceInterfacesAttribute" /> classe com os tipos para usar como interfaces de origem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para expor três interfaces de origem de evento para clientes COM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComSourceInterfacesAttribute (Type sourceInterface1, Type sourceInterface2, Type sourceInterface3, Type sourceInterface4);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type sourceInterface1, class System.Type sourceInterface2, class System.Type sourceInterface3, class System.Type sourceInterface4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComSourceInterfacesAttribute.#ctor(System.Type,System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceInterface1" Type="System.Type" />
+        <Parameter Name="sourceInterface2" Type="System.Type" />
+        <Parameter Name="sourceInterface3" Type="System.Type" />
+        <Parameter Name="sourceInterface4" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="sourceInterface1">O <see cref="T:System.Type" /> da interface de origem padrão.</param>
+        <param name="sourceInterface2">O <see cref="T:System.Type" /> de uma interface de origem.</param>
+        <param name="sourceInterface3">O <see cref="T:System.Type" /> de uma interface de origem.</param>
+        <param name="sourceInterface4">O <see cref="T:System.Type" /> de uma interface de origem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ComSourceInterfacesAttribute" /> classe com os tipos para usar como interfaces de origem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para expor quatro interfaces de origem de evento para clientes COM.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComSourceInterfacesAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome totalmente qualificado da interface de origem do evento.</summary>
+        <value>O nome totalmente qualificado da interface de origem do evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você especificar mais de uma interface de origem, o valor retornado é uma lista delimitada por null de nomes de interface de origem do evento totalmente qualificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

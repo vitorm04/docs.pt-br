@@ -1,0 +1,225 @@
+<Type Name="WebDisplayNameAttribute" FullName="System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute">
+  <TypeSignature Language="C#" Value="public class WebDisplayNameAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebDisplayNameAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o nome amigável de uma propriedade de um controle de Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle fornece uma interface de usuário genérica (UI) que permite aos usuários editar propriedades personalizadas em <xref:System.Web.UI.WebControls.WebParts.WebPart> e controles de servidor colocado no <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zonas. A interface do usuário de edição é fornecida para propriedades que são marcadas no código-fonte com o `WebBrowsable` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> classe). Quando uma propriedade é marcada com esse atributo, um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle cria a interface do usuário de edição com base no tipo da propriedade e usa um <xref:System.ComponentModel.PropertyDescriptor> se necessário para converter o valor em cada controle de edição para o tipo da propriedade do objeto.  
+  
+ O `WebDisplayName` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute> classe) permite que você especifique o texto do rótulo que aparece com cada controle na edição IU.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute> atributo para atribuir um nome para exibição para uma propriedade em um controle de Web Parts. Personalizado `UserJobType` propriedade recebe um nome amigável, "Tipo de trabalho" para exibir o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. Este exemplo é parte de um exemplo maior encontrado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> visão geral da classe.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebDisplayNameAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute" /> classe sem um nome especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.%23ctor%2A> construtor define o <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayName%2A> propriedade como uma cadeia de caracteres vazia ("").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebDisplayNameAttribute (string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">O nome amigável para usar em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute" /> classe com um nome de exibição especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.%23ctor%2A> construtor define o <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayName%2A> propriedade `displayName`. O `displayName` parâmetro é o valor que será exibido em uma <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute> atributo para atribuir um nome para exibição para uma propriedade em um controle de Web Parts. Personalizado `UserJobType` propriedade recebe o nome amigável "Tipo de trabalho" para exibir o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. O nome é atribuído por meio de <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.%23ctor%2A> construtor. Este exemplo é parte de um exemplo maior encontrado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> visão geral da classe.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma ocorrência da <see cref="T:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute" /> classe com o <see cref="P:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayName" /> propriedade definida como uma cadeia de caracteres vazia ("").</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.Default> campo retorna o mesmo resultado de chamar o <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public virtual string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de uma propriedade para exibir em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> controle.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor a ser exibido em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayNameValue">
+      <MemberSignature Language="C#" Value="protected string DisplayNameValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayNameValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayNameValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome para exibir o <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> controle.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o valor a ser exibido em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayNameValue%2A> propriedade obtém ou define o mesmo valor que é acessado por meio de <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayName%2A> propriedade. O <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.DisplayNameValue%2A> propriedade é protegido e, portanto, somente acessível na classe ou por meio de uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância, ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o valor de nome de exibição.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a instância atual está definida como o valor padrão.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute" /> é igual a <see cref="F:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute.Default" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

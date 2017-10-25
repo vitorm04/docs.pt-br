@@ -1,0 +1,154 @@
+<Type Name="IQueryable" FullName="System.Linq.IQueryable">
+  <TypeSignature Language="C#" Value="public interface IQueryable : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IQueryable implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Linq.IQueryable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Linq.Expressions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a funcionalidade para avaliar as consultas em uma fonte de dados específica no qual o tipo de dado não foi especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IQueryable> interface destina implementação por provedores de consulta. Só deve ser implementada por provedores que também implementam <xref:System.Linq.IQueryable%601>. Se o provedor não implementa também <xref:System.Linq.IQueryable%601>, os operadores de consulta padrão não podem ser usados na fonte de dados do provedor.  
+  
+ O <xref:System.Linq.IQueryable> interface herda o <xref:System.Collections.IEnumerable> interface para que se ele representa uma consulta, os resultados da consulta podem ser enumerados. Enumeração faz com que a árvore de expressão associada com um <xref:System.Linq.IQueryable> objeto a ser executado. A definição de "execução de uma árvore de expressão" é específica para um provedor de consulta. Por exemplo, pode envolver transferir a árvore de expressão para uma linguagem de consulta apropriada para a fonte de dados subjacente. As consultas que não retornam resultados enumeráveis são executadas quando o <xref:System.Linq.IQueryProvider.Execute%2A> método é chamado.  
+  
+ Para obter mais informações sobre como criar seu próprio provedor LINQ, consulte [LINQ: Criando um provedor IQueryable](http://go.microsoft.com/fwlink/?LinkID=112370) blogs do MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ElementType">
+      <MemberSignature Language="C#" Value="public Type ElementType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ElementType" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.IQueryable.ElementType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de elemento que é retornado quando a árvore de expressão associada a esta instância do <see cref="T:System.Linq.IQueryable" /> é executada.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de elemento que é retornado quando a árvore de expressão associada a este objeto é executada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Linq.IQueryable.ElementType%2A> propriedade representa o "T" em `IQueryable<T>` ou `IQueryable(Of T)`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.Linq.Expressions.Expression Expression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.Expressions.Expression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.IQueryable.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.Expressions.Expression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a árvore de expressão que é associada à instância de <see cref="T:System.Linq.IQueryable" />.</summary>
+        <value>A <see cref="T:System.Linq.Expressions.Expression" /> associada a essa instância de <see cref="T:System.Linq.IQueryable" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma instância do <xref:System.Linq.IQueryable> representa um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta em uma fonte de dados, a árvore de expressão associado representa essa consulta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public System.Linq.IQueryProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Linq.IQueryProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Linq.IQueryable.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Linq.Expressions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o provedor de consulta associado esta fonte de dados.</summary>
+        <value>A <see cref="T:System.Linq.IQueryProvider" /> associado a essa fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma instância do <xref:System.Linq.IQueryable> representa um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta em uma fonte de dados, o provedor de consulta associado é o provedor que criou o <xref:System.Linq.IQueryable> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

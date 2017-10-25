@@ -1,0 +1,56 @@
+<Type Name="IConfigurationManagerHelper" FullName="System.Configuration.Internal.IConfigurationManagerHelper">
+  <TypeSignature Language="C#" Value="public interface IConfigurationManagerHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IConfigurationManagerHelper" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.IConfigurationManagerHelper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma interface usada pelo .NET Framework para dar suporte ao gerenciamento de configuração.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="EnsureNetConfigLoaded">
+      <MemberSignature Language="C#" Value="public void EnsureNetConfigLoaded ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnsureNetConfigLoaded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Internal.IConfigurationManagerHelper.EnsureNetConfigLoaded" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Garante que a configuração de rede é carregada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para evitar deadlocks nas classes de rede, garantindo que configuração de rede é carregada antes que são feitas solicitações de rede.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

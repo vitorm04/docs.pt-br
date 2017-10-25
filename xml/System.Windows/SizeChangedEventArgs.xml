@@ -1,0 +1,141 @@
+<Type Name="SizeChangedEventArgs" FullName="System.Windows.SizeChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class SizeChangedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SizeChangedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.SizeChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados relacionados ao evento <see cref="E:System.Windows.FrameworkElement.SizeChanged" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HeightChanged">
+      <MemberSignature Language="C#" Value="public bool HeightChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HeightChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SizeChangedEventArgs.HeightChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.FrameworkElement.Height" /> alterado de componente do tamanho.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.FrameworkElement.Height" /> componente do tamanho alterado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque <xref:System.Double> precisão números processo imprecisely, essa propriedade pode retornar um valor de `false` mesmo quando <xref:System.Windows.SizeChangedEventArgs.PreviousSize%2A> e <xref:System.Windows.SizeChangedEventArgs.NewSize%2A> não são iguais.  
+  
+ O sistema de layout, ocasionalmente, apresenta esse estado devido a pequenas flutuações nos parâmetros de entrada; No entanto, a cena renderizada geral é considerada como iguais. Portanto, nenhuma alteração visível é detectadas. O manipulador para o <xref:System.Windows.FrameworkElement.SizeChanged> evento deve verificar esse estado para evitar invalidação de layout se a dimensão, na verdade, não foi alterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.SizeChangedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador genérico para chamar em uma forma de um tipo específico.</param>
+        <param name="genericTarget">O destino para chamar o manipulador no.</param>
+        <summary>Invoca manipuladores de eventos de uma maneira de um tipo específico, que pode aumentar a eficiência do sistema de eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação converte o manipulador genérico como um <xref:System.Windows.SizeChangedEventHandler> e, em seguida, invoca. Para obter detalhes sobre esse padrão de implementação e os motivos para ele, consulte <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> e [visão geral sobre eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSize">
+      <MemberSignature Language="C#" Value="public System.Windows.Size NewSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Size NewSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SizeChangedEventArgs.NewSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo <see cref="T:System.Windows.Size" /> do objeto.</summary>
+        <value>O novo <see cref="T:System.Windows.Size" /> do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousSize">
+      <MemberSignature Language="C#" Value="public System.Windows.Size PreviousSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Size PreviousSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SizeChangedEventArgs.PreviousSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o anterior <see cref="T:System.Windows.Size" /> do objeto.</summary>
+        <value>Anterior <see cref="T:System.Windows.Size" /> do objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthChanged">
+      <MemberSignature Language="C#" Value="public bool WidthChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WidthChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.SizeChangedEventArgs.WidthChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.FrameworkElement.Width" /> alterado de componente do tamanho.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.FrameworkElement.Width" /> componente do tamanho alterado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque <xref:System.Double> precisão números processo imprecisely, essa propriedade pode retornar um valor de `false` mesmo quando <xref:System.Windows.SizeChangedEventArgs.PreviousSize%2A> e <xref:System.Windows.SizeChangedEventArgs.NewSize%2A> não são iguais.  
+  
+ O sistema de layout, ocasionalmente, apresenta esse estado devido a pequenas flutuações nos parâmetros de entrada; No entanto, a cena renderizada geral é considerada como iguais. Portanto, nenhuma alteração visível é detectadas. O manipulador para o <xref:System.Windows.FrameworkElement.SizeChanged> evento deve verificar esse estado para evitar invalidação de layout se a dimensão, na verdade, não foi alterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

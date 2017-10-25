@@ -1,0 +1,426 @@
+<Type Name="ZipArchiveEntry" FullName="System.IO.Compression.ZipArchiveEntry">
+  <TypeSignature Language="C#" Value="public class ZipArchiveEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ZipArchiveEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Compression.ZipArchiveEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Compression</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um arquivo compactado em um arquivo zip.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um arquivo zip contém uma entrada para cada arquivo compactado. O <xref:System.IO.Compression.ZipArchiveEntry> classe permite que você examine as propriedades de uma entrada e abrir ou excluir a entrada. Quando você abre uma entrada, você pode modificar o arquivo compactado ao gravar no fluxo do arquivo compactado.  
+  
+ Os métodos para manipular arquivos zip e suas entradas do arquivo estão espalhados em três classes: <xref:System.IO.Compression.ZipFile>, <xref:System.IO.Compression.ZipArchive> e <xref:System.IO.Compression.ZipArchiveEntry>.  
+  
+|Para...|Uso...|  
+|---------|----------|  
+|Criar um arquivo zip de um diretório|<xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>|  
+|Extraia o conteúdo de um arquivo zip para um diretório|<xref:System.IO.Compression.ZipFile.ExtractToDirectory%2A?displayProperty=nameWithType>|  
+|Adicionar novos arquivos em um arquivo zip existente|<xref:System.IO.Compression.ZipArchive.CreateEntry%2A?displayProperty=nameWithType>|  
+|Recuperar um arquivo em um arquivo zip|<xref:System.IO.Compression.ZipArchive.GetEntry%2A?displayProperty=nameWithType>|  
+|Recuperar todos os arquivos em um arquivo zip|<xref:System.IO.Compression.ZipArchive.Entries%2A?displayProperty=nameWithType>|  
+|Para abrir um fluxo para um arquivo individual contida em um arquivo zip|<xref:System.IO.Compression.ZipArchiveEntry.Open%2A?displayProperty=nameWithType>|  
+|Excluir um arquivo de um arquivo zip|<xref:System.IO.Compression.ZipArchiveEntry.Delete%2A?displayProperty=nameWithType>|  
+  
+ Se você fizer referência a `System.IO.Compression.FileSystem` assembly em seu projeto, você pode acessar dois métodos de extensão para o <xref:System.IO.Compression.ZipArchiveEntry> classe. Esses métodos são <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%28System.IO.Compression.ZipArchiveEntry%2CSystem.String%29> e <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%28System.IO.Compression.ZipArchiveEntry%2CSystem.String%2CSystem.Boolean%29>, e eles permitem que você descompactar o conteúdo da entrada em um arquivo. O `System.IO.Compression.FileSystem` assembly não está disponível em [!INCLUDE[win8](~/includes/win8-md.md)]. Em [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplicativos, poderá descompactar o conteúdo de um arquivo morto usando <xref:System.IO.Compression.DeflateStream> ou <xref:System.IO.Compression.GZipStream>, ou você pode usar o [!INCLUDE[wrt](~/includes/wrt-md.md)] tipos [compactador](http://go.microsoft.com/fwlink/p/?LinkId=246357) e [descompactador](http://go.microsoft.com/fwlink/?LinkId=246358) para compactar e descompactar os arquivos.  
+  
+   
+  
+## Examples  
+ O primeiro exemplo mostra como criar uma nova entrada em um arquivo zip e gravar nele.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
+  
+ O segundo exemplo mostra como usar o <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%28System.IO.Compression.ZipArchiveEntry%2CSystem.String%29> método de extensão. Você deve fazer referência a `System.IO.Compression.FileSystem` assembly em seu projeto para o código para executar.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Archive">
+      <MemberSignature Language="C#" Value="public System.IO.Compression.ZipArchive Archive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Compression.ZipArchive Archive" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.Archive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.ZipArchive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o arquivo morto zip ao qual a entrada pertence.</summary>
+        <value>O arquivo morto zip ao qual a entrada pertence ou <see langword="null" /> se a entrada tiver sido excluída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompressedLength">
+      <MemberSignature Language="C#" Value="public long CompressedLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CompressedLength" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.CompressedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho compactado da entrada no arquivo morto zip.</summary>
+        <value>O tamanho compactado da entrada no arquivo morto zip.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não pode ser recuperada quando o modo é definido como <xref:System.IO.Compression.ZipArchiveMode.Create>, ou o modo é definido como <xref:System.IO.Compression.ZipArchiveMode.Update> e a entrada foi aberta.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar entradas em um arquivo zip e avaliar as propriedades das entradas. Ele usa o <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> propriedade para exibir o nome da entrada e o <xref:System.IO.Compression.ZipArchiveEntry.Length%2A> e <xref:System.IO.Compression.ZipArchiveEntry.CompressedLength%2A> propriedades para calcular quanto o arquivo foi compactado.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade não está disponível porque a entrada foi modificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchiveEntry.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui a entrada do arquivo zip.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">A entrada já está aberta para leitura ou gravação.</exception>
+        <exception cref="T:System.NotSupportedException">O arquivo zip para essa entrada foi aberto em um modo diferente de <see cref="F:System.IO.Compression.ZipArchiveMode.Update" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O arquivo zip para essa entrada foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalAttributes">
+      <MemberSignature Language="C#" Value="public int ExternalAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExternalAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.ExternalAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho relativo da entrada no arquivo zip.</summary>
+        <value>O caminho relativo da entrada no arquivo zip.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> propriedade contém o caminho relativo, incluindo a hierarquia de subdiretório de uma entrada em um arquivo zip. (Por outro lado, o <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> propriedade contém apenas o nome da entrada e não inclui a hierarquia de subdiretório.) Por exemplo, se você criar duas entradas em um arquivo zip usando o <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A> método e fornecer `NewEntry.txt` como o nome da primeira entrada e `AddedFolder\\NewEntry.txt` da segunda entrada, terá as duas entradas `NewEntry.txt` no <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> propriedade. A primeira entrada também terá `NewEntry.txt` no <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> propriedade, mas a segunda entrada terá `AddedFolder\\NewEntry.txt` no <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> propriedade.  
+  
+ Você pode especificar qualquer cadeia de caracteres como o caminho de uma entrada, incluindo cadeias de caracteres que especificam caminhos absolutos e inválidos. Portanto, o <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> propriedade pode conter um valor que não está formatado corretamente. Um caminho absoluto ou inválido pode resultar em uma exceção quando você extrai o conteúdo do arquivo morto zip.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como percorrer o conteúdo de um arquivo. zip e extraia os arquivos que contêm a extensão. txt.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchive#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchive/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchive/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastWriteTime">
+      <MemberSignature Language="C#" Value="public DateTimeOffset LastWriteTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset LastWriteTime" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.LastWriteTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a última vez que a entrada no arquivo morto zip foi alterada.</summary>
+        <value>A última vez que a entrada no arquivo morto zip foi alterada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma nova entrada de um arquivo existente chamando o <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A> método, o <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> propriedade para a entrada é definida automaticamente como a última vez que o arquivo foi modificada. Quando você cria uma nova entrada programaticamente chamando o <xref:System.IO.Compression.ZipArchive.CreateEntry%2A> método, o <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> propriedade para a entrada é definida automaticamente como o tempo de execução. Se você modificar a entrada, você deve definir explicitamente o <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> se você quiser que o valor para refletir a hora da última alteração de propriedade.  
+  
+ Quando você definir essa propriedade, o <xref:System.DateTimeOffset> valor é convertido em um formato de carimbo de hora que é específico para arquivos zip. Esse formato oferece suporte a uma resolução de dois segundos. O valor mais baixo permitido é 1 de janeiro de 1980 0:00:00 (meia-noite). O último valor permitido é 31 de dezembro de 2107 23:59:58 (um segundo antes da meia-noite). Se o valor para o último tempo de gravação não for válido, a propriedade retorna um valor padrão de 1980 1 de janeiro 0:00:00 (meia-noite).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como abrir uma entrada em um arquivo zip, modificá-lo e definir o <xref:System.IO.Compression.ZipArchiveEntry.LastWriteTime%2A> propriedade para a hora atual.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program2.cs#2)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">A tentativa de definir essa propriedade falhou, porque o arquivo morto zip da entrada está no modo <see cref="F:System.IO.Compression.ZipArchiveMode.Read" />.</exception>
+        <exception cref="T:System.IO.IOException">O modo de arquivo morto é definido como <see cref="F:System.IO.Compression.ZipArchiveMode.Create" />.  
+  
+ \- ou -  
+  
+ O modo de arquivo morto é definido como <see cref="F:System.IO.Compression.ZipArchiveMode.Update" /> e a entrada foi aberta.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Foi feita uma tentativa de definir essa propriedade com um valor anterior a 1º de janeiro de 1980 0:00:00 (meia-noite) ou posterior a 31 de dezembro de 2107 23:59:58 (um segundo antes da meia-noite).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho não compactado da entrada no arquivo zip.</summary>
+        <value>O tamanho não compactado da entrada no arquivo zip.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não pode ser recuperada quando o modo é definido como <xref:System.IO.Compression.ZipArchiveMode.Create>, ou o modo é definido como <xref:System.IO.Compression.ZipArchiveMode.Update> e a entrada foi aberta.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar entradas de um arquivo zip e avaliar as propriedades das entradas. Ele usa o <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> propriedade para exibir o nome da entrada e o <xref:System.IO.Compression.ZipArchiveEntry.Length%2A> e <xref:System.IO.Compression.ZipArchiveEntry.CompressedLength%2A> propriedades para calcular quanto o arquivo foi compactado.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor da propriedade não está disponível porque a entrada foi modificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Compression.ZipArchiveEntry.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de arquivo da entrada no arquivo zip.</summary>
+        <value>O nome de arquivo da entrada no arquivo zip.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> propriedade contém a parte do <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> propriedade que segue o caractere separador de diretório final (\\) e não inclui a hierarquia de subdiretório. Por exemplo, se você criar duas entradas em um arquivo zip usando o <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%2A> método e fornecer `NewEntry.txt` como o nome da primeira entrada e `AddedFolder\\NewEntry.txt` da segunda entrada, terá as duas entradas `NewEntry.txt` no <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> propriedade. A primeira entrada também terá `NewEntry.txt` no <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> propriedade, mas a segunda entrada terá `AddedFolder\\NewEntry.txt` no <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como recuperar entradas de um arquivo zip e avaliar as propriedades das entradas. Ele usa o <xref:System.IO.Compression.ZipArchiveEntry.Name%2A> propriedade para exibir o nome da entrada e o <xref:System.IO.Compression.ZipArchiveEntry.Length%2A> e <xref:System.IO.Compression.ZipArchiveEntry.CompressedLength%2A> propriedades para calcular quanto o arquivo foi compactado.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveEntry#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchiveentry/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchiveEntry.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre a entrada do arquivo zip.</summary>
+        <returns>O fluxo que representa o conteúdo da entrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para acessar o fluxo de uma entrada em um arquivo zip. Depois de recuperar o fluxo, você pode ler ou gravar no fluxo. Quando você grava no fluxo, as modificações feitas para a entrada serão exibida no arquivo morto zip.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma nova entrada, abri-lo com o <xref:System.IO.Compression.ZipArchiveEntry.Open%2A> método e gravação no fluxo.  
+  
+ [!code-csharp[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/cs/program1.cs#1)]
+ [!code-vb[System.IO.Compression.ZipArchiveMode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.ziparchivemode/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">A entrada já está atualmente aberta para gravação.  
+  
+ -ou-  
+  
+ A entrada foi excluída do arquivo.  
+  
+ -ou-  
+  
+ O arquivo para esta entrada foi aberto com o modo <see cref="F:System.IO.Compression.ZipArchiveMode.Create" /> e essa entrada já foi gravada.</exception>
+        <exception cref="T:System.IO.InvalidDataException">A entrada está ausente do arquivo ou está corrompida e não pode ser lida.  
+  
+ -ou-  
+  
+ A entrada foi compactada usando um método de compactação sem suporte.</exception>
+        <exception cref="T:System.ObjectDisposedException">O arquivo zip para essa entrada foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Compression.ZipArchiveEntry.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o caminho relativo da entrada no arquivo morto zip.</summary>
+        <returns>O caminho relativo da entrada, que é o valor armazenado na <see cref="P:System.IO.Compression.ZipArchiveEntry.FullName" /> propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

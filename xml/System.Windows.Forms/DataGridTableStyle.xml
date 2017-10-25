@@ -1,0 +1,3119 @@
+<Type Name="DataGridTableStyle" FullName="System.Windows.Forms.DataGridTableStyle">
+  <TypeSignature Language="C#" Value="public class DataGridTableStyle : System.ComponentModel.Component, System.Windows.Forms.IDataGridEditingService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridTableStyle extends System.ComponentModel.Component implements class System.Windows.Forms.IDataGridEditingService" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridTableStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IDataGridEditingService</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a tabela desenhada pelo controle <see cref="T:System.Windows.Forms.DataGrid" /> no tempo de execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle exibe os dados na forma de uma grade. O <xref:System.Windows.Forms.DataGridTableStyle> é uma classe que representa a grade desenhado. Essa grade não deve ser confundida com o <xref:System.Data.DataTable> classe, que é uma possível fonte de dados para a grade. Em vez disso, o <xref:System.Windows.Forms.DataGridTableStyle> representa estritamente a grade conforme ele é pintado no controle. Portanto, por meio de <xref:System.Windows.Forms.DataGridTableStyle> você pode controlar a aparência da grade para cada <xref:System.Data.DataTable>. Para especificar qual <xref:System.Windows.Forms.DataGridTableStyle> é usado ao exibir dados de um determinado <xref:System.Data.DataTable>, defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> para o <xref:System.Data.DataTable.TableName%2A> de um <xref:System.Data.DataTable>.  
+  
+ O <xref:System.Windows.Forms.GridTableStylesCollection> recuperados por meio de <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade contém todos os a <xref:System.Windows.Forms.DataGridTableStyle> objetos usados por um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle. A coleção pode conter tantos <xref:System.Windows.Forms.DataGridTableStyle> objetos conforme necessário, no entanto, a <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> de cada um deve ser exclusivo. Em tempo de execução, isso permite a substituição outro <xref:System.Windows.Forms.DataGridTableStyle> para os mesmos dados, dependendo da preferência do usuário. Para fazer isso:  
+  
+1.  Preencher o <xref:System.Windows.Forms.GridTableStylesCollection> com <xref:System.Windows.Forms.DataGridTableStyle> objetos. Se um <xref:System.Windows.Forms.DataGridTableStyle> existe no <xref:System.Windows.Forms.GridTableStylesCollection> cujo <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valor de propriedade é igual a <xref:System.Data.DataTable> do objeto <xref:System.Data.DataTable.TableName%2A> propriedade, o <xref:System.Data.DataTable> é exibido com essa <xref:System.Windows.Forms.DataGridTableStyle>. Se nenhum <xref:System.Windows.Forms.DataGridTableStyle> existe com uma correspondência <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>, o <xref:System.Data.DataTable> é exibido com o estilo padrão de tabelas de grade de dados.  
+  
+2.  Quando um estilo de diferentes de grade é necessário, use o `Item` propriedade para selecionar as <xref:System.Windows.Forms.DataGridTableStyle> (passar o <xref:System.Data.DataTable.TableName%2A> para o <xref:System.Windows.Forms.GridTableStylesCollection.Item%2A> propriedade) e defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> do objeto retornado para um novo valor.  
+  
+3.  Use o <xref:System.Windows.Forms.GridTableStylesCollection.Item%2A> propriedade para selecionar o desejado <xref:System.Windows.Forms.DataGridTableStyle>e defina seu <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> para o <xref:System.Data.DataTable.TableName%2A> do <xref:System.Data.DataTable>.  
+  
+> [!CAUTION]
+>  Sempre criar <xref:System.Windows.Forms.DataGridColumnStyle> objetos e adicioná-los para o <xref:System.Windows.Forms.GridColumnStylesCollection> antes de adicionar <xref:System.Windows.Forms.DataGridTableStyle> objetos para o <xref:System.Windows.Forms.GridTableStylesCollection>. Quando você adiciona um vazio <xref:System.Windows.Forms.DataGridTableStyle> com uma validade <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valor à coleção, <xref:System.Windows.Forms.DataGridColumnStyle> objetos são gerados automaticamente para você. Consequentemente, uma exceção será lançada se você tentar adicionar uma nova <xref:System.Windows.Forms.DataGridColumnStyle> objetos com duplicata <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valores para o <xref:System.Windows.Forms.GridColumnStylesCollection>.  
+  
+ Para determinar qual <xref:System.Windows.Forms.DataGridTableStyle> é exibido no momento, use o <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedades do <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> para retornar um <xref:System.Windows.Forms.CurrencyManager>. Se a fonte de dados implementa a <xref:System.ComponentModel.ITypedList> interface, você pode usar o <xref:System.ComponentModel.ITypedList.GetListName%2A> método para retornar o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> da tabela atual. Isso é mostrado no código c# a seguir:  
+  
+```  
+private void PrintCurrentListName(DataGrid myDataGrid){  
+ CurrencyManager myCM = (CurrencyManager)  
+ BindingContext[myDataGrid.DataSource, myDataGrid.DataMember];  
+ IList myList = myCM.List;  
+ ITypedList thisList = (ITypedList) myList;  
+ Console.WriteLine(thisList.GetListName(null));  
+}  
+```  
+  
+ Se o <xref:System.Data.DataSet> contém <xref:System.Data.DataTable> objetos relacionados por meio de <xref:System.Data.DataRelation> objetos e exibido no momento <xref:System.Data.DataTable> é uma tabela filho, o <xref:System.Windows.Forms.DataGrid.DataMember%2A> retornará uma cadeia de caracteres na forma de TableName.RelationName (no caso mais simples). Se o <xref:System.Data.DataTable> é mais abaixo na hierarquia, a cadeia de caracteres será composto de nome da tabela pai seguido necessários <xref:System.Data.DataRelation.RelationName%2A> valores necessários para alcançar o nível da tabela. Por exemplo, imagine três <xref:System.Data.DataTable> objetos em uma relação hierárquica chamado (de cima para baixo) `Regions`, `Customers`, e `Orders`e dois <xref:System.Data.DataRelation> objetos nomeados `RegionsToCustomers` e `CustomersToOrders`, o <xref:System.Windows.Forms.DataGrid.DataMember%2A> propriedade retornará "Regions.RegionsToCustomers.CustomersToOrders". No entanto, o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> será "Orders".  
+  
+ A coleção de <xref:System.Windows.Forms.DataGridTableStyle> objetos é retornado por meio de <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade do <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType>.  
+  
+ Quando um <xref:System.Windows.Forms.DataGridTableStyle> for exibido, as configurações para o <xref:System.Windows.Forms.DataGridTableStyle> substituirão as configurações para o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle. Se um valor não for definido para um determinado <xref:System.Windows.Forms.DataGridTableStyle> propriedade, o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> em vez disso, será usado o valor do controle. A lista a seguir mostra o <xref:System.Windows.Forms.DataGridColumnStyle> propriedades que podem ser definidas para substituir <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> propriedades de controle:  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.AllowSorting%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.BackColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisible%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.ForeColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.GridLineColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.GridLineStyle%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.HeaderBackColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.HeaderFont%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.HeaderForeColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.LinkColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.PreferredColumnWidth%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.PreferredRowHeight%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.ReadOnly%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.RowHeadersVisible%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.RowHeaderWidth%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.SelectionBackColor%2A>  
+  
+-   <xref:System.Windows.Forms.DataGridTableStyle.SelectionForeColor%2A>  
+  
+ Para associar o <xref:System.Windows.Forms.DataGrid> em uma matriz fortemente tipada de objetos, o tipo de objeto deve conter propriedades públicas. Para criar um <xref:System.Windows.Forms.DataGridTableStyle> que exibe a matriz, defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> propriedade `typename` onde `typename` é substituído pelo nome do tipo de objeto. Observe também que o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade diferencia maiusculas de minúsculas; o nome do tipo deve ser exatamente iguais. Consulte o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade para obter um exemplo.  
+  
+ Você também pode associar o <xref:System.Windows.Forms.DataGrid> para um <xref:System.Collections.ArrayList>. Um recurso do <xref:System.Collections.ArrayList> é que ele pode conter objetos de vários tipos, mas o <xref:System.Windows.Forms.DataGrid> só pode ser associado a essa lista quando todos os itens na lista são do mesmo tipo que o primeiro item. Isso significa que todos os objetos devem ser do mesmo tipo, ou eles devem herdar da classe mesmo como o primeiro item na lista. Por exemplo, se o primeiro item em uma lista é uma <xref:System.Windows.Forms.Control>, o segundo item pode ser um <xref:System.Windows.Forms.TextBox> (que herda de <xref:System.Windows.Forms.Control>). Se, por outro lado, o primeiro item é um <xref:System.Windows.Forms.TextBox>, o segundo objeto não pode ser um <xref:System.Windows.Forms.Control>. Além disso, o <xref:System.Collections.ArrayList> deve ter itens nele quando é associada e os objetos de <xref:System.Windows.Forms.DataGridTableStyle> deve conter propriedades públicas. Vazio <xref:System.Collections.ArrayList> resultará em uma grade vazia. Ao associar a um <xref:System.Collections.ArrayList>, defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> do <xref:System.Windows.Forms.DataGridTableStyle> para "ArrayList" (o nome do tipo).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria dois <xref:System.Windows.Forms.DataGridTableStyle> instâncias e define o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> de cada objeto para o <xref:System.Data.DataTable.TableName%2A> de um <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>. O exemplo adiciona <xref:System.Windows.Forms.DataGridColumnStyle> objetos para o <xref:System.Windows.Forms.GridColumnStylesCollection> de cada <xref:System.Windows.Forms.DataGridTableStyle>. Para obter um exemplo que é executado, consulte o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> exemplo.  
+  
+ [!code-cpp[Classic DataGridTableStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridTableStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Windows.Forms.DataGridTableStyle> e adiciona-o para o <xref:System.Windows.Forms.GridTableStylesCollection>.  
+  
+ [!code-cpp[Classic DataGridTableStyle.DataGridTableStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.DataGridTableStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.DataGridTableStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridTableStyle (bool isDefaultTableStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isDefaultTableStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isDefaultTableStyle" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isDefaultTableStyle">
+          <see langword="true" />para especificar a tabela como o padrão. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridTableStyle" /> classe usando o valor especificado para determinar se a tabela de grade é o estilo padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Windows.Forms.DataGridTableStyle> e adiciona-o para o <xref:System.Windows.Forms.GridTableStylesCollection>.  
+  
+ [!code-cpp[Classic DataGridTableStyle.DataGridTableStyle Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.DataGridTableStyle Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.DataGridTableStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridTableStyle (System.Windows.Forms.CurrencyManager listManager);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.CurrencyManager listManager) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.#ctor(System.Windows.Forms.CurrencyManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="listManager" Type="System.Windows.Forms.CurrencyManager" />
+      </Parameters>
+      <Docs>
+        <param name="listManager">O <see cref="T:System.Windows.Forms.CurrencyManager" /> a ser usado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridTableStyle" /> com o <see cref="T:System.Windows.Forms.CurrencyManager" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Windows.Forms.DataGridTableStyle> usando um <xref:System.Windows.Forms.CurrencyManager> para um <xref:System.Data.DataTable>.  
+  
+ [!code-cpp[Classic DataGridTableStyle.DataGridTableStyle2 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.DataGridTableStyle2 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle2 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.DataGridTableStyle2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGridTableStyle2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSorting">
+      <MemberSignature Language="C#" Value="public bool AllowSorting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowSorting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.AllowSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a classificação é permitida na grade de tabela quando isso <see cref="T:System.Windows.Forms.DataGridTableStyle" /> é usado.</summary>
+        <value>
+          <see langword="true" />Se a classificação é permitida. Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.DataGridTableStyle.AllowSorting%2A> está definida como `true`, um triângulo aparece em cada cabeçalho de coluna que indica a direção da classificação. O usuário pode clicar em qualquer cabeçalho de coluna para classificar a grade por essa coluna. Se você clicar uma segunda vez altera a direção da classificação.  
+  
+ Essa propriedade substitui a <xref:System.Windows.Forms.DataGrid.AllowSorting%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que você alterne de disponibilidade de classificação em um <xref:System.Windows.Forms.DataGrid> clicando em um botão e o status atual de classificação é exibida em um rótulo. Este exemplo requer que você tenha um <xref:System.Windows.Forms.DataGrid> com um <xref:System.Data.DataSet?displayProperty=nameWithType> que contém alguns dados, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.Label> em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[DataGridTableStyle_Sample2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample2/CPP/datagridtablestyle_sample2.cpp#1)]
+ [!code-csharp[DataGridTableStyle_Sample2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample2/CS/datagridtablestyle_sample2.cs#1)]
+ [!code-vb[DataGridTableStyle_Sample2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample2/VB/datagridtablestyle_sample2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowSortingChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AllowSortingChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AllowSortingChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.AllowSortingChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.AllowSorting" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir permite que você alterne de disponibilidade de classificação em um <xref:System.Windows.Forms.DataGrid> clicando em um botão e o status atual de classificação é exibida em um rótulo. Este exemplo requer que você tenha um <xref:System.Windows.Forms.DataGrid> com um <xref:System.Data.DataSet?displayProperty=nameWithType> que contém alguns dados, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.Label> em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[DataGridTableStyle_Sample2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample2/CPP/datagridtablestyle_sample2.cpp#1)]
+ [!code-csharp[DataGridTableStyle_Sample2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample2/CS/datagridtablestyle_sample2.cs#1)]
+ [!code-vb[DataGridTableStyle_Sample2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample2/VB/datagridtablestyle_sample2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternatingBackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color AlternatingBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color AlternatingBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo de linhas ímpares da grade.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo das linhas ímpares. O padrão é <see cref="P:System.Drawing.SystemBrushes.Window" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância de <xref:System.Windows.Forms.DataGridTableStyle> e define o <xref:System.Windows.Forms.DataGridTableStyle.BackColor%2A> e <xref:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor%2A> propriedades para novos valores. O exemplo requer que você tenha um <xref:System.Windows.Forms.DataGrid> com um <xref:System.Data.DataSet?displayProperty=nameWithType> que contém alguns dados e um <xref:System.Windows.Forms.Button> em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[DataGridTableStyle_sample5#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CPP/datagridtablestyle_sample5.cpp#1)]
+ [!code-csharp[DataGridTableStyle_sample5#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CS/datagridtablestyle_sample5.cs#1)]
+ [!code-vb[DataGridTableStyle_sample5#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_sample5/VB/datagridtablestyle_sample5.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternatingBackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AlternatingBackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AlternatingBackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.AlternatingBackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridTableStyle.AlternatingBackColorChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridTableStyle> chamado `DataGridTableStyle1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridTableStyle.AlternatingBackColorChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#221](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#221)]
+ [!code-vb[System.Windows.Forms.EventExamples#221](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#221)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo das linhas pares da grade.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo das linhas ímpares.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor%2A> propriedade também pode ser definida para criar uma aparência semelhante a razão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância de <xref:System.Windows.Forms.DataGridTableStyle> e define o <xref:System.Windows.Forms.DataGridTableStyle.BackColor%2A> e <xref:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor%2A> propriedades para novos valores. O exemplo requer que você tenha um <xref:System.Windows.Forms.DataGrid> com um <xref:System.Data.DataSet?displayProperty=nameWithType> que contém alguns dados e um <xref:System.Windows.Forms.Button> em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[DataGridTableStyle_sample5#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CPP/datagridtablestyle_sample5.cpp#1)]
+ [!code-csharp[DataGridTableStyle_sample5#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CS/datagridtablestyle_sample5.cs#1)]
+ [!code-vb[DataGridTableStyle_sample5#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_sample5/VB/datagridtablestyle_sample5.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler BackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler BackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.BackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.BackColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridTableStyle.BackColorChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridTableStyle> chamado `DataGridTableStyle1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridTableStyle.BackColorChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#222](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#222)]
+ [!code-vb[System.Windows.Forms.EventExamples#222](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#222)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public bool BeginEdit (System.Windows.Forms.DataGridColumnStyle gridColumn, int rowNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool BeginEdit(class System.Windows.Forms.DataGridColumnStyle gridColumn, int32 rowNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.BeginEdit(System.Windows.Forms.DataGridColumnStyle,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gridColumn" Type="System.Windows.Forms.DataGridColumnStyle" />
+        <Parameter Name="rowNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="gridColumn">O <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> para editar.</param>
+        <param name="rowNumber">O número da linha editada.</param>
+        <summary>Solicita uma operação de edição.</summary>
+        <returns>
+          <see langword="true" />, se a operação for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridTableStyle.BeginEdit%2A> método destina-se para notificar o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controlar quando o usuário iniciou uma operação de edição. Quando o controle está no modo de edição, vários pode ser editado e as restrições serão temporariamente não impostas.  
+  
+ Chamar o <xref:System.Windows.Forms.DataGridTableStyle.EndEdit%2A> método para sair do modo de edição.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o <xref:System.Windows.Forms.DataGridTableStyle.BeginEdit%2A> método no atual <xref:System.Windows.Forms.DataGridTableStyle> em um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle.  
+  
+ [!code-cpp[Classic DataGridTableStyle.BeginEdit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.BeginEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.BeginEdit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.BeginEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeadersVisible">
+      <MemberSignature Language="C#" Value="public bool ColumnHeadersVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ColumnHeadersVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os cabeçalhos de coluna estão visíveis.</summary>
+        <value>
+          <see langword="true" />Se os cabeçalhos de coluna estão visíveis; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o texto de legenda de cabeçalho, use o <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> propriedade o <xref:System.Windows.Forms.DataGridColumnStyle> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Sample3#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample3/CPP/datagridtablestyle_sample3.cpp#1)]
+ [!code-csharp[DataGridTableStyle_Sample3#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample3/CS/datagridtablestyle_sample3.cs#1)]
+ [!code-vb[DataGridTableStyle_Sample3#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample3/VB/datagridtablestyle_sample3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeadersVisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ColumnHeadersVisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ColumnHeadersVisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisible" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o texto da legenda para cada coluna em uma grade, defina o <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> propriedade o <xref:System.Windows.Forms.DataGridColumnStyle> classe.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Sample3#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample3/CPP/datagridtablestyle_sample3.cpp#2)]
+ [!code-csharp[DataGridTableStyle_Sample3#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample3/CS/datagridtablestyle_sample3.cs#2)]
+ [!code-vb[DataGridTableStyle_Sample3#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample3/VB/datagridtablestyle_sample3.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGridColumn">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.DataGridColumnStyle CreateGridColumn (System.ComponentModel.PropertyDescriptor prop);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Windows.Forms.DataGridColumnStyle CreateGridColumn(class System.ComponentModel.PropertyDescriptor prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.CreateGridColumn(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridColumnStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> usado para criar o objeto de estilo de coluna.</param>
+        <summary>Cria um <see cref="T:System.Windows.Forms.DataGridColumnStyle" />, usando o descritor da propriedade especificada.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> recém-criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGridColumn">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.DataGridColumnStyle CreateGridColumn (System.ComponentModel.PropertyDescriptor prop, bool isDefault);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Windows.Forms.DataGridColumnStyle CreateGridColumn(class System.ComponentModel.PropertyDescriptor prop, bool isDefault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.CreateGridColumn(System.ComponentModel.PropertyDescriptor,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridColumnStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+        <Parameter Name="isDefault" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="prop">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> usado para criar o objeto de estilo de coluna.</param>
+        <param name="isDefault">Especifica se o <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> é um estilo de coluna padrão. Esse parâmetro é somente leitura.</param>
+        <summary>Cria um <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> usando o descritor da propriedade especificada. Especifica se o <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> é um estilo de coluna padrão.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> recém-criado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataGrid">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGrid DataGrid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGrid DataGrid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.DataGrid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGrid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.DataGrid" /> controle para a tabela desenhada.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGrid" /> controle que exibe a tabela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle exibe os dados na forma de uma grade. O <xref:System.Windows.Forms.DataGridTableStyle> é um objeto que representa a grade desenhada. O <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> propriedade retorna uma referência para o controle que está exibindo a grade.  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.DataGrid%2A> propriedade é definida quando um <xref:System.Windows.Forms.DataGridTableStyle> é adicionado a um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> do controle <xref:System.Windows.Forms.GridTableStylesCollection>. Você não deve tentar definir essa propriedade, a menos que você está substituindo-lo e criando um designer para um controle de usuário que incorpora o <xref:System.Windows.Forms.DataGrid> controle.  
+  
+   
+  
+## Examples  
+ O código a seguir imprime exemplo o <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> do <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> exibindo um <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ [!code-cpp[Classic DataGridTableStyle.DataGrid Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGrid Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.DataGrid Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGrid Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.DataGrid Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.DataGrid Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTableStyle">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Forms.DataGridTableStyle DefaultTableStyle;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Forms.DataGridTableStyle DefaultTableStyle" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataGridTableStyle.DefaultTableStyle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridTableStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo de tabela padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Descarta os recursos (exceto a memória) usados pelo <see cref="T:System.Windows.Forms.DataGridTableStyle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método chama o <xref:System.Windows.Forms.DataGridTableStyle.Dispose%2A?displayProperty=nameWithType> método em cada <xref:System.Windows.Forms.DataGridColumnStyle> contidas na coleção antes de chamar <xref:System.Windows.Forms.DataGrid.Dispose%2A?displayProperty=nameWithType> na grade em si.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEdit">
+      <MemberSignature Language="C#" Value="public bool EndEdit (System.Windows.Forms.DataGridColumnStyle gridColumn, int rowNumber, bool shouldAbort);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EndEdit(class System.Windows.Forms.DataGridColumnStyle gridColumn, int32 rowNumber, bool shouldAbort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.EndEdit(System.Windows.Forms.DataGridColumnStyle,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gridColumn" Type="System.Windows.Forms.DataGridColumnStyle" />
+        <Parameter Name="rowNumber" Type="System.Int32" />
+        <Parameter Name="shouldAbort" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="gridColumn">O <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> para editar.</param>
+        <param name="rowNumber">O número da linha editada.</param>
+        <param name="shouldAbort">Um valor que indica se a operação deve ser interrompida; <see langword="true" /> caso seja interrompido; caso contrário, <see langword="false" />.</param>
+        <summary>Solicita uma extremidade de uma operação de edição.</summary>
+        <returns>
+          <see langword="true" />Se a operação de edição é terminado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Semelhante do <xref:System.Windows.Forms.DataGridTableStyle.BeginEdit%2A> método, o <xref:System.Windows.Forms.DataGridTableStyle.EndEdit%2A> método destina-se para notificar o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> quando uma operação de edição está terminando.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama o <xref:System.Windows.Forms.DataGridTableStyle.BeginEdit%2A> método no atual <xref:System.Windows.Forms.DataGridTableStyle> em um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle.  
+  
+ [!code-cpp[Classic DataGridTableStyle.EndEdit Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.EndEdit Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.EndEdit Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.EndEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.EndEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.EndEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano da tabela de grade.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano da tabela de grade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ForeColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ForeColor/CPP/datagridtablestyle_forecolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ForeColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ForeColor/CS/datagridtablestyle_forecolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ForeColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ForeColor/VB/datagridtablestyle_forecolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.ForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.ForeColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridTableStyle.ForeColorChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridTableStyle> chamado `DataGridTableStyle1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridTableStyle.ForeColorChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#223](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#223)]
+ [!code-vb[System.Windows.Forms.EventExamples#223](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#223)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridColumnStyles">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.GridColumnStylesCollection GridColumnStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.GridColumnStylesCollection GridColumnStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.GridColumnStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.GridColumnStylesCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de colunas desenhada para essa tabela.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.GridColumnStylesCollection" /> que contém todos os objetos <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> para a tabela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.GridColumnStylesCollection> retornado pelo <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriedade permite que você crie um conjunto personalizado de estilos de coluna. Para cada <xref:System.Data.DataColumn> em uma <xref:System.Data.DataTable>, defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> de um <xref:System.Windows.Forms.DataGridColumnStyle> para o <xref:System.Data.DataColumn.ColumnName%2A>. Esse estilo de coluna serão automaticamente usadas quando isso <xref:System.Windows.Forms.DataGridTableStyle> é exibido.  
+  
+ Se você criar um <xref:System.Windows.Forms.DataGridTableStyle> sem adicionar qualquer <xref:System.Windows.Forms.DataGridColumnStyle> objetos para o <xref:System.Windows.Forms.GridColumnStylesCollection>, uma coleção de <xref:System.Windows.Forms.DataGridColumnStyle> objetos serão criados automaticamente quando um <xref:System.Windows.Forms.DataGridTableStyle> com uma validade <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> é adicionado ao <xref:System.Windows.Forms.GridTableStylesCollection>. Uma exceção será lançada se você tentar adicionar <xref:System.Windows.Forms.DataGridColumnStyle> objetos com duplicata <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> valores para a coleção.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.GridColumnStylesCollection> de um <xref:System.Windows.Forms.DataGridTableStyle> e imprime o cabeçalho de cada objeto.  
+  
+ [!code-cpp[Classic DataGridTableStyle.GridColumnStyles Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.GridColumnStyles Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.GridColumnStyles Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.GridColumnStyles Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.GridColumnStyles Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.GridColumnStyles Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridLineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color GridLineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color GridLineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.GridLineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor das linhas de grade.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor da linha de grade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_sample5#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CPP/datagridtablestyle_sample5.cpp#2)]
+ [!code-csharp[DataGridTableStyle_sample5#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CS/datagridtablestyle_sample5.cs#2)]
+ [!code-vb[DataGridTableStyle_sample5#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_sample5/VB/datagridtablestyle_sample5.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridLineColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler GridLineColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler GridLineColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.GridLineColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.GridLineColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_sample5#3](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CPP/datagridtablestyle_sample5.cpp#3)]
+ [!code-csharp[DataGridTableStyle_sample5#3](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_sample5/CS/datagridtablestyle_sample5.cs#3)]
+ [!code-vb[DataGridTableStyle_sample5#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_sample5/VB/datagridtablestyle_sample5.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridLineStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataGridLineStyle GridLineStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridLineStyle GridLineStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.GridLineStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridLineStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo das linhas de grade.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DataGridLineStyle" />. O padrão é <see langword="DataGridLineStyle.Solid" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GridLineStyleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler GridLineStyleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler GridLineStyleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.GridLineStyleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.GridLineStyle" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_sample1#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_sample1/CPP/datagridtablestyle_sample1.cpp#2)]
+ [!code-csharp[DataGridTableStyle_sample1#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_sample1/CS/datagridtablestyle_sample1.cs#2)]
+ [!code-vb[DataGridTableStyle_sample1#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_sample1/VB/datagridtablestyle_sample1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderBackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color HeaderBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color HeaderBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.HeaderBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo de cabeçalhos.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo de cabeçalhos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Header_4#4](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CPP/datagridtablestyle_header_4.cpp#4)]
+ [!code-csharp[DataGridTableStyle_Header_4#4](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CS/datagridtablestyle_header_4.cs#4)]
+ [!code-vb[DataGridTableStyle_Header_4#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Header_4/VB/datagridtablestyle_header_4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderBackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler HeaderBackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HeaderBackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.HeaderBackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderBackColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Header_4#3](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CPP/datagridtablestyle_header_4.cpp#3)]
+ [!code-csharp[DataGridTableStyle_Header_4#3](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CS/datagridtablestyle_header_4.cs#3)]
+ [!code-vb[DataGridTableStyle_Header_4#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Header_4/VB/datagridtablestyle_header_4.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderFont">
+      <MemberSignature Language="C#" Value="public System.Drawing.Font HeaderFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font HeaderFont" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.HeaderFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.AmbientValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte usada para legendas de cabeçalho.</summary>
+        <value>O <see cref="T:System.Drawing.Font" /> usado para legendas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para definir o texto de legenda de cabeçalho, use o <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> propriedade o <xref:System.Windows.Forms.DataGridColumnStyle> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Sample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CPP/datagridtablestyle_sample.cpp#2)]
+ [!code-csharp[DataGridTableStyle_Sample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CS/datagridtablestyle_sample.cs#2)]
+ [!code-vb[DataGridTableStyle_Sample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample/VB/datagridtablestyle_sample.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderFontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler HeaderFontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HeaderFontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.HeaderFontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderFont" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Sample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CPP/datagridtablestyle_sample.cpp#4)]
+ [!code-csharp[DataGridTableStyle_Sample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CS/datagridtablestyle_sample.cs#4)]
+ [!code-vb[DataGridTableStyle_Sample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample/VB/datagridtablestyle_sample.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color HeaderForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color HeaderForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.HeaderForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano dos cabeçalhos.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano dos cabeçalhos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Header_4#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CPP/datagridtablestyle_header_4.cpp#2)]
+ [!code-csharp[DataGridTableStyle_Header_4#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CS/datagridtablestyle_header_4.cs#2)]
+ [!code-vb[DataGridTableStyle_Header_4#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Header_4/VB/datagridtablestyle_header_4.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler HeaderForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HeaderForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.HeaderForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderForeColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Header_4#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CPP/datagridtablestyle_header_4.cpp#1)]
+ [!code-csharp[DataGridTableStyle_Header_4#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Header_4/CS/datagridtablestyle_header_4.cs#1)]
+ [!code-vb[DataGridTableStyle_Header_4#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Header_4/VB/datagridtablestyle_header_4.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LinkColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LinkColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.LinkColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do texto do link.</summary>
+        <value>O <see cref="T:System.Drawing.Color" /> do texto do link.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Sample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CPP/datagridtablestyle_sample.cpp#1)]
+ [!code-csharp[DataGridTableStyle_Sample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CS/datagridtablestyle_sample.cs#1)]
+ [!code-vb[DataGridTableStyle_Sample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample/VB/datagridtablestyle_sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LinkColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LinkColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.LinkColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.LinkColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_Sample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CPP/datagridtablestyle_sample.cpp#3)]
+ [!code-csharp[DataGridTableStyle_Sample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_Sample/CS/datagridtablestyle_sample.cs#3)]
+ [!code-vb[DataGridTableStyle_Sample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_Sample/VB/datagridtablestyle_sample.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkHoverColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LinkHoverColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LinkHoverColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.LinkHoverColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor exibida ao focalizar o texto do link.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> que representa a cor de foco.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinkHoverColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LinkHoverColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LinkHoverColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.LinkHoverColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.LinkHoverColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappingName">
+      <MemberSignature Language="C#" Value="public string MappingName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MappingName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.MappingName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataGridTableStyleMappingNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome usado para mapear esta tabela para uma fonte de dados específica.</summary>
+        <value>O nome usado para mapear esta grade para uma fonte de dados específica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para associar o <xref:System.Windows.Forms.DataGrid> em uma matriz fortemente tipada de objetos, o tipo de objeto deve conter propriedades públicas. Para criar um <xref:System.Windows.Forms.DataGridTableStyle> que exibe a matriz, defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> propriedade `typename` onde `typename` é substituído pelo nome do tipo de objeto. Observe também que o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade diferencia maiusculas de minúsculas; o nome do tipo deve ser exatamente iguais. Consulte o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade para obter um exemplo.  
+  
+ Você também pode associar o <xref:System.Windows.Forms.DataGrid> para um <xref:System.Collections.ArrayList>. Um recurso do <xref:System.Collections.ArrayList> é que ele pode conter objetos de vários tipos, mas o <xref:System.Windows.Forms.DataGrid> só pode ser associado a essa lista quando todos os itens na lista são do mesmo tipo que o primeiro item. Isso significa que todos os objetos devem ser do mesmo tipo, ou eles devem herdar da classe mesmo como o primeiro item na lista. Por exemplo, se o primeiro item em uma lista é uma <xref:System.Windows.Forms.Control>, o segundo item pode ser um <xref:System.Windows.Forms.TextBox> (que herda de <xref:System.Windows.Forms.Control>). Se, por outro lado, o primeiro item é um <xref:System.Windows.Forms.TextBox>, o segundo objeto não pode ser um <xref:System.Windows.Forms.Control>. Além disso, o <xref:System.Collections.ArrayList> devem ter itens nele quando ele está vinculado. Vazio <xref:System.Collections.ArrayList> resultará em uma grade vazia. Ao associar a um <xref:System.Collections.ArrayList>, defina o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> do <xref:System.Windows.Forms.DataGridTableStyle> para "ArrayList" (o nome do tipo).  
+  
+ O padrão é o nome da lista de gerenciados pelo <xref:System.Windows.Forms.CurrencyManager> para esta grade. O <xref:System.Windows.Forms.CurrencyManager> para o <xref:System.Windows.Forms.DataGridTableStyle> é definida usando o <xref:System.Windows.Forms.DataGridTableStyle.%23ctor%2A> construtor.  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.MappingNameChanged> evento ocorre quando o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> o valor é alterado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma matriz de `Widget` objetos e associa um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle para a matriz. O código, em seguida, cria um <xref:System.Windows.Forms.DataGridTableStyle> e define o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> para o nome da classe mais colchetes.  
+  
+ [!code-cpp[DataGridTable.MappingName Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTable.MappingName Example/CPP/bindarray.cpp#1)]
+ [!code-csharp[DataGridTable.MappingName Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTable.MappingName Example/CS/bindarray.cs#1)]
+ [!code-vb[DataGridTable.MappingName Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTable.MappingName Example/VB/bindarray.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappingNameChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MappingNameChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MappingNameChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.MappingNameChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.MappingName" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_sample1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_sample1/CPP/datagridtablestyle_sample1.cpp#1)]
+ [!code-csharp[DataGridTableStyle_sample1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_sample1/CS/datagridtablestyle_sample1.cs#1)]
+ [!code-vb[DataGridTableStyle_sample1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_sample1/VB/datagridtablestyle_sample1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAllowSortingChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAllowSortingChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAllowSortingChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnAllowSortingChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.AllowSortingChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnAllowSortingChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnAllowSortingChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnAllowSortingChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAlternatingBackColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAlternatingBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAlternatingBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnAlternatingBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.AlternatingBackColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnAlternatingBackColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnAlternatingBackColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnAlternatingBackColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBackColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.BackColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnBackColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnBackColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnBackColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnColumnHeadersVisibleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnColumnHeadersVisibleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnColumnHeadersVisibleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnColumnHeadersVisibleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.ColumnHeadersVisibleChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnColumnHeadersVisibleChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnColumnHeadersVisibleChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnColumnHeadersVisibleChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnForeColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnForeColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnForeColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnForeColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.ForeColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnForeColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnForeColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnForeColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGridLineColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnGridLineColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGridLineColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnGridLineColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.GridLineColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnGridLineColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnGridLineColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnGridLineColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGridLineStyleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnGridLineStyleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGridLineStyleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnGridLineStyleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.GridLineStyleChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnGridLineStyleChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnGridLineStyleChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnGridLineStyleChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderBackColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnHeaderBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.HeaderBackColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnHeaderBackColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnHeaderBackColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnHeaderBackColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderFontChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnHeaderFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.HeaderFontChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnHeaderFontChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnHeaderFontChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnHeaderFontChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnHeaderForeColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnHeaderForeColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnHeaderForeColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnHeaderForeColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.HeaderForeColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnHeaderForeColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnHeaderForeColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnHeaderForeColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLinkColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnLinkColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLinkColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnLinkColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.LinkColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnLinkColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnLinkColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnLinkColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLinkHoverColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnLinkHoverColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLinkHoverColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnLinkHoverColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see langword="LinkHoverColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnLinkHoverColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnLinkHoverColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnLinkHoverColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMappingNameChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnMappingNameChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMappingNameChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnMappingNameChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Windows.Forms.DataGridTableStyle.MappingNameChanged" /> evento</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnMappingNameChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnMappingNameChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnMappingNameChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreferredColumnWidthChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPreferredColumnWidthChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPreferredColumnWidthChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnPreferredColumnWidthChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.PreferredColumnWidthChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnPreferredColumnWidthChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnPreferredColumnWidthChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnPreferredColumnWidthChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreferredRowHeightChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPreferredRowHeightChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPreferredRowHeightChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnPreferredRowHeightChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.PreferredRowHeightChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnPreferredRowHeightChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnPreferredRowHeightChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnPreferredRowHeightChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnReadOnlyChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnReadOnlyChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnReadOnlyChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnReadOnlyChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.ReadOnlyChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnReadOnlyChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnReadOnlyChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnReadOnlyChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRowHeadersVisibleChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRowHeadersVisibleChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRowHeadersVisibleChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnRowHeadersVisibleChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.RowHeadersVisibleChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnRowHeadersVisibleChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnRowHeadersVisibleChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnRowHeadersVisibleChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRowHeaderWidthChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnRowHeaderWidthChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRowHeaderWidthChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnRowHeaderWidthChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.RowHeaderWidthChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnRowHeaderWidthChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnRowHeaderWidthChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnRowHeaderWidthChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionBackColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionBackColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionBackColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnSelectionBackColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.SelectionBackColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnSelectionBackColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnSelectionBackColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnSelectionBackColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionForeColorChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectionForeColorChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectionForeColorChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.OnSelectionForeColorChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.DataGridTableStyle.SelectionForeColorChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Windows.Forms.DataGridTableStyle.OnSelectionForeColorChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridTableStyle.OnSelectionForeColorChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridTableStyle.OnSelectionForeColorChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredColumnWidth">
+      <MemberSignature Language="C#" Value="public int PreferredColumnWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PreferredColumnWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.PreferredColumnWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(75)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataGridPreferredColumnWidthTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura usada para criar colunas quando uma nova grade será exibida.</summary>
+        <value>A largura usada para criar colunas quando uma nova grade será exibida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_PreferredColumnWidth#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_PreferredColumnWidth/CPP/datagridtablestyle_preferredcolumnwidth.cpp#1)]
+ [!code-csharp[DataGridTableStyle_PreferredColumnWidth#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_PreferredColumnWidth/CS/datagridtablestyle_preferredcolumnwidth.cs#1)]
+ [!code-vb[DataGridTableStyle_PreferredColumnWidth#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_PreferredColumnWidth/VB/datagridtablestyle_preferredcolumnwidth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredColumnWidthChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PreferredColumnWidthChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PreferredColumnWidthChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.PreferredColumnWidthChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.PreferredColumnWidth" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridTableStyle.PreferredColumnWidthChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridTableStyle> chamado `DataGridTableStyle1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridTableStyle.PreferredColumnWidthChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#231](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#231)]
+ [!code-vb[System.Windows.Forms.EventExamples#231](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#231)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRowHeight">
+      <MemberSignature Language="C#" Value="public int PreferredRowHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PreferredRowHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.PreferredRowHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura usada para criar uma linha quando uma nova grade será exibida.</summary>
+        <value>A altura de uma linha, em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A altura preferencial é a altura mínima necessária para acomodar o texto exibido com atribuída <xref:System.Windows.Forms.DataGridTableStyle.HeaderFont%2A>. Uma linha não será criada com uma altura menor que o valor especificado. Se o tamanho da fonte exigir, no entanto, a altura da linha pode ser maior que o valor especificado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_PreferredRowHeight#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_PreferredRowHeight/CPP/datagridtablestyle_preferredrowheight.cpp#1)]
+ [!code-csharp[DataGridTableStyle_PreferredRowHeight#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_PreferredRowHeight/CS/datagridtablestyle_preferredrowheight.cs#1)]
+ [!code-vb[DataGridTableStyle_PreferredRowHeight#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_PreferredRowHeight/VB/datagridtablestyle_preferredrowheight.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRowHeightChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PreferredRowHeightChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PreferredRowHeightChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.PreferredRowHeightChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.PreferredRowHeight" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_PreferredRowHeightChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_PreferredRowHeightChanged/CPP/preferredrowheightchanged.cpp#1)]
+ [!code-csharp[DataGridTableStyle_PreferredRowHeightChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_PreferredRowHeightChanged/CS/preferredrowheightchanged.cs#1)]
+ [!code-vb[DataGridTableStyle_PreferredRowHeightChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_PreferredRowHeightChanged/VB/preferredrowheightchanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as colunas podem ser editadas.</summary>
+        <value>
+          <see langword="true" />, se colunas não podem ser editadas; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode especificar se as colunas individuais dentro da tabela são editáveis, definindo o <xref:System.Windows.Forms.DataGridColumnStyle> da classe <xref:System.Windows.Forms.DataGridColumnStyle.ReadOnly%2A?displayProperty=nameWithType> propriedade para um valor apropriado, `true` ou `false`.  
+  
+ Como alternativa, para garantir que os dados não são editados, você pode definir o <xref:System.Data.DataColumn> da classe <xref:System.Data.DataColumn.ReadOnly%2A> propriedade `true`.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo retorna o <xref:System.Windows.Forms.DataGridTableStyle.ReadOnly%2A> propriedade para cada <xref:System.Windows.Forms.DataGridTableStyle> em um <xref:System.Windows.Forms.GridTableStylesCollection>.  
+  
+ [!code-cpp[Classic DataGridTableStyle.ReadOnly Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridTableStyle.ReadOnly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridTableStyle.ReadOnly Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridTableStyle.ReadOnly Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridTableStyle.ReadOnly Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridTableStyle.ReadOnly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnlyChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ReadOnlyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ReadOnlyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.ReadOnlyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.ReadOnly" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ReadOnlyChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ReadOnlyChanged/CPP/datagridtablestyle_readonlychanged.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ReadOnlyChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ReadOnlyChanged/CS/datagridtablestyle_readonlychanged.cs#1)]
+ [!code-vb[DataGridTableStyle_ReadOnlyChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ReadOnlyChanged/VB/datagridtablestyle_readonlychanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAlternatingBackColor">
+      <MemberSignature Language="C#" Value="public void ResetAlternatingBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAlternatingBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetAlternatingBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeAlternatingBackColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetAlternatingBackcolor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetAlternatingBackcolor/CPP/resetalternatingbackcolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetAlternatingBackcolor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetAlternatingBackcolor/CS/resetalternatingbackcolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetAlternatingBackcolor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetAlternatingBackcolor/VB/resetalternatingbackcolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetBackColor">
+      <MemberSignature Language="C#" Value="public void ResetBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.BackColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetBackColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetBackColor/CPP/datagridtablestyle_resetbackcolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetBackColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetBackColor/CS/datagridtablestyle_resetbackcolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetBackColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetBackColor/VB/datagridtablestyle_resetbackcolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetForeColor">
+      <MemberSignature Language="C#" Value="public void ResetForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.ForeColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeForeColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetForeColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetForeColor/CPP/datagridtablestyle_resetforecolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetForeColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetForeColor/CS/datagridtablestyle_resetforecolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetForeColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetForeColor/VB/datagridtablestyle_resetforecolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetGridLineColor">
+      <MemberSignature Language="C#" Value="public void ResetGridLineColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetGridLineColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetGridLineColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.GridLineColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeGridLineColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetGridLineColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetGridLineColor/CPP/datagridtablestyle_resetgridlinecolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetGridLineColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetGridLineColor/CS/datagridtablestyle_resetgridlinecolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetGridLineColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetGridLineColor/VB/datagridtablestyle_resetgridlinecolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetHeaderBackColor">
+      <MemberSignature Language="C#" Value="public void ResetHeaderBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetHeaderBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetHeaderBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderBackColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeHeaderBackColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetHeaderBackColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderBackColor/CPP/datagridtablestyle_resetheaderbackcolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetHeaderBackColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderBackColor/CS/datagridtablestyle_resetheaderbackcolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetHeaderBackColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderBackColor/VB/datagridtablestyle_resetheaderbackcolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetHeaderFont">
+      <MemberSignature Language="C#" Value="public void ResetHeaderFont ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetHeaderFont() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetHeaderFont" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderFont" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetHeaderFont1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderFont1/CPP/datagridtablestyle_resetheaderfont1.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetHeaderFont1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderFont1/CS/datagridtablestyle_resetheaderfont1.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetHeaderFont1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderFont1/VB/datagridtablestyle_resetheaderfont1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetHeaderForeColor">
+      <MemberSignature Language="C#" Value="public void ResetHeaderForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetHeaderForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetHeaderForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderForeColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeHeaderForeColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetHeaderForeColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderForeColor/CPP/datagridtablestyle_resetheaderforecolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetHeaderForeColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderForeColor/CS/datagridtablestyle_resetheaderforecolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetHeaderForeColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetHeaderForeColor/VB/datagridtablestyle_resetheaderforecolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetLinkColor">
+      <MemberSignature Language="C#" Value="public void ResetLinkColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetLinkColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetLinkColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.LinkColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeLinkColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_ResetLinkColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_ResetLinkColor/CPP/datagridtablestyle_resetlinkcolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_ResetLinkColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_ResetLinkColor/CS/datagridtablestyle_resetlinkcolor.cs#1)]
+ [!code-vb[DataGridTableStyle_ResetLinkColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_ResetLinkColor/VB/datagridtablestyle_resetlinkcolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetLinkHoverColor">
+      <MemberSignature Language="C#" Value="public void ResetLinkHoverColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetLinkHoverColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetLinkHoverColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.LinkHoverColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeLinkHoverColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetSelectionBackColor">
+      <MemberSignature Language="C#" Value="public void ResetSelectionBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetSelectionBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetSelectionBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.SelectionBackColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeSelectionBackColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetSelectionForeColor">
+      <MemberSignature Language="C#" Value="public void ResetSelectionForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetSelectionForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ResetSelectionForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a propriedade <see cref="P:System.Windows.Forms.DataGridTableStyle.SelectionForeColor" /> para seu valor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>. Você pode usar o <xref:System.Windows.Forms.DataGridTableStyle.ShouldSerializeSelectionForeColor%2A> método para determinar se o valor da propriedade foi alterado do padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_SelectionForeColor#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_SelectionForeColor/CPP/selectionforecolor.cpp#2)]
+ [!code-csharp[DataGridTableStyle_SelectionForeColor#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_SelectionForeColor/CS/selectionforecolor.cs#2)]
+ [!code-vb[DataGridTableStyle_SelectionForeColor#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_SelectionForeColor/VB/selectionforecolor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeadersVisible">
+      <MemberSignature Language="C#" Value="public bool RowHeadersVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RowHeadersVisible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.RowHeadersVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os cabeçalhos de linha estão visíveis.</summary>
+        <value>
+          <see langword="true" /> se os cabeçalhos de linha estiverem visíveis, caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando os cabeçalhos de linha estão visíveis, um sinal de adição é exibido em cada cabeçalho de linha se subjacente <xref:System.Data.DataTable> tem uma tabela filho relacionados.  
+  
+ Essa propriedade não funcionará até que você adicione <xref:System.Windows.Forms.DataGridTableStyle> objetos para o <xref:System.Windows.Forms.GridTableStylesCollection>. Até lá, a definição dessa propriedade não terá efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_RowHeadersVisibleChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_RowHeadersVisibleChanged/CPP/rowheadersvisiblechanged.cpp#1)]
+ [!code-csharp[DataGridTableStyle_RowHeadersVisibleChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_RowHeadersVisibleChanged/CS/rowheadersvisiblechanged.cs#1)]
+ [!code-vb[DataGridTableStyle_RowHeadersVisibleChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_RowHeadersVisibleChanged/VB/rowheadersvisiblechanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeadersVisibleChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RowHeadersVisibleChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RowHeadersVisibleChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.RowHeadersVisibleChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.RowHeadersVisible" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_RowHeadersVisibleChanged#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_RowHeadersVisibleChanged/CPP/rowheadersvisiblechanged.cpp#2)]
+ [!code-csharp[DataGridTableStyle_RowHeadersVisibleChanged#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_RowHeadersVisibleChanged/CS/rowheadersvisiblechanged.cs#2)]
+ [!code-vb[DataGridTableStyle_RowHeadersVisibleChanged#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_RowHeadersVisibleChanged/VB/rowheadersvisiblechanged.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeaderWidth">
+      <MemberSignature Language="C#" Value="public int RowHeaderWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowHeaderWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.RowHeaderWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(35)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura dos cabeçalhos de linha.</summary>
+        <value>A largura dos cabeçalhos de linha, em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando os cabeçalhos de linha estão visíveis um sinal de adição é exibido em cada cabeçalho de linha, se os dados subjacentes tiverem uma tabela filho relacionados.  
+  
+ Essa propriedade não funcionará até que você adicione <xref:System.Windows.Forms.DataGridTableStyle> objetos para o <xref:System.Windows.Forms.GridTableStylesCollection>. Até lá, a definição dessa propriedade não terá efeito.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_RowHeaderWidth#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_RowHeaderWidth/CPP/rowheaderwidth.cpp#1)]
+ [!code-csharp[DataGridTableStyle_RowHeaderWidth#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_RowHeaderWidth/CS/rowheaderwidth.cs#1)]
+ [!code-vb[DataGridTableStyle_RowHeaderWidth#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_RowHeaderWidth/VB/rowheaderwidth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeaderWidthChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler RowHeaderWidthChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler RowHeaderWidthChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.RowHeaderWidthChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.RowHeaderWidth" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_RowHeaderWidth#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_RowHeaderWidth/CPP/rowheaderwidth.cpp#2)]
+ [!code-csharp[DataGridTableStyle_RowHeaderWidth#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_RowHeaderWidth/CS/rowheaderwidth.cs#2)]
+ [!code-vb[DataGridTableStyle_RowHeaderWidth#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_RowHeaderWidth/VB/rowheaderwidth.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color SelectionBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SelectionBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.SelectionBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo das células selecionadas.</summary>
+        <value>O <see cref="T:System.Drawing.Color" /> que representa a cor de plano de fundo das células selecionadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_SelectionBackColor#2](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_SelectionBackColor/CPP/selectionbackcolor.cpp#2)]
+ [!code-csharp[DataGridTableStyle_SelectionBackColor#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_SelectionBackColor/CS/selectionbackcolor.cs#2)]
+ [!code-vb[DataGridTableStyle_SelectionBackColor#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_SelectionBackColor/VB/selectionbackcolor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionBackColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionBackColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionBackColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.SelectionBackColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.SelectionBackColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_SelectionBackColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_SelectionBackColor/CPP/selectionbackcolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_SelectionBackColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_SelectionBackColor/CS/selectionbackcolor.cs#1)]
+ [!code-vb[DataGridTableStyle_SelectionBackColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_SelectionBackColor/VB/selectionbackcolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color SelectionForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color SelectionForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridTableStyle.SelectionForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Description("The foreground color for the current data grid row")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano das células selecionadas.</summary>
+        <value>O <see cref="T:System.Drawing.Color" /> que representa a cor de primeiro plano das células selecionadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridTableStyle_SelectionForeColor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridTableStyle_SelectionForeColor/CPP/selectionforecolor.cpp#1)]
+ [!code-csharp[DataGridTableStyle_SelectionForeColor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridTableStyle_SelectionForeColor/CS/selectionforecolor.cs#1)]
+ [!code-vb[DataGridTableStyle_SelectionForeColor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridTableStyle_SelectionForeColor/VB/selectionforecolor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionForeColorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionForeColorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionForeColorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridTableStyle.SelectionForeColorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridTableStyle.SelectionForeColor" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.DataGridTableStyle.SelectionForeColorChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.DataGridTableStyle> chamado `DataGridTableStyle1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.DataGridTableStyle.SelectionForeColorChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#237](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#237)]
+ [!code-vb[System.Windows.Forms.EventExamples#237](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#237)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeAlternatingBackColor">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeAlternatingBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeAlternatingBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeAlternatingBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.AlternatingBackColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeBackColor">
+      <MemberSignature Language="C#" Value="protected bool ShouldSerializeBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ShouldSerializeBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.BackColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeForeColor">
+      <MemberSignature Language="C#" Value="protected bool ShouldSerializeForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ShouldSerializeForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.ForeColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeGridLineColor">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeGridLineColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeGridLineColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeGridLineColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.GridLineColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeHeaderBackColor">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeHeaderBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeHeaderBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeHeaderBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderBackColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeHeaderForeColor">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeHeaderForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeHeaderForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeHeaderForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.HeaderForeColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeLinkColor">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeLinkColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeLinkColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeLinkColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.LinkColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeLinkHoverColor">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeLinkHoverColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeLinkHoverColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeLinkHoverColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.LinkHoverColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializePreferredRowHeight">
+      <MemberSignature Language="C#" Value="protected bool ShouldSerializePreferredRowHeight ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ShouldSerializePreferredRowHeight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializePreferredRowHeight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.PreferredRowHeight" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSelectionBackColor">
+      <MemberSignature Language="C#" Value="protected bool ShouldSerializeSelectionBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ShouldSerializeSelectionBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeSelectionBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.SelectionBackColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeSelectionForeColor">
+      <MemberSignature Language="C#" Value="protected virtual bool ShouldSerializeSelectionForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ShouldSerializeSelectionForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridTableStyle.ShouldSerializeSelectionForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Windows.Forms.DataGridTableStyle.SelectionForeColor" /> propriedade deverá ser persistente.</summary>
+        <returns>
+          <see langword="true" />Se o valor da propriedade foi alterado do padrão; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGridTableStyle> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

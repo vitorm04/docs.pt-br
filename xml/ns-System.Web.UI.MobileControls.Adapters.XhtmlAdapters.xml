@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.UI.MobileControls.Adapters.XhtmlAdapters">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.MobileControls.Adapters.XhtmlAdapters" /> namespace contém classes que você pode usar para substituir os estágios do ciclo de vida de um controle móvel para modificar sua marcação XHTML padrão ou o comportamento de novos padrões de marcação ou para dispositivos móveis e navegadores específicos. Para obter informações sobre como desenvolver aplicativos móveis, consulte o <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlControlAdapter>é herdada por todas as classes adaptador o <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters> namespace, incluindo <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlLabelAdapter> e <xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlSelectionListAdapter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

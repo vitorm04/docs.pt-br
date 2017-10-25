@@ -1,0 +1,101 @@
+<Type Name="EventResetMode" FullName="System.Threading.EventResetMode">
+  <TypeSignature Language="C#" Value="public enum EventResetMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventResetMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.EventResetMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica se um <see cref="T:System.Threading.EventWaitHandle" /> é redefinido automaticamente ou manualmente depois de receber um sinal.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Threading.WaitHandle.SignalAndWait%28System.Threading.WaitHandle%2CSystem.Threading.WaitHandle%29> sobrecarga do método para permitir que o thread principal de sinalizar um thread bloqueado e, em seguida, aguarde até que o thread conclui uma tarefa.  
+  
+ O exemplo inicia cinco threads e permite bloquear um <xref:System.Threading.EventWaitHandle> criado com o sinalizador AutoReset, versões um thread cada vez o usuário pressiona a tecla ENTER. O exemplo, em seguida, as filas outro threads cinco e libera todos os usando um <xref:System.Threading.EventWaitHandle> criado com o sinalizador ManualReset.  
+  
+ [!code-cpp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CPP/source.cpp#1)]
+ [!code-csharp[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/CS/source.cs#1)]
+ [!code-vb[System.Threading.WaitHandle.SignalAndWait#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.WaitHandle.SignalAndWait/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutoReset">
+      <MemberSignature Language="C#" Value="AutoReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.EventResetMode AutoReset = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.EventResetMode.AutoReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.EventResetMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando sinalizado, o <see cref="T:System.Threading.EventWaitHandle" /> redefine automaticamente após o lançamento de um único thread. Se nenhum thread estiver aguardando, o <see cref="T:System.Threading.EventWaitHandle" /> permanece sinalizado até que um thread seja bloqueado e é redefinido após a liberação do thread.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ManualReset">
+      <MemberSignature Language="C#" Value="ManualReset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.EventResetMode ManualReset = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.EventResetMode.ManualReset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.EventResetMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando sinalizado, o <see cref="T:System.Threading.EventWaitHandle" /> libera todos os threads em espera e permanece sinalizado até ser redefinido manualmente.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

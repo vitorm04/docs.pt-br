@@ -1,0 +1,126 @@
+<Type Name="LinearSingleKeyFrame" FullName="System.Windows.Media.Animation.LinearSingleKeyFrame">
+  <TypeSignature Language="C#" Value="public class LinearSingleKeyFrame : System.Windows.Media.Animation.SingleKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinearSingleKeyFrame extends System.Windows.Media.Animation.SingleKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.LinearSingleKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.SingleKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Anima a partir de <see cref="T:System.Single" /> valor do quadro chave anterior para a sua própria <see cref="P:System.Windows.Media.Animation.SingleKeyFrame.Value" /> usando interpolação linear.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada como parte de um <xref:System.Windows.Media.Animation.SingleKeyFrameCollection> em conjunto com um <xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames> para animar uma <xref:System.Single> valor da propriedade ao longo de um conjunto de quadros-chave.  
+  
+ Um quadro-chave define um segmento do <xref:System.Windows.Media.Animation.SingleAnimationUsingKeyFrames> ao qual ela pertence. Cada quadro chave tem um destino <xref:System.Windows.Media.Animation.SingleKeyFrame.Value%2A> e um <xref:System.Windows.Media.Animation.SingleKeyFrame.KeyTime%2A>. O <xref:System.Windows.Media.Animation.SingleKeyFrame.KeyTime%2A> Especifica a hora em que o quadro chave <xref:System.Windows.Media.Animation.SingleKeyFrame.Value%2A> devem ser atingido. Um quadro chave anima do valor de destino de quadro chave anterior a seu próprio valor de destino. Ele começa quando o quadro chave anterior termina e termina quando é atingido sua própria chave de tempo.  
+  
+ Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearSingleKeyFrame> criar uma interpolação linear suave entre valores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearSingleKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSingleKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.LinearSingleKeyFrame" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearSingleKeyFrame (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSingleKeyFrame.#ctor(System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor (também conhecido como "valor de destino") para o quadro-chave de término.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.LinearSingleKeyFrame" /> classe com o valor final especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinearSingleKeyFrame (float value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSingleKeyFrame.#ctor(System.Single,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Valor (também conhecido como "valor de destino") para o quadro-chave de término.</param>
+        <param name="keyTime">Chave de tempo para o quadro-chave. O tempo de chave determina quando o valor de destino é atingido que também é quando o quadro chave termina.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.LinearSingleKeyFrame" /> classe com o valor e chave de hora especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSingleKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância de <see cref="T:System.Windows.Media.Animation.LinearSingleKeyFrame" />.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Media.Animation.LinearSingleKeyFrame" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override float InterpolateValueCore (float baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float32 InterpolateValueCore(float32 baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.LinearSingleKeyFrame.InterpolateValueCore(System.Single,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Single" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar do.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0, inclusive, que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Interpola, de maneira linear entre o valor anterior de quadro-chave e o valor do quadro atual da chave, usando o incremento de andamento fornecido.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

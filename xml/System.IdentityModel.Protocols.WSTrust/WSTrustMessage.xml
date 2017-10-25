@@ -1,0 +1,510 @@
+<Type Name="WSTrustMessage" FullName="System.IdentityModel.Protocols.WSTrust.WSTrustMessage">
+  <TypeSignature Language="C#" Value="public abstract class WSTrustMessage : System.IdentityModel.OpenObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WSTrustMessage extends System.IdentityModel.OpenObject" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.WSTrustMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.OpenObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe Base para a primeira e RSTR.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a mensagem e os elementos que essa classe representa, consulte a versão da especificação WS-Trust que se aplica ao seu cenário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WSTrustMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustMessage" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão para extensibilidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowPostdating">
+      <MemberSignature Language="C#" Value="public bool AllowPostdating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowPostdating" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AllowPostdating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:AllowPostdating.</summary>
+        <value>
+          <see langword="true" />Se os tokens retornados devem permitir solicitações de tokens pós-datado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento opcional indica que retornados tokens devem permitir solicitações de tokens pós-datado.  
+  
+ Essa propriedade normalmente é usada com a associação de renovação de tokens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppliesTo">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.EndpointReference AppliesTo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.EndpointReference AppliesTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AppliesTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.EndpointReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wsp:AppliesTo.</summary>
+        <value>Um <see cref="T:System.ServiceModel.EndpointAddress" /> que representa o endereço de ponto de extremidade para o qual o token de segurança é desejado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este elemento opcional especifica o endereço de ponto de extremidade para o qual esse token de segurança é desejado; Por exemplo, o serviço ao qual o token se aplica.  
+  
+ Wst:TokenType ou wst:AppliesTo deve ser definido na mensagem de solicitação de token. Se ambos forem especificados, o campo wst:AppliesTo terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationType">
+      <MemberSignature Language="C#" Value="public string AuthenticationType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AuthenticationType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.AuthenticationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:AuthenticationType.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que indica o tipo de autenticação desejado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento opcional indica o tipo de autenticação desejado, especificado como um URI.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BinaryExchange">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.BinaryExchange BinaryExchange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.BinaryExchange BinaryExchange" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.BinaryExchange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.BinaryExchange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:BinaryExchange.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.BinaryExchange" /> que contém os dados binários trocados. Isso inclui o conteúdo de atributos ValueType e EncodingType, bem como os dados reais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanonicalizationAlgorithm">
+      <MemberSignature Language="C#" Value="public string CanonicalizationAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CanonicalizationAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.CanonicalizationAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:CanonicalizationAlgorithm.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que indica o algoritmo de conversão em formato canônico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public string Context { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Context" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do atributo de contexto na primeira ou RSTR.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que identifica o contexto de uma mensagem de solicitação ou resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo de contexto opcional em um elemento de primeira especifica um identificador (contexto) para uma solicitação. Todos os elementos RSTR subsequentes relacionadas a esta solicitação devem executar esse atributo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public string EncryptionAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.EncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:EncryptionAlgorithm.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que indica o algoritmo de criptografia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento URI opcional indica o algoritmo de criptografia desejada usado dentro do token retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptWith">
+      <MemberSignature Language="C#" Value="public string EncryptWith { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EncryptWith" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.EncryptWith" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:EncryptWith.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que indica a algoritm de criptografia desejada a ser usado com o token de segurança emitido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento URI opcional indica o algoritmo de criptografia desejada a ser usado com o token de segurança emitido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir a propriedade como <see langword="null" /> ou uma cadeia de caracteres vazia ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Entropy">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.Entropy Entropy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.Entropy Entropy" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Entropy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.Entropy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:Entropy.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.Entropy" /> que representa o conteúdo do elemento de entropia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento opcional permite que um solicitante especifique entropia que será usado na criação da chave. Isso é normalmente usado em uma mensagem de solicitação de emissão de token. O valor desse elemento deve ser um EncryptedKey ou BinarySecret dependendo se a chave é criptografada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySizeInBits">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; KeySizeInBits { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; KeySizeInBits" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeySizeInBits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:KeySize dentro de uma mensagem RequestSecurityToken (primeira).</summary>
+        <value>O tamanho da chave em bits.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Ocorre uma tentativa de definir um valor menor ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyType">
+      <MemberSignature Language="C#" Value="public string KeyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:KeyType dentro de uma mensagem RequestSecurityToken (primeira).</summary>
+        <value>Uma cadeia de caracteres que contém o URI que identifica o tipo de chave desejado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento URI opcional indica o tipo de chave desejado no token de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyWrapAlgorithm">
+      <MemberSignature Language="C#" Value="public string KeyWrapAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyWrapAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyWrapAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:KeyWrapAlgorithm.</summary>
+        <value>Uma cadeia de caracteres que contém o URI que identifica a chave envolver o algoritmo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse URI opcional indica o algoritmo desejado a ser usado para quebra automática de chave quando STS criptografa o token emitido para a terceira parte confiável usando uma chave assimétrica.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lifetime">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.Lifetime Lifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.Lifetime Lifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Lifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.Lifetime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:Lifetime dentro de uma mensagem RequestSecurityToken (primeira).</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.Lifetime" /> que representa o tempo desejado durante o qual o token retornado será válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento opcional especifica o intervalo de tempo desejado durante o qual o token de segurança retornado é válido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplyTo">
+      <MemberSignature Language="C#" Value="public string ReplyTo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReplyTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.ReplyTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço a ser usado para responder a terceira parte confiável.</summary>
+        <value>Uma cadeia de caracteres que contém o endereço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é uma extensão de local que é usada exclusivamente em cenários passivos com o protocolo WS-Federation.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestType">
+      <MemberSignature Language="C#" Value="public string RequestType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.RequestType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento wst:RequestType.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que indica o tipo de solicitação. Por exemplo, uma das constantes definidas na <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestTypes" /> classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso necessário elemento indica o tipo de solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAlgorithm">
+      <MemberSignature Language="C#" Value="public string SignatureAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.SignatureAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:SignatureAlgorithm.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que indica o algoritmo de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento URI opcional indica o algoritmo de assinatura desejado usado dentro do token retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignWith">
+      <MemberSignature Language="C#" Value="public string SignWith { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignWith" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.SignWith" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:SignWith.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que identifica o algoritmo de assinatura desejado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento URI opcional indica o algoritmo de assinatura desejado a ser usado com o token de segurança emitido. Isso é uma extensão para o elemento RequestSecurityToken.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma tentativa de definir o valor para <see langword="null" /> ou uma cadeia de caracteres vazia ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenType">
+      <MemberSignature Language="C#" Value="public string TokenType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TokenType" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.TokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:TokenType.</summary>
+        <value>Uma cadeia de caracteres que contém um URI que indica o tipo de token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse elemento opcional indica o tipo de token desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseKey">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.UseKey UseKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.UseKey UseKey" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.UseKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.UseKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do elemento wst:UseKey.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.UseKey" /> que contém a chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o solicitante desejar usar uma chave existente em vez de criar um novo, essa propriedade pode ser usada para fazer referência a um token de segurança que contém a chave desejada. Isso é normalmente usado no caso de chave issurance assimétrico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

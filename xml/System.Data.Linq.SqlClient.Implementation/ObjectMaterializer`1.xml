@@ -1,0 +1,437 @@
+<Type Name="ObjectMaterializer&lt;TDataReader&gt;" FullName="System.Data.Linq.SqlClient.Implementation.ObjectMaterializer&lt;TDataReader&gt;">
+  <TypeSignature Language="C#" Value="public abstract class ObjectMaterializer&lt;TDataReader&gt; where TDataReader : DbDataReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ObjectMaterializer`1&lt;(class System.Data.Common.DbDataReader) TDataReader&gt; extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TDataReader">
+      <Constraints>
+        <BaseTypeName>System.Data.Common.DbDataReader</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TDataReader">O tipo de leitor de dados.</typeparam>
+    <summary>Define métodos para materializar objetos dinamicamente.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectMaterializer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public object[] Arguments;" />
+      <MemberSignature Language="ILAsm" Value=".field public object[] Arguments" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Arguments" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Captura o estado interno para o materializer rápida.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BufferReader">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbDataReader BufferReader;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.Data.Common.DbDataReader BufferReader" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.BufferReader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbDataReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um leitor que lê linhas de dados de uma maneira de somente avanço.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CanDeferLoad">
+      <MemberSignature Language="C#" Value="public abstract bool CanDeferLoad { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanDeferLoad" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.CanDeferLoad" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o carregamento Deferido está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o adiamento de carregamento for habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Convert&lt;TOutput&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;TOutput&gt; Convert&lt;TOutput&gt; (System.Collections.IEnumerable source);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;!!TOutput&gt; Convert&lt;TOutput&gt;(class System.Collections.IEnumerable source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Convert``1(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TOutput&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TOutput" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TOutput">O tipo para converter os elementos.</typeparam>
+        <param name="source">Uma sequência que contém elementos para converter.</param>
+        <summary>Altera o tipo de cada elemento em uma sequência específica.</summary>
+        <returns>Uma sequência que contém os elementos de conversão de tipo.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGroup&lt;TKey,TElement&gt;">
+      <MemberSignature Language="C#" Value="public static System.Linq.IGrouping&lt;TKey,TElement&gt; CreateGroup&lt;TKey,TElement&gt; (TKey key, System.Collections.Generic.IEnumerable&lt;TElement&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Linq.IGrouping`2&lt;!!TKey, !!TElement&gt; CreateGroup&lt;TKey, TElement&gt;(!!TKey key, class System.Collections.Generic.IEnumerable`1&lt;!!TElement&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.CreateGroup``2(``0,System.Collections.Generic.IEnumerable{``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IGrouping&lt;TKey,TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TKey" />
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;TElement&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TKey">O tipo da chave do grupo.</typeparam>
+        <typeparam name="TElement">O tipo dos valores do grupo.</typeparam>
+        <param name="key">A chave para o grupo.</param>
+        <param name="items">Os valores para o grupo.</param>
+        <summary>Cria um grupo de uma chave especificada e a coleção de valores.</summary>
+        <returns>Um grupo que tem a chave especificada e o conjunto especificado de valores.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrderedEnumerable&lt;TElement&gt;">
+      <MemberSignature Language="C#" Value="public static System.Linq.IOrderedEnumerable&lt;TElement&gt; CreateOrderedEnumerable&lt;TElement&gt; (System.Collections.Generic.IEnumerable&lt;TElement&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Linq.IOrderedEnumerable`1&lt;!!TElement&gt; CreateOrderedEnumerable&lt;TElement&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TElement&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.CreateOrderedEnumerable``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IOrderedEnumerable&lt;TElement&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TElement" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;TElement&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TElement">O tipo de valores na sequência ordenada.</typeparam>
+        <param name="items">Os valores para colocar na sequência ordenada.</param>
+        <summary>Cria uma sequência ordenada de um conjunto especificado de valores.</summary>
+        <returns>Uma sequência ordenada que contém os valores especificados.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DataReader">
+      <MemberSignature Language="C#" Value="public TDataReader DataReader;" />
+      <MemberSignature Language="ILAsm" Value=".field public !TDataReader DataReader" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.DataReader" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TDataReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um leitor de dados.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorAssignmentToNull">
+      <MemberSignature Language="C#" Value="public static Exception ErrorAssignmentToNull (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Exception ErrorAssignmentToNull(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.ErrorAssignmentToNull(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo para o qual um <see langword="null" /> valor foi tentado a ser atribuído.</param>
+        <summary>Retorna uma exceção que indica que um <see langword="null" /> houve tentativa de valor a ser atribuído a um tipo de valor não nulo.</summary>
+        <returns>Uma exceção que indica que um <see langword="null" /> valor foi tentado a ser atribuído a um tipo de valor não nulo.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteSubQuery">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerable ExecuteSubQuery (int iSubQuery, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerable ExecuteSubQuery(int32 iSubQuery, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.ExecuteSubQuery(System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iSubQuery" Type="System.Int32" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="iSubQuery">O índice da consulta.</param>
+        <param name="args">Os argumentos para a consulta.</param>
+        <summary>Quando substituído em uma classe derivada, executa uma consulta.</summary>
+        <returns>Os resultados da execução da consulta.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetLinkSource&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;T&gt; GetLinkSource&lt;T&gt; (int globalLink, int localFactory, object[] keyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; GetLinkSource&lt;T&gt;(int32 globalLink, int32 localFactory, object[] keyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.GetLinkSource``1(System.Int32,System.Int32,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="globalLink" Type="System.Int32" />
+        <Parameter Name="localFactory" Type="System.Int32" />
+        <Parameter Name="keyValues" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos de resultado.</typeparam>
+        <param name="globalLink">O índice do link.</param>
+        <param name="localFactory">O índice da fábrica.</param>
+        <param name="keyValues">Os valores de chave para a fonte adiada.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma nova fonte adiada.</summary>
+        <returns>Uma origem enumerável adiada.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetNestedLinkSource&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;T&gt; GetNestedLinkSource&lt;T&gt; (int globalLink, int localFactory, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; GetNestedLinkSource&lt;T&gt;(int32 globalLink, int32 localFactory, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.GetNestedLinkSource``1(System.Int32,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="globalLink" Type="System.Int32" />
+        <Parameter Name="localFactory" Type="System.Int32" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos de resultado.</typeparam>
+        <param name="globalLink">O índice do link.</param>
+        <param name="localFactory">O índice da fábrica.</param>
+        <param name="instance">A instância para a fonte adiada.</param>
+        <summary>Quando substituído em uma classe derivada, cria uma nova fonte adiada.</summary>
+        <returns>Uma origem enumerável adiada.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Globals">
+      <MemberSignature Language="C#" Value="public object[] Globals;" />
+      <MemberSignature Language="ILAsm" Value=".field public object[] Globals" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Globals" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Captura o estado interno para o materializer rápida.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InsertLookup">
+      <MemberSignature Language="C#" Value="public abstract object InsertLookup (int globalMetaType, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object InsertLookup(int32 globalMetaType, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.InsertLookup(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="globalMetaType" Type="System.Int32" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="globalMetaType">O índice do <see cref="T:System.Data.Linq.Mapping.MetaType" />.</param>
+        <param name="instance">O objeto a ser inserido na estrutura de dados.</param>
+        <summary>Quando substituído em uma classe derivada, insere um valor em uma estrutura de dados.</summary>
+        <returns>O valor que foi inserido na estrutura de dados.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Locals">
+      <MemberSignature Language="C#" Value="public object[] Locals;" />
+      <MemberSignature Language="ILAsm" Value=".field public object[] Locals" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Locals" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Captura o estado interno para o materializer rápida.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Ordinals">
+      <MemberSignature Language="C#" Value="public int[] Ordinals;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32[] Ordinals" />
+      <MemberSignature Language="DocId" Value="F:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Ordinals" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa os ordinais de coluna de um leitor de dados.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public abstract bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, avança o leitor para o próximo registro.</summary>
+        <returns>
+          <see langword="true" /> se houver mais linhas; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="SendEntityMaterialized">
+      <MemberSignature Language="C#" Value="public abstract void SendEntityMaterialized (int globalMetaType, object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendEntityMaterialized(int32 globalMetaType, object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.SqlClient.Implementation.ObjectMaterializer`1.SendEntityMaterialized(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="globalMetaType" Type="System.Int32" />
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="globalMetaType">O índice do <see cref="T:System.Data.Linq.Mapping.MetaType" />.</param>
+        <param name="instance">O parâmetro para passar para o método invocado.</param>
+        <summary>Quando substituído em uma classe derivada, chama o método representado pela <see cref="P:System.Data.Linq.Mapping.MetaType.OnLoadedMethod" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,226 @@
+<Type Name="StreamContent" FullName="System.Net.Http.StreamContent">
+  <TypeSignature Language="C#" Value="public class StreamContent : System.Net.Http.HttpContent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StreamContent extends System.Net.Http.HttpContent" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.StreamContent" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Http.HttpContent</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece conteúdo HTTP baseado em um fluxo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamContent (System.IO.Stream content);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream content) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.StreamContent.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="content">O conteúdo usado para inicializar o <see cref="T:System.Net.Http.StreamContent" />.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Net.Http.StreamContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamContent (System.IO.Stream content, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream content, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.StreamContent.#ctor(System.IO.Stream,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="content" Type="System.IO.Stream" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="content">O conteúdo usado para inicializar o <see cref="T:System.Net.Http.StreamContent" />.</param>
+        <param name="bufferSize">O tamanho, em bytes, do buffer para o <see cref="T:System.Net.Http.StreamContent" />.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Net.Http.StreamContent" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="content" /> era <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="bufferSize" /> era menor ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateContentReadStreamAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;System.IO.Stream&gt; CreateContentReadStreamAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.IO.Stream&gt; CreateContentReadStreamAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.StreamContent.CreateContentReadStreamAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grave o conteúdo do fluxo HTTP em um fluxo de memória como uma operação assíncrona.</summary>
+        <returns>O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após todo o conteúdo foi gravado para o fluxo de memória.  
+  
+ O <xref:System.Net.Http.StreamContent.CreateContentReadStreamAsync%2A> método armazena em buffer o conteúdo a um fluxo de memória. Classes derivadas podem substituir esse comportamento se há uma maneira melhor para recuperar o conteúdo como fluxo. Por exemplo, uma matriz de bytes ou uma cadeia de caracteres pode usar uma forma mais eficiente de método como somente leitura de encapsulamento <xref:System.IO.MemoryStream> em torno de cadeia de caracteres ou bytes.)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.StreamContent.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Net.Http.StreamContent" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A>invoca `Dispose` com `disposing` definido como `false`. Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Net.Http.StreamContent> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeToStreamAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task SerializeToStreamAsync (System.IO.Stream stream, System.Net.TransportContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Threading.Tasks.Task SerializeToStreamAsync(class System.IO.Stream stream, class System.Net.TransportContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.StreamContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="context" Type="System.Net.TransportContext" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de destino.</param>
+        <param name="context">Informações sobre o transporte (token da associação de canal, por exemplo). Esse parâmetro pode ser <see langword="null" />.</param>
+        <summary>Serialize o conteúdo HTTP em um fluxo como uma operação assíncrona.</summary>
+        <returns>O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task> objeto será concluída após todo o conteúdo tem sido serializados para o fluxo de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryComputeLength">
+      <MemberSignature Language="C#" Value="protected override bool TryComputeLength (out long length);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool TryComputeLength([out] int64&amp; length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.StreamContent.TryComputeLength(System.Int64@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int64&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="length">Obtém o tamanho do conteúdo do fluxo em bytes.</param>
+        <summary>Determina se o conteúdo de fluxo tem um tamanho válido em bytes.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="length" /> for um comprimento válido; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http.StreamContent.TryComputeLength%2A> método permite transmitir o conteúdo HTTP para calcular o tamanho do conteúdo. Isso é útil para tipos de conteúdo que pode facilmente calcular o tamanho do conteúdo. Se o comprimento do conteúdo não é possível ou cara (exigiria que o sistema para todo o conteúdo em que a serialização poderia ser caro ou exigem que o sistema para alocar muita memória do buffer) de computação, esse método pode retornar `false`. Se esse método retornar `false`, isso significa que é necessária a transferência em partes ou o conteúdo deve obter armazenados em buffer antes de serem enviados ao servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

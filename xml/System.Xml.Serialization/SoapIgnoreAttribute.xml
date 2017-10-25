@@ -1,0 +1,93 @@
+<Type Name="SoapIgnoreAttribute" FullName="System.Xml.Serialization.SoapIgnoreAttribute">
+  <TypeSignature Language="C#" Value="public class SoapIgnoreAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapIgnoreAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapIgnoreAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Instrui o <see cref="T:System.Xml.Serialization.XmlSerializer" /> para não serializar o campo público ou o valor da propriedade pública de leitura/gravação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.SoapIgnoreAttribute> classe pertence a uma família de atributos que controla como o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa um objeto como XML de SOAP codificado. O XML resultante está em conformidade com a seção 5 do documento na World Wide Web Consortium (www.w3.org), "Simple Object Access Protocol (SOAP) 1.1". Para obter uma lista completa de atributos semelhantes, consulte [atributos que controle codificado serialização SOAP](~/docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+  
+ Para serializar um objeto como uma mensagem SOAP codificado, você deve construir o <xref:System.Xml.Serialization.XmlSerializer> usando um <xref:System.Xml.Serialization.XmlTypeMapping> criado com o <xref:System.Xml.Serialization.SoapReflectionImporter.ImportTypeMapping%2A> método o <xref:System.Xml.Serialization.SoapReflectionImporter> classe.  
+  
+ Aplicar o <xref:System.Xml.Serialization.SoapIgnoreAttribute> a qualquer membro de classe que você deseja o <xref:System.Xml.Serialization.XmlSerializer> para ignorar quando uma instância da classe é serializada. Por exemplo, você pode fazer isso quando o membro é usado para conter metadados sobre o objeto que está sendo serializado.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+> [!NOTE]
+>  Você pode usar a palavra `SoapIgnore` em seu código em vez do mais <xref:System.Xml.Serialization.SoapIgnoreAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Group`. A serialização do `GroupName` e `IgnoreThis` campos e os membros do `GroupType` enumeração são substituídas. No `CreateOverrideSerializer` método, uma <xref:System.Xml.Serialization.SoapAttributeOverrides> é criado e para cada membro substituído ou de enumeração, uma <xref:System.Xml.Serialization.SoapAttributes> é criado com a propriedade apropriada definido e adicionados ao <xref:System.Xml.Serialization.SoapAttributeOverrides>. Um <xref:System.Xml.Serialization.XmlTypeMapping> é criado usando o <xref:System.Xml.Serialization.SoapAttributeOverrides>e que <xref:System.Xml.Serialization.XmlTypeMapping> é usado para criar o <xref:System.Xml.Serialization.XmlSerializer> que substitui a serialização padrão.  
+  
+ [!code-cpp[SoapAttributesOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributesOverrides/CPP/soapover.cpp#1)]
+ [!code-csharp[SoapAttributesOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributesOverrides/CS/soapover.cs#1)]
+ [!code-vb[SoapAttributesOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributesOverrides/VB/SoapOver.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapIgnoreAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapIgnoreAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.SoapIgnoreAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Group`. A serialização do `GroupName` e `IgnoreThis` campos e os membros do `GroupType` enumeração são substituídas. No `CreateOverrideSerializer` método, uma <xref:System.Xml.Serialization.SoapAttributeOverrides> é criado e para cada membro substituído ou de enumeração, uma <xref:System.Xml.Serialization.SoapAttributes> é criado com a propriedade apropriada definido e adicionados ao <xref:System.Xml.Serialization.SoapAttributeOverrides>. Um <xref:System.Xml.Serialization.XmlTypeMapping> é criado usando o <xref:System.Xml.Serialization.SoapAttributeOverrides>e que <xref:System.Xml.Serialization.XmlTypeMapping> é usado para criar o <xref:System.Xml.Serialization.XmlSerializer> que substitui a serialização padrão.  
+  
+ [!code-cpp[SoapAttributesOverrides#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributesOverrides/CPP/soapover.cpp#1)]
+ [!code-csharp[SoapAttributesOverrides#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributesOverrides/CS/soapover.cs#1)]
+ [!code-vb[SoapAttributesOverrides#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributesOverrides/VB/SoapOver.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

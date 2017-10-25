@@ -1,0 +1,44 @@
+<Type Name="JumpItem" FullName="System.Windows.Shell.JumpItem">
+  <TypeSignature Language="C#" Value="public abstract class JumpItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit JumpItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Shell.JumpItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a classe base das classes <see cref="T:System.Windows.Shell.JumpPath" /> e <see cref="T:System.Windows.Shell.JumpTask" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CustomCategory">
+      <MemberSignature Language="C#" Value="public string CustomCategory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomCategory" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Shell.JumpItem.CustomCategory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da categoria de <see cref="T:System.Windows.Shell.JumpItem" /> é agrupado com no [!INCLUDE[win7](~/includes/win7-md.md)] lista de atalhos da barra de tarefas.</summary>
+        <value>O nome da categoria de <see cref="T:System.Windows.Shell.JumpItem" /> é agrupado com. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Shell.JumpItem.CustomCategory%2A> é de propriedade `null` ou <xref:System.String.Empty>, o item é adicionado para o **tarefas** categoria. Se um valor for especificado, o item é adicionado a uma categoria que usa o nome especificado. Itens em categorias personalizadas podem ser fixados na lista de atalhos pelo usuário. Quando um item é fixado, ele move a uma categoria automática chamada **fixos**. O usuário também pode remover os itens da lista de salto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Entity.Design.PluralizationServices">
+  <Docs>
+    <summary>O <see cref="T:System.Data.Entity.Design.PluralizationServices" /> namespace fornece classes para alterar palavras da única forma plural e vice-versa.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

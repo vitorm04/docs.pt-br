@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.Win32.SafeHandles">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.Win32.SafeHandles" /> namespace contém classes que são derivações abstratas de classes do identificador seguro que fornecem a funcionalidade comum com suporte a identificadores de arquivo e sistema operacional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas classes são derivadas do <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.CriticalHandle?displayProperty=nameWithType> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

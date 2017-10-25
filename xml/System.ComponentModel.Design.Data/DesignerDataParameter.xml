@@ -1,0 +1,118 @@
+<Type Name="DesignerDataParameter" FullName="System.ComponentModel.Design.Data.DesignerDataParameter">
+  <TypeSignature Language="C#" Value="public sealed class DesignerDataParameter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerDataParameter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.DesignerDataParameter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um parâmetro para um procedimento armazenado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.DesignerDataParameter> classe é um dos vários tipos que representam o esquema de um repositório de dados em tempo de design. Esses itens de esquema são disponibilizadas para controles pelos designers de implementar o <xref:System.ComponentModel.Design.Data.IDataEnvironment> interface. Controla o acesso a objetos de esquema chamando o <xref:System.ComponentModel.Design.Data.IDataEnvironment.GetConnectionSchema%2A> método da interface.  
+  
+ O <xref:System.ComponentModel.Design.Data.DesignerDataParameter> classe representa os parâmetros necessários para chamar um procedimento armazenado no repositório de dados. A propriedade <xref:System.ComponentModel.Design.Data.DesignerDataStoredProcedure.Parameters%2A?displayProperty=nameWithType> contém uma coleção de objetos <xref:System.ComponentModel.Design.Data.DesignerDataParameter>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerDataParameter (string name, System.Data.DbType dataType, System.Data.ParameterDirection direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, valuetype System.Data.DbType dataType, valuetype System.Data.ParameterDirection direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Data.DesignerDataParameter.#ctor(System.String,System.Data.DbType,System.Data.ParameterDirection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="dataType" Type="System.Data.DbType" />
+        <Parameter Name="direction" Type="System.Data.ParameterDirection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do parâmetro.</param>
+        <param name="dataType">Um dos valores de <see cref="T:System.Data.DbType" />.</param>
+        <param name="direction">Um dos valores de <see cref="T:System.Data.ParameterDirection" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Data.DesignerDataParameter" /> classe com o nome especificado, o tipo de dados e a semântica de entrada/saída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public System.Data.DbType DataType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DbType DataType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataParameter.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DbType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de banco de dados do parâmetro.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.DbType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.DesignerDataParameter.DataType%2A> propriedade contém o tipo de dados exigidos pelo armazenamento de dados subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public System.Data.ParameterDirection Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ParameterDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataParameter.Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ParameterDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o parâmetro apenas de entrada, é somente de saída, bidirecional ou um parâmetro de valor de retorno do procedimento armazenado.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.ParameterDirection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ComponentModel.Design.Data.DesignerDataParameter.Direction%2A> propriedade para indicar se um parâmetro é passado para um procedimento armazenado, retornado de um procedimento armazenado, ou ambos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Data.DesignerDataParameter.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do parâmetro.</summary>
+        <value>O nome do parâmetro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

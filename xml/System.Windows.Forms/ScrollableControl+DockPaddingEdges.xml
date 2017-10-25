@@ -1,0 +1,318 @@
+<Type Name="ScrollableControl+DockPaddingEdges" FullName="System.Windows.Forms.ScrollableControl+DockPaddingEdges">
+  <TypeSignature Language="C#" Value="public class ScrollableControl.DockPaddingEdges : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ScrollableControl/DockPaddingEdges extends System.Object implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollableControl.DockPaddingEdges" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.ScrollableControl/DockPaddingEdgesConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Determina a borda de preenchimento para controles encaixados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> classe cria uma margem em uma borda de determinada ou em todas as bordas de um controle encaixado. Você pode definir a largura dessa margem para cada borda individual definindo as seguintes propriedades: <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Bottom%2A>, <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Top%2A>, <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Left%2A>, <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Right%2A>. Como alternativa, você pode definir todas as bordas com a mesma largura simultaneamente definindo a <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges.All%2A> propriedade. Se o tamanho do controle é muito grande para seu contêiner, o controle será redimensionado para caber no contêiner, menos a largura da margem especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Panel>. O exemplo encaixa um botão no painel de controle e percorre o <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> propriedades, definir cada individualmente em clique do botão. Esse código requer que um <xref:System.Windows.Forms.Panel> controle e um <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário e uma variável de membro de nível de classe chamado `myCounter` foi declarado como um inteiro assinado de 32 bits. Esse código deve ser chamado no <xref:System.Windows.Forms.Control.Click> eventos do botão.  
+  
+ [!code-cpp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="public int All { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 All" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.DockPaddingEdges.All" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de preenchimento para todas as bordas de um controle encaixado.</summary>
+        <value>A largura do preenchimento em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura do preenchimento atribuída a essa propriedade é aplicada a todas as bordas do controle encaixado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Panel>. O exemplo encaixa um botão no painel de controle e percorre o <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> propriedades, definir cada individualmente em clique do botão. Esse código requer que um <xref:System.Windows.Forms.Panel> controle e um <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário e uma variável de membro de nível de classe chamado `myCounter` foi declarado como um inteiro assinado de 32 bits. Esse código deve ser chamado no <xref:System.Windows.Forms.Control.Click> eventos do botão.  
+  
+ [!code-cpp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public int Bottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Bottom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de preenchimento para a borda inferior de um controle encaixado.</summary>
+        <value>A largura do preenchimento em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura do preenchimento atribuída a essa propriedade é aplicada somente à borda inferior do controle encaixado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Panel>. O exemplo encaixa um botão no painel de controle e percorre o <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> propriedades, definir cada individualmente em clique do botão. Esse código requer que um <xref:System.Windows.Forms.Panel> controle e um <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário e uma variável de membro de nível de classe chamado `myCounter` foi declarado como um inteiro assinado de 32 bits. Esse código deve ser chamado no <xref:System.Windows.Forms.Control.Click> eventos do botão.  
+  
+ [!code-cpp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto a ser comparado com o atual <see cref="T:System.Windows.Forms.ScrollableControl.DockPaddingEdges" /> objeto.</param>
+        <summary>Determina se o objeto especificado é igual ao atual <see cref="T:System.Windows.Forms.ScrollableControl.DockPaddingEdges" /> objeto.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.DockPaddingEdges.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um tipo específico.</summary>
+        <returns>Um código hash do <see cref="T:System.Object" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public int Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de preenchimento da borda esquerda de um controle encaixado.</summary>
+        <value>A largura do preenchimento em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura do preenchimento atribuída a essa propriedade é aplicada somente à borda esquerda do controle encaixado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Panel>. O exemplo encaixa um botão no painel de controle e percorre o <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> propriedades, definir cada individualmente em clique do botão. Esse código requer que um <xref:System.Windows.Forms.Panel> controle e um <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário e uma variável de membro de nível de classe chamado `myCounter` foi declarado como um inteiro assinado de 32 bits. Esse código deve ser chamado no <xref:System.Windows.Forms.Control.Click> eventos do botão.  
+  
+ [!code-cpp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public int Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Right" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de preenchimento para a borda direita de um controle encaixado.</summary>
+        <value>A largura do preenchimento em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura do preenchimento atribuída a essa propriedade é aplicada somente para a borda direita do controle encaixado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Panel>. O exemplo encaixa um botão no painel de controle e percorre o <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> propriedades, definir cada individualmente em clique do botão. Esse código requer que um <xref:System.Windows.Forms.Panel> controle e um <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário e uma variável de membro de nível de classe chamado `myCounter` foi declarado como um inteiro assinado de 32 bits. Esse código deve ser chamado no <xref:System.Windows.Forms.Control.Click> eventos do botão.  
+  
+ [!code-cpp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.DockPaddingEdges.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto que é uma cópia da instância atual.</summary>
+        <returns>Um novo objeto que é uma cópia da instância atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public int Top { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ScrollableControl.DockPaddingEdges.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura de preenchimento para a borda superior de um controle encaixado.</summary>
+        <value>A largura do preenchimento em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A largura do preenchimento atribuída a essa propriedade é aplicada somente à borda superior do controle encaixado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada, <xref:System.Windows.Forms.Panel>. O exemplo encaixa um botão no painel de controle e percorre o <xref:System.Windows.Forms.ScrollableControl.DockPaddingEdges> propriedades, definir cada individualmente em clique do botão. Esse código requer que um <xref:System.Windows.Forms.Panel> controle e um <xref:System.Windows.Forms.Button> tenham sido criadas em um formulário e uma variável de membro de nível de classe chamado `myCounter` foi declarado como um inteiro assinado de 32 bits. Esse código deve ser chamado no <xref:System.Windows.Forms.Control.Click> eventos do botão.  
+  
+ [!code-cpp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/CS/source.cs#1)]
+ [!code-vb[Classic ScrollableControl.DockPaddingEdges Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic ScrollableControl.DockPaddingEdges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ScrollableControl.DockPaddingEdges.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres vazia.</summary>
+        <returns>Uma cadeia de caracteres vazia.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

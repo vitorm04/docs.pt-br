@@ -1,0 +1,96 @@
+<Type Name="HorizontalAlignment" FullName="System.Windows.HorizontalAlignment">
+  <TypeSignature Language="C#" Value="public enum HorizontalAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HorizontalAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.HorizontalAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica onde um elemento deve ser exibido no eixo horizontal em relação ao slot de layout alocado do elemento pai.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Stretch é o comportamento de layout padrão.  
+  
+ Elemento <xref:System.Windows.FrameworkElement.Height%2A> e <xref:System.Windows.FrameworkElement.Width%2A> propriedades que são definidas explicitamente têm prioridade sobre o valor da propriedade Stretch.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.HorizontalAlignment Center = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.HorizontalAlignment.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um elemento alinhado ao centro do slot de layout para o elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.HorizontalAlignment Left = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.HorizontalAlignment.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um elemento alinhado à esquerda do slot de layout para o elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.HorizontalAlignment Right = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.HorizontalAlignment.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um elemento alinhado à direita do slot de layout para o elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stretch">
+      <MemberSignature Language="C#" Value="Stretch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.HorizontalAlignment Stretch = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.HorizontalAlignment.Stretch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um elemento estendido para preencher todo o slot de layout para o elemento pai.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

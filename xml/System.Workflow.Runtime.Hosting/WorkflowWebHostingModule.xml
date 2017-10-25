@@ -1,0 +1,110 @@
+<Type Name="WorkflowWebHostingModule" FullName="System.Workflow.Runtime.Hosting.WorkflowWebHostingModule">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowWebHostingModule : System.Web.IHttpModule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowWebHostingModule extends System.Object implements class System.Web.IHttpModule" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpModule</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um mecanismo para rotear a ID de instância de fluxo de trabalho para e de um <see cref="T:System.Workflow.Activities.WorkflowWebService" /> para um cookie no cliente Web. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Essa funcionalidade é necessário para inserir novamente uma definição de fluxo de trabalho que é exposta como um serviço Web. Sem esse módulo, a primeira chamada para o serviço Web expostos pelo fluxo de trabalho funciona, mas falha nas chamadas subsequentes. Além disso, certifique-se de que o aplicativo cliente tem cookies habilitados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowWebHostingModule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Dispose">
+      <MemberSignature Language="C#" Value="void IHttpModule.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.System#Web#IHttpModule#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pelo <see cref="T:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.System%23Web%23IHttpModule%23Dispose?displayProperty=nameWithType> quando tiver terminado de usar o <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule>. O <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.System%23Web%23IHttpModule%23Dispose> método deixa o <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule> em um estado inutilizável. Depois de chamar <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.System%23Web%23IHttpModule%23Dispose>, você deve liberar todas as referências para o <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule> do objeto para o coletor de lixo possa recuperar a memória que o <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule> objeto ocupado.  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule>. Caso contrário, os recursos que está usando não são liberados até o coletor de lixo chama o <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpModule.Init">
+      <MemberSignature Language="C#" Value="void IHttpModule.Init (System.Web.HttpApplication application);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpModule.Init(class System.Web.HttpApplication application) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.System#Web#IHttpModule#Init(System.Web.HttpApplication)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="application" Type="System.Web.HttpApplication" />
+      </Parameters>
+      <Docs>
+        <param name="application">Um <see cref="T:System.Web.HttpApplication" /> que fornece acesso aos métodos, propriedades e eventos comuns a todos os objetos de aplicativo em um aplicativo ASP.NET.</param>
+        <summary>Inicializa o módulo de hospedagem de Web do fluxo de trabalho e prepara o módulo para tratar as solicitações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Workflow.Runtime.Hosting.WorkflowWebHostingModule.System%23Web%23IHttpModule%23Init(System.Web.HttpApplication)?displayProperty=nameWithType> para registrar os métodos com eventos específicos de manipulação de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

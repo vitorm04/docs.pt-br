@@ -1,0 +1,696 @@
+<Type Name="ModuleHandle" FullName="System.ModuleHandle">
+  <TypeSignature Language="C#" Value="public struct ModuleHandle" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ModuleHandle extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.ModuleHandle" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um identificador de tempo de execução de um módulo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ModuleHandle.ResolveFieldHandle%2A>, <xref:System.ModuleHandle.ResolveMethodHandle%2A>, e <xref:System.ModuleHandle.ResolveTypeHandle%2A> métodos fornecem resolução eficiente de tokens de metadados para identificadores do tempo de execução para campos, métodos e tipos no módulo atual.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EmptyHandle">
+      <MemberSignature Language="C#" Value="public static readonly ModuleHandle EmptyHandle;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.ModuleHandle EmptyHandle" />
+      <MemberSignature Language="DocId" Value="F:System.ModuleHandle.EmptyHandle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ModuleHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um identificador de módulo vazio.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (ModuleHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.ModuleHandle handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.Equals(System.ModuleHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.ModuleHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">O <see cref="T:System.ModuleHandle" /> estrutura a ser comparada com a atual <see cref="T:System.ModuleHandle" />.</param>
+        <summary>Retorna um <see cref="T:System.Boolean" /> valor que indica se o especificado <see cref="T:System.ModuleHandle" /> estrutura é igual à atual <see cref="T:System.ModuleHandle" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="handle" /> é igual à atual <see cref="T:System.ModuleHandle" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ConstrainedExecution.ReliabilityContract(System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState, System.Runtime.ConstrainedExecution.Cer.Success)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o atual <see cref="T:System.ModuleHandle" /> estrutura.</param>
+        <summary>Retorna um <see cref="T:System.Boolean" /> valor que indica se o objeto especificado é um <see cref="T:System.ModuleHandle" /> estrutura e igual a atual <see cref="T:System.ModuleHandle" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é um <see cref="T:System.ModuleHandle" /> estrutura e é igual à atual <see cref="T:System.ModuleHandle" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um inteiro com sinal de 32 bits que é o código hash para esta instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeFieldHandleFromMetadataToken">
+      <MemberSignature Language="C#" Value="public RuntimeFieldHandle GetRuntimeFieldHandleFromMetadataToken (int fieldToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeFieldHandle GetRuntimeFieldHandleFromMetadataToken(int32 fieldToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.GetRuntimeFieldHandleFromMetadataToken(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeFieldHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldToken" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fieldToken">Um token de metadados que identifica um campo no módulo.</param>
+        <summary>Retorna um identificador de tempo de execução para o campo identificado pelo token de metadados especificado.</summary>
+        <returns>Um <see cref="T:System.RuntimeFieldHandle" /> para o campo identificado por <paramref name="fieldToken" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeMethodHandleFromMetadataToken">
+      <MemberSignature Language="C#" Value="public RuntimeMethodHandle GetRuntimeMethodHandleFromMetadataToken (int methodToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeMethodHandle GetRuntimeMethodHandleFromMetadataToken(int32 methodToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.GetRuntimeMethodHandleFromMetadataToken(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodToken" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="methodToken">Um token de metadados que identifica um método ou um construtor no módulo.</param>
+        <summary>Retorna um identificador de método do tempo de execução para o método ou construtor identificado pelo token de metadados especificado.</summary>
+        <returns>Um <see cref="T:System.RuntimeMethodHandle" /> para o método ou construtor identificado por <paramref name="methodToken" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeTypeHandleFromMetadataToken">
+      <MemberSignature Language="C#" Value="public RuntimeTypeHandle GetRuntimeTypeHandleFromMetadataToken (int typeToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeTypeHandle GetRuntimeTypeHandleFromMetadataToken(int32 typeToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.GetRuntimeTypeHandleFromMetadataToken(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeTypeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeToken" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="typeToken">Um token de metadados que identifica um tipo no módulo.</param>
+        <summary>Retorna um identificador de tipo de tempo de execução para o tipo identificado pelo token de metadados especificado.</summary>
+        <returns>Um <see cref="T:System.RuntimeTypeHandle" /> para o tipo identificado por <paramref name="typeToken" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MDStreamVersion">
+      <MemberSignature Language="C#" Value="public int MDStreamVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MDStreamVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ModuleHandle.MDStreamVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de fluxo de metadados.</summary>
+        <value>Um inteiro de 32 bits que representa a versão de fluxo de metadados. Os dois bytes de ordem superior representam o número de versão principal e as ordem inferior dois bytes representam o número de versão secundária.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para obter mais informações sobre o cabeçalho de metadados, consulte a partição II: definição de metadados e a semântica de documentação. A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (ModuleHandle left, ModuleHandle right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.ModuleHandle left, valuetype System.ModuleHandle right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.op_Equality(System.ModuleHandle,System.ModuleHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ModuleHandle" />
+        <Parameter Name="right" Type="System.ModuleHandle" />
+      </Parameters>
+      <Docs>
+        <param name="left">O <see cref="T:System.ModuleHandle" /> estrutura à esquerda do operador de igualdade.</param>
+        <param name="right">O <see cref="T:System.ModuleHandle" /> estrutura à direita do operador de igualdade.</param>
+        <summary>Testa se duas estruturas <see cref="T:System.ModuleHandle" /> são iguais.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ModuleHandle" /> estruturas forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.ModuleHandle.Equals%28System.ModuleHandle%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (ModuleHandle left, ModuleHandle right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.ModuleHandle left, valuetype System.ModuleHandle right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.op_Inequality(System.ModuleHandle,System.ModuleHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.ModuleHandle" />
+        <Parameter Name="right" Type="System.ModuleHandle" />
+      </Parameters>
+      <Docs>
+        <param name="left">O <see cref="T:System.ModuleHandle" /> estrutura à esquerda do operador de desigualdade.</param>
+        <param name="right">O <see cref="T:System.ModuleHandle" /> estrutura à direita do operador de desigualdade.</param>
+        <summary>Testa se dois <see cref="T:System.ModuleHandle" /> estruturas são diferentes.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.ModuleHandle" /> estruturas forem diferentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.ModuleHandle.Equals%28System.ModuleHandle%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveFieldHandle">
+      <MemberSignature Language="C#" Value="public RuntimeFieldHandle ResolveFieldHandle (int fieldToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeFieldHandle ResolveFieldHandle(int32 fieldToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.ResolveFieldHandle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeFieldHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldToken" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fieldToken">Um token de metadados que identifica um campo no módulo.</param>
+        <summary>Retorna um identificador de tempo de execução para o campo identificado pelo token de metadados especificado.</summary>
+        <returns>Um <see cref="T:System.RuntimeFieldHandle" /> para o campo identificado por <paramref name="fieldToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para resolver um token de metadados que identifica um campo cujo pai `TypeSpec` tem uma assinatura que contém o tipo de elemento `var` ou `mvar`, use o <xref:System.ModuleHandle.ResolveFieldHandle%28System.Int32%2CSystem.RuntimeTypeHandle%5B%5D%2CSystem.RuntimeTypeHandle%5B%5D%29> sobrecarga de método, o que permite que você fornecer o contexto necessário.  
+  
+> [!NOTE]
+>  Informações sobre tokens de metadados podem ser encontradas na documentação do Common Language Infrastructure (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="metadataToken" /> não é um token válido no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />não é um token para um campo no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />identifica um campo cujo pai <see langword="TypeSpec" /> tem uma assinatura que contém o tipo de elemento <see langword="var" /> ou <see langword="mvar" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método é chamado em um identificador de campo vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveFieldHandle">
+      <MemberSignature Language="C#" Value="public RuntimeFieldHandle ResolveFieldHandle (int fieldToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeFieldHandle ResolveFieldHandle(int32 fieldToken, valuetype System.RuntimeTypeHandle[] typeInstantiationContext, valuetype System.RuntimeTypeHandle[] methodInstantiationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.ResolveFieldHandle(System.Int32,System.RuntimeTypeHandle[],System.RuntimeTypeHandle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeFieldHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldToken" Type="System.Int32" />
+        <Parameter Name="typeInstantiationContext" Type="System.RuntimeTypeHandle[]" />
+        <Parameter Name="methodInstantiationContext" Type="System.RuntimeTypeHandle[]" />
+      </Parameters>
+      <Docs>
+        <param name="fieldToken">Um token de metadados que identifica um campo no módulo.</param>
+        <param name="typeInstantiationContext">Uma matriz de <see cref="T:System.RuntimeTypeHandle" /> estruturas que representa os argumentos de tipo genérico do tipo onde o token está no escopo, ou <see langword="null" /> se esse tipo não é genérico.</param>
+        <param name="methodInstantiationContext">Uma matriz de <see cref="T:System.RuntimeTypeHandle" /> estruturas que representa os argumentos de tipo genérico do método onde o token está no escopo, ou <see langword="null" /> se o método não genérico.</param>
+        <summary>Retorna um identificador de campo de tempo de execução para o campo identificado pelo token de metadados especificado, especificar os argumentos de tipo genérico do tipo e método em que o token está no escopo.</summary>
+        <returns>Um <see cref="T:System.RuntimeFieldHandle" /> para o campo identificado por <paramref name="fieldToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Informações sobre tokens de metadados podem ser encontradas na documentação do Common Language Infrastructure (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="metadataToken" /> não é um token válido no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />não é um token para um campo no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />identifica um campo cujo pai <see langword="TypeSpec" /> tem uma assinatura que contém o tipo de elemento <see langword="var" /> ou <see langword="mvar" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método é chamado em um identificador de campo vazio.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="fieldToken" />não é um token válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveMethodHandle">
+      <MemberSignature Language="C#" Value="public RuntimeMethodHandle ResolveMethodHandle (int methodToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeMethodHandle ResolveMethodHandle(int32 methodToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.ResolveMethodHandle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodToken" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="methodToken">Um token de metadados que identifica um método ou um construtor no módulo.</param>
+        <summary>Retorna um identificador de método do tempo de execução para o método ou construtor identificado pelo token de metadados especificado.</summary>
+        <returns>Um <see cref="T:System.RuntimeMethodHandle" /> para o método ou construtor identificado por <paramref name="methodToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para resolver um token de metadados para um `MethodSpec` cuja assinatura contém o tipo de elemento `var` ou `mvar`, use o <xref:System.ModuleHandle.ResolveMethodHandle%28System.Int32%2CSystem.RuntimeTypeHandle%5B%5D%2CSystem.RuntimeTypeHandle%5B%5D%29> sobrecarga de método, o que permite que você fornecer o contexto necessário.  
+  
+> [!NOTE]
+>  Informações sobre tokens de metadados podem ser encontradas na documentação do Common Language Infrastructure (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="methodToken" />não é um token de metadados válido para um método no módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" /> não é um token de um método ou construtor no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />é um <see langword="MethodSpec" /> cuja assinatura contém o tipo de elemento <see langword="var" /> ou <see langword="mvar" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método é chamado em um identificador de método vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveMethodHandle">
+      <MemberSignature Language="C#" Value="public RuntimeMethodHandle ResolveMethodHandle (int methodToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeMethodHandle ResolveMethodHandle(int32 methodToken, valuetype System.RuntimeTypeHandle[] typeInstantiationContext, valuetype System.RuntimeTypeHandle[] methodInstantiationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.ResolveMethodHandle(System.Int32,System.RuntimeTypeHandle[],System.RuntimeTypeHandle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeMethodHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="methodToken" Type="System.Int32" />
+        <Parameter Name="typeInstantiationContext" Type="System.RuntimeTypeHandle[]" />
+        <Parameter Name="methodInstantiationContext" Type="System.RuntimeTypeHandle[]" />
+      </Parameters>
+      <Docs>
+        <param name="methodToken">Um token de metadados que identifica um método ou um construtor no módulo.</param>
+        <param name="typeInstantiationContext">Uma matriz de <see cref="T:System.RuntimeTypeHandle" /> estruturas que representa os argumentos de tipo genérico do tipo onde o token está no escopo, ou <see langword="null" /> se esse tipo não é genérico.</param>
+        <param name="methodInstantiationContext">Uma matriz de <see cref="T:System.RuntimeTypeHandle" /> estruturas que representa os argumentos de tipo genérico do método onde o token está no escopo, ou <see langword="null" /> se o método não genérico.</param>
+        <summary>Retorna um identificador de método do tempo de execução para o método ou construtor identificado pelo token de metadados especificado, especificar os argumentos de tipo genérico do tipo e método em que o token está no escopo.</summary>
+        <returns>Um <see cref="T:System.RuntimeMethodHandle" /> para o método ou construtor identificado por <paramref name="methodToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Informações sobre tokens de metadados podem ser encontradas na documentação do Common Language Infrastructure (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="methodToken" />não é um token de metadados válido para um método no módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" /> não é um token de um método ou construtor no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />é um <see langword="MethodSpec" /> cuja assinatura contém o tipo de elemento <see langword="var" /> ou <see langword="mvar" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método é chamado em um identificador de método vazio.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="methodToken" />não é um token válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveTypeHandle">
+      <MemberSignature Language="C#" Value="public RuntimeTypeHandle ResolveTypeHandle (int typeToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeTypeHandle ResolveTypeHandle(int32 typeToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.ResolveTypeHandle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeTypeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeToken" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="typeToken">Um token de metadados que identifica um tipo no módulo.</param>
+        <summary>Retorna um identificador de tipo de tempo de execução para o tipo identificado pelo token de metadados especificado.</summary>
+        <returns>Um <see cref="T:System.RuntimeTypeHandle" /> para o tipo identificado por <paramref name="typeToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para resolver um token de metadados para um `TypeSpec` cuja assinatura contém o tipo de elemento `var` ou `mvar`, use o <xref:System.ModuleHandle.ResolveTypeHandle%28System.Int32%2CSystem.RuntimeTypeHandle%5B%5D%2CSystem.RuntimeTypeHandle%5B%5D%29> sobrecarga de método, o que permite que você fornecer o contexto necessário.  
+  
+> [!NOTE]
+>  Informações sobre tokens de metadados podem ser encontradas na documentação do Common Language Infrastructure (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="typeToken" />não é um token de metadados válido para um tipo no módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />não é um token para um tipo no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />é um <see langword="TypeSpec" /> cuja assinatura contém o tipo de elemento <see langword="var" /> ou <see langword="mvar" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método é chamado em um identificador de tipo vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveTypeHandle">
+      <MemberSignature Language="C#" Value="public RuntimeTypeHandle ResolveTypeHandle (int typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.RuntimeTypeHandle ResolveTypeHandle(int32 typeToken, valuetype System.RuntimeTypeHandle[] typeInstantiationContext, valuetype System.RuntimeTypeHandle[] methodInstantiationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ModuleHandle.ResolveTypeHandle(System.Int32,System.RuntimeTypeHandle[],System.RuntimeTypeHandle[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.RuntimeTypeHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeToken" Type="System.Int32" />
+        <Parameter Name="typeInstantiationContext" Type="System.RuntimeTypeHandle[]" />
+        <Parameter Name="methodInstantiationContext" Type="System.RuntimeTypeHandle[]" />
+      </Parameters>
+      <Docs>
+        <param name="typeToken">Um token de metadados que identifica um tipo no módulo.</param>
+        <param name="typeInstantiationContext">Uma matriz de <see cref="T:System.RuntimeTypeHandle" /> estruturas que representa os argumentos de tipo genérico do tipo onde o token está no escopo, ou <see langword="null" /> se esse tipo não é genérico.</param>
+        <param name="methodInstantiationContext">Uma matriz de <see cref="T:System.RuntimeTypeHandle" /> estruturas de objetos que representam os argumentos de tipo genérico do método onde o token está no escopo, ou <see langword="null" /> se o método não genérico.</param>
+        <summary>Retorna um identificador de tipo de tempo de execução para o tipo identificado pelo token de metadados especificado, especificar os argumentos de tipo genérico do tipo e método em que o token está no escopo.</summary>
+        <returns>Um <see cref="T:System.RuntimeTypeHandle" /> para o tipo identificado por <paramref name="typeToken" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Informações sobre tokens de metadados podem ser encontradas na documentação do Common Language Infrastructure (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="typeToken" />não é um token de metadados válido para um tipo no módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />não é um token para um tipo no escopo do módulo atual.  
+  
+ -ou-  
+  
+ <paramref name="metadataToken" />é um <see langword="TypeSpec" /> cuja assinatura contém o tipo de elemento <see langword="var" /> ou <see langword="mvar" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O método é chamado em um identificador de tipo vazio.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="typeToken" />não é um token válido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

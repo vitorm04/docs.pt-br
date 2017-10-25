@@ -1,0 +1,1108 @@
+<Type Name="Binding" FullName="System.ServiceModel.Channels.Binding">
+  <TypeSignature Language="C#" Value="public abstract class Binding : System.ServiceModel.IDefaultCommunicationTimeouts" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Binding extends System.Object implements class System.ServiceModel.IDefaultCommunicationTimeouts" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.Binding" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IDefaultCommunicationTimeouts</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contém os elementos de associação que especifica os protocolos, transportes e codificadores de mensagem usados para comunicação entre clientes e serviços.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa uma coleção de elementos de associação de cada um deles descreve um aspecto de como um ponto de extremidade se comunica com outros pontos de extremidade e que são criados, de forma consistente, uma fábrica de canais no cliente e a um ouvinte de canal do serviço. Uma associação contém uma coleção de elementos de associação que correspondem ao canais de protocolo, canais de transporte e codificadores de mensagem. Pode haver qualquer número de elementos de associação para o protocolo canais mas apenas um elemento de associação para cada o codificador de transporte e de mensagem. Há seis comumente camadas de elementos de associação em uma associação. São necessários somente o transporte e elementos de associação na parte inferior da pilha de codificação. Como uma codificação é necessária para cada associação, se não for especificada uma codificação, [!INCLUDE[indigo1](~/includes/indigo1-md.md)] adiciona uma codificação padrão para você. O padrão é texto/XML para os transportes HTTP e HTTPS e binários para outros transportes.  
+  
+ A tabela a seguir resume as opções para cada camada.  
+  
+|Camada|Opções|Necessária|  
+|-----------|-------------|--------------|  
+|Fluxo de transações|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Não|  
+|Confiabilidade|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Não|  
+|Segurança|Simétrica, assimétrica, nível de transporte|Não|  
+|Alteração de forma|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Não|  
+|Atualizações de transporte|Fluxo SSL, fluxo do Windows, resolvedor Peer|Não|  
+|Codificando|Texto, binária, MTOM, personalizado|Sim|  
+|Transporte|TCP, denominado Pipes, HTTP, HTTPS, MSMQ, personalizado|Sim|  
+  
+ Cada elemento de associação fornece a especificação para a criação de uma fábrica de canais no cliente e um ouvinte de canal do serviço. Quando a pilha de fábrica de canais é construída, por exemplo, há uma fábrica de canais da pilha para cada elemento de associação na associação. O mesmo tipo de mapeamento se aplica aos ouvintes de canais da pilha no serviço. Consistência no cliente e serviço é essencial para estabelecer a conexão com base em canal entre esses pontos de extremidade. Cada fábrica e o ouvinte, por sua vez, processa o envio e a aceitação dos canais correspondentes na pilha de canais que se conecta a eles, e esses canais, em seguida, podem enviar e receber as mensagens usadas para se comunicar.  
+  
+ Cada instância de um <xref:System.ServiceModel.Channels.Binding> tem um <xref:System.ServiceModel.Channels.Binding.Name%2A> e <xref:System.ServiceModel.Channels.Binding.Namespace%2A> que juntas identificam exclusivamente nos metadados do serviço. Se nenhum nome ou namespace for especificado, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] adiciona um valores padrão para você. O nome padrão é `null` e o namespace padrão é http://tempuri.org/. Este nome de usuário para a associação é diferente da especificação do nome de protocolo, o que é especificado pelo <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade. Se você quiser adicionar mais associações de HTTP, por exemplo, você pode nomeá-los como quiser e definir todos os seus esquemas para "http". Nenhum aplicativo inerente ou despacho de máquina com base no <xref:System.ServiceModel.Channels.Binding.Scheme%2A>. Portanto, evite o problema comum de não registrar manipuladores adicionais para protocolos bem conhecidos. Também é fácil, você pode trabalhar com várias versões de uma ligação lado a lado, fornecendo um nome diferente a cada versão.  
+  
+ O <xref:System.ServiceModel.Channels.Binding> classe implementa o <xref:System.ServiceModel.IDefaultCommunicationTimeouts> interface para mitigar ataques de negação de serviço (DOS) que dependem de prender os recursos estendidos intervalos de tempo. A implementação Especifica os valores de tempos limite de comunicação para a abertura e fechamento de conexões e para a leitura e gravação operações associados ao receber e enviar mensagens. As propriedades usadas para obter e definir esses tempos limite e suas operações de valores padrão são resumidas na tabela a seguir.  
+  
+|Propriedade Timeout|Valor padrão|  
+|----------------------|-------------------|  
+|<xref:System.ServiceModel.Channels.Binding.OpenTimeout%2A>|1 minuto|  
+|<xref:System.ServiceModel.Channels.Binding.CloseTimeout%2A>|1 minuto|  
+|<xref:System.ServiceModel.Channels.Binding.SendTimeout%2A>|1 minuto|  
+|<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>|10 minutos|  
+  
+ Quando você cria uma associação herdando de <xref:System.ServiceModel.Channels.Binding>, você deve substituir <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+  
+ Além disso, você pode definir seus próprios elementos de associação e inseri-los entre qualquer uma das camadas definidas na tabela anterior. Para obter mais informações, consulte a classe <xref:System.ServiceModel.Channels.CustomBinding>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEBinding#11](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebinding/cs/service.cs#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Binding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.Binding" /> classe com um nome padrão e um namespace.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome padrão é `null` e o namespace padrão é http://tempuri.org/.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UEBinding#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uebinding/cs/service.cs#2)]
+ [!code-vb[S_UEBinding#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uebinding/vb/service.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Binding (string name, string ns);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name, string ns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O <see cref="P:System.ServiceModel.Channels.Binding.Name" /> da associação.</param>
+        <param name="ns">O <see cref="P:System.ServiceModel.Channels.Binding.Namespace" /> da associação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Channels.Binding" /> de uma associação especificada do serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.Binding.Name%2A> e <xref:System.ServiceModel.Channels.Binding.Namespace%2A> juntas identificam exclusivamente uma instância de um <xref:System.ServiceModel.Channels.Binding> nos metadados do serviço.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="ns" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelFactory``1(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal que produz a fábrica de canais.</typeparam>
+        <param name="parameters">A matriz de objeto que especifica os requisitos para a fábrica de canais que é criado.</param>
+        <summary>Amplia a pilha de fábrica de canais do cliente que cria um tipo de canal especificado e que satisfaça os recursos especificados por uma matriz de objetos.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados pela coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt; BuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelFactory`1&lt;!!TChannel&gt; BuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelFactory``1(System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelFactory&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal que produz a fábrica de canais.</typeparam>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para a fábrica de canais criados.</param>
+        <summary>Amplia a pilha de fábrica de canais do cliente que cria um tipo de canal especificado e que satisfaça os recursos especificados por uma coleção de parâmetros de associação.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelFactory`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados pela coleção.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (params object[] parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="parameters">A matriz de objeto que especifica os requisitos para a fábrica de canais criados.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingParameterCollection parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para o ouvinte de canal que é criado.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados por uma coleção de parâmetros de associação.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (Uri listenUri, params object[] parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.Uri listenUri, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.Uri,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="listenUriBaseAddress" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="listenUri">To be added.</param>
+        <param name="parameters">A matriz de objeto que especifica os requisitos para a fábrica de canais que é criado.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (Uri listenUri, System.ServiceModel.Channels.BindingParameterCollection parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.Uri listenUri, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.Uri,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="listenUriBaseAddress" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="listenUri">To be added.</param>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para o ouvinte de canal que é criado.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (Uri listenUriBaseAddress, string listenUriRelativeAddress, params object[] parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.Uri listenUriBaseAddress, string listenUriRelativeAddress, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.Uri,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="listenUriBaseAddress" Type="System.Uri" />
+        <Parameter Name="listenUriRelativeAddress" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="listenUriBaseAddress">O <see cref="T:System.Uri" /> que fornece o endereço base no qual o serviço de escuta.</param>
+        <param name="listenUriRelativeAddress">O endereço relativo ao endereço básico, em que o serviço de escuta.</param>
+        <param name="parameters">A matriz de objeto que especifica os requisitos para a fábrica de canais que é criado.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (Uri listenUriBaseAddress, string listenUriRelativeAddress, System.ServiceModel.Channels.BindingParameterCollection parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.Uri listenUriBaseAddress, string listenUriRelativeAddress, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.Uri,System.String,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="listenUriBaseAddress" Type="System.Uri" />
+        <Parameter Name="listenUriRelativeAddress" Type="System.String" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="listenUriBaseAddress">O <see cref="T:System.Uri" /> que fornece o endereço base no qual o serviço de escuta.</param>
+        <param name="listenUriRelativeAddress">O endereço relativo ao endereço básico, em que o serviço de escuta.</param>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para o ouvinte de canal que é criado.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (Uri listenUriBaseAddress, string listenUriRelativeAddress, System.ServiceModel.Description.ListenUriMode listenUriMode, params object[] parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.Uri listenUriBaseAddress, string listenUriRelativeAddress, valuetype System.ServiceModel.Description.ListenUriMode listenUriMode, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.Uri,System.String,System.ServiceModel.Description.ListenUriMode,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="listenUriBaseAddress" Type="System.Uri" />
+        <Parameter Name="listenUriRelativeAddress" Type="System.String" />
+        <Parameter Name="listenUriMode" Type="System.ServiceModel.Description.ListenUriMode" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="listenUriBaseAddress">O <see cref="T:System.Uri" /> que fornece o endereço base no qual o serviço de escuta.</param>
+        <param name="listenUriRelativeAddress">O endereço relativo ao endereço básico, em que o serviço de escuta.</param>
+        <param name="listenUriMode">Um valor de <see cref="T:System.ServiceModel.Description.ListenUriMode" /> que indica se o transporte deve garantir que o URI fornecido para o serviço ao escutar em é exclusivo ou pode ser usado exatamente conforme fornecido.</param>
+        <param name="parameters">A matriz de objeto que especifica os requisitos para a fábrica de canais que é criado.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt; BuildChannelListener&lt;TChannel&gt; (Uri listenUriBaseAddress, string listenUriRelativeAddress, System.ServiceModel.Description.ListenUriMode listenUriMode, System.ServiceModel.Channels.BindingParameterCollection parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.IChannelListener`1&lt;!!TChannel&gt; BuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.Uri listenUriBaseAddress, string listenUriRelativeAddress, valuetype System.ServiceModel.Description.ListenUriMode listenUriMode, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.BuildChannelListener``1(System.Uri,System.String,System.ServiceModel.Description.ListenUriMode,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.IChannelListener&lt;TChannel&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="listenUriBaseAddress" Type="System.Uri" />
+        <Parameter Name="listenUriRelativeAddress" Type="System.String" />
+        <Parameter Name="listenUriMode" Type="System.ServiceModel.Description.ListenUriMode" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">Aceita o tipo de canal de escuta de canal.</typeparam>
+        <param name="listenUriBaseAddress">O <see cref="T:System.Uri" /> que fornece o endereço base no qual o serviço de escuta.</param>
+        <param name="listenUriRelativeAddress">O endereço relativo ao endereço básico, em que o serviço de escuta.</param>
+        <param name="listenUriMode">Um valor de <see cref="T:System.ServiceModel.Description.ListenUriMode" /> que indica se o transporte deve garantir que o URI fornecido para o serviço ao escutar em é exclusivo ou pode ser usado exatamente conforme fornecido.</param>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para o ouvinte de canal que é criado.</param>
+        <summary>Cria a escuta de canal do serviço que aceita que um tipo especificado de canal e que atenda os recursos especificados.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.Channels.IChannelListener`1" /> do tipo <paramref name="TChannel" /> que satisfaça os recursos especificados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Elemento de transporte está ausente ou fora de ordem ou esquema é inválido ou a versão de mensagem não for especificada.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um valor que indica se a associação atual pode criar uma pilha de fábrica de canais no cliente que atenda a alguns critérios específicos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja verificar se a fábrica de canais para canais de tipo `TChannel` pode ser compilado para o `context` fornecido antes de tentar criar a fábrica. Como alternativa, tente criar a fábrica de canais chamando <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> e capturar a exceção gerada se ele não pode ser criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public bool CanBuildChannelFactory&lt;TChannel&gt; (params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanBuildChannelFactory&lt;TChannel&gt;(object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.CanBuildChannelFactory``1(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal para o qual a fábrica está sendo testada.</typeparam>
+        <param name="parameters">A matriz de objeto que especifica os requisitos para a fábrica de canais que é criado.</param>
+        <summary>Retorna um valor que indica se a associação atual pode criar uma pilha de fábrica de canais no cliente que satisfaz os requisitos especificados por uma matriz de objetos.</summary>
+        <returns>
+          <see langword="true" />Se a pilha de fábrica de canal especificado pode ser compilar no cliente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja verificar se a fábrica de canais para canais de tipo `TChannel` pode ser compilado para a associação `parameters` especificado antes de tentar criar a fábrica. Como alternativa, tente criar a fábrica de canais chamando <xref:System.ServiceModel.Channels.Binding.BuildChannelFactory%60%601%28System.Object%5B%5D%29> e capturar a exceção gerada se ele não pode ser criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelFactory&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool CanBuildChannelFactory&lt;TChannel&gt; (System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanBuildChannelFactory&lt;TChannel&gt;(class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.CanBuildChannelFactory``1(System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal para o qual a fábrica está sendo testada.</typeparam>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para a fábrica de canais que é criado.</param>
+        <summary>Retorna um valor que indica se a associação atual pode criar uma pilha de fábrica de canais no cliente que atenda a coleção de associação de parâmetros especificados.</summary>
+        <returns>
+          <see langword="true" />Se a pilha de fábrica de canal especificado pode ser compilar no cliente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja verificar se a fábrica de canais para canais de tipo `TChannel` pode ser compilado para a associação `parameters` especificado antes de tentar criar a fábrica. Como alternativa, tente criar a fábrica de canais chamando <xref:System.ServiceModel.Channels.Binding.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingParameterCollection%29> e capturar a exceção gerada se ele não pode ser criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public bool CanBuildChannelListener&lt;TChannel&gt; (params object[] parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.CanBuildChannelListener``1(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal para o qual o ouvinte está sendo testado.</typeparam>
+        <param name="parameters">A matriz de objeto que especifica os requisitos para a fábrica de canais que é criado.</param>
+        <summary>Retorna um valor que indica se a associação atual pode criar uma pilha de canal de escuta no serviço que satisfaz os critérios especificados em uma matriz de objetos.</summary>
+        <returns>
+          <see langword="true" />Se a pilha de escuta de canal especificado pode criar o serviço; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja verificar que a escuta de canal para canais de tipo `TChannel` pode ser compilado para a associação `parameters` especificado antes de tentar criar o ouvinte. Como alternativa, tente criar o ouvinte de canal chamando <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%60%601%28System.Object%5B%5D%29> e capturar a exceção gerada se ele não pode ser criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanBuildChannelListener&lt;TChannel&gt;">
+      <MemberSignature Language="C#" Value="public virtual bool CanBuildChannelListener&lt;TChannel&gt; (System.ServiceModel.Channels.BindingParameterCollection parameters) where TChannel : class, System.ServiceModel.Channels.IChannel;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanBuildChannelListener&lt;class (class System.ServiceModel.Channels.IChannel) TChannel&gt;(class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.CanBuildChannelListener``1(System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TChannel">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TChannel">O tipo de canal para o qual o ouvinte está sendo testado.</typeparam>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para o ouvinte de canal que é criado.</param>
+        <summary>Retorna um valor que indica se a associação atual pode criar uma pilha de canal de escuta no serviço que satisfaz a coleção de associação de parâmetros especificados.</summary>
+        <returns>
+          <see langword="true" />Se a pilha de escuta de canal especificado pode criar o serviço; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você deseja verificar que a escuta de canal para canais de tipo `TChannel` pode ser compilado para a associação `parameters` especificado antes de tentar criar o ouvinte. Como alternativa, tente criar o ouvinte de canal chamando <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingParameterCollection%29> e capturar a exceção gerada se ele não pode ser criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan CloseTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CloseTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.CloseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo concedido para que uma conexão seja fechada antes que o transporte gere uma exceção.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação de fechamento tem para ser concluída antes de atingir o tempo limite. O valor padrão é 1 minuto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é usado pelos canais e ouvintes produzido por fábricas da associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero ou é muito grande.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBindingElements">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.Channels.BindingElementCollection CreateBindingElements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.BindingElementCollection CreateBindingElements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.CreateBindingElements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.BindingElementCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria uma coleção que contém os elementos de associação que fazem parte da associação atual.</summary>
+        <returns>Um objeto <see cref="T:System.Collections.Generic.ICollection`1" /> do tipo <see cref="T:System.ServiceModel.Channels.BindingElement" /> que contém os elementos de associação do objeto de associação atual na ordem correta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos não devem fazer referência a elementos internos que o <xref:System.ServiceModel.Channels.Binding> usos do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetProperty&lt;T&gt; (System.ServiceModel.Channels.BindingParameterCollection parameters) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetProperty&lt;class T&gt;(class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.GetProperty``1(System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O objeto com tipo para o qual o método está consultando.</typeparam>
+        <param name="parameters">O <see cref="T:System.ServiceModel.Channels.BindingParameterCollection" /> que especifica os requisitos para o ouvinte de canal que é criado.</param>
+        <summary>Retorna um objeto de tipo solicitado, se presente, da camada da pilha de associação apropriada.</summary>
+        <returns>O objeto de tipo <paramref name="T" /> solicitado se ele estiver presente ou <see langword="null" /> se não for.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma camada de suporte para retornar o objeto solicitado, ele retorna. Caso contrário, ela delega a chamada para a próxima camada da pilha. Se ele obtém a parte inferior da pilha de nenhuma camada de suporte para o objeto solicitado e o método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageVersion">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.MessageVersion MessageVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Channels.MessageVersion MessageVersion" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.MessageVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.MessageVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão de mensagem usada por clientes e serviços configurados com a associação.</summary>
+        <value>A <see cref="T:System.ServiceModel.Channels.MessageVersion" /> usada por clientes e serviços configurados com a associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da associação.</summary>
+        <value>O nome da associação. O nome padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada instância de um <xref:System.ServiceModel.Channels.Binding> tem um <xref:System.ServiceModel.Channels.Binding.Name%2A> e <xref:System.ServiceModel.Channels.Binding.Namespace%2A> que juntas identificam exclusivamente o nome de usuário para a associação nos metadados do serviço.  
+  
+ Este nome de usuário para a associação é diferente da especificação do nome de protocolo, o que é especificado pelo <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade. Se você quiser adicionar mais associações de HTTP, por exemplo, você pode nomeá-los como quiser e definir todos os seus esquemas para "http". Nenhum aplicativo inerente ou despacho de máquina com base no <xref:System.ServiceModel.Channels.Binding.Scheme%2A>. Portanto, evite o problema comum de não registrar manipuladores adicionais para protocolos bem conhecidos. Também é fácil, você pode trabalhar com várias versões de uma ligação lado a lado, fornecendo um nome diferente a cada versão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor definido não pode ser <see langword="null" /> ou uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace de XML da associação.</summary>
+        <value>O namespace XML da associação. O valor padrão é "http://tempuri.org/".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada instância de um <xref:System.ServiceModel.Channels.Binding> tem um <xref:System.ServiceModel.Channels.Binding.Name%2A> e <xref:System.ServiceModel.Channels.Binding.Namespace%2A> que juntas identificam exclusivamente o nome de usuário para a associação nos metadados do serviço.  
+  
+ Este nome de usuário para a associação é diferente da especificação do nome de protocolo, o que é especificado pelo <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade. Se você quiser adicionar mais associações de HTTP, por exemplo, você pode nomeá-los como quiser e definir todos os seus esquemas para "http". Nenhum aplicativo inerente ou despacho de máquina com base no <xref:System.ServiceModel.Channels.Binding.Scheme%2A>. Portanto, evite o problema comum de não registrar manipuladores adicionais para protocolos bem conhecidos. Também é fácil, você pode trabalhar com várias versões de uma ligação lado a lado, fornecendo um nome diferente a cada versão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor definido não pode ser <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan OpenTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan OpenTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.OpenTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo concedido para que uma conexão seja aberta antes que o transporte gere uma exceção.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação de abertura tem para ser concluída antes de atingir o tempo limite. O valor padrão é 1 minuto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é usado pelos canais e ouvintes produzido por fábricas da associação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero ou é muito grande.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ReceiveTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReceiveTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.ReceiveTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo que uma conexão pode permanecer inativa, durante o qual nenhuma mensagem de aplicativo é recebida, antes de seu descarte.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica até quanto tempo o aplicativo precisa receber uma mensagem antes do tempo limite. O valor padrão é 10 minutos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar uma sessão confiável, existem dois timers de inatividade diferentes que devem ser atendidos para manter a conexão ativa. Se qualquer um desses temporizadores de inatividade for, a conexão é descartado.  
+  
+-   O timer de inatividade primeiro está na sessão confiável e é chamado de <xref:System.ServiceModel.ReliableSession.InactivityTimeout%2A>. Esse tempo de inatividade é acionada se nenhuma mensagem, aplicativo ou infraestrutura, for recebida dentro do período de tempo limite. Uma mensagem de infraestrutura é uma mensagem que é gerada com a finalidade de um dos protocolos na pilha de canais, como um keep alive ou uma confirmação, em vez de contendo dados de aplicativo.  
+  
+-   O timer de inatividade segundo é o serviço e usa o <xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A> configuração da associação. Esse tempo de inatividade é acionada se nenhuma mensagem de aplicativo for recebida dentro do período de tempo limite. Isso especifica, por exemplo, o tempo máximo que um cliente pode levar ao enviar pelo menos uma mensagem para o servidor antes do servidor fechará o canal usado por uma sessão. Esse comportamento garante que os clientes não podem conter recursos de servidor por longos períodos arbitrários.  
+  
+ Desde que a conexão será descartada se o timer de inatividade é acionado, aumentando <xref:System.ServiceModel.ReliableSession.InactivityTimeout%2A> depois que for maior que <xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A> não tem nenhum efeito. O padrão para ambos esses tempos limite é 10 minutos, para que você sempre tenha que aumentar a ambos os parâmetros de fazer a diferença ao usar uma sessão confiável.  
+  
+ Se o fluxo de transações está habilitado na associação ou o canal, a operação pode levar mais tempo para executar que o tempo limite especificado. Nessas circunstâncias, que a operação falha devido ao tempo limite expirou e a transação será anulada adequadamente.  
+  
+ Quando a segurança é usada com sessões, o <xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A> valor definido na associação também é usado como o tempo limite da sessão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero ou é muito grande.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public abstract string Scheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.Scheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, define o esquema de URI que especifica o transporte usado pelas fábricas de canal e de ouvinte criadas pelas associações.</summary>
+        <value>O esquema de URI usado pelos canais ou ouvintes criados pelas fábricas criadas pela associação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este nome de usuário para a associação é diferente da especificação do nome de protocolo, o que é especificado pelo <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade. Cada instância de um <xref:System.ServiceModel.Channels.Binding> tem um <xref:System.ServiceModel.Channels.Binding.Name%2A> e <xref:System.ServiceModel.Channels.Binding.Namespace%2A> que juntas identificam exclusivamente o nome de usuário para a associação nos metadados do serviço. Se você quiser adicionar mais associações de HTTP, por exemplo, você pode nomeá-los como quiser e definir todos os seus esquemas para "http". Nenhum aplicativo inerente ou despacho de máquina com base no <xref:System.ServiceModel.Channels.Binding.Scheme%2A>. Portanto, evite o problema comum de não registrar manipuladores adicionais para protocolos bem conhecidos. Também é fácil, você pode trabalhar com várias versões de uma ligação lado a lado, fornecendo um nome diferente a cada versão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan SendTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan SendTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.Binding.SendTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo concedido para uma operação ser concluída antes de o transporte gerar uma exceção.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> que especifica quanto tempo a operação de gravação tem para ser concluída antes de atingir o tempo limite. O valor padrão é 1 minuto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o fluxo de transações está habilitado na associação ou o canal, a operação pode levar mais tempo para executar que o tempo limite especificado. Nessas circunstâncias, que a operação falha devido ao tempo limite expirou e a transação será anulada adequadamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor é menor que zero ou é muito grande.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeName">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.ShouldSerializeName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se o nome da associação deve ser serializado.</summary>
+        <returns>
+          <see langword="true" />Se o nome da associação deve ser serializado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeNamespace">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.Binding.ShouldSerializeNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna se o namespace da associação deve ser serializado.</summary>
+        <returns>
+          <see langword="true" />Se o namespace de associação deve ser serializado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

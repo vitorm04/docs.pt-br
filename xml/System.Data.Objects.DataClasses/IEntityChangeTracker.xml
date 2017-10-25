@@ -1,0 +1,173 @@
+<Type Name="IEntityChangeTracker" FullName="System.Data.Objects.DataClasses.IEntityChangeTracker">
+  <TypeSignature Language="C#" Value="public interface IEntityChangeTracker" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEntityChangeTracker" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.IEntityChangeTracker" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define os recursos que são usados pelos Serviços de objeto para acompanhar as alterações feitas nas propriedades de um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.EntityObject>e <xref:System.Data.Objects.DataClasses.ComplexObject> são as classes base para tipos de entidade e tipos complexos gerados pelas ferramentas do modelo de dados de entidade. Usam as classes base <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> às alterações de propriedade do relatório.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EntityComplexMemberChanged">
+      <MemberSignature Language="C#" Value="public void EntityComplexMemberChanged (string entityMemberName, object complexObject, string complexObjectMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityComplexMemberChanged(string entityMemberName, object complexObject, string complexObjectMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+        <Parameter Name="complexObject" Type="System.Object" />
+        <Parameter Name="complexObjectMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">O nome da propriedade complexa do tipo de entidade que foi alterado.</param>
+        <param name="complexObject">O tipo complexo que contém a propriedade que foram alteradas.</param>
+        <param name="complexObjectMemberName">O nome da propriedade que foram alteradas no tipo complexo.</param>
+        <summary>Notifica o rastreador de alteração que uma propriedade de um tipo complexo foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged%2A>é usado pelo <xref:System.Data.Objects.DataClasses.ComplexObject> para relatórios que uma propriedade é alterada.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityComplexMemberChanging">
+      <MemberSignature Language="C#" Value="public void EntityComplexMemberChanging (string entityMemberName, object complexObject, string complexObjectMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityComplexMemberChanging(string entityMemberName, object complexObject, string complexObjectMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging(System.String,System.Object,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+        <Parameter Name="complexObject" Type="System.Object" />
+        <Parameter Name="complexObjectMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">O nome da propriedade de entidade de nível superior que está sendo alterado.</param>
+        <param name="complexObject">O tipo complexo que contém a propriedade que está sendo alterado.</param>
+        <param name="complexObjectMemberName">O nome da propriedade que está sendo alterado no tipo complexo.</param>
+        <summary>Notifica o rastreador de alteração de uma alteração pendente para uma propriedade complexa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging%2A>é usado pelo <xref:System.Data.Objects.DataClasses.EntityObject> e <xref:System.Data.Objects.DataClasses.ComplexObject> ao relatório de alteração de uma propriedade complexa.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityMemberChanged">
+      <MemberSignature Language="C#" Value="public void EntityMemberChanged (string entityMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityMemberChanged(string entityMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">O nome da propriedade que foi alterada.</param>
+        <summary>Notifica o rastreador de alteração que uma propriedade de um tipo de entidade mudou.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanged%2A>é usado pelo <xref:System.Data.Objects.DataClasses.EntityObject> para relatórios que uma propriedade é alterada.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityMemberChanging">
+      <MemberSignature Language="C#" Value="public void EntityMemberChanging (string entityMemberName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EntityMemberChanging(string entityMemberName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entityMemberName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="entityMemberName">O nome da propriedade que está sendo alterado.</param>
+        <summary>Notifica o rastreador de alteração de uma alteração pendente para uma propriedade de um tipo de entidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityMemberChanging%2A>é usado pelo <xref:System.Data.Objects.DataClasses.EntityObject> para relatório de uma propriedade está sendo alterado.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityState">
+      <MemberSignature Language="C#" Value="public System.Data.EntityState EntityState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.EntityState EntityState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual de um objeto controlado.</summary>
+        <value>Um <see cref="T:System.Data.EntityState" /> que é o estado do objeto controlado.  
+  
+ Para obter mais informações, consulte [resolução de identidade, gerenciamento de estado e controle de alterações](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0) e [de controle de alterações em entidades POCO](http://msdn.microsoft.com/en-us/52d2fc77-5c87-4082-a8e2-a2952ceb8461).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

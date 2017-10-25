@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.CSharp">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.CSharp" /> namespace contém classes que oferecem suporte à compilação e geração de código usando a linguagem c#.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

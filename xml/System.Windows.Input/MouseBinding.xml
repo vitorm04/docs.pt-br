@@ -1,0 +1,282 @@
+<Type Name="MouseBinding" FullName="System.Windows.Input.MouseBinding">
+  <TypeSignature Language="C#" Value="public class MouseBinding : System.Windows.Input.InputBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MouseBinding extends System.Windows.Input.InputBinding" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseBinding" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputBinding</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Associa um <see cref="T:System.Windows.Input.MouseGesture" /> a um <see cref="T:System.Windows.Input.RoutedCommand" /> (ou a outra implementação de <see cref="T:System.Windows.Input.ICommand" />).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Input.MouseBinding> associa um <xref:System.Windows.Input.MouseGesture> com um <xref:System.Windows.Input.ICommand> implementação. <xref:System.Windows.Input.RoutedCommand>é a implementação principal do <xref:System.Windows.Input.ICommand> a interface para o [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] ordenar o sistema. Em geral, quando o <xref:System.Windows.Input.MouseGesture> é executado, o comando é invocado, embora o comportamento do comando adicional é influenciado por fatores de comando específico, como o <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> valor.  Para obter mais informações sobre comandos, consulte [Visão geral de comandos](~/docs/framework/wpf/advanced/commanding-overview.md).  
+  
+ Ao definir um <xref:System.Windows.Input.MouseBinding> na [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)], há duas maneiras para especificar o <xref:System.Windows.Input.MouseGesture>. O primeiro modo para estabelecer um <xref:System.Windows.Input.MouseBinding> na [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] é definir o <xref:System.Windows.Input.MouseBinding.Gesture%2A> atributo do <xref:System.Windows.Input.MouseBinding> elemento, que permite uma sintaxe especificar ações do mouse e modificadores como uma única cadeia de caracteres; por exemplo, "CTRL + LeftClick". A segunda maneira é definir o <xref:System.Windows.Input.MouseBinding.MouseAction%2A> atributo o <xref:System.Windows.Input.MouseBinding> elemento. Ambos os modos de configuração de <xref:System.Windows.Input.MouseGesture> são equivalentes e modificar o mesmo objeto subjacente, mas haverá um conflito se os dois são usados.  No caso de quando o <xref:System.Windows.Input.MouseBinding.MouseAction%2A> e <xref:System.Windows.Input.MouseBinding.Gesture%2A> atributos são definidos, o gesto é inválido. Em geral, é recomendável que você use somente o <xref:System.Windows.Input.KeyBinding.Gesture%2A> de atributo de [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], mesmo se você não especificar modificadores; Isso evita a ambiguidade, fornece a sintaxe mais simplificada e fornece a representação mais simples para serialização.  
+  
+ Um <xref:System.Windows.Input.MouseBinding> podem ser definidas em um objeto específico ou no nível de classe Registrando um <xref:System.Windows.Input.CommandManager.RegisterClassInputBinding%2A> no <xref:System.Windows.Input.CommandManager> classe. A maneira mais comum para definir um <xref:System.Windows.Input.MouseBinding> está dentro do modelo de controle, definindo o <xref:System.Windows.UIElement.InputBindings%2A> propriedade [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] declarando um ou mais <xref:System.Windows.Input.MouseBinding> ou <xref:System.Windows.Input.KeyBinding> elementos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Windows.Input.MouseBinding> para associar um <xref:System.Windows.Input.MouseGesture> para um <xref:System.Windows.Input.RoutedCommand>.  
+  
+ [!code-xaml[commandlibrarysnippets#MouseBindingMouseGestureXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml#mousebindingmousegesturexaml)]  
+  
+ [!code-csharp[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#mousebindingaddedtoinputbinding)]
+ [!code-vb[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#mousebindingaddedtoinputbinding)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.MouseBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseBinding (System.Windows.Input.ICommand command, System.Windows.Input.MouseGesture gesture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Input.ICommand command, class System.Windows.Input.MouseGesture gesture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseBinding.#ctor(System.Windows.Input.ICommand,System.Windows.Input.MouseGesture)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Windows.Input.ICommand" />
+        <Parameter Name="gesture" Type="System.Windows.Input.MouseGesture" />
+      </Parameters>
+      <Docs>
+        <param name="command">O comando associado com o gesto.</param>
+        <param name="gesture">O gesto associado com o comando.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.MouseBinding" /> classe usando o gesto de mouse e o comando especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como associar um <xref:System.Windows.Input.ICommand> com um <xref:System.Windows.Input.MouseGesture> usando um <xref:System.Windows.Input.MouseBinding.MouseAction%2A>.  
+  
+ [!code-csharp[commandlibrarysnippets#MouseBindingAddedCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#mousebindingaddedcommand)]
+ [!code-vb[commandlibrarysnippets#MouseBindingAddedCommand](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#mousebindingaddedcommand)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseBinding.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O objeto para clonar.</param>
+        <summary>Copia os valores base (não animado) das propriedades do objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseBinding.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O objeto para clonar.</param>
+        <summary>Copia os valores atuais das propriedades do objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseBinding.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um <see cref="T:System.Windows.Input.MouseBinding" />.</summary>
+        <returns>O novo objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gesture">
+      <MemberSignature Language="C#" Value="public override System.Windows.Input.InputGesture Gesture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.InputGesture Gesture" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseBinding.Gesture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Input.MouseGestureConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Input.MouseGestureValueSerializer))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputGesture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o gesto associado a essa <see cref="T:System.Windows.Input.MouseBinding" />.</summary>
+        <value>O gesto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Input.MouseGesture> é um <xref:System.Windows.Input.MouseAction> com ou sem um conjunto de <xref:System.Windows.Input.ModifierKeys>.  Ao contrário de um <xref:System.Windows.Input.KeyGesture>, um <xref:System.Windows.Input.MouseGesture> não precisa ter uma chave de modificador associada a ele.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostram como criar uma associação entre um <xref:System.Windows.Input.MouseGesture> para um <xref:System.Windows.Input.RoutedCommand>.  
+  
+ [!code-xaml[commandlibrarysnippets#MouseBindingGestureXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml#mousebindinggesturexaml)]  
+  
+ [!code-csharp[commandlibrarysnippets#MouseBindingGesture](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#mousebindinggesture)]
+ [!code-vb[commandlibrarysnippets#MouseBindingGesture](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#mousebindinggesture)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <see cref="P:System.Windows.Input.MouseBinding.Gesture" /> é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseBinding.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O objeto para clonar.</param>
+        <summary>Cria a instância de um clone congelado especificada <see cref="T:System.Windows.Freezable" /> usando valores de propriedade base (não animado).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected override void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseBinding.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O objeto para clonar.</param>
+        <summary>Cria a instância atual um clone congelado especificada <see cref="T:System.Windows.Freezable" />. Se o objeto tem propriedades de dependência animada, seus valores atuais de animado serão copiados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseAction">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseAction MouseAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseAction MouseAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseBinding.MouseAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Input.MouseAction" /> associado a esse <see cref="T:System.Windows.Input.MouseBinding" />.</summary>
+        <value>A ação do mouse.  O padrão é <see cref="F:System.Windows.Input.MouseAction.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de um <xref:System.Windows.Input.KeyGesture>, um <xref:System.Windows.Input.MouseGesture> não precisa ser associado uma tecla modificadora.  Portanto um <xref:System.Windows.Input.MouseAction> por si só, como <xref:System.Windows.Input.MouseAction.MiddleClick>, pode ser um válido <xref:System.Windows.Input.MouseGesture>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma associação entre um <xref:System.Windows.Input.MouseAction> e um <xref:System.Windows.Input.RoutedCommand>.  
+  
+ [!code-xaml[commandlibrarysnippets#MouseBindingMouseActionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml#mousebindingmouseactionxaml)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseActionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MouseActionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MouseActionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseBinding.MouseActionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Input.MouseBinding.MouseAction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

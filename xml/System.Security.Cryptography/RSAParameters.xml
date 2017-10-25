@@ -1,0 +1,308 @@
+<Type Name="RSAParameters" FullName="System.Security.Cryptography.RSAParameters">
+  <TypeSignature Language="C#" Value="public struct RSAParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi serializable sealed beforefieldinit RSAParameters extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.RSAParameters" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os parâmetros padrão do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.RSA> classe expõe um <xref:System.Security.Cryptography.RSA.ExportParameters%2A> método que permite que você recupere a chave RSA bruta na forma de um <xref:System.Security.Cryptography.RSAParameters> estrutura. Noções básicas sobre o conteúdo desta estrutura requer familiaridade com como o <xref:System.Security.Cryptography.RSA> algoritmo funciona. A próxima seção descreve o algoritmo brevemente.  
+  
+## <a name="rsa-algorithm"></a>Algoritmo RSA  
+ Para gerar um par de chaves, comece criando duas os números primos grandes denominado p e q. Esses números são multiplicados e o resultado é chamado n. Como p e q são ambos os números primos, os únicos fatores de n, p, q e n são 1.  
+  
+ Se considerarmos apenas números menores que n, a contagem de números primos relativamente a n, ou seja, não têm nenhum fatores em comum com n, igual a (p - 1)(q-1).  
+  
+ Agora que você escolher um número e, que é relativamente principal para o valor calculado. Agora, a chave pública é representada como {e, n}.  
+  
+ Para criar a chave privada, você deve calcular d, que é um número, de modo que (d)(e) mod (p - 1)(q-1) = 1. De acordo com o algoritmo Euclidiano, a chave privada é agora {d, n}.  
+  
+ Criptografia de m de texto sem formatação para o texto cifrado c é definida como c = (m ^ e) n mod. Descriptografia, em seguida, deve ser definida como m = (c ^ d) n mod.  
+  
+## <a name="summary-of-fields"></a>Resumo de campos  
+ Seção A.1.2 do [PKCS n º 1: padrão de criptografia RSA](http://go.microsoft.com/fwlink/?LinkId=113155) na RSA Laboratories Web site define um formato para as chaves privadas de RSA.  
+  
+ A tabela a seguir resume os campos do <xref:System.Security.Cryptography.RSAParameters> estrutura. A terceira coluna fornece o campo correspondente na seção A.1.2 de [PKCS n º 1: padrão de criptografia RSA](http://go.microsoft.com/fwlink/?LinkId=113155).  
+  
+|Campo do <xref:System.Security.Cryptography.RSAParameters>|Contém|Campo correspondente do PKCS n º 1|  
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------|  
+|<xref:System.Security.Cryptography.RSAParameters.D>|d, o expoente privado|privateExponent|  
+|<xref:System.Security.Cryptography.RSAParameters.DP>|d mod (1 - p)|exponent1|  
+|<xref:System.Security.Cryptography.RSAParameters.DQ>|d mod (1 - p)|exponent2|  
+|<xref:System.Security.Cryptography.RSAParameters.Exponent>|e, o expoente público|publicExponent|  
+|<xref:System.Security.Cryptography.RSAParameters.InverseQ>|(InverseQ) (p) = 1 p mod|coeficiente|  
+|<xref:System.Security.Cryptography.RSAParameters.Modulus>|n|módulo|  
+|<xref:System.Security.Cryptography.RSAParameters.P>|p|prime1|  
+|<xref:System.Security.Cryptography.RSAParameters.Q>|q|prime2|  
+  
+ A segurança do RSA deriva do fato de que, a chave pública {eletrônico, n}, é impraticável para calcular d, diretamente ou por fatorar n em p e q. Portanto, qualquer parte da chave relacionada ao d, p e q deve ser mantida em segredo. Se você chamar  
+  
+ <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A>e solicite apenas as informações da chave pública, isso é porque você receberá apenas <xref:System.Security.Cryptography.RSAParameters.Exponent> e <xref:System.Security.Cryptography.RSAParameters.Modulus>. Os outros campos estão disponíveis somente se você tem acesso à chave privada e você solicitá-lo.  
+  
+ <xref:System.Security.Cryptography.RSAParameters>não é criptografado de qualquer forma, portanto você deve ter cuidado ao usá-lo com as informações da chave privadas. Na verdade, nenhum dos campos que contêm informações de chave privada pode ser serializado. Se você tentar serializar um <xref:System.Security.Cryptography.RSAParameters> chamar de estrutura com uma arquitetura de comunicação remota ou usando um dos serializadores, você receberá apenas informações de chave pública. Se você deseja passar as informações de chave privada, você precisará enviar os dados manualmente. Em todos os casos, se qualquer pessoa pode derivar os parâmetros, a chave que você transmite se tornará inútil.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="D">
+      <MemberSignature Language="C#" Value="public byte[] D;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] D" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.D" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="D" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DP">
+      <MemberSignature Language="C#" Value="public byte[] DP;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] DP" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.DP" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="DP" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DQ">
+      <MemberSignature Language="C#" Value="public byte[] DQ;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] DQ" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.DQ" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="DQ" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exponent">
+      <MemberSignature Language="C#" Value="public byte[] Exponent;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Exponent" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.Exponent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="Exponent" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InverseQ">
+      <MemberSignature Language="C#" Value="public byte[] InverseQ;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] InverseQ" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.InverseQ" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="InverseQ" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modulus">
+      <MemberSignature Language="C#" Value="public byte[] Modulus;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Modulus" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.Modulus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="Modulus" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="P">
+      <MemberSignature Language="C#" Value="public byte[] P;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] P" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.P" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="P" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Q">
+      <MemberSignature Language="C#" Value="public byte[] Q;" />
+      <MemberSignature Language="ILAsm" Value=".field public unsigned int8[] Q" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.RSAParameters.Q" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o parâmetro <see langword="Q" /> do algoritmo <see cref="T:System.Security.Cryptography.RSA" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

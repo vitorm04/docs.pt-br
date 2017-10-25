@@ -1,0 +1,284 @@
+<Type Name="HttpFileCollection" FullName="System.Web.HttpFileCollection">
+  <TypeSignature Language="C#" Value="public sealed class HttpFileCollection : System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpFileCollection extends System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpFileCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso aos arquivos carregados por um cliente e os organiza.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os clientes codificar arquivos e transmiti-los no corpo de conteúdo usando o formato MIME de várias partes com um HTTP `Content-Type` cabeçalho de `multipart/form-data`. ASP.NET extrai os arquivos codificados do corpo de conteúdo em membros individuais de um <xref:System.Web.HttpFileCollection>. Métodos e propriedades de <xref:System.Web.HttpPostedFile> classe fornecem acesso ao conteúdo e propriedades de cada arquivo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como acessar o <xref:System.Web.HttpFileCollection> coleção retornada do <xref:System.Web.HttpRequest.Files%2A> propriedade o <xref:System.Web.HttpRequest> objeto. O <xref:System.Web.HttpFileCollection> coleção é preenchida por dois <xref:System.Web.UI.WebControls.FileUpload> controles na página da Web. Itens na coleção de arquivo são exibidos em um <xref:System.Web.UI.WebControls.BulletedList> controle.  
+  
+ [!code-aspx-csharp[System.Web.HttpFileCollection1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.HttpFileCollection1/cs/HttpFileCollectionCS.aspx#1)]
+ [!code-aspx-vb[System.Web.HttpFileCollection1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.HttpFileCollection1/vb/HttpFileCollectionVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public string[] AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de cadeia de caracteres que contém as chaves (nomes) de todos os membros da coleção de arquivos.</summary>
+        <value>Uma matriz de nomes de arquivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir carrega o <xref:System.Web.HttpFileCollection> nomes transmitidos de um cliente em uma matriz de cadeia de caracteres.  
+  
+ [!code-csharp[Classic HttpFileCollection.AllKeys Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpFileCollection.AllKeys Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpFileCollection.AllKeys Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpFileCollection.AllKeys Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">O <see cref="T:System.Array" /> de destino.</param>
+        <param name="index">O índice da matriz de destino onde a cópia inicia.</param>
+        <summary>Copia os membros da coleção de arquivo para um <see cref="T:System.Array" /> começando no índice especificado da matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir copia a coleção de arquivo inteiro em uma nova <xref:System.Array> objeto.  
+  
+ [!code-csharp[Classic HttpFileCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpFileCollection.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpFileCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpFileCollection.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.HttpPostedFile Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.HttpPostedFile Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do objeto a ser retornado da coleção de arquivo.</param>
+        <summary>Retorna o <see cref="T:System.Web.HttpPostedFile" /> objeto com o índice numérico especificado da coleção de arquivos.</summary>
+        <returns>Um objeto <see cref="T:System.Web.HttpPostedFile" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir recupera o primeiro objeto de arquivo (índice = 0) da coleção enviada pelo cliente e recupera o nome do arquivo representado pelo objeto.  
+  
+ [!code-csharp[Classic HttpFileCollection.Get1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpFileCollection.Get1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpFileCollection.Get1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpFileCollection.Get1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.HttpPostedFile Get (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.HttpPostedFile Get(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do objeto a ser retornado de uma coleção de arquivos.</param>
+        <summary>Retorna o objeto <see cref="T:System.Web.HttpPostedFile" /> com o nome especificado da coleção de arquivos.</summary>
+        <returns>Um objeto <see cref="T:System.Web.HttpPostedFile" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir recupera o objeto de arquivo denominado "CustInfo" da coleção enviada pelo cliente e recupera o nome do arquivo real representado pelo objeto.  
+  
+ [!code-csharp[Classic HttpFileCollection.Get Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpFileCollection.Get Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpFileCollection.Get Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpFileCollection.Get Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do objeto a ser retornado.</param>
+        <summary>Retorna o nome do <see cref="T:System.Web.HttpFileCollection" /> membro com o índice numérico especificado.</summary>
+        <returns>O nome do <see cref="T:System.Web.HttpFileCollection" /> membro especificado por <paramref name="index" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir percorre a coleção de arquivos e executa a ação se um membro da coleção de arquivo com o nome "CustInfo" foi encontrado.  
+  
+ [!code-csharp[Classic HttpFileCollection.GetKey Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpFileCollection.GetKey Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpFileCollection.GetKey Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpFileCollection.GetKey Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMultiple">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Web.HttpPostedFile&gt; GetMultiple (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class System.Web.HttpPostedFile&gt; GetMultiple(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpFileCollection.GetMultiple(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Web.HttpPostedFile&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser comparado.</param>
+        <summary>Retorna todos os arquivos que correspondem ao nome especificado.</summary>
+        <returns>A coleção de arquivos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma nova instância de coleção cada vez que ele é chamado. Esse método deve ser chamado uma vez por nome por solicitação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.HttpPostedFile this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpPostedFile Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item a ser obtido da coleção de arquivos.</param>
+        <summary>Obtém o objeto com o índice numérico especificado do <see cref="T:System.Web.HttpFileCollection" />.</summary>
+        <value>O <see cref="T:System.Web.HttpPostedFile" /> especificado por <paramref name="index" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir recupera o primeiro objeto de arquivo (índice = 0) da coleção enviada pelo cliente e recupera o nome do arquivo real representado pelo objeto.  
+  
+ [!code-csharp[Classic HttpFileCollection.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpFileCollection.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpFileCollection.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpFileCollection.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.HttpPostedFile this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.HttpPostedFile Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpFileCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpPostedFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Nome do item a ser retornado.</param>
+        <summary>Obtém o objeto com o nome especificado da coleção de arquivos.</summary>
+        <value>O <see cref="T:System.Web.HttpPostedFile" /> especificado por <paramref name="name" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir recupera o objeto de arquivo denominado "CustInfo" da coleção enviada pelo cliente e recupera o nome do arquivo real representado pelo objeto.  
+  
+ [!code-csharp[Classic HttpFileCollection.this Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HttpFileCollection.this Example/CS/source.cs#1)]
+ [!code-vb[Classic HttpFileCollection.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HttpFileCollection.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

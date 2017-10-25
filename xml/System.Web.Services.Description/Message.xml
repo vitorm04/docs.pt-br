@@ -1,0 +1,214 @@
+<Type Name="Message" FullName="System.Web.Services.Description.Message">
+  <TypeSignature Language="C#" Value="public sealed class Message : System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Message extends System.Web.Services.Description.NamedItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.Message" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.NamedItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPoint("Extensions")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma definição abstrata de dados passados por um serviço Web XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Services.Description.Message> pode conter informações orientado por documentos ou orientado pelo procedimento. Mensagens orientadas a procedimento contêm parâmetros e valores de retorno, enquanto mensagens orientado por documentos contêm os documentos.  
+  
+ O <xref:System.Web.Services.Description.Message> classe corresponde a um WSDL Web Services Description Language () `message` elemento delimitados pelo `definitions` elemento raiz. Para obter mais informações sobre WSDL, consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ [!code-cpp[DescriptionNamespaceSample1#13](~/samples/snippets/cpp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CPP/descriptionnamespacesample1.cpp#13)]
+ [!code-csharp[DescriptionNamespaceSample1#13](~/samples/snippets/csharp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CS/descriptionnamespacesample1.cs#13)]
+ [!code-vb[DescriptionNamespaceSample1#13](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DescriptionNamespaceSample1/VB/descriptionnamespacesample1.vb#13)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Message ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.Message.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.Message" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection Extensions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.Message.Extensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.Message" />.</summary>
+        <value>O <see cref="T:System.Web.Services.Description.ServiceDescriptionFormatExtensionCollection" /> associado a este <see cref="T:System.Web.Services.Description.Message" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindPartByName">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MessagePart FindPartByName (string partName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.MessagePart FindPartByName(string partName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.Message.FindPartByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MessagePart</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partName">Uma cadeia de caracteres que nomeia a <see cref="T:System.Web.Services.Description.MessagePart" /> a ser retornado.</param>
+        <summary>Pesquisas de <see cref="T:System.Web.Services.Description.MessagePartCollection" /> retornado pelo <see cref="P:System.Web.Services.Description.Message.Parts" /> propriedade e retorna o nome <see cref="T:System.Web.Services.Description.MessagePart" />.</summary>
+        <returns>Um <see cref="T:System.Web.Services.Description.MessagePart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método `FindPartByName`.  
+  
+ [!code-cpp[Message_Samples3#3](~/samples/snippets/cpp/VS_Snippets_Remoting/Message_Samples3/CPP/message_samples3.cpp#3)]
+ [!code-csharp[Message_Samples3#3](~/samples/snippets/csharp/VS_Snippets_Remoting/Message_Samples3/CS/message_samples3.cs#3)]
+ [!code-vb[Message_Samples3#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message_Samples3/VB/message_samples3.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Não <see cref="T:System.Web.Services.Description.MessagePart" /> com o nome especificado existe na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindPartsByName">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MessagePart[] FindPartsByName (string[] partNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Description.MessagePart[] FindPartsByName(string[] partNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.Message.FindPartsByName(System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MessagePart[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="partNames">Uma matriz de nomes do <see cref="T:System.Web.Services.Description.MessagePart" /> instâncias a ser retornado.</param>
+        <summary>Pesquisas de <see cref="T:System.Web.Services.Description.MessagePartCollection" /> retornado pelo <see cref="P:System.Web.Services.Description.Message.Parts" /> propriedade e retorna uma matriz do tipo <see cref="T:System.Web.Services.Description.MessagePart" /> que contém as instâncias nomeadas.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Web.Services.Description.MessagePart" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do método `FindPartsByName`.  
+  
+ [!code-cpp[Message_Samples3#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Message_Samples3/CPP/message_samples3.cpp#1)]
+ [!code-csharp[Message_Samples3#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Message_Samples3/CS/message_samples3.cs#1)]
+ [!code-vb[Message_Samples3#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Message_Samples3/VB/message_samples3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Não <see cref="T:System.Web.Services.Description.MessagePart" /> instâncias com os nomes especificados existem na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Parts">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.MessagePartCollection Parts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.MessagePartCollection Parts" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.Message.Parts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("part")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.MessagePartCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção do <see cref="T:System.Web.Services.Description.MessagePart" /> objetos contidos no <see cref="T:System.Web.Services.Description.Message" />.</summary>
+        <value>Um <see cref="T:System.Web.Services.Description.MessagePartCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de <xref:System.Web.Services.Description.Message.Parts%2A> propriedade.  
+  
+ [!code-cpp[DescriptionNamespaceSample1#13](~/samples/snippets/cpp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CPP/descriptionnamespacesample1.cpp#13)]
+ [!code-csharp[DescriptionNamespaceSample1#13](~/samples/snippets/csharp/VS_Snippets_Remoting/DescriptionNamespaceSample1/CS/descriptionnamespacesample1.cs#13)]
+ [!code-vb[DescriptionNamespaceSample1#13](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DescriptionNamespaceSample1/VB/descriptionnamespacesample1.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescription">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescription ServiceDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescription ServiceDescription" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.Message.ServiceDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Description.ServiceDescription" /> deles atual <see cref="T:System.Web.Services.Description.Message" /> é um membro.</summary>
+        <value>Um <see cref="T:System.Web.Services.Description.ServiceDescription" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do <xref:System.Web.Services.Description.ServiceDescription> propriedade.  
+  
+ Message_Samples3 n º 2  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

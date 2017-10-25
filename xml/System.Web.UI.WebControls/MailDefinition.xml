@@ -1,0 +1,618 @@
+<Type Name="MailDefinition" FullName="System.Web.UI.WebControls.MailDefinition">
+  <TypeSignature Language="C#" Value="public sealed class MailDefinition : System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MailDefinition extends System.Object implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MailDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.EmptyStringExpandableObjectConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true, "")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que um controle criar mensagens de email de arquivos de texto ou cadeias de caracteres. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition> classe pode ser usada por todos os controles para criar um <xref:System.Net.Mail.MailMessage> objeto a partir de um arquivo de texto ou uma cadeia de caracteres que contém o corpo da mensagem de email. Use o <xref:System.Web.UI.WebControls.MailDefinition> predefinidos de classe para simplificar a criação de mensagens de email a ser enviado por um controle. Se você deseja enviar um email não usando um controle, consulte o <xref:System.Net.Mail> classe.  
+  
+ Você pode fazer substituições de texto no corpo da mensagem de email, passando para o <xref:System.Web.UI.WebControls.MailDefinition.CreateMailMessage%2A> método um <xref:System.Collections.IDictionary> instância que mapeia cadeias de caracteres para suas substituições.  
+  
+ O <xref:System.Net.Mail.MailMessage> objeto criado pelo <xref:System.Web.UI.WebControls.MailDefinition> classe é enviada usando o <xref:System.Net.Mail.SmtpClient.Send%2A> método o <xref:System.Net.Mail.SmtpClient> classe. Para ser capaz de enviar o email, você deve configurar um servidor de email SMTP no seu arquivo Web. config. Para obter mais informações, consulte o [ &lt;smtp&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md).  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.MailDefinition> classe não dá suporte à associação de dados. Propriedades do <xref:System.Web.UI.WebControls.MailDefinition> classe não pode ser associada a dados usando o `<%#   %>` sintaxe de expressão de associação de dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma mensagem de email de Internet de uma página de Web Forms. Você pode inserir o texto da mensagem na forma ou digite o nome de um arquivo de texto a ser usado como o corpo do email. O código define duas substituições de cadeia de caracteres da mensagem: a lista de destinatários do formulário de caixa de texto substitui a cadeia de caracteres "\<a % >" e o texto especificado no <xref:System.Web.UI.WebControls.MailDefinition.From%2A> propriedade substitui a cadeia de caracteres "\<% de % >".  
+  
+ Na página de Web Forms gera esse código, você pode clicar em **criar email e exibir apenas** para criar uma mensagem de email e exibir as propriedades do <xref:System.Net.Mail.MailMessage> objeto na página da Web. Clique em **criar email e enviar** para exibir a mensagem de email na página da Web e enviar a mensagem para os destinatários por email de Internet.  
+  
+> [!IMPORTANT]
+>  Este controle tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[MailDefinitionClassSample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#1)]
+ [!code-aspx-vb[MailDefinitionClassSample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.MailDefinition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BodyFileName">
+      <MemberSignature Language="C#" Value="public string BodyFileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BodyFileName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.BodyFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.MailDefinitionBodyFileNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty("*.*")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do arquivo que contém o texto do corpo da mensagem de email.</summary>
+        <value>O nome do arquivo que contém o texto do corpo de mensagem. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade especifica o local do arquivo de texto a ser usado para o corpo da mensagem de email.  
+  
+ O <xref:System.Web.UI.WebControls.MailDefinition.CreateMailMessage%28System.String%2CSystem.Collections.IDictionary%2CSystem.Web.UI.Control%29> método usa sua `owner` parâmetro para mapear o <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade a um caminho no servidor. Se o `owner` parâmetro aponta para um controle em uma página. aspx ou para a página propriamente dita, o <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade aponta para um arquivo de texto no mesmo diretório que a página. aspx. Por exemplo, se a página. aspx está localizada em C:\inetpub\wwwroot\default.aspx, o <xref:System.Web.UI.WebControls.MailDefinition> controle procurará o arquivo de texto no diretório C:\inetpub\wwwroot.  
+  
+ Se o <xref:System.Web.UI.WebControls.MailDefinition> classe é usada em um controle de usuário contido em um arquivo. ascx, o <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade aponta para um arquivo de texto localizado no mesmo diretório que o controle de usuário. Por exemplo, se a página. aspx está localizada em C:\inetpub\wwwroot\default.aspx e o controle de usuário está no C:\inetpub\wwwroot\controls\control.aspx, o <xref:System.Web.UI.WebControls.MailDefinition> objeto procurará o arquivo de texto no diretório C:\inetpub\wwwroot\controls.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade para o texto inserido em um <xref:System.Web.UI.WebControls.TextBox> controle em uma página de Web Forms.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#3)]
+ [!code-vb[MailDefinitionClassSample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CC">
+      <MemberSignature Language="C#" Value="public string CC { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CC" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.CC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista separada por vírgulas de endereços de email para enviar uma cópia (CC) da mensagem.</summary>
+        <value>Uma lista separada por vírgulas de endereços de email para enviar uma cópia (CC) da mensagem. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition.CC%2A> propriedade contém uma lista de destinatários adicionais da mensagem de email.  
+  
+ Se o <xref:System.Web.UI.WebControls.MailDefinition.CC%2A> propriedade contém um endereço de email formado incorretamente, o <xref:System.Net.Mail.SmtpClient.Send%2A> método lança um <xref:System.Web.HttpException> exceção e a mensagem de email não são enviadas.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.MailDefinition.CC%2A> propriedade para o texto inserido em um <xref:System.Web.UI.WebControls.TextBox> controle em uma página de Web Forms.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#4)]
+ [!code-vb[MailDefinitionClassSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMailMessage">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.MailMessage CreateMailMessage (string recipients, System.Collections.IDictionary replacements, System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Mail.MailMessage CreateMailMessage(string recipients, class System.Collections.IDictionary replacements, class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.CreateMailMessage(System.String,System.Collections.IDictionary,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.MailMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recipients" Type="System.String" />
+        <Parameter Name="replacements" Type="System.Collections.IDictionary" />
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="recipients">Uma lista separada por vírgula dos destinatários da mensagem.</param>
+        <param name="replacements">Um <see cref="T:System.Collections.IDictionary" /> que contém uma lista de cadeias de caracteres e suas cadeias de caracteres de substituição.</param>
+        <param name="owner">O <see cref="T:System.Web.UI.Control" /> que possui essa <see cref="T:System.Web.UI.WebControls.MailDefinition" />.</param>
+        <summary>Cria uma mensagem de email de um arquivo de texto para enviar por meio de SMTP (Simple Mail Transfer Protocol).</summary>
+        <returns>A mensagem de email de um arquivo de texto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition.CreateMailMessage%2A> método cria um novo <xref:System.Net.Mail.MailMessage> objeto que pode ser enviado usando o <xref:System.Net.Mail.SmtpClient.Send%2A?displayProperty=nameWithType> método.  
+  
+ O <xref:System.Web.Mail.MailMessage.BodyFormat%2A> propriedade deve ser definida para indicar se a mensagem de email deve ser formatada como texto sem formatação (<xref:System.Web.Mail.MailFormat?displayProperty=nameWithType>) ou HTML (<xref:System.Web.Mail.MailFormat?displayProperty=nameWithType>).  
+  
+ O `recipients` parâmetro contém uma lista separada por vírgula dos destinatários da mensagem de email. Se o `recipients` parâmetro contém um endereço de email de Internet formatado incorretamente, o <xref:System.Net.Mail.SmtpClient.Send%2A> método lança um <xref:System.Web.HttpException> exceção e a mensagem de email não são enviadas.  
+  
+ O `replacements` parâmetro é um <xref:System.Collections.IDictionary> instância que contém uma lista de cadeias de caracteres a substituir. Cadeias de caracteres são substituídas na ordem na qual eles foram adicionados para o <xref:System.Collections.IDictionary> coleta e eles podem substituir substituições anteriores.  
+  
+ O `owner` parâmetro indica que o controle é o pai do <xref:System.Web.UI.WebControls.MailDefinition> controle. Determina qual diretório para procurar o arquivo de texto especificado no <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Specialized.ListDictionary> objeto que define duas cadeias de caracteres ("\<a % >" e "\<% de % >") que são substituídos na mensagem de email.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#7](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#7)]
+ [!code-vb[MailDefinitionClassSample#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#7)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.MailDefinition.CreateMailMessage%2A> método para criar uma nova mensagem de email de um arquivo de texto.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#8](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#8)]
+ [!code-vb[MailDefinitionClassSample#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="replacements" />não contém cadeias de caracteres.</exception>
+        <exception cref="T:System.Web.HttpException">O valo <see langword="From" /> na seção SMTP do arquivo de configuração é <see langword="null" /> ou cadeia de caracteres vazia  
+  
+ \- ou -  
+  
+ <paramref name="recipients" /> contém um endereço de email incorreto.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMailMessage">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.MailMessage CreateMailMessage (string recipients, System.Collections.IDictionary replacements, string body, System.Web.UI.Control owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.Mail.MailMessage CreateMailMessage(string recipients, class System.Collections.IDictionary replacements, string body, class System.Web.UI.Control owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.CreateMailMessage(System.String,System.Collections.IDictionary,System.String,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.MailMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recipients" Type="System.String" />
+        <Parameter Name="replacements" Type="System.Collections.IDictionary" />
+        <Parameter Name="body" Type="System.String" />
+        <Parameter Name="owner" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="recipients">A lista separada por vírgula dos destinatários.</param>
+        <param name="replacements">Um <see cref="T:System.Collections.IDictionary" /> que contém uma lista de cadeias de caracteres e suas cadeias de caracteres de substituição.</param>
+        <param name="body">O texto da mensagem de email.</param>
+        <param name="owner">O <see cref="T:System.Web.UI.Control" /> que possui essa <see cref="T:System.Web.UI.WebControls.MailDefinition" />.</param>
+        <summary>Cria uma mensagem de email com substituições de um arquivo de texto para enviar por meio do protocolo SMTP.</summary>
+        <returns>A mensagem de email com substituições de um arquivo de texto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition.CreateMailMessage%2A> método cria um novo <xref:System.Net.Mail.MailMessage> objeto que pode ser enviado com o <xref:System.Net.Mail.SmtpClient.Send%2A?displayProperty=nameWithType> método.  
+  
+ O `recipients` parâmetro contém uma lista separada por vírgula dos destinatários da mensagem de email. Se o `recipients` parâmetro contém um endereço de email de Internet formatado incorretamente, o <xref:System.Net.Mail.SmtpClient.Send%2A> método lança um <xref:System.Web.HttpException> exceção e a mensagem de email não são enviadas.  
+  
+ O `replacements` parâmetro é um <xref:System.Collections.IDictionary> instância que contém uma lista de cadeias de caracteres a substituir. Cadeias de caracteres são substituídas na ordem na qual eles foram adicionados para o <xref:System.Collections.IDictionary> coleta e eles podem substituir substituições anteriores.  
+  
+ O `body` parâmetro contém o texto da mensagem de email.  
+  
+ O `owner` parâmetro indica que o controle é o pai do <xref:System.Web.UI.WebControls.MailDefinition> controle. Determina qual diretório para procurar o arquivo de texto especificado no <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Collections.Specialized.ListDictionary> objeto que define duas cadeias de caracteres ("\<a % >" e "\<% de % >") que são substituídos na mensagem de email.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#7](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#7)]
+ [!code-vb[MailDefinitionClassSample#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#7)]  
+  
+ O seguinte exemplo de código usa o <xref:System.Web.UI.WebControls.MailDefinition.CreateMailMessage%2A> método para criar uma nova mensagem de email de texto inserido em um <xref:System.Web.UI.WebControls.TextBox> controle em uma página de Web Forms.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#8](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#8)]
+ [!code-vb[MailDefinitionClassSample#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="replacements" />não contém cadeias de caracteres.</exception>
+        <exception cref="T:System.Web.HttpException">O valor <see langword="From" /> na seção SMTP do arquivo de configuração é <see langword="null" /> ou uma cadeia de caracteres vazia ("").  
+  
+ \- ou -  
+  
+ <paramref name="recipients" /> contém um endereço de email incorreto.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="owner" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EmbeddedObjects">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.EmbeddedMailObjectsCollection EmbeddedObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.EmbeddedMailObjectsCollection EmbeddedObjects" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.EmbeddedObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.EmbeddedMailObjectsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Web.UI.WebControls.EmbeddedMailObject" /> instâncias, normalmente usadas para inserir imagens em um <see cref="T:System.Web.UI.WebControls.MailDefinition" /> objeto antes de enviar um email para um usuário.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.EmbeddedMailObjectsCollection" /> instâncias usadas para inserir imagens em um <see cref="T:System.Web.UI.WebControls.MailDefinition" /> objeto antes de enviar um email para um usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.EmbeddedMailObject> itens no <xref:System.Web.UI.WebControls.EmbeddedMailObjectsCollection> coleção retornada pelo <xref:System.Web.UI.WebControls.MailDefinition.EmbeddedObjects%2A> propriedade representam itens para inserir em uma mensagem de email. Esses itens podem incluir arquivos de imagem como logotipos de empresa ou outros elementos gráficos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public string From { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string From" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço de email do remetente da mensagem.</summary>
+        <value>O endereço de email do remetente da mensagem. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition.From%2A> propriedade contém o endereço de email do remetente da mensagem de email. Se o <xref:System.Web.UI.WebControls.MailDefinition.From%2A> propriedade for deixada em branco ou contém um endereço de email formado incorretamente, o <xref:System.Net.Mail.SmtpClient.Send%2A?displayProperty=nameWithType> método lança um <xref:System.Web.HttpException> exceção e a mensagem de email não são enviadas.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.MailDefinition.From%2A> propriedade para o texto inserido em um <xref:System.Web.UI.WebControls.TextBox> controle em uma página de Web Forms.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#5)]
+ [!code-vb[MailDefinitionClassSample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBodyHtml">
+      <MemberSignature Language="C#" Value="public bool IsBodyHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBodyHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.IsBodyHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o corpo do email é HTML.</summary>
+        <value>
+          <see langword="true" />Se o corpo do email é HTML; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MailDefinition.IsBodyHtml%2A> propriedade para especificar se o corpo da mensagem de email contém texto simples ou marcação HTML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Net.Mail.MailPriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Mail.MailPriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.MailPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade da mensagem de email.</summary>
+        <value>Um dos valores de <see cref="T:System.Net.Mail.MailPriority" />. O padrão é <see cref="F:System.Net.Mail.MailPriority.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition.Priority%2A> propriedade indica a prioridade relativa da mensagem de email.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.MailDefinition.Priority%2A> propriedade para o valor escolhido de um <xref:System.Web.UI.WebControls.DropDownList> controle em uma página de Web Forms.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#10](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#10)]
+ [!code-vb[MailDefinitionClassSample#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor selecionado não é um do <see cref="T:System.Net.Mail.MailPriority" /> valores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a linha de assunto da mensagem de email.</summary>
+        <value>A linha de assunto da mensagem de email. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MailDefinition.Subject%2A> propriedade é usada como a linha de assunto da mensagem de email. Ele pode ser deixado vazio.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.MailDefinition.Subject%2A> propriedade para o texto inserido em um <xref:System.Web.UI.WebControls.TextBox> controle em uma página de Web Forms.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.MailDefinition> classe.  
+  
+ [!code-csharp[MailDefinitionClassSample#6](~/samples/snippets/csharp/VS_Snippets_WebNet/MailDefinitionClassSample/CS/maildefinitionsamplecs.aspx#6)]
+ [!code-vb[MailDefinitionClassSample#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MailDefinitionClassSample/VB/maildefinitionsamplevb.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MailDefinition.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle de servidor está salvando alterações no estado de exibição.</summary>
+        <value>
+          <see langword="true" /> se o controle estiver marcado para salvar seu estado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.MailDefinition> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.MailDefinition.BodyFileName%2A> e <xref:System.Web.UI.WebControls.EmbeddedMailObject.Path%2A> propriedades não são salvas no <xref:System.Web.UI.Control.ViewState%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Object" /> que representa o estado de controle a ser restaurado.</param>
+        <summary>Restaura informações de estado de exibição de uma solicitação de página anterior salva pelo método <see cref="M:System.Web.UI.IStateManager.SaveViewState" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.MailDefinition> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva alterações de estado de exibição do controle de servidor que ocorreram desde a hora em que ocorreu o postback da página no servidor.</summary>
+        <returns>Estado de exibição atual do controle de servidor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.MailDefinition> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MailDefinition.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Causa o acompanhamento das alterações de estado de exibição para o controle de servidor, para que elas possam ser armazenadas no objeto <see cref="T:System.Web.UI.StateBag" /> do controle de servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.MailDefinition> é convertida em uma interface de <xref:System.Web.UI.IStateManager>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

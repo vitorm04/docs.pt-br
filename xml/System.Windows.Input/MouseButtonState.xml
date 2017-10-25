@@ -1,0 +1,65 @@
+<Type Name="MouseButtonState" FullName="System.Windows.Input.MouseButtonState">
+  <TypeSignature Language="C#" Value="public enum MouseButtonState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseButtonState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseButtonState" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os possíveis estados de um botão do mouse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.MouseButtonState> enumeração Especifica constantes que se relaciona ao estado de um botão do mouse.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos de mouse que determina quais botões são pressionados no momento, verificando o estado de botão de cada botão do mouse.  
+  
+ [!code-csharp[mousesnippetsample#MouseEventArgsMouseButton](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mouseeventargsmousebutton)]
+ [!code-vb[mousesnippetsample#MouseEventArgsMouseButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mouseeventargsmousebutton)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Pressed">
+      <MemberSignature Language="C#" Value="Pressed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.MouseButtonState Pressed = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseButtonState.Pressed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão é pressionado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Released">
+      <MemberSignature Language="C#" Value="Released" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.MouseButtonState Released = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.MouseButtonState.Released" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O botão é liberado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

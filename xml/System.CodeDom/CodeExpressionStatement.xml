@@ -1,0 +1,121 @@
+<Type Name="CodeExpressionStatement" FullName="System.CodeDom.CodeExpressionStatement">
+  <TypeSignature Language="C#" Value="public class CodeExpressionStatement : System.CodeDom.CodeStatement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeExpressionStatement extends System.CodeDom.CodeStatement" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeExpressionStatement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeStatement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma instrução que consiste em uma única expressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.CodeDom.CodeExpressionStatement> contém um <xref:System.CodeDom.CodeExpression> objeto e podem ser adicionados a um <xref:System.CodeDom.CodeStatementCollection> objeto, permitindo que algumas expressões de forma autônoma. Por exemplo, um <xref:System.CodeDom.CodeMethodInvokeExpression> contido por um <xref:System.CodeDom.CodeExpressionStatement> pode representar uma chamada de método sem um valor de retorno.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar uma instância do <xref:System.CodeDom.CodeExpressionStatement> classe usando um <xref:System.CodeDom.CodeExpression> objeto.  
+  
+ [!code-cpp[CodeDomSampleBatch#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomSampleBatch/CPP/class1.cpp#1)]
+ [!code-csharp[CodeDomSampleBatch#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomSampleBatch/CS/class1.cs#1)]
+ [!code-vb[CodeDomSampleBatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomSampleBatch/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeExpressionStatement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeExpressionStatement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeExpressionStatement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeExpressionStatement (System.CodeDom.CodeExpression expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.CodeDom.CodeExpression expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeExpressionStatement.#ctor(System.CodeDom.CodeExpression)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="expression" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="expression">Um <see cref="T:System.CodeDom.CodeExpression" /> para a instrução.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeExpressionStatement" /> classe usando a expressão especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.CodeDom.CodeExpression> do objeto e o utiliza como um parâmetro para inicializar uma instância do <xref:System.CodeDom.CodeExpressionStatement> classe.  
+  
+ [!code-cpp[CodeDomSampleBatch#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomSampleBatch/CPP/class1.cpp#1)]
+ [!code-csharp[CodeDomSampleBatch#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomSampleBatch/CS/class1.cs#1)]
+ [!code-vb[CodeDomSampleBatch#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomSampleBatch/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeExpression Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeExpression Expression" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeExpressionStatement.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão para a instrução.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeExpression" /> que indica a expressão para a instrução.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

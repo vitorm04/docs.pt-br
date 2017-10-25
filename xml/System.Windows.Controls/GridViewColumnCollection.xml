@@ -1,0 +1,189 @@
+<Type Name="GridViewColumnCollection" FullName="System.Windows.Controls.GridViewColumnCollection">
+  <TypeSignature Language="C#" Value="public class GridViewColumnCollection : System.Collections.ObjectModel.ObservableCollection&lt;System.Windows.Controls.GridViewColumn&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit GridViewColumnCollection extends System.Collections.ObjectModel.ObservableCollection`1&lt;class System.Windows.Controls.GridViewColumn&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.GridViewColumnCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.ObservableCollection&lt;System.Windows.Controls.GridViewColumn&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Windows.Controls.GridViewColumn</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Controls.GridViewColumn" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.GridViewColumnCollection> objeto contém um conjunto de <xref:System.Windows.Controls.GridViewColumn> objetos que são normalmente usados para definir as colunas de uma <xref:System.Windows.Controls.GridView> objeto. Um <xref:System.Windows.Controls.GridView> é um <xref:System.Windows.Controls.ListView.View%2A> que define o layout dos dados em um <xref:System.Windows.Controls.ListView> controle.  
+  
+ Para receber notificação de alterações na coleção, monitorar o <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged> evento que é herdado do <xref:System.Collections.ObjectModel.ObservableCollection%601>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewColumnCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Windows.Controls.GridViewColumnCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnCollection.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Windows.Controls.GridViewColumn" /> objetos do <see cref="T:System.Windows.Controls.GridViewColumnCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Windows.Controls.GridViewColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Windows.Controls.GridViewColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnCollection.InsertItem(System.Int32,System.Windows.Controls.GridViewColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Windows.Controls.GridViewColumn" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição para colocar o novo <see cref="T:System.Windows.Controls.GridViewColumn" />.</param>
+        <param name="column">O <see cref="T:System.Windows.Controls.GridViewColumn" /> a ser inserido.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Controls.GridViewColumn" /> na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método cria um novo item no <xref:System.Windows.Controls.GridViewColumnCollection> sem substituir outro item. Para substituir um item na coleção com um novo item, use o <xref:System.Windows.Controls.GridViewColumnCollection.SetItem%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveItem">
+      <MemberSignature Language="C#" Value="protected override void MoveItem (int oldIndex, int newIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void MoveItem(int32 oldIndex, int32 newIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnCollection.MoveItem(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldIndex" Type="System.Int32" />
+        <Parameter Name="newIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="oldIndex">A posição original do <see cref="T:System.Windows.Controls.GridViewColumn" />.</param>
+        <param name="newIndex">A nova posição do <see cref="T:System.Windows.Controls.GridViewColumn" />.</param>
+        <summary>Altera a posição de um <see cref="T:System.Windows.Controls.GridViewColumn" /> na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollectionChanged">
+      <MemberSignature Language="C#" Value="protected override void OnCollectionChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCollectionChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnCollection.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os argumentos de evento.</param>
+        <summary>Gera o <see cref="E:System.Collections.ObjectModel.ObservableCollection`1.CollectionChanged" /> eventos quando o <see cref="T:System.Windows.Controls.GridViewColumnCollection" /> alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnCollection.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do <see cref="T:System.Windows.Controls.GridViewColumn" /> para remover.</param>
+        <summary>Remove um <see cref="T:System.Windows.Controls.GridViewColumn" /> do <see cref="T:System.Windows.Controls.GridViewColumnCollection" /> no índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Windows.Controls.GridViewColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Windows.Controls.GridViewColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.GridViewColumnCollection.SetItem(System.Int32,System.Windows.Controls.GridViewColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Windows.Controls.GridViewColumn" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição na qual o novo <see cref="T:System.Windows.Controls.GridViewColumn" /> substitui o antigo <see cref="T:System.Windows.Controls.GridViewColumn" />.</param>
+        <param name="column">O <see cref="T:System.Windows.Controls.GridViewColumn" /> para colocar na posição especificada.</param>
+        <summary>Substitui o <see cref="T:System.Windows.Controls.GridViewColumn" /> que está no índice especificado com outro <see cref="T:System.Windows.Controls.GridViewColumn" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui uma coluna de <xref:System.Windows.Controls.GridViewColumnCollection> com uma nova coluna. Para inserir uma nova coluna sem substituir a outra coluna, use o <xref:System.Windows.Controls.GridViewColumnCollection.InsertItem%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

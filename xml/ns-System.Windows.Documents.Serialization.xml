@@ -1,0 +1,15 @@
+<Namespace Name="System.Windows.Documents.Serialization">
+  <Docs>
+    <summary>Fornece tipos que oferecem suporte a criação e uso de tempo de execução acessíveis serializadores plug-in que ler e gravar documentos em formatos de dados diferentes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Plug-ins serializadores só podem ser usados com aplicativos de confiança total.  
+  
+ Quando chamado pelo aplicativo, o serializador de plug-in é executado no mesmo thread do aplicativo e pode acessar somente os elementos criados no thread do aplicativo.  Ao criar um serializador de plug-in personalizado, é importante lidar adequadamente com todas as possíveis condições de erro. Uma falha em um serializador de plug-in pode causar um falha do aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

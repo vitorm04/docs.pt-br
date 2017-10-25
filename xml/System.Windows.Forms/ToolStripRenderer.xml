@@ -1,0 +1,2142 @@
+<Type Name="ToolStripRenderer" FullName="System.Windows.Forms.ToolStripRenderer">
+  <TypeSignature Language="C#" Value="public abstract class ToolStripRenderer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ToolStripRenderer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripRenderer" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Manipula a funcionalidade de pintura para objetos <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripRenderer> classe para aplicar um estilo específico ou um tema para uma <xref:System.Windows.Forms.ToolStrip>. Em vez de pintura personalizada um <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripItem> objetos que ela contém, defina o <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> propriedade a um objeto que herda de <xref:System.Windows.Forms.ToolStripRenderer>. A pintura especificada pelo <xref:System.Windows.Forms.ToolStripRenderer> é aplicado ao <xref:System.Windows.Forms.ToolStrip>, bem como os itens que ele contém.  
+  
+ Você pode fazer pintura personalizada no <xref:System.Windows.Forms.ToolStrip> controles de várias maneiras. Assim como acontece com outros controles de formulários do Windows, o <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripItem> têm substituível `OnPaint` métodos e `Paint` eventos. Assim como ocorre com pintura regular, o sistema de coordenadas é relativo à área de cliente do controle, ou seja, o canto superior esquerdo do controle é 0, 0. O `Paint` eventos e `OnPaint` método para um <xref:System.Windows.Forms.ToolStripItem> se comportam como outros eventos de pintura do controle.  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer> classe tem métodos substituíveis para pintar o plano de fundo, plano de fundo do item, imagem de item, seta de item, texto do item e borda do <xref:System.Windows.Forms.ToolStrip>. Os argumentos de evento para esses métodos expõem várias propriedades como retângulos, cores e formatos de texto que você pode ajustar conforme desejado.  
+  
+ Para ajustar apenas alguns aspectos de como um item é pintado, você normalmente substitui o <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ Se você estiver escrevendo um novo item e desejar controlar todos os aspectos de pintura, substitua o método `OnPaint`. No `OnPaint`, você pode usar métodos de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ Por padrão, o <xref:System.Windows.Forms.ToolStrip> é duplo em buffer, aproveitando o <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> configuração.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar um personalizado <xref:System.Windows.Forms.ToolStripRenderer> classe. O `GridStripRenderer` classe personaliza três aspectos do `GridStrip` aparência do controle: `GridStrip` borda, <xref:System.Windows.Forms.ToolStripButton> borda, e <xref:System.Windows.Forms.ToolStripButton> imagem. Para obter uma listagem de código completo, consulte [como: implementar um ToolStripRenderer personalizado](~/docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md).  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#10)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ToolStripRenderer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolStripRenderer" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ToolStripRenderer>é uma classe abstrata, portanto o construtor está disponível somente para classes derivadas dele.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDisabledImage">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Image CreateDisabledImage (System.Drawing.Image normalImage);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Image CreateDisabledImage(class System.Drawing.Image normalImage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.CreateDisabledImage(System.Drawing.Image)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Image</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="normalImage" Type="System.Drawing.Image" />
+      </Parameters>
+      <Docs>
+        <param name="normalImage">A imagem a ser copiada.</param>
+        <summary>Cria uma cópia de escala de cinza de uma determinada imagem.</summary>
+        <returns>Um <see cref="T:System.Drawing.Image" /> que é uma cópia da imagem fornecida, mas com uma matriz de cores de escala de cinza.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawArrow">
+      <MemberSignature Language="C#" Value="public void DrawArrow (System.Windows.Forms.ToolStripArrowRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawArrow(class System.Windows.Forms.ToolStripArrowRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawArrow(System.Windows.Forms.ToolStripArrowRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripArrowRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripArrowRenderEventArgs" /> que contém dados para desenhar a seta.</param>
+        <summary>Desenha uma seta em uma <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawArrow%2A> método fornece um ponto de entrada para o código de renderização de seta. Use esse método para desenhar uma seta ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar uma seta a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como uma seta é renderizada, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderArrow%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawButtonBackground">
+      <MemberSignature Language="C#" Value="public void DrawButtonBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawButtonBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">O <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém dados para desenhar o plano de fundo do botão.</param>
+        <summary>Desenha o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawButtonBackground%2A> método fornece um ponto de entrada para o código de renderização para o plano de fundo de um <xref:System.Windows.Forms.ToolStripButton>. Use esse método para desenhar o plano de fundo de um botão ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar o plano de fundo de um botão a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como o plano de fundo é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderButtonBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawDropDownButtonBackground">
+      <MemberSignature Language="C#" Value="public void DrawDropDownButtonBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawDropDownButtonBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawDropDownButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados para desenhar o plano de fundo do botão suspenso.</param>
+        <summary>Desenha o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripDropDownButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawDropDownButtonBackground%2A> método fornece o ponto de entrada para o código de renderização para o plano de fundo de um <xref:System.Windows.Forms.ToolStripDropDownButton>. Use esse método para desenhar o plano de fundo de um botão de menu suspenso ao substituir o <xref:System.Windows.Forms.ToolStripDropDownButton.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar o plano de fundo de um botão suspenso a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como o plano de fundo é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderDropDownButtonBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawGrip">
+      <MemberSignature Language="C#" Value="public void DrawGrip (System.Windows.Forms.ToolStripGripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawGrip(class System.Windows.Forms.ToolStripGripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawGrip(System.Windows.Forms.ToolStripGripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripGripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripGripRenderEventArgs" /> que contém os dados para desenhar a alça de movimentação.</param>
+        <summary>Desenha uma alça de movimentação em um <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawGrip%2A> método fornece um ponto de entrada para o código de renderização para uma alça de movimentação localizada em um <xref:System.Windows.Forms.ToolStrip>. Use esse método ao substituir o <xref:System.Windows.Forms.ToolStrip.OnPaintGrip%2A?displayProperty=nameWithType> método, ou para forçar uma alça de movimentação a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como uma alça de movimentação é renderizada, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderGrip%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawImageMargin">
+      <MemberSignature Language="C#" Value="public void DrawImageMargin (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawImageMargin(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawImageMargin(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados para desenhar o espaço em torno da imagem.</param>
+        <summary>Desenha o espaço em torno de uma imagem em um <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawImageMargin%2A> método fornece o ponto de entrada para o código de renderização da imagem. Use esse método para desenhar a margem da imagem ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar a margem da imagem a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como margem da imagem é renderizada, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderImageMargin%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawItemBackground">
+      <MemberSignature Language="C#" Value="public void DrawItemBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawItemBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados para desenhar o plano de fundo do item.</param>
+        <summary>Desenha o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawItemBackground%2A> método fornece o ponto de entrada para o código de renderização para o plano de fundo de um item. Use esse método para desenhar o plano de fundo de um item ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar o plano de fundo de um item a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como o plano de fundo de um item é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawItemCheck">
+      <MemberSignature Language="C#" Value="public void DrawItemCheck (System.Windows.Forms.ToolStripItemImageRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawItemCheck(class System.Windows.Forms.ToolStripItemImageRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawItemCheck(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemImageRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemImageRenderEventArgs" /> que contém os dados para desenhar a imagem selecionada.</param>
+        <summary>Desenha uma imagem em um <see cref="T:System.Windows.Forms.ToolStripItem" /> que indica que o item está em um estado selecionado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawItemCheck%2A> método fornece o ponto de entrada para o código de renderização para uma imagem em um estado selecionado. Use esse método para desenhar uma imagem selecionada ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar uma imagem selecionada a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como uma imagem selecionada é renderizada, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemCheck%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawItemImage">
+      <MemberSignature Language="C#" Value="public void DrawItemImage (System.Windows.Forms.ToolStripItemImageRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawItemImage(class System.Windows.Forms.ToolStripItemImageRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawItemImage(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemImageRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemImageRenderEventArgs" /> que contém os dados para desenhar a imagem.</param>
+        <summary>Desenha uma imagem em um <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawItemImage%2A> método fornece o ponto de entrada para o código de renderização para uma imagem. Use esse método para desenhar uma imagem ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método ou para forçar a imagem a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como a imagem é renderizada, substituir o `OnDrawItem` método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawItemText">
+      <MemberSignature Language="C#" Value="public void DrawItemText (System.Windows.Forms.ToolStripItemTextRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawItemText(class System.Windows.Forms.ToolStripItemTextRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawItemText(System.Windows.Forms.ToolStripItemTextRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemTextRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemTextRenderEventArgs" /> que contém os dados para desenhar o texto.</param>
+        <summary>Desenha texto em um <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawItemText%2A> método fornece o ponto de entrada para o código de renderização para o texto de um <xref:System.Windows.Forms.ToolStripItem>. Use esse método para desenhar o texto do item ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar o texto do item a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como o texto do item é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemText%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawLabelBackground">
+      <MemberSignature Language="C#" Value="public void DrawLabelBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawLabelBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados para desenhar o plano de fundo do rótulo.</param>
+        <summary>Desenha o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripLabel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawLabelBackground%2A> método fornece o ponto de entrada para o código de renderização para o plano de fundo de um <xref:System.Windows.Forms.ToolStripLabel>. Use esse método para desenhar o plano de fundo de um <xref:System.Windows.Forms.ToolStripLabel> ao substituir o <xref:System.Windows.Forms.ToolStripLabel.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar o plano de fundo de um <xref:System.Windows.Forms.ToolStripLabel> a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar o modo como o plano de fundo de um <xref:System.Windows.Forms.ToolStripLabel> é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderLabelBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawMenuItemBackground">
+      <MemberSignature Language="C#" Value="public void DrawMenuItemBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawMenuItemBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawMenuItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados para desenhar o plano de fundo do item de menu.</param>
+        <summary>Desenha o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripMenuItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawMenuItemBackground%2A> método fornece o ponto de entrada para o código de renderização para o plano de fundo de um <xref:System.Windows.Forms.ToolStripMenuItem>. Use esse método para desenhar o plano de fundo de um <xref:System.Windows.Forms.ToolStripMenuItem> ao substituir o <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar o plano de fundo de um <xref:System.Windows.Forms.ToolStripMenuItem> a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar o modo como o plano de fundo para um <xref:System.Windows.Forms.ToolStripMenuItem> é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderMenuItemBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawOverflowButtonBackground">
+      <MemberSignature Language="C#" Value="public void DrawOverflowButtonBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawOverflowButtonBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawOverflowButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha o plano de fundo de um botão de estouro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawOverflowButtonBackground%2A> método fornece o ponto de entrada para o código de renderização para o plano de fundo de um botão de estouro. Use esse método para desenhar o plano de fundo de um botão de estouro ao substituir o <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar o plano de fundo de um botão de estouro a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como o plano de fundo de um botão de estouro é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderOverflowButtonBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawSeparator">
+      <MemberSignature Language="C#" Value="public void DrawSeparator (System.Windows.Forms.ToolStripSeparatorRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawSeparator(class System.Windows.Forms.ToolStripSeparatorRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawSeparator(System.Windows.Forms.ToolStripSeparatorRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripSeparatorRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripSeparatorRenderEventArgs" /> que contém os dados para desenhar o <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</param>
+        <summary>Desenha um <see cref="T:System.Windows.Forms.ToolStripSeparator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawSeparator%2A> método fornece o ponto de entrada para o código de renderização para um <xref:System.Windows.Forms.ToolStripSeparator>. Use esse método para desenhar o <xref:System.Windows.Forms.ToolStripSeparator> ao substituir o <xref:System.Windows.Forms.ToolStrip.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar uma <xref:System.Windows.Forms.ToolStripSeparator> a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como o <xref:System.Windows.Forms.ToolStripSeparator> é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderSeparator%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawSplitButton">
+      <MemberSignature Language="C#" Value="public void DrawSplitButton (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawSplitButton(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawSplitButton(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha um <see cref="T:System.Windows.Forms.ToolStripSplitButton" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawSplitButton%2A> método fornece o ponto de entrada para o código de renderização para um <xref:System.Windows.Forms.ToolStripSplitButton>. Use esse método para desenhar uma <xref:System.Windows.Forms.ToolStripSplitButton> ao substituir o <xref:System.Windows.Forms.ToolStripSplitButton.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar uma <xref:System.Windows.Forms.ToolStripSplitButton> a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como o <xref:System.Windows.Forms.ToolStripSplitButton> é renderizado, substituir o <xref:System.Windows.Forms.ToolStripSystemRenderer.OnRenderSplitButtonBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawStatusStripSizingGrip">
+      <MemberSignature Language="C#" Value="public void DrawStatusStripSizingGrip (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawStatusStripSizingGrip(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawStatusStripSizingGrip(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha uma alça de dimensionamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawToolStripBackground">
+      <MemberSignature Language="C#" Value="public void DrawToolStripBackground (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawToolStripBackground(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados para desenhar o plano de fundo a <see cref="T:System.Windows.Forms.ToolStrip" />.</param>
+        <summary>Desenha o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawToolStripBackground%2A> método fornece o ponto de entrada para o código de renderização para o plano de fundo de um <xref:System.Windows.Forms.ToolStrip>. Use esse método para desenhar o plano de fundo de um <xref:System.Windows.Forms.ToolStrip> ao substituir o <xref:System.Windows.Forms.ToolStrip.OnPaintBackground%2A?displayProperty=nameWithType> método, ou para forçar o plano de fundo de um <xref:System.Windows.Forms.ToolStrip> a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar o modo como o plano de fundo de um <xref:System.Windows.Forms.ToolStrip> é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawToolStripBorder">
+      <MemberSignature Language="C#" Value="public void DrawToolStripBorder (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawToolStripBorder(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawToolStripBorder(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados para desenhar a borda para o <see cref="T:System.Windows.Forms.ToolStrip" />.</param>
+        <summary>Desenha a borda de um <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripRenderer.DrawToolStripBorder%2A> método fornece o ponto de entrada para o código de renderização da borda de um <xref:System.Windows.Forms.ToolStrip>. Use esse método para desenhar a borda de um <xref:System.Windows.Forms.ToolStrip> ao substituir o <xref:System.Windows.Forms.ToolStrip.OnPaint%2A?displayProperty=nameWithType> método, ou para forçar a borda de um <xref:System.Windows.Forms.ToolStrip> a ser desenhada em um personalizado <xref:System.Windows.Forms.ToolStripRenderer>. Para alterar a maneira como a borda de um <xref:System.Windows.Forms.ToolStrip> é renderizado, substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder%2A> método em uma classe derivada de <xref:System.Windows.Forms.ToolStripRenderer>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawToolStripContentPanelBackground">
+      <MemberSignature Language="C#" Value="public void DrawToolStripContentPanelBackground (System.Windows.Forms.ToolStripContentPanelRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawToolStripContentPanelBackground(class System.Windows.Forms.ToolStripContentPanelRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawToolStripContentPanelBackground(System.Windows.Forms.ToolStripContentPanelRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripContentPanelRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripContentPanelRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha o plano de fundo do <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawToolStripPanelBackground">
+      <MemberSignature Language="C#" Value="public void DrawToolStripPanelBackground (System.Windows.Forms.ToolStripPanelRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawToolStripPanelBackground(class System.Windows.Forms.ToolStripPanelRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawToolStripPanelBackground(System.Windows.Forms.ToolStripPanelRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripPanelRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripPanelRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha o plano de fundo do <see cref="T:System.Windows.Forms.ToolStripPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawToolStripStatusLabelBackground">
+      <MemberSignature Language="C#" Value="public void DrawToolStripStatusLabelBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawToolStripStatusLabelBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.DrawToolStripStatusLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha o plano de fundo do <see cref="T:System.Windows.Forms.ToolStripStatusLabel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected virtual void Initialize (System.Windows.Forms.ToolStrip toolStrip);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Initialize(class System.Windows.Forms.ToolStrip toolStrip) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.Initialize(System.Windows.Forms.ToolStrip)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolStrip" Type="System.Windows.Forms.ToolStrip" />
+      </Parameters>
+      <Docs>
+        <param name="toolStrip">O <see cref="T:System.Windows.Forms.ToolStrip" /> seja inicializada.</param>
+        <summary>Quando substituído em uma classe derivada, fornece para inicialização personalizada da determinado <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripRenderer.Initialize%2A> método para definir propriedades, como o <xref:System.Windows.Forms.ToolStrip.BackColor%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.ToolStrip.Font%2A?displayProperty=nameWithType>, quando um <xref:System.Windows.Forms.ToolStrip> é renderizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeContentPanel">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeContentPanel (System.Windows.Forms.ToolStripContentPanel contentPanel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void InitializeContentPanel(class System.Windows.Forms.ToolStripContentPanel contentPanel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.InitializeContentPanel(System.Windows.Forms.ToolStripContentPanel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentPanel" Type="System.Windows.Forms.ToolStripContentPanel" />
+      </Parameters>
+      <Docs>
+        <param name="contentPanel">O <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</param>
+        <summary>Inicializa especificado <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeItem">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeItem (System.Windows.Forms.ToolStripItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void InitializeItem(class System.Windows.Forms.ToolStripItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.InitializeItem(System.Windows.Forms.ToolStripItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.ToolStripItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Windows.Forms.ToolStripItem" /> seja inicializada.</param>
+        <summary>Quando substituído em uma classe derivada, fornece para inicialização personalizada da determinado <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolStripRenderer.InitializeItem%2A> método para definir propriedades, como o <xref:System.Windows.Forms.ToolStripItem.BackColor%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.ToolStripItem.Font%2A?displayProperty=nameWithType>, quando um <xref:System.Windows.Forms.ToolStripItem> é renderizado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar individuais <xref:System.Windows.Forms.ToolStripItem> controles. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#11)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializePanel">
+      <MemberSignature Language="C#" Value="protected virtual void InitializePanel (System.Windows.Forms.ToolStripPanel toolStripPanel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void InitializePanel(class System.Windows.Forms.ToolStripPanel toolStripPanel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.InitializePanel(System.Windows.Forms.ToolStripPanel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolStripPanel" Type="System.Windows.Forms.ToolStripPanel" />
+      </Parameters>
+      <Docs>
+        <param name="toolStripPanel">O <see cref="T:System.Windows.Forms.ToolStripPanel" />.</param>
+        <summary>Inicializa especificado <see cref="T:System.Windows.Forms.ToolStripPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset2X">
+      <MemberSignature Language="C#" Value="protected static int Offset2X;" />
+      <MemberSignature Language="ILAsm" Value=".field family static int32 Offset2X" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripRenderer.Offset2X" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento multiplicador para duas vezes o deslocamento ao longo do eixo x.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset2Y">
+      <MemberSignature Language="C#" Value="protected static int Offset2Y;" />
+      <MemberSignature Language="ILAsm" Value=".field family static int32 Offset2Y" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripRenderer.Offset2Y" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento multiplicador para duas vezes o deslocamento ao longo do eixo y.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderArrow">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderArrow (System.Windows.Forms.ToolStripArrowRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderArrow(class System.Windows.Forms.ToolStripArrowRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderArrow(System.Windows.Forms.ToolStripArrowRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripArrowRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripArrowRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderArrow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderArrow%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderArrow(System.Windows.Forms.ToolStripArrowRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderArrow(System.Windows.Forms.ToolStripArrowRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderButtonBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderButtonBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderButtonBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderButtonBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderButtonBackground%2A> método para desenhar uma borda ao redor de um <xref:System.Windows.Forms.ToolStripButton> do controle <xref:System.Windows.Forms.ToolStripItem.Image%2A>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#14)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderDropDownButtonBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderDropDownButtonBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderDropDownButtonBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderDropDownButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderDropDownButtonBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderDropDownButtonBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderDropDownButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderDropDownButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderGrip">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderGrip (System.Windows.Forms.ToolStripGripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderGrip(class System.Windows.Forms.ToolStripGripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderGrip(System.Windows.Forms.ToolStripGripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripGripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripGripRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderGrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderGrip%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderGrip(System.Windows.Forms.ToolStripGripRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderGrip(System.Windows.Forms.ToolStripGripRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderImageMargin">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderImageMargin (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderImageMargin(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderImageMargin(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Desenha o plano de fundo do item.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderImageMargin%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderImageMargin(System.Windows.Forms.ToolStripRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderImageMargin(System.Windows.Forms.ToolStripRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderItemBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderItemBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderItemBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.ToolStripSystemRenderer.OnRenderItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderItemCheck">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderItemCheck (System.Windows.Forms.ToolStripItemImageRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderItemCheck(class System.Windows.Forms.ToolStripItemImageRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemCheck(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemImageRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemImageRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderItemCheck" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemCheck%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemCheck(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemCheck(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderItemImage">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderItemImage (System.Windows.Forms.ToolStripItemImageRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderItemImage(class System.Windows.Forms.ToolStripItemImageRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemImage(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemImageRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemImageRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderItemImage" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemImage%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemImage(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemImage(System.Windows.Forms.ToolStripItemImageRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderItemText">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderItemText (System.Windows.Forms.ToolStripItemTextRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderItemText(class System.Windows.Forms.ToolStripItemTextRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemText(System.Windows.Forms.ToolStripItemTextRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemTextRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemTextRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderItemText" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderItemText%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemText(System.Windows.Forms.ToolStripItemTextRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderItemText(System.Windows.Forms.ToolStripItemTextRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderLabelBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderLabelBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderLabelBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderLabelBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderLabelBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderMenuItemBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderMenuItemBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderMenuItemBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderMenuItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderMenuItemBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderMenuItemBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderMenuItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderMenuItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderOverflowButtonBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderOverflowButtonBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderOverflowButtonBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderOverflowButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderOverflowButtonBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderOverflowButtonBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderOverflowButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderOverflowButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderSeparator">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderSeparator (System.Windows.Forms.ToolStripSeparatorRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderSeparator(class System.Windows.Forms.ToolStripSeparatorRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderSeparator(System.Windows.Forms.ToolStripSeparatorRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripSeparatorRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripSeparatorRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderSeparator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderSeparator%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderSeparator(System.Windows.Forms.ToolStripSeparatorRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderSeparator(System.Windows.Forms.ToolStripSeparatorRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderSplitButtonBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderSplitButtonBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderSplitButtonBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderSplitButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderSplitButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderSplitButtonBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderSplitButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderSplitButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderStatusStripSizingGrip">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderStatusStripSizingGrip (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderStatusStripSizingGrip(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderStatusStripSizingGrip(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderStatusStripSizingGrip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderStatusStripSizingGrip%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderStatusStripSizingGrip(System.Windows.Forms.ToolStripRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderStatusStripSizingGrip(System.Windows.Forms.ToolStripRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderToolStripBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderToolStripBackground (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderToolStripBackground(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground%2A> método para desenhar um gradiente de plano de fundo de um <xref:System.Windows.Forms.ToolStrip> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#13)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderToolStripBorder">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderToolStripBorder (System.Windows.Forms.ToolStripRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderToolStripBorder(class System.Windows.Forms.ToolStripRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder(System.Windows.Forms.ToolStripRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder%2A> método para desenhar uma borda personalizada em torno de um <xref:System.Windows.Forms.ToolStrip> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.ToolStripRenderer> classe.  
+  
+ [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#12)]
+ [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder(System.Windows.Forms.ToolStripRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripBorder(System.Windows.Forms.ToolStripRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderToolStripContentPanelBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderToolStripContentPanelBackground (System.Windows.Forms.ToolStripContentPanelRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderToolStripContentPanelBackground(class System.Windows.Forms.ToolStripContentPanelRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripContentPanelBackground(System.Windows.Forms.ToolStripContentPanelRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripContentPanelRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripContentPanelRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripContentPanelBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripContentPanelBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripContentPanelBackground(System.Windows.Forms.ToolStripContentPanelRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripContentPanelBackground(System.Windows.Forms.ToolStripContentPanelRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderToolStripPanelBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderToolStripPanelBackground (System.Windows.Forms.ToolStripPanelRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderToolStripPanelBackground(class System.Windows.Forms.ToolStripPanelRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripPanelBackground(System.Windows.Forms.ToolStripPanelRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripPanelRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripPanelRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripPanelBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripPanelBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripPanelBackground(System.Windows.Forms.ToolStripPanelRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripPanelBackground(System.Windows.Forms.ToolStripPanelRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRenderToolStripStatusLabelBackground">
+      <MemberSignature Language="C#" Value="protected virtual void OnRenderToolStripStatusLabelBackground (System.Windows.Forms.ToolStripItemRenderEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnRenderToolStripStatusLabelBackground(class System.Windows.Forms.ToolStripItemRenderEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripStatusLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.ToolStripItemRenderEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.ToolStripItemRenderEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripStatusLabelBackground" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripStatusLabelBackground%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripStatusLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ToolStripRenderer.OnRenderToolStripStatusLabelBackground(System.Windows.Forms.ToolStripItemRenderEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderArrow">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripArrowRenderEventHandler RenderArrow;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripArrowRenderEventHandler RenderArrow" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderArrow" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripArrowRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma seta em uma <see cref="T:System.Windows.Forms.ToolStripItem" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderArrow> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderArrow> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#583](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#583)]
+ [!code-vb[System.Windows.Forms.EventExamples#583](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#583)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderButtonBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderButtonBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderButtonBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripButton" /> é processado</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#588](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#588)]
+ [!code-vb[System.Windows.Forms.EventExamples#588](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#588)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderDropDownButtonBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderDropDownButtonBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderDropDownButtonBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderDropDownButtonBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripDropDownButton" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderDropDownButtonBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderDropDownButtonBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#589](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#589)]
+ [!code-vb[System.Windows.Forms.EventExamples#589](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#589)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderGrip">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripGripRenderEventHandler RenderGrip;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripGripRenderEventHandler RenderGrip" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderGrip" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripGripRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a movimentação de identificador para um <see cref="T:System.Windows.Forms.ToolStrip" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#591](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#591)]
+ [!code-vb[System.Windows.Forms.EventExamples#591](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#591)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderImageMargin">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripRenderEventHandler RenderImageMargin;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripRenderEventHandler RenderImageMargin" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderImageMargin" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Desenha a margem entre uma imagem e seu contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderImageMargin> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderImageMargin> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#596](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#596)]
+ [!code-vb[System.Windows.Forms.EventExamples#596](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#596)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItemBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderItemBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderItemBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderItemBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripItem" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#592](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#592)]
+ [!code-vb[System.Windows.Forms.EventExamples#592](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#592)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItemCheck">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemImageRenderEventHandler RenderItemCheck;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemImageRenderEventHandler RenderItemCheck" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderItemCheck" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemImageRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a imagem para um selecionado <see cref="T:System.Windows.Forms.ToolStripItem" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemCheck> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemCheck> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#594](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#594)]
+ [!code-vb[System.Windows.Forms.EventExamples#594](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#594)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItemImage">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemImageRenderEventHandler RenderItemImage;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemImageRenderEventHandler RenderItemImage" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderItemImage" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemImageRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a imagem para um <see cref="T:System.Windows.Forms.ToolStripItem" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemImage> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#593](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#593)]
+ [!code-vb[System.Windows.Forms.EventExamples#593](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#593)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItemText">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemTextRenderEventHandler RenderItemText;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemTextRenderEventHandler RenderItemText" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderItemText" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemTextRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o texto de um <see cref="T:System.Windows.Forms.ToolStripItem" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderItemText> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#595](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#595)]
+ [!code-vb[System.Windows.Forms.EventExamples#595](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#595)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderLabelBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderLabelBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderLabelBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderLabelBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripLabel" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderLabelBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderLabelBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#597](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#597)]
+ [!code-vb[System.Windows.Forms.EventExamples#597](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#597)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMenuItemBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderMenuItemBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderMenuItemBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderMenuItemBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripMenuItem" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderMenuItemBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderMenuItemBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#598](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#598)]
+ [!code-vb[System.Windows.Forms.EventExamples#598](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#598)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderOverflowButtonBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderOverflowButtonBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderOverflowButtonBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderOverflowButtonBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo de um botão de estouro é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderOverflowButtonBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderOverflowButtonBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#590](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#590)]
+ [!code-vb[System.Windows.Forms.EventExamples#590](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#590)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderSeparator">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripSeparatorRenderEventHandler RenderSeparator;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripSeparatorRenderEventHandler RenderSeparator" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderSeparator" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripSeparatorRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um <see cref="T:System.Windows.Forms.ToolStripSeparator" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderSeparator> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderSeparator> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#602](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#602)]
+ [!code-vb[System.Windows.Forms.EventExamples#602](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#602)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderSplitButtonBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderSplitButtonBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderSplitButtonBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderSplitButtonBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStripSplitButton" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderSplitButtonBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderSplitButtonBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#601](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#601)]
+ [!code-vb[System.Windows.Forms.EventExamples#601](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#601)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderStatusStripSizingGrip">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripRenderEventHandler RenderStatusStripSizingGrip;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripRenderEventHandler RenderStatusStripSizingGrip" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderStatusStripSizingGrip" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o estilo de exibição é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderStatusStripSizingGrip> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderStatusStripSizingGrip> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#600](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#600)]
+ [!code-vb[System.Windows.Forms.EventExamples#600](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#600)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderToolStripBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripRenderEventHandler RenderToolStripBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripRenderEventHandler RenderToolStripBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o plano de fundo para um <see cref="T:System.Windows.Forms.ToolStrip" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#584](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#584)]
+ [!code-vb[System.Windows.Forms.EventExamples#584](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#584)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderToolStripBorder">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripRenderEventHandler RenderToolStripBorder;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripRenderEventHandler RenderToolStripBorder" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a borda de um <see cref="T:System.Windows.Forms.ToolStrip" /> é renderizado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#587](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#587)]
+ [!code-vb[System.Windows.Forms.EventExamples#587](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#587)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderToolStripContentPanelBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripContentPanelRenderEventHandler RenderToolStripContentPanelBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripContentPanelRenderEventHandler RenderToolStripContentPanelBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripContentPanelBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripContentPanelRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Desenha o plano de fundo de um <see cref="T:System.Windows.Forms.ToolStripContentPanel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripContentPanelBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripContentPanelBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#586](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#586)]
+ [!code-vb[System.Windows.Forms.EventExamples#586](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#586)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderToolStripPanelBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripPanelRenderEventHandler RenderToolStripPanelBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripPanelRenderEventHandler RenderToolStripPanelBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripPanelBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripPanelRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Desenha o plano de fundo de um <see cref="T:System.Windows.Forms.ToolStripPanel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripPanelBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripPanelBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#585](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#585)]
+ [!code-vb[System.Windows.Forms.EventExamples#585](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#585)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderToolStripStatusLabelBackground">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.ToolStripItemRenderEventHandler RenderToolStripStatusLabelBackground;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.ToolStripItemRenderEventHandler RenderToolStripStatusLabelBackground" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolStripRenderer.RenderToolStripStatusLabelBackground" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemRenderEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Desenha o plano de fundo de um <see cref="T:System.Windows.Forms.ToolStripStatusLabel" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripStatusLabelBackground> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância de um tipo que herda de <xref:System.Windows.Forms.ToolStripRenderer>, como um <xref:System.Windows.Forms.ToolStripSystemRenderer> ou <xref:System.Windows.Forms.ToolStripProfessionalRenderer>. Em seguida, nomear a instância `ToolStripRenderer1` e certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripStatusLabelBackground> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#599](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#599)]
+ [!code-vb[System.Windows.Forms.EventExamples#599](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#599)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScaleArrowOffsetsIfNeeded">
+      <MemberSignature Language="C#" Value="protected static void ScaleArrowOffsetsIfNeeded ();" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig void ScaleArrowOffsetsIfNeeded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolStripRenderer.ScaleArrowOffsetsIfNeeded" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Aplica-se a F:System.Windows.Forms.ToolStripRenderer.Offset2X e F:System.Windows.Forms.ToolStripRenderer.Offset2Y especificado no ícone de seta de dimensionamento se dimensionamento é necessário pelas configurações de DPI do computador.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

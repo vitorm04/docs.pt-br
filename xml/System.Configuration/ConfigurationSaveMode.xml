@@ -1,0 +1,89 @@
+<Type Name="ConfigurationSaveMode" FullName="System.Configuration.ConfigurationSaveMode">
+  <TypeSignature Language="C#" Value="public enum ConfigurationSaveMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConfigurationSaveMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationSaveMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina quais propriedades são gravadas em um arquivo de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationSaveMode> valores de enumeração identificam quais propriedades são gravadas em um arquivo de configuração ao chamar o <xref:System.Configuration.Configuration.Save%2A> e <xref:System.Configuration.Configuration.SaveAs%2A> métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationSaveMode Full = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationSaveMode.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSaveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Faz com que todas as propriedades sejam gravadas no arquivo de configuração. Isso é útil principalmente para criar arquivos de configuração de informações ou mover os valores de configuração de um computador para outro.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimal">
+      <MemberSignature Language="C#" Value="Minimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationSaveMode Minimal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationSaveMode.Minimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSaveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Faz com que apenas as propriedades que são diferentes dos valores herdados sejam gravadas no arquivo de configuração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modified">
+      <MemberSignature Language="C#" Value="Modified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Configuration.ConfigurationSaveMode Modified = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Configuration.ConfigurationSaveMode.Modified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationSaveMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Faz com que apenas propriedades modificadas sejam gravadas no arquivo de configuração, mesmo quando o valor é igual ao valor herdado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,310 @@
+<Type Name="ActivityDesigner" FullName="System.Activities.Presentation.ActivityDesigner">
+  <TypeSignature Language="C#" Value="public class ActivityDesigner : System.Activities.Presentation.WorkflowViewElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ActivityDesigner extends System.Activities.Presentation.WorkflowViewElement" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.ActivityDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Presentation.WorkflowViewElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base para todos os componentes do designer de atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo fornece a funcionalidade de aparência e funcionalidade básica para outros designers de atividade e permite que um desenvolvedor adicionar recursos à superfície do designer de atividade. Isso normalmente é feito para a exibir informações interessantes adicionais para o usuário da atividade, crie um melhor em tela de experiência de edição (por exemplo, usando o `ExpressionTextBox` em um `If` designer de atividade), ou para permitir que os elementos contidos editado (novamente, considere o <xref:System.Activities.Statements.If.Then%2A> e <xref:System.Activities.Statements.If.Else%2A> propriedades do <xref:System.Activities.Statements.If> atividade).  
+  
+ O <xref:System.Activities.Presentation.ActivityDesigner> herda de <xref:System.Activities.Presentation.WorkflowViewElement> e adiciona principalmente o estilo padrão, bem como a capacidade de personalizar o ícone por meio de <xref:System.Activities.Presentation.ActivityDesigner.Icon%2A> propriedade. Ele deve ser usado sempre que você estiver criando um designer para um tipo que deriva de <xref:System.Activities.Activity>. Quando associada a um <xref:System.Activities.Activity> tipo, o <xref:System.Activities.Presentation.WorkflowViewElement.ModelItem%2A> propriedade apontará para a hierarquia de ModelItem que descreve a instância do tipo que está sendo editado.  
+  
+   
+  
+## Examples  
+ No código de exemplo abaixo, um `First2of3` atividade é definida pela primeira vez, em seguida, o código para o designer First2of3 é exibido e, por fim, ele é mostrado como usar o atributo de Designer para associar a atividade com o designer é fornecido.  
+  
+```  
+  
+//The First2of3 activity  
+using System.Activities;  
+using System.Collections.Generic;  
+using System.Linq;  
+  
+namespace Microsoft.Activities.Documentation.ActivityTypes  
+{  
+  
+    public sealed class First2of3 : NativeActivity  
+    {  
+        public Activity Activity1 { get; set; }  
+        public Activity Activity2 { get; set; }  
+        public Activity Activity3 { get; set; }  
+  
+        Variable<List<ActivityInstance>> ExecutingActivities { get; set; }  
+  
+        public First2of3()  
+        {  
+            ExecutingActivities = new Variable<List<ActivityInstance>>();  
+        }  
+  
+        // If your activity returns a value, derive from CodeActivity<TResult>  
+        // and return the value from the Execute method.  
+        protected override void Execute(NativeActivityContext context)  
+        {  
+            // Obtain the runtime value of the Text input argument  
+            var l = new List<ActivityInstance>();  
+            ExecutingActivities.Set(context, l);  
+            l.Add(context.ScheduleActivity(Activity1, onComplete));  
+            l.Add(context.ScheduleActivity(Activity2, onComplete));  
+            l.Add(context.ScheduleActivity(Activity3, onComplete));  
+        }  
+  
+        protected override void CacheMetadata(NativeActivityMetadata metadata)  
+        {  
+            metadata.AddImplementationVariable(ExecutingActivities);  
+            metadata.AddChild(Activity1);  
+            metadata.AddChild(Activity2);  
+            metadata.AddChild(Activity3);  
+        }  
+  
+        private void onComplete(NativeActivityContext context, ActivityInstance completedInstance)  
+        {  
+            var l = ExecutingActivities.Get(context);  
+            l.Remove(completedInstance);  
+            if (l.Count == 1)  
+            {  
+                context.CancelChild(l.Single());  
+            }  
+        }  
+    }  
+}  
+  
+//’Code for the First2of3 Designer:  
+<sap:ActivityDesigner x:Class="Microsoft.Activites.Documentation.First2of3Designer"  
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"  
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">  
+    <StackPanel>  
+        <Label Content="2 of 3 activity">  
+            <Label.ToolTip>  
+                This activity has 3 child activities which will be scheduled in parallel.    
+                Upon completion of any 2, the third will be cancelled  
+            </Label.ToolTip>  
+        </Label>  
+        <StackPanel Orientation="Horizontal">  
+            <Border BorderBrush="Blue" BorderThickness="2" CornerRadius="2" Margin="2" Padding="2">  
+                <sap:WorkflowItemPresenter HintText="Drop Activity1 Here" Item="{Binding Path=ModelItem.Activity1, Mode=TwoWay}" />  
+            </Border>  
+            <Border BorderBrush="Blue" BorderThickness="2" CornerRadius="2" Margin="2" Padding="2">  
+                <sap:WorkflowItemPresenter HintText="Drop Activity2 Here" Item="{Binding Path=ModelItem.Activity2, Mode=TwoWay}" />  
+  
+            </Border>  
+            <Border BorderBrush="Blue" BorderThickness="2" CornerRadius="2" Margin="2" Padding="2">  
+                <sap:WorkflowItemPresenter HintText="Drop Activity3 Here" Item="{Binding Path=ModelItem.Activity3, Mode=TwoWay}" />  
+  
+            </Border>  
+        </StackPanel>  
+    </StackPanel>  
+</sap:ActivityDesigner>  
+  
+//Code for associating the activity with the designer using the Designer attribute.  
+[Designer(typeof(First2of3Designer))]  
+public sealed class First2of3 : NativeActivity  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.ActivityDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationIdMemberName">
+      <MemberSignature Language="C#" Value="protected override string GetAutomationIdMemberName ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetAutomationIdMemberName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.GetAutomationIdMemberName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a cadeia de caracteres "DisplayName" nesta implementação do método substituído.</summary>
+        <returns>A cadeia de caracteres "DisplayName" nesta implementação do método substituído.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomationItemStatus">
+      <MemberSignature Language="C#" Value="protected override string GetAutomationItemStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance string GetAutomationItemStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.GetAutomationItemStatus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o status do item de automação.</summary>
+        <returns>O status do item de automação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.DrawingBrush Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.DrawingBrush Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ActivityDesigner.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.DrawingBrush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ícone associado a esta <see cref="T:System.Activities.Presentation.ActivityDesigner" />.</summary>
+        <value>Retorna um <see cref="T:System.Windows.Media.DrawingBrush" /> que representa o ícone associado a esta <see cref="T:System.Activities.Presentation.ActivityDesigner" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IconProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IconProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.ActivityDesigner.IconProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="F:System.Activities.Presentation.ActivityDesigner.IconProperty" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia o processo de aplicação de um modelo para criar um <see cref="T:System.Activities.Presentation.ActivityDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEditAnnotation">
+      <MemberSignature Language="C#" Value="protected override void OnEditAnnotation ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnEditAnnotation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.OnEditAnnotation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia o processamento que ocorre durante a edição de anotação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnModelItemChanged">
+      <MemberSignature Language="C#" Value="protected override void OnModelItemChanged (object newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnModelItemChanged(object newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.OnModelItemChanged(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newItem">O novo item.</param>
+        <summary>Inicia o processamento que ocorre quando o item de modelo é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Inicia o processamento que ocorre quando qualquer botão do mouse é liberado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesigner.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DragEventArgs" /> que contém os dados do evento.</param>
+        <summary>Inicia o processamento que ocorre quando um sem tratamento <see cref="T:System.Windows.Input.Mouse.PreviewMouseDown" /> anexado evento roteado atinge um elemento em sua rota que é derivada dessa classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

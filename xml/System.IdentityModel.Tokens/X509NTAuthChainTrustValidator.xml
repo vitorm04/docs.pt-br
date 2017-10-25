@@ -1,0 +1,86 @@
+<Type Name="X509NTAuthChainTrustValidator" FullName="System.IdentityModel.Tokens.X509NTAuthChainTrustValidator">
+  <TypeSignature Language="C#" Value="public class X509NTAuthChainTrustValidator : System.IdentityModel.Selectors.X509CertificateValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit X509NTAuthChainTrustValidator extends System.IdentityModel.Selectors.X509CertificateValidator" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.X509NTAuthChainTrustValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Selectors.X509CertificateValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um validador de certificado x. 509 que validar um certificado x. 509 especificado e verificar se o certificado pode ser mapeado para uma conta do Windows e se a cadeia de certificação é confiável.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509NTAuthChainTrustValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509NTAuthChainTrustValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.X509NTAuthChainTrustValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public X509NTAuthChainTrustValidator (bool useMachineContext, System.Security.Cryptography.X509Certificates.X509ChainPolicy chainPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool useMachineContext, class System.Security.Cryptography.X509Certificates.X509ChainPolicy chainPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509NTAuthChainTrustValidator.#ctor(System.Boolean,System.Security.Cryptography.X509Certificates.X509ChainPolicy)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="useMachineContext" Type="System.Boolean" />
+        <Parameter Name="chainPolicy" Type="System.Security.Cryptography.X509Certificates.X509ChainPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="useMachineContext">
+          <see langword="true" />Para usar o contexto do computador local para criar a cadeia de certificados; Caso contrário, <see langword="false" />.</param>
+        <param name="chainPolicy">A política de cadeia para usar ao construir a cadeia de certificados x. 509.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.X509NTAuthChainTrustValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.X509NTAuthChainTrustValidator.Validate(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O certificado x. 509 para validar.</param>
+        <summary>Valida o certificado x. 509 especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Gera um <xref:System.IdentityModel.Tokens.SecurityTokenValidationException> exceção se a validação falhar.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="certificate" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenValidationException">Falha na validação do certificado x. 509.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

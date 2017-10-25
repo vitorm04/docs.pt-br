@@ -1,0 +1,104 @@
+<Type Name="DataFormats+Format" FullName="System.Windows.Forms.DataFormats+Format">
+  <TypeSignature Language="C#" Value="public class DataFormats.Format" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit DataFormats/Format extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataFormats.Format" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um tipo de formato de área de transferência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tipo de formato consiste em um nome de formato baseado em texto e um número de identificação. O par de números de ID do nome de formato pode definir um sistema <xref:System.Windows.Forms.Clipboard> ou outro formato.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como recuperar um <xref:System.Windows.Forms.DataFormats.Format> que representa um par de nome/ID de formato. O <xref:System.Windows.Forms.DataFormats.UnicodeText> formato for solicitado e o conteúdo do recuperada <xref:System.Windows.Forms.DataFormats.Format> são exibidos em uma caixa de texto.  
+  
+ Esse código requer que `textBox1` foi criado.  
+  
+ [!code-cpp[Classic DataFormats.GetFormat Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataFormats.GetFormat Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/CS/source.cs#1)]
+ [!code-vb[Classic DataFormats.GetFormat Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataFormats.GetFormat Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Format (string name, int id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataFormats.Format.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome desse formato.</param>
+        <param name="id">O número de identificação para esse formato.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataFormats.Format" /> classe com um valor booleano que indica se um <see langword="Win32" /> identificador é esperado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo formato de um nome e o número de identificação exclusivo. O novo formato não requer um identificador. Isso requer que `textBox1` instanciado.  
+  
+ [!code-cpp[Classic DataFormats.Format.Format Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataFormats.Format.Format Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataFormats.Format.Format Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataFormats.Format.Format Example/CS/source.cs#1)]
+ [!code-vb[Classic DataFormats.Format.Format Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataFormats.Format.Format Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public int Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataFormats.Format.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de identificação para esse formato.</summary>
+        <value>O número de identificação para esse formato.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataFormats.Format.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome desse formato.</summary>
+        <value>O nome desse formato.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

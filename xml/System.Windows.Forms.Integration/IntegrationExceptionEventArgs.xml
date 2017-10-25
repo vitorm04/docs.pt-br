@@ -1,0 +1,95 @@
+<Type Name="IntegrationExceptionEventArgs" FullName="System.Windows.Forms.Integration.IntegrationExceptionEventArgs">
+  <TypeSignature Language="C#" Value="public class IntegrationExceptionEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IntegrationExceptionEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Integration.IntegrationExceptionEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsFormsIntegration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base para <see cref="T:System.EventArgs" /> classes que oferecem suporte, opcionalmente, gerando exceções.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Integration.IntegrationExceptionEventArgs> classe permite que o usuário a visualizar uma exceção antes que ele seja gerado.  
+  
+ No seu manipulador de eventos, defina o valor da <xref:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.ThrowException%2A> propriedade `true` para indicar que a exceção deve ser gerada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntegrationExceptionEventArgs (bool throwException, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool throwException, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.#ctor(System.Boolean,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="throwException" Type="System.Boolean" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="throwException">
+          <see langword="true" />para gerar o <see cref="T:System.Exception" /> especificado por <c>exceção</c>; caso contrário, <see langword="false" />.</param>
+        <param name="exception">O <see cref="T:System.Exception" /> para gerar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Integration.IntegrationExceptionEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Exception" /> associado a este <see cref="T:System.Windows.Forms.Integration.IntegrationExceptionEventArgs" />.</summary>
+        <value>O <see cref="T:System.Exception" /> associado a este <see cref="T:System.Windows.Forms.Integration.IntegrationExceptionEventArgs" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowException">
+      <MemberSignature Language="C#" Value="public bool ThrowException { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowException" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.ThrowException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsFormsIntegration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é gerar o <see cref="T:System.Exception" /> especificado pelo <see cref="P:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.Exception" /> propriedade.</summary>
+        <value>
+          <see langword="true" />Se <see cref="P:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.Exception" /> será gerado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No seu manipulador de eventos, defina o valor da <xref:System.Windows.Forms.Integration.IntegrationExceptionEventArgs.ThrowException%2A> propriedade `true` para indicar que a exceção deve ser gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

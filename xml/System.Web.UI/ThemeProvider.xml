@@ -1,0 +1,227 @@
+<Type Name="ThemeProvider" FullName="System.Web.UI.ThemeProvider">
+  <TypeSignature Language="C#" Value="public sealed class ThemeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ThemeProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ThemeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe que encapsula informações da folha de tema e um estilo para controles em um ambiente de designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores de páginas e autores de controle não usam o <xref:System.Web.UI.ThemeProvider> classe. Construtores de designer e a ferramenta de desenvolvedor ASP.NET usam o <xref:System.Web.UI.ThemeProvider> classe junto com o <xref:System.Web.UI.SkinBuilder> classe e o <xref:System.Web.UI.IThemeResolutionService> interface aplicar temas e suas capas de controle do respectivos controles em tempo de design.  
+  
+ O <xref:System.Web.UI.ThemeProvider> classe encapsula as informações necessárias para aplicar um tema ou tema de folha de estilo e as capas de controle para os controles filho de um controle em um designer.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThemeProvider (System.ComponentModel.Design.IDesignerHost host, string name, string themeDefinition, string[] cssFiles, string themePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.Design.IDesignerHost host, string name, string themeDefinition, string[] cssFiles, string themePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeProvider.#ctor(System.ComponentModel.Design.IDesignerHost,System.String,System.String,System.String[],System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="themeDefinition" Type="System.String" />
+        <Parameter Name="cssFiles" Type="System.String[]" />
+        <Parameter Name="themePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="host">Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que representa o ambiente de designer atual.</param>
+        <param name="name">O nome do tema ou tema de folha de estilo que o <see cref="T:System.Web.UI.ThemeProvider" /> representa. Esse parâmetro pode ser <see langword="null" />.</param>
+        <param name="themeDefinition">Informações de tema passado para o <see cref="M:System.Web.UI.DesignTimeTemplateParser.ParseTheme(System.ComponentModel.Design.IDesignerHost,System.String,System.String)" /> método. Esses são o conteúdo bruto, concatenado do tema.</param>
+        <param name="cssFiles">Os nomes do estilo em cascata arquivos (CSS) que estão incluídos com o tema da folha que o <see cref="T:System.Web.UI.ThemeProvider" /> representa.</param>
+        <param name="themePath">O caminho absoluto do arquivo que contém as informações de capa de tema e controle para o tema nomeada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ThemeProvider" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `themeDefinition` parâmetro passado para o <xref:System.Web.UI.ThemeProvider.%23ctor%28System.ComponentModel.Design.IDesignerHost%2CSystem.String%2CSystem.String%2CSystem.String%5B%5D%2CSystem.String%29> construtor representa a concatenação de todas as capas de controle associado com o tema, mas não é exposta diretamente pelo <xref:System.Web.UI.ThemeProvider> classe, conforme determinado este parâmetro é passado para um <xref:System.Web.UI.DesignTimeTemplateParser> para recuperar um <xref:System.Web.UI.ControlBuilder> e não é usada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentHashCode">
+      <MemberSignature Language="C#" Value="public int ContentHashCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContentHashCode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ThemeProvider.ContentHashCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o hash da definição de tema transmitido ao construtor.</summary>
+        <value>Um código hash para a cadeia de caracteres passada como a definição de tema para o construtor da classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CssFiles">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection CssFiles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection CssFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ThemeProvider.CssFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto de cadeias de caracteres que representa os nomes de quaisquer arquivos CSS (folha) de estilo em cascata associados ao tema atual, se o tema for um tema de folha de estilos.</summary>
+        <value>Um <see cref="T:System.Collections.ICollection" /> de cadeias de caracteres que identificam os arquivos CSS associados com o tema ou tema de folha de estilo. Essa propriedade pode retornar <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada por hosts designers para adicionar links de folha de estilo para arquivos CSS durante a renderização HTML em uma superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerHost">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IDesignerHost DesignerHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesignerHost DesignerHost" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ThemeProvider.DesignerHost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesignerHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> objeto que representa o ambiente de designer atual.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que representa o ambiente de designer atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSkinBuilder">
+      <MemberSignature Language="C#" Value="public System.Web.UI.SkinBuilder GetSkinBuilder (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.SkinBuilder GetSkinBuilder(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeProvider.GetSkinBuilder(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.SkinBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle para aplicar uma capa de controle e de tema para.</param>
+        <summary>Recupera um <see cref="T:System.Web.UI.SkinBuilder" /> instância para o controle especificado, o que é usado para aplicar uma capa de controle e o tema em um ambiente de designer.</summary>
+        <returns>Um <see cref="T:System.Web.UI.SkinBuilder" /> instância, se um for definido para o tipo de controle especificado; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ThemeProvider.GetSkinBuilder%2A> método é chamado pelo <xref:System.Web.UI.ControlBuilder> classe para aplicar um tema e qualquer base controlar a aparência para um controle quando ele é criado em tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSkinControlBuildersForControlType">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary GetSkinControlBuildersForControlType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IDictionary GetSkinControlBuildersForControlType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeProvider.GetSkinControlBuildersForControlType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> para o qual recuperar associados <see cref="T:System.Web.UI.ControlBuilder" /> objetos.</param>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> objeto que contém um conjunto de <see cref="T:System.Web.UI.SkinBuilder" /> objetos especificado <see cref="T:System.Type" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IDictionary" /> que contém uma lista de um ou mais <see cref="T:System.Web.UI.ControlBuilder" /> objetos associados a <see cref="T:System.Type" /> passado para o método. Esta lista é preenchida com <see cref="T:System.Collections.DictionaryEntry" /> objetos onde o <see cref="P:System.Web.UI.Control.SkinID" /> é um <see cref="P:System.Collections.DictionaryEntry.Key" />e seus associados <see cref="T:System.Web.UI.SkinBuilder" /> é o <see cref="P:System.Collections.DictionaryEntry.Value" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSkinsForControl">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection GetSkinsForControl (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ICollection GetSkinsForControl(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ThemeProvider.GetSkinsForControl(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> para o qual recuperar os nomes de capa associado.</param>
+        <summary>Obtém um <see cref="T:System.Collections.ICollection" /> de identificadores de capa que estão associados com especificado <see cref="T:System.Type" />.</summary>
+        <returns>Um <see cref="T:System.Collections.ICollection" /> de identificadores de capa se capas de controle são definidas para o <see cref="T:System.Type" />. Se nenhum capas de controle estão associadas com o tipo, vazio <see cref="T:System.Collections.ICollection" /> é retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ThemeProvider.GetSkinsForControl%2A> método é usado por designers para popular a lista de nomes de capa de controle. Designers de usam a lista para associar a elementos de interface do usuário ou para exibir as propriedades de design de um tipo de dado controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThemeName">
+      <MemberSignature Language="C#" Value="public string ThemeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThemeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ThemeProvider.ThemeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tema ou tema de folha de estilo que o <see cref="T:System.Web.UI.ThemeProvider" /> instância representa.</summary>
+        <value>O nome do tema ou tema de folha de estilo que o <see cref="T:System.Web.UI.ThemeProvider" /> instância representa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.ThemeProvider.ThemeName%2A> propriedade é definida pelo `name` propriedade o <xref:System.Web.UI.ThemeProvider.%23ctor%28System.ComponentModel.Design.IDesignerHost%2CSystem.String%2CSystem.String%2CSystem.String%5B%5D%2CSystem.String%29> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

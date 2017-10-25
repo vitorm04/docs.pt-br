@@ -1,0 +1,352 @@
+<Type Name="ParallelLoopState" FullName="System.Threading.Tasks.ParallelLoopState">
+  <TypeSignature Language="C#" Value="public class ParallelLoopState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParallelLoopState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.ParallelLoopState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("ShouldExitCurrentIteration = {ShouldExitCurrentIteration}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite iterações de loops paralelos para interação com outras iterações. Uma instância dessa classe é fornecida pela classe <see cref="T:System.Threading.Tasks.Parallel" /> a cada loop. Você não pode criar instâncias no seu código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que não é possível instanciar uma instância dessa classe. Ele é gerado automaticamente pelo compilador como um argumento em uma chamada para o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> método. O exemplo fornece uma ilustração.  
+  
+ Constrói como `for` e `foreach` (em c#) e `For` e `For Each` (no Visual Basic) execute sequencialmente do índice mais baixo para o mais alto ou do primeiro objeto em um conjunto para o último. Em contraste, o <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> métodos não. Como individuais iterações do loop são executados em paralelo, eles podem começam e terminam em qualquer ordem. O <xref:System.Threading.Tasks.ParallelLoopState> classe permite individuais iterações de loops paralelos para interação com uma da outra. O <xref:System.Threading.Tasks.ParallelLoopState> classe permite que você:  
+  
+-   Sair a iteração atual e evitar qualquer iterações adicionais sejam iniciados ao chamar o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método. Isso não afeta a iterações que já começou a execução.  
+  
+-   Impedir que qualquer iterações com um índice maior que o índice atual em execução chamando o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método. Isso não afeta a iterações que já começou a execução.  
+  
+-   Determinar se uma exceção ocorreu em qualquer iteração do loop, recuperando o valor de <xref:System.Threading.Tasks.ParallelLoopState.IsExceptional%2A> propriedade.  
+  
+-   Determinar se qualquer iteração do loop chamou o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método por recuperar o valor da <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> propriedade. Você pode usar essa propriedade para retornar de iterações do loop que iniciados antes da chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método mas ainda estão em execução.  
+  
+-   Determinar se qualquer iteração do loop chamou o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> ou <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método ou gerou uma exceção ao recuperar o valor da <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> propriedade.  
+  
+-   Sair de uma iteração de longa execução cujo índice é maior que o índice de uma iteração quebra foi chamada por recuperar o valor da <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir executa até 100 iterações de um loop em paralelo. Cada iteração pausa por um intervalo aleatório de 1 para 1.000 milissegundos. Um valor gerado aleatoriamente determina em qual iteração do loop de <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método é chamado. Como a saída mostra o exemplo, nenhum iterações cujo índice é maior do que o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> início do valor de propriedade após a chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ Como iterações do loop são ainda podem estar em execução quando o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método é chamado, chamadas de cada iteração a <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> propriedade para verificar se a outra iteração chamou o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método. Se o valor da propriedade é `true`, a iteração verifica o valor da <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> propriedade e, se for maior que o valor de índice de iteração atual, retorna imediatamente.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Um <see cref="T:System.Threading.Tasks.ParallelLoopState" /> instância deve ser usado somente dentro do corpo do loop para o qual uma instância foi fornecida.  Não é seguro usar um fornecido <see cref="T:System.Threading.Tasks.ParallelLoopState" /> instância após o loop associado termina, nem é seguro explicitamente entregá-lo a outros segmentos e tem esses threads acessá-lo a qualquer momento.  Outro <see cref="T:System.Threading.Tasks.ParallelLoopState" /> instância será fornecida para cada thread envolvidos em um loop.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Break">
+      <MemberSignature Language="C#" Value="public void Break ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Break() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.ParallelLoopState.Break" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Comunica que o loop de <see cref="T:System.Threading.Tasks.Parallel" /> deve encerrar a execução de iterações além da iteração atual, conforme a necessidade mais recente do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>indica que nenhuma iterações após a iteração atual devem ser executadas. Efetivamente, ele cancela qualquer adicionais iterações do loop. No entanto, ela não interrompe qualquer iterações que já começou a execução. Por exemplo, se <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> é chamado de 100 vezes iteração de um loop paralelo iteração de 0 a 1.000, todas as iterações menor que 100 devem ainda ser executado, mas as iterações de 101 a 1000 que ainda não foram iniciados não são executados.  
+  
+ Iterações de longa execução que podem já estar em execução, <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> define o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> índice de iteração atual se o índice atual for menor que o valor atual da propriedade <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A>. Para interromper iterações cujo índice é maior do que a iteração de quebra mais baixa de execução concorrente, faça o seguinte:  
+  
+1.  Verifique se o <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> é de propriedade `true`.  
+  
+2.  Sair da iteração, se o índice é maior do que o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> o valor da propriedade.  
+  
+ O exemplo fornece uma ilustração.  
+  
+ <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>normalmente é utilizado em algoritmos de pesquisa com base em onde uma ordenação está presente na fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir executa até 100 iterações de um loop em paralelo. Cada iteração pausa por um intervalo aleatório de 1 para 1.000 milissegundos. Um valor gerado aleatoriamente determina em qual iteração do loop de <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método é chamado. Como a saída mostra o exemplo, nenhum iterações cujo índice é maior do que o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> início do valor de propriedade após a chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ Como iterações do loop são ainda podem estar em execução quando o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método é chamado, chamadas de cada iteração a <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> propriedade para verificar se a outra iteração chamou o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método. Se o valor da propriedade é `true`, a iteração verifica o valor da <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> propriedade e, se for maior que o valor de índice de iteração atual, retorna imediatamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> foi chamado anteriormente. <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> e <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> não podem ser usados em combinação por iterações do mesmo loop.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExceptional">
+      <MemberSignature Language="C#" Value="public bool IsExceptional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExceptional" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.IsExceptional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se qualquer iteração do loop gerou uma exceção que ficou sem tratamento por essa iteração.</summary>
+        <value>
+          <see langword="true" />Se tiver sido lançada uma exceção sem tratamento. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStopped">
+      <MemberSignature Language="C#" Value="public bool IsStopped { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStopped" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.IsStopped" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se qualquer iteração do loop chamou o <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> método.</summary>
+        <value>
+          <see langword="true" />Se qualquer iteração parou o loop chamando o <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> método; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Iterações de longa execução do loop, você pode recuperar o valor da <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> propriedade para determinar se qualquer iterações do loop que começou a execução antes da chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método ainda estão em execução. Você pode usar o valor da <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> propriedade para determinar se eles devem retornar imediatamente ou executar normalmente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir executa até 10.000 iterações de um loop em paralelo. Cada iteração pausa por um intervalo aleatório de 1 para 1.000 milissegundos. Um valor gerado aleatoriamente determina em qual iteração do loop de <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método é chamado. Como iterações do loop são ainda podem estar em execução quando o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método é chamado, a expressão de lambda chama o <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> método para verificar se a outra iteração chamou o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método. Se ele retornar `true`, a iteração retorna imediatamente.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/stop1.cs#1)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/stop1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowestBreakIteration">
+      <MemberSignature Language="C#" Value="public Nullable&lt;long&gt; LowestBreakIteration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int64&gt; LowestBreakIteration" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a menor iteração do loop do qual <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> foi chamado.</summary>
+        <value>A iteração menor do que <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> foi chamado. No caso de um <see cref="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})" /> loop, o valor é baseado em um índice gerado internamente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível que várias iterações de um loop paralelo para chamar o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método. Se isso ocorrer, esse valor é o menor índice de uma iteração que chamou <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>. Se nenhuma iteração do loop chamado <xref:System.Threading.Tasks.ParallelLoopState.Break%2A>, essa propriedade retornará `null`. Observe que o valor da propriedade não é afetado por chamadas para o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método.  
+  
+ Em iterações de longa duração em que todas as iterações após a iteração que chama o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> não precisa executar o método, o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> propriedade é usada para encerrar iterações que começaram a execução antes da chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método. Para interromper iterações cujo índice é maior do que a iteração de quebra mais baixa de execução concorrente, faça o seguinte:  
+  
+1.  Verifique se o <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> é de propriedade `true`.  
+  
+2.  Sair da iteração, se o índice é maior do que o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> o valor da propriedade.  
+  
+ O exemplo fornece uma ilustração.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir executa até 100 iterações de um loop em paralelo. Cada iteração pausa por um intervalo aleatório de 1 para 1.000 milissegundos. Um valor gerado aleatoriamente determina em qual iteração do loop de <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método é chamado. Isso impede que iterações cujo índice é maior do que o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> valor da propriedade seja iniciado após a chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método, mas ele não afeta qualquer iterações que já começou a execução. Para evitar que eles concluam, cada iteração chama o <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> método para verificar se a outra iteração chamou o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método. Se assim, a iteração verifica o valor da <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> propriedade e, se for maior que o valor de índice de iteração atual, retorna imediatamente.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ Observe que, como o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> valor está fora do escopo fora do loop paralelo, você deve atribuí-lo a uma variável que é visível fora do loop, se você quiser preservar seu valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldExitCurrentIteration">
+      <MemberSignature Language="C#" Value="public bool ShouldExitCurrentIteration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldExitCurrentIteration" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se a iteração atual do loop deve sair com base nas solicitações feitas por este ou outras iterações.</summary>
+        <value>
+          <see langword="true" />Se a iteração atual deve ser encerrada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> está definida como `true` em qualquer uma das seguintes condições:  
+  
+-   Uma iteração do loop chamadas <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> ou <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A>.  
+  
+-   Uma iteração do loop gera uma exceção.  
+  
+-   O loop será cancelado.  
+  
+ Quando essa propriedade é `true`, o <xref:System.Threading.Tasks.Parallel> classe proativamente tentará proibir adicionais iterações do loop de iniciar a execução. No entanto, pode haver casos em que não é possível evitar iterações adicionais sejam iniciados.  
+  
+ Ele também pode ser o caso de uma iteração de longa execução já iniciou a execução. Nesses casos, iterações podem verificar explicitamente o <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> propriedade e deixará de execução se a propriedade retornar `true`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir executa até 100 iterações de um loop em paralelo. Cada iteração pausa por um intervalo aleatório de 1 para 1.000 milissegundos. Um valor gerado aleatoriamente determina em qual iteração do loop de <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método é chamado. Isso impede que iterações cujo índice é maior do que o <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> valor da propriedade seja iniciado após a chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método, mas ele não afeta qualquer iterações que já começou a execução. Para evitar que eles concluam, cada iteração chama o <xref:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration%2A> método para verificar se a outra iteração chamou o <xref:System.Threading.Tasks.ParallelLoopState.Break%2A> método. Se assim, a iteração verifica o valor da <xref:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration%2A> propriedade e, se for maior que o valor de índice de iteração atual, retorna imediatamente.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/break1.cs#2)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/break1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.ParallelLoopState.Stop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Parallel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Comunica que o loop <see cref="T:System.Threading.Tasks.Parallel" /> deve cessar a execução assim que for possível para o sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método indica que qualquer iterações do loop que ainda não foram iniciados não precisam ser executadas. Efetivamente, ele cancela qualquer adicionais iterações do loop. No entanto, ela não interrompe qualquer iterações que já começou a execução.  
+  
+ Chamando o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método faz com que o <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> propriedade para retornar `true` para qualquer iteração do loop que ainda está em execução. Isso é particularmente útil para iterações de longa execução, que podem verificar o <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> propriedade e saída no início se seu valor é `true`.  
+  
+ <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A>normalmente é utilizado em algoritmos com base em pesquisa, onde depois que um resultado é encontradas, nenhum outras iterações precisam ser executadas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir executa até 10.000 iterações de um loop em paralelo. Cada iteração pausa por um intervalo aleatório de 1 para 1.000 milissegundos. Um valor gerado aleatoriamente determina em qual iteração do loop de <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método é chamado. Como mostra a saída do exemplo, nenhum iterações executar após a chamada para o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método.  
+  
+ [!code-csharp[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/cs/stop1.cs#1)]
+ [!code-vb[System.Threading.Tasks.ParallelLoopState#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallelloopstate/vb/stop1.vb#1)]  
+  
+ Como iterações do loop são ainda podem estar em execução quando o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método é chamado, chamadas de cada iteração a <xref:System.Threading.Tasks.ParallelLoopState.IsStopped%2A> método para verificar se a outra iteração chamou o <xref:System.Threading.Tasks.ParallelLoopState.Stop%2A> método. Se ele retornar `true`, a iteração retorna imediatamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> foi chamado anteriormente. <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> e <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> não podem ser usados em combinação por iterações do mesmo loop.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

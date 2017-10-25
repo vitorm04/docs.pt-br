@@ -1,0 +1,100 @@
+<Type Name="ScrollBars" FullName="System.Windows.Forms.ScrollBars">
+  <TypeSignature Language="C#" Value="public enum ScrollBars" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollBars extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ScrollBars" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica que as barras de rolagem serão visíveis em um controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por <xref:System.Windows.Forms.TextBox.ScrollBars%2A?displayProperty=nameWithType>.  
+  
+ Nem todos os controles dão suporte a barras de rolagem. Use esta enumeração para especificar as barras de rolagem serão visíveis em um controle, sob algumas ou todas as circunstâncias.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.ScrollBars> enumeração. Para executar o exemplo, cole o código a seguir em um formulário. Chamar o `SetFourDifferentScrollBars` método no construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ScrollBarsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ScrollBarsExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ScrollBarsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ScrollBarsExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ScrollBarsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ScrollBarsExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollBars Both = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollBars.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As barras de rolagem horizontais e verticais são mostradas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="Horizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollBars Horizontal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollBars.Horizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente as barras de rolagem horizontais são mostradas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollBars None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollBars.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma barra de rolagem é mostrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="Vertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ScrollBars Vertical = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ScrollBars.Vertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ScrollBars</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Somente as barras de rolagem verticais são mostradas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

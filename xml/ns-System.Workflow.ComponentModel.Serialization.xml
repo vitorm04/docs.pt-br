@@ -1,0 +1,6 @@
+<Namespace Name="System.Workflow.ComponentModel.Serialization">
+  <Docs>
+    <summary>Fornece a infraestrutura para gerenciar a serialização de atividades e fluxos de trabalho para e do extensible Application Markup Language (XAML) e CodeDOM.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

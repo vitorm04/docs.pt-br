@@ -1,0 +1,6 @@
+<Namespace Name="System.CodeDom.Compiler">
+  <Docs>
+    <summary>O namespace <see cref="N:System.CodeDom.Compiler" /> contém tipos para gerenciar a geração e compilação do código-fonte em linguagens de programação com suporte. Geradores de código podem cada código-fonte em uma linguagem de programação específico com base na estrutura de modelos de código de origem de modelo de objeto de documento de código (CodeDOM) consiste em elementos fornecidos por produzir a <see cref="N:System.CodeDom" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

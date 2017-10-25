@@ -1,0 +1,197 @@
+<Type Name="TransmitFileOptions" FullName="System.Net.Sockets.TransmitFileOptions">
+  <TypeSignature Language="C#" Value="public enum TransmitFileOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransmitFileOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.TransmitFileOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A enumeração <see cref="T:System.Net.Sockets.TransmitFileOptions" /> define os valores usados nas solicitações de transferência de arquivo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Observação** os sinalizadores de desconexão e ReuseSocket retornará o soquete para desconectado, reutilizável estado depois que o arquivo foi transmitido. Esses sinalizadores não devem ser usados em um soquete em que foi solicitada a qualidade do serviço (QOS), porque o provedor de serviços pode excluir imediatamente qualquer qualidade de serviço associada ao soquete antes que a transferência foi concluída. A melhor abordagem para um soquete QOS habilitado é chamar <xref:System.Net.Sockets.Socket.Close%2A> quando a transferência for concluída, em vez de contar esses sinalizadores.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso de <xref:System.Net.Sockets.TransmitFileOptions.ReuseSocket> em uma chamada para <xref:System.Net.Sockets.Socket.SendFile%2A>. O arquivo "test.txt" está localizado no diretório raiz da máquina local. Neste exemplo, um prebuffer postbuffer de dados são criados e enviados ao host remoto com o arquivo. Para usar o thread de padrão do sistema, UseDefaultWorkerThread é especificado.  
+  
+ [!code-cpp[NCLSocketEnhancements#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLSocketEnhancements/CPP/nclsocketenhancements.cpp#4)]
+ [!code-csharp[NCLSocketEnhancements#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLSocketEnhancements/CS/nclsocketenhancements.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="Disconnect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.TransmitFileOptions Disconnect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.TransmitFileOptions.Disconnect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TransmitFileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Inicie uma desconexão de nível de transporte depois que todos os dados do arquivo forem colocados em fila para transmissão. Quando forem usados com <see cref="F:System.Net.Sockets.TransmitFileOptions.ReuseSocket" />, esses sinalizadores retornarão o soquete para um estado desconectado e reutilizável depois que o arquivo tiver sido transmitido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReuseSocket">
+      <MemberSignature Language="C#" Value="ReuseSocket" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.TransmitFileOptions ReuseSocket = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.TransmitFileOptions.ReuseSocket" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TransmitFileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O identificador de soquete poderá ser reutilizado quando a solicitação for concluída. Esse sinalizador apenas será válido se <see cref="F:System.Net.Sockets.TransmitFileOptions.Disconnect" /> também for especificado. Quando forem usados com <see cref="F:System.Net.Sockets.TransmitFileOptions.Disconnect" />, esses sinalizadores retornarão o soquete para um estado desconectado e reutilizável depois que o arquivo tiver sido transmitido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultWorkerThread">
+      <MemberSignature Language="C#" Value="UseDefaultWorkerThread" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.TransmitFileOptions UseDefaultWorkerThread = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.TransmitFileOptions.UseDefaultWorkerThread" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TransmitFileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o thread padrão para processar solicitações de transferência de arquivo longas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseKernelApc">
+      <MemberSignature Language="C#" Value="UseKernelApc" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.TransmitFileOptions UseKernelApc = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.TransmitFileOptions.UseKernelApc" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TransmitFileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use APCs (chamadas de procedimento assíncronas) de kernel em vez de threads de trabalho para processar solicitações de transferência de arquivo longas. Solicitações longas são definidas como solicitações que exigem mais de uma única leitura do arquivo ou de um cache; portanto, a solicitação depende do tamanho do arquivo e do tamanho especificado do pacote de envio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseSystemThread">
+      <MemberSignature Language="C#" Value="UseSystemThread" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.TransmitFileOptions UseSystemThread = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.TransmitFileOptions.UseSystemThread" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TransmitFileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use threads do sistema para processar solicitações de transferência de arquivo longas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBehind">
+      <MemberSignature Language="C#" Value="WriteBehind" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.TransmitFileOptions WriteBehind = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.TransmitFileOptions.WriteBehind" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.TransmitFileOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conclua a solicitação de transferência de arquivo imediatamente, sem pendência. Se esse sinalizador for especificado e a transferência de arquivos for bem-sucedida, isso indica que os dados foram aceitos pelo sistema, mas não necessariamente reconhecidos pela extremidade remota. Não use esse sinalizador com os sinalizadores <see cref="F:System.Net.Sockets.TransmitFileOptions.Disconnect" /> e <see cref="F:System.Net.Sockets.TransmitFileOptions.ReuseSocket" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

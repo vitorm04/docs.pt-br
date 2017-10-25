@@ -1,0 +1,52 @@
+<Type Name="IEndpointIdentityProvider" FullName="System.ServiceModel.Security.IEndpointIdentityProvider">
+  <TypeSignature Language="C#" Value="public interface IEndpointIdentityProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IEndpointIdentityProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.IEndpointIdentityProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a identidade de um ponto de extremidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta interface é uma extensibilidade ponto `SecurityTokenManagers` podem implementar para fornecer um padrão <xref:System.ServiceModel.EndpointIdentity> para o ponto de extremidade do serviço (por exemplo, uma identidade DNS). Isso <xref:System.ServiceModel.EndpointIdentity> é publicada como parte da WSDL para o ponto de extremidade de serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetIdentityOfSelf">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointIdentity GetIdentityOfSelf (System.IdentityModel.Selectors.SecurityTokenRequirement tokenRequirement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.EndpointIdentity GetIdentityOfSelf(class System.IdentityModel.Selectors.SecurityTokenRequirement tokenRequirement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Security.IEndpointIdentityProvider.GetIdentityOfSelf(System.IdentityModel.Selectors.SecurityTokenRequirement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointIdentity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tokenRequirement" Type="System.IdentityModel.Selectors.SecurityTokenRequirement" />
+      </Parameters>
+      <Docs>
+        <param name="tokenRequirement">O <see cref="T:System.IdentityModel.Selectors.SecurityTokenRequirement" /> que descreve os requisitos de token de segurança.</param>
+        <summary>Obtém a identidade do ponto de extremidade atual, com base na segurança requisitos de token passados.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointIdentity" /> do ponto de extremidade atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `tokenRequirement` parâmetro contém as informações de associação do ponto de extremidade, que normalmente é usada para determinar o <xref:System.ServiceModel.EndpointIdentity> para o ponto de extremidade. Por exemplo, se a associação é configurada para fazer a autenticação Kerberos, a identidade padrão retornada será uma `ServicePrincipalName` (SPN) ou `UserPrincipalName` (UPN).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

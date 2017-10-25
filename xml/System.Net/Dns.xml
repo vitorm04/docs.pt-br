@@ -1,0 +1,1223 @@
+<Type Name="Dns" FullName="System.Net.Dns">
+  <TypeSignature Language="C#" Value="public static class Dns" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed Dns extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Dns" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NameResolution</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a funcionalidade de resolução de nome de domínio simples.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns> classe é uma classe estática que recupera informações sobre um host específico da Internet sistema DNS (Domain Name).  
+  
+ As informações do host da consulta DNS são retornadas em uma instância do <xref:System.Net.IPHostEntry> classe. Se o host especificado tem mais de uma entrada no banco de dados DNS <xref:System.Net.IPHostEntry> contém vários endereços IP e aliases.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir consulta o banco de dados do DNS para obter informações sobre o host www.contoso.com.  
+  
+ [!code-cpp[Classic Dns Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic Dns Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Dns Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic Dns Example/CS/source.cs#1)]
+ [!code-vb[Classic Dns Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic Dns Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginGetHostAddresses">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginGetHostAddresses (string hostNameOrAddress, AsyncCallback requestCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginGetHostAddresses(string hostNameOrAddress, class System.AsyncCallback requestCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="requestCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O nome do host ou endereço IP a ser resolvido.</param>
+        <param name="requestCallback">Um delegado <see cref="T:System.AsyncCallback" /> que faz referência ao método a ser invocado quando a operação é concluída.</param>
+        <param name="state">Um objeto definido pelo usuário que contém informações sobre a operação. Este objeto é passado para o <c>requestCallback</c> delegar quando a operação for concluída.</param>
+        <summary>Retorna os endereços IP (protocolo IP) de modo assíncrono para o host especificado.</summary>
+        <returns>Uma instância <see cref="T:System.IAsyncResult" /> que referencia a solicitação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.BeginGetHostAddresses%2A> método assincronamente consulta um servidor DNS para os endereços IP que estão associados com um nome de host. Se `hostNameOrAddress` é um endereço IP, esse endereço é retornado sem consultar o servidor DNS.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ Se uma cadeia de caracteres vazia for passada como o `hostNameOrAddress` argumento e, em seguida, esse método retorna os endereços IPv4 e IPv6 do host local.
+  
+ O assíncrona <xref:System.Net.Dns.BeginGetHostAddresses%2A> operação deve ser concluída chamando o <xref:System.Net.Dns.EndGetHostAddresses%2A> método. Normalmente, o método é invocado pelo `requestCallback` delegate.  
+  
+ Esse método não bloqueia até que a operação seja concluída. Para bloquear até que a operação for concluída, use o <xref:System.Net.Dns.GetHostAddresses%2A> método.  
+  
+ Para obter mais informações sobre como usar o modelo de programação assíncrono, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho de <paramref name="hostNameOrAddress" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="hostNameOrAddress" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hostNameOrAddress" /> é um endereço IP inválido.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetHostByName">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginGetHostByName (string hostName, AsyncCallback requestCallback, object stateObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginGetHostByName(string hostName, class System.AsyncCallback requestCallback, object stateObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostByName(System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use BeginGetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostName" Type="System.String" />
+        <Parameter Name="requestCallback" Type="System.AsyncCallback" />
+        <Parameter Name="stateObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostName">O nome DNS do host.</param>
+        <param name="requestCallback">Um delegado <see cref="T:System.AsyncCallback" /> que faz referência ao método a ser invocado quando a operação é concluída.</param>
+        <param name="stateObject">Um objeto definido pelo usuário que contém informações sobre a operação. Este objeto é passado para o <c>requestCallback</c> delegar quando a operação for concluída.</param>
+        <summary>Inicia uma solicitação assíncrona para <see cref="T:System.Net.IPHostEntry" /> informações sobre o nome de host DNS especificado.</summary>
+        <returns>Uma instância <see cref="T:System.IAsyncResult" /> que referencia a solicitação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O assíncrona <xref:System.Net.Dns.BeginGetHostByName%2A> operação deve ser concluída chamando o <xref:System.Net.Dns.EndGetHostByName%2A> método. Normalmente, o método é invocado pelo `requestCallback` delegate.  
+  
+ Esse método não bloqueia até que a operação seja concluída. Para bloquear até que a operação for concluída, use o <xref:System.Net.Dns.GetHostByName%2A> método.  
+  
+ Para obter informações detalhadas sobre como usar o modelo de programação assíncrono, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Ocorreu um erro ao executar a consulta DNS.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetHostEntry">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginGetHostEntry (System.Net.IPAddress address, AsyncCallback requestCallback, object stateObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginGetHostEntry(class System.Net.IPAddress address, class System.AsyncCallback requestCallback, object stateObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostEntry(System.Net.IPAddress,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="requestCallback" Type="System.AsyncCallback" />
+        <Parameter Name="stateObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address">O endereço IP a ser resolvido.</param>
+        <param name="requestCallback">Um delegado <see cref="T:System.AsyncCallback" /> que faz referência ao método a ser invocado quando a operação é concluída.</param>
+        <param name="stateObject">Um objeto definido pelo usuário que contém informações sobre a operação. Este objeto é passado para o <c>requestCallback</c> delegar quando a operação for concluída.</param>
+        <summary>Resolve assincronamente um endereço IP para uma instância de <see cref="T:System.Net.IPHostEntry" />.</summary>
+        <returns>Uma instância <see cref="T:System.IAsyncResult" /> que referencia a solicitação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.BeginGetHostEntry%2A> método assincronamente consulta um servidor DNS para os endereços IP e alias associados a um endereço IP.  
+  
+ **Observação** esse membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ O assíncrona <xref:System.Net.Dns.BeginGetHostEntry%2A> operação deve ser concluída chamando o <xref:System.Net.Dns.EndGetHostEntry%2A> método. Normalmente, o método é invocado pelo `requestCallback` delegate.  
+  
+ Esse método não bloqueia até que a operação seja concluída. Para bloquear até que a operação for concluída, use o <xref:System.Net.Dns.GetHostEntry%2A> método.  
+  
+ Para obter informações detalhadas sobre como usar o modelo de programação assíncrono, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Net.Dns.BeginGetHostEntry%2A> método para resolver um IP endereço para um <xref:System.Net.IPHostEntry> instância.  
+  
+ [!code-cpp[System.Net.Dns#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Dns/CPP/dnsnewmethods.cpp#2)]
+ [!code-csharp[System.Net.Dns#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Dns/CS/dnsnewmethods.cs#2)]
+ [!code-vb[System.Net.Dns#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Dns/vb/dnsnewmethods.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="address" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" /> é um endereço IP inválido.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetHostEntry">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginGetHostEntry (string hostNameOrAddress, AsyncCallback requestCallback, object stateObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginGetHostEntry(string hostNameOrAddress, class System.AsyncCallback requestCallback, object stateObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginGetHostEntry(System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="requestCallback" Type="System.AsyncCallback" />
+        <Parameter Name="stateObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O nome do host ou endereço IP a ser resolvido.</param>
+        <param name="requestCallback">Um delegado <see cref="T:System.AsyncCallback" /> que faz referência ao método a ser invocado quando a operação é concluída.</param>
+        <param name="stateObject">Um objeto definido pelo usuário que contém informações sobre a operação. Este objeto é passado para o <c>requestCallback</c> delegar quando a operação for concluída.</param>
+        <summary>Resolve um nome do host ou endereço IP para uma instância <see cref="T:System.Net.IPHostEntry" /> de forma assíncrona.</summary>
+        <returns>Uma instância <see cref="T:System.IAsyncResult" /> que referencia a solicitação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.BeginGetHostEntry%2A> método consulta um servidor DNS para o endereço IP que está associado com um nome de host ou endereço IP.  
+  
+ **Observação** esse membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ O assíncrona <xref:System.Net.Dns.BeginGetHostEntry%2A> operação deve ser concluída chamando o <xref:System.Net.Dns.EndGetHostEntry%2A> método. Normalmente, o método é invocado pelo `requestCallback` delegate.  
+  
+ Esse método não bloqueia até que a operação seja concluída. Para bloquear até que a operação for concluída, use o <xref:System.Net.Dns.GetHostEntry%2A> método.  
+  
+ Para obter informações detalhadas sobre como usar o modelo de programação assíncrono, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Net.Dns.BeginGetHostEntry%2A> método para resolver um IP endereço para um <xref:System.Net.IPHostEntry> instância.  
+  
+ [!code-cpp[System.Net.Dns#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Dns/CPP/dnsnewmethods.cpp#2)]
+ [!code-csharp[System.Net.Dns#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Dns/CS/dnsnewmethods.cs#2)]
+ [!code-vb[System.Net.Dns#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Dns/vb/dnsnewmethods.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho de <paramref name="hostNameOrAddress" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="hostNameOrAddress" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hostNameOrAddress" /> é um endereço IP inválido.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginResolve">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginResolve (string hostName, AsyncCallback requestCallback, object stateObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginResolve(string hostName, class System.AsyncCallback requestCallback, object stateObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.BeginResolve(System.String,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use BeginGetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostName" Type="System.String" />
+        <Parameter Name="requestCallback" Type="System.AsyncCallback" />
+        <Parameter Name="stateObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostName">O nome DNS do host.</param>
+        <param name="requestCallback">Um delegado <see cref="T:System.AsyncCallback" /> que faz referência ao método a ser invocado quando a operação é concluída.</param>
+        <param name="stateObject">Um objeto definido pelo usuário que contém informações sobre a operação. Este objeto é passado para o <c>requestCallback</c> delegar quando a operação for concluída.</param>
+        <summary>Inicia uma solicitação assíncrona para resolver um nome de host DNS ou endereço IP para um <see cref="T:System.Net.IPAddress" /> instância.</summary>
+        <returns>Uma instância <see cref="T:System.IAsyncResult" /> que referencia a solicitação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O assíncrona <xref:System.Net.Dns.BeginResolve%2A> operação deve ser concluída chamando o <xref:System.Net.Dns.EndResolve%2A> método. Normalmente, o método é invocado pelo `requestCallback` delegate.  
+  
+ Esse método não bloqueia até que a operação seja concluída. Para bloquear até que a operação for concluída, use o <xref:System.Net.Dns.Resolve%2A> método.  
+  
+ Para obter mais informações sobre como usar o modelo de programação assíncrono, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Net.Dns.BeginResolve%2A> para resolver um nome de host DNS para um <xref:System.Net.IPAddress>.  
+  
+ [!code-cpp[Dns_Begin_EndResolve#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Dns_Begin_EndResolve/CPP/dns_begin_endresolve.cpp#1)]
+ [!code-csharp[Dns_Begin_EndResolve#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Dns_Begin_EndResolve/CS/dns_begin_endresolve.cs#1)]
+ [!code-vb[Dns_Begin_EndResolve#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Dns_Begin_EndResolve/VB/dns_begin_endresolve.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">O chamador não tem permissão para acessar informações de DNS.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetHostAddresses">
+      <MemberSignature Language="C#" Value="public static System.Net.IPAddress[] EndGetHostAddresses (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPAddress[] EndGetHostAddresses(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndGetHostAddresses(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Uma instância <see cref="T:System.IAsyncResult" /> retornada por uma chamada ao método <see cref="M:System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object)" />.</param>
+        <summary>Encerra uma solicitação assíncrona de informações de DNS.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Net.IPAddress" /> que contém os endereços IP do host especificado pelo parâmetro <paramref name="hostNameOrAddress" /> de <see cref="M:System.Net.Dns.BeginGetHostAddresses(System.String,System.AsyncCallback,System.Object)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.BeginGetHostAddresses%2A> método consulta um servidor DNS para os endereços IP associados com um nome de host. Se `hostNameOrAddress` é um endereço IP, esse endereço é retornado sem consultar o servidor DNS.  
+  
+ Se uma cadeia de caracteres vazia for passada como o `hostNameOrAddress` argumento e, em seguida, esse método retorna os endereços IPv4 e IPv6 do host local.
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetHostByName">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry EndGetHostByName (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry EndGetHostByName(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndGetHostByName(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use EndGetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Um <see cref="T:System.IAsyncResult" /> instância que é retornada por uma chamada para o <see cref="M:System.Net.Dns.BeginGetHostByName(System.String,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Encerra uma solicitação assíncrona de informações de DNS.</summary>
+        <returns>Um <see cref="T:System.Net.IPHostEntry" /> objeto que contém informações sobre um host de DNS.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que a operação seja concluída.  
+  
+ Para executar esta operação síncrona, use o <xref:System.Net.Dns.GetHostByName%2A> método.  
+  
+ Se o <xref:System.Net.Configuration.Ipv6Element.Enabled%2A?displayProperty=nameWithType> está definida como `true`, o <xref:System.Net.IPHostEntry.Aliases%2A> propriedade do <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetHostEntry">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry EndGetHostEntry (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry EndGetHostEntry(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndGetHostEntry(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Uma instância <see cref="T:System.IAsyncResult" /> retornada por uma chamada a um método <see cref="Overload:System.Net.Dns.BeginGetHostEntry" />.</param>
+        <summary>Encerra uma solicitação assíncrona de informações de DNS.</summary>
+        <returns>Uma instância <see cref="T:System.Net.IPHostEntry" /> que contém informações de endereço sobre o host.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que a operação seja concluída.  
+  
+ O <xref:System.Net.IPHostEntry.Aliases%2A> propriedade o <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+ Para executar esta operação síncrona, use um <xref:System.Net.Dns.GetHostEntry%2A> método.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndResolve">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry EndResolve (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry EndResolve(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.EndResolve(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use EndGetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Um <see cref="T:System.IAsyncResult" /> instância que é retornada por uma chamada para o <see cref="M:System.Net.Dns.BeginResolve(System.String,System.AsyncCallback,System.Object)" /> método.</param>
+        <summary>Encerra uma solicitação assíncrona de informações de DNS.</summary>
+        <returns>Um <see cref="T:System.Net.IPHostEntry" /> objeto que contém informações sobre um host de DNS.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Blocos este método até que a operação seja concluída.  
+  
+ Se o <xref:System.Net.Configuration.Ipv6Element.Enabled%2A?displayProperty=nameWithType> é definido como `true`, o <xref:System.Net.IPHostEntry.Aliases%2A> propriedade o <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+ Para executar esta operação síncrona, use o <xref:System.Net.Dns.Resolve%2A> método.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir encerra uma solicitação assíncrona para obter informações de host DNS.  
+  
+ [!code-cpp[Dns_Begin_EndResolve#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Dns_Begin_EndResolve/CPP/dns_begin_endresolve.cpp#1)]
+ [!code-csharp[Dns_Begin_EndResolve#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Dns_Begin_EndResolve/CS/dns_begin_endresolve.cs#1)]
+ [!code-vb[Dns_Begin_EndResolve#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Dns_Begin_EndResolve/VB/dns_begin_endresolve.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asyncResult" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostAddresses">
+      <MemberSignature Language="C#" Value="public static System.Net.IPAddress[] GetHostAddresses (string hostNameOrAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPAddress[] GetHostAddresses(string hostNameOrAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostAddresses(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O nome do host ou endereço IP a ser resolvido.</param>
+        <summary>Retorna os endereços IP (Internet Protocol) para o host especificado.</summary>
+        <returns>Uma matriz do tipo <see cref="T:System.Net.IPAddress" /> que contém os endereços IP para o host especificado pelo parâmetro <paramref name="hostNameOrAddress" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.GetHostAddresses%2A> método consulta um servidor DNS para os endereços IP associados com um nome de host. Se `hostNameOrAddress` é um endereço IP, esse endereço é retornado sem consultar o servidor DNS.  
+  
+ Se uma cadeia de caracteres vazia for passada como o `hostNameOrAddress` argumento e, em seguida, esse método retorna os endereços IPv4 e IPv6 do host local.
+  
+ Endereços IPv6 são filtrados dos resultados do <xref:System.Net.Dns.GetHostAddresses%2A> método se o computador local não tiver o IPv6 foi instalado. Como resultado, é possível voltar vazio <xref:System.Net.IPAddress> instância se somente IPv6 resultados quando disponíveis para o `hostNameOrAddress`.parameter.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Net.Dns.GetHostAddresses%2A> método para resolver o endereço IP para uma matriz do tipo <xref:System.Net.IPAddress>.  
+  
+ [!code-cpp[System.Net.Dns#3](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Dns/CPP/dnsnewmethods.cpp#3)]
+ [!code-csharp[System.Net.Dns#3](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Dns/CS/dnsnewmethods.cs#3)]
+ [!code-vb[System.Net.Dns#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Dns/vb/dnsnewmethods.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho de <paramref name="hostNameOrAddress" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="hostNameOrAddress" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hostNameOrAddress" /> é um endereço IP inválido.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostAddressesAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Net.IPAddress[]&gt; GetHostAddressesAsync (string hostNameOrAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Net.IPAddress[]&gt; GetHostAddressesAsync(string hostNameOrAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostAddressesAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.IPAddress[]&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O nome do host ou endereço IP a ser resolvido.</param>
+        <summary>Retorna os endereços IP (protocolo IP) para o host especificado como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto de tarefa retorna uma matriz do tipo <see cref="T:System.Net.IPAddress" /> que contém os endereços IP para o host especificado pelo parâmetro <paramref name="hostNameOrAddress" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após o `hostNameOrAddress` foi resolvido.  
+  
+ Este método consulta um servidor DNS para os endereços IP associados com um nome de host. Se `hostNameOrAddress` é um endereço IP, esse endereço é retornado sem consultar o servidor DNS.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho de <paramref name="hostNameOrAddress" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="hostNameOrAddress" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="hostNameOrAddress" /> é um endereço IP inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostByAddress">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry GetHostByAddress (System.Net.IPAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry GetHostByAddress(class System.Net.IPAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostByAddress(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" />.</param>
+        <summary>Cria uma instância de <see cref="T:System.Net.IPHostEntry" /> do <see cref="T:System.Net.IPAddress" /> especificado.</summary>
+        <returns>Um <see cref="T:System.Net.IPHostEntry" />.  
+  
+ Uma instância <see cref="T:System.Net.IPHostEntry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Net.IPHostEntry> de um <xref:System.Net.IPAddress>.  
+  
+ [!code-cpp[Dns_GetHostByAddress_IPAddress#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Dns_GetHostByAddress_IPAddress/CPP/dns_gethostbyaddress_ipaddress.cpp#1)]
+ [!code-csharp[Dns_GetHostByAddress_IPAddress#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Dns_GetHostByAddress_IPAddress/CS/dns_gethostbyaddress_ipaddress.cs#1)]
+ [!code-vb[Dns_GetHostByAddress_IPAddress#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Dns_GetHostByAddress_IPAddress/VB/dns_gethostbyaddress_ipaddress.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="address" />.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostByAddress">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry GetHostByAddress (string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry GetHostByAddress(string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostByAddress(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um endereço IP.</param>
+        <summary>Cria uma instância <see cref="T:System.Net.IPHostEntry" /> com base em um endereço IP.</summary>
+        <returns>Uma instância <see cref="T:System.Net.IPHostEntry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="address" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostByName">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry GetHostByName (string hostName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry GetHostByName(string hostName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostByName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostName">O nome DNS do host.</param>
+        <summary>Obtém as informações de DNS do nome do host DNS especificado.</summary>
+        <returns>Um objeto <see cref="T:System.Net.IPHostEntry" /> que contém informações de host do endereço especificado em <paramref name="hostName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.GetHostByName%2A> método consulta o servidor DNS da Internet para obter informações de host. Se você passar uma cadeia de caracteres vazia como o nome do host, esse método recupera o nome de host padrão para o computador local.  
+  
+ Para acessar assíncrona informações de DNS, use o <xref:System.Net.Dns.BeginGetHostByName%2A> e <xref:System.Net.Dns.EndGetHostByName%2A> métodos.  
+  
+ Se o <xref:System.Net.Configuration.Ipv6Element.Enabled%2A?displayProperty=nameWithType> está definida como `true`, o <xref:System.Net.IPHostEntry.Aliases%2A> propriedade do <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.Dns.GetHostByName%2A> método para obter as informações de DNS para o nome de host DNS especificado.  
+  
+ [!code-cpp[Dns_GetHostByName#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Dns_GetHostByName/CPP/dns_gethostbyname.cpp#1)]
+ [!code-csharp[Dns_GetHostByName#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Dns_GetHostByName/CS/dns_gethostbyname.cs#1)]
+ [!code-vb[Dns_GetHostByName#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Dns_GetHostByName/VB/dns_gethostbyname.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho de <paramref name="hostName" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="hostName" />.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostEntry">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry GetHostEntry (System.Net.IPAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry GetHostEntry(class System.Net.IPAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntry(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um endereço IP.</param>
+        <summary>Resolve um endereço IP para uma instância <see cref="T:System.Net.IPHostEntry" />.</summary>
+        <returns>Uma instância <see cref="T:System.Net.IPHostEntry" /> que contém informações de endereço sobre o host especificado em <paramref name="address" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.GetHostEntry%2A> método consulta um servidor DNS para os endereços IP e alias associados a um endereço IP.  
+  
+ Endereços IPv6 são filtrados dos resultados do <xref:System.Net.Dns.GetHostEntry%2A> método se o computador local não tiver o IPv6 foi instalado. Como resultado, é possível voltar vazio <xref:System.Net.IPHostEntry> instância se somente IPv6 resultados quando disponíveis para o `address` parâmetro.  
+  
+ O <xref:System.Net.IPHostEntry.Aliases%2A> propriedade o <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Net.Dns.GetHostEntry%2A> método para resolver um IP endereço para um <xref:System.Net.IPHostEntry> instância.  
+  
+ [!code-cpp[System.Net.Dns#4](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Dns/CPP/dnsnewmethods.cpp#4)]
+ [!code-csharp[System.Net.Dns#4](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Dns/CS/dnsnewmethods.cs#4)]
+ [!code-vb[System.Net.Dns#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Dns/vb/dnsnewmethods.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="address" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" /> é um endereço IP inválido.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostEntry">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry GetHostEntry (string hostNameOrAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry GetHostEntry(string hostNameOrAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntry(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O nome do host ou endereço IP a ser resolvido.</param>
+        <summary>Resolve um nome do host ou endereço IP para uma instância <see cref="T:System.Net.IPHostEntry" />.</summary>
+        <returns>Uma instância <see cref="T:System.Net.IPHostEntry" /> que contém informações de endereço sobre o host especificado em <paramref name="hostNameOrAddress" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.GetHostEntry%2A> método consulta um servidor DNS para o endereço IP que está associado com um nome de host ou endereço IP.  
+  
+ Se uma cadeia de caracteres vazia for passada como o `hostNameOrAddress` argumento e, em seguida, esse método retorna os endereços IPv4 e IPv6 do host local.
+  
+ Se o nome do host não pôde ser encontrado, o <xref:System.Net.Sockets.SocketException> exceção será retornada com um valor de 11001 (erro do Windows Sockets WSAHOST_NOT_FOUND). Essa exceção pode ser retornada se o servidor DNS não responder. Essa exceção também pode ser retornada se o nome não é um nome de host oficial ou um alias ou não foi encontrado no banco de dados que está sendo consultado.  
+  
+ O <xref:System.ArgumentException> exceção também é retornada se o `hostNameOrAddress` parâmetro contém <xref:System.Net.IPAddress.Any> ou <xref:System.Net.IPAddress.IPv6Any>.  
+  
+ O <xref:System.Net.Dns.GetHostEntry%2A> método pressupõe que, se uma cadeia de caracteres literal de IP é passada a `hostNameOrAddress` parâmetro que o aplicativo deseja um <xref:System.Net.IPHostEntry> instância retornada com todo o conjunto de propriedades. Essas propriedades incluem o <xref:System.Net.IPHostEntry.AddressList%2A>, <xref:System.Net.IPHostEntry.Aliases%2A>, e <xref:System.Net.IPHostEntry.HostName%2A>. Como resultado, a implementação de <xref:System.Net.Dns.GetHostEntry%2A> método apresenta o seguinte comportamento quando um literal de cadeia IP é passado:  
+  
+1.  O método tenta analisar o endereço. Se o `hostNameOrAddress` parâmetro contiver um literal de cadeia IP válido, em seguida, a primeira fase é bem-sucedida.  
+  
+2.  Tentativa de uma pesquisa inversa usando o endereço IP da cadeia literal de IP para obter o nome do host. Esse resultado é definido como o <xref:System.Net.IPHostEntry.HostName%2A> propriedade.  
+  
+3.  O nome do host dessa pesquisa inversa é usado novamente para obter todos os possíveis endereços IP associado com o nome e defina como o <xref:System.Net.IPHostEntry.AddressList%2A> propriedade.  
+  
+ Para uma IPv4 cadeia de caracteres literal, todas as três etapas acima poderão ser bem-sucedida. Mas é possível que um registro DNS obsoleto para um endereço IPv4 que realmente pertence a um host diferente a ser retornado. Isso pode causar a etapa &#3; falhar e lançar uma exceção (há um registro PTR de DNS para o endereço IPv4, mas nenhum registro de DNS A para o endereço IPv4).  
+  
+ Para IPv6, etapa #2 acima pode falhar, pois a maioria das implantações do IPv6 não registrar o registro inverso (PTR) para um endereço IPv6. Para que esse método pode retornar a IPv6 da cadeia de caracteres literal como o nome de domínio totalmente qualificado (FQDN) do host no <xref:System.Net.IPHostEntry.HostName%2A> propriedade.  
+  
+ O <xref:System.Net.Dns.GetHostAddresses%2A> método tem um comportamento diferente em relação a literais IP. Se a etapa #1 acima for bem-sucedida (ele com êxito analisa como um endereço IP), que o endereço é imediatamente retornado como o resultado. Não há nenhuma tentativa de uma pesquisa inversa.  
+  
+ Endereços IPv6 são filtrados dos resultados do <xref:System.Net.Dns.GetHostEntry%2A> método se o computador local não tiver o IPv6 foi instalado. Como resultado, é possível voltar vazio <xref:System.Net.IPHostEntry> instância se somente IPv6 resultados quando disponíveis para o `hostNameOrAddress`.parameter.  
+  
+ O <xref:System.Net.IPHostEntry.Aliases%2A> propriedade o <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.Dns.GetHostEntry%2A> método para resolver um IP endereço para um <xref:System.Net.IPHostEntry> instância.  
+  
+ [!code-cpp[System.Net.Dns#1](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Net.Dns/CPP/dnsnewmethods.cpp#1)]
+ [!code-csharp[System.Net.Dns#1](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Net.Dns/CS/dnsnewmethods.cs#1)]
+ [!code-vb[System.Net.Dns#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Net.Dns/vb/dnsnewmethods.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="hostNameOrAddress" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho do parâmetro <paramref name="hostNameOrAddress" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Erro ao resolver o parâmetro <paramref name="hostNameOrAddress" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="hostNameOrAddress" /> é um endereço IP inválido.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostEntryAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Net.IPHostEntry&gt; GetHostEntryAsync (System.Net.IPAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Net.IPHostEntry&gt; GetHostEntryAsync(class System.Net.IPAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntryAsync(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.IPHostEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um endereço IP.</param>
+        <summary>Resolve um endereço IP para uma instância <see cref="T:System.Net.IPHostEntry" /> como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto de tarefa retorna uma instância <see cref="T:System.Net.IPHostEntry" /> que contém informações de endereço sobre o host especificado em <paramref name="address" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após o `address` foi resolvido.  
+  
+ Este método consulta um servidor DNS para os endereços IP e alias associados a um endereço IP.  
+  
+ Endereços IPv6 são filtrados dos resultados desse método se o computador local não tiver o IPv6 foi instalado. Como resultado, é possível voltar vazio <xref:System.Net.IPHostEntry> instância se somente IPv6 resultados quando disponíveis para o `address` parâmetro.  
+  
+ O <xref:System.Net.IPHostEntry.Aliases%2A> propriedade o <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="address" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" /> é um endereço IP inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostEntryAsync">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;System.Net.IPHostEntry&gt; GetHostEntryAsync (string hostNameOrAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;class System.Net.IPHostEntry&gt; GetHostEntryAsync(string hostNameOrAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostEntryAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.IPHostEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O nome do host ou endereço IP a ser resolvido.</param>
+        <summary>Resolve um nome de host ou endereço IP para uma instância de <see cref="T:System.Net.IPHostEntry" /> como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona. A propriedade <see cref="P:System.Threading.Tasks.Task`1.Result" /> no objeto de tarefa retorna uma instância <see cref="T:System.Net.IPHostEntry" /> que contém informações de endereço sobre o host especificado em <paramref name="hostNameOrAddress" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601> objeto será concluída após o `hostNameOrAddress` foi resolvido.  
+  
+ Este método consulta um servidor DNS para o endereço IP que está associado com um nome de host ou endereço IP.  
+  
+ Se uma cadeia de caracteres vazia for passada como o `hostNameOrAddress` argumento e, em seguida, esse método retorna os endereços IPv4 e IPv6 do host local.
+  
+ Se o nome do host não pôde ser encontrado, o <xref:System.Net.Sockets.SocketException> exceção será retornada com um valor de 11001 (erro do Windows Sockets WSAHOST_NOT_FOUND). Essa exceção pode ser retornada se o servidor DNS não responder. Essa exceção também pode ser retornada se o nome não é um nome de host oficial ou um alias ou não foi encontrado no banco de dados que está sendo consultado.  
+  
+ O <xref:System.ArgumentException> exceção também é retornada se o `hostNameOrAddress` parâmetro contém <xref:System.Net.IPAddress.Any> ou <xref:System.Net.IPAddress.IPv6Any>.  
+  
+ Este método assume que, se uma cadeia de caracteres literal de IP é passada a `hostNameOrAddress` parâmetro que o aplicativo deseja um <xref:System.Net.IPHostEntry> instância retornada com todo o conjunto de propriedades. Essas propriedades incluem o <xref:System.Net.IPHostEntry.AddressList%2A>, <xref:System.Net.IPHostEntry.Aliases%2A>, e <xref:System.Net.IPHostEntry.HostName%2A>. Como resultado, a implementação desse método apresenta o seguinte comportamento quando um literal de cadeia IP é passado:  
+  
+1.  O método tenta analisar o endereço. Se o `hostNameOrAddress` parâmetro contiver um literal de cadeia IP válido, em seguida, a primeira fase é bem-sucedida.  
+  
+2.  Tentativa de uma pesquisa inversa usando o endereço IP da cadeia literal de IP para obter o nome do host. Esse resultado é definido como o <xref:System.Net.IPHostEntry.HostName%2A> propriedade.  
+  
+3.  O nome do host dessa pesquisa inversa é usado novamente para obter todos os possíveis endereços IP associado com o nome e defina como o <xref:System.Net.IPHostEntry.AddressList%2A> propriedade.  
+  
+ Para uma IPv4 cadeia de caracteres literal, todas as três etapas acima poderão ser bem-sucedida. Mas é possível que um registro DNS obsoleto para um endereço IPv4 que realmente pertence a um host diferente a ser retornado. Isso pode causar a etapa &#3; falhar e lançar uma exceção (há um registro PTR de DNS para o endereço IPv4, mas nenhum registro de DNS A para o endereço IPv4).  
+  
+ Para IPv6, etapa #2 acima pode falhar, pois a maioria das implantações do IPv6 não registrar o registro inverso (PTR) para um endereço IPv6. Para que esse método pode retornar a IPv6 da cadeia de caracteres literal como o nome de domínio totalmente qualificado (FQDN) do host no <xref:System.Net.IPHostEntry.HostName%2A> propriedade.  
+  
+ O <xref:System.Net.Dns.GetHostAddresses%2A> método tem um comportamento diferente em relação a literais IP. Se a etapa #1 acima for bem-sucedida (ele com êxito analisa como um endereço IP), que o endereço é imediatamente retornado como o resultado. Não há nenhuma tentativa de uma pesquisa inversa.  
+  
+ Endereços IPv6 são filtrados dos resultados desse método se o computador local não tiver o IPv6 foi instalado. Como resultado, é possível voltar vazio <xref:System.Net.IPHostEntry> instância se somente IPv6 resultados quando disponíveis para o `hostNameOrAddress`.parameter.  
+  
+ O <xref:System.Net.IPHostEntry.Aliases%2A> propriedade o <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="hostNameOrAddress" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho do parâmetro <paramref name="hostNameOrAddress" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Erro ao resolver o parâmetro <paramref name="hostNameOrAddress" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="hostNameOrAddress" /> é um endereço IP inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostName">
+      <MemberSignature Language="C#" Value="public static string GetHostName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetHostName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.GetHostName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o nome de host do computador local.</summary>
+        <returns>Uma cadeia de caracteres que contém o nome do host DNS do computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.Dns.GetHostName%2A> método para obter o nome de host do computador local.  
+  
+ [!code-cpp[Dns_GetHostName#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Dns_GetHostName/CPP/dns_gethostname.cpp#1)]
+ [!code-csharp[Dns_GetHostName#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Dns_GetHostName/CS/dns_gethostname.cs#1)]
+ [!code-vb[Dns_GetHostName#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Dns_GetHostName/VB/dns_gethostname.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.Sockets.SocketException">Foi encontrado um erro ao resolver o nome do host local.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolve">
+      <MemberSignature Language="C#" Value="public static System.Net.IPHostEntry Resolve (string hostName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.IPHostEntry Resolve(string hostName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Dns.Resolve(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NameResolution</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use GetHostEntry instead")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.IPHostEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostName">Um nome de host no estilo DNS ou endereço IP.</param>
+        <summary>Resolve um nome do host DNS ou endereço IP para uma instância <see cref="T:System.Net.IPHostEntry" />.</summary>
+        <returns>Uma instância <see cref="T:System.Net.IPHostEntry" /> que contém informações de endereço sobre o host especificado em <paramref name="hostName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Dns.Resolve%2A> método consulta um servidor DNS para o endereço IP associado a um nome de host ou endereço IP.  
+  
+ Quando `hostName` é um nome de host DNS estilo associado com vários endereços IP, somente o primeiro endereço IP que resolve para o nome do host é retornado.  
+  
+ Se o <xref:System.Net.Configuration.Ipv6Element.Enabled%2A?displayProperty=nameWithType> está definida como `true`, o <xref:System.Net.IPHostEntry.Aliases%2A> propriedade do <xref:System.Net.IPHostEntry> instância retornada por este método, não é populada e sempre estará vazia.  
+  
+> [!NOTE]
+>  Este membro emite as informações de rastreamento ao habilitar o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte [rastreamento de rede no .NET Framework](~/docs/framework/network-programming/network-tracing.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Net.Dns.Resolve%2A> método para resolver um IP endereço para um <xref:System.Net.IPHostEntry> instância.  
+  
+ [!code-cpp[Dns_Resolve#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Dns_Resolve/CPP/dns_resolve.cpp#1)]
+ [!code-csharp[Dns_Resolve#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Dns_Resolve/CS/dns_resolve.cs#1)]
+ [!code-vb[Dns_Resolve#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Dns_Resolve/VB/dns_resolve.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho de <paramref name="hostName" /> é maior que 255 caracteres.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Um erro foi encontrado durante a resolução de <paramref name="hostName" />.</exception>
+        <permission cref="T:System.Net.DnsPermission">para acessar informações de DNS. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

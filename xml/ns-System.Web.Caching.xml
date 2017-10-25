@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.Caching">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Caching" /> namespace fornece classes para cache frequentemente usados com dados no servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este namespace inclui o <xref:System.Web.Caching.Cache> classe, um dicionário que permite armazenar objetos de dados como tabelas de hash e conjuntos de dados. Ele também fornece funcionalidade de expiração para esses objetos e métodos que permitem que você adicione e remova os objetos. Você pode adicionar objetos ao cache com uma dependência em outros arquivos ou entradas de cache. Nesse caso, o <xref:System.Web.Caching.Cache> objeto pode invocar um método de retorno de chamada para notificar seu aplicativo quando um objeto é removido do cache.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

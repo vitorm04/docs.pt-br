@@ -1,0 +1,16 @@
+<Namespace Name="System.Data.Sql">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Sql" /> namespace contém classes que oferecem suporte à funcionalidade específica do SQL Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre a funcionalidade que as classes neste namespace de suportam, consulte [ao enumerar instâncias do SQL Server (ADO.NET)](~/docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md) e [notificações de consulta no SQL Server](~/docs/framework/data/adonet/sql/query-notifications-in-sql-server.md).  
+  
+> [!NOTE]
+>  Nas versões beta do ADO.NET versão 2.0, o <xref:System.Data.Sql> namespace contidas também classes para uso com a integração do SQL Server common language runtime (CLR). No entanto, essas classes foram movidas para o seu próprio namespace <xref:Microsoft.SqlServer.Server>. Para obter mais informações sobre como usar a integração CLR do SQL Server, consulte [integração Common Language Runtime do SQL Server](~/docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

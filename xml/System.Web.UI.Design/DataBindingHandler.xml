@@ -1,0 +1,80 @@
+<Type Name="DataBindingHandler" FullName="System.Web.UI.Design.DataBindingHandler">
+  <TypeSignature Language="C#" Value="public abstract class DataBindingHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataBindingHandler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DataBindingHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base para um manipulador de associação de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.DataBindingHandler>Fornece uma classe base para manipuladores de associação de dados. Um manipulador de associação de dados pode ser usado em um designer para executar associação de dados para habilitar uma exibição significativa de controle na superfície de design. Normalmente, o designer do controle é responsável por essa funcionalidade. No entanto, quando um controle não está em tempo real na superfície de design, como dentro do modelo de controle de outro, ele não tem um designer, e essa funcionalidade é fornecida por um manipulador de associação de dados se um tiver sido especificado com um <xref:System.Web.UI.DataBindingHandlerAttribute> no código para o controle.  
+  
+ Para usar um manipulador de associação de dados, o controle que tem a propriedade de associação de dados ou as propriedades deve ter um <xref:System.Web.UI.DataBindingHandlerAttribute> especificado dentro de seu código que indica o tipo de manipulador de associação de dados a ser usado.  
+  
+ Por exemplo, o <xref:System.Web.UI.WebControls.Label> controle está associado a <xref:System.Web.UI.Design.TextDataBindingHandler> classe por meio de um <xref:System.Web.UI.DataBindingHandlerAttribute> no código para o <xref:System.Web.UI.WebControls.Label> classe. Dentro de um modelo para um <xref:System.Web.UI.WebControls.DataList>, um <xref:System.Web.UI.WebControls.Label> controle cuja propriedade de texto foi associados a dados exibe a palavra "Ligação de dados" no rótulo. Sem o manipulador de associação de dados, o rótulo seria invisível em tempo de design, pois não tem um designer para vincular suas propriedades de associação de dados em um controle modelado em tempo de design.  
+  
+ Para implementar um manipulador de associação de dados, definir uma nova classe que deriva dessa classe e implementar o <xref:System.Web.UI.Design.DataBindingHandler.DataBindControl%2A> método para definir as propriedades adequadas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataBindingHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataBindingHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.DataBindingHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataBindControl">
+      <MemberSignature Language="C#" Value="public abstract void DataBindControl (System.ComponentModel.Design.IDesignerHost designerHost, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DataBindControl(class System.ComponentModel.Design.IDesignerHost designerHost, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DataBindingHandler.DataBindControl(System.ComponentModel.Design.IDesignerHost,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="designerHost" Type="System.ComponentModel.Design.IDesignerHost" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="designerHost">O <see cref="T:System.ComponentModel.Design.IDesignerHost" /> para o documento.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> para associar.</param>
+        <summary>Associa o controle especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método deve ser implementado em uma classe derivada para fornecer funcionalidade para um manipulador personalizado de associação de dados. A lógica para a associação de dados deve ser implementada dentro desse método e pode ser específica para o tipo ou tipos que é o manipulador de associação de dados associar uma ou mais propriedades no.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A maioria dos manipuladores de associação de dados precisará examinar a coleção de associações de dados no controle, usando o <see cref="T:System.Web.UI.IDataBindingsAccessor" /> interface para determinar se qualquer pode lidar com as propriedades específicas são associados a dados.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1520 @@
+<Type Name="WorkflowRuntime" FullName="System.Workflow.Runtime.WorkflowRuntime">
+  <TypeSignature Language="C#" Value="public class WorkflowRuntime : IDisposable, IServiceProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi WorkflowRuntime extends System.Object implements class System.IDisposable, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowRuntime" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o ambiente de execução configurável fornecido pelo mecanismo de tempo de execução de fluxo de trabalho para fluxos de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.WorkflowRuntime>expõe a funcionalidade requerida por um aplicativo host e serviços para configurar e controlar o mecanismo de tempo de execução do fluxo de trabalho e para ser notificado sobre alterações para o mecanismo de tempo de execução do fluxo de trabalho e qualquer uma de suas instâncias de fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. Ele fornece exemplos de como usar o <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%2A> construtor e o <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A>, <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A>, e <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> métodos. O código também mostra a maneira recomendada para criar um <xref:System.Workflow.Runtime.WorkflowInstance> objeto em um host de fluxo de trabalho usando o <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> método. Ele também mostra como definir manipuladores de eventos para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted>, <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled>, e <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated> eventos.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
+ [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.WorkflowRuntime" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.WorkflowRuntime> é inicializada com os valores de propriedade padrão e contém os principais serviços padrão. Para configurar o mecanismo de tempo de execução de fluxo de trabalho Além disso, você pode adicionar e remover serviços usando <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> e <xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A>, e você pode definir <xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A>. Após o <xref:System.Workflow.Runtime.WorkflowRuntime> é configurado, chame <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> para iniciar o mecanismo de tempo de execução do fluxo de trabalho e seus serviços.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Workflow.Runtime.WorkflowRuntime> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A>|"WorkflowRuntime"|  
+|<xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A>|`false`|  
+  
+ Os serviços de núcleo padrão são <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> e <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. Ele fornece um exemplo de como usar o <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%2A> construtor para criar uma instância de um <xref:System.Workflow.Runtime.WorkflowRuntime> e acessar seus métodos e eventos.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
+ [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRuntime (string configSectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configSectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configSectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configSectionName">O nome de uma opção válida <see langword="workflowSettings" /> seção no arquivo de configuração do aplicativo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> classe por meio da seção especificada do arquivo de configuração do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.WorkflowRuntime> é inicializada de acordo com as configurações na seção especificada pelo `configSectionName` no arquivo de configuração do aplicativo. `configSectionName`deve corresponder ao válido `workflowSettings` seção de um arquivo de configuração.  
+  
+ Quando o mecanismo de tempo de execução do fluxo de trabalho é configurado por meio de um arquivo de configuração do aplicativo, ele carrega e instancia classes dos tipos listados no `Services` seção do arquivo de configuração. Quando o mecanismo de tempo de execução do fluxo de trabalho constrói essas classes parece para construtores de classe com as seguintes assinaturas na seguinte ordem:  
+  
+1.  Serviço (tempo de execução de WorkflowRuntime, NameValueCollection parâmetros)  
+  
+2.  Serviço (tempo de execução de WorkflowRuntime)  
+  
+3.  Serviço (NameValueCollection parâmetros)  
+  
+4.  Service()  
+  
+ Todas as classes de serviço que são carregadas de um arquivo de configuração devem implementar pelo menos uma dessas assinaturas de construtor.  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)] <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="configSectionName" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">Uma opção válida <see langword="workflowSettings" /> seção não pôde ser encontrada no arquivo de configuração do aplicativo.</exception>
+        <exception cref="T:System.InvalidOperationException">Um <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> já existe para este domínio de aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRuntime (System.Workflow.Runtime.Configuration.WorkflowRuntimeSection settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.Runtime.Configuration.WorkflowRuntimeSection settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.#ctor(System.Workflow.Runtime.Configuration.WorkflowRuntimeSection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Workflow.Runtime.Configuration.WorkflowRuntimeSection" />
+      </Parameters>
+      <Docs>
+        <param name="settings">Um <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> classe usando as configurações do <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor fornece um mecanismo para configurar o mecanismo de tempo de execução do fluxo de trabalho usando uma única chamada de método para hosts que não usam um arquivo de configuração do aplicativo. Há muitas razões para não usar o arquivo de configuração do aplicativo. Um host pode executar em um ambiente que não permitem o uso de arquivos de configuração; Por exemplo, nos ambientes confiáveis que não permitem a leitura do arquivo de configuração de aplicativo por motivos de segurança. Além disso, um host pode usar um mecanismo de configuração de propriedade; Por exemplo, o host pode armazenar as definições de configuração do mecanismo de tempo de execução de fluxo de trabalho em um banco de dados SQL.  
+  
+ O mecanismo de tempo de execução do fluxo de trabalho carrega e instancia classes de tipos contidos em <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.Services%2A?displayProperty=nameWithType>. Quando o mecanismo de tempo de execução do fluxo de trabalho constrói essas classes parece para construtores de classe com as seguintes assinaturas na seguinte ordem:  
+  
+1.  Serviço (tempo de execução de WorkflowRuntime, NameValueCollection parâmetros)  
+  
+2.  Serviço (tempo de execução de WorkflowRuntime)  
+  
+3.  Serviço (NameValueCollection parâmetros)  
+  
+4.  Service()  
+  
+ Todas as classes de serviço que são especificadas em `settings` deve implementar pelo menos uma dessas assinaturas de construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="settings" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">Um <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> já existe para este domínio de aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public void AddService (object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddService(object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.AddService(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="service">Um objeto que representa o serviço a adicionar.</param>
+        <summary>Adiciona o serviço especificado para o mecanismo de tempo de execução do fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode configurar o mecanismo de tempo de execução do fluxo de trabalho adicionando serviços principais. Serviços principais são aqueles que derivam de qualquer uma das seguintes classes de base de serviço: o <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> classe e o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe.  Serviços de núcleo só podem ser adicionados quando o mecanismo de tempo de execução do fluxo de trabalho não está em execução; ou seja, quando <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> é `false`. O <xref:System.Workflow.Runtime.WorkflowRuntime> também pode ser usado como um contêiner de armazenamento para outros serviços que podem ser usados por outros fluxos de trabalho ou aplicativos em execução em um host. Se você adicionar um serviço não essenciais que deriva de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe depois que o mecanismo de tempo de execução do fluxo de trabalho tiver sido iniciado, <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> chamadas de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método implementado por esse serviço.  
+  
+> [!NOTE]
+>  <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A>impõe a restrição que nenhum dois serviços do mesmo <xref:System.Type> podem ser adicionados para o <xref:System.Workflow.Runtime.WorkflowRuntime>. No entanto, você pode adicionar vários serviços que derivam da mesma classe base.  Pode haver somente um serviço derivado de cada as seguintes classes de base do serviço no <xref:System.Workflow.Runtime.WorkflowRuntime>: o <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> classe e o <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> classe.  Se você adicionar vários serviços derivados de uma dessas classes, por exemplo dois serviços de persistência, <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> lança um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. Fornece um exemplo de como usar o <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> método para adicionar um <xref:System.Workflow.Activities.ExternalDataExchangeService> e <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> ao mecanismo de tempo de execução de fluxo de trabalho.  
+  
+ Este exemplo de código é parte do [cancelar um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkId=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
+ [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="service" />já está registrado com o mecanismo de tempo de execução do fluxo de trabalho.  
+  
+ -ou-  
+  
+ <paramref name="service" />é um serviço principal e o mecanismo de tempo de execução do fluxo de trabalho já está em execução (<see cref="P:System.Workflow.Runtime.WorkflowRuntime.IsStarted" /> é <see langword="true" />).</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="CreateWorkflow">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria uma instância de fluxo de trabalho usando os parâmetros especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o mecanismo de tempo de execução do fluxo de trabalho não tiver sido iniciado, o <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> métodos chamada <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A>. Consulte <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> para obter uma lista de possíveis exceções. Depois de criar a instância de fluxo de trabalho, chame <xref:System.Workflow.Runtime.WorkflowInstance.Start%2A?displayProperty=nameWithType> no <xref:System.Workflow.Runtime.WorkflowInstance> objeto retornado pelo <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> método para iniciar a execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="CreateWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance CreateWorkflow (Type workflowType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.WorkflowInstance CreateWorkflow(class System.Type workflowType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> do fluxo de trabalho para criar.</param>
+        <summary>Cria uma nova instância de fluxo de trabalho usando o fluxo de trabalho especificado <see cref="T:System.Type" />.</summary>
+        <returns>A instância de fluxo de trabalho criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes do <xref:System.Workflow.Runtime.WorkflowInstance> é criado, a validação é executada nele. Se ocorrerem erros de validação, o <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> é gerada. Isso funciona bem para cenários simples, mas em um ambiente de servidor, revalidar um fluxo de trabalho para cada ativação pode ser sobrecarga desnecessária.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]desabilitar a validação, consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a maneira recomendada para criar um <xref:System.Workflow.Runtime.WorkflowInstance> objeto em um host de fluxo de trabalho usando o <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> método.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#260](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#260)]
+ [!code-vb[WF_Samples#260](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#260)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="workflowType" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance CreateWorkflow (System.Xml.XmlReader workflowDefinitionReader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.WorkflowInstance CreateWorkflow(class System.Xml.XmlReader workflowDefinitionReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowDefinitionReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionReader">Um <see cref="T:System.Xml.XmlReader" /> que contém a definição de fluxo de trabalho.</param>
+        <summary>Cria uma instância de fluxo de trabalho usando especificado <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>A instância de fluxo de trabalho criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância de fluxo de trabalho é criada a partir de um arquivo de definição de fluxo de trabalho XAML referenciado pelo <xref:System.Xml.XmlReader>.  
+  
+ Antes do <xref:System.Workflow.Runtime.WorkflowInstance> é criado, a validação é executada nele. Se ocorrerem erros de validação, o <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> é gerada. Isso funciona bem para cenários simples, mas em um ambiente de servidor, revalidar um fluxo de trabalho para cada ativação pode ser sobrecarga desnecessária.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]desabilitar a validação, consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um fluxo de trabalho recebe uma definição de fluxo de trabalho baseado em XAML.  
+  
+```  
+static void Main(string[] args)  
+{  
+    using (WorkflowRuntime workflowRuntime = new WorkflowRuntime())  
+    {  
+        AutoResetEvent waitHandle = new AutoResetEvent(false);  
+        workflowRuntime.WorkflowCompleted += delegate(object sender, WorkflowCompletedEventArgs e)  
+        {  
+            waitHandle.Set();  
+        };  
+        workflowRuntime.WorkflowTerminated += delegate(object sender, WorkflowTerminatedEventArgs e)  
+        {  
+            Console.WriteLine(e.Exception.Message);  
+            waitHandle.Set();  
+        };  
+  
+        TypeProvider typeProvider = new TypeProvider(null);  
+        // Add referenced assemblies, if needed  
+        // typeProvider.AddAssembly(...);  
+        workflowRuntime.AddService(typeProvider);  
+  
+        using (XmlReader reader = XmlReader.Create("Workflow1.xoml"))  
+        {  
+            WorkflowInstance instance = workflowRuntime.CreateWorkflow(reader);  
+            instance.Start();  
+        }  
+  
+        waitHandle.WaitOne();  
+    }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="workflowDefinitionReader" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> é descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance CreateWorkflow (Type workflowType, System.Collections.Generic.Dictionary&lt;string,object&gt; namedArgumentValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.WorkflowInstance CreateWorkflow(class System.Type workflowType, class System.Collections.Generic.Dictionary`2&lt;string, object&gt; namedArgumentValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="namedArgumentValues" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> do fluxo de trabalho para criar.</param>
+        <param name="namedArgumentValues">Um <see cref="T:System.Collections.Generic.Dictionary`2" /> de objetos, organizados pela cadeia de caracteres que representa os argumentos para o fluxo de trabalho.</param>
+        <summary>Cria uma instância de fluxo de trabalho usando o fluxo de trabalho especificado <see cref="T:System.Type" /> e os argumentos para o fluxo de trabalho especificado contidas <see cref="T:System.Collections.Generic.Dictionary`2" />.</summary>
+        <returns>A instância de fluxo de trabalho criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes do <xref:System.Workflow.Runtime.WorkflowInstance> é criado, a validação é executada nele. Se ocorrerem erros de validação, o <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> é gerada. Isso funciona bem para cenários simples, mas em um ambiente de servidor, revalidar um fluxo de trabalho para cada ativação pode ser sobrecarga desnecessária.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]desabilitar a validação, consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
+  
+ Para obter um exemplo de passar parâmetros para `CreateWorkflow`, consulte [fluxo de trabalho com parâmetros de exemplo](http://go.microsoft.com/fwlink/?LinkId=157403).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="workflowType" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance CreateWorkflow (Type workflowType, System.Collections.Generic.Dictionary&lt;string,object&gt; namedArgumentValues, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.WorkflowInstance CreateWorkflow(class System.Type workflowType, class System.Collections.Generic.Dictionary`2&lt;string, object&gt; namedArgumentValues, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Type,System.Collections.Generic.Dictionary{System.String,System.Object},System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="namedArgumentValues" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> do fluxo de trabalho para criar.</param>
+        <param name="namedArgumentValues">Um <see cref="T:System.Collections.Generic.Dictionary`2" /> de objetos chaveados por uma cadeia de caracteres que representa os argumentos para o fluxo de trabalho.</param>
+        <param name="instanceId">O <see cref="T:System.Guid" /> específico <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> para criar.</param>
+        <summary>Cria uma instância de fluxo de trabalho usando os parâmetros especificados.</summary>
+        <returns>A instância de fluxo de trabalho criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes do <xref:System.Workflow.Runtime.WorkflowInstance> é criado, a validação é executada nele. Se ocorrerem erros de validação, o <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> é gerada. Isso funciona bem para cenários simples, mas em um ambiente de servidor, revalidar um fluxo de trabalho para cada ativação pode ser sobrecarga desnecessária.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]desabilitar a validação, consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
+  
+ O fluxo de trabalho `instanceId` para qualquer executando fluxos de trabalho carregados pelo <xref:System.Workflow.Runtime.WorkflowRuntime> devem ser exclusivos. Se você passar um `instanceId` criar um fluxo de trabalho e um fluxo de trabalho em execução já está usando que `instanceId`, uma <xref:System.InvalidOperationException> é gerada.  
+  
+ Para obter um exemplo de passar parâmetros para `CreateWorkflow`, consulte [fluxo de trabalho com parâmetros de exemplo](http://go.microsoft.com/fwlink/?LinkID=157403).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="workflowType" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance CreateWorkflow (System.Xml.XmlReader workflowDefinitionReader, System.Xml.XmlReader rulesReader, System.Collections.Generic.Dictionary&lt;string,object&gt; namedArgumentValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.WorkflowInstance CreateWorkflow(class System.Xml.XmlReader workflowDefinitionReader, class System.Xml.XmlReader rulesReader, class System.Collections.Generic.Dictionary`2&lt;string, object&gt; namedArgumentValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Xml.XmlReader,System.Xml.XmlReader,System.Collections.Generic.Dictionary{System.String,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowDefinitionReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="rulesReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="namedArgumentValues" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionReader">Um <see cref="T:System.Xml.XmlReader" /> que contém a definição de fluxo de trabalho.</param>
+        <param name="rulesReader">Um <see cref="T:System.Xml.XmlReader" />.</param>
+        <param name="namedArgumentValues">Um <see cref="T:System.Collections.Generic.Dictionary`2" /> de objetos chaveados por uma cadeia de caracteres que representa os argumentos para o fluxo de trabalho.</param>
+        <summary>Cria uma instância de fluxo de trabalho usando especificado <see cref="T:System.Xml.XmlReader" /> objetos e os argumentos contidos em especificado <see cref="T:System.Collections.Generic.Dictionary`2" />.</summary>
+        <returns>A instância de fluxo de trabalho criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância de fluxo de trabalho é criada da definição de fluxo de trabalho referenciada pelo <xref:System.Xml.XmlReader> e os argumentos fornecidos pelo `namedArgumentValues`.  
+  
+ Antes do <xref:System.Workflow.Runtime.WorkflowInstance> é criado, a validação é executada nele. Se ocorrerem erros de validação, o <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> é gerada. Isso funciona bem para cenários simples, mas em um ambiente de servidor, revalidar um fluxo de trabalho para cada ativação pode ser sobrecarga desnecessária.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]desabilitar a validação, consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
+  
+ Para obter um exemplo de passar parâmetros para `CreateWorkflow`, consulte [fluxo de trabalho com parâmetros de exemplo](http://go.microsoft.com/fwlink/?LinkID=157403).  
+  
+ Para obter um exemplo de como usar as regras definidas no XML, consulte [IfElse com regras de exemplo](http://go.microsoft.com/fwlink/?LinkId=157404).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="workflowDefinitionReader" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> é descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance CreateWorkflow (System.Xml.XmlReader workflowDefinitionReader, System.Xml.XmlReader rulesReader, System.Collections.Generic.Dictionary&lt;string,object&gt; namedArgumentValues, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.WorkflowInstance CreateWorkflow(class System.Xml.XmlReader workflowDefinitionReader, class System.Xml.XmlReader rulesReader, class System.Collections.Generic.Dictionary`2&lt;string, object&gt; namedArgumentValues, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow(System.Xml.XmlReader,System.Xml.XmlReader,System.Collections.Generic.Dictionary{System.String,System.Object},System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowDefinitionReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="rulesReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="namedArgumentValues" Type="System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionReader">Um <see cref="T:System.Xml.XmlReader" /> que contém a definição de fluxo de trabalho.</param>
+        <param name="rulesReader">Um <see cref="T:System.Xml.XmlReader" />.</param>
+        <param name="namedArgumentValues">Um <see cref="T:System.Collections.Generic.Dictionary`2" /> de objetos chaveados por uma cadeia de caracteres que representa os argumentos para o fluxo de trabalho.</param>
+        <param name="instanceId">O <see cref="T:System.Guid" /> específico <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> para criar.</param>
+        <summary>Cria uma instância de fluxo de trabalho usando os parâmetros especificados.</summary>
+        <returns>A instância de fluxo de trabalho criado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes do <xref:System.Workflow.Runtime.WorkflowInstance> é criado, a validação é executada nele. Se ocorrerem erros de validação, o <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> é gerada. Isso funciona bem para cenários simples, mas em um ambiente de servidor, revalidar um fluxo de trabalho para cada ativação pode ser sobrecarga desnecessária.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]desabilitar a validação, consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate%2A>.  
+  
+ O fluxo de trabalho `instanceId` para qualquer executando fluxos de trabalho carregados pelo <xref:System.Workflow.Runtime.WorkflowRuntime> devem ser exclusivos. Se você passar um `instanceId` criar um fluxo de trabalho e um fluxo de trabalho em execução já está usando que `instanceId`, uma <xref:System.InvalidOperationException> é gerada.  
+  
+ Para obter um exemplo de passar parâmetros para `CreateWorkflow`, consulte [fluxo de trabalho com parâmetros de exemplo](http://go.microsoft.com/fwlink/?LinkID=157403).  
+  
+ Para obter um exemplo de como usar as regras definidas no XML, consulte [IfElse com regras de exemplo](http://go.microsoft.com/fwlink/?LinkID=157404).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="workflowType" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pelo <see cref="T:System.Workflow.Runtime.WorkflowRuntime" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para desligar o <xref:System.Workflow.Runtime.WorkflowRuntime> normalmente, você só deve chamar <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> depois de ter chamado <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A>. Isso ocorre porque a chamada a <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> método apenas deixa o <xref:System.Workflow.Runtime.WorkflowRuntime> em um estado inutilizável. <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A>libera os recursos usados pelo tempo de execução pelo fechamento abrir identificadores de arquivos, conexões de banco de dados e assim por diante, mas não descarregar instâncias de fluxo de trabalho, interromper serviços ou executar qualquer uma das outras ações que <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> does.  
+  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A>deve ser chamado apenas quando o aplicativo de host deve liberar os recursos usados pelo <xref:System.Workflow.Runtime.WorkflowRuntime> antes que eles serão liberados automaticamente pelo coletor de lixo. Para obter informações gerais sobre <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A>, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como chamar <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> em uma <xref:System.Workflow.Runtime.WorkflowRuntime> objeto. Neste exemplo, o <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> método é chamado de manipulador de eventos FormClosing para o formulário principal do aplicativo; isso garante que os objetos criados pelo tempo de execução são limpos corretamente quando o aplicativo é desligado. Este exemplo é do [exemplo de aplicativo de fala](http://go.microsoft.com/fwlink/?LinkId=157405).  
+  
+ [!code-csharp[WF_Samples#108](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#108)]
+ [!code-vb[WF_Samples#108](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#108)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllServices">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;object&gt; GetAllServices (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;object&gt; GetAllServices(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetAllServices(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O <see cref="T:System.Type" /> que serviços devem implementar a ser retornado.</param>
+        <summary>Recupera todos os serviços que são adicionados ao tempo de execução do fluxo de trabalho do mecanismo que implementam ou derivam especificado <see cref="T:System.Type" />.</summary>
+        <returns>Serviços que implementam ou derivam especificado <see cref="T:System.Type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vazio <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> indica que não há serviços que implementam ou derivam especificado <xref:System.Type> foram adicionados ao mecanismo de tempo de execução de fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar todos os serviços de um determinado tipo de um <xref:System.Workflow.Runtime.WorkflowRuntime> objeto.  
+  
+ [!code-csharp[WF_Samples#19](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#19)]
+ [!code-vb[WF_Samples#19](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> é descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllServices&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt; GetAllServices&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;!!T&gt; GetAllServices&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetAllServices``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de serviço.</typeparam>
+        <summary>Recupera todos os serviços que são adicionados ao mecanismo de tempo de execução de fluxo de trabalho que implementam ou derivam do tipo genérico especificado.</summary>
+        <returns>Serviços que implementam ou derivam do tipo genérico especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Vazio <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> indica que nenhum serviço foram adicionado ao mecanismo de tempo de execução de fluxo de trabalho que implementam ou derivar do tipo genérico especificado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar todos os serviços de um determinado tipo de um <xref:System.Workflow.Runtime.WorkflowRuntime> objeto.  
+  
+ [!code-csharp[WF_Samples#6](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#6)]
+ [!code-vb[WF_Samples#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> é descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLoadedWorkflows">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.Runtime.WorkflowInstance&gt; GetLoadedWorkflows ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.Runtime.WorkflowInstance&gt; GetLoadedWorkflows() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetLoadedWorkflows" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.Runtime.WorkflowInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção que contém todas as instâncias de fluxo de trabalho atualmente carregadas na memória.</summary>
+        <returns>Um <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> objeto para cada instância de fluxo de trabalho atualmente carregados na memória.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que, ao contrário de <xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A>, esse método não lança uma <xref:System.InvalidOperationException> se o tempo de execução não for iniciado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar uma coleção de fluxos de trabalho carregados de um <xref:System.Workflow.Runtime.WorkflowRuntime> objeto.  
+  
+ [!code-csharp[WF_Samples#18](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#18)]
+ [!code-vb[WF_Samples#18](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> é descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O <see cref="T:System.Type" /> do serviço a ser recuperado.</param>
+        <summary>Recupera um serviço do <see cref="T:System.Type" /> do mecanismo de tempo de execução de fluxo de trabalho.</summary>
+        <returns>O serviço do <see cref="T:System.Type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.GetService%2A>gera um <xref:System.InvalidOperationException> se existir mais de um serviço especificado <xref:System.Type>. Portanto, você deve usar um dos métodos sobrecarregados do <xref:System.Workflow.Runtime.WorkflowRuntime.GetAllServices%2A> se é possível que vários serviços do tipo especificado estão presentes no <xref:System.Workflow.Runtime.WorkflowRuntime>. Por exemplo, o mecanismo de tempo de execução do fluxo de trabalho pode ter vários serviços de controle. Se você solicitar um serviço de controle, especificando o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe base, é possível que uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> já é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">Mais de um serviço do tipo <paramref name="serviceType" /> foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetService&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetService&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetService``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo de serviço.</typeparam>
+        <summary>Recupera um serviço do tipo genérico especificado do mecanismo de tempo de execução de fluxo de trabalho.</summary>
+        <returns>Um único serviço do tipo genérico especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.GetService%2A>gera um <xref:System.InvalidOperationException> se existir mais de um serviço para o tipo genérico especificado. Portanto, você deve usar um dos métodos sobrecarregados do <xref:System.Workflow.Runtime.WorkflowRuntime.GetAllServices%2A> se é possível que vários serviços do tipo genérico estão presentes no <xref:System.Workflow.Runtime.WorkflowRuntime>. Por exemplo, o mecanismo de tempo de execução do fluxo de trabalho pode ter vários serviços de controle. Se você solicitar um serviço de controle, especificando o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe base, é possível que uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar um único serviço de um <xref:System.Workflow.Runtime.WorkflowRuntime> objeto; neste caso, um serviço do tipo <xref:System.Workflow.Runtime.Hosting.ManualWorkflowSchedulerService>. Este exemplo é proveniente do [exemplo de Threading de fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkId=157350).  
+  
+ [!code-csharp[WF_Samples#28](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#28)]
+ [!code-vb[WF_Samples#28](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> já foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">Foi encontrado mais de um serviço do tipo genérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance GetWorkflow (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.WorkflowInstance GetWorkflow(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O <see cref="T:System.Guid" /> de uma instância de fluxo de trabalho.</param>
+        <summary>Recupera a instância de fluxo de trabalho que foi especificado <see cref="T:System.Guid" />.</summary>
+        <returns>O <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> que foi especificado <see cref="T:System.Guid" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `instanceId` Especifica uma instância de fluxo de trabalho que não está na memória, a instância de fluxo de trabalho está carregada na memória e agendada para execução. Por exemplo, depois que uma instância de fluxo de trabalho é interrompida, você pode chamar <xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A> para carregar a instância de fluxo de trabalho para a memória. Nesse caso, o último estado persistente da instância do fluxo de trabalho é carregado na memória pelo serviço de persistência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um `ReloadWorkflow` método chama o <xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A> método. O `ReloadWorkflow` método faz parte de uma classe maior que tem um `Runtime` propriedade para acessar todos os métodos, propriedades e eventos do <xref:System.Workflow.Runtime.WorkflowRuntime> classe.  
+  
+ Este exemplo de código é parte do [exemplo de serviço de persistência personalizado](http://go.microsoft.com/fwlink/?LinkId=157351) exemplo.  
+  
+> [!NOTE]
+>  No exemplo, a chamada para <xref:System.Workflow.Runtime.WorkflowInstance.Load%2A> é redundante porque tanto o <xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A> e <xref:System.Workflow.Runtime.WorkflowInstance.Load%2A> métodos usam o mesmo método auxiliar interno para carregar a instância de fluxo de trabalho na memória.  
+  
+ [!code-csharp[WF_Samples#265](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#265)]
+ [!code-vb[WF_Samples#265](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#265)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O tempo de execução do fluxo de trabalho não foi iniciado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStarted">
+      <MemberSignature Language="C#" Value="public bool IsStarted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStarted" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowRuntime.IsStarted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o mecanismo de tempo de execução do fluxo de trabalho foi iniciado.</summary>
+        <value>
+          <see langword="true" />Se o mecanismo de tempo de execução do fluxo de trabalho foi iniciado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A>Indica se os serviços do mecanismo de tempo de execução de fluxo de trabalho estão em execução. <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A>é `false` até que as chamadas de host <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A>. Ele permanece `true` até que as chamadas de host <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A>.  
+  
+> [!NOTE]
+>  Você não pode adicionar serviços principais para o mecanismo de tempo de execução do fluxo de trabalho enquanto ele está em execução. Principais são serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> classe, o <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> classe e o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como acessar o <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> propriedade de um <xref:System.Workflow.Runtime.WorkflowRuntime> objeto. Neste exemplo, se o tempo de execução é iniciado, uma mensagem será impressa no console.  
+  
+ [!code-csharp[WF_Samples#21](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#21)]
+ [!code-vb[WF_Samples#21](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowRuntime.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome associado a <see cref="T:System.Workflow.Runtime.WorkflowRuntime" />.</summary>
+        <value>O nome associado a esta <see cref="T:System.Workflow.Runtime.WorkflowRuntime" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível definir <xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A> enquanto o fluxo de trabalho está executando o mecanismo de tempo de execução (<xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> é `true`).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como acessar o <xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A> propriedade de um <xref:System.Workflow.Runtime.WorkflowRuntime> objeto. Neste exemplo, o nome do tempo de execução é definido como "Tempo de execução principal".  
+  
+ [!code-csharp[WF_Samples#20](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#20)]
+ [!code-vb[WF_Samples#20](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Tentativa de definir <see cref="P:System.Workflow.Runtime.WorkflowRuntime.Name" /> em um <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> que é descartado ocorre.</exception>
+        <exception cref="T:System.InvalidOperationException">Tentativa de definir <see cref="P:System.Workflow.Runtime.WorkflowRuntime.Name" /> enquanto o fluxo de trabalho está executando o mecanismo de tempo de execução ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveService">
+      <MemberSignature Language="C#" Value="public void RemoveService (object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveService(object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.RemoveService(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="service">Um objeto que representa o serviço a ser removido.</param>
+        <summary>Remove o serviço especificado do mecanismo de tempo de execução de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não pode remover um serviço principal, enquanto o mecanismo de tempo de execução do fluxo de trabalho está em execução (<xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> é `true`). Principais são serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> classe, ou o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe.  Se `service` deriva o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe <xref:System.Workflow.Runtime.WorkflowRuntime.RemoveService%2A> chama o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método implementado por `service`.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> é adicionado e removido o <xref:System.Workflow.Runtime.WorkflowRuntime>.  
+  
+ [!code-csharp[WF_Samples#16](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#16)]
+ [!code-vb[WF_Samples#16](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> já é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho foi iniciado (<see cref="P:System.Workflow.Runtime.WorkflowRuntime.IsStarted" /> é <see langword="true" />) e <paramref name="service" /> é um serviço principal.  
+  
+ \- ou -  
+  
+ <paramref name="service" />não está registrado com o mecanismo de tempo de execução do fluxo de trabalho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServicesExceptionNotHandled">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.ServicesExceptionNotHandledEventArgs&gt; ServicesExceptionNotHandled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.ServicesExceptionNotHandledEventArgs&gt; ServicesExceptionNotHandled" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.ServicesExceptionNotHandledEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um serviço que é derivado de <see cref="T:System.Workflow.Runtime.Hosting.WorkflowRuntimeService" /> classe chamadas <see cref="M:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent(System.Exception,System.Guid)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço que é derivado do <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe pode chamar o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent%2A> método para informar os assinantes a <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled> evento que ocorreu uma exceção que não foi possível manipular durante sua execução. Você pode assinar a esse evento para implementar um mecanismo de recuperação.  
+  
+ Esse evento é gerado quando uma instância de fluxo de trabalho ainda não foi criada pelo mecanismo de tempo de execução de fluxo de trabalho e ocorrerá uma exceção. Nesse cenário, a única maneira de informar um aplicativo host que ocorreu uma exceção é gerar este evento. No entanto, o mecanismo de tempo de execução do fluxo de trabalho não chamar isso diretamente. Em vez disso, o mecanismo de tempo de execução do fluxo de trabalho seja oferece uma exceção para a instância de fluxo de trabalho ou, se não houver nenhuma instância lança novamente para o chamador, que nesse caso é realmente o serviço que dispara este evento. Se você criar sua própria persistência ou o serviço do Agendador, você deve implementar esse evento por conta própria por meio da base de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.RaiseServicesExceptionNotHandledEvent%2A> método.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Guid> da instância de fluxo de trabalho que estava usando o serviço e o <xref:System.Exception> que não pôde ser tratada.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. Associa o código <xref:System.Workflow.Runtime.WorkflowRuntime.ServicesExceptionNotHandled> com um manipulador de eventos, um método chamado `OnExceptionNotHandled`.  
+  
+ Este exemplo de código é parte do [exemplo de serviço de persistência personalizado](http://go.microsoft.com/fwlink/?LinkID=157351).  
+  
+ [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
+ [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Started">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; Started;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; Started" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.Started" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o mecanismo de tempo de execução do fluxo de trabalho é iniciado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> método gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Started> evento após a configuração do serviço principal do mecanismo de tempo de execução de fluxo de trabalho, ela validada chamou o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> método implementado por cada um dos seus serviços que derivam o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe e tiver definido <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> para `true`. Não há nenhuma garantia sobre a ordem na qual os serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe são iniciadas pelo mecanismo de tempo de execução de fluxo de trabalho, e alguns desses serviços de mecanismo de tempo de execução do fluxo de trabalho podem dependem da funcionalidade fornecida por outros desses serviços para concluir suas tarefas de inicialização. Serviços de mecanismo de tempo de execução do fluxo de trabalho podem substituir o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStarted%2A?displayProperty=nameWithType> método para executar as tarefas de inicialização final que exigem suporte de outro mecanismo de tempo de execução do fluxo de trabalho de serviços quando o <xref:System.Workflow.Runtime.WorkflowRuntime.Started> é gerado.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um manipulador de eventos é adicionado para o <xref:System.Workflow.Runtime.WorkflowRuntime.Started> evento o <xref:System.Workflow.Runtime.WorkflowRuntime>. Neste exemplo, o manipulador é um método anônimo que imprime uma mensagem simple para o console.  
+  
+ [!code-csharp[WF_Samples#15](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#15)]
+ [!code-vb[WF_Samples#15](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRuntime">
+      <MemberSignature Language="C#" Value="public void StartRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartRuntime() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.StartRuntime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia o mecanismo de tempo de execução do fluxo de trabalho e os serviços do mecanismo de tempo de execução de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método verifica se um conjunto válido de serviços principais existe e, em seguida, inicia todos os serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe.  Deve haver apenas um de cada um dos seguintes serviços principais: um fluxo de trabalho `CommitWorkBatch` serviço derivado a <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> derivam de classe base e um serviço de Agendador do <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> classe base.  Se um ou ambos esses serviços centrais estiverem ausentes, o mecanismo de tempo de execução do fluxo de trabalho fornece o serviço padrão apropriado: <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> do fluxo de trabalho `CommitWorkBatch` service e <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowSchedulerService> para o serviço do Agendador. Um serviço de persistência é opcional, mas pode haver no máximo um serviço de persistência presente. Depois que a configuração do serviço, ela validada <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> chamadas <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Start%2A> em todos os serviços que são derivados do <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe.  Por fim, o mecanismo de tempo de execução do fluxo de trabalho define <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> e gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Started> evento.  
+  
+ Você não pode adicionar ou remover serviços principais, depois que o mecanismo de tempo de execução do fluxo de trabalho é iniciado. Principais são serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowSchedulerService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService> classe, o <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> classe, ou o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe.  Se você chamar <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> enquanto o mecanismo de tempo de execução do fluxo de trabalho é executado, nenhuma ação é executada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código chama o <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> depois que o <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%2A> cria um <xref:System.Workflow.Runtime.WorkflowRuntime> instância e depois chama <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A> para adicionar serviços no tempo de execução. Ele também chama <xref:System.Workflow.Runtime.WorkflowRuntime.StartRuntime%2A> antes de qualquer outro processamento ocorre.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkId=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
+ [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">Não há mais de um fluxo de trabalho do serviço <see langword="CommitWorkBatch" /> serviço registrado com esse <see cref="T:System.Workflow.Runtime.WorkflowRuntime" />.  
+  
+ -ou-  
+  
+ Não há mais de um serviço de Agendador registrado com esse <see cref="T:System.Workflow.Runtime.WorkflowRuntime" />.  
+  
+ -ou-  
+  
+ Não há mais de um serviço de persistência registrado com esse <see cref="T:System.Workflow.Runtime.WorkflowRuntime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopped">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; Stopped;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt; Stopped" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.Stopped" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowRuntimeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o mecanismo de tempo de execução do fluxo de trabalho é interrompido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> método gera o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped> evento depois de ter chamado o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.Stop%2A> método implementado por cada um dos seus serviços que derivam de <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe.  Não há nenhuma garantia sobre a ordem na qual esses serviços de mecanismo de tempo de execução do fluxo de trabalho são interrompidos, e alguns desses serviços podem precisar preservar alguma funcionalidade que é usada por outros serviços até que eles também são interrompidos. Esses serviços podem substituir o <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService.OnStopped%2A?displayProperty=nameWithType> método para executar qualquer lógica de desligamento residual quando o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped> é gerado.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, um manipulador de eventos é adicionado para o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped> evento o <xref:System.Workflow.Runtime.WorkflowRuntime>. Neste exemplo, o manipulador é um método anônimo que imprime uma mensagem simple para o console.  
+  
+ [!code-csharp[WF_Samples#14](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#14)]
+ [!code-vb[WF_Samples#14](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopRuntime">
+      <MemberSignature Language="C#" Value="public void StopRuntime ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopRuntime() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowRuntime.StopRuntime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o mecanismo de tempo de execução do fluxo de trabalho e os serviços de tempo de execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz com que o mecanismo de tempo de execução do fluxo de trabalho descarregar a cada uma de suas instâncias de fluxo de trabalho, interrompa todos os seus serviços que são derivados do <xref:System.Workflow.Runtime.Hosting.WorkflowRuntimeService> classe, defina <xref:System.Workflow.Runtime.WorkflowRuntime.IsStarted%2A> para `false`e gerar o <xref:System.Workflow.Runtime.WorkflowRuntime.Stopped> evento.  
+  
+ Para desligar o <xref:System.Workflow.Runtime.WorkflowRuntime> normalmente, chame <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A> antes de chamar <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A>.  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)]o <xref:System.Workflow.Runtime.WorkflowRuntime.Dispose%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. <xref:System.Workflow.Runtime.WorkflowRuntime.StopRuntime%2A>é chamado depois que o host foi concluída em todos os outros processamentos associado com o tempo de execução.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkId=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#259](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#259)]
+ [!code-vb[WF_Samples#259](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#259)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> já é descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowAborted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowAborted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowAborted" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowAborted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma instância de fluxo de trabalho foi anulada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowAborted>Ocorre depois que todos os trabalho do fluxo de trabalho pendente instância está desmarcada, mas antes do fluxo de trabalho de instância é invalidada em memória. Você pode anular uma instância de fluxo de trabalho chamando <xref:System.Workflow.Runtime.WorkflowInstance.Abort%2A?displayProperty=nameWithType>.  
+  
+ Para esse evento, o remetente contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkId=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowAborted> com um manipulador de eventos, um método chamado `OnWorkflowAborted`.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#141](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#141)]
+ [!code-vb[WF_Samples#141](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#141)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowCompletedEventArgs&gt; WorkflowCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowCompletedEventArgs&gt; WorkflowCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowCompletedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma instância de fluxo de trabalho é concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted>é gerado depois que a instância de fluxo de trabalho foi concluída, mas antes da instância é invalidada em memória.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> e seus parâmetros de saída.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkId=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted> com um manipulador de eventos, um método chamado `OnWorkflowCompleted`.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkId=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
+ [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma instância de fluxo de trabalho é criada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de tempo de execução do fluxo de trabalho gerará o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCreated> evento depois que a instância de fluxo de trabalho é construída completamente, mas antes de atividades são processadas. Para esse evento, o remetente contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkId=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCreated> com um manipulador de eventos, um método chamado `OnWorkflowCreated`.  
+  
+ Este exemplo de código é parte do [exemplo de serviço de persistência personalizado](http://go.microsoft.com/fwlink/?LinkID=15735).  
+  
+ [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
+ [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowIdled">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowIdled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowIdled" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma instância de fluxo de trabalho entra no estado ocioso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de tempo de execução do fluxo de trabalho gerará o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled> evento quando a instância de fluxo de trabalho entra em um estado ocioso; por exemplo, quando o fluxo de trabalho está aguardando um <xref:System.Workflow.Activities.DelayActivity> atividade para concluir.  
+  
+ Para esse evento, o remetente contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled> com um manipulador de eventos, um método chamado `OnWorkflowIdled`.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#258](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#258)]
+ [!code-vb[WF_Samples#258](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#258)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowLoaded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowLoaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowLoaded" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a instância de fluxo de trabalho é carregada na memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded>Ocorre depois que o serviço de persistência restaurou a instância de fluxo de trabalho, mas antes do fluxo de trabalho do mecanismo de tempo de execução começa a executar todas as atividades.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded> com um manipulador de eventos, um método chamado `OnWorkflowLoad`.  
+  
+ Este exemplo de código é parte do [o serviço de persistência personalizado](http://go.microsoft.com/fwlink/?LinkID=157351) exemplo.  
+  
+ [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
+ [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowPersisted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowPersisted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowPersisted" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o estado de uma instância de fluxo de trabalho é mantido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância de fluxo de trabalho pode ser persistentes por vários motivos. Por exemplo, o host pode chamar <xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A?displayProperty=nameWithType> em uma instância de fluxo de trabalho ou o fluxo de trabalho do mecanismo de tempo de execução pode persistir uma instância de fluxo de trabalho porque a instância estiver ociosa ou como um escopo atômico foi concluída. Se um serviço de persistência está presente no <xref:System.Workflow.Runtime.WorkflowRuntime>, <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> é gerado pelo tempo de execução depois que o estado da instância do fluxo de trabalho é salvo na memória. Se um serviço de persistência não estiver presente, o evento ainda é gerado, mas o estado da instância não é salva. Se o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> evento ocorre porque a instância de fluxo de trabalho está sendo descarregada, ele é seguido por um <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> eventos.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> com um manipulador de eventos, um método chamado `OnWorkflowPersisted`.  
+  
+ Este exemplo de código é parte do [exemplo de serviço de persistência personalizado](http://go.microsoft.com/fwlink/?LinkID=15735).  
+  
+ [!code-csharp[WF_Samples#279](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#279)]
+ [!code-vb[WF_Samples#279](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#279)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowResumed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowResumed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowResumed" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a execução de uma instância de fluxo de trabalho é retomada após uma suspensão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de tempo de execução do fluxo de trabalho gerará o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> evento antes da instância de fluxo de trabalho é agendada. O <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> é normalmente gerado devido a uma chamada explícita para <xref:System.Workflow.Runtime.WorkflowInstance.Resume%2A?displayProperty=nameWithType>. No entanto, o mecanismo de tempo de execução do fluxo de trabalho pode suspender temporariamente uma instância para executar uma operação, por exemplo, para aplicar uma alteração de fluxo de trabalho. Nesse caso, o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> evento é gerado quando o tempo de execução retoma a execução da instância do fluxo de trabalho após a operação.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> com um manipulador de eventos, um método chamado `OnWorkflowResume`.  
+  
+ Este exemplo de código é parte do [suspender e encerrar exemplo](http://go.microsoft.com/fwlink/?LinkId=157402).  
+  
+ [!code-csharp[WF_Samples#171](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#171)]
+ [!code-vb[WF_Samples#171](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#171)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowStarted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowStarted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowStarted" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowStarted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma instância de fluxo de trabalho foi iniciada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de tempo de execução do fluxo de trabalho gerará o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowStarted> evento após a instância de fluxo de trabalho é iniciada pelo agendamento de atividade raiz para execução. Para esse evento, o remetente contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowStarted> com um manipulador de eventos, um método chamado `OnWorkflowStarted`.  
+  
+ Este exemplo de código é parte do [exemplo de comunicação de Host](http://go.microsoft.com/fwlink/?LinkId=157406).  
+  
+ [!code-csharp[WF_Samples#297](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets38.cs#297)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowSuspended">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowSuspendedEventArgs&gt; WorkflowSuspended;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowSuspendedEventArgs&gt; WorkflowSuspended" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowSuspendedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma instância de fluxo de trabalho é suspenso.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância de fluxo de trabalho pode ser suspenso pelo host por meio de uma chamada para o <xref:System.Workflow.Runtime.WorkflowInstance.Suspend%2A> método, por um <xref:System.Workflow.ComponentModel.SuspendActivity> atividade, ou implicitamente pelo mecanismo de tempo de execução do fluxo de trabalho. Por exemplo, o mecanismo de tempo de execução do fluxo de trabalho suspende temporariamente a instância ao aplicar alterações dinâmicas para a instância.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowSuspendedEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> e uma cadeia de caracteres que descreve o motivo pelo qual a instância foi suspenso.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended> com um manipulador de eventos, um método chamado `OnWorkflowSuspended`.  
+  
+ Este exemplo de código é parte do [suspender e encerrar exemplo](http://go.microsoft.com/fwlink/?LinkID=157402).  
+  
+ [!code-csharp[WF_Samples#170](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#170)]
+ [!code-vb[WF_Samples#170](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#170)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowTerminated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowTerminatedEventArgs&gt; WorkflowTerminated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowTerminatedEventArgs&gt; WorkflowTerminated" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowTerminatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma instância de fluxo de trabalho é encerrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fluxo de trabalho pode ser encerrado pelo host por meio de uma chamada para o <xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A> método, por um <xref:System.Workflow.ComponentModel.TerminateActivity> atividade, ou pelo mecanismo de tempo de execução do fluxo de trabalho quando ocorre uma exceção sem tratamento. O mecanismo de tempo de execução do fluxo de trabalho gerará o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated> evento depois que a instância de fluxo de trabalho for encerrada, mas antes de ele é invalidado em memória.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> e informações sobre o motivo pelo qual a instância foi encerrada no <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs.Exception%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted> com um manipulador de eventos, um método chamado `OnWorkflowCompleted`.  
+  
+ Este exemplo de código é parte do [Cancelando um fluxo de trabalho](http://go.microsoft.com/fwlink/?LinkID=157346) exemplo.  
+  
+ [!code-csharp[WF_Samples#260](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#260)]
+ [!code-vb[WF_Samples#260](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#260)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowUnloaded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowUnloaded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Workflow.Runtime.WorkflowEventArgs&gt; WorkflowUnloaded" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Workflow.Runtime.WorkflowEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a instância de fluxo de trabalho é descarregada da memória.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância de fluxo de trabalho pode ser descarregada da memória por uma chamada explícita para <xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A>, ou implicitamente pelo mecanismo de tempo de execução de fluxo de trabalho de acordo com a sua própria semântica. Por exemplo, o mecanismo de tempo de execução do fluxo de trabalho descarrega uma instância de fluxo de trabalho se a instância ficar ociosa e o tempo de execução tiver um <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> adicionado para o qual <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService.UnloadOnIdle%2A> é `true`.  
+  
+ O mecanismo de tempo de execução do fluxo de trabalho gerará o  
+  
+ <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded>evento depois que o estado da instância do fluxo de trabalho foram persistentes com êxito, mas antes da instância é invalidada em memória. Portanto, um <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowPersisted> evento precede o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> evento.  
+  
+ Para o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> o remetente do evento, contém o <xref:System.Workflow.Runtime.WorkflowRuntime> e <xref:System.Workflow.Runtime.WorkflowEventArgs> contém o <xref:System.Workflow.Runtime.WorkflowInstance> associado ao evento.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]manipulação de eventos, consulte [consumindo eventos](http://go.microsoft.com/fwlink/?LinkID=157352).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowRuntime> funcionalidade de um host de fluxo de trabalho. O código associa o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> com um manipulador de eventos, um método chamado `OnWorkflowUnload`.  
+  
+ Este exemplo de código é parte do [exemplo de serviço de persistência personalizado](http://go.microsoft.com/fwlink/?LinkID=157351).  
+  
+ [!code-csharp[WF_Samples#271](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#271)]
+ [!code-vb[WF_Samples#271](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#271)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

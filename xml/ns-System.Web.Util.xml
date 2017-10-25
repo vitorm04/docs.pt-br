@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Util">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Util" /> namespace é uma coleção de classes que permitem a métodos de retorno de chamada deve ser executado com o escopo de uma transação e que permitem que o trabalho a ser lançado para separar segmentos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

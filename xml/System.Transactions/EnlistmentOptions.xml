@@ -1,0 +1,95 @@
+<Type Name="EnlistmentOptions" FullName="System.Transactions.EnlistmentOptions">
+  <TypeSignature Language="C#" Value="public enum EnlistmentOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EnlistmentOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.EnlistmentOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Determina se o objeto deve ser inscrita durante a fase de preparação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é passada para o <xref:System.Transactions.Transaction.EnlistVolatile%2A> e <xref:System.Transactions.Transaction.EnlistDurable%2A> e métodos para notificar o Gerenciador de transações se o Gerenciador de recursos precisa criar outra inscrição durante a fase de preparação. Para obter mais informações sobre a inscrição, consulte [inscrição recursos como participantes em uma transação](http://msdn.microsoft.com/en-us/7bf66ce7-4190-4910-89d7-df4ad43e9f31).  
+  
+ Se EnlistDuringPrepareRequired for especificado durante a inscrição, o Gerenciador de recursos indica que deseja receber uma notificação de preparação enquanto novas inscrições ainda são permitidas para a transação. Um Gerenciador de recursos que atua como um cache para outro recurso durável, como um banco de dados de back-end, provavelmente usa essa opção durante a inscrição. Quando o recurso de cache obtém sua notificação de preparação, transfere o conteúdo para o recurso durável. Fazendo isso, o recurso durável inscreve na transação para se tornar um participante do protocolo (2PC) de confirmação de fase 2. Antes que isso aconteça, somente o recurso de cache (não o recurso durável) foi inscrito.  
+  
+ Se nenhum for especificado, a inscrição indica que ele não receberá uma notificação de preparação até que seja muito tarde criar novas inscrições em 2PC. Em nosso cenário anterior, se um recurso de cache especifica essa opção durante a inscrição e tenta liberar seu cache durante a notificação de preparação, o recurso durável obtém uma exceção ao tentar na inscrição, pois é muito tarde.  
+  
+ Nenhuma deve ser usada como padrão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnlistDuringPrepareRequired">
+      <MemberSignature Language="C#" Value="EnlistDuringPrepareRequired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnlistmentOptions EnlistDuringPrepareRequired = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnlistmentOptions.EnlistDuringPrepareRequired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnlistmentOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto deve se inscrever durante a fase inicial do processo de confirmação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnlistmentOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnlistmentOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnlistmentOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O objeto não exige que a inscrição durante a fase inicial do processo de confirmação.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

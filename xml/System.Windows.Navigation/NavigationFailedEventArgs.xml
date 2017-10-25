@@ -1,0 +1,224 @@
+<Type Name="NavigationFailedEventArgs" FullName="System.Windows.Navigation.NavigationFailedEventArgs">
+  <TypeSignature Language="C#" Value="public class NavigationFailedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NavigationFailedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.NavigationFailedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o **NavigationFailed** eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses argumentos de eventos contêm informações sobre uma navegação que falharam e é passada para manipuladores do **NavigationFailed** evento, que é implementado pelo seguinte:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationFailed?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Navigation.NavigationWindow.NavigationFailed?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Controls.Frame.NavigationFailed?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Application.NavigationFailed?displayProperty=nameWithType>  
+  
+ <xref:System.Windows.Navigation.NavigationFailedEventArgs>encapsula os detalhes da solicitação de navegação com falha a seguir:  
+  
+-   **Início da navegação**: <xref:System.Windows.Navigation.NavigationFailedEventArgs.Navigator%2A>.  
+  
+-   **Exceção de navegação**: <xref:System.Windows.Navigation.NavigationFailedEventArgs.Exception%2A>, <xref:System.Windows.Navigation.NavigationFailedEventArgs.Handled%2A>.  
+  
+-   **Conteúdo de navegação**: <xref:System.Windows.Navigation.NavigationFailedEventArgs.Uri%2A>.  
+  
+-   **Detalhes da navegação**: <xref:System.Windows.Navigation.NavigationFailedEventArgs.WebRequest%2A>, <xref:System.Windows.Navigation.NavigationFailedEventArgs.WebResponse%2A>.  
+  
+-   **Estado da navegação**: <xref:System.Windows.Navigation.NavigationFailedEventArgs.ExtraData%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationFailedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Exception" /> que foi gerado como resultado de uma falha na navegação.</summary>
+        <value>O <see cref="T:System.Exception" /> que foi gerado como resultado de uma falha na navegação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Exception>será um <xref:System.Net.WebException> ou um<xref:System.IO.IOException>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtraData">
+      <MemberSignature Language="C#" Value="public object ExtraData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ExtraData" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationFailedEventArgs.ExtraData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados opcionais <see cref="T:System.Object" /> que foi passado ao navegação foi iniciada.</summary>
+        <value>Os dados opcionais <see cref="T:System.Object" /> que foi passado ao navegação foi iniciada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationFailedEventArgs.ExtraData%2A>pode ser usado para passar dados de contexto específico que são específicos para uma navegação em particular. <xref:System.Windows.Navigation.NavigationFailedEventArgs.ExtraData%2A>contém uma referência ao objeto que é passado como o segundo argumento ao chamar <xref:System.Windows.Navigation.NavigationService.Navigate%2A> ou <xref:System.Windows.Navigation.NavigationService.Navigate%2A>. Caso contrário, será `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationFailedEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se a exceção de navegação com falha foi tratada.</summary>
+        <value>
+          <see langword="true" />Se a exceção é manipulada; Caso contrário, <see langword="false" /> (padrão).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você processa <xref:System.Windows.Navigation.NavigationService.NavigationFailed> para processar uma exceção que é lançada como resultado da navegação uma falha e você não quiser [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] para continuar o processamento de exceção, você deve definir o <xref:System.Windows.Navigation.NavigationFailedEventArgs.Handled%2A> propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigator">
+      <MemberSignature Language="C#" Value="public object Navigator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Navigator" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationFailedEventArgs.Navigator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O navegador que gerou esse evento.</summary>
+        <value>Um <see cref="T:System.Object" /> que é o navegador que disparou este evento</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationFailedEventArgs.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para o conteúdo que não pode ser acessado para.</summary>
+        <value>O <see cref="T:System.Uri" /> para o conteúdo que não pode ser acessado para.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebRequest">
+      <MemberSignature Language="C#" Value="public System.Net.WebRequest WebRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebRequest WebRequest" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationFailedEventArgs.WebRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a solicitação da web que foi usada para solicitar o conteúdo especificado.</summary>
+        <value>Obtém o <see cref="T:System.Net.WebRequest" /> objeto que foi usado para solicitar o conteúdo especificado. Se a navegação para um objeto, <see cref="P:System.Windows.Navigation.NavigationFailedEventArgs.WebRequest" /> é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebRequest?displayProperty=nameWithType>é uma classe base abstrata que encapsula uma solicitação da web, e é independente de protocolo. Para cada protocolo comum, o [!INCLUDE[TLA#tla_titlewinfx](~/includes/tlasharptla-titlewinfx-md.md)] inclui uma classe que deriva de <xref:System.Net.WebRequest?displayProperty=nameWithType> e estende com estado específico de protocolo e o comportamento, incluindo:  
+  
+-   <xref:System.IO.Packaging.PackWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `pack://` esquema para solicitar os arquivos de dados do aplicativo (consulte [recursos de aplicativo do WPF, conteúdo e arquivos de dados](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).  
+  
+-   <xref:System.Net.HttpWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `http://` esquema para arquivos de solicitação de servidores Web.  
+  
+-   <xref:System.Net.FtpWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `ftp://` esquema para arquivos de solicitação de servidores FTP.  
+  
+-   <xref:System.Net.FileWebRequest>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `file://` esquema solicitar arquivos locais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebResponse">
+      <MemberSignature Language="C#" Value="public System.Net.WebResponse WebResponse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.WebResponse WebResponse" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationFailedEventArgs.WebResponse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.WebResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a resposta da web que foi retornada após a tentativa de baixar a solicitação de conteúdo especificado.</summary>
+        <value>O <see cref="T:System.Net.WebResponse" /> que foi retornado após a tentativa de baixar a solicitação de conteúdo especificado. Se a navegação falhou, <see cref="P:System.Windows.Navigation.NavigationFailedEventArgs.WebResponse" /> é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Net.WebResponse?displayProperty=nameWithType>é uma classe base abstrata que encapsula uma resposta da web, e é independente de protocolo. Para cada protocolo comum, o [!INCLUDE[TLA#tla_titlewinfx](~/includes/tlasharptla-titlewinfx-md.md)] inclui uma classe que deriva de <xref:System.Net.WebResponse?displayProperty=nameWithType> e estende com estado de protocolo específico, incluindo:  
+  
+-   <xref:System.IO.Packaging.PackWebResponse>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `pack://` esquema para solicitar os arquivos de dados do aplicativo (consulte [recursos de aplicativo do WPF, conteúdo e arquivos de dados](~/docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)).  
+  
+-   <xref:System.Net.HttpWebResponse>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `http://` esquema para arquivos de solicitação de servidores Web.  
+  
+-   <xref:System.Net.FtpWebResponse>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `ftp://` esquema para arquivos de solicitação de servidores FTP.  
+  
+-   <xref:System.Net.FileWebResponse>: [!INCLUDE[TLA2#tla_uri#plural](~/includes/tla2sharptla-urisharpplural-md.md)] que usam o `file://` esquema solicitar arquivos locais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,132 @@
+<Type Name="TextRenderingHint" FullName="System.Drawing.Text.TextRenderingHint">
+  <TypeSignature Language="C#" Value="public enum TextRenderingHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextRenderingHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Text.TextRenderingHint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a qualidade de renderização do texto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os intervalos de qualidade do texto (desempenho mais rápido, mas menor qualidade) em texto não suavizado (melhor qualidade, mas um desempenho mais lento) para texto ClearType (melhor qualidade em uma tela de LCD).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Drawing.Graphics.TextRenderingHint%2A> e <xref:System.Drawing.Graphics.TextContrast%2A> propriedades e o <xref:System.Drawing.Text.TextRenderingHint> enumeração.  
+  
+ Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `ChangeTextRenderingHintAndTextContrast` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.GraphicsProperties#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/CPP/form1.cpp#5)]
+ [!code-csharp[System.Drawing.GraphicsProperties#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/CS/form1.cs#5)]
+ [!code-vb[System.Drawing.GraphicsProperties#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.GraphicsProperties/VB/form1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AntiAlias">
+      <MemberSignature Language="C#" Value="AntiAlias" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Text.TextRenderingHint AntiAlias = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Text.TextRenderingHint.AntiAlias" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Text.TextRenderingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada caractere é desenhado usando seu bitmap de glifo com suavização sem dicas. Melhor qualidade devido à suavização. Diferenças de largura de hastes podem ser perceptíveis, pois as dicas estão desativadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AntiAliasGridFit">
+      <MemberSignature Language="C#" Value="AntiAliasGridFit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Text.TextRenderingHint AntiAliasGridFit = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Text.TextRenderingHint.AntiAliasGridFit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Text.TextRenderingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada caractere é desenhado usando seu bitmap de glifo com suavização e dicas. Qualidade muito melhor devido à suavização, porém com custo de desempenho mais alto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearTypeGridFit">
+      <MemberSignature Language="C#" Value="ClearTypeGridFit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Text.TextRenderingHint ClearTypeGridFit = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Text.TextRenderingHint.ClearTypeGridFit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Text.TextRenderingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada caractere é desenhado usando seu bitmap ClearType de glifo com dicas. A configuração de qualidade mais alta. Usado para tirar proveito dos recursos de fonte ClearType.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleBitPerPixel">
+      <MemberSignature Language="C#" Value="SingleBitPerPixel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Text.TextRenderingHint SingleBitPerPixel = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Text.TextRenderingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada caractere é desenhado usando seu bitmap de glifo. As dicas não são usadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleBitPerPixelGridFit">
+      <MemberSignature Language="C#" Value="SingleBitPerPixelGridFit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Text.TextRenderingHint SingleBitPerPixelGridFit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Text.TextRenderingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada caractere é desenhado usando seu bitmap de glifo. As dicas são usadas para melhorar a aparência de caractere nas hastes e curvaturas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDefault">
+      <MemberSignature Language="C#" Value="SystemDefault" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Text.TextRenderingHint SystemDefault = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Text.TextRenderingHint.SystemDefault" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Text.TextRenderingHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Cada caractere é desenhado usando seu bitmap de glifo, com a dica de renderização padrão do sistema. O texto será desenhado usando as configurações de suavização de fonte selecionadas pelo usuário para o sistema.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

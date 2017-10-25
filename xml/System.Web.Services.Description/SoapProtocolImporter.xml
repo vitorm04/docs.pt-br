@@ -1,0 +1,388 @@
+<Type Name="SoapProtocolImporter" FullName="System.Web.Services.Description.SoapProtocolImporter">
+  <TypeSignature Language="C#" Value="public class SoapProtocolImporter : System.Web.Services.Description.ProtocolImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapProtocolImporter extends System.Web.Services.Description.ProtocolImporter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.SoapProtocolImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ProtocolImporter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera classes para serviços Web que usam o protocolo SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapProtocolImporter> classe gera o código de proxy de cliente ou servidor abstrata código acordo com o protocolo SOAP. A classe gera uma classe para cada associação com suporte definida em um documento WSDL Web Services Description Language ().  
+  
+ Normalmente, em vez de invocar <xref:System.Web.Services.Description.SoapProtocolImporter> diretamente, um desenvolvedor usa a classe indiretamente por meio de <xref:System.Web.Services.Description.ServiceDescriptionImporter> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapProtocolImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.SoapProtocolImporter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginClass">
+      <MemberSignature Language="C#" Value="protected override System.CodeDom.CodeTypeDeclaration BeginClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.CodeDom.CodeTypeDeclaration BeginClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.BeginClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a geração de uma classe de associação.</summary>
+        <returns>Uma classe de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a geração de uma classe para uma associação de determinado, o <xref:System.Web.Services.Description.SoapProtocolImporter.BeginClass%2A> método é executado antes do <xref:System.Web.Services.Description.SoapProtocolImporter> classe gera métodos que correspondem às operações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginNamespace">
+      <MemberSignature Language="C#" Value="protected override void BeginNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void BeginNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.BeginNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a inicialização para um namespace todo código durante a geração de código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a geração de código, o <xref:System.Web.Services.Description.SoapProtocolImporter.BeginNamespace%2A> método é executado antes do <xref:System.Web.Services.Description.SoapProtocolImporter> classe gera classes que representam as associações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndClass">
+      <MemberSignature Language="C#" Value="protected override void EndClass ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndClass() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.EndClass" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Os processos de uma classe de associação após a geração dos métodos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a geração de uma classe para uma associação de determinado, o <xref:System.Web.Services.Description.SoapProtocolImporter.EndClass%2A> método é executado após o <xref:System.Web.Services.Description.SoapProtocolImporter> classe gera métodos que correspondem às operações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndNamespace">
+      <MemberSignature Language="C#" Value="protected override void EndNamespace ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EndNamespace() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.EndNamespace" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o processamento para um namespace todo código após a geração de classe de associação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a geração de código, o <xref:System.Web.Services.Description.SoapProtocolImporter.EndNamespace%2A> método é executado após o <xref:System.Web.Services.Description.SoapProtocolImporter> classe gera classes que representam as associações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethod">
+      <MemberSignature Language="C#" Value="protected override System.CodeDom.CodeMemberMethod GenerateMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.CodeDom.CodeMemberMethod GenerateMethod() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.GenerateMethod" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeMemberMethod</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o código do método para uma classe de associação.</summary>
+        <returns>O código do método para uma classe de associação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Durante a geração de uma classe para uma associação de determinado, o <xref:System.Web.Services.Description.SoapProtocolImporter.GenerateMethod%2A> método é executado para cada método de classe de associação que representa uma operação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBindingSupported">
+      <MemberSignature Language="C#" Value="protected override bool IsBindingSupported ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsBindingSupported() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.IsBindingSupported" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se uma classe pode ser gerada para a associação atual.</summary>
+        <returns>
+          <see langword="true" />Se a classe pode ser gerada para a associação atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapProtocolImporter.IsBindingSupported%2A> método determina se é para gerar uma classe para a associação atual, conforme representado pelo <xref:System.Web.Services.Description.SoapProtocolImporter.Binding%2A> propriedade. O método verifica se o <xref:System.Web.Services.Description.SoapProtocolImporter.Binding%2A> da propriedade <xref:System.Web.Services.Description.Binding.Extensions%2A> propriedade contém um <xref:System.Web.Services.Description.SoapBinding> instância. Além disso, o mecanismo de transporte obtidas por meio de <xref:System.Web.Services.Description.SoapBinding.Transport%2A> propriedade deve ser suportada pela configuração de serviços da Web atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOperationFlowSupported">
+      <MemberSignature Language="C#" Value="protected override bool IsOperationFlowSupported (System.Web.Services.Description.OperationFlow flow);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsOperationFlowSupported(valuetype System.Web.Services.Description.OperationFlow flow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.IsOperationFlowSupported(System.Web.Services.Description.OperationFlow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flow" Type="System.Web.Services.Description.OperationFlow" />
+      </Parameters>
+      <Docs>
+        <param name="flow">Um <see cref="T:System.Web.Services.Description.OperationFlow" /> valor de enumeração que representa um padrão de transmissão.</param>
+        <summary>Determina se há suporte para o fluxo de operação da operação atual.</summary>
+        <returns>
+          <see langword="true" />Se o fluxo de operação da operação atual é suportado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapProtocolImporter.IsOperationFlowSupported%2A> método determina se é necessário gerar um método para a operação atual, conforme representado pelo <xref:System.Web.Services.Description.Operation> propriedade. Essa avaliação ocorre para cada operação em uma associação para o qual uma classe está sendo gerada. Se um `false` valor é retornado, o <xref:System.Web.Services.Description.SoapProtocolImporter.UnsupportedOperationWarning%2A> método é executado. Um `true` valor é retornado somente se o valor de entrada é <xref:System.Web.Services.Description.OperationFlow.OneWay> ou <xref:System.Web.Services.Description.OperationFlow.RequestResponse>.  
+  
+ Para obter mais informações, consulte a propriedade <xref:System.Web.Services.Description.OperationMessageCollection.Flow%2A>. A propriedade <xref:System.Web.Services.Description.Operation.Messages%2A> é do tipo <xref:System.Web.Services.Description.OperationMessageCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSoapEncodingPresent">
+      <MemberSignature Language="C#" Value="protected virtual bool IsSoapEncodingPresent (string uriList);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsSoapEncodingPresent(string uriList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.SoapProtocolImporter.IsSoapEncodingPresent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uriList">Uma lista delimitada por espaço de URIs.</param>
+        <summary>Verifica a presença de "http://schemas.xmlsoap.org/soap/encoding/" em uma cadeia de caracteres que representa uma lista de indicadores de recurso uniforme (URIs).</summary>
+        <returns>
+          <see langword="true" />a cadeia de caracteres contém [http://schemas.xmlsoap.org/soap/encoding/](http://schemas.xmlsoap.org/soap/encoding/); caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolName">
+      <MemberSignature Language="C#" Value="public override string ProtocolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProtocolName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapProtocolImporter.ProtocolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor de "Soap".</summary>
+        <value>Um <see cref="T:System.String" /> objeto que contém a cadeia de caracteres "Soap".</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapBinding">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.SoapBinding SoapBinding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.SoapBinding SoapBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapProtocolImporter.SoapBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.SoapBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.Services.Description.SoapBinding" /> instância obtidas por meio de <see cref="P:System.Web.Services.Description.SoapProtocolImporter.SoapBinding" /> da propriedade <see cref="P:System.Web.Services.Description.Binding.Extensions" /> propriedade.</summary>
+        <value>Um <see cref="T:System.Web.Services.Description.SoapBinding" /> instância obtidas por meio de <see cref="P:System.Web.Services.Description.SoapProtocolImporter.SoapBinding" /> da propriedade <see cref="P:System.Web.Services.Description.Binding.Extensions" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapExporter">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.SoapCodeExporter SoapExporter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.SoapCodeExporter SoapExporter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapProtocolImporter.SoapExporter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.SoapCodeExporter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto do tipo <see cref="T:System.Xml.Serialization.SoapCodeExporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe para gerar código de mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML de codificação SOAP.</summary>
+        <value>Um objeto do tipo <see cref="T:System.Xml.Serialization.SoapCodeExporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe para gerar código de mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML de codificação SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapProtocolImporter> classe usa um <xref:System.Xml.Serialization.SoapCodeExporter> objeto para criar o código de mapeamentos de tipo do .NET Framework para o esquema XML de elementos e tipos de dados que permitem a codificação de SOAP, em vez de uso de esquema XML literal. Codificação de SOAP é especificado na seção 5 da especificação do SOAP 1.1. Codificação SOAP usa o namespace "http://schemas.xmlsoap.org/soap/encoding/".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapImporter">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.SoapSchemaImporter SoapImporter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.SoapSchemaImporter SoapImporter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapProtocolImporter.SoapImporter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.SoapSchemaImporter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto do tipo <see cref="T:System.Xml.Serialization.SoapSchemaImporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe gerar mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML de codificação SOAP.</summary>
+        <value>Um objeto do tipo <see cref="T:System.Xml.Serialization.SoapSchemaImporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe gerar mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML de codificação SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapProtocolImporter> classe usa um <xref:System.Xml.Serialization.SoapSchemaImporter> objeto para criar mapeamentos de tipo do .NET Framework para o esquema XML elementos e tipos de dados que permitem a codificação de SOAP, em vez de uso de esquema XML literal. Codificação de SOAP é especificado na seção 5 da especificação do SOAP 1.1. Codificação SOAP usa o namespace "http://schemas.xmlsoap.org/soap/encoding/".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlExporter">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlCodeExporter XmlExporter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlCodeExporter XmlExporter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapProtocolImporter.XmlExporter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlCodeExporter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto do tipo <see cref="T:System.Xml.Serialization.XmlCodeExporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe para gerar código de mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML literal.</summary>
+        <value>Um objeto do tipo <see cref="T:System.Xml.Serialization.XmlCodeExporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe para gerar código de mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML literal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapProtocolImporter> classe usa um <xref:System.Xml.Serialization.XmlSchemaImporter> objeto para criar mapeamentos de tipo do .NET Framework para o esquema XML elementos e tipos de dados que exigem o uso de esquema XML literal, em vez de codificação SOAP. Codificação de SOAP é especificado na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlImporter">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSchemaImporter XmlImporter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSchemaImporter XmlImporter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.SoapProtocolImporter.XmlImporter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSchemaImporter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto do tipo <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe gerar mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML literal.</summary>
+        <value>Um objeto do tipo <see cref="T:System.Xml.Serialization.XmlSchemaImporter" /> usado internamente pelo <see cref="T:System.Web.Services.Description.SoapProtocolImporter" /> classe gerar mapeamentos entre tipos do .NET Framework e o conteúdo de esquema XML literal.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.SoapProtocolImporter> classe usa um <xref:System.Xml.Serialization.XmlSchemaImporter> objeto para criar o código de mapeamentos de tipo do .NET Framework para o esquema XML de elementos e tipos de dados que exigem o uso de esquema XML literal, em vez de codificação SOAP. Codificação de SOAP é especificado na seção 5 da especificação do SOAP 1.1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

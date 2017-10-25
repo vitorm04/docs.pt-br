@@ -1,0 +1,171 @@
+<Type Name="RegisteredScript" FullName="System.Web.UI.RegisteredScript">
+  <TypeSignature Language="C#" Value="public sealed class RegisteredScript" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RegisteredScript extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.RegisteredScript" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso a um script de cliente que foi anteriormente registrado com o <see cref="T:System.Web.UI.Page" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um script de cliente é identificado exclusivamente por sua chave e seu tipo. Somente um script com um par chave/tipo fornecido pode ser registrado com uma página.  
+  
+ Não há garantia de scripts de cliente para a saída na ordem em que eles são registrados no.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddScriptTags">
+      <MemberSignature Language="C#" Value="public bool AddScriptTags { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AddScriptTags" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.AddScriptTags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o bloco de script deve ser renderizado na página da Web, entre em <see langword="&lt;script&gt;" /> marcas.</summary>
+        <value>
+          <see langword="true" />Se o script deve ser renderizado na página da Web, entre em <see langword="&lt;script&gt;" /> marcas; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Control Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Control Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle que registrou o script.</summary>
+        <value>Uma referência para o controle que registrou o script.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave que, juntamente com o <see cref="P:System.Web.UI.RegisteredScript.Type" /> valor, identifica o script.</summary>
+        <value>O valor da chave. Esse valor pode ser <see langword="null" /> ou vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um script de cliente é identificado exclusivamente por sua chave e seu tipo. Somente um script com um par chave/tipo fornecido pode ser registrado com uma página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="public string Script { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Script" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Script" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo do script.</summary>
+        <value>O nome do arquivo do script. Esse valor pode ser <see langword="null" /> ou vazio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScriptType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.RegisteredScriptType ScriptType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.RegisteredScriptType ScriptType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.ScriptType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.RegisteredScriptType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de script que indica quando o script deve ser executada.</summary>
+        <value>Um valor definido pelo <see cref="T:System.Web.UI.RegisteredScriptType" /> enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o script de cliente de tipo que, juntamente com o <see cref="P:System.Web.UI.RegisteredScript.Key" /> valor, identifica o script.</summary>
+        <value>O tipo do script.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade normalmente é especificada usando o tipo do controle que registrou o script.  
+  
+ Um script de cliente é identificado exclusivamente por sua chave e seu tipo. Somente um script com um par chave/tipo fornecido pode ser registrado com uma página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.RegisteredScript.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL do arquivo de script.</summary>
+        <value>A URL do arquivo de script. Esse valor pode ser <see langword="null" /> ou vazio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

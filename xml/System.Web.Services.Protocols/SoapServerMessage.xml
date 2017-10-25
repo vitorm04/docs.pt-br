@@ -1,0 +1,259 @@
+<Type Name="SoapServerMessage" FullName="System.Web.Services.Protocols.SoapServerMessage">
+  <TypeSignature Language="C#" Value="public sealed class SoapServerMessage : System.Web.Services.Protocols.SoapMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapServerMessage extends System.Web.Services.Protocols.SoapMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapServerMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.SoapMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os dados em uma solicitação SOAP recebidas ou uma resposta SOAP enviada por um método de serviço da Web em XML em um determinado <see cref="T:System.Web.Services.Protocols.SoapMessageStage" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O fragmento de código a seguir faz parte de uma extensão SOAP que registra as mensagens SOAP enviadas e recebidas por um método de serviço da Web em XML. Processa este fragmento específico a <xref:System.Web.Services.Protocols.SoapServerMessage> passado para o <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A?displayProperty=nameWithType> método da extensão SOAP escrevendo propriedades do <xref:System.Web.Services.Protocols.SoapServerMessage> para o arquivo de log.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public override string Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o campo de cabeçalho de solicitação HTTP SOAPAction para a solicitação SOAP ou resposta SOAP.</summary>
+        <value>O campo de cabeçalho de solicitação HTTP SOAPAction para a solicitação SOAP ou resposta SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapServerMessage.Action%2A> propriedade pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ O fragmento de código a seguir faz parte de uma extensão SOAP que registra as mensagens SOAP enviadas e recebidas por um serviço Web XML. Este fragmento específico saídas para esse arquivo de log o valor da `SOAPAction` campo de cabeçalho de solicitação HTTP.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInStage">
+      <MemberSignature Language="C#" Value="protected override void EnsureInStage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EnsureInStage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerMessage.EnsureInStage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureOutStage">
+      <MemberSignature Language="C#" Value="protected override void EnsureOutStage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void EnsureOutStage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapServerMessage.EnsureOutStage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodInfo">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Protocols.LogicalMethodInfo MethodInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.LogicalMethodInfo MethodInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.MethodInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.LogicalMethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação do protótipo do método para o método de serviço da Web em XML para o qual a solicitação SOAP é pretendida.</summary>
+        <value>Um <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> que representa o método de serviço da Web em XML para o qual a solicitação SOAP é pretendida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Web.Services.Protocols.SoapServerMessage.MethodInfo%2A> propriedade pode ser acessado durante qualquer estágio, as informações do método só estão disponíveis durante <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> e <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize>.  
+  
+   
+  
+## Examples  
+ O fragmento de código a seguir faz parte de uma extensão SOAP que registra as mensagens SOAP enviadas e recebidas por um serviço Web XML. Este fragmento específico gera esse arquivo de log o nome do método de serviço Web XML solicitado.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="public override bool OneWay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneWay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.OneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o cliente aguarda o servidor concluir o processamento de um método de serviço da Web em XML.</summary>
+        <value>
+          <see langword="true" />Se o cliente aguarda o servidor processar completamente um método; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> ou <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> aplicados a uma Web XML método de serviço ou cliente de serviço Web XML pode especificar se o método de serviço Web XML é uma forma ou não, definindo a <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay%2A> propriedade do atributo.  
+  
+ O <xref:System.Web.Services.Protocols.SoapServerMessage.OneWay%2A> propriedade pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ O fragmento de código a seguir faz parte de uma extensão SOAP que registra as mensagens SOAP enviadas e recebidas por um serviço Web XML. Este fragmento específico saídas para esse arquivo de log uma frase informando o método de serviço Web XML é unidirecional quando o <xref:System.Web.Services.Protocols.SoapServerMessage.OneWay%2A> é de propriedade `true`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public object Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Server" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.Server" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância da classe tratamento a invocação do método no servidor Web.</summary>
+        <value>A instância da classe de implementação do serviço Web XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapServerMessage.Server%2A> propriedade é uma instância da classe de implementação do serviço Web XML. Se uma extensão SOAP soubesse antecipadamente o tipo da classe, ela foi convertida <xref:System.Web.Services.Protocols.SoapServerMessage.Server%2A> que propriedades de tipo e acesso e os métodos da classe implementar o XML Web Services. O <xref:System.Web.Services.Protocols.SoapServerMessage.Server%2A> propriedade pode ser acessado durante <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> ou <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize>.  
+  
+   
+  
+## Examples  
+ O fragmento de código a seguir faz parte de uma extensão SOAP que registra as mensagens SOAP enviadas e recebidas por um serviço Web XML. Este fragmento específico gera a saída para o arquivo de log o tipo de serviço da Web em XML, é `MathSvc`.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> não é <see cref="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize" /> ou <see cref="F:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapVersion">
+      <MemberSignature Language="C#" Value="public override System.Web.Services.Protocols.SoapProtocolVersion SoapVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapProtocolVersion SoapVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.SoapVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapProtocolVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do protocolo SOAP usada para se comunicar com o serviço Web XML.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Services.Protocols.SoapProtocolVersion" />. O padrão é <see cref="F:System.Web.Services.Protocols.SoapProtocolVersion.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapServerMessage.SoapVersion%2A> propriedade é garantida para ser válido após o <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize> estágio. No <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize> estágio a propriedade está disponível, mas a mensagem SOAP não foi processada completamente e extensões SOAP que podem alterar o conteúdo da mensagem SOAP não foram executados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public override string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapServerMessage.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a URL base do serviço da Web em XML.</summary>
+        <value>A URL base do serviço da Web em XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapServerMessage.Url%2A> propriedade pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ O fragmento de código a seguir faz parte de uma extensão SOAP que registra as mensagens SOAP enviadas e recebidas por um serviço Web XML. Este fragmento específico gera esse arquivo de log a URL do serviço da Web em XML.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

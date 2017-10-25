@@ -1,0 +1,203 @@
+<Type Name="TableLayoutRowStyleCollection" FullName="System.Windows.Forms.TableLayoutRowStyleCollection">
+  <TypeSignature Language="C#" Value="public class TableLayoutRowStyleCollection : System.Windows.Forms.TableLayoutStyleCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableLayoutRowStyleCollection extends System.Windows.Forms.TableLayoutStyleCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TableLayoutRowStyleCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.TableLayoutStyleCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma coleção que armazena objetos <see cref="T:System.Windows.Forms.RowStyle" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutRowStyleCollection> classe representa a coleção de todos os estilos usados para descrever as linhas em um tipo de <xref:System.Windows.Forms.TableLayoutPanel>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir <xref:System.Windows.Forms.RowStyle> para um <xref:System.Windows.Forms.TableLayoutRowStyleCollection>. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.TableLayoutPanel> controle.  
+  
+ [!code-csharp[System.Windows.Forms.TableLayoutPanel#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/CS/form1.cs#9)]
+ [!code-vb[System.Windows.Forms.TableLayoutPanel#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel/VB/form1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Windows.Forms.RowStyle rowStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Windows.Forms.RowStyle rowStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutRowStyleCollection.Add(System.Windows.Forms.RowStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowStyle" Type="System.Windows.Forms.RowStyle" />
+      </Parameters>
+      <Docs>
+        <param name="rowStyle">O <see cref="T:System.Windows.Forms.RowStyle" /> para adicionar ao <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Forms.RowStyle" /> para o <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />.</summary>
+        <returns>A posição na qual o novo elemento foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutRowStyleCollection.Add%2A> método reaplica o layout da tabela para todos os controles no atual <xref:System.Windows.Forms.TableLayoutPanel> contêiner.  
+  
+ O número de estilos armazenados em uma coleção é limitado apenas pela memória disponível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.RowStyle rowStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.RowStyle rowStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutRowStyleCollection.Contains(System.Windows.Forms.RowStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowStyle" Type="System.Windows.Forms.RowStyle" />
+      </Parameters>
+      <Docs>
+        <param name="rowStyle">O <see cref="T:System.Windows.Forms.RowStyle" /> a ser localizado no <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />.</param>
+        <summary>Determina se o <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" /> contém um estilo específico.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.Forms.RowStyle" /> for encontrado no <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.RowStyle rowStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.RowStyle rowStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutRowStyleCollection.IndexOf(System.Windows.Forms.RowStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowStyle" Type="System.Windows.Forms.RowStyle" />
+      </Parameters>
+      <Docs>
+        <param name="rowStyle">O <see cref="T:System.Windows.Forms.RowStyle" /> a ser localizado no <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />.</param>
+        <summary>Determina o índice de um item específico em <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />.</summary>
+        <returns>O índice do <paramref name="rowStyle" /> se encontrado no <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutRowStyleCollection.IndexOf%2A> método inicia a pesquisa no primeiro elemento do <xref:System.Windows.Forms.TableLayoutRowStyleCollection> e termina quando encontrar uma correspondência ou atingir o último elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Windows.Forms.RowStyle rowStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Windows.Forms.RowStyle rowStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutRowStyleCollection.Insert(System.Int32,System.Windows.Forms.RowStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="rowStyle" Type="System.Windows.Forms.RowStyle" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o <see cref="T:System.Windows.Forms.RowStyle" /> devem ser inseridos.</param>
+        <param name="rowStyle">O <see cref="T:System.Windows.Forms.RowStyle" /> para inserir o <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Insere um <see cref="T:System.Windows.Forms.RowStyle" /> para o <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" /> na posição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutRowStyleCollection.Insert%2A> método reaplica o layout da tabela para todos os controles no atual <xref:System.Windows.Forms.TableLayoutPanel> contêiner.  
+  
+ O número de estilos armazenados em uma coleção é limitado apenas pela memória disponível.  
+  
+ Coleções de elementos contíguos, como o <xref:System.Windows.Forms.TableLayoutRowStyleCollection> classe, os elementos que seguem o ponto de inserção mover para baixo para acomodar o elemento inserido. Os índices dos elementos que são movidos também são atualizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.RowStyle this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.RowStyle Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TableLayoutRowStyleCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RowStyle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Windows.Forms.RowStyle" /> para obter ou definir.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.RowStyle" /> no índice especificado.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.RowStyle" /> no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.RowStyle rowStyle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.RowStyle rowStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TableLayoutRowStyleCollection.Remove(System.Windows.Forms.RowStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowStyle" Type="System.Windows.Forms.RowStyle" />
+      </Parameters>
+      <Docs>
+        <param name="rowStyle">O <see cref="T:System.Windows.Forms.RowStyle" /> a ser removido de <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Remove a primeira ocorrência de um objeto específico do <see cref="T:System.Windows.Forms.TableLayoutRowStyleCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TableLayoutRowStyleCollection.Remove%2A> método reaplica o layout da tabela para todos os controles no atual <xref:System.Windows.Forms.TableLayoutPanel> contêiner.  
+  
+ Coleções de elementos contíguos, como o <xref:System.Windows.Forms.TableLayoutRowStyleCollection> classe, os elementos que seguem o ponto de exclusão mover para cima para ocupar o ponto vagas. Os índices dos elementos que são movidos também são atualizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

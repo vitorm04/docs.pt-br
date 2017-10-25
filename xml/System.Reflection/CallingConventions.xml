@@ -1,0 +1,198 @@
+<Type Name="CallingConventions" FullName="System.Reflection.CallingConventions">
+  <TypeSignature Language="C#" Value="public enum CallingConventions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed CallingConventions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.CallingConventions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as convenções de chamada válidas para um método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A convenção de chamada nativa é o conjunto de regras que controlam a ordem e o layout dos argumentos passados para compilado métodos. Ele também controla como passar o valor de retorno, que registra a ser usado para argumentos e se a chamada ou o método de chamada remove argumentos da pilha.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Type_GetConstructor3#1](~/samples/snippets/cpp/VS_Snippets_CLR/Type_GetConstructor3/CPP/type_getconstructor3.cpp#1)]
+ [!code-csharp[Type_GetConstructor3#1](~/samples/snippets/csharp/VS_Snippets_CLR/Type_GetConstructor3/CS/type_getconstructor3.cs#1)]
+ [!code-vb[Type_GetConstructor3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Type_GetConstructor3/VB/type_getconstructor3.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.CallingConventions Any = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.CallingConventions.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a convenção de chamada <see langword="Standard" /> ou <see langword="VarArgs" /> pode ser usada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExplicitThis">
+      <MemberSignature Language="C#" Value="ExplicitThis" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.CallingConventions ExplicitThis = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.CallingConventions.ExplicitThis" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a assinatura é uma assinatura de ponteiro de função, que representa uma chamada para um método virtual ou de instância (não um método estático). Se <see langword="ExplicitThis" /> for definido, <see langword="HasThis" /> também deverá ser definido. O primeiro argumento passado para o método chamado ainda é um ponteiro <see langword="this" />, mas o tipo do primeiro argumento agora é desconhecido. Portanto, um token que descreve o tipo (ou classe) do ponteiro <see langword="this" /> é explicitamente armazenado em sua assinatura de metadados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="HasThis">
+      <MemberSignature Language="C#" Value="HasThis" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.CallingConventions HasThis = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.CallingConventions.HasThis" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um método virtual ou de instância (não um método estático). No tempo de execução, o método chamado é passado em um ponteiro para o objeto de destino como seu primeiro argumento (o ponteiro <see langword="this" />). A assinatura armazenada nos metadados não inclui o tipo desse primeiro argumento, pois o método é conhecido e sua classe de proprietário pode ser descoberta dos metadados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Standard">
+      <MemberSignature Language="C#" Value="Standard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.CallingConventions Standard = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.CallingConventions.Standard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a convenção de chamada padrão conforme determinado pelo Common Language Runtime. Use esta convenção de chamada para métodos estáticos. Para métodos virtuais ou de instância, use <see langword="HasThis" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VarArgs">
+      <MemberSignature Language="C#" Value="VarArgs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.CallingConventions VarArgs = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.CallingConventions.VarArgs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.CallingConventions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a convenção de chamada de métodos com argumentos variáveis.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

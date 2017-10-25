@@ -1,0 +1,113 @@
+<Type Name="FollowingSiblingMergeIterator" FullName="System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator">
+  <TypeSignature Language="C#" Value="public struct FollowingSiblingMergeIterator" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit FollowingSiblingMergeIterator extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.SqlXml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Itera byfollowing de nós filho os nós irmãos.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public void Create (System.Xml.Xsl.Runtime.XmlNavigatorFilter filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Create(class System.Xml.Xsl.Runtime.XmlNavigatorFilter filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Create(System.Xml.Xsl.Runtime.XmlNavigatorFilter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filter" Type="System.Xml.Xsl.Runtime.XmlNavigatorFilter" />
+      </Parameters>
+      <Docs>
+        <param name="filter">Uma instância do <see cref="T:System.Xml.Xsl.Runtime.XmlNavigatorFilter" /> classe, que permite que você filtre nós com base no nome.</param>
+        <summary>Inicializa o <see cref="T:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Xml.XPath.XPathNavigator Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Current" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o navegador de resultados atual.</summary>
+        <value>O navegador de resultados atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Current%2A> propriedade obtém modificada quando o <xref:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.MoveNext%2A> método define o <xref:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Current%2A> propriedade para o próximo nó e retorna <xref:System.Xml.Xsl.Runtime.IteratorResult.HaveCurrentNode>; caso contrário, o <xref:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Current%2A> propriedade permanece inalterada.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public System.Xml.Xsl.Runtime.IteratorResult MoveNext (System.Xml.XPath.XPathNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Xml.Xsl.Runtime.IteratorResult MoveNext(class System.Xml.XPath.XPathNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.MoveNext(System.Xml.XPath.XPathNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.SqlXml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Xsl.Runtime.IteratorResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="navigator" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="navigator">
+          Objeto <see cref="T:System.Xml.XPath.XPathNavigator" />.</param>
+        <summary>Posicione esse iterador para o próximo nó de conteúdo ou irmão.</summary>
+        <returns>Retorna <see cref="F:System.Xml.Xsl.Runtime.IteratorResult.NoMoreNodes" /> se não houver mais nenhum nó de conteúdo ou irmão. Retorna <see cref="F:System.Xml.Xsl.Runtime.IteratorResult.NeedInputNode" /> se o próximo nó de entrada precisa ser buscada pela primeira vez. Retorna <see cref="F:System.Xml.Xsl.Runtime.IteratorResult.HaveCurrentNode" /> se, durante a iteração através de nós, o <see cref="P:System.Xml.Xsl.Runtime.FollowingSiblingMergeIterator.Current" /> propriedade foi definida para o próximo nó.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

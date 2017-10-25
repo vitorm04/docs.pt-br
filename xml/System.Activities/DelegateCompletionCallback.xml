@@ -1,0 +1,34 @@
+<Type Name="DelegateCompletionCallback" FullName="System.Activities.DelegateCompletionCallback">
+  <TypeSignature Language="C#" Value="public delegate void DelegateCompletionCallback(NativeActivityContext context, ActivityInstance completedInstance, IDictionary&lt;string,object&gt; outArguments);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DelegateCompletionCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.DelegateCompletionCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+    <Parameter Name="completedInstance" Type="System.Activities.ActivityInstance" />
+    <Parameter Name="outArguments" Type="System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="context">O ambiente de execução da atividade tratando o retorno de chamada.</param>
+    <param name="completedInstance">A instância de atividade concluída do <see cref="T:System.Activities.ActivityDelegate" /> manipulador.</param>
+    <param name="outArguments">Os argumentos de saída concluídos <see cref="T:System.Activities.ActivityDelegate" />.</param>
+    <summary>Representa o método que é chamado quando um <see cref="T:System.Activities.ActivityDelegate" /> é concluída.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores a `outArguments` dicionário são o <xref:System.Activities.ActivityDelegateParameter> valores do <xref:System.Activities.ActivityDelegate> que são atribuídos quando o <xref:System.Activities.ActivityDelegate> é invocado, organizado pela <xref:System.Activities.ActivityDelegateParameter.Name%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Automation.Peers">
+  <Docs>
+    <summary>Define o <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> base classe e um conjunto de tipos que derivam e que correspondem aos controles do Microsoft .NET Framework. Cada <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> expõe o controle do Microsoft .NET Framework correspondente para a automação de interface do usuário da Microsoft.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

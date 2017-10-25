@@ -1,0 +1,191 @@
+<Type Name="TransactionAttribute" FullName="System.EnterpriseServices.TransactionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TransactionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransactionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.TransactionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de transação disponível para o objeto atribuído. Os valores permitidos são membros da enumeração <see cref="T:System.EnterpriseServices.TransactionOption" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se for especificado um tipo de transação com esse atributo, ele não deve ser alterado no catálogo COM+. Se o tipo de transação é alterado no catálogo do COM+, o mesmo tipo de transação deve ser especificado no componente com esse atributo.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do `TransactionAttribute` para marcar um <xref:System.EnterpriseServices.ServicedComponent> como transacional.  
+  
+ [!code-cpp[EnterpriseServices_Transaction#1](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CPP/transaction.cpp#1)]
+ [!code-csharp[EnterpriseServices_Transaction#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Transaction/CS/transaction.cs#1)]
+ [!code-vb[EnterpriseServices_Transaction#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Transaction/VB/transaction.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.TransactionAttribute" />.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.TransactionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.TransactionAttribute" /> classe, tipo de transação solicitada do componente de configuração <see cref="F:System.EnterpriseServices.TransactionOption.Required" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.EnterpriseServices.TransactionAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesTransactionAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServicesTransactionAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionAttribute (System.EnterpriseServices.TransactionOption val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.EnterpriseServices.TransactionOption val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.TransactionAttribute.#ctor(System.EnterpriseServices.TransactionOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="val" Type="System.EnterpriseServices.TransactionOption" />
+      </Parameters>
+      <Docs>
+        <param name="val">O tipo de transação especificado, um <see cref="T:System.EnterpriseServices.TransactionOption" /> valor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.TransactionAttribute" /> classe, especificando o tipo de transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.EnterpriseServices.TransactionAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesTransactionAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/CS/class1.cs#2)]
+ [!code-vb[EnterpriseServicesTransactionAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Isolation">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.TransactionIsolationLevel Isolation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.TransactionIsolationLevel Isolation" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.TransactionAttribute.Isolation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionIsolationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de isolamento da transação.</summary>
+        <value>Um dos valores de <see cref="T:System.EnterpriseServices.TransactionIsolationLevel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de um `Transaction` do atributo <xref:System.EnterpriseServices.TransactionAttribute.Isolation%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServicesTransactionAttribute#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/CS/class1.cs#3)]
+ [!code-vb[EnterpriseServicesTransactionAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.TransactionAttribute.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite para essa transação.</summary>
+        <value>O tempo limite da transação em segundos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de um `Transaction` do atributo <xref:System.EnterpriseServices.TransactionAttribute.Timeout%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServicesTransactionAttribute#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/CS/class1.cs#4)]
+ [!code-vb[EnterpriseServicesTransactionAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public System.EnterpriseServices.TransactionOption Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.EnterpriseServices.TransactionOption Value" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.TransactionAttribute.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.TransactionOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.EnterpriseServices.TransactionOption" /> valor para a transação, opcionalmente, a desabilitação do serviço de transação.</summary>
+        <value>O tipo de transação especificado, um <see cref="T:System.EnterpriseServices.TransactionOption" /> valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor de um `Transaction` do atributo <xref:System.EnterpriseServices.TransactionAttribute.Value%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServicesTransactionAttribute#5](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/CS/class1.cs#5)]
+ [!code-vb[EnterpriseServicesTransactionAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesTransactionAttribute/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

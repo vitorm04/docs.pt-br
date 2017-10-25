@@ -1,0 +1,124 @@
+<Type Name="TaskExtensions" FullName="System.Threading.Tasks.TaskExtensions">
+  <TypeSignature Language="C#" Value="public static class TaskExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit TaskExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.TaskExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de métodos estáticos (compartilhado no Visual Basic) para trabalhar com tipos específicos de instâncias <see cref="T:System.Threading.Tasks.Task" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Unwrap">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task Unwrap (this System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt; task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task Unwrap(class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task&gt; task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskExtensions.Unwrap(System.Threading.Tasks.Task{System.Threading.Tasks.Task})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="task">O <see langword="Task&lt;Task&gt;" /> (c#) ou <see langword="Task (Of Task)" /> (Visual Basic) a ser descompactado.</param>
+        <summary>cria um proxy <see cref="T:System.Threading.Tasks.Task" /> que representa a operação assíncrona de um <see cref="M:System.Threading.Tasks.TaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)" />.</summary>
+        <returns>Uma tarefa que representa a operação assíncrona do <see langword="System.Threading.Tasks.Task(Of Task)" /> fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente é útil poder retornar uma tarefa de um <xref:System.Threading.Tasks.Task%601>, em que a tarefa interna representa o trabalho feito como parte de externa <xref:System.Threading.Tasks.Task%601>. No entanto, isso pode resultar em uma `Task<Task>` (c#) ou `Task (Of Task)` (Visual Basic), que, se não tratados com cuidado, pode produzir um comportamento inesperado. Decodificar resolve esse problema criando um proxy de tarefa que representa a operação assíncrona inteira de uma tarefa.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como desencapsular uma tarefa:  
+  
+ [!code-csharp[System.Threading.Tasks.TaskExtensions#01](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.taskextensions/cs/unwrap.cs#01)]
+ [!code-vb[System.Threading.Tasks.TaskExtensions#01](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.taskextensions/vb/unwrap.vb#01)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A exceção lançada se o argumento <paramref name="task" /> for nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unwrap&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Threading.Tasks.Task&lt;TResult&gt; Unwrap&lt;TResult&gt; (this System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt; task);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Threading.Tasks.Task`1&lt;!!TResult&gt; Unwrap&lt;TResult&gt;(class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task`1&lt;!!TResult&gt;&gt; task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.TaskExtensions.Unwrap``1(System.Threading.Tasks.Task{System.Threading.Tasks.Task{``0}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="task" Type="System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&lt;TResult&gt;&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo de resultado da tarefa.</typeparam>
+        <param name="task">O <see langword="Task&lt;Task&lt;T&gt;&gt;" /> (c#) ou <see langword="Task (Of Task(Of T))" /> (Visual Basic) a ser descompactado.</param>
+        <summary>Cria um proxy <see cref="T:System.Threading.Tasks.Task" /> que representa a operação assíncrona de um <see langword="Task&lt;Task&lt;T&gt;&gt;" /> (C#) ou <see langword="Task (Of Task(Of T))" /> (Visual Basic).</summary>
+        <returns>Um <see cref="T:System.Threading.Tasks.Task" /> que representa a operação assíncrona do <see langword="Task&lt;Task&lt;T&gt;&gt;" /> (C#) ou <see langword="Task (Of Task(Of T))" /> (Visual Basic) fornecido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente é útil poder retornar um <xref:System.Threading.Tasks.Task> de um <xref:System.Threading.Tasks.Task>, onde interna <xref:System.Threading.Tasks.Task> representa o trabalho feito como parte de externa <xref:System.Threading.Tasks.Task>. No entanto, isso pode resultar em uma `Task<Task<T>>` (c#) ou `Task (Of Task(Of T))` (Visual Basic), que, se não tratados com cuidado, pode produzir um comportamento inesperado. Decodificar resolve esse problema criando um proxy <xref:System.Threading.Tasks.Task%601> que representa a toda a operação assíncrona de tais um `Task<Task<T>>` (c#) ou `Task (Of Task(Of T))` (Visual Basic).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A exceção lançada se o argumento <paramref name="task" /> for nulo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

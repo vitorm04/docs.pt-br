@@ -1,0 +1,79 @@
+<Type Name="IWebFormsBuilderUIService" FullName="System.Web.UI.Design.IWebFormsBuilderUIService">
+  <TypeSignature Language="C#" Value="public interface IWebFormsBuilderUIService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebFormsBuilderUIService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IWebFormsBuilderUIService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para iniciar as interfaces de usuário específico para a criação de propriedades em tempo de design.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuildColor">
+      <MemberSignature Language="C#" Value="public string BuildColor (System.Windows.Forms.Control owner, string initialColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string BuildColor(class System.Windows.Forms.Control owner, string initialColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsBuilderUIService.BuildColor(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.Control" />
+        <Parameter Name="initialColor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O controle usado para o pai da caixa de diálogo mostrada pelo <see cref="T:System.Web.UI.Design.ColorBuilder" />.</param>
+        <param name="initialColor">A cor inicial para o editor selecionar previamente.</param>
+        <summary>Inicia um <see cref="T:System.Web.UI.Design.ColorBuilder" /> para criar uma propriedade de cor.</summary>
+        <returns>A cor que foi selecionada. Esse valor será uma cor nomeada ou uma cor RGB expresso no formato de cor HTML (#RRGGBB).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `initialColor` parâmetro deve ser um nome de cor ou uma cor RGB expresso no formato de cor HTML (#RRGGBB).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildUrl">
+      <MemberSignature Language="C#" Value="public string BuildUrl (System.Windows.Forms.Control owner, string initialUrl, string baseUrl, string caption, string filter, System.Web.UI.Design.UrlBuilderOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string BuildUrl(class System.Windows.Forms.Control owner, string initialUrl, string baseUrl, string caption, string filter, valuetype System.Web.UI.Design.UrlBuilderOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IWebFormsBuilderUIService.BuildUrl(System.Windows.Forms.Control,System.String,System.String,System.String,System.String,System.Web.UI.Design.UrlBuilderOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.Control" />
+        <Parameter Name="initialUrl" Type="System.String" />
+        <Parameter Name="baseUrl" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="filter" Type="System.String" />
+        <Parameter Name="options" Type="System.Web.UI.Design.UrlBuilderOptions" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O controle usado para o pai da caixa de diálogo mostrada pelo <see cref="T:System.Web.UI.Design.UrlBuilder" />.</param>
+        <param name="initialUrl">A URL inicial para exibir na interface de seleção.</param>
+        <param name="baseUrl">A URL base usada para construir URLs relativas.</param>
+        <param name="caption">Uma legenda que apresenta uma mensagem na interface de seleção.</param>
+        <param name="filter">A cadeia de caracteres de filtro usados para filtrar, opcionalmente, os arquivos exibidos na interface de seleção.</param>
+        <param name="options">Um <see cref="T:System.Web.UI.Design.UrlBuilderOptions" /> que indica as opções para o <see cref="T:System.Web.UI.Design.UrlBuilder" />.</param>
+        <summary>Inicia um editor para criar uma propriedade de URL.</summary>
+        <returns>Uma cadeia de caracteres que contém a URL retornada pelo <see cref="T:System.Web.UI.Design.UrlBuilder" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

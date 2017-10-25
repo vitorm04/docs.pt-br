@@ -1,0 +1,47 @@
+<Namespace Name="System.IO.Packaging">
+  <Docs>
+    <summary>Fornece classes que oferecem suporte ao armazenamento de vários objetos de dados em um único contêiner.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IO.Packaging.Package>é uma classe abstrata que pode ser usada para organizar objetos em uma única entidade de um formato físico definido para a portabilidade e acesso eficiente.  
+  
+ Um arquivo ZIP é o principal formato físico para o <xref:System.IO.Packaging.Package>.  Outros <xref:System.IO.Packaging.Package> implementações podem usar outros formatos físicos, como um documento XML, um banco de dados ou serviço da Web.  
+  
+ Como um sistema de arquivos, os itens contidos em um <xref:System.IO.Packaging.Package> são referenciados em uma organização hierárquica de pastas e arquivos.  
+  
+ Embora <xref:System.IO.Packaging.Package> é uma classe abstrata, o <xref:System.IO.Packaging.ZipPackage> classe derivada é usado como padrão pelo <xref:System.IO.Packaging.Package.Open%2A?displayProperty=nameWithType> método.  
+  
+ Um <xref:System.IO.Packaging.PackagePart> ("parte") é a classe abstrata que representa um objeto que é armazenado em um <xref:System.IO.Packaging.Package>.  
+  
+ Um <xref:System.IO.Packaging.PackageRelationship> ("relação") define uma associação entre uma fonte de <xref:System.IO.Packaging.Package> ou <xref:System.IO.Packaging.PackagePart> e um objeto de destino.  Um <xref:System.IO.Packaging.PackageRelationship> pode ser um dos dois tipos, cada um deles pode ser uma das duas formas:  
+  
+-   Relação de nível de pacote (criado pelo <xref:System.IO.Packaging.Package.CreateRelationship%2A?displayProperty=nameWithType>)  
+  
+    -   Entre um <xref:System.IO.Packaging.Package> e uma parte de destino no pacote.  
+  
+    -   Entre um <xref:System.IO.Packaging.Package> e um recurso de destino fora do pacote.  
+  
+-   Nível de parte relação (criado pelo <xref:System.IO.Packaging.PackagePart.CreateRelationship%2A?displayProperty=nameWithType>)  
+  
+    -   Entre uma fonte de <xref:System.IO.Packaging.PackagePart> e outra parte de destino no pacote.  
+  
+    -   Entre uma fonte de <xref:System.IO.Packaging.PackagePart> e um recurso de destino fora do pacote.  
+  
+ Origem da relação <xref:System.IO.Packaging.Package> ou origem <xref:System.IO.Packaging.PackagePart> é considerada "proprietário" da relação.  Quando o objeto de origem é excluído, todas as relações de propriedade do objeto de origem também são excluídas.  O processo de criação ou exclusão de uma relação não altera os objetos de origem ou destino de alguma forma fisicamente.  
+  
+ Um <xref:System.IO.Packaging.PackageDigitalSignature> ("assinatura digital") é uma composição de partes e relações que representa uma assinatura digital incluída com um <xref:System.IO.Packaging.Package>.  A assinatura digital identifica o remetente e valida as partes assinados e as relações contidas no <xref:System.IO.Packaging.Package> não foram modificadas.  
+  
+ Pacotes também oferecem suporte para gerenciamento direitos digitais (DRM), que permite que os elementos de conteúdo em um <xref:System.IO.Packaging.Package> a serem criptografados com direitos de acesso específicos concedidos a usuários autorizados.  
+  
+ Com base no <xref:System.IO.Packaging.Package> arquitetura, um <xref:System.Windows.Xps.Packaging.XpsDocument> é um tipo de pacote criado para armazenar documentos com base em abrir [XML Paper Specification (XPS)](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]usa pacotes para armazenar o conteúdo, recursos e relações para páginas e documentos usando um arquivo ZIP padrão por padrão. Assim como com qualquer arquivo ZIP, seu aplicativo pode usar o <xref:System.IO.Packaging> classes para armazenar e, opcionalmente, proteger qualquer tipo ou o número de arquivos de dados em um único contêiner de acesso eficiente.  
+  
+ Para obter mais informações, consulte a especificação Open Packaging Conventions (OPC), disponível para download na seção do XPS [Central do desenvolvedor de Hardware do Windows](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

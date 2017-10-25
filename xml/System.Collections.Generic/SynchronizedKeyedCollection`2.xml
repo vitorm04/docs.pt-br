@@ -1,0 +1,375 @@
+<Type Name="SynchronizedKeyedCollection&lt;K,T&gt;" FullName="System.Collections.Generic.SynchronizedKeyedCollection&lt;K,T&gt;">
+  <TypeSignature Language="C#" Value="public abstract class SynchronizedKeyedCollection&lt;K,T&gt; : System.Collections.Generic.SynchronizedCollection&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SynchronizedKeyedCollection`2&lt;K, T&gt; extends System.Collections.Generic.SynchronizedCollection`1&lt;!T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.SynchronizedKeyedCollection`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="K" />
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Collections.Generic.SynchronizedCollection&lt;T&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">T</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="K">O tipo da chave usada para agrupar os itens contidos na coleção.</typeparam>
+    <typeparam name="T">O tipo de itens contidos na coleção thread-safe com chave.</typeparam>
+    <summary>Fornece uma coleção thread-safe que contém objetos de um tipo especificado por um parâmetro genérico e que são agrupados por chaves.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Herdado por <xref:System.ServiceModel.UriSchemeKeyedCollection> para hospedagem de uso.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SynchronizedKeyedCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.SynchronizedKeyedCollection`2" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SynchronizedKeyedCollection (object syncRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(object syncRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="syncRoot" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="syncRoot">O objeto usado para sincronizar o acesso à coleção thread-safe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.SynchronizedKeyedCollection`2" /> classe com acesso sincronizado por um objeto especificado explicitamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se várias instâncias do <xref:System.Collections.Generic.SynchronizedKeyedCollection%602> são criados usando o mesmo `syncRoot`, em seguida, o acesso é protegido em todas as instâncias.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="syncRoot" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SynchronizedKeyedCollection (object syncRoot, System.Collections.Generic.IEqualityComparer&lt;K&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(object syncRoot, class System.Collections.Generic.IEqualityComparer`1&lt;!K&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.#ctor(System.Object,System.Collections.Generic.IEqualityComparer{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="syncRoot" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;K&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="syncRoot">O objeto usado para sincronizar o acesso à coleção thread-safe.</param>
+        <param name="comparer">O <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> do tipo <c>K</c> usado para comparar objetos de chave do tipo <c>K</c> para igualdade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.SynchronizedKeyedCollection`2" /> classe com acesso sincronizado por um objeto explicitamente especificado e com chaves em comparação comparadas uma forma especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O parâmetro genérico `K` usado pelo <xref:System.Collections.Generic.IEqualityComparer%601> parâmetro de entrada é o primeiro parâmetro genérico para esta classe.  Isso permite comparar chaves para igualdade de forma personalizada que pode ser usada, por exemplo, para otimizar os aspectos mais importantes da comparação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          O <paramref name="syncRoot" /> é <see langword="null" /> ou o <paramref name="comparer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SynchronizedKeyedCollection (object syncRoot, System.Collections.Generic.IEqualityComparer&lt;K&gt; comparer, int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(object syncRoot, class System.Collections.Generic.IEqualityComparer`1&lt;!K&gt; comparer, int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.#ctor(System.Object,System.Collections.Generic.IEqualityComparer{`0},System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="syncRoot" Type="System.Object" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;K&gt;" />
+        <Parameter Name="dictionaryCreationThreshold" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="syncRoot">O objeto usado para sincronizar o acesso à coleção thread-safe.</param>
+        <param name="comparer">O <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> do tipo <c>K</c> usado para comparar objetos de chave do tipo <c>K</c> para igualdade.</param>
+        <param name="capacity">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.SynchronizedKeyedCollection`2" /> classe com acesso sincronizado por um objeto explicitamente especificado e com chaves em comparação comparadas uma forma especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração `dictionaryCreationThreshold` como -1 atribui o <xref:System.Int32.MaxValue> (2.147.483.647; hexadecimal 0x7FFFFFFF) a ele.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          O <paramref name="syncRoot" /> é <see langword="null" /> ou o <paramref name="comparer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="dictionaryCreationThreshold" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeItemKey">
+      <MemberSignature Language="C#" Value="protected void ChangeItemKey (T item, K newKey);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ChangeItemKey(!T item, !K newKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.ChangeItemKey(`1,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+        <Parameter Name="newKey" Type="K" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item cuja chave está sendo alterado.</param>
+        <param name="newKey">A nova chave para o item especificado.</param>
+        <summary>Altera a chave para um item especificado na coleção sincronizado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os itens da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (K key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(!K key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="K" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do tipo <c>K</c> que está sendo testado para.</param>
+        <summary>Retorna um valor que indica se a coleção contém um item com uma chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém um item com a chave especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dictionary">
+      <MemberSignature Language="C#" Value="protected System.Collections.Generic.IDictionary&lt;K,T&gt; Dictionary { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;!K, !T&gt; Dictionary" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SynchronizedKeyedCollection`2.Dictionary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;K,T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o dicionário associado à coleção.</summary>
+        <value>O <see cref="T:System.Collections.Generic.IDictionary`2" /> que contém os pares item-chave para a coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKeyForItem">
+      <MemberSignature Language="C#" Value="protected abstract K GetKeyForItem (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance !K GetKeyForItem(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.GetKeyForItem(`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>K</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item do tipo <c>T</c> cuja chave está sendo recuperado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém a chave de um item especificado.</summary>
+        <returns>A chave do tipo K especificado <paramref name="item" /> do tipo <paramref name="T" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.InsertItem(System.Int32,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero que especifica o local de inserção para o item na coleção.</param>
+        <param name="item">O item do tipo <c>T</c> a ser inserido na coleção.</param>
+        <summary>Insere um item na coleção em um local especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public T this[K key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Item(!K)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.SynchronizedKeyedCollection`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="K" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave para o item que está sendo recuperado.</param>
+        <summary>Obtém os itens com uma chave especificada da coleção.</summary>
+        <value>O item do tipo <paramref name="T" /> da coleção com a chave especificada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (K key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(!K key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="K" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do item a ser removido.</param>
+        <summary>Remove um item com uma chave especificada da coleção e retorna um valor que indica se um item foi removido.</summary>
+        <returns>
+          <see langword="true" />Se um item com a chave especificada foi removido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero que especifica o local do item é removido da coleção.</param>
+        <summary>Remove um item em um local especificado da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.SynchronizedKeyedCollection`2.SetItem(System.Int32,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero que especifica o local de inserção para o item na coleção.</param>
+        <param name="item">O item do tipo <c>T</c> a ser inserido na coleção.</param>
+        <summary>Substitui um item em um local especificado da coleção com um novo item.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

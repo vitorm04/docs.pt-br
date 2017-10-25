@@ -1,0 +1,36 @@
+<Type Name="IClientFormatterSinkProvider" FullName="System.Runtime.Remoting.Channels.IClientFormatterSinkProvider">
+  <TypeSignature Language="C#" Value="public interface IClientFormatterSinkProvider : System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IClientFormatterSinkProvider implements class System.Runtime.Remoting.Channels.IClientChannelSinkProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IClientFormatterSinkProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Channels.IClientChannelSinkProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Marca um provedor de coletor de canal do cliente como um provedor de coletor do formatador de cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Runtime.Remoting.Channels.IClientFormatterSinkProvider> cria o cliente do coletor do formatador do canal do cliente por meio de comunicação remota do qual fluem de mensagens. O primeiro coletor no lado do cliente deve implementar o <xref:System.Runtime.Remoting.Messaging.IMessageSink> e <xref:System.Runtime.Remoting.Channels.IClientChannelSink> interfaces, ou o <xref:System.Runtime.Remoting.Channels.IClientFormatterSink> interface.  
+  
+ Para usar um `<formatter>` marca em vez de um `<provider>` marca dentro de um arquivo de configuração, o provedor de coletor de canal cliente deve implementar o <xref:System.Runtime.Remoting.Channels.IClientFormatterSinkProvider> interface em vez de simplesmente <xref:System.Runtime.Remoting.Channels.IClientChannelSinkProvider>. Para obter informações adicionais sobre a configuração de comunicação remota, consulte [&#91;\< Topic://cpconchannelformatterconfigurationproperties > &#93; ](http://msdn.microsoft.com/en-us/226ecf74-ebbd-4ea0-a701-dcf4441deefe) e [esquema de configurações de comunicação remota](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e).  
+  
+ Algumas implementações de coletor do formatador usam formatadores de tempo de execução (<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>). Outras implementações podem usar seus próprios meios para transformar a mensagem de canal no fluxo. Sobre a jornada de retorno do coletor do formatador transformará o fluxo de mensagem volta para os elementos de mensagem de canal (mensagem de retorno).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

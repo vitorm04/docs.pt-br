@@ -1,0 +1,74 @@
+<Type Name="DesignerAutoFormatStyle" FullName="System.Web.UI.Design.DesignerAutoFormatStyle">
+  <TypeSignature Language="C#" Value="public class DesignerAutoFormatStyle : System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerAutoFormatStyle extends System.Web.UI.WebControls.Style" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.DesignerAutoFormatStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Style</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o estilo de um <see cref="T:System.Web.UI.Design.DesignerAutoFormat" /> objeto. Essa classe é usada principalmente por desenvolvedores de controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DesignerAutoFormatStyle> classe encapsula as propriedades que controlam a aparência de um controle de servidor Web para formatação automática no tempo de design. Você pode especificar a cor do plano de fundo, cor da fonte e o alinhamento vertical de um controle definindo o <xref:System.Web.UI.WebControls.Style.BackColor%2A>, <xref:System.Web.UI.WebControls.Style.ForeColor%2A>, e <xref:System.Web.UI.Design.DesignerAutoFormatStyle.VerticalAlign%2A> propriedades, respectivamente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerAutoFormatStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.DesignerAutoFormatStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.DesignerAutoFormatStyle" /> usando valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerticalAlign">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.VerticalAlign VerticalAlign { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.VerticalAlign VerticalAlign" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.DesignerAutoFormatStyle.VerticalAlign" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.VerticalAlign</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento vertical do conteúdo para o controle associado.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.VerticalAlign" />. O padrão é <see langword="NotSet" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.VerticalAlign> propriedade para especificar o alinhamento vertical do conteúdo para o controle associado. Se o <xref:System.Web.UI.WebControls.VerticalAlign> não se aplica a um controle associado, a configuração é ignorada. Para obter os valores definidos para a enumeração de alinhamento vertical, consulte <xref:System.Web.UI.WebControls.VerticalAlign>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.Design.DesignerAutoFormat> objeto e o <xref:System.Web.UI.Design.DesignerAutoFormat.Style%2A> aplicar formatação a um controle.  
+  
+ [!code-csharp[DesignerAutoFormat#3](~/samples/snippets/csharp/VS_Snippets_WebNet/DesignerAutoFormat/CS/DesignerAutoFormat.cs#3)]
+ [!code-vb[DesignerAutoFormat#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DesignerAutoFormat/VB/DesignerAutoFormat.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

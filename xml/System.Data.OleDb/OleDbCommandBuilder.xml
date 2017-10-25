@@ -1,0 +1,633 @@
+<Type Name="OleDbCommandBuilder" FullName="System.Data.OleDb.OleDbCommandBuilder">
+  <TypeSignature Language="C#" Value="public sealed class OleDbCommandBuilder : System.Data.Common.DbCommandBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OleDbCommandBuilder extends System.Data.Common.DbCommandBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OleDb.OleDbCommandBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbCommandBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera automaticamente os comandos de tabela única usados para reconciliar as alterações feitas em um <see cref="T:System.Data.DataSet" /> com o banco de dados associado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OleDb.OleDbDataAdapter> não gera automaticamente as instruções SQL necessárias para reconciliar as alterações feitas em um <xref:System.Data.DataSet> com a fonte de dados associado. No entanto, você pode criar um <xref:System.Data.OleDb.OleDbCommandBuilder> objeto para gerar automaticamente instruções SQL para atualizações de tabela única se você definir o <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> propriedade o <xref:System.Data.OleDb.OleDbDataAdapter>. Em seguida, qualquer instrução SQL adicional que você não defina é geradas pelo <xref:System.Data.OleDb.OleDbCommandBuilder>.  
+  
+ O <xref:System.Data.OleDb.OleDbCommandBuilder> se registra como um ouvinte para <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdating> eventos sempre que você definir o <xref:System.Data.OleDb.OleDbCommandBuilder.DataAdapter%2A> propriedade. Você só pode associar um <xref:System.Data.OleDb.OleDbDataAdapter> ou <xref:System.Data.OleDb.OleDbCommandBuilder> objeto uns com os outros ao mesmo tempo.  
+  
+ Para gerar instruções INSERT, UPDATE ou DELETE, o <xref:System.Data.OleDb.OleDbCommandBuilder> usa o <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> propriedade para recuperar um conjunto necessário de metadados automaticamente. Se você alterar o <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> depois que os metadados são recuperados, como após a primeira atualização, você deve chamar o <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> método para atualizar os metadados.  
+  
+ O <xref:System.Data.OleDb.OleDbCommandBuilder> também usa o <xref:System.Data.OleDb.OleDbCommand.Connection%2A>, <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A>, e <xref:System.Data.OleDb.OleDbCommand.Transaction%2A> propriedades referenciada pelo <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A>. O usuário deve chamar <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se uma ou mais dessas propriedades são modificadas, ou se o <xref:System.Data.OleDb.OleDbDataAdapter.SelectCommand%2A> será substituído. Caso contrário, o <xref:System.Data.OleDb.OleDbDataAdapter.InsertCommand%2A>, <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand%2A>, e <xref:System.Data.OleDb.OleDbDataAdapter.DeleteCommand%2A> propriedades retêm os valores anteriores.  
+  
+ Se você chamar <xref:System.ComponentModel.Component.Dispose%2A>, o <xref:System.Data.OleDb.OleDbCommandBuilder> seja desassociado do <xref:System.Data.OleDb.OleDbDataAdapter>, e os comandos gerados não são mais usados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.OleDb.OleDbCommand>, acompanhando <xref:System.Data.OleDb.OleDbDataAdapter> e <xref:System.Data.OleDb.OleDbConnection>, para selecionar linhas de uma fonte de dados. O exemplo é passado uma inicializado <xref:System.Data.DataSet>, uma cadeia de caracteres de conexão, uma cadeia de caracteres de consulta que é uma instrução SQL SELECT e uma cadeia de caracteres que é o nome da tabela de fonte de dados. O exemplo cria um <xref:System.Data.OleDb.OleDbCommandBuilder>.  
+  
+ [!code-csharp[Classic WebData OleDbCommandBuilder#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OleDbCommandBuilder/CS/mysample.cs#1)]
+ [!code-vb[Classic WebData OleDbCommandBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OleDbCommandBuilder/VB/mysample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbCommandBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.OleDb.OleDbCommandBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OleDbCommandBuilder (System.Data.OleDb.OleDbDataAdapter adapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.OleDb.OleDbDataAdapter adapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.#ctor(System.Data.OleDb.OleDbDataAdapter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="adapter" Type="System.Data.OleDb.OleDbDataAdapter" />
+      </Parameters>
+      <Docs>
+        <param name="adapter">Um <see cref="T:System.Data.OleDb.OleDbDataAdapter" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.OleDb.OleDbCommandBuilder" /> com o objeto <see cref="T:System.Data.OleDb.OleDbDataAdapter" /> associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OleDb.OleDbCommandBuilder> se registra como um ouvinte para <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdating> eventos gerados pelo <xref:System.Data.OleDb.OleDbDataAdapter> especificado nesta propriedade.  
+  
+ Quando você cria uma nova instância <xref:System.Data.OleDb.OleDbCommandBuilder>, qualquer existente <xref:System.Data.OleDb.OleDbCommandBuilder> associado a esta <xref:System.Data.OleDb.OleDbDataAdapter> é liberado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyParameterInfo">
+      <MemberSignature Language="C#" Value="protected override void ApplyParameterInfo (System.Data.Common.DbParameter parameter, System.Data.DataRow datarow, System.Data.StatementType statementType, bool whereClause);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ApplyParameterInfo(class System.Data.Common.DbParameter parameter, class System.Data.DataRow datarow, valuetype System.Data.StatementType statementType, bool whereClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.ApplyParameterInfo(System.Data.Common.DbParameter,System.Data.DataRow,System.Data.StatementType,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Common.DbParameter" />
+        <Parameter Name="datarow" Type="System.Data.DataRow" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="whereClause" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">To be added.</param>
+        <param name="datarow">To be added.</param>
+        <param name="statementType">To be added.</param>
+        <param name="whereClause">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAdapter">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbDataAdapter DataAdapter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.OleDb.OleDbDataAdapter DataAdapter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OleDb.OleDbCommandBuilder.DataAdapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbDataAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Data.OleDb.OleDbDataAdapter" /> objeto para o qual o SQL instruções são geradas automaticamente.</summary>
+        <value>Um objeto <see cref="T:System.Data.OleDb.OleDbDataAdapter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.OleDb.OleDbCommandBuilder> se registra como um ouvinte para <xref:System.Data.OleDb.OleDbDataAdapter.RowUpdating> eventos gerados pelo <xref:System.Data.OleDb.OleDbDataAdapter> especificado nesta propriedade.  
+  
+ Quando você cria uma nova instância <xref:System.Data.OleDb.OleDbCommandBuilder>, qualquer existente <xref:System.Data.OleDb.OleDbCommandBuilder> associado a esta <xref:System.Data.OleDb.OleDbDataAdapter> é liberado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveParameters">
+      <MemberSignature Language="C#" Value="public static void DeriveParameters (System.Data.OleDb.OleDbCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeriveParameters(class System.Data.OleDb.OleDbCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.DeriveParameters(System.Data.OleDb.OleDbCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.OleDb.OleDbCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">O <see cref="T:System.Data.OleDb.OleDbCommand" /> que referencia o procedimento armazenado do qual as informações de parâmetro devem ser derivadas. Os parâmetros derivados são adicionados à coleção <see cref="P:System.Data.OleDb.OleDbCommand.Parameters" /> do <see cref="T:System.Data.OleDb.OleDbCommand" />.</param>
+        <summary>Recupera informações de parâmetro do procedimento armazenado especificado no <see cref="T:System.Data.OleDb.OleDbCommand" /> e popula a coleção <see cref="P:System.Data.OleDb.OleDbCommand.Parameters" /> do objeto <see cref="T:System.Data.OleDb.OleDbCommand" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.OleDb.OleDbCommandBuilder.DeriveParameters%2A>substitui quaisquer informações de parâmetro existentes para o <xref:System.Data.OleDb.OleDbCommand>.  
+  
+ <xref:System.Data.OleDb.OleDbCommandBuilder.DeriveParameters%2A>requer uma chamada adicional para a fonte de dados para obter as informações. Se as informações de parâmetro são conhecidas antecipadamente, é mais eficiente para preencher a coleção de parâmetros definindo explicitamente as informações.  
+  
+ Você só pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.DeriveParameters%2A> com procedimentos armazenados. Não é possível usar <xref:System.Data.OleDb.OleDbCommandBuilder.DeriveParameters%2A> para preencher o <xref:System.Data.OleDb.OleDbParameterCollection> com arbitrárias instruções Transact-SQL, como uma instrução SELECT com parâmetros.  
+  
+ Para obter mais informações, consulte [Configurando parâmetros e tipos de dados do parâmetro](~/docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O provedor OLE DB subjacente não oferece suporte a retornar informações de parâmetro de procedimento armazenado, o texto do comando não é um nome válido de procedimento armazenado, ou o <see cref="P:System.Data.OleDb.OleDbCommand.CommandType" /> especificado não era <see langword="StoredProcedure" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetDeleteCommand">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.OleDb.OleDbCommand" /> devem fazer exclusões na fonte de dados de objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetDeleteCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand GetDeleteCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand GetDeleteCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.OleDb.OleDbCommand" /> devem fazer exclusões na fonte de dados de objeto.</summary>
+        <returns>Gerado automaticamente <see cref="T:System.Data.OleDb.OleDbCommand" /> devem fazer exclusões de objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeleteCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand GetDeleteCommand (bool useColumnsForParameterNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand GetDeleteCommand(bool useColumnsForParameterNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useColumnsForParameterNames" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useColumnsForParameterNames">Se <see langword="true" />, gerar nomes de parâmetro de correspondência de nomes de coluna, se possível. Se <see langword="false" />, gerar @p1, @p2e assim por diante.</param>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.OleDb.OleDbCommand" /> devem fazer exclusões na fonte de dados de objeto.</summary>
+        <returns>Gerado automaticamente <see cref="T:System.Data.OleDb.OleDbCommand" /> devem fazer exclusões de objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetDeleteCommand%2A>.  
+  
+ O comportamento padrão, ao gerar nomes de parâmetro, é usar @p1, @p2, e assim por diante para os vários parâmetros. Passando `true` para o `useColumnsForParameterNames` parâmetro permite que você force a <xref:System.Data.OleDb.OleDbCommandBuilder> para gerar parâmetros com base nos nomes de coluna em vez disso. Isso é realizada somente se as seguintes condições forem atendidas:  
+  
+-   O <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNameMaxLength> foi especificado e seu comprimento é igual ou maior que o nome de parâmetro gerado.  
+  
+-   O nome de parâmetro gerado atende aos critérios especificados a <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNamePattern> expressão regular.  
+  
+-   Um <xref:System.Data.Common.DbMetaDataColumnNames.ParameterMarkerFormat> for especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetInsertCommand">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.OleDb.OleDbCommand" /> objeto necessário para executar as inserções na fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> método para solução de problemas ou informativas fins porque retorna o texto do <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetInsertCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand GetInsertCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand GetInsertCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.OleDb.OleDbCommand" /> objeto necessário para executar as inserções na fonte de dados.</summary>
+        <returns>O objeto <see cref="T:System.Data.OleDb.OleDbCommand" /> gerado automaticamente necessário para executar inserções.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> método para solução de problemas ou informativas fins porque retorna o texto do <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInsertCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand GetInsertCommand (bool useColumnsForParameterNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand GetInsertCommand(bool useColumnsForParameterNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useColumnsForParameterNames" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useColumnsForParameterNames">Se <see langword="true" />, gerar nomes de parâmetro de correspondência de nomes de coluna, se possível. Se <see langword="false" />, gerar @p1, @p2e assim por diante.</param>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.OleDb.OleDbCommand" /> objeto necessário para executar as inserções na fonte de dados.</summary>
+        <returns>O objeto <see cref="T:System.Data.OleDb.OleDbCommand" /> gerado automaticamente necessário para executar inserções.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> método para solução de problemas ou informativas fins porque retorna o texto do <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetInsertCommand%2A>.  
+  
+ O comportamento padrão, ao gerar nomes de parâmetro, é usar @p1, @p2, e assim por diante para os vários parâmetros. Passando `true` para o `useColumnsForParameterNames` parâmetro permite que você force a <xref:System.Data.OleDb.OleDbCommandBuilder> para gerar parâmetros com base nos nomes de coluna em vez disso. Isso é realizada somente se as seguintes condições forem atendidas:  
+  
+-   O <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNameMaxLength> foi especificado e seu comprimento é igual ou maior que o nome de parâmetro gerado.  
+  
+-   O nome de parâmetro gerado atende aos critérios especificados a <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNamePattern> expressão regular.  
+  
+-   Um <xref:System.Data.Common.DbMetaDataColumnNames.ParameterMarkerFormat> for especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterName">
+      <MemberSignature Language="C#" Value="protected override string GetParameterName (int parameterOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParameterName(int32 parameterOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetParameterName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterOrdinal">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterName">
+      <MemberSignature Language="C#" Value="protected override string GetParameterName (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParameterName(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetParameterName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterPlaceholder">
+      <MemberSignature Language="C#" Value="protected override string GetParameterPlaceholder (int parameterOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParameterPlaceholder(int32 parameterOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetParameterPlaceholder(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterOrdinal">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetUpdateCommand">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Data.OleDb.OleDbCommand" /> gerado automaticamente necessário para realizar atualizações na fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetUpdateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand GetUpdateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand GetUpdateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Data.OleDb.OleDbCommand" /> gerado automaticamente necessário para realizar atualizações na fonte de dados.</summary>
+        <returns>O objeto <see cref="T:System.Data.OleDb.OleDbCommand" /> gerado automaticamente necessário para executar atualizações.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUpdateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.OleDb.OleDbCommand GetUpdateCommand (bool useColumnsForParameterNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.OleDb.OleDbCommand GetUpdateCommand(bool useColumnsForParameterNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.OleDb.OleDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useColumnsForParameterNames" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useColumnsForParameterNames">Se <see langword="true" />, gerar nomes de parâmetro de correspondência de nomes de coluna, se possível. Se <see langword="false" />, gerar @p1, @p2e assim por diante.</param>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.OleDb.OleDbCommand" /> necessário para executar atualizações na fonte de dados, opcionalmente usando colunas para nomes de parâmetro de objeto.</summary>
+        <returns>O objeto <see cref="T:System.Data.OleDb.OleDbCommand" /> gerado automaticamente necessário para executar atualizações.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar o <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.OleDb.OleDbCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> e modificar o <xref:System.Data.OleDb.OleDbCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.OleDb.OleDbDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, o aplicativo deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A> será ainda estar usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.OleDb.OleDbDataAdapter.UpdateCommand*> ou <xref:System.Data.OleDb.OleDbCommandBuilder.GetUpdateCommand%2A>.  
+  
+ O comportamento padrão, ao gerar nomes de parâmetro, é usar @p1, @p2, e assim por diante para os vários parâmetros. Passando `true` para o `useColumnsForParameterNames` parâmetro permite que você force a <xref:System.Data.OleDb.OleDbCommandBuilder> para gerar parâmetros com base nos nomes de coluna em vez disso. Isso é realizada somente se as seguintes condições forem atendidas:  
+  
+-   O <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNameMaxLength> foi especificado e seu comprimento é igual ou maior que o nome de parâmetro gerado.  
+  
+-   O nome de parâmetro gerado atende aos critérios especificados a <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNamePattern> expressão regular.  
+  
+-   Um <xref:System.Data.Common.DbMetaDataColumnNames.ParameterMarkerFormat> for especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuoteIdentifier">
+      <MemberSignature Language="C#" Value="public override string QuoteIdentifier (string unquotedIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string QuoteIdentifier(string unquotedIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.QuoteIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unquotedIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="unquotedIdentifier">O identificador original sem aspas.</param>
+        <summary>Dado um identificador sem aspas no caso de catálogo correto, retorna a forma entre aspas correta desse identificador. Isso inclui o uso da sequência de escape correta de quaisquer aspas inseridas no identificador.</summary>
+        <returns>A versão entre aspas do identificador. A sequência de escape das aspas inseridas no identificador está correta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuoteIdentifier">
+      <MemberSignature Language="C#" Value="public string QuoteIdentifier (string unquotedIdentifier, System.Data.OleDb.OleDbConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string QuoteIdentifier(string unquotedIdentifier, class System.Data.OleDb.OleDbConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.QuoteIdentifier(System.String,System.Data.OleDb.OleDbConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unquotedIdentifier" Type="System.String" />
+        <Parameter Name="connection" Type="System.Data.OleDb.OleDbConnection" />
+      </Parameters>
+      <Docs>
+        <param name="unquotedIdentifier">O identificador sem aspas a ser retornado em formato entre aspas.</param>
+        <param name="connection">Quando uma conexão for passado, faz com que o wrapper gerenciado obter o caractere de aspas do provedor OLE DB. Quando nenhuma conexão é passado, a cadeia de caracteres está entre aspas usando valores de <see cref="P:System.Data.Common.DbCommandBuilder.QuotePrefix" /> e <see cref="P:System.Data.Common.DbCommandBuilder.QuoteSuffix" />.</param>
+        <summary>Dado um identificador sem aspas no caso de catálogo correto, retorna a forma entre aspas correta desse identificador. Isso inclui o uso da sequência de escape correta de quaisquer aspas inseridas no identificador.</summary>
+        <returns>A versão entre aspas do identificador. A sequência de escape das aspas inseridas no identificador está correta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRowUpdatingHandler">
+      <MemberSignature Language="C#" Value="protected override void SetRowUpdatingHandler (System.Data.Common.DbDataAdapter adapter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetRowUpdatingHandler(class System.Data.Common.DbDataAdapter adapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.SetRowUpdatingHandler(System.Data.Common.DbDataAdapter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adapter" Type="System.Data.Common.DbDataAdapter" />
+      </Parameters>
+      <Docs>
+        <param name="adapter">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnquoteIdentifier">
+      <MemberSignature Language="C#" Value="public override string UnquoteIdentifier (string quotedIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string UnquoteIdentifier(string quotedIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.UnquoteIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quotedIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="quotedIdentifier">O identificador que terá seus removidas as aspas inseridas.</param>
+        <summary>Fornecido um identificador entre aspas, retorna a forma sem aspas correta do identificador. Isso inclui corretamente sem escape qualquer inseridos aspas no identificador.</summary>
+        <returns>O identificador sem aspas, com aspas inseridas corretamente sem escape.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnquoteIdentifier">
+      <MemberSignature Language="C#" Value="public string UnquoteIdentifier (string quotedIdentifier, System.Data.OleDb.OleDbConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string UnquoteIdentifier(string quotedIdentifier, class System.Data.OleDb.OleDbConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OleDb.OleDbCommandBuilder.UnquoteIdentifier(System.String,System.Data.OleDb.OleDbConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quotedIdentifier" Type="System.String" />
+        <Parameter Name="connection" Type="System.Data.OleDb.OleDbConnection" />
+      </Parameters>
+      <Docs>
+        <param name="quotedIdentifier">O identificador que terá seus removidas as aspas inseridas.</param>
+        <param name="connection">O <see cref="T:System.Data.OleDb.OleDbConnection" />.</param>
+        <summary>Fornecido um identificador entre aspas, retorna a forma sem aspas correta do identificador. Isso inclui corretamente sem escape qualquer inseridos aspas no identificador.</summary>
+        <returns>O identificador sem aspas, com aspas inseridas corretamente sem escape.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

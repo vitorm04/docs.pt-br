@@ -1,0 +1,192 @@
+<Type Name="AppSettingsReader" FullName="System.Configuration.AppSettingsReader">
+  <TypeSignature Language="C#" Value="public class AppSettingsReader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AppSettingsReader extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.AppSettingsReader" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um método para ler valores de determinado tipo com base na configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um arquivo de configuração que contém o `<appSettings>` seção e, em seguida, usa o <xref:System.Configuration.AppSettingsReader> para ler as configurações que acabou de ser geradas.  
+  
+```  
+using System;  
+using System.Configuration;  
+  
+class Program  
+{  
+    static void Main(string[] args)  
+    {  
+        var reader = new AppSettingsReader();  
+  
+        var stringSetting = reader.GetValue("String setting", typeof(string));  
+        Console.WriteLine("String setting: " + stringSetting);  
+  
+        var dateTimeSetting = reader.GetValue("DateTime setting", typeof(DateTime));  
+        Console.WriteLine("DateTime setting: " + dateTimeSetting);  
+  
+        try  
+        {  
+            var missingSetting = reader.GetValue("Int setting", typeof(Int32));  
+        }  
+        catch (InvalidOperationException e)  
+        {  
+            Console.WriteLine("Missing key error: " + e.Message);  
+        }  
+  
+        Console.WriteLine("Press any key to continue");  
+        Console.ReadKey();  
+    }  
+}  
+```  
+  
+ O exemplo a seguir demonstra um arquivo de configuração usado pelo exemplo anterior.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+    <appSettings>  
+        <add key="String setting" value="String retrieved from App.Config"/>  
+        <add key="Date setting" value="Thursday, December 01, 2005 12:53:56 PM"/>  
+    </appSettings>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppSettingsReader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.AppSettingsReader.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.AppSettingsReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um arquivo de configuração que contém o `<appSettings>` seção e, em seguida, usa o <xref:System.Configuration.AppSettingsReader> para ler as configurações que acabou de ser geradas.  
+  
+```  
+using System;  
+using System.Configuration;  
+  
+class Program  
+{  
+    static void Main(string[] args)  
+    {  
+        var reader = new AppSettingsReader();  
+  
+        var stringSetting = reader.GetValue("String setting", typeof(string));  
+        Console.WriteLine("String setting: " + stringSetting);  
+  
+        var dateTimeSetting = reader.GetValue("DateTime setting", typeof(DateTime));  
+        Console.WriteLine("DateTime setting: " + dateTimeSetting);  
+  
+        try  
+        {  
+            var missingSetting = reader.GetValue("Int setting", typeof(Int32));  
+        }  
+        catch (InvalidOperationException e)  
+        {  
+            Console.WriteLine("Missing key error: " + e.Message);  
+        }  
+  
+        Console.WriteLine("Press any key to continue");  
+        Console.ReadKey();  
+    }  
+}  
+```  
+  
+ O exemplo a seguir demonstra um arquivo de configuração usado pelo exemplo anterior.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+    <appSettings>  
+        <add key="String setting" value="String retrieved from App.Config"/>  
+        <add key="Date setting" value="Thursday, December 01, 2005 12:53:56 PM"/>  
+    </appSettings>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (string key, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(string key, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.AppSettingsReader.GetValue(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave para a qual o valor será obtido.</param>
+        <param name="type">O tipo de objeto a ser retornado.</param>
+        <summary>Obtém o valor de uma chave especificada da propriedade <see cref="P:System.Configuration.ConfigurationSettings.AppSettings" /> e retorna um objeto do tipo especificado que contém o valor da configuração.</summary>
+        <returns>O valor da coluna especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Configuration.AppSettingsReader.GetValue%2A> método para recuperar o valor para cada chave de `<appSettings>` seção do arquivo de configuração.  
+  
+ [!code-csharp[System.Configuration.AppSettingsReader#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.AppSettingsReader/CS/AppSettingsReader.cs#2)]
+ [!code-vb[System.Configuration.AppSettingsReader#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.AppSettingsReader/VB/AppSettingsReader.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.  
+  
+ \- ou -  
+  
+ <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          O <paramref name="key" /> não existe na seção de configuração <see langword="&lt;appSettings&gt;" />.  
+  
+ \- ou -  
+  
+ O valor na seção de configuração <see langword="&lt;appSettings&gt;" /> de <paramref name="key" /> não é do tipo <paramref name="type" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

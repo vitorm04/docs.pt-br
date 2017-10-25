@@ -1,0 +1,46 @@
+<Type Name="INativeHandleContract" FullName="System.AddIn.Contract.INativeHandleContract">
+  <TypeSignature Language="C#" Value="public interface INativeHandleContract : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INativeHandleContract implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.INativeHandleContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece acesso ao manipulador de janela (Hwnd) de código nativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que a adicionar recursos de interface do usuário para suplementos obtendo identificadores de recursos nativos de janela e transmiti-los entre domínios de aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHandle">
+      <MemberSignature Language="C#" Value="public IntPtr GetHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance native int GetHandle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.INativeHandleContract.GetHandle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o identificador da janela (Hwnd).</summary>
+        <returns>Um <see cref="T:System.IntPtr" /> objeto que representa um ponteiro para a identificação da janela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

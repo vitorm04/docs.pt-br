@@ -1,0 +1,161 @@
+<Type Name="ToolStripItemDesignerAvailabilityAttribute" FullName="System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ToolStripItemDesignerAvailabilityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ToolStripItemDesignerAvailabilityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica quais tipos de um <see cref="T:System.Windows.Forms.ToolStripItem" /> pode aparecer em. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos disponíveis são <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, e <xref:System.Windows.Forms.StatusStrip>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripItemDesignerAvailabilityAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolStripItemDesignerAvailabilityAttribute (System.Windows.Forms.Design.ToolStripItemDesignerAvailability visibility);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Forms.Design.ToolStripItemDesignerAvailability visibility) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute.#ctor(System.Windows.Forms.Design.ToolStripItemDesignerAvailability)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="visibility" Type="System.Windows.Forms.Design.ToolStripItemDesignerAvailability" />
+      </Parameters>
+      <Docs>
+        <param name="visibility">Um <see cref="T:System.Windows.Forms.Design.ToolStripItemDesignerAvailability" /> valor que especifica a visibilidade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute" /> classe com a visibilidade especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor padrão de <see cref="T:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute" />. Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância ou uma referência nula (<see langword="Nothing" /> no Visual Basic).</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, indica se o valor desta instância é o valor padrão para a classe derivada.</summary>
+        <returns>
+          <see langword="true" /> se a instância for o atributo padrão para a classe; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemAdditionVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.ToolStripItemDesignerAvailability ItemAdditionVisibility { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.ToolStripItemDesignerAvailability ItemAdditionVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.ToolStripItemDesignerAvailabilityAttribute.ItemAdditionVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.ToolStripItemDesignerAvailability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a visibilidade de um <see cref="T:System.Windows.Forms.ToolStripItem" />.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Design.ToolStripItemDesignerAvailability" /> que representa a visibilidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,164 @@
+<Type Name="QualifiedAce" FullName="System.Security.AccessControl.QualifiedAce">
+  <TypeSignature Language="C#" Value="public abstract class QualifiedAce : System.Security.AccessControl.KnownAce" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit QualifiedAce extends System.Security.AccessControl.KnownAce" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.QualifiedAce" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.KnownAce</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma entrada de controle de acesso (ACE) que contém um qualificador. O qualificador, representado por um <see cref="T:System.Security.AccessControl.AceQualifier" /> de objeto, que especifica se a ACE permite o acesso, nega o acesso, faz com que o sistema auditorias ou faz com que alarmes de sistema. O <see cref="T:System.Security.AccessControl.QualifiedAce" /> classe é a classe base abstrata para o <see cref="T:System.Security.AccessControl.CommonAce" /> e <see cref="T:System.Security.AccessControl.ObjectAce" /> classes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AceQualifier">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.AceQualifier AceQualifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.AccessControl.AceQualifier AceQualifier" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.QualifiedAce.AceQualifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AceQualifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a ACE permite o acesso, nega o acesso, faz com que o sistema auditorias ou faz com que alarmes de sistema.</summary>
+        <value>Um valor que especifica se a ACE permite o acesso, nega o acesso, faz com que o sistema auditorias ou faz com que alarmes de sistema.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOpaque">
+      <MemberSignature Language="C#" Value="public byte[] GetOpaque ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetOpaque() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.QualifiedAce.GetOpaque" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna os dados de retorno de chamada opaco associados a esta <see cref="T:System.Security.AccessControl.QualifiedAce" /> objeto.</summary>
+        <returns>Uma matriz de valores de byte que representa os dados de retorno de chamada opaco associados a esta <see cref="T:System.Security.AccessControl.QualifiedAce" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados de retorno de chamada opaca estão presentes somente no retorno de chamada de entradas de controle de acesso (ACEs).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCallback">
+      <MemberSignature Language="C#" Value="public bool IsCallback { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.QualifiedAce.IsCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se este <see cref="T:System.Security.AccessControl.QualifiedAce" /> objeto contém os dados de retorno de chamada.</summary>
+        <value>
+          <see langword="true" />Se este <see cref="T:System.Security.AccessControl.QualifiedAce" /> objeto contém os dados de retorno de chamada; caso contrário, false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpaqueLength">
+      <MemberSignature Language="C#" Value="public int OpaqueLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OpaqueLength" />
+      <MemberSignature Language="DocId" Value="P:System.Security.AccessControl.QualifiedAce.OpaqueLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento dos dados de retorno de chamada opaco associados a esta <see cref="T:System.Security.AccessControl.QualifiedAce" /> objeto. Essa propriedade é válida apenas para retorno de chamada de entradas de controle de acesso (ACEs).</summary>
+        <value>O comprimento dos dados de retorno de chamada opaco.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOpaque">
+      <MemberSignature Language="C#" Value="public void SetOpaque (byte[] opaque);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetOpaque(unsigned int8[] opaque) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.QualifiedAce.SetOpaque(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="opaque" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="opaque">Uma matriz de valores de byte que representa os dados de retorno de chamada opaco para este <see cref="T:System.Security.AccessControl.QualifiedAce" /> objeto.</param>
+        <summary>Define os dados de retorno de chamada opaco associados a esta <see cref="T:System.Security.AccessControl.QualifiedAce" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dados de retorno de chamada opaca estão presentes somente no retorno de chamada de entradas de controle de acesso (ACEs).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

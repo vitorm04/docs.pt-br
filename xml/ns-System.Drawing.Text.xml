@@ -1,0 +1,16 @@
+<Namespace Name="System.Drawing.Text">
+  <Docs>
+    <summary>O <see cref="N:System.Drawing.Text" /> namespace fornece funcionalidade GDI+ tipografia avançada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Funcionalidade básica de gráficos é fornecida pelo <xref:System.Drawing> namespace. As classes nesse namespace permitem aos usuários criar e usar coleções de fontes.  
+  
+> [!CAUTION]
+>  Classes de dentro do <xref:System.Drawing.Text> namespace não têm suporte para uso em um serviço do Windows ou do ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

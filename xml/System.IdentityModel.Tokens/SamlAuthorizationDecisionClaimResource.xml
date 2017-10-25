@@ -1,0 +1,217 @@
+<Type Name="SamlAuthorizationDecisionClaimResource" FullName="System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource">
+  <TypeSignature Language="C#" Value="public class SamlAuthorizationDecisionClaimResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlAuthorizationDecisionClaimResource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma declaração para um <see cref="T:System.IdentityModel.Tokens.SamlSecurityToken" /> token de segurança que declara uma decisão de autorização relacionados ao acesso a um recurso específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.IdentityModel.Tokens.SamlSecurityToken>tokens de segurança especificam suas declarações usando asserções SAML. As declarações em uma asserção de SAML são representadas por instruções de SAML. A especificação de SAML define um conjunto de tipos de declaração SAML e um deles é um <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement>. Um <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement> declara uma decisão de autorização por uma autoridade SAML relacionados ao acesso a um recurso específico. O <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource> classe representa um recurso de declaração para o <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAuthorizationDecisionClaimResource (string resource, System.IdentityModel.Tokens.SamlAccessDecision decision, string actionName, string actionNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string resource, valuetype System.IdentityModel.Tokens.SamlAccessDecision decision, string actionName, string actionNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.#ctor(System.String,System.IdentityModel.Tokens.SamlAccessDecision,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resource" Type="System.String" />
+        <Parameter Name="accessDecision" Type="System.IdentityModel.Tokens.SamlAccessDecision" />
+        <Parameter Name="actionNamespace" Type="System.String" />
+        <Parameter Name="actionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="resource">O recurso o assunto está tentando obter acesso ao.</param>
+        <param name="decision">To be added.</param>
+        <param name="actionName">A ação é procurado pelo assunto do recurso especificado no <c>recurso</c> parâmetro.</param>
+        <param name="actionNamespace">O namespace XML no qual a ação especificada no <c>ação</c> parâmetro está definido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource" /> classe usando o recurso especificado, o assunto está tentando obter acesso para a decisão de autorização sobre o recurso, a ação procurado no recurso e o namespace XML no qual a ação está definida.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir detalha as propriedades definidas pelos parâmetros passados para o construtor.  
+  
+|Parâmetro|Propriedade|  
+|---------------|--------------|  
+|`resource`|<xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.Resource%2A>|  
+|`accessDecision`|<xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.AccessDecision%2A>|  
+|`actionNamespace`|<xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionNamespace%2A>|  
+|`actionName`|<xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionName%2A>|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="resource" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="actionName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessDecision">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SamlAccessDecision AccessDecision { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Tokens.SamlAccessDecision AccessDecision" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.AccessDecision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SamlAccessDecision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a decisão de autorização renderizada pela autoridade de SAML sobre o acesso ao recurso, a entidade.</summary>
+        <value>A decisão de autorização foi processada pela autoridade de SAML sobre o acesso ao recurso, a entidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.AccessDecision%2A> propriedade corresponde do `Decision` atributo do `<AuthorizationDecisionStatement>` elemento que é definido no protocolo e asserções para a especificação do OASIS SAML Security Assertion Markup Language ().  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionName">
+      <MemberSignature Language="C#" Value="public string ActionName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActionName" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ação procurada pelo assunto do recurso especificado no <see cref="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.Resource" /> propriedade.</summary>
+        <value>A ação é procurado pelo assunto do recurso especificado no <see cref="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.Resource" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionName%2A> propriedade corresponde do `<Action>` elemento que é definido no protocolo e asserções para a especificação do OASIS SAML Security Assertion Markup Language ().  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionNamespace">
+      <MemberSignature Language="C#" Value="public string ActionNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActionNamespace" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace XML no qual a ação especificada no <see cref="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionName" /> está definida.</summary>
+        <value>O namespace XML no qual a ação especificada no <see cref="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.ActionName" /> está definida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.AccessDecision%2A> propriedade corresponde do `Namespace` atributo do `<Action>` elemento que é definido no protocolo e asserções para a especificação do OASIS SAML Security Assertion Markup Language ().  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com essa instância.</param>
+        <summary>Retorna um valor que indica se a instância é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for um <see cref="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource" /> e seu valor for o mesmo que o dessa instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o <see cref="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource" />.</summary>
+        <returns>Um código hash para o <see cref="T:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public string Resource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Resource" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o assunto está tentando obter acesso ao recurso.</summary>
+        <value>Um URI que representa o recurso o assunto está tentando obter acesso ao.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.SamlAuthorizationDecisionClaimResource.AccessDecision%2A> propriedade corresponde do `Resource` atributo do `<AuthorizationDecisionStatement>` elemento que é definido no protocolo e asserções para a especificação do OASIS SAML Security Assertion Markup Language ().  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

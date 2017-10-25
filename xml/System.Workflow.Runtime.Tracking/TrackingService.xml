@@ -1,0 +1,291 @@
+<Type Name="TrackingService" FullName="System.Workflow.Runtime.Tracking.TrackingService">
+  <TypeSignature Language="C#" Value="public abstract class TrackingService : System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TrackingService extends System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.TrackingService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowRuntimeService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a interface básica entre um serviço de controle e a infra-estrutura de controle de tempo de execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Um serviço de controle é responsável por fornecer controle de canais e controlando perfis para o mecanismo de tempo de execução do fluxo de trabalho. O mecanismo de tempo de execução do fluxo de trabalho solicita um <xref:System.Workflow.Runtime.Tracking.TrackingChannel> de um serviço de controle para cada instância de fluxo de trabalho para o qual ele tem um <xref:System.Workflow.Runtime.Tracking.TrackingProfile>. O mecanismo de tempo de execução do fluxo de trabalho usa essa <xref:System.Workflow.Runtime.Tracking.TrackingChannel> para enviar os registros de controle associada a essa instância de fluxo de trabalho. Um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> contém pontos de controle que especificam um conjunto de eventos para os quais a infra-estrutura de controle de tempo de execução deve enviar os registros do controle de rastreamento. Um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> também pode especificar os dados a ser extraído da instância de fluxo de trabalho quando ocorre um desses eventos de rastreamento.  
+  
+ A infra-estrutura de controle de tempo de execução usa um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para filtro de rastreamento de eventos emitidos por uma instância de fluxo de trabalho. Quando um evento de rastreamento é emitido que corresponda a um ponto de controle no <xref:System.Workflow.Runtime.Tracking.TrackingProfile>, a infra-estrutura de controle de tempo de execução extrai os dados especificados no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> da instância de fluxo de trabalho e encapsula esses dados e informações sobre o evento de rastreamento em um registro de controle. Esse registro de controle, em seguida, é enviado pelo <xref:System.Workflow.Runtime.Tracking.TrackingChannel> associado com a instância de fluxo de trabalho. Um registro de controle pode ser um dos seguintes tipos:  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingRecord>  
+  
+ <xref:System.Workflow.Runtime.Tracking.UserTrackingRecord>  
+  
+ <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord>  
+  
+ O aplicativo de host pode usar o registro de rastreamento de qualquer forma que ele escolhe. Por exemplo, o aplicativo host pode armazenar as informações de rastreamento em um banco de dados e usá-lo para implementar uma interface de usuário sofisticada, ou ele pode usar as informações para informar o administrador de uma condição que exija alguma ação. Você pode registrar um serviço de controle com o mecanismo de tempo de execução do fluxo de trabalho chamando <xref:System.Workflow.Runtime.WorkflowRuntime.AddService%2A?displayProperty=nameWithType> ou incluindo a entrada apropriada no arquivo de configuração do aplicativo.  
+  
+ Todos os serviços de controle herde o <xref:System.Workflow.Runtime.Tracking.TrackingService> classe abstrata. Essa classe define a interface básica entre um serviço de controle e a infra-estrutura de controle de tempo de execução. As solicitações de mecanismo de tempo de execução do fluxo de trabalho uma <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para uma instância de fluxo de trabalho específico ou um fluxo de trabalho <xref:System.Type> chamando um dos sobrecarregados <xref:System.Workflow.Runtime.Tracking.TrackingService.GetProfile%2A> métodos ou <xref:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile%2A> método. As chamadas de mecanismo de tempo de execução do fluxo de trabalho <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> a solicitação de um <xref:System.Workflow.Runtime.Tracking.TrackingChannel>.  
+  
+ O fluxo de trabalho de controle em tempo de execução de chamadas a <xref:System.Workflow.Runtime.Tracking.TrackingService.GetProfile%2A> e <xref:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile%2A> métodos sempre que uma instância de fluxo de trabalho é criada ou carregada do armazenamento de persistência. A sobrecarga associada a essas chamadas pode ser cara para o serviço de acompanhamento (muitos banco de dados chama, por exemplo). Você pode implementar o <xref:System.Workflow.Runtime.Tracking.IProfileNotification> interface em seu serviço de controle para contornar esse mecanismo baseado em chamada e usar os eventos para notificar o mecanismo de tempo de execução do fluxo de trabalho de alterações para um <xref:System.Workflow.Runtime.Tracking.TrackingProfile>. Para controlar os serviços que implementam o <xref:System.Workflow.Runtime.Tracking.IProfileNotification> interface, o mecanismo de tempo de execução do fluxo de trabalho assina o <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileUpdated> e <xref:System.Workflow.Runtime.Tracking.IProfileNotification.ProfileRemoved> eventos. O serviço de controle pode gerar o evento apropriado quando ocorre uma alteração em um de seus perfis de rastreamento. O <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> classe implementa essa interface.  
+  
+ As chamadas de mecanismo de tempo de execução do fluxo de trabalho de <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A> método para testar se um <xref:System.Workflow.Runtime.Tracking.TrackingProfile> foi atualizado ou removido como resultado de uma chamada explícita por um host ou um serviço para <xref:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles%2A> em uma instância de fluxo de trabalho. Esse processo permite que um host ou um serviço alterar dinamicamente o perfil de rastreamento que está sendo usado para uma instância de fluxo de trabalho específico.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>-   Ao herdar de <see cref="T:System.Workflow.Runtime.Tracking.TrackingService" />, você deve substituir os seguintes membros:<see cref="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Guid)" />  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Type,System.Version)" />  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile(System.Type,System.Workflow.Runtime.Tracking.TrackingProfile@)" />  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel(System.Workflow.Runtime.Tracking.TrackingParameters)" />  
+  
+-   <see cref="M:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile(System.Type,System.Guid,System.Workflow.Runtime.Tracking.TrackingProfile@)" /></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.TrackingService" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma nova instância de um `TerminationTrackingService` objeto, de um tipo que deriva de `TrackingService`. Este exemplo é de amostra do SDK do serviço de controle de encerramento. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de serviço de controle de encerramento](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#111](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#111)]
+ [!code-vb[WF_Samples#111](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#111)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetProfile">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Deve ser substituído e quando implementado na classe derivada, obtém o perfil de rastreamento para uma instância de fluxo de trabalho especificado ou o tipo de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço de controle é responsável por gerenciar os perfis de rastreamento disponíveis para tipos de fluxo de trabalho específico e as instâncias de fluxo de trabalho específico. Você pode implementar esse gerenciamento de forma que você escolher. Por exemplo, você pode retornar o mesmo <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para cada fluxo de trabalho <xref:System.Type> e instância de fluxo de trabalho, ou você pode gerenciar um repositório sofisticado de rastreamento perfis referenciados por instância de fluxo de trabalho de fluxo de trabalho <xref:System.Type>, e <xref:System.Version>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetProfile">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.Runtime.Tracking.TrackingProfile GetProfile (Guid workflowInstanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.Runtime.Tracking.TrackingProfile GetProfile(valuetype System.Guid workflowInstanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="workflowInstanceId">O <see cref="T:System.Guid" /> da instância do fluxo de trabalho.</param>
+        <summary>Deve ser substituído e quando implementado na classe derivada, retorna o perfil de rastreamento para a instância de fluxo de trabalho especificado.</summary>
+        <returns>O perfil de rastreamento para a instância de fluxo de trabalho especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço de controle é responsável por gerenciar os perfis de rastreamento disponíveis para tipos de fluxo de trabalho específico e as instâncias de fluxo de trabalho específico. Você pode implementar esse gerenciamento de forma que você escolher. Por exemplo, você pode retornar o mesmo <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para cada fluxo de trabalho <xref:System.Type> e instância de fluxo de trabalho, ou você pode gerenciar um repositório sofisticado de rastreamento perfis referenciados por instância de fluxo de trabalho de fluxo de trabalho <xref:System.Type>, e <xref:System.Version>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação do `GetProfile` método. Neste exemplo, várias sobrecargas do `GetProfile` privada uma única chamada de método `GetProfile` método, que retorna um padrão embutido, perfil de rastreamento. Este exemplo é do exemplo do SDK do serviço de controle de encerramento. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de serviço de controle de encerramento](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#115](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#115)]
+ [!code-vb[WF_Samples#115](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#115)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProfile">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.Runtime.Tracking.TrackingProfile GetProfile (Type workflowType, Version profileVersionId);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.Runtime.Tracking.TrackingProfile GetProfile(class System.Type workflowType, class System.Version profileVersionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.GetProfile(System.Type,System.Version)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingProfile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="profileVersionId" Type="System.Version" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> do fluxo de trabalho.</param>
+        <param name="profileVersionId">O <see cref="T:System.Version" /> do perfil de rastreamento.</param>
+        <summary>Deve ser substituído e quando implementado na classe derivada, retorna o perfil de rastreamento, qualificado pela versão do fluxo de trabalho especificado <see cref="T:System.Type" />.</summary>
+        <returns>O perfil de rastreamento para o tipo de fluxo de trabalho especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço de controle é responsável por gerenciar os perfis de rastreamento disponíveis para tipos de fluxo de trabalho específico e as instâncias de fluxo de trabalho específico. Você pode implementar esse gerenciamento de forma que você escolher. Por exemplo, você pode retornar o mesmo <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para cada fluxo de trabalho <xref:System.Type> e instância de fluxo de trabalho, ou você pode gerenciar um repositório sofisticado de rastreamento perfis referenciados por instância de fluxo de trabalho de fluxo de trabalho <xref:System.Type>, e <xref:System.Version>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrackingChannel">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.Runtime.Tracking.TrackingChannel GetTrackingChannel (System.Workflow.Runtime.Tracking.TrackingParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.Runtime.Tracking.TrackingChannel GetTrackingChannel(class System.Workflow.Runtime.Tracking.TrackingParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel(System.Workflow.Runtime.Tracking.TrackingParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Workflow.Runtime.Tracking.TrackingParameters" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">O <see cref="T:System.Workflow.Runtime.Tracking.TrackingParameters" /> associado com a instância de fluxo de trabalho.</param>
+        <summary>Deve ser substituído e quando implementado na classe derivada, retorna o canal que a infra-estrutura de controle de tempo de execução usa para enviar os registros de controle para o serviço de acompanhamento.</summary>
+        <returns>O <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" /> que é usado para enviar os registros de controle para o serviço de acompanhamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A infra-estrutura de controle de tempo de execução usa um <xref:System.Workflow.Runtime.Tracking.TrackingChannel> para cada serviço de controle para cada instância de fluxo de trabalho. As chamadas de mecanismo de tempo de execução do fluxo de trabalho <xref:System.Workflow.Runtime.Tracking.TrackingService.GetTrackingChannel%2A> em cada serviço de rastreamento para obter o <xref:System.Workflow.Runtime.Tracking.TrackingChannel> para esse serviço. Você pode usar as informações transmitidas em <xref:System.Workflow.Runtime.Tracking.TrackingParameters> para associar o controle de dados enviados no <xref:System.Workflow.Runtime.Tracking.TrackingChannel> para o serviço de controle com uma instância de fluxo de trabalho raiz específica.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação do `GetTrackingChannel` método. Este exemplo é do exemplo do SDK do serviço de controle de encerramento. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de serviço de controle de encerramento](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#113](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#113)]
+ [!code-vb[WF_Samples#113](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#113)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProfile">
+      <MemberSignature Language="C#" Value="protected abstract bool TryGetProfile (Type workflowType, out System.Workflow.Runtime.Tracking.TrackingProfile profile);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryGetProfile(class System.Type workflowType, [out] class System.Workflow.Runtime.Tracking.TrackingProfile&amp; profile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.TryGetProfile(System.Type,System.Workflow.Runtime.Tracking.TrackingProfile@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="profile" Type="System.Workflow.Runtime.Tracking.TrackingProfile&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> do fluxo de trabalho para o qual obter o perfil de rastreamento.</param>
+        <param name="profile">Quando este método retorna, contém o <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> para carregar. Este parâmetro é passado não inicializado.</param>
+        <summary>Deve ser substituído na classe derivada e, quando implementada, recupera o perfil de rastreamento para o tipo de fluxo de trabalho especificado, se houver um disponível.</summary>
+        <returns>
+          <see langword="true" />Se um <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> do fluxo de trabalho especificado <see cref="T:System.Type" /> estiver disponível; caso contrário, <see langword="false" />. Se <see langword="true" />, o <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> é retornado no <paramref name="profile" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um serviço de controle é responsável por gerenciar os perfis de rastreamento disponíveis para tipos de fluxo de trabalho específico e as instâncias de fluxo de trabalho específico. Você pode implementar esse gerenciamento de forma que você escolher. Por exemplo, você pode retornar o mesmo <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para cada fluxo de trabalho <xref:System.Type> e instância de fluxo de trabalho, ou você pode gerenciar um repositório sofisticado de rastreamento perfis referenciados por instância de fluxo de trabalho de fluxo de trabalho <xref:System.Type>, e <xref:System.Version>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra uma implementação de `TryGetProfile` método, que chama uma particular `GetProfile` método. Este exemplo é do exemplo do SDK do serviço de controle de encerramento. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de serviço de controle de encerramento](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[Wf_samples#209](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#209)]
+ [!code-vb[Wf_samples#209](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#209)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReloadProfile">
+      <MemberSignature Language="C#" Value="protected abstract bool TryReloadProfile (Type workflowType, Guid workflowInstanceId, out System.Workflow.Runtime.Tracking.TrackingProfile profile);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool TryReloadProfile(class System.Type workflowType, valuetype System.Guid workflowInstanceId, [out] class System.Workflow.Runtime.Tracking.TrackingProfile&amp; profile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile(System.Type,System.Guid,System.Workflow.Runtime.Tracking.TrackingProfile@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+        <Parameter Name="workflowInstanceId" Type="System.Guid" />
+        <Parameter Name="profile" Type="System.Workflow.Runtime.Tracking.TrackingProfile&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> da instância do fluxo de trabalho.</param>
+        <param name="workflowInstanceId">O <see cref="T:System.Guid" /> da instância do fluxo de trabalho.</param>
+        <param name="profile">Quando este método retorna, contém o <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> para carregar. Este parâmetro é passado não inicializado.</param>
+        <summary>Deve ser substituído na classe derivada e, quando implementada, recupera um novo perfil de rastreamento para a instância de fluxo de trabalho especificado se o perfil de rastreamento tiver sido alterada desde a última carregado.</summary>
+        <returns>
+          <see langword="true" />Se um novo <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> deve ser carregado; caso contrário, <see langword="false" />. Se <see langword="true" />, o <see cref="T:System.Workflow.Runtime.Tracking.TrackingProfile" /> é retornado no <paramref name="profile" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A>é chamado pela infraestrutura de controle de tempo de execução para determinar se um novo <xref:System.Workflow.Runtime.Tracking.TrackingProfile> deve ser carregado para a instância de fluxo de trabalho especificado. Se um novo <xref:System.Workflow.Runtime.Tracking.TrackingProfile> é necessário, ele é retornado na `profile`. Se você desejar que a infra-estrutura de controle de tempo de execução para parar o controle de uma instância de fluxo de trabalho, o serviço de controle deve retornar `true` e defina `profile` igual a uma referência nula (`Nothing` no Visual Basic). O serviço de controle pode usar `workflowType` ou `workflowInstanceId` forma que você escolher determinar se um perfil de rastreamento deve ser recarregado. Por exemplo, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> usa apenas `workflowInstanceId` para decidir se o perfil de rastreamento deve ser recarregado. <xref:System.Workflow.Runtime.Tracking.TrackingService.TryReloadProfile%2A>é chamado pela infraestrutura de controle de tempo de execução de acordo com seu próprio controle semântica ou em resposta a uma chamada de serviço ou o host <xref:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles%2A?displayProperty=nameWithType> em uma instância de fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação básica do `TryReloadProfile` método. Este exemplo é do exemplo do SDK do serviço de controle de encerramento. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de serviço de controle de encerramento](http://msdn.microsoft.com/en-us/29b7c0d7-cece-4bb9-96d0-c5b6c6e14439).  
+  
+ [!code-csharp[WF_Samples#116](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#116)]
+ [!code-vb[WF_Samples#116](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#116)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

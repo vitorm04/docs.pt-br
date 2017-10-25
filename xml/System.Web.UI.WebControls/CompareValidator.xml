@@ -1,0 +1,377 @@
+<Type Name="CompareValidator" FullName="System.Web.UI.WebControls.CompareValidator">
+  <TypeSignature Language="C#" Value="public class CompareValidator : System.Web.UI.WebControls.BaseCompareValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CompareValidator extends System.Web.UI.WebControls.BaseCompareValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.CompareValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BaseCompareValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:CompareValidator runat="server" ErrorMessage="CompareValidator"&gt;&lt;/{0}:CompareValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Compara o valor inserido pelo usuário em um controle de entrada com o valor inserido em outro no controle de entrada, ou com um valor constante.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CompareValidator> controle para comparar o valor inserido pelo usuário em um controle de entrada, como um <xref:System.Web.UI.WebControls.TextBox> controle com o valor inserido no controle de entrada de outro ou um valor constante. O <xref:System.Web.UI.WebControls.CompareValidator> controle passa a validação se o valor de controle de entrada corresponder aos critérios especificados pelo <xref:System.Web.UI.WebControls.CompareValidator.Operator%2A>, <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A>, e/ou <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedades.  
+  
+ Você também pode usar o <xref:System.Web.UI.WebControls.CompareValidator> controle para indicar se o valor inserido em um controle de entrada pode ser convertido para o tipo de dados especificado pelo <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> propriedade.  
+  
+ Especifique o controle de entrada para validar, definindo o <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> propriedade. Se você deseja comparar um controle de entrada específico com outro controle de entrada, defina o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade para especificar o controle para comparação.  
+  
+> [!NOTE]
+>  Se o valor inserido no controle de entrada especificado pelo <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade não pode ser convertida para o tipo de dados especificado pelo <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> propriedade, mas o valor inserido no controle de entrada especificado pelo <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A> propriedade pode ser convertida, o controle de entrada que está sendo validado é considerado válido. Portanto, você também deve colocar um <xref:System.Web.UI.WebControls.CompareValidator> ou <xref:System.Web.UI.WebControls.RangeValidator> controle sobre o controle de entrada especificado pelo <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade.  
+  
+ Em vez de comparar o valor de um controle de entrada com outro controle de entrada, você pode comparar o valor de um controle de entrada para um valor constante. Especifique o valor constante para comparar com definindo o <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade.  
+  
+> [!NOTE]
+>  Se o valor especificado com o <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade não pode ser convertida para o tipo de dados especificado pelo <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> propriedade, uma exceção será lançada. Verifique o tipo de dados de um valor antes de atribuí-lo para programaticamente o <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade.  
+  
+> [!NOTE]
+>  Não defina o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> e <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade ao mesmo tempo. Ou você pode comparar o valor de um controle de entrada para outro controle de entrada ou para um valor constante. Se ambas as propriedades forem definidas, o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade terá precedência.  
+  
+ Use o <xref:System.Web.UI.WebControls.CompareValidator.Operator%2A> propriedade para especificar o tipo de comparação a ser executadas, como maior que, igual, e assim por diante. Se você definir o <xref:System.Web.UI.WebControls.CompareValidator.Operator%2A> propriedade `ValidationCompareOperator.DataTypeCheck`, o <xref:System.Web.UI.WebControls.CompareValidator> controle ignorará o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> e <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedades e simplesmente indica se o valor inserido no controle de entrada pode ser convertido para o tipo de dados especificado pelo <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> propriedade é usada para especificar o tipo de dados de ambos os valores de comparação. Ambos os valores são convertidos automaticamente para esse tipo de dados antes da operação de comparação é executada.  
+  
+> [!IMPORTANT]
+>  Quando o <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A> está definida como <xref:System.Web.UI.WebControls.ValidationDataType.Date> e o tipo de calendário atual é não gregorianos, o validador executa somente a validação do lado do servidor. O script de validação de cliente oferece suporte a somente os calendários gregoriano.  
+  
+ A tabela a seguir lista os vários tipos de dados que podem ser comparados.  
+  
+|Tipo de dados|Descrição|  
+|---------------|-----------------|  
+|`String`|Um tipo de dados String.|  
+|`Integer`|Um tipo de dados inteiro com sinal de 32 bits.|  
+|`Double`|Um precisão dupla ponto flutuante tipo de dados numérico.|  
+|`Date`|Um tipo de dados de data.|  
+|`Currency`|Um tipo de dados decimal. Ele não pode conter símbolos de moeda.|  
+  
+> [!NOTE]
+>  Se o controle de entrada estiver vazio, nenhuma validação funções são chamadas e a validação for bem-sucedida. Use um <xref:System.Web.UI.WebControls.RequiredFieldValidator> controle para exigir que o usuário insira dados no controle de entrada.  
+  
+> [!NOTE]
+>  Quando você usa o <xref:System.Web.UI.WebControls.CompareValidator> controle dentro de um <xref:System.Web.UI.UpdatePanel> de controle, certifique-se de que o controle de validação e o controle está associado são do mesmo painel. Para obter mais informações sobre como usar o <xref:System.Web.UI.UpdatePanel> para atualizações parciais de página, consulte [visão geral de renderização de página parcial](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Para obter mais informações sobre os controles de validação, consulte <xref:System.Web.UI.WebControls.BaseValidator>.  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ Para obter informações sobre como configurar este controle para que ele gera marcação que está de acordo com os padrões de acessibilidade, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.CompareValidator> controle para comparar os valores em duas <xref:System.Web.UI.WebControls.TextBox> controles.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic CompareValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CompareValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CompareValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CompareValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompareValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompareValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.CompareValidator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa quaisquer campos para seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompareValidator.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém o fluxo de saída para renderização no cliente.</param>
+        <summary>Adiciona os atributos deste controle o fluxo de saída para renderização no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.CompareValidator.AddAttributesToRender%2A> método em um controle de servidor personalizado para que o <xref:System.Web.UI.WebControls.CompareValidator> mensagem de erro sempre aparece em negrito.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomCompareValidatorAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCompareValidatorAddAttributesToRender/CS/custom_comparevalidator_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomCompareValidatorAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCompareValidatorAddAttributesToRender/VB/custom_comparevalidator_addattributestorendervb.aspx#1)]  
+[!code-csharp[CustomCompareValidatorAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCompareValidatorAddAttributesToRender/CS/custom_comparevalidator_addattributestorender.cs#2)]
+[!code-vb[CustomCompareValidatorAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCompareValidatorAddAttributesToRender/VB/custom_comparevalidator_addattributestorender.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlPropertiesValid">
+      <MemberSignature Language="C#" Value="protected override bool ControlPropertiesValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ControlPropertiesValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompareValidator.ControlPropertiesValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica as propriedades do controle para valores válidos.</summary>
+        <returns>
+          <see langword="true" />Se as propriedades de controle são válidas. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.CompareValidator.ControlPropertiesValid%2A> método em um servidor personalizado de controle para que ele sempre retorna o valor da propriedade visible, contanto que o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade o <xref:System.Web.UI.WebControls.CompareValidator> controle está na página e contém Propriedades de validação.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomCompareValidatorControlPropertiesValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCompareValidatorControlPropertiesValid/CS/custom_comparevalidator_controlpropertiesvalidcs.aspx#1)]
+ [!code-aspx-vb[CustomCompareValidatorControlPropertiesValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCompareValidatorControlPropertiesValid/VB/custom_comparevalidator_controlpropertiesvalidvb.aspx#1)]  
+[!code-csharp[CustomCompareValidatorControlPropertiesValid#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCompareValidatorControlPropertiesValid/CS/custom_comparevalidator_controlpropertiesvalid.cs#2)]
+[!code-vb[CustomCompareValidatorControlPropertiesValid#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCompareValidatorControlPropertiesValid/VB/custom_comparevalidator_controlpropertiesvalid.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O valor de uma propriedade de destino não pode ser convertido para o esperado <see cref="T:System.Type" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlToCompare">
+      <MemberSignature Language="C#" Value="public string ControlToCompare { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlToCompare" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompareValidator.ControlToCompare" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.WebControls.ValidatedControlConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o controle de entrada a ser comparado com o controle de entrada que está sendo validado.</summary>
+        <value>O controle de entrada a ser comparado com o controle de entrada que está sendo validado. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade para especificar um controle de entrada, como um <xref:System.Web.UI.WebControls.TextBox> controle a ser comparado com o controle de entrada que está sendo validado. Se o controle de entrada especificado por essa propriedade não é um controle na página, uma exceção será lançada.  
+  
+> [!NOTE]
+>  Não defina o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> e <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade ao mesmo tempo. Ou você pode comparar o valor de um controle de entrada para outro controle de entrada ou para um valor constante. Se ambas as propriedades forem definidas, o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade terá precedência.  
+  
+ Para obter mais informações, consulte <xref:System.Web.UI.WebControls.BaseValidator.ControlToValidate%2A?displayProperty=nameWithType>.  
+  
+> [!IMPORTANT]
+>  Se o controle para comparar está oculto ou é dentro de um contêiner (como um <xref:System.Web.UI.WebControls.Panel> controle) que não estiver visível, o validador executa somente a validação do lado do servidor. O script de validação de cliente oferece suporte a somente os controles visíveis.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade para especificar o controle a ser comparado com o controle que está sendo validado.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic CompareValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CompareValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CompareValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CompareValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.CompareValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, este método contém o código para determinar se o valor no controle de entrada é válido.</summary>
+        <returns>
+          <see langword="true" /> se o valor no controle de entrada for válido, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.CompareValidator.EvaluateIsValid%2A> método em um servidor personalizado de controle para que ele sempre retorna `true` se os valores dos dois controles especificados forem iguais e `false` caso contrário.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomCompareValidatorEvaluateIsValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCompareValidatorEvaluateIsValid/CS/custom_comparevalidator_evaluateisvalidcs.aspx#1)]
+ [!code-aspx-vb[CustomCompareValidatorEvaluateIsValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCompareValidatorEvaluateIsValid/VB/custom_comparevalidator_evaluateisvalidvb.aspx#1)]  
+[!code-csharp[CustomCompareValidatorEvaluateIsValid#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomCompareValidatorEvaluateIsValid/CS/custom_comparevalidator_evaluateisvalid.cs#2)]
+[!code-vb[CustomCompareValidatorEvaluateIsValid#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomCompareValidatorEvaluateIsValid/VB/custom_comparevalidator_evaluateisvalid.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operator">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ValidationCompareOperator Operator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ValidationCompareOperator Operator" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompareValidator.Operator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ValidationCompareOperator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a operação de comparação a ser executada.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.ValidationCompareOperator" />. O valor padrão é <see langword="Equal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CompareValidator.Operator%2A> propriedade para especificar a operação de comparação a ser executada. A tabela a seguir lista as operações de comparação que são possíveis.  
+  
+|Operação|Descrição|  
+|---------------|-----------------|  
+|`Equal`|Uma comparação de igualdade entre os valores do controle de entrada que estão sendo validados e outro controle ou um valor constante.|  
+|`NotEqual`|Uma comparação de desigualdade entre os valores do controle de entrada que estão sendo validados e outro controle ou um valor constante.|  
+|`GreaterThan`|Uma comparação para maior entre os valores do controle de entrada que estão sendo validados e outro controle ou um valor constante.|  
+|`GreaterThanEqual`|Uma comparação para maior que ou igual a entre os valores do controle de entrada que estão sendo validados e outro controle ou um valor constante.|  
+|`LessThan`|Uma comparação para menor que entre os valores do controle de entrada que estão sendo validados e outro controle ou um valor constante.|  
+|`LessThanEqual`|Uma comparação para menor que ou igual a entre os valores do controle de entrada que estão sendo validados e outro controle ou um valor constante.|  
+|`DataTypeCheck`|Uma comparação de tipo de dados do valor inserido no controle de entrada que estão sendo validado e o tipo de dados especificado pelo <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> propriedade. Validação falhará se o valor não pode ser convertido para o tipo de dados especificado. **Observação:** o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> e <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedades são ignoradas quando esse operador é usado.|  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CompareValidator.Operator%2A> propriedade para especificar a operação de comparação.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic CompareValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CompareValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CompareValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CompareValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O operador de comparação especificado não é um dos valores <see cref="T:System.Web.UI.WebControls.ValidationCompareOperator" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueToCompare">
+      <MemberSignature Language="C#" Value="public string ValueToCompare { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueToCompare" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.CompareValidator.ValueToCompare" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor constante a ser comparado com o valor inserido pelo usuário no controle de entrada que está sendo validado.</summary>
+        <value>O valor constante a ser comparado com o valor inserido pelo usuário no controle de entrada que está sendo validado. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade para especificar um valor constante para comparar com o valor inserido pelo usuário no controle de entrada que está sendo validado. Se o valor da constante especificado por essa propriedade não converter para o tipo de dados especificado pelo <xref:System.Web.UI.WebControls.BaseCompareValidator.Type%2A?displayProperty=nameWithType> propriedade, uma exceção será lançada.  
+  
+> [!NOTE]
+>  Não defina o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> e <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade ao mesmo tempo. Ou você pode comparar o valor de um controle de entrada para outro controle de entrada ou para um valor constante. Se ambas as propriedades forem definidas, o <xref:System.Web.UI.WebControls.CompareValidator.ControlToCompare%2A> propriedade terá precedência.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.CompareValidator.ValueToCompare%2A> propriedade para comparar o valor inserido pelo usuário em um <xref:System.Web.UI.WebControls.TextBox> controle com um valor constante.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic CompareValidator.ValueToCompare Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic CompareValidator.ValueToCompare Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic CompareValidator.ValueToCompare Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic CompareValidator.ValueToCompare Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

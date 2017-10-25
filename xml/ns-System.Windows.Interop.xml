@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Interop">
+  <Docs>
+    <summary>Fornece tipos de suporte para interoperação entre o Windows Presentation Foundation (WPF) e outras tecnologias, como as APIs do Win32 e classes base para outros cenários de interoperação específicos que envolvem WPF.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

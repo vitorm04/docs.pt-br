@@ -1,0 +1,285 @@
+<Type Name="Floater" FullName="System.Windows.Documents.Floater">
+  <TypeSignature Language="C#" Value="public class Floater : System.Windows.Documents.AnchoredBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Floater extends System.Windows.Documents.AnchoredBlock" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.Floater" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.AnchoredBlock</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um elemento de conteúdo de fluxo de nível embutido usado para hospedar um floater. Um *floater* exibe imagens e outros conteúdos paralelos ao fluxo de conteúdo principal em um <see cref="T:System.Windows.Documents.FlowDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.Figure>ou <xref:System.Windows.Documents.Floater> elementos geralmente são usados para realçar ou destacar partes do conteúdo para o host com suporte para imagens ou outro conteúdo dentro do fluxo de conteúdo principal, ou inserir livremente relacionados ao conteúdo, como anúncios. Um floater pode conter objetos que herdem da classe de bloco. Para obter mais informações, consulte [visão geral do modelo conteúdo TextElement](~/docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+  
+ <xref:System.Windows.Documents.Figure>e <xref:System.Windows.Documents.Floater> diferem de diversas maneiras e são usados para cenários diferentes.  
+  
+ **Figure:**  
+  
+-   Pode ser posicionada: você pode definir suas âncoras horizontais e verticais para encaixá-la em relação à página, ao conteúdo, à coluna ou ao parágrafo. Você também pode usar seu <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> propriedades para especificar offsets arbitrários.  
+  
+-   É dimensionável para mais de uma coluna: você pode definir <xref:System.Windows.Documents.Figure> altura e largura para múltiplos de página, o conteúdo ou a coluna de altura ou largura. Observe que no caso de página e o conteúdo, múltiplos maiores que 1 não são permitidos. Por exemplo, você pode definir a largura de uma <xref:System.Windows.Documents.Figure> "página 0,5" ou "conteúdo 0,25" ou "coluna 2". Você também pode definir a altura e largura para valores de pixel absolutos.  
+  
+-   Não pagina: se o conteúdo dentro de um <xref:System.Windows.Documents.Figure> não se ajustam a <xref:System.Windows.Documents.Figure>, ele processará qualquer conteúdo que entra e o conteúdo restante é perdido  
+  
+ **Floater:**  
+  
+-   Não pode ser posicionado e será renderizado sempre que for possível disponibilizar espaço para ele. Não é possível definir o deslocamento ou âncora um <xref:System.Windows.Documents.Floater>.  
+  
+-   Não pode ser dimensionada para mais de uma coluna: por padrão, <xref:System.Windows.Documents.Floater> tamanhos em uma coluna. Ele tem um <xref:System.Windows.Documents.Floater.Width%2A> propriedade que pode ser definida como um valor de pixel absoluto, mas se esse valor for maior que a largura de uma coluna, ele será ignorado e o floater é dimensionada em uma coluna. Pode ser dimensionar para menos de uma coluna, definindo a largura de pixel correto, mas o dimensionamento não está relativos a coluna, "0.5Column" não é uma expressão válida para <xref:System.Windows.Documents.Floater> largura. <xref:System.Windows.Documents.Floater>não tem nenhuma propriedade de altura e é a altura não pode ser definida, sua altura depende do conteúdo  
+  
+-   <xref:System.Windows.Documents.Floater>pagina: se o seu conteúdo em sua largura especificada estende-se à altura da coluna mais de 1, floater quebra e pagina para a próxima coluna, a próxima página, etc.  
+  
+ <xref:System.Windows.Documents.Figure>é um bom lugar para colocar o conteúdo autônomo onde você deseja controlar o tamanho e posicionamento e tiver certeza de que o conteúdo caiba no tamanho especificado. <xref:System.Windows.Documents.Floater>é um bom lugar para colocar mais conteúdo de fluxo livre que flui semelhante para o conteúdo da página principal, mas é separado dele.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma <xref:System.Windows.Documents.FlowDocument> que contém ambos <xref:System.Windows.Documents.Floater> e <xref:System.Windows.Documents.Figure> elementos.  
+  
+ [!code-xaml[FloaterFigureSnippets#_FloaterFigureXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml#_floaterfigurexaml)]  
+  
+ A ilustração a seguir mostra como esse exemplo é renderizado.  
+  
+ ![Captura de tela: Os Floaters e cálculos em um FlowDocument](~/add/media/floaterfigure.png "captura de tela: Os Floaters e imagens em um FlowDocument")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Floater ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Floater.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Documents.Floater" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Floater (System.Windows.Documents.Block childBlock);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Block childBlock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Floater.#ctor(System.Windows.Documents.Block)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childBlock" Type="System.Windows.Documents.Block" />
+      </Parameters>
+      <Docs>
+        <param name="childBlock">O conteúdo inicial do novo <see cref="T:System.Windows.Documents.Floater" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Floater" /> classe com especificado <see cref="T:System.Windows.Documents.Block" /> objeto como seu conteúdo inicial.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar este construtor.  
+  
+ [!code-csharp[FloaterFigureSnippets#_FloaterConst1](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml.cs#_floaterconst1)]
+ [!code-vb[FloaterFigureSnippets#_FloaterConst1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb#_floaterconst1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Floater (System.Windows.Documents.Block childBlock, System.Windows.Documents.TextPointer insertionPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Documents.Block childBlock, class System.Windows.Documents.TextPointer insertionPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.Floater.#ctor(System.Windows.Documents.Block,System.Windows.Documents.TextPointer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="childBlock" Type="System.Windows.Documents.Block" />
+        <Parameter Name="insertionPosition" Type="System.Windows.Documents.TextPointer" />
+      </Parameters>
+      <Docs>
+        <param name="childBlock">O conteúdo inicial do novo <see cref="T:System.Windows.Documents.Floater" />. Esse parâmetro pode ser <see langword="null" />, caso em que nenhum <see cref="T:System.Windows.Documents.Block" /> é inserido.</param>
+        <param name="insertionPosition">A posição na qual inserir o <see cref="T:System.Windows.Documents.Floater" /> elemento depois que ele é criado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Documents.Floater" /> classe com especificado <see cref="T:System.Windows.Documents.Block" /> objeto como seu conteúdo inicial e um <see cref="T:System.Windows.Documents.TextPointer" /> que especifica a posição de uma inserção para o novo <see cref="T:System.Windows.Documents.Floater" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar este construtor.  
+  
+ [!code-csharp[FloaterFigureSnippets#_FloaterConst2](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml.cs#_floaterconst2)]
+ [!code-vb[FloaterFigureSnippets#_FloaterConst2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb#_floaterconst2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlignment">
+      <MemberSignature Language="C#" Value="public System.Windows.HorizontalAlignment HorizontalAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.HorizontalAlignment HorizontalAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Floater.HorizontalAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o alinhamento horizontal de um <see cref="T:System.Windows.Documents.Floater" /> objeto.</summary>
+        <value>Um membro do <see cref="T:System.Windows.HorizontalAlignment" /> enumeração que especifica o alinhamento horizontal para o <see cref="T:System.Windows.Documents.Floater" />. O padrão é <see cref="F:System.Windows.HorizontalAlignment.Stretch" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HorizontalAlignment"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Floater.HorizontalAlignmentProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir essa propriedade.  
+  
+ [!code-xaml[FloaterFigureSnippets#_FloaterPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml#_floaterpropsxaml)]  
+  
+ [!code-csharp[FloaterFigureSnippets#_FloaterProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml.cs#_floaterprops)]
+ [!code-vb[FloaterFigureSnippets#_FloaterProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb#_floaterprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HorizontalAlignmentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HorizontalAlignmentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HorizontalAlignmentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Floater.HorizontalAlignmentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Floater.HorizontalAlignment" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public double Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.Floater.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.LengthConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a largura de uma <see cref="T:System.Windows.Documents.Floater" /> objeto.</summary>
+        <value>A largura do <see cref="T:System.Windows.Documents.Floater" />, em pixels independentes de dispositivo. O valor padrão é <see cref="F:System.Double.NaN" /> (equivalente a um valor de atributo <c>automática</c>), que indica que a altura da linha é determinada automaticamente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlAttributeUsage_Width"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Width="double"/>  
+- or -  
+<object Width="qualifiedDouble"/>  
+- or -  
+<object Width="Auto"/>  
+```  
+  
+<a name="xamlValues_Width"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *double*  
+ <xref:System.Double>  
+  
+ Uma representação de cadeia de caracteres de um <xref:System.Double> valor igual ou maior que 0.0, mas menor do que <xref:System.Double.PositiveInfinity>. Um valor não qualificado é medido em [!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]. Cadeias de caracteres não precisam explicitamente incluir pontos decimais.  
+  
+ *qualifiedDouble*  
+ Um `double` valor conforme descrito acima, (exceto `Auto`) seguido por um dos seguintes especificadores de unidade: `px`, `in`, `cm`, `pt`.  
+  
+ `px`é (padrão)[!INCLUDE[TLA#tla_dipixel#plural](~/includes/tlasharptla-dipixelsharpplural-md.md)]  
+  
+ `in`polegadas; em 1 = = 96px  
+  
+ `cm`centímetros; 1cm==(96/2.54) px  
+  
+ `pt`pontos; 1pt==(96/72) px  
+  
+ Auto  
+ Faz com que a largura será determinado automaticamente. Equivalente a um valor da propriedade <xref:System.Double.NaN>.  
+  
+<a name="dependencyPropertyInfo_Width"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Documents.Floater.WidthProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Documents.Floater.Width%2A> atributo de um <xref:System.Windows.Documents.Floater> elemento.  
+  
+ [!code-xaml[FloaterFigureSnippets#_FloaterPropsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml#_floaterpropsxaml)]  
+  
+ [!code-csharp[FloaterFigureSnippets#_FloaterProps](~/samples/snippets/csharp/VS_Snippets_Wpf/FloaterFigureSnippets/CSharp/Window1.xaml.cs#_floaterprops)]
+ [!code-vb[FloaterFigureSnippets#_FloaterProps](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FloaterFigureSnippets/visualbasic/window1.xaml.vb#_floaterprops)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WidthProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WidthProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Documents.Floater.WidthProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Documents.Floater.Width" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

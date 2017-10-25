@@ -1,0 +1,98 @@
+<Type Name="WebScriptServiceHostFactory" FullName="System.ServiceModel.Activation.WebScriptServiceHostFactory">
+  <TypeSignature Language="C#" Value="public class WebScriptServiceHostFactory : System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebScriptServiceHostFactory extends System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.WebScriptServiceHostFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activation.ServiceHostFactory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Adiciona automaticamente um ponto de extremidade ASP.NET do AJAX a um serviço, sem a necessidade de configuração, em um ambiente de hospedagem gerenciado que ativa dinamicamente instâncias do host para o serviço em resposta a mensagens de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta fábrica fornece uma maneira de adicionar um ponto de extremidade do ASP.NET AJAX em um serviço sem a necessidade de configuração. O ponto de extremidade é adicionado para outros pontos de extremidade que são definidos na configuração, se houver. Os ambientes de hospedagem gerenciados que oferecem suporte a esse tipo de ativação de host dinâmico são serviços de informações da Internet (IIS) e serviços de ativação de processos do Windows (WAS).  
+  
+ Para usar esta fábrica, especifique o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> no `Factory` atributo do [ @ServiceHost ](~/docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva.  
+  
+ O ponto de extremidade do ASP.NET AJAX criado por essa fábrica é configurado com o <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, com todas as configurações padrão. O ponto de extremidade é criado em um endereço vazio em relação ao arquivo. svc. Se a configuração de serviço já define um ponto de extremidade no endereço, um <xref:System.InvalidOperationException> é gerada e o serviço não for iniciado.  
+  
+   
+  
+## Examples  
+ Especifique o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> para o valor da `Factory` atributo no [ @ServiceHost ](~/docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva para ativar um ponto de extremidade do ASP.NET AJAX para a `MyService` serviço conforme mostrado no exemplo a seguir.  
+  
+```  
+<% @ServiceHost   
+Service="MyService"  
+Language="C#"  
+Debug="true"  
+Factory="WebScriptServiceHostFactory"  
+%>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebScriptServiceHostFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WebScriptServiceHostFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activation.WebScriptServiceHostFactory" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, este construtor é chamado automaticamente pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] como parte da ativação de serviço - não é necessário para chamar esse método manualmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.ServiceHost CreateServiceHost (Type serviceType, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.ServiceHost CreateServiceHost(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WebScriptServiceHostFactory.CreateServiceHost(System.Type,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHost</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço de host.</param>
+        <param name="baseAddresses">O <see cref="T:System.Array" /> do tipo <see cref="T:System.Uri" /> que contém os endereços de base para o serviço hospedado.</param>
+        <summary>Cria uma classe derivada de <see cref="T:System.ServiceModel.ServiceHost" /> para um tipo específico de serviço com um endereço base específico que pode ser usado para ativar automaticamente os pontos de extremidade do ASP.NET AJAX em determinados cenários.</summary>
+        <returns>Um <see cref="T:System.ServiceModel.ServiceHost" /> para o tipo de serviço especificado com o endereço base especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é chamado automaticamente pelo [!INCLUDE[indigo1](~/includes/indigo1-md.md)] como parte da ativação de serviço - não é necessário para chamar esse método manualmente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Outro serviço usa o mesmo endereço base ou outro ponto de extremidade está usando o mesmo endereço como o ponto de extremidade do ASP.NET AJAX que esta fábrica está tentando criar.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

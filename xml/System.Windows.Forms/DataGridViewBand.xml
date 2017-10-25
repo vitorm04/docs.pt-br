@@ -1,0 +1,761 @@
+<Type Name="DataGridViewBand" FullName="System.Windows.Forms.DataGridViewBand">
+  <TypeSignature Language="C#" Value="public class DataGridViewBand : System.Windows.Forms.DataGridViewElement, ICloneable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewBand extends System.Windows.Forms.DataGridViewElement implements class System.ICloneable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewBand" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção linear de elementos em um controle <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewBand> classe representa <xref:System.Windows.Forms.DataGridViewCell> Unidos em uma faixa que pode ser manipulada como um grupo de elementos. Cada elemento normalmente é uma instância de <xref:System.Windows.Forms.DataGridViewCell> ou uma de suas classes derivadas. Embora um <xref:System.Windows.Forms.DataGridViewHeaderCell> está associado com cada faixa, células de cabeçalho não são consideradas elementos da faixa.  
+  
+ <xref:System.Windows.Forms.DataGridViewBand>é a classe base a <xref:System.Windows.Forms.DataGridViewRow> e <xref:System.Windows.Forms.DataGridViewColumn> classes. Não há nenhum construtor público para o <xref:System.Windows.Forms.DataGridViewBand> digitar, a única maneira de acessar uma faixa é por meio de colunas e linhas em um <xref:System.Windows.Forms.DataGridView>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Windows.Forms.DataGridViewBand> para manipular propriedades de grupos de células em um <xref:System.Windows.Forms.DataGridView>.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#0)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#0)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewBand.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata dessa faixa.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o <see cref="T:System.Windows.Forms.DataGridViewBand" /> clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para duplicar uma linha ou coluna de células.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewBand.Clone" /> em uma classe derivada, chame a classe base <see cref="M:System.Windows.Forms.DataGridViewBand.Clone" /> método para que as propriedades da classe base são copiadas para a nova faixa e certifique-se de também copiar os valores de todas as propriedades que foram adicionados à classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o menu de atalho para a faixa.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ContextMenuStrip" /> associado ao <see cref="T:System.Windows.Forms.DataGridViewBand" /> atual. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O menu de atalho aparece quando um usuário clica no botão direito do mouse na área de exibição da banda. A área de exibição é um <xref:System.Windows.Forms.DataGridViewColumn> ou <xref:System.Windows.Forms.DataGridViewRow> em um <xref:System.Windows.Forms.DataGridView>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridViewColumn.ContextMenuStrip%2A> propriedade de um <xref:System.Windows.Forms.DataGridViewColumn> para adicionar funcionalidade para alterar a cor de plano de fundo da célula. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.DataGridViewColumn> classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#130)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#130)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#130)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCellStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle DefaultCellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.DefaultCellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da célula padrão da banda.</summary>
+        <value>O <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> associado ao <see cref="T:System.Windows.Forms.DataGridViewBand" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estilo de célula padrão é aplicado às células que não têm um estilo associado. Ao obter essa propriedade, um <xref:System.Windows.Forms.DataGridViewCellStyle> padrão valores serão criados se o estilo de célula padrão não existe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir define o estilo de célula padrão para a primeira coluna em um <xref:System.Windows.Forms.DataGridView>.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#7)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#7)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultHeaderCellType">
+      <MemberSignature Language="C#" Value="public Type DefaultHeaderCellType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DefaultHeaderCellType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.DefaultHeaderCellType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de tempo de execução da célula de cabeçalho padrão.</summary>
+        <value>Um <see cref="T:System.Type" /> que descreve a classe de tempo de execução do objeto usado como a célula de cabeçalho padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade deve obter ou definir uma instância do <xref:System.Windows.Forms.DataGridViewHeaderCell> classe ou um de seus tipos derivados. Por exemplo, o <xref:System.Windows.Forms.DataGridViewRow> classe usa um <xref:System.Windows.Forms.DataGridViewRowHeaderCell> como o tipo de célula de cabeçalho padrão. Da mesma forma, o <xref:System.Windows.Forms.DataGridViewColumn> classe usa um <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>.  
+  
+ Se você estiver usando um tipo personalizado derivado de <xref:System.Windows.Forms.DataGridViewHeaderCell> em uma linha ou coluna, o <xref:System.Windows.Forms.DataGridViewBand.DefaultHeaderCellType%2A> propriedade deve ser definida para o tipo personalizado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado ao configurar essa propriedade não é um <see cref="T:System.Type" /> representando <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> ou um tipo derivado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Displayed">
+      <MemberSignature Language="C#" Value="public virtual bool Displayed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Displayed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.Displayed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a banda é exibida na tela no momento.</summary>
+        <value>
+          <see langword="true" /> se a faixa aparecer na tela no momento; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewBand.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Windows.Forms.DataGridViewBand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Windows.Forms.DataGridViewBand.Dispose%2A> quando tiver terminado de usar o <xref:System.Windows.Forms.DataGridViewBand>. O <xref:System.Windows.Forms.DataGridViewBand.Dispose%2A> método deixa o <xref:System.Windows.Forms.DataGridViewBand> em um estado inutilizável. Depois de chamar <xref:System.Windows.Forms.DataGridViewBand.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Windows.Forms.DataGridViewBand> para o coletor de lixo possa recuperar a memória que o <xref:System.Windows.Forms.DataGridViewBand> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Windows.Forms.DataGridViewBand.Dispose%2A> antes de liberar sua última referência para o <xref:System.Windows.Forms.DataGridViewBand>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Windows.Forms.DataGridViewBand> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewBand.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.DataGridViewBand" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro for true, este método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Windows.Forms.DataGridViewBand> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~DataGridViewBand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewBand.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos associados com a faixa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ Para obter mais informações, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ Quando chamado pelo coletor de lixo, este método chama o <xref:System.Windows.Forms.DataGridViewBand.Dispose%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frozen">
+      <MemberSignature Language="C#" Value="public virtual bool Frozen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Frozen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.Frozen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a faixa se moverá quando o usuário rolar pelo <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>
+          <see langword="true" /> se a faixa não puder ser rolada na exibição; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade pode conter uma faixa de informações importantes em vigor quando um usuário percorre o <xref:System.Windows.Forms.DataGridView>. Faixas adjacentes a banda congelada moverá sobre a faixa congelada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir congela uma faixa de células em uma coluna e uma linha. O exemplo também altera o estilo de célula padrão das bandas congeladas para especificar quais faixas congeladas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.DataGridViewBand> classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#7)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#7)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDefaultCellStyle">
+      <MemberSignature Language="C#" Value="public bool HasDefaultCellStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDefaultCellStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Windows.Forms.DataGridViewBand.DefaultCellStyle" /> propriedade foi definida.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Windows.Forms.DataGridViewBand.DefaultCellStyle" /> propriedade tiver sido definida; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtendo o valor de <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> propriedade automaticamente cria um novo <xref:System.Windows.Forms.DataGridViewCellStyle> se a propriedade não tiver sido acessada anteriormente. Você deve, portanto, usar o <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> propriedade para determinar se o <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> propriedade está definida atualmente para um <xref:System.Windows.Forms.DataGridViewCellStyle> instância. Isso é útil para determinar quais propriedades do objeto retornado pelo <xref:System.Windows.Forms.DataGridViewBand.InheritedStyle%2A> propriedade representam definido especificamente para a faixa de estilos.  
+  
+ Para obter mais informações sobre herança de estilo de célula, consulte [Estilos de célula no controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderCellCore">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.DataGridViewHeaderCell HeaderCellCore { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewHeaderCell HeaderCellCore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.HeaderCellCore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewHeaderCell</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a célula de cabeçalho de <see cref="T:System.Windows.Forms.DataGridViewBand" />.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> que representa a célula de cabeçalho de <see cref="T:System.Windows.Forms.DataGridViewBand" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor especificado quando a definição dessa propriedade não é um <see cref="T:System.Windows.Forms.DataGridViewRowHeaderCell" /> e <see cref="T:System.Windows.Forms.DataGridViewBand" /> instância é do tipo <see cref="T:System.Windows.Forms.DataGridViewRow" />.  
+  
+ -ou-  
+  
+ O valor especificado quando a definição dessa propriedade não é um <see cref="T:System.Windows.Forms.DataGridViewColumnHeaderCell" /> e <see cref="T:System.Windows.Forms.DataGridViewBand" /> instância é do tipo <see cref="T:System.Windows.Forms.DataGridViewColumn" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição relativa da faixa dentro do controle <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <value>A posição de base zero da faixa no <see cref="T:System.Windows.Forms.DataGridViewRowCollection" /> ou <see cref="T:System.Windows.Forms.DataGridViewColumnCollection" /> em que ela está contida. O padrão é -1, indicando que não há um controle <see cref="T:System.Windows.Forms.DataGridView" /> associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade não corresponde necessariamente à posição atual visual da faixa de dentro da coleção. Por exemplo, se o usuário reordena colunas em um <xref:System.Windows.Forms.DataGridView> em tempo de execução (supondo que o <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A> está definida como `true`), o valor da <xref:System.Windows.Forms.DataGridViewBand.Index%2A> propriedade de cada coluna não será alterada. Em vez disso, a coluna <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> valores alterados. Classificando linhas, no entanto, alterar seus <xref:System.Windows.Forms.DataGridViewBand.Index%2A> valores.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridViewBand.Index%2A> propriedade para definir os rótulos de coluna. A faixa <xref:System.Windows.Forms.DataGridViewBand.Index%2A> propriedade é acessada por meio de um <xref:System.Windows.Forms.DataGridViewColumn>.  
+  
+> [!NOTE]
+>  Se esses estilos estejam habilitados, o tema atual substituirá as propriedades de estilo de exibição para cabeçalhos de linha e coluna.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#150](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#150)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#150)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#150)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InheritedStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewCellStyle InheritedStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridViewCellStyle InheritedStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.InheritedStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewCellStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo de célula em vigor para a faixa atual, levando em herança de estilo de conta.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> associado a <see cref="T:System.Windows.Forms.DataGridViewBand" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação dessa propriedade no <xref:System.Windows.Forms.DataGridViewBand> classe sempre retorna `null` porque essa classe base não pode conter elementos.  
+  
+ Para obter mais informações sobre herança de estilo, consulte [Estilos de célula no controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRow">
+      <MemberSignature Language="C#" Value="protected bool IsRow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.IsRow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a banda representa uma linha.</summary>
+        <value>
+          <see langword="true" /> se a banda representar uma <see cref="T:System.Windows.Forms.DataGridViewRow" />; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataGridViewChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDataGridViewChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataGridViewChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewBand.OnDataGridViewChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando a banda está associada a outro <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewBand.OnDataGridViewChanged" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewBand.OnDataGridViewChanged" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o usuário pode editar as células da banda.</summary>
+        <value>
+          <see langword="true" /> se o usuário não puder editar as células da banda; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewBand.ReadOnly%2A> propriedade afeta o <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A?displayProperty=nameWithType> a propriedade de cada célula na faixa. Por exemplo, se o <xref:System.Windows.Forms.DataGridViewBand.ReadOnly%2A> propriedade de um <xref:System.Windows.Forms.DataGridViewRow> alterações, o <xref:System.Windows.Forms.DataGridViewCell.ReadOnly%2A?displayProperty=nameWithType> propriedade de todas as células na linha será alterada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DataGridViewBand.ReadOnly%2A> propriedade para desativar a edição de toda uma <xref:System.Windows.Forms.DataGridView>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.DataGridViewBand> classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#11)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#11)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Ao configurar essa propriedade, essa instância <see cref="T:System.Windows.Forms.DataGridViewBand" /> é uma <see cref="T:System.Windows.Forms.DataGridViewRow" /> compartilhada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resizable">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridViewTriState Resizable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataGridViewTriState Resizable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.Resizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewTriState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a faixa pode ser redimensionada na interface do usuário.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.DataGridViewTriState" />. O padrão é <see cref="F:System.Windows.Forms.DataGridViewTriState.True" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode impedir que os usuários o redimensionamento de colunas ou linhas individuais definindo suas <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> propriedades. Por padrão, o <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> o valor da propriedade se baseia o <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> valor de propriedade para as colunas e o <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> valor de propriedade para as linhas. Se você definir explicitamente <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> para <xref:System.Windows.Forms.DataGridViewTriState.True> ou <xref:System.Windows.Forms.DataGridViewTriState.False>, no entanto, o valor do controle é ignorado. Definir <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> para <xref:System.Windows.Forms.DataGridViewTriState.NotSet> para restaurar a herança.  
+  
+ Porque <xref:System.Windows.Forms.DataGridViewTriState.NotSet> restaura a herança de valor, o <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> propriedade nunca retornarão um <xref:System.Windows.Forms.DataGridViewTriState.NotSet> valor, a menos que a linha ou coluna não foi adicionada a um <xref:System.Windows.Forms.DataGridView> controle. Se você precisar determinar se o <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> valor da propriedade de uma linha ou coluna é herdada, verifique seu <xref:System.Windows.Forms.DataGridViewElement.State%2A> propriedade. Se o <xref:System.Windows.Forms.DataGridViewElement.State%2A> valor inclui o <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> sinalizador, o <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> o valor da propriedade não é herdado. Se o <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> é o valor da propriedade <xref:System.Windows.Forms.DataGridViewTriState.False>, o usuário não poderá ajustar manualmente o tamanho da faixa.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> propriedade padrão.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.MouseBasedResizing#14](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/CPP/mousesizing.cpp#14)]
+ [!code-csharp[System.Windows.Forms.DataGridView.MouseBasedResizing#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/CS/mousesizing.cs#14)]
+ [!code-vb[System.Windows.Forms.DataGridView.MouseBasedResizing#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.MouseBasedResizing/VB/mousesizing.vb#14)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public virtual bool Selected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.Selected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a banda está em um estado de interface do usuário selecionado.</summary>
+        <value>
+          <see langword="true" /> se a banda estiver selecionada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser definida somente se um <xref:System.Windows.Forms.DataGridView> com o <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> propriedade habilitada está associada com a faixa.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso dessa propriedade.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#05](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#05)]
+ [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#05](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#05)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor especificado ao definir esta propriedade é <see langword="true" />, mas a banda não foi adicionada a um controle <see cref="T:System.Windows.Forms.DataGridView" />.  
+  
+ -ou-  
+  
+ Essa propriedade está sendo definida em um <see cref="T:System.Windows.Forms.DataGridViewRow" /> compartilhado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que contém os dados associados à banda.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém as informações associadas à banda. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewBand.Tag%2A> propriedade pode armazenar qualquer objeto que você deseja associar a uma faixa. Essa propriedade normalmente é usada para armazenar informações de identificação, como um nome de cadeia de caracteres, um identificador exclusivo (por exemplo, um <xref:System.Guid>), ou o índice dos dados da banda em um banco de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridViewBand.Tag%2A> propriedade para armazenar uma cor que for posteriormente recuperada para definir o <xref:System.Windows.Forms.DataGridView.BackColor%2A> propriedade.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#12](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#12)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#12)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewBand.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa a banda atual.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o atual <see cref="T:System.Windows.Forms.DataGridViewBand" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Object.ToString%2A?displayProperty=nameWithType> método. A cadeia de caracteres retornada contém o nome da classe e <xref:System.Windows.Forms.DataGridViewBand.Index%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public virtual bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewBand.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a faixa está visível para o usuário.</summary>
+        <value>
+          <see langword="true" /> se a faixa estiver visível; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser usada para ocultar linhas ou colunas irrelevantes.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> propriedade para ocultar uma linha. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.DataGridViewBand> classe.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#9)]
+ [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#9)]
+ [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O valor especificado ao definir esta propriedade é <see langword="false" /> e a faixa é a linha para os novos registros.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

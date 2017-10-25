@@ -1,0 +1,109 @@
+<Type Name="EnterpriseServicesInteropOption" FullName="System.Transactions.EnterpriseServicesInteropOption">
+  <TypeSignature Language="C#" Value="public enum EnterpriseServicesInteropOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EnterpriseServicesInteropOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.EnterpriseServicesInteropOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como as transações distribuídas interagem com transações COM+.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework permite que os componentes gerenciados de .NET participar de transações em COM+ usando as classes de <xref:System.EnterpriseServices> namespace. No entanto, como a interoperação não é fornecida por padrão, você precisa usar essa enumeração para especificar como você deseja participar no contexto COM+. Especificamente, quando você cria um novo <xref:System.Transactions.TransactionScope>, usar essa enumeração para indicar como deseja que participem de transações COM+ na transação. Para obter mais informações, consulte [interoperabilidade com serviços da empresa e transações COM+](http://msdn.microsoft.com/en-us/2e93b3c6-4d48-4b9b-82b2-7d5908a2c970).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnterpriseServicesInteropOption Automatic = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnterpriseServicesInteropOption.Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnterpriseServicesInteropOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pesquise por um contexto COM+ existente e sincronize com ele, se houver.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Full">
+      <MemberSignature Language="C#" Value="Full" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnterpriseServicesInteropOption Full = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnterpriseServicesInteropOption.Full" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnterpriseServicesInteropOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O contexto <see cref="N:System.EnterpriseServices" /> (que pode ser recuperado chamando o método estático <see cref="P:System.EnterpriseServices.ContextUtil.Transaction" /> da classe <see cref="T:System.EnterpriseServices.ContextUtil" />) e a transação de ambiente <see cref="N:System.Transactions" /> (que pode ser recuperada chamando o método estático <see cref="P:System.Transactions.Transaction.Current" /> da classe<see cref="T:System.Transactions.Transaction" />) sempre são sincronizados. Isso introduz uma penalidade de desempenho porque pode ser necessário criar novos contextos <see cref="N:System.EnterpriseServices" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Transactions.EnterpriseServicesInteropOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Transactions.EnterpriseServicesInteropOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.EnterpriseServicesInteropOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não há sincronização entre <see cref="P:System.EnterpriseServices.ContextUtil.Transaction" /> e <see cref="P:System.Transactions.Transaction.Current" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,717 @@
+<Type Name="StringType" FullName="Microsoft.VisualBasic.CompilerServices.StringType">
+  <TypeSignature Language="C#" Value="public sealed class StringType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringType extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompilerServices.StringType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Essa classe foi preterida a partir do Visual Basic 2005.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece métodos para manipular dados potencialmente representa um `String` valor.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="FromBoolean">
+      <MemberSignature Language="C#" Value="public static string FromBoolean (bool Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromBoolean(bool Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromBoolean(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Boolean" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Boolean" />.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromByte">
+      <MemberSignature Language="C#" Value="public static string FromByte (byte Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromByte(unsigned int8 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Byte" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Byte" />.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromChar">
+      <MemberSignature Language="C#" Value="public static string FromChar (char Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromChar(char Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Char" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Char" />.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromDate">
+      <MemberSignature Language="C#" Value="public static string FromDate (DateTime Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromDate(valuetype System.DateTime Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromDate(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Data para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à data especificada.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromDecimal">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Decimal" /> e informações de formato de número opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromDecimal">
+      <MemberSignature Language="C#" Value="public static string FromDecimal (decimal Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromDecimal(valuetype System.Decimal Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromDecimal(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Decimal" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Decimal" />.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromDecimal">
+      <MemberSignature Language="C#" Value="public static string FromDecimal (decimal Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromDecimal(valuetype System.Decimal Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromDecimal(System.Decimal,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Decimal" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Decimal" />Para converter um <see langword="String" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Decimal" /> e informações de formato de número.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromDouble">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Double" /> e informações de formato de número opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromDouble">
+      <MemberSignature Language="C#" Value="public static string FromDouble (double Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromDouble(float64 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromDouble(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Double" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Double" />.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromDouble">
+      <MemberSignature Language="C#" Value="public static string FromDouble (double Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromDouble(float64 Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromDouble(System.Double,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Double" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Double" />Para converter um <see langword="String" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Double" /> e informações de formato de número.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromInteger">
+      <MemberSignature Language="C#" Value="public static string FromInteger (int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromInteger(int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromInteger(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Integer" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Integer" />.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromLong">
+      <MemberSignature Language="C#" Value="public static string FromLong (long Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromLong(int64 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromLong(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Int64" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Int64" /> (inteiro de 64 bits).</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromObject">
+      <MemberSignature Language="C#" Value="public static string FromObject (object Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromObject(object Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromObject(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. Objeto para converter para um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde ao objeto especificado.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromShort">
+      <MemberSignature Language="C#" Value="public static string FromShort (short Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromShort(int16 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromShort(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Int616" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Int16" /> (inteiro de 16 bits).</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="FromSingle">
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Single" /> e informações de formato de número opcional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="FromSingle">
+      <MemberSignature Language="C#" Value="public static string FromSingle (float Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromSingle(float32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromSingle(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Single" />Para converter um <see langword="String" /> valor.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Single" />.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="FromSingle">
+      <MemberSignature Language="C#" Value="public static string FromSingle (float Value, System.Globalization.NumberFormatInfo NumberFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string FromSingle(float32 Value, class System.Globalization.NumberFormatInfo NumberFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.FromSingle(System.Single,System.Globalization.NumberFormatInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Value" Type="System.Single" />
+        <Parameter Name="NumberFormat" Type="System.Globalization.NumberFormatInfo" />
+      </Parameters>
+      <Docs>
+        <param name="Value">Necessário. <see langword="Sinble" />Para converter um <see langword="String" /> valor.</param>
+        <param name="NumberFormat">Um <see cref="T:System.Globalization.NumberFormatInfo" /> objeto que define como os valores numéricos são formatados e exibidos, dependendo da cultura.</param>
+        <summary>Retorna um <see langword="String" /> valor que corresponde à especificada <see langword="Single" /> e informações de formato de número.</summary>
+        <returns>O <see langword="String" /> valor correspondente a <paramref name="Value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MidStmtStr">
+      <MemberSignature Language="C#" Value="public static void MidStmtStr (ref string sDest, int StartPosition, int MaxInsertLength, string sInsert);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void MidStmtStr(string&amp; sDest, int32 StartPosition, int32 MaxInsertLength, string sInsert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.MidStmtStr(System.String@,System.Int32,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sDest" Type="System.String&amp;" RefType="ref" />
+        <Parameter Name="StartPosition" Type="System.Int32" />
+        <Parameter Name="MaxInsertLength" Type="System.Int32" />
+        <Parameter Name="sInsert" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sDest">Necessário. Variável de cadeia de caracteres para modificar.</param>
+        <param name="StartPosition">Necessário. Local de <c>sDest</c> parâmetro para começar a substituição do. O índice é baseado em 1.</param>
+        <param name="MaxInsertLength">Necessário. Número máximo de caracteres a partir de <c>sInsert</c> parâmetro a ser usado, a partir do primeiro caractere.</param>
+        <param name="sInsert">Necessário. Cadeia de caracteres o valor para substituir o <c>sDest</c> o parâmetro.</param>
+        <summary>Substitui o <paramref name="sDest" /> parâmetro com o conteúdo a <paramref name="sInsert" /> parâmetro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StrCmp">
+      <MemberSignature Language="C#" Value="public static int StrCmp (string sLeft, string sRight, bool TextCompare);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 StrCmp(string sLeft, string sRight, bool TextCompare) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.StrCmp(System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sLeft" Type="System.String" />
+        <Parameter Name="sRight" Type="System.String" />
+        <Parameter Name="TextCompare" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sLeft">Necessário. Cadeia de caracteres a ser comparado com <c>sRight</c>.</param>
+        <param name="sRight">Necessário. Cadeia de caracteres a ser comparado com <c>sLeft</c>.</param>
+        <param name="TextCompare">Necessário. <see langword="True" /> para executar uma comparação que diferencia maiúsculas de minúsculas; caso contrário, <see langword="False" />.</param>
+        <summary>Compara duas cadeias de caracteres.</summary>
+        <returns>
+          <list type="table">
+            <listheader>
+              <term> Valor  
+  
+ </term>
+              <description> Condição  
+  
+ </description>
+            </listheader>
+            <item>
+              <term> zero  
+  
+ </term>
+              <description> As duas cadeias são iguais.  
+  
+ </description>
+            </item>
+            <item>
+              <term> menor que zero  
+  
+ </term>
+              <description>
+                <paramref name="sLeft" /> é menor que <paramref name="sRight" />.  
+  
+ </description>
+            </item>
+            <item>
+              <term> maior que zero  
+  
+ </term>
+              <description>
+                <paramref name="sLeft" /> é maior que <paramref name="sRight" />.  
+  
+ </description>
+            </item>
+          </list>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe dá suporte ao compilador do Visual Basic e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StrLike">
+      <MemberSignature Language="C#" Value="public static bool StrLike (string Source, string Pattern, Microsoft.VisualBasic.CompareMethod CompareOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool StrLike(string Source, string Pattern, valuetype Microsoft.VisualBasic.CompareMethod CompareOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.StrLike(System.String,System.String,Microsoft.VisualBasic.CompareMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Source" Type="System.String" />
+        <Parameter Name="Pattern" Type="System.String" />
+        <Parameter Name="CompareOption" Type="Microsoft.VisualBasic.CompareMethod" />
+      </Parameters>
+      <Docs>
+        <param name="Source">Necessário. Qualquer expressão de <see langword="String" /> .</param>
+        <param name="Pattern">Qualquer expressão <see langword="String" /> de acordo com as convenções de correspondência de padrão descritas no operador Like.</param>
+        <param name="CompareOption">Especifica como comparar cadeias de caracteres para padrões de acordo com o <see cref="T:Microsoft.VisualBasic.CompareMethod" />. Pode ser <see langword="vbBinaryCompare" /> para comparação binária ou <see langword="vbTextCompare" /> para comparação com base em uma ordem de classificação de maiusculas e minúsculas do texto determinada pelo seu sistema <see langword="LocaleID" /> valor.</param>
+        <summary>Compara os parâmetros <paramref name="Source" /> e <paramref name="Pattern" /> e retorna os mesmos resultados que o <see langword="Like" /> operador.</summary>
+        <returns>Um <see langword="Boolean" /> valor que indica se a cadeia de caracteres satisfaz o padrão ou não. Se o valor na cadeia de caracteres satisfizer o padrão contido no padrão, o resultado é <see langword="True" />. Se a cadeia de caracteres não atender ao padrão, o resultado é <see langword="False" />. Se a cadeia de caracteres e padrão são cadeias de caracteres vazias, o resultado será <see langword="True" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método compara os parâmetros `Source` e `Pattern` e retorna os mesmos resultados que o [operador Like](~/docs/visual-basic/language-reference/operators/like-operator.md). O resultado é um valor booliano que indica se a cadeia de caracteres satisfaz o padrão.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StrLikeBinary">
+      <MemberSignature Language="C#" Value="public static bool StrLikeBinary (string Source, string Pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool StrLikeBinary(string Source, string Pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.StrLikeBinary(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Source" Type="System.String" />
+        <Parameter Name="Pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Source">Necessário. Qualquer expressão de <see langword="String" /> .</param>
+        <param name="Pattern">Necessário. Qualquer expressão <see langword="String" /> de acordo com as convenções de correspondência de padrão descritas no operador Like.</param>
+        <summary>Compara os parâmetros <paramref name="Source" /> e <paramref name="Pattern" /> e retorna os mesmos resultados que o <see langword="Like" /> operador, usando a comparação binária.</summary>
+        <returns>Um <see langword="Boolean" /> valor que indica se a cadeia de caracteres satisfaz o padrão ou não. Se o valor na cadeia de caracteres satisfizer o padrão contido no padrão, o resultado é <see langword="True" />. Se a cadeia de caracteres não atender ao padrão, o resultado é <see langword="False" />. Se a cadeia de caracteres e padrão são cadeias de caracteres vazias, o resultado será <see langword="True" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método compara os parâmetros `Source` e `Pattern` e retorna os mesmos resultados que o [operador Like](~/docs/visual-basic/language-reference/operators/like-operator.md). O resultado é um valor booliano que indica se a cadeia de caracteres satisfaz o padrão.  
+  
+ Esse método é semelhante ao <xref:Microsoft.VisualBasic.CompilerServices.StringType.StrLike%2A> exceto que ela sempre executa uma comparação binária diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="StrLikeText">
+      <MemberSignature Language="C#" Value="public static bool StrLikeText (string Source, string Pattern);" />
+      <MemberSignature Language="ILAsm" Value=".method public static bool StrLikeText(string Source, string Pattern) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.CompilerServices.StringType.StrLikeText(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Source" Type="System.String" />
+        <Parameter Name="Pattern" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Source">Necessário. Qualquer expressão de <see langword="String" /> .</param>
+        <param name="Pattern">Necessário. Qualquer expressão <see langword="String" /> de acordo com as convenções de correspondência de padrão descritas no operador Like.</param>
+        <summary>Compara os parâmetros <paramref name="Source" /> e <paramref name="Pattern" /> e retorna os mesmos resultados que o <see langword="Like" /> operador, usando a comparação de texto.</summary>
+        <returns>Um <see langword="Boolean" /> valor que indica se a cadeia de caracteres satisfaz o padrão ou não. Se o valor na cadeia de caracteres satisfizer o padrão contido no padrão, o resultado é <see langword="True" />. Se a cadeia de caracteres não atender ao padrão, o resultado é <see langword="False" />. Se a cadeia de caracteres e padrão são cadeias de caracteres vazias, o resultado será <see langword="True" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método compara os parâmetros `Source` e `Pattern` e retorna os mesmos resultados que o [operador Like](~/docs/visual-basic/language-reference/operators/like-operator.md). O resultado é um `Boolean` valor que indica se a cadeia de caracteres satisfaz o padrão ou não.  
+  
+ Esse método é semelhante ao <xref:Microsoft.VisualBasic.CompilerServices.StringType.StrLike%2A> exceto que ela sempre executa uma comparação com base em uma ordem de classificação de maiusculas e minúsculas do texto determinada pelo seu sistema `LocaleID` valor.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,577 @@
+<Type Name="BehaviorService" FullName="System.Windows.Forms.Design.Behavior.BehaviorService">
+  <TypeSignature Language="C#" Value="public sealed class BehaviorService : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BehaviorService extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.BehaviorService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia a interface do usuário no designer. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> é criado, ele adiciona uma janela transparente sobre o quadro de designer. O <xref:System.Windows.Forms.Design.Behavior.BehaviorService> pode usar essa janela para renderizar elementos de interface do usuário, chamados <xref:System.Windows.Forms.Design.Behavior.Glyph> objetos, como também captura todas as mensagens de mouse. Dessa forma, o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> pode controlar o comportamento do designer.  
+  
+ O <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe oferece suporte a uma pilha de comportamento, no qual <xref:System.Windows.Forms.Design.Behavior.Behavior> objetos podem ser enviados. Quando uma mensagem for interceptada pela janela transparente, o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> pode enviar a mensagem para o <xref:System.Windows.Forms.Design.Behavior.Behavior> na parte superior da pilha. Isso permite que os modos de interface de usuário diferente dependendo atualmente enviado <xref:System.Windows.Forms.Design.Behavior.Behavior>. O <xref:System.Windows.Forms.Design.Behavior.BehaviorService> é usado para processar todos os <xref:System.Windows.Forms.Design.Behavior.Glyph> objetos, como bordas de seleção, alças de dimensionamento e marcas inteligentes. O <xref:System.Windows.Forms.Design.Behavior.BehaviorService> também controla vários comportamentos de tempo de design, como usando guias de alinhamento, arrastando e selecionando.  
+  
+ Para obter mais informações, consulte [visão geral do serviço de comportamento](http://msdn.microsoft.com/library/7c60cc41-4324-46b5-b444-b39eda7cb33f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar seu próprio <xref:System.Windows.Forms.Design.Behavior.Behavior> com base em classe que responde a cliques do usuário.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Adorners">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection Adorners { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection Adorners" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.BehaviorService.Adorners" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection" />.</summary>
+        <value>Uma coleção de adorno.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Adorners%2A> propriedade fornece acesso para o <xref:System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection> gerenciados pelo <xref:System.Windows.Forms.Design.Behavior.BehaviorService>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como adicionar <xref:System.Windows.Forms.Design.Behavior.Adorner> objetos e removê-los de um <xref:System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection>. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#2)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdornerWindowGraphics">
+      <MemberSignature Language="C#" Value="public System.Drawing.Graphics AdornerWindowGraphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Graphics AdornerWindowGraphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.BehaviorService.AdornerWindowGraphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Graphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Graphics" /> da janela adorno.</summary>
+        <value>O <see cref="T:System.Drawing.Graphics" /> da janela adorno.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdornerWindowPointToScreen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point AdornerWindowPointToScreen (System.Drawing.Point p);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point AdornerWindowPointToScreen(valuetype System.Drawing.Point p) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.AdornerWindowPointToScreen(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="p">O <see cref="T:System.Drawing.Point" /> valor transformar.</param>
+        <summary>Converte um <see cref="T:System.Drawing.Point" /> na janela de adorno em coordenadas da tela.</summary>
+        <returns>Transformado <see cref="T:System.Drawing.Point" /> valor, em coordenadas da tela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdornerWindowToScreen">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point AdornerWindowToScreen ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point AdornerWindowToScreen() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.AdornerWindowToScreen" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o local da janela de adorno em coordenadas da tela.</summary>
+        <returns>O local do canto superior esquerdo da janela de adorno, em coordenadas da tela.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDrag">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler BeginDrag;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler BeginDrag" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Design.Behavior.BehaviorService.BeginDrag" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" /> inicia uma operação de arrastar e soltar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.BehaviorService> gera o <xref:System.Windows.Forms.Design.Behavior.BehaviorService.BeginDrag> evento imediatamente antes de ele inicia uma operação de arrastar e soltar.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlRectInAdornerWindow">
+      <MemberSignature Language="C#" Value="public System.Drawing.Rectangle ControlRectInAdornerWindow (System.Windows.Forms.Control c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Rectangle ControlRectInAdornerWindow(class System.Windows.Forms.Control c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.ControlRectInAdornerWindow(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="c">O <see cref="T:System.Windows.Forms.Control" /> a ser movido.</param>
+        <summary>Retorna o limite <see cref="T:System.Drawing.Rectangle" /> de um <see cref="T:System.Windows.Forms.Control" />.</summary>
+        <returns>O delimitador <see cref="T:System.Drawing.Rectangle" /> de um <see cref="T:System.Windows.Forms.Control" /> convertida com as coordenadas da janela adorno.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A janela de adorno é uma janela transparente que reside na parte superior do quadro do designer. Esta janela é usada pelo <xref:System.Windows.Forms.Design.Behavior.BehaviorService> para interceptar todas as mensagens. Ele também serve como uma tela unificada no qual desenhar um <xref:System.Windows.Forms.Design.Behavior.Glyph>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlToAdornerWindow">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point ControlToAdornerWindow (System.Windows.Forms.Control c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point ControlToAdornerWindow(class System.Windows.Forms.Control c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.ControlToAdornerWindow(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="c">O <see cref="T:System.Windows.Forms.Control" /> a ser movido.</param>
+        <summary>Retorna o local de um <see cref="T:System.Windows.Forms.Control" /> convertidos em coordenadas da janela adorno.</summary>
+        <returns>Um <see cref="T:System.Drawing.Point" /> valor que indica o local do <paramref name="c" /> em coordenadas da janela adorno.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir faz parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#8)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.Behavior CurrentBehavior { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.Behavior.Behavior CurrentBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.BehaviorService.CurrentBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.Behavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> na parte superior da pilha de comportamento sem removê-lo.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> na parte superior da pilha de comportamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Dispose%2A> quando tiver terminado de usar o <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. O <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Dispose%2A> método deixa o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> em um estado inutilizável. Depois de chamar <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Dispose%2A>, você deve liberar todas as referências para o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> para o coletor de lixo possa recuperar a memória que o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> estava ocupando. Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Dispose%2A> antes de liberar sua última referência para o <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDrag">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler EndDrag;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler EndDrag" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Design.Behavior.BehaviorService.EndDrag" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.BehaviorDragDropEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" /> conclui uma operação de arrastar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.BehaviorService> gera o <xref:System.Windows.Forms.Design.Behavior.BehaviorService.EndDrag> evento imediatamente após a operação de arrastar é concluído.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNextBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.Behavior GetNextBehavior (System.Windows.Forms.Design.Behavior.Behavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Design.Behavior.Behavior GetNextBehavior(class System.Windows.Forms.Design.Behavior.Behavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.GetNextBehavior(System.Windows.Forms.Design.Behavior.Behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.Behavior</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Windows.Forms.Design.Behavior.Behavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> precede o <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> a ser retornado.</param>
+        <summary>Retorna o <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> imediatamente após o determinado <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> na pilha de comportamento.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> imediatamente após <paramref name="behavior" /> na pilha de comportamento, ou <see langword="null" /> se não houver nenhum comportamento a seguir.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invalida a janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando o <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Invalidate%2A> método força uma atualização de todos os <xref:System.Windows.Forms.Design.Behavior.Adorner> objetos e, por sua vez, todos os <xref:System.Windows.Forms.Design.Behavior.Glyph> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate (System.Drawing.Rectangle rect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate(valuetype System.Drawing.Rectangle rect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.Invalidate(System.Drawing.Rectangle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="rect">A área retangular para invalidar.</param>
+        <summary>Invalida, dentro da janela de adorno, a área especificada do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Invalidate%2A> método forçará uma atualização de todos os <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Adorners%2A> e, por sua vez, todos os <xref:System.Windows.Forms.Design.Behavior.Adorner.Glyphs%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public void Invalidate (System.Drawing.Region r);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Invalidate(class System.Drawing.Region r) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.Invalidate(System.Drawing.Region)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r" Type="System.Drawing.Region" />
+      </Parameters>
+      <Docs>
+        <param name="r">A região para invalidar.</param>
+        <summary>Invalida, dentro da janela de adorno, a área especificada do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Invalidate%2A> método forçará uma atualização de todos os <xref:System.Windows.Forms.Design.Behavior.BehaviorService.Adorners%2A> e, por sua vez, todos os <xref:System.Windows.Forms.Design.Behavior.Adorner.Glyphs%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAdornerWindowPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point MapAdornerWindowPoint (IntPtr handle, System.Drawing.Point pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point MapAdornerWindowPoint(native int handle, valuetype System.Drawing.Point pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.MapAdornerWindowPoint(System.IntPtr,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+        <Parameter Name="pt" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Identificador de uma janela de adorno.</param>
+        <param name="pt">Um <see cref="T:System.Drawing.Point" /> no sistema de coordenadas do identificador.</param>
+        <summary>Converte um ponto no sistema de coordenadas do identificador com as coordenadas da janela adorno.</summary>
+        <returns>Um <see cref="T:System.Drawing.Point" /> em coordenadas da janela de adorno.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopBehavior">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.Behavior.Behavior PopBehavior (System.Windows.Forms.Design.Behavior.Behavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.Design.Behavior.Behavior PopBehavior(class System.Windows.Forms.Design.Behavior.Behavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.PopBehavior(System.Windows.Forms.Design.Behavior.Behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.Behavior</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Windows.Forms.Design.Behavior.Behavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> para remover da pilha.</param>
+        <summary>Remove e retorna o <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> na parte superior da pilha.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> que foi removido da pilha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remove a atual <xref:System.Windows.Forms.Design.Behavior.Behavior> da pilha de comportamento mantida internamente pelo <xref:System.Windows.Forms.Design.Behavior.BehaviorService>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> a pilha está vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PushBehavior">
+      <MemberSignature Language="C#" Value="public void PushBehavior (System.Windows.Forms.Design.Behavior.Behavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushBehavior(class System.Windows.Forms.Design.Behavior.Behavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.PushBehavior(System.Windows.Forms.Design.Behavior.Behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Windows.Forms.Design.Behavior.Behavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> para envio.</param>
+        <summary>Envia um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> para a pilha de comportamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.BehaviorService.PushBehavior%2A> método geralmente é realizado por meio de uma ocorrência testado <xref:System.Windows.Forms.Design.Behavior.Glyph>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="behavior" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PushCaptureBehavior">
+      <MemberSignature Language="C#" Value="public void PushCaptureBehavior (System.Windows.Forms.Design.Behavior.Behavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PushCaptureBehavior(class System.Windows.Forms.Design.Behavior.Behavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.PushCaptureBehavior(System.Windows.Forms.Design.Behavior.Behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Windows.Forms.Design.Behavior.Behavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> para envio.</param>
+        <summary>Envia um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> para a pilha de comportamento e atribui a captura do mouse no comportamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Enviar um comportamento de captura geralmente é feito por meio de uma ocorrência testado <xref:System.Windows.Forms.Design.Behavior.Glyph>. Se um comportamento chama o <xref:System.Windows.Forms.Design.Behavior.BehaviorService.PushCaptureBehavior%2A> captura do mouse e o método é perdido, o comportamento <xref:System.Windows.Forms.Design.Behavior.Behavior.OnLoseCapture%2A> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="behavior" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenToAdornerWindow">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point ScreenToAdornerWindow (System.Drawing.Point p);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Point ScreenToAdornerWindow(valuetype System.Drawing.Point p) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.ScreenToAdornerWindow(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="p">O <see cref="T:System.Drawing.Point" /> valor transformar.</param>
+        <summary>Converte um ponto em coordenadas da tela para as coordenadas da janela de adorno do <see cref="T:System.Windows.Forms.Design.Behavior.BehaviorService" />.</summary>
+        <returns>Transformado <see cref="T:System.Drawing.Point" /> valor, em coordenadas da janela adorno.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronize">
+      <MemberSignature Language="C#" Value="public event EventHandler Synchronize;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Synchronize" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Design.Behavior.BehaviorService.Synchronize" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a seleção atual deve ser atualizada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncSelection">
+      <MemberSignature Language="C#" Value="public void SyncSelection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SyncSelection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.BehaviorService.SyncSelection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sincroniza todos os glifos de seleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

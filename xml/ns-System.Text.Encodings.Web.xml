@@ -1,0 +1,6 @@
+<Namespace Name="System.Text.Encodings.Web">
+  <Docs>
+    <summary>O <see cref="N:System.Text.Encodings.Web" /> namespace contém uma classe base que representa um codificador de web; subclasses que representam o HTML, JavaScript e Url codificação; e uma classe que representa um filtro para permitir que somente determinados caracteres, os intervalos de caracteres de caracteres ou pontos para ser codificado de código.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

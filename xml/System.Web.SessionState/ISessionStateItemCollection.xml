@@ -1,0 +1,280 @@
+<Type Name="ISessionStateItemCollection" FullName="System.Web.SessionState.ISessionStateItemCollection">
+  <TypeSignature Language="C#" Value="public interface ISessionStateItemCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISessionStateItemCollection implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.ISessionStateItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define o contrato para a coleção usada por estado de sessão ASP.NET para gerenciar a sessão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.ISessionStateItemCollection> interface define a coleção de itens de sessão expostos ao código de aplicativo, o <xref:System.Web.SessionState.HttpSessionStateContainer> classe.  
+  
+ A implementação do ASP.NET do <xref:System.Web.SessionState.ISessionStateItemCollection> interface é a <xref:System.Web.SessionState.SessionStateItemCollection> classe.  
+  
+ Se você criar uma classe derivada do <xref:System.Web.SessionState.SessionStateStoreProviderBase> de classe para armazenar dados de sessão, você pode usar o <xref:System.Web.SessionState.SessionStateItemCollection> classe para gerenciar os objetos armazenados ou implementar o <xref:System.Web.SessionState.ISessionStateItemCollection> interface em seu próprio Gerenciador de coleção.  
+  
+ Se você implementar o <xref:System.Web.SessionState.ISessionStateItemCollection> interface, você deve criar uma classe que herda de <xref:System.Web.SessionState.SessionStateStoreProviderBase> classe para fazer uso de seu <xref:System.Web.SessionState.ISessionStateItemCollection> implementação para gerenciar as variáveis de sessão.  
+  
+ Um <xref:System.Web.SessionState.ISessionStateItemCollection> implementação também deve implementar os membros de <xref:System.Collections.ICollection> interface.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Web.SessionState.ISessionStateItemCollection> e usa o <xref:System.Collections.SortedList> classe para armazenar valores e nomes de variável de estado de sessão.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#1)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionStateItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todas as chaves e valores da coleção de estado da sessão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de <xref:System.Web.SessionState.ISessionStateItemCollection.Clear%2A> método, você deve definir o <xref:System.Web.SessionState.ISessionStateItemCollection.Dirty%2A> propriedade para `true` para indicatethatvalues no <xref:System.Web.SessionState.ISessionStateItemCollection> implementação foi modificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.SessionState.ISessionStateItemCollection.Clear%2A> método. Para obter um exemplo de uma implementação completa do <xref:System.Web.SessionState.ISessionStateItemCollection> interface, consulte o exemplo fornecido para o <xref:System.Web.SessionState.ISessionStateItemCollection> visão geral da interface.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#6)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dirty">
+      <MemberSignature Language="C#" Value="public bool Dirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Dirty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.ISessionStateItemCollection.Dirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a coleção foi marcada como alterada.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.SessionState.SessionStateItemCollection" /> conteúdo forem alterados; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.ISessionStateItemCollection.Dirty%2A> propriedade é usada pelo <xref:System.Web.SessionState.SessionStateModule> para determinar se os valores em um <xref:System.Web.SessionState.ISessionStateItemCollection> implementação foi modificada.  
+  
+ Na implementação o <xref:System.Web.SessionState.ISessionStateItemCollection> interface, você deve inicializar o <xref:System.Web.SessionState.ISessionStateItemCollection.Dirty%2A> a propriedade como `false` e defina o <xref:System.Web.SessionState.SessionStateItemCollection.Dirty%2A> propriedade `true` em implementações do <xref:System.Web.SessionState.ISessionStateItemCollection.Remove%2A>, <xref:System.Web.SessionState.ISessionStateItemCollection.RemoveAt%2A>, ou <xref:System.Web.SessionState.ISessionStateItemCollection.Clear%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação de <xref:System.Web.SessionState.ISessionStateItemCollection.Dirty%2A> propriedade. Para obter um exemplo de uma implementação completa do <xref:System.Web.SessionState.ISessionStateItemCollection> interface, consulte o exemplo fornecido para o <xref:System.Web.SessionState.ISessionStateItemCollection> visão geral da interface.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#2)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.ISessionStateItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice numérico do valor na coleção.</param>
+        <summary>Obtém ou define um valor na coleção por índice numérico.</summary>
+        <value>O valor da coleção armazenado no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.SessionState.ISessionStateItemCollection.Item%28System.Int32%29> propriedade usa um <xref:System.Collections.SortedList> para armazenar valores e nomes de variável de sessão. Para obter um exemplo de uma implementação completa do <xref:System.Web.SessionState.ISessionStateItemCollection> interface, consulte o exemplo fornecido no <xref:System.Web.SessionState.ISessionStateItemCollection> visão geral da interface.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#3)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string name] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.ISessionStateItemCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da chave do valor na coleção.</param>
+        <summary>Obtém ou define um valor na coleção por nome.</summary>
+        <value>O valor da coleção com o nome especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.SessionState.ISessionStateItemCollection.Item%28System.String%29> propriedade usa um <xref:System.Collections.SortedList> para armazenar valores e nomes de variável de sessão. Para obter um exemplo de uma implementação completa do <xref:System.Web.SessionState.ISessionStateItemCollection> interface, consulte o exemplo fornecido no <xref:System.Web.SessionState.ISessionStateItemCollection> visão geral da interface.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#4)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameObjectCollectionBase.KeysCollection Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameObjectCollectionBase/KeysCollection Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SessionState.ISessionStateItemCollection.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameObjectCollectionBase+KeysCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos nomes de variável para todos os valores armazenados na coleção.</summary>
+        <value>O <see cref="T:System.Collections.Specialized.NameObjectCollectionBase.KeysCollection" /> que contém todas as chaves da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.SessionState.ISessionStateItemCollection.Keys%2A> propriedade usa um <xref:System.Collections.SortedList> para armazenar valores e nomes de variável de sessão. Para obter um exemplo de uma implementação completa do <xref:System.Web.SessionState.ISessionStateItemCollection> interface, consulte o exemplo fornecido no <xref:System.Web.SessionState.ISessionStateItemCollection> visão geral da interface.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#5)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionStateItemCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do item a ser excluído da coleção.</param>
+        <summary>Exclui um item da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de <xref:System.Web.SessionState.ISessionStateItemCollection.Remove%2A> método, você deve definir o <xref:System.Web.SessionState.ISessionStateItemCollection.Dirty%2A> propriedade para `true` para indicatevalues no <xref:System.Web.SessionState.ISessionStateItemCollection> implementação foi modificada.  
+  
+ Se o <xref:System.Web.SessionState.ISessionStateItemCollection> implementação não contém um elemento com especificado `name`, a coleção deve permanecer inalterada e nenhuma exceção seja lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.SessionState.ISessionStateItemCollection.Remove%2A> método. Para obter um exemplo de uma implementação completa do <xref:System.Web.SessionState.ISessionStateItemCollection> interface, consulte o exemplo fornecido no <xref:System.Web.SessionState.ISessionStateItemCollection> visão geral da interface.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#7)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.SessionState.ISessionStateItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item a ser removido da coleção.</param>
+        <summary>Exclui um item em um índice especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na implementação de <xref:System.Web.SessionState.ISessionStateItemCollection.RemoveAt%2A> método, você deve definir o <xref:System.Web.SessionState.ISessionStateItemCollection.Dirty%2A> propriedade para `true` para indicatevalues no <xref:System.Web.SessionState.ISessionStateItemCollection> implementação foi modificada.  
+  
+ A implementação do <xref:System.Web.SessionState.ISessionStateItemCollection.RemoveAt%2A> método deve lançar uma <xref:System.ArgumentOutOfRangeException> exceção se `index` é menor que zero ou é maior ou igual a <xref:System.Collections.ICollection.Count%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma implementação do <xref:System.Web.SessionState.ISessionStateItemCollection.RemoveAt%2A> método. Para obter um exemplo de uma implementação completa do <xref:System.Web.SessionState.ISessionStateItemCollection> interface, consulte o exemplo fornecido no <xref:System.Web.SessionState.ISessionStateItemCollection> visão geral da interface.  
+  
+ [!code-csharp[System.Web.SessionState.ISessionStateItemCollection#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/CS/isessionstateitemcollectionsnippets.cs#8)]
+ [!code-vb[System.Web.SessionState.ISessionStateItemCollection#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SessionState.ISessionStateItemCollection/VB/isessionstateitemcollectionsnippets.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

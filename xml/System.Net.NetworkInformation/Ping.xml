@@ -1,0 +1,1876 @@
+<Type Name="Ping" FullName="System.Net.NetworkInformation.Ping">
+  <TypeSignature Language="C#" Value="public class Ping : System.ComponentModel.Component, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Ping extends System.ComponentModel.Component implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.Ping" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Ping</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.MonoTODO("IPv6 support is missing")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que um aplicativo determine se um computador remoto está acessível na rede.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os aplicativos usam o <xref:System.Net.NetworkInformation.Ping> classe para detectar se um computador remoto está acessível.  
+  
+ Topologia de rede pode determinar se <xref:System.Net.NetworkInformation.Ping> pode entrar em contato com um host remoto. A presença e a configuração de firewalls, equipamento de NAT (conversão) do endereço de rede ou proxies podem impedir <xref:System.Net.NetworkInformation.Ping> tenham êxito. Sucesso <xref:System.Net.NetworkInformation.Ping> apenas indica que o controle remoto host pode ser alcançado na rede; a presença dos serviços de nível superior (como um servidor Web) no host remoto não é garantida.  
+  
+ Essa classe fornece funcionalidade semelhante para a ferramenta de linha de comando Ping.exe. O <xref:System.Net.NetworkInformation.Ping.Send%2A> e <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos enviar uma mensagem de solicitação de eco ICMP Internet Control Message Protocol () em um computador remoto e aguarda uma mensagem de resposta de eco ICMP do computador. Para obter uma descrição detalhada das mensagens ICMP, consulte a RFC 792, disponível em [http://www.ietf.org](http://www.ietf.org/).  
+  
+ Os seguintes tipos são usados com o <xref:System.Net.NetworkInformation.Ping> de classe e são descritas em detalhes abaixo.  
+  
+|**Nome do tipo**|**Descrição**|  
+|-------------------|---------------------|  
+|<xref:System.Net.NetworkInformation.IPStatus>|Define os códigos de status que descrevem o resultado de uma mensagem de solicitação de eco ICMP.|  
+|<xref:System.Net.NetworkInformation.PingOptions>|Permite definir ou recuperar as configurações que controlam quantas vezes o pacote de solicitação podem ser encaminhadas (<xref:System.Net.NetworkInformation.PingOptions.Ttl%2A>), e se ele pode ser fragmentado (<xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> ).|  
+|<xref:System.Net.NetworkInformation.PingReply>|Contém os resultados de uma solicitação de eco ICMP.|  
+|<xref:System.Net.NetworkInformation.PingException>|Gerada se ocorrer um erro irrecuperável.|  
+|<xref:System.Net.NetworkInformation.PingCompletedEventArgs>|Contém os dados associados ao <xref:System.Net.NetworkInformation.Ping.PingCompleted> eventos que são gerados quando um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamada é concluída ou foi cancelada.|  
+|<xref:System.Net.NetworkInformation.PingCompletedEventHandler>|O representante que fornece o método de retorno de chamada invocado quando uma <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamada é concluída ou foi cancelada.|  
+  
+ O <xref:System.Net.NetworkInformation.Ping.Send%2A> e <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos retornam a resposta em uma <xref:System.Net.NetworkInformation.PingReply> objeto. O <xref:System.Net.NetworkInformation.PingReply.Status%2A?displayProperty=nameWithType> propriedade retorna um <xref:System.Net.NetworkInformation.IPStatus> valor para indicar o resultado da solicitação.  
+  
+ Ao enviar a solicitação, você deve especificar o computador remoto. Você pode fazer isso, fornecendo um host de cadeia de caracteres de nome, endereço IP no formato de cadeia de caracteres, ou um <xref:System.Net.IPAddress> objeto.  
+  
+ Você também pode especificar qualquer um dos seguintes tipos de informações:  
+  
+-   Dados para acompanhar a solicitação. Especificando `buffer` permite que você aprenda a quantidade de tempo necessário para um pacote de um determinado tamanho transmitidos de e para o host remoto e a unidade de transmissão máxima do caminho da rede. (Consulte o <xref:System.Net.NetworkInformation.Ping.Send%2A> ou <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecargas que usam um `buffer` parâmetro.)  
+  
+-   Se o pacote de eco ICMP pode ser fragmentado em trânsito. (Consulte o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade e o <xref:System.Net.NetworkInformation.Ping.Send%2A> ou <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecargas que usam um `options` parâmetro.)  
+  
+-   Quantas vezes roteamento nós, como roteadores ou gateways, pode encaminhar o pacote antes de atingir o computador de destino ou é descartado. (Consulte <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> e <xref:System.Net.NetworkInformation.Ping.Send%2A> ou <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecargas que usam um `options` parâmetro.)  
+  
+-   O limite de tempo no qual a resposta deve ser recebida. (Consulte o <xref:System.Net.NetworkInformation.Ping.Send%2A> ou <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecargas que usam um `timeout` parâmetro.  
+  
+ O <xref:System.Net.NetworkInformation.Ping> classe oferece métodos síncronos e assíncronos para enviar a solicitação. Se seu aplicativo deve bloquear enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas. Se seu aplicativo não deve bloquear, use o assíncrona <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos. Uma chamada para <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> é executado em seu próprio thread automaticamente alocada do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Os aplicativos usam um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para especificar o método é chamado para <xref:System.Net.NetworkInformation.Ping.PingCompleted> eventos. Você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+ Você não pode usar a mesma instância do <xref:System.Net.NetworkInformation.Ping> classe para gerar várias solicitações simultâneas de eco ICMP. Chamando <xref:System.Net.NetworkInformation.Ping.Send%2A> enquanto um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamada está em andamento ou chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> várias vezes antes de todas as chamadas anteriores concluiu faz com que um <xref:System.InvalidOperationException>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Net.NetworkInformation.Ping> classe de forma síncrona.  
+  
+ [!code-cpp[NCLPingSync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingSync/CPP/syncping.cpp#1)]
+ [!code-csharp[NCLPingSync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingSync/CS/syncping.cs#1)]  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Net.NetworkInformation.Ping> classe de forma assíncrona.  
+  
+ [!code-cpp[NCLPingASync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingAsync/CPP/asyncping.cpp#1)]
+ [!code-csharp[NCLPingASync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingAsync/CS/asyncping.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ping ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.Ping" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Net.NetworkInformation.Ping> instância. O exemplo completo está disponível na <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ [!code-cpp[NCLPingAsync#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingAsync/CPP/asyncping.cpp#2)]
+ [!code-csharp[NCLPingAsync#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingAsync/CS/asyncping.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Net.NetworkInformation.Ping" /> de objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.ComponentModel.Component.Finalize%2A>. O público `Dispose()` método invoca protegido <xref:System.Net.NetworkInformation.Ping.Dispose%2A> método com o `disposing` parâmetro definido como `true`. <xref:System.ComponentModel.Component.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Net.NetworkInformation.Ping> referências de objeto. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPingCompleted">
+      <MemberSignature Language="C#" Value="protected void OnPingCompleted (System.Net.NetworkInformation.PingCompletedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnPingCompleted(class System.Net.NetworkInformation.PingCompletedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.OnPingCompleted(System.Net.NetworkInformation.PingCompletedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Net.NetworkInformation.PingCompletedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.Net.NetworkInformation.PingCompletedEventArgs" /> que contém dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Net.NetworkInformation.Ping.PingCompleted" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que herdam o <xref:System.Net.NetworkInformation.Ping> classe pode substituir este método para executar tarefas adicionais, como registrar em log os dados contidos no `e` parâmetro.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Net.NetworkInformation.Ping.OnPingCompleted%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Net.NetworkInformation.Ping.OnPingCompleted(System.Net.NetworkInformation.PingCompletedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Net.NetworkInformation.Ping.OnPingCompleted(System.Net.NetworkInformation.PingCompletedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PingCompleted">
+      <MemberSignature Language="C#" Value="public event System.Net.NetworkInformation.PingCompletedEventHandler PingCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Net.NetworkInformation.PingCompletedEventHandler PingCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Net.NetworkInformation.Ping.PingCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação assíncrona envia uma mensagem de eco do protocolo ICMP e recebe a mensagem de resposta de eco do protocolo ICMP correspondente concluída ou cancelada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os aplicativos usam o <xref:System.Net.NetworkInformation.Ping.PingCompleted> eventos para obter informações sobre o status de conclusão e os dados coletados por uma chamada para uma da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos. O <xref:System.Net.NetworkInformation.PingCompletedEventHandler> representante fornece a chamada de retorno do método invocado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera esse evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como especificar um método de retorno de chamada para o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. O exemplo completo está disponível na <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ [!code-cpp[NCLPingAsync#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingAsync/CPP/asyncping.cpp#2)]
+ [!code-csharp[NCLPingAsync#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingAsync/CS/asyncping.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Send">
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Tentativas de enviar uma mensagem de eco ICMP Internet Control Message Protocol () para um computador remoto e receber um ICMP correspondente ecoar a mensagem de resposta do computador remoto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O endereço IP retornado por qualquer uma da <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecargas podem se originar de um computador remoto mal-intencionado. Não se conecte ao computador remoto usando isso. Use o DNS para determinar o endereço IP do computador ao qual você deseja se conectar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (System.Net.IPAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(class System.Net.IPAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco do ICMP correspondente desse computador.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem tiver sido recebida ou descreve o motivo da falha, se nenhuma mensagem tiver sido recebida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método envia para o host especificado por `address` um 32 <xref:System.Byte> buffer de dados com a mensagem de eco ICMP. O método espera cinco segundos para uma mensagem de resposta de eco ICMP. Se ele não receber uma resposta no momento, o método retorna e <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>. O pacote ou fragmentos de pacotes (se fragmentado) podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método.  
+  
+ [!code-cpp[NCLPingSampler#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#3)]
+ [!code-csharp[NCLPingSampler#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (string hostNameOrAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(string hostNameOrAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem foi recebida, ou fornece o motivo da falha, se nenhuma mensagem foi recebida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método envia um 32 <xref:System.Byte> buffer de dados com a mensagem de eco ICMP. O método espera cinco segundos para uma mensagem de resposta de eco ICMP. Se ele não receber uma resposta no momento, o método retorna e <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>. O pacote ou fragmentos de pacotes (se fragmentado) podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método.  
+  
+ [!code-cpp[NCLPingSampler#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#2)]
+ [!code-csharp[NCLPingSampler#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (System.Net.IPAddress address, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(class System.Net.IPAddress address, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.Net.IPAddress,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Esse método permite que você especifique um valor de tempo limite para a operação.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem foi recebida ou fornece o motivo da falha, se nenhuma mensagem foi recebida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado no `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ O pacote ou fragmentos de pacotes podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que demonstra a chamar um <xref:System.Net.NetworkInformation.Ping.Send%2A> método, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (string hostNameOrAddress, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(string hostNameOrAddress, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Esse método permite que você especifique um valor de tempo limite para a operação.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem foi recebida ou fornece o motivo da falha, se nenhuma mensagem foi recebida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado no `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>. O pacote ou fragmentos de pacotes (se fragmentado) podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que demonstra a chamar um <xref:System.Net.NetworkInformation.Ping.Send%2A> método, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (System.Net.IPAddress address, int timeout, byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(class System.Net.IPAddress address, int32 timeout, unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.Net.IPAddress,System.Int32,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem foi recebida, ou fornece o motivo da falha, se nenhuma mensagem foi recebida. O método retornará <see cref="F:System.Net.NetworkInformation.IPStatus.PacketTooBig" /> se o pacote ultrapassar a MTU (Unidade Máxima de Transmissão) máxima.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado no `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ O pacote ou fragmentos de pacotes podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método.  
+  
+ [!code-cpp[NCLPingSampler#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#6)]
+ [!code-csharp[NCLPingSampler#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" /> ou o tamanho de <paramref name="buffer" /> é maior que 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (string hostNameOrAddress, int timeout, byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(string hostNameOrAddress, int32 timeout, unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.String,System.Int32,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem foi recebida ou fornece o motivo da falha, se nenhuma mensagem foi recebida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado no `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ O pacote ou fragmentos de pacotes podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que demonstra como chamar um <xref:System.Net.NetworkInformation.Ping.Send%2A> sobrecarga, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" /> ou o tamanho de <paramref name="buffer" /> é maior que 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (System.Net.IPAddress address, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(class System.Net.IPAddress address, int32 timeout, unsigned int8[] buffer, class System.Net.NetworkInformation.PingOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.Net.IPAddress,System.Int32,System.Byte[],System.Net.NetworkInformation.PingOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="options" Type="System.Net.NetworkInformation.PingOptions" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="options">Um <see cref="T:System.Net.NetworkInformation.PingOptions" /> objeto usado para controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco de ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação e controle valores de fragmentação e vida útil para o pacote de mensagem de eco de ICMP.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem foi recebida, ou fornece o motivo da falha, se nenhuma mensagem foi recebida. O método retornará <see cref="F:System.Net.NetworkInformation.IPStatus.PacketTooBig" /> se o pacote ultrapassar a MTU (Unidade Máxima de Transmissão) máxima.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Se o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é de propriedade `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ Use o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para especificar o número máximo de vezes que a mensagem de eco ICMP pode ser enviada antes de alcançar seu destino. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método.  
+  
+ [!code-cpp[NCLPingSampler#5](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#5)]
+ [!code-csharp[NCLPingSampler#5](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" /> ou o tamanho de <paramref name="buffer" /> é maior que 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkInformation.PingReply Send (string hostNameOrAddress, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Net.NetworkInformation.PingReply Send(string hostNameOrAddress, int32 timeout, unsigned int8[] buffer, class System.Net.NetworkInformation.PingOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.Send(System.String,System.Int32,System.Byte[],System.Net.NetworkInformation.PingOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PingReply</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="options" Type="System.Net.NetworkInformation.PingOptions" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="options">Um <see cref="T:System.Net.NetworkInformation.PingOptions" /> objeto usado para controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação e a fragmentação de controle e valores de vida útil do pacote ICMP.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.PingReply" /> que fornece informações sobre a mensagem de resposta de eco do ICMP, se uma mensagem foi recebida ou fornece o motivo da falha, se nenhuma mensagem foi recebida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Se o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é de propriedade `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ Use o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para especificar o número máximo de vezes que a mensagem de eco ICMP pode ser enviada antes de alcançar seu destino. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método.  
+  
+ [!code-cpp[NCLPingSampler#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#4)]
+ [!code-csharp[NCLPingSampler#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres de tamanho zero.  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" /> ou o tamanho de <paramref name="buffer" /> é maior que 65.500 bytes.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SendAsync">
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Tentativas de forma assíncrona enviar uma mensagem de eco ICMP Internet Control Message Protocol () para um computador e receber uma mensagem de resposta de eco ICMP correspondente do computador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses métodos não causam o thread principal de seu aplicativo bloquear. Se você deseja bloquear ao aguardar a mensagem de resposta de eco ICMP, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos.  
+  
+> [!NOTE]
+>  O endereço IP retornado por qualquer uma da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos podem ser obtidos de um computador remoto mal-intencionado. Não se conecte ao computador remoto usando isso. Use o DNS para determinar o endereço IP do computador ao qual você deseja se conectar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (System.Net.IPAddress address, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(class System.Net.IPAddress address, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.Net.IPAddress,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta enviar assincronamente uma mensagem de eco do protocolo ICMP para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco do ICMP correspondente desse computador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada para esse método é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento, você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+> [!NOTE]
+>  Se seu aplicativo deve bloquear enquanto aguarda uma resposta, use uma da <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Esse método envia um 32 <xref:System.Byte> buffer de dados com a mensagem de eco ICMP. O método espera cinco segundos para uma mensagem de resposta de eco ICMP. Se ele não receber uma resposta no momento, o método retorna e <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ O pacote ou fragmentos de pacotes podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código que demonstra chamar um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para o <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> método está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (string hostNameOrAddress, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(string hostNameOrAddress, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador de maneira assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada para esse método é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento, você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+> [!NOTE]
+>  Se seu aplicativo deve bloquear enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Esse método envia um 32 <xref:System.Byte> buffer de dados com a mensagem de eco ICMP. O método espera cinco segundos para uma mensagem de resposta de eco ICMP. Se não receber uma resposta no momento o método retornará e <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ O pacote ou fragmentos de pacotes podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código que demonstra a chamada a <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="M:System.Net.NetworkInformation.Ping.SendAsync(System.String,System.Object)" /> método está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          O <paramref name="hostNameOrAddress" /> não pôde ser resolvido para um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (System.Net.IPAddress address, int timeout, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(class System.Net.IPAddress address, int32 timeout, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.Net.IPAddress,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta enviar assincronamente uma mensagem de eco do protocolo ICMP para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco do ICMP correspondente desse computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Os aplicativos usam um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento. Você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+ Se seu aplicativo deve bloquear enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>. O pacote ou fragmentos de pacotes (se fragmentado) podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código que demonstra chamar um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="M:System.Net.NetworkInformation.Ping.SendAsync(System.Net.IPAddress,System.Int32,System.Byte[],System.Object)" /> método está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (string hostNameOrAddress, int timeout, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(string hostNameOrAddress, int32 timeout, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.String,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta enviar uma mensagem de eco do protocolo ICMP para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador de maneira assíncrona. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Os aplicativos usam um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento. Você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+ Se seu aplicativo deve bloquear enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>. O pacote ou fragmentos de pacotes (se fragmentado) podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código que demonstra a chamada a <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="hostNameOrAddress" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          O <paramref name="hostNameOrAddress" /> não pôde ser resolvido para um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (System.Net.IPAddress address, int timeout, byte[] buffer, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(class System.Net.IPAddress address, int32 timeout, unsigned int8[] buffer, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.Net.IPAddress,System.Int32,System.Byte[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta de forma assíncrona enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento, você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+> [!NOTE]
+>  Se seu aplicativo bloqueado enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>. O pacote ou fragmentos de pacotes (se fragmentado) podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo de código que demonstra chamar um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (string hostNameOrAddress, int timeout, byte[] buffer, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(string hostNameOrAddress, int32 timeout, unsigned int8[] buffer, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.String,System.Int32,System.Byte[],System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta de forma assíncrona enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Os aplicativos usam um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento. Você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto contendo um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+ Se seu aplicativo deve bloquear enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Essa sobrecarga usa configurações padrão de fragmentação de pacote e o encaminhamento de pacotes. O pacote que contém a mensagem de eco ICMP pode ser fragmentado em trânsito se o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos. Para evitar a fragmentação, use um do <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> métodos que leva um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> propriedade `true`. Quando <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>. O pacote ou fragmentos de pacotes (se fragmentado) podem ser encaminhados por nós roteamentos 128 vezes antes de ser descartado. Para alterar essa configuração, use um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga que utiliza um `options` parâmetro e defina o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para o valor desejado. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar um <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> sobrecarga, consulte o <xref:System.Net.NetworkInformation.Ping> visão geral da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="hostNameOrAddress" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          O <paramref name="hostNameOrAddress" /> não pôde ser resolvido para um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (System.Net.IPAddress address, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(class System.Net.IPAddress address, int32 timeout, unsigned int8[] buffer, class System.Net.NetworkInformation.PingOptions options, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.Net.IPAddress,System.Int32,System.Byte[],System.Net.NetworkInformation.PingOptions,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="options" Type="System.Net.NetworkInformation.PingOptions" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.Net.IPAddress" /> que identifica o computador de destino da mensagem de eco ICMP.</param>
+        <param name="timeout">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="options">Um <see cref="T:System.Net.NetworkInformation.PingOptions" /> objeto usado para controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta de forma assíncrona enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação e controle valores de fragmentação e vida útil para o pacote de mensagem de eco de ICMP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Os aplicativos usam um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento. Você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+ Se seu aplicativo bloqueado enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Se o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é de propriedade `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ Use o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para especificar o número máximo de vezes que a mensagem de eco ICMP pode ser enviada antes de alcançar seu destino. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método. Para uma implementação do método de retorno de chamada, consulte o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> seção de exemplo de sobrecarga de método.  
+  
+ O exemplo de código a seguir requer os seguintes namespaces:  
+  
+ [!code-cpp[NCLPingSampler#0](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#0)]
+ [!code-csharp[NCLPingSampler#0](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#0)]  
+  
+ O exemplo de código a seguir envia uma mensagem de eco ICMP de forma assíncrona.  
+  
+ [!code-cpp[NCLPingSampler#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLPingSampler/CPP/pingtest.cpp#7)]
+ [!code-csharp[NCLPingSampler#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLPingSampler/CS/pingtest.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="public void SendAsync (string hostNameOrAddress, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options, object userToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsync(string hostNameOrAddress, int32 timeout, unsigned int8[] buffer, class System.Net.NetworkInformation.PingOptions options, object userToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsync(System.String,System.Int32,System.Byte[],System.Net.NetworkInformation.PingOptions,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="options" Type="System.Net.NetworkInformation.PingOptions" />
+        <Parameter Name="userToken" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">Um <see cref="T:System.String" /> que identifica o computador de destino para a mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="buffer">Um valor <see cref="T:System.Int32" /> que especifica o número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="options">Um <see cref="T:System.Net.NetworkInformation.PingOptions" /> objeto usado para controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</param>
+        <param name="userToken">Um objeto passado para o método invocado quando a operação assíncrona é concluída.</param>
+        <summary>Tenta de forma assíncrona enviar uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e receber uma mensagem de resposta de eco do ICMP correspondente do computador. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação e a fragmentação de controle e valores de vida útil do pacote ICMP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método envia a mensagem de eco de forma assíncrona e, quando a operação for concluída (com êxito ou não), retorna o status para o seu aplicativo. Chamar o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> método quando seu aplicativo não deve bloquear. Cada chamada é executado em um thread separado que automaticamente é alocado do pool de threads. Quando a operação assíncrona é concluída, ela gera o <xref:System.Net.NetworkInformation.Ping.PingCompleted> evento. Os aplicativos usam um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para especificar o método chamado quando <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> gera o evento. Você deve adicionar um <xref:System.Net.NetworkInformation.PingCompletedEventHandler> delegado para o evento antes de chamar <xref:System.Net.NetworkInformation.Ping.SendAsync%2A>. Método do representante recebe um <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto que contém um <xref:System.Net.NetworkInformation.PingReply> objeto que descreve o resultado da <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar. O <xref:System.Net.NetworkInformation.PingCompletedEventArgs> objeto herda o <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Esta propriedade contém o `userToken` objeto passado para o <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> chamar.  
+  
+ Se seu aplicativo deve bloquear enquanto aguarda uma resposta, use o <xref:System.Net.NetworkInformation.Ping.Send%2A> métodos, esses métodos são síncronas.  
+  
+ Se a mensagem de resposta de eco ICMP não for recebida dentro do tempo especificado o `timeout` parâmetro, o eco ICMP falha e o <xref:System.Net.NetworkInformation.PingReply.Status%2A> está definida como <xref:System.Net.NetworkInformation.IPStatus.TimedOut>.  
+  
+> [!NOTE]
+>  Ao especificar um número muito pequeno para `timeout`, a resposta de Ping pode ser recebida mesmo se `timeout` milissegundos decorridos.  
+  
+ Se o <xref:System.Net.NetworkInformation.PingOptions.DontFragment%2A> é de propriedade `true` e o tamanho total do pacote excede o tamanho máximo de pacote que pode ser transmitido por um de nós de roteamento entre os computadores locais e remotos, a solicitação de eco ICMP falha. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.PacketTooBig>.  
+  
+ Use o <xref:System.Net.NetworkInformation.PingOptions.Ttl%2A> propriedade para especificar o número máximo de vezes que a mensagem de eco ICMP pode ser enviada antes de alcançar seu destino. Se o pacote não chegar ao seu destino depois que está sendo encaminhado o número de vezes especificado, o pacote será descartado e falha a solicitação de eco ICMP. Quando isso acontece, o <xref:System.Net.NetworkInformation.PingReply.Status%2A> é definido como <xref:System.Net.NetworkInformation.IPStatus.TtlExpired>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar esse método.  
+  
+ [!code-cpp[NCLPingAsync#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclPingAsync/CPP/asyncping.cpp#1)]
+ [!code-csharp[NCLPingAsync#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclPingAsync/CS/asyncping.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="hostNameOrAddress" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendAsync" /> está em andamento.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="address" /> é um endereço IPv6 e o computador local está executando um sistema operacional anterior ao Windows 2000.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          O <paramref name="hostNameOrAddress" /> não pôde ser resolvido para um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="buffer" /> excede 65.500 bytes.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">Para enviar uma mensagem de eco ICMP.  
+  
+ Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Ping" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsyncCancel">
+      <MemberSignature Language="C#" Value="public void SendAsyncCancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendAsyncCancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendAsyncCancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela todas as solicitações assíncronas pendentes para enviar uma mensagem de eco ICMP Internet Control Message Protocol () e recebe uma mensagem de resposta de eco ICMP correspondente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame esse método para encerrar todas as chamadas para <xref:System.Net.NetworkInformation.Ping.SendAsync%2A> que não foram concluídos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (System.Net.IPAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(class System.Net.IPAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.Net.IPAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um endereço IP que identifica o computador de destino para a mensagem de eco do ICMP.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e recebe uma mensagem de resposta de eco do ICMP correspondente do computador como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendPingAsync" /> está em andamento.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (string hostNameOrAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(string hostNameOrAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O computador de destino da mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e recebe uma mensagem de resposta de eco do ICMP do computador como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (System.Net.IPAddress address, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(class System.Net.IPAddress address, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.Net.IPAddress,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um endereço IP que identifica o computador de destino para a mensagem de eco do ICMP.</param>
+        <param name="timeout">O número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e recebe uma mensagem de resposta de eco do ICMP correspondente do computador como uma operação assíncrona. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (string hostNameOrAddress, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(string hostNameOrAddress, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O computador de destino da mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">O número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e recebe uma mensagem de resposta de eco do ICMP do computador como uma operação assíncrona. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (System.Net.IPAddress address, int timeout, byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(class System.Net.IPAddress address, int32 timeout, unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.Net.IPAddress,System.Int32,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um endereço IP que identifica o computador de destino para a mensagem de eco do ICMP.</param>
+        <param name="timeout">O número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e recebe uma mensagem de resposta de eco do ICMP correspondente do computador como uma operação assíncrona. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação e um buffer a ser usado para enviar e receber.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendPingAsync" /> está em andamento.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho de <paramref name="buffer" /> excede 65.500 bytes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (string hostNameOrAddress, int timeout, byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(string hostNameOrAddress, int32 timeout, unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.String,System.Int32,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O computador de destino da mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">O número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e recebe uma mensagem de resposta de eco do ICMP do computador como uma operação assíncrona. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação e um buffer a ser usado para enviar e receber.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (System.Net.IPAddress address, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(class System.Net.IPAddress address, int32 timeout, unsigned int8[] buffer, class System.Net.NetworkInformation.PingOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.Net.IPAddress,System.Int32,System.Byte[],System.Net.NetworkInformation.PingOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Net.IPAddress" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="options" Type="System.Net.NetworkInformation.PingOptions" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um endereço IP que identifica o computador de destino para a mensagem de eco do ICMP.</param>
+        <param name="timeout">O número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="options">Um <see cref="T:System.Net.NetworkInformation.PingOptions" /> objeto usado para controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador que tem o <see cref="T:System.Net.IPAddress" /> especificado e recebe uma mensagem de resposta de eco do ICMP correspondente do computador como uma operação assíncrona. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação, um buffer a ser usado para enviar e receber e controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="timeout" /> é menor que zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma chamada para <see cref="Overload:System.Net.NetworkInformation.Ping.SendPingAsync" /> está em andamento.</exception>
+        <exception cref="T:System.Net.NetworkInformation.PingException">Uma exceção foi gerada durante o envio ou recebimento de mensagens do ICMP. Consulte a exceção interna para obter a exceção exata gerada.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">
+          <paramref name="address" /> não é um endereço IP válido.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi descartado.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho de <paramref name="buffer" /> excede 65.500 bytes.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendPingAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt; SendPingAsync (string hostNameOrAddress, int timeout, byte[] buffer, System.Net.NetworkInformation.PingOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.PingReply&gt; SendPingAsync(string hostNameOrAddress, int32 timeout, unsigned int8[] buffer, class System.Net.NetworkInformation.PingOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.SendPingAsync(System.String,System.Int32,System.Byte[],System.Net.NetworkInformation.PingOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Ping</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.PingReply&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostNameOrAddress" Type="System.String" />
+        <Parameter Name="timeout" Type="System.Int32" />
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="options" Type="System.Net.NetworkInformation.PingOptions" />
+      </Parameters>
+      <Docs>
+        <param name="hostNameOrAddress">O computador de destino da mensagem de eco do ICMP. O valor especificado para esse parâmetro pode ser um nome do host ou uma representação de cadeia de caracteres de um endereço IP.</param>
+        <param name="timeout">O número máximo de milissegundos (após o envio da mensagem de eco) de espera pela mensagem de resposta de eco de ICMP.</param>
+        <param name="buffer">Uma matriz <see cref="T:System.Byte" /> que contém dados a serem enviados com a mensagem de eco de ICMP e retornados na mensagem de resposta de eco de ICMP. A matriz não pode conter mais de 65.500 bytes.</param>
+        <param name="options">Um <see cref="T:System.Net.NetworkInformation.PingOptions" /> objeto usado para controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</param>
+        <summary>Envia uma mensagem de eco do protocolo ICMP com o buffer de dados especificado para o computador especificado e recebe uma mensagem de resposta de eco do ICMP do computador como uma operação assíncrona. Essa sobrecarga permite que você especifique um valor de tempo limite para a operação, um buffer a ser usado para enviar e receber e controlar a fragmentação e valores de tempo de vida para o pacote de mensagens de eco ICMP.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa operação não será bloqueada. Retornado <xref:System.Threading.Tasks.Task%601>> objeto será concluída depois que o pacote ICMP foi enviado e a resposta foi recebida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IDisposable.Dispose">
+      <MemberSignature Language="C#" Value="void IDisposable.Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.IDisposable.Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.Ping.System#IDisposable#Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

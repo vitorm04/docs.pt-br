@@ -1,0 +1,393 @@
+<Type Name="Control+ControlAccessibleObject" FullName="System.Windows.Forms.Control+ControlAccessibleObject">
+  <TypeSignature Language="C#" Value="public class Control.ControlAccessibleObject : System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit Control/ControlAccessibleObject extends System.Windows.Forms.AccessibleObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Control.ControlAccessibleObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.AccessibleObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre um controle que pode ser usado por um aplicativo de acessibilidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Windows Forms tem suporte de acessibilidade interno e fornece informações sobre o aplicativo que permite trabalhar com aplicativos cliente de acessibilidade. São exemplos de aplicativos cliente de acessibilidade: tela ampliador e utilitários de revisor, utilitários de entrada de voz, na tela teclados, dispositivos de entrada alternativos e os utilitários de aprimoramento de teclado. Às vezes, você deve fornecer informações adicionais para aplicativos cliente de acessibilidade. Há duas maneiras de fornecer essas informações adicionais. Para fornecer informações de acessibilidade limitada para controles existentes, defina o controle <xref:System.Windows.Forms.Control.AccessibleName%2A>, <xref:System.Windows.Forms.Control.AccessibleDescription%2A>, <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A>, e <xref:System.Windows.Forms.Control.AccessibleRole%2A> valores de propriedade, que serão relatados para aplicativos cliente de acessibilidade. Como alternativa, se você precisar de mais informações sobre acessibilidade para ser incluído no seu controle, você pode escrever sua própria classe derivando de <xref:System.Windows.Forms.AccessibleObject> ou <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes. Por exemplo, se você estiver escrevendo seu próprio controle que não é derivado de controles comuns ou requerem operações como teste de clique dentro do controle, você deve criar um <xref:System.Windows.Forms.Control.ControlAccessibleObject> para seu controle chamando o <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método.  
+  
+> [!NOTE]
+>  Se você substituir o <xref:System.Windows.Forms.AccessibleObject.GetChild%2A?displayProperty=nameWithType> método, você também deve substituir o <xref:System.Windows.Forms.AccessibleObject.GetChildCount%2A?displayProperty=nameWithType> método. Para obter ou definir o <xref:System.Windows.Forms.Control.AccessibilityObject%2A> propriedade, você deve adicionar uma referência para o `Accessibility` assembly instalado com o .NET Framework.  
+  
+ Para obter mais informações sobre objetos acessíveis, consulte a seção de acessibilidade ativa da biblioteca MSDN.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um controle de caixa de seleção que deriva de <xref:System.Windows.Forms.CheckBox> classe e cria um personalizado <xref:System.Windows.Forms.Control.ControlAccessibleObject> para a classe derivada usar. A classe derivada, `MyCheckBox`, tem um <xref:System.Windows.Forms.CheckBox.Appearance%2A> de <xref:System.Windows.Forms.Appearance.Button> por padrão, então ele aparece como um botão de alternância. Derivada <xref:System.Windows.Forms.Control.ControlAccessibleObject> classe `MyCheckBoxControlAccessibleObject`, substitui três propriedades para considerar a diferença de aparência.  
+  
+ [!code-cpp[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/CPP/controlaccessibility.cpp#1)]
+ [!code-csharp[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/CS/controlaccessibility.cs#1)]
+ [!code-vb[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/VB/controlaccessibility.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ControlAccessibleObject (System.Windows.Forms.Control ownerControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Control ownerControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Control.ControlAccessibleObject.#ctor(System.Windows.Forms.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="ownerControl">O <see cref="T:System.Windows.Forms.Control" /> que tem o <see cref="T:System.Windows.Forms.Control.ControlAccessibleObject" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Control.ControlAccessibleObject" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um controle de caixa de seleção que deriva de <xref:System.Windows.Forms.CheckBox> classe e cria um personalizado <xref:System.Windows.Forms.Control.ControlAccessibleObject> para a classe derivada usar. A classe derivada, `MyCheckBox`, tem um <xref:System.Windows.Forms.CheckBox.Appearance%2A> de <xref:System.Windows.Forms.Appearance.Button> por padrão, então ele aparece como um botão de alternância. Derivada <xref:System.Windows.Forms.Control.ControlAccessibleObject> classe `MyCheckBoxControlAccessibleObject`, substitui três propriedades para considerar a diferença de aparência.  
+  
+ [!code-cpp[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/CPP/controlaccessibility.cpp#1)]
+ [!code-csharp[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/CS/controlaccessibility.cs#1)]
+ [!code-vb[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/VB/controlaccessibility.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de parâmetro <paramref name="ownerControl" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAction">
+      <MemberSignature Language="C#" Value="public override string DefaultAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.DefaultAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que descreve a ação padrão do objeto. Nem todos os objetos têm uma ação padrão.</summary>
+        <value>Uma descrição da ação padrão para um objeto, ou <see langword="null" /> se este objeto não tem nenhuma ação padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public override string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição de <see cref="T:System.Windows.Forms.Control.ControlAccessibleObject" />.</summary>
+        <value>Uma cadeia de caracteres que descreve o <see cref="T:System.Windows.Forms.Control.ControlAccessibleObject" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHelpTopic">
+      <MemberSignature Language="C#" Value="public override int GetHelpTopic (out string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHelpTopic([out] string&amp; fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Control.ControlAccessibleObject.GetHelpTopic(System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Quando este método retorna, contém uma cadeia de caracteres que representa o caminho para o arquivo de ajuda associado a este objeto acessível. Este parâmetro é passado não inicializado.</param>
+        <summary>Obtém um identificador para um tópico da Ajuda e o caminho para o arquivo de ajuda associado a este objeto acessível.</summary>
+        <returns>Um identificador para um tópico da Ajuda, ou -1 se não houver nenhum tópico da Ajuda. No retorno, o <paramref name="fileName" /> parâmetro conterá o caminho para o arquivo de ajuda associado a este objeto acessível, ou <see langword="null" /> se não houver nenhum <see langword="IAccessible" /> interface especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Passe o identificador para o arquivo WinHelp especificado pelo `fileName` parâmetro para identificar o tópico da Ajuda desejado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador do objeto acessível.</summary>
+        <value>Um <see cref="T:System.IntPtr" /> que representa o identificador do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.Windows.Forms.Control.ControlAccessibleObject.Handle%2A> propriedade para o <xref:System.Windows.Forms.Control.ControlAccessibleObject> é igual ao <xref:System.Windows.Forms.Control.Handle%2A> propriedade do <xref:System.Windows.Forms.Control> está associado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Help">
+      <MemberSignature Language="C#" Value="public override string Help { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Help" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.Help" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição do que o objeto não ou como o objeto é usado.</summary>
+        <value>A descrição do que o objeto não ou como o objeto é usado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyboardShortcut">
+      <MemberSignature Language="C#" Value="public override string KeyboardShortcut { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyboardShortcut" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.KeyboardShortcut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a tecla de atalho do objeto ou a chave de acesso para um objeto acessível.</summary>
+        <value>A tecla de atalho do objeto ou a chave de acesso para um objeto acessível, ou <see langword="null" /> se não houver nenhuma tecla de atalho associada ao objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os objetos que têm uma tecla de atalho ou tecla de acesso devem dar suporte a essa propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto acessível.</summary>
+        <value>O nome do objeto acessível.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyClients">
+      <MemberSignature Language="C#" Value="public void NotifyClients (System.Windows.Forms.AccessibleEvents accEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyClients(valuetype System.Windows.Forms.AccessibleEvents accEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients(System.Windows.Forms.AccessibleEvents)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accEvent" Type="System.Windows.Forms.AccessibleEvents" />
+      </Parameters>
+      <Docs>
+        <param name="accEvent">O <see cref="T:System.Windows.Forms.AccessibleEvents" /> para notificar os aplicativos cliente de acessibilidade.</param>
+        <summary>Notifica os aplicativos de cliente de acessibilidade do <see cref="T:System.Windows.Forms.AccessibleEvents" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients%2A> método para cada <xref:System.Windows.Forms.AccessibleEvents> serão notificados de aplicativos de cliente de acessibilidade do objeto. O <xref:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients%2A> método normalmente é chamado quando uma propriedade é definida ou de dentro um manipulador de eventos. Por exemplo, você pode chamar o <xref:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients%2A> método e passar um <xref:System.Windows.Forms.AccessibleEvents> valor `Hide` de dentro do manipulador de eventos para o <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyClients">
+      <MemberSignature Language="C#" Value="public void NotifyClients (System.Windows.Forms.AccessibleEvents accEvent, int childID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyClients(valuetype System.Windows.Forms.AccessibleEvents accEvent, int32 childID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients(System.Windows.Forms.AccessibleEvents,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accEvent" Type="System.Windows.Forms.AccessibleEvents" />
+        <Parameter Name="childID" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="accEvent">O <see cref="T:System.Windows.Forms.AccessibleEvents" /> para notificar os aplicativos cliente de acessibilidade.</param>
+        <param name="childID">O <see cref="T:System.Windows.Forms.Control" /> filho para notificar o evento acessível.</param>
+        <summary>Notifica os aplicativos cliente de acessibilidade do <see cref="T:System.Windows.Forms.AccessibleEvents" /> especificado para o controle filho especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve chamar o <xref:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients%2A> método para cada <xref:System.Windows.Forms.AccessibleEvents> serão notificados de aplicativos de cliente de acessibilidade do objeto. O <xref:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients%2A> método normalmente é chamado quando uma propriedade é definida ou de dentro um manipulador de eventos. Por exemplo, você pode chamar o <xref:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients%2A> método e passar um <xref:System.Windows.Forms.AccessibleEvents> valor `Hide` de dentro de dentro do manipulador de eventos para o <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyClients">
+      <MemberSignature Language="C#" Value="public void NotifyClients (System.Windows.Forms.AccessibleEvents accEvent, int objectID, int childID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NotifyClients(valuetype System.Windows.Forms.AccessibleEvents accEvent, int32 objectID, int32 childID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Control.ControlAccessibleObject.NotifyClients(System.Windows.Forms.AccessibleEvents,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accEvent" Type="System.Windows.Forms.AccessibleEvents" />
+        <Parameter Name="objectID" Type="System.Int32" />
+        <Parameter Name="childID" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="accEvent">O <see cref="T:System.Windows.Forms.AccessibleEvents" /> para notificar os aplicativos cliente de acessibilidade.</param>
+        <param name="objectID">O identificador do <see cref="T:System.Windows.Forms.AccessibleObject" />.</param>
+        <param name="childID">O <see cref="T:System.Windows.Forms.Control" /> filho para notificar o evento acessível.</param>
+        <summary>Notifica os aplicativos cliente de acessibilidade do <see cref="T:System.Windows.Forms.AccessibleEvents" /> para o controle filho especificado, dando a identificação do <see cref="T:System.Windows.Forms.AccessibleObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o proprietário do objeto acessível.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Control" /> que tem o <see cref="T:System.Windows.Forms.Control.ControlAccessibleObject" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria um controle de caixa de seleção que deriva de <xref:System.Windows.Forms.CheckBox> classe e cria um personalizado <xref:System.Windows.Forms.Control.ControlAccessibleObject> para a classe derivada usar. A classe derivada, `MyCheckBox`, tem um <xref:System.Windows.Forms.CheckBox.Appearance%2A> de <xref:System.Windows.Forms.Appearance.Button> por padrão, então ele aparece como um botão de alternância. Derivada <xref:System.Windows.Forms.Control.ControlAccessibleObject> classe `MyCheckBoxControlAccessibleObject`, substitui três propriedades para considerar a diferença de aparência.  
+  
+ [!code-cpp[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/CPP/controlaccessibility.cpp#1)]
+ [!code-csharp[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/CS/controlaccessibility.cs#1)]
+ [!code-vb[Windows.Forms.Control.ControlAccessibleObject#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Windows.Forms.Control.ControlAccessibleObject/VB/controlaccessibility.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleObject Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject Parent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o pai de um objeto acessível.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> que representa o pai de um objeto acessível, ou <see langword="null" /> se não houver nenhum objeto pai.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.AccessibleRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AccessibleRole Role" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Control.ControlAccessibleObject.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a função deste objeto acessível.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.AccessibleRole" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Control.ControlAccessibleObject.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

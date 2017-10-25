@@ -1,0 +1,181 @@
+<Type Name="GridViewDeleteEventArgs" FullName="System.Web.UI.WebControls.GridViewDeleteEventArgs">
+  <TypeSignature Language="C#" Value="public class GridViewDeleteEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GridViewDeleteEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.GridViewDeleteEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.GridView.RowDeleting" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.GridView> controlar gera o <xref:System.Web.UI.WebControls.GridView.RowDeleting> eventos quando um botão de exclusão é clicado, mas antes de <xref:System.Web.UI.WebControls.GridView> controle exclui o registro. (Um botão delete é um controle de botão cuja propriedade de `CommandName` é definida como “excluir”). Você pode executar uma rotina personalizada sempre que esse evento ocorre, como cancelar a operação de exclusão.  
+  
+ Um <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs> objeto é passado para o manipulador de eventos. Isso permite que você para determinar o índice da linha que está sendo excluído e cancelar a operação de exclusão. Para cancelar a operação de exclusão, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs> do objeto para `true`. Você também pode manipular o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> e <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> coleções antes que os valores são passados para a fonte de dados.  
+  
+ Para obter mais informações sobre como manipular eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs>, consulte o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs> objeto que é passado para o manipulador de eventos. O código cancela a operação de exclusão se o usuário tentar remover o último registro de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[GridViewRowDeleting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewRowDeleting/CS/gridviewrowdeleting.aspx#1)]
+ [!code-aspx-vb[GridViewRowDeleting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewRowDeleting/VB/gridviewrowdeleting.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GridViewDeleteEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.GridViewDeleteEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha que contém o botão de exclusão que gerou o evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.GridViewDeleteEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.RowIndex%2A>|O valor de `rowIndex` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando elas geram eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de pares nome/valor de campo que representam a chave primária da linha a ser excluída.</summary>
+        <value>Um dicionário que contém pares nome/valor de campo que representam a chave primária da linha a ser excluída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> propriedade de um <xref:System.Web.UI.WebControls.GridView> controle está definido, use o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> (dicionário) de propriedade para obter o valor da chave primária ou chaves de linha a ser excluída.  
+  
+> [!NOTE]
+>  Para obter os valores dos campos de não-chave, use o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> dicionário é preenchido automaticamente com os pares de nome/valor do campo ou campos especificados no <xref:System.Web.UI.WebControls.GridView.DataKeyNames%2A> propriedade. Se vários campos formam a chave primária, uma entrada separada é adicionada para o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> dicionário para cada campo de chave.  
+  
+ Para determinar o nome de um campo de chave, use o <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> propriedade de um <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> objeto o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> dicionário. Para determinar o valor de um campo de chave, use o <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> propriedade para obter os valores dos campos de chave para a linha a ser excluída. Os valores, em seguida, são gravados em um arquivo de log dos registros excluídos.  
+  
+ [!code-aspx-csharp[GridViewDeleteEventArgsValues#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/CS/gridviewdeleteeventargsvaluescs.aspx#1)]
+ [!code-aspx-vb[GridViewDeleteEventArgsValues#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/VB/gridviewdeleteeventargsvaluesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewDeleteEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice da linha que está sendo excluída.</summary>
+        <value>O índice baseado em zero da linha que está sendo excluída.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O índice de linha é frequentemente usado para recuperar a linha especificada do <xref:System.Web.UI.WebControls.GridView.Rows%2A> coleção do <xref:System.Web.UI.WebControls.GridView> controle. Em seguida, você pode acessar propriedades da linha.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.RowIndex%2A> para determinar o índice da linha a ser excluída.  
+  
+ [!code-aspx-csharp[GridViewDeleteEventArgsRowIndex#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewDeleteEventArgsRowIndex/CS/gridviewdeleteeventargsrowindexcs.aspx#1)]
+ [!code-aspx-vb[GridViewDeleteEventArgsRowIndex#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewDeleteEventArgsRowIndex/VB/gridviewdeleteeventargsrowindexvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário de pares nome/valor do campo não chave para a linha a ser excluída.</summary>
+        <value>Um objeto <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> que contém os pares nome/valor do campo não chave da linha a serem excluídos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> propriedade é preenchida automaticamente com os pares de nome/valor dos campos de não-chave da linha. Para determinar o nome do campo de uma entrada, use o <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> propriedade de um <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType> objeto o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> dicionário. Para determinar o valor de uma entrada, use o <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> propriedade.  
+  
+> [!NOTE]
+>  O campo de chave primária ou campos não são incluídos neste dicionário. Para acessar os valores do campo de chave primária ou campos, use o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Keys%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.GridViewDeleteEventArgs.Values%2A> propriedade para obter os valores dos campos de não-chave para a linha a ser excluída. Os valores, em seguida, são gravados em um arquivo de log dos registros excluídos.  
+  
+ [!code-aspx-csharp[GridViewDeleteEventArgsValues#1](~/samples/snippets/csharp/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/CS/gridviewdeleteeventargsvaluescs.aspx#1)]
+ [!code-aspx-vb[GridViewDeleteEventArgsValues#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/GridViewDeleteEventArgsValues/VB/gridviewdeleteeventargsvaluesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

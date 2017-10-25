@@ -1,0 +1,243 @@
+<Type Name="CursorEventArgs" FullName="System.Windows.Forms.DataVisualization.Charting.CursorEventArgs">
+  <TypeSignature Language="C#" Value="public class CursorEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CursorEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades que são usadas com os seguintes eventos na raiz <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> objeto: <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged" />, <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging" />, <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanged" /> e <see cref="E:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs> classe é exposta como o `e` parâmetro o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged>, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging>, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanged> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging> eventos da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto.  
+  
+ Essa classe contém as seguintes propriedades:  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.ChartArea%2A> propriedade, que é usada para obter o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea> que o evento foi gerado para o objeto. O <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.Name> propriedade obtém o nome da área do gráfico; outras propriedades da área do gráfico também podem ser definidas.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.Axis%2A> propriedade, que é usada para obter o <xref:System.Windows.Forms.DataVisualization.Charting.Axis> que o evento foi gerado para o objeto. Para determinar o tipo de eixo – X, X2, Y ou Y2 — use o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.AxisName%2A> propriedade. Outras propriedades de eixo também podem ser definidas.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewPosition%2A> propriedade, que representa a posição de um cursor ao longo do eixo, medida como um valor do eixo, no momento em que o evento foi gerado. O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewPosition%2A> propriedade pode ser usada para obter a posição de um cursor. No <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging> evento, esta propriedade também pode ser usada para redefinir a posição do cursor.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionStart%2A> propriedade, que representa a posição inicial de uma seleção de intervalo ao longo do eixo, medida como um valor do eixo, no momento em que o evento foi gerado. O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionStart%2A> propriedade pode ser usada para obter a posição de início do intervalo selecionado. No <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging> evento, esta propriedade também pode ser usada para redefinir a posição.  
+  
+-   O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionEnd%2A> propriedade, que representa a posição final de uma seleção de intervalo ao longo do eixo, medida como um valor do eixo, no momento em que o evento foi gerado. O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionEnd%2A> propriedade pode ser usada para obter a posição final do intervalo selecionado. No <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging> evento, esta propriedade também pode ser usada para redefinir a posição.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CursorEventArgs (System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea, System.Windows.Forms.DataVisualization.Charting.Axis axis, double newPosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea, class System.Windows.Forms.DataVisualization.Charting.Axis axis, float64 newPosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.#ctor(System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.Axis,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="chartArea" Type="System.Windows.Forms.DataVisualization.Charting.ChartArea" />
+        <Parameter Name="axis" Type="System.Windows.Forms.DataVisualization.Charting.Axis" />
+        <Parameter Name="newPosition" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="chartArea">O <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> do cursor.</param>
+        <param name="axis">O eixo do cursor.</param>
+        <param name="newPosition">A nova posição do cursor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs" /> classe com a área de gráfico especificado, o eixo e a posição do cursor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CursorEventArgs (System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea, System.Windows.Forms.DataVisualization.Charting.Axis axis, double newSelectionStart, double newSelectionEnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea, class System.Windows.Forms.DataVisualization.Charting.Axis axis, float64 newSelectionStart, float64 newSelectionEnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.#ctor(System.Windows.Forms.DataVisualization.Charting.ChartArea,System.Windows.Forms.DataVisualization.Charting.Axis,System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="chartArea" Type="System.Windows.Forms.DataVisualization.Charting.ChartArea" />
+        <Parameter Name="axis" Type="System.Windows.Forms.DataVisualization.Charting.Axis" />
+        <Parameter Name="newSelectionStart" Type="System.Double" />
+        <Parameter Name="newSelectionEnd" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="chartArea">O <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> do cursor.</param>
+        <param name="axis">O eixo do cursor.</param>
+        <param name="newSelectionStart">A posição inicial da nova seleção de intervalo.</param>
+        <param name="newSelectionEnd">A posição final da nova seleção de intervalo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs" /> classe com as posições de área, eixo, início e término de gráfico especificado para o novo intervalo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Axis">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Axis Axis { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Axis Axis" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.Axis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Axis</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> objeto ao qual pertence uma seleção de cursor ou intervalo.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.Axis" /> objeto que representa o eixo que uma seleção de cursor ou o intervalo pertence.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.Axis%2A> propriedade é exposta nos seguintes eventos da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto: <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged>, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging>, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanged> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging>.  
+  
+ Essa propriedade pode ser usada para:  
+  
+-   Determinar o tipo de eixo – X, X2, Y ou Y2 — que o evento está sendo gerado, usando o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.AxisName%2A> propriedade.  
+  
+-   Obter e definir propriedades do eixo, tais como <xref:System.Windows.Forms.DataVisualization.Charting.Axis.LineColor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartArea">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ChartArea ChartArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.ChartArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartArea</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> objeto ao qual pertence uma seleção de cursor ou intervalo.</summary>
+        <value>Um objeto do tipo <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartArea" /> que representa a área de gráfico que um cursor ou a seleção de intervalo pertence.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.ChartArea%2A> propriedade é exposta nos seguintes eventos da raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto: <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged>, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging>, <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanged> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging>.  
+  
+ Essa propriedade pode ser usada para:  
+  
+-   determinar qual área do gráfico do evento está sendo gerado Isso é útil saber quando há várias áreas dentro de uma imagem de gráfico.  
+  
+-   obter e definir propriedades da área do gráfico, tais como <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.BackColor%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewPosition">
+      <MemberSignature Language="C#" Value="public double NewPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 NewPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição de um cursor. Dependendo do evento, também define a posição do cursor.</summary>
+        <value>Um <see langword="double" /> valor que representa a posição de um cursor ao longo do eixo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade representa a nova posição de um cursor e pode ser usada no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged> eventos para obter a posição do cursor. Ele também pode ser usado no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging> evento para definir a posição do cursor.  
+  
+ Observe que a definição dessa propriedade <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging> evento não terá efeito. O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewPosition%2A> propriedade terá um valor de <xref:System.Double.NaN> nesse evento.  
+  
+ Para determinar que o evento está sendo gerado para a área do gráfico, use o <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.ChartArea%2A> propriedade.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.Axis%2A> propriedade para determinar se essa posição final para um intervalo selecionado ao longo do primário ou secundário X ou eixo Y.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSelectionEnd">
+      <MemberSignature Language="C#" Value="public double NewSelectionEnd { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 NewSelectionEnd" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionEnd" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição final de um intervalo selecionado. Dependendo do evento, também define a posição final do intervalo.</summary>
+        <value>Um <see langword="double" /> valor que representa a posição final de um intervalo selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionEnd%2A> propriedade representa a nova posição de um cursor e pode ser usada no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged> eventos para obter a posição do cursor. Ele também pode ser usado no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging> evento para definir a posição do cursor.  
+  
+ Observe que a definição dessa propriedade <xref:System.Windows.Forms.DataVisualization.Charting.Chart.SelectionRangeChanging> evento não terá efeito. O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionEnd%2A> propriedade terá um valor de <xref:System.Double.NaN> nesse evento.  
+  
+ A posição inicial de um intervalo selecionado não é necessariamente menor do que a posição final de um intervalo selecionado.  A posição inicial é a posição em que o primeiro usuário clicados dentro da área do gráfico e a posição final é a posição do mouse no momento em que o evento é gerado.  
+  
+ Para determinar a área do gráfico que o evento está sendo gerado para usar o <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.ChartArea%2A> propriedade.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.Axis%2A> propriedade para determinar se essa posição final para um intervalo selecionado ao longo do primário ou secundário X ou eixo Y.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewSelectionStart">
+      <MemberSignature Language="C#" Value="public double NewSelectionStart { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 NewSelectionStart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição inicial de um intervalo selecionado. Dependendo do evento, também define a posição inicial do intervalo.</summary>
+        <value>Um <see langword="double" /> valor que representa a posição inicial de um intervalo selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionStart%2A> propriedade representa a nova posição de um cursor e pode ser usada no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanged> eventos para obter a posição do cursor. Ele também pode ser usado no <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging> evento para definir a posição do cursor.  
+  
+ Observe que a definição dessa propriedade <xref:System.Windows.Forms.DataVisualization.Charting.Chart.CursorPositionChanging> evento não tem efeito; o <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.NewSelectionStart%2A> propriedade terá um valor de <xref:System.Double.NaN> nesse evento.  
+  
+ A posição inicial de um intervalo selecionado não é necessariamente menor do que a posição final de um intervalo selecionado. A posição inicial é a posição em que o primeiro usuário clicados dentro da área do gráfico e a posição final é a posição do mouse no momento em que o evento é gerado.  
+  
+ Para determinar que o evento está sendo gerado para a área do gráfico, use o <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.ChartArea%2A> propriedade.  
+  
+ Use o <xref:System.Windows.Forms.DataVisualization.Charting.CursorEventArgs.Axis%2A> propriedade para determinar se essa posição final para um intervalo selecionado ao longo do primário ou secundário X ou eixo Y.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

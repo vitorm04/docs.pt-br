@@ -1,0 +1,136 @@
+<Type Name="ExclusiveHandle" FullName="System.Activities.ExclusiveHandle">
+  <TypeSignature Language="C#" Value="public class ExclusiveHandle : System.Activities.Handle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExclusiveHandle extends System.Activities.Handle" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ExclusiveHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Handle</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Adiciona informações complementares para um indicador que permite acesso a um subconjunto de seus identificadores de escopo, exceto os identificadores que não são necessários.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExclusiveHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExclusiveHandle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.ExclusiveHandle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialize">
+      <MemberSignature Language="C#" Value="protected override void OnInitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExclusiveHandle.OnInitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O ambiente no qual o identificador é criado.</param>
+        <summary>Cria uma lista de padrão <see cref="T:System.Activities.BookmarkScopeHandle" /> objetos do identificador de variáveis no contexto de inicialização do identificador especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterBookmarkScope">
+      <MemberSignature Language="C#" Value="public void RegisterBookmarkScope (System.Activities.NativeActivityContext context, System.Activities.BookmarkScopeHandle bookmarkScopeHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterBookmarkScope(class System.Activities.NativeActivityContext context, class System.Activities.BookmarkScopeHandle bookmarkScopeHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExclusiveHandle.RegisterBookmarkScope(System.Activities.NativeActivityContext,System.Activities.BookmarkScopeHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+        <Parameter Name="bookmarkScopeHandle" Type="System.Activities.BookmarkScopeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="context">O ambiente no qual o identificador é criado.</param>
+        <param name="bookmarkScopeHandle">O token usado para identificar e acessar um grupo de indicadores que operam sob o mesmo protocolo em uma operação de atividade de fluxo de trabalho.</param>
+        <summary>Adiciona o identificador de escopo de indicadores especificado para o <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> de <see cref="T:System.Activities.BookmarkScopeHandle" /> objetos usando o contexto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse método é chamado depois que um bookmark foi criado sob esse escopo exclusivo, um <xref:System.InvalidOperationException> será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisteredBookmarkScopes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.BookmarkScopeHandle&gt; RegisteredBookmarkScopes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Activities.BookmarkScopeHandle&gt; RegisteredBookmarkScopes" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ExclusiveHandle.RegisteredBookmarkScopes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Activities.BookmarkScopeHandle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um novo ou existente <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> de <see cref="T:System.Activities.BookmarkScopeHandle" /> objetos.</summary>
+        <value>Uma coleção somente leitura de identificadores de escopo de indicador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reinitialize">
+      <MemberSignature Language="C#" Value="public void Reinitialize (System.Activities.NativeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reinitialize(class System.Activities.NativeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ExclusiveHandle.Reinitialize(System.Activities.NativeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.NativeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O ambiente no qual o identificador é criado.</param>
+        <summary>Define o escopo de indicadores registrados manipula volta para o padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse método é chamado quando existem indicadores registrados com o identificador exclusivo, um <xref:System.InvalidOperationException> será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

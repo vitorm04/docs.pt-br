@@ -1,0 +1,798 @@
+<Type Name="SqlRoleProvider" FullName="System.Web.Security.SqlRoleProvider">
+  <TypeSignature Language="C#" Value="public class SqlRoleProvider : System.Web.Security.RoleProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlRoleProvider extends System.Web.Security.RoleProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.SqlRoleProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Security.RoleProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia o armazenamento das informações de associação de função de um aplicativo ASP.NET em um banco de dados SQL Server.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada pelo <xref:System.Web.Security.Roles> e <xref:System.Web.Security.RolePrincipal> classes para fornecer serviços de gerenciamento de função para um aplicativo ASP.NET usando um banco de dados do SQL Server. Você pode usar o gerenciamento de função para especificar diferentes níveis de autorização para seu aplicativo.  
+  
+ Para usar o <xref:System.Web.Security.SqlRoleProvider> classe, você deve primeiro criar o banco de dados do SQL Server usado pelo <xref:System.Web.Security.SqlRoleProvider>. Para criar o banco de dados usado pelo <xref:System.Web.Security.SqlRoleProvider> classe, execute o `aspnet_regsql.exe` executável encontrado na C:\WINDOWS\Microsoft.NET\Framework\ `versionNumber` pasta e especifique o `-Ar` opção (por exemplo, `aspnet_regsql.exe -Ar`). O banco de dados criado é chamado Aspnetdb. Como alternativa, execute o aspnet_regsql.exe para consultar o modo de configuração de GUI e escolha configurar todos os recursos do ASP.NET.  
+  
+ Se o provedor de função é configurado com uma cadeia de caracteres de conexão que usa segurança integrada, a conta de processo do aplicativo ASP.NET deve ter direitos para se conectar ao banco de dados do SQL Server.  
+  
+ O arquivo Machine. config é configurado com um <xref:System.Web.Security.SqlRoleProvider> instância nomeada AspNetSqlProvider que se conecta ao SQL Server no computador local. Você pode usar essa instância do provedor ou especificar sua própria no arquivo Web. config para seu aplicativo ASP.NET. Para usar a instância AspNetSqlProvider, especifique AspNetSqlProvider como o `defaultProvider` em sua configuração.  
+  
+ Você pode configurar o <xref:System.Web.Security.SqlRoleProvider> para usar as mesmas informações de banco de dados e o usuário que o <xref:System.Web.Security.SqlMembershipProvider> para usar um único banco de dados para obter informações de autenticação e autorização. Para usar o mesmo banco de dados de associação e informações de função, execute o aspnet_regsql.exe e instale o recurso de associação. Em seguida, especifique a mesma cadeia de conexão em sua configuração para os seus <xref:System.Web.Security.SqlRoleProvider> e <xref:System.Web.Security.SqlMembershipProvider> instâncias. Além disso, certifique-se de que ambas as instâncias do provedor estão configuradas com o mesmo <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o arquivo Web. config para um aplicativo ASP.NET configurado para usar um <xref:System.Web.Security.SqlRoleProvider> objeto e o <xref:System.Web.Security.SqlMembershipProvider>. O elemento é configurado para permitir acesso aos usuários autenticados somente à função Administradores.  
+  
+```  
+<configuration>  
+  <connectionStrings>  
+    <add name="SqlServices" connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
+  </connectionStrings>  
+  <system.web>  
+    <authentication mode="Forms" >  
+      <forms loginUrl="logincs.aspx"  
+      name=".ASPXFORMSAUTH" />  
+    </authentication>  
+    <authorization>  
+      <deny users="?" />  
+         <allow roles="Administrators" />  
+         <deny users="*" />  
+    </authorization>  
+    <membership defaultProvider="SqlProvider" userIsOnlineTimeWindow="15">  
+      <providers>  
+        <add   
+          name="SqlProvider"   
+          type="System.Web.Security.SqlMembershipProvider"   
+          connectionStringName="SqlServices"  
+          enablePasswordRetrieval="false"  
+          enablePasswordReset="false"  
+          requiresQuestionAndAnswer="false"   
+          passwordFormat="Hashed"   
+          applicationName="SampleApplication" />  
+      </providers>  
+    </membership>  
+    <roleManager defaultProvider="SqlProvider"   
+      enabled="true"  
+      cacheRolesInCookie="true"  
+      cookieName=".ASPROLES"  
+      cookieTimeout="30"  
+      cookiePath="/"  
+      cookieRequireSSL="true"  
+      cookieSlidingExpiration="true"  
+      cookieProtection="All" >  
+      <providers>  
+        <add  
+          name="SqlProvider"  
+          type="System.Web.Security.SqlRoleProvider"  
+          connectionStringName="SqlServices"   
+          applicationName="SampleApplication" />  
+      </providers>  
+    </roleManager>  
+  </system.web>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlRoleProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.Security.SqlRoleProvider" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.%23ctor%2A> construtor é chamado pelo ASP.NET para criar uma instância do <xref:System.Web.Security.SqlRoleProvider> classe conforme especificado na configuração do aplicativo. Este construtor não se destina a ser usado em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUsersToRoles">
+      <MemberSignature Language="C#" Value="public override void AddUsersToRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddUsersToRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.AddUsersToRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeias de caracteres de nomes de usuário a serem adicionados às funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeia de caracteres de nomes de função à qual adicionar os nomes de usuário.</param>
+        <summary>Adiciona os nomes de usuário especificado para cada uma das funções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.AddUsersToRoles%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para associar um ou mais usuários uma ou mais funções no banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config). Este método é chamado pelo <xref:System.Web.Security.Roles.AddUserToRole%2A>, <xref:System.Web.Security.Roles.AddUserToRoles%2A>, <xref:System.Web.Security.Roles.AddUsersToRole%2A>, e <xref:System.Web.Security.Roles.AddUsersToRoles%2A> métodos de <xref:System.Web.Security.Roles> classe.  
+  
+ As atualizações de banco de dados que são executadas durante a chamada para o <xref:System.Web.Security.SqlRoleProvider.AddUsersToRoles%2A> método são feitas em uma transação. Se um erro for encontrado, como um nome de usuário que já está em uma função especificada, a transação é revertida e nenhuma atualização será executada.  
+  
+ Se o <xref:System.Web.Security.SqlRoleProvider> está sendo usado com o <xref:System.Web.Security.SqlMembershipProvider>e um dos nomes de usuário especificado não existe no banco de dados, o nome de usuário será adicionado automaticamente ao banco de dados.  
+  
+ Nomes de usuário e nomes de função não podem conter vírgulas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona um ou mais usuários a uma função ou remove um usuário de uma função. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma das funções no <paramref name="roleNames" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos usuários no <paramref name="usernames" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Uma das funções no <paramref name="roleNames" /> é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ Um dos usuários em <paramref name="usernames" /> é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ Uma das funções no <paramref name="roleNames" /> tem mais de 256 caracteres.  
+  
+ -ou-  
+  
+ Um dos usuários em <paramref name="usernames" /> tem mais de 256 caracteres.  
+  
+ -ou-  
+  
+ <paramref name="roleNames" />contém um elemento duplicado.  
+  
+ -ou-  
+  
+ <paramref name="usernames" />contém um elemento duplicado.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um ou mais dos nomes de função especificado não foi encontrado.  
+  
+ -ou-  
+  
+ Um ou mais nomes de usuário especificado não foi encontrado.  
+  
+ -ou-  
+  
+ Um ou mais nomes de usuário especificado já está associado um ou mais dos nomes de função especificada.  
+  
+ -ou-  
+  
+ Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public override string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Security.SqlRoleProvider.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do aplicativo para armazenar e recuperar informações de função.</summary>
+        <value>O nome do aplicativo para armazenar e recuperar informações de função. O padrão é o <see cref="P:System.Web.HttpRequest.ApplicationPath" /> valor da propriedade atual <see cref="P:System.Web.HttpContext.Request" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> é usado pelo <xref:System.Web.Security.SqlRoleProvider> para associar usuários e funções diferentes aplicativos. Isso permite que vários aplicativos usar o mesmo banco de dados para armazenar informações de usuário e função sem exibir conflitos entre nomes duplicados ou nomes de função. Vários aplicativos ASP.NET podem usar o mesmo banco de dados, especificando o mesmo valor no <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> propriedade. O <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> propriedade pode ser definida programaticamente, ou pode ser definida declarativamente no arquivo de configuração para o aplicativo Web usando o `applicationName` atributo.  
+  
+ Se um valor não for especificado para o `applicationName` atributo no arquivo de configuração para o aplicativo Web, em seguida, o <xref:System.Web.HttpRequest.ApplicationPath%2A?displayProperty=nameWithType> valor da propriedade atual <xref:System.Web.HttpContext.Request%2A?displayProperty=nameWithType> objeto é usado.  
+  
+> [!CAUTION]
+>  Como uma instância do provedor de função única padrão é usada para todas as solicitações atendidas por um <xref:System.Web.HttpApplication> do objeto, você pode ter várias solicitações de execução simultaneamente e a tentativa de definir o <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> o valor da propriedade. O <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> propriedade não é thread safe para várias gravações e alterando o <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> o valor da propriedade pode resultar em comportamento inesperado para vários usuários de um aplicativo. É recomendável que você evite escrever código que permite aos usuários definir o <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> propriedade, a menos que você precisa. Um exemplo de um aplicativo em que a configuração de <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> propriedade pode ser necessária é um aplicativo administrativo que gerencia os dados de função para vários aplicativos. Esse aplicativo deve ser um aplicativo de usuário único e não é um aplicativo Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o elemento de `system.web` seção do arquivo Web. config para um aplicativo ASP.NET. Especifica o aplicativo <xref:System.Web.Security.SqlRoleProvider> instância e conjuntos de <xref:System.Web.Security.SqlRoleProvider.ApplicationName%2A> propriedade `MyApplication`.  
+  
+```  
+<roleManager defaultProvider="SqlProvider"   
+  enabled="true"  
+  cacheRolesInCookie="true"  
+  cookieName=".ASPROLES"  
+  cookieTimeout="30"  
+  cookiePath="/"  
+  cookieRequireSSL="false"  
+  cookieSlidingExpiration="true"  
+  cookieProtection="All" >  
+  <providers>  
+    <add  
+      name="SqlProvider"  
+      type="System.Web.Security.SqlRoleProvider"  
+      connectionStringName="SqlServices"  
+      applicationName="MyApplication" />  
+  </providers>  
+</roleManager>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Foi feita uma tentativa para definir o <see cref="P:System.Web.Security.SqlRoleProvider.ApplicationName" /> propriedade por um chamador que não tenha <see cref="F:System.Web.AspNetHostingPermissionLevel.High" /> ASP.NET permissão de hospedagem.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Foi feita uma tentativa para definir o <see cref="P:System.Web.Security.SqlRoleProvider.ApplicationName" /> para uma cadeia de caracteres que é maior do que 256 caracteres.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRole">
+      <MemberSignature Language="C#" Value="public override void CreateRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CreateRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.CreateRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser criada.</param>
+        <summary>Adiciona uma nova função no banco de dados de função.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.CreateRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para criar uma função no banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+ O comprimento máximo para o nome da função é de 256 caracteres. Os nomes de função não diferenciam maiusculas de minúsculas. Vírgulas não são permitidas em nomes de função.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova função no banco de dados. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="roleName" />é maior do que 256 caracteres.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="roleName" />já existe no banco de dados.  
+  
+ -ou-  
+  
+ Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteRole">
+      <MemberSignature Language="C#" Value="public override bool DeleteRole (string roleName, bool throwOnPopulatedRole);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool DeleteRole(string roleName, bool throwOnPopulatedRole) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.DeleteRole(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="throwOnPopulatedRole" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função a ser excluída.</param>
+        <param name="throwOnPopulatedRole">Se <see langword="true" />, lança uma exceção <c>roleName</c> tem um ou mais membros.</param>
+        <summary>Remove uma função de banco de dados de função.</summary>
+        <returns>
+          <see langword="true" />Se a função foi excluída com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.DeleteRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para excluir uma função de banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config). Quando uma função é excluída, a lista de usuários associados a essa função também é excluída do banco de dados. As informações do usuário no banco de dados não são afetadas.  
+  
+ Se `throwOnPopulatedRole` é `true`, em seguida, uma exceção será lançada e a função não será excluída se a função identificado pelo `roleName` parâmetro tem um ou mais membros. Se `throwOnPopulatedRole` é `false`, em seguida, a função será excluída se ela estiver vazia ou não.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exclui uma função do banco de dados. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/deleterolecs.aspx#2)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/deleterolevb.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" /> (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="roleName" />é maior do que 256 caracteres.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="roleName" />tem um ou mais membros e <paramref name="throwOnPopulatedRole" /> é <see langword="true" />.  
+  
+ -ou-  
+  
+ Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] FindUsersInRole (string roleName, string usernameToMatch);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] FindUsersInRole(string roleName, string usernameToMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.FindUsersInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+        <Parameter Name="usernameToMatch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">A função a ser pesquisada.</param>
+        <param name="usernameToMatch">O nome de usuário a ser pesquisado.</param>
+        <summary>Obtém uma matriz de nomes de usuário em uma função em que o nome de usuário contém o nome de usuário especificado para corresponder.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todos os usuários cujo nome de usuário corresponde <paramref name="usernameToMatch" /> e o usuário é um membro da função especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.FindUsersInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe e retorna uma lista de usuários em uma função onde o nome de usuário contém uma correspondência de fornecido `usernameToMatch` configurado `applicationName`. O <xref:System.Web.Security.SqlRoleProvider> procura um nome de usuário que corresponda a `usernameToMatch` valor de parâmetro usando os LIKE palavra-chave e oferece suporte ao SQL Server curingas. Por exemplo, se o `usernameToMatch` parâmetro for definido como "Usuário1", informações de associação para o usuário com o nome de usuário de "Usuário1" são retornadas, se ele existir. Se o `usernameToMatch` parâmetro for definido como "usuário %", em seguida, as informações de associação para usuários com o nome de usuário de "Usuário1", "Usuário2", "usuário_admin" e assim por diante são retornados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.FindUsersInRole%2A> método para exibir a associação de função com base na entrada do usuário. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.Roles>.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.Roles#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.Roles/CS/FindUsersInRolecs.aspx#11)]
+ [!code-aspx-vb[System.Web.Security.Roles#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.Roles/VB/FindUsersInRolevb.aspx#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" /> (<see langword="Nothing" /> no Visual Basic).  
+  
+ -ou-  
+  
+ <paramref name="usernameToMatch" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="usernameToMatch" /> é uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="roleName" />é maior do que 256 caracteres.  
+  
+ -ou-  
+  
+ <paramref name="usernameToMatch" />é maior do que 256 caracteres.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="roleName" />não foi encontrado no banco de dados.  
+  
+ -ou-  
+  
+ Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllRoles">
+      <MemberSignature Language="C#" Value="public override string[] GetAllRoles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetAllRoles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.GetAllRoles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma lista de todas as funções do aplicativo.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todas as funções armazenadas no banco de dados de um aplicativo específico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.GetAllRoles%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para recuperar uma lista de todas as funções no banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.GetAllRoles%2A> método para obter a lista de funções para um aplicativo e associar os resultados para um <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> controle. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRolesForUser">
+      <MemberSignature Language="C#" Value="public override string[] GetRolesForUser (string username);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetRolesForUser(string username) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.GetRolesForUser(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O usuário para o qual será retornada uma lista de funções.</param>
+        <summary>Obtém uma lista das funções de que o usuário faz parte.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todas as funções que o usuário especificado está em.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.GetRolesForUser%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para recuperar uma lista de funções de usuário especificado do banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.GetRolesForUser%2A> método para recuperar uma lista de funções para um usuário especificado e o associa a um <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> controle. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/ViewRolescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/ViewRolesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="username" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="username" /> contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="username" />é maior do que 256 caracteres.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUsersInRole">
+      <MemberSignature Language="C#" Value="public override string[] GetUsersInRole (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string[] GetUsersInRole(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.GetUsersInRole(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função para a qual a lista de usuários será obtida.</param>
+        <summary>Obtém uma lista de usuários na função especificada.</summary>
+        <returns>Uma matriz de cadeia de caracteres que contém os nomes de todos os usuários que são membros da função especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.GetUsersInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para recuperar a lista de usuários associados com a função especificada no banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.GetUsersInRole%2A> método para obter uma lista de usuários em uma função específica e associar os resultados para um <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> controle. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="roleName" />é maior do que 256 caracteres.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">
+          <paramref name="rolename" />não foi encontrado no banco de dados.  
+  
+ -ou-  
+  
+ Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da instância de <see cref="T:System.Web.Security.SqlRoleProvider" /> a ser inicializada.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> que contém os nomes e valores de opções de configuração para o provedor de função.</param>
+        <summary>Inicializa o provedor de função do SQL Server com os valores de propriedade especificados no arquivo de configuração do aplicativo ASP.NET. Esse método não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método inicializa a <xref:System.Web.Security.SqlRoleProvider> com a propriedade de valores especificados no arquivo de configuração do aplicativo ASP.NET (Web. config) e não se destina a ser usado diretamente no seu código.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O aplicativo ASP.NET não está em execução no <see cref="F:System.Web.AspNetHostingPermissionLevel.Medium" /> confiança ou superior.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="config" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">O <see langword="connectionStringName" /> atributo está vazio ou não existe no arquivo de configuração do aplicativo para este <see cref="T:System.Web.Security.SqlRoleProvider" /> instância.  
+  
+ -ou-  
+  
+ O <see langword="applicationName" /> atributo excede 256 caracteres.  
+  
+ -ou-  
+  
+ O arquivo de configuração do aplicativo para este <see cref="T:System.Web.Security.SqlRoleProvider" /> instância contém um atributo não reconhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserInRole">
+      <MemberSignature Language="C#" Value="public override bool IsUserInRole (string username, string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsUserInRole(string username, string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.IsUserInRole(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário a ser pesquisado.</param>
+        <param name="roleName">A função a ser pesquisada.</param>
+        <summary>Obtém um valor que indica se o usuário especificado está na função especificada para a função especificada.</summary>
+        <returns>
+          <see langword="true" />Se o nome de usuário especificado está na função especificada. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.IsUserInRole%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe e o <xref:System.Security.Principal.IPrincipal.IsInRole%2A> método o <xref:System.Web.UI.Page.User%2A?displayProperty=nameWithType> propriedade para determinar se um usuário está associado uma função no banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir programaticamente verifica se o logon do usuário está na função de administradores antes de permitir que o usuário exibir as funções de usuário. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/ViewRolescs.aspx#4)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/ViewRolesvb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="username" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="username" />é contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="roleName" />é maior do que 256 caracteres.  
+  
+ -ou-  
+  
+ <paramref name="username" />é maior do que 256 caracteres.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveUsersFromRoles">
+      <MemberSignature Language="C#" Value="public override void RemoveUsersFromRoles (string[] usernames, string[] roleNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveUsersFromRoles(string[] usernames, string[] roleNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.RemoveUsersFromRoles(System.String[],System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="usernames" Type="System.String[]" />
+        <Parameter Name="roleNames" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="usernames">Uma matriz de cadeia de caracteres de nomes de usuário a ser removido das funções especificadas.</param>
+        <param name="roleNames">Uma matriz de cadeia de caracteres de nomes de função para remover os nomes de usuários especificados.</param>
+        <summary>Remove os nomes de usuários especificados das funções especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.RemoveUsersFromRoles%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para remover um ou mais usuários de uma ou mais funções no banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config). Este método é chamado pelo <xref:System.Web.Security.Roles.RemoveUserFromRole%2A>, <xref:System.Web.Security.Roles.RemoveUserFromRoles%2A>, <xref:System.Web.Security.Roles.RemoveUsersFromRole%2A>, e <xref:System.Web.Security.Roles.RemoveUsersFromRoles%2A> métodos de <xref:System.Web.Security.Roles> classe.  
+  
+ As atualizações de banco de dados que são executadas durante a chamada para <xref:System.Web.Security.SqlRoleProvider.RemoveUsersFromRoles%2A> são feitas em uma transação. Se um erro for encontrado, como um nome de usuário que não existe ou um nome de usuário que já está em uma função especificada, a transação é revertida e nenhuma atualização será executada.  
+  
+ Nomes de usuário e nomes de função não podem conter vírgulas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir adiciona um ou mais usuários a uma função ou remove um usuário de uma função. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/adduserstorolecs.aspx#3)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/adduserstorolevb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Uma das funções no <paramref name="roleNames" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ Um dos usuários no <paramref name="usernames" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Uma das funções no <paramref name="roleNames" /> é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ Um dos usuários em <paramref name="usernames" /> é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ Uma das funções no <paramref name="roleNames" /> tem mais de 256 caracteres.  
+  
+ -ou-  
+  
+ Um dos usuários em <paramref name="usernames" /> tem mais de 256 caracteres.  
+  
+ -ou-  
+  
+ <paramref name="roleNames" />contém um elemento duplicado.  
+  
+ -ou-  
+  
+ <paramref name="usernames" />contém um elemento duplicado.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Um ou mais nomes de usuário especificado não foi encontrado.  
+  
+ -ou-  
+  
+ Um ou mais dos nomes de função especificado não foi encontrado.  
+  
+ -ou-  
+  
+ Um ou mais nomes de usuário especificado não está associado com um ou mais dos nomes de função especificada.  
+  
+ -ou-  
+  
+ Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RoleExists">
+      <MemberSignature Language="C#" Value="public override bool RoleExists (string roleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool RoleExists(string roleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Security.SqlRoleProvider.RoleExists(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="roleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="roleName">O nome da função para pesquisar no banco de dados.</param>
+        <summary>Obtém um valor que indica se o nome da função especificada já existe no banco de dados de função.</summary>
+        <returns>
+          <see langword="true" />Se o nome da função já existe no banco de dados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.SqlRoleProvider.RoleExists%2A> método é chamado pelo <xref:System.Web.Security.Roles> classe para determinar se um nome de função existe no banco de dados do SQL Server especificado no arquivo de configuração do aplicativo ASP.NET (Web. config).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.Security.Roles.RoleExists%2A> método para determinar se um nome de função já existe antes de criar a função. Para obter um exemplo de um arquivo Web. config que permita o gerenciamento de função, consulte <xref:System.Web.Security.SqlRoleProvider>.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/CS/createrolecs.aspx#1)]
+ [!code-aspx-vb[System.Web.Security.SqlRoleProvider#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.SqlRoleProvider/VB/createrolevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="roleName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="roleName" />é uma cadeia de caracteres vazia ou contém uma vírgula.  
+  
+ -ou-  
+  
+ <paramref name="roleName" />é maior do que 256 caracteres.</exception>
+        <exception cref="T:System.Configuration.Provider.ProviderException">Erro desconhecido durante a comunicação com o banco de dados.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

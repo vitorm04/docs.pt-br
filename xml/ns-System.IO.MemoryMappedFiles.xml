@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.MemoryMappedFiles">
+  <Docs>
+    <summary>O <see cref="N:System.IO.MemoryMappedFiles" /> namespace fornece classes para usar um arquivo de mapeamento de memória, que mapeia o conteúdo de um arquivo para o espaço de endereçamento lógico de um aplicativo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,17 @@
+<Namespace Name="System.Web.Profile">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Profile" /> namespace contém classes que são usadas para trabalhar com perfis de usuário do ASP.NET em aplicativos de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Perfis do ASP.NET são usados para armazenar e recuperar configurações de usuário de uma fonte de dados como um banco de dados. Valores de propriedade e informações de perfil são gerenciados por meio de um provedor de perfil. Informações de perfil podem ser armazenadas em um banco de dados do Microsoft SQL Server usando o <xref:System.Web.Profile.SqlProfileProvider> classe, ou em uma fonte de dados personalizada usando uma implementação do <xref:System.Web.Profile.ProfileProvider> classe abstrata.  
+  
+ Perfis do ASP.NET são configurados usando a seção de configuração.  
+  
+ Quando inicia um aplicativo que tem perfis habilitados, o ASP.NET cria uma nova classe de tipo `ProfileCommon`, que herda de <xref:System.Web.Profile.ProfileBase> classe. Acessadores fortemente tipados são adicionados para o `ProfileCommon` classe para cada propriedade que é definida na seção de configuração. Uma instância do `ProfileCommon` classe é definida como o valor da <xref:System.Web.HttpContext.Profile%2A> propriedade <xref:System.Web.HttpContext> objeto. Você pode criar uma implementação de perfil personalizado que herda de <xref:System.Web.Profile.ProfileBase> classe abstrata e que define as propriedades do perfil de usuário que não são especificadas no elemento de configuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,102 @@
+<Type Name="ConflictOption" FullName="System.Data.ConflictOption">
+  <TypeSignature Language="C#" Value="public enum ConflictOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConflictOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Data.ConflictOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como as alterações conflitantes na fonte de dados serão detectadas e resolvidas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareAllSearchableValues">
+      <MemberSignature Language="C#" Value="CompareAllSearchableValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConflictOption CompareAllSearchableValues = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConflictOption.CompareAllSearchableValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConflictOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>As instruções Update e Delete incluirão todas as colunas pesquisáveis da tabela na cláusula WHERE. Isso é equivalente a especificar <see langword="CompareAllValuesUpdate" />  |  <see langword="CompareAllValuesDelete" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareRowVersion">
+      <MemberSignature Language="C#" Value="CompareRowVersion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConflictOption CompareRowVersion = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConflictOption.CompareRowVersion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConflictOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se houver colunas Carimbo de Data/Hora na tabela, elas serão usadas na cláusula WHERE de todas as instruções de atualização geradas. Isso é equivalente a especificar <see langword="CompareRowVersionUpdate" />  |  <see langword="CompareRowVersionDelete" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteChanges">
+      <MemberSignature Language="C#" Value="OverwriteChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Data.ConflictOption OverwriteChanges = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Data.ConflictOption.OverwriteChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ConflictOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as instruções UPDATE e DELETE incluem apenas colunas <see cref="P:System.Data.DataTable.PrimaryKey" /> na cláusula WHERE. Se nenhum <see cref="P:System.Data.DataTable.PrimaryKey" /> for definido, todas as colunas pesquisáveis serão incluídas na cláusula WHERE. Isso é equivalente a <see langword="OverwriteChangesUpdate" />  |  <see langword="OverwriteChangesDelete" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

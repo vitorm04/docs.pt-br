@@ -1,0 +1,346 @@
+<Type Name="RecommendedAsConfigurableAttribute" FullName="System.ComponentModel.RecommendedAsConfigurableAttribute">
+  <TypeSignature Language="C#" Value="public class RecommendedAsConfigurableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RecommendedAsConfigurableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.RecommendedAsConfigurableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use System.ComponentModel.SettingsBindableAttribute instead to work with the new settings model.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que a propriedade pode ser usada como uma configuração de aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades que são marcadas com o <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> definida como `true` exibida quando você expande o **ConfigurableProperties** linha o **propriedades** janela. Uma propriedade que não possua nenhuma configuração recomendada ou que está marcado com <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> definida como `false` não é mostrada e é um candidato improvável por ser uma configuração de aplicativo. O padrão é `false`.  
+  
+ Você pode associar uma propriedade que não tem um <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> para uma configuração no Visual Studio, clicando no botão de reticências (...) em **configurações** no **propriedades** janela e selecionando a propriedade apropriada na lista.  
+  
+> [!NOTE]
+>  Quando você marca uma propriedade com <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> definida como `true`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.Yes>. Para uma propriedade é marcada com <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> definido como valor `false`, o valor é <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.No>. Portanto, quando você quiser verificar o valor desse atributo no seu código, você deve especificar o atributo como <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.Yes?displayProperty=nameWithType> ou <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.No?displayProperty=nameWithType>.  
+  
+ Para obter mais informações, consulte [Atributos](~/docs/standard/attributes/index.md).  
+  
+ .  
+  
+   
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade como pode ser usado como uma configuração de aplicativo.  
+  
+ [!code-cpp[Classic RecommendedAsConfigurableAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RecommendedAsConfigurableAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic RecommendedAsConfigurableAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir mostra como verificar o valor da <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> para `MyProperty`. Primeiro o código obtém um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto. Em seguida ele indexará no <xref:System.ComponentModel.PropertyDescriptorCollection> obter `MyProperty`. Em seguida, ele retorna os atributos para essa propriedade e os salva na variável de atributos.  
+  
+ Este exemplo apresenta duas maneiras de verificar o valor de <xref:System.ComponentModel.RecommendedAsConfigurableAttribute>. No segundo fragmento de código, o exemplo chama o <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.Equals%2A> método. No último fragmento de código, o exemplo usa o <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.RecommendedAsConfigurable%2A> propriedade para verificar o valor.  
+  
+ [!code-cpp[Classic RecommendedAsConfigurableAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic RecommendedAsConfigurableAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic RecommendedAsConfigurableAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/VB/source.vb#2)]  
+  
+ Se você marcou uma classe com o <xref:System.ComponentModel.RecommendedAsConfigurableAttribute>, use o seguinte código para verificar o valor.  
+  
+ [!code-cpp[Classic RecommendedAsConfigurableAttribute Example#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic RecommendedAsConfigurableAttribute Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/CS/source.cs#3)]
+ [!code-vb[Classic RecommendedAsConfigurableAttribute Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute Example/VB/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecommendedAsConfigurableAttribute (bool recommendedAsConfigurable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool recommendedAsConfigurable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.RecommendedAsConfigurableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="recommendedAsConfigurable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="recommendedAsConfigurable">
+          <see langword="true" />Se esse atributo é associado a propriedade pode ser usada como uma configuração de aplicativo; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.RecommendedAsConfigurableAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade como pode ser usado como uma configuração de aplicativo. Esse código cria um novo <xref:System.ComponentModel.RecommendedAsConfigurableAttribute>, define seu valor como <xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>e o associa à propriedade.  
+  
+ [!code-cpp[Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurableAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurableAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurableAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurableAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurableAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.RecommendedAsConfigurableAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.RecommendedAsConfigurableAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.RecommendedAsConfigurableAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.RecommendedAsConfigurableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor padrão para o <see cref="T:System.ComponentModel.RecommendedAsConfigurableAttribute" />, que é <see cref="F:System.ComponentModel.RecommendedAsConfigurableAttribute.No" />. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.RecommendedAsConfigurableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Outro objeto a ser comparado.</param>
+        <summary>Indica se essa instância e um objeto especificado são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual a essa instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.RecommendedAsConfigurableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código hash do <see cref="T:System.ComponentModel.RecommendedAsConfigurableAttribute" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.RecommendedAsConfigurableAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o valor desta instância é o valor padrão para a classe.</summary>
+        <returns>
+          <see langword="true" /> se a instância for o atributo padrão para a classe; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.RecommendedAsConfigurableAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.RecommendedAsConfigurableAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.RecommendedAsConfigurableAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.RecommendedAsConfigurableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade não pode ser usada como uma configuração de aplicativo. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é a configuração padrão para esse atributo.  
+  
+ Quando você marca uma propriedade com <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> definida como `false`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.No>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.No?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecommendedAsConfigurable">
+      <MemberSignature Language="C#" Value="public bool RecommendedAsConfigurable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RecommendedAsConfigurable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.RecommendedAsConfigurableAttribute.RecommendedAsConfigurable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a propriedade esse atributo é associado a pode ser usado como uma configuração de aplicativo.</summary>
+        <value>
+          <see langword="true" />Se esse atributo é associado a propriedade pode ser usada como uma configuração de aplicativo; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir verifica se `MyProperty` for associável. Primeiro, o código obtém os atributos de `MyProperty` por:  
+  
+-   Recuperando um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto.  
+  
+-   A indexação para o <xref:System.ComponentModel.PropertyDescriptorCollection> obter `MyProperty`.  
+  
+-   Salvando os atributos para essa propriedade na variável de atributos.  
+  
+ Em seguida, o código define `myAttribute` para o valor da <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> no <xref:System.ComponentModel.AttributeCollection> e verifica se a propriedade associável.  
+  
+ [!code-cpp[Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurable Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurable Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurable Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurable Example/CS/source.cs#1)]
+ [!code-vb[Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurable Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic RecommendedAsConfigurableAttribute.RecommendedAsConfigurable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.RecommendedAsConfigurableAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.RecommendedAsConfigurableAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.RecommendedAsConfigurableAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.RecommendedAsConfigurableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade pode ser usada como uma configuração de aplicativo. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com <xref:System.ComponentModel.RecommendedAsConfigurableAttribute> definida como `true`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.Yes>.  
+  
+ Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.RecommendedAsConfigurableAttribute.Yes?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

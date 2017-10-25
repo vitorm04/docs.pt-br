@@ -1,0 +1,1045 @@
+<Type Name="Menu+MenuItemCollection" FullName="System.Windows.Forms.Menu+MenuItemCollection">
+  <TypeSignature Language="C#" Value="public class Menu.MenuItemCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit Menu/MenuItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Menu.MenuItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Forms.MenuItem" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa a coleção de <xref:System.Windows.Forms.MenuItem> objetos armazenados em uma <xref:System.Windows.Forms.MainMenu>, <xref:System.Windows.Forms.ContextMenu>, ou <xref:System.Windows.Forms.MenuItem>. Para o <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> classes, essa coleção representa a estrutura inteira do menu para o controle. Para o <xref:System.Windows.Forms.MenuItem> classe, essa coleção representa a lista de itens de submenu associados a <xref:System.Windows.Forms.MenuItem>.  
+  
+ O <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> e <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> métodos permitem que você adicionar e remover itens de menu individuais da coleção. Você também pode usar o <xref:System.Windows.Forms.Menu.MenuItemCollection.Clear%2A> método para remover todos os itens de menu da coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItemCollection (System.Windows.Forms.Menu owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Menu owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.#ctor(System.Windows.Forms.Menu)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.Menu" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.Menu" /> que é o proprietário dessa coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Menu.MenuItemCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe requer que você associar a coleção de uma classe que deriva de <xref:System.Windows.Forms.Menu>, como o <xref:System.Windows.Forms.MainMenu>, <xref:System.Windows.Forms.ContextMenu>, ou <xref:System.Windows.Forms.MenuItem> classe. Desde que você deve especificar um menu que está associado esta coleção, não é possível criar coleções de itens de menu vários e associá-los a um menu conforme necessário. Para alternar os itens de menu associados a um menu, você deve limpar a coleção de itens e adicione os itens de menu para exibir a coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MenuItem Add (string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.MenuItem Add(string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="caption">A legenda do item de menu.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Forms.MenuItem" />, até o final do menu atual, com uma legenda especificada.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.MenuItem" /> que representa o item de menu que está sendo adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.MenuItem> só pode estar contido em um menu em um momento e não pode ser adicionado mais de uma vez para o mesmo menu. Para reutilizar uma <xref:System.Windows.Forms.MenuItem> em mais de um menu, use o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método o <xref:System.Windows.Forms.MenuItem> classe. Para remover um <xref:System.Windows.Forms.MenuItem> que você adicionou anteriormente, use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.MainMenu> para criar um menu principal, `mainMenu1`, que tem duas <xref:System.Windows.Forms.MenuItem> objetos adicionados ao seu <xref:System.Windows.Forms.Menu.MenuItems%2A> coleção. O código, em seguida, atribui `mainMenu1` para o <xref:System.Windows.Forms.Form.Menu%2A> propriedade o <xref:System.Windows.Forms.Form>. Este exemplo requer que o código definido neste exemplo está localizado com em um formulário.  
+  
+ [!code-cpp[Classic Menu.MenuItemCollection.Add Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu.MenuItemCollection.Add Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu.MenuItemCollection.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (System.Windows.Forms.MenuItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(class System.Windows.Forms.MenuItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Add(System.Windows.Forms.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Windows.Forms.MenuItem" /> a ser adicionado.</param>
+        <summary>Adiciona um criado anteriormente <see cref="T:System.Windows.Forms.MenuItem" /> ao final do menu atual.</summary>
+        <returns>O índice de base zero onde o item é armazenado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.MenuItem> só pode estar contido em um menu em um momento e não pode ser adicionado mais de uma vez para o mesmo menu. Para reutilizar uma <xref:System.Windows.Forms.MenuItem> em mais de um menu, use o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método o <xref:System.Windows.Forms.MenuItem> classe. Para remover um <xref:System.Windows.Forms.MenuItem> que você adicionou anteriormente, use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> método.  
+  
+ Esta versão do <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método permite que você adicione criado anteriormente <xref:System.Windows.Forms.MenuItem> coleção de itens de objetos para o fim do menu.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância da classe derivada, <xref:System.Windows.Forms.MainMenu>e adiciona um <xref:System.Windows.Forms.MenuItem> à sua coleção de <xref:System.Windows.Forms.MenuItem> objetos. Este exemplo requer que o método definido neste exemplo está localizado dentro da classe de um formulário e chamado por um método na classe desse formulário.  
+  
+ [!code-cpp[Classic Menu.MenuItems Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu.MenuItems Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu.MenuItems Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu.MenuItems Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu.MenuItems Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu.MenuItems Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (int index, System.Windows.Forms.MenuItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(int32 index, class System.Windows.Forms.MenuItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Add(System.Int32,System.Windows.Forms.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Windows.Forms.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição para adicionar o novo item.</param>
+        <param name="item">O <see cref="T:System.Windows.Forms.MenuItem" /> a ser adicionado.</param>
+        <summary>Adiciona um criado anteriormente <see cref="T:System.Windows.Forms.MenuItem" /> no índice especificado na coleção de itens de menu.</summary>
+        <returns>O índice de base zero onde o item é armazenado na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.MenuItem> só pode estar contido em um menu em um momento e não pode ser adicionado mais de uma vez para o mesmo menu. Para reutilizar uma <xref:System.Windows.Forms.MenuItem> em mais de um menu, use o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método o <xref:System.Windows.Forms.MenuItem> classe. Para remover um <xref:System.Windows.Forms.MenuItem> que você adicionou anteriormente, use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> método.  
+  
+ Esta versão do <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método permite que você adicione criado anteriormente <xref:System.Windows.Forms.MenuItem> objetos para um local de índice específico dentro da coleção. Qualquer <xref:System.Windows.Forms.MenuItem> localizado no momento em que o índice e todos os <xref:System.Windows.Forms.MenuItem> objetos após esse índice, são movidos para o próximo menor índice na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância da classe derivada, <xref:System.Windows.Forms.MainMenu>e adiciona um <xref:System.Windows.Forms.MenuItem> objeto à sua coleção de <xref:System.Windows.Forms.MenuItem> objetos em um local específico no menu de coleção de itens. Este exemplo requer que o método definido neste exemplo está localizado dentro da classe de um formulário e chamado por um método na classe desse formulário.  
+  
+ [!code-cpp[Classic Menu.MenuItemCollection.Add4 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add4 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu.MenuItemCollection.Add4 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add4 Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu.MenuItemCollection.Add4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">O <see cref="T:System.Windows.Forms.MenuItem" /> que está sendo adicionado já está em uso.</exception>
+        <exception cref="T:System.ArgumentException">O índice fornecido no <paramref name="index" /> parâmetro for maior que o tamanho da coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MenuItem Add (string caption, EventHandler onClick);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.MenuItem Add(string caption, class System.EventHandler onClick) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Add(System.String,System.EventHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="onClick" Type="System.EventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="caption">A legenda do item de menu.</param>
+        <param name="onClick">Um <see cref="T:System.EventHandler" /> que representa o manipulador de eventos que é chamado quando o item é clicado pelo usuário, ou quando um usuário pressiona uma tecla de atalho ou acelerador do item de menu.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Forms.MenuItem" /> até o final do menu atual com uma legenda especificada e um manipulador de eventos especificado para o <see cref="E:System.Windows.Forms.MenuItem.Click" /> evento.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.MenuItem" /> que representa o item de menu que está sendo adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.MenuItem> só pode estar contido em um menu em um momento e não pode ser adicionado mais de uma vez para o mesmo menu. Para reutilizar uma <xref:System.Windows.Forms.MenuItem> em mais de um menu, use o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método o <xref:System.Windows.Forms.MenuItem> classe. Para remover um <xref:System.Windows.Forms.MenuItem> que você adicionou anteriormente, use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> método.  
+  
+ Esta versão do <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método permite que você especificar uma legenda para o item de menu e um delegado para manipular o <xref:System.Windows.Forms.MenuItem.Click> evento. Você pode usar esta versão do <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método se seu aplicativo já tiver um manipulador de eventos para lidar com o <xref:System.Windows.Forms.MenuItem.Click> evento.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.MenuItem.Click> evento não é gerado para um <xref:System.Windows.Forms.MenuItem> que contém itens de submenu.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a classe derivada <xref:System.Windows.Forms.MainMenu> para criar um menu principal, `mainMenu1`, que tem duas <xref:System.Windows.Forms.MenuItem> objetos adicionados ao seu <xref:System.Windows.Forms.Menu.MenuItems%2A> coleção. O código usa esta versão do <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método para definir um manipulador de eventos para o <xref:System.Windows.Forms.MenuItem.Click> evento do segundo item de menu é adicionado à coleção. O código, em seguida, atribui `mainMenu1` para o <xref:System.Windows.Forms.Form.Menu%2A> propriedade o <xref:System.Windows.Forms.Form>. Este exemplo requer que o código definido neste exemplo está localizado dentro de um formulário.  
+  
+ [!code-cpp[Classic Menu.MenuItemCollection.Add1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu.MenuItemCollection.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu.MenuItemCollection.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MenuItem Add (string caption, System.Windows.Forms.MenuItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.MenuItem Add(string caption, class System.Windows.Forms.MenuItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Add(System.String,System.Windows.Forms.MenuItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="items" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="caption">A legenda do item de menu.</param>
+        <param name="items">Uma matriz de <see cref="T:System.Windows.Forms.MenuItem" /> objetos que esse <see cref="T:System.Windows.Forms.MenuItem" /> conterá.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Forms.MenuItem" /> ao final nesse menu com a legenda especificada, <see cref="E:System.Windows.Forms.MenuItem.Click" /> manipulador de eventos e itens.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.MenuItem" /> que representa o item de menu que está sendo adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.MenuItem> só pode estar contido em um menu em um momento e não pode ser adicionado mais de uma vez para o mesmo menu. Para reutilizar uma <xref:System.Windows.Forms.MenuItem> em mais de um menu, use o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método o <xref:System.Windows.Forms.MenuItem> classe. Para remover um <xref:System.Windows.Forms.MenuItem> que você adicionou anteriormente, use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> método.  
+  
+ Esta versão do <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método permite que você especificar uma legenda para o item de menu e um representante que manipulará o <xref:System.Windows.Forms.MenuItem.Click> evento. Você pode usar esta versão do <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método se seu aplicativo já tiver um manipulador de eventos para lidar com o <xref:System.Windows.Forms.MenuItem.Click> evento. Esta versão do método também permite que você especifique uma matriz de criou <xref:System.Windows.Forms.MenuItem> objetos que você deseja adicionar à coleção. Você pode usar esse recurso para reutilizar existente <xref:System.Windows.Forms.MenuItem> objetos que foram clonados usando o <xref:System.Windows.Forms.MenuItem.CloneMenu%2A> método. Se o `items` parâmetro não está vazio ou `null`, o <xref:System.Windows.Forms.MenuItem> que está sendo adicionado à coleção conterá itens de submenu.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.Forms.MenuItem.Click> evento não é gerado para um <xref:System.Windows.Forms.MenuItem> que contém itens de submenu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public virtual void AddRange (System.Windows.Forms.MenuItem[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRange(class System.Windows.Forms.MenuItem[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.AddRange(System.Windows.Forms.MenuItem[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Windows.Forms.MenuItem[]" />
+      </Parameters>
+      <Docs>
+        <param name="items">Uma matriz de objetos <see cref="T:System.Windows.Forms.MenuItem" /> que representa os itens de menu a serem adicionados à coleção.</param>
+        <summary>Adiciona uma matriz de objetos <see cref="T:System.Windows.Forms.MenuItem" /> criados anteriormente à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar método para adicionar rapidamente um grupo de criou <xref:System.Windows.Forms.MenuItem> objetos na coleção em vez de adicionar manualmente cada <xref:System.Windows.Forms.MenuItem> à coleção usando o <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método. Se a coleção já contém <xref:System.Windows.Forms.MenuItem> objetos, chamar este método adicionará o novo <xref:System.Windows.Forms.MenuItem> objetos ao final da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma matriz e copia o <xref:System.Windows.Forms.Menu.MenuItemCollection> objetos de dois <xref:System.Windows.Forms.MenuItem> objetos na matriz. O exemplo copia a matriz de <xref:System.Windows.Forms.MenuItem> objetos na coleção de controle para um <xref:System.Windows.Forms.ContextMenu> chamado `contextMenu1`. Este exemplo requer que há dois <xref:System.Windows.Forms.MenuItem> objetos que contêm itens de submenu chamados `menuItem1` e `menuItem2`.  
+  
+ [!code-cpp[Classic Menu.MenuItemCollection.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu.MenuItemCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu.MenuItemCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Windows.Forms.MenuItem" /> objetos no menu de coleção de itens.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para limpar toda a coleção de itens de menu em um menu. Para remover um item de menu individuais da coleção, use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> método. Para adicionar uma nova <xref:System.Windows.Forms.MenuItem> objetos na coleção, use o <xref:System.Windows.Forms.Menu.MenuItemCollection.Add%2A> método.  
+  
+   
+  
+## Examples  
+ Neste exemplo, você cria um menu principal, `myMainMenu`, com dois <xref:System.Windows.Forms.MenuItem> objetos, `File` e `Edit`. O `File` menu tem três itens de submenu, `New`, `Open`, e `Exit`. Usando o `Clear` método, você remover todas a <xref:System.Windows.Forms.MenuItem> objetos no `File` coleção de menu. Este programa requer que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[ClearItems#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ClearItems/CPP/clearitems.cpp#1)]
+ [!code-csharp[ClearItems#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ClearItems/CS/clearitems.cs#1)]
+ [!code-vb[ClearItems#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ClearItems/VB/clearitems.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.MenuItem value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.MenuItem value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Contains(System.Windows.Forms.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.MenuItem" /> a ser localizado na coleção.</param>
+        <summary>Determina se o <see cref="T:System.Windows.Forms.MenuItem" /> especificado é membro da coleção.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.Forms.MenuItem" /> é um membro da coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você determine se um <xref:System.Windows.Forms.MenuItem> é membro da coleção antes de tentar realizar operações de <xref:System.Windows.Forms.MenuItem>. Você pode usar esse método para confirmar que um <xref:System.Windows.Forms.MenuItem> foi adicionado ao ou ainda é um membro da coleção.  
+  
+   
+  
+## Examples  
+ Neste exemplo, você cria um menu principal, `myMainMenu`, com dois <xref:System.Windows.Forms.MenuItem> objetos, `File` e `Edit`. O `File` menu tem três itens de submenu, `New`, `Open`, e `Exit`. Usando o <xref:System.Windows.Forms.Menu.MenuItemCollection.Contains%2A> método, verifique se o `File` menu coleção contém o item `Open`. Se o item existe, você exibe o resultado em uma caixa de texto. Este programa requer que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[ContainsItems#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ContainsItems/CPP/containsitems.cpp#1)]
+ [!code-csharp[ContainsItems#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ContainsItems/CS/containsitems.cs#1)]
+ [!code-vb[ContainsItems#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ContainsItems/VB/containsitems.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser pesquisada.</param>
+        <summary>Determina se a coleção contém um item com a chave especificada.</summary>
+        <returns>
+          <see langword="true" />Se a coleção contém um item com a chave especificada, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Menu.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.MenuItem> no <xref:System.Windows.Forms.Menu.MenuItemCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.Menu.MenuItemCollection.ContainsKey%2A> retorna`false.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">A matriz de destino.</param>
+        <param name="index">O índice na matriz de destino na qual armazenar iniciada.</param>
+        <summary>Copia toda a coleção em uma matriz existente de um local especificado na matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para combinar <xref:System.Windows.Forms.MenuItem> objetos de várias coleções em uma única matriz. Esse recurso permite que você facilmente combinar dois ou mais conjuntos de itens de menu para uso em um <xref:System.Windows.Forms.ContextMenu> ou <xref:System.Windows.Forms.MainMenu>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma matriz e copia o <xref:System.Windows.Forms.Menu.MenuItemCollection> objetos de dois <xref:System.Windows.Forms.MenuItem> objetos na matriz. O exemplo copia a matriz de <xref:System.Windows.Forms.MenuItem> objetos na coleção de controle para um <xref:System.Windows.Forms.ContextMenu> chamado `contextMenu1`. Este exemplo requer que há dois <xref:System.Windows.Forms.MenuItem> objetos que contêm itens de submenu chamados `menuItem1` e `menuItem2`.  
+  
+ [!code-cpp[Classic Menu.MenuItemCollection.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Menu.MenuItemCollection.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic Menu.MenuItemCollection.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic Menu.MenuItemCollection.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o número total de <see cref="T:System.Windows.Forms.MenuItem" /> objetos na coleção.</summary>
+        <value>O número de <see cref="T:System.Windows.Forms.MenuItem" /> objetos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Count` propriedade contém o número de <xref:System.Windows.Forms.MenuItem> atribuídos à coleção de objetos. Você pode usar o `Count` valor da propriedade como os limites superiores de um loop para iterar por meio de uma coleção. Tenha em mente, o valor de índice de uma coleção é um índice com base em zero, portanto você deve subtrair um variável de loop. Se você não conta para isso, você exceder os limites superiores da coleção e lançar uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um menu principal, `myMainMenu`, com um <xref:System.Windows.Forms.MenuItem>, `File`, que tem três itens de submenu: `New`, `Open`, e `Exit`. Usando o `Count` propriedade, você conta o número de objetos de `File` menu e exibir esse número em uma caixa de mensagem. Este exemplo requer que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[CountProperty#1](~/samples/snippets/cpp/VS_Snippets_Winforms/CountProperty/CPP/countitems.cpp#1)]
+ [!code-csharp[CountProperty#1](~/samples/snippets/csharp/VS_Snippets_Winforms/CountProperty/CS/countitems.cs#1)]
+ [!code-vb[CountProperty#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/CountProperty/VB/countitems.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MenuItem[] Find (string key, bool searchAllChildren);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.MenuItem[] Find(string key, bool searchAllChildren) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Find(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="searchAllChildren" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item de menu a ser pesquisado.</param>
+        <param name="searchAllChildren">
+          <see langword="true" /> para pesquisar itens de menu filho; caso contrário, <see langword="false" />.</param>
+        <summary>Encontra os itens com a chave especificada, com a opção de pesquisar os itens de submenu</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Windows.Forms.MenuItem" /> cuja propriedade <see cref="P:System.Windows.Forms.Menu.Name" /> corresponde ao <paramref name="key" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia ou não há nenhuma correspondência <xref:System.Windows.Forms.Menu.MenuItemCollection.Find%2A> retorna uma matriz vazia.  
+  
+ O <xref:System.Windows.Forms.Menu.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.MenuItem> no <xref:System.Windows.Forms.Menu.MenuItemCollection>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para iterar na coleção de item de menu.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção de itens de menu.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.MenuItem value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.MenuItem value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.IndexOf(System.Windows.Forms.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.MenuItem" /> a ser localizado na coleção.</param>
+        <summary>Recupera o índice de um item específico na coleção.</summary>
+        <returns>O índice de base zero do item encontrado na coleção; Caso contrário, retornará -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um menu principal, `myMainMenu`, com dois <xref:System.Windows.Forms.MenuItem> objetos, `File` e `Edit`. O `File` menu tem três itens de submenu: `New`, `Open`, e `Exit`. Usando o <xref:System.Windows.Forms.Menu.MenuItemCollection.IndexOf%2A> método, recupere o índice da `Exit` item o `File` coleção de menu e, em seguida, exibir seu valor em uma caixa de mensagem. Este exemplo requer que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[IndexOf#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IndexOf/CPP/indexof.cpp#1)]
+ [!code-csharp[IndexOf#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IndexOf/CS/indexof.cs#1)]
+ [!code-vb[IndexOf#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IndexOf/VB/indexof.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOfKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.IndexOfKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item de menu a ser pesquisado.</param>
+        <summary>Localiza o índice da primeira ocorrência de um item de menu com a chave especificada.</summary>
+        <returns>O índice com base em zero do primeiro item de menu com a chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Forms.Menu.MenuItemCollection.IndexOfKey%2A> é chamado sucessivamente, a última retornou o índice será verificado para uma correspondência de chave pela primeira vez e se não houver nenhuma correspondência, a pesquisa começa no início da coleção.  
+  
+ O <xref:System.Windows.Forms.Menu.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.MenuItem> no <xref:System.Windows.Forms.Menu.MenuItemCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia ou não há nenhuma correspondência, <xref:System.Windows.Forms.Menu.MenuItemCollection.IndexOfKey%2A> retornará -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MenuItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.MenuItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A localização indexada do <see cref="T:System.Windows.Forms.MenuItem" /> na coleção.</param>
+        <summary>Recupera o <see cref="T:System.Windows.Forms.MenuItem" /> no local especificado indexada local na coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.MenuItem" /> no local especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para atribuir <xref:System.Windows.Forms.MenuItem> objetos em um local específico ou para recuperá-los do <xref:System.Windows.Forms.Menu.MenuItemCollection>, você pode referenciar o objeto de coleção com um valor de índice específico. O valor de índice de <xref:System.Windows.Forms.Menu.MenuItemCollection> é um índice com base em zero.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="value" /> é <see langword="null" />.  
+  
+ ou  
+  
+ O parâmetro <paramref name="index" /> é menor que zero.  
+  
+ ou  
+  
+ O <paramref name="index" /> parâmetro for maior que o número de itens de menu na coleção e a coleção de itens de menu não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.MenuItem this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.MenuItem Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item a ser recuperado da coleção.</param>
+        <summary>Obtém um item com a chave especificada da coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.MenuItem" /> com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Menu.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.MenuItem> no <xref:System.Windows.Forms.Menu.MenuItemCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, <xref:System.Windows.Forms.Menu.MenuItemCollection.Item%2A> retorna`null.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public virtual void Remove (System.Windows.Forms.MenuItem item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(class System.Windows.Forms.MenuItem item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.Remove(System.Windows.Forms.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Windows.Forms.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="item">O <see cref="T:System.Windows.Forms.MenuItem" /> a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Windows.Forms.MenuItem" /> especificado da coleção de itens de menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.MenuItem> é removido da coleção de itens de menu, menu subsequentes todos os itens são movidos para cima uma posição na coleção. Você pode usar esta versão do `Remove` para remover um determinado <xref:System.Windows.Forms.MenuItem> da coleção usando uma referência para o <xref:System.Windows.Forms.MenuItem> a ser removido. Se você não tem uma referência para o <xref:System.Windows.Forms.MenuItem> que você deseja remover, você pode usar a outra versão desse método que aceita como um parâmetro, um índice correspondente para o <xref:System.Windows.Forms.MenuItem> a ser removido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um menu principal, `myMainMenu`, com dois <xref:System.Windows.Forms.MenuItem> objetos, `File` e `Edit`. O `File` menu tem três itens de submenu: `New`, `Open`, e `Exit`. Usando o `Remove` método, você remover o `Open` item do `File` coleção de menu. Este exemplo requer que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[RemoveMenuItems#1](~/samples/snippets/cpp/VS_Snippets_Winforms/RemoveMenuItems/CPP/removeitems.cpp#1)]
+ [!code-csharp[RemoveMenuItems#1](~/samples/snippets/csharp/VS_Snippets_Winforms/RemoveMenuItems/CS/removeitems.cs#1)]
+ [!code-vb[RemoveMenuItems#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/RemoveMenuItems/VB/removeitems.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Windows.Forms.MenuItem" /> a ser removido.</param>
+        <summary>Remove um <see cref="T:System.Windows.Forms.MenuItem" /> da coleção de itens de menu em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.MenuItem> é removido da coleção de itens de menu, menu subsequentes todos os itens são movidos para cima uma posição na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar um menu principal, `myMainMenu`, com dois <xref:System.Windows.Forms.MenuItem> objetos, `File` e `Edit`. O `File` menu tem três itens de submenu: `New`, `Open`, e `Exit`. Usando o `RemoveAt` método, você remover o `Exit` item do `File` usando seu número de índice de coleção de menu. Este exemplo requer que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[RemoveAt#1](~/samples/snippets/cpp/VS_Snippets_Winforms/RemoveAt/CPP/removeat.cpp#1)]
+ [!code-csharp[RemoveAt#1](~/samples/snippets/csharp/VS_Snippets_Winforms/RemoveAt/CS/removeat.cs#1)]
+ [!code-vb[RemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/RemoveAt/VB/removeat.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveByKey">
+      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveByKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.RemoveByKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do item de menu a ser removido.</param>
+        <summary>Remove o item de menu com a chave especificada da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Menu.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.MenuItem> no <xref:System.Windows.Forms.Menu.MenuItemCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Windows.Forms.Menu.MenuItemCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.MenuItem" /> a adicionar à coleção.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>A posição na qual a <see cref="T:System.Windows.Forms.MenuItem" /> foi inserido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser localizado na coleção.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Contains(System.Object)" />.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado for um <see cref="T:System.Windows.Forms.MenuItem" /> na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.MenuItem" /> a ser localizado na coleção.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.IndexOf(System.Object)" />.</summary>
+        <returns>O índice de base zero se <paramref name="value" /> é um <see cref="T:System.Windows.Forms.MenuItem" /> na coleção; caso contrário -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o <see cref="T:System.Windows.Forms.MenuItem" /> devem ser inseridos.</param>
+        <param name="value">O <see cref="T:System.Windows.Forms.MenuItem" /> para inserir o <see cref="T:System.Windows.Forms.Menu.MenuItemCollection" />.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do elemento a ser obtido.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.Item(System.Int32)" />.</summary>
+        <value>O <see cref="T:System.Windows.Forms.MenuItem" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Menu.MenuItemCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.MenuItem" /> a ser removido.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Remove(System.Object)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.Menu.MenuItemCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

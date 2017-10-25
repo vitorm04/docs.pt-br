@@ -1,0 +1,163 @@
+<Type Name="CorrelationQuery" FullName="System.ServiceModel.CorrelationQuery">
+  <TypeSignature Language="C#" Value="public class CorrelationQuery" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CorrelationQuery extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.CorrelationQuery" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um <see cref="P:System.ServiceModel.CorrelationQuery.Where" /> cláusula e um <see cref="P:System.ServiceModel.CorrelationQuery.Select" /> cláusula que identificam as características exclusivas de uma mensagem para que ele possa ser roteado para a instância correta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ServiceModel.CorrelationQuery> é um conjunto de consultas que são executadas em uma mensagem de entrada ou saída para gerar um conjunto de chaves da instância. Um <xref:System.Runtime.DurableInstancing.InstanceKey> representa uma associação entre os dados selecionados da consulta e uma instância de serviço específico.  
+  
+ O <xref:System.ServiceModel.CorrelationQuery.Where%2A> cláusula permite que o usuário filtrar o conjunto de mensagens que este <xref:System.ServiceModel.CorrelationQuery> é executado em. O <xref:System.ServiceModel.CorrelationQuery.Select%2A> cláusula representa o conjunto de consulta usado para identificar exclusivamente a instância de serviço para o qual uma mensagem de entrada deve ser distribuída. O <xref:System.ServiceModel.CorrelationQuery.SelectAdditional%2A> cláusulas são um conjunto de conjuntos de consulta que representam as novas chaves de instância devem ser criadas para associar os dados com a instância do serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CorrelationQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CorrelationQuery.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.CorrelationQuery" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CorrelationQuery.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">O objeto a ser comparado.</param>
+        <summary>Determina se o atual <see cref="T:System.ServiceModel.CorrelationQuery" /> é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o atual <see cref="T:System.ServiceModel.CorrelationQuery" /> é igual ao objeto especificado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.CorrelationQuery>instâncias são consideradas iguais se seus <xref:System.ServiceModel.CorrelationQuery.Where%2A> cláusulas são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.CorrelationQuery.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para a atual <see cref="T:System.ServiceModel.CorrelationQuery" />.</summary>
+        <returns>O código hash para a atual <see cref="T:System.ServiceModel.CorrelationQuery" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ServiceModel.CorrelationQuery.GetHashCode%2A>Retorna um código hash com base no valor da <xref:System.ServiceModel.CorrelationQuery.Where%2A> cláusula.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageQuerySet Select { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.MessageQuerySet Select" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CorrelationQuery.Select" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageQuerySet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.MessageQuerySet" /> que contém os elementos na mensagem que compõem a chave de instância que identifica exclusivamente a mensagem.</summary>
+        <value>O <see cref="T:System.ServiceModel.MessageQuerySet" /> que contém os elementos na mensagem que compõem a chave de instância que identifica exclusivamente a mensagem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectAdditional">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.ServiceModel.MessageQuerySet&gt; SelectAdditional { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.ServiceModel.MessageQuerySet&gt; SelectAdditional" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CorrelationQuery.SelectAdditional" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.ServiceModel.MessageQuerySet&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cláusulas, cada uma delas define o conjunto de elementos na mensagem que formam uma chave associada.</summary>
+        <value>Uma coleção de cláusulas, cada uma delas define o conjunto de elementos na mensagem que formam uma chave associada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Dispatcher.MessageFilter Where { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Dispatcher.MessageFilter Where" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.CorrelationQuery.Where" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Dispatcher.MessageFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ServiceModel.Dispatcher.MessageFilter" /> que define o conjunto de mensagens para o qual se aplica a esta consulta.</summary>
+        <value>O filtro de mensagem que define o conjunto de mensagens para o qual se aplica a esta consulta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

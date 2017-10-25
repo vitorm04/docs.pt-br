@@ -1,0 +1,307 @@
+<Type Name="XmlFormatExtensionAttribute" FullName="System.Web.Services.Configuration.XmlFormatExtensionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class XmlFormatExtensionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XmlFormatExtensionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que uma extensão de formato de descrição de serviço é executado em um ou mais pontos de extensão. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma extensão de formato de descrição de serviço estende como uma descrição de serviço é gerada para um serviço Web XML criado usando ASP.NET. Especificamente, uma extensão de formato de descrição de serviço adiciona elementos XML para a descrição do serviço. Isso é útil quando uma extensão SOAP é criada para ser executado no lado do cliente e o servidor de um serviço da Web em XML, como informações sobre as extensões SOAP não são colocadas na descrição do serviço. Se você deseja adicionar informações sobre a extensão SOAP para a descrição do serviço, um cliente pode interpretar o que ele deve executar a extensão SOAP específica. Um exemplo de uma extensão SOAP que deve ser executado no cliente e servidor é uma extensão SOAP de criptografia. Se uma extensão SOAP a criptografia é executado somente no servidor e ele criptografa os valores de retorno antes de enviá-los de volta ao cliente, o cliente deve ter a extensão SOAP em execução para descriptografar a mensagem SOAP. Caso contrário, o cliente não pode processar o valor de retorno.  
+  
+ Use as seguintes etapas para criar uma extensão de formato de descrição de serviço:  
+  
+1.  Criar uma classe que deriva de <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>.  
+  
+2.  Aplicar um <xref:System.Web.Services.Configuration.XmlFormatExtensionAttribute> à classe e especifique os pontos de extensão em que a extensão de formato de descrição de serviço deve ser executado.  
+  
+3.  Opcionalmente, aplique um <xref:System.Web.Services.Configuration.XmlFormatExtensionPointAttribute> à classe e especifique um membro dentro da classe que atua como um novo ponto de extensão.  
+  
+4.  Opcionalmente, aplique um <xref:System.Web.Services.Configuration.XmlFormatExtensionPrefixAttribute> à classe e especifique o prefixo de namespace XML para ser associado a elementos XML gerados pela extensão de formato de descrição de serviço.  
+  
+5.  Configurar a extensão de formato de descrição de serviço para ser executado no `serviceDescriptionFormatExtensionTypes` seção do arquivo de configuração.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#1)]
+ [!code-vb[ServiceDescriptionFormatExtension#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="ns">O namespace XML para o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint1">O ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> classe que especifica o elemento XML e o namespace para adicionar durante a execução no ponto de extensão especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type[] extensionPoints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type[] extensionPoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoints" Type="System.Type[]" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="ns">O namespace XML para o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoints">Uma matriz de pontos de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> classe que especifica o elemento XML e o namespace para adicionar ao executar nos pontos de extensão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1, Type extensionPoint2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1, class System.Type extensionPoint2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+        <Parameter Name="extensionPoint2" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="ns">O namespace XML para o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint1">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint2">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> classe que especifica o elemento XML e o namespace para adicionar ao executar nos pontos de extensão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1, Type extensionPoint2, Type extensionPoint3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1, class System.Type extensionPoint2, class System.Type extensionPoint3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+        <Parameter Name="extensionPoint2" Type="System.Type" />
+        <Parameter Name="extensionPoint3" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="ns">O namespace XML para o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint1">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint2">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint3">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> classe que especifica o elemento XML e o namespace para adicionar ao executar nos pontos de extensão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormatExtensionAttribute (string elementName, string ns, Type extensionPoint1, Type extensionPoint2, Type extensionPoint3, Type extensionPoint4);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string elementName, string ns, class System.Type extensionPoint1, class System.Type extensionPoint2, class System.Type extensionPoint3, class System.Type extensionPoint4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Configuration.XmlFormatExtensionAttribute.#ctor(System.String,System.String,System.Type,System.Type,System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+        <Parameter Name="ns" Type="System.String" />
+        <Parameter Name="extensionPoint1" Type="System.Type" />
+        <Parameter Name="extensionPoint2" Type="System.Type" />
+        <Parameter Name="extensionPoint3" Type="System.Type" />
+        <Parameter Name="extensionPoint4" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">O elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="ns">O namespace XML para o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint1">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint2">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint3">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <param name="extensionPoint4">Um ponto de extensão no qual executar a extensão de formato de descrição de serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Services.Configuration.XmlFormatExtensionAttribute" /> classe que especifica o elemento XML e o namespace para adicionar ao executar nos pontos de extensão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="public string ElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionAttribute.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</summary>
+        <value>O elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionPoints">
+      <MemberSignature Language="C#" Value="public Type[] ExtensionPoints { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] ExtensionPoints" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionAttribute.ExtensionPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estágios em que a extensão de formato de descrição de serviço é executado.</summary>
+        <value>Uma matriz de <see cref="T:System.Type" /> que especifica o estágio em que a extensão de formato de descrição de serviço é executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista de tipos disponíveis com o qual pode executar uma extensão de formato de descrição de serviço incluem aqueles criados em ASP.NET e quaisquer tipos personalizados configurados no servidor Web. Os tipos integrados do ASP.NET que podem ser executados com uma extensão de formato de descrição de serviço são na lista a seguir:  
+  
+-   <xref:System.Web.Services.Description.Binding>  
+  
+-   <xref:System.Web.Services.Description.OperationBinding>  
+  
+-   <xref:System.Web.Services.Description.FaultBinding>  
+  
+-   <xref:System.Web.Services.Description.InputBinding>  
+  
+-   <xref:System.Web.Services.Description.OutputBinding>  
+  
+-   <xref:System.Web.Services.Description.Operation>  
+  
+-   <xref:System.Web.Services.Description.Types>  
+  
+-   <xref:System.Web.Services.Description.Port>  
+  
+-   <xref:System.Web.Services.Description.ServiceDescription>  
+  
+ Consultem essas classes todas as seções, dentro de uma descrição de serviço, que são geradas pelo ASP.NET.  
+  
+   
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Configuration.XmlFormatExtensionAttribute.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace XML para o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</summary>
+        <value>O namespace XML para o elemento XML adicionado para a descrição do serviço pela extensão de formato de descrição de serviço.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[ServiceDescriptionFormatExtension#2](~/samples/snippets/csharp/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/CS/source.cs#2)]
+ [!code-vb[ServiceDescriptionFormatExtension#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ServiceDescriptionFormatExtension/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

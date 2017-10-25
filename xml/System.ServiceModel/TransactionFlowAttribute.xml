@@ -1,0 +1,284 @@
+<Type Name="TransactionFlowAttribute" FullName="System.ServiceModel.TransactionFlowAttribute">
+  <TypeSignature Language="C#" Value="public sealed class TransactionFlowAttribute : Attribute, System.ServiceModel.Description.IOperationBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TransactionFlowAttribute extends System.Attribute implements class System.ServiceModel.Description.IOperationBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.TransactionFlowAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Description.IOperationBehavior</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se uma operação de serviço aceita transações de entrada de um cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.TransactionFlowAttribute> é um atributo de forma declarativa usado para associar uma política de fluxo de transação específica uma operação de serviço. O <xref:System.ServiceModel.TransactionFlowOption> propriedade deste atributo especifica se a operação do respectiva aceita o fluxo de uma transação do cliente, ou se a operação requer que o cliente para sempre transmitir uma transação. O <xref:System.ServiceModel.TransactionFlowAttribute> também pode ser usado como um comportamento de operação para programaticamente associar uma política de fluxo de transação com uma operação específica. Nesse caso, ele deve ser adicionado a `Behaviors` coleção na descrição da operação.  
+  
+> [!NOTE]
+>  O `OperationContract` para cada método que usa o <xref:System.ServiceModel.TransactionFlowAttribute> deve fornecer um totalmente qualificado `Action` cadeia de caracteres. Um valor de "*" não tem suporte.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso dessa enumeração junto com o <xref:System.ServiceModel.TransactionFlowOption> classe no nível da operação.  
+  
+```  
+using System;  
+using System.ServiceModel;  
+using System.Transactions;  
+  
+namespace Microsoft.WCF.Documentation  
+{  
+  [ServiceContract(  
+    Namespace="http://microsoft.wcf.documentation",   
+    SessionMode=SessionMode.Required  
+  )]  
+  public interface IBehaviorService  
+  {  
+    [OperationContract]  
+    [TransactionFlow(TransactionFlowOption.Mandatory)]  
+    string TxWork(string message);  
+  }  
+  
+  // Note: To use the TransactionIsolationLevel property, you   
+  // must add a reference to the System.Transactions.dll assembly.  
+  /* The following service implementation:  
+   *   -- Processes messages on one thread at a time  
+   *   -- Creates one service object per session  
+   *   -- Releases the service object when the transaction commits  
+   */  
+  [ServiceBehavior(  
+    ConcurrencyMode=ConcurrencyMode.Single,  
+    InstanceContextMode=InstanceContextMode.PerSession,  
+    ReleaseServiceInstanceOnTransactionComplete=true  
+  )]  
+  public class BehaviorService : IBehaviorService, IDisposable  
+  {  
+    Guid myID;  
+  
+    public BehaviorService()  
+    {  
+      myID = Guid.NewGuid();  
+      Console.WriteLine(  
+        "Object "  
+        + myID.ToString()  
+        + " created.");  
+    }  
+  
+    /*  
+    / * The following operation-level behaviors are specified:  
+    / * Always executes under a transaction scope.  
+    / * The transaction scope is completed when the operation  
+    / * terminates without an unhandled exception.  
+    /*  
+    [OperationBehavior(  
+      TransactionAutoComplete = true,  
+      TransactionScopeRequired = true  
+    )]  
+    public string TxWork(string message)  
+    {  
+      // Do some transactable work.  
+      Console.WriteLine("TxWork called with: " + message);  
+      // Display transaction information.  
+  
+      TransactionInformation info = Transaction.Current.TransactionInformation;  
+      Console.WriteLine("The distributed tx ID: {0}.", info.DistributedIdentifier);  
+      Console.WriteLine("The tx status: {0}.", info.Status);  
+      return String.Format("Hello. This was object {0}.",myID.ToString()) ;  
+    }  
+  
+    public void Dispose()  
+    {  
+      Console.WriteLine(  
+        "Service "  
+        + myID.ToString()  
+        + " is being recycled."  
+      );  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransactionFlowAttribute (System.ServiceModel.TransactionFlowOption transactions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ServiceModel.TransactionFlowOption transactions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.TransactionFlowAttribute.#ctor(System.ServiceModel.TransactionFlowOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transactions" Type="System.ServiceModel.TransactionFlowOption" />
+      </Parameters>
+      <Docs>
+        <param name="transactions">Um <see cref="T:System.ServiceModel.TransactionFlowOption" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.TransactionFlowAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso dessa enumeração junto com o <xref:System.ServiceModel.TransactionFlowOption> classe no nível da operação.  
+  
+ [!code-csharp[OperationBehaviorAttribute1#2](~/samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute1/cs/services.cs#2)]
+ [!code-vb[OperationBehaviorAttribute1#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute1/vb/services.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.AddBindingParameters">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.AddBindingParameters (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Channels.BindingParameterCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Channels.BindingParameterCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.TransactionFlowAttribute.System#ServiceModel#Description#IOperationBehavior#AddBindingParameters(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="parameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição de operação para a qual o atributo adiciona funcionalidade adicional.</param>
+        <param name="parameters">A coleção de objetos de parâmetro no contexto de associação.</param>
+        <summary>Adiciona parâmetros adicionais (configurações) para o contexto de associação para dar suporte ao comportamento desta operação. Esse método não pode ser herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método fornece um contexto de associação com os parâmetros adicionais (configurações) para dar suporte o comportamento necessário para esta operação. Ele é chamado internamente pela infraestrutura quando um serviço é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyClientBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.ClientOperation proxy);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.ClientOperation proxy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.TransactionFlowAttribute.System#ServiceModel#Description#IOperationBehavior#ApplyClientBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.ClientOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="proxy" Type="System.ServiceModel.Dispatcher.ClientOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">A operação para o qual o atributo anexa a funcionalidade.</param>
+        <param name="proxy">O <see cref="T:System.ServiceModel.Dispatcher.ClientOperation" /> objeto que representa a operação atual.</param>
+        <summary>Anexa a funcionalidade de atributo para o <see langword="ProxyOperation" /> objeto para o método que marca o atributo. Esse método não pode ser herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite exibir, modificar ou adicionar extensões personalizadas no tempo de execução do cliente em todas as mensagens ou para uma operação específica. Observe que no caso do <xref:System.ServiceModel.TransactionFlowAttribute>, a implementação do método está vazia. Esse método é chamado internamente pela infraestrutura quando um proxy de serviço é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.ApplyDispatchBehavior (System.ServiceModel.Description.OperationDescription description, System.ServiceModel.Dispatcher.DispatchOperation dispatch);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior(class System.ServiceModel.Description.OperationDescription description, class System.ServiceModel.Dispatcher.DispatchOperation dispatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.TransactionFlowAttribute.System#ServiceModel#Description#IOperationBehavior#ApplyDispatchBehavior(System.ServiceModel.Description.OperationDescription,System.ServiceModel.Dispatcher.DispatchOperation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+        <Parameter Name="dispatch" Type="System.ServiceModel.Dispatcher.DispatchOperation" />
+      </Parameters>
+      <Docs>
+        <param name="description">A descrição para esta operação.</param>
+        <param name="dispatch">O <see cref="T:System.ServiceModel.Dispatcher.DispatchOperation" /> objeto para esta operação.</param>
+        <summary>Anexa a funcionalidade de atributo para o <see cref="T:System.ServiceModel.Dispatcher.DispatchOperation" /> objeto para o método que marca o atributo. Esse método não pode ser herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite exibir, modificar ou adicionar extensões personalizadas no tempo de execução do cliente em todas as mensagens ou para uma operação específica. Observe que no caso do <xref:System.ServiceModel.TransactionFlowAttribute>, a implementação do método está vazia. Esse método é chamado internamente pela infraestrutura quando um serviço é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.Description.IOperationBehavior.Validate">
+      <MemberSignature Language="C#" Value="void IOperationBehavior.Validate (System.ServiceModel.Description.OperationDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.Description.IOperationBehavior.Validate(class System.ServiceModel.Description.OperationDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.TransactionFlowAttribute.System#ServiceModel#Description#IOperationBehavior#Validate(System.ServiceModel.Description.OperationDescription)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.ServiceModel.Description.OperationDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">A operação para validar.</param>
+        <summary>Verifica se a operação pode dar suporte a esse comportamento. Esse método não pode ser herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método verifica se a descrição da operação é suficiente para suportar o comportamento de fluxo de transações. Observe que no caso do <xref:System.ServiceModel.TransactionFlowAttribute>, a implementação do método está vazia. Esse método é chamado internamente pela infraestrutura quando um serviço é criado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transactions">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.TransactionFlowOption Transactions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.TransactionFlowOption Transactions" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.TransactionFlowAttribute.Transactions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.TransactionFlowOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a transação de entrada tem suporte.</summary>
+        <value>Um <see cref="T:System.ServiceModel.TransactionFlowOption" /> que indica se a transação de entrada tem suporte.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Xml.XPath">
+  <Docs>
+    <summary>O <see cref="N:System.Xml.XPath" /> namespace contém as classes que definem um modelo de cursor para navegar e editar itens de informações XML como instâncias do XQuery 1.0 e XPath 2.0 Data Model.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

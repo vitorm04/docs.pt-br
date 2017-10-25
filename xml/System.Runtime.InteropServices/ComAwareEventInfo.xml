@@ -1,0 +1,583 @@
+<Type Name="ComAwareEventInfo" FullName="System.Runtime.InteropServices.ComAwareEventInfo">
+  <TypeSignature Language="C#" Value="public class ComAwareEventInfo : System.Reflection.EventInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComAwareEventInfo extends System.Reflection.EventInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComAwareEventInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.EventInfo</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite o registro de associação tardia de um manipulador de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, compiladores incorporará automaticamente chamadas para o <xref:System.Runtime.InteropServices.ComAwareEventInfo.AddEventHandler%28System.Object%2CSystem.Delegate%29?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.ComAwareEventInfo.RemoveEventHandler%28System.Object%2CSystem.Delegate%29?displayProperty=nameWithType> métodos em vez de usar regular manipulador métodos add e remove manipulador de eventos. Isso ocorre se a interface que o evento correspondente é definido em precisa ser inserido.  
+  
+ Você pode especificar isso incorporando o assembly inteiro que contém a interface usando o **/link** opção os compiladores ou definindo o **Embed Interop Types** propriedade `True` no Visual Studio.  
+  
+ O <xref:System.Runtime.InteropServices.ComAwareEventInfo> tipo deriva o <xref:System.Reflection.EventInfo> classe e substituições de <xref:System.Reflection.EventInfo.AddEventHandler%28System.Object%2CSystem.Delegate%29?displayProperty=nameWithType> e <xref:System.Reflection.EventInfo.RemoveEventHandler%28System.Object%2CSystem.Delegate%29?displayProperty=nameWithType> métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComAwareEventInfo (Type type, string eventName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string eventName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="eventName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de objeto.</param>
+        <param name="eventName">O nome de um evento em <c>tipo</c>.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ComAwareEventInfo" /> classe usando o tipo especificado e um nome do evento no tipo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventHandler">
+      <MemberSignature Language="C#" Value="public override void AddEventHandler (object target, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddEventHandler(object target, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.AddEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto de destino ao qual o delegado de evento deve ser associado.</param>
+        <param name="handler">O delegado do evento.</param>
+        <summary>Anexa um manipulador de eventos a um objeto COM.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante de <xref:System.Reflection.EventInfo.AddEventHandler%28System.Object%2CSystem.Delegate%29?displayProperty=nameWithType> método, exceto que ela permite que você anexe eventos a objetos COM.  
+  
+ Se `target` é um COM o objeto, este método adiciona um delegado a um evento usando o <xref:System.Runtime.InteropServices.ComEventsHelper.Combine%28System.Object%2CSystem.Guid%2CSystem.Int32%2CSystem.Delegate%29?displayProperty=nameWithType> método.  
+  
+ <xref:System.Runtime.InteropServices.ComAwareEventInfo.AddEventHandler%2A>facilita o registro receptores de evento COM encaminham chamadas para delegados gerenciados correspondentes. Requer as seguintes informações:  
+  
+-   O objeto de destino (`target`).  
+  
+-   O GUID da interface de origem.  
+  
+-   O DispID do método na interface COM que corresponde ao evento especificado.  
+  
+-   O representante que seria invocado quando o objeto COM dispara o evento correspondente (`handler`).  
+  
+ <xref:System.Runtime.InteropServices.ComAwareEventInfo.AddEventHandler%2A>procura a interface de origem COM correspondente (especificado como o primeiro parâmetro do <xref:System.Runtime.InteropServices.ComEventInterfaceAttribute.%23ctor%28System.Type%2CSystem.Type%29?displayProperty=nameWithType> construtor). Em seguida, procura um método na interface de origem cujo nome é idêntico ao nome do evento. O valor de `GuidAttribute` na fonte de interface é o GUID que é passado para <xref:System.Runtime.InteropServices.ComEventsHelper.Combine%28System.Object%2CSystem.Guid%2CSystem.Int32%2CSystem.Delegate%29?displayProperty=nameWithType>; o valor de `DispIDAttribute` no método é o valor DispID que é passado para <xref:System.Runtime.InteropServices.ComEventsHelper.Combine%28System.Object%2CSystem.Guid%2CSystem.Int32%2CSystem.Delegate%29?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public override System.Reflection.EventAttributes Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.EventAttributes Attributes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComAwareEventInfo.Attributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.EventAttributes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os atributos para este evento.</summary>
+        <value>Os atributos somente leitura para este evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os atributos são retornados em um inteiro de 4 bytes, que representa um bitmap dos atributos definidos para o evento que é refletido por esta instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclaringType">
+      <MemberSignature Language="C#" Value="public override Type DeclaringType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type DeclaringType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComAwareEventInfo.DeclaringType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a classe que declara esse membro.</summary>
+        <value>O objeto <see cref="T:System.Type" /> para a classe que declara esse membro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAddMethod">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo GetAddMethod (bool nonPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo GetAddMethod(bool nonPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.GetAddMethod(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonPublic">
+          <see langword="true" />para retornar os métodos não-públicos; Caso contrário, <see langword="false" />.</param>
+        <summary>Obtém o método que foi usado para adicionar um delegado de manipulador de eventos para a origem do evento.</summary>
+        <returns>Delegar o método usado para adicionar um manipulador de eventos para a origem do evento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Reflection.EventInfo.GetAddMethod%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MethodAccessException">
+          <paramref name="nonPublic" />é <see langword="true" /> e o método usado para adicionar um delegado de manipulador de eventos é não-públicos, mas o chamador não tem permissão para refletir nos métodos não-públicos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.GetCustomAttributes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="inherit">
+          <see langword="true" /> para pesquisar a cadeia de herança desse membro para encontrar os atributos; caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, obtém uma matriz que contém todos os atributos personalizados que são aplicados a esse membro.</summary>
+        <returns>Uma matriz que contém todos os atributos personalizados, ou uma matriz que não tem nenhum elemento se nenhum atributo foi definido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama o <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> método subjacente <xref:System.Reflection.EventInfo> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Esse membro pertence a um tipo carregado no contexto somente reflexão. Consulte [Como carregar assemblies no contexto de somente reflexão](~/docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public override object[] GetCustomAttributes (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object[] GetCustomAttributes(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.GetCustomAttributes(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O tipo de atributo a ser pesquisado. Somente os atributos pode ser atribuídos a esse tipo podem ser retornados.</param>
+        <param name="inherit">
+          <see langword="true" /> para pesquisar a cadeia de herança desse membro para encontrar os atributos; caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, obtém uma matriz que contém todos os atributos personalizados do tipo especificado que são aplicados a esse membro.</summary>
+        <returns>Uma matriz que contém todos os atributos personalizados do tipo especificado, ou uma matriz que não tem nenhum elemento se nenhum atributo foi definido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="attributeType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Esse membro pertence a um tipo carregado no contexto somente reflexão. Consulte [como: carregar Assemblies no contexto exclusivo de reflexão](~/docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)</exception>
+        <exception cref="T:System.TypeLoadException">Um tipo de atributo personalizado não pode ser carregado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRaiseMethod">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo GetRaiseMethod (bool nonPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo GetRaiseMethod(bool nonPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.GetRaiseMethod(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonPublic">
+          <see langword="true" />para retornar os métodos não-públicos; Caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, retorna o método foi chamado quando o evento foi gerado.</summary>
+        <returns>O objeto foi chamado quando o evento foi gerado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `null` para eventos que são declarados com o c# `event` palavra-chave ou o Visual Basic `Event` palavra-chave. Isso ocorre porque os compiladores c# e Visual Basic não geram tal método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MethodAccessException">
+          <paramref name="nonPublic" />é <see langword="true" /> e o método usado para adicionar um delegado de manipulador de eventos é não-públicos, mas o chamador não tem permissão para refletir nos métodos não-públicos.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoveMethod">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MethodInfo GetRemoveMethod (bool nonPublic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Reflection.MethodInfo GetRemoveMethod(bool nonPublic) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.GetRemoveMethod(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nonPublic" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nonPublic">
+          <see langword="true" />para retornar os métodos não-públicos; Caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, recupera o <see cref="T:System.Reflection.MethodInfo" /> objeto para a remoção de um método do evento.</summary>
+        <returns>Delegar o método que foi usado para remover um manipulador de eventos da origem do evento.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.MethodAccessException">
+          <paramref name="nonPublic" />é <see langword="true" /> e o método usado para adicionar um delegado de manipulador de eventos é não-públicos, mas o chamador não tem permissão para refletir nos métodos não-públicos.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefined">
+      <MemberSignature Language="C#" Value="public override bool IsDefined (Type attributeType, bool inherit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefined(class System.Type attributeType, bool inherit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.IsDefined(System.Type,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributeType" Type="System.Type" />
+        <Parameter Name="inherit" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributeType">O tipo de atributo a ser pesquisado.</param>
+        <param name="inherit">
+          <see langword="true" /> para pesquisar a cadeia de herança desse membro para encontrar os atributos; caso contrário, <see langword="false" />.</param>
+        <summary>Indica se uma ou mais instâncias do atributo especificado são aplicadas a este membro.</summary>
+        <returns>
+          <see langword="true" />Se o atributo especificado tiver sido aplicado a este membro; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComAwareEventInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do membro atual.</summary>
+        <value>O nome desse membro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedType">
+      <MemberSignature Language="C#" Value="public override Type ReflectedType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReflectedType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ComAwareEventInfo.ReflectedType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de classe que foi usado para inicializar esta instância.</summary>
+        <value>O <see cref="T:System.Type" /> objeto que foi usado para inicializar o objeto atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEventHandler">
+      <MemberSignature Language="C#" Value="public override void RemoveEventHandler (object target, Delegate handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveEventHandler(object target, class System.Delegate handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComAwareEventInfo.RemoveEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="handler" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto de destino que o delegado do evento está associado a.</param>
+        <param name="handler">O delegado do evento.</param>
+        <summary>Desanexa um manipulador de eventos de um objeto COM.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante de <xref:System.Reflection.EventInfo.RemoveEventHandler%28System.Object%2CSystem.Delegate%29?displayProperty=nameWithType> método, exceto que ela permite que você desanexar eventos dos objetos COM.  
+  
+ Se `target` é um COM o objeto, este método lança um delegado a um evento por meio de <xref:System.Runtime.InteropServices.ComEventsHelper.Remove%28System.Object%2CSystem.Guid%2CSystem.Int32%2CSystem.Delegate%29?displayProperty=nameWithType> método.  
+  
+ <xref:System.Runtime.InteropServices.ComAwareEventInfo.RemoveEventHandler%2A>facilita ao cancelar o registro receptores de evento COM encaminham chamadas para delegados gerenciados correspondentes. Requer as seguintes informações:  
+  
+-   O objeto de destino (`target`).  
+  
+-   O GUID da interface de origem.  
+  
+-   O DispID do método na interface COM que corresponde ao evento especificado.  
+  
+-   O representante que seria invocado quando o objeto COM dispara o evento correspondente (`handler`).  
+  
+ <xref:System.Runtime.InteropServices.ComAwareEventInfo.RemoveEventHandler%2A>procura a interface de origem COM correspondente (especificado como o primeiro parâmetro do <xref:System.Runtime.InteropServices.ComEventInterfaceAttribute.%23ctor%28System.Type%2CSystem.Type%29?displayProperty=nameWithType> construtor). Ele então pesquisa a um método na interface de origem cujo nome é idêntico ao nome do evento. O valor de `GuidAttribute` na fonte de interface é o GUID que é passado para <xref:System.Runtime.InteropServices.ComEventsHelper.Remove%28System.Object%2CSystem.Guid%2CSystem.Int32%2CSystem.Delegate%29?displayProperty=nameWithType>; o valor de `DispIDAttribute` no método é o valor DispID que é passado para <xref:System.Runtime.InteropServices.ComEventsHelper.Remove%28System.Object%2CSystem.Guid%2CSystem.Int32%2CSystem.Delegate%29?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O evento não tem um acessador <see langword="remove" /> público.</exception>
+        <exception cref="T:System.ArgumentException">O manipulador passado não pode ser usado.</exception>
+        <exception cref="T:System.Reflection.TargetException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch <see cref="T:System.Exception" /> em vez disso.  
+  
+</para>
+          </block>  
+  
+ O parâmetro <paramref name="target" /> é <see langword="null" /> e o evento não é estático.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Reflection.EventInfo" /> não está declarado no destino.</exception>
+        <exception cref="T:System.MethodAccessException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.MemberAccessException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ O chamador não tem permissão de acesso ao membro.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,756 @@
+<Type Name="WorkflowInstance" FullName="System.Workflow.Runtime.WorkflowInstance">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma instância de fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ O <xref:System.Workflow.Runtime.WorkflowInstance> classe expõe métodos e propriedades que podem ser usadas para controlar a execução de uma instância de fluxo de trabalho; ela é essencialmente um proxy para a instância de fluxo de trabalho real usada pelo mecanismo de tempo de execução de fluxo de trabalho. Um host ou um serviço pode instruir o mecanismo de tempo de execução do fluxo de trabalho para executar ações em uma instância de fluxo de trabalho chamando os métodos apropriados estão contidos no <xref:System.Workflow.Runtime.WorkflowInstance> classe.  Se a ação solicitada não é válida, por exemplo, se o host chama <xref:System.Workflow.Runtime.WorkflowInstance.Load%2A> em uma instância de fluxo de trabalho que já foi concluída, o mecanismo de tempo de execução do fluxo de trabalho gerará uma exceção apropriada.  
+  
+> [!NOTE]
+>  Se uma instância de fluxo de trabalho não responder porque não retorna uma chamada no aplicativo host, a única maneira de recuperar a instância é reiniciar o tempo de execução. No entanto, se a instância tiver sido descarregada à força, anuladas ou suspensas, ele pode ser continuado chamando o <xref:System.Workflow.Runtime.WorkflowInstance.Resume%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode criar e iniciar um <xref:System.Workflow.Runtime.WorkflowInstance> em um host de fluxo de trabalho. O código cria uma instância do <xref:System.Workflow.Runtime.WorkflowRuntime>, adiciona serviços ao tempo de execução e, em seguida, demonstra a maneira recomendada para criar um <xref:System.Workflow.Runtime.WorkflowInstance> objeto. O código inicializa <xref:System.Workflow.Runtime.WorkflowInstance> chamando o <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> método e passar o tipo criado anteriormente para ele. O <xref:System.Workflow.Runtime.WorkflowInstance> é iniciado com o <xref:System.Workflow.Runtime.WorkflowInstance.Start%2A> chamada de método.  
+  
+ Este exemplo de código é parte de cancelar um SDK de fluxo de trabalho de exemplo do arquivo Program.cs. Para obter mais informações, consulte [Cancelando um fluxo de trabalho](http://msdn.microsoft.com/en-us/d5077f56-a78b-48e7-825c-f6c77c8e54fb).  
+  
+ [!code-csharp[WF_Samples#260](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#260)]
+ [!code-vb[WF_Samples#260](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#260)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Anula a instância de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância de fluxo de trabalho é interrompida de forma síncrona; ou seja, o método retorna após a instância de fluxo de trabalho foi anulada. O mecanismo de tempo de execução do fluxo de trabalho invalida a instância de fluxo de trabalho na memória e limpa o <xref:System.Workflow.Runtime.WorkflowEnvironment.WorkBatch%2A>. Se um serviço de persistência usado por sua instância de fluxo de trabalho, todo o trabalho executado desde o último ponto de persistência é descartado. Depois que interrompa a instância de fluxo de trabalho, o mecanismo de tempo de execução do fluxo de trabalho gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowAborted> evento. Você pode chamar <xref:System.Workflow.Runtime.WorkflowRuntime.GetWorkflow%2A> para recarregar a instância de fluxo de trabalho e iniciar a partir de seu último ponto de persistência.  
+  
+ `Abort`é diferente do <xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A> em que, embora `Abort` simplesmente limpa a instância de fluxo de trabalho na memória e pode ser reiniciado do último ponto de persistência, Terminate limpa a instância de fluxo de trabalho na memória e informa o serviço de persistência que a instância foi limpa da memória. Para o <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, isso significa que todas as informações de estado para essa instância de fluxo de trabalho são excluídas do banco de dados após o encerramento. Você não poderá recarregar a instância de fluxo de trabalho de um ponto de persistência armazenada anteriormente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a anulação de chamada em uma instância de fluxo de trabalho do tipo Workflow1.  
+  
+ [!code-csharp[WF_Samples#13](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#13)]
+ [!code-vb[WF_Samples#13](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyWorkflowChanges">
+      <MemberSignature Language="C#" Value="public void ApplyWorkflowChanges (System.Workflow.ComponentModel.WorkflowChanges workflowChanges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyWorkflowChanges(class System.Workflow.ComponentModel.WorkflowChanges workflowChanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.ApplyWorkflowChanges(System.Workflow.ComponentModel.WorkflowChanges)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowChanges" Type="System.Workflow.ComponentModel.WorkflowChanges" />
+      </Parameters>
+      <Docs>
+        <param name="workflowChanges">Um <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" /> especificando atualizações dinâmicas para a instância de fluxo de trabalho.</param>
+        <summary>Aplica as alterações para a instância de fluxo de trabalho especificada pelo <see cref="T:System.Workflow.ComponentModel.WorkflowChanges" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a instância de fluxo de trabalho já não estiver suspenso, o mecanismo de tempo de execução do fluxo de trabalho suspende temporariamente a instância antes de aplicar as alterações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a chamada ApplyWorkflowChanges para um <xref:System.Workflow.Runtime.WorkflowInstance> objeto.  Este exemplo é do exemplo de ordenação SDK da máquina de estado do arquivo Mainform.cs.  Para obter mais informações, consulte o [exemplo pedido de máquina de estado](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[WF_Samples#89](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#89)]
+ [!code-vb[WF_Samples#89](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#89)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnqueueItem">
+      <MemberSignature Language="C#" Value="public void EnqueueItem (IComparable queueName, object item, System.Workflow.Runtime.IPendingWork pendingWork, object workItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnqueueItem(class System.IComparable queueName, object item, class System.Workflow.Runtime.IPendingWork pendingWork, object workItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.EnqueueItem(System.IComparable,System.Object,System.Workflow.Runtime.IPendingWork,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="pendingWork" Type="System.Workflow.Runtime.IPendingWork" />
+        <Parameter Name="workItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome do <see cref="T:System.Workflow.Runtime.WorkflowQueue" />.</param>
+        <param name="item">O objeto enfileirar.</param>
+        <param name="pendingWork">Um <see cref="T:System.Workflow.Runtime.IPendingWork" /> que permite que o remetente para ser notificado quando <c>item</c> é entregue.</param>
+        <param name="workItem">Um objeto a ser passado para o <see cref="T:System.Workflow.Runtime.IPendingWork" /> métodos.</param>
+        <summary>Envia uma mensagem na fila de fluxo de trabalho especificado sincronicamente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Envia o `item` especificado <xref:System.Workflow.Runtime.WorkflowQueue>. Se você quiser ser notificado quando a mensagem é entregue, você pode implementar <xref:System.Workflow.Runtime.IPendingWork> e passe um `workItem` e um <xref:System.Workflow.Runtime.IPendingWork> do objeto para <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A>. Se você não quiser que essa notificação, você pode passar uma referência nula (`Nothing` no Visual Basic) para `pendingWork` e `workItem`.  
+  
+ Ao usar esse método com um fluxo de trabalho de máquina de estado, você pode obter uma exceção com a mensagem "fila '{0}' não está habilitada." Isso ocorre quando o estado atual da máquina de estado não sabe como tratar um evento específico. Por exemplo, quando algum estado que não seja o estado atual contém o <xref:System.Workflow.Activities.EventDrivenActivity> que contém o <xref:System.Workflow.Activities.HandleExternalEventActivity> que é representada pela fila '{0}'.  
+  
+> [!NOTE]
+>  As mensagens são garantidas não sejam recebidas pela instância de fluxo de trabalho na ordem em que foram enviadas. Por exemplo, se receber uma mensagem em existente da fila (A fila) faz com que um fluxo de trabalho para criar outra fila (fila B), que, em seguida, escuta outra mensagem enviado após a primeira mensagem, é possível que a segunda mensagem será entregue pela primeira vez e não será recebida devido a sua fila não está sendo criada. Para evitar esse problema, a segunda mensagem não deve ser enviada até que a presença da segunda fila é verificada (usando <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A>.)  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A>. Quando o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled> evento ocorrer, o `OnWorkflowIdled` definido neste exemplo de método é chamado. Determina qual fluxo de trabalho está ocioso usando o <xref:System.Workflow.Runtime.WorkflowEventArgs.WorkflowInstance%2A> propriedade e, em seguida, obtém uma coleção de itens em fila para o fluxo de trabalho de instância ao chamar o <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A> método. O código itera pela coleção para determinar qual atividade está aguardando o evento que ociosos o fluxo de trabalho. Em seguida, envia uma exceção para a fila de fluxo de trabalho usando o <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A> método junto com o nome do item da fila de eventos.  
+  
+ Este exemplo de código é parte de cancelar um SDK de fluxo de trabalho de exemplo do arquivo Program.cs. Para obter mais informações, consulte [Cancelando um fluxo de trabalho](http://msdn.microsoft.com/en-us/d5077f56-a78b-48e7-825c-f6c77c8e54fb).  
+  
+ [!code-csharp[WF_Samples#261](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#261)]
+ [!code-vb[WF_Samples#261](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#261)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="queueName" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> especificado por <paramref name="queueName" /> não existe.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> especificado por <paramref name="queueName" /> não está habilitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnqueueItemOnIdle">
+      <MemberSignature Language="C#" Value="public void EnqueueItemOnIdle (IComparable queueName, object item, System.Workflow.Runtime.IPendingWork pendingWork, object workItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnqueueItemOnIdle(class System.IComparable queueName, object item, class System.Workflow.Runtime.IPendingWork pendingWork, object workItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.EnqueueItemOnIdle(System.IComparable,System.Object,System.Workflow.Runtime.IPendingWork,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="pendingWork" Type="System.Workflow.Runtime.IPendingWork" />
+        <Parameter Name="workItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome do <see cref="T:System.Workflow.Runtime.WorkflowQueue" />.</param>
+        <param name="item">O objeto enfileirar.</param>
+        <param name="pendingWork">Um <see cref="T:System.Workflow.Runtime.IPendingWork" /> que permite que o remetente para ser notificado quando <c>item</c> é entregue.</param>
+        <param name="workItem">Um objeto a ser passado para o <see cref="T:System.Workflow.Runtime.IPendingWork" /> métodos.</param>
+        <summary>Envia uma mensagem na fila de fluxo de trabalho especificado quando o fluxo de trabalho está ocioso. <see cref="M:System.Workflow.Runtime.WorkflowInstance.EnqueueItemOnIdle(System.IComparable,System.Object,System.Workflow.Runtime.IPendingWork,System.Object)" />aguarda até que o fluxo de trabalho atinge um ponto de ociosidade e enfileira depois de verificar que o Agendador de fluxo de trabalho está ocioso (ou seja, nenhuma operação ativa está sendo executada).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aguarda até que a instância de fluxo de trabalho ficar ocioso e, em seguida, envia o `item` especificado <xref:System.Workflow.Runtime.WorkflowQueue>. Se você chamar <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItemOnIdle%2A> enquanto a instância de fluxo de trabalho é suspenso, o mecanismo de tempo de execução do fluxo de trabalho gerará um <xref:System.InvalidOperationException>. Se você quiser ser notificado quando a mensagem é entregue, você pode implementar <xref:System.Workflow.Runtime.IPendingWork> e passe um `workItem` e um <xref:System.Workflow.Runtime.IPendingWork> do objeto para <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A>. Se você não quiser que essa notificação, você pode passar uma referência nula (`Nothing` no Visual Basic) para `pendingWork` e `workItem`.  
+  
+ Quando você estiver usando esse método com um fluxo de trabalho de máquina de estado, você pode obter uma exceção que contém a mensagem "Fila '{0}' não está habilitada." Isso ocorre quando o estado atual da máquina de estado não sabe como tratar um evento específico. Por exemplo, quando algum estado que não seja o estado atual contém o <xref:System.Workflow.Activities.EventDrivenActivity> que contém o <xref:System.Workflow.Activities.HandleExternalEventActivity> que é representada pela fila '{0}'.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o envio de informações para uma instância de fluxo de trabalho usando o `EnqueueItemOnIdle` método. Primeiro, um objeto WorkflowInstance é criado e iniciado; em seguida, um objeto que implementa o <xref:System.Workflow.Runtime.IPendingWork> interface foi criada. `EnqueueItemOnIdle`em seguida, é chamado, passando os valores de cadeia de caracteres para o nome da fila, o item de fila e o item de trabalho a serem passados para os métodos do objeto pendingWork.  
+  
+ [!code-csharp[WF_Samples#12](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#12)]
+ [!code-vb[WF_Samples#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="queueName" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.  
+  
+ -ou-  
+  
+ A instância de fluxo de trabalho é suspensa.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> especificado por <paramref name="queueName" /> não existe.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Workflow.Runtime.WorkflowQueue" /> especificado por <paramref name="queueName" /> não está habilitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado.</param>
+        <summary>Retorna um valor que indica se o objeto especificado é igual a <see cref="T:System.Workflow.Runtime.WorkflowInstance" />.</summary>
+        <returns>
+          <see langword="true" /> se o objeto especificado for igual a esse <see cref="T:System.Workflow.Runtime.WorkflowInstance" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto deve ser uma instância do <xref:System.Workflow.Runtime.WorkflowInstance> classe e têm o mesmo <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A> este <xref:System.Workflow.Runtime.WorkflowInstance>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância de fluxo de trabalho.</summary>
+        <returns>O código hash para este <see cref="T:System.Workflow.Runtime.WorkflowInstance" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowInstance.GetHashCode%2A>Retorna um código hash com base no valor de <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity GetWorkflowDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.ComponentModel.Activity GetWorkflowDefinition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.GetWorkflowDefinition" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a atividade raiz para essa instância de fluxo de trabalho.</summary>
+        <returns>Um objeto <see cref="T:System.Workflow.ComponentModel.Activity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar a atividade raiz para navegar na hierarquia de atividade do fluxo de trabalho.  
+  
+ Este método não é thread-safe, o host deve sincronizar suas chamadas a este método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar a definição de fluxo de trabalho de uma instância de fluxo de trabalho.  Este exemplo é do exemplo de ordenação SDK da máquina de estado do arquivo Mainform.cs.  Para obter mais informações, consulte o [exemplo pedido de máquina de estado](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[WF_Samples#86](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#86)]
+ [!code-vb[WF_Samples#86](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#86)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowNextTimerExpiration">
+      <MemberSignature Language="C#" Value="public DateTime GetWorkflowNextTimerExpiration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.DateTime GetWorkflowNextTimerExpiration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.GetWorkflowNextTimerExpiration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o próximo ponto no tempo que este <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> está programado para ser entregue a uma mensagem de timer.</summary>
+        <returns>Um valor DateTime que representa o próximo <see cref="P:System.Workflow.Runtime.TimerEventSubscription.ExpiresAt" /> tempo isso <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> receberão uma mensagem de timer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowNextTimerExpiration%2A> método para determinar se mais mensagens de timer do fluxo de trabalho são colocados. Este exemplo é da amostra WorkflowThreading SDK, do arquivo Program.cs. Para obter mais informações, consulte [exemplo de Threading de fluxo de trabalho](http://msdn.microsoft.com/en-us/5b650be7-09fa-47db-a2f6-523dc8ea5ee9).  
+  
+ [!code-csharp[WF_Samples#284](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#284)]
+ [!code-vb[WF_Samples#284](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#284)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowQueueData">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.Runtime.WorkflowQueueInfo&gt; GetWorkflowQueueData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.Runtime.WorkflowQueueInfo&gt; GetWorkflowQueueData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.Runtime.WorkflowQueueInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Workflow.Runtime.WorkflowQueueInfo" /> objetos que contém os itens pendentes e assinado atividades para as filas de fluxo de trabalho associado a esta instância de fluxo de trabalho.</summary>
+        <returns>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> de objetos <see cref="T:System.Workflow.Runtime.WorkflowQueueInfo" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A>Retorna uma coleção de <xref:System.Workflow.Runtime.WorkflowQueueInfo> objetos, cada uma delas contém informações sobre o estado de um fluxo de trabalho filas associadas a esta instância de fluxo de trabalho. <xref:System.Workflow.Runtime.WorkflowQueueInfo.Items%2A?displayProperty=nameWithType>contém os itens pendentes para um <xref:System.Workflow.Runtime.WorkflowQueue> e <xref:System.Workflow.Runtime.WorkflowQueueInfo.SubscribedActivityNames%2A?displayProperty=nameWithType> contém uma lista das atividades que se inscreveu para entrega do item em uma <xref:System.Workflow.Runtime.WorkflowQueue>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode usar o <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A> método para obter informações sobre o estado de todas as filas de fluxo de trabalho associado com um <xref:System.Workflow.Runtime.WorkflowInstance> objeto. Quando o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled> evento ocorrer, o `OnWorkflowIdled` definido neste exemplo de método é chamado. Determina qual fluxo de trabalho está ocioso usando o <xref:System.Workflow.Runtime.WorkflowEventArgs.WorkflowInstance%2A> propriedade e, em seguida, obtém uma coleção de itens em fila para o fluxo de trabalho de instância ao chamar o <xref:System.Workflow.Runtime.WorkflowInstance.GetWorkflowQueueData%2A> método. O código itera pela coleção para determinar qual atividade está aguardando o evento que ociosos o fluxo de trabalho. Em seguida, envia uma exceção para a fila de fluxo de trabalho usando o <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A> método junto com o nome do item da fila de eventos.  
+  
+ Este exemplo de código é parte de cancelar um SDK de fluxo de trabalho de exemplo do arquivo Program.cs. Para obter mais informações, consulte [Cancelando um fluxo de trabalho](http://msdn.microsoft.com/en-us/d5077f56-a78b-48e7-825c-f6c77c8e54fb).  
+  
+ [!code-csharp[WF_Samples#261](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#261)]
+ [!code-vb[WF_Samples#261](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#261)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowInstance.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador exclusivo para a instância de fluxo de trabalho.</summary>
+        <value>O <see cref="T:System.Guid" /> da instância do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A> para fazer referência à instância de fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode usar o <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A> propriedade para obter informações sobre um <xref:System.Workflow.Runtime.WorkflowInstance> objeto. O trecho de código primeiro cria um <xref:System.Workflow.Runtime.WorkflowInstance> variável chamada `instanceId`.  
+  
+ [!code-csharp[WF_Samples#210](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#210)]
+ [!code-vb[WF_Samples#210](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#210)]  
+  
+ O trecho a segunda usa o <xref:System.Workflow.Runtime.WorkflowInstance.InstanceId%2A> a propriedade como o primeiro objeto um `OrderEventArgs` construtor chamar quando o `CallBackForApproval` método é chamado.  
+  
+ Este exemplo de código é parte do exemplo escutar SDK do arquivo OrderServiceImple.cs. Para obter mais informações, consulte [escutar exemplo](http://msdn.microsoft.com/en-us/1cec0e82-7544-429f-b717-0fc25eb42b7f).  
+  
+ [!code-csharp[WF_Samples#211](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#211)]
+ [!code-vb[WF_Samples#211](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#211)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Load" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Carrega uma instância de fluxo de trabalho descarregado anteriormente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowInstance.Load%2A>é síncrona; Se a instância de fluxo de trabalho pode ser carregada, <xref:System.Workflow.Runtime.WorkflowInstance.Load%2A> retornará depois que a instância de fluxo de trabalho foi carregado na memória e agendada pelo mecanismo de tempo de execução de fluxo de trabalho. O tempo de execução gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowLoaded> evento depois que o serviço de persistência restaurou a instância de fluxo de trabalho na memória, mas antes do fluxo de trabalho, o mecanismo de tempo de execução agenda a instância.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como carregar um anteriormente descarregado <xref:System.Workflow.Runtime.WorkflowInstance> objeto.  
+  
+ [!code-csharp[WF_Samples#10](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#10)]
+ [!code-vb[WF_Samples#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReloadTrackingProfiles">
+      <MemberSignature Language="C#" Value="public void ReloadTrackingProfiles ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReloadTrackingProfiles() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.ReloadTrackingProfiles" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recarregue os perfis de rastreamento para essa instância de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A infra-estrutura de controle de tempo de execução será recarregado cada <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para esta instância de fluxo de trabalho associada com seus canais de controle. Se ainda não estiver em um estado suspenso, o fluxo de trabalho é suspenso temporariamente pelo tempo de execução de infra-estrutura de controle, enquanto os perfis de rastreamento são recarregados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resume">
+      <MemberSignature Language="C#" Value="public void Resume ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resume() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Resume" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retoma a execução de uma instância de fluxo de trabalho suspenso anteriormente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host pode chamar <xref:System.Workflow.Runtime.WorkflowInstance.Resume%2A> para retomar a execução de uma instância de fluxo de trabalho que foi suspenso anteriormente. Se a instância de fluxo de trabalho não estiver no estado suspenso, nenhuma ação é executada. O tempo de execução gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowResumed> evento antes da execução da instância do fluxo de trabalho é retomada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra retomar chamada em uma instância de fluxo de trabalho suspenso anteriormente.  Este exemplo é do exemplo de suspender e encerrar SDK.  Para obter mais informações, consulte [suspender e encerrar exemplo](http://msdn.microsoft.com/en-us/f4dffa58-d01e-44fb-b5a1-3b283d2c4517).  
+  
+ [!code-csharp[WF_Samples#172](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#172)]
+ [!code-vb[WF_Samples#172](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#172)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia a execução da instância do fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowInstance.Start%2A>chamadas <xref:System.Workflow.ComponentModel.ActivityExecutionContext.ExecuteActivity%2A> na atividade raiz desta instância de fluxo de trabalho. Se <xref:System.Workflow.Runtime.WorkflowInstance.Start%2A> encontra uma exceção, encerra a instância de fluxo de trabalho chamando <xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A> com o <xref:System.Exception.Message%2A> propriedade da exceção passado como o motivo para a terminação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode usar o <xref:System.Workflow.Runtime.WorkflowInstance.Start%2A> método para iniciar um <xref:System.Workflow.Runtime.WorkflowInstance> em um host de fluxo de trabalho. O código cria uma instância do <xref:System.Workflow.Runtime.WorkflowRuntime>, adiciona serviços ao tempo de execução e, em seguida, demonstra a maneira recomendada para criar um <xref:System.Workflow.Runtime.WorkflowInstance> objeto. Ele cria um <xref:System.Type> do objeto e converte-o para um dos objetos de fluxo de trabalho ao qual o host está associado. O código de lado inicializa <xref:System.Workflow.Runtime.WorkflowInstance> chamando o <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> método e passar o tipo criado anteriormente para ele. O <xref:System.Workflow.Runtime.WorkflowInstance> é iniciado com o <xref:System.Workflow.Runtime.WorkflowInstance.Start%2A> chamada de método.  
+  
+ Este exemplo de código é parte de cancelar um SDK de fluxo de trabalho de exemplo do arquivo Program.cs. Para obter mais informações, consulte [Cancelando um fluxo de trabalho](http://msdn.microsoft.com/en-us/d5077f56-a78b-48e7-825c-f6c77c8e54fb).  
+  
+ [!code-csharp[WF_Samples#260](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#260)]
+ [!code-vb[WF_Samples#260](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#260)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.  
+  
+ -ou-  
+  
+ A instância de fluxo de trabalho já foi iniciada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Suspend">
+      <MemberSignature Language="C#" Value="public void Suspend (string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Suspend(string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Suspend(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="error">Uma descrição do motivo de suspender a instância de fluxo de trabalho.</param>
+        <summary>Suspende a instância de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância de fluxo de trabalho é suspenso de forma síncrona. Se a instância de fluxo de trabalho já é suspenso, nenhuma ação será executada; Caso contrário, o mecanismo de tempo de execução do fluxo de trabalho suspende a instância de fluxo de trabalho, gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowSuspended> eventos e passa `reason` em um <xref:System.Workflow.Runtime.WorkflowSuspendedEventArgs>.  
+  
+> [!NOTE]
+>  <xref:System.Workflow.Runtime.WorkflowInstance.Suspend%2A>não descarrega a instância de fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a suspensão de chamada em um <xref:System.Workflow.Runtime.WorkflowInstance> objeto.  
+  
+ [!code-csharp[WF_Samples#9](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#9)]
+ [!code-vb[WF_Samples#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate (string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Terminate(string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Terminate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="error">Uma descrição do motivo para encerrar a instância de fluxo de trabalho.</param>
+        <summary>Encerra a instância de fluxo de trabalho de forma síncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instância de fluxo de trabalho é encerrada de forma síncrona. As chamadas de host <xref:System.Workflow.Runtime.WorkflowInstance.Terminate%2A> para encerrar a instância de fluxo de trabalho. O mecanismo de tempo de execução do fluxo de trabalho limpa a instância de fluxo de trabalho na memória e informa o serviço de persistência que a instância foi limpa da memória. Para o <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, isso significa que todas as informações de estado para essa instância de fluxo de trabalho são excluídas do banco de dados após o encerramento. Você não poderá recarregar a instância de fluxo de trabalho de um ponto de persistência armazenada anteriormente.  
+  
+ Depois que a instância de fluxo de trabalho na memória está desmarcada e o serviço de persistência é informado sobre o encerramento, o `Terminate` método gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowTerminated> eventos e passa `reason` no <xref:System.Exception.Message%2A> propriedade de um <xref:System.Workflow.ComponentModel.WorkflowTerminatedException> contidos no <xref:System.Workflow.Runtime.WorkflowTerminatedEventArgs>.  
+  
+ `Terminate`é diferente do <xref:System.Workflow.Runtime.WorkflowInstance.Abort%2A> em que enquanto Terminate limpa a instância de fluxo de trabalho na memória e informa o serviço de persistência do encerramento, `Abort` simplesmente limpa a instância de fluxo de trabalho na memória, que pode ser reiniciada a partir do último ponto de persistência.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o Terminate chamada em um <xref:System.Workflow.Runtime.WorkflowInstance> objeto.  
+  
+ [!code-csharp[WF_Samples#8](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#8)]
+ [!code-vb[WF_Samples#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O mecanismo de tempo de execução do fluxo de trabalho não está em execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUnload">
+      <MemberSignature Language="C#" Value="public bool TryUnload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryUnload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.TryUnload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarrega a instância de fluxo de trabalho da memória para o repositório de persistência quando a instância é suspenso ou ocioso.</summary>
+        <returns>
+          <see langword="true" />Se a instância de fluxo de trabalho foi descarregada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a instância de fluxo de trabalho está ocioso ou suspenso, <xref:System.Workflow.Runtime.WorkflowInstance.TryUnload%2A> usa o serviço de persistência para remover a instância de fluxo de trabalho da memória e mantê-lo para um repositório de dados. Se não houver nenhum serviço de persistência registrado com o <xref:System.Workflow.Runtime.WorkflowRuntime>, <xref:System.Workflow.Runtime.WorkflowInstance.TryUnload%2A> lança um <xref:System.InvalidOperationException>. Se a instância de fluxo de trabalho é mantida com êxito, o tempo de execução gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> eventos e retorna `true`. <xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A>Retorna `false` se a instância de fluxo de trabalho já foi descarregada, foi encerrada, foi anulada ou já foi concluída.  
+  
+ O host pode usar <xref:System.Workflow.Runtime.WorkflowInstance.TryUnload%2A> para recuperar recursos do sistema de um fluxo de trabalho ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o método TryUnload para descarregar um fluxo de trabalho quando o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowIdled> evento ser acionado. Este exemplo é do exemplo usando o SDK de serviços de persistência, do arquivo Program.cs. Para obter mais informações, consulte [usando o exemplo de serviços de persistência](http://msdn.microsoft.com/en-us/3176b7e7-ae49-4d5c-802b-85032d6ebde6).  
+  
+ [!code-csharp[WF_Samples#280](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#280)]
+ [!code-vb[WF_Samples#280](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#280)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum serviço de persistência registrado com o mecanismo de tempo de execução do fluxo de trabalho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unload">
+      <MemberSignature Language="C#" Value="public void Unload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Unload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.WorkflowInstance.Unload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarrega a instância de fluxo de trabalho da memória para o repositório de persistência. Essa chamada bloqueia até após a conclusão do trabalho agendado no momento, ou no final de um escopo de transação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A>é síncrona; ou seja, ela retorna depois de concluir todas as ações que ele executa. Se a instância de fluxo de trabalho não estiver ociosa, o tempo de execução aguarda até que a instância pode ser interrompida. Uma instância pode ser interrompida somente após o item de trabalho agendado no momento; Isso é normalmente quando a atividade em execução no momento retorna de seu <xref:System.Workflow.ComponentModel.Activity.Execute%2A> método. No entanto, se estiver executando a instância de um <xref:System.Workflow.ComponentModel.TransactionScopeActivity>, o escopo da transação deve concluir a execução antes da instância pode ser interrompida. Unload, em seguida, usa o serviço de persistência para remover a instância de fluxo de trabalho da memória e os mantém para um repositório de dados. Se não houver nenhum serviço de persistência registrado com o <xref:System.Workflow.Runtime.WorkflowRuntime>, <xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A> lança um <xref:System.InvalidOperationException>. Se a instância de fluxo de trabalho é mantida com êxito, o tempo de execução gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowUnloaded> evento.  
+  
+ O host pode usar <xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A> para recuperar recursos do sistema de um fluxo de trabalho ocioso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a chamada <xref:System.Workflow.Runtime.WorkflowInstance.Unload%2A> em uma <xref:System.Workflow.Runtime.WorkflowInstance> objeto.  
+  
+ [!code-csharp[WF_Samples#11](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#11)]
+ [!code-vb[WF_Samples#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há nenhum serviço de persistência registrado com o mecanismo de tempo de execução do fluxo de trabalho.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowRuntime">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowRuntime WorkflowRuntime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.WorkflowRuntime WorkflowRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowInstance.WorkflowRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowRuntime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> para essa instância de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.WorkflowRuntime" /> que representa o ambiente de execução em que esta instância de fluxo de trabalho está em execução.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o acesso de execução <xref:System.Workflow.Runtime.WorkflowRuntime> de um <xref:System.Workflow.Runtime.WorkflowInstance> objeto.  
+  
+ [!code-csharp[WF_Samples#7](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#7)]
+ [!code-vb[WF_Samples#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

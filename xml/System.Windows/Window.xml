@@ -1,0 +1,2299 @@
+<Type Name="Window" FullName="System.Windows.Window">
+  <TypeSignature Language="C#" Value="public class Window : System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Window extends System.Windows.Controls.ContentControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Window" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.ContentControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a capacidade de criar, configurar, exibir e gerenciar o tempo de vida de janelas e caixas de diálogo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ponto de interação entre um usuário e um aplicativo autônomo é uma janela. Um [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] janela consiste em duas áreas distintas:  
+  
+-   Uma área não cliente, que hospeda os ornamentos do windows, incluindo um ícone, o título, o menu do sistema, botão Minimizar, maximizar o botão, o botão Restaurar, o botão Fechar e uma borda.  
+  
+-   Uma área do cliente, que hospeda o conteúdo específico do aplicativo.  
+  
+ Uma janela padrão é mostrada na figura a seguir:  
+  
+ ![Elementos de janela](~/add/media/windowoverviewfigure1.PNG "elementos da janela")  
+  
+ <xref:System.Windows.Window>encapsula a capacidade de criar, configurar, exibir e gerenciar o tempo de vida do windows e caixas de diálogo e fornece os seguintes serviços de chave:  
+  
+ **Gerenciamento de vida útil**: <xref:System.Windows.Window.Activate%2A>, <xref:System.Windows.Window.Activated>, <xref:System.Windows.Window.Close%2A>, <xref:System.Windows.Window.Closed>, <xref:System.Windows.Window.Closing>, <xref:System.Windows.Window.Deactivated>, <xref:System.Windows.Window.Hide%2A>, <xref:System.Windows.Window.IsActive%2A>, <xref:System.Windows.Window.Show%2A>, <xref:System.Windows.Window.SourceInitialized>.  
+  
+ **Gerenciamento de janela**: <xref:System.Windows.Window.GetWindow%2A>, <xref:System.Windows.Window.OwnedWindows%2A>, <xref:System.Windows.Window.Owner%2A>.  
+  
+ **Appearance and Behavior**: <xref:System.Windows.Window.AllowsTransparency%2A>, <xref:System.Windows.Window.ContentRendered>, <xref:System.Windows.Window.DragMove%2A>, <xref:System.Windows.Window.Icon%2A>, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.Window.LocationChanged>, <xref:System.Windows.Window.ResizeMode%2A>, <xref:System.Windows.Window.RestoreBounds%2A>, <xref:System.Windows.Window.ShowActivated%2A>, <xref:System.Windows.Window.ShowInTaskbar%2A>, <xref:System.Windows.Window.SizeToContent%2A>, <xref:System.Windows.Window.StateChanged>, <xref:System.Windows.Window.Title%2A>, <xref:System.Windows.Window.Top%2A>, <xref:System.Windows.Window.Topmost%2A>, <xref:System.Windows.Window.WindowStartupLocation%2A>, <xref:System.Windows.Window.WindowState%2A>,<xref:System.Windows.Window.WindowStyle%2A>  
+  
+ **Caixas de diálogo**: <xref:System.Windows.Window.DialogResult%2A>, <xref:System.Windows.Window.ShowDialog%2A>.  
+  
+ Além disso, <xref:System.Windows.Application> expõe suporte especial para gerenciar todas as janelas em um aplicativo:  
+  
+-   Aplicativo mantém uma lista de todas as janelas que atualmente são instanciados no aplicativo. Essa lista é exposta pelo <xref:System.Windows.Application.Windows%2A> propriedade.  
+  
+-   Por padrão, <xref:System.Windows.Application.MainWindow%2A> é definido automaticamente com uma referência ao primeiro <xref:System.Windows.Window> instanciado em um aplicativo. Esta janela, tornando o janela principal do aplicativo.  
+  
+ Um <xref:System.Windows.Window> pode ser implementada usando marcação, marcação e code-behind ou código.  
+  
+ <xref:System.Windows.Window>é usado principalmente para exibir as janelas e caixas de diálogo para aplicativos autônomos. No entanto, para aplicativos que exigem a navegação no nível da janela, como assistentes, você pode usar <xref:System.Windows.Navigation.NavigationWindow> ; <xref:System.Windows.Navigation.NavigationWindow> deriva <xref:System.Windows.Window> e estende com suporte de navegação de estilo de navegador.  
+  
+> [!NOTE]
+>  Ilhas de conteúdo navegável podem ser incorporadas em outros contêineres de conteúdo e o conteúdo usando <xref:System.Windows.Controls.Frame>.  
+  
+ <xref:System.Windows.Window>precisa de `UnmanagedCode` permissão de segurança a ser instanciado. Isso tem as seguintes consequências:  
+  
+-   [!INCLUDE[TLA#tla_clickonce](~/includes/tlasharptla-clickonce-md.md)]-aplicativos autônomos implantado irá solicitar a elevação de permissões quando iniciado a partir de zonas de Internet ou Intranet Local.  
+  
+-   [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)]qualquer coisa que solicitarem menor que permissões completas não poderá criar uma instância de janelas ou caixas de diálogo.  
+  
+ Para obter informações sobre considerações de segurança e de implantação de aplicativo autônomo, consulte [estratégia de segurança do WPF - segurança da plataforma](~/docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+  
+ Um <xref:System.Windows.Window> é um <xref:System.Windows.Controls.ContentControl>, que significa que ele pode conter um único objeto de qualquer tipo (como uma cadeia de caracteres, uma imagem ou um painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.ContentControl>. Além disso, <xref:System.Windows.Window> é um elemento raiz e, portanto, não pode ser parte de outro conteúdo de elemento.  
+  
+> [!NOTE]
+>  O <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.Window.Top%2A>, e <xref:System.Windows.Window.Left%2A> propriedades definidas em um <xref:System.Windows.Window> por meio de um estilo não serão aplicadas em tempo de execução.  
+  
+## <a name="customizing-the-window-control"></a>Personalizando o controle de janela  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Window> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Window>, consulte [modelos e estilos de janela](~/docs/framework/wpf/controls/window-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Window> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como uma janela padrão é definido usando apenas marcação:  
+  
+ [!code-xaml[WindowSnippets#WindowMARKUPONLY](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowSnippets/CSharp/MarkupOnlyWindow.xaml#windowmarkuponly)]  
+  
+ A exemplo a seguir mostra como uma janela padrão é definida usando somente de código:  
+  
+ [!code-csharp[WindowSnippets#WindowCODEONLY](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowSnippets/CSharp/CodeOnlyWindow.cs#windowcodeonly)]
+ [!code-vb[WindowSnippets#WindowCODEONLY](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowSnippets/visualbasic/codeonlywindow.vb#windowcodeonly)]  
+  
+ O exemplo a seguir mostra como uma janela padrão é definido usando uma combinação de marcação e code-behind.  
+  
+ [!code-xaml[WindowSnippets#WindowXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowSnippets/CSharp/MainWindow.xaml#windowxaml)]  
+  
+ [!code-csharp[WindowSnippets#WindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowSnippets/CSharp/MainWindow.xaml.cs#windowcodebehind)]
+ [!code-vb[WindowSnippets#WindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowSnippets/visualbasic/mainwindow.xaml.vb#windowcodebehind)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Window ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Window" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor inicializa o <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.Window.Top%2A>, e <xref:System.Windows.Window.Left%2A> propriedades padrão <xref:System.Windows.Window> valores.  
+  
+ Se uma janela é criada dentro de um <xref:System.AppDomain> que tem um <xref:System.Windows.Application> do objeto, o construtor adiciona o <xref:System.Windows.Window> objeto ao conjunto de <xref:System.Windows.Application>-gerenciados windows por meio do <xref:System.Windows.Application.Windows%2A> propriedade do <xref:System.Windows.Application> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">permissão para que esse objeto chamar métodos nativos não seguros. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Activate">
+      <MemberSignature Language="C#" Value="public bool Activate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Activate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.Activate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Tenta trazer a janela para o primeiro plano e a ativa.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.Window" /> tiver sido ativado com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As regras que determinam se a janela está ativada são as mesmas usadas pelo [!INCLUDE[TLA2#tla_win32](~/includes/tla2sharptla-win32-md.md)] `SetForegroundWindow` função (User32. dll).  
+  
+ Se a janela é ativada em um [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)] aplicativo que não seja o aplicativo do usuário em primeiro plano, <xref:System.Windows.Application.Activated> é gerado.  
+  
+> [!NOTE]
+>  Este método não pode ser chamado quando uma janela está hospedada em um navegador.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão ativar uma janela. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Activated">
+      <MemberSignature Language="C#" Value="public event EventHandler Activated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Activated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.Activated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma janela passa a ser a janela em primeiro plano.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma janela é ativada (torna-se a janela de primeiro plano) quando:  
+  
+-   A janela é aberta pela primeira vez.  
+  
+-   Um usuário alterna para uma janela, selecionando-o com o mouse, pressione ALT + TAB ou no Gerenciador de tarefas.  
+  
+-   Um usuário clica no botão da janela na barra de tarefas.  
+  
+ Windows que precisam detectar quando eles se tornar ativa pode manipular o <xref:System.Windows.Window.Activated> evento.  
+  
+ Depois de uma janela é ativada pela primeira vez, podem ser desativado e reativado muitas vezes durante seu ciclo de vida. Se o estado ou o comportamento de um aplicativo depende de seu estado de ativação, pode inspecionar <xref:System.Windows.Window.IsActive%2A> para determinar qual estado de ativação está em.  
+  
+ Um aplicativo também pode ser <xref:System.Windows.Application.Activated>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsTransparency">
+      <MemberSignature Language="C#" Value="public bool AllowsTransparency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowsTransparency" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.AllowsTransparency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a área de cliente de uma janela dá suporte à transparência.</summary>
+        <value>
+          <see langword="true" /> se a janela der suporte à transparência; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.Control.Background%2A> propriedade de uma janela é definida como um transparente de cores, usando <xref:System.Windows.Media.Brushes.Transparent%2A> , por exemplo, a janela permanece opaca. Isso significa que a área de trabalho e quaisquer aplicativos em execução "sob" a janela não podem ser vistos. Para permitir esse tipo de transparência, <xref:System.Windows.Window.AllowsTransparency%2A> deve ser definido como `true`.  
+  
+ <xref:System.Windows.Window.AllowsTransparency%2A>existe para facilitar a criação de janelas não retangulares e, consequentemente, quando <xref:System.Windows.Window.AllowsTransparency%2A> é definido como `true`, uma janela <xref:System.Windows.Window.WindowStyle%2A> propriedade deve ser definida como <xref:System.Windows.WindowStyle.None>.  
+  
+<a name="dependencyPropertyInfo_WindowAllowsTransparency"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.AllowsTransparencyProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Uma janela com um valor <see cref="P:System.Windows.Window.WindowStyle" /> de qualquer coisa diferente de <see cref="F:System.Windows.WindowStyle.None" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowsTransparencyProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty AllowsTransparencyProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty AllowsTransparencyProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.AllowsTransparencyProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.AllowsTransparency" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeBounds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeBounds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeBounds" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeBounds">Um <see cref="T:System.Windows.Size" /> que reflete o tamanho final que janela deve usar para organizar a próprio e seus filhos.</param>
+        <summary>Substitua este método para organizar e o tamanho de uma janela e seus elementos filho.</summary>
+        <returns>Um <see cref="T:System.Windows.Size" /> que reflete o tamanho real que foi usado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.ArrangeOverride%2A>não é chamado quando o <xref:System.Windows.UIElement.Visibility%2A> propriedade tem um valor de <xref:System.Windows.Visibility.Collapsed>. Se o valor de <xref:System.Windows.UIElement.Visibility%2A> propriedade está <xref:System.Windows.Visibility.Hidden> ou <xref:System.Windows.Visibility.Visible>, <xref:System.Windows.Window.ArrangeOverride%2A> é chamado.  
+  
+> [!NOTE]
+>  Quando o <xref:System.Windows.Window.Show%2A> ou <xref:System.Windows.Window.ShowDialog%2A> são chamadas, o <xref:System.Windows.UIElement.Visibility%2A> propriedade de um <xref:System.Windows.Window> é definido como <xref:System.Windows.Visibility.Visible>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha um <see cref="T:System.Windows.Window" /> manualmente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Window> pode ser fechada usando uma das várias, mecanismos conhecidos, fornecido pelo sistema localizado na sua barra de título, incluindo:  
+  
+-   ALT + F4.  
+  
+-   Menu do sistema &#124; **Close**.  
+  
+-   **Fechar** botão.  
+  
+ Um <xref:System.Windows.Window> também pode ser fechada usando um dos vários mecanismos conhecidos na área do cliente que são fornecidos por desenvolvedores, incluindo:  
+  
+-   **Arquivo** &#124; **Exit** em uma janela principal.  
+  
+-   **Arquivo** &#124; **Fechar** ou um **fechar** botão em uma janela filho.  
+  
+> [!NOTE]
+>  **Okey** e **Cancelar** botões em uma caixa de diálogo também são fornecido pelo desenvolvedor, embora será provavelmente conjunto <xref:System.Windows.Window.DialogResult%2A>, que fecha automaticamente uma janela que foi aberta chamando <xref:System.Windows.Window.ShowDialog%2A>.  
+  
+ Esses mecanismos exigem que você chamar explicitamente <xref:System.Windows.Window.Close%2A> para fechar uma janela.  
+  
+> [!NOTE]
+>  Se uma janela aberta chamando <xref:System.Windows.Window.ShowDialog%2A>e com um <xref:System.Windows.Controls.Button> com seus <xref:System.Windows.Controls.Button.IsCancel%2A> propriedade definida como true, será fechada automaticamente quando o botão é clicado ou ou ESC é pressionado. Se a janela foi aberta usando <xref:System.Windows.Window.Show%2A>, no entanto, <xref:System.Windows.Window.Close%2A> deve ser chamado explicitamente, tais como de <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos para o <xref:System.Windows.Controls.Button>.  
+  
+ Fechar uma janela faz com que o <xref:System.Windows.Window.Closing> evento ser gerado. Se o <xref:System.Windows.Window.Closing> evento não for cancelado, ocorre o seguinte:  
+  
+-   O <xref:System.Windows.Window> é removido do <xref:System.Windows.Application.Windows%2A?displayProperty=nameWithType> (se um <xref:System.Windows.Application> objeto existe).  
+  
+-   O <xref:System.Windows.Window> é removido do proprietário <xref:System.Windows.Window> se a relação de propriedade foi estabelecida antes da propriedade <xref:System.Windows.Window> foi exibido e depois o proprietário <xref:System.Windows.Window> foi aberto.  
+  
+-   O <xref:System.Windows.Window.Closed> é gerado.  
+  
+-   Criado por recursos não gerenciados a <xref:System.Windows.Window> são descartados.  
+  
+-   Se <xref:System.Windows.Window.ShowDialog%2A> foi chamado para mostrar o <xref:System.Windows.Window>, <xref:System.Windows.Window.ShowDialog%2A> retorna.  
+  
+ Fechar um <xref:System.Windows.Window> faz com que todas as janelas que ela possui para ser fechado. Além disso, fechar um <xref:System.Windows.Window> pode fazer com que um aplicativo para interromper a execução dependendo de como a <xref:System.Windows.Application.ShutdownMode%2A?displayProperty=nameWithType> está definida.  
+  
+> [!NOTE]
+>  Este método não pode ser chamado quando uma janela está hospedada em um navegador.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um **arquivo** &#124; **Exit** menu está sendo tratado para chamar explicitamente o <xref:System.Windows.Window.Close%2A>.  
+  
+ [!code-xaml[WindowCloseSnippets#WindowCloseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowCloseSnippets/CSharp/MainWindow.xaml#windowclosexaml)]  
+  
+ [!code-csharp[WindowCloseSnippets#WindowCloseCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowCloseSnippets/CSharp/MainWindow.xaml.cs#windowclosecodebehind)]
+ [!code-vb[WindowCloseSnippets#WindowCloseCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowCloseSnippets/visualbasic/mainwindow.xaml.vb#windowclosecodebehind)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão usar todas as janelas e eventos de entrada do usuário sem restrição. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Closed">
+      <MemberSignature Language="C#" Value="public event EventHandler Closed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Closed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.Closed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a janela está prestes a fechar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que esse evento é gerado, uma janela não pode ser impedida de fechamento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.UIElement.Visibility" /> é definido, ou <see cref="M:System.Windows.Window.Show" />, <see cref="M:System.Windows.Window.ShowDialog" /> ou <see cref="M:System.Windows.Window.Hide" /> é chamado durante o fechamento de uma janela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Closing">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.CancelEventHandler Closing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.CancelEventHandler Closing" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.Closing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.CancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre logo após <see cref="M:System.Windows.Window.Close" /> ser chamado e pode ser usado para cancelar o fechamento de uma janela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.Closing>pode ser usado para detectar quando uma janela está sendo fechada (por exemplo, quando <xref:System.Windows.Window.Close%2A> é chamado). Além disso, <xref:System.Windows.Window.Closing> pode ser usado para impedir que uma janela seja fechada. Para impedir que uma janela seja fechada, você pode definir o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade o <xref:System.ComponentModel.CancelEventArgs> argumento `true`.  
+  
+ O <xref:System.Windows.Window.Closing> é gerado quando <xref:System.Windows.Window.Close%2A> é chamado, se o usuário clica no botão Fechar uma janela, ou se o usuário pressionar ALT + F4.  
+  
+ Se uma janela de propriedade foi aberta usando seu proprietário janela <xref:System.Windows.Window.Show%2A>e o proprietário da janela for fechada, a janela de propriedade <xref:System.Windows.Window.Closing> não é gerado. Se o proprietário de uma janela for fechado (consulte <xref:System.Windows.Window.Owner%2A>), <xref:System.Windows.Window.Closing> não é gerado na janela de propriedade.  
+  
+ Se <xref:System.Windows.Application.Shutdown%2A> é chamado, o <xref:System.Windows.Window.Closing> é gerado para cada janela. No entanto, se <xref:System.Windows.Window.Closing> é cancelado, o cancelamento é ignorado.  
+  
+ Se uma sessão encerrada porque um usuário efetua logoff ou desliga, <xref:System.Windows.Window.Closing> não é gerado; tratar <xref:System.Windows.Application.SessionEnding> para implementar o código que cancela o fechamento do aplicativo.  
+  
+ Se você deseja mostrar e ocultar uma janela várias vezes durante o tempo de vida de um aplicativo e você não deseja reinstantiate janela sempre mostrá-la, você pode manipular o <xref:System.Windows.Window.Closing> evento, cancelá-la e chamar o <xref:System.Windows.Window.Hide%2A> método. Em seguida, você pode chamar <xref:System.Windows.Window.Show%2A> na mesma instância para reabri-la.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um <xref:System.Windows.Window> que determina se é preciso fechar intervenção do usuário.  
+  
+ [!code-xaml[WindowClosingSnippets#WindowClosingXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml#windowclosingxaml1)]  
+[!code-xaml[WindowClosingSnippets#WindowClosingXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml#windowclosingxaml2)]  
+  
+ [!code-csharp[WindowClosingSnippets#WindowClosingCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs#windowclosingcodebehind1)]
+ [!code-vb[WindowClosingSnippets#WindowClosingCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb#windowclosingcodebehind1)]  
+[!code-csharp[WindowClosingSnippets#WindowClosingCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs#windowclosingcodebehind2)]
+[!code-vb[WindowClosingSnippets#WindowClosingCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb#windowclosingcodebehind2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.UIElement.Visibility" /> é definido, ou <see cref="M:System.Windows.Window.Show" />, <see cref="M:System.Windows.Window.ShowDialog" /> ou <see cref="M:System.Windows.Window.Close" /> é chamado durante o fechamento de uma janela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentRendered">
+      <MemberSignature Language="C#" Value="public event EventHandler ContentRendered;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ContentRendered" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.ContentRendered" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que o conteúdo de uma janela é processado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a janela não tem nenhum conteúdo, esse evento não será gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deactivated">
+      <MemberSignature Language="C#" Value="public event EventHandler Deactivated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Deactivated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.Deactivated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma janela passa a ser uma janela em segundo plano.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma janela é desativada (se torna uma janela de plano de fundo) quando:  
+  
+-   Um usuário alterna para outra janela do aplicativo atual.  
+  
+-   Um usuário alterna para a janela em outro aplicativo usando ALT + TAB ou usando o Gerenciador de tarefas.  
+  
+-   Um usuário clica no botão de barra de tarefas para uma janela em outro aplicativo.  
+  
+ Windows que precisam detectar quando eles se tornam desativados manipulando o <xref:System.Windows.Window.Deactivated> evento.  
+  
+ Depois de uma janela é desativada pela primeira vez, pode ser reativado e desativado muitas vezes durante seu ciclo de vida. Se o estado ou o comportamento de um aplicativo depende de seu estado de ativação, pode inspecionar <xref:System.Windows.Window.IsActive%2A> para determinar qual estado de ativação está em.  
+  
+ Um aplicativo também pode ser <xref:System.Windows.Application.Deactivated>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogResult">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; DialogResult { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; DialogResult" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.DialogResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.DialogResultConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do resultado da caixa de diálogo, que é o valor retornado do método <see cref="M:System.Windows.Window.ShowDialog" />.</summary>
+        <value>Um valor <see cref="T:System.Nullable`1" /> do tipo <see cref="T:System.Boolean" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.DialogResult%2A>pode ser usado em código que mostrava uma caixa de diálogo para determinar se um usuário aceita (`true`) ou cancelado (`false`) a caixa de diálogo. Se uma caixa de diálogo é aceita, isso significa para o código que abriu a caixa de diálogo para recuperar os dados que foram coletados pelo usuário e processá-la. Se uma caixa de diálogo foi cancelada, no entanto, isso significa que o código de chamada deve parar a nenhum processamento adicional.  
+  
+ Por padrão, uma caixa de diálogo é cancelada quando um usuário faz o seguinte:  
+  
+-   PressesALT + F4.  
+  
+-   Clica o **fechar** botão.  
+  
+-   Seleciona **fechar** no menu de sistema.  
+  
+ Em todos esses casos, <xref:System.Windows.Window.DialogResult%2A> é `false` por padrão.  
+  
+ Normalmente, uma caixa de diálogo fornece um botão especial para cancelar uma caixa de diálogo, que é o botão cujo <xref:System.Windows.Controls.Button.IsCancel%2A> está definida como `true`. Um botão configurado dessa forma será fechada automaticamente uma janela quando ou é pressionado ou quando é pressionada a tecla ESC. Em ambos os casos, <xref:System.Windows.Window.DialogResult%2A> permanece `false`.  
+  
+ Uma caixa de diálogo também normalmente fornece um botão aceitar, que é o botão cujo <xref:System.Windows.Controls.Button.IsDefault%2A> está definida como `true`. Um botão com essa configuração irá gerar seu <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento quando ele ou a tecla ENTER é pressionada. No entanto, ele não fecha automaticamente a caixa de diálogo nem será definida <xref:System.Windows.Window.DialogResult%2A> para `true`. Você precisa gravar manualmente esse código, geralmente do <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos para o botão padrão.  
+  
+ <xref:System.Windows.Window.DialogResult%2A>é `null` quando a caixa de diálogo é exibida mas não aceita nem cancelada.  
+  
+ Depois que uma caixa de diálogo é fechada, você pode obter o resultado da caixa de diálogo do valor retornado por <xref:System.Windows.Window.ShowDialog%2A> método, ou inspecionando o <xref:System.Windows.Window.DialogResult%2A> propriedade.  
+  
+ <xref:System.Windows.Window.DialogResult%2A>só pode ser definida quando um <xref:System.Windows.Window> é aberta, chamando seu <xref:System.Windows.Window.ShowDialog%2A> método.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como configurar um botão Okey e um botão Cancelar para retornar as <xref:System.Windows.Window.DialogResult%2A>.  
+  
+ [!code-xaml[WindowDialogResultSnippets#WindowDialogResultXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowDialogResultSnippets/CSharp/DialogBox.xaml#windowdialogresultxaml)]  
+  
+ [!code-csharp[WindowDialogResultSnippets#WindowDialogResultCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowDialogResultSnippets/CSharp/DialogBox.xaml.cs#windowdialogresultcodebehind)]
+ [!code-vb[WindowDialogResultSnippets#WindowDialogResultCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowDialogResultSnippets/visualbasic/dialogbox.xaml.vb#windowdialogresultcodebehind)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Windows.Window.DialogResult" />é definido antes de uma janela é aberta, chamando <see cref="M:System.Windows.Window.ShowDialog" />.  
+  
+ -ou-  
+  
+ <see cref="P:System.Windows.Window.DialogResult" /> é definido em uma janela aberta chamando <see cref="M:System.Windows.Window.Show" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiChanged">
+      <MemberSignature Language="C#" Value="public event System.Windows.DpiChangedEventHandler DpiChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.DpiChangedEventHandler DpiChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.DpiChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DpiChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que o DPI da tela em que a janela é exibido é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiChangedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent DpiChangedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent DpiChangedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.DpiChangedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.Windows.RoutedEvent" /> para quando o DPI da tela de janela é sobre as alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragMove">
+      <MemberSignature Language="C#" Value="public void DragMove ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DragMove() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.DragMove" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que uma janela seja arrastada com um mouse com o botão esquerdo em uma área exposta da área de cliente da janela.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O botão esquerdo do mouse deve estar inativos quando <xref:System.Windows.Window.DragMove%2A> é chamado. É uma maneira de detectar quando o botão esquerdo do mouse é pressionado lidar com o <xref:System.Windows.UIElement.MouseLeftButtonDown> evento.  
+  
+ Quando <xref:System.Windows.Window.DragMove%2A> é chamado, à esquerda deve ser pressionado o botão do mouse sobre a área exposta da área cliente da janela.  
+  
+> [!NOTE]
+>  Este método não pode ser chamado quando uma janela está hospedada em um navegador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como substituir <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> chamar <xref:System.Windows.Window.DragMove%2A>.  
+  
+ [!code-csharp[WindowDragMoveSnippets#CallWindowDragMoveCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowDragMoveSnippets/CSharp/MainWindow.xaml.cs#callwindowdragmovecodebehind)]
+ [!code-vb[WindowDragMoveSnippets#CallWindowDragMoveCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowDragMoveSnippets/visualbasic/mainwindow.xaml.vb#callwindowdragmovecodebehind)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O botão esquerdo do mouse não foi pressionado.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão arrastar uma janela. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWindow">
+      <MemberSignature Language="C#" Value="public static System.Windows.Window GetWindow (System.Windows.DependencyObject dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Window GetWindow(class System.Windows.DependencyObject dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.GetWindow(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Window</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">O objeto de dependência.</param>
+        <summary>Retorna uma referência ao objeto <see cref="T:System.Windows.Window" /> que hospeda a árvore de conteúdo na qual o objeto de dependência está localizado.</summary>
+        <returns>Um <see cref="T:System.Windows.Window" /> referência para a janela do host.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="dependencyObject" /> é nulo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="public void Hide ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Hide() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.Hide" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Torna uma janela invisível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma janela não é fechada quando ele estiver oculto e não o <xref:System.Windows.Window.Closing> nem <xref:System.Windows.Window.Closed> é gerado. Em vez disso, a janela <xref:System.Windows.UIElement.Visibility%2A> está definida como <xref:System.Windows.Visibility?displayProperty=nameWithType>.  
+  
+ Se uma janela do aplicativo <xref:System.Windows.Application.MainWindow%2A> e o aplicativo <xref:System.Windows.Application.ShutdownMode%2A> é <xref:System.Windows.ShutdownMode.OnMainWindowClose>, o aplicativo não é desligado. Da mesma forma, o aplicativo não é desligado se uma janela é a única e modo de desligamento do aplicativo é <xref:System.Windows.ShutdownMode.OnLastWindowClose>.  
+  
+ Se você deseja mostrar e ocultar uma janela várias vezes durante o tempo de vida de um aplicativo e você não deseja criar novamente a janela de cada vez mostrá-la, você pode manipular o <xref:System.Windows.Window.Closing> evento, cancelá-la e chamar o <xref:System.Windows.Window.Hide%2A> método. Em seguida, você pode chamar <xref:System.Windows.Window.Show%2A> na mesma instância para abri-la novamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Window.Hide" /> é chamado em uma janela que está sendo fechada (<see cref="E:System.Windows.Window.Closing" />) ou que foi fechada (<see cref="E:System.Windows.Window.Closed" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Icon">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.ImageSource Icon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.ImageSource Icon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.Icon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ImageSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um ícone de janela.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Media.ImageSource" /> que representa o ícone.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA#tla_wpf](~/includes/tlasharptla-wpf-md.md)]aplicativos autônomos têm dois tipos de ícones:  
+  
+-   Ícone de um assembly, que é especificado usando o `<ApplicationIcon>` arquivo de compilação de propriedade no projeto do aplicativo. Esse ícone é usado como o ícone da área de trabalho para um assembly.  
+  
+    > [!NOTE]
+    >  Durante a depuração no Visual Studio, o ícone não pode aparecer devido ao processo de hospedagem. Se você executar o executável, o ícone será exibido. Para obter mais informações, consulte [Processo de hospedagem (vshost.exe)](http://msdn.microsoft.com/library/c6b9e2be-f18d-4d75-ac52-56d55784734b).  
+  
+-   Um ícone por janela que é especificado pela configuração <xref:System.Windows.Window.Icon%2A>. Para cada janela, esse ícone é usado em sua barra de título, o botão da barra de tarefas e em sua entrada de lista de seleção de aplicativo ALT TAB.  
+  
+ Um [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] janela sempre exibe um ícone. Quando um não for fornecido, definindo <xref:System.Windows.Window.Icon%2A>, [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] escolhe um ícone para exibir com base nas seguintes regras:  
+  
+1.  Use o ícone de assembly, se especificado.  
+  
+2.  Se o ícone de assembly não for especificado, use o padrão [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] ícone.  
+  
+ Se você usar <xref:System.Windows.Window.Icon%2A> para especificar um ícone de janela personalizada, você pode restaurar o ícone de aplicativo padrão definindo <xref:System.Windows.Window.Icon%2A> para `null`.  
+  
+ Um único ícone pode ser usado em uma variedade de formas no [!INCLUDE[TLA#tla_mswin](~/includes/tlasharptla-mswin-md.md)], inclusive sendo mostrado na barra de título de uma janela, a barra de tarefas para uma janela, a tecla ALT + TAB arquivo de lista de seleção. Cada uma dessas mostra o ícone com um tamanho diferente; um ícone de 16 x 16 pixels é exibido na barra de título de uma janela e na barra de tarefas, enquanto um ícone de 32 x 32 pixels é exibido na lista de seleção de arquivo ALT + TAB. Alguns aplicativos, como o [!INCLUDE[TLA#tla_winexpl](~/includes/tlasharptla-winexpl-md.md)], forneça um **exibição** menu que permite que você escolha o tamanho do ícone que você deseja exibir.  
+  
+ Para atender a vários tamanhos de exibição, um arquivo de ícone é composto de um ou mais ícones reais em que cada uma representa uma versão do ícone que tem como alvo uma profundidade de cor e tamanho específica. Por exemplo, um ícone pode ter somente um único ícone de 16 x 16 pixels com 16 cores, enquanto outra pode conter 16 x 16 pixels e ícones de 32 x 32 pixels com 16 cores e de 256 cores.  
+  
+ Se existirem ícones para todos os tamanhos possíveis e intensidades de cor em um arquivo de ícone <xref:System.Windows.Window> usará no ícone apropriado. Se um arquivo de ícone contém apenas um subconjunto de todos os possíveis ícones, <xref:System.Windows.Window> usa o próximo ícone mais apropriado em ordem decrescente de tamanhos e profundidade de cor.  
+  
+ O resultado é que um ícone sempre será usado por <xref:System.Windows.Window>, embora o ícone usado não pode direcionar a intensidade da cor e tamanho necessária. Por exemplo, um ícone de 16 x 16 pixels com 16 cores pode ser usado para exibir como um ícone de 32 x 32 pixels com 256 cores. Isso pode causar efeitos visuais indesejáveis, como pixilation, mas pode ser evitado por meio da criação de ícones de alvo de todos os tamanhos e intensidades de cor.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowIcon"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.IconProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir um ícone de janela.  
+  
+ [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
+  
+ [!code-csharp[WindowIconSnippets#SetWindowIconInCode](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowIconSnippets/CSharp/MainWindow.xaml.cs#setwindowiconincode)]
+ [!code-vb[WindowIconSnippets#SetWindowIconInCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowIconSnippets/visualbasic/mainwindow.xaml.vb#setwindowiconincode)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão definir o ícone. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IconProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IconProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IconProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.IconProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.Icon" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActive">
+      <MemberSignature Language="C#" Value="public bool IsActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsActive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.IsActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a janela está ativa.</summary>
+        <value>
+          <see langword="true" /> se a janela estiver ativa; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma janela ativa é a janela de primeiro plano atual do usuário e tem o foco, representado pela aparência da barra de título ativa. Uma janela ativa também será o principal de todas as janelas de nível superior não definir explicitamente o <xref:System.Windows.Window.Topmost%2A> propriedade.  
+  
+<a name="dependencyPropertyInfo_WindowIsActive"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.IsActiveProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsActiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsActiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.IsActiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.IsActive" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public double Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Left" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição da borda esquerda da janela em relação à área de trabalho.</summary>
+        <value>A posição a borda esquerda da janela, em unidades lógicas (1/96 de polegada).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Window> é maximizada ou minimizada, esse valor representa a borda esquerda da restauração de ponto para o <xref:System.Windows.Window>.  
+  
+ Essa propriedade não pode ser definida por meio de um estilo.  
+  
+ Se você não especificar um valor de <xref:System.Windows.Window.Left%2A> é definido como o valor padrão do sistema. Você também pode especificar o valor padrão do sistema, definindo <xref:System.Windows.Window.Left%2A> para <xref:System.Double.NaN>. Nem <xref:System.Double.NegativeInfinity> nem <xref:System.Double.PositiveInfinity> é um valor válido para <xref:System.Windows.Window.Left%2A>.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowLeft"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.LeftProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty LeftProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty LeftProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.LeftProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.Left" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler LocationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LocationChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.LocationChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a localização da janela é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Localização da janela é alterado quando:  
+  
+-   Um usuário move uma janela arrastando-a com a barra de título da janela.  
+  
+-   Uma janela é movida após <xref:System.Windows.Window.DragMove%2A> é chamado.  
+  
+-   Tanto o <xref:System.Windows.Window.Left%2A> ou <xref:System.Windows.Window.Top%2A> propriedade configurada de forma programática.  
+  
+-   O **mover** item de menu do menu do sistema da janela é escolhido.  
+  
+-   O <xref:System.Windows.Window.WindowState%2A> propriedade é alterada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador para o filho lógico da janela elementos.</summary>
+        <value>Um <see cref="T:System.Collections.IEnumerator" /> elementos filho de uma janela.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size availableSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size availableSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="availableSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="availableSize">Um <see cref="T:System.Windows.Size" /> que reflete o tamanho disponível que pode dar a esta janela para o filho. Infinito pode ser fornecido como um valor para indicar que a janela será dimensionado para qualquer conteúdo que está disponível.</param>
+        <summary>Substitua este método para medir o tamanho de uma janela.</summary>
+        <returns>Um <see cref="T:System.Windows.Size" /> que reflete o tamanho que essa janela determina necessários durante o layout, com base em seus cálculos de tamanhos de filhos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.MeasureOverride%2A>não é chamado quando o <xref:System.Windows.UIElement.Visibility%2A> propriedade tem um valor de <xref:System.Windows.Visibility.Collapsed>. Se o valor de <xref:System.Windows.UIElement.Visibility%2A> propriedade está <xref:System.Windows.Visibility.Hidden> ou <xref:System.Windows.Visibility.Visible>, <xref:System.Windows.Window.MeasureOverride%2A> é chamado.  
+  
+> [!NOTE]
+>  Quando o <xref:System.Windows.Window.Show%2A> ou <xref:System.Windows.Window.ShowDialog%2A> são chamadas, o <xref:System.Windows.UIElement.Visibility%2A> propriedade de um <xref:System.Windows.Window> é definido como <xref:System.Windows.Visibility.Visible>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnActivated">
+      <MemberSignature Language="C#" Value="protected virtual void OnActivated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnActivated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnActivated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.Activated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnActivated%2A>gera o <xref:System.Windows.Window.Activated> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnActivated%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnActivated%2A> na classe base se <xref:System.Windows.Window.Activated> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected virtual void OnClosed (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClosed(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnClosed(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.Closed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnClosed%2A>gera o <xref:System.Windows.Window.Closed> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnClosed%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnClosed%2A> na classe base se <xref:System.Windows.Window.Closed> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosing">
+      <MemberSignature Language="C#" Value="protected virtual void OnClosing (System.ComponentModel.CancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnClosing(class System.ComponentModel.CancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnClosing(System.ComponentModel.CancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.ComponentModel.CancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.ComponentModel.CancelEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.Closing" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnClosing%2A>gera o <xref:System.Windows.Window.Closing> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnClosing%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnClosing%2A> na classe base se <xref:System.Windows.Window.Closing> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnContentChanged (object oldContent, object newContent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnContentChanged(object oldContent, object newContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnContentChanged(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContent" Type="System.Object" />
+        <Parameter Name="newContent" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="oldContent">Uma referência para a raiz da árvore de conteúdo antigo.</param>
+        <param name="newContent">Uma referência para a raiz da árvore de conteúdo novo.</param>
+        <summary>Chamado quando a propriedade <see cref="P:System.Windows.Controls.ContentControl.Content" /> é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnContentRendered">
+      <MemberSignature Language="C#" Value="protected virtual void OnContentRendered (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnContentRendered(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnContentRendered(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.ContentRendered" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnContentRendered%2A>gera o <xref:System.Windows.Window.ContentRendered> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnContentRendered%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnContentRendered%2A> na classe base se <xref:System.Windows.Window.ContentRendered> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Windows.Automation.Peers.WindowAutomationPeer" /> objeto para este <see cref="T:System.Windows.Window" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.WindowAutomationPeer" /> objeto para este <see cref="T:System.Windows.Window" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeactivated">
+      <MemberSignature Language="C#" Value="protected virtual void OnDeactivated (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDeactivated(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnDeactivated(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.Deactivated" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnDeactivated%2A>gera o <xref:System.Windows.Window.Deactivated> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnDeactivated%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnDeactivated%2A> na classe base se <xref:System.Windows.Window.Deactivated> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDpiChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDpiChanged (System.Windows.DpiScale oldDpi, System.Windows.DpiScale newDpi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDpiChanged(valuetype System.Windows.DpiScale oldDpi, valuetype System.Windows.DpiScale newDpi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnDpiChanged(System.Windows.DpiScale,System.Windows.DpiScale)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldDpi" Type="System.Windows.DpiScale" />
+        <Parameter Name="newDpi" Type="System.Windows.DpiScale" />
+      </Parameters>
+      <Docs>
+        <param name="oldDpi">A escala DPI anterior configuração.</param>
+        <param name="newDpi">A nova configuração da escala de DPI.</param>
+        <summary>Chamado quando o DPI em que essa janela é processada alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLocationChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnLocationChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLocationChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnLocationChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.LocationChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnLocationChanged%2A>gera o <xref:System.Windows.Window.LocationChanged> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnLocationChanged%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnLocationChanged%2A> na classe base se <xref:System.Windows.Window.LocationChanged> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnManipulationBoundaryFeedback">
+      <MemberSignature Language="C#" Value="protected override void OnManipulationBoundaryFeedback (System.Windows.Input.ManipulationBoundaryFeedbackEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnManipulationBoundaryFeedback(class System.Windows.Input.ManipulationBoundaryFeedbackEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.ManipulationBoundaryFeedbackEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Chamado quando o evento <see cref="E:System.Windows.UIElement.ManipulationBoundaryFeedback" /> ocorre.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação não altera o estado manipulado (o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade) da <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> dados de evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Window.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Window.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSourceInitialized">
+      <MemberSignature Language="C#" Value="protected virtual void OnSourceInitialized (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSourceInitialized(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnSourceInitialized(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.SourceInitialized" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnSourceInitialized%2A>gera o <xref:System.Windows.Window.SourceInitialized> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnSourceInitialized%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnSourceInitialized%2A> na classe base se <xref:System.Windows.Window.SourceInitialized> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnStateChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStateChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnStateChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Window.StateChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.OnStateChanged%2A>gera o <xref:System.Windows.Window.StateChanged> evento.  
+  
+ Um tipo que deriva de <xref:System.Windows.Window> podem substituir <xref:System.Windows.Window.OnStateChanged%2A>. O método substituído deve chamar <xref:System.Windows.Window.OnStateChanged%2A> na classe base se <xref:System.Windows.Window.StateChanged> precisa ser gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected override sealed void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">O pai anterior. Definido como nulo se o <see cref="T:System.Windows.DependencyObject" /> não tem um pai anterior.</param>
+        <summary>Chamado quando o pai da janela é alterado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnedWindows">
+      <MemberSignature Language="C#" Value="public System.Windows.WindowCollection OwnedWindows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.WindowCollection OwnedWindows" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.OwnedWindows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de janelas das quais esta janela é a proprietária.</summary>
+        <value>Um <see cref="T:System.Windows.WindowCollection" /> que contém referências às janelas das quais esta janela é a proprietária.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma janela de propriedade é uma cujo <xref:System.Windows.Window.Owner%2A> propriedade é definida com uma referência a outra janela, que é conhecida como a janela do proprietário. Para localizar todas as janelas que possui uma janela do proprietário, você pode enumerar <xref:System.Windows.WindowCollection> que é retornado pelo <xref:System.Windows.Window.OwnedWindows%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como enumerar <xref:System.Windows.Window.OwnedWindows%2A>.  
+  
+ [!code-csharp[WindowOwnerOwnedWindowsSnippets#GetWindowOwnedWindowsCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#getwindowownedwindowscode)]
+ [!code-vb[WindowOwnerOwnedWindowsSnippets#GetWindowOwnedWindowsCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#getwindowownedwindowscode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Windows.Window Owner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Window Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Window</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Window" /> que tem esse <see cref="T:System.Windows.Window" />.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Window" /> que representa o proprietário deste <see cref="T:System.Windows.Window" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma janela filho é aberta por uma janela pai chamando <xref:System.Windows.Window.ShowDialog%2A>, é estabelecida uma relação implícita entre a janela pai e filho. Essa relação impõe determinados comportamentos, inclusive em relação ao minimizar, maximizar e restaurar.  
+  
+ Quando uma janela filho é criada por uma janela pai chamando <xref:System.Windows.Window.Show%2A>, no entanto, a janela filho não tem uma relação com a janela pai. Isso significa que:  
+  
+-   A janela filho não tem uma referência para a janela pai.  
+  
+-   O comportamento da janela filho não é dependente de comportamento da janela do pai. a janela pode cobrir a outra ou ser minimizada, maximizada e restaurada independentemente uns dos outros.  
+  
+ Para permitir que você criar uma relação entre uma janela filho e uma janela pai, <xref:System.Windows.Window> oferece suporte a noção de propriedade. Propriedade é estabelecida quando o <xref:System.Windows.Window.Owner%2A> propriedade de uma janela (a janela de propriedade) é definida com uma referência a outra janela (a janela do proprietário).  
+  
+ Quando essa relação é estabelecida, os seguintes comportamentos são exibidos:  
+  
+-   Se uma janela do proprietário é minimizada, todos os seu windows corporativos é minimizado também.  
+  
+-   Se uma janela de propriedade é minimizada, seu proprietário não é minimizado.  
+  
+-   Se uma janela do proprietário é maximizada, a janela do proprietário e sua propriedade windows será restaurado.  
+  
+-   Uma janela proprietária nunca pode abranger uma janela de propriedade.  
+  
+-   Propriedade do windows que não foram abertos usando <xref:System.Windows.Window.ShowDialog%2A> não são restritas. O usuário ainda pode interagir com a janela do proprietário.  
+  
+-   Se você fechar uma janela do proprietário, sua propriedade windows também é fechado.  
+  
+-   Se uma janela de propriedade foi aberta usando seu proprietário janela <xref:System.Windows.Window.Show%2A>e o proprietário da janela for fechada, a janela de propriedade <xref:System.Windows.Window.Closing> não é gerado.  
+  
+ Quando você abre uma janela filho chamando <xref:System.Windows.Window.ShowDialog%2A>, você também deve definir o <xref:System.Windows.Window.Owner%2A> propriedade da janela filho. Se você não fizer isso, os usuários não será capazes de restaurar a janela filho e a janela pai, pressionando o botão de barra de tarefas. Em vez disso, o pressionamento do botão de barra de tarefas produzirá uma lista do windows, incluindo a janela pai e filho, a seleção; somente a janela selecionada é restaurada.  
+  
+> [!IMPORTANT]
+>  Você também deve definir o <xref:System.Windows.Window.Owner%2A> propriedade em uma janela que que é aberta, chamando <xref:System.Windows.Window.ShowDialog%2A> para verificar o comportamento correto com.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como estabelecer a relação de propriedade.  
+  
+ [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
+ [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Uma janela tenta proprietário dele mesmo  
+  
+ -ou-  
+  
+ Duas janelas tentam possui uns aos outros.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="P:System.Windows.Window.Owner" /> propriedade é definida em uma janela visível mostrada usando<see cref="M:System.Windows.Window.ShowDialog" />  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Windows.Window.Owner" /> é definida com uma janela que não tenha sido mostrada anteriormente.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão usar todas as janelas e eventos de entrada do usuário sem restrição. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeMode">
+      <MemberSignature Language="C#" Value="public System.Windows.ResizeMode ResizeMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.ResizeMode ResizeMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.ResizeMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ResizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de redimensionamento.</summary>
+        <value>Um valor <see cref="T:System.Windows.ResizeMode" /> que especifica o modo de redimensionamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há quatro opções:  
+  
+-   **NoResize**. O usuário não pode redimensionar a janela. As caixas de maximizar e minimizar não são mostradas.  
+  
+-   **CanMinimize**. O usuário só pode minimizar a janela e restaurá-lo na barra de tarefas. As caixas de minimizar e maximizar são mostradas, mas a caixa de minimização está habilitada.  
+  
+-   **CanResize**. O usuário tem a capacidade total para redimensionar a janela, usando as caixas de minimizar e maximizar e uma estrutura de tópicos arrastável a janela. As caixas de minimizar e maximizar são mostradas e habilitadas. (Padrão).  
+  
+-   **CanResizeWithGrip**. Essa opção tem a mesma funcionalidade que <xref:System.Windows.ResizeMode.CanResize>, mas adiciona uma alça de redimensionamento"" para o canto inferior direito da janela.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowResizeMode"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.ResizeModeProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResizeModeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ResizeModeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ResizeModeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.ResizeModeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.ResizeMode" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestoreBounds">
+      <MemberSignature Language="C#" Value="public System.Windows.Rect RestoreBounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Rect RestoreBounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.RestoreBounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho e a localização de uma janela antes de ser minimizada ou maximizada.</summary>
+        <value>Uma <see cref="T:System.Windows.Rect" /> que especifica o tamanho e a localização de uma janela antes de ser minimizada ou maximizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O retângulo de restauração é a região ocupada pela janela antes que ele foi minimizado ou maximizado. Você pode usar <xref:System.Windows.Window.RestoreBounds%2A> para salvar o último tamanho e o local de uma janela antes do fechamento de um aplicativo e recuperar esses valores na próxima vez que um aplicativo é iniciado para restaurar uma janela à forma como um usuário deixou.  
+  
+ Se você consultar <xref:System.Windows.Window.RestoreBounds%2A> antes que a janela foi mostrada ou depois que ele foi fechado, <xref:System.Windows.Rect.Empty%2A> será retornado.  
+  
+> [!NOTE]
+>  Você não pode obter essa propriedade quando uma janela é hospedada em um navegador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Windows.Window.RestoreBounds%2A> e armazenamento para garantir que o tamanho e a localização de uma janela são os mesmos que estavam na última vez em que a janela foi mostrada isolado.  
+  
+ [!code-xaml[WindowRestoreBoundsSnippets#WindowRestoreBoundsXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowRestoreBoundsSnippets/CSharp/MainWindow.xaml#windowrestoreboundsxaml1)]  
+[!code-xaml[WindowRestoreBoundsSnippets#WindowRestoreBoundsXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowRestoreBoundsSnippets/CSharp/MainWindow.xaml#windowrestoreboundsxaml2)]  
+  
+ [!code-csharp[WindowRestoreBoundsSnippets#WindowRestoreBoundsCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowRestoreBoundsSnippets/CSharp/MainWindow.xaml.cs#windowrestoreboundscodebehind1)]
+ [!code-vb[WindowRestoreBoundsSnippets#WindowRestoreBoundsCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowRestoreBoundsSnippets/visualbasic/mainwindow.xaml.vb#windowrestoreboundscodebehind1)]  
+[!code-csharp[WindowRestoreBoundsSnippets#WindowRestoreBoundsCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowRestoreBoundsSnippets/CSharp/MainWindow.xaml.cs#windowrestoreboundscodebehind2)]
+[!code-vb[WindowRestoreBoundsSnippets#WindowRestoreBoundsCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowRestoreBoundsSnippets/visualbasic/mainwindow.xaml.vb#windowrestoreboundscodebehind2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão consultar o tamanho e a localização de uma janela delimitadora do retângulo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.Show" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre uma janela e retorna sem aguardar a janela recém-aberta fechar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Window> classe é instanciada, ela não é visível por padrão. <xref:System.Windows.Window.Show%2A>mostra uma janela e retorna imediatamente, sem esperar que a janela a ser fechado. Consequentemente, a janela aberta não impede que usuários interagir com outras janelas no aplicativo. Esse tipo de janela é chamado um *sem janela restrita* janela. Exemplos comuns do windows sem janela restrita são paletas, caixas de ferramentas e janelas Propriedades. Para impedir que um usuário para interagir com uma janela específica, a janela deve ser aberto chamando <xref:System.Windows.Window.ShowDialog%2A>.  
+  
+ Uma janela que é aberta, chamando <xref:System.Windows.Window.Show%2A> does não automaticamente têm uma relação com a janela que a abriu; especificamente, a janela aberta não sabe qual janela aberto. Essa relação pode ser estabelecida com o <xref:System.Windows.Window.Owner%2A> propriedade e gerenciados usando o <xref:System.Windows.Window.OwnedWindows%2A> propriedade.  
+  
+ Chamando <xref:System.Windows.Window.Show%2A> atinja o mesmo resultado final como configuração <xref:System.Windows.UIElement.Visibility%2A> propriedade o <xref:System.Windows.Window> do objeto para <xref:System.Windows.Visibility.Visible>. No entanto, há uma diferença entre os dois de uma perspectiva de tempo.  
+  
+ Chamando <xref:System.Windows.Window.Show%2A> é uma operação síncrona que retorna somente após o <xref:System.Windows.FrameworkElement.Loaded> foi levantado o evento na janela filho:  
+  
+ [!code-csharp[WindowShowTimingSnippets#ShowSync](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowShowTimingSnippets/CSharp/Window1.xaml.cs#showsync)]
+ [!code-vb[WindowShowTimingSnippets#ShowSync](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowShowTimingSnippets/visualbasic/window1.xaml.vb#showsync)]  
+  
+ Definindo <xref:System.Windows.UIElement.Visibility%2A>, no entanto, é uma operação assíncrona que retorna imediatamente:  
+  
+ [!code-csharp[WindowShowTimingSnippets#ShowASync](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowShowTimingSnippets/CSharp/Window1.xaml.cs#showasync)]
+ [!code-vb[WindowShowTimingSnippets#ShowASync](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowShowTimingSnippets/visualbasic/window1.xaml.vb#showasync)]  
+  
+ Ao definir <xref:System.Windows.UIElement.Visibility%2A>, quaisquer eventos da janela registrar antes de definir <xref:System.Windows.UIElement.Visibility%2A> não pode ser gerado até após o método em que você definir <xref:System.Windows.UIElement.Visibility%2A> concluiu a execução.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como abrir uma janela não restrita.  
+  
+ [!code-csharp[WindowShowSnippets#WindowShowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowShowSnippets/CSharp/MainWindow.xaml.cs#windowshowcode)]
+ [!code-vb[WindowShowSnippets#WindowShowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowShowSnippets/visualbasic/mainwindow.xaml.vb#windowshowcode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Window.Show" /> é chamado em uma janela que está sendo fechada (<see cref="E:System.Windows.Window.Closing" />) ou que foi fechada (<see cref="E:System.Windows.Window.Closed" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowActivated">
+      <MemberSignature Language="C#" Value="public bool ShowActivated { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowActivated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.ShowActivated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma janela é ativada quando mostrada pela primeira vez.</summary>
+        <value>
+          <see langword="true" /> se uma janela é ativada quando mostrada pela primeira vez; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma janela com seu <xref:System.Windows.Window.ShowActivated%2A> propriedade definida como `false` é aberto, a janela não está ativada e seu <xref:System.Windows.Window.Activated> evento não será gerado até que um usuário manualmente ativa a janela selecionando-a. Depois que a janela é selecionada, ele ativa e desativa normalmente.  
+  
+ Para impedir que uma janela está sendo ativado quando ele for aberto, o <xref:System.Windows.Window.ShowActivated%2A> propriedade deve ser definida como `false` antes que a janela é mostrada (chamando <xref:System.Windows.Window.Show%2A>); configuração <xref:System.Windows.Window.ShowActivated%2A> para `false` depois que uma janela seja exibida não tem nenhum efeito.  
+  
+ Configuração <xref:System.Windows.Window.ShowActivated%2A> para `false` em uma janela que é aberta modalmente, chamando <xref:System.Windows.Window.ShowDialog%2A>, não tem nenhum impacto real. Embora a janela restrita não será ativada, a janela modal impedirá o usuário ativar todas as janelas abertas.  
+  
+<a name="dependencyPropertyInfo_WindowShowActivated"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.ShowActivatedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar marcação para configurar uma janela para ser aberto sem que está sendo ativado.  
+  
+ [!code-xaml[WindowShowActivatedSnippets#ShowUnactivatedMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowShowActivatedSnippets/CSharp/AWindow.xaml#showunactivatedmarkup1)]  
+  
+  
+ [!code-csharp[WindowShowActivatedSnippets#ShowUnactivatedCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowShowActivatedSnippets/CSharp/AWindow.xaml.cs#showunactivatedcodebehind)]
+ [!code-vb[WindowShowActivatedSnippets#ShowUnactivatedCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowShowActivatedSnippets/visualbasic/awindow.xaml.vb#showunactivatedcodebehind)]  
+  
+ O exemplo a seguir mostra como usar código para configurar uma janela para ser aberto sem ele está sendo ativado.  
+  
+ [!code-csharp[WindowShowActivatedSnippets#ShowUnactivatedWindowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowShowActivatedSnippets/CSharp/Window1.xaml.cs#showunactivatedwindowcode)]
+ [!code-vb[WindowShowActivatedSnippets#ShowUnactivatedWindowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowShowActivatedSnippets/visualbasic/window1.xaml.vb#showunactivatedwindowcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowActivatedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowActivatedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowActivatedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.ShowActivatedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.ShowActivated" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; ShowDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;bool&gt; ShowDialog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Window.ShowDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre uma janela e retorna somente quando a janela recém-aberta é fechada.</summary>
+        <returns>Um valor <see cref="T:System.Nullable`1" /> do tipo <see cref="T:System.Boolean" /> que especifica se a atividade foi aceita (<see langword="true" />) ou cancelada (<see langword="false" />). O valor retornado é o valor da propriedade <see cref="P:System.Windows.Window.DialogResult" /> antes que uma janela seja fechada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Window> classe é instanciada, ela não é visível por padrão. <xref:System.Windows.Window.ShowDialog%2A>mostra a janela, desabilita todas as outras janelas no aplicativo e retorna somente quando a janela for fechada. Esse tipo de janela é conhecido como um *modal* janela.  
+  
+ Janelas modais são usadas principalmente como caixas de diálogo. Uma caixa de diálogo é um tipo especial de janela que aplicativos usam para interagir com os usuários para executar tarefas, como abrir arquivos ou impressão de documentos. Caixas de diálogo geralmente permitem aos usuários aceitar ou cancelar a tarefa para a qual eles foram mostrados antes da caixa de diálogo é fechada. <xref:System.Windows.Window.ShowDialog%2A>Retorna um <xref:System.Nullable%601> <xref:System.Boolean> valor que especifica se a atividade foi aceito ou cancelada. O valor retornado é o valor da propriedade <xref:System.Windows.Window.DialogResult%2A> antes que uma janela seja fechada. Para obter mais informações, consulte <xref:System.Windows.Window.DialogResult%2A>.  
+  
+ Uma janela que é aberta, chamando o <xref:System.Windows.Window.ShowDialog%2A> método não tem uma relação com a janela que a abriu automaticamente; especificamente, a janela aberta não sabe qual janela aberto. Essa relação pode ser estabelecida com o <xref:System.Windows.Window.Owner%2A> propriedade e gerenciados usando o <xref:System.Windows.Window.OwnedWindows%2A> propriedade. Para dar suporte a [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] automação (consulte [visão geral de automação de interface do usuário](~/docs/framework/ui-automation/ui-automation-overview.md)), <xref:System.Windows.Window.Owner%2A> devem ser definidas para uma janela aberta chamando <xref:System.Windows.Window.ShowDialog%2A>.  
+  
+ Quando um modal [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] janela (uma janela aberta chamando <xref:System.Windows.Window.ShowDialog%2A>) for fechada, ativado anteriormente janela for reativada. Se um modal [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] janela tem uma janela do proprietário (consulte <xref:System.Windows.Window.Owner%2A>), a janela do proprietário não é reativado quando o modal [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] janela for fechada, a menos que era a janela ativada anteriormente.  
+  
+> [!NOTE]
+>  Este método não pode ser chamado quando uma janela está hospedada em um navegador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como abrir uma janela modal.  
+  
+ [!code-csharp[WindowShowDialogSnippets#WindowShowDialogCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowShowDialogSnippets/CSharp/MainWindow.xaml.cs#windowshowdialogcode)]
+ [!code-vb[WindowShowDialogSnippets#WindowShowDialogCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowShowDialogSnippets/visualbasic/mainwindow.xaml.vb#windowshowdialogcode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Window.ShowDialog" /> é chamado em uma janela que está sendo fechada (<see cref="E:System.Windows.Window.Closing" />) ou que foi fechada (<see cref="E:System.Windows.Window.Closed" />).</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">permissão ativar uma janela. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowInTaskbar">
+      <MemberSignature Language="C#" Value="public bool ShowInTaskbar { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowInTaskbar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.ShowInTaskbar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a janela tem um botão na barra de tarefas.</summary>
+        <value>
+          <see langword="true" /> se a janela tiver um botão na barra de tarefas; caso contrário, <see langword="false" />. Não se aplica quando a janela é hospedada em um navegador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Window.ShowInTaskbar%2A> é definido como `true`, a janela também aparecerá na lista de seleção de aplicativo ALT + TAB.  
+  
+ O ícone que é usado para o botão da barra de tarefas e a lista de seleção de aplicativo ALT + TAB é o valor da <xref:System.Windows.Window.Icon%2A> propriedade.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowShowInTaskbar"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.ShowInTaskbarProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowInTaskbarProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowInTaskbarProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowInTaskbarProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.ShowInTaskbarProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.ShowInTaskbar" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeToContent">
+      <MemberSignature Language="C#" Value="public System.Windows.SizeToContent SizeToContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.SizeToContent SizeToContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.SizeToContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.SizeToContent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma janela será redimensionada automaticamente para se ajustar ao tamanho de seu conteúdo.</summary>
+        <value>Um valor <see cref="T:System.Windows.SizeToContent" />. O padrão é <see cref="F:System.Windows.SizeToContent.Manual" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Window.SizeToContent%2A> é definido como <xref:System.Windows.SizeToContent.WidthAndHeight>, configuração <xref:System.Windows.FrameworkElement.Height%2A> ou <xref:System.Windows.FrameworkElement.Width%2A> não tem nenhum efeito; ambas as propriedades podem ser definidas, mas os valores que são definidas com não são aplicados à janela.  
+  
+ Quando <xref:System.Windows.Window.SizeToContent%2A> é definido como <xref:System.Windows.SizeToContent.Height>, configuração <xref:System.Windows.FrameworkElement.Height%2A> não altera a altura da janela.  
+  
+ Quando <xref:System.Windows.Window.SizeToContent%2A> é definido como <xref:System.Windows.SizeToContent.Width>, configuração <xref:System.Windows.FrameworkElement.Width%2A> não altera a largura da janela.  
+  
+ Se <xref:System.Windows.Window.SizeToContent%2A> tem um valor diferente de <xref:System.Windows.SizeToContent.Manual>:  
+  
+-   <xref:System.Windows.Window.SizeToContent%2A>é definida automaticamente como <xref:System.Windows.SizeToContent.Manual> se um usuário redimensionar a janela usando a alça de redimensionamento ou arrastando a borda.  
+  
+-   Se o tamanho do conteúdo é alterado de forma que faz com que a janela para redimensionar em si, <xref:System.Windows.FrameworkElement.SizeChanged> é gerado.  
+  
+ Se uma janela é transparente (consulte <xref:System.Windows.Window.AllowsTransparency%2A>), você deve considerar a configuração <xref:System.Windows.Window.SizeToContent%2A> para <xref:System.Windows.SizeToContent.WidthAndHeight> para garantir que a janela não seja maior que seu conteúdo visível.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowSizeToContent"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.SizeToContentProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Window.SizeToContent%2A> propriedade no código para especificar como uma janela é redimensionada para ajustar seu conteúdo.  
+  
+ [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
+ [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SizeToContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SizeToContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SizeToContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.SizeToContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.SizeToContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceInitialized">
+      <MemberSignature Language="C#" Value="public event EventHandler SourceInitialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SourceInitialized" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.SourceInitialized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse evento é gerado para dar suporte à interoperação com [!INCLUDE[TLA#tla_win32](~/includes/tlasharptla-win32-md.md)]. Consulte <see cref="T:System.Windows.Interop.HwndSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler StateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Window.StateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Window.WindowState" /> da janela se altera.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskbarItemInfo">
+      <MemberSignature Language="C#" Value="public System.Windows.Shell.TaskbarItemInfo TaskbarItemInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Shell.TaskbarItemInfo TaskbarItemInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.TaskbarItemInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Shell.TaskbarItemInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o [!INCLUDE[win7](~/includes/win7-md.md)] miniatura da barra de tarefas para o <see cref="T:System.Windows.Window" />.</summary>
+        <value>A miniatura da barra de tarefas [!INCLUDE[win7](~/includes/win7-md.md)] para o <see cref="T:System.Windows.Window" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como usar o [!INCLUDE[win7](~/includes/win7-md.md)] consulte em miniatura, na barra de tarefas de <xref:System.Windows.Shell.TaskbarItemInfo> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskbarItemInfoProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TaskbarItemInfoProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TaskbarItemInfoProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.TaskbarItemInfoProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.TaskbarItemInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Title)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um título de janela.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o título da janela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O título de um <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, ou [!INCLUDE[TLA#tla_iegeneric](~/includes/tlasharptla-iegeneric-md.md)], também pode ser definida usando <xref:System.Windows.Controls.Page.WindowTitle%2A?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_WindowTitle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.TitleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TitleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TitleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.TitleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.Title" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public double Top { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Top" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Windows.LengthConverter, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Custom=null")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição da borda superior da janela, em relação à área de trabalho.</summary>
+        <value>A posição da parte superior da janela, em unidades lógicas (1/96").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Window> é maximizada ou minimizada, esse valor representa a borda superior da restauração de ponto para o <xref:System.Windows.Window>.  
+  
+ Essa propriedade não pode ser definida por meio de um estilo.  
+  
+ Se você não especificar um valor de <xref:System.Windows.Window.Top%2A> é definido como o valor padrão do sistema. Você também pode especificar o valor padrão do sistema, definindo <xref:System.Windows.Window.Top%2A> para <xref:System.Double.NaN>. Nem <xref:System.Double.NegativeInfinity> nem <xref:System.Double.PositiveInfinity> é um valor válido para <xref:System.Windows.Window.Top%2A>.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowTop"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.TopProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Topmost">
+      <MemberSignature Language="C#" Value="public bool Topmost { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Topmost" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.Topmost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma janela aparece na frente das demais.</summary>
+        <value>
+          <see langword="true" /> se a janela aparecer na frente das demais; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma janela cujo <xref:System.Windows.Window.Topmost%2A> está definida como `true` aparece acima de todas as janelas cujo <xref:System.Windows.Window.Topmost%2A> propriedades são definidas como `false`.  
+  
+ No grupo do windows que tenha <xref:System.Windows.Window.Topmost%2A> está definida como `true`, a janela atualmente ativo é o mais alto. Da mesma forma para o grupo do windows que tenha <xref:System.Windows.Window.Topmost%2A> está definida como `false`.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowTopmost"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.TopmostProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopmostProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TopmostProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TopmostProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.TopmostProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.Topmost" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TopProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TopProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TopProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.TopProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.Top" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStartupLocation">
+      <MemberSignature Language="C#" Value="public System.Windows.WindowStartupLocation WindowStartupLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.WindowStartupLocation WindowStartupLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.WindowStartupLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowStartupLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição da janela quando mostrada pela primeira vez.</summary>
+        <value>Um valor <see cref="T:System.Windows.WindowStartupLocation" /> que especifica a posição superior/esquerda de uma janela quando mostrada pela primeira vez. O padrão é <see cref="F:System.Windows.WindowStartupLocation.Manual" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Configuração <xref:System.Windows.WindowStartupLocation> para <xref:System.Windows.WindowStartupLocation.Manual> faz com que uma janela deve ser posicionado de acordo com seu <xref:System.Windows.Window.Left%2A> e <xref:System.Windows.Window.Top%2A> valores de propriedade. Se o <xref:System.Windows.Window.Left%2A> ou <xref:System.Windows.Window.Top%2A> propriedades não forem especificadas, seus valores são determinados pelo [!INCLUDE[TLA2#tla_mswin](~/includes/tla2sharptla-mswin-md.md)].  
+  
+ Configuração <xref:System.Windows.WindowStartupLocation.CenterScreen> faz com que uma janela deve ser posicionado no centro da tela que contém o cursor do mouse.  
+  
+ Configuração <xref:System.Windows.WindowStartupLocation> para <xref:System.Windows.WindowStartupLocation.CenterOwner> faz com que uma janela deve ser posicionado no centro da sua janela do proprietário (consulte <xref:System.Windows.Window.Owner%2A>), se especificada. A janela do proprietário pode ser uma janela de não-WPF ou outra janela do WPF.  
+  
+> [!NOTE]
+>  Para obter mais informações sobre janelas WPF com o windows não-WPF, consulte [WPF e Win32 interoperação](~/docs/framework/wpf/advanced/wpf-and-win32-interoperation.md) e <xref:System.Windows.Interop.WindowInteropHelper>.  
+  
+ Se uma janela do proprietário não for especificada, a posição da janela é determinada da mesma forma como se <xref:System.Windows.WindowStartupLocation> é definido como <xref:System.Windows.WindowStartupLocation.Manual>.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter o valor dessa propriedade quando uma janela está hospedada em um navegador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowState">
+      <MemberSignature Language="C#" Value="public System.Windows.WindowState WindowState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.WindowState WindowState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.WindowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma janela está restaurada, minimizada ou maximizada.</summary>
+        <value>Um <see cref="T:System.Windows.WindowState" /> que determina se uma janela está restaurada, minimizada ou maximizada. O padrão é <see cref="F:System.Windows.WindowState.Normal" /> (restaurada).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de uma janela é minimizada ou maximizada, seu tamanho e local são armazenados em <xref:System.Windows.Window.RestoreBounds%2A>. Quando uma janela é restaurada posteriormente, seus valores de tamanho e local são restaurados com os valores de <xref:System.Windows.Window.RestoreBounds%2A>.  
+  
+ Quando o <xref:System.Windows.Window.WindowState%2A> propriedade for alterada, <xref:System.Windows.Window.StateChanged> é gerado.  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowWindowState"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.WindowStateProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WindowStateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WindowStateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.WindowStateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.WindowState" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.WindowStyle WindowStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.WindowStyle WindowStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Window.WindowStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.WindowStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um estilo de borda da janela.</summary>
+        <value>Um <see cref="T:System.Windows.WindowStyle" /> que especifica um estilo de borda da janela. O padrão é <see cref="F:System.Windows.WindowStyle.SingleBorderWindow" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Window.WindowStyle%2A>pode ser uma da <xref:System.Windows.WindowStyle> valores de enumeração, incluindo <xref:System.Windows.WindowStyle.None>, <xref:System.Windows.WindowStyle.ToolWindow>, <xref:System.Windows.WindowStyle.SingleBorderWindow> (padrão), e <xref:System.Windows.WindowStyle.ThreeDBorderWindow>.  
+  
+ A figura a seguir mostra os estilos de janela no [!INCLUDE[TLA#tla_longhorn](~/includes/tlasharptla-longhorn-md.md)] (tema Aero do Windows Vista, com efeito de transparência habilitado):  
+  
+ ![Estilos de janela](~/add/media/windowoverviewfigure6.PNG "estilos de janela")  
+  
+> [!NOTE]
+>  Você não pode definir ou obter esta propriedade quando uma janela é hospedada em um navegador.  
+  
+<a name="dependencyPropertyInfo_WindowWindowStyle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Window.WindowStyleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WindowStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WindowStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Window.WindowStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Window.WindowStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

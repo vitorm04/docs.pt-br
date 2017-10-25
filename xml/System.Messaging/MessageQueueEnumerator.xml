@@ -1,0 +1,287 @@
+<Type Name="MessageQueueEnumerator" FullName="System.Messaging.MessageQueueEnumerator">
+  <TypeSignature Language="C#" Value="public class MessageQueueEnumerator : MarshalByRefObject, IDisposable, System.Collections.IEnumerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageQueueEnumerator extends System.MarshalByRefObject implements class System.Collections.IEnumerator, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueueEnumerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerator</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um cursor somente de avanço para enumerar por meio de mensagens em uma fila de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Messaging.MessageQueueEnumerator> para dinâmica interação com as filas na rede. Métodos disponíveis por meio de <xref:System.Messaging.MessageQueue> classe pode retornar um <xref:System.Messaging.MessageQueueEnumerator> que contém uma lista dinâmica de filas ou uma matriz que contém um instantâneo da coleção de fila no momento em que o método especificado foi chamado.  
+  
+ Não há nenhuma ordem definida de filas em uma rede. Eles não são ordenados, por exemplo, por computador, o rótulo, o status público ou privado ou outros critérios acessível ao usuário. Um <xref:System.Messaging.MessageQueueEnumerator> é um cursor, inicializado para o início de uma lista dinâmica. Você pode mover o cursor para a primeira fila da enumeração chamando <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A>. Depois que o enumerador foi inicializado, você pode usar <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> para percorrer as filas restantes para a frente.  
+  
+ Não é possível retroceder uma etapa com um <xref:System.Messaging.MessageQueueEnumerator>. Um cursor permite apenas movimento para frente por meio da enumeração de fila. No entanto, você pode chamar <xref:System.Messaging.MessageQueueEnumerator.Reset%2A> para redefinir a enumeração e coloque o cursor no início da lista novamente. Como o enumerador é dinâmico, uma fila que é anexada além da posição atual do cursor pode ser acessada pelo enumerador. Uma fila que é inserida antes da posição atual do cursor não pode ser acessada sem redefinir chamada primeiro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir itera todas as filas de mensagens na rede e examina o caminho para cada fila. Finalmente, ele exibe o número de filas públicas na rede.  
+  
+ [!code-cpp[MessageQueue.GetMessageQueueEnumerator_noparms#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_noparms/CPP/mqgetmessagequeueenumerator.cpp#1)]
+ [!code-csharp[MessageQueue.GetMessageQueueEnumerator_noparms#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_noparms/CS/mqgetmessagequeueenumerator.cs#1)]
+ [!code-vb[MessageQueue.GetMessageQueueEnumerator_noparms#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.GetMessageQueueEnumerator_noparms/VB/mqgetmessagequeueenumerator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos associados com o enumerador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema operacional retém um identificador aberto, <xref:System.Messaging.MessageQueueEnumerator.LocatorHandle%2A>, para o enumerador de fila durante o tempo de vida do cursor. Quando terminar de trabalhar com o enumerador, chame <xref:System.Messaging.MessageQueueEnumerator.Close%2A> para liberar os recursos associados com o identificador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueEnumerator.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Messaging.MessageQueue" /> da enumeração.</summary>
+        <value>A fila na qual o cursor está atualmente posicionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o enumerador é criado, ele não apontar para qualquer coisa, portanto <xref:System.Messaging.MessageQueueEnumerator.Current%2A> não é válido e lançará uma exceção se ele for acessado. Você deve chamar <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> para posicionar o cursor na primeira fila na enumeração.  
+  
+ Diversas chamadas para <xref:System.Messaging.MessageQueueEnumerator.Current%2A> com nenhuma intervenção chamadas para <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> retornará o mesmo <xref:System.Messaging.MessageQueue> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Você chamou <see cref="P:System.Messaging.MessageQueueEnumerator.Current" /> antes da primeira chamada para <see cref="M:System.Messaging.MessageQueueEnumerator.MoveNext" />. O cursor está localizado antes da primeira fila na enumeração.  
+  
+ -ou-  
+  
+ Você chamou <see cref="P:System.Messaging.MessageQueueEnumerator.Current" /> após uma chamada para <see cref="M:System.Messaging.MessageQueueEnumerator.MoveNext" /> retornou false (indicando que o cursor está localizado após a última fila na enumeração).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Messaging.MessageQueueEnumerator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando <xref:System.Messaging.MessageQueueEnumerator.Dispose%2A> permite que os recursos usados pelo <xref:System.Messaging.MessageQueueEnumerator> para ser realocada para outros fins. Para obter mais informações sobre <xref:System.Messaging.MessageQueueEnumerator.Dispose%2A>, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Messaging.MessageQueueEnumerator" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.Messaging.MessageQueueEnumerator.Dispose%2A> e pelo método <xref:System.Object.Finalize%2A>. `Dispose` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Messaging.MessageQueueEnumerator> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tome cuidado para não referenciar objetos que tenham sido descartados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see langword="Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~MessageQueueEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocatorHandle">
+      <MemberSignature Language="C#" Value="public IntPtr LocatorHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int LocatorHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueEnumerator.LocatorHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de enfileiramento de mensagens nativo usado para localizar filas em uma rede.</summary>
+        <value>O identificador nativo para a fila atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você não precisa mais isso <xref:System.Messaging.MessageQueueEnumerator> instância, chame <xref:System.Messaging.MessageQueueEnumerator.Close%2A> para liberar esse identificador para o recurso.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Messaging.MessageQueueException">O identificador não existe.</exception>
+        <exception cref="T:System.Security.SecurityException">O código de chamada não tem permissões de procura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveNext">
+      <MemberSignature Language="C#" Value="public bool MoveNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool MoveNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.MoveNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Avança o enumerador para a próxima fila de enumeração, se houver um disponível no momento.</summary>
+        <returns>
+          <see langword="true" />Se o enumerador foi avançado com êxito para a próxima fila; <see langword="false" /> se o enumerador atingiu o fim da enumeração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A>Retorna `false` imediatamente se não houver nenhum filas associadas a enumeração.  
+  
+ <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A>retornará `true` até que ele tenha atingido o final da coleção. Em seguida, ele retornará `false` para cada chamada sucessiva. No entanto, quando <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> retornou `false`, acessando o <xref:System.Messaging.MessageQueueEnumerator.Current%2A> propriedade gerará uma exceção.  
+  
+ Após a criação, um enumerador é conceitualmente posicionado antes da primeira <xref:System.Messaging.MessageQueue> de enumeração e a primeira chamada para <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> coloca na primeira fila da enumeração em modo de exibição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O código de chamada não tem permissões de procura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueueEnumerator.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o cursor, portanto ele aponta para o início da enumeração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um enumerador move em uma direção de somente avanço. Use esse método para retornar ao início da enumeração de filas.  
+  
+ <xref:System.Messaging.MessageQueueEnumerator.Reset%2A>posiciona o cursor na primeira fila na lista. Você não precisa chamar <xref:System.Messaging.MessageQueueEnumerator.MoveNext%2A> depois de chamar <xref:System.Messaging.MessageQueueEnumerator.Reset%2A> para mover o cursor para frente para a primeira fila na enumeração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerator.Current">
+      <MemberSignature Language="C#" Value="object System.Collections.IEnumerator.Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueueEnumerator.System#Collections#IEnumerator#Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atual <see cref="T:System.Messaging.MessageQueue" /> da enumeração.</summary>
+        <value>A fila na qual o cursor está atualmente posicionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,461 @@
+<Type Name="SmartLabelStyle" FullName="System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle">
+  <TypeSignature Language="C#" Value="public class SmartLabelStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SmartLabelStyle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Forms.DataVisualization.Charting.NoNameExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos e propriedades usados para executar o posicionamento de rótulo de ponto de dados inteligente baseado em regra para resolver problemas de sobreposição de rótulos de ponto de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando os rótulos inteligentes estão habilitados, o gráfico reposiciona sobrepostos rótulos de ponto de dados, com base em um conjunto de regras definidas pelo usuário.  
+  
+ Linhas de texto explicativo serão desenhadas para vincular o rótulo de ponto de dados. Os atributos visuais de linha do texto explicativo podem ser controlados. Esses atributos visual incluem cor, estilo de linha e a largura da linha. O <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutStyle%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle%2A> propriedades controlam ornamentos, como pontas de seta, que aparecem no final da linha do texto explicativo.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineColor%2A> propriedade pode ser definida como qualquer <xref:System.Drawing.Color> objeto. Se você definir a cor da linha do texto explicativo, você definirá a cor do automaticamente o <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle%2A> e o ornamentos definido pelo <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutStyle%2A>.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineWidth%2A> propriedade controla a largura de pixel da linha do texto explicativo. O uso dessa propriedade também será dimensionado ornamentos do <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutStyle%2A>.  
+  
+ A movimentação de rótulos inteligentes pode ser controlada com o uso de várias propriedades relacionadas a animação. Elas definem as regras de movimento para a direção de distância e se o ponto de dados rótulo é permitido para deixar a área de plotagem. As regras de movimento padrão normalmente resolverá a maioria dos problemas. O <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MaxMovingDistance%2A> define um valor que especifica a distância máxima em pixels, dos dados de ponto que rótulos de ponto de dados podem ser movidos em caso de sobreposição. O <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MinMovingDistance%2A> propriedade define um valor que especifica a distância mínima de pixels a partir dos dados de ponto que rótulos de ponto de dados serão movidos em caso de sobreposição. Quando um ponto de dados rótulo precisa ser reposicionado, o rótulo será movido pelo menos o número de pixels especificado.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsOverlappedHidden%2A> propriedade indica se os rótulos estão ocultos quando problemas de sobreposição não podem ser resolvido. Se o <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsOverlappedHidden%2A> é de propriedade `true`, e o ponto de dados não pode ser desenhado dentro da área especificada pela <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MinMovingDistance%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MaxMovingDistance%2A> nas direções permitidas pelo <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MovingDirection%2A>, o rótulo de ponto de dados não será desenhado.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MovingDirection%2A> propriedade define o direction(s) no qual o rótulo de ponto de dados pode ser movido. Essa propriedade aceita um <xref:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles> valor ou um bit a bit ou de vários <xref:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles> valores. O padrão é o bit a bit ou de todos os <xref:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles> valores, para permitir o reposicionamento em todas as direções possíveis, exceto para o Centro de dados de ponto.  
+  
+ Não há suporte para os rótulos inteligentes para os seguintes tipos de gráfico:  
+  
+-   Gráficos de barras: barras e gráficos de barras empilhadas com 100 por cento.  
+  
+-   Gráficos de forma: pizza, rosca, polar e gráficos de radar.  
+  
+-   Gráficos de intervalo: intervalo, a coluna de intervalo e gráficos de barras de intervalo.  
+  
+-   Gráficos de área empilhadas: empilhada área e gráficos de área 100 por cento empilhado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SmartLabelStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowOutsidePlotArea">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle AllowOutsidePlotArea { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle AllowOutsidePlotArea" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.AllowOutsidePlotArea" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que especifica se um <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> objeto pode ser desenhado fora da área de plotagem.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalloutBackColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color CalloutBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CalloutBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Transparent")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo do texto explicativo de rótulo.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só é aplicável quando o <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutStyle%2A> propriedade é definida como um valor de <xref:System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle.Box>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalloutLineAnchorCapStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.LineAnchorCapStyle CalloutLineAnchorCapStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LineAnchorCapStyle CalloutLineAnchorCapStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de terminação de ancoragem da linha de texto explicativo do rótulo.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.LineAnchorCapStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalloutLineColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color CalloutLineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color CalloutLineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.ChartColorEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da linha de texto explicativo do rótulo.</summary>
+        <value>Um valor <see cref="T:System.Drawing.Color" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalloutLineDashStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.ChartDashStyle CalloutLineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.ChartDashStyle CalloutLineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo da linha de texto explicativo do rótulo.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartDashStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalloutLineWidth">
+      <MemberSignature Language="C#" Value="public virtual int CalloutLineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CalloutLineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutLineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da linha de texto explicativo do rótulo.</summary>
+        <value>Um valor <see langword="integer" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalloutStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle CalloutStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle CalloutStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.CalloutStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de texto explicativo do reposicionados <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> objeto.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public virtual bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se um <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> algoritmo está habilitado.</summary>
+        <value>
+          <see langword="True" />Se um algoritmo será aplicado para impedir a sobreposição de rótulos de ponto de dados. <see langword="False" />Se a sobreposição de rótulos de ponto de dados não será impedido. O valor padrão é <see langword="True" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMarkerOverlappingAllowed">
+      <MemberSignature Language="C#" Value="public virtual bool IsMarkerOverlappingAllowed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMarkerOverlappingAllowed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsMarkerOverlappingAllowed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que especifica se os rótulos de pontos podem sobrepor um marcador de ponto.</summary>
+        <value>
+          <see langword="True" />Se o ponto de dados rótulos podem sobrepor marcadores de ponto. <see langword="False" />Se o ponto de dados rótulos serão impedidos de sobreposição os marcadores de ponto. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOverlappedHidden">
+      <MemberSignature Language="C#" Value="public virtual bool IsOverlappedHidden { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOverlappedHidden" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.IsOverlappedHidden" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que indica se a sobreposição de rótulos que não pode ser reposicionado ficará oculta.</summary>
+        <value>
+          <see langword="True" />Se rótulos ficará oculta se sobreponham. <see langword="False" />Se a sobreposição de rótulos não ficará oculta. O valor padrão é <see langword="True" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o ponto não pode ser desenhado dentro da área especificada pelas propriedades <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MinMovingDistance%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MaxMovingDistance%2A>, nas direções permitidas pelo <xref:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MovingDirection%2A>, propriedade e essa propriedade é `true`, o rótulo de ponto de dados não será desenhado.  
+  
+> [!NOTE]
+>  Os rótulos inteligentes só funcionam quando o <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.Angle%2A> propriedade é definida como zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMovingDistance">
+      <MemberSignature Language="C#" Value="public virtual double MaxMovingDistance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MaxMovingDistance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MaxMovingDistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(30)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância máxima, em pixels, que a sobreposição <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> objeto pode ser movido do marcador.</summary>
+        <value>Um valor <see langword="double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica a distância máxima em pixels, dos dados de ponto que rótulos de ponto de dados podem ser movidos em caso de sobreposição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinMovingDistance">
+      <MemberSignature Language="C#" Value="public virtual double MinMovingDistance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MinMovingDistance" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MinMovingDistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a distância mínima, em pixels, que a sobreposição <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> objeto pode ser movido do marcador.</summary>
+        <value>Um valor <see langword="double" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica a distância mínima de pixels a partir dos dados de ponto que rótulos de ponto de dados podem ser movidos em caso de sobreposição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MovingDirection">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles MovingDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles MovingDirection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle.MovingDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles), "Top, Bottom, Right, Left, TopLeft, TopRight, BottomLeft, BottomRight")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataVisualization.Charting.FlagsEnumUITypeEditor, System.Windows.Forms.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o direction(s) na qual o sobreposto <see cref="T:System.Windows.Forms.DataVisualization.Charting.SmartLabelStyle" /> objeto pode ser movido.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles" /> tinha valor de enumeração ou vários OR bit a bit <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles" /> valores. O padrão é o OR bit a bit de todos os <see cref="T:System.Windows.Forms.DataVisualization.Charting.LabelAlignmentStyles" /> valores para permitir o reposicionamento em todas as direções, exceto para o Centro de dados de ponto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

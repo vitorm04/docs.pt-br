@@ -1,0 +1,43 @@
+<Type Name="VisualStyleElement+Taskbar" FullName="System.Windows.Forms.VisualStyles.VisualStyleElement+Taskbar">
+  <TypeSignature Language="C#" Value="public static class VisualStyleElement.Taskbar" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi abstract sealed beforefieldinit VisualStyleElement/Taskbar extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém classes que fornecem <see cref="T:System.Windows.Forms.VisualStyles.VisualStyleElement" /> objetos para as partes da barra de tarefas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar> classe fornece uma base na qual as classes a seguir são definidas:  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.BackgroundBottom>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.BackgroundLeft>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.BackgroundRight>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.BackgroundTop>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.SizingBarBottom>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.SizingBarLeft>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.SizingBarRight>  
+  
+-   <xref:System.Windows.Forms.VisualStyles.VisualStyleElement.Taskbar.SizingBarTop>  
+  
+ Cada uma dessas classes fornece uma propriedade que retorna um <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> para a parte da barra de tarefas especificada pelo nome da classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

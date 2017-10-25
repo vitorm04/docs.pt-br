@@ -1,0 +1,218 @@
+<Type Name="InvalidTimeZoneException" FullName="System.InvalidTimeZoneException">
+  <TypeSignature Language="C#" Value="public class InvalidTimeZoneException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InvalidTimeZoneException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.InvalidTimeZoneException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é gerada quando informações de fuso horário são inválidas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa exceção é lançada quando um <xref:System.TimeZoneInfo> objeto contém dados inválidos, incompletos ou ausentes. Ela é gerada pelo <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> corrompido de método quando um fuso horário é encontrado no registro, mas contém dados. Ela também pode ser gerada pelo <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método em qualquer uma das seguintes condições:  
+  
+-   As regras de ajuste se sobrepõem.  
+  
+-   As regras de ajuste contêm um ou mais elementos nulos.  
+  
+-   A soma do delta de deslocamento e o horário de verão do tempo Universal Coordenado (UTC) está fora do intervalo. (Ele é maior do que 14 horas ou menos de-14 horas.)  
+  
+-   Uma única data tem várias regras de ajuste aplicadas a ele.  
+  
+ Essa exceção não é gerada para indicar que o fuso horário não está definido em um sistema específico. o <xref:System.TimeZoneNotFoundException> é usado para essa finalidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidTimeZoneException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.InvalidTimeZoneException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.InvalidTimeZoneException" /> classe com uma mensagem fornecida pelo sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o construtor padrão da <xref:System.InvalidTimeZoneException> classe. Ele inicializa o <xref:System.Exception.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "Exceção do tipo 'System.InvalidTimeZoneException' foi gerada." Esta mensagem é localizada para a cultura atual do sistema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidTimeZoneException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.InvalidTimeZoneException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que descreve a exceção.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.InvalidTimeZoneException" /> classe com a cadeia de caracteres de mensagem especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres fornecida como o `message` parâmetro é atribuído a <xref:System.Exception.Message%2A> propriedade. Ele deve ser localizado para a cultura atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InvalidTimeZoneException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.InvalidTimeZoneException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que contém os dados serializados.</param>
+        <param name="context">O fluxo que contém os dados serializados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.InvalidTimeZoneException" /> classe a partir de dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não é chamado diretamente por seu código para instanciar o <xref:System.InvalidTimeZoneException> objeto. Em vez disso, ele é chamado pelo <xref:System.Runtime.Serialization.IFormatter> do objeto <xref:System.Runtime.Serialization.IFormatter.Deserialize%2A> método ao desserializar o <xref:System.InvalidTimeZoneException> objeto a partir de um fluxo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="info" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="context" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InvalidTimeZoneException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.InvalidTimeZoneException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma cadeia de caracteres que descreve a exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.InvalidTimeZoneException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa esta sobrecarga do <xref:System.InvalidTimeZoneException> classe para manipular uma exceção em um `try`...`catch` bloco. O `innerException` parâmetro deve ser uma referência para o objeto de exceção do `catch` bloco, ou pode ser `null`. Esse valor é então atribuído ao <xref:System.InvalidTimeZoneException> do objeto <xref:System.Exception.InnerException%2A> propriedade.  
+  
+ O `message` cadeia de caracteres é atribuída para o <xref:System.Exception.Message%2A> propriedade. A cadeia de caracteres deve ser localizada para a cultura atual.  
+  
+   
+  
+## Examples  
+ O código a seguir tenta recuperar um <xref:System.TimeZoneInfo> objeto que representa o fuso horário padrão Central. Se um <xref:System.InvalidTimeZoneException> ocorre no `RetrieveTimeZone` chamada de método, o manipulador de exceção encapsula a exceção em uma nova <xref:System.InvalidTimeZoneException> objeto, que retorna ao chamador. Manipulador de exceção do chamador, em seguida, exibe informações sobre as exceções externas e internas.  
+  
+ [!code-csharp[System.TimeZoneNotFoundException.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZoneNotFoundException.Class/cs/TimeZoneNotFoundException.cs#1)]
+ [!code-vb[System.TimeZoneNotFoundException.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZoneNotFoundException.Class/vb/TimeZoneNotFoundException.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

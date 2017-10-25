@@ -1,0 +1,46 @@
+<Type Name="BitmapSuffixInSatelliteAssemblyAttribute" FullName="System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute">
+  <TypeSignature Language="C#" Value="public class BitmapSuffixInSatelliteAssemblyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BitmapSuffixInSatelliteAssemblyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que, ao interpretar <see cref="T:System.Drawing.ToolboxBitmapAttribute" /> declarações, o assembly deve procurar os recursos indicados em um assembly satélite, mas com o <see cref="P:System.Drawing.Configuration.SystemDrawingSection.BitmapSuffix" /> acrescentado ao nome do arquivo declarados de valor de configuração.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sufixo de bitmap é acrescentado ao nome do arquivo antes da extensão. Por exemplo, com um sufixo de bitmap de ". test.1.0", um <xref:System.Drawing.ToolboxBitmapAttribute> referência a "my.bmp" é interpretada como "my.test.1.0.bmp".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapSuffixInSatelliteAssemblyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.BitmapSuffixInSatelliteAssemblyAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

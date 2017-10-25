@@ -1,0 +1,67 @@
+<Type Name="ITransactionPromoter" FullName="System.Transactions.ITransactionPromoter">
+  <TypeSignature Language="C#" Value="public interface ITransactionPromoter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITransactionPromoter" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.ITransactionPromoter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve uma transação delegada para uma transação existente que pode ser escalonada para ser gerenciado pelo MSDTC quando necessário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você deseja implementar um Gerenciador de recursos, você não deve implementar o <xref:System.Transactions.ITransactionPromoter> interface diretamente. Em vez disso, você deve implementar <xref:System.Transactions.ISinglePhaseNotification> interface que herda o único <xref:System.Transactions.ITransactionPromoter.Promote%2A> método desta interface. Para obter mais informações sobre como implementar um Gerenciador de recursos, consulte [implementar um Gerenciador de recursos](http://msdn.microsoft.com/en-us/81509719-d579-4530-831e-42e1acdef63e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Promote">
+      <MemberSignature Language="C#" Value="public byte[] Promote ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] Promote() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Transactions.ITransactionPromoter.Promote" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica um inscrita objeto que foi solicitado um escalonamento da transação delegada.</summary>
+        <returns>Um token de propagação do transmissor/receptor que realiza marshaling de uma transação distribuída. Para obter mais informações, consulte <see cref="M:System.Transactions.TransactionInterop.GetTransactionFromTransmitterPropagationToken(System.Byte[])" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Transactions.TransactionPromotionException> deve ser gerada por uma implementação de <xref:System.Transactions.IPromotableSinglePhaseNotification> interface para indicar que uma chamada para <xref:System.Transactions.ITransactionPromoter.Promote%2A> falhou.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

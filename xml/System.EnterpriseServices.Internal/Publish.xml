@@ -1,0 +1,641 @@
+<Type Name="Publish" FullName="System.EnterpriseServices.Internal.Publish">
+  <TypeSignature Language="C#" Value="public class Publish : System.EnterpriseServices.Internal.IComSoapPublisher" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Publish extends System.Object implements class System.EnterpriseServices.Internal.IComSoapPublisher" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Internal.Publish" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.EnterpriseServices.Internal.IComSoapPublisher</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("d8013eef-730b-45e2-ba24-874b7242c425")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Publica interfaces COM para aplicativos COM+ habilitados para SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Internal.Publish>é usado internamente pelo .NET Framework. Você não precisa usá-lo diretamente no seu código.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Publish ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.Internal.Publish" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMailBox">
+      <MemberSignature Language="C#" Value="public void CreateMailBox (string RootMailServer, string MailBox, out string SmtpName, out string Domain, out string PhysicalPath, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateMailBox(string RootMailServer, string MailBox, [out] string&amp; SmtpName, [out] string&amp; Domain, [out] string&amp; PhysicalPath, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.CreateMailBox(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootMailServer" Type="System.String" />
+        <Parameter Name="MailBox" Type="System.String" />
+        <Parameter Name="SmtpName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Domain" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="PhysicalPath" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootMailServer">A URL para o servidor de email de raiz.</param>
+        <param name="MailBox">A caixa de correio para criar.</param>
+        <param name="SmtpName">Quando este método retorna, este parâmetro contém o nome do servidor SMTP Simple Mail Transfer Protocol () que contém a caixa de correio.</param>
+        <param name="Domain">Quando este método retorna, este parâmetro contém o domínio do servidor SMTP.</param>
+        <param name="PhysicalPath">Quando este método retorna, este parâmetro contém o caminho do sistema de arquivo da caixa de correio.</param>
+        <param name="Error">Quando este método retorna, este parâmetro contém uma mensagem de erro se o problema.</param>
+        <summary>Cria uma caixa de correio de aplicativo habilitado para SOAP COM+ em uma URL especificada. Não foi totalmente implementado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é totalmente implementado; não criar uma caixa de correio. Retorna a mensagem de erro "Serviços SOAP COM+ não há suporte à publicação SMTP."  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateVirtualRoot">
+      <MemberSignature Language="C#" Value="public void CreateVirtualRoot (string Operation, string FullUrl, out string BaseUrl, out string VirtualRoot, out string PhysicalPath, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateVirtualRoot(string Operation, string FullUrl, [out] string&amp; BaseUrl, [out] string&amp; VirtualRoot, [out] string&amp; PhysicalPath, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot(System.String,System.String,System.String@,System.String@,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Operation" Type="System.String" />
+        <Parameter Name="FullUrl" Type="System.String" />
+        <Parameter Name="BaseUrl" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="VirtualRoot" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="PhysicalPath" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="Operation">A operação a ser executada.</param>
+        <param name="FullUrl">O endereço de URL completo para a raiz virtual.</param>
+        <param name="BaseUrl">Quando este método retorna, este parâmetro contém o endereço de URL base.</param>
+        <param name="VirtualRoot">Quando este método retorna, este parâmetro contém o nome da raiz virtual.</param>
+        <param name="PhysicalPath">Quando este método retorna, este parâmetro contém o caminho do arquivo para a raiz virtual.</param>
+        <param name="Error">Quando este método retorna, este parâmetro contém uma mensagem de erro se o problema.</param>
+        <summary>Cria uma habilitado para SOAP COM+ raiz virtual do aplicativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É recomendável que <xref:System.EnterpriseServices.Internal.SoapServerVRoot.CreateVirtualRootEx%2A> ser usado em vez de <xref:System.EnterpriseServices.Internal.Publish.CreateVirtualRoot%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.  
+  
+ -ou-  
+  
+ O chamador não tem permissão para acessar informações de DNS.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="FullUrl" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Foi encontrado um erro ao resolver o nome do host local.</exception>
+        <exception cref="T:System.UriFormatException">
+          <paramref name="FullUrl" /> está vazio.  
+  
+ -ou-  
+  
+ O esquema especificado na <paramref name="FullUrl" /> é inválido.  
+  
+ -ou-  
+  
+ <paramref name="FullUrl" />contém mais de duas barras consecutivas.  
+  
+ -ou-  
+  
+ A senha especificada na <paramref name="FullUrl" /> é inválido.  
+  
+ -ou-  
+  
+ O nome de host especificado no <paramref name="FullUrl" /> é inválido.  
+  
+ -ou-  
+  
+ O nome de arquivo especificado em <paramref name="FullUrl" /> é inválido.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteMailBox">
+      <MemberSignature Language="C#" Value="public void DeleteMailBox (string RootMailServer, string MailBox, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteMailBox(string RootMailServer, string MailBox, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.DeleteMailBox(System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootMailServer" Type="System.String" />
+        <Parameter Name="MailBox" Type="System.String" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootMailServer">A URL para o servidor de email de raiz.</param>
+        <param name="MailBox">A caixa de correio para excluir.</param>
+        <param name="Error">Quando este método retorna, este parâmetro contém uma mensagem de erro se o problema.</param>
+        <summary>Exclui uma habilitado para SOAP COM+ aplicativo da caixa de correio em uma URL especificada. Não foi totalmente implementado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é totalmente implementado, não exclui a caixa de correio. Retorna a mensagem de erro "Serviços SOAP COM+ não há suporte à publicação SMTP."  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteVirtualRoot">
+      <MemberSignature Language="C#" Value="public void DeleteVirtualRoot (string RootWebServer, string FullUrl, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteVirtualRoot(string RootWebServer, string FullUrl, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.DeleteVirtualRoot(System.String,System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="RootWebServer" Type="System.String" />
+        <Parameter Name="FullUrl" Type="System.String" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="RootWebServer">O servidor de Web raiz.</param>
+        <param name="FullUrl">O endereço de URL completo para a raiz virtual.</param>
+        <param name="Error">Quando este método retorna, este parâmetro contém uma mensagem de erro se o problema.</param>
+        <summary>Exclui uma habilitado para SOAP COM+ raiz virtual do aplicativo. Não foi totalmente implementado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A funcionalidade para <xref:System.EnterpriseServices.Internal.Publish.DeleteVirtualRoot%2A> ainda não está disponível.  
+  
+> [!CAUTION]
+>  O método retorna atualmente sem erro, mas a raiz virtual não é excluída.  
+  
+ Quando a funcionalidade torna-se disponível, o método recomendado será <xref:System.EnterpriseServices.Internal.SoapServerVRoot.DeleteVirtualRootEx%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GacInstall">
+      <MemberSignature Language="C#" Value="public void GacInstall (string AssemblyPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GacInstall(string AssemblyPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.GacInstall(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AssemblyPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AssemblyPath">O caminho do sistema de arquivos do assembly.</param>
+        <summary>Instala um assembly no cache de assembly global.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GacRemove">
+      <MemberSignature Language="C#" Value="public void GacRemove (string AssemblyPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GacRemove(string AssemblyPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.GacRemove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AssemblyPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AssemblyPath">O caminho do sistema de arquivos do assembly.</param>
+        <summary>Remove um assembly do cache de assembly global.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.  
+  
+ -ou-  
+  
+ O chamador não tem permissão de descoberta de caminho.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="AssemblyPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="AssemblyPath" /> está vazio.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">
+          <paramref name="AssemblyPath" /> não foi encontrado.</exception>
+        <exception cref="T:System.IO.FileLoadException">Um assembly ou módulo foi carregado duas vezes em com duas evidências diferentes.</exception>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="AssemblyPath" /> não é um assembly válido.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAssemblyNameForCache">
+      <MemberSignature Language="C#" Value="public void GetAssemblyNameForCache (string TypeLibPath, out string CachePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetAssemblyNameForCache(string TypeLibPath, [out] string&amp; CachePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.GetAssemblyNameForCache(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="TypeLibPath" Type="System.String" />
+        <Parameter Name="CachePath" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="TypeLibPath">O caminho para o arquivo que contém a biblioteca de tipos.</param>
+        <param name="CachePath">Quando este método retorna, este parâmetro contém o nome do diretório SoapCache.</param>
+        <summary>Retorna o caminho completo para um nome forte assinado assembly gerado no diretório SoapCache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para um não gerenciado componente COM+ ser publicado por meio de comunicação remota do .NET como um ponto de extremidade SOAP, um proxy precisa ser gerado para disponibilizar os componentes gerenciados para o .NET Framework. Isso é feito por meio de programação executando as mesmas etapas importador da biblioteca (Tlbimp.exe), o [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] ferramenta que é usada para converter bibliotecas não gerenciadas COM+ tipo para assemblies de metadados de proxy. Para a ativação do cliente através de SOAP seja bem-sucedida, no entanto, máquinas cliente e servidor devem compartilhar os mesmo proxies de nome forte assinado metadados. Por esse motivo, quando um assembly de proxy gerenciado é gerado para um não gerenciado componente COM+, uma chave de nome forte é também gerada e usada para assinar o assembly de proxy.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="TypeLibPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <exception cref="T:System.ArgumentException">O nome do arquivo está vazio, contém somente espaços em branco ou contém caracteres inválidos.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso a <paramref name="TypeLibPath" /> é negado.</exception>
+        <exception cref="T:System.IO.PathTooLongException">O caminho especificado, o nome de arquivo, ou ambos excedem o tamanho máximo definido pelo sistema. Por exemplo, em plataformas com base no Windows, os caminhos devem ter menos que 248 caracteres e os nomes de arquivo devem ter menos que 260 caracteres.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="TypeLibPath" /> contém dois-pontos (:) no meio da cadeia de caracteres.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientPhysicalPath">
+      <MemberSignature Language="C#" Value="public static string GetClientPhysicalPath (bool CreateDir);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetClientPhysicalPath(bool CreateDir) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.GetClientPhysicalPath(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="CreateDir" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="CreateDir">Definido como <see langword="true" /> para criar o diretório ou <see langword="false" /> para retornar o caminho, mas não criar o diretório.</param>
+        <summary>Retorna o caminho para o diretório para armazenar arquivos de configuração do cliente.</summary>
+        <returns>O caminho para o diretório que contém os arquivos de configuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria os diretórios "\com\SOAPAssembly\\" no diretório do sistema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O chamador não tem a permissão necessária.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeNameFromProgId">
+      <MemberSignature Language="C#" Value="public string GetTypeNameFromProgId (string AssemblyPath, string ProgId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetTypeNameFromProgId(string AssemblyPath, string ProgId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.GetTypeNameFromProgId(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AssemblyPath" Type="System.String" />
+        <Parameter Name="ProgId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AssemblyPath">O caminho do sistema de arquivos do assembly.</param>
+        <param name="ProgId">O identificador programático da classe.</param>
+        <summary>Reflete sobre um conjunto e retorna o nome do tipo que corresponde a ProgID.</summary>
+        <returns>O nome do tipo que corresponde a ProgID.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseUrl">
+      <MemberSignature Language="C#" Value="public static void ParseUrl (string FullUrl, out string BaseUrl, out string VirtualRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ParseUrl(string FullUrl, [out] string&amp; BaseUrl, [out] string&amp; VirtualRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.ParseUrl(System.String,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="FullUrl" Type="System.String" />
+        <Parameter Name="BaseUrl" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="VirtualRoot" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="FullUrl">O endereço de URL completo para a raiz virtual.</param>
+        <param name="BaseUrl">Quando este método retorna, este parâmetro contém o endereço de URL base.</param>
+        <param name="VirtualRoot">Quando este método retorna, este parâmetro contém o nome da raiz virtual.</param>
+        <summary>Analisa uma URL e retorna a URL base e partes de raiz virtual.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="FullUrl" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Net.Sockets.SocketException">Foi encontrado um erro ao resolver o nome do host local.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem permissão para acessar informações de DNS.</exception>
+        <exception cref="T:System.UriFormatException">
+          <paramref name="FullUrl" /> está vazio.  
+  
+ -ou-  
+  
+ O esquema especificado na <paramref name="FullUrl" /> é inválido.  
+  
+ -ou-  
+  
+ <paramref name="FullUrl" />contém um número excessivo de barras.  
+  
+ -ou-  
+  
+ A senha especificada na <paramref name="FullUrl" /> é inválido.  
+  
+ -ou-  
+  
+ O nome de host especificado no <paramref name="FullUrl" /> é inválido.  
+  
+ -ou-  
+  
+ O nome de arquivo especificado em <paramref name="FullUrl" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessClientTlb">
+      <MemberSignature Language="C#" Value="public void ProcessClientTlb (string ProgId, string SrcTlbPath, string PhysicalPath, string VRoot, string BaseUrl, string Mode, string Transport, out string AssemblyName, out string TypeName, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessClientTlb(string ProgId, string SrcTlbPath, string PhysicalPath, string VRoot, string BaseUrl, string Mode, string Transport, [out] string&amp; AssemblyName, [out] string&amp; TypeName, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.ProcessClientTlb(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String@,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ProgId" Type="System.String" />
+        <Parameter Name="SrcTlbPath" Type="System.String" />
+        <Parameter Name="PhysicalPath" Type="System.String" />
+        <Parameter Name="VRoot" Type="System.String" />
+        <Parameter Name="BaseUrl" Type="System.String" />
+        <Parameter Name="Mode" Type="System.String" />
+        <Parameter Name="Transport" Type="System.String" />
+        <Parameter Name="AssemblyName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="TypeName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ProgId">O identificador programático da classe.</param>
+        <param name="SrcTlbPath">O caminho para o arquivo que contém a biblioteca de tipos.</param>
+        <param name="PhysicalPath">O diretório de aplicativo Web.</param>
+        <param name="VRoot">O nome da raiz virtual.</param>
+        <param name="BaseUrl">A URL base que contém a raiz virtual.</param>
+        <param name="Mode">O modo de ativação.</param>
+        <param name="Transport">Não usado. Especifique <see langword="null" /> para esse parâmetro.</param>
+        <param name="AssemblyName">Quando este método retorna, este parâmetro contém o nome para exibição do assembly.</param>
+        <param name="TypeName">Quando este método retorna, este parâmetro contém o nome de tipo totalmente qualificado do assembly.</param>
+        <param name="Error">Quando este método retorna, este parâmetro contém uma mensagem de erro se o problema.</param>
+        <summary>Processa uma biblioteca de tipos de cliente, criando um arquivo de configuração no cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado em uma importação de proxy do cliente para gerar um arquivo de configuração de comunicação remota.  
+  
+ Se o `Mode` parâmetro é "wellknownobject" ou uma cadeia de caracteres vazia (""), um objeto conhecido é assumido; Caso contrário, a ativação do cliente será assumida.  
+  
+ É recomendável que <xref:System.EnterpriseServices.Internal.SoapClientImport.ProcessClientTlbEx%2A> ser usado em vez de <xref:System.EnterpriseServices.Internal.Publish.ProcessClientTlb%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessServerTlb">
+      <MemberSignature Language="C#" Value="public void ProcessServerTlb (string ProgId, string SrcTlbPath, string PhysicalPath, string Operation, out string strAssemblyName, out string TypeName, out string Error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessServerTlb(string ProgId, string SrcTlbPath, string PhysicalPath, string Operation, [out] string&amp; strAssemblyName, [out] string&amp; TypeName, [out] string&amp; Error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.ProcessServerTlb(System.String,System.String,System.String,System.String,System.String@,System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ProgId" Type="System.String" />
+        <Parameter Name="SrcTlbPath" Type="System.String" />
+        <Parameter Name="PhysicalPath" Type="System.String" />
+        <Parameter Name="Operation" Type="System.String" />
+        <Parameter Name="strAssemblyName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="TypeName" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="Error" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ProgId">O identificador programático da classe.</param>
+        <param name="SrcTlbPath">O caminho para o arquivo que contém a biblioteca de tipos.</param>
+        <param name="PhysicalPath">O diretório de aplicativo Web.</param>
+        <param name="Operation">A operação a ser executada.</param>
+        <param name="strAssemblyName">Quando este método retorna, este parâmetro contém o nome para exibição do assembly.</param>
+        <param name="TypeName">Quando este método retorna, este parâmetro contém o nome de tipo totalmente qualificado do assembly.</param>
+        <param name="Error">Quando este método retorna, este parâmetro contém uma mensagem de erro se o problema.</param>
+        <summary>Processa uma biblioteca de tipos de servidor, adicionando ou excluindo entradas do componente para os arquivos Web. config e Default.disco. Gera um proxy, se necessário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Internal.Publish.ProcessServerTlb%2A>Adiciona uma entrada para o arquivo de descoberta e o arquivo Web. config para os componentes em typelib, e gera ou copia um proxy para o diretório bin para componentes não gerenciados. Se `Operation` igual a "delete", em seguida, as entradas de componente são removidas dos arquivos Web. config e Default.disco.  
+  
+ É recomendável que <xref:System.EnterpriseServices.Internal.SoapServerTlb.AddServerTlb%2A> e <xref:System.EnterpriseServices.Internal.SoapServerTlb.DeleteServerTlb%2A> ser usado em vez de <xref:System.EnterpriseServices.Internal.Publish.ProcessServerTlb%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.</exception>
+        <exception cref="T:System.EnterpriseServices.ServicedComponentException">O <paramref name="SrcTlbPath" /> mencionados ScrObj; portanto, não há suporte para publicação de SOAP de componentes de script.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">a capacidade de acessar o código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterAssembly">
+      <MemberSignature Language="C#" Value="public void RegisterAssembly (string AssemblyPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterAssembly(string AssemblyPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.RegisterAssembly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AssemblyPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AssemblyPath">O caminho do sistema de arquivos do assembly.</param>
+        <summary>Registra um assembly para interoperabilidade COM.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Internal.Publish.RegisterAssembly%2A>usa a ferramenta de registro de Assembly (Regasm.exe) para registrar as classes instanciável no assembly. Para obter mais informações, consulte [Regasm.exe (ferramenta de registro de Assembly)](~/docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.EnterpriseServices.RegistrationException">O assembly de entrada não tem um nome forte.</exception>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.  
+  
+ -ou-  
+  
+ Uma base de código que não é iniciada com “file://” foi especificada sem o <see cref="T:System.Net.WebPermission" /> necessário.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="AssemblyPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">
+          O <paramref name="AssemblyPath" /> não foi encontrado ou uma extensão de nome de arquivo não foi especificada.</exception>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="AssemblyPath" /> não é um assembly válido.</exception>
+        <exception cref="T:System.IO.FileLoadException">Um assembly ou módulo foi carregado duas vezes com duas evidências diferentes ou o nome do assembly é maior que os caracteres de MAX_PATH.</exception>
+        <exception cref="T:System.InvalidOperationException">Um método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> não é <see langword="static" />.  
+  
+ -ou-  
+  
+ Não há mais de um método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> em um determinado nível da hierarquia.  
+  
+ -ou-  
+  
+ A assinatura do método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> não é válido.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de acessar o registro. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para determinar o diretório atual. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.AllAccess" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler um URI que começa com "file://". Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Net.WebPermission">para ler um URI que não começa com "file://".</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UnRegisterAssembly">
+      <MemberSignature Language="C#" Value="public void UnRegisterAssembly (string AssemblyPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnRegisterAssembly(string AssemblyPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Internal.Publish.UnRegisterAssembly(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AssemblyPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AssemblyPath">O caminho do sistema de arquivos do assembly.</param>
+        <summary>Cancela o registro de um assembly de interoperabilidade COM.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Internal.Publish.UnRegisterAssembly%2A>usa Regasm.exe para cancelar o registro de classes instanciável no assembly. Para obter mais informações, consulte [Regasm.exe (ferramenta de registro de Assembly)](~/docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Um chamador na cadeia de chamadas não tem permissão para acessar o código não gerenciado.  
+  
+ -ou-  
+  
+ Uma base de código que não é iniciada com “file://” foi especificada sem o <see cref="T:System.Net.WebPermission" /> necessário.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="AssemblyPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">
+          <paramref name="AssemblyPath" /> não foi encontrado ou uma extensão de nome de arquivo não foi especificada.</exception>
+        <exception cref="T:System.BadImageFormatException">
+          <paramref name="AssemblyPath" /> não é um assembly válido.</exception>
+        <exception cref="T:System.IO.FileLoadException">Um assembly ou módulo foi carregado duas vezes com duas evidências diferentes ou o nome do assembly é maior que os caracteres de MAX_PATH.</exception>
+        <exception cref="T:System.InvalidOperationException">Um método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> não é <see langword="static" />.  
+  
+ -ou-  
+  
+ Não há mais de um método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> em um determinado nível da hierarquia.  
+  
+ -ou-  
+  
+ A assinatura do método marcado com <see cref="T:System.Runtime.InteropServices.ComUnregisterFunctionAttribute" /> não é válido.</exception>
+        <permission cref="T:System.Security.Permissions.RegistryPermission">a capacidade de acessar o registro. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para determinar o diretório atual. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.AllAccess" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler um URI que começa com "file://". Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+        <permission cref="T:System.Net.WebPermission">para ler um URI que não começa com "file://".</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

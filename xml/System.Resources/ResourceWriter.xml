@@ -1,0 +1,684 @@
+<Type Name="ResourceWriter" FullName="System.Resources.ResourceWriter">
+  <TypeSignature Language="C#" Value="public sealed class ResourceWriter : System.Resources.IResourceWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResourceWriter extends System.Object implements class System.IDisposable, class System.Resources.IResourceWriter" />
+  <TypeSignature Language="DocId" Value="T:System.Resources.ResourceWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Resources.Writer</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Resources.IResourceWriter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Grava recursos no formato padrão do sistema em um arquivo de saída ou um fluxo de saída. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Resources.ResourceWriter>Fornece uma implementação padrão da <xref:System.Resources.IResourceWriter> interface. Ele permite criar programaticamente um arquivo de recurso binário (. resources).  
+  
+ Recursos são especificados como pares de nome e valor usando o <xref:System.Resources.ResourceWriter.AddResource%2A> método. Nomes de recurso diferenciam maiusculas de minúsculas quando usado para pesquisas, mas mais facilmente dar suporte a ferramentas de criação e ajudar a eliminar erros, <xref:System.Resources.ResourceWriter> não permitirá que um arquivo. Resources para têm nomes que variam somente por maiusculas. O <xref:System.Resources.ResourceWriter> classe permite que você criar a cadeia de caracteres, objeto e binários de recursos. Binários de recursos podem ser gravados para o arquivo de recurso como uma matriz de bytes ou um fluxo.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Para criar um arquivo de recursos, criar um <xref:System.Resources.ResourceWriter> com um nome de arquivo exclusivo, chame <xref:System.Resources.ResourceWriter.AddResource%2A> pelo menos uma vez, chamar <xref:System.Resources.ResourceWriter.Generate%2A> para gravar o arquivo de recursos para o disco e, em seguida, chame <xref:System.Resources.ResourceWriter.Close%2A> para fechar o arquivo. Chamando <xref:System.Resources.ResourceWriter.Close%2A> implicitamente chamará <xref:System.Resources.ResourceWriter.Generate%2A> se você não chama explicitamente <xref:System.Resources.ResourceWriter.Generate%2A>.  
+  
+ Os recursos não serão necessariamente gravados na mesma ordem em que eles foram adicionados.  
+  
+ Para recuperar os recursos de um arquivo. Resources binários criado pelo <xref:System.Resources.ResourceWriter> classe, você pode usar o <xref:System.Resources.ResourceManager> classe, que permite recuperar recursos nomeados, ou o <xref:System.Resources.ResourceReader> classe, que lhe permite enumerar todos os recursos no arquivo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava várias cadeias de caracteres no arquivo de myResources.resources.  
+  
+ [!code-cpp[Classic ResourceWriter Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ResourceWriter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ResourceWriter Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ResourceWriter Example/CS/source.cs#1)]
+ [!code-vb[Classic ResourceWriter Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ResourceWriter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceWriter (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de saída.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResourceWriter" /> classe que grava os recursos para o fluxo fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define uma nova instância do <xref:System.Resources.ResourceWriter> classe grava em um fluxo especificado. O código adiciona recursos para o gravador e grava os recursos no fluxo.  
+  
+ [!code-cpp[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/CPP/resourcewritercstr1.cpp#1)]
+ [!code-csharp[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/CS/resourcewritercstr1.cs#1)]
+ [!code-vb[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/VB/resourcewritercstr1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="stream" /> parâmetro não é gravável.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceWriter (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo de saída.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Resources.ResourceWriter" /> classe que grava os recursos para o arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define uma nova instância do <xref:System.Resources.ResourceWriter> classe irá gravar um arquivo especificado. O código adiciona recursos para o gravador e grava os recursos para o arquivo.  
+  
+ [!code-cpp[Classic ResourceWriter Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ResourceWriter Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ResourceWriter Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ResourceWriter Example/CS/source.cs#1)]
+ [!code-vb[Classic ResourceWriter Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ResourceWriter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="fileName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResource(string name, unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.AddResource(System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="value">Valor do recurso como uma matriz de inteiro não assinado de 8 bits.</param>
+        <summary>Adiciona um recurso nomeado especificado como uma matriz de bytes para a lista de recursos a serem gravados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recurso não é gravado até <xref:System.Resources.ResourceWriter.Generate%2A> é chamado.  
+  
+ Você pode recuperar os recursos escritos pelo <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.Byte%5B%5D%29> método chamando o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.Byte%5B%5D%29> método para adicionar uma imagem de gráfico que foi lido como uma matriz de bytes a um <xref:System.Resources.ResourceWriter> objeto.  
+  
+ [!code-csharp[System.Resources.ResourceWriter.AddResource#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcewriter.addresource/cs/addresource_byt1.cs#4)]
+ [!code-vb[System.Resources.ResourceWriter.AddResource#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcewriter.addresource/vb/addresource_byt1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />(ou um nome que varia somente por maiusculas e minúsculas) já foi adicionado a este <see cref="T:System.Resources.ResourceWriter" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Este <see cref="T:System.Resources.ResourceWriter" /> foi fechado e sua tabela de hash não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, System.IO.Stream value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResource(string name, class System.IO.Stream value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.AddResource(System.String,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso para adicionar.</param>
+        <param name="value">O valor do recurso para adicionar. O recurso deve oferecer suporte a <see cref="P:System.IO.Stream.Length" /> propriedade.</param>
+        <summary>Adiciona um recurso nomeado especificado como um fluxo para a lista de recursos a serem gravados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar qualquer fluxo com suporte para o <xref:System.IO.Stream.Length%2A?displayProperty=nameWithType> propriedade `value`.  
+  
+ Você pode recuperar os recursos escritos pelo <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.IO.Stream%29> método chamando o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.IO.Stream%29> método para adicionar uma imagem de gráfico que foi salvo em um <xref:System.IO.MemoryStream> o objeto para um <xref:System.Resources.ResourceWriter> objeto.  
+  
+ [!code-csharp[System.Resources.ResourceWriter.AddResource#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcewriter.addresource/cs/addresource_str1.cs#2)]
+ [!code-vb[System.Resources.ResourceWriter.AddResource#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcewriter.addresource/vb/addresource_str1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />(ou um nome que varia somente por maiusculas e minúsculas) já foi adicionado a este <see cref="T:System.Resources.ResourceWriter" />.  
+  
+ -ou-  
+  
+ O fluxo não oferece suporte a <see cref="P:System.IO.Stream.Length" /> propriedade.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Isso <see cref="T:System.Resources.ResourceWriter" /> foi fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResource(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.AddResource(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="value">O valor do recurso.</param>
+        <summary>Adiciona um recurso nomeado especificado como um objeto para a lista de recursos a serem gravados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `value`deve ser serializável.  
+  
+ O recurso não será gravado até que o <xref:System.Resources.ResourceWriter.Generate%2A> método é chamado.  
+  
+ Você pode recuperar os recursos escritos pelo <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.Object%29> método chamando o <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.Object%29> método para adicionar dados de objeto para um arquivo de recursos binários.  
+  
+ [!code-csharp[System.Resources.ResourceWriter.AddResource#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcewriter.addresource/cs/addresource_obj1.cs#1)]  
+  
+ `DonorColumns`é uma classe personalizada cujos campos contêm os nomes de colunas a serem exibidas na interface do usuário. Observe que a classe é marcada com o <xref:System.SerializableAttribute> atributo. Em geral, a classe deve ser definida em um assembly separado, e uma referência a ele pode ser fornecida para o compilador em tempo de compilação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />(ou um nome que varia somente por maiusculas e minúsculas) já foi adicionado a este <see cref="T:System.Resources.ResourceWriter" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Este <see cref="T:System.Resources.ResourceWriter" /> foi fechado e sua tabela de hash não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResource(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.AddResource(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso.</param>
+        <param name="value">O valor do recurso.</param>
+        <summary>Adiciona um recurso de cadeia de caracteres à lista de recursos a ser gravado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O recurso não é gravado até <xref:System.Resources.ResourceWriter.Generate%2A> é chamado.  
+  
+ Você pode recuperar os recursos escritos pelo <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.String%29> método chamando o <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceWriter.AddResource%2A> método para adicionar recursos de cadeia de caracteres para um <xref:System.Resources.ResourceWriter> objeto.  
+  
+ [!code-cpp[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/CPP/resourcewritercstr1.cpp#1)]
+ [!code-csharp[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/CS/resourcewritercstr1.cs#1)]
+ [!code-vb[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/VB/resourcewritercstr1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> (ou um nome que varia apenas de acordo com o uso de maiúsculas) já foi adicionado a este ResourceWriter.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Este <see cref="T:System.Resources.ResourceWriter" /> foi fechado e sua tabela de hash não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResource">
+      <MemberSignature Language="C#" Value="public void AddResource (string name, System.IO.Stream value, bool closeAfterWrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResource(string name, class System.IO.Stream value, bool closeAfterWrite) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.AddResource(System.String,System.IO.Stream,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.IO.Stream" />
+        <Parameter Name="closeAfterWrite" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do recurso para adicionar.</param>
+        <param name="value">O valor do recurso para adicionar. O recurso deve oferecer suporte a <see cref="P:System.IO.Stream.Length" /> propriedade.</param>
+        <param name="closeAfterWrite">
+          <see langword="true" />para fechar o fluxo após o <see cref="M:System.Resources.ResourceWriter.Generate" /> método é chamado; caso contrário, <see langword="false" />.</param>
+        <summary>Adiciona um recurso nomeado especificado como um fluxo para a lista de recursos a serem gravados e especifica se o fluxo deve ser fechado após o <see cref="M:System.Resources.ResourceWriter.Generate" /> método é chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar qualquer fluxo com suporte para o <xref:System.IO.Stream.Length%2A?displayProperty=nameWithType> propriedade `value`.  
+  
+ Você pode recuperar os recursos escritos pelo <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.IO.Stream%2CSystem.Boolean%29> método chamando o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceWriter.AddResource%28System.String%2CSystem.IO.Stream%2CSystem.Boolean%29> método para adicionar uma imagem de gráfico que foi salvo em um <xref:System.IO.MemoryStream> o objeto para um <xref:System.Resources.ResourceWriter> objeto.  
+  
+ [!code-csharp[System.Resources.ResourceWriter.AddResource#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcewriter.addresource/cs/addresource_str2.cs#3)]
+ [!code-vb[System.Resources.ResourceWriter.AddResource#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcewriter.addresource/vb/addresource_str2.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" />(ou um nome que varia somente por maiusculas e minúsculas) já foi adicionado a este <see cref="T:System.Resources.ResourceWriter" />.  
+  
+ -ou-  
+  
+ O fluxo não oferece suporte a <see cref="P:System.IO.Stream.Length" /> propriedade.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ou <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">Isso <see cref="T:System.Resources.ResourceWriter" /> foi fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResourceData">
+      <MemberSignature Language="C#" Value="public void AddResourceData (string name, string typeName, byte[] serializedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddResourceData(string name, string typeName, unsigned int8[] serializedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.AddResourceData(System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="serializedData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um nome que identifica o recurso que contém os dados adicionados.</param>
+        <param name="typeName">O nome do tipo dos dados adicionados.</param>
+        <param name="serializedData">Uma matriz de bytes que contém a representação binária dos dados adicionados.</param>
+        <summary>Adiciona uma unidade de dados como um recurso à lista de recursos a serem gravados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Resources.ResourceWriter.AddResourceData%2A> método para adicionar um recurso no formato binário (ou seja, como uma matriz de bytes) para a lista de recursos a serem gravados. Você deve especificar o nome do recurso, o nome do tipo de dados contidos no recurso e a representação binária dos dados em si. Depois de adicionar cada recurso que você precisa, use o <xref:System.Resources.ResourceWriter.Generate%2A> método para gravar a lista de recursos para o arquivo de recursos ou de fluxo que foi especificado no <xref:System.Resources.ResourceWriter.%23ctor%2A> construtor.  
+  
+ `typeName`é uma cadeia de caracteres que representa o tipo de dados do recurso. Ele pode ser qualquer um dos seguintes valores:  
+  
+-   A representação de cadeia de caracteres de um `ResourceTypeCode` membro de enumeração que indica o tipo de dados do recurso. `ResourceTypeCode`é uma enumeração privada que é usada para indicar que um formato binário especial é usado para armazenar um dos tipos de dados comuns 19. Isso inclui os tipos de dados primitivos do .NET Framework (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.SByte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>), bem como <xref:System.String>, <xref:System.DateTime>, e <xref:System.TimeSpan>. Além disso, o `ResourceTypeCode` enumeração inclui os valores mostrados na tabela a seguir.  
+  
+    |Valor `ResourceTypeCode`|Descrição|  
+    |------------------------------|-----------------|  
+    |`ResourceTypeCode.ByteArray`|Os dados serão uma matriz de bytes.|  
+    |`ResourceTypeCode.Null`|Os dados são uma referência nula.|  
+    |`ResourceTypeCode.Stream`|Os dados são armazenados em um fluxo.|  
+  
+-   Uma cadeia de caracteres que contém o nome totalmente qualificado do tipo cujos dados binários são atribuídos para a `serializedData` argumento (por exemplo, `System.String`). Além disso, para tipos que não fazem parte da biblioteca de classes do .NET Framework, a cadeia de caracteres inclui o nome, versão, cultura e chave pública do assembly que contém o tipo. Por exemplo, a cadeia de caracteres a seguir indica que os dados serializados representam uma instância do `Person` digite o `Extensions` namespace, que é encontrada na versão 1.0 de um assembly chamado utilitário com nenhuma chave pública e nenhuma cultura designada.  
+  
+     `Extensions.Person, Utility, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`  
+  
+ Um método paralelo para ler dados de recursos escritos com o <xref:System.Resources.ResourceWriter.AddResourceData%2A> método é <xref:System.Resources.ResourceReader.GetResourceData%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceWriter.AddResourceData%2A> método grave inteiro de dois valores para um arquivo. Resources e, em seguida, usa um <xref:System.Resources.ResourceReader> objeto recuperá-las.  
+  
+ [!code-csharp[System.Resources.ResourceWriter.AddResourceData#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.resources.resourcewriter.addresourcedata/cs/addresourcedata.cs#1)]
+ [!code-vb[System.Resources.ResourceWriter.AddResourceData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.resources.resourcewriter.addresourcedata/vb/addresourcedata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" />, <paramref name="typeName" /> ou <paramref name="serializedData" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> (ou um nome que varia de acordo apenas com maiúsculas e minúsculas) já foi adicionado a este objeto <see cref="T:System.Resources.ResourceWriter" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O objeto <see cref="T:System.Resources.ResourceWriter" /> não foi inicializado. A causa provável é que o objeto <see cref="T:System.Resources.ResourceWriter" /> está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva os recursos para o fluxo de saída e, em seguida, fecha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Resources.ResourceWriter.Generate%2A>é chamado implicitamente por <xref:System.Resources.ResourceWriter.Close%2A>, se necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Resources.ResourceWriter.Close%2A> método gravar todos os recursos de objetos em um <xref:System.Resources.ResourceWriter> classe ao fluxo de saída. O código, em seguida, desliga o gravador.  
+  
+ [!code-cpp[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/CPP/resourcewritercstr1.cpp#1)]
+ [!code-csharp[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/CS/resourcewritercstr1.cs#1)]
+ [!code-vb[System.Resources.ResourceWriter Cstr1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceWriter Cstr1 Example/VB/resourcewritercstr1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Ocorreu um erro durante a serialização do objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que os usuários para fechar o arquivo de recurso ou o fluxo, explicitamente, liberando recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação deste método é o mesmo que <xref:System.Resources.ResourceWriter.Close%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Resources.ResourceWriter.Dispose%2A> método gravar todos os recursos de objetos em um <xref:System.Resources.ResourceWriter> classe ao fluxo de saída. O código, em seguida, desliga o gravador e disponibilizar os recursos do gravador para outros processos.  
+  
+ [!code-cpp[System.Resources.ResourceWriter.Dispose Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceWriter.Dispose Example/CPP/resourcewriterdispose.cpp#1)]
+ [!code-csharp[System.Resources.ResourceWriter.Dispose Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceWriter.Dispose Example/CS/resourcewriterdispose.cs#1)]
+ [!code-vb[System.Resources.ResourceWriter.Dispose Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceWriter.Dispose Example/VB/resourcewriterdispose.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Ocorreu um erro durante a serialização do objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Generate">
+      <MemberSignature Language="C#" Value="public void Generate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Generate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Resources.ResourceWriter.Generate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva todos os recursos para o fluxo de saída no formato padrão do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Resources.ResourceWriter.Generate%2A> método é chamado implicitamente, o <xref:System.Resources.ResourceWriter.Close%2A> método se ele não é chamado pelo código do aplicativo.  
+  
+ <xref:System.Resources.ResourceWriter.Generate%2A>só pode ser chamado uma vez, depois de todas as chamadas para <xref:System.Resources.ResourceWriter.AddResource%2A> e <xref:System.Resources.ResourceWriter.AddResourceData%2A> foram feitas. Se ocorrer uma exceção ao gravar os recursos, o fluxo de saída será fechado para evitar gravar informações inválidas.  
+  
+ <xref:System.Resources.ResourceWriter.Generate%2A>Não feche o fluxo de saída em casos normais. A menos que você combina dados extras com o arquivo. Resources ou precisa de acesso para o fluxo posteriormente, você deve chamar <xref:System.Resources.ResourceWriter.Close%2A> depois de chamar <xref:System.Resources.ResourceWriter.Generate%2A>, ou simplesmente chamar <xref:System.Resources.ResourceWriter.Close%2A>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Resources.ResourceWriter.Generate%2A> método gravar todos os recursos de objetos em um <xref:System.Resources.ResourceWriter> classe ao fluxo de saída  
+  
+ [!code-cpp[System.Resources.ResourceWriter.Generate Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Resources.ResourceWriter.Generate Example/CPP/resourcewritergenerate.cpp#1)]
+ [!code-csharp[System.Resources.ResourceWriter.Generate Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Resources.ResourceWriter.Generate Example/CS/resourcewritergenerate.cs#1)]
+ [!code-vb[System.Resources.ResourceWriter.Generate Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Resources.ResourceWriter.Generate Example/VB/resourcewritergenerate.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Ocorreu um erro durante a serialização do objeto.</exception>
+        <exception cref="T:System.InvalidOperationException">Este <see cref="T:System.Resources.ResourceWriter" /> foi fechado e sua tabela de hash não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeNameConverter">
+      <MemberSignature Language="C#" Value="public Func&lt;Type,string&gt; TypeNameConverter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Type, string&gt; TypeNameConverter" />
+      <MemberSignature Language="DocId" Value="P:System.Resources.ResourceWriter.TypeNameConverter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Resources.Writer</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Type,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um delegado que permite que os módulos de recursos a serem gravados que versões do .NET Framework antes de destino a [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] usando nomes de assembly qualificado.</summary>
+        <value>O tipo que é encapsulado por representante.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[vs_dev10_long](~/includes/vs-dev10-long-md.md)]e MSBuild definir essa propriedade se você direcionar uma versão anterior do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,224 @@
+<Type Name="MD5CryptoServiceProvider" FullName="System.Security.Cryptography.MD5CryptoServiceProvider">
+  <TypeSignature Language="C#" Value="public sealed class MD5CryptoServiceProvider : System.Security.Cryptography.MD5" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MD5CryptoServiceProvider extends System.Security.Cryptography.MD5" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.MD5CryptoServiceProvider" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.MD5</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Calcula o <see cref="T:System.Security.Cryptography.MD5" /> valor de hash para os dados de entrada com a implementação fornecida pelo provedor de serviços de criptografia (CSP). Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Hash funções mapa binárias cadeias de caracteres de um comprimento arbitrário que cadeias pequenas de binários de comprimento fixo. Uma função de hash criptográfico tem a propriedade que é impraticável para encontrar duas entradas distintas que usam o hash para o mesmo valor. Isto é, hashes de dois conjuntos de dados devem corresponder se também correspondam os dados correspondentes. Pequenas alterações aos dados resultar em grandes, imprevisíveis alterações no hash.  
+  
+> [!NOTE]
+>  Funções de hash mais recentes, como o Hash seguro \ algoritmos SHA-256 e SHA-512 estão disponíveis. Considere o uso de <xref:System.Security.Cryptography.SHA256> classe ou o <xref:System.Security.Cryptography.SHA512> classe o <xref:System.Security.Cryptography.MD5CryptoServiceProvider> classe. Use <xref:System.Security.Cryptography.MD5CryptoServiceProvider> somente para compatibilidade com aplicativos herdados e dados.  
+  
+ Tamanho de hash para o <xref:System.Security.Cryptography.MD5CryptoServiceProvider> classe é de 128 bits.  
+  
+ O <xref:System.Security.Cryptography.HashAlgorithm.ComputeHash%2A> métodos de <xref:System.Security.Cryptography.MD5CryptoServiceProvider> classe retornar o hash como uma matriz de 16 bytes.  Observe que algumas implementações de MD5 produzem um hash de 32 caracteres, em formato hexadecimal.  Para interoperar com tais implementações, formatar o valor de retorno de <xref:System.Security.Cryptography.HashAlgorithm.ComputeHash%2A> métodos como um valor hexadecimal.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo calcula o <xref:System.Security.Cryptography.MD5> para o valor de hash `data` e o retorna.  
+  
+ [!code-cpp[Classic MD5CryptoServiceProvider Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MD5CryptoServiceProvider Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MD5CryptoServiceProvider Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MD5CryptoServiceProvider Example/CS/source.cs#1)]
+ [!code-vb[Classic MD5CryptoServiceProvider Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MD5CryptoServiceProvider Example/VB/source.vb#1)]  
+  
+ O código a seguir exemplo calcula o <xref:System.Security.Cryptography.MD5> o valor de uma cadeia de caracteres de hash e retorna o hash como uma cadeia de caracteres de 32 caracteres, em formato hexadecimal.  A cadeia de caracteres de hash criada por esse exemplo de código é compatível com qualquer função de hash MD5 (em qualquer plataforma) que cria uma cadeia de caracteres de hash de 32 caracteres, em formato hexadecimal.  
+  
+ [!code-csharp[Security.Cryptography.MD5CryptoServiceProvider#1](~/samples/snippets/csharp/VS_Snippets_CLR/Security.Cryptography.MD5CryptoServiceProvider/cs/example.cs#1)]
+ [!code-vb[Security.Cryptography.MD5CryptoServiceProvider#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Security.Cryptography.MD5CryptoServiceProvider/vb/example.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MD5CryptoServiceProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5CryptoServiceProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Uma política de algoritmo em conformidade com FIPS não está sendo usada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5CryptoServiceProvider.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~MD5CryptoServiceProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5CryptoServiceProvider.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashCore">
+      <MemberSignature Language="C#" Value="protected override void HashCore (byte[] rgb, int ibStart, int cbSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HashCore(unsigned int8[] rgb, int32 ibStart, int32 cbSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5CryptoServiceProvider.HashCore(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rgb" Type="System.Byte[]" />
+        <Parameter Name="ibStart" Type="System.Int32" />
+        <Parameter Name="cbSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rgb">To be added.</param>
+        <param name="ibStart">To be added.</param>
+        <param name="cbSize">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashFinal">
+      <MemberSignature Language="C#" Value="protected override byte[] HashFinal ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance unsigned int8[] HashFinal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5CryptoServiceProvider.HashFinal" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.MD5CryptoServiceProvider.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Csp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância de <see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

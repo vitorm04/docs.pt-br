@@ -1,0 +1,62 @@
+<Type Name="IRegisteredObject" FullName="System.Web.Hosting.IRegisteredObject">
+  <TypeSignature Language="C#" Value="public interface IRegisteredObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRegisteredObject" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IRegisteredObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos para objetos gerenciados pelo ambiente de hospedagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos devem implementar a <xref:System.Web.Hosting.IRegisteredObject> interface para registrar com o ambiente de hospedagem e ter seu tempo de vida gerenciado pelo ambiente de hospedagem.  
+  
+ Você pode criar uma instância de um objeto registrado chamando o <xref:System.Web.Hosting.ApplicationManager.CreateObject%2A?displayProperty=nameWithType> método no Gerenciador de aplicativo. O Gerenciador de aplicativo retorna o objeto recém-criado para o chamador, que pode, em seguida, chamar um método de tipo específico no objeto. Durante a inicialização, o objeto registrado deve chamar o <xref:System.Web.Hosting.HostingEnvironment.RegisterObject%2A?displayProperty=nameWithType> método para concluir o registro do objeto.  
+  
+ Quando o Gerenciador de aplicativos precisa parar um objeto registrado, ele chamará o <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> método.  
+  
+ Aplicativos podem ter apenas uma instância de um tipo registrado. Para criar várias instâncias de um tipo registrado, use o padrão de fábrica para criar um objeto Gerenciador que está registrado com o aplicativo e, em seguida, gerencia as várias instâncias. Para obter um exemplo de um objeto implementando o padrão de fábrica, consulte o exemplo para o <xref:System.Web.Hosting.ApplicationManager> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop (bool immediate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stop(bool immediate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IRegisteredObject.Stop(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="immediate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="immediate">
+          <see langword="true" />para indicar o objeto registrado deve cancelar o registro do ambiente de hospedagem antes de retornar; Caso contrário, <see langword="false" />.</param>
+        <summary>Solicita um objeto registrado para cancelar o registro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Gerenciador de aplicativo chamará o <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> método para solicitar que um objeto registrado para cancelar o registro. Durante o processamento das <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> método, o objeto registrado deve chamar o <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A?displayProperty=nameWithType> método.  
+  
+ O <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> método é chamado pela primeira vez com o `immediate` parâmetro definido como `false`. O objeto pode ou concluir o processamento, chame o <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A> método e, em seguida, retorno ou retornar imediatamente e concluir o processamento de forma assíncrona antes de chamar o <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A> método.  
+  
+ Se o objeto registrado não concluiu o processamento antes de expira o período de tempo limite do Gerenciador de aplicativos, o <xref:System.Web.Hosting.IRegisteredObject.Stop%2A> método é chamado novamente com o `immediate` parâmetro definido como `true`. Quando o `immediate` parâmetro é `true`, objeto registrado deve chamar o <xref:System.Web.Hosting.HostingEnvironment.UnregisterObject%2A> método antes de retornar; caso contrário, seu registro será removido pelo Gerenciador de aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

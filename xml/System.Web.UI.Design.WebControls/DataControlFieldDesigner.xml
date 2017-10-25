@@ -1,0 +1,313 @@
+<Type Name="DataControlFieldDesigner" FullName="System.Web.UI.Design.WebControls.DataControlFieldDesigner">
+  <TypeSignature Language="C#" Value="public abstract class DataControlFieldDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataControlFieldDesigner extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.DataControlFieldDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para adicionar e editar campos de dados em um controle associado a dados, como <see cref="T:System.Web.UI.WebControls.GridView" /> ou <see cref="T:System.Web.UI.WebControls.DetailsView" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataControlFieldDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.DataControlFieldDesigner" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.WebControls.DataControlField CreateField ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.DataControlField CreateField() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateField" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, cria um objeto de campos vazios.</summary>
+        <returns>Um objeto de campos vazios.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateField">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.WebControls.DataControlField CreateField (System.Web.UI.Design.IDataSourceFieldSchema fieldSchema);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.DataControlField CreateField(class System.Web.UI.Design.IDataSourceFieldSchema fieldSchema) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateField(System.Web.UI.Design.IDataSourceFieldSchema)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fieldSchema" Type="System.Web.UI.Design.IDataSourceFieldSchema" />
+      </Parameters>
+      <Docs>
+        <param name="fieldSchema">Informações de esquema que contém a estrutura de um campo de dados.</param>
+        <summary>Quando substituído em uma classe derivada, cria um novo objeto de campo usando as informações de campo de dados especificado.</summary>
+        <returns>Um novo objeto de campo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTemplateField">
+      <MemberSignature Language="C#" Value="public abstract System.Web.UI.WebControls.TemplateField CreateTemplateField (System.Web.UI.WebControls.DataControlField dataControlField, System.Web.UI.WebControls.DataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.TemplateField CreateTemplateField(class System.Web.UI.WebControls.DataControlField dataControlField, class System.Web.UI.WebControls.DataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateTemplateField(System.Web.UI.WebControls.DataControlField,System.Web.UI.WebControls.DataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TemplateField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataControlField" Type="System.Web.UI.WebControls.DataControlField" />
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.DataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataControlField">O campo de dados.</param>
+        <param name="dataBoundControl">O controle de associação de dados que contém o campo de dados.</param>
+        <summary>Quando substituído em uma classe derivada, cria um <see cref="T:System.Web.UI.WebControls.TemplateField" /> campo para o campo de dados especificado.</summary>
+        <returns>O novo campo de modelo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateTemplateField%2A> método é invocado quando você clica no link para converter um campo de dados em um <xref:System.Web.UI.WebControls.TemplateField> no editor de campos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultNodeText">
+      <MemberSignature Language="C#" Value="public abstract string DefaultNodeText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultNodeText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataControlFieldDesigner.DefaultNodeText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o texto padrão que é exibido para o campo de dados no editor de campos.</summary>
+        <value>O texto padrão que é exibido para o campo de dados no editor de campos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNewDataSourceName">
+      <MemberSignature Language="C#" Value="protected string GetNewDataSourceName (Type controlType, System.Web.UI.WebControls.DataBoundControlMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetNewDataSourceName(class System.Type controlType, valuetype System.Web.UI.WebControls.DataBoundControlMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetNewDataSourceName(System.Type,System.Web.UI.WebControls.DataBoundControlMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlType" Type="System.Type" />
+        <Parameter Name="mode" Type="System.Web.UI.WebControls.DataBoundControlMode" />
+      </Parameters>
+      <Docs>
+        <param name="controlType">O tipo de controle que será criado.</param>
+        <param name="mode">O modo de entrada de dados para o controle.</param>
+        <summary>Obtém uma ID exclusiva para um controle que é criado quando um campo de dados é convertido em um <see cref="T:System.Web.UI.WebControls.TemplateField" />.</summary>
+        <returns>Uma ID exclusiva para o controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetNewDataSourceName%2A> é um método auxiliar que pode ser usado pelo <xref:System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateTemplateField%2A> método para gerar identificações exclusivas para os controles que são criados quando você clicar no link para converter um campo de dados em um <xref:System.Web.UI.WebControls.TemplateField> no editor de campos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNodeText">
+      <MemberSignature Language="C#" Value="public abstract string GetNodeText (System.Web.UI.WebControls.DataControlField dataControlField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetNodeText(class System.Web.UI.WebControls.DataControlField dataControlField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetNodeText(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataControlField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="dataControlField">O campo de dados.</param>
+        <summary>Quando substituído em uma classe derivada, obtém o nome que é exibido para o campo de dados no editor de campos.</summary>
+        <returns>O nome que é exibido para o campo de dados no editor de campos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="protected object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de objeto de serviço a ser obtido.</param>
+        <summary>Obtém o objeto de serviço do tipo especificado.</summary>
+        <returns>O objeto de serviço do tipo especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplate">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.ITemplate GetTemplate (System.Web.UI.WebControls.DataBoundControl control, string templateContent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.ITemplate GetTemplate(class System.Web.UI.WebControls.DataBoundControl control, string templateContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetTemplate(System.Web.UI.WebControls.DataBoundControl,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ITemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.WebControls.DataBoundControl" />
+        <Parameter Name="templateContent" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">O controle de associação de dados.</param>
+        <param name="templateContent">A marcação de modelo.</param>
+        <summary>Obtém o <see cref="T:System.Web.UI.ITemplate" /> objeto que contém a marcação de modelo para o controle de associação de dados especificado.</summary>
+        <returns>Um objeto que contém a marcação de modelo para o controle de associação de dados especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemplateField">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.TemplateField GetTemplateField (System.Web.UI.WebControls.DataControlField dataControlField, System.Web.UI.WebControls.DataBoundControl dataBoundControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Web.UI.WebControls.TemplateField GetTemplateField(class System.Web.UI.WebControls.DataControlField dataControlField, class System.Web.UI.WebControls.DataBoundControl dataBoundControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetTemplateField(System.Web.UI.WebControls.DataControlField,System.Web.UI.WebControls.DataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TemplateField</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataControlField" Type="System.Web.UI.WebControls.DataControlField" />
+        <Parameter Name="dataBoundControl" Type="System.Web.UI.WebControls.DataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="dataControlField">O campo de dados.</param>
+        <param name="dataBoundControl">O controle de associação de dados que contém o campo de dados.</param>
+        <summary>Obtém um <see cref="T:System.Web.UI.WebControls.TemplateField" /> objeto para o campo de dados especificado.</summary>
+        <returns>O novo campo de modelo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.DataControlFieldDesigner.GetTemplateField%2A> é um método auxiliar que pode ser usado pelo <xref:System.Web.UI.Design.WebControls.DataControlFieldDesigner.CreateTemplateField%2A> método para criar um novo <xref:System.Web.UI.WebControls.TemplateField> de objeto e inicializar suas propriedades usando as propriedades de campo de dados especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public abstract bool IsEnabled (System.Web.UI.WebControls.DataBoundControl parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsEnabled(class System.Web.UI.WebControls.DataBoundControl parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.DataControlFieldDesigner.IsEnabled(System.Web.UI.WebControls.DataBoundControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.UI.WebControls.DataBoundControl" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O controle de associação de dados que contém o campo de dados.</param>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o campo de dados está habilitado no editor de campos.</summary>
+        <returns>Um valor que indica se o campo de dados está habilitado no editor de campos.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceProvider">
+      <MemberSignature Language="C#" Value="protected IServiceProvider ServiceProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IServiceProvider ServiceProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataControlFieldDesigner.ServiceProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IServiceProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a implementação de provedor de serviço que é usada pelo editor de campos.</summary>
+        <value>A serviço implementação de provedor, normalmente é fornecida pelo host do design, que pode ser usado para obter os serviços de tempo de design adicionais.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesSchema">
+      <MemberSignature Language="C#" Value="public abstract bool UsesSchema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesSchema" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.DataControlFieldDesigner.UsesSchema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se as informações de esquema são usadas para carregar os campos de dados.</summary>
+        <value>
+          <see langword="true" />Se as informações de esquema são usadas para carregar os campos de dados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,366 @@
+<Type Name="EventLogPermissionEntryCollection" FullName="System.Diagnostics.EventLogPermissionEntryCollection">
+  <TypeSignature Language="C#" Value="public class EventLogPermissionEntryCollection : System.Collections.CollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit EventLogPermissionEntryCollection extends System.Collections.CollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventLogPermissionEntryCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.CollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção fortemente tipada de <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> objetos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (System.Diagnostics.EventLogPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class System.Diagnostics.EventLogPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.Add(System.Diagnostics.EventLogPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.EventLogPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> a ser adicionado.</param>
+        <summary>Adiciona um <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> a esta coleção.</summary>
+        <returns>O índice com base em zero do adicionado <see cref="T:System.Diagnostics.EventLogPermissionEntry" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Diagnostics.EventLogPermissionEntry[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Diagnostics.EventLogPermissionEntry[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.AddRange(System.Diagnostics.EventLogPermissionEntry[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.EventLogPermissionEntry[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz do tipo <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> objetos que contém as entradas de permissão para adicionar.</param>
+        <summary>Anexa um conjunto de entradas de permissões especificado a esta coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (System.Diagnostics.EventLogPermissionEntryCollection value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(class System.Diagnostics.EventLogPermissionEntryCollection value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.AddRange(System.Diagnostics.EventLogPermissionEntryCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.EventLogPermissionEntryCollection" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Diagnostics.EventLogPermissionEntryCollection" /> que contém as entradas de permissão para adicionar.</param>
+        <summary>Anexa um conjunto de entradas de permissões especificado a esta coleção.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Diagnostics.EventLogPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Diagnostics.EventLogPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.Contains(System.Diagnostics.EventLogPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.EventLogPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> para localizar.</param>
+        <summary>Determina se esta coleção contém um <see cref="T:System.Diagnostics.EventLogPermissionEntry" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> pertence a esta coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Diagnostics.EventLogPermissionEntry[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Diagnostics.EventLogPermissionEntry[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.CopyTo(System.Diagnostics.EventLogPermissionEntry[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Diagnostics.EventLogPermissionEntry[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz do tipo <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> que recebe as entradas de permissão da coleta.</param>
+        <param name="index">O índice de base zero no qual começar a copiar as entradas de permissão.</param>
+        <summary>Copia as entradas de permissão dessa coleção em uma matriz, começando em um índice específico da matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Diagnostics.EventLogPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Diagnostics.EventLogPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.IndexOf(System.Diagnostics.EventLogPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.EventLogPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">A entrada de permissão para pesquisar.</param>
+        <summary>Determina o índice de uma entrada de permissão especificada na coleção.</summary>
+        <returns>O índice baseado em zero da entrada de permissão especificado, ou -1 se a entrada de permissão não foi encontrada na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Diagnostics.EventLogPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class System.Diagnostics.EventLogPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.Insert(System.Int32,System.Diagnostics.EventLogPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Diagnostics.EventLogPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero da coleção na qual inserir a entrada de permissão.</param>
+        <param name="value">A entrada de permissão para inserir a esta coleção.</param>
+        <summary>Insere uma entrada de permissão na coleção em um índice especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.EventLogPermissionEntry this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.EventLogPermissionEntry Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventLogPermissionEntryCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.EventLogPermissionEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero na coleção.</param>
+        <summary>Obtém ou define o objeto em um índice especificado.</summary>
+        <value>O <see cref="T:System.Diagnostics.EventLogPermissionEntry" /> que existe no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClear">
+      <MemberSignature Language="C#" Value="protected override void OnClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.OnClear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa processos personalizados adicionais depois de limpar o conteúdo da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInsert">
+      <MemberSignature Language="C#" Value="protected override void OnInsert (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnInsert(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.OnInsert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir <c>valor</c>.</param>
+        <param name="value">O novo valor da entrada de permissão na <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais antes de uma nova entrada de permissão é inserida na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRemove">
+      <MemberSignature Language="C#" Value="protected override void OnRemove (int index, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnRemove(int32 index, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.OnRemove(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>valor</c> pode ser encontrado.</param>
+        <param name="value">A entrada de permissão para remover do <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais durante a remoção de uma nova entrada de permissão da coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSet">
+      <MemberSignature Language="C#" Value="protected override void OnSet (int index, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSet(int32 index, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.OnSet(System.Int32,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual <c>oldValue</c> pode ser encontrado.</param>
+        <param name="oldValue">O valor para substituir <c>newValue</c>.</param>
+        <param name="newValue">O novo valor da entrada de permissão na <c>índice</c>.</param>
+        <summary>Executa processos personalizados adicionais antes de definir um valor na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Diagnostics.EventLogPermissionEntry value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Diagnostics.EventLogPermissionEntry value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventLogPermissionEntryCollection.Remove(System.Diagnostics.EventLogPermissionEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Diagnostics.EventLogPermissionEntry" />
+      </Parameters>
+      <Docs>
+        <param name="value">A entrada de permissão para remover.</param>
+        <summary>Remove uma entrada de permissão especificado desta coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

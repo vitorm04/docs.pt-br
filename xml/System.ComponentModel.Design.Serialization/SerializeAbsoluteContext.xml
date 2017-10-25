@@ -1,0 +1,114 @@
+<Type Name="SerializeAbsoluteContext" FullName="System.ComponentModel.Design.Serialization.SerializeAbsoluteContext">
+  <TypeSignature Language="C#" Value="public sealed class SerializeAbsoluteContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializeAbsoluteContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica que os serializadores devem lidar com valores padrão. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.ComponentSerializationService> oferece suporte à serialização absoluta. Isso significa que, em vez de serializar apenas os valores que são diferentes dos valores padrão de um objeto, todos os valores são serializados, permitindo que os valores devem ser redefinidos para seus valores padrão para objetos que podem já ter sido inicializados. Quando deseja indicar esse comportamento para um serviço de serialização do componente <xref:System.ComponentModel.Design.Serialization.CodeDomSerializer> objetos, ele colocará um <xref:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext> objeto na pilha de contexto. O membro neste contexto pode ser `null`, para indicar que todos os membros são serializados, ou pode indicar que somente um membro específico está sendo serializado no momento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializeAbsoluteContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando o construtor padrão indica que este contexto deve ser usado para todos os membros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializeAbsoluteContext (System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.#ctor(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="member">O membro ao qual este contexto está associado. Pode ser <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext" /> classe com a opção de associação a um membro específico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `member` é `null`, neste contexto será usado para todos os membros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.MemberDescriptor Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.MemberDescriptor Member" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MemberDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o membro ao qual este contexto está associado.</summary>
+        <value>O membro ao qual está associado a este contexto, ou <see langword="null" /> se o contexto está associado a todos os membros de um objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerialize">
+      <MemberSignature Language="C#" Value="public bool ShouldSerialize (System.ComponentModel.MemberDescriptor member);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerialize(class System.ComponentModel.MemberDescriptor member) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.SerializeAbsoluteContext.ShouldSerialize(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="member">O membro a ser examinado para serialização.</param>
+        <summary>Obtém um valor que indica se o membro fornecido deve ser serializado neste contexto.</summary>
+        <returns>
+          <see langword="true" />Se o membro fornecido deve ser serializado neste contexto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

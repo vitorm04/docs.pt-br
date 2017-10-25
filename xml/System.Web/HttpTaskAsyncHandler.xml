@@ -1,0 +1,181 @@
+<Type Name="HttpTaskAsyncHandler" FullName="System.Web.HttpTaskAsyncHandler">
+  <TypeSignature Language="C#" Value="public abstract class HttpTaskAsyncHandler : System.Web.IHttpAsyncHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HttpTaskAsyncHandler extends System.Object implements class System.Web.IHttpAsyncHandler, class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.HttpTaskAsyncHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpAsyncHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece métodos que uma classe de manipulador de tarefa derivada pode implementar para processar uma tarefa assíncrona.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpTaskAsyncHandler> classe fornece uma maneira simplificada para lidar com tarefas assíncronas, sem a necessidade de implementar o <xref:System.Web.IHttpAsyncHandler.BeginProcessRequest%2A> e <xref:System.Web.IHttpAsyncHandler.EndProcessRequest%2A> métodos.  Para criar um manipulador para uma tarefa assíncrona, você pode substituir o <xref:System.Web.HttpTaskAsyncHandler.ProcessRequestAsync%2A> tarefa personalizada de método e implementar o código de manipulação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HttpTaskAsyncHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpTaskAsyncHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Chamado de construtores em classes derivadas para inicializar a classe <see cref="T:System.Web.HttpTaskAsyncHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReusable">
+      <MemberSignature Language="C#" Value="public virtual bool IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.HttpTaskAsyncHandler.IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se a instância de classe do manipulador de tarefa pode ser reutilizada para outra tarefa assíncrona.</summary>
+        <value>
+          <see langword="true" />Se o manipulador pode ser reutilizado; Caso contrário, <see langword="false" />.  O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="public virtual void ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpTaskAsyncHandler.ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto HTTP.</param>
+        <summary>Quando substituído em uma classe derivada, fornece o código que manipula uma tarefa síncrona.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">O método é implementado, mas não fornece nenhum tratamento padrão para tarefas síncronas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequestAsync">
+      <MemberSignature Language="C#" Value="public abstract System.Threading.Tasks.Task ProcessRequestAsync (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task ProcessRequestAsync(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpTaskAsyncHandler.ProcessRequestAsync(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto HTTP.</param>
+        <summary>Quando substituído em uma classe derivada, fornece o código que manipula uma tarefa assíncrona.</summary>
+        <returns>A tarefa assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um manipulador personalizado para uma tarefa assíncrona, substituir o <xref:System.Web.HttpTaskAsyncHandler.ProcessRequestAsync%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpAsyncHandler.BeginProcessRequest">
+      <MemberSignature Language="C#" Value="IAsyncResult IHttpAsyncHandler.BeginProcessRequest (System.Web.HttpContext context, AsyncCallback cb, object extraData);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.IAsyncResult System.Web.IHttpAsyncHandler.BeginProcessRequest(class System.Web.HttpContext context, class System.AsyncCallback cb, object extraData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpTaskAsyncHandler.System#Web#IHttpAsyncHandler#BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="cb" Type="System.AsyncCallback" />
+        <Parameter Name="extraData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto HTTP.</param>
+        <param name="cb">O método de retorno de chamada a ser invocada quando o método retorna.</param>
+        <param name="extraData">Dados adicionais para a tarefa de processamento.</param>
+        <summary>Manipulador de tarefa inicia assíncrona de processamento de uma tarefa em um HTTP.</summary>
+        <returns>Um objeto que contém dados de status sobre a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.HttpTaskAsyncHandler> é convertida em uma interface de <xref:System.Web.IHttpAsyncHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpAsyncHandler.EndProcessRequest">
+      <MemberSignature Language="C#" Value="void IHttpAsyncHandler.EndProcessRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpAsyncHandler.EndProcessRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.HttpTaskAsyncHandler.System#Web#IHttpAsyncHandler#EndProcessRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O status da operação assíncrona.</param>
+        <summary>Manipulador de tarefas de extremidades assíncronas de processamento de uma tarefa em um HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.HttpTaskAsyncHandler> é convertida em uma interface de <xref:System.Web.IHttpAsyncHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

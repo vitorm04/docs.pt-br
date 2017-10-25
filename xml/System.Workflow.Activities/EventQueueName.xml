@@ -1,0 +1,379 @@
+<Type Name="EventQueueName" FullName="System.Workflow.Activities.EventQueueName">
+  <TypeSignature Language="C#" Value="public sealed class EventQueueName : IComparable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit EventQueueName extends System.Object implements class System.IComparable" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.EventQueueName" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IComparable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o nome de uma fila associada a um evento em um <see cref="T:System.Workflow.Runtime.WorkflowInstance" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Essa classe pode ser associada com um <xref:System.Workflow.Runtime.WorkflowQueue> ou quaisquer outras filas usadas pelo Workflow Foundation (WF).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQueueName (Type interfaceType, string operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type interfaceType, string operation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interfaceType" Type="System.Type" />
+        <Parameter Name="operation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceType">O <see cref="T:System.Type" /> da interface para associar o <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
+        <param name="operation">Uma cadeia de caracteres que contém o nome da operação para associar o <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.EventQueueName" /> classe usando especificado <see cref="T:System.Type" /> e o nome da operação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventQueueName (Type interfaceType, string operation, System.Collections.Generic.ICollection&lt;System.Workflow.Runtime.CorrelationProperty&gt; propertyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type interfaceType, string operation, class System.Collections.Generic.ICollection`1&lt;class System.Workflow.Runtime.CorrelationProperty&gt; propertyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.#ctor(System.Type,System.String,System.Collections.Generic.ICollection{System.Workflow.Runtime.CorrelationProperty})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interfaceType" Type="System.Type" />
+        <Parameter Name="operation" Type="System.String" />
+        <Parameter Name="propertyValues" Type="System.Collections.Generic.ICollection&lt;System.Workflow.Runtime.CorrelationProperty&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceType">O <see cref="T:System.Type" /> da interface</param>
+        <param name="operation">Uma cadeia de caracteres que contém o nome da operação para associar o <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
+        <param name="propertyValues">Um <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> que define os valores de propriedade para associar a coleção <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (object toCompare);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 CompareTo(object toCompare) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.CompareTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toCompare" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="toCompare">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
+        <summary>Compara atual <see cref="T:System.Workflow.Activities.EventQueueName" /> especificado <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <returns>Um inteiro assinado de 32 bits que indica se o comprarands corresponder. -1 indica que o atual <see cref="T:System.Workflow.Activities.EventQueueName" /> e o objeto especificado não coincidem; 0 indica que o <see cref="T:System.Workflow.Activities.EventQueueName" /> e a correspondência de objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `toCompare` não é do tipo <xref:System.Workflow.Activities.EventQueueName>, <xref:System.Workflow.Activities.EventQueueName.CompareTo%2A> retornará -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareTo">
+      <MemberSignature Language="C#" Value="public int CompareTo (System.Workflow.Activities.EventQueueName eventQueueName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 CompareTo(class System.Workflow.Activities.EventQueueName eventQueueName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.CompareTo(System.Workflow.Activities.EventQueueName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventQueueName" Type="System.Workflow.Activities.EventQueueName" />
+      </Parameters>
+      <Docs>
+        <param name="eventQueueName">O <see cref="T:System.Workflow.Activities.EventQueueName" /> para comparar com a atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
+        <summary>Compara atual <see cref="T:System.Workflow.Activities.EventQueueName" /> especificado <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <returns>Um inteiro assinado de 32 bits que indica se o comprarands corresponder. -1 indica que os dois <see cref="T:System.Workflow.Activities.EventQueueName" /> objetos não coincidem; 0 indica que os dois <see cref="T:System.Workflow.Activities.EventQueueName" /> objetos correspondem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> para comparar com a atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</param>
+        <summary>Determina se o objeto especificado é igual ao atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado o <see cref="T:System.Object" /> é igual à atual <see cref="T:System.Workflow.Activities.EventQueueName" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCorrelationValues">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.CorrelationProperty[] GetCorrelationValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Runtime.CorrelationProperty[] GetCorrelationValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.GetCorrelationValues" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.CorrelationProperty[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> matriz que contém todas as propriedades de correlação associada a <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <returns>O <see cref="T:System.Workflow.Runtime.CorrelationProperty" /> matriz que contém todas as propriedades de correlação associada a <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um código hash para a atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <returns>Um inteiro que representa o código de hash gerado atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.EventQueueName.GetHashCode%2A>Retorna um valor de hash com base no tipo de interface e a operação usada para criar atual <xref:System.Workflow.Activities.EventQueueName>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceType">
+      <MemberSignature Language="C#" Value="public Type InterfaceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type InterfaceType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.EventQueueName.InterfaceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Type" /> associado ao <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <value>O <see cref="T:System.Type" /> associado ao <see cref="T:System.Workflow.Activities.EventQueueName" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public string MethodName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.EventQueueName.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do método associado com o <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <value>Uma cadeia de caracteres que contém o nome do método associado com o <see cref="T:System.Workflow.Activities.EventQueueName" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Workflow.Activities.EventQueueName queueKey1, System.Workflow.Activities.EventQueueName queueKey2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Workflow.Activities.EventQueueName queueKey1, class System.Workflow.Activities.EventQueueName queueKey2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.op_Equality(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueKey1" Type="System.Workflow.Activities.EventQueueName" />
+        <Parameter Name="queueKey2" Type="System.Workflow.Activities.EventQueueName" />
+      </Parameters>
+      <Docs>
+        <param name="queueKey1">O primeiro <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <param name="queueKey2">O segundo <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <summary>Retorna um valor que indica se os dois especificado <see cref="T:System.Workflow.Activities.EventQueueName" /> objetos forem iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="queueKey1" /> e <paramref name="queueKey2" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `queueKey1` e `queueKey2` contêm uma referência nula (`Nothing` no Visual Basic), <xref:System.Workflow.Activities.EventQueueName.op_Equality%2A> retorna `true`.  
+  
+ O método equivalente para esse operador é<xref:System.Workflow.Activities.EventQueueName.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_GreaterThan">
+      <MemberSignature Language="C#" Value="public static bool operator &gt; (System.Workflow.Activities.EventQueueName queueKey1, System.Workflow.Activities.EventQueueName queueKey2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_GreaterThan(class System.Workflow.Activities.EventQueueName queueKey1, class System.Workflow.Activities.EventQueueName queueKey2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.op_GreaterThan(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueKey1" Type="System.Workflow.Activities.EventQueueName" />
+        <Parameter Name="queueKey2" Type="System.Workflow.Activities.EventQueueName" />
+      </Parameters>
+      <Docs>
+        <param name="queueKey1">O primeiro <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <param name="queueKey2">O segundo <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <summary>Retorna um valor que indica se o primeiro dos dois especificado <see cref="T:System.Workflow.Activities.EventQueueName" /> objetos for maior que o segundo.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="queueKey1" /> seja maior que <paramref name="queueKey2" />; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Workflow.Activities.EventQueueName.CompareTo%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="queueKey1" />ou <paramref name="queueKey2" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Workflow.Activities.EventQueueName queueKey1, System.Workflow.Activities.EventQueueName queueKey2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Workflow.Activities.EventQueueName queueKey1, class System.Workflow.Activities.EventQueueName queueKey2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.op_Inequality(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueKey1" Type="System.Workflow.Activities.EventQueueName" />
+        <Parameter Name="queueKey2" Type="System.Workflow.Activities.EventQueueName" />
+      </Parameters>
+      <Docs>
+        <param name="queueKey1">O primeiro <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <param name="queueKey2">O segundo <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <summary>Retorna um valor que indica se os dois especificado <see cref="T:System.Workflow.Activities.EventQueueName" /> objetos não são igual.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="queueKey1" /> e <paramref name="queueKey2" /> não sejam iguais; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Workflow.Activities.EventQueueName.CompareTo%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_LessThan">
+      <MemberSignature Language="C#" Value="public static bool operator &lt; (System.Workflow.Activities.EventQueueName queueKey1, System.Workflow.Activities.EventQueueName queueKey2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_LessThan(class System.Workflow.Activities.EventQueueName queueKey1, class System.Workflow.Activities.EventQueueName queueKey2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.op_LessThan(System.Workflow.Activities.EventQueueName,System.Workflow.Activities.EventQueueName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueKey1" Type="System.Workflow.Activities.EventQueueName" />
+        <Parameter Name="queueKey2" Type="System.Workflow.Activities.EventQueueName" />
+      </Parameters>
+      <Docs>
+        <param name="queueKey1">O primeiro <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <param name="queueKey2">O segundo <see cref="T:System.Workflow.Activities.EventQueueName" /> a ser comparado.</param>
+        <summary>Retorna um valor que indica se o primeiro dos dois especificado <see cref="T:System.Workflow.Activities.EventQueueName" /> objetos é menor que o segundo.</summary>
+        <returns>
+          <see langword="true" /> caso <paramref name="queueKey1" /> seja maior que <paramref name="queueKey2" />; do contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Workflow.Activities.EventQueueName.CompareTo%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="queueKey1" />ou <paramref name="queueKey2" /> contém uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.EventQueueName.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> representação do atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</summary>
+        <returns>Um <see cref="T:System.String" /> representação do atual <see cref="T:System.Workflow.Activities.EventQueueName" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres que <xref:System.Workflow.Activities.EventQueueName.ToString%2A> retorna inclui o tipo de interface, operação e quaisquer valores de correlação que estão associados com o <xref:System.Workflow.Activities.EventQueueName>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

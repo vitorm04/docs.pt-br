@@ -1,0 +1,6 @@
+<Namespace Name="System.Diagnostics.Eventing.Reader">
+  <Docs>
+    <summary>Usando o <see cref="N:System.Diagnostics.Eventing.Reader" /> namespace, você pode desenvolver aplicativos que leem e gerenciar logs de eventos. Um evento em um log de eventos contém informações, um aviso ou erro que foi publicado por um componente de aplicativo, serviço ou sistema operacional específico.  Esses eventos são lidos por aplicativos que monitora a integridade do computador e que entram em ação quando eventos específicos ocorrem.  Para obter mais informações, consulte [resumo de tecnologia para leitura e gerenciar Logs de eventos](https://msdn.microsoft.com/library/bb671205.aspx) e [cenários de Log de eventos](https://msdn.microsoft.com/library/bb671204.aspx).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

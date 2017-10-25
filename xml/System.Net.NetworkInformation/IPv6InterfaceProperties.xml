@@ -1,0 +1,201 @@
+<Type Name="IPv6InterfaceProperties" FullName="System.Net.NetworkInformation.IPv6InterfaceProperties">
+  <TypeSignature Language="C#" Value="public abstract class IPv6InterfaceProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IPv6InterfaceProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IPv6InterfaceProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre as interfaces de rede que dão suporte ao protocolo IP versão 6 (IPv6).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece acesso às informações de endereço e configuração para interfaces de rede que oferecem suporte a IPv6. Você não criar instâncias dessa classe; eles são retornados pelo <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv6Properties%2A> método.  
+  
+ Para propriedades de IPV4, consulte <xref:System.Net.NetworkInformation.IPInterfaceProperties.GetIPv4Properties%2A>.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém um <xref:System.Net.NetworkInformation.IPInterfaceProperties> do objeto e exibe seus dados.  
+  
+ [!code-cpp[NclNetInfo2#49](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#49)]
+ [!code-csharp[NclNetInfo2#49](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#49)]
+ [!code-vb[NclNetInfo2#49](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#49)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IPv6InterfaceProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPv6InterfaceProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.IPv6InterfaceProperties" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado somente por classes que derivam de <xref:System.Net.NetworkInformation.IPv6InterfaceProperties>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScopeId">
+      <MemberSignature Language="C#" Value="public virtual long GetScopeId (System.Net.NetworkInformation.ScopeLevel scopeLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int64 GetScopeId(valuetype System.Net.NetworkInformation.ScopeLevel scopeLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPv6InterfaceProperties.GetScopeId(System.Net.NetworkInformation.ScopeLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scopeLevel" Type="System.Net.NetworkInformation.ScopeLevel" />
+      </Parameters>
+      <Docs>
+        <param name="scopeLevel">O nível de escopo.</param>
+        <summary>Obtém a ID do escopo da interface de rede associado a uma protocolo IP versão 6 (IPv6) de endereço.</summary>
+        <returns>Retorna <see cref="T:System.Int64" />.  
+  
+ A ID do escopo da interface de rede associado a um endereço IPv6.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public abstract int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv6InterfaceProperties.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice da interface de rede associado a uma protocolo IP versão 6 (IPv6) de endereços.</summary>
+        <value>Um <see cref="T:System.Int32" /> valor que contém o índice da interface de rede para o endereço IPv6.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor dessa propriedade é zero, não há suporte por esta interface para IPv6.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém um <xref:System.Net.NetworkInformation.IPv6InterfaceProperties> do objeto e exibe seus dados.  
+  
+ [!code-cpp[NclNetInfo2#49](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#49)]
+ [!code-csharp[NclNetInfo2#49](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#49)]
+ [!code-vb[NclNetInfo2#49](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#49)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mtu">
+      <MemberSignature Language="C#" Value="public abstract int Mtu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Mtu" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPv6InterfaceProperties.Mtu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a MTU (unidade de transmissão máxima) desse adaptador de rede.</summary>
+        <value>Um valor <see cref="T:System.Int64" /> que especifica a MTU.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A MTU de uma interface de rede é o maior pacote que pode ser transmitido. Ele é medido em octetos (bytes de 8 bits).  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém um <xref:System.Net.NetworkInformation.IPv6InterfaceProperties> do objeto e exibe seus dados.  
+  
+ [!code-cpp[NclNetInfo2#49](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#49)]
+ [!code-csharp[NclNetInfo2#49](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#49)]
+ [!code-vb[NclNetInfo2#49](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#49)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,149 @@
+<Type Name="IGridProvider" FullName="System.Windows.Automation.Provider.IGridProvider">
+  <TypeSignature Language="C#" Value="public interface IGridProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IGridProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IGridProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("b17d6187-0907-464b-a168-0ef17a1572b1")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente de automação de interface do usuário para controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <see cref="T:System.Windows.Automation.Provider.IGridItemProvider" /> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser percorrido (isto é, um cliente de automação de interface do usuário pode mudar para os controles adjacentes) usando o teclado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.GridPattern> padrão de controle.  
+  
+ <xref:System.Windows.Automation.Provider.IGridProvider>não habilitam manipulação ativa de uma grade; <xref:System.Windows.Automation.Provider.ITransformProvider> deve ser implementado para habilitar essa funcionalidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ColumnCount">
+      <MemberSignature Language="C#" Value="public int ColumnCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridProvider.ColumnCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de colunas em uma grade.</summary>
+        <value>O número total de colunas em uma grade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Linhas e colunas, dependendo da implementação de provedor, podem ser carregadas no [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas no <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas tem ainda não foram carregadas eles não serão contados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir retorna o valor da propriedade.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGrid.cs#102)]
+ [!code-vb[UIAMiscPatternProviders_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgrid.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.Provider.IRawElementProviderSimple GetItem (int row, int column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Automation.Provider.IRawElementProviderSimple GetItem(int32 row, int32 column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IGridProvider.GetItem(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Provider.IRawElementProviderSimple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="row" Type="System.Int32" />
+        <Parameter Name="column" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="row">O número ordinal da linha de interesse.</param>
+        <param name="column">O número ordinal da coluna de interesse.</param>
+        <summary>Recupera o provedor de automação de interface do usuário para a célula especificada.</summary>
+        <returns>O provedor de automação de interface do usuário para a célula especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Coordenadas da grade são baseadas em zero com o superior esquerda (ou célula superior direita dependendo da localidade) tendo as coordenadas (0,0).  
+  
+-   Se uma célula está vazia um provedor de automação de interface do usuário ainda deve ser retornado para oferecer suporte a <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> propriedade daquela célula. Isso é possível quando o layout dos elementos filho na grade é semelhante a uma matriz irregular.  
+  
+ ![Windows Explorer exibir mostrando desbalanceada layout. ] (~/add/media/uia-gridpattern-ragged-array.PNG "Desbalanceada layout do Windows Explorer exibição mostrando.")  
+Exemplo de um controle de grade com coordenadas vazios  
+  
+-   Linhas e colunas, dependendo da implementação de provedor, podem ser carregadas no [!INCLUDE[TLA2#tla_uiautomation](~/includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas no <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> e <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas tem ainda não foram carregadas eles não devem ser contados.  
+  
+   
+  
+## Examples  
+ O código a seguir é um exemplo de implementação desse método que retorna um objeto que representa o item no local especificado.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGrid.cs#101)]
+ [!code-vb[UIAMiscPatternProviders_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgrid.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowCount">
+      <MemberSignature Language="C#" Value="public int RowCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IGridProvider.RowCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de linhas em uma grade.</summary>
+        <value>O número total de linhas em uma grade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Linhas e colunas, dependendo da implementação de provedor, pode ser carregadas na árvore lógica e, portanto, serão refletidas no <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas tem ainda não foram carregadas eles não serão contados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir retorna o valor da propriedade.  
+  
+ [!code-csharp[UIAMiscPatternProviders_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/CSharp/CustomGrid.cs#103)]
+ [!code-vb[UIAMiscPatternProviders_snip#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAMiscPatternProviders_snip/visualbasic/customgrid.vb#103)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

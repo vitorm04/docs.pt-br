@@ -1,0 +1,376 @@
+<Type Name="XmlDsigXPathTransform" FullName="System.Security.Cryptography.Xml.XmlDsigXPathTransform">
+  <TypeSignature Language="C#" Value="public class XmlDsigXPathTransform : System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDsigXPathTransform extends System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a transformação de XPath para uma assinatura digital, conforme definido pelo W3C.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe permite que você resolver um documento XML usando a linguagem XPath.  Essa classe usa uma expressão XPath para selecionar os nós XML que você deseja assinar ou criptografar ao remover todos os outros usuários de qualquer operação de criptografia.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe para assinar ou criptografar partes específicas de um documento XML usando uma expressão XPath.  Para obter informações sobre como inicializar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> de classe para o valor de uma cadeia de caracteres XPath transformação, consulte o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInnerXml%2A> método.  
+  
+ O URI Uniform Resource Identifier () que descreve o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe é definida pelo <xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigXPathTransformUrl> campo.  
+  
+ Para obter mais informações sobre a transformação do XPath, consulte a seção 6.6.3 da especificação XMLDSIG, que está disponível a partir do W3C em www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código mostra como assinar e verificar um documento XML usando o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe com uma assinatura de envelope.  Este exemplo assina um documento XML e salva a assinatura em um novo documento XML.  O segundo exemplo de código demonstra como chamar membros de <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  
+  
+ **Exemplo &#1;**  
+  
+ [!code-cpp[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/CS/sample.cs#1)]
+ [!code-vb[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/VB/sample.vb#1)]  
+  
+ **Exemplo &#2;**  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigXPathTransform#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/CS/members.cs#2)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigXPathTransform#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/VB/members.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigXPathTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como assinar e verificar um documento XML usando o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  Este exemplo cria uma assinatura de envelope.  
+  
+ [!code-cpp[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/CS/sample.cs#1)]
+ [!code-vb[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerXml">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlNodeList GetInnerXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlNodeList GetInnerXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetInnerXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação XML dos parâmetros de um <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto adequados ser incluída como subelementos de um XMLDSIG <see langword="&lt;Transform&gt;" /> elemento.</summary>
+        <returns>Uma lista de nós XML que representam o conteúdo específico da transformação necessário para descrever atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto em um XMLDSIG <see langword="&lt;Transform&gt;" /> elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetOutput">
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna a saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput%2A> método para recuperar um <xref:System.Xml.XmlNodeList> objeto que contém uma representação XML de uma transformação de XPath.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</summary>
+        <returns>A saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do objeto retornado deve ser <xref:System.Xml.XmlNodeList>.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput%2A> método para recuperar um <xref:System.Xml.XmlNodeList> objeto que contém uma representação XML de uma transformação de XPath.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput%2A> método para recuperar a saída do atual <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigXPathTransform#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/CS/members.cs#8)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigXPathTransform#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/VB/members.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de saída para retornar. <see cref="T:System.Xml.XmlNodeList" />é o tipo só é válido para esse parâmetro.</param>
+        <summary>Retorna a saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto do tipo <see cref="T:System.Xml.XmlNodeList" />.</summary>
+        <returns>A saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto do tipo <see cref="T:System.Xml.XmlNodeList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do objeto retornado deve ser <xref:System.Xml.XmlNodeList>.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput%2A> método para recuperar um <xref:System.Xml.XmlNodeList> objeto que contém uma representação XML de uma transformação de XPath.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput%2A> método para recuperar a saída do atual <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigXPathTransform#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/CS/members.cs#7)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigXPathTransform#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/VB/members.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="type" /> não é um objeto <see cref="T:System.Xml.XmlNodeList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] InputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] InputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigXPathTransform.InputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de tipos que são entradas válidas para o <see cref="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInput(System.Object)" /> método atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</summary>
+        <value>Uma matriz de tipos de entrada válidas para o atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto; você pode passar apenas os objetos de um desses tipos para o <see cref="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInput(System.Object)" /> método atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de entrada válida para <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> são <xref:System.IO.Stream>, <xref:System.Xml.XmlDocument>, e <xref:System.Xml.XmlNodeList>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.InputTypes%2A> propriedade para recuperar os tipos de entrada válidos para a transformação atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigXPathTransform#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/CS/members.cs#4)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigXPathTransform#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/VB/members.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInnerXml">
+      <MemberSignature Language="C#" Value="public override void LoadInnerXml (System.Xml.XmlNodeList nodeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInnerXml(class System.Xml.XmlNodeList nodeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInnerXml(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeList" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodeList">Um <see cref="T:System.Xml.XmlNodeList" /> objeto para carregar no atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</param>
+        <summary>Analisa especificado <see cref="T:System.Xml.XmlNodeList" /> objeto como conteúdo de transformação específica de um <see langword="&lt;Transform&gt;" /> elemento e configura o estado interno do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto para corresponder a <see langword="&lt;Transform&gt;" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInnerXml%2A> método para inicializar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe com uma transformação de XPath.  
+  
+ Para inicializar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe com uma transformação de XPath, conclua as etapas a seguir.  
+  
+1.  Criar um novo <xref:System.Xml.XmlElement> de classe e defina o <xref:System.Xml.XmlElement.InnerText%2A> propriedade para o valor de uma cadeia de caracteres de transformação de XPath.  
+  
+2.  Chamar o <xref:System.Xml.XmlNode.SelectNodes%2A> método para criar um <xref:System.Xml.XmlNodeList> objeto que representa a transformação.  
+  
+3.  Criar uma nova instância do <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe e passar criado anteriormente <xref:System.Xml.XmlNodeList> o objeto para o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInnerXml%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como assinar e verificar um documento XML usando o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  Este exemplo cria uma assinatura de envelope.  
+  
+ [!code-cpp[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/CS/sample.cs#1)]
+ [!code-vb[Cryptography.Xml.XmlDsigXPathTransform#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XmlDsigXPathTransform/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">O parâmetro <paramref name="nodeList" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O <paramref name="nodeList" /> parâmetro não tem um <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> elemento.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInput">
+      <MemberSignature Language="C#" Value="public override void LoadInput (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInput(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInput(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">A entrada para carregar no atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</param>
+        <summary>Carrega a entrada especificada em atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInput%2A> método para inicializar um <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> objeto para o valor de uma transformação de XPath usando um <xref:System.IO.Stream>, <xref:System.Xml.XmlDocument>, ou <xref:System.Xml.XmlNodeList> objeto.  Para obter informações sobre como inicializar um <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> objeto usando uma cadeia de caracteres XPath transformação, consulte o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInnerXml%2A> método.  
+  
+ O tipo de objeto de entrada deve ser um dos tipos de <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.InputTypes%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.LoadInput%2A> método usando especificado <xref:System.Xml.XmlDocument> objeto como entrada. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigXPathTransform#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/CS/members.cs#11)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigXPathTransform#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/VB/members.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] OutputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] OutputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigXPathTransform.OutputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de tipos que são possíveis saídas provenientes de <see cref="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput" /> métodos do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto.</summary>
+        <value>Uma matriz de tipos de saída válido para o atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> objeto; o <see cref="M:System.Security.Cryptography.Xml.XmlDsigXPathTransform.GetOutput" /> métodos do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigXPathTransform" /> retorno somente objetos de um desses tipos de objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Xml.XmlNodeList>é o tipo de saída só é válida para <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform.OutputTypes%2A> propriedade para recuperar os tipos de saída válido para a transformação atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform> classe.  
+  
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigXPathTransform#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/CS/members.cs#5)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigXPathTransform#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigXPathTransform/VB/members.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

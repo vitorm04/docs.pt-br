@@ -1,0 +1,165 @@
+<Type Name="DataGridViewCellValueEventArgs" FullName="System.Windows.Forms.DataGridViewCellValueEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewCellValueEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewCellValueEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewCellValueEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos <see cref="E:System.Windows.Forms.DataGridView.CellValueNeeded" /> e <see cref="E:System.Windows.Forms.DataGridView.CellValuePushed" /> do controle <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Windows.Forms.DataGridView.CellValueNeeded> e <xref:System.Windows.Forms.DataGridView.CellValuePushed> eventos para implementar o modo virtual no <xref:System.Windows.Forms.DataGridView> controle. Para obter mais informações sobre o modo virtual, consulte [Como implementar o modo virtual no controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md).  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.DataGridView.CellValuePushed> evento para armazenar as atualizações e novas entradas em um objeto de repositório de dados. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType> tópico de referência.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CPP/virtual.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CS/virtual.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/VB/virtual.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewCellValueEventArgs (int columnIndex, int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 columnIndex, int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewCellValueEventArgs.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">O índice da coluna que contém a célula para a qual o evento ocorre.</param>
+        <param name="rowIndex">O índice da linha que contém a célula que o evento ocorre.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewCellValueEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="columnIndex" /> é menor que 0.  
+  
+ -ou-  
+  
+ <paramref name="rowIndex" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnIndex">
+      <MemberSignature Language="C#" Value="public int ColumnIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ColumnIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellValueEventArgs.ColumnIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o índice de coluna da célula para a qual o evento ocorre.</summary>
+        <value>O índice da coluna que contém a célula para a qual o evento ocorre.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse deslocamento com o <xref:System.Windows.Forms.DataGridView.Columns%2A> propriedade para fazer referência à célula que o evento ocorre.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.DataGridViewCellValueEventArgs.ColumnIndex%2A> propriedade para recuperar valores de célula do armazenamento de dados. Este exemplo é parte de um exemplo maior fornecido em [como: implementar o modo Virtual no controle de DataGridView dos Windows Forms](~/docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#120)]
+ [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
+ [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellValueEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o índice da linha da célula para a qual o evento ocorre.</summary>
+        <value>O índice da linha que contém a célula que o evento ocorre.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse deslocamento com o <xref:System.Windows.Forms.DataGridView.Rows%2A> propriedade para fazer referência à célula que o evento ocorre.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.DataGridView.CellValuePushed> evento para armazenar as atualizações e novas entradas em um objeto de repositório de dados. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType> tópico de referência.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CPP/virtual.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CS/virtual.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/VB/virtual.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewCellValueEventArgs.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor da célula que o evento ocorre.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o valor da célula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para inspecionar o valor da célula ao manipular um evento ou para comunicar o valor da célula atual, se criar um evento.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.DataGridView.CellValuePushed> evento para armazenar as atualizações e novas entradas em um objeto de repositório de dados. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType> tópico de referência.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CPP/virtual.cpp#10)]
+ [!code-csharp[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CS/virtual.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView._Virtual#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/VB/virtual.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

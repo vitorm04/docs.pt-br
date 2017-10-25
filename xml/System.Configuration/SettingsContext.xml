@@ -1,0 +1,53 @@
+<Type Name="SettingsContext" FullName="System.Configuration.SettingsContext">
+  <TypeSignature Language="C#" Value="public class SettingsContext : System.Collections.Hashtable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SettingsContext extends System.Collections.Hashtable" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsContext" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Hashtable</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações contextuais que o provedor pode usar ao persistir as configurações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsContext> classe é a classe base usada por aplicativos para fornecer informações contextuais para o provedor de configurações. Embora a classe não é abstrata, um aplicativo pode optar por criar uma classe especializada que herda de <xref:System.Configuration.SettingsContext> classe e fornece informações adicionais para tipos específicos de provedores. O provedor, em seguida, pode examinar configurações contextuais ao gravar as propriedades.  
+  
+ A principal finalidade do <xref:System.Configuration.SettingsContext> classe é fornecer recursos que usam o <xref:System.Configuration.SettingsBase> classe e a infraestrutura relacionada. O <xref:System.Configuration.SettingsContext> classe fornece informações contextuais recursos específicos adicionais sobre os dados de propriedade que está sendo armazenados pelo <xref:System.Configuration.SettingsBase> instância. Portanto, é muito simple armazenar informações adicionais em um <xref:System.Configuration.SettingsContext> classe sem derivados dele (ou de outras classes configurações *) para dar suporte a informações de contexto específicas de recurso adicional.  
+  
+ Por exemplo, o ASP.NET usa o <xref:System.Configuration.SettingsContext> classe passar o nome de usuário associado aos dados gerenciados por um <xref:System.Configuration.SettingsBase> instância, bem como uma propriedade que indica se o usuário é considerado autenticado. Dessa forma, o ASP.NET usa a <xref:System.Configuration.SettingsContext> classe para identificar autenticados ou dados de perfil anônimos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsContext.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SettingsContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

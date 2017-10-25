@@ -1,0 +1,117 @@
+<Type Name="SmtpAccess" FullName="System.Net.Mail.SmtpAccess">
+  <TypeSignature Language="C#" Value="public enum SmtpAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SmtpAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.SmtpAccess" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o nível de acesso permitido para um servidor SMTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Mail.SmtpAccess> enumeração é usada pelo <xref:System.Net.Mail.SmtpPermission> e <xref:System.Net.Mail.SmtpPermissionAttribute> computador hospedam de classes para especificar um nível de acesso para um SMTP. O <xref:System.Net.Mail.SmtpClient> classe demandas um <xref:System.Net.Mail.SmtpPermission> ao enviar emails para o host SMTP para entrega.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Net.Mail.SmtpAccess> enumeração para criar um objeto de permissão.  
+  
+ [!code-cpp[NclMailPerms#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NclMailPerms/CPP/mailpermissions.cpp#1)]
+ [!code-csharp[NclMailPerms#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NclMailPerms/CS/mailpermissions.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="Connect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.SmtpAccess Connect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.SmtpAccess.Connect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.SmtpAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conexão com um host SMTP na porta padrão (porta 25).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectToUnrestrictedPort">
+      <MemberSignature Language="C#" Value="ConnectToUnrestrictedPort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.SmtpAccess ConnectToUnrestrictedPort = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.SmtpAccess.ConnectToUnrestrictedPort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.SmtpAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Conexão com um host SMTP em qualquer porta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Mail.SmtpAccess None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Mail.SmtpAccess.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mail.SmtpAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sem acesso a um host SMTP.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,301 @@
+<Type Name="DebuggerService" FullName="System.Activities.Presentation.Debug.DebuggerService">
+  <TypeSignature Language="C#" Value="public class DebuggerService : System.Activities.Presentation.Debug.IDesignerDebugView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DebuggerService extends System.Object implements class System.Activities.Presentation.Debug.IDesignerDebugView" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Debug.DebuggerService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Activities.Presentation.Debug.IDesignerDebugView</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia o posicionamento dos pontos de interrupção de um processo de depuração.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DebuggerService (System.Activities.Presentation.EditingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.EditingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.#ctor(System.Activities.Presentation.EditingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.Presentation.EditingContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O estado contextuais designer de atividade.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Presentation.Debug.DebuggerService" /> classe com o contexto de edição especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentContext">
+      <MemberSignature Language="C#" Value="public System.Activities.Debugger.SourceLocation CurrentContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Debugger.SourceLocation CurrentContext" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Debug.DebuggerService.CurrentContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Debugger.SourceLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o escopo de execução atual no arquivo de origem.</summary>
+        <value>Uma posição no arquivo de origem que marca o início da execução.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentLocation">
+      <MemberSignature Language="C#" Value="public System.Activities.Debugger.SourceLocation CurrentLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Debugger.SourceLocation CurrentLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Debug.DebuggerService.CurrentLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Debugger.SourceLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local de execução atual.</summary>
+        <value>Um local no arquivo de origem.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteBreakpoint">
+      <MemberSignature Language="C#" Value="public void DeleteBreakpoint (System.Activities.Debugger.SourceLocation sourceLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteBreakpoint(class System.Activities.Debugger.SourceLocation sourceLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.DeleteBreakpoint(System.Activities.Debugger.SourceLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceLocation" Type="System.Activities.Debugger.SourceLocation" />
+      </Parameters>
+      <Docs>
+        <param name="sourceLocation">Um local no arquivo de origem.</param>
+        <summary>Exclui um ponto de interrupção de seu local no arquivo de origem.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureVisible">
+      <MemberSignature Language="C#" Value="public void EnsureVisible (System.Activities.Debugger.SourceLocation sourceLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnsureVisible(class System.Activities.Debugger.SourceLocation sourceLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.EnsureVisible(System.Activities.Debugger.SourceLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceLocation" Type="System.Activities.Debugger.SourceLocation" />
+      </Parameters>
+      <Docs>
+        <param name="sourceLocation">Um local no arquivo de origem.</param>
+        <summary>Garante que o serviço do depurador está visível.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBreakpointLocations">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;System.Activities.Debugger.SourceLocation,System.Activities.Presentation.Debug.BreakpointTypes&gt; GetBreakpointLocations ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;class System.Activities.Debugger.SourceLocation, valuetype System.Activities.Presentation.Debug.BreakpointTypes&gt; GetBreakpointLocations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.GetBreakpointLocations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Activities.Debugger.SourceLocation,System.Activities.Presentation.Debug.BreakpointTypes&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista dos locais de ponto de interrupção mais recentes.</summary>
+        <returns>Uma lista de pontos de interrupção do tipo <see cref="P:System.Activities.Presentation.Debug.BreakpointInfo.SourceLocation" /> removido do arquivo de origem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetExactLocation">
+      <MemberSignature Language="C#" Value="public System.Activities.Debugger.SourceLocation GetExactLocation (System.Activities.Debugger.SourceLocation approximateLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Activities.Debugger.SourceLocation GetExactLocation(class System.Activities.Debugger.SourceLocation approximateLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.GetExactLocation(System.Activities.Debugger.SourceLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Debugger.SourceLocation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="approximateLocation" Type="System.Activities.Debugger.SourceLocation" />
+      </Parameters>
+      <Docs>
+        <param name="approximateLocation">Um local de arquivo de origem em inexato.</param>
+        <summary>Retorna um local de arquivo de origem exata com base nos números de início e término da atividade em sua forma serializada do XAML.</summary>
+        <returns>Um local exato no arquivo de origem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideSourceFileName">
+      <MemberSignature Language="C#" Value="public bool HideSourceFileName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HideSourceFileName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Debug.DebuggerService.HideSourceFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o nome do arquivo de origem no visualizador está oculto.</summary>
+        <value>
+          <see langword="true" />Se o nome do arquivo de origem está oculta; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertBreakpoint">
+      <MemberSignature Language="C#" Value="public void InsertBreakpoint (System.Activities.Debugger.SourceLocation sourceLocation, System.Activities.Presentation.Debug.BreakpointTypes breakpointType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InsertBreakpoint(class System.Activities.Debugger.SourceLocation sourceLocation, valuetype System.Activities.Presentation.Debug.BreakpointTypes breakpointType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.InsertBreakpoint(System.Activities.Debugger.SourceLocation,System.Activities.Presentation.Debug.BreakpointTypes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceLocation" Type="System.Activities.Debugger.SourceLocation" />
+        <Parameter Name="breakpointType" Type="System.Activities.Presentation.Debug.BreakpointTypes" />
+      </Parameters>
+      <Docs>
+        <param name="sourceLocation">O local no arquivo de origem que recebe o novo ponto de interrupção.</param>
+        <param name="breakpointType">O tipo de ponto de interrupção; Por exemplo, None, habilitado, limitada ou condicional.</param>
+        <summary>Insere um novo ponto de interrupção do tipo especificado no local especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDebugging">
+      <MemberSignature Language="C#" Value="public bool IsDebugging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDebugging" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Debug.DebuggerService.IsDebugging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a depuração é o estado atual.</summary>
+        <value>
+          <see langword="true" />Se a depuração é o estado atual. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetBreakpoints">
+      <MemberSignature Language="C#" Value="public void ResetBreakpoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ResetBreakpoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.ResetBreakpoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine os pontos de interrupção e o prepara para a atualização do ponto de interrupção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedLocation">
+      <MemberSignature Language="C#" Value="public System.Activities.Debugger.SourceLocation SelectedLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Debugger.SourceLocation SelectedLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Debug.DebuggerService.SelectedLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Debugger.SourceLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local selecionado no momento do designer.</summary>
+        <value>A posição no arquivo de origem que está selecionado no momento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateBreakpoint">
+      <MemberSignature Language="C#" Value="public void UpdateBreakpoint (System.Activities.Debugger.SourceLocation sourceLocation, System.Activities.Presentation.Debug.BreakpointTypes newBreakpointType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateBreakpoint(class System.Activities.Debugger.SourceLocation sourceLocation, valuetype System.Activities.Presentation.Debug.BreakpointTypes newBreakpointType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.UpdateBreakpoint(System.Activities.Debugger.SourceLocation,System.Activities.Presentation.Debug.BreakpointTypes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceLocation" Type="System.Activities.Debugger.SourceLocation" />
+        <Parameter Name="newBreakpointType" Type="System.Activities.Presentation.Debug.BreakpointTypes" />
+      </Parameters>
+      <Docs>
+        <param name="sourceLocation">O local do ponto de interrupção para atualizar.</param>
+        <param name="newBreakpointType">Um novo tipo de ponto de interrupção do <see cref="T:System.Activities.Presentation.Debug.BreakpointTypes" /> enumeração.</param>
+        <summary>Atualiza a aparência de um ponto de interrupção especificada para mostrar o tipo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateSourceLocations">
+      <MemberSignature Language="C#" Value="public void UpdateSourceLocations (System.Collections.Generic.Dictionary&lt;object,System.Activities.Debugger.SourceLocation&gt; newSourceLocationMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateSourceLocations(class System.Collections.Generic.Dictionary`2&lt;object, class System.Activities.Debugger.SourceLocation&gt; newSourceLocationMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Debug.DebuggerService.UpdateSourceLocations(System.Collections.Generic.Dictionary{System.Object,System.Activities.Debugger.SourceLocation})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newSourceLocationMapping" Type="System.Collections.Generic.Dictionary&lt;System.Object,System.Activities.Debugger.SourceLocation&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="newSourceLocationMapping">Uma lista de pares de item e o ponto de interrupção do modelo.</param>
+        <summary>Coleta o novo mapeamento de item de modelo e os pontos de interrupção de SourceLocationMapping.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

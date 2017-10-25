@@ -1,0 +1,161 @@
+<Type Name="TransformChain" FullName="System.Security.Cryptography.Xml.TransformChain">
+  <TypeSignature Language="C#" Value="public class TransformChain" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TransformChain extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.TransformChain" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma lista ordenada de <see cref="T:System.Security.Cryptography.Xml.Transform" /> objetos que é aplicada ao conteúdo não assinado antes do cálculo de resumo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.TransformChain> classe contém uma lista de <xref:System.Security.Cryptography.Xml.Transform> objetos que determinam como ordenar os dados XML antes de criar um digest.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.TransformChain> classe sempre que você precisa adicionar um ou mais objetos de transformação para um documento XML criptografado ou para um documento XML assinado.  
+  
+ Ambos os <xref:System.Security.Cryptography.Xml.Reference> classe e o <xref:System.Security.Cryptography.Xml.EncryptedReference> classe contém um <xref:System.Security.Cryptography.Xml.TransformChain> objeto.  Você pode adicionar uma <xref:System.Security.Cryptography.Xml.Transform> o objeto para o <xref:System.Security.Cryptography.Xml.Reference> classe chamando o <xref:System.Security.Cryptography.Xml.Reference.AddTransform%2A> método. Você pode adicionar uma <xref:System.Security.Cryptography.Xml.Transform> o objeto para o <xref:System.Security.Cryptography.Xml.EncryptedReference> classe chamando o <xref:System.Security.Cryptography.Xml.EncryptedReference.AddTransform%2A> método.  Você também pode criar um <xref:System.Security.Cryptography.Xml.TransformChain> objeto manualmente e passá-lo como o <xref:System.Security.Cryptography.Xml.Reference.TransformChain%2A> propriedade ou o <xref:System.Security.Cryptography.Xml.EncryptedReference.TransformChain%2A> propriedade.  
+  
+ Se você deseja assinar apenas uma parte de um documento XML, você pode usar uma transformação para identificar os elementos XML que você pretende assinar.  Observe que o <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> propriedade e o <xref:System.Security.Cryptography.Xml.EncryptedReference.Uri%2A> propriedade automaticamente criar transformações internas que permitem que você entre uma parte de um documento.  
+  
+ Para obter mais informações sobre transformações, consulte a especificação de XMLDSIG, que está disponível da W3C em www.w3.org/TR/xmldsig-core/, ou consulte a especificação de criptografia de XML, que está disponível a partir do W3C em www.w3.org/TR/xmlenc-core/.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TransformChain ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.TransformChain.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.TransformChain" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Security.Cryptography.Xml.Transform transform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Security.Cryptography.Xml.Transform transform) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.TransformChain.Add(System.Security.Cryptography.Xml.Transform)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="System.Security.Cryptography.Xml.Transform" />
+      </Parameters>
+      <Docs>
+        <param name="transform">A transformação para adicionar à lista de transformações.</param>
+        <summary>Adiciona uma transformação para a lista de transformações a serem aplicadas ao conteúdo não assinado antes do cálculo de resumo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As transformações são aplicadas ao conteúdo não assinado na ordem na qual eles foram adicionados para o <xref:System.Security.Cryptography.Xml.TransformChain> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.TransformChain.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de transformações no <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> objeto.</summary>
+        <value>O número de transformações no <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.TransformChain.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador de transformações no <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> objeto.</summary>
+        <returns>Um enumerador de transformações no <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Xml.Transform this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Xml.Transform Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.TransformChain.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Xml.Transform</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> do objeto que especifica qual transformar para retornar.</param>
+        <summary>Obtém a transformação no índice especificado no <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> objeto.</summary>
+        <value>A transformação no índice especificado no <see cref="T:System.Security.Cryptography.Xml.TransformChain" /> objeto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="index" /> parâmetro for maior que o número de transformações.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

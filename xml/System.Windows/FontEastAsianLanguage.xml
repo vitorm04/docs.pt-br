@@ -1,0 +1,185 @@
+<Type Name="FontEastAsianLanguage" FullName="System.Windows.FontEastAsianLanguage">
+  <TypeSignature Language="C#" Value="public enum FontEastAsianLanguage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontEastAsianLanguage extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontEastAsianLanguage" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Fornece um mecanismo para que o usuário selecione versões específicas de fonte de glifos para um idioma ou o sistema de escrita do Leste Asiático especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma fonte especificada não dá suporte a um conjunto específico de glifo, glifos padrão são exibidos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HojoKanji">
+      <MemberSignature Language="C#" Value="HojoKanji" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage HojoKanji = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.HojoKanji" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui os glifos padrão com os formulários correspondentes da especificação de Hojo Kanji.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Jis04">
+      <MemberSignature Language="C#" Value="Jis04" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage Jis04 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.Jis04" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui os glifos japonês padrão com os formulários correspondentes da especificação de JIS04.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Jis78">
+      <MemberSignature Language="C#" Value="Jis78" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage Jis78 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.Jis78" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui os glifos japonês padrão com os formulários correspondentes da especificação de JIS78.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Jis83">
+      <MemberSignature Language="C#" Value="Jis83" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage Jis83 = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.Jis83" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui os glifos japonês padrão com os formulários correspondentes da especificação de JIS83.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Jis90">
+      <MemberSignature Language="C#" Value="Jis90" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage Jis90 = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.Jis90" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui os glifos japonês padrão com os formulários correspondentes da especificação de JIS90.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NlcKanji">
+      <MemberSignature Language="C#" Value="NlcKanji" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage NlcKanji = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.NlcKanji" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui os glifos padrão com os formulários correspondentes da especificação de NLC Kanji.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma versão de glifo específicos de fontes é aplicada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Simplified">
+      <MemberSignature Language="C#" Value="Simplified" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage Simplified = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.Simplified" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui os formatos tradicionais em chinês ou japonês com seus formulários simplificados correspondentes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Traditional">
+      <MemberSignature Language="C#" Value="Traditional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage Traditional = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.Traditional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui simplificado, chinês ou japonês formulários com seus formulários tradicionais correspondentes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TraditionalNames">
+      <MemberSignature Language="C#" Value="TraditionalNames" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.FontEastAsianLanguage TraditionalNames = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.FontEastAsianLanguage.TraditionalNames" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontEastAsianLanguage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui simplificado formulários Kanji com seus formulários tradicionais correspondentes. Esse conjunto de glifo é explicitamente limitado aos formulários tradicionais considerado adequado para uso em nomes de pessoas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

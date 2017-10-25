@@ -1,0 +1,123 @@
+<Type Name="InlineCollection" FullName="System.Windows.Documents.InlineCollection">
+  <TypeSignature Language="C#" Value="public class InlineCollection : System.Windows.Documents.TextElementCollection&lt;System.Windows.Documents.Inline&gt;, System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InlineCollection extends System.Windows.Documents.TextElementCollection`1&lt;class System.Windows.Documents.Inline&gt; implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Documents.InlineCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Documents.TextElementCollection&lt;System.Windows.Documents.Inline&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TextElementType">System.Windows.Documents.Inline</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentWrapper(typeof(System.Windows.Documents.Run))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentWrapper(typeof(System.Windows.Documents.InlineUIContainer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.WhitespaceSignificantCollection</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de elementos <see cref="T:System.Windows.Documents.Inline" />. <see cref="T:System.Windows.Documents.InlineCollection" /> define o conteúdo filho permitido dos elementos <see cref="T:System.Windows.Documents.Paragraph" />, <see cref="T:System.Windows.Documents.Span" /> e <see cref="T:System.Windows.Controls.TextBlock" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Documents.InlineCollection>criação só é permitida dentro de um elemento que possui um <xref:System.Windows.Documents.InlineCollection>, como um <xref:System.Windows.Controls.TextBlock> ou <xref:System.Windows.Documents.Paragraph>. Como tal, um <xref:System.Windows.Documents.InlineCollection> não pode ser instanciado diretamente e não possui padrão ou sobrecarregado construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.InlineCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Texto definido como o <see cref="P:System.Windows.Documents.Run.Text" /> propriedade para o implícita <see cref="T:System.Windows.Documents.Run" />.</param>
+        <summary>Adiciona um implícita <see cref="T:System.Windows.Documents.Run" /> elemento com o texto especificado, fornecido como um <see cref="T:System.String" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Windows.UIElement uiElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Windows.UIElement uiElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Documents.InlineCollection.Add(System.Windows.UIElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uiElement" Type="System.Windows.UIElement" />
+      </Parameters>
+      <Docs>
+        <param name="uiElement">
+          <see cref="T:System.Windows.UIElement" />Definir como o <see cref="P:System.Windows.Documents.InlineUIContainer.Child" /> propriedade para o implícita <see cref="T:System.Windows.Documents.InlineUIContainer" />.</param>
+        <summary>Adiciona um implícita <see cref="T:System.Windows.Documents.InlineUIContainer" /> com fornecido <see cref="T:System.Windows.UIElement" /> já nele.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstInline">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Inline FirstInline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Inline FirstInline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.InlineCollection.FirstInline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Inline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a primeira <see cref="T:System.Windows.Documents.Inline" /> elemento dentro desta instância do <see cref="T:System.Windows.Documents.InlineCollection" />.</summary>
+        <value>A primeira <see cref="T:System.Windows.Documents.Inline" /> elemento dentro desta instância do <see cref="T:System.Windows.Documents.InlineCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastInline">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.Inline LastInline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.Inline LastInline" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Documents.InlineCollection.LastInline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.Inline</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a última <see cref="T:System.Windows.Documents.Inline" /> elemento dentro desta instância do <see cref="T:System.Windows.Documents.InlineCollection" />.</summary>
+        <value>A última <see cref="T:System.Windows.Documents.Inline" /> elemento dentro desta instância do <see cref="T:System.Windows.Documents.InlineCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

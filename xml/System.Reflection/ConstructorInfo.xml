@@ -1,0 +1,806 @@
+<Type Name="ConstructorInfo" FullName="System.Reflection.ConstructorInfo">
+  <TypeSignature Language="C#" Value="public abstract class ConstructorInfo : System.Reflection.MethodBase, System.Runtime.InteropServices._ConstructorInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ConstructorInfo extends System.Reflection.MethodBase implements class System.Runtime.InteropServices._ConstructorInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.ConstructorInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Reflection.MethodBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.InteropServices._ConstructorInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComDefaultInterface(typeof(System.Runtime.InteropServices._ConstructorInfo))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descobre os atributos de um construtor de classe e fornece acesso aos metadados do construtor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ConstructorInfo`é usado para descobrir os atributos de um construtor, bem como chamar um construtor. Objetos são criados chamando <xref:System.Reflection.ConstructorInfo.Invoke%2A> em uma `ConstructorInfo` retornado pelo <xref:System.Type.GetConstructors%2A> ou <xref:System.Type.GetConstructor%2A> método de um <xref:System.Type> objeto.  
+  
+> [!NOTE]
+>  <xref:System.Reflection.ConstructorInfo>herda de <xref:System.Reflection.MethodBase> vários membros, como <xref:System.Reflection.MethodBase.IsGenericMethod%2A>, que pode ser usado para examinar os métodos genéricos. No .NET Framework versão 2.0 construtores não podem ser genéricos, para que esses membros retornem `false` ou `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa `ConstructorInfo` com <xref:System.Type.GetConstructor%2A> e <xref:System.Reflection.BindingFlags> para localizar os construtores que correspondem aos critérios de pesquisa especificados.  
+  
+ [!code-cpp[type_getconstructor3#1](~/samples/snippets/cpp/VS_Snippets_CLR/Type_GetConstructor3/CPP/type_getconstructor3.cpp#1)]
+ [!code-csharp[type_getconstructor3#1](~/samples/snippets/csharp/VS_Snippets_CLR/Type_GetConstructor3/CS/type_getconstructor3.cs#1)]
+ [!code-vb[type_getconstructor3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Type_GetConstructor3/VB/type_getconstructor3.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see langword="ConstructorInfo" />, você deve substituir a sobrecarga de membro a seguir: <see cref="M:System.Reflection.ConstructorInfo.Invoke(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConstructorInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.ConstructorInfo" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructorName">
+      <MemberSignature Language="C#" Value="public static readonly string ConstructorName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string ConstructorName" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ConstructorInfo.ConstructorName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o nome do método de construtor da classe conforme ele é armazenado nos metadados. Esse nome é sempre ". ctor". Este campo é somente leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com essa instância ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Invoke(object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.Invoke(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Uma matriz de valores que corresponde ao número, à ordem e ao tipo (de acordo com as restrições do associador padrão) dos parâmetros desse construtor. Se esse construtor não usar nenhum parâmetro, use uma matriz com zero elementos ou <see langword="null" />, como em parâmetros de Object[] = novo Object[0]. Qualquer objeto nesta matriz que não for inicializado explicitamente com um valor conterá o valor padrão desse tipo de objeto. Para elementos de tipo de referência, esse valor é <see langword="null" />. Para elementos de tipo de valor, esse valor é 0, 0,0, ou <see langword="false" />, dependendo do tipo de elemento específico.</param>
+        <summary>Invoca o construtor refletido pela instância que tem os parâmetros especificados, fornecendo valores padrão para os parâmetros que não são usados normalmente.</summary>
+        <returns>Uma instância da classe associada ao construtor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número, tipo e ordem de elementos de `parameters` matriz deve ser idêntica de número, tipo e ordem de parâmetros para o construtor refletido por esta instância. Antes de chamar o construtor `Invoke` garante que o chamador tenha permissão de acesso e verifica se os parâmetros são válidos.  
+  
+ Restrições de acesso são ignoradas por código totalmente confiável. Ou seja, propriedades, métodos, campos e construtores privados podem ser acessadas e invocados usando reflexão sempre que o código é totalmente confiável.  
+  
+> [!NOTE]
+>  Para criar uma instância de um tipo de valor que não tem nenhum construtor de instância, use o <xref:System.Activator.CreateInstance%2A> método.  
+  
+ Esse método é um método conveniente para a seguinte versão sobrecarregado, usando valores padrão. Este método não pode ser substituído.  
+  
+> [!NOTE]
+>  Começando por [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], este método pode ser usado para acessar membros não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos membros não públicos esteja restrito ao conjunto de concessões do chamador ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">A classe é abstrata.  
+  
+ -ou-  
+  
+ O construtor é um inicializador de classe.</exception>
+        <exception cref="T:System.MethodAccessException">
+          <block subset="none" type="note">
+            <para>  
+ No [.NET para aplicativos Windows Store](http://go.microsoft.com/fwlink/?LinkID=247912) ou [biblioteca de classes portátil](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), capturar a exceção de classe base, <see cref="T:System.MemberAccessException" />, em vez disso.  
+  
+</para>
+          </block>  
+  
+ O construtor é particular ou protegido, e o chamador não tem o <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</exception>
+        <exception cref="T:System.ArgumentException">A matriz <paramref name="parameters" /> não contém valores que correspondem aos tipos aceitos por esse construtor.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">O construtor invocado gera uma exceção.</exception>
+        <exception cref="T:System.Reflection.TargetParameterCountException">Um número incorreto de parâmetros foi passado.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte à criação dos tipos <see cref="T:System.TypedReference" />, <see cref="T:System.ArgIterator" /> e <see cref="T:System.RuntimeArgumentHandle" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão de acesso do código necessária.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public abstract object Invoke (System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.Invoke(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="invokeAttr">Um dos valores <see langword="BindingFlags" /> que especifica o tipo de associação.</param>
+        <param name="binder">Um <see langword="Binder" /> que define um conjunto de propriedades e permite a associação, coerção de tipos de argumento e invocação de membros usando a reflexão. Se <c>associador</c> é <see langword="null" />, em seguida, <see langword="Binder.DefaultBinding" /> é usado.</param>
+        <param name="parameters">Uma matriz do tipo <see langword="Object" /> usado para corresponder ao número, ordem e tipo dos parâmetros para esse construtor, sob as restrições de <c>associador</c>. Se esse construtor não exigir parâmetros, passe uma matriz com zero elementos, como em parâmetros de Object[] = novo Object[0]. Qualquer objeto nesta matriz que não for inicializado explicitamente com um valor conterá o valor padrão desse tipo de objeto. Para elementos de tipo de referência, esse valor é <see langword="null" />. Para elementos de tipo de valor, esse valor é 0, 0,0, ou <see langword="false" />, dependendo do tipo de elemento específico.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> determinam a coerção de tipos. Se isso for <see langword="null" />, será usado o <see cref="T:System.Globalization.CultureInfo" /> para o thread atual.</param>
+        <summary>Quando implementado em uma classe derivada, invoca o construtor refletido por este <see langword="ConstructorInfo" /> com os argumentos especificados, sob as restrições do <see langword="Binder" /> especificado.</summary>
+        <returns>Uma instância da classe associada ao construtor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O número, tipo e ordem de elementos de `parameters` matriz deve ser idêntica de número, tipo e ordem de parâmetros para o construtor refletido por esta instância.  
+  
+ Antes de chamar o construtor `Invoke` garante que o chamador tenha permissão de acesso e que os parâmetros são do número correto, a ordem e o tipo.  
+  
+ Restrições de acesso são ignoradas por código totalmente confiável. Ou seja, propriedades, métodos, campos e construtores privados podem ser acessadas e invocados usando reflexão sempre que o código é totalmente confiável.  
+  
+> [!NOTE]
+>  Para criar uma instância de um tipo de valor que não tem nenhum construtor de instância, use o <xref:System.Activator.CreateInstance%2A> método.  
+  
+> [!NOTE]
+>  Começando por [!INCLUDE[net_v20sp1_long](~/includes/net-v20sp1-long-md.md)], este método pode ser usado para acessar membros não públicos caso o chamador tenha recebido <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag?displayProperty=nameWithType> e caso o conjunto de concessões dos membros não públicos esteja restrito ao conjunto de concessões do chamador ou um subconjunto dele. (Consulte [considerações de segurança para reflexão](~/docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).)  
+>   
+>  Para usar essa funcionalidade, seu aplicativo deve ter como destino o [!INCLUDE[net_v35_long](~/includes/net-v35-long-md.md)] ou posterior.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A matriz <paramref name="parameters" /> não contém valores que correspondem aos tipos aceitos por esse construtor, sob as restrições do <paramref name="binder" />.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">O construtor invocado gera uma exceção.</exception>
+        <exception cref="T:System.Reflection.TargetParameterCountException">Um número incorreto de parâmetros foi passado.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte à criação dos tipos <see cref="T:System.TypedReference" />, <see cref="T:System.ArgIterator" /> e <see cref="T:System.RuntimeArgumentHandle" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões de acesso do código necessárias.</exception>
+        <exception cref="T:System.MemberAccessException">A classe é abstrata.  
+  
+ -ou-  
+  
+ O construtor é um inicializador de classe.</exception>
+        <exception cref="T:System.MethodAccessException">O construtor é particular ou protegido, e o chamador não tem o <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberType">
+      <MemberSignature Language="C#" Value="public override System.Reflection.MemberTypes MemberType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Reflection.MemberTypes MemberType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.ConstructorInfo.MemberType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MemberTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Reflection.MemberTypes" /> valor que indica que esse membro é um construtor.</summary>
+        <value>Um <see cref="T:System.Reflection.MemberTypes" /> valor que indica que esse membro é um construtor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade substitui <xref:System.Reflection.MemberInfo.MemberType%2A>. Portanto, quando você examinar um conjunto de <xref:System.Reflection.MemberInfo> objetos — por exemplo, a matriz retornada por <xref:System.Type.GetMembers%2A> — o <xref:System.Reflection.MemberInfo.MemberType%2A> propriedade retorna <xref:System.Reflection.MemberTypes.Constructor> somente quando um determinado membro é um construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Reflection.ConstructorInfo.MemberType%2A> propriedade para identificar um <xref:System.Reflection.MemberInfo> objeto como um construtor.  
+  
+ [!code-cpp[Classic MemberInfo.MemberType Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic MemberInfo.MemberType Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MemberInfo.MemberType Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic MemberInfo.MemberType Example/CS/source.cs#1)]
+ [!code-vb[Classic MemberInfo.MemberType Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic MemberInfo.MemberType Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Reflection.ConstructorInfo left, System.Reflection.ConstructorInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Reflection.ConstructorInfo left, class System.Reflection.ConstructorInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.op_Equality(System.Reflection.ConstructorInfo,System.Reflection.ConstructorInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="right" Type="System.Reflection.ConstructorInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro <see cref="T:System.Reflection.ConstructorInfo" /> a ser comparado.</param>
+        <param name="right">O segundo <see cref="T:System.Reflection.ConstructorInfo" /> a ser comparado.</param>
+        <summary>Indica se dois objetos <see cref="T:System.Reflection.ConstructorInfo" /> são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="left" /> é igual a <paramref name="right" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Reflection.ConstructorInfo left, System.Reflection.ConstructorInfo right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Reflection.ConstructorInfo left, class System.Reflection.ConstructorInfo right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.op_Inequality(System.Reflection.ConstructorInfo,System.Reflection.ConstructorInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Reflection.ConstructorInfo" />
+        <Parameter Name="right" Type="System.Reflection.ConstructorInfo" />
+      </Parameters>
+      <Docs>
+        <param name="left">O primeiro <see cref="T:System.Reflection.ConstructorInfo" /> a ser comparado.</param>
+        <param name="right">O segundo <see cref="T:System.Reflection.ConstructorInfo" /> a ser comparado.</param>
+        <summary>Indica se dois <see cref="T:System.Reflection.ConstructorInfo" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="left" /> não é igual a <paramref name="right" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.GetIDsOfNames">
+      <MemberSignature Language="C#" Value="void _ConstructorInfo.GetIDsOfNames (ref Guid riid, IntPtr rgszNames, uint cNames, uint lcid, IntPtr rgDispId);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorInfo.GetIDsOfNames([in]valuetype System.Guid&amp; riid, native int rgszNames, unsigned int32 cNames, unsigned int32 lcid, native int rgDispId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#GetIDsOfNames(System.Guid@,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="rgszNames" Type="System.IntPtr" />
+        <Parameter Name="cNames" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="rgDispId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="rgszNames">Matriz passada de nomes a serem mapeados.</param>
+        <param name="cNames">Contagem dos nomes a serem mapeados.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar os nomes.</param>
+        <param name="rgDispId">Matriz alocada pelo chamador que recebe os IDs correspondentes aos nomes.</param>
+        <summary>Mapeia um conjunto de nomes para um conjunto correspondente de identificadores de expedição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetIDsOfNames`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.GetType">
+      <MemberSignature Language="C#" Value="Type _ConstructorInfo.GetType ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.Runtime.InteropServices._ConstructorInfo.GetType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#GetType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Type" /> objeto representando o <see cref="T:System.Reflection.ConstructorInfo" /> tipo.</summary>
+        <returns>Um <see cref="T:System.Type" /> objeto representando o <see cref="T:System.Reflection.ConstructorInfo" /> tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.GetTypeInfo">
+      <MemberSignature Language="C#" Value="void _ConstructorInfo.GetTypeInfo (uint iTInfo, uint lcid, IntPtr ppTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorInfo.GetTypeInfo(unsigned int32 iTInfo, unsigned int32 lcid, native int ppTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#GetTypeInfo(System.UInt32,System.UInt32,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iTInfo" Type="System.UInt32" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="ppTInfo" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="iTInfo">As informações de tipo a serem retornadas.</param>
+        <param name="lcid">O identificador de localidade das informações do tipo.</param>
+        <param name="ppTInfo">Recebe um ponteiro para o objeto de informações de tipo solicitado.</param>
+        <summary>Recupera as informações do tipo de um objeto, que podem ser usadas para obter informações de tipo para uma interface.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfo`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.GetTypeInfoCount">
+      <MemberSignature Language="C#" Value="void _ConstructorInfo.GetTypeInfoCount (out uint pcTInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorInfo.GetTypeInfoCount([out] unsigned int32&amp; pcTInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#GetTypeInfoCount(System.UInt32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pcTInfo" Type="System.UInt32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pcTInfo">Aponta para um local que recebe o número de interfaces de informações de tipo fornecido pelo objeto.</param>
+        <summary>Retorna o número de interfaces de informações do tipo que um objeto fornece (0 ou 1).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::GetTypeInfoCount`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.Invoke">
+      <MemberSignature Language="C#" Value="void _ConstructorInfo.Invoke (uint dispIdMember, ref Guid riid, uint lcid, short wFlags, IntPtr pDispParams, IntPtr pVarResult, IntPtr pExcepInfo, IntPtr puArgErr);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.InteropServices._ConstructorInfo.Invoke(unsigned int32 dispIdMember, [in]valuetype System.Guid&amp; riid, unsigned int32 lcid, int16 wFlags, native int pDispParams, native int pVarResult, native int pExcepInfo, native int puArgErr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#Invoke(System.UInt32,System.Guid@,System.UInt32,System.Int16,System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dispIdMember" Type="System.UInt32" />
+        <Parameter Name="riid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="lcid" Type="System.UInt32" />
+        <Parameter Name="wFlags" Type="System.Int16" />
+        <Parameter Name="pDispParams" Type="System.IntPtr" />
+        <Parameter Name="pVarResult" Type="System.IntPtr" />
+        <Parameter Name="pExcepInfo" Type="System.IntPtr" />
+        <Parameter Name="puArgErr" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="dispIdMember">Identifica o membro.</param>
+        <param name="riid">Reservado para uso futuro. Deve ser IID_NULL.</param>
+        <param name="lcid">O contexto de localidade no qual interpretar argumentos.</param>
+        <param name="wFlags">Sinalizadores que descrevem o contexto da chamada.</param>
+        <param name="pDispParams">Ponteiro para uma estrutura contendo uma matriz de argumentos, uma matriz de DISPIDs de argumento para argumentos nomeados e contagens para o número de elementos nas matrizes.</param>
+        <param name="pVarResult">Ponteiro para o local onde o resultado deve ser armazenado.</param>
+        <param name="pExcepInfo">Ponteiro para uma estrutura que contém informações de exceção.</param>
+        <param name="puArgErr">O índice do primeiro argumento que tem um erro.</param>
+        <summary>Fornece acesso a propriedades e métodos expostos por um objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é para acesso a classes gerenciadas de código não gerenciado e não deve ser chamado em código gerenciado. Para obter mais informações sobre `IDispatch::Invoke`, consulte a Biblioteca MSDN.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Acesso de associação tardia usando o COM <c>IDispatch</c> interface não é suportada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.Invoke_2">
+      <MemberSignature Language="C#" Value="object _ConstructorInfo.Invoke_2 (object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Runtime.InteropServices._ConstructorInfo.Invoke_2(object obj, valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#Invoke_2(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="obj">A instância que criou esse método.</param>
+        <param name="invokeAttr">Um dos valores <see cref="T:System.Reflection.BindingFlags" /> que especifica o tipo de associação.</param>
+        <param name="binder">Um <see cref="T:System.Reflection.Binder" /> que define um conjunto de propriedades e permite a associação, coerção de tipos de argumento e invocação de membros usando a reflexão. Se <c>associador</c> é <see langword="null" />, em seguida, <see cref="P:System.Type.DefaultBinder" /> é usado.</param>
+        <param name="parameters">Uma matriz de objetos usados para coincidir com o número, ordem e tipo dos parâmetros para esse construtor, sob as restrições de <c>associador</c>. Se este construtor não exigir parâmetros, passe uma matriz com zero elementos. Qualquer objeto nesta matriz que não for inicializado explicitamente com um valor conterá o valor padrão desse tipo de objeto. Para elementos de tipo de referência, esse valor é <see langword="null" />. Para elementos de tipo de valor, esse valor é 0, 0,0, ou <see langword="false" />, dependendo do tipo de elemento específico.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> determinam a coerção de tipos. Se isso for <see langword="null" />, será usado o <see cref="T:System.Globalization.CultureInfo" /> para o thread atual.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />.</summary>
+        <returns>Uma instância do tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Reflection.ConstructorInfo> é convertida em uma interface de <xref:System.Runtime.InteropServices._ConstructorInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.Invoke_3">
+      <MemberSignature Language="C#" Value="object _ConstructorInfo.Invoke_3 (object obj, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Runtime.InteropServices._ConstructorInfo.Invoke_3(object obj, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#Invoke_3(System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="obj">A instância que criou esse método.</param>
+        <param name="parameters">Uma matriz de objetos usados para coincidir com o número, ordem e tipo dos parâmetros para esse construtor, sob as restrições de <c>associador</c>. Se este construtor não exigir parâmetros, passe uma matriz com zero elementos. Qualquer objeto nesta matriz que não for inicializado explicitamente com um valor conterá o valor padrão desse tipo de objeto. Para elementos de tipo de referência, esse valor é <see langword="null" />. Para elementos de tipo de valor, esse valor é 0, 0,0, ou <see langword="false" />, dependendo do tipo de elemento específico.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.MethodBase.Invoke(System.Object,System.Object[])" />.</summary>
+        <returns>Uma instância do tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Reflection.ConstructorInfo> é convertida em uma interface de <xref:System.Runtime.InteropServices._ConstructorInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.Invoke_4">
+      <MemberSignature Language="C#" Value="object _ConstructorInfo.Invoke_4 (System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, object[] parameters, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Runtime.InteropServices._ConstructorInfo.Invoke_4(valuetype System.Reflection.BindingFlags invokeAttr, class System.Reflection.Binder binder, object[] parameters, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#Invoke_4(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="invokeAttr" Type="System.Reflection.BindingFlags" />
+        <Parameter Name="binder" Type="System.Reflection.Binder" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="invokeAttr">Um dos valores <see cref="T:System.Reflection.BindingFlags" /> que especifica o tipo de associação.</param>
+        <param name="binder">Um <see cref="T:System.Reflection.Binder" /> que define um conjunto de propriedades e permite a associação, coerção de tipos de argumento e invocação de membros usando a reflexão. Se <c>associador</c> é <see langword="null" />, em seguida, <see cref="P:System.Type.DefaultBinder" /> é usado.</param>
+        <param name="parameters">Uma matriz de objetos usados para coincidir com o número, ordem e tipo dos parâmetros para esse construtor, sob as restrições de <c>associador</c>. Se este construtor não exigir parâmetros, passe uma matriz com zero elementos. Qualquer objeto nesta matriz que não for inicializado explicitamente com um valor conterá o valor padrão desse tipo de objeto. Para elementos de tipo de referência, esse valor é <see langword="null" />. Para elementos de tipo de valor, esse valor é 0, 0,0, ou <see langword="false" />, dependendo do tipo de elemento específico.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> determinam a coerção de tipos. Se isso for <see langword="null" />, será usado o <see cref="T:System.Globalization.CultureInfo" /> para o thread atual.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.ConstructorInfo.Invoke(System.Reflection.BindingFlags,System.Reflection.Binder,System.Object[],System.Globalization.CultureInfo)" />.</summary>
+        <returns>Uma instância do tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Reflection.ConstructorInfo> é convertida em uma interface de <xref:System.Runtime.InteropServices._ConstructorInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.InteropServices._ConstructorInfo.Invoke_5">
+      <MemberSignature Language="C#" Value="object _ConstructorInfo.Invoke_5 (object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Runtime.InteropServices._ConstructorInfo.Invoke_5(object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.ConstructorInfo.System#Runtime#InteropServices#_ConstructorInfo#Invoke_5(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Uma matriz de objetos usados para coincidir com o número, ordem e tipo dos parâmetros para esse construtor, sob as restrições de <c>associador</c>. Se este construtor não exigir parâmetros, passe uma matriz com zero elementos. Qualquer objeto nesta matriz que não for inicializado explicitamente com um valor conterá o valor padrão desse tipo de objeto. Para elementos de tipo de referência, esse valor é <see langword="null" />. Para elementos de tipo de valor, esse valor é 0, 0,0, ou <see langword="false" />, dependendo do tipo de elemento específico.</param>
+        <summary>Fornece objetos COM com acesso independente de versão para o método <see cref="M:System.Reflection.ConstructorInfo.Invoke(System.Object[])" />.</summary>
+        <returns>Uma instância do tipo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Reflection.ConstructorInfo> é convertida em uma interface de <xref:System.Runtime.InteropServices._ConstructorInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeConstructorName">
+      <MemberSignature Language="C#" Value="public static readonly string TypeConstructorName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string TypeConstructorName" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.ConstructorInfo.TypeConstructorName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o nome do método de construtor de tipo como ele é armazenado nos metadados. Esse nome é sempre ". cctor". Esta propriedade é somente para leitura.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

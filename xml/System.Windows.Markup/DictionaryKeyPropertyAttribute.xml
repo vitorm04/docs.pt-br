@@ -1,0 +1,83 @@
+<Type Name="DictionaryKeyPropertyAttribute" FullName="System.Windows.Markup.DictionaryKeyPropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DictionaryKeyPropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DictionaryKeyPropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.DictionaryKeyPropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica uma propriedade da classe associada que fornece o valor da chave implícita. Chaves implícitas são usadas para chaves em vez de explícita <see langword="x:Key" /> atributos definidos em XAML de um item em <see cref="T:System.Collections.IDictionary" /> coleções.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Itens em uma <xref:System.Collections.IDictionary> dicionário (como o [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary>) exigem uma chave. Em XAML, a chave normalmente é especificada pelo `x:Key` atributo na marcação XAML para cada item de <xref:System.Collections.IDictionary>. O <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> é aplicada às classes que funcionam com uma chave implícita, em que a chave a ser usado para <xref:System.Collections.IDictionary> inclusão vêm de um valor de propriedade diferente na classe. Instâncias de aplicação de classe a <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> podem ser incluídos em um <xref:System.Collections.IDictionary> sem uma chave explícita contanto que a propriedade referenciada por <xref:System.Collections.IDictionary> tem um valor que é válido como chave na implementação desse dicionário.  
+  
+ Nas versões anteriores do .NET Framework, essa classe existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ A lista a seguir exemplos de referências de APIs do WPF em que esse atributo é aplicado:  
+  
+-   <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.DataTemplate.DataTemplateKey%2A?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>  
+  
+ Para obter mais informações sobre as implicações de dicionário de recursos do WPF de <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>, consulte [recursos XAML](~/docs/framework/wpf/advanced/xaml-resources.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DictionaryKeyPropertyAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.DictionaryKeyPropertyAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da propriedade que fornece o valor da chave implícita.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Markup.DictionaryKeyPropertyAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Markup.DictionaryKeyPropertyAttribute.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da propriedade que fornece o valor da chave implícita.</summary>
+        <value>O nome da propriedade que fornece o valor da chave implícita.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

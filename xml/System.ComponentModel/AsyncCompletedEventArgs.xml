@@ -1,0 +1,305 @@
+<Type Name="AsyncCompletedEventArgs" FullName="System.ComponentModel.AsyncCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class AsyncCompletedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AsyncCompletedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.AsyncCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento *MethodName*<see langword="Completed" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver usando uma classe que implementa o [baseado em evento visão geral do padrão assíncrono](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md), a classe fornecerá uma *MethodName* `Completed` eventos. Se você adicionar uma instância do <xref:System.ComponentModel.AsyncCompletedEventHandler?displayProperty=nameWithType> delegar para o evento, você receberá informações sobre o resultado de operações assíncronas no <xref:System.ComponentModel.AsyncCompletedEventArgs> parâmetro do método do manipulador de eventos correspondente.  
+  
+ Delegado de manipulador de eventos do aplicativo cliente pode verificar o <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> propriedade para determinar se a tarefa assíncrona foi cancelada.  
+  
+ Delegado de manipulador de eventos do aplicativo cliente pode verificar o <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> propriedade para determinar se ocorreu uma exceção durante a execução da tarefa assíncrona.  
+  
+ Se a classe oferece suporte a vários métodos assíncronos ou várias chamadas para o mesmo método assíncrono, você pode determinar qual tarefa gerado o *MethodName* `Completed` evento marcando o valor da <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Seu código precisa controlar esses tokens, conhecidos como IDs de tarefas, como suas tarefas assíncronas correspondentes iniciam e concluam.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.ComponentModel.AsyncOperation> para rastrear o tempo de vida de operações assíncronas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#12)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>As classes que seguem o padrão assíncrono baseado em evento podem gerar eventos para clientes de alerta sobre o status de operações assíncronas pendentes. Se a classe fornece um *MethodName* <see langword="Completed" /> eventos, você pode usar o <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" /> para informar os clientes sobre o resultado de operações assíncronas.  
+  
+ Talvez você queira se comunicar com clientes para obter mais informações sobre o resultado de uma operação assíncrona que um <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" /> acomoda. Nesse caso, você pode derivar sua própria classe a partir de <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" /> classe e fornecer variáveis de instância privada adicionais e propriedades públicas correspondentes de somente leitura. Chamar o <see cref="M:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary" /> método antes de retornar o valor da propriedade, caso a operação foi cancelada ou ocorreu um erro.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsyncCompletedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncCompletedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsyncCompletedEventArgs (Exception error, bool cancelled, object userState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception error, bool cancelled, object userState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncCompletedEventArgs.#ctor(System.Exception,System.Boolean,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="error" Type="System.Exception" />
+        <Parameter Name="cancelled" Type="System.Boolean" />
+        <Parameter Name="userState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="error">Qualquer erro que ocorreu durante a operação assíncrona.</param>
+        <param name="cancelled">Um valor que indica se a operação assíncrona foi cancelada.</param>
+        <param name="userState">O objeto opcional de estado fornecido pelo usuário passado para o <see cref="M:System.ComponentModel.BackgroundWorker.RunWorkerAsync(System.Object)" /> método.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancelled">
+      <MemberSignature Language="C#" Value="public bool Cancelled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancelled" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AsyncCompletedEventArgs.Cancelled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma operação assíncrona foi cancelada.</summary>
+        <value>
+          <see langword="true" /> se a operação em segundo plano tiver sido cancelada; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> é de propriedade `true`, a operação assíncrona foi interrompida.  
+  
+ Delegado de manipulador de eventos do aplicativo cliente deve verificar o <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> propriedade antes de acessar as propriedades em uma classe derivada de <xref:System.ComponentModel.AsyncCompletedEventArgs>; caso contrário, a propriedade irá gerar um <xref:System.InvalidOperationException> se a operação assíncrona foi interrompida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.ComponentModel.AsyncOperation> para rastrear o tempo de vida de operações assíncronas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#12)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você fornecer propriedades somente leitura em uma classe derivada, certifique-se de chamar o <see cref="M:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary" /> método. Isso impede que os clientes acessando propriedades potencialmente não são válidas devido a uma falha na operação assíncrona.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public Exception Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Error" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AsyncCompletedEventArgs.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica qual erro ocorreu durante uma operação assíncrona.</summary>
+        <value>Uma instância de <see cref="T:System.Exception" />, se ocorreu um erro durante uma operação assíncrona, caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma exceção é gerada durante uma operação assíncrona, a classe atribuirá a exceção para o <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> propriedade. Delegado de manipulador de eventos do aplicativo cliente deve verificar o <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> propriedade antes de acessar as propriedades em uma classe derivada de <xref:System.ComponentModel.AsyncCompletedEventArgs>; caso contrário, a propriedade gerará uma <xref:System.Reflection.TargetInvocationException> com seus <xref:System.Exception.InnerException%2A> propriedade contém uma referência a <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A>.  
+  
+ O valor de <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> é de propriedade `null` se a operação foi cancelada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.ComponentModel.AsyncOperation> para rastrear o tempo de vida de operações assíncronas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#12)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você fornecer propriedades somente leitura em uma classe derivada, certifique-se de chamar o <see cref="M:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary" /> método em sua implementação de propriedade. Isso impede que os clientes acessando propriedades potencialmente não são válidas devido a uma falha na operação assíncrona.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseExceptionIfNecessary">
+      <MemberSignature Language="C#" Value="protected void RaiseExceptionIfNecessary ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseExceptionIfNecessary() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera uma exceção fornecida pelo usuário se uma operação assíncrona falhou.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> em derivadas propriedades de classe.  
+  
+  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Cancelled" /> é <see langword="true" />.</exception>
+        <exception cref="T:System.Reflection.TargetInvocationException">A propriedade <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> foi definida pela operação assíncrona. A propriedade <see cref="P:System.Exception.InnerException" /> contém uma referência a <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Se derivada sua própria classe a partir de <see cref="T:System.ComponentModel.AsyncCompletedEventArgs" /> classe, as propriedades somente leitura devem chamar o <see cref="M:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary" /> método antes de retornar o valor da propriedade. Se o componente do assíncrono código trabalho atribui uma exceção para o <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Error" /> propriedade ou define o <see cref="P:System.ComponentModel.AsyncCompletedEventArgs.Cancelled" /> propriedade <see langword="true" />, a propriedade gerará uma exceção se um cliente tenta ler seu valor. Isso impede que os clientes acessando propriedades potencialmente não são válidas devido a uma falha na operação assíncrona.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UserState">
+      <MemberSignature Language="C#" Value="public object UserState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object UserState" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.AsyncCompletedEventArgs.UserState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.EventBasedAsync</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador exclusivo para a tarefa assíncrona.</summary>
+        <value>Uma referência de objeto que identifica exclusivamente a tarefa assíncrona, caso contrário, <see langword="null" /> se nenhum valor tiver sido definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma classe oferece suporte a vários métodos assíncronos ou várias invocações de um único método, você pode determinar qual tarefa gerado o *MethodName* `Completed` evento marcando o valor da <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A> propriedade. Seu código precisa controlar esses tokens, conhecidos como IDs de tarefas, como suas tarefas assíncronas correspondentes iniciam e concluam.  
+  
+ O valor dessa propriedade é definido durante a chamada original para o método assíncrono que a tarefa foi iniciado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.ComponentModel.AsyncOperation> para rastrear o tempo de vida de operações assíncronas. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ComponentModel.AsyncOperationManager?displayProperty=nameWithType> classe.  
+  
+ [!code-csharp[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
+ [!code-vb[System.ComponentModel.AsyncOperationManager#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
+[!code-csharp[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#12)]
+[!code-vb[System.ComponentModel.AsyncOperationManager#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

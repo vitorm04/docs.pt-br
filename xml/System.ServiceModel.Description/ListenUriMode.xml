@@ -1,0 +1,70 @@
+<Type Name="ListenUriMode" FullName="System.ServiceModel.Description.ListenUriMode">
+  <TypeSignature Language="C#" Value="public enum ListenUriMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ListenUriMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.ListenUriMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica se o transporte deve garantir que o URI fornecido para o serviço para escuta é exclusivo ou pode ser usado exatamente como fornecido.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O URI do ponto de extremidade em que um serviço escuta pode ser definido programaticamente usando o <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> propriedade e o valor da <xref:System.ServiceModel.Description.ListenUriMode> para esse ponto de extremidade é definido usando o <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUriMode%2A> propriedade. O valor padrão para <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> é <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>. O valor padrão para <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUriMode%2A> é Explicit.  
+  
+ O valor dessas propriedades também pode ser definido com o <xref:System.ServiceModel.Configuration.ServiceEndpointElement.ListenUri%2A> propriedade e o <xref:System.ServiceModel.Configuration.ServiceEndpointElement.ListenUriMode%2A> propriedade.  
+  
+ Quando o valor da <xref:System.ServiceModel.Description.ListenUriMode> é definido como Unique o transporte é responsável pela criação de um URI exclusivo. Transportes diferentes usados por [!INCLUDE[indigo1](~/includes/indigo1-md.md)] gerar esse URI exclusivo de forma diferente  
+  
+-   Para TCP em modo exclusivo (<xref:System.ServiceModel.Channels.TcpTransportBindingElement.PortSharingEnabled%2A> é `false`) isso significa que a associação a um número de porta disponível exclusivamente.  
+  
+-   Para TCP no modo de compartilhamento de porta (<xref:System.ServiceModel.Channels.TcpTransportBindingElement.PortSharingEnabled%2A> é `true`) e para todos os outros existente [!INCLUDE[indigo2](~/includes/indigo2-md.md)] transportes, isso significa acrescentando um caminho exclusivo (uma GUID) até o final do <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>.  
+  
+ Quando o valor da <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUriMode%2A> é definido como o modo Explicit, usa o transporte de <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> exatamente como ele é fornecido sem modificá-lo para torná-lo exclusivo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Explicit">
+      <MemberSignature Language="C#" Value="Explicit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.ListenUriMode Explicit = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.ListenUriMode.Explicit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ListenUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usa o <see cref="P:System.ServiceModel.Description.ServiceEndpoint.ListenUri" /> exatamente como fornecido. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unique">
+      <MemberSignature Language="C#" Value="Unique" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Description.ListenUriMode Unique = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Description.ListenUriMode.Unique" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Description.ListenUriMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o transporte deve usar um mecanismo específico ao transporte para garantir que o <see cref="P:System.ServiceModel.Description.ServiceEndpoint.ListenUri" /> é exclusivo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

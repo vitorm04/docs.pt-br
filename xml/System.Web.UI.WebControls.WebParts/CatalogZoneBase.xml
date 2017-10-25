@@ -1,0 +1,1276 @@
+<Type Name="CatalogZoneBase" FullName="System.Web.UI.WebControls.WebParts.CatalogZoneBase">
+  <TypeSignature Language="C#" Value="public abstract class CatalogZoneBase : System.Web.UI.WebControls.WebParts.ToolZone, System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CatalogZoneBase extends System.Web.UI.WebControls.WebParts.ToolZone implements class System.Web.UI.IPostBackDataHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.ToolZone</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IPostBackDataHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Serve como a classe base para todos os controles de zona que agem como catálogos. Os catálogos contêm listas de <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles que os usuários podem adicionar a uma página da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe é uma classe base que herda de <xref:System.Web.UI.WebControls.WebParts.ToolZone> classe. Ele fornece um conjunto básico de comportamentos para zonas derivadas.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe fornece uma interface de usuário exclusivo (UI) que permite aos usuários adicionar <xref:System.Web.UI.WebControls.WebParts.WebPart> controles e outros controles de servidor para páginas da Web. Controles que derivam de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe, como <xref:System.Web.UI.WebControls.WebParts.CatalogZone>, são os controles, na verdade, colocada em páginas da Web. Eles atuam como contêineres para outros controles, conhecidos como <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles, criar listas de controles de servidor para os usuários adicionar a uma página. As zonas que derivam de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe pode aparecer somente quando a página estiver no modo de exibição de catálogo.  
+  
+> [!NOTE]
+>  Um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona só pode conter <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles e por outro lado, <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles podem residir somente em <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zonas.  
+  
+ O mecanismo para adicionar controles de servidor a um catálogo é o seguinte conjunto de três controles que derivam da base de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> classe.  
+  
+|Controle|Descrição|  
+|-------------|-----------------|  
+|<xref:System.Web.UI.WebControls.WebParts.PageCatalogPart>|Mantém referências aos controles que foram fechados em uma página. Esses controles podem ser reabertos (adicionado de volta para a página) por usuários.|  
+|<xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>|Contém referências aos controles que são declarados em um catálogo de Web Parts na marcação de uma página da Web. Esses controles podem ser adicionados a uma página da Web por usuários.|  
+|<xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart>|Fornece a interface do usuário para um usuário carregar um arquivo de definição para um catálogo de forma que o controle pode ser adicionado a uma página da Web. Arquivos de definição são arquivos XML com um. Web Part extensão de nome de arquivo que importar configurações para um controle. O controle deve estar presente no servidor para que o arquivo de definição possa ser importado.|  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe tiver um número de propriedades que são úteis para exibir os catálogos de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.AddVerb%2A> propriedade referencia o verbo que adiciona um controle selecionado a partir do catálogo para a página, enquanto o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CloseVerb%2A> propriedade referencia um verbo que fecha o catálogo e retorna o modo de exibição da página para o modo de procura. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade faz referência a coleção de todos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles na zona. Várias propriedades de texto, como <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.EmptyZoneText%2A>, <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A>, e <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A>, substituir as propriedades de base para fornecer apropriado para os catálogos de texto padrão. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectTargetZoneText%2A> propriedade contém o texto junto com o controle de lista suspensa que permite aos usuários escolher qual zona um controle será adicionada ao.  
+  
+ Várias outras propriedades são incluídas na <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade é um identificador de cadeia de caracteres exclusiva para selecionado no momento <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.ShowCatalogIcons%2A> propriedade indica se os ícones que podem ser associados a controles, definindo o <xref:System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl%2A> propriedade em um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> propriedade contém atributos de estilo para os links para o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles que não estão selecionados atualmente na zona. Em contraste, o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> propriedade contém atributos de estilo para um link para o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle que o usuário atualmente selecionado na zona.  
+  
+ Além das propriedades, também há alguns métodos na <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe, além de manipulação de eventos padrão e renderização métodos herdados de outros controles de base, que são projetados exclusivamente para fins de tratamento de catálogos de controles. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogPartChrome%2A> método cria chrome (elementos de interface do usuário periféricos, como uma borda, verbos, ícones e um título) que envolve cada <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle na zona e também controla a renderização de controles. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> é um método abstrato; classes derivadas substituem-lo para criar instâncias de todos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles contidos na zona. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InvalidateCatalogParts%2A> método pode ser chamado por uma classe derivada, se a coleção de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles alterado na zona para algum motivo a programação e a classe derivada precisa recriar a coleção. O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.LoadPostData%2A> método carrega o estado existente para as caixas de seleção ao lado de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles no catálogo, sempre que a página é postada para o servidor; por outro lado, o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SaveControlState%2A> método salva o estado das caixas de seleção. Por fim, o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderCatalogPartLinks%2A> método fornece todo o processamento para os links para cada <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle contido na zona.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra várias declarativa e usa programático do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe. Como a classe é abstrata, os exemplos de código usam derivada <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe que é fornecido com o conjunto de controles de Web Parts, demonstrando as propriedades e métodos que ele herda o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe.  
+  
+ O exemplo de código tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição na página da Web.  
+  
+-   Uma página da Web que contém uma referência a um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle e algum código que demonstra o uso de alguns recursos principais <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> membros de classe.  
+  
+-   Um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle que é adicionado ao personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle.  
+  
+-   Uma descrição de como o exemplo funciona em um navegador.  
+  
+ A primeira parte deste exemplo de código é o controle de usuário que permite que você altere os modos de exibição na página. Para obter detalhes sobre como exibem modos e uma descrição do código-fonte nesse controle, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#8](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/displaymodemenucs.ascx#8)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/displaymodemenuvb.ascx#8)]  
+  
+ A segunda parte do exemplo de código é uma página da Web que contém uma referência declarativa para um <xref:System.Web.UI.WebControls.WebParts.CatalogZone> controle. Na parte superior da página são dois `Register` diretivas – um para o controle de usuário e outro para personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Observe que abaixo o `<asp:WebPartZone>` elemento é um `<asp: CatalogZone>` elemento que contém referências declarativas para personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle e um ASP.NET <xref:System.Web.UI.WebControls.Calendar> controle. A zona também tem uma variedade de marcas e propriedades definidas para determinar sua aparência e comportamento. Entre o `<script>` marcas da página é uma variedade de código de manipulação de eventos, mais do que demonstra o programático vários usos do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> membros.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#1)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#1)]  
+  
+ A terceira parte do exemplo de código é personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle chamado `TextDisplayWebPart`. Ele é declarado dentro da zona e um usuário final pode adicioná-lo do catálogo para a página. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para ver uma demonstração de ambos os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#9](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/textdisplaywebpart.cs#9)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/textdisplaywebpart.vb#9)]  
+  
+ Observe que para o exemplo de código trabalhar, há uma configuração que você deve adicionar o arquivo Web. config para habilitar a exportação de arquivos de descrição de Web Parts. Certifique-se de que você tenha um arquivo Web. config no mesmo diretório que a página da Web para este exemplo de código. Dentro de `<system.web>` seção, verifique se há um `<webParts>` elemento com um `enableExport` atributo definido como `true`, conforme mostrado no seguinte marcação.  
+  
+ `<webParts enableExport="true">`  
+  
+ `...`  
+  
+ `</webParts>`  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na caixa de listagem suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, você pode ver os dois controles de servidor que podem ser adicionados do catálogo para a página e também Observe na interface de usuário os efeitos de declarativa e programático usam da <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> membros de classe.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Se você deseja desenvolver uma zona personalizada para hospedagem <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles, você deve determinar se deseja fornecer suporte de modelo de zona. Um modelo de zona é criado por tipos que implementam o <see cref="T:System.Web.UI.ITemplate" /> de interface e é necessário se você quiser permitir que os desenvolvedores de página usando seu fuso personalizado para fazer referência a <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles dentro de sua região na marcação declarativa de uma página da Web. Se você precisar de zona suporte de modelo, você deve herdar do <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> classe. Por outro lado, se a zona personalizada e sua <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles vai ser autocontidos e elas serão criadas por meio de programação sem opções para desenvolvedores de página especificar os controles de forma declarativa em um modelo de zona, você pode herdar diretamente do <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe. Se você herdar o <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe, você deve substituir o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts" /> método e adicione o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> ou outros controles de servidor que você deseja no catálogo para um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> objeto.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CatalogZoneBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa a classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor é chamado quando uma classe derivada é inicializada, como o <xref:System.Web.UI.WebControls.WebParts.CatalogZone> classe fornecida com o conjunto de controles de Web Parts. A base de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.%23ctor%2A> construtor ajuda a preparar a página para exibir a interface de usuário do catálogo de Web Parts (IU), passando apropriada <xref:System.Web.UI.WebControls.WebParts.WebPartDisplayMode> o objeto para o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle. Especificamente, os passos de construtor um <xref:System.Web.UI.WebControls.WebParts.WebPartManager.CatalogDisplayMode> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVerb">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerb AddVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb AddVerb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.AddVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> objeto que permite que os usuários finais adicionem controles de um catálogo para uma página de Web Parts.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> que permite que os usuários finais adicionem controles do catálogo para uma página da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O verbo de adicionar é referenciado pelo <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.AddVerb%2A> derivado de propriedade em um controle de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe. O verbo adicionar adiciona um controle que um usuário final selecionado no catálogo para uma página da Web. Normalmente, o verbo de adicionar é exibida na interface do usuário (UI) como um <xref:System.Web.UI.WebControls.Button> controlar, embora ele também pode ser um link ou uma imagem.  
+  
+ O verbo de adicionar é um controle de nível de zona, o que significa que, embora possa haver várias <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles no catálogo, o verbo adicionar se aplica a todos os controles selecionados pelo usuário e adiciona-os para a zona selecionada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.AddVerb%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ A primeira parte do exemplo de código mostra como acessar o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.ApplyVerb%2A> propriedade declarativamente em uma página da Web. Este exemplo personaliza o texto para o verbo.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ A segunda parte do exemplo mostra como acessar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.AddVerb%2A> propriedade programaticamente, usando um botão de alternância para habilitar ou desabilitá-lo.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#3)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, você pode examinar o texto personalizado no <xref:System.Web.UI.WebControls.Button> controle para o verbo de adicionar e você pode clicar no **habilitar ou desabilitar verbos** botão para demonstrar que você pode acessar o verbo aplicar programaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogPartChrome">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.CatalogPartChrome CatalogPartChrome { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.CatalogPartChrome CatalogPartChrome" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogPartChrome" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPartChrome</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência à instância do <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> classe associada a <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> que está associado com a zona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogPartChrome%2A> método é chamado, ele cria uma instância do <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome> classe e essa instância é usado para renderizar o usuário periférico elementos de interface do usuário (também chamados de cromo) para todos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles em uma zona.  
+  
+ Os elementos de cromo de um indivíduo <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle incluem o texto de título e borda. O <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles fornecidos com o conjunto de controles de Web Parts não tem verbos de cabeçalho por padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CatalogParts">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.CatalogPartCollection CatalogParts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.CatalogPartCollection CatalogParts" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPartCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todos os <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles contidos em um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> que contém todos os individuais <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles em uma zona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade fornece uma referência a uma coleção de todos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles na zona. Ele faz referência a ambos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles fornecidos com o conjunto de controles de Web Parts e qualquer personalizado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles que são adicionados à zona.  
+  
+ A coleção é criada inicialmente quando acessa outro método de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade e a propriedade chama o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> método.  
+  
+> [!NOTE]
+>  Observe que qualquer <xref:System.Web.UI.WebControls.WebParts.CatalogPart> que é adicionado à coleção de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles em uma implementação do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> método deve ter um valor atribuído à sua propriedade ID, caso contrário, uma exceção será lançada quando a coleção é atribuída para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ O exemplo de código mostra como acessar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade iterar na coleção e lista as IDs de todos os <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles na zona.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#4)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#4)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, você pode clicar no **lista CatalogParts** botão para demonstrar como o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade pode ser acessado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> que está sendo adicionado à coleção não tem um valor atribuído à sua propriedade ID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="protected override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Alterna a página da Web do modo de exibição de catálogo para o modo de procura normal.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.Close%2A> método ignora qualquer controle selecionado atualmente no catálogo. Ele simplesmente chama o <xref:System.Web.UI.WebControls.WebParts.WebPartManager> controle para retornar a página da Web para o modo de procura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseVerb">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.WebParts.WebPartVerb CloseVerb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebParts.WebPartVerb CloseVerb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CloseVerb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebPartVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> objeto que permite aos usuários finais feche a interface de usuário (IU) do catálogo e retorna a página para o modo de procura normal.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> que permite que os usuários finais fechar o interface do usuário do catálogo na página da Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O verbo fechar é referenciado pelo <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CloseVerb%2A> derivado de propriedade em um controle de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe.  
+  
+ Usuário pode clicar no verbo Fechar no rodapé da zona. Quando o usuário clica o verbo de fechar qualquer <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles selecionado pelo usuário são ignorados, o catálogo de interface do usuário fecha e retorna a página para o modo de procura normal.  
+  
+ O verbo fechar é um controle de nível de zona, que significa que a ação se aplica no nível de zona inteira. Quando um usuário clica o verbo fechar, todos os controles que foram selecionados, mas não é adicionados à página são ignorados, o catálogo está fechado e retorna a página para o modo de procura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CloseVerb%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ A primeira parte do exemplo de código mostra como acessar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CloseVerb%2A> propriedade declarativamente em uma página da Web. Este exemplo personaliza o <xref:System.Web.UI.WebControls.WebParts.WebPartVerb.Description%2A> propriedade para o verbo.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ A segunda parte do exemplo mostra como acessar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CloseVerb%2A> propriedade programaticamente, usando um botão de alternância para habilitar ou desabilitá-lo.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#3)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, posicionando o ponteiro do mouse sobre o **fechar** botão, você pode ver o texto de descrição em uma dica de ferramenta. Você também pode clicar a **habilitar ou desabilitar verbos** botão para demonstrar que você pode acessar programaticamente o verbo fechar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCatalogPartChrome">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.WebParts.CatalogPartChrome CreateCatalogPartChrome ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.CatalogPartChrome CreateCatalogPartChrome() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogPartChrome" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPartChrome</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> objeto usado para renderizar o usuário periférico elementos de interface do usuário para <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles em uma zona.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> que renderiza os elementos de interface do usuário periféricos para a zona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogPartChrome%2A> retorna um objeto <xref:System.Web.UI.WebControls.WebParts.CatalogPartChrome>. Os elementos de cromo de um indivíduo <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle incluem o texto de título e borda. O <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles fornecidos com o conjunto de controles de Web Parts não tem verbos de cabeçalho por padrão. No entanto, é possível definir o <xref:System.Web.UI.WebControls.WebParts.Part.ChromeState%2A> propriedade de um <xref:System.Web.UI.WebControls.WebParts.CatalogPart> de controle, para que você possa minimizar e restaurar o controle programaticamente, se necessário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCatalogParts">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.UI.WebControls.WebParts.CatalogPartCollection CreateCatalogParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.CatalogPartCollection CreateCatalogParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.CatalogPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma declaração de método de base que é derivado de zonas pode substituir para lidar com os detalhes da criação de <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles contidos em uma zona.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartCollection" /> que contém a coleção de <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles associados a zona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> método não fornece nenhuma implementação. Ele se destina a ser implementada em uma classe derivada e deve ser usado para criar uma instância de coleção de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles contidos em uma região, sempre que a página da Web de hospedagem entra em modo de catálogo. O <xref:System.Web.UI.WebControls.WebParts.CatalogZone.CreateCatalogParts%2A?displayProperty=nameWithType> método fornece um exemplo de uma implementação de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> método.  
+  
+> [!NOTE]
+>  Observe que qualquer <xref:System.Web.UI.WebControls.WebParts.CatalogPart> que é adicionado à coleção de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles em uma implementação do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> método deve ter um valor atribuído à sua propriedade ID, caso contrário, uma exceção será lançada quando a coleção é atribuída para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogParts%2A> propriedade.  
+  
+ O método pode criar o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles de várias fontes: controles que são declarados no formato de persistência dentro de um <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> , ou controles que são mantidos em vários mecanismos de armazenamento, como um arquivo XML ou um banco de dados.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os desenvolvedores que criam personalizados <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles devem herdar do <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> ou <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZone" /> classes e substitua este método se desejar criar um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPartChrome" /> objeto para processar seu personalizado <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria o conjunto de filho controles associados a um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmptyZoneText">
+      <MemberSignature Language="C#" Value="public override string EmptyZoneText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EmptyZoneText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.EmptyZoneText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma mensagem que aparece quando uma zona não contém nenhum controle.</summary>
+        <value>Uma cadeia de caracteres que contém a mensagem que aparece em uma zona vazia. Uma cadeia de caracteres de específicos de cultura padrão é fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de cadeia de caracteres da <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.EmptyZoneText%2A> propriedade é exibida quando uma página da Web entra em modo de catálogo, se o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona não contém nenhuma <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.EmptyZoneText%2A> propriedade declarativamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ Observe que o exemplo de código declara duas `<asp:catalogzone>` elementos e o segundo não declarar qualquer <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controla, embora ele atribui um valor para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.EmptyZoneText%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, observe que abaixo na primeira zona, que contém duas <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles, a segunda zona aparece e exibe o conteúdo do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.EmptyZoneText%2A> propriedade porque ele contém controles não.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public override string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto para a área do cabeçalho de uma zona.</summary>
+        <value>Uma cadeia de caracteres que contém o texto do cabeçalho da zona. Uma cadeia de caracteres de específicos de cultura padrão é fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de cadeia de caracteres da <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A> propriedade é exibida na área de cabeçalho de um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona, que está na parte superior da zona. O texto do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A> propriedade é exibida quando uma página entra no modo de catálogo e a interface do usuário do catálogo (UI) se torna visível.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ Observe que o exemplo de código declara duas `<asp:catalogzone>` elementos. O outro não declara nenhum <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles, mas ambos declarar um valor para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ Na segunda parte do exemplo de código, o valor de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A> propriedade na primeira zona programaticamente é atribuída a um valor diferente.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#5)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#5)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, observe os valores de cada <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A> propriedade exibida na área do cabeçalho de cada região. Você pode clicar no **definir propriedades de texto de zona** botão e o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.HeaderText%2A> da zona superior é definida como o valor atribuído a ele no código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstructionText">
+      <MemberSignature Language="C#" Value="public override string InstructionText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InstructionText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto em uma zona que fornece instruções para os usuários finais.</summary>
+        <value>Uma cadeia de caracteres que contém as instruções para os usuários finais. Um padrão, cadeia de caracteres específicas da cultura é fornecida pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de cadeia de caracteres da <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> propriedade é exibida apenas abaixo da área de cabeçalho de um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona. O texto do <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> propriedade é exibida quando uma página entra no modo de catálogo e a interface do usuário do catálogo (UI) se torna visível.  
+  
+ A finalidade de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> é de propriedade fornecer ao usuário instruções gerais sobre o que fazer quando o catálogo da interface do usuário é exibido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ Observe que o exemplo de código declara duas `<asp:catalogzone>` elementos e o primeiro declara um valor para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ Na segunda parte do exemplo de código, o valor de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> propriedade na primeira zona programaticamente é atribuída a um valor diferente.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#5)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#5)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, observe o valor de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> propriedade exibida na área do cabeçalho de cada região. Você pode clicar no **definir propriedades de texto de zona** botão e o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InstructionText%2A> da zona superior é definida como o valor atribuído a ele no código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidateCatalogParts">
+      <MemberSignature Language="C#" Value="protected void InvalidateCatalogParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InvalidateCatalogParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InvalidateCatalogParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Destrói a coleção de <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles associados a um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InvalidateCatalogParts%2A> método pode ser chamado por classes derivadas se a lista de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles associados a um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona foi alterado por alguma razão, e a classe derivada precisa obter uma lista atualizada de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles. A classe derivada deve primeiro chamar <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.InvalidateCatalogParts%2A> destruir a coleção atual e, em seguida, a classe base chamará <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CreateCatalogParts%2A> conforme o necessário para criar a coleção atualizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadControlState">
+      <MemberSignature Language="C#" Value="protected override void LoadControlState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void LoadControlState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.LoadControlState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Os dados de estado salvo anteriormente.</param>
+        <summary>Carrega o estado de uma solicitação de página anterior para as propriedades de controle que deve persistir em postagens, mesmo quando o estado de exibição está desabilitado no controle.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="savedState" />não é um estado de controle válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadPostData">
+      <MemberSignature Language="C#" Value="protected virtual bool LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">O identificador da chave do controle.</param>
+        <param name="postCollection">A coleção de pares de nome/valor para o servidor.</param>
+        <summary>O estado das caixas de seleção que correspondem dos processos de <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles no catálogo, quando a página é postada para o servidor.</summary>
+        <returns>Esse método, em contraste com o método base substituído, sempre retornará <see langword="false" />, porque a classe não expõe nenhum evento de alteração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método itera através da coleção de <xref:System.Web.UI.WebControls.CheckBox> controles para determinar qual <xref:System.Web.UI.WebControls.WebParts.WebPart> ou outros controles de servidor no catálogo foram selecionados por um usuário. Os itens selecionados são atribuídos a uma matriz interna, que é processada, em seguida, adicionar os controles correspondentes à página da Web.  
+  
+ O método não foi projetado para ser chamado a partir de seu código; ele é usado internamente pelo conjunto de controle de Web Parts.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Os dados de estado salvo anteriormente.</param>
+        <summary>Carrega previamente salva informações de estado para uma zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado basicamente pela infraestrutura do .NET Framework e não se destina a ser usado diretamente no seu código. No entanto, você pode substituir este método para especificar como um controle de servidor personalizado restaura o estado de exibição. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.LoadViewState%2A> método primeiro chama o método base para carregar quaisquer informações de estado já existente. Em seguida, ele adiciona o objeto de dados de estado de exibição que contém as informações de estado para o verbo de adicionar, o verbo fechar, o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> objeto e o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O tamanho do <paramref name="savedState" /> objeto não igual ao tamanho do objeto de estado de exibição atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Registra o objeto de página para que a página requer que o estado do controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Web.UI.Control.PreRender" /> evento e registra a página do objeto para que ele exija postbacks.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PartLinkStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style PartLinkStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style PartLinkStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que contém atributos de estilo para o <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles que não estão selecionados atualmente na zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que contém atributos de estilo para controles que não estão selecionados atualmente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona, links são exibidos para cada tipo de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle: <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart>, <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>, e <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart>. Quando um usuário clica em um dos links, correspondente <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle se torna o controle selecionado e os controles filho contidos pelo controle selecionado se tornarão visíveis.  
+  
+ O <xref:System.Web.UI.WebControls.Style> objeto referenciado pelo <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> propriedade contém os atributos de estilo para o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles que não estão selecionados atualmente. Embora o objeto referenciado pela propriedade é somente leitura, você ainda pode usá-lo para definir as características de estilo subjacente para o desmarcado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ Observe que a primeira parte do exemplo de código declara duas `<asp:catalogzone>` elementos e o primeiro declara um valor para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ A segunda parte do exemplo de código, o texto de cores para o desmarcado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles é definido como um valor diferente.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#7)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#7)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, observe os atributos de estilo do desmarcado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles listados na zona (por padrão, selecionado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle é o <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart> controle). Você pode clicar no **alterar estilos de Link de parte** botão para alterar a cor do texto dos controles não selecionados. Você também pode clicar nos links para os controles não selecionados, para ver como os atributos de estilo são alteradas quando um controle está selecionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaisePostBackEvent">
+      <MemberSignature Language="C#" Value="protected override void RaisePostBackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RaisePostBackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RaisePostBackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Um <see cref="T:System.String" /> que contém o argumento para o evento.</param>
+        <summary>Executa as ações associadas a um dos verbos de zona ou gera um evento que envia de volta para o servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `eventArgument` dados do parâmetro indicam que o verbo de adicionar ou o verbo fechar foi clicado, o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RaisePostBackEvent%2A> método executa a ação associada com o verbo, como a adição de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles para a página ou fechar o catálogo. Se o método está sendo chamado por qualquer outro motivo, o método base é chamado para gerar um evento de postback para o servidor.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você quiser adicionar verbos personalizados para um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona, você precisa substituir o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RaisePostBackEvent(System.String)" /> método para tratar o evento, se um usuário clicar em um verbo personalizado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo da região.</param>
+        <summary>Renderiza a zona especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.Render%2A> método substitui o método base do <xref:System.Web.UI.WebControls.WebControl> classe para chamar o <xref:System.Web.UI.Page.VerifyRenderingInServerForm%2A> método, que verifica se um formulário HTML é renderizado para o controle de zona em tempo de execução. Depois da verificação, o método renderiza o conteúdo restante da zona.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBody">
+      <MemberSignature Language="C#" Value="protected override void RenderBody (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderBody(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderBody(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo do corpo da região.</param>
+        <summary>Substitui o método base para renderizar a área do corpo de uma zona que deriva de <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderBody%2A> método renderiza a área do corpo de um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona, que é a área de conteúdo principal entre as áreas de cabeçalho e rodapé e contém <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderBody%2A> método substitui o método base no <xref:System.Web.UI.WebControls.WebParts.WebZone> classe para fornecer processamento especializado que tratam de layout e estilo de atributos que se aplicam apenas aos <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zonas. O método renderiza uma tabela que contém todo o conteúdo do corpo e na tabela, ele define valores de atributo diferente dependendo de várias condições, incluindo quantos <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles estão na zona. Se houver várias <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles, um link é criado para cada controle e somente o conteúdo do controle selecionado no momento é exibido. Atributos de estilo especiais são definidos no <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.CatalogPartChrome%2A> propriedade selecionado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle em relação àqueles que não estão selecionados atualmente.  
+  
+ Se não houver nenhum <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles na zona, o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderBody%2A> método renderiza o valor da <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.EmptyZoneText%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderCatalogPartLinks">
+      <MemberSignature Language="C#" Value="protected virtual void RenderCatalogPartLinks (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderCatalogPartLinks(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderCatalogPartLinks(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo dos links para os controles da região.</param>
+        <summary>Renderiza os links para a pessoa <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles em um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderCatalogPartLinks%2A> método renderiza links para a pessoa <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles em uma zona se houver várias <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles.  
+  
+ O link atualmente selecionado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle é renderizado diferente para que ele se destaque dos controles não selecionados. Os desenvolvedores podem definir os atributos de estilo para os links do controle selecionado e não selecionado usando o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> e <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> propriedades, respectivamente.  
+  
+ Os links para o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles em uma zona não são navegação; eles são para exibir a interface do usuário (UI) dos controles. Quando um usuário clica no link para um controle, a interface do usuário para qualquer outro controle exibido está oculta e a interface do usuário para o controle selecionado é exibida.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você criar uma classe personalizada que herda o <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe, você pode substituir, opcionalmente, o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderCatalogPartLinks(System.Web.UI.HtmlTextWriter)" /> método. Esse método fornece controle programático sobre como os links para <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controles na zona são renderizados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderFooter">
+      <MemberSignature Language="C#" Value="protected override void RenderFooter (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderFooter(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderFooter(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que renderiza a área do rodapé da zona.</param>
+        <summary>Renderiza a área de rodapé para um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O rodapé de um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona é a área da parte inferior da zona que contém os verbos de nível de zona, como o verbo de adicionar e o verbo fechar. Na marcação subjacente, um rodapé é simplesmente uma célula em uma tabela HTML.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderFooter%2A> método primeiro cria os atributos de estilo do rodapé e, em seguida, chama o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderVerbs%2A> método para renderizar a adicionar e fechar verbos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderVerbs">
+      <MemberSignature Language="C#" Value="protected override void RenderVerbs (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderVerbs(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderVerbs(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que renderiza os verbos para a zona.</param>
+        <summary>Renderiza os verbos na área de rodapé de um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderVerbs%2A> método renderiza o verbo de adicionar e o verbo fechar dentro da área de rodapé de um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderVerbs(System.Web.UI.HtmlTextWriter)" /> método não manipula o processamento para qualquer personalizado <see cref="T:System.Web.UI.WebControls.WebParts.WebPartVerb" /> objetos que um desenvolvedor adiciona a um personalizado <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> zona. Se você quiser adicionar verbos personalizados para um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe, você deve herdar do <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe e substituir o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RenderVerbs(System.Web.UI.HtmlTextWriter)" /> método, que você pode usar para processar os verbos personalizados para a zona. Você também deve substituir o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.RaisePostBackEvent(System.String)" /> método para manipular o evento quando um verbo personalizado é clicado pelo usuário.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveControlState">
+      <MemberSignature Language="C#" Value="protected override object SaveControlState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance object SaveControlState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SaveControlState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações em um <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> estado do controle que ocorrem após a página da Web é postada para o servidor.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém os dados de estado do controle. Se não houve nenhuma alteração ao estado, o método retornará <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SaveControlState%2A> método está preocupado com os dados de estado que são essencial para a operação do controle (por exemplo, um índice ou a palavra-chave) e está separado dos dados de estado de exibição do controle.  
+  
+ O método primeiro chama o método base para salvar os dados de estado existente para o controle. Em seguida, ele determina se um <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle na zona no momento está selecionado, verificando se o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade tem um valor. Se houver um controle selecionado, o método atualiza os dados de estado existente com os dados de estado do controle selecionado e, em seguida, retorna todos os dados de estado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Opcionalmente, você pode substituir o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SaveControlState" /> método em uma classe derivada para que você possa atualizar o estado salvo outros objetos personalizados na zona.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações de estado de exibição que ocorreram depois que uma página foi postada no servidor.</summary>
+        <returns>Retorna o estado de exibição atual do controle de zona. Se nenhum estado de exibição é associado com a zona, esse método retorna <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SaveViewState%2A> método chama o método base para salvar o estado de exibição associado a <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona. Em seguida, ele salva qualquer estado de exibição para adicionar e fechar verbos, bem como para o <xref:System.Web.UI.WebControls.Style> objetos associados a <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> e <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedCatalogPartID">
+      <MemberSignature Language="C#" Value="public string SelectedCatalogPartID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedCatalogPartID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres como um identificador para selecionado no momento <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controle em uma zona.</summary>
+        <value>Uma cadeia de caracteres que serve como o identificador para o controle selecionado no momento. O padrão é o valor do controle do <see cref="P:System.Web.UI.Control.ID" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade permite que você defina um identificador de sua escolha para selecionado no momento <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle. Isso não altera o controle <xref:System.Web.UI.Control.ID%2A> valor da propriedade, então você pode usar essa propriedade para seus próprios fins através de programação. Por exemplo, se você quisesse sempre executar alguma ação programática em selecionado no momento <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle, essa propriedade permite que você acesse esse controle por meio de um valor conhecido que você definir antecipadamente.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ Observe que a primeira parte do exemplo de código declara duas `<asp:catalogzone>` elementos e o primeiro declara um valor para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ A segunda parte do exemplo de código, o valor de texto para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade do controle selecionado no momento é exibida.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#6)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#6)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo estiver visível, clique em um dos links para um <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle para selecioná-la. Em seguida, clique no **Mostrar identificação de CatalogPart selecionada** botão para exibir o valor da propriedade. Observe que o valor da propriedade é o valor que foi definido declarativamente para a zona. Se você selecionar outro <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles na zona, o mesmo valor se tornará o valor de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade para cada controle quando ele é selecionado. Se você não definir o valor da <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedCatalogPartID%2A> propriedade, o valor padrão é sempre o valor da <xref:System.Web.UI.Control.ID%2A> propriedade do controle selecionado no momento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedPartLinkStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style SelectedPartLinkStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style SelectedPartLinkStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que contém atributos de estilo para o <see cref="T:System.Web.UI.WebControls.WebParts.CatalogPart" /> controle está selecionado no momento na zona.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que contém atributos de estilo para o controle selecionado no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona, links são exibidos para cada tipo de <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle: <xref:System.Web.UI.WebControls.WebParts.PageCatalogPart>, <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>, e <xref:System.Web.UI.WebControls.WebParts.ImportCatalogPart>. Quando um usuário clica em um dos links, correspondente <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle se torna o controle selecionado e os controles filho contidos pelo controle selecionado se tornarão visíveis.  
+  
+ O <xref:System.Web.UI.WebControls.Style> objeto referenciado pelo <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> propriedade contém os atributos de estilo do link para o <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle está selecionado no momento. Embora o objeto referenciado pela propriedade é somente leitura, você ainda pode usá-lo para definir as características de estilo subjacente selecionado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ Observe que a primeira parte do exemplo de código declara duas `<asp:catalogzone>` elementos e o primeiro declara um valor para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ A segunda parte do exemplo de código, o texto de cores selecionado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controle está definido para um valor diferente.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#7)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#7)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo estiver visível, clique no link para um dos listado <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controla e observe os atributos de estilo do controle selecionado. Você pode clicar no **alterar estilos de Link de parte** botão para alterar a cor do texto do controle selecionado. Você também pode clicar nos links para os controles não selecionados, para ver como os atributos de estilo são alteradas quando um controle está selecionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectTargetZoneText">
+      <MemberSignature Language="C#" Value="public virtual string SelectTargetZoneText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectTargetZoneText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectTargetZoneText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto junto com o controle na interface do usuário (UI) de catálogo que permite aos usuários escolher qual zona para adicionar seus controles selecionados para.</summary>
+        <value>Uma cadeia de caracteres que contém o texto a ser exibido junto com o controle de seleção da zona. Uma cadeia de caracteres de específicos de cultura padrão é fornecida pelo .NET Framework.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o catálogo da interface do usuário é exibida pela primeira vez, os usuários podem selecionar uma da <xref:System.Web.UI.WebControls.WebParts.CatalogPart> controles, como <xref:System.Web.UI.WebControls.WebParts.DeclarativeCatalogPart>, que contém <xref:System.Web.UI.WebControls.WebParts.WebPart> ou outros controles de servidor que podem ser adicionados à página da Web. O usuário seleciona um ou mais controles e pode usar o <xref:System.Web.UI.WebControls.DropDownList> na área de rodapé do catálogo de controle e escolha o <xref:System.Web.UI.WebControls.WebParts.WebPartZone> controle na página na qual colocar os controles de servidor selecionado. O valor de texto de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectTargetZoneText%2A> propriedade é exibida junto com o <xref:System.Web.UI.WebControls.DropDownList> controle como uma instrução simple.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectTargetZoneText%2A> propriedade declarativamente e programaticamente. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> visão geral da classe.  
+  
+ Observe que a primeira parte do exemplo de código declara duas `<asp:catalogzone>` elementos e o primeiro declara um valor para o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectTargetZoneText%2A> propriedade.  
+  
+ [!code-aspx-csharp[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#2)]
+ [!code-aspx-vb[WebParts_CatalogZoneBase_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#2)]  
+  
+ Na segunda parte do exemplo de código, o valor de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectTargetZoneText%2A> propriedade é alterada de forma programática.  
+  
+ [!code-csharp[WebParts_CatalogZoneBase_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/CS/catalogzonebasecs.aspx#5)]
+ [!code-vb[WebParts_CatalogZoneBase_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_CatalogZoneBase_Overview/VB/catalogzonebasevb.aspx#5)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **catálogo** na lista suspensa para alternar para modo de exibição de catálogo. Quando o catálogo está visível, observe o texto exibido ao lado de <xref:System.Web.UI.WebControls.DropDownList> controle no rodapé do catálogo. Você pode clicar no **definir propriedades de texto de zona** botão para alterar o valor de texto da propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowCatalogIcons">
+      <MemberSignature Language="C#" Value="public virtual bool ShowCatalogIcons { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowCatalogIcons" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.CatalogZoneBase.ShowCatalogIcons" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os controles de servidor no catálogo exibem seus ícones associados no catálogo.</summary>
+        <value>
+          <see langword="true" />Se os ícones associados a controles de servidor no catálogo devem ser exibidos; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.WebControls.WebParts.WebPart>controles e outros controles de servidor que são encapsulados como <xref:System.Web.UI.WebControls.WebParts.GenericWebPart> controles em tempo de execução têm um <xref:System.Web.UI.WebControls.WebParts.WebPart.CatalogIconImageUrl%2A> propriedade. O valor dessa propriedade é a URL para uma imagem que é usada como um ícone para representar o controle em um catálogo de controles.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.ShowCatalogIcons%2A> propriedade indica se os ícones associados <xref:System.Web.UI.WebControls.WebParts.WebPart> e outros controles de servidor são exibidos no catálogo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.LoadPostData">
+      <MemberSignature Language="C#" Value="bool IPostBackDataHandler.LoadPostData (string postDataKey, System.Collections.Specialized.NameValueCollection postCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Web.UI.IPostBackDataHandler.LoadPostData(string postDataKey, class System.Collections.Specialized.NameValueCollection postCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.System#Web#UI#IPostBackDataHandler#LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="postDataKey" Type="System.String" />
+        <Parameter Name="postCollection" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="postDataKey">O identificador da chave do controle.</param>
+        <param name="postCollection">A coleção de pares de nome/valor para o servidor.</param>
+        <summary>Implementa o <see cref="M:System.Web.UI.IPostBackDataHandler.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" /> método chamando o <see cref="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)" /> método o <see cref="T:System.Web.UI.WebControls.WebParts.CatalogZoneBase" /> classe.</summary>
+        <returns>
+          <see langword="true" />Se um evento deve ser gerado para indicar que os dados foram alterados; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> é convertida em uma interface de <xref:System.Web.UI.IPostBackDataHandler>. Simplesmente chama o método de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.LoadPostData%2A> método no <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> classe, que por sua vez, processa o estado das caixas de seleção em um catálogo que correspondem aos controles de servidor no catálogo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent">
+      <MemberSignature Language="C#" Value="void IPostBackDataHandler.RaisePostDataChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.System#Web#UI#IPostBackDataHandler#RaisePostDataChangedEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> é convertida em uma interface de <xref:System.Web.UI.IPostBackDataHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.CatalogZoneBase.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Controla as alterações para o estado de exibição do controle de uma zona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.TrackViewState%2A> pela primeira vez, o método chama o método base <xref:System.Web.UI.WebControls.WebParts.ToolZone> classe para controlar o estado de exibição associado um <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase> zona. Em seguida, o método começa a rastrear o estado de exibição para adicionar e fechar verbos, bem como o <xref:System.Web.UI.WebControls.Style> objetos associados a <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.PartLinkStyle%2A> e o <xref:System.Web.UI.WebControls.WebParts.CatalogZoneBase.SelectedPartLinkStyle%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

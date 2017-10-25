@@ -1,0 +1,531 @@
+<Type Name="DiscoveryClientProtocol" FullName="System.Web.Services.Discovery.DiscoveryClientProtocol">
+  <TypeSignature Language="C#" Value="public class DiscoveryClientProtocol : System.Web.Services.Protocols.HttpWebClientProtocol" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiscoveryClientProtocol extends System.Web.Services.Protocols.HttpWebClientProtocol" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.DiscoveryClientProtocol" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Protocols.HttpWebClientProtocol</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Dá suporte para invocar programaticamente a descoberta de serviços Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Descoberta do serviço Web XML é o processo de localização, ou descoberta, um ou mais relacionadas a documentos que descrevem os XML Web services disponíveis. É por meio da descoberta de serviços da Web em XML que os clientes do serviço Web XML Saiba mais sobre o XML Web services disponíveis em uma determinada URL e como usá-los. XML Web services discovery funciona do local que você tenha já obtido a URL para um documento de descoberta, possivelmente por meio de um serviço de diretório, como http://uddi.microsoft.com, no entanto, você não tiver os detalhes sobre os serviços Web XML oferecido. Por meio da descoberta de serviços da Web em XML, você pode descobrir os detalhes sobre os serviços Web XML listados em um <xref:System.Web.Services.Discovery.DiscoveryDocument> em uma URL específica.  
+  
+ Um cliente de serviço Web XML inicia a descoberta de serviços da Web em XML, fornecendo uma URL para o o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A> ou <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> métodos. Normalmente, essa URL refere-se a um documento de descoberta, que por sua vez, refere-se a documentos que descrevem um ou mais serviços Web XML, que são adicionados ao <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> propriedade. Nesse momento, somente esse documento é baixado e verificado para apontar para informações válidas sobre XML Web services. No entanto, as referências contidas no documento não são verificadas neste estágio. Em vez disso, eles são adicionados para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> propriedade. Para verificar se as referências são válidas, invoque o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> ou <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> métodos que adicionar documentos referenciados válidos para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade. Último, se um cliente deseja salvar os resultados de descoberta no disco, chamar o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.WriteAll%2A> método.  
+  
+ Se não for necessário o acesso programático a descoberta de serviços da Web em XML, o [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] a ferramenta de descoberta de serviços Web (Disco.exe) é fornecido para a descoberta de serviços Web XML em um prompt de comando. Para obter mais detalhes, consulte [ferramenta de descoberta de serviços da Web (Disco.exe)](http://msdn.microsoft.com/en-us/acd88078-c581-42bc-94ca-6633e2851979).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que demonstra como usar o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol> classe junto com as outras classes no <xref:System.Web.Services.Discovery> namespace para chamar programaticamente os XML Web services descoberta. O exemplo de código demonstra como usar o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ReadAll%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.WriteAll%2A> métodos.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[DiscoveryClientProtocol#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol/CS/discocs.aspx#1)]
+ [!code-aspx-vb[DiscoveryClientProtocol#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DiscoveryClientProtocol ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Discovery.DiscoveryClientProtocol" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalInformation">
+      <MemberSignature Language="C#" Value="public System.Collections.IList AdditionalInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList AdditionalInformation" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientProtocol.AdditionalInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações além das referências encontrada no documento discovery.</summary>
+        <value>Um <see cref="T:System.Collections.IList" /> contendo informações adicionais sobre encontrada no documento discovery.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.AdditionalInformation%2A> propriedade principalmente contém associações de SOAP, representadas pelo <xref:System.Web.Services.Discovery.SoapBinding> classe, definida no documento discovery.  
+  
+   
+  
+## Examples  
+ [!code-cpp[DiscoveryClientProtocol_AdditionalInformation#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientProtocol_AdditionalInformation/CPP/discoveryclientprotocol_additionalinformation.cpp#1)]
+ [!code-csharp[DiscoveryClientProtocol_AdditionalInformation#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol_AdditionalInformation/CS/discoveryclientprotocol_additionalinformation.cs#1)]
+ [!code-vb[DiscoveryClientProtocol_AdditionalInformation#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol_AdditionalInformation/VB/discoveryclientprotocol_additionalinformation.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Discover">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryDocument Discover (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Discovery.DiscoveryDocument Discover(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL onde começa a descoberta de serviços da Web em XML.</param>
+        <summary>Descobre a URL fornecida para determinar se ele é um documento de descoberta.</summary>
+        <returns>Um <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> contendo os resultados da descoberta de serviços Web XML na URL fornecida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A> método espera que a URL fornecida é um documento de descoberta. Se a URL se refere a uma descrição de serviço ou um esquema XML uma exceção será lançada. Para descobrir um esquema XML ou uma descrição de serviço chamar o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> método.  
+  
+ Se a URL fornecida aponta para um documento de descoberta válida, o documento discovery na URL fornecida é adicionado para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleção. Além disso, referências dentro do documento de descoberta são adicionadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleção, mas não verificados para apontar para documentos de descoberta válida. Verifique se as referências, aponte para documentos de descoberta válida para invocar o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> ou <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que preenche um <xref:System.Web.UI.WebControls.DataGrid> com os detalhes sobre os documentos a <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade junto com as referências encontradas em cada documento durante a descoberta de serviços da Web em XML. O `PopulateGrid` método preenchimentos a <xref:System.Web.UI.WebControls.DataGrid> com os resultados de uma <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A> invocação seguido por uma chamada para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>.  
+  
+ [!code-csharp[DiscoveryClientProtocol.Discover#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.Discover/CS/discocs.aspx#1)]
+ [!code-vb[DiscoveryClientProtocol.Discover#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.Discover/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">Acessando a URL fornecida retornou um código de status HTTP diferente de <see cref="F:System.Net.HttpStatusCode.OK" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="url" /> parameteris uma URL válida, mas não apontar para um documento de descoberta válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscoverAny">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryDocument DiscoverAny (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Discovery.DiscoveryDocument DiscoverAny(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryDocument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL onde começa a descoberta de serviços da Web em XML.</param>
+        <summary>Descobre a URL fornecida para determinar se ele é um documento de descoberta, descrição do serviço ou um esquema de definição de esquema XML (XSD).</summary>
+        <returns>Um <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> contendo os resultados da descoberta de serviços Web XML na URL fornecida. Se o <paramref name="url" /> parâmetro se refere a uma descrição de serviço ou um esquema XSD, um <see cref="T:System.Web.Services.Discovery.DiscoveryDocument" /> é criado na memória para ela.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> método descobre se a URL fornecida é um documento de descoberta, a descrição do serviço ou o esquema XSD. Se ele for conhecido que a URL somente se refere a um documento de descoberta, o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A> método pode ser chamado.  
+  
+ Se a URL fornecida aponta para um documento de descoberta válida, o esquema XSD ou a descrição do serviço, o documento discovery na URL fornecida é adicionado para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleções. Quando a URL fornecida se refere a um esquema XSD ou a descrição do serviço um <xref:System.Web.Services.Discovery.DiscoveryDocument> é criado na memória e adicionado para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleções. Além disso, referências dentro do documento de descoberta são adicionadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleção, mas não verificados para apontar para documentos de descoberta válida. Para verificar se as referências apontam para documentos de descoberta válida, invoque o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> ou <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que preenche um <xref:System.Web.UI.WebControls.DataGrid> com os detalhes sobre os documentos a <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade junto com as referências encontradas em cada documento durante uma descoberta de serviços da Web em XML. O `PopulateGrid` método preenchimentos a <xref:System.Web.UI.WebControls.DataGrid> com os resultados de uma <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> invocação seguido por uma chamada para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>.  
+  
+ [!code-csharp[DiscoveryClientProtocol.DiscoverAny#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.DiscoverAny/CS/discocs.aspx#1)]
+ [!code-vb[DiscoveryClientProtocol.DiscoverAny#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.DiscoverAny/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">Acessando a URL fornecida retornou um código de status HTTP diferente de <see cref="F:System.Net.HttpStatusCode.OK" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O <paramref name="url" /> parameteris uma URL válida, mas não apontar para um documento de descoberta válida, a descrição do serviço ou o esquema XSD.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Documents">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryClientDocumentCollection Documents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Discovery.DiscoveryClientDocumentCollection Documents" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryClientDocumentCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de documentos de descoberta.</summary>
+        <value>Um <see cref="T:System.Web.Services.Discovery.DiscoveryClientDocumentCollection" /> que representa a coleção de documentos de descoberta encontrado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> coleção é preenchida durante chamadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> métodos. Durante as chamadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> métodos, se a URL fornecida é um documento de descoberta válida, o documento será adicionado ao <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> coleção. Durante chamadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> métodos, referências de documento de descoberta válida no <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleta são adicionados para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que preenche um <xref:System.Web.UI.WebControls.DataGrid> com os detalhes sobre os documentos a <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade descoberta durante a descoberta de serviços da Web em XML. O `PopulateGrid` método preenchimentos a <xref:System.Web.UI.WebControls.DataGrid> com os resultados de uma <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> invocação seguido por uma chamada para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[DiscoveryClientProtocol.Documents#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.Documents/CS/discocs.aspx#1)]
+ [!code-aspx-vb[DiscoveryClientProtocol.Documents#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.Documents/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Download">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Download (ref string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream Download(string&amp; url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.Download(System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL do documento de descoberta para baixar.</param>
+        <summary>Baixa o documento discovery na URL fornecida em um <see cref="T:System.IO.Stream" /> objeto.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> que contém o documento na URL fornecida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryClientProtocol_Download#2](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientProtocol_Download/CPP/discoveryclientprotocol_download.cpp#2)]
+ [!code-csharp[DiscoveryClientProtocol_Download#2](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol_Download/CS/discoveryclientprotocol_download.cs#2)]
+ [!code-vb[DiscoveryClientProtocol_Download#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol_Download/VB/discoveryclientprotocol_download.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">O download da URL fornecida retornou um código de status HTTP diferente de <see cref="F:System.Net.HttpStatusCode.OK" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Download">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Download (ref string url, ref string contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream Download(string&amp; url, string&amp; contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.Download(System.String@,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String&amp;" RefType="ref" />
+        <Parameter Name="contentType" Type="System.String&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="url">A URL do documento de descoberta para baixar.</param>
+        <param name="contentType">A codificação MIME do documento de descoberta baixado.</param>
+        <summary>Baixa o documento discovery na URL fornecida em um <see cref="T:System.IO.Stream" /> objeto, definindo o <paramref name="contentType" /> parâmetro para a codificação MIME do documento de descoberta.</summary>
+        <returns>Um <see cref="T:System.IO.Stream" /> que contém o documento na URL fornecida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[DiscoveryClientProtocol_Download2#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientProtocol_Download2/CPP/discoveryclientprotocol_download.cpp#1)]
+ [!code-csharp[DiscoveryClientProtocol_Download2#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol_Download2/CS/discoveryclientprotocol_download.cs#1)]
+ [!code-vb[DiscoveryClientProtocol_Download2#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol_Download2/VB/discoveryclientprotocol_download.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.WebException">O download da URL fornecida retornou um código de status HTTP diferente de <see cref="F:System.Net.HttpStatusCode.OK" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryExceptionDictionary Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Discovery.DiscoveryExceptionDictionary Errors" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientProtocol.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryExceptionDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de exceções que ocorreram durante a invocação do método desta classe.</summary>
+        <value>Um <see cref="T:System.Web.Services.Discovery.DiscoveryExceptionDictionary" /> de exceções.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Errors%2A> coleção é preenchida com exceções que ocorreram durante as chamadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>, e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> métodos. O <xref:System.Web.Services.Discovery.DiscoveryExceptionDictionary> está desmarcada na invocação dos métodos a seguir.  
+  
+   
+  
+## Examples  
+ [!code-cpp[DiscoveryClientProtocol_Errors#1](~/samples/snippets/cpp/VS_Snippets_Remoting/DiscoveryClientProtocol_Errors/CPP/discoveryclientprotocol_errors.cpp#1)]
+ [!code-csharp[DiscoveryClientProtocol_Errors#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol_Errors/CS/discoveryclientprotocol_errors.cs#1)]
+ [!code-vb[DiscoveryClientProtocol_Errors#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol_Errors/VB/discoveryclientprotocol_errors.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadExternals">
+      <MemberSignature Language="C#" Value="public void LoadExternals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadExternals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from a future version. The method call is no longer required for resource discovery", false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o <see cref="T:System.Web.Services.Discovery.DiscoveryClientProtocol" /> objeto para carregar todas as referências externas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAll">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryClientResultCollection ReadAll (string topLevelFilename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Discovery.DiscoveryClientResultCollection ReadAll(string topLevelFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.ReadAll(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryClientResultCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="topLevelFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="topLevelFilename">Nome do arquivo para ler, que contém o mapa de salva documentos de descoberta.</param>
+        <summary>Lê um arquivo que contém um mapa de documentos de descoberta salvo preenchendo o <see cref="P:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents" /> e <see cref="P:System.Web.Services.Discovery.DiscoveryClientProtocol.References" /> propriedades com documentos de descoberta, esquemas de definição de esquema XML (XSD) e descrições do serviço referenciadas no arquivo.</summary>
+        <returns>Um <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" /> que contém os resultados encontrados no arquivo com o mapa de documentos de descoberta salvos. O formato de arquivo é um <see cref="T:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoveryClientResultsFile" /> classe serializados em XML; no entanto, um normalmente deve criar o arquivo usando apenas o <see cref="M:System.Web.Services.Discovery.DiscoveryClientProtocol.WriteAll(System.String,System.String)" /> Disco.exe ou método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um arquivo que contém um mapa de documentos de descoberta salvo pode ser criado pela <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.WriteAll%2A> Disco.exe ou método.  
+  
+ O `topLevelFilename` parâmetro deve incluir o caminho totalmente qualificado, se o arquivo não existe no diretório atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que preenche um <xref:System.Web.UI.WebControls.DataGrid> com os detalhes sobre os documentos e referências encontradas em uma existente descoberta mapa documento usando o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ReadAll%2A> método.  
+  
+ [!code-csharp[DiscoveryClientProtocol.ReadAll#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.ReadAll/CS/discocs.aspx#1)]
+ [!code-vb[DiscoveryClientProtocol.ReadAll#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.ReadAll/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="References">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryClientReferenceCollection References { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Discovery.DiscoveryClientReferenceCollection References" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.DiscoveryClientProtocol.References" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryClientReferenceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma coleção de referências founds em documentos de descoberta resolvido.</summary>
+        <value>Um <see cref="T:System.Web.Services.Discovery.DiscoveryClientReferenceCollection" /> de referências descobertas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleção é preenchida durante chamadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A>, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> métodos. Durante as chamadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> métodos, se a URL fornecida é um documento de descoberta válida, o documento será adicionado ao <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleção junto com referências encontrada no documento discovery. Referências adicionadas durante chamadas para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Discover%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> métodos não são documentos de descoberta necessariamente válido. Durante chamadas para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> faz referência dentro de <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleção são verificado como documentos de descoberta válida. Se eles são válidos e contêm referências, eles devem ser adicionados para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que preenche um <xref:System.Web.UI.WebControls.DataGrid> com os detalhes sobre as referências a <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> propriedade descoberta durante uma descoberta de serviços da Web em XML. O `PopulateGrid` método preenchimentos a <xref:System.Web.UI.WebControls.DataGrid> com as referências encontradas em uma chamada para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A>.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[DiscoveryClientProtocol.References#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.References/CS/discocs.aspx#1)]
+ [!code-aspx-vb[DiscoveryClientProtocol.References#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.References/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAll">
+      <MemberSignature Language="C#" Value="public void ResolveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Resolve todas as referências a documentos de descoberta, esquemas de definição de esquema XML (XSD) e descrições de serviços no <see cref="P:System.Web.Services.Discovery.DiscoveryClientProtocol.References" /> propriedade, bem como referências nos documentos de descoberta referenciado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>resolve válido faz referência a ela localiza e as coloca no <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade. Ambos <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> Baixe e verifique se os esquemas XSD e descrições de serviço do <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> propriedade. No entanto, os dois métodos diferem no modo como tratam documentos de descoberta. <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A>resolve todas as referências em documentos de descoberta no <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> propriedade; se um documento de descoberta contém referências a outros documentos de descoberta, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> resolve apenas os documentos de descoberta. Documentos de descoberta encontrados nesses documentos de descoberta aninhados em um nível de profundidade não são resolvidos por <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A>; enquanto <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> resolve todos eles. <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>continua a resolver referências em documentos de descoberta aninhada até que não haja nenhuma referência a mais.  
+  
+ Erros que ocorrem durante o processo de verificação feito por <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> não gerada no momento da ocorrência, mas em vez disso, coletados e adicionado para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Errors%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que preenche um <xref:System.Web.UI.WebControls.DataGrid> com os detalhes sobre os documentos a <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade junto com as referências encontradas em cada documento durante uma descoberta de serviços da Web em XML. O `PopulateGrid` método preenchimentos a <xref:System.Web.UI.WebControls.DataGrid> com os resultados de uma <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> invocação seguido por uma chamada para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>.  
+  
+ [!code-csharp[DiscoveryClientProtocol.ResolveAll#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.ResolveAll/CS/discocs.aspx#1)]
+ [!code-vb[DiscoveryClientProtocol.ResolveAll#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.ResolveAll/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveOneLevel">
+      <MemberSignature Language="C#" Value="public void ResolveOneLevel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResolveOneLevel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Resolve todas as referências a documentos de descoberta, esquemas de definição de esquema XML (XSD) e descrições de serviços em <see cref="P:System.Web.Services.Discovery.DiscoveryClientProtocol.References" />, bem como referências encontradas nesses documentos de descoberta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A>resolve válido faz referência a ela localiza e as coloca no <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade. Ambos <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> Baixe e verifique se os esquemas XSD e descrições de serviço do <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> propriedade. No entanto, os dois métodos diferem no modo como tratam documentos de descoberta. <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A>resolve todas as referências em documentos de descoberta dentro do <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> propriedade. Se um documento de descoberta contiver referências a outros documentos de descoberta, <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> resolve apenas os documentos de descoberta. Documentos de descoberta encontrados nesses documentos de descoberta aninhados em um nível de profundidade não são resolvidos por <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A>; enquanto <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A> resolver todos eles. <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>continua a resolver referências em documentos de descoberta aninhada até que não haja nenhuma referência a mais.  
+  
+ Erros que ocorrem durante o processo de verificação feito por <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A> não gerada no momento da ocorrência, mas em vez disso, coletados e adicionado para o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Errors%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que preenche um <xref:System.Web.UI.WebControls.DataGrid> com os detalhes sobre os documentos a <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedade junto com as referências encontradas em cada documento durante uma descoberta de serviços da Web em XML. O `PopulateGrid` método preenchimentos a <xref:System.Web.UI.WebControls.DataGrid> com os resultados de uma <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> invocação seguido por uma chamada para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveOneLevel%2A>.  
+  
+ [!code-csharp[DiscoveryClientProtocol.ResolveOneLevel#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.ResolveOneLevel/CS/discocs.aspx#1)]
+ [!code-vb[DiscoveryClientProtocol.ResolveOneLevel#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.ResolveOneLevel/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAll">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Discovery.DiscoveryClientResultCollection WriteAll (string directory, string topLevelFilename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Services.Discovery.DiscoveryClientResultCollection WriteAll(string directory, string topLevelFilename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.DiscoveryClientProtocol.WriteAll(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Discovery.DiscoveryClientResultCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directory" Type="System.String" />
+        <Parameter Name="topLevelFilename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="directory">O diretório no qual salvar todos os documentos no momento o <see cref="P:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents" /> propriedade.</param>
+        <param name="topLevelFilename">O nome do arquivo para criar ou substituir contendo um mapa de todos os documentos salvos.</param>
+        <summary>Grava todos os documentos de descoberta, esquemas de definição de esquema XML (XSD) e descrições de serviços no <see cref="P:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents" /> propriedade para o diretório fornecido e cria um arquivo no diretório.</summary>
+        <returns>Um <see cref="T:System.Web.Services.Discovery.DiscoveryClientResultCollection" /> que contém os resultados de todos os arquivos salvos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo criado com o nome do `topLevelFilename` parâmetro no diretório especificado pelo parâmetro de diretório contém um mapa de documentos de descoberta salvo, esquemas de definição de esquema XML (XSD) e descrições de serviços. Esse arquivo pode ser lido usando o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ReadAll%2A> para popular o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.References%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.Documents%2A> propriedades. O formato do arquivo é XML que contém uma versão serializada do <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoveryClientResultsFile> classe.  
+  
+ Se houver um arquivo com o mesmo nome que o `topLevelFilename` parâmetro no `directory` parâmetro, o arquivo será substituído pelo <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.WriteAll%2A> método. O `topLevelFilename` parâmetro deve incluir o caminho totalmente qualificado, se o arquivo não existe no diretório atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é um formulário da Web que grava os resultados de uma descoberta de serviços da Web em disco invocando o <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.WriteAll%2A> método depois chamadas para <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.DiscoverAny%2A> e <xref:System.Web.Services.Discovery.DiscoveryClientProtocol.ResolveAll%2A>.  
+  
+ [!code-csharp[DiscoveryClientProtocol.WriteAll#1](~/samples/snippets/csharp/VS_Snippets_Remoting/DiscoveryClientProtocol.WriteAll/CS/discocs.aspx#1)]
+ [!code-vb[DiscoveryClientProtocol.WriteAll#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/DiscoveryClientProtocol.WriteAll/VB/discovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

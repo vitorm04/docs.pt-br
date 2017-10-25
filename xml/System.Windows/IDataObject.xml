@@ -1,0 +1,492 @@
+<Type Name="IDataObject" FullName="System.Windows.IDataObject">
+  <TypeSignature Language="C#" Value="public interface IDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.IDataObject" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um mecanismo independente de formato para a transferência de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.IDataObject> interface é usada pelo <xref:System.Windows.Clipboard> classe para dados de operações de transferência como arrastar e soltar.  
+  
+ Quando implementado por uma classe, o <xref:System.Windows.IDataObject> métodos permitem que um único objeto de dados oferecer dados em vários formatos.  Oferta de dados em vários formatos tende a tornar os dados usados por uma ampla variedade de aplicativos que se apenas um único formato de dados tinham suporte.  
+  
+ O <xref:System.Windows.DataObject> classe fornece uma implementação básica do <xref:System.Windows.IDataObject> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetData(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato no qual os dados serão recuperados. Consulte a classe <see cref="T:System.Windows.DataFormats" /> para obter um conjunto de formatos de dados predefinidos.</param>
+        <summary>Recupera um objeto de dados em um formato especificado; o formato de dados é especificado por uma cadeia de caracteres.</summary>
+        <returns>Um objeto de dados com os dados no formato especificado ou **null**, se os dados não estiverem disponíveis no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.GetData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetData(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um objeto <see cref="T:System.Type" /> que especifica o formato com o qual os dados serão recuperados. Consulte a classe <see cref="T:System.Windows.DataFormats" /> para obter um conjunto de formatos de dados predefinidos.</param>
+        <summary>Recupera um objeto de dados em um formato especificado; o formato de dados é especificado por um objeto <see cref="T:System.Type" />.</summary>
+        <returns>Um objeto de dados com os dados no formato especificado ou **null**, se os dados não estiverem disponíveis no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.GetData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetData(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetData(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato no qual os dados serão recuperados. Consulte a classe <see cref="T:System.Windows.DataFormats" /> para obter um conjunto de formatos de dados predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="true" />para tentar converter automaticamente os dados no formato especificado; <see langword="false" /> para nenhuma conversão de formato de dados.  
+  
+ Se esse parâmetro for <see langword="false" />, o método retorna dados no formato especificado, se disponível, ou <see langword="null" /> se os dados não estão disponíveis no formato especificado.</param>
+        <summary>Recupera um objeto de dados em um formato especificado, opcionalmente, converter os dados no formato especificado.</summary>
+        <returns>Um objeto de dados com os dados no formato especificado ou **null**, se os dados não estiverem disponíveis no formato especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.GetData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetDataPresent">
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Verifica se os dados estão disponíveis em um formato especificado ou se podem ser convertidos para esse formato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar **GetDataPresent** para determinar se um formato especificado está disponível neste objeto de dados antes de chamar <xref:System.Windows.IDataObject.GetData%2A>.  
+  
+ Chamar <xref:System.Windows.IDataObject.GetFormats%2A> para obter uma lista de todos os formatos disponíveis neste objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetDataPresent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato para verificar. Consulte o <see cref="T:System.Windows.DataFormats" /> classe para um conjunto de formatos de dados predefinidos.</param>
+        <summary>Verifica se os dados estão disponíveis no, ou podem ser convertidos em um formato especificado; o formato de dados é especificado por uma cadeia de caracteres.</summary>
+        <returns>
+          <see langword="true" /> se os dados estiverem no formato especificado ou puderem ser convertidos nele; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.GetDataPresent%2A>.  
+  
+ Chamar **GetDataPresent** para determinar se um formato especificado está disponível neste objeto de dados antes de chamar <xref:System.Windows.IDataObject.GetData%2A>.  
+  
+ Chamar <xref:System.Windows.IDataObject.GetFormats%2A> para obter uma lista de todos os formatos disponíveis neste objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (Type format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(class System.Type format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetDataPresent(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que especifica o formato para verificar. Consulte a classe <see cref="T:System.Windows.DataFormats" /> para obter um conjunto de formatos de dados predefinidos.</param>
+        <summary>Verifica se os dados estão disponíveis em um formato especificado ou se podem ser convertidos para esse formato. O formato de dados é especificado por uma <see cref="T:System.Type" /> objeto.</summary>
+        <returns>
+          <see langword="true" /> se os dados estiverem no formato especificado ou puderem ser convertidos nele; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método <xref:System.Windows.DataObject.GetDataPresent%2A>.  
+  
+ Chamar **GetDataPresent** para determinar se um formato especificado está disponível neste objeto de dados antes de chamar <xref:System.Windows.IDataObject.GetData%2A>.  
+  
+ Chamar <xref:System.Windows.IDataObject.GetFormats%2A> para obter uma lista de todos os formatos disponíveis neste objeto de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataPresent">
+      <MemberSignature Language="C#" Value="public bool GetDataPresent (string format, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetDataPresent(string format, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetDataPresent(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato para verificar. Consulte o <see cref="T:System.Windows.DataFormats" /> classe para um conjunto de formatos de dados predefinidos.</param>
+        <param name="autoConvert">
+          <see langword="false" />Para verificar somente para o formato especificado; <see langword="true" /> também de verificar se os dados armazenados neste objeto de dados podem ser convertidos no formato especificado.</param>
+        <summary>Verifica se os dados estão disponíveis em um formato especificado ou se podem ser convertidos para esse formato. Um <see langword="Boolean" /> sinalizador indica se é necessário verificar se os dados podem ser convertidos no formato especificado, se ele não está disponível nesse formato.</summary>
+        <returns>
+          <see langword="true" /> se os dados estiverem no formato especificado ou puderem ser convertidos nele; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.GetDataPresent%2A>.  
+  
+ Chamar **GetDataPresent** para determinar se um formato especificado está disponível neste objeto de dados antes de chamar <xref:System.Windows.IDataObject.GetData%2A>.  
+  
+ Chamar <xref:System.Windows.IDataObject.GetFormats%2A> para obter uma lista de todos os formatos disponíveis neste objeto de dados.  
+  
+ Este método retorna **true** quando:  
+  
+-   O *autoConvert* parâmetro é **true** e os dados estão no formato especificado, ou ele pode ser convertido no formato especificado.  
+  
+-   O *autoConvert* parâmetro é **false** e os dados no formato especificado.  
+  
+ Este método retorna **false** quando:  
+  
+-   O *autoConvert* parâmetro é **true** e os dados não está disponíveis no formato especificado e não podem ser convertidos no formato especificado.  
+  
+-   O *autoConvert* parâmetro é **false**, e os dados não estão disponíveis no formato especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public string[] GetFormats ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetFormats" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de todos os formatos de dados neste objeto de dados são armazenados no, ou podem ser convertidos em.</summary>
+        <returns>Uma matriz de cadeias de caracteres, com cada cadeia de caracteres especificando o nome de um formato suportado por este objeto de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.GetFormats%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFormats">
+      <MemberSignature Language="C#" Value="public string[] GetFormats (bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string[] GetFormats(bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.GetFormats(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="autoConvert">
+          <see langword="true" />para recuperar todos os formatos de que os dados armazenados neste objeto de dados são armazenados no, ou podem ser convertidos em; <see langword="false" /> para recuperar apenas os formatos de dados armazenados neste objeto de dados são armazenados em (excluindo formatos que os dados não são armazenados em, mas podem ser convertidos automaticamente para).</param>
+        <summary>Retorna uma lista de todos os formatos de dados neste objeto de dados são armazenados em. Um <see langword="Boolean" /> sinalizador indica se deve ou não incluir também os formatos de dados podem ser convertidos automaticamente para.</summary>
+        <returns>Uma matriz de cadeias de caracteres, com cada cadeia de caracteres especificando o nome de um formato suportado por este objeto de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.GetFormats%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="data">Os dados a serem armazenados neste objeto de dados.</param>
+        <summary>Armazena os dados especificados neste objeto de dados, converter automaticamente o formato de dados do tipo de objeto de origem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.SetData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato para armazenar os dados. Consulte o <see cref="T:System.Windows.DataFormats" /> classe para um conjunto de formatos de dados predefinidos.</param>
+        <param name="data">Os dados a serem armazenados neste objeto de dados.</param>
+        <summary>Armazena os dados especificados neste objeto de dados, juntamente com um ou mais formatos de dados especificado. O formato de dados é especificado por uma cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.SetData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (Type format, object data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(class System.Type format, object data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Type" />
+        <Parameter Name="data" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="format">Um <see cref="T:System.Type" /> que especifica o formato para armazenar os dados. Consulte a classe <see cref="T:System.Windows.DataFormats" /> para obter um conjunto de formatos de dados predefinidos.</param>
+        <param name="data">Os dados a serem armazenados neste objeto de dados.</param>
+        <summary>Armazena os dados especificados neste objeto de dados, juntamente com um ou mais formatos de dados especificado. O formato de dados é especificado por um <see cref="T:System.Type" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.SetData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (string format, object data, bool autoConvert);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetData(string format, object data, bool autoConvert) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.IDataObject.SetData(System.String,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="data" Type="System.Object" />
+        <Parameter Name="autoConvert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="format">Uma cadeia de caracteres que especifica o formato para armazenar os dados. Consulte o <see cref="T:System.Windows.DataFormats" /> classe para um conjunto de formatos de dados predefinidos.</param>
+        <param name="data">Os dados a serem armazenados neste objeto de dados.</param>
+        <param name="autoConvert">
+          <see langword="true" />para permitir que os dados a ser convertido em outro formato de recuperação; <see langword="false" /> para impedir que os dados de que está sendo convertido em outro formato de recuperação.</param>
+        <summary>Armazena os dados especificados neste objeto de dados, juntamente com um ou mais formatos de dados especificado. Essa sobrecarga inclui um <see langword="Boolean" /> sinalizador para indicar se os dados podem ser convertidos para outro formato de recuperação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma implementação deste método, consulte <xref:System.Windows.DataObject.SetData%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

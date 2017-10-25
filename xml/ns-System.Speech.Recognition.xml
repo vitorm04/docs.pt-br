@@ -1,0 +1,45 @@
+<Namespace Name="System.Speech.Recognition">
+  <Docs>
+    <summary>O <see cref="N:System.Speech.Recognition" /> namespace contém tipos de tecnologia de fala de área de trabalho do Windows para implementar o reconhecimento de fala.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O software de tecnologia de voz de área de trabalho do Windows oferece uma infraestrutura de reconhecimento de fala básico que digitaliza acústico sinais e recupera as palavras e elementos de fala de entrada de áudio.  
+  
+ Os aplicativos usam o <xref:System.Speech.Recognition> namespace para acessar e estender essa tecnologia de reconhecimento de fala básica definindo algoritmos para identificar e atuando em específicos frases ou padrões de palavra e gerenciando o comportamento de tempo de execução dessa infraestrutura de fala.  
+  
+ **Criar gramáticas**  
+  
+ Criar gramáticas, que consistem em um conjunto de regras e restrições, definir palavras e frases que reconheça o aplicativo como entrada significativa. Usar um construtor para o <xref:System.Speech.Recognition.Grammar> classe, você pode criar um objeto de gramática em tempo de execução de <xref:System.Speech.Recognition.GrammarBuilder> ou <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> instâncias, ou de um arquivo, uma cadeia de caracteres ou um fluxo que contém uma definição de uma gramática.  
+  
+ Usando o <xref:System.Speech.Recognition.GrammarBuilder> e <xref:System.Speech.Recognition.Choices> classes, você pode criar programaticamente gramáticas de baixa a média complexidade que pode ser usada para executar o reconhecimento para muitos cenários comuns. Para criar gramáticas programaticamente que estão em conformidade com a [fala reconhecimento gramática especificação 1.0 (SRGS)](http://go.microsoft.com/fwlink/?LinkId=201761) e aproveitar a flexibilidade de criação de SRGS, use os tipos do <xref:System.Speech.Recognition.SrgsGrammar> namespace. Você também pode criar gramáticas SRGS de formato XML usando qualquer texto editor e use o resultado para criar <xref:System.Speech.Recognition.GrammarBuilder>, <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> , ou <xref:System.Speech.Recognition.Grammar> objetos.  
+  
+ Além disso, a <xref:System.Speech.Recognition.DictationGrammar> classe fornece uma gramática casos especiais para dar suporte a um modelo de ditado convencional.  
+  
+ Consulte [criar gramáticas](http://msdn.microsoft.com/en-us/dbea278c-21a5-4816-aee7-5fd88ef993dd) no [guia de programação de fala de sistema para o .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) para obter mais informações e exemplos.  
+  
+ **Gerenciar os mecanismos de reconhecimento de fala**  
+  
+ Instâncias do <xref:System.Speech.Recognition.SpeechRecognizer> e <xref:System.Speech.Recognition.SpeechRecognitionEngine> fornecido com <xref:System.Speech.Recognition.Grammar> objetos fornecem o acesso primário para os mecanismos de reconhecimento de fala da tecnologia de fala de área de trabalho do Windows.  
+  
+ Você pode usar o <xref:System.Speech.Recognition.SpeechRecognizer> classe para criar aplicativos que usam a tecnologia de reconhecimento de fala fornecida pelo Windows, que pode ser configurado por meio de cliente a **painel de controle**. Esses aplicativos aceitam entrada por meio do mecanismo de entrada áudio do computador padrão.  
+  
+ Para obter mais controle sobre a configuração e o tipo de mecanismo de reconhecimento, criar um aplicativo usando <xref:System.Speech.Recognition.SpeechRecognitionEngine>, que é executado em processo. Usando o <xref:System.Speech.Recognition.SpeechRecognitionEngine> classe, você pode selecionar também dinamicamente de entrada de dispositivos, arquivos ou fluxos de áudio.  
+  
+ Consulte [inicializar e gerenciar um mecanismo de reconhecimento de fala](http://msdn.microsoft.com/en-us/6eed5b59-1258-4013-8a4c-a1ddabd93ae4) no [guia de programação de fala de sistema para o .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) para obter mais informações.  
+  
+ **Responder a eventos**  
+  
+ <xref:System.Speech.Recognition.SpeechRecognizer>e <xref:System.Speech.Recognition.SpeechRecognitionEngine> objetos geram eventos em resposta a entrada de áudio para o mecanismo de reconhecimento de fala. O `AudioLevelUpdated`, `AudioSignalProblemOccurred`, `AudioStateChanged` os eventos são gerados em resposta a alterações no sinal de entrada. O `SpeechDetected` é gerado quando o mecanismo de reconhecimento de fala identifica a entrada de áudio como fala. O mecanismo de reconhecimento de fala gera o `SpeechRecognized` evento quando ela corresponde a fala para uma das suas gramáticas carregadas e gera o `SpeechRecognitionRejected` quando a entrada de fala não corresponde a nenhum dos seus gramáticas carregadas.  
+  
+ Outros tipos de eventos incluem o `LoadGrammarCompleted` eventos que um mecanismo de reconhecimento de fala gera quando ele carregou uma gramática. O <xref:System.Speech.Recognition.SpeechRecognizer.StateChanged> é exclusivo para o <xref:System.Speech.Recognition.SpeechRecognizer> classe, que gera o evento quando muda o estado de reconhecimento de fala do Windows.  
+  
+ Você pode registrar para receber notificações de eventos que gera o reconhecimento de fala e criar manipuladores usando o `EventsArgs` classes associadas a cada um desses eventos programar o comportamento do aplicativo quando um evento é gerado.  
+  
+ Consulte [usando eventos de reconhecimento de fala](http://msdn.microsoft.com/en-us/01c598ca-2e0e-4e89-b303-cd1cef9e8482) no [guia de programação de fala de sistema para o .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) para obter mais informações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

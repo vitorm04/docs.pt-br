@@ -1,0 +1,73 @@
+<Type Name="AudioPlayMode" FullName="Microsoft.VisualBasic.AudioPlayMode">
+  <TypeSignature Language="C#" Value="public enum AudioPlayMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AudioPlayMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.AudioPlayMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica como tocar sons ao chamar métodos de áudio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o `AudioPlayMode` membros de enumeração para controlar como o <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> método reproduz sons.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Background">
+      <MemberSignature Language="C#" Value="Background" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AudioPlayMode Background = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AudioPlayMode.Background" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AudioPlayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Faz com que o método <see langword="My.Computer.Audio.Play" /> toque o som em segundo plano. O código de chamada continua a ser executado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundLoop">
+      <MemberSignature Language="C#" Value="BackgroundLoop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AudioPlayMode BackgroundLoop = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AudioPlayMode.BackgroundLoop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AudioPlayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Faz com que o método <see langword="My.Computer.Audio.Play" /> toque o som em segundo plano até o método <see cref="M:Microsoft.VisualBasic.Devices.Audio.Stop" /> ser chamado. O código de chamada continua a ser executado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitToComplete">
+      <MemberSignature Language="C#" Value="WaitToComplete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.AudioPlayMode WaitToComplete = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.AudioPlayMode.WaitToComplete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.AudioPlayMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Faz com que o método <see langword="My.Computer.Audio.Play" /> toque o som e aguarda até que ele seja concluído antes de prosseguir com o código de chamada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

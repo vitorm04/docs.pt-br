@@ -1,0 +1,289 @@
+<Type Name="ServicePointManagerElement" FullName="System.Net.Configuration.ServicePointManagerElement">
+  <TypeSignature Language="C#" Value="public sealed class ServicePointManagerElement : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ServicePointManagerElement extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.ServicePointManagerElement" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as configurações padrão usadas para criar conexões com um computador remoto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe corresponde do `servicePointManager` atributo do `settings` [ &lt;servicePointManager&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md) elemento de configuração.  
+  
+ Essa classe é usada para especificar os valores que são usados para inicializar novas <xref:System.Net.ServicePoint> objetos.  
+  
+ Essa classe fornece acesso programático a informações que podem ser armazenados em arquivos de configuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServicePointManagerElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.ServicePointManagerElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Configuration.ServicePointManagerElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckCertificateName">
+      <MemberSignature Language="C#" Value="public bool CheckCertificateName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckCertificateName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.CheckCertificateName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("checkCertificateName", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que controla verificando informações de nome de host no X509 certificado.</summary>
+        <value>
+          <see langword="true" />para especificar a verificação de nome de host; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckCertificateRevocationList">
+      <MemberSignature Language="C#" Value="public bool CheckCertificateRevocationList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckCertificateRevocationList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.CheckCertificateRevocationList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("checkCertificateRevocationList", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o certificado é verificado em relação à lista de revogação de autoridade de certificação.</summary>
+        <value>
+          <see langword="true" />Se a lista de revogação de certificado é verificada; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, o certificado é verificado em relação a lista de revogação de autoridade de certificado como parte do processo de validação de certificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsRefreshTimeout">
+      <MemberSignature Language="C#" Value="public int DnsRefreshTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DnsRefreshTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.DnsRefreshTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("dnsRefreshTimeout", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo após o qual as informações de endereço são atualizadas.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> que especifica quando endereços são resolvidos usando DNS.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade define o <xref:System.Net.ServicePointManager.DnsRefreshTimeout%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDnsRoundRobin">
+      <MemberSignature Language="C#" Value="public bool EnableDnsRoundRobin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDnsRoundRobin" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.EnableDnsRoundRobin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("enableDnsRoundRobin", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que controla o uso de endereços IP diferentes em conexões no mesmo servidor.</summary>
+        <value>
+          <see langword="true" />Para habilitar o comportamento de rodízio DNS; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionPolicy">
+      <MemberSignature Language="C#" Value="public System.Net.Security.EncryptionPolicy EncryptionPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Security.EncryptionPolicy EncryptionPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.EncryptionPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("encryptionPolicy", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Security.EncryptionPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Net.Security.EncryptionPolicy" /> para usar.</summary>
+        <value>A política de criptografia a ser usado para um <see cref="T:System.Net.ServicePointManager" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Security.EncryptionPolicy> propriedade pode exigir, permitir ou impedir a criptografia. O <xref:System.Net.Security.EncryptionPolicy> serão aplicadas a uma sessão SSL/TLS. O uso da criptografia Null é necessário quando a política de criptografia é definida como <xref:System.Net.Security.EncryptionPolicy?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expect100Continue">
+      <MemberSignature Language="C#" Value="public bool Expect100Continue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Expect100Continue" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.Expect100Continue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("expect100Continue", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que determina se 100-Continue comportamento é usado.</summary>
+        <value>
+          <see langword="true" /> para esperar respostas 100-Continue para solicitações <see langword="POST" />; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, solicitações de cliente que usam o `POST` método esperar receber 100-Continue a resposta do servidor para indicar que o cliente deve enviar os dados a ser lançada. Esse mecanismo permite que os clientes evitar o envio de grandes quantidades de dados pela rede quando o servidor, com base em cabeçalhos de solicitação, pretende rejeitar a solicitação.  
+  
+ Para obter mais informações, consulte: <xref:System.Net.ServicePointManager.Expect100Continue%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostDeserialize">
+      <MemberSignature Language="C#" Value="protected override void PostDeserialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PostDeserialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.ServicePointManagerElement.PostDeserialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseNagleAlgorithm">
+      <MemberSignature Language="C#" Value="public bool UseNagleAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseNagleAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.ServicePointManagerElement.UseNagleAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("useNagleAlgorithm", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booleano que determina se o algoritmo Nagle é usado.</summary>
+        <value>
+          <see langword="true" /> para usar o algoritmo de Nagle; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O algoritmo Nagle é usado para reduzir o tráfego de rede, o buffer de pacotes pequenos de dados e transmiti-los como um único pacote. Esse processo também é conhecido como "nagling"; ele é amplamente usado porque reduz o número de pacotes transmitidos e reduz a sobrecarga por pacote.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

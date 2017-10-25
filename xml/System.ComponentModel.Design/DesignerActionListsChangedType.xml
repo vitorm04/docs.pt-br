@@ -1,0 +1,65 @@
+<Type Name="DesignerActionListsChangedType" FullName="System.ComponentModel.Design.DesignerActionListsChangedType">
+  <TypeSignature Language="C#" Value="public enum DesignerActionListsChangedType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DesignerActionListsChangedType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionListsChangedType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de alteração que ocorrem em uma coleção de <see cref="T:System.ComponentModel.Design.DesignerActionList" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionListsChangedType> enumeração indica que um elemento foi adicionado ou removido de uma coleção gerenciada de <xref:System.ComponentModel.Design.DesignerActionList> objetos. Essa enumeração é usada no <xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs> classe, que está associado com o <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> evento.  
+  
+> [!NOTE]
+>  Embora o <xref:System.ComponentModel.Design.DesignerActionListCollection> classe é uma coleção de <xref:System.ComponentModel.Design.DesignerActionList> objetos, ele não gere eventos diretamente. Em vez disso, o proprietário <xref:System.ComponentModel.Design.DesignerActionService> gera <xref:System.ComponentModel.Design.DesignerActionService.DesignerActionListsChanged> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActionListsAdded">
+      <MemberSignature Language="C#" Value="ActionListsAdded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.DesignerActionListsChangedType ActionListsAdded = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.DesignerActionListsChangedType.ActionListsAdded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListsChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ou mais <see cref="T:System.ComponentModel.Design.DesignerActionList" /> objetos foram adicionados à coleção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ActionListsRemoved">
+      <MemberSignature Language="C#" Value="ActionListsRemoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.DesignerActionListsChangedType ActionListsRemoved = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.DesignerActionListsChangedType.ActionListsRemoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerActionListsChangedType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um ou mais <see cref="T:System.ComponentModel.Design.DesignerActionList" /> objetos foram removidos da coleção.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,354 @@
+<Type Name="UriTemplateMatch" FullName="System.UriTemplateMatch">
+  <TypeSignature Language="C#" Value="public class UriTemplateMatch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UriTemplateMatch extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.UriTemplateMatch" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe que representa os resultados de uma operação de correspondência em uma instância de <see cref="T:System.UriTemplate" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.UriTemplateMatch> classe representa os resultados de chamar o <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> método. Esta classe não é thread-safe.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como usar o <xref:System.UriTemplateMatch> classe.  
+  
+ [!code-csharp[UriTemplateMatch#0](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/program.cs#0)]
+ [!code-vb[UriTemplateMatch#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UriTemplateMatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.UriTemplateMatch.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.UriTemplateMatch" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Geralmente você não diretamente criar uma instância dessa classe, uma <xref:System.UriTemplateMatch> instância é retornada do <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> ou <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> método. O <xref:System.UriTemplateTable.Match%2A> método retorna uma coleção de <xref:System.UriTemplateMatch> também.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseUri">
+      <MemberSignature Language="C#" Value="public Uri BaseUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri BaseUri" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.BaseUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o URI de base para a correspondência de modelo.</summary>
+        <value>Um <see cref="T:System.Uri" /> instância que representa o URI de base para a correspondência de modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.BaseUri%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#1](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#1)]
+ [!code-vb[UriTemplateMatch#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoundVariables">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection BoundVariables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection BoundVariables" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.BoundVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="BoundVariables" /> coleção para a correspondência de modelo.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> instância que contém valores de variáveis de modelo extraídos do URI durante a correspondência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada nome de variável de modelo aparece como um nome na coleção, e o valor associado a essa variável é armazenado com o nome correspondente. Os valores nesta coleção tem tido todas as sequências de escape convertidas em caracteres reais. Esta coleção de valor de nome usa uma pesquisa não diferencia maiusculas de minúsculas durante a correspondência de nomes de variáveis.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.BoundVariables%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#2](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#2)]
+ [!code-vb[UriTemplateMatch#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/snippets.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public object Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Data" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o objeto associado a <see cref="T:System.UriTemplateMatch" /> instância.</summary>
+        <value>Uma instância <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você adiciona um <xref:System.UriTemplate> para um <xref:System.UriTemplateTable> associar dados com o modelo. Esse valor é um aplicativo específico; Nenhuma semântica específica é associada esse valor. Quando <xref:System.UriTemplateTable.Match%28System.Uri%29> é chamado e uma correspondência for encontrada, os dados associados com o modelo correspondente serão retornados no <xref:System.UriTemplateMatch.Data%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.Data%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#3](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#3)]
+ [!code-vb[UriTemplateMatch#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/snippets.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection QueryParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection QueryParameters" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.QueryParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de parâmetros de cadeia de caracteres de consulta e seus valores.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> instância que contém os parâmetros de cadeia de caracteres de consulta e seus valores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os pares de nome/valor de cadeia de caracteres de consulta do URI original aparecem nessa coleção, mesmo que não são explicitamente especificados na cadeia de caracteres modelo foi correspondida. Os valores nesta coleção tiveram todos convertidas em caracteres reais de sequências de escape.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.QueryParameters%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#4](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#4)]
+ [!code-vb[UriTemplateMatch#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/snippets.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePathSegments">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; RelativePathSegments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; RelativePathSegments" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.RelativePathSegments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de segmentos de caminho relativo.</summary>
+        <value>Uma coleção de segmentos de caminho relativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade contém uma coleção dos segmentos de caminho de URI que o modelo junto com os segmentos de caminho que corresponde a um modelo curinga de correspondência do candidato. Segmentos de caminho que corresponde a um caractere curinga de modelo também estão contidos no <xref:System.UriTemplateMatch.WildcardPathSegments%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.RelativePathSegments%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#5](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#5)]
+ [!code-vb[UriTemplateMatch#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/snippets.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public Uri RequestUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri RequestUri" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.RequestUri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o URI correspondente.</summary>
+        <value>Uma instância de <see cref="T:System.Uri" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.RequestUri%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#6](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#6)]
+ [!code-vb[UriTemplateMatch#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/snippets.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Template">
+      <MemberSignature Language="C#" Value="public UriTemplate Template { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.UriTemplate Template" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.Template" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o <see cref="T:System.UriTemplate" /> instância associada a esta <see cref="T:System.UriTemplateMatch" /> instância.</summary>
+        <value>Uma instância de <see cref="T:System.UriTemplate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade contém o <xref:System.UriTemplate> candidato URI correspondente.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.Template%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#7](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#7)]
+ [!code-vb[UriTemplateMatch#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/uritemplatematch/vb/snippets.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WildcardPathSegments">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; WildcardPathSegments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; WildcardPathSegments" />
+      <MemberSignature Language="DocId" Value="P:System.UriTemplateMatch.WildcardPathSegments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de segmentos de caminho que correspondem a um caractere curinga no modelo de URI.</summary>
+        <value>Uma coleção de segmentos de caminho que correspondem a um caractere curinga no modelo de URI.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como acessar o <xref:System.UriTemplateMatch.WildcardPathSegments%2A> propriedade.  
+  
+ [!code-csharp[UriTemplateMatch#8](~/samples/snippets/csharp/VS_Snippets_CFX/uritemplatematch/cs/snippets.cs#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

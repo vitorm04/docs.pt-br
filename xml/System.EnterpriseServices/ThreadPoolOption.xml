@@ -1,0 +1,94 @@
+<Type Name="ThreadPoolOption" FullName="System.EnterpriseServices.ThreadPoolOption">
+  <TypeSignature Language="C#" Value="public enum ThreadPoolOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed ThreadPoolOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ThreadPoolOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica o pool de thread em que o trabalho enviado pelo <see cref="T:System.EnterpriseServices.Activity" />, é executado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.ThreadPoolOption>é usado para o valor de <xref:System.EnterpriseServices.ServiceConfig.ThreadPool%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Inherit">
+      <MemberSignature Language="C#" Value="Inherit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ThreadPoolOption Inherit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ThreadPoolOption.Inherit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ThreadPoolOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O mesmo tipo de apartment de pool de thread apartment do thread do chamador é usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MTA">
+      <MemberSignature Language="C#" Value="MTA" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ThreadPoolOption MTA = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ThreadPoolOption.MTA" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ThreadPoolOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um MTA (multithreaded apartment) é usado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ThreadPoolOption None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ThreadPoolOption.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ThreadPoolOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum pool de threads é usado. Se esse valor é usado para configurar um <see cref="T:System.EnterpriseServices.ServiceConfig" /> que é passado para um <see cref="T:System.EnterpriseServices.Activity" />, uma exceção será lançada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="STA">
+      <MemberSignature Language="C#" Value="STA" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.EnterpriseServices.ThreadPoolOption STA = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.EnterpriseServices.ThreadPoolOption.STA" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EnterpriseServices.ThreadPoolOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um single-threaded apartment (STA) é usado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

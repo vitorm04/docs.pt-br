@@ -1,0 +1,141 @@
+<Type Name="CompressionLevel" FullName="System.IO.Compression.CompressionLevel">
+  <TypeSignature Language="C#" Value="public enum CompressionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompressionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Compression.CompressionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Compression</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica valores que indicam se uma operação de compactação enfatiza a velocidade ou tamanho da compactação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Operações de compactação geralmente envolvem uma compensação entre a velocidade e a eficiência da compactação. Você usa o <xref:System.IO.Compression.CompressionLevel> enumeração para indicar quais fatores é mais importante em seu cenário de desenvolvimento: o tempo para concluir a operação de compactação ou o tamanho do arquivo compactado. Esses valores não correspondem aos níveis de compactação específica; o objeto que implementa a compactação determina como lidar com eles.  
+  
+ Os seguintes métodos do <xref:System.IO.Compression.DeflateStream>, <xref:System.IO.Compression.GZipStream>, <xref:System.IO.Compression.ZipArchive>, <xref:System.IO.Compression.ZipFile>, e <xref:System.IO.Compression.ZipFileExtensions> classes incluem um parâmetro denominado `compressionLevel` que permite que você especifique o nível de compactação:  
+  
+-   <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.DeflateStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.GZipStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.GZipStream.%23ctor%28System.IO.Stream%2CSystem.IO.Compression.CompressionLevel%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipArchive.CreateEntry%28System.String%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipFile.CreateFromDirectory%28System.String%2CSystem.String%2CSystem.IO.Compression.CompressionLevel%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+-   <xref:System.IO.Compression.ZipFileExtensions.CreateEntryFromFile%28System.IO.Compression.ZipArchive%2CSystem.String%2CSystem.String%2CSystem.IO.Compression.CompressionLevel%29?displayProperty=nameWithType>  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o nível de compactação durante a criação de um arquivo zip usando o <xref:System.IO.Compression.ZipFile> classe.  
+  
+ [!code-csharp[System.IO.Compression.ZipFile#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program3.cs#3)]
+ [!code-vb[System.IO.Compression.ZipFile#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program3.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Fastest">
+      <MemberSignature Language="C#" Value="Fastest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.CompressionLevel Fastest = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.CompressionLevel.Fastest" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.CompressionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação de compactação deve ser concluída assim que possível, mesmo se o arquivo resultante não for compactado de forma ideal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoCompression">
+      <MemberSignature Language="C#" Value="NoCompression" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.CompressionLevel NoCompression = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.CompressionLevel.NoCompression" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.CompressionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma compactação deve ser executada no arquivo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Optimal">
+      <MemberSignature Language="C#" Value="Optimal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Compression.CompressionLevel Optimal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Compression.CompressionLevel.Optimal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Compression</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Compression.CompressionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A operação de compactação deve ser compactada de forma ideal, mesmo se a operação leve mais tempo para ser concluída.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

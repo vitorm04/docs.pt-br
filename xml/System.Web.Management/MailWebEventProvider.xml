@@ -1,0 +1,153 @@
+<Type Name="MailWebEventProvider" FullName="System.Web.Management.MailWebEventProvider">
+  <TypeSignature Language="C#" Value="public abstract class MailWebEventProvider : System.Web.Management.BufferedWebEventProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MailWebEventProvider extends System.Web.Management.BufferedWebEventProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.MailWebEventProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Management.BufferedWebEventProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a funcionalidade básica para a criação de provedores de eventos que enviam email.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de evento de integridade responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ O <xref:System.Web.Management.MailWebEventProvider> classe é uma classe base para criação de provedores que monitoram eventos da Web e enviar um email para os eventos selecionados. Esta classe dá suporte à infraestrutura .NET Framework e não é se destina a ser herdadas de ou usada diretamente no seu código.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `<healthMonitoring>` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de criação de um provedor personalizado, consulte [como: implementar a integridade de monitoramento personalizado provedor exemplo](http://msdn.microsoft.com/library/bbb1c959-e6e4-42b2-be62-49b7ca5ab72c).  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public override void Initialize (string name, System.Collections.Specialized.NameValueCollection config);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Initialize(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.MailWebEventProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome usado no arquivo de configuração para identificar esse provedor.</param>
+        <param name="config">Um <see cref="T:System.Collections.Specialized.NameValueCollection" /> que especifica os atributos atribuídos para esse provedor no arquivo de configuração.</param>
+        <summary>Define os valores iniciais para este objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado para inicializar o <xref:System.Web.Management.EventLogWebEventProvider> com o nome conforme especificado no arquivo de configuração e definições de configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Nenhum destinatário tenha recebido em <paramref name="config" />.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEvent">
+      <MemberSignature Language="C#" Value="public override void ProcessEvent (System.Web.Management.WebBaseEvent eventRaised);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessEvent(class System.Web.Management.WebBaseEvent eventRaised) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.MailWebEventProvider.ProcessEvent(System.Web.Management.WebBaseEvent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventRaised" Type="System.Web.Management.WebBaseEvent" />
+      </Parameters>
+      <Docs>
+        <param name="eventRaised">O <see cref="T:System.Web.Management.WebBaseEvent" /> do objeto de processo.</param>
+        <summary>Processa o evento passado para o provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse é o método que o monitoramento de integridade do ASP.NET chama para iniciar o processamento do evento.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se o buffer está habilitado, você deve tratar adicionando eventos no buffer.</para>
+        </block>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEventFlush">
+      <MemberSignature Language="C#" Value="public override void ProcessEventFlush (System.Web.Management.WebEventBufferFlushInfo flushInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ProcessEventFlush(class System.Web.Management.WebEventBufferFlushInfo flushInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.MailWebEventProvider.ProcessEventFlush(System.Web.Management.WebEventBufferFlushInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="flushInfo" Type="System.Web.Management.WebEventBufferFlushInfo" />
+      </Parameters>
+      <Docs>
+        <param name="flushInfo">O <see cref="T:System.Web.Management.WebEventBufferFlushInfo" /> que contém a contagem de eventos aguardando para enviar sua notificação.</param>
+        <summary>Remove todos os eventos de buffer do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado pelo sistema de monitoramento de integridade quando uma liberação do buffer de eventos é necessária.  
+  
+ Quando o buffer de evento for liberado, ocorre uma notificação e o buffer de evento completa é enviado para os destinatários de mensagens mínimo possível, independentemente do tamanho do tempo decorrido desde a última notificação.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public override void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.MailWebEventProvider.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa tarefas associadas ao desligamento do provedor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET chama o <xref:System.Web.Management.EventLogWebEventProvider.Shutdown%2A> método quando o domínio de aplicativo que hospeda o aplicativo Web é encerrado. O método é chamado para executar tarefas que permitirá que o aplicativo terminar normalmente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,530 @@
+<Type Name="Keyboard" FullName="Microsoft.VisualBasic.Devices.Keyboard">
+  <TypeSignature Language="C#" Value="public class Keyboard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Keyboard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.Keyboard" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades para acessar o estado atual do teclado, como quais teclas estão pressionadas no momento e fornece um método para enviar pressionamentos de teclas para a janela ativa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Keyboard` fornece uma interface para o teclado do computador. As propriedades do `My.Computer.Keyboard` fornecem informações sobre o estado das várias teclas especiais. O `My.Computer.Keyboard.SendKeys` método permite que você envie as chaves para a janela ativa como se eles tivessem sido digitados no teclado.  
+  
+## <a name="tasks"></a>Tarefas  
+ A tabela a seguir lista um exemplo de tarefa envolvendo o `My.Computer.Keyboard` objeto.  
+  
+|Para|Consulte|  
+|-|-|  
+|Enviar pressionamentos de teclas para um aplicativo|[Como Iniciar um Aplicativo e Enviar Pressionamentos de tecla (Visual Basic)](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.CtrlKeyDown` propriedade para determinar se a tecla CTRL do computador é pressionada.  
+  
+ [!code-vb[VbVbalrMyComputer#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#36)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Keyboard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Keyboard.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.Devices.Keyboard" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AltKeyDown">
+      <MemberSignature Language="C#" Value="public bool AltKeyDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AltKeyDown" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="Boolean" /> que indica se a tecla ALT é pressionada.</summary>
+        <value>Um <see langword="Boolean" /> valor: <see langword="True" /> se a tecla ALT para baixo; caso contrário <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Keyboard.AltKeyDown` propriedade fornece funcionalidade semelhante para o <xref:System.Windows.Forms.Control.ModifierKeys%2A> propriedade.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.AltKeyDown` propriedade para determinar se a tecla ALT do computador está inativo.  
+  
+ [!code-vb[VbVbalrMyComputer#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapsLock">
+      <MemberSignature Language="C#" Value="public bool CapsLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CapsLock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.CapsLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="Boolean" /> indicando se CAPS LOCK está ativado.</summary>
+        <value>Um valor <see langword="Boolean" />: <see langword="True" /> se CAPS LOCK estiver ativado; caso contrário, <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Apenas o estado da tecla CAPS LOCK é retornado.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.CapsLock` propriedade para determinar se tecla CAPS LOCK do computador está ativado.  
+  
+ [!code-vb[VbVbalrMyComputer#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#50)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CtrlKeyDown">
+      <MemberSignature Language="C#" Value="public bool CtrlKeyDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CtrlKeyDown" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="Boolean" /> que indica se uma tecla CTRL está pressionada.</summary>
+        <value>Um valor <see langword="Boolean" />. <see langword="True" /> se uma tecla CTRL estiver pressionada; caso contrário, <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Keyboard.CtrlKeyDown` propriedade fornece funcionalidade semelhante para o <xref:System.Windows.Forms.Control.ModifierKeys%2A> propriedade.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.CtrlKeyDown` propriedade para determinar se a tecla CTRL do computador está inativo.  
+  
+ [!code-vb[VbVbalrMyComputer#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#34)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumLock">
+      <MemberSignature Language="C#" Value="public bool NumLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NumLock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.NumLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="Boolean" /> indicando se a tecla NUM LOCK está ativada.</summary>
+        <value>Um valor <see langword="Boolean" />. <see langword="True" /> se NUM LOCK estiver ativada; caso contrário, <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o estado da tecla Numlock é retornado.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.NumLock` propriedade para determinar se a chave do computador NUM LOCK.  
+  
+ [!code-vb[VbVbalrMyComputer#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#48)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollLock">
+      <MemberSignature Language="C#" Value="public bool ScrollLock { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ScrollLock" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="Boolean" /> que indica se a tecla SCROLL LOCK está ativada.</summary>
+        <value>Um valor <see langword="Boolean" />. <see langword="True" /> se SCROLL LOCK estiver ativada; caso contrário, <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente o estado da chave SCROLL LOCK é retornado.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.ScrollLock` propriedade para determinar se a chave do computador SCROLL LOCK.  
+  
+ [!code-vb[VbVbalrMyComputer#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#31)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendKeys">
+      <MemberSignature Language="C#" Value="public void SendKeys (string keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SendKeys(string keys) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Keyboard.SendKeys(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Um <see langword="String" /> que define as teclas a serem enviadas.</param>
+        <summary>Envia um ou mais pressionamentos de teclas para a janela ativa, como se eles tivessem sido digitados no teclado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Keyboard.SendKeys` método fornece funcionalidade semelhante para o <xref:System.Windows.Forms.SendKeys.Send%2A> e <xref:System.Windows.Forms.SendKeys.SendWait%2A> métodos.  
+  
+ O `wait` argumento é útil se o outro aplicativo deve terminar antes que o aplicativo pode continuar.  
+  
+> [!NOTE]
+>  Porque não há nenhum método gerenciado para ativar outro aplicativo, você pode usar essa classe dentro do aplicativo atual, manualmente selecione a janela para enviar as teclas ou usar métodos da API do Windows, como `FindWindow` e `SetForegroundWindow`, para forçar foco em outros aplicativos. Para obter mais informações, consulte [passo a passo: chamando APIs do Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+  
+ O `keys` argumento pode especificar qualquer tecla única ou qualquer tecla combinada com ALT, CTRL ou SHIFT (ou qualquer combinação dessas teclas). Cada chave é representada por um ou mais caracteres, como `a` para o caractere "a", ou `{ENTER}` para a tecla ENTER.  
+  
+ Para combinar uma chave com a tecla SHIFT, preceda o código da tecla com `+` (sinal de adição). Para combinar uma chave com CTRL, preceda o código da tecla com `^` (cursor). Para combinar uma chave com ALT, preceda o código da tecla com `%` (sinal de por cento). Para especificar teclas de repetição, use o formulário `{` *chave número*`}`. Você deve colocar um espaço entre *chave* e *número*. Por exemplo, `{LEFT 42}` significa "pressione a tecla de seta para a esquerda 42 vezes"; `{h 10}` significa "Pressione 'h' 10 vezes."  
+  
+ A tabela a seguir lista os códigos que podem ser usados para especificar caracteres que não são exibidos quando você pressiona a tecla correspondente (por exemplo, ENTER ou TAB).  
+  
+|Chave|Código|  
+|-|-|  
+|BACKSPACE|{BACKSPACE} ou {BS}|  
+|QUEBRA|{QUEBRA}|  
+|CAPS LOCK|{CAPSLOCK}|  
+|LIMPAR|{LIMPAR}|  
+|DELETE|{EXCLUIR} ou {DEL}|  
+|SETA PARA BAIXO|{BAIXO}|  
+|END|{FINAL}|  
+|ENTER (no teclado numérico)|{INSERIR}|  
+|ENTER|~|  
+|ESC|{ESCAPE} ou {ESC}|  
+|AJUDA|{AJUDA}|  
+|HOME|{HOME}|  
+|INS|{INSERIR}|  
+|SETA PARA A ESQUERDA|{LEFT}|  
+|NUM LOCK|{NUMLOCK}|  
+|PAGE DOWN|{PGDN}|  
+|PAGE UP|{PGUP}|  
+|RETORNAR|{RETORNAR}|  
+|SETA PARA A DIREITA|{RIGHT}|  
+|BLOQUEIO DE ROLAGEM|{SCROLLLOCK}|  
+|TAB|{GUIA}|  
+|SETA PARA CIMA|{A}|  
+|F1 a F15|{F1} por {F15}|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.SendKeys` método para enviar pressionamentos de teclas para um aplicativo externo, o aplicativo Calculadora, iniciado pela `Shell` função.  
+  
+ [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]  
+  
+ Uma exceção <xref:System.ArgumentException> será gerada se um aplicativo com o identificador do processo solicitado não for localizado.  
+  
+ A chamada para a função `Shell` exige confiança total (classe <xref:System.Security.SecurityException>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Existe uma situação de confiança parcial na qual o usuário não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Controla a capacidade de acessar arquivos e pastas. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">Controla as permissões relacionadas às interfaces do usuário e a área de transferência. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SendKeys">
+      <MemberSignature Language="C#" Value="public void SendKeys (string keys, bool wait);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance void SendKeys(string keys, bool wait) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Keyboard.SendKeys(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String" />
+        <Parameter Name="wait" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Um <see langword="String" /> que define as teclas a serem enviadas.</param>
+        <param name="wait">Opcional. Um <see langword="Boolean" /> que especifica se deverá ou não aguardar o processamento dos pressionamentos de tecla antes que o aplicativo continue. <see langword="True" /> por padrão.</param>
+        <summary>Envia um ou mais pressionamentos de teclas para a janela ativa, como se eles tivessem sido digitados no teclado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Keyboard.SendKeys` método fornece funcionalidade semelhante para o <xref:System.Windows.Forms.SendKeys.Send%2A> e <xref:System.Windows.Forms.SendKeys.SendWait%2A> métodos.  
+  
+ O `wait` argumento é útil se o outro aplicativo deve terminar antes que o aplicativo pode continuar.  
+  
+> [!NOTE]
+>  Porque não há nenhum método gerenciado para ativar outro aplicativo, você pode usar essa classe dentro do aplicativo atual, manualmente selecione a janela para enviar as teclas ou usar métodos da API do Windows, como `FindWindow` e `SetForegroundWindow`, para forçar foco em outros aplicativos. Para obter mais informações, consulte [passo a passo: chamando APIs do Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+  
+ O `keys` argumento pode especificar qualquer tecla única ou qualquer tecla combinada com ALT, CTRL ou SHIFT (ou qualquer combinação dessas teclas). Cada chave é representada por um ou mais caracteres, como `a` para o caractere "a", ou `{ENTER}` para a tecla ENTER.  
+  
+ Para combinar uma chave com a tecla SHIFT, preceda o código da tecla com `+` (sinal de adição). Para combinar uma chave com CTRL, preceda o código da tecla com `^` (cursor). Para combinar uma chave com ALT, preceda o código da tecla com `%` (sinal de por cento). Para especificar teclas de repetição, use o formulário `{` *chave número*`}`. Você deve colocar um espaço entre *chave* e *número*. Por exemplo, `{LEFT 42}` significa "pressione a tecla de seta para a esquerda 42 vezes"; `{h 10}` significa "Pressione 'h' 10 vezes."  
+  
+ A tabela a seguir lista os códigos que podem ser usados para especificar caracteres que não são exibidos quando você pressiona a tecla correspondente (por exemplo, ENTER ou TAB).  
+  
+|Chave|Código|  
+|-|-|  
+|BACKSPACE|{BACKSPACE} ou {BS}|  
+|QUEBRA|{QUEBRA}|  
+|CAPS LOCK|{CAPSLOCK}|  
+|LIMPAR|{LIMPAR}|  
+|DELETE|{EXCLUIR} ou {DEL}|  
+|SETA PARA BAIXO|{BAIXO}|  
+|END|{FINAL}|  
+|ENTER (no teclado numérico)|{INSERIR}|  
+|ENTER|~|  
+|ESC|{ESCAPE} ou {ESC}|  
+|AJUDA|{AJUDA}|  
+|HOME|{HOME}|  
+|INS|{INSERIR}|  
+|SETA PARA A ESQUERDA|{LEFT}|  
+|NUM LOCK|{NUMLOCK}|  
+|PAGE DOWN|{PGDN}|  
+|PAGE UP|{PGUP}|  
+|RETORNAR|{RETORNAR}|  
+|SETA PARA A DIREITA|{RIGHT}|  
+|BLOQUEIO DE ROLAGEM|{SCROLLLOCK}|  
+|TAB|{GUIA}|  
+|SETA PARA CIMA|{A}|  
+|F1 a F15|{F1} por {F15}|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.SendKeys` método para enviar pressionamentos de teclas para um aplicativo externo, o aplicativo Calculadora, iniciado pela `Shell` função.  
+  
+ [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]  
+  
+ Uma exceção <xref:System.ArgumentException> será gerada se um aplicativo com o identificador do processo solicitado não for localizado.  
+  
+ A chamada para a função `Shell` exige confiança total (classe <xref:System.Security.SecurityException>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Existe uma situação de confiança parcial na qual o usuário não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Controla a capacidade de acessar arquivos e pastas. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />.</permission>
+        <permission cref="T:System.Security.Permissions.UIPermission">Controla as permissões relacionadas às interfaces do usuário e a área de transferência. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftKeyDown">
+      <MemberSignature Language="C#" Value="public bool ShiftKeyDown { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShiftKeyDown" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="Boolean" /> que indica se uma tecla SHIFT está pressionada.</summary>
+        <value>Um valor <see langword="Boolean" />. <see langword="True" /> se uma tecla SHIFT estiver pressionada; caso contrário, <see langword="False" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Keyboard.ShiftKeyDown` propriedade fornece funcionalidade semelhante para o <xref:System.Windows.Forms.Control.ModifierKeys%2A> propriedade.  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `My.Computer.Keyboard.ShiftKeyDown` propriedade para determinar se uma das teclas SHIFT do computador está inativo.  
+  
+ [!code-vb[VbVbalrMyComputer#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#47)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

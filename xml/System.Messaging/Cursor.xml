@@ -1,0 +1,72 @@
+<Type Name="Cursor" FullName="System.Messaging.Cursor">
+  <TypeSignature Language="C#" Value="public sealed class Cursor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Cursor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Cursor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Um <see cref="T:System.Messaging.Cursor" /> é usado para manter um local específico em um <see cref="T:System.Messaging.MessageQueue" /> ao ler as mensagens da fila.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter um cursor para um <xref:System.Messaging.MessageQueue>, chame o <xref:System.Messaging.MessageQueue.CreateCursor%2A> método para essa fila.  
+  
+ Um <xref:System.Messaging.Cursor> é usado com esses métodos como <xref:System.Messaging.MessageQueue.Peek%28System.TimeSpan%2CSystem.Messaging.Cursor%2CSystem.Messaging.PeekAction%29> e <xref:System.Messaging.MessageQueue.Receive%28System.TimeSpan%2CSystem.Messaging.Cursor%29> quando você precisa ler as mensagens que não estão na frente da fila. Isso inclui ler mensagens de forma síncrona ou assíncrona. Cursores não precisa ser usado para ler a primeira mensagem em uma fila.  
+  
+ Ao ler mensagens em uma transação, enfileiramento de mensagens não reverte movimento do cursor se a transação foi anulada. Por exemplo, suponha que há uma fila com duas mensagens, A1 e A2. Se você remover a mensagem A1 enquanto estiver em uma transação, enfileiramento de mensagens move o cursor para a mensagem A2. No entanto, se a transação foi anulada por qualquer motivo, mensagem que a1 será inserida novamente na fila, mas o cursor permanecerá apontando para mensagens A2.  
+  
+ Para fechar o cursor, chame <xref:System.Messaging.Cursor.Close%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Cursor.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o cursor, permitindo que o enfileiramento de mensagens liberar os recursos associados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Cursor.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Messaging.Cursor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

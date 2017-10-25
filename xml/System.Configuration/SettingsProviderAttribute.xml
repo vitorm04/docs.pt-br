@@ -1,0 +1,125 @@
+<Type Name="SettingsProviderAttribute" FullName="System.Configuration.SettingsProviderAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SettingsProviderAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SettingsProviderAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.SettingsProviderAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o provedor de configurações usado para fornecer armazenamento para a propriedade ou classe de configuração de aplicativo atual. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada classe de configurações de aplicativo define um grupo de propriedades de configurações do aplicativo que representam informações que persiste entre as execuções do aplicativo. No entanto, é um provedor de configurações, uma classe derivada de <xref:System.Configuration.SettingsProvider>— que realmente fornece o mecanismo de armazenamento.  
+  
+ O <xref:System.Configuration.SettingsProviderAttribute> Especifica o provedor de configurações usado para fornecer armazenamento para propriedades de configurações do aplicativo. Esse atributo pode ser aplicado à classe de configurações do aplicativo inteiro ou propriedades de configurações de aplicativos individuais. Um <xref:System.Configuration.SettingsProviderAttribute> set no nível de propriedade substituirá o atributo de nível de classe. Se um provedor de configurações não for especificado explicitamente, o provedor padrão é usado. Para aplicativos cliente, o provedor padrão é <xref:System.Configuration.LocalFileSettingsProvider>.  
+  
+ Provedores de configuração não pode ser determinado em tempo de execução. Determinar a tempo de execução de métodos de armazenamento deve ser codificado para a própria classe de provedor de configurações.  
+  
+> [!CAUTION]
+>  Usando configurações personalizadas de provedores de terceiros arbitrários é inerentemente seguro porque esses provedores tem acesso de leitura/gravação completa a informações de configuração do aplicativo. Um provedor de configurações deve ser completamente verificado antes que ele for adotado para uso geral.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProviderAttribute (string providerTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string providerTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProviderAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="providerTypeName">Um <see cref="T:System.String" /> que contém o nome do provedor de configurações.</param>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Configuration.SettingsProviderAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do tipo é o nome de classe, derivada de <xref:System.Configuration.SettingsProvider>que está sendo especificado como o provedor de configurações.  
+  
+> [!CAUTION]
+>  Usando configurações personalizadas de provedores de terceiros arbitrários é inerentemente seguro porque esses provedores tem acesso de leitura/gravação completa a informações de configuração do aplicativo. Um provedor de configurações deve ser completamente verificado antes que ele for adotado para uso geral.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SettingsProviderAttribute (Type providerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type providerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.SettingsProviderAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="providerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="providerType">Um <see cref="T:System.Type" /> que contém o tipo de provedor de configurações.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.SettingsProviderAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderTypeName">
+      <MemberSignature Language="C#" Value="public string ProviderTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProviderTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.SettingsProviderAttribute.ProviderTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tipo do provedor de configurações.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome do provedor de configurações.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.SettingsProviderAttribute.ProviderTypeName%2A> propriedade é definida no <xref:System.Configuration.SettingsProviderAttribute.%23ctor%2A> para a classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

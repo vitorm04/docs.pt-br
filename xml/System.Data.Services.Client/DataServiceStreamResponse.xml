@@ -1,0 +1,165 @@
+<Type Name="DataServiceStreamResponse" FullName="System.Data.Services.Client.DataServiceStreamResponse">
+  <TypeSignature Language="C#" Value="public sealed class DataServiceStreamResponse : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataServiceStreamResponse extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.DataServiceStreamResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma resposta do WCF Data Services que contém dados binários como um fluxo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContentDisposition">
+      <MemberSignature Language="C#" Value="public string ContentDisposition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentDisposition" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceStreamResponse.ContentDisposition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see langword="Content-Disposition" /> campo do cabeçalho para o fluxo de resposta.</summary>
+        <value>O conteúdo de <see langword="Content-Disposition" /> campo de cabeçalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o `Content-Disposition` cabeçalho não está presente na resposta, o <xref:System.Data.Services.Client.DataServiceStreamResponse.ContentDisposition%2A> propriedade retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceStreamResponse.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de conteúdo do fluxo de resposta.</summary>
+        <value>O tipo de conteúdo do fluxo de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o `Content-Type` cabeçalho não está presente na resposta, o <xref:System.Data.Services.Client.DataServiceStreamResponse.ContentDisposition%2A> propriedade retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.DataServiceStreamResponse.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Data.Services.Client.DataServiceStreamResponse" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar o <xref:System.Data.Services.Client.DataServiceStreamResponse.Dispose%2A> método quando você terminar de usar o <xref:System.Data.Services.Client.DataServiceStreamResponse>. Isso libera recursos mantidos pelo objeto. Você sempre deve fazer isso para liberar os recursos mantidos pelo <xref:System.Data.Services.Client.DataServiceStreamResponse>; caso contrário, os recursos consumidos não serão liberados até o coletor de lixo chama o <xref:System.Object.Finalize%2A> método no <xref:System.Data.Services.Client.DataServiceStreamResponse> objeto.  
+  
+ Após o <xref:System.Data.Services.Client.DataServiceStreamResponse.Dispose%2A> método é chamado e todas as referências para o <xref:System.Data.Services.Client.DataServiceStreamResponse> são lançadas, a memória usada pode ser recuperada pela coleta de lixo.  
+  
+ Não é possível usar <xref:System.Data.Services.Client.DataServiceStreamResponse> depois de chamar o <xref:System.Data.Services.Client.DataServiceStreamResponse.Dispose%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,string&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, string&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceStreamResponse.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de cabeçalhos de resposta.</summary>
+        <value>A coleção de cabeçalhos da mensagem de resposta como um <see cref="T:System.Collections.Generic.Dictionary`2" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A resposta é um <xref:System.Collections.Generic.Dictionary%602> objeto que contém pares chave-valor de cadeias de caracteres para cada cabeçalho de resposta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Stream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Stream" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.DataServiceStreamResponse.Stream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados de propriedade binária do serviço de dados como um fluxo binário.</summary>
+        <value>O fluxo que contém os dados de propriedade binária.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando ocorre um erro de rede durante a leitura do fluxo, um erro será gerado.  
+  
+ O <xref:System.IO.Stream> retornado é somente leitura.  
+  
+ Você deve chamar o <xref:System.Data.Services.Client.DataServiceStreamResponse.Dispose%2A> método no <xref:System.Data.Services.Client.DataServiceStreamResponse> ou <xref:System.IO.Stream.Close%2A> método no <xref:System.IO.Stream>. Caso contrário, a conexão de rede permanece aberta e disponível para outros aplicativos.  
+  
+ O <xref:System.Net.HttpWebResponse.GetResponseStream%2A> método é usado para acessar o fluxo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Quando o <see cref="T:System.Data.Services.Client.DataServiceStreamResponse" /> já foi descartada.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

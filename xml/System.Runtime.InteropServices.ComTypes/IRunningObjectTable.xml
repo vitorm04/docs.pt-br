@@ -1,0 +1,357 @@
+<Type Name="IRunningObjectTable" FullName="System.Runtime.InteropServices.ComTypes.IRunningObjectTable">
+  <TypeSignature Language="C#" Value="public interface IRunningObjectTable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRunningObjectTable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComTypes.IRunningObjectTable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00000010-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a definição gerenciada da interface <see langword="IRunningObjectTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode recuperar uma interface para a tabela de objetos em execução chamando o COM [GetRunningObjectTable](http://go.microsoft.com/fwlink/?LinkId=163472) função.  
+  
+ Para obter mais informações, consulte a documentação para o COM [IRunningObjectTable](http://go.microsoft.com/fwlink/?LinkId=163473) interface na biblioteca MSDN.  
+  
+ O common language runtime lança uma exceção quando um método COM em código nativo retorna um HRESULT. Para obter mais informações, consulte [como: mapear HRESULTs e exceções](~/docs/framework/interop/how-to-map-hresults-and-exceptions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EnumRunning">
+      <MemberSignature Language="C#" Value="public void EnumRunning (out System.Runtime.InteropServices.ComTypes.IEnumMoniker ppenumMoniker);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnumRunning([out] class System.Runtime.InteropServices.ComTypes.IEnumMoniker&amp; ppenumMoniker) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.EnumRunning(System.Runtime.InteropServices.ComTypes.IEnumMoniker@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ppenumMoniker" Type="System.Runtime.InteropServices.ComTypes.IEnumMoniker&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="ppenumMoniker">Quando este método retorna, contém o novo enumerador para a tabela de objeto em execução (CORROMPIDOS). Este parâmetro é passado não inicializado.</param>
+        <summary>Enumera os objetos registrados atualmente como em execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação para o [IRunningObjectTable::EnumRunning](http://go.microsoft.com/fwlink/?LinkId=163475) método na biblioteca do MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public int GetObject (System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName, out object ppunkObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetObject(class System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName, [out] object&amp; ppunkObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.GetObject(System.Runtime.InteropServices.ComTypes.IMoniker,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmkObjectName" Type="System.Runtime.InteropServices.ComTypes.IMoniker" />
+        <Parameter Name="ppunkObject" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pmkObjectName">Uma referência para o moniker para pesquisar na tabela de objeto em execução (CORROMPIDOS).</param>
+        <param name="ppunkObject">Quando este método retorna, contém o objeto de execução solicitado. Este parâmetro é passado não inicializado.</param>
+        <summary>Retorna o objeto registrado se o nome do objeto fornecido é registrado como em execução.</summary>
+        <returns>Um <see langword="HRESULT" /> valor que indica o êxito ou falha da operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação para o [IRunningObjectTable::GetObject](http://go.microsoft.com/fwlink/?LinkId=163476) método na biblioteca do MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTimeOfLastChange">
+      <MemberSignature Language="C#" Value="public int GetTimeOfLastChange (System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName, out System.Runtime.InteropServices.ComTypes.FILETIME pfiletime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetTimeOfLastChange(class System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName, [out] valuetype System.Runtime.InteropServices.ComTypes.FILETIME&amp; pfiletime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.GetTimeOfLastChange(System.Runtime.InteropServices.ComTypes.IMoniker,System.Runtime.InteropServices.ComTypes.FILETIME@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmkObjectName" Type="System.Runtime.InteropServices.ComTypes.IMoniker" />
+        <Parameter Name="pfiletime" Type="System.Runtime.InteropServices.ComTypes.FILETIME&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pmkObjectName">Uma referência para o moniker para pesquisar na tabela de objeto em execução (CORROMPIDOS).</param>
+        <param name="pfiletime">Quando esse objeto retorna, contém os hora da última alteração de objetos. Este parâmetro é passado não inicializado.</param>
+        <summary>Procura por este identificador de origem na tabela de objeto em execução (CORROMPIDOS) e relata o tempo registrado de alteração, se houver.</summary>
+        <returns>Um <see langword="HRESULT" /> valor que indica o êxito ou falha da operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação para o [IRunningObjectTable::GetTimeOfLastChange](http://go.microsoft.com/fwlink/?LinkId=163477) método na biblioteca do MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public int IsRunning (System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IsRunning(class System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.IsRunning(System.Runtime.InteropServices.ComTypes.IMoniker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmkObjectName" Type="System.Runtime.InteropServices.ComTypes.IMoniker" />
+      </Parameters>
+      <Docs>
+        <param name="pmkObjectName">Uma referência para o moniker para pesquisar na tabela de objeto em execução (CORROMPIDOS).</param>
+        <summary>Determina se o identificador de origem especificado está registrado atualmente na tabela de objeto em execução (CORROMPIDOS).</summary>
+        <returns>Um <see langword="HRESULT" /> valor que indica o êxito ou falha da operação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação para o [IRunningObjectTable::IsRunning](http://go.microsoft.com/fwlink/?LinkId=163478) método na biblioteca do MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoteChangeTime">
+      <MemberSignature Language="C#" Value="public void NoteChangeTime (int dwRegister, ref System.Runtime.InteropServices.ComTypes.FILETIME pfiletime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NoteChangeTime(int32 dwRegister, valuetype System.Runtime.InteropServices.ComTypes.FILETIME&amp; pfiletime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.NoteChangeTime(System.Int32,System.Runtime.InteropServices.ComTypes.FILETIME@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dwRegister" Type="System.Int32" />
+        <Parameter Name="pfiletime" Type="System.Runtime.InteropServices.ComTypes.FILETIME&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="dwRegister">A entrada da tabela de objeto em execução (CORROMPIDOS) do objeto alterado.</param>
+        <param name="pfiletime">Uma referência a hora da última alteração do objeto.</param>
+        <summary>Notas de tempo que um determinado objeto alterado isso <see langword="IMoniker::GetTimeOfLastChange" /> pode relatar um tempo apropriado de alteração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação para o [IRunningObjectTable::NoteChangeTime](http://go.microsoft.com/fwlink/?LinkId=163479) método na biblioteca do MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public int Register (int grfFlags, object punkObject, System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Register(int32 grfFlags, object punkObject, class System.Runtime.InteropServices.ComTypes.IMoniker pmkObjectName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Register(System.Int32,System.Object,System.Runtime.InteropServices.ComTypes.IMoniker)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="grfFlags" Type="System.Int32" />
+        <Parameter Name="punkObject" Type="System.Object" />
+        <Parameter Name="pmkObjectName" Type="System.Runtime.InteropServices.ComTypes.IMoniker" />
+      </Parameters>
+      <Docs>
+        <param name="grfFlags">Especifica se executando o objeto da tabela (CORROMPIDOS) fazem referência a <c>punkObject</c> é forte ou fraca e controla o acesso ao objeto por meio de sua entrada no CORROMPIDOS.</param>
+        <param name="punkObject">Uma referência ao objeto que está sendo registrado como em execução.</param>
+        <param name="pmkObjectName">Uma referência para o moniker identifica <c>punkObject</c>.</param>
+        <summary>Registra que o objeto fornecido entrou no estado de execução.</summary>
+        <returns>Um valor que pode ser usado para identificar essa entrada CORROMPIDOS nas chamadas subsequentes para <see cref="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Revoke(System.Int32)" /> ou <see cref="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.NoteChangeTime(System.Int32,System.Runtime.InteropServices.ComTypes.FILETIME@)" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Referências de CORROMPIDOS a `punkObject` (fraco e forte) determinam o tempo de vida do objeto. Para obter mais informações, consulte a documentação para o COM [IRunningObjectTable::Register](http://go.microsoft.com/fwlink/?LinkId=163474) método na biblioteca do MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Revoke">
+      <MemberSignature Language="C#" Value="public void Revoke (int dwRegister);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Revoke(int32 dwRegister) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComTypes.IRunningObjectTable.Revoke(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dwRegister" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dwRegister">A entrada da tabela de objeto em execução (CORROMPIDOS) revogar.</param>
+        <summary>Cancela o registro do objeto especificado da tabela de objeto em execução (CORROMPIDOS).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte a documentação para o [IRunningObjectTable::Revoke](http://go.microsoft.com/fwlink/?LinkId=163480) método na biblioteca do MSDN.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

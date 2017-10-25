@@ -1,0 +1,1687 @@
+<Type Name="Grammar" FullName="System.Speech.Recognition.Grammar">
+  <TypeSignature Language="C#" Value="public class Grammar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Grammar extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.Grammar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Grammar: {(_uri != null ? "uri=" + _uri.ToString () + " " : "") + "rule=" + _ruleName }")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Um objeto de tempo de execução que faz referência a uma gramática de reconhecimento de fala, que um aplicativo pode usar para definir as restrições de reconhecimento de fala.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma gramática de reconhecimento de fala é um conjunto de regras e restrições que definem como entrada significativa pode reconhecer um mecanismo de reconhecimento de fala. Para obter mais informações sobre criação e uso de gramáticas de reconhecimento de fala, consulte [o reconhecimento de fala](http://msdn.microsoft.com/en-us/6a7dc524-07fc-4862-8d48-8c10dc64b919), [criar gramáticas usando XML](http://msdn.microsoft.com/en-us/2d799487-49c6-4cc9-b42f-f71cd3824fe1), [criar gramáticas usando GrammarBuilder](http://msdn.microsoft.com/en-us/7e2cc577-cb05-4318-9da3-7c8675d3d9ae), e [criar gramáticas usando SrgsGrammar](http://msdn.microsoft.com/en-us/e4d9f96e-2241-4c39-b9e0-ac9ef4e9a906).  
+  
+ Depois que você criar uma gramática, você deve criar em um <xref:System.Speech.Recognition.Grammar> de objetos que um mecanismo de reconhecimento de fala pode carregar e que seu aplicativo pode usar em tempo de execução para gerenciar o reconhecimento de fala. Você pode usar um <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor para criar um <xref:System.Speech.Recognition.Grammar> da instância de um <xref:System.Speech.Recognition.GrammarBuilder> ou um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> objeto, ou de um arquivo ou um <xref:System.IO.Stream> que contém uma descrição de uma gramática em um formato com suporte. Os formatos com suporte incluem o seguinte:  
+  
+-   Arquivos de formato XML que está de acordo com o W3C [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201761)  
+  
+-   Gramáticas foram compiladas para um arquivo binário com uma extensão de arquivo. cfg  
+  
+ Construtores de gramática que aceitam arquivos de gramática de formato XML em seus argumentos compilar as gramáticas XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Você pode reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática XML formato ao compilar a gramática de antemão, usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos.  
+  
+ Reconhecimento de fala de um aplicativo, como gerenciado por um <xref:System.Speech.Recognition.SpeechRecognizer> ou <xref:System.Speech.Recognition.SpeechRecognitionEngine> de objeto, pode carregar várias gramáticas de reconhecimento de fala. O aplicativo independentemente pode habilitar ou desabilitar gramáticas individuais definindo a <xref:System.Speech.Recognition.Grammar.Enabled%2A> propriedade e modificar o comportamento de reconhecimento por meio de <xref:System.Speech.Recognition.Grammar> propriedades, como o <xref:System.Speech.Recognition.Grammar.Priority%2A> e <xref:System.Speech.Recognition.Grammar.Weight%2A> propriedades.  
+  
+ A gramática <xref:System.Speech.Recognition.Grammar.SpeechRecognized> evento é gerado quando a entrada corresponde a um caminho por meio de gramática.  
+  
+> [!NOTE]
+>  É uma prática recomendada para verificar a segurança de qualquer URI ou DLL usado para criar um <xref:System.Speech.Recognition.Grammar> objeto.  
+>   
+>  Windows e plataforma de fala fornecem segurança para aplicativos construindo um <xref:System.Speech.Recognition.Grammar> instância de uma DLL ou de uma gramática que oferece suporte a scripts.  
+>   
+>  Scripts em <xref:System.Speech.Recognition.Grammar> objetos sempre são executados como se o download de uma página da web a `Internet Zone`. O tempo de execução de linguagem comum (CLR) isola qualquer DLL carregada para obter uma definição de gramática.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir constrói um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática de reconhecimento de fala definido em um arquivo XML (cities.xml). O conteúdo do arquivo cities.xml é exibido no exemplo XML a seguir.  
+  
+```csharp  
+// Load a cities grammar from a local file and return the grammar object.   
+private static Grammar CreateGrammarFromFile()  
+{  
+  Grammar citiesGrammar = new Grammar(@"c:\temp\cities.xml");  
+  citiesGrammar.Name = "SRGS File Cities Grammar";  
+  return citiesGrammar;  
+}  
+  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- cities.xml:   
+    Defines an SRGS grammar for requesting a flight. This grammar includes  
+    a Cities rule that lists the cities that can be used for departures  
+    and destinations. -->  
+  
+  <rule id="Main">  
+    <item>  
+      I would like to fly from <ruleref uri="#Cities"/>  
+      to <ruleref uri="#Cities"/>  
+    </item>  
+  </rule>  
+  
+  <rule id="Cities" scope="public">  
+    <one-of>  
+      <item> Seattle </item>  
+      <item> Los Angeles </item>  
+      <item> New York </item>  
+      <item> Miami </item>  
+    </one-of>  
+  </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.Grammar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar um <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor para criar um <xref:System.Speech.Recognition.Grammar> da instância de um <xref:System.Speech.Recognition.GrammarBuilder> ou <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> objeto, ou de um arquivo ou um <xref:System.IO.Stream> que contém uma descrição de uma gramática em um formato com suporte. Os formatos com suporte incluem o seguinte:  
+  
+-   Arquivos de formato XML que está de acordo com o W3C [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201761)  
+  
+-   Gramáticas foram compiladas para um arquivo binário com uma extensão de arquivo. cfg  
+  
+ Construtores de gramática que aceitam arquivos de gramática de formato XML em seus argumentos compilar as gramáticas XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Você pode reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática XML formato ao compilar a gramática de antemão, usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos.  
+  
+ Uma gramática de reconhecimento de fala pode definir uma regra raiz. Para criar um <xref:System.Speech.Recognition.Grammar> objeto que especifica qual regra a ser usada como a regra raiz, use um construtor que aceita o `ruleName` parâmetro.  
+  
+ Para criar um <xref:System.Speech.Recognition.Grammar> objeto que especifica um URI de base para resolver referências de regra relativo, use um construtor que aceita o `baseUri` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Grammar ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.Grammar" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um fluxo que descreve uma gramática de reconhecimento de fala em um formato com suporte.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.Grammar" /> de um <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar os parâmetros para o manipulador de inicialização e a descrição não deve definir um manipulador de inicialização que requer argumentos.  
+  
+ Este construtor pode criar um <xref:System.Speech.Recognition.Grammar> instância nos seguintes formatos:  
+  
+-   Arquivos de formato XML que está de acordo com o W3C [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201761)  
+  
+-   Gramáticas foram compiladas para um arquivo binário com uma extensão de arquivo. cfg  
+  
+ Este construtor compila arquivos de gramática de formato XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Você pode reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática XML formato ao compilar a gramática de antemão, usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos.  
+  
+ Uma gramática SRGS pode definir uma regra raiz. Para criar um <xref:System.Speech.Recognition.Grammar> do objeto de um fluxo e especificar uma regra raiz, use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> ou <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+ Para criar um <xref:System.Speech.Recognition.Grammar> do objeto de um fluxo e especifique um URI de base para usar ao resolver referências de regra relativo, use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala de um arquivo SRGS local (cities.xml) usando um fluxo de arquivos. O conteúdo do arquivo cities.xml aparece exemplo c# a seguir.  
+  
+```csharp  
+  
+// Load a cities grammar from an I/O stream and    
+// return the new grammar.   
+private static Grammar CreateGrammarFromStream()  
+{  
+  string fileName = @"c:\temp\cities.xml";  
+  Grammar citiesGrammar =  
+    new Grammar(new FileStream(fileName, FileMode.Open));  
+  citiesGrammar.Name = "Stream Cities Grammar";  
+  return citiesGrammar;  
+}  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- cities.xml:   
+    Defines an SRGS grammar for requesting a flight. This grammar includes  
+    a Cities rule that lists the cities that can be used for departures  
+    and destinations. -->  
+  
+  <rule id="Main">  
+    <item>  
+      I would like to fly from <ruleref uri="#Cities"/>  
+      to <ruleref uri="#Cities"/>  
+    </item>  
+  </rule>  
+  
+  <rule id="Cities" scope="public">  
+    <one-of>  
+      <item>Seattle</item>  
+      <item>Los Angeles</item>  
+      <item>New York</item>  
+      <item>Miami</item>  
+    </one-of>  
+  </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />Descreve uma gramática não contém uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">O fluxo não contém uma descrição válida de uma gramática ou descreve uma gramática que contém uma referência de regra não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.Speech.Recognition.GrammarBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.GrammarBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.Speech.Recognition.GrammarBuilder)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Speech.Recognition.GrammarBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">Uma instância de <see cref="T:System.Speech.Recognition.GrammarBuilder" /> que contém as restrições da gramática de reconhecimento de fala.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.Grammar" /> de um objeto <see cref="T:System.Speech.Recognition.GrammarBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como usar o <xref:System.Speech.Recognition.GrammarBuilder> classe para definir uma gramática, consulte [criar gramáticas usando GrammarBuilder](http://msdn.microsoft.com/en-us/7e2cc577-cb05-4318-9da3-7c8675d3d9ae).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala usando <xref:System.Speech.Recognition.Choices> e <xref:System.Speech.Recognition.GrammarBuilder> objetos. O <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor cria um <xref:System.Speech.Recognition.Grammar> de objeto o <xref:System.Speech.Recognition.GrammarBuilder> objeto.  
+  
+```csharp  
+  
+// Create a grammar using a GrammarBuilder and return the new grammar.   
+private static Grammar CreateGrammarBuilderGrammar()  
+{  
+  GrammarBuilder builder = new GrammarBuilder();  
+  
+  Choices cityChoice = new Choices (new string[]   
+  {"Seattle", "New York", "Miami", "Los Angeles"});  
+  
+  builder.Append("I would like to fly from");  
+  builder.Append(cityChoice);  
+  builder.Append("to");  
+  builder.Append(cityChoice);  
+  
+  Grammar citiesGrammar = new Grammar(builder);  
+  citiesGrammar.Name = "GrammarBuilder Cities Grammar";  
+  
+  return citiesGrammar;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="srgsDocument" Type="System.Speech.Recognition.SrgsGrammar.SrgsDocument" />
+      </Parameters>
+      <Docs>
+        <param name="srgsDocument">As restrições para a gramática de reconhecimento de fala.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Speech.Recognition.Grammar" /> classe um <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar todos os parâmetros para o manipulador de inicialização e o <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> não deve conter um manipulador de inicialização que requer argumentos.  
+  
+ Um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> pode ter uma regra raiz. Para criar um <xref:System.Speech.Recognition.Grammar> objeto que especifica uma regra raiz, use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> ou <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+ Para criar o reconhecimento de fala <xref:System.Speech.Recognition.Grammar> de um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> e especifique um URI de base para usar ao resolver referências de regra relativa, use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala em um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> instância, que é usada para construir um <xref:System.Speech.Recognition.Grammar> objeto.  
+  
+```csharp  
+private static Grammar CreateSrgsDocumentGrammar()  
+{  
+  // Create the SrgsDocument.  
+  SrgsDocument document = new SrgsDocument();  
+  
+  // Create the Cities rule and add it to the document.  
+  SrgsRule citiesRule = new SrgsRule("Cities");  
+  
+  SrgsOneOf cityChoice = new SrgsOneOf();  
+  cityChoice.Add(new SrgsItem("Seattle"));  
+  cityChoice.Add(new SrgsItem("Los Angeles"));  
+  cityChoice.Add(new SrgsItem("New York"));  
+  cityChoice.Add(new SrgsItem("Miami"));  
+  
+  citiesRule.Add(cityChoice);  
+  document.Rules.Add(citiesRule);  
+  
+  // Create the Main rule and add it to the document.  
+  SrgsRule mainRule = new SrgsRule("Main");  
+  mainRule.Scope = SrgsRuleScope.Public;  
+  
+  SrgsItem item = new SrgsItem("I would like to fly from");  
+  item.Add(new SrgsRuleRef(citiesRule));  
+  item.Add(new SrgsText("to"));  
+  item.Add(new SrgsRuleRef(citiesRule));  
+  
+  mainRule.Add(item);  
+  document.Rules.Add(mainRule);  
+  
+  // Set the root rule.  
+  document.Root = mainRule;  
+  
+  // Create the Grammar object.  
+  Grammar citiesGrammar = new Grammar(document);  
+  citiesGrammar.Name = "SrgsDocument Cities Grammar";  
+  
+  return citiesGrammar;  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="srgsDocument" />não contém uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="srgsDocument" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="srgsDocument" />contém uma referência de regra não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho do arquivo que descreve uma gramática de reconhecimento de fala em um formato com suporte.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Speech.Recognition.Grammar" /> de um arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar os parâmetros para o manipulador de inicialização e a descrição não deve definir um manipulador de inicialização que requer argumentos.  
+  
+ Este construtor pode criar um <xref:System.Speech.Recognition.Grammar> instância nos seguintes formatos:  
+  
+-   Arquivos de formato XML que está de acordo com o W3C [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201761)  
+  
+-   Gramáticas foram compiladas para um arquivo binário com uma extensão de arquivo. cfg  
+  
+ Este construtor compila arquivos de gramática de formato XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Você pode reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática XML formato ao compilar a gramática de antemão, usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos.  
+  
+ Uma gramática SRGS pode definir uma regra raiz. Para criar um <xref:System.Speech.Recognition.Grammar> de uma cadeia de caracteres do objeto e especificar uma regra raiz, use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+ Para criar um <xref:System.Speech.Recognition.Grammar> objeto que especifica um URI de base para usar ao resolver referências de regra relativo, abra o arquivo em um fluxo de arquivos e usar o <xref:System.Speech.Recognition.Grammar.%23ctor%2A?displayProperty=nameWithType> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega uma gramática de reconhecimento de fala de um arquivo SRGS local para criar um <xref:System.Speech.Recognition.Grammar> objeto. O conteúdo do arquivo cities.xml é exibido no exemplo XML que segue o exemplo c#.  
+  
+```csharp  
+// Load a cities grammar from a local file and  
+// return the new grammar.   
+private static Grammar CreateGrammarFromFile()  
+{  
+  Grammar citiesGrammar = new Grammar(@"c:\temp\cities.xml");  
+  citiesGrammar.Name = "SRGS File Cities Grammar";  
+  return citiesGrammar;  
+}  
+  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- cities.xml:   
+    Defines an SRGS grammar for requesting a flight. This grammar includes  
+    a Cities rule that lists the cities that can be used for departures  
+    and destinations. -->  
+  
+  <rule id="Main">  
+    <item>  
+      I would like to fly from <ruleref uri="#Cities"/>  
+      to <ruleref uri="#Cities"/>  
+    </item>  
+  </rule>  
+  
+  <rule id="Cities" scope="public">  
+    <one-of>  
+      <item>Seattle</item>  
+      <item>Los Angeles</item>  
+      <item>New York</item>  
+      <item>Miami</item>  
+    </one-of>  
+  </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" />contém a cadeia de caracteres vazia (""), ou o arquivo descreve uma gramática não contém uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">O arquivo não contém uma descrição válida ou descreve uma gramática que contém uma referência de regra que não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.IO.Stream stream, string ruleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string ruleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.IO.Stream,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="ruleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um fluxo que descreve uma gramática de reconhecimento de fala em um formato com suporte.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> classe um <see cref="T:System.IO.Stream" /> e especifica uma regra raiz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar os parâmetros para o manipulador de inicialização e a descrição não deve definir um manipulador de inicialização que requer argumentos.  
+  
+ Este construtor pode criar um <xref:System.Speech.Recognition.Grammar> instância nos seguintes formatos:  
+  
+-   Arquivos de formato XML que está de acordo com o W3C [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201761)  
+  
+-   Gramáticas foram compiladas para um arquivo binário com uma extensão de arquivo. cfg  
+  
+ Este construtor compila arquivos de gramática de formato XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Você pode reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática XML formato ao compilar a gramática de antemão, usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos.  
+  
+ Para criar um <xref:System.Speech.Recognition.Grammar> de um fluxo e especifique um URI de base para usar ao resolver referências de regra relativa, use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega um arquivo SRGS local (cities.xml) de um fluxo de arquivos e especifica uma regra a ser usada como a raiz da gramática. O conteúdo do arquivo cities.xml é exibido no exemplo XML que segue o exemplo c#.  
+  
+```csharp  
+  
+// Load a cities grammar from an I/O stream, use a specific  
+// rule as the root of the grammar, and return the new grammar.   
+private static Grammar CreateGrammarFromStream2()  
+{  
+  FileInfo file = new FileInfo(@"c:\temp\cities.xml");  
+  Grammar citiesGrammar = new Grammar(file.OpenRead(), "Main");  
+  citiesGrammar.Name = "Stream Cities Grammar 2";  
+  return citiesGrammar;  
+}  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- cities.xml:   
+    Defines an SRGS grammar for requesting a flight. This grammar includes  
+    a Cities rule that lists the cities that can be used for departures  
+    and destinations. -->  
+  
+  <rule id="Main">  
+    <item>  
+      I would like to fly from <ruleref uri="#Cities"/>  
+      to <ruleref uri="#Cities"/>  
+    </item>  
+  </rule>  
+  
+  <rule id="Cities" scope="public">  
+    <one-of>  
+      <item>Seattle</item>  
+      <item>Los Angeles</item>  
+      <item>New York</item>  
+      <item>Miami</item>  
+    </one-of>  
+  </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ruleName" />não pode ser resolvido ou não é público, ou <paramref name="ruleName" /> é <see langword="null" /> e a descrição de gramática não define uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">O fluxo não contém uma descrição válida ou descreve uma gramática que contém uma referência de regra não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsDocument,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="srgsDocument" Type="System.Speech.Recognition.SrgsGrammar.SrgsDocument" />
+        <Parameter Name="ruleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="srgsDocument">As restrições para a gramática de reconhecimento de fala.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão do <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" />.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Speech.Recognition.Grammar" /> classe um <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> do objeto e especifica uma regra raiz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar todos os parâmetros para o manipulador de inicialização e o <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> não deve conter um manipulador de inicialização que requer argumentos.  
+  
+ Para criar um <xref:System.Speech.Recognition.Grammar> de objeto um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> e especifique um URI de base para usar ao resolver referências de regra relativa, use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala em um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> de instância e especifica uma regra a ser usada como a regra raiz da gramática. O exemplo constrói uma <xref:System.Speech.Recognition.Grammar> de objeto o <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> instância e os carrega no reconhecimento de fala.  
+  
+```csharp  
+using System;  
+using System.Speech.Recognition;  
+using System.Speech.Recognition.SrgsGrammar;  
+  
+namespace SampleRecognition  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+  
+    // Initialize an in-process speech recognition engine.  
+    {  
+      using (SpeechRecognitionEngine recognizer =  
+         new SpeechRecognitionEngine())  
+      {  
+  
+        // Create the SrgsDocument.  
+        SrgsDocument document = new SrgsDocument();  
+  
+        // Create the Cities rule and add it to the document.  
+        SrgsRule citiesRule = new SrgsRule("Cities");  
+        citiesRule.Scope = SrgsRuleScope.Public;  
+  
+        SrgsOneOf cityChoice = new SrgsOneOf();  
+        cityChoice.Add(new SrgsItem("Seattle"));  
+        cityChoice.Add(new SrgsItem("Los Angeles"));  
+        cityChoice.Add(new SrgsItem("New York"));  
+        cityChoice.Add(new SrgsItem("Miami"));  
+  
+        citiesRule.Add(cityChoice);  
+        document.Rules.Add(citiesRule);  
+  
+        // Create the Main rule and add it to the document.  
+        SrgsRule mainRule = new SrgsRule("Main");  
+        mainRule.Scope = SrgsRuleScope.Public;  
+  
+        mainRule.Add(new SrgsItem("I would like to fly from"));  
+        mainRule.Add(new SrgsRuleRef(citiesRule));  
+        mainRule.Add(new SrgsItem("to"));  
+        mainRule.Add(new SrgsRuleRef(citiesRule));  
+  
+        document.Rules.Add(mainRule);  
+  
+        // Create the Grammar object and specify which rule to use as the root.  
+        Grammar citiesGrammar = new Grammar(document,"Main");  
+  
+        // Load the grammar object to the recognizer.  
+        recognizer.LoadGrammarAsync(citiesGrammar);  
+  
+        // Attach a handler for the SpeechRecognized event.  
+        recognizer.SpeechRecognized +=  
+          new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);  
+  
+        // Set the input to the recognizer.  
+        recognizer.SetInputToDefaultAudioDevice();  
+  
+        // Start recognition.  
+        recognizer.RecognizeAsync();  
+        Console.WriteLine("Starting aynchronous recognition...");  
+  
+        // Keep the console window open.  
+        Console.ReadLine();  
+      }  
+    }  
+  
+    // Handle the SpeechRecognized event.  
+    static void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)  
+    {  
+      Console.WriteLine("  Speech recognized: " + e.Result.Text);  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ruleName" />não pode ser resolvido ou não é público, ou <paramref name="ruleName" /> é <see langword="null" /> e <paramref name="srgsDocument" /> não contém uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="srgsDocument" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="srgsDocument" />contém uma referência de regra não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (string path, string ruleName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string ruleName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="ruleName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho do arquivo que descreve uma gramática de reconhecimento de fala em um formato com suporte.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> de um arquivo de classe e especifica uma regra raiz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar os parâmetros para o manipulador de inicialização e a descrição não deve definir um manipulador de inicialização que requer argumentos.  
+  
+ Este construtor pode criar um <xref:System.Speech.Recognition.Grammar> instância nos seguintes formatos:  
+  
+-   Arquivos de formato XML que está de acordo com o W3C [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201761)  
+  
+-   Gramáticas foram compiladas para um arquivo binário com uma extensão de arquivo. cfg  
+  
+ Este construtor compila arquivos de gramática de formato XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Você pode reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática XML formato ao compilar a gramática de antemão, usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos.  
+  
+ Para criar um <xref:System.Speech.Recognition.Grammar> que especifica um URI de base a ser usado para resolver referências de regra relativo, abra um fluxo para o arquivo e use o <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega um arquivo SRGS local (cities.xml) de um arquivo e especifica uma regra a ser usada como a raiz da gramática. O conteúdo do arquivo cities.xml é exibido no exemplo XML que segue o exemplo c#.  
+  
+```csharp  
+  
+// Load a cities grammar from a local file, use a specific  
+// rule as the root of the grammar, and return the new grammar.  
+private static Grammar CreateGrammarFromFile2()  
+{  
+  Grammar citiesGrammar = new Grammar(@"c:\temp\cities.xml", "Main");  
+  citiesGrammar.Name = "SRGS File Cities Grammar 2";  
+  return citiesGrammar;  
+}  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- cities.xml:   
+    Defines an SRGS grammar for requesting a flight. This grammar includes  
+    a Cities rule that lists the cities that can be used for departures  
+    and destinations. -->  
+  
+  <rule id="Main">  
+    <item>  
+      I would like to fly from <ruleref uri="#Cities"/>  
+      to <ruleref uri="#Cities"/>  
+    </item>  
+  </rule>  
+  
+  <rule id="Cities" scope="public">  
+    <one-of>  
+      <item>Seattle</item>  
+      <item>Los Angeles</item>  
+      <item>New York</item>  
+      <item>Miami</item>  
+    </one-of>  
+  </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ruleName" />não pode ser resolvido ou não é público, <paramref name="path" /> é a cadeia de caracteres vazia (""), ou <paramref name="ruleName" /> é <see langword="null" /> e a descrição de gramática não define uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">O arquivo não contém uma descrição válida ou descreve uma gramática que contém uma referência de regra não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.IO.Stream stream, string ruleName, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string ruleName, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.IO.Stream,System.String,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="ruleName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> conectado a um objeto de entrada/saída (incluindo arquivos de recursos do Visual Studio e DLLs) que contém uma especificação de gramática.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <param name="parameters">Parâmetros a serem passados para o manipulador de inicialização especificado pelo <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnInit" /> propriedade para o ponto de entrada ou a regra raiz da <see cref="T:System.Speech.Recognition.Grammar" /> a ser criado. Esse parâmetro pode ser nulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> classe um <see cref="T:System.IO.Stream" /> e especifica uma regra raiz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros para um manipulador de inicialização também podem ser especificados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" />está conectado a uma gramática que:  
+  
+-   Não contém a regra especificada no<paramref name="ruleName" />  
+  
+-   Requer parâmetros de inicialização diferentes das especificadas no<paramref name="parameters" />  
+  
+-   Contém uma referência de regra relativo que não pode ser resolvida por base o padrão <see cref="T:System.Uri" /> regra para gramáticas</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.IO.Stream stream, string ruleName, Uri baseUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string ruleName, class System.Uri baseUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.IO.Stream,System.String,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="ruleName" Type="System.String" />
+        <Parameter Name="baseUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um fluxo que descreve uma gramática de reconhecimento de fala em um formato com suporte.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <param name="baseUri">O URI de base a ser usado para resolver qualquer referência relativa de regra na descrição de gramática ou <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> classe a partir de um fluxo, especifica uma regra raiz e define uma base URI Uniform Resource Identifier () para resolver referências de regra relativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar os parâmetros para o manipulador de inicialização e a descrição não deve definir um manipulador de inicialização que requer argumentos.  
+  
+ Este construtor pode criar um <xref:System.Speech.Recognition.Grammar> instância nos seguintes formatos:  
+  
+-   Arquivos de formato XML que está de acordo com o W3C [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201761)  
+  
+-   Gramáticas foram compiladas para um arquivo binário com uma extensão de arquivo. cfg  
+  
+ Este construtor compila arquivos de gramática de formato XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Você pode reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> objeto a partir de uma gramática XML formato ao compilar a gramática de antemão, usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos.  
+  
+ Este construtor não valida `baseUri`. No entanto, o `LoadGrammar` método de um <xref:System.Speech.Recognition.SpeechRecognitionEngine> ou <xref:System.Speech.Recognition.SpeechRecognizer> objeto lança uma exceção se ele não puder resolver todas as referências de regra na descrição de gramática. Se `baseUri` não é `null`, o `LoadGrammar` método usa o URI para resolver quaisquer referências de regra caso contrário, ele não pode resolver. Se `baseUri` representa um arquivo, em seguida, o `LoadGrammar` usa o arquivo designado e o diretório do arquivo quando ele tenta resolver referências de regra relativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir carrega um arquivo SRGS local (shuttle.xml) de um fluxo de arquivos. O arquivo contém uma referência de regra relativa a uma regra no arquivo cities.xml e especifica um URI de base a ser usado para resolver a referência de regra. O conteúdo dos arquivos shuttle.xml e cities.xml aparece nos exemplos de XML que siga o exemplo c#.  
+  
+```csharp  
+  
+private static Grammar CreateGrammarFromStream3()  
+{  
+  FileInfo file = new FileInfo(@".\shuttle.xml");  
+  Uri baseUri = new Uri(@"file://c:\temp\");  
+  Grammar citiesGrammar = new Grammar(file.OpenRead(), null, baseUri);  
+  citiesGrammar.Name = "Stream Cities Grammar 3";  
+  return citiesGrammar;  
+}  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- shuttle.xml:   
+    Defines an SRGS grammar for asking about a shuttle service. This grammar  
+    references a Cities rule that is defined in the cities.xml grammar. -->  
+  
+  <rule id="Main">  
+    <item>  
+      Can I get a shuttle in  
+      <ruleref uri="cities.xml#Cities"/>  
+    </item>  
+  </rule>  
+</grammar>  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- cities.xml:   
+    Defines an SRGS grammar for requesting a flight. This grammar includes  
+    a Cities rule that lists the cities that can be used for departures  
+    and destinations. -->  
+  
+  <rule id="Main">  
+    <item>  
+      I would like to fly from <ruleref uri="#Cities"/>  
+      to <ruleref uri="#Cities"/>  
+    </item>  
+  </rule>  
+  
+  <rule id="Cities" scope="public">  
+    <one-of>  
+      <item>Seattle</item>  
+      <item>Los Angeles</item>  
+      <item>New York</item>  
+      <item>Miami</item>  
+    </one-of>  
+  </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ruleName" />não pode ser resolvido ou não é público, ou <paramref name="ruleName" /> é <see langword="null" /> e a descrição de gramática não define uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">O fluxo não contém uma descrição válida ou descreve uma gramática que contém uma referência de regra não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsDocument,System.String,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="srgsDocument" Type="System.Speech.Recognition.SrgsGrammar.SrgsDocument" />
+        <Parameter Name="ruleName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="srgsDocument">Uma instância de <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> que contém as restrições da gramática de reconhecimento de fala.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <param name="parameters">Parâmetros a serem passados para o manipulador de inicialização especificado pelo <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnInit" /> propriedade para o ponto de entrada ou a regra raiz da <see cref="T:System.Speech.Recognition.Grammar" /> a ser criado. Esse parâmetro pode ser nulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> classe a partir de uma instância de <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" />e especifica o nome de uma regra para ser o ponto de entrada para a gramática.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros para um manipulador de inicialização também podem ser especificados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   Qualquer um dos parâmetros contém um valor inválido.  
+  
+-   O <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> especificado por <paramref name="srgsDocument" /> não contém a regra especificada por <paramref name="ruleName" />.  
+  
+-   O conteúdo dos parâmetros de matriz não coincidem com os argumentos de qualquer um dos manipuladores de inicialização da regra.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName, Uri baseUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName, class System.Uri baseUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsDocument,System.String,System.Uri)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="srgsDocument" Type="System.Speech.Recognition.SrgsGrammar.SrgsDocument" />
+        <Parameter Name="ruleName" Type="System.String" />
+        <Parameter Name="baseUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="srgsDocument">As restrições para a gramática de reconhecimento de fala.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão do <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" />.</param>
+        <param name="baseUri">O URI de base a ser usado para resolver qualquer referência à regra relativo no <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" />, ou <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Speech.Recognition.Grammar" /> classe um <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> objeto Especifica uma regra raiz e define uma base URI Uniform Resource Identifier () para resolver referências de regra relativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não passar todos os parâmetros para o manipulador de inicialização e o <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> não deve conter um manipulador de inicialização que requer argumentos.  
+  
+ Este construtor não valida `baseUri`. No entanto, o `LoadGrammar` método de um <xref:System.Speech.Recognition.SpeechRecognitionEngine> ou <xref:System.Speech.Recognition.SpeechRecognizer> objeto lança uma exceção se ele não puder resolver todas as referências de regra na descrição de gramática. Se `baseUri` não é `null`, o `LoadGrammar` método usa o URI para resolver quaisquer referências de regra caso contrário, ele não pode resolver. Se `baseUri` representa um arquivo, em seguida, o `LoadGrammar` método usa o arquivo designado e o diretório do arquivo quando ele tenta resolver referências de regra relativo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma gramática de reconhecimento de fala em um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> que contém uma referência de regra relativo ao arquivo cities.xml e especifica um URI a ser usado para resolver a referência de regra. O conteúdo do arquivo cities.xml é exibido no exemplo XML que segue o exemplo c#.  
+  
+```csharp  
+  
+private static Grammar CreateSrgsDocumentGrammar3()  
+{  
+  // Create the SrgsDocument.  
+  SrgsDocument document = new SrgsDocument();  
+  
+  // Create the Main rule and add it to the document.  
+  SrgsRule mainRule = new SrgsRule("Main");  
+  mainRule.Scope = SrgsRuleScope.Public;  
+  
+  SrgsItem item = new SrgsItem("Can I get a shuttle in");  
+  
+  // Create a relative URI for the cities rule.  
+  Uri ruleUri = new Uri("cities.xml#Cities", UriKind.Relative);  
+  
+  item.Add(new SrgsRuleRef(ruleUri));  
+  
+  mainRule.Add(item);  
+  document.Rules.Add(mainRule);  
+  
+  // Set the root rule.  
+  document.Root = mainRule;  
+  
+  // Create the grammar.  
+  Uri baseUri = new Uri(@"file://c:\temp\");  
+  Grammar citiesGrammar = new Grammar(document, null, baseUri);  
+  citiesGrammar.Name = "SrgsDocument Cities Grammar 3";  
+  
+  return citiesGrammar;  
+}  
+  
+```  
+  
+```xml  
+  
+<?xml version="1.0" encoding="UTF-8" ?>  
+<grammar version="1.0" xml:lang="en-US"  
+         xmlns="http://www.w3.org/2001/06/grammar"  
+         tag-format="semantics/1.0" root="Main">  
+  
+  <!-- cities.xml:   
+    Defines an SRGS grammar for requesting a flight. This grammar includes  
+    a Cities rule that lists the cities that can be used for departures  
+    and destinations. -->  
+  
+  <rule id="Main">  
+    <item>  
+      I would like to fly from <ruleref uri="#Cities"/>  
+      to <ruleref uri="#Cities"/>  
+    </item>  
+  </rule>  
+  
+  <rule id="Cities" scope="public">  
+    <one-of>  
+      <item>Seattle</item>  
+      <item>Los Angeles</item>  
+      <item>New York</item>  
+      <item>Miami</item>  
+    </one-of>  
+  </rule>  
+</grammar>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ruleName" />não pode ser resolvido ou não é público, ou <paramref name="ruleName" /> é <see langword="null" /> e <paramref name="srgsDocument" /> não contém uma regra raiz.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="srgsDocument" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="srgsDocument" />contém uma referência de regra não pode ser resolvida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (string path, string ruleName, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, string ruleName, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.String,System.String,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="ruleName" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho para um arquivo, incluindo DLLs, que contém uma especificação de gramática.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <param name="parameters">Parâmetros a serem passados para o manipulador de inicialização especificado pelo <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnInit" /> propriedade para o ponto de entrada ou a regra raiz da <see cref="T:System.Speech.Recognition.Grammar" /> a ser criado. Esse parâmetro pode ser nulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> classe a partir de um arquivo que contém uma definição de gramática e especifica o nome de uma regra para ser o ponto de entrada para a gramática.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros para um manipulador de inicialização também podem ser especificados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   Qualquer um dos parâmetros contém um valor inválido.  
+  
+-   O arquivo especificado por <paramref name="path" /> não contém uma gramática válida ou a regra especificada no <paramref name="ruleName" />.  
+  
+-   O conteúdo dos parâmetros de matriz não coincidem com os argumentos de qualquer um dos manipuladores de inicialização da regra.  
+  
+-   A gramática não tem uma referência de regra relativo que não pode ser resolvida por base o padrão <see cref="T:System.Uri" /> regra para gramáticas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.IO.Stream stream, string ruleName, Uri baseUri, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, string ruleName, class System.Uri baseUri, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.IO.Stream,System.String,System.Uri,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="ruleName" Type="System.String" />
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Um <see cref="T:System.IO.Stream" /> conectado a um objeto de entrada/saída (incluindo arquivos de recursos do Visual Studio e DLLs) que contém uma especificação de gramática.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <param name="baseUri">O URI de base a ser usado para resolver qualquer referência relativa de regra na descrição de gramática ou <see langword="null" />.</param>
+        <param name="parameters">Parâmetros a serem passados para o manipulador de inicialização especificado pelo <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnInit" /> propriedade para o ponto de entrada ou a regra raiz da <see cref="T:System.Speech.Recognition.Grammar" /> a ser criado. Esse parâmetro pode ser nulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> classe um <see cref="T:System.IO.Stream" /> e especifica uma regra raiz e um URI de base para resolver as referências relativas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros para um manipulador de inicialização também podem ser especificados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   Qualquer um dos parâmetros contém um valor inválido.  
+  
+-   O <paramref name="stream" /> está conectado a uma gramática não contém a regra especificada por <paramref name="ruleName" />.  
+  
+-   O conteúdo dos parâmetros de matriz não coincidem com os argumentos de qualquer um dos manipuladores de inicialização da regra.  
+  
+-   A gramática contém uma referência de regra relativo que não pode ser resolvida por base o padrão <see cref="T:System.Uri" /> regra para gramáticas ou o URI fornecido pelo <paramref name="baseUri" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grammar (System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName, Uri baseUri, object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsDocument, string ruleName, class System.Uri baseUri, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.#ctor(System.Speech.Recognition.SrgsGrammar.SrgsDocument,System.String,System.Uri,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="srgsDocument" Type="System.Speech.Recognition.SrgsGrammar.SrgsDocument" />
+        <Parameter Name="ruleName" Type="System.String" />
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="srgsDocument">Uma instância de <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> que contém as restrições da gramática de reconhecimento de fala.</param>
+        <param name="ruleName">O identificador da regra a ser usado como o ponto de entrada da gramática de reconhecimento de fala, ou <see langword="null" /> para usar a regra de raiz padrão da descrição da gramática.</param>
+        <param name="baseUri">O URI de base a ser usado para resolver qualquer referência relativa de regra na descrição de gramática ou <see langword="null" />.</param>
+        <param name="parameters">Parâmetros a serem passados para o manipulador de inicialização especificado pelo <see cref="P:System.Speech.Recognition.SrgsGrammar.SrgsRule.OnInit" /> propriedade para o ponto de entrada ou a regra raiz da <see cref="T:System.Speech.Recognition.Grammar" /> a ser criado. Esse parâmetro pode ser nulo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Speech.Recognition.Grammar" /> classe a partir de uma instância de <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" />e especifica o nome de uma regra para ser o ponto de entrada para a gramática e um URI de base para resolver as referências relativas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros para um manipulador de inicialização também podem ser especificados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">-   Qualquer um dos parâmetros contém um valor inválido.  
+  
+-   O <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> especificado por <paramref name="srgsDocument" /> não contém a regra especificada no <paramref name="ruleName" />.  
+  
+-   O conteúdo dos parâmetros de matriz não coincidem com os argumentos de qualquer um dos manipuladores de inicialização da regra.  
+  
+-   A gramática não tem uma referência de regra relativo que não pode ser resolvida por base o padrão <see cref="T:System.Uri" /> regra para gramáticas ou o URI fornecido pelo <paramref name="baseUri" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que controla se um <see cref="T:System.Speech.Recognition.Grammar" /> pode ser usado por um reconhecedor de fala para executar o reconhecimento.</summary>
+        <value>O <see langword="Enabled" /> propriedade retorna <see langword="true" /> se um reconhecedor de fala pode executar o reconhecimento usando a gramática de reconhecimento de fala; caso contrário, a propriedade retornará <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância de <xref:System.Speech.Recognition.Grammar> podem ser ativados ou desativados independentemente sendo carregado pelo mecanismo de reconhecimento de fala.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava informações sobre um <xref:System.Speech.Recognition.Grammar> o objeto para o [console](http://go.microsoft.com/fwlink/?LinkId=159613).  
+  
+```csharp  
+  
+private static void DumpGrammarStatus(Grammar item)  
+{  
+  Console.WriteLine("Grammar name is {0}:", item.Name);  
+  Console.WriteLine("  The Grammar {0} loaded.",  
+    item.Loaded ? "is" : "is not");  
+  Console.WriteLine("  The Grammar {0} enabled.",  
+    item.Enabled ? "is" : "is not");  
+  if (item.RuleName != null)  
+  {  
+    Console.WriteLine("  The root rule is {0}.", item.RuleName);  
+  }  
+  else  
+  {  
+    Console.WriteLine("  The Grammar does not specify a root rule.");  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStg">
+      <MemberSignature Language="C#" Value="protected virtual bool IsStg { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStg" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.IsStg" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se uma gramática é fortemente tipada.</summary>
+        <value>O <see langword="IsStg" /> propriedade retorna <see langword="true" /> se a gramática está fortemente tipadas; caso contrário, a propriedade retornará <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fortemente tipado <xref:System.Speech.Recognition.Grammar> objeto (`IsStg` é igual a `true`) pode retornar resultados fortemente tipado (objetos, em vez de texto não processado) para um aplicativo cliente. Por exemplo, uma gramática fortemente tipado pode retornar <xref:System.DateTime> objetos em vez de entrada não reconhecida processada.  
+  
+ Você pode implementar gramáticas fortemente tipada, anexando o código para as regras de uma gramática. Como um mecanismo de reconhecimento processa qualquer determinada regra, considerando como entrada os resultados parciais atuais, o código associado é executado e as informações textuais torna-se objetos de tipo avançado. Isso permite que um cliente para tornar mais fácil usar verificando semântica avançada, suporte a várias culturas, e a lógica de gramática interno.  
+  
+ Instâncias do tipo mais acentuado <xref:System.Speech.Recognition.Grammar> objetos normalmente são obtidos de recursos em um assembly como um <xref:System.Type> do tempo de execução do CLR (Common Language). Os tipos de localizada usados para dar suporte a idiomas diferentes são exemplos de tais <xref:System.Speech.Recognition.Grammar> objetos.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Herdando de gramáticas fortemente tipada <see cref="T:System.Speech.Recognition.Grammar" /> precisar substituir o comportamento padrão de <see langword="IsStg" />, que é retornar <see langword="false" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Loaded">
+      <MemberSignature Language="C#" Value="public bool Loaded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Loaded" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.Loaded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se um <see cref="T:System.Speech.Recognition.Grammar" /> foi carregado por um reconhecedor de fala.</summary>
+        <value>O <see langword="Loaded" /> propriedade retorna <see langword="true" /> se a gramática de reconhecimento de fala referenciado carregada no reconhecedor de fala; caso contrário, a propriedade retornará <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma vez um <xref:System.Speech.Recognition.Grammar> tenha sido carregado, os valores de <xref:System.Speech.Recognition.Grammar.Weight%2A>, e <xref:System.Speech.Recognition.Grammar.Priority%2A> não pode ser alterado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava informações sobre um <xref:System.Speech.Recognition.Grammar> o objeto para o [console](http://go.microsoft.com/fwlink/?LinkId=159613).  
+  
+```csharp  
+  
+private static void DumpGrammarStatus(Grammar item)  
+{  
+  Console.WriteLine("Grammar name is {0}:", item.Name);  
+  Console.WriteLine("  The Grammar {0} loaded.",  
+    item.Loaded ? "is" : "is not");  
+  Console.WriteLine("  The Grammar {0} enabled.",  
+    item.Enabled ? "is" : "is not");  
+  if (item.RuleName != null)  
+  {  
+    Console.WriteLine("  The root rule is {0}.", item.RuleName);  
+  }  
+  else  
+  {  
+    Console.WriteLine("  The Grammar does not specify a root rule.");  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadLocalizedGrammarFromType">
+      <MemberSignature Language="C#" Value="public static System.Speech.Recognition.Grammar LoadLocalizedGrammarFromType (Type type, params object[] onInitParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Speech.Recognition.Grammar LoadLocalizedGrammarFromType(class System.Type type, object[] onInitParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.LoadLocalizedGrammarFromType(System.Type,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Recognition.Grammar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="onInitParameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="type">Em um assembly, o <see cref="T:System.Type" /> de um objeto com base em <see cref="T:System.Speech.Recognition.Grammar" />.</param>
+        <param name="onInitParameters">Os parâmetros a serem passados para um método de inicialização de localizedobject baseados em <see cref="T:System.Speech.Recognition.Grammar" />. Esse parâmetro pode ser nulo.</param>
+        <summary>O <see langword="LoadLocalizedGrammarFromType" /> método retorna uma instância localizada de um <see cref="T:System.Speech.Recognition.Grammar" /> objeto derivado de <see cref="T:System.Type" />.</summary>
+        <returns>O <see langword="LoadLocalizedGrammarFromType" /> método retorna um objeto válido com base em <see cref="T:System.Speech.Recognition.Grammar" />, ou <see langword="null" /> se houve um erro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Localizada gramáticas obtidas com `LoadLocalizedGrammarFromType` são normalmente fortemente tipado (consulte <xref:System.Speech.Recognition.Grammar.IsStg%2A> para obter mais informações sobre as gramáticas com rigidez de tipos). Se `onInitParameters` for uma referência nula (Nothing no Visual Basic) localizado gramática deve ter nenhum método de inicialização, ou um método que não usa nenhum argumento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de uma <see cref="T:System.Speech.Recognition.Grammar" /> objeto.</summary>
+        <value>O <see langword="Name" /> propriedade retorna o nome do <see cref="T:System.Speech.Recognition.Grammar" /> objeto. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria dois <xref:System.Speech.Recognition.Grammar> objetos, uma para dígitos e um para frações. Os objetos de gramática são atribuídos nomes e pesos relativos e prioridades e carregados por um reconhecedor de fala no processo. O `CreateDigitsGrammar`, `CreateFractionsGrammar`, e `recognizer_SpeechRecognized` métodos não são mostrados aqui.  
+  
+```csharp  
+  
+// Create a Grammar for recognizing numeric digits.  
+Grammar digitsGrammar = CreateDigitsGrammar();  
+digitsGrammar.Name = "Digits Grammar";  
+digitsGrammar.Priority = 2;  
+digitsGrammar.Weight = 0.6f;  
+  
+// Create a Grammar for recognizing fractions.  
+Grammar fractionsGrammar = CreateFractionsGrammar();  
+fractionsGrammar.Name = "Fractions Grammar";  
+fractionsGrammar.Priority = 1;  
+fractionsGrammar.Weight = 1f;  
+  
+// Create an in-process speech recognizer.  
+SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine();  
+  
+recognizer.SpeechRecognized +=  
+  new EventHandler<SpeechRecognizedEventArgs>(  
+    recognizer_SpeechRecognized);  
+  
+// Load the digits and fractions Grammar objects.  
+recognizer.LoadGrammar(digitsGrammar);  
+recognizer.LoadGrammar(fractionsGrammar);  
+  
+// Start recognition.  
+recognizer.SetInputToDefaultAudioDevice();  
+recognizer.RecognizeAsync(RecognizeMode.Multiple);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public int Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de prioridade de uma <see cref="T:System.Speech.Recognition.Grammar" /> objeto.</summary>
+        <value>O <see langword="Priority" /> propriedade retorna um valor inteiro que representa a prioridade relativa de um determinado <see cref="T:System.Speech.Recognition.Grammar" />. O intervalo é de -128 a 127, inclusive. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Priority` propriedade é usada para selecionar uma gramática quando mais de uma gramática produzirá um resultado de reconhecimento idênticos. Se um reconhecedor de fala tem mais de uma gramática de reconhecimento fala carregados e habilitados que correspondem a entrada, e a correspondência é o melhor resultado do reconhecedor, então o reconhecedor usa a gramática que tem o mais alto `Priority`. Se as gramáticas que produzem o resultado de reconhecimento idênticos também têm o mesmo `Priority` de valor, então a gramática que usa o reconhecedor não está definida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria dois <xref:System.Speech.Recognition.Grammar> objetos, uma para dígitos e um para frações. O <xref:System.Speech.Recognition.Grammar> objetos são atribuídos nomes e pesos relativos e prioridades e carregados por um reconhecedor de fala no processo. O `CreateDigitsGrammar`, `CreateFractionsGrammar`, e `recognizer_SpeechRecognized` métodos não são mostrados aqui.  
+  
+```csharp  
+  
+// Create a Grammar for recognizing numeric digits.  
+Grammar digitsGrammar = CreateDigitsGrammar();  
+digitsGrammar.Name = "Digits Grammar";  
+digitsGrammar.Priority = 2;  
+digitsGrammar.Weight = 0.6f;  
+  
+// Create a Grammar for recognizing fractions.  
+Grammar fractionsGrammar = CreateFractionsGrammar();  
+fractionsGrammar.Name = "Fractions Grammar";  
+fractionsGrammar.Priority = 1;  
+fractionsGrammar.Weight = 1f;  
+  
+// Create an in-process speech recognizer.  
+SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine();  
+  
+recognizer.SpeechRecognized +=  
+  new EventHandler<SpeechRecognizedEventArgs>(  
+    recognizer_SpeechRecognized);  
+  
+// Load the digits and fractions Grammar objects.  
+recognizer.LoadGrammar(digitsGrammar);  
+recognizer.LoadGrammar(fractionsGrammar);  
+  
+// Start recognition.  
+recognizer.SetInputToDefaultAudioDevice();  
+recognizer.RecognizeAsync(RecognizeMode.Multiple);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceName">
+      <MemberSignature Language="C#" Value="protected string ResourceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResourceName" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.ResourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor com o nome de um recurso binário que foi usado para carregar atual <see cref="T:System.Speech.Recognition.Grammar" />.</summary>
+        <value>O <see langword="ResourceName" /> propriedade retorna o nome do recurso binário do qual a gramática fortemente tipada, usado por <see cref="T:System.Speech.Recognition.Grammar" />, foi carregada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RuleName">
+      <MemberSignature Language="C#" Value="public string RuleName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RuleName" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.RuleName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do ponto de entrada ou regra raiz de um <see cref="T:System.Speech.Recognition.Grammar" /> objeto.</summary>
+        <value>O <see langword="RuleName" /> propriedade retorna o identificador para a regra raiz da gramática de reconhecimento de fala referenciado. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para construir um <xref:System.Speech.Recognition.Grammar> de objeto e definir o nome de sua regra raiz, use um do <xref:System.Speech.Recognition.Grammar.%23ctor%2A> construtores que usa o `ruleName` parâmetro.  
+  
+ Se a regra raiz de um <xref:System.Speech.Recognition.Grammar> não tem nome, a propriedade retornará `null`.  
+  
+ As regras de raiz de <xref:System.Speech.Recognition.Grammar> instâncias construído a partir de <xref:System.Speech.Recognition.GrammarBuilder> objetos normalmente não têm nome, portanto <xref:System.Speech.Recognition.Grammar.RuleName%2A> retorna `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava informações sobre um <xref:System.Speech.Recognition.Grammar> o objeto para o [console](http://go.microsoft.com/fwlink/?LinkId=159613).  
+  
+```csharp  
+  
+private static void DumpGrammarStatus(Grammar item)  
+{  
+  Console.WriteLine("Grammar name is {0}:", item.Name);  
+  Console.WriteLine("  The Grammar {0} loaded.",  
+    item.Loaded ? "is" : "is not");  
+  Console.WriteLine("  The Grammar {0} enabled.",  
+    item.Enabled ? "is" : "is not");  
+  if (item.RuleName != null)  
+  {  
+    Console.WriteLine("  The root rule is {0}.", item.RuleName);  
+  }  
+  else  
+  {  
+    Console.WriteLine("  The Grammar does not specify a root rule.");  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeechRecognized">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Speech.Recognition.SpeechRecognizedEventArgs&gt; SpeechRecognized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Speech.Recognition.SpeechRecognizedEventArgs&gt; SpeechRecognized" />
+      <MemberSignature Language="DocId" Value="E:System.Speech.Recognition.Grammar.SpeechRecognized" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Speech.Recognition.SpeechRecognizedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gerado quando um reconhecedor de fala executa o reconhecimento usando o objeto <see cref="T:System.Speech.Recognition.Grammar" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O reconhecedor de fala também gera um `SpeechRecognized` evento quando ele reconhece a entrada. O <xref:System.Speech.Recognition.Grammar> do objeto <xref:System.Speech.Recognition.Grammar.SpeechRecognized> é gerado antes do reconhecedor de fala `SpeechRecognized` eventos. Para obter mais informações, consulte o <xref:System.Speech.Recognition.SpeechRecognizer.SpeechRecognized?displayProperty=nameWithType>, <xref:System.Speech.Recognition.SpeechRecognitionEngine.SpeechRecognized?displayProperty=nameWithType>, e <xref:System.Speech.Recognition.SpeechRecognitionEngine.RecognizeCompleted> eventos.  
+  
+ As tarefas específicas a uma gramática específica sempre devem ser tratadas pelo manipuladores para o <xref:System.Speech.Recognition.Grammar> do objeto <xref:System.Speech.Recognition.Grammar.SpeechRecognized> eventos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o uso de um manipulador de eventos para o <xref:System.Speech.Recognition.Grammar> do objeto <xref:System.Speech.Recognition.Grammar.SpeechRecognized> eventos. Ele produz os resultados de reconhecimento para a [console](http://go.microsoft.com/fwlink/?LinkId=159613).  
+  
+```csharp  
+public partial class Form1 : Form  
+{  
+  SpeechRecognitionEngine sre;  
+  
+  public Form1()  
+  {  
+  InitializeComponent();  
+  
+  // Create an in-process speech recognizer.  
+  sre = new SpeechRecognitionEngine();  
+  
+  // Configure input to the speech recognizer.  
+  sre.SetInputToDefaultAudioDevice();  
+  
+  // Create a simple grammar and load it.  
+  Grammar testGrammar = new Grammar(new GrammarBuilder("testing"));  
+  sre.LoadGrammarAsync(testGrammar);  
+  
+  // Add a handler for the grammar's speech recognized event.  
+  testGrammar.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(testGrammar_SpeechRecognized);  
+  
+  // Start asynchronous speech recognition.  
+  sre.RecognizeAsync();  
+  }  
+  
+  // Handle the grammar's SpeechRecognized event, output the recognized text.  
+  void testGrammar_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)  
+  {  
+    Console.WriteLine("Recognized text: " + e.Result.Text);  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StgInit">
+      <MemberSignature Language="C#" Value="protected void StgInit (object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void StgInit(object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.Grammar.StgInit(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Parâmetros a serem passados para inicializar a gramática fortemente tipada. Esse parâmetro pode ser nulo.</param>
+        <summary>O <see langword="StgInit" /> método inicializa uma gramática fortemente tipada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fortemente tipado <xref:System.Speech.Recognition.Grammar> objeto (`IsStg` é igual a `true`) pode retornar resultados fortemente tipado (objetos, em vez de texto não processado) para um aplicativo cliente. Por exemplo, uma gramática fortemente tipado pode retornar <xref:System.DateTime> objetos em vez de entrada não reconhecida processada.  
+  
+ Você pode implementar gramáticas fortemente tipada, anexando o código para as regras de uma gramática. Como um mecanismo de reconhecimento processa qualquer determinada regra, considerando como entrada os resultados parciais atuais, o código associado é executado e as informações textuais torna-se objetos de tipo avançado. Isso permite que um cliente para tornar mais fácil usar verificando semântica avançada, suporte a várias culturas, e a lógica de gramática interno.  
+  
+ Instâncias do tipo mais acentuado <xref:System.Speech.Recognition.Grammar> objetos normalmente são obtidos de recursos em um assembly como um <xref:System.Type> do tempo de execução do CLR (Common Language). Os tipos de localizada usados para dar suporte a idiomas diferentes são exemplos de tais <xref:System.Speech.Recognition.Grammar> objetos.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se uma gramática fortemente tipada requer inicialização, <see langword="StgInit" /> deve ser chamado em um construtor ou um método de inicialização.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Weight">
+      <MemberSignature Language="C#" Value="public float Weight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Weight" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.Grammar.Weight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de peso de um objeto <see cref="T:System.Speech.Recognition.Grammar" />.</summary>
+        <value>A propriedade <see langword="Weight" /> retorna um valor de ponto flutuante que indica o peso relativo que uma instância do mecanismo de reconhecimento deve atribuir à gramática ao processar a entrada de voz. É o intervalo de 0,0 a 1,0 inclusive. O padrão é 1.0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Devido à complexidade de uso de um mecanismo de reconhecimento de **peso**, seu efeito no desempenho da gramática de um determinado não é diretamente como previsível do <xref:System.Speech.Recognition.Grammar.Priority%2A>.  
+  
+ O reconhecimento de fala é um sistema ponderado. Ele avalia todos os caminhos de reconhecimento possíveis com base em uma combinação de peso da gramática, os pesos definidos para alternativas dentro a gramática e as probabilidades definidas pelos modelos de fala. O mecanismo de reconhecimento de fala usa a combinação dessas pesos e probabilidades para classificação reconhecimentos alternativas potenciais. Gramáticas com pesos mais altos contribuirá com mais para a classificação das alternativas de reconhecimento de gramáticas com pesos inferiores.  
+  
+ O efeito de <xref:System.Speech.Recognition.Grammar.Weight%2A> propriedade em um reconhecedor de fala é dependente de implementação do reconhecedor de. Embora o <xref:System.Speech.Recognition.Grammar.Weight%2A> propriedade pode ser usada para ajustar a precisão do reconhecimento de fala de um aplicativo, ele deve ser usado somente depois controlado estudo de diagnóstico de um ambiente de determinado reconhecimento e com informações completas sobre o mecanismo de reconhecimento em uso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria dois <xref:System.Speech.Recognition.Grammar> objetos, uma para dígitos e um para frações. O <xref:System.Speech.Recognition.Grammar> objetos são atribuídos nomes e pesos relativos e prioridades e carregados por um reconhecedor de fala no processo. O `CreateDigitsGrammar`, `CreateFractionsGrammar`, e `recognizer_SpeechRecognized` métodos não são mostrados aqui.  
+  
+```csharp  
+  
+// Create a Grammar for recognizing numeric digits.  
+Grammar digitsGrammar = CreateDigitsGrammar();  
+digitsGrammar.Name = "Digits Grammar";  
+digitsGrammar.Priority = 2;  
+digitsGrammar.Weight = 0.6f;  
+  
+// Create a Grammar for recognizing fractions.  
+Grammar fractionsGrammar = CreateFractionsGrammar();  
+fractionsGrammar.Name = "Fractions Grammar";  
+fractionsGrammar.Priority = 1;  
+fractionsGrammar.Weight = 1f;  
+  
+// Create an in-process speech recognizer.  
+SpeechRecognitionEngine recognizer = new SpeechRecognitionEngine();  
+  
+recognizer.SpeechRecognized +=  
+  new EventHandler<SpeechRecognizedEventArgs>(  
+    recognizer_SpeechRecognized);  
+  
+// Load the digits and fractions Grammar objects.  
+recognizer.LoadGrammar(digitsGrammar);  
+recognizer.LoadGrammar(fractionsGrammar);  
+  
+// Start recognition.  
+recognizer.SetInputToDefaultAudioDevice();  
+recognizer.RecognizeAsync(RecognizeMode.Multiple);  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

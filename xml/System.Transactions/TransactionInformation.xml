@@ -1,0 +1,159 @@
+<Type Name="TransactionInformation" FullName="System.Transactions.TransactionInformation">
+  <TypeSignature Language="C#" Value="public class TransactionInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TransactionInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Transactions.TransactionInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Transactions.Local</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações adicionais sobre uma transação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode consultar as informações relevantes sobre uma transação, acessando o <xref:System.Transactions.Transaction.TransactionInformation%2A> proptery do <xref:System.Transactions.Transaction> classe. Dessa forma, você pode recuperar o status de qualquer objeto de transação, incluindo a transação de ambiente atual, fazendo uma chamada como `Transaction.Current.TransactionInfomation.Status`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreationTime">
+      <MemberSignature Language="C#" Value="public DateTime CreationTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime CreationTime" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.TransactionInformation.CreationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a hora de criação da transação.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que contém a hora de criação da transação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada principalmente para determinar se a transação foi criada para um período significativo de tempo. Esse carimbo de hora é preciso somente em 1 segundo o tempo de criação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistributedIdentifier">
+      <MemberSignature Language="C#" Value="public Guid DistributedIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid DistributedIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.TransactionInformation.DistributedIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo da transação escalado.</summary>
+        <value>Um <see cref="T:System.Guid" /> que contém o identificador exclusivo da transação escalado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a transação ser escalonada para uma transação de confirmação de duas fases, essa propriedade retorna o identificador exclusivo. Se a transação não será escalonada, o valor será `null`.  
+  
+ Para obter mais informações sobre como o gerenciamento da transação será escalonado, consulte [escalonamento de bloqueios de gerenciamento de transação](http://msdn.microsoft.com/en-us/5b87ae58-8ccf-4b9b-9715-41e4aade89b7).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalIdentifier">
+      <MemberSignature Language="C#" Value="public string LocalIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.TransactionInformation.LocalIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo da transação.</summary>
+        <value>Um identificador exclusivo da transação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Transactions.TransactionStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Transactions.TransactionStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Transactions.TransactionInformation.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Transactions.Local</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Transactions.TransactionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status da transação.</summary>
+        <value>Um <see cref="T:System.Transactions.TransactionStatus" /> que contém o status da transação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

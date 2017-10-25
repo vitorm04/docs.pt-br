@@ -1,0 +1,129 @@
+<Type Name="ModelChangedEventArgs" FullName="System.Activities.Presentation.Services.ModelChangedEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class ModelChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ModelChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Services.ModelChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe base abstrata que representa os dados de evento que contém uma descrição das alterações na árvore de item de modelo na sessão de edição anterior.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados de evento podem ser usados por assinantes do <xref:System.Activities.Presentation.Services.ModelService.ModelChanged> eventos.  
+  
+   
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ModelChangedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Services.ModelChangedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Presentation.Services.ModelChangedEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsAdded">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt; ItemsAdded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; ItemsAdded" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsAdded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Don't use this property. Use "ModelChangeInfo" instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado por uma classe derivada, obtém uma enumeração de evento objetos de argumento que foram adicionados.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> de argumentos de evento adicionado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsRemoved">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt; ItemsRemoved { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelItem&gt; ItemsRemoved" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsRemoved" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Don't use this property. Use "ModelChangeInfo" instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado por uma classe derivada, obtém uma enumeração de evento objetos de argumento que foram removidos.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> de argumentos de evento removido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelChangeInfo">
+      <MemberSignature Language="C#" Value="public virtual System.Activities.Presentation.Services.ModelChangeInfo ModelChangeInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Services.ModelChangeInfo ModelChangeInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Services.ModelChangeInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado por uma classe derivada, obtém as informações detalhadas sobre as alterações feitas em um modelo.</summary>
+        <value>Um <see cref="T:System.Activities.Presentation.Services.ModelChangeInfo" /> que contém informações detalhadas sobre as alterações feitas em um modelo de objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesChanged">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelProperty&gt; PropertiesChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Activities.Presentation.Model.ModelProperty&gt; PropertiesChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Don't use this property. Use "ModelChangeInfo" instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Activities.Presentation.Model.ModelProperty&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementado por uma classe derivada, obtém uma enumeração de propriedades que foram alteradas.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.IEnumerable`1" /> de propriedade alterada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

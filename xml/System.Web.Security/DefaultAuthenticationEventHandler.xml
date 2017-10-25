@@ -1,0 +1,47 @@
+<Type Name="DefaultAuthenticationEventHandler" FullName="System.Web.Security.DefaultAuthenticationEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DefaultAuthenticationEventHandler(object sender, DefaultAuthenticationEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DefaultAuthenticationEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Security.DefaultAuthenticationEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.Security.DefaultAuthenticationEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Web.Security.DefaultAuthenticationEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipula o **DefaultAuthentication_OnAuthenticate** eventos de um <see cref="T:System.Web.Security.DefaultAuthenticationModule" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Security.DefaultAuthenticationEventHandler> delegado é definido para o <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> evento o <xref:System.Web.Security.DefaultAuthenticationModule> classe. Você pode acessar o <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> evento o <xref:System.Web.Security.DefaultAuthenticationModule> classe especificando uma sub-rotina chamada **DefaultAuthentication_OnAuthenticate** no arquivo global. asax para seu aplicativo ASP.NET. O <xref:System.Web.Security.DefaultAuthenticationModule.Authenticate> é gerado após o <xref:System.Web.HttpApplication.AuthenticateRequest> eventos e é usado para garantir que o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> é preenchida com um <xref:System.Security.Principal.IPrincipal> objeto.  
+  
+ Você pode usar o <xref:System.Web.Security.DefaultAuthenticationEventArgs.Context%2A> propriedade o <xref:System.Web.Security.DefaultAuthenticationEventArgs> objeto fornecido para o **DefaultAuthentication_OnAuthenticate** evento para definir o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> para um personalizado <xref:System.Security.Principal.IPrincipal> objeto. Se você não especificar um valor para o <xref:System.Web.HttpContext.User%2A> propriedade do <xref:System.Web.HttpContext> fornecido durante a **DefaultAuthentication_OnAuthenticate** evento, o <xref:System.Web.Security.DefaultAuthenticationModule> define o <xref:System.Web.HttpContext.User%2A> propriedade do <xref:System.Web.HttpContext> para um <xref:System.Security.Principal.GenericPrincipal> objeto que não contém nenhuma informação de usuário.  
+  
+ O **DefaultAuthentication_OnAuthenticate** é gerado após o <xref:System.Web.HttpApplication.AuthenticateRequest> eventos e antes do <xref:System.Web.HttpApplication.AuthorizeRequest> evento. Se você tiver uma seção que depende do nome de usuário para negar ou permitir o acesso ao seu aplicativo, modificando o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> pode afetar o comportamento do seu aplicativo. Certifique-se que o nome de usuário definido durante a **DefaultAuthentication_OnAuthenticate** eventos é considerado quando você especifica a seção em sua configuração.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o **DefaultAuthentication_OnAuthenticate** evento para testar se o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> é `null`. Se a propriedade for `null`, conjuntos de exemplo o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> para um <xref:System.Security.Principal.GenericPrincipal> objeto, onde o <xref:System.Security.Principal.GenericPrincipal.Identity%2A> do <xref:System.Security.Principal.GenericPrincipal> objeto é um <xref:System.Security.Principal.GenericIdentity> com um <xref:System.Security.Principal.GenericIdentity.Name%2A> valor padrão" ".  
+  
+> [!NOTE]
+>  O **DefaultAuthentication_OnAuthenticate** é gerado antes do <xref:System.Web.HttpApplication.AuthorizeRequest> evento. Como resultado, se você definir o <xref:System.Web.HttpContext.User%2A> propriedade <xref:System.Web.HttpContext> para uma identidade personalizada, ele pode afetar o comportamento do seu aplicativo. Por exemplo, se você estiver usando o <xref:System.Web.Security.FormsAuthentication> classe e garante que somente usuários autenticados tem acesso ao seu site, usando a seção e especificando `<deny users="?" />`, este exemplo fará com que o elemento a ser ignorada, pois o usuário terá um nome, que é "padrão". Em vez disso, você especificaria `<deny users="default" />` para garantir que somente usuários autenticados podem acessar seu site.  
+  
+ [!code-csharp[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/CS/global.asax#1)]
+ [!code-vb[System.Web.Security.DefaultAuthenticationModule#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.DefaultAuthenticationModule/VB/global.asax#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

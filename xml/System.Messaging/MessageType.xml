@@ -1,0 +1,77 @@
+<Type Name="MessageType" FullName="System.Messaging.MessageType">
+  <TypeSignature Language="C#" Value="public enum MessageType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed MessageType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica o tipo de uma mensagem. Uma mensagem pode ser uma mensagem típica do serviço de enfileiramento de mensagens, uma mensagem de confirmação positiva (de chegada e de leitura) ou negativa (de chegada e de leitura) ou uma mensagem de relatório.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Típica (`Normal` tipo) mensagens são aqueles que você envia para uma fila usando o <xref:System.Messaging.Message> classe ou nenhuma sobrecarga do <xref:System.Messaging.MessageQueue.Send%2A?displayProperty=nameWithType> método.  
+  
+ O Message Queuing gera mensagens de confirmação sempre que o aplicativo de envio solicita um. Se você enviar uma mensagem usando o <xref:System.Messaging.Message> classe, você pode usar seu <xref:System.Messaging.Message.AcknowledgeType%2A> propriedade para especificar os tipos de confirmações de recebimento. Por exemplo, enfileiramento de mensagens pode gerar mensagens positivas ou negativas para indicar que a mensagem original chegou ou foi lido. O Message Queuing retorna a mensagem de confirmação apropriada para a fila de administração especificada pelo aplicativo de envio. Quando você receber ou exibir uma mensagem de confirmação usando um <xref:System.Messaging.Message>, sua <xref:System.Messaging.Message.Acknowledgment%2A> propriedade indica o motivo do enfileiramento de mensagens enviadas a confirmação.  
+  
+ O Message Queuing gera mensagens de relatório sempre que uma fila de relatórios é definida no Gerenciador de filas de origem. Quando o rastreamento está habilitado (definindo o <xref:System.Messaging.Message.UseTracing%2A?displayProperty=nameWithType> propriedade na mensagem original), enfileiramento de mensagens envia uma mensagem de relatório para a fila de enfileiramento de mensagens de relatório sempre que a mensagem original entra ou sai de um servidor de enfileiramento de mensagens.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Acknowledgment">
+      <MemberSignature Language="C#" Value="Acknowledgment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageType Acknowledgment = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageType.Acknowledgment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma mensagem de confirmação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageType Normal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageType.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma mensagem normal do serviço de enfileiramento de mensagens.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Report">
+      <MemberSignature Language="C#" Value="Report" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Messaging.MessageType Report = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Messaging.MessageType.Report" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma mensagem de relatório.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

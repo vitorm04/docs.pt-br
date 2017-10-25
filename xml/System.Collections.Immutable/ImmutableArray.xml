@@ -1,0 +1,726 @@
+<Type Name="ImmutableArray" FullName="System.Collections.Immutable.ImmutableArray">
+  <TypeSignature Language="C#" Value="public static class ImmutableArray" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ImmutableArray extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Immutable.ImmutableArray" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <AssemblyVersion>1.2.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>  
+  
+ Fornece métodos para criar uma matriz que é imutável; que significa que ela não pode ser alterado depois que ela é criada.  
+  
+ [!INCLUDE[immutable_nuget_short](~/includes/immutable-nuget-short-md.md)]</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="BinarySearch&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static int BinarySearch&lt;T&gt; (this System.Collections.Immutable.ImmutableArray&lt;T&gt; array, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 BinarySearch&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; array, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.BinarySearch``1(System.Collections.Immutable.ImmutableArray{``0},``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" RefType="this" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="array">A matriz classificada para pesquisar.</param>
+        <param name="value">O objeto a ser procurado.</param>
+        <summary>  
+  
+ Pesquisa da matriz classificada imutável de um elemento especificado usando o comparador padrão e retorna o índice de base zero do elemento, se ele for encontrado.</summary>
+        <returns>O índice de base zero do item na matriz, se o item for encontrado; Caso contrário, um negativo número o complemento bit a bit do índice do próximo elemento que é maior do que <paramref name="value" /> ou, se não houver nenhum elemento maior, o complemento bit a bit de <see cref="P:System.Collections.Generic.ICollection`1.Count" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="value" />não implementa <see cref="T:System.IComparable" /> ou a pesquisa encontra um elemento que não implementa <see cref="T:System.IComparable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static int BinarySearch&lt;T&gt; (this System.Collections.Immutable.ImmutableArray&lt;T&gt; array, T value, System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 BinarySearch&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; array, !!T value, class System.Collections.Generic.IComparer`1&lt;!!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.BinarySearch``1(System.Collections.Immutable.ImmutableArray{``0},``0,System.Collections.Generic.IComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" RefType="this" />
+        <Parameter Name="value" Type="T" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="array">A matriz classificada para pesquisar.</param>
+        <param name="value">O objeto a ser procurado.</param>
+        <param name="comparer">A implementação de comparador para usar ao comparar os elementos, ou null para usar o comparador padrão.</param>
+        <summary>  
+  
+ Pesquisa uma matriz classificada imutável de um elemento especificado e retorna o índice de base zero do elemento, se ele for encontrado.</summary>
+        <returns>O índice de base zero do item na matriz, se o item for encontrado; Caso contrário, um negativo número o complemento bit a bit do índice do próximo elemento que é maior do que <paramref name="value" /> ou, se não houver nenhum elemento maior, o complemento bit a bit de <see cref="P:System.Collections.Generic.ICollection`1.Count" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="comparer" />é nulo e <paramref name="value" /> não implementa <see cref="T:System.IComparable" /> ou a pesquisa encontra um elemento que não implementa <see cref="T:System.IComparable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static int BinarySearch&lt;T&gt; (this System.Collections.Immutable.ImmutableArray&lt;T&gt; array, int index, int length, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 BinarySearch&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; array, int32 index, int32 length, !!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.BinarySearch``1(System.Collections.Immutable.ImmutableArray{``0},System.Int32,System.Int32,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" RefType="this" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="array">A matriz classificada para pesquisar.</param>
+        <param name="index">O índice inicial do intervalo a ser procurado.</param>
+        <param name="length">O tamanho do intervalo a ser procurado.</param>
+        <param name="value">O objeto a ser procurado.</param>
+        <summary>  
+  
+ Pesquisa uma matriz classificada imutável de um elemento especificado e retorna o índice de base zero do elemento, se ele for encontrado.</summary>
+        <returns>O índice de base zero do item na matriz, se o item for encontrado; Caso contrário, um negativo número o complemento bit a bit do índice do próximo elemento que é maior do que <paramref name="value" /> ou, se não houver nenhum elemento maior, o complemento bit a bit de <see cref="P:System.Collections.Generic.ICollection`1.Count" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="value" />não implementa <see cref="T:System.IComparable" /> ou a pesquisa encontra um elemento que não implementa <see cref="T:System.IComparable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BinarySearch&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static int BinarySearch&lt;T&gt; (this System.Collections.Immutable.ImmutableArray&lt;T&gt; array, int index, int length, T value, System.Collections.Generic.IComparer&lt;T&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 BinarySearch&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; array, int32 index, int32 length, !!T value, class System.Collections.Generic.IComparer`1&lt;!!T&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.BinarySearch``1(System.Collections.Immutable.ImmutableArray{``0},System.Int32,System.Int32,``0,System.Collections.Generic.IComparer{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="array" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" RefType="this" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="value" Type="T" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IComparer&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="array">A matriz classificada para pesquisar.</param>
+        <param name="index">O índice inicial do intervalo a ser procurado.</param>
+        <param name="length">O tamanho do intervalo a ser procurado.</param>
+        <param name="value">O objeto a ser procurado.</param>
+        <param name="comparer">O comparador para usar ao comparar elementos de igualdade ou <see langword="null" /> para usar o comparador padrão.</param>
+        <summary>  
+  
+ Pesquisa uma matriz classificada imutável de um elemento especificado e retorna o índice de base zero do elemento.</summary>
+        <returns>O índice de base zero do item na matriz, se o item for encontrado; Caso contrário, um negativo número o complemento bit a bit do índice do próximo elemento que é maior do que <paramref name="value" /> ou, se não houver nenhum elemento maior, o complemento bit a bit de <see cref="P:System.Collections.Generic.ICollection`1.Count" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="comparer" />é nulo e <paramref name="value" /> não implementa <see cref="T:System.IComparable" /> ou a pesquisa encontra um elemento que não implementa <see cref="T:System.IComparable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <summary>  
+  
+ Cria uma matriz imutável vazia.</summary>
+        <returns>Uma matriz vazia imutável.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;(!!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <param name="item">O objeto para armazenar na matriz.</param>
+        <summary>  
+  
+ Cria uma matriz imutável que contém o objeto especificado.</summary>
+        <returns>Retorna uma matriz imutável que contém o objeto especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; (params T[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;(!!T[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1(``0[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="T[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <param name="items">A matriz de objetos para preencher a matriz de com.</param>
+        <summary>  
+  
+ Cria uma matriz imutável da matriz de objetos especificada.</summary>
+        <returns>Uma matriz imutável que contém a matriz de itens.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; (T item1, T item2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;(!!T item1, !!T item2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1(``0,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T" />
+        <Parameter Name="item2" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <param name="item1">O primeiro objeto para armazenar na matriz.</param>
+        <param name="item2">O segundo objeto para armazenar na matriz.</param>
+        <summary>  
+  
+ Cria uma matriz imutável que contém os objetos especificados.</summary>
+        <returns>Retorna uma matriz imutável que contém os objetos especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; (System.Collections.Immutable.ImmutableArray&lt;T&gt; items, int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; items, int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1(System.Collections.Immutable.ImmutableArray{``0},System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;T&gt;" />
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <param name="items">A matriz de objetos de origem.</param>
+        <param name="start">O índice do primeiro elemento copiar de <c>itens</c>.</param>
+        <param name="length">O número de elementos do <c>itens</c> para incluir nessa matriz imutável.</param>
+        <summary>  
+  
+ Cria uma matriz imutável com os objetos especificados na outra matriz imutável.</summary>
+        <returns>Uma matriz imutável que contém os objetos especificados da matriz de origem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; (T item1, T item2, T item3);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;(!!T item1, !!T item2, !!T item3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1(``0,``0,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T" />
+        <Parameter Name="item2" Type="T" />
+        <Parameter Name="item3" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <param name="item1">O primeiro objeto para armazenar na matriz.</param>
+        <param name="item2">O segundo objeto para armazenar na matriz.</param>
+        <param name="item3">O terceiro objeto para armazenar na matriz.</param>
+        <summary>  
+  
+ Cria uma matriz imutável que contém os objetos especificados.</summary>
+        <returns>Uma matriz imutável que contém os objetos especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; (T[] items, int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;(!!T[] items, int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1(``0[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="T[]" />
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <param name="items">A matriz de objetos de origem.</param>
+        <param name="start">O índice do primeiro elemento copiar de <c>itens</c>.</param>
+        <param name="length">O número de elementos do <c>itens</c> para incluir nessa matriz imutável.</param>
+        <summary>  
+  
+ Cria uma matriz imutável com objetos especificados de outra matriz.</summary>
+        <returns>Uma matriz imutável que contém os objetos especificados da matriz de origem.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; Create&lt;T&gt; (T item1, T item2, T item3, T item4);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; Create&lt;T&gt;(!!T item1, !!T item2, !!T item3, !!T item4) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.Create``1(``0,``0,``0,``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="item1" Type="T" />
+        <Parameter Name="item2" Type="T" />
+        <Parameter Name="item3" Type="T" />
+        <Parameter Name="item4" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados na matriz.</typeparam>
+        <param name="item1">O primeiro objeto para armazenar na matriz.</param>
+        <param name="item2">O segundo objeto para armazenar na matriz.</param>
+        <param name="item3">O terceiro objeto para armazenar na matriz.</param>
+        <param name="item4">O quarto objeto para armazenar na matriz.</param>
+        <summary>  
+  
+ Cria uma matriz imutável que contém os objetos especificados.</summary>
+        <returns>Uma matriz imutável que contém os objetos especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilder&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt;.Builder CreateBuilder&lt;T&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableArray`1/Builder&lt;!!T&gt; CreateBuilder&lt;T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.CreateBuilder``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados no construtor de.</typeparam>
+        <summary>  
+  
+ Cria uma matriz mutável que pode ser convertida em um <see cref="T:System.Collections.Immutable.ImmutableArray" /> sem alocação de memória de novo.</summary>
+        <returns>Uma matriz mutável do tipo especificado que pode ser convertido com eficiência em uma matriz imutável.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBuilder&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt;.Builder CreateBuilder&lt;T&gt; (int initialCapacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Immutable.ImmutableArray`1/Builder&lt;!!T&gt; CreateBuilder&lt;T&gt;(int32 initialCapacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.CreateBuilder``1(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;+Builder</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="initialCapacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo dos elementos armazenados no construtor de.</typeparam>
+        <param name="initialCapacity">A capacidade inicial do construtor.</param>
+        <summary>  
+  
+ Cria uma matriz mutável que pode ser convertida em um <see cref="T:System.Collections.Immutable.ImmutableArray" /> sem alocação de memória de novo.</summary>
+        <returns>Uma matriz mutável do tipo especificado que pode ser convertido com eficiência em uma matriz imutável.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;T&gt; CreateRange&lt;T&gt; (System.Collections.Generic.IEnumerable&lt;T&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!T&gt; CreateRange&lt;T&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!T&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.CreateRange``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de elemento armazenado na matriz.</typeparam>
+        <param name="items">Os elementos para adicionar à matriz.</param>
+        <summary>  
+  
+ Cria um novo <see cref="T:System.Collections.Immutable.ImmutableArray`1" /> preenchida com os itens especificados.</summary>
+        <returns>Uma matriz imutável que contém os itens especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;TResult&gt; CreateRange&lt;TSource,TResult&gt; (System.Collections.Immutable.ImmutableArray&lt;TSource&gt; items, Func&lt;TSource,TResult&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TResult&gt; CreateRange&lt;TSource, TResult&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TSource&gt; items, class System.Func`2&lt;!!TSource, !!TResult&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.CreateRange``2(System.Collections.Immutable.ImmutableArray{``0},System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;TSource&gt;" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="items">A matriz de origem para inicializar a matriz resultante com.</param>
+        <param name="selector">A função para aplicar a cada elemento da matriz de origem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Immutable.ImmutableArray`1" /> struct.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga permite a criação eficiente de um <xref:System.Collections.Immutable.ImmutableArray%601> com base em uma <xref:System.Collections.Immutable.ImmutableArray%601>, em que uma função de mapeamento precisa ser aplicada a cada elemento da matriz de origem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;TSource,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;TResult&gt; CreateRange&lt;TSource,TResult&gt; (System.Collections.Immutable.ImmutableArray&lt;TSource&gt; items, int start, int length, Func&lt;TSource,TResult&gt; selector);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TResult&gt; CreateRange&lt;TSource, TResult&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TSource&gt; items, int32 start, int32 length, class System.Func`2&lt;!!TSource, !!TResult&gt; selector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.CreateRange``2(System.Collections.Immutable.ImmutableArray{``0},System.Int32,System.Int32,System.Func{``0,``1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;TSource&gt;" />
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,TResult&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="items">A matriz de origem para inicializar a matriz resultante com.</param>
+        <param name="start">O índice do primeiro elemento da matriz de origem para incluir na matriz resultante.</param>
+        <param name="length">O número de elementos da matriz de origem para incluir na matriz resultante.</param>
+        <param name="selector">A função para aplicar a cada elemento da matriz de origem incluído na matriz resultante.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Immutable.ImmutableArray`1" /> struct.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga permite a criação eficiente de um <xref:System.Collections.Immutable.ImmutableArray%601> com base em uma fatia de um objeto existente <xref:System.Collections.Immutable.ImmutableArray%601>, em que uma função de mapeamento precisa ser aplicada a cada elemento da matriz de origem incluído na matriz resultante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;TSource,TArg,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;TResult&gt; CreateRange&lt;TSource,TArg,TResult&gt; (System.Collections.Immutable.ImmutableArray&lt;TSource&gt; items, Func&lt;TSource,TArg,TResult&gt; selector, TArg arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TResult&gt; CreateRange&lt;TSource, TArg, TResult&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TSource&gt; items, class System.Func`3&lt;!!TSource, !!TArg, !!TResult&gt; selector, !!TArg arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.CreateRange``3(System.Collections.Immutable.ImmutableArray{``0},System.Func{``0,``1,``2},``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TArg" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;TSource&gt;" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,TArg,TResult&gt;" />
+        <Parameter Name="arg" Type="TArg" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TArg">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="items">A matriz de origem para inicializar a matriz resultante com.</param>
+        <param name="selector">A função para aplicar a cada elemento da matriz de origem.</param>
+        <param name="arg">Um argumento a ser passado para a função de mapeamento do seletor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Immutable.ImmutableArray`1" /> struct.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga permite a criação eficiente de um <xref:System.Collections.Immutable.ImmutableArray%601> com base em uma <xref:System.Collections.Immutable.ImmutableArray%601>, em que uma função de mapeamento precisa ser aplicada a cada elemento da matriz de origem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRange&lt;TSource,TArg,TResult&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;TResult&gt; CreateRange&lt;TSource,TArg,TResult&gt; (System.Collections.Immutable.ImmutableArray&lt;TSource&gt; items, int start, int length, Func&lt;TSource,TArg,TResult&gt; selector, TArg arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TResult&gt; CreateRange&lt;TSource, TArg, TResult&gt;(valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TSource&gt; items, int32 start, int32 length, class System.Func`3&lt;!!TSource, !!TArg, !!TResult&gt; selector, !!TArg arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.CreateRange``3(System.Collections.Immutable.ImmutableArray{``0},System.Int32,System.Int32,System.Func{``0,``1,``2},``1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+        <TypeParameter Name="TArg" />
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Immutable.ImmutableArray&lt;TSource&gt;" />
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="selector" Type="System.Func&lt;TSource,TArg,TResult&gt;" />
+        <Parameter Name="arg" Type="TArg" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">To be added.</typeparam>
+        <typeparam name="TArg">To be added.</typeparam>
+        <typeparam name="TResult">To be added.</typeparam>
+        <param name="items">A matriz de origem para inicializar a matriz resultante com.</param>
+        <param name="start">O índice do primeiro elemento da matriz de origem para incluir na matriz resultante.</param>
+        <param name="length">O número de elementos da matriz de origem para incluir na matriz resultante.</param>
+        <param name="selector">A função para aplicar a cada elemento da matriz de origem incluído na matriz resultante.</param>
+        <param name="arg">Um argumento a ser passado para a função de mapeamento do seletor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Immutable.ImmutableArray`1" /> struct.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga permite a criação eficiente de um <xref:System.Collections.Immutable.ImmutableArray%601> com base em uma fatia de um objeto existente <xref:System.Collections.Immutable.ImmutableArray%601>, em que uma função de mapeamento precisa ser aplicada a cada elemento da matriz de origem incluído na matriz resultante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToImmutableArray&lt;TSource&gt;">
+      <MemberSignature Language="C#" Value="public static System.Collections.Immutable.ImmutableArray&lt;TSource&gt; ToImmutableArray&lt;TSource&gt; (this System.Collections.Generic.IEnumerable&lt;TSource&gt; items);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Collections.Immutable.ImmutableArray`1&lt;!!TSource&gt; ToImmutableArray&lt;TSource&gt;(class System.Collections.Generic.IEnumerable`1&lt;!!TSource&gt; items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Immutable.ImmutableArray.ToImmutableArray``1(System.Collections.Generic.IEnumerable{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.Immutable</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.1.0</AssemblyVersion>
+        <AssemblyVersion>1.2.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Immutable.ImmutableArray&lt;TSource&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TSource" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="items" Type="System.Collections.Generic.IEnumerable&lt;TSource&gt;" RefType="this" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TSource">O tipo de elementos contidos na <c>itens</c>.</typeparam>
+        <param name="items">A coleção de objetos a serem copiados para a matriz imutável.</param>
+        <summary>  
+  
+ Cria uma matriz imutável da coleção especificada.</summary>
+        <returns>Uma matriz imutável que contém a coleção de objetos especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1040 @@
+<Type Name="NavigationService" FullName="System.Windows.Navigation.NavigationService">
+  <TypeSignature Language="C#" Value="public sealed class NavigationService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NavigationService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.NavigationService" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém métodos, propriedades e eventos para dar suporte à navegação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService>encapsula a capacidade de baixar o conteúdo dentro do contexto de navegação de um estilo de navegador.  
+  
+ O conteúdo pode ser qualquer tipo de [!INCLUDE[TLA2#tla_winfx](~/includes/tla2sharptla-winfx-md.md)] objeto e [!INCLUDE[TLA#tla_html](~/includes/tlasharptla-html-md.md)] arquivos. Em geral, no entanto, páginas são preferenciais como o modo de conteúdo do pacote para navegação (consulte <xref:System.Windows.Controls.Page>).  
+  
+ Conteúdo pode ser navegado, fornecendo uma instância de um objeto e chamar uma sobrecarga de <xref:System.Windows.Navigation.NavigationService.Navigate%2A> método que aceita um objeto:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%29?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Object%2CSystem.Object%29?displayProperty=nameWithType>  
+  
+ Como alternativa, o conteúdo pode ser navegada passando relativo ou absoluto [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] para uma da <xref:System.Windows.Navigation.NavigationService.Navigate%2A> sobrecargas do método que aceita um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%29?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%2CSystem.Object%29?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigate%28System.Uri%2CSystem.Object%2CSystem.Boolean%29?displayProperty=nameWithType>  
+  
+ Quando conteúdo é navegado por [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)], <xref:System.Windows.Navigation.NavigationService> retornará um objeto que contém o conteúdo.  
+  
+ O tempo de vida de uma navegação pode ser controlado por meio de eventos a seguir:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigating>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigated>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationProgress>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationFailed>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationStopped>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.LoadCompleted>  
+  
+-   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>.  
+  
+ Nem todos os eventos são gerados sempre que ocorra uma navegação; o conjunto de eventos que são gerados é determinado pelo tipo de navegação que ocorre (fragmento de conteúdo ou conteúdo) e como a navegação é concluída (cancelada, interrompido ou falha).  
+  
+ A figura a seguir ilustra a sequência na qual esses eventos são gerados:  
+  
+ ![Gráfico de fluxo de navegação de página](~/add/media/navigationoverviewfigure11.png "gráfico de fluxo de navegação de página")  
+  
+ Durante ou após uma navegação <xref:System.Windows.Navigation.NavigationService> fornece informações sobre o conteúdo que está sendo navegado, incluindo o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do conteúdo que está sendo navegado (<xref:System.Windows.Navigation.NavigationService.Source%2A>), o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do conteúdo atual (<xref:System.Windows.Navigation.NavigationService.CurrentSource%2A>) e um objeto que contém o conteúdo que foi direcionado (<xref:System.Windows.Navigation.NavigationService.Content%2A>).  
+  
+ Quando o conteúdo é direcionado, <xref:System.Windows.Navigation.NavigationService> registra a navegação como uma entrada no histórico de navegação. Uma entrada é adicionada para fazer o histórico de navegação quando ocorre uma nova navegação, chamando o <xref:System.Windows.Navigation.NavigationService.Navigate%2A> método, ou navegando para uma entrada no histórico de navegação de avanço, chamando <xref:System.Windows.Navigation.NavigationService.GoForward%2A>. Uma entrada é adicionada ao histórico de navegação de avanço, navegando para uma entrada no histórico de navegação, chamando <xref:System.Windows.Navigation.NavigationService.GoBack%2A>. <xref:System.Windows.Navigation.NavigationService.CanGoBack%2A>e <xref:System.Windows.Navigation.NavigationService.CanGoForward%2A> relatar se há entradas no e o histórico de navegação de avanço, respectivamente. Além disso, a entrada mais recente no histórico de navegação pode ser removido chamando <xref:System.Windows.Navigation.NavigationService.RemoveBackEntry%2A>.  
+  
+ Por padrão, <xref:System.Windows.Navigation.NavigationService> não armazene uma instância de um objeto de conteúdo no histórico de navegação. Em vez disso, <xref:System.Windows.Navigation.NavigationService> cria uma nova instância do objeto conteúdo de cada vez que ele é para onde navegar usando o histórico de navegação. Esse comportamento é projetado para evitar o consumo excessivo de memória quando grandes números e grandes partes do conteúdo estão sendo navegados. Consequentemente, o estado do conteúdo não será lembrado na barra de uma navegação para a próxima. No entanto, [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] oferece várias técnicas que você pode armazenar uma parte do estado de uma parte do conteúdo no histórico de navegação.  
+  
+ Usando <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A>, lembre-se também vários conjuntos de estado para uma instância única página.  
+  
+ <xref:System.Windows.Navigation.NavigationService>é `sealed` classe e, portanto, não pode ser instanciado; em vez disso, <xref:System.Windows.Navigation.NavigationService> é usado por navegadores para permitir a navegação. Em [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)], há dois navegadores: <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>.  
+  
+ Visualmente, [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)] usar [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] como um navegador, para fornecer uma experiência de usuário integrada. Fisicamente, no entanto, [!INCLUDE[TLA2#tla_xbap#plural](~/includes/tla2sharptla-xbapsharpplural-md.md)] usam de fato <xref:System.Windows.Navigation.NavigationWindow> como o navegador; o <xref:System.Windows.Application.MainWindow%2A> propriedade de um [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)] em execução no [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] retornará uma referência ao <xref:System.Windows.Navigation.NavigationWindow>e o histórico de navegação que é gerenciado pelo <xref:System.Windows.Navigation.NavigationWindow> é integrado com o histórico de navegação que é gerenciado pelo [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] das seguintes maneiras:  
+  
+-   Quando o conteúdo é navegar até chamando <xref:System.Windows.Navigation.NavigationService.Navigate%2A>, <xref:System.Windows.Navigation.NavigationService.GoBack%2A>, e <xref:System.Windows.Navigation.NavigationService.GoForward%2A> de dentro um [!INCLUDE[TLA2#tla_xbap](~/includes/tla2sharptla-xbap-md.md)] as entradas de histórico de navegação relevantes também são adicionadas ao [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] histórico de navegação.  
+  
+-   Quando as entradas na [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] navegação [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] forem selecionadas, [!INCLUDE[TLA2#tla_ie7](~/includes/tla2sharptla-ie7-md.md)] faz com que <xref:System.Windows.Navigation.NavigationService> navegar de volta ou encaminha para o conteúdo que está associado essas entradas.  
+  
+> [!NOTE]
+>  Um <xref:System.Windows.Controls.Frame> pode fornecer seu próprio histórico de navegação, ou usar o histórico de navegação do navegador que o hospeda. Se <xref:System.Windows.Controls.Frame> fornece seu próprio histórico de navegação, ele pode exibir sua própria navegação [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] para navegar por meio de entradas no histórico de navegação; essas entradas não são adicionadas ao histórico de navegação do navegador de host (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, [!INCLUDE[TLA2#tla_iegeneric](~/includes/tla2sharptla-iegeneric-md.md)]) e, consequentemente, não pode ser acessada de painel de navegação [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)] de cada (consulte <xref:System.Windows.Controls.Frame.JournalOwnership%2A>).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddBackEntry">
+      <MemberSignature Language="C#" Value="public void AddBackEntry (System.Windows.Navigation.CustomContentState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddBackEntry(class System.Windows.Navigation.CustomContentState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.AddBackEntry(System.Windows.Navigation.CustomContentState)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Windows.Navigation.CustomContentState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Windows.Navigation.CustomContentState" /> objeto que representa o estado definido pelo aplicativo associado uma parte específica do conteúdo.</param>
+        <summary>Adiciona uma entrada para fazer o histórico de navegação que contém um <see cref="T:System.Windows.Navigation.CustomContentState" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.AddBackEntry%2A>, <xref:System.Windows.Navigation.CustomContentState>, e <xref:System.Windows.Navigation.IProvideCustomContentState> são usados para ajudar a lembrar vários conjuntos de estado para o conteúdo atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="state" />é <see langword="null" />e um <see cref="T:System.Windows.Navigation.CustomContentState" /> objeto não é retornado do <see cref="M:System.Windows.Navigation.IProvideCustomContentState.GetContentState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoBack">
+      <MemberSignature Language="C#" Value="public bool CanGoBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoBack" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationService.CanGoBack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há pelo menos uma entrada no histórico de navegação.</summary>
+        <value>
+          <see langword="true" /> se houver pelo menos uma entrada no histórico de navegação. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.CanGoBack%2A>para determinar se há pelo menos uma entrada no histórico de navegação. Essa propriedade deverá ser inspecionada antes de chamar <xref:System.Windows.Navigation.NavigationService.GoBack%2A>; se <xref:System.Windows.Navigation.NavigationService.GoBack%2A> é chamado e não existem entradas no histórico de navegação, um <xref:System.InvalidOperationException> é gerada.  
+  
+> [!NOTE]
+>  que se o histórico de navegação é compartilhado por vários navegadores (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>), a maioria dos entrada recente no histórico de navegação pode não ter sido adicionado pelo <xref:System.Windows.Navigation.NavigationService> para o navegador atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoForward">
+      <MemberSignature Language="C#" Value="public bool CanGoForward { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoForward" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationService.CanGoForward" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há pelo menos uma entrada no histórico de navegação de avanço.</summary>
+        <value>
+          <see langword="true" />Se houver pelo menos uma entrada no histórico de navegação de avanço; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.CanGoForward%2A>para determinar se há pelo menos uma entrada no histórico de navegação de avanço. Essa propriedade deverá ser inspecionada antes de chamar <xref:System.Windows.Navigation.NavigationService.GoForward%2A>; se <xref:System.Windows.Navigation.NavigationService.GoForward%2A> é chamado e não existem entradas no histórico de navegação de avanço, um <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public object Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Content" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationService.Content" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para o objeto que contém o conteúdo atual.</summary>
+        <value>Um objeto que é uma referência para o objeto que contém o conteúdo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conteúdo pode ser definido em uma das duas maneiras:  
+  
+-   Diretamente, definindo-o para uma referência a um objeto.  
+  
+-   Indiretamente, chamando <xref:System.Windows.Navigation.NavigationService.Navigate%2A>, <xref:System.Windows.Navigation.NavigationService.GoBack%2A>, ou <xref:System.Windows.Navigation.NavigationService.GoForward%2A>.  
+  
+ Configuração <xref:System.Windows.Navigation.NavigationService> inicia uma nova navegação; como navegação é assíncrona, <xref:System.Windows.Navigation.NavigationService.Content%2A> não retorna um valor se ele é inspecionado imediatamente depois que está sendo definido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentSource">
+      <MemberSignature Language="C#" Value="public Uri CurrentSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri CurrentSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationService.CurrentSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do conteúdo que foi direcionado pela última.</summary>
+        <value>Um <see cref="T:System.Uri" /> para o conteúdo que foi acessado pela última, se navegados usando um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A> propriedade não será alterada até que a navegação para outro [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] foi concluída com êxito.  
+  
+ <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A>pode ser definido com um fragmento somente [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FragmentNavigation">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.FragmentNavigationEventHandler FragmentNavigation;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.FragmentNavigationEventHandler FragmentNavigation" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationService.FragmentNavigation" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.FragmentNavigationEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a navegação para um fragmento de conteúdo começar, o que ocorre imediatamente caso o fragmento desejado esteja no conteúdo atual ou então, se o fragmento desejado estiver em outro conteúdo, ocorre após o conteúdo da fonte [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] ter sido carregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, um fragmento de conteúdo é conteúdo que é contido por um conjunto nomeado <xref:System.Windows.UIElement>, que é um <xref:System.Windows.UIElement> cujo <xref:System.Windows.FrameworkElement.Name%2A> atributo for definido, por exemplo:  
+  
+```  
+<TextBlock Name="FragmentName">...</TextBlock>  
+```  
+  
+ Navegue até um [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] fragmento, fornecendo um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] com um sufixo no seguinte formato:  
+  
+ \#*FragmentName*  
+  
+ A seguir mostra um exemplo de um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] que se refere a um fragmento de conteúdo:  
+  
+ `http://www.microsoft.com/targetpage.xaml#FragmentName`  
+  
+ Depois que a página de origem é carregada (após <xref:System.Windows.Navigation.NavigationService.LoadCompleted> é gerado), começa a navegação de fragmento e <xref:System.Windows.Navigation.NavigationService> tenta localizar o [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] fragmento. Se o [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] fragmento for encontrado, <xref:System.Windows.Navigation.NavigationService> instrui o navegador de conteúdo (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) para mostrar o fragmento. Se você precisar alterar esse comportamento, você pode manipular <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> para fornecer seu próprio comportamento de navegação de fragmento. <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>é passado um <xref:System.Windows.Navigation.FragmentNavigationEventArgs> parâmetro que expõe propriedades que são úteis para essa finalidade, incluindo:  
+  
+-   O navegador que possui este serviço de navegação (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>).  
+  
+-   O nome do fragmento.  
+  
+ Você pode manipular <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> para substituir o padrão [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] implementação com sua própria implementação personalizada de fragmento. Se você fizer isso, você precisará definir <xref:System.Windows.Navigation.FragmentNavigationEventArgs.Handled%2A> para `true`; caso contrário, o padrão [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] fragmento comportamento de processamento é aplicado.  
+  
+ Você deve evitar iniciar diretamente a navegação de dentro um <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> manipulador de eventos. Como <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> é gerado durante uma navegação existente, iniciando uma nova navegação de um <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> manipulador de eventos cria uma navegação aninhada que pode causar o <xref:System.ExecutionEngineException> seja gerada. Em vez disso, você pode iniciar indiretamente navegação criando um trabalho assíncrono usando o item de <xref:System.Windows.Threading.Dispatcher>.  
+  
+> [!NOTE]
+>  Quando <xref:System.Windows.Navigation.NavigationService> gera <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>, ele também gera <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType> evento sobre o <xref:System.Windows.Application> objeto.  
+  
+> [!IMPORTANT]
+>  Navegação de fragmento não há suporte para perder [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] páginas (somente marcação [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] arquivos com `Page` como elemento raiz) nos seguintes casos:  
+>   
+>  • Ao navegar para um fragmento em um flexível [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] página.  
+>   
+>  • Durante a navegação de um flexível [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] página a um fragmento em outro flexível [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] página.  
+>   
+>  No entanto, um flexível [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] página pode navegar para seus próprios fragmentos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> para fornecer um comportamento de navegação de fragmento personalizado. Nesse caso, o exemplo abre um erro [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] página se o fragmento na fonte [!INCLUDE[TLA2#tla_titlexaml](~/includes/tla2sharptla-titlexaml-md.md)] página não foi encontrada.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowFragmentNavigationCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindowfragmentnavigationcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowFragmentNavigationCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindowfragmentnavigationcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNavigationService">
+      <MemberSignature Language="C#" Value="public static System.Windows.Navigation.NavigationService GetNavigationService (System.Windows.DependencyObject dependencyObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Navigation.NavigationService GetNavigationService(class System.Windows.DependencyObject dependencyObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.GetNavigationService(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationService</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dependencyObject" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="dependencyObject">O <see cref="T:System.Windows.DependencyObject" /> no conteúdo que é hospedado por um navegador.</param>
+        <summary>Obtém uma referência ao <see cref="T:System.Windows.Navigation.NavigationService" /> do navegador cujo conteúdo contém o <see cref="T:System.Windows.DependencyObject" /> especificado.</summary>
+        <returns>Uma referência para o <see cref="T:System.Windows.Navigation.NavigationService" /> para o navegador cujo conteúdo contém especificado <see cref="T:System.Windows.DependencyObject" />; pode ser <see langword="null" /> em alguns casos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um navegador possui um <xref:System.Windows.Navigation.NavigationService> que manipula a navegação de conteúdo. [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)]tem dois navegadores: <xref:System.Windows.Navigation.NavigationWindow> e <xref:System.Windows.Controls.Frame>. Para processar solicitações de navegação e gerenciar o tempo de vida de navegação, usa um navegador de [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] serviço de navegação, que é implementado como o <xref:System.Windows.Navigation.NavigationService> classe. Conteúdo que é hospedado por um navegador pode obter uma referência para o navegador <xref:System.Windows.Navigation.NavigationService> chamando o <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> método.  
+  
+ <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A>Retorna `null` quando o `dependencyObject`:  
+  
+-   É um <xref:System.Windows.Navigation.NavigationWindow>.  
+  
+-   É um <xref:System.Windows.Controls.Frame> que:  
+  
+    1.  É hospedado por outro navegador.  
+  
+    2.  Tem seu <xref:System.Windows.Controls.Frame.JournalOwnership%2A> propriedade definida como <xref:System.Windows.Navigation.JournalOwnership.UsesParentJournal>.  
+  
+-   Não é parte do conteúdo que é hospedado por um navegador.  
+  
+ [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)]oferece dois atalhos para adquirir uma referência para o <xref:System.Windows.Navigation.NavigationService>:  
+  
+-   O <xref:System.Windows.Navigation.NavigationService> que processado a navegação para um <xref:System.Windows.Controls.Page> pode ser acessado a partir de <xref:System.Windows.Controls.Page> próprio obtendo o valor de seu <xref:System.Windows.Controls.Page.NavigationService%2A?displayProperty=nameWithType> propriedade.  
+  
+-   O <xref:System.Windows.Navigation.NavigationService> que é usado por um <xref:System.Windows.Controls.Frame> processar navegação pode ser acessado por obter o valor da <xref:System.Windows.Controls.Frame.NavigationService%2A> propriedade.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra como um <xref:System.Windows.Controls.UserControl> pode recuperar um serviço de navegação chamando <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A>.  
+  
+ [!code-csharp[NSGetNavigationServiceSnippets#GetNavigationServiceCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/NSGetNavigationServiceSnippets/CSharp/ContentUserControl.xaml.cs#getnavigationservicecode1)]
+ [!code-vb[NSGetNavigationServiceSnippets#GetNavigationServiceCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NSGetNavigationServiceSnippets/visualbasic/contentusercontrol.xaml.vb#getnavigationservicecode1)]  
+[!code-csharp[NSGetNavigationServiceSnippets#GetNavigationServiceCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/NSGetNavigationServiceSnippets/CSharp/ContentUserControl.xaml.cs#getnavigationservicecode2)]
+[!code-vb[NSGetNavigationServiceSnippets#GetNavigationServiceCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NSGetNavigationServiceSnippets/visualbasic/contentusercontrol.xaml.vb#getnavigationservicecode2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="dependencyObject" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GoBack">
+      <MemberSignature Language="C#" Value="public void GoBack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoBack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.GoBack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Navega para a entrada mais recente do histórico de navegação de retorno, se houver.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar <xref:System.Windows.Navigation.NavigationService.GoBack%2A>, o <xref:System.Windows.Navigation.NavigationService.CanGoBack%2A> propriedade pode ser inspecionada para determinar se há entradas no histórico de navegação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir navega para a entrada mais recente no histórico de navegação, se houver.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindowbackcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindowbackcode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          O <see cref="M:System.Windows.Navigation.NavigationService.GoBack" /> é chamado quando não existem entradas no histórico de navegação de retorno.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GoForward">
+      <MemberSignature Language="C#" Value="public void GoForward ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoForward() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.GoForward" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Navegue até a entrada mais recente no histórico de navegação de avanço, se houver um.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes de chamar <xref:System.Windows.Navigation.NavigationService.GoForward%2A>, o <xref:System.Windows.Navigation.NavigationService.CanGoForward%2A> propriedade pode ser inspecionada para determinar se há entradas no histórico de navegação de avanço.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir navega para a entrada mais recente no histórico de navegação de avanço, se houver.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowForwardCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindowforwardcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowForwardCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindowforwardcode)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="M:System.Windows.Navigation.NavigationService.GoForward" />é chamado quando não existem entradas no histórico de navegação de avanço.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCompleted">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.LoadCompletedEventHandler LoadCompleted" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationService.LoadCompleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.LoadCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o conteúdo para o qual se navegou foi carregado, analisado e iniciou a renderização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular <xref:System.Windows.Navigation.NavigationService.LoadCompleted> se você precisar descobrir informações pertinentes sobre a solicitação de navegação após a conclusão do carregamento. Essas informações estão disponíveis do <xref:System.Windows.Navigation.NavigationEventArgs> objeto que é passado para o <xref:System.Windows.Navigation.NavigationService.LoadCompleted> manipulador de eventos e inclui:  
+  
+-   O conteúdo e seus [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].  
+  
+-   O navegador (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>).  
+  
+-   Dados adicionais, se a navegação foi iniciada chamando <xref:System.Windows.Navigation.NavigationService.Navigate%2A> ou <xref:System.Windows.Navigation.NavigationService.Navigate%2A>.  
+  
+-   Detalhes da resposta (usando um <xref:System.Net.WebResponse> objeto).  
+  
+ <xref:System.Windows.Navigation.NavigationService.LoadCompleted>não é gerado quando a página de código-fonte não pode ser encontrada ou carregada, caso em que <xref:System.Windows.Navigation.NavigationService.NavigationFailed> é gerado.  
+  
+> [!NOTE]
+>  Quando <xref:System.Windows.Navigation.NavigationService> gera <xref:System.Windows.Navigation.NavigationService.LoadCompleted>, ele também gera <xref:System.Windows.Application.LoadCompleted?displayProperty=nameWithType> evento sobre o <xref:System.Windows.Application> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Windows.Navigation.NavigationService.LoadCompleted>.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowLoadCompletedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindowloadcompletedcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowLoadCompletedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindowloadcompletedcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (object root);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(object root) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.Navigate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="root">Um objeto que contém o conteúdo para navegação.</param>
+        <summary>Navegue de forma assíncrona para o conteúdo contido por um objeto.</summary>
+        <returns>
+          <see langword="true" /> se uma navegação não tiver sido cancelada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.Navigate%2A>navegará para a <xref:System.Object> especificado por `root` se as seguintes condições forem verdadeiras:  
+  
+-   O <xref:System.Windows.Navigation.NavigationService.Navigating> evento não foi cancelado.  
+  
+-   Uma solicitação da web (consulte <xref:System.Windows.Navigation.NavigationService.Navigating>) pode ser criado.  
+  
+ Se `root` é `null`, o conteúdo existente (<xref:System.Windows.Navigation.NavigationService.Content%2A>) está desmarcada.  
+  
+> [!NOTE]
+>  Ao baixar o conteúdo da Web, você receberá uma exceção da Web (por exemplo, 404: arquivo não encontrado). Você pode tratar essas exceções de <xref:System.Windows.Navigation.NavigationService.NavigationFailed>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar até um <xref:System.Windows.Controls.Page> objeto que contém a árvore de conteúdo de origem.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigateObjectCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigateobjectcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigateObjectCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigateobjectcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (Uri source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(class System.Uri source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.Navigate(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um objeto <see cref="T:System.Uri" /> inicializado pelo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do conteúdo desejado.</param>
+        <summary>Navegue de maneira assíncrona para o conteúdo que é especificado por um [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].</summary>
+        <returns>
+          <see langword="true" /> se uma navegação não tiver sido cancelada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de `source` pode ser uma Web [!INCLUDE[TLA#tla_url](~/includes/tlasharptla-url-md.md)] ou um pacote válido do [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] (consulte [URIs de pacote no WPF](~/docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+  
+ <xref:System.Windows.Navigation.NavigationService.Navigate%2A>navegará para a [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] especificado por `source` se as seguintes condições forem verdadeiras:  
+  
+-   O <xref:System.Windows.Navigation.NavigationService.Navigating> evento não foi cancelado.  
+  
+-   Uma solicitação da web (consulte <xref:System.Windows.Navigation.NavigationService.Navigating>) pode ser criado.  
+  
+ Se `source` é `null`, o conteúdo existente (<xref:System.Windows.Navigation.NavigationService.Content%2A>) está desmarcada.  
+  
+> [!NOTE]
+>  Ao baixar o conteúdo da Web, você receberá uma exceção da Web (por exemplo, 404: arquivo não encontrado). Você pode tratar essas exceções de <xref:System.Windows.Navigation.NavigationService.NavigationFailed>.  
+  
+ Você pode usar <xref:System.Windows.Navigation.NavigationService.Navigate%2A> para navegar até um fragmento de conteúdo. Se o conteúdo é identificado pelo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] é atual conteúdo, ele não será baixado novamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar até um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigateCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigatecode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigateCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigatecode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (object root, object navigationState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(object root, object navigationState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.Navigate(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="root" Type="System.Object" />
+        <Parameter Name="navigationState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="root">Um objeto que contém o conteúdo para navegação.</param>
+        <param name="navigationState">Um objeto que contém dados a serem usados para processamento durante a navegação.</param>
+        <summary>Navegue de forma assíncrona o conteúdo contido por um objeto e passe um objeto que contém dados a serem usados para processamento durante a navegação.</summary>
+        <returns>
+          <see langword="true" /> se uma navegação não tiver sido cancelada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método tem o mesmo comportamento que <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>, embora um objeto é passado em vez de um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como navegar até um <xref:System.Windows.Controls.Page> do objeto que contém o conteúdo de origem e passar o estado de navegação.  
+  
+ [!code-csharp[NavigationServiceNavigateObjectStateSnippets#MainWindowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceNavigateObjectStateSnippets/CSharp/MainWindow.xaml.cs#mainwindowcode)]
+ [!code-vb[NavigationServiceNavigateObjectStateSnippets#MainWindowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceNavigateObjectStateSnippets/visualbasic/mainwindow.xaml.vb#mainwindowcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (Uri source, object navigationState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(class System.Uri source, object navigationState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.Navigate(System.Uri,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+        <Parameter Name="navigationState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um objeto <see cref="T:System.Uri" /> inicializado pelo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do conteúdo desejado.</param>
+        <param name="navigationState">Um objeto que contém dados a serem usados para processamento durante a navegação.</param>
+        <summary>Navegue de forma assíncrona para o conteúdo de origem localizado em um [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] e passe um objeto que contém dados que serão usados para processamento durante a navegação.</summary>
+        <returns>
+          <see langword="true" /> se uma navegação não tiver sido cancelada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como navegações são assíncronas, é possível que várias navegações para estar em andamento ao mesmo tempo. Por exemplo, se houver dois quadros filho em uma única página, ambos os quadros podem navegar. Nesse caso, os vários eventos de navegação que são gerados pelo <xref:System.Windows.Navigation.NavigationService> pode ser gerada várias vezes, uma para cada parte do conteúdo que está sendo navegado, e não necessariamente para que as navegações foram solicitadas. Consequentemente, se precisar de uma solicitação de navegação específico processar os dados que são específicos para a solicitação individual, ele não pode usar dados que estão disponíveis para todas as solicitações de navegação. Em vez disso, você pode usar `navigationState` para passar dados para navegação de processamento que é específica para a solicitação de navegação de um.  
+  
+ Os argumentos de evento a seguir fornecem acesso ao estado de navegação:  
+  
+-   <xref:System.Windows.Navigation.NavigatingCancelEventArgs.ExtraData%2A>(passado para o <xref:System.Windows.Navigation.NavigationService.Navigating> evento).  
+  
+-   <xref:System.Windows.Navigation.NavigationEventArgs.ExtraData%2A>(passado para o <xref:System.Windows.Navigation.NavigationService.Navigated>, <xref:System.Windows.Navigation.NavigationService.NavigationStopped>, <xref:System.Windows.Navigation.NavigationService.LoadCompleted> manipuladores de eventos).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra a navegação para um [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] e passar o estado de navegação.  
+  
+ [!code-csharp[NavigationServiceNavigateUriStateSnippets#MainWindowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceNavigateUriStateSnippets/CSharp/MainWindow.xaml.cs#mainwindowcode)]
+ [!code-vb[NavigationServiceNavigateUriStateSnippets#MainWindowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceNavigateUriStateSnippets/visualbasic/mainwindow.xaml.vb#mainwindowcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public bool Navigate (Uri source, object navigationState, bool sandboxExternalContent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Navigate(class System.Uri source, object navigationState, bool sandboxExternalContent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.Navigate(System.Uri,System.Object,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Uri" />
+        <Parameter Name="navigationState" Type="System.Object" />
+        <Parameter Name="sandboxExternalContent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um objeto <see cref="T:System.Uri" /> inicializado pelo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do conteúdo desejado.</param>
+        <param name="navigationState">Um objeto que contém dados a serem usados para processamento durante a navegação.</param>
+        <param name="sandboxExternalContent">Baixar o conteúdo em uma área restrita de confiança parcial (com o padrão da Internet zonas no conjunto de permissões, se <see langword="true" />. O padrão é <see langword="false" />.</param>
+        <summary>Navegue de maneira assíncrona para conteúdo de origem localizado em um [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)], passe um objeto que contém o estado de navegação para processamento durante a navegação e coloque o conteúdo na área restrita.</summary>
+        <returns>
+          <see langword="true" /> se uma navegação não tiver sido cancelada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é somente para aplicativos autônomos e [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)] conteúdo.  
+  
+ Esse método apresenta o mesmo comportamento que <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>, e amplia, garantindo que o conteúdo que está sendo carregado é colocado em uma área restrita de confiança parcial (com o conjunto de zona de Internet padrão de permissões - consulte [segurança de confiança parcial do WPF](~/docs/framework/wpf/wpf-partial-trust-security.md)).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigated">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatedEventHandler Navigated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatedEventHandler Navigated" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationService.Navigated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o conteúdo para o qual se está navegando foi encontrado e está disponível na propriedade <see cref="P:System.Windows.Navigation.NavigationService.Content" />, embora ele talvez não tenha concluído o carregamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular <xref:System.Windows.Navigation.NavigationService.Navigated> se você precisar descobrir informações pertinentes sobre a solicitação de navegação ao fazer o download começa. Essas informações estão disponíveis do <xref:System.Windows.Navigation.NavigationEventArgs> objeto que é passado para o <xref:System.Windows.Navigation.NavigationService.Navigated> manipulador de eventos e inclui:  
+  
+-   A página de código-fonte. Quando <xref:System.Windows.Navigation.NavigationService.Navigated> é gerado, pelo menos parte da página de código-fonte [!INCLUDE[TLA#tla_ui](~/includes/tlasharptla-ui-md.md)] árvore foi analisada e anexada a um controle de conteúdo de destino.  
+  
+-   A solicitação [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].  
+  
+-   O navegador (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>).  
+  
+-   Dados adicionais, se a navegação foi iniciada chamando <xref:System.Windows.Navigation.NavigationService.Navigate%2A> ou <xref:System.Windows.Navigation.NavigationService.Navigate%2A>.  
+  
+-   Detalhes da resposta (usando um <xref:System.Net.WebResponse> objeto).  
+  
+ <xref:System.Windows.Navigation.NavigationService.Navigated>não é gerado quando a página de código-fonte não pode ser encontrada ou carregada, caso em que <xref:System.Windows.Navigation.NavigationService.NavigationFailed> é gerado.  
+  
+> [!NOTE]
+>  Quando <xref:System.Windows.Navigation.NavigationService> gera <xref:System.Windows.Navigation.NavigationService.NavigationFailed>, ele também gera <xref:System.Windows.Application.NavigationFailed?displayProperty=nameWithType> evento sobre o <xref:System.Windows.Application> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Windows.Navigation.NavigationService.Navigated>.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigatedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigatedcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigatedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigatedcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigating">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigatingCancelEventHandler Navigating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigatingCancelEventHandler Navigating" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationService.Navigating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigatingCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma nova navegação é solicitada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.Navigating>é gerado quando uma nova navegação é solicitada, mas antes da fonte de conteúdo for solicitado, incluindo quando:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.Navigate%2A> é chamado.  
+  
+-   <xref:System.Windows.Navigation.NavigationService.GoBack%2A>ou <xref:System.Windows.Navigation.NavigationService.GoForward%2A> é chamado (ou uma entrada está selecionada na barra de navegação [!INCLUDE[TLA2#tla_ui](~/includes/tla2sharptla-ui-md.md)]).  
+  
+-   Navega para um fragmento de conteúdo.  
+  
+ Manipular <xref:System.Windows.Navigation.NavigationService.Navigating> se você precisar descobrir informações pertinentes sobre a solicitação de navegação antes do início da navegação. Essas informações estão disponíveis do <xref:System.Windows.Navigation.NavigatingCancelEventArgs> objeto que é passado para o <xref:System.Windows.Navigation.NavigationService.Navigating> manipulador de eventos.  
+  
+ Um <xref:System.Net.WebRequest> do objeto para a navegação é criado e está disponível na <xref:System.Windows.Navigation.NavigatingCancelEventArgs> parâmetro; porque a solicitação real ainda não foram feita neste ponto, você pode reconfigurar o <xref:System.Net.WebRequest> do objeto, se necessário.  
+  
+ Você também tratar <xref:System.Windows.Navigation.NavigatingCancelEventArgs> para cancelar a navegação, se necessário, definindo <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> como true. Se você cancelar a navegação, nenhum outro evento de navegação é gerado.  
+  
+> [!NOTE]
+>  Se seu aplicativo for hospedado no navegador, você não pode impedir que o usuário navegar para fora de seu aplicativo, cancelando o <xref:System.Windows.Navigation.NavigationService.Navigating> evento.  
+  
+ Depois que a primeira parte do conteúdo é navegada por um navegador (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>), cada parte do conteúdo é navegado para fora é adicionado ao histórico de navegação. Se você precisar salvar informações de estado sobre o conteúdo que você está navegando longe do, você pode adicionar o estado para a entrada do diário para esse conteúdo definindo <xref:System.Windows.Navigation.NavigatingCancelEventArgs.ContentStateToSave%2A> com um <xref:System.Windows.Navigation.CustomContentState> objeto.  
+  
+> [!NOTE]
+>  Quando <xref:System.Windows.Navigation.NavigationService> gera <xref:System.Windows.Navigation.NavigationService.Navigating>, ele também gera <xref:System.Windows.Application.Navigating?displayProperty=nameWithType> evento sobre o <xref:System.Windows.Application> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Windows.Navigation.NavigationService.Navigating> para detectar se foi feita uma solicitação para atualizar o conteúdo estático e, nesse caso, para cancelar a solicitação.  
+  
+ <xref:System.Windows.Navigation.NavigationService.Navigating>.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigatingCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigatingcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigatingCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigatingcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationFailed">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationFailedEventHandler NavigationFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationFailedEventHandler NavigationFailed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationService.NavigationFailed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationFailedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando há um erro durante a navegação para conteúdo solicitado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando tanto uma <xref:System.Net.WebException> ou um <xref:System.IO.IOException> é lançada durante a navegação, a <xref:System.Windows.Navigation.NavigationService.NavigationFailed> é gerado. <xref:System.Windows.Navigation.NavigationService.NavigationFailed>é passado um <xref:System.Windows.Navigation.NavigationFailedEventArgs> que encapsula informações sobre a exceção e os detalhes do painel de navegação que causou a exceção.  
+  
+ Quando uma exceção resulta de uma falha na navegação e é sem tratamento, os seguintes eventos são gerados na ordem listada:  
+  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationFailed?displayProperty=nameWithType>.  
+  
+-   <xref:System.Windows.Controls.Frame.NavigationFailed?displayProperty=nameWithType> ou <xref:System.Windows.Navigation.NavigationWindow.NavigationFailed?displayProperty=nameWithType>.  
+  
+-   <xref:System.Windows.Application.NavigationFailed?displayProperty=nameWithType>.  
+  
+-   <xref:System.Windows.Application.DispatcherUnhandledException>.  
+  
+ Se um navegador (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) é hospedado por um ou mais navegadores `NavigationFailed` não é gerado em qualquer um deles.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Windows.Navigation.NavigationService.NavigationFailed>.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigationFailedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigationfailedcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigationFailedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigationfailedcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationProgress">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationProgressEventHandler NavigationProgress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationProgressEventHandler NavigationProgress" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationService.NavigationProgress" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationProgressEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre periodicamente durante um download para fornecer informações sobre o andamento da navegação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.NavigationProgress>é passado um <xref:System.Windows.Navigation.NavigationProgressEventArgs> que expõe as seguintes informações de progresso:  
+  
+-   Número de bytes baixados até o momento (<xref:System.Windows.Navigation.NavigationProgressEventArgs.BytesRead%2A>).  
+  
+-   Número total de bytes para download (<xref:System.Windows.Navigation.NavigationProgressEventArgs.MaxBytes%2A>).  
+  
+ <xref:System.Windows.Navigation.NavigationService.NavigationProgress>é gerado uma vez para cada 1024 bytes do conteúdo baixado e mais uma vez se o número de bytes restantes é sempre menor que 1024 bytes. Por esse motivo, tratamento <xref:System.Windows.Navigation.NavigationService.NavigationProgress> fornece uma maneira útil de controlar e exibir o andamento de um download atual.  
+  
+ <xref:System.Windows.Navigation.NavigationService.NavigationProgress>não será criado em alguns casos, como quando a mesma parte do conteúdo é direcionada, ou quando um fragmento de conteúdo é para onde navegar no conteúdo que está atualmente carregado (ou seja, o valor da <xref:System.Windows.Navigation.NavigationService.Content%2A> propriedade).  
+  
+ Ao navegar para um recurso XAML compilado, o último <xref:System.Windows.Navigation.NavigationService.NavigationProgress> evento não pode ser gerado. Isso significa que, ao final do download, o último relatado <xref:System.Windows.Navigation.NavigationProgressEventArgs.BytesRead%2A> valor não pode ser igual a <xref:System.Windows.Navigation.NavigationProgressEventArgs.MaxBytes%2A> valor. Manipular o <xref:System.Windows.Navigation.NavigationService.LoadCompleted> evento para ser notificado quando a navegação foi concluída.  
+  
+> [!NOTE]
+>  Quando <xref:System.Windows.Navigation.NavigationService> gera <xref:System.Windows.Navigation.NavigationService.NavigationProgress>, ele também gera <xref:System.Windows.Application.NavigationProgress?displayProperty=nameWithType> evento sobre o <xref:System.Windows.Application> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Windows.Navigation.NavigationService.NavigationProgress>.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigationProgressCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigationprogresscode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigationProgressCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigationprogresscode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationStopped">
+      <MemberSignature Language="C#" Value="public event System.Windows.Navigation.NavigationStoppedEventHandler NavigationStopped;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Navigation.NavigationStoppedEventHandler NavigationStopped" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Navigation.NavigationService.NavigationStopped" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.NavigationStoppedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o método <see cref="M:System.Windows.Navigation.NavigationService.StopLoading" /> é chamado ou quando uma nova navegação é solicitada durante uma navegação atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular <xref:System.Windows.Navigation.NavigationService.NavigationStopped> se desejar descobrir informações pertinentes sobre a solicitação de navegação quando o download é interrompido. Essas informações estão disponíveis do <xref:System.Windows.Navigation.NavigationEventArgs> objeto que é passado para o <xref:System.Windows.Navigation.NavigationService.NavigationStopped> manipulador de eventos e inclui:  
+  
+-   A solicitação [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].  
+  
+-   O navegador (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>).  
+  
+-   Dados adicionais, se a navegação foi iniciada chamando <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> ou <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Quando <xref:System.Windows.Navigation.NavigationService> gera <xref:System.Windows.Navigation.NavigationService.NavigationStopped>, ele também gera <xref:System.Windows.Application.NavigationStopped?displayProperty=nameWithType> evento sobre o <xref:System.Windows.Application> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como tratar <xref:System.Windows.Navigation.NavigationService.NavigationStopped>.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowNavigationStoppedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindownavigationstoppedcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowNavigationStoppedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindownavigationstoppedcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recarrega o conteúdo atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o conteúdo atual (especificado pelo valor da <xref:System.Windows.Navigation.NavigationService.Source%2A> propriedade) é direcionada novamente, <xref:System.Windows.Navigation.NavigationService> não baixa o conteúdo novamente. Para forçar <xref:System.Windows.Navigation.NavigationService> para navegar novamente para o conteúdo, chame <xref:System.Windows.Navigation.NavigationService.Refresh%2A>.  
+  
+ Observe que, se o conteúdo atual é direcionado novamente, ao chamar <xref:System.Windows.Navigation.NavigationService.Navigate%2A> ou <xref:System.Windows.Navigation.NavigationService.Refresh%2A>, uma nova entrada não é adicionada ao histórico de navegação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveBackEntry">
+      <MemberSignature Language="C#" Value="public System.Windows.Navigation.JournalEntry RemoveBackEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Navigation.JournalEntry RemoveBackEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.RemoveBackEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Navigation.JournalEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove a entrada de diário mais recente do histórico anterior.</summary>
+        <returns>O <see cref="T:System.Windows.Navigation.JournalEntry" /> mais recente no histórico de navegação anterior, se houver.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois ou mais navegadores (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) compartilham o mesmo histórico de navegação, um navegador pode usar <xref:System.Windows.Navigation.NavigationService.RemoveBackEntry%2A> para recuperar a entrada do histórico de navegação para uma navegação que ocorreu em outro navegador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Uri Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Navigation.NavigationService.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)] do conteúdo atual ou o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do conteúdo novo de navegação atual.</summary>
+        <value>Um <see cref="T:System.Uri" /> que contém o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para o conteúdo atual ou o conteúdo de navegação atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir essa propriedade para outro [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] daquela que está sendo exibido no momento, o navegador (<xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>) navega especificado [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ <xref:System.Windows.Navigation.NavigationService.Source%2A>é definido como o conteúdo carregado a partir de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] que é direcionada, a menos que a navegação é cancelada.  
+  
+ <xref:System.Windows.Navigation.NavigationService.Source%2A>pode ser definido com um fragmento somente [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)]e pode ser definido como `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopLoading">
+      <MemberSignature Language="C#" Value="public void StopLoading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopLoading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.NavigationService.StopLoading" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o download de mais de conteúdo para a solicitação de navegação atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>pode ser chamado, assim como <xref:System.Windows.Navigation.NavigationService.Navigate%2A> retorna e deixa de navegação que está em andamento em quadros filho.  
+  
+ (<xref:System.Windows.Controls.Frame>).  
+  
+ Chamando o <xref:System.Windows.Navigation.NavigationService.StopLoading%2A> método gera o <xref:System.Windows.Navigation.NavigationService.NavigationStopped> evento.  
+  
+> [!NOTE]
+>  <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>deve ser chamado no mesmo thread que iniciou a navegação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como interromper o carregamento.  
+  
+ [!code-csharp[NavigationServiceSnippets#MainWindowStopLoadingCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationServiceSnippets/CSharp/MainWindow.xaml.cs#mainwindowstoploadingcode)]
+ [!code-vb[NavigationServiceSnippets#MainWindowStopLoadingCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationServiceSnippets/visualbasic/mainwindow.xaml.vb#mainwindowstoploadingcode)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

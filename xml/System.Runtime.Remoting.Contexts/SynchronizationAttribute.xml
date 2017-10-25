@@ -1,0 +1,404 @@
+<Type Name="SynchronizationAttribute" FullName="System.Runtime.Remoting.Contexts.SynchronizationAttribute">
+  <TypeSignature Language="C#" Value="public class SynchronizationAttribute : System.Runtime.Remoting.Contexts.ContextAttribute, System.Runtime.Remoting.Contexts.IContributeClientContextSink, System.Runtime.Remoting.Contexts.IContributeServerContextSink" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit SynchronizationAttribute extends System.Runtime.Remoting.Contexts.ContextAttribute implements class System.Runtime.Remoting.Contexts.IContributeClientContextSink, class System.Runtime.Remoting.Contexts.IContributeServerContextSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Contexts.ContextAttribute</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Contexts.IContributeClientContextSink</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Contexts.IContributeServerContextSink</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Impõe um domínio de sincronização para o contexto atual e todos os contextos que compartilham a mesma instância.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando esse atributo é aplicado a um objeto, apenas um thread pode executar em todos os contextos que compartilham uma instância dessa propriedade. Isso é feito por coletores que interceptar e serializar chamadas para os respectivos contextos de contribuição. Se a propriedade é marcada para reentrada, textos explicativos são interceptados muito. A interceptação de texto explicativo permite que outros threads de espera inserir o domínio de sincronização para a taxa de transferência máxima.  
+  
+> [!NOTE]
+>  Há duas classes chamadas `SynchronizationAttribute` : um no <xref:System.Runtime.Remoting.Contexts> namespace e outro no <xref:System.EnterpriseServices> namespace. O <xref:System.EnterpriseServices.SynchronizationAttribute?displayProperty=nameWithType> classe chamadas síncronas somente dá suporte a e pode ser usado somente com os componentes de serviço. (Para obter mais informações sobre os componentes de serviço, consulte [&#91;\< Topic://cpconservicedcomponentoverview > &#93; ](http://msdn.microsoft.com/en-us/5133a620-9c8c-47bd-8e36-130e722fe463).) O <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute?displayProperty=nameWithType> oferece suporte a chamadas síncronas e assíncronas e pode ser usado somente com objetos de contexto associado. (Para obter mais informações sobre o contexto associado a objetos, consulte o <xref:System.ContextBoundObject> classe.)  
+  
+> [!NOTE]
+>  Essa classe faz uma demanda de link e uma demanda de herança no nível de classe. Um <xref:System.Security.SecurityException> é gerada quando o chamador imediato ou classe derivada não tem permissão de infraestrutura. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>. Para o código de exemplo completo, consulte o exemplo para o <xref:System.Runtime.Remoting.Messaging.AsyncResult> classe.  
+  
+ [!code-cpp[AsyncResult.NewExamples#2](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncResult.NewExamples/CPP/ad.cpp#2)]
+ [!code-csharp[AsyncResult.NewExamples#2](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncResult.NewExamples/CS/ad.cs#2)]
+ [!code-vb[AsyncResult.NewExamples#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncResult.NewExamples/VB/ad.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SynchronizationAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" /> com valores padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SynchronizationAttribute (bool reEntrant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool reEntrant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="reEntrant" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="reEntrant">Um valor booliano que indica se a entrada é necessária.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" /> classe com um valor booliano que indica se a entrada é necessária.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entrada é necessária, textos explicativos do <xref:System.Runtime.Remoting.Contexts.Context> para que o atributo atual é aplicado deve ser interceptado e serializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SynchronizationAttribute (int flag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 flag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Um valor inteiro que indica o comportamento do objeto ao qual esse atributo é aplicado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" /> classe com um sinalizador que indica o comportamento do objeto ao qual esse atributo é aplicado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `flag` parâmetro deve ser <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.NOT_SUPPORTED>, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.SUPPORTED>, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.REQUIRED>, ou <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.REQUIRES_NEW>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="flag" /> parâmetro não era um dos sinalizadores definidos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SynchronizationAttribute (int flag, bool reEntrant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 flag, bool reEntrant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.#ctor(System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flag" Type="System.Int32" />
+        <Parameter Name="reEntrant" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="flag">Um valor inteiro que indica o comportamento do objeto ao qual esse atributo é aplicado.</param>
+        <param name="reEntrant">
+          <see langword="true" />Se reentrada for necessária, e textos explicativos devem ser interceptados e serializados; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" /> classe com um sinalizador que indica o comportamento do objeto ao qual esse atributo é aplicado e um valor booliano que indica se a entrada é necessária.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `flag` parâmetro deve ser <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.NOT_SUPPORTED>, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.SUPPORTED>, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.REQUIRED>, ou <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute.REQUIRES_NEW>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="flag" /> parâmetro não era um dos sinalizadores definidos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetClientContextSink">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.Messaging.IMessageSink GetClientContextSink (System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetClientContextSink(class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.GetClientContextSink(System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="nextSink">A cadeia de Coletores composto até o momento.</param>
+        <summary>Cria um coletor de texto explicativo e encadeia-lo na frente da cadeia fornecida de Coletores no limite do contexto no lado do cliente de uma chamada de comunicação remota.</summary>
+        <returns>A cadeia de coletor composto com o novo coletor de texto explicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método atual é uma implementação de <xref:System.Runtime.Remoting.Contexts.IContributeClientContextSink.GetClientContextSink%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertiesForNewContext">
+      <MemberSignature Language="C#" Value="public override void GetPropertiesForNewContext (System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetPropertiesForNewContext(class System.Runtime.Remoting.Activation.IConstructionCallMessage ctorMsg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.GetPropertiesForNewContext(System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctorMsg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="ctorMsg">O <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" /> ao qual adicionar a propriedade.</param>
+        <summary>Adiciona o <see langword="Synchronized" /> propriedade de contexto especificado <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServerContextSink">
+      <MemberSignature Language="C#" Value="public virtual System.Runtime.Remoting.Messaging.IMessageSink GetServerContextSink (System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetServerContextSink(class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.GetServerContextSink(System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="nextSink">A cadeia de Coletores composto até o momento.</param>
+        <summary>Cria um coletor de expedição sincronizado e se encadeia-lo na frente da cadeia fornecida de Coletores no limite de contexto na extremidade do servidor de uma chamada de comunicação remota.</summary>
+        <returns>A cadeia de coletor composto com o novo coletor de expedição sincronizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método atual é uma implementação de <xref:System.Runtime.Remoting.Contexts.IContributeServerContextSink.GetServerContextSink%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContextOK">
+      <MemberSignature Language="C#" Value="public override bool IsContextOK (System.Runtime.Remoting.Contexts.Context ctx, System.Runtime.Remoting.Activation.IConstructionCallMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsContextOK(class System.Runtime.Remoting.Contexts.Context ctx, class System.Runtime.Remoting.Activation.IConstructionCallMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.SynchronizationAttribute.IsContextOK(System.Runtime.Remoting.Contexts.Context,System.Runtime.Remoting.Activation.IConstructionCallMessage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="System.Runtime.Remoting.Contexts.Context" />
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">O contexto para verificar.</param>
+        <param name="msg">Informações coletadas no momento da construção do objeto vinculado contexto marcado por este atributo. O <see cref="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" /> pode inspecionar, adicionar a e remover propriedades de contexto ao determinar se o contexto é aceitável a ele.</param>
+        <summary>Retorna um valor booliano que indica se o parâmetro de contexto atende aos requisitos do atributo de contexto.</summary>
+        <returns>
+          <see langword="true" />Se o contexto transmitido é Okey; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="ctx" /> ou <paramref name="msg" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReEntrant">
+      <MemberSignature Language="C#" Value="public virtual bool IsReEntrant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReEntrant" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.SynchronizationAttribute.IsReEntrant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se a entrada é necessária.</summary>
+        <value>Um valor booliano que indica se a entrada é necessária.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entrada é necessária, textos explicativos do <xref:System.Runtime.Remoting.Contexts.Context> para que o atributo atual é aplicado deve ser interceptado e serializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Locked">
+      <MemberSignature Language="C#" Value="public virtual bool Locked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Locked" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Contexts.SynchronizationAttribute.Locked" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o <see cref="T:System.Runtime.Remoting.Contexts.Context" /> implementar esta instância do <see cref="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" /> está bloqueado.</summary>
+        <value>Um valor booliano que indica se o <see cref="T:System.Runtime.Remoting.Contexts.Context" /> implementar esta instância do <see cref="T:System.Runtime.Remoting.Contexts.SynchronizationAttribute" /> está bloqueado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um sincronizado <xref:System.Runtime.Remoting.Contexts.Context> estiver bloqueado, somente o thread em execução em que ele tem acesso a objetos no <xref:System.Runtime.Remoting.Contexts.Context>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NOT_SUPPORTED">
+      <MemberSignature Language="C#" Value="public const int NOT_SUPPORTED = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 NOT_SUPPORTED = (1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Contexts.SynchronizationAttribute.NOT_SUPPORTED" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Indica que a classe à qual esse atributo é aplicado não pode ser criada em um contexto que tem a sincronização. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="REQUIRED">
+      <MemberSignature Language="C#" Value="public const int REQUIRED = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 REQUIRED = (4)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Contexts.SynchronizationAttribute.REQUIRED" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Indica que a classe à qual esse atributo é aplicado deve ser criada em um contexto que tem a sincronização. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="REQUIRES_NEW">
+      <MemberSignature Language="C#" Value="public const int REQUIRES_NEW = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 REQUIRES_NEW = (8)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Contexts.SynchronizationAttribute.REQUIRES_NEW" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Indica que a classe à qual esse atributo é aplicado deve ser criada em um contexto com uma nova instância da propriedade sincronização cada vez. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SUPPORTED">
+      <MemberSignature Language="C#" Value="public const int SUPPORTED = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SUPPORTED = (2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Contexts.SynchronizationAttribute.SUPPORTED" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Indica que a classe à qual esse atributo é aplicado não é dependente de contexto se tem a sincronização. Este campo é constante.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

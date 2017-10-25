@@ -1,0 +1,1616 @@
+<Type Name="BitConverter" FullName="System.BitConverter">
+  <TypeSignature Language="C#" Value="public static class BitConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BitConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.BitConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Converte tipos de dados para uma matriz de bytes e uma matriz de bytes para tipos de dados base de base.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter> classe ajuda a manipular tipos de valor em sua forma fundamental, como uma série de bytes. Um byte é definido como um inteiro não assinado de 8 bits. O <xref:System.BitConverter> classe inclui métodos estáticos para converter cada um dos tipos primitivos em uma matriz de bytes, como mostra a tabela a seguir.  
+  
+|Tipo|A conversão de bytes|Com a conversão de bytes|  
+|----------|------------------------|--------------------------|  
+|<xref:System.Boolean>|<xref:System.BitConverter.GetBytes%28System.Boolean%29>|<xref:System.BitConverter.ToBoolean%2A>|  
+|<xref:System.Char>|<xref:System.BitConverter.GetBytes%28System.Char%29>|<xref:System.BitConverter.ToChar%2A>|  
+|<xref:System.Double>|<xref:System.BitConverter.GetBytes%28System.Double%29><br /><br /> -ou-<br /><br /> <xref:System.BitConverter.DoubleToInt64Bits%28System.Double%29>|<xref:System.BitConverter.ToDouble%2A><br /><br /> -ou-<br /><br /> <xref:System.BitConverter.Int64BitsToDouble%2A>|  
+|<xref:System.Int16>|<xref:System.BitConverter.GetBytes%28System.Int16%29>|<xref:System.BitConverter.ToInt16%2A>|  
+|<xref:System.Int32>|<xref:System.BitConverter.GetBytes%28System.Int32%29>|<xref:System.BitConverter.ToInt32%2A>|  
+|<xref:System.Int64>|<xref:System.BitConverter.GetBytes%28System.Int64%29>|<xref:System.BitConverter.ToInt64%2A>|  
+|<xref:System.Single>|<xref:System.BitConverter.GetBytes%28System.Single%29>|<xref:System.BitConverter.ToSingle%2A>|  
+|<xref:System.UInt16>|<xref:System.BitConverter.GetBytes%28System.UInt16%29>|<xref:System.BitConverter.ToUInt16%2A>|  
+|<xref:System.UInt32>|<xref:System.BitConverter.GetBytes%28System.UInt32%29>|<xref:System.BitConverter.ToUInt32%2A>|  
+|<xref:System.UInt64>|<xref:System.BitConverter.GetBytes%28System.UInt64%29>|<xref:System.BitConverter.ToUInt64%2A>|  
+  
+ Se você usar <xref:System.BitConverter> métodos aos dados de ida e volta, verifique se o <xref:System.BitConverter.GetBytes%2A> de sobrecarga e a `To` *tipo* método especificam o mesmo tipo. Como mostra o exemplo a seguir, restaurando uma matriz que representa um inteiro chamando o <xref:System.BitConverter.ToUInt32%2A> método pode resultar em um valor que é diferente do original. Para obter mais informações, consulte a entrada [trabalhando com valores de bit a bit e de Decimal não assinado](http://go.microsoft.com/fwlink/?LinkId=186999) no Blog da equipe de BCL.  
+  
+ [!code-csharp[System.BitConverter.Class#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/example1.cs#3)]
+ [!code-vb[System.BitConverter.Class#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/example1.vb#3)]  
+  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> sobrecargas de método (, bem como a ordem de bits o inteiro retornado pelo <xref:System.BitConverter.DoubleToInt64Bits%2A> método e a ordem das cadeias de caracteres hexadecimais retornado pelo <xref:System.BitConverter.ToString%28System.Byte%5B%5D%29> método) depende se a arquitetura do computador é little-endian ou big-endian. Da mesma forma, a ordem de bytes na matriz e retornado pelo `To` *Valor_inteiro* métodos e <xref:System.BitConverter.ToChar%2A> método depende se a arquitetura do computador é little-endian ou big-endian. A ordenação de bits de uma arquitetura é indicada pelo <xref:System.BitConverter.IsLittleEndian> propriedade, que retorna `true` em sistemas little endian e `false` em sistemas big-endian. Em sistemas little endian, os bytes de ordem inferior precedem bytes de ordem superior. No sistema de big-endian, os bytes de ordem superior precedem bytes de ordem inferior. A tabela a seguir ilustra a diferença nas matrizes de bytes que resultam de passar o inteiro 1,234,567,890 (0x499602D2) para o <xref:System.BitConverter.GetBytes%28System.Int32%29> método. Os bytes são listados na ordem do byte no índice 0 byte no índice 3.  
+  
+|||  
+|-|-|  
+|Little endian|49 D2-02-96|  
+|Big-endian.|49-96-02-D2|  
+  
+ Como o valor de alguns métodos de retorno depende da arquitetura do sistema, tenha cuidado ao transmitir dados de byte além dos limites da máquina:  
+  
+-   Se há garantia de todos os sistemas de envio e recebimento de dados têm o mesmo endian, nada foi feito para os dados.  
+  
+-   Se os sistemas de envio e recebimento de dados podem ter endian diferentes, sempre transmita dados em uma ordem específica. Isso significa que a ordem de bytes na matriz talvez tenha que ser revertida antes de enviá-los ou após recebê-los. Uma convenção comum é transmitir dados em ordem de bytes de rede (ordem big-endian). O exemplo a seguir fornece uma implementação para enviar um valor inteiro em ordem de bytes de rede.  
+  
+     [!code-csharp[System.BitConverter.Class#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/networkorder1.cs#4)]
+     [!code-vb[System.BitConverter.Class#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/networkorder1.vb#4)]  
+  
+-   Se os sistemas de envio e recebimento de dados podem ter endian diferentes e os dados sejam transmitidos consistem de inteiros com sinal, chame o <xref:System.Net.IPAddress.HostToNetworkOrder%2A?displayProperty=nameWithType> método para converter os dados em ordem de bytes de rede e o <xref:System.Net.IPAddress.NetworkToHostOrder%2A?displayProperty=nameWithType> método para convertê-lo em ordem exigida pelo destinatário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso de várias <xref:System.BitConverter> métodos de classe.  
+  
+ [!code-cpp[System.BitConverter.Class#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.Class/CPP/bitconv.cpp#1)]
+ [!code-csharp[System.BitConverter.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/bitconv.cs#1)]
+ [!code-vb[System.BitConverter.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/bitconv.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DoubleToInt64Bits">
+      <MemberSignature Language="C#" Value="public static long DoubleToInt64Bits (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 DoubleToInt64Bits(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.DoubleToInt64Bits(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Converte o número de ponto flutuante de precisão dupla especificado em um inteiro com sinal de 64 bits.</summary>
+        <returns>Um inteiro com sinal de 64 bits cujo valor é equivalente a <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bits o inteiro retornado pelo <xref:System.BitConverter.DoubleToInt64Bits%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de várias <xref:System.Double> valores <xref:System.Int64> valores com o `DoubleToInt64Bits` método.  
+  
+ [!code-cpp[System.BitConverter.DoubleInt64#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CPP/dbltobits.cpp#2)]
+ [!code-csharp[System.BitConverter.DoubleInt64#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CS/dbltobits.cs#2)]
+ [!code-vb[System.BitConverter.DoubleInt64#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/VB/dbltobits.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um valor booliano.</param>
+        <summary>Retorna o valor booliano especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com comprimento 1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode converter uma matriz de bytes para uma <xref:System.Boolean> valor chamando o <xref:System.BitConverter.ToBoolean%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte os padrões de bit de <xref:System.Boolean> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/bytesbool.cpp#1)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/bytesbool.cs#1)]
+ [!code-vb[System.BitConverter.GetBytes.Others#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/bytesbool.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser convertido.</param>
+        <summary>Retorna o valor de caractere Unicode especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com tamanho 2.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.Char> valores (caracteres Unicode) para <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/byteschar.cpp#2)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/byteschar.cs#2)]
+ [!code-vb[System.BitConverter.GetBytes.Others#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/byteschar.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor especificado do ponto flutuante de dupla precisão como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com tamanho 8.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.Double> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/bytesdouble.cpp#4)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/bytesdouble.cs#4)]
+ [!code-vb[System.BitConverter.GetBytes.Others#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/bytesdouble.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor inteiro com sinal de 16 bits especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com tamanho 2.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.Int16> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.SInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CPP/bytesint16.cpp#3)]
+ [!code-csharp[System.BitConverter.GetBytes.SInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CS/bytesint16.cs#3)]
+ [!code-vb[System.BitConverter.GetBytes.SInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/VB/bytesint16.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor inteiro com sinal de 32 bits especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com comprimento 4.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.Int32> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.SInts#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CPP/bytesint32.cpp#2)]
+ [!code-csharp[System.BitConverter.GetBytes.SInts#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CS/bytesint32.cs#2)]
+ [!code-vb[System.BitConverter.GetBytes.SInts#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/VB/bytesint32.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor inteiro com sinal de 64 bits especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com tamanho 8.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir chama o <xref:System.BitConverter.GetBytes%2A> método para converter cada elemento em uma <xref:System.Int64> de matriz para um <xref:System.Byte> matrizes.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.SInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CPP/bytesint64.cpp#1)]
+ [!code-csharp[System.BitConverter.GetBytes.SInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/CS/bytesint64.cs#1)]
+ [!code-vb[System.BitConverter.GetBytes.SInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.SInts/VB/bytesint64.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor especificado do ponto flutuante de precisão simples como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com comprimento 4.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.Single> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.Others#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CPP/bytessingle.cpp#3)]
+ [!code-csharp[System.BitConverter.GetBytes.Others#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/CS/bytessingle.cs#3)]
+ [!code-vb[System.BitConverter.GetBytes.Others#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.Others/VB/bytessingle.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor do inteiro sem sinal de 16 bits especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com tamanho 2.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.UInt16> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.UInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CPP/bytesuint16.cpp#3)]
+ [!code-csharp[System.BitConverter.GetBytes.UInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CS/bytesuint16.cs#3)]
+ [!code-vb[System.BitConverter.GetBytes.UInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/VB/bytesuint16.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor do inteiro sem sinal de 32 bits especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com comprimento 4.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.UInt32> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.UInts#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CPP/bytesuint32.cpp#2)]
+ [!code-csharp[System.BitConverter.GetBytes.UInts#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CS/bytesuint32.cs#2)]
+ [!code-vb[System.BitConverter.GetBytes.UInts#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/VB/bytesuint32.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBytes (ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBytes(unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.GetBytes(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Retorna o valor do inteiro sem sinal de 64 bits especificado como uma matriz de bytes.</summary>
+        <returns>Uma matriz de bytes com tamanho 8.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem de bytes na matriz retornada pelo <xref:System.BitConverter.GetBytes%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de <xref:System.UInt64> valores <xref:System.Byte> matrizes com o `GetBytes` método.  
+  
+ [!code-cpp[System.BitConverter.GetBytes.UInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CPP/bytesuint64.cpp#1)]
+ [!code-csharp[System.BitConverter.GetBytes.UInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/CS/bytesuint64.cs#1)]
+ [!code-vb[System.BitConverter.GetBytes.UInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.GetBytes.UInts/VB/bytesuint64.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Int32BitsToSingle">
+      <MemberSignature Language="C#" Value="public static float Int32BitsToSingle (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Int32BitsToSingle(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.Int32BitsToSingle(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Int64BitsToDouble">
+      <MemberSignature Language="C#" Value="public static double Int64BitsToDouble (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 Int64BitsToDouble(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.Int64BitsToDouble(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O número a ser convertido.</param>
+        <summary>Converte o inteiro com sinal de 64 bits especificado em um número de ponto flutuante de precisão dupla.</summary>
+        <returns>Um número de ponto flutuante de precisão cujo valor é equivalente a <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, `value` é um inteiro que é retornado pelo <xref:System.BitConverter.DoubleToInt64Bits%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os padrões de bit de várias <xref:System.Int64> valores <xref:System.Double> valores com o `Int64BitsToDouble` método.  
+  
+ [!code-cpp[System.BitConverter.DoubleInt64#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CPP/bitstodbl.cpp#1)]
+ [!code-csharp[System.BitConverter.DoubleInt64#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/CS/bitstodbl.cs#1)]
+ [!code-vb[System.BitConverter.DoubleInt64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.DoubleInt64/VB/bitstodbl.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLittleEndian">
+      <MemberSignature Language="C#" Value="public static readonly bool IsLittleEndian;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly bool IsLittleEndian" />
+      <MemberSignature Language="DocId" Value="F:System.BitConverter.IsLittleEndian" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica a ordem de byte (“endianness”) na qual os dados são armazenados nessa arquitetura de computador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Arquiteturas de outro computador armazenam dados usando ordens de byte. "Big-endian" significa que o byte mais significativo na extremidade esquerda de uma palavra. "Little-endian" significa que o byte mais significativo na extremidade direita de uma palavra.  
+  
+> [!NOTE]
+>  Você pode converter de ordem de bytes de rede para a ordem de byte do computador host sem recuperar o valor da <xref:System.BitConverter.IsLittleEndian?displayProperty=nameWithType> campo passando um inteiro de 16 bits, 32 bits ou 64 bits para o <xref:System.Net.IPAddress.HostToNetworkOrder%2A?displayProperty=nameWithType> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra o uso do `IsLittleEndian` campo.  
+  
+ [!code-cpp[System.BitConverter.Class#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.Class/CPP/littleend.cpp#2)]
+ [!code-csharp[System.BitConverter.Class#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.Class/CS/littleend.cs#2)]
+ [!code-vb[System.BitConverter.Class#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.Class/VB/littleend.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleToInt32Bits">
+      <MemberSignature Language="C#" Value="public static int SingleToInt32Bits (float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 SingleToInt32Bits(float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.SingleToInt32Bits(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBoolean">
+      <MemberSignature Language="C#" Value="public static bool ToBoolean (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ToBoolean(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToBoolean(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">O índice do byte em <c>valor</c>.</param>
+        <summary>Retorna um valor booliano convertido do byte em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>
+          <see langword="true" /> se o byte no <paramref name="startIndex" /> em <paramref name="value" /> for diferente de zero, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para converter um <xref:System.Boolean> valor em sua representação de bytes, a chamada a <xref:System.BitConverter.ToBoolean%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.Boolean> valores com o `ToBoolean` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batobool.cpp#1)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batobool.cs#1)]
+ [!code-vb[System.BitConverter.ToXXX.Others#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batobool.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToChar">
+      <MemberSignature Language="C#" Value="public static char ToChar (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig char ToChar(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToChar(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um caractere Unicode convertido dos dois bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um caractere formado por dois bytes começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToChar%2A> método converte os bytes do índice `startIndex` para `startIndex` + 1 para um <xref:System.Char> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários a <xref:System.BitConverter> tópico sobre a classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.Char> valores (caracteres Unicode) com o `ToChar` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batochar.cpp#2)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batochar.cs#2)]
+ [!code-vb[System.BitConverter.ToXXX.Others#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batochar.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é igual ao comprimento de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDouble">
+      <MemberSignature Language="C#" Value="public static double ToDouble (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 ToDouble(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToDouble(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um número de ponto flutuante de precisão dupla convertido de oito bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um número de ponto flutuante de precisão dupla formado por oito bytes, começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToDouble%2A> método converte os bytes do índice `startIndex` para `startIndex` + 7 para um <xref:System.Double> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários a <xref:System.BitConverter> tópico sobre a classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.Double> valores com o `ToDouble` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batodouble.cpp#3)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batodouble.cs#3)]
+ [!code-vb[System.BitConverter.ToXXX.Others#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batodouble.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é maior ou igual ao tamanho de <paramref name="value" /> menos 7 e é menor ou igual ao tamanho de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt16">
+      <MemberSignature Language="C#" Value="public static short ToInt16 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 ToInt16(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToInt16(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um inteiro com sinal de 16 bits convertido de dois bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um inteiro com sinal de 16 bits formado por dois bytes, começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToInt16%2A> método converte os bytes do índice `startIndex` para `startIndex` + 1 para uma <xref:System.Int16> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários a <xref:System.BitConverter> tópico sobre a classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.Int16> valores com o `ToInt16` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.SInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CPP/batoint16.cpp#1)]
+ [!code-csharp[System.BitConverter.ToXXX.SInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CS/batoint16.cs#1)]
+ [!code-vb[System.BitConverter.ToXXX.SInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/VB/batoint16.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é igual ao comprimento de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt32">
+      <MemberSignature Language="C#" Value="public static int ToInt32 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 ToInt32(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToInt32(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um inteiro com sinal de 32 bits convertido de quatro bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um inteiro com sinal de 32 bits formado por quatro bytes, começando no <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToInt32%2A> método converte os bytes do índice `startIndex` para `startIndex` + 3 para um <xref:System.Int32> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários de <xref:System.BitConverter>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.BitConverter.ToInt32%2A> método para criar <xref:System.Int32> valores de uma matriz de quatro bytes nos quatro bytes superiores de uma matriz de oito bytes. Ele também usa o <xref:System.BitConverter.GetBytes%28System.Int32%29> e <xref:System.BitConverter.ToInt32%2A> métodos para viagem um <xref:System.Int32> valor.  
+  
+ [!code-csharp[System.BitConverter.ToInt32#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.bitconverter.toint32/cs/toint32.cs#1)]
+ [!code-vb[System.BitConverter.ToInt32#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.bitconverter.toint32/vb/toint32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é maior ou igual ao tamanho de <paramref name="value" /> menos 3, e é menor ou igual ao tamanho de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToInt64">
+      <MemberSignature Language="C#" Value="public static long ToInt64 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int64 ToInt64(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToInt64(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um inteiro com sinal de 64 bits convertido de oito bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um inteiro com sinal de 64 bits formado por oito bytes, começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToInt64%2A> método converte os bytes do índice `startIndex` para `startIndex` + 7 para um <xref:System.Int64> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários a <xref:System.BitConverter> tópico sobre a classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.Int64> valores com o `ToInt64` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.SInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CPP/batoint64.cpp#3)]
+ [!code-csharp[System.BitConverter.ToXXX.SInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/CS/batoint64.cs#3)]
+ [!code-vb[System.BitConverter.ToXXX.SInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.SInts/VB/batoint64.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é maior ou igual ao tamanho de <paramref name="value" /> menos 7 e é menor ou igual ao tamanho de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToSingle">
+      <MemberSignature Language="C#" Value="public static float ToSingle (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 ToSingle(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToSingle(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um número de ponto flutuante de precisão simples convertido de quatro bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um número de ponto flutuante de precisão simples formado por quatro bytes, começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToSingle%2A> método converte os bytes do índice `startIndex` para `startIndex` + 3 para um <xref:System.Single> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários de <xref:System.BitConverter>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.Single> valores com o `ToSingle` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.Others#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CPP/batosingle.cpp#4)]
+ [!code-csharp[System.BitConverter.ToXXX.Others#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/CS/batosingle.cs#4)]
+ [!code-vb[System.BitConverter.ToXXX.Others#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.Others/VB/batosingle.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é maior ou igual ao tamanho de <paramref name="value" /> menos 3, e é menor ou igual ao tamanho de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToString(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <summary>Converte o valor numérico de cada elemento de uma matriz de bytes especificada em sua representação de cadeia de caracteres hexadecimal equivalente.</summary>
+        <returns>Uma cadeia de caracteres de pares hexadecimais separados por hifens, em que cada par representa o elemento correspondente de <paramref name="value" />. Por exemplo, "7F-2C-4A-00".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os elementos de `value` são convertidos. A ordem das cadeias de caracteres hexadecimais retornado pelo <xref:System.BitConverter.ToString%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O código a seguir converte exemplo <xref:System.Byte> matrizes para <xref:System.String> objetos com o `ToString` método.  
+  
+ [!code-cpp[System.BitConverter.ToString#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToString/CPP/batostring.cpp#1)]
+ [!code-csharp[System.BitConverter.ToString#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToString/CS/batostring.cs#1)]
+ [!code-vb[System.BitConverter.ToString#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToString/VB/batostring.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToString(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Converte o valor numérico de cada elemento de uma submatriz de bytes especificada em sua representação de cadeia de caracteres hexadecimal equivalente.</summary>
+        <returns>Uma cadeia de caracteres de pares hexadecimais separados por hifens, em que cada par representa o elemento correspondente de uma submatriz de <paramref name="value" />. Por exemplo, "7F-2C-4A-00".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos da posição de matriz `startIndex` ao final da matriz são convertidos. A ordem das cadeias de caracteres hexadecimais retornado pelo <xref:System.BitConverter.ToString%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte a parte de um <xref:System.Byte> matriz a partir de especificado `startIndex` para um <xref:System.String> com o `ToString` método.  
+  
+ [!code-cpp[System.BitConverter.ToString#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToString/CPP/batostringii.cpp#2)]
+ [!code-csharp[System.BitConverter.ToString#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToString/CS/batostringii.cs#2)]
+ [!code-vb[System.BitConverter.ToString#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToString/VB/batostringii.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public static string ToString (byte[] value, int startIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToString(unsigned int8[] value, int32 startIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToString(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <param name="length">O número de elementos da matriz em <c>valor</c> para converter.</param>
+        <summary>Converte o valor numérico de cada elemento de uma submatriz de bytes especificada em sua representação de cadeia de caracteres hexadecimal equivalente.</summary>
+        <returns>Uma cadeia de caracteres de pares hexadecimais separados por hifens, em que cada par representa o elemento correspondente de uma submatriz de <paramref name="value" />. Por exemplo, "7F-2C-4A-00".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `length` elementos da posição de matriz `startIndex` são convertidos. Se `length` igual a zero, o método retornará <xref:System.String?displayProperty=nameWithType>.  
+  
+ A ordem das cadeias de caracteres hexadecimais retornado pelo <xref:System.BitConverter.ToString%2A> método depende se a arquitetura do computador é little-endian ou big-endian.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.BitConverter.ToString%2A> método para converter a parte de uma matriz de bytes, começando em especificado `startIndex` e com especificado `length`, uma cadeia de caracteres.  
+  
+ [!code-cpp[System.BitConverter.ToString#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToString/CPP/batostringii.cpp#2)]
+ [!code-csharp[System.BitConverter.ToString#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToString/CS/batostringii.cs#2)]
+ [!code-vb[System.BitConverter.ToString#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToString/VB/batostringii.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> ou <paramref name="length" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="startIndex" /> é maior que zero e é maior ou igual ao comprimento de <paramref name="value" />.</exception>
+        <exception cref="T:System.ArgumentException">A combinação de <paramref name="startIndex" /> e <paramref name="length" /> não especifica uma posição em <paramref name="value" />, ou seja, o parâmetro <paramref name="startIndex" /> é maior que o comprimento de <paramref name="value" /> menos o parâmetro <paramref name="length" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt16">
+      <MemberSignature Language="C#" Value="public static ushort ToUInt16 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int16 ToUInt16(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToUInt16(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">A matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um inteiro sem sinal de 16 bits convertido de dois bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um inteiro sem sinal de 16 bits formado por dois bytes, começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToUInt16%2A> método converte os bytes do índice `startIndex` para `startIndex` + 1 para um <xref:System.UInt16> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários a <xref:System.BitConverter> tópico sobre a classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.UInt16> valores com o `ToUInt16` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.UInts#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CPP/batouint16.cpp#1)]
+ [!code-csharp[System.BitConverter.ToXXX.UInts#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CS/batouint16.cs#1)]
+ [!code-vb[System.BitConverter.ToXXX.UInts#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/VB/batouint16.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é igual ao comprimento de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt32">
+      <MemberSignature Language="C#" Value="public static uint ToUInt32 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int32 ToUInt32(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToUInt32(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um inteiro sem sinal de 32 bits convertido de quatro bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um inteiro sem sinal de 32 bits formado por quatro bytes, começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToUInt32%2A> método converte os bytes do índice `startIndex` para `startIndex` + 3 para um <xref:System.UInt32> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários a <xref:System.BitConverter> tópico sobre a classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.UInt32> valores com o `ToUInt32` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.UInts#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CPP/batouint32.cpp#2)]
+ [!code-csharp[System.BitConverter.ToXXX.UInts#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CS/batouint32.cs#2)]
+ [!code-vb[System.BitConverter.ToXXX.UInts#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/VB/batouint32.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é maior ou igual ao tamanho de <paramref name="value" /> menos 3, e é menor ou igual ao tamanho de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUInt64">
+      <MemberSignature Language="C#" Value="public static ulong ToUInt64 (byte[] value, int startIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int64 ToUInt64(unsigned int8[] value, int32 startIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.BitConverter.ToUInt64(System.Byte[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma matriz de bytes.</param>
+        <param name="startIndex">A posição inicial dentro <c>valor</c>.</param>
+        <summary>Retorna um inteiro sem sinal de 64 bits convertido de oito bytes em uma posição especificada em uma matriz de bytes.</summary>
+        <returns>Um inteiro sem sinal de 64 bits formado pelos oito bytes, começando em <paramref name="startIndex" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.BitConverter.ToUInt64%2A> método converte os bytes do índice `startIndex` para `startIndex` + 7 para um <xref:System.UInt64> valor. A ordem de bytes na matriz deve refletir a ordenação de bits da arquitetura do sistema de computador; Para obter mais informações, consulte a seção comentários a <xref:System.BitConverter> tópico sobre a classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir converte os elementos de <xref:System.Byte> matrizes para <xref:System.UInt64> valores com o `ToUInt64` método.  
+  
+ [!code-cpp[System.BitConverter.ToXXX.UInts#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CPP/batouint64.cpp#3)]
+ [!code-csharp[System.BitConverter.ToXXX.UInts#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/CS/batouint64.cs#3)]
+ [!code-vb[System.BitConverter.ToXXX.UInts#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.BitConverter.ToXXX.UInts/VB/batouint64.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="startIndex" /> é maior ou igual ao tamanho de <paramref name="value" /> menos 7 e é menor ou igual ao tamanho de <paramref name="value" /> menos 1.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="startIndex" /> é menor que zero ou maior que o tamanho de <paramref name="value" /> menos 1.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

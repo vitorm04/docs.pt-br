@@ -1,0 +1,204 @@
+<Type Name="ExpressionBinding" FullName="System.Web.UI.ExpressionBinding">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExpressionBinding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ExpressionBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Oferece suporte à análise e à persistência de uma instância de associação de expressão. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBinding (string propertyName, Type propertyType, string expressionPrefix, string expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string propertyName, class System.Type propertyType, string expressionPrefix, string expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBinding.#ctor(System.String,System.Type,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="propertyType" Type="System.Type" />
+        <Parameter Name="expressionPrefix" Type="System.String" />
+        <Parameter Name="expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">Uma cadeia de caracteres que indica o nome da propriedade do objeto ao qual o <c>expressão</c> parâmetro estiver aplicado.</param>
+        <param name="propertyType">Um <see cref="T:System.Type" /> que indica o tipo da propriedade do objeto ao qual o <c>expressão</c> parâmetro estiver aplicado.</param>
+        <param name="expressionPrefix">Uma cadeia de caracteres que representa o valor do prefixo da expressão.</param>
+        <param name="expression">Uma cadeia de caracteres que representa o valor da expressão na sua sintaxe declarativa.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ExpressionBinding" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBinding.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com o <see cref="T:System.Web.UI.ExpressionBinding" /> atual.</param>
+        <summary>Determina se o objeto especificado é a mesma instância atual do <see cref="T:System.Web.UI.ExpressionBinding" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se o objeto especificado é a mesma instância atual do <see cref="T:System.Web.UI.ExpressionBinding" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Expression">
+      <MemberSignature Language="C#" Value="public string Expression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Expression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBinding.Expression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor da expressão em sua sintaxe declarativa.</summary>
+        <value>Uma cadeia de caracteres que é usada com a <see cref="P:System.Web.UI.ExpressionBinding.ExpressionPrefix" /> propriedade para executar uma ação.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExpressionPrefix">
+      <MemberSignature Language="C#" Value="public string ExpressionPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExpressionPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBinding.ExpressionPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor para o prefixo de uma expressão em sua sintaxe declarativa.</summary>
+        <value>Uma cadeia de caracteres que representa o prefixo de expressão.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Generated">
+      <MemberSignature Language="C#" Value="public bool Generated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Generated" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBinding.Generated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a expressão foi gerada implicitamente pelo analisador.</summary>
+        <value>
+          <see langword="true" />Se a expressão foi gerada implicitamente pelo analisador; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ExpressionBinding.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash atual <see cref="T:System.Web.UI.ExpressionBinding" /> objeto; adequado para o hash de algoritmos e estruturas de dados, como uma tabela de hash.</summary>
+        <returns>Um código hash do <see cref="T:System.Web.UI.ExpressionBinding" /> atual.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ParsedExpressionData">
+      <MemberSignature Language="C#" Value="public object ParsedExpressionData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ParsedExpressionData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBinding.ParsedExpressionData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que representa os dados de uma expressão, conforme criado por meio de <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" /> método.</summary>
+        <value>O objeto que representa os dados de uma expressão como criada chamando o <see cref="M:System.Web.Compilation.ExpressionBuilder.ParseExpression(System.String,System.Type,System.Web.Compilation.ExpressionBuilderContext)" /> método.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBinding.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o nome da propriedade do objeto ao qual a expressão é aplicada.</summary>
+        <value>Um valor que representa o nome da propriedade do objeto ao qual a expressão é aplicada.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyType">
+      <MemberSignature Language="C#" Value="public Type PropertyType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type PropertyType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.ExpressionBinding.PropertyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o <see cref="T:System.Type" /> da propriedade do objeto ao qual a expressão é aplicada.</summary>
+        <value>O <see cref="T:System.Type" /> da propriedade do objeto ao qual a expressão é aplicada.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

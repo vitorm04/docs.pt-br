@@ -1,0 +1,197 @@
+<Type Name="EdmToObjectNamespaceMap" FullName="System.Data.Services.Design.EdmToObjectNamespaceMap">
+  <TypeSignature Language="C#" Value="public class EdmToObjectNamespaceMap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EdmToObjectNamespaceMap extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Design.EdmToObjectNamespaceMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Usado pela ferramentas de linha de comando de geração de código e ferramentas no Visual Studio para gerar objetos fortemente tipados do lado do cliente para se comunicar com os serviços de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe não se destina para uso público e é usada pelas ferramentas de linha de comando geração de código e ferramentas no Visual Studio para gerar fortemente tipado objetos de cliente para se comunicar com os serviços de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string edmNamespace, string objectNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string edmNamespace, string objectNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Design.EdmToObjectNamespaceMap.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmNamespace" Type="System.String" />
+        <Parameter Name="objectNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="edmNamespace">Cadeia de caracteres que contém o nome do namespace.</param>
+        <param name="objectNamespace">Cadeia de caracteres que contém o namespace do objeto.</param>
+        <summary>Adiciona o mapeamento entre o namespace do modelo de dados de entidade e o objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Design.EdmToObjectNamespaceMap.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa <see cref="T:System.Data.Services.Design.EdmToObjectNamespaceMap" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string edmNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string edmNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Design.EdmToObjectNamespaceMap.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="edmNamespace">Valor que contém o objeto de mapeamento de consulta de cadeia de caracteres.</param>
+        <summary>Se o mapeamento contém o objeto de consulta <paramref name="edmNamespace" /> parâmetro.</summary>
+        <returns>
+          <see langword="true" />Se o objeto for encontrado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.EdmToObjectNamespaceMap.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma contagem dos mapeamentos contido pelo <see cref="T:System.Data.Services.Design.EdmToObjectNamespaceMap" />.</summary>
+        <value>Valor inteiro que contém a contagem de mapeamentos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EdmNamespaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; EdmNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; EdmNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.EdmToObjectNamespaceMap.EdmNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém <see langword="edmNamespace" /> itens em uma <see cref="T:System.Data.Services.Design.EdmToObjectNamespaceMap" /> objeto.</summary>
+        <value>Cadeia de caracteres que contém valor <see langword="EdmNamespace" /> itens.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public string this[string edmNamespace] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Design.EdmToObjectNamespaceMap.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="edmNamespace">Cadeia de caracteres que contém valor <see langword="edmNamespace" /> nome.</param>
+        <summary>Obtém o namespace identificado por <paramref name="edmNamespace" /> parâmetro.</summary>
+        <value>
+          Objeto <see langword="EdmNamespace" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (string edmNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(string edmNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Design.EdmToObjectNamespaceMap.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmNamespace" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="edmNamespace">Valor de cadeia de caracteres que contém o objeto de mapeamento.</param>
+        <summary>Remove o objeto identificado por <paramref name="edmNamespace" /> parâmetro.</summary>
+        <returns>
+          <see langword="true" />Se a operação for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetObjectNamespace">
+      <MemberSignature Language="C#" Value="public bool TryGetObjectNamespace (string edmNamespace, out string objectNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetObjectNamespace(string edmNamespace, [out] string&amp; objectNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Design.EdmToObjectNamespaceMap.TryGetObjectNamespace(System.String,System.String@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="edmNamespace" Type="System.String" />
+        <Parameter Name="objectNamespace" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="edmNamespace">Valor de cadeia de caracteres que contém o nome do namespace.</param>
+        <param name="objectNamespace">Valor de cadeia de caracteres que identifica o namespace do objeto</param>
+        <summary>Testa se um objeto identificado por <paramref name="objectNamespace" /> e <paramref name="edmNamespace" /> é mapeado por <see cref="T:System.Data.Services.Design.EdmToObjectNamespaceMap" />.</summary>
+        <returns>
+          <see langword="true" />Se o mapeamento é retornado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,105 @@
+<Type Name="LineAnchorCapStyle" FullName="System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle">
+  <TypeSignature Language="C#" Value="public enum LineAnchorCapStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LineAnchorCapStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a forma — ou seja, a extremidade da ancoragem — para desenhar no final do ponto da linha de texto explicativo do rótulo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle> enumeração representa a forma a ser desenhada no final do ponto da linha de texto explicativo do rótulo. Ele é usado em conjunto com o <xref:System.Web.UI.DataVisualization.Charting.SmartLabelStyle.CalloutStyle%2A> e <xref:System.Web.UI.DataVisualization.Charting.SmartLabelStyle.CalloutLineAnchorCapStyle%2A> propriedades. Se uma linha de texto explicativo não for usada, esta enumeração não terá nenhum efeito.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Arrow">
+      <MemberSignature Language="C#" Value="Arrow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Arrow = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Arrow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Extremidade da ancoragem será desenhada com uma ponta de seta.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Diamond">
+      <MemberSignature Language="C#" Value="Diamond" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Diamond = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Diamond" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Extremidade da ancoragem será desenhada com um end em forma de losango.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Extremidade da ancoragem não será desenhada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="Round" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Round = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Round" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Extremidade da ancoragem será desenhada com uma extremidade arredondada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Square">
+      <MemberSignature Language="C#" Value="Square" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle Square = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle.Square" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LineAnchorCapStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Extremidade da ancoragem será desenhada com um cabeçalho de quadrados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

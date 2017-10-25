@@ -1,0 +1,241 @@
+<Type Name="ParameterEditorUserControl" FullName="System.Web.UI.Design.WebControls.ParameterEditorUserControl">
+  <TypeSignature Language="C#" Value="public class ParameterEditorUserControl : System.Windows.Forms.UserControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ParameterEditorUserControl extends System.Windows.Forms.UserControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.ParameterEditorUserControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um reutilizável <see cref="T:System.Windows.Forms.UserControl" /> objeto para edição <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor> classe fornece uma interface do usuário para edição de <xref:System.Web.UI.WebControls.Parameter> elementos de <xref:System.Web.UI.WebControls.ParameterCollection> objetos que são referenciados por várias propriedades diferentes de controles em tempo de design.  
+  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl> classe encapsula a maioria das funcionalidades de <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor>. O <xref:System.Web.UI.Design.WebControls.ParameterCollectionEditor> consiste em um formulário de delimitador que contém o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl>, e **Okey** e **Cancelar** botões.  
+  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.AddParameters%2A> método adiciona uma matriz de parâmetros existentes para o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl>. O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.ClearParameters%2A> método Remove todos os parâmetros do <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl>. O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.GetParameters%2A> método obtém todos os parâmetros do <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl>.  
+  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.SetAllowCollectionChanges%2A> método controla se as adições e exclusões podem ser feitas para os parâmetros de <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ParameterEditorUserControl (IServiceProvider serviceProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IServiceProvider serviceProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterEditorUserControl.#ctor(System.IServiceProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um <see cref="T:System.IServiceProvider" /> interface para o host de design atual, como [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)].</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.ParameterEditorUserControl" /> usando o <see cref="T:System.IServiceProvider" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.%23ctor%2A> construtor inicializa os controles de componente do <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl> objeto, inicializa os elementos de interface do usuário, se conecta a eventos para os editores de componente individual e adiciona os editores de componente para o <xref:System.Windows.Forms.Control.Controls%2A> coleta para o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameters">
+      <MemberSignature Language="C#" Value="public void AddParameters (System.Web.UI.WebControls.Parameter[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddParameters(class System.Web.UI.WebControls.Parameter[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterEditorUserControl.AddParameters(System.Web.UI.WebControls.Parameter[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Web.UI.WebControls.Parameter[]" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">A <see cref="T:System.Web.UI.WebControls.Parameter" /> matriz de parâmetros existentes para adicionar o Editor.</param>
+        <summary>Adiciona uma matriz de parâmetros existentes para o editor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.AddParameters%2A> método adiciona o <xref:System.Web.UI.WebControls.Parameter> elementos de `parameters` para o <xref:System.Windows.Forms.ListView> controlar o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl> objeto. Se houver mais de um <xref:System.Web.UI.WebControls.Parameter> elemento, o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.AddParameters%2A> seleciona o primeiro no <xref:System.Windows.Forms.ListView>. Em seguida, o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.AddParameters%2A> atualiza o <xref:System.Windows.Forms.ListView> controle e gera o <xref:System.Web.UI.WebControls.ParameterCollection.ParametersChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearParameters">
+      <MemberSignature Language="C#" Value="public void ClearParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterEditorUserControl.ClearParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os parâmetros do editor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.ClearParameters%2A> método Remove os parâmetros a partir o <xref:System.Windows.Forms.ListView> controlar o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl> objeto. Em seguida, o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.ClearParameters%2A> atualiza o <xref:System.Windows.Forms.ListView> controle e gera o <xref:System.Web.UI.WebControls.ParameterCollection.ParametersChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Parameter[] GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.UI.WebControls.Parameter[] GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterEditorUserControl.GetParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Parameter[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém todos os parâmetros do editor.</summary>
+        <returns>A <see cref="T:System.Web.UI.WebControls.Parameter" /> matriz de todos os parâmetros do editor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.GetParameters%2A> método preenche uma <xref:System.Web.UI.WebControls.Parameter> matriz com todos os parâmetros do <xref:System.Windows.Forms.ListView> controlar o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParametersChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnParametersChanged (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnParametersChanged(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterEditorUserControl.OnParametersChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o <see cref="E:System.Web.UI.Design.WebControls.ParameterEditorUserControl.ParametersChanged" /> evento quando muda o estado de um parâmetro no editor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParametersChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ParametersChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ParametersChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.Design.WebControls.ParameterEditorUserControl.ParametersChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando qualquer parâmetro ou uma das propriedades do parâmetro é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParametersConfigured">
+      <MemberSignature Language="C#" Value="public bool ParametersConfigured { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ParametersConfigured" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ParameterEditorUserControl.ParametersConfigured" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um valor que indica se todos os parâmetros no editor estão configurados.</summary>
+        <value>
+          <see langword="true" />Se todos os parâmetros no editor sejam configurados; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAllowCollectionChanges">
+      <MemberSignature Language="C#" Value="public void SetAllowCollectionChanges (bool allowChanges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAllowCollectionChanges(bool allowChanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.ParameterEditorUserControl.SetAllowCollectionChanges(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="allowChanges" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allowChanges">Um <see cref="T:System.Boolean" /> que indica se as adições e exclusões podem ser feitas para o <see cref="T:System.Web.UI.WebControls.ParameterCollection" /> que está sendo editado.</param>
+        <summary>Controla se as adições e exclusões podem ser feitas para os valores no editor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.SetAllowCollectionChanges%2A> método controla se as adições e exclusões podem ser feitas para o <xref:System.Web.UI.WebControls.ParameterCollection> elemento o <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl> objeto. O <xref:System.Web.UI.Design.WebControls.ParameterEditorUserControl.SetAllowCollectionChanges%2A> habilita ou desabilita a para cima, para baixo, para adicionar e excluir botões, mas ele não afeta a edição de um indivíduo <xref:System.Web.UI.WebControls.Parameter> elementos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeDescriptionProvider">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.TypeDescriptionProvider TypeDescriptionProvider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.TypeDescriptionProvider TypeDescriptionProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.ParameterEditorUserControl.TypeDescriptionProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeDescriptionProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece metadados para o <see cref="T:System.Web.UI.Design.WebControls.ParameterEditorUserControl" /> classe.</summary>
+        <value>Um objeto de provedor de descritor de tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

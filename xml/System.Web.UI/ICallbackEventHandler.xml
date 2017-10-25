@@ -1,0 +1,85 @@
+<Type Name="ICallbackEventHandler" FullName="System.Web.UI.ICallbackEventHandler">
+  <TypeSignature Language="C#" Value="public interface ICallbackEventHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICallbackEventHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ICallbackEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Usado para indicar que um controle pode ser o destino de um evento de retorno de chamada no servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.Web.UI.ICallbackEventHandler> interface para qualquer controle personalizado que precisa receber eventos de retorno de chamada. Para obter mais informações, consulte [implementando retornos de chamada de cliente sem Postbacks](http://msdn.microsoft.com/library/dfaaa7d4-e1f2-4322-b2f5-796e0419f185).  
+  
+ Exemplos de controles que implementam o <xref:System.Web.UI.ICallbackEventHandler> interface incluir o <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.TreeView> controles. Quando um evento de retorno de chamada tem como alvo um controle que implementa o <xref:System.Web.UI.ICallbackEventHandler> interface, o <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> método é chamado para manipular o evento, passando o argumento do evento como um parâmetro e o <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> método retorna o resultado de retorno de chamada.  
+  
+ Controles que recuperam dados de um controle de fonte de dados durante o retorno de chamada podem fazer isso forma síncrona ou assíncrona. Controles do ASP.NET como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.TreeView> são implementadas de forma síncrona. Retornos de chamada síncronos não impedem que o usuário trabalhando no navegador. No modo síncrono, somente um retorno de chamada por vez pode ser executado, com o retorno de chamada última tendo precedência. Quando um controle da Web é implementado para dar suporte ao comportamento assíncrono, vários retornos de chamada podem ser gerados simultaneamente. Para obter detalhes sobre a programação assíncrona, consulte [padrão assíncrono baseado em evento (EAP)](~/docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+  
+ Você pode especificar se os eventos de retorno de chamada da interface do usuário de origem renderizado por uma implementação de controle de <xref:System.Web.UI.ICallbackEventHandler> interface são validados. Validação de eventos é uma boa prática de segurança. No entanto, por motivos de desempenho você pode desabilitá-lo. Para controlar se eventos de validação é executado em eventos de retorno de chamada, defina o `enableEventValidation` atributo do [@ Page](http://msdn.microsoft.com/en-us/f06cf9e5-22bb-461d-8b8f-549e53ff40a4) diretiva ou o `enableEventValidation` atributo do [páginas Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458) do arquivo Web. config. Se você definir o <xref:System.Web.UI.Page.EnableEventValidation%2A> propriedade no código, defina-o `Page_Init` fase do processamento da página. Para obter mais informações sobre o balanceamento do benefício da segurança do evento de validação com o custo de desempenho, consulte [visão geral de desempenho do ASP.NET](http://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetCallbackResult">
+      <MemberSignature Language="C#" Value="public string GetCallbackResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetCallbackResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ICallbackEventHandler.GetCallbackResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna os resultados de um evento de retorno de chamada que segmenta um controle.</summary>
+        <returns>O resultado do retorno de chamada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Exceções geradas <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> não impedirá que <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> do que está sendo chamada e retornar um resultado. Para evitar <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> retornem um resultado, definir um sinalizador quando uma exceção será lançada <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> e retornar uma cadeia de caracteres vazia de <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseCallbackEvent">
+      <MemberSignature Language="C#" Value="public void RaiseCallbackEvent (string eventArgument);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RaiseCallbackEvent(string eventArgument) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgument" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgument">Uma cadeia de caracteres que representa um argumento do evento a ser passado para o manipulador de eventos.</param>
+        <summary>Processa um evento de retorno de chamada que segmenta um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `null` é usado como o parâmetro de argumento de evento, a cadeia de caracteres é serializada como "null" e enviada de volta para o servidor. Como não há nenhuma forma de distinguir entre `null` e "null", você deve evitar usar `null` parâmetros de argumento com retornos de chamada.  
+  
+ Exceções geradas <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> não impedirá que <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> do que está sendo chamada e retornar um resultado. Para evitar <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A> retornem um resultado, definir um sinalizador quando uma exceção será lançada <xref:System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent%2A> e retornar uma cadeia de caracteres vazia de <xref:System.Web.UI.ICallbackEventHandler.GetCallbackResult%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

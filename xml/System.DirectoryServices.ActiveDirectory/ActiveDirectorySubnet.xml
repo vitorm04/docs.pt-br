@@ -1,0 +1,323 @@
+<Type Name="ActiveDirectorySubnet" FullName="System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet">
+  <TypeSignature Language="C#" Value="public class ActiveDirectorySubnet : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveDirectorySubnet extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> classe representa uma sub-rede em um <see cref="T:System.DirectoryServices.ActiveDirectory.Forest" />.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectorySubnet (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string subnetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string subnetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="subnetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> que especifica o contexto para este objeto <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</param>
+        <param name="subnetName">Um <see cref="T:System.String" /> que especifica o nome da sub-rede.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> classe usando especificado <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> nome de objeto e a sub-rede.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">
+          <paramref name="context" />Especifica um conjunto de configurações, mas não foi encontrada a instância do AD LDS.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">Essa exceção ocorrerá para qualquer um dos seguintes motivos:  
+  
+-   <paramref name="context" />não faz referência a uma floresta válido, o conjunto de configurações, o controlador de domínio ou o servidor AD LDS.  
+  
+-   <paramref name="subnetName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ou <paramref name="subnetName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Authentication.AuthenticationException">As credenciais fornecidas não são válidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActiveDirectorySubnet (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string subnetName, string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string subnetName, string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.#ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="subnetName" Type="System.String" />
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> que especifica o contexto para este objeto <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</param>
+        <param name="subnetName">Um <see cref="T:System.String" /> que especifica o nome da sub-rede.</param>
+        <param name="siteName">Um <see cref="T:System.String" /> que especifica o nome do site que contém a sub-rede.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> classe usando especificado <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto, o nome da sub-rede e o nome do site.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">
+          <paramref name="context" />Especifica um conjunto de configurações, mas não foi encontrada a instância do AD LDS.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">Essa exceção ocorrerá para qualquer um dos seguintes motivos:  
+  
+-   <paramref name="context" />não faz referência a uma floresta válido, o conjunto de configurações, o controlador de domínio ou o servidor AD LDS.  
+  
+-   <paramref name="subnetName" /> ou <paramref name="siteName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" />, <paramref name="subnetName" /> ou <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Authentication.AuthenticationException">As credenciais fornecidas não são válidas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui a sub-rede que é representada por esse <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos que são usados pelo objeto de <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> .</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />Se os recursos gerenciados devem ser liberados; <see langword="false" /> se apenas os recursos não gerenciados devem ser liberados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> de objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindByName">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet FindByName (System.DirectoryServices.ActiveDirectory.DirectoryContext context, string subnetName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet FindByName(class System.DirectoryServices.ActiveDirectory.DirectoryContext context, string subnetName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.FindByName(System.DirectoryServices.ActiveDirectory.DirectoryContext,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+        <Parameter Name="subnetName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> objeto que é válido para esta sub-rede.</param>
+        <param name="subnetName">O nome da sub-rede para localizar.</param>
+        <summary>Retorna uma sub-rede com base em um nome de sub-rede.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> para a sub-rede solicitada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">No <paramref name="context" /> parâmetro foi especificado, o site não pôde ser encontrado para o determinado <paramref name="subnetName" /> parâmetro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ArgumentException">Essa exceção ocorrerá para qualquer um dos seguintes motivos:  
+  
+-   O destino de <paramref name="context" /> parâmetro não é uma floresta, o conjunto de configurações, o controlador de domínio ou o servidor AD LDS.  
+  
+-   <paramref name="subnetName" /> é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> ou <paramref name="subnetName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.DirectoryEntry" /> objeto para este <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</summary>
+        <returns>O <see cref="T:System.DirectoryServices.DirectoryEntry" /> objeto para este <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto ainda não foram salvas no Active Directory Domain Services armazenar.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public string Location { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Location" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição do local do <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</summary>
+        <value>A descrição do local do <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da sub-rede do <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</summary>
+        <value>O nome da sub-rede.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava as alterações para o <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto para o repositório de serviços de domínio do Active Directory.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException">O objeto de sub-rede já existe.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException">O servidor de destino está ocupado ou não disponível.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">A conta especificada não tem permissão para executar essa operação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySite Site { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySite Site" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local em que o <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto é membro.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> objeto para o site que o <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto é membro.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Aplica-se para definir somente. Especificado <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> objeto não existe. Se ele foi criado recentemente, ele deve ser confirmado para o repositório de diretório antes de atribuí-lo para o <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet" /> objeto.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome da sub-rede.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa o nome da sub-rede.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

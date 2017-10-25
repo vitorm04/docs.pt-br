@@ -1,0 +1,98 @@
+<Type Name="WorkflowCompletedEventArgs" FullName="System.Workflow.Runtime.WorkflowCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowCompletedEventArgs : System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowCompletedEventArgs extends System.Workflow.Runtime.WorkflowEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.WorkflowCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.WorkflowEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Quando o fluxo de trabalho for concluído, o mecanismo de tempo de execução do fluxo de trabalho gera o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted> evento. O mecanismo de tempo de execução do fluxo de trabalho passa todos os parâmetros de saída do fluxo de trabalho em um <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs>.  Isso inclui o `out` e `ref` parâmetros do fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um método de manipulador de eventos que usa <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs> como um parâmetro. O `OnWorkflowCompleted` método é chamado quando o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted> é gerado. O código usa o <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A> propriedade para obter o valor associado com o `Status` da chave e grava-o para o console.  
+  
+ Este exemplo de código é parte do fluxo de trabalho sequencial com parâmetros de amostra do SDK do arquivo Program.cs. Para obter mais informações, consulte [fluxo de trabalho sequencial com parâmetros](http://msdn.microsoft.com/en-us/17157f2d-8fed-4848-a386-e4efa381b66b).  
+  
+ [!code-csharp[wf_samples#192](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#192)]
+ [!code-vb[wf_samples#192](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#192)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OutputParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.Dictionary&lt;string,object&gt; OutputParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.Dictionary`2&lt;string, object&gt; OutputParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a saída do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.Dictionary`2" /> de valores de chave por nome de parâmetro que contém os parâmetros de saída do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A>contém o `out` e `ref` parâmetros do fluxo de trabalho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como obter um valor de uma chave armazenada no <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A> propriedade. O `OnWorkflowCompleted` método tem um parâmetro que usa um <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs>. Este método é chamado quando o <xref:System.Workflow.Runtime.WorkflowRuntime.WorkflowCompleted> é gerado. O código usa o <xref:System.Workflow.Runtime.WorkflowCompletedEventArgs.OutputParameters%2A> propriedade para obter o valor associado com o `Status` da chave e grava-o para o console.  
+  
+ Este exemplo de código é parte do fluxo de trabalho sequencial com parâmetros de amostra do SDK do arquivo Program.cs. Para obter mais informações, consulte [fluxo de trabalho sequencial com parâmetros](http://msdn.microsoft.com/en-us/17157f2d-8fed-4848-a386-e4efa381b66b).  
+  
+ [!code-csharp[WF_Samples#192](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#192)]
+ [!code-vb[WF_Samples#192](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#192)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity WorkflowDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Activity WorkflowDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.WorkflowCompletedEventArgs.WorkflowDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Workflow.ComponentModel.Activity" /> que representa a definição de fluxo de trabalho após a conclusão da instância do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Activity" /> que representa a definição de fluxo de trabalho após a conclusão da instância do fluxo de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

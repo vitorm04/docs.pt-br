@@ -1,0 +1,337 @@
+<Type Name="StateMachineWorkflowInstance" FullName="System.Workflow.Activities.StateMachineWorkflowInstance">
+  <TypeSignature Language="C#" Value="public sealed class StateMachineWorkflowInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StateMachineWorkflowInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.StateMachineWorkflowInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma classe que gerencia a instância atual de um <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Essa classe também fornece a interface de consulta sobre a instância atual do <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Ao usar uma instância dessa classe, você pode fazer várias consultas no <xref:System.Workflow.Activities.StateMachineWorkflowInstance>.  
+  
+ Consultas comuns que podem ser feitas são da seguinte maneira:  
+  
+-   Estado atual da máquina de estado.  
+  
+-   Possíveis transições de estado atual.  
+  
+-   Histórico de transições para a instância de máquina de estado.  
+  
+-   Enumeração de todos os estados de máquina de estado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StateMachineWorkflowInstance (System.Workflow.Runtime.WorkflowRuntime runtime, Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.Runtime.WorkflowRuntime runtime, valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateMachineWorkflowInstance.#ctor(System.Workflow.Runtime.WorkflowRuntime,System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="runtime" Type="System.Workflow.Runtime.WorkflowRuntime" />
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="runtime">O tempo de execução do fluxo de trabalho atual.</param>
+        <param name="instanceId">O <see cref="T:System.Guid" /> que indica a instância do <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.StateMachineWorkflowInstance" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma nova instância de um <xref:System.Workflow.Activities.StateMachineWorkflowInstance> objeto. Este exemplo é do exemplo de ordenação SDK da máquina de estado. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Ordenação de exemplo de máquina de estado](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[wf_samples#128](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#128)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="runtime" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).  
+  
+ ou  
+  
+ <paramref name="instanceId" />está vazio <see cref="T:System.Guid" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentState">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.StateActivity CurrentState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.StateActivity CurrentState" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.CurrentState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.StateActivity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o em execução no momento <see cref="T:System.Workflow.Activities.StateActivity" />.</summary>
+        <value>O <see cref="T:System.Workflow.Activities.StateActivity" /> atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentStateName">
+      <MemberSignature Language="C#" Value="public string CurrentStateName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentStateName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.CurrentStateName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do atual <see cref="T:System.Workflow.Activities.StateActivity" />.</summary>
+        <value>O nome do atual <see cref="T:System.Workflow.Activities.StateActivity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnqueueItem">
+      <MemberSignature Language="C#" Value="public void EnqueueItem (IComparable queueName, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnqueueItem(class System.IComparable queueName, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateMachineWorkflowInstance.EnqueueItem(System.IComparable,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome da fila de fluxo de trabalho.</param>
+        <param name="item">O objeto de fila.</param>
+        <summary>Envia uma mensagem para o <see cref="T:System.Workflow.Activities.StateMachineWorkflowInstance" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnqueueItem">
+      <MemberSignature Language="C#" Value="public void EnqueueItem (IComparable queueName, object item, System.Workflow.Runtime.IPendingWork pendingWork, object workItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnqueueItem(class System.IComparable queueName, object item, class System.Workflow.Runtime.IPendingWork pendingWork, object workItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateMachineWorkflowInstance.EnqueueItem(System.IComparable,System.Object,System.Workflow.Runtime.IPendingWork,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="queueName" Type="System.IComparable" />
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="pendingWork" Type="System.Workflow.Runtime.IPendingWork" />
+        <Parameter Name="workItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="queueName">O nome da fila de fluxo de trabalho.</param>
+        <param name="item">O objeto de fila.</param>
+        <param name="pendingWork">Um <see cref="T:System.Workflow.Runtime.IPendingWork" /> que permite que o remetente ser notificado quando o item é entregue.</param>
+        <param name="workItem">Um objeto a ser passado para o <see cref="T:System.Workflow.Runtime.IPendingWork" /> métodos.</param>
+        <summary>Envia uma mensagem para o <see cref="T:System.Workflow.Activities.StateMachineWorkflowInstance" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Guid" /> que indica a instância atual do <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />.</summary>
+        <value>O <see cref="T:System.Guid" /> que indica a instância atual do <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PossibleStateTransitions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; PossibleStateTransitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; PossibleStateTransitions" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.PossibleStateTransitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de transições de estado que o atual <see cref="T:System.Workflow.Activities.StateActivity" /> pode fazer.</summary>
+        <value>Uma coleção de estado faz a transição que atual <see cref="T:System.Workflow.Activities.StateActivity" /> pode fazer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetState">
+      <MemberSignature Language="C#" Value="public void SetState (string targetStateName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetState(string targetStateName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateMachineWorkflowInstance.SetState(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetStateName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetStateName">O nome do <see cref="T:System.Workflow.Activities.StateActivity" /> a transição para o.</param>
+        <summary>Fornece uma transição para um especificado <see cref="T:System.Workflow.Activities.StateActivity" /> usando o nome do <see cref="T:System.Workflow.Activities.StateActivity" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetStateName" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="T:System.Workflow.Activities.StateActivity" /> especificado por <paramref name="targetStateName" /> é uma referência nula (<see langword="Nothing" />).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetState">
+      <MemberSignature Language="C#" Value="public void SetState (System.Workflow.Activities.StateActivity targetState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetState(class System.Workflow.Activities.StateActivity targetState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.StateMachineWorkflowInstance.SetState(System.Workflow.Activities.StateActivity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetState" Type="System.Workflow.Activities.StateActivity" />
+      </Parameters>
+      <Docs>
+        <param name="targetState">O <see cref="T:System.Workflow.Activities.StateActivity" /> a transição para o.</param>
+        <summary>Fornece uma transição para um <see cref="T:System.Workflow.Activities.StateActivity" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="targetState" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StateHistory">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; StateHistory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; StateHistory" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.StateHistory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de atividades de estado que tiver feito a transição por meio da instância de fluxo de trabalho de máquina de estado.</summary>
+        <value>Uma coleção de transições que o <see cref="T:System.Workflow.Activities.StateActivity" /> fez.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade só retorna o histórico de estado, se o <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> é usado. Um `InvalidOperationException` ocorre se o <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> não está instalado.  Se não houver nenhum histórico de estado para uma instância recém-criada, histórico de estado é criado sem a instância que está sendo iniciada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateMachineWorkflow">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.StateMachineWorkflowActivity StateMachineWorkflow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.StateMachineWorkflowActivity StateMachineWorkflow" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.StateMachineWorkflow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.StateMachineWorkflowActivity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a definição mais recente do <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />.</summary>
+        <value>A definição mais recente do <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade só retorna uma cópia da definição de fluxo de trabalho e nunca a árvore de instância dinâmica. Portanto, a árvore de atividade que é retornada por essa propriedade não pode ser usada para consultar os valores de tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se o fluxo de trabalho já foi concluída, atual <see cref="T:System.Workflow.Activities.StateMachineWorkflowActivity" /> não pode ser recuperado, por isso a definição anterior é recuperada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="States">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.Activities.StateActivity&gt; States { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.Activities.StateActivity&gt; States" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.States" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.Activities.StateActivity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de <see cref="T:System.Workflow.Activities.StateActivity" /> classes de <see cref="P:System.Workflow.Activities.StateMachineWorkflowInstance.StateMachineWorkflow" />.</summary>
+        <value>Uma lista de <see cref="T:System.Workflow.Activities.StateActivity" /> classes de <see cref="P:System.Workflow.Activities.StateMachineWorkflowInstance.StateMachineWorkflow" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">O <see langword="Nothing" /> é uma referência nula (<see cref="P:System.Workflow.Activities.StateMachineWorkflowInstance.StateMachineWorkflow" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowInstance">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowInstance WorkflowInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.WorkflowInstance WorkflowInstance" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.StateMachineWorkflowInstance.WorkflowInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> atual.</summary>
+        <value>O <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

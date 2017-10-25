@@ -1,0 +1,75 @@
+<Type Name="PackWebRequestFactory" FullName="System.IO.Packaging.PackWebRequestFactory">
+  <TypeSignature Language="C#" Value="public sealed class PackWebRequestFactory : System.Net.IWebRequestCreate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PackWebRequestFactory extends System.Object implements class System.Net.IWebRequestCreate" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.PackWebRequestFactory" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Net.IWebRequestCreate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a classe que é invocada quando uma instância de um URI de pacote <see cref="T:System.IO.Packaging.PackWebRequest" /> é criado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PackWebRequestFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebRequestFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Packaging.PackWebRequestFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Net.IWebRequestCreate.Create">
+      <MemberSignature Language="C#" Value="System.Net.WebRequest IWebRequestCreate.Create (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Net.WebRequest System.Net.IWebRequestCreate.Create(class System.Uri uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Packaging.PackWebRequestFactory.System#Net#IWebRequestCreate#Create(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.WebRequest</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] para criar a solicitação da Web.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.  Use a segurança de tipo <see cref="T:System.IO.Packaging.PackUriHelper" /> método em vez disso.</summary>
+        <returns>A solicitação da Web URI de pacote.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria uma solicitação da Web URI de pacote de um determinado [!INCLUDE[TLA#tla_uri](~/includes/tlasharptla-uri-md.md)].  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

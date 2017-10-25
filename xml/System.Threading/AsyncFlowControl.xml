@@ -1,0 +1,293 @@
+<Type Name="AsyncFlowControl" FullName="System.Threading.AsyncFlowControl">
+  <TypeSignature Language="C#" Value="public struct AsyncFlowControl : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit AsyncFlowControl extends System.ValueType implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.AsyncFlowControl" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Threading</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece a funcionalidade para restaurar a migração ou o fluxo do contexto de execução entre threads.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um contexto de execução contém todas as informações relacionadas à execução de um segmento lógico. O fluxo do contexto de execução a outros threads pode ser evitado por meio de <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType> método, que retorna um <xref:System.Threading.AsyncFlowControl> estrutura. O <xref:System.Threading.AsyncFlowControl.Undo%2A> método retornado <xref:System.Threading.AsyncFlowControl> estrutura pode ser usada para desfazer a supressão de fluxo. O <xref:System.Threading.AsyncFlowControl> estrutura deve ser usada no mesmo thread em que ele foi criado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncFlowControl.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Threading.AsyncFlowControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Threading.AsyncFlowControl>. O `Dispose` método deixa o <xref:System.Threading.AsyncFlowControl> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Threading.AsyncFlowControl> para o coletor de lixo possa recuperar a memória que o <xref:System.Threading.AsyncFlowControl> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Threading.AsyncFlowControl>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Threading.AsyncFlowControl> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Threading.AsyncFlowControl" /> estrutura não é usada no thread em que ele foi criado.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Threading.AsyncFlowControl" /> estrutura já foi usada para chamar <see cref="M:System.Threading.AsyncFlowControl.Dispose" /> ou <see cref="M:System.Threading.AsyncFlowControl.Undo" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncFlowControl.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com a estrutura atual.</param>
+        <summary>Determina se o objeto especificado é igual ao atual <see cref="T:System.Threading.AsyncFlowControl" /> estrutura.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é um <see cref="T:System.Threading.AsyncFlowControl" /> estrutura e é igual à atual <see cref="T:System.Threading.AsyncFlowControl" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Threading.AsyncFlowControl obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Threading.AsyncFlowControl obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncFlowControl.Equals(System.Threading.AsyncFlowControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Threading.AsyncFlowControl" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Threading.AsyncFlowControl" /> estrutura a ser comparado com a estrutura atual.</param>
+        <summary>Determina se o especificado <see cref="T:System.Threading.AsyncFlowControl" /> estrutura é igual à atual <see cref="T:System.Threading.AsyncFlowControl" /> estrutura.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é igual à atual <see cref="T:System.Threading.AsyncFlowControl" /> estrutura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncFlowControl.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para a atual <see cref="T:System.Threading.AsyncFlowControl" /> estrutura.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Threading.AsyncFlowControl" /> estrutura.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Threading.AsyncFlowControl a, System.Threading.AsyncFlowControl b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Threading.AsyncFlowControl a, valuetype System.Threading.AsyncFlowControl b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncFlowControl.op_Equality(System.Threading.AsyncFlowControl,System.Threading.AsyncFlowControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Threading.AsyncFlowControl" />
+        <Parameter Name="b" Type="System.Threading.AsyncFlowControl" />
+      </Parameters>
+      <Docs>
+        <param name="a">Uma estrutura <see cref="T:System.Threading.AsyncFlowControl" />.</param>
+        <param name="b">Uma estrutura <see cref="T:System.Threading.AsyncFlowControl" />.</param>
+        <summary>Compara dois <see cref="T:System.Threading.AsyncFlowControl" /> estruturas para determinar se eles são iguais.</summary>
+        <returns>
+          <see langword="true" />Se duas estruturas forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Threading.AsyncFlowControl.Equals%28System.Threading.AsyncFlowControl%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Threading.AsyncFlowControl a, System.Threading.AsyncFlowControl b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Threading.AsyncFlowControl a, valuetype System.Threading.AsyncFlowControl b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncFlowControl.op_Inequality(System.Threading.AsyncFlowControl,System.Threading.AsyncFlowControl)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Threading.AsyncFlowControl" />
+        <Parameter Name="b" Type="System.Threading.AsyncFlowControl" />
+      </Parameters>
+      <Docs>
+        <param name="a">Uma estrutura <see cref="T:System.Threading.AsyncFlowControl" />.</param>
+        <param name="b">Uma estrutura <see cref="T:System.Threading.AsyncFlowControl" />.</param>
+        <summary>Compara dois <see cref="T:System.Threading.AsyncFlowControl" /> estruturas para determinar se eles não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se as estruturas não forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é <xref:System.Threading.AsyncFlowControl.Equals%28System.Threading.AsyncFlowControl%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Undo">
+      <MemberSignature Language="C#" Value="public void Undo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Undo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.AsyncFlowControl.Undo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Restaura o fluxo do contexto de execução entre threads.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType> método retorna um <xref:System.Threading.AsyncFlowControl> estrutura que é usada para restaurar o fluxo.  
+  
+ O <xref:System.Threading.AsyncFlowControl.Undo%2A> método deve ser chamado apenas no <xref:System.Threading.AsyncFlowControl> estrutura retornada por seus associados <xref:System.Threading.ExecutionContext.SuppressFlow%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Threading.AsyncFlowControl" /> estrutura não é usada no thread em que ele foi criado.  
+  
+ -ou-  
+  
+ O <see cref="T:System.Threading.AsyncFlowControl" /> estrutura já foi usada para chamar <see cref="M:System.Threading.AsyncFlowControl.Dispose" /> ou <see cref="M:System.Threading.AsyncFlowControl.Undo" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

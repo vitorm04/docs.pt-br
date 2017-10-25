@@ -1,0 +1,89 @@
+<Type Name="AnnotationPathPointCollection" FullName="System.Windows.Forms.DataVisualization.Charting.AnnotationPathPointCollection">
+  <TypeSignature Language="C#" Value="public class AnnotationPathPointCollection : System.Windows.Forms.DataVisualization.Charting.ChartElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.AnnotationPathPoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnnotationPathPointCollection extends System.Windows.Forms.DataVisualization.Charting.ChartElementCollection`1&lt;class System.Windows.Forms.DataVisualization.Charting.AnnotationPathPoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.AnnotationPathPointCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataVisualization.Charting.ChartElementCollection&lt;System.Windows.Forms.DataVisualization.Charting.AnnotationPathPoint&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">System.Windows.Forms.DataVisualization.Charting.AnnotationPathPoint</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de <see cref="T:System.Windows.Forms.DataVisualization.Charting.PolylineAnnotation" /> ou <see cref="T:System.Windows.Forms.DataVisualization.Charting.PolygonAnnotation" /> pontos de caminho, que podem ser acessados usando o <c>GraphicPathPoints</c> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa coleção é usada em tempo de design apenas e usa serialização para expor a forma de uma anotação de polilinha ou polígono, usando suas respectivas `GraphicPathPoints` propriedades de coleção.  
+  
+ Em tempo de execução, use o `GraphicsPath` propriedade para definir o caminho de um <xref:System.Windows.Forms.DataVisualization.Charting.PolylineAnnotation> ou <xref:System.Windows.Forms.DataVisualization.Charting.PolygonAnnotation>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnnotationPathPointCollection (System.Windows.Forms.DataVisualization.Charting.PolylineAnnotation annotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.DataVisualization.Charting.PolylineAnnotation annotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.AnnotationPathPointCollection.#ctor(System.Windows.Forms.DataVisualization.Charting.PolylineAnnotation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="annotation" Type="System.Windows.Forms.DataVisualization.Charting.PolylineAnnotation" />
+      </Parameters>
+      <Docs>
+        <param name="annotation">Uma anotação de polilinha.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.AnnotationPathPointCollection" /> classe com a anotação de polilinha especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.AnnotationPathPointCollection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="True" />para liberar recursos gerenciados e não; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Versões não gerenciados e, opcionalmente, gerenciados recursos</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="public override void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.AnnotationPathPointCollection.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Força a invalidação do elemento do gráfico.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

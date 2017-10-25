@@ -1,0 +1,33 @@
+<Type Name="DataSourceViewOperationCallback" FullName="System.Web.UI.DataSourceViewOperationCallback">
+  <TypeSignature Language="C#" Value="public delegate bool DataSourceViewOperationCallback(int affectedRecords, Exception ex);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataSourceViewOperationCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataSourceViewOperationCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="affectedRecords" Type="System.Int32" />
+    <Parameter Name="ex" Type="System.Exception" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="affectedRecords">O número de registros que a operação de dados afetada.</param>
+    <param name="ex">Um <see cref="T:System.Exception" />, se um for gerado pela operação de dados durante o processamento.</param>
+    <summary>Representa o método de retorno de chamada assíncrono que fornece um controle associado a dados para uma exibição da fonte de dados para operações de exclusão de dados, atualização ou inserção assíncrona.</summary>
+    <returns>Um valor que indica se as exceções geradas durante a operação de dados foram tratadas.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a execução de controle e de página da Web do ASP.NET é síncrona. No entanto, os controles de fonte de dados podem ser estendidos para dar suporte a operações de dados e recuperação de dados assíncronos. O <xref:System.Web.UI.DataSourceView> objeto oferece suporte a <xref:System.Web.UI.DataSourceView.Insert%2A>, <xref:System.Web.UI.DataSourceView.Update%2A>, e <xref:System.Web.UI.DataSourceView.Delete%2A> métodos assíncrono para processamento de dados. O <xref:System.Web.UI.DataSourceViewOperationCallback> delegate é passado para o modo de exibição de fonte de dados por um controle associado a dados, para que a exibição possa chamar esse delegado quando o processamento assíncrono é concluído e notifique o controle associado a dados de resultado da operação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

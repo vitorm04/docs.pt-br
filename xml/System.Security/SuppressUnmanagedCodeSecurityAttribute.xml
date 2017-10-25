@@ -1,0 +1,86 @@
+<Type Name="SuppressUnmanagedCodeSecurityAttribute" FullName="System.Security.SuppressUnmanagedCodeSecurityAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SuppressUnmanagedCodeSecurityAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SuppressUnmanagedCodeSecurityAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SuppressUnmanagedCodeSecurityAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface | System.AttributeTargets.Delegate, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que o código gerenciado para chamar código não gerenciado sem um exame da pilha. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Use esse atributo com muito cuidado. Uso incorreto pode criar vulnerabilidades de segurança.  
+  
+ Esse atributo pode ser aplicado a métodos que deseja chamar código nativo sem incorrer em perda de desempenho de uma verificação de segurança de tempo de execução ao fazer isso. A movimentação da pilha realizada ao chamar código não gerenciado é omitida em tempo de execução, resultando em economia significativa de desempenho. Usar esse atributo em uma classe aplica a todos os métodos independentes.  
+  
+ Em geral, sempre que o código gerenciado chama código não gerenciado (por PInvoke ou a interoperabilidade COM código nativo), há uma demanda para o `UnmanagedCode` permissão para garantir que todos os chamadores tem a permissão necessária para permitir isso. Ao aplicar esse atributo explícito, os desenvolvedores podem suprimir a demanda em tempo de execução. O desenvolvedor deve assumir a responsabilidade de garantir que a transição para o código não gerenciado é suficientemente protegida por outros meios. A demanda para o `UnmanagedCode` permissão ainda ocorrerá no momento de link. Por exemplo, se chamadas de função, A função B e B de função é marcada com <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>, função, um será verificado para não gerenciado permissão de código durante a compilação just-in-time, mas não subsequentemente durante o tempo de execução.  
+  
+ Esse atributo só é eficaz quando aplicado a métodos PInvoke (ou classes que contêm os métodos PInvoke) ou a definição de uma interface por meio do qual serão feitas chamadas interop. Ele será ignorado em todos os outros contextos.  
+  
+ Esse atributo é útil para implementar uma classe que fornece acesso aos recursos do sistema por meio de código não gerenciado. Código que não tem permissão para acessar código não gerenciado pode chamar uma classe com esse atributo para acessar código não gerenciado. Isso só é seguro se o gravador da classe com esse atributo foi programada a classe seja segura. Caso contrário, esse atributo é perigoso e pode permitir que o código que usa para ser usado de forma incorreta.  
+  
+ Isso não é um atributo de segurança declarativa, mas um atributo regular (deriva de <xref:System.Attribute>, não <xref:System.Security.Permissions.SecurityAttribute>).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SuppressUnmanagedCodeSecurityAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SuppressUnmanagedCodeSecurityAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.SuppressUnmanagedCodeSecurityAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão inicializa quaisquer campos para seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

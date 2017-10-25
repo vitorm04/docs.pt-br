@@ -1,0 +1,102 @@
+<Type Name="TickPlacement" FullName="System.Windows.Controls.Primitives.TickPlacement">
+  <TypeSignature Language="C#" Value="public enum TickPlacement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TickPlacement extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.TickPlacement" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica a posição das marcas de escala em um <see cref="T:System.Windows.Controls.Slider" /> controlar com relação ao <see cref="T:System.Windows.Controls.Primitives.Track" /> que implementa o controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.Primitives.TickPlacement> enumeração é usada para definir o <xref:System.Windows.Controls.Slider.TickPlacement%2A> propriedade de um <xref:System.Windows.Controls.Slider>.  
+  
+ A ilustração a seguir mostra um <xref:System.Windows.Controls.Slider> com marcas de escala que estão localizadas abaixo do <xref:System.Windows.Controls.Primitives.Track>. Neste exemplo, o <xref:System.Windows.Controls.Slider.TickPlacement%2A> está definida como BottomRight.  
+  
+ **Exemplo de controle deslizante**  
+  
+ ![Ilustração de controle deslizante](~/add/media/genericslider.png "ilustração de controle deslizante")  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.Slider.TickPlacement%2A> propriedade para um <xref:System.Windows.Controls.Slider.TickPlacement%2A> controle.  
+  
+ [!code-xaml[Slider#4](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Both">
+      <MemberSignature Language="C#" Value="Both" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement Both = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.Both" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Marcas de escala aparecem acima e abaixo de <see cref="T:System.Windows.Controls.Primitives.Track" /> barra um horizontal <see cref="T:System.Windows.Controls.Slider" />, ou à esquerda e à direita do <see cref="T:System.Windows.Controls.Primitives.Track" /> para vertical <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement BottomRight = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Marcas de escala aparecem abaixo do <see cref="T:System.Windows.Controls.Primitives.Track" /> um horizontal <see cref="T:System.Windows.Controls.Slider" />, ou à direita do <see cref="T:System.Windows.Controls.Primitives.Track" /> para vertical <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma marca de escala aparecem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Controls.Primitives.TickPlacement TopLeft = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.TickPlacement.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.TickPlacement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Marcas de escala aparecem acima de <see cref="T:System.Windows.Controls.Primitives.Track" /> um horizontal <see cref="T:System.Windows.Controls.Slider" />, ou à esquerda do <see cref="T:System.Windows.Controls.Primitives.Track" /> para vertical <see cref="T:System.Windows.Controls.Slider" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,610 @@
+<Type Name="Csc" FullName="Microsoft.Build.Tasks.Csc">
+  <TypeSignature Language="C#" Value="public class Csc : Microsoft.Build.Tasks.ManagedCompiler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Csc extends Microsoft.Build.Tasks.ManagedCompiler" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Csc" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Tasks.ManagedCompiler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa o <c>Csc</c> tarefa. Use o <c>Csc</c> elemento no arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e parâmetro, consulte [Tarefa Csc](http://msdn.microsoft.com/library/d8c19b36-f5ca-484b-afa6-8ff3b90e103a).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Csc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Csc.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.Csc" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AddResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected override void AddResponseFileCommands (Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddResponseFileCommands(class Microsoft.Build.Tasks.CommandLineBuilderExtension commandLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Csc.AddResponseFileCommands(Microsoft.Build.Tasks.CommandLineBuilderExtension)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandLine" Type="Microsoft.Build.Tasks.CommandLineBuilderExtension" />
+      </Parameters>
+      <Docs>
+        <param name="commandLine">Construtor da linha de comando ao qual adicionar argumentos.</param>
+        <summary>Preenche especificado <paramref name="commandLine" /> parâmetro com comutadores e outras informações que podem entrar em um arquivo de resposta.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="AllowUnsafeBlocks">
+      <MemberSignature Language="C#" Value="public bool AllowUnsafeBlocks { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowUnsafeBlocks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.AllowUnsafeBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se deve compilar o código que usa o [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) palavra-chave.</summary>
+        <value>
+          <see langword="true" />Se compilará o código que usa o [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) palavra-chave; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/unsafe (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationConfiguration">
+      <MemberSignature Language="C#" Value="public string ApplicationConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.ApplicationConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna informações de configuração.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BaseAddress">
+      <MemberSignature Language="C#" Value="public string BaseAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BaseAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.BaseAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o endereço base preferencial no qual carregar uma DLL.</summary>
+        <value>O endereço base preferencial no qual carregar uma DLL.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O endereço básico padrão para uma DLL é definido pelo Common Language Runtime de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [/baseaddress (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/baseaddress-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CallHostObjectToExecute">
+      <MemberSignature Language="C#" Value="protected override bool CallHostObjectToExecute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CallHostObjectToExecute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Csc.CallHostObjectToExecute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Compila o projeto por meio do objeto de host.</summary>
+        <returns>
+          <see langword="true" />Se a compilação for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método será chamado durante a execução se um objeto de host foi passado para o `Csc` tarefa.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CheckForOverflowUnderflow">
+      <MemberSignature Language="C#" Value="public bool CheckForOverflowUnderflow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckForOverflowUnderflow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.CheckForOverflowUnderflow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o <c>Csc</c> tarefa deve causar uma exceção em tempo de execução para aritmética de inteiros que excede os limites do tipo de dados.</summary>
+        <value>Obtém ou define um valor booliano que indica se verdadeiro se o <c>Csc</c> tarefa deve causar uma exceção em tempo de execução para aritmética de inteiros que excede os limites do tipo de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/checked (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/checked-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DisabledWarnings">
+      <MemberSignature Language="C#" Value="public string DisabledWarnings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisabledWarnings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.DisabledWarnings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista de avisos será desabilitada.</summary>
+        <value>A lista de avisos será desabilitada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/nowarn (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/nowarn-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentationFile">
+      <MemberSignature Language="C#" Value="public string DocumentationFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentationFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.DocumentationFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o arquivo XML para armazenar comentários de documentação.</summary>
+        <value>O arquivo XML para armazenar comentários de documentação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/doc (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/doc-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorEndLocation">
+      <MemberSignature Language="C#" Value="public bool ErrorEndLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ErrorEndLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.ErrorEndLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se true, gera a linha e coluna do local final de cada erro.</summary>
+        <value>Retorna <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorReport">
+      <MemberSignature Language="C#" Value="public string ErrorReport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorReport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.ErrorReport" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o método para relatar um erro interno do compilador c# à Microsoft.</summary>
+        <value>O método para relatar um erro interno do compilador c# à Microsoft.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ter um valor de `prompt`, `send`, ou `none`. Se a propriedade é definida como `prompt`, você receberá um aviso quando ocorre um erro interno do compilador. O prompt permite enviar um relatório de bugs eletronicamente à Microsoft. Se a propriedade é definida como `send`, um relatório de erros é enviado automaticamente. Se a propriedade é definida como `none`, o erro é relatado somente na saída de texto do compilador. O padrão é `none`. Para obter mais informações, consulte [/errorreport (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/errorreport-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPaths">
+      <MemberSignature Language="C#" Value="public bool GenerateFullPaths { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GenerateFullPaths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.GenerateFullPaths" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se deve gerar o caminho absoluto para o arquivo na saída do compilador (<see langword="true" />) ou para gerar o nome do arquivo na saída do compilador (<see langword="false" />).</summary>
+        <value>
+          <see langword="true" />Se o <c>Csc</c> tarefa deve gerar o caminho absoluto para o arquivo na saída do compilador; <see langword="false" /> se o <c>Csc</c> tarefa deve gerar o nome do arquivo na saída do compilador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão é `false`. Para obter mais informações, consulte [/fullpaths (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/fullpaths-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPathToTool">
+      <MemberSignature Language="C#" Value="protected override string GenerateFullPathToTool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GenerateFullPathToTool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Csc.GenerateFullPathToTool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho completo do arquivo da ferramenta Csc.</summary>
+        <returns>O caminho completo do arquivo da ferramenta Csc.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeHostObject">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Csc.InitializeHostObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.HostObjectInitializationStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um host de objeto de valor de status de inicialização que indica que a próxima ação que deve ser.</summary>
+        <returns>Um valor de status do inicialização de objeto host que indica que a próxima ação que deve ser.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método será chamado durante a execução dessa tarefa se um objeto de host foi passado para o `Csc` tarefa.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="LangVersion">
+      <MemberSignature Language="C#" Value="public string LangVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LangVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.LangVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a versão do idioma a ser usado.</summary>
+        <value>A versão do idioma a ser usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/langversion (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/langversion-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ModuleAssemblyName">
+      <MemberSignature Language="C#" Value="public string ModuleAssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ModuleAssemblyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.ModuleAssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um assembly cujos tipos não públicos um. netmodule pode acessar.</summary>
+        <value>Um assembly cujo não público tipos um. netmodule pode acessar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/moduleassemblyname (opção do compilador de c#)](~/docs/csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="NoStandardLib">
+      <MemberSignature Language="C#" Value="public bool NoStandardLib { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoStandardLib" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.NoStandardLib" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o <c>Csc</c> tarefa deve impedir que a importação de mscorlib. dll, que define o namespace do sistema inteiro.</summary>
+        <value>
+          <see langword="true" />Se o <c>Csc</c> tarefa deve impedir que a importação de mscorlib; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para definir ou criar seu próprio namespace do sistema e objetos. Para obter mais informações, consulte [/nostdlib (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/nostdlib-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PdbFile">
+      <MemberSignature Language="C#" Value="public string PdbFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PdbFile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.PdbFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo. PDB.</summary>
+        <value>O caminho do arquivo. PDB.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/pdb (opções do compilador c#)](~/docs/csharp/language-reference/compiler-options/pdb-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredUILang">
+      <MemberSignature Language="C#" Value="public string PreferredUILang { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredUILang" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.PreferredUILang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do idioma passado para o "/ preferreduilang" opção de compilador.</summary>
+        <value>Retorna o nome do idioma.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se definido como nulo, "/ preferreduilang" for omitido e o compilador usa a configuração padrão.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ToolName">
+      <MemberSignature Language="C#" Value="protected override string ToolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.ToolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o nome da ferramenta Csc (csc.exe).</summary>
+        <value>O nome da ferramenta Csc (csc.exe).</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="UseHostCompilerIfAvailable">
+      <MemberSignature Language="C#" Value="public bool UseHostCompilerIfAvailable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseHostCompilerIfAvailable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.UseHostCompilerIfAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor booliano que indica se o <c>Csc</c> tarefa deve usar o objeto do compilador em processo, se disponível.</summary>
+        <value>
+          <see langword="true" />Se o <c>Csc</c> tarefa deve usar o objeto do compilador em processo, se disponível; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado somente por [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WarningLevel">
+      <MemberSignature Language="C#" Value="public int WarningLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WarningLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.WarningLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nível de aviso para o compilador para exibir.</summary>
+        <value>O nível de aviso para o compilador para exibir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/warn (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/warn-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WarningsAsErrors">
+      <MemberSignature Language="C#" Value="public string WarningsAsErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WarningsAsErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.WarningsAsErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de avisos a serem tratados como erros.</summary>
+        <value>A lista de avisos a serem tratados como erros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/warnaserror (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/warnaserror-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WarningsNotAsErrors">
+      <MemberSignature Language="C#" Value="public string WarningsNotAsErrors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WarningsNotAsErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Csc.WarningsNotAsErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma lista de avisos que não são tratados como erros.</summary>
+        <value>A lista de avisos que não são tratados como erros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [/warnaserror (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/warnaserror-compiler-option.md).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

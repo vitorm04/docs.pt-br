@@ -1,0 +1,152 @@
+<Type Name="RenamedEventArgs" FullName="System.IO.RenamedEventArgs">
+  <TypeSignature Language="C#" Value="public class RenamedEventArgs : System.IO.FileSystemEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RenamedEventArgs extends System.IO.FileSystemEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IO.RenamedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.FileSystemEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.IO.FileSystemWatcher.Renamed" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe herda de <xref:System.IO.FileSystemEventArgs> e estende adicionando um campo de nome antigo e um campo de caminho completo antigo para especificar o nome anterior e o caminho completo do diretório ou arquivo afetado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um FileSystemWatcher para monitorar alterações de arquivo (cria, exclui, renomeia alterações) que ocorrem em uma unidade de disco. O exemplo também mostra como corretamente receber notificações de erro.  
+  
+ [!code-csharp[FileSystemWatcher#1](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#1)]
+ [!code-vb[FileSystemWatcher#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RenamedEventArgs (System.IO.WatcherChangeTypes changeType, string directory, string name, string oldName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.IO.WatcherChangeTypes changeType, string directory, string name, string oldName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.RenamedEventArgs.#ctor(System.IO.WatcherChangeTypes,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="changeType" Type="System.IO.WatcherChangeTypes" />
+        <Parameter Name="directory" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="oldName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="changeType">Um dos valores de <see cref="T:System.IO.WatcherChangeTypes" />.</param>
+        <param name="directory">O nome do diretório ou arquivo afetado.</param>
+        <param name="name">O nome do diretório ou arquivo afetado.</param>
+        <param name="oldName">O nome antigo do arquivo afetado ou diretório.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.RenamedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe herda o <xref:System.IO.FileSystemEventArgs> classe e estende adicionando um campo de nome antigo para especificar o nome anterior do arquivo ou diretório afetados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldFullPath">
+      <MemberSignature Language="C#" Value="public string OldFullPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OldFullPath" />
+      <MemberSignature Language="DocId" Value="P:System.IO.RenamedEventArgs.OldFullPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho totalmente qualificado anterior do arquivo afetado ou diretório.</summary>
+        <value>O caminho totalmente qualificado anterior do arquivo afetado ou diretório.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.IO.RenamedEventArgs.OldFullPath%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.RenamedEventArgs> classe.  
+  
+ [!code-csharp[FileSystemWatcher#8](~/samples/snippets/csharp/VS_Snippets_CLR/FileSystemWatcher/cs/filesystemwatcher.cs#8)]
+ [!code-vb[FileSystemWatcher#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/FileSystemWatcher/VB/FileSystemWatcher.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OldName">
+      <MemberSignature Language="C#" Value="public string OldName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OldName" />
+      <MemberSignature Language="DocId" Value="P:System.IO.RenamedEventArgs.OldName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.FileSystem.Watcher</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome antigo do arquivo afetado ou diretório.</summary>
+        <value>O nome anterior do arquivo afetado ou diretório.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

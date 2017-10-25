@@ -1,0 +1,40 @@
+<Type Name="XpsImage" FullName="System.Windows.Xps.Packaging.XpsImage">
+  <TypeSignature Language="C#" Value="public class XpsImage : System.Windows.Xps.Packaging.XpsResource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsImage extends System.Windows.Xps.Packaging.XpsResource" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsImage" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Xps.Packaging.XpsResource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma imagem em um <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.Packaging.XpsImage> classe não tem construtor público.  
+  
+ Use o <xref:System.Windows.Xps.Packaging.IXpsFixedPageWriter.AddImage%2A> método para adicionar uma imagem e obter uma referência a ele em um novo documento.  
+  
+ Use o <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.GetImage%2A> método para obter uma referência de imagem em um documento existente.  
+  
+ Com base nas configurações de <xref:System.Windows.Xps.Serialization.XpsSerializationManager> e <xref:System.Windows.Xps.Serialization.XpsPackagingPolicy>, como <xref:System.Windows.Xps.Serialization.FontSubsetterCommitPolicies> e <xref:System.Windows.Xps.Packaging.PackageInterleavingOrder>, a operação de liberação do <xref:System.Windows.Xps.Packaging.XpsResource.Commit%2A> método o <xref:System.Windows.Xps.Packaging.XpsImage> classe pode ser atrasada até a conclusão <xref:System.Windows.Xps.Packaging.XpsDocument> está fechado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar imagens a um <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpageresources)]
+ [!code-csharp[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpageresources)]
+ [!code-vb[XpsCreate#XpsCreateAddPageResources](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpageresources)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

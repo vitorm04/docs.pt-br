@@ -1,0 +1,136 @@
+<Type Name="SelectionChangedEventArgs" FullName="System.Windows.Controls.SelectionChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class SelectionChangedEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SelectionChangedEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.SelectionChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ListBox> e assina o <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> evento. Ele usa o <xref:System.Windows.Controls.SelectionChangedEventArgs> para localizar o item selecionado no <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-xaml[ListBoxEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#8)]  
+  
+ [!code-csharp[ListBoxEvent#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml.cs#9)]
+ [!code-vb[ListBoxEvent#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxEvent/VisualBasic/Pane1.xaml.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SelectionChangedEventArgs (System.Windows.RoutedEvent id, System.Collections.IList removedItems, System.Collections.IList addedItems);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.RoutedEvent id, class System.Collections.IList removedItems, class System.Collections.IList addedItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SelectionChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Collections.IList,System.Collections.IList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="id" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="removedItems" Type="System.Collections.IList" />
+        <Parameter Name="addedItems" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="id">O evento [!INCLUDE[TLA#tla_id](~/includes/tlasharptla-id-md.md)].</param>
+        <param name="removedItems">Os itens que foram desmarcados durante esse evento.</param>
+        <param name="addedItems">Os itens que foram selecionados durante esse evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.SelectionChangedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ListBox> e assina o <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> evento. Ele usa o <xref:System.Windows.Controls.SelectionChangedEventArgs> para localizar o item selecionado no <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-xaml[ListBoxEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#8)]  
+  
+ [!code-csharp[ListBoxEvent#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml.cs#9)]
+ [!code-vb[ListBoxEvent#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxEvent/VisualBasic/Pane1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddedItems">
+      <MemberSignature Language="C#" Value="public System.Collections.IList AddedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList AddedItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.SelectionChangedEventArgs.AddedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista que contém os itens que foram selecionados.</summary>
+        <value>Os itens que foram selecionados desde a última vez que o evento <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" /> ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.SelectionChangedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador para invocar.</param>
+        <param name="genericTarget">O objeto atual ao longo de rota do evento.</param>
+        <summary>Executa a conversão de tipo adequado para chamar a segurança de tipo <see cref="T:System.Windows.Controls.SelectionChangedEventHandler" /> delegar o <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Windows.Controls.ListBox> e assina o <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> evento. Ele usa o <xref:System.Windows.Controls.SelectionChangedEventArgs> para localizar o item selecionado no <xref:System.Windows.Controls.ListBox>.  
+  
+ [!code-xaml[ListBoxEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#8)]  
+  
+ [!code-csharp[ListBoxEvent#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml.cs#9)]
+ [!code-vb[ListBoxEvent#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxEvent/VisualBasic/Pane1.xaml.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovedItems">
+      <MemberSignature Language="C#" Value="public System.Collections.IList RemovedItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList RemovedItems" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.SelectionChangedEventArgs.RemovedItems" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista que contém os itens que foram desmarcados.</summary>
+        <value>Os itens que foram desmarcados desde a última vez que o evento <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" /> ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

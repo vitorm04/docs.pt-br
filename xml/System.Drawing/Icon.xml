@@ -1,0 +1,696 @@
+<Type Name="Icon" FullName="System.Drawing.Icon">
+  <TypeSignature Language="C#" Value="public sealed class Icon : MarshalByRefObject, ICloneable, IDisposable, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Icon extends System.MarshalByRefObject implements class System.ICloneable, class System.IDisposable, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Icon" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Drawing.Design.IconEditor, System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.IconConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um ícone do Windows, que é uma pequena imagem bitmap usada para representar um objeto. Os ícones podem ser considerados bitmaps transparentes, embora seu tamanho seja determinado pelo sistema.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode construir <xref:System.Drawing.Icon> objetos de recursos incorporados, fluxos ou arquivos. Para obter uma lista dos construtores, consulte <xref:System.Drawing.Icon.%23ctor%2A>. Você também pode converter um <xref:System.Drawing.Icon> para um bitmap usando o <xref:System.Drawing.Icon.ToBitmap%2A> método.  
+  
+ Um recurso de ícone pode conter várias imagens de ícone. Um arquivo de ícone pode conter imagens em vários tamanhos e intensidades de cor. A imagem que é usada em um aplicativo depende do sistema operacional e configurações. A lista a seguir detalha os tamanhos típicos para um ícone:  
+  
+-   16 pixels x 16 de pixels  
+  
+-   32 pixels x 32 de pixels  
+  
+-   48 pixels x 48 de pixels  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Icon.ToBitmap%2A> método. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário e cole o seguinte código para ele. Chamar o `IconToBitmap` método no formulário de <xref:System.Windows.Forms.Control.Paint> manipulador de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.MiscExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.MiscExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de dados do qual carregar o <see cref="T:System.Drawing.Icon" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Icon" /> do fluxo de dados especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um recurso de ícone pode conter várias imagens de ícone. Um arquivo de ícone pode conter imagens em vários tamanhos e intensidades de cor. A imagem que é usada em um aplicativo depende do sistema operacional e configurações. A lista a seguir detalha os tamanhos típicos para um ícone:  
+  
+-   16 pixels x 16 de pixels  
+  
+-   32 pixels x 32 de pixels  
+  
+-   48 pixels x 48 de pixels  
+  
+ Este construtor retorna a imagem menor que está contida no fluxo especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O arquivo a ser carregado do <see cref="T:System.Drawing.Icon" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Icon" /> do nome do arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um recurso de ícone pode conter várias imagens de ícone. Um arquivo de ícone pode conter imagens em vários tamanhos e intensidades de cor. A imagem que é usada em um aplicativo depende do sistema operacional e configurações. A lista a seguir detalha os tamanhos típicos para um ícone:  
+  
+-   16 pixels x 16 de pixels  
+  
+-   32 pixels x 32 de pixels  
+  
+-   48 pixels x 48 de pixels  
+  
+ Este construtor retorna a menor imagem que está contida no arquivo especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (System.Drawing.Icon original, System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Icon original, valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.Drawing.Icon,System.Drawing.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Drawing.Icon" />
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="original">O <see cref="T:System.Drawing.Icon" /> do qual carregar o ícone recém-dimensionado.</param>
+        <param name="size">A estrutura <see cref="T:System.Drawing.Size" /> que especifica a altura e largura do novo <see cref="T:System.Drawing.Icon" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Icon" /> e tenta localizar uma versão do ícone que corresponde ao tamanho solicitado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma versão não pode ser encontrada que corresponda exatamente ao tamanho, a correspondência mais próxima será usada. Se o `original` parâmetro é um <xref:System.Drawing.Icon> que tem um tamanho único, esse método só cria um ícone duplicado. Usar os recursos de alongamento do <xref:System.Drawing.Graphics.DrawImage%2A> método para redimensionar o ícone.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="original" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (System.IO.Stream stream, System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.IO.Stream,System.Drawing.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo que contém os dados do ícone.</param>
+        <param name="size">O tamanho desejado do ícone.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Icon" /> classe do tamanho especificado do fluxo especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="stream" /> é <see langword="null" /> ou não contém dados de imagem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (string fileName, System.Drawing.Size size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, valuetype System.Drawing.Size size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.String,System.Drawing.Size)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="size" Type="System.Drawing.Size" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome e caminho do arquivo que contém os dados do ícone.</param>
+        <param name="size">O tamanho desejado do ícone.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Icon" /> classe do tamanho especificado do arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o arquivo especificado não contém uma imagem que corresponda ao tamanho desejado, o ícone que tem o tamanho mais próximo é retornado.  
+  
+ O `fileName` deve incluir o caminho completo, se não estiver no diretório do aplicativo atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="string" /> é <see langword="null" /> ou não contém dados de imagem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (Type type, string resource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, string resource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="resource" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que especifica o assembly no qual procurar o recurso.</param>
+        <param name="resource">O nome do recurso a carregar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Icon" /> de um recurso no assembly especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.Drawing.Icon> de um recurso com o nome especificado o `resource` o assembly que contém o tipo especificado pelo parâmetro o `type` parâmetro.  
+  
+ Este construtor combina o namespace do tipo especificado junto com o nome de cadeia de caracteres do recurso e procura uma correspondência no manifesto do assembly. Por exemplo você pode passar o <xref:System.Windows.Forms.Control> tipo e `Error.ico` a este construtor e procura um recurso chamado `System.Windows.Forms.Error.ico`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Icon.%23ctor%2A> construtor. Para executar este exemplo, cole o código em um formulário do Windows e controlar o formulário <xref:System.Windows.Forms.Control.Paint> eventos. Chamar o `ConstructAnIconFromAType` método a partir de <xref:System.Windows.Forms.Control.Paint> manipulador de eventos, passando `e` como <xref:System.EventArgs>.  
+  
+ [!code-csharp[System.Drawing.Misc3#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#3)]
+ [!code-vb[System.Drawing.Misc3#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ícone especificado por <paramref name="resource" /> não foi encontrado no assembly que contém o <paramref name="type" /> especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (System.Drawing.Icon original, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Drawing.Icon original, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.Drawing.Icon,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Drawing.Icon" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="original">O ícone do qual carregar o tamanho diferente.</param>
+        <param name="width">A largura do novo ícone.</param>
+        <param name="height">A altura do novo ícone.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Drawing.Icon" /> e tenta localizar uma versão do ícone que corresponde ao tamanho solicitado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma versão não pode ser encontrada que corresponda exatamente ao tamanho, a correspondência mais próxima será usada. Se o `original` parâmetro é um <xref:System.Drawing.Icon> que tem um tamanho único, esse método só cria um ícone duplicado. Usar os recursos de alongamento do <xref:System.Drawing.Graphics.DrawImage%2A> método para redimensionar o ícone.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Icon.ToBitmap%2A> método. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário e cole o seguinte código para ele. Chamar o `IconToBitmap` método no formulário de <xref:System.Windows.Forms.Control.Paint> manipulador de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs>.  
+  
+ [!code-cpp[System.Drawing.MiscExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.MiscExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.MiscExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="original" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (System.IO.Stream stream, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.IO.Stream,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de dados do qual carregar o ícone.</param>
+        <param name="width">A largura, em pixels, do ícone.</param>
+        <param name="height">A altura, em pixels, do ícone.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Icon" /> classe de fluxo de dados especificado e com a altura e largura especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Icon (string fileName, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.#ctor(System.String,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome e caminho do arquivo que contém o <see cref="T:System.Drawing.Icon" /> dados.</param>
+        <param name="width">A largura desejada do <see cref="T:System.Drawing.Icon" />.</param>
+        <param name="height">A altura desejada do <see cref="T:System.Drawing.Icon" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Drawing.Icon" /> classe com a largura especificada e a altura do arquivo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o arquivo especificado não contém uma imagem que corresponda a altura desejada e a largura, o ícone que tem o tamanho mais próximo é retornado.  
+  
+ O `fileName` deve incluir o caminho completo, se não estiver no diretório do aplicativo atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="string" /> é <see langword="null" /> ou não contém dados de imagem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Clones o <see cref="T:System.Drawing.Icon" />, criando uma imagem duplicada.</summary>
+        <returns>Um objeto que pode ser transmitido para um <see cref="T:System.Drawing.Icon" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este <see cref="T:System.Drawing.Icon" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamando `Dispose` permite que os recursos que são usados por este <xref:System.Drawing.Icon> sejam realocadas para outras finalidades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractAssociatedIcon">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon ExtractAssociatedIcon (string filePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Icon ExtractAssociatedIcon(string filePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.ExtractAssociatedIcon(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filePath">O caminho para o arquivo que contém uma imagem.</param>
+        <summary>Retorna uma representação de ícone de uma imagem que está contida no arquivo especificado.</summary>
+        <returns>A representação <see cref="T:System.Drawing.Icon" /> da imagem que está contida no arquivo especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um caminho relativo deve para ser relativo ao diretório de trabalho atual.  
+  
+ Quando <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> é usado com bitmaps, uma imagem em miniatura pode ser retornada em vez de um ícone, se o sistema que está executando o aplicativo tem uma configuração de registro que faz com que os arquivos de bitmap a ser mostrado como imagens em miniatura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> método. Para executar este exemplo, cole o código em um formulário do Windows e a chamada `ExtractAssociatedIconEx` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> manipulador de eventos.  
+  
+ [!code-csharp[System.Drawing.Misc3#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc3/CS/Form1.cs#2)]
+ [!code-vb[System.Drawing.Misc3#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="filePath" /> não indica um arquivo válido.  
+  
+ -ou-  
+  
+ O <paramref name="filePath" /> indica um caminho UNC.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Icon ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um objeto tente liberar recursos e executar outras operações de limpeza antes de ser recuperado pela coleta de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromHandle">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Icon FromHandle (IntPtr handle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Icon FromHandle(native int handle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.FromHandle(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Icon</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handle" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="handle">Um identificador do Windows para um ícone.</param>
+        <summary>Cria um <see cref="T:System.Drawing.Icon" /> GDI+ com base no identificador especificado do Windows para um ícone (<see langword="HICON" />).</summary>
+        <returns>O <see cref="T:System.Drawing.Icon" /> criado por esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar esse método, você deve descartar o ícone original usando o `DestroyIcon` método na API do Win32 para garantir que os recursos são liberados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. O código executa as seguintes ações:  
+  
+-   Cria um <xref:System.Drawing.Bitmap>.  
+  
+-   Desenha o objeto para a tela.  
+  
+-   Obtém um identificador de ícone para o <xref:System.Drawing.Bitmap>.  
+  
+-   Conjuntos de <xref:System.Windows.Forms.Form.Icon%2A?displayProperty=nameWithType> atributo do formulário para um ícone criado a partir do identificador.  
+  
+-   Chama a função de API do Win32 `DestroyIcon` para liberar recursos.  
+  
+ [!code-cpp[System.Drawing.ClassicBitmapExamples#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CPP/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ClassicBitmapExamples#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ClassicBitmapExamples#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ClassicBitmapExamples/VB/form1.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar código não gerenciado. Relacionado a enumeração <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public IntPtr Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Handle" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Icon.Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador do Windows para este <see cref="T:System.Drawing.Icon" />. Isso não é uma cópia do identificador; não liberá-la.</summary>
+        <value>O identificador do Windows para o ícone.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como carregar um bitmap de um <xref:System.Drawing.Icon> tratar usando o <xref:System.Drawing.GraphicsUnit> enumeração e como usar o <xref:System.Drawing.Rectangle.Round%2A> método para desenhar os limites do retângulo de um bitmap.  
+  
+ Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário que contém um botão chamado `Button2`. Cole o código no formulário e associar esse método com o botão <xref:System.Windows.Forms.Control.Click> eventos.  
+  
+ [!code-cpp[System.Drawing.BitmapMembers#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.BitmapMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.BitmapMembers/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.BitmapMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.BitmapMembers/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Icon.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura deste <see cref="T:System.Drawing.Icon" />.</summary>
+        <value>A altura deste <see cref="T:System.Drawing.Icon" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.Save(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="outputStream">O <see cref="T:System.IO.Stream" /> a ser salvo.</param>
+        <summary>Salva esse <see cref="T:System.Drawing.Icon" /> na saída <see cref="T:System.IO.Stream" /> especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Icon.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho deste <see cref="T:System.Drawing.Icon" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> estrutura que especifica a largura e altura deste <see cref="T:System.Drawing.Icon" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Runtime.Serialization.ISerializable.GetObjectData">
+      <MemberSignature Language="C#" Value="void ISerializable.GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Runtime.Serialization.ISerializable.GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> a ser preenchido com dados.</param>
+        <param name="context">O destino (consulte <see cref="T:System.Runtime.Serialization.StreamingContext" />) desta serialização.</param>
+        <summary>Popula um <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com os dados necessários para serializar o objeto de destino.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para serialização. Relacionado a enumeração <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBitmap">
+      <MemberSignature Language="C#" Value="public System.Drawing.Bitmap ToBitmap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Drawing.Bitmap ToBitmap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.ToBitmap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte este <see cref="T:System.Drawing.Icon" /> em um <see cref="T:System.Drawing.Bitmap" /> GDI+.</summary>
+        <returns>Um <see cref="T:System.Drawing.Bitmap" /> que representa o <see cref="T:System.Drawing.Icon" /> convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As áreas transparentes do ícone são perdidas quando ele é convertido em um bitmap e a cor transparente do bitmap resultante é definida como `RGB(13,11,12)`. O bitmap retornado tem a mesma altura e largura como o ícone original.  
+  
+> [!NOTE]
+>  Começando com o suporte da versão 4.6 framework foi adicionado para quadros PNG em arquivos. ico. Aplicativos que versões anteriores do framework de destino, mas que estão em execução nos bits 4.6 podem aceitar o novo comportamento adicionando a seguinte linha ao `<runtime>` seção do arquivo App. config:`<AppContextSwitchOverrides value="Switch.System.Drawing.DontSupportPngFramesInIcons=false" />`  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.Icon.ToBitmap%2A> método. Este exemplo é projetado para ser usado com o Windows Forms. Criar um formulário e cole o seguinte código para ele. Chamar o `IconToBitmap` método do formulário.<xref:System.Windows.Forms.Control.Paint> manipulador de eventos, passando `e` como <xref:System.Windows.Forms.PaintEventArgs> .  
+  
+ [!code-cpp[System.Drawing.MiscExamples#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CPP/form1.cpp#9)]
+ [!code-csharp[System.Drawing.MiscExamples#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscExamples/CS/form1.cs#9)]
+ [!code-vb[System.Drawing.MiscExamples#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscExamples/VB/form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Icon.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres legível por humanos que descreve o <see cref="T:System.Drawing.Icon" />.</summary>
+        <returns>Uma cadeia de caracteres que descreve o <see cref="T:System.Drawing.Icon" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.Icon.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a largura deste <see cref="T:System.Drawing.Icon" />.</summary>
+        <value>A largura deste <see cref="T:System.Drawing.Icon" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

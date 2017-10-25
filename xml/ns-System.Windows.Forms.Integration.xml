@@ -1,0 +1,19 @@
+<Namespace Name="System.Windows.Forms.Integration">
+  <Docs>
+    <summary>Contém classes que oferecem suporte à interoperação de controles de formulários do Windows e WPF.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Integration> namespace contém classes que permitem interoperação entre o [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] tecnologias. Quando você usa <xref:System.Windows.Forms.Integration> classes, você pode hospedar [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] controles em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] páginas, e [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] elementos no [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)]-com base em aplicativos.  
+  
+ As duas classes chave que implementam recursos de interoperabilidade são <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost>. A classe usada depende de sua implementação de controle:  
+  
+-   Use o <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe quando você deve usar um [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)] control em um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] página.  
+  
+-   Use o <xref:System.Windows.Forms.Integration.ElementHost> classe quando você deve usar um [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] elemento em um [!INCLUDE[TLA#tla_winforms](~/includes/tlasharptla-winforms-md.md)]-aplicativo com base em.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

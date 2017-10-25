@@ -1,0 +1,97 @@
+<Type Name="ImageUrlEditor" FullName="System.Web.UI.Design.ImageUrlEditor">
+  <TypeSignature Language="C#" Value="public class ImageUrlEditor : System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageUrlEditor extends System.Web.UI.Design.UrlEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ImageUrlEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.UrlEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface do usuário para selecionar uma URL que faz referência a uma imagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.UI.Design.ImageUrlEditor>é um <xref:System.Drawing.Design.UITypeEditor> que fornece uma caixa de diálogo para selecionar uma propriedade de URL que faz referência a uma imagem.  
+  
+   
+  
+## Examples  
+ [!code-cpp[WebUITypeEditorsExample#5](~/samples/snippets/cpp/VS_Snippets_WebNet/WebUITypeEditorsExample/CPP/webcustomcontrol1.cpp#5)]
+ [!code-csharp[WebUITypeEditorsExample#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebUITypeEditorsExample/CS/webcustomcontrol1.cs#5)]
+ [!code-vb[WebUITypeEditorsExample#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebUITypeEditorsExample/VB/webcustomcontrol1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageUrlEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ImageUrlEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.ImageUrlEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="protected override string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ImageUrlEditor.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a legenda a ser exibida na janela de diálogo de seleção.</summary>
+        <value>A legenda a ser exibida na janela de diálogo de seleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="protected override string Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ImageUrlEditor.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de filtro de nome de arquivo para o editor. Essa cadeia de caracteres é usada para determinar os itens que aparecem na lista de arquivos da caixa de diálogo.</summary>
+        <value>A cadeia de caracteres de filtro que pode ser usada para filtrar a lista de arquivos da caixa de diálogo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ImageUrlEditor.Filter%2A> propriedade especifica uma cadeia de caracteres de filtro com duas opções de filtro: um para extensões de arquivo de imagem comuns (*. gif, jpg, JPEG,. bmp, WMF, *. png) e outro para todos os arquivos (\*.\*).  
+  
+ Uma cadeia de caracteres de filtro contém uma ou mais opções de filtro. Cada opção de filtro contém uma descrição do filtro, seguida pela barra vertical (&#124;) e o padrão de filtro. As cadeias de caracteres para diferentes opções de filtragem são separadas por barra vertical.  
+  
+ A seguir está um exemplo de uma cadeia de caracteres de filtro que contém duas opções de filtro: "`Bitmap Files (*.bmp)|*.bmp|All Files (*.*)|*.*`".  
+  
+ Você pode especificar vários padrões de filtro em uma opção de filtro, separando os padrões de filtro com ponto e vírgula. A seguir está um exemplo de uma cadeia de caracteres de filtro no qual a primeira opção de filtro especifica três padrões de filtro: "`Image Files(*.bmp;*.jpg;*.gif)|*.bmp;*.jpg;*.gif|All Files (*.*)|*.*`".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

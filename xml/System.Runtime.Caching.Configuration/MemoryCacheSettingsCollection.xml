@@ -1,0 +1,294 @@
+<Type Name="MemoryCacheSettingsCollection" FullName="System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection">
+  <TypeSignature Language="C#" Value="public sealed class MemoryCacheSettingsCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MemoryCacheSettingsCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Runtime.Caching.Configuration.MemoryCacheElement), CollectionType=System.Configuration.ConfigurationElementCollectionType.AddRemoveClearMap)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de elementos <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection> classe representa a coleção de elementos de configuração e configurações de configurar uma instância de <xref:System.Runtime.Caching.MemoryCache> classe. Em outras palavras, essa coleção de configurações contém objetos que representam os elementos e configurações que são filhos de um `memoryCache` elemento. O <xref:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection> classe contém um `namedCaches` elemento.  
+  
+ Para obter mais informações sobre as opções de configuração que estão relacionados a essa classe, consulte [ &lt;memoryCache&gt; elemento (configurações de Cache)](~/docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) e [ &lt;namedCaches&gt;(Configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryCacheSettingsCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Runtime.Caching.Configuration.MemoryCacheElement cache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Runtime.Caching.Configuration.MemoryCacheElement cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.Add(System.Runtime.Caching.Configuration.MemoryCacheElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Runtime.Caching.Configuration.MemoryCacheElement" />
+      </Parameters>
+      <Docs>
+        <param name="cache">O elemento de configuração de cache de memória para adicionar.</param>
+        <summary>Adiciona o elemento de configuração de cache especificado para o <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" /> coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os elementos do <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" /> coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de coleção de configurações.</summary>
+        <value>O tipo da coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement (string elementName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement(string elementName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.CreateNewElement(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Runtime.Caching.Configuration.MemoryCacheElement cache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Runtime.Caching.Configuration.MemoryCacheElement cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.IndexOf(System.Runtime.Caching.Configuration.MemoryCacheElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Runtime.Caching.Configuration.MemoryCacheElement" />
+      </Parameters>
+      <Docs>
+        <param name="cache">O elemento de configuração de cache para obter o índice.</param>
+        <summary>Obtém o índice do elemento de configuração de cache especificado no <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" /> coleção.</summary>
+        <returns>O índice do elemento de configuração de cache de memória.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.Configuration.MemoryCacheElement this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.Configuration.MemoryCacheElement Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.Configuration.MemoryCacheElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do item na coleção.</param>
+        <summary>Obtém o <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheElement" /> item com o índice especificado.</summary>
+        <value>O elemento no índice especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Runtime.Caching.Configuration.MemoryCacheElement this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Caching.Configuration.MemoryCacheElement Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.Configuration.MemoryCacheElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para o item.</param>
+        <summary>Obtém o <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheElement" /> item que tem a chave especificada.</summary>
+        <value>O item especificado pela chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Runtime.Caching.Configuration.MemoryCacheElement cache);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Runtime.Caching.Configuration.MemoryCacheElement cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.Remove(System.Runtime.Caching.Configuration.MemoryCacheElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Runtime.Caching.Configuration.MemoryCacheElement" />
+      </Parameters>
+      <Docs>
+        <param name="cache">O elemento de configuração de cache de memória a ser removido.</param>
+        <summary>Remove o elemento de configuração de cache especificado o <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no qual remover o elemento de configuração de cache de memória.</param>
+        <summary>Remove o elemento de configuração no local especificado no cache de <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheSettingsCollection" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,172 @@
+<Type Name="SaveFileDialog" FullName="Microsoft.Win32.SaveFileDialog">
+  <TypeSignature Language="C#" Value="public sealed class SaveFileDialog : Microsoft.Win32.FileDialog" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SaveFileDialog extends Microsoft.Win32.FileDialog" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SaveFileDialog" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Win32.FileDialog</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma caixa de diálogo comum que permite que o usuário especifique um nome de arquivo com o qual um arquivo será salvo. <see cref="T:Microsoft.Win32.SaveFileDialog" /> não pode ser usado por um aplicativo executado em confiança parcial.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A figura a seguir mostra um <xref:Microsoft.Win32.SaveFileDialog> para [!INCLUDE[TLA#tla_winvista](~/includes/tlasharptla-winvista-md.md)].  
+  
+ ![Caixa de diálogo Salvar como](~/add/media/dialogboxesoverviewfigure3.png "caixa de diálogo Salvar como")  
+  
+ A partir do [!INCLUDE[TLA2#tla_winvista](~/includes/tla2sharptla-winvista-md.md)], abrir e salvar caixas de diálogo de arquivo tem uma **Links Favoritos** painel no lado esquerdo da caixa de diálogo que permite que o usuário navegar rapidamente para um local diferente. Esses links são chamados de locais personalizados. Use o <xref:Microsoft.Win32.FileDialog.CustomPlaces%2A> propriedade para definir esta lista de links.  
+  
+<a name="xamlTextUsage_SaveFileDialog"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Você não pode declarar esta classe gerenciada no [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:Microsoft.Win32.SaveFileDialog> e processar o resultado.  
+  
+ [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
+ [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SaveFileDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SaveFileDialog.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Win32.SaveFileDialog" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePrompt">
+      <MemberSignature Language="C#" Value="public bool CreatePrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CreatePrompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SaveFileDialog.CreatePrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se <see cref="T:Microsoft.Win32.SaveFileDialog" /> solicita ao usuário permissão para criar um arquivo, se o usuário Especifica um arquivo que não existe.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo deve solicitar antes de salvá-lo em um nome de arquivo não existia anteriormente; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para definir essa opção de caixa de diálogo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFile">
+      <MemberSignature Language="C#" Value="public System.IO.Stream OpenFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IO.Stream OpenFile() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SaveFileDialog.OpenFile" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um fluxo de arquivos de leitura / gravação para o nome do arquivo selecionado pelo usuário usando <see cref="T:Microsoft.Win32.SaveFileDialog" />.</summary>
+        <returns>Um novo <see cref="T:System.IO.Stream" /> que contém o arquivo selecionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O fluxo de arquivos que é retornado é aberto com acesso de leitura-gravação (<xref:System.IO.FileMode.Create> e <xref:System.IO.FileAccess.ReadWrite>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhum arquivo foi selecionado na caixa de diálogo.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para definir essa opção de caixa de diálogo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwritePrompt">
+      <MemberSignature Language="C#" Value="public bool OverwritePrompt { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OverwritePrompt" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Win32.SaveFileDialog.OverwritePrompt" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se <see cref="T:Microsoft.Win32.SaveFileDialog" /> exibirá um aviso se o usuário Especifica o nome de um arquivo que já existe.</summary>
+        <value>
+          <see langword="true" />Se a caixa de diálogo deve solicitar existiam antes de salvar em um nome de arquivo que anteriormente; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para definir essa opção de caixa de diálogo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public override void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SaveFileDialog.Reset" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todas as propriedades <see cref="T:Microsoft.Win32.SaveFileDialog" /> para seus valores padrão.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Para definir essa opção de caixa de diálogo. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+        <block subset="none" type="overrides">
+          <para>Essa classe é lacrada, você não pode substituir esse método.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,212 @@
+<Type Name="Glyph" FullName="System.Windows.Forms.Design.Behavior.Glyph">
+  <TypeSignature Language="C#" Value="public abstract class Glyph" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Glyph extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.Behavior.Glyph" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma única entidade de interface do usuário gerenciada por um <see cref="T:System.Windows.Forms.Design.Behavior.Adorner" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O único propósito de um <xref:System.Windows.Forms.Design.Behavior.Glyph> é para pintura e teste de clique. Um <xref:System.Windows.Forms.Design.Behavior.Glyph> não tem um identificador de janela (HWND), como ele é renderizado no controle de janela de adorno do <xref:System.Windows.Forms.Design.Behavior.BehaviorService>. Cada <xref:System.Windows.Forms.Design.Behavior.Glyph> pode ter um <xref:System.Windows.Forms.Design.Behavior.Behavior> associados a ele. Um testada com êxito ocorrências- <xref:System.Windows.Forms.Design.Behavior.Glyph> tem a oportunidade de enviar um novo ou diferente <xref:System.Windows.Forms.Design.Behavior.Behavior> para a pilha de comportamento do <xref:System.Windows.Forms.Design.Behavior.BehaviorService>.  
+  
+ Para obter mais informações, consulte [visão geral do serviço de comportamento](http://msdn.microsoft.com/library/7c60cc41-4324-46b5-b444-b39eda7cb33f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar seu próprio <xref:System.Windows.Forms.Design.Behavior.Glyph> com base em classe com <xref:System.Windows.Forms.Design.Behavior.Behavior> associados a ele. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#5)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Glyph (System.Windows.Forms.Design.Behavior.Behavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Design.Behavior.Behavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Glyph.#ctor(System.Windows.Forms.Design.Behavior.Behavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Windows.Forms.Design.Behavior.Behavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> associado ao <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />. Pode ser <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como inicializar uma nova instância do <xref:System.Windows.Forms.Design.Behavior.Glyph> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#4)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Behavior">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.Design.Behavior.Behavior Behavior { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Design.Behavior.Behavior Behavior" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.Glyph.Behavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.Behavior.Behavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> associado ao <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> associados a <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />, ou <see langword="null" /> se não houver nenhum comportamento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bounds">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Rectangle Bounds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Rectangle Bounds" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.Behavior.Glyph.Bounds" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os limites do <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</summary>
+        <value>Um <see cref="T:System.Drawing.Rectangle" /> que representa os limites do <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Windows.Forms.Design.Behavior.Glyph.Bounds%2A> para criar um glifo com dimensões específicas e posição. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#8](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#8)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#8)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHitTest">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Forms.Cursor GetHitTest (System.Drawing.Point p);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.Cursor GetHitTest(valuetype System.Drawing.Point p) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Glyph.GetHitTest(System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Cursor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="p">Um ponto de teste de hit.</param>
+        <summary>Fornece lógica de teste de clique.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.Cursor" /> se o <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" /> associado <paramref name="p" />; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Glyph.GetHitTest%2A> método é um `abstract` método força <xref:System.Windows.Forms.Design.Behavior.Glyph> implementações para fornecer lógica de teste de clique. Dada a qualquer momento, se o <xref:System.Windows.Forms.Design.Behavior.Glyph> decidiu envolvido com que local, ele deverá retornar um válido <xref:System.Windows.Forms.Cursor>. Caso contrário, retornando `null` fará com que o <xref:System.Windows.Forms.Design.Behavior.BehaviorService> para ignorar o local.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Windows.Forms.Design.Behavior.Glyph.GetHitTest%2A> para ver se o ponto está dentro este glifo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#9](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#9)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#9)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="public abstract void Paint (System.Windows.Forms.PaintEventArgs pe);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Paint(class System.Windows.Forms.PaintEventArgs pe) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Glyph.Paint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pe" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pe">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Fornece lógica de pintura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.Behavior.Glyph.Paint%2A> método é um `abstract` método força <xref:System.Windows.Forms.Design.Behavior.Glyph> implementações para fornecer lógica de pintura. O `pe` parâmetro contém o <xref:System.Drawing.Graphics> relacionadas à janela de adorno do <xref:System.Windows.Forms.Design.Behavior.BehaviorService>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como substituir o <xref:System.Windows.Forms.Design.Behavior.Glyph.Paint%2A> para desenhar um glifo. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Windows.Forms.Design.Behavior.BehaviorService> classe.  
+  
+ [!code-cpp[System.Windows.Forms.Design.Behavior.BehaviorService#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/cpp/Form1.cpp#10)]
+ [!code-csharp[System.Windows.Forms.Design.Behavior.BehaviorService#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.Design.Behavior.BehaviorService#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.Behavior.BehaviorService/VB/Form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBehavior">
+      <MemberSignature Language="C#" Value="protected void SetBehavior (System.Windows.Forms.Design.Behavior.Behavior behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetBehavior(class System.Windows.Forms.Design.Behavior.Behavior behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.Behavior.Glyph.SetBehavior(System.Windows.Forms.Design.Behavior.Behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="behavior" Type="System.Windows.Forms.Design.Behavior.Behavior" />
+      </Parameters>
+      <Docs>
+        <param name="behavior">Um <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> para associar o <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</param>
+        <summary>Alterações de <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> associado a <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Windows.Forms.Design.Behavior.Glyph.SetBehavior(System.Windows.Forms.Design.Behavior.Behavior)" /> método é chamado por herança de classes para alterar o <see cref="T:System.Windows.Forms.Design.Behavior.Behavior" /> associado a <see cref="T:System.Windows.Forms.Design.Behavior.Glyph" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

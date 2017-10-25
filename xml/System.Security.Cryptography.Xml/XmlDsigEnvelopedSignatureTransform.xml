@@ -1,0 +1,383 @@
+<Type Name="XmlDsigEnvelopedSignatureTransform" FullName="System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform">
+  <TypeSignature Language="C#" Value="public class XmlDsigEnvelopedSignatureTransform : System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlDsigEnvelopedSignatureTransform extends System.Security.Cryptography.Xml.Transform" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Cryptography.Xml.Transform</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa a transformação de assinatura envelopada para uma assinatura digital XML conforme definido pelo W3C.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe remove o `<Signature>` elemento de um documento XML antes da compilação é computada. Com essa transformação, você pode entrar e verifique se todos os elementos de um documento XML, exceto os elementos XML de assinatura digital.  
+  
+ Embora você possa criar e inserir uma assinatura em um documento XML, verificar o documento modificado usando a assinatura inserida falhará porque o documento agora tem elementos adicionais.  Essa transformação remove o `<Signature>` elemento e permite que você verifique se o documento usando o formato original.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe sempre que você criar uma assinatura envelopada.  
+  
+ Para obter mais informações sobre a transformação de assinatura envelopado, consulte a seção 6.6.4 da especificação XMLDSIG, que está disponível a partir do W3C em www.w3.org/TR/xmldsig-core/.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo demonstra como assinar um arquivo XML usando uma assinatura de envelope. O segundo exemplo demonstra como usar os membros de <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ **Exemplo &#1;**  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#1)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#1)]  
+  
+ **Exemplo &#2;**  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/cpp/members.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/CS/members.cs#2)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/VB/members.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigEnvelopedSignatureTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar membros de <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.XML-XMLDsigEnvelope#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CPP/xmldsigenv.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.XML-XMLDsigEnvelope#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/CS/xmldsigenv.cs#2)]
+ [!code-vb[System.Security.Cryptography.XML-XMLDsigEnvelope#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.XML-XMLDsigEnvelope/VB/xmldsigenv.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlDsigEnvelopedSignatureTransform (bool includeComments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool includeComments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="includeComments" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeComments">
+          <see langword="true" />para incluir comentários; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> classe com comentários, se especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.%23ctor%2A> construtor com um <xref:System.Boolean> valor `true` para incluir comentários. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/cpp/members.cpp#3)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/CS/members.cs#3)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/VB/members.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInnerXml">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlNodeList GetInnerXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlNodeList GetInnerXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.GetInnerXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNodeList</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação XML dos parâmetros de um <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto adequados ser incluída como subelementos de um XMLDSIG <see langword="&lt;Transform&gt;" /> elemento.</summary>
+        <returns>Uma lista de nós XML que representam o conteúdo específico da transformação necessário para descrever atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto em um XMLDSIG <see langword="&lt;Transform&gt;" /> elemento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.GetOutput" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</summary>
+        <returns>A saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do objeto retornado deve ser <xref:System.Xml.XmlNodeList>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.Xml.XmlDsigBase64Transform.GetOutput%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/cpp/members.cpp#8)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/CS/members.cs#8)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/VB/members.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Que contém o documento XML é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutput">
+      <MemberSignature Language="C#" Value="public override object GetOutput (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetOutput(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.GetOutput(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de saída para retornar. <see cref="T:System.Xml.XmlNodeList" />é o tipo só é válido para esse parâmetro.</param>
+        <summary>Retorna a saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto do tipo <see cref="T:System.Xml.XmlNodeList" />.</summary>
+        <returns>A saída do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto do tipo <see cref="T:System.Xml.XmlNodeList" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do objeto retornado deve ser <xref:System.Xml.XmlNodeList>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.GetOutput%2A> método para recuperar a saída do atual <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/cpp/members.cpp#9)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/CS/members.cs#9)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/VB/members.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="type" /> não é um objeto <see cref="T:System.Xml.XmlNodeList" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] InputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] InputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.InputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de tipos que são entradas válidas para o <see cref="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.LoadInput(System.Object)" /> método atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</summary>
+        <value>Uma matriz de tipos de entrada válidas para o atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto; você pode passar apenas os objetos de um desses tipos para o <see cref="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.LoadInput(System.Object)" /> método atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de entrada válida para <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> são <xref:System.IO.Stream>, <xref:System.Xml.XmlDocument>, e <xref:System.Xml.XmlNodeList>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.InputTypes%2A> propriedade para recuperar os tipos de entrada válidos para a transformação atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/cpp/members.cpp#5)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/CS/members.cs#5)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/VB/members.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInnerXml">
+      <MemberSignature Language="C#" Value="public override void LoadInnerXml (System.Xml.XmlNodeList nodeList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInnerXml(class System.Xml.XmlNodeList nodeList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.LoadInnerXml(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodeList" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodeList">Um <see cref="T:System.Xml.XmlNodeList" /> para carregar no atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</param>
+        <summary>Analisa especificado <see cref="T:System.Xml.XmlNodeList" /> como conteúdo de transformação específica de um <see langword="&lt;Transform&gt;" /> elemento e configura o estado interno do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto para corresponder a <see langword="&lt;Transform&gt;" /> elemento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque nenhum conteúdo específico da transformação é definido para <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform>, uma chamada para esse método não altera o estado da transformação.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.LoadInnerXml%2A> método usando especificado <xref:System.Xml.XmlNodeList> objeto configurar atual <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/cpp/members.cpp#11)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/CS/members.cs#11)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/VB/members.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadInput">
+      <MemberSignature Language="C#" Value="public override void LoadInput (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void LoadInput(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.LoadInput(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">A entrada para carregar no atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</param>
+        <summary>Carrega a entrada especificada em atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de objeto de entrada deve ser um dos tipos de <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.InputTypes%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.LoadInput%2A> método usando especificado <xref:System.Xml.XmlDocument> objeto como entrada. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigBase64Transform#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigBase64Transform/CPP/members.cpp#12)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigBase64Transform#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigBase64Transform/CS/members.cs#12)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigBase64Transform#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigBase64Transform/VB/members.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="obj" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Que contém o documento XML é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypes">
+      <MemberSignature Language="C#" Value="public override Type[] OutputTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type[] OutputTypes" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.OutputTypes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de tipos que são possíveis saídas provenientes de <see cref="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.GetOutput" /> métodos do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</summary>
+        <value>Uma matriz de tipos de saída válido para o atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto; somente os objetos de um desses tipos são retornados do <see cref="M:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.GetOutput" /> métodos do atual <see cref="T:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos de saída válida para <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> são <xref:System.Xml.XmlNodeList> e <xref:System.Xml.XmlDocument>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform.OutputTypes%2A> propriedade para recuperar os tipos de saída válido para a transformação atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/cpp/members.cpp#6)]
+ [!code-csharp[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/CS/members.cs#6)]
+ [!code-vb[System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform/VB/members.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

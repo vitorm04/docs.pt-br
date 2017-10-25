@@ -1,0 +1,121 @@
+<Type Name="JpegBitmapDecoder" FullName="System.Windows.Media.Imaging.JpegBitmapDecoder">
+  <TypeSignature Language="C#" Value="public sealed class JpegBitmapDecoder : System.Windows.Media.Imaging.BitmapDecoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit JpegBitmapDecoder extends System.Windows.Media.Imaging.BitmapDecoder" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.JpegBitmapDecoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapDecoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um decodificador para imagens Joint Photographics Experts Group (JPEG) codificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A lista a tabela a seguir o <xref:System.Windows.Media.PixelFormats> que são compatíveis com o <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> classe.  
+  
+|PixelFormat fornecido|Decodifica para PixelFormat|  
+|--------------------------|----------------------------|  
+|<xref:System.Windows.Media.PixelFormats.Gray8%2A>|<xref:System.Windows.Media.PixelFormats.Gray8%2A>|  
+|<xref:System.Windows.Media.PixelFormats.Rgb24%2A>|<xref:System.Windows.Media.PixelFormats.Rgb24%2A>|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JpegBitmapDecoder (System.IO.Stream bitmapStream, System.Windows.Media.Imaging.BitmapCreateOptions createOptions, System.Windows.Media.Imaging.BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream bitmapStream, valuetype System.Windows.Media.Imaging.BitmapCreateOptions createOptions, valuetype System.Windows.Media.Imaging.BitmapCacheOption cacheOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.JpegBitmapDecoder.#ctor(System.IO.Stream,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="bitmapStream" Type="System.IO.Stream" />
+        <Parameter Name="createOptions" Type="System.Windows.Media.Imaging.BitmapCreateOptions" />
+        <Parameter Name="cacheOption" Type="System.Windows.Media.Imaging.BitmapCacheOption" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapStream">O fluxo de bitmap a ser decodificado.</param>
+        <param name="createOptions">Opções de inicialização para a imagem de bitmap.</param>
+        <param name="cacheOption">O método de cache a ser usado para a imagem de bitmap.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Imaging.JpegBitmapDecoder" /> do fluxo de arquivos especificado, com o <paramref name="createOptions" /> e <paramref name="cacheOption" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnLoad> opção de cache, se você deseja fechar o `bitmapStream` depois que o decodificador é criado. O padrão <xref:System.Windows.Media.Imaging.BitmapCacheOption.OnDemand> opção de cache mantém o acesso ao fluxo de até que o bitmap é necessária e a limpeza é tratada pelo coletor de lixo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma instância do e usar um <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> de um fluxo de arquivos. A imagem decodificada é usada como a fonte de um <xref:System.Windows.Controls.Image> controle.  
+  
+ [!code-cpp[jpegbitmapdecoderencoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#1)]
+ [!code-csharp[jpegbitmapdecoderencoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#1)]
+ [!code-vb[jpegbitmapdecoderencoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="bitmapStream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">O <paramref name="bitmapStream" /> não é uma imagem codificada [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)].</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public JpegBitmapDecoder (Uri bitmapUri, System.Windows.Media.Imaging.BitmapCreateOptions createOptions, System.Windows.Media.Imaging.BitmapCacheOption cacheOption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Uri bitmapUri, valuetype System.Windows.Media.Imaging.BitmapCreateOptions createOptions, valuetype System.Windows.Media.Imaging.BitmapCacheOption cacheOption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.JpegBitmapDecoder.#ctor(System.Uri,System.Windows.Media.Imaging.BitmapCreateOptions,System.Windows.Media.Imaging.BitmapCacheOption)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="bitmapUri" Type="System.Uri" />
+        <Parameter Name="createOptions" Type="System.Windows.Media.Imaging.BitmapCreateOptions" />
+        <Parameter Name="cacheOption" Type="System.Windows.Media.Imaging.BitmapCacheOption" />
+      </Parameters>
+      <Docs>
+        <param name="bitmapUri">O <see cref="T:System.Uri" /> que identifica o bitmap para decodificar.</param>
+        <param name="createOptions">Opções de inicialização para a imagem de bitmap.</param>
+        <param name="cacheOption">O método de cache a ser usado para a imagem de bitmap.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Imaging.JpegBitmapDecoder" /> classe especificado <see cref="T:System.Uri" />, com especificado <paramref name="createOptions" /> e <paramref name="cacheOption" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ocorrerá uma exceção se o decodificador não é possível carregar especificado `bitmapUri`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma instância do e usar um <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> de um <xref:System.Uri>. A imagem decodificada é usada como a fonte de um <xref:System.Windows.Controls.Image> controle.  
+  
+ [!code-cpp[jpegbitmapdecoderencoder#5](~/samples/snippets/cpp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CPP/jpegencoderdecoder.cpp#5)]
+ [!code-csharp[jpegbitmapdecoderencoder#5](~/samples/snippets/csharp/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/CSharp/JpegEncoderDecoder.cs#5)]
+ [!code-vb[jpegbitmapdecoderencoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/JpegBitmapDecoderEncoder/VB/JpegEncoderDecoder.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de <paramref name="bitmapUri" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.FileFormatException">O <paramref name="bitmapUri" /> não é uma imagem codificada [!INCLUDE[TLA#tla_jpegorg](~/includes/tlasharptla-jpegorg-md.md)].</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

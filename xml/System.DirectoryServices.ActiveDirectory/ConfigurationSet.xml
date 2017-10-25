@@ -1,0 +1,469 @@
+<Type Name="ConfigurationSet" FullName="System.DirectoryServices.ActiveDirectory.ConfigurationSet">
+  <TypeSignature Language="C#" Value="public class ConfigurationSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConfigurationSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> classe representa um conjunto de configurações para um ou mais AD LDS instâncias.</summary>
+    <remarks>To be added.</remarks>
+    <permission cref="T:System.DirectoryServices.DirectoryServicesPermission">Valor de demanda:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName="AdamInstances">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstanceCollection AdamInstances { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AdamInstanceCollection AdamInstances" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ConfigurationSet.AdamInstances" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstanceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura do AD LDS instâncias na configuração definidos.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection" /> objeto que contém o <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objetos que estão na configuração do conjunto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationPartitions">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection ApplicationPartitions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection ApplicationPartitions" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ConfigurationSet.ApplicationPartitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de partições de aplicativo que são a configuração do conjunto.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection" /> objeto que contém o <see cref="T:System.DirectoryServices.ActiveDirectory.ApplicationPartition" /> objetos que estão na configuração do conjunto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos gerenciados e não gerenciados usados pelo objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Um <see cref="T:System.Boolean" /> valor que determina se os recursos gerenciados devem ser liberados. <see langword="true" />Se os recursos gerenciados devem ser liberados; <see langword="false" /> se apenas os recursos não gerenciados devem ser liberados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAdamInstance">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstance FindAdamInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.AdamInstance FindAdamInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.FindAdamInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Localiza uma instância do AD LDS no conjunto de configurações.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto que representa uma instância do AD LDS que foi encontrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Uma instância do AD LDS não foi encontrada neste conjunto de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAdamInstance">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstance FindAdamInstance (string partitionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.AdamInstance FindAdamInstance(string partitionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.FindAdamInstance(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partitionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partitionName">Um <see cref="T:System.String" /> que especifica uma partição na qual pesquisar.</param>
+        <summary>Localiza uma instância do AD LDS nessa configuração definida para um nome de determinada partição.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto que representa uma instância do AD LDS que foi encontrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partitionName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Uma instância do AD LDS especificado <paramref name="partitionName" /> não foi encontrado no conjunto de configurações.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAdamInstance">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstance FindAdamInstance (string partitionName, string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.AdamInstance FindAdamInstance(string partitionName, string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.FindAdamInstance(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partitionName" Type="System.String" />
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partitionName">Um <see cref="T:System.String" /> que especifica uma partição na qual pesquisar.</param>
+        <param name="siteName">Um <see cref="T:System.String" /> que especifica um site no qual pesquisar.</param>
+        <summary>Localiza uma instância do AD LDS nessa configuração, defina um nome de determinada partição e o nome do site.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto que representa uma instância do AD LDS que foi encontrada.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Uma instância do AD LDS especificado <paramref name="partitionName" /> e <paramref name="siteName" /> parâmetros não foi encontrados no conjunto de configurações.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllAdamInstances">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAllAdamInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAllAdamInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.FindAllAdamInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstanceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna todas as instâncias do AD LDS no conjunto de configurações.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection" /> objeto que contém o <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objetos que foram encontrados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllAdamInstances">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAllAdamInstances (string partitionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAllAdamInstances(string partitionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.FindAllAdamInstances(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstanceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partitionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partitionName">Um <see cref="T:System.String" /> que especifica uma partição na qual pesquisar.</param>
+        <summary>Retorna todas as instâncias do AD LDS nessa configuração definida para um nome de determinada partição.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection" /> objeto que contém o <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objetos que foram encontrados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="partitionName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindAllAdamInstances">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAllAdamInstances (string partitionName, string siteName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.ActiveDirectory.AdamInstanceCollection FindAllAdamInstances(string partitionName, string siteName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.FindAllAdamInstances(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstanceCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="partitionName" Type="System.String" />
+        <Parameter Name="siteName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="partitionName">Um <see cref="T:System.String" /> que especifica uma partição na qual pesquisar.</param>
+        <param name="siteName">Um <see cref="T:System.String" /> que especifica uma partição na qual pesquisar.</param>
+        <summary>Retorna todas as instâncias do AD LDS nessa configuração, defina um nome de determinada partição e o nome do site.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstanceCollection" /> objeto que contém o <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objetos que são encontrados.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="siteName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConfigurationSet">
+      <MemberSignature Language="C#" Value="public static System.DirectoryServices.ActiveDirectory.ConfigurationSet GetConfigurationSet (System.DirectoryServices.ActiveDirectory.DirectoryContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.DirectoryServices.ActiveDirectory.ConfigurationSet GetConfigurationSet(class System.DirectoryServices.ActiveDirectory.DirectoryContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.GetConfigurationSet(System.DirectoryServices.ActiveDirectory.DirectoryContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ConfigurationSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.DirectoryServices.ActiveDirectory.DirectoryContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto <see cref="T:System.DirectoryServices.ActiveDirectory.DirectoryContext" /> que contém o destino e as credenciais a serem usados para recuperar o objeto. O destino do contexto pode ser uma instância do AD LDS ou palavras-chave que são especificadas no objeto serviceConnectionPoint na floresta atual que pode identificar o conjunto de configurações.</param>
+        <summary>Retorna um <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> objeto para o contexto de diretório especificado.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> objeto que representa a configuração definida para o contexto especificado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException">Um destino especificado no <paramref name="context" /> parâmetro não pôde ser encontrado.</exception>
+        <exception cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException">Uma chamada ao serviço de diretório subjacente resultou em um erro.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="context" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="context" /> não é válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDirectoryEntry">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.DirectoryEntry GetDirectoryEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.DirectoryServices.DirectoryEntry GetDirectoryEntry() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.GetDirectoryEntry" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.DirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.DirectoryServices.DirectoryEntry" /> objeto para a partição de configuração.</summary>
+        <returns>O <see cref="T:System.DirectoryServices.DirectoryEntry" /> objeto para a partição de configuração.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSecurityLevel">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel GetSecurityLevel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel GetSecurityLevel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.GetSecurityLevel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nível de segurança de replicação de AD LDS.</summary>
+        <returns>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel" /> valor que indica o modo de autenticação de replicação do AD LDS atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ConfigurationSet.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> objeto.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome do <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> objeto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NamingRoleOwner">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstance NamingRoleOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AdamInstance NamingRoleOwner" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ConfigurationSet.NamingRoleOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância do AD LDS que é o proprietário atual da função de mestre de nomeação de domínio.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto que representa a instância do AD LDS que atualmente contém a função de mestre de nomeação de domínio.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Schema">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema Schema { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema Schema" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ConfigurationSet.Schema" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto de esquema para o conjunto de configurações.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema" /> objeto que representa o esquema para este conjunto de configuração.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaRoleOwner">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.AdamInstance SchemaRoleOwner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.AdamInstance SchemaRoleOwner" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ConfigurationSet.SchemaRoleOwner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.AdamInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância do AD LDS que é o proprietário atual da função de mestre de operações do esquema.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.AdamInstance" /> objeto que representa o AD LDS +  
+  
+ instância que atualmente contém a função de mestre de operações de esquema.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSecurityLevel">
+      <MemberSignature Language="C#" Value="public void SetSecurityLevel (System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel securityLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSecurityLevel(valuetype System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel securityLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.SetSecurityLevel(System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityLevel" Type="System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel" />
+      </Parameters>
+      <Docs>
+        <param name="securityLevel">O <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel" /> valor para o qual definir modo de autenticação de replicação de AD LDS.</param>
+        <summary>Define o nível de segurança de replicação de AD LDS.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="securityLevel" /> não é um valor <see cref="T:System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sites">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection Sites { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection Sites" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ActiveDirectory.ConfigurationSet.Sites" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de sites que estão na configuração do conjunto.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection" /> objeto que contém <see cref="T:System.DirectoryServices.ActiveDirectory.ActiveDirectorySite" /> objetos que estão na configuração do conjunto.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O objeto foi eliminado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ActiveDirectory.ConfigurationSet.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o nome do <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> objeto.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o nome do atual <see cref="T:System.DirectoryServices.ActiveDirectory.ConfigurationSet" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,209 @@
+<Type Name="AuthorizationContext" FullName="System.Security.Claims.AuthorizationContext">
+  <TypeSignature Language="C#" Value="public class AuthorizationContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthorizationContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Claims.AuthorizationContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações de contexto de um evento de autorização. Isso inclui a entidade de segurança que representa o chamador, o recurso que está sendo solicitado e a ação que está sendo executada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Claims.AuthorizationContext> classe representa o contexto que é usado por um Gerenciador de autorização de declarações, uma implementação do <xref:System.Security.Claims.ClaimsAuthorizationManager> classe, para determinar se uma entidade de segurança (entidade) deve ser autorizada a executar uma ação especificada em um determinado recurso. O Gerenciador de autorização de declarações avalia o contexto de autorização no <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> método e o nega ou concede acesso com base em declarações apresentadas pela entidade de segurança.  
+  
+ O <xref:System.Security.Claims.AuthorizationContext.Principal%2A> propriedade contém a entidade de segurança para o qual está sendo solicitada autorização, o <xref:System.Security.Claims.AuthorizationContext.Resource%2A> propriedade contém o recurso no qual a entidade está sendo autorizada, e o <xref:System.Security.Claims.AuthorizationContext.Action%2A> propriedade contém as ações que a entidade de segurança deve executar no recurso. O recurso e a ação são representados como uma coleção de declarações; No entanto, na maioria dos casos, cada coleção contém uma única declaração.  
+  
+   
+  
+## Examples  
+ O exemplo de código que é usado no <xref:System.Security.Claims.AuthorizationContext> tópico é obtido a `Claims Based Authorization` exemplo. Este exemplo fornece um Gerenciador de autorização de declarações personalizadas que pode autorizar entidades com base em uma política que é especificada na configuração. Esse gerenciador personalizado consiste em três componentes básicos: uma classe derivada de <xref:System.Security.Claims.ClaimsAuthorizationManager> que implementa o Gerenciador de `ResourceAction` classe pares de um recurso e uma ação e um leitor de política que lê e compila a política que é especificada no arquivo de configuração. Isso compilado política pode então usado pelo Gerenciador de autorização de declarações para avaliar uma entidade de segurança para autorizar o acesso aos recursos. Nem todos os elementos são mostrados por questão de brevidade. Para obter informações sobre esse exemplo e outros exemplos disponíveis para o WIF e onde baixá-las, consulte [índice de exemplo de código do WIF](~/docs/framework/security/wif-code-sample-index.md).  
+  
+ O código a seguir mostra o <xref:System.Security.Claims.ClaimsAuthorizationManager.CheckAccess%2A> método para o Gerenciador de autorização de declarações personalizadas. Uma função que é avaliada a entidade de segurança com base no recurso e a ação especificada no <xref:System.Security.Claims.AuthorizationContext> é invocado. Essa função retorna um `true` ou `false`, que concede ou nega acesso à entidade de segurança.  
+  
+ [!code-csharp[WifClaimsBasedAuthorization#3](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#3)]  
+[!code-csharp[WifClaimsBasedAuthorization#5](~/samples/snippets/csharp/VS_Snippets_Misc/wifclaimsbasedauthorization/cs/claimsauthorizationlibrary/myclaimsauthorizationmanager.cs#5)]  
+  
+ O XML a seguir mostra um exemplo da política de autorização foi especificado na configuração. Na primeira política, a entidade de segurança deve ter uma das declarações especificadas para executar a ação especificada no recurso especificado. Na segunda política, a entidade de segurança deve ter ambas as declarações para poder executar a ação especificada no recurso especificado. Em todos os outros, a entidade de segurança é concedida automaticamente acesso, independentemente das declarações que ela possui.  
+  
+```xml  
+<system.identityModel>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  
+      <policy resource="http://localhost:28491/Developers.aspx" action="GET">  
+        <or>  
+          <claim claimType="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" claimValue="developer" />  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+        </or>  
+      </policy>  
+      <policy resource="http://localhost:28491/Administrators.aspx" action="GET">  
+        <and>  
+          <claim claimType="http://schemas.xmlsoap.org/claims/Group" claimValue="Administrator" />  
+          <claim claimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country" claimValue="USA" />  
+        </and>  
+      </policy>  
+      <policy resource="http://localhost:28491/Default.aspx" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/" action="GET">  
+      </policy>  
+      <policy resource="http://localhost:28491/Claims.aspx" action="GET">  
+      </policy>  
+    </claimsAuthorizationManager>  
+  
+    ...  
+  
+  </identityConfiguration>  
+</system.identityModel>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationContext (System.Security.Claims.ClaimsPrincipal principal, System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt; resource, System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Claims.ClaimsPrincipal principal, class System.Collections.ObjectModel.Collection`1&lt;class System.Security.Claims.Claim&gt; resource, class System.Collections.ObjectModel.Collection`1&lt;class System.Security.Claims.Claim&gt; action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.AuthorizationContext.#ctor(System.Security.Claims.ClaimsPrincipal,System.Collections.ObjectModel.Collection{System.Security.Claims.Claim},System.Collections.ObjectModel.Collection{System.Security.Claims.Claim})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="principal" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="resource" Type="System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt;" />
+        <Parameter Name="action" Type="System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="principal">A entidade de segurança para o qual a autorização é a ser verificada.</param>
+        <param name="resource">Uma coleção de declarações que representa o recurso para o qual a entidade for autorizado. Normalmente, a coleção contém um único elemento.</param>
+        <param name="action">Uma coleção de declarações que representa a ação a ser executada no recurso. Normalmente, a coleção contém um único elemento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.AuthorizationContext" /> classe com o principal especificado, declaração de recurso e a declaração de ação.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="principal" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="resource" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="action" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthorizationContext (System.Security.Claims.ClaimsPrincipal principal, string resource, string action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Claims.ClaimsPrincipal principal, string resource, string action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Claims.AuthorizationContext.#ctor(System.Security.Claims.ClaimsPrincipal,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="principal" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="resource" Type="System.String" />
+        <Parameter Name="action" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="principal">A entidade de segurança para o qual a autorização é a ser verificada.</param>
+        <param name="resource">O recurso para o qual a entidade for autorizado. O recurso é especificado como o valor de uma declaração de nome.</param>
+        <param name="action">A ação a ser executada no recurso. A ação é especificada como o valor de uma declaração de nome.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Claims.AuthorizationContext" /> classe com o principal especificado, o nome de recurso e o nome da ação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Claims.AuthorizationContext.Action%2A> propriedade é inicializada para conter uma declaração de nome (<xref:System.Security.Claims.ClaimTypes.Name?displayProperty=nameWithType>) que tem o valor especificado pelo `action` parâmetro. O <xref:System.Security.Claims.AuthorizationContext.Resource%2A> propriedade é inicializada para conter uma declaração de nome que tem o valor especificado pelo `resource` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="principal" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="resource" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="action" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt; Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Security.Claims.Claim&gt; Action" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthorizationContext.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ação para o qual a entidade for autorizado.</summary>
+        <value>Uma coleção de declarações que representa as ações relevantes para a solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, a coleção contém um único elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Principal">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsPrincipal Principal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsPrincipal Principal" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthorizationContext.Principal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a entidade de segurança (entidade) para o qual a organização está sendo solicitada.</summary>
+        <value>A entidade de autorização para o qual está sendo solicitada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt; Resource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Security.Claims.Claim&gt; Resource" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Claims.AuthorizationContext.Resource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Security.Claims.Claim&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o recurso no qual o principal for autorizado.</summary>
+        <value>Uma coleção de declarações que representa o recurso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, a coleção contém um único elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

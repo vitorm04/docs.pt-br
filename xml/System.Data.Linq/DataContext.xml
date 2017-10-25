@@ -1,0 +1,1435 @@
+<Type Name="DataContext" FullName="System.Data.Linq.DataContext">
+  <TypeSignature Language="C#" Value="public class DataContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.DataContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o ponto de entrada principal para LINQ a estrutura de SQL.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Linq.DataContext> é a origem de todas as entidades mapeado sobre uma conexão de banco de dados. Ele rastreia as alterações feitas a todas as entidades recuperadas e mantém um "cache de identidade" garante que as entidades recuperadas mais de uma vez é representados por usando a mesma instância de objeto.  
+  
+ Em geral, um <xref:System.Data.Linq.DataContext> instância foi projetada para a última para uma "unidade de trabalho", no entanto, o aplicativo define termo. Um <xref:System.Data.Linq.DataContext> é leve e não é caro criar. Um típico [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] aplicativo cria <xref:System.Data.Linq.DataContext> instâncias no escopo do método ou como um membro de curta duração classes que representam um conjunto lógico de relacionadas a operações de banco de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContext (System.Data.IDbConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.IDbConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.#ctor(System.Data.IDbConnection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Data.IDbConnection" />
+      </Parameters>
+      <Docs>
+        <param name="connection">A conexão usada pelo [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.DataContext" /> referenciando a conexão usada pelo [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.Linq.DataContext> abre e fecha uma conexão de banco de dados conforme necessário, se você fornecer uma conexão fechada ou uma cadeia de caracteres de conexão. Em geral, você nunca deve chamar `Dispose` em um <xref:System.Data.Linq.DataContext>. Se você fornecer uma conexão aberta, o <xref:System.Data.Linq.DataContext> não será fechado. Portanto, não criar uma instância de um <xref:System.Data.Linq.DataContext> com uma conexão aberta, a menos que você tem uma boa razão para isso. Em um <xref:System.Transactions> transação, um <xref:System.Data.Linq.DataContext> não abrir ou fechar uma conexão para evitar a promoção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContext (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileOrServerOrConnection" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.DataContext" /> referenciando uma fonte de arquivo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContext (System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.IDbConnection connection, class System.Data.Linq.Mapping.MappingSource mapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.#ctor(System.Data.IDbConnection,System.Data.Linq.Mapping.MappingSource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Data.IDbConnection" />
+        <Parameter Name="mapping" Type="System.Data.Linq.Mapping.MappingSource" />
+      </Parameters>
+      <Docs>
+        <param name="connection">A conexão usada pelo .NET Framework.</param>
+        <param name="mapping">Uma fonte de mapeamento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.DataContext" /> referenciando uma conexão e uma fonte de mapeamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataContext (string fileOrServerOrConnection, System.Data.Linq.Mapping.MappingSource mapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileOrServerOrConnection, class System.Data.Linq.Mapping.MappingSource mapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.#ctor(System.String,System.Data.Linq.Mapping.MappingSource)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileOrServerOrConnection" Type="System.String" />
+        <Parameter Name="mapping" Type="System.Data.Linq.Mapping.MappingSource" />
+      </Parameters>
+      <Docs>
+        <param name="fileOrServerOrConnection">Esse argumento pode ser um dos seguintes:  
+  
+ O nome de um arquivo em que reside um banco de dados SQL Server Express.  
+  
+ O nome de um servidor em que existe um banco de dados. Nesse caso, o provedor usa o banco de dados padrão de um usuário.  
+  
+ Uma cadeia de conexão completa. O [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] passa apenas a cadeia de caracteres para o provedor sem modificação.</param>
+        <param name="mapping">Uma fonte de mapeamento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Linq.DataContext" /> referenciando uma fonte de arquivo e fonte de mapeamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeConflicts">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.ChangeConflictCollection ChangeConflicts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.ChangeConflictCollection ChangeConflicts" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.ChangeConflicts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ChangeConflictCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos que causaram conflitos de simultaneidade quando o <see cref="M:System.Data.Linq.DataContext.SubmitChanges" /> foi chamado.</summary>
+        <value>Uma coleção de objetos que causaram conflitos de simultaneidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir mostra como a coleção pode ser iterada para recuperar informações de conflito.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.ObjectChangeConflict#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.objectchangeconflict/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.ObjectChangeConflict#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.objectchangeconflict/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTimeout">
+      <MemberSignature Language="C#" Value="public int CommandTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CommandTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.CommandTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que aumenta o período de tempo limite para consultas que, de outra forma, atingir o tempo limite durante o período de tempo limite padrão.</summary>
+        <value>Um valor que aumenta o período de tempo limite para consultas que, de outra forma, atingir o tempo limite durante o período de tempo limite padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém ou define o tempo limite do comando usado para executar comandos gerados (`IDbCommands`). Para obter mais informações, consulte <xref:System.Data.IDbCommand.CommandTimeout%2A>.  
+  
+ Quando essa propriedade não é definida, o valor padrão de <xref:System.Data.IDbCommand.CommandTimeout%2A> é usado para a execução do comando de consulta. O valor padrão é definido pelo provedor de armazenamento. Observe que alguns provedores podem gerar exceções se esse valor é definido como um valor diferente de zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.Connection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a conexão usada pela estrutura.</summary>
+        <value>A conexão usada pela estrutura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para a interoperação com código do ADO.NET relacional.  
+  
+ A conexão retornado será fechado, a menos que ele foi aberto explicitamente pelo usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDatabase">
+      <MemberSignature Language="C#" Value="public void CreateDatabase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateDatabase() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.CreateDatabase" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um banco de dados no servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do banco de dados será derivado usando o seguinte algoritmo:  
+  
+-   Se um banco de dados for identificado na cadeia de conexão, seu nome será usado.  
+  
+-   Se um <xref:System.Data.Linq.Mapping.DatabaseAttribute> atributo estiver presente, seu <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> propriedade é usada como o nome do banco de dados.  
+  
+-   Se não houver nenhuma marca de banco de dados na cadeia de conexão e fortemente tipadas <xref:System.Data.Linq.DataContext> for usado, um banco de dados que tem o mesmo nome que o <xref:System.Data.Linq.DataContext> herança de classe está marcada.  
+  
+-   Se um fracamente tipada <xref:System.Data.Linq.DataContext> é usado, uma exceção será lançada.  
+  
+-   Se o <xref:System.Data.Linq.DataContext> foi criado usando um nome de arquivo, o banco de dados correspondente para o nome do arquivo é criado.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como configurar um banco de dados temporário e, em seguida, removê-lo.  
+  
+ [!code-csharp[System.Data.Linq.DataContext#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.DataContext/cs/Program.cs#1)]
+ [!code-vb[System.Data.Linq.DataContext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.DataContext/vb/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateMethodCallQuery&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="protected System.Linq.IQueryable&lt;TResult&gt; CreateMethodCallQuery&lt;TResult&gt; (object instance, System.Reflection.MethodInfo methodInfo, params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance class System.Linq.IQueryable`1&lt;!!TResult&gt; CreateMethodCallQuery&lt;TResult&gt;(object instance, class System.Reflection.MethodInfo methodInfo, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.CreateMethodCallQuery``1(System.Object,System.Reflection.MethodInfo,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Linq.IQueryable&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="methodInfo" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo dos elementos na coleção retornada.</typeparam>
+        <param name="instance">A instância da invocação do método (o objeto atual).</param>
+        <param name="methodInfo">O <see cref="T:System.Reflection.MethodInfo" /> que identifica o método CLR que corresponde a um método de banco de dados.</param>
+        <param name="parameters">A matriz de parâmetros a serem passados para o comando.</param>
+        <summary>Executa a função de banco de dados com valor de tabela associada com o método CLR especificado.</summary>
+        <returns>Uma coleção de valores resultantes retornado pela consulta de banco de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Linq.DataContext.CreateMethodCallQuery%2A> método é usado no código gerado automaticamente e atua como um proxy para funções de banco de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DatabaseExists">
+      <MemberSignature Language="C#" Value="public bool DatabaseExists ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DatabaseExists() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.DatabaseExists" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o banco de dados associado pode ser aberto.</summary>
+        <returns>
+          <see langword="true" /> se o banco de dados especificado puder ser aberto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa a conexão no <xref:System.Data.Linq.DataContext.Connection%2A> propriedade para tentar abrir o banco de dados associado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa esse método para determinar se um banco de dados já existe.  
+  
+ [!code-csharp[System.Data.Linq.DataContext#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.DataContext/cs/Program.cs#1)]
+ [!code-vb[System.Data.Linq.DataContext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.DataContext/vb/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferredLoadingEnabled">
+      <MemberSignature Language="C#" Value="public bool DeferredLoadingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DeferredLoadingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.DeferredLoadingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se relações de um-para-muitos ou de um-para-um devem ter o carregamento adiado.</summary>
+        <value>
+          <see langword="true" /> se o adiamento de carregamento for habilitado; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o código acessa uma dessas relações, null será retornado se a relação é um para um, e uma coleção vazia é retornada se ele for um-para-muitos. As relações ainda podem ser preenchidas, definindo o <xref:System.Data.Linq.DataContext.LoadOptions%2A> propriedade.  
+  
+ O cenário principal para essa propriedade é habilitar a extração de uma parte do modelo de objeto e enviá-lo (por exemplo, para um serviço da Web).  
+  
+> [!NOTE]
+>  Se essa propriedade é definida como `false` depois que uma consulta tiver sido executada, uma exceção será lançada. Consulte o **os modos válidos** seção abaixo para obter mais informações.  
+  
+## <a name="valid-modes"></a>Modos válidos  
+ O carregamento Deferido requer controle de objeto. Somente os seguintes modos são válidos:  
+  
+-   <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> = `false`. <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A>é ignorado e inferido para ser `false`. Esse comportamento corresponde a um somente leitura <xref:System.Data.Linq.DataContext>.  
+  
+-   <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> = `true`. <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> = `false`. Essa situação corresponde a um <xref:System.Data.Linq.DataContext> que permite que os usuários carreguem um gráfico de objeto usando <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> diretivas, mas não habilitar o carregamento adiado.  
+  
+-   Ambos são definidos como `true`. Esse é o padrão.  
+  
+ Os sinalizadores não podem ser alterados depois que uma consulta é executada. Qualquer alteração após a execução da primeira consulta que usa <xref:System.Data.Linq.DataContext> lança uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteDatabase">
+      <MemberSignature Language="C#" Value="public void DeleteDatabase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteDatabase() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.DeleteDatabase" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui o banco de dados associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método usa a conexão no <xref:System.Data.Linq.DataContext.Connection%2A> propriedade para identificar o banco de dados a ser excluído.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como excluir um banco de dados que tenha sido criado temporariamente.  
+  
+ [!code-csharp[System.Data.Linq.DataContext#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.DataContext/cs/Program.cs#1)]
+ [!code-vb[System.Data.Linq.DataContext#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.DataContext/vb/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Data.Linq.DataContext" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Data.Linq.DataContext" /> de classe e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteCommand">
+      <MemberSignature Language="C#" Value="public int ExecuteCommand (string command, params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ExecuteCommand(string command, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.ExecuteCommand(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="command">O comando SQL ser executado.</param>
+        <param name="parameters">A matriz de parâmetros a serem passados para o comando. Observe o seguinte comportamento:  
+  
+ Se o número de objetos na matriz for menor que o maior número identificado na cadeia de caracteres de comando, uma exceção será gerada.  
+  
+ Se a matriz contiver objetos que não são referenciados na cadeia de caracteres de comando, nenhuma exceção será gerada.  
+  
+ Se um dos parâmetros for nulo, ele será convertido em <see langword="DBNull.Value" />.</param>
+        <summary>Executa comandos SQL diretamente no banco de dados.</summary>
+        <returns>O número de linhas modificadas pelo comando executado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é um mecanismo de passagem para casos onde [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] não fornece adequado para um determinado cenário.  
+  
+ A sintaxe do comando é quase o mesmo que a sintaxe usada para criar um ADO.NET `DataCommand`. A única diferença está em como os parâmetros são especificados. Especificamente, você pode especificar parâmetros, colocando-os entre chaves ({…}) e enumerá-los a partir de 0. O parâmetro é associado ao objeto igualmente numerado na matriz de parâmetros.  
+  
+ `ExecuteQuery`e `ExecuteCommand` permitem que você especifique um número variável de argumentos para a substituição de parâmetro. Por exemplo, você pode especificar os parâmetros ao chamar ExecuteQuery\<TResult >:  
+  
+```  
+db.ExecuteQuery<Customer>("select * from dbo.Customers where City = {0}", "London");  
+```  
+  
+ E outro exemplo:  
+  
+```  
+db.ExecuteCommand("UPDATE Products SET QuantityPerUnit = {0} WHERE ProductID = {1}", "24 boxes", 5);  
+```  
+  
+ O exemplo a seguir abre uma conexão e passa um SQL `UPDATE` comando para o mecanismo do SQL.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DLinqCommunicatingWithDatabase#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#3)]
+ [!code-vb[DLinqCommunicatingWithDatabase#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDynamicDelete">
+      <MemberSignature Language="C#" Value="protected void ExecuteDynamicDelete (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void ExecuteDynamicDelete(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.ExecuteDynamicDelete(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser excluída.</param>
+        <summary>Executa dentro de métodos de substituição de exclusão, para redelegar para [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] a tarefa de gerar e executar SQL dinâmico para operações de exclusão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.Data.Linq.DataContext.ExecuteDynamicInsert%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDynamicInsert">
+      <MemberSignature Language="C#" Value="protected void ExecuteDynamicInsert (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void ExecuteDynamicInsert(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.ExecuteDynamicInsert(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser inserida.</param>
+        <summary>Executa dentro de métodos de substituição de inserção para redelegar para [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] a tarefa de gerar e executar SQL dinâmico para operações de inserção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe as seguintes considerações:  
+  
+-   Como o método tem um modificador protegido, seu uso exige subclassificação <xref:System.Data.Linq.DataContext>.  
+  
+-   Uma exceção é gerada se essa operação não é chamada dentro de um <xref:System.Data.Linq.DataContext.SubmitChanges%2A> operação. Ele não se destina a ser chamado como uma operação autônoma fora do escopo de um <xref:System.Data.Linq.DataContext.SubmitChanges%2A> operação. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>chamadas substituem métodos se eles são implementados e os métodos anteriores devem ser chamado dentro de métodos de substituição.  
+  
+-   É responsabilidade do desenvolvedor para passar a entidade correta. A implementação verifica que a entidade transmitido é controlada. No entanto, é responsabilidade do desenvolvedor para manter a ordem ou passe na mesma entidade duas vezes.  
+  
+-   É responsabilidade do desenvolvedor para chamar a API dinâmica correta. Por exemplo, o `Update` substituir o método, somente o <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A> método pode ser chamado. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] não detecta ou não verifica se o método dinâmico chamado corresponde a operação aplicável. Os resultados serão definidos se for chamado um método aplicável (por exemplo, chamar <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A> para um objeto a ser atualizado).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteDynamicUpdate">
+      <MemberSignature Language="C#" Value="protected void ExecuteDynamicUpdate (object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void ExecuteDynamicUpdate(object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.ExecuteDynamicUpdate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade a ser atualizada.</param>
+        <summary>É executado, dentro de métodos de substituição de atualização, para redelegar para [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] a tarefa de geração e execução de SQL dinâmico para operações de atualização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.Data.Linq.DataContext.ExecuteDynamicInsert%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteMethodCall">
+      <MemberSignature Language="C#" Value="protected System.Data.Linq.IExecuteResult ExecuteMethodCall (object instance, System.Reflection.MethodInfo methodInfo, params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Data.Linq.IExecuteResult ExecuteMethodCall(object instance, class System.Reflection.MethodInfo methodInfo, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.ExecuteMethodCall(System.Object,System.Reflection.MethodInfo,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.IExecuteResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="methodInfo" Type="System.Reflection.MethodInfo" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="instance">A instância da invocação do método (o objeto atual).</param>
+        <param name="methodInfo">Identifica o método CLR que corresponde a um método de banco de dados.</param>
+        <param name="parameters">A matriz de parâmetros a serem passados para o comando.</param>
+        <summary>Executa o procedimento armazenado do banco de dados ou a função escalar associada com o método CLR especificado.</summary>
+        <returns>O resultado (o valor retornado e parâmetros de saída) da execução do método especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Linq.DataContext.ExecuteMethodCall%2A> método é usado no código gerado automaticamente e atua como um proxy para funções de banco de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteQuery">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable ExecuteQuery (Type elementType, string query, params object[] parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable ExecuteQuery(class System.Type elementType, string query, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.ExecuteQuery(System.Type,System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementType" Type="System.Type" />
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="elementType">O tipo dos <see cref="T:System.Collections.Generic.IEnumerable`1" /> a serem retornados.  
+  
+ O algoritmo para colunas correspondentes nos resultados da consulta para campos ou propriedades no objeto funciona da seguinte maneira:  
+  
+ Se um campo ou propriedade é mapeado para um nome de coluna em particular, o nome dessa coluna é esperado no conjunto de resultados.  
+  
+ Se um campo ou propriedade não for mapeado, uma coluna com o mesmo nome do campo ou propriedade é esperada no conjunto de resultados.  
+  
+ A comparação é realizada procurando, primeiro, uma correspondência que diferencia maiúsculas de minúsculas. Se essa correspondência não for encontrada, uma pesquisa subsequente ocorre para uma correspondência que diferencia maiúsculas de minúsculas.  
+  
+ A consulta deve retornar todos os campos rastreados e propriedades do objeto (exceto aqueles que são carregados de forma adiada) quando todas as seguintes condições forem verdadeiras:  
+  
+ <c>T</c> uma entidade explicitamente controlada pelo <see cref="T:System.Data.Linq.DataContext" />.  
+  
+ <see cref="P:System.Data.Linq.DataContext.ObjectTrackingEnabled" /> é <see langword="true" />.  
+  
+ A entidade tem uma chave primária.  
+  
+ Do contrário, uma exceção será acionada.</param>
+        <param name="query">A consulta SQL a ser executada.</param>
+        <param name="parameters">A matriz de parâmetros a serem passados para o comando. Observe o seguinte comportamento:  
+  
+ Se o número de objetos na matriz for menor que o maior número identificado na cadeia de caracteres de comando, uma exceção será gerada.  
+  
+ Se a matriz contiver objetos que não são referenciados na cadeia de caracteres de comando, nenhuma exceção será gerada.  
+  
+ Se um parâmetro for <see langword="null" />, ele será convertido em <see langword="DBNull.Value" />.</param>
+        <summary>Executa consultas SQL diretamente no banco de dados.</summary>
+        <returns>Uma coleção de objetos <see cref="T:System.Collections.Generic.IEnumerable`1" /> retornada pela consulta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteQuery&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TResult&gt; ExecuteQuery&lt;TResult&gt; (string query, params object[] parameters) where TResult : new();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!TResult&gt; ExecuteQuery&lt;.ctor TResult&gt;(string query, object[] parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.ExecuteQuery``1(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="query" Type="System.String" />
+        <Parameter Name="parameters" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo dos elementos na coleção retornada.</typeparam>
+        <param name="query">A consulta SQL a ser executada.</param>
+        <param name="parameters">A matriz de parâmetros a serem passados para o comando. Observe o seguinte comportamento:  
+  
+ Se o número de objetos na matriz for menor que o maior número identificado na cadeia de caracteres de comando, uma exceção será gerada.  
+  
+ Se a matriz contiver objetos que não são referenciados na cadeia de caracteres de comando, nenhuma exceção será gerada.  
+  
+ Se um parâmetro for nulo, ele será convertido em <see langword="DBNull.Value" />.</param>
+        <summary>Executa consultas SQL diretamente no banco de dados e retorna objetos.</summary>
+        <returns>Uma coleção de objetos retornada pela consulta.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é um mecanismo de passagem para casos onde [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] não fornece um cenário específico.  
+  
+ O algoritmo para as colunas correspondentes no resultado da consulta aos campos e propriedades no objeto funciona da seguinte maneira:  
+  
+-   Se um campo ou propriedade é mapeado para um nome de coluna em particular, o nome dessa coluna é esperado no conjunto de resultados.  
+  
+-   Se um campo ou propriedade não for mapeado, uma coluna com o mesmo nome do campo ou propriedade é esperada no conjunto de resultados.  
+  
+-   A comparação é executada primeiro procurando uma correspondência diferencia maiusculas de minúsculas. Se essa correspondência não for encontrada, uma pesquisa subsequente ocorre uma correspondência diferencia maiusculas de minúsculas.  
+  
+-   A consulta deve retornar todas as propriedades do objeto (exceto aquelas sujeito a carregamento adiado) e rastreados campos quando todos os itens a seguir forem verdadeiras:  
+  
+    -   Se `<T>` uma entidade explicitamente controlada pelo <xref:System.Data.Linq.DataContext>.  
+  
+    -   ObjectTrackingEnabled é true.  
+  
+    -   A entidade tem uma chave primária.  
+  
+     Do contrário, uma exceção será acionada.  
+  
+-   Em todos os outros casos, a consulta pode recuperar apenas um subconjunto dos campos rastreados e propriedades do objeto.  
+  
+ O trecho c# a seguir mostra um uso para este método:  
+  
+```  
+var customers = db.ExecuteQuery<Customer>(@"SELECT CustomerID, CompanyName, ContactName, ContactTitle,   
+   Address, City, Region, PostalCode, Country, Phone, Fax  
+   FROM   dbo.Customers  
+   WHERE  City = {0}", "London");  
+  
+foreach (Customer c in customers)  
+   Console.WriteLine(c.ContactName);  
+```  
+  
+ No Visual Basic  
+  
+```  
+Dim customers = db.ExecuteQuery(Of Customer)("SELECT CustomerID, _    CompanyName, ContactName, ContactTitle, _  
+   Address, City, Region, PostalCode, Country, Phone, Fax _  
+   FROM dbo.Customers _  
+WHERE City = {0}", "London")  
+  
+For Each c As Customer In customers  
+    Console.WriteLine(c.ContactName)  
+Next  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChangeSet">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.ChangeSet GetChangeSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Linq.ChangeSet GetChangeSet() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.GetChangeSet" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ChangeSet</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os objetos modificados controlados pelo <see cref="T:System.Data.Linq.DataContext" />.</summary>
+        <returns>O conjunto de objetos é retornado como três coleções somente leitura.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe as seguintes considerações:  
+  
+-   <xref:System.Data.Linq.DataContext.GetChangeSet%2A>pode ter efeitos colaterais, como inferência de inserir e excluir operações que geralmente são executadas no momento da <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Por exemplo, objetos que são usados em operações a seguir podem criar operações deduzidas correspondentes na lista a seguir:  
+  
+    -   <xref:System.Data.Linq.EntitySet%601.Add%2A>to <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>.  
+  
+    -   <xref:System.Data.Linq.EntityRef%601>atribuição para nulo (possivelmente por causa da <xref:System.Data.Linq.EntitySet%601.Remove%2A> para <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
+  
+-   O conjunto não pode ser ordenado de acordo com as restrições de chave estrangeiras.  
+  
+-   Os valores gerados pelo banco de dados (por exemplo, valores de chave primários e estrangeiras, os carimbos de hora e assim por diante) não estão disponíveis. Essas informações requerem a execução do comando de banco de dados e talvez a propagação de informações recuperadas (por exemplo, chave estrangeira da chave primária).  
+  
+-   O conjunto de objetos alterados é calculado no momento da chamada. As chamadas subsequentes para <xref:System.Data.Linq.DataContext.SubmitChanges%2A> pode produzir um conjunto diferente, se forem feitas alterações adicionais.  
+  
+ Saída quando nenhuma alteração foi feita aparece da seguinte maneira:  
+  
+ `{Added: 0, Removed: 0, Modified: 0}`  
+  
+   
+  
+## Examples  
+ [!code-csharp[DLinqDebuggingSupport#2](~/samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
+ [!code-vb[DLinqDebuggingSupport#2](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbCommand GetCommand (System.Linq.IQueryable query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Common.DbCommand GetCommand(class System.Linq.IQueryable query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.GetCommand(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="query">A consulta cujas informações de comando SQL devem ser recuperadas.</param>
+        <summary>Obtém as informações sobre os comandos SQL gerados pelo [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)].</summary>
+        <returns>O objeto de informações do comando solicitado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é somente um getter e não afeta <xref:System.Data.Linq.DataContext> estado.  
+  
+ Observe as seguintes considerações:  
+  
+-   O argumento deve ser não-nulo. Caso contrário, será gerada uma exceção de argumento nulo.  
+  
+-   Exceções de conversão de consulta normal lançadas durante a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] se aplicam a execução da consulta para uma consulta que não pode ser convertida.  
+  
+-   Somente o primeiro comando de consulta é retornado. Especificamente, os comandos adicionais que são usados para carregamento adiantado (<xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>) não são incluídos.  
+  
+-   <xref:System.Data.Linq.DataContext>não controla o que o usuário faz com o comando. Por exemplo, os resultados da execução do comando retornado não são rastreados e não afetam <xref:System.Data.Linq.DataContext> estado.  
+  
+   
+  
+## Examples  
+ [!code-csharp[DLinqDebuggingSupport#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
+ [!code-vb[DLinqDebuggingSupport#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIDbCommand">
+      <MemberSignature Language="C#" Value="public System.Data.IDbCommand GetIDbCommand (System.Linq.IQueryable query);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.IDbCommand GetIDbCommand(class System.Linq.IQueryable query) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.GetIDbCommand(System.Linq.IQueryable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="query" Type="System.Linq.IQueryable" />
+      </Parameters>
+      <Docs>
+        <param name="query">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTable">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.ITable GetTable (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Linq.ITable GetTable(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.GetTable(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.ITable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo dos objetos a serem retornados.</param>
+        <summary>Retorna uma coleção de objetos de um tipo específico, em que o tipo é definido pelo parâmetro <paramref name="type" />.</summary>
+        <returns>Uma coleção de objetos definidos pelo parâmetro <paramref name="type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma versão sem rigidez de tipos de <xref:System.Data.Linq.DataContext.GetTable%2A>. É importante ter uma versão sem rigidez de tipos porque é uma prática comum relativamente para construir consultas dinamicamente. Seria inconveniente forçar o aplicativo usar reflexão para chamar o método genérico correto.  
+  
+ Se não houver nenhuma coleção para um determinado tipo, uma exceção é lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTable&lt;TEntity&gt;">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.Table&lt;TEntity&gt; GetTable&lt;TEntity&gt; () where TEntity : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Linq.Table`1&lt;!!TEntity&gt; GetTable&lt;class TEntity&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.GetTable``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Table&lt;TEntity&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEntity">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TEntity">O tipo dos objetos a serem retornados.</typeparam>
+        <summary>Retorna uma coleção de objetos de um tipo específico, em que o tipo é definido pelo parâmetro <paramref name="TEntity" />.</summary>
+        <returns>Uma coleção de objetos definidos pelo parâmetro <paramref name="TEntity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é o ponto de entrada principal para a consulta. Quando um fortemente tipada <xref:System.Data.Linq.DataContext> é criadas, novas propriedades geradas encapsular chamadas para esse método. Por exemplo, um `Customers` propriedade gerada retorna `GetTable<Customer>`.  
+  
+ Se não houver nenhuma coleção para um determinado tipo, uma exceção é lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadOptions">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.DataLoadOptions LoadOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.DataLoadOptions LoadOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.LoadOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.DataLoadOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Data.Linq.DataLoadOptions" /> associado a esse <see cref="T:System.Data.Linq.DataContext" />.</summary>
+        <value>As opções de carregamento da pré-busca para os dados relacionados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade obtém ou define as opções que são usadas para definir o comportamento de pré-busca para membros carregados adiada e associação de coleções relacionadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public System.IO.TextWriter Log { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.TextWriter Log" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.Log" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o destino para escrever a consulta ou o comando SQL.</summary>
+        <value>O <see cref="T:System.IO.TextReader" /> a ser usado para gravar o comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como `null` para desabilitar o log de comando.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o SQL gerado na janela do console antes de exibir os resultados da consulta.  
+  
+ [!code-csharp[System.Data.Linq.DataContext#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Data.Linq.DataContext/cs/Program.cs#2)]
+ [!code-vb[System.Data.Linq.DataContext#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Data.Linq.DataContext/vb/Module1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mapping">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.Mapping.MetaModel Mapping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Linq.Mapping.MetaModel Mapping" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.Mapping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.Mapping.MetaModel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.Linq.Mapping.MetaModel" /> no qual o mapeamento é baseado.</summary>
+        <value>O mapeamento entre objetos de banco de dados e de domínio.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectTrackingEnabled">
+      <MemberSignature Language="C#" Value="public bool ObjectTrackingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ObjectTrackingEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.ObjectTrackingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o rastreamento do objeto está habilitado.</summary>
+        <value>
+          <see langword="true" /> se o rastreamento do objeto estiver habilitado; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade como `false` melhora o desempenho em tempo de recuperação, pois há menos itens para rastrear.  
+  
+ Uma exceção é gerada:  
+  
+-   Se a propriedade é definida como `false` depois que uma consulta é executada.  
+  
+     Para obter mais informações, consulte a seção modos válidos <xref:System.Data.Linq.DataContext>.  
+  
+-   Se a propriedade é definida como `false` e <xref:System.Data.Linq.DataContext.SubmitChanges%2A> é chamado.  
+  
+ Se <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> é `false`, <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> é ignorada e tratada como `false`. Nesse caso, o <xref:System.Data.Linq.DataContext> é somente leitura.  
+  
+ Se <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> é `true`, <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> é `false`. Nesse caso, <xref:System.Data.Linq.DataContext> permite que você carregue um gráfico de objeto usando <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> diretivas, mas não habilitar o carregamento adiado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryCacheEnabled">
+      <MemberSignature Language="C#" Value="public bool QueryCacheEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool QueryCacheEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.QueryCacheEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Refresh">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Atualiza o estado do objeto, usando os dados no banco de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é útil após um erro de simultaneidade otimista para colocar itens em um estado para outra tentativa. Ele atualizará o estado dos primitivos campos e propriedades nos objetos.  
+  
+> [!NOTE]
+>  Se o objeto de *muitos* lados de uma relação um-para-muitos, a chave estrangeira no objeto serão definido e o ponteiro de objeto para o outro lado da relação será definido para o novo valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh (System.Data.Linq.RefreshMode mode, System.Collections.IEnumerable entities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh(valuetype System.Data.Linq.RefreshMode mode, class System.Collections.IEnumerable entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Data.Linq.RefreshMode" />
+        <Parameter Name="entities" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um valor que especifica como os conflitos de simultaneidade otimista são tratados.</param>
+        <param name="entities">A coleção de entidades a ser atualizada.</param>
+        <summary>Atualiza uma coleção de objetos de entidade de acordo com o modo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh (System.Data.Linq.RefreshMode mode, object entity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh(valuetype System.Data.Linq.RefreshMode mode, object entity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Data.Linq.RefreshMode" />
+        <Parameter Name="entity" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Um valor que especifica como os conflitos de simultaneidade otimista são tratados.</param>
+        <param name="entity">O objeto a ser atualizado.</param>
+        <summary>Atualiza um objeto de entidade de acordo com o modo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh (System.Data.Linq.RefreshMode mode, params object[] entities);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh(valuetype System.Data.Linq.RefreshMode mode, object[] entities) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Refresh(System.Data.Linq.RefreshMode,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Data.Linq.RefreshMode" />
+        <Parameter Name="entities" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="mode">Um valor que especifica como os conflitos de simultaneidade otimista são tratados.</param>
+        <param name="entities">A matriz de objetos de entidade a ser atualizada.</param>
+        <summary>Atualiza uma matriz de objetos de entidade de acordo com o modo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="SubmitChanges">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Calcula o conjunto de objetos modificados a serem inseridos, atualizados ou excluídos e executa os comandos adequados para implementar as alterações no banco de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver métodos de substituição para insert, update ou delete, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> executa esses métodos em vez do padrão [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] comandos.  
+  
+ <xref:System.Data.Linq.DataContext.SubmitChanges%2A>inicia uma transação e será revertida se ocorrer uma exceção enquanto <xref:System.Data.Linq.DataContext.SubmitChanges%2A> está em execução. No entanto, isso não reverte as alterações na memória ou controlada pelo <xref:System.Data.Linq.DataContext>; essas alterações precisará ser revertido manualmente. Você pode iniciar com uma nova instância do <xref:System.Data.Linq.DataContext> se as alterações na memória devem ser descartadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="SubmitChanges">
+      <MemberSignature Language="C#" Value="public void SubmitChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SubmitChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.SubmitChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Calcula o conjunto de objetos modificados a serem inseridos, atualizados ou excluídos e executa os comandos adequados para implementar as alterações no banco de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver métodos de substituição para insert, update ou delete, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> executa esses métodos em vez do padrão [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] comandos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubmitChanges">
+      <MemberSignature Language="C#" Value="public virtual void SubmitChanges (System.Data.Linq.ConflictMode failureMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SubmitChanges(valuetype System.Data.Linq.ConflictMode failureMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.SubmitChanges(System.Data.Linq.ConflictMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="failureMode" Type="System.Data.Linq.ConflictMode" />
+      </Parameters>
+      <Docs>
+        <param name="failureMode">A ação a ser tomada se o envio falhar. Os argumentos válidos são da seguinte maneira:  
+  
+ <see cref="F:System.Data.Linq.ConflictMode.FailOnFirstConflict" /><see cref="F:System.Data.Linq.ConflictMode.ContinueOnConflict" /></param>
+        <summary>Envia as alterações que foram feitas para recuperar objetos de banco de dados subjacente e especifica a ação a ser tomada se o envio falhar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modo de falha padrão é <xref:System.Data.Linq.ConflictMode.FailOnFirstConflict>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Data.Linq.ConflictModeEnumeration#1](~/samples/snippets/csharp/VS_Snippets_Data/system.data.linq.conflictmodeenumeration/cs/program.cs#1)]
+ [!code-vb[System.Data.Linq.ConflictModeEnumeration#1](~/samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.conflictmodeenumeration/vb/module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transaction">
+      <MemberSignature Language="C#" Value="public System.Data.Common.DbTransaction Transaction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.DbTransaction Transaction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.DataContext.Transaction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma transação local para o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para usar para acessar o banco de dados.</summary>
+        <value>O objeto de transação usado pelo <see cref="T:System.Data.Linq.DataContext" /> ao executar consultas e comandos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O cenário principal para essa propriedade é a interoperabilidade com relacional [!INCLUDE[vstecado](~/includes/vstecado-md.md)] código. Por exemplo, use essa propriedade quando você escrever seu próprio `Create` / `Update` / `Delete` métodos para definir o `Transaction` propriedade ADO `Command` objeto.  
+  
+ Observe o seguinte:  
+  
+-   Se essa propriedade não foi definida explicitamente, o getter retorna nulo.  
+  
+-   Se o código está sendo executado em um <xref:System.Transactions.Transaction> contexto, a definição dessa propriedade gera uma exceção.  
+  
+-   Se essa propriedade for conjunto e um novo <xref:System.Transactions.Transaction> é aberto, uma exceção é lançada quando uma consulta ou atualização é executada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Translate">
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Converte um existente <see cref="T:System.Data.IDataReader" /> a objetos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada linha de <xref:System.Data.IDataReader> é convertido em um objeto no <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+```  
+public IEnumerable<T> Translate<T>(IDataReader reader) {}  
+```  
+  
+ Descrição: Este método é usado para converter um existente <xref:System.Data.Common.DbDataReader> a objetos. Cada linha de <xref:System.Data.Common.DbDataReader> é convertido em um objeto no <xref:System.Collections.Generic.IEnumerable%601>.  
+  
+ **Parâmetros genéricos:**  
+  
+ `T`: Consulte <xref:System.Data.Linq.DataContext.ExecuteQuery%2A>.  
+  
+ **Parâmetros:**  
+  
+ `Query`: Consulte a descrição do comando em <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>.  
+  
+ `Parameters`: Consulte a descrição de parâmetros em <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>.  
+  
+ **Tipo de retorno:**  
+  
+ <xref:System.Collections.Generic.IEnumerable%601>: a coleção de objetos retornados pela conversão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public System.Data.Linq.IMultipleResults Translate (System.Data.Common.DbDataReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Linq.IMultipleResults Translate(class System.Data.Common.DbDataReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Translate(System.Data.Common.DbDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Linq.IMultipleResults</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.Common.DbDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Data.IDataReader" /> a ser convertido.</param>
+        <summary>Converte um existente <see cref="T:System.Data.Common.DbDataReader" /> a objetos.</summary>
+        <returns>Uma lista de objetos retornados pela conversão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable Translate (Type elementType, System.Data.Common.DbDataReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerable Translate(class System.Type elementType, class System.Data.Common.DbDataReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Translate(System.Type,System.Data.Common.DbDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementType" Type="System.Type" />
+        <Parameter Name="reader" Type="System.Data.Common.DbDataReader" />
+      </Parameters>
+      <Docs>
+        <param name="elementType">O tipo dos <see cref="T:System.Collections.Generic.IEnumerable`1" /> a serem retornados.  
+  
+ O algoritmo para as colunas correspondentes no resultado de campos e propriedades no objeto funciona da seguinte maneira:  
+  
+ Se um campo ou propriedade é mapeado para um nome de coluna em particular, o nome dessa coluna é esperado no conjunto de resultados.  
+  
+ Se um campo ou propriedade não for mapeado, uma coluna com o mesmo nome do campo ou propriedade é esperada no conjunto de resultados.  
+  
+ A comparação é realizada procurando, primeiro, uma correspondência que diferencia maiúsculas de minúsculas. Se essa correspondência não for encontrada, uma pesquisa subsequente é ocorre uma correspondência diferencia maiusculas de minúsculas.  
+  
+ A consulta deve retornar todos os campos rastreados e propriedades do objeto (exceto aqueles que são carregados de forma adiada) quando todas as seguintes condições forem verdadeiras:  
+  
+ <c>T</c> uma entidade explicitamente controlada pelo <see cref="T:System.Data.Linq.DataContext" />.  
+  
+ <see cref="P:System.Data.Linq.DataContext.ObjectTrackingEnabled" /> é <see langword="true" />.  
+  
+ A entidade tem uma chave primária.  
+  
+ Do contrário, uma exceção será acionada.</param>
+        <param name="reader">O <see cref="T:System.Data.IDataReader" /> a ser convertido.</param>
+        <summary>Converte um existente <see cref="T:System.Data.Common.DbDataReader" /> a objetos.</summary>
+        <returns>Uma lista de objetos retornados pela conversão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Translate&lt;TResult&gt;">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;TResult&gt; Translate&lt;TResult&gt; (System.Data.Common.DbDataReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;!!TResult&gt; Translate&lt;TResult&gt;(class System.Data.Common.DbDataReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.DataContext.Translate``1(System.Data.Common.DbDataReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;TResult&gt;</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResult" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Data.Common.DbDataReader" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResult">O tipo dos <see cref="T:System.Collections.Generic.IEnumerable`1" /> a serem retornados.</typeparam>
+        <param name="reader">O <see cref="T:System.Data.IDataReader" /> a ser convertido.</param>
+        <summary>Converte um existente <see cref="T:System.Data.Common.DbDataReader" /> a objetos.</summary>
+        <returns>Uma coleção de objetos retornados pela conversão.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

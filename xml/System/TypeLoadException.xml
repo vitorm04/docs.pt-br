@@ -1,0 +1,407 @@
+<Type Name="TypeLoadException" FullName="System.TypeLoadException">
+  <TypeSignature Language="C#" Value="public class TypeLoadException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TypeLoadException extends System.SystemException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.TypeLoadException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é gerada quando ocorre uma falha de carregamento de tipos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.TypeLoadException>é acionado quando o common language runtime não é possível localizar o assembly, o tipo dentro do assembly, ou não é possível carregar o tipo. O <xref:System.TypeLoadException.Message%2A> propriedade contém informações mais detalhadas que podem ajudá-lo a identificar a causa da exceção.  
+  
+ <xref:System.TypeLoadException>usa o HRESULT COR_E_TYPELOAD, que tem o valor 0x80131522.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.TypeLoadException>, consulte o <xref:System.TypeLoadException.%23ctor%2A> construtores.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLoadException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypeLoadException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.TypeLoadException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.TypeLoadException.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "Falha ao carregar um tipo." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.TypeLoadException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.TypeLoadException.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLoadException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypeLoadException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.TypeLoadException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo a `message` parâmetro deve ser legível para o usuário. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.TypeLoadException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.TypeLoadException.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.TypeLoadException.%23ctor%28System.String%29> construtor. Ele contém um método que gera um <xref:System.TypeLoadException> com uma mensagem personalizada e exibe a mensagem de erro para o console.  
+  
+ [!code-cpp[TypeLoadException_Constructor2#1](~/samples/snippets/cpp/VS_Snippets_CLR/TypeLoadException_Constructor2/CPP/typeloadexception_constructor2.cpp#1)]
+ [!code-csharp[TypeLoadException_Constructor2#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeLoadException_Constructor2/CS/typeloadexception_constructor2.cs#1)]
+ [!code-vb[TypeLoadException_Constructor2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeLoadException_Constructor2/VB/typeloadexception_constructor2.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TypeLoadException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypeLoadException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.TypeLoadException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo. Para obter mais informações, consulte [XML e serialização SOAP](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir gera uma exceção, serializa os dados de exceção para um arquivo e reconstitui, em seguida, a exceção. Para este exemplo de código ser executado, você deve fornecer o nome de assembly totalmente qualificado. Para obter informações sobre como obter o nome totalmente qualificado do assembly, consulte [nomes de Assembly](~/docs/framework/app-domains/assembly-names.md).  
+  
+ [!code-cpp[TypeLoadException_GetObjectData#1](~/samples/snippets/cpp/VS_Snippets_CLR/TypeLoadException_GetObjectData/CPP/typeloadexception_getobjectdata.cpp#1)]
+ [!code-csharp[TypeLoadException_GetObjectData#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeLoadException_GetObjectData/CS/typeloadexception_getobjectdata.cs#1)]
+ [!code-vb[TypeLoadException_GetObjectData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeLoadException_GetObjectData/VB/typeloadexception_getobjectdata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O objeto <paramref name="info" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeLoadException (string message, Exception inner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception inner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypeLoadException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="inner" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="inner">A exceção que é a causa da exceção atual. Se o <c>interna</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.TypeLoadException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior pode incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.TypeLoadException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.TypeLoadException.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.TypeLoadException.%23ctor%28System.String%2CSystem.Exception%29> construtor. Ele contém um método que gera um <xref:System.TypeLoadException>, captura essa exceção e gera uma nova <xref:System.TypeLoadException> com uma mensagem personalizada, incluindo original <xref:System.TypeLoadException> como a exceção interna.  
+  
+ [!code-cpp[TypeLoadException_Constructor3#1](~/samples/snippets/cpp/VS_Snippets_CLR/TypeLoadException_Constructor3/CPP/typeloadexception_constructor3.cpp#1)]
+ [!code-csharp[TypeLoadException_Constructor3#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeLoadException_Constructor3/CS/typeloadexception_constructor3.cs#1)]
+ [!code-vb[TypeLoadException_Constructor3#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeLoadException_Constructor3/VB/typeloadexception_constructor3.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.TypeLoadException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com o nome de classe, o nome do método, ID de recurso e informações adicionais de exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.TypeLoadException.GetObjectData%2A>define um <xref:System.Runtime.Serialization.SerializationInfo> com todos os dados do objeto de exceção destinados para a serialização. Durante a desserialização, o objeto de exceção é reconstituído a partir do <xref:System.Runtime.Serialization.SerializationInfo> transmitido pelo fluxo.  
+  
+ Para obter mais informações, consulte [XML e serialização SOAP](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+   
+  
+## Examples  
+ [Visual Basic, C#]  
+  
+ O exemplo a seguir gera uma exceção, serializa os dados de exceção para um arquivo e reconstitui, em seguida, a exceção. Para este exemplo de código ser executado, você deve fornecer o nome de assembly totalmente qualificado. Para obter informações sobre como obter o nome totalmente qualificado do assembly, consulte [nomes de Assembly](~/docs/framework/app-domains/assembly-names.md).  
+  
+ [!code-cpp[TypeLoadException_GetObjectData#1](~/samples/snippets/cpp/VS_Snippets_CLR/TypeLoadException_GetObjectData/CPP/typeloadexception_getobjectdata.cpp#1)]
+ [!code-csharp[TypeLoadException_GetObjectData#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeLoadException_GetObjectData/CS/typeloadexception_getobjectdata.cs#1)]
+ [!code-vb[TypeLoadException_GetObjectData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeLoadException_GetObjectData/VB/typeloadexception_getobjectdata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O objeto <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.TypeLoadException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de erro para essa exceção.</summary>
+        <value>A cadeia de caracteres da mensagem de erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade substitui <xref:System.Exception.Message%2A>. A mensagem de erro deve ser localizada.  
+  
+ Esta propriedade é somente para leitura.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir tenta carregar um tipo inexistente do assembly mscorlib. A exceção resultante é recebida e o <xref:System.TypeLoadException.TypeName%2A> e <xref:System.TypeLoadException.Message%2A> valores são exibidos. Para este exemplo de código ser executado, você deve fornecer o nome de assembly totalmente qualificado. Para obter informações sobre como obter o nome totalmente qualificado do assembly, consulte [nomes de Assembly](~/docs/framework/app-domains/assembly-names.md).  
+  
+ [!code-cpp[TypeLoadException_TypeName#1](~/samples/snippets/cpp/VS_Snippets_CLR/TypeLoadException_TypeName/CPP/typeloadexception_typename.cpp#1)]
+ [!code-csharp[TypeLoadException_TypeName#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeLoadException_TypeName/CS/typeloadexception_typename.cs#1)]
+ [!code-vb[TypeLoadException_TypeName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeLoadException_TypeName/VB/typeloadexception_typename.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeName">
+      <MemberSignature Language="C#" Value="public string TypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TypeName" />
+      <MemberSignature Language="DocId" Value="P:System.TypeLoadException.TypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome totalmente qualificado do tipo que causa a exceção.</summary>
+        <value>O nome de tipo totalmente qualificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir tenta carregar um tipo inexistente do assembly mscorlib. A exceção resultante é recebida e o <xref:System.TypeLoadException.TypeName%2A> e <xref:System.TypeLoadException.Message%2A> valores são exibidos. Para este exemplo de código ser executado, você deve fornecer o nome de assembly totalmente qualificado. Para obter informações sobre como obter o nome totalmente qualificado do assembly, consulte [nomes de Assembly](~/docs/framework/app-domains/assembly-names.md).  
+  
+ [!code-cpp[TypeLoadException_TypeName#1](~/samples/snippets/cpp/VS_Snippets_CLR/TypeLoadException_TypeName/CPP/typeloadexception_typename.cpp#1)]
+ [!code-csharp[TypeLoadException_TypeName#1](~/samples/snippets/csharp/VS_Snippets_CLR/TypeLoadException_TypeName/CS/typeloadexception_typename.cs#1)]
+ [!code-vb[TypeLoadException_TypeName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/TypeLoadException_TypeName/VB/typeloadexception_typename.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="P:System.TypeLoadException.TypeName" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="P:System.TypeLoadException.TypeName" /> propriedade.  
+  
+ Esta propriedade é somente para leitura.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

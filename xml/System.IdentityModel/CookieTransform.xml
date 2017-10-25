@@ -1,0 +1,78 @@
+<Type Name="CookieTransform" FullName="System.IdentityModel.CookieTransform">
+  <TypeSignature Language="C#" Value="public abstract class CookieTransform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CookieTransform extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.CookieTransform" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe base abstrata para classes que aplicar uma transformação de dados reversível para dados do cookie.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CookieTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.CookieTransform.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Chamado de construtores em classes derivadas para inicializar a classe <see cref="T:System.IdentityModel.CookieTransform" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decode">
+      <MemberSignature Language="C#" Value="public abstract byte[] Decode (byte[] encoded);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] Decode(unsigned int8[] encoded) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.CookieTransform.Decode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoded" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="encoded">O formulário codificado do cookie.</param>
+        <summary>Quando substituído em uma classe derivada, reverte a transformação.</summary>
+        <returns>A matriz de bytes codificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encode">
+      <MemberSignature Language="C#" Value="public abstract byte[] Encode (byte[] value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] Encode(unsigned int8[] value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.CookieTransform.Encode(System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="value">A matriz de bytes a ser decodificado.</param>
+        <summary>Quando substituído em uma classe derivada, aplica a transformação.</summary>
+        <returns>O cookie codificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

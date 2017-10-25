@@ -1,0 +1,81 @@
+<Type Name="RelatedImageListAttribute" FullName="System.Windows.Forms.RelatedImageListAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RelatedImageListAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RelatedImageListAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.RelatedImageListAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica qual <see cref="T:System.Windows.Forms.ImageList" /> uma propriedade está relacionada ao.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RelatedImageListAttribute (string relatedImageList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string relatedImageList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.RelatedImageListAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="relatedImageList" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relatedImageList">O nome do <see cref="T:System.Windows.Forms.ImageList" /> a propriedade se refere à.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.RelatedImageListAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `relatedImageList` parâmetro pode se referir a uma propriedade do objeto atual ou uma propriedade de uma propriedade do objeto atual. Por exemplo, se você tiver um <xref:System.Windows.Forms.ListViewItem> do objeto com um <xref:System.Windows.Forms.ListViewItem.ListView%2A> propriedade definida para uma que contém <xref:System.Windows.Forms.ListView> objeto e que o contém <xref:System.Windows.Forms.ListView> objeto tem um <xref:System.Windows.Forms.ListView.SmallImageList%2A> propriedade, você poderá transmitir `"ListView.SmallImageList"` como o `relatedImageList` valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelatedImageList">
+      <MemberSignature Language="C#" Value="public string RelatedImageList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RelatedImageList" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.RelatedImageListAttribute.RelatedImageList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do relacionado<see cref="T:System.Windows.Forms.ImageList" /></summary>
+        <value>O nome do relacionado<see cref="T:System.Windows.Forms.ImageList" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.RelatedImageListAttribute.RelatedImageList%2A> propriedade pode fazer referência a uma propriedade do objeto atual ou uma propriedade de uma propriedade do objeto atual. Por exemplo, se você tiver um <xref:System.Windows.Forms.ListViewItem> do objeto com um <xref:System.Windows.Forms.ListViewItem.ListView%2A> propriedade definida para uma que contém <xref:System.Windows.Forms.ListView> objeto e que o contém <xref:System.Windows.Forms.ListView> objeto tem um <xref:System.Windows.Forms.ListView.SmallImageList%2A> propriedade, o <xref:System.Windows.Forms.RelatedImageListAttribute.RelatedImageList%2A> propriedade deve ser definida como `"ListView.SmallImageList"`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

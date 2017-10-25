@@ -1,0 +1,261 @@
+<Type Name="FlowDecision" FullName="System.Activities.Statements.FlowDecision">
+  <TypeSignature Language="C#" Value="public sealed class FlowDecision : System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FlowDecision extends System.Activities.Statements.FlowNode" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.FlowDecision" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.Statements.FlowNode</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+          <see cref="T:System.Activities.Statements.FlowNode" /> especializado que fornece a capacidade de modelagem um nó condicional com dois resultados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Statements.FlowDecision>usa uma condição e define as ações a serem executadas se a condição for `true` ou `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Statements.FlowDecision" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDecision ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowDecision.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Statements.FlowDecision" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDecision (System.Activities.Activity&lt;bool&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Activity`1&lt;bool&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowDecision.#ctor(System.Activities.Activity{System.Boolean})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Activities.Activity&lt;System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">A condição de <see cref="T:System.Activities.Statements.FlowDecision" /> está testando.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Statements.FlowDecision" /> classe com a condição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FlowDecision (System.Linq.Expressions.Expression&lt;Func&lt;System.Activities.ActivityContext,bool&gt;&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Linq.Expressions.Expression`1&lt;class System.Func`2&lt;class System.Activities.ActivityContext, bool&gt;&gt; condition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Statements.FlowDecision.#ctor(System.Linq.Expressions.Expression{System.Func{System.Activities.ActivityContext,System.Boolean}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Linq.Expressions.Expression&lt;System.Func&lt;System.Activities.ActivityContext,System.Boolean&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">A condição de <see cref="T:System.Activities.Statements.FlowDecision" /> está testando.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Statements.FlowDecision" /> classe com a condição especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity&lt;bool&gt; Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity`1&lt;bool&gt; Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a condição de <see cref="T:System.Activities.Statements.FlowDecision" /> está testando.</summary>
+        <value>Uma expressão de valor que representa a condição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a condição for avaliada como `true`, o <xref:System.Activities.Statements.FlowNode> no <xref:System.Activities.Statements.FlowDecision.True%2A> propriedade é executada. Caso contrário, o <xref:System.Activities.Statements.FlowNode> no <xref:System.Activities.Statements.FlowDecision.False%2A> propriedade é executada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar a propriedade de condição de uma <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("Decision")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome dessa decisão de fluxo a ser exibido no designer de atividade.</summary>
+        <value>O nome da decisão de fluxo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="False">
+      <MemberSignature Language="C#" Value="public System.Activities.Statements.FlowNode False { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Statements.FlowNode False" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.False" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("True")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Statements.FlowNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Activities.Statements.FlowNode" /> que é executado quando a condição for avaliada como <see langword="false" />.</summary>
+        <value>A atividade que é executada quando a condição for avaliada como <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra definindo a propriedade False de uma <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="True">
+      <MemberSignature Language="C#" Value="public System.Activities.Statements.FlowNode True { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Statements.FlowNode True" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.FlowDecision.True" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Condition")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Statements.FlowNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Activities.Statements.FlowNode" /> que é executado quando a condição for avaliada como <see langword="true" />.</summary>
+        <value>A atividade seja executada quando a condição for avaliada como <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra definindo a propriedade True de um <xref:System.Activities.Statements.FlowDecision> nó. Este exemplo é proveniente do [tratamento de falhas em um fluxograma atividade usando TryCatch](~/docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) exemplo.  
+  
+ [!code-csharp[wfs_FlowChartWithFaultHandling#3](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_flowchartwithfaulthandling/cs/program.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

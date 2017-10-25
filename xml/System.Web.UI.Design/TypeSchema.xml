@@ -1,0 +1,87 @@
+<Type Name="TypeSchema" FullName="System.Web.UI.Design.TypeSchema">
+  <TypeSignature Language="C#" Value="public sealed class TypeSchema : System.Web.UI.Design.IDataSourceSchema" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TypeSchema extends System.Object implements class System.Web.UI.Design.IDataSourceSchema" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.TypeSchema" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.Design.IDataSourceSchema</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa a estrutura ou o esquema de um tipo de objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.TypeSchema> classe fornece informações sobre uma determinada classe, fornecida como uma instância dessa classe. Por exemplo, dada uma <xref:System.Data.DataSet> objeto, um <xref:System.Web.UI.WebControls.GridView> objeto ou uma instância de uma classe personalizada que você criar, os métodos e propriedades fornecem informações sobre a classe da qual deriva o objeto. Ele não fornece informações sobre a instância específica, mas sobre a classe.  
+  
+ O <xref:System.Web.UI.Design.TypeSchema> classe é usada pelos designers de controle personalizado para ajudá-lo na preparação de dados de exemplo para a visualização dos controles personalizados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TypeSchema (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TypeSchema.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">Um <see cref="T:System.Type" /> que descreve um objeto.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.Design.TypeSchema" /> classe usando fornecido <see cref="T:System.Type" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetViews">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.IDataSourceViewSchema[] GetViews ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.IDataSourceViewSchema[] GetViews() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.TypeSchema.GetViews" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.IDataSourceViewSchema[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz de descritores de esquema para modos de exibição em uma fonte de dados.</summary>
+        <returns>Uma matriz de instâncias de <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" />, ou de instâncias de uma classe que implementa o <see cref="T:System.Web.UI.Design.IDataSourceViewSchema" /> interface.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora o <xref:System.Web.UI.Design.TypeSchema.GetViews%2A> método sempre retorna uma matriz de <xref:System.Web.UI.Design.IDataSourceViewSchema> os objetos que implementam o <xref:System.Web.UI.Design.IDataSourceViewSchema> interface, o valor de retorno exato depende o objeto que é fornecido ao criar a instância do <xref:System.Web.UI.Design.TypeSchema> classe.  
+  
+ A tabela a seguir fornece exemplos de valores de retorno.  
+  
+|O tipo subjacente|Valor de retorno|  
+|---------------------|------------------|  
+|Um <xref:System.Data.DataSet>|Uma matriz do tipo <xref:System.Web.UI.Design.DataSetViewSchema>, um para cada <xref:System.Data.DataTable>.|  
+|Um <xref:System.Data.DataTable>|Um item de uma matriz que contém um <xref:System.Web.UI.Design.DataSetViewSchema>.|  
+|Um <xref:System.Collections.IEnumerable> tipo|Um item de uma matriz que contém um <xref:System.Web.UI.Design.IDataSourceViewSchema>.|  
+|Qualquer outro tipo|Um item de uma matriz que contém um <xref:System.Web.UI.Design.IDataSourceViewSchema>.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

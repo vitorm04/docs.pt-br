@@ -1,0 +1,111 @@
+<Type Name="IValueConverter" FullName="System.Windows.Data.IValueConverter">
+  <TypeSignature Language="C#" Value="public interface IValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.IValueConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira de aplicar lógica personalizada a uma associação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você deseja associar um conversor de valor com uma associação, crie uma classe que implementa o <xref:System.Windows.Data.IValueConverter> interface e, em seguida, implemente o <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos. Conversores podem alterar dados de um tipo para outro, converter os dados com base nas informações de culturais ou modifique outros aspectos da apresentação. Para obter exemplos de alguns cenários típicos de conversor, consulte "Conversão de dados" em [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+ Conversores de valor têm suporte para a cultura. Tanto o <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos têm um `culture` parâmetro que indica as informações de culturais. Se informações culturais são irrelevantes para a conversão, você pode ignorar esse parâmetro no seu conversor personalizado.  
+  
+ O <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos também têm um parâmetro chamado `parameter` para que você possa usar a mesma instância do conversor com parâmetros diferentes. Por exemplo, você pode escrever um conversor de formatação que produz diferentes formatos de dados com base no parâmetro de entrada que você usar. Você pode usar o <xref:System.Windows.Data.Binding.ConverterParameter%2A> do <xref:System.Windows.Data.Binding> classe para passar um parâmetro como um argumento para o <xref:System.Windows.Data.IValueConverter.Convert%2A> e <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object value, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor produzido pela fonte de associação.</param>
+        <param name="targetType">O tipo da propriedade de destino da associação.</param>
+        <param name="parameter">O parâmetro de conversor a ser usado.</param>
+        <param name="culture">A cultura a ser usada no conversor.</param>
+        <summary>Converte um valor.</summary>
+        <returns>Um valor convertido. Se o método retornar <see langword="null" />, o valor null válido será usado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de associação de dados chama esse método quando ele propaga um valor da fonte de associação para o destino da associação.  
+  
+ O mecanismo de associação de dados não capturar exceções geradas por um conversor fornecido pelo usuário. Qualquer exceção que é lançada pelo <xref:System.Windows.Data.IValueConverter.Convert%2A> método ou todas as exceções geradas por métodos que o <xref:System.Windows.Data.IValueConverter.Convert%2A> chamadas de método, são tratados como erros de tempo de execução. Tratar problemas antecipados retornando <xref:System.Windows.DependencyProperty.UnsetValue?displayProperty=nameWithType>.  
+  
+ Um valor de retorno <xref:System.Windows.DependencyProperty.UnsetValue?displayProperty=nameWithType> indica que o conversor não produzidos nenhum valor e que a associação usa o <xref:System.Windows.Data.BindingBase.FallbackValue%2A>, se disponível, ou o valor padrão em vez disso.  
+  
+ Um valor de retorno <xref:System.Windows.Data.Binding.DoNothing?displayProperty=nameWithType> indica que a associação não transferir o valor ou usar o <xref:System.Windows.Data.BindingBase.FallbackValue%2A> ou o valor padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object ConvertBack (object value, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertBack(object value, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Data.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor que é produzido pelo destino da associação.</param>
+        <param name="targetType">O tipo para o qual converter.</param>
+        <param name="parameter">O parâmetro de conversor a ser usado.</param>
+        <param name="culture">A cultura a ser usada no conversor.</param>
+        <summary>Converte um valor.</summary>
+        <returns>Um valor convertido. Se o método retornar <see langword="null" />, o valor null válido será usado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de associação de dados chama esse método quando ele propaga um valor de destino da associação a origem da associação.  
+  
+ A implementação deste método deve ser o inverso do <xref:System.Windows.Data.IValueConverter.Convert%2A> método.  
+  
+ O mecanismo de associação de dados não capturar exceções geradas por um conversor fornecido pelo usuário. Qualquer exceção que é lançada pelo <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> método ou todas as exceções geradas por métodos que o <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> chamadas de método, são tratados como erros de tempo de execução. Tratar problemas antecipados retornando <xref:System.Windows.DependencyProperty>.<xref:System.Windows.DependencyProperty.UnsetValue>.  
+  
+ Um valor de retorno <xref:System.Windows.DependencyProperty.UnsetValue?displayProperty=nameWithType> indica que o conversor não produzidos nenhum valor e que a associação usa o <xref:System.Windows.Data.BindingBase.FallbackValue%2A>, se disponível, ou o valor padrão em vez disso.  
+  
+ Um valor de retorno <xref:System.Windows.Data.Binding.DoNothing?displayProperty=nameWithType> indica que a associação não transferir o valor ou usar o <xref:System.Windows.Data.BindingBase.FallbackValue%2A> ou o valor padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

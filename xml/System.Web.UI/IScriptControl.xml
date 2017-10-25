@@ -1,0 +1,79 @@
+<Type Name="IScriptControl" FullName="System.Web.UI.IScriptControl">
+  <TypeSignature Language="C#" Value="public interface IScriptControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IScriptControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IScriptControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define métodos que os controles de servidor ASP.NET devem implementar para definir recursos ECMAScript (JavaScript) em aplicativos habilitados para AJAX.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando implementado por uma classe, os métodos do <xref:System.Web.UI.IScriptControl> interface fornece referências a bibliotecas de scripts que definem os componentes de cliente e executar scripts de descritores que representam as instâncias de tipos de cliente. Implemente essa interface em controles de servidor personalizados que incluem funcionalidade de controle de script.  
+  
+ Para obter mais informações, consulte [adicionando recursos de cliente a um controle de servidor Web](http://msdn.microsoft.com/library/1d365cbe-1bde-4cef-9fe7-2cd04d3cbdea).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetScriptDescriptors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptDescriptor&gt; GetScriptDescriptors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IScriptControl.GetScriptDescriptors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptDescriptor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de descritores de script que representam componentes de cliente do ECMAScript (JavaScript).</summary>
+        <returns>Uma coleção <see cref="T:System.Collections.IEnumerable" /> de objetos <see cref="T:System.Web.UI.ScriptDescriptor" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implemente esse método para definir componentes, comportamentos ou controles de cliente da biblioteca do Microsoft Ajax requer que o controle de servidor. Esse método permite que você passar parâmetros declarativamente especificados para funções da biblioteca do Microsoft Ajax.  
+  
+ Para usar esse método, você também deve implementar abstrata <xref:System.Web.UI.ScriptDescriptor> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetScriptReferences">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt; GetScriptReferences ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.UI.ScriptReference&gt; GetScriptReferences() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IScriptControl.GetScriptReferences" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.UI.ScriptReference&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Web.UI.ScriptReference" /> que definem os recursos de script que exigem o controle.</summary>
+        <returns>Uma coleção <see cref="T:System.Collections.IEnumerable" /> de objetos <see cref="T:System.Web.UI.ScriptReference" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implemente esse método para definir as dependências de biblioteca de script personalizado que requer que o controle de servidor, como scripts em uma pasta de Scripts de aplicativo da Web atual, ou recursos em um assembly. Scripts da biblioteca do Microsoft Ajax não possuem ser registrado dessa maneira.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1673 @@
+<Type Name="ItemCollection" FullName="System.Windows.Controls.ItemCollection">
+  <TypeSignature Language="C#" Value="public sealed class ItemCollection : System.Windows.Data.CollectionView, System.Collections.IList, System.ComponentModel.ICollectionViewLiveShaping, System.ComponentModel.IEditableCollectionViewAddNewItem, System.ComponentModel.IItemProperties, System.Windows.IWeakEventListener" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ItemCollection extends System.Windows.Data.CollectionView implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList, class System.ComponentModel.ICollectionViewLiveShaping, class System.ComponentModel.IEditableCollectionView, class System.ComponentModel.IEditableCollectionViewAddNewItem, class System.ComponentModel.IItemProperties, class System.Windows.IWeakEventListener" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Data.CollectionView</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ICollectionViewLiveShaping</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IEditableCollectionViewAddNewItem</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IItemProperties</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.IWeakEventListener</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.Ignore)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Retém a lista de itens que constituem o conteúdo de um <see cref="T:System.Windows.Controls.ItemsControl" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.ItemCollection>mantém uma coleção de itens, como cadeias de caracteres, objetos, [!INCLUDE[TLA#tla_xml](~/includes/tlasharptla-xml-md.md)] nós, elementos e outras coleções. Um <xref:System.Windows.Controls.ItemsControl> usa os dados a <xref:System.Windows.Controls.ItemCollection> para gerar seu conteúdo. Se você quiser agregar mais de uma coleção, atribua um <xref:System.Windows.Data.CompositeCollection> para o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade do seu <xref:System.Windows.Controls.ItemsControl>.  
+  
+ Use o <xref:System.Windows.Controls.ItemsControl.Items%2A> propriedade ou o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade para especificar a coleção deve ser usada para gerar o conteúdo de sua <xref:System.Windows.Controls.ItemsControl>. Quando o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade for definida, o <xref:System.Windows.Controls.ItemsControl.Items%2A> coleção se tornará somente leitura e de tamanho fixo. Isso significa que, se você estiver usando o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade, você não pode adicionar, excluir ou alterar itens no <xref:System.Windows.Controls.ItemCollection> diretamente.  
+  
+ <xref:System.Windows.Controls.ItemCollection>é um <xref:System.Windows.Data.CollectionView> e, portanto, fornece as funcionalidades da exibição de coleção, como classificação, agrupamento e filtragem. Para obter mais informações, consulte <xref:System.Windows.Controls.ItemCollection.SortDescriptions%2A>, <xref:System.Windows.Controls.ItemCollection.Filter%2A> e <xref:System.Windows.Controls.ItemCollection.GroupDescriptions%2A>.  
+  
+ Para obter mais informações sobre exibições de coleção, consulte [visão geral de associação de dados](~/docs/framework/wpf/data/data-binding-overview.md).  
+  
+   
+  
+## Examples  
+ Se você tiver um <xref:System.Windows.Controls.ItemsControl>, como um <xref:System.Windows.Controls.ListBox> que tem o conteúdo, você pode usar o <xref:System.Windows.Controls.ItemsControl.Items%2A> propriedade para acessar o <xref:System.Windows.Controls.ItemCollection>, que é um modo de exibição. Como ele é um modo de exibição, você pode usar as funcionalidades relacionadas à exibição, como classificação, filtragem e agrupamento. Observe que quando ItemsSource está definida, as operações do modo de exibição delegar para o modo de exibição sobre a coleção ItemsSource. Portanto, o ItemCollection dá suporte à classificação, filtragem e agrupamento somente se o modo de exibição delegado suporte a elas.  
+  
+ O exemplo a seguir mostra como classificar o conteúdo de um <xref:System.Windows.Controls.ListBox> chamado `myListBox`. Neste exemplo, `Content` é o nome da propriedade de classificação.  
+  
+ [!code-csharp[ListBoxSort_snip#Sort](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxSort_snip/CSharp/Window1.xaml.cs#sort)]
+ [!code-vb[ListBoxSort_snip#Sort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxSort_snip/visualbasic/window1.xaml.vb#sort)]  
+  
+ Quando você fizer isso, o modo de exibição podem ou não ser a exibição padrão, dependendo de como os dados são configurados para cima em seu <xref:System.Windows.Controls.ItemsControl>. Por exemplo, quando o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade é associada a um <xref:System.Windows.Data.CollectionViewSource>, o modo de exibição que você obter usando o <xref:System.Windows.Controls.ItemsControl.Items%2A> propriedade não é o modo de exibição padrão.  
+  
+ Se seu <xref:System.Windows.Controls.ItemsControl> está associado (você está usando o <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade), em seguida, você pode fazer o seguinte para obter o modo de exibição padrão:  
+  
+ [!code-csharp[GroupingSample#MyView](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml.cs#myview)]
+ [!code-vb[GroupingSample#MyView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GroupingSample/visualbasic/window1.xaml.vb#myview)]  
+[!code-csharp[GroupingSample#GetView](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupingSample/CSharp/Window1.xaml.cs#getview)]
+[!code-vb[GroupingSample#GetView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GroupingSample/visualbasic/window1.xaml.vb#getview)]  
+  
+ Como alternativa, você pode especificar filtrando, classificando e agrupando critérios em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] usando <xref:System.Windows.Data.CollectionViewSource>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(object newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newItem">O item a ser adicionado à coleção.</param>
+        <summary>Adiciona um item ao <see cref="T:System.Windows.Controls.ItemCollection" />.</summary>
+        <returns>O índice de base zero no qual o objeto for adicionado ou -1, se o item não puder ser adicionado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção está no modo de ItemsSource.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveFiltering">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveFiltering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CanChangeLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição de coleção dá suporte ao ativar ou desativar a filtragem de dados em tempo real.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição de coleção oferece suporte à filtragem dinâmica ativar ou desativar; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveGrouping">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveGrouping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CanChangeLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição de coleção oferece suporte a agrupamento de transformação de dados em tempo real ou desativar.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição de coleção dão suporte a agrupamento ao vivo de ativar ou desativar; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveSorting">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CanChangeLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição de coleção dá suporte ao ativar ou desativar a classificação de dados em tempo real.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição de coleção dá suporte à classificação ao vivo ativar ou desativar; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanFilter">
+      <MemberSignature Language="C#" Value="public override bool CanFilter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanFilter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CanFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este modo de exibição de coleção oferece suporte à filtragem.</summary>
+        <value>
+          <see langword="true" />Se este modo de exibição oferece suporte à filtragem; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para verificar se este conjunto oferece suporte à filtragem antes de atribuir um retorno de chamada de filtro para o <xref:System.Windows.Controls.ItemCollection.Filter%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGroup">
+      <MemberSignature Language="C#" Value="public override bool CanGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CanGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este modo de exibição de coleção oferece suporte a agrupamento.</summary>
+        <value>
+          <see langword="true" />Se a coleção suporta agrupamento; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para testar se a implementação atual oferece suporte a agrupamento antes de usar o <xref:System.Windows.Controls.ItemCollection.GroupDescriptions%2A> propriedade a adicionar <xref:System.ComponentModel.GroupDescription> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSort">
+      <MemberSignature Language="C#" Value="public override bool CanSort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSort" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CanSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este modo de exibição de coleção dá suporte à classificação.</summary>
+        <value>
+          <see langword="true" />Se este modo de exibição dão suporte à classificação; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para verificar se esta coleção dá suporte à classificação antes de usar o <xref:System.Windows.Controls.ItemCollection.SortDescriptions%2A> propriedade a adicionar <xref:System.ComponentModel.SortDescription> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa a coleção e libera as referências em todos os itens atualmente na coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar esse método. No exemplo, `sbar` é um <xref:System.Windows.Controls.Primitives.StatusBar> controle, que é um <xref:System.Windows.Controls.ItemsControl>.  
+  
+ [!code-csharp[StatusBar#MakeProgressBar](~/samples/snippets/csharp/VS_Snippets_Wpf/StatusBar/CSharp/Window1.xaml.cs#makeprogressbar)]
+ [!code-vb[StatusBar#MakeProgressBar](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StatusBar/visualbasic/window1.xaml.vb#makeprogressbar)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Controls.ItemCollection" /> está em <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> modo. (Quando o <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> propriedade for definida, o <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleção se tornará somente leitura e de tamanho fixo.)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (object containItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(object containItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="containItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="containItem">O objeto a ser verificado.</param>
+        <summary>Retorna um valor que indica se o item especificado está neste modo de exibição.</summary>
+        <returns>
+          <see langword="true" />para indicar que o item pertence a esta coleção e transmite o filtro ativo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de destino para copiar.</param>
+        <param name="index">O índice baseado em zero na matriz de destino.</param>
+        <summary>Copia os elementos da coleção para uma matriz, começando em um índice de matriz específico.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O destino <paramref name="array" /> é multidimensional.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="index" /> é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public override int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de registros na coleção.</summary>
+        <value>O número de itens da coleção ou 0 se a coleção não foi inicializada ou se não existe na coleção de <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> modo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentItem">
+      <MemberSignature Language="C#" Value="public override object CurrentItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object CurrentItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CurrentItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item atual na exibição.</summary>
+        <value>O objeto atual no modo de exibição ou <see langword="null" /> se a coleção foi inicializada ou se não existe na coleção de <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> modo.  
+  
+ Por padrão, o primeiro item da coleção é iniciado como o item atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentPosition">
+      <MemberSignature Language="C#" Value="public override int CurrentPosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.CurrentPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição ordinal do item atual no modo de exibição.</summary>
+        <value>A posição ordinal do item atual no modo de exibição ou -1 se a coleção foi inicializada ou se não existe na coleção de <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> modo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeferRefresh">
+      <MemberSignature Language="C#" Value="public override IDisposable DeferRefresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IDisposable DeferRefresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.DeferRefresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Insere um ciclo de atraso que pode ser usado para mesclar as alterações na exibição e atrasar a atualização automática.</summary>
+        <returns>Um objeto <see cref="T:System.IDisposable" /> que pode ser usado para descartar o objeto de chamada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é normalmente usado para criar um `using` escopo e, em seguida, colocar várias chamadas de alterar o modo de exibição dentro do escopo. Isso atrasa a atualização automática até que o ciclo defer é encerrado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public override Predicate&lt;object&gt; Filter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Predicate`1&lt;object&gt; Filter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Predicate&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um retorno de chamada usado para determinar se um item é adequado para inclusão na exibição.</summary>
+        <value>Um método usado para determinar se um item é adequado para inclusão na exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Controls.ItemCollection.CanFilter%2A> propriedade para testar se a implementação atual oferece suporte à filtragem antes de atribuir essa propriedade com um valor não nulo.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo relacionado, consulte [como: filtrar dados em um modo de exibição](~/docs/framework/wpf/data/how-to-filter-data-in-a-view.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para filtragem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItemAt">
+      <MemberSignature Language="C#" Value="public override object GetItemAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object GetItemAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.GetItemAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual o item está localizado.</param>
+        <summary>Retorna o item no índice de base zero especificado nessa exibição.</summary>
+        <returns>O item no índice de base zero especificado nessa exibição.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método avalia o índice com qualquer classificação, filtragem ou agrupamento critérios definidos no modo de exibição usando o <xref:System.Windows.Data.CollectionView.SortDescriptions%2A> ou <xref:System.Windows.Data.CollectionView.Filter%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> está fora do intervalo.</exception>
+        <exception cref="T:System.InvalidOperationException">A coleção foi inicializada ou a associação em <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> fornecido um <see langword="null" /> valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupDescriptions">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ObservableCollection&lt;System.ComponentModel.GroupDescription&gt; GroupDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;class System.ComponentModel.GroupDescription&gt; GroupDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.GroupDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.ComponentModel.GroupDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.ComponentModel.GroupDescription" /> objetos que define como agrupar os itens.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" /> de <see cref="T:System.ComponentModel.GroupDescription" /> objetos. A coleção é indexada por níveis de grupo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Controls.ItemCollection.CanGroup%2A> propriedade para testar se a implementação atual oferece suporte a agrupamento antes de adicionar <xref:System.ComponentModel.GroupDescription> objetos.  
+  
+> [!NOTE]
+>  Essa propriedade pode ser definida somente por acessar o objeto de coleção e usar seus vários métodos, como `Add`. A propriedade para acessar o objeto de coleção é somente leitura, enquanto a coleção em si é leitura / gravação.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo relacionado, consulte <xref:System.Windows.Data.PropertyGroupDescription>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Groups">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyObservableCollection&lt;object&gt; Groups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyObservableCollection`1&lt;object&gt; Groups" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.Groups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyObservableCollection&lt;System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os grupos de nível superior que são criados de acordo com o <see cref="P:System.Windows.Controls.ItemCollection.GroupDescriptions" />.</summary>
+        <value>Os grupos de nível superior que são criados de acordo com o <see cref="P:System.Windows.Controls.ItemCollection.GroupDescriptions" />. O valor padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public override int IndexOf (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 IndexOf(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser pesquisado na coleção.</param>
+        <summary>Retorna o índice na coleção onde se encontra o item especificado.</summary>
+        <returns>O índice do item na coleção, ou -1 se o item não existe na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int insertIndex, object insertItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 insertIndex, object insertItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="insertIndex" Type="System.Int32" />
+        <Parameter Name="insertItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="insertIndex">O índice de base zero no qual inserir o item.</param>
+        <param name="insertItem">O item a ser inserido.</param>
+        <summary>Insere um elemento na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os itens após a posição especificado são movidos para baixo por um.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção está no modo de ItemsSource.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentAfterLast">
+      <MemberSignature Language="C#" Value="public override bool IsCurrentAfterLast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentAfterLast" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.IsCurrentAfterLast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o item atual da exibição está além do fim da coleção.</summary>
+        <value>
+          <see langword="true" />Se o item atual da exibição está além do fim da coleção; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentBeforeFirst">
+      <MemberSignature Language="C#" Value="public override bool IsCurrentBeforeFirst { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentBeforeFirst" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.IsCurrentBeforeFirst" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o item atual da exibição está além do início da coleção.</summary>
+        <value>
+          <see langword="true" />Se o item atual da exibição está além do início da coleção; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public override bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição resultante (filtrado) está vazio.</summary>
+        <value>
+          <see langword="true" />Se a exibição resultante está vazia. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveFiltering">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveFiltering { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.IsLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a filtragem de dados em tempo real está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a filtragem de dados em tempo real está habilitada; <see langword="false" /> se a filtragem em tempo real não está habilitada; <see langword="null" /> se não é possível determinar se o modo de exibição de coleção implementa a filtragem em tempo real.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveGrouping">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveGrouping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.IsLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o agrupamento de dados em tempo real está habilitada.</summary>
+        <value>
+          <see langword="true" />Se o agrupamento de dados em tempo real está ativado. <see langword="false" /> se o agrupamento ao vivo não estiver habilitado; <see langword="null" /> se não for possível determinar se o modo de exibição de coleção implementa agrupamento ao vivo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveSorting">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveSorting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.IsLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a classificação em tempo real está habilitada.</summary>
+        <value>
+          <see langword="true" />Se a classificação de dados em tempo real está ativado. <see langword="false" /> se a classificação ao vivo não estiver habilitado; <see langword="null" /> se não for possível determinar se o modo de exibição de coleção implementa classificação ao vivo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do item.</param>
+        <summary>Obtém ou define o item no índice baseado em zero especificado.</summary>
+        <value>O objeto recuperado ou o objeto que está sendo definido para o índice especificado.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A coleção não foi inicializada, o item para definir já tem um pai lógico diferente ou a coleção está <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> modo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveFilteringProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveFilteringProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveFilteringProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.LiveFilteringProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cadeias de caracteres que especificam as propriedades que participam da filtragem de dados em tempo real.</summary>
+        <value>Uma coleção de cadeias de caracteres que especificam as propriedades que participam da filtragem de dados em tempo real.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveGroupingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveGroupingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveGroupingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.LiveGroupingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cadeias de caracteres que especifica as propriedades que participam no agrupamento de dados em tempo real.</summary>
+        <value>Uma coleção de cadeias de caracteres que especifica as propriedades que participam no agrupamento de dados em tempo real.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveSortingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveSortingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveSortingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.LiveSortingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cadeias de caracteres que especifica as propriedades que participam na classificação de dados em tempo real.</summary>
+        <value>Uma coleção de cadeias de caracteres que especifica as propriedades que participam na classificação de dados em tempo real.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCurrentTo">
+      <MemberSignature Language="C#" Value="public override bool MoveCurrentTo (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveCurrentTo(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.MoveCurrentTo(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item a ser definido como o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" />.</param>
+        <summary>Define o item especificado da coleção como o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" />.</summary>
+        <returns>
+          <see langword="true" />para indicar que o resultante <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> é um item no modo de exibição; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCurrentToFirst">
+      <MemberSignature Language="C#" Value="public override bool MoveCurrentToFirst ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveCurrentToFirst() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.MoveCurrentToFirst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o primeiro item na exibição como o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" />.</summary>
+        <returns>
+          <see langword="true" />para indicar que o resultante <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> é um item no modo de exibição; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCurrentToLast">
+      <MemberSignature Language="C#" Value="public override bool MoveCurrentToLast ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveCurrentToLast() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.MoveCurrentToLast" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o último item no modo de exibição como o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" />.</summary>
+        <returns>
+          <see langword="true" />para indicar que o resultante <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> é um item no modo de exibição; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCurrentToNext">
+      <MemberSignature Language="C#" Value="public override bool MoveCurrentToNext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveCurrentToNext() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.MoveCurrentToNext" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o item após o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> no modo de exibição como o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" />.</summary>
+        <returns>
+          <see langword="true" />para indicar que o resultante <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> é um item no modo de exibição; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCurrentToPosition">
+      <MemberSignature Language="C#" Value="public override bool MoveCurrentToPosition (int position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveCurrentToPosition(int32 position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.MoveCurrentToPosition(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="position">O índice de base zero do item a ser definido como o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" />.</param>
+        <summary>Define o item no índice especificado para ser o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> no modo de exibição.</summary>
+        <returns>
+          <see langword="true" />para indicar que o resultante <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> é um item no modo de exibição; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveCurrentToPrevious">
+      <MemberSignature Language="C#" Value="public override bool MoveCurrentToPrevious ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MoveCurrentToPrevious() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.MoveCurrentToPrevious" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o item antes do <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> no modo de exibição como o <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" />.</summary>
+        <returns>
+          <see langword="true" />para indicar que o resultante <see cref="P:System.Windows.Controls.ItemCollection.CurrentItem" /> é um item no modo de exibição; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedsRefresh">
+      <MemberSignature Language="C#" Value="public override bool NeedsRefresh { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeedsRefresh" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.NeedsRefresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção precisa ser atualizado.</summary>
+        <value>
+          <see langword="true" />Se a coleção precisa ser atualizada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PassesFilter">
+      <MemberSignature Language="C#" Value="public override bool PassesFilter (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool PassesFilter(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.PassesFilter(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser testado.</param>
+        <summary>Retorna um valor que indica se o item especificado pertence a esta exibição.</summary>
+        <returns>
+          <see langword="true" />para indicar que o item especificado pertence a este modo de exibição ou não há nenhum conjunto de filtros na exibição de coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é usado durante notificações de alteração de coleção para determinar se o item especificado pertence a este modo de exibição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshOverride">
+      <MemberSignature Language="C#" Value="protected override void RefreshOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RefreshOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.RefreshOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object removeItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object removeItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="removeItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="removeItem">O objeto a ser removido.</param>
+        <summary>Remove a referência de item especificado da coleção ou exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um item é removido da coleção, os itens restantes com valores mais altos de índice decrementar seu índice por um que reduz o tamanho da coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Controls.ItemCollection" /> é somente leitura porque ele está em <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> modo ou se DeferRefresh está em vigor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int removeIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 removeIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="removeIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="removeIndex">O índice com base em zero do item a ser removido.</param>
+        <summary>Remove o item no índice especificado da coleção ou da exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um item é removido da coleção, os itens restantes com valores mais altos de índice decrementar seu índice por um que reduz o tamanho da coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Controls.ItemCollection" /> é somente leitura porque ele está em <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> modo ou se DeferRefresh está em vigor.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDescriptions">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.SortDescriptionCollection SortDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.SortDescriptionCollection SortDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.SortDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.SortDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.ComponentModel.SortDescription" /> que descrevem como os itens na coleção são classificados na exibição.</summary>
+        <value>Uma coleção de objetos <see cref="T:System.ComponentModel.SortDescription" /> que descrevem como os itens na coleção são classificados na exibição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Controls.ItemCollection.CanSort%2A> propriedade para testar se a implementação atual dá suporte à classificação antes de adicionar <xref:System.ComponentModel.SortDescription> objetos para o <xref:System.ComponentModel.SortDescriptionCollection>.  
+  
+> [!NOTE]
+>  Essa propriedade pode ser definida somente por acessar o objeto de coleção e usar seus vários métodos, como `Add`. A propriedade para acessar o objeto de coleção é somente leitura, enquanto a coleção em si é leitura / gravação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceCollection">
+      <MemberSignature Language="C#" Value="public override System.Collections.IEnumerable SourceCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable SourceCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.SourceCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção não classificada e não filtrada que serve como base para esse modo de exibição de coleção.</summary>
+        <value>Um <see cref="T:System.Collections.IEnumerable" /> objeto que é a coleção subjacente ou o usuário fornecido <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.IList" /> tiver um valor fixo; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#Collections#IList#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Collections.IList" /> é somente leitura; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.AddNew">
+      <MemberSignature Language="C#" Value="object IEditableCollectionView.AddNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.IEditableCollectionView.AddNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#AddNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo item à coleção.</summary>
+        <returns>O novo item é adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CanAddNew">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IEditableCollectionView.CanAddNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IEditableCollectionView.CanAddNew" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CanAddNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um novo item pode ser adicionado à coleção.</summary>
+        <value>
+          <see langword="true" />Se um novo item pode ser adicionado à coleção; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CanCancelEdit">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IEditableCollectionView.CanCancelEdit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IEditableCollectionView.CanCancelEdit" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CanCancelEdit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição de coleção pode descartar as alterações pendentes e restaurar os valores originais de um objeto editado.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição de coleção pode descartar as alterações pendentes e restaurar os valores originais de um objeto editado. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CancelEdit">
+      <MemberSignature Language="C#" Value="void IEditableCollectionView.CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IEditableCollectionView.CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a transação de editar e, se possível, restaura o valor original para o item.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CancelNew">
+      <MemberSignature Language="C#" Value="void IEditableCollectionView.CancelNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IEditableCollectionView.CancelNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CancelNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a transação de adicionar e descarta o novo item de pendente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CanRemove">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IEditableCollectionView.CanRemove { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IEditableCollectionView.CanRemove" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CanRemove" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um item pode ser removido da coleção.</summary>
+        <value>
+          <see langword="true" />Se um item pode ser removido da coleção; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CommitEdit">
+      <MemberSignature Language="C#" Value="void IEditableCollectionView.CommitEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IEditableCollectionView.CommitEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CommitEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a transação de edição e salva as alterações pendentes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CommitNew">
+      <MemberSignature Language="C#" Value="void IEditableCollectionView.CommitNew ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IEditableCollectionView.CommitNew() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CommitNew" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Termina a transação de adicionar e salva o novo item de pendente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CurrentAddItem">
+      <MemberSignature Language="C#" Value="object System.ComponentModel.IEditableCollectionView.CurrentAddItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.ComponentModel.IEditableCollectionView.CurrentAddItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CurrentAddItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item que está sendo adicionado durante atual adicionar transação.</summary>
+        <value>O item que está sendo adicionado se <see cref="P:System.ComponentModel.IEditableCollectionView.IsAddingNew" /> é <see langword="true" />; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.CurrentEditItem">
+      <MemberSignature Language="C#" Value="object System.ComponentModel.IEditableCollectionView.CurrentEditItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.ComponentModel.IEditableCollectionView.CurrentEditItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#CurrentEditItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o item na coleção que está sendo editada.</summary>
+        <value>O item na coleção que está sendo editado se <see cref="P:System.ComponentModel.IEditableCollectionView.IsEditingItem" /> é <see langword="true" />; caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.EditItem">
+      <MemberSignature Language="C#" Value="void IEditableCollectionView.EditItem (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IEditableCollectionView.EditItem(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#EditItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item para editar.</param>
+        <summary>Inicia uma transação de edição do item especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.IsAddingNew">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IEditableCollectionView.IsAddingNew { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IEditableCollectionView.IsAddingNew" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#IsAddingNew" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma transação de adicionar está em andamento.</summary>
+        <value>
+          <see langword="true" />Se uma transação de adicionar está em andamento. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.IsEditingItem">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IEditableCollectionView.IsEditingItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IEditableCollectionView.IsEditingItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#IsEditingItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma transação de edição está em andamento.</summary>
+        <value>
+          <see langword="true" />Se uma transação de edição está em andamento. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition">
+      <MemberSignature Language="C#" Value="System.ComponentModel.NewItemPlaceholderPosition System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.NewItemPlaceholderPosition System.ComponentModel.IEditableCollectionView.NewItemPlaceholderPosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#NewItemPlaceholderPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.NewItemPlaceholderPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição do espaço reservado novo item no modo de exibição de coleção.</summary>
+        <value>Um dos valores de enumeração que especifica a posição do espaço reservado novo item no modo de exibição de coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.Remove">
+      <MemberSignature Language="C#" Value="void IEditableCollectionView.Remove (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IEditableCollectionView.Remove(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item a ser removido.</param>
+        <summary>Remove o item especificado da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionView.RemoveAt">
+      <MemberSignature Language="C#" Value="void IEditableCollectionView.RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.IEditableCollectionView.RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionView#RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do item a ser removido.</param>
+        <summary>Remove o item na posição especificada da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionViewAddNewItem.AddNewItem">
+      <MemberSignature Language="C#" Value="object IEditableCollectionViewAddNewItem.AddNewItem (object newItem);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ComponentModel.IEditableCollectionViewAddNewItem.AddNewItem(object newItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionViewAddNewItem#AddNewItem(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newItem">O objeto a ser adicionado à coleção.</param>
+        <summary>Adiciona o objeto especificado à coleção.</summary>
+        <returns>O objeto que foi adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionViewAddNewItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem">
+      <MemberSignature Language="C#" Value="bool System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.ComponentModel.IEditableCollectionViewAddNewItem.CanAddNewItem" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IEditableCollectionViewAddNewItem#CanAddNewItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um objeto especificado pode ser adicionado à coleção.</summary>
+        <value>
+          <see langword="true" />Se um objeto especificado pode ser adicionado à coleção; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IEditableCollectionViewAddNewItem>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.IItemProperties.ItemProperties">
+      <MemberSignature Language="C#" Value="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.ItemPropertyInfo&gt; System.ComponentModel.IItemProperties.ItemProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.ComponentModel.ItemPropertyInfo&gt; System.ComponentModel.IItemProperties.ItemProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.ItemCollection.System#ComponentModel#IItemProperties#ItemProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.ComponentModel.ItemPropertyInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém informações sobre as propriedades que estão disponíveis nos itens em uma coleção.</summary>
+        <value>Uma coleção que contém informações sobre as propriedades que estão disponíveis nos itens em uma coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.ComponentModel.IItemProperties>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.IWeakEventListener.ReceiveWeakEvent">
+      <MemberSignature Language="C#" Value="bool IWeakEventListener.ReceiveWeakEvent (Type managerType, object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.IWeakEventListener.ReceiveWeakEvent(class System.Type managerType, object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ItemCollection.System#Windows#IWeakEventListener#ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="managerType" Type="System.Type" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="managerType">O tipo do <see cref="T:System.Windows.WeakEventManager" /> que chama esse método.</param>
+        <param name="sender">Objeto que originou o evento.</param>
+        <param name="e">Dados do evento.</param>
+        <summary>Recebe eventos do gerenciador de eventos centralizado.</summary>
+        <returns>
+          <see langword="true" />Se o ouvinte tratado o evento; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.ItemCollection> é convertida em uma interface de <xref:System.Windows.IWeakEventListener>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

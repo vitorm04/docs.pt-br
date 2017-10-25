@@ -1,0 +1,1699 @@
+<Type Name="MemoryStream" FullName="System.IO.MemoryStream">
+  <TypeSignature Language="C#" Value="public class MemoryStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MemoryStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.IO.MemoryStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria um fluxo cujo repositório de backup é a memória.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/io/memorystream.cs#1a4dcb744a23ba6f). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ A posição atual de um fluxo é a posição na qual a próxima leitura ou operação de gravação pode ocorrer. A posição atual pode ser recuperada ou definida por meio de <xref:System.IO.MemoryStream.Seek%2A> método. Quando uma nova instância da <xref:System.IO.MemoryStream> é criado, a atual posição é definida como zero.  
+  
+[!INCLUDE[note_unnecessary_dispose](~/includes/note-unnecessary-dispose.md)]
+  
+ Fluxos de memória criados com uma matriz de byte não atribuído fornecem um fluxo não redimensionável dos dados. Ao usar uma matriz de bytes, não é possível anexar ao nem reduzir o fluxo, embora você poderá modificar o conteúdo existente, dependendo dos parâmetros passados para o construtor. Fluxos de memória vazia são redimensionáveis e podem ser gravados e lidos do.  
+  
+ Se um <xref:System.IO.MemoryStream> objeto é adicionado a um arquivo ResX ou um arquivo. Resources, chame o <xref:System.Resources.ResourceManager.GetStream%2A> método em tempo de execução para recuperá-lo.  
+  
+ Se um <xref:System.IO.MemoryStream> objeto é serializado como um arquivo de recurso, na verdade, será serializado como um <xref:System.IO.UnmanagedMemoryStream>. Esse comportamento fornece melhor desempenho, bem como a capacidade de obter um ponteiro para os dados diretamente, sem precisar passar por <xref:System.IO.Stream> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como ler e gravar dados de uso da memória como um armazenamento de backup.  
+  
+ [!code-cpp[System.IO.MemoryStream#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#1)]
+ [!code-csharp[System.IO.MemoryStream#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#1)]
+ [!code-vb[System.IO.MemoryStream#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.MemoryStream" /> com uma capacidade expansível inicializada em zero.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryStream.CanRead%2A>, <xref:System.IO.MemoryStream.CanSeek%2A>, e <xref:System.IO.MemoryStream.CanWrite%2A> propriedades são definidas como `true`.  
+  
+ A capacidade do fluxo atual aumenta automaticamente quando você usa o <xref:System.IO.MemoryStream.SetLength%2A> método para definir o comprimento para um valor maior do que a capacidade do fluxo atual.  
+  
+ Este construtor expõe subjacente de fluxo, que <xref:System.IO.MemoryStream.GetBuffer%2A> retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryStream (byte[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de bytes sem sinal com base na qual o fluxo atual será criado.</param>
+        <summary>Inicializa uma nova instância não redimensionável da classe <see cref="T:System.IO.MemoryStream" /> com base na matriz de bytes especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryStream.CanRead%2A>, <xref:System.IO.MemoryStream.CanSeek%2A>, e <xref:System.IO.MemoryStream.CanWrite%2A> propriedades são definidas como `true`. <xref:System.IO.MemoryStream.Capacity%2A>é definido como o comprimento da matriz de bytes especificado. Novo fluxo pode ser gravado, mas não pode ser redimensionado.  
+  
+ O comprimento do fluxo não pode ser definido como um valor maior que o tamanho inicial da matriz de bytes especificada; No entanto, o fluxo pode ser truncado (consulte <xref:System.IO.MemoryStream.SetLength%2A>).  
+  
+ Este construtor não expõe o fluxo subjacente. <xref:System.IO.MemoryStream.GetBuffer%2A>gera <xref:System.UnauthorizedAccessException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryStream (int capacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 capacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="capacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="capacity">O tamanho inicial da matriz interna em bytes.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.MemoryStream" /> com uma capacidade expansível inicializada conforme especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryStream.CanRead%2A>, <xref:System.IO.MemoryStream.CanSeek%2A>, e <xref:System.IO.MemoryStream.CanWrite%2A> propriedades são definidas como `true`.  
+  
+ A capacidade aumenta automaticamente quando você usa o <xref:System.IO.MemoryStream.SetLength%2A> método para definir o comprimento para um valor maior do que a capacidade do fluxo atual. Exceto para uma `MemoryStream` construído com um parâmetro de byte [], gravar operações no final de um `MemoryStream` expandir o `MemoryStream`.  
+  
+ Este construtor expõe subjacente de fluxo que <xref:System.IO.MemoryStream.GetBuffer%2A> retorna.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#2)]
+ [!code-csharp[System.IO.MemoryStream#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#2)]
+ [!code-vb[System.IO.MemoryStream#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="capacity" /> é negativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryStream (byte[] buffer, bool writable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer, bool writable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.#ctor(System.Byte[],System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="writable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de bytes sem sinal da qual este fluxo deve ser criado.</param>
+        <param name="writable">A configuração da propriedade <see cref="P:System.IO.MemoryStream.CanWrite" />, que determina se o fluxo dá suporte à gravação.</param>
+        <summary>Inicializa uma nova instância não redimensionável da classe <see cref="T:System.IO.MemoryStream" /> com base na matriz de bytes especificada com a propriedade <see cref="P:System.IO.MemoryStream.CanWrite" /> definida conforme especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryStream.CanRead%2A> e <xref:System.IO.MemoryStream.CanSeek%2A> propriedades são definidas como `true`. <xref:System.IO.MemoryStream.Capacity%2A>é definido como o comprimento da matriz de bytes especificado.  
+  
+ O comprimento do fluxo não pode ser definido como um valor maior que o tamanho inicial da matriz de bytes especificada; No entanto, o fluxo pode ser truncado (consulte <xref:System.IO.MemoryStream.SetLength%2A>).  
+  
+ Este construtor não expõe o fluxo subjacente. <xref:System.IO.MemoryStream.GetBuffer%2A>gera <xref:System.UnauthorizedAccessException>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryStream (byte[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.#ctor(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de bytes sem sinal da qual este fluxo deve ser criado.</param>
+        <param name="index">O índice <c>buffer</c> no qual o fluxo começa.</param>
+        <param name="count">O comprimento do fluxo em bytes.</param>
+        <summary>Inicializa uma nova instância não redimensionável da classe <see cref="T:System.IO.MemoryStream" /> com base na região (índice) especificada de uma matriz bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryStream.CanRead%2A>, <xref:System.IO.MemoryStream.CanSeek%2A>, e <xref:System.IO.MemoryStream.CanWrite%2A> propriedades são definidas como `true`, mas a capacidade não pode ser alterada. <xref:System.IO.MemoryStream.Capacity%2A> é definido como `count`.  
+  
+ O comprimento do fluxo não pode ser definido como um valor maior que o tamanho inicial da matriz de bytes especificada; No entanto, o fluxo pode ser truncado (consulte <xref:System.IO.MemoryStream.SetLength%2A>).  
+  
+ Este construtor não expõe o fluxo subjacente. <xref:System.IO.MemoryStream.GetBuffer%2A>gera <xref:System.UnauthorizedAccessException>. No entanto, você pode gravar no fluxo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryStream (byte[] buffer, int index, int count, bool writable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer, int32 index, int32 count, bool writable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="writable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de bytes sem sinal da qual este fluxo deve ser criado.</param>
+        <param name="index">O índice em <c>buffer</c> no qual o fluxo começa.</param>
+        <param name="count">O comprimento do fluxo em bytes.</param>
+        <param name="writable">A configuração da propriedade <see cref="P:System.IO.MemoryStream.CanWrite" />, que determina se o fluxo dá suporte à gravação.</param>
+        <summary>Inicializa uma nova instância não redimensionável da classe <see cref="T:System.IO.MemoryStream" /> com base na região especificada de uma matriz de bytes, com a propriedade <see cref="P:System.IO.MemoryStream.CanWrite" /> definida conforme especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryStream.CanRead%2A> e <xref:System.IO.MemoryStream.CanSeek%2A> propriedades são definidas como `true`. <xref:System.IO.MemoryStream.Capacity%2A> é definido como `count`.  
+  
+ O comprimento do fluxo não pode ser definido como um valor maior que o tamanho inicial da matriz de bytes especificada; No entanto, o fluxo pode ser truncado (consulte <xref:System.IO.MemoryStream.SetLength%2A>).  
+  
+ Este construtor não expõe o fluxo subjacente. <xref:System.IO.MemoryStream.GetBuffer%2A>gera <xref:System.UnauthorizedAccessException>. No entanto, você pode gravar no fluxo se `writable` é `true`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryStream (byte[] buffer, int index, int count, bool writable, bool publiclyVisible);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] buffer, int32 index, int32 count, bool writable, bool publiclyVisible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="writable" Type="System.Boolean" />
+        <Parameter Name="publiclyVisible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de bytes sem sinal da qual este fluxo deve ser criado.</param>
+        <param name="index">O índice <c>buffer</c> no qual o fluxo começa.</param>
+        <param name="count">O comprimento do fluxo em bytes.</param>
+        <param name="writable">A configuração da propriedade <see cref="P:System.IO.MemoryStream.CanWrite" />, que determina se o fluxo dá suporte à gravação.</param>
+        <param name="publiclyVisible">
+          <see langword="true" /> para habilitar o <see cref="M:System.IO.MemoryStream.GetBuffer" />, que retorna a matriz de bytes sem sinal da qual o fluxo foi criado. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.MemoryStream" /> com base na região especificada de uma matriz de bytes, com o conjunto de propriedades <see cref="P:System.IO.MemoryStream.CanWrite" /> especificado e a capacidade de chamar <see cref="M:System.IO.MemoryStream.GetBuffer" /> definida de acordo com a especificação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.MemoryStream.CanRead%2A> e <xref:System.IO.MemoryStream.CanSeek%2A> propriedades são definidas como `true`. <xref:System.IO.MemoryStream.Capacity%2A> é definido como `count`.  
+  
+ A nova instância de fluxo pode ser gravada, mas o <xref:System.IO.MemoryStream.Capacity%2A> matriz do byte subjacente não pode ser alterada. O comprimento do fluxo não pode ser definido como um valor maior que o tamanho inicial da matriz de bytes especificada; No entanto, o fluxo pode ser truncado (consulte <xref:System.IO.MemoryStream.SetLength%2A>).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRead">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginRead(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="callback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWrite">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginWrite(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">To be added.</param>
+        <param name="offset">To be added.</param>
+        <param name="count">To be added.</param>
+        <param name="callback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo atual dá suporte à leitura.</summary>
+        <value>
+          <see langword="true" /> se o fluxo estiver aberto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma classe derivada de <xref:System.IO.Stream> não dá suporte para leitura, chamadas para o <xref:System.IO.MemoryStream.Read%2A> e <xref:System.IO.MemoryStream.ReadByte%2A> métodos lançam uma <xref:System.NotSupportedException>.  
+  
+ Se o fluxo está fechado, essa propriedade retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo atual dá suporte à busca.</summary>
+        <value>
+          <see langword="true" /> se o fluxo estiver aberto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma classe derivada de <xref:System.IO.Stream> não dá suporte para busca, chamadas para <xref:System.IO.MemoryStream.Length%2A>, <xref:System.IO.MemoryStream.SetLength%2A>, <xref:System.IO.MemoryStream.Position%2A>, e <xref:System.IO.MemoryStream.Seek%2A> lançar um <xref:System.NotSupportedException>.  
+  
+ Se o fluxo está fechado, essa propriedade retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo atual dá suporte à gravação.</summary>
+        <value>
+          <see langword="true" /> se o fluxo der suporte à gravação; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma classe derivada de <xref:System.IO.Stream> não oferece suporte à gravação, uma chamada para <xref:System.IO.Stream.SetLength%2A>, <xref:System.IO.Stream.Write%2A>, ou <xref:System.IO.Stream.WriteByte%2A> lança um <xref:System.NotSupportedException>.  
+  
+ Se o fluxo está fechado, essa propriedade retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public virtual int Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Capacity" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryStream.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de bytes alocados a este fluxo.</summary>
+        <value>O tamanho da parte utilizável do buffer para o fluxo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `Capacity`é o comprimento do buffer para matrizes de bytes fornecido pelo sistema. `Capacity`não pode ser definido como um valor menor que o tamanho atual do fluxo.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#5)]
+ [!code-csharp[System.IO.MemoryStream#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#5)]
+ [!code-vb[System.IO.MemoryStream#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Foi definida uma capacidade negativa ou menor que o tamanho atual do fluxo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo atual está fechado.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see langword="set" /> é invocado em um fluxo cuja capacidade não pode ser modificada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public override void CopyTo (System.IO.Stream destination, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyTo(class System.IO.Stream destination, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.CopyTo(System.IO.Stream,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.IO.Stream" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">To be added.</param>
+        <param name="bufferSize">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyToAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task CopyToAsync (System.IO.Stream destination, int bufferSize, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task CopyToAsync(class System.IO.Stream destination, int32 bufferSize, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.CopyToAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.IO.Stream" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="destination">O fluxo para o qual o conteúdo do fluxo atual será copiado.</param>
+        <param name="bufferSize">O tamanho do buffer, em bytes. Esse valor deve ser maior que zero.</param>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento.</param>
+        <summary>Lê todos os bytes do fluxo atual e grava-as em outro fluxo, usando um tamanho de buffer especificado e o cancelamento de forma assíncrona token.</summary>
+        <returns>Uma tarefa que representa a operação de cópia assíncrona.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="destination" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="buffersize" /> é negativo ou zero.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo atual ou o fluxo de destino é descartado.</exception>
+        <exception cref="T:System.NotSupportedException">O fluxo atual não dá suporte à leitura ou o fluxo de destino não dá suporte à gravação.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pela classe <see cref="T:System.IO.MemoryStream" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público <xref:System.ComponentModel.Component.Dispose%2A> e pelo método <xref:System.Object.Finalize%2A>. <xref:System.ComponentModel.Component.Dispose%2A> invoca o método <xref:System.IO.MemoryStream.Dispose%2A> protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca <xref:System.IO.MemoryStream.Dispose%2A> com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.IO.MemoryStream> referências. Este método invoca o método <xref:System.ComponentModel.Component.Dispose%2A> de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="M:System.ComponentModel.Component.Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see cref="M:System.IO.MemoryStream.Dispose(System.Boolean)" /> cuidado para não fazer referência a objetos que têm foi descartados anteriormente em uma chamada anterior para <see cref="M:System.ComponentModel.Component.Dispose" />. Para obter mais informações sobre como implementar <see cref="M:System.IO.MemoryStream.Dispose(System.Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see cref="M:System.ComponentModel.Component.Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRead">
+      <MemberSignature Language="C#" Value="public override int EndRead (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 EndRead(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.EndRead(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWrite">
+      <MemberSignature Language="C#" Value="public override void EndWrite (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndWrite(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.EndWrite(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitui o método <see cref="M:System.IO.Stream.Flush" /> para que nenhuma ação seja executada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.IO.Stream.Flush%2A?displayProperty=nameWithType> método.  
+  
+ Porque os dados gravados em um <xref:System.IO.MemoryStream> objeto é gravado na RAM, esse método é redundante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task FlushAsync (System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task FlushAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.FlushAsync(System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento.</param>
+        <summary>Limpa todos os buffers para esse fluxo e de forma assíncrona monitora solicitações de cancelamento.</summary>
+        <returns>Uma tarefa que representa a operação de liberação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque os dados gravados em um <xref:System.IO.MemoryStream> objeto é gravado na RAM, esse método é redundante.  
+  
+ Se a operação foi cancelada antes da conclusão, a tarefa retornada contém o <xref:System.Threading.Tasks.TaskStatus.Canceled> valor para o <xref:System.Threading.Tasks.Task.Status%2A> propriedade.  
+  
+ Você pode criar um token de cancelamento, criando uma instância do <xref:System.Threading.CancellationTokenSource> classe e passando o <xref:System.Threading.CancellationTokenSource.Token%2A> a propriedade como o `cancellationToken` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O fluxo foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBuffer">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.GetBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a matriz de bytes sem sinal com base na qual este fluxo foi criado.</summary>
+        <returns>A matriz de bytes com base na qual este fluxo foi criado ou a matriz subjacente se uma matriz de bytes não tiver sido fornecida para o construtor <see cref="T:System.IO.MemoryStream" /> durante a construção da instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Observe que o buffer contém bytes alocados que não podem ser usados. Por exemplo, se a cadeia de caracteres "test" é gravada para o <xref:System.IO.MemoryStream> objeto, o comprimento do buffer retornado de <xref:System.IO.MemoryStream.GetBuffer%2A> é 256, não 4, com 252 bytes não utilizados. Para obter apenas os dados no buffer, use o <xref:System.IO.MemoryStream.ToArray%2A> método; no entanto, <xref:System.IO.MemoryStream.ToArray%2A> cria uma cópia dos dados na memória.  
+  
+ O buffer também pode ser `null`.  
+  
+ Para criar um `MemoryStream` instância com um buffer visível publicamente, use <xref:System.IO.MemoryStream.%23ctor%2A>, <xref:System.IO.MemoryStream.%23ctor%28System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean%29>, ou <xref:System.IO.MemoryStream.%23ctor%28System.Int32%29>. Se o fluxo atual é redimensionável, duas chamadas a este método não retornam a mesma matriz se a matriz de bytes subjacente é redimensionada entre as chamadas. Para obter mais informações, consulte: <xref:System.IO.MemoryStream.Capacity%2A>.  
+  
+> [!NOTE]
+>  Esse método funciona quando o fluxo de memória está fechado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">A instância de <see langword="MemoryStream" /> não foi criada com um buffer visível publicamente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do fluxo em bytes.</summary>
+        <value>O comprimento do fluxo em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#5)]
+ [!code-csharp[System.IO.MemoryStream#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#5)]
+ [!code-vb[System.IO.MemoryStream#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.IO.MemoryStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição atual no fluxo.</summary>
+        <value>A posição atual no fluxo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#5)]
+ [!code-csharp[System.IO.MemoryStream#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#5)]
+ [!code-vb[System.IO.MemoryStream#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A posição é definida com um valor negativo ou um valor maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read([out] unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Quando este método retorna, contém a matriz de bytes especificada com os valores entre <c>deslocamento</c> e (<c>deslocamento</c> + <c>contagem</c> - 1) substituídos pelos caracteres leitura do fluxo atual.</param>
+        <param name="offset">O deslocamento de bytes baseado em zero em <c>buffer</c> no qual começar a armazenar dados no fluxo atual.</param>
+        <param name="count">O número máximo de bytes a serem lidos.</param>
+        <summary>Lê um bloco de bytes do fluxo atual e grava os dados em um buffer.</summary>
+        <returns>O número total de bytes gravados no buffer. Isso poderá ser menor que o número de bytes solicitado se esse número de bytes não estiver disponível no momento, ou zero se o final do fluxo for atingido antes que os bytes sejam lidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.Stream.Read%2A>.  
+  
+ O `offset` parâmetro fornece o deslocamento do primeiro byte no `buffer` para os dados do fluxo atual foi criados. O `count` parâmetro retorna o número máximo de bytes a serem lidos do fluxo atual. O valor retornado é o número real de bytes lidos ou zero se o fim do fluxo for atingido.  
+  
+ Se a operação de leitura for bem-sucedida, a posição atual dentro do fluxo avança pelo número de bytes lidos. Se ocorrer uma exceção, a posição atual dentro do fluxo permanecerá inalterada.  
+  
+ O `Read` método retornará zero somente se o fim do fluxo for atingido. Em todos os outros casos, `Read` lê sempre pelo menos um byte do fluxo antes de retornar. Por definição, se não há dados disponíveis do fluxo após uma chamada para `Read`, o `Read` método retorna zero (o fim do fluxo for alcançado automaticamente). Uma implementação está livre para retornar menos bytes que solicitado, mesmo que não foi atingido o fim do fluxo.  
+  
+ Use <xref:System.IO.BinaryReader> para ler tipos de dados primitivos.  
+  
+> [!CAUTION]
+>  Se a matriz de bytes especificado no `buffer` parâmetro é o buffer subjacente retornado pelo <xref:System.IO.MemoryStream.GetBuffer%2A> método, o conteúdo da matriz é substituído e nenhuma exceção é lançada.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#7)]
+ [!code-csharp[System.IO.MemoryStream#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#7)]
+ [!code-vb[System.IO.MemoryStream#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="offset" /> subtraído do tamanho do buffer é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual do fluxo está fechada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task&lt;int&gt; ReadAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task`1&lt;int32&gt; ReadAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer no qual os dados serão gravados.</param>
+        <param name="offset">O deslocamento de byte no <c>buffer</c> no qual começar a gravar dados no fluxo.</param>
+        <param name="count">O número máximo de bytes a serem lidos.</param>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento. O valor padrão é <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Lê de forma assíncrona uma sequência de bytes do fluxo atual, avança a posição no fluxo até o número de bytes lidos e monitora as solicitações de cancelamento.</summary>
+        <returns>Uma tarefa que representa a operação de leitura assíncrona. O valor do parâmetro <paramref name="TResult" /> contém o número total de bytes lidos no buffer. O valor do resultado poderá ser menor que o número de bytes solicitados se o número de bytes disponíveis no momento for menor que o número solicitado ou poderá ser 0 (zero) se o final do fluxo foi atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a operação foi cancelada antes da conclusão, a tarefa retornada contém o <xref:System.Threading.Tasks.TaskStatus.Canceled> valor para o <xref:System.Threading.Tasks.Task.Status%2A> propriedade.  
+  
+ Você pode criar um token de cancelamento, criando uma instância do <xref:System.Threading.CancellationTokenSource> classe e passando o <xref:System.Threading.CancellationTokenSource.Token%2A> a propriedade como o `cancellationToken` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">A soma de <paramref name="offset" /> e <paramref name="count" /> é maior que o tamanho do buffer.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para leitura no fluxo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O fluxo está sendo usado no momento por uma operação de leitura anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public override int ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.ReadByte" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê um byte no fluxo atual.</summary>
+        <returns>O byte é convertido em um <see cref="T:System.Int32" />, ou -1 se o fim do fluxo foi atingido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.Stream.ReadByte%2A>.  
+  
+ Se a operação de leitura for bem-sucedida, a posição atual dentro do fluxo for avançada por um byte. Se ocorrer uma exceção, a posição atual dentro do fluxo está inalterada.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#8)]
+ [!code-csharp[System.IO.MemoryStream#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#8)]
+ [!code-vb[System.IO.MemoryStream#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">A instância atual do fluxo está fechada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin loc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin loc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="loc" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">A nova posição no fluxo. Isso é relativo a <c>loc</c> parâmetro e pode ser positivo ou negativo.</param>
+        <param name="loc">Um valor do tipo <see cref="T:System.IO.SeekOrigin" />, que atua como o ponto de referência de busca.</param>
+        <summary>Define a posição no fluxo atual com o valor especificado.</summary>
+        <returns>A nova posição no fluxo, calculada pela combinação do ponto de referência inicial e do deslocamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.Stream.Seek%2A?displayProperty=nameWithType>.  
+  
+ Há suporte para busca em qualquer local além do comprimento do fluxo.  
+  
+ Não use o <xref:System.IO.MemoryStream.Seek%2A> método para determinar a nova posição no fluxo se o <xref:System.IO.MemoryStream> foi inicializada com um deslocamento diferente de zero. Se você fizer isso, <xref:System.IO.MemoryStream.Seek%2A> retornará um valor. Em vez disso, use o <xref:System.IO.MemoryStream.Position%2A> propriedade para obter a nova posição do fluxo.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#6)]
+ [!code-csharp[System.IO.MemoryStream#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#6)]
+ [!code-vb[System.IO.MemoryStream#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">A busca é tentada antes do início do fluxo.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> é maior que <see cref="F:System.Int32.MaxValue" />.</exception>
+        <exception cref="T:System.ArgumentException">Há um <see cref="T:System.IO.SeekOrigin" /> inválido.  
+  
+ -ou-  
+  
+ O <paramref name="offset" /> causou um estouro aritmético.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual do fluxo está fechada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser usado para definir o comprimento.</param>
+        <summary>Define o comprimento do fluxo atual para o valor especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.Stream.SetLength%2A>.  
+  
+ Se o valor especificado é menor que o tamanho atual do fluxo, o fluxo é truncado. Se após o truncamento da posição atual dentro do fluxo for após o fim do fluxo a <xref:System.IO.MemoryStream.ReadByte%2A> método retornará -1, o <xref:System.IO.MemoryStream.Read%2A> método lê a zero bytes para a matriz de bytes fornecida, e <xref:System.IO.MemoryStream.Write%2A> e <xref:System.IO.MemoryStream.WriteByte%2A> métodos acrescentar os bytes especificados ao final do fluxo, aumentando seu tamanho. Se o valor especificado é maior do que a capacidade atual e o fluxo é redimensionável, aumenta a capacidade e a posição atual dentro do fluxo não é alterada. Se o tamanho é aumentado, o conteúdo do fluxo entre o antigo e o novo comprimento é inicializado para zeros.  
+  
+> [!NOTE]
+>  Um <xref:System.IO.MemoryStream> instância deve oferecer suporte à gravação para esse método trabalhar. Use o <xref:System.IO.MemoryStream.CanWrite%2A> propriedade para determinar se a instância atual oferece suporte à gravação. Para obter mais informações, consulte: <xref:System.IO.Stream.CanWrite%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O fluxo atual não é redimensionável e <paramref name="value" /> é maior que a capacidade atual.  
+  
+ -ou-  
+  
+ O fluxo atual não dá suporte para gravação.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> é negativo ou maior que o comprimento máximo do <see cref="T:System.IO.MemoryStream" />, em que o comprimento máximo é (<see cref="F:System.Int32.MaxValue" /> – origem) e a origem é o índice para o buffer subjacente no qual o fluxo se inicia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public virtual byte[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava o conteúdo de fluxo em uma matriz de bytes, independentemente da propriedade <see cref="P:System.IO.MemoryStream.Position" />.</summary>
+        <returns>Uma nova matriz de bytes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método omite bytes não utilizados no <xref:System.IO.MemoryStream> da matriz. Para obter o buffer inteiro, use o <xref:System.IO.MemoryStream.GetBuffer%2A> método.  
+  
+ Esse método retorna uma cópia do conteúdo do <xref:System.IO.MemoryStream> como uma matriz de bytes. Se a instância atual foi construída em uma matriz de bytes fornecida, uma cópia da seção da matriz ao qual esta instância tem acesso será retornada. Consulte o <xref:System.IO.MemoryStream.%23ctor%2A> construtor para obter detalhes.  
+  
+> [!NOTE]
+>  Esse método funciona quando o <xref:System.IO.MemoryStream> está fechado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetBuffer">
+      <MemberSignature Language="C#" Value="public virtual bool TryGetBuffer (out ArraySegment&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetBuffer([out] valuetype System.ArraySegment`1&lt;unsigned int8&gt;&amp; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.TryGetBuffer(System.ArraySegment{System.Byte}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ArraySegment&lt;System.Byte&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O segmento da matriz de bytes do qual este fluxo foi criado.</param>
+        <summary>Retorna a matriz de bytes sem sinal com base na qual este fluxo foi criado. O valor de retorno indica se a conversão foi bem-sucedida.</summary>
+        <returns>
+          <see langword="true" /> se a conversão tiver sido bem-sucedida; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer do qual os dados serão gravados.</param>
+        <param name="offset">O deslocamento de bytes baseado em zero em <c>buffer</c> no qual começar a copiar bytes para o fluxo atual.</param>
+        <param name="count">O número máximo de bytes a serem gravados.</param>
+        <summary>Grava um bloco de bytes no fluxo atual usando os dados lidos de um buffer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.Stream.Write%2A>.  
+  
+ O `offset` parâmetro fornece o deslocamento do primeiro byte na `buffer` para gravação e o `count` parâmetro retorna o número de bytes a serem gravados. Se a operação de gravação for bem-sucedida, a posição atual dentro do fluxo for avançada pelo número de bytes gravados. Se ocorrer uma exceção, a posição atual dentro do fluxo está inalterada.  
+  
+ Exceto para uma `MemoryStream` construído com um parâmetro de byte [], gravar operações no final de um `MemoryStream` expandir o `MemoryStream`.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#3)]
+ [!code-csharp[System.IO.MemoryStream#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#3)]
+ [!code-vb[System.IO.MemoryStream#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para gravação no fluxo. Para obter mais informações, consulte <see cref="P:System.IO.Stream.CanWrite" />.  
+  
+ -ou-  
+  
+ A posição atual está mais próxima do que bytes <paramref name="count" /> até o final do fluxo, e a capacidade não pode ser modificada.</exception>
+        <exception cref="T:System.ArgumentException">
+          O <paramref name="offset" /> subtraído do tamanho do buffer é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ObjectDisposedException">A instância atual do fluxo está fechada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (byte[] buffer, int offset, int count, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(unsigned int8[] buffer, int32 offset, int32 count, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer do qual os dados serão gravados.</param>
+        <param name="offset">O deslocamento de bytes baseado em zero em <c>buffer</c> da qual começar a copiar bytes para o fluxo.</param>
+        <param name="count">O número máximo de bytes a serem gravados.</param>
+        <param name="cancellationToken">O token a se monitorar para solicitações de cancelamento. O valor padrão é <see cref="P:System.Threading.CancellationToken.None" />.</param>
+        <summary>Grava uma sequência de bytes no fluxo atual assincronamente, avança a posição atual dentro desse fluxo pelo número de bytes gravados e monitora as solicitações de cancelamento.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a operação foi cancelada antes da conclusão, a tarefa retornada contém o <xref:System.Threading.Tasks.TaskStatus.Canceled> valor para o <xref:System.Threading.Tasks.Task.Status%2A> propriedade.  
+  
+ Você pode criar um token de cancelamento, criando uma instância do <xref:System.Threading.CancellationTokenSource> classe e passando o <xref:System.Threading.CancellationTokenSource.Token%2A> a propriedade como o `cancellationToken` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="offset" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">A soma de <paramref name="offset" /> e <paramref name="count" /> é maior que o tamanho do buffer.</exception>
+        <exception cref="T:System.NotSupportedException">Não há suporte para gravação no fluxo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo foi descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O fluxo está em uso no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public override void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.WriteByte(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">O byte a ser gravado.</param>
+        <summary>Grava um byte no fluxo atual na posição atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.Stream.WriteByte%2A>.  
+  
+ Exceto para uma `MemoryStream` construído com um parâmetro de byte [], gravar operações no final de um `MemoryStream` expandir o `MemoryStream`.  
+  
+   
+  
+## Examples  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.IO.MemoryStream> classe.  
+  
+ [!code-cpp[System.IO.MemoryStream#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.MemoryStream/CPP/memstream.cpp#4)]
+ [!code-csharp[System.IO.MemoryStream#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.MemoryStream/CS/memstream.cs#4)]
+ [!code-vb[System.IO.MemoryStream#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.MemoryStream/VB/memstream.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para gravação no fluxo. Para obter mais informações, consulte <see cref="P:System.IO.Stream.CanWrite" />.  
+  
+ -ou-  
+  
+ A posição atual é no final do fluxo e a capacidade não pode ser modificada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo atual está fechado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteTo">
+      <MemberSignature Language="C#" Value="public virtual void WriteTo (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteTo(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.MemoryStream.WriteTo(System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo no qual este fluxo de memória será gravado.</param>
+        <summary>Grava todo o conteúdo deste fluxo de memória em outro fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o fluxo atual está aberto, esse método é equivalente a chamar <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> no buffer deste fluxo subjacente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ObjectDisposedException">O fluxo atual ou de destino está fechado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,111 @@
+<Type Name="IDataBoundListControl" FullName="System.Web.UI.WebControls.IDataBoundListControl">
+  <TypeSignature Language="C#" Value="public interface IDataBoundListControl : System.Web.UI.WebControls.IDataBoundControl" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataBoundListControl implements class System.Web.UI.WebControls.IDataBoundControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IDataBoundListControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.WebControls.IDataBoundControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Expõe as propriedades comuns de dados--controles associados que exibem várias linhas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClientIDRowSuffix">
+      <MemberSignature Language="C#" Value="public string[] ClientIDRowSuffix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] ClientIDRowSuffix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundListControl.ClientIDRowSuffix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os nomes dos campos de dados cujos valores são acrescentados ao valor da propriedade <see cref="P:System.Web.UI.Control.ClientID" /> para identificar exclusivamente cada instância de um controle com limite de dados.</summary>
+        <value>Uma matriz de nomes de campo de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataKeys">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKeyArray DataKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKeyArray DataKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundListControl.DataKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKeyArray</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Web.UI.WebControls.DataKey" /> valor de cada linha em um controle associado a dados de chave de objetos que representam os dados.</summary>
+        <value>Uma coleção de objetos de chave de dados que contém o valor de chave de dados de cada linha em um controle associado a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePersistedSelection">
+      <MemberSignature Language="C#" Value="public bool EnablePersistedSelection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnablePersistedSelection" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundListControl.EnablePersistedSelection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a seleção de uma linha é baseada em valores de chave de dados ou no índice.</summary>
+        <value>
+          <see langword="true" /> se a seleção de linha for baseada em valores de chave de dados; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedDataKey">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataKey SelectedDataKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataKey SelectedDataKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundListControl.SelectedDataKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto que contém o valor de chave de dados para a linha selecionada em um controle associado a dados.</summary>
+        <value>O objeto que contém o valor de chave de dados para a linha selecionada em um controle associado a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedIndex">
+      <MemberSignature Language="C#" Value="public int SelectedIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SelectedIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IDataBoundListControl.SelectedIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o índice da linha selecionada em um controle associado a dados.</summary>
+        <value>O índice da linha selecionada em um controle associado a dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

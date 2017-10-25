@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceProcess.Design">
+  <Docs>
+    <summary>O <see cref="N:System.ServiceProcess.Design" /> namespace contém classes que podem ser usados para estender o suporte de tempo de design para aplicativos de serviços do Windows.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

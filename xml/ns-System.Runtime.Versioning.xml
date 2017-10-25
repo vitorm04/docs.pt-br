@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Versioning">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Versioning" /> namespace contém tipos avançados que oferecem suporte a controle de versão em implementações lado a lado do .NET Framework.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos encontrados no namespace destinam para uso dentro do .NET Framework e não para aplicativos de usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

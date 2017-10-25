@@ -1,0 +1,217 @@
+<Type Name="Point3D" FullName="System.Windows.Forms.DataVisualization.Charting.Point3D">
+  <TypeSignature Language="C#" Value="public class Point3D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Point3D extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.Point3D" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa as coordenadas um tridimensional (3D) do ponto de dados. Essa classe é usada ao executar um desenho personalizado com gráficos 3D.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer ponto usado no desenho 3D personalizado — que é realizado usando GDI+ — deve ser transformada do relativo X, Y e Z (3D) coordenadas relativa X e Y (2D) coordena usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método. Chamando <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A>, os X e valores de Y de <xref:System.Windows.Forms.DataVisualization.Charting.Point3D> objetos são alterados para que reflitam o espaço de 3-dimensional. Novo X e Y pontos, em seguida, podem ser usados para chamadas de método GDI+ — o valor de Z, em seguida, é desconsiderado — depois de alterado para coordenadas de pixel absoluto usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartGraphics.GetAbsolutePoint%2A> método.  
+  
+ Observe que a coordenada Z pode ser menor que zero (localizado atrás de uma área do gráfico) ou maior que 100 (localizado na frente de uma área do gráfico).  
+  
+ Para habilitar gráficos 3D e trabalhar com seus estilos, use o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.Area3DStyle%2A> propriedade. O <xref:System.Windows.Forms.DataVisualization.Charting.Point3D> classe não é usada para os estilos 3D.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Point3D ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Point3D.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataVisualization.Charting.Point3D" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Point3D (float x, float y, float z);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 x, float32 y, float32 z) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataVisualization.Charting.Point3D.#ctor(System.Single,System.Single,System.Single)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="z" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">A coordenada X do 3D ponto.</param>
+        <param name="y">A coordenada Y do 3D ponto.</param>
+        <param name="z">A coordenada Z, que representa a profundidade de 3D ponto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataVisualization.Charting.AnnotationPathPoint" /> classe com as coordenadas X, Y e Z.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PointF">
+      <MemberSignature Language="C#" Value="public System.Drawing.PointF PointF { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.PointF PointF" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Point3D.PointF" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.PointF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Drawing.PointF" /> estrutura, que armazena as coordenadas X e Y de um ponto de 3D.</summary>
+        <value>Um <see cref="T:System.Drawing.PointF" /> estrutura que armazena as coordenadas X e Y de um ponto de 3D.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer ponto usado no desenho 3D personalizado — que é realizado usando GDI+ — devem ser transformados de X, Y e Z (3D) coordena em X e Y (2D) coordena usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método. Esse método usa uma matriz de <xref:System.Windows.Forms.DataVisualization.Charting.Point3D> objetos como seu único parâmetro. Chamando <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A>, os valores de propriedade X e Y são alterados para refletir o espaço de 3-dimensional.  
+  
+ Esses novos coordenadas X e Y são então convertidos em absoluto coordenadas, usando um método, como o <xref:System.Windows.Forms.DataVisualization.Charting.ChartGraphics.GetAbsolutePoint%2A> método. Depois de converter as coordenadas de <xref:System.Windows.Forms.DataVisualization.Charting.Point3D.PointF%2A> propriedade de cada objeto Point3D pode ser usada para qualquer método GDI+ levar uma <xref:System.Drawing.PointF> objeto como um parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="X">
+      <MemberSignature Language="C#" Value="public float X { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 X" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Point3D.X" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada X do ponto de 3D.</summary>
+        <value>Um <see langword="float" /> que representa a coordenada X do ponto de 3D.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer ponto usado no desenho 3D personalizado — que é realizado usando GDI+ — devem ser transformados de X, Y e Z (3D) coordena em X e Y (2D) coordena usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método. Esse método usa uma matriz de objetos Point3D como seu único parâmetro. Chamando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método, os valores de propriedade X e Y são alterados para refletir o espaço de 3-dimensional.  
+  
+ Esses novos X e Y coordenadas são então convertidos em absoluto coordenadas usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartGraphics.GetAbsolutePoint%2A> método. Eles são usados para chamadas de método GDI+.  
+  
+ Relativo coordenada X pode ser obtida de um valor do eixo ao chamar o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.ValueToPosition%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Y">
+      <MemberSignature Language="C#" Value="public float Y { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Y" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Point3D.Y" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada Y do ponto de 3D.</summary>
+        <value>Um <see langword="float" /> valor que representa a coordenada Y do ponto de 3D.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer ponto usado no desenho 3D personalizado — que é realizado usando GDI+ — devem ser transformados de X, Y e Z (3D) coordena em X e Y (2D) coordena usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método. Esse método usa uma matriz de objetos Point3D como seu único parâmetro. Chamando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método, os valores de propriedade X e Y são alterados para refletir o espaço de 3-dimensional.  
+  
+ Esses novos coordenadas X e Y são então convertidos em absoluto coordenadas usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartGraphics.GetAbsolutePoint%2A> método. Eles são usados para chamadas de método GDI+.  
+  
+ Uma coordenada Y relativa pode ser obtida de um valor de eixo usando o <xref:System.Windows.Forms.DataVisualization.Charting.Axis.ValueToPosition%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Z">
+      <MemberSignature Language="C#" Value="public float Z { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Z" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.Point3D.Z" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a coordenada Z de um ponto de 3D.</summary>
+        <value>A coordenada Z de um ponto de 3D, medido como uma porcentagem de profundidade da área do gráfico relevantes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade Z sempre é expressa como uma porcentagem de profundidade da área do gráfico relevantes. Com gráficos 3D, Z coordenadas são relativas e tem um valor de 0 a parede traseira da área do gráfico e um valor de 100 para a front parede da área do gráfico.  
+  
+ **Observação** propriedade Z este pode ser menor que zero (localizado atrás de uma área do gráfico) ou maior que 100 (localizado na frente de uma área do gráfico).  
+  
+ Qualquer ponto usado no desenho 3D personalizado — que é realizado usando GDI+ — devem ser transformados de X, Y e Z (3D) coordena em X e Y (2D) coordena usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método. Esse método usa uma matriz de objetos Point3D como seu único parâmetro. Chamando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.TransformPoints%2A> método, os valores de propriedade X e Y são alterados para refletir o espaço de 3-dimensional.  
+  
+ Esses novos coordenadas X e Y são então convertidos em absoluto coordenadas usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartGraphics.GetAbsolutePoint%2A> método. Eles são usados para chamadas de método GDI+.  
+  
+ Coordenadas relativas de Z podem ser obtidas para a série usando o <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.GetSeriesDepth%2A> e <xref:System.Windows.Forms.DataVisualization.Charting.ChartArea.GetSeriesZPosition%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

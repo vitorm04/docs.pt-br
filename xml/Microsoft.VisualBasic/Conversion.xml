@@ -1,0 +1,2136 @@
+<Type Name="Conversion" FullName="Microsoft.VisualBasic.Conversion">
+  <TypeSignature Language="C#" Value="public sealed class Conversion" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Conversion extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Conversion" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O módulo <see langword="Conversion" /> contém procedimentos usados para executar várias operações de conversão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este módulo oferece suporte a palavras-chave de linguagem Visual Basic e membros da biblioteca em tempo de execução que convertem números decimais em outras bases, números em cadeias de caracteres, cadeias de caracteres em números e dados de um tipo para outro.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CTypeDynamic">
+      <MemberSignature Language="C#" Value="public static object CTypeDynamic (object Expression, Type TargetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object CTypeDynamic(object Expression, class System.Type TargetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.CTypeDynamic(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+        <Parameter Name="TargetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">O objeto a ser convertido.</param>
+        <param name="TargetType">O tipo para o qual o objeto será convertido.</param>
+        <summary>Converte um objeto no tipo especificado.</summary>
+        <returns>Um objeto cujo tipo em tempo de execução é o tipo de destino solicitado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `CTypeDynamic` método converte o objeto passado como o `Expression` parâmetro para o tipo especificado pelo `TargetType` parâmetro. Se o objeto for um objeto dinâmico, o `CTypeDynamic` método se aplica a conversões dinâmicos disponíveis.  
+  
+ O `CTypeDynamic` método se aplica a conversões dinâmicos de acordo com a semântica de conversão definida pelo objeto em si. Se um objeto dinâmico herda de <xref:System.Dynamic.DynamicObject>, o `CTypeDynamic` método primeiro tenta executar a conversão usando uma conversão definida pelo usuário, estática. Se a conversão definida pelo usuário, estática falhar, o `CTypeDynamic` método tenta executar a conversão usando conversões dinâmicos. Se um objeto dinâmico implementa <xref:System.Dynamic.IDynamicMetaObjectProvider>, o `CTypeDynamic` método dá prioridade ao conversões dinâmicos sobre conversões definidas pelo usuário, estáticos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `CTypeDynamic` método para converter um objeto dinâmico para uma cadeia de caracteres usando a conversão definida pelo objeto dinâmico.  
+  
+```vb  
+Imports System.Dynamic  
+  
+Module Module1  
+    Sub Main()  
+        Dim dyn As Object = New SampleDynamicObject  
+        Dim sampleString = CTypeDynamic(dyn, GetType(String))  
+        Console.WriteLine(sampleString)  
+    End Sub  
+End Module  
+  
+Class SampleDynamicObject  
+    Inherits DynamicObject  
+  
+    Public Overrides Function TryConvert(ByVal binder As ConvertBinder,  
+                                         ByRef result As Object) As Boolean  
+  
+        If binder.Type = GetType(String) Then  
+            result = "Sample String"  
+            Return True  
+        End If  
+  
+        Return False  
+    End Function  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CTypeDynamic&lt;TargetType&gt;">
+      <MemberSignature Language="C#" Value="public static TargetType CTypeDynamic&lt;TargetType&gt; (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static !!TargetType CTypeDynamic&lt;TargetType&gt;(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.CTypeDynamic``1(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TargetType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TargetType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TargetType">O tipo para o qual o objeto será convertido.</typeparam>
+        <param name="Expression">O objeto a ser convertido.</param>
+        <summary>Converte um objeto no tipo genérico especificado.</summary>
+        <returns>Um objeto digitalmente tipado como o tipo genérico solicitado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `CTypeDynamic` método converte o objeto passado como o `Expression` parâmetro para o tipo especificado pelo tipo do parâmetro genérico. Se o objeto for um objeto dinâmico, o `CTypeDynamic` método se aplica a conversões dinâmicos disponíveis.  
+  
+ O `CTypeDynamic` método se aplica a conversões dinâmicos de acordo com a semântica de conversão definida pelo objeto em si. Se um objeto dinâmico herda de <xref:System.Dynamic.DynamicObject>, o `CTypeDynamic` método primeiro tenta executar a conversão usando uma conversão definida pelo usuário, estática. Se a conversão definida pelo usuário, estática falhar, o `CTypeDynamic` método tenta executar a conversão usando conversões dinâmicos. Se um objeto dinâmico implementa <xref:System.Dynamic.IDynamicMetaObjectProvider>, o `CTypeDynamic` método dá prioridade ao conversões dinâmicos sobre conversões definidas pelo usuário, estáticos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `CTypeDynamic` método para converter um objeto dinâmico para uma cadeia de caracteres usando a conversão definida pelo objeto dinâmico.  
+  
+```vb  
+Imports System.Dynamic  
+  
+Module Module1  
+    Sub Main()  
+        Dim dyn As Object = New SampleDynamicObject  
+        Dim str = CTypeDynamic(Of String)(dyn)  
+        Console.WriteLine(str)  
+    End Sub  
+End Module  
+  
+Class SampleDynamicObject  
+    Inherits DynamicObject  
+  
+    Public Overrides Function TryConvert(ByVal binder As ConvertBinder,  
+                                         ByRef result As Object) As Boolean  
+  
+        If binder.Type = GetType(String) Then  
+            result = "Sample String"  
+            Return True  
+        End If  
+  
+        Return False  
+    End Function  
+End Class  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorToString">
+      <MemberSignature Language="C#" Value="public static string ErrorToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static string ErrorToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.ErrorToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a mensagem de erro que corresponde a um número de erro especificado.</summary>
+        <returns>A mensagem de erro que corresponde ao erro em tempo de execução mais recente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `ErrorToString` função examina as configurações de propriedade do `Err` objeto para identificar o erro em tempo de execução mais recente. O valor de retorno a `ErrorToString` função corresponde ao `Description` propriedade o `Err` objeto. Se nenhum erro de tempo de execução ocorreu, `ErrorToString` retorna uma cadeia de caracteres de comprimento zero ("").  
+  
+ No Visual Basic versão 6.0 e versões anteriores, essa funcionalidade foi fornecida pelo `Error` função.  
+  
+   
+  
+## Examples  
+ O código a seguir usa o `ErrorToString` função para exibir mensagens de erro que correspondem aos números de erro especificado.  
+  
+ [!code-vb[VbVbalrCatRef#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ErrorNumber" /> está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorToString">
+      <MemberSignature Language="C#" Value="public static string ErrorToString (int ErrorNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string ErrorToString(int32 ErrorNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.ErrorToString(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ErrorNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ErrorNumber">Opcional. Qualquer número de erro válido.</param>
+        <summary>Retorna a mensagem de erro que corresponde a um número de erro especificado.</summary>
+        <returns>A mensagem de erro que corresponde a um determinado número de erro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `ErrorToString` função examina as configurações de propriedade do `Err` objeto para identificar o erro em tempo de execução mais recente. O valor de retorno a `ErrorToString` função corresponde ao `Description` propriedade o `Err` objeto. Se `ErrorNumber` é um número de erro válido, mas não está definido, `ErrorToString` retorna a cadeia de caracteres `"Application-defined or object-defined error."` se `ErrorNumber` não é válido, ocorrerá um erro. Se `ErrorNumber` for omitido, a mensagem correspondente o mais recente será retornado o erro de tempo de execução. Se nenhum erro de tempo de execução ou `ErrorNumber` é 0, `ErrorToString` retorna uma cadeia de caracteres de comprimento zero ("").  
+  
+ No Visual Basic versão 6.0 e versões anteriores, essa funcionalidade foi fornecida pelo `Error` função.  
+  
+   
+  
+## Examples  
+ O código a seguir usa o `ErrorToString` função para exibir mensagens de erro que correspondem aos números de erro especificado.  
+  
+ [!code-vb[VbVbalrCatRef#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="ErrorNumber" /> está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fix">
+      <MemberSignature Language="C#" Value="public static decimal Fix (decimal Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal Fix(valuetype System.Decimal Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Fix(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fix">
+      <MemberSignature Language="C#" Value="public static double Fix (double Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Fix(float64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Fix(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fix">
+      <MemberSignature Language="C#" Value="public static short Fix (short Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int16 Fix(int16 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Fix(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fix">
+      <MemberSignature Language="C#" Value="public static int Fix (int Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Fix(int32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Fix(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fix">
+      <MemberSignature Language="C#" Value="public static long Fix (long Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int64 Fix(int64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Fix(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fix">
+      <MemberSignature Language="C#" Value="public static object Fix (object Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object Fix(object Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Fix(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Fix">
+      <MemberSignature Language="C#" Value="public static float Fix (float Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 Fix(float32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Fix(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (byte Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(unsigned int8 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (short Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(int16 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (int Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(int32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (long Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(int64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (object Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(object Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (sbyte Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(int8 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.SByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Hex(System.Byte)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (ushort Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(unsigned int16 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Hex(System.Int16)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (uint Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(unsigned int32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Hex(System.Int32)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Hex">
+      <MemberSignature Language="C#" Value="public static string Hex (ulong Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Hex(unsigned int64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Hex(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor hexadecimal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se `Number` é|Hex retornará|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer valor numérico|Até dezesseis caracteres hexadecimais|  
+  
+ Você pode representar números hexadecimais diretamente precedendo números no intervalo adequado com `&H`. Por exemplo, `&H10` representa decimal 16 em notação hexadecimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Hex` função para retornar o valor hexadecimal de um número.  
+  
+ [!code-vb[VbVbalrStrings#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#16)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Hex(System.Int64)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="public static decimal Int (decimal Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype System.Decimal Int(valuetype System.Decimal Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Int(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="public static double Int (double Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Int(float64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Int(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="public static short Int (short Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int16 Int(int16 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Int(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="public static int Int (int Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Int(int32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Int(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="public static long Int (long Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int64 Int(int64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Int(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="public static object Int (object Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object Int(object Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Int(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Int">
+      <MemberSignature Language="C#" Value="public static float Int (float Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float32 Int(float32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Int(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um número do tipo <see langword="Double" /> ou qualquer expressão numérica válida. Se <c>número</c> contém <see langword="Nothing" />, <see langword="Nothing" /> será retornado.</param>
+        <summary>Retorna a parte inteira de um número.</summary>
+        <returns>Retorna a parte inteira de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tanto o `Int` e `Fix` funções removem a parte fracionária `Number` e retornar o valor inteiro resultante.  
+  
+ A diferença entre `Int` e `Fix` funciona é que, se `Number` for negativo, `Int` retorna o primeiro inteiro negativo menor ou igual a `Number`, enquanto `Fix` retorna o primeiro inteiro negativo maior ou igual a `Number`. Por exemplo, `Int` converte-8,4 para -9, e `Fix` converte-8,4 para -8.  
+  
+ `Fix(number)` equivale a `Sign(number) * Int(Abs(number)).`  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra como o `Int` e `Fix` funções retornam partes inteiras de números. No caso de um argumento de número negativo, o `Int` função retorna o primeiro inteiro negativo menor ou igual ao número; o `Fix` função retorna o primeiro inteiro negativo maior ou igual ao número. O exemplo a seguir exige que você especifique `Option Strict Off` porque conversões implícitas de tipo `Double` digitar `Integer` não são permitidas em `Option Strict On`:  
+  
+ [!code-vb[VbVbalrMath#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class2.vb#4)]  
+  
+ Você pode usar o `CInt` função para converter explicitamente outros tipos de dados para o tipo `Integer` com `Option Strict Off`. No entanto, `CInt` é arredondado para o inteiro mais próximo, em vez de truncar a parte fracionária do número. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#5)]  
+  
+ Você pode usar o `CInt` função no resultado de uma chamada para `Fix` ou `Int` para executar uma conversão explícita para inteiro sem arredondamento. Por exemplo:  
+  
+ [!code-vb[VbVbalrMath#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMath/VB/Class1.vb#6)]  
+  
+ Para obter mais informações sobre `CInt`, consulte [funções de conversão de tipo](~/docs/visual-basic/language-reference/functions/type-conversion-functions.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O número não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">O número não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (byte Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(unsigned int8 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (short Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(int16 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (int Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(int32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (long Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(int64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (object Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(object Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (sbyte Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(int8 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.SByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Oct(System.Byte)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (ushort Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(unsigned int16 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Oct(System.Int16)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (uint Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(unsigned int32 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Oct(System.Int32)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Oct">
+      <MemberSignature Language="C#" Value="public static string Oct (ulong Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Oct(unsigned int64 Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Oct(System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Qualquer expressão numérica válida ou expressão <see langword="String" />.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o valor octal de um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o valor octal de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Number` já não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+|Se o número for|Retornos OCT|  
+|-|-|  
+|Vazio|Zero (0)|  
+|Qualquer outro número|Até 22 caracteres octais|  
+  
+ É possível representar números octais diretamente precedendo números no intervalo adequado com `&O`. Por exemplo, `&O10` é a notação octal para 8 decimal.  
+  
+   
+  
+## Examples  
+ Este exemplo usa a função `Oct` para retornar o valor octal de um número.  
+  
+ [!code-vb[VbVbalrStrings#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="M:Microsoft.VisualBasic.Conversion.Oct(System.Int64)" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Str">
+      <MemberSignature Language="C#" Value="public static string Str (object Number);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Str(object Number) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Str(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. Um <see langword="Object" /> contendo qualquer expressão numérica válida.</param>
+        <summary>Retorna uma representação <see langword="String" /> de um número.</summary>
+        <returns>Retorna uma representação <see langword="String" /> de um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando os números são convertidos em cadeias de caracteres, um espaço à esquerda é sempre reservado para o sinal de `Number`. Se `Number` for positivo, a cadeia de caracteres retornada contém um espaço à esquerda e o sinal de adição é inferido. Um número negativo incluirá o sinal de subtração (-) e não há espaço à esquerda.  
+  
+ Use o `Format` function para converter valores numéricos que você deseja formatados como datas, horas ou moeda ou em outros formatos definidos pelo usuário. Ao contrário de `Str` função, o `Format` função não inclui um espaço à esquerda para o sinal de `Number`.  
+  
+> [!NOTE]
+>  O `Str` função reconhece somente o ponto (`.`) como um separador decimal válido. Se separadores decimais diferentes forem usados (por exemplo, em aplicativos internacionais), use o `CStr` ou `Format` funções para converter um número em uma cadeia de caracteres. Para obter a representação de cadeia de caracteres de um número em uma cultura específica, use o número `ToString(IFormatProvider)` método. Por exemplo, use <xref:System.Double.ToString%2A> ao converter um valor do tipo `Double` para uma cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Str` função para retornar um `String` representação de um número. Quando um número positivo é convertido em uma cadeia de caracteres, um espaço à esquerda é sempre reservado para o sinal.  
+  
+ [!code-vb[VbVbalrStrings#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="Number" /> não está especificado.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="Number" /> não é um tipo numérico.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Val">
+      <MemberSignature Language="C#" Value="public static int Val (char Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Val(char Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Val(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Qualquer expressão <see langword="String" /> válida, variável <see langword="Object" /> ou valor <see langword="Char" />. Se <c>expressão</c> é do tipo <see langword="Object" />, seu valor deve ser conversível em <see langword="String" /> ou um <see cref="T:System.ArgumentException" /> erro ocorre.</param>
+        <summary>Retorna os números contidos em uma cadeia de caracteres como um valor numérico do tipo apropriado.</summary>
+        <returns>Retorna os números contidos em uma cadeia de caracteres como um valor numérico do tipo apropriado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Val` função deixa de ler a cadeia de caracteres no primeiro caractere que não reconhece como parte de um número. Símbolos e caracteres que normalmente são considerados como partes de valores numéricos, como cifrões e vírgulas, não são reconhecidos. No entanto, a função reconhece os prefixos `&O` (para octal) e `&H` (para hexadecimal). Espaços em branco, tabulações e caracteres de alimentação de linha são removidos do argumento.  
+  
+ A chamada a seguir retorna o valor 1615198.  
+  
+```  
+  
+Val(" 1615 198th Street N.E.")   
+```  
+  
+ A chamada a seguir retorna o valor decimal -1.  
+  
+```  
+  
+Val("&HFFFF")   
+```  
+  
+> [!NOTE]
+>  O `Val` função reconhece somente o ponto (`.`) como um separador decimal válido. Quando separadores decimais diferentes forem usados, como em aplicativos internacionais, use `CDbl` ou `CInt` em vez disso, para converter uma cadeia de caracteres em um número. Para converter a representação de cadeia de caracteres de um número em uma cultura específica para um valor numérico, use o tipo numérico `Parse(String, IFormatProvider)` método. Por exemplo, use <xref:System.Double.Parse%2A?displayProperty=nameWithType> ao converter uma cadeia de caracteres para um `Double`.  
+  
+> [!NOTE]
+>  Um <xref:System.InvalidCastException> exceção pode ser gerada em resposta a determinados formatos de número incomuns. Por exemplo, o código a seguir gera essa exceção.  
+>   
+>  `' These examples cause run-time errors.`  
+>   
+>  `'Console.WriteLine(Val("1.34%"))`  
+>   
+>  `'Console.WriteLine(Val("1.34&"))`  
+>   
+>  O conflito entre o número formatado como um `Double` e `Integer` e `Long` caracteres de tipo deve ser capturados pelo compilador se ele não estava contido em uma cadeia de caracteres.  
+>   
+>  `' These examples cause compiler errors.`  
+>   
+>  `'Dim m = 1.34%`  
+>   
+>  `'Dim n = 1.34&`  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `Val` função para retornar os números contidos em cada cadeia de caracteres. `Val`Interrompe a conversão no primeiro caractere que não pode ser interpretado como um dígito numérico, modificador de número, pontuação numérica ou espaço em branco.  
+  
+ [!code-vb[VbVbalrFunctions#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">
+          <paramref name="InputStr" /> é muito grande.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Expression" /> é uma expressão de tipo <see langword="Object" /> não conversível para <see langword="String" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Val">
+      <MemberSignature Language="C#" Value="public static double Val (object Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Val(object Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Val(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Qualquer expressão <see langword="String" /> válida, variável <see langword="Object" /> ou valor <see langword="Char" />. Se <c>expressão</c> é do tipo <see langword="Object" />, seu valor deve ser conversível em <see langword="String" /> ou um <see cref="T:System.ArgumentException" /> erro ocorre.</param>
+        <summary>Retorna os números contidos em uma cadeia de caracteres como um valor numérico do tipo apropriado.</summary>
+        <returns>Retorna os números contidos em uma cadeia de caracteres como um valor numérico do tipo apropriado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Val` função deixa de ler a cadeia de caracteres no primeiro caractere que não reconhece como parte de um número. Símbolos e caracteres que normalmente são considerados como partes de valores numéricos, como cifrões e vírgulas, não são reconhecidos. No entanto, a função reconhece os prefixos `&O` (para octal) e `&H` (para hexadecimal). Espaços em branco, tabulações e caracteres de alimentação de linha são removidos do argumento.  
+  
+ A chamada a seguir retorna o valor 1234123.  
+  
+```  
+  
+Val(" 1234 123th Street N.E.")   
+```  
+  
+ A chamada a seguir retorna o valor decimal -1.  
+  
+```  
+  
+Val("&HFFFF")   
+```  
+  
+> [!NOTE]
+>  O `Val` função reconhece somente o ponto (`.`) como um separador decimal válido. Quando outros separadores decimais forem usados, como em aplicativos internacionais, use `CDbl` ou `CInt` em vez disso, para converter uma cadeia de caracteres em um número. Para converter a representação de cadeia de caracteres de um número em uma cultura específica para um valor numérico, use o tipo numérico `Parse(String, IFormatProvider)` método. Por exemplo, use <xref:System.Double.Parse%2A?displayProperty=nameWithType> ao converter uma cadeia de caracteres para um `Double`.  
+  
+> [!NOTE]
+>  Um <xref:System.InvalidCastException> exceção pode ser gerada em resposta a determinados formatos de número incomuns. Por exemplo, o código a seguir gera essa exceção.  
+>   
+>  `' These examples cause run-time errors.`  
+>   
+>  `'Console.WriteLine(Val("1.34%"))`  
+>   
+>  `'Console.WriteLine(Val("1.34&"))`  
+>   
+>  O conflito entre o número formatado como um `Double` e `Integer` e `Long` caracteres de tipo deve ser capturados pelo compilador se o conflito não estava contido em cadeias de caracteres.  
+>   
+>  `' These examples cause compiler errors.`  
+>   
+>  `'Dim m = 1.34%`  
+>   
+>  `'Dim n = 1.34&`  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `Val` função para retornar os números contidos em cada cadeia de caracteres. `Val`Interrompe a conversão no primeiro caractere que não pode ser interpretado como um dígito numérico, modificador de número, pontuação numérica ou espaço em branco.  
+  
+ [!code-vb[VbVbalrFunctions#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">
+          <paramref name="InputStr" /> é muito grande.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Expression" /> é uma expressão de tipo <see langword="Object" /> não conversível para <see langword="String" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Val">
+      <MemberSignature Language="C#" Value="public static double Val (string InputStr);" />
+      <MemberSignature Language="ILAsm" Value=".method public static float64 Val(string InputStr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Conversion.Val(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="InputStr" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="InputStr">Necessário. Qualquer expressão <see langword="String" /> válida, variável <see langword="Object" /> ou valor <see langword="Char" />. Se <c>expressão</c> é do tipo <see langword="Object" />, seu valor deve ser conversível em <see langword="String" /> ou um <see cref="T:System.ArgumentException" /> erro ocorre.</param>
+        <summary>Retorna os números contidos em uma cadeia de caracteres como um valor numérico do tipo apropriado.</summary>
+        <returns>Retorna os números contidos em uma cadeia de caracteres como um valor numérico do tipo apropriado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Val` função deixa de ler a cadeia de caracteres no primeiro caractere que não reconhece como parte de um número. Símbolos e caracteres que normalmente são considerados como partes de valores numéricos, como cifrões e vírgulas, não são reconhecidos. No entanto, a função reconhece os prefixos `&O` (para octal) e `&H` (para hexadecimal). Espaços em branco, tabulações e caracteres de alimentação de linha são removidos do argumento.  
+  
+ A chamada a seguir retorna o valor 1234123.  
+  
+```  
+  
+Val(" 1234 123th Street N.E.")   
+```  
+  
+ A chamada a seguir retorna o valor decimal -1.  
+  
+```  
+  
+Val("&HFFFF")   
+```  
+  
+> [!NOTE]
+>  O `Val` função reconhece somente o ponto (`.`) como um separador decimal válido. Quando outros separadores decimais forem usados, como em aplicativos internacionais, use `CDbl` ou `CInt` em vez disso, para converter uma cadeia de caracteres em um número. Para converter a representação de cadeia de caracteres de um número em uma cultura específica para um valor numérico, use o tipo numérico `Parse(String, IFormatProvider)` método. Por exemplo, use <xref:System.Double.Parse%2A?displayProperty=nameWithType> ao converter uma cadeia de caracteres para um `Double`.  
+  
+> [!NOTE]
+>  Um <xref:System.InvalidCastException> exceção pode ser gerada em resposta a determinados formatos de número incomuns. Por exemplo, o código a seguir gera essa exceção.  
+>   
+>  `' These examples cause run-time errors.`  
+>   
+>  `'Console.WriteLine(Val("1.34%"))`  
+>   
+>  `'Console.WriteLine(Val("1.34&"))`  
+>   
+>  O conflito entre o número formatado como um `Double` e `Integer` e `Long` caracteres de tipo deve ser capturados pelo compilador se o conflito não estava contido em cadeias de caracteres.  
+>   
+>  `' These examples cause compiler errors.`  
+>   
+>  `'Dim m = 1.34%`  
+>   
+>  `'Dim n = 1.34&`  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `Val` função para retornar os números contidos em cada cadeia de caracteres. `Val`Interrompe a conversão no primeiro caractere que não pode ser interpretado como um dígito numérico, modificador de número, pontuação numérica ou espaço em branco.  
+  
+ [!code-vb[VbVbalrFunctions#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#54)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.OverflowException">
+          <paramref name="InputStr" /> é muito grande.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Expression" /> é uma expressão de tipo <see langword="Object" /> não conversível para <see langword="String" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

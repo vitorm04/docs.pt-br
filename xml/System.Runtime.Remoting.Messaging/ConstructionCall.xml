@@ -1,0 +1,247 @@
+<Type Name="ConstructionCall" FullName="System.Runtime.Remoting.Messaging.ConstructionCall">
+  <TypeSignature Language="C#" Value="public class ConstructionCall : System.Runtime.Remoting.Messaging.MethodCall, System.Runtime.Remoting.Activation.IConstructionCallMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ConstructionCall extends System.Runtime.Remoting.Messaging.MethodCall implements class System.Runtime.Remoting.Activation.IConstructionCallMessage, class System.Runtime.Remoting.Messaging.IMessage, class System.Runtime.Remoting.Messaging.IMethodCallMessage, class System.Runtime.Remoting.Messaging.IMethodMessage" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.ConstructionCall" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Messaging.MethodCall</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Runtime.Remoting.Activation.IConstructionCallMessage</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.CLSCompliant(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa o <see cref="T:System.Runtime.Remoting.Activation.IConstructionCallMessage" /> interface para criar uma mensagem de solicitação que constitui uma chamada de construtor em um objeto remoto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.ConstructionCall> classe é usada pela infraestrutura de comunicação remota do .NET Framework. Você não precisa criar uma instância do <xref:System.Runtime.Remoting.Messaging.ConstructionCall> classe diretamente; em vez disso, use o <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage> interface.  
+  
+ Um cliente de comunicação remota envia um <xref:System.Runtime.Remoting.Messaging.ConstructionCall> mensagem para um servidor ao tentar criar uma instância de uma classe remota ativado pelo cliente.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstructionCall (System.Runtime.Remoting.Messaging.Header[] headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Remoting.Messaging.Header[] headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.ConstructionCall.#ctor(System.Runtime.Remoting.Messaging.Header[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Runtime.Remoting.Messaging.Header[]" />
+      </Parameters>
+      <Docs>
+        <param name="headers">Uma matriz de cabeçalhos de comunicação remota que contém pares chave-valor. Esta matriz é usada para inicializar <see cref="T:System.Runtime.Remoting.Messaging.ConstructionCall" /> campos para os cabeçalhos que pertencem ao namespace "http://schemas.microsoft.com/clr/soap/messageProperties".</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Messaging.ConstructionCall" /> classe de uma matriz de cabeçalhos de comunicação remota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.ConstructionCall> classe é usada pela infraestrutura de comunicação remota do .NET Framework. Você não precisa criar uma instância do <xref:System.Runtime.Remoting.Messaging.ConstructionCall> classe diretamente; em vez disso, use o <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage> interface.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConstructionCall (System.Runtime.Remoting.Messaging.IMessage m);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Remoting.Messaging.IMessage m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.ConstructionCall.#ctor(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="m" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="m">Uma mensagem de comunicação remota.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Remoting.Messaging.ConstructionCall" /> classe copiando uma mensagem existente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.ConstructionCall> classe é usada pela infraestrutura de comunicação remota do .NET Framework. Você não precisa criar uma instância do <xref:System.Runtime.Remoting.Messaging.ConstructionCall> classe diretamente; em vez disso, use o <xref:System.Runtime.Remoting.Activation.IConstructionCallMessage> interface.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ActivationType">
+      <MemberSignature Language="C#" Value="public Type ActivationType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ActivationType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.ConstructionCall.ActivationType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do objeto remoto para ativar.</summary>
+        <value>O <see cref="T:System.Type" /> do objeto remoto para ativar.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ActivationTypeName">
+      <MemberSignature Language="C#" Value="public string ActivationTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActivationTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.ConstructionCall.ActivationTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo completo do objeto remoto para ativar.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome de tipo completo do objeto remoto para ativar.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Activator">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Activation.IActivator Activator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Remoting.Activation.IActivator Activator" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.ConstructionCall.Activator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Activation.IActivator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o ativador que ativa o objeto remoto.</summary>
+        <value>O <see cref="T:System.Runtime.Remoting.Activation.IActivator" /> que ativa o objeto remoto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="CallSiteActivationAttributes">
+      <MemberSignature Language="C#" Value="public object[] CallSiteActivationAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] CallSiteActivationAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.ConstructionCall.CallSiteActivationAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chamada de atributos de ativação do site para o objeto remoto.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.Object" /> que contém os atributos de ativação do site de chamada para o objeto remoto.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ContextProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.IList ContextProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IList ContextProperties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.ConstructionCall.ContextProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de propriedades que definem o contexto no qual o objeto remoto é a ser criado.</summary>
+        <value>Um <see cref="T:System.Collections.IList" /> que contém uma lista de propriedades que definem o contexto no qual o objeto remoto é a ser criado.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.ConstructionCall.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public override System.Collections.IDictionary Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Messaging.ConstructionCall.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> interface que representa uma coleção de propriedades da mensagem de comunicação remota.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> interface que representa uma coleção de propriedades da mensagem de comunicação remota.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.ConstructionCall.Properties%2A> propriedade retorna o valor da herdadas <xref:System.Runtime.Remoting.Messaging.MethodCall.ExternalProperties> campo.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

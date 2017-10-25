@@ -1,0 +1,55 @@
+<Type Name="OutputAttribute" FullName="Microsoft.Build.Framework.OutputAttribute">
+  <TypeSignature Language="C#" Value="public sealed class OutputAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OutputAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.OutputAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o atributo de metadados que os autores de tarefa usam para identificar as propriedades de tarefa que a saída de dados da tarefa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[vstecmsbuild](~/includes/vstecmsbuild-md.md)] mecanismo permitirá que apenas as propriedades da tarefa marcadas com esse atributo para dados de saída de uma tarefa. Os autores de projeto só podem usar as propriedades marcadas com esse atributo no `Output` elemento de um arquivo de projeto. Todas as outras propriedades de tarefa são tratadas como entradas para uma tarefa.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [Estendendo metadados usando atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o código de uma tarefa que cria um ou mais diretórios.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OutputAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.OutputAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Framework.OutputAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

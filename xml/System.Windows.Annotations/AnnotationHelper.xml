@@ -1,0 +1,296 @@
+<Type Name="AnnotationHelper" FullName="System.Windows.Annotations.AnnotationHelper">
+  <TypeSignature Language="C#" Value="public static class AnnotationHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AnnotationHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.AnnotationHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos de utilitário e comandos para criar e excluir anotações de nota de texto, nota de tinta e realce.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearHighlightsForSelection">
+      <MemberSignature Language="C#" Value="public static void ClearHighlightsForSelection (System.Windows.Annotations.AnnotationService service);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearHighlightsForSelection(class System.Windows.Annotations.AnnotationService service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationHelper.ClearHighlightsForSelection(System.Windows.Annotations.AnnotationService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Windows.Annotations.AnnotationService" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de anotação do qual remover realce anotações.</param>
+        <summary>Realce de limpa todas as anotações na seleção atual do controle visualizador associado a determinado <see cref="T:System.Windows.Annotations.AnnotationService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a seleção atual do visualizador tem comprimento zero ou não se sobreponha a qualquer anotação de realces, <xref:System.Windows.Annotations.AnnotationHelper.ClearHighlightsForSelection%2A> não executa nenhuma operação.  
+  
+ Se a seleção atual do visualizador se sobrepõe a um realce apenas parcialmente, somente a parte do que se sobrepõe a seleção é desmarcada e a parte não selecionada do realce anotação permanece.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="service" />não está habilitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHighlightForSelection">
+      <MemberSignature Language="C#" Value="public static System.Windows.Annotations.Annotation CreateHighlightForSelection (System.Windows.Annotations.AnnotationService service, string author, System.Windows.Media.Brush highlightBrush);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Annotations.Annotation CreateHighlightForSelection(class System.Windows.Annotations.AnnotationService service, string author, class System.Windows.Media.Brush highlightBrush) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationHelper.CreateHighlightForSelection(System.Windows.Annotations.AnnotationService,System.String,System.Windows.Media.Brush)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Windows.Annotations.AnnotationService" />
+        <Parameter Name="author" Type="System.String" />
+        <Parameter Name="highlightBrush" Type="System.Windows.Media.Brush" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de anotação a ser usado para criar a anotação de realce.</param>
+        <param name="author">O autor da anotação.</param>
+        <param name="highlightBrush">O pincel usado para desenhar o realce sobre o conteúdo selecionado.</param>
+        <summary>Cria uma anotação de realce na seleção atual do controle visualizador associado ao <see cref="T:System.Windows.Annotations.AnnotationService" />.</summary>
+        <returns>A anotação de realce; ou <see langword="null" />, se não houver nenhum conteúdo selecionado para realçar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A anotação de realce está ancorada conteúdo definido na seleção atual do <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, ou <xref:System.Windows.Controls.FlowDocumentReader> controle especificado para o <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> construtor.  
+  
+ Se não houver nenhum conteúdo selecionado (o comprimento de seleção tem comprimento zero), nenhuma anotação é criada e um <xref:System.InvalidOperationException> é gerada.  
+  
+ `author`pode ser especificado como `null` caso em que nenhum autor está definido.  
+  
+ Se `highlightBrush` é `null`, o padrão realçar pincel da anotação determinada `service` é usado.  
+  
+ A anotação determinada `service` deve ser habilitado por meio de uma chamada para <xref:System.Windows.Annotations.AnnotationService.Enable%2A?displayProperty=nameWithType> antes de chamar <xref:System.Windows.Annotations.AnnotationHelper.CreateHighlightForSelection%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="service" />não está habilitado.  
+  
+ -ou-  
+  
+ <paramref name="highlightBrush" />não em um <see cref="T:System.Windows.Media.SolidColorBrush" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O controle do visualizador não contém nenhuma seleção de conteúdo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInkStickyNoteForSelection">
+      <MemberSignature Language="C#" Value="public static System.Windows.Annotations.Annotation CreateInkStickyNoteForSelection (System.Windows.Annotations.AnnotationService service, string author);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Annotations.Annotation CreateInkStickyNoteForSelection(class System.Windows.Annotations.AnnotationService service, string author) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationHelper.CreateInkStickyNoteForSelection(System.Windows.Annotations.AnnotationService,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Windows.Annotations.AnnotationService" />
+        <Parameter Name="author" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de anotação a ser usado para criar a anotação de nota de tinta.</param>
+        <param name="author">O autor da anotação.</param>
+        <summary>Cria uma anotação de nota na seleção atual do controle visualizador associada com especificado de tinta <see cref="T:System.Windows.Annotations.AnnotationService" />...</summary>
+        <returns>A anotação de nota tinta; ou <see langword="null" />, se não houver nenhum conteúdo selecionado para anotar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A anotação de nota de tinta é ancorada a conteúdo definido na seleção atual do <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, ou <xref:System.Windows.Controls.FlowDocumentReader> controle especificado para o <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> construtor.  
+  
+ Se não houver nenhum conteúdo selecionados pelo usuário (o comprimento de seleção tem comprimento zero), nenhuma anotação é criada e um <xref:System.InvalidOperationException> é gerada.  
+  
+ `author`pode ser especificado como `null` caso em que nenhum autor está definido.  
+  
+ A anotação determinada `service` deve ser habilitado por meio de uma chamada para <xref:System.Windows.Annotations.AnnotationService.Enable%2A?displayProperty=nameWithType> antes de chamar <xref:System.Windows.Annotations.AnnotationHelper.CreateInkStickyNoteForSelection%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="service" />não está habilitado.</exception>
+        <exception cref="T:System.InvalidOperationException">O controle do visualizador não contém nenhuma seleção de conteúdo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTextStickyNoteForSelection">
+      <MemberSignature Language="C#" Value="public static System.Windows.Annotations.Annotation CreateTextStickyNoteForSelection (System.Windows.Annotations.AnnotationService service, string author);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Annotations.Annotation CreateTextStickyNoteForSelection(class System.Windows.Annotations.AnnotationService service, string author) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationHelper.CreateTextStickyNoteForSelection(System.Windows.Annotations.AnnotationService,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Windows.Annotations.AnnotationService" />
+        <Parameter Name="author" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de anotação a ser usado para criar a anotação de nota de texto.</param>
+        <param name="author">O autor da anotação.</param>
+        <summary>Cria um texto de anotação de nota na seleção atual do controle do visualizador associada a <see cref="T:System.Windows.Annotations.AnnotationService" />.</summary>
+        <returns>A anotação de nota de texto; ou <see langword="null" />, se não houver nenhum conteúdo selecionado para anotar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A anotação de nota de texto está ancorada conteúdo definido na seleção atual do <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, <xref:System.Windows.Controls.DocumentViewer>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.FlowDocumentScrollViewer>, ou <xref:System.Windows.Controls.FlowDocumentReader> controle especificado para o <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> construtor.  
+  
+ Se não houver nenhum conteúdo selecionados pelo usuário (o comprimento de seleção tem comprimento zero), nenhuma anotação é criada e um <xref:System.InvalidOperationException> é gerada.  
+  
+ `author`pode ser especificado como `null` caso em que nenhum autor está definido.  
+  
+ A anotação determinada `service` deve ser habilitado por meio de uma chamada para <xref:System.Windows.Annotations.AnnotationService.Enable%2A?displayProperty=nameWithType> antes de chamar <xref:System.Windows.Annotations.AnnotationHelper.CreateTextStickyNoteForSelection%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="service" />não está habilitado.</exception>
+        <exception cref="T:System.InvalidOperationException">O controle do visualizador não contém nenhuma seleção de conteúdo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteInkStickyNotesForSelection">
+      <MemberSignature Language="C#" Value="public static void DeleteInkStickyNotesForSelection (System.Windows.Annotations.AnnotationService service);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteInkStickyNotesForSelection(class System.Windows.Annotations.AnnotationService service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationHelper.DeleteInkStickyNotesForSelection(System.Windows.Annotations.AnnotationService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Windows.Annotations.AnnotationService" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de anotação da qual excluir anotações de nota.</param>
+        <summary>Exclui tinta anotações nota totalmente contidos dentro da seleção atual do controle visualizador associadas a determinado <see cref="T:System.Windows.Annotations.AnnotationService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle do visualizador associado com o <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> não contém nenhum usuário seleção ou a seleção do usuário não totalmente tem quaisquer anotações de nota, <xref:System.Windows.Annotations.AnnotationHelper.DeleteInkStickyNotesForSelection%2A> não executa nenhuma operação.  
+  
+ A anotação determinada `service` deve ser habilitado por meio de uma chamada para <xref:System.Windows.Annotations.AnnotationService.Enable%2A?displayProperty=nameWithType> antes de chamar <xref:System.Windows.Annotations.AnnotationHelper.DeleteInkStickyNotesForSelection%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="service" />não está habilitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTextStickyNotesForSelection">
+      <MemberSignature Language="C#" Value="public static void DeleteTextStickyNotesForSelection (System.Windows.Annotations.AnnotationService service);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeleteTextStickyNotesForSelection(class System.Windows.Annotations.AnnotationService service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationHelper.DeleteTextStickyNotesForSelection(System.Windows.Annotations.AnnotationService)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Windows.Annotations.AnnotationService" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de anotação da qual excluir anotações de nota de texto.</param>
+        <summary>Exclui texto anotações nota totalmente contidos dentro da seleção atual do controle visualizador associadas a determinado <see cref="T:System.Windows.Annotations.AnnotationService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle do visualizador associado com o <xref:System.Windows.Annotations.AnnotationService.%23ctor%2A> não contém nenhum usuário seleção ou a seleção do usuário não totalmente tem quaisquer anotações de nota de texto, <xref:System.Windows.Annotations.AnnotationHelper.DeleteTextStickyNotesForSelection%2A> não executa nenhuma operação.  
+  
+ A anotação determinada `service` deve ser habilitado por meio de uma chamada para <xref:System.Windows.Annotations.AnnotationService.Enable%2A?displayProperty=nameWithType> antes de chamar <xref:System.Windows.Annotations.AnnotationHelper.DeleteTextStickyNotesForSelection%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="service" />não está habilitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnchorInfo">
+      <MemberSignature Language="C#" Value="public static System.Windows.Annotations.IAnchorInfo GetAnchorInfo (System.Windows.Annotations.AnnotationService service, System.Windows.Annotations.Annotation annotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Windows.Annotations.IAnchorInfo GetAnchorInfo(class System.Windows.Annotations.AnnotationService service, class System.Windows.Annotations.Annotation annotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.AnnotationHelper.GetAnchorInfo(System.Windows.Annotations.AnnotationService,System.Windows.Annotations.Annotation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.IAnchorInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Windows.Annotations.AnnotationService" />
+        <Parameter Name="annotation" Type="System.Windows.Annotations.Annotation" />
+      </Parameters>
+      <Docs>
+        <param name="service">O serviço de anotação a ser usado para esta operação.</param>
+        <param name="annotation">A anotação para obter informações de ancoragem.</param>
+        <summary>Retorna um <see cref="T:System.Windows.Annotations.IAnchorInfo" /> objeto que fornece informações de ancoragem, como o local de ancoragem, sobre a anotação especificada.</summary>
+        <returns>Um <see cref="T:System.Windows.Annotations.IAnchorInfo" /> objeto que fornece informações de ancoragem sobre a anotação especificada, ou <see langword="null" /> se ele não pode ser resolvido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Annotations.AnnotationHelper.GetAnchorInfo%2A>é introduzido no [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] versão 3.5. Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ Considere um aplicativo de leitor de documento simples que tem um painel de comentários. O painel de comentários pode ser uma caixa de listagem que exiba texto de uma lista de anotações ancoradas a um documento. Se o usuário selecionar um item na caixa de listagem, o aplicativo trará para a exibição o parágrafo no documento ao qual o objeto de anotação correspondente está ancorado.  
+  
+ O exemplo a seguir demonstra como implementar o manipulador de eventos de uma caixa de listagem assim que serve como painel de comentários.  
+  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

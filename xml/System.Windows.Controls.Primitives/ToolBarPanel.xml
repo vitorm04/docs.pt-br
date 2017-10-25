@@ -1,0 +1,85 @@
+<Type Name="ToolBarPanel" FullName="System.Windows.Controls.Primitives.ToolBarPanel">
+  <TypeSignature Language="C#" Value="public class ToolBarPanel : System.Windows.Controls.StackPanel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ToolBarPanel extends System.Windows.Controls.StackPanel" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.ToolBarPanel" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.StackPanel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Organiza os itens <see cref="T:System.Windows.Controls.ToolBar" /> em um <see cref="T:System.Windows.Controls.ToolBar" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.ToolBarPanel> determina quais <xref:System.Windows.Controls.ToolBar> itens serão ajustadas dentro de um <xref:System.Windows.Controls.ToolBar> e que deve ser colocado na área de excedentes. O <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> propriedade determina como os itens devem ser distribuídos entre o <xref:System.Windows.Controls.Primitives.ToolBarPanel> e <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolBarPanel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToolBarPanel.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Primitives.ToolBarPanel" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToolBarPanel.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">O tamanho que o <see cref="T:System.Windows.Controls.Primitives.ToolBarPanel" /> assume para posicionar os seus filhos.</param>
+        <summary>Organiza e tamanhos de <see cref="T:System.Windows.Controls.ToolBar" /> itens dentro de um <see cref="T:System.Windows.Controls.Primitives.ToolBarPanel" />.</summary>
+        <returns>O tamanho do painel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size MeasureOverride (System.Windows.Size constraint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size MeasureOverride(valuetype System.Windows.Size constraint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.ToolBarPanel.MeasureOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="constraint" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="constraint">As restrições de medida; um <see cref="T:System.Windows.Controls.Primitives.ToolBarPanel" /> não pode retornar um tamanho maior do que a restrição.</param>
+        <summary>Remeasures um painel da barra de ferramentas.</summary>
+        <returns>O tamanho desejado do painel.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

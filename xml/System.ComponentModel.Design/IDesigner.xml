@@ -1,0 +1,192 @@
+<Type Name="IDesigner" FullName="System.ComponentModel.Design.IDesigner">
+  <TypeSignature Language="C#" Value="public interface IDesigner : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesigner implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a estrutura básica para a criação de um designer personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.IDesigner> interface fornece uma interface por meio do qual você pode implementar serviços básicos de um designer. Um designer pode modificar o comportamento de um componente em tempo de design e pode fornecer seus próprios serviços e o comportamento. Um designer só é ativado em tempo de design e deve ser associado um tipo de componente usando um <xref:System.ComponentModel.DesignerAttribute> para ser carregado quando um componente do tipo associado é criado em tempo de design.  
+  
+ O <xref:System.ComponentModel.Design.IDesigner> interface fornece métodos e propriedades que você pode implementar para fornecer um comportamento personalizado em tempo de design.  
+  
+ Implementar o <xref:System.ComponentModel.Design.IDesigner.Initialize%2A> método de um designer para executar ações quando um componente é criado. Isso pode ser útil se um componente deve ter uma configuração especial em tempo de design, ou se deve alterar sua configuração com base nas condições que o designer pode determinar.  
+  
+ Um designer pode fornecer comandos de menu no menu de atalho que é exibido quando um usuário clica um componente ou controle no ambiente de tempo de design. Você pode implementar o <xref:System.ComponentModel.Design.IDesigner.Verbs%2A> propriedade para definir um acessador get que retorna um <xref:System.ComponentModel.Design.DesignerVerbCollection> que contém o <xref:System.ComponentModel.Design.DesignerVerb> objetos para a geração de comandos de menu.  
+  
+ Um designer para um componente que aparece na bandeja do componente pode executar uma ação padrão quando o componente é clicado duas vezes. Implementar o <xref:System.ComponentModel.Design.IDesigner.DoDefaultAction%2A> método para especificar o comportamento para executar quando o componente é clicado duas vezes.  
+  
+ Um designer também pode usar os serviços de tempo de design disponíveis para executar uma variedade de tarefas, incluindo pesquisa o atual ambiente de tempo de design para componentes e suas propriedades, ler e definir os valores das propriedades dos componentes, gerenciando a caixa de ferramentas, gerenciar componentes selecionados ou exibir uma interface do usuário que pode ser usada para configurar valores ou aplicar processamento adicional.  
+  
+ Para implementar um designer para um controle que pode ser colocado em um formulário, é possível herdar a <xref:System.Windows.Forms.Design.ControlDesigner> classe. Controles cujo designer associado não é derivado de <xref:System.Windows.Forms.Design.ControlDesigner> são exibidos na bandeja do componente. O <xref:System.ComponentModel.Design.ComponentDesigner> e <xref:System.Windows.Forms.Design.ControlDesigner> classes implementam o <xref:System.ComponentModel.Design.IDesigner> interface e fornecer suporte adicional do tempo de design que pode ser útil para autores de designers. Para obter mais informações, consulte a documentação de referência para essas classes.  
+  
+ Para obter uma visão geral de criação de componentes de design, consulte [Estendendo suporte em tempo de Design](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra um <xref:System.ComponentModel.Design.IDesigner> implementação que armazena uma referência local para seu componente, executa uma ação padrão quando o componente é clicado duas vezes e fornece um comando de menu verbo do designer.  
+  
+ [!code-cpp[IDesignerExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerExample/CPP/testcontrol.cpp#1)]
+ [!code-csharp[IDesignerExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IDesignerExample/CS/testcontrol.cs#1)]
+ [!code-vb[IDesignerExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerExample/VB/testcontrol.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Component { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Component" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesigner.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o componente base que está criando esse designer.</summary>
+        <value>Um <see cref="T:System.ComponentModel.IComponent" /> indicando que o componente base que está criando esse designer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoDefaultAction">
+      <MemberSignature Language="C#" Value="public void DoDefaultAction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DoDefaultAction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesigner.DoDefaultAction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a ação padrão para este designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando um usuário clica duas vezes a representação de um componente na bandeja do componente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IDesigner.Initialize(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para associar a este designer.</param>
+        <summary>Inicializa o designer com o componente especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesigner.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos verbos de tempo de design tem suporte do designer.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.DesignerVerbCollection" /> que contém os verbos com suporte pelo designer, ou <see langword="null" /> se o componente tiver sem verbos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna o design de verbos de tempo com suporte pelo componente associado com o designer. Os verbos retornados por esse método normalmente são exibidos pelo ambiente de tempo de design em um menu de atalho. Quando um usuário seleciona um dos verbos, o manipulador de eventos do <xref:System.ComponentModel.Design.DesignerVerb> é invocado.  
+  
+> [!NOTE]
+>  Um ambiente de tempo de design normalmente fornece um **propriedades... ** entrada no menu de atalho do componente. Para evitar títulos duplicados para entradas de menu, nenhum verbo com um título de "Propriedades …" deve ser incluído em um <xref:System.ComponentModel.Design.DesignerVerbCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

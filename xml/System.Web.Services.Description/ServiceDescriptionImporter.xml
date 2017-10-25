@@ -1,0 +1,392 @@
+<Type Name="ServiceDescriptionImporter" FullName="System.Web.Services.Description.ServiceDescriptionImporter">
+  <TypeSignature Language="C#" Value="public class ServiceDescriptionImporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceDescriptionImporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.ServiceDescriptionImporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Expõe um meio de gerar classes proxy do cliente para serviços Web XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interface para um serviço Web XML normalmente é descrita por um arquivo WSDL Web Services Description Language (). Por exemplo obter uma descrição de WSDL de um serviço Web usando o ASP.NET exposto em `http://localhost/service.asmx`, simplesmente, navegue até `http://localhost/service.asmx?WSDL`.  
+  
+ O <xref:System.Web.Services.Description.ServiceDescriptionImporter> classe permite que você facilmente importar as informações contidas em uma descrição de WSDL em uma <xref:System.CodeDom.CodeCompileUnit?displayProperty=nameWithType> objeto. Ajustando o valor da <xref:System.Web.Services.Description.ServiceDescriptionImporter.Style%2A> parâmetro, você pode instruir um <xref:System.Web.Services.Description.ServiceDescriptionImporter> instância para gerar uma classe de proxy de cliente que fornece a funcionalidade do serviço Web chamando-a transparente ou para gerar uma classe abstrata que encapsula a funcionalidade do serviço Web sem implementá-lo.  
+  
+ O código resultante <xref:System.CodeDom.CodeCompileUnit> objeto pode então ser chamado diretamente ou exportado no idioma de sua escolha.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso da <xref:System.Web.Services.Description.ServiceDescriptionImporter> classe para gerar o código de cliente de proxy que chama um serviço Web XML descrito por um arquivo WSDL.  
+  
+ [!code-cpp[WebServices_Description_Importer#0](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#0)]
+ [!code-csharp[WebServices_Description_Importer#0](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServiceDescriptionImporter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionImporter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir ilustra o uso desse construtor.  
+  
+ [!code-cpp[WebServices_Description_Importer#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#1)]
+ [!code-csharp[WebServices_Description_Importer#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddServiceDescription">
+      <MemberSignature Language="C#" Value="public void AddServiceDescription (System.Web.Services.Description.ServiceDescription serviceDescription, string appSettingUrlKey, string appSettingBaseUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddServiceDescription(class System.Web.Services.Description.ServiceDescription serviceDescription, string appSettingUrlKey, string appSettingBaseUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionImporter.AddServiceDescription(System.Web.Services.Description.ServiceDescription,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceDescription" Type="System.Web.Services.Description.ServiceDescription" />
+        <Parameter Name="appSettingUrlKey" Type="System.String" />
+        <Parameter Name="appSettingBaseUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceDescription">A instância <see cref="T:System.Web.Services.Description.ServiceDescription" /> a ser adicionada à coleção</param>
+        <param name="appSettingUrlKey">Define o valor inicial de <see langword="Url" /> propriedade da classe proxy a ser gerado a partir de instância representada pelo <c>serviceDescription</c> parâmetro. Especifica que ele deve ser gerado com base na seção <see langword="&lt;appsetting&gt;" /> do arquivo web.config.</param>
+        <param name="appSettingBaseUrl">Define o valor inicial de <see langword="Url" /> propriedade da classe proxy a ser gerado a partir de instância representada pelo <c>serviceDescription</c> parâmetro. Especifica que ele deve ser construído com base em uma combinação do valor desse parâmetro e a URL especificada pelo atributo <see langword="location" /> no documento WSDL.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Services.Description.ServiceDescription" /> especificado à coleção de valores <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" /> a serem importados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para adicionar <xref:System.Web.Services.Description.ServiceDescription> instâncias na coleção que deve ser importado quando o <xref:System.Web.Services.Description.ServiceDescriptionImporter.Import%2A> método é chamado.  
+  
+ Os dois parâmetros de cadeia de caracteres `appSettingUrlKey` e `appSettingBaseUrl`, especifique como construir o `Url` propriedade do proxy do serviço da Web em XML que deve ser gerado a partir de importado <xref:System.Web.Services.Description.ServiceDescription> valor. O `appSettingUrlKey` parâmetro especifica que o `Url` propriedade deve ser lida fora do arquivo Web. config `<appsettings>` seção usando o valor do parâmetro como a chave de configuração. Se o `appSettingUrlKey` parâmetro é `null` ou uma cadeia de caracteres vazia, o valor inicial é determinado pelo `location` atributo no documento WSDL Web Services Description Language (). Se o valor de <xref:System.Web.Services.Description.ServiceDescriptionImporter.Style%2A> é `Server`, um erro será gerado se você tentar definir o valor da `appSettingUrlKey` parâmetro.  
+  
+ O `appSettingBaseUrl` parâmetro especifica que o inicial valor para o `Url` propriedade deve ser construída a partir de uma combinação desse valor de parâmetro e a URL especificada pelo `location` atributo no documento WSDL. O `appSettingUrlKey` parâmetro também deve ser especificado. O `Url` propriedade é construída, combinando uma URL relativa (construído a partir de `appSettingBaseUrl` parâmetro e a URL especificada pelo WSDL) com a URL carregada do arquivo Web. config. Se esse parâmetro for `null` ou uma cadeia de caracteres vazia, a URL é construída inteiramente do valor no arquivo Web. config.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Web.Services.Description.ServiceDescriptionImporter.AddServiceDescription%2A> método ao usar o <xref:System.Web.Services.Description.ServiceDescriptionImporter> classe.  
+  
+ [!code-cpp[WebServices_Description_Importer#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#1)]
+ [!code-csharp[WebServices_Description_Importer#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeGenerationOptions">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.CodeGenerationOptions CodeGenerationOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xml.Serialization.CodeGenerationOptions CodeGenerationOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerationOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.CodeGenerationOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define várias opções para geração de código.</summary>
+        <value>Um membro ou uma combinação de membros a <see cref="T:System.Xml.Serialization.CodeGenerationOptions" /> enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerationOptions%2A> propriedade permite que você especificar várias opções usadas quando o <xref:System.Web.Services.Description.ServiceDescriptionImporter.Import%2A> método é chamado para gerar código. Por exemplo, você pode especificar se os tipos simples descritos no WSDL são gerados como tipos de valor ou <xref:System.Data.SqlTypes> tipos de namespace, e se eles são gerados como campos ou propriedades.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerationOptions%2A> propriedade.  
+  
+ [!code-cpp[WebServices_Description_Importer#4](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#4)]
+ [!code-csharp[WebServices_Description_Importer#4](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeGenerator">
+      <MemberSignature Language="C#" Value="public System.CodeDom.Compiler.CodeDomProvider CodeGenerator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CodeDomProvider CodeGenerator" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionImporter.CodeGenerator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeDomProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o gerador de código usado pelo importador de descrição de serviço.</summary>
+        <value>O <see cref="T:System.CodeDom.Compiler.ICodeGenerator" /> interface usada pelo importador de descrição de serviço para gerar o código de proxy.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateWebReferences">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.StringCollection GenerateWebReferences (System.Web.Services.Description.WebReferenceCollection webReferences, System.CodeDom.Compiler.CodeDomProvider codeProvider, System.CodeDom.CodeCompileUnit codeCompileUnit, System.Web.Services.Description.WebReferenceOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Specialized.StringCollection GenerateWebReferences(class System.Web.Services.Description.WebReferenceCollection webReferences, class System.CodeDom.Compiler.CodeDomProvider codeProvider, class System.CodeDom.CodeCompileUnit codeCompileUnit, class System.Web.Services.Description.WebReferenceOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionImporter.GenerateWebReferences(System.Web.Services.Description.WebReferenceCollection,System.CodeDom.Compiler.CodeDomProvider,System.CodeDom.CodeCompileUnit,System.Web.Services.Description.WebReferenceOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webReferences" Type="System.Web.Services.Description.WebReferenceCollection" />
+        <Parameter Name="codeProvider" Type="System.CodeDom.Compiler.CodeDomProvider" />
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="options" Type="System.Web.Services.Description.WebReferenceOptions" />
+      </Parameters>
+      <Docs>
+        <param name="webReferences">Um <see cref="T:System.Web.Services.Description.WebReferenceCollection" /> de referências da Web para compilar.</param>
+        <param name="codeProvider">Um <see cref="T:System.CodeDom.Compiler.CodeDomProvider" /> que especifica o provedor de código.</param>
+        <param name="codeCompileUnit">Um <see cref="T:System.CodeDom.CodeCompileUnit" /> que especifica a unidade na qual o código é compilado.</param>
+        <param name="options">Um <see cref="T:System.Web.Services.Description.WebReferenceOptions" /> que especifica as opções de geração de código.</param>
+        <summary>Compila uma coleção de referências da Web para gerar um proxy de cliente ou um stub de servidor.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.StringCollection" /> de avisos do compilador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção de documento de descrição de serviços em cada <xref:System.Web.Services.Description.WebReference> membro o `webReferences` coleção deve conter apenas <xref:System.Web.Services.Description.ServiceDescription> e <xref:System.Xml.Schema.XmlSchema> objetos. Esse método é capaz de interpretar <xref:System.Web.Services.Discovery.DiscoveryDocument> objetos.  
+  
+ Se qualquer um dos XML Web serviço métodos o `webReferences` coleção compartilhar parâmetro personalizado ou tipos de retorno, esses tipos também são compartilhados entre os métodos de proxy gerados. Essa é uma vantagem importante sobre a situação em que cada proxy é compilado separadamente, porque o caso em que esses tipos não interoperam.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Import">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionImportWarnings Import (System.CodeDom.CodeNamespace codeNamespace, System.CodeDom.CodeCompileUnit codeCompileUnit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Web.Services.Description.ServiceDescriptionImportWarnings Import(class System.CodeDom.CodeNamespace codeNamespace, class System.CodeDom.CodeCompileUnit codeCompileUnit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.ServiceDescriptionImporter.Import(System.CodeDom.CodeNamespace,System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionImportWarnings</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="codeNamespace" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="codeCompileUnit" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="codeNamespace">O namespace para o qual os valores de <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" /> são importados.</param>
+        <param name="codeCompileUnit">O <see cref="T:System.CodeDom.CodeCompileUnit" /> instância na qual o código que representa o <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" /> valor é gerado.</param>
+        <summary>Importa os valores de <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" /> especificados, o que gera o código conforme especificado pela propriedade <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.Style" />.</summary>
+        <returns>Um valor <see cref="T:System.Web.Services.Description.ServiceDescriptionImportWarnings" /> que descreve qualquer erro ocorrido; ou 0 se nenhum erro tiver ocorrido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que você especificou o <xref:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions%2A> valores para importar e <xref:System.Web.Services.Description.ServiceDescriptionImporter.Style%2A> propriedade do código, chame o <xref:System.Web.Services.Description.Import> método para iniciar a geração de código.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do método <xref:System.Web.Services.Description.Import>.  
+  
+ [!code-cpp[WebServices_Description_Importer#5](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#5)]
+ [!code-csharp[WebServices_Description_Importer#5](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolName">
+      <MemberSignature Language="C#" Value="public string ProtocolName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProtocolName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionImporter.ProtocolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o protocolo usado para acessar os serviços Web XML descritos.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome que não diferencia maiúsculas de minúsculas do protocolo a ser importado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores permitidos para essa propriedade são:  
+  
+-   "Soap"  
+  
+-   "Soap12"  
+  
+-   "HttpPost"  
+  
+-   "HttpGet"  
+  
+-   "HttpSoap"  
+  
+ O valor padrão é "Soap", que indica o padrão de SOAP 1.1.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Web.Services.Description.ServiceDescriptionImporter.ProtocolName%2A> propriedade ao usar o <xref:System.Web.Services.Description.ServiceDescriptionImporter> classe.  
+  
+ [!code-cpp[WebServices_Description_Importer#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#1)]
+ [!code-csharp[WebServices_Description_Importer#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Schemas">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlSchemas Schemas { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlSchemas Schemas" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionImporter.Schemas" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlSchemas</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xml.Serialization.XmlSchemas" /> usado pelo <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" /> propriedade.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlSchemas" /> objeto que contém os esquemas XML usados pelo <see cref="T:System.Web.Services.Description.ServiceDescription" /> instâncias de <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" /> coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Web.Services.Description.ServiceDescriptionImporter.Schemas%2A> propriedade.  
+  
+ [!code-cpp[WebServices_Description_Importer#2](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#2)]
+ [!code-csharp[WebServices_Description_Importer#2](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceDescriptions">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionCollection ServiceDescriptions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Description.ServiceDescriptionCollection ServiceDescriptions" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de <see cref="T:System.Web.Services.Description.ServiceDescription" /> instâncias a serem importados.</summary>
+        <value>Um <see cref="T:System.Web.Services.Description.ServiceDescriptionCollection" /> instância que contém o <see cref="T:System.Web.Services.Description.ServiceDescription" /> instâncias programado para ser importado pela <see cref="T:System.Web.Services.Description.ServiceDescriptionImporter" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assim como acontece com qualquer coleção que formam uma propriedade somente leitura, os membros podem ser adicionados à coleção, removido da coleção ou modificadas usando os métodos expostos pela coleção. Você também pode usar o <xref:System.Web.Services.Description.ServiceDescriptionImporter.AddServiceDescription%2A> para adicionar membros a esta coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions%2A> propriedade.  
+  
+ [!code-cpp[WebServices_Description_Importer#2](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#2)]
+ [!code-csharp[WebServices_Description_Importer#2](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Description.ServiceDescriptionImportStyle Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Description.ServiceDescriptionImportStyle Style" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.ServiceDescriptionImporter.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Description.ServiceDescriptionImportStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina o estilo de código (cliente ou servidor) que é gerado quando o <see cref="P:System.Web.Services.Description.ServiceDescriptionImporter.ServiceDescriptions" /> valores são importados.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Services.Description.ServiceDescriptionImportStyle" />. O padrão é <see cref="F:System.Web.Services.Description.ServiceDescriptionImportStyle.Client" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Services.Description.ServiceDescriptionImporter.Style%2A> está definida como <xref:System.Web.Services.Description.ServiceDescriptionImportStyle.Client>, o <xref:System.Web.Services.Description.ServiceDescriptionImporter> gera classes de proxy de cliente que fornecem a funcionalidade dos serviços da Web descritos chamando-los.  
+  
+ Se o <xref:System.Web.Services.Description.ServiceDescriptionImporter.Style%2A> está definida como <xref:System.Web.Services.Description.ServiceDescriptionImportStyle.Server>, o <xref:System.Web.Services.Description.ServiceDescriptionImporter> instância gera classes abstratas que representam a funcionalidade dos serviços Web XML descritos sem implementá-las. Você pode implementá-las escrevendo classes que herdam essas classes abstratas e implementam os métodos relevantes.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o uso do <xref:System.Web.Services.Description.ServiceDescriptionImporter.Style%2A> propriedade.  
+  
+ [!code-cpp[WebServices_Description_Importer#3](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_Description_Importer/CPP/import.cpp#3)]
+ [!code-csharp[WebServices_Description_Importer#3](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_Description_Importer/CS/import.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

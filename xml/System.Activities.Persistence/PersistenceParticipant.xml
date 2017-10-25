@@ -1,0 +1,185 @@
+<Type Name="PersistenceParticipant" FullName="System.Activities.Persistence.PersistenceParticipant">
+  <TypeSignature Language="C#" Value="public abstract class PersistenceParticipant" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PersistenceParticipant extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Persistence.PersistenceParticipant" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe permite que ambos <see cref="T:System.Activities.WorkflowApplication" /> e <see cref="T:System.ServiceModel.WorkflowServiceHost" /> participem no processo de persistência. Um participante de persistência deriva da classe <see cref="T:System.Activities.Persistence.PersistenceParticipant" /> ou <see cref="T:System.Activities.Persistence.PersistenceIOParticipant" /> (classe derivada da classe <see cref="T:System.Activities.Persistence.PersistenceParticipant" />), implementa métodos abstratos e adiciona uma instância da classe como uma extensão da instância do fluxo de trabalho. O <see cref="T:System.Activities.WorkflowApplication" /> e <see cref="T:System.ServiceModel.WorkflowServiceHost" /> procuram por tais extensões ao persistirem uma instância e invocarem os métodos apropriados em momentos apropriados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um host executa as etapas seguintes (ou estágios) quando manter uma instância:  
+  
+1.  Coleta de valores a ser mantido.  
+  
+2.  Mapeia os campos de valores estruturados monolíticos para valores individuais.  
+  
+3.  Problemas de <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> para o provedor de persistência.  
+  
+4.  Executa e/s na transação de persistência.  
+  
+ Um host conclui uma etapa antes de iniciar o próximo estágio. Por exemplo, quando a persistência, o host coleta valores de todos os participantes de persistência antes de passar para o segundo estágio. Na segunda etapa, o host fornece todos os valores coletados na primeira etapa para todos os participantes de persistência no segundo estágio de mapeamento. Na terceira etapa, o host fornece todos os valores coletados nos estágios primeiro e o segundo para o provedor de persistência ao invocar o <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>. Em seguida, o quarto estágio, o host fornece todos os valores coletados para todos os participantes de e/s de persistência na transação de persistência.  
+  
+ Um host executa as seguintes fases ao carregar uma instância de persistência:  
+  
+1.  Problemas de <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> e <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand> para o provedor de persistência.  
+  
+2.  Executa e/s na transação de persistência.  
+  
+3.  Publica os valores carregados.  
+  
+ Em que as extensões de instância de fluxo de trabalho de nível, mais altas que derivam de <xref:System.Activities.Persistence.PersistenceParticipant> classe pode participar (coletar) primeiro e segundo estágios (Map) do processo persistente e a terceira etapa (publicar) do processo de carregamento.  Extensões de instância de fluxo de trabalho derivado da classe PersistenceIOParticipant adicionalmente podem participar a quarta etapa do processo de persistência e o segundo estágio do processo de carregamento (e/s).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe que deriva de <xref:System.Activities.Persistence.PersistenceParticipant>. Este exemplo é proveniente do [contratando processo](~/docs/framework/windows-workflow-foundation/samples/hiring-process.md) exemplo.  
+  
+ [!code-csharp[wfs_HiringRequestProcess#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_hiringrequestprocess/cs/hiringrequestpersistenceparticipant.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PersistenceParticipant ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceParticipant.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.Activities.Persistence.PersistenceParticipant" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe que deriva de <xref:System.Activities.Persistence.PersistenceParticipant>. Este exemplo é proveniente do [contratando processo](~/docs/framework/windows-workflow-foundation/samples/hiring-process.md) exemplo.  
+  
+ [!code-csharp[wfs_HiringRequestProcess#1](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_hiringrequestprocess/cs/hiringrequestpersistenceparticipant.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectValues">
+      <MemberSignature Language="C#" Value="protected virtual void CollectValues (out System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; readWriteValues, out System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; writeOnlyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CollectValues([out] class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt;&amp; readWriteValues, [out] class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt;&amp; writeOnlyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceParticipant.CollectValues(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object}@,System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object}@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readWriteValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;&amp;" RefType="out" />
+        <Parameter Name="writeOnlyValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="readWriteValues">Os valores de leitura-gravação para persistir.</param>
+        <param name="writeOnlyValues">Os valores somente gravação para persistir.</param>
+        <summary>Um host chama esse método em um participante de persistência personalizada para coletar valores de leitura-gravação e valores somente gravação, para ser persistente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O host pacotes valores de leitura / gravação no dicionário primeiro como <xref:System.Runtime.DurableInstancing.InstanceValue> objetos de um <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData*> coleta e valores de pacotes somente gravação no dicionário de segundo como <xref:System.Runtime.DurableInstancing.InstanceValue> objetos com <xref:System.Runtime.DurableInstancing.InstanceValueOptions.Optional> e <xref:System.Runtime.DurableInstancing.InstanceValueOptions.WriteOnly> conjunto de sinalizadores. [!INCLUDE[crdefault](~/includes/crdefault-md.md)] <xref:System.Runtime.DurableInstancing.InstanceValueOptions>.  
+  
+> [!IMPORTANT]
+>  Cada valor fornecido pelas implementações de <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> em todos os participantes de persistência dentro de persistência de um episódio deve ter um XName exclusivo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de CollectValues em uma classe que deriva de <xref:System.Activities.Persistence.PersistenceParticipant>. Este exemplo é proveniente do [participantes de persistência](~/docs/framework/windows-workflow-foundation/persistence-participants.md) exemplo.  
+  
+ [!code-csharp[wfs_PersistenceParticipants#2](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_persistenceparticipants/cs/stepcountextension.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapValues">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; MapValues (System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; readWriteValues, System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; writeOnlyValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; MapValues(class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; readWriteValues, class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; writeOnlyValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceParticipant.MapValues(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object},System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readWriteValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+        <Parameter Name="writeOnlyValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="readWriteValues">Os valores de leitura-gravação para persistir.</param>
+        <param name="writeOnlyValues">Os valores somente gravação para persistir.</param>
+        <summary>Um host chama este método depois que ele está coletando os valores na primeira etapa. O host encaminha dois dicionários de somente leitura dos valores que ele coletados de todos os participantes de persistência durante a primeira etapa (etapa CollectValues) para este método para mapeamento. O host adiciona valores no dicionário retornado por esse método para a coleção de valores somente gravação.</summary>
+        <returns>Um dicionário que contém valores adicionais de somente gravação para persistir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada valor fornecido pelas implementações de todos os <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> métodos em todos os participantes de persistência, incluindo todos os valores coletados no primeiro estágio (CollectValues estágio) devem ter um XName exclusivo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de MapValues em uma classe que deriva de <xref:System.Activities.Persistence.PersistenceParticipant>. Este exemplo é proveniente de [o processo de compra corporativo](~/docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) exemplo.  
+  
+ [!code-csharp[wfs_PurchaseProcess#2](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_purchaseprocess/cs/xmlpersistenceparticipant.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishValues">
+      <MemberSignature Language="C#" Value="protected virtual void PublishValues (System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,object&gt; readWriteValues);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PublishValues(class System.Collections.Generic.IDictionary`2&lt;class System.Xml.Linq.XName, object&gt; readWriteValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Persistence.PersistenceParticipant.PublishValues(System.Collections.Generic.IDictionary{System.Xml.Linq.XName,System.Object})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="readWriteValues" Type="System.Collections.Generic.IDictionary&lt;System.Xml.Linq.XName,System.Object&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="readWriteValues">Os valores de leitura / gravação que foram carregados do armazenamento de persistência. Esse dicionário corresponde ao dicionário de leitura-gravação valores persistentes no episódio persistência mais recente.</param>
+        <summary>O host chama esse método e passa todos os valores carregados no <see cref="P:System.Activities.Persistence.SaveWorkflowCommand.InstanceData" /> coleção (preenchido pelo <see cref="T:System.Activities.Persistence.LoadWorkflowCommand" /> ou <see cref="T:System.Activities.Persistence.LoadWorkflowByInstanceKeyCommand" />) como um parâmetro de dicionário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de PublishValues em uma classe que deriva de <xref:System.Activities.Persistence.PersistenceParticipant>. Este exemplo é proveniente do [participantes de persistência](~/docs/framework/windows-workflow-foundation/persistence-participants.md) exemplo.  
+  
+ [!code-csharp[wfs_PersistenceParticipants#2](~/samples/snippets/csharp/VS_Snippets_CFX/wfs_persistenceparticipants/cs/stepcountextension.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

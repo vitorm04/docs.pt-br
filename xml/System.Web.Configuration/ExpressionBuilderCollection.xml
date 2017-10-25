@@ -1,0 +1,323 @@
+<Type Name="ExpressionBuilderCollection" FullName="System.Web.Configuration.ExpressionBuilderCollection">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionBuilderCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExpressionBuilderCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.ExpressionBuilderCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.ExpressionBuilder))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.Configuration.ExpressionBuilder" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.ExpressionBuilderCollection> classe não se refere a qualquer elemento real no arquivo de configuração subjacentes. É uma construção que permite o fácil acesso às informações de compilação que ele contém.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira demonstra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.ExpressionBuilderCollection> classe. O segundo demonstra como usar membros de <xref:System.Web.Configuration.ExpressionBuilderCollection> classe.  
+  
+ O exemplo de arquivo de configuração a seguir mostra como especificar declarativamente valores para várias propriedades da <xref:System.Web.Configuration.ExpressionBuilderCollection> classe.  
+  
+```  
+<system.web>  
+  <compilation>   
+    <expressionBuilders>  
+      <add   
+        expressionPrefix="Resources"   
+        type="System.Web.Compilation.ResourceExpressionBuilder"/>  
+      <add   
+        expressionPrefix="ConnectionStrings"   
+        type="System.Web.Compilation.  
+        ConnectionStringsExpressionBuilder"/>  
+      <add expressionPrefix="AppSettings"   
+        type="System.Web.Compilation.AppSettingsExpressionBuilder" />  
+    </expressionBuilders>  
+  </compilation>  
+</system.web>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar membros de <xref:System.Web.Configuration.ExpressionBuilderCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ExpressionBuilderCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/CS/ExpressionBuilderCollection.cs#1)]
+ [!code-vb[System.Web.Configuration.ExpressionBuilderCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/VB/ExpressionBuilderCollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBuilderCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilderCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.ExpressionBuilder buildProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.ExpressionBuilder buildProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilderCollection.Add(System.Web.Configuration.ExpressionBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buildProvider" Type="System.Web.Configuration.ExpressionBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="buildProvider">Um valor de cadeia de caracteres especificando o <see cref="T:System.Web.Configuration.ExpressionBuilder" /> referência.</param>
+        <summary>Adiciona um <see cref="T:System.Web.Configuration.ExpressionBuilder" /> o objeto para o <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adiciona um <xref:System.Web.Configuration.ExpressionBuilder> objeto à coleção. Se o objeto de assembly não foi inicializado com informações de assembly, uma exceção será lançada. Se o objeto assembly já existe na coleção, a instrução será ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.ExpressionBuilderCollection.Add%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ExpressionBuilderCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ExpressionBuilderCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/CS/ExpressionBuilderCollection.cs#4)]
+ [!code-vb[System.Web.Configuration.ExpressionBuilderCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/VB/ExpressionBuilderCollection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationException">O <see cref="T:System.Web.Configuration.ExpressionBuilder" /> objeto a ser adicionado já existe na coleção, ou a coleção é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilderCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todas as <see cref="T:System.Web.Configuration.ExpressionBuilder" /> objetos do <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilderCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilderCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Item">
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém ou define o especificado <see cref="T:System.Web.Configuration.ExpressionBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.ExpressionBuilder>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ExpressionBuilder this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ExpressionBuilder Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ExpressionBuilderCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ExpressionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor de inteiro especificando um <see cref="T:System.Web.Configuration.ExpressionBuilder" /> dentro do objeto de <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> coleção.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.ExpressionBuilder" /> no índice especificado no <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> coleção.</summary>
+        <value>O <see cref="T:System.Web.Configuration.ExpressionBuilder" /> objeto no índice especificado ou <see langword="null" /> se não houver nenhum objeto no índice.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.ExpressionBuilder this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.ExpressionBuilder Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ExpressionBuilderCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.ExpressionBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de um <see cref="T:System.Web.Configuration.ExpressionBuilder" /> objeto o <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> coleção.</param>
+        <summary>Obtém o objeto <see cref="T:System.Web.Configuration.ExpressionBuilder" /> com o nome especificado.</summary>
+        <value>O <see cref="T:System.Web.Configuration.ExpressionBuilder" /> ou <see langword="null" /> se não houver nenhum objeto com esse nome na coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.ExpressionBuilderCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilderCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Um valor de cadeia de caracteres especificando o <see cref="T:System.Web.Configuration.ExpressionBuilder" /> referência.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.ExpressionBuilder" /> de objeto o <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o assembly não existe na coleção, a instrução será ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.ExpressionBuilderCollection.Remove%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ExpressionBuilderCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ExpressionBuilderCollection#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/CS/ExpressionBuilderCollection.cs#5)]
+ [!code-vb[System.Web.Configuration.ExpressionBuilderCollection#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/VB/ExpressionBuilderCollection.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.ExpressionBuilderCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor inteiro especificando um determinado <see cref="T:System.Web.Configuration.ExpressionBuilder" /> dentro do objeto de <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> coleção.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.ExpressionBuilder" /> de objeto o <see cref="T:System.Web.Configuration.ExpressionBuilderCollection" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o assembly não existe na coleção, é gerada uma exceção fora do intervalo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.ExpressionBuilderCollection.RemoveAt%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.ExpressionBuilderCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.ExpressionBuilderCollection#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/CS/ExpressionBuilderCollection.cs#6)]
+ [!code-vb[System.Web.Configuration.ExpressionBuilderCollection#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.ExpressionBuilderCollection/VB/ExpressionBuilderCollection.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

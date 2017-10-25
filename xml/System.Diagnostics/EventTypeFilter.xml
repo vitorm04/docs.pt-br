@@ -1,0 +1,179 @@
+<Type Name="EventTypeFilter" FullName="System.Diagnostics.EventTypeFilter">
+  <TypeSignature Language="C#" Value="public class EventTypeFilter : System.Diagnostics.TraceFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventTypeFilter extends System.Diagnostics.TraceFilter" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.EventTypeFilter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Diagnostics.TraceFilter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Indica se um ouvinte deve rastrear com base no tipo de evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um dos vários tipos diferentes de filtros pode ser atribuído a um ouvinte de rastreamento por meio de <xref:System.Diagnostics.TraceListener.Filter%2A> propriedade para fornecer uma camada de triagem além do fornecido pelo <xref:System.Diagnostics.TraceSwitch>. O filtro pode ser usado para controlar os tipos de eventos que são produzidos pelo ouvinte.  
+  
+ Essa classe filtra eventos com base no valor da <xref:System.Diagnostics.EventTypeFilter.EventType%2A> propriedade.  Essa propriedade pode ser definida por código ou em um arquivo de configuração para especificar o tipo de evento de mensagens que devem ser rastreadas pelo ouvinte. O valor da propriedade indica que o limite no qual iniciar o rastreamento. Tipos de evento no e acima do nível especificado são rastreados. O <xref:System.Diagnostics.TraceFilter.ShouldTrace%2A> método, chamado por ouvintes para determinar se um evento deve ser rastreado, usa o valor de <xref:System.Diagnostics.EventTypeFilter.EventType%2A> propriedade.  
+  
+ Para definir o evento de tipo no qual começar rastreamento, edite o arquivo de configuração que corresponde ao nome do seu aplicativo. Nesse arquivo, adicione um ouvinte, defina seu tipo de filtro e especificar o tipo de evento de rastreamento. O arquivo de configuração deve ser formatado da seguinte maneira.  
+  
+```  
+<configuration>  
+  <system.diagnostics>  
+    <sharedListeners>  
+      <add name="Console" type="System.Diagnostics.ConsoleTraceListener">  
+        <filter type="System.Diagnostics.EventTypeFilter"   
+          initializeData="Warning" />  
+      </add>  
+    </sharedListeners>  
+  </system.diagnostics>  
+</configuration>  
+```  
+  
+ Para obter mais informações sobre como inicializar dados para um <xref:System.Diagnostics.EventTypeFilter>, consulte [ &lt;filtro&gt;](~/docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventTypeFilter (System.Diagnostics.SourceLevels level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Diagnostics.SourceLevels level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventTypeFilter.#ctor(System.Diagnostics.SourceLevels)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="level" Type="System.Diagnostics.SourceLevels" />
+      </Parameters>
+      <Docs>
+        <param name="level">Uma combinação bit a bit do <see cref="T:System.Diagnostics.SourceLevels" /> valores que especifica o tipo de evento das mensagens de rastreamento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.EventTypeFilter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de `level` parâmetro é usado para inicializar o <xref:System.Diagnostics.EventTypeFilter.EventType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.SourceLevels EventType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.SourceLevels EventType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.EventTypeFilter.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.SourceLevels</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de evento das mensagens a serem rastreadas.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Diagnostics.SourceLevels" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.EventTypeFilter.EventType%2A> propriedade indica o nível de rastreamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldTrace">
+      <MemberSignature Language="C#" Value="public override bool ShouldTrace (System.Diagnostics.TraceEventCache cache, string source, System.Diagnostics.TraceEventType eventType, int id, string formatOrMessage, object[] args, object data1, object[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ShouldTrace(class System.Diagnostics.TraceEventCache cache, string source, valuetype System.Diagnostics.TraceEventType eventType, int32 id, string formatOrMessage, object[] args, object data1, object[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.EventTypeFilter.ShouldTrace(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[],System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.TraceSource</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cache" Type="System.Diagnostics.TraceEventCache" />
+        <Parameter Name="source" Type="System.String" />
+        <Parameter Name="eventType" Type="System.Diagnostics.TraceEventType" />
+        <Parameter Name="id" Type="System.Int32" />
+        <Parameter Name="formatOrMessage" Type="System.String" />
+        <Parameter Name="args" Type="System.Object[]" />
+        <Parameter Name="data1" Type="System.Object" />
+        <Parameter Name="data" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="cache">Um <see cref="T:System.Diagnostics.TraceEventCache" /> que representa o cache de informações do evento de rastreamento.</param>
+        <param name="source">O nome da fonte.</param>
+        <param name="eventType">Um dos valores de <see cref="T:System.Diagnostics.TraceEventType" />.</param>
+        <param name="id">Um número de identificador de rastreamento.</param>
+        <param name="formatOrMessage">O formato a ser usado para gravar uma matriz de argumentos, ou uma mensagem para gravar.</param>
+        <param name="args">Uma matriz de objetos de argumento.</param>
+        <param name="data1">Um objeto de dados de rastreamento.</param>
+        <param name="data">Uma matriz de objetos de dados de rastreamento.</param>
+        <summary>Determina se o ouvinte de rastreamento deve rastrear o evento.</summary>
+        <returns>
+          <see langword="true" />Se o rastreamento deve ser produzido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor da `eventType` parâmetro é maior que ou igual ao valor da <xref:System.Diagnostics.EventTypeFilter.EventType%2A> propriedade, o método retornará `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

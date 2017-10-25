@@ -1,0 +1,488 @@
+<Type Name="EventListener" FullName="System.Diagnostics.Tracing.EventListener">
+  <TypeSignature Language="C#" Value="public abstract class EventListener : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EventListener extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Tracing.EventListener" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece métodos para habilitar e desabilitar eventos de fontes de eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um ouvinte de evento representa o destino para todos os eventos gerados pela origem do evento (<xref:System.Diagnostics.Tracing.EventSource> objeto) implementações no domínio do aplicativo atual. Quando um novo ouvinte de evento é criado, ele é logicamente anexado a todas as fontes de evento no domínio de aplicativo.  
+  
+> [!NOTE]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ Um ouvinte de evento pode habilitar ou desabilitar em uma base de origem do evento por atual usando níveis de evento (<xref:System.Diagnostics.Tracing.EventLevel>) e palavras-chave do evento (<xref:System.Diagnostics.Tracing.EventKeywords>) para restringir ainda mais o conjunto de eventos a serem enviados para o ouvinte. O ouvinte também pode enviar comandos arbitrários para uma fonte de evento atual específica usando o <xref:System.Diagnostics.Tracing.EventSource.SendCommand%2A> método. Os significados dos comandos são específicos para a implementação de origem do evento.  
+  
+ Se o <xref:System.Diagnostics.Tracing.EventSource.Guid%2A> propriedade o <xref:System.Diagnostics.Tracing.EventSource> objeto que é usado para ativar ou desativar eventos está <xref:System.Guid.Empty>, todas as fontes de evento no domínio de aplicativo são afetadas.  
+  
+ Vários ouvintes de eventos podem ser definidos em um domínio de aplicativo único. Cada ouvinte é logicamente independente dos outros ouvintes de forma que os eventos que são habilitados ou desabilitados por um ouvinte afetam somente esse ouvinte. É possível que comandos enviados com o <xref:System.Diagnostics.Tracing.EventSource.SendCommand%2A> método para fazer com que uma operação de semântica (como uma coleta de lixo ou liberação de dados) que afeta os outros ouvintes, mas isso é a exceção em vez da regra.  
+  
+ Cada fonte de evento mantém uma lista de ouvintes de eventos que envia eventos para. Um conjunto de critérios de filtragem está associado a cada par de origem de ouvinte de evento. Esses critérios determinam os eventos desse ouvinte será exibida para a origem do evento atual. Ouvintes de recebem os eventos em seus <xref:System.Diagnostics.Tracing.EventListener.OnEventWritten%2A> método. Portanto, as subclasses de <xref:System.Diagnostics.Tracing.EventListener> devem substituir este método para fazer algo útil com os dados.  
+  
+ Quando uma nova fonte de evento é criada, o <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A> método é chamado. Cada ouvinte de evento atual obtém exatamente um <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A> chamada para cada fonte de evento atual que pode enviar a ele mensagens de log. Quando um ouvinte de evento é criado, uma série de <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A> as chamadas são feitas para notificar o novo ouvinte de todas as fontes de evento que existiam antes do ouvinte foi criado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventListener ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Diagnostics.Tracing.EventListener" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os eventos são desabilitados quando uma nova instância é criada. Use o <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A> métodos para habilitar os eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableEvents">
+      <MemberSignature Language="C#" Value="public void DisableEvents (System.Diagnostics.Tracing.EventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableEvents(class System.Diagnostics.Tracing.EventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.DisableEvents(System.Diagnostics.Tracing.EventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.Diagnostics.Tracing.EventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A origem do evento para desativar eventos.</param>
+        <summary>Desabilita todos os eventos para a origem do evento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Diagnostics.Tracing.EventSource.Guid%2A> propriedade `eventSource` é <xref:System.Guid.Empty>, eventos para todas as fontes de evento no domínio do aplicativo estão desabilitados para este ouvinte de evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos usados pela instância atual da classe <see cref="T:System.Diagnostics.Tracing.EventListener" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Diagnostics.Tracing.EventListener>. O `Dispose` método deixa o <xref:System.Diagnostics.Tracing.EventListener> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Diagnostics.Tracing.EventListener> para o coletor de lixo possa recuperar a memória que o <xref:System.Diagnostics.Tracing.EventListener> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="EnableEvents">
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Permite que os eventos para a origem do evento especificado.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="EnableEvents">
+      <MemberSignature Language="C#" Value="public void EnableEvents (System.Diagnostics.Tracing.EventSource eventSource, System.Diagnostics.Tracing.EventLevel level);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableEvents(class System.Diagnostics.Tracing.EventSource eventSource, valuetype System.Diagnostics.Tracing.EventLevel level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.Diagnostics.Tracing.EventSource" />
+        <Parameter Name="level" Type="System.Diagnostics.Tracing.EventLevel" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A origem do evento para a qual os eventos serão habilitados.</param>
+        <param name="level">O nível de eventos a ser habilitado.</param>
+        <summary>Habilita eventos para a origem do evento especificado que têm o nível de detalhes especificado ou inferior.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Diagnostics.Tracing.EventSource.Guid%2A> propriedade especificado na `eventSource` é <xref:System.Guid.Empty>, todas as fontes de evento no domínio de aplicativo são afetadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableEvents">
+      <MemberSignature Language="C#" Value="public void EnableEvents (System.Diagnostics.Tracing.EventSource eventSource, System.Diagnostics.Tracing.EventLevel level, System.Diagnostics.Tracing.EventKeywords matchAnyKeyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableEvents(class System.Diagnostics.Tracing.EventSource eventSource, valuetype System.Diagnostics.Tracing.EventLevel level, valuetype System.Diagnostics.Tracing.EventKeywords matchAnyKeyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.Diagnostics.Tracing.EventSource" />
+        <Parameter Name="level" Type="System.Diagnostics.Tracing.EventLevel" />
+        <Parameter Name="matchAnyKeyword" Type="System.Diagnostics.Tracing.EventKeywords" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A origem do evento para a qual os eventos serão habilitados.</param>
+        <param name="level">O nível de eventos a ser habilitado.</param>
+        <param name="matchAnyKeyword">Os sinalizadores de palavra-chave necessários para habilitar os eventos.</param>
+        <summary>Habilita eventos para a origem do evento especificado que têm o nível de detalhes especificado ou inferior e os sinalizadores de palavra-chave de correspondência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Diagnostics.Tracing.EventSource.Guid%2A> propriedade especificado na `eventSource` é <xref:System.Guid.Empty>, todas as fontes de evento no domínio de aplicativo são afetadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableEvents">
+      <MemberSignature Language="C#" Value="public void EnableEvents (System.Diagnostics.Tracing.EventSource eventSource, System.Diagnostics.Tracing.EventLevel level, System.Diagnostics.Tracing.EventKeywords matchAnyKeyword, System.Collections.Generic.IDictionary&lt;string,string&gt; arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableEvents(class System.Diagnostics.Tracing.EventSource eventSource, valuetype System.Diagnostics.Tracing.EventLevel level, valuetype System.Diagnostics.Tracing.EventKeywords matchAnyKeyword, class System.Collections.Generic.IDictionary`2&lt;string, string&gt; arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel,System.Diagnostics.Tracing.EventKeywords,System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.Diagnostics.Tracing.EventSource" />
+        <Parameter Name="level" Type="System.Diagnostics.Tracing.EventLevel" />
+        <Parameter Name="matchAnyKeyword" Type="System.Diagnostics.Tracing.EventKeywords" />
+        <Parameter Name="arguments" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A origem do evento para a qual os eventos serão habilitados.</param>
+        <param name="level">O nível de eventos a ser habilitado.</param>
+        <param name="matchAnyKeyword">Os sinalizadores de palavra-chave necessários para habilitar os eventos.</param>
+        <param name="arguments">Os argumentos a serem correspondidos para habilitar os eventos.</param>
+        <summary>Permite que os eventos para a origem do evento especificado que tem o nível de verbosidade especificado ou inferior, o sinalizador de palavra-chave do evento de correspondência e correspondência de argumentos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Diagnostics.Tracing.EventSource.Guid%2A> propriedade especificado na `eventSource` é <xref:System.Guid.Empty>, todas as fontes de evento no domínio de aplicativo são afetadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Diagnostics.Tracing.EventSourceCreatedEventArgs&gt; EventSourceCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Diagnostics.Tracing.EventSourceCreatedEventArgs&gt; EventSourceCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Diagnostics.Tracing.EventListener.EventSourceCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Diagnostics.Tracing.EventSourceCreatedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma fonte de evento (<see cref="T:System.Diagnostics.Tracing.EventSource" /> objeto) está anexado para o distribuidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.Tracing.EventListener.EventSourceCreated> ocorre para todas as origens de eventos existentes quando o ouvinte de evento é criado, bem como para qualquer fonte de evento que é criado após a criação do ouvinte de evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventSourceIndex">
+      <MemberSignature Language="C#" Value="public static int EventSourceIndex (System.Diagnostics.Tracing.EventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 EventSourceIndex(class System.Diagnostics.Tracing.EventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.EventSourceIndex(System.Diagnostics.Tracing.EventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.Diagnostics.Tracing.EventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A origem do evento para localizar o índice.</param>
+        <summary>Obtém um pequeno número não negativo que representa a origem do evento especificado.</summary>
+        <returns>Um pequeno número de não-negativo que representa a origem do evento especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado por <xref:System.Diagnostics.Tracing.EventListener.EventSourceIndex%2A> identifica uma fonte de evento que é adequada para indexação de uma matriz. Esse inteiro é exclusivo dentro do domínio de aplicativo. Um ouvinte de evento pode ser útil para armazenar informações adicionais sobre cada origem do evento que está conectada a ele. O valor retornado por <xref:System.Diagnostics.Tracing.EventListener.EventSourceIndex%2A> permite que essas informações extras com eficiência sejam armazenados em uma matriz expansível como `List<T>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventWritten">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Diagnostics.Tracing.EventWrittenEventArgs&gt; EventWritten;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Diagnostics.Tracing.EventWrittenEventArgs&gt; EventWritten" />
+      <MemberSignature Language="DocId" Value="E:System.Diagnostics.Tracing.EventListener.EventWritten" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Diagnostics.Tracing.EventWrittenEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um evento foi gravado por uma fonte de evento (<see cref="T:System.Diagnostics.Tracing.EventSource" /> objeto) para o qual o ouvinte de evento habilitou eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEventSourceCreated">
+      <MemberSignature Language="C#" Value="protected virtual void OnEventSourceCreated (System.Diagnostics.Tracing.EventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnEventSourceCreated(class System.Diagnostics.Tracing.EventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated(System.Diagnostics.Tracing.EventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="System.Diagnostics.Tracing.EventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">A fonte do evento.</param>
+        <summary>Chamado para todas as origens de eventos existentes quando o ouvinte de evento é criado e quando uma nova fonte de evento é anexada ao ouvinte.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações de origem do evento devem estar cientes de que esses retornos de chamada são emitidos para origens de eventos existentes quando o ouvinte de evento é instanciado.  
+  
+ Em um ambiente multithreaded, é possível <xref:System.Diagnostics.Tracing.EventListener.OnEventWritten%2A> retornos de chamada antes que o <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A> retorno de chamada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEventWritten">
+      <MemberSignature Language="C#" Value="protected abstract void OnEventWritten (System.Diagnostics.Tracing.EventWrittenEventArgs eventData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnEventWritten(class System.Diagnostics.Tracing.EventWrittenEventArgs eventData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Tracing.EventListener.OnEventWritten(System.Diagnostics.Tracing.EventWrittenEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Tracing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventData" Type="System.Diagnostics.Tracing.EventWrittenEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventData">Os argumentos de evento que descrevem o evento.</param>
+        <summary>Chamado sempre que um evento tiver sido gravado por uma origem do evento para a qual o ouvinte de eventos tiver habilitado eventos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

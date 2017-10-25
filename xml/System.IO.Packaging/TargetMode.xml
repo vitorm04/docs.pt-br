@@ -1,0 +1,74 @@
+<Type Name="TargetMode" FullName="System.IO.Packaging.TargetMode">
+  <TypeSignature Language="C#" Value="public enum TargetMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TargetMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Packaging.TargetMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Packaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se o destino de uma <see cref="T:System.IO.Packaging.PackageRelationship" /> está dentro ou fora de <see cref="T:System.IO.Packaging.Package" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o destino estiver dentro de <xref:System.IO.Packaging.Package> (interna), a relação <xref:System.IO.Packaging.PackageRelationship.TargetUri%2A> sempre é relativo [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ Se o destino estiver fora de <xref:System.IO.Packaging.PackageRelationship.TargetUri%2A> (externo), a relação <xref:System.IO.Packaging.PackageRelationship.TargetUri%2A> pode ser um absoluto ou relativo para o local atual do pacote [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="External" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Packaging.TargetMode External = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Packaging.TargetMode.External" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.TargetMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A relação faz referência a um recurso que é externo ao pacote.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Internal">
+      <MemberSignature Language="C#" Value="Internal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.IO.Packaging.TargetMode Internal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.IO.Packaging.TargetMode.Internal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Packaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.TargetMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A relação faz referência a uma parte que está dentro do pacote.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,187 @@
+<Type Name="SamlAssertionKeyIdentifierClause" FullName="System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause">
+  <TypeSignature Language="C#" Value="public class SamlAssertionKeyIdentifierClause : System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SamlAssertionKeyIdentifierClause extends System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um <see langword="&lt;KeyIndentifier&gt;" /> elemento que faz referência a um <see langword="&lt;saml:Assertion&gt;" /> elemento em uma mensagem SOAP.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAssertionKeyIdentifierClause (string assertionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string assertionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assertionId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assertionId">O identificador do <see cref="T:System.IdentityModel.Tokens.SamlAssertion" /> que contém o identificador de chave</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" /> classe usando o identificador de asserção SAML especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Passar o <xref:System.IdentityModel.Tokens.SamlAssertion.AssertionId%2A> propriedade de um <xref:System.IdentityModel.Tokens.SamlAssertion> a este construtor.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assertionId" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SamlAssertionKeyIdentifierClause (string assertionId, byte[] derivationNonce, int derivationLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string assertionId, unsigned int8[] derivationNonce, int32 derivationLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.#ctor(System.String,System.Byte[],System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="assertionId" Type="System.String" />
+        <Parameter Name="derivationNonce" Type="System.Byte[]" />
+        <Parameter Name="derivationLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="assertionId">O identificador do <see cref="T:System.IdentityModel.Tokens.SamlAssertion" /> que contém o identificador de chave.</param>
+        <param name="derivationNonce">Uma matriz de <see cref="T:System.Byte" /> que contém o valor de uso único que foi usado para criar uma chave derivada.</param>
+        <param name="derivationLength">O tamanho da chave derivada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" /> classe usando o identificador de asserção SAML especificado, nonce e comprimento de chave.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Passar o <xref:System.IdentityModel.Tokens.SamlAssertion.AssertionId%2A> propriedade de um <xref:System.IdentityModel.Tokens.SamlAssertion> a este construtor.  
+  
+ O `derivationNonce` e `derivationLength` parâmetros são ignorados quando o <xref:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause> classe é serializada em uma mensagem SOAP de saída.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="assertionId" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssertionId">
+      <MemberSignature Language="C#" Value="public string AssertionId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssertionId" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.AssertionId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador para o <see cref="T:System.IdentityModel.Tokens.SamlAssertion" /> que contém o identificador de chave.</summary>
+        <value>O identificador para o <see cref="T:System.IdentityModel.Tokens.SamlAssertion" /> que contém o identificador de chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador para uma <xref:System.IdentityModel.Tokens.SamlAssertion> é especificado no <xref:System.IdentityModel.Tokens.SamlAssertion.AssertionId%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause clause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.Matches(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="clause">To be added.</param>
+        <summary>Determina se o identificador de chave especificado é o mesmo que a instância atual.</summary>
+        <returns>
+          <see langword="true" />Quando o identificador de chave especificado é igual à instância atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.Matches%2A> sobrecarga retorna um valor de `true` quando uma das seguintes opções for `true`:  
+  
+-   O <xref:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.AssertionId%2A> propriedade o `keyIdentifierClause` parâmetro tem o mesmo valor que a instância atual <xref:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.AssertionId%2A> propriedade.  
+  
+-   O `keyIdentifierClause` parâmetro e esta instância são a mesma instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public bool Matches (string assertionId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Matches(string assertionId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.Matches(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="assertionId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="assertionId">O identificador de asserção SAML a ser comparado.</param>
+        <summary>Determina se o identificador de asserção SAML especificado é o mesmo que a instância atual.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="assertionId" /> tem o mesmo valor que a instância atual <see cref="P:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.AssertionId" /> propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A comparação diferencia maiúsculas de minúsculas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> que inclui o identificador de asserção SAML que representa a cláusula de identificador de chave atual.</summary>
+        <returns>Um <see cref="T:System.String" /> que inclui o identificador de asserção SAML que representa o atual <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

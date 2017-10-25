@@ -1,0 +1,151 @@
+<Type Name="IValueProvider" FullName="System.Windows.Automation.Provider.IValueProvider">
+  <TypeSignature Language="C#" Value="public interface IValueProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IValueProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.Provider.IValueProvider" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationProvider</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("c7935180-6fb3-4201-b174-7df73adbf64a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Expõe métodos e propriedades para oferecer suporte ao acesso de cliente à Automação da Interface do Usuário para controles que têm um valor intrínseco que não abrange um intervalo e que pode ser representado como uma cadeia de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do controle pode ou não poderão ser editado dependendo do controle e suas configurações.  
+  
+ Implementado em um provedor de automação de interface do usuário que deve dar suporte a <xref:System.Windows.Automation.ValuePattern> padrão de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IValueProvider.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se o valor de um controle é somente leitura.</summary>
+        <value>
+          <see langword="true" />Se o valor é somente leitura; <see langword="false" /> se ele pode ser modificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle deve ter sua <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> definida como `true` e sua <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> definida como `false` antes de permitir uma chamada para <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que permite que seu valor seja alterado.  
+  
+ [!code-csharp[UIAIValueProvider_snip#IsReadOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIValueProvider_snip/CSharp/ValueFragment.cs#isreadonly)]
+ [!code-vb[UIAIValueProvider_snip#IsReadOnly](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIValueProvider_snip/visualbasic/valuefragment.vb#isreadonly)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="public void SetValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Automation.Provider.IValueProvider.SetValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser definido. O provedor é responsável por converter o valor para o tipo de dados apropriado.</param>
+        <summary>Define o valor de um controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles de edição de linha única oferecem suporte a acesso programático a seu conteúdo implementando <xref:System.Windows.Automation.Provider.IValueProvider>. No entanto, os controles de edição de várias linhas não implementam <xref:System.Windows.Automation.Provider.IValueProvider>; em vez disso, eles oferecem acesso a seus conteúdos implementando <xref:System.Windows.Automation.Provider.ITextProvider>.  
+  
+ Controla como <xref:System.Windows.Automation.ControlType.ListItem> e <xref:System.Windows.Automation.ControlType.TreeItem> deve implementar <xref:System.Windows.Automation.Provider.IValueProvider> se o valor de qualquer um dos itens for editável, independentemente do atual modo de edição do controle. O controle pai também deve implementar <xref:System.Windows.Automation.Provider.IValueProvider> se os itens filhos são editáveis.  
+  
+ ![Item de lista editável. ] (~/add/media/uia-valuepattern-editable-listitem.PNG "Item de lista editável.")  
+Exemplo de um Item de lista editável  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um controle personalizado que permite que seu valor seja definida como uma cadeia de caracteres de tamanho limitado.  
+  
+ [!code-csharp[UIAIValueProvider_snip#SetValue](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIValueProvider_snip/CSharp/ValueFragment.cs#setvalue)]
+ [!code-vb[UIAIValueProvider_snip#SetValue](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIValueProvider_snip/visualbasic/valuefragment.vb#setvalue)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Se informações específicas de localidade são passadas para um controle em um formato incorreto, como uma data formatada incorretamente.</exception>
+        <exception cref="T:System.ArgumentException">Se um novo valor não é possível converter uma cadeia de caracteres em um formato reconhece o controle.</exception>
+        <exception cref="T:System.Windows.Automation.ElementNotEnabledException">Quando é feita uma tentativa para manipular um controle que não está habilitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.Provider.IValueProvider.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationProvider</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do controle.</summary>
+        <value>O valor do controle como uma cadeia de caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles de edição de linha única oferecem suporte a acesso programático a seu conteúdo implementando <xref:System.Windows.Automation.Provider.IValueProvider> (além <xref:System.Windows.Automation.Provider.ITextProvider>). No entanto, os controles de edição de várias linhas não implementam <xref:System.Windows.Automation.Provider.IValueProvider>.  
+  
+ Para recuperar o conteúdo textual de controles de edição de várias linhas, os controles devem implementar <xref:System.Windows.Automation.Provider.ITextProvider>. No entanto, <xref:System.Windows.Automation.Provider.ITextProvider> não oferece suporte para a definição do valor de um controle.  
+  
+ <xref:System.Windows.Automation.Provider.IValueProvider>não oferece suporte a recuperação de informações ou valores de subcadeia de caracteres de formatação. Implementar <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação deste método para um controle que permite que seu valor a ser recuperado.  
+  
+ [!code-csharp[UIAIValueProvider_snip#Value](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAIValueProvider_snip/CSharp/ValueFragment.cs#value)]
+ [!code-vb[UIAIValueProvider_snip#Value](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAIValueProvider_snip/visualbasic/valuefragment.vb#value)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

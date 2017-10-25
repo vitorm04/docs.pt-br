@@ -1,0 +1,174 @@
+<Type Name="ApplicationSecurityInfo" FullName="System.Security.Policy.ApplicationSecurityInfo">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationSecurityInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationSecurityInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.ApplicationSecurityInfo" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Mantém a evidência de segurança para um aplicativo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Security.Policy.ApplicationSecurityInfo>Fornece informações de segurança sobre um aplicativo ativado manifesto usando informações obtidas de manifestos do aplicativo e sua <xref:System.ActivationContext>.  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationSecurityInfo (ActivationContext activationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ActivationContext activationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.ApplicationSecurityInfo.#ctor(System.ActivationContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="activationContext" Type="System.ActivationContext" />
+      </Parameters>
+      <Docs>
+        <param name="activationContext">Um <see cref="T:System.ActivationContext" /> objeto que identifica exclusivamente o aplicativo de destino.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Policy.ApplicationSecurityInfo" /> classe usando o contexto de ativação fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ActivationContext> objeto contém um <xref:System.ApplicationIdentity> que identifica exclusivamente um aplicativo por seu nome completo e o local do objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activationContext" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationEvidence">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.Evidence ApplicationEvidence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Policy.Evidence ApplicationEvidence" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationEvidence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.Evidence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a evidência do aplicativo.</summary>
+        <value>Um <see cref="T:System.Security.Policy.Evidence" /> objeto para o aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Evidência é o conjunto de informações que constituem a entrada para decisões de política de segurança, tais como decidir quais permissões podem ser concedidas ao código.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationEvidence" /> é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationId">
+      <MemberSignature Language="C#" Value="public ApplicationId ApplicationId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ApplicationId ApplicationId" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ApplicationId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de identidade do aplicativo.</summary>
+        <value>Um objeto <see cref="T:System.ApplicationId" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma identidade de aplicativo consiste de chave pública do Editor, o nome do aplicativo, a arquitetura de processador de destino, a cultura do aplicativo e a versão do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Security.Policy.ApplicationSecurityInfo.ApplicationId" /> é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRequestSet">
+      <MemberSignature Language="C#" Value="public System.Security.PermissionSet DefaultRequestSet { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.PermissionSet DefaultRequestSet" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.DefaultRequestSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.PermissionSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conjunto de permissões padrão.</summary>
+        <value>Um <see cref="T:System.Security.PermissionSet" /> objeto que representa as permissões padrão para o aplicativo. O padrão é um <see cref="T:System.Security.PermissionSet" /> com um estado de permissão de<see cref="F:System.Security.Permissions.PermissionState.None" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a propriedade não foi definida, o acessador get retorna um <xref:System.Security.PermissionSet> com um estado de permissão de <xref:System.Security.Permissions.PermissionState.None>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Security.Policy.ApplicationSecurityInfo.DefaultRequestSet" /> é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeploymentId">
+      <MemberSignature Language="C#" Value="public ApplicationId DeploymentId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ApplicationId DeploymentId" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Policy.ApplicationSecurityInfo.DeploymentId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ApplicationId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento superior no aplicativo, que é descrito na identidade de implantação.</summary>
+        <value>Um <see cref="T:System.ApplicationId" /> objeto que descreve o elemento superior do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma identidade de implantação consiste de chave pública do Editor, o nome do aplicativo, a arquitetura de processador de destino, a cultura do aplicativo e a versão do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <see cref="P:System.Security.Policy.ApplicationSecurityInfo.DeploymentId" /> é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

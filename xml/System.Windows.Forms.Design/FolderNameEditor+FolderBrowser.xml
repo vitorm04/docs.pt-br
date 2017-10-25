@@ -1,0 +1,154 @@
+<Type Name="FolderNameEditor+FolderBrowser" FullName="System.Windows.Forms.Design.FolderNameEditor+FolderBrowser">
+  <TypeSignature Language="C#" Value="protected sealed class FolderNameEditor.FolderBrowser : System.ComponentModel.Component" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi sealed beforefieldinit FolderNameEditor/FolderBrowser extends System.ComponentModel.Component" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma caixa de diálogo que permite que o usuário escolha uma pasta. Essa classe não pode ser herdada.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FolderBrowser ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma descrição para mostrar acima de pastas.</summary>
+        <value>A descrição para mostrar acima de pastas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa descrição pode fornecer instruções sobre como selecionar uma pasta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectoryPath">
+      <MemberSignature Language="C#" Value="public string DirectoryPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DirectoryPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser.DirectoryPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do diretório para o objeto de usuário separado.</summary>
+        <value>O caminho de diretório para o objeto de usuário separado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.DialogResult ShowDialog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser.ShowDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Mostra a caixa de diálogo de navegador de pasta.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DialogResult" /> do formulário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowDialog (System.Windows.Forms.IWin32Window owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Windows.Forms.DialogResult ShowDialog(class System.Windows.Forms.IWin32Window owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser.ShowDialog(System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Janela de nível superior que possuirá a caixa de diálogo modal (ex.: Form).</param>
+        <summary>Mostra a caixa de diálogo de navegador de pasta com o proprietário especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.DialogResult" /> do formulário.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartLocation">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.FolderNameEditor.FolderBrowserFolder StartLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.FolderNameEditor/FolderBrowserFolder StartLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser.StartLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.FolderNameEditor+FolderBrowserFolder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local inicial do nó raiz.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Design.FolderNameEditor.FolderBrowserFolder" /> que indica o local para o navegador de pasta procurar inicialmente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Design.FolderNameEditor.FolderBrowserStyles Style { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.Design.FolderNameEditor/FolderBrowserStyles Style" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser.Style" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Design.FolderNameEditor+FolderBrowserStyles</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os estilos que o navegador de pasta usará ao navegar em pastas. Isso deve ser uma combinação de sinalizadores do <see cref="T:System.Windows.Forms.Design.FolderNameEditor.FolderBrowserStyles" /> enumeração.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.Design.FolderNameEditor.FolderBrowserStyles" /> membro de enumeração que indica o comportamento para o <see cref="T:System.Windows.Forms.Design.FolderNameEditor.FolderBrowser" /> para usar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

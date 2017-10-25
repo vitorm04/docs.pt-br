@@ -1,0 +1,6 @@
+<Namespace Name="System.ServiceModel.PeerResolvers">
+  <Docs>
+    <summary>O <see cref="N:System.ServiceModel.PeerResolvers" /> namespace contém classes que permitem aos desenvolvedores personalizar e estender o serviço de protocolo PNRP.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

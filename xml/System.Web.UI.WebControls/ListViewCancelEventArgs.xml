@@ -1,0 +1,146 @@
+<Type Name="ListViewCancelEventArgs" FullName="System.Web.UI.WebControls.ListViewCancelEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewCancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.ListView.ItemCanceling" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListView> controlar gera o <xref:System.Web.UI.WebControls.ListView.ItemCanceling> evento quando o botão Cancelar é clicado, mas antes de sair de inserção ou modo de edição. (Um botão de cancelamento é um botão cujo `CommandName` estiver definida como "Cancel") isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada sempre que esse evento ocorre, como interromper a operação de cancelamento se colocaria o item em um estado indesejado.  
+  
+ Um <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> objeto é passado para o método de manipulação de eventos. Esse objeto permite que você determine o índice do item que contém o botão de cancelamento que gerou o evento. Você também pode determinar qual operação foi cancelada. Para interromper a operação de cancelamento, defina o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> objeto para exibir uma mensagem quando o usuário cancela a operação insert ou update em um <xref:System.Web.UI.WebControls.ListView> controle. O <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> objeto é passado para o método de manipulação de eventos para o <xref:System.Web.UI.WebControls.ListView.ItemCanceling> evento.  
+  
+> [!IMPORTANT]
+>  Este exemplo contém uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListView.ItemCanceling#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/CS/ListViewItemCancelingCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListView.ItemCanceling#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/VB/ListViewItemCancelingVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewCancelEventArgs (int itemIndex, System.Web.UI.WebControls.ListViewCancelMode cancelMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 itemIndex, valuetype System.Web.UI.WebControls.ListViewCancelMode cancelMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewCancelEventArgs.#ctor(System.Int32,System.Web.UI.WebControls.ListViewCancelMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="itemIndex" Type="System.Int32" />
+        <Parameter Name="cancelMode" Type="System.Web.UI.WebControls.ListViewCancelMode" />
+      </Parameters>
+      <Docs>
+        <param name="itemIndex">O índice do item que contém o botão de cancelamento que gerou o evento.</param>
+        <param name="cancelMode">Uma da <see cref="T:System.Web.UI.WebControls.ListViewCancelMode" /> valores que indicam qual operação o usuário cancelou.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewCancelEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A>|O valor de `cancelMode` parâmetro.|  
+|<xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A>|O valor de `itemIndex` parâmetro.|  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando elas geram eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelMode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ListViewCancelMode CancelMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.ListViewCancelMode CancelMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ListViewCancelMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo de entrada de dados que o <see cref="T:System.Web.UI.WebControls.ListView" /> controle estava quando o botão Cancelar foi clicado.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.ListViewCancelMode" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A> propriedade para determinar se o <xref:System.Web.UI.WebControls.ListView> controle estava em Editar ou modo de inserção quando o botão Cancelar foi clicado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A> propriedade para determinar o modo de entrada de dados que o <xref:System.Web.UI.WebControls.ListView> controle estava quando o usuário clicou no botão Cancelar. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/CS/ListViewItemCancelingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/VB/ListViewItemCancelingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemIndex">
+      <MemberSignature Language="C#" Value="public int ItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do item que contém o botão de cancelamento que gerou o evento.</summary>
+        <value>O índice de base zero do item que contém o botão de cancelamento que gerou o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A> propriedade para determinar o índice do item que contém o botão Cancelar é clicado pelo usuário. O índice do item é geralmente usado para recuperar o item do <xref:System.Web.UI.WebControls.ListView.Items%2A> coleção do <xref:System.Web.UI.WebControls.ListView> controle, que permite que você acesse as propriedades do item.  
+  
+ Quando o <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.CancelMode%2A> está definida como `ListViewCancelMode.CancelingInsert`, o valor da <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A> propriedade sempre é -1.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewCancelEventArgs.ItemIndex%2A> para determinar o índice do item de edição que contém o botão Cancelar foi clicado pelo usuário. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.ListViewCancelEventArgs> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/CS/ListViewItemCancelingCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.ItemCanceling#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.ItemCanceling/VB/ListViewItemCancelingVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

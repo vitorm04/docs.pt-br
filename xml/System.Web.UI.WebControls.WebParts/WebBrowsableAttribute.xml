@@ -1,0 +1,255 @@
+<Type Name="WebBrowsableAttribute" FullName="System.Web.UI.WebControls.WebParts.WebBrowsableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class WebBrowsableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebBrowsableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica se a propriedade designada de um controle de Web Parts é exibida em um objeto <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle fornece uma interface de usuário genérica (UI) que permite aos usuários editar propriedades personalizadas em <xref:System.Web.UI.WebControls.WebParts.WebPart> e controles de servidor colocado no <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zonas. A interface do usuário de edição é fornecida para propriedades que são marcadas no código-fonte com o `WebBrowsable` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> classe). Quando uma propriedade é marcada com esse atributo, um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle cria a interface do usuário de edição com base no tipo da propriedade e usa um <xref:System.ComponentModel.PropertyDescriptor> se necessário para converter o valor em cada controle de edição para o tipo da propriedade do objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> atributo marcar uma propriedade em um controle de Web Parts como disponível para ser exibido em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. Este exemplo é parte de um exemplo maior encontrado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> visão geral da classe.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ ]]></format>
+    </remarks>
+    <exception cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</exception>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowsableAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute" /> classe com o <see cref="P:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Browsable" /> propriedade definida como <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.%23ctor%2A> construtor é usado quando o `WebBrowsable` atributo é aplicado por meio da declaração de atributo `[WebBrowsable()]` em c# ou `<WebBrowsable()>` no Visual Basic.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> atributo marcar uma propriedade em um controle de Web Parts como disponível para ser exibido em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. A propriedade é definida como navegável por meio de <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.%23ctor%2A> construtor. Este exemplo é parte de um exemplo maior encontrado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> visão geral da classe.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#6)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebBrowsableAttribute (bool browsable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool browsable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="browsable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="browsable">Um valor booliano que indica se a propriedade deve ser exibida em um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute" /> classe com o valor especificado para o <see cref="P:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Browsable" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.%23ctor%2A> construtor é usado quando o `WebBrowsable` atributo é aplicado por meio da declaração de atributo com um valor booliano. Para impedir que uma propriedade que está sendo exibido em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle, a propriedade pode ser marcada com o atributo `[WebBrowsable(false)]` em c# ou `<WebBrowsable(false)>` no Visual Basic.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Browsable">
+      <MemberSignature Language="C#" Value="public bool Browsable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Browsable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Browsable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> controle deve exibir uma propriedade específica de um controle de Web Parts.</summary>
+        <value>
+          <see langword="true" />Se <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> exibirá a propriedade; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Browsable%2A> propriedade é definida por meio de <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.WebBrowsableAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.WebBrowsableAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebBrowsableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma ocorrência da <see cref="T:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute" /> classe com o <see cref="P:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Browsable" /> propriedade definida como o valor padrão, que é <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Default> campo retorna o mesmo resultado de chamar o <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.%23ctor%2A> construtor e passando `false` como o parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância, ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para o valor de nome de exibição.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a instância atual está definida como o valor padrão.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute" /> é igual a <see cref="F:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Default" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.WebBrowsableAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.WebBrowsableAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebBrowsableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma ocorrência da <see cref="T:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute" /> classe com o <see cref="P:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Browsable" /> propriedade definida como <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.No> campo retorna o mesmo resultado de chamar o <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.%23ctor%2A> construtor e passando `false` como o parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.Web.UI.WebControls.WebParts.WebBrowsableAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Web.UI.WebControls.WebParts.WebBrowsableAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.WebBrowsableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa uma ocorrência da <see cref="T:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute" /> classe com o <see cref="P:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Browsable" /> propriedade definida como <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.Yes> campo retorna o mesmo resultado de chamar o <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute.%23ctor%2A> construtor e passando `true` como o parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

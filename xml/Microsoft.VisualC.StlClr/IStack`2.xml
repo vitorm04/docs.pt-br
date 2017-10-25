@@ -1,0 +1,211 @@
+<Type Name="IStack&lt;TValue,TCont&gt;" FullName="Microsoft.VisualC.StlClr.IStack&lt;TValue,TCont&gt;">
+  <TypeSignature Language="C#" Value="public interface IStack&lt;TValue,TCont&gt; : ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IStack`2&lt;TValue, TCont&gt; implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualC.StlClr.IStack`2" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TValue" />
+    <TypeParameter Name="TCont" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TValue">O tipo de um elemento na sequência controlada.</typeparam>
+    <typeparam name="TCont">O tipo do contêiner subjacente.</typeparam>
+    <summary>Define a interface de um STL/CLR [pilha](http://msdn.microsoft.com/library/6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb) objeto.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="assign">
+      <MemberSignature Language="C#" Value="public void assign (Microsoft.VisualC.StlClr.IStack&lt;TValue,TCont&gt; _Right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void assign(class Microsoft.VisualC.StlClr.IStack`2&lt;!TValue, !TCont&gt; _Right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IStack`2.assign(Microsoft.VisualC.StlClr.IStack{`0,`1})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Right" Type="Microsoft.VisualC.StlClr.IStack&lt;TValue,TCont&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="_Right">O adaptador do contêiner cujos elementos serão inseridos no contêiner.</param>
+        <summary>Substitui todos os elementos de contêiner com os elementos no contêiner fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [stack::assign (STL/CLR)](http://msdn.microsoft.com/library/18cc35ad-23cf-4a5a-adae-d967dc5d6980).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="empty">
+      <MemberSignature Language="C#" Value="public bool empty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool empty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IStack`2.empty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o contêiner não contém elementos.</summary>
+        <returns>
+          <see langword="true" />Se o contêiner não contém elementos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Stack:: Empty (STL/CLR)](http://msdn.microsoft.com/library/30bb4ec6-e7a1-4137-99ba-0e0ebdf31baf).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="pop">
+      <MemberSignature Language="C#" Value="public void pop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void pop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IStack`2.pop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o último elemento do contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Stack:: pop (STL/CLR)](http://msdn.microsoft.com/library/b7565385-9e6b-432d-8c71-c62c9c6ad90d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="push">
+      <MemberSignature Language="C#" Value="public void push (TValue _Val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void push(!TValue _Val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IStack`2.push(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="_Val" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="_Val">O valor a ser acrescentado ao contêiner.</param>
+        <summary>Adiciona um elemento ao contêiner.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Stack:: push (STL/CLR)](http://msdn.microsoft.com/library/60e5b076-c80f-4af0-a018-62cda7e081db).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="size">
+      <MemberSignature Language="C#" Value="public int size ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 size() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IStack`2.size" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Conta o número de elementos no contêiner.</summary>
+        <returns>O comprimento da sequência controlada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Stack:: Size (STL/CLR)](http://msdn.microsoft.com/library/6113e649-a4f9-4021-8131-34cee4bc8ca0).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="top">
+      <MemberSignature Language="C#" Value="public TValue top ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TValue top() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualC.StlClr.IStack`2.top" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue@</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Acessa o último elemento do contêiner.</summary>
+        <returns>O último elemento da sequência controlada, que deve ser não vazio.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Stack (STL/CLR)](http://msdn.microsoft.com/library/5d8b7b69-336e-4d01-8b91-413a17aa2533).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="top_item">
+      <MemberSignature Language="C#" Value="public TValue top_item { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue top_item" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualC.StlClr.IStack`2.top_item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualC.STLCLR</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acessa o último elemento do contêiner.</summary>
+        <value>O último elemento da sequência controlada, que deve ser não vazio.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [stack::top_item (STL/CLR)](http://msdn.microsoft.com/library/01571acf-4880-44c4-80c4-bd91408a032d).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

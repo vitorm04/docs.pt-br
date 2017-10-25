@@ -1,0 +1,221 @@
+<Type Name="BaseValueSource" FullName="System.Windows.BaseValueSource">
+  <TypeSignature Language="C#" Value="public enum BaseValueSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BaseValueSource extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.BaseValueSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Identifica a origem do sistema de propriedades de um valor da propriedade de dependência específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por uma propriedade dentro de <xref:System.Windows.ValueSource> estrutura, que por sua vez é obtida chamando um <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A> método em relação a uma determinada propriedade de dependência.  
+  
+ Cada valor dessa enumeração indica que um determinado aspecto do geral [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade foi responsável para a determinação de valor efetivo de um determinado valor de propriedade de dependência em um objeto de dependência específicas. Para saber mais sobre o [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade e a precedência na qual cada aspecto da propriedade sistema opera, consulte [precedência de valor de propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ O valor padrão não é o valor padrão da enumeração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é o valor padrão, conforme definido pelos metadados da propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultStyle">
+      <MemberSignature Language="C#" Value="DefaultStyle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource DefaultStyle = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.DefaultStyle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte provém de um setter no estilo padrão. O estilo padrão é obtido do tema atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultStyleTrigger">
+      <MemberSignature Language="C#" Value="DefaultStyleTrigger" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource DefaultStyleTrigger = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.DefaultStyleTrigger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte provém de um gatilho no estilo padrão. O estilo padrão é obtido do tema atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplicitStyleReference">
+      <MemberSignature Language="C#" Value="ImplicitStyleReference" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource ImplicitStyleReference = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.ImplicitStyleReference" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é uma referência de estilo implícita (o estilo se baseava no tipo detectado ou no tipo baseado). Esse valor é retornado apenas para a propriedade Style em si, não para as propriedades definidas por meio de setters ou gatilhos de um estilo desse tipo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Inherited">
+      <MemberSignature Language="C#" Value="Inherited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource Inherited = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.Inherited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é um valor por meio da herança do valor da propriedade.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Local">
+      <MemberSignature Language="C#" Value="Local" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource Local = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.Local" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é um valor definido localmente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentTemplate">
+      <MemberSignature Language="C#" Value="ParentTemplate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource ParentTemplate = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.ParentTemplate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte baseia-se em um modelo pai que está sendo usado por um elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentTemplateTrigger">
+      <MemberSignature Language="C#" Value="ParentTemplateTrigger" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource ParentTemplateTrigger = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.ParentTemplateTrigger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é um valor baseado em gatilho de um modelo pai que criou o elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="Style" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource Style = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.Style" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte provém de um setter de estilo de um estilo sem temas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StyleTrigger">
+      <MemberSignature Language="C#" Value="StyleTrigger" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource StyleTrigger = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.StyleTrigger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é um valor baseado em gatilho de um estilo sem temas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateTrigger">
+      <MemberSignature Language="C#" Value="TemplateTrigger" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource TemplateTrigger = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.TemplateTrigger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é um valor baseado em gatilho em um modelo que provém de um estilo sem temas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.BaseValueSource Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.BaseValueSource.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A fonte é desconhecida. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

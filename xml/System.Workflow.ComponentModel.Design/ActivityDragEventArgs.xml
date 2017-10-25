@@ -1,0 +1,96 @@
+<Type Name="ActivityDragEventArgs" FullName="System.Workflow.ComponentModel.Design.ActivityDragEventArgs">
+  <TypeSignature Language="C#" Value="public class ActivityDragEventArgs : System.Windows.Forms.DragEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivityDragEventArgs extends System.Windows.Forms.DragEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Design.ActivityDragEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DragEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma classe que fornece dados para o <see cref="M:System.Workflow.ComponentModel.Design.ActivityDesigner.OnDragDrop(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" />, <see cref="M:System.Workflow.ComponentModel.Design.ActivityPreviewDesigner.OnDragEnter(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" />, e <see cref="M:System.Workflow.ComponentModel.Design.ActivityDesigner.OnDragOver(System.Workflow.ComponentModel.Design.ActivityDragEventArgs)" /> eventos no designer de fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Esses argumentos de evento são passados para <xref:System.Workflow.ComponentModel.Design.ActivityDesigner> classes quando uma operação de arrastar e soltar está em andamento na superfície de design de fluxo de trabalho. <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>classes podem acessar as informações contidas no <xref:System.Workflow.ComponentModel.Design.ActivityDragEventArgs> classe para influenciar o comportamento da operação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Activities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Activity&gt; Activities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Workflow.ComponentModel.Activity&gt; Activities" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.Activities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Workflow.ComponentModel.Activity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de atividades no qual uma operação de arrastar e soltar é executada.</summary>
+        <value>Uma coleção somente leitura que contém todos os <see cref="T:System.Workflow.ComponentModel.Activity" /> objetos em que a operação de arrastar e soltar é executada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragImageSnapPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point DragImageSnapPoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point DragImageSnapPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.DragImageSnapPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local em que as atividades devem ser descartados na superfície de design de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Drawing.Point" /> que define o local na superfície de design de fluxo de trabalho em que as atividades serão removidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.ComponentModel.Design.WorkflowView> classe cria uma imagem de arrastar para as atividades que está sendo arrastado. <xref:System.Workflow.ComponentModel.Design.ActivityDesigner>objetos podem usar o <xref:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.DragImageSnapPoint%2A> propriedade para ajustar a imagem para um destino e remover as atividades no local especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DragInitiationPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point DragInitiationPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Point DragInitiationPoint" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Design.ActivityDragEventArgs.DragInitiationPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.Point" /> na superfície de design de fluxo de trabalho em que uma operação de arrastar começou.</summary>
+        <value>Um <see cref="T:System.Drawing.Point" /> que define o local na superfície de design de fluxo de trabalho em que a operação de arrastar começou.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

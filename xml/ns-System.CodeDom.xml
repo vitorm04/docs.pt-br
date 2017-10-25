@@ -1,0 +1,15 @@
+<Namespace Name="System.CodeDom">
+  <Docs>
+    <summary>O <see cref="N:System.CodeDom" /> namespace contém classes que podem ser usados para representar os elementos e a estrutura de um documento de código fonte. As classes nesse namespace podem ser usadas para modelar a estrutura de um documento de código de origem que pode ser gerados como código-fonte em um idioma com suporte, usando a funcionalidade fornecida pelo <see cref="N:System.CodeDom.Compiler" /> namespace.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre como usar o CodeDOM para representar e gerar código-fonte, consulte [dinâmico geração de código-fonte e compilação](~/docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).  
+  
+ Para uma tabela que lista os elementos de CodeDOM por tipo e a função, consulte o [referência rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

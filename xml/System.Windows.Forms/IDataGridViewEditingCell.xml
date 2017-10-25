@@ -1,0 +1,140 @@
+<Type Name="IDataGridViewEditingCell" FullName="System.Windows.Forms.IDataGridViewEditingCell">
+  <TypeSignature Language="C#" Value="public interface IDataGridViewEditingCell" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataGridViewEditingCell" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.IDataGridViewEditingCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a funcionalidade comum para uma célula que permita a manipulação de seu valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada por classes como <xref:System.Windows.Forms.DataGridViewCheckBoxCell> que derivam <xref:System.Windows.Forms.DataGridViewCell> e fornecer uma interface de usuário (UI) para especificar valores sem hospedando um controle de edição. Nesse caso, a interface do usuário é exibido, independentemente se a célula está em modo de edição.  
+  
+ Tipos de outra célula, como <xref:System.Windows.Forms.DataGridViewButtonCell>, fornecer uma interface do usuário, mas não armazenam valores especificados pelo usuário. Nesse caso, o tipo de célula não implementa <xref:System.Windows.Forms.IDataGridViewEditingCell> ou hospedar um controle de edição.  
+  
+ Tipos de célula que exibem uma edição de controle quando a célula está em modo de edição, como <xref:System.Windows.Forms.DataGridViewTextBoxCell>, não implementam <xref:System.Windows.Forms.IDataGridViewEditingCell> mas de fornecer uma classe complementar que implementa <xref:System.Windows.Forms.IDataGridViewEditingControl>. Por exemplo, <xref:System.Windows.Forms.DataGridViewTextBoxCell> fornece um <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl> que deriva de <xref:System.Windows.Forms.TextBox> controle e implementa <xref:System.Windows.Forms.IDataGridViewEditingControl>. Nesse caso, a célula <xref:System.Windows.Forms.DataGridViewCell.EditType%2A> está definida como um <xref:System.Type> objeto que representa o tipo de controle de edição. Para obter informações sobre como implementar <xref:System.Windows.Forms.IDataGridViewEditingControl>, consulte [como: hospedar controles em células de DataGridView do Windows Forms](~/docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EditingCellFormattedValue">
+      <MemberSignature Language="C#" Value="public object EditingCellFormattedValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object EditingCellFormattedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingCell.EditingCellFormattedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor formatado da célula.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém o valor da célula.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor formatado representa o valor conforme ele é exibido na interface do usuário da célula. O valor formatado pode ser diferente no valor absoluto e o tipo de dados mesmo que o valor real contido na célula.  
+  
+ Implementações dessa propriedade normalmente retornam um valor recuperado chamando o <xref:System.Windows.Forms.IDataGridViewEditingCell.GetEditingCellFormattedValue%2A> método e passar o <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Formatting> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingCellValueChanged">
+      <MemberSignature Language="C#" Value="public bool EditingCellValueChanged { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EditingCellValueChanged" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.IDataGridViewEditingCell.EditingCellValueChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o valor da célula é alterado.</summary>
+        <value>
+          <see langword="true" />Se o valor da célula é alterado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é definida como `true` para indicar que o valor de célula foi modificado e sua interface de usuário (UI) talvez precise ser atualizada para refletir essa alteração de valor. A célula ou tabela proprietária redefina essa propriedade como `false` após uma atualização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEditingCellFormattedValue">
+      <MemberSignature Language="C#" Value="public object GetEditingCellFormattedValue (System.Windows.Forms.DataGridViewDataErrorContexts context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetEditingCellFormattedValue(valuetype System.Windows.Forms.DataGridViewDataErrorContexts context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingCell.GetEditingCellFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Windows.Forms.DataGridViewDataErrorContexts" />
+      </Parameters>
+      <Docs>
+        <param name="context">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewDataErrorContexts" /> valores que especifica o contexto no qual os dados são necessários.</param>
+        <summary>Recupera o valor formatado da célula.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa a versão formatada do conteúdo da célula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor formatado representa o valor conforme ele é exibido na interface do usuário da célula. O valor formatado pode ser diferente no valor absoluto e o tipo de dados mesmo que o valor real contido na célula.  
+  
+ Para definir o valor formatado da célula, use o <xref:System.Windows.Forms.IDataGridViewEditingCell.EditingCellFormattedValue%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareEditingCellForEdit">
+      <MemberSignature Language="C#" Value="public void PrepareEditingCellForEdit (bool selectAll);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PrepareEditingCellForEdit(bool selectAll) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.IDataGridViewEditingCell.PrepareEditingCellForEdit(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectAll" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="selectAll">
+          <see langword="true" />para selecionar o conteúdo da célula. Caso contrário, <see langword="false" />.</param>
+        <summary>Prepara a célula selecionada atualmente para edição</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objetivo deste método é preparar a célula e seu conteúdo para edição. Por exemplo, convém colocar o ponto de inserção no final do conteúdo da célula, ou alterar como o conteúdo é alinhado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

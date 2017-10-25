@@ -1,0 +1,535 @@
+<Type Name="MulticastDelegate" FullName="System.MulticastDelegate">
+  <TypeSignature Language="C#" Value="public abstract class MulticastDelegate : Delegate" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi abstract serializable beforefieldinit MulticastDelegate extends System.Delegate" />
+  <TypeSignature Language="DocId" Value="T:System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um delegado de projeção múltipla, ou seja, um delegado que pode ter mais de um elemento na lista de invocação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.MulticastDelegate>é uma classe especial. Compiladores e outras ferramentas podem derivar desta classe, mas você não pode derivar dele explicitamente. O mesmo é verdadeiro para o <xref:System.Delegate> classe.  
+  
+ Além dos métodos tipos delegados herdam <xref:System.MulticastDelegate>, o common language runtime fornece dois métodos especiais: `BeginInvoke` e `EndInvoke`. Para obter mais informações sobre esses métodos, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+ Um <xref:System.MulticastDelegate> tem uma lista vinculada de delegates, chamada de uma lista de invocação, consiste em um ou mais elementos. Quando um delegado multicast é chamado, os representantes na lista de invocação são chamados de forma síncrona na ordem em que aparecem. Se ocorrer um erro durante a execução da lista é gerada uma exceção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe, `StringContainer`, que inclui uma coleção de cadeias de caracteres. Um de seus membros é o `CheckAndDisplayDelegate` delegado, que é usada para exibir cadeias de caracteres armazenadas em uma `StringContainer` objeto que atendem a critérios específicos. O representante usa uma única cadeia de caracteres como um parâmetro e retorna `void` (ou, no Visual Basic, ele é um `Sub` procedimento). Ele também inclui um método `DisplayAllQualified`, que tem um único parâmetro, um `CheckAndDisplayDelegate` delegate. Isso permite que o método a ser chamado e exibir um conjunto de cadeias de caracteres que são filtrados com base nos métodos que contém o delegado.  
+  
+ O exemplo também define uma classe de utilitário `StringExtensions`, que tem dois métodos:  
+  
+-   `ConStart`, que exibe cadeias de caracteres que começam com uma consoante.  
+  
+-   `VowelStart`, que exibe cadeias de caracteres que começam com uma vogal.  
+  
+ Observe que ambos os métodos incluem um parâmetro de cadeia de caracteres único e retornam `void`. Em outras palavras, os dois métodos podem ser atribuídos ao `CheckAndDisplayDelegate` delegate.  
+  
+ O `Test.Main` método é o ponto de entrada do aplicativo. Ele cria um `StringContainer` objeto, preenche-o com cadeias de caracteres e cria dois `CheckAndDisplayDelegate` delegados, `conStart` e `vowelStart`, que invoca um método único. Depois, ele chama o <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> método para criar o `multipleDelegates` delegado, que inicialmente contém o `ConStart` e `VowelStart` delegados. Observe que, quando o `multipleDelegates` delegado é invocado, ele exibe as cadeias de caracteres na coleção em sua ordem original. Isso ocorre porque cada letra é passada separadamente para cada representante e cada letra atende aos critérios de filtragem de apenas um dos dois delegados. Finalmente, depois de chamadas para <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> e <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>, `multipleDelegates` contém duas `conStart` delegados. Quando ela é invocada, cada cadeia de caracteres no `StringContainer` objeto é exibido duas vezes.  
+  
+ [!code-cpp[Multicast Delegate Introduction#1](~/samples/snippets/cpp/VS_Snippets_CLR/Multicast Delegate Introduction/CPP/delegatestring.cpp#1)]
+ [!code-csharp[Multicast Delegate Introduction#1](~/samples/snippets/csharp/VS_Snippets_CLR/Multicast Delegate Introduction/CS/delegatestring.cs#1)]
+ [!code-vb[Multicast Delegate Introduction#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Multicast Delegate Introduction/VB/delegatestring.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MulticastDelegate (object target, string method);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(object target, string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.#ctor(System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto no qual <c>método</c> está definido.</param>
+        <param name="method">O nome do método para o qual um delegado é criado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.MulticastDelegate" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não pode ser usado no código do aplicativo. Para criar um delegado, especificando o nome de um método de instância, use uma sobrecarga de <xref:System.Delegate.CreateDelegate%2A?displayProperty=nameWithType> método que especifica um nome de método e um objeto de destino. Por exemplo, o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.String%29?displayProperty=nameWithType> sobrecarga do método cria um delegado para um método de instância com um nome especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MulticastDelegate (Type target, string method);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Type target, string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.#ctor(System.Type,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="target" Type="System.Type" />
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">O tipo de objeto no qual <c>método</c> está definido.</param>
+        <param name="method">O nome do método estático para o qual um delegado é criado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.MulticastDelegate" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não pode ser usado no código do aplicativo. Para criar um delegado, especificando o nome de um método estático, use uma sobrecarga de <xref:System.Delegate.CreateDelegate%2A?displayProperty=nameWithType> método que especifica um nome de método, mas não especificam um objeto de destino. Por exemplo, o <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Type%2CSystem.String%29?displayProperty=nameWithType> sobrecarga do método cria um delegado de estático para um método com um nome especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CombineImpl">
+      <MemberSignature Language="C#" Value="protected override sealed Delegate CombineImpl (Delegate follow);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Delegate CombineImpl(class System.Delegate follow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.CombineImpl(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="follow" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="follow">O representante para combinar com este delegado.</param>
+        <summary>Combina isso <see cref="T:System.Delegate" /> com especificado <see cref="T:System.Delegate" /> para formar um novo delegado.</summary>
+        <returns>Um delegado que é nova raiz do <see cref="T:System.MulticastDelegate" /> lista de invocação.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="follow" />não tem o mesmo tipo que esta instância.</exception>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DynamicInvokeImpl">
+      <MemberSignature Language="C#" Value="protected override sealed object DynamicInvokeImpl (object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object DynamicInvokeImpl(object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.DynamicInvokeImpl(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override sealed bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser comparado com essa instância.</param>
+        <summary>Determina se esse delegado multicast e o objeto especificado são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> e essa instância tiverem as mesmas listas de invocação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois delegados são iguais se não forem `null` e são exatamente o mesmo tipo, suas listas de invocação contêm o mesmo número de elementos, e cada elemento na lista de invocação do delegado primeiro é igual ao elemento correspondente na lista de invocação do delegado do segundo.  
+  
+ Dois elementos de lista de invocação são iguais se invocar o mesmo método de instância na mesma instância de destino ou invocar o mesmo método estático.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override sealed int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInvocationList">
+      <MemberSignature Language="C#" Value="public override sealed Delegate[] GetInvocationList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Delegate[] GetInvocationList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.GetInvocationList" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a lista de invocação de delegado de multicast, na ordem de invocação.</summary>
+        <returns>Uma matriz de delegados cujas listas de invocação correspondem coletivamente à lista de invocação dessa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz contém um conjunto de delegados, cada um com uma lista de invocação de uma entrada. Chamar esses representantes sequencialmente, na ordem em que aparecem na matriz, produz os mesmos resultados que invocar a instância atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMethodImpl">
+      <MemberSignature Language="C#" Value="protected override System.Reflection.MethodInfo GetMethodImpl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Reflection.MethodInfo GetMethodImpl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.GetMethodImpl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.MethodInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um método estático representado pelo atual <see cref="T:System.MulticastDelegate" />.</summary>
+        <returns>Um método estático representado pelo atual <see cref="T:System.MulticastDelegate" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.MulticastDelegate> representa vários métodos, apenas um método é retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um objeto que contém todos os dados necessários para serializar ou desserializar essa instância.</param>
+        <param name="context">(Reservadas) O local onde os dados serializados são armazenados e recuperados.</param>
+        <summary>Preenche uma <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com todos os dados necessários para serializar a essa instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método armazena todas as informações no `info` necessários para serializar a essa instância.  
+  
+ O `context` parâmetro é reservado e não está sendo usado na execução deste método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Ocorreu um erro de serialização.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (MulticastDelegate d1, MulticastDelegate d2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.MulticastDelegate d1, class System.MulticastDelegate d2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.op_Equality(System.MulticastDelegate,System.MulticastDelegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d1" Type="System.MulticastDelegate" />
+        <Parameter Name="d2" Type="System.MulticastDelegate" />
+      </Parameters>
+      <Docs>
+        <param name="d1">O operando da esquerda.</param>
+        <param name="d2">O operando da direita.</param>
+        <summary>Determina se dois objetos <see cref="T:System.MulticastDelegate" /> são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="d1" /> e <paramref name="d2" /> têm as mesmas listas de invocação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois delegados são iguais se não forem `null` e são exatamente o mesmo tipo, suas listas de invocação contêm o mesmo número de elementos, e cada elemento na lista de invocação do delegado primeiro é igual ao elemento correspondente na lista de invocação do delegado do segundo.  
+  
+ Dois elementos de lista de invocação são iguais se invocar o mesmo método de instância na mesma instância de destino ou invocar o mesmo método estático.  
+  
+ O método equivalente para esse operador é<xref:System.MulticastDelegate.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (MulticastDelegate d1, MulticastDelegate d2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.MulticastDelegate d1, class System.MulticastDelegate d2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.op_Inequality(System.MulticastDelegate,System.MulticastDelegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d1" Type="System.MulticastDelegate" />
+        <Parameter Name="d2" Type="System.MulticastDelegate" />
+      </Parameters>
+      <Docs>
+        <param name="d1">O operando da esquerda.</param>
+        <param name="d2">O operando da direita.</param>
+        <summary>Determina se dois <see cref="T:System.MulticastDelegate" /> objetos não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="d1" /> e <paramref name="d2" /> não têm as mesmas listas de invocação; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois delegados são iguais se não forem `null` e são exatamente o mesmo tipo, suas listas de invocação contêm o mesmo número de elementos, e cada elemento na lista de invocação do delegado primeiro é igual ao elemento correspondente na lista de invocação do delegado do segundo.  
+  
+ Dois elementos de lista de invocação são iguais se invocar o mesmo método de instância na mesma instância de destino ou invocar o mesmo método estático.  
+  
+ O método equivalente para esse operador é<xref:System.MulticastDelegate.Equals%28System.Object%29?displayProperty=nameWithType>]]></format>
+        </remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveImpl">
+      <MemberSignature Language="C#" Value="protected override sealed Delegate RemoveImpl (Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Delegate RemoveImpl(class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.MulticastDelegate.RemoveImpl(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="value">O delegado a ser pesquisado na lista de invocação.</param>
+        <summary>Remove um elemento da lista de invocação desse <see cref="T:System.MulticastDelegate" /> que é igual ao representante especificado.</summary>
+        <returns>Se <paramref name="value" /> for encontrado na lista de invocação para esta instância, em seguida, um novo <see cref="T:System.Delegate" /> sem <paramref name="value" /> na lista de invocação; caso contrário, essa instância com sua lista de invocação original.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.MemberAccessException">Não é possível criar uma instância de uma classe abstrata, ou este membro foi invocado com um mecanismo de associação tardia.</exception>
+        <permission cref="T:System.Security.Permissions.ReflectionPermission">quando invocado com associação tardia por meio de mecanismos como <see cref="M:System.Type.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])" />. Enumeração associada: <see cref="F:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

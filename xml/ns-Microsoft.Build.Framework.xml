@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Build.Framework">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.Build.Framework" /> namespace contém os tipos que definem como as tarefas e agentes de log interagem com o mecanismo MSBuild. Para obter informações, consulte <see href="https://docs.microsoft.com/visualstudio/msbuild/">MSBuild</see>.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

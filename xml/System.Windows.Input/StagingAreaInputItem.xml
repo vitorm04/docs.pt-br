@@ -1,0 +1,110 @@
+<Type Name="StagingAreaInputItem" FullName="System.Windows.Input.StagingAreaInputItem">
+  <TypeSignature Language="C#" Value="public class StagingAreaInputItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StagingAreaInputItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StagingAreaInputItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula um evento de entrada quando ele está sendo processado pelo Gerenciador de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.StagingAreaInputItem> classe fornece um armazenamento de dicionário de ouvintes de eventos de entrada do Gerenciador.  
+  
+ A área de preparação de entrada processa a entrada bruta em [!INCLUDE[TLA2#tla_wpf](~/includes/tla2sharptla-wpf-md.md)] eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public object GetData (object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetData(object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StagingAreaInputItem.GetData(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma chave arbitrária para os dados. Esse não pode ser <see langword="null" />.</param>
+        <summary>Obtém os dados de entrada associados à chave especificada.</summary>
+        <returns>Os dados para essa chave, ou <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para chamar esse método.  Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.InputEventArgs Input { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.InputEventArgs Input" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.StagingAreaInputItem.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.InputEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados de evento de entrada associados a esta <see cref="T:System.Windows.Input.StagingAreaInputItem" /> objeto</summary>
+        <value>O evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetData(object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StagingAreaInputItem.SetData(System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="key">Uma chave arbitrária para os dados. Esse não pode ser <see langword="null" />.</param>
+        <param name="value">Os dados a ser definido para essa chave. Ele pode ser <see langword="null" />.</param>
+        <summary>Cria uma entrada de dicionário com a chave especificada e os dados especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados são usados durante o processamento deste evento de entrada.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para chamar esse método.  Enumerações associadas:<see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

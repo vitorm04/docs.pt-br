@@ -1,0 +1,176 @@
+<Type Name="PrefixOrigin" FullName="System.Net.NetworkInformation.PrefixOrigin">
+  <TypeSignature Language="C#" Value="public enum PrefixOrigin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PrefixOrigin extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.PrefixOrigin" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como um prefixo de rede do endereço IP foi localizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Endereços IP são divididos em duas partes: o prefixo e o sufixo. O prefixo de endereço identifica a parte de um endereço IP de rede e o sufixo de endereço identifica a parte do host. Prefixos são atribuídos por autoridades global e sufixos são atribuídos por administradores de sistema local.  
+  
+ Essa enumeração é usada pelo <xref:System.Net.NetworkInformation.UnicastIPAddressInformation> e <xref:System.Net.NetworkInformation.MulticastIPAddressInformation> classes. As instâncias dessa classe são retornadas ao recuperar as informações de endereço para um <xref:System.Net.NetworkInformation.NetworkInterface> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de prefixo e sufixo para o endereço de unicast.  
+  
+ [!code-cpp[NclNetInfo2#45](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#45)]
+ [!code-csharp[NclNetInfo2#45](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#45)]
+ [!code-vb[NclNetInfo2#45](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#45)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Dhcp">
+      <MemberSignature Language="C#" Value="Dhcp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin Dhcp = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.Dhcp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O prefixo foi fornecido por um servidor de protocolo de configuração de Host dinâmico (DHCP).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Manual">
+      <MemberSignature Language="C#" Value="Manual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin Manual = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.Manual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O prefixo foi configurado manualmente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin Other = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O prefixo foi localizado usando uma origem não especificada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RouterAdvertisement">
+      <MemberSignature Language="C#" Value="RouterAdvertisement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin RouterAdvertisement = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.RouterAdvertisement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O prefixo foi fornecido por um anúncio de roteador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WellKnown">
+      <MemberSignature Language="C#" Value="WellKnown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkInformation.PrefixOrigin WellKnown = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkInformation.PrefixOrigin.WellKnown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.PrefixOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O prefixo é um prefixo conhecido. Prefixos Well-Known são especificados na solicitação de rastreamento padrão para documentos de comentários (RFC) e atribuídos pela Internet Assigned Numbers Authority (Iana) ou um registro de endereço. Esses prefixos são reservados para fins especiais.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

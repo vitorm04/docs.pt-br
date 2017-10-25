@@ -1,0 +1,178 @@
+<Type Name="Prosody" FullName="System.Speech.Synthesis.TtsEngine.Prosody">
+  <TypeSignature Language="C#" Value="public class Prosody" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi beforefieldinit Prosody extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.Prosody" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de configurações de propriedades de voz como <see langword="Pitch" />, <see langword="Rate" /> e <see langword="Volume" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Prosody` classe representa uma coleção de propriedades de voz em uma <xref:System.Speech.Synthesis.TtsEngine.FragmentState> objeto. O `FragmentState` objeto é retornado no `State` propriedade em uma <xref:System.Speech.Synthesis.TtsEngine.TextFragment> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Prosody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.Prosody.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Constrói uma nova instância do <see langword="Prosody" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Construtor padrão para <xref:System.Speech.Synthesis.TtsEngine.Prosody>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public int Duration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Duration" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.Prosody.Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a duração do <see langword="TextFragment" /> em milissegundos.</summary>
+        <value>Um valor em milissegundos para o tempo desejado dizer o texto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContourPoints">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.ContourPoint[] GetContourPoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Speech.Synthesis.TtsEngine.ContourPoint[] GetContourPoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.Prosody.GetContourPoints" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ContourPoint[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz que contém o <see langword="ContourPoints" /> do <see langword="TextFragment" />.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pitch">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.ProsodyNumber Pitch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber Pitch" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.Prosody.Pitch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a densidade da linha de base do <see langword="TextFragment" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.ProsodyNumber Range { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber Range" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.Prosody.Range" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tom do <see langword="TextFragment" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rate">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.ProsodyNumber Rate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber Rate" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.Prosody.Rate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a taxa de fala do <see langword="TextFragment" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetContourPoints">
+      <MemberSignature Language="C#" Value="public void SetContourPoints (System.Speech.Synthesis.TtsEngine.ContourPoint[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetContourPoints(valuetype System.Speech.Synthesis.TtsEngine.ContourPoint[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.TtsEngine.Prosody.SetContourPoints(System.Speech.Synthesis.TtsEngine.ContourPoint[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="points" Type="System.Speech.Synthesis.TtsEngine.ContourPoint[]" />
+      </Parameters>
+      <Docs>
+        <param name="points">Uma matriz de bytes <see langword="ContourPoint" /> objetos.</param>
+        <summary>Conjuntos de <see langword="ContourPoints" /> do <see langword="TextFragment" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Volume">
+      <MemberSignature Language="C#" Value="public System.Speech.Synthesis.TtsEngine.ProsodyNumber Volume { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Speech.Synthesis.TtsEngine.ProsodyNumber Volume" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.TtsEngine.Prosody.Volume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.ProsodyNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o volume falado (intensidade) do <see langword="TextFragment" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

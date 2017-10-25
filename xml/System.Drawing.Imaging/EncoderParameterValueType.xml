@@ -1,0 +1,155 @@
+<Type Name="EncoderParameterValueType" FullName="System.Drawing.Imaging.EncoderParameterValueType">
+  <TypeSignature Language="C#" Value="public enum EncoderParameterValueType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EncoderParameterValueType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Imaging.EncoderParameterValueType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Usado para especificar o tipo de dados de <see cref="T:System.Drawing.Imaging.EncoderParameter" /> usado com o <see cref="Overload:System.Drawing.Image.Save" /> ou <see cref="Overload:System.Drawing.Image.SaveAdd" /> método de uma imagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ GDI+ usa codificadores de imagem para converter as imagens armazenadas <xref:System.Drawing.Bitmap> objetos para vários formatos de arquivo. Codificadores de imagem são incorporados no GDI+ para os formatos BMP, JPEG, GIF, TIFF e PNG. Um codificador é invocado quando você chamar o <xref:System.Drawing.Image.Save%2A> ou <xref:System.Drawing.Image.SaveAdd%2A> método de um <xref:System.Drawing.Bitmap> objeto.  
+  
+ O <xref:System.Drawing.Imaging.EncoderParameter.NumberOfValues%2A> membro de dados a <xref:System.Drawing.Imaging.EncoderParameter> objeto indica o comprimento da cadeia de caracteres caracteres, incluindo o `null` terminador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ValueTypeAscii">
+      <MemberSignature Language="C#" Value="ValueTypeAscii" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeAscii = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeAscii" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a matriz de valores é uma cadeia de caracteres ASCII terminada em nulo. Observe que o <see langword="NumberOfValues" /> membro de dados a <see cref="T:System.Drawing.Imaging.EncoderParameter" /> objeto indica o comprimento da cadeia de caracteres, incluindo o terminador nulo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeByte">
+      <MemberSignature Language="C#" Value="ValueTypeByte" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeByte = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeByte" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que cada valor na matriz é um inteiro não assinado de 8 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeLong">
+      <MemberSignature Language="C#" Value="ValueTypeLong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeLong = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que cada valor na matriz é um inteiro não assinado de 32 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeLongRange">
+      <MemberSignature Language="C#" Value="ValueTypeLongRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeLongRange = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeLongRange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que cada valor na matriz é um par de números inteiros sem sinal de 32 bits. Cada par representa um intervalo de números.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeRational">
+      <MemberSignature Language="C#" Value="ValueTypeRational" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeRational = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRational" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que cada valor na matriz é um par de números inteiros sem sinal de 32 bits. Cada par representa uma fração, o primeiro inteiro sendo o numerador e o segundo inteiro sendo o denominador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeRationalRange">
+      <MemberSignature Language="C#" Value="ValueTypeRationalRange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeRationalRange = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRationalRange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que cada valor na matriz é um conjunto de quatro, inteiros sem sinal de 32 bits. Os primeiros dois inteiros representam uma fração, e os dois inteiros representam uma fração de segundo. As duas frações representam um intervalo de números racionais. A primeira fração é o menor número racional no intervalo e a fração de segundo é o maior número racional no intervalo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeShort">
+      <MemberSignature Language="C#" Value="ValueTypeShort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeShort = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeShort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que cada valor na matriz é um inteiro não assinado de 16 bits.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueTypeUndefined">
+      <MemberSignature Language="C#" Value="ValueTypeUndefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Imaging.EncoderParameterValueType ValueTypeUndefined = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeUndefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Imaging.EncoderParameterValueType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a matriz de valores é uma matriz de bytes que não tem nenhum tipo de dados definido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,44 @@
+<Type Name="Catch" FullName="System.Activities.Statements.Catch">
+  <TypeSignature Language="C#" Value="public abstract class Catch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Catch extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Statements.Catch" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém as ações a ser executado depois que uma exceção será lançada em correspondente <see langword="Try" /> block de um <see cref="T:System.Activities.Statements.TryCatchFinally" /> atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma vez colocado no designer, <xref:System.Activities.Statements.Catch> atividades não podem ser reordenadas no designer.  Para reordenar a coleção de <xref:System.Activities.Statements.Catch> atividades, exclua e adicione-os novamente na ordem correta ou usar o modo de exibição xaml (código) para o fluxo de trabalho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExceptionType">
+      <MemberSignature Language="C#" Value="public abstract Type ExceptionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ExceptionType" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Statements.Catch.ExceptionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo de exceção que o <see cref="T:System.Activities.Statements.Catch" /> tratamento de bloco.</summary>
+        <value>O tipo de exceção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

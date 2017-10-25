@@ -1,0 +1,415 @@
+<Type Name="Trigger" FullName="System.Windows.Trigger">
+  <TypeSignature Language="C#" Value="public class Trigger : System.Windows.TriggerBase, System.ComponentModel.ISupportInitialize, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Trigger extends System.Windows.TriggerBase implements class System.ComponentModel.ISupportInitialize, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Trigger" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.TriggerBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Setters")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.XamlSetTypeConverter("ReceiveTypeConverter")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um gatilho que aplica valores de propriedade ou executa ações de forma condicional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)]Define as propriedades que correspondem às ações do usuário final, como o <xref:System.Windows.UIElement.IsMouseOver%2A> propriedade é definida como `true` quando o usuário passa o cursor sobre um <xref:System.Windows.UIElement> ou correspondente <xref:System.Windows.ContentElement.IsMouseOver%2A> propriedade de um <xref:System.Windows.ContentElement>. Que representa a ações do usuário final em valores de propriedade, junto com o <xref:System.Windows.Trigger> elemento, permite que [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] estilos para alterar valores de propriedade com base nas ações do usuário final, tudo a partir de dentro de marcação.  
+  
+ As propriedades alteradas por gatilhos automaticamente são redefinidas para seu valor anterior quando a condição de disparada não for atendida. Os gatilhos são otimizados para transitório estados que é esperado para alterar e estado de retorno para original, como <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> na <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> em <xref:System.Windows.Controls.ListBoxItem>. O <xref:System.Windows.Trigger.Property%2A> de interesse deve ser uma propriedade de dependência.  
+  
+ Observe que você deve especificar ambos os <xref:System.Windows.Trigger.Property%2A> e <xref:System.Windows.Trigger.Value%2A> propriedades em um <xref:System.Windows.Trigger> para o gatilho para que seja significativo. Se uma ou ambas as propriedades não forem definidas, uma exceção será lançada.  
+  
+ O <xref:System.Windows.Trigger.Setters%2A> propriedade de um <xref:System.Windows.Trigger> objeto pode consistir apenas de <xref:System.Windows.Setter> objetos. Adicionando um <xref:System.Windows.Setter> filho para uma <xref:System.Windows.Trigger> objeto adiciona implicitamente para o <xref:System.Windows.SetterBaseCollection> para o <xref:System.Windows.Trigger> objeto. <xref:System.Windows.EventSetter>Não há suporte para objetos; somente <xref:System.Windows.Style.Setters%2A?displayProperty=nameWithType> suporta <xref:System.Windows.EventSetter> objetos.  
+  
+ Há outros tipos de disparadores. <xref:System.Windows.MultiTrigger>permite que você aplique as alterações com base no estado de várias propriedades. <xref:System.Windows.EventTrigger>permite que você aplique as alterações quando ocorre um evento. <xref:System.Windows.DataTrigger>e <xref:System.Windows.MultiDataTrigger> são para as propriedades de associação de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um conjunto nomeado <xref:System.Windows.Style> disponíveis para <xref:System.Windows.Controls.Button> controles. O <xref:System.Windows.Style> define uma <xref:System.Windows.Trigger> elemento altera o <xref:System.Windows.Controls.Control.Foreground%2A> propriedade de um botão quando o <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> é de propriedade `true`.  
+  
+ [!code-xaml[BtnStyles#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnStyles/CS/app.xaml#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Trigger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Trigger" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty Property { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Trigger.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Modifiability=System.Windows.Modifiability.Unmodifiable, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a propriedade que retorna o valor que é comparado com a propriedade <see cref="P:System.Windows.Trigger.Value" /> do gatilho. A comparação é uma verificação de igualdade de referência.</summary>
+        <value>Um <see cref="T:System.Windows.DependencyProperty" /> que retorna o valor da propriedade do elemento. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado por essa propriedade é comparado com o valor especificado pelo <xref:System.Windows.Trigger.Value%2A> propriedade. A comparação é executada é uma verificação de igualdade de referência. Se os dois valores corresponderem, em seguida, associado <xref:System.Windows.Setter>s aplicar os valores de propriedade especificada.  
+  
+ Use o `ClassName.PropertyName` sintaxe qualificar a propriedade que você está especificando se o estilo ou modelo que contém o gatilho não tiver o `TargetType` conjunto de propriedades.  
+  
+ Observe que você deve especificar ambos os <xref:System.Windows.Trigger.Property%2A> e <xref:System.Windows.Trigger.Value%2A> propriedades em um <xref:System.Windows.Trigger> para o gatilho para que seja significativo. Se uma ou ambas as propriedades não forem definidas, uma exceção será lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir contém dois gatilhos. As alterações primeiro o <xref:System.Windows.Controls.Control.Background%2A> propriedade de um <xref:System.Windows.Controls.Button> quando o <xref:System.Windows.UIElement.IsMouseOver%2A> é de propriedade **true**. As alterações de segunda a <xref:System.Windows.Controls.Control.Foreground%2A> propriedade de um botão quando o <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> é de propriedade **true**. O <xref:System.Windows.Style.TargetType%2A> do <xref:System.Windows.Style> é definido como <xref:System.Windows.Controls.Button> e, portanto, não é necessário para qualificar o `Property` propriedades com o nome da classe.  
+  
+ [!code-xaml[BtnStyles#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnStyles/CS/app.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um <see cref="T:System.Windows.Style" /> não pode conter um <see cref="T:System.Windows.Trigger" /> que se refere ao <see cref="T:System.Windows.Style" /> propriedade.</exception>
+        <exception cref="T:System.InvalidOperationException">Após um <see cref="T:System.Windows.Trigger" /> estar em uso, ele não pode ser modificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveTypeConverter">
+      <MemberSignature Language="C#" Value="public static void ReceiveTypeConverter (object targetObject, System.Windows.Markup.XamlSetTypeConverterEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReceiveTypeConverter(object targetObject, class System.Windows.Markup.XamlSetTypeConverterEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Trigger.ReceiveTypeConverter(System.Object,System.Windows.Markup.XamlSetTypeConverterEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetObject" Type="System.Object" />
+        <Parameter Name="eventArgs" Type="System.Windows.Markup.XamlSetTypeConverterEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="targetObject">O objeto em que o conversor de tipo define o valor.</param>
+        <param name="eventArgs">Dados que são relevantes para o processamento de conversor de tipo.</param>
+        <summary>Lida com casos em que um conversor de tipo fornece um valor de uma propriedade de um <see cref="T:System.Windows.Trigger" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse é o método referenciado por um aplicado <xref:System.Windows.Markup.XamlSetTypeConverterAttribute> atributo no nível de classe, o que significa que este método processa todas as tentativas de definir valores de <xref:System.Windows.Trigger> com um conversor de tipo. Você não geralmente chamar este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Setters">
+      <MemberSignature Language="C#" Value="public System.Windows.SetterBaseCollection Setters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.SetterBaseCollection Setters" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Trigger.Setters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.SetterBaseCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos <see cref="T:System.Windows.Setter" />, que descrevem os valores de propriedade a aplicar quando a condição especificada for atendida.</summary>
+        <value>O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="xamlPropertyElementUsage_Setters"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.Setters>  
+    ZeroOrMoreSetters  
+  </object.Setters>  
+</object>  
+```  
+  
+<a name="xamlValues_Setters"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *ZeroOrMoreSetters*  
+ Zero ou mais <xref:System.Windows.Setter> objetos. Isso não suporta <xref:System.Windows.EventSetter> objeto.  
+  
+ Um <xref:System.Windows.Trigger> permite que você use <xref:System.Windows.Setter>s para aplicar a propriedade valores quando o elemento atende a uma condição especificada. Por exemplo, você talvez queira alterar a cor de plano de fundo de um elemento quando ele está no foco.  
+  
+ Se a mesma propriedade está definida mais de uma vez, o último valor de propriedade será aplicado.  
+  
+ O <xref:System.Windows.Trigger.Setters%2A> propriedade de um <xref:System.Windows.Trigger> objeto pode consistir apenas de <xref:System.Windows.Setter> objetos. Adicionando um <xref:System.Windows.Setter> filho para uma <xref:System.Windows.Trigger> objeto adiciona implicitamente para o <xref:System.Windows.SetterBaseCollection> para o <xref:System.Windows.Trigger> objeto. <xref:System.Windows.EventSetter>Não há suporte para objetos; somente <xref:System.Windows.Style.Setters%2A?displayProperty=nameWithType> suporta <xref:System.Windows.EventSetter> objetos.  
+  
+   
+  
+## Examples  
+ Conforme mencionado acima, adicionando um <xref:System.Windows.Setter> filho para uma <xref:System.Windows.Trigger> objeto adiciona implicitamente para o <xref:System.Windows.SetterBaseCollection> para o <xref:System.Windows.Trigger> objeto. No exemplo a seguir, `<Trigger.Setters>` está implícito.  
+  
+ [!code-xaml[PhotoStoreDemoStyled#TriggerSettersRef](~/samples/snippets/csharp/VS_Snippets_Wpf/PhotoStoreDemoStyled/CS/window1.xaml#triggersettersref)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceName">
+      <MemberSignature Language="C#" Value="public string SourceName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Trigger.SourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.Ambient</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto com a propriedade que faz com que os setters associados sejam aplicados.</summary>
+        <value>A propriedade padrão é <see langword="null" />. Se essa propriedade for <see langword="null" />, em seguida, o <see cref="P:System.Windows.Trigger.Property" /> propriedade é avaliada em relação ao elemento esse estilo ou modelo está sendo aplicado a (o estilo pai ou o modelo pai).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir essa propriedade como o nome de qualquer elemento dentro do escopo em que a coleção de gatilho (a coleção que este <xref:System.Windows.Trigger> faz parte do) é aplicada. Isso geralmente é um elemento nomeado que esteja dentro do modelo que contém essa <xref:System.Windows.Trigger>.  
+  
+ Você pode nomear um objeto usando o [diretiva X:Name](~/docs/framework/xaml-services/x-name-directive.md) sintaxe.  
+  
+   
+  
+## Examples  
+ Um cenário quando você usaria o <xref:System.Windows.Trigger.SourceName%2A> é de propriedade quando a propriedade de interesse não é uma propriedade do modelo pai, como no exemplo a seguir:  
+  
+ [!code-xaml[ControlTemplateExamples#TriggerSourceName](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#triggersourcename)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Após um <see cref="T:System.Windows.Trigger" /> estar em uso, ele não pode ser modificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.BeginInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Trigger.System#ComponentModel#ISupportInitialize#BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinaliza o objeto de que a inicialização está sendo iniciada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Setter> é convertida em uma interface de <xref:System.ComponentModel.ISupportInitialize>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ComponentModel.ISupportInitialize.EndInit">
+      <MemberSignature Language="C#" Value="void ISupportInitialize.EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ComponentModel.ISupportInitialize.EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Trigger.System#ComponentModel#ISupportInitialize#EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sinaliza o objeto de que a inicialização está sendo concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Setter> é convertida em uma interface de <xref:System.ComponentModel.ISupportInitialize>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Trigger.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto filho a ser adicionado.</param>
+        <summary>Adiciona um objeto filho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Trigger> é convertida em uma interface de <xref:System.Windows.Markup.IAddChild>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Trigger.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser adicionado ao objeto.</param>
+        <summary>Adiciona o conteúdo do texto de um nó ao objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Trigger> é convertida em uma interface de <xref:System.Windows.Markup.IAddChild>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Trigger.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Markup.SetterTriggerConditionValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Localizability(System.Windows.LocalizationCategory.None, Readability=System.Windows.Readability.Unreadable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("Property")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Windows.Markup.DependsOn("SourceName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor a ser comparado com o valor da propriedade do elemento. A comparação é uma verificação de igualdade de referência.</summary>
+        <value>O valor padrão é <see langword="null" />. Consulte também a seção Exceções.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é comparado com o valor da propriedade retornado pelo <xref:System.Windows.Trigger.Property%2A> propriedade o <xref:System.Windows.Trigger>. A comparação é executada é uma verificação de qualidade de referência. Se os dois valores forem iguais, associado <xref:System.Windows.Setter>s aplicar os valores de propriedade especificada.  
+  
+ Observe que você deve especificar ambos os <xref:System.Windows.Trigger.Property%2A> e <xref:System.Windows.Trigger.Value%2A> propriedades em um <xref:System.Windows.Trigger> para o gatilho para que seja significativo. Portanto, se uma ou ambas as propriedades não forem especificadas, uma exceção será lançada.  
+  
+<a name="xamlPropertyElementUsage_Value"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<object>  
+  <object.Value>  
+    Value  
+  </object.Value>  
+</object>  
+```  
+  
+   
+  
+## Examples  
+ A exemplo a seguir altera o <xref:System.Windows.Controls.Control.Foreground%2A> propriedade de um botão quando o <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> é de propriedade **true**.  
+  
+ [!code-xaml[BtnStyles#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnStyles/CS/app.xaml#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Não há suporte para expressões como associações.</exception>
+        <exception cref="T:System.InvalidOperationException">Após um <see cref="T:System.Windows.Trigger" /> estar em uso, ele não pode ser modificado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

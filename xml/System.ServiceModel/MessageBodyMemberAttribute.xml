@@ -1,0 +1,134 @@
+<Type Name="MessageBodyMemberAttribute" FullName="System.ServiceModel.MessageBodyMemberAttribute">
+  <TypeSignature Language="C#" Value="public class MessageBodyMemberAttribute : System.ServiceModel.MessageContractMemberAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MessageBodyMemberAttribute extends System.ServiceModel.MessageContractMemberAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageBodyMemberAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.MessageContractMemberAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que um membro é serializado como um elemento dentro do corpo SOAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.MessageBodyMemberAttribute> atributo para especificar que um membro de dados é serializado no corpo SOAP e controlar alguns itens de serialização.  
+  
+ O <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> propriedade é usada para especificar a ordem das partes de corpo em casos em que a ordem alfabética padrão não é apropriada.  
+  
+ As outras propriedades são herdadas da classe base, <xref:System.ServiceModel.MessageContractMemberAttribute?displayProperty=nameWithType>.  
+  
+ [!INCLUDE[crabout](~/includes/crabout-md.md)]Controlando a serialização do conteúdo de um corpo SOAP sem modificar o envelope SOAP de padrão em si, consulte <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>, [especificando a transferência de dados em contratos de serviço](~/docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md), e [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Usando contratos de mensagem](~/docs/framework/wcf/feature-details/using-message-contracts.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.MessageContractAttribute> para controlar a estrutura de envelope SOAP para a mensagem de solicitação e a mensagem de resposta e o uso de ambos os <xref:System.ServiceModel.MessageHeaderAttribute> (para criar um cabeçalho SOAP da mensagem de resposta) e o <xref:System.ServiceModel.MessageBodyMemberAttribute>(para especificar o corpo da mensagem de solicitação e resposta). O exemplo de código contém um exemplo de cada mensagem quando enviada.  
+  
+ [!code-csharp[MessageHeaderAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#1)]
+ [!code-vb[MessageHeaderAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageBodyMemberAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageBodyMemberAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MessageBodyMemberAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte <xref:System.ServiceModel.MessageBodyMemberAttribute> para obter um exemplo completo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Order">
+      <MemberSignature Language="C#" Value="public int Order { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Order" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageBodyMemberAttribute.Order" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a posição na qual o membro é serializado no corpo SOAP.</summary>
+        <value>O local do elemento no corpo SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> propriedade para especificar o local de um membro de dados no elemento do corpo SOAP. O valor não precisa ser consecutivos, porque ele não representa a posição do membro, apenas a chave de classificação.  
+  
+ A ordem dos elementos do corpo é alfabética por padrão. A semântica dessa propriedade é o mesmo que a semântica do <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> propriedade para serializar o `sourceAccount` valor pela primeira vez, o `targetAccount` valor segundo e o `amount` valor de terceiros. Se o <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> propriedade não for usada, o `amount` valor é serializado pela primeira vez.  
+  
+```  
+[MessageContract]  
+public class BankingTransaction  
+{  
+  [MessageHeader] public Operation operation;  
+  [MessageBodyMember(Order=1)] public Account sourceAccount;  
+  [MessageBodyMember(Order=2)] public Account targetAccount;  
+  [MessageBodyMember(Order=3)] public int amount;  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor passado para o setter da propriedade é um inteiro negativo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

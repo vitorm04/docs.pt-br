@@ -1,0 +1,140 @@
+<Type Name="TrackingQueryElement" FullName="System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement">
+  <TypeSignature Language="C#" Value="public abstract class TrackingQueryElement : System.ServiceModel.Activities.Tracking.Configuration.TrackingConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TrackingQueryElement extends System.ServiceModel.Activities.Tracking.Configuration.TrackingConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activities.Tracking.Configuration.TrackingConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um elemento de configuração que representa um <see cref="T:System.Activities.Tracking.TrackingQuery" /> ao especificar um perfil de rastreamento da instância.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é a classe base para todos os elementos de consulta de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TrackingQueryElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Activities.Tracking.Configuration.AnnotationElementCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Activities.Tracking.Configuration.AnnotationElementCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("annotations")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Activities.Tracking.Configuration.AnnotationElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de anotações associadas a <see cref="T:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement" />.</summary>
+        <value>Uma coleção de anotações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementKey">
+      <MemberSignature Language="C#" Value="public override object ElementKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ElementKey" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement.ElementKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma chave que identifica exclusivamente o rastreamento de consulta.</summary>
+        <value>A chave do elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewTrackingQuery">
+      <MemberSignature Language="C#" Value="protected abstract System.Activities.Tracking.TrackingQuery NewTrackingQuery ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Activities.Tracking.TrackingQuery NewTrackingQuery() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement.NewTrackingQuery" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Tracking.TrackingQuery</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Substitua este método para criar uma instância de consulta e definir as propriedades não são herdadas por classes derivadas.</summary>
+        <returns>Uma instância de <see cref="T:System.Activities.Tracking.TrackingQuery" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de propriedades.</summary>
+        <value>A coleção de propriedades para o elemento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateTrackingQuery">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateTrackingQuery (System.Activities.Tracking.TrackingQuery trackingQuery);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateTrackingQuery(class System.Activities.Tracking.TrackingQuery trackingQuery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activities.Tracking.Configuration.TrackingQueryElement.UpdateTrackingQuery(System.Activities.Tracking.TrackingQuery)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trackingQuery" Type="System.Activities.Tracking.TrackingQuery" />
+      </Parameters>
+      <Docs>
+        <param name="trackingQuery">O rastreamento de consulta.</param>
+        <summary>Substitua este método para definir as propriedades de uma classe derivada pode ser herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

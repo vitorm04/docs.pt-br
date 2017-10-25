@@ -1,0 +1,132 @@
+<Type Name="LinkLabelLinkClickedEventArgs" FullName="System.Windows.Forms.LinkLabelLinkClickedEventArgs">
+  <TypeSignature Language="C#" Value="public class LinkLabelLinkClickedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinkLabelLinkClickedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.LinkLabelLinkClickedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.LinkLabel.LinkClicked" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra manipulação o <xref:System.Windows.Forms.LinkLabel.LinkClicked> evento iniciando o navegador da Web de hiperlinks e exibindo um <xref:System.Windows.Forms.MessageBox> para outros links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkLabelLinkClickedEventArgs (System.Windows.Forms.LinkLabel.Link link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.LinkLabel/Link link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabelLinkClickedEventArgs.#ctor(System.Windows.Forms.LinkLabel.Link)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="link" Type="System.Windows.Forms.LinkLabel+Link" />
+      </Parameters>
+      <Docs>
+        <param name="link">O <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que foi clicado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.LinkLabelLinkClickedEventArgs" /> classe com o link especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkLabelLinkClickedEventArgs (System.Windows.Forms.LinkLabel.Link link, System.Windows.Forms.MouseButtons button);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.LinkLabel/Link link, valuetype System.Windows.Forms.MouseButtons button) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.LinkLabelLinkClickedEventArgs.#ctor(System.Windows.Forms.LinkLabel.Link,System.Windows.Forms.MouseButtons)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="link" Type="System.Windows.Forms.LinkLabel+Link" />
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+      </Parameters>
+      <Docs>
+        <param name="link">O <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que foi clicado.</param>
+        <param name="button">Um dos valores de <see cref="T:System.Windows.Forms.MouseButtons" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.LinkLabelLinkClickedEventArgs" /> classe com o link especificado e o botão especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.MouseButtons Button { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.MouseButtons Button" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabelLinkClickedEventArgs.Button" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.MouseButtons</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o botão do mouse que faz com que o link para ser clicado.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.MouseButtons" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.LinkLabel.LinkClicked?displayProperty=nameWithType> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.LinkLabel> chamado `LinkLabel1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.LinkLabel.LinkClicked?displayProperty=nameWithType> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#461](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#461)]
+ [!code-vb[System.Windows.Forms.EventExamples#461](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#461)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Link">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.LinkLabel.Link Link { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.LinkLabel/Link Link" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.LinkLabelLinkClickedEventArgs.Link" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.LinkLabel+Link</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.LinkLabel.Link" /> que foi clicado.</summary>
+        <value>Em um link de <see cref="T:System.Windows.Forms.LinkLabel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.LinkLabel> classe com vários <xref:System.Windows.Forms.LinkArea> seções definidas para exibir um rótulo em um formulário. O exemplo mostra a configuração de <xref:System.Windows.Forms.Label.AutoSize%2A>, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.DisabledLinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, e <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> propriedades para personalizar a aparência do <xref:System.Windows.Forms.LinkLabel>. A primeira <xref:System.Windows.Forms.LinkArea> é especificado usando o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A?displayProperty=nameWithType> propriedade. Links adicionais são adicionados para o <xref:System.Windows.Forms.LinkLabel> usando o <xref:System.Windows.Forms.LinkLabel.LinkCollection.Add%2A?displayProperty=nameWithType> método. Os identificadores de exemplo de <xref:System.Windows.Forms.LinkLabel.LinkClicked> evento iniciando o navegador da Web de hiperlinks e exibindo um <xref:System.Windows.Forms.MessageBox> para outros links.  
+  
+ [!code-cpp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CPP/linklabel.cpp#1)]
+ [!code-csharp[System.Windows.Forms.LinkLabel#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/CS/linklabel.cs#1)]
+ [!code-vb[System.Windows.Forms.LinkLabel#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LinkLabel/VB/linklabel.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

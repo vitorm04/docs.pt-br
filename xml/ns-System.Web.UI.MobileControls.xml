@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.UI.MobileControls">
+  <Docs>
+    <summary>O <see cref="N:System.Web.UI.MobileControls" /> espaço para nome contém um conjunto de controles de servidor ASP.NET que podem processar seu aplicativo para dispositivos móveis diferentes. As APIs no namespace são obsoletas. Para obter informações sobre como desenvolver aplicativos móveis, consulte o <see href="http://go.microsoft.com/fwlink/?LinkID=182900">www.asp.net/mobile</see> site da Web.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,819 @@
+<Type Name="DefaultPropertiesToSend" FullName="System.Messaging.DefaultPropertiesToSend">
+  <TypeSignature Language="C#" Value="public class DefaultPropertiesToSend" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultPropertiesToSend extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.DefaultPropertiesToSend" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os valores de propriedade padrão que serão usados ao enviar objetos diferentes de <see cref="T:System.Messaging.Message" /> instâncias para uma fila de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir valores padrão em propriedades selecionadas de mensagens enviadas para um <xref:System.Messaging.MessageQueue>. <xref:System.Messaging.DefaultPropertiesToSend>é usado para especificar valores de propriedade padrão da mensagem sendo enviada quando objetos diferentes de <xref:System.Messaging.Message> instâncias são enviadas a uma fila, por exemplo, o argumento de cadeia de caracteres passada para o <xref:System.Messaging.MessageQueue.Send%2A> método no fragmento de código, `myMessageQueue.Send("hello")`. O <xref:System.Messaging.Message> classe tem correspondente, nomes idênticos propriedades às <xref:System.Messaging.DefaultPropertiesToSend> que fornecem os valores de durante o envio de um <xref:System.Messaging.Message> instância especificamente. Mesmo se você especificou <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=nameWithType> para uma fila, enviando um <xref:System.Messaging.Message> objeto para essa fila fará com que os valores de nome idêntico <xref:System.Messaging.Message> propriedades para substituir a fila <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> valores.  
+  
+ Propriedades que você não definir explicitamente como padrão os valores especificados pelo construtor, <xref:System.Messaging.DefaultPropertiesToSend.%23ctor%2A>.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Messaging.DefaultPropertiesToSend>, consulte o <xref:System.Messaging.DefaultPropertiesToSend> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa a prioridade de uma mensagem para determinar as propriedades padrão para enviar a mensagem.  
+  
+ [!code-cpp[MessageQueue.DefaultPropertiesToSend#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueue.DefaultPropertiesToSend/CPP/mqdefaultpropertiestosend.cpp#1)]
+ [!code-csharp[MessageQueue.DefaultPropertiesToSend#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueue.DefaultPropertiesToSend/CS/mqdefaultpropertiestosend.cs#1)]
+ [!code-vb[MessageQueue.DefaultPropertiesToSend#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/MessageQueue.DefaultPropertiesToSend/VB/mqdefaultpropertiestosend.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultPropertiesToSend ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.DefaultPropertiesToSend.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Messaging.DefaultPropertiesToSend" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode criar uma nova instância da <xref:System.Messaging.DefaultPropertiesToSend> para definir valores de propriedade padrão para associar objetos enviados a uma fila que não são do tipo <xref:System.Messaging.Message>. Ao trabalhar com <xref:System.Messaging.MessageQueue> objetos, uma <xref:System.Messaging.DefaultPropertiesToSend> instância é criada e associada a <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=nameWithType> membro o <xref:System.Messaging.MessageQueue>.  
+  
+ Há duas maneiras de definir as propriedades padrão de uma fila para enviar, como mostra o código c# a seguir. Você pode definir valores para esta instância de <xref:System.Messaging.DefaultPropertiesToSend> e associá-la com a fila <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=nameWithType> propriedade:  
+  
+```  
+DefaultPropertiesToSend myDefaultProperties = new DefaultPropertiesToSend();  
+  // Set default values for the properties.  
+  myDefaultProperties.Label = "myLabel";  
+  myDefaultProperties.Recoverable = false;  
+ ...  
+  myMessageQueue.DefaultPropertiesToSend = myDefaultProperties;  
+  myMessageQueue.Send("hello");  
+```  
+  
+ Ou, individualmente, você pode atribuir valores para o <xref:System.Messaging.MessageQueue> da instância <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A> propriedade diretamente:  
+  
+```  
+myMessageQueue.DefaultPropertiesToSend.Label = "myLabel";  
+  myMessageQueue.DefaultPropertiesToSend.Recoverable = false;  
+...  
+  myMessageQueue.Send("hello");  
+```  
+  
+ Se você escolher a segunda dessas opções, você não precisa chamar o <xref:System.Messaging.DefaultPropertiesToSend.%23ctor%2A> construtor explicitamente. Talvez você queira criar instâncias de <xref:System.Messaging.DefaultPropertiesToSend>, por exemplo, se os valores padrão das propriedades dependem de um critério da mensagem está sendo enviada. Você pode criar várias <xref:System.Messaging.DefaultPropertiesToSend> instâncias e atribua um para a fila <xref:System.Messaging.MessageQueue.DefaultPropertiesToSend%2A?displayProperty=nameWithType> propriedade antes de enviar a mensagem para a fila.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Messaging.DefaultPropertiesToSend>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A>|`AcknowledgeTypes.None`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.AdministrationQueue%2A>|`null`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.AppSpecific%2A>|0|  
+|<xref:System.Messaging.DefaultPropertiesToSend.AttachSenderId%2A>|`true`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.EncryptionAlgorithm%2A>|`EncryptionAlgorithm.RC2`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.Extension%2A>|Uma matriz de bytes de comprimento zero|  
+|<xref:System.Messaging.DefaultPropertiesToSend.HashAlgorithm%2A>|`HashAlgorithm.MD5`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.Label%2A>|Uma cadeia de caracteres vazia ("")|  
+|<xref:System.Messaging.DefaultPropertiesToSend.Priority%2A>|`MessagePriority.Normal`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.Recoverable%2A>|`false`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.ResponseQueue%2A>|`null`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A>|`Message.InfiniteTimeout`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.TransactionStatusQueue%2A>|`null`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A>|`false`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A>|`false`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.UseEncryption%2A>|`false`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.UseJournalQueue%2A>|`false`|  
+|<xref:System.Messaging.DefaultPropertiesToSend.UseTracing%2A>|`false`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcknowledgeType">
+      <MemberSignature Language="C#" Value="public System.Messaging.AcknowledgeTypes AcknowledgeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.AcknowledgeTypes AcknowledgeType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.AcknowledgeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAcknowledgeType")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.AcknowledgeTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de mensagem de confirmação a ser retornado para o aplicativo de envio.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Messaging.AcknowledgeTypes" />. Esse valor é usado para determinar o tipo de sistema de postagens na fila de administração e as confirmações são retornadas para o aplicativo de envio de mensagens de confirmação. O padrão é <see langword="AcknowledgeTypes.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A> propriedade especifica o tipo de mensagens de confirmação para retornar para o aplicativo de envio. Por exemplo, definir o <xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A> propriedade para a solicitação de notificação quando uma mensagem atingir seu destino, quando eles são recuperados, ou se um tempo limite impediu a mensagem atingir ou que está sendo recuperada da fila de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdministrationQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue AdministrationQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue AdministrationQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.AdministrationQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAdministrationQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fila que recebe mensagens de confirmação geradas pelo enfileiramento de mensagens.</summary>
+        <value>O <see cref="T:System.Messaging.MessageQueue" /> que especifica a fila de administração usada para mensagens de confirmação geradas pelo sistema. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A fila especificada no <xref:System.Messaging.DefaultPropertiesToSend.AdministrationQueue%2A> propriedade pode ser qualquer fila não transacional. As mensagens de confirmação enviadas para a fila de administração podem indicar se a mensagem original alcançou sua fila de destino e se ela foi removida da fila.  
+  
+ Quando o <xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A> propriedade tem qualquer valor diferente de `None`, o aplicativo de envio deve especificar a fila a ser usada como a fila de administração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppSpecific">
+      <MemberSignature Language="C#" Value="public int AppSpecific { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AppSpecific" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.AppSpecific" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAppSpecific")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações adicionais específicas do aplicativo.</summary>
+        <value>Informações específicas do aplicativo. O padrão é 0.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.AppSpecific%2A> propriedade contém informações adicionais específicas do aplicativo que podem ser usadas para organizar os diferentes tipos de mensagens, por exemplo, usando índices específicos do aplicativo. É responsabilidade do aplicativo para interpretar <xref:System.Messaging.DefaultPropertiesToSend.AppSpecific%2A> informações.  
+  
+ Sempre que possível, os dados de mensagem devem ser incluídos no corpo da mensagem, em vez do <xref:System.Messaging.DefaultPropertiesToSend.AppSpecific%2A> propriedade.  
+  
+ Ao trabalhar com filas externas, use o <xref:System.Messaging.DefaultPropertiesToSend.Extension%2A> propriedade para especificar propriedades de não do serviço de enfileiramento de mensagens. Assim como acontece com <xref:System.Messaging.DefaultPropertiesToSend.AppSpecific%2A>, é responsabilidade do aplicativo para entender o conteúdo do <xref:System.Messaging.DefaultPropertiesToSend.Extension%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachSenderId">
+      <MemberSignature Language="C#" Value="public bool AttachSenderId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AttachSenderId" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.AttachSenderId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgAttachSenderId")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a ID do remetente deve ser anexada à mensagem.</summary>
+        <value>
+          <see langword="true" />Se a ID do remetente deve ser anexado à mensagem; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ID do remetente é uma matriz de bytes que representa o identificador do usuário envio. A ID do remetente é definida pelo enfileiramento de mensagens e é usada pelo Gerenciador de fila de recebimento para verificar se o remetente tem direitos de acesso a uma fila. A ID do remetente só é confiável se a mensagem foi autenticada quando atingiu a fila de destino.  
+  
+ Quando a ID do remetente não está anexada à mensagem, o aplicativo de envio está indicando que enfileiramento deve não validar o remetente da mensagem quando a mensagem é enviada à fila de destino. Se a fila de destino aceita apenas mensagens autenticadas e o <xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A> ou <xref:System.Messaging.DefaultPropertiesToSend.AttachSenderId%2A> é `false`, a mensagem será rejeitada quando atingir a fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Messaging.EncryptionAlgorithm EncryptionAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.EncryptionAlgorithm EncryptionAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.EncryptionAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgEncryptionAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.EncryptionAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo de criptografia usado para criptografar o corpo de uma mensagem particular.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Messaging.EncryptionAlgorithm" />. O padrão é <see langword="RC2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma mensagem for privada, ele é criptografado antes que ele é enviado e é descriptografado quando é recebido. O <xref:System.Messaging.DefaultPropertiesToSend.EncryptionAlgorithm%2A> propriedade especifica o algoritmo usado para criptografar o corpo da mensagem de uma mensagem particular.  
+  
+ Uma fila pode exigir que entrada mensagens ser criptografadas. Se uma mensagem de (não-particular) não criptografado é enviada para uma fila que aceita apenas mensagens particulares, ou se uma mensagem particular é enviada para uma fila que aceita apenas mensagens particulares não, a mensagem será rejeitada pela fila. O aplicativo de envio pode solicitar uma mensagem de confirmação negativa ser retornado para o aplicativo de envio, se uma mensagem foi rejeitada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public byte[] Extension { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Extension" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.ArrayEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgExtension")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações adicionais associadas com a mensagem.</summary>
+        <value>Uma matriz de bytes que fornece informações adicionais, definido pelo aplicativo associadas à mensagem. O padrão é uma matriz de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.Extension%2A> propriedade fornece informações adicionais definidas por um aplicativo que está associado com a mensagem, como um objeto binário grande. É responsabilidade do aplicativo de recebimento para interpretar o conteúdo a <xref:System.Messaging.DefaultPropertiesToSend.Extension%2A>.  
+  
+ Sempre que possível, os dados de mensagem devem ser incluídos no corpo da mensagem, em vez de na extensão.  
+  
+ Ao trabalhar com filas externas, use o <xref:System.Messaging.DefaultPropertiesToSend.Extension%2A> propriedade para especificar propriedades de não do serviço de enfileiramento de mensagens.  
+  
+ Existe uma fila externa em um sistema de enfileiramento de mensagens diferente de enfileiramento de mensagens da Microsoft. Enfileiramento de mensagens da Microsoft se comunica com essas filas por meio de um aplicativo conector.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HashAlgorithm">
+      <MemberSignature Language="C#" Value="public System.Messaging.HashAlgorithm HashAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.HashAlgorithm HashAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.HashAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgHashAlgorithm")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo usado na autenticação de mensagens de hash ou criando uma assinatura digital de uma mensagem.</summary>
+        <value>Um dos valores de enumeração <see cref="T:System.Messaging.HashAlgorithm" />. O padrão é <see langword="MD5" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.HashAlgorithm%2A> propriedade identifica o algoritmo de hash enfileiramento de mensagens usa ao autenticar mensagens ou ao criar uma assinatura digital de uma mensagem.  
+  
+ O enfileiramento de mensagens no computador de origem usa o algoritmo de hash durante a criação de uma assinatura digital de uma mensagem. O Gerenciador de filas de destino, em seguida, usa o mesmo algoritmo de hash para autenticar a mensagem quando ela é recebida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgLabel")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma cadeia de caracteres definida pelo aplicativo que descreve a mensagem.</summary>
+        <value>O rótulo da mensagem. O padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um rótulo de mensagem pode ser usado para fins de exibição, por exemplo, ou seletivamente processar mensagens com base no valor do rótulo. O comprimento máximo para um rótulo da mensagem é 249 caracteres Unicode. O rótulo não precisa ser exclusivo entre as mensagens.  
+  
+ Fila de mensagens e rótulos de mensagens representam um valor definido pelo aplicativo que pode ajudar a identificar a fila ou a mensagem em termos legível. É responsabilidade do aplicativo para interpretar o conteúdo de rótulo. eles têm nenhum significado intrínseco para o aplicativo do serviço de enfileiramento de mensagens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessagePriority Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessagePriority Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgPriority")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessagePriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a prioridade da mensagem, que é usada para determinar onde a mensagem é colocada na fila.</summary>
+        <value>Uma da <see cref="T:System.Messaging.MessagePriority" /> valores de enumeração que representa o nível de prioridade de uma mensagem não transacional. O padrão é <see langword="Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.Priority%2A> propriedade afeta como o enfileiramento de mensagens trata a mensagem enquanto ele estiver em trânsito, bem como onde a mensagem é colocada na fila quando atingir o destino. Mensagens de alta prioridade são recebem preferência durante o roteamento e inseridas em direção à frente da fila. Mensagens com a mesma prioridade são colocadas na fila de acordo com a hora de chegada.  
+  
+ A prioridade da mensagem pode ser definida somente significativamente para mensagens não transacionais. A prioridade de mensagens transacionais é definida automaticamente como `Lowest`, que faz com que a prioridade da mensagem transacional ser ignorada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recoverable">
+      <MemberSignature Language="C#" Value="public bool Recoverable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Recoverable" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.Recoverable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgRecoverable")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se há garantia de que a mensagem seja entregue no caso de um problema de rede ou falha do computador.</summary>
+        <value>
+          <see langword="true" />Se a mensagem é garantia de entrega ao salvá-lo no disco no caminho; <see langword="false" /> se a entrega não é garantida. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.Recoverable%2A> propriedade indica se a entrega de uma mensagem é garantida, mesmo que um computador trave enquanto a mensagem estiver a caminho para a fila de destino.  
+  
+ Se a garantia de entrega de uma mensagem, a mensagem é armazenada localmente em cada etapa na rota até que a mensagem é encaminhada com êxito para o próximo computador. Configuração <xref:System.Messaging.DefaultPropertiesToSend.Recoverable%2A> para `true` em <xref:System.Messaging.DefaultPropertiesToSend> pode afetar a taxa de transferência.  
+  
+ Se a mensagem for transacional, enfileiramento de mensagens automaticamente trata a mensagem como recuperável, independentemente se <xref:System.Messaging.DefaultPropertiesToSend.Recoverable%2A> é definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue ResponseQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue ResponseQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.ResponseQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgResponseQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fila que recebe mensagens de resposta geradas por aplicativo.</summary>
+        <value>O <see cref="T:System.Messaging.MessageQueue" /> qual resposta geradas pelo aplicativo, as mensagens são retornadas. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.ResponseQueue%2A> propriedade identifica a fila que recebe mensagens de resposta geradas por aplicativos que são retornadas para o aplicativo de envio pelo aplicativo de recebimento. Filas de resposta são especificadas pelo aplicativo de envio quando o aplicativo envia suas mensagens. Qualquer fila disponível pode ser especificada como uma fila de resposta.  
+  
+ As mensagens retornadas para a fila de resposta são específicas do aplicativo. O aplicativo deve definir o que é nas mensagens, bem como o que é feito quando uma mensagem é recebida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToBeReceived">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToBeReceived { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToBeReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Messaging.TimeoutConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToBeReceived")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite para a mensagem a ser recuperada da fila de destino.</summary>
+        <value>O tempo total, em segundos, para uma mensagem enviada ser recebida da fila de destino. O padrão é <see cref="F:System.Messaging.Message.InfiniteTimeout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> propriedade especifica o tempo total em segundos para uma mensagem enviada ser recebida da fila de destino. Esse tempo limite inclui o tempo gasto obtendo à fila de destino e o tempo gasto aguardando na fila antes da mensagem é recuperada por um aplicativo.  
+  
+> [!CAUTION]
+>  Ao usar computadores cliente dependentes, sincronize o relógio no computador cliente com o relógio no servidor executando o enfileiramento de mensagens. Se os dois relógios não estão sincronizados, você pode ter um comportamento imprevisível ao enviar mensagens quando <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> não é <xref:System.Messaging.Message.InfiniteTimeout>.  
+  
+ Se o <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> intervalo expira antes que a mensagem é removida da fila, o aplicativo do serviço de enfileiramento de mensagens descartará a mensagem. A mensagem será enviadas para a fila de mensagens mortas, se a mensagem <xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A> está definida como `true`, ou se ignorado, <xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A> é `false`. Se <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> é menor que <xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A>, <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> terá precedência.  
+  
+ A mensagem <xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A> propriedade pode ser definida para solicitar que enfileiramento de mensagens envia uma mensagem de confirmação negativa para o aplicativo de envio se a mensagem não foi recuperada antes do timer expira.  
+  
+> [!CAUTION]
+>  Se você especificou para receber <xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A> confirmações negativas, você não receberá-las quando o valor de <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> é menor que o valor de <xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A>.  
+  
+ Quando várias mensagens são enviadas em uma transação, enfileiramento de mensagens usa o valor da primeira mensagem <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToReachQueue">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeToReachQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeToReachQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Messaging.TimeoutConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTimeToReachQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo limite para a mensagem chegar à fila.</summary>
+        <value>O limite de tempo em segundos para uma mensagem chegar à fila de destino, desde o momento a mensagem é enviado. O padrão é <see cref="F:System.Messaging.Message.InfiniteTimeout" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A> intervalo expira antes que a mensagem chega ao seu destino, o aplicativo do serviço de enfileiramento de mensagens descartará a mensagem. A mensagem será enviadas para a fila de mensagens mortas, se a mensagem <xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A> está definida como `true`, ou se ignorado, <xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A> é `false`. Se <xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A> é maior do que <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A>, <xref:System.Messaging.DefaultPropertiesToSend.TimeToBeReceived%2A> terá precedência.  
+  
+ A mensagem <xref:System.Messaging.DefaultPropertiesToSend.AcknowledgeType%2A> propriedade pode ser definida para solicitar que enfileiramento de mensagens envia uma mensagem de confirmação negativa para o aplicativo de envio se a mensagem não chegou antes do timer expira.  
+  
+ Se <xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A> é 0 segundos, o enfileiramento de mensagens tenta uma vez para enviar a mensagem para o destino se a fila está esperando a mensagem. Se a fila for local, a mensagem sempre atinge a fila.  
+  
+ Quando várias mensagens são enviadas em uma transação, enfileiramento de mensagens usa o valor da primeira mensagem <xref:System.Messaging.DefaultPropertiesToSend.TimeToReachQueue%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransactionStatusQueue">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueue TransactionStatusQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Messaging.MessageQueue TransactionStatusQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.TransactionStatusQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgTransactionStatusQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a fila de status de transação no computador de origem.</summary>
+        <value>A fila de status de transação no computador de origem, que é usado para enviar mensagens de confirmação de volta para o aplicativo de envio. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.TransactionStatusQueue%2A> propriedade identifica a fila de status de transação no computador de origem. A propriedade é definida pelo enfileiramento de mensagens e é usada por aplicativos de conector ao recuperar mensagens transacionais enviadas para uma fila externa.  
+  
+ Existe uma fila externa em um sistema de enfileiramento de mensagens diferente de enfileiramento de mensagens da Microsoft. Enfileiramento de mensagens da Microsoft se comunica com essas filas por meio de um aplicativo conector.  
+  
+ O aplicativo do conector pode usar a fila de status de transação para enviar mensagens de confirmação de volta para o aplicativo de envio. A fila de status de transação deve receber essas confirmações, mesmo se o aplicativo de envio não solicita outras confirmações.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAuthentication">
+      <MemberSignature Language="C#" Value="public bool UseAuthentication { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAuthentication" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.UseAuthentication" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseAuthentication")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a mensagem deve ser autenticada antes de serem enviados.</summary>
+        <value>
+          <see langword="true" /> se o aplicativo de envio tiver solicitado a autenticação para a mensagem; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A> propriedade especifica se a mensagem precisa ser autenticada. Se o aplicativo de envio solicita autenticação, enfileiramento de mensagens cria uma assinatura digital e o utiliza para assinar a mensagem quando ela é enviada e para autenticar a mensagem quando ela é recebida.  
+  
+ Se uma mensagem é enviada a uma fila que aceita apenas mensagens autenticadas, a mensagem será rejeitada quando atingir a fila se <xref:System.Messaging.DefaultPropertiesToSend.UseAuthentication%2A> é definido como `false`.  
+  
+ Não é possível examinar as propriedades de uma mensagem e determinar se uma mensagem de falha na autenticação. Mensagens de falham de autenticação são descartadas e não são entregues para a fila.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDeadLetterQueue">
+      <MemberSignature Language="C#" Value="public bool UseDeadLetterQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDeadLetterQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseDeadLetterQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma cópia da mensagem não pôde ser entregue deve ser enviada a uma fila de mensagens mortas.</summary>
+        <value>
+          <see langword="true" />Se a falha de entrega de mensagem deve resultar em uma cópia da mensagem está sendo enviada para uma fila de mensagens mortas; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.DefaultPropertiesToSend.UseJournalQueue%2A>e <xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A> especificar como o enfileiramento de mensagens irá controlar uma mensagem. Se <xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A> é `true`, em seguida, em caso de falha de entrega (para mensagens não transacionais), a mensagem é enviada para a fila de mensagens mortas não transacional no computador que não foi possível entregar a mensagem (por exemplo, se um timer de mensagem expira).  
+  
+ No caso de falha de entrega de mensagens transacionais, a mensagem é enviada para a fila de mensagens mortas transacional no computador de origem em todos os casos negativos e em dúvida.  
+  
+ Quando você armazena mensagens em uma fila de mensagens mortas, vazio a fila periodicamente para remover as mensagens que não são mais necessários. Mensagens armazenadas na contagem de filas de mensagens mortas em relação à cota de tamanho para o computador em que a fila reside. A cota do computador é definida pelo administrador e refere-se ao tamanho total alocado para armazenar mensagens em um computador, não apenas em uma única fila.  
+  
+ Você não criar uma fila de mensagens mortas ou diário. Esses são ambas as filas do sistema que são geradas pelo serviço de enfileiramento de mensagens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseEncryption">
+      <MemberSignature Language="C#" Value="public bool UseEncryption { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseEncryption" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.UseEncryption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseEncryption")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a mensagem privada.</summary>
+        <value>
+          <see langword="true" />para exigir que o enfileiramento de mensagens criptografar a mensagem. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma mensagem for privada, seu corpo é criptografado antes que ele é enviado e é descriptografado quando é recebido. Para enviar uma mensagem particular, o aplicativo de envio deve especificar que a criptografia usado e, opcionalmente, o algoritmo de criptografia para aplicar.  
+  
+ Ao enviar mensagens particulares, não é necessário que o aplicativo executar a criptografia de mensagem. Mensagem de enfileiramento de mensagens pode criptografar o corpo da mensagem para você quando seu aplicativo envia mensagens dentro de uma empresa do Microsoft Windows 2000 que não há acesso ao serviço de diretório. Ao receber mensagens particulares, é sempre que o Gerenciador de fila de recebimento que descriptografa o corpo da mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseJournalQueue">
+      <MemberSignature Language="C#" Value="public bool UseJournalQueue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseJournalQueue" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.UseJournalQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseJournalQueue")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma cópia da mensagem deve ser mantida em um diário de máquina no computador de origem.</summary>
+        <value>
+          <see langword="true" />para exigir que uma cópia de uma mensagem seja mantida em diário do computador do computador de origem depois que ele tem foram transmitidos com êxito do computador de origem para a próxima etapa. Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Messaging.DefaultPropertiesToSend.UseJournalQueue%2A>e <xref:System.Messaging.DefaultPropertiesToSend.UseDeadLetterQueue%2A> especificar como o enfileiramento de mensagens irá controlar uma mensagem. Se <xref:System.Messaging.DefaultPropertiesToSend.UseJournalQueue%2A> é `true`, em seguida, em cada etapa que uma mensagem é transmitida, uma cópia é mantida no diário do computador no computador de origem.  
+  
+ A mensagem enviada somente será copiada para a fila de diário se a fila de destino estiver em um computador remoto. Se o destino estiver no computador local, a mensagem é enviada diretamente para a fila; Não há nenhuma etapa intermediária para exigir o registro em log.  
+  
+ Quando você armazenar mensagens em uma fila do diário, vazio a fila periodicamente para remover as mensagens que não são mais necessários. Mensagens armazenadas na contagem de filas de diário em relação à cota para o computador em que a fila reside (a cota do computador é definida pelo administrador).  
+  
+ Você não criar uma fila de mensagens mortas ou diário. Esses são ambas as filas do sistema que são geradas pelo serviço de enfileiramento de mensagens.  
+  
+ Registro em log pode ser especificado, a mensagem e a fila. Quando <xref:System.Messaging.DefaultPropertiesToSend.UseJournalQueue%2A?displayProperty=nameWithType> é `true`, a mensagem é registrada quando ela é enviada. Quando <xref:System.Messaging.MessageQueue.UseJournalQueue%2A?displayProperty=nameWithType> é `true`, a mensagem é registrada quando é recebido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseTracing">
+      <MemberSignature Language="C#" Value="public bool UseTracing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseTracing" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.DefaultPropertiesToSend.UseTracing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Messaging.MessagingDescription("MsgUseTracing")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma mensagem deve ser rastreada enquanto ela se aproxima da sua fila de destino.</summary>
+        <value>
+          <see langword="true" />Se cada etapa intermediária feita por mensagem original voltados para a fila de destino irá gerar um relatório a ser enviado para a fila de relatórios do sistema; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.DefaultPropertiesToSend.UseTracing%2A> propriedade especifica se é controlar a rota de uma mensagem à medida que se aproxima sua fila de destino. Se `true`, uma mensagem de relatório gerado pelo serviço de enfileiramento de mensagens é enviada para uma fila de relatórios sempre que a mensagem passa por um servidor de roteamento de enfileiramento de mensagens. A fila de relatórios é especificada pela fonte do Gerenciador de fila. Filas de relatórios não se limitam a mensagens de relatório gerado pelo serviço de enfileiramento de mensagens. As mensagens geradas pelo aplicativo podem ser enviadas para filas de relatório também.  
+  
+ Usando rastreamento envolve a configuração do Active Directory e especificando uma fila de relatórios para a empresa de enfileiramento de mensagens. Essas configurações são definidas pelo administrador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

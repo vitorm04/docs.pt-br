@@ -1,0 +1,277 @@
+<Type Name="ExternalDataEventArgs" FullName="System.Workflow.Activities.ExternalDataEventArgs">
+  <TypeSignature Language="C#" Value="public class ExternalDataEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ExternalDataEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.ExternalDataEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os dados enviados quando um evento é gerado usando o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Uma interface de comunicação local marcado com <xref:System.Workflow.Activities.ExternalDataExchangeAttribute> devem declarar um tipo que deriva de <xref:System.Workflow.Activities.ExternalDataEventArgs> na definição de interface para o evento correspondente a serem processados em um fluxo de trabalho com um <xref:System.Workflow.Activities.HandleExternalEventActivity> atividade.  
+  
+   
+  
+## Examples  
+ Uma classe de evento herda de <xref:System.Workflow.Activities.ExternalDataEventArgs> deve implementar um construtor que usa o `:base(instanceId)` construtor. Além disso, a nova classe de evento deve ser marcada como `Serializable` conforme mostrado no código a seguir.  
+  
+```csharp  
+[Serializable]  
+public class TaskEventArgs : ExternalDataEventArgs  
+{  
+    private string orderName;  
+  
+    public TaskEventArgs(Guid instanceId, string id)  
+        :base(instanceId)  
+    {  
+        orderName = id;  
+    }  
+  
+    public string Id  
+    {  
+        get { return orderName; }  
+        set { orderName = value; }  
+    }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como chamar a base <xref:System.Workflow.Activities.ExternalDataEventArgs> construtor do construtor de uma classe derivada. Este exemplo é do exemplo de ordenação SDK da máquina de estado. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Ordenação de exemplo de máquina de estado](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[wf_samples#121](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#121)]
+ [!code-vb[wf_samples#121](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#121)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataEventArgs (Guid instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataEventArgs.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador de instância de fluxo de trabalho para a instância de fluxo de trabalho que contém o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> que é esperado para manipular o evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.ExternalDataEventArgs" /> classe usando o identificador da instância do fluxo de trabalho.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataEventArgs (Guid instanceId, System.Workflow.Runtime.IPendingWork workHandler, object workItem);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, class System.Workflow.Runtime.IPendingWork workHandler, object workItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataEventArgs.#ctor(System.Guid,System.Workflow.Runtime.IPendingWork,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="workHandler" Type="System.Workflow.Runtime.IPendingWork" />
+        <Parameter Name="workItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador de instância de fluxo de trabalho para a instância de fluxo de trabalho que contém o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> que é esperado para manipular o evento.</param>
+        <param name="workHandler">O <see cref="T:System.Workflow.Runtime.IPendingWork" /> para permitir que o código externo, gera o evento, para participar do lote.</param>
+        <param name="workItem">O objeto que contém o código externo que gera o evento.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataEventArgs (Guid instanceId, System.Workflow.Runtime.IPendingWork workHandler, object workItem, bool waitForIdle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid instanceId, class System.Workflow.Runtime.IPendingWork workHandler, object workItem, bool waitForIdle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataEventArgs.#ctor(System.Guid,System.Workflow.Runtime.IPendingWork,System.Object,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Guid" />
+        <Parameter Name="workHandler" Type="System.Workflow.Runtime.IPendingWork" />
+        <Parameter Name="workItem" Type="System.Object" />
+        <Parameter Name="waitForIdle" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">O identificador de instância de fluxo de trabalho para a instância de fluxo de trabalho que contém o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> que é esperado para manipular o evento.</param>
+        <param name="workHandler">O <see cref="T:System.Workflow.Runtime.IPendingWork" /> para permitir que o código externo que gera o evento para participar do lote.</param>
+        <param name="workItem">O objeto que contém o código externo que gera o evento.</param>
+        <param name="waitForIdle">Um valor que indica se o fluxo de trabalho deve ficar ocioso antes de acionar o evento; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identity">
+      <MemberSignature Language="C#" Value="public string Identity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Identity" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ExternalDataEventArgs.Identity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a identidade do usuário que gerou o evento.</summary>
+        <value>A identidade do usuário que está gerando o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é avaliada por meio de <xref:System.Workflow.Activities.HandleExternalEventActivity> atividade. Se o valor é definido no <xref:System.Workflow.Activities.HandleExternalEventActivity.Roles%2A> propriedade dessa atividade não corresponde a nenhuma das funções associadas à identidade de usuário, a atividade não tem permissão para executar.  
+  
+ A entidade que gera o evento pode ser uma pessoa ou em um computador.  
+  
+ Identidade é usada pela funcionalidade de funções para garantir que essa identidade tem permissão para enviar dados para este fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public Guid InstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ExternalDataEventArgs.InstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o identificador de instância de fluxo de trabalho para a instância de fluxo de trabalho que contém o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> que é esperado para manipular o evento.</summary>
+        <value>O identificador de instância de fluxo de trabalho para a instância de fluxo de trabalho que contém o <see cref="T:System.Workflow.Activities.HandleExternalEventActivity" /> que é esperado para manipular o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma propriedade obrigatória.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForIdle">
+      <MemberSignature Language="C#" Value="public bool WaitForIdle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WaitForIdle" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ExternalDataEventArgs.WaitForIdle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o evento deve ser gerado imediatamente ou se o fluxo de trabalho deve ficar ocioso antes de acionar o evento.</summary>
+        <value>
+          <see langword="true" />Se o fluxo de trabalho deve ficar ocioso antes de acionar o evento; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é `false`.  
+  
+ Um valor de `true` indica que os dados foram enviados para o fluxo de trabalho usando <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItemOnIdle%2A>. Um valor de `false` indica que os dados foram enviados para o fluxo de trabalho usando <xref:System.Workflow.Runtime.WorkflowInstance.EnqueueItem%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkHandler">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.IPendingWork WorkHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.IPendingWork WorkHandler" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ExternalDataEventArgs.WorkHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.IPendingWork</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Workflow.Runtime.IPendingWork" /> para permitir que o código externo, gera o evento, para participar do lote.</summary>
+        <value>O <see cref="T:System.Workflow.Runtime.IPendingWork" /> para permitir que o código externo, gera o evento, para participar do lote.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkItem">
+      <MemberSignature Language="C#" Value="public object WorkItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WorkItem" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.ExternalDataEventArgs.WorkItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que contém o código externo que gera o evento.</summary>
+        <value>O objeto que contém o código externo que gera o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

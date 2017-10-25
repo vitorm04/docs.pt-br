@@ -1,0 +1,28 @@
+<Type Name="StreamChangeCallback" FullName="System.Configuration.Internal.StreamChangeCallback">
+  <TypeSignature Language="C#" Value="public delegate void StreamChangeCallback(string streamName);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StreamChangeCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Internal.StreamChangeCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="streamName" Type="System.String" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="streamName">O nome do <see cref="T:System.IO.Stream" /> tarefas de objeto para executar e/s no arquivo de configuração.</param>
+    <summary>Representa um método de hosts chamar quando um fluxo monitorado é alterado.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+</Type>

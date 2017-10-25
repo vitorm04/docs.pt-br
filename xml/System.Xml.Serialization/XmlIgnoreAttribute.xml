@@ -1,0 +1,101 @@
+<Type Name="XmlIgnoreAttribute" FullName="System.Xml.Serialization.XmlIgnoreAttribute">
+  <TypeSignature Language="C#" Value="public class XmlIgnoreAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlIgnoreAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlIgnoreAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Instrui o método <see cref="M:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)" /> do <see cref="T:System.Xml.Serialization.XmlSerializer" /> para não serializar o campo público ou o valor da propriedade pública de leitura/gravação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlIgnoreAttribute> pertence a uma família de atributos que controla como o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa um objeto. Se você aplicar o <xref:System.Xml.Serialization.XmlIgnoreAttribute> a qualquer membro de uma classe, o <xref:System.Xml.Serialization.XmlSerializer> ignora o membro ao serializar ou desserializar uma instância da classe. Para obter uma lista completa de atributos semelhantes, consulte [atributos que controle a serialização XML](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ Você pode substituir o comportamento causado pelo <xref:System.Xml.Serialization.XmlIgnoreAttribute> criando um <xref:System.Xml.Serialization.XmlAttributes> objeto e a configuração de seu <xref:System.Xml.Serialization.XmlAttributes.XmlIgnore%2A> propriedade `false`. Você deve <xref:System.Xml.Serialization.XmlAttributeOverrides.Add%2A> o <xref:System.Xml.Serialization.XmlAttributes> uma instância do objeto de <xref:System.Xml.Serialization.XmlAttributeOverrides> classe. Por fim, você deve usar o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto para construir uma instância do <xref:System.Xml.Serialization.XmlSerializer> classe antes de chamar o <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> ou <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> métodos.  
+  
+ O [ferramenta de definição de esquema XML (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) ocasionalmente gera o <xref:System.Xml.Serialization.XmlIgnoreAttribute> durante a criação de classes de um arquivo de esquema (. xsd). Esse comportamento ocorre porque os tipos de valor não podem ser definidos como `null`, mas todos os tipos de dados XML podem ser. Portanto, a ferramenta cria dois campos ao encontrar um tipo XML que é mapeado para um tipo de valor: um para manter o valor e outro campo especial que assume a forma de `fieldnameSpecified`, onde o `fieldname` é substituído pelo nome do campo ou propriedade. No entanto, observe que esse campo especial é gerado somente quando o esquema Especifica que o elemento não tem nenhuma ocorrência mínimo (minOccurs = "0") e que o elemento não tem valor padrão. O <xref:System.Xml.Serialization.XmlSerializer> define e verifica o campo especial para determinar se um valor foi definido para o campo ou propriedade. Como o campo especial não deve ser serializado, aplica-se a ferramenta de <xref:System.Xml.Serialization.XmlIgnoreAttribute> a ele.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+> [!NOTE]
+>  Você pode usar a palavra `XmlIgnore` em seu código em vez do mais <xref:System.Xml.Serialization.XmlIgnoreAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma classe chamada `Group`, que contém um campo chamado `Comment`. O exemplo atribui o <xref:System.Xml.Serialization.XmlIgnoreAttribute> para o campo, assim, instruindo o <xref:System.Xml.Serialization.XmlSerializer> para ignorar o campo ao serializar ou desserializar uma instância da classe.  
+  
+ [!code-cpp[Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlIgnoreAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlIgnoreAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlIgnoreAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma classe chamada `Group`, que contém um campo chamado `Comment`. O exemplo atribui o <xref:System.Xml.Serialization.XmlIgnoreAttribute> para o campo, assim, instruindo o <xref:System.Xml.Serialization.XmlSerializer> para ignorar o campo ao serializar ou desserializar uma instância da classe.  
+  
+ [!code-cpp[Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlIgnoreAttribute.XmlIgnoreAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

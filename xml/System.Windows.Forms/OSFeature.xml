@@ -1,0 +1,244 @@
+<Type Name="OSFeature" FullName="System.Windows.Forms.OSFeature">
+  <TypeSignature Language="C#" Value="public class OSFeature : System.Windows.Forms.FeatureSupport" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OSFeature extends System.Windows.Forms.FeatureSupport" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.OSFeature" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.FeatureSupport</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece consultas de recurso específico do sistema operacional.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `static` instância desta classe fornecida a <xref:System.Windows.Forms.OSFeature.Feature%2A> propriedade para consultar recursos do sistema operacional. Não é possível criar uma instância dessa classe.  
+  
+ Para determinar a versão de um recurso, chame o <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> método. Para determinar se um recurso ou uma versão específica estiver presente, chame o <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> método e especifique o recurso Procurar com os identificadores de recurso fornecidos nesta classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Windows.Forms.OSFeature> para consultar o sistema operacional para determinar se o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso é instalado. O exemplo apresenta duas maneiras diferentes de verificação para ver se o recurso está presente. O primeiro método, `myVersion` é verificado para ver se ele é `null`. Se a versão for `null`, o recurso não está instalado. O segundo método, o exemplo chama o método da classe base <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> para ver se o recurso é instalado. Os resultados são exibidos em uma caixa de texto.  
+  
+ Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected OSFeature ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OSFeature.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.OSFeature" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma instância dessa classe. Para consultar de recursos do sistema operacional, use o `static` instância de <xref:System.Windows.Forms.OSFeature> fornecidos nesta classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Feature">
+      <MemberSignature Language="C#" Value="public static System.Windows.Forms.OSFeature Feature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Forms.OSFeature Feature" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.OSFeature.Feature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.OSFeature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see langword="static" /> instância o <see cref="T:System.Windows.Forms.OSFeature" /> classe a ser usado para consultas de recurso. Esta propriedade é somente para leitura.</summary>
+        <value>Uma instância da classe <see cref="T:System.Windows.Forms.OSFeature" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este `static` propriedade para consultar recursos do sistema operacional. Não é possível criar uma instância dessa classe.  
+  
+ Para determinar a versão de um recurso, chame o <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> método. Para determinar se um recurso ou uma versão específica estiver presente, chame o <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> método e especifique o recurso Procurar com os identificadores de recurso fornecidos nesta classe.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir consulta <xref:System.Windows.Forms.OSFeature> para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersionPresent">
+      <MemberSignature Language="C#" Value="public override Version GetVersionPresent (object feature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Version GetVersionPresent(object feature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OSFeature.GetVersionPresent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="feature" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="feature">O recurso cuja versão é solicitado, ou <see cref="F:System.Windows.Forms.OSFeature.LayeredWindows" /> ou <see cref="F:System.Windows.Forms.OSFeature.Themes" />.</param>
+        <summary>Recupera a versão do recurso especificado está disponível no sistema.</summary>
+        <returns>Um <see cref="T:System.Version" /> que representa a versão do sistema operacional especificado recurso disponível atualmente no sistema; ou <see langword="null" /> se o recurso não pode ser encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.OSFeature.Feature%2A> propriedade, o `static` instância de <xref:System.Windows.Forms.OSFeature> fornecido nessa classe, a consulta para o número de versão de um recurso.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir consulta <xref:System.Windows.Forms.OSFeature> para o <xref:System.Windows.Forms.OSFeature.LayeredWindows> recurso. A versão é verificada para ver se ele está `null`, para determinar se o recurso está presente. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi criado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature.GetVersionPresent Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature.GetVersionPresent Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPresent">
+      <MemberSignature Language="C#" Value="public static bool IsPresent (System.Windows.Forms.SystemParameter enumVal);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsPresent(valuetype System.Windows.Forms.SystemParameter enumVal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.OSFeature.IsPresent(System.Windows.Forms.SystemParameter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enumVal" Type="System.Windows.Forms.SystemParameter" />
+      </Parameters>
+      <Docs>
+        <param name="enumVal">Um <see cref="T:System.Windows.Forms.SystemParameter" /> que representa o recurso a ser pesquisado.</param>
+        <summary>Recupera um valor que indica se o sistema operacional suporta o recurso especificado ou a métrica.</summary>
+        <returns>
+          <see langword="true" />Se o recurso está disponível no sistema. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa o <xref:System.Windows.Forms.OSFeature.IsPresent%2A> método para determinar se o sistema operacional suporta o recurso específico ou a métrica identificado por `enumValue`. Com base no valor retornado do <xref:System.Windows.Forms.OSFeature.IsPresent%2A>, você deve executar ações condicionais em seu código. Por exemplo, se chamar este método com um valor de parâmetro <xref:System.Windows.Forms.SystemParameter.FlatMenu> retorna `true`, você pode criar menus de desenho proprietário em seu aplicativo em um estilo simples.  
+  
+ Acesso a alguns recursos do sistema ou a métrica pode gerar exceções se eles não estão disponíveis em uma versão específica do sistema operacional. Nesse caso, primeiro use correspondente <xref:System.Windows.Forms.SystemParameter> valor de enumeração, juntamente com <xref:System.Windows.Forms.OSFeature.IsPresent%2A>, para determinar se a métrica é suportada. Por exemplo, chamar <xref:System.Windows.Forms.OSFeature.IsPresent%2A> com <xref:System.Windows.Forms.SystemInformation.CaretWidth%2A> antes de obter o <xref:System.Windows.Forms.SystemInformation.CaretWidth%2A?displayProperty=nameWithType> o valor da propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.OSFeature.IsPresent%2A> método com o <xref:System.Windows.Forms.SystemParameter> enumeração. O exemplo determina se o sistema operacional suporta o `CaretWidth` métrica antes de chamar o <xref:System.Windows.Forms.SystemInformation.CaretWidth%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-cpp[System.Windows.Forms.OSFeature.IsPresent#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.OSFeature.IsPresent#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.OSFeature.IsPresent#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/VB/form1.vb#1)]  
+[!code-cpp[System.Windows.Forms.OSFeature.IsPresent#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CPP/form1.cpp#2)]
+[!code-csharp[System.Windows.Forms.OSFeature.IsPresent#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/CS/form1.cs#2)]
+[!code-vb[System.Windows.Forms.OSFeature.IsPresent#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.OSFeature.IsPresent/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayeredWindows">
+      <MemberSignature Language="C#" Value="public static readonly object LayeredWindows;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object LayeredWindows" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.OSFeature.LayeredWindows" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o recurso do windows em camadas, de nível superior. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma janela em camadas pode ser feita transparente ou transparente pelo sistema operacional. Suporte para o windows em camadas foi introduzido no Windows 2000. Para obter mais informações, consulte o "em camadas Windows: A nova maneira para Use Translucency e transparência efeitos em aplicativos do Windows" na documentação do Platform SDK em http://msdn.microsoft.com.  
+  
+ Para determinar se o recurso do windows em camadas está instalado, use o <xref:System.Windows.Forms.OSFeature.Feature%2A> propriedade para chamar o método de classe base <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> com <xref:System.Windows.Forms.OSFeature.LayeredWindows> como o recurso a ser pesquisada.  
+  
+ Como alternativa, você pode verificar se o recurso é instalado por meio da chamada de <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> método com <xref:System.Windows.Forms.OSFeature.LayeredWindows> como o recurso de localizar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir determina se o sistema atual oferece suporte a janelas em camadas. O método de classe base <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> é chamado com <xref:System.Windows.Forms.OSFeature.LayeredWindows> como o recurso a ser pesquisada. O resultado é exibido em uma caixa de texto. Esse código supõe `textBox1` foi instanciado e colocado em um formulário.  
+  
+ [!code-cpp[Classic OSFeature.LayeredWindows Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic OSFeature.LayeredWindows Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic OSFeature.LayeredWindows Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic OSFeature.LayeredWindows Example/CS/source.cs#1)]
+ [!code-vb[Classic OSFeature.LayeredWindows Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic OSFeature.LayeredWindows Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Themes">
+      <MemberSignature Language="C#" Value="public static readonly object Themes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly object Themes" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.OSFeature.Themes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o recurso de temas do sistema operacional. Este campo é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um tema é uma coleção de configurações de interface visual que incluem papel de parede, cursores, fontes, sons e ícones introduzido pela primeira vez no Microsoft Plus! para o Windows 95. O .NET Framework não dá suporte diretamente manipular temas, embora tenha suporte extensivo para estilos visuais no <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespace. Para obter mais informações sobre os temas do Windows, consulte os tópicos temas e estilos visuais e referência de estilos visuais no SDK do Win32.  
+  
+ Para determinar se o recurso de temas está instalado, chame o método da classe base <xref:System.Windows.Forms.FeatureSupport.IsPresent%2A> com <xref:System.Windows.Forms.OSFeature.Themes> como o recurso a ser pesquisada.  
+  
+ Como alternativa, você pode verificar se o recurso é instalado por meio da chamada de <xref:System.Windows.Forms.OSFeature.GetVersionPresent%2A> método com <xref:System.Windows.Forms.OSFeature.Themes> como o recurso de localizar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

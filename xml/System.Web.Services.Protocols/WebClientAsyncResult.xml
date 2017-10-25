@@ -1,0 +1,153 @@
+<Type Name="WebClientAsyncResult" FullName="System.Web.Services.Protocols.WebClientAsyncResult">
+  <TypeSignature Language="C#" Value="public class WebClientAsyncResult : IAsyncResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebClientAsyncResult extends System.Object implements class System.IAsyncResult" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.WebClientAsyncResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IAsyncResult</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma implementação de <see cref="T:System.IAsyncResult" /> para uso pelos proxies de serviço da Web em XML para implementar o padrão de método assíncrono padrão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o `BeginMyMethodName` método, onde `MyMethodName` é uma versão síncrona do método em uma classe de proxy de serviço da Web em XML, uma instância do <xref:System.Web.Services.Protocols.WebClientAsyncResult> será retornado. Seguindo o padrão de design assíncronos padrão, essa instância do <xref:System.Web.Services.Protocols.WebClientAsyncResult> devem ser passadas posteriormente para `EndMyMethodName` para completar a chamada de método assíncrono.  
+  
+ Para obter detalhes sobre chamando os XML Web services de forma assíncrona, consulte [&#91;\< Topic://cpconInvokingWebServicesAsynchronously > &#93; ](http://msdn.microsoft.com/en-us/f9e26a43-063a-440a-8c73-a02f2ccf3ea0).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="public void Abort ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Abort() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.WebClientAsyncResult.Abort" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela uma solicitação de serviço Web XML assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A solicitação de serviço Web XML será cancelada se o transporte subjacente oferece suporte a <xref:System.Net.WebRequest.Abort%2A?displayProperty=nameWithType> método. Se correspondente `End` método é chamado subsequentemente após a <xref:System.Web.Services.Protocols.WebClientAsyncResult.Abort%2A> método, uma <xref:System.Net.WebException> for lançada, definindo o <xref:System.Net.WebException.Status%2A> propriedade <xref:System.Net.WebExceptionStatus.RequestCanceled>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncState">
+      <MemberSignature Language="C#" Value="public object AsyncState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AsyncState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientAsyncResult.AsyncState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto fornecido no último parâmetro para o <see langword="Begin" /> chamada de método assíncrono.</summary>
+        <value>O <see cref="T:System.Object" /> fornecido no último parâmetro para o <see langword="Begin" /> chamada de método.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncWaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle AsyncWaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle AsyncWaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientAsyncResult.AsyncWaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Threading.WaitHandle" /> que é usado para aguardar a conclusão de uma operação assíncrona.</summary>
+        <value>Um <see cref="T:System.Threading.WaitHandle" /> que é usado para aguardar a conclusão de uma operação assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.WaitHandle> podem ser usados para executar um <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, ou <xref:System.Threading.WaitHandle.WaitAll%2A> de espera para concluir a chamada assíncrona.  
+  
+ Para obter mais detalhes, consulte <xref:System.IAsyncResult.AsyncWaitHandle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletedSynchronously">
+      <MemberSignature Language="C#" Value="public bool CompletedSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CompletedSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientAsyncResult.CompletedSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a chamada Begin concluído simultaneamente.</summary>
+        <value>
+          <see langword="true" />Se a chamada de Begin concluída de forma síncrona; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Services.Protocols.WebClientAsyncResult.CompletedSynchronously%2A> é definido como `true` dentro de <xref:System.AsyncCallback> representante, é provável que o thread de chamada <xref:System.Web.Services.Protocols.SoapHttpClientProtocol.BeginInvoke%2A> é o thread atual. Nesse caso, você deve ter cuidado ao fazer Begin assíncrono outra chamada do método de retorno de chamada, pois isso poderá causar a pilha cresça sem associados se as chamadas continuam concluído de forma síncrona. Em vez disso, a chamada deve ser concluída no site de chamada, fora do método de retorno de chamada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.WebClientAsyncResult.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a solicitação de serviço Web XML assíncrona foi concluída.</summary>
+        <value>
+          <see langword="true" />Se a solicitação de serviço Web XML assíncrona foi concluída; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

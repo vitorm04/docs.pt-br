@@ -1,0 +1,122 @@
+<Type Name="EntityTemplateUserControl" FullName="System.Web.DynamicData.EntityTemplateUserControl">
+  <TypeSignature Language="C#" Value="public class EntityTemplateUserControl : System.Web.UI.UserControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EntityTemplateUserControl extends System.Web.UI.UserControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.EntityTemplateUserControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.UserControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a classe base para modelos de entidade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Modelos de entidade são controles de usuário que se aplicam a uma entidade (uma tabela) em vez de um único campo de dados, assim como acontece com modelos de campo. Um modelo de entidade geralmente contém várias <xref:System.Web.DynamicData.DynamicControl> controles para a renderização de campos de dados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EntityTemplateUserControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.EntityTemplateUserControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.EntityTemplateUserControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.ContainerType ContainerType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.DynamicData.ContainerType ContainerType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.ContainerType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.ContainerType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do controle associado a dados que contém este modelo de entidade.</summary>
+        <value>O tipo que contém o modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.EntityTemplateUserControl.ContainerType%2A> classe fornece informações sobre o contexto (o tipo de controle) no qual o <xref:System.Web.DynamicData.EntityTemplateUserControl> classe está contida. Esse tipo pode ser um controle de lista, como um <xref:System.Web.UI.WebControls.GridView> ou <xref:System.Web.UI.WebControls.ListView> controle. Ele também pode ser um único item de controle, como um <xref:System.Web.UI.WebControls.DetailsView> ou <xref:System.Web.UI.WebControls.FormView> controle.  
+  
+ Você pode personalizar o comportamento de um aplicativo, dependendo do <xref:System.Web.DynamicData.EntityTemplateUserControl.ContainerType%2A> valor, como condicionalmente exibindo ou ocultando elementos de interface do usuário específicos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataBoundControlMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.DataBoundControlMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataBoundControlMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o modo de renderização de dados para a entidade.</summary>
+        <value>O modo de renderização de dados para a entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Web.DynamicData.MetaTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.DynamicData.MetaTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.MetaTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma tabela que o modelo de entidade aplica-se a.</summary>
+        <value>A tabela que o modelo de entidade aplica-se a.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationGroup">
+      <MemberSignature Language="C#" Value="public string ValidationGroup { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationGroup" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.EntityTemplateUserControl.ValidationGroup" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a validação para aplicar ao grupo de controle de entidade.</summary>
+        <value>A validação para aplicar ao grupo de controle de entidade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

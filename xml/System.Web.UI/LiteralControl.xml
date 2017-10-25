@@ -1,0 +1,190 @@
+<Type Name="LiteralControl" FullName="System.Web.UI.LiteralControl">
+  <TypeSignature Language="C#" Value="public class LiteralControl : System.Web.UI.Control, System.Web.UI.ITextControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiteralControl extends System.Web.UI.Control implements class System.Web.UI.ITextControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.LiteralControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.ITextControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa os elementos HTML, texto e quaisquer outras cadeias de caracteres em uma página ASP.NET que não exigem processamento no servidor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ASP.NET compila todos os elementos HTML e texto legível que não exigem processamento do lado do servidor para as instâncias dessa classe. Por exemplo, um elemento HTML não contém um `runat="server"` par atributo/valor em sua marca de abertura é compilado em um <xref:System.Web.UI.LiteralControl> objeto. <xref:System.Web.UI.LiteralControl>objetos não mantêm o estado de exibição, então o conteúdo de um <xref:System.Web.UI.LiteralControl> objeto deve ser recriado em cada solicitação.  
+  
+ Controles literal se comportam como os proprietários de texto, que significa que você pode extrair o texto do controle literal e remova o controle literal do controle de servidor pai <xref:System.Web.UI.ControlCollection> coleção por meio do pai <xref:System.Web.UI.Control.Controls%2A> propriedade. Portanto, ao desenvolver um controle personalizado derivado de <xref:System.Web.UI.LiteralControl> classe, verifique se o controle executa qualquer pré-processamento etapas, em vez de usar uma chamada para o <xref:System.Web.UI.LiteralControl.Render%2A?displayProperty=nameWithType> método realizá-las. Normalmente, você faria isso para melhorar o tempo de resposta do seu aplicativo Web.  
+  
+ Você pode adicionar ou remover controles literal de uma página ou o servidor de controle programaticamente usando o <xref:System.Web.UI.ControlCollection.Add%2A?displayProperty=nameWithType> ou <xref:System.Web.UI.ControlCollection.Remove%2A?displayProperty=nameWithType> método, respectivamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o sobrecarregado <xref:System.Web.UI.LiteralControl.%23ctor%2A> construtor ao substituir o <xref:System.Web.UI.Control.CreateChildControls%2A?displayProperty=nameWithType> método. O código adiciona dois novos <xref:System.Web.UI.LiteralControl> objetos e um <xref:System.Web.UI.WebControls.TextBox> controle de servidor para o controle de servidor atual Web <xref:System.Web.UI.Control.Controls%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-csharp[SystemWebUILiteralControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUILiteralControl/CS/controlcreatechildcontrols.cs#1)]
+ [!code-vb[SystemWebUILiteralControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUILiteralControl/VB/controlcreatechildcontrols.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiteralControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.LiteralControl" /> classe que contém uma cadeia de caracteres literal a ser renderizado na página ASP.NET solicitada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma classe, `CustLiteralControlClass`, que estende o <xref:System.Web.UI.LiteralControl> classe. Ele cria uma instância da classe chamada `myLiteralControlClass1` usando o construtor que não especifica o texto do <xref:System.Web.UI.LiteralControl> objeto. Depois que o objeto é criado, o <xref:System.Web.UI.LiteralControl.Text%2A> propriedade é usada para definir o texto que ele contém.  
+  
+ [!code-csharp[LiteralControlSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/LiteralControlSample/CS/customliteralcontrol.cs.aspx#4)]
+ [!code-vb[LiteralControlSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LiteralControlSample/VB/customliteralcontrol.vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiteralControl (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto a ser renderizado na página da Web solicitada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.LiteralControl" /> classe com o texto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria duas instâncias do <xref:System.Web.UI.LiteralControl> classe usando o <xref:System.Web.UI.LiteralControl.%23ctor%2A> construtor. As duas instâncias renderizam marcações de abertura e fechamento de um elemento HTML H3 e incluam o texto a ser exibido nas marcas H3.  
+  
+ [!code-csharp[SystemWebUILiteralControl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/SystemWebUILiteralControl/CS/controlcreatechildcontrols.cs#1)]
+ [!code-vb[SystemWebUILiteralControl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/SystemWebUILiteralControl/VB/controlcreatechildcontrols.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Web.UI.EmptyControlCollection" /> objeto para a instância atual do <see cref="T:System.Web.UI.LiteralControl" /> classe.</summary>
+        <returns>O <see cref="T:System.Web.UI.EmptyControlCollection" /> para o controle atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, <xref:System.Web.UI.LiteralControl> objetos contêm apenas texto e controles de servidor nenhum filho. Se você quiser alterar esse comportamento, você deve substituir esse método.  
+  
+   
+  
+## Examples  
+ Substituições de exemplo de código a seguir a <xref:System.Web.UI.LiteralControl.CreateControlCollection%2A> método para criar uma instância do <xref:System.Web.UI.ControlCollection> classe em vez de uma instância do <xref:System.Web.UI.EmptyControlCollection> classe.  
+  
+ [!code-csharp[LiteralControlSample#2](~/samples/snippets/csharp/VS_Snippets_WebNet/LiteralControlSample/CS/customliteralcontrol.cs#2)]
+ [!code-vb[LiteralControlSample#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LiteralControlSample/VB/customliteralcontrol.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.LiteralControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="output">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que renderiza o conteúdo do <see cref="T:System.Web.UI.LiteralControl" /> para o cliente solicitante.</param>
+        <summary>Grava o conteúdo do <see cref="T:System.Web.UI.LiteralControl" /> objeto para a página ASP.NET.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um servidor personalizado, controle e deseja renderizar HTML ou texto específico em um cliente, você pode melhorar o desempenho do controle, passando o valor da <xref:System.Web.UI.LiteralControl.Text%2A> propriedade para o <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType> método em vez de chamar o <xref:System.Web.UI.LiteralControl.Render%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.LiteralControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do texto do objeto <see cref="T:System.Web.UI.LiteralControl" />.</summary>
+        <value>Um <see cref="T:System.String" /> que representa o conteúdo do texto do controle literal. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma classe, `CustLiteralControlClass`, que estende o <xref:System.Web.UI.LiteralControl> classe. Ele cria uma instância da classe chamada `myLiteralControlClass1` usando o construtor que não especifica o texto do <xref:System.Web.UI.LiteralControl> objeto. Depois que o objeto é criado, o <xref:System.Web.UI.LiteralControl.Text%2A> propriedade é usada para definir o texto que ele contém.  
+  
+ [!code-csharp[LiteralControlSample#4](~/samples/snippets/csharp/VS_Snippets_WebNet/LiteralControlSample/CS/customliteralcontrol.cs.aspx#4)]
+ [!code-vb[LiteralControlSample#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LiteralControlSample/VB/customliteralcontrol.vb.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

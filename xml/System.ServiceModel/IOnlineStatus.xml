@@ -1,0 +1,75 @@
+<Type Name="IOnlineStatus" FullName="System.ServiceModel.IOnlineStatus">
+  <TypeSignature Language="C#" Value="public interface IOnlineStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOnlineStatus" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.IOnlineStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define as propriedades e eventos usados por objetos de rede habilitados para indicar a disponibilidade de rede.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada quando precisa de uma classe indicar a disponibilidade de rede de suas instâncias de outros objetos de ServiceModel.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsOnline">
+      <MemberSignature Language="C#" Value="public bool IsOnline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOnline" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.IOnlineStatus.IsOnline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se a instância tem conectividade de rede e se está conectada a um recurso.</summary>
+        <value>True se a instância atual está disponível na rede; False se não for.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offline">
+      <MemberSignature Language="C#" Value="public event EventHandler Offline;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Offline" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.IOnlineStatus.Offline" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a instância foi desconectado de um recurso de rede.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Online">
+      <MemberSignature Language="C#" Value="public event EventHandler Online;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Online" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.IOnlineStatus.Online" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a instância se conectou a um recurso de rede.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,114 @@
+<Type Name="ProxyDataContractResolver" FullName="System.Data.Objects.ProxyDataContractResolver">
+  <TypeSignature Language="C#" Value="public class ProxyDataContractResolver : System.Runtime.Serialization.DataContractResolver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProxyDataContractResolver extends System.Runtime.Serialization.DataContractResolver" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.ProxyDataContractResolver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Serialization.DataContractResolver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe ajuda a resolver os tipos de proxy que foram criados para classes de dados [com ignorância de persistência](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3) para os tipos reais de objetos com ignorância de persistência.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.ProxyDataContractResolver> classe é usada com a <xref:System.Runtime.Serialization.DataContractSerializer>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProxyDataContractResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ProxyDataContractResolver.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Objects.ProxyDataContractResolver" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveName">
+      <MemberSignature Language="C#" Value="public override Type ResolveName (string typeName, string typeNamespace, Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type ResolveName(string typeName, string typeNamespace, class System.Type declaredType, class System.Runtime.Serialization.DataContractResolver knownTypeResolver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ProxyDataContractResolver.ResolveName(System.String,System.String,System.Type,System.Runtime.Serialization.DataContractResolver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="typeNamespace" Type="System.String" />
+        <Parameter Name="declaredType" Type="System.Type" />
+        <Parameter Name="knownTypeResolver" Type="System.Runtime.Serialization.DataContractResolver" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O <see langword="xsi:type" /> informações para mapear.</param>
+        <param name="typeNamespace">O namespace do <see langword="xsi:type" />.</param>
+        <param name="declaredType">O tipo declarado.</param>
+        <param name="knownTypeResolver">Uma instância de <see cref="T:System.Data.Objects.ProxyDataContractResolver" />.</param>
+        <summary>Durante a desserialização, mapeia qualquer <see langword="xsi:type" /> informações para o tipo real do [com ignorância de persistência](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3) objeto.</summary>
+        <returns>Retorna o tipo que o <see langword="xsi:type" /> é mapeado para. Retorna <see langword="null" /> se nenhum tipo conhecido foi encontrado que corresponda a <see langword="xsi:type" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte: [trabalhando com entidades POCO](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryResolveType">
+      <MemberSignature Language="C#" Value="public override bool TryResolveType (Type dataContractType, Type declaredType, System.Runtime.Serialization.DataContractResolver knownTypeResolver, out System.Xml.XmlDictionaryString typeName, out System.Xml.XmlDictionaryString typeNamespace);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool TryResolveType(class System.Type dataContractType, class System.Type declaredType, class System.Runtime.Serialization.DataContractResolver knownTypeResolver, [out] class System.Xml.XmlDictionaryString&amp; typeName, [out] class System.Xml.XmlDictionaryString&amp; typeNamespace) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.ProxyDataContractResolver.TryResolveType(System.Type,System.Type,System.Runtime.Serialization.DataContractResolver,System.Xml.XmlDictionaryString@,System.Xml.XmlDictionaryString@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataContractType" Type="System.Type" />
+        <Parameter Name="declaredType" Type="System.Type" />
+        <Parameter Name="knownTypeResolver" Type="System.Runtime.Serialization.DataContractResolver" />
+        <Parameter Name="typeName" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+        <Parameter Name="typeNamespace" Type="System.Xml.XmlDictionaryString&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="dataContractType">O tipo real do objeto com ignorância de persistência.</param>
+        <param name="declaredType">O tipo declarado.</param>
+        <param name="knownTypeResolver">Uma instância de <see cref="T:System.Data.Objects.ProxyDataContractResolver" />.</param>
+        <param name="typeName">Quando este método retorna, contém uma lista de <see langword="xsi:type" /> declarações.</param>
+        <param name="typeNamespace">Quando este método retorna, contém uma lista de namespaces usados.</param>
+        <summary>Durante a serialização, mapeia tipos reais para <see langword="xsi:type" /> informações.</summary>
+        <returns>
+          <see langword="true" />Se o tipo foi resolvido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte: [trabalhando com entidades POCO](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

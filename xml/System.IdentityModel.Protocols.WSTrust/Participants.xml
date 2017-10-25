@@ -1,0 +1,77 @@
+<Type Name="Participants" FullName="System.IdentityModel.Protocols.WSTrust.Participants">
+  <TypeSignature Language="C#" Value="public class Participants" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Participants extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.Participants" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento de participantes do WS-Trust. O elemento wst:Participants é uma extensão para o elemento wst:RequestSecurityToken e é usado para transmitir informações sobre quais partes são autorizadas a participar no uso do token.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a versão da especificação WS-Trust que se aplica ao seu cenário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Participants ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.Participants.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Protocols.WSTrust.Participants" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Participant">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;System.IdentityModel.Protocols.WSTrust.EndpointReference&gt; Participant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class System.IdentityModel.Protocols.WSTrust.EndpointReference&gt; Participant" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.Participants.Participant" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.IdentityModel.Protocols.WSTrust.EndpointReference&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de participantes que têm permissão para usar o token.</summary>
+        <value>A lista de participantes. Cada item na lista contém o conteúdo de um elemento wst:Participant.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Primary">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.EndpointReference Primary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.EndpointReference Primary" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.Participants.Primary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.EndpointReference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o usuário principal do token emitido.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Protocols.WSTrust.EndpointReference" /> que contém o endereço do usuário primário do token. Este é o conteúdo do elemento wst:Primary.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

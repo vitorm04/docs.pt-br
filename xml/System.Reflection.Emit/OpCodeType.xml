@@ -1,0 +1,200 @@
+<Type Name="OpCodeType" FullName="System.Reflection.Emit.OpCodeType">
+  <TypeSignature Language="C#" Value="public enum OpCodeType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed OpCodeType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.Emit.OpCodeType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve os tipos das instruções da MSIL (Microsoft intermediate language).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="Annotation">
+      <MemberSignature Language="C#" Value="Annotation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.OpCodeType Annotation = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.OpCodeType.Annotation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API has been deprecated.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.OpCodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse valor do enumerador é reservado e não deve ser usado.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Macro">
+      <MemberSignature Language="C#" Value="Macro" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.OpCodeType Macro = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.OpCodeType.Macro" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.OpCodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essas são instruções da Microsoft intermediate language (MSIL) que são usadas como um sinônimo para outras instruções da MSIL. Por exemplo, <see langword="ldarg.0" /> representa o <see langword="ldarg" /> instrução com um argumento de 0.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Nternal">
+      <MemberSignature Language="C#" Value="Nternal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.OpCodeType Nternal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.OpCodeType.Nternal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.OpCodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Descreve uma instrução reservada do Microsoft intermediate language (MSIL).</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Objmodel">
+      <MemberSignature Language="C#" Value="Objmodel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.OpCodeType Objmodel = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.OpCodeType.Objmodel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.OpCodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Descreve uma instrução do Microsoft intermediate language (MSIL) que se aplica aos objetos.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="Prefix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.OpCodeType Prefix = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.OpCodeType.Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.OpCodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Descreve uma instrução de prefixo que modifica o comportamento da instrução a seguir.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Primitive">
+      <MemberSignature Language="C#" Value="Primitive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Reflection.Emit.OpCodeType Primitive = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Reflection.Emit.OpCodeType.Primitive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Reflection.Emit.OpCodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Descreve uma instrução interna.</summary>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

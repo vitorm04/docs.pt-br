@@ -1,0 +1,115 @@
+<Type Name="AxHost+ConnectionPointCookie" FullName="System.Windows.Forms.AxHost+ConnectionPointCookie">
+  <TypeSignature Language="C#" Value="public class AxHost.ConnectionPointCookie" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit AxHost/ConnectionPointCookie extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AxHost.ConnectionPointCookie" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Conecta-se um controle ActiveX em um cliente que trata os eventos do controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles ActiveX se comunicar com clientes por meio de sua interface COM. O <xref:System.Windows.Forms.AxHost.ConnectionPointCookie> classe fornece o vínculo entre o <xref:System.Windows.Forms.AxHost> classe e o controle ActiveX.  
+  
+ Para obter mais informações, consulte "Eventos no e conectável objetos COM" na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConnectionPointCookie (object source, object sink, Type eventInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object source, object sink, class System.Type eventInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AxHost.ConnectionPointCookie.#ctor(System.Object,System.Object,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="sink" Type="System.Object" />
+        <Parameter Name="eventInterface" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um objeto conectável que contém pontos de conexão.</param>
+        <param name="sink">Chama coletor do cliente que recebe a saída do ponto de conexão.</param>
+        <param name="eventInterface">A interface de saída cujo objeto de ponto de conexão está sendo solicitado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.AxHost.ConnectionPointCookie" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.AxHost.ConnectionPointCookie.%23ctor%2A> construtor estabelece uma conexão entre o cliente e o controle ActiveX.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="source" /> não implementa <paramref name="eventInterface" />.</exception>
+        <exception cref="T:System.InvalidCastException">
+          <paramref name="sink" /> não implementa <paramref name="eventInterface" />.  
+  
+ -ou-  
+  
+ <paramref name="source" /> não implementa <see cref="T:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O ponto de conexão já atingiu seu limite de conexões e não pode aceitar mais nenhum.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="public void Disconnect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Disconnect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AxHost.ConnectionPointCookie.Disconnect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desconecta o controle ActiveX do cliente.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ConnectionPointCookie ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.AxHost.ConnectionPointCookie.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.AxHost.ConnectionPointCookie" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui  <xref:System.Object.Finalize%2A>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ Para obter mais informações, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

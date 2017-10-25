@@ -1,0 +1,798 @@
+<Type Name="LegendCellColumn" FullName="System.Web.UI.DataVisualization.Charting.LegendCellColumn">
+  <TypeSignature Language="C#" Value="public class LegendCellColumn : System.Web.UI.DataVisualization.Charting.ChartNamedElement, System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LegendCellColumn extends System.Web.UI.DataVisualization.Charting.ChartNamedElement implements class System.Web.UI.DataVisualization.Charting.IChartMapArea" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.LegendCellColumn" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.DataVisualization.Charting.ChartNamedElement</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.DataVisualization.Charting.IChartMapArea</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coluna de célula em uma legenda, que é usada para estender a funcionalidade da legenda padrão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer número de colunas da célula pode ser colocado em qualquer ordem, que oferece a flexibilidade para estender as capacidades de padrão de entradas de legenda.  
+  
+ As colunas da célula de legenda só são aplicáveis aos itens gerados automaticamente de pontos de dados ou de série.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendCellColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendCellColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellColumn" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendCellColumn (string headerText, System.Web.UI.DataVisualization.Charting.LegendCellColumnType columnType, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string headerText, valuetype System.Web.UI.DataVisualization.Charting.LegendCellColumnType columnType, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendCellColumn.#ctor(System.String,System.Web.UI.DataVisualization.Charting.LegendCellColumnType,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="headerText" Type="System.String" />
+        <Parameter Name="columnType" Type="System.Web.UI.DataVisualization.Charting.LegendCellColumnType" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="headerText">O texto do cabeçalho da coluna da célula da legenda.</param>
+        <param name="columnType">Um <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellColumnType" /> valor de enumeração que especifica o tipo que será usado para definir o conteúdo de coluna da célula de legenda.</param>
+        <param name="text">O texto da coluna da célula de legenda.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellColumn" /> classe com o texto de cabeçalho especificado, o tipo de coluna e o texto da célula de coluna.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LegendCellColumn (string headerText, System.Web.UI.DataVisualization.Charting.LegendCellColumnType columnType, string text, System.Drawing.ContentAlignment alignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string headerText, valuetype System.Web.UI.DataVisualization.Charting.LegendCellColumnType columnType, string text, valuetype System.Drawing.ContentAlignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendCellColumn.#ctor(System.String,System.Web.UI.DataVisualization.Charting.LegendCellColumnType,System.String,System.Drawing.ContentAlignment)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="headerText" Type="System.String" />
+        <Parameter Name="columnType" Type="System.Web.UI.DataVisualization.Charting.LegendCellColumnType" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="alignment" Type="System.Drawing.ContentAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="headerText">O texto do cabeçalho da coluna da célula da legenda.</param>
+        <param name="columnType">Um <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellColumnType" /> valor de enumeração que especifica o tipo que será usado para definir o conteúdo de coluna da célula de legenda.</param>
+        <param name="text">O texto da coluna da célula de legenda.</param>
+        <param name="alignment">O alinhamento do conteúdo da célula de legenda</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellColumn" /> classe com o texto de cabeçalho especificado, o tipo de coluna, texto de célula de coluna e alinhamento do conteúdo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.ContentAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.ContentAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.ContentAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do conteúdo da coluna de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.ContentAlignment" /> valor que representa o alinhamento do conteúdo da célula de legenda. O valor padrão é <see cref="F:System.Drawing.ContentAlignment.MiddleCenter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada para alinhar o texto ou uma série de símbolos dentro da coluna da célula de legenda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo de célula da coluna da legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para desenhar o plano de fundo de coluna de célula de legenda.  
+  
+ O valor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade substitui a <xref:System.Web.UI.DataVisualization.Charting.Legend.BackColor%2A> propriedade da legenda que pertence a coluna da célula de legenda. Ela também substitui o <xref:System.Web.UI.DataVisualization.Charting.Legend.InterlacedRows%2A> propriedade da legenda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnType">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.LegendCellColumnType ColumnType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.LegendCellColumnType ColumnType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.ColumnType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ParenthesizePropertyName(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.LegendCellColumnType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de coluna da célula de legenda.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellColumnType" />. Esse valor representa o tipo que será usado para definir o conteúdo de coluna da célula de legenda. O valor padrão é <see cref="F:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.Text" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina o tipo de conteúdo que será exibido em cada coluna da célula de legenda individuais. Há dois valores possíveis:  
+  
+-   Texto: Por padrão, a palavra-chave #LEGENDTEXT é usada para colocar o <xref:System.Web.UI.DataVisualization.Charting.DataPointCustomProperties.LegendText%2A> valor em cada coluna da célula. No entanto, você pode usar o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Text%2A> propriedade para definir qualquer palavras-chave que será substituído por um valor da série correspondente.  
+  
+-   SeriesSymbol: A célula de legenda contém um símbolo da série, como um retângulo, linha, a linha com marcador ou marcador, da mesma cor de preenchimento como sua série correspondente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Web.UI.DataVisualization.Charting.LegendCellColumn" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Font Font { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font Font" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Font" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte para o texto da coluna de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> objeto que especifica a fonte para o texto da coluna de legenda. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade só é aplicável quando o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType> é definido como <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.Text>e um `string` valor está definido para o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Text%2A> propriedade. Você pode usar o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Font%2A> propriedade para definir as propriedades de fonte da coluna de célula de legenda.  
+  
+ Se você tentar alterar as propriedades desse <xref:System.Drawing.Font> do objeto em tempo de execução, ocorrerá um erro de compilação. Para definir propriedades de fonte em tempo de execução, você deve criar um novo <xref:System.Drawing.Font> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do texto da coluna da célula de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para desenhar o texto de coluna da célula de legenda. O valor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é aplicável somente se o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType> é definido como <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.Text>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderAlignment">
+      <MemberSignature Language="C#" Value="public System.Drawing.StringAlignment HeaderAlignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.StringAlignment HeaderAlignment" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.HeaderAlignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.StringAlignment), "Center")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento horizontal do texto do cabeçalho de coluna da célula de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.StringAlignment" /> valor de enumeração que especifica o alinhamento horizontal do texto do cabeçalho de coluna da célula de legenda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderBackColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color HeaderBackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color HeaderBackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.HeaderBackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo para o cabeçalho de coluna da célula de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor usado para desenhar o plano de fundo do cabeçalho de coluna da célula de legenda. O valor padrão é <see cref="F:System.Drawing.Color.Empty" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderFont">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Font HeaderFont { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Font HeaderFont" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.HeaderFont" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Font), "Microsoft Sans Serif, 8pt, style=Bold")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Font</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a fonte usada no cabeçalho da coluna de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Font" /> objeto que especifica a fonte usada no cabeçalho da coluna de legenda. O valor padrão é "Microsoft Sans Serif, 8 pt, negrito".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser usada para definir propriedades de fonte de cabeçalho de coluna da célula de legenda.  
+  
+ Se você tentar alterar as propriedades desse <xref:System.Drawing.Font> do objeto em tempo de execução, ocorrerá um erro de compilação. Para definir propriedades de fonte em tempo de execução, você deve criar um novo <xref:System.Drawing.Font> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderForeColor">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Color HeaderForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color HeaderForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.HeaderForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor do texto de cabeçalho de coluna da legenda (<see cref="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.HeaderText" /> propriedade).</summary>
+        <value>Um <see cref="T:System.Drawing.Color" /> valor que especifica a cor do texto de cabeçalho de coluna da legenda.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public virtual string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto para o cabeçalho de coluna da célula de legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa o texto de cabeçalho de coluna de célula de legenda. O valor padrão é uma cadeia de comprimento zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Legend">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.Legend Legend { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Legend Legend" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Legend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Legend</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a legenda na qual essa coluna de célula de legenda pertence.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataVisualization.Charting.Legend" /> objeto que representa a legenda na qual essa coluna de célula de legenda pertence.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MapAreaAttributes">
+      <MemberSignature Language="C#" Value="public virtual string MapAreaAttributes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MapAreaAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.MapAreaAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.KeywordsStringEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o mapa de atributos da área da coluna de célula de legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa os atributos da área do mapa que corresponde à coluna de célula de legenda. O valor padrão é uma cadeia de comprimento zero.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margins">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.DataVisualization.Charting.Margins Margins { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataVisualization.Charting.Margins Margins" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Margins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Web.UI.DataVisualization.Charting.Margins), "0,0,15,15")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.Margins</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as margens da coluna de célula de legenda.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataVisualization.Charting.Margins" /> objeto que representa a parte superior, inferior, esquerda e direita valores das margens da célula de legenda. Os valores padrão para a parte superior, inferior, direita e esquerda são "0,0,15,15".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é medida como uma porcentagem do tamanho de fonte da legenda.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumWidth">
+      <MemberSignature Language="C#" Value="public virtual int MaximumWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.MaximumWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.IntNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura máxima da coluna de célula de legenda.</summary>
+        <value>Um <see langword="integer" /> valor que representa a largura máxima da coluna de célula de legenda. O valor padrão é menos um (-1), o que significa que a largura máxima é calculada automaticamente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumWidth">
+      <MemberSignature Language="C#" Value="public virtual int MinimumWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.MinimumWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(-1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.IntNanValueConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura mínima da coluna de célula de legenda.</summary>
+        <value>Um <see langword="integer" /> valor que representa a largura mínima da coluna de célula de legenda. O valor padrão é menos um (-1), o que significa que a largura mínima é calculada automaticamente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da coluna de célula de legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa o nome da coluna de célula de legenda de texto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da célula da legenda deve ser exclusivo; Caso contrário, uma exceção será lançada.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Name%2A> propriedade pode ser usada como o indexador ao recuperar um <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumn> de objeto o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnCollection>.  
+  
+ Se você definir essa propriedade como uma cadeia de caracteres de comprimento zero, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostBackValue">
+      <MemberSignature Language="C#" Value="public string PostBackValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PostBackValue" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.PostBackValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de postback que pode ser processado em um evento <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" />.</summary>
+        <value>Um <see langword="string" /> valor que representa o valor de postback que é passado para um <see cref="E:System.Web.UI.DataVisualization.Charting.Chart.Click" /> eventos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SeriesSymbolSize">
+      <MemberSignature Language="C#" Value="public virtual System.Drawing.Size SeriesSymbolSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size SeriesSymbolSize" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.SeriesSymbolSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Size), "200, 70")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do símbolo série exibido em uma coluna de célula de legenda.</summary>
+        <value>Um <see cref="T:System.Drawing.Size" /> objeto que representa o tamanho do símbolo de série. Os valores padrão para a largura e altura do símbolo são 200 e 70, respectivamente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do símbolo de série é medido como uma porcentagem do tamanho da fonte da legenda.  
+  
+ Essa propriedade é aplicável somente se o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType> está definida como <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.SeriesSymbol>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMargins">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMargins ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMargins() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.LegendCellColumn.ShouldSerializeMargins" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se a propriedade deve ser serializada. Somente para uso interno.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade deve ser serializada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Somente para uso interno.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public virtual string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("#LEGENDTEXT")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.KeywordsStringEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto da coluna da célula de legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa o texto para a coluna da célula de legenda. O valor padrão é uma cadeia de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é aplicável somente se o <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType> é definido como <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumnType.Text>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTip">
+      <MemberSignature Language="C#" Value="public virtual string ToolTip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTip" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.ToolTip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.KeywordsStringEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de dica de ferramenta para a coluna da célula de legenda.</summary>
+        <value>Um <see langword="string" /> valor que representa a dica de ferramenta para a coluna da célula de legenda. O valor padrão é uma cadeia de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ **Importante** para criar um mapa de imagem dessa maneira, o <xref:System.Web.UI.DataVisualization.Charting.Chart.RenderType%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto deve ser definido como <xref:System.Web.UI.DataVisualization.Charting.RenderType.ImageTag>. É possível criar um mapa de imagem ao usar fluxo binário, mas outra técnica deve ser usada.  
+  
+ Se o `ToolTip` propriedade está definida para um item de legenda e uma célula de legenda, a propriedade de célula de legenda tem precedência.  
+  
+ Isso <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumn.ToolTip%2A> propriedade permite que você defina as palavras-chave especiais para exibir diferentes tipos de dados relacionados ao gráfico.  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public virtual string Url { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.KeywordsStringEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL de destino da legenda geradas automaticamente de um ponto de dados ou série de colunas de célula.</summary>
+        <value>Um <see langword="string" /> valor que representa o ponto de URL ou da âncora de destino do elemento do gráfico. Para usar um absoluto URL começar a expressão de cadeia de caracteres com "http://" ou "www". Se a cadeia de caracteres não começa com um destes prefixos, ele será tratado como uma URL relativa. O valor padrão é uma cadeia de comprimento zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você definir essa propriedade, um mapa de imagem do lado do cliente será criado automaticamente. Uma área do mapa também será criada com o atributo de Href definido como a âncora especificado ou a URL.  
+  
+ A definição dessa propriedade não terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Chart.IsMapEnabled%2A> está definida como `false`. O valor padrão é `true`.  
+  
+ Atributos de area(s) mapa, por exemplo, destino = blank, podem ser especificados usando o <xref:System.Web.UI.DataVisualization.Charting.LegendCell.MapAreaAttributes%2A> propriedade.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.LegendCellColumn.Url%2A> propriedade permite que você defina as palavras-chave especiais para exibir diferentes tipos de dados relacionados ao gráfico.  
+  
+ Para criar mapas de imagem que têm coordenadas definidas pelo usuário, use o <xref:System.Web.UI.DataVisualization.Charting.Chart.MapAreas%2A> propriedade da raiz <xref:System.Web.UI.DataVisualization.Charting.Chart> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

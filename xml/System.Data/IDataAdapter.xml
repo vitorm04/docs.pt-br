@@ -1,0 +1,430 @@
+<Type Name="IDataAdapter" FullName="System.Data.IDataAdapter">
+  <TypeSignature Language="C#" Value="public interface IDataAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Data.IDataAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que um objeto implemente um DataAdapter e representa um conjunto de métodos e propriedades relacionadas à ação de mapeamento que são usadas para preencher e atualizar um <see cref="T:System.Data.DataSet" /> e atualizar uma fonte de dados.  
+  
+ <see cref="T:System.Data.IDbDataAdapter" />instâncias são para fontes de dados (ou semelhante) bancos de dados relacionais com textuais comandos (como Transact-SQL), enquanto <see cref="T:System.Data.IDataAdapter" /> instâncias podem pode usar qualquer tipo de fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.IDataAdapter> interface permite que uma classe herda de implementar uma classe DataAdapter, que representa a ponte entre uma fonte de dados e um <xref:System.Data.DataSet>. Para obter mais informações sobre classes de DataAdapter, consulte [preenchendo um DataSet de um DataAdapter](~/docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
+  
+ Um aplicativo não cria uma instância do <xref:System.Data.IDataAdapter> interface diretamente, mas implementa uma instância de uma classe que herda <xref:System.Data.IDataAdapter>.  
+  
+ As classes que herdam <xref:System.Data.IDataAdapter> deve implementar os membros herdados e geralmente definem membros adicionais para adicionar funcionalidade específica do provedor. Por exemplo, o <xref:System.Data.IDataAdapter> interface define uma <xref:System.Data.IDataAdapter.Fill%2A> método que utiliza um <xref:System.Data.DataSet> como um parâmetro. Por sua vez, o <xref:System.Data.OleDb.OleDbDataAdapter> classe herda o <xref:System.Data.Common.DbDataAdapter.Fill%2A> método e também define duas sobrecargas adicionais do <xref:System.Data.OleDb.OleDbDataAdapter.Fill%2A> que levam a um objeto de conjunto de registros ADO como um parâmetro de método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa as classes derivadas, <xref:System.Data.SqlClient.SqlCommand>, <xref:System.Data.SqlClient.SqlDataAdapter>, e <xref:System.Data.SqlClient.SqlConnection>para selecionar registros do banco de dados. O preenchimento <xref:System.Data.DataSet> , em seguida, é retornado. Para fazer isso, o método é passado um inicializado <xref:System.Data.DataSet>, uma cadeia de caracteres de conexão e uma cadeia de caracteres de consulta que é uma instrução SELECT Transact-SQL.  
+  
+ [!code-csharp[Classic WebData SqlDataAdapter Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData SqlDataAdapter Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Para promover a consistência entre os provedores de dados .NET Framework, nomeie a classe herdada no formulário <paramref name="Prv" /> DataAdapter onde <paramref name="Prv" /> é o prefixo uniforme fornecido para todas as classes em um namespace específico do provedor de dados do .NET Framework. Por exemplo, <paramref name="Sql" /> é o prefixo do <see cref="T:System.Data.SqlClient.SqlDataAdapter" /> classe no <see langword="System.Data.SqlClient" /> namespace.  
+  
+ Ao herdar do <see cref="T:System.Data.IDataAdapter" /> interface, você deve implementar construtores a seguir:  
+  
+ <list type="table"><listheader><term>Item  
+  
+ </term><description>Descrição  
+  
+ </description></listheader><item><term>PrvDataAdapter()  
+  
+ </term><description>Inicializa uma nova instância da classe PrvDataAdapter.  
+  
+ </description></item><item><term>PrvDataAdapter (PrvCommand selectCommand)  
+  
+ </term><description>Inicializa uma nova instância da classe PrvDataAdapter usando a instrução SQL SELECT.  
+  
+ </description></item><item><term>PrvDataAdapter (cadeia de caracteres selectCommandText, selectConnectionString de cadeia de caracteres)  
+  
+ </term><description>Inicializa uma nova instância da classe PrvDataAdapter por meio de uma instrução SQL SELECT e uma cadeia de caracteres de conexão.  
+  
+ </description></item><item><term>PrvDataAdapter (cadeia de caracteres selectCommandText, PrvConnection selectConnection)  
+  
+ </term><description>Inicializa uma nova instância da classe PrvDataAdapter por meio de uma instrução SQL SELECT e um objeto PrvConnection.  
+  
+ </description></item></list></para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public int Fill (System.Data.DataSet dataSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Fill(class System.Data.DataSet dataSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataAdapter.Fill(System.Data.DataSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">Um <see cref="T:System.Data.DataSet" /> a ser preenchido com registros e, se necessário, esquema.</param>
+        <summary>Adiciona ou atualiza linhas no <see cref="T:System.Data.DataSet" /> para corresponder àquelas na fonte de dados usando o nome <see cref="T:System.Data.DataSet" /> e cria um <see cref="T:System.Data.DataTable" /> chamado "Table".</summary>
+        <returns>O número de linhas adicionadas com êxito a ou atualizadas no <see cref="T:System.Data.DataSet" />. Isso não inclui linhas afetadas por instruções que não retornam linhas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.IDataAdapter.Fill%2A>recupera linhas da fonte de dados usando a instrução SELECT especificada por um associado <xref:System.Data.IDbDataAdapter.SelectCommand%2A> propriedade. O objeto de conexão associado à instrução SELECT deve ser válido, mas não precisa estar aberto. Se a conexão for fechada antes <xref:System.Data.IDataAdapter.Fill%2A> é chamado, ele é aberto para recuperar dados e fechado. Se a conexão está aberta antes de <xref:System.Data.IDataAdapter.Fill%2A> é chamado, ele permanecerá aberto.  
+  
+ O <xref:System.Data.IDataAdapter.Fill%2A> operação, em seguida, adiciona as linhas ao destino <xref:System.Data.DataTable> objetos no <xref:System.Data.DataSet>, criando o <xref:System.Data.DataTable> objetos se eles ainda não existir. Ao criar <xref:System.Data.DataTable> objetos, o <xref:System.Data.IDataAdapter.Fill%2A> operação geralmente cria apenas os metadados de nome de coluna. No entanto, caso a propriedade <xref:System.Data.IDataAdapter.MissingSchemaAction%2A> seja definida como `AddWithKey`, as chaves primárias apropriadas e as restrições também são criadas.  
+  
+ Se o `SelectCommand` retornar os resultados de um OUTER JOIN, o `DataAdapter` não definirá um valor de <xref:System.Data.DataTable.PrimaryKey%2A> para o<xref:System.Data.DataTable> resultante. Você deve definir explicitamente a chave primária para garantir que as linhas duplicadas sejam resolvidas corretamente. Para obter mais informações, consulte [definindo chaves primárias](~/docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+  
+ Se o <xref:System.Data.IDataAdapter> encontra colunas duplicadas ao preencher um <xref:System.Data.DataTable>, ele gera nomes para as colunas sucessivas, usando o padrão "nome_da_coluna1", "columnname2", "columnname3" e assim por diante. Se os dados de entrada contém colunas sem nome, eles são colocados no <xref:System.Data.DataSet> acordo com o padrão "Coluna1", "Coluna2" e assim por diante. Quando vários conjuntos de resultados são adicionados para o <xref:System.Data.DataSet>, cada conjunto de resultados é colocado em uma tabela separada. Os conjuntos de resultados adicionais são nomeados adicionando-se valores integrais ao nome da tabela especificado (por exemplo, "Tabela", "Tabela1", "Tabela2" e assim por diante). Aplicativos devem ter cuidado ao usar nomes de coluna e tabela para garantir que não ocorrem conflitos com esses padrões de nomenclatura.  
+  
+ Quando a instrução SELECT que é usada para popular o <xref:System.Data.DataSet> retornar vários resultados, como um instrução SQL em lote, se um dos resultados contiver um erro, todos os resultados sucessivos são ignorados e não adicionados ao <xref:System.Data.DataSet>.  
+  
+ Você pode usar o <xref:System.Data.IDataAdapter.Fill%2A> método várias vezes no mesmo <xref:System.Data.DataTable>. Caso haja uma chave primária, as linhas de entrada são mescladas com linhas correspondentes já existentes. Caso não haja nenhuma chave primária, as linhas de entrada são acrescentadas ao <xref:System.Data.DataTable>.  
+  
+> [!NOTE]
+>  Ao lidar com instruções SQL em lotes que retornem vários resultados, a implementação de <xref:System.Data.IDataAdapter.Fill%2A> e <xref:System.Data.IDataAdapter.FillSchema%2A> para dados do .NET Framework provedor recupera informações de esquema para apenas o primeiro resultado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillSchema">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable[] FillSchema (System.Data.DataSet dataSet, System.Data.SchemaType schemaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.DataTable[] FillSchema(class System.Data.DataSet dataSet, valuetype System.Data.SchemaType schemaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataAdapter.FillSchema(System.Data.DataSet,System.Data.SchemaType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+        <Parameter Name="schemaType" Type="System.Data.SchemaType" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">O <see cref="T:System.Data.DataSet" /> a ser preenchido com o esquema da fonte de dados.</param>
+        <param name="schemaType">Um dos valores de <see cref="T:System.Data.SchemaType" />.</param>
+        <summary>Adiciona um <see cref="T:System.Data.DataTable" /> com o nome “Tabela” ao <see cref="T:System.Data.DataSet" /> especificado e configura o esquema para corresponder a eles na fonte de dados com base no <see cref="T:System.Data.SchemaType" /> especificado.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Data.DataTable" /> que contém informações de esquema retornadas da fonte de dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.IDataAdapter.FillSchema%2A> método recupera o esquema de fonte de dados usando o <xref:System.Data.IDbDataAdapter.SelectCommand%2A>. O objeto de conexão associado ao <xref:System.Data.IDbDataAdapter.SelectCommand%2A> deve ser válido, mas não precisa estar aberto. Se a conexão for fechada antes <xref:System.Data.IDataAdapter.FillSchema%2A> é chamado, ele é aberto para recuperar dados e fechado. Se a conexão está aberta antes de <xref:System.Data.IDataAdapter.FillSchema%2A> é chamado, ele permanecerá aberto.  
+  
+ Um <xref:System.Data.IDataAdapter.FillSchema%2A> operação adiciona um <xref:System.Data.DataTable> para o destino <xref:System.Data.DataSet>. Em seguida, adiciona colunas para o <xref:System.Data.DataColumnCollection> do <xref:System.Data.DataTable> e configura o seguinte <xref:System.Data.DataColumn> propriedades se eles existirem na fonte de dados:  
+  
+-   <xref:System.Data.DataColumn.AllowDBNull%2A>  
+  
+-   <xref:System.Data.DataColumn.AutoIncrement%2A>. Você deve definir <xref:System.Data.DataColumn.AutoIncrementStep%2A> e <xref:System.Data.DataColumn.AutoIncrementSeed%2A> separadamente.  
+  
+-   <xref:System.Data.DataColumn.MaxLength%2A>  
+  
+-   <xref:System.Data.DataColumn.ReadOnly%2A>  
+  
+-   <xref:System.Data.DataColumn.Unique%2A>  
+  
+ <xref:System.Data.IDataAdapter.FillSchema%2A>também configura o <xref:System.Data.DataTable.PrimaryKey%2A> e <xref:System.Data.DataTable.Constraints%2A> propriedades de acordo com as regras a seguir:  
+  
+-   Caso uma ou mais colunas de chave primária sejam retornadas pelo <xref:System.Data.IDbDataAdapter.SelectCommand%2A>, elas são usadas como colunas de chave primária para o <xref:System.Data.DataTable>.  
+  
+-   Se não há colunas de chave primária são retornadas, mas são colunas exclusivas, as colunas exclusivas são usadas como chave primária se todas as colunas exclusivas não são nulas. Caso qualquer uma das colunas seja anulável, um <xref:System.Data.UniqueConstraint> é adicionado ao <xref:System.Data.ConstraintCollection>, mas a propriedade <xref:System.Data.DataTable.PrimaryKey%2A> não é definida.  
+  
+-   Caso as colunas de chave primária e as colunas exclusivas sejam retornadas, as colunas de chave primária são usadas como as colunas de chave primária para o <xref:System.Data.DataTable>.  
+  
+ Observe que as chaves primárias e restrições exclusivas serão adicionadas para o <xref:System.Data.ConstraintCollection> acordo com as regras anteriores, mas outra restrição de tipos não são adicionados.  
+  
+ Se um índice agrupado exclusivo estiver definido em colunas em uma tabela do SQL Server e a restrição de chave primária estiver definida em um conjunto de colunas separado, os nomes das colunas no índice agrupado serão retornados. Para retornar o nome ou os nomes das colunas de chave primária, use uma dica de consulta com a instrução SELECT que especifica o nome do índice de chave primária. Para obter mais informações sobre como especificar dicas de consulta, consulte [a dica de consulta (Transact-SQL)](http://msdn.microsoft.com/library/ms181714.aspx).  
+  
+ Se o <xref:System.Data.IDataAdapter> encontra colunas duplicadas ao preencher um <xref:System.Data.DataTable>, ele gera nomes para as colunas sucessivas, usando o padrão "nome_da_coluna1", "columnname2", "columnname3" e assim por diante. Se os dados de entrada contém colunas sem nome, eles são colocados no <xref:System.Data.DataSet> acordo com o padrão "Coluna1", "Coluna2" e assim por diante. Quando vários conjuntos de resultados são adicionados para o <xref:System.Data.DataSet>, cada conjunto de resultados é colocado em uma tabela separada. Os conjuntos de resultados adicionais são nomeados adicionando-se valores integrais ao nome da tabela especificado (por exemplo, "Tabela", "Tabela1", "Tabela2" e assim por diante). Aplicativos devem ter cuidado ao usar nomes de coluna e tabela para garantir que não ocorrem conflitos com esses padrões de nomenclatura.  
+  
+ <xref:System.Data.IDataAdapter.FillSchema%2A>não retorna nenhuma linha. Use o <xref:System.Data.IDataAdapter.Fill%2A> método para adicionar linhas a um <xref:System.Data.DataTable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFillParameters">
+      <MemberSignature Language="C#" Value="public System.Data.IDataParameter[] GetFillParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.IDataParameter[] GetFillParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataAdapter.GetFillParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.IDataParameter[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os parâmetros definidos pelo usuário ao executar uma instrução SQL SELECT.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Data.IDataParameter" /> que contém os parâmetros definidos pelo usuário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+```  
+private static void GetParameters(String connectiongString) {  
+           using (SqlConnection conn = new SqlConnection(connectiongString)) {  
+              String queryString = "Select [CourseID],[Title],[Credits] from [MySchool].[dbo].[Course] where [Year]=@Year and [Credits]>=@Credits";   
+              SqlParameter year = new SqlParameter("@Year", 2012);   
+              SqlParameter credits = new SqlParameter("@Credits", SqlDbType.Int, 4, "Credits");   
+              credits.Value = 4; SqlCommand command = new SqlCommand(queryString, conn);   
+              command.Parameters.Add(year);   
+              command.Parameters.Add(credits);   
+              IDbDataAdapter mySchool = new SqlDataAdapter(command);   
+              IDataParameter[] parameters = mySchool.GetFillParameters();  
+              Console.WriteLine("{0,-15}{1,-15}{2,-15}{3,-15}{4,-15}", "ParameterName", "SourceColumn", "Direction", "DbType", "Value");   
+              foreach (IDataParameter parameter in parameters) {   
+                 Console.WriteLine("{0,-15}{1,-15}{2,-15}{3,-15}{4,-15}", parameter.ParameterName, parameter.SourceColumn, parameter.Direction, parameter.DbType, parameter.Value);   
+              }  
+           }  
+        }  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MissingMappingAction">
+      <MemberSignature Language="C#" Value="public System.Data.MissingMappingAction MissingMappingAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.MissingMappingAction MissingMappingAction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataAdapter.MissingMappingAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingMappingAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica ou especifica se colunas ou tabelas de origem não mapeados são passadas com seus nomes de fonte para ser filtrada ou para gerar um erro.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.MissingMappingAction" />. O padrão é <see langword="Passthrough" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.IDataAdapter.TableMappings%2A> propriedade fornece o mapeamento entre os registros retornados de mestre e o <xref:System.Data.DataSet>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor definido não é um dos valores <see cref="T:System.Data.MissingMappingAction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MissingSchemaAction">
+      <MemberSignature Language="C#" Value="public System.Data.MissingSchemaAction MissingSchemaAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.MissingSchemaAction MissingSchemaAction" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataAdapter.MissingSchemaAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.MissingSchemaAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica ou especifica se as tabelas de origem ausentes, colunas e suas relações são adicionadas ao esquema do conjunto de dados, ignorado, ou causam um erro a ser gerado.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.MissingSchemaAction" />. O padrão é <see langword="Add" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O valor definido não é um dos valores <see cref="T:System.Data.MissingSchemaAction" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TableMappings">
+      <MemberSignature Language="C#" Value="public System.Data.ITableMappingCollection TableMappings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.ITableMappingCollection TableMappings" />
+      <MemberSignature Language="DocId" Value="P:System.Data.IDataAdapter.TableMappings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.ITableMappingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica como uma tabela de origem é mapeada para uma tabela de conjunto de dados.</summary>
+        <value>Uma coleção que fornece o mapeamento mestre entre os registros retornados e o <see cref="T:System.Data.DataSet" />. O valor padrão é uma coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.IDataAdapter> usa apenas os mapeamentos para a tabela de origem chamada "Table". Todas as SELECT, instruções INSERT, DELETE e UPDATE, retornando dados devem fazer isso usando o nome da coluna consistente. Os nomes de coluna retornados nos registros devem ser exclusivos, caso contrário, colunas com nomes duplicados substituir dados anteriores. Em <xref:System.Data.IDataAdapter.Update%2A>, somente a tabela mapeada para a tabela de origem chamada "Table" terá suas alterações reconciliadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public int Update (System.Data.DataSet dataSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Update(class System.Data.DataSet dataSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.IDataAdapter.Update(System.Data.DataSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSet" Type="System.Data.DataSet" />
+      </Parameters>
+      <Docs>
+        <param name="dataSet">O <see cref="T:System.Data.DataSet" /> usado para atualizar a fonte de dados.</param>
+        <summary>Chama as respectivas instruções INSERT, UPDATE ou DELETE para cada linha inserida, atualizada ou excluída no <see cref="T:System.Data.DataSet" /> especificado em um <see cref="T:System.Data.DataTable" /> denominado “Tabela”.</summary>
+        <returns>O número de linhas atualizadas com êxito a partir do <see cref="T:System.Data.DataSet" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um aplicativo chama o <xref:System.Data.IDataAdapter.Update%2A> método, o <xref:System.Data.IDataAdapter> examina o <xref:System.Data.DataRow.RowState%2A> propriedade e executa as instruções INSERT, UPDATE ou DELETE necessárias iterativamente para cada linha, com base na ordem de índices configurados no <xref:System.Data.DataSet>. Por exemplo, <xref:System.Data.IDataAdapter.Update%2A> pode executar uma instrução DELETE, seguido por uma instrução INSERT e, em seguida, outra instrução de exclusão, devido a ordem das linhas de <xref:System.Data.DataTable>.  
+  
+ Lembre-se de que essas instruções não são executadas como um processo em lote; cada linha é atualizada individualmente. Um aplicativo pode chamar o <xref:System.Data.DataSet.GetChanges%2A> método se você deve controlar a sequência de tipos de instrução (por exemplo, inserções antes de atualizações). Para obter mais informações, consulte [Atualizar fontes de dados com DataAdapters](~/docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+  
+ Se as instruções INSERT, UPDATE ou DELETE não forem especificadas, o <xref:System.Data.Common.DataAdapter.Update%2A> método gera uma exceção. No entanto, é possível criar um objeto <xref:System.Data.SqlClient.SqlCommandBuilder> ou <xref:System.Data.OleDb.OleDbCommandBuilder> para gerar automaticamente instruções SQL para atualizações de tabela única caso você defina a propriedade `SelectCommand` de um provedor de dados do .NET Framework. Em seguida, qualquer instrução SQL adicional que você não defina é geradas pelo CommandBuilder. Esta lógica de geração requer que as informações da coluna principal estejam presente no <xref:System.Data.DataSet>. Para obter mais informações, consulte [gerar comandos com CommandBuilders](~/docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+ O <xref:System.Data.Common.DataAdapter.Update%2A> método recupera linhas da tabela listada no mapeamento primeiro antes de executar uma atualização. O <xref:System.Data.Common.DataAdapter.Update%2A> , em seguida, atualiza a linha com o valor de <xref:System.Data.IDbCommand.UpdatedRowSource%2A> propriedade. Todas as linhas adicionais retornadas são ignoradas.  
+  
+ Depois que todos os dados são recarregados no <xref:System.Data.DataSet>, o evento <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A> é acionado, permitindo que o usuário inspecione a linha <xref:System.Data.DataSet> reconciliada e todos os parâmetros de saída retornados pelo comando. Depois que uma linha é atualizada com êxito, as alterações feitas nessa linha são aceitas.  
+  
+ Ao usar <xref:System.Data.IDataAdapter.Update%2A>, a ordem de execução é o seguinte:  
+  
+1.  Os valores no <xref:System.Data.DataRow> são movidos para os valores de parâmetro.  
+  
+2.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdating%2A> é gerado.  
+  
+3.  O comando é executado.  
+  
+4.  Se o comando é definido como `FirstReturnedRecord`, retornado do primeiro resultado é colocado no <xref:System.Data.DataRow>.  
+  
+5.  Se não houver parâmetros de saída, eles são colocados no <xref:System.Data.DataRow>.  
+  
+6.  O <xref:System.Data.Common.DbDataAdapter.OnRowUpdated%2A> é gerado.  
+  
+7.  <xref:System.Data.DataRow.AcceptChanges%2A> é chamado.  
+  
+ Cada comando associado a <xref:System.Data.IDataAdapter> normalmente tem uma coleção de parâmetros associada a ele. Os parâmetros são mapeados para a linha atual por meio das propriedades `SourceColumn` e `SourceVersion` da classe `Parameter` de um provedor de dados do .NET Framework. `SourceColumn`refere-se a uma <xref:System.Data.DataTable> coluna que o <xref:System.Data.IDataAdapter> referências para obter valores de parâmetro para a linha atual.  
+  
+ `SourceColumn` refere-se ao nome da coluna não mapeado antes da aplicação de qualquer mapeamento de tabela. Caso `SourceColumn` refira-se a uma coluna inexistente, a ação tomada depende de um dos valores <xref:System.Data.MissingMappingAction> a seguir.  
+  
+|Valor de Enumeração|Ação realizada|  
+|-----------------------|------------------|  
+|`MissingMappingAction.Passthrough`|Use os nomes de coluna de fonte e os nomes de tabela no <xref:System.Data.DataSet> caso nenhum mapeamento esteja presente.|  
+|`MissingMappingAction.Ignore`|Um <xref:System.SystemException> é gerado. Quando os mapeamentos são definidos explicitamente, um mapeamento ausente para um parâmetro de entrada é geralmente causado por um erro.|  
+|`MissingMappingAction.Error`|Um <xref:System.SystemException> é gerado.|  
+  
+ A propriedade `SourceColumn` também é usada para remapear o valor para parâmetros de saída ou de entrada/saída para o `DataSet`. Uma exceção será gerada se fizer referência a uma coluna inexistente.  
+  
+ O `SourceVersion` propriedade de um provedor de dados do .NET Framework `Parameter` classe determina se deve usar o `Original`, `Current`, ou `Proposed` versão do valor da coluna. Esse recurso é usado com frequência para incluir valores originais na cláusula WHERE de uma instrução UPDATE para verificar se há violações de simultaneidade otimista.  
+  
+> [!NOTE]
+>  Caso ocorra um erro durante a atualização de uma linha, uma exceção é lançada e a execução da atualização é descontinuada. Para continuar a operação de atualização sem gerar exceções quando um erro é encontrado, defina a propriedade <xref:System.Data.Common.DataAdapter.ContinueUpdateOnError%2A> como `true` antes de chamar <xref:System.Data.Common.DbDataAdapter.Update%2A>. Você também pode responder a erros linha por linha dentro do evento `RowUpdated` de um DataAdapter. Para continuar a operação de atualização sem gerar uma exceção dentro evento `RowUpdated`, defina a propriedade <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> do <xref:System.Data.Common.RowUpdatedEventArgs> como <xref:System.Data.UpdateStatus.Continue>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a classe derivada, <xref:System.Data.OleDb.OleDbDataAdapter>, <xref:System.Data.Common.DataAdapter.Update%2A> a fonte de dados. Este exemplo supõe que você tenha criado um <xref:System.Data.OleDb.OleDbDataAdapter> e um <xref:System.Data.DataSet>.  
+  
+ [!code-csharp[Classic WebData DataAdapter.IDataAdapter.Update Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataAdapter.IDataAdapter.Update Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataAdapter.IDataAdapter.Update Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataAdapter.IDataAdapter.Update Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DBConcurrencyException">Uma tentativa de executar uma instrução INSERT, UPDATE ou DELETE resultou em zero registro afetado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

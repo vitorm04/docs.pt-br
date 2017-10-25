@@ -1,0 +1,13 @@
+<Namespace Name="System.Runtime.Remoting.Contexts">
+  <Docs>
+    <summary>O <see cref="N:System.Runtime.Remoting.Contexts" /> namespace contém objetos que definem os contextos de todos os objetos residem no. Um contexto é uma sequência ordenada de propriedades que define um ambiente para os objetos dentro dele. Contextos são criados durante o processo de ativação para objetos que são configurados para exigir que determinados automático serviços tais sincronização, transações, just-in-time (JIT) ativação, segurança e assim por diante. Vários objetos podem residir em um contexto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Sempre que um novo objeto é criado, o.NET Framework encontra um contexto compatível ou cria um novo contexto para o objeto. Depois que um objeto é colocado em um contexto, ela permanece nele vida. Classes que podem ser associados a um contexto são chamadas de classes associadas. Quando acessado de outro contexto, essas classes associados a contexto são referenciados diretamente usando um proxy. Uma chamada de um objeto em um contexto para um objeto em outro contexto passará por um proxy de contexto e ser afetada pela política implementada por propriedades de contexto combinado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

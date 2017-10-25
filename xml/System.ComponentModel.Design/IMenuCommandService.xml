@@ -1,0 +1,388 @@
+<Type Name="IMenuCommandService" FullName="System.ComponentModel.Design.IMenuCommandService">
+  <TypeSignature Language="C#" Value="public interface IMenuCommandService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMenuCommandService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IMenuCommandService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos para gerenciar os comandos de menu e os verbos de designer globais disponíveis no modo de design e para exibir alguns tipos de menu de atalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface fornece métodos para:  
+  
+-   Localizar, invocar, adicionar e remover comandos global verbo do designer.  
+  
+-   Localizar, invocar, adicionar e remover comandos de menu padrão.  
+  
+-   Altere os manipuladores de eventos associados com os comandos de menu padrão.  
+  
+-   Exibir um menu de atalho de comandos padrão que está associado um menu <xref:System.ComponentModel.Design.CommandID>.  
+  
+ Verbos do Designer representam comandos personalizadas que são listados no menu de atalho no modo de design. Um verbo do designer pode fornecer um rótulo de texto especificado. Cada verbo do designer é automaticamente atribuído um exclusivo <xref:System.ComponentModel.Design.CommandID>. Um designer pode fornecer verbos do designer por meio de seu <xref:System.ComponentModel.Design.IDesigner.Verbs%2A> propriedade, mas eles estão disponíveis somente quando o componente do designer está selecionado no momento. Verbos do designer globais são comandos de verbo do designer que podem ser acessados de um menu de atalho do modo de design, independentemente do componente selecionado. Essa interface permite que você gerencie o conjunto de verbos do designer globais que estão disponíveis no modo de design.  
+  
+ Você pode adicionar um verbo do designer global usando o <xref:System.ComponentModel.Design.IMenuCommandService.AddVerb%2A> método e você pode remover um verbo do designer global usando o <xref:System.ComponentModel.Design.IMenuCommandService.RemoveVerb%2A> método. Você pode chamar um verbo do designer usando o <xref:System.ComponentModel.Design.IMenuCommandService.GlobalInvoke%2A> método se você souber o <xref:System.ComponentModel.Design.CommandID> do verbo. O <xref:System.ComponentModel.Design.IMenuCommandService.Verbs%2A> propriedade desta interface contém o conjunto atual de comandos de verbo do designer para exibir um menu de atalho. Este conjunto de comandos de verbo do designer consiste em todos os verbos do designer global e qualquer verbos do designer oferecidos pelo designer de qualquer componente selecionado no momento. Esse conjunto de verbos é atualizado sempre que um componente com um designer de oferta comandos verbo do designer é selecionado ou desmarcado.  
+  
+ Comandos de menu são limitados ao conjunto de comandos padrão predefinidos. A maioria dos comandos padrão predefinidas é definida no <xref:System.ComponentModel.Design.StandardCommands> e <xref:System.Windows.Forms.Design.MenuCommands> enumerações. Você pode adicionar, remover e chamar comandos de menu e comandos de menu que foram adicionados a um menu usando métodos desta interface de pesquisa.  
+  
+ Você pode adicionar um comando de menu padrão usando o <xref:System.ComponentModel.Design.IMenuCommandService.AddCommand%2A> método e remover um comando de menu padrão usando o <xref:System.ComponentModel.Design.IMenuCommandService.RemoveCommand%2A> método. Você pode anexar um manipulador de eventos para um comando de menu padrão predefinidas, seguindo o procedimento detalhado na documentação para o <xref:System.ComponentModel.Design.IMenuCommandService.AddCommand%2A> método. Você pode recuperar um comando de menu por <xref:System.ComponentModel.Design.CommandID> se ele tiver sido adicionado a um menu usando o <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A> método. Você pode invocar um comando de menu ou verbo do designer por <xref:System.ComponentModel.Design.CommandID> usando o <xref:System.ComponentModel.Design.IMenuCommandService.GlobalInvoke%2A> método.  
+  
+> [!NOTE]
+>  Uma tentativa de adicionar um comando de menu com um já existente <xref:System.ComponentModel.Design.CommandID> lançará um <xref:System.InvalidOperationException>. Ao adicionar um comando de menu, certifique-se de verificar se ele não ainda estiver em um menu usando o <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A> método ou use exceção tratamento cuidadosamente.  
+  
+> [!NOTE]
+>  Um comando de menu podem ser adicionados a um menu e ter seu <xref:System.ComponentModel.Design.MenuCommand.Visible%2A> ou <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> propriedades definidas como `false`. Se você não pode localizar visualmente um comando de menu que foi adicionado em um menu, uma dessas propriedades talvez tenha sido definida `false`.  
+  
+ Você pode mostrar determinados menus de atalho padrão que contém os comandos de menu em um local especificado usando o <xref:System.ComponentModel.Design.IMenuCommandService.ShowContextMenu%2A> método. A documentação para este método contém uma tabela que lista as IDs de comando que especificam os menus válidos para mostrar.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como usar o <xref:System.ComponentModel.Design.IMenuCommandService> para adicionar um <xref:System.ComponentModel.Design.MenuCommand>.  
+  
+ [!code-cpp[MenuCommand Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MenuCommand Example/CPP/component1.cpp#1)]
+ [!code-csharp[MenuCommand Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MenuCommand Example/CS/component1.cs#1)]
+ [!code-vb[MenuCommand Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MenuCommand Example/VB/component1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddCommand">
+      <MemberSignature Language="C#" Value="public void AddCommand (System.ComponentModel.Design.MenuCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddCommand(class System.ComponentModel.Design.MenuCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IMenuCommandService.AddCommand(System.ComponentModel.Design.MenuCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.ComponentModel.Design.MenuCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">O <see cref="T:System.ComponentModel.Design.MenuCommand" /> a ser adicionado.</param>
+        <summary>Adiciona o comando de menu padrão especificado para o menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.Design.MenuCommands> e <xref:System.ComponentModel.Design.StandardCommands> enumerações contêm <xref:System.ComponentModel.Design.CommandID> identificadores para predefinidos comandos padrão e comandos de menu que já estão associados com um local em um menu específico.  
+  
+> [!NOTE]
+>  Uma tentativa de adicionar um comando de menu com um já existente <xref:System.ComponentModel.Design.CommandID> lançará um <xref:System.InvalidOperationException>. Ao adicionar um comando de menu, certifique-se de verificar se ele não ainda estiver em um menu usando o <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A> método ou use exceção tratamento cuidadosamente.  
+  
+ Você pode anexar um manipulador de eventos para um comando de menu predefinidas com o procedimento a seguir:  
+  
+1.  Se o comando de menu para vincular a um manipulador de eventos tiver sido adicionado a um menu ou encontra-se com o <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A> método, considere se você deseja restaurar este comando de menu posteriormente, e se você deseja invocar o manipulador de eventos atual de seu novo manipulador de eventos. Se seu código pode restaurar o comando de menu ou cadeia a invocação de manipuladores de eventos, certifique-se de armazenar uma referência para o comando de menu em algum lugar.  
+  
+2.  Certifique-se de que qualquer comando de menu existente com o mesmo <xref:System.ComponentModel.Design.CommandID> foi removido do menu usando o <xref:System.ComponentModel.Design.IMenuCommandService.RemoveCommand%2A> método.  
+  
+3.  Criar um novo <xref:System.ComponentModel.Design.MenuCommand> e especificar o manipulador de eventos no construtor, junto com um <xref:System.ComponentModel.Design.CommandID> que representa o comando para adicionar. Cada comando de menu padrão está associado um local de menu predefinidas onde ele é adicionado ao. As IDs de comando com suporte são definidas no <xref:System.ComponentModel.Design.StandardCommands> e <xref:System.Windows.Forms.Design.MenuCommands> enumerações.  
+  
+4.  Se você deseja invocar qualquer preexistentes manipulador de eventos para o comando de menu, chame o <xref:System.ComponentModel.Design.MenuCommand.Invoke%2A> método de substituição no menu do manipulador de eventos que manipula o evento invoke do comando de menu no comando de menu.  
+  
+5.  Se você estiver interessado no manipulador de eventos de um comando de menu preexistentes, substituição de restauração, adicione armazenado, preexistente comando de menu depois de remover o comando de menu de substituição que você criou. Você talvez queira adicionar esse comportamento para o `Dispose` método para seu tipo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.ComponentModel.Design.CommandID" /> especificada <see cref="T:System.ComponentModel.Design.MenuCommand" /> já está presente em um menu.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddVerb">
+      <MemberSignature Language="C#" Value="public void AddVerb (System.ComponentModel.Design.DesignerVerb verb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddVerb(class System.ComponentModel.Design.DesignerVerb verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IMenuCommandService.AddVerb(System.ComponentModel.Design.DesignerVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.ComponentModel.Design.DesignerVerb" />
+      </Parameters>
+      <Docs>
+        <param name="verb">O <see cref="T:System.ComponentModel.Design.DesignerVerb" /> a ser adicionado.</param>
+        <summary>Adiciona o verbo do designer especificado para o conjunto de verbos do designer global.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os designers de componentes que fornecem os verbos do designer devem usar o <xref:System.ComponentModel.Design.IDesigner.Verbs%2A> propriedade de seu designer em vez de chamar esse método. Este método adiciona um verbo do designer global que pode ser acessado no menu de atalho com o botão direito no modo de design, independentemente do componente selecionado atualmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindCommand">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.MenuCommand FindCommand (System.ComponentModel.Design.CommandID commandID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ComponentModel.Design.MenuCommand FindCommand(class System.ComponentModel.Design.CommandID commandID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IMenuCommandService.FindCommand(System.ComponentModel.Design.CommandID)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.MenuCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandID" Type="System.ComponentModel.Design.CommandID" />
+      </Parameters>
+      <Docs>
+        <param name="commandID">O <see cref="T:System.ComponentModel.Design.CommandID" /> a ser pesquisado.</param>
+        <summary>Procura a ID de comando especificado e retorna o comando de menu associado a ele.</summary>
+        <returns>O <see cref="T:System.ComponentModel.Design.MenuCommand" /> associado à ID de comando, ou <see langword="null" /> se nenhum comando foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalInvoke">
+      <MemberSignature Language="C#" Value="public bool GlobalInvoke (System.ComponentModel.Design.CommandID commandID);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GlobalInvoke(class System.ComponentModel.Design.CommandID commandID) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IMenuCommandService.GlobalInvoke(System.ComponentModel.Design.CommandID)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandID" Type="System.ComponentModel.Design.CommandID" />
+      </Parameters>
+      <Docs>
+        <param name="commandID">O <see cref="T:System.ComponentModel.Design.CommandID" /> do comando para pesquisar e executar.</param>
+        <summary>Invoca um comando de verbo de menu ou no designer de correspondência de ID de comando especificado.</summary>
+        <returns>
+          <see langword="true" />Se o comando foi encontrado e é invocado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método de pesquisa para um comando de menu ou verbo do designer com um <xref:System.ComponentModel.Design.CommandID> correspondente especificado <xref:System.ComponentModel.Design.CommandID>. Este método primeiro pesquisa dentro da coleção de verbos do designer consiste em global e ativos verbos fornecida pelo designer antes de continuar a pesquisa, se necessário, por meio do serviço de comando de ambiente global. Se um comando de menu correspondente ou o verbo do designer está localizado, o comando é invocado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCommand">
+      <MemberSignature Language="C#" Value="public void RemoveCommand (System.ComponentModel.Design.MenuCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveCommand(class System.ComponentModel.Design.MenuCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IMenuCommandService.RemoveCommand(System.ComponentModel.Design.MenuCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.ComponentModel.Design.MenuCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">O <see cref="T:System.ComponentModel.Design.MenuCommand" /> a ser removido.</param>
+        <summary>Remove o comando de menu padrão especificado no menu.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método Remove especificado <xref:System.ComponentModel.Design.MenuCommand> se ela for encontrada. Esse método não gerar uma exceção ou retornar um valor se especificado <xref:System.ComponentModel.Design.MenuCommand> não foi encontrado. Use o <xref:System.ComponentModel.Design.IMenuCommandService.FindCommand%2A> método para determinar se um <xref:System.ComponentModel.Design.MenuCommand> correspondência especificada <xref:System.ComponentModel.Design.CommandID> está localizado em um menu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveVerb">
+      <MemberSignature Language="C#" Value="public void RemoveVerb (System.ComponentModel.Design.DesignerVerb verb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveVerb(class System.ComponentModel.Design.DesignerVerb verb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IMenuCommandService.RemoveVerb(System.ComponentModel.Design.DesignerVerb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="verb" Type="System.ComponentModel.Design.DesignerVerb" />
+      </Parameters>
+      <Docs>
+        <param name="verb">O <see cref="T:System.ComponentModel.Design.DesignerVerb" /> a ser removido.</param>
+        <summary>Remove o verbo do designer especificado da coleção de globais verbos do designer.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método Remove o verbo do designer global especificado se ele está dentro da coleção de globais verbos do designer. Você pode adicionar um verbo do designer para a coleção de verbos do designer global usando o <xref:System.ComponentModel.Design.IMenuCommandService.AddVerb%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowContextMenu">
+      <MemberSignature Language="C#" Value="public void ShowContextMenu (System.ComponentModel.Design.CommandID menuID, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowContextMenu(class System.ComponentModel.Design.CommandID menuID, int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IMenuCommandService.ShowContextMenu(System.ComponentModel.Design.CommandID,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="menuID" Type="System.ComponentModel.Design.CommandID" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="menuID">O <see cref="T:System.ComponentModel.Design.CommandID" /> para mostrar o menu de atalho.</param>
+        <param name="x">A coordenada x no qual exibir o menu, em coordenadas da tela.</param>
+        <param name="y">A coordenada y no qual exibir o menu, em coordenadas da tela.</param>
+        <summary>Mostra o menu de atalho especificado no local especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.IMenuCommandService.ShowContextMenu%2A> método pode exibir qualquer os seguintes menus de atalho do Visual Studio que contém os comandos de menu em um momento específico:  
+  
+|Menu|ID de comando|  
+|----------|---------------|  
+|Menu de atalho exibido para um contêiner|<xref:System.Windows.Forms.Design.MenuCommands.ContainerMenu>|  
+|O menu de atalho exibido para bandeja de componentes|<xref:System.Windows.Forms.Design.MenuCommands.ComponentTrayMenu>|  
+|Menu de atalho exibido para uma seleção|<xref:System.Windows.Forms.Design.MenuCommands.SelectionMenu>|  
+|Menu de atalho exibido para uma seleção de bandeja|<xref:System.Windows.Forms.Design.MenuCommands.TraySelectionMenu>|  
+  
+ Esse método também pode exibir outros menus de atalho registrado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbs">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerVerbCollection Verbs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerVerbCollection Verbs" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IMenuCommandService.Verbs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerVerbCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção dos verbos do designer que estão disponíveis no momento.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.DesignerVerbCollection" /> que contém os verbos do designer que estão disponíveis no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conjunto de verbos do designer disponíveis atualmente consiste em todos os global verbos do designer, que são adicionados pelo <xref:System.ComponentModel.Design.IMenuCommandService.AddVerb%2A> método nessa interface e verbos do designer individuais, que são oferecidos pelo <xref:System.ComponentModel.Design.IDesigner.Verbs%2A> propriedade dos designers individuais. Se o nome de um verbo global está em conflito com o nome de um verbo do designer, o verbo do designer fornecida pelo designer terá precedência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

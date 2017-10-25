@@ -1,0 +1,82 @@
+<Type Name="StringAlignment" FullName="System.Drawing.StringAlignment">
+  <TypeSignature Language="C#" Value="public enum StringAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StringAlignment extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.StringAlignment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o alinhamento da cadeia de caracteres de um texto em relação ao seu retângulo de layout.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando usado com o <xref:System.Drawing.StringFormat.LineAlignment%2A> propriedade, esta enumeração define o alinhamento vertical de uma cadeia de caracteres de desenho. Quando usado com o <xref:System.Drawing.StringFormat.Alignment%2A> propriedade, esta enumeração define o alinhamento horizontal.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Drawing.StringFormat.LineAlignment%2A> e <xref:System.Drawing.StringFormat.Alignment%2A> propriedades e o <xref:System.Drawing.StringAlignment> enumeração para alinhar as cadeias de caracteres. Este exemplo é projetado para ser usado com o Windows Forms. Cole o código em um formulário e uma chamada a `ShowLineAndAlignment` método ao lidar com o formulário <xref:System.Windows.Forms.Control.Paint> evento, passando `e` como <xref:System.Windows.Forms.PaintEventArgs> .  
+  
+ [!code-cpp[System.Drawing.Misc2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.Misc2/CPP/form1.cpp#1)]
+ [!code-csharp[System.Drawing.Misc2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Misc2/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.Misc2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc2/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringAlignment Center = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringAlignment.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o texto é alinhado no centro do retângulo de layout.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Far">
+      <MemberSignature Language="C#" Value="Far" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringAlignment Far = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringAlignment.Far" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o texto é alinhado longe da posição de origem do retângulo de layout. Em um layout da esquerda para a direita, a posição mais distante é à direita. Em um layout da direita para a esquerda, a posição mais distante é à esquerda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Near">
+      <MemberSignature Language="C#" Value="Near" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.StringAlignment Near = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.StringAlignment.Near" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.StringAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o texto seja alinhado perto do layout. Em um layout da esquerda para a direita, a posição aproximada é à esquerda. Em um layout da direita para a esquerda, a posição aproximada é à direita.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

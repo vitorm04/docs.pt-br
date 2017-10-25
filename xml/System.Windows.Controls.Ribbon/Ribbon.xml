@@ -1,0 +1,1764 @@
+<Type Name="Ribbon" FullName="System.Windows.Controls.Ribbon.Ribbon">
+  <TypeSignature Language="C#" Value="public class Ribbon : System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Ribbon extends System.Windows.Controls.Primitives.Selector" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.Ribbon" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Primitives.Selector</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ContextualTabGroupStyle", StyleTargetType=typeof(System.Windows.Controls.Ribbon.RibbonContextualTabGroup))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="TabHeaderStyle", StyleTargetType=typeof(System.Windows.Controls.Ribbon.RibbonTabHeader))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ContextualTabGroupItemsControl", Type=typeof(System.Windows.Controls.Ribbon.RibbonContextualTabGroupItemsControl))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_TitlePanel", Type=typeof(System.Windows.Controls.Ribbon.Primitives.RibbonTitlePanel))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_TitleHost", Type=typeof(System.Windows.Controls.ContentPresenter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="QatTopHost", Type=typeof(System.Windows.Controls.Grid))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_HelpPane", Type=typeof(System.Windows.Controls.ContentPresenter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_ITEMSPRESENTERPOPUP", Type=typeof(System.Windows.Controls.Primitives.Popup))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o elemento raiz de uma interface do usuário da faixa de opções que hospeda uma Barra de Ferramentas de Acesso Rápido, o Menu de Aplicativo e guias.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma faixa de opções é uma barra de comandos que organiza os recursos de um aplicativo em uma série de guias na parte superior da janela do aplicativo. Ele substitui os tradicionais barra de menus e barras de ferramentas.  
+  
+ O <xref:System.Windows.Controls.Ribbon.Ribbon> classe é o elemento raiz de uma interface do usuário da faixa de opções (UI) no Windows Presentation Foundation (WPF). O <xref:System.Windows.Controls.Ribbon.Ribbon> classe hospeda um <xref:System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar>, um <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu>e um ou mais <xref:System.Windows.Controls.Ribbon.RibbonTab> controles. Esses controles de host, em seguida, uma variedade de controles de botão e menu que habilitam o acesso a comandos de aplicativo.  
+  
+ A lista a seguir mostra a hierarquia típica de elementos de faixa de opções.  
+  
+-   <xref:System.Windows.Controls.Ribbon.Ribbon>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContent%2A?displayProperty=nameWithType>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonButton>, <xref:System.Windows.Controls.Ribbon.RibbonRadioButton>, <xref:System.Windows.Controls.Ribbon.RibbonToggleButton>, <xref:System.Windows.Controls.Ribbon.RibbonCheckBox>, <xref:System.Windows.Controls.Ribbon.RibbonTextBox>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonComboBox>, <xref:System.Windows.Controls.Ribbon.RibbonMenuButton>, <xref:System.Windows.Controls.Ribbon.RibbonSplitButton>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar.CustomizeMenuButton%2A>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenuItem>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.FooterPaneContent%2A>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu.AuxiliaryPaneContent%2A>  
+  
+    -   <xref:System.Windows.Controls.Ribbon.RibbonTab>  
+  
+        -   <xref:System.Windows.Controls.Ribbon.RibbonGroup>  
+  
+            -   <xref:System.Windows.Controls.Ribbon.RibbonButton>, <xref:System.Windows.Controls.Ribbon.RibbonRadioButton>, <xref:System.Windows.Controls.Ribbon.RibbonToggleButton>, <xref:System.Windows.Controls.Ribbon.RibbonCheckBox>, <xref:System.Windows.Controls.Ribbon.RibbonTextBox>  
+  
+            -   <xref:System.Windows.Controls.Ribbon.RibbonComboBox>, <xref:System.Windows.Controls.Ribbon.RibbonMenuButton>, <xref:System.Windows.Controls.Ribbon.RibbonSplitButton>  
+  
+            -   <xref:System.Windows.Controls.Ribbon.RibbonControlGroup>  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma faixa de opções simple que é criada pelo modelo do Visual Studio 2010, com o painel de Ajuda e elementos de barra de ferramentas de acesso rápido adicionados.  
+  
+ [!code-xaml[Ribbon_Snippets#RibbonDefault](~/samples/snippets/csharp/VS_Snippets_Wpf/ribbon_snippets/cs/mainwindow.xaml#ribbondefault)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ribbon ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationMenu">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonApplicationMenu ApplicationMenu { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Ribbon.RibbonApplicationMenu ApplicationMenu" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.ApplicationMenu" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonApplicationMenu</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Controls.Ribbon.RibbonApplicationMenu" /> que é um filho lógico deste controle <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <value>A faixa de opções Menu do Aplicativo que é um filho lógico deste controle <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Windows.Controls.Ribbon.Ribbon.ApplicationMenu%2A> propriedade para associar um <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu> do objeto com o <xref:System.Windows.Controls.Ribbon.Ribbon>.  
+  
+<a name="dependencyPropertyInfo_ApplicationMenu"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.ApplicationMenuProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um simples que aplicativo Menu anexado a um controle de faixa de opções. Para obter mais exemplos, consulte <xref:System.Windows.Controls.Ribbon.RibbonApplicationMenu>.  
+  
+```xaml  
+xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"  
+...  
+<ribbon:Ribbon >  
+    <ribbon:Ribbon.ApplicationMenu>  
+        <ribbon:RibbonApplicationMenu SmallImageSource="Images\SmallIcon.png">  
+            <ribbon:RibbonApplicationMenuItem Header="Hello _Ribbon"  
+                                              x:Name="MenuItem1"  
+                                              ImageSource="Images\LargeIcon.png"/>  
+        </ribbon:RibbonApplicationMenu>  
+    </ribbon:Ribbon.ApplicationMenu>  
+    <ribbon:RibbonTab>  
+        <!-- Ribbon content goes here. -->  
+    </ribbon:RibbonTab>  
+</ribbon:Ribbon >  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationMenuProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ApplicationMenuProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ApplicationMenuProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.ApplicationMenuProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.ApplicationMenu" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedBackground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush CheckedBackground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush CheckedBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.CheckedBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar o plano de fundo do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de ativação.</summary>
+        <value>O pincel que é usado para desenhar o plano de fundo do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de ativação. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CheckedBackground"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.CheckedBackgroundProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedBackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CheckedBackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CheckedBackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.CheckedBackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.CheckedBackground" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedBorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush CheckedBorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush CheckedBorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.CheckedBorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de ativação.</summary>
+        <value>O pincel que é usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de ativação. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CheckedBorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.CheckedBorderBrushProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckedBorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CheckedBorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CheckedBorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.CheckedBorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.CheckedBorderBrush" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapsed">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Collapsed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Collapsed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Ribbon.Ribbon.Collapsed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Controls.Ribbon.Ribbon.IsCollapsed" /> propriedade é alterada para <see langword="true" /> e <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> é recolhido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollapsedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent CollapsedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent CollapsedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.CollapsedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Ribbon.Ribbon.Collapsed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualTabGroupHeaderTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate ContextualTabGroupHeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate ContextualTabGroupHeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupHeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo é usado para exibir <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Header" /> itens do <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" />.</summary>
+        <value>O modelo que é usado para exibir <see cref="P:System.Windows.Controls.Ribbon.RibbonContextualTabGroup.Header" /> itens do <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" />. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ContextualTabGroupHeaderTemplate"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupHeaderTemplateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualTabGroupHeaderTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContextualTabGroupHeaderTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContextualTabGroupHeaderTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupHeaderTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupHeaderTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualTabGroups">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.Ribbon.RibbonContextualTabGroup&gt; ContextualTabGroups { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Controls.Ribbon.RibbonContextualTabGroup&gt; ContextualTabGroups" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroups" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Windows.Controls.Ribbon.RibbonContextualTabGroup&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém todos os <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> itens no <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <value>A coleção de <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> itens no <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> se existir; caso contrário, uma nova coleção vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa um *guia contextual* para exibir grupos de comandos que são relevantes apenas em um contexto específico. Grupos de guia contextual são mostrados ou ocultados com base em critérios especificados. Por exemplo, um grupo de guias de ferramentas de tinta pode ser mostrado quando a entrada do tablet for detectada ou um grupo de guias de ferramentas de imagem pode ser mostrado quando um objeto de imagem é selecionado.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Windows.Controls.Ribbon.RibbonTab> chamado **canetas** no **ferramentas de tinta** grupo guia contextual.  
+  
+```xaml  
+</ribbon:Ribbon>  
+    <ribbon:RibbonTab Name="Pens" Header="Pens" ContextualTabGroupHeader="Ink Tools" >  
+    <!-- Ribbon Tab Content -->  
+    </ribbon:RibbonTab>  
+    <ribbon:Ribbon.ContextualTabGroups>  
+        <ribbon:RibbonContextualTabGroup Header="Ink Tools" Visibility="Visible" Background="Green" />  
+    </ribbon:Ribbon.ContextualTabGroups>  
+</ribbon:Ribbon>  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualTabGroupsSource">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable ContextualTabGroupsSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable ContextualTabGroupsSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupsSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção usada para gerar o conteúdo de <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> itens.</summary>
+        <value>Uma coleção usada para gerar o conteúdo de <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> itens. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ContextualTabGroupHeadersSource"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupsSourceProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualTabGroupsSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContextualTabGroupsSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContextualTabGroupsSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupsSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupsSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualTabGroupStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style ContextualTabGroupStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style ContextualTabGroupStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo usado ao renderizar <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> itens do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <value>O estilo aplicado a todos os <see cref="T:System.Windows.Controls.Ribbon.RibbonContextualTabGroup" /> itens do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ContextualTabGroupHeaderStyle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupStyleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextualTabGroupStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ContextualTabGroupStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ContextualTabGroupStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.ContextualTabGroupStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Expanded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Expanded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Ribbon.Ribbon.Expanded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Controls.Ribbon.Ribbon.IsCollapsed" /> propriedade é alterada para <see langword="false" /> e <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> é expandido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ExpandedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ExpandedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.ExpandedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.Ribbon.Ribbon.Expanded" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedBackground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush FocusedBackground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush FocusedBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.FocusedBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar o plano de fundo de <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controles no estado focalizada.</summary>
+        <value>O pincel usado para desenhar o plano de fundo de <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controles no estado focalizada. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_FocusedBackground"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.FocusedBackgroundProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedBackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FocusedBackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FocusedBackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.FocusedBackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.FocusedBackground" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedBorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush FocusedBorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush FocusedBorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.FocusedBorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controles no estado focalizada.</summary>
+        <value>O pincel usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controles no estado focalizada. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para colocar o foco do teclado em um controle de faixa de opções, pressione ALT + KeyTip letra e navegar com as teclas de direção.  
+  
+<a name="dependencyPropertyInfo_FocusedBorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.FocusedBorderBrushProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusedBorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FocusedBorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FocusedBorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.FocusedBorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.FocusedBorderBrush" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um novo objeto <see cref="T:System.Windows.Controls.Ribbon.RibbonTab" />.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Controls.Ribbon.RibbonTab" /> objeto contêiner que é usado para exibir um item a partir de <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpPaneContent">
+      <MemberSignature Language="C#" Value="public object HelpPaneContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object HelpPaneContent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do painel da Ajuda.</summary>
+        <value>O conteúdo do painel da Ajuda. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir o conteúdo do painel da Ajuda para permitir aos usuários acessar o conteúdo da Ajuda para seu aplicativo. Normalmente você definirá o <xref:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContent%2A> propriedade para um único botão que abre uma janela de ajuda separado. No entanto, você pode definir qualquer conteúdo ir no painel de Ajuda. Você pode especificar o layout e a aparência do conteúdo, definindo o <xref:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContentTemplate%2A> propriedade.  
+  
+<a name="dependencyPropertyInfo_HelpPaneContent"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContentProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpPaneContentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HelpPaneContentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HelpPaneContentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpPaneContentTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate HelpPaneContentTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate HelpPaneContentTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContentTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo é usado para exibir o conteúdo do painel da Ajuda.</summary>
+        <value>O modelo é usado para exibir o conteúdo do painel da Ajuda. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_HelpPaneContentTemplate"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContentTemplateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpPaneContentTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty HelpPaneContentTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty HelpPaneContentTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContentTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.HelpPaneContentTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCollapsed">
+      <MemberSignature Language="C#" Value="public bool IsCollapsed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCollapsed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.IsCollapsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> é recolhido.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> recolhido; caso contrário, <see langword="false" />. O padrão registrado é <see langword="false" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A faixa de opções recolhe automaticamente quando a janela do aplicativo é redimensionada e não tem espaço suficiente para exibir a faixa de opções de forma significativa. Quando a faixa de opções é recolhida, todos os elementos da faixa de opções ficam ocultos na exibição.  
+  
+ Quando a faixa de opções é recolhida, o <xref:System.Windows.Controls.Ribbon.Ribbon.Collapsed> evento ocorre. Quando a faixa de opções é expandida, o <xref:System.Windows.Controls.Ribbon.Ribbon.Expanded> evento ocorre.  
+  
+<a name="dependencyPropertyInfo_IsCollapsed"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.IsCollapsedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCollapsedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsCollapsedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsCollapsedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.IsCollapsedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.IsCollapsed" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDropDownOpen">
+      <MemberSignature Language="C#" Value="public bool IsDropDownOpen { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDropDownOpen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o menu suspenso para um <see cref="T:System.Windows.Controls.Ribbon.RibbonTab" /> está aberto.</summary>
+        <value>
+          <see langword="true" />Se o menu suspenso para um <see cref="T:System.Windows.Controls.Ribbon.RibbonTab" /> está aberta; caso contrário, <see langword="false" />. O padrão registrado é <see langword="false" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.Ribbon.Ribbon.IsMinimized%2A> é de propriedade `true`, a barra de ferramentas de acesso rápido, o Menu de aplicativo e cabeçalhos de guia são exibidos, mas o conteúdo do guia é colocado na lista suspensa e não é mostrado por padrão. Quando um usuário seleciona um cabeçalho de guia, na lista suspensa para a guia é aberta e seus conteúdos são mostrados. Marcando ou desmarcando os botões de cabeçalho de guia de <xref:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpen%2A> propriedade entre `true` e `false`.  
+  
+ Se o <xref:System.Windows.Controls.Ribbon.Ribbon.IsMinimized%2A> é de propriedade `false`, o <xref:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpen%2A> propriedade também é `false`.  
+  
+<a name="dependencyPropertyInfo_IsDropDownOpen"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpenProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDropDownOpenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsDropDownOpenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsDropDownOpenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpen" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHostedInRibbonWindow">
+      <MemberSignature Language="C#" Value="public bool IsHostedInRibbonWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHostedInRibbonWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.IsHostedInRibbonWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> esteja hospedado em um <see cref="T:System.Windows.Controls.Ribbon.RibbonWindow" />.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> é hospedado em um <see cref="T:System.Windows.Controls.Ribbon.RibbonWindow" />; caso contrário, <see langword="false" />. O padrão registrado é <see langword="false" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_IsHostedInRibbonWindow"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.IsHostedInRibbonWindowProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHostedInRibbonWindowProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsHostedInRibbonWindowProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsHostedInRibbonWindowProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.IsHostedInRibbonWindowProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.IsHostedInRibbonWindow" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item de teste.</param>
+        <summary>Retorna um valor que indica se o item especificado está (ou é elegível para ser) seu próprio contêiner.</summary>
+        <returns>
+          <see langword="true" />Se o item for uma <see cref="T:System.Windows.Controls.Ribbon.RibbonTab" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMinimized">
+      <MemberSignature Language="C#" Value="public bool IsMinimized { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMinimized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.IsMinimized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> está minimizado.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> estiver minimizado; caso contrário, <see langword="false" />. O padrão registrado é <see langword="false" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um usuário pode minimizar a faixa de opções clicando duas vezes a faixa de opções e selecionando **minimizar a faixa de opções** no menu de contexto. Quando o <xref:System.Windows.Controls.Ribbon.Ribbon.IsMinimized%2A> é de propriedade `true`, a barra de ferramentas de acesso rápido, o Menu de aplicativo e cabeçalhos de guia são exibidos, mas o conteúdo do guia é colocado na lista suspensa e não é mostrado por padrão. Quando um usuário seleciona um cabeçalho de guia, na lista suspensa para a guia é aberta e seus conteúdos são mostrados.  
+  
+ Se o <xref:System.Windows.Controls.Ribbon.Ribbon.IsMinimized%2A> é de propriedade `true`, marcando ou desmarcando os botões de cabeçalho de guia de <xref:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpen%2A> propriedade entre `true` e `false`. Se o <xref:System.Windows.Controls.Ribbon.Ribbon.IsMinimized%2A> é de propriedade `false`, o <xref:System.Windows.Controls.Ribbon.Ribbon.IsDropDownOpen%2A> propriedade também é `false`.  
+  
+<a name="dependencyPropertyInfo_IsMinimized"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.IsMinimizedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMinimizedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsMinimizedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsMinimizedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.IsMinimizedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.IsMinimized" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IEnumerator" /> que itera por meio de elementos filho do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseOverBackground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush MouseOverBackground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush MouseOverBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.MouseOverBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar o plano de fundo do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de mouse.</summary>
+        <value>O pincel que é usado para desenhar o plano de fundo do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de mouse. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_MouseOverBackground"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.MouseOverBackgroundProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseOverBackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MouseOverBackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MouseOverBackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.MouseOverBackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.MouseOverBackground" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseOverBorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush MouseOverBorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush MouseOverBorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.MouseOverBorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de mouse.</summary>
+        <value>O pincel que é usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado de mouse. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_MouseOverBorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.MouseOverBorderBrushProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseOverBorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MouseOverBorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MouseOverBorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.MouseOverBorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.MouseOverBorderBrush" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a árvore visual para o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> quando um novo modelo é aplicado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado sempre que o código do aplicativo ou um processo interno, como uma passagem de layout de recriação, chama o <xref:System.Windows.FrameworkElement.ApplyTemplate%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Windows.Automation.Peers.RibbonAutomationPeer" /> objeto para este controle.</summary>
+        <returns>Um novo objeto de mesmo nível de automação para este controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Atualiza a seleção atual e sincroniza os cabeçalhos quando um item é alterado no <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.KeyDown" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.MouseDown" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.PreviewMouseDown" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviewMouseWheel">
+      <MemberSignature Language="C#" Value="protected override void OnPreviewMouseWheel (System.Windows.Input.MouseWheelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreviewMouseWheel(class System.Windows.Input.MouseWheelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.MouseWheel" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Girando a roda do mouse enquanto o ponteiro do mouse está sobre o <xref:System.Windows.Controls.Ribbon.Ribbon> faz com que o <xref:System.Windows.Controls.Ribbon.Ribbon> para alternar entre as guias.  
+  
+ Essa implementação marca o <xref:System.Windows.UIElement.MouseWheel> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectionChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSelectionChanged (System.Windows.Controls.SelectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSelectionChanged(class System.Windows.Controls.SelectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Controls.SelectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método força a seleção única no <xref:System.Windows.Controls.Ribbon.Ribbon>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override void PrepareContainerForItemOverride (System.Windows.DependencyObject element, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PrepareContainerForItemOverride(class System.Windows.DependencyObject element, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.Ribbon.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento usado para exibir o <c>item</c>.</param>
+        <param name="item">O item para exibir a partir de <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleção.</param>
+        <summary>Prepara o elemento especificado para exibir o item especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PressedBackground">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush PressedBackground { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush PressedBackground" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.PressedBackground" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar o plano de fundo do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado pressionado.</summary>
+        <value>O pincel que é usado para desenhar o plano de fundo do <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado pressionado. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_PressedBackground"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.PressedBackgroundProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PressedBackgroundProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PressedBackgroundProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PressedBackgroundProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.PressedBackgroundProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.PressedBackground" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PressedBorderBrush">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Brush PressedBorderBrush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Brush PressedBorderBrush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.PressedBorderBrush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Brush</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o pincel usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado pressionado.</summary>
+        <value>O pincel que é usado para desenhar a borda externa da <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controla quando estiverem no estado pressionado. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_PressedBorderBrush"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.PressedBorderBrushProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PressedBorderBrushProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PressedBorderBrushProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PressedBorderBrushProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.PressedBorderBrushProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.PressedBorderBrush" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuickAccessToolBar">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar QuickAccessToolBar { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar QuickAccessToolBar" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.QuickAccessToolBar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar" /> que é um filho deste <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <value>A barra de ferramentas de acesso rápido que é o filho lógico <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controle. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_QuichAccessToolBar"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.QuickAccessToolBarProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuickAccessToolBarProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty QuickAccessToolBarProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty QuickAccessToolBarProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.QuickAccessToolBarProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.QuickAccessToolBar" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowQuickAccessToolBarOnTop">
+      <MemberSignature Language="C#" Value="public bool ShowQuickAccessToolBarOnTop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowQuickAccessToolBarOnTop" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.ShowQuickAccessToolBarOnTop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se as ferramentas de acesso rápido acima de <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <value>
+          <see langword="true" />Se a barra de ferramentas de acesso rápido é mostrada acima de <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />; <see langword="false" /> se a barra de ferramentas de acesso rápido abaixo é o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />. O padrão registrado é <see langword="true" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ShowQuickAccessToolbarOnTop"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.ShowQuickAccessToolBarOnTopProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowQuickAccessToolBarOnTopProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ShowQuickAccessToolBarOnTopProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ShowQuickAccessToolBarOnTopProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.ShowQuickAccessToolBarOnTopProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.ShowQuickAccessToolBarOnTop" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabHeaderStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style TabHeaderStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style TabHeaderStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.TabHeaderStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo que é usado durante a renderização de cabeçalhos de guia.</summary>
+        <value>O estilo que é usado durante a renderização de cabeçalhos de guia. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TabHeaderStyle"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.TabHeaderStyleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabHeaderStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TabHeaderStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TabHeaderStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.TabHeaderStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.TabHeaderStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabHeaderTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate TabHeaderTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate TabHeaderTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.TabHeaderTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo é usado para exibir cabeçalhos de guia.</summary>
+        <value>O modelo é usado para exibir cabeçalhos de guia. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TabHeaderTemplate"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.TabHeaderTemplateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TabHeaderTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TabHeaderTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TabHeaderTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.TabHeaderTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.TabHeaderTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public object Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Title" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o título disso <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controle.</summary>
+        <value>O título deste <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> controle. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente você definirá o <xref:System.Windows.Window.Title%2A> propriedade o <xref:System.Windows.Controls.Ribbon.RibbonWindow> em vez de configuração o <xref:System.Windows.Controls.Ribbon.Ribbon.Title%2A?displayProperty=nameWithType> propriedade.  
+  
+ O <xref:System.Windows.Controls.Ribbon.Ribbon.Title%2A?displayProperty=nameWithType> é mostrado na barra de título do <xref:System.Windows.Controls.Ribbon.RibbonWindow> se o <xref:System.Windows.Window.Title%2A?displayProperty=nameWithType> propriedade o <xref:System.Windows.Controls.Ribbon.RibbonWindow> é `null`. Se o <xref:System.Windows.Window.Title%2A?displayProperty=nameWithType> propriedade não é `null`, o <xref:System.Windows.Controls.Ribbon.RibbonWindow> título é mostrado em vez do <xref:System.Windows.Controls.Ribbon.Ribbon.Title%2A?displayProperty=nameWithType> valor.  
+  
+ Se o <xref:System.Windows.Controls.Ribbon.Ribbon> é hospedado em um <xref:System.Windows.Window> em vez de um <xref:System.Windows.Controls.Ribbon.RibbonWindow>, o <xref:System.Windows.Controls.Ribbon.Ribbon.Title%2A?displayProperty=nameWithType> é mostrado ao lado da barra de ferramentas de acesso rápido, abaixo de <xref:System.Windows.Window.Title%2A?displayProperty=nameWithType>.  
+  
+<a name="dependencyPropertyInfo_Title"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.TitleProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TitleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TitleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.TitleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.Title" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleTemplate">
+      <MemberSignature Language="C#" Value="public System.Windows.DataTemplate TitleTemplate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DataTemplate TitleTemplate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.TitleTemplate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DataTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modelo é usado para exibir o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> título.</summary>
+        <value>O modelo que é usado para exibir o <see cref="T:System.Windows.Controls.Ribbon.Ribbon" /> título. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_TitleTemplate"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.TitleTemplateProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TitleTemplateProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty TitleTemplateProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty TitleTemplateProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.TitleTemplateProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.TitleTemplate" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowIconVisibility">
+      <MemberSignature Language="C#" Value="public System.Windows.Visibility WindowIconVisibility { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Visibility WindowIconVisibility" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.Ribbon.WindowIconVisibility" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Visibility</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Visibility" /> para o ícone do <see cref="T:System.Windows.Controls.Ribbon.RibbonWindow" /> que contém esta <see cref="T:System.Windows.Controls.Ribbon.Ribbon" />.</summary>
+        <value>Um dos valores de enumeração que especifica a visibilidade do ícone. O padrão registrado é <see cref="F:System.Windows.Visibility.Visible" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_WindowIconVisibility"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.Ribbon.WindowIconVisibilityProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowIconVisibilityProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty WindowIconVisibilityProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty WindowIconVisibilityProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.Ribbon.WindowIconVisibilityProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.Ribbon.WindowIconVisibility" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

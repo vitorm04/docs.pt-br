@@ -1,0 +1,646 @@
+<Type Name="CustomAttributeData" FullName="System.Reflection.CustomAttributeData">
+  <TypeSignature Language="C#" Value="public class CustomAttributeData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CustomAttributeData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.CustomAttributeData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Reflection</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece acesso aos dados de atributo personalizado para assemblies, módulos, tipos, membros e parâmetros que são carregados no contexto exclusivo de reflexão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código que está sendo examinado no contexto exclusivo de reflexão não pode ser executado, portanto, sempre não é possível examinar os atributos personalizados ao criar instâncias de-las e, em seguida, examinar suas propriedades, usando métodos como <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>, <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>e assim por diante. Se o código para o tipo de atributo é carregado no contexto exclusivo de reflexão, ele não pode ser executado.  
+  
+ O <xref:System.Reflection.CustomAttributeData> classe permite o exame dos atributos personalizados no contexto exclusivo de reflexão, fornecendo uma abstração para atributos. Os membros dessa classe podem ser usados para obter os argumentos posicionais e denominados argumentos do atributo. Use o <xref:System.Reflection.CustomAttributeData.ConstructorArguments%2A> propriedade para obter uma lista de <xref:System.Reflection.CustomAttributeTypedArgument> estruturas que representam os argumentos posicionais e usam o <xref:System.Reflection.CustomAttributeData.NamedArguments%2A> propriedade para obter uma lista de <xref:System.Reflection.CustomAttributeNamedArgument> estruturas que representam os argumentos nomeados.  
+  
+> [!NOTE]
+>  O <xref:System.Reflection.CustomAttributeNamedArgument> estrutura só fornece informações sobre a propriedade do atributo usada para obter e definir o valor do argumento. Para obter o tipo e o valor do argumento, use o <xref:System.Reflection.CustomAttributeNamedArgument.TypedValue%2A?displayProperty=nameWithType> propriedade para obter um <xref:System.Reflection.CustomAttributeTypedArgument> estrutura.  
+  
+ Quando você tiver um <xref:System.Reflection.CustomAttributeTypedArgument> estrutura para um argumento nomeado ou posicional, use o <xref:System.Reflection.CustomAttributeTypedArgument.ArgumentType%2A?displayProperty=nameWithType> propriedade para obter o tipo e o <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A?displayProperty=nameWithType> propriedade para obter o valor.  
+  
+> [!NOTE]
+>  Para um argumento de matriz, o <xref:System.Reflection.CustomAttributeTypedArgument.Value%2A?displayProperty=nameWithType> propriedade retorna um genérico <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> de <xref:System.Reflection.CustomAttributeTypedArgument> objetos. Cada <xref:System.Reflection.CustomAttributeTypedArgument> objeto na coleção representa o elemento correspondente da matriz.  
+  
+ <xref:System.Reflection.CustomAttributeData>pode ser usado no contexto de execução, bem como o contexto exclusivo de reflexão. Por exemplo, você talvez queira evitar carregar o assembly que contém o código para um atributo personalizado. Usando o <xref:System.Reflection.CustomAttributeData> classe é diferente de usar os métodos, como <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>:  
+  
+-   As propriedades e métodos de <xref:System.Reflection.CustomAttributeData> apenas fornecer os valores que foram especificados para a instância do atributo, não a semântica do construtor. Por exemplo, um argumento de cadeia de caracteres de um atributo pode ser convertido internamente em alguma outra representação e retornado em uma forma canônica; ou uma propriedade pode ter efeitos colaterais quando o código do atributo real é executado.  
+  
+-   As propriedades e métodos de <xref:System.Reflection.CustomAttributeData> não permitem recuperar os atributos personalizados herdados de classes base.  
+  
+ Para criar instâncias da <xref:System.Reflection.CustomAttributeData> classe, use o `static` (`Shared` no Visual Basic) <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> métodos de fábrica.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe informações sobre os atributos personalizados que foram aplicadas a ele e o tipo e os membros que ele contém.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomAttributeData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.CustomAttributeData" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado por classes derivadas durante a construção do <xref:System.Reflection.CustomAttributeData> objetos.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">Requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AttributeType">
+      <MemberSignature Language="C#" Value="public Type AttributeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type AttributeType" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.AttributeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do atributo.</summary>
+        <value>O tipo do atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Constructor">
+      <MemberSignature Language="C#" Value="public virtual System.Reflection.ConstructorInfo Constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Reflection.ConstructorInfo Constructor" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.Constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Reflection.ConstructorInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Reflection.ConstructorInfo" /> que representa o construtor que teria inicializado o atributo personalizado.</summary>
+        <value>Um objeto que representa o construtor que teria inicializado o atributo personalizado representado pela instância atual da classe <see cref="T:System.Reflection.CustomAttributeData" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um tipo de atributo tem vários construtores, essa propriedade retorna apenas o construtor específico que poderia ter inicializado a instância de atributo representada pelo atual <xref:System.Reflection.CustomAttributeData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe os atributos personalizados.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ O <xref:System.Reflection.CustomAttributeData.Constructor%2A> propriedade é usada a `ShowAttributeData` método que exibe dados de atributo personalizado. Neste exemplo de código, o <xref:System.Reflection.ConstructorInfo> retornados por essa propriedade é usada para exibir uma cadeia de caracteres de texto que descreve o construtor, demonstrando que a propriedade retorna o construtor que seria inicializar o atributo.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConstructorArguments">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeTypedArgument&gt; ConstructorArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Reflection.CustomAttributeTypedArgument&gt; ConstructorArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.ConstructorArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeTypedArgument&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de argumentos posicionais especificados para a instância de atributo representada pelo objeto <see cref="T:System.Reflection.CustomAttributeData" />.</summary>
+        <value>Uma coleção de estruturas que representa os argumentos posicionais especificados para a instância de atributo personalizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém os argumentos posicionais que foram especificados para a instância do atributo personalizado sem executar qualquer código personalizado do atributo. Portanto, ele pode ser usado no contexto exclusivo de reflexão.  
+  
+ Use o <xref:System.Reflection.CustomAttributeData.NamedArguments%2A> método para obter os argumentos nomeados especificados para a instância do atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe os atributos personalizados.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ O <xref:System.Reflection.CustomAttributeData.ConstructorArguments%2A> propriedade é usada a `ShowAttributeData` método que exibe dados de atributo personalizado. Neste exemplo de código, essa propriedade é usada para exibir a lista de argumentos passados para o construtor que inicializar o atributo.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um objeto a ser comparado com essa instância ou <see langword="null" />.</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é igual à instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.Assembly target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.Assembly target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.Assembly)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.Assembly" />
+      </Parameters>
+      <Docs>
+        <param name="target">O assembly cujos dados de atributo personalizado devem ser recuperados.</param>
+        <summary>Retorna uma lista de objetos <see cref="T:System.Reflection.CustomAttributeData" /> que representam os dados sobre os atributos que foram aplicados ao assembly de destino.</summary>
+        <returns>Uma lista de objetos que representam dados sobre os atributos que foram aplicados ao assembly de destino.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método fornece uma alternativa para o <xref:System.Reflection.Assembly.GetCustomAttributes%2A> método sempre pode ser usado no contexto exclusivo de reflexão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe os atributos personalizados.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ O <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> método é usado em `Main()` para obter os atributos personalizados aplicados ao assembly. O valor de retorno do método é passado para o `ShowAttributeData` método.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.MemberInfo target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.MemberInfo target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.MemberInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.MemberInfo" />
+      </Parameters>
+      <Docs>
+        <param name="target">O membro cujos dados de atributo devem ser recuperados.</param>
+        <summary>Retorna uma lista de objetos <see cref="T:System.Reflection.CustomAttributeData" /> que representam dados sobre os atributos que foram aplicados ao membro de destino.</summary>
+        <returns>Uma lista de objetos que representa dados sobre os atributos que foram aplicados ao membro de destino.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa sobrecarga de método obtém dados de atributo personalizado para tipos, tipos aninhados e membros de tipo, porque o <xref:System.Type> e as classes no <xref:System.Reflection> namespace que representam todos os derivam de membros de tipo <xref:System.Reflection.MemberInfo>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe os atributos personalizados.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ O <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> método é usado em `Main()` para obter os atributos personalizados que foram aplicados a um tipo e a um método de teste (<xref:System.Type> deriva <xref:System.Reflection.MemberInfo>). O valor de retorno <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> é passado para o `ShowAttributeData` método.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="Overload:System.Reflection.MemberInfo.GetCustomAttributes" />
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.Module target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.Module target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.Module)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.Module" />
+      </Parameters>
+      <Docs>
+        <param name="target">O módulo são cujos dados de atributo personalizado a ser recuperado.</param>
+        <summary>Retorna uma lista de <see cref="T:System.Reflection.CustomAttributeData" /> objetos que representam dados sobre os atributos que foram aplicados para o módulo de destino.</summary>
+        <returns>Uma lista de objetos que representam dados sobre os atributos que foram aplicados para o módulo de destino.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCustomAttributes">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt; GetCustomAttributes (System.Reflection.ParameterInfo target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Reflection.CustomAttributeData&gt; GetCustomAttributes(class System.Reflection.ParameterInfo target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetCustomAttributes(System.Reflection.ParameterInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Reflection.ParameterInfo" />
+      </Parameters>
+      <Docs>
+        <param name="target">O parâmetro são cujos dados de atributo a ser recuperado.</param>
+        <summary>Retorna uma lista de <see cref="T:System.Reflection.CustomAttributeData" /> objetos que representam dados sobre os atributos que foram aplicados para o parâmetro de destino.</summary>
+        <returns>Uma lista de objetos que representam dados sobre os atributos que foram aplicados para o parâmetro de destino.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método fornece uma alternativa para o <xref:System.Reflection.ParameterInfo.GetCustomAttributes%2A> método sempre pode ser usado no contexto exclusivo de reflexão.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe os atributos personalizados.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ O <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> método é usado em `Main()` para recuperar os atributos personalizados aplicados a um parâmetro de um método de teste. O valor de retorno <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A> é passado para o `ShowAttributeData` método.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="target" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Serve como uma função de hash para um tipo específico.</summary>
+        <returns>Um código hash do <see cref="T:System.Object" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamedArguments">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeNamedArgument&gt; NamedArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;valuetype System.Reflection.CustomAttributeNamedArgument&gt; NamedArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.CustomAttributeData.NamedArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Reflection</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Reflection.CustomAttributeNamedArgument&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de argumentos nomeados especificados para a instância de atributo representada pelo objeto <see cref="T:System.Reflection.CustomAttributeData" />.</summary>
+        <value>Uma coleção de estruturas que representam os argumentos nomeados especificados para a instância de atributo personalizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém os argumentos nomeados que foram especificados para a instância do atributo personalizado sem executar qualquer código personalizado do atributo. Portanto, ele pode ser usado no contexto exclusivo de reflexão.  
+  
+ A lista que é retornada contém apenas os argumentos nomeados que foram especificados para a instância do atributo.  
+  
+ Use o <xref:System.Reflection.CustomAttributeData.ConstructorArguments%2A> método para obter os argumentos posicionais que foram especificados para a instância do atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe os atributos personalizados.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ O <xref:System.Reflection.CustomAttributeData.NamedArguments%2A> propriedade é usada a `ShowAttributeData` método que exibe dados de atributo personalizado. Neste exemplo de código, essa propriedade é usada para exibir a lista de argumentos nomeados especificado para o atributo.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.CustomAttributeData.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres do atributo personalizado.</summary>
+        <returns>Um valor de cadeia de caracteres que representa o atributo personalizado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de cadeia de caracteres inclui o tipo de atributo, os parâmetros de atributo e os parâmetros nomeados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define um atributo personalizado com quatro construtores e quatro propriedades. Duas propriedades são somente leitura e são definidas usando os parâmetros posicionais dos construtores. As duas propriedades são somente leitura, e pode ser conjunto somente usando argumentos nomeado. Uma propriedade de posição é uma matriz de cadeias de caracteres e uma propriedade nomeada é uma matriz de inteiros.  
+  
+ O atributo é aplicado ao assembly, a um tipo declarado no assembly, para um método do tipo e a um parâmetro do método. Construtores diferentes são usados para esses casos. Quando executado, o assembly carrega em si no contexto exclusivo de reflexão e exibe os atributos personalizados.  
+  
+ O atributo é aplicado ao tipo demonstra as propriedades de matriz, com argumentos posicionais e nomeadas.  
+  
+ Neste exemplo, o <xref:System.Reflection.CustomAttributeData.ToString%2A> método é usado o `ShowAttributeData` método, para identificar o atributo cujos dados estão sendo exibidos.  
+  
+ [!code-cpp[CustomAttributeData#1](~/samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](~/samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

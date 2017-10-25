@@ -1,0 +1,276 @@
+<Type Name="FederatedMessageSecurityOverHttpElement" FullName="System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement">
+  <TypeSignature Language="C#" Value="public sealed class FederatedMessageSecurityOverHttpElement : System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit FederatedMessageSecurityOverHttpElement extends System.ServiceModel.Configuration.ServiceModelConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Configuration.ServiceModelConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um elemento de configuração que configura a segurança de uma mensagem enviada usando HTTP em uma federação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederatedMessageSecurityOverHttpElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.AlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ServiceModel.Configuration.SecurityAlgorithmSuiteConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("algorithmSuite", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a criptografia de mensagem e os algoritmos de encapsulamento de chave.</summary>
+        <value>Uma opção válida <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" /> valor. O valor padrão é <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimTypeRequirements">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.ClaimTypeElementCollection ClaimTypeRequirements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.ClaimTypeElementCollection ClaimTypeRequirements" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("claimTypeRequirements")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.ClaimTypeElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conjunto de tipos de declaração para essa associação.</summary>
+        <value>Uma coleção de tipos de declaração. O padrão é uma coleção vazia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EstablishSecurityContext">
+      <MemberSignature Language="C#" Value="public bool EstablishSecurityContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EstablishSecurityContext" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.EstablishSecurityContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("establishSecurityContext", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma conversa segura é estabelecida usando tokens de contexto de segurança.</summary>
+        <value>
+          <see langword="true" />Se uma conversa segura é estabelecida usando tokens de contexto de segurança; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedKeyType">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyType IssuedKeyType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IdentityModel.Tokens.SecurityKeyType IssuedKeyType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuedKeyType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("issuedKeyType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de chave a ser emitido.</summary>
+        <value>O tipo de chave a ser emitido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuedTokenType">
+      <MemberSignature Language="C#" Value="public string IssuedTokenType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IssuedTokenType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuedTokenType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("issuedTokenType", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um URI que especifica o tipo de token a ser emitido.</summary>
+        <value>Um URI que especifica o tipo de token a ser emitido.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement Issuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement Issuer" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("issuer")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço do emissor.</summary>
+        <value>O endereço do emissor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IssuerMetadata">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.EndpointAddressElementBase IssuerMetadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.EndpointAddressElementBase IssuerMetadata" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("issuerMetadata")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.EndpointAddressElementBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço do ponto de extremidade do emissor.</summary>
+        <value>O endereço de ponto de extremidade do emissor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiateServiceCredential">
+      <MemberSignature Language="C#" Value="public bool NegotiateServiceCredential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NegotiateServiceCredential" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.NegotiateServiceCredential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("negotiateServiceCredential", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se a credencial de serviço é trocada como parte da negociação.</summary>
+        <value>
+          <see langword="true" />Se a credencial de serviço é negociada; <see langword="false" /> se a credencial de serviço está fora de banda disponível. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade indica se a credencial de serviço é negociada automaticamente entre o cliente e o serviço. Se essa propriedade for `true`, então essa negociação ocorre. Se essa propriedade for `false`, em seguida, as credenciais do serviço devem ser especificadas no cliente para comunicação com o serviço pode ocorrer.  
+  
+ Se essa propriedade é definida como `false`e a associação está configurada para usar o Windows como um tipo de credencial de cliente, a conta de serviço deve ser associada com um Service Principal Name (SPN). Para fazer isso, execute o serviço sob a conta de serviço de rede ou a conta sistema LOCAL. Como alternativa, use a ferramenta SetSpn.exe para criar um SPN para a conta de serviço. Em ambos os casos, o cliente deve usar o SPN correto no [ &lt;servicePrincipalName&gt; ](~/docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento, ou usando o <xref:System.ServiceModel.EndpointAddress> construtor. Para obter mais informações, consulte [autenticação e identidade de serviço](~/docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenRequestParameters">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Configuration.XmlElementElementCollection TokenRequestParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Configuration.XmlElementElementCollection TokenRequestParameters" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tokenRequestParameters")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Configuration.XmlElementElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de elementos de configuração que especificam os elementos XML adicionais para serem enviadas no corpo da mensagem para o serviço de Token de segurança quando solicitar um token.</summary>
+        <value>Uma coleção de elementos de configuração que especificam os elementos XML adicionais para serem enviadas no corpo da mensagem para o serviço de Token de segurança quando solicitar um token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

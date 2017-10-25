@@ -1,0 +1,106 @@
+<Type Name="ScrollAmount" FullName="System.Windows.Automation.ScrollAmount">
+  <TypeSignature Language="C#" Value="public enum ScrollAmount" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ScrollAmount extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ScrollAmount" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("bd52d3c7-f990-4c52-9ae3-5c377e9eb772")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém valores usados pela <see cref="T:System.Windows.Automation.ScrollPattern" /> para indicar a direção e a distância para rolar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LargeDecrement">
+      <MemberSignature Language="C#" Value="LargeDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount LargeDecrement = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.LargeDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a rolagem é feita em grandes diminui, equivalente a **PageUp** ou clicando em uma parte em branco de uma barra de rolagem. Se um **PageUp** não for um valor relevante para o controle e/ou não houver nenhuma barra de rolagem, o valor representará um valor igual à janela visível atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeIncrement">
+      <MemberSignature Language="C#" Value="LargeIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount LargeIncrement = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.LargeIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a rolagem é feita em incrementos grandes, equivalente a um **PageDown** ou a clicar na faixa de um componente da barra de rolagem. Se um **PageDown** não for um valor relevante para o controle e/ou não houver nenhuma barra de rolagem, o valor representará um valor igual à região visível atual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoAmount">
+      <MemberSignature Language="C#" Value="NoAmount" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount NoAmount = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.NoAmount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a rolagem não deve ser feita.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallDecrement">
+      <MemberSignature Language="C#" Value="SmallDecrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount SmallDecrement = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.SmallDecrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a rolagem é feita em decrementos pequenos, equivalente a pressionar uma tecla de direção ou a clicar no botão de seta em uma barra de rolagem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmallIncrement">
+      <MemberSignature Language="C#" Value="SmallIncrement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ScrollAmount SmallIncrement = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ScrollAmount.SmallIncrement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ScrollAmount</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a rolagem é feita em incrementos pequenos, equivalente a pressionar uma tecla de direção ou a clicar no botão de seta em uma barra de rolagem.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

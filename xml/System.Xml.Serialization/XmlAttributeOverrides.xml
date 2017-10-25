@@ -1,0 +1,292 @@
+<Type Name="XmlAttributeOverrides" FullName="System.Xml.Serialization.XmlAttributeOverrides">
+  <TypeSignature Language="C#" Value="public class XmlAttributeOverrides" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlAttributeOverrides extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlAttributeOverrides" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Permite a substituição de propriedade, campo e atributos de classe quando você usa o <see cref="T:System.Xml.Serialization.XmlSerializer" /> para serializar ou desserializar um objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlAttributeOverrides> permite que o <xref:System.Xml.Serialization.XmlSerializer> para substituir a forma padrão de serializar um conjunto de objetos. Substituir a serialização dessa maneira tem dois usos: primeiro, você pode controlar e aumentar a serialização de objetos encontrados em uma DLL – mesmo se você não tiver acesso à fonte de; em seguida, você pode criar um conjunto de classes serializáveis, mas serializar os objetos de várias maneiras. Por exemplo, em vez de serialização de membros de uma instância da classe como elementos XML, você pode serializá-los como atributos XML, resultando em um documento mais eficiente de transporte.  
+  
+ Depois de criar um <xref:System.Xml.Serialization.XmlAttributeOverrides> do objeto, você passá-lo como um argumento para o <xref:System.Xml.Serialization.XmlSerializer.%23ctor%2A> construtor. Resultante <xref:System.Xml.Serialization.XmlSerializer> usa os dados contidos pelo <xref:System.Xml.Serialization.XmlAttributeOverrides> para substituir os atributos que controlam como os objetos são serializados. Para fazer isso, o <xref:System.Xml.Serialization.XmlAttributeOverrides> contém uma coleção de tipos de objeto são substituídos, bem como um <xref:System.Xml.Serialization.XmlAttributes> objeto associado a cada tipo de objeto substituído. O <xref:System.Xml.Serialization.XmlAttributes> próprio objeto contém um conjunto apropriado de objetos de atributos que controlam como cada campo, propriedade ou classe é serializado.  
+  
+ O processo para criar e usar um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto é o seguinte:  
+  
+1.  Criar um <xref:System.Xml.Serialization.XmlAttributes> objeto.  
+  
+2.  Crie um objeto de atributo que é apropriado para o objeto que está sendo substituído. Por exemplo, para substituir um campo ou propriedade, crie um <xref:System.Xml.Serialization.XmlElementAttribute>, usando o novo tipo derivado. Opcionalmente, você pode atribuir um novo <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A>, ou <xref:System.Xml.Serialization.XmlElementAttribute.Namespace%2A> que substitui o namespace ou nome de atributo da classe base.  
+  
+3.  Adicionar o objeto de atributo ao apropriado <xref:System.Xml.Serialization.XmlAttributes> propriedade ou coleção. Por exemplo, você adicionaria o <xref:System.Xml.Serialization.XmlElementAttribute> para o <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> coleção do <xref:System.Xml.Serialization.XmlAttributes> objeto, especificando o nome do membro que está sendo substituído.  
+  
+4.  Criar um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+5.  Usando o <xref:System.Xml.Serialization.XmlAttributeOverrides.Add%2A> método, adicione o <xref:System.Xml.Serialization.XmlAttributes> o objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto. Se o objeto que está sendo substituído for um <xref:System.Xml.Serialization.XmlRootAttribute> ou <xref:System.Xml.Serialization.XmlTypeAttribute>, você só precisará especificar o tipo do objeto substituído. Mas se você está substituindo um campo ou propriedade, você também deve especificar o nome do membro substituído.  
+  
+6.  Ao construir o <xref:System.Xml.Serialization.XmlSerializer>, passar o <xref:System.Xml.Serialization.XmlAttributeOverrides> para o <xref:System.Xml.Serialization.XmlSerializer.%23ctor%2A> construtor.  
+  
+7.  Use resultante <xref:System.Xml.Serialization.XmlSerializer> para serializar ou desserializar os objetos de classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Orchestra`, que contém um único campo chamado `Instruments` que retorna uma matriz de `Instrument` objetos. Uma segunda classe denominada `Brass` herda o `Instrument` classe. O exemplo usa uma instância do <xref:System.Xml.Serialization.XmlAttributeOverrides> classe para substituir o `Instrument` campo, permitindo que o campo aceitar `Brass` objetos.  
+  
+ [!code-cpp[Classic XmlAttributeOverrides Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributeOverrides Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributeOverrides Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributeOverrides Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributeOverrides Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributeOverrides Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlAttributeOverrides ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAttributeOverrides.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlAttributeOverrides" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Type type, System.Xml.Serialization.XmlAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Type type, class System.Xml.Serialization.XmlAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAttributeOverrides.Add(System.Type,System.Xml.Serialization.XmlAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="attributes" Type="System.Xml.Serialization.XmlAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do objeto que será substituído.</param>
+        <param name="attributes">Um <see cref="T:System.Xml.Serialization.XmlAttributes" /> atributos de objeto que representa a substituição.</param>
+        <summary>Adiciona um <see cref="T:System.Xml.Serialization.XmlAttributes" /> objeto à coleção de <see cref="T:System.Xml.Serialization.XmlAttributes" /> objetos. O <paramref name="type" /> parâmetro especifica um objeto a ser substituído pelo <see cref="T:System.Xml.Serialization.XmlAttributes" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlAttributes> objeto contém uma união de objetos de atributos que fazem com que o <xref:System.Xml.Serialization.XmlSerializer> para substituir o comportamento de serialização padrão para um conjunto de objetos. Escolha os objetos de atributo para colocar no <xref:System.Xml.Serialization.XmlAttributes> objeto, dependendo dos comportamentos específicos que você deseja substituir. Por exemplo, o <xref:System.Xml.Serialization.XmlSerializer> serializa um membro de classe como um elemento XML por padrão. Se desejar que o membro a ser serializado como um atributo XM, você criaria um <xref:System.Xml.Serialization.XmlAttributeAttribute>, atribuí-lo ao <xref:System.Xml.Serialization.XmlAttributes.XmlAttribute%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes>e adicione o <xref:System.Xml.Serialization.XmlAttributes> do objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+ Use essa sobrecarga para substituir um <xref:System.Xml.Serialization.XmlRootAttribute> ou <xref:System.Xml.Serialization.XmlTypeAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe denominada `Band` que é derivada de uma classe denominada `Orchestra`. O exemplo cria um <xref:System.Xml.Serialization.XmlRootAttribute> de objeto e atribui-lo para o <xref:System.Xml.Serialization.XmlAttributes.XmlRoot%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes> objeto. O exemplo, em seguida, chama o <xref:System.Xml.Serialization.XmlAttributeOverrides.Add%2A> método para adicionar o <xref:System.Xml.Serialization.XmlAttributes> o objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+ [!code-cpp[Classic XmlAttributeOverrides.Add Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.Add Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributeOverrides.Add Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.Add Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributeOverrides.Add Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributeOverrides.Add Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Type type, string member, System.Xml.Serialization.XmlAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Type type, string member, class System.Xml.Serialization.XmlAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlAttributeOverrides.Add(System.Type,System.String,System.Xml.Serialization.XmlAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="member" Type="System.String" />
+        <Parameter Name="attributes" Type="System.Xml.Serialization.XmlAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do objeto para substituir.</param>
+        <param name="member">O nome do membro para substituir.</param>
+        <param name="attributes">Um <see cref="T:System.Xml.Serialization.XmlAttributes" /> atributos de objeto que representa a substituição.</param>
+        <summary>Adiciona um <see cref="T:System.Xml.Serialization.XmlAttributes" /> objeto à coleção de <see cref="T:System.Xml.Serialization.XmlAttributes" /> objetos. O <paramref name="type" /> parâmetro especifica um objeto a ser substituído. O <paramref name="member" /> parâmetro especifica o nome de um membro que é substituído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlAttributes> objeto contém uma união de objetos de atributos que fazem com que o <xref:System.Xml.Serialization.XmlSerializer> para substituir o comportamento de serialização padrão para um conjunto de objetos. Escolha os objetos de atributo para colocar no <xref:System.Xml.Serialization.XmlAttributes> objeto, dependendo dos comportamentos específicos que você deseja substituir. Por exemplo, o <xref:System.Xml.Serialization.XmlSerializer> serializa um membro de classe como um elemento XML por padrão. Se desejar que o membro a ser serializado como um atributo XML em vez disso, você deve criar um <xref:System.Xml.Serialization.XmlAttributeAttribute>, atribuí-lo ao <xref:System.Xml.Serialization.XmlAttributes.XmlAttribute%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes>e adicione o <xref:System.Xml.Serialization.XmlAttributes> o objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+ Use esse método durante a tentativa de substituir um <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, ou <xref:System.Xml.Serialization.XmlIgnoreAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Serialization.XmlAttributeAttribute> de objeto e atribui-lo para o <xref:System.Xml.Serialization.XmlAttributes.XmlAttribute%2A> propriedade de um <xref:System.Xml.Serialization.XmlAttributes> objeto. O exemplo adiciona o <xref:System.Xml.Serialization.XmlAttributes> o objeto para um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto antes de criar um <xref:System.Xml.Serialization.XmlSerializer>.  
+  
+ [!code-cpp[Classic XmlAttributeOverrides.Add1 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.Add1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributeOverrides.Add1 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.Add1 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributeOverrides.Add1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributeOverrides.Add1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlAttributes this[Type type] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlAttributes Item(class System.Type)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributeOverrides.Item(System.Type)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">A classe base <see cref="T:System.Type" /> associada à coleção de atributos que você deseja recuperar.</param>
+        <summary>Obtém o objeto associado ao tipo de classe base especificado.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlAttributes" /> que representa a coleção de atributos de substituição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para retornar um <xref:System.Xml.Serialization.XmlAttributes> objeto que contém atributos de uma <xref:System.Xml.Serialization.XmlRootAttribute> ou <xref:System.Xml.Serialization.XmlTypeAttribute> objeto.  
+  
+ Se o <xref:System.Xml.Serialization.XmlAttributes> objeto contém objetos que substituem uma <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlEnumAttribute>, ou <xref:System.Xml.Serialization.XmlAttributeAttribute>, você deve usar a sobrecarga que especifique o membro substituído, bem como o tipo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto, um <xref:System.Xml.Serialization.XmlAttributes> objeto e um <xref:System.Xml.Serialization.XmlRootAttribute> objeto. O exemplo atribui o <xref:System.Xml.Serialization.XmlRootAttribute> para o <xref:System.Xml.Serialization.XmlAttributes.XmlRoot%2A> propriedade do <xref:System.Xml.Serialization.XmlAttributes> e o adiciona a <xref:System.Xml.Serialization.XmlAttributes> o objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto. Por fim, o exemplo obtém o <xref:System.Xml.Serialization.XmlAttributes> objeto passando o <xref:System.Type> da classe serializada para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto. Neste exemplo, o <xref:System.Type> é `Group`.  
+  
+ [!code-cpp[Classic XmlAttributeOverrides.this Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.this Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributeOverrides.this Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.this Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributeOverrides.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributeOverrides.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Xml.Serialization.XmlAttributes this[Type type, string member] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Serialization.XmlAttributes Item(class System.Type, string)" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlAttributeOverrides.Item(System.Type,System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Serialization.XmlAttributes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="member" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">A classe base <see cref="T:System.Type" /> que está associado com a coleção de atributos que você deseja.</param>
+        <param name="member">O nome do membro substituído que especifica o <see cref="T:System.Xml.Serialization.XmlAttributes" /> para retornar.</param>
+        <summary>Obtém o objeto associado ao tipo especificado (classe base). O parâmetro de membro Especifica o membro de classe base é substituído.</summary>
+        <value>Um <see cref="T:System.Xml.Serialization.XmlAttributes" /> que representa a coleção de atributos de substituição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para retornar um <xref:System.Xml.Serialization.XmlAttributes> objeto que contém objetos que substituir um <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, ou <xref:System.Xml.Serialization.XmlEnumAttribute>. Se o <xref:System.Xml.Serialization.XmlAttributes> objeto contém um <xref:System.Xml.Serialization.XmlRootAttribute> ou <xref:System.Xml.Serialization.XmlTypeAttribute>, você deve usar a sobrecarga que especifica apenas o tipo de substituição.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto, um <xref:System.Xml.Serialization.XmlAttributes>e um <xref:System.Xml.Serialization.XmlAttributeAttribute> objeto. O exemplo atribui o <xref:System.Xml.Serialization.XmlAttributeAttribute> para o <xref:System.Xml.Serialization.XmlAttributes.XmlAttribute%2A> propriedade do <xref:System.Xml.Serialization.XmlAttributes> e o adiciona a <xref:System.Xml.Serialization.XmlAttributes> o objeto para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto. Por fim, o exemplo obtém o <xref:System.Xml.Serialization.XmlAttributes> objeto passando o <xref:System.Type> do nome de classe e membro serializado para o <xref:System.Xml.Serialization.XmlAttributeOverrides> objeto.  
+  
+ [!code-cpp[Classic XmlAttributeOverrides.this1 Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.this1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlAttributeOverrides.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlAttributeOverrides.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlAttributeOverrides.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlAttributeOverrides.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,146 @@
+<Type Name="IWebEditable" FullName="System.Web.UI.WebControls.WebParts.IWebEditable">
+  <TypeSignature Language="C#" Value="public interface IWebEditable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWebEditable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IWebEditable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para os desenvolvedores especifiquem controles de edição personalizados que são associados com um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface permite que você associe personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles com um controle de servidor – como um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, um controle de usuário ou um controle de servidor personalizado. O <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles contidos com um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle e esta zona com seus controles de edição fornece aos usuários finais uma interface de usuário (UI) para modificar as propriedades, a aparência e comportamento de associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface inclui dois membros expostos. O <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> propriedade fornece uma maneira de <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles para obter uma referência para o controle de servidor associado. O <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método é usado para criar uma instância de cada personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle associado a um controle de servidor e retorná-los como uma coleção.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface já foi implementada na base de <xref:System.Web.UI.WebControls.WebParts.WebPart> classe, embora por padrão essa implementação não associar qualquer personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles com o <xref:System.Web.UI.WebControls.WebParts.WebPart> classe. Para associar um derivado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles, você pode substituir o <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir os métodos do <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface em um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle, que, em seguida, cria uma instância de um personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controlar quando o <xref:System.Web.UI.WebControls.WebParts.WebPart> controle entra em modo de edição.  
+  
+ Este exemplo tem quatro partes:  
+  
+-   O código para a classe personalizada.  
+  
+-   A página da Web que hospeda o controle personalizado.  
+  
+-   Um controle de usuário alterna a página em modo de edição.  
+  
+-   Uma descrição de como o exemplo funciona em um navegador.  
+  
+ A primeira parte do exemplo de código é personalizado `TextDisplayWebPart` classe. Observe que a classe deriva o <xref:System.Web.UI.WebControls.WebParts.WebPart> classe e implemente o <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface, fornecer implementações específicas para o <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método e o <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> propriedade. Observe também que aninhados a `TextDisplayWebPart` classe é particular, personalizada `TextDisplayEditorPart` classe que deriva de base de <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe. Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstra os métodos de compilação, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+ [!code-csharp[WebParts_IWebEditable_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/CS/textdisplaywebpart.cs#1)]
+ [!code-vb[WebParts_IWebEditable_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/VB/textdisplaywebpart.vb#1)]  
+  
+ A segunda parte do exemplo de código é uma página da Web que hospeda o controle personalizado. Observe que, embora uma <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle é declarado na marcação da página, personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controle não precisa ser referenciado, porque podem ser adicionado por meio de programação em tempo de execução.  
+  
+ [!code-aspx-csharp[WebParts_IWebEditable_Overview#7](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/CS/editorpart_overview_cs.aspx#7)]
+ [!code-aspx-vb[WebParts_IWebEditable_Overview#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/VB/editorpart_overview_vb.aspx#7)]  
+  
+ A terceira parte do exemplo de código é um controle de usuário que permite que um usuário alterne a página em modo de edição. Observe que o controle de usuário é referenciado na página da Web de hospedagem. Para obter uma descrição completa de como criar este controle de usuário, consulte [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0).  
+  
+ [!code-aspx-csharp[WebParts_IWebEditable_Overview#8](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/CS/displaymodeuccs.ascx#8)]
+ [!code-aspx-vb[WebParts_IWebEditable_Overview#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/VB/displaymodeucvb.ascx#8)]  
+  
+ Para executar o exemplo de código, carregar a página da Web de hospedagem em um navegador, adicionar texto à caixa de texto e clique no **definir o conteúdo de rótulo** botão para atualizar o rótulo no controle. Para alternar a página em modo de edição, selecione **editar** na lista suspensa que contém os modos de exibição. Para exibir a interface do usuário do personalizado `TextDisplayEditorPart` de controle, clique na seta de lista suspensa menu de verbos no `TextDisplayWebPart` controle e selecione **editar**. Na interface de usuário de edição, você pode usar a lista suspensa que contém os estilos de fonte para atualizar o estilo do texto do rótulo no `TextDisplayWebPart` controle. Você deve clicar em **modo procurar** na lista suspensa de modos de exibição para retornar a página para o modo normal e confirme se o texto no rótulo agora tem o estilo da fonte que você selecionou no modo de edição.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Se você deseja usar controles de servidor que não são <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles em um aplicativo de Web Parts (ou seja, se você adicionar esses controles para um <see cref="T:System.Web.UI.WebControls.WebParts.WebPartZoneBase" /> zona), e se você deseja associar personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles com esses controles de servidor, você precisa implementar o <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> interface. Derivado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controles não devem implementar a interface, pois a base de <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> classe já faz isso.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateEditorParts">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.WebParts.EditorPartCollection CreateEditorParts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebParts.EditorPartCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma coleção de personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles associados a um controle de servidor que implementa o <see cref="T:System.Web.UI.WebControls.WebParts.IWebEditable" /> interface.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> que contém a coleção de personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles associados a um controle de servidor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método permite que você crie uma coleção de todos os personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles associados ao seu controle personalizado, <xref:System.Web.UI.WebControls.WebParts.WebPart> controle ou usuário controlar e retorná-los como um <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> objeto. O <xref:System.Web.UI.WebControls.WebParts.WebPartManager> usa a coleção de controle e cria instâncias de todos os <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles sempre que o controle de servidor entra em modo de edição.  
+  
+ Normalmente você implementar esse método em um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle substituindo seu <xref:System.Web.UI.WebControls.WebParts.WebPart.CreateEditorParts%2A> método. No método, você cria instâncias de personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles que você deseja associar as controles, adicioná-las a um <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> de objeto e, em seguida, retornar esse objeto. A coleção de <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles é então atribuído ao <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.EditorParts%2A> propriedade o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zona.  
+  
+> [!NOTE]
+>  Qualquer <xref:System.Web.UI.WebControls.WebParts.EditorPart> que é adicionado à coleção de <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles em uma implementação do <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método deve ter um valor atribuído à sua propriedade ID, caso contrário, uma exceção será lançada quando a coleção é atribuída para o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase.EditorParts%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra uma substituição do <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método em um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. O código-fonte completo necessário para executar o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.IWebEditable> tópico de visão geral da classe.  
+  
+ O exemplo de código contém os dois membros do <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface. Observe que a substituição do <xref:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts%2A> método cria um <xref:System.Collections.ArrayList> para coletar um ou mais personalizada <xref:System.Web.UI.WebControls.WebParts.EditorPart> controla e, em seguida, usa a lista para criar o <xref:System.Web.UI.WebControls.WebParts.EditorPartCollection> objeto.  
+  
+ [!code-csharp[WebParts_IWebEditable_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/CS/textdisplaywebpart.cs#4)]
+ [!code-vb[WebParts_IWebEditable_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/VB/textdisplaywebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> do objeto que o <see cref="M:System.Web.UI.WebControls.WebParts.IWebEditable.CreateEditorParts" /> método retorna é somente leitura e não tem nenhum método acessível para adicionar os controles individuais a ele. No entanto, em sua substituição ou a implementação do método, você pode criar outro tipo de <see cref="T:System.Collections.ICollection" /> objeto, como um <see cref="T:System.Collections.ArrayList" />, para conter todos os personalizado <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controla e passá-lo para o construtor quando você cria um novo <see cref="T:System.Web.UI.WebControls.WebParts.EditorPartCollection" /> objeto . Para obter um exemplo de código, consulte a seção de exemplo.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WebBrowsableObject">
+      <MemberSignature Language="C#" Value="public object WebBrowsableObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object WebBrowsableObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle, controle de usuário ou um controle personalizado que será editado por <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controles.</summary>
+        <value>Uma referência de objeto para o controle associado a um <see cref="T:System.Web.UI.WebControls.WebParts.EditorPart" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> propriedade fornece uma maneira de <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles para obter uma referência para os controles de servidor que estão associados.  
+  
+ Embora a propriedade em si é somente leitura, permite que a referência de objeto que ela retorna <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles para alterar os valores no controle de servidor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject%2A> propriedade pode ser substituída em um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. O código-fonte completo necessário para executar o exemplo foi encontrado na seção exemplo de <xref:System.Web.UI.WebControls.WebParts.IWebEditable> tópico de visão geral da classe.  
+  
+ O exemplo de código substitui os dois membros do <xref:System.Web.UI.WebControls.WebParts.IWebEditable> interface.  
+  
+ [!code-csharp[WebParts_IWebEditable_Overview#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/CS/textdisplaywebpart.cs#4)]
+ [!code-vb[WebParts_IWebEditable_Overview#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_IWebEditable_Overview/VB/textdisplaywebpart.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Normalmente, quando você implementa o <see cref="P:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject" /> propriedade em um controle de servidor, você simplesmente retorna uma referência para o controle de servidor. No caso do <see cref="T:System.Web.UI.WebControls.WebParts.GenericWebPart" /> classe, porque ela inclui um controle filho para habilitá-lo para funcionar como um <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controlar sua implementação do <see cref="P:System.Web.UI.WebControls.WebParts.IWebEditable.WebBrowsableObject" /> propriedade retorna uma referência para o controle filho.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

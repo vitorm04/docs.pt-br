@@ -1,0 +1,179 @@
+<Type Name="ManagementDateTimeConverter" FullName="System.Management.ManagementDateTimeConverter">
+  <TypeSignature Language="C#" Value="public sealed class ManagementDateTimeConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagementDateTimeConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ManagementDateTimeConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para converter os intervalos de datetime e de hora de DMTF em <see cref="T:System.DateTime" /> compatíveis com CLR e no formato <see cref="T:System.TimeSpan" /> e vice-versa.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public static DateTime ToDateTime (string dmtfDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTime ToDateTime(string dmtfDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementDateTimeConverter.ToDateTime(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dmtfDate" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dmtfDate">Uma cadeia de caracteres que representa o datetime no formato DMTF.</param>
+        <summary>Converte determinado datetime de DMTF em <see cref="T:System.DateTime" />. O <see cref="T:System.DateTime" /> retornado estará no fuso horário atual do sistema.</summary>
+        <returns>Uma <see cref="T:System.DateTime" /> que representa o datetime do DMTF especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Data e hora no WMI é representado no formato de data/hora DMTF. Esse formato é explicado na documentação do SDK do WMI. Uma cadeia de caracteres de data/hora DMTF tem um UTC deslocamento que representa essa cadeia de caracteres de data e hora. Durante a conversão para <xref:System.DateTime>, o deslocamento UTC é usado para converter a data em que o fuso horário atual. De acordo com o formato da DMTF, um campo específico pode ser representado pelo caractere ' *'. Isso será convertido para o <xref:System.DateTime.MinValue> valor do campo que pode ser representado em <xref:System.DateTime>.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte uma cadeia de caracteres de data/hora DMTF em um <xref:System.DateTime>.  
+  
+ [!code-csharp[wminet_ManagementDateTimeConverter_ToDateTime#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToDateTime/cs/ManagementDateTimeConverter_ToDateTime.cs#1)]
+ [!code-vb[wminet_ManagementDateTimeConverter_ToDateTime#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToDateTime/vb/ManagementDateTimeConverter_ToDateTime.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDmtfDateTime">
+      <MemberSignature Language="C#" Value="public static string ToDmtfDateTime (DateTime date);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToDmtfDateTime(valuetype System.DateTime date) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementDateTimeConverter.ToDmtfDateTime(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="date" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="date">Uma <see cref="T:System.DateTime" /> que representa a datetime a ser convertida em datetime DMTF.</param>
+        <summary>Converte um determinado <see cref="T:System.DateTime" /> para o formato datetime DMTF.</summary>
+        <returns>Uma cadeia de caracteres que representa a datetime DMTF para a <see cref="T:System.DateTime" /> determinada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Data e hora no WMI é representado no formato de data/hora DMTF. Esse formato é explicado na documentação do SDK do WMI. A cadeia de caracteres de data/hora DMTF representada será em relação o deslocamento UTC do fuso horário atual. A precisão mais baixa no DMTF é microssegundos; em <xref:System.DateTime>, a menor precisão é <xref:System.DateTime.Ticks%2A>, que são equivalente a 100 nanossegundos. Durante a conversão, <xref:System.DateTime.Ticks%2A> são convertidos em microssegundos e arredondado para o mais próximo microssegundos.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte um determinado <xref:System.DateTime> para formato de data e hora da DMTF.  
+  
+ [!code-csharp[wminet_ManagementDateTimeConverter_ToDmtfDateTime#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToDmtfDateTime/cs/ManagementDateTimeConverter_ToDmtfDateTime.cs#1)]
+ [!code-vb[wminet_ManagementDateTimeConverter_ToDmtfDateTime#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToDmtfDateTime/vb/ManagementDateTimeConverter_ToDmtfDateTime.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDmtfTimeInterval">
+      <MemberSignature Language="C#" Value="public static string ToDmtfTimeInterval (TimeSpan timespan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToDmtfTimeInterval(valuetype System.TimeSpan timespan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementDateTimeConverter.ToDmtfTimeInterval(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timespan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timespan">Um <see cref="T:System.TimeSpan" /> que representa a data e hora a ser convertido em um intervalo de tempo DMTF.</param>
+        <summary>Converte um determinado <see cref="T:System.TimeSpan" /> para o intervalo de tempo DMTF.</summary>
+        <returns>Uma cadeia de caracteres que representa o intervalo de tempo DMTF para a determinada <see cref="T:System.TimeSpan" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Intervalo de tempo no WMI é representado no formato de data/hora DMTF. Esse formato é explicado na documentação do SDK do WMI. A precisão mais baixa no DMTF é microssegundos; em <xref:System.TimeSpan>, a menor precisão é <xref:System.TimeSpan.Ticks%2A>, que é equivalente a 100 nanossegundos. Durante a conversão, <xref:System.TimeSpan.Ticks%2A> são convertidos em microssegundos e arredondado para o mais próximo microssegundos.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte um determinado <xref:System.TimeSpan> para o intervalo de tempo DMTF.  
+  
+ [!code-csharp[wminet_ManagementDateTimeConverter_ToDmtfTimeInterval#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToDmtfTimeInterval/cs/ManagementDateTimeConverter_ToDmtfTimeInterval.cs#1)]
+ [!code-vb[wminet_ManagementDateTimeConverter_ToDmtfTimeInterval#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToDmtfTimeInterval/vb/ManagementDateTimeConverter_ToDmtfTimeInterval.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTimeSpan">
+      <MemberSignature Language="C#" Value="public static TimeSpan ToTimeSpan (string dmtfTimespan);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.TimeSpan ToTimeSpan(string dmtfTimespan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.ManagementDateTimeConverter.ToTimeSpan(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dmtfTimespan" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dmtfTimespan">Uma representação de cadeia de caracteres do intervalo de tempo DMTF.</param>
+        <summary>Converte um determinado intervalo de tempo DMTF para um <see cref="T:System.TimeSpan" />.</summary>
+        <returns>Um <see cref="T:System.TimeSpan" /> que representa o intervalo de tempo DMTF determinado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Intervalo de tempo no WMI é representado em formato DMTF. Esse formato é explicado na documentação do SDK do WMI. Se o valor do intervalo de tempo DMTF é maior do que a de <xref:System.TimeSpan.MaxValue> , em seguida, <xref:System.ArgumentOutOfRangeException> é gerada.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir converte um determinado intervalo de tempo DMTF para <xref:System.TimeSpan>.  
+  
+ [!code-csharp[wminet_ManagementDateTimeConverter_ToTimeSpan#1](~/samples/snippets/csharp/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToTimeSpan/cs/ManagementDateTimeConverter_ToTimeSpan.cs#1)]
+ [!code-vb[wminet_ManagementDateTimeConverter_ToTimeSpan#1](~/samples/snippets/visualbasic/VS_Snippets_WindowsServer/wminet_ManagementDateTimeConverter_ToTimeSpan/vb/ManagementDateTimeConverter_ToTimeSpan.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

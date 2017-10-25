@@ -1,0 +1,107 @@
+<Type Name="ExpressionBuilderContext" FullName="System.Web.Compilation.ExpressionBuilderContext">
+  <TypeSignature Language="C#" Value="public sealed class ExpressionBuilderContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ExpressionBuilderContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.ExpressionBuilderContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece o contexto para um <see cref="T:System.Web.Compilation.ExpressionBuilder" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Compilation.ExpressionBuilderContext> objeto normalmente é usado para obter um caminho virtual ou um <xref:System.Web.UI.Control.TemplateControl%2A> propriedade para uso com um construtor de expressões. Para obter mais informações, consulte <xref:System.Web.Configuration.ExpressionBuilder>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBuilderContext (string virtualPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string virtualPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilderContext.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="virtualPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualPath">O caminho virtual do arquivo associado ao <see cref="T:System.Web.Compilation.ExpressionBuilder" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Compilation.ExpressionBuilderContext" /> classe usando o caminho virtual especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExpressionBuilderContext (System.Web.UI.TemplateControl templateControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.TemplateControl templateControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.ExpressionBuilderContext.#ctor(System.Web.UI.TemplateControl)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="templateControl" Type="System.Web.UI.TemplateControl" />
+      </Parameters>
+      <Docs>
+        <param name="templateControl">O <see cref="T:System.Web.UI.TemplateControl" /> para usar com especificado <see cref="T:System.Web.Compilation.ExpressionBuilder" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Compilation.ExpressionBuilderContext" /> classe usando o controle do modelo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateControl">
+      <MemberSignature Language="C#" Value="public System.Web.UI.TemplateControl TemplateControl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.TemplateControl TemplateControl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ExpressionBuilderContext.TemplateControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.TemplateControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um <see cref="T:System.Web.Compilation.ExpressionBuilder" /> objeto com uma referência a um <see cref="T:System.Web.UI.TemplateControl" /> objeto.</summary>
+        <value>O <see cref="T:System.Web.UI.TemplateControl" /> que contém essa expressão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um construtor de expressões pode requerer informações adicionais sobre o conteúdo da página para avaliar ou analisar o valor da expressão.  
+  
+ Isso também fornece o <xref:System.Web.Compilation.ExpressionBuilder> objeto com informações sobre a página que pode ser necessária. Quando uma instância de um controle é parte de um modelo de controle, o <xref:System.Web.Compilation.ExpressionBuilderContext.TemplateControl%2A> propriedade contém uma referência para o controle recipiente. Para obter mais informações, consulte <xref:System.Web.UI.TemplateControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualPath">
+      <MemberSignature Language="C#" Value="public string VirtualPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VirtualPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.ExpressionBuilderContext.VirtualPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna um caminho virtual para o arquivo associado a <see cref="T:System.Web.Compilation.ExpressionBuilderContext" /> objeto.</summary>
+        <value>O caminho virtual do arquivo associado a <see cref="T:System.Web.Compilation.ExpressionBuilderContext" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Security.Cryptography.X509Certificates">
+  <Docs>
+    <summary>O <see cref="N:System.Security.Cryptography.X509Certificates" /> namespace contém a implementação de tempo de execução de linguagem comum do certificado Authenticode x. 509 v. 3. Esse certificado é assinado com uma chave privada que identifica exclusiva e positivamente o proprietário do certificado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

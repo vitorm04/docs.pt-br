@@ -1,0 +1,61 @@
+<Type Name="ConflictOptions" FullName="System.Web.UI.ConflictOptions">
+  <TypeSignature Language="C#" Value="public enum ConflictOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConflictOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ConflictOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina como a fonte de dados do ASP.NET controla identificador conflitos de dados durante a atualização ou exclusão de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controle de simultaneidade é uma técnica de repositórios de dados usam para controlar como os dados é lida e alterados no repositório quando vários clientes estão acessando e manipulando os mesmos dados. Por exemplo, um cliente lê os dados e apresenta-as para um usuário, enquanto outro cliente lê os mesmos dados e apresenta-as para um usuário diferente. Se ambos os usuários atualizam os dados e enviá-lo para o armazenamento de dados, alguns resultados inesperados poderão ocorrer, pois os clientes podem atualizar valores diferentes para os mesmos dados. Isso é considerado um conflito.  
+  
+ O `ConflictDetection` propriedade que é definida para controles de fonte de dados do ASP.NET é usada para determinar como um controle manipula conflitos de dados no armazenamento de dados subjacente quando o armazenamento de dados subjacente é usando simultaneidade otimista e uma exclusão ou operação de atualização é executada.  
+  
+ Por padrão, o `ConflictDetection` está definida como OverwriteChanges, o que significa que o controle de fonte de dados substituirá as alterações feitas em uma linha de dados entre a hora em que o controle de fonte de dados primeiro ler dados da linha e a hora em que a linha é atualizada. A chave primária é usada para localizar a linha de dados que será atualizada ou excluída, mas nenhuma outra comparação dos dados é executada. Se o controle de fonte de dados estiver configurado para usar a opção CompareAllValues, no entanto, o controle passa os dados originais no `oldValues` coleções do `Update` e `Delete` métodos para que você possa escrever lógica para atualizar ou excluir dados somente se esses valores correspondem aos valores atualmente no armazenamento de dados. Os valores correspondentes indicam que os dados não foram alterados desde a hora em que foi lido.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompareAllValues">
+      <MemberSignature Language="C#" Value="CompareAllValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ConflictOptions CompareAllValues = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ConflictOptions.CompareAllValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ConflictOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um controle de fonte de dados usa o <paramref name="oldValues" /> coleção do <see langword="Update" /> e <see langword="Delete" /> métodos para determinar se os dados foram alterados por outro processo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteChanges">
+      <MemberSignature Language="C#" Value="OverwriteChanges" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.ConflictOptions OverwriteChanges = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.ConflictOptions.OverwriteChanges" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ConflictOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um controle de fonte de dados substitui todos os valores em uma linha de dados com seus próprios valores para a linha.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

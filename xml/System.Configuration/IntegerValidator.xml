@@ -1,0 +1,231 @@
+<Type Name="IntegerValidator" FullName="System.Configuration.IntegerValidator">
+  <TypeSignature Language="C#" Value="public class IntegerValidator : System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IntegerValidator extends System.Configuration.ConfigurationValidatorBase" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.IntegerValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationValidatorBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece validação de um valor <see cref="T:System.Int32" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.IntegerValidator> classe é usada para garantir que um número inteiro atende a critérios específicos. Os critérios de validação são estabelecidos quando uma instância do <xref:System.Configuration.IntegerValidator> classe é criada. O <xref:System.Configuration.IntegerValidator.%23ctor%2A> construtor com dois parâmetros garante que o inteiro que está sendo verificado adota um mínimo e um valor máximo. O <xref:System.Configuration.IntegerValidator.%23ctor%2A> construtor com três parâmetros verifica o mínimo e máximo <xref:System.Int32> valores, bem como se o valor a ser validado está dentro do intervalo especificado. O <xref:System.Configuration.IntegerValidator.%23ctor%2A> construtor com quatro parâmetros verifica a três parâmetros anteriores e também verifica se o <xref:System.Int32> valor é igual a uma resolução específica.  
+  
+ O <xref:System.Configuration.IntegerValidator.CanValidate%2A> método determina se o tipo de objeto que está sendo validado corresponde ao tipo esperado. O objeto que está sendo validado é passado como um parâmetro de <xref:System.Configuration.IntegerValidator.Validate%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.IntegerValidator> tipo.  
+  
+ [!code-csharp[System.Configuration.IntegerValidator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.IntegerValidator/CS/IntegerValidator.cs#1)]
+ [!code-vb[System.Configuration.IntegerValidator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.IntegerValidator/VB/IntegerValidator.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntegerValidator (int minValue, int maxValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 minValue, int32 maxValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IntegerValidator.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="minValue" Type="System.Int32" />
+        <Parameter Name="maxValue" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minValue">Um <see cref="T:System.Int32" /> objeto que especifica o valor mínimo.</param>
+        <param name="maxValue">Um <see cref="T:System.Int32" /> objeto que especifica o valor máximo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.IntegerValidator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Configuration.IntegerValidator.%23ctor%2A> construtor garante que o inteiro que está sendo verificado adota um mínimo e máximo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntegerValidator (int minValue, int maxValue, bool rangeIsExclusive);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 minValue, int32 maxValue, bool rangeIsExclusive) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IntegerValidator.#ctor(System.Int32,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="minValue" Type="System.Int32" />
+        <Parameter Name="maxValue" Type="System.Int32" />
+        <Parameter Name="rangeIsExclusive" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="minValue">Um <see cref="T:System.Int32" /> objeto que especifica o valor mínimo.</param>
+        <param name="maxValue">Um <see cref="T:System.Int32" /> objeto que especifica o valor máximo.</param>
+        <param name="rangeIsExclusive">
+          <see langword="true" />para especificar que o intervalo de validação é exclusivo. Inclusive significa que o valor a ser validado deve estar dentro do intervalo especificado; exclusivo significa que ele deve ser abaixo do mínimo ou acima do máximo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.IntegerValidator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao criar uma instância do <xref:System.Configuration.IntegerValidator> classe isso <xref:System.Configuration.IntegerValidator.%23ctor%2A> construtor verifica o mínimo e máximo <xref:System.Int32> valores, bem como se o intervalo de validação é exclusivo. Quando o `rangeIsExclusive` parâmetro está definido como `true`, o <xref:System.Int32> valor não deve estar entre o `minValue` e `maxValue` valores de parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.IntegerValidator.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.IntegerValidator> classe.  
+  
+ [!code-csharp[System.Configuration.IntegerValidator#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.IntegerValidator/CS/IntegerValidator.cs#2)]
+ [!code-vb[System.Configuration.IntegerValidator#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.IntegerValidator/VB/IntegerValidator.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IntegerValidator (int minValue, int maxValue, bool rangeIsExclusive, int resolution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 minValue, int32 maxValue, bool rangeIsExclusive, int32 resolution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IntegerValidator.#ctor(System.Int32,System.Int32,System.Boolean,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="minValue" Type="System.Int32" />
+        <Parameter Name="maxValue" Type="System.Int32" />
+        <Parameter Name="rangeIsExclusive" Type="System.Boolean" />
+        <Parameter Name="resolution" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="minValue">Um <see cref="T:System.Int32" /> objeto que especifica o comprimento mínimo do valor inteiro.</param>
+        <param name="maxValue">Um <see cref="T:System.Int32" /> objeto que especifica o comprimento máximo do valor inteiro.</param>
+        <param name="rangeIsExclusive">Um <see cref="T:System.Boolean" /> valor que especifica se o intervalo de validação é exclusivo.</param>
+        <param name="resolution">Um <see cref="T:System.Int32" /> objeto que especifica um valor que deve ser correspondentes.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.IntegerValidator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Int32> valor que está sendo validada deve ser igual de `resolution` valor para passar pela validação.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="resolution" /> é menor que <see langword="0" />.  
+  
+ \- ou -  
+  
+ <paramref name="minValue" /> é maior que <paramref name="maxValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanValidate">
+      <MemberSignature Language="C#" Value="public override bool CanValidate (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanValidate(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IntegerValidator.CanValidate(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo do objeto.</param>
+        <summary>Determina se o tipo de objeto pode ser validado.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="type" /> parâmetro corresponde a uma <see cref="T:System.Int32" /> valor; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.IntegerValidator.CanValidate%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.IntegerValidator> classe.  
+  
+ [!code-csharp[System.Configuration.IntegerValidator#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.IntegerValidator/CS/IntegerValidator.cs#3)]
+ [!code-vb[System.Configuration.IntegerValidator#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.IntegerValidator/VB/IntegerValidator.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override void Validate (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Validate(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.IntegerValidator.Validate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser validado.</param>
+        <summary>Determina se o valor de um objeto é válido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Configuration.IntegerValidator> objeto contém as regras necessárias para validar um objeto inteiro. As regras são estabelecidas quando uma instância do <xref:System.Configuration.IntegerValidator> classe é criada. O objeto inteiro para validar é passado como um parâmetro de <xref:System.Configuration.IntegerValidator.Validate%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Configuration.IntegerValidator.Validate%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Configuration.IntegerValidator> classe.  
+  
+ [!code-csharp[System.Configuration.IntegerValidator#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.IntegerValidator/CS/IntegerValidator.cs#4)]
+ [!code-vb[System.Configuration.IntegerValidator#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.IntegerValidator/VB/IntegerValidator.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

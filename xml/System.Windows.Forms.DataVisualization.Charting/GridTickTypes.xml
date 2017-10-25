@@ -1,0 +1,94 @@
+<Type Name="GridTickTypes" FullName="System.Windows.Forms.DataVisualization.Charting.GridTickTypes">
+  <TypeSignature Language="C#" Value="public enum GridTickTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GridTickTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.GridTickTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as opções para exibir uma linha de grade ou uma marca de escala para um rótulo personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.GridTickTypes> enumeração é usada em conjunto com o <xref:System.Windows.Forms.DataVisualization.Charting.CustomLabel.GridTicks%2A> marca de propriedade para exibir uma linha de grade e/ou em uma escala para um rótulo personalizado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.GridTickTypes All = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.GridTickTypes.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.GridTickTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma marca de escala e uma linha de grade são mostradas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Gridline">
+      <MemberSignature Language="C#" Value="Gridline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.GridTickTypes Gridline = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.GridTickTypes.Gridline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.GridTickTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma linha de grade é mostrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.GridTickTypes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.GridTickTypes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.GridTickTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma linha de grade ou marca de escala é mostrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TickMark">
+      <MemberSignature Language="C#" Value="TickMark" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DataVisualization.Charting.GridTickTypes TickMark = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DataVisualization.Charting.GridTickTypes.TickMark" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.GridTickTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma marca de escala é mostrada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

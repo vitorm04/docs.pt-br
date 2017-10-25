@@ -1,0 +1,72 @@
+<Type Name="SecurityTokenValidatedEventArgs" FullName="System.IdentityModel.Services.SecurityTokenValidatedEventArgs">
+  <TypeSignature Language="C#" Value="public class SecurityTokenValidatedEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SecurityTokenValidatedEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.SecurityTokenValidatedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento é gerado depois que o token emitido foi recebido do serviço de token de segurança (STS) é validado durante o logon. Você pode acessar a entidade que foi criada durante a validação usando o <xref:System.IdentityModel.Services.SecurityTokenValidatedEventArgs.ClaimsPrincipal%2A> propriedade e modificar ou substituí-lo. Você pode definir o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade para cancelar o processamento da mensagem de resposta de logon.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityTokenValidatedEventArgs (System.Security.Claims.ClaimsPrincipal claimsPrincipal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Claims.ClaimsPrincipal claimsPrincipal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.SecurityTokenValidatedEventArgs.#ctor(System.Security.Claims.ClaimsPrincipal)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="claimsPrincipal" Type="System.Security.Claims.ClaimsPrincipal" />
+      </Parameters>
+      <Docs>
+        <param name="claimsPrincipal">A entidade de segurança de declarações resultante da validação de recebido <see cref="T:System.IdentityModel.Tokens.SecurityToken" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Services.SecurityTokenValidatedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Services.SecurityTokenValidatedEventArgs.ClaimsPrincipal%2A> está definida como a entidade especificada no `claimsPrincipal` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="claimsPrincipal" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsPrincipal">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsPrincipal ClaimsPrincipal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsPrincipal ClaimsPrincipal" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.SecurityTokenValidatedEventArgs.ClaimsPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Security.Claims.ClaimsPrincipal" /> que os resultados da validação de token.</summary>
+        <value>A entidade de declarações que os resultados de validação de token.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermissionAttribute">Para definir a propriedade. Enumerações associadas:<see cref="F:System.Security.Permissions.SecurityAction.Demand" /><see cref="F:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

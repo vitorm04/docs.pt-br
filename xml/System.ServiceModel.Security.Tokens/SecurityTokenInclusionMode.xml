@@ -1,0 +1,102 @@
+<Type Name="SecurityTokenInclusionMode" FullName="System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode">
+  <TypeSignature Language="C#" Value="public enum SecurityTokenInclusionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityTokenInclusionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Uma lista dos requisitos de inclusão de token para mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são usadas como parâmetros em muitos dos métodos do <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> classe e de suas classes derivadas ao criar elementos de associação e os certificados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlwaysToInitiator">
+      <MemberSignature Language="C#" Value="AlwaysToInitiator" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode AlwaysToInitiator = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToInitiator" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Token é sempre incluído em mensagens para o iniciador e nunca ao destinatário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AlwaysToRecipient">
+      <MemberSignature Language="C#" Value="AlwaysToRecipient" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode AlwaysToRecipient = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.AlwaysToRecipient" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Token é sempre incluído em mensagens para o destinatário e nunca o iniciador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode Never = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O token nunca é incluído em mensagens, mas é referenciado. O token deve ser conhecido para o destinatário fora da banda. A opção não funciona fora da caixa. Você precisa incluir credenciais personalizadas para este trabalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Once">
+      <MemberSignature Language="C#" Value="Once" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode Once = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode.Once" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Token é incluído uma vez.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token deve ser incluído em apenas uma mensagem enviada do iniciador para o destinatário. Referências para o token podem usar um mecanismo de referência interna. Mensagens relacionadas subsequentes enviadas entre o iniciador e o destinatário podem se referir ao token usando um mecanismo de referência externa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,239 @@
+<Type Name="SrgsGrammarCompiler" FullName="System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler">
+  <TypeSignature Language="C#" Value="public static class SrgsGrammarCompiler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SrgsGrammarCompiler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Compila <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> e arquivos em arquivos de gramática binária com a extensão. cfg de gramática de formato XML e envia a saída para um fluxo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compilar <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> objetos e gramáticas de formato XML em um formato binário para otimizá-los para carregamento e o consumo por um mecanismo de reconhecimento de fala. Compilando uma gramática de reconhecimento de fala usando um do <xref:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile%2A> métodos podem reduzir a quantidade de tempo necessário para construir um <xref:System.Speech.Recognition.Grammar> de objeto um <xref:System.Speech.Recognition.SrgsGrammar.SrgsDocument> ou uma gramática de formato XML.  
+  
+ Para obter mais informações, consulte [compilar SRGS gramáticas](http://msdn.microsoft.com/en-us/dbdd9e2b-62c7-4938-be84-3dcc77ad454a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public static void Compile (System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsGrammar, System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Compile(class System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsGrammar, class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile(System.Speech.Recognition.SrgsGrammar.SrgsDocument,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="srgsGrammar" Type="System.Speech.Recognition.SrgsGrammar.SrgsDocument" />
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="srgsGrammar">A gramática para compilar.</param>
+        <param name="outputStream">O fluxo que recebe os resultados da compilação.</param>
+        <summary>Compila um <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> objeto em um arquivo de gramática binária com a extensão. cfg e envia a saída para um fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [compilar SRGS gramáticas](http://msdn.microsoft.com/en-us/dbdd9e2b-62c7-4938-be84-3dcc77ad454a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="srgsGrammar" /> é <see langword="null" />.  
+  
+ <paramref name="outputStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public static void Compile (string inputPath, System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Compile(string inputPath, class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile(System.String,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputPath" Type="System.String" />
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="inputPath">O caminho do arquivo para compilar.</param>
+        <param name="outputStream">O fluxo que recebe os resultados da compilação.</param>
+        <summary>Compila um arquivo de gramática de formato XML em um arquivo de gramática binária com a extensão. cfg e envia a saída para um fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo de formato XML de gramática deve estar de acordo com o [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://www.w3.org/TR/speech-grammar/).  
+  
+ Ao acessar arquivos, uma verificação de segurança é executada quando o arquivo é criado ou aberto. A verificação de segurança geralmente não é feita novamente, a menos que o arquivo for fechado e reaberto.  
+  
+ Para obter mais informações, consulte [compilar SRGS gramáticas](http://msdn.microsoft.com/en-us/dbdd9e2b-62c7-4938-be84-3dcc77ad454a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputPath" /> é <see langword="null" />.  
+  
+ <paramref name="outputStream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="inputPath" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Compile">
+      <MemberSignature Language="C#" Value="public static void Compile (System.Xml.XmlReader reader, System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Compile(class System.Xml.XmlReader reader, class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.Compile(System.Xml.XmlReader,System.IO.Stream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> que lê a gramática. A gramática pode residir em um arquivo físico ou na memória.</param>
+        <param name="outputStream">O fluxo que receberá os resultados da compilação.</param>
+        <summary>Compila os dados para um arquivo de gramática de formato XML referenciado por um <see cref="T:System.Xml.XmlReader" /> em um arquivo de gramática binária com a extensão. cfg e envia a saída para um fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo de gramática de formato XML referenciado pelo <xref:System.Xml.XmlReader> devem estar de acordo com o [especificação de gramática de reconhecimento de fala (SRGS) versão 1.0](http://www.w3.org/TR/speech-grammar/).  
+  
+ Para obter mais informações, consulte [compilar SRGS gramáticas](http://msdn.microsoft.com/en-us/dbdd9e2b-62c7-4938-be84-3dcc77ad454a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ <paramref name="outputStream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileClassLibrary">
+      <MemberSignature Language="C#" Value="public static void CompileClassLibrary (System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsGrammar, string outputPath, string[] referencedAssemblies, string keyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CompileClassLibrary(class System.Speech.Recognition.SrgsGrammar.SrgsDocument srgsGrammar, string outputPath, string[] referencedAssemblies, string keyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.CompileClassLibrary(System.Speech.Recognition.SrgsGrammar.SrgsDocument,System.String,System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="srgsGrammar" Type="System.Speech.Recognition.SrgsGrammar.SrgsDocument" />
+        <Parameter Name="outputPath" Type="System.String" />
+        <Parameter Name="referencedAssemblies" Type="System.String[]" />
+        <Parameter Name="keyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="srgsGrammar">O <see cref="T:System.Speech.Recognition.SrgsGrammar.SrgsDocument" /> que contém a gramática para compilar.</param>
+        <param name="outputPath">O caminho da DLL de saída.</param>
+        <param name="referencedAssemblies">Uma lista de assemblies referenciados de entrada gramáticas.</param>
+        <param name="keyFile">O nome do arquivo que contém um par de chaves, habilitando a saída DLL a ser assinado.</param>
+        <summary>Compila um documento SRGS em uma DLL.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="srgsGrammar" /> é <see langword="null" />.  
+  
+ <paramref name="outputPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="outputPath" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileClassLibrary">
+      <MemberSignature Language="C#" Value="public static void CompileClassLibrary (string[] inputPaths, string outputPath, string[] referencedAssemblies, string keyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CompileClassLibrary(string[] inputPaths, string outputPath, string[] referencedAssemblies, string keyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.CompileClassLibrary(System.String[],System.String,System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputPaths" Type="System.String[]" />
+        <Parameter Name="outputPath" Type="System.String" />
+        <Parameter Name="referencedAssemblies" Type="System.String[]" />
+        <Parameter Name="keyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="inputPaths">Uma lista de gramáticas para compilar.</param>
+        <param name="outputPath">O caminho da DLL de saída.</param>
+        <param name="referencedAssemblies">Uma lista de assemblies referenciados de entrada gramáticas.</param>
+        <param name="keyFile">O nome do arquivo que contém um par de chaves, habilitando a saída DLL a ser assinado.</param>
+        <summary>Compila as gramáticas SRGS várias em uma DLL.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="inputPaths" /> é <see langword="null" />.  
+  
+ <paramref name="outputPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="outputPath" /> é uma cadeia de caracteres vazia.  
+  
+ Qualquer elemento do <paramref name="inputPaths" /> matriz é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CompileClassLibrary">
+      <MemberSignature Language="C#" Value="public static void CompileClassLibrary (System.Xml.XmlReader reader, string outputPath, string[] referencedAssemblies, string keyFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CompileClassLibrary(class System.Xml.XmlReader reader, string outputPath, string[] referencedAssemblies, string keyFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.SrgsGrammar.SrgsGrammarCompiler.CompileClassLibrary(System.Xml.XmlReader,System.String,System.String[],System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+        <Parameter Name="outputPath" Type="System.String" />
+        <Parameter Name="referencedAssemblies" Type="System.String[]" />
+        <Parameter Name="keyFile" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> que lê a gramática.</param>
+        <param name="outputPath">O caminho da DLL de saída.</param>
+        <param name="referencedAssemblies">Uma lista de assemblies referenciados de entrada gramáticas.</param>
+        <param name="keyFile">O nome do arquivo que contém um par de chaves, habilitando a saída DLL a ser assinado.</param>
+        <summary>Compila uma gramática SRGS em uma DLL.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="reader" /> é <see langword="null" />.  
+  
+ <paramref name="outputPath" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="outputPath" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

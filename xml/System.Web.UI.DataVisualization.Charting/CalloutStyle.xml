@@ -1,0 +1,137 @@
+<Type Name="CalloutStyle" FullName="System.Web.UI.DataVisualization.Charting.CalloutStyle">
+  <TypeSignature Language="C#" Value="public enum CalloutStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CalloutStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.CalloutStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Representa os estilos de texto explicativo disponíveis. Aplicável somente para anotações de texto explicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.CalloutStyle> enumeração é usada em conjunto com o <xref:System.Web.UI.DataVisualization.Charting.CalloutAnnotation.CalloutStyle%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Borderline">
+      <MemberSignature Language="C#" Value="Borderline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CalloutStyle Borderline = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Borderline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma borda é desenhada ao redor do texto explicativo e uma linha aponta para o ponto de ancoragem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cloud">
+      <MemberSignature Language="C#" Value="Cloud" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CalloutStyle Cloud = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Cloud" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Texto explicativo está dentro da nuvem e nuvens menores apontam para o ponto de ancoragem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ellipse">
+      <MemberSignature Language="C#" Value="Ellipse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CalloutStyle Ellipse = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Ellipse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma elipse é desenhada ao redor do texto explicativo, que está conectado ao ponto de ancoragem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Perspective">
+      <MemberSignature Language="C#" Value="Perspective" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CalloutStyle Perspective = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Perspective" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um retângulo de perspectiva é desenhado ao redor do texto explicativo, que está conectado ao ponto de ancoragem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rectangle">
+      <MemberSignature Language="C#" Value="Rectangle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CalloutStyle Rectangle = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.Rectangle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um retângulo ao redor do texto explicativo, que está conectado ao ponto de ancoragem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RoundedRectangle">
+      <MemberSignature Language="C#" Value="RoundedRectangle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CalloutStyle RoundedRectangle = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.RoundedRectangle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um retângulo arredondado é desenhado ao redor do texto explicativo, que está conectado ao ponto de ancoragem.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SimpleLine">
+      <MemberSignature Language="C#" Value="SimpleLine" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.CalloutStyle SimpleLine = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.CalloutStyle.SimpleLine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.CalloutStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Texto explicativo está sublinhado e pontos de uma linha para o ponto de ancoragem.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

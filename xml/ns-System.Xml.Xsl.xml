@@ -1,0 +1,6 @@
+<Namespace Name="System.Xml.Xsl">
+  <Docs>
+    <summary>O namespace de System.Xml.Xsl fornece suporte para transformações de transformação de folha de estilos extensível (XSLT). Ele dá suporte a recomendação do W3C XSLT (transformações XSL) versão 1.0 (www.w3.org/TR/xslt).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

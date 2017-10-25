@@ -1,0 +1,274 @@
+<Type Name="ProjectTaskInstance" FullName="Microsoft.Build.Execution.ProjectTaskInstance">
+  <TypeSignature Language="C#" Value="public sealed class ProjectTaskInstance : Microsoft.Build.Execution.ProjectTargetInstanceChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProjectTaskInstance extends Microsoft.Build.Execution.ProjectTargetInstanceChild" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.ProjectTaskInstance" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Execution.ProjectTargetInstanceChild</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Name={name} Condition={condition} ContinueOnError={continueOnError} MSBuildRuntime={MSBuildRuntime} MSBuildArchitecture={MSBuildArchitecture} #Parameters={parameters.Count} #Outputs={outputs.Count}")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula um [(MSBuild) do elemento de tarefa](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma classe imutável  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public override string Condition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Condition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o atributo de condição não avaliado dessa tarefa.</summary>
+        <value>Retorna o valor do atributo Condition. Retorna uma cadeia de caracteres vazia caso o atributo não esteja presente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConditionLocation">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Construction.ElementLocation ConditionLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ConditionLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.ConditionLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local da condição, se houver algum</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnError">
+      <MemberSignature Language="C#" Value="public string ContinueOnError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContinueOnError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.ContinueOnError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o atributo ContinueOnError não avaliado da tarefa.</summary>
+        <value>Retorna o atributo ContinueOnError não avaliado da tarefa. Retorna uma cadeia de caracteres vazia caso o atributo não esteja presente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [elemento Task (MSBuild)](http://msdn.microsoft.com/library/d82e2485-e5f0-4936-a357-745bacccc299) e [como: ignorar erros em tarefas](http://msdn.microsoft.com/library/e2f1ca4f-787b-44bd-bc64-81a036025e96).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnErrorLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation ContinueOnErrorLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation ContinueOnErrorLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.ContinueOnErrorLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo ContinueOnError, se houver</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public override Microsoft.Build.Construction.ElementLocation Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation Location" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do elemento original</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildArchitecture">
+      <MemberSignature Language="C#" Value="public string MSBuildArchitecture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildArchitecture" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.MSBuildArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não avaliado MSBuildArchitecture na tarefa.  
+  
+ Pode ser uma cadeia de caracteres vazia.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildArchitectureLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation MSBuildArchitectureLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation MSBuildArchitectureLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.MSBuildArchitectureLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo MSBuildArchitecture, se houver</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildRuntime">
+      <MemberSignature Language="C#" Value="public string MSBuildRuntime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildRuntime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.MSBuildRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Não avaliado MSBuildRuntime na tarefa.  
+  
+ Pode ser uma cadeia de caracteres vazia.</summary>
+        <value>Retorna <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildRuntimeLocation">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Construction.ElementLocation MSBuildRuntimeLocation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Construction.ElementLocation MSBuildRuntimeLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.MSBuildRuntimeLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Construction.ElementLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Local do atributo MSBuildRuntime, se houver</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Construction.ElementLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da tarefa, possivelmente qualificado, como ele aparece no projeto.</summary>
+        <value>Retorna o nome da tarefa, possivelmente qualificado, como ele aparece no projeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectTaskInstanceChild&gt; Outputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Build.Execution.ProjectTaskInstanceChild&gt; Outputs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Build.Execution.ProjectTaskInstanceChild&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto ordenado de objetos de propriedade e o item de saída dessa tarefa.</summary>
+        <value>Retorna um conjunto ordenado de objetos de propriedade e o item de saída da tarefa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma coleção somente leitura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectTaskInstance.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto não ordenado de nomes de parâmetro de tarefas e valores não avaliados dessa tarefa.</summary>
+        <value>Retorna um conjunto não ordenado de nomes de parâmetro de tarefas e valores não avaliados dessa tarefa.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma coleção somente leitura.  
+  
+ Condição e atributos ContinueOnError que têm suas próprias propriedades, não são incluídos na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

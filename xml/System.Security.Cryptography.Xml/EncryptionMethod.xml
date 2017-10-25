@@ -1,0 +1,246 @@
+<Type Name="EncryptionMethod" FullName="System.Security.Cryptography.Xml.EncryptionMethod">
+  <TypeSignature Language="C#" Value="public class EncryptionMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EncryptionMethod extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.Xml.EncryptionMethod" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula o algoritmo de criptografia usado para a criptografia XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `<EncryptionMethod>` marca usa um identificador de recurso uniforme (URI) para identificar o algoritmo de criptografia deve ser usado para descriptografar os dados XML.  O <xref:System.Security.Cryptography.Xml.EncryptionMethod> classe encapsula o `<EncryptionMethod>` marca definida pela especificação de criptografia de XML do World Wide Web Consortium localizado em http://www.w3.org/TR/xmlenc-core/.  
+  
+ Use o <xref:System.Security.Cryptography.Xml.EncryptionMethod> classe para identificar o algoritmo de criptografia associado a <xref:System.Security.Cryptography.Xml.EncryptedData> elemento ou o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento.  
+  
+ Use um dos identificadores de URI definidos pela especificação de criptografia de XML do World Wide Web Consortium em http://www.w3.org/TR/xmlenc-core/.  Todos os identificadores URI são acessíveis como campos estáticos do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe de utilitário simples que usa o <xref:System.Security.Cryptography.TripleDES> o algoritmo para criptografar um documento XML.  
+  
+ [!code-cpp[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/VB/sample.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como criptografar um documento XML usando uma chave simétrica. Este exemplo não inclui quaisquer informações de chave no documento XML criptografado.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptionMethod ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionMethod.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa uma nova instância do <xref:System.Security.Cryptography.Xml.EncryptionMethod> classe sem especificar o identificador de URI (Uniform Resource) de um algoritmo de criptografia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EncryptionMethod (string strAlgorithm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string strAlgorithm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionMethod.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="algorithm" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="strAlgorithm">To be added.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" /> classe especificando um algoritmo de identificador de recurso uniforme (URI).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa uma nova instância do <xref:System.Security.Cryptography.Xml.EncryptionMethod> classe usando o URI de um algoritmo de criptografia.  
+  
+ Use um dos identificadores de URI definidos pela especificação de criptografia de XML do World Wide Web Consortium em http://www.w3.org/TR/xmlenc-core/.  Todos os identificadores URI são acessíveis como campos estáticos do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma classe de utilitário simples que usa o <xref:System.Security.Cryptography.TripleDES> o algoritmo para criptografar um documento XML.  
+  
+ [!code-cpp[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/CPP/sample.cpp#1)]
+ [!code-csharp[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.MainXMLEncDecryptDataOOP#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.MainXMLEncDecryptDataOOP/VB/sample.vb#1)]  
+  
+ O exemplo de código a seguir demonstra como criptografar um documento XML usando uma chave simétrica. Este exemplo não inclui quaisquer informações de chave no documento XML criptografado.  
+  
+ [!code-cpp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CPP/Cryptography.XML.XMLEncMinimalDecryptData.cpp#1)]
+ [!code-csharp[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/CS/sample.cs#1)]
+ [!code-vb[Cryptography.XML.XMLEncMinimalDecryptData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.XML.XMLEncMinimalDecryptData/VB/sample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement GetXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Xml.XmlElement GetXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionMethod.GetXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Xml.XmlElement" /> que encapsula uma instância do objeto de <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" /> classe.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlElement" /> que encapsula uma instância do objeto de <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" /> classe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.EncryptionMethod.GetXml%2A> método retorna uma representação de `<EncryptionMethod>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyAlgorithm">
+      <MemberSignature Language="C#" Value="public string KeyAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionMethod.KeyAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um identificador de recursos uniforme (URI) que descreve o algoritmo a ser usado para criptografia XML.</summary>
+        <value>Um URI Uniform Resource Identifier () que descreve o algoritmo a ser usado para criptografia de XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.EncryptionMethod.KeyAlgorithm%2A> propriedade descreve o identificador de URI (Uniform Resource) do algoritmo de criptografia usado para criptografar dados associados a um o <xref:System.Security.Cryptography.Xml.EncryptedData> elemento ou o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento.  
+  
+ Use um dos identificadores de URI definidos pela especificação de criptografia de XML do World Wide Web Consortium em http://www.w3.org/TR/xmlenc-core/.  Todos os identificadores URI são acessíveis como campos estáticos do <xref:System.Security.Cryptography.Xml.EncryptedXml> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeySize">
+      <MemberSignature Language="C#" Value="public int KeySize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 KeySize" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.Xml.EncryptionMethod.KeySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho de chave de algoritmo usado para criptografia de XML.</summary>
+        <value>O algoritmo tamanho da chave, em bits, usado para criptografia de XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.EncryptionMethod.KeySize%2A> propriedade descreve o tamanho da chave do algoritmo de criptografia usado para criptografar dados associados a um o <xref:System.Security.Cryptography.Xml.EncryptedData> elemento ou o <xref:System.Security.Cryptography.Xml.EncryptedKey> elemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Security.Cryptography.Xml.EncryptionMethod.KeySize" /> propriedade foi definida como um valor que era menor do que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadXml">
+      <MemberSignature Language="C#" Value="public void LoadXml (System.Xml.XmlElement value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadXml(class System.Xml.XmlElement value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.Xml.EncryptionMethod.LoadXml(System.Xml.XmlElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Xml.XmlElement" /> objeto a ser analisado.</param>
+        <summary>Analisa especificado <see cref="T:System.Xml.XmlElement" /> do objeto e configura o estado interno do <see cref="T:System.Security.Cryptography.Xml.EncryptionMethod" /> objeto para corresponder.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Cryptography.Xml.EncryptionMethod.LoadXml%2A> método configura o <xref:System.Security.Cryptography.Xml.EncryptionMethod> objeto para corresponder o estado de um <xref:System.Xml.XmlElement> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O tamanho da chave é expresso no <paramref name="value" /> parâmetro era menor do que 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

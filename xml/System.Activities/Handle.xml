@@ -1,0 +1,156 @@
+<Type Name="Handle" FullName="System.Activities.Handle">
+  <TypeSignature Language="C#" Value="public abstract class Handle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Handle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Handle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um tipo que tem seu tempo de vida controlado pelo tempo de execução do fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos derivados de <xref:System.Activities.Handle> ter suas vidas úteis controladas pelo tempo de execução de fluxo de trabalho. Para variáveis de fluxo de trabalho dos tipos de identificador, o tempo de execução usa o construtor padrão necessários para criar uma instância do tipo e o atribui para a <xref:System.Activities.Variable>e chama <xref:System.Activities.Handle.OnInitialize%2A> ao inicializar o ambiente. Quando a variável sai do escopo, <xref:System.Activities.Handle.OnUninitialize%2A> é chamado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Handle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Handle" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes que derivam de <xref:System.Activities.Handle> deve fornecer um construtor padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionPropertyName">
+      <MemberSignature Language="C#" Value="public string ExecutionPropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExecutionPropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Handle.ExecutionPropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome a ser usado por este <see cref="T:System.Activities.Handle" /> quando adicionada às propriedades de execução de uma atividade.</summary>
+        <value>O nome do tipo derivado conforme fornecido por <see cref="P:System.Type.FullName" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInitialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnInitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnInitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.OnInitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O ambiente no qual o identificador é criado.</param>
+        <summary>Chamado pelo tempo de execução do fluxo de trabalho quando o ambiente que contém o <see cref="T:System.Activities.Handle" /> é inicializado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUninitialize">
+      <MemberSignature Language="C#" Value="protected virtual void OnUninitialize (System.Activities.HandleInitializationContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUninitialize(class System.Activities.HandleInitializationContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.OnUninitialize(System.Activities.HandleInitializationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.HandleInitializationContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O ambiente no qual o identificador foi criado.</param>
+        <summary>Chamado pelo tempo de execução do fluxo de trabalho quando o <see cref="T:System.Activities.Variable" /> para o <see cref="T:System.Activities.Handle" /> sai do escopo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Activities.ActivityInstance Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.ActivityInstance Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Handle.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Activities.ActivityInstance" /> que contém o <see cref="T:System.Activities.Variable" /> que contém o <see cref="T:System.Activities.Handle" />.</summary>
+        <value>A instância de atividade que contém o <see cref="T:System.Activities.Variable" /> que contém o <see cref="T:System.Activities.Handle" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowIfUninitialized">
+      <MemberSignature Language="C#" Value="protected void ThrowIfUninitialized ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ThrowIfUninitialized() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Handle.ThrowIfUninitialized" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera um <see cref="T:System.InvalidOperationException" /> se o <see cref="T:System.Activities.Handle" /> não foi inicializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Handle.ThrowIfUninitialized%2A>Fornece um método conveniente para chamar a partir de qualquer métodos ou propriedades da classe derivada que não são válidas de autores de classe derivado de identificador personalizado se o <xref:System.Activities.Handle> não foi inicializado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

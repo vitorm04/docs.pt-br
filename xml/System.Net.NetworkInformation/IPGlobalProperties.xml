@@ -1,0 +1,1062 @@
+<Type Name="IPGlobalProperties" FullName="System.Net.NetworkInformation.IPGlobalProperties">
+  <TypeSignature Language="C#" Value="public abstract class IPGlobalProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IPGlobalProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IPGlobalProperties" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre a conectividade de rede do computador local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece informações de configuração e estatísticas sobre interfaces de rede e a conexões de rede do computador local.  
+  
+ As informações fornecidas por esta classe são semelhantes àquela fornecida pelas funções de API do auxiliar de protocolo de Internet. Para obter informações sobre o auxiliar de protocolo de Internet, consulte a documentação na biblioteca MSDN.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações sobre o computador local usando uma instância dessa classe.  
+  
+ [!code-cpp[NclNetInfo2#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfo2/CPP/networkexamples.cpp#15)]
+ [!code-csharp[NclNetInfo2#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfo2/CS/networkexamples.cs#15)]
+ [!code-vb[NclNetInfo2#15](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLNetInfo2/VB/networkexamples.vb#15)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IPGlobalProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.IPGlobalProperties" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado somente por classes derivadas de <xref:System.Net.NetworkInformation.IPGlobalProperties>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetUnicastAddresses">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginGetUnicastAddresses (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginGetUnicastAddresses(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses(System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O delegado <see cref="T:System.AsyncCallback" />.</param>
+        <param name="state">Um objeto que contém informações de estado para essa solicitação.</param>
+        <summary>Inicia uma solicitação assíncrona para recuperar a tabela de endereço IP de unicast estável no computador local.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que faz referência à solicitação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para oferecer suporte a conexões de saída ou para aceitar conexões de entrada em uma interface Teredo, aplicativos precisam garantir que a interface Teredo esteja ativado e pronto para uso. Isso ocorre porque o Teredo pode entrar em um estado de dormência quando não usada por um período de tempo.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> método permite que um aplicativo assincronamente recuperar a lista de endereços IP unicast estável. O <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType> propriedade pode ser usada para determinar se um endereço IP é um endereço IPv6 Teredo com o prefixo de 2001::/ / 32.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> método também retorna Teredo não aborda e fornece uma maneira mais conveniente de obter o unicast endereços IP para um sistema que enumerando todas as <xref:System.Net.NetworkInformation.NetworkInterface?displayProperty=nameWithType> objetos em um computador local e consultando os endereços IP associados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotImplementedException">Este método não está implementado na plataforma. Esse método usa nativo <see langword="NotifyStableUnicastIpAddressTable" /> função que tem suporte no Windows Vista e posterior.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">A chamada para o nativo <see langword="NotifyStableUnicastIpAddressTable" /> Falha na função.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DhcpScopeName">
+      <MemberSignature Language="C#" Value="public abstract string DhcpScopeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DhcpScopeName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPGlobalProperties.DhcpScopeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do escopo de protocolo de configuração de Host dinâmico (DHCP).</summary>
+        <value>Um <see cref="T:System.String" /> instância que contém o nome do escopo DHCP do computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um escopo DHCP é um agrupamento administrativo de computadores em rede que estão na mesma sub-rede.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de rede para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#15)]
+ [!code-csharp[NCLNetInfoReport#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">Falha em uma chamada de função do Win32.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainName">
+      <MemberSignature Language="C#" Value="public abstract string DomainName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DomainName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPGlobalProperties.DomainName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o domínio em que o computador local está registrado.</summary>
+        <value>Uma instância <see cref="T:System.String" /> que contém o nome de domínio do computador. Se o computador não pertence a um domínio, retorna <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de rede para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#15)]
+ [!code-csharp[NCLNetInfoReport#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">Falha em uma chamada de função do Win32.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetUnicastAddresses">
+      <MemberSignature Language="C#" Value="public virtual System.Net.NetworkInformation.UnicastIPAddressInformationCollection EndGetUnicastAddresses (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.UnicastIPAddressInformationCollection EndGetUnicastAddresses(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.UnicastIPAddressInformationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Um <see cref="T:System.IAsyncResult" /> que faz referência à solicitação assíncrona.</param>
+        <summary>Termina uma solicitação assíncrona pendente para recuperar a tabela de endereço IP de unicast estável no computador local.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que armazena informações de estado e dados definidos pelo usuário para essa operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para oferecer suporte a conexões de saída ou para aceitar conexões de entrada em uma interface Teredo, aplicativos precisam garantir que a interface Teredo esteja ativado e pronto para uso. Isso ocorre porque o Teredo pode entrar em um estado de dormência quando não usada por um período de tempo.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> método permite que um aplicativo assincronamente recuperar a lista de endereços IP unicast estável. O <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType> propriedade pode ser usada para determinar se um endereço IP é um endereço IPv6 Teredo com o prefixo de 2001::/ / 32.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> método termina uma solicitação assíncrona pendente para recuperar a tabela de endereço IP de unicast estável.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> método também retorna Teredo não aborda e fornece uma maneira mais conveniente de obter o unicast endereços IP para um sistema que enumerando todas as <xref:System.Net.NetworkInformation.NetworkInterface?displayProperty=nameWithType> objetos em um computador local e consultando os endereços IP associados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para o nativo <see langword="GetAdaptersAddresses" /> Falha na função.</exception>
+        <exception cref="T:System.NotImplementedException">Este método não está implementado na plataforma. Esse método usa nativo <see langword="NotifyStableUnicastIpAddressTable" /> função que tem suporte no Windows Vista e posterior.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem necessário <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" /> permissão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActiveTcpConnections">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.TcpConnectionInformation[] GetActiveTcpConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.TcpConnectionInformation[] GetActiveTcpConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetActiveTcpConnections" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpConnectionInformation[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações sobre as conexões do protocolo TCP IPv4 (Protocolo IP versão 4) e IPv6 no computador local.</summary>
+        <returns>Uma matriz <see cref="T:System.Net.NetworkInformation.TcpConnectionInformation" /> que contém objetos que descrevem as conexões TCP ativas ou uma matriz vazia se não houver conexões TCP ativas detectadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os objetos retornados por este método incluem conexões em todos os estados TCP, exceto o <xref:System.Net.NetworkInformation.TcpState.Listen> estado. Você pode verificar o estado de uma conexão com a chamada <xref:System.Net.NetworkInformation.TcpConnectionInformation.State%2A>.  
+  
+ O protocolo TCP é definido em IETF RFC 793. Observe que os objetos retornados por este método refletem as conexões a partir da hora em que a matriz é criada. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe informações de ponto de extremidade para conexões TCP ativas.  
+  
+ [!code-cpp[NCLNetInfoReport#17](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#17)]
+ [!code-csharp[NCLNetInfoReport#17](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A função Win32 <see langword="GetTcpTable" /> falhou.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActiveTcpListeners">
+      <MemberSignature Language="C#" Value="public abstract System.Net.IPEndPoint[] GetActiveTcpListeners ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.IPEndPoint[] GetActiveTcpListeners() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetActiveTcpListeners" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações de ponto de extremidade sobre os ouvintes TCP (Transmission Control Protocol) IPv4 e IPv6 no computador local.</summary>
+        <returns>Uma matriz <see cref="T:System.Net.IPEndPoint" /> que contém objetos que descrevem os ouvintes TCP ativos ou uma matriz vazia se não houver ouvintes TCP ativos detectados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os objetos retornados por este método incluem ouvintes em todos os estados TCP, exceto o <xref:System.Net.NetworkInformation.TcpState.Listen> estado.  
+  
+ O protocolo TCP é definido em IETF RFC 793. Observe que os objetos retornados por este método refletem as conexões a partir da hora em que a matriz é criada. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de ponto de extremidade para os ouvintes TCP ativas.  
+  
+ [!code-cpp[NCLNetInfoReport#18](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#18)]
+ [!code-csharp[NCLNetInfoReport#18](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#18)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A função Win32 <see langword="GetTcpTable" /> falhou.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActiveUdpListeners">
+      <MemberSignature Language="C#" Value="public abstract System.Net.IPEndPoint[] GetActiveUdpListeners ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.IPEndPoint[] GetActiveUdpListeners() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetActiveUdpListeners" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações sobre os ouvintes do IPv4 (protocolo IP versão 4) e do UDP (protocolo UDP) IPv6 no computador local.</summary>
+        <returns>Uma matriz <see cref="T:System.Net.IPEndPoint" /> que contém objetos que descrevem os ouvintes UDP ou uma matriz vazia se nenhum ouvinte UDP for detectado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ UDP é um protocolo de camada de transporte sem conexão que é responsável por enviar e receber datagramas. Ela é definida em IETF RFC 768.  
+  
+ Um ouvinte UDP é um soquete que aguarda e recebe datagramas UDP. Como UDP é um protocolo sem conexão, o ouvinte não mantém uma conexão para um ponto de extremidade remoto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe os ouvintes UDP ativos.  
+  
+ [!code-cpp[NCLNetInfoReport#19](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#19)]
+ [!code-csharp[NCLNetInfoReport#19](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#19)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para a função <see langword="GetUdpTable" /> do Win32 falhou.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIcmpV4Statistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IcmpV4Statistics GetIcmpV4Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.IcmpV4Statistics GetIcmpV4Statistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetIcmpV4Statistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IcmpV4Statistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece dados de estatísticas do controle mensagem ICMP (Internet Protocol) versão 4 para o computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.IcmpV4Statistics" /> objeto que fornece estatísticas de tráfego ICMP versão 4 para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O ICMP é um conjunto de mensagens para uso com o protocolo IP versão 4 (IPv4). ICMP é usado por nós de IPv4 para relatar erros encontrados no processamento de pacotes de dados e executar outras funções de camada de Internet. Versão 4 do ICMP é definido em IETF RFC 792.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego de versão 4 de ICMP que estão disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.IcmpV4Statistics> documentação de classe. Observe que o <xref:System.Net.NetworkInformation.IcmpV4Statistics> objeto retornado por esse método reflete as estatísticas a partir da hora em que o objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as estatísticas de ICMPv4 atuais.  
+  
+ [!code-cpp[NCLNetInfoReport#6](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#6)]
+ [!code-csharp[NCLNetInfoReport#6](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A função Win32 <see langword="GetIcmpStatistics" /> falhou.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIcmpV6Statistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IcmpV6Statistics GetIcmpV6Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.IcmpV6Statistics GetIcmpV6Statistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetIcmpV6Statistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IcmpV6Statistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece dados de estatísticas do controle mensagem ICMP (Internet Protocol) versão 6 para o computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.IcmpV6Statistics" /> objeto que fornece estatísticas de tráfego ICMP versão 6 para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Versão 6 o ICMP é um conjunto de mensagens para uso com o protocolo IP versão 6 (IPv6). ICMP é usado por nós de IPv6 para relatar erros encontrados no processamento de pacotes de dados e executar outras funções de camada de Internet. ICMP versão 6 é definida em IETF RFC 1885.  
+  
+ Não há suporte para o protocolo IPv6 para computadores com Windows 2000 ou sistemas operacionais anteriores.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego ICMP versão 6 disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.IcmpV6Statistics> documentação de classe. Observe que o <xref:System.Net.NetworkInformation.IcmpV6Statistics> objeto retornado por esse método reflete as estatísticas a partir da hora em que o objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as estatísticas de ICMPv6 atuais.  
+  
+ [!code-cpp[NCLNetInfoReport#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#7)]
+ [!code-csharp[NCLNetInfoReport#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A função Win32 <see langword="GetIcmpStatisticsEx" /> falhou.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Sistema operacional do computador local não for o Windows XP ou posterior.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIPGlobalProperties">
+      <MemberSignature Language="C#" Value="public static System.Net.NetworkInformation.IPGlobalProperties GetIPGlobalProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.NetworkInformation.IPGlobalProperties GetIPGlobalProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPGlobalProperties</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um objeto que fornece informações sobre as estatísticas de tráfego e conectividade de rede do computador local.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.IPGlobalProperties" /> que contém informações sobre o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado por esse método é um tipo fornecido pelo sistema que deriva de <xref:System.Net.NetworkInformation.IPGlobalProperties> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações sobre o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#15)]
+ [!code-csharp[NCLNetInfoReport#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIPv4GlobalStatistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPGlobalStatistics GetIPv4GlobalStatistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.IPGlobalStatistics GetIPv4GlobalStatistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetIPv4GlobalStatistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPGlobalStatistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece o protocolo IP versão 4 (IPv4) os dados estatísticos para o computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.IPGlobalStatistics" /> objeto que fornece estatísticas de tráfego IPv4 para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O IPv4 é um protocolo de camada de rede que é responsável por pacotes de dados do seu computador de origem para o destino de roteamento.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego IP disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.IPGlobalStatistics> documentação de classe. Observe que o objeto retornado por esse método reflete as estatísticas a partir da hora de <xref:System.Net.NetworkInformation.IPGlobalStatistics> objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas IP para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#1)]
+ [!code-csharp[NCLNetInfoReport#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para a função <see langword="GetIpStatistics" /> do Win32 falhou.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIPv6GlobalStatistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.IPGlobalStatistics GetIPv6GlobalStatistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.IPGlobalStatistics GetIPv6GlobalStatistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetIPv6GlobalStatistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.IPGlobalStatistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece o protocolo IP versão 6 (IPv6) os dados estatísticos para o computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.IPGlobalStatistics" /> objeto que fornece estatísticas de tráfego IPv6 para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O IPv6 é um protocolo de camada de rede responsável por pacotes de dados do seu computador de origem para o destino de roteamento. Não há suporte para o protocolo IPv6 em computadores com Windows 2000 ou sistemas operacionais anteriores.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego IP disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.IPGlobalStatistics> documentação de classe. Observe que o objeto retornado por esse método reflete as estatísticas a partir da hora de <xref:System.Net.NetworkInformation.IPGlobalStatistics> objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe as estatísticas IP para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#1](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#1)]
+ [!code-csharp[NCLNetInfoReport#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para a função <see langword="GetIpStatistics" /> do Win32 falhou.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O computador local não está executando um sistema operacional que dá suporte a IPv6.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTcpIPv4Statistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.TcpStatistics GetTcpIPv4Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.TcpStatistics GetTcpIPv4Statistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetTcpIPv4Statistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpStatistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece os dados estatísticos do TCP/IPv4 (protocolo TCP/protocolo IP versão 4) para o computador local.</summary>
+        <returns>Um objeto <see cref="T:System.Net.NetworkInformation.TcpStatistics" /> que fornece estatísticas de tráfego TCP/IPv4 para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O TCP é um protocolo de camada de transporte que é responsável por enviar e receber pacotes de dados de forma confiável. Ela é definida em IETF RFC 793.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego TCP disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.TcpStatistics> documentação de classe. Observe que o objeto retornado por esse método reflete as estatísticas a partir da hora de <xref:System.Net.NetworkInformation.TcpStatistics> objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as estatísticas de TCP/IP para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#2)]
+ [!code-csharp[NCLNetInfoReport#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para a função <see langword="GetTcpStatistics" /> do Win32 falhou.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTcpIPv6Statistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.TcpStatistics GetTcpIPv6Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.TcpStatistics GetTcpIPv6Statistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetTcpIPv6Statistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.TcpStatistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece a versão Transmission Control Protocol/Internet Protocol 6 (TCP/IPv6) os dados estatísticos para o computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.TcpStatistics" /> objeto que fornece estatísticas de tráfego TCP/IPv6 para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O TCP é um protocolo de camada de transporte responsável por enviar e receber pacotes de dados de forma confiável. Ela é definida em IETF RFC 793.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego TCP que estão disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.TcpStatistics> documentação de classe. Observe que o objeto retornado por esse método reflete as estatísticas a partir da hora de <xref:System.Net.NetworkInformation.TcpStatistics> objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as estatísticas de TCP/IP para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#2)]
+ [!code-csharp[NCLNetInfoReport#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para a função <see langword="GetTcpStatistics" /> do Win32 falhou.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O computador local não está executando um sistema operacional que dá suporte a IPv6.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUdpIPv4Statistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.UdpStatistics GetUdpIPv4Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.UdpStatistics GetUdpIPv4Statistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetUdpIPv4Statistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.UdpStatistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece usuário Datagram Protocol/Internet Protocol versão 4 (IPv4/UDP) os dados estatísticos para o computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.UdpStatistics" /> objeto que fornece estatísticas de tráfego IPv4/UDP para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ UDP é um protocolo de camada de transporte sem conexão que é responsável por enviar e receber datagramas. Ela é definida em IETF RFC 768.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego UDP que estão disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.UdpStatistics> documentação de classe. Observe que o objeto retornado por esse método reflete as estatísticas a partir da hora de <xref:System.Net.NetworkInformation.UdpStatistics> objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as estatísticas UDP/IP para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">Falha na chamada para a função GetUdpStatistics do Win32.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUdpIPv6Statistics">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.UdpStatistics GetUdpIPv6Statistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.UdpStatistics GetUdpIPv6Statistics() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetUdpIPv6Statistics" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.UdpStatistics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece usuário Datagram Protocol/Internet Protocol versão 6 (UDP/IPv6) os dados estatísticos para o computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.UdpStatistics" /> objeto que fornece estatísticas de tráfego UDP/IPv6 para o computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ UDP é um protocolo de camada de transporte sem conexão que é responsável por enviar e receber datagramas. Ela é definida em IETF RFC 768.  
+  
+ Para obter detalhes sobre as estatísticas de tráfego UDP que estão disponíveis para aplicativos, consulte o <xref:System.Net.NetworkInformation.UdpStatistics> documentação de classe. Observe que o objeto retornado por esse método reflete as estatísticas a partir da hora de <xref:System.Net.NetworkInformation.UdpStatistics> objeto é criado. Essas informações não são atualizadas dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe as estatísticas UDP/IP para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#3](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#3)]
+ [!code-csharp[NCLNetInfoReport#3](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para a função <see langword="GetUdpStatistics" /> do Win32 falhou.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">O computador local não está executando um sistema operacional que dá suporte a IPv6.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnicastAddresses">
+      <MemberSignature Language="C#" Value="public virtual System.Net.NetworkInformation.UnicastIPAddressInformationCollection GetUnicastAddresses ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Net.NetworkInformation.UnicastIPAddressInformationCollection GetUnicastAddresses() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.UnicastIPAddressInformationCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a tabela de endereço IP de unicast estável no computador local.</summary>
+        <returns>Um <see cref="T:System.Net.NetworkInformation.UnicastIPAddressInformationCollection" /> que contém uma lista de endereços IP de unicast estável no computador local.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para oferecer suporte a conexões de saída ou para aceitar conexões de entrada em uma interface Teredo, aplicativos precisam garantir que a interface Teredo esteja ativado e pronto para uso. Isso ocorre porque o Teredo pode entrar em um estado de dormência quando não usada por um período de tempo.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> método permitirá um aplicativo para recuperar a lista de endereços IP unicast estável. O <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType> propriedade pode ser usada para determinar se um endereço IP é um endereço IPv6 Teredo com o prefixo de 2001::/ / 32.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> método também retorna Teredo não aborda e fornece uma maneira mais conveniente de obter o unicast endereços IP para um sistema que enumerando todas as <xref:System.Net.NetworkInformation.NetworkInterface?displayProperty=nameWithType> objetos em um computador local e consultando os endereços IP associados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para o nativo <see langword="GetAdaptersAddresses" /> Falha na função.</exception>
+        <exception cref="T:System.NotImplementedException">Este método não está implementado na plataforma. Esse método usa nativo <see langword="NotifyStableUnicastIpAddressTable" /> função que tem suporte no Windows Vista e posterior.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem necessário <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" /> permissão.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">A chamada para o nativo <see langword="NotifyStableUnicastIpAddressTable" /> Falha na função.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUnicastAddressesAsync">
+      <MemberSignature Language="C#" Value="public virtual System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.UnicastIPAddressInformationCollection&gt; GetUnicastAddressesAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.NetworkInformation.UnicastIPAddressInformationCollection&gt; GetUnicastAddressesAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddressesAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.NetworkInformation.UnicastIPAddressInformationCollection&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a tabela de endereço IP de unicast estável no computador local como uma operação assíncrona.</summary>
+        <returns>Retorna <see cref="T:System.Threading.Tasks.Task`1" />.  
+  
+ O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para oferecer suporte a conexões de saída ou para aceitar conexões de entrada em uma interface Teredo, aplicativos precisam garantir que a interface Teredo esteja ativado e pronto para uso. Isso ocorre porque o Teredo pode entrar em um estado de dormência quando não usada por um período de tempo.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddressesAsync%2A> método permitirá um aplicativo para recuperar a lista de endereços IP unicast estável como operação assíncrona. O <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType> propriedade pode ser usada para determinar se um endereço IP é um endereço IPv6 Teredo com o prefixo de 2001::/ / 32.  
+  
+ O <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> método também retorna Teredo não aborda e fornece uma maneira mais conveniente de obter o unicast endereços IP para um sistema que enumerando todas as <xref:System.Net.NetworkInformation.NetworkInterface?displayProperty=nameWithType> objetos em um computador local e consultando os endereços IP associados.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">A chamada para o nativo <see langword="GetAdaptersAddresses" /> Falha na função.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem necessário <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" /> permissão.</exception>
+        <exception cref="T:System.ComponentModel.Win32Exception">A chamada para o nativo <see langword="NotifyStableUnicastIpAddressTable" /> Falha na função.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public abstract string HostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPGlobalProperties.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do host do computador local.</summary>
+        <value>Uma instância de <see cref="T:System.String" /> que contém o nome NetBIOS do computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade chama a função auxiliar de IP nativo, GetNetworkParams, que retorna uma estrutura FIXED_INFO que contém o host de NetBIOS de cadeia de caracteres do nome. A cadeia de caracteres de nome de host é truncada quando ele exceder 15 caracteres.  
+  
+ Nome NetBIOS do computador deve ser exclusivo dentro da rede e não está totalmente qualificado pelo nome de domínio.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de rede para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#15)]
+ [!code-csharp[NCLNetInfoReport#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">Falha em uma chamada de função do Win32.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWinsProxy">
+      <MemberSignature Language="C#" Value="public abstract bool IsWinsProxy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWinsProxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPGlobalProperties.IsWinsProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Boolean" /> valor que especifica se o computador local está agindo como um proxy de serviço de nome na Internet do Windows (WINS).</summary>
+        <value>
+          <see langword="true" />Se o computador local é um proxy WINS; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O WINS fornece um banco de dados distribuído para registrar e consultar os nomes de NetBIOS dinâmicos para mapeamentos de endereço IP.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de rede para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#15)]
+ [!code-csharp[NCLNetInfoReport#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">Falha em uma chamada de função do Win32.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public abstract System.Net.NetworkInformation.NetBiosNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.NetworkInformation.NetBiosNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPGlobalProperties.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkInformation.NetBiosNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de nó do sistema de entrada/saída básico de rede (NetBIOS) do computador local.</summary>
+        <value>Um valor <see cref="T:System.Net.NetworkInformation.NetBiosNodeType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de nó determina a maneira na qual os nomes NetBIOS são resolvidos para endereços IP. Para obter informações adicionais, consulte o <xref:System.Net.NetworkInformation.NetBiosNodeType> visão geral da classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações de rede para o computador local.  
+  
+ [!code-cpp[NCLNetInfoReport#15](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLNetInfoReport/CPP/netinfo.cpp#15)]
+ [!code-csharp[NCLNetInfoReport#15](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLNetInfoReport/CS/netinfo.cs#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Net.NetworkInformation.NetworkInformationException">Falha em uma chamada de função do Win32.</exception>
+        <permission cref="T:System.Net.NetworkInformation.NetworkInformationPermission">para ler as informações de rede. Enumeração associada: <see cref="F:System.Net.NetworkInformation.NetworkInformationAccess.Read" />.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

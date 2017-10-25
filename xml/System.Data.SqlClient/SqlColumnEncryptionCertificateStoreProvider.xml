@@ -1,0 +1,105 @@
+<Type Name="SqlColumnEncryptionCertificateStoreProvider" FullName="System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider">
+  <TypeSignature Language="C#" Value="public class SqlColumnEncryptionCertificateStoreProvider : System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlColumnEncryptionCertificateStoreProvider extends System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A implementação do provedor de repositório de chaves para repositório de certificados do Windows. Essa classe permite o uso de certificados armazenados no repositório de certificados do Windows como chaves mestras de coluna. Para obter detalhes, consulte [sempre criptografado](https://msdn.microsoft.com/library/mt163865.aspx).</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlColumnEncryptionCertificateStoreProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Provedor de repositório de chaves para repositório de certificados do Windows.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptColumnEncryptionKey">
+      <MemberSignature Language="C#" Value="public override byte[] DecryptColumnEncryptionKey (string masterKeyPath, string encryptionAlgorithm, byte[] encryptedColumnEncryptionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DecryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, unsigned int8[] encryptedColumnEncryptionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.DecryptColumnEncryptionKey(System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterKeyPath" Type="System.String" />
+        <Parameter Name="encryptionAlgorithm" Type="System.String" />
+        <Parameter Name="encryptedColumnEncryptionKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="masterKeyPath">O caminho da chave mestra.</param>
+        <param name="encryptionAlgorithm">O algoritmo de criptografia. Atualmente, o único valor válido é: <c>RSA_OAEP</c></param>
+        <param name="encryptedColumnEncryptionKey">A chave de criptografia de coluna criptografada.</param>
+        <summary>Descriptografa o valor criptografado especificado de uma chave de criptografia de coluna. O valor criptografado deve ser criptografado usando o certificado com o caminho da chave especificado e o algoritmo especificado. O formato do caminho da chave deve ser "computador Local/meu/&lt;certificate_thumbrint&gt;" ou "atual usuário/Meus/&lt;certificate_thumbprint&gt;".</summary>
+        <returns>Retorna <see cref="T:System.Byte" />.   
+A chave de criptografia de coluna descriptografada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptColumnEncryptionKey">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptColumnEncryptionKey (string masterKeyPath, string encryptionAlgorithm, byte[] columnEncryptionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] EncryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, unsigned int8[] columnEncryptionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.EncryptColumnEncryptionKey(System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterKeyPath" Type="System.String" />
+        <Parameter Name="encryptionAlgorithm" Type="System.String" />
+        <Parameter Name="columnEncryptionKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="masterKeyPath">O caminho da chave mestra.</param>
+        <param name="encryptionAlgorithm">O algoritmo de criptografia. Atualmente, o único valor válido é: <c>RSA_OAEP</c></param>
+        <param name="columnEncryptionKey">A chave de criptografia de coluna criptografada.</param>
+        <summary>Criptografa uma chave de criptografia de coluna usando o certificado com o caminho da chave especificado e o algoritmo especificado. O formato do caminho da chave deve ser "computador Local/meu/&lt;certificate_thumbrint&gt;" ou "atual usuário/Meus/&lt;certificate_thumbprint&gt;".</summary>
+        <returns>Retorna <see cref="T:System.Byte" />.   
+A chave de criptografia de coluna criptografada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public const string ProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ProviderName" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlColumnEncryptionCertificateStoreProvider.ProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do provedor.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

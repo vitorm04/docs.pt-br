@@ -1,0 +1,804 @@
+<Type Name="DataGridViewHeaderCell" FullName="System.Windows.Forms.DataGridViewHeaderCell">
+  <TypeSignature Language="C#" Value="public class DataGridViewHeaderCell : System.Windows.Forms.DataGridViewCell" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewHeaderCell extends System.Windows.Forms.DataGridViewCell" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewHeaderCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.DataGridViewCell</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém funcionalidade comum para células de cabeçalho de linha e células de cabeçalho de coluna.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é uma classe base para outras classes de célula de cabeçalho, como <xref:System.Windows.Forms.DataGridViewRowHeaderCell> e <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>. Para criar ícones de cabeçalho de linha personalizado ou glifos de cabeçalho de coluna, herdam o <xref:System.Windows.Forms.DataGridViewHeaderCell> classe e adiciona a funcionalidade para pintar o seu próprio ícone ou glifo.  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você deriva de <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> e adicionar novas propriedades para a classe derivada, certifique-se de substituir o <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.Clone" /> método para copiar as novas propriedades durante operações de clonagem. Você também deve chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.Clone" /> método para que as propriedades da classe base são copiadas para a nova célula.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewHeaderCell ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonState">
+      <MemberSignature Language="C#" Value="protected System.Windows.Forms.ButtonState ButtonState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ButtonState ButtonState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.ButtonState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado visual buttonlike da célula de cabeçalho.</summary>
+        <value>Um dos valores <see cref="T:System.Windows.Forms.ButtonState" />; o padrão é <see cref="F:System.Windows.Forms.ButtonState.Normal" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.DataGridViewHeaderCell> é como um botão em que ele pode ser clicado para definir os estados, como classificação ou executar a seleção do nível de linha. O <xref:System.Windows.Forms.DataGridViewHeaderCell.ButtonState%2A> usos de propriedade <xref:System.Windows.Forms.ButtonState?displayProperty=nameWithType> valores para fornecer buttonlike estados visuais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia exata desta célula.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> clonado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Windows.Forms.DataGridViewHeaderCell.Clone%2A> método sempre que derivam de <xref:System.Windows.Forms.DataGridViewHeaderCell> e adicionar novas propriedades para a classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.Clone" /> em uma classe derivada, chame a classe base <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.Clone" /> método para que as propriedades da classe base são copiadas para a nova célula e certifique-se de também copiar os valores de todas as propriedades que foram adicionados à classe derivada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Displayed">
+      <MemberSignature Language="C#" Value="public override bool Displayed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Displayed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.Displayed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a célula é exibida na tela no momento.</summary>
+        <value>
+          <see langword="true" /> se a célula estiver na tela ou parcialmente na tela, caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormattedValueType">
+      <MemberSignature Language="C#" Value="public override Type FormattedValueType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type FormattedValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.FormattedValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do valor formatado da célula.</summary>
+        <value>Um <see cref="T:System.Type" /> objeto representando o <see cref="T:System.String" /> tipo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propriedade é o objeto de dados reais contido na célula, enquanto o <xref:System.Windows.Forms.DataGridViewCell.FormattedValue%2A> propriedade é a representação de formatação dos dados. O <xref:System.Windows.Forms.DataGridViewHeaderCell.ValueType%2A> e <xref:System.Windows.Forms.DataGridViewHeaderCell.FormattedValueType%2A> propriedades correspondem aos tipos de dados desses valores, respectivamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frozen">
+      <MemberSignature Language="C#" Value="public override bool Frozen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Frozen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.Frozen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a célula está congelada.</summary>
+        <value>
+          <see langword="true" /> se a célula está congelada; caso contrário, <see langword="false" />. O padrão é <see langword="false" /> se a célula é desanexada de um <see cref="T:System.Windows.Forms.DataGridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewHeaderCell.Frozen%2A> é de propriedade `true` se a célula pertence a uma linha congelada ou coluna, ou se a célula é a célula do cabeçalho esquerda superior. Uma célula, linha ou coluna está congelada quando seu <xref:System.Windows.Forms.DataGridViewElement.State%2A> propriedade tem um valor de<xref:System.Windows.Forms.DataGridViewElementStates?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInheritedContextMenuStrip">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.ContextMenuStrip GetInheritedContextMenuStrip (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Forms.ContextMenuStrip GetInheritedContextMenuStrip(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.GetInheritedContextMenuStrip(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">Ignorado por esta implementação.</param>
+        <summary>Obtém o menu de atalho da célula de cabeçalho.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.ContextMenuStrip" /> se o <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> ou <see cref="T:System.Windows.Forms.DataGridView" /> tem um menu de atalho atribuído; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.DataGridViewHeaderCell> não tem um menu de atalho, o <xref:System.Windows.Forms.DataGridViewHeaderCell> herdará o menu de atalho do <xref:System.Windows.Forms.DataGridView>. Se o <xref:System.Windows.Forms.DataGridView> também não tem um menu de atalho, em seguida, o <xref:System.Windows.Forms.DataGridViewHeaderCell.GetInheritedContextMenuStrip%2A> método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInheritedState">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.DataGridViewElementStates GetInheritedState (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.Windows.Forms.DataGridViewElementStates GetInheritedState(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.GetInheritedState(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridViewElementStates</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha que contém a célula ou -1 se a célula não é uma célula de cabeçalho de linha ou não está contida em um <see cref="T:System.Windows.Forms.DataGridView" /> controle.</param>
+        <summary>Retorna um valor que indica o estado atual da célula como herdadas do estado de linha ou coluna.</summary>
+        <returns>Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> valores que representam o estado atual da célula.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">A célula é uma célula de cabeçalho de linha, a célula não está contida em um <see cref="T:System.Windows.Forms.DataGridView" /> controle, e <paramref name="rowIndex" /> não é -1.  
+  
+ \- ou -  
+  
+ A célula é uma célula de cabeçalho de linha, a célula está dentro de um <see cref="T:System.Windows.Forms.DataGridView" /> controle, e <paramref name="rowIndex" /> está fora do intervalo válido de 0 até o número de linhas no controle menos 1.  
+  
+ \- ou -  
+  
+ A célula é uma célula de cabeçalho de linha e <paramref name="rowIndex" /> não é o índice da linha que contém essa célula.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A célula é uma célula de cabeçalho de coluna ou o controle <see cref="P:System.Windows.Forms.DataGridView.TopLeftHeaderCell" /> e <paramref name="rowIndex" /> não é -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSize">
+      <MemberSignature Language="C#" Value="protected override System.Drawing.Size GetSize (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Drawing.Size GetSize(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.GetSize(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice de linha da célula de cabeçalho.</param>
+        <summary>Obtém o tamanho da célula.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que representa o tamanho da célula de cabeçalho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewHeaderCell.GetSize%2A> método retorna o tamanho necessário para se ajustar em uma linha de cabeçalhos de coluna, se a célula de cabeçalho é um cabeçalho de coluna, o tamanho necessário para se ajustar em uma coluna de cabeçalhos de linha, se a célula de cabeçalho é um cabeçalho de linha ou o tamanho necessário para ser um <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell> se a célula é uma célula do cabeçalho esquerda superior.  
+  
+ Se a célula não está anexada a um <xref:System.Windows.Forms.DataGridView>, o <xref:System.Windows.Forms.DataGridViewCell.Size%2A> propriedade o <xref:System.Windows.Forms.DataGridViewHeaderCell> retorna o valor (-1, -1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de <see cref="P:System.Windows.Forms.DataGridViewElement.DataGridView" /> é de propriedade dessa célula <see langword="null" /> e <paramref name="rowIndex" /> não é igual a -1.  
+  
+ -ou-  
+  
+ O valor da <see cref="P:System.Windows.Forms.DataGridViewCell.OwningColumn" /> não é de propriedade dessa célula <see langword="null" /> e <paramref name="rowIndex" /> não é igual a -1.  
+  
+ -ou-  
+  
+ O valor da <see cref="P:System.Windows.Forms.DataGridViewCell.OwningRow" /> não é de propriedade dessa célula <see langword="null" /> e <paramref name="rowIndex" /> é menor que zero ou maior que ou igual ao número de linhas no controle.  
+  
+ -ou-  
+  
+ Os valores a <see cref="P:System.Windows.Forms.DataGridViewCell.OwningColumn" /> e <see cref="P:System.Windows.Forms.DataGridViewCell.OwningRow" /> propriedades dessa célula são ambos <see langword="null" /> e <paramref name="rowIndex" /> não é igual a -1.</exception>
+        <exception cref="T:System.ArgumentException">O valor da <see cref="P:System.Windows.Forms.DataGridViewCell.OwningRow" /> propriedade dessa célula não é <see langword="null" /> e <paramref name="rowIndex" /> indica uma linha que o <see cref="P:System.Windows.Forms.DataGridViewCell.OwningRow" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="protected override object GetValue (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetValue(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.GetValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha pai da célula.</param>
+        <summary>Obtém o valor da célula.</summary>
+        <returns>O valor atual <see cref="T:System.Windows.Forms.DataGridViewCell" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="rowIndex" />não é -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseDownUnsharesRow">
+      <MemberSignature Language="C#" Value="protected override bool MouseDownUnsharesRow (System.Windows.Forms.DataGridViewCellMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool MouseDownUnsharesRow(class System.Windows.Forms.DataGridViewCellMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.MouseDownUnsharesRow(System.Windows.Forms.DataGridViewCellMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewCellMouseEventArgs" /> que contém informações sobre a posição do mouse.</param>
+        <summary>Indica se uma linha ser descompartilhada quando o botão do mouse é pressionado enquanto o ponteiro está em uma célula na linha.</summary>
+        <returns>
+          <see langword="true" />Se o usuário clica com o botão esquerdo do mouse, estilos visuais estiverem habilitados e o <see cref="P:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles" /> é de propriedade <see langword="true" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre como habilitar estilos visuais, consulte o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método.  
+  
+ <xref:System.Windows.Forms.DataGridViewHeaderCell.MouseDownUnsharesRow%2A>é chamado antes <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseDown%2A>. Ele deve retornar `true` se a chamada para <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseDown%2A> tem o efeito de descompartilhar a linha `rowIndex`. Ele deverá retornar `false` caso contrário.  
+  
+ Para obter mais informações sobre compartilhamento de linha, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseEnterUnsharesRow">
+      <MemberSignature Language="C#" Value="protected override bool MouseEnterUnsharesRow (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool MouseEnterUnsharesRow(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.MouseEnterUnsharesRow(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha que inseriu o ponteiro do mouse.</param>
+        <summary>Indica se uma linha ser descompartilhada quando o ponteiro do mouse se move sobre uma célula na linha.</summary>
+        <returns>
+          <see langword="true" />Se esses estilos estejam habilitados e o <see cref="P:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles" /> é de propriedade <see langword="true" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre como habilitar estilos visuais, consulte o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método.  
+  
+ <xref:System.Windows.Forms.DataGridViewHeaderCell.MouseEnterUnsharesRow%2A>é chamado antes <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseEnter%2A>. Ele deve retornar `true` se a chamada para <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseEnter%2A> tem o efeito de descompartilhar a linha `rowIndex`. Ele deverá retornar `false` caso contrário.  
+  
+ Para obter mais informações sobre compartilhamento de linha, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.MouseEnterUnsharesRow(System.Int32)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.MouseEnterUnsharesRow(System.Int32)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseLeaveUnsharesRow">
+      <MemberSignature Language="C#" Value="protected override bool MouseLeaveUnsharesRow (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool MouseLeaveUnsharesRow(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.MouseLeaveUnsharesRow(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha que o ponteiro do mouse à esquerda.</param>
+        <summary>Indica se uma linha ser descompartilhada quando o ponteiro do mouse sai da linha.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Windows.Forms.DataGridViewHeaderCell.ButtonState" /> o valor da propriedade não é <see cref="F:System.Windows.Forms.ButtonState.Normal" />, estilos visuais estiverem habilitados e o <see cref="P:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles" /> é de propriedade <see langword="true" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre como habilitar estilos visuais, consulte o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método.  
+  
+ <xref:System.Windows.Forms.DataGridViewHeaderCell.MouseLeaveUnsharesRow%2A>é chamado antes <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseLeave%2A>. Ele deve retornar `true` se a chamada para <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseLeave%2A> tem o efeito de descompartilhar a linha `rowIndex`. Ele deverá retornar `false` caso contrário.  
+  
+ Para obter mais informações sobre compartilhamento de linha, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseUpUnsharesRow">
+      <MemberSignature Language="C#" Value="protected override bool MouseUpUnsharesRow (System.Windows.Forms.DataGridViewCellMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool MouseUpUnsharesRow(class System.Windows.Forms.DataGridViewCellMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.MouseUpUnsharesRow(System.Windows.Forms.DataGridViewCellMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewCellMouseEventArgs" /> que contém informações sobre a posição do mouse.</param>
+        <summary>Indica se uma linha ser descompartilhada quando o botão do mouse é liberado enquanto o ponteiro está em uma célula na linha.</summary>
+        <returns>
+          <see langword="true" />Se o botão esquerdo foi liberado, estilos visuais estiverem habilitados e o <see cref="P:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles" /> é de propriedade <see langword="true" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre como habilitar estilos visuais, consulte o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método.  
+  
+ <xref:System.Windows.Forms.DataGridViewHeaderCell.MouseUpUnsharesRow%2A>é chamado antes <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseUp%2A>. Ele deve retornar `true` se a chamada para <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseUp%2A> tem o efeito de descompartilhar a linha `rowIndex`. Ele deverá retornar `false` caso contrário.  
+  
+ Para obter mais informações sobre compartilhamento de linha, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseDown (System.Windows.Forms.DataGridViewCellMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseDown(class System.Windows.Forms.DataGridViewCellMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseDown(System.Windows.Forms.DataGridViewCellMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewCellMouseEventArgs" /> que contém informações sobre a posição do mouse.</param>
+        <summary>Chamado quando o botão do mouse é pressionado enquanto o ponteiro está em uma célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseDown%2A> método define o <xref:System.Windows.Forms.DataGridViewHeaderCell.ButtonState%2A> para <xref:System.Windows.Forms.ButtonState.Pushed> se a célula é clicada com o botão esquerdo do mouse e estilos visuais são habilitados para cabeçalhos. Para obter mais informações sobre estilos visuais para cabeçalhos, consulte o <xref:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles%2A?displayProperty=nameWithType> propriedade.  
+  
+ Esse método é semelhante de <xref:System.Windows.Forms.DataGridView.OnCellMouseDown%2A?displayProperty=nameWithType> método. As mesmas circunstâncias em que ele é chamado um <xref:System.Windows.Forms.DataGridView.CellMouseDown?displayProperty=nameWithType> é gerado, mas ele não gera o evento realmente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseDown(System.Windows.Forms.DataGridViewCellMouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseDown(System.Windows.Forms.DataGridViewCellMouseEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseEnter">
+      <MemberSignature Language="C#" Value="protected override void OnMouseEnter (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseEnter(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseEnter(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha que contém a célula.</param>
+        <summary>Chamado quando o ponteiro do mouse entra na célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseEnter%2A> método define o <xref:System.Windows.Forms.DataGridViewHeaderCell.ButtonState%2A> para <xref:System.Windows.Forms.ButtonState.Pushed> se o botão esquerdo do mouse é pressionado quando o ponteiro entra na célula e estilos visuais são habilitados para cabeçalhos. Para obter mais informações sobre estilos visuais para cabeçalhos, consulte o <xref:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles%2A?displayProperty=nameWithType> propriedade.  
+  
+ Esse método é semelhante de <xref:System.Windows.Forms.DataGridView.OnCellMouseEnter%2A?displayProperty=nameWithType> método. As mesmas circunstâncias em que ele é chamado um <xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=nameWithType> é gerado, mas ele não gera o evento realmente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseEnter(System.Int32)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseEnter(System.Int32)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeave">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeave (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeave(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseLeave(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha que contém a célula.</param>
+        <summary>Chamado quando o ponteiro do mouse sai da célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseLeave%2A> método define o <xref:System.Windows.Forms.DataGridViewHeaderCell.ButtonState%2A> para <xref:System.Windows.Forms.ButtonState.Normal> se ele estava em estado de outro e estilos visuais são habilitados para cabeçalhos. Para obter mais informações sobre estilos visuais para cabeçalhos, consulte o <xref:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles%2A?displayProperty=nameWithType> propriedade.  
+  
+ Esse método é semelhante de <xref:System.Windows.Forms.DataGridView.OnCellMouseLeave%2A?displayProperty=nameWithType> método. As mesmas circunstâncias em que ele é chamado um <xref:System.Windows.Forms.DataGridView.CellMouseLeave?displayProperty=nameWithType> é gerado, mas ele não gera o evento realmente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseLeave(System.Int32)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseLeave(System.Int32)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseUp">
+      <MemberSignature Language="C#" Value="protected override void OnMouseUp (System.Windows.Forms.DataGridViewCellMouseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseUp(class System.Windows.Forms.DataGridViewCellMouseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseUp(System.Windows.Forms.DataGridViewCellMouseEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.DataGridViewCellMouseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewCellMouseEventArgs" /> que contém informações sobre a posição do mouse.</param>
+        <summary>Chamado quando o botão do mouse é liberado enquanto o ponteiro está sobre a célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridViewHeaderCell.OnMouseUp%2A> método define o <xref:System.Windows.Forms.DataGridViewHeaderCell.ButtonState%2A> para <xref:System.Windows.Forms.ButtonState.Normal> se o botão esquerdo foi liberado e estilos visuais são habilitados para cabeçalhos. Para obter mais informações sobre estilos visuais para cabeçalhos, consulte o <xref:System.Windows.Forms.DataGridView.EnableHeadersVisualStyles%2A?displayProperty=nameWithType> propriedade.  
+  
+ Esse método é semelhante de <xref:System.Windows.Forms.DataGridView.OnCellMouseUp%2A?displayProperty=nameWithType> método. As mesmas circunstâncias em que ele é chamado um <xref:System.Windows.Forms.DataGridView.CellMouseUp?displayProperty=nameWithType> é gerado, mas ele não gera o evento realmente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseUp(System.Windows.Forms.DataGridViewCellMouseEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.DataGridViewHeaderCell.OnMouseUp(System.Windows.Forms.DataGridViewCellMouseEventArgs)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected override void Paint (System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, System.Windows.Forms.DataGridViewElementStates dataGridViewElementState, object value, object formattedValue, string errorText, System.Windows.Forms.DataGridViewCellStyle cellStyle, System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, System.Windows.Forms.DataGridViewPaintParts paintParts);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Paint(class System.Drawing.Graphics graphics, valuetype System.Drawing.Rectangle clipBounds, valuetype System.Drawing.Rectangle cellBounds, int32 rowIndex, valuetype System.Windows.Forms.DataGridViewElementStates dataGridViewElementState, object value, object formattedValue, string errorText, class System.Windows.Forms.DataGridViewCellStyle cellStyle, class System.Windows.Forms.DataGridViewAdvancedBorderStyle advancedBorderStyle, valuetype System.Windows.Forms.DataGridViewPaintParts paintParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Rectangle,System.Int32,System.Windows.Forms.DataGridViewElementStates,System.Object,System.Object,System.String,System.Windows.Forms.DataGridViewCellStyle,System.Windows.Forms.DataGridViewAdvancedBorderStyle,System.Windows.Forms.DataGridViewPaintParts)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="graphics" Type="System.Drawing.Graphics" />
+        <Parameter Name="clipBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="cellBounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="rowIndex" Type="System.Int32" />
+        <Parameter Name="dataGridViewElementState" Type="System.Windows.Forms.DataGridViewElementStates" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="formattedValue" Type="System.Object" />
+        <Parameter Name="errorText" Type="System.String" />
+        <Parameter Name="cellStyle" Type="System.Windows.Forms.DataGridViewCellStyle" />
+        <Parameter Name="advancedBorderStyle" Type="System.Windows.Forms.DataGridViewAdvancedBorderStyle" />
+        <Parameter Name="paintParts" Type="System.Windows.Forms.DataGridViewPaintParts" />
+      </Parameters>
+      <Docs>
+        <param name="graphics">O <see cref="T:System.Drawing.Graphics" /> usado para pintar a célula.</param>
+        <param name="clipBounds">Um <see cref="T:System.Drawing.Rectangle" /> que representa a área do <see cref="T:System.Windows.Forms.DataGridView" /> que precisa ser pintada novamente.</param>
+        <param name="cellBounds">Um <see cref="T:System.Drawing.Rectangle" /> que contém os limites da célula que está sendo pintada.</param>
+        <param name="rowIndex">O índice de linha da célula que está sendo pintada.</param>
+        <param name="dataGridViewElementState">Uma combinação bit a bit de <see cref="T:System.Windows.Forms.DataGridViewElementStates" /> valores que especifica o estado da célula.</param>
+        <param name="value">Os dados da célula que está sendo pintada.</param>
+        <param name="formattedValue">Os dados formatados da célula que está sendo pintada.</param>
+        <param name="errorText">Uma mensagem de erro que é associada à célula.</param>
+        <param name="cellStyle">Um <see cref="T:System.Windows.Forms.DataGridViewCellStyle" /> que contém informações de formatação e estilo sobre a célula.</param>
+        <param name="advancedBorderStyle">Um <see cref="T:System.Windows.Forms.DataGridViewAdvancedBorderStyle" /> que contém estilos de borda para a célula que está sendo pintada.</param>
+        <param name="paintParts">Uma combinação bit a bit dos valores <see cref="T:System.Windows.Forms.DataGridViewPaintParts" /> que especificam quais partes da célula precisam ser pintadas.</param>
+        <summary>Pinta o <see cref="T:System.Windows.Forms.DataGridViewHeaderCell" /> atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public override bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a célula de cabeçalho é somente leitura.</summary>
+        <value>
+          <see langword="true" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Uma operação tenta definir essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Resizable">
+      <MemberSignature Language="C#" Value="public override bool Resizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Resizable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.Resizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a célula é redimensionável.</summary>
+        <value>
+          <see langword="true" />Se essa célula pode ser redimensionada; Caso contrário, <see langword="false" />. O padrão é <see langword="false" /> se a célula não está anexada a um <see cref="T:System.Windows.Forms.DataGridView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma célula de cabeçalho de linha pode ser redimensionada se a linha pode ser redimensionada ou o <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A> está definida como <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.EnableResizing>. Uma célula de cabeçalho de coluna é redimensionável se a coluna é redimensionável ou <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A> está definida como <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public override bool Selected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Selected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.Selected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a célula estiver selecionada.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade não é significativa para células de cabeçalho.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade está sendo definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewHeaderCell.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que descreve o objeto atual.</summary>
+        <returns>Uma cadeia de caracteres que representa o objeto atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueType">
+      <MemberSignature Language="C#" Value="public override Type ValueType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ValueType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.ValueType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do valor armazenado na célula.</summary>
+        <value>Um <see cref="T:System.Type" /> objeto representando o <see cref="T:System.String" /> tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewHeaderCell.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a célula estiver visível ou não.</summary>
+        <value>
+          <see langword="true" /> se a célula estiver visível; caso contrário, <see langword="false" />. O padrão é <see langword="false" /> se a célula é desanexada de um<see cref="T:System.Windows.Forms.DataGridView" /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a célula é uma célula de cabeçalho de linha, ela é visível se a linha estiver visível e o <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A> é de propriedade `true`. Se a célula é uma célula de cabeçalho de coluna, é visível se uma coluna está visível e o <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> é de propriedade `true`. Se a célula a célula do cabeçalho esquerda superior é visível se <xref:System.Windows.Forms.DataGridView.RowHeadersVisible%2A> e <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> forem verdadeiras.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

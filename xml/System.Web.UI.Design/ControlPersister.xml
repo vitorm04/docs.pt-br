@@ -1,0 +1,300 @@
+<Type Name="ControlPersister" FullName="System.Web.UI.Design.ControlPersister">
+  <TypeSignature Language="C#" Value="public sealed class ControlPersister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ControlPersister extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ControlPersister" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para persistir controles de servidor Web em tempo de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlPersister> classe fornece métodos que podem manter uma <xref:System.Web.UI.Control> controle ou um <xref:System.Web.UI.ITemplate> implementação de interface como uma cadeia de caracteres de código aspx. A implementação desses métodos é controlada por atributos de metadados, como o <xref:System.ComponentModel.DefaultValueAttribute>, <xref:System.Web.UI.PersistenceModeAttribute>, e <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>.  
+  
+> [!NOTE]
+>  O designer de página Web Forms não oferece suporte a <code> Reset <em> PropertyName </em> </code> opcionalmente exposto por controles com base em formulários do Microsoft Windows para a persistência da propriedade.  
+  
+ Para criar um <xref:System.Web.UI.Control> objeto ou um <xref:System.Web.UI.ITemplate> analisando uma cadeia de caracteres de dados de persistência de modelo ou controle de interface, use o <xref:System.Web.UI.Design.ControlParser> métodos de classe.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ControlParserPersisterExample#1](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#1)]
+ [!code-csharp[ControlParserPersisterExample#1](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#1)]
+ [!code-vb[ControlParserPersisterExample#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static string PersistControl (System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistControl(class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> para manter.</param>
+        <summary>Obtém uma cadeia de caracteres de dados que representa o formulário persistente do controle especificado.</summary>
+        <returns>Uma cadeia de caracteres que representa o formulário persistente do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação funcione corretamente. Esse método usa o <xref:System.Web.UI.Control.Site%2A> do controle especificado para recuperar o designer host.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ControlParserPersisterExample#3](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#3)]
+ [!code-csharp[ControlParserPersisterExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#3)]
+ [!code-vb[ControlParserPersisterExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static void PersistControl (System.IO.TextWriter sw, System.Web.UI.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistControl(class System.IO.TextWriter sw, class System.Web.UI.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.IO.TextWriter,System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sw" Type="System.IO.TextWriter" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="sw">O <see cref="T:System.IO.TextWriter" /> para saída de dados de controle persistente para.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> para manter.</param>
+        <summary>Produz uma cadeia de caracteres de dados que representa o formulário persistente do controle especificado especificado <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação funcione corretamente. Esse método usa o <xref:System.Web.UI.Control.Site%2A> do controle especificado para recuperar o designer host.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static string PersistControl (System.Web.UI.Control control, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistControl(class System.Web.UI.Control control, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.Web.UI.Control,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> para manter.</param>
+        <param name="host">Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que é o host de designer para o controle.</param>
+        <summary>Obtém uma cadeia de caracteres de dados que representa o formulário persistente do controle especificado, usando o designer de host especificado.</summary>
+        <returns>Uma cadeia de caracteres que representa o formulário persistente do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação funcione corretamente.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ControlParserPersisterExample#3](~/samples/snippets/cpp/VS_Snippets_WebNet/ControlParserPersisterExample/CPP/webcustomcontrol1.cpp#3)]
+ [!code-csharp[ControlParserPersisterExample#3](~/samples/snippets/csharp/VS_Snippets_WebNet/ControlParserPersisterExample/CS/webcustomcontrol1.cs#3)]
+ [!code-vb[ControlParserPersisterExample#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/ControlParserPersisterExample/VB/webcustomcontrol1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistControl">
+      <MemberSignature Language="C#" Value="public static void PersistControl (System.IO.TextWriter sw, System.Web.UI.Control control, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistControl(class System.IO.TextWriter sw, class System.Web.UI.Control control, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistControl(System.IO.TextWriter,System.Web.UI.Control,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sw" Type="System.IO.TextWriter" />
+        <Parameter Name="control" Type="System.Web.UI.Control" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="sw">O <see cref="T:System.IO.TextWriter" /> para saída de dados de controle persistente para.</param>
+        <param name="control">O <see cref="T:System.Web.UI.Control" /> para manter.</param>
+        <param name="host">Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que é o host de designer para o controle.</param>
+        <summary>Produz uma cadeia de caracteres de dados que representa o formulário persistente do controle especificado especificado <see cref="T:System.IO.TextWriter" />, usando o designer de host especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação funcione corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistInnerProperties">
+      <MemberSignature Language="C#" Value="public static string PersistInnerProperties (object component, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistInnerProperties(object component, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistInnerProperties(System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para persistir as propriedades internas.</param>
+        <param name="host">Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que é o host de designer para o controle.</param>
+        <summary>Obtém uma cadeia de caracteres de dados que podem persistir as propriedades internas do controle especificado.</summary>
+        <returns>Uma cadeia de caracteres que contém as informações para persistir sobre as propriedades internas do controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação funcione corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistInnerProperties">
+      <MemberSignature Language="C#" Value="public static void PersistInnerProperties (System.IO.TextWriter sw, object component, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistInnerProperties(class System.IO.TextWriter sw, object component, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistInnerProperties(System.IO.TextWriter,System.Object,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sw" Type="System.IO.TextWriter" />
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="sw">O <see cref="T:System.IO.TextWriter" /> a ser usado.</param>
+        <param name="component">O componente para manter.</param>
+        <param name="host">Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que é o host de designer para o controle.</param>
+        <summary>Produz uma cadeia de caracteres de dados que podem persistir as propriedades internas do controle especificado especificado <see cref="T:System.IO.TextWriter" />, usando o designer de host especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação funcione corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistTemplate">
+      <MemberSignature Language="C#" Value="public static string PersistTemplate (System.Web.UI.ITemplate template, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string PersistTemplate(class System.Web.UI.ITemplate template, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistTemplate(System.Web.UI.ITemplate,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="template">O modelo para manter.</param>
+        <param name="host">Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que é o host de designer para o controle.</param>
+        <summary>Obtém uma cadeia de caracteres de dados que representa o formulário persistente do modelo especificado.</summary>
+        <returns>Uma cadeia de caracteres que representa o formulário persistente do modelo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlPersister.PersistTemplate%2A> método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação de interface para funcionar corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistTemplate">
+      <MemberSignature Language="C#" Value="public static void PersistTemplate (System.IO.TextWriter writer, System.Web.UI.ITemplate template, System.ComponentModel.Design.IDesignerHost host);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void PersistTemplate(class System.IO.TextWriter writer, class System.Web.UI.ITemplate template, class System.ComponentModel.Design.IDesignerHost host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ControlPersister.PersistTemplate(System.IO.TextWriter,System.Web.UI.ITemplate,System.ComponentModel.Design.IDesignerHost)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="template" Type="System.Web.UI.ITemplate" />
+        <Parameter Name="host" Type="System.ComponentModel.Design.IDesignerHost" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.IO.TextWriter" /> para gravar os dados de modelo persistente para.</param>
+        <param name="template">O modelo para manter.</param>
+        <param name="host">Um <see cref="T:System.ComponentModel.Design.IDesignerHost" /> que é o host de designer para o controle.</param>
+        <summary>Grava uma cadeia de caracteres de dados que representa o formulário persistente do modelo especificado especificado <see cref="T:System.IO.TextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.ControlPersister.PersistTemplate%2A> método exige um <xref:System.ComponentModel.Design.IDesignerHost> implementação de interface para funcionar corretamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

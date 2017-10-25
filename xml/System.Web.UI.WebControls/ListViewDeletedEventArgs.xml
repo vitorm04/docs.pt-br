@@ -1,0 +1,267 @@
+<Type Name="ListViewDeletedEventArgs" FullName="System.Web.UI.WebControls.ListViewDeletedEventArgs">
+  <TypeSignature Language="C#" Value="public class ListViewDeletedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewDeletedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewDeletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Web.UI.WebControls.ListView.ItemDeleted" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListView> controlar gera o <xref:System.Web.UI.WebControls.ListView.ItemDeleted> evento quando um botão de exclusão no controle é clicado ou <xref:System.Web.UI.WebControls.ListView.DeleteItem%2A> método é chamado, mas após o <xref:System.Web.UI.WebControls.ListView> controle exclui o item. (Um botão de exclusão é um botão cujo `CommandName` estiver definida como "Excluir".) Isso permite que você forneça um método de manipulação de eventos que executa uma rotina personalizada sempre que esse evento ocorre, como verificar os resultados de uma operação de exclusão.  
+  
+ Um <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs> objeto é passado para o método de manipulação de eventos. Esse objeto permite que você determine o número de itens afetados e todas as exceções que possam ter ocorrido. Para determinar o número de itens que foram afetados pela operação de exclusão, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.AffectedRows%2A> propriedade. Para determinar se qualquer exceção ocorreu, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Exception%2A> propriedade. Você pode indicar se você tratou a exceção no método de manipulação de eventos, definindo o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.ExceptionHandled%2A> propriedade.  
+  
+> [!NOTE]
+>  Se ocorrer uma exceção durante a operação de exclusão e a <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.ExceptionHandled%2A> está definida como `false`, o <xref:System.Web.UI.WebControls.ListView> controle gera novamente a exceção.  
+  
+ Para acessar os campos de chave do item excluído, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Keys%2A> propriedade. Para acessar os campos de não-chave do item excluído, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Values%2A> propriedade. Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs> de classe, consulte o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs> objeto para determinar se ocorreu uma exceção durante uma operação de exclusão. O <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs> objeto é passado para o método de manipulação de eventos para o <xref:System.Web.UI.WebControls.ListView.ItemDeleted> evento.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/CS/ListViewDeletedEventArgsCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/VB/ListViewDeletedEventArgsVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewDeletedEventArgs (int affectedRows, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 affectedRows, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewDeletedEventArgs.#ctor(System.Int32,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="affectedRows" Type="System.Int32" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="affectedRows">O número de linhas afetadas pela operação de exclusão.</param>
+        <param name="exception">A exceção que foi gerada quando a operação de exclusão foi executada, se houver. Se nenhuma exceção foi gerada, use <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewDeletedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs> classe.  
+  
+> [!NOTE]
+>  Este construtor é usado principalmente por desenvolvedores de controle quando elas geram eventos.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.AffectedRows%2A>|O valor de `affectedRows` parâmetro.|  
+|<xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Exception%2A>|O valor de `e` parâmetro.|  
+|<xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.ExceptionHandled%2A>|`false`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AffectedRows">
+      <MemberSignature Language="C#" Value="public int AffectedRows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AffectedRows" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeletedEventArgs.AffectedRows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de linhas afetadas pela operação de exclusão.</summary>
+        <value>O número de linhas afetadas pela operação de exclusão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.AffectedRows%2A> para determinar o número de itens que foram afetados pela operação de exclusão, conforme relatado pelo controle de fonte de dados. Essa propriedade normalmente é usada para determinar se o número correto de itens excluído das seguintes maneiras:  
+  
+-   Para verificar se apenas um único item foi excluído. Às vezes, uma instrução delete escrito incorretamente pode excluir vários itens.  
+  
+-   Para verificar se um item foi excluído se ocorrer um erro durante a operação de exclusão, mas nenhuma exceção foi gerada.  
+  
+-   Para verificar se um item foi excluído quando um controle de fonte de dados que oferece suporte a simultaneidade otimista (como o <xref:System.Web.UI.WebControls.SqlDataSource> e <xref:System.Web.UI.WebControls.ObjectDataSource> controles) tem seu <xref:System.Web.UI.WebControls.SqlDataSource.ConflictDetection%2A> propriedade definida como o `ConflictOptions.CompareAllValues` valor de enumeração. Sob essa configuração, um item que foi modificado por outro usuário não pode ser excluído.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.AffectedRows%2A> propriedade para verificar se um item foi excluído durante a operação de exclusão.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/CS/ListViewDeletedEventArgsCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/VB/ListViewDeletedEventArgsVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeletedEventArgs.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção, se houver, que foi gerado durante a operação de exclusão.</summary>
+        <value>A exceção foi elevada durante a operação de exclusão, se houver; Caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Exception%2A> propriedade para obter a exceção foi elevada durante a operação de exclusão, se houver. Se nenhuma exceção tiver sido acionada, essa propriedade retornará `null`.  
+  
+> [!NOTE]
+>  Se uma exceção foi gerada e lidar com a exceção no caso de manipulador, defina o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.ExceptionHandled%2A> propriedade `true`. Caso contrário, o <xref:System.Web.UI.WebControls.ListView> controle gera novamente a exceção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Exception%2A> propriedade para determinar se uma exceção ocorreu durante uma operação de exclusão.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/CS/ListViewDeletedEventArgsCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/VB/ListViewDeletedEventArgsVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExceptionHandled">
+      <MemberSignature Language="C#" Value="public bool ExceptionHandled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExceptionHandled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeletedEventArgs.ExceptionHandled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma exceção foi elevada durante a operação de exclusão foi tratada no evento manipulador.</summary>
+        <value>
+          <see langword="true" />Se a exceção foi tratada no evento manipulador; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma exceção é gerada durante a operação de exclusão, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.ExceptionHandled%2A> propriedade para indicar se você tratou a exceção durante o evento. Se essa propriedade é definida como `true`, a exceção será considerada tratadas e não é gerada novamente. Se essa propriedade é definida como `false`, o <xref:System.Web.UI.WebControls.ListView> controle gera novamente a exceção. Para determinar qual exceção foi gerada, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Exception%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.ExceptionHandled%2A> propriedade para indicar que a exceção foi tratada no evento manipulador.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/CS/ListViewDeletedEventArgsCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewDeletedEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/VB/ListViewDeletedEventArgsVB.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeletedEventArgs.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave ou chaves para o item excluído.</summary>
+        <value>A chave ou chaves para o item excluído.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Keys%2A> propriedade para acessar os valores dos campos de chave (conforme especificado pelo <xref:System.Web.UI.WebControls.ListView.DataKeyNames%2A?displayProperty=nameWithType> propriedade) para um item excluído. Por exemplo, você pode usar esses valores para manter um registro de itens excluídos.  
+  
+> [!NOTE]
+>  Esta propriedade contém apenas os campos de chave. Para acessar os campos de não-chave, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Values%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Keys%2A> propriedade retorna um objeto que implementa o <xref:System.Collections.Specialized.IOrderedDictionary> interface. O objeto contém <xref:System.Collections.DictionaryEntry> objetos que representam os campos de chave do item excluído.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Keys%2A> propriedade para acessar os valores dos campos de chave para um item excluído.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewDeletedEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/CS/ListViewDeletedEventArgsKeysCS.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewDeletedEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/VB/ListViewDeletedEventArgsKeysVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary Values" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDeletedEventArgs.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores de campo não-chave para o item excluído.</summary>
+        <value>Os valores de campo não-chave para o item excluído.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Values%2A> propriedade para acessar os valores dos campos de não-chave para um item excluído. Por exemplo, você pode usar esses valores para manter um registro de itens excluídos.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Values%2A> propriedade é preenchida somente quando as expressões de associação bidirecional são usadas no <xref:System.Web.UI.WebControls.ListView> modelos, como o <xref:System.Web.UI.WebControls.ListView.ItemTemplate%2A> modelo. Para obter mais informações sobre expressões de associação bidirecional, consulte [sintaxe de expressão de associação de dados](http://msdn.microsoft.com/en-us/676beb1d-ddfa-4153-bba8-3c86dcb7ceca).  
+  
+ O <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Values%2A> propriedade retorna um objeto que implementa o <xref:System.Collections.Specialized.IOrderedDictionary> interface. O objeto contém <xref:System.Collections.DictionaryEntry> objetos que representam os campos de não-chave do item excluído.  
+  
+> [!NOTE]
+>  Essa propriedade não contém os campos de chave (conforme especificado pelo <xref:System.Web.UI.WebControls.ListView.DataKeyNames%2A?displayProperty=nameWithType> propriedade) para o item excluído. Para acessar os campos de chave, use o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Keys%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDeletedEventArgs.Values%2A> propriedade para acessar os valores dos campos de não-chave para um item excluído.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewDeletedEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/CS/ListViewDeletedEventArgsKeysCS.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewDeletedEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDeletedEventArgs/VB/ListViewDeletedEventArgsKeysVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

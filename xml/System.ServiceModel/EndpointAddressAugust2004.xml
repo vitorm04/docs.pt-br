@@ -1,0 +1,202 @@
+<Type Name="EndpointAddressAugust2004" FullName="System.ServiceModel.EndpointAddressAugust2004">
+  <TypeSignature Language="C#" Value="public class EndpointAddressAugust2004 : System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EndpointAddressAugust2004 extends System.Object implements class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.EndpointAddressAugust2004" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("EndpointReference", Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlSchemaProvider("GetSchema")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um tipo serializável de endereço de ponto de extremidade que é compatível com a versão do WS-Addressing publicado em agosto de 2004 e que permite que ele seja exposto como parte do contrato de serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.EndpointAddress> não é serializável nem é vinculada a uma versão específica da especificação WS-Addressing. [!INCLUDE[indigo1](~/includes/indigo1-md.md)]Fornece uma classe que fornece um tipo serializável, <xref:System.ServiceModel.EndpointAddress10>, que é o WS-Addressing V1 compatíveis.  
+  
+ Essa classe fornece WS-Addressing wrapper compatível de agosto de 2004 para o <xref:System.ServiceModel.EndpointAddress> é serializável e associada a um determinado formato de conexão para fins de legado. O <xref:System.ServiceModel.EndpointAddressAugust2004.FromEndpointAddress%28System.ServiceModel.EndpointAddress%29> método faz o encapsulamento e o <xref:System.ServiceModel.EndpointAddressAugust2004.ToEndpointAddress%2A> método faz o desempacotamento, permitindo a recuperação do endereço do ponto de extremidade depois que está sendo serializado na conexão.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddressAugust2004#1](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddressaugust2004/cs/source.cs#1)]
+ [!code-vb[EndpointAddressAugust2004#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/endpointaddressaugust2004/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FromEndpointAddress">
+      <MemberSignature Language="C#" Value="public static System.ServiceModel.EndpointAddressAugust2004 FromEndpointAddress (System.ServiceModel.EndpointAddress address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.ServiceModel.EndpointAddressAugust2004 FromEndpointAddress(class System.ServiceModel.EndpointAddress address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressAugust2004.FromEndpointAddress(System.ServiceModel.EndpointAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddressAugust2004</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.ServiceModel.EndpointAddress" />
+      </Parameters>
+      <Docs>
+        <param name="address">O <see cref="T:System.ServiceModel.EndpointAddress" /> usado para inicializar a instância dessa classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.EndpointAddress10" /> classe com um endereço de ponto de extremidade especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddressAugust2004" /> classe que contém o endereço do ponto de extremidade especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.EndpointAddress> não está vinculado a uma versão específica da especificação WS-Addressing ou associado a um determinado formato de conexão.  
+  
+   
+  
+## Examples  
+ [!code-csharp[EndpointAddressAugust2004#1](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddressaugust2004/cs/source.cs#1)]
+ [!code-vb[EndpointAddressAugust2004#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/endpointaddressaugust2004/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public static System.Xml.XmlQualifiedName GetSchema (System.Xml.Schema.XmlSchemaSet xmlSchemaSet);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlQualifiedName GetSchema(class System.Xml.Schema.XmlSchemaSet xmlSchemaSet) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressAugust2004.GetSchema(System.Xml.Schema.XmlSchemaSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlSchemaSet" Type="System.Xml.Schema.XmlSchemaSet" />
+      </Parameters>
+      <Docs>
+        <param name="xmlSchemaSet">Um <see cref="T:System.Xml.Schema.XmlSchema" /> que contém um cache de esquemas XML schema definition linguagem XSD para o endereço do ponto de extremidade.</param>
+        <summary>Retorna um nome qualificado XML que descreve a representação XML do endereço versão 1 do ponto de extremidade de um esquema em cache especificado.</summary>
+        <returns>Um <see cref="T:System.Xml.XmlQualifiedName" /> que descreve a representação XML do endereço do ponto de extremidade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é necessário para o contrato de serialização. Ele deve ser público para ser visto pelo XmlSerializer. Ele não se destina a ser chamado por desenvolvedores.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xmlSchemaSet" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressAugust2004.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna <see langword="null" />.</summary>
+        <returns>
+          <see langword="null" />
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressAugust2004.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">O <see cref="T:System.Xml.XmlReader" /> do que o endereço do ponto de extremidade é obtido.</param>
+        <summary>Esse membro oferece suporte à infraestrutura .NET Framework e não se destina à utilização diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressAugust2004.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Xml.XmlWriter" /> para que o endereço de ponto de extremidade atual é salvo.</param>
+        <summary>Esse membro oferece suporte à infraestrutura .NET Framework e não se destina à utilização diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToEndpointAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress ToEndpointAddress ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ServiceModel.EndpointAddress ToEndpointAddress() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.EndpointAddressAugust2004.ToEndpointAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera o endereço de ponto de extremidade contido nesse tipo serializável.</summary>
+        <returns>O <see cref="T:System.ServiceModel.EndpointAddress" /> que contém um endereço de ponto de extremidade com neutralidade de versão deste <see cref="T:System.ServiceModel.EndpointAddressAugust2004" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[EndpointAddressAugust2004#1](~/samples/snippets/csharp/VS_Snippets_CFX/endpointaddressaugust2004/cs/source.cs#1)]
+ [!code-vb[EndpointAddressAugust2004#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/endpointaddressaugust2004/vb/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,276 @@
+<Type Name="ValueSource" FullName="System.Windows.ValueSource">
+  <TypeSignature Language="C#" Value="public struct ValueSource" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ValueSource extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.ValueSource" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Relata as informações retornadas de <see cref="M:System.Windows.DependencyPropertyHelper.GetValueSource(System.Windows.DependencyObject,System.Windows.DependencyProperty)" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria das informações que <xref:System.Windows.ValueSource> transmite está contida no <xref:System.Windows.ValueSource.BaseValueSource%2A> propriedade. Esta propriedade contém um valor de enumeração que especifica exatamente um aspecto da geral [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] sistema de propriedade que é responsável por valor efetivo de uma propriedade de dependência.  
+  
+ O valor base, além de outras informações que podem ser interessantes sobre o valor de propriedade de dependência são se o valor está sendo animado e se o valor envolve uma expressão (por exemplo, uma associação, ou uma referência de recurso dinâmico). Estas informações são relatadas por <xref:System.Windows.ValueSource.IsAnimated%2A> e <xref:System.Windows.ValueSource.IsExpression%2A> respectivamente. Além disso, se coerção está atuando em um valor de propriedade, a propriedade mantém um valor desejado, e o valor da propriedade tentará alcançar esse valor desejado se as restrições da coerção específica são alteradas ou eliminadas. Uma propriedade forçada que não está em seu valor desejado relatará que <xref:System.Windows.ValueSource.IsCoerced%2A> é `true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseValueSource">
+      <MemberSignature Language="C#" Value="public System.Windows.BaseValueSource BaseValueSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.BaseValueSource BaseValueSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ValueSource.BaseValueSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.BaseValueSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor de <see cref="T:System.Windows.BaseValueSource" /> enumeração, que informa a fonte de desde que o sistema de propriedade de dependência com um valor.</summary>
+        <value>Um valor da enumeração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor base não é o valor efetivo se animação ou coerção atua na propriedade. Verificar <xref:System.Windows.ValueSource.IsAnimated%2A> e <xref:System.Windows.ValueSource.IsCoerced%2A> para determinar se o valor base é o valor efetivo.  
+  
+ Talvez você também queira verificar <xref:System.Windows.ValueSource.IsExpression%2A> para ver se o valor base foi avaliado fora de uma expressão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ValueSource.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O objeto a ser comparado com esse <see cref="T:System.Windows.ValueSource" />.</param>
+        <summary>Retorna um valor que indica se este <see cref="T:System.Windows.ValueSource" /> é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" />Se o objeto fornecido é equivalente à atual <see cref="T:System.Windows.ValueSource" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação oferece suporte a igualdade de valor, com base em cada um dos valores de propriedade de cada <xref:System.Windows.ValueSource> estrutura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ValueSource.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.Windows.ValueSource" />.</summary>
+        <returns>Um código de hash de inteiro não assinado de 32 bits.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse código de hash se baseia o <xref:System.Windows.ValueSource.BaseValueSource%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAnimated">
+      <MemberSignature Language="C#" Value="public bool IsAnimated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAnimated" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ValueSource.IsAnimated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que declara se a propriedade está sendo animada.</summary>
+        <value>
+          <see langword="true" />Se a propriedade é animada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para qualquer propriedade que está sendo animada no momento, a origem é relatado pelo <xref:System.Windows.ValueSource.BaseValueSource%2A> não é imediatamente relevante, porque a animação opera a precedência de propriedade de dependência maior que o valor base. Para obter mais informações sobre precedência e animações, consulte [precedência de valor de propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCoerced">
+      <MemberSignature Language="C#" Value="public bool IsCoerced { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCoerced" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ValueSource.IsCoerced" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que declara se este valor resultou de uma <see cref="T:System.Windows.CoerceValueCallback" /> aplicada a uma propriedade de dependência de implementação.</summary>
+        <value>
+          <see langword="true" />Se o valor de resultado de uma <see cref="T:System.Windows.CoerceValueCallback" /> implementação aplicada a uma propriedade de dependência; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a coerção está atuando em um valor de propriedade, a propriedade mantém um valor desejado e o valor da propriedade tentará alcançar esse valor desejado se as restrições da coerção específica são alteradas ou eliminadas. Uma propriedade forçada que não está em seu valor desejado relatará que <xref:System.Windows.ValueSource.IsCoerced%2A> é `true`.  
+  
+ Coerção age precedência maior que o valor base e não é estritamente um participante em como o valor base é definido. Portanto, o estado do que está sendo forçado é relatado por essa propriedade, em vez de um valor da <xref:System.Windows.BaseValueSource> enumeração. Para obter mais informações sobre a coerção, valores de base e a precedência, consulte [precedência de valor de propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrent">
+      <MemberSignature Language="C#" Value="public bool IsCurrent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ValueSource.IsCurrent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o valor foi definido com o <see cref="M:System.Windows.DependencyObject.SetCurrentValue(System.Windows.DependencyProperty,System.Object)" /> método.</summary>
+        <value>
+          <see langword="true" />Se o valor foi definido com o <see cref="M:System.Windows.DependencyObject.SetCurrentValue(System.Windows.DependencyProperty,System.Object)" /> método; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpression">
+      <MemberSignature Language="C#" Value="public bool IsExpression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.ValueSource.IsExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que declara se este valor resultou de uma expressão avaliada. Isso pode ser um <see cref="T:System.Windows.Data.BindingExpression" /> com suporte para uma associação ou uma expressão interna, como aqueles que oferecem suporte a [DynamicResource Markup Extension](~/docs/framework/wpf/advanced/dynamicresource-markup-extension.md).</summary>
+        <value>
+          <see langword="true" />Se o valor for proveniente de uma expressão avaliada. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma expressão avaliada reportará também o valor base específico, definir condição em que a expressão foi aplicada, como um valor em <xref:System.Windows.ValueSource.BaseValueSource%2A>. O <xref:System.Windows.ValueSource.BaseValueSource%2A> ainda é muito relevante para qualquer propriedade onde <xref:System.Windows.ValueSource.IsExpression%2A> é `true`. Saber se um valor fornecido por meio de uma expressão pode ser particularmente útil se o valor foi definido indiretamente, por exemplo, por meio de um modelo ou um valor de propriedade herdada.  
+  
+ Se uma expressão não avaliada (Falha na associação; não foi encontrado nenhum recurso do nome), o valor será proveniente do algum outro participante no sistema de propriedade, provavelmente, o valor padrão. Fonte, em seguida, é relatada em <xref:System.Windows.ValueSource.BaseValueSource%2A>. Avaliações de expressão com falha retornará `false` para <xref:System.Windows.ValueSource.IsExpression%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.ValueSource vs1, System.Windows.ValueSource vs2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.ValueSource vs1, valuetype System.Windows.ValueSource vs2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ValueSource.op_Equality(System.Windows.ValueSource,System.Windows.ValueSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vs1" Type="System.Windows.ValueSource" />
+        <Parameter Name="vs2" Type="System.Windows.ValueSource" />
+      </Parameters>
+      <Docs>
+        <param name="vs1">O primeiro <see cref="T:System.Windows.ValueSource" /> a ser comparado.</param>
+        <param name="vs2">O segundo <see cref="T:System.Windows.ValueSource" /> a ser comparado.</param>
+        <summary>Determina se duas instâncias <see cref="T:System.Windows.ValueSource" /> têm o mesmo valor.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.ValueSource" /> instâncias forem equivalentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação chama <xref:System.Windows.ValueSource.Equals%2A>, e dá suporte ao valor de igualdade com base em todas as propriedades de <xref:System.Windows.ValueSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.ValueSource vs1, System.Windows.ValueSource vs2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.ValueSource vs1, valuetype System.Windows.ValueSource vs2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.ValueSource.op_Inequality(System.Windows.ValueSource,System.Windows.ValueSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="vs1" Type="System.Windows.ValueSource" />
+        <Parameter Name="vs2" Type="System.Windows.ValueSource" />
+      </Parameters>
+      <Docs>
+        <param name="vs1">O primeiro <see cref="T:System.Windows.ValueSource" /> a ser comparado.</param>
+        <param name="vs2">O segundo <see cref="T:System.Windows.ValueSource" /> a ser comparado.</param>
+        <summary>Determina se dois <see cref="T:System.Windows.ValueSource" /> instâncias não tiverem o mesmo valor.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.ValueSource" /> instâncias não são equivalentes; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação chama <xref:System.Windows.ValueSource.Equals%2A>, retornando a negação e dá suporte a igualdade de valor com base em todas as propriedades de <xref:System.Windows.ValueSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

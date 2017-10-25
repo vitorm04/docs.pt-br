@@ -1,0 +1,272 @@
+<Type Name="StaticPartialCachingControl" FullName="System.Web.UI.StaticPartialCachingControl">
+  <TypeSignature Language="C#" Value="public class StaticPartialCachingControl : System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StaticPartialCachingControl extends System.Web.UI.BasePartialCachingControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.StaticPartialCachingControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.BasePartialCachingControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma ocorrência da <see cref="T:System.Web.UI.UserControl" /> classe que é especificado para o cache de saída e declarativamente incluído em uma página ou outro controle de usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância dessa classe é criada quando um controle de usuário é especificado para o cache de saída, usando qualquer uma diretiva no arquivo. ascx declarativa, ou o <xref:System.Web.UI.PartialCachingAttribute> classe no arquivo de code-behind do controle de usuário. Quando o controle de usuário é incluído declarativamente na sua página contém (em oposição a dinamicamente sendo carregados usando o <xref:System.Web.UI.TemplateControl.LoadControl%2A> método o <xref:System.Web.UI.TemplateControl> classe de controle), o <xref:System.Web.UI.StaticPartialCachingControl> instância é colocada na hierarquia de controle da página como um pai para o controle de usuário em cache.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticPartialCachingControl (string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="ctrlID">O identificador atribuído ao controle do servidor pelo ASP.NET.</param>
+        <param name="guid">O identificador global exclusivo passado no controle do servidor.</param>
+        <param name="duration">O período de tempo que o controle de servidor é permanecem no cache.</param>
+        <param name="varyByParams">Uma cadeia de caracteres dos parâmetros de consulta cadeia de caracteres ou formulário POST pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByControls">Uma cadeia de caracteres de propriedades de controle do servidor pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByCustom">Uma cadeia definida pelo usuário que contém os valores de parâmetro personalizado do cache de saída.</param>
+        <param name="buildMethod">Um delegado que chama o método para criar o <see cref="T:System.Web.UI.StaticPartialCachingControl" />.</param>
+        <summary>Cria o <see cref="T:System.Web.UI.StaticPartialCachingControl" /> objeto para conter o conteúdo do controle de servidor em cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StaticPartialCachingControl.%23ctor%2A> construtor destina para uso pela estrutura de página ASP.NET e não deve ser chamado diretamente pelos desenvolvedores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticPartialCachingControl (string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="ctrlID">O identificador atribuído ao controle do servidor pelo ASP.NET.</param>
+        <param name="guid">O identificador global exclusivo passado no controle do servidor.</param>
+        <param name="duration">O período de tempo que o controle de servidor é permanecem no cache.</param>
+        <param name="varyByParams">Uma cadeia de caracteres dos parâmetros de consulta cadeia de caracteres ou formulário POST pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByControls">Uma cadeia de caracteres de propriedades de controle do servidor pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByCustom">Uma cadeia definida pelo usuário que contém os valores de parâmetro personalizado do cache de saída.</param>
+        <param name="sqlDependency">Uma cadeia delimitada por ponto e vírgula que especifica quais bancos de dados e tabelas para usar para a dependência de cache do Microsoft SQL Server.</param>
+        <param name="buildMethod">Um delegado que chama o método para criar o <see cref="T:System.Web.UI.StaticPartialCachingControl" />.</param>
+        <summary>Cria o <see cref="T:System.Web.UI.StaticPartialCachingControl" /> objeto para conter o conteúdo do controle de servidor em cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StaticPartialCachingControl.%23ctor%2A> construtor destina para uso pela estrutura de página ASP.NET e não deve ser chamado diretamente pelos desenvolvedores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StaticPartialCachingControl (string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod, string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod, string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ctrlID">A ID que é atribuída ao controle pelo ASP.NET.</param>
+        <param name="guid">O identificador global exclusivo (GUID) para o controle em cache.</param>
+        <param name="duration">O período de tempo que a saída do controle é armazenado em cache.</param>
+        <param name="varyByParams">Uma cadeia de caracteres dos parâmetros de consulta cadeia de caracteres ou formulário POST pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByControls">Uma cadeia de caracteres que lista as propriedades de controle de servidor pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByCustom">Uma cadeia definida pelo usuário que contém os valores de parâmetro personalizado do cache de saída.</param>
+        <param name="sqlDependency">Uma cadeia delimitada por ponto e vírgula que especifica quais bancos de dados e tabelas para usar para a dependência de cache do Microsoft SQL Server.</param>
+        <param name="buildMethod">Um delegado que chama o método que cria o controle.</param>
+        <param name="providerName">O nome do provedor que é usado para armazenar o controle de cache de saída.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.StaticPartialCachingControl" /> classe para um controle que é definido em um arquivo. ascx.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar um provedor de cache de saída para um controle ou declarativamente usando o <xref:System.Web.UI.PartialCachingAttribute> no código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildCachedControl">
+      <MemberSignature Language="C#" Value="public static void BuildCachedControl (System.Web.UI.Control parent, string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BuildCachedControl(class System.Web.UI.Control parent, string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.BuildCachedControl(System.Web.UI.Control,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.UI.Control" />
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O controle de servidor para conter o <see cref="T:System.Web.UI.StaticPartialCachingControl" /> instância.</param>
+        <param name="ctrlID">O identificador atribuído ao controle pelo ASP.NET.</param>
+        <param name="guid">O identificador exclusivo para o controle em cache.</param>
+        <param name="duration">O período de tempo que a saída do controle é armazenado em cache.</param>
+        <param name="varyByParams">Uma cadeia de caracteres dos parâmetros de consulta cadeia de caracteres ou formulário POST pelo qual variar o controle de servidor no cache.</param>
+        <param name="varyByControls">Uma cadeia de caracteres que lista as propriedades de controle de servidor pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByCustom">Uma cadeia definida pelo usuário que contém os valores de parâmetro personalizado do cache de saída.</param>
+        <param name="buildMethod">Um delegado que chama o método para criar o controle.</param>
+        <summary>Cria um <see cref="T:System.Web.UI.StaticPartialCachingControl" /> com os parâmetros especificados no controle de usuário (arquivo. ascx) e o adiciona como um sub-objeto analisado para o controle recipiente do servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StaticPartialCachingControl.BuildCachedControl%2A> método cria um controle em cache sem nenhuma relação com uma tabela de banco de dados do Microsoft SQL Server.  
+  
+ O <xref:System.Web.UI.StaticPartialCachingControl.BuildCachedControl%2A> método destina para uso pela estrutura de página ASP.NET e não deve ser chamado diretamente pelos desenvolvedores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildCachedControl">
+      <MemberSignature Language="C#" Value="public static void BuildCachedControl (System.Web.UI.Control parent, string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BuildCachedControl(class System.Web.UI.Control parent, string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.BuildCachedControl(System.Web.UI.Control,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.UI.Control" />
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O controle de servidor para conter o <see cref="T:System.Web.UI.StaticPartialCachingControl" /> instância.</param>
+        <param name="ctrlID">O identificador atribuído ao controle pelo ASP.NET.</param>
+        <param name="guid">O identificador exclusivo para o controle em cache.</param>
+        <param name="duration">O período de tempo que a saída do controle é armazenado em cache.</param>
+        <param name="varyByParams">Uma cadeia de caracteres dos parâmetros de consulta cadeia de caracteres ou formulário POST pelo qual variar o controle de servidor no cache.</param>
+        <param name="varyByControls">Uma cadeia de caracteres que lista as propriedades de controle de servidor pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByCustom">Uma cadeia definida pelo usuário que contém os valores de parâmetro personalizado do cache de saída.</param>
+        <param name="sqlDependency">Uma cadeia delimitada por ponto e vírgula que especifica quais bancos de dados e tabelas para usar para a dependência de cache do Microsoft SQL Server.</param>
+        <param name="buildMethod">Um delegado que chama o método para criar o controle.</param>
+        <summary>Cria um <see cref="T:System.Web.UI.StaticPartialCachingControl" /> com os parâmetros especificados no controle de usuário (arquivo. ascx) e o adiciona como um sub-objeto analisado para o controle recipiente do servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.StaticPartialCachingControl.BuildCachedControl%2A> método cria um controle em cache com uma relação com uma tabela de banco de dados do SQL Server especificada pelo `sqlDependency` parâmetro.  
+  
+ O <xref:System.Web.UI.StaticPartialCachingControl.%23ctor%2A> método destina para uso pela estrutura de página ASP.NET e não deve ser chamado diretamente pelos desenvolvedores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildCachedControl">
+      <MemberSignature Language="C#" Value="public static void BuildCachedControl (System.Web.UI.Control parent, string ctrlID, string guid, int duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, System.Web.UI.BuildMethod buildMethod, string providerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void BuildCachedControl(class System.Web.UI.Control parent, string ctrlID, string guid, int32 duration, string varyByParams, string varyByControls, string varyByCustom, string sqlDependency, class System.Web.UI.BuildMethod buildMethod, string providerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.StaticPartialCachingControl.BuildCachedControl(System.Web.UI.Control,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Web.UI.BuildMethod,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.UI.Control" />
+        <Parameter Name="ctrlID" Type="System.String" />
+        <Parameter Name="guid" Type="System.String" />
+        <Parameter Name="duration" Type="System.Int32" />
+        <Parameter Name="varyByParams" Type="System.String" />
+        <Parameter Name="varyByControls" Type="System.String" />
+        <Parameter Name="varyByCustom" Type="System.String" />
+        <Parameter Name="sqlDependency" Type="System.String" />
+        <Parameter Name="buildMethod" Type="System.Web.UI.BuildMethod" />
+        <Parameter Name="providerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O controle de servidor que é usado como o contêiner para o <see cref="T:System.Web.UI.StaticPartialCachingControl" /> instância.</param>
+        <param name="ctrlID">A ID que é atribuída ao controle pelo ASP.NET.</param>
+        <param name="guid">O identificador global exclusivo (GUID) para o controle em cache.</param>
+        <param name="duration">O período de tempo que a saída do controle é armazenado em cache.</param>
+        <param name="varyByParams">Uma cadeia de caracteres dos parâmetros de consulta cadeia de caracteres ou formulário POST pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByControls">Uma cadeia de caracteres que lista as propriedades de controle de servidor pelo qual variar o controle de usuário no cache.</param>
+        <param name="varyByCustom">Uma cadeia definida pelo usuário que contém os valores de parâmetro personalizado do cache de saída.</param>
+        <param name="sqlDependency">Uma cadeia delimitada por ponto e vírgula que especifica quais bancos de dados e tabelas para usar para a dependência de cache do Microsoft SQL Server.</param>
+        <param name="buildMethod">Um delegado que chama o método que cria o controle.</param>
+        <param name="providerName">O nome do provedor que é usado para armazenar o controle de cache de saída.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.StaticPartialCachingControl" /> classe para um controle que é definido em um arquivo. ascx.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,32 @@
+<Type Name="InstallEventHandler" FullName="System.Configuration.Install.InstallEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void InstallEventHandler(object sender, InstallEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed InstallEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Install.InstallEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Configuration.Install.InstallEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Configuration.Install.InstallEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento <see cref="E:System.Configuration.Install.Installer.BeforeInstall" />, <see cref="E:System.Configuration.Install.Installer.AfterInstall" />, <see cref="E:System.Configuration.Install.Installer.Committing" />, <see cref="E:System.Configuration.Install.Installer.Committed" />, <see cref="E:System.Configuration.Install.Installer.BeforeRollback" />, <see cref="E:System.Configuration.Install.Installer.AfterRollback" />, <see cref="E:System.Configuration.Install.Installer.BeforeUninstall" /> ou <see cref="E:System.Configuration.Install.Installer.AfterUninstall" /> de um <see cref="T:System.Configuration.Install.Installer" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Configuration.Install.InstallEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

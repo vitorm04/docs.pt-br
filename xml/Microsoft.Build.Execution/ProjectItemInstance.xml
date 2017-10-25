@@ -1,0 +1,676 @@
+<Type Name="ProjectItemInstance" FullName="Microsoft.Build.Execution.ProjectItemInstance">
+  <TypeSignature Language="C#" Value="public class ProjectItemInstance : Microsoft.Build.Framework.ITaskItem2" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProjectItemInstance extends System.Object implements class Microsoft.Build.Framework.ITaskItem, class Microsoft.Build.Framework.ITaskItem2" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Execution.ProjectItemInstance" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskItem2</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("{ItemType}={EvaluatedInclude} #DirectMetadata={DirectMetadataCount})")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula um item avaliado para fins de compilação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não armazena informações sobre o elemento item, porque todos os avaliação e verificação já foi executada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DirectMetadataCount">
+      <MemberSignature Language="C#" Value="public int DirectMetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DirectMetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.DirectMetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens de metadados neste item.</summary>
+        <value>Retorna o número de itens de metadados neste item.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluatedInclude">
+      <MemberSignature Language="C#" Value="public string EvaluatedInclude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EvaluatedInclude" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.EvaluatedInclude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do atributo Include avaliado.</summary>
+        <value>Retorna o valor do atributo Include avaliado, que pode ser a cadeia de caracteres vazia.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectMetadataInstance GetMetadata (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Execution.ProjectMetadataInstance GetMetadata(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.GetMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectMetadataInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome dos metadados.</param>
+        <summary>Obter os metadados com o nome fornecido, incluindo metadados herdado de definições do item.</summary>
+        <returns>Retorna os metadados com o nome fornecido. Retorna nulo se nenhum metadado com esse nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não inclui quaisquer metadados internos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMetadataValue">
+      <MemberSignature Language="C#" Value="public string GetMetadataValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetMetadataValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.GetMetadataValue(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome dos metadados.</param>
+        <summary>Obtém o valor dos metadados com o nome fornecido, incluindo metadados herdado de definições do item.</summary>
+        <returns>Obtém o valor dos metadados com o nome fornecido, incluindo metadados herdado de definições do item. Retorna uma cadeia de caracteres vazia se não existem metadados com esse nome.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inclui metadados internos.  
+  
+ Para determinar se uma parte dos metadados está presente, mas com um valor vazio, use <xref:Microsoft.Build.Execution.ProjectItemInstance.HasMetadata%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasMetadata">
+      <MemberSignature Language="C#" Value="public bool HasMetadata (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasMetadata(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.HasMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome dos metadados.</param>
+        <summary>Determina se os metadados com o nome fornecido está definido neste item (mesmo que seu valor é uma cadeia de caracteres vazia).</summary>
+        <returns>Retorna VERDADEIRO se os metadados com o nome fornecido está definido neste item (mesmo que seu valor é a cadeia de caracteres vazia); FALSO caso contrário.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pesquisa interno metadados e os metadados de definições de item, porque esse método é usado para processamento em lotes, onde não importa os metadados de origem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public string ItemType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de item, por exemplo "Compilação".</summary>
+        <value>Retorna o tipo de item, por exemplo "Compilação".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não pode ser definida, pois ele é usado como a chave na tabela de itens do projeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Metadata">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Execution.ProjectMetadataInstance&gt; Metadata { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Build.Execution.ProjectMetadataInstance&gt; Metadata" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.Metadata" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Build.Execution.ProjectMetadataInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador nos metadados do item avaliado. Esta é uma coleção somente leitura.</summary>
+        <value>Retorna um enumerador sobre os metadados avaliado do item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não inclui metadados internas ou metadados de definições de item.  
+  
+ Para modificar os metadados, use <xref:Microsoft.Build.Execution.ProjectItemInstance.SetMetadata%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataCount">
+      <MemberSignature Language="C#" Value="public int MetadataCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MetadataCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.MetadataCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de entradas de metadados, incluindo metadados herdado de definições do item.</summary>
+        <value>Retorna o número de entradas de metadados, incluindo metadados herdado de definições de item</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inclui metadados internos e personalizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetadataNames">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; MetadataNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;string&gt; MetadataNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.MetadataNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém todos os nomes de metadados desse item, incluindo metadados herdado de definições do item.</summary>
+        <value>Retorna todos os nomes de metadados desse item, incluindo metadados herdado de definições do item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inclui nomes de metadados internos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem.CloneCustomMetadata">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionary ITaskItem.CloneCustomMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionary Microsoft.Build.Framework.ITaskItem.CloneCustomMetadata() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#CloneCustomMetadata" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementação de ITaskItem. Obtém a coleção de metadados personalizados.</summary>
+        <returns>A coleção de metadados personalizados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   Não inclui metadados internos.  
+  
+-   Esse método deve retornar um clone dos metadados.  
+  
+-   A gravação desse dicionário não deve ser refletida no item subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem.CopyMetadataTo">
+      <MemberSignature Language="C#" Value="void ITaskItem.CopyMetadataTo (Microsoft.Build.Framework.ITaskItem destinationItem);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Build.Framework.ITaskItem.CopyMetadataTo(class Microsoft.Build.Framework.ITaskItem destinationItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#CopyMetadataTo(Microsoft.Build.Framework.ITaskItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationItem" Type="Microsoft.Build.Framework.ITaskItem" />
+      </Parameters>
+      <Docs>
+        <param name="destinationItem">Copiar as entradas de metadados para o item.</param>
+        <summary>Implementação de ITaskItem. Copia as entradas de metadados personalizados para outro item.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Siga as diretrizes abaixo para implementação deste método.  
+  
+-   Não substituir o <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> propriedade.  
+  
+-   Não substitua entradas de metadados existentes.  
+  
+-   Não copie entradas de metadados que não fazem sentido no item de destino.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem.GetMetadata">
+      <MemberSignature Language="C#" Value="string ITaskItem.GetMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string Microsoft.Build.Framework.ITaskItem.GetMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#GetMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome da entrada de metadados.</param>
+        <summary>Implementação de ITaskItem. Obtém o valor da entrada de metadados especificado.</summary>
+        <returns>O valor de <paramref name="attributeName" /> metadados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não deve retornar null se não houver metadados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem.ItemSpec">
+      <MemberSignature Language="C#" Value="string Microsoft.Build.Framework.ITaskItem.ItemSpec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Microsoft.Build.Framework.ITaskItem.ItemSpec" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#ItemSpec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementação de ITaskItem. Obtém ou define a especificação de item.</summary>
+        <value>A especificação de item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A especificação de item é uma cadeia de caracteres arbitrária. Se o item representa um arquivo no disco, a especificação de item será o caminho do arquivo.  
+  
+ O <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> a seguinte declaração de item em um projeto do arquivo é `File.cs`.  
+  
+```  
+<ItemGroup>  
+    <Compile Include="File.cs"/>  
+</ItemGroup>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra o código de uma tarefa que cria um ou mais diretórios.  
+  
+ [!code-csharp[msbuild_MakeDirTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_MakeDirTask/CS/msbuild_MakeDirTask.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem.MetadataNames">
+      <MemberSignature Language="C#" Value="System.Collections.ICollection Microsoft.Build.Framework.ITaskItem.MetadataNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection Microsoft.Build.Framework.ITaskItem.MetadataNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#MetadataNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementação de ITaskItem. Obtém os nomes das entradas de metadados associados ao item.</summary>
+        <value>Os nomes das entradas de metadados associados ao item.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem.SetMetadata">
+      <MemberSignature Language="C#" Value="void ITaskItem.SetMetadata (string metadataName, string metadataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Build.Framework.ITaskItem.SetMetadata(string metadataName, string metadataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem#SetMetadata(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+        <Parameter Name="metadataValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">Nome de metadados a serem adicionados ou alterados.</param>
+        <param name="metadataValue">Valor de metadados a serem adicionados ou alterados.</param>
+        <summary>Implementação de ITaskItem. Adiciona ou altera uma entrada de metadados personalizados para o item.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped">
+      <MemberSignature Language="C#" Value="System.Collections.IDictionary ITaskItem2.CloneCustomMetadataEscaped ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IDictionary Microsoft.Build.Framework.ITaskItem2.CloneCustomMetadataEscaped() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem2#CloneCustomMetadataEscaped" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Implementação de ITaskItem2. Retorna um clone dos metadados neste objeto.  Valores retornados são no formato original com caracteres de escape.</summary>
+        <returns>Retorna os metadados clonado, com valores escape preservados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped">
+      <MemberSignature Language="C#" Value="string Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Microsoft.Build.Framework.ITaskItem2.EvaluatedIncludeEscaped" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem2#EvaluatedIncludeEscaped" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementação de ITaskItem2. Avaliado incluem o valor de escape conforme necessário. Pode ser uma cadeia de caracteres vazia. Obtém ou define o item incluir valor, por exemplo, para itens com base em disco deve ser o caminho do arquivo.</summary>
+        <value>Retorna o item incluir valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aproveitando a oportunidade para corrigir o nome da propriedade, embora isso não faz óbvio é uma melhoria em ItemSpec.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped">
+      <MemberSignature Language="C#" Value="string ITaskItem2.GetMetadataValueEscaped (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string Microsoft.Build.Framework.ITaskItem2.GetMetadataValueEscaped(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem2#GetMetadataValueEscaped(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Os metadados a ser consultado.</param>
+        <summary>Implementação de ITaskItem2. Permite que os valores de metadados no item a ser consultado.</summary>
+        <returns>Retorna o valor de metadados com caracteres de escape.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aproveitando a oportunidade para corrigir o nome da propriedade, embora isso não faz óbvio é um aprimoramento GetMetadata.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral">
+      <MemberSignature Language="C#" Value="void ITaskItem2.SetMetadataValueLiteral (string metadataName, string metadataValue);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Build.Framework.ITaskItem2.SetMetadataValueLiteral(string metadataName, string metadataValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.Microsoft#Build#Framework#ITaskItem2#SetMetadataValueLiteral(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+        <Parameter Name="metadataValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados.</param>
+        <param name="metadataValue">O valor de metadados.</param>
+        <summary>Implementação de ITaskItem2. Permite que uma parte dos metadados personalizados que devem ser definidas no item. Assume que o valor transmitido é sem escape e ignora o valor conforme necessário para manter seu valor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aproveitando a oportunidade para corrigir o nome da propriedade, embora isso não faz óbvio é uma melhoria em SetMetadata.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Project">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectInstance Project { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Execution.ProjectInstance Project" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Execution.ProjectItemInstance.Project" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectInstance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o projeto proprietário.</summary>
+        <value>Retorna o projeto proprietário.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMetadata">
+      <MemberSignature Language="C#" Value="public void RemoveMetadata (string metadataName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveMetadata(string metadataName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.RemoveMetadata(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="metadataName">O nome de metadados.</param>
+        <summary>Remove metadados com o nome fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado pelo TaskItem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadata">
+      <MemberSignature Language="C#" Value="public void SetMetadata (System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;string,string&gt;&gt; metadataDictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMetadata(class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, string&gt;&gt; metadataDictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.SetMetadata(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadataDictionary" Type="System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.String&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="metadataDictionary">Os metadados para adicionar.</param>
+        <summary>Adiciona metadados com os nomes e valores. Substitui todos os metadados pelo mesmo nome já na coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMetadata">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Execution.ProjectMetadataInstance SetMetadata (string name, string evaluatedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Build.Execution.ProjectMetadataInstance SetMetadata(string name, string evaluatedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.SetMetadata(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Execution.ProjectMetadataInstance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="evaluatedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome dos metadados a serem adicionados.</param>
+        <param name="evaluatedValue">Valor dos metadados em Adicionar.</param>
+        <summary>Adicione metadados com o nome e valor. Substitui todos os metadados pelo mesmo nome já na coleção.</summary>
+        <returns>Retorna os novos metadados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Execution.ProjectItemInstance.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa o item atual.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o item atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

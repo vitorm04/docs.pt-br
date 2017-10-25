@@ -1,0 +1,190 @@
+<Type Name="PrecompilationFlags" FullName="System.Web.Compilation.PrecompilationFlags">
+  <TypeSignature Language="C#" Value="public enum PrecompilationFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PrecompilationFlags extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.PrecompilationFlags" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece os sinalizadores que determinam o comportamento de pré-compilação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `PrecompilationFlags` classe define o comportamento do Gerenciador de compilação durante a pré-compilação. O <xref:System.Web.Compilation.ClientBuildManager> classe usa `PrecompilationFlags` como um de seus parâmetros de construtor. Pré-compilação pode ser executada programaticamente por meio <xref:System.Web.Compilation.ClientBuildManager> ou por meio da ferramenta de linha de comando do Aspnet_compiler.exe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowPartiallyTrustedCallers">
+      <MemberSignature Language="C#" Value="AllowPartiallyTrustedCallers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags AllowPartiallyTrustedCallers = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.AllowPartiallyTrustedCallers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um <see cref="T:System.Security.AllowPartiallyTrustedCallersAttribute" /> atributo é gerado para os assemblies, que significa que os assemblies podem ser chamados por código parcialmente confiável. O <see langword="/aptca" /> sinalizador será adicionado como um símbolo de compilação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Clean">
+      <MemberSignature Language="C#" Value="Clean" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags Clean = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.Clean" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo será criado "limpeza": todos os componentes anteriormente compilados serão recompilados. Este campo corresponde do <see langword="-c" /> alternar em Aspnet_compiler.exe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CodeAnalysis">
+      <MemberSignature Language="C#" Value="CodeAnalysis" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags CodeAnalysis = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.CodeAnalysis" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see langword="/define:CodeAnalysis" /> sinalizador será adicionado como um símbolo de compilação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor padrão. Não há comportamento especial especificado para pré-compilação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DelaySign">
+      <MemberSignature Language="C#" Value="DelaySign" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags DelaySign = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.DelaySign" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O assembly não estará totalmente assinado quando criado. O assembly pode ser assinado posteriormente por uma ferramenta de assinatura como Sn.exe. O <see langword="/delaysign" /> sinalizador será adicionado como um símbolo de compilação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FixedNames">
+      <MemberSignature Language="C#" Value="FixedNames" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags FixedNames = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.FixedNames" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O assembly será gerado com nomes fixos para as páginas da Web. Os arquivos não são divididas em lotes durante a compilação e em vez disso, são compilados individualmente para produzir os nomes fixos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceDebug">
+      <MemberSignature Language="C#" Value="ForceDebug" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags ForceDebug = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.ForceDebug" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O compilador emitirá informações de depuração. Este campo corresponde do <see langword="-d" /> alternar em Aspnet_compiler.exe.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreBadImageFormatException">
+      <MemberSignature Language="C#" Value="IgnoreBadImageFormatException" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags IgnoreBadImageFormatException = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.IgnoreBadImageFormatException" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O compilador irá ignorar as exceções de formato de imagem inválido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteTarget">
+      <MemberSignature Language="C#" Value="OverwriteTarget" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags OverwriteTarget = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.OverwriteTarget" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O diretório de destino pode ser substituído. Este campo corresponde do <see langword="-f" /> Aspnet_compiler.exe alternar para um destino anteriormente pré-compilado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Updatable">
+      <MemberSignature Language="C#" Value="Updatable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Compilation.PrecompilationFlags Updatable = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Compilation.PrecompilationFlags.Updatable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.PrecompilationFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O aplicativo implantado será atualizável. Este campo corresponde do <see langword="-u" /> alternar em Aspnet_compiler.exe.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

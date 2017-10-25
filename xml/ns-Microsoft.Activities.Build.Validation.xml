@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.Activities.Build.Validation">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.Activities.Build.Validation" /> fornece classes relacionadas à validação de compilação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

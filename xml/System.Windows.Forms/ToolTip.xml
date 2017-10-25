@@ -1,0 +1,1298 @@
+<Type Name="ToolTip" FullName="System.Windows.Forms.ToolTip">
+  <TypeSignature Language="C#" Value="public class ToolTip : System.ComponentModel.Component, System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToolTip extends System.ComponentModel.Component implements class System.ComponentModel.IExtenderProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolTip" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IExtenderProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Popup")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ProvideProperty("ToolTip", typeof(System.Windows.Forms.Control))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItemFilter("System.Windows.Forms")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma pequena janela pop-up retangular que exibe uma breve descrição da finalidade do controle quando o usuário deixa o ponteiro sobre o controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Forms.ToolTip> classe, você pode fornecer dicas ao usuário quando o usuário coloca o ponteiro em um controle. O <xref:System.Windows.Forms.ToolTip> classe normalmente é usada para alertar os usuários sobre o uso pretendido de um controle. Por exemplo, você pode especificar o texto de dica de ferramenta para um <xref:System.Windows.Forms.TextBox> controle que aceita um nome, especificando o formato do nome a ser digitado no controle. Além de fornecer dicas, você também pode usar o <xref:System.Windows.Forms.ToolTip> classe para fornecer informações de status de tempo de execução. Por exemplo, você pode usar o <xref:System.Windows.Forms.ToolTip> classe para exibir dados de qualidade de velocidade e a linha de conexão quando o usuário move o ponteiro para um <xref:System.Windows.Forms.PictureBox> controle que exibe o status de conexão de Internet.  
+  
+ O <xref:System.Windows.Forms.ToolTip> classe pode ser usada em qualquer contêiner. Para especificar explicitamente um contêiner, use o <xref:System.Windows.Forms.ToolTip.%23ctor%28System.ComponentModel.IContainer%29> construtor. Um único <xref:System.Windows.Forms.ToolTip> componente normalmente é usado para criar as dicas de ferramenta para vários controles em um formulário simples. Depois de criar um <xref:System.Windows.Forms.ToolTip>, use uma chamada separada para o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método de associar o texto de exibição de dica de ferramenta a um controle individual. Em seguida, quando o usuário move o ponteiro em um controle, a dica de ferramenta com o texto é exibida. Você pode chamar <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> mais de uma vez para o mesmo controle alterar o texto que está associado com o controle. Para obter o texto que está associado um controle, use o <xref:System.Windows.Forms.ToolTip.GetToolTip%2A> método. Para remover todas as associações de texto de dica de ferramenta com uma instância do <xref:System.Windows.Forms.ToolTip> classe, use o <xref:System.Windows.Forms.ToolTip.RemoveAll%2A> método.  
+  
+> [!NOTE]
+>  Texto de dica de ferramenta não é exibido para controles que estão desabilitados. A menos que o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> está definida como `true`, dicas de ferramenta não são exibidas quando o contêiner está inativo.  
+  
+ O <xref:System.Windows.Forms.ToolTip> classe fornece as seguintes propriedades e métodos para modificar o comportamento padrão e a aparência de uma dica de ferramenta.  
+  
+|Categoria|Membros associados|  
+|--------------|------------------------|  
+|Exibição manual|<xref:System.Windows.Forms.ToolTip.Active%2A>, <xref:System.Windows.Forms.ToolTip.Show%2A>, <xref:System.Windows.Forms.ToolTip.Hide%2A>, <xref:System.Windows.Forms.ToolTip.ShowAlways%2A>, <xref:System.Windows.Forms.ToolTip.Popup>, <xref:System.Windows.Forms.ToolTip.StopTimer%2A>|  
+|Tempo de dica de ferramenta|<xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, <xref:System.Windows.Forms.ToolTip.StopTimer%2A>|  
+|Conteúdo|<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>, <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>, <xref:System.Windows.Forms.ToolTip.StripAmpersands%2A>, <xref:System.Windows.Forms.ToolTip.ToolTipIcon%2A>, <xref:System.Windows.Forms.ToolTip.ToolTipTitle%2A>, <xref:System.Windows.Forms.ToolTip.RemoveAll%2A>|  
+|Aparência|<xref:System.Windows.Forms.ToolTip.BackColor%2A>, <xref:System.Windows.Forms.ToolTip.ForeColor%2A>, <xref:System.Windows.Forms.ToolTip.IsBalloon%2A>, <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>, <xref:System.Windows.Forms.ToolTip.UseAnimation%2A>, <xref:System.Windows.Forms.ToolTip.UseFading%2A>|  
+  
+ Se você quiser desabilitar todo o texto de dica de ferramenta para que ele não pode ser exibido em seu aplicativo, você pode usar o <xref:System.Windows.Forms.ToolTip.Active%2A> propriedade. Geralmente a dica de ferramenta é desenhada pelo sistema operacional, mas para personalizar a aparência do <xref:System.Windows.Forms.ToolTip>, você pode definir o <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> propriedade `true` e tratar o <xref:System.Windows.Forms.ToolTip.Draw> evento.  
+  
+ O <xref:System.Windows.Forms.ToolTip.ToolTipTitle%2A> classe implementa o <xref:System.ComponentModel.IExtenderProvider?displayProperty=nameWithType> interface, que tem um único método, <xref:System.Windows.Forms.ToolTip.CanExtend%2A>. Dicas de ferramenta estendem controles no formulário mesmo em tempo de design, adicionando um `ToolTip` propriedade. Para obter mais informações sobre os provedores de extensão, consulte [provedores de extensor](http://msdn.microsoft.com/library/4ce043d8-cd48-49dd-abef-185a2079e96a).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Windows.Forms.ToolTip> classe e o associa a instância com o <xref:System.Windows.Forms.Form> que a instância é criada dentro. O código, em seguida, inicializa as propriedades de atraso <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Além da instância do <xref:System.Windows.Forms.ToolTip> classe define o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade `true` para habilitar o texto de dica de ferramenta a ser sempre a exibição, independentemente se o formulário está ativo. Por fim, o exemplo associa o texto de dica de ferramenta com dois controles em um formulário, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.CheckBox>. O exemplo de código requer que o método definido no exemplo está localizado dentro de um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `button1` e um <xref:System.Windows.Forms.CheckBox> controle chamado `checkBox1`, e que o método é chamado a partir do construtor da <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolTip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Windows.Forms.ToolTip" /> com um contêiner especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma instância de uma dica de ferramenta não associada a qualquer contêiner.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Windows.Forms.ToolTip> classe. O código, em seguida, inicializa as propriedades de atraso <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Além da instância do <xref:System.Windows.Forms.ToolTip> classe define o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade `true` para habilitar o texto de dica de ferramenta a ser exibido, independentemente se o formulário está ativo. Por fim, o exemplo associa o texto de dica de ferramenta com dois controles em um formulário, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.CheckBox>. O exemplo de código requer que o método definido no exemplo está localizado dentro de um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `button1` e um <xref:System.Windows.Forms.CheckBox> controle chamado `checkBox1,` e que o método é chamado do construtor de o <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToolTip (System.ComponentModel.IContainer cont);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.IContainer cont) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.#ctor(System.ComponentModel.IContainer)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cont" Type="System.ComponentModel.IContainer" />
+      </Parameters>
+      <Docs>
+        <param name="cont">Um <see cref="T:System.ComponentModel.IContainer" /> que representa o contêiner do <see cref="T:System.Windows.Forms.ToolTip" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ToolTip" /> com um contêiner especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip> construtor permite que você associe um <xref:System.Windows.Forms.ToolTip> com qualquer <xref:System.ComponentModel.Container> objeto. Associando a <xref:System.Windows.Forms.ToolTip> dessa maneira, você entrega o controle do tempo de vida da dica de ferramenta para o <xref:System.ComponentModel.Container>. Isso pode ser útil se você usa vários componentes em seu aplicativo e deseja descartar todos eles ao mesmo tempo. Por exemplo, se você associar um <xref:System.Windows.Forms.ToolTip>, uma <xref:System.Windows.Forms.ImageList>e um <xref:System.Windows.Forms.Timer> com um <xref:System.ComponentModel.Container>, chamar <xref:System.ComponentModel.Container.Dispose%2A> no <xref:System.ComponentModel.Container> também irá forçar o descarte de todos esses componentes.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Active">
+      <MemberSignature Language="C#" Value="public bool Active { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Active" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.Active" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a dica de ferramenta está ativa no momento.</summary>
+        <value>
+          <see langword="true" /> se a dica de ferramenta estiver ativa no momento; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Forms.ToolTip.Active%2A> propriedade, você pode habilitar ou desabilitar a exibição do texto de dica de ferramenta para todos os controles que têm o texto especificado por específico <xref:System.Windows.Forms.ToolTip> componente. Embora mais de uma <xref:System.Windows.Forms.ToolTip> componente pode ser criado e atribuído a um formulário, definindo a <xref:System.Windows.Forms.ToolTip.Active%2A> propriedade `false` afeta apenas o atual <xref:System.Windows.Forms.ToolTip>. Você pode habilitar os usuários definir o valor dessa propriedade em um formulário que fornece opções de aplicativo. Essas opções, por sua vez, fornecem ao usuário a capacidade de ativar ou desativar a exibição de dicas de ferramentas em seu aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticDelay">
+      <MemberSignature Language="C#" Value="public int AutomaticDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutomaticDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.AutomaticDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(500)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o atraso automático para a dica de ferramenta.</summary>
+        <value>O atraso automático, em milissegundos. O padrão é 500.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade permite que você defina um valor de atraso único, que é usado para definir os valores de <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> propriedades. Cada vez que o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> estiver definida, os seguintes valores são definidos por padrão.  
+  
+|Propriedade|Valor padrão|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>|10 vezes o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> o valor da propriedade.|  
+|<xref:System.Windows.Forms.ToolTip.InitialDelay%2A>|Igual a <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> o valor da propriedade.|  
+|<xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>|1/5 a <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> o valor da propriedade.|  
+  
+ Essas propriedades também podem ser definidas independentemente de uma vez o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade foi definida. Para obter mais informações, consulte o <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> propriedades. Essa propriedade normalmente é usada para fornecer um padrão de atraso consistente para as janelas de dica de ferramenta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPopDelay">
+      <MemberSignature Language="C#" Value="public int AutoPopDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutoPopDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.AutoPopDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período em que ToolTip permanecerá visível se o ponteiro estiver parado em um controle com o texto de ToolTip especificado.</summary>
+        <value>O período, em milissegundos, em que o <see cref="T:System.Windows.Forms.ToolTip" /> permanece visível quando o ponteiro está parado em um controle. O valor padrão é 5000.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> propriedade permite que você encurtar ou aumentar o tempo que o <xref:System.Windows.Forms.ToolTip> janela é exibida quando o ponteiro está em um controle. Por exemplo, se você exibir ajuda extenso em uma janela de dica de ferramenta, você pode aumentar o valor dessa propriedade para garantir que o usuário tenha tempo suficiente para acomodar o texto.  
+  
+ Se você quiser ter um padrão de atraso consistente para as janelas de dica de ferramenta, você pode definir o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade. O <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> conjuntos de propriedades de <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, e <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedades com valores iniciais com base em um único valor. Toda vez que o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade for definida, o <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> está definida como 10 vezes o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> o valor da propriedade. Uma vez o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> estiver definida, você pode definir independentemente a <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> propriedade, substituindo o valor padrão.  
+  
+ O tempo máximo que você pode adiar um pop-up é 5000 milissegundos. Para mais longas, use o <xref:System.Windows.Forms.ToolTip.Show%2A> método para controlar o momento exato quando a dica de ferramenta é exibida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Windows.Forms.ToolTip> classe e o associa a instância com o <xref:System.Windows.Forms.Form> que a instância é criada dentro. O código, em seguida, inicializa as propriedades de atraso <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Além da instância do <xref:System.Windows.Forms.ToolTip> classe define o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade `true` para habilitar o texto de dica de ferramenta a ser exibido, independentemente se o formulário está ativo. Por fim, o exemplo associa o texto de dica de ferramenta com dois controles em um formulário, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.CheckBox>. O exemplo de código requer que o método definido no exemplo está localizado dentro de um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `button1` e um <xref:System.Windows.Forms.CheckBox> controle chamado `checkBox1,` e que o método é chamado do construtor de o <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BackColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color BackColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color BackColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.BackColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Info")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da tela de fundo do ToolTip.</summary>
+        <value>A tela de fundo <see cref="T:System.Drawing.Color" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que a dica de ferramenta desenhados pelo proprietário, essa propriedade será ignorada.  
+  
+ A fonte padrão do sistema é usada automaticamente e só pode ser substituído pelo proprietário do desenho a dica de ferramenta. Para obter mais informações, consulte a propriedade <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanExtend">
+      <MemberSignature Language="C#" Value="public bool CanExtend (object target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanExtend(object target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.CanExtend(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">O objeto de destino ao qual adicionar uma propriedade de extensão.</param>
+        <summary>Retorna <see langword="true" /> se a dica de ferramenta pode oferecer uma propriedade de extensão para o componente de destino especificado.</summary>
+        <returns>
+          <see langword="true" /> se a classe <see cref="T:System.Windows.Forms.ToolTip" /> pode oferecer uma ou mais propriedades estendidas; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip.CanExtend%2A> método é o único membro a <xref:System.ComponentModel.IExtenderProvider?displayProperty=nameWithType> interface. Este método retorna `true` se o `target` parâmetro é do tipo <xref:System.Windows.Forms.Control>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação para a janela de dica de ferramenta.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém as informações necessárias para criar a dica de ferramenta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip.CreateParams%2A> propriedade apenas deve ser estendida quando são quebra automática de uma classe de controle do Windows padrão ou definir estilos não fornecida pelo <xref:System.Windows.Forms?displayProperty=nameWithType> namespace. Para obter mais informações sobre como criar parâmetros de controle, consulte o `CreateWindow` e `CreateWindowEx` funções e o `CREATESTRUCT` documentação de estrutura na referência do SDK da plataforma Windows localizado na biblioteca MSDN.  
+  
+> [!NOTE]
+>  Ao substituir o <xref:System.Windows.Forms.ToolTip.CreateParams%2A> propriedade em uma classe derivada, use a classe base <xref:System.Windows.Forms.ToolTip.CreateParams%2A> propriedade para estender a implementação base.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">De herança de classes para chamar código não gerenciado ao obter o valor da propriedade.</permission>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para o chamador imediato chamar código não gerenciado ao obter o valor da propriedade.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.ComponentModel.Component" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.DrawToolTipEventHandler Draw;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.DrawToolTipEventHandler Draw" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolTip.Draw" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DrawToolTipEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a dica de ferramenta é desenhada e a propriedade <see cref="P:System.Windows.Forms.ToolTip.OwnerDraw" /> é definida como <see langword="true" /> e a propriedade <see cref="P:System.Windows.Forms.ToolTip.IsBalloon" /> é <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Forms.ToolTip.Draw> eventos, você pode personalizar a aparência do <xref:System.Windows.Forms.ToolTip>.  
+  
+ O <xref:System.Windows.Forms.ToolTip.Draw> evento é gerado pelo <xref:System.Windows.Forms.ToolTip> quando o <xref:System.Windows.Forms.ToolTip> é desenhada e o <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType> é o valor da propriedade `true` e <xref:System.Windows.Forms.ToolTip.IsBalloon%2A> é de propriedade `false`. O <xref:System.Windows.Forms.DrawToolTipEventArgs> classe contém todas as informações necessárias para pintar o <xref:System.Windows.Forms.ToolTip>, incluindo o texto de dica de ferramenta, o <xref:System.Drawing.Rectangle>e o <xref:System.Drawing.Graphics> do objeto no qual o desenho deve ser feito. Para personalizar a aparência da dica de ferramenta, use o <xref:System.Drawing.Rectangle> para determinar os limites da dica de ferramenta e o <xref:System.Drawing.Graphics> objeto para executar o desenho personalizado. Você pode aumentar os limites do <xref:System.Windows.Forms.ToolTip> antes de ser mostrada manipulando o <xref:System.Windows.Forms.ToolTip.Popup> evento.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [tratamento e gerando eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como desenhar personalizado a <xref:System.Windows.Forms.ToolTip>. O exemplo cria um <xref:System.Windows.Forms.ToolTip> e associa-o para três <xref:System.Windows.Forms.Button> controles localizados no <xref:System.Windows.Forms.Form>. O exemplo define o <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> propriedade `true` e trata o <xref:System.Windows.Forms.ToolTip.Draw> evento. No <xref:System.Windows.Forms.ToolTip.Draw> manipulador de eventos, o <xref:System.Windows.Forms.ToolTip> é personalizada desenhada de forma diferente, dependendo de qual botão o <xref:System.Windows.Forms.ToolTip> está sendo exibido para conforme indicado pelo <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ToolTip ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos não gerenciados e executa outras operações de limpeza antes que <see cref="T:System.Windows.Forms.Cursor" /> seja recuperado pelo coletor de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. O código do aplicativo não deve chamar este método; o método <xref:System.Object.Finalize%2A> de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType>. Para obter mais informações, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForeColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ForeColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ForeColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ForeColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "InfoText")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de primeiro plano da dica de ferramenta.</summary>
+        <value>A <see cref="T:System.Drawing.Color" /> do primeiro plano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Forms.ToolTip.BackColor%2A> e <xref:System.Windows.Forms.ToolTip.ForeColor%2A> propriedades para modificar o esquema de cores usado pelo dicas de ferramenta. A fonte padrão do sistema é usada automaticamente e só pode ser substituído pelo proprietário do desenho a dica de ferramenta. Para obter mais informações, consulte a propriedade <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetToolTip">
+      <MemberSignature Language="C#" Value="public string GetToolTip (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetToolTip(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.GetToolTip(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Windows.Forms.Control" /> do qual recuperar o texto <see cref="T:System.Windows.Forms.ToolTip" />.</param>
+        <summary>Recupera o texto da dica de ferramenta associado ao controle especificado.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o texto de dica de ferramenta para o controle especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Forms.ToolTip.GetToolTip%2A> método, você pode recuperar o texto de dica de ferramenta para qualquer controle. Se o texto de dica de ferramenta é alterado dinamicamente em um aplicativo, você pode usar esse método para descobrir qual o texto é exibido em qualquer momento, dependendo do estado do aplicativo. Para alterar o texto que está exibindo um controle, use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="public void Hide (System.Windows.Forms.IWin32Window win);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Hide(class System.Windows.Forms.IWin32Window win) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Hide(System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="win" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="win">O <see cref="T:System.Windows.Forms.IWin32Window" /> da janela ou controle associado a que a dica de ferramenta está associada.</param>
+        <summary>Oculta a janela de dica de ferramenta especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip.Hide%2A> método oculta a dica de ferramenta especificado <xref:System.Windows.Forms.Control> se ele está sendo exibido. Não desative ou impedir a mesma dica de ferramenta sejam exibidas no futuro. Em vez disso, desabilitar todas as janelas de dica de ferramenta associadas atual <xref:System.Windows.Forms.ToolTip.ToolTipTitle%2A> componente, definir o <xref:System.Windows.Forms.ToolTip.Active%2A> propriedade `false`.  
+  
+ Aplicativos em execução em confiança parcial devem declarar o <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> permissão para usar esse método, como <xref:System.Windows.Forms.ToolTip.Hide%2A> pode ocultar a dica independente de ação do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="win" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Requer <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialDelay">
+      <MemberSignature Language="C#" Value="public int InitialDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InitialDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.InitialDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo decorrido antes que a dica de ferramenta seja exibida.</summary>
+        <value>O período de tempo, em milissegundos, que o ponteiro deve permanecer parado em um controle antes de a janela de dica da ferramenta ser exibida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedade, você pode reduzir ou aumentar o tempo que o <xref:System.Windows.Forms.ToolTip> aguarda antes de exibir uma janela de dica de ferramenta. Se o valor de <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedade é definida como um valor que é muito longo duração, o usuário do seu aplicativo poderá não saber que seu aplicativo fornece ajuda de dica de ferramenta. Você pode usar essa propriedade para garantir que o usuário tem dicas de ferramenta exibidas rapidamente, diminuindo o tempo especificado.  
+  
+ O valor para essa propriedade não pode exceder 32767.  
+  
+ Se você quiser ter um padrão de atraso consistente para as janelas de dica de ferramenta, você pode definir o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade. O <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> conjuntos de propriedades de <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, e <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedades com valores iniciais com base no valor de uma única vez. Toda vez que o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade for definida, o <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedade é definida como o mesmo valor que o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade. Uma vez o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> estiver definida, você pode definir independentemente a <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedade, substituindo o valor padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Windows.Forms.ToolTip> classe e o associa a instância com o <xref:System.Windows.Forms.Form> que a instância é criada dentro. O código, em seguida, inicializa as propriedades de atraso <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Além da instância do <xref:System.Windows.Forms.ToolTip> classe define o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade `true` para habilitar o texto de dica de ferramenta a ser exibido, independentemente se o formulário está ativo. Por fim, o exemplo associa o texto de dica de ferramenta com dois controles em um formulário, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.CheckBox>. O exemplo de código requer que o método definido no exemplo está localizado dentro de um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `button1` e um <xref:System.Windows.Forms.CheckBox> controle chamado `checkBox1,` e que o método é chamado do construtor de o <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBalloon">
+      <MemberSignature Language="C#" Value="public bool IsBalloon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBalloon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.IsBalloon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a dica de ferramenta deve usar uma janela de balão.</summary>
+        <value>
+          <see langword="true" /> para usar uma janela de balão. Caso contrário, <see langword="false" /> para usar uma janela retangular padrão. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, as dicas de ferramentas são exibidas usando o windows retangulares vazio. Definindo o <xref:System.Windows.Forms.ToolTip.IsBalloon%2A> propriedade `true`, a dica de ferramenta será exibida com uma janela de balão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDraw">
+      <MemberSignature Language="C#" Value="public bool OwnerDraw { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OwnerDraw" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.OwnerDraw" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a dica de ferramenta é desenhada pelo sistema operacional ou pelo código que você fornece.</summary>
+        <value>
+          <see langword="true" /> se <see cref="T:System.Windows.Forms.ToolTip" /> for desenhado pelo código que você fornecer; <see langword="false" /> se <see cref="T:System.Windows.Forms.ToolTip" /> for desenhado pelo sistema operacional. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um <xref:System.Windows.Forms.ToolTip> é desenhado pelo sistema operacional, mas para personalizar a aparência do <xref:System.Windows.Forms.ToolTip> você pode definir o <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> propriedade `true` e tratar o <xref:System.Windows.Forms.ToolTip.Draw> evento.  
+  
+ O <xref:System.Windows.Forms.ToolTip.IsBalloon%2A> propriedade tem precedência sobre o <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> propriedade. Se ambas estiverem definidas `true`, o <xref:System.Windows.Forms.ToolTip> será exibida com uma janela de balão em vez de uma janela de desenho do proprietário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como proprietário desenhar o <xref:System.Windows.Forms.ToolTip>. O exemplo cria um <xref:System.Windows.Forms.ToolTip> e associa-o para três <xref:System.Windows.Forms.Button> controles localizados no <xref:System.Windows.Forms.Form>. O exemplo define o <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A> propriedade `true` e trata o <xref:System.Windows.Forms.ToolTip.Draw> evento. No <xref:System.Windows.Forms.ToolTip.Draw> manipulador de eventos, o <xref:System.Windows.Forms.ToolTip> é personalizada desenhada de forma diferente, dependendo o botão de <xref:System.Windows.Forms.ToolTip> está sendo exibido para conforme indicado pelo <xref:System.Windows.Forms.DrawToolTipEventArgs.AssociatedControl%2A?displayProperty=nameWithType> propriedade.  
+  
+ [!code-cpp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolTip.OwnerDraw#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolTip.OwnerDraw/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Popup">
+      <MemberSignature Language="C#" Value="public event System.Windows.Forms.PopupEventHandler Popup;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.Forms.PopupEventHandler Popup" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ToolTip.Popup" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.PopupEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes que uma dica de ferramenta seja exibida inicialmente. Trata-se do evento padrão para a classe <see cref="T:System.Windows.Forms.ToolTip" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip.Popup> é gerado sempre que uma dica de ferramenta é exibida, por meio de uma chamada explícita para um do <xref:System.Windows.Forms.ToolTip.Show%2A> métodos ou quando o <xref:System.Windows.Forms.ToolTip> classe implicitamente exibe uma dica de ferramenta. Esse evento pode ser cancelado.  
+  
+ Chamando propriedades neste evento que fazer com que o identificador de janela subjacente ser recriadas, como <xref:System.Windows.Forms.ToolTip.IsBalloon%2A>, resultará em uma exceção sendo lançada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.ToolTip.Popup> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.ToolTip> chamado `ToolTip1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.ToolTip.Popup> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#619](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#619)]
+ [!code-vb[System.Windows.Forms.EventExamples#619](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#619)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.RemoveAll" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todo texto de dica de ferramenta associado atualmente com o componente de dica de ferramenta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para remover todo o texto de dica de ferramenta está associado a <xref:System.Windows.Forms.ToolTip> componente para todos os respectivos controles. Para desativar a exibição do texto em vez disso, use o <xref:System.Windows.Forms.ToolTip.Active%2A> propriedade. Para alterar o texto de um único controle associado, use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReshowDelay">
+      <MemberSignature Language="C#" Value="public int ReshowDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReshowDelay" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ReshowDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo que deve ocorrer antes que as janelas de dica de ferramenta subsequentes sejam exibidas à medida que o ponteiro se move de um controle para outro.</summary>
+        <value>O período de tempo, em milissegundos, que as janelas de dica de ferramenta subsequentes levam para serem exibidas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> propriedade, você pode reduzir ou aumentar o tempo que o <xref:System.Windows.Forms.ToolTip> aguarda antes de exibir uma janela de dica de ferramenta depois que uma janela anterior de dica de ferramenta é exibida. Na primeira vez uma janela de dica de ferramenta é exibida, o valor de <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedade é usada para determinar o atraso para aplicar antes de mostrar inicialmente a janela de dica de ferramenta. Quando uma janela de dica de ferramenta está sendo exibida atualmente e o usuário move o ponteiro para um outro controle que exibe uma janela de dica de ferramenta, o valor de <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> propriedade é usada antes de mostrar a dica de ferramenta para o novo controle. A janela de dica de ferramenta do controle anterior ainda deve ser exibida na ordem para o intervalo especificado na <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> propriedade a ser usada; caso contrário o <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> o valor da propriedade é usado.  
+  
+ Se desejar ter um padrão de atraso consistentes para windows de dica de ferramenta, você pode definir o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade. O <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> conjuntos de propriedades de <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>, e <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> propriedades com valores iniciais com base no valor de uma única vez. Toda vez que o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> propriedade for definida, o <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> está definida como 1/5 a <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> o valor da propriedade. Uma vez o <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> estiver definida, você pode definir independentemente a <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> propriedade, substituindo o valor padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Windows.Forms.ToolTip> classe e o associa a instância com o <xref:System.Windows.Forms.Form> que a instância é criada dentro. O código, em seguida, inicializa as propriedades de atraso <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Além da instância do <xref:System.Windows.Forms.ToolTip> classe define o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade `true` para habilitar o texto de dica de ferramenta a ser exibido, independentemente se o formulário está ativo. Por fim, o exemplo associa o texto de dica de ferramenta com dois controles em um formulário, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.CheckBox>. O exemplo de código requer que o método definido no exemplo está localizado dentro de um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `button1` e um <xref:System.Windows.Forms.CheckBox> controle chamado `checkBox1,` e que o método é chamado do construtor de o <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetToolTip">
+      <MemberSignature Language="C#" Value="public void SetToolTip (System.Windows.Forms.Control control, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetToolTip(class System.Windows.Forms.Control control, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.SetToolTip(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Windows.Forms.Control" /> ao qual associar o texto ToolTip.</param>
+        <param name="caption">O texto ToolTip a ser exibido quando o ponteiro está sobre o controle.</param>
+        <summary>Associa o texto ToolTip ao controle especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Além de especificar o texto de dica de ferramenta a ser exibida para um controle, você também pode usar esse método para modificar o texto de dica de ferramenta para um controle. Chamar o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método mais de uma vez para um dado controle não especificar vários texto de dica de ferramenta a ser exibido para um controle, mas em vez disso, o texto de dica de ferramenta atual para o controle é alterado. Para determinar o texto de dica de ferramenta que é associado um controle em tempo de execução, use o <xref:System.Windows.Forms.ToolTip.GetToolTip%2A> método.  
+  
+ Como regra geral, o texto usado deve ser curto; No entanto, você pode inserir quebras de linha usando o `\r\n` sequência de caracteres de escape. E comercial (&) no texto são tratadas como descrito pelo <xref:System.Windows.Forms.ToolTip.StripAmpersands%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Windows.Forms.ToolTip> classe e o associa a instância com o <xref:System.Windows.Forms.Form> que a instância é criada dentro. O código, em seguida, inicializa as propriedades de atraso <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Além da instância do <xref:System.Windows.Forms.ToolTip> classe define o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade `true` para habilitar o texto de dica de ferramenta a ser exibido, independentemente se o formulário está ativo. Por fim, o exemplo associa o texto de dica de ferramenta com dois controles em um formulário, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.CheckBox>. Este exemplo requer que o método definido no exemplo está localizado dentro de um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `button1` e um <xref:System.Windows.Forms.CheckBox> controle chamado `checkBox1`, e que o método é chamado do construtor de o <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="text">Um <see cref="T:System.String" /> que contém o novo texto de ToolTip.</param>
+        <param name="window">O <see cref="T:System.Windows.Forms.Control" /> na qual a ToolTip será exibida.</param>
+        <summary>Define o texto de ToolTip associado ao controle especificado e exibe a ToolTip de forma restrita.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A versão do <xref:System.Windows.Forms.ToolTip.Show%2A> método exibe a dica de ferramenta para o controle especificado modalmente; ou seja, a dica de ferramenta será exibida até que o <xref:System.Windows.Forms.ToolTip.Hide%2A> método é chamado, ou até que o formulário pai é minimizado, oculto ou fechado. A dica de ferramenta é colocada no centro do controle associado.  
+  
+ Aplicativos em execução em confiança parcial devem declarar o <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> permissão para usar esse método, como <xref:System.Windows.Forms.ToolTip.Show%2A> pode controlar a exibição e o local de uma dica de ferramenta independente de ação do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="window" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Requer <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="text">Um <see cref="T:System.String" /> que contém o novo texto de ToolTip.</param>
+        <param name="window">O <see cref="T:System.Windows.Forms.Control" /> na qual a ToolTip será exibida.</param>
+        <param name="point">Um <see cref="T:System.Drawing.Point" /> contendo o deslocamento, em pixels, em relação ao canto superior esquerdo da janela de controle associada para exibir a dica de contexto.</param>
+        <summary>Define o texto de dica de contexto associado ao controle especificado e então exibe a dica de forma restrita na posição relativa especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `pt` parâmetro pode especificar uma posição fora dos limites do controle associado, seu formulário pai ou até mesmo a área de trabalho. A versão do <xref:System.Windows.Forms.ToolTip.Show%2A> método exibe a dica de ferramenta para o controle especificado modalmente; ou seja, a dica de ferramenta será exibida até que o <xref:System.Windows.Forms.ToolTip.Hide%2A> método é chamado, ou até que o formulário pai é minimizado, oculto ou descartado.  
+  
+ Aplicativos em execução em confiança parcial devem declarar o <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> permissão para usar esse método, como <xref:System.Windows.Forms.ToolTip.Show%2A> pode controlar a exibição e o local de uma dica de ferramenta independente de ação do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="window" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Requer <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Um <see cref="T:System.String" /> que contém o novo texto de ToolTip.</param>
+        <param name="window">O <see cref="T:System.Windows.Forms.Control" /> na qual a ToolTip será exibida.</param>
+        <param name="duration">Um <see cref="T:System.Int32" /> que contém a duração, em milissegundos, para exibir a dica de ferramenta.</param>
+        <summary>Define o texto da dica de ferramenta associada ao controle especificado e exibe a dica de ferramenta pela duração indicada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A dica de ferramenta é colocada no centro do controle associado representado pelo `win` parâmetro. Para exibir a dica de ferramenta restrito, chame o <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%29> sobrecarregado versão desse método em vez disso.  
+  
+ Aplicativos em execução em confiança parcial devem declarar o <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> permissão para usar esse método, como <xref:System.Windows.Forms.ToolTip.Show%2A> pode controlar a exibição e o local de uma dica de ferramenta independente de ação do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="window" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="duration" /> é menor ou igual a 0.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Requer <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, System.Drawing.Point point, int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, valuetype System.Drawing.Point point, int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Drawing.Point,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="point" Type="System.Drawing.Point" />
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Um <see cref="T:System.String" /> que contém o novo texto de ToolTip.</param>
+        <param name="window">O <see cref="T:System.Windows.Forms.Control" /> na qual a ToolTip será exibida.</param>
+        <param name="point">Um <see cref="T:System.Drawing.Point" /> contendo o deslocamento, em pixels, em relação ao canto superior esquerdo da janela de controle associada para exibir a dica de contexto.</param>
+        <param name="duration">Um <see cref="T:System.Int32" /> que contém a duração, em milissegundos, para exibir a dica de ferramenta.</param>
+        <summary>Define o texto da dica de ferramenta associada ao controle especificado e a exibe pela duração indicada na posição relativa especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `pt` parâmetro pode especificar uma posição fora dos limites do controle associado, seu formulário pai ou até mesmo a área de trabalho.  A dica de ferramenta é colocada no centro do controle associado. Para exibir a dica de ferramenta restrito, chame o <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Drawing.Point%29> sobrecarregado versão desse método em vez disso.  
+  
+ Aplicativos em execução em confiança parcial devem declarar o <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> permissão para usar esse método, como <xref:System.Windows.Forms.ToolTip.Show%2A> pode controlar a exibição e o local de uma dica de ferramenta independente de ação do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="window" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="duration" /> é menor ou igual a 0.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Requer <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Um <see cref="T:System.String" /> que contém o novo texto de ToolTip.</param>
+        <param name="window">O <see cref="T:System.Windows.Forms.Control" /> na qual a ToolTip será exibida.</param>
+        <param name="x">O deslocamento horizontal, em pixels, relativos ao canto superior esquerdo da janela do controle associado, para exibir a dica de ferramenta.</param>
+        <param name="y">O deslocamento vertical, em pixels, em relação ao canto superior esquerdo da janela de controle associada para exibir a dica de ferramenta.</param>
+        <summary>Define o texto de dica de contexto associado ao controle especificado e então exibe a dica de forma restrita na posição relativa especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do sobrecarregados <xref:System.Windows.Forms.ToolTip.Show%2A> método opera de forma idêntica ao <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Drawing.Point%29> versão, exceto que o deslocamento é especificado como separados coordenadas x e y-em vez de um <xref:System.Drawing.Point>.  
+  
+ Aplicativos em execução em confiança parcial devem declarar o <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> permissão para usar esse método, como <xref:System.Windows.Forms.ToolTip.Show%2A> pode controlar a exibição e o local de uma dica de ferramenta independente de ação do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">Requer <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="public void Show (string text, System.Windows.Forms.IWin32Window window, int x, int y, int duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Show(string text, class System.Windows.Forms.IWin32Window window, int32 x, int32 y, int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.Show(System.String,System.Windows.Forms.IWin32Window,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="window" Type="System.Windows.Forms.IWin32Window" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="text">Um <see cref="T:System.String" /> que contém o novo texto de ToolTip.</param>
+        <param name="window">O <see cref="T:System.Windows.Forms.Control" /> na qual a ToolTip será exibida.</param>
+        <param name="x">O deslocamento horizontal, em pixels, relativos ao canto superior esquerdo da janela do controle associado, para exibir a dica de ferramenta.</param>
+        <param name="y">O deslocamento vertical, em pixels, em relação ao canto superior esquerdo da janela de controle associada para exibir a dica de ferramenta.</param>
+        <param name="duration">Um <see cref="T:System.Int32" /> que contém a duração, em milissegundos, para exibir a dica de ferramenta.</param>
+        <summary>Define o texto da dica de ferramenta associada ao controle especificado e a exibe pela duração indicada na posição relativa especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do sobrecarregados <xref:System.Windows.Forms.ToolTip.Show%2A> método opera de forma idêntica ao <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Drawing.Point%2CSystem.Int32%29> versão, exceto que o deslocamento é especificado como algo separado x e y coordena em vez de um <xref:System.Drawing.Point>. Para exibir a dica de ferramenta restrito, chame o <xref:System.Windows.Forms.ToolTip.Show%28System.String%2CSystem.Windows.Forms.IWin32Window%2CSystem.Int32%2CSystem.Int32%29> sobrecarregado versão desse método em vez disso.  
+  
+ Aplicativos em execução em confiança parcial devem declarar o <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> permissão para usar esse método, como <xref:System.Windows.Forms.ToolTip.Show%2A> pode controlar a exibição e o local de uma dica de ferramenta independente de ação do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="window" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="duration" /> é menor ou igual a 0.</exception>
+        <permission cref="T:System.Security.Permissions.UIPermission">Requer <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /> permissão.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowAlways">
+      <MemberSignature Language="C#" Value="public bool ShowAlways { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowAlways" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ShowAlways" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se uma janela Dica de ferramenta é exibida, mesmo quando seu controle pai não está ativo.</summary>
+        <value>
+          <see langword="true" /> se a Dica de ferramenta sempre é exibida, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade, você pode exibir uma janela de dica de ferramenta, mesmo quando o contêiner do <xref:System.Windows.Forms.ToolTip> não está ativa. Você pode usar esse recurso em um aplicativo de janela não restrita para habilitar o windows de dica de ferramenta a ser exibido, independentemente de qual janela sem janela restrita está ativa. Esse recurso também é útil quando você deseja criar um controle usando o <xref:System.Windows.Forms.UserControl>, que contém uma série de controles dentro dele que exibir janelas de dica de ferramenta. Porque o <xref:System.Windows.Forms.UserControl> geralmente não é a janela ativa em um formulário, a definição dessa propriedade `true` habilita os controles dentro de <xref:System.Windows.Forms.UserControl> para exibir janelas de dica de ferramenta a qualquer momento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma instância do <xref:System.Windows.Forms.ToolTip> classe e o associa a instância com o <xref:System.Windows.Forms.Form> que a instância é criada dentro. O código, em seguida, inicializa as propriedades de atraso <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>, e <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>. Além da instância do <xref:System.Windows.Forms.ToolTip> classe define o <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedade `true` para habilitar o texto de dica de ferramenta a ser exibido, independentemente se o formulário está ativo. Por fim, o exemplo associa o texto de dica de ferramenta com dois controles em um formulário, um <xref:System.Windows.Forms.Button> e um <xref:System.Windows.Forms.CheckBox>. O exemplo de código requer que o método definido no exemplo está localizado dentro de um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.Button> controle chamado `button1` e um <xref:System.Windows.Forms.CheckBox> controle chamado `checkBox1`, e que o método é chamado a partir do construtor da <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[ToolTip Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ToolTip Example/CPP/form1.cpp#1)]
+ [!code-csharp[ToolTip Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolTip Example/CS/form1.cs#1)]
+ [!code-vb[ToolTip Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolTip Example/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopTimer">
+      <MemberSignature Language="C#" Value="protected void StopTimer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void StopTimer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.StopTimer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Interrompe o cronômetro que oculta as dicas de ferramenta exibidas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolTip> classe tiver um temporizador interno que ele usa para definir a duração de exibição de dicas de ferramenta. A duração associada a este temporizador é definida por meio de <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> propriedade. O <xref:System.Windows.Forms.ToolTip.StopTimer%2A> método irá parar o temporizador interno, fazendo com que qualquer dica de ferramenta exibida a ser exibido modalmente até que o <xref:System.Windows.Forms.ToolTip.Hide%2A> método é chamado, ou o formulário pai é minimizado, oculto ou fechado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StripAmpersands">
+      <MemberSignature Language="C#" Value="public bool StripAmpersands { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StripAmpersands" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.StripAmpersands" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina como e comercial (&amp;) caracteres são tratados.</summary>
+        <value>
+          <see langword="true" /> se os caracteres de E comercial forem eliminados do texto da ToolTip; caso contrário, <see langword="false" />. O padrão é falso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, um aplicativo usa o mesmo recurso de cadeia de caracteres para várias finalidades, como um item de menu e uma dica de ferramenta. No entanto, os menus geralmente permitem aceleradores, indicados por um caractere e comercial, na cadeia de item de menu. Dicas de ferramenta não oferecem suporte a esse recurso, portanto, por padrão, o e comercial apenas é exibidos como caracteres normais. Definindo o <xref:System.Windows.Forms.ToolTip.StripAmpersands%2A> propriedade `true` remove todas as vezes o texto de dica de ferramenta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.StringConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto que contém os dados fornecidos pelo programador associados a <see cref="T:System.Windows.Forms.ToolTip" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém dados sobre o <see cref="T:System.Windows.Forms.ToolTip" />. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você usa o <xref:System.Windows.Forms.ToolTip.Tag%2A> propriedade para armazenar dados que estão estreitamente relacionados com o <xref:System.Windows.Forms.ToolTip>. Por exemplo, se você estiver exibindo um <xref:System.Windows.Forms.ToolTip> para um controle que exibe informações de cliente, você pode armazenar o <xref:System.Data.DataSet> que contém as informações do cliente no <xref:System.Windows.Forms.ToolTip.Tag%2A> propriedade para os dados possam ser acessados rapidamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipIcon">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ToolTipIcon ToolTipIcon { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.ToolTipIcon ToolTipIcon" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ToolTipIcon" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolTipIcon</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que define o tipo de ícone a ser exibido ao lado do texto de dica de ferramenta.</summary>
+        <value>Um dos valores enumerados <see cref="T:System.Windows.Forms.ToolTipIcon" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você deseja usar um gráfico que não é definido pelo <xref:System.Windows.Forms.ToolTipIcon?displayProperty=nameWithType> enumeração, você deve desenho proprietário toda a dica de ferramenta. Para obter mais informações, consulte a propriedade <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolTipTitle">
+      <MemberSignature Language="C#" Value="public string ToolTipTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolTipTitle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.ToolTipTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um título para a janela de ToolTip.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o título da janela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O título é exibido dentro da janela como uma linha de texto em negrito acima do texto padrão de uma descrição de controle de dica de ferramenta. Normalmente, os títulos são só usadas tanto para diferenciar categorias diferentes de controles em um formulário ou como uma introdução para uma descrição de controle muito longo.  
+  
+ O comprimento máximo de um título é 99 caracteres. Se essa propriedade contém uma cadeia de caracteres mais 99 caracteres, sem título será exibido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ToolTip.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres para este controle.</summary>
+        <returns>Um <see cref="T:System.String" /> contendo uma descrição do <see cref="T:System.Windows.Forms.ToolTip" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão de substituição de <xref:System.Windows.Forms.ToolTip.ToString%2A> método exibe o nome da classe, seguido pelos valores da <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> e <xref:System.Windows.Forms.ToolTip.ShowAlways%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAnimation">
+      <MemberSignature Language="C#" Value="public bool UseAnimation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAnimation" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.UseAnimation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor determinando se um efeito de animação deve ser usado ao exibir a dica de ferramenta.</summary>
+        <value>
+          <see langword="true" />Se a animação da janela deve ser usada; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Internet Explorer 5 e o Microsoft Windows XP introduziram efeitos de interface de usuário dinâmico como esmaecimento de janela e animação. Se o usuário não tiver desabilitado a esses recursos, o <xref:System.Windows.Forms.ToolTip.UseAnimation%2A> propriedade pode ser usada para habilitar esse recurso para dicas de ferramenta exibido nessas plataformas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseFading">
+      <MemberSignature Language="C#" Value="public bool UseFading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseFading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ToolTip.UseFading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor determinando se um efeito de esmaecimento deve ser usado ao exibir a dica de ferramenta.</summary>
+        <value>
+          <see langword="true" />Se desaparece da janela deve ser usado; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Internet Explorer 5 e o Microsoft Windows XP introduziram efeitos de interface de usuário dinâmico como esmaecimento de janela e animação. Se o usuário não tiver desabilitado a esses recursos, o <xref:System.Windows.Forms.ToolTip.UseFading%2A> propriedade pode ser usada para habilitar esse recurso para dicas de ferramenta exibido nessas plataformas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

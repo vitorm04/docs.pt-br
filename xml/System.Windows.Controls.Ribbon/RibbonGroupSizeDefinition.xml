@@ -1,0 +1,130 @@
+<Type Name="RibbonGroupSizeDefinition" FullName="System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition">
+  <TypeSignature Language="C#" Value="public class RibbonGroupSizeDefinition : System.Windows.Controls.Ribbon.RibbonGroupSizeDefinitionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RibbonGroupSizeDefinition extends System.Windows.Controls.Ribbon.RibbonGroupSizeDefinitionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Ribbon.RibbonGroupSizeDefinitionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("ControlSizeDefinitions")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica informações sobre o tamanho dos controles em um <see cref="T:System.Windows.Controls.Ribbon.RibbonGroup" /> e o estado visual do grupo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Windows.Controls.Ribbon.RibbonGroup.GroupSizeDefinitions%2A> coleção que especifica três tamanhos de grupo diferente.  
+  
+```  
+<ribbon:RibbonGroup.GroupSizeDefinitions>  
+  <ribbon:RibbonGroupSizeDefinition>  
+    <ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />  
+    <ribbon:RibbonControlSizeDefinition ImageSize="Small" IsLabelVisible="True" />  
+    <ribbon:RibbonControlSizeDefinition ImageSize="Small" IsLabelVisible="True" />  
+  </ribbon:RibbonGroupSizeDefinition>  
+  <ribbon:RibbonGroupSizeDefinition>  
+    <ribbon:RibbonControlSizeDefinition ImageSize="Large" IsLabelVisible="True" />  
+    <ribbon:RibbonControlSizeDefinition ImageSize="Small" IsLabelVisible="False" />  
+    <ribbon:RibbonControlSizeDefinition ImageSize="Small" IsLabelVisible="False" />  
+  </ribbon:RibbonGroupSizeDefinition>  
+  <ribbon:RibbonGroupSizeDefinition IsCollapsed="True" />  
+</ribbon:RibbonGroup.GroupSizeDefinitions>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RibbonGroupSizeDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlSizeDefinitions">
+      <MemberSignature Language="C#" Value="public System.Windows.Controls.Ribbon.RibbonControlSizeDefinitionCollection ControlSizeDefinitions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Ribbon.RibbonControlSizeDefinitionCollection ControlSizeDefinitions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition.ControlSizeDefinitions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Ribbon.RibbonControlSizeDefinitionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção de <see cref="T:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition" /> que especifique o tamanho dos controles no grupo de itens.</summary>
+        <value>Uma coleção de <see cref="T:System.Windows.Controls.Ribbon.RibbonControlSizeDefinition" /> que especifique o tamanho dos controles no grupo de itens. O padrão registrado é <see langword="null" />. Para obter mais informações sobre o que pode influenciar o valor, consulte [Precedência do valor da propriedade de dependência](~/docs/framework/wpf/advanced/dependency-property-value-precedence.md).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_ControlSizeDefinitions"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition.ControlSizeDefinitionsProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlSizeDefinitionsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ControlSizeDefinitionsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ControlSizeDefinitionsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition.ControlSizeDefinitionsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition.ControlSizeDefinitions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Controls.Ribbon</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Windows.Controls.Ribbon.RibbonGroupSizeDefinition" />.</summary>
+        <returns>A nova instância dessa classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

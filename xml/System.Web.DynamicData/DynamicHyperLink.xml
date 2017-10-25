@@ -1,0 +1,329 @@
+<Type Name="DynamicHyperLink" FullName="System.Web.DynamicData.DynamicHyperLink">
+  <TypeSignature Language="C#" Value="public class DynamicHyperLink : System.Web.UI.WebControls.HyperLink" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DynamicHyperLink extends System.Web.UI.WebControls.HyperLink implements class System.Web.UI.IAttributeAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.DynamicHyperLink" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.HyperLink</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Action")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.DynamicData.DynamicHyperLink), "DynamicHyperLink.bmp")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Exibe os links para ações de tabela como editar, excluir e inserir.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.DynamicData.DynamicHyperLink> controle cria links que são baseados nas ações de tabela que são habilitadas por dados dinâmicos. Essas ações são definidas no arquivo global. asax, como regras de roteamento padrão. As regras são associadas com modelos de página padrão como Edit.aspx, List.aspx e assim por diante. Quando o usuário clica no link, uma página é exibida que permite ao usuário executar a ação que é especificada pelo link.  
+  
+ O <xref:System.Web.DynamicData.DynamicHyperLink> controle permite que você crie os seguintes links:  
+  
+-   Links de dados associados do linha de tabela, que são links de ação específica de item de dados, como "Editar" e "Detalhes". Dados dinâmicos infere a tabela e a chave primária da linha atual. É um exemplo desses links na página de Edit.aspx de um site da Web de dados dinâmicos.  
+  
+-   Links para <xref:System.Web.DynamicData.MetaTable> objetos, que são links de ação específica, como "List" e "Insert" que por sua vez, aponte para objetos como tabelas. É um exemplo desses links na página Default.aspx de um site da Web dinâmico de dados.  
+  
+-   Links não associados, que cria links de ação de tabela fora de um controle associado a dados. É um exemplo desses links no link de inserção no modelo List.aspx página de um site da Web dinâmico de dados. Como esses links não fazem parte de um controle associado a dados que tem um contexto de dados definido, você deve especificar a tabela de acesso e a ação a realizar. Se você especificar "Editar" ou "Detalhes" como a ação, você também deve fornecer a chave primária.  
+  
+ O <xref:System.Web.DynamicData.DynamicHyperLink> oferece suporte a atributos de marcação adicional de controle, em seguida, possam ser encaminhados para o mecanismo de roteamento quando o link é ativado. Isso pode ser útil quando você deseja ter um link de item específico em um contexto de dados associados.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:DynamicHyperlink  
+    ID="string"  
+    Action="Details|Edit|Insert|List"  
+    ContextTypeName="string"  
+    DataField="string"  
+    TableName="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnPreRender="PreRender event handler"/>  
+```  
+  
+   
+  
+## Examples  
+ Um projeto do Visual Studio com o código-fonte está disponível para acompanhar este tópico: [Scaffolding de dados dinâmicos](http://go.microsoft.com/fwlink/?LinkId=168914).  
+  
+ Os exemplos a seguir mostram como criar <xref:System.Web.DynamicData.DynamicHyperLink> controles para linhas de dados, para uma coleção e para executar a ação especificada.  
+  
+ [!code-aspx-csharp[DynamicData.DynamicHyperlinks#1](~/samples/snippets/csharp/VS_Snippets_WebNet/dynamicdata.dynamichyperlinks/cs/dynamicdatadynamichyperlink.aspx#1)]
+ [!code-aspx-vb[DynamicData.DynamicHyperlinks#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/dynamicdata.dynamichyperlinks/vb/dynamicdatadynamichyperlink.aspx#1)]  
+  
+ [!code-csharp[DynamicData.DynamicHyperlinks#2](~/samples/snippets/csharp/VS_Snippets_WebNet/dynamicdata.dynamichyperlinks/cs/dynamicdatadynamichyperlink.aspx.cs#2)]
+ [!code-vb[DynamicData.DynamicHyperlinks#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/dynamicdata.dynamichyperlinks/vb/dynamicdatadynamichyperlink.aspx.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DynamicHyperLink ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicHyperLink.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.DynamicHyperLink" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicHyperLink.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Navigation")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.DynamicData.ActionConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ação que está associada com o link.</summary>
+        <value>A ação que está associada com o link.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores predefinidos que podem ser atribuídos a essa propriedade são "Editar", "Insert", "List" e "Detalhes". Cada um desses valores é associada um modelo de página. Você também pode atribuir valores personalizados. Valores personalizados devem ser suportados por modelos personalizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicHyperLink.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Navigation")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contexto de dados para o modelo de dados que o link é aplicável.</summary>
+        <value>O contexto de dados que se aplica ao link.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.DynamicData.DynamicHyperLink> controle é usado em um controle associado a dados, o valor padrão é o mesmo que aquele que é usado pelo controle de associação de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public string DataField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicHyperLink.DataField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Navigation")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto de exibição do link.</summary>
+        <value>O texto de exibição do link.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o texto do link de exibição estiver vazio, a exibição padrão `string` é usado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataBinding">
+      <MemberSignature Language="C#" Value="protected override void OnDataBinding (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataBinding(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicHyperLink.OnDataBinding(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.DataBinding" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método notifica um <xref:System.Web.DynamicData.DynamicHyperLink> que ele deve executar qualquer lógica de associação de dados de controle.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Foi feita uma tentativa para definir o contexto de tabela e dados durante a associação de dados.  
+  
+ -ou-  
+  
+ Foi feita uma tentativa para vincular a um <see langword="null" /> campo de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicHyperLink.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.PreRender" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método notifica um <xref:System.Web.DynamicData.DynamicHyperLink> controle que ele deve executar qualquer pré-processamento necessário de etapas antes do controle salva o estado de exibição e renderiza o conteúdo.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Web.DynamicData.DynamicHyperLink" /> objeto não é possível determinar a tabela de dados para vincular a.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.GetAttribute">
+      <MemberSignature Language="C#" Value="string IAttributeAccessor.GetAttribute (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.Web.UI.IAttributeAccessor.GetAttribute(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicHyperLink.System#Web#UI#IAttributeAccessor#GetAttribute(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do atributo a ser recuperado.</param>
+        <summary>Recupera o valor do atributo especificado que é aplicado para o <see cref="T:System.Web.DynamicData.DynamicHyperLink" /> controle.</summary>
+        <returns>O atributo especificado que é aplicado ao link.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IAttributeAccessor.SetAttribute">
+      <MemberSignature Language="C#" Value="void IAttributeAccessor.SetAttribute (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IAttributeAccessor.SetAttribute(string key, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.DynamicHyperLink.System#Web#UI#IAttributeAccessor#SetAttribute(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do atributo.</param>
+        <param name="value">O valor atribuído ao atributo.</param>
+        <summary>Define um atributo e seu valor a ser aplicado para o <see cref="T:System.Web.DynamicData.DynamicHyperLink" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableName">
+      <MemberSignature Language="C#" Value="public string TableName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TableName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.DynamicData.DynamicHyperLink.TableName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Navigation")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a tabela para a ação de link.</summary>
+        <value>O nome da tabela para a ação de link.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

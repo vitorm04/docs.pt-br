@@ -1,0 +1,617 @@
+<Type Name="SoapMessage" FullName="System.Web.Services.Protocols.SoapMessage">
+  <TypeSignature Language="C#" Value="public abstract class SoapMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SoapMessage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Protocols.SoapMessage" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os dados em uma solicitação SOAP ou resposta SOAP em um determinado <see cref="T:System.Web.Services.Protocols.SoapMessageStage" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O principal uso do <xref:System.Web.Services.Protocols.SoapMessage> classe é para extensões SOAP, que representa os dados em uma solicitação SOAP ou resposta SOAP. Quando o <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> método é chamado, um <xref:System.Web.Services.Protocols.SoapExtension> recebe um <xref:System.Web.Services.Protocols.SoapMessage> em cada <xref:System.Web.Services.Protocols.SoapMessageStage>. Cabe a extensão SOAP específica para escolher como processar o <xref:System.Web.Services.Protocols.SoapMessage>. Extensões comuns incluem a criptografia e compactação.  
+  
+ Extensões SOAP podem ser aplicadas a uma ou ambas as um método de serviço Web XML criados usando ASP.NET ou um cliente de serviço da Web em XML. Quando uma extensão SOAP é aplicada a um método de serviço da Web em XML, o <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> método recebe uma instância de <xref:System.Web.Services.Protocols.SoapServerMessage>, que é derivado de <xref:System.Web.Services.Protocols.SoapMessage>. Da mesma forma, quando uma extensão SOAP é aplicada a um cliente de serviço da Web em XML, <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> recebe uma instância de <xref:System.Web.Services.Protocols.SoapClientMessage>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#1)]
+ [!code-csharp[SoapMessage#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#1)]
+ [!code-vb[SoapMessage#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public abstract string Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o campo de cabeçalho de solicitação HTTP SOAPAction para a solicitação SOAP ou resposta SOAP.</summary>
+        <value>O campo de cabeçalho de solicitação HTTP SOAPAction para a solicitação SOAP ou resposta SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapMessage.Action%2A> propriedade pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#2](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#2)]
+ [!code-csharp[SoapMessage#2](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#2)]
+ [!code-vb[SoapMessage#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentEncoding">
+      <MemberSignature Language="C#" Value="public string ContentEncoding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentEncoding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.ContentEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo de <see langword="Content-Encoding" /> cabeçalho HTTP.</summary>
+        <value>O conteúdo do cabeçalho HTTP <see langword="Content-Encoding" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma extensão SOAP pode definir o <xref:System.Web.Services.Protocols.SoapMessage.ContentEncoding%2A> propriedade para fornecer informações suplementares sobre a codificação de uma mensagem SOAP sem alterar o tipo de mídia, conforme expresso no `Content-Type` cabeçalho HTTP.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Atual <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> é <see cref="F:System.Web.Services.Protocols.SoapMessageStage.AfterSerialize" /> ou <see cref="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize" /> estágios.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.ContentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="Content-Type" /> HTTP da solicitação SOAP ou da resposta SOAP.</summary>
+        <value>O <see langword="Content-Type" /> HTTP da solicitação SOAP ou da resposta SOAP. O padrão é "text/xml".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapMessage.ContentType%2A> propriedade só pode ser acessada a <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize> e <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize> prepara; caso contrário, um <xref:System.InvalidOperationException> é gerada.  
+  
+ Use o <xref:System.Web.Services.Protocols.SoapMessage.ContentEncoding%2A> propriedade, em vez do <xref:System.Web.Services.Protocols.SoapMessage.ContentType%2A> propriedade para fornecer informações suplementares sobre a codificação de uma mensagem SOAP.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#3](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#3)]
+ [!code-csharp[SoapMessage#3](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#3)]
+ [!code-vb[SoapMessage#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <see cref="P:System.Web.Services.Protocols.SoapMessage.ContentType" /> é acessado nos estágios <see cref="F:System.Web.Services.Protocols.SoapMessageStage.AfterSerialize" /> ou <see cref="F:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureInStage">
+      <MemberSignature Language="C#" Value="protected abstract void EnsureInStage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EnsureInStage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapMessage.EnsureInStage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, declara que o atual <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> é um estágio onde nos parâmetros disponíveis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estágio declarado é diferente para clientes de serviço Web XML e métodos do serviço da Web em XML. Um método XML Web service nos parâmetros está disponível depois que a solicitação SOAP é desserializada no <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> estágio. Para um cliente de serviço da Web em XML, os parâmetros de entrada estão disponíveis antes do processo de serialização de solicitação SOAP no <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize> estágio.  
+  
+ <xref:System.Web.Services.Protocols.SoapMessage.EnsureInStage%2A>pode ser chamado durante qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>, porém um <xref:System.InvalidOperationException> é gerada quando em parâmetros não estão disponíveis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Parâmetros não estão disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureOutStage">
+      <MemberSignature Language="C#" Value="protected abstract void EnsureOutStage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EnsureOutStage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapMessage.EnsureOutStage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, declara que o atual <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> estágio é um estágio em que os parâmetros de saída estão disponíveis.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estágio declarado é diferente para clientes de serviço Web XML e métodos do serviço da Web em XML. Um método XML Web service parâmetros de saída está disponível antes do processo de serialização de resposta SOAP no <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize> estágio. Em um cliente de serviço da Web em XML, os parâmetros de saída estão disponíveis após o processo de desserialização de resposta SOAP no <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> estágio.  
+  
+ <xref:System.Web.Services.Protocols.SoapMessage.EnsureOutStage%2A>pode ser chamado durante qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>, porém um <xref:System.InvalidOperationException> são descartados quando os parâmetros não estão disponíveis.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Parâmetros de saída não estão disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureStage">
+      <MemberSignature Language="C#" Value="protected void EnsureStage (System.Web.Services.Protocols.SoapMessageStage stage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EnsureStage(valuetype System.Web.Services.Protocols.SoapMessageStage stage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapMessage.EnsureStage(System.Web.Services.Protocols.SoapMessageStage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stage" Type="System.Web.Services.Protocols.SoapMessageStage" />
+      </Parameters>
+      <Docs>
+        <param name="stage">O <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> declarada.</param>
+        <summary>Garante que o <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> da chamada para o XML Web o método de serviço é o estágio ou estágios passado. Se o estágio de processamento atual não é um dos estágios passados, uma exceção será lançada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Várias etapas podem ser declaradas executando uma operação OR bit a bit em várias instâncias do <xref:System.Web.Services.Protocols.SoapMessageStage> classe.  
+  
+ <xref:System.Web.Services.Protocols.SoapMessage.EnsureStage%2A>pode ser chamado durante qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir declara que o atual <xref:System.Web.Services.Protocols.SoapMessageStage> é <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize> ou <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize>; se não estiver, uma exceção será lançada.  
+  
+ [!code-cpp[Classic SoapMessage.EnsureStage Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapMessage.EnsureStage Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapMessage.EnsureStage Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapMessage.EnsureStage Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapMessage.EnsureStage Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapMessage.EnsureStage Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Atual <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> não é o estágio declarado ou estágios.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapException Exception { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.SoapException Exception" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapException</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Protocols.SoapException" /> da chamada para o método de serviço da Web em XML.</summary>
+        <value>O <see cref="T:System.Web.Services.Protocols.SoapException" /> que ocorreu na chamada para o método de serviço da Web em XML. <see langword="null" />Se nenhum <see cref="T:System.Web.Services.Protocols.SoapException" /> ocorreu durante a chamada para o método de serviço Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapMessage.Exception%2A> propriedade pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInParameterValue">
+      <MemberSignature Language="C#" Value="public object GetInParameterValue (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetInParameterValue(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapMessage.GetInParameterValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do parâmetro na matriz de parâmetros.</param>
+        <summary>Obtém o parâmetro passado para o método de serviço da Web em XML no índice especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o parâmetro no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapMessage.GetInParameterValue%2A> é de propriedade só estão disponíveis quando acessível nos parâmetros. ASP.NET gera <xref:System.InvalidOperationException> ao acessar o <xref:System.Web.Services.Protocols.SoapMessage.GetInParameterValue%2A> propriedade em caso de parâmetros não estão disponíveis.  
+  
+ Em um <xref:System.Web.Services.Protocols.SoapClientMessage> os parâmetros de entrada estão disponíveis no <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize> <xref:System.Web.Services.Protocols.SoapMessageStage>. Em um <xref:System.Web.Services.Protocols.SoapServerMessage> os parâmetros de entrada estão disponíveis no <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#6](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#6)]
+ [!code-csharp[SoapMessage#6](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#6)]
+ [!code-vb[SoapMessage#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O <paramref name="index" /> parâmetro é menor que 0 ou maior que o comprimento da matriz de parâmetros.</exception>
+        <exception cref="T:System.InvalidOperationException">Acessar essa propriedade quando nos parâmetros não estão disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutParameterValue">
+      <MemberSignature Language="C#" Value="public object GetOutParameterValue (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetOutParameterValue(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapMessage.GetOutParameterValue(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice com base em zero do parâmetro na matriz de parâmetros.</param>
+        <summary>Obtém o parâmetro out passado para o método de serviço da Web em XML no índice especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o parâmetro no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a saída parâmetros não estão disponíveis, o ASP.NET gera uma <xref:System.InvalidOperationException> ao acessar o <xref:System.Web.Services.Protocols.SoapMessage.GetOutParameterValue%2A> propriedade.  
+  
+ Em um <xref:System.Web.Services.Protocols.SoapClientMessage> os parâmetros de saída estão disponíveis no <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> <xref:System.Web.Services.Protocols.SoapMessageStage>. Em um <xref:System.Web.Services.Protocols.SoapServerMessage> os parâmetros de saída estão disponíveis no <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize> do <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#8](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#8)]
+ [!code-csharp[SoapMessage#8](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#8)]
+ [!code-vb[SoapMessage#8](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O <paramref name="index" /> parâmetro for maior que o comprimento da matriz de parâmetros.</exception>
+        <exception cref="T:System.InvalidOperationException">Acessar essa propriedade quando os parâmetros de saída não estão disponíveis.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReturnValue">
+      <MemberSignature Language="C#" Value="public object GetReturnValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetReturnValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Protocols.SoapMessage.GetReturnValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o valor de retorno de um método de serviço da Web em XML.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor de retorno do método de serviço da Web em XML.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um valor de retorno não estiver disponível, o ASP.NET gera <xref:System.InvalidOperationException> ao acessar o <xref:System.Web.Services.Protocols.SoapMessage.GetReturnValue%2A> propriedade.  
+  
+ Em um <xref:System.Web.Services.Protocols.SoapClientMessage> o valor de retorno está disponível quando o <xref:System.Web.Services.Protocols.SoapMessageStage> valor é <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize>. Em um <xref:System.Web.Services.Protocols.SoapServerMessage> o valor de retorno está disponível quando <xref:System.Web.Services.Protocols.SoapMessageStage> valor é <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#9](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#9)]
+ [!code-csharp[SoapMessage#9](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#9)]
+ [!code-vb[SoapMessage#9](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O método de serviço da Web em XML não tem um valor de retorno.  
+  
+ OU  
+  
+ O valor de retorno não está disponível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapHeaderCollection Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.SoapHeaderCollection Headers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.Headers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapHeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma coleção dos cabeçalhos SOAP aplicados à solicitação ou resposta SOAP atual.</summary>
+        <value>Um <see cref="T:System.Web.Services.Protocols.SoapHeaderCollection" /> dos cabeçalhos SOAP aplicados à solicitação ou resposta SOAP atual. <see langword="null" /> se não houver nenhum cabeçalho SOAP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cabeçalhos SOAP são uma parte opcional de uma solicitação SOAP ou resposta SOAP. Para obter mais detalhes sobre o uso de cabeçalhos SOAP em XML Web services criados usando ASP.NET e seus clientes, consulte o <xref:System.Web.Services.Protocols.SoapHeader> classe.  
+  
+ Embora o <xref:System.Web.Services.Protocols.SoapMessage.Headers%2A> propriedade pode ser acessado em qualquer estágio, ele só é populado com as informações de cabeçalho SOAP no <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize> e <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> estágios.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodInfo">
+      <MemberSignature Language="C#" Value="public abstract System.Web.Services.Protocols.LogicalMethodInfo MethodInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Services.Protocols.LogicalMethodInfo MethodInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.MethodInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.LogicalMethodInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém uma representação do protótipo do método para o método de serviço da Web em XML para o qual a solicitação SOAP é pretendida.</summary>
+        <value>Um <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo" /> que representa o método de serviço da Web em XML para o qual a solicitação SOAP é pretendida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora <xref:System.Web.Services.Protocols.SoapMessage.MethodInfo%2A> pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>, ela só tem dados durante <xref:System.Web.Services.Protocols.SoapMessageStage.AfterDeserialize> e <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeSerialize>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#7](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#7)]
+ [!code-csharp[SoapMessage#7](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#7)]
+ [!code-vb[SoapMessage#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneWay">
+      <MemberSignature Language="C#" Value="public abstract bool OneWay { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneWay" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.OneWay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica o <see cref="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay" /> propriedade da <see cref="T:System.Web.Services.Protocols.SoapDocumentMethodAttribute" /> ou o <see cref="T:System.Web.Services.Protocols.SoapRpcMethodAttribute" /> atributo aplicado ao método de serviço da Web em XML.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="P:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay" /> propriedade o <see cref="T:System.Web.Services.Protocols.SoapDocumentMethodAttribute" /> ou <see cref="T:System.Web.Services.Protocols.SoapRpcMethodAttribute" /> aplicada para o método de serviço é XML Web <see langword="true" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute.OneWay%2A?displayProperty=nameWithType> propriedade <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> ou <xref:System.Web.Services.Protocols.SoapRpcMethodAttribute> para obter detalhes sobre os métodos de serviço Web XML unidirecionais.  
+  
+ O <xref:System.Web.Services.Protocols.SoapMessage.OneWay%2A> propriedade é acessível em todos os estágios de <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#4](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#4)]
+ [!code-csharp[SoapMessage#4](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#4)]
+ [!code-vb[SoapMessage#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapVersion">
+      <MemberSignature Language="C#" Value="public virtual System.Web.Services.Protocols.SoapProtocolVersion SoapVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapProtocolVersion SoapVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.SoapVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapProtocolVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do protocolo SOAP usada para se comunicar com o serviço Web XML.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.Services.Protocols.SoapProtocolVersion" />. O padrão é <see cref="F:System.Web.Services.Protocols.SoapProtocolVersion.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma <xref:System.Web.Services.Protocols.SoapServerMessage>, o <xref:System.Web.Services.Protocols.SoapServerMessage.SoapVersion%2A> propriedade é garantida para ser válido após o <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize> estágio. No <xref:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize> estágio, a propriedade está disponível, no entanto, a mensagem SOAP não foi processada completamente e extensões SOAP que podem alterar o conteúdo da mensagem SOAP não foram executados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stage">
+      <MemberSignature Language="C#" Value="public System.Web.Services.Protocols.SoapMessageStage Stage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Services.Protocols.SoapMessageStage Stage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.Stage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Services.Protocols.SoapMessageStage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> do <see cref="T:System.Web.Services.Protocols.SoapMessage" />.</summary>
+        <value>O <see cref="T:System.Web.Services.Protocols.SoapMessageStage" /> do <see cref="T:System.Web.Services.Protocols.SoapMessage" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapMessage.Stage%2A> propriedade pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como determinar o <xref:System.Web.Services.Protocols.SoapMessageStage> dentro de <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A?displayProperty=nameWithType> método.  
+  
+ [!code-cpp[Classic SoapExtension.ProcessMessage Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SoapExtension.ProcessMessage Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SoapExtension.ProcessMessage Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SoapExtension.ProcessMessage Example/CS/source.cs#1)]
+ [!code-vb[Classic SoapExtension.ProcessMessage Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SoapExtension.ProcessMessage Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream Stream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream Stream" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.Stream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados que representa a solicitação SOAP ou a resposta SOAP na forma de um <see cref="T:System.IO.Stream" />.</summary>
+        <value>Uma instância somente leitura da classe <see cref="T:System.IO.Stream" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Extensões SOAP que inspecionar os dados que representa uma solicitação SOAP ou a resposta SOAP, como um registro de extensão SOAP, podem usar o `Stream` propriedade para exibir os dados em cada <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+ Extensões SOAP que modificam os dados que representa uma solicitação SOAP ou a resposta SOAP, como extensões SOAP a compactação ou criptografia, faça isso com o <xref:System.IO.Stream> passado para o <xref:System.Web.Services.Protocols.SoapExtension.ChainStream%2A> método <xref:System.Web.Services.Protocols.SoapExtension>. O <xref:System.Web.Services.Protocols.SoapMessage.Stream%2A> propriedade <xref:System.Web.Services.Protocols.SoapMessage> passado para <xref:System.Web.Services.Protocols.SoapExtension.ProcessMessage%2A> é somente leitura.  
+  
+ Para obter mais informações sobre como modificar os dados que representa uma solicitação SOAP ou resposta SOAP, consulte <xref:System.Web.Services.Protocols.SoapExtension.ChainStream%2A>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage_Headers#2](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage_Headers/CPP/SoapMessage_Headers.cpp#2)]
+ [!code-csharp[SoapMessage_Headers#2](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage_Headers/CS/soapmessage_headers.cs#2)]
+ [!code-vb[SoapMessage_Headers#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage_Headers/VB/soapmessage_headers.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Url">
+      <MemberSignature Language="C#" Value="public abstract string Url { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Url" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Protocols.SoapMessage.Url" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a URL base do serviço da Web em XML.</summary>
+        <value>A URL base do serviço da Web em XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Services.Protocols.SoapMessage.Url%2A> propriedade pode ser acessado em qualquer <xref:System.Web.Services.Protocols.SoapMessageStage>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[SoapMessage#5](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapMessage/CPP/SoapMessage.cpp#5)]
+ [!code-csharp[SoapMessage#5](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapMessage/CS/soapmessage.cs#5)]
+ [!code-vb[SoapMessage#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapMessage/VB/soapmessage.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

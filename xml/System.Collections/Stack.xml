@@ -1,0 +1,835 @@
+<Type Name="Stack" FullName="System.Collections.Stack">
+  <TypeSignature Language="C#" Value="public class Stack : ICloneable, System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Stack extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Stack" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Stack/StackDebugView))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção não genérica simples UEPS (último a entrar, primeiro a sair) de objetos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter a versão genérica dessa coleção, consulte <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>.  
+  
+ A capacidade de um <xref:System.Collections.Stack> é o número de elementos de <xref:System.Collections.Stack> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Stack>, a capacidade é aumentada automaticamente conforme necessário por meio de realocação.  
+  
+ Se <xref:System.Collections.Stack.Count%2A> é menor que a capacidade da pilha, <xref:System.Collections.Stack.Push%2A> é uma operação de (1). Se a capacidade precisa ser aumentado para acomodar o novo elemento, <xref:System.Collections.Stack.Push%2A> se torna um O (`n`) operação, onde `n` é <xref:System.Collections.Stack.Count%2A>. <xref:System.Collections.Stack.Pop%2A>é uma operação de (1).  
+  
+ <xref:System.Collections.Stack> aceita `null` como um valor válido e permite elementos duplicados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar e adicionar valores para um <xref:System.Collections.Stack> e como exibir seus valores.  
+  
+ [!code-cpp[Classic Stack Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Para garantir a segurança de thread do <see cref="T:System.Collections.Stack" />, todas as operações devem ser feitas por meio do wrapper retornado pelo <see cref="M:System.Collections.Stack.Synchronized(System.Collections.Stack)" /> método.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Stack" /> que está vazia e tem a capacidade inicial padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Stack> é o número de elementos que o <xref:System.Collections.Stack> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Stack>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Stack>.  
+  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stack (System.Collections.ICollection col);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ICollection col) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.#ctor(System.Collections.ICollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="col" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="col">A <see cref="T:System.Collections.ICollection" /> da qual copiar elementos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Stack" />, que contém os elementos copiados da coleção especificada e tem a mesma capacidade inicial que o número de elementos copiados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Stack> é o número de elementos que o <xref:System.Collections.Stack> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Stack>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Stack>.  
+  
+ Os elementos são copiados para o <xref:System.Collections.Stack> na mesma ordem em que são lidas pelo <xref:System.Collections.IEnumerator> do <xref:System.Collections.ICollection>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é o número de elementos em `col`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="col" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Stack (int initialCapacity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 initialCapacity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="initialCapacity" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="initialCapacity">O número inicial de elementos que o <see cref="T:System.Collections.Stack" /> pode conter.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Stack" /> que está vazia e tem a capacidade inicial especificada ou a capacidade inicial padrão, a que for maior.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade de um <xref:System.Collections.Stack> é o número de elementos que o <xref:System.Collections.Stack> pode conter. Como os elementos são adicionados a um <xref:System.Collections.Stack>, a capacidade é aumentada automaticamente conforme necessário ao realocar a matriz interna.  
+  
+ Se o tamanho da coleção pode ser estimado, especificando a capacidade inicial elimina a necessidade de executar um número de operações de redimensionamento durante a adição de elementos para o <xref:System.Collections.Stack>.  
+  
+ Este construtor é um O (`n`) operação, onde `n` é `initialCapacity`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="initialCapacity" /> é menor que zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os objetos da <see cref="T:System.Collections.Stack" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Stack.Count%2A>é definido como zero, e referências a outros objetos de elementos da coleção também são liberadas.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Stack.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como limpar os valores de <xref:System.Collections.Stack>.  
+  
+ [!code-cpp[Classic Stack.Clear Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.Clear Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.Clear Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.Clear Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.Clear Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.Clear Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia superficial do <see cref="T:System.Collections.Stack" />.</summary>
+        <returns>Uma cópia superficial do <see cref="T:System.Collections.Stack" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia superficial de uma coleção copia apenas os elementos da coleção, se eles são tipos de referência ou tipos de valor, mas não copia os objetos que se referem as referências a. As referências na nova coleção apontam para os mesmos objetos que as referências na coleção original apontem para.  
+  
+ Em contraste, uma cópia profunda de uma coleção copia os elementos e tudo direta ou indiretamente referenciado por elementos.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Stack.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public virtual bool Contains (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto a ser localizado no <see cref="T:System.Collections.Stack" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Determina se um elemento está no <see cref="T:System.Collections.Stack" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for encontrado no <see cref="T:System.Collections.Stack" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método determina a igualdade chamando o <xref:System.Object.Equals%2A?displayProperty=nameWithType> método.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.Stack.Count%2A>.  
+  
+ Começando com o .NET Framework 2.0, este método testa a igualdade passando o `obj` argumento para o <xref:System.Object.Equals%2A> método objetos individuais na coleção. Nas versões anteriores do .NET Framework, isso foi feito usando passando os itens individuais na coleção para a <xref:System.Object.Equals%2A> método o `obj` argumento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public virtual void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.Stack" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia o <see cref="T:System.Collections.Stack" /> para um unidimensional <see cref="T:System.Array" /> existente, começando no índice da matriz especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para a matriz na ordem do último a entrar, primeiro a sair (UEPS), semelhante à ordem dos elementos retornados por uma sucessão de chamadas para <xref:System.Collections.Stack.Pop%2A>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Stack.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como copiar um <xref:System.Collections.Stack> em uma matriz unidimensional.  
+  
+ [!code-cpp[Classic Stack.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.Stack" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.Stack" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Stack.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos no <see cref="T:System.Collections.Stack" />.</summary>
+        <value>O número de elementos contidos no <see cref="T:System.Collections.Stack" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A capacidade é o número de elementos que o <xref:System.Collections.Stack> pode armazenar. <xref:System.Collections.Stack.Count%2A>é o número de elementos que estão realmente no <xref:System.Collections.Stack>.  
+  
+ A capacidade é sempre maior que ou igual a <xref:System.Collections.Stack.Count%2A>. Se <xref:System.Collections.Stack.Count%2A> excede a capacidade durante a adição de elementos, a capacidade é aumentada automaticamente realocando a matriz interna antes de copiar os elementos antigos e adição de novos elementos.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Collections.IEnumerator" /> para o <see cref="T:System.Collections.Stack" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para o <see cref="T:System.Collections.Stack" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [Visual Basic, C#]  
+  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public virtual bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Stack.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.Stack" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" />, se acesse o <see cref="T:System.Collections.Stack" /> é sincronizado (thread-safe); caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir a segurança de thread do <xref:System.Collections.Stack>, todas as operações devem ser feitas por meio do wrapper retornado pelo <xref:System.Collections.Stack.Synchronized%2A> método.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.Stack.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic Stack.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic Stack.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic Stack.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como sincronizar um <xref:System.Collections.Stack>, determinar se um <xref:System.Collections.Stack> está sincronizado e usar um sincronizado <xref:System.Collections.Stack>.  
+  
+ [!code-cpp[Classic Stack.IsSynchronized Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.IsSynchronized Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.IsSynchronized Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Peek">
+      <MemberSignature Language="C#" Value="public virtual object Peek ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Peek() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.Peek" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o objeto na parte superior do <see cref="T:System.Collections.Stack" /> sem removê-lo.</summary>
+        <returns>O <see cref="T:System.Object" /> na parte superior do <see cref="T:System.Collections.Stack" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante do <xref:System.Collections.Stack.Pop%2A> método, mas <xref:System.Collections.Stack.Peek%2A> não modifica o <xref:System.Collections.Stack>.  
+  
+ `null`pode ser enviado para o <xref:System.Collections.Stack> como um espaço reservado, se necessário. Para distinguir entre um valor nulo e o fim da pilha, verifique o <xref:System.Collections.Stack.Count%2A> catch ou propriedade de <xref:System.InvalidOperationException>, que é gerado quando o <xref:System.Collections.Stack> está vazio.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar elementos para o <xref:System.Collections.Stack>, remover elementos do <xref:System.Collections.Stack>, ou exibir o elemento na parte superior do <xref:System.Collections.Stack>.  
+  
+ [!code-cpp[Classic Stack.Peek Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.Peek Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.Peek Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.Peek Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.Peek Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.Peek Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Collections.Stack" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pop">
+      <MemberSignature Language="C#" Value="public virtual object Pop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Pop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.Pop" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove e retorna o objeto na parte superior do <see cref="T:System.Collections.Stack" />.</summary>
+        <returns>O <see cref="T:System.Object" /> foi removido da parte superior do <see cref="T:System.Collections.Stack" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é semelhante do <xref:System.Collections.Stack.Peek%2A> método, mas <xref:System.Collections.Stack.Peek%2A> não modifica o <xref:System.Collections.Stack>.  
+  
+ `null`pode ser enviado para o <xref:System.Collections.Stack> como um espaço reservado, se necessário. Para distinguir entre um valor nulo e o fim da pilha, verifique o <xref:System.Collections.Stack.Count%2A> catch ou propriedade de <xref:System.InvalidOperationException>, que é gerado quando o <xref:System.Collections.Stack> está vazio.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar elementos para o <xref:System.Collections.Stack>, remover elementos do <xref:System.Collections.Stack>, ou exibir o elemento na parte superior do <xref:System.Collections.Stack>.  
+  
+ [!code-cpp[Classic Stack.Peek Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.Peek Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.Peek Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.Peek Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.Peek Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.Peek Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Collections.Stack" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Push">
+      <MemberSignature Language="C#" Value="public virtual void Push (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Push(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.Push(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Object" /> a ser enviado por push para o <see cref="T:System.Collections.Stack" />. O valor pode ser <see langword="null" />.</param>
+        <summary>Insere um objeto na parte superior do <see cref="T:System.Collections.Stack" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Collections.Stack.Count%2A> já for igual à capacidade, a capacidade do <xref:System.Collections.Stack> é aumentado, automaticamente realocando matriz interna, e os elementos existentes são copiados para a nova matriz antes de adicionar o novo elemento.  
+  
+ `null`pode ser enviado para o <xref:System.Collections.Stack> como um espaço reservado, se necessário. Ele ocupa um slot da pilha e é tratado como qualquer objeto.  
+  
+ Se <xref:System.Collections.Stack.Count%2A> é menor que a capacidade da pilha, <xref:System.Collections.Stack.Push%2A> é uma operação de (1). Se a capacidade precisa ser aumentado para acomodar o novo elemento, <xref:System.Collections.Stack.Push%2A> se torna um O (`n`) operação, onde `n` é <xref:System.Collections.Stack.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar elementos para o <xref:System.Collections.Stack>, remover elementos do <xref:System.Collections.Stack>, ou exibir o elemento na parte superior do <xref:System.Collections.Stack>.  
+  
+ [!code-cpp[Classic Stack.Peek Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.Peek Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.Peek Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.Peek Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.Peek Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.Peek Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Synchronized">
+      <MemberSignature Language="C#" Value="public static System.Collections.Stack Synchronized (System.Collections.Stack stack);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Stack Synchronized(class System.Collections.Stack stack) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.Synchronized(System.Collections.Stack)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Stack</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stack" Type="System.Collections.Stack" />
+      </Parameters>
+      <Docs>
+        <param name="stack">O <see cref="T:System.Collections.Stack" /> a ser sincronizado.</param>
+        <summary>Retorna um wrapper sincronizado (thread-safe) para o <see cref="T:System.Collections.Stack" />.</summary>
+        <returns>Um wrapper sincronizado em torno do <see cref="T:System.Collections.Stack" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para garantir a segurança de thread do <xref:System.Collections.Stack>, todas as operações devem ser feitas por meio desse wrapper.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.Stack.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic Stack.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic Stack.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic Stack.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como sincronizar um <xref:System.Collections.Stack>, determinar se um <xref:System.Collections.Stack> está sincronizado e usar um sincronizado <xref:System.Collections.Stack>.  
+  
+ [!code-cpp[Classic Stack.IsSynchronized Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.IsSynchronized Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.IsSynchronized Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stack" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public virtual object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Stack.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.Stack" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que pode ser usado para sincronizar o acesso a <see cref="T:System.Collections.Stack" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma versão sincronizada do <xref:System.Collections.Stack>, use o <xref:System.Collections.Stack.Synchronized%2A> método. No entanto, as classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.Stack> usando o <xref:System.Collections.Stack.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.Stack.SyncRoot%2A> do <xref:System.Collections.Stack>, não diretamente no <xref:System.Collections.Stack>. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.Stack> objeto.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.Stack.SyncRoot%2A> durante toda a enumeração.  
+  
+ [!code-cpp[Classic Stack.IsSynchronized Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CPP/source2.cpp#2)]
+ [!code-csharp[Classic Stack.IsSynchronized Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/CS/source2.cs#2)]
+ [!code-vb[Classic Stack.IsSynchronized Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.IsSynchronized Example/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToArray">
+      <MemberSignature Language="C#" Value="public virtual object[] ToArray ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ToArray() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Stack.ToArray" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Copia o <see cref="T:System.Collections.Stack" /> em uma nova matriz.</summary>
+        <returns>Uma nova matriz que contém cópias dos elementos do <see cref="T:System.Collections.Stack" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os elementos são copiados para a matriz na ordem do último a entrar, primeiro a sair (UEPS), semelhante à ordem dos elementos retornados por uma sucessão de chamadas para <xref:System.Collections.Stack.Pop%2A>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Stack.Count%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como copiar um <xref:System.Collections.Stack> em uma matriz unidimensional.  
+  
+ [!code-cpp[Classic Stack.CopyTo Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic Stack.CopyTo Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic Stack.CopyTo Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic Stack.CopyTo Example/CS/source.cs#1)]
+ [!code-vb[Classic Stack.CopyTo Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic Stack.CopyTo Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

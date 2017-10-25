@@ -1,0 +1,215 @@
+<Type Name="ExternalDataExchangeService" FullName="System.Workflow.Activities.ExternalDataExchangeService">
+  <TypeSignature Language="C#" Value="public class ExternalDataExchangeService : System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExternalDataExchangeService extends System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.ExternalDataExchangeService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowRuntimeService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um serviço que deve ser adicionado ao mecanismo de tempo de execução de fluxo de trabalho para comunicações de serviços locais ser habilitado. Implementações de serviço local são necessárias a serem adicionadas à <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" /> para esses serviços ser inicializado e registrado corretamente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Uma implementação de serviço local é uma classe que implementa uma interface marcada com <xref:System.Workflow.Activities.ExternalDataExchangeAttribute>. Os serviços locais adicionados dessa maneira são usados por <xref:System.Workflow.Activities.CallExternalMethodActivity> e <xref:System.Workflow.Activities.HandleExternalEventActivity>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataExchangeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância do <xref:System.Workflow.Activities.ExternalDataExchangeService> classe.  Este exemplo é do exemplo de ordenação SDK da máquina de estado. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Ordenação de exemplo de máquina de estado](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[wf_samples#122](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#122)]
+ [!code-vb[wf_samples#122](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#122)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataExchangeService (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.#ctor(System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">Uma coleção de parâmetros usados para configurar o serviço. Os valores permitidos são uma coleção vazia ou uma coleção que contém apenas o <see langword="ConfigurationSection" /> chave.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataExchangeService (string configSectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string configSectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="configSectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="configSectionName">O nome da seção de configuração que contém esse serviço de configuração desejado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExternalDataExchangeService (System.Workflow.Activities.ExternalDataExchangeServiceSection settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.Activities.ExternalDataExchangeServiceSection settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.#ctor(System.Workflow.Activities.ExternalDataExchangeServiceSection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Workflow.Activities.ExternalDataExchangeServiceSection" />
+      </Parameters>
+      <Docs>
+        <param name="settings">A seção de configuração que contém configurações para este serviço.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddService">
+      <MemberSignature Language="C#" Value="public virtual void AddService (object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddService(object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.AddService(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="service">Um objeto que representa o serviço a adicionar.</param>
+        <summary>Adiciona o serviço especificado para o <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar um serviço para um <xref:System.Workflow.Activities.ExternalDataExchangeService> objeto. Este exemplo é do exemplo de ordenação SDK da máquina de estado. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Ordenação de exemplo de máquina de estado](http://msdn.microsoft.com/en-us/59272cf4-bc98-439c-bcfa-b66999ebce5c).  
+  
+ [!code-csharp[wf_samples#122](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#122)]
+ [!code-vb[wf_samples#122](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#122)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">O contêiner de tempo de execução externo não foi encontrado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public virtual object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O <see cref="T:System.Type" /> da interface implementada pelo serviço para recuperar.</param>
+        <summary>Obtém a implementação de serviço do tipo de interface especificado se o serviço está disponível.</summary>
+        <returns>Um objeto que implementa o serviço solicitado, ou nulo (<see langword="Nothing" /> no Visual Basic) se o serviço não pode ser resolvido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" />é uma referência nula (<see langword="Nothing" />).</exception>
+        <exception cref="T:System.InvalidOperationException">O serviço não está registrado com o tempo de execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveService">
+      <MemberSignature Language="C#" Value="public virtual void RemoveService (object service);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveService(object service) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.RemoveService(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="service" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="service">Um objeto que representa o serviço a ser removido.</param>
+        <summary>Remove o serviço especificado a partir de <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="service" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">O serviço não está registrado com o tempo de execução.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="protected override void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.ExternalDataExchangeService.Start" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona serviços locais, se uma seção de configuração foi especificada durante a construção do objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

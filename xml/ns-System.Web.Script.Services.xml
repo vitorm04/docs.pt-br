@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Script.Services">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Script.Services" /> namespace fornece os atributos que permitem que você personalize o suporte do serviço Web para a funcionalidade de AJAX do ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

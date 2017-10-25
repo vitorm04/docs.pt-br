@@ -1,0 +1,215 @@
+<Type Name="MobileCapabilities" FullName="System.Web.Mobile.MobileCapabilities">
+  <TypeSignature Language="C#" Value="public class MobileCapabilities : System.Web.HttpBrowserCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MobileCapabilities extends System.Web.HttpBrowserCapabilities" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Mobile.MobileCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.HttpBrowserCapabilities</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma única fonte para acessar informações de capacidade sobre um dispositivo cliente e executar consultas com relação a funcionalidades do dispositivo. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Mobile.MobileCapabilities> classe estende a <xref:System.Web.HttpBrowserCapabilities> classe. O <xref:System.Web.Mobile.MobileCapabilities> classe oferece um grande número de propriedades somente leitura que fornecem acesso fortemente tipado ao dicionário de recursos do objeto do navegador.  
+  
+ Você pode usar a propriedade de navegador do <xref:System.Web.HttpRequest> objeto para apontar para uma instância de um <xref:System.Web.Mobile.MobileCapabilities> objeto, que pode ser usado para ler os recursos do navegador solicitante e dispositivo.  
+  
+   
+  
+## Examples  
+ Durante o carregamento de página, o <xref:System.Web.Mobile.MobileCapabilities> objeto obtém os recursos por meio de <xref:System.Web.Configuration.HttpCapabilitiesBase.Browser%2A> propriedade conforme abordada anteriormente. O <xref:System.Web.Configuration.HttpCapabilitiesBase.PreferredRenderingMime%2A> e o <xref:System.Web.Configuration.HttpCapabilitiesBase.ScreenCharactersWidth%2A> propriedades do <xref:System.Web.Mobile.MobileCapabilities> relatório de volta para o navegador do objeto, definindo propriedades no <xref:System.Web.HttpResponse> objeto e também pela configuração programática de `Text` propriedade de certos controles na página.  
+  
+```csharp  
+<%@ Page Inherits="System.Web.UI.MobileControls.MobilePage"   
+    Language="c#" %>  
+<script language="c#" runat="server">  
+public void Page_Load(Object sender, EventArgs e)  
+{  
+    System.Web.Mobile.MobileCapabilities currentCapabilities;  
+    MobileCapabilities currentCapabilities =   
+        (MobileCapabilities)Request.Browser;  
+    // Programatically find the mobile capabilities without using   
+    // DeviceSpecific Filters.  
+    if(currentCapabilities.PreferredRenderingMIME=="text/html")  
+    {  
+        Label2.Text = "You are using an html supported device.";  
+    }  
+    else if(currentCapabilities.PreferredRenderingMIME ==   
+        "text/vnd.wap.wml")  
+    {  
+        Label2.Text = "You are using a wml supported device.";  
+    }  
+    Label1.Text = "Screen Width (chars): " +   
+        currentCapabilities.ScreenCharactersWidth;  
+ }  
+ </script>  
+ <Mobile:Form runat="server" id=frmTemplate >  
+      <mobile:label ID="Label1" runat="server" />  
+      <mobile:label ID="Label2" runat="server" />  
+ </Mobile:Form>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Web.AspNetHostingPermission">para operação em um ambiente hospedado. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand" />; valor de permissão: <see cref="F:System.Web.AspNetHostingPermissionLevel.Minimal" />.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MobileCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Mobile.MobileCapabilities.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Web.Mobile.MobileCapabilities" /> classe. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasCapability">
+      <MemberSignature Language="C#" Value="public bool HasCapability (string delegateName, string optionalParameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasCapability(string delegateName, string optionalParameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Mobile.MobileCapabilities.HasCapability(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delegateName" Type="System.String" />
+        <Parameter Name="optionalParameter" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="delegateName">O método de avaliação do dispositivo, nome da propriedade ou item na coleção de recursos.</param>
+        <param name="optionalParameter">O argumento opcional.</param>
+        <summary>Fornece uma maneira uniforme para avaliar os recursos do dispositivo. Esse método é usado internamente pelo ASP.NET para implementar vários critérios de seleção do dispositivo expressados na sintaxe dos controles. Por exemplo, esse método é usado para escolher entre [ &lt;opção&gt; (guia do desenvolvedor do .NET Framework) do elemento](http://msdn.microsoft.com/en-us/c81bee77-bb45-4211-be0f-e13a040b3c2d) construir elementos na opção/DeviceSpecific. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>
+          <see langword="true" />Se o dispositivo tem o recurso especificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os aplicativos podem usar o <xref:System.Web.Mobile.MobileCapabilities.HasCapability%2A> método programaticamente quando eles coletam informações específicas do dispositivo. Se o `capabilityName` parâmetro especifica um método de avaliação do dispositivo, o `optionalArgument` parâmetro é passado para este método. Se o `capabilityName` parâmetro especifica um nome de propriedade ou um item no dicionário de recursos, o <xref:System.Web.Mobile.MobileCapabilities.HasCapability%2A> método verifica se a propriedade ou o item é igual de `optionalArgument` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um <paramref name="capabilityName" /> parâmetro não foi encontrado como um nome de filtro de dispositivo especificado no arquivo de configuração, como um <see cref="T:System.Web.Mobile.MobileCapabilities" /> propriedade, ou como um item no <see cref="T:System.Web.Mobile.MobileCapabilities" /> coleção de itens.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="delegateName" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRenderingTypeChtml10">
+      <MemberSignature Language="C#" Value="public static readonly string PreferredRenderingTypeChtml10;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PreferredRenderingTypeChtml10" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeChtml10" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o identificador de origem a ser usado para compact HTML 1.0. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado por um adaptador para atribuir o tipo de renderização para o dispositivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRenderingTypeHtml32">
+      <MemberSignature Language="C#" Value="public static readonly string PreferredRenderingTypeHtml32;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PreferredRenderingTypeHtml32" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeHtml32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o identificador de origem a ser usado para HTML 3.2. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado pelo adaptador para atribuir o tipo de renderização para o dispositivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRenderingTypeWml11">
+      <MemberSignature Language="C#" Value="public static readonly string PreferredRenderingTypeWml11;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PreferredRenderingTypeWml11" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeWml11" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o identificador de origem a ser usado para WML 1.1. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado pelo adaptador para atribuir o tipo de renderização para o dispositivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRenderingTypeWml12">
+      <MemberSignature Language="C#" Value="public static readonly string PreferredRenderingTypeWml12;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly string PreferredRenderingTypeWml12" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Mobile.MobileCapabilities.PreferredRenderingTypeWml12" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o identificador de origem a ser usado para WML 1.2. Este campo é somente leitura. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado pelo adaptador para atribuir o tipo de renderização para o dispositivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,53 @@
+<Type Name="ApplicationHost" FullName="System.Web.Hosting.ApplicationHost">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationHost" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationHost extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.ApplicationHost" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Habilita a hospedagem de páginas ASP.NET fora do aplicativo de IIS (Serviços de Informações da Internet). Essa classe habilita o host a criar domínios de aplicativo para o processamento de solicitações do ASP.NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Hosting.ApplicationHost>é introduzido no .NET Framework versão 3.5.  Para saber mais, confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateApplicationHost">
+      <MemberSignature Language="C#" Value="public static object CreateApplicationHost (Type hostType, string virtualDir, string physicalDir);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object CreateApplicationHost(class System.Type hostType, string virtualDir, string physicalDir) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ApplicationHost.CreateApplicationHost(System.Type,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostType" Type="System.Type" />
+        <Parameter Name="virtualDir" Type="System.String" />
+        <Parameter Name="physicalDir" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="hostType">O nome de uma classe fornecida pelo usuário a ser criada no novo domínio de aplicativo.</param>
+        <param name="virtualDir">O diretório virtual para o domínio de aplicativo, por exemplo, /myapp.</param>
+        <param name="physicalDir">O diretório físico para o domínio de aplicativo em que as páginas ASP.NET se encontram, por exemplo, c:\mypages.</param>
+        <summary>Cria e configura um domínio de aplicativo para hospedar ASP.NET.</summary>
+        <returns>Uma instância de uma classe fornecida pelo usuário para realizar marshaling em chamadas no domínio de aplicativo recém-criado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O computador de host da Web não está executando a plataforma Windows NT ou em um ambiente Coriolis.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

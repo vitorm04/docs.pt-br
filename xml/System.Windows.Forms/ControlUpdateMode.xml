@@ -1,0 +1,57 @@
+<Type Name="ControlUpdateMode" FullName="System.Windows.Forms.ControlUpdateMode">
+  <TypeSignature Language="C#" Value="public enum ControlUpdateMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ControlUpdateMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ControlUpdateMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina quando as alterações para um valor de fonte de dados obtenham propagadas para a propriedade de controle de associação de dados correspondente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ControlUpdateMode> é usado pelo <xref:System.Windows.Forms.Binding.ControlUpdateMode%2A> propriedade o <xref:System.Windows.Forms.Binding> classe. OnPropertyChanged é o valor padrão. Para forçar uma atualização do controle quando o modo de atualização é nunca, use o <xref:System.Windows.Forms.Binding.ReadValue%2A> método relacionado <xref:System.Windows.Forms.Binding>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ControlUpdateMode Never = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ControlUpdateMode.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle associado nunca é atualizado quando um valor de fonte de dados é alterado. A fonte de dados é somente gravação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="OnPropertyChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ControlUpdateMode OnPropertyChanged = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ControlUpdateMode.OnPropertyChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ControlUpdateMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle de limite é atualizado quando alterações de valor, ou as alterações de posição de fonte de dados da fonte de dados.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

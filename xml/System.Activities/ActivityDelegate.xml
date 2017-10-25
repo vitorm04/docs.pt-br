@@ -1,0 +1,199 @@
+<Type Name="ActivityDelegate" FullName="System.Activities.ActivityDelegate">
+  <TypeSignature Language="C#" Value="public abstract class ActivityDelegate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ActivityDelegate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.ActivityDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Handler")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um retorno de chamada baseado na atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Delegados de atividade permitem que os autores atividade para expor os retornos de chamada com assinaturas específicas que os usuários da atividade podem fornecer manipuladores baseado na atividade. Há dois tipos de delegados de atividade: <xref:System.Activities.ActivityAction%601> é usado para invocar as atividades que não têm um valor de retorno, e <xref:System.Activities.ActivityFunc%601> é usado para invocar as atividades que têm um valor de retorno. Os representantes de atividade são úteis em situações onde uma atividade filho deve ser restrita a ter uma determinada assinatura.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ActivityDelegate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityDelegate.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Chamado por construtores de classe derivada para inicializar o objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityDelegate.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um nome amigável opcional que é usado para depuração, validação, manipulação de exceções e acompanhamento.</summary>
+        <value>Um nome amigável opcional que é usado para depuração, validação, manipulação de exceções e acompanhamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é somente leitura em tempo de execução. Se o valor é definido em tempo de execução, um <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResultArgument">
+      <MemberSignature Language="C#" Value="protected virtual System.Activities.DelegateOutArgument GetResultArgument ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Activities.DelegateOutArgument GetResultArgument() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityDelegate.GetResultArgument" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.DelegateOutArgument</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, retorna o <see cref="T:System.Activities.DelegateOutArgument" /> do <see cref="T:System.Activities.ActivityDelegate" />.</summary>
+        <returns>Um argumento de saída para o <see cref="T:System.Activities.ActivityDelegate" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handler">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Handler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Handler" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.ActivityDelegate.Handler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a atividade que é representada por esse <see cref="T:System.Activities.ActivityDelegate" />.</summary>
+        <value>A atividade que é representada por esse <see cref="T:System.Activities.ActivityDelegate" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é somente leitura em tempo de execução. Se o valor é definido em tempo de execução, um <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetRuntimeDelegateArguments">
+      <MemberSignature Language="C#" Value="protected virtual void OnGetRuntimeDelegateArguments (System.Collections.Generic.IList&lt;System.Activities.RuntimeDelegateArgument&gt; runtimeDelegateArguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGetRuntimeDelegateArguments(class System.Collections.Generic.IList`1&lt;class System.Activities.RuntimeDelegateArgument&gt; runtimeDelegateArguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityDelegate.OnGetRuntimeDelegateArguments(System.Collections.Generic.IList{System.Activities.RuntimeDelegateArgument})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="runtimeDelegateArguments" Type="System.Collections.Generic.IList&lt;System.Activities.RuntimeDelegateArgument&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="runtimeDelegateArguments">A lista a ser preenchido com os argumentos de tempo de execução.</param>
+        <summary>Fornece uma lista de argumentos de tempo de execução para o <see cref="T:System.Activities.ActivityDelegate" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando substituído em uma classe derivada, esse método pode ser usado para personalizar os argumentos que são usados pelo <xref:System.Activities.ActivityDelegate>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeDisplayName">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeDisplayName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeDisplayName() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityDelegate.ShouldSerializeDisplayName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o <see cref="P:System.Activities.ActivityDelegate.DisplayName" /> o valor da propriedade deve ser serializado para XAML.</summary>
+        <returns>
+          <see langword="true" />, se o <see cref="P:System.Activities.ActivityDelegate.DisplayName" /> o valor da propriedade deve ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.ActivityDelegate.ShouldSerializeDisplayName%2A>Retorna `true` se o <xref:System.Activities.ActivityDelegate.DisplayName%2A> explicitamente definida no <xref:System.Activities.ActivityDelegate>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.ActivityDelegate.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.String" /> representação do <see cref="T:System.Activities.ActivityDelegate" /> que contém o <see cref="P:System.Activities.ActivityDelegate.DisplayName" />.</summary>
+        <returns>Uma representação do <see cref="T:System.Activities.ActivityDelegate" /> que contém o <see cref="P:System.Activities.ActivityDelegate.DisplayName" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

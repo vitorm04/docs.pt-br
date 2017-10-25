@@ -1,0 +1,140 @@
+<Type Name="DirectoryControl" FullName="System.DirectoryServices.Protocols.DirectoryControl">
+  <TypeSignature Language="C#" Value="public class DirectoryControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectoryControl extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.DirectoryControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" /> especifica dados de extensão para várias operações LDAP.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectoryControl (string type, byte[] value, bool isCritical, bool serverSide);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, unsigned int8[] value, bool isCritical, bool serverSide) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryControl.#ctor(System.String,System.Byte[],System.Boolean,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="isCritical" Type="System.Boolean" />
+        <Parameter Name="serverSide" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de controle.</param>
+        <param name="value">O valor associado ao controle.</param>
+        <param name="isCritical">Especifica se o controle é crítico. O padrão é <see langword="true" />.</param>
+        <param name="serverSide">Especifica se este é um controle de servidor.  O padrão é <see langword="true" />. <see langword="false" />Especifica um controle do lado do cliente.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DirectoryControl.#ctor(System.String,System.Byte[],System.Boolean,System.Boolean)" /> construtor cria uma instância do <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" /> usando os valores especificados para o tipo de valor, importância e ServerSide propriedades de classe.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" />o parâmetro é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public virtual byte[] GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.DirectoryControl.GetValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.DirectoryControl.GetValue" /> método retorna os dados associados ao controle.</summary>
+        <returns>Os dados associados ao controle.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCritical">
+      <MemberSignature Language="C#" Value="public bool IsCritical { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCritical" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryControl.IsCritical" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DirectoryControl.IsCritical" /> propriedade especifica se o controle é crítico.</summary>
+        <value>
+          <see langword="true" />Se o controle é importante; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão dessa propriedade é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerSide">
+      <MemberSignature Language="C#" Value="public bool ServerSide { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServerSide" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryControl.ServerSide" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DirectoryControl.ServerSide" /> propriedade especifica se este é um controle de servidor.</summary>
+        <value>
+          <see langword="true" />Se o controle é um controle de servidor. <see langword="false" />Especifica um controle do lado do cliente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão dessa propriedade é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.DirectoryControl.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.DirectoryControl.Type" /> propriedade contém o identificador de objeto (OID) do controle.</summary>
+        <value>O OID do controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

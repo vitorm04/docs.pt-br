@@ -1,0 +1,369 @@
+<Type Name="IRequestChannel" FullName="System.ServiceModel.Channels.IRequestChannel">
+  <TypeSignature Language="C#" Value="public interface IRequestChannel : System.ServiceModel.Channels.IChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRequestChannel implements class System.ServiceModel.Channels.IChannel, class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IRequestChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Channels.IChannel</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define o contrato que um canal deve implementar para estar no lado do solicitante de uma comunicação de solicitação-resposta entre pontos de extremidade de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IRequestChannel> define variantes síncronas e assíncronas de um <xref:System.ServiceModel.ClientBase%601.ChannelBase%601.System%23ServiceModel%23Channels%23IRequestChannel%23Request%2A> método que retorna uma mensagem de resposta. Ele também fornece um <xref:System.ServiceModel.Channels.IRequestChannel.RemoteAddress%2A> e <xref:System.ServiceModel.Channels.IRequestChannel.Via%2A> propriedades para recuperar o endereço de ponto de extremidade e o URI ao qual a mensagem de solicitação é enviada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRequest (System.ServiceModel.Channels.Message message, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginRequest(class System.ServiceModel.Channels.Message message, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IRequestChannel.BeginRequest(System.ServiceModel.Channels.Message,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">A solicitação <see cref="T:System.ServiceModel.Channels.Message" /> a ser transmitida.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação assíncrona transmitir uma mensagem de solicitação.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas a transmitir uma mensagem de solicitação de operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para transmitir uma mensagem de solicitação para o lado de resposta de uma troca de mensagens de solicitação-resposta.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a transmissão de mensagens assíncronas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de solicitação é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como implementar esse método.  
+  
+ [!code-csharp[S_UE_HttpCookieSession#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_httpcookiesession/cs/httpcookierequestsessionchannel.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRequest (System.ServiceModel.Channels.Message message, TimeSpan timeout, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginRequest(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IRequestChannel.BeginRequest(System.ServiceModel.Channels.Message,System.TimeSpan,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">A solicitação <see cref="T:System.ServiceModel.Channels.Message" /> a ser transmitida.</param>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo em que uma resposta deve ser recebida.</param>
+        <param name="callback">O <see cref="T:System.AsyncCallback" /> delegate que recebe a notificação de conclusão da operação assíncrona transmitir uma mensagem de solicitação.</param>
+        <param name="state">Um objeto, especificado pelo aplicativo, que contém informações de estado associadas a transmitir uma mensagem de solicitação de operação assíncrona.</param>
+        <summary>Inicia uma operação assíncrona para transmitir uma mensagem de solicitação para o lado de resposta de uma troca de mensagens de solicitação-resposta dentro de um intervalo de tempo especificado.</summary>
+        <returns>O <see cref="T:System.IAsyncResult" /> que faz referência a transmissão de mensagens assíncronas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de solicitação é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> deve ser gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+ Se um `timeout` é passado ao chamar a função, em seguida, esse valor é usado. Se o <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A> é definido na associação, o valor na associação é usado se nenhum `timeout` for especificado ao chamar a função.  
+  
+ O <xref:System.ServiceModel.Channels.ChannelBase.DefaultSendTimeout%2A> será usado se nenhum tempo limite é especificado em qualquer ligação ou ao chamar a função. O valor padrão é 1 minuto.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como implementar esse método:  
+  
+ [!code-csharp[S_UE_HttpCookieSession#3](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_httpcookiesession/cs/httpcookierequestsessionchannel.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação deve lançar uma <see cref="T:System.TimeoutException" /> se especificado <paramref name="timeout" /> for excedido antes que a operação seja concluída.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRequest">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message EndRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message EndRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IRequestChannel.EndRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">O <see cref="T:System.IAsyncResult" /> retornado por uma chamada para o <see cref="Overload:System.ServiceModel.Channels.IInputChannel.BeginReceive" /> método.</param>
+        <summary>Conclui uma operação assíncrona para retornar uma resposta de mensagem a uma solicitação transmitida.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.Message" /> recebido em resposta à solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a mensagem de solicitação é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como implementar esse método.  
+  
+ [!code-csharp[S_UE_HttpCookieSession#4](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_httpcookiesession/cs/httpcookierequestsessionchannel.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteAddress">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.EndpointAddress RemoteAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.EndpointAddress RemoteAddress" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IRequestChannel.RemoteAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.EndpointAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço remoto ao qual o canal de solicitação envia mensagens.</summary>
+        <value>O <see cref="T:System.ServiceModel.EndpointAddress" /> para que o canal de solicitação envia mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.EndpointAddress> serve como o destino final e o endereço físico, se um <xref:System.ServiceModel.Channels.IRequestChannel.Via%2A> não for especificado. Se o <xref:System.ServiceModel.Channels.IRequestChannel.Via%2A> for especificado, o que é o endereço físico real para que a mensagem é enviada, e por meio do qual a mensagem deve ir para chegar ao seu destino.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como implementar essa propriedade.  
+  
+ [!code-csharp[S_UE_HttpCookieSession#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_httpcookiesession/cs/httpcookierequestsessionchannel.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message Request (System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message Request(class System.ServiceModel.Channels.Message message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IRequestChannel.Request(System.ServiceModel.Channels.Message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+      </Parameters>
+      <Docs>
+        <param name="message">A solicitação <see cref="T:System.ServiceModel.Channels.Message" /> a ser transmitida.</param>
+        <summary>Envia uma solicitação baseada em mensagem e retorna a resposta correlacionada com base em mensagem.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.Message" /> recebido em resposta à solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações de <xref:System.ServiceModel.Channels.IRequestChannel> Certifique-se de que a mensagem de resposta está correlacionada a mensagem de solicitação.  
+  
+ Em geral, se uma implementação de <xref:System.ServiceModel.Channels.IRequestChannel> recebe uma mensagem que não está correlacionada a uma solicitação pendente, ele é descartado.  
+  
+ O <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A> método pode ser chamado simultaneamente por vários threads.  
+  
+ Passar a mensagem para o canal de solicitação faz com que a mensagem a ser acessado. Depois de chamar <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A>, você não pode inspecionar a mensagem ou chamada <xref:System.ServiceModel.Channels.Message.Close%2A> na mensagem.  
+  
+ Se a mensagem de solicitação é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como implementar esse método:  
+  
+ [!code-csharp[S_UE_HttpCookieSession#5](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_httpcookiesession/cs/httpcookierequestsessionchannel.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Channels.Message Request (System.ServiceModel.Channels.Message message, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.Channels.Message Request(class System.ServiceModel.Channels.Message message, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IRequestChannel.Request(System.ServiceModel.Channels.Message,System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.Message</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="message">A solicitação <see cref="T:System.ServiceModel.Channels.Message" /> a ser transmitida.</param>
+        <param name="timeout">O <see cref="T:System.TimeSpan" /> que especifica o intervalo de tempo em que uma resposta deve ser recebida.</param>
+        <summary>Envia uma solicitação de mensagem e retorna correlacionado com base em mensagem de resposta em um intervalo de tempo especificado.</summary>
+        <returns>O <see cref="T:System.ServiceModel.Channels.Message" /> recebido em resposta à solicitação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações de <xref:System.ServiceModel.Channels.IRequestChannel> Certifique-se de que a mensagem de resposta está correlacionada a mensagem de solicitação.  
+  
+ Em geral, se uma implementação de <xref:System.ServiceModel.Channels.IRequestChannel> recebe uma mensagem que não está correlacionada a uma solicitação pendente, ele é descartado.  
+  
+ O <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A> método pode ser chamado simultaneamente por vários threads.  
+  
+ Passar a mensagem para o canal de solicitação faz com que a mensagem a ser acessado. Depois de chamar <xref:System.ServiceModel.Channels.IRequestChannel.Request%2A>, você não pode inspecionar a mensagem ou chamada <xref:System.ServiceModel.Channels.Message.Close%2A> na mensagem.  
+  
+ Se a mensagem de solicitação é maior do que o máximo permitido pela associação está sendo usada, do tamanho da mensagem um <xref:System.ServiceModel.QuotaExceededException> é gerada. O tamanho máximo da mensagem é definido <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> propriedade. O valor padrão é 65536 bytes.  
+  
+ Se um `timeout` é passado ao chamar a função, em seguida, esse valor é usado. Se o <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A> é definido na associação, o valor na associação é usado se nenhum `timeout` for especificado ao chamar a função.  
+  
+ O <xref:System.ServiceModel.Channels.ChannelBase.DefaultSendTimeout%2A> será usado se nenhum tempo limite é especificado em qualquer ligação ou ao chamar a função. O valor padrão é 1 minuto.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como implementar esse método.  
+  
+ [!code-csharp[S_UE_HttpCookieSession#6](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_httpcookiesession/cs/httpcookierequestsessionchannel.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A operação deve lançar uma <see cref="T:System.TimeoutException" /> se especificado <paramref name="timeout" /> for excedido antes que a operação seja concluída.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Via">
+      <MemberSignature Language="C#" Value="public Uri Via { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Via" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IRequestChannel.Via" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço de transporte para o qual a solicitação é enviar.</summary>
+        <value>O <see cref="T:System.Uri" /> que contém o endereço de transporte para o qual a mensagem é enviada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.EndpointAddress> serve como o destino final e o endereço físico, se um <xref:System.ServiceModel.Channels.IRequestChannel.Via%2A> não for especificado. Se o <xref:System.ServiceModel.Channels.IRequestChannel.Via%2A> for especificado, o que é o endereço físico real para que a mensagem é enviada, e por meio do qual a mensagem deve ir para chegar ao seu destino.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como implementar essa propriedade.  
+  
+ [!code-csharp[S_UE_HttpCookieSession#1](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_httpcookiesession/cs/httpcookierequestsessionchannel.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

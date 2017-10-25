@@ -1,0 +1,246 @@
+<Type Name="LateBoundBitmapDecoder" FullName="System.Windows.Media.Imaging.LateBoundBitmapDecoder">
+  <TypeSignature Language="C#" Value="public sealed class LateBoundBitmapDecoder : System.Windows.Media.Imaging.BitmapDecoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LateBoundBitmapDecoder extends System.Windows.Media.Imaging.BitmapDecoder" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.LateBoundBitmapDecoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapDecoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um decodificador que exige a criação de bitmap atrasada como assíncrona imagem baixa.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder> é usado quando <xref:System.Windows.Media.Imaging.BitmapCreateOptions.DelayCreation> for especificado. O <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder.Decoder%2A> propriedade cria o necessário "decodificador real" em uma base de sob demanda. Retornarem todas as propriedades de decodificador `null` durante download de conteúdo.  
+  
+ Um <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder> também podem ser criados quando o sistema tem uma imagem de forma assíncrona baixado localmente. Nesse caso, o decodificador também retorna `null` para propriedades até que a imagem foi baixada. O aplicativo pode verificar o <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder.IsDownloading%2A> propriedade ou adicionar um delegado para o <xref:System.Windows.Media.Imaging.BitmapDecoder.DownloadCompleted> evento para monitorar o status do download. Além disso, todos os quadros obtido um <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder> enquanto a imagem está baixando retornará uma largura/altura de 1,1 até que os quadros de concluído o download.  
+  
+ <xref:System.Windows.Media.Imaging.BitmapFrame>objetos que são retornados por essa classe estão congelados e, portanto, imutáveis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CodecInfo">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Imaging.BitmapCodecInfo CodecInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapCodecInfo CodecInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.CodecInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapCodecInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações que descrevem esse codec.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapCodecInfo" />. Esta propriedade não tem valor padrão. Se o decodificador associado tardia ainda está sendo baixado, essa propriedade retornará <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como ler as informações de um <xref:System.Windows.Media.Imaging.BitmapCodecInfo> de objeto e enviá-lo para uma cadeia de caracteres.  
+  
+ [!code-cpp[bmpbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
+ [!code-csharp[bmpbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[bmpbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorContexts">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.ColorContext&gt; ColorContexts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Media.ColorContext&gt; ColorContexts" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.ColorContexts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.ColorContext&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que representa o perfil de cor que está associado um bitmap, se um for definido.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.ColorContext" /> que representa o perfil de cor incorporado do bitmap. Se nenhum perfil de cor tiver sido definida ou se o <see cref="T:System.Windows.Media.Imaging.LateBoundBitmapDecoder" /> ainda está baixando conteúdo, esta propriedade retornará <see langword="null" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decoder">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.BitmapDecoder Decoder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapDecoder Decoder" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.Decoder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapDecoder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o decodificador subjacente que está associado com o decodificador de associação tardia.</summary>
+        <value>O <see cref="T:System.Windows.Media.Imaging.BitmapDecoder" /> subjacente. Se o <see cref="T:System.Windows.Media.Imaging.LateBoundBitmapDecoder" /> é ainda baixar um bitmap, o decodificador subjacente é <see langword="null" />. Caso contrário, o decodificador subjacente é criado no primeiro acesso.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frames">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.Imaging.BitmapFrame&gt; Frames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Media.Imaging.BitmapFrame&gt; Frames" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.Frames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Media.Imaging.BitmapFrame&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o conteúdo de um quadro individual dentro de um bitmap.</summary>
+        <value>Uma instância de <see cref="T:System.Windows.Media.Imaging.BitmapFrame" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque um <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder> é baixado de forma assíncrona, é possível que a coleção subjacente de <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder.Frames%2A> alterar depois que o conteúdo é baixado e decodificar. Enquanto o download de conteúdo, a coleção sempre retorna pelo menos um item. Quando o download e a decodificação forem concluídas, o <xref:System.Windows.Media.Imaging.BitmapFrame> altera automaticamente o seu conteúdo subjacente. Em outras palavras, o objeto de coleção pode alterar; o objeto de quadros real permanece o mesmo.  
+  
+ Qualquer quadro obtido um <xref:System.Windows.Media.Imaging.LateBoundBitmapDecoder> enquanto a imagem está baixando retornará uma largura/altura do `1,1` até que os quadros de concluído o download.  
+  
+ Somente [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] e [!INCLUDE[TLA#tla_gif](~/includes/tlasharptla-gif-md.md)] imagens oferecem suporte a mais de um quadro.  
+  
+ Qualquer <xref:System.Windows.Media.Imaging.BitmapFrame> objetos que essa propriedade retorna congelados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar um <xref:System.Windows.Media.Imaging.BitmapFrame> como um <xref:System.Windows.Media.Imaging.BitmapSource>.  
+  
+ [!code-csharp[bitmapframeexample#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#4)]
+ [!code-vb[bitmapframeexample#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDownloading">
+      <MemberSignature Language="C#" Value="public override bool IsDownloading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDownloading" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.IsDownloading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o decodificador está fazendo download de conteúdo.</summary>
+        <value>
+          <see langword="true" />Se o decodificador está baixando conteúdo; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Palette">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Imaging.BitmapPalette Palette { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapPalette Palette" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.Palette" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapPalette</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> que está associado com o decodificador.</summary>
+        <value>O <see cref="T:System.Windows.Media.Imaging.BitmapPalette" /> que está associado com o decodificador. Se o bitmap não tem nenhuma paleta, ou se o <see cref="T:System.Windows.Media.Imaging.LateBoundBitmapDecoder" /> ainda está baixando conteúdo, esta propriedade retornará <see langword="null" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Preview">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Imaging.BitmapSource Preview { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Preview" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.Preview" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a visualização global de bitmap, se um for definido.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a visualização global do bitmap. Se nenhuma visualização é definida, ou se o <see cref="T:System.Windows.Media.Imaging.LateBoundBitmapDecoder" /> ainda está baixando conteúdo, esta propriedade retornará <see langword="null" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Imaging.BitmapSource> que essa propriedade retorna está congelada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Thumbnail">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Imaging.BitmapSource Thumbnail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Imaging.BitmapSource Thumbnail" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.LateBoundBitmapDecoder.Thumbnail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.BitmapSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa a miniatura de bitmap, se um for definido.</summary>
+        <value>Um <see cref="T:System.Windows.Media.Imaging.BitmapSource" /> que representa uma miniatura do bitmap. Se nenhuma miniatura é definida, ou se o <see cref="T:System.Windows.Media.Imaging.LateBoundBitmapDecoder" /> ainda está baixando conteúdo, esta propriedade retornará <see langword="null" />. Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Imaging.BitmapSource> que essa propriedade retorna está congelada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

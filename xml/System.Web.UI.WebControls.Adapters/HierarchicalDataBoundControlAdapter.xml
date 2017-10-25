@@ -1,0 +1,153 @@
+<Type Name="HierarchicalDataBoundControlAdapter" FullName="System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter">
+  <TypeSignature Language="C#" Value="public class HierarchicalDataBoundControlAdapter : System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HierarchicalDataBoundControlAdapter extends System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.Adapters.WebControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Personaliza o comportamento de um <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" /> objeto ao qual este adaptador de controle está associado, para solicitações de navegador específico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe adapta associado <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> controle para modificar a marcação padrão ou o comportamento de um navegador específico. Você pode estender o <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe para personalizar a renderização de formatos de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> controle.  
+  
+ Um <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> controle está associado a uma fonte de dados e gera seu usuário interface (ou filho que controlam a hierarquia, normalmente), enumerando os itens na fonte de dados ao qual ele está associado. Para obter mais informações sobre controles associados a dados hierárquicos, consulte <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl>.  
+  
+ Controle adaptadores are.NET componentes que gerenciam uma ou mais fases do ciclo de vida de um controle para um navegador específico. Estendendo o <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe fornece acesso para os estágios do ciclo de vida de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> controle. Para obter mais informações, consulte [arquitetura visão geral do controle comportamento adaptável](http://msdn.microsoft.com/library/4ff05ae9-4109-4352-929e-ad893895dbff).  
+  
+ A solicitação inicial de um adaptador faz com que o .NET Framework procurar um adaptador mapeado para o controle, dadas as características do navegador solicitante. Arquivos de definição de navegador são usados pela <xref:System.Web.HttpBrowserCapabilities> classe para identificar as características do navegador do cliente e mapear o adaptador para o tipo de navegador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como estender o <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe para renderizar um hierárquica <xref:System.Web.UI.WebControls.TreeView> controle que está associado a um <xref:System.Web.UI.WebControls.XmlDataSource> objeto.  
+  
+ Este exemplo de código contém quatro objetos:  
+  
+-   Um adaptador é derivado de <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe.  
+  
+-   O arquivo. aspx que incorpora o <xref:System.Web.UI.WebControls.TreeView> controle e o conteúdo específico ao dispositivo.  
+  
+-   Um arquivo de navegador para vincular o adaptador a um tipo de dispositivo.  
+  
+-   Um arquivo XML que contém uma lista hierárquica de funcionários.  
+  
+ Este exemplo de código consiste em quatro segmentos de código. O primeiro segmento de código demonstra como estender o <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/hierarchicaltreeviewadapter.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/hierarchicaltreeviewadapter.vb#1)]  
+  
+ O segundo segmento de código demonstra como declarar um <xref:System.Web.UI.WebControls.TreeView> para associar a uma fonte de dados XML.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/implcs.aspx#4)]
+ [!code-aspx-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/implvb.aspx#4)]  
+  
+ O terceiro segmento de código mostra como vincular a <xref:System.Web.UI.WebControls.TreeView> controle para o adaptador personalizado para navegadores em execução no Windows CE.  
+  
+  
+  
+ O segmento de código final fornece os dados XML que o <xref:System.Web.UI.WebControls.TreeView> controle associa a.  
+  
+  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HierarchicalDataBoundControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework constrói uma instância do <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe. A solicitação inicial de um adaptador faz com que o .NET Framework pesquisar um adaptador mapeado para o controle recebe as características do navegador solicitante. Depois que o adaptador for encontrado, o controle contém uma referência para a instância do adaptador mapeado no seu <xref:System.Web.UI.Control.Adapter%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.HierarchicalDataBoundControl Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.HierarchicalDataBoundControl Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.HierarchicalDataBoundControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Recupera uma referência com rigidez de tipos para o <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" /> controle associado a esta <see cref="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" /> objeto.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.HierarchicalDataBoundControl" /> associado à instância atual de <see cref="T:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.Control%2A> propriedade fornece acesso para o controle correspondente, incluindo suas propriedades e métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.Control%2A> propriedade para recuperar um fortemente tipada <xref:System.Web.UI.WebControls.TreeView> controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/hierarchicaltreeviewadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/hierarchicaltreeviewadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected virtual void PerformDataBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void PerformDataBinding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa os dados na fonte de dados do controle associado a dados hierárquico associado ao adaptador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> método associa os dados na fonte de dados especificado do associado <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> o controle para o <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> objeto. Você pode substituir <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> para substituir a funcionalidade de associação de dados padrão de associado <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> controle ou para fornecer funcionalidade adicional de associação de dados se associado <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> controle estendido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> método para verificar a <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl.DataSourceID%2A> propriedade foi definida antes de chamar o pai <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter.PerformDataBinding%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/CS/hierarchicaltreeviewadapter.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.Adapters.HierarchicalDataBoundControlAdapter/VB/hierarchicaltreeviewadapter.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

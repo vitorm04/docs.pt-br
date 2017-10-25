@@ -1,0 +1,318 @@
+<Type Name="BorderSkinStyle" FullName="System.Web.UI.DataVisualization.Charting.BorderSkinStyle">
+  <TypeSignature Language="C#" Value="public enum BorderSkinStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BorderSkinStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.BorderSkinStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica um estilo para a capa da borda de um gráfico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.BorderSkin> classe representa o estilo da capa da borda usada para uma imagem de gráfico. Se você definir o <xref:System.Web.UI.DataVisualization.Charting.BorderSkin.SkinStyle> propriedade para None, nenhuma capa será usada. Este é o valor padrão para a propriedade de <xref:System.Web.UI.DataVisualization.Charting.BorderSkin.SkinStyle> .  
+  
+> [!NOTE]
+>  A diferença entre os conjuntos de estilos de capa de borda que usam quadros e siga a convenção de nomenclatura "FrameThin*" ou "FrameTitle*" (por exemplo, System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin1 ou System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle1) é a forma e a espessura de seus quadros.  
+  
+ Além disso, se você usar uma das capas de borda do estilo "FrameThin", o título do gráfico não será exibido. No entanto, se você usar uma das capas de borda do estilo "FrameTitle", o título do gráfico será exibido na parte superior horizontal do quadro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Emboss">
+      <MemberSignature Language="C#" Value="Emboss" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle Emboss = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Emboss" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda em alto relevo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameThin1">
+      <MemberSignature Language="C#" Value="FrameThin1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameThin1 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda fina com cantos arredondados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameThin2">
+      <MemberSignature Language="C#" Value="FrameThin2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameThin2 = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda fina com cantos superiores arredondados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameThin3">
+      <MemberSignature Language="C#" Value="FrameThin3" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameThin3 = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda fina com cantos quadrados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameThin4">
+      <MemberSignature Language="C#" Value="FrameThin4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameThin4 = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda fina com cantos externos quadrados e cantos internos arredondados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameThin5">
+      <MemberSignature Language="C#" Value="FrameThin5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameThin5 = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda fina com cantos arredondados e parafusos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameThin6">
+      <MemberSignature Language="C#" Value="FrameThin6" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameThin6 = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameThin6" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda fina com cantos internos quadrados e cantos externos arredondados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle1">
+      <MemberSignature Language="C#" Value="FrameTitle1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle1 = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos arredondados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle2">
+      <MemberSignature Language="C#" Value="FrameTitle2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle2 = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos superiores arredondados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle3">
+      <MemberSignature Language="C#" Value="FrameTitle3" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle3 = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos quadrados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle4">
+      <MemberSignature Language="C#" Value="FrameTitle4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle4 = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos internos arredondados e cantos externos quadrados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle5">
+      <MemberSignature Language="C#" Value="FrameTitle5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle5 = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos arredondados e parafusos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle6">
+      <MemberSignature Language="C#" Value="FrameTitle6" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle6 = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle6" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos externos arredondados e cantos internos quadrados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle7">
+      <MemberSignature Language="C#" Value="FrameTitle7" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle7 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle7" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos arredondados. Nenhuma borda no lado direito.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTitle8">
+      <MemberSignature Language="C#" Value="FrameTitle8" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle FrameTitle8 = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.FrameTitle8" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda com cantos arredondados somente nas laterais superior e inferior.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhuma capa de borda é usada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Raised">
+      <MemberSignature Language="C#" Value="Raised" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle Raised = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Raised" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda em alto relevo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sunken">
+      <MemberSignature Language="C#" Value="Sunken" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.BorderSkinStyle Sunken = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.BorderSkinStyle.Sunken" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.BorderSkinStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use uma capa de borda em baixo relevo.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

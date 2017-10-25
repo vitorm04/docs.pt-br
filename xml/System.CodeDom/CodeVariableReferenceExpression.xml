@@ -1,0 +1,114 @@
+<Type Name="CodeVariableReferenceExpression" FullName="System.CodeDom.CodeVariableReferenceExpression">
+  <TypeSignature Language="C#" Value="public class CodeVariableReferenceExpression : System.CodeDom.CodeExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeVariableReferenceExpression extends System.CodeDom.CodeExpression" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeVariableReferenceExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma referência a uma variável local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeVariableReferenceExpression>pode ser usado para representar uma referência a uma variável local.  
+  
+ O <xref:System.CodeDom.CodeVariableReferenceExpression.VariableName%2A> propriedade especifica o nome da variável local para fazer referência.  
+  
+ Use <xref:System.CodeDom.CodeFieldReferenceExpression> para fazer referência a um campo. Use <xref:System.CodeDom.CodePropertyReferenceExpression> para fazer referência a uma propriedade. Use <xref:System.CodeDom.CodeEventReferenceExpression> para fazer referência a um evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de um <xref:System.CodeDom.CodeVariableReferenceExpression> para se referir a uma variável local.  
+  
+ [!code-cpp[CodeReferenceExample#4](~/samples/snippets/cpp/VS_Snippets_CLR/CodeReferenceExample/CPP/codereferenceexample.cpp#4)]
+ [!code-csharp[CodeReferenceExample#4](~/samples/snippets/csharp/VS_Snippets_CLR/CodeReferenceExample/CS/codereferenceexample.cs#4)]
+ [!code-vb[CodeReferenceExample#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeReferenceExample/VB/codereferenceexample.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeVariableReferenceExpression ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeVariableReferenceExpression.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeVariableReferenceExpression" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeVariableReferenceExpression (string variableName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string variableName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeVariableReferenceExpression.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="variableName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variableName">O nome da variável local para fazer referência.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.CodeDom.CodeVariableReferenceExpression" /> classe usando o nome da variável local especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VariableName">
+      <MemberSignature Language="C#" Value="public string VariableName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string VariableName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeVariableReferenceExpression.VariableName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da variável local para fazer referência.</summary>
+        <value>O nome da variável local para fazer referência.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

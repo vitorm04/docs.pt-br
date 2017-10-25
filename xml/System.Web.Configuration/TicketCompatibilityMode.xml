@@ -1,0 +1,71 @@
+<Type Name="TicketCompatibilityMode" FullName="System.Web.Configuration.TicketCompatibilityMode">
+  <TypeSignature Language="C#" Value="public enum TicketCompatibilityMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TicketCompatibilityMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TicketCompatibilityMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define se deseja usar UTC (Tempo Universal Coordenado) ou o horário local para a data de validade do tíquete para autenticação de formulários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A data de expiração do tíquete de autenticação de formulários do ASP.NET pode ser armazenada usando o tempo Universal Coordenado (UTC) ou a hora local. Para compatibilidade entre aplicativos e para compatibilidade entre versões diferentes do .NET Framework, o tempo de expiração do tíquete pode ser especificado usando o `ticketCompatilityMode` atributo do elemento. O valor padrão para o `ticketCompatibilityMode` atributo é Framework20.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define a data de expiração de tíquete de autenticação de formulários, como hora UTC.  
+  
+```  
+<system.web>  
+  <authentication mode="Forms">   
+    <forms ticketCompatilityMode="Framework40">  
+    </forms>  
+  </authentication>  
+</system.web>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Framework20">
+      <MemberSignature Language="C#" Value="Framework20" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.TicketCompatibilityMode Framework20 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.TicketCompatibilityMode.Framework20" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TicketCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a data de validade do tíquete é armazenada como horário local. Este é o valor padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Framework40">
+      <MemberSignature Language="C#" Value="Framework40" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Configuration.TicketCompatibilityMode Framework40 = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Configuration.TicketCompatibilityMode.Framework40" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TicketCompatibilityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a data de validade do tíquete é armazenada como UTC.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Services.Discovery">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Services.Discovery" /> namespace consiste das classes que permite que os clientes de serviço Web XML localizar os serviços Web XML disponíveis em um servidor Web por meio de um processo chamado descoberta os XML Web services.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

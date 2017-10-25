@@ -1,0 +1,458 @@
+<Type Name="XmlStreamStore" FullName="System.Windows.Annotations.Storage.XmlStreamStore">
+  <TypeSignature Language="C#" Value="public sealed class XmlStreamStore : System.Windows.Annotations.Storage.AnnotationStore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlStreamStore extends System.Windows.Annotations.Storage.AnnotationStore" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Annotations.Storage.XmlStreamStore" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Annotations.Storage.AnnotationStore</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um repositório de dados XML para gravação e leitura de anotações do usuário.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlStreamStore (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de e/s de leitura e gravação de anotações do usuário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Annotations.Storage.XmlStreamStore" /> classe com uma e/s especificado <see cref="T:System.IO.Stream" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `stream`deve ser o formato XML válido e estar de acordo com o [!INCLUDE[TLA#tla_caf](~/includes/tlasharptla-caf-md.md)] esquema.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlStreamStore (System.IO.Stream stream, System.Collections.Generic.IDictionary&lt;Uri,System.Collections.Generic.IList&lt;Uri&gt;&gt; knownNamespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Collections.Generic.IDictionary`2&lt;class System.Uri, class System.Collections.Generic.IList`1&lt;class System.Uri&gt;&gt; knownNamespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.#ctor(System.IO.Stream,System.Collections.Generic.IDictionary{System.Uri,System.Collections.Generic.IList{System.Uri}})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="knownNamespaces" Type="System.Collections.Generic.IDictionary&lt;System.Uri,System.Collections.Generic.IList&lt;System.Uri&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo de e/s de leitura e gravação de anotações do usuário.</param>
+        <param name="knownNamespaces">Um dicionário com uma lista de namespaces compatíveis conhecidos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Annotations.Storage.XmlStreamStore" /> classe com uma e/s especificado <see cref="T:System.IO.Stream" /> e dicionário de namespaces compatíveis conhecidos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Windows.Annotations.Storage.XmlStreamStore.%23ctor%2A> construtor permite que o registro do conhecido namespaces específicos do aplicativo.  
+  
+ O `knownNamespace` dicionário define namespaces de aplicativo que são usadas ao armazenar conteúdo personalizado como parte de uma anotação.  A chave de dicionário é o namespace primário conhecido para o programa de aplicativo.  A chave do namespace está associada uma lista de valores de namespaces mais antigos que são compatíveis com o namespace "chave".  Quando as anotações são carregadas todos os namespaces nesta lista serão substituídas pelo namespace "chave".  
+  
+ `stream`deve ser o formato XML válido e estar de acordo com o [anotações esquema](~/docs/framework/wpf/advanced/annotations-schema.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xml.XmlException">
+          <paramref name="stream" />contém XML inválido.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="knownNamespaces" /> dicionário contém um espaço para nome duplicado.  
+  
+ -ou-  
+  
+ O <paramref name="knownNamespaces" /> dicionário contém um elemento que tem um <see langword="null" /> chave.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAnnotation">
+      <MemberSignature Language="C#" Value="public override void AddAnnotation (System.Windows.Annotations.Annotation newAnnotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void AddAnnotation(class System.Windows.Annotations.Annotation newAnnotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.AddAnnotation(System.Windows.Annotations.Annotation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newAnnotation" Type="System.Windows.Annotations.Annotation" />
+      </Parameters>
+      <Docs>
+        <param name="newAnnotation">A anotação para adicionar ao repositório.</param>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Annotations.Annotation" /> no repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Annotations.Storage.XmlStreamStore.AddAnnotation%2A> é chamado, o <xref:System.Windows.Annotations.Annotation.Id%2A> do <xref:System.Windows.Annotations.Annotation> é verificado para ver se o <xref:System.Windows.Annotations.Annotation> já foi adicionado ao repositório.  Se o <xref:System.Windows.Annotations.Annotation> já foi adicionado e está no repositório de um <xref:System.ArgumentException> erro será lançado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="newAnnotation" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um <see cref="T:System.Windows.Annotations.Annotation" /> com o mesmo <see cref="P:System.Windows.Annotations.Annotation.Id" /> já está no repositório.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma e/s <see cref="T:System.IO.Stream" /> não foi definido para o repositório.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" />foi chamado no repositório.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="public override bool AutoFlush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoFlush" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.Storage.XmlStreamStore.AutoFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os dados nos buffers de anotação a ser gravado imediatamente para o repositório de dados físico.</summary>
+        <value>
+          <see langword="true" />Se for de dados em buffers de anotação a ser gravado imediatamente para o repositório de dados físico para cada operação. Caso contrário, <see langword="false" /> se for de dados nos buffers de anotação a ser gravado quando o aplicativo chama explicitamente <see cref="M:System.Windows.Annotations.Storage.XmlStreamStore.Flush" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAnnotation">
+      <MemberSignature Language="C#" Value="public override System.Windows.Annotations.Annotation DeleteAnnotation (Guid annotationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Annotations.Annotation DeleteAnnotation(valuetype System.Guid annotationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.DeleteAnnotation(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="annotationId">O [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] <see cref="P:System.Windows.Annotations.Annotation.Id" /> propriedade de anotação a ser excluído.</param>
+        <summary>Exclui a anotação com especificado <see cref="P:System.Windows.Annotations.Annotation.Id" /> do repositório.</summary>
+        <returns>A anotação que foi excluída; Caso contrário, <see langword="null" /> se uma anotação com especificado <paramref name="annotationId" /> não foi encontrado no repositório.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra o uso do <xref:System.Windows.Annotations.Storage.XmlStreamStore.DeleteAnnotation%2A> e <xref:System.Windows.Annotations.Storage.XmlStreamStore.Flush%2A> métodos.  
+  
+ [!code-csharp[DocumentSerialize#DocSerDelete](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserdelete)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" />foi chamado no repositório.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma e/s <see cref="T:System.IO.Stream" /> não foi definido para o repositório.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Força a nenhum dado de anotação retidos em buffers internos para ser gravado no dispositivo de armazenamento subjacente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Annotations.Storage.XmlStreamStore.Flush%2A> método quando o aplicativo for fechado o <xref:System.Windows.Annotations.AnnotationService>.  
+  
+ [!code-csharp[DocViewerAnnotationsXps#StopAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/AnnotationsHelperXps.cs#stopannotations)]
+ [!code-vb[DocViewerAnnotationsXps#StopAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXps/visualbasic/annotationshelperxps.vb#stopannotations)]  
+  
+ O exemplo a seguir mostra o uso do <xref:System.Windows.Annotations.Storage.XmlStreamStore.DeleteAnnotation%2A> e <xref:System.Windows.Annotations.Storage.XmlStreamStore.Flush%2A> métodos.  
+  
+ [!code-csharp[DocumentSerialize#DocSerDelete](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserdelete)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" />foi chamado no repositório.</exception>
+        <exception cref="T:System.InvalidOperationException">Uma e/s <see cref="T:System.IO.Stream" /> não foi definido para o repositório.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">E/s de armazenamento <see cref="T:System.IO.Stream" /> é somente leitura e não pode ser acessada para saída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnnotation">
+      <MemberSignature Language="C#" Value="public override System.Windows.Annotations.Annotation GetAnnotation (Guid annotationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Windows.Annotations.Annotation GetAnnotation(valuetype System.Guid annotationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotation(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Annotations.Annotation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="annotationId" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="annotationId">O [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] <see cref="P:System.Windows.Annotations.Annotation.Id" /> propriedade de anotação a ser retornado.</param>
+        <summary>Retorna a anotação com especificado <see cref="P:System.Windows.Annotations.Annotation.Id" /> do repositório.</summary>
+        <returns>A anotação com o determinado <paramref name="annotationId" />; caso contrário, <see langword="null" /> se uma anotação com especificado <paramref name="annotationId" /> não foi encontrado no repositório.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" />foi chamado no repositório.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetAnnotations">
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Retorna uma lista de todas as anotações no repositório.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations%2A> método para determinar se há quaisquer anotações contidas no repositório.  
+  
+ [!code-csharp[DocumentSerialize#DocSerCloseFile](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserclosefile)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetAnnotations">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt; GetAnnotations ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;class System.Windows.Annotations.Annotation&gt; GetAnnotations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma lista de todas as anotações no repositório.</summary>
+        <returns>A lista de todas as anotações que estão atualmente no repositório.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations%2A> método nunca retornará `null`; no entanto, a lista pode estar vazia se o repositório contém sem anotações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations%2A> método para determinar se há quaisquer anotações no repositório.  
+  
+ [!code-csharp[DocumentSerialize#DocSerCloseFile](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserclosefile)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="Overload:System.Windows.Annotations.Storage.AnnotationStore.Dispose" />foi chamado no repositório.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAnnotations">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt; GetAnnotations (System.Windows.Annotations.ContentLocator anchorLocator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IList`1&lt;class System.Windows.Annotations.Annotation&gt; GetAnnotations(class System.Windows.Annotations.ContentLocator anchorLocator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations(System.Windows.Annotations.ContentLocator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Windows.Annotations.Annotation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="anchorLocator" Type="System.Windows.Annotations.ContentLocator" />
+      </Parameters>
+      <Docs>
+        <param name="anchorLocator">A partir <see cref="T:System.Windows.Annotations.ContentLocatorPart" /> sequência de retorno correspondentes anotações para.</param>
+        <summary>Retorna uma lista de anotações que têm <see cref="P:System.Windows.Annotations.Annotation.Anchors" /> com localizadores que começam com uma correspondência <see cref="T:System.Windows.Annotations.ContentLocatorPart" /> sequência.</summary>
+        <returns>A lista de anotações que têm <see cref="P:System.Windows.Annotations.Annotation.Anchors" /> com localizadores que iniciam e correspondem a determinado <paramref name="anchorLocator" />; caso contrário, <see langword="null" /> se não há anotações correspondentes foram encontradas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations%2A> método usa internamente o <xref:System.Windows.Annotations.ContentLocator.StartsWith%2A> método o <xref:System.Windows.Annotations.ContentLocator> classe para pesquisar e corresponder para as anotações retornar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations%2A> método para determinar se há quaisquer anotações no repositório.  
+  
+ [!code-csharp[DocumentSerialize#DocSerCloseFile](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserclosefile)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWellKnownCompatibleNamespaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Uri&gt; GetWellKnownCompatibleNamespaces (Uri name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class System.Uri&gt; GetWellKnownCompatibleNamespaces(class System.Uri name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.GetWellKnownCompatibleNamespaces(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="name">A sequência inicial de URI para retornar a lista de namespaces para.</param>
+        <summary>Retorna uma lista de namespaces compatíveis como um espaço para nome de entrada.</summary>
+        <returns>Uma lista de namespaces compatíveis que correspondem a <paramref name="name" />; caso contrário, <see langword="null" /> se não há nenhum namespace compatível encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `name` parâmetro funciona somente para predefinidos [!INCLUDE[TLA#tla_caf](~/includes/tlasharptla-caf-md.md)] namespaces.  Para qualquer outro namespace fornecido no `name` parâmetro <xref:System.Windows.Annotations.Storage.XmlStreamStore.GetWellKnownCompatibleNamespaces%2A> retornará `null`, até mesmo os namespaces registrado por meio de `knownNamespaces` parâmetro do <xref:System.Windows.Annotations.Storage.XmlStreamStore.%23ctor%2A> construtor.  
+  
+ Os namespaces predefinidos pelo [!INCLUDE[TLA2#tla_caf](~/includes/tla2sharptla-caf-md.md)] incluem o seguinte:  
+  
+-   http://schemas.microsoft.com/Windows/Annotations/2003/11/Core  
+  
+-   http://schemas.microsoft.com/Windows/Annotations/2003/11/base  
+  
+-   http://schemas.microsoft.com/winfx/2006/xaml/presentation  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoredNamespaces">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Uri&gt; IgnoredNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Uri&gt; IgnoredNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.Storage.XmlStreamStore.IgnoredNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de namespaces que foram ignoradas quando o fluxo XML foi carregado.</summary>
+        <value>A lista de namespaces que foram ignoradas quando o fluxo XML foi carregado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Annotations.Storage.XmlStreamStore.IgnoredNamespaces%2A> propriedade nunca retornará `null`, no entanto, a lista retornada pode ser vazia se nenhum namespace é ignorado.  
+  
+ <xref:System.Windows.Annotations.Storage.XmlStreamStore.IgnoredNamespaces%2A>Ajuda na compatibilidade de marcação XML quando o programa lê o conteúdo de anotação criada por versões diferentes do [!INCLUDE[TLA#tla_caf](~/includes/tlasharptla-caf-md.md)].  Quando um aplicativo mais antigo recebe conteúdo de anotação criado usando uma versão mais recente do [!INCLUDE[TLA2#tla_caf](~/includes/tla2sharptla-caf-md.md)], <xref:System.Windows.Annotations.Storage.XmlStreamStore.IgnoredNamespaces%2A> retorna uma lista de namespaces XML para elementos e atributos não são conhecidos para a estrutura mais antiga.  Desconhecido elementos e atributos XML associados a namespaces mais recentes são ignorados quando o conteúdo da anotação é lida e desserializado por aplicativos mais antigos.  Para obter mais informações, consulte o *especificação de compatibilidade de marcação XML* disponível em [http://go.microsoft.com/fwlink/?LinkId=73824](http://go.microsoft.com/fwlink/?LinkId=73824).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStoreContentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnStoreContentChanged (System.Windows.Annotations.Storage.StoreContentChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnStoreContentChanged(class System.Windows.Annotations.Storage.StoreContentChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Annotations.Storage.XmlStreamStore.OnStoreContentChanged(System.Windows.Annotations.Storage.StoreContentChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Annotations.Storage.StoreContentChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WellKnownNamespaces">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Uri&gt; WellKnownNamespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IList`1&lt;class System.Uri&gt; WellKnownNamespaces" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Annotations.Storage.XmlStreamStore.WellKnownNamespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Uri&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de todos os namespaces predefinidos pelo [!INCLUDE[TLA2#tla_caf](~/includes/tla2sharptla-caf-md.md)].</summary>
+        <value>A lista de namespaces predefinidos pelo [!INCLUDE[TLA#tla_caf](~/includes/tlasharptla-caf-md.md)].</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os namespaces predefinidos pelo [!INCLUDE[TLA2#tla_caf](~/includes/tla2sharptla-caf-md.md)] incluem o seguinte:  
+  
+-   http://schemas.microsoft.com/Windows/Annotations/2003/11/Core  
+  
+-   http://schemas.microsoft.com/Windows/Annotations/2003/11/base  
+  
+-   http://schemas.microsoft.com/winfx/2006/xaml/presentation  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

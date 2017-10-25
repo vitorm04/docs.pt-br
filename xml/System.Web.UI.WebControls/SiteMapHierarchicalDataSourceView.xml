@@ -1,0 +1,108 @@
+<Type Name="SiteMapHierarchicalDataSourceView" FullName="System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView">
+  <TypeSignature Language="C#" Value="public class SiteMapHierarchicalDataSourceView : System.Web.UI.HierarchicalDataSourceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SiteMapHierarchicalDataSourceView extends System.Web.UI.HierarchicalDataSourceView" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HierarchicalDataSourceView</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma exibição de dados em um nó de mapa de site ou uma coleção de nós de um <see cref="T:System.Web.UI.WebControls.SiteMapDataSource" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapDataSource> controle pode apresentar os dados subjacentes em formato tabular e hierárquico para controles de servidor Web que se associar a ele. O <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView> é usado por desenvolvedores de controles, mas não os desenvolvedores de página ou no código da página.  
+  
+ Controla como <xref:System.Web.UI.WebControls.Menu> ou <xref:System.Web.UI.WebControls.DropDownList> usar o <xref:System.Web.UI.WebControls.SiteMapDataSource> para associar a dados de mapa do site e apresentá-lo no formato de lista, enquanto os controles que derivam de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> classe, como <xref:System.Web.UI.WebControls.TreeView>, associar dados do mapa do site e apresentá-los de forma hierárquica.  
+  
+ Se um controle de associação de dados chama o <xref:System.Web.UI.IDataSource.GetView%2A> método o <xref:System.Web.UI.WebControls.SiteMapDataSource>, um <xref:System.Web.UI.WebControls.SiteMapDataSourceView> é criado pela fonte de dados. Se um controle chama o <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> método, um <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView> é criado. O <xref:System.Web.UI.WebControls.SiteMapDataSourceView> classe é fornecida para controles de servidor Web que derivam de <xref:System.Web.UI.WebControls.DataBoundControl> e vincula a listas e dados tabulares, enquanto o <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView> é fornecido para controles de servidor Web que derivam de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> e associar a dados hierárquicos.  
+  
+ Como todos os <xref:System.Web.UI.HierarchicalDataSourceView> objetos auxiliares de <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView> define as operações que pode ser executadas a fonte de dados com os dados subjacentes. Porque o <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView> apenas substituições de classe a <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.Select%2A> método, o associado <xref:System.Web.UI.WebControls.SiteMapDataSource> controle não oferece suporte a expressões de classificação ou insert, delete ou operações de atualização.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapHierarchicalDataSourceView (System.Web.SiteMapNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SiteMapNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.#ctor(System.Web.SiteMapNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.SiteMapNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Um <see cref="T:System.Web.SiteMapNode" /> que representa o modo de exibição de fonte de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView" /> classe, adicionar o nó especificado para o <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> coleção que mantém a exibição da fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView> classe mantém interno <xref:System.Web.SiteMapNodeCollection> coleção de nós. Quando o <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.%23ctor%2A> construtor é usado, o nó especificado for adicionado à coleção. Uma chamada para o <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.Select%2A> método retornará a esta coleção de um elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SiteMapHierarchicalDataSourceView (System.Web.SiteMapNodeCollection collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.SiteMapNodeCollection collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.#ctor(System.Web.SiteMapNodeCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Web.SiteMapNodeCollection" />
+      </Parameters>
+      <Docs>
+        <param name="collection">Um <see cref="T:System.Web.SiteMapNodeCollection" /> que representa o modo de exibição de fonte de dados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView" /> classe, definindo o conjunto especificado como o <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> coleção que mantém a exibição da fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView> classe mantém interno <xref:System.Web.SiteMapNodeCollection> coleção de nós. Quando o <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.%23ctor%2A> construtor é usado, o conjunto especificado torna-se a uma exibição da fonte de dados mantém.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.IHierarchicalEnumerable Select ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.IHierarchicalEnumerable Select() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.Select" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IHierarchicalEnumerable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a coleção do <see cref="T:System.Web.SiteMapNode" /> objetos que representa a estrutura de navegação do site para o usuário atual.</summary>
+        <returns>Um <see cref="T:System.Web.UI.IHierarchicalEnumerable" /> coleção de nós de mapa de site.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.SiteMapHierarchicalDataSourceView.Select%2A> método retorna um <xref:System.Web.UI.IHierarchicalEnumerable> coleção de nós. Você pode chamar o <xref:System.String.System%23Collections%23IEnumerable%23GetEnumerator%2A> método para obter um <xref:System.Collections.IEnumerator> de objeto e iterar por meio desta coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

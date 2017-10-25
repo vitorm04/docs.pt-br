@@ -1,0 +1,194 @@
+<Type Name="LifetimeServices" FullName="System.Runtime.Remoting.Lifetime.LifetimeServices">
+  <TypeSignature Language="C#" Value="public sealed class LifetimeServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LifetimeServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Lifetime.LifetimeServices" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla os serviços de tempo de vida de comunicação remota do .NET.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Coleta de lixo distribuído é responsável para controlar os tempos de vida de aplicativos de servidor e excluí-los quando seus tempos de vida expiraram. Tradicionalmente, a coleta de lixo distribuída usa contagens de referência e executar o ping para o controle. Isso funciona bem quando há alguns clientes por objeto, mas não funciona bem quando há milhares de clientes por cada objeto. O serviço de tempo de vida pode assumir a função de um coletor de lixo distribuído tradicional e escalas bem quando o número de clientes aumenta.  
+  
+ O serviço de tempo de vida associa uma concessão de cada objeto ativado remotamente. Quando a concessão expirar, o objeto é removido.  
+  
+> [!NOTE]
+>  Essa classe faz uma demanda de link. Um SecurityException é gerada se o chamador imediato não tem permissão de infraestrutura. Consulte [demandas de Link](~/docs/framework/misc/link-demands.md) para obter mais informações.  
+  
+   
+  
+## Examples  
+ [!code-cpp[System.Runtime.Remoting.Lifetime#2](~/samples/snippets/cpp/VS_Snippets_Remoting/System.Runtime.Remoting.Lifetime/CPP/server.cpp#2)]
+ [!code-csharp[System.Runtime.Remoting.Lifetime#2](~/samples/snippets/csharp/VS_Snippets_Remoting/System.Runtime.Remoting.Lifetime/CS/server.cs#2)]
+ [!code-vb[System.Runtime.Remoting.Lifetime#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/System.Runtime.Remoting.Lifetime/VB/server.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LifetimeServices ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Lifetime.LifetimeServices.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Call the static methods directly on this type instead", true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.Lifetime.LifetimeServices" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaseManagerPollTime">
+      <MemberSignature Language="C#" Value="public static TimeSpan LeaseManagerPollTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan LeaseManagerPollTime" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.LifetimeServices.LeaseManagerPollTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo entre cada ativação do gerenciador de concessão para limpar as concessões expiradas.</summary>
+        <value>O tempo padrão em que o gerenciador de concessão é suspenso após a verificação em busca de concessões expiradas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade atual define a frequência na qual o Gerenciador de concessão se torna ativo para limpar as concessões expiradas. Por exemplo, se <xref:System.Runtime.Remoting.Lifetime.LifetimeServices.LeaseManagerPollTime%2A> for definido como 100 segundos, a lista de concessão é inspecionada para limpezas e renovações cada 100 segundos.  
+  
+ O valor padrão de <xref:System.Runtime.Remoting.Lifetime.LifetimeServices.LeaseManagerPollTime%2A> propriedade é 10 segundos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota. Essa exceção é gerada apenas ao definir o valor da propriedade.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="LeaseTime">
+      <MemberSignature Language="C#" Value="public static TimeSpan LeaseTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan LeaseTime" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.LifetimeServices.LeaseTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo de concessão inicial para uma <see cref="T:System.AppDomain" />.</summary>
+        <value>A concessão inicial <see cref="T:System.TimeSpan" /> para objetos que podem ter concessões a <see cref="T:System.AppDomain" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O período de tempo de concessão padrão é 5 minutos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota. Essa exceção é gerada apenas ao definir o valor da propriedade.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RenewOnCallTime">
+      <MemberSignature Language="C#" Value="public static TimeSpan RenewOnCallTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan RenewOnCallTime" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.LifetimeServices.RenewOnCallTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo pelo qual a concessão é estendida toda vez que uma chamada é fornecido no objeto de servidor.</summary>
+        <value>O <see cref="T:System.TimeSpan" /> pelo qual um tempo de vida da concessão atual <see cref="T:System.AppDomain" /> é estendido após cada chamada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tempo de renovação padrão pelo qual uma concessão de tempo de vida é estendida é 2 minutos.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ILease_ILease#3](~/samples/snippets/cpp/VS_Snippets_Remoting/ILease_ILease/CPP/ilease_client.cpp#3)]
+ [!code-csharp[ILease_ILease#3](~/samples/snippets/csharp/VS_Snippets_Remoting/ILease_ILease/CS/ilease_client.cs#3)]
+ [!code-vb[ILease_ILease#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ILease_ILease/VB/ilease_client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota. Essa exceção é gerada apenas ao definir o valor da propriedade.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SponsorshipTimeout">
+      <MemberSignature Language="C#" Value="public static TimeSpan SponsorshipTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan SponsorshipTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Lifetime.LifetimeServices.SponsorshipTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo que o Gerenciador de concessão aguarda um patrocinador retornar com um tempo de renovação da concessão.</summary>
+        <value>O tempo limite de apoio inicial.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tempo padrão até que uma chamada para um patrocinador é atingiu o tempo limite é 2 minutos.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ILease_ILease#3](~/samples/snippets/cpp/VS_Snippets_Remoting/ILease_ILease/CPP/ilease_client.cpp#3)]
+ [!code-csharp[ILease_ILease#3](~/samples/snippets/csharp/VS_Snippets_Remoting/ILease_ILease/CS/ilease_client.cs#3)]
+ [!code-vb[ILease_ILease#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ILease_ILease/VB/ilease_client.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota. Essa exceção é gerada apenas ao definir o valor da propriedade.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

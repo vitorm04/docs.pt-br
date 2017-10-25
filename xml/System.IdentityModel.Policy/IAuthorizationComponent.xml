@@ -1,0 +1,48 @@
+<Type Name="IAuthorizationComponent" FullName="System.IdentityModel.Policy.IAuthorizationComponent">
+  <TypeSignature Language="C#" Value="public interface IAuthorizationComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAuthorizationComponent" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Policy.IAuthorizationComponent" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um componente que é usado para autorizar usuários.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Políticas de autorização e contextos de autorização, que implementam o <xref:System.IdentityModel.Policy.IAuthorizationPolicy> de interface e derivam o <xref:System.IdentityModel.Policy.AuthorizationContext> classe, respectivamente, implementar a <xref:System.IdentityModel.Policy.IAuthorizationComponent> interface. O <xref:System.IdentityModel.Policy.IAuthorizationComponent> interface define um identificador exclusivo para componentes de autorização com o <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> propriedade, que geralmente é usada para fazer a auditoria.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.IAuthorizationComponent.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que identifica este componente de autorização.</summary>
+        <value>Uma cadeia de caracteres que identifica este componente de autorização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> propriedade deve ser exclusiva para todos os objetos no modelo de identidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

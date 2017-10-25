@@ -1,0 +1,98 @@
+<Type Name="ManifestKinds" FullName="System.Security.ManifestKinds">
+  <TypeSignature Language="C#" Value="public enum ManifestKinds" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ManifestKinds extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.ManifestKinds" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o tipo de manifesto que as informações de assinatura se aplica ao.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração tem duas finalidades:  
+  
+-   No <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> método, especifica quais manifestos que você deseja gerar informações de assinatura de.  
+  
+-   Em um <xref:System.Security.Cryptography.ManifestSignatureInformation> objeto, ele mostra que as informações de assinatura são geradas a partir de manifesto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="Application" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.ManifestKinds Application = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.ManifestKinds.Application" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.ManifestKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O manifesto é para um aplicativo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationAndDeployment">
+      <MemberSignature Language="C#" Value="ApplicationAndDeployment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.ManifestKinds ApplicationAndDeployment = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.ManifestKinds.ApplicationAndDeployment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.ManifestKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O manifesto é para a implantação e aplicativo. O é o valor padrão para verificar assinaturas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Deployment">
+      <MemberSignature Language="C#" Value="Deployment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.ManifestKinds Deployment = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.ManifestKinds.Deployment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.ManifestKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O manifesto é apenas para implantação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.ManifestKinds None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.ManifestKinds.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.ManifestKinds</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O manifesto é de nenhum tipo específico.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

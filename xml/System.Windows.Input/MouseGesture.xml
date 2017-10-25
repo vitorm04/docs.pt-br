@@ -1,0 +1,245 @@
+<Type Name="MouseGesture" FullName="System.Windows.Input.MouseGesture">
+  <TypeSignature Language="C#" Value="public class MouseGesture : System.Windows.Input.InputGesture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MouseGesture extends System.Windows.Input.InputGesture" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseGesture" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputGesture</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Input.MouseGestureConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Input.MouseGestureValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um gesto de entrada de mouse que pode ser usado para invocar um comando.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de um <xref:System.Windows.Input.KeyGesture>, um <xref:System.Windows.Input.MouseAction> não precisa ser emparelhado com <xref:System.Windows.Input.ModifierKeys> para ser um válido <xref:System.Windows.Input.MouseGesture>.  
+  
+ Um <xref:System.Windows.Input.MouseGesture> pode ser associado a um <xref:System.Windows.Input.RoutedCommand> (ou outros <xref:System.Windows.Input.ICommand> implementações) por meio de um <xref:System.Windows.Input.MouseBinding> para que o comando é invocado quando o <xref:System.Windows.Input.MouseGesture> ocorre.  
+  
+ Para <xref:System.Windows.Input.MouseGesture> [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] usos de atributo, que geralmente é definida na propriedade [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] é <xref:System.Windows.Input.MouseBinding.Gesture%2A>, em casos onde o gesto pode representar uma ação do mouse e tecla modificadora de um ou mais. Você também pode definir o <xref:System.Windows.Input.MouseBinding.Gesture%2A> propriedade para uma ação de mouse. Em geral, é recomendável que você use somente o <xref:System.Windows.Input.KeyBinding.Gesture%2A> de atributo de [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)], em vez de configuração <xref:System.Windows.Input.MouseBinding.MouseAction%2A>, mesmo se você não especificar modificadores. Isso pode evitar a ambiguidade, fornece a sintaxe mais simplificada e fornece a representação mais simples para serialização.  
+  
+ <xref:System.Windows.Input.MouseGesture>[!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] usos de elemento de objeto são possíveis, mas raro, como normalmente é possível definir o <xref:System.Windows.Input.MouseBinding.Gesture%2A> propriedade <xref:System.Windows.Input.MouseBinding> embutido sem o uso da sintaxe de elemento de propriedade.  
+  
+<a name="xamlAttributeUsage_MouseGesture"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="mouseAction"/>  
+- or -  
+<object property="oneOrMoreModifierKeys+mouseAction"/>  
+```  
+  
+<a name="xamlValues_MouseGesture"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `mouseAction`  
+ <xref:System.Windows.Input.MouseAction>  
+  
+ Uma ação do mouse.  
+  
+ `oneOrMoreModifierKeys`  
+ Um ou mais teclas modificadoras, definidas pelo <xref:System.Windows.Input.ModifierKeys> enumeração. Se mais de uma chave de modificador for fornecida, cada tecla modificadora é delimitada com um caractere "+".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra para criar um <xref:System.Windows.Input.MouseGesture> e associá-la a um <xref:System.Windows.Input.RoutedCommand> por meio de um <xref:System.Windows.Input.MouseBinding>.  Quando a roda do mouse é clicada durante o <xref:System.Windows.Input.ModifierKeys.Control> tecla é pressionada, o <xref:System.Windows.Input.ApplicationCommands.Open%2A> é invocado.  
+  
+ [!code-xaml[commandlibrarysnippets#MouseBindingMouseGestureXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml#mousebindingmousegesturexaml)]  
+  
+ [!code-csharp[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#mousebindingaddedtoinputbinding)]
+ [!code-vb[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#mousebindingaddedtoinputbinding)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseGesture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGesture.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.MouseGesture" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseGesture (System.Windows.Input.MouseAction mouseAction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.MouseAction mouseAction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGesture.#ctor(System.Windows.Input.MouseAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouseAction" Type="System.Windows.Input.MouseAction" />
+      </Parameters>
+      <Docs>
+        <param name="mouseAction">A ação associada a esse gesto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.MouseGesture" /> usando o <see cref="T:System.Windows.Input.MouseAction" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="mouseAction" /> não é um valor <see cref="T:System.Windows.Input.MouseAction" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MouseGesture (System.Windows.Input.MouseAction mouseAction, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.MouseAction mouseAction, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGesture.#ctor(System.Windows.Input.MouseAction,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mouseAction" Type="System.Windows.Input.MouseAction" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="mouseAction">A ação associada a esse gesto.</param>
+        <param name="modifiers">Os modificadores associados a esse gesto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.MouseGesture" /> classe usando especificado <see cref="T:System.Windows.Input.MouseAction" /> e <see cref="T:System.Windows.Input.ModifierKeys" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="mouseAction" />não é válido <see cref="T:System.Windows.Input.MouseAction" /> valor  
+  
+ -ou-  
+  
+ <paramref name="modifiers" /> não é um valor <see cref="T:System.Windows.Input.ModifierKeys" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (object targetElement, System.Windows.Input.InputEventArgs inputEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(object targetElement, class System.Windows.Input.InputEventArgs inputEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.MouseGesture.Matches(System.Object,System.Windows.Input.InputEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetElement" Type="System.Object" />
+        <Parameter Name="inputEventArgs" Type="System.Windows.Input.InputEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="targetElement">O destino.</param>
+        <param name="inputEventArgs">Os dados de evento de entrada a ser comparado com esse gesto.</param>
+        <summary>Determina se <see cref="T:System.Windows.Input.MouseGesture" /> corresponde à entrada associada especificado <see cref="T:System.Windows.Input.InputEventArgs" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se os dados de evento correspondem a isso <see cref="T:System.Windows.Input.MouseGesture" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como testar se um <xref:System.Windows.Input.MouseGesture> corresponde a entrada associada a uma instância de um <xref:System.Windows.Input.InputEventArgs>. Um <xref:System.Windows.UIElement.MouseDown> manipulador de eventos compara os dados de evento com o <xref:System.Windows.Input.MouseGesture> usando o <xref:System.Windows.Input.MouseGesture.Matches%2A> método.  
+  
+ [!code-csharp[commandlibrarysnippets#KeyDownHandlerMouseGestureMatches](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#keydownhandlermousegesturematches)]
+ [!code-vb[commandlibrarysnippets#KeyDownHandlerMouseGestureMatches](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#keydownhandlermousegesturematches)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiers">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ModifierKeys Modifiers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.ModifierKeys Modifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseGesture.Modifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as teclas modificadoras associadas a esta <see cref="T:System.Windows.Input.MouseGesture" />.</summary>
+        <value>As teclas modificadoras associadas a esse gesto. O valor padrão é <see cref="F:System.Windows.Input.ModifierKeys.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de um <xref:System.Windows.Input.KeyGesture>, um <xref:System.Windows.Input.MouseAction> não precisa ser emparelhado com <xref:System.Windows.Input.ModifierKeys> para ser um válido <xref:System.Windows.Input.MouseGesture>.  
+  
+ <xref:System.Windows.Input.ModifierKeys>é um pouco a enumeração do campo, portanto, é possível que várias teclas modificadoras seja pressionado ao mesmo tempo. Use as operações de bits para determinar o conjunto exato de teclas modificadoras pressionado.  
+  
+<a name="xamlAttributeUsage_Modifiers"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object Modifiers="oneOrMoreModifierKeys"/>  
+```  
+  
+<a name="xamlValues_Modifiers"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *oneOrMoreModifierKeys*  
+ Um ou mais teclas modificadoras, definidas pelo <xref:System.Windows.Input.ModifierKeys> enumeração, delimitada por um caractere "+".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra para criar um <xref:System.Windows.Input.MouseGesture> e associá-la a um <xref:System.Windows.Input.RoutedCommand> por meio de um <xref:System.Windows.Input.MouseBinding>.  
+  
+ [!code-csharp[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#mousebindingaddedtoinputbinding)]
+ [!code-vb[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#mousebindingaddedtoinputbinding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MouseAction">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.MouseAction MouseAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.MouseAction MouseAction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.MouseGesture.MouseAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.MouseAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Input.MouseAction" /> associado a esse gesto.</summary>
+        <value>A ação de mouse associada a esse gesto. O valor padrão é <see cref="F:System.Windows.Input.MouseAction.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de um <xref:System.Windows.Input.KeyGesture>, um <xref:System.Windows.Input.MouseAction> não precisa ser emparelhado com <xref:System.Windows.Input.ModifierKeys> para ser um válido <xref:System.Windows.Input.MouseGesture>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra para criar um <xref:System.Windows.Input.MouseGesture> e associá-la a um <xref:System.Windows.Input.RoutedCommand> por meio de um <xref:System.Windows.Input.MouseBinding>.  
+  
+ [!code-csharp[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#mousebindingaddedtoinputbinding)]
+ [!code-vb[commandlibrarysnippets#MouseBindingAddedToInputBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#mousebindingaddedtoinputbinding)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

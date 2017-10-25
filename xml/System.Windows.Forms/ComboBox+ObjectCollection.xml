@@ -1,0 +1,596 @@
+<Type Name="ComboBox+ObjectCollection" FullName="System.Windows.Forms.ComboBox+ObjectCollection">
+  <TypeSignature Language="C#" Value="public class ComboBox.ObjectCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit ComboBox/ObjectCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ComboBox.ObjectCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ListBindable(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a coleção de itens em um <see cref="T:System.Windows.Forms.ComboBox" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ComboBox.ObjectCollection?displayProperty=nameWithType> classe encapsula os itens a <xref:System.Windows.Forms.ComboBox>. A coleção de objetos de uma caixa de combinação pode ser usada para gerenciar vários tipos de objetos, inclusive cadeias de caracteres, imagens e objetos de negócios personalizada.  
+  
+ Você pode adicionar itens à coleção de várias maneiras. O <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> método adiciona um objeto à coleção. Para adicionar um número de objetos na coleção, é melhor criar uma matriz de itens e atribuir com o <xref:System.Windows.Forms.ComboBox.ObjectCollection.AddRange%2A> método. Para inserir um objeto em um local específico na coleção, você pode usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A> método. Para remover os itens em um índice conhecido na coleção, você pode usar tanto o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> método ou o <xref:System.Windows.Forms.ComboBox.ObjectCollection.RemoveAt%2A> método. O <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> método Remove todos os itens da coleção.  
+  
+ Além dos métodos e propriedades para adicionar e remover itens, o <xref:System.Windows.Forms.ComboBox.ObjectCollection?displayProperty=nameWithType> também fornece métodos para localizar itens dentro da coleção. O <xref:System.Windows.Forms.ComboBox.ObjectCollection.Contains%2A> método permite que você determine se um objeto é um membro da coleção. Quando você souber que o item está localizado dentro da coleção, você pode usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.IndexOf%2A> método para determinar onde o item está localizado dentro da coleção.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectCollection (System.Windows.Forms.ComboBox owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.ComboBox owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.#ctor(System.Windows.Forms.ComboBox)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Windows.Forms.ComboBox" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O <see cref="T:System.Windows.Forms.ComboBox" /> que possui essa coleção de objetos.</param>
+        <summary>Inicializa uma nova instância de <see cref="T:System.Windows.Forms.ComboBox.ObjectCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância dessa classe não pode ser criada sem associá-lo com um <xref:System.Windows.Forms.ComboBox> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um objeto que representa o item a ser adicionado à coleção.</param>
+        <summary>Adiciona um item à lista de itens para um <see cref="T:System.Windows.Forms.ComboBox" />.</summary>
+        <returns>O índice baseado em zero do item na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona um item à caixa de combinação. Se o <xref:System.Windows.Forms.ComboBox.Sorted%2A> propriedade o <xref:System.Windows.Forms.ComboBox> é definido como `true`, o item é inserido na lista em ordem alfabética. Caso contrário, o item é inserido no final da lista.  
+  
+ Uma representação visual do item é exibida na caixa de combinação. Essa representação de conteúdo é especificada pelo <xref:System.Windows.Forms.ListControl.DisplayMember%2A> propriedade. Se o <xref:System.Windows.Forms.ListControl.DisplayMember%2A> é de propriedade `null`, o item `ToString` método é chamado para obter a cadeia de caracteres que é exibido na caixa de combinação; caso contrário, a propriedade do objeto armazenado conforme especificado pelo <xref:System.Windows.Forms.ListControl.DisplayMember%2A> propriedade é exibida. A <xref:System.SystemException> ocorre se houver espaço suficiente disponível para armazenar o novo item. Para adicionar um conjunto de itens à caixa de combinação é melhor usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.AddRange%2A> método. Se você optar por usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> método para adicionar um número de itens à caixa de combinação, use o <xref:System.Windows.Forms.ComboBox.BeginUpdate%2A> método suspender redesenho durante a adicionar e <xref:System.Windows.Forms.ComboBox.EndUpdate%2A> método retomar redesenho. Você pode usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A> método para especificar o local na lista onde um item é adicionado. Quando um objeto é adicionado à coleção, o <xref:System.Windows.Forms.ComboBox> chama o objeto <xref:System.Object.ToString%2A> método para obter a cadeia de caracteres para exibir na lista.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="item" /> era <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public void AddRange (object[] items);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddRange(object[] items) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.AddRange(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="items" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="items">Uma matriz de objetos a serem adicionados à lista.</param>
+        <summary>Adiciona uma matriz de itens à lista de itens de um <see cref="T:System.Windows.Forms.ComboBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.ComboBox.Sorted%2A> propriedade o <xref:System.Windows.Forms.ComboBox> é definido como true, os itens são inseridos na lista em ordem alfabética. Caso contrário, os itens são inseridos na ordem em que ocorrem dentro da matriz. Esse método normalmente é passado para uma matriz de <xref:System.String> objetos, mas sim uma matriz de qualquer tipo de objeto pode ser passado para este método. Quando um objeto é adicionado à coleção, o método chama o objeto <xref:System.Object.ToString%2A> método para obter a cadeia de caracteres para exibir na lista. Ao usar esse método para adicionar itens à coleção, você não precisa chamar o <xref:System.Windows.Forms.ComboBox.BeginUpdate%2A> e <xref:System.Windows.Forms.ComboBox.EndUpdate%2A> métodos para otimizar o desempenho.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar um <xref:System.Windows.Forms.ComboBox> controle definindo a propriedade de texto e usando o <xref:System.Windows.Forms.ComboBox.ObjectCollection.AddRange%2A> para popular o <xref:System.Windows.Forms.ComboBox>. Ele também demonstra o tratamento de <xref:System.Windows.Forms.ComboBox.DropDown> eventos. Para executar o exemplo, cole o seguinte código em um formulário e a chamada a `InitializeComboBox` método de construtor do formulário ou `Load` método.  
+  
+ [!code-cpp[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ComboBoxDropDown#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxDropDown/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Um item no parâmetro <paramref name="items" /> era <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens do <see cref="T:System.Windows.Forms.ComboBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você remove itens da lista, todas as informações sobre os itens excluídos são perdidas. Para remover um único item do <xref:System.Windows.Forms.ComboBox>, use o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> ou <xref:System.Windows.Forms.ComboBox.ObjectCollection.RemoveAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto que representa o item a ser localizado na coleção.</param>
+        <summary>Determina se o item especificado está localizado na coleção.</summary>
+        <returns>
+          <see langword="true" /> se o item estiver localizado na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ComboBox.ObjectCollection.Contains%2A> método permite que você determine se um objeto é um membro da coleção. Quando você souber que o item está localizado dentro da coleção, você pode usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.IndexOf%2A> método para determinar onde o item está localizado dentro da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (object[] destination, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(object[] destination, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.CopyTo(System.Object[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Object[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">A matriz de objetos para a qual a coleção será copiada.</param>
+        <param name="arrayIndex">O local da matriz de destino para a qual a coleção é copiada.</param>
+        <summary>Copia toda a coleção em uma matriz existente de objetos em um local especificado na matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para combinar os itens de várias coleções em uma única matriz. Você pode usar essa matriz para popular o conteúdo de outra <xref:System.Windows.Forms.ComboBox> controlar usando o <xref:System.Windows.Forms.ComboBox.ObjectCollection.AddRange%2A> método do <xref:System.Windows.Forms.ComboBox.ObjectCollection> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComboBox.ObjectCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na coleção.</summary>
+        <value>Número de itens na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade permite que você determine o número de itens no <xref:System.Windows.Forms.ComboBox>. Você pode usar esse valor ao percorrer os valores da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para iterar na coleção de item.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa a coleção de itens.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto que representa o item a ser localizado na coleção.</param>
+        <summary>Recupera o índice dentro da coleção do item especificado.</summary>
+        <returns>O índice de base zero no qual o item está localizado na coleção; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ComboBox.ObjectCollection.IndexOf%2A> método permite que você determine onde um item está localizado dentro da coleção. Para determinar se um item está localizado dentro da coleção antes de chamar esse método, use o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Contains%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="value" /> era <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do índice de base zero no qual o item é inserido.</param>
+        <param name="item">Um objeto que representa o item a ser inserido.</param>
+        <summary>Insere um item na coleção no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.ComboBox.Sorted%2A> propriedade o <xref:System.Windows.Forms.ComboBox> for true, o `index` parâmetro é ignorado. Quando um objeto é adicionado à coleção, o <xref:System.Windows.Forms.ComboBox> chama o objeto <xref:System.Object.ToString%2A> método é para obter a cadeia de caracteres para exibir na lista.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="item" /> era <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> foi menor que zero.  
+  
+ -ou-  
+  
+ O <paramref name="index" /> era maior do que a contagem de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComboBox.ObjectCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta coleção pode ser modificada.</summary>
+        <value>Sempre <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual object this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComboBox.ObjectCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item na coleção a ser obtida.</param>
+        <summary>Recupera o item no índice especificado da coleção.</summary>
+        <value>Um objeto que representa o item localizado no índice especificado da coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para obter o item no local especificado na coleção. Você pode usar <xref:System.Windows.Forms.ComboBox.ObjectCollection.IndexOf%2A> encontrar o local de um item, ou você pode usar o índice de retorno do <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O índice era menor que zero.  
+  
+ -ou-  
+  
+ O <paramref name="index" /> era maior ou igual à contagem de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Object" /> para remover da lista.</param>
+        <summary>Remove o item especificado do <see cref="T:System.Windows.Forms.ComboBox" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nenhuma exceção é gerada se o item especificado não foi encontrado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item a ser removido.</param>
+        <summary>Remove um item do <see cref="T:System.Windows.Forms.ComboBox" /> no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar um <xref:System.Windows.Forms.ComboBox> controle definindo o <xref:System.Windows.Forms.ComboBox.MaxDropDownItems%2A> e <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> propriedades usando o <xref:System.Windows.Forms.ComboBox.FindStringExact%2A> métodos para pesquisar o <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.ComboBox.ObjectCollection.RemoveAt%2A> método para remover um item do <xref:System.Windows.Forms.ComboBox>. Ele também mostra o tratamento de <xref:System.Windows.Forms.ComboBox.SelectedIndexChanged> eventos.  
+  
+ [!code-cpp[System.Windows.Forms.ComboBoxFindString#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxFindString/CPP/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.ComboBoxFindString#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxFindString/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.ComboBoxFindString#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComboBoxFindString/VB/form1.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O parâmetro <paramref name="value" /> era menor que zero.  
+  
+ -ou-  
+  
+ O <paramref name="value" /> parâmetro era maior que ou igual à contagem de itens na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array destination, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array destination, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="destination">A matriz unidimensional que é o destino dos elementos copiados da coleção. A matriz deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.ComboBox.ObjectCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComboBox.ObjectCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.IsSynchronized" />.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.ComboBox.ObjectCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComboBox.ObjectCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.ICollection.SyncRoot" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Windows.Forms.ComboBox.ObjectCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.ComboBox.ObjectCollection> é convertida em uma interface de <xref:System.Collections.ICollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ComboBox.ObjectCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um objeto que representa o item a ser adicionado à coleção.</param>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.Collections.IList.Add(System.Object)" />.</summary>
+        <returns>O índice baseado em zero do item na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.ComboBox.ObjectCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ Este método adiciona um item à caixa de combinação. Se o <xref:System.Windows.Forms.ComboBox.Sorted%2A> propriedade o <xref:System.Windows.Forms.ComboBox> é definido como `true`, o item é inserido na lista em ordem alfabética. Caso contrário, o item é inserido no final da lista.  
+  
+ Uma representação visual do item é exibida na caixa de combinação. Essa representação de conteúdo é especificada pelo <xref:System.Windows.Forms.ListControl.DisplayMember%2A> propriedade. Se o <xref:System.Windows.Forms.ListControl.DisplayMember%2A> é de propriedade `null`, o item <xref:System.Object.ToString%2A> método é chamado para obter a cadeia de caracteres que é exibido na caixa de combinação; caso contrário, a propriedade do objeto armazenado conforme especificado pelo <xref:System.Windows.Forms.ListControl.DisplayMember%2A> propriedade é exibida. Para adicionar um conjunto de itens à caixa de combinação, é melhor usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.AddRange%2A> método. Se você optar por usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> método para adicionar um conjunto de itens à caixa de combinação, use o <xref:System.Windows.Forms.ComboBox.BeginUpdate%2A> método suspender redesenho durante a adicionar e <xref:System.Windows.Forms.ComboBox.EndUpdate%2A> método retomar redesenho. Você pode usar o <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A> método para especificar o local na lista onde um item é adicionado. Quando um objeto é adicionado à coleção, o <xref:System.Windows.Forms.ComboBox> chama o objeto <xref:System.Object.ToString%2A> método para obter a cadeia de caracteres para exibir na lista.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="item" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.SystemException">Não há espaço suficiente disponível para armazenar o novo item.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ComboBox.ObjectCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="P:System.Collections.IList.IsFixedSize" />.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Forms.ComboBox.ObjectCollection> é convertida em uma interface de <xref:System.Collections.IList>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

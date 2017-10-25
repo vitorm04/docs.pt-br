@@ -1,0 +1,417 @@
+<Type Name="TrustLevelCollection" FullName="System.Web.Configuration.TrustLevelCollection">
+  <TypeSignature Language="C#" Value="public sealed class TrustLevelCollection : System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TrustLevelCollection extends System.Configuration.ConfigurationElementCollection" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TrustLevelCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElementCollection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Configuration.ConfigurationCollection(typeof(System.Web.Configuration.TrustLevel), AddItemName="trustLevel", CollectionType=System.Configuration.ConfigurationElementCollectionType.BasicMap)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém uma coleção de objetos <see cref="T:System.Web.Configuration.TrustLevel" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Web.Configuration.TrustLevel>objetos são usados para mapear os níveis de segurança específicos para arquivos de política nomeada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.TrustLevelCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevelCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/CS/trustlevelcollection.cs#1)]
+ [!code-vb[System.Web.Configuration.TrustLevelCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/VB/trustlevelcollection.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustLevelCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.TrustLevelCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.Configuration.TrustLevel trustLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.Configuration.TrustLevel trustLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.Add(System.Web.Configuration.TrustLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trustLevel" Type="System.Web.Configuration.TrustLevel" />
+      </Parameters>
+      <Docs>
+        <param name="trustLevel">O <see cref="T:System.Web.Configuration.TrustLevel" /> a adicionar à coleção.</param>
+        <summary>Adiciona um objeto de <see cref="T:System.Web.Configuration.TrustLevel" /> à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.TrustLevelCollection.Add%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TrustLevelCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevelCollection#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/CS/trustlevelcollection.cs#2)]
+ [!code-vb[System.Web.Configuration.TrustLevelCollection#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/VB/trustlevelcollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os <see cref="T:System.Web.Configuration.TrustLevel" /> objetos da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Web.Configuration.TrustLevelCollection> entradas existem na coleção de nó local, todas as entradas são excluídas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollectionType">
+      <MemberSignature Language="C#" Value="public override System.Configuration.ConfigurationElementCollectionType CollectionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.ConfigurationElementCollectionType CollectionType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevelCollection.CollectionType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementCollectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de <see cref="T:System.Web.Configuration.TrustLevelCollection" /> objeto.</summary>
+        <value>Um valor da <see cref="T:System.Configuration.ConfigurationElementCollectionType" /> enumeração que representa o tipo da coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewElement">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElement CreateNewElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Configuration.ConfigurationElement CreateNewElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.CreateNewElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementName">
+      <MemberSignature Language="C#" Value="protected override string ElementName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevelCollection.ElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TrustLevel Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.TrustLevel Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TrustLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.Configuration.TrustLevelCollection" />.</param>
+        <summary>Obtém o objeto <see cref="T:System.Web.Configuration.TrustLevel" /> no índice especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.TrustLevel" /> no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.TrustLevelCollection.Get%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TrustLevelCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevelCollection#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/CS/trustlevelcollection.cs#4)]
+ [!code-vb[System.Web.Configuration.TrustLevelCollection#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/VB/trustlevelcollection.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetElementKey">
+      <MemberSignature Language="C#" Value="protected override object GetElementKey (System.Configuration.ConfigurationElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object GetElementKey(class System.Configuration.ConfigurationElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.GetElementKey(System.Configuration.ConfigurationElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Configuration.ConfigurationElement" />
+      </Parameters>
+      <Docs>
+        <param name="element">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsElementName">
+      <MemberSignature Language="C#" Value="protected override bool IsElementName (string elementname);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsElementName(string elementname) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.IsElementName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="elementname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="elementname">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TrustLevel this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.TrustLevel Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevelCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TrustLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice numérico da <see cref="T:System.Web.Configuration.TrustLevel" />.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.TrustLevel" /> item no índice especificado dentro de <see cref="T:System.Web.Configuration.TrustLevelCollection" /> objeto.</summary>
+        <value>Um <see cref="T:System.Web.Configuration.TrustLevel" /> no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um <xref:System.Web.Configuration.TrustLevel> objeto existe no índice especificado, o <xref:System.Web.Configuration.TrustLevel> será removido e um novo é adicionado. Se nenhum <xref:System.Web.Configuration.TrustLevel> objeto existe no índice, um novo é adicionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.TrustLevel this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.TrustLevel Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevelCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.TrustLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O índice do <see cref="T:System.Web.Configuration.TrustLevel" />.</param>
+        <summary>Obtém o objeto <see cref="T:System.Web.Configuration.TrustLevel" /> no índice especificado.</summary>
+        <value>Um <see cref="T:System.Web.Configuration.TrustLevel" /> que existe no índice especificado do <see cref="T:System.Web.Configuration.TrustLevelCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.Configuration.TrustLevel> deve existir no índice especificado dentro do objeto de <xref:System.Web.Configuration.TrustLevelCollection> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevelCollection.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.Configuration.TrustLevel trustLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.Configuration.TrustLevel trustLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.Remove(System.Web.Configuration.TrustLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trustLevel" Type="System.Web.Configuration.TrustLevel" />
+      </Parameters>
+      <Docs>
+        <param name="trustLevel">O <see cref="T:System.Web.Configuration.TrustLevel" /> a ser removido de <see cref="T:System.Web.Configuration.TrustLevelCollection" />.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.TrustLevel" /> de objeto o <see cref="T:System.Web.Configuration.TrustLevelCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Web.Configuration.TrustLevel> objeto não existe na coleção de nó local, nenhum erro será gerado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do índice de <see cref="T:System.Web.Configuration.TrustLevel" /> para remover do <see cref="T:System.Web.Configuration.TrustLevelCollection" />.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.TrustLevel" /> objeto no local do índice especificado do <see cref="T:System.Web.Configuration.TrustLevelCollection" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (int index, System.Web.Configuration.TrustLevel trustLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(int32 index, class System.Web.Configuration.TrustLevel trustLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TrustLevelCollection.Set(System.Int32,System.Web.Configuration.TrustLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="trustLevel" Type="System.Web.Configuration.TrustLevel" />
+      </Parameters>
+      <Docs>
+        <param name="index">A posição do índice de <see cref="T:System.Web.Configuration.TrustLevel" /> a ser definido dentro de <see cref="T:System.Web.Configuration.TrustLevelCollection" />.</param>
+        <param name="trustLevel">O <see cref="T:System.Web.Configuration.TrustLevel" /> a ser definido dentro de <see cref="T:System.Web.Configuration.TrustLevelCollection" />.</param>
+        <summary>Adiciona o <see cref="T:System.Web.Configuration.TrustLevel" /> o objeto para o <see cref="T:System.Web.Configuration.TrustLevelCollection" /> objeto no índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.Configuration.TrustLevelCollection.Set%2A> método. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.TrustLevelCollection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.TrustLevelCollection#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/CS/trustlevelcollection.cs#3)]
+ [!code-vb[System.Web.Configuration.TrustLevelCollection#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.TrustLevelCollection/VB/trustlevelcollection.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowOnDuplicate">
+      <MemberSignature Language="C#" Value="protected override bool ThrowOnDuplicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowOnDuplicate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TrustLevelCollection.ThrowOnDuplicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

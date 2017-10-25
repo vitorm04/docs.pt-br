@@ -1,0 +1,127 @@
+<Type Name="HttpBinding" FullName="System.Web.Services.Description.HttpBinding">
+  <TypeSignature Language="C#" Value="public sealed class HttpBinding : System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HttpBinding extends System.Web.Services.Description.ServiceDescriptionFormatExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Description.HttpBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Services.Description.ServiceDescriptionFormatExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtension("binding", "http://schemas.xmlsoap.org/wsdl/http/", typeof(System.Web.Services.Description.Binding))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.Services.Configuration.XmlFormatExtensionPrefix("http", "http://schemas.xmlsoap.org/wsdl/http/")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um elemento de extensibilidade adicionado a um <see cref="T:System.Web.Services.Description.Binding" /> dentro de um serviço Web XML. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso dessa classe como um elemento de extensibilidade Especifica que informações a ser passado por HTTP. Para obter mais informações sobre a especificação dos protocolos para XML Web services, consulte [&#91;\< Topic://cpconbuildingaspnetwebservices > &#93; ](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c). Para obter mais informações sobre WSDL Web Services Description Language (), consulte a especificação em http://www.w3.org/TR/wsdl/.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um uso típico do `HttpBinding` classe.  
+  
+ [!code-cpp[WebServices_HttpBinding#1](~/samples/snippets/cpp/VS_Snippets_Remoting/WebServices_HttpBinding/CPP/httpbinding.cpp#1)]
+ [!code-csharp[WebServices_HttpBinding#1](~/samples/snippets/csharp/VS_Snippets_Remoting/WebServices_HttpBinding/CS/httpbinding.cs#1)]
+ [!code-vb[WebServices_HttpBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/WebServices_HttpBinding/VB/httpbinding.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Description.HttpBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Description.HttpBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Description.HttpBinding.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o URI do namespace XML que representa o transporte HTTP para uso com SOAP. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor do campo é "http://schemas.xmlsoap.org/wsdl/http/".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um uso típico de `Namespace` campo.  
+  
+ [!code-cpp[HttpBinding_HttpBinding#2](~/samples/snippets/cpp/VS_Snippets_Remoting/HttpBinding_HttpBinding/CPP/httpbinding_ctor.cpp#2)]
+ [!code-csharp[HttpBinding_HttpBinding#2](~/samples/snippets/csharp/VS_Snippets_Remoting/HttpBinding_HttpBinding/CS/httpbinding_ctor.cs#2)]
+ [!code-vb[HttpBinding_HttpBinding#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/HttpBinding_HttpBinding/VB/httpbinding_ctor.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public string Verb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Verb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Description.HttpBinding.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("verb")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a solicitação HTTP será feita usando o método "GET" ou "POST".</summary>
+        <value>Uma cadeia de caracteres que contém um dos dois valores possíveis, "GET" ou "POST". O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo a seguir cria um novo `HttpBinding` e define seu `Verb` propriedade.  
+  
+ WebServices_HttpBinding n º 2  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

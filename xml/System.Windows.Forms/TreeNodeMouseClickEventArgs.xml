@@ -1,0 +1,85 @@
+<Type Name="TreeNodeMouseClickEventArgs" FullName="System.Windows.Forms.TreeNodeMouseClickEventArgs">
+  <TypeSignature Language="C#" Value="public class TreeNodeMouseClickEventArgs : System.Windows.Forms.MouseEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeNodeMouseClickEventArgs extends System.Windows.Forms.MouseEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeNodeMouseClickEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.MouseEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Windows.Forms.TreeView.NodeMouseClick" /> e de <see cref="E:System.Windows.Forms.TreeView.NodeMouseDoubleClick" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.Windows.Forms.TreeView.NodeMouseDoubleClick> eventos e como usar o <xref:System.Windows.Forms.TreeNodeMouseClickEventArgs>. Para executar este exemplo, cole o código em um Windows Form que contém um <xref:System.Windows.Forms.TreeView> chamado `treeView1`. Popular `treeView1` com os nomes de arquivos localizados no `c:\` diretório do exemplo está em execução no sistema e associar o <xref:System.Windows.Forms.TreeView.NodeMouseDoubleClick> eventos de `treeView1` com o `treeView1_NodeMouseDoubleClick` método neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.TreeViewWhidbeyMembers#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/cpp/Form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.TreeViewWhidbeyMembers#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/CS/Form1.cs#5)]
+ [!code-vb[System.Windows.Forms.TreeViewWhidbeyMembers#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/VB/Form1.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNodeMouseClickEventArgs (System.Windows.Forms.TreeNode node, System.Windows.Forms.MouseButtons button, int clicks, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TreeNode node, valuetype System.Windows.Forms.MouseButtons button, int32 clicks, int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeMouseClickEventArgs.#ctor(System.Windows.Forms.TreeNode,System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+        <Parameter Name="button" Type="System.Windows.Forms.MouseButtons" />
+        <Parameter Name="clicks" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="node">O nó que foi clicado.</param>
+        <param name="button">Uma da <see cref="T:System.Windows.Forms.MouseButtons" /> membros.</param>
+        <param name="clicks">O número de cliques que ocorreu.</param>
+        <param name="x">A coordenada x onde ocorreu o clique.</param>
+        <param name="y">A coordenada y onde ocorreu o clique.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TreeNodeMouseClickEventArgs" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeMouseClickEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó que recebeu um clique.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi clicado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.Windows.Forms.TreeView.NodeMouseDoubleClick> eventos e como usar o <xref:System.Windows.Forms.TreeNodeMouseClickEventArgs>. Para executar este exemplo, cole o código em um Windows Form que contém um <xref:System.Windows.Forms.TreeView> chamado `treeView1`. Preencher o `treeView1` com os nomes de arquivos localizados no `c:\` diretório do exemplo está em execução no sistema e associar o <xref:System.Windows.Forms.TreeView.NodeMouseDoubleClick> eventos de `treeView1` com o `treeView1_NodeMouseDoubleClick` método neste exemplo.  
+  
+ [!code-cpp[System.Windows.Forms.TreeViewWhidbeyMembers#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/cpp/Form1.cpp#5)]
+ [!code-csharp[System.Windows.Forms.TreeViewWhidbeyMembers#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/CS/Form1.cs#5)]
+ [!code-vb[System.Windows.Forms.TreeViewWhidbeyMembers#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/VB/Form1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

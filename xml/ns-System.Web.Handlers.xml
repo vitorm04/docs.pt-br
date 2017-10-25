@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Handlers">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Handlers" /> namespace contém classes de manipulador HTTP que processam solicitações HTTP em um servidor Web.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

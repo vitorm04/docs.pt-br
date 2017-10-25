@@ -1,0 +1,2246 @@
+<Type Name="LinqDataSource" FullName="System.Web.UI.WebControls.LinqDataSource">
+  <TypeSignature Language="C#" Value="public class LinqDataSource : System.Web.UI.WebControls.ContextDataSource, System.Web.DynamicData.IDynamicDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LinqDataSource extends System.Web.UI.WebControls.ContextDataSource implements class System.Web.DynamicData.IDynamicDataSource, class System.Web.UI.IDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LinqDataSource" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ContextDataSource</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.DynamicData.IDynamicDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("Selecting")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("ContextTypeName")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LinqDataSourceDesigner, System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Web.UI.WebControls.LinqDataSource), "LinqDataSource.bmp")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ParseChildren(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.PersistChildren(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite o uso do LINQ (Consulta Integrada à Linguagem) em uma página da Web do ASP.NET por meio do texto de marcação para recuperar e modificar dados de um objeto de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Ordem das operações](#order_of_operations)  
+  
+-   [Ordenando dados](#ordering_data)  
+  
+-   [Agrupando Dados](#grouping_data)  
+  
+-   [Modificações de dados](#data_modifications)  
+  
+-   [Avaliando os valores em tempo de execução](#evaluating_value_at_run_time)  
+  
+-   [Trabalhando com procedimentos armazenados](#working_with_stored_procedures)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ Consulta integrada à linguagem (LINQ) é uma sintaxe de consulta que define um conjunto de operadores de consulta que permitem operações de passagem, filtrar e projeção ser expresso de forma declarativa em qualquer. Linguagem de programação baseado em rede. O objeto de dados pode ser uma coleção de dados na memória ou um objeto que representa dados de um banco de dados. Você pode recuperar ou modificar os dados sem precisar gravar comandos SQL para cada operação.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle permite que você use LINQ em uma página da Web do ASP.NET, definindo propriedades no texto de marcação. O <xref:System.Web.UI.WebControls.LinqDataSource> controle usa LINQ to SQL para gerar automaticamente os comandos de dados. Para obter mais informações sobre o LINQ to SQL, consulte [LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
+  
+ Quando você estiver recuperando dados de uma coleção de dados na memória, você define o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade à classe que contém a coleção de dados. Definir o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para a propriedade ou campo que retorna a coleção de dados. Por exemplo, você pode ter uma classe denominada `Person` que contém uma propriedade chamada `FavoriteCities` que retorna uma matriz de valores de cadeia de caracteres. Nesse caso, você define o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade `Person` e defina o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade `FavoriteCities`.  
+  
+ Ao consultar um banco de dados, primeiro crie classes de entidade que representam o banco de dados e suas tabelas. Você pode usar o [!INCLUDE[vs_ordesigner_long](~/includes/vs-ordesigner-long-md.md)] ou o utilitário SqlMetal.exe para gerar essas classes. Você definir o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade para a classe que representa o banco de dados e defina o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para a propriedade que representa a tabela de banco de dados.  
+  
+<a name="order_of_operations"></a>   
+## <a name="order-of-operations"></a>Ordem das operações  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle se aplica a operações de dados na seguinte ordem:  
+  
+1.  Onde (especificar quais dados registros de retorno).  
+  
+2.  Order By (classificação).  
+  
+3.  Group By (registros de dados de agregação que compartilham valores).  
+  
+4.  Grupos de ordem (dados agrupada de classificação).  
+  
+5.  Selecione (especificar quais campos ou propriedades a serem retornadas).  
+  
+6.  Classificação automática (registros de dados de classificação por uma propriedade que o usuário selecionou).  
+  
+7.  Página automático (recuperar um subconjunto de registros de dados que foram selecionados pelo usuário).  
+  
+ Você pode adicionar condições de <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade para filtrar os registros de dados que são retornados de uma consulta. Se o <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade não for definida, o <xref:System.Web.UI.WebControls.LinqDataSource> controle recupera todos os registros do objeto de dados.  
+  
+<a name="ordering_data"></a>   
+## <a name="ordering-data"></a>Ordenando dados  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade para especificar os nomes das propriedades dos dados retornados pelo qual classificar.  
+  
+> [!NOTE]
+>  Quando você usa o <xref:System.Web.UI.WebControls.LinqDataSource> controlar com [!INCLUDE[ss2k](~/includes/ss2k-md.md)] ou [!INCLUDE[ssEW](~/includes/ssew-md.md)] e <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> está definida como `true`, você deve fornecer um valor na <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade. Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> é de propriedade `true`. Se você atribuir um valor para o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade, você também deve incluir todas as colunas de identidade na lista de propriedades que é retornada na consulta.  
+  
+<a name="grouping_data"></a>   
+## <a name="grouping-data"></a>Agrupando dados  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade para especificar quais propriedades são usadas para consolidar os registros de dados que têm os mesmos valores. Quando você agrupar os dados, você pode incluir `Key` e `It`, que é criado dinamicamente propriedades, no <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. O `Key` propriedade refere-se aos valores de propriedade ou propriedades que foram usadas para agrupar os dados. Por exemplo, se você agrupar por uma propriedade chamada `Category`, o `Key` propriedade conterá todos os valores exclusivos de `Category` propriedade. O `It` propriedade se refere a uma coleção de registros individuais em um agrupamento de dados. Você pode repetir o `It` propriedade para recuperar os registros individuais que foram consolidados na operação de agrupamento. Por exemplo, se você agrupar por uma propriedade chamada `Category`, o `It` propriedade contém todos os registros individuais que compartilham um valor comum no `Category` propriedade.  
+  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade para especificar as propriedades a serem usadas para classificar os dados agrupados. Quando você agrupar os dados, o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade especifica como os registros individuais dentro dos dados agrupados são classificados.  
+  
+ Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSource> controle recupera valores para todas as propriedades de um objeto de dados. Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para especificar quais propriedades para retornar se você deseja trabalhar com um subconjunto de propriedades disponíveis. A operação Select é aplicada depois Where, Order By e Group By operações. Portanto, se você criar um nome de alias em uma cláusula Select, o alias não está disponível nas outras cláusulas.  
+  
+<a name="data_modifications"></a>   
+## <a name="data-modifications"></a>Modificações de dados  
+ Você pode especificar se as modificações de dados estão habilitadas usando o <xref:System.Web.UI.WebControls.LinqDataSource.EnableDelete%2A>, <xref:System.Web.UI.WebControls.LinqDataSource.EnableInsert%2A>, e <xref:System.Web.UI.WebControls.LinqDataSource.EnableUpdate%2A> propriedades. A interface do usuário para modificar dados de um <xref:System.Web.UI.WebControls.LinqDataSource> controle normalmente é fornecido por meio de um controle associado a dados, como um <xref:System.Web.UI.WebControls.DetailsView> controle. Além de configuração <xref:System.Web.UI.WebControls.LinqDataSource.EnableDelete%2A>, <xref:System.Web.UI.WebControls.LinqDataSource.EnableInsert%2A>, ou <xref:System.Web.UI.WebControls.LinqDataSource.EnableUpdate%2A> para `true`, as seguintes condições são necessárias para habilitar as modificações de dados automática:  
+  
+-   O <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade não pode ser atribuída um valor.  
+  
+-   O <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade não pode ser atribuída um valor.  
+  
+-   A classe que é atribuída para o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade deve ser derivado de <xref:System.Data.Linq.DataContext>.  
+  
+-   A propriedade que é atribuída para o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade deve ser derivado de <xref:System.Data.Linq.Table%601>.  
+  
+ Você pode restringir quais propriedades são exibidas em um controle associado a dados de duas maneiras. Você pode definir o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade a um subconjunto de propriedades, ou você pode definir os campos para um controle associado a dados adicionando <xref:System.Web.UI.WebControls.DataControlField> controles. No entanto, se você definir o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade, isso significa que a atualização automática, inserção e as operações de exclusão não podem ser habilitadas. Se você deseja habilitar as modificações de dados automática enquanto você trabalha com um subconjunto das propriedades disponíveis, não defina o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. Em vez disso, recuperar todas as propriedades do objeto de dados e gerenciar quais delas são exibidas usando o controle associado a dados. Quando você usa o <xref:System.Web.UI.WebControls.DetailsView> controle ou <xref:System.Web.UI.WebControls.GridView> controle, você também deve definir o <xref:System.Web.UI.WebControls.DetailsView.AutoGenerateRows%2A> ou <xref:System.Web.UI.WebControls.GridView.AutoGenerateColumns%2A> propriedades `false`. Isso impede que o controle associado a dados automaticamente, incluindo botões para editar e excluir os dados. Quaisquer valores que não são exibidos no controle associado a dados são armazenados no estado de exibição. Eles são passados inalterados para a fonte de dados quando a atualização de dados é executada.  
+  
+<a name="evaluating_value_at_run_time"></a>   
+## <a name="evaluating-values-at-run-time"></a>Avaliando os valores em tempo de execução  
+ Se você tem que avaliar valores em tempo de execução de classificação, filtragem, ou valores de agrupamento, você pode adicionar parâmetros para o <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A>, <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A>, <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters%2A>, ou <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleções.  
+  
+ Se você quiser especificar valores padrão, você pode adicionar parâmetros para o <xref:System.Web.UI.WebControls.LinqDataSource.InsertParameters%2A> coleção.  
+  
+ Se você quiser examinar ou modificar os valores antes da operação de dados é executada, você pode manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Deleting>, <xref:System.Web.UI.WebControls.LinqDataSource.Inserting>, <xref:System.Web.UI.WebControls.LinqDataSource.Selecting>, ou <xref:System.Web.UI.WebControls.LinqDataSource.Updating> eventos. Você também pode lidar com esses eventos para cancelar a operação de dados ou para examinar os erros de validação ocorreram ao definir as propriedades na classe de dados com base na entrada do usuário.  
+  
+ Para examinar os valores após a operação de dados, tratar o <xref:System.Web.UI.WebControls.LinqDataSource.Deleted>, <xref:System.Web.UI.WebControls.LinqDataSource.Inserted>, <xref:System.Web.UI.WebControls.LinqDataSource.Selected>, ou <xref:System.Web.UI.WebControls.LinqDataSource.Updated> eventos.  
+  
+<a name="working_with_stored_procedures"></a>   
+## <a name="working-with-stored-procedures"></a>Trabalhando com procedimentos armazenados  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource> controle para recuperar dados de um procedimento armazenado com a criação de um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. No evento manipulador, você chamar o método na classe de contexto de dados que representa o procedimento armazenado e definir o resultado para o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto. Se você quiser habilitar a atualização automática, inserção e operações de exclusão para os dados, o tipo retornado do método deve corresponder ao tipo especificado no <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade. Para obter mais informações sobre como criar métodos de contexto de dados, consulte [como: métodos DataContext criar mapeados para procedimentos armazenados e funções (Object Relational Designer)](http://msdn.microsoft.com/library/e7ca32f1-50b3-48af-ad92-ceafd749296a).  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:LinqDataSource  
+    AutoGenerateOrderByClause="True|False"  
+    AutoGenerateWhereClause="True|False"  
+    AutoPage="True|False"  
+    AutoSort="True|False"  
+    ContextTypeName="string"  
+    EnableDelete="True|False"  
+    EnableInsert="True|False"  
+    EnableTheming="True|False"  
+    EnableUpdate="True|False"  
+    EnableViewState="True|False"  
+    GroupBy="string"  
+    ID="string"  
+    OnContextCreated="ContextCreated event handler"  
+    OnContextCreating="ContextCreating event handler"  
+    OnContextDisposing="ContextDisposing event handler"  
+    OnDataBinding="DataBinding event handler"  
+    OnDeleted="Deleted event handler"  
+    OnDeleting="Deleting event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnInserted="Inserted event handler"  
+    OnInserting="Inserting event handler"  
+    OnLoad="Load event handler"  
+    OnPreRender="PreRender event handler"  
+    OnSelected="Selected event handler"  
+    OnSelecting="Selecting event handler"  
+    OnUnload="Unload event handler"  
+    OnUpdated="Updated event handler"  
+    OnUpdating="Updating event handler"  
+    OrderBy="string"  
+    runat="server"  
+    Select="string"  
+    SkinID="string"  
+    StoreOriginalValuesInViewState="True|False"  
+    TableName="string"  
+    Visible="True|False"  
+    Where="string"  
+>  
+        <GroupByParameters />  
+        <InsertParameters />  
+        <OrderByParameters />  
+        <SelectParameters />  
+        <WhereParameters />  
+</asp:LinqDataSource>  
+```  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controle que recupera dados de uma classe de entidade nomeada `Products`. A classe da entidade foi gerada usando o [!INCLUDE[vs_ordesigner_short](~/includes/vs-ordesigner-short-md.md)] ou o utilitário SqlMetal.exe. O <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade é definida para retornar somente os registros que têm um valor na `Price` propriedade maior do que 50. Um <xref:System.Web.UI.WebControls.GridView> controle está vinculado a <xref:System.Web.UI.WebControls.LinqDataSource> controle para exibir os dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default5.aspx#5)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default5.aspx#5)]  
+  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controle que permite aos usuários atualizar, excluir e inserir registros na fonte de dados. Um <xref:System.Web.UI.WebControls.DetailsView> controle está vinculado a <xref:System.Web.UI.WebControls.LinqDataSource> controlar e permite que os usuários vejam e modificar os dados. Observe que nenhum comando SQL é necessárias para selecionar, atualizar, excluir ou inserir os registros.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default2.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default2.aspx#2)]  
+  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento que define o objeto de dados com base em um valor na página da Web.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default3.aspx.cs#3)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/Default3.aspx.vb#3)]  
+  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controlar o que é configurado para o grupo por duas colunas. O `Key` propriedade faz referência a um objeto que tem duas propriedades, `ProductCategory` e `Color`. O objeto representado pelo `It` é renomeado (alias) para `Products`. Renomeadas `Products` objeto contém uma coleção dos registros individuais de um agrupamento. Contém todas as colunas de cada instância de `Products` tabela.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.GroupBy#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.GroupBy#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/vb/Default.aspx#1)]  
+  
+ O exemplo a seguir mostra duas <xref:System.Web.UI.WebControls.ListView> controles que exibem os dados a partir de <xref:System.Web.UI.WebControls.LinqDataSource> controle no exemplo anterior. Um <xref:System.Web.UI.WebControls.ListView> controle exibe os dados agrupados e o outro <xref:System.Web.UI.WebControls.ListView> controle exibe os nomes individuais de produtos que pertencem a esse grupo. O controle de associação de dados aninhado <xref:System.Web.UI.WebControls.BaseDataList.DataSource%2A> está definida como `Products`, que é o alias para o `It` objeto.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.GroupBy#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/cs/Default.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.GroupBy#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/vb/Default.aspx#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinqDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.LinqDataSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateOrderByClause">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateOrderByClause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateOrderByClause" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle cria dinamicamente uma cláusula Order By com base nos valores de <see cref="P:System.Web.UI.WebControls.LinqDataSource.OrderByParameters" /> coleção.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle cria a cláusula Order By; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> propriedade para `true`, o <xref:System.Web.UI.WebControls.LinqDataSource> controle cria dinamicamente uma cláusula Order By com base nos valores de <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção. O <xref:System.Web.UI.WebControls.LinqDataSource> controle classifica os dados pelo primeiro parâmetro e, em seguida, além disso, classifica os dados para cada parâmetro adicional. Parâmetros que contêm `null` ou um valor vazio não são incluídos na cláusula Order By.  
+  
+ Você não definir a <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade quando o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> é definido como `true`, porque o analisador cria dinamicamente a cláusula Order By. O <xref:System.Web.UI.WebControls.LinqDataSource> controle lança uma exceção se o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> é definido como `true` e <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> é atribuído a valores de propriedade.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controlar com o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> definido como `true`. Um parâmetro está incluído no <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção que classifica os dados com base na propriedade de nome que um usuário seleciona um <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default8.aspx#8)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default8.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoGenerateWhereClause">
+      <MemberSignature Language="C#" Value="public bool AutoGenerateWhereClause { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoGenerateWhereClause" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle cria dinamicamente um onde cláusula com base nos valores definidos no <see cref="P:System.Web.UI.WebControls.LinqDataSource.WhereParameters" /> coleção.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> criará onde cláusula; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> propriedade `true`, o <xref:System.Web.UI.WebControls.LinqDataSource> controle cria dinamicamente onde cláusula dos parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção. Cada parâmetro que você adicionar à <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção deve ter seu <xref:System.Web.UI.WebControls.Parameter.Name%2A> propriedade definida como um valor que corresponde a uma propriedade no objeto de dados que está sendo consultada. Gerado automaticamente onde cláusula verificará se o valor especificado no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção é igual ao valor da propriedade correspondente no objeto de dados. Se você fornecer mais de um parâmetro, os parâmetros são vinculados com uma lógica `AND` operação. Parâmetros que contêm `null` ou um valor vazio não são incluídos no Where cláusula.  
+  
+ Gerado automaticamente <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> cláusula pode testar apenas para fins de igualdade e pode vincular parâmetros apenas com o `AND` operação. Não defina o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> propriedade `true` se você precisa adicionar uma condição que não testar a igualdade ou se você tiver que relacionar os parâmetros com o `OR` operação. Você pode realizar essas tarefas, definindo o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> propriedade `false` e adicionar espaços reservados no <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade para cada parâmetro no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção. No <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade, preceda o nome de cada espaço reservado com o símbolo @.  
+  
+ Você não definir a <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade quando o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> é de propriedade `true`, porque o analisador cria dinamicamente onde cláusula. O <xref:System.Web.UI.WebControls.LinqDataSource> controle lança uma exceção se o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> é de propriedade `true` e <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> é atribuído a valores de propriedade.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controlar com o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> definido como `true`. Um <xref:System.Web.UI.WebControls.GridView> controle está vinculado a <xref:System.Web.UI.WebControls.LinqDataSource> controle para exibir os dados que são retornados da consulta. Um <xref:System.Web.UI.WebControls.DropDownList> controle está incluído que é preenchida com três valores. Um parâmetro está incluído no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção com o nome definido como `Category,` que corresponde a uma das propriedades do objeto de dados. Seu <xref:System.Web.UI.WebControls.ControlParameter.ControlID%2A> propriedade é definida como a ID do <xref:System.Web.UI.WebControls.DropDownList> controle. O <xref:System.Web.UI.WebControls.LinqDataSource> controle cria automaticamente o <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade para filtrar registros com base no valor que o usuário seleciona o <xref:System.Web.UI.WebControls.DropDownList> controle. A consulta retorna os registros cujo `Category` propriedade corresponde ao valor que o usuário selecionou a partir de <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default7.aspx#7)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default7.aspx#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPage">
+      <MemberSignature Language="C#" Value="public bool AutoPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoPage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle oferece suporte à navegação pelas seções de dados em tempo de execução.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode ler os dados; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> propriedade `true` para habilitar a paginação no <xref:System.Web.UI.WebControls.LinqDataSource> controle. Para habilitar o usuário para ver os dados, conecte-se um controle associado a dados que fornece a interface para a paginação para o <xref:System.Web.UI.WebControls.LinqDataSource> controle. Quando o <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> está definida como `true`, o <xref:System.Web.UI.WebControls.LinqDataSource> controle recupera somente registros suficientes para uma página no controle associado a dados. Ele usa o <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> métodos para recuperar os registros para a página atual.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controlar com o <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> propriedade definida como `true` e um <xref:System.Web.UI.WebControls.GridView> controle associado para o <xref:System.Web.UI.WebControls.LinqDataSource> controle. O <xref:System.Web.UI.WebControls.GridView.AllowPaging%2A> propriedade o <xref:System.Web.UI.WebControls.GridView> controle é definido como `true` para fornecer a interface que permite que a página de usuários por meio de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoSort">
+      <MemberSignature Language="C#" Value="public bool AutoSort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoSort" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.AutoSort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle oferece suporte a classificação dos dados em tempo de execução.</summary>
+        <value>
+          <see langword="true" />Se o usuário pode classificar os dados. Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle suporta duas abordagens para classificar os dados. Você pode usar o <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> propriedade para habilitar a classificação de tempo de execução, ou você pode definir o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade para definir a classificação em tempo de design.  
+  
+ Definir o <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> propriedade `true` para habilitar a classificação em um <xref:System.Web.UI.WebControls.LinqDataSource> controle baseado na expressão de classificação de um controle associado a dados. O controle de associação de dados fornece a interface para permitir que o usuário selecionar em tempo de execução cuja propriedade a ser usado para classificação.  
+  
+ Você pode definir a ordem na qual os dados são retornados, definindo o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade para a propriedade ou propriedades usadas para classificação. Quando o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade é definida como uma propriedade e o <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> é de propriedade `true`, a expressão de classificação do controle associado a dados é aplicada depois da expressão no <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade. Portanto, isso determina a classificação final dos dados.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controlar com o <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> propriedade definida como `true` e um <xref:System.Web.UI.WebControls.GridView> controle associado para o <xref:System.Web.UI.WebControls.LinqDataSource> controle. O <xref:System.Web.UI.WebControls.GridView.AllowSorting%2A> propriedade o <xref:System.Web.UI.WebControls.GridView> controle é definido como `true` para fornecer a interface que permite aos usuários classificar os dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; ContextCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; ContextCreated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.ContextCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre depois que uma instância do objeto de tipo de contexto é criada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreated> evento para examinar o objeto de tipo de contexto ou examine as exceções que são geradas quando o objeto está sendo criado. Recuperar o objeto de tipo de contexto da <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Result%2A> propriedade o <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto que está associado com esse evento. Recuperar a exceção foi gerada durante a operação de dados a partir de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade.  
+  
+ O objeto de tipo de contexto é criado durante a select, update, insert e operações de exclusão e é reutilizado em toda a solicitação.  
+  
+ Há uma vez quando o evento não será gerado. Isso é quando você define o <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Result%2A> propriedade para um objeto durante a <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> eventos. Uma condição adicional é que ambos os valores originais não precisam ser armazenadas em estado de exibição, ou o objeto de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Result%2A> propriedade implementa o <xref:System.Data.Linq.ITable> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextCreating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt; ContextCreating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt; ContextCreating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.ContextCreating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceContextEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de uma instância do objeto de tipo de contexto é criada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSource> controle cria uma instância do tipo especificado no <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade. O <xref:System.Web.UI.WebControls.LinqDataSource> controle chama o construtor padrão do objeto de contexto de dados para criar uma instância do objeto. É possível que você precisa usar um construtor não padrão, ou você precisa criar um objeto que é diferente do especificado no <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade. Nesse caso, você deve tratar o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> eventos e criar manualmente o objeto de contexto de dados.  
+  
+ O objeto de tipo de contexto é criado durante a selecionar, atualizar, inserir e excluir operações.  
+  
+ Há uma vez quando o evento não será gerado. Isso é quando você define o <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Result%2A> propriedade a um objeto em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. Uma condição adicional é que ambos os valores originais não precisam ser armazenadas em estado de exibição, ou o objeto de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Result%2A> propriedade implementa o <xref:System.Data.Linq.ITable> interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar o objeto de contexto de dados usando um construtor não padrão durante o <xref:System.Web.UI.WebControls.LinqDataSource.ContextCreating> evento. O código atribui o objeto para o <xref:System.Web.UI.WebControls.LinqDataSourceContextEventArgs.ObjectInstance%2A> propriedade.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.ContextCreating#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.ContextCreating/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.ContextCreating#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.ContextCreating/vb/Default.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextDisposing">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt; ContextDisposing;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt; ContextDisposing" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.ContextDisposing" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDisposeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de descartar o objeto de tipo de contexto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.ContextDisposing> evento para descartar o objeto manualmente, ou para executar limpeza que é específica para o objeto antes do objeto é destruído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextTypeName">
+      <MemberSignature Language="C#" Value="public override string ContextTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContextTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.ContextTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo que contém a propriedade cujo valor tem os dados que você deseja recuperar.</summary>
+        <value>O nome da classe da qual dados serão recuperados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você usa o <xref:System.Web.UI.WebControls.LinqDataSource> controlar para recuperar dados de uma coleção de dados na memória ou um banco de dados, você deve especificar duas propriedades. A primeira é uma classe de contexto de dados que representa a fonte de dados. O segundo é uma propriedade na classe de contexto de dados que contém os dados. Definir o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> definida para o nome da classe de contexto de dados e você o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para a coleta de dados que contém os dados.  
+  
+ Por exemplo, quando você recupera dados de um banco de dados, defina o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade para o nome da classe que representa o banco de dados. Defina também a <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para a propriedade que representa a tabela no banco de dados. Para gerar classes de banco de dados, use o [!INCLUDE[vs_ordesigner_short](~/includes/vs-ordesigner-short-md.md)] ou o utilitário SqlMetal.exe para gerar automaticamente as instâncias dessas classes.  
+  
+ Quando você recupera dados de uma coleção de dados na memória como uma matriz, defina o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade para o nome da classe que contém a propriedade de matriz. Em seguida, defina o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para a propriedade que obtém a matriz.  
+  
+ Para habilitar a atualização automática, inserir ou excluir operações por meio de <xref:System.Web.UI.WebControls.LinqDataSource> controlar, a classe atribuída para o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade deve derivar de <xref:System.Data.Linq.DataContext>. Além disso, a propriedade atribuída para o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade deve ser derivado de <xref:System.Data.Linq.Table%601>. Se você não precisa para habilitar a atualização automática, inserir ou excluir operações, você pode atribuir o nome de qualquer tipo de classe para o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade.  
+  
+ Para obter informações sobre como selecionar dados de uma instância de uma classe, consulte o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade a uma classe que contém uma matriz de cadeias de caracteres. Ele também mostra como definir a propriedade a uma classe (gerado pelo [!INCLUDE[vs_ordesigner_short](~/includes/vs-ordesigner-short-md.md)]) que representa um banco de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/cs/Default.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/vb/Default.aspx#2)]  
+  
+ A classe denominada `ExampleDataContext` que representa a tabela de banco de dados não é mostrada neste exemplo. Para esse exemplo funcione, você deve criar essa classe adicionando uma classe de LINQ To SQL Example.dbml nomeado e arrastando uma tabela denominada filme a [!INCLUDE[vs_ordesigner_short](~/includes/vs-ordesigner-short-md.md)]. Uma classe denominada `ExampleDataContext` com uma propriedade chamada `Movies` é gerado.  
+  
+ O exemplo a seguir mostra a classe denominada `MovieLibrary` que é referenciado no <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/cs/App_Code/MovieLibrary.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/vb/App_Code/MovieLibrary.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateQueryableView">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.WebControls.QueryableDataSourceView CreateQueryableView ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.WebControls.QueryableDataSourceView CreateQueryableView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.CreateQueryableView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.QueryableDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma exibição que podem ser consulta.</summary>
+        <returns>Uma exibição que podem ser consulta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateView">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.WebControls.LinqDataSourceView CreateView ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.WebControls.LinqDataSourceView CreateView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.CreateView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LinqDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.UI.WebControls.LinqDataSourceView" /> classe que está associado este controle.</summary>
+        <returns>Um objeto que atua como a interface para controles associados a dados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para fornecer uma exibição personalizada, você pode substituir esse método em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public int Delete (System.Collections.IDictionary keys, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Delete(class System.Collections.IDictionary keys, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.Delete(System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Os valores de chave da linha para os registros a serem excluídos.</param>
+        <param name="oldValues">Os valores de linha são avaliados para detectar conflitos de dados.</param>
+        <summary>Executa uma operação de exclusão.</summary>
+        <returns>O número de registros afetados pela operação de exclusão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não precisa chamar o <xref:System.Web.UI.WebControls.LinqDataSource.Delete%2A> método do seu código. Quando você usa um <xref:System.Web.UI.WebControls.LinqDataSource> controle com um controle associado a dados, o controle associado a dados automaticamente chamará o <xref:System.Web.UI.WebControls.LinqDataSource.Delete%2A> método quando o usuário executa a ação para excluir um registro. Chamar explicitamente o <xref:System.Web.UI.WebControls.LinqDataSource.Delete%2A> método quando você deseja criar seu próprio processo de exclusão de dados. Por exemplo, você pode chamar o <xref:System.Web.UI.WebControls.LinqDataSource.Delete%2A> método quando você deseja excluir o registro com base em um evento fora do controle de associação de dados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Deleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Deleted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Deleted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação de exclusão for concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Deleted> evento para capturar todas as exceções de operação de exclusão, ou para examinar os parâmetros de saída após a operação. Você pode recuperar os parâmetros de saída a <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto que é passado para manipuladores de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection DeleteParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection DeleteParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.DeleteParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta propriedade não é usada pelo <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> classe.</summary>
+        <value>Uma coleção de parâmetros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deleting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt; Deleting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt; Deleting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Deleting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de uma operação de exclusão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Deleting> evento para validar o objeto a ser excluído, examine os erros de validação de dados da classe de dados, para alterar um valor antes da operação de exclusão ou cancelar a operação de exclusão. O <xref:System.Web.UI.WebControls.LinqDataSource> controle passa um <xref:System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs> objeto para manipuladores de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Deleting> evento. O <xref:System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs> objeto contém os dados que serão excluídos e permite que você cancelar a operação de exclusão. Se os dados de classe lança um <xref:System.Web.UI.WebControls.LinqDataSourceValidationException> exceção, o <xref:System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs> objeto contém essa exceção no <xref:System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs.Exception%2A> propriedade.  
+  
+ Se uma exceção será lançada em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Deleting> evento, você deve tratar a exceção no manipulador de eventos. A exceção não será passada para um manipulador de eventos a <xref:System.Web.UI.WebControls.LinqDataSource.Deleted> eventos (por meio de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade do <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto). O <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade contém apenas as exceções que são lançadas após o <xref:System.Web.UI.WebControls.LinqDataSource.Deleting> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Deleting> evento. O código cancela a operação de exclusão com base em uma propriedade no <xref:System.Web.UI.WebControls.LinqDataSourceDeleteEventArgs.OriginalObject%2A> propriedade e um valor da página da Web. No exemplo, quando o `OnSale` está definida como `true`, o usuário deverá selecionar um <xref:System.Web.UI.WebControls.CheckBox> controle para confirmar que um registro deve ser excluído.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.Deleting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Deleting/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.Deleting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Deleting/vb/Default.aspx.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDelete">
+      <MemberSignature Language="C#" Value="public bool EnableDelete { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableDelete" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableDelete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os registros de dados podem ser excluídos por meio de <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle.</summary>
+        <value>
+          <see langword="true" />Se as operações de exclusão automática estiverem habilitadas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.WebControls.LinqDataSource.EnableDelete%2A> propriedade para `true` quando quiser permitir que os usuários excluir um registro de dados por meio de <xref:System.Web.UI.WebControls.LinqDataSource> controle. Quando <xref:System.Web.UI.WebControls.LinqDataSource.EnableDelete%2A> é `true`, o <xref:System.Web.UI.WebControls.LinqDataSource> controle usa LINQ to SQL para criar automaticamente o comando para excluir os dados. Você deve incluir uma interface que permite aos usuários selecionar um registro para excluir, como um <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle não dá suporte a operações de exclusão automática quando o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade ou o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> está definida. Nesse caso, o <xref:System.Web.UI.WebControls.LinqDataSource> controle lança uma exceção se uma operação de exclusão é tentada.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controle com <xref:System.Web.UI.WebControls.LinqDataSource.EnableDelete%2A> definido como `true`. Um <xref:System.Web.UI.WebControls.DetailsView> controle exibe os dados e cria um botão que permite aos usuários a excluir um registro de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default2.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default2.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableInsert">
+      <MemberSignature Language="C#" Value="public bool EnableInsert { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableInsert" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableInsert" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os registros de dados podem ser inseridos por meio de <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle.</summary>
+        <value>
+          <see langword="true" />Se as operações de inserção automática estiverem habilitadas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.WebControls.LinqDataSource.EnableInsert%2A> propriedade para `true` quando quiser permitir aos usuários inserir um novo registro de dados por meio de <xref:System.Web.UI.WebControls.LinqDataSource> controle. Quando <xref:System.Web.UI.WebControls.LinqDataSource.EnableInsert%2A> é `true`, o <xref:System.Web.UI.WebControls.LinqDataSource> controle usa LINQ to SQL para criar automaticamente o comando para inserir os dados. Você deve incluir uma interface que permite aos usuários inserir um novo registro, como um <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle não dá suporte a operações de inserção automática quando o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade ou o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> está definida. Nesse caso, o <xref:System.Web.UI.WebControls.LinqDataSource> controle lança uma exceção se uma operação de inserção é tentada.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controle com <xref:System.Web.UI.WebControls.LinqDataSource.EnableInsert%2A> definido como `true`. Um <xref:System.Web.UI.WebControls.DetailsView> controle exibe os dados e exibe um botão que alterna o controle para o modo em que os usuários podem criar e salvar um novo registro de inserção.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default2.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default2.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableObjectTracking">
+      <MemberSignature Language="C#" Value="public bool EnableObjectTracking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableObjectTracking" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableObjectTracking" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor que indica se as alterações para o objeto de contexto de dados são rastreadas.</summary>
+        <value>
+          <see langword="true" />Se o objeto de contexto de dados é controlado para as alterações; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSource.EnableObjectTracking%2A> propriedade só é usada ao selecionar dados de um objeto de contexto de dados LINQ To SQL.  
+  
+ Quando você estiver interagindo com dados somente leitura, definindo o <xref:System.Web.UI.WebControls.LinqDataSource.EnableObjectTracking%2A> propriedade `false` melhora o desempenho porque os dados não é armazenado em cache para determinar se ele foi alterado. No entanto, ele também desabilita a consulta deferida. Essa propriedade deve ser definida como `true` se você quiser usar a execução de consulta deferida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableUpdate">
+      <MemberSignature Language="C#" Value="public bool EnableUpdate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableUpdate" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.EnableUpdate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os registros de dados podem ser atualizados por meio de <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> controle.</summary>
+        <value>
+          <see langword="true" />Se as operações de atualização automática estiverem habilitadas; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.WebControls.LinqDataSource.EnableUpdate%2A> propriedade `true` quando quiser permitir que os usuários atualizar um registro de dados usando o <xref:System.Web.UI.WebControls.LinqDataSource> controle. Quando <xref:System.Web.UI.WebControls.LinqDataSource.EnableUpdate%2A> é `true`, o <xref:System.Web.UI.WebControls.LinqDataSource> controle usa LINQ to SQL para criar automaticamente o comando para atualizar os dados. Você deve incluir uma interface que permite aos usuários atualizar um registro, como um <xref:System.Web.UI.WebControls.DetailsView> controle.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle não dá suporte a operações de atualização automática quando a <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade ou o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> está definida. Nesse caso, o <xref:System.Web.UI.WebControls.LinqDataSource> controle lança uma exceção se uma operação de atualização é tentada.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controle com <xref:System.Web.UI.WebControls.LinqDataSource.EnableUpdate%2A> definido como `true`. Um <xref:System.Web.UI.WebControls.DetailsView> controle exibe os dados e cria um botão que permite aos usuários atualizar um registro de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default2.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default2.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupBy">
+      <MemberSignature Language="C#" Value="public string GroupBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.GroupBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica quais propriedades são usadas para agrupar os dados recuperados.</summary>
+        <value>Uma cadeia de caracteres que é usada para criar a cláusula Group By.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade para especificar quais propriedades são usadas para a consolidação de registros de dados que têm os mesmos valores. Por exemplo, se você definir o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade `Name`, todos os registros na consulta que têm o mesmo `Name` o valor da propriedade são retornados como um único registro consolidado.  
+  
+ Você pode atribuir mais de uma propriedade para o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade colocando todas as propriedades de `new` função e separando cada propriedade usando uma vírgula. Por exemplo, para agrupar por propriedades `Name` e, em seguida, `Category`, defina o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade `new(Name, Category)`.  
+  
+ Os valores que são usados para agrupamento na propriedade são retornados por meio de uma propriedade gerada chamada `Key`. Incluir o `Key` propriedade o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para recuperar os valores agrupados. Você pode definir o `Key` propriedade como um alias usando o `As` palavra-chave, mas você não precisa usar um alias. Por exemplo, você pode definir o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade uma propriedade chamada `Category`. Você pode recuperar os valores consolidados do `Category` propriedade definindo o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade `new(Key As ProductCategory)`.  
+  
+ Você pode acessar os registros individuais em um agrupamento, incluindo o `It` propriedade o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. O `It` propriedade contém uma coleção de registros que compartilham um valor na propriedade agrupado. Você pode repetir o `It` propriedade para recuperar os registros individuais.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade geralmente é usada com métodos de agregação. Você pode usar os seguintes métodos de agregação:  
+  
+-   `Count()`  
+  
+-   `Average(`*column*`)`  
+  
+-   `Sum(`*column*`)`  
+  
+-   `Max(`*column*`)`  
+  
+-   `Min(`*column*`)`  
+  
+-   `Where(`*condição*`)`  
+  
+-   `Any()`  
+  
+-   `All(`*condição*`)`  
+  
+ Para obter mais informações, consulte [NIB: Visão geral do controle de servidor Web LinqDataSource](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136) e [como: agrupar e agregar dados usando o controle LinqDataSource](http://msdn.microsoft.com/en-us/b922cf69-251f-4158-b405-ea960993a1af).  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controle que agrupa os dados retornados por uma propriedade chamada `Category`. Ele retorna os valores compartilhados e calcula o preço médio de registros agrupados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default3.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default3.aspx#3)]  
+  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controlar o que é configurado para o grupo por duas colunas. O `Key` propriedade faz referência a um objeto que tem duas propriedades, `ProductCategory` e `Color`. O objeto representado pelo `It` é renomeado `Products`. Renomeadas `Products` objeto contém uma coleção de registros individuais em um agrupamento, e cada instância contém todas as colunas da tabela produtos.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.GroupBy#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.GroupBy#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/vb/Default.aspx#1)]  
+  
+ O exemplo a seguir mostra duas <xref:System.Web.UI.WebControls.ListView> controles para exibir os dados a partir de <xref:System.Web.UI.WebControls.LinqDataSource> controle no exemplo anterior. Um <xref:System.Web.UI.WebControls.ListView> controle exibe os dados agrupados e o outro <xref:System.Web.UI.WebControls.ListView> controle exibe os nomes individuais de produtos que pertencem a esse grupo. O controle de associação de dados aninhado <xref:System.Web.UI.WebControls.BaseDataList.DataSource%2A> está definida como `Products`, que é o alias para o `It` objeto.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.GroupBy#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/cs/Default.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.GroupBy#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.GroupBy/vb/Default.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupByParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection GroupByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection GroupByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.GroupByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que são usados para criar a cláusula Group By.</summary>
+        <value>Os parâmetros que são usados para criar a cláusula Group By.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle usa parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> coleção para criar a cláusula Group By em tempo de execução. Normalmente você não usará o <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> coleção para agrupar dados. Em vez disso, você pode usar o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade. Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> coleta somente quando um valor na cláusula Group By deve ser definida em tempo de execução e esse valor não é um nome de propriedade. Por exemplo, use o <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> coleção para agrupar os dados com base em se o `LastName` propriedade nos registros de dados é igual a um valor fornecido pelo usuário.  
+  
+ Se você deseja agrupar dados por uma propriedade e essa propriedade não precisa ser definida em tempo de execução, você pode definir a propriedade de agrupamento de <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade. Por exemplo retornar valores de uma tabela de banco de dados agrupados por `LastName`, defina <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> como "Sobrenome" sem parâmetros. Se você deseja agrupar os dados dinamicamente por uma propriedade, crie um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> eventos e personalizar o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade conforme necessário.  
+  
+ Você não pode atribuir o nome de uma propriedade como o valor para um parâmetro de <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> coleção. Adicionar parâmetros a <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> coleção quando você deseja adicionar uma condição para a <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade deve ser definida em tempo de execução.  
+  
+ Para definir valores no <xref:System.Web.UI.WebControls.LinqDataSource.GroupByParameters%2A> coleção, atribua um nome para cada parâmetro e, em seguida, adicione um espaço reservado de <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade para que o parâmetro nomeado. Na cláusula Group By, preceda cada nome de parâmetro com o símbolo @.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public int Insert (System.Collections.IDictionary values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Insert(class System.Collections.IDictionary values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.Insert(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="values">Os valores de linha a ser inserido na fonte de dados.</param>
+        <summary>Executa uma operação de inserção.</summary>
+        <returns>O número de linhas afetadas pela operação de inserção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não precisa chamar o <xref:System.Web.UI.WebControls.LinqDataSource.Insert%2A> método do seu código. O controle de associação de dados automaticamente chamará o <xref:System.Web.UI.WebControls.LinqDataSource.Insert%2A> método quando o usuário executa a ação para inserir um novo registro. Chamar explicitamente o <xref:System.Web.UI.WebControls.LinqDataSource.Insert%2A> método quando você deseja criar seu próprio processo de inserção de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como inserir programaticamente um novo registro na fonte de dados depois que o usuário clica em um botão. O código passa um <xref:System.Collections.Specialized.ListDictionary> valores de objeto que contém o padrão para o <xref:System.Web.UI.WebControls.LinqDataSource.Insert%2A> método.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.Insert#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Insert/cs/Default2.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.Insert#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Insert/vb/Default2.aspx.vb#1)]  
+  
+ O exemplo a seguir mostra a marcação para o exemplo anterior.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.Insert#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Insert/cs/Default2.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.Insert#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Insert/vb/Default2.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Inserted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Inserted" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Inserted" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação de inserção tiver terminado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Inserted> evento para capturar todas as exceções de operação de inserção ou para examinar os valores após a operação de inserção. Você pode recuperar os novos valores por meio de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto que é passado para manipuladores de eventos. Por exemplo, você pode usar o <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto ao recuperar a propriedade de identidade gerada por um banco de dados para um novo registro de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Inserted> evento que verifica se há exceções e recupera a propriedade de identidade para o novo registro.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceStatusEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceStatusEventArgs/cs/Default.aspx#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceStatusEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceStatusEventArgs/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inserting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt; Inserting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt; Inserting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Inserting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceInsertEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de uma operação de inserção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> evento para validar o objeto a ser inserido, examine os erros de validação de dados da classe de dados, para alterar um valor antes da operação de inserção, ou para cancelar a operação de inserção. O <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs> objeto passado para manipuladores de eventos para este evento contém o novo objeto a ser inserido na fonte de dados.  
+  
+ Se ocorrer um erro de validação durante a operação de inserção, o <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs> objeto contém as exceções de validação que são geradas pela classe de dados. Um erro de validação ocorre se um valor a ser inserido não corresponde ao tipo da propriedade na classe de dados, ou se ele não passar em uma verificação de validação personalizada. Em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> eventos, você pode recuperar as exceções de validação e tomar as devidas providências.  
+  
+ Se uma exceção será lançada em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> evento, você deve tratar a exceção no manipulador de eventos. A exceção não será passada para um manipulador de eventos a <xref:System.Web.UI.WebControls.LinqDataSource.Inserted> eventos (por meio de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade do <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto). O <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade contém apenas as exceções que são lançadas após o <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> evento que modifica os dados antes da operação de inserção. O objeto a partir de <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs.NewObject%2A> propriedade é convertida em um tipo denominado `Product`. O `DateModified` propriedade o `Product` objeto é definido como a data e hora atuais.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.Inserting#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Inserting/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.Inserting#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Inserting/vb/Default.aspx.vb#1)]  
+  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Inserting> evento que recupera as exceções de validação.  
+  
+```vb  
+Protected Sub LinqDataSource_Inserting(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceInsertEventArgs)  
+    If (e.Exception IsNot Nothing) Then  
+        For Each innerException As KeyValuePair(Of String, Exception) _  
+               In e.Exception.InnerExceptions  
+            Label1.Text &= innerException.Key & ": " & _  
+                innerException.Value.Message & "<br />"  
+        Next  
+        e.ExceptionHandled = True  
+    End If  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Inserting(object sender,   
+        LinqDataSourceInsertEventArgs e)  
+{  
+    if (e.Exception != null)  
+    {  
+        foreach (KeyValuePair<string, Exception> innerException in   
+             e.Exception.InnerExceptions)  
+        {  
+        Label1.Text += innerException.Key + ": " +   
+            innerException.Value.Message + "<br />";  
+        }  
+        e.ExceptionHandled = true;  
+    }  
+}  
+```  
+  
+ O exemplo anterior recupera exceções de validação. Uma exceção pode ser gerada se um valor não corresponde ao tipo da propriedade. Ele também pode ser gerado de uma verificação personalizada, como mostrado no exemplo a seguir. O `OnAgeChanging` método verifica se o número para o `Age` propriedade não é negativa.  
+  
+```csharp  
+partial void  OnAgeChanging(int? value)  
+{  
+    if (value < 0)  
+    {  
+        throw new Exception("Age cannot be a negative number.");  
+    }  
+}  
+```  
+  
+```vb  
+Private Sub OnAgeChanging(ByVal value As System.Nullable(Of Integer))  
+    If (value < 0) Then  
+        Throw New Exception("Age cannot be a negative number.")  
+    End If  
+End Sub  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection InsertParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection InsertParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.InsertParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que são usados durante uma operação de inserção.</summary>
+        <value>Os parâmetros que são usados durante uma operação de inserção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, os valores que são necessários para uma operação de inserção são passados para o <xref:System.Web.UI.WebControls.LinqDataSource> controle pelo controle associado a dados. Especificar parâmetros de inserção quando você deseja fornecer um padrão de valor ou definem se deve converter valores vazios `null`. Você não precisa fornecer um parâmetro para cada valor que será inserido, apenas para os valores que devem ser tratados quando o usuário não fornecer um valor.  
+  
+ Os valores que você fornece o <xref:System.Web.UI.WebControls.LinqDataSource.InsertParameters%2A> coleção são usados somente para os campos que são definidos na fonte de dados, mas que não estão associados no controle de dados. Por exemplo, suponha que uma tabela de banco de dados tem colunas que são chamadas de nome, endereço e CEP, mas um <xref:System.Web.UI.WebControls.ListView> controle que está associado à tabela é vinculado somente para os campos nome e endereço. Os valores de <xref:System.Web.UI.WebControls.LinqDataSource.InsertParameters%2A> coleção será usada apenas para o campo PostalCode. Eles não serão usados para o campo de nome e endereço. Isso é verdadeiro mesmo se nenhum valor for inserido para esses campos. Se os campos de gere automaticamente o controle associado a dados para todos os campos de dados de origem, nenhum valor da <xref:System.Web.UI.WebControls.LinqDataSource.InsertParameters%2A> coleção será usada.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controle com um parâmetro que fornece um valor padrão no <xref:System.Web.UI.WebControls.LinqDataSource.InsertParameters%2A> coleção. Se o usuário não fornecer um valor para o `Category` propriedade, o valor padrão que é fornecido pelo parâmetro é salva no banco de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default9.aspx#9)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default9.aspx#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnInit">
+      <MemberSignature Language="C#" Value="protected override void OnInit (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnInit(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.OnInit(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Inicializa o objeto <see cref="T:System.Web.UI.WebControls.LinqDataSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnload">
+      <MemberSignature Language="C#" Value="protected override void OnUnload (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnUnload(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.OnUnload(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.Control.Unload" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderBy">
+      <MemberSignature Language="C#" Value="public string OrderBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrderBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica quais campos são usados para ordenar os dados recuperados.</summary>
+        <value>Uma cadeia de caracteres que é usada para criar a cláusula Order By.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade para especificar quais propriedades dos dados retornados a ser usado para classificação. A propriedade de classificação dos dados deve existir na fonte de dados original, mas ele não precisa ser incluído no <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. Você pode adicionar um espaço e `Ascending`, `ASC`, `Descending`, ou `DESC` a uma propriedade no <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> cadeia de caracteres para especificar como os dados ordenados são retornados.  
+  
+ Você pode fornecer mais de uma propriedade no <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade separando cada propriedade usando uma vírgula. Por exemplo, a ordem por propriedades chamadas `LastName` e `FirstName`, defina o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade como "Sobrenome, nome".  
+  
+> [!NOTE]
+>  Quando você usa o <xref:System.Web.UI.WebControls.LinqDataSource> controlar com [!INCLUDE[ss2k](~/includes/ss2k-md.md)] ou [!INCLUDE[ssEW](~/includes/ssew-md.md)] e <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> está definida como `true`, você deve fornecer um valor na <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade. Por padrão, o <xref:System.Web.UI.WebControls.LinqDataSource.AutoPage%2A> é de propriedade `true`. Se você atribuir um valor para o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade, você também deve incluir todas as colunas de identidade na lista de propriedades que é retornada na consulta.  
+  
+ Se o <xref:System.Web.UI.WebControls.LinqDataSource.AutoSort%2A> está definida como `true`, um controle associado a dados pode passar uma expressão de classificação para o <xref:System.Web.UI.WebControls.LinqDataSource> controle em tempo de execução. O <xref:System.Web.UI.WebControls.LinqDataSource> controle será aplicada a expressão de classificação do controle associado a dados depois de aplicar o <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade. Portanto, os dados são retornados de acordo com a expressão de classificação do controle associado a dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir retorna os dados em ordem alfabética inversa, com base nos valores de `Category` propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default4.aspx#4)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default4.aspx#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderByParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection OrderByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection OrderByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que são usados para criar a cláusula Order By.</summary>
+        <value>Os parâmetros que são usados para criar a cláusula Order By.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle usa parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção para criar a cláusula Order By em tempo de execução. Em geral é definir o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> propriedade `true` quando você adiciona parâmetros para o <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção. Quando o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> está definida como `true`, cada parâmetro no <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção será adicionada à cláusula Order By na sequência que elas são especificadas no <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção. Quando o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> é de propriedade `true`, os parâmetros não precisam ser chamado porque eles são aplicados em sequência e não corresponde a um espaço reservado.  
+  
+ Se você não precisa definir um valor de tempo de execução na cláusula Order By, você não precisará usar o <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção. Você pode definir os campos a serem usada para ordenar os dados de <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade. Por exemplo retornar valores de uma tabela de banco de dados ordenados por `LastName`, defina <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> como "Sobrenome" sem parâmetros.  
+  
+ Você pode definir parâmetros <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleta e correspondem aos parâmetros aos espaços reservados no <xref:System.Web.UI.WebControls.LinqDataSource.OrderBy%2A> propriedade, mas essa abordagem limitou o aplicativo. Quando você usar essa abordagem, os parâmetros de <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção não pode representar um nome de coluna. Você pode definir um parâmetro para um valor e, em seguida, compare esse valor com valores em uma propriedade. Por exemplo, você pode classificar os dados com base em se os valores em uma propriedade serão menor que o valor de tempo de execução representado pelo parâmetro.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Web.UI.WebControls.LinqDataSource> controlar com o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateOrderByClause%2A> propriedade definida como `true`. Um parâmetro está incluído no <xref:System.Web.UI.WebControls.LinqDataSource.OrderByParameters%2A> coleção que classifica os dados com base na propriedade de nome que um usuário seleciona um <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default8.aspx#8)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default8.aspx#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderGroupsBy">
+      <MemberSignature Language="C#" Value="public string OrderGroupsBy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrderGroupsBy" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os campos que são usados para ordenação dados agrupados.</summary>
+        <value>Uma cadeia de caracteres que é usada para criar a cláusula de grupos de Order By.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade para especificar como os grupos de dados são classificados. Por exemplo, você pode agrupar pela `CategoryID` propriedade e, em seguida, classificação de grupo pela média de cada ID de categoria de `Price` propriedade.  
+  
+ Você pode definir o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade somente quando você agrupar os dados. Se você definir o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade sem definir o <xref:System.Web.UI.WebControls.LinqDataSource.GroupBy%2A> propriedade, o <xref:System.Web.UI.WebControls.LinqDataSource> controle gera uma exceção.  
+  
+ A propriedade que é usada para classificar os dados deve ser uma propriedade que é usada para agrupar os dados ou o resultado de uma função de agregação para os dados agrupados. Para especificar como os dados são classificados, você pode adicionar um espaço e a cadeia de caracteres "Crescente", "Crescente", "Decrescente" ou "DESC" para um nome de propriedade no <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> cadeia de caracteres.  
+  
+ Você pode especificar mais de uma propriedade no <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade. Separe cada propriedade usando uma vírgula.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como agrupar os dados por meio de duas propriedades e como classificar dados agrupados usando uma dessas propriedades. Os dados de uma tabela denominada `Products` são agrupados usando propriedades chamadas `CategoryID` e `Discontinued`. Os dados agrupados são classificados pelo `CategoryID` propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy/vb/Default.aspx#1)]  
+  
+ O exemplo a seguir mostra como agrupar os dados por meio de uma propriedade e como realizar a classificação com base nos resultados de uma função de agregação. Os dados a partir o `Products` tabela é agrupada usando o `CategoryID` propriedade. Ele será classificado com base na média do `UnitPrice` propriedade dentro de cada grupo.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy/cs/Default2.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy/vb/Default2.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrderGroupsByParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection OrderGroupsByParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection OrderGroupsByParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros que são usados para criar a cláusula de grupos de Order By.</summary>
+        <value>Os parâmetros que são usados para criar a cláusula de grupos de Order By.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle usa parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters%2A> coleção para criar a cláusula de grupos de Order By em tempo de execução.  
+  
+ Adicionar valores para o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters%2A> coleta somente quando você deve definir valores em tempo de execução na cláusula grupos de Order By. Você pode definir os campos que são usados para ordenar os dados usando o <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade.  
+  
+ Você pode definir parâmetros <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters%2A> coleta e correspondem aos parâmetros aos espaços reservados no <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsBy%2A> propriedade. No entanto, quando você usa essa abordagem, os parâmetros de <xref:System.Web.UI.WebControls.LinqDataSource.OrderGroupsByParameters%2A> coleção não pode representar um nome de coluna; eles devem representar valores. Você pode definir um parâmetro para um valor e, em seguida, compare esse valor para uma propriedade. Por exemplo, você pode classificar os dados com base em se os valores em uma propriedade serão menor que o valor de tempo de execução representado pelo parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="public string Select { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Select" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.Select" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as propriedades e os valores calculados que são incluídos nos dados recuperados.</summary>
+        <value>Uma cadeia de caracteres que é usada para criar a cláusula Select.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você não definir a <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade, o <xref:System.Web.UI.WebControls.LinqDataSource> controle recupera todas as propriedades (colunas de dados) do objeto de dados. Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para recuperar um subconjunto das propriedades do objeto ou calcular novos valores, quando os dados estão sendo recuperados.  
+  
+ Especificar quais propriedades para recuperar, definindo o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para os nomes das propriedades que você deseja incluir nos dados retornados.  
+  
+ Se você recuperar um subconjunto das propriedades do objeto de dados, o <xref:System.Web.UI.WebControls.LinqDataSource> controle cria dinamicamente uma classe que contém somente as propriedades que você especificar o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. Uma classe também é criada dinamicamente se você calcular propriedades que não são propriedades no objeto de dados. Nesses casos, o objeto retornado da consulta não é uma instância da classe que é especificada no <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade. Em vez disso, você deve usar o `new` método o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para indicar que uma nova classe é retornada da consulta. Por exemplo, para retornar apenas o `FirstName` e `LastName` propriedades de um objeto que contém mais do que essas propriedades, defina o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade `new(FirstName, LastName)`. O <xref:System.Web.UI.WebControls.LinqDataSource> dinamicamente criará a nova classe que você especificou no `new` método.  
+  
+ Você pode usar o `As` palavra-chave para atribuir um alias para um valor selecionado. Se você atribuir um alias, você deve incluir as propriedades de um alias no `new` método. Qualquer controle associado a dados que vincula os resultados do <xref:System.Web.UI.WebControls.LinqDataSource> controle deve se referir à propriedade pelo alias. Por exemplo, se você definir o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade `new(Region As SalesRegion, Revenue / 1000 As RevenueThousands)`, o controle associado a dados pode acessar duas propriedades, `SalesRegion` e `RevenueThousands`.  
+  
+ Você usa o `new` funcionar no <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade de acordo com as condições listadas na tabela a seguir.  
+  
+|Selecionar|Usar de novo|Exemplo|  
+|------------|----------------|-------------|  
+|Única propriedade.|`new`não é necessária.|`Select="Category"`|  
+|Várias propriedades.|`new`necessário.|`Select="new(Cateogry, Name)"`|  
+|Única ou várias propriedades que têm um alias.|`new`necessário.|`Select="new(Category As CategoryGroup)"`|  
+  
+ Se você deseja habilitar as modificações de dados automática, mas você não deseja exibir todas as propriedades do objeto de dados, não defina o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. Em vez disso, gerencie a exibição por meio do controle de associação de dados. Quando você usa o <xref:System.Web.UI.WebControls.DetailsView> controle ou o <xref:System.Web.UI.WebControls.GridView> controle, você também deve definir o <xref:System.Web.UI.WebControls.DetailsView.AutoGenerateRows%2A> ou <xref:System.Web.UI.WebControls.GridView.AutoGenerateColumns%2A> propriedade `false`. Quaisquer valores que não são exibidos no controle associado a dados são armazenados no estado de exibição. Eles são passados inalterados para a fonte de dados quando a atualização de dados é executada.  
+  
+ Quando você agrupar dados na consulta, você pode incluir os métodos de agregação no <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. Você pode usar os seguintes métodos de agregação:  
+  
+-   `Count()`  
+  
+-   `Average(`*column*`)`  
+  
+-   `Sum(`*column*`)`  
+  
+-   `Max(`*column*`)`  
+  
+-   `Min(`*column*`)`  
+  
+-   `Where(`*condição*`)`  
+  
+-   `Any()`  
+  
+-   `All(`*condição*`)`  
+  
+ Para obter mais informações, consulte [NIB: Visão geral do controle de servidor Web LinqDataSource](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136) e [como: agrupar e agregar dados usando o controle LinqDataSource](http://msdn.microsoft.com/en-us/b922cf69-251f-4158-b405-ea960993a1af).  
+  
+ Quando você agrupar os dados, você pode incluir `Key` e `It`, que é criado dinamicamente propriedades, no <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. O `Key` propriedade refere-se aos valores de propriedade ou propriedades que foram usadas para agrupar os dados. Por exemplo, se você agrupar por uma propriedade chamada `Category`, o `Key` contém cada valor exclusivo na propriedade de `Category` propriedade. O `It` propriedade se refere a uma coleção de registros individuais em um agrupamento de dados. Você pode repetir o `It` propriedade para recuperar os registros individuais que foram consolidados na operação de agrupamento. Por exemplo, se você agrupar por uma propriedade chamada `Category`, o `It` propriedade contém todos os registros individuais que compartilham um valor comum no `Category` propriedade.  
+  
+ Se você incluir o `It` palavra-chave no <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade quando se agrupam dados, você deve atribuir um alias para o `It` palavra-chave. O <xref:System.Web.UI.WebControls.LinqDataSource> controle lançará uma exceção se `It` não tem um alias. Você pode atribuir um alias para o `Key` palavra-chave, mas isso não é necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para um subconjunto das propriedades no objeto de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default10.aspx#10)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default10.aspx#10)]  
+  
+ O exemplo a seguir mostra como recuperar valores em uma propriedade que foi usado para agrupar os dados e recuperar a média para os registros agrupados. O `Key` palavra-chave contém a propriedade que foi usada para agrupar dados. Neste exemplo, `Key` conterá os valores compartilhados do `ProductCategory` propriedade.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default3.aspx#3)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default3.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação de recuperação de dados for concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Selected> evento para capturar todas as exceções da operação de recuperação de dados ou para examinar o objeto de dados após a operação de recuperação. O objeto está disponível na <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto que é passado para manipuladores de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selecting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt; Selecting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt; Selecting" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Selecting" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceSelectEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de uma operação de recuperação de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento para executar as seguintes tarefas:  
+  
+-   Modificar parâmetros para a recuperação de dados.  
+  
+-   Gere consulta programaticamente.  
+  
+-   Modifique os valores de classificação ou paginação.  
+  
+-   Execute classificação personalizada ou paginação.  
+  
+-   Cancele a operação de recuperação de dados.  
+  
+ O <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs> objeto que é passado para manipuladores de eventos para esse evento contém os parâmetros para a operação de recuperação de dados. Você pode modificar os parâmetros de <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> manipulador de eventos antes da consulta é executada, ou você pode criar um novo conjunto de resultados e atribuí-la para o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade.  
+  
+ A capacidade de implementar a classificação personalizada ou paginação em manipuladores para esse evento pode ser limitado pelo controle que está associado ao <xref:System.Web.UI.WebControls.LinqDataSource>. Por exemplo, quando o cabeçalho da coluna de uma <xref:System.Web.UI.WebControls.GridView> controle é clicado, o controle executa a classificação automática que pode substituir a ordem de sua estabelecer no evento manipulador.  
+  
+ Se uma exceção será lançada em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento, você deve tratar a exceção no manipulador de eventos. A exceção não será passada para um manipulador de eventos a <xref:System.Web.UI.WebControls.LinqDataSource.Selected> eventos (por meio de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade do <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto). O <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade contém apenas as exceções que são lançadas após o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> evento. O manipulador cria uma consulta que recupera os valores de uma matriz de valores de cadeia de caracteres na página da Web.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/cs/Default3.aspx.cs#3)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSourceSelectEventArgs#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSourceSelectEventArgs/vb/Default3.aspx.vb#3)]  
+  
+ O exemplo a seguir mostra como atribuir a <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade para o objeto que é retornado de um método que representa um procedimento armazenado.  
+  
+```vb  
+Protected Sub LinqDataSource_Selecting(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceSelectEventArgs)  
+    Dim exampleContext As ExampleDataContext = New ExampleDataContext()  
+    e.Result = exampleContext.GetRegisteredCustomers()  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Selecting(object sender,   
+        LinqDataSourceSelectEventArgs e)  
+{  
+    ExampleDataContext exampleContext = new ExampleDataContext();  
+    e.Result = exampleContext.GetRegisteredCustomers();  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection SelectParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection SelectParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.SelectParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros usados durante uma operação de recuperação de dados.</summary>
+        <value>Os parâmetros usados para criar a cláusula Select.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle usa parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> coleção para criar a cláusula Select em tempo de execução. Adicionar parâmetros a <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> coleção quando você quiser usar valores de tempo de execução na cláusula Select. Por exemplo, você pode adicionar um parâmetro para o <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> coleção para representar uma propriedade no perfil do usuário. Você pode usar essa propriedade e um valor da fonte de dados para calcular um novo valor.  
+  
+ Se você não precisa definir um valor de tempo de execução na cláusula Select, você não precisará usar o <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> coleção. Você pode definir as propriedades para recuperar o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade. Por exemplo, para retornar o `FirstName` e `LastName` valores de uma tabela de banco de dados, definir <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> para "FirstName, LastName" sem parâmetros.  
+  
+ Para definir valores no <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> coleção, você adiciona um espaço reservado de <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para o parâmetro nomeado. Na cláusula Select, preceda cada nome de parâmetro com o símbolo @.  
+  
+ Você não pode usar um parâmetro de <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> coleção para representar um nome de propriedade. Para definir dinamicamente o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade para o nome de uma propriedade, criar um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Selecting> eventos e personalizar o <xref:System.Web.UI.WebControls.LinqDataSource.Select%2A> propriedade conforme necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um valor fornecido pelo usuário para calcular um valor nos dados retornados. O usuário pode inserir um valor na caixa de texto que representa o número de dias de produção. Esse valor é dividido por um valor de um banco de dados que representa o número de dias para fabricar um produto. O valor retornado indica quantos produtos podem ser fabricados durante o número de dias especificado. A entrada do usuário está incluído no comando Select por meio de <xref:System.Web.UI.WebControls.LinqDataSource.SelectParameters%2A> coleção.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.SelectParameters#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.SelectParameters/cs/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.SelectParameters#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.SelectParameters/vb/Default.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreOriginalValuesInViewState">
+      <MemberSignature Language="C#" Value="public bool StoreOriginalValuesInViewState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StoreOriginalValuesInViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os dados da fonte de dados devem ser armazenados em estado de exibição para certificar-se de que os dados não foi alterados por outro processo antes de ser atualizado ou excluído.</summary>
+        <value>
+          <see langword="true" />Se os valores serão armazenados na exibição de estado; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, quando atualizar e excluir operações foram habilitadas, o <xref:System.Web.UI.WebControls.LinqDataSource> controle armazena os valores originais para todos os registros no modo de exibição de estado. O <xref:System.Web.UI.WebControls.LinqDataSource> controle armazena valores para todas as chaves primárias e todas as propriedades não marcado com `UpdateCheck.Never` no `Column` atributo. Você definir o `UpdateCheck` propriedade o `Column` atributo no [!INCLUDE[vs_ordesigner_short](~/includes/vs-ordesigner-short-md.md)].  
+  
+ Antes do LINQ to SQL atualiza ou exclui dados, ele verifica os valores em estado de exibição em relação aos valores atuais da fonte de dados. Se os valores não coincidirem, o registro da fonte de dados foi alterado. Nesse caso, o LINQ to SQL gera uma exceção e não continuar com a atualização ou operação de exclusão. Para obter mais informações sobre o LINQ to SQL, consulte [LINQ to SQL](http://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655).  
+  
+ Armazenar os valores originais na exibição estado pode fazer com que o tamanho da página para se tornar desnecessariamente grandes e pode expor dados confidenciais para um usuário mal-intencionado. Você pode desabilitar o armazenamento de valores em estado de exibição, definindo o <xref:System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState%2A> propriedade `false`. Se você fizer isso, você deve fornecer sua própria maneira para certificar-se de que os dados não foi alterado. Se você definir o <xref:System.Web.UI.WebControls.LinqDataSource.StoreOriginalValuesInViewState%2A> propriedade `false`, os valores originais não são persistentes no estado de exibição para o controle associado a dados. Nesse caso, o LINQ to SQL não é possível verificar a integridade dos dados. O LINQ to SQL lançará uma exceção que indica um conflito de dados, mesmo se os dados na fonte de dados, na verdade, não mudou.  
+  
+ Se a fonte de dados contiver um campo de carimbo de hora que é atualizado automaticamente durante uma atualização, você pode armazenar apenas esse valor em estado de exibição. Nesse caso, a propriedade de carimbo de hora na classe de entidade é definida como `IsVersion=true` e todas as propriedades são definidas como `UpdateCheck.Never`. Como um campo de carimbo de hora é atualizado automaticamente pelo banco de dados sempre que as alterações de dados no registro, o LINQ to SQL determina desse valor se dados foram alterados. Isso ajuda a reduzir o tamanho do estado de exibição e não há dados confidenciais são expostos. O LINQ to SQL verifica a consistência dos dados comparando o valor de carimbo de hora no modo de exibição estado com o valor de carimbo de hora no banco de dados. Para obter mais informações, consulte [passo a passo: usando um carimbo de hora com o controle LinqDataSource para verificar a integridade de dados](http://msdn.microsoft.com/en-us/e7700162-4f05-4130-81f7-3be1361027fa).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IDynamicDataSource.ContextType">
+      <MemberSignature Language="C#" Value="Type System.Web.DynamicData.IDynamicDataSource.ContextType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type System.Web.DynamicData.IDynamicDataSource.ContextType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.System#Web#DynamicData#IDynamicDataSource#ContextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="T:System.Web.DynamicData.IDynamicDataSource" />.</summary>
+        <value>O tipo que está associado com a classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.LinqDataSource> é convertida em uma interface de <xref:System.Web.DynamicData.IDynamicDataSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.DynamicData.IDynamicDataSource.EntitySetName">
+      <MemberSignature Language="C#" Value="string System.Web.DynamicData.IDynamicDataSource.EntitySetName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string System.Web.DynamicData.IDynamicDataSource.EntitySetName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.System#Web#DynamicData#IDynamicDataSource#EntitySetName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="T:System.Web.DynamicData.IDynamicDataSource" />.</summary>
+        <value>O nome da entidade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.UI.WebControls.LinqDataSource> é convertida em uma interface de <xref:System.Web.DynamicData.IDynamicDataSource>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TableName">
+      <MemberSignature Language="C#" Value="public string TableName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TableName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.TableName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da propriedade ou campo na classe de contexto de dados que representa uma coleção de dados.</summary>
+        <value>Uma cadeia de caracteres que contém o nome da propriedade que contém a coleção de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para o nome da propriedade ou campo que representa os dados que você deseja recuperar. Quando você estiver se conectando a uma tabela de banco de dados, o nome da propriedade é normalmente o mesmo que o nome da tabela. Quando você estiver se conectando a uma coleção de dados na memória, defina o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para o nome da propriedade ou campo que retorna a coleção de dados.  
+  
+ Você pode atribuir uma propriedade que retorna qualquer tipo para o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade para operações de recuperação. Se o objeto que é representado pela propriedade não implementa <xref:System.Collections.IEnumerable>, o <xref:System.Web.UI.WebControls.LinqDataSource> controle ajustará automaticamente o objeto em uma instância de um <xref:System.Collections.IEnumerable> objeto.  
+  
+ Para habilitar a atualização automática, inserir ou excluir operações, a classe que é atribuído para o <xref:System.Web.UI.WebControls.LinqDataSource.ContextTypeName%2A> propriedade deve derivar de <xref:System.Data.Linq.DataContext> e a propriedade que é atribuída ao <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade deve derivar de <xref:System.Data.Linq.Table%601>.  
+  
+ Para obter informações sobre como selecionar dados de uma instância de uma classe, consulte o <xref:System.Web.UI.WebControls.LinqDataSourceSelectEventArgs.Result%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra duas <xref:System.Web.UI.WebControls.LinqDataSource> controles. Em um <xref:System.Web.UI.WebControls.LinqDataSource> controle, o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade é definida como uma propriedade em uma classe. Essa propriedade retorna uma matriz de cadeias de caracteres. Nos outros <xref:System.Web.UI.WebControls.LinqDataSource> controle, o <xref:System.Web.UI.WebControls.LinqDataSource.TableName%2A> propriedade é definida como uma propriedade que representa uma tabela de banco de dados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/cs/Default.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/vb/Default.aspx#2)]  
+  
+ A classe denominada `ExampleDataContext` que representa a tabela de banco de dados não é mostrada neste exemplo. Para esse exemplo funcione, você deve criar essa classe adicionando um LINQ a classe SQL Example.dbml nomeado e arrastando uma tabela chamada filme a [!INCLUDE[vs_ordesigner_short](~/includes/vs-ordesigner-short-md.md)]. Uma classe denominada `ExampleDataContext` com uma propriedade chamada `Movies` é gerado.  
+  
+ O exemplo a seguir mostra a classe denominada `MovieLibrary` que é referenciado no <xref:System.Web.UI.WebControls.LinqDataSource> controle.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/cs/App_Code/MovieLibrary.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Overview/vb/App_Code/MovieLibrary.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public int Update (System.Collections.IDictionary keys, System.Collections.IDictionary values, System.Collections.IDictionary oldValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Update(class System.Collections.IDictionary keys, class System.Collections.IDictionary values, class System.Collections.IDictionary oldValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LinqDataSource.Update(System.Collections.IDictionary,System.Collections.IDictionary,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.IDictionary" />
+        <Parameter Name="values" Type="System.Collections.IDictionary" />
+        <Parameter Name="oldValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Os valores de chave da linha para os registros a serem atualizados.</param>
+        <param name="values">Os valores de linha a ser atualizada na fonte de dados.</param>
+        <param name="oldValues">Os valores de linha são avaliados para detectar conflitos de dados.</param>
+        <summary>Executa uma operação de atualização.</summary>
+        <returns>O número de registros afetados pela operação de atualização.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não precisa chamar o <xref:System.Web.UI.WebControls.LinqDataSource.Update%2A> método do seu código. O controle de associação de dados automaticamente chamará o <xref:System.Web.UI.WebControls.LinqDataSource.Update%2A> método quando o usuário executa a ação para atualizar um registro. Chamar explicitamente o <xref:System.Web.UI.WebControls.LinqDataSource.Update%2A> método quando você deseja criar seu próprio processo de atualização de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como atualizar programaticamente um registro na fonte de dados depois que o usuário clica em um botão. O código passa um <xref:System.Collections.Specialized.ListDictionary> objeto que contém o valor da chave, uma <xref:System.Collections.Specialized.ListDictionary> objeto que contém os valores originais, e um <xref:System.Collections.Specialized.ListDictionary> objeto que contém os novos valores para o <xref:System.Web.UI.WebControls.LinqDataSource.Update%2A> método.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.Update#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Update/cs/Default2.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.Update#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Update/vb/Default3.aspx.vb#1)]  
+  
+ O exemplo a seguir mostra a marcação para o exemplo anterior.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource.Update#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Update/cs/Default2.aspx#2)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource.Update#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Update/vb/Default3.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Updated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt; Updated" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Updated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceStatusEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma operação de atualização for concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Updated> evento para capturar todas as exceções da operação de atualização ou para examinar os valores de parâmetros de saída após a operação de atualização. Os parâmetros de saída estão disponíveis no <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto que é passado para manipuladores de eventos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection UpdateParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection UpdateParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.UpdateParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esta coleção não é usada pelo <see cref="T:System.Web.UI.WebControls.LinqDataSource" /> classe.</summary>
+        <value>Uma coleção de parâmetros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Updating">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt; Updating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt; Updating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LinqDataSource.Updating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de uma operação de atualização.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Manipular o <xref:System.Web.UI.WebControls.LinqDataSource.Updating> evento para validar o objeto a ser atualizada, para examinar os erros de validação de dados da classe de dados, para alterar um valor antes da operação de atualização, ou para cancelar a operação de atualização. O <xref:System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs> objeto que é passado para manipuladores de eventos contém o objeto original e o objeto atualizado.  
+  
+ Se ocorrer um erro de validação durante a operação de atualização, o <xref:System.Web.UI.WebControls.LinqDataSourceInsertEventArgs> objeto contém as exceções de validação que são geradas pela classe de dados. Um erro de validação ocorre se um valor a ser atualizada não corresponde ao tipo da propriedade na classe de dados, ou se ele não passar em uma verificação de validação personalizada. Em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Updating> eventos, você pode recuperar as exceções de validação e tomar as devidas providências.  
+  
+ Se uma exceção será lançada em um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Updating> evento, você deve tratar a exceção no manipulador de eventos. A exceção não será passada para um manipulador de eventos a <xref:System.Web.UI.WebControls.LinqDataSource.Updated> eventos (por meio de <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade do <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs> objeto). O <xref:System.Web.UI.WebControls.LinqDataSourceStatusEventArgs.Exception%2A> propriedade contém apenas as exceções que são lançadas após o <xref:System.Web.UI.WebControls.LinqDataSource.Updating> evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Updating> evento. O código compara propriedades do <xref:System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs.OriginalObject%2A> propriedade e o <xref:System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs.NewObject%2A> propriedade para ver se um valor foi alterado. Se o valor for alterado, o valor de <xref:System.Web.UI.WebControls.LinqDataSourceUpdateEventArgs.NewObject%2A> está definida como `true`.  
+  
+ [!code-csharp[System.Web.UI.WebControls.LinqDataSource.Updating#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Updating/cs/Default.aspx.cs#1)]
+ [!code-vb[System.Web.UI.WebControls.LinqDataSource.Updating#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource.Updating/vb/Default.aspx.vb#1)]  
+  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.UI.WebControls.LinqDataSource.Updating> evento que recupera as exceções de validação.  
+  
+```vb  
+Protected Sub LinqDataSource_Updating(ByVal sender As Object, _  
+        ByVal e As LinqDataSourceUpdateEventArgs)  
+    If (e.Exception IsNot Nothing) Then  
+        For Each innerException As KeyValuePair(Of String, Exception) _  
+               In e.Exception.InnerExceptions  
+            Label1.Text &= innerException.Key & ": " & _  
+                innerException.Value.Message & "<br />"  
+        Next  
+        e.ExceptionHandled = True  
+    End If  
+End Sub  
+```  
+  
+```csharp  
+protected void LinqDataSource_Updating(object sender,   
+        LinqDataSourceUpdateEventArgs e)  
+{  
+    if (e.Exception != null)  
+    {  
+        foreach (KeyValuePair<string, Exception> innerException in   
+             e.Exception.InnerExceptions)  
+        {  
+        Label1.Text += innerException.Key + ": " +   
+            innerException.Value.Message + "<br />";  
+        }  
+        e.ExceptionHandled = true;  
+    }  
+}  
+```  
+  
+ O exemplo anterior recupera exceções de validação. Uma exceção pode ser gerada se um valor não corresponde ao tipo da propriedade. Ele também pode ser gerado de uma verificação personalizada, como mostrado no exemplo a seguir. O `OnAgeChanging` método verifica se o número para o `Age` propriedade não é negativa.  
+  
+```csharp  
+partial void  OnAgeChanging(int? value)  
+{  
+    if (value < 0)  
+    {  
+        throw new Exception("Age cannot be a negative number.");  
+    }  
+}  
+```  
+  
+```vb  
+Private Sub OnAgeChanging(ByVal value As System.Nullable(Of Integer))  
+    If (value < 0) Then  
+        Throw New Exception("Age cannot be a negative number.")  
+    End If  
+End Sub  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Where">
+      <MemberSignature Language="C#" Value="public string Where { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Where" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.Where" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica quais condições devem ser verdadeiras para um registro ser incluído nos dados recuperados.</summary>
+        <value>Uma cadeia de caracteres que é usada para criar a cláusula Where.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa o <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade para especificar as condições para o registro a ser retornado de uma consulta. A sintaxe para a <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade é o mesmo que a sintaxe para uma cláusula Where LINQ em c#.  
+  
+ Especifique uma expressão que resulta em um valor booliano, e se a expressão for avaliada como `true` para uma determinada linha, a linha é incluída no conjunto de resultados. Expressões são compostas de nomes de coluna, operadores de comparação e valores de comparação, conforme mostrado no exemplo a seguir:  
+  
+```  
+<asp:LinqDataSource ... Where="Price > 50"...>  
+```  
+  
+ Para especificar várias expressões vinculadas por lógica `AND` ou `OR` operadores, use `&&` como um operador lógico AND e `||` como um operador lógico OR, conforme mostrado no exemplo a seguir:  
+  
+```  
+<asp:LinqDataSource ... Where="Price > 50 && Price < 100"...>  
+<asp:LinqDataSource ... Where="Price <= 50 || Price >= 100"...>  
+```  
+  
+ Se você quiser testar uma propriedade com um valor de cadeia de caracteres literal, o valor de cadeia de caracteres literal deve estar entre aspas duplas. Para fazer isso na marcação, coloque o <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> valor cláusula entre aspas, conforme mostrado no exemplo a seguir:  
+  
+```  
+<asp:LinqDataSource ... Where='Category = "Sports"' ... >  
+```  
+  
+ Para testar em relação a um valor de cadeia de caracteres literal no código, use caracteres de escape que são apropriados para o idioma que você está usando para inserir aspas duplas, conforme mostrado no exemplo a seguir:  
+  
+```vb  
+LinqDataSource1.Where = "Category = ""Sports"""  
+```  
+  
+```csharp  
+LinqDataSource1.Where = "Category = \"Sports\"";  
+```  
+  
+ Se você quiser testar se uma cadeia de caracteres é maior ou menor do que outra cadeia de caracteres, você deve usar métodos de <xref:System.String> classe em vez de usar `<` ou `>` operadores entre o nome da coluna e o valor de cadeia de caracteres. Os exemplos a seguir mostram como selecionar linhas com valores de categoria que são menores do que, menor que ou igual a, maior a, ou maior que ou igual a "Esportes":  
+  
+```  
+<asp:LinqDataSource ... Where='Category.CompareTo("Sports") < 0' ... >  
+<asp:LinqDataSource ... Where='Category.CompareTo("Sports") <= 0' ... >  
+<asp:LinqDataSource ... Where='Category.CompareTo("Sports") > 0' ... >  
+<asp:LinqDataSource ... Where='Category.CompareTo("Sports") >= 0' ... >  
+```  
+  
+ Você também pode usar outros métodos para o <xref:System.String> classe, como <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, e <xref:System.String.Contains%2A>. Para obter mais informações sobre como comparar cadeias de caracteres, consulte [comparar cadeias de caracteres](~/docs/standard/base-types/comparing.md). Para obter mais informações sobre onde sintaxe da cláusula, consulte [operadores em c#](http://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43) e [onde cláusula](~/docs/csharp/language-reference/keywords/where-clause.md).  
+  
+ Além de filtragem com base em valores estáticos que você defina quando você cria a página da Web, você pode filtrar com base em valores dinâmicos que são avaliados em tempo de execução. Nesse caso, você pode incluir um parâmetro nomeado no <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> que atua como um espaço reservado para o valor da propriedade. Você, em seguida, adicionar um parâmetro que tem o nome correspondente para o <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção.  
+  
+ Como alternativa, você pode definir o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> propriedade `true` e defina os parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção. Quando o <xref:System.Web.UI.WebControls.LinqDataSource.AutoGenerateWhereClause%2A> é de propriedade `true`, você não precisa incluir os parâmetros nomeados no <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade. Em vez disso, o <xref:System.Web.UI.WebControls.LinqDataSource> controle gera automaticamente onde cláusula dos parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> propriedade.  
+  
+ Para obter mais informações sobre como filtrar dados, consulte [passo a passo: selecionando e filtrando um subconjunto de dados com o LinqDataSource e controles GridView](http://msdn.microsoft.com/en-us/c1cca3e8-86e4-4e69-a29f-1c05b91f2205).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como filtrar os dados retornados de uma consulta com base em uma condição estática.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default5.aspx#5)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default5.aspx#5)]  
+  
+ O exemplo a seguir mostra como filtrar os dados com base em um valor que é fornecido pelo usuário em tempo de execução. Neste exemplo um <xref:System.Web.UI.WebControls.DropDownList> controle e um <xref:System.Web.UI.WebControls.GridView> controle são exibidos na página. Quando o usuário seleciona um dos valores no <xref:System.Web.UI.WebControls.DropDownList> controle, o <xref:System.Web.UI.WebControls.LinqDataSource> controle seleciona o `Products` tabela somente linhas com `UserPrice` valores iguais ao valor selecionado. O <xref:System.Web.UI.WebControls.GridView> controle, em seguida, exibe os dados filtrados.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default6.aspx#6)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default6.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhereParameters">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.ParameterCollection WhereParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.ParameterCollection WhereParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LinqDataSource.WhereParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Data")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.InnerProperty)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.ParameterCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros usados para criar a cláusula Where.</summary>
+        <value>Uma coleção dos parâmetros usados para criar a cláusula Where na propriedade <see cref="P:System.Web.UI.WebControls.LinqDataSource.Where" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LinqDataSource> controle usa parâmetros no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção para criar onde cláusula em tempo de execução. Adicionar parâmetros a <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção quando você deseja definir programaticamente uma ou mais das condições em Where cláusula. Por exemplo, você pode pesquisar uma tabela de banco de dados para registros com um sobrenome igual ao valor de um <xref:System.Web.UI.WebControls.TextBox> controle. Nesse caso, você pode adicionar um parâmetro para o <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleta para o valor da caixa de texto.  
+  
+ Se você não precisa definir um valor de tempo de execução no local em que a cláusula, você não precisa usar o <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção. Você pode definir os campos a serem recuperados no <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade. Por exemplo, para retornar valores de uma tabela de banco de dados onde `LastName` igual a "Adams" marcação, defina o <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade `'LastName = "Adams"'` sem parâmetros.  
+  
+ Para definir valores no <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção, atribua um nome para cada parâmetro e, em seguida, adicione um espaço reservado de <xref:System.Web.UI.WebControls.LinqDataSource.Where%2A> propriedade para esse parâmetro. Na janela onde cláusula, preceda cada nome de parâmetro com o símbolo @.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.LinqDataSource.WhereParameters%2A> coleção para criar dinamicamente onde cláusula. O <xref:System.Web.UI.WebControls.LinqDataSource> controle retorna todos os registros com um valor na `Price` coluna é maior que o valor selecionado pelo usuário em um <xref:System.Web.UI.WebControls.DropDownList> controle.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.LinqDataSource_Simple#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/cs/Default6.aspx#6)]
+ [!code-aspx-vb[System.Web.UI.WebControls.LinqDataSource_Simple#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.LinqDataSource_Simple/vb/Default6.aspx#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

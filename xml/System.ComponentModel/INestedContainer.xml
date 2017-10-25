@@ -1,0 +1,77 @@
+<Type Name="INestedContainer" FullName="System.ComponentModel.INestedContainer">
+  <TypeSignature Language="C#" Value="public interface INestedContainer : IDisposable, System.ComponentModel.IContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INestedContainer implements class System.ComponentModel.IContainer, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.INestedContainer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.IContainer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece funcionalidade para contêineres aninhados, que logicamente, contêm zero ou mais componentes e pertencem a um componente pai.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.INestedContainer> interface adiciona o conceito de um componente de proprietário para o <xref:System.ComponentModel.IContainer> interface. Um contêiner aninhado é um objeto que logicamente, mas não necessariamente visualmente, contém zero ou mais componentes do filho e pertence a algum componente pai. Para contenção visual, o componente proprietário costuma ser outro contêiner.  
+  
+ Contêineres aninhados permitem seções de um controle para ser projetáveis, sem a necessidade de uma variável de membro serializado explícito ou um serializador personalizado para cada subcontrole. Em vez disso, o designer de formulário mantém um contêiner mestre dos componentes. Site de cada componente pode ter um contêiner aninhado que fornece um local para colocar os componentes extras. Quando um componente está localizado em um contêiner aninhado, o nome que ele recebe é uma combinação de seu nome e o nome do componente de seu proprietário. Além disso, componentes adicionadas a um contêiner aninhado têm acesso completo aos serviços do contêiner pai e o contêiner aninhado fornece o mesmo comportamento do pai em relação à adição de novos componentes. O contêiner aninhado criará o designer para cada componente que ele contém, habilitando suporte de tempo de design. Porque os serializadores de código padrão não examinar contêineres aninhados, esses componentes só são serializados se um caminho para eles pode ser obtido percorrendo os componentes no contêiner primário.  
+  
+ Contêineres aninhados podem ser encontrados ao consultar o site do componente para serviços do tipo <xref:System.ComponentModel.INestedContainer>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.IComponent Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.IComponent Owner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.INestedContainer.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.IComponent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o componente de proprietário para o contêiner aninhado.</summary>
+        <value>O <see cref="T:System.ComponentModel.IComponent" /> que possui o contêiner aninhado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O componente proprietário é a característica que diferencia contêineres aninhados de contêineres comuns.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

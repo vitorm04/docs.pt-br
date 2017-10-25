@@ -1,0 +1,105 @@
+<Type Name="LogFileLocation" FullName="Microsoft.VisualBasic.Logging.LogFileLocation">
+  <TypeSignature Language="C#" Value="public enum LogFileLocation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LogFileLocation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Logging.LogFileLocation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina qual caminho predefinido a classe <see cref="T:Microsoft.VisualBasic.Logging.FileLogTraceListener" /> usa para gravar seus arquivos de log.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atribuir um do <xref:Microsoft.VisualBasic.Logging.LogFileLocation> valores de enumeração para o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> propriedade para especificar qual predefinidos caminho o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> classe usa para gravar seus arquivos de log.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CommonApplicationDirectory">
+      <MemberSignature Language="C#" Value="CommonApplicationDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileLocation CommonApplicationDirectory = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileLocation.CommonApplicationDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o caminho para os dados de aplicativo compartilhados entre todos os usuários.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileLocation Custom = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileLocation.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se a cadeia de caracteres especificada por <see cref="P:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation" /> não estiver vazia, use-a como o caminho. Caso contrário, use o caminho para os dados de aplicativo de um usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutableDirectory">
+      <MemberSignature Language="C#" Value="ExecutableDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileLocation ExecutableDirectory = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileLocation.ExecutableDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o caminho para o arquivo executável que iniciou o aplicativo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalUserApplicationDirectory">
+      <MemberSignature Language="C#" Value="LocalUserApplicationDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileLocation LocalUserApplicationDirectory = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileLocation.LocalUserApplicationDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o caminho para os dados de aplicativo de um usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TempDirectory">
+      <MemberSignature Language="C#" Value="TempDirectory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.Logging.LogFileLocation TempDirectory = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.Logging.LogFileLocation.TempDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.Logging.LogFileLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o caminho da pasta temporária do sistema atual.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

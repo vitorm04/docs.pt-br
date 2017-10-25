@@ -1,0 +1,462 @@
+<Type Name="ApplicationId" FullName="System.ApplicationId">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationId" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ApplicationId extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ApplicationId" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações usadas para identificar exclusivamente um aplicativo baseado em manifesto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma identidade de aplicativo consiste de chave pública do Editor, o nome do aplicativo, a arquitetura de processador de destino, a cultura do aplicativo e a versão do aplicativo. Os valores de propriedades de identidade de aplicativo correspondem às informações contidas no manifesto do aplicativo. Para obter mais informações sobre o manifesto do aplicativo, consulte [manifesto do aplicativo ClickOnce](http://msdn.microsoft.com/library/29570cec-4e53-4660-a850-abc4fa150243).  
+  
+ <xref:System.ApplicationId>é usado pelo <xref:System.Security.Policy.ApplicationSecurityInfo> classe para identificar um aplicativo baseado no manifesto.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.ApplicationId> propriedades obtendo o <xref:System.ApplicationId> de um <xref:System.Security.Policy.ApplicationSecurityInfo> instância criada usando o <xref:System.ActivationContext> para o aplicativo em execução no momento de manifesto com base no.  
+  
+ [!code-csharp[System.ApplicationIdentity#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ApplicationIdentity/CS/program.cs#1)]
+ [!code-vb[System.ApplicationIdentity#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ApplicationIdentity/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationId (byte[] publicKeyToken, string name, Version version, string processorArchitecture, string culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] publicKeyToken, string name, class System.Version version, string processorArchitecture, string culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationId.#ctor(System.Byte[],System.String,System.Version,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="publicKeyToken" Type="System.Byte[]" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="version" Type="System.Version" />
+        <Parameter Name="processorArchitecture" Type="System.String" />
+        <Parameter Name="culture" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="publicKeyToken">A matriz de bytes que representa os dados brutos de chave públicos.</param>
+        <param name="name">O nome do aplicativo.</param>
+        <param name="version">Um <see cref="T:System.Version" /> objeto que especifica a versão do aplicativo.</param>
+        <param name="processorArchitecture">A arquitetura do processador do aplicativo.</param>
+        <param name="culture">A cultura do aplicativo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ApplicationId" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor inicializa o <xref:System.ApplicationId.Culture%2A>, <xref:System.ApplicationId.Name%2A>, <xref:System.ApplicationId.ProcessorArchitecture%2A>, <xref:System.ApplicationId.PublicKeyToken%2A>, e <xref:System.ApplicationId.Version%2A> propriedades da <xref:System.ApplicationId>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="version" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="publicKeyToken" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public ApplicationId Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.ApplicationId Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationId.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ApplicationId</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica da identidade do aplicativo atual.</summary>
+        <returns>Um <see cref="T:System.ApplicationId" /> objeto que representa uma cópia exata do original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cópia retornada por esse método é igual ao valor original como preenchido pelo <xref:System.ApplicationId.Equals%2A> método. Os códigos de hash para o original e a cópia também forem iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public string Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Culture" />
+      <MemberSignature Language="DocId" Value="P:System.ApplicationId.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa as informações de cultura para o aplicativo.</summary>
+        <value>As informações de cultura para o aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ApplicationId.Culture%2A> valor pode incluir informações de idioma, por exemplo, "en-US".  
+  
+ Para obter informações sobre valores de cultura, consulte <xref:System.Globalization.CultureInfo>.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.ApplicationId.Culture%2A> propriedade obtendo o <xref:System.ApplicationId> de um <xref:System.Security.Policy.ApplicationSecurityInfo> instância criada usando o <xref:System.ActivationContext> para o aplicativo em execução no momento de manifesto com base no.  Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ApplicationId> classe.  
+  
+ [!code-csharp[System.ApplicationIdentity#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ApplicationIdentity/CS/program.cs#8)]
+ [!code-vb[System.ApplicationIdentity#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ApplicationIdentity/VB/program.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object o);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationId.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="o">O <see cref="T:System.ApplicationId" /> objeto a ser comparado ao atual <see cref="T:System.ApplicationId" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.ApplicationId" /> objeto é equivalente à atual <see cref="T:System.ApplicationId" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.ApplicationId" /> objeto é equivalente à atual <see cref="T:System.ApplicationId" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationId.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o código hash para a identidade do aplicativo atual.</summary>
+        <returns>O código hash para a identidade do aplicativo atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método gera o mesmo código de hash de dois objetos que têm os mesmos valores para seus <xref:System.ApplicationId.Name%2A> e <xref:System.ApplicationId.Version%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ApplicationId.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do aplicativo.</summary>
+        <value>O nome do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ApplicationId.Name%2A>é o nome simple, não criptografado do aplicativo.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.ApplicationId.Name%2A> propriedade obtendo o <xref:System.ApplicationId> de um <xref:System.Security.Policy.ApplicationSecurityInfo> instância criada usando o <xref:System.ActivationContext> para o aplicativo em execução no momento de manifesto com base no. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ApplicationId> classe.  
+  
+ [!code-csharp[System.ApplicationIdentity#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ApplicationIdentity/CS/program.cs#7)]
+ [!code-vb[System.ApplicationIdentity#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ApplicationIdentity/VB/program.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessorArchitecture">
+      <MemberSignature Language="C#" Value="public string ProcessorArchitecture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProcessorArchitecture" />
+      <MemberSignature Language="DocId" Value="P:System.ApplicationId.ProcessorArchitecture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a arquitetura do processador de destino para o aplicativo.</summary>
+        <value>A arquitetura do processador do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores válidos incluem "msil", "x86", "ia64" e "amd64". O padrão é "msil", ou Microsoft intermediate language, que significa que todos os assemblies são independentes de plataforma, e o common language runtime será compilá-los quando eles são necessários para seu aplicativo.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.ApplicationId.ProcessorArchitecture%2A> propriedade obtendo o <xref:System.ApplicationId> de um <xref:System.Security.Policy.ApplicationSecurityInfo> instância criada usando o <xref:System.ActivationContext> para o aplicativo em execução no momento de manifesto com base no.  Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ApplicationId> classe.  
+  
+ [!code-csharp[System.ApplicationIdentity#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ApplicationIdentity/CS/program.cs#9)]
+ [!code-vb[System.ApplicationIdentity#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ApplicationIdentity/VB/program.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKeyToken">
+      <MemberSignature Language="C#" Value="public byte[] PublicKeyToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] PublicKeyToken" />
+      <MemberSignature Language="DocId" Value="P:System.ApplicationId.PublicKeyToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o token da chave pública para o aplicativo.</summary>
+        <value>Uma matriz de bytes que contém o token de chave pública para o aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de chave pública é representado pelos últimos 8 bytes de hash SHA-1 da chave pública em que o aplicativo está assinado.  
+  
+ Para obter mais informações, consulte <xref:System.Reflection.AssemblyName.GetPublicKeyToken%2A?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.ApplicationId.PublicKeyToken%2A> propriedade obtendo o <xref:System.ApplicationId> de um <xref:System.Security.Policy.ApplicationSecurityInfo> instância criada usando o <xref:System.ActivationContext> para o aplicativo em execução no momento de manifesto com base no. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ApplicationId> classe.  
+  
+ [!code-csharp[System.ApplicationIdentity#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ApplicationIdentity/CS/program.cs#11)]
+ [!code-vb[System.ApplicationIdentity#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ApplicationIdentity/VB/program.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ApplicationId.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma representação de cadeia de caracteres da identidade do aplicativo.</summary>
+        <returns>Uma representação de cadeia de caracteres da identidade do aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Object.ToString%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.ApplicationId.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a versão do aplicativo.</summary>
+        <value>Um <see cref="T:System.Version" /> que especifica a versão do aplicativo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Version?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.ApplicationId.Version%2A> propriedade obtendo o <xref:System.ApplicationId> de um <xref:System.Security.Policy.ApplicationSecurityInfo> instância criada usando o <xref:System.ActivationContext> para o aplicativo em execução no momento de manifesto com base no. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.ApplicationId> classe.  
+  
+ [!code-csharp[System.ApplicationIdentity#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.ApplicationIdentity/CS/program.cs#10)]
+ [!code-vb[System.ApplicationIdentity#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ApplicationIdentity/VB/program.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

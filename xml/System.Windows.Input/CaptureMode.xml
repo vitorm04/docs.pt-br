@@ -1,0 +1,75 @@
+<Type Name="CaptureMode" FullName="System.Windows.Input.CaptureMode">
+  <TypeSignature Language="C#" Value="public enum CaptureMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CaptureMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.CaptureMode" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as políticas de captura do mouse.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Windows.Input.CaptureMode> está definido para o elemento captura do mouse é aplicada somente para o elemento que capturou o mouse.  
+  
+ Quando <xref:System.Windows.Input.CaptureMode.Element> é definido como subárvore, captura do mouse é aplicada ao elemento que tem a captura do mouse ou um de seus elementos filho, se o mouse estiver sobre o elemento filho.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="Element" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.CaptureMode Element = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.CaptureMode.Element" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.CaptureMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Captura do mouse é aplicada a um único elemento.  Entrada do mouse vai para o elemento capturado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.CaptureMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.CaptureMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.CaptureMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum captura do mouse.  Entrada do mouse vai para o elemento sob o mouse.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SubTree">
+      <MemberSignature Language="C#" Value="SubTree" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.CaptureMode SubTree = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.CaptureMode.SubTree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.CaptureMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Captura do mouse é aplicada a uma subárvore de elementos.  Se o mouse estiver sobre um filho do elemento com a captura, a entrada do mouse é enviada para o elemento filho.  Caso contrário, a entrada do mouse é enviada para o elemento com a captura do mouse.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

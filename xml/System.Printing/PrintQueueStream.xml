@@ -1,0 +1,575 @@
+<Type Name="PrintQueueStream" FullName="System.Printing.PrintQueueStream">
+  <TypeSignature Language="C#" Value="public class PrintQueueStream : System.IO.Stream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintQueueStream extends System.IO.Stream" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PrintQueueStream" />
+  <AssemblyInfo>
+    <AssemblyName>System.Printing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.Stream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Um fluxo que representa um trabalho de impressão em spool em uma fila de impressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa classe para gravar informações específicas de dispositivo para um arquivo de spool não é incluído automaticamente pelo [!INCLUDE[TLA#tla_win](~/includes/tlasharptla-win-md.md)] spooler. Obviamente, você precisa saber se o arquivo de spool é [!INCLUDE[TLA#tla_emf](~/includes/tlasharptla-emf-md.md)] ou [!INCLUDE[TLA#tla_xps](~/includes/tlasharptla-xps-md.md)]. Se você preferir trabalhar com um <xref:System.Byte> matriz, você também pode usar duas sobrecargas do <xref:System.Printing.PrintQueue.AddJob%2A> método e o <xref:System.Printing.PrintSystemJobInfo.JobStream%2A> propriedade para gravar no arquivo de spool.  
+  
+> [!CAUTION]
+>  Classes dentro de <xref:System.Printing> namespace não têm suporte para uso dentro de um serviço do Windows ou serviço ou aplicativo ASP.NET. Tentativa de usar essas classes de dentro de um desses tipos de aplicativo pode gerar problemas inesperados, como diminuído exceções de desempenho e tempo de execução de serviço.  
+  
+ Se você quiser imprimir a partir de um aplicativo Windows Forms, consulte o <xref:System.Drawing.Printing> namespace.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueStream (System.Printing.PrintQueue printQueue, string printJobName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintQueue printQueue, string printJobName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.#ctor(System.Printing.PrintQueue,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+        <Parameter Name="printJobName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">O <see cref="T:System.Printing.PrintQueue" /> que hospeda o trabalho de impressão que fornece o conteúdo do fluxo.</param>
+        <param name="printJobName">O nome do trabalho de impressão que fornece o conteúdo do fluxo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintQueueStream" /> classe para impressão especificado trabalho hospedado especificado na <see cref="T:System.Printing.PrintQueue" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueStream (System.Printing.PrintQueue printQueue, string printJobName, bool commitDataOnClose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintQueue printQueue, string printJobName, bool commitDataOnClose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.#ctor(System.Printing.PrintQueue,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+        <Parameter Name="printJobName" Type="System.String" />
+        <Parameter Name="commitDataOnClose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">O <see cref="T:System.Printing.PrintQueue" /> que hospeda o trabalho de impressão que fornece o conteúdo do fluxo.</param>
+        <param name="printJobName">O nome do trabalho de impressão que fornece o conteúdo do fluxo.</param>
+        <param name="commitDataOnClose">
+          <see langword="true" />para confirmar os dados a <see cref="T:System.Printing.PrintQueueStream" /> quando o <see cref="M:System.Printing.PrintQueueStream.Close" /> método é chamado; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintQueueStream" /> classe para impressão especificado trabalho hospedado especificado na <see cref="T:System.Printing.PrintQueue" />, com uma indicação se dados no <see cref="T:System.Printing.PrintQueueStream" /> devem ser confirmadas quando o fluxo está fechado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintQueueStream (System.Printing.PrintQueue printQueue, string printJobName, bool commitDataOnClose, System.Printing.PrintTicket printTicket);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Printing.PrintQueue printQueue, string printJobName, bool commitDataOnClose, class System.Printing.PrintTicket printTicket) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.#ctor(System.Printing.PrintQueue,System.String,System.Boolean,System.Printing.PrintTicket)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="printQueue" Type="System.Printing.PrintQueue" />
+        <Parameter Name="printJobName" Type="System.String" />
+        <Parameter Name="commitDataOnClose" Type="System.Boolean" />
+        <Parameter Name="printTicket" Type="System.Printing.PrintTicket" />
+      </Parameters>
+      <Docs>
+        <param name="printQueue">O <see cref="T:System.Printing.PrintQueue" /> que hospeda o trabalho de impressão que fornece o conteúdo do fluxo.</param>
+        <param name="printJobName">O nome do trabalho de impressão que fornece o conteúdo do fluxo.</param>
+        <param name="commitDataOnClose">
+          <see langword="true" />para confirmar os dados a <see cref="T:System.Printing.PrintQueueStream" /> quando o <see cref="M:System.Printing.PrintQueueStream.Close" /> método é chamado; caso contrário, <see langword="false" />.</param>
+        <param name="printTicket">As configurações do trabalho de impressão.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Printing.PrintQueueStream" /> classe para impressão especificado trabalho hospedado especificado na <see cref="T:System.Printing.PrintQueue" />, com as configurações especificadas e uma indicação se dados no <see cref="T:System.Printing.PrintQueueStream" /> devem ser confirmadas quando o fluxo está fechado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginWrite">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginWrite(unsigned int8[] buffer, int32 offset, int32 count, class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">O buffer do qual a gravação de dados.</param>
+        <param name="offset">O deslocamento no buffer do qual iniciar a gravação de bytes.</param>
+        <param name="count">O número máximo de bytes a serem gravados.</param>
+        <param name="callback">Um retorno de chamada assíncrono, que é chamado quando a operação de gravação é concluída.</param>
+        <param name="state">Um objeto fornecido pelo usuário que distingue esta solicitação de gravação assíncrona de outras solicitações.</param>
+        <summary>Inicia uma operação de gravação assíncrona.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que representa a gravação assíncrona, que pode estar pendente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanRead">
+      <MemberSignature Language="C#" Value="public override bool CanRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanRead" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStream.CanRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo oferece suporte à leitura.</summary>
+        <value>
+          <see langword="true" />Se houver suporte para leitura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSeek">
+      <MemberSignature Language="C#" Value="public override bool CanSeek { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanSeek" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStream.CanSeek" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo oferece suporte à busca, que é mover a posição de leitura/gravação para uma nova posição no fluxo.</summary>
+        <value>
+          <see langword="true" />Se houver suporte para busca; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanWrite">
+      <MemberSignature Language="C#" Value="public override bool CanWrite { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanWrite" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStream.CanWrite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo oferece suporte à gravação.</summary>
+        <value>
+          <see langword="true" />Se houver suporte para gravação; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o fluxo e libera todos os recursos, como soquetes e identificadores de arquivos que estão associados ele.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool A_0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool A_0) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptions</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="A_0" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="A_0">To be added.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Printing.PrintQueueStream" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Object.Finalize%2A> método. `Dispose()`invoca o protegido `Dispose(Boolean)` método com o parâmetro booliano sem nome definido como `true`. <xref:System.Object.Finalize%2A>invoca `Dispose` com o parâmetro booliano sem nome definido como `false`.  
+  
+ Quando o parâmetro booliano sem nome for `true`, esse método libera todos os recursos que são mantidos por qualquer objeto gerenciado que este <xref:System.Printing.PrintQueueStream> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose(Boolean)" />, tenha cuidado em não fazer referência a objetos que foram eliminados anteriormente em uma chamada anterior para <see langword="Dispose" />. Para obter mais informações sobre como implementar <see langword="Dispose(Boolean)" />, consulte [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+ Para obter mais informações sobre <see langword="Dispose" /> e <see cref="M:System.Object.Finalize" />, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="EndWrite">
+      <MemberSignature Language="C#" Value="public override void EndWrite (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EndWrite(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.EndWrite(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">Uma referência para a solicitação de e/s assíncrona pendente.</param>
+        <summary>Encerra uma operação de gravação assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Printing.PrintQueueStream.EndWrite%2A>deve ser chamado apenas uma vez em cada <xref:System.IAsyncResult> que é retornado de uma chamada para <xref:System.Printing.PrintQueueStream.BeginWrite%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~PrintQueueStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que um <see cref="T:System.Printing.PrintQueueStream" /> tente liberar recursos e realizar outras operações de limpeza antes do <see cref="T:System.Printing.PrintQueueStream" /> é recuperada pela coleta de lixo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. O código do aplicativo não deve chamar este método; o método `Finalize` de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A>.  
+  
+ Para obter mais informações, consulte [métodos Finalize e destruidores](http://msdn.microsoft.com/en-us/fd376774-1643-499b-869e-9546a3aeea70), [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md), e [substituindo o método Finalize](http://msdn.microsoft.com/en-us/8026cb68-fe93-43fc-96c1-c09ad7d64cd3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os buffers para esse fluxo e grava os dados em buffer no dispositivo subjacente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePackagingProgressEvent">
+      <MemberSignature Language="C#" Value="public void HandlePackagingProgressEvent (object sender, System.Windows.Xps.Packaging.PackagingProgressEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void HandlePackagingProgressEvent(object sender, class System.Windows.Xps.Packaging.PackagingProgressEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.HandlePackagingProgressEvent(System.Object,System.Windows.Xps.Packaging.PackagingProgressEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.Windows.Xps.Packaging.PackagingProgressEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Os dados do evento.</param>
+        <summary>Permite que o <see cref="T:System.Printing.PrintQueueStream" /> para responder ao progresso de empacotamento manipulando o <see cref="E:System.Windows.Xps.Serialization.XpsPackagingPolicy.PackagingProgressEvent" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobIdentifier">
+      <MemberSignature Language="C#" Value="public int JobIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 JobIdentifier" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStream.JobIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de identificação do trabalho de impressão.</summary>
+        <value>Um <see cref="T:System.Int32" /> que representa um número de identificação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public override long Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStream.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do fluxo em bytes.</summary>
+        <value>Um <see cref="T:System.Int64" /> que representa o comprimento do fluxo em bytes.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public override long Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Position" />
+      <MemberSignature Language="DocId" Value="P:System.Printing.PrintQueueStream.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a posição atual de leitura/gravação no fluxo.</summary>
+        <value>Um <see cref="T:System.Int64" /> que representa a posição atual no fluxo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override int Read (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Read(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.Read(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes.</param>
+        <param name="offset">O deslocamento de bytes de base zero no buffer de onde você deseja começar a armazenar os dados lidos do fluxo.</param>
+        <param name="count">O número máximo de bytes a serem lidos do fluxo.</param>
+        <summary>Lê uma sequência de bytes do fluxo e avança a posição de leitura/gravação no fluxo pelo número de bytes que foram lidos.</summary>
+        <returns>Um <see cref="T:System.Int32" /> que contém o número total de bytes lidos no buffer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno pode ser menor que o número de bytes solicitados se muitos bytes não estão disponíveis; ou o número pode ser zero (0) se a posição de leitura/gravação está no final do fluxo.  
+  
+ Quando este método retorna, `buffer` contém a matriz de bytes especificado e os valores entre `offset` e (deslocamento + contagem - 1) são substituídos pelos bytes lidos da origem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public override long Seek (long offset, System.IO.SeekOrigin origin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 Seek(int64 offset, valuetype System.IO.SeekOrigin origin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.Seek(System.Int64,System.IO.SeekOrigin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int64" />
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="offset">Um deslocamento de bytes que é relativo ao parâmetro de origem.</param>
+        <param name="origin">Um valor do tipo <see cref="T:System.IO.SeekOrigin" /> que indica o ponto de referência que é usado para obter a nova posição.</param>
+        <summary>Define a posição de leitura/gravação dentro do fluxo.</summary>
+        <returns>Um <see cref="T:System.Int64" /> que representa a nova posição de leitura/gravação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLength">
+      <MemberSignature Language="C#" Value="public override void SetLength (long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SetLength(int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.SetLength(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="value">O necessário comprimento, em bytes, do fluxo atual.</param>
+        <summary>Define o comprimento do fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um fluxo deve dão suporte a gravação e busca de <xref:System.Printing.PrintQueueStream.SetLength%2A> para trabalhar.  
+  
+ Use o <xref:System.Printing.PrintQueueStream.CanWrite%2A> propriedade para determinar se a instância atual oferece suporte à gravação e, em seguida, usar o <xref:System.Printing.PrintQueueStream.CanSeek%2A> para determinar se a busca é suportada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte[] buffer, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8[] buffer, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Printing.PrintQueueStream.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Printing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de bytes da qual copiar para o fluxo.</param>
+        <param name="offset">O deslocamento de bytes baseado em zero no <c>buffer</c> onde você deseja começar a copiar bytes para o fluxo.</param>
+        <param name="count">O número de bytes a serem gravados no fluxo.</param>
+        <summary>Grava uma sequência de bytes no fluxo e avança a posição de leitura/gravação no fluxo pelo número de bytes gravados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

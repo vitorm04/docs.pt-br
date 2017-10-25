@@ -1,0 +1,280 @@
+<Type Name="IContractBehavior" FullName="System.ServiceModel.Description.IContractBehavior">
+  <TypeSignature Language="C#" Value="public interface IContractBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContractBehavior" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IContractBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa métodos que podem ser usados para estender o comportamento de tempo de execução de um contrato em um serviço ou aplicativo cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IContractBehavior> interface para modificar, examinar ou estender algum aspecto da execução de todo o contrato no nível do aplicativo. Ao contrário de <xref:System.ServiceModel.Description.IServiceBehavior> e <xref:System.ServiceModel.Description.IEndpointBehavior> objetos, <xref:System.ServiceModel.Description.IContractBehavior> objetos não podem ser adicionados ao tempo de execução usando um arquivo de configuração do aplicativo; eles só podem ser adicionados programaticamente ou usando um atributo.  
+  
+ Para obter mais informações sobre como escolher entre o serviço de ponto de extremidade e comportamentos de contrato, consulte [Configurando e estendendo o tempo de execução com comportamentos](~/docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+  
+-   Use o <xref:System.ServiceModel.Description.IContractBehavior.AddBindingParameters%2A> método para fornecer dados personalizados para suportar o comportamento de elementos de associação.  
+  
+-   Use o <xref:System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior%2A> método para modificar, examinar ou inserir extensões a um contrato em um aplicativo cliente.  
+  
+-   Use o <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> método para modificar, examinar ou inserir extensões a um contrato em um aplicativo de serviço.  
+  
+-   Use o <xref:System.ServiceModel.Description.IContractBehavior.Validate%2A> método para garantir que um contrato pode dar suporte a um determinado recurso.  
+  
+ <xref:System.ServiceModel.Description.IContractBehavior>podem ser usados de qualquer um desses métodos, mas somente um é importante. Nesses casos, podem retornar os métodos não utilizados sem qualquer valor.  
+  
+> [!NOTE]
+>  Todos os <xref:System.ServiceModel.Description.IContractBehavior> métodos passam <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> como parâmetros. Esses parâmetros são para exame; Se você modificar os objetos, o comportamento de execução é indefinido.  
+  
+ <xref:System.ServiceModel.Description.IContractBehavior>tipos podem ser usados no serviço ou cliente ou ambos. Para executar uma tarefa de personalização do serviço, o <xref:System.ServiceModel.Description.IContractBehavior> objeto deve ser adicionado para o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A> propriedade antes da construção do tempo de execução de serviço, que ocorre quando o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> método é chamado no <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> objeto. Há duas formas de fazer isso.  
+  
+ O primeiro método é adicionar programaticamente o comportamento de contrato personalizados para o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A> propriedade antes do ponto quando o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> método é chamado no <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> objeto. Quando aplicado dessa forma, o comportamento é aplicado para todas as mensagens que passam por esse contrato em qualquer ponto de extremidade.  
+  
+> [!NOTE]
+>  O comportamento é aplicado a todos os contratos do mesmo tipo. Por exemplo, se você adicionar programaticamente o mesmo tipo de contrato para mais de um ponto de extremidade, o comportamento modifica todos os pontos de extremidade que se referem ao mesmo objeto de contrato.  
+  
+ O segundo método é criar um atributo personalizado que implementa <xref:System.ServiceModel.Description.IContractBehavior> e aplicar a:  
+  
+-   Uma interface de contrato. Nesse caso, o comportamento é aplicado a todos os contratos desse tipo em qualquer ponto de extremidade.  
+  
+-   Uma classe de serviço.  Nesse caso, o comportamento é aplicado a todos os pontos de extremidade, independentemente do contrato.  
+  
+-   Uma classe de retorno de chamada.  Nesse caso, o comportamento é aplicado ao ponto de extremidade do cliente duplex.  
+  
+ O comportamento da segunda abordagem varia se o atributo personalizado também implementa <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType>. Nesse caso, o comportamento é o seguinte:  
+  
+-   Uma interface de contrato. Nesse caso, o comportamento é aplicado a todos os contratos desse tipo em qualquer ponto de extremidade e [!INCLUDE[indigo1](~/includes/indigo1-md.md)] ignora o valor da <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> propriedade.  
+  
+-   Uma classe de serviço.  Nesse caso, o comportamento é aplicado somente aos pontos de extremidade de contrato que é o valor da <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> propriedade.  
+  
+-   Uma classe de retorno de chamada.  Nesse caso, o comportamento é aplicado ao ponto de extremidade do cliente duplex e [!INCLUDE[indigo2](~/includes/indigo2-md.md)] ignora o valor da <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> propriedade.  
+  
+ Para executar a tarefa de personalização no cliente para o qual é pretendido, o <xref:System.ServiceModel.Description.IContractBehavior> objeto deve ser adicionado para o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A> propriedade antes da construção do tempo de execução de cliente, que ocorre quando <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> é chamado. Há duas formas de fazer isso:  
+  
+-   Adicionar programaticamente o comportamento de contrato personalizados para o <xref:System.ServiceModel.Description.ContractDescription.Behaviors%2A> propriedade antes do ponto quando o <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> é chamado.  
+  
+-   Criar um atributo personalizado que também implementa <xref:System.ServiceModel.Description.IContractBehavior>.  
+  
+ Para obter mais informações sobre como adicionar programaticamente <xref:System.ServiceModel.Description.IContractBehavior> tipos ao aplicativo cliente ou serviço, consulte [Configurando e estendendo o tempo de execução com comportamentos](~/docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir pressupõe um personalizado <xref:System.ServiceModel.Dispatcher.IInstanceProvider> implementação chamado `ObjectProviderBehavior` que fornece um comportamento de "simples"; ele sempre retorna a mesma instância de serviço e não reciclar.  
+  
+ Para inserir a personalização do provedor de instância, o exemplo mostra como implementar um atributo personalizado (`SingletonBehaviorAttribute`) que implementa <xref:System.ServiceModel.Description.IContractBehavior> para inserir o provedor de instância de serviço personalizado. Ele também implementa <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, que associa o seu uso para o `ISampleService` contrato.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddBindingParameters">
+      <MemberSignature Language="C#" Value="public void AddBindingParameters (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Channels.BindingParameterCollection bindingParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddBindingParameters(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Channels.BindingParameterCollection bindingParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IContractBehavior.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="bindingParameters" Type="System.ServiceModel.Channels.BindingParameterCollection" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">A descrição do contrato para modificar.</param>
+        <param name="endpoint">O ponto de extremidade a ser modificado.</param>
+        <param name="bindingParameters">Os objetos que os elementos de associação necessitam para oferecer suporte ao comportamento.</param>
+        <summary>Configura a qualquer elemento de associação para dar suporte o comportamento de contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IContractBehavior.AddBindingParameters%2A> método para fornecer elementos de associação com os objetos adicionais necessários para dar suporte o comportamento de contrato.  
+  
+ Esse método é chamado uma vez para cada ponto de extremidade que usa o contrato de serviço especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyClientBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyClientBehavior (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime clientRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyClientBehavior(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.ClientRuntime clientRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="clientRuntime" Type="System.ServiceModel.Dispatcher.ClientRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">A descrição do contrato para o qual se destina a extensão.</param>
+        <param name="endpoint">O ponto de extremidade.</param>
+        <param name="clientRuntime">O tempo de execução do cliente.</param>
+        <summary>Implementa uma modificação ou a extensão do cliente em um contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior%2A> método para exibir, modificar ou adicionar extensões personalizadas no tempo de execução do cliente em todas as mensagens ou para uma operação específica. Para obter detalhes sobre as personalizações que você pode fazer com que um objeto de tempo de execução do cliente, consulte <xref:System.ServiceModel.Dispatcher.ClientRuntime> e <xref:System.ServiceModel.Dispatcher.ClientOperation>.  
+  
+ O <xref:System.ServiceModel.Description.IContractBehavior.ApplyClientBehavior%2A> método pode acionar um <xref:System.NotImplementedException> exceção se o comportamento é destinado somente para uso em um aplicativo de serviço.  
+  
+ Esse método é chamado uma vez para cada ponto de extremidade que usa o contrato de serviço especificado.  
+  
+ Observe que pode haver duas operações com o mesmo nome na descrição (um em cada direção), para que se deve iterar por meio de operações em que o contrato é um contrato duplex, você deve correlacionar a direção de mensagem entre o ponto de extremidade <xref:System.ServiceModel.Dispatcher.ClientRuntime> e retornado pelo <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> propriedade.  
+  
+ Como outros comportamentos tenha já adicionado ou removido algumas operações de tempo de execução, não há nenhuma garantia de que há o mesmo número de operações na descrição de como existem <xref:System.ServiceModel.Dispatcher.ClientOperation> objetos no <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir pressupõe um personalizado <xref:System.ServiceModel.Dispatcher.IInstanceProvider> implementação chamado `ObjectProviderBehavior` que fornece um comportamento de "simples"; ele sempre retorna a mesma instância de serviço e não reciclar.  
+  
+ Para inserir a personalização do provedor de instância, o exemplo mostra como implementar um atributo personalizado (`SingletonBehaviorAttribute`) que implementa <xref:System.ServiceModel.Description.IContractBehavior> para inserir o provedor de instância de serviço personalizado. Ele também implementa <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, que associa o seu uso para o `ISampleService` contrato.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyDispatchBehavior">
+      <MemberSignature Language="C#" Value="public void ApplyDispatchBehavior (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyDispatchBehavior(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint, class System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+        <Parameter Name="dispatchRuntime" Type="System.ServiceModel.Dispatcher.DispatchRuntime" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">A descrição do contrato a ser modificado.</param>
+        <param name="endpoint">O ponto de extremidade que expõe o contrato.</param>
+        <param name="dispatchRuntime">O tempo de execução de despacho que controla a execução do serviço.</param>
+        <summary>Implementa uma modificação ou a extensão do cliente em um contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> para exibir, modificar ou adicionar extensões personalizadas no tempo de execução do serviço em todas as mensagens em um contrato específico ou para uma operação específica no contrato. Para obter detalhes sobre as personalizações que você pode executar em um aplicativo de serviço, consulte <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e <xref:System.ServiceModel.Dispatcher.DispatchOperation>.  
+  
+ O <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> método pode acionar um <xref:System.NotImplementedException> exceção se o comportamento é destinado somente para uso em um aplicativo cliente.  
+  
+ Esse método é chamado uma vez para cada ponto de extremidade que usa o contrato de serviço especificado.  
+  
+ Observe que pode haver duas operações com o mesmo nome na descrição (um em cada direção), para que se deve iterar por meio de operações em que o contrato é um contrato duplex, você deve correlacionar a direção de mensagem entre o ponto de extremidade <xref:System.ServiceModel.Dispatcher.DispatchRuntime> e retornado pelo <xref:System.ServiceModel.Dispatcher.DispatchRuntime.CallbackClientRuntime%2A> propriedade.  
+  
+ Além disso, como outros comportamentos tenha já adicionado ou removido algumas operações de tempo de execução, não há nenhuma garantia de que há o mesmo número de operações na descrição de como existem <xref:System.ServiceModel.Dispatcher.DispatchOperation> objetos no <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir pressupõe um personalizado <xref:System.ServiceModel.Dispatcher.IInstanceProvider> implementação chamado `ObjectProviderBehavior` que fornece um comportamento de "simples"; ele sempre retorna a mesma instância de serviço e não reciclar.  
+  
+ Para inserir a personalização do provedor de instância, o exemplo mostra como implementar um atributo personalizado (`SingletonBehaviorAttribute`) que implementa <xref:System.ServiceModel.Description.IContractBehavior> para inserir o provedor de instância de serviço personalizado. Ele também implementa <xref:System.ServiceModel.Description.IContractBehaviorAttribute>, que associa o seu uso para o `ISampleService` contrato.  
+  
+ [!code-csharp[IContractBehavior#2](~/samples/snippets/csharp/VS_Snippets_CFX/icontractbehavior/cs/objectproviderbehavior.cs#2)]
+ [!code-vb[IContractBehavior#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/icontractbehavior/vb/objectproviderbehavior.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public void Validate (System.ServiceModel.Description.ContractDescription contractDescription, System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.ServiceModel.Description.ContractDescription contractDescription, class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IContractBehavior.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractDescription" Type="System.ServiceModel.Description.ContractDescription" />
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="contractDescription">O contrato para validar.</param>
+        <param name="endpoint">O ponto de extremidade para validar.</param>
+        <summary>Implemente para confirmar que o contrato e o ponto de extremidade podem oferecer suporte o comportamento de contrato.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IContractBehavior.Validate%2A> método para confirmar que a descrição do contrato é suficiente para suportar o comportamento de contrato personalizados. Implementações podem inspecionar a descrição e o lançar ou nenhum valor de retorno.  
+  
+ Esse método é chamado uma vez para cada ponto de extremidade que usa o contrato de serviço especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,254 @@
+<Type Name="WebRequestInformation" FullName="System.Web.Management.WebRequestInformation">
+  <TypeSignature Language="C#" Value="public sealed class WebRequestInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebRequestInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Management.WebRequestInformation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre a solicitação da Web atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Monitoramento de integridade do ASP.NET permite que a equipe de produção e operações gerenciar a implantação de aplicativos da Web. O <xref:System.Web.Management> namespace contém os tipos de eventos responsáveis pela compactação de dados de status de integridade do aplicativo e os tipos de provedor responsáveis pelo processamento de dados. Ele também contém tipos de suporte para ajudá-lo durante o gerenciamento de eventos de integridade.  
+  
+ Instâncias do <xref:System.Web.Management.WebRequestInformation> classe contêm informações que são obtidas por meio de <xref:System.Web.Management.WebRequestEvent>, <xref:System.Web.Management.WebAuditEvent>, <xref:System.Web.Management.WebErrorEvent>, ou <xref:System.Web.Management.WebRequestErrorEvent> tipos.  
+  
+ Seu aplicativo precisa as permissões apropriadas para acessar informações protegidas fornecidas por este tipo.  
+  
+> [!NOTE]
+>  Na maioria dos casos, você será capaz de usar os tipos de monitoramento de integridade do ASP.NET, conforme implementado e controlará o sistema de monitoramento de integridade, especificando valores a `healthMonitoring` seção de configuração. Você também pode derivar dos tipos de monitoramento de integridade para criar seus próprios eventos personalizados e provedores. Para obter um exemplo de criação de uma classe de evento personalizado, consulte o exemplo fornecido neste tópico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como implementar um evento personalizado que usa o <xref:System.Web.Management.WebRequestInformation> tipo.  
+  
+ Também é mostrado é um trecho do arquivo de configuração que permite que o ASP.NET usar este evento personalizado.  
+  
+ Certifique-se de que seu evento personalizado é gerado em um momento apropriado, ou seja, quando o evento de integridade do sistema equivalentes substitui será emitido.  
+  
+```  
+<healthMonitoring  
+  heartBeatInterval="0" enabled="true">  
+  
+  <profiles>  
+    <add name="Custom"   
+      minInstances="1"   
+      maxLimit="Infinite"   
+      minInterval="00:00:00" />  
+  </profiles>  
+  
+  <eventMappings>  
+  
+    <add   
+      name="SampleWebRequestInformation"   
+      type="SamplesAspNet.SampleWebRequestInformation,webrequestinformation,Version=1.0.1782.28745, Culture=neutral, PublicKeyToken=79955d9b8521c250,processorArchitecture=MSIL" />  
+  
+  </eventMappings>  
+  
+  <rules>  
+  
+    <add name="Custom Web Request Info Event"   
+      eventName="SampleWebRequestInformation"   
+      provider="EventLogProvider"  
+      profile="Custom" />  
+  
+  </rules>  
+  
+</healthMonitoring>  
+```  
+  
+ [!code-csharp[System.Web.Management.WebRequestInformation#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/CS/webrequestinformation.cs#1)]
+ [!code-vb[System.Web.Management.WebRequestInformation#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/VB/webrequestinformation.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FormatToString">
+      <MemberSignature Language="C#" Value="public void FormatToString (System.Web.Management.WebEventFormatter formatter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FormatToString(class System.Web.Management.WebEventFormatter formatter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Management.WebRequestInformation.FormatToString(System.Web.Management.WebEventFormatter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formatter" Type="System.Web.Management.WebEventFormatter" />
+      </Parameters>
+      <Docs>
+        <param name="formatter">O <see cref="T:System.Web.Management.WebEventFormatter" /> que contém as configurações de recuo e tabulação usadas para formatar as informações de evento de integridade da Web.</param>
+        <summary>Formata as informações de solicitação da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Management.WebRequestInformation.FormatToString%2A> método fornece um formato uniforme para obter informações de evento, que é útil se os dados do evento devem ser registrados e posteriormente apresentados ao usuário. Ele é chamado internamente quando o provedor chama uma da <xref:System.Web.Management.WebBaseEvent.ToString%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como formatar informações personalizadas.  
+  
+ [!code-csharp[System.Web.Management.WebRequestInformation#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/CS/webrequestinformation.cs#9)]
+ [!code-vb[System.Web.Management.WebRequestInformation#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/VB/webrequestinformation.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Principal">
+      <MemberSignature Language="C#" Value="public System.Security.Principal.IPrincipal Principal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Principal.IPrincipal Principal" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebRequestInformation.Principal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Principal.IPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a instância da entidade de segurança de código gerenciado associada com a solicitação da Web.</summary>
+        <value>O <see cref="T:System.Security.Principal.IPrincipal" /> instância que está associada ao evento de solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A entidade de segurança refere-se a entidade autenticada que emitiu a solicitação da Web.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar a entidade de segurança associada à solicitação da Web.  
+  
+ [!code-csharp[System.Web.Management.WebRequestInformation#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/CS/webrequestinformation.cs#8)]
+ [!code-vb[System.Web.Management.WebRequestInformation#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/VB/webrequestinformation.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestPath">
+      <MemberSignature Language="C#" Value="public string RequestPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebRequestInformation.RequestPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho físico da solicitação da Web.</summary>
+        <value>O caminho físico da solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o caminho de solicitação da Web.  
+  
+ [!code-csharp[System.Web.Management.WebRequestInformation#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/CS/webrequestinformation.cs#5)]
+ [!code-vb[System.Web.Management.WebRequestInformation#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/VB/webrequestinformation.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUrl">
+      <MemberSignature Language="C#" Value="public string RequestUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebRequestInformation.RequestUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho lógico da solicitação.</summary>
+        <value>O caminho lógico da solicitação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo de código a seguir mostra como obter o caminho lógico de solicitação da Web.  
+  
+ [!code-csharp[System.Web.Management.WebRequestInformation#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/CS/webrequestinformation.cs#6)]
+ [!code-vb[System.Web.Management.WebRequestInformation#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/VB/webrequestinformation.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThreadAccountName">
+      <MemberSignature Language="C#" Value="public string ThreadAccountName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ThreadAccountName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebRequestInformation.ThreadAccountName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que representa o nome de logon do Windows do usuário em cujo nome o código está sendo executado.</summary>
+        <value>O nome de logon do Windows do usuário em cujo nome o código está sendo executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é determinado pelo atual <xref:System.Security.Principal.WindowsIdentity> do objeto <xref:System.Security.Principal.WindowsIdentity.Name%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserHostAddress">
+      <MemberSignature Language="C#" Value="public string UserHostAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserHostAddress" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Management.WebRequestInformation.UserHostAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço de host do usuário.</summary>
+        <value>O endereço de host do usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O exemplo de código a seguir mostra como obter o endereço de host do usuário.  
+  
+ [!code-csharp[System.Web.Management.WebRequestInformation#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/CS/webrequestinformation.cs#7)]
+ [!code-vb[System.Web.Management.WebRequestInformation#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Management.WebRequestInformation/VB/webrequestinformation.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

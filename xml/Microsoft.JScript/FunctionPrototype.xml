@@ -1,0 +1,137 @@
+<Type Name="FunctionPrototype" FullName="Microsoft.JScript.FunctionPrototype">
+  <TypeSignature Language="C#" Value="public class FunctionPrototype : Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FunctionPrototype extends Microsoft.JScript.ScriptFunction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.FunctionPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ScriptFunction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece propriedades e métodos estáticos <see cref="T:Microsoft.JScript.FunctionObject" /> objetos. Todos os métodos dessa classe são chamados pela passagem de uma referência ao objeto que está solicitando acesso ao método. Essa classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="apply">
+      <MemberSignature Language="C#" Value="public static object apply (object thisob, object thisarg, object argArray);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object apply(object thisob, object thisarg, object argArray) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.FunctionPrototype.apply(System.Object,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Function_apply)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="thisarg" Type="System.Object" />
+        <Parameter Name="argArray" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="thisarg">O escopo padrão atual. O objeto independente de um <see langword="with" /> escopo da instrução ou o escopo global.</param>
+        <param name="argArray">Os argumentos para passar para a função, como um <see cref="T:Microsoft.JScript.ArgumentsObject" /> ou um <see cref="T:Microsoft.JScript.ArrayObject" />.</param>
+        <summary>Chama a função que representa esse objeto, a conversão do objeto do argumento especificado para uma matriz de argumentos se ele precisa.</summary>
+        <returns>O valor de retorno de chamada para a função que esse objeto representa.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="call">
+      <MemberSignature Language="C#" Value="public static object call (object thisob, object thisarg, params object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object call(object thisob, object thisarg, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.FunctionPrototype.call(System.Object,System.Object,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject | Microsoft.JScript.JSFunctionAttributeEnum.HasVarArgs, Microsoft.JScript.JSBuiltin.Function_call)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+        <Parameter Name="thisarg" Type="System.Object" />
+        <Parameter Name="args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <param name="thisarg">O escopo padrão atual. O objeto independente de um <see langword="with" /> escopo da instrução ou o escopo global.</param>
+        <param name="args">Os argumentos para passar para a função como uma matriz.</param>
+        <summary>Chama a função que esse objeto representa.</summary>
+        <returns>O valor de retorno de chamada para a função que esse objeto representa.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public static Microsoft.JScript.FunctionConstructor constructor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.JScript.FunctionConstructor constructor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.JScript.FunctionPrototype.constructor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.JScript.FunctionConstructor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência a um objeto com base no protótipo que está usando esse protótipo.</summary>
+        <value>Uma referência a um objeto de protótipo.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public static string toString (object thisob);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string toString(object thisob) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.JScript.FunctionPrototype.toString(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.JScript.JSFunction(Microsoft.JScript.JSFunctionAttributeEnum.HasThisObject, Microsoft.JScript.JSBuiltin.Function_toString)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="thisob" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="thisob">O objeto que este método é agir sobre.</param>
+        <summary>Cria uma representação de cadeia de caracteres do objeto especificado.</summary>
+        <returns>Uma representação de cadeia de caracteres de <paramref name="thisob" /> que contém o nome da função.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

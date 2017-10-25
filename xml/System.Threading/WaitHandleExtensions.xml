@@ -1,0 +1,138 @@
+<Type Name="WaitHandleExtensions" FullName="System.Threading.WaitHandleExtensions">
+  <TypeSignature Language="C#" Value="public static class WaitHandleExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WaitHandleExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.WaitHandleExtensions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Handles</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos de conveniência para trabalhar com um identificador seguro para um identificador de espera.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Threading.WaitHandleExtensions> classe inclui dois métodos de extensão que permitem a você criar um identificador seguro para um identificador de espera para recuperar o identificador de sistema operacional nativo de um identificador seguro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSafeWaitHandle">
+      <MemberSignature Language="C#" Value="public static Microsoft.Win32.SafeHandles.SafeWaitHandle GetSafeWaitHandle (this System.Threading.WaitHandle waitHandle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Win32.SafeHandles.SafeWaitHandle GetSafeWaitHandle(class System.Threading.WaitHandle waitHandle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandleExtensions.GetSafeWaitHandle(System.Threading.WaitHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SafeHandles.SafeWaitHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandle" Type="System.Threading.WaitHandle" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandle">Um identificador nativo do sistema operacional.</param>
+        <summary>Obtém o identificador seguro para um identificador de espera nativo do sistema operacional.</summary>
+        <returns>Identificador de espera do identificador de espera de segurança que encapsula o sistema operacional nativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitHandleExtensions.GetSafeWaitHandle%2A>é um método de extensão que é equivalente ao recuperar o valor da <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="waitHandle" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSafeWaitHandle">
+      <MemberSignature Language="C#" Value="public static void SetSafeWaitHandle (this System.Threading.WaitHandle waitHandle, Microsoft.Win32.SafeHandles.SafeWaitHandle value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSafeWaitHandle(class System.Threading.WaitHandle waitHandle, class Microsoft.Win32.SafeHandles.SafeWaitHandle value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.WaitHandleExtensions.SetSafeWaitHandle(System.Threading.WaitHandle,Microsoft.Win32.SafeHandles.SafeWaitHandle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Handles</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitHandle" Type="System.Threading.WaitHandle" RefType="this" />
+        <Parameter Name="value" Type="Microsoft.Win32.SafeHandles.SafeWaitHandle" />
+      </Parameters>
+      <Docs>
+        <param name="waitHandle">Um identificador de espera que encapsula um objeto específico do sistema operacional que aguarda o acesso exclusivo a um recurso compartilhado.</param>
+        <param name="value">SafeHandle para encapsular o identificador de sistema operacional.</param>
+        <summary>Define um identificador seguro para um identificador de espera do sistema operacional nativo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Threading.WaitHandleExtensions.SetSafeWaitHandle%2A>é um método de extensão que é equivalente ao atribuir um valor para o <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="waitHandle" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

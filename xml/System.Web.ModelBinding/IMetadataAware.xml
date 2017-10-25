@@ -1,0 +1,44 @@
+<Type Name="IMetadataAware" FullName="System.Web.ModelBinding.IMetadataAware">
+  <TypeSignature Language="C#" Value="public interface IMetadataAware" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMetadataAware" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.IMetadataAware" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um método que deve ser implementado pelas classes de metadados com suporte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface permite que os atributos contribuem para o processo de criação de metadados do modelo sem a necessidade de um provedor de metadados personalizados. É usado pelo <xref:System.Web.ModelBinding.AssociatedMetadataProvider> classe, para que esse comportamento é automaticamente herdado por todas as classes que derivam de <xref:System.Web.ModelBinding.AssociatedMetadataProvider> classe (especialmente o <xref:System.Web.ModelBinding.DataAnnotationsModelMetadataProvider> classe).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnMetadataCreated">
+      <MemberSignature Language="C#" Value="public void OnMetadataCreated (System.Web.ModelBinding.ModelMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnMetadataCreated(class System.Web.ModelBinding.ModelMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.IMetadataAware.OnMetadataCreated(System.Web.ModelBinding.ModelMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Web.ModelBinding.ModelMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados.</param>
+        <summary>Permite que os atributos com suporte a metadados executar o processamento necessário de metadados depois que os metadados são criados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

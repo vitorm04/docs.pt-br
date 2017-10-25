@@ -1,0 +1,96 @@
+<Type Name="EvidenceBase" FullName="System.Security.Policy.EvidenceBase">
+  <TypeSignature Language="C#" Value="public abstract class EvidenceBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit EvidenceBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.EvidenceBase" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base da qual todos os objetos a serem usadas como evidência deve derivar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Antes do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], praticamente qualquer object pode ser usado como um objeto de evidência se quiser que o código de hospedagem para aplicá-lo como evidência. Por exemplo, um código do .NET Framework reconhecido <xref:System.Uri?displayProperty=nameWithType> objetos como evidência. O common language runtime (CLR) considerados objetos de evidência como <xref:System.Object?displayProperty=nameWithType> faz referência e não foi aplicada a qualquer tipo de segurança a eles.  
+  
+ Isso apresentado um problema porque não havia implícita restrições nos quais tipos de podem ser usados como objetos de evidência. Especificamente, qualquer objeto usado como evidência precisava ser serializável e não pôde ser `null`. Se esses requisitos não foram atendidos, o CLR lançou uma exceção sempre que uma operação que exigia um nessas pressuposições foi executada.  
+  
+ O <xref:System.Security.Policy.EvidenceBase> classe, que todos os objetos de evidência devem derivar de, foi introduzido no [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] para habilitar restrições sobre os tipos de objetos que podem ser usados como evidência e fornecer a capacidade de adicionar novos recursos e requisitos para todos os objetos de evidência. O <xref:System.Security.Policy.EvidenceBase> classe garante que, após a instanciação, que o objeto de evidência é serializável. Além disso, ele permite que novos requisitos de evidência a ser criado pela adição de novas implementações padrão para a classe base.  
+  
+ Todos os tipos usados pelo CLR como objetos de evidência foram atualizados a [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)] derivar <xref:System.Security.Policy.EvidenceBase>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EvidenceBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.EvidenceBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Policy.EvidenceBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os objetos a serem usadas como evidência devem ser serializáveis. Você deve marcar qualquer tipos derivados como serializável, como o atributo serializable não se propagam para classes derivadas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Um objeto a ser usado como evidência não é serializável.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Policy.EvidenceBase Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.EvidenceBase Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.EvidenceBase.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.EvidenceBase</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto que é uma cópia completa da instância atual.</summary>
+        <returns>Uma cópia deste objeto de evidência.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cópia é uma cópia completa que inclui todos os objetos de evidência na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

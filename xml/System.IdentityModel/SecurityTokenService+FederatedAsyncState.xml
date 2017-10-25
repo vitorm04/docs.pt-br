@@ -1,0 +1,139 @@
+<Type Name="SecurityTokenService+FederatedAsyncState" FullName="System.IdentityModel.SecurityTokenService+FederatedAsyncState">
+  <TypeSignature Language="C#" Value="protected class SecurityTokenService.FederatedAsyncState" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit SecurityTokenService/FederatedAsyncState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.SecurityTokenService.FederatedAsyncState" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe é usada para manter o estado de solicitação entre chamadas assíncronas dentro de um serviço de token de segurança.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederatedAsyncState (System.IdentityModel.SecurityTokenService.FederatedAsyncState federatedAsyncState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.SecurityTokenService/FederatedAsyncState federatedAsyncState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.SecurityTokenService.FederatedAsyncState.#ctor(System.IdentityModel.SecurityTokenService.FederatedAsyncState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="federatedAsyncState" Type="System.IdentityModel.SecurityTokenService+FederatedAsyncState" />
+      </Parameters>
+      <Docs>
+        <param name="federatedAsyncState">O <see cref="T:System.IdentityModel.SecurityTokenService.FederatedAsyncState" /> instância do qual criar a nova instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.SecurityTokenService.FederatedAsyncState" /> classe especificado <see cref="T:System.IdentityModel.SecurityTokenService.FederatedAsyncState" /> objeto. Este construtor cria efetivamente uma cópia da instância especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="federatedAsyncState" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FederatedAsyncState (System.IdentityModel.Protocols.WSTrust.RequestSecurityToken request, System.Security.Claims.ClaimsPrincipal principal, IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken request, class System.Security.Claims.ClaimsPrincipal principal, class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.SecurityTokenService.FederatedAsyncState.#ctor(System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.Security.Claims.ClaimsPrincipal,System.IAsyncResult)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="request" Type="System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" />
+        <Parameter Name="principal" Type="System.Security.Claims.ClaimsPrincipal" />
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="request">A solicitação de token.</param>
+        <param name="principal">A identidade do solicitante.</param>
+        <param name="result">Um <see cref="T:System.IAsyncResult" /> que representa o status da chamada assíncrona.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.SecurityTokenService.FederatedAsyncState" /> classe com a token solicitação especificada (primeira) solicitante de token, e <see cref="T:System.IAsyncResult" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="request" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="result" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClaimsPrincipal">
+      <MemberSignature Language="C#" Value="public System.Security.Claims.ClaimsPrincipal ClaimsPrincipal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Claims.ClaimsPrincipal ClaimsPrincipal" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.SecurityTokenService.FederatedAsyncState.ClaimsPrincipal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Claims.ClaimsPrincipal</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a identidade do solicitante token associado à chamada assíncrona.</summary>
+        <value>A identidade do solicitante de token.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.RequestSecurityToken Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.RequestSecurityToken Request" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.SecurityTokenService.FederatedAsyncState.Request" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.RequestSecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a solicitação de token (primeira) associada à chamada assíncrona.</summary>
+        <value>A solicitação de token associada à chamada assíncrona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public IAsyncResult Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IAsyncResult Result" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.SecurityTokenService.FederatedAsyncState.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.IAsyncResult" /> associado à chamada assíncrona.</summary>
+        <value>Um <see cref="T:System.IAsyncResult" /> que representa o status da chamada assíncrona.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenHandler">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityTokenHandler SecurityTokenHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityTokenHandler SecurityTokenHandler" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.SecurityTokenService.FederatedAsyncState.SecurityTokenHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityTokenHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o manipulador de token de segurança que será usado durante uma chamada assíncrona de emissão de token.</summary>
+        <value>O manipulador de token que será usado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

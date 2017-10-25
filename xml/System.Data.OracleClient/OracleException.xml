@@ -1,0 +1,77 @@
+<Type Name="OracleException" FullName="System.Data.OracleClient.OracleException">
+  <TypeSignature Language="C#" Value="public sealed class OracleException : System.Data.Common.DbException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit OracleException extends System.Data.Common.DbException" />
+  <TypeSignature Language="DocId" Value="T:System.Data.OracleClient.OracleException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção gerada quando um aviso ou erro é retornado por um banco de dados Oracle ou pelo Provedor de Dados .NET Framework para Oracle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é criada sempre que o <xref:System.Data.OracleClient.OracleDataAdapter> encontrar uma situação que não pode tratar.  
+  
+ Se a severidade do erro for muito grande, o servidor poderá fechar o <xref:System.Data.OracleClient.OracleConnection>. No entanto, o usuário pode reabrir a conexão e continuar.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir gera um <xref:System.Data.OracleClient.OracleException> devido a um banco de dados ausente e, em seguida, exibe a exceção.  
+  
+ [!code-csharp[Classic WebData OracleException#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OracleException/CS/source.cs#1)]
+ [!code-vb[Classic WebData OracleException#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OracleException/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="public int Code { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Code" />
+      <MemberSignature Language="DocId" Value="P:System.Data.OracleClient.OracleException.Code" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a parte de código do erro como um inteiro.</summary>
+        <value>A parte de código do erro como um inteiro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.OracleClient.OracleException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.OracleClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> com informações sobre a exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

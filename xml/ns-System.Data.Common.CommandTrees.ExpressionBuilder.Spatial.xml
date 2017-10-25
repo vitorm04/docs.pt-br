@@ -1,0 +1,6 @@
+<Namespace Name="System.Data.Common.CommandTrees.ExpressionBuilder.Spatial">
+  <Docs>
+    <summary>O <see cref="N:System.Data.Common.CommandTrees.ExpressionBuilder.Spatial" /> namespace contém uma classe que representam as funções de modelo de dados de entidade (EDM) de um.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

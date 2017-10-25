@@ -1,0 +1,128 @@
+<Type Name="ComplexObject" FullName="System.Data.Objects.DataClasses.ComplexObject">
+  <TypeSignature Language="C#" Value="public abstract class ComplexObject : System.Data.Objects.DataClasses.StructuralObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ComplexObject extends System.Data.Objects.DataClasses.StructuralObject" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.ComplexObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.StructuralObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract(IsReference=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Classe base de tipos complexos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Objects.DataClasses.ComplexObject>implementa a funcionalidade básica para tipos complexos. Para obter mais informações, consulte [objetos complexos do tipo](http://msdn.microsoft.com/en-us/34d5c570-a891-42b8-80ae-20e96eedc3af).  
+  
+ Ao implementar classes de dados personalizado com um modelo conceitual, recomendamos que suas classes de dados que representam tipos complexos herdam <xref:System.Data.Objects.DataClasses.ComplexObject>. Para obter mais informações, consulte [personalizando objetos](http://msdn.microsoft.com/en-us/af6f07ce-2261-4c65-87cf-d018ad082921).  
+  
+ Um tipo complexo pode ser uma propriedade de um tipo de entidade ou de outro tipo complexo.  
+  
+ Tipos complexos são retornados pelas propriedades não escalares de tipos de entidade. Isso permite que propriedades escalares sejam organizadas dentro de entidades. Como as entidades, tipos complexos consistem de propriedades escalares ou outras propriedades de tipo complexo. Um tipo complexo não pode ser usado sem um tipo de entidade associada. Como os tipos complexos têm chaves, objetos de tipo complexo não podem ser gerenciados sem um tipo de entidade associada. Para obter mais informações, consulte [objetos complexos do tipo](http://msdn.microsoft.com/en-us/34d5c570-a891-42b8-80ae-20e96eedc3af).  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, a classe de dados personalizados `OrderInfo` herda de <xref:System.Data.Objects.DataClasses.ComplexObject> e é mapeado para o `OrderInfo` definido no modelo conceitual de tipo complexo.  
+  
+ [!code-csharp[DP EntityObject Concepts#EntityObject](~/samples/snippets/csharp/VS_Snippets_Data/DP EntityObject Concepts/CS/SalesObjects.cs#entityobject)]
+ [!code-vb[DP EntityObject Concepts#EntityObject](~/samples/snippets/visualbasic/VS_Snippets_Data/DP EntityObject Concepts/VB/SalesObjects.vb#entityobject)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComplexObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.ComplexObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Data.Objects.DataClasses.ComplexObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override sealed void ReportPropertyChanged (string property);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ReportPropertyChanged(string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.ComplexObject.ReportPropertyChanged(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="property">O nome da propriedade alterada.</param>
+        <summary>Notifica o rastreador de alteração que uma propriedade de um objeto complexo foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um tipo complexo é gerado pelas ferramentas do modelo de dados de entidade, o <xref:System.Data.Objects.DataClasses.ComplexObject.ReportPropertyChanged%2A> método é chamado após uma alteração de propriedade para confirmar o valor armazenado em cache o <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> como o valor original da propriedade.  
+  
+ Este método chama o <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanged%2A> método no controlador de alterações.  
+  
+ Quando o controle de alterações que são feitas para a propriedade de um objeto complexo personalizado, você deve chamar <xref:System.Data.Objects.DataClasses.ComplexObject.ReportPropertyChanged%2A>. Faça isso quando o objeto complexo herda de <xref:System.Data.Objects.DataClasses.ComplexObject>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="property" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportPropertyChanging">
+      <MemberSignature Language="C#" Value="protected override sealed void ReportPropertyChanging (string property);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ReportPropertyChanging(string property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Objects.DataClasses.ComplexObject.ReportPropertyChanging(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="property">O nome da propriedade a alterar.</param>
+        <summary>Notifica o rastreador de alteração que uma alteração de propriedade está pendente em um objeto complexo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um tipo complexo é gerado pelas ferramentas do modelo de dados de entidade, o <xref:System.Data.Objects.DataClasses.ComplexObject.ReportPropertyChanging%2A> método é chamado antes de uma alteração de propriedade para armazenar em cache o valor atual da propriedade no <xref:System.Data.Objects.DataClasses.IEntityChangeTracker> para que esse valor pode ser usado como o valor original da propriedade.  
+  
+ Este método chama o <xref:System.Data.Objects.DataClasses.IEntityChangeTracker.EntityComplexMemberChanging%2A> método no controlador de alterações.  
+  
+ Quando o controle de alterações que são feitas para a propriedade de um objeto complexo personalizado, você deve chamar <xref:System.Data.Objects.DataClasses.ComplexObject.ReportPropertyChanging%2A>. Faça isso quando o objeto complexo herda de <xref:System.Data.Objects.DataClasses.ComplexObject>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="property" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

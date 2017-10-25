@@ -1,0 +1,170 @@
+<Type Name="PropertyFilterAttribute" FullName="System.ComponentModel.PropertyFilterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class PropertyFilterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyFilterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.PropertyFilterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica quais propriedades devem ser relatadas por descritores de tipo, especificamente o método <see cref="M:System.ComponentModel.TypeDescriptor.GetProperties(System.Object)" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.PropertyFilterAttribute> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] oferece suporte a um mecanismo interno que limita o número de propriedades em um tipo que são retornados pelo personalizado <xref:System.Windows.DependencyObject> descritor de tipo. Se o [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] for encontrado, o descritor de tipo limita o escopo de propriedades retornadas. <xref:System.ComponentModel.PropertyFilterAttribute>difere típico [!INCLUDE[TLA#tla_netframewkattr#plural](~/includes/tlasharptla-netframewkattrsharpplural-md.md)] porque não é possível aplicá-la a uma classe como metadados. O mecanismo de filtro funciona por meio de código em vez de por meio de metadados estático.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyFilterAttribute (System.ComponentModel.PropertyFilterOptions filter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ComponentModel.PropertyFilterOptions filter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyFilterAttribute.#ctor(System.ComponentModel.PropertyFilterOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filter" Type="System.ComponentModel.PropertyFilterOptions" />
+      </Parameters>
+      <Docs>
+        <param name="filter">As opções que descrevem esse filtro de propriedade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.PropertyFilterAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.PropertyFilterAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.PropertyFilterAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.PropertyFilterAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_netframewk](~/includes/tlasharptla-netframewk-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyFilterAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado a este <see cref="T:System.ComponentModel.PropertyFilterAttribute" />.</param>
+        <summary>Retorna um valor que indica se o atual <see cref="T:System.ComponentModel.PropertyFilterAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] é igual ao objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.ComponentModel.PropertyFilterAttribute" /> especificado for igual ao <see cref="T:System.ComponentModel.PropertyFilterAttribute" /> atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação compara o <xref:System.ComponentModel.PropertyFilterOptions> valores em cada <xref:System.ComponentModel.PropertyFilterAttribute> para igualdade de valor. Se o <xref:System.ComponentModel.PropertyFilterOptions> é o mesmo, então os dois <xref:System.ComponentModel.PropertyFilterAttribute> instâncias são iguais.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.PropertyFilterOptions Filter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ComponentModel.PropertyFilterOptions Filter" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.PropertyFilterAttribute.Filter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyFilterOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as opções de filtro para este <see cref="T:System.ComponentModel.PropertyFilterAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)].</summary>
+        <value>As opções de filtro de propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.ComponentModel.PropertyFilterAttribute.Filter%2A> é o mesmo valor que foi fornecido para o `filter` argumento do construtor de quando isso <xref:System.ComponentModel.PropertyFilterAttribute> foi construído. Não há nenhum outro meio de configuração de <xref:System.ComponentModel.PropertyFilterAttribute.Filter%2A> valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyFilterAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para a atual <see cref="T:System.ComponentModel.PropertyFilterAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)].</summary>
+        <returns>Um valor inteiro de 32 bits com sinal.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public override bool Match (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Match(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.PropertyFilterAttribute.Match(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser comparado. Este objeto deve ser um <see cref="T:System.ComponentModel.PropertyFilterAttribute" />.</param>
+        <summary>Retorna um valor que indica se a propriedade filtrar opções do atual <see cref="T:System.ComponentModel.PropertyFilterAttribute" /> [!INCLUDE[TLA#tla_netframewkattr](~/includes/tlasharptla-netframewkattr-md.md)] corresponde às opções de filtro de propriedade do objeto fornecido.</summary>
+        <returns>
+          <see langword="true" />Se houver uma correspondência; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para atributos que armazenam sinalizadores, que é verdadeiro para <xref:System.ComponentModel.PropertyFilterAttribute>, um <xref:System.ComponentModel.PropertyFilterAttribute.Match%2A> resultado pode ser diferente de um <xref:System.ComponentModel.PropertyFilterAttribute.Equals%2A> resultados. Por exemplo, um filtro de <xref:System.ComponentModel.PropertyFilterOptions.SetValues> corresponde a um filtro de <xref:System.ComponentModel.PropertyFilterOptions.All>, pois <xref:System.ComponentModel.PropertyFilterOptions.All> é uma mesclagem de todos os valores de filtro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,292 @@
+<Type Name="PerformanceCounterInstaller" FullName="System.Diagnostics.PerformanceCounterInstaller">
+  <TypeSignature Language="C#" Value="public class PerformanceCounterInstaller : System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PerformanceCounterInstaller extends System.Configuration.Install.ComponentInstaller" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterInstaller" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.Install.ComponentInstaller</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um instalador para o componente <see cref="T:System.Diagnostics.PerformanceCounter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações a seguir podem ajudar a fornecer uma melhoria de desempenho ao instalar contadores de desempenho na inicialização do aplicativo. Categorias de contador de desempenho instaladas com o .NET Framework versão 2.0 usam memórias compartilhadas separadas, com cada categoria de contador de desempenho com sua própria memória. Você pode especificar o tamanho da memória compartilhada separado, criando um DWORD chamado FileMappingSize na chave do registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nome da categoria >*\Performance. O valor de FileMappingSize é definido como o tamanho de memória compartilhada da categoria. O tamanho padrão é 131072 decimal. Se o valor de FileMappingSize não estiver presente, o `fileMappingSize` atributo de valor para o `performanceCounters` elemento especificado no arquivo Machine. config é usado, causando uma sobrecarga adicional para o processamento do arquivo de configuração. Você pode obter uma melhoria de desempenho de inicialização do aplicativo, definindo o tamanho de arquivo de mapeamento no registro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um <xref:System.Diagnostics.PerformanceCounterInstaller> de objeto e adicioná-lo para um <xref:System.Configuration.Install.InstallerCollection>.  
+  
+ [!code-cpp[PerformanceCounterInstaller#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterInstaller/CPP/performancecounterinstaller.cpp#1)]
+ [!code-csharp[PerformanceCounterInstaller#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterInstaller/CS/performancecounterinstaller.cs#1)]
+ [!code-vb[PerformanceCounterInstaller#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterInstaller/VB/performancecounterinstaller.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PerformanceCounterInstaller ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.PerformanceCounterInstaller" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryHelp">
+      <MemberSignature Language="C#" Value="public string CategoryHelp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryHelp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.CategoryHelp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a mensagem descritiva para o contador de desempenho.</summary>
+        <value>A mensagem descritiva para o contador de desempenho.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é definido como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryName">
+      <MemberSignature Language="C#" Value="public string CategoryName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryName" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.CategoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter("System.Diagnostics.Design.StringValueConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da categoria de desempenho para o contador de desempenho.</summary>
+        <value>O nome da categoria de desempenho para o contador de desempenho.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é definido como <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O valor não é um nome de categoria válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterCategoryType CategoryType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterCategoryType CategoryType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.CategoryType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de categoria de contador de desempenho.</summary>
+        <value>Um dos valores de <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Diagnostics.PerformanceCounterInstaller.CategoryType%2A> propriedade especifica se a categoria do contador de desempenho pode ter várias instâncias.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor não é um <see cref="T:System.Diagnostics.PerformanceCounterCategoryType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFromComponent">
+      <MemberSignature Language="C#" Value="public override void CopyFromComponent (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void CopyFromComponent(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.CopyFromComponent(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para copiar de.</param>
+        <summary>Copia todas as propriedades do componente especificado que são necessários no tempo para um contador de desempenho de instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.PerformanceCounterInstaller>pode instalar vários contadores somente na mesma categoria.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O componente especificado não é um <see cref="T:System.Diagnostics.PerformanceCounter" />.  
+  
+ -ou-  
+  
+ Especificado <see cref="T:System.Diagnostics.PerformanceCounter" /> está incompleta.  
+  
+ -ou-  
+  
+ Vários contadores em categorias diferentes estão tentando ser instalado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Counters">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.CounterCreationDataCollection Counters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Diagnostics.CounterCreationDataCollection Counters" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.Counters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.CounterCreationDataCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de dados que pertencem aos contadores para instalar.</summary>
+        <value>Um <see cref="T:System.Diagnostics.CounterCreationDataCollection" /> que contém os nomes, mensagens de Ajuda e tipos de contadores para instalar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Install">
+      <MemberSignature Language="C#" Value="public override void Install (System.Collections.IDictionary stateSaver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Install(class System.Collections.IDictionary stateSaver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.Install(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateSaver" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="stateSaver">Um <see cref="T:System.Collections.IDictionary" /> que é usado para salvar as informações necessárias para executar um commit, rollback, ou a operação de desinstalação.</param>
+        <summary>Realiza a instalação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Ao instalar um serviço e um contador de desempenho com o mesmo nome, instale o serviço antes de instalar o contador de desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public override void Rollback (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Rollback(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.Rollback(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado de pré-instalação do computador.</param>
+        <summary>Restaura o computador para o estado em que estava antes da instalação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uninstall">
+      <MemberSignature Language="C#" Value="public override void Uninstall (System.Collections.IDictionary savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Uninstall(class System.Collections.IDictionary savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.PerformanceCounterInstaller.Uninstall(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Collections.IDictionary" /> que contém o estado após a instalação do computador.</param>
+        <summary>Remove uma instalação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UninstallAction">
+      <MemberSignature Language="C#" Value="public System.Configuration.Install.UninstallAction UninstallAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Configuration.Install.UninstallAction UninstallAction" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.PerformanceCounterInstaller.UninstallAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Install.UninstallAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o contador de desempenho deve ser removido no momento da desinstalação.</summary>
+        <value>Um dos valores de <see cref="T:System.Configuration.Install.UninstallAction" />. O padrão é <see langword="Remove" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O valor não é um <see cref="T:System.Configuration.Install.UninstallAction" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,959 @@
+<Type Name="RemotingConfiguration" FullName="System.Runtime.Remoting.RemotingConfiguration">
+  <TypeSignature Language="C#" Value="public static class RemotingConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit RemotingConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.RemotingConfiguration" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece vários métodos estáticos para configurar a infraestrutura de comunicação remota.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationId">
+      <MemberSignature Language="C#" Value="public static string ApplicationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ApplicationId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.RemotingConfiguration.ApplicationId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do aplicativo em execução no momento.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a ID do aplicativo em execução no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ID do aplicativo é anexada ao URI dos objetos criados pelo aplicativo em execução no momento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationName">
+      <MemberSignature Language="C#" Value="public static string ApplicationName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ApplicationName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.RemotingConfiguration.ApplicationName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de um aplicativo de comunicação remota.</summary>
+        <value>O nome de um aplicativo de comunicação remota.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nome de aplicativo pode ser definido apenas uma vez, por meio da propriedade atual ou por meio de um arquivo de configuração. Se um aplicativo estiver em execução dentro de um ambiente hospedado, como os serviços de informações da Internet (IIS), esse valor pode ter já foi definido (normalmente para o diretório virtual). A propriedade current retornará `null` se o nome do aplicativo não foi definido.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.Remoting.RemotingConfiguration.ApplicationName%2A> propriedade para indicar o nome do aplicativo de comunicação remota. Para o código de exemplo completo, consulte os exemplos para o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> e <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownServiceType%2A> métodos.  
+  
+ [!code-cpp[RemotingConfiguration.ServerActivation1#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/server.cpp#2)]
+ [!code-csharp[RemotingConfiguration.ServerActivation1#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/server.cs#2)]
+ [!code-vb[RemotingConfiguration.ServerActivation1#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/server.vb#2)]  
+  
+ O exemplo de código a seguir demonstra como acessar um objeto remoto de um aplicativo nomeado.  
+  
+ [!code-cpp[RemotingConfiguration.ServerActivation1#6](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/client.cpp#6)]
+ [!code-csharp[RemotingConfiguration.ServerActivation1#6](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/client.cs#6)]
+ [!code-vb[RemotingConfiguration.ServerActivation1#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/client.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota. Essa exceção é gerada apenas ao definir o valor da propriedade.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Configure">
+      <MemberSignature Language="C#" Value="public static void Configure (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Configure(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.Configure(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use Configure(String,Boolean)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo de configuração de comunicação remota. Pode ser <see langword="null" />.</param>
+        <summary>Lê o arquivo de configuração e configura a infraestrutura de comunicação remota. <see cref="M:System.Runtime.Remoting.RemotingConfiguration.Configure(System.String)" /> é obsoleto. Use <see cref="M:System.Runtime.Remoting.RemotingConfiguration.Configure(System.String,System.Boolean)" /> em seu lugar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%28System.String%29> é obsoleto. Use <xref:System.Runtime.Remoting.RemotingConfiguration.Configure%28System.String%2CSystem.Boolean%29> em seu lugar.  
+  
+ Passando `null` como o `filename` parâmetro fará com que a inicialização de comunicação remota padrão sem exigir a existência de um arquivo de configuração.  
+  
+ Para obter a sintaxe do arquivo de configuração, consulte [esquema de configurações de comunicação remota](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e).  
+  
+> [!NOTE]
+>  Objetos de marshaling por referência (MBRs) não estão na memória para sempre. Em vez disso, a menos que o tipo substitui <xref:System.MarshalByRefObject.InitializeLifetimeService%2A?displayProperty=nameWithType> para controlar suas próprias diretivas de tempo de vida, cada MBR tem um tempo de vida finito antes do sistema de comunicação remota do .NET Framework começa o processo de exclusão e recuperação de memória. Para obter mais informações, consulte [concessões de tempo de vida](http://msdn.microsoft.com/en-us/c72d561c-1266-4c8b-b258-2c168c08da9a).  
+  
+   
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_Configure_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_Configure_Client/CPP/remotingconfiguration_configure_server.cpp#1)]
+ [!code-csharp[RemotingConfiguration_Configure_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_Configure_Client/CS/remotingconfiguration_configure_server.cs#1)]
+ [!code-vb[RemotingConfiguration_Configure_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_Configure_Client/VB/remotingconfiguration_configure_server.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Configure">
+      <MemberSignature Language="C#" Value="public static void Configure (string filename, bool ensureSecurity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Configure(string filename, bool ensureSecurity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.Configure(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+        <Parameter Name="ensureSecurity" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="filename">O nome do arquivo de configuração de comunicação remota. Pode ser <see langword="null" />.</param>
+        <param name="ensureSecurity">Se definido como <see langword="true" /> a segurança é necessária. Se definido como <see langword="false" />, segurança não é necessária, mas ainda podem ser usadas.</param>
+        <summary>Lê o arquivo de configuração e configura a infraestrutura de comunicação remota.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Passando `null` como o `filename` parâmetro fará com que a inicialização de comunicação remota padrão sem exigir a existência de um arquivo de configuração. Para obter mais informações sobre segurança e comunicação remota consulte [segurança na comunicação remota.](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)  
+  
+ Para obter a sintaxe do arquivo de configuração, consulte [esquema de configurações de comunicação remota](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e).  
+  
+> [!NOTE]
+>  Objetos de marshaling por referência (MBRs) não estão na memória para sempre. Em vez disso, a menos que o tipo substitui <xref:System.MarshalByRefObject.InitializeLifetimeService%2A?displayProperty=nameWithType> para controlar suas próprias diretivas de tempo de vida, cada MBR tem um tempo de vida finito antes do sistema de comunicação remota do .NET Framework começa o processo de exclusão e recuperação de memória. Para obter mais informações, consulte [concessões de tempo de vida](http://msdn.microsoft.com/en-us/c72d561c-1266-4c8b-b258-2c168c08da9a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomErrorsEnabled">
+      <MemberSignature Language="C#" Value="public static bool CustomErrorsEnabled (bool isLocalRequest);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CustomErrorsEnabled(bool isLocalRequest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.CustomErrorsEnabled(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isLocalRequest" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isLocalRequest">
+          <see langword="true" />para especificar o locais chamadores; <see langword="false" /> para especificar a chamadores remotos.</param>
+        <summary>Indica se os canais de servidor neste domínio de aplicativo retornam informações de exceção completa ou filtrada para chamadores locais ou remotos.</summary>
+        <returns>
+          <see langword="true" />Se apenas filtrados informações de exceção é retornado para chamadores locais ou remotos, conforme especificado pelo <paramref name="isLocalRequest" /> parâmetro; <see langword="false" /> se completa informações de exceção são retornadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações de exceção completa incluem a exceção de servidor exata e o rastreamento de pilha do servidor. Informações filtradas incluem uma exceção de comunicação remota padrão, mas nenhum rastreamento de pilha do servidor.  
+  
+ O `CustomErrorsEnabled` método reflete as definições de configuração que foram especificadas no `mode` atributo do `<customErrors>` elemento do arquivo de configuração do aplicativo. Para obter mais informações sobre opções de configuração, consulte [&#91;\< Topic://cpconconfiguration > &#93; ](http://msdn.microsoft.com/en-us/92c0c097-d984-4315-835b-7490ecdf1097).  
+  
+ A tabela a seguir mostra o canal do servidor de três valores de propriedades que especificam quais chamadores recebem informações de exceção e o tipo de informação que eles recebem.  
+  
+|Valor|Descrição|  
+|-----------|-----------------|  
+|`off`|Todos os chamadores recebem informações de exceção completa.|  
+|`on`|Todos os chamadores recebem informações de exceção filtrados.|  
+|`remoteOnly`|Chamadores locais recebem informações de exceção completa; chamadores remotos recebem informações de exceção filtrados.|  
+  
+ A tabela a seguir mostra a interação entre o `isLocalRequest` parâmetro e o servidor de propriedade do canal.  
+  
+|Valor|isLocalRequest|Valor retornado|Descrição|  
+|-----------|--------------------|------------------|-----------------|  
+|`on`|`true`|`true`|Chamadores locais recebem informações de exceção filtrados.|  
+|`on`|`false`|`true`|Chamadores remotos recebem informações de exceção filtrados.|  
+|`off`|`true`|`false`|Chamadores locais recebem informações de exceção completa.|  
+|`off`|`false`|`false`|Chamadores remotos recebem informações de exceção completa.|  
+|`remoteOnly`|`true`|`false`|Chamadores locais recebem informações de exceção completa.|  
+|`remoteOnly`|`false`|`true`|Chamadores remotos recebem informações de exceção filtrados.|  
+  
+ Para obter informações sobre como usar arquivos de configuração do aplicativo para controlar o retorno de informações de exceção para chamadores, consulte o `<customErrors>` elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomErrorsMode">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.CustomErrorsModes CustomErrorsMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Runtime.Remoting.CustomErrorsModes CustomErrorsMode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.RemotingConfiguration.CustomErrorsMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.CustomErrorsModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica como os erros personalizados são tratados.</summary>
+        <value>Um membro da enumeração <see cref="T:System.Runtime.Remoting.CustomErrorsModes" /> que indica como os erros personalizados são tratados.</value>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegisteredActivatedClientTypes">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ActivatedClientTypeEntry[] GetRegisteredActivatedClientTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ActivatedClientTypeEntry[] GetRegisteredActivatedClientTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.GetRegisteredActivatedClientTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ActivatedClientTypeEntry[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de tipos de objeto registrado no cliente, como tipos serão ativados remotamente.</summary>
+        <returns>Uma matriz de tipos de objeto registrado no cliente, como tipos serão ativados remotamente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma descrição detalhada de objetos ativado pelo cliente, consulte [&#91;\< Topic://cpconClientActivation > &#93; ](http://msdn.microsoft.com/en-us/4a791494-c18a-4711-a5c1-4ab0e49a8f1a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegisteredActivatedServiceTypes">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ActivatedServiceTypeEntry[] GetRegisteredActivatedServiceTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ActivatedServiceTypeEntry[] GetRegisteredActivatedServiceTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.GetRegisteredActivatedServiceTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ActivatedServiceTypeEntry[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de tipos de objeto registrado no lado do serviço pode ser ativado na solicitação de um cliente.</summary>
+        <returns>Uma matriz de tipos de objeto registrado no lado do serviço pode ser ativado na solicitação de um cliente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma descrição detalhada de objetos ativado pelo cliente, consulte [&#91;\< Topic://cpconClientActivation > &#93; ](http://msdn.microsoft.com/en-us/4a791494-c18a-4711-a5c1-4ab0e49a8f1a).  
+  
+   
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_GetRegisteredActivatedServer_Client#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredActivatedServer_Client/CPP/RemotingConfiguration_GetRegisteredActivatedService_server.cpp#2)]
+ [!code-csharp[RemotingConfiguration_GetRegisteredActivatedServer_Client#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredActivatedServer_Client/CS/remotingconfiguration_getregisteredactivatedservice_server.cs#2)]
+ [!code-vb[RemotingConfiguration_GetRegisteredActivatedServer_Client#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredActivatedServer_Client/VB/remotingconfiguration_getregisteredactivatedservice_server.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegisteredWellKnownClientTypes">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.WellKnownClientTypeEntry[] GetRegisteredWellKnownClientTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.WellKnownClientTypeEntry[] GetRegisteredWellKnownClientTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.GetRegisteredWellKnownClientTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.WellKnownClientTypeEntry[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de tipos de objeto registrado no lado do cliente como tipos conhecidos.</summary>
+        <returns>Uma matriz de tipos de objeto é registrado no lado do cliente como tipos conhecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de objeto Well-Known podem ser chamada único ou singleton. Se um tipo de objeto for a única chamada, uma nova instância dele é criada sempre que uma chamada do cliente for. Todas as chamadas para um objeto de singleton são tratadas por uma instância do objeto.  
+  
+ Para obter uma descrição mais detalhada de objetos conhecidos, consulte [&#91;\< Topic://cpconServerActivation > &#93; ](http://msdn.microsoft.com/en-us/77ded6e2-4ca8-448b-acf2-562d27fd4396).  
+  
+   
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_GetRegisteredWellKnownClient_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredWellKnownClient_Client/CPP/remotingconfiguration_getregisteredwellknownclient_client.cpp#1)]
+ [!code-csharp[RemotingConfiguration_GetRegisteredWellKnownClient_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredWellKnownClient_Client/CS/remotingconfiguration_getregisteredwellknownclient_client.cs#1)]
+ [!code-vb[RemotingConfiguration_GetRegisteredWellKnownClient_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredWellKnownClient_Client/VB/remotingconfiguration_getregisteredwellknownclient_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRegisteredWellKnownServiceTypes">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.WellKnownServiceTypeEntry[] GetRegisteredWellKnownServiceTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.WellKnownServiceTypeEntry[] GetRegisteredWellKnownServiceTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.GetRegisteredWellKnownServiceTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.WellKnownServiceTypeEntry[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera uma matriz de tipos de objeto registrado na extremidade do serviço como tipos conhecidos.</summary>
+        <returns>Uma matriz de tipos de objeto é registrado no lado do serviço como tipos conhecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tipos de objeto Well-Known podem ser chamada único ou singleton. Se um tipo de objeto for a única chamada, uma nova instância dele é criada sempre que uma chamada do cliente for. Todas as chamadas para um objeto de singleton são tratadas por uma instância do objeto.  
+  
+ Para obter uma descrição mais detalhada de objetos conhecidos, consulte [&#91;\< Topic://cpconServerActivation > &#93; ](http://msdn.microsoft.com/en-us/77ded6e2-4ca8-448b-acf2-562d27fd4396).  
+  
+   
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_Configure_Client#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_Configure_Client/CPP/remotingconfiguration_configure_server.cpp#2)]
+ [!code-csharp[RemotingConfiguration_Configure_Client#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_Configure_Client/CS/remotingconfiguration_configure_server.cs#2)]
+ [!code-vb[RemotingConfiguration_Configure_Client#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_Configure_Client/VB/remotingconfiguration_configure_server.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActivationAllowed">
+      <MemberSignature Language="C#" Value="public static bool IsActivationAllowed (Type svrType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsActivationAllowed(class System.Type svrType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.IsActivationAllowed(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="svrType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="svrType">O objeto <see cref="T:System.Type" /> para verificar.</param>
+        <summary>Retorna um valor booliano que indica se o especificado <see cref="T:System.Type" /> pode ser ativado do cliente.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Type" /> é permitida como cliente ativado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método atual é usado na extremidade do servidor para determinar se uma ativação do objeto <xref:System.Type> seja explicitamente permitido pelo servidor.  
+  
+   
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_GetRegisteredActivatedServer_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredActivatedServer_Client/CPP/RemotingConfiguration_GetRegisteredActivatedService_server.cpp#1)]
+ [!code-csharp[RemotingConfiguration_GetRegisteredActivatedServer_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredActivatedServer_Client/CS/remotingconfiguration_getregisteredactivatedservice_server.cs#1)]
+ [!code-vb[RemotingConfiguration_GetRegisteredActivatedServer_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_GetRegisteredActivatedServer_Client/VB/remotingconfiguration_getregisteredactivatedservice_server.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRemotelyActivatedClientType">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ActivatedClientTypeEntry IsRemotelyActivatedClientType (Type svrType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ActivatedClientTypeEntry IsRemotelyActivatedClientType(class System.Type svrType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.IsRemotelyActivatedClientType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ActivatedClientTypeEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="svrType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="svrType">O tipo de objeto para verificar.</param>
+        <summary>Verifica se o objeto especificado <see cref="T:System.Type" /> é registrado como um tipo de cliente ativado remotamente.</summary>
+        <returns>O <see cref="T:System.Runtime.Remoting.ActivatedClientTypeEntry" /> que corresponde ao tipo de objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_IsRemotelyActivatedClientType1_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_IsRemotelyActivatedClientType1_Client/CPP/remotingconfiguration_isremotelyactivatedclienttype1_client.cpp#1)]
+ [!code-csharp[RemotingConfiguration_IsRemotelyActivatedClientType1_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_IsRemotelyActivatedClientType1_Client/CS/remotingconfiguration_isremotelyactivatedclienttype1_client.cs#1)]
+ [!code-vb[RemotingConfiguration_IsRemotelyActivatedClientType1_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_IsRemotelyActivatedClientType1_Client/VB/remotingconfiguration_isremotelyactivatedclienttype1_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRemotelyActivatedClientType">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.ActivatedClientTypeEntry IsRemotelyActivatedClientType (string typeName, string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.ActivatedClientTypeEntry IsRemotelyActivatedClientType(string typeName, string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.IsRemotelyActivatedClientType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ActivatedClientTypeEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo de objeto a ser verificado.</param>
+        <param name="assemblyName">O nome do assembly do objeto para verificação.</param>
+        <summary>Verifica se o objeto especificado por seu nome de tipo e o nome do assembly é registrado como um tipo de cliente ativado remotamente.</summary>
+        <returns>O <see cref="T:System.Runtime.Remoting.ActivatedClientTypeEntry" /> que corresponde ao tipo de objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_IsRemotelyActivatedClientType2_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_IsRemotelyActivatedClientType2_Client/CPP/remotingconfiguration_isremotelyactivatedclienttype2_client.cpp#1)]
+ [!code-csharp[RemotingConfiguration_IsRemotelyActivatedClientType2_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_IsRemotelyActivatedClientType2_Client/CS/remotingconfiguration_isremotelyactivatedclienttype2_client.cs#1)]
+ [!code-vb[RemotingConfiguration_IsRemotelyActivatedClientType2_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_IsRemotelyActivatedClientType2_Client/VB/remotingconfiguration_isremotelyactivatedclienttype2_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWellKnownClientType">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.WellKnownClientTypeEntry IsWellKnownClientType (Type svrType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.WellKnownClientTypeEntry IsWellKnownClientType(class System.Type svrType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.IsWellKnownClientType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.WellKnownClientTypeEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="svrType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="svrType">O objeto <see cref="T:System.Type" /> para verificar.</param>
+        <summary>Verifica se o objeto especificado <see cref="T:System.Type" /> é registrado como um tipo de cliente bem conhecidos.</summary>
+        <returns>O <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" /> que corresponde ao tipo de objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_IsWellKnownClientType1_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_IsWellKnownClientType1_Client/CPP/remotingconfiguration_iswellknownclienttype1_client.cpp#1)]
+ [!code-csharp[RemotingConfiguration_IsWellKnownClientType1_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_IsWellKnownClientType1_Client/CS/remotingconfiguration_iswellknownclienttype1_client.cs#1)]
+ [!code-vb[RemotingConfiguration_IsWellKnownClientType1_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_IsWellKnownClientType1_Client/VB/remotingconfiguration_iswellknownclienttype1_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWellKnownClientType">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Remoting.WellKnownClientTypeEntry IsWellKnownClientType (string typeName, string assemblyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Runtime.Remoting.WellKnownClientTypeEntry IsWellKnownClientType(string typeName, string assemblyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.IsWellKnownClientType(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.WellKnownClientTypeEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeName" Type="System.String" />
+        <Parameter Name="assemblyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeName">O nome do tipo de objeto a ser verificado.</param>
+        <param name="assemblyName">O nome do assembly do objeto para verificação.</param>
+        <summary>Verifica se o objeto especificado por seu nome de tipo e o nome do assembly é registrado como um tipo de cliente bem conhecidos.</summary>
+        <returns>O <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" /> que corresponde ao tipo de objeto especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[RemotingConfiguration_IsWellKnownClientType2_Client#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration_IsWellKnownClientType2_Client/CPP/remotingconfiguration_iswellknownclienttype2_client.cpp#1)]
+ [!code-csharp[RemotingConfiguration_IsWellKnownClientType2_Client#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration_IsWellKnownClientType2_Client/CS/remotingconfiguration_iswellknownclienttype2_client.cs#1)]
+ [!code-vb[RemotingConfiguration_IsWellKnownClientType2_Client#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration_IsWellKnownClientType2_Client/VB/remotingconfiguration_iswellknownclienttype2_client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessId">
+      <MemberSignature Language="C#" Value="public static string ProcessId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ProcessId" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.RemotingConfiguration.ProcessId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a ID do processo em execução no momento.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a ID do processo em execução no momento.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador imediato não tem permissão de infraestrutura.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a operação com código de infraestrutura. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.Infrastructure" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterActivatedClientType">
+      <MemberSignature Language="C#" Value="public static void RegisterActivatedClientType (System.Runtime.Remoting.ActivatedClientTypeEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterActivatedClientType(class System.Runtime.Remoting.ActivatedClientTypeEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType(System.Runtime.Remoting.ActivatedClientTypeEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Runtime.Remoting.ActivatedClientTypeEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Definições de configuração para o tipo de cliente ativado.</param>
+        <summary>Registra um objeto <see cref="T:System.Type" /> registradas fornecidos <see cref="T:System.Runtime.Remoting.ActivatedClientTypeEntry" /> no lado do cliente como um tipo que pode ser ativado no servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância de um objeto ativado pelo cliente no servidor, você deve saber o <xref:System.Type> e ele deve ser registrado na extremidade do servidor usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A> método. Para obter um proxy para uma nova instância do objeto cliente ativado, o cliente deve primeiro registrar um canal com <xref:System.Runtime.Remoting.Channels.ChannelServices> e, em seguida, ativar o objeto chamando `new`.  
+  
+ Para ativar um tipo de objeto ativado pelo cliente com o `new` palavra-chave, você deve primeiro registrar o tipo de objeto no cliente final usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método fornece a infraestrutura de comunicação remota a localização do aplicativo remoto onde `new` tentará criá-la. Se, por outro lado, você usa o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> método para criar uma nova instância do objeto cliente ativado, você deve fornecer a URL do aplicativo remoto como um parâmetro, portanto, nenhum registro anterior no lado do cliente é necessário. Para fornecer o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> método com a URL do servidor onde você deseja criar o objeto, você deve encapsular a URL em uma instância do <xref:System.Runtime.Remoting.Activation.UrlAttribute> classe.  
+  
+ Para obter uma descrição detalhada de objetos ativado pelo cliente, consulte [&#91;\< Topic://cpconClientActivation > &#93; ](http://msdn.microsoft.com/en-us/4a791494-c18a-4711-a5c1-4ab0e49a8f1a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterActivatedClientType">
+      <MemberSignature Language="C#" Value="public static void RegisterActivatedClientType (Type type, string appUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterActivatedClientType(class System.Type type, string appUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="appUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O objeto <see cref="T:System.Type" />.</param>
+        <param name="appUrl">URL do aplicativo em que esse tipo é ativado.</param>
+        <summary>Registra um objeto <see cref="T:System.Type" /> no lado do cliente como um tipo que pode ser ativado no servidor, usando os parâmetros especificados para inicializar uma nova instância do <see cref="T:System.Runtime.Remoting.ActivatedClientTypeEntry" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância de um objeto ativado pelo cliente no servidor, você deve saber o <xref:System.Type> e ele deve ser registrado na extremidade do servidor usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A> método. Para obter um proxy para uma nova instância do objeto cliente ativado, o cliente deve primeiro registrar um canal com <xref:System.Runtime.Remoting.Channels.ChannelServices> e, em seguida, ativar o objeto chamando `new`.  
+  
+ Para ativar um tipo de objeto ativado pelo cliente com o `new` palavra-chave, você deve primeiro registrar o tipo de objeto no cliente final usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método fornece a infraestrutura de comunicação remota a localização do aplicativo remoto onde `new` tentará criá-la. Se, por outro lado, você usa o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> método para criar uma nova instância do objeto cliente ativado, você deve fornecer a URL do aplicativo remoto como um parâmetro, portanto, nenhum registro anterior no lado do cliente é necessário. Para fornecer o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> método com a URL do servidor onde você deseja criar o objeto, você deve encapsular a URL em uma instância do <xref:System.Runtime.Remoting.Activation.UrlAttribute> classe.  
+  
+ Para obter uma descrição detalhada de objetos ativado pelo cliente, consulte [&#91;\< Topic://cpconClientActivation > &#93;](http://msdn.microsoft.com/en-us/4a791494-c18a-4711-a5c1-4ab0e49a8f1a)  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o registro de um tipo de objeto no lado do cliente como um tipo que pode ser ativado no servidor. Para o código de servidor que corresponde ao código cliente apresentada, consulte o exemplo para o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A> método.  
+  
+ [!code-cpp[RemotingConfiguration.ClientActivation#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/CPP/client.cpp#1)]
+ [!code-csharp[RemotingConfiguration.ClientActivation#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/CS/client.cs#1)]
+ [!code-vb[RemotingConfiguration.ClientActivation#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/VB/client.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="typeName" /> ou <paramref name="URI" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterActivatedServiceType">
+      <MemberSignature Language="C#" Value="public static void RegisterActivatedServiceType (System.Runtime.Remoting.ActivatedServiceTypeEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterActivatedServiceType(class System.Runtime.Remoting.ActivatedServiceTypeEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType(System.Runtime.Remoting.ActivatedServiceTypeEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Runtime.Remoting.ActivatedServiceTypeEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Definições de configuração para o tipo de cliente ativado.</param>
+        <summary>Registra um tipo de objeto registrado fornecidos <see cref="T:System.Runtime.Remoting.ActivatedServiceTypeEntry" /> na extremidade do serviço, como aquele que pode ser ativado na solicitação de um cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância de um objeto ativado pelo cliente no servidor, você deve saber o <xref:System.Type> e ele deve ser registrado na extremidade do servidor usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A> método. Para obter um proxy para uma nova instância do objeto cliente ativado, o cliente deve primeiro registrar um canal com <xref:System.Runtime.Remoting.Channels.ChannelServices> e, em seguida, ativar o objeto chamando `new` ou <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>.  
+  
+ Para ativar um tipo de objeto ativado pelo cliente com o `new` palavra-chave, você deve primeiro registrar o tipo de objeto no cliente final usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método fornece a infraestrutura de comunicação remota a localização do aplicativo remoto, onde `new` tentará criá-la. Se, por outro lado, você usa o <xref:System.Activator.CreateInstance%2A> método para criar uma nova instância do objeto cliente ativado, você deve fornecer a URL do aplicativo remoto como um parâmetro, portanto, nenhum registro anterior no lado do cliente é necessário. Para fornecer o <xref:System.Activator.CreateInstance%2A> método com a URL do servidor onde você deseja criar o objeto, você deve encapsular a URL em uma instância do <xref:System.Runtime.Remoting.Activation.UrlAttribute> classe.  
+  
+ Para obter uma descrição detalhada de objetos ativado pelo cliente, consulte [&#91;\< Topic://cpconClientActivation > &#93; ](http://msdn.microsoft.com/en-us/4a791494-c18a-4711-a5c1-4ab0e49a8f1a).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterActivatedServiceType">
+      <MemberSignature Language="C#" Value="public static void RegisterActivatedServiceType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterActivatedServiceType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do objeto para registrar.</param>
+        <summary>Registra um tipo de objeto especificado na extremidade do serviço como um tipo que pode ser ativado na solicitação de um cliente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância de um objeto ativado pelo cliente no servidor, você deve saber o <xref:System.Type> e ele deve ser registrado na extremidade do servidor usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedServiceType%2A> método. Para obter um proxy para uma nova instância do objeto cliente ativado, o cliente deve primeiro registrar um canal com <xref:System.Runtime.Remoting.Channels.ChannelServices> e, em seguida, ativar o objeto chamando `new` ou <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>.  
+  
+ Para ativar um tipo de objeto ativado pelo cliente com o `new` palavra-chave, você deve primeiro registrar o tipo de objeto no cliente final usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método fornece a infraestrutura de comunicação remota a localização do aplicativo remoto, onde `new` tentará criá-la. Se, por outro lado, você usa o <xref:System.Activator.CreateInstance%2A> método para criar uma nova instância do objeto cliente ativado, você deve fornecer a URL do aplicativo remoto como um parâmetro, portanto, nenhum registro anterior no lado do cliente é necessário. Para fornecer o <xref:System.Activator.CreateInstance%2A> método com a URL do servidor onde você deseja criar o objeto, você deve encapsular a URL em uma instância do <xref:System.Runtime.Remoting.Activation.UrlAttribute> classe.  
+  
+ Para obter uma descrição detalhada de objetos ativado pelo cliente, consulte [&#91;\< Topic://cpconClientActivation > &#93; ](http://msdn.microsoft.com/en-us/4a791494-c18a-4711-a5c1-4ab0e49a8f1a).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o registro de um tipo de objeto no servidor como um tipo que pode ser ativado pelo cliente. Para o código do cliente que corresponde ao código de servidor apresentada, consulte o exemplo para o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterActivatedClientType%2A> método.  
+  
+ [!code-cpp[RemotingConfiguration.ClientActivation#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/CPP/server.cpp#2)]
+ [!code-csharp[RemotingConfiguration.ClientActivation#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/CS/server.cs#2)]
+ [!code-vb[RemotingConfiguration.ClientActivation#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/VB/server.vb#2)]  
+  
+ O exemplo de código a seguir mostra o objeto de serviço registrado no código de exemplo acima.  
+  
+ [!code-cpp[RemotingConfiguration.ClientActivation#3](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/CPP/service.cpp#3)]
+ [!code-csharp[RemotingConfiguration.ClientActivation#3](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/CS/service.cs#3)]
+ [!code-vb[RemotingConfiguration.ClientActivation#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ClientActivation/VB/service.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWellKnownClientType">
+      <MemberSignature Language="C#" Value="public static void RegisterWellKnownClientType (System.Runtime.Remoting.WellKnownClientTypeEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterWellKnownClientType(class System.Runtime.Remoting.WellKnownClientTypeEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType(System.Runtime.Remoting.WellKnownClientTypeEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Runtime.Remoting.WellKnownClientTypeEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Definições de configuração para o tipo conhecido.</param>
+        <summary>Registra um objeto <see cref="T:System.Type" /> registradas fornecidos <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" /> no lado do cliente como um tipo conhecido que pode ser ativado no servidor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer cliente que saiba o URI de um objeto conhecido registrado pode obter um proxy para o objeto registrando o canal que ele prefere com <xref:System.Runtime.Remoting.Channels.ChannelServices>e ativar o objeto chamando `new` ou <xref:System.Activator.GetObject%2A?displayProperty=nameWithType>. Para ativar um objeto conhecido com `new`, você deve primeiro registrar o tipo de objeto conhecido no cliente usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método fornece a infraestrutura de comunicação remota a localização do objeto remoto, que permite que o `new` palavra-chave para criá-lo. Se, por outro lado, você usa o <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> método para ativar o objeto conhecido, você deve fornecê-lo com a URL do objeto como um argumento, portanto, nenhum registro anterior no lado do cliente é necessário.  
+  
+ Para obter uma descrição detalhada de objetos conhecidos, consulte [&#91;\< Topic://cpconServerActivation > &#93; ](http://msdn.microsoft.com/en-us/77ded6e2-4ca8-448b-acf2-562d27fd4396).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWellKnownClientType">
+      <MemberSignature Language="C#" Value="public static void RegisterWellKnownClientType (Type type, string objectUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterWellKnownClientType(class System.Type type, string objectUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType(System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="objectUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">O objeto <see cref="T:System.Type" />.</param>
+        <param name="objectUrl">URL de um objeto bem conhecido do cliente.</param>
+        <summary>Registra um objeto <see cref="T:System.Type" /> na extremidade do cliente como um tipo conhecido que pode ser ativado no servidor, usando os parâmetros especificados para inicializar uma nova instância da classe <see cref="T:System.Runtime.Remoting.WellKnownClientTypeEntry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer cliente que saiba o URI de um objeto conhecido registrado pode obter um proxy para o objeto registrando o canal que ele prefere com <xref:System.Runtime.Remoting.Channels.ChannelServices>e ativar o objeto chamando `new` ou <xref:System.Activator.GetObject%2A?displayProperty=nameWithType>. Para ativar um objeto conhecido com `new`, você deve primeiro registrar o tipo de objeto conhecido no cliente usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método fornece a infraestrutura de comunicação remota a localização do objeto remoto, que permite que o `new` palavra-chave para criá-lo. Se, por outro lado, você usa o <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> método para ativar o objeto conhecido, você deve fornecê-lo com a URL do objeto como um argumento, portanto, nenhum registro anterior no lado do cliente é necessário.  
+  
+ Para obter uma descrição detalhada de objetos conhecidos, consulte [&#91;\< Topic://cpconServerActivation > &#93; ](http://msdn.microsoft.com/en-us/77ded6e2-4ca8-448b-acf2-562d27fd4396).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o registro de um tipo de objeto no lado do cliente como um tipo conhecido. Para o código de servidor que corresponde ao código cliente apresentada, consulte o exemplo para o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownServiceType%2A> método.  
+  
+ [!code-cpp[RemotingConfiguration.ServerActivation1#5](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/client.cpp#5)]
+ [!code-csharp[RemotingConfiguration.ServerActivation1#5](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/client.cs#5)]
+ [!code-vb[RemotingConfiguration.ServerActivation1#5](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/client.vb#5)]  
+[!code-cpp[RemotingConfiguration.ServerActivation1#6](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/client.cpp#6)]
+[!code-csharp[RemotingConfiguration.ServerActivation1#6](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/client.cs#6)]
+[!code-vb[RemotingConfiguration.ServerActivation1#6](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/client.vb#6)]  
+[!code-cpp[RemotingConfiguration.ServerActivation1#7](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/client.cpp#7)]
+[!code-csharp[RemotingConfiguration.ServerActivation1#7](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/client.cs#7)]
+[!code-vb[RemotingConfiguration.ServerActivation1#7](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/client.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWellKnownServiceType">
+      <MemberSignature Language="C#" Value="public static void RegisterWellKnownServiceType (System.Runtime.Remoting.WellKnownServiceTypeEntry entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterWellKnownServiceType(class System.Runtime.Remoting.WellKnownServiceTypeEntry entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownServiceType(System.Runtime.Remoting.WellKnownServiceTypeEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="System.Runtime.Remoting.WellKnownServiceTypeEntry" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Definições de configuração para o tipo conhecido.</param>
+        <summary>Registra um objeto <see cref="T:System.Type" /> registrado no <see cref="T:System.Runtime.Remoting.WellKnownServiceTypeEntry" /> fornecido na extremidade do serviço como um tipo conhecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer cliente que saiba o URI de um objeto conhecido registrado pode obter um proxy para o objeto registrando o canal que ele prefere com <xref:System.Runtime.Remoting.Channels.ChannelServices>e ativar o objeto chamando `new` ou <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> método. Para ativar um objeto conhecido com `new`, você deve primeiro registrar o tipo de objeto conhecido no cliente usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método fornece a infraestrutura de comunicação remota a localização do objeto remoto, que permite que o `new` palavra-chave para criá-lo. Se, por outro lado, você usa o <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> método para ativar o objeto conhecido, você deve fornecê-lo com a URL do objeto como um argumento, portanto, nenhum registro anterior no lado do cliente é necessário.  
+  
+ Quando a chamada chega ao servidor, o .NET Framework extrai o URI da mensagem, examina as tabelas de comunicação remota para localizar a referência para o objeto que coincide com o URI e, em seguida, cria o objeto, se necessário, a chamada de método para o objeto de encaminhamento. Se o objeto é registrado como <xref:System.Runtime.Remoting.WellKnownObjectMode.SingleCall>, ele será destruído depois que a chamada do método está concluída. Uma nova instância do objeto é criada para cada método de chamada. A única diferença entre <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> e `new` é que a primeira permite que você especifique uma URL como um parâmetro e o último obtém a URL da configuração.  
+  
+ O objeto remoto em si não é instanciado pelo processo de registro. Isso só acontece quando um cliente tentar chamar um método no objeto ou ativa o objeto do lado do cliente.  
+  
+ Para obter uma descrição detalhada de objetos conhecidos, consulte [&#91;\< Topic://cpconServerActivation > &#93; ](http://msdn.microsoft.com/en-us/77ded6e2-4ca8-448b-acf2-562d27fd4396).  
+  
+   
+  
+## Examples  
+ [!code-cpp[CreateObjRef2#2](~/samples/snippets/cpp/VS_Snippets_Remoting/CreateObjRef2/CPP/example.cpp#2)]
+ [!code-csharp[CreateObjRef2#2](~/samples/snippets/csharp/VS_Snippets_Remoting/CreateObjRef2/CS/example.cs#2)]
+ [!code-vb[CreateObjRef2#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/CreateObjRef2/VB/example.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterWellKnownServiceType">
+      <MemberSignature Language="C#" Value="public static void RegisterWellKnownServiceType (Type type, string objectUri, System.Runtime.Remoting.WellKnownObjectMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterWellKnownServiceType(class System.Type type, string objectUri, valuetype System.Runtime.Remoting.WellKnownObjectMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownServiceType(System.Type,System.String,System.Runtime.Remoting.WellKnownObjectMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="objectUri" Type="System.String" />
+        <Parameter Name="mode" Type="System.Runtime.Remoting.WellKnownObjectMode" />
+      </Parameters>
+      <Docs>
+        <param name="type">O objeto <see cref="T:System.Type" />.</param>
+        <param name="objectUri">O objeto URI.</param>
+        <param name="mode">O modo de ativação do tipo de objeto bem conhecido que está sendo registrado. (Consulte <see cref="T:System.Runtime.Remoting.WellKnownObjectMode" />.)</param>
+        <summary>Registra um objeto <see cref="T:System.Type" /> no lado do serviço como um tipo conhecido, usando os parâmetros especificados para inicializar uma nova instância da <see cref="T:System.Runtime.Remoting.WellKnownServiceTypeEntry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Qualquer cliente que saiba o URI de um objeto conhecido registrado pode obter um proxy para o objeto registrando o canal que ele prefere com <xref:System.Runtime.Remoting.Channels.ChannelServices>e ativar o objeto chamando `new` ou <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> método. Para ativar um objeto conhecido com `new`, você deve primeiro registrar o tipo de objeto conhecido no cliente usando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método. Chamando o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método fornece a infraestrutura de comunicação remota a localização do objeto remoto, que permite que o `new` palavra-chave para criá-lo. Se, por outro lado, você usa o <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> método para ativar o objeto conhecido, você deve fornecê-lo com a URL do objeto como um argumento, portanto, nenhum registro anterior no lado do cliente é necessário.  
+  
+ Quando a chamada chega ao servidor, o .NET Framework extrai o URI da mensagem, examina as tabelas de comunicação remota para localizar a referência para o objeto que coincide com o URI e, em seguida, cria o objeto, se necessário, a chamada de método para o objeto de encaminhamento. Se o objeto é registrado como <xref:System.Runtime.Remoting.WellKnownObjectMode.SingleCall>, ele será destruído depois que a chamada do método está concluída. Uma nova instância do objeto é criada para cada método de chamada. A única diferença entre <xref:System.Activator.GetObject%2A?displayProperty=nameWithType> e `new` é que a primeira permite que você especifique uma URL como um parâmetro e o último obtém a URL da configuração.  
+  
+ O objeto remoto em si não é instanciado pelo processo de registro. Isso só acontece quando um cliente tentar chamar um método no objeto ou ativa o objeto do lado do cliente.  
+  
+ Para obter uma descrição detalhada de objetos conhecidos, consulte [&#91;\< Topic://cpconServerActivation > &#93; ](http://msdn.microsoft.com/en-us/77ded6e2-4ca8-448b-acf2-562d27fd4396).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o registro de um tipo de objeto no servidor como um tipo de objeto conhecido. Para o código do cliente que corresponde ao código de servidor apresentada, consulte o exemplo para o <xref:System.Runtime.Remoting.RemotingConfiguration.RegisterWellKnownClientType%2A> método.  
+  
+ [!code-cpp[RemotingConfiguration.ServerActivation1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/server.cpp#1)]
+ [!code-csharp[RemotingConfiguration.ServerActivation1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/server.cs#1)]
+ [!code-vb[RemotingConfiguration.ServerActivation1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/server.vb#1)]  
+[!code-cpp[RemotingConfiguration.ServerActivation1#2](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/server.cpp#2)]
+[!code-csharp[RemotingConfiguration.ServerActivation1#2](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/server.cs#2)]
+[!code-vb[RemotingConfiguration.ServerActivation1#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/server.vb#2)]  
+[!code-cpp[RemotingConfiguration.ServerActivation1#3](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/server.cpp#3)]
+[!code-csharp[RemotingConfiguration.ServerActivation1#3](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/server.cs#3)]
+[!code-vb[RemotingConfiguration.ServerActivation1#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/server.vb#3)]  
+  
+ O exemplo de código a seguir mostra o objeto de serviço registrado no código de exemplo acima.  
+  
+ [!code-cpp[RemotingConfiguration.ServerActivation1#4](~/samples/snippets/cpp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CPP/service.cpp#4)]
+ [!code-csharp[RemotingConfiguration.ServerActivation1#4](~/samples/snippets/csharp/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/CS/service.cs#4)]
+ [!code-vb[RemotingConfiguration.ServerActivation1#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/RemotingConfiguration.ServerActivation1/VB/service.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">Pelo menos um dos chamadores no topo da pilha de chamadas não tem permissão para configurar canais e tipos de comunicação remota.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para configuração da infraestrutura de comunicação remota. Valor de demanda: <see cref="F:System.Security.Permissions.SecurityAction.Demand" />; Valor de permissão:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.RemotingConfiguration" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

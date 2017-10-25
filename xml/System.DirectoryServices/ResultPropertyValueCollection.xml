@@ -1,0 +1,129 @@
+<Type Name="ResultPropertyValueCollection" FullName="System.DirectoryServices.ResultPropertyValueCollection">
+  <TypeSignature Language="C#" Value="public class ResultPropertyValueCollection : System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ResultPropertyValueCollection extends System.Collections.ReadOnlyCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ResultPropertyValueCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ReadOnlyCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém os valores de uma propriedade <see cref="T:System.DirectoryServices.SearchResult" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.DirectoryServices.SearchResult>instâncias são semelhantes às <xref:System.DirectoryServices.DirectoryEntry> instâncias. A diferença importante é que o <xref:System.DirectoryServices.DirectoryEntry> recupera as informações da hierarquia de serviços de domínio do Active Directory sempre que um novo objeto é acessado, enquanto os dados para o <xref:System.DirectoryServices.SearchResult> já está disponível na <xref:System.DirectoryServices.SearchResultCollection> que um <xref:System.DirectoryServices.DirectorySearcher> consulta retorna. Se você tentar obter um <xref:System.DirectoryServices.SearchResult> propriedade que sua consulta não especificou para recuperação, a propriedade não estará disponível.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ResultPropertyValueCollection.Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor da propriedade para localizar.</param>
+        <summary>O <see cref="M:System.DirectoryServices.ResultPropertyValueCollection.Contains(System.Object)" /> método determina se um valor da propriedade especificada está na coleção.</summary>
+        <returns>O valor de retorno é <see langword="true" /> se a propriedade especificada pertence a esta coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (object[] values, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(object[] values, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ResultPropertyValueCollection.CopyTo(System.Object[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="values">Uma matriz do tipo <see cref="T:System.Object" /> que recebe os valores de propriedade desta coleção.</param>
+        <param name="index">O índice de matriz com base em zero no qual começar a copiar os valores de propriedade.</param>
+        <summary>O <see cref="M:System.DirectoryServices.ResultPropertyValueCollection.CopyTo(System.Object[],System.Int32)" /> método copia os valores de propriedade dessa coleção em uma matriz, começando em um índice específico da matriz.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.ResultPropertyValueCollection.IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor da propriedade para localizar.</param>
+        <summary>O <see cref="M:System.DirectoryServices.ResultPropertyValueCollection.IndexOf(System.Object)" /> método recupera o índice de um valor de propriedade especificado nesta coleção.</summary>
+        <returns>O índice de base zero do valor da propriedade especificada. Se o objeto não for encontrado, o valor de retorno é -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.ResultPropertyValueCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero do valor da propriedade a ser recuperado.</param>
+        <summary>A propriedade <see cref="P:System.DirectoryServices.ResultPropertyValueCollection.Item(System.Int32)" /> obtém o valor da propriedade localizado em um índice especificado.</summary>
+        <value>O valor da propriedade que está localizado no índice especificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No c#, essa propriedade é o indexador de <xref:System.DirectoryServices.ResultPropertyValueCollection> classe.  
+  
+ No JScript, você pode usar as propriedades indexadas padrão definidas por um tipo, mas você não pode definir explicitamente as suas próprias. No entanto, especificar o atributo expando em uma classe fornece automaticamente um padrão propriedade com um tipo de objeto e um tipo de índice indexada <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,342 @@
+<Type Name="LocalizableAttribute" FullName="System.ComponentModel.LocalizableAttribute">
+  <TypeSignature Language="C#" Value="public sealed class LocalizableAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LocalizableAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.LocalizableAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica se uma propriedade deve ser localizada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o código é gerado para um componente, os membros que são marcados com o <xref:System.ComponentModel.LocalizableAttribute> definida como `true` ter seus valores de propriedade salvas em arquivos de recurso. Você pode localizar esses arquivos de recurso sem modificar seu código.  
+  
+ Por padrão, os membros que nenhum atributo localizável ou são marcados com o <xref:System.ComponentModel.LocalizableAttribute> definida como `false` serão têm seus valores de propriedade persistente para o código, se permitir que o tipo de dados. Caso contrário, se o componente principal é definido como `Localizable`, todas as propriedades serão mantidas no arquivo de recurso. O padrão é `false`.  
+  
+> [!NOTE]
+>  Quando você marca uma propriedade com o <xref:System.ComponentModel.LocalizableAttribute> definida como `true`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.LocalizableAttribute.Yes>. Para uma propriedade é marcada com o <xref:System.ComponentModel.LocalizableAttribute> definida como `false`, o valor é <xref:System.ComponentModel.LocalizableAttribute.No>. Portanto, quando você quiser verificar o valor desse atributo no seu código, você deve especificar o atributo como <xref:System.ComponentModel.LocalizableAttribute.Yes?displayProperty=nameWithType> ou <xref:System.ComponentModel.LocalizableAttribute.No?displayProperty=nameWithType>.  
+  
+ Para obter mais informações, consulte [Atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade que deve ser localizado.  
+  
+ [!code-cpp[classic localizableattribute example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LocalizableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[classic localizableattribute example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LocalizableAttribute Example/CS/source.cs#1)]
+ [!code-vb[classic localizableattribute example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LocalizableAttribute Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir mostra como verificar o valor da <xref:System.ComponentModel.LocalizableAttribute> para `MyProperty`. Primeiro, o código obtém um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto. Em seguida, o código obtém `MyProperty` do <xref:System.ComponentModel.PropertyDescriptorCollection>. Em seguida, ele retorna os atributos para essa propriedade e os salva na variável de atributos.  
+  
+ Por fim, o código define `myAttribute` para o valor da <xref:System.ComponentModel.LocalizableAttribute> no <xref:System.ComponentModel.AttributeCollection> e verifica se a propriedade deve ser localizada.  
+  
+ [!code-cpp[classic localizableattribute example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LocalizableAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[classic localizableattribute example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LocalizableAttribute Example/CS/source.cs#2)]
+ [!code-vb[classic localizableattribute example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LocalizableAttribute Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizableAttribute (bool isLocalizable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool isLocalizable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LocalizableAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isLocalizable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isLocalizable">
+          <see langword="true" />Se uma propriedade deve ser localizada; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.LocalizableAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade que deve ser localizado. Esse código cria um novo <xref:System.ComponentModel.LocalizableAttribute>, define seu valor como <xref:System.ComponentModel.LocalizableAttribute?displayProperty=nameWithType>e o associa à propriedade.  
+  
+ [!code-cpp[Classic LocalizableAttribute.LocalizableAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LocalizableAttribute.LocalizableAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LocalizableAttribute.LocalizableAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LocalizableAttribute.LocalizableAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic LocalizableAttribute.LocalizableAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LocalizableAttribute.LocalizableAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.LocalizableAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.LocalizableAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.LocalizableAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LocalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor padrão, que é <see cref="F:System.ComponentModel.LocalizableAttribute.No" />. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com esse valor, esse atributo é definido como o membro constante <xref:System.ComponentModel.LocalizableAttribute.No>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.LocalizableAttribute?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LocalizableAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto para testar a igualdade de valor de.</param>
+        <summary>Retorna se o valor do objeto especificado é igual ao atual <see cref="T:System.ComponentModel.LocalizableAttribute" />.</summary>
+        <returns>
+          <see langword="true" />Se o valor do objeto especificado for igual do atual; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LocalizableAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código hash do <see cref="T:System.ComponentModel.LocalizableAttribute" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.LocalizableAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se este atributo é o padrão.</summary>
+        <returns>
+          <see langword="true" />Se o atributo é o valor padrão para essa classe de atributo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLocalizable">
+      <MemberSignature Language="C#" Value="public bool IsLocalizable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLocalizable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.LocalizableAttribute.IsLocalizable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se uma propriedade deve ser localizada.</summary>
+        <value>
+          <see langword="true" />Se uma propriedade deve ser localizada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como verificar o valor de <xref:System.ComponentModel.LocalizableAttribute> para `MyProperty`. Primeiro, o código obtém um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto. Em seguida, o código obtém `MyProperty` do <xref:System.ComponentModel.PropertyDescriptorCollection>. Em seguida, ele retorna os atributos para essa propriedade e os salva na variável de atributos.  
+  
+ Por fim, o código define `myAttribute` para o valor da <xref:System.ComponentModel.LocalizableAttribute> no <xref:System.ComponentModel.AttributeCollection> e verifica se a propriedade deve ser localizada.  
+  
+ [!code-cpp[Classic LocalizableAttribute.IsLocalizable Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic LocalizableAttribute.IsLocalizable Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic LocalizableAttribute.IsLocalizable Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic LocalizableAttribute.IsLocalizable Example/CS/source.cs#1)]
+ [!code-vb[Classic LocalizableAttribute.IsLocalizable Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic LocalizableAttribute.IsLocalizable Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.LocalizableAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.LocalizableAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.LocalizableAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LocalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade não deve ser localizada. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é a configuração padrão para esse atributo.  
+  
+ Quando você marca uma propriedade com o <xref:System.ComponentModel.LocalizableAttribute> definida como `false`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.LocalizableAttribute.No>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.LocalizableAttribute.No?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.LocalizableAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.LocalizableAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.LocalizableAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.LocalizableAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade deve ser localizada. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com o <xref:System.ComponentModel.LocalizableAttribute> definida como `true`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.LocalizableAttribute.Yes>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.LocalizableAttribute.Yes?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

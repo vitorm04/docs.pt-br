@@ -1,0 +1,518 @@
+<Type Name="Ports" FullName="Microsoft.VisualBasic.Devices.Ports">
+  <TypeSignature Language="C#" Value="public class Ports" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Ports extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Devices.Ports" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma propriedade e um método para acessar portas seriais do computador.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Ports` objeto fornece um ponto de entrada simples para acessar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe porta serial, <xref:System.IO.Ports.SerialPort>.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Ports` objeto.  
+  
+|Para|Consulte|  
+|-|-|  
+|Disque um modem conectado a uma porta serial|[Como Discar Modems Conectados a Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Enviar uma cadeia de caracteres para uma porta serial|[Como Enviar Cadeias de Caracteres para Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Receber cadeias de caracteres de uma porta serial|[Como Receber Cadeias de Caracteres de Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+|Mostrar portas seriais disponíveis|[Como Mostrar Portas Seriais Disponíveis](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo descreve como enviar cadeias de caracteres para o computador `COM1` porta serial.  
+  
+ O bloco `Using` permite que o aplicativo feche a porta serial mesmo que ele gere uma exceção. Todo o código que manipula a porta serial deve aparecer dentro deste bloco ou em um `Try...Catch...Finally` bloco com uma chamada para usar o <xref:System.IO.Ports.SerialPort.Close%2A> método.  
+  
+ O método <xref:System.IO.Ports.SerialPort.WriteLine%2A> envia os dados à porta serial.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Para obter mais informações, consulte [como: enviar cadeias de caracteres para portas seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ports ();" />
+      <MemberSignature Language="ILAsm" Value=".method public specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.VisualBasic.Devices.Ports" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Necessário. Nome da porta a ser aberta.</param>
+        <summary>Cria e abre um objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Ports.SerialPort" /> aberto, configurado com os argumentos fornecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Ports.OpenSerialPort` método cria e abre um <xref:System.IO.Ports.SerialPort> objeto. Os argumentos para o `OpenSerialPort` método determinar as configurações do <xref:System.IO.Ports.SerialPort> objeto.  
+  
+ Seu código deve fechar o <xref:System.IO.Ports.SerialPort> objeto quando ele for concluído usando o objeto. Você pode usar o <xref:System.IO.Ports.SerialPort.Close%2A> método para fechar o objeto explicitamente ou `Using` instrução para fechá-la implicitamente. Consulte o exemplo neste tópico para obter mais informações.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Ports.OpenSerialPort` método.  
+  
+|Para|Consulte|  
+|-|-|  
+|Disque um modem conectado a uma porta serial|[Como Discar Modems Conectados a Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Enviar uma cadeia de caracteres para a porta serial|[Como Enviar Cadeias de Caracteres para Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Receber cadeias de caracteres de uma porta serial|[Como Receber Cadeias de Caracteres de Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo descreve como enviar cadeias de caracteres para o computador `COM1` porta serial.  
+  
+ O bloco `Using` permite que o aplicativo feche a porta serial mesmo que ele gere uma exceção. Todo o código que manipula a porta serial deve aparecer dentro deste bloco ou em um `Try...Catch...Finally` bloco com uma chamada para usar o <xref:System.IO.Ports.SerialPort.Close%2A> método.  
+  
+ O método <xref:System.IO.Ports.SerialPort.WriteLine%2A> envia os dados à porta serial.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Para obter mais informações, consulte [como: enviar cadeias de caracteres para portas seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="portName" /> é <see langword="Nothing" /> ou é uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Necessário. Nome da porta a ser aberta.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Taxa de transmissão da porta.</param>
+        <summary>Cria e abre um objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Ports.SerialPort" /> aberto, configurado com os argumentos fornecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Ports.OpenSerialPort` método cria e abre um <xref:System.IO.Ports.SerialPort> objeto. Os argumentos para o `OpenSerialPort` método determinar as configurações do <xref:System.IO.Ports.SerialPort> objeto.  
+  
+ Seu código deve fechar o <xref:System.IO.Ports.SerialPort> objeto quando ele for concluído usando o objeto. Você pode usar o <xref:System.IO.Ports.SerialPort.Close%2A> método para fechar o objeto explicitamente ou `Using` instrução para fechá-la implicitamente. Consulte o exemplo neste tópico para obter mais informações.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Ports.OpenSerialPort` método.  
+  
+|Para|Consulte|  
+|-|-|  
+|Disque um modem conectado a uma porta serial|[Como Discar Modems Conectados a Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Enviar uma cadeia de caracteres para a porta serial|[Como Enviar Cadeias de Caracteres para Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Receber cadeias de caracteres de uma porta serial|[Como Receber Cadeias de Caracteres de Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo descreve como enviar cadeias de caracteres para o computador `COM1` porta serial.  
+  
+ O bloco `Using` permite que o aplicativo feche a porta serial mesmo que ele gere uma exceção. Todo o código que manipula a porta serial deve aparecer dentro deste bloco ou em um `Try...Catch...Finally` bloco com uma chamada para usar o <xref:System.IO.Ports.SerialPort.Close%2A> método.  
+  
+ O método <xref:System.IO.Ports.SerialPort.WriteLine%2A> envia os dados à porta serial.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Para obter mais informações, consulte [como: enviar cadeias de caracteres para portas seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="portName" /> é <see langword="Nothing" /> ou é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="baudRate" /> é menor que ou igual a zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate, System.IO.Ports.Parity parity);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32,System.IO.Ports.Parity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Necessário. Nome da porta a ser aberta.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Taxa de transmissão da porta.</param>
+        <param name="parity">
+          <see cref="T:System.IO.Ports.Parity" />. Paridade da porta.</param>
+        <summary>Cria e abre um objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Ports.SerialPort" /> aberto, configurado com os argumentos fornecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Ports.OpenSerialPort` método cria e abre um <xref:System.IO.Ports.SerialPort> objeto. Os argumentos para o `OpenSerialPort` método determinar as configurações do <xref:System.IO.Ports.SerialPort> objeto.  
+  
+ Seu código deve fechar o <xref:System.IO.Ports.SerialPort> objeto quando ele for concluído usando o objeto. Você pode usar o <xref:System.IO.Ports.SerialPort.Close%2A> método para fechar o objeto explicitamente ou `Using` instrução para fechá-la implicitamente. Consulte o exemplo neste tópico para obter mais informações.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Ports.OpenSerialPort` método.  
+  
+|Para|Consulte|  
+|-|-|  
+|Disque um modem conectado a uma porta serial|[Como Discar Modems Conectados a Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Enviar uma cadeia de caracteres para a porta serial|[Como Enviar Cadeias de Caracteres para Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Receber cadeias de caracteres de uma porta serial|[Como Receber Cadeias de Caracteres de Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo descreve como enviar cadeias de caracteres para o computador `COM1` porta serial.  
+  
+ O bloco `Using` permite que o aplicativo feche a porta serial mesmo que ele gere uma exceção. Todo o código que manipula a porta serial deve aparecer dentro deste bloco ou em um `Try...Catch...Finally` bloco com uma chamada para usar o <xref:System.IO.Ports.SerialPort.Close%2A> método.  
+  
+ O método <xref:System.IO.Ports.SerialPort.WriteLine%2A> envia os dados à porta serial.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Para obter mais informações, consulte [como: enviar cadeias de caracteres para portas seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="portName" /> é <see langword="Nothing" /> ou é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="baudRate" /> é menor que ou igual a zero.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="parity" /> não é um dos valores de enumeração <see cref="T:System.IO.Ports.Parity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate, System.IO.Ports.Parity parity, int dataBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity, int32 dataBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32,System.IO.Ports.Parity,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+        <Parameter Name="dataBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Necessário. Nome da porta a ser aberta.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Taxa de transmissão da porta.</param>
+        <param name="parity">
+          <see cref="T:System.IO.Ports.Parity" />. Paridade da porta.</param>
+        <param name="dataBits">
+          <see langword="Integer" />. Configuração de bit de dados da porta.</param>
+        <summary>Cria e abre um objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Ports.SerialPort" /> aberto, configurado com os argumentos fornecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Ports.OpenSerialPort` método cria e abre um <xref:System.IO.Ports.SerialPort> objeto. Os argumentos para o `OpenSerialPort` método determinar as configurações do <xref:System.IO.Ports.SerialPort> objeto.  
+  
+ Seu código deve fechar o <xref:System.IO.Ports.SerialPort> objeto quando ele for concluído usando o objeto. Você pode usar o <xref:System.IO.Ports.SerialPort.Close%2A> método para fechar o objeto explicitamente ou `Using` instrução para fechá-la implicitamente. Consulte o exemplo neste tópico para obter mais informações.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Ports.OpenSerialPort` método.  
+  
+|Para|Consulte|  
+|-|-|  
+|Disque um modem conectado a uma porta serial|[Como Discar Modems Conectados a Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Enviar uma cadeia de caracteres para a porta serial|[Como Enviar Cadeias de Caracteres para Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Receber cadeias de caracteres de uma porta serial|[Como Receber Cadeias de Caracteres de Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo descreve como enviar cadeias de caracteres para o computador `COM1` porta serial.  
+  
+ O bloco `Using` permite que o aplicativo feche a porta serial mesmo que ele gere uma exceção. Todo o código que manipula a porta serial deve aparecer dentro deste bloco ou em um `Try...Catch...Finally` bloco com uma chamada para usar o <xref:System.IO.Ports.SerialPort.Close%2A> método.  
+  
+ O método <xref:System.IO.Ports.SerialPort.WriteLine%2A> envia os dados à porta serial.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Para obter mais informações, consulte [como: enviar cadeias de caracteres para portas seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="portName" /> é <see langword="Nothing" /> ou é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dataBits" /> é menor que ou igual a zero.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="parity" /> não é um dos valores de enumeração <see cref="T:System.IO.Ports.Parity" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenSerialPort">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPort OpenSerialPort (string portName, int baudRate, System.IO.Ports.Parity parity, int dataBits, System.IO.Ports.StopBits stopBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public instance class System.IO.Ports.SerialPort OpenSerialPort(string portName, int32 baudRate, valuetype System.IO.Ports.Parity parity, int32 dataBits, valuetype System.IO.Ports.StopBits stopBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort(System.String,System.Int32,System.IO.Ports.Parity,System.Int32,System.IO.Ports.StopBits)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPort</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="baudRate" Type="System.Int32" />
+        <Parameter Name="parity" Type="System.IO.Ports.Parity" />
+        <Parameter Name="dataBits" Type="System.Int32" />
+        <Parameter Name="stopBits" Type="System.IO.Ports.StopBits" />
+      </Parameters>
+      <Docs>
+        <param name="portName">
+          <see langword="String" />. Necessário. Nome da porta a ser aberta.</param>
+        <param name="baudRate">
+          <see langword="Integer" />. Taxa de transmissão da porta.</param>
+        <param name="parity">
+          <see cref="T:System.IO.Ports.Parity" />. Paridade da porta.</param>
+        <param name="dataBits">
+          <see langword="Integer" />. Configuração de bit de dados da porta.</param>
+        <param name="stopBits">
+          <see cref="T:System.IO.Ports.StopBits" />. Configuração de bit de parada da porta.</param>
+        <summary>Cria e abre um objeto <see cref="T:System.IO.Ports.SerialPort" />.</summary>
+        <returns>Um objeto <see cref="T:System.IO.Ports.SerialPort" /> aberto, configurado com os argumentos fornecidos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Ports.OpenSerialPort` método cria e abre um <xref:System.IO.Ports.SerialPort> objeto. Os argumentos para o `OpenSerialPort` método determinar as configurações do <xref:System.IO.Ports.SerialPort> objeto.  
+  
+ Seu código deve fechar o <xref:System.IO.Ports.SerialPort> objeto quando ele for concluído usando o objeto. Você pode usar o <xref:System.IO.Ports.SerialPort.Close%2A> método para fechar o objeto explicitamente ou `Using` instrução para fechá-la implicitamente. Consulte o exemplo neste tópico para obter mais informações.  
+  
+ A tabela a seguir lista exemplos de tarefas que envolvem o `My.Computer.Ports.OpenSerialPort` método.  
+  
+|Para|Consulte|  
+|-|-|  
+|Disque um modem conectado a uma porta serial|[Como Discar Modems Conectados a Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)|  
+|Enviar uma cadeia de caracteres para a porta serial|[Como Enviar Cadeias de Caracteres para Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)|  
+|Receber cadeias de caracteres de uma porta serial|[Como Receber Cadeias de Caracteres de Portas Seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo descreve como enviar cadeias de caracteres para o computador `COM1` porta serial.  
+  
+ O bloco `Using` permite que o aplicativo feche a porta serial mesmo que ele gere uma exceção. Todo o código que manipula a porta serial deve aparecer dentro deste bloco ou em um `Try...Catch...Finally` bloco com uma chamada para usar o <xref:System.IO.Ports.SerialPort.Close%2A> método.  
+  
+ O método <xref:System.IO.Ports.SerialPort.WriteLine%2A> envia os dados à porta serial.  
+  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
+  
+ Para obter mais informações, consulte [como: enviar cadeias de caracteres para portas seriais](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="portName" /> é <see langword="Nothing" /> ou é uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="dataBits" /> é menor que ou igual a zero.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="stopBits" /> não é um dos valores de enumeração <see cref="T:System.IO.Ports.StopBits" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialPortNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; SerialPortNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; SerialPortNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.VisualBasic.Devices.Ports.SerialPortNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de nomes de portas seriais no computador.</summary>
+        <value>Uma coleção de nomes de portas seriais no computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `My.Computer.Ports.SerialPortNames` propriedade obtém uma coleção de nomes de portas seriais no computador.  
+  
+> [!NOTE]
+>  Os nomes das portas retornados por `My.Computer.Ports.SerialPortNames` podem estar incorretos quando executados no Windows 98. Para evitar erros de aplicativo, use o tratamento de exceções, como a instrução `Try...Catch...Finally` ou a instrução `Using`, ao usar os nomes de portas para abrir portas.  
+  
+ A tabela a seguir lista um exemplo de tarefa envolvendo o `My.Computer.Ports.SerialPortNames` propriedade.  
+  
+|Para|Consulte|  
+|-|-|  
+|Mostrar portas seriais disponíveis|[Como Mostrar Portas Seriais Disponíveis](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)|  
+  
+## <a name="availability-by-project-type"></a>Disponibilidade por tipo de projeto  
+  
+|Tipo de projeto|Disponível|  
+|-|-|  
+|Aplicativo do Windows|**Sim**|  
+|Biblioteca de Classes|**Sim**|  
+|Aplicativo do Console|**Sim**|  
+|Biblioteca de controle do Windows|**Sim**|  
+|Biblioteca de controle da Web|Não|  
+|Serviço do Windows|**Sim**|  
+|Site da Web|Não|  
+  
+   
+  
+## Examples  
+ Este exemplo faz um loop em todas as cadeias de caracteres que a propriedade `My.Computer.Ports.SerialPortNames` retorna. Essas cadeias de caracteres são os nomes das portas seriais disponíveis no computador.  
+  
+ Normalmente, um usuário seleciona qual porta serial o aplicativo deve usar na lista de portas disponíveis. Neste exemplo, os nomes das portas seriais são armazenados em um controle <xref:System.Windows.Forms.ListBox>. Para saber mais, veja [Controle ListBox](~/docs/framework/winforms/controls/listbox-control-windows-forms.md).  
+  
+ [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
+  
+ Este exemplo requer:  
+  
+-   Uma referência para o <xref:System?displayProperty=nameWithType> namespace.  
+  
+-   Que seu formulário tenha um controle <xref:System.Windows.Forms.ListBox> chamado `ListBox1`.  
+  
+ Para obter mais informações, consulte [Como mostrar portas seriais disponíveis](~/docs/visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+  
+ ]]></format>
+        </remarks>
+        <altCompliant cref="None." />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

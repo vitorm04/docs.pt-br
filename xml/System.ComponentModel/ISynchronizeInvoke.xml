@@ -1,0 +1,200 @@
+<Type Name="ISynchronizeInvoke" FullName="System.ComponentModel.ISynchronizeInvoke">
+  <TypeSignature Language="C#" Value="public interface ISynchronizeInvoke" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISynchronizeInvoke" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ISynchronizeInvoke" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira executar um delegado de forma síncrona ou assíncrona.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.ISynchronizeInvoke> interface fornece comunicação síncrona e assíncrona entre objetos sobre a ocorrência de um evento. Objetos que implementam esta interface podem receber notificação que um evento ocorreu, e eles podem responder a consultas sobre o evento. Dessa forma, os clientes podem garantir que uma solicitação foi processada antes de enviar uma solicitação subsequente depende da conclusão da primeira.  
+  
+ O <xref:System.ComponentModel.ISynchronizeInvoke> classe fornece duas maneiras para chamar um processo:  
+  
+1.  De forma assíncrona, usando o <xref:System.ComponentModel.ISynchronizeInvoke.BeginInvoke%2A> método. <xref:System.ComponentModel.ISynchronizeInvoke.BeginInvoke%2A>inicia um processo e, em seguida, retorna imediatamente. Use <xref:System.ComponentModel.ISynchronizeInvoke.EndInvoke%2A> para aguardar até que o processo iniciado pelo <xref:System.ComponentModel.ISynchronizeInvoke.BeginInvoke%2A> é concluída.  
+  
+2.  De forma síncrona, usando o <xref:System.ComponentModel.ISynchronizeInvoke.Invoke%2A> método. <xref:System.ComponentModel.ISynchronizeInvoke.Invoke%2A>inicia um processo, aguarda até que ela seja concluída e, em seguida, retorna. Use <xref:System.ComponentModel.ISynchronizeInvoke.Invoke%2A> quando o controle principal do thread é diferente do thread de chamada para realizar marshaling da chamada para o thread adequado.  
+  
+> [!NOTE]
+>  O <xref:System.Security.Permissions.HostProtectionAttribute> atributo aplicado a essa classe tem as seguintes <xref:System.Security.Permissions.HostProtectionAttribute.Resources%2A> o valor da propriedade: <xref:System.Security.Permissions.HostProtectionResource.Synchronization> &#124; <xref:System.Security.Permissions.HostProtectionResource.ExternalThreading>. <xref:System.Security.Permissions.HostProtectionAttribute> não afeta aplicativos de área de trabalho (que são normalmente iniciados com o clique duplo em um ícone, a digitação de um comando ou a inserção de uma URL em um navegador). Para obter mais informações, consulte o <xref:System.Security.Permissions.HostProtectionAttribute> classe ou [programação do SQL Server e atributos de proteção de Host](~/docs/framework/performance/sql-server-programming-and-host-protection-attributes.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginInvoke">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInvoke (Delegate method, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginInvoke(class System.Delegate method, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="method">Um <see cref="T:System.Delegate" /> para um método que usa parâmetros do mesmo número e tipo que estão contidos em <c>args</c>.</param>
+        <param name="args">Uma matriz de tipo <see cref="T:System.Object" /> a passar como argumentos para o método em determinado. Pode ser <see langword="null" />, caso nenhum argumento seja necessário.</param>
+        <summary>Executa o delegado de modo assíncrono no thread que criou esse objeto.</summary>
+        <returns>Uma interface <see cref="T:System.IAsyncResult" /> que representa a operação assíncrona foi iniciada chamando esse método.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `method` delegado é executado no thread que criou o objeto, em vez do thread no qual <xref:System.ComponentModel.ISynchronizeInvoke.BeginInvoke%2A> foi chamado.  
+  
+ O representante é chamado de forma assíncrona, e esse método retorna imediatamente. Você pode chamar esse método de qualquer thread. Se você precisar que o valor de retorno de um processo iniciado com esse método, chame <xref:System.ComponentModel.ISynchronizeInvoke.EndInvoke%2A> para obter o valor.  
+  
+ Se você precisar chamar o delegado de forma síncrona, use o <xref:System.ComponentModel.ISynchronizeInvoke.Invoke%2A> método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInvoke">
+      <MemberSignature Language="C#" Value="public object EndInvoke (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object EndInvoke(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ISynchronizeInvoke.EndInvoke(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Um <see cref="T:System.IAsyncResult" /> interface que representa a operação assíncrona iniciada chamando <see cref="M:System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[])" />.</param>
+        <summary>Aguarda até que o processo iniciado chamando <see cref="M:System.ComponentModel.ISynchronizeInvoke.BeginInvoke(System.Delegate,System.Object[])" /> for concluída e, em seguida, retorna o valor gerado pelo processo.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor de retorno gerado pela operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método obtém o valor de retorno da operação assíncrona representado pelo <xref:System.IAsyncResult> passado por esta interface. Se a operação assíncrona não for concluída, esse método aguardará até que o resultado estiver disponível.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invoke">
+      <MemberSignature Language="C#" Value="public object Invoke (Delegate method, object[] args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Invoke(class System.Delegate method, object[] args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ISynchronizeInvoke.Invoke(System.Delegate,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+        <Parameter Name="args" Type="System.Object[]" />
+      </Parameters>
+      <Docs>
+        <param name="method">Um <see cref="T:System.Delegate" /> que contém um método para chamar, no contexto do thread para o controle.</param>
+        <param name="args">Uma matriz do tipo <see cref="T:System.Object" /> que representa os argumentos para passar para o método fornecido. Pode ser <see langword="null" />, caso nenhum argumento seja necessário.</param>
+        <summary>Executa o delegado de forma síncrona no thread que criou esse objeto e realiza marshaling na chamada para o thread de criação.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o valor retornado do delegado que está sendo invocado ou <see langword="null" /> se o delegado não tiver um valor retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de <xref:System.ComponentModel.ISynchronizeInvoke.BeginInvoke%2A>, este método opera de forma síncrona, ou seja, ele aguarda até que o processo seja concluído antes de retornar. Exceções geradas durante a chamada são propagadas de volta para o chamador.  
+  
+ Use esse método ao chamar um método de um thread diferente para realizar marshaling da chamada para o thread adequado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeRequired">
+      <MemberSignature Language="C#" Value="public bool InvokeRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvokeRequired" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ISynchronizeInvoke.InvokeRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o chamador deve chamar <see cref="M:System.ComponentModel.ISynchronizeInvoke.Invoke(System.Delegate,System.Object[])" /> ao chamar um objeto que implementa essa interface.</summary>
+        <value>
+          <see langword="true" /> se o chamador deve chamar <see cref="M:System.ComponentModel.ISynchronizeInvoke.Invoke(System.Delegate,System.Object[])" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade determina se o chamador deve chamar <xref:System.ComponentModel.ISynchronizeInvoke.Invoke%2A> ao fazer chamadas de método para um objeto que implementa essa interface. Esses objetos são associados a um segmento específico e não são thread-safe. Se você estiver chamando um método de um thread diferente, você deve usar o <xref:System.ComponentModel.ISynchronizeInvoke.Invoke%2A> método realizar marshaling da chamada para o thread adequado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

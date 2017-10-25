@@ -1,0 +1,41 @@
+<Type Name="DateRangeEventHandler" FullName="System.Windows.Forms.DateRangeEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DateRangeEventHandler(object sender, DateRangeEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DateRangeEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DateRangeEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DateRangeEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.DateRangeEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento <see cref="E:System.Windows.Forms.MonthCalendar.DateChanged" /> ou <see cref="E:System.Windows.Forms.MonthCalendar.DateSelected" /> de um <see cref="T:System.Windows.Forms.MonthCalendar" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.DateRangeEventArgs> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe um formulário que contém um <xref:System.Windows.Forms.MonthCalendar> controle que exibe um ano. O exemplo demonstra como definir propriedades como <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, e <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> para personalizar a aparência do controle de calendário. Outras propriedades como <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, e <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> são definidos para personalizar quais datas estão em negrito. O exemplo também define propriedades para alterar o formato de calendário, incluindo <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>, <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>, <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>, e <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>. O <xref:System.Windows.Forms.MonthCalendar.DateSelected> e <xref:System.Windows.Forms.MonthCalendar.DateChanged> eventos também são manipulados e seu status é exibido no formulário.  
+  
+ [!code-cpp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CPP/monthcalendar.cpp#1)]
+ [!code-csharp[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/CS/monthcalendar.cs#1)]
+ [!code-vb[System.Windows.Forms.MonthCalendar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.MonthCalendar/VB/monthcalendar.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

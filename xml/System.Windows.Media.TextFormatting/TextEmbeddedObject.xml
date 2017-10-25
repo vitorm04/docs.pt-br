@@ -1,0 +1,169 @@
+<Type Name="TextEmbeddedObject" FullName="System.Windows.Media.TextFormatting.TextEmbeddedObject">
+  <TypeSignature Language="C#" Value="public abstract class TextEmbeddedObject : System.Windows.Media.TextFormatting.TextRun" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TextEmbeddedObject extends System.Windows.Media.TextFormatting.TextRun" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.TextFormatting.TextEmbeddedObject" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.TextFormatting.TextRun</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um tipo de conteúdo de texto no qual medir, ocorrências de teste e desenho de todo o conteúdo é feita em todo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de um <xref:System.Windows.Media.TextFormatting.TextEmbeddedObject> é um botão no meio de uma linha de texto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TextEmbeddedObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextEmbeddedObject.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.TextFormatting.TextEmbeddedObject" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakAfter">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.LineBreakCondition BreakAfter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineBreakCondition BreakAfter" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextEmbeddedObject.BreakAfter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha de quebra condição após o objeto de texto.</summary>
+        <value>Um valor enumerado de <see cref="T:System.Windows.LineBreakCondition" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BreakBefore">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.LineBreakCondition BreakBefore { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.LineBreakCondition BreakBefore" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextEmbeddedObject.BreakBefore" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.LineBreakCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a condição antes do objeto de texto de quebra de linha.</summary>
+        <value>Um valor enumerado de <see cref="T:System.Windows.LineBreakCondition" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComputeBoundingBox">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Rect ComputeBoundingBox (bool rightToLeft, bool sideways);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Rect ComputeBoundingBox(bool rightToLeft, bool sideways) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextEmbeddedObject.ComputeBoundingBox(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Rect</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rightToLeft" Type="System.Boolean" />
+        <Parameter Name="sideways" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rightToLeft">Um <see cref="T:System.Boolean" /> valor que determina se o objeto de texto é desenhado da direita para esquerda.</param>
+        <param name="sideways">Um <see cref="T:System.Boolean" /> valor que determina se o objeto de texto é desenhado com seu lado paralela à linha de base.</param>
+        <summary>Obtém a computada caixa delimitadora do objeto de texto.</summary>
+        <returns>Um <see cref="T:System.Windows.Rect" /> valor que representa o tamanho da caixa delimitadora do objeto de texto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public abstract void Draw (System.Windows.Media.DrawingContext drawingContext, System.Windows.Point origin, bool rightToLeft, bool sideways);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Draw(class System.Windows.Media.DrawingContext drawingContext, valuetype System.Windows.Point origin, bool rightToLeft, bool sideways) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextEmbeddedObject.Draw(System.Windows.Media.DrawingContext,System.Windows.Point,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="drawingContext" Type="System.Windows.Media.DrawingContext" />
+        <Parameter Name="origin" Type="System.Windows.Point" />
+        <Parameter Name="rightToLeft" Type="System.Boolean" />
+        <Parameter Name="sideways" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="drawingContext">O <see cref="T:System.Windows.Media.DrawingContext" /> a ser usado para renderizar o objeto de texto.</param>
+        <param name="origin">O <see cref="T:System.Windows.Point" /> valor que representa a origem do qual o objeto de texto é desenhado.</param>
+        <param name="rightToLeft">Um <see cref="T:System.Boolean" /> valor que determina se o objeto de texto é desenhado da direita para esquerda.</param>
+        <param name="sideways">Um <see cref="T:System.Boolean" /> valor que determina se o objeto de texto é desenhado com seu lado paralela à linha de base.</param>
+        <summary>Desenha o objeto de texto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public abstract System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics Format (double remainingParagraphWidth);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics Format(float64 remainingParagraphWidth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.TextFormatting.TextEmbeddedObject.Format(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="remainingParagraphWidth" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="remainingParagraphWidth">Um <see cref="T:System.Double" /> que representa a largura restante do parágrafo.</param>
+        <summary>Obter métricas de medição de objeto de texto que se ajustarem a largura restante especificada do parágrafo.</summary>
+        <returns>Um <see cref="T:System.Windows.Media.TextFormatting.TextEmbeddedObjectMetrics" /> valor que representa as métricas de objeto de texto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFixedSize">
+      <MemberSignature Language="C#" Value="public abstract bool HasFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.TextFormatting.TextEmbeddedObject.HasFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se o objeto de texto tem um tamanho fixo, independentemente de onde ele é colocado dentro de uma linha.</summary>
+        <value>
+          <see langword="true" />Se o objeto de texto tem um tamanho fixo; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

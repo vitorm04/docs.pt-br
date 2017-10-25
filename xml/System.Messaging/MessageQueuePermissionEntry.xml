@@ -1,0 +1,238 @@
+<Type Name="MessageQueuePermissionEntry" FullName="System.Messaging.MessageQueuePermissionEntry">
+  <TypeSignature Language="C#" Value="public class MessageQueuePermissionEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit MessageQueuePermissionEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.MessageQueuePermissionEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a menor unidade de uma permissão de segurança de acesso do código definido para o sistema de mensagens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte [Code Access Security](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso de <xref:System.Messaging.MessageQueuePermissionEntry>.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#0](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#0)]
+ [!code-csharp[MessageQueuePermissionEntry#0](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueuePermissionEntry (System.Messaging.MessageQueuePermissionAccess permissionAccess, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Messaging.MessageQueuePermissionAccess permissionAccess, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermissionEntry.#ctor(System.Messaging.MessageQueuePermissionAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Messaging.MessageQueuePermissionAccess" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Uma combinação bit a bit dos valores <see cref="T:System.Messaging.MessageQueuePermissionAccess" />. O <see cref="P:System.Messaging.MessageQueuePermissionEntry.PermissionAccess" /> propriedade é definida para esse valor.</param>
+        <param name="path">O caminho da fila que é referenciado pelo <see cref="T:System.Messaging.MessageQueue" /> objeto. O <see cref="P:System.Messaging.MessageQueuePermissionEntry.Path" /> propriedade é definida para esse valor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.MessageQueuePermissionEntry" /> classe com os níveis de acesso de permissão especificada e o caminho da fila.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de <xref:System.Messaging.MessageQueuePermissionEntry>.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#1](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#1)]
+ [!code-csharp[MessageQueuePermissionEntry#1](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageQueuePermissionEntry (System.Messaging.MessageQueuePermissionAccess permissionAccess, string machineName, string label, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Messaging.MessageQueuePermissionAccess permissionAccess, string machineName, string label, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.MessageQueuePermissionEntry.#ctor(System.Messaging.MessageQueuePermissionAccess,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Messaging.MessageQueuePermissionAccess" />
+        <Parameter Name="machineName" Type="System.String" />
+        <Parameter Name="label" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">Uma combinação bit a bit dos valores <see cref="T:System.Messaging.MessageQueuePermissionAccess" />. O <see cref="P:System.Messaging.MessageQueuePermissionEntry.PermissionAccess" /> propriedade é definida para esse valor.</param>
+        <param name="machineName">O nome do computador em que a fila do serviço de enfileiramento de mensagens está localizada. O <see cref="P:System.Messaging.MessageQueuePermissionEntry.MachineName" /> propriedade é definida para esse valor.</param>
+        <param name="label">A descrição da fila. O <see cref="P:System.Messaging.MessageQueuePermissionEntry.Label" /> propriedade é definida para esse valor.</param>
+        <param name="category">A categoria de fila (identificador de tipo de enfileiramento de mensagens). O <see cref="P:System.Messaging.MessageQueuePermissionEntry.Category" /> propriedade é definida para esse valor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.MessageQueuePermissionEntry" /> níveis de classe com o acesso de permissões especificado, o nome do computador em que a fila está localizada, a descrição da fila e a categoria de fila.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância de <xref:System.Messaging.MessageQueuePermissionEntry>.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#2](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#2)]
+ [!code-csharp[MessageQueuePermissionEntry#2](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueuePermissionEntry.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a categoria da fila.</summary>
+        <value>A categoria de fila (enfileiramento tipo identificador), que permite que os aplicativos categorizem suas filas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem permissão entrada da fila <xref:System.Messaging.MessageQueuePermissionEntry.Category%2A> propriedade.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#3](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#3)]
+ [!code-csharp[MessageQueuePermissionEntry#3](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueuePermissionEntry.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição da fila.</summary>
+        <value>O rótulo para a fila de mensagens.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem permissão entrada da fila <xref:System.Messaging.MessageQueuePermissionEntry.Label%2A> propriedade.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#4](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#4)]
+ [!code-csharp[MessageQueuePermissionEntry#4](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public string MachineName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueuePermissionEntry.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do computador em que a fila do serviço de enfileiramento de mensagens está localizada.</summary>
+        <value>O nome do computador no qual a fila está localizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem permissão entrada da fila <xref:System.Messaging.MessageQueuePermissionEntry.MachineName%2A> propriedade.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#5](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#5)]
+ [!code-csharp[MessageQueuePermissionEntry#5](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueuePermissionEntry.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho da fila.</summary>
+        <value>A fila que é referenciada pelo <see cref="T:System.Messaging.MessageQueue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem permissão entrada da fila <xref:System.Messaging.MessageQueuePermissionEntry.Path%2A> propriedade.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#6](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#6)]
+ [!code-csharp[MessageQueuePermissionEntry#6](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionAccess">
+      <MemberSignature Language="C#" Value="public System.Messaging.MessageQueuePermissionAccess PermissionAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.MessageQueuePermissionAccess PermissionAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.MessageQueuePermissionEntry.PermissionAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.MessageQueuePermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os níveis de permissão de acesso usados na solicitação de permissões.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Messaging.MessageQueuePermissionAccess" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o valor de uma mensagem permissão entrada da fila <xref:System.Messaging.MessageQueuePermissionEntry.PermissionAccess%2A> propriedade.  
+  
+ [!code-cpp[MessageQueuePermissionEntry#7](~/samples/snippets/cpp/VS_Snippets_Remoting/MessageQueuePermissionEntry/cpp/class1.cpp#7)]
+ [!code-csharp[MessageQueuePermissionEntry#7](~/samples/snippets/csharp/VS_Snippets_Remoting/MessageQueuePermissionEntry/CS/class1.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

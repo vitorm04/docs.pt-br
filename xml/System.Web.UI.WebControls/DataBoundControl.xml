@@ -1,0 +1,753 @@
+<Type Name="DataBoundControl" FullName="System.Web.UI.WebControls.DataBoundControl">
+  <TypeSignature Language="C#" Value="public abstract class DataBoundControl : System.Web.UI.WebControls.BaseDataBoundControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataBoundControl extends System.Web.UI.WebControls.BaseDataBoundControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataBoundControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BaseDataBoundControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.DataBoundControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Serve como a classe base para todos os controles com limite de dados do ASP.NET versão 2.0 que exibem os dados em formato de lista ou tabela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl> classe é a classe base usada para controles do ASP.NET que recuperam tabulares ou controle de fonte de dados de estilo de lista de uma data do ASP.NET e associar os elementos de interface do usuário (IU) do controle para que os dados para exibição. Controles de composição da associação de dados como <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.FormView>; controles associados a dados de estilo de lista como <xref:System.Web.UI.WebControls.BulletedList> e <xref:System.Web.UI.WebControls.CheckBoxList>; e outros controles, como <xref:System.Web.UI.WebControls.AdRotator> derivam <xref:System.Web.UI.WebControls.DataBoundControl>.  
+  
+ Os desenvolvedores de página não usar o <xref:System.Web.UI.WebControls.DataBoundControl> classe diretamente; em vez disso, eles usam os controles que derivam dessa classe.  
+  
+ Os desenvolvedores de controle estender essa classe para criar controles associados a dados que funcionam com classes que implementam o <xref:System.Web.UI.IDataSource> interface e classes que derivam de <xref:System.Web.UI.DataSourceControl> e <xref:System.Web.UI.DataSourceView> classes. Ao derivar uma classe a partir de <xref:System.Web.UI.WebControls.DataBoundControl> classe, substitua o <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> método para associar os elementos de interface do usuário de seu controle aos dados recuperados pelo <xref:System.Web.UI.WebControls.DataBoundControl.GetData%2A> método. Na maioria dos casos, o <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> é o único método em sua classe derivada, você substituirá.  
+  
+ Para controles de associação de dados do ASP.NET 2.0, o <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> método é equivalente a `DataBind` método e é chamado para associar os dados em tempo de execução. O <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> chamadas de método de <xref:System.Web.UI.WebControls.DataBoundControl.GetData%2A> e <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como derivar uma classe a partir de <xref:System.Web.UI.WebControls.DataBoundControl> classe para criar um controle associado a dados personalizado. O `TextBoxSet` controle cria um <xref:System.Web.UI.WebControls.TextBox> controlar para cada item de dados recuperados do seu controle de fonte de dados associados e vincula o valor do item de dados em tempo de execução. A implementação atual do `Render` método processa o <xref:System.Web.UI.WebControls.TextBox> controles como uma lista não ordenada.  
+  
+ [!code-csharp[Samples.AspNet.TextBoxSet#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/CS/textboxset.cs#2)]
+ [!code-vb[Samples.AspNet.TextBoxSet#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/VB/textboxset.vb#2)]  
+  
+ O exemplo de código a seguir demonstra como usar o `TextBoxSet` controle, definida no exemplo anterior e associá-lo para um <xref:System.Web.UI.WebControls.AccessDataSource> controle.  
+  
+ [!code-aspx-csharp[Samples.AspNet.TextBoxSet#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/CS/textboxsetcs.aspx#1)]
+ [!code-aspx-vb[Samples.AspNet.TextBoxSet#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/VB/textboxsetvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataBoundControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o <see cref="T:System.Web.UI.WebControls.DataBoundControl" /> classe para uso por uma instância de classe herdada. Esse construtor só pode ser chamado por uma classe herdada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallingDataMethods">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CallingDataMethodsEventHandler CallingDataMethods;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CallingDataMethodsEventHandler CallingDataMethods" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.DataBoundControl.CallingDataMethods" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CallingDataMethodsEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando os métodos de dados estão sendo chamados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade desse evento é que você tenha a oportunidade para especificar que os métodos de dados a ser chamado em um objeto diferente que o <xref:System.Web.UI.Page> objeto.  
+  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDataSourceSelectArguments">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.DataSourceSelectArguments CreateDataSourceSelectArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.DataSourceSelectArguments CreateDataSourceSelectArguments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.CreateDataSourceSelectArguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um padrão <see cref="T:System.Web.UI.DataSourceSelectArguments" /> objeto usado pelo controle associado a dados, se nenhum argumento for especificado.</summary>
+        <returns>Um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> inicializado para <see cref="P:System.Web.UI.DataSourceSelectArguments.Empty" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.CreateDataSourceSelectArguments%2A> método é usado pelo <xref:System.Web.UI.WebControls.DataBoundControl.SelectArguments%2A> propriedade para inicializar um objeto de argumentos padrão e o <xref:System.Web.UI.WebControls.DataBoundControl> implementação da classe do <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.WebControls.DataBoundControl.CreateDataSourceSelectArguments%2A> método pode ser usado em uma classe derivada para recuperar um padrão <xref:System.Web.UI.DataSourceSelectArguments> objeto.  
+  
+ [!code-csharp[Samples.AspNet.TextBoxSet#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/CS/textboxset.cs#3)]
+ [!code-vb[Samples.AspNet.TextBoxSet#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/VB/textboxset.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatingModelDataSource">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.CreatingModelDataSourceEventHandler CreatingModelDataSource;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.CreatingModelDataSourceEventHandler CreatingModelDataSource" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.DataBoundControl.CreatingModelDataSource" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.CreatingModelDataSourceEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> objeto está sendo criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A finalidade desse evento é que você tenha a oportunidade para alterar o <xref:System.Web.UI.WebControls.ModelDataSourceView> instância em cenários em que você deseja usar uma classe personalizada que deriva de <xref:System.Web.UI.WebControls.ModelDataSourceView> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataMember">
+      <MemberSignature Language="C#" Value="public virtual string DataMember { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataMember" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataBoundControl.DataMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da lista de dados ao qual o controle com limite de dados está associado, nos casos em que a fonte de dados contém mais de uma lista distinta de itens de dados.</summary>
+        <value>O nome da lista específica de dados à qual o controle com limite de dados está associado, caso mais de uma lista seja fornecida por um controle de fonte de dados. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de <xref:System.Web.UI.WebControls.DataBoundControl.DataMember%2A> propriedade é armazenada em um estado de exibição.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceID">
+      <MemberSignature Language="C#" Value="public override string DataSourceID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSourceID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataBoundControl.DataSourceID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Web.UI.IDReferenceProperty(typeof(System.Web.UI.DataSourceControl))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ID do controle do qual o controle associado a dados recupera sua lista de itens de dados.</summary>
+        <value>A ID de um controle que representa a fonte de dados da qual o controle associado a dados recupera seus dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceObject">
+      <MemberSignature Language="C#" Value="public System.Web.UI.IDataSource DataSourceObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.IDataSource DataSourceObject" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataBoundControl.DataSourceObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IDataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que implementa a interface <see cref="T:System.Web.UI.IDataSource" />, que fornece acesso ao conteúdo de dados do objeto.</summary>
+        <value>Um objeto com acesso ao seu conteúdo de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.DataSourceView GetData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.DataSourceView GetData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.GetData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um objeto <see cref="T:System.Web.UI.DataSourceView" /> que o controle com associação de dados usa para executar operações de dados.</summary>
+        <returns>Um <see cref="T:System.Web.UI.DataSourceView" /> que o controle com associação de dados usa para executar operações de dados. Se a propriedade <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataMember" /> estiver definida, um <see cref="T:System.Web.UI.DataSourceView" /> nomeado específico será retornado. Caso contrário, o <see cref="T:System.Web.UI.DataSourceView" /> padrão será retornado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.GetData%2A> método recupera um <xref:System.Web.UI.DataSourceView> objeto a partir do controle da fonte de dados associado ao chamar o <xref:System.Web.UI.WebControls.DataBoundControl.GetDataSource%2A> método. Se o <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> propriedade é usada para identificar uma fonte de dados, um padrão <xref:System.Web.UI.DataSourceView> objeto é criado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.WebControls.DataBoundControl.GetData%2A> método é chamado para recuperar o <xref:System.Web.UI.DataSourceView> objeto do controle de fonte de dados associados e o <xref:System.Web.UI.DataSourceView.Select%2A> método é chamado para recuperar os dados. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataBoundControl> classe.  
+  
+ [!code-csharp[Samples.AspNet.TextBoxSet#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/CS/textboxset.cs#3)]
+ [!code-vb[Samples.AspNet.TextBoxSet#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/VB/textboxset.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">As propriedades <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSource" /> e <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSourceID" /> foram definidas.  
+  
+ \- ou -  
+  
+ A propriedade <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataMember" /> foi definida, mas um objeto <see cref="T:System.Web.UI.DataSourceView" /> com esse nome não existe.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDataSource">
+      <MemberSignature Language="C#" Value="protected virtual System.Web.UI.IDataSource GetDataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.IDataSource GetDataSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.GetDataSource" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.IDataSource</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a interface <see cref="T:System.Web.UI.IDataSource" /> à qual o controle associado a dados está associado, se houver.</summary>
+        <returns>Um <see cref="T:System.Web.UI.IDataSource" /> que representa a fonte de dados identificada por <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataSourceID" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.GetData%2A> chamadas de método de <xref:System.Web.UI.WebControls.DataBoundControl.GetDataSource%2A> método internamente. Uma opção válida <xref:System.Web.UI.IDataSource> é recuperada por esses dois métodos de instância e é armazenado em cache pelo <xref:System.Web.UI.WebControls.DataBoundControl> do objeto até que o <xref:System.Web.UI.WebControls.DataBoundControl.OnDataPropertyChanged%2A> método sinaliza que a fonte de dados foi alterado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">O controle identificado pela propriedade <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataSourceID" /> não existe no contêiner atual.  
+  
+ \- ou -  
+  
+ O objeto especificado pela propriedade <see cref="P:System.Web.UI.WebControls.DataBoundControl.DataSourceID" /> não implementa a interface <see cref="T:System.Web.UI.IDataSource" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUsingModelBinders">
+      <MemberSignature Language="C#" Value="protected override bool IsUsingModelBinders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUsingModelBinders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataBoundControl.IsUsingModelBinders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação de modelo está em uso.</summary>
+        <value>
+          <see langword="true" />Se a associação de modelo está em uso; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public virtual string ItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataBoundControl.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do tipo de item de dados para vinculação de dados com rigidez de tipos.</summary>
+        <value>O nome do tipo de modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir essa propriedade permite a `Item` e `BindItem` expressões de associação de dados.  
+  
+ Definir este método automaticamente habilita a funcionalidade de dados dinâmicos.  
+  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um objeto que representa o estado de exibição para restaurar.</param>
+        <summary>Restaura informações de estado de exibição de uma solicitação de página anterior salva pelo método <see cref="M:System.Web.UI.WebControls.DataBoundControl.SaveViewState" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarkAsDataBound">
+      <MemberSignature Language="C#" Value="protected void MarkAsDataBound ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void MarkAsDataBound() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.MarkAsDataBound" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o estado do controle em estado de exibição como com êxito associada aos dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle de associação de dados mantém um valor em um estado de exibição que indica se ele está atualmente associado aos dados. O <xref:System.Web.UI.WebControls.DataBoundControl.MarkAsDataBound%2A> método define o valor como `true`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.WebControls.DataBoundControl.MarkAsDataBound%2A> método é usado por uma classe derivada controle de associação de dados. Depois que os dados são recuperados pelo <xref:System.Web.UI.WebControls.DataBoundControl.GetData%2A> método e o limite para o controle com o <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> método, o <xref:System.Web.UI.WebControls.BaseDataBoundControl.RequiresDataBinding%2A> está definida como `false` e o <xref:System.Web.UI.WebControls.DataBoundControl.MarkAsDataBound%2A> método é chamado para indicar que o controle foi concluída a associação e não está mais exige que ele durante o ciclo de vida da página atual. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataBoundControl> classe.  
+  
+ [!code-csharp[Samples.AspNet.TextBoxSet#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/CS/textboxset.cs#3)]
+ [!code-vb[Samples.AspNet.TextBoxSet#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/VB/textboxset.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreatingModelDataSource">
+      <MemberSignature Language="C#" Value="protected virtual void OnCreatingModelDataSource (System.Web.UI.WebControls.CreatingModelDataSourceEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCreatingModelDataSource(class System.Web.UI.WebControls.CreatingModelDataSourceEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.OnCreatingModelDataSource(System.Web.UI.WebControls.CreatingModelDataSourceEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.CreatingModelDataSourceEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto que fornece acesso para o <see cref="T:System.Web.UI.WebControls.ModelDataSource" /> objeto que está sendo criado.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.DataBoundControl.CreatingModelDataSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDataPropertyChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDataPropertyChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.OnDataPropertyChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reconecta o controle de dados associados aos seus dados depois que um dos dados base da fonte de alterações de propriedades de identificação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceViewChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSourceViewChanged (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSourceViewChanged(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewChanged(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento, o <see cref="T:System.Web.UI.DataSourceView" />.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.DataSourceView.DataSourceViewChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewChanged%2A> método notifica um controle associado a dados que a fonte de dados subjacente foi alterada e que o controle deve associar novamente e qualquer trabalho necessário deve ser executado. Normalmente, o <xref:System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewChanged%2A> método é chamado quando uma propriedade da exibição da fonte de dados foi alterado.  
+  
+ O <xref:System.Web.UI.WebControls.DataBoundControl> classe define o <xref:System.Web.UI.WebControls.BaseDataBoundControl.RequiresDataBinding%2A> propriedade `true` quando ele gera o <xref:System.Web.UI.DataSourceView.DataSourceViewChanged> evento.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewChanged(System.Object,System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewChanged(System.Object,System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoad">
+      <MemberSignature Language="C#" Value="protected override void OnLoad (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnLoad(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.OnLoad(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto <see cref="T:System.EventArgs" /> que contém dados do evento.</param>
+        <summary>Manipula o <see cref="E:System.Web.UI.Control.Load" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl> classe chama o <xref:System.Web.UI.WebControls.BaseDataBoundControl.ConfirmInitState%2A?displayProperty=nameWithType> método para definir o estado inicializado do controle associado a dados e define o <xref:System.Web.UI.WebControls.BaseDataBoundControl.RequiresDataBinding%2A> propriedade `true` se a solicitação HTTP não é um postback.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPagePreLoad">
+      <MemberSignature Language="C#" Value="protected override void OnPagePreLoad (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPagePreLoad(object sender, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.OnPagePreLoad(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">O <see cref="T:System.Web.UI.Page" /> que gerou o evento.</param>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Define o estado inicializado do controle associado a dados antes do controle for carregado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.OnPagePreLoad%2A> método é substituído pelo <xref:System.Web.UI.WebControls.DataBoundControl> classe para definir o <xref:System.Web.UI.WebControls.BaseDataBoundControl.RequiresDataBinding%2A?displayProperty=nameWithType> propriedade `true` em casos onde a solicitação HTTP é um postback e estado de exibição é ativado, mas o controle associado a dados ainda não foi vinculado. Esse cenário é comum com controles como <xref:System.Web.UI.WebControls.Wizard> e <xref:System.Web.UI.WebControls.MultiView>, onde a visibilidade do controle é alterada em tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformDataBinding">
+      <MemberSignature Language="C#" Value="protected virtual void PerformDataBinding (System.Collections.IEnumerable data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void PerformDataBinding(class System.Collections.IEnumerable data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding(System.Collections.IEnumerable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IEnumerable" />
+      </Parameters>
+      <Docs>
+        <param name="data">O <see cref="T:System.Collections.IEnumerable" /> lista de dados retornados de uma <see cref="M:System.Web.UI.WebControls.DataBoundControl.PerformSelect" /> chamada de método.</param>
+        <summary>Quando substituído em uma classe derivada, associa dados da fonte de dados para o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar esse método em vez do <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBind%2A> método quando você derivar um controle associado a dados do <xref:System.Web.UI.WebControls.DataBoundControl> classe. Colocar a lógica de associação de dados do controle em <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> permite que você evite o <xref:System.Web.UI.Control.DataBinding> e <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataBound> eventos que estão sendo gerados na ordem errada.  
+  
+ Enquanto a base de <xref:System.Web.UI.WebControls.DataBoundControl> classe não fornece nenhuma implementação específica para esse método, o <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> método é chamado pelo <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> controla o método para associar os valores de qualquer interface de usuário (UI) aos dados que são recuperados pelo <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como implementar a <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> método em uma classe derivada de <xref:System.Web.UI.WebControls.DataBoundControl>. O `TextBoxSet` controle cria um <xref:System.Web.UI.WebControls.TextBox> controle para cada item de dados está associado a. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataBoundControl> classe.  
+  
+ [!code-csharp[Samples.AspNet.TextBoxSet#5](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/CS/textboxset.cs#5)]
+ [!code-vb[Samples.AspNet.TextBoxSet#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/VB/textboxset.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformSelect">
+      <MemberSignature Language="C#" Value="protected override void PerformSelect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PerformSelect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.PerformSelect" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera dados da fonte de dados associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> método é chamado depois que os dados são recuperados para associar dados aos elementos do controle associado a dados. Tipos derivados substituem este método para recuperar dados somente se a implementação padrão não for adequada. Normalmente, é suficiente fornecer uma <xref:System.Web.UI.DataSourceViewSelectCallback> delegado que executa qualquer trabalho de dados personalizado, em vez de implementar o <xref:System.Web.UI.WebControls.DataBoundControl.PerformDataBinding%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.DataBoundControl.PerformSelect%2A> método para recuperar dados de uma fonte de dados associados usando o <xref:System.Web.UI.WebControls.DataBoundControl.GetData%2A> método e associá-lo para os elementos do controle. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataBoundControl> classe.  
+  
+ [!code-csharp[Samples.AspNet.TextBoxSet#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/CS/textboxset.cs#3)]
+ [!code-vb[Samples.AspNet.TextBoxSet#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.TextBoxSet/VB/textboxset.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveViewState">
+      <MemberSignature Language="C#" Value="protected override object SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações de estado de exibição que ocorreram desde a hora em que a página foi postada no servidor.</summary>
+        <returns>Estado de exibição atual do controle. Se não houver um estado de exibição associado ao controle, esse método retornará <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectArguments">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.DataSourceSelectArguments SelectArguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataSourceSelectArguments SelectArguments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataBoundControl.SelectArguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> que o controle de associação de dados usa ao recuperar dados de um controle de fonte de dados do objeto.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> usado pelo controle associado a dados para recuperar dados de valor. O padrão é <see cref="P:System.Web.UI.DataSourceSelectArguments.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.SelectArguments%2A> chamadas de propriedade de <xref:System.Web.UI.WebControls.DataBoundControl.CreateDataSourceSelectArguments%2A> método para criar um padrão <xref:System.Web.UI.DataSourceSelectArguments> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectMethod">
+      <MemberSignature Language="C#" Value="public virtual string SelectMethod { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectMethod" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataBoundControl.SelectMethod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome do método a ser chamado para ler os dados.</summary>
+        <value>O nome do método.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade faz com que a associação de modelo a ser usado como o método de associação de dados.  
+  
+ Para uma série de tutoriais sobre como usar a associação de modelo com formulários da Web, consulte [modelo de associação e formulários da Web](http://go.microsoft.com/fwlink/?LinkId=286117).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackViewState">
+      <MemberSignature Language="C#" Value="protected override void TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que as alterações de estado de exibição para o controle a ser rastreada para que eles podem ser armazenados no controle do <see cref="T:System.Web.UI.StateBag" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateDataSource">
+      <MemberSignature Language="C#" Value="protected override void ValidateDataSource (object dataSource);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ValidateDataSource(object dataSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataBoundControl.ValidateDataSource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">Um objeto definido para o <see cref="P:System.Web.UI.WebControls.BaseDataBoundControl.DataSource" /> propriedade.</param>
+        <summary>Verifica se o objeto que associa um controle associado a dados a é um pode funcionar com.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataBoundControl.ValidateDataSource%2A> método é chamado somente no <xref:System.Web.UI.WebControls.BaseDataBoundControl> modificador da classe (`set` acessador) para o <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> propriedade. O <xref:System.Web.UI.WebControls.DataBoundControl> classe verifica o tipo do objeto que está definido para o <xref:System.Web.UI.WebControls.BaseDataBoundControl.DataSource%2A> propriedade para garantir que ele é uma instância do <xref:System.Web.UI.IDataSource>, <xref:System.ComponentModel.IListSource>, ou <xref:System.Collections.IEnumerable> interface.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O objeto passado <paramref name="dataSource" /> parâmetro não é <see langword="null" /> ou um tipo reconhecido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,426 @@
+<Type Name="WebUtility" FullName="System.Net.WebUtility">
+  <TypeSignature Language="C#" Value="public static class WebUtility" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit WebUtility extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.WebUtility" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para codificar e decodificar URLs durante o processamento de solicitações da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.HttpUtility> classe contém codificação e decodificação de métodos de utilitário para uso com cadeias de caracteres de codificação HTML. O <xref:System.Uri?displayProperty=nameWithType> classe também contém métodos e propriedades que podem ser usadas para propósitos similares.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HtmlDecode">
+      <MemberSignature Language="C#" Value="public static string HtmlDecode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlDecode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.HtmlDecode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para decodificar.</param>
+        <summary>Converte uma cadeia de caracteres que foi codificada em HTML para transmissão HTTP em uma cadeia de caracteres decodificada.</summary>
+        <returns>Uma cadeia de caracteres decodificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação HTML converte caracteres que não são permitidos em HTML em equivalentes de entidade de caractere; Decodificação HTML inverte a codificação. Por exemplo, quando inserido em um bloco de texto, os caracteres \< e > são codificadas como &lt; e &gt; para transmissão HTTP.  
+  
+ Se o `value` parâmetro é `null`, em seguida, a cadeia de caracteres decodificada retornada é `null`. Se o `value` parâmetro é uma cadeia de caracteres vazia e, em seguida, a cadeia de caracteres decodificada retornada é uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDecode">
+      <MemberSignature Language="C#" Value="public static void HtmlDecode (string value, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HtmlDecode(string value, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.HtmlDecode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para decodificar.</param>
+        <param name="output">Um fluxo de saída <see cref="T:System.IO.TextWriter" />.</param>
+        <summary>Converte uma cadeia de caracteres que foi codificada em HTML em uma cadeia de caracteres decodificada e envia a cadeia de caracteres decodificada para um fluxo de saída <see cref="T:System.IO.TextWriter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação HTML converte caracteres que não são permitidos em HTML em equivalentes de entidade de caractere; Decodificação HTML inverte a codificação. Por exemplo, quando inserido em um bloco de texto, os caracteres \< e > são codificadas como &lt; e &gt; para transmissão HTTP.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="output" /> não pode ser <see langword="null" /> se o parâmetro <paramref name="value" /> não for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public static string HtmlEncode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string HtmlEncode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.HtmlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <summary>Converte uma cadeia de caracteres em uma cadeia de caracteres codificada em HTML.</summary>
+        <returns>Uma cadeia de caracteres codificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação HTML converte caracteres que não são permitidos em HTML em equivalentes de entidade de caractere; Decodificação HTML inverte a codificação. Por exemplo, quando inserido em um bloco de texto, os caracteres \< e > são codificadas como &lt; e &gt; para transmissão HTTP.  
+  
+ Se o `value` parâmetro é `null`, em seguida, a cadeia de caracteres codificada retornada é `null`. Se o `value` parâmetro é uma cadeia de caracteres vazia, a cadeia de caracteres codificada retornada será uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlEncode">
+      <MemberSignature Language="C#" Value="public static void HtmlEncode (string value, System.IO.TextWriter output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void HtmlEncode(string value, class System.IO.TextWriter output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="output" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser codificada.</param>
+        <param name="output">Um fluxo de saída de <see cref="T:System.IO.TextWriter" />.</param>
+        <summary>Converte uma cadeia de caracteres em uma cadeia de caracteres codificada em HTML e retorna o resultado como um fluxo <see cref="T:System.IO.TextWriter" /> de saída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação HTML converte caracteres que não são permitidos em HTML em equivalentes de entidade de caractere; Decodificação HTML inverte a codificação. Por exemplo, quando inserido em um bloco de texto, os caracteres \< e >, são codificadas como &lt; e &gt; para transmissão HTTP.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="output" /> não pode ser <see langword="null" /> se o parâmetro <paramref name="value" /> não for <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecode">
+      <MemberSignature Language="C#" Value="public static string UrlDecode (string encodedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlDecode(string encodedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.UrlDecode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encodedValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="encodedValue">Uma cadeia de caracteres codificada de URL a ser decodificada.</param>
+        <summary>Converte uma cadeia de caracteres codificada para transmissão em uma URL em uma cadeia de caracteres decodificada.</summary>
+        <returns>Retorna <see cref="T:System.String" />.  
+  
+ Uma cadeia de caracteres decodificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação de URL converte caracteres que não são permitidos em uma URL em sequências de escape hexadecimal equivalente. O <xref:System.Net.WebUtility.UrlEncode%2A> método cria uma cadeia de caracteres codificados de URL.  
+  
+ Decodificação URL substitui as sequências de escape hexadecimal com equivalentes de caractere ASCII correspondentes. Por exemplo, quando inserido em um bloco de texto codificado de URL, o sequências de escape `%3c` e `%3e` são decodificado para os caracteres `<` e `>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlDecodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlDecodeToBytes (byte[] encodedValue, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlDecodeToBytes(unsigned int8[] encodedValue, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.UrlDecodeToBytes(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encodedValue" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="encodedValue">Uma codificação de URL <see cref="T:System.Byte" /> matriz decodificar.</param>
+        <param name="offset">O deslocamento, em bytes, do início do <see cref="T:System.Byte" /> matriz decodificar.</param>
+        <param name="count">A contagem, em bytes, para decodificar do <see cref="T:System.Byte" /> matriz.</param>
+        <summary>Converte uma matriz de bytes codificados que foi codificada para transmissão em uma URL em uma matriz de bytes codificados.</summary>
+        <returns>Retorna <see cref="T:System.Byte" />.  
+  
+ Um decodificada <see cref="T:System.Byte" /> matriz.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação de URL converte caracteres que não são permitidos em uma URL em sequências de escape hexadecimal equivalente. O <xref:System.Net.WebUtility.UrlEncodeToBytes%2A> método cria uma matriz de bytes codificados de URL.  
+  
+ Decodificação URL substitui as sequências de escape hexadecimal com equivalentes de caractere ASCII correspondentes. Por exemplo, quando inserido em um bloco de texto codificado de URL, o sequências de escape `%3c` e `%3e` são decodificado para os caracteres `<` e `>`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncode">
+      <MemberSignature Language="C#" Value="public static string UrlEncode (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string UrlEncode(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.UrlEncode(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O texto a ser codificado em URL.</param>
+        <summary>Converte uma cadeia de caracteres de texto em uma cadeia de caracteres codificada em URL.</summary>
+        <returns>Retorna <see cref="T:System.String" />.  
+  
+ Uma cadeia de caracteres codificada em URL.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação de URL substitui caracteres que não são permitidos em uma URL com equivalentes de entidade de caracteres que consiste de sequências de escape hexadecimal. A cadeia de caracteres convertida deve estar de acordo com o formato UTF-8.  
+  
+ Codificação de URL substitui todos os códigos de caractere, exceto letras, números e caracteres de pontuação a seguir:  
+  
+-   `-`(sinal de subtração`)`  
+  
+-   `_`(sublinhado`)`  
+  
+-   `.`(período`)`  
+  
+-   `!`(ponto de exclamação`)`  
+  
+-   \*(com asterisco)  
+  
+-   `(`e `)` (abrir e fechar parênteses)  
+  
+ Por exemplo, quando inserido em um bloco de texto a ser transmitido em uma URL, os caracteres `<` e `>` são codificadas como `%3c` e `%3e`.  
+  
+ O <xref:System.Net.WebUtility.UrlDecode%2A> método inverte a codificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UrlEncodeToBytes">
+      <MemberSignature Language="C#" Value="public static byte[] UrlEncodeToBytes (byte[] value, int offset, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] UrlEncodeToBytes(unsigned int8[] value, int32 offset, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.WebUtility.UrlEncodeToBytes(System.Byte[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">A matriz <see cref="T:System.Byte" /> a ser codificada em URL.</param>
+        <param name="offset">O deslocamento, em bytes, do início da matriz <see cref="T:System.Byte" /> a ser codificado.</param>
+        <param name="count">A contagem, em bytes, a ser codificada da matriz <see cref="T:System.Byte" />.</param>
+        <summary>Converte uma matriz de bytes em uma matriz de bytes codificada em URL.</summary>
+        <returns>Retorna <see cref="T:System.Byte" />.  
+  
+ Uma matriz <see cref="T:System.Byte" /> codificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se caracteres como espaços em branco e pontuação é passado em um fluxo HTTP, eles podem ser interpretados incorretamente na extremidade receptora. Codificação de URL substitui caracteres que não são permitidos em uma URL com equivalentes de entidade de caracteres que consiste de sequências de escape hexadecimal. A cadeia de caracteres convertida deve estar de acordo com o formato UTF-8.  
+  
+ Codificação de URL substitui todos os códigos de caractere, exceto letras, números e caracteres de pontuação a seguir:  
+  
+-   `-`(sinal de subtração)  
+  
+-   `_`(sublinhado)  
+  
+-   `.`(ponto)  
+  
+-   `!`(ponto de exclamação)  
+  
+-   ' *' (com asterisco)  
+  
+-   `'`(aspa simples)  
+  
+-   `(`e `)` (abrir e fechar parênteses)  
+  
+ Por exemplo, quando inserido em um bloco de texto a ser transmitido em uma URL, os caracteres `<` e `>` são codificadas como `%3c` e `%3e`.  
+  
+ O <xref:System.Net.WebUtility.UrlDecodeToBytes%2A> método inverte a codificação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

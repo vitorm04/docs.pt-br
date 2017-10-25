@@ -1,0 +1,77 @@
+<Type Name="XmlSeverityType" FullName="System.Xml.Schema.XmlSeverityType">
+  <TypeSignature Language="C#" Value="public enum XmlSeverityType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlSeverityType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Schema.XmlSeverityType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Representa a gravidade do evento de validação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSeverityType Error = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSeverityType.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSeverityType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que um erro de validação ocorreu ao validar o documento de instância. Isso se aplica a DTDs (definições de tipo de documento) e esquemas de linguagem XSD (definição de esquema XML). Restrições de validade do W3C (World Wide Web Consortium) são consideradas erros. Se nenhum manipulador de eventos de validação tiver sido criado, os erros lançarão uma exceção.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Warning">
+      <MemberSignature Language="C#" Value="Warning" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.Schema.XmlSeverityType Warning = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.Schema.XmlSeverityType.Warning" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSeverityType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que ocorreu um evento de validação que não é um erro. Normalmente, é emitido um aviso quando não há um DTD ou esquema XML com o qual validar um atributo ou elemento em particular. Diferente dos erros, os avisos não lançarão uma exceção se não houver um manipulador de eventos de validação.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

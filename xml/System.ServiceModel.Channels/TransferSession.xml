@@ -1,0 +1,85 @@
+<Type Name="TransferSession" FullName="System.ServiceModel.Channels.TransferSession">
+  <TypeSignature Language="C#" Value="public enum TransferSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TransferSession extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.TransferSession" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina se o contrato para a transferência de mensagens de um cliente para um aplicativo requer uma sessão e se a entrega de mensagens deve preservar a ordem na qual as operações são chamadas pelo cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.TransferSession> as enumerações são geralmente usadas em associação com um contrato de serviço. Quando um cliente envia mensagens para um aplicativo remoto ou o serviço para chamar operações, <xref:System.ServiceModel.Channels.TransferSession> é usado para determinar se uma sessão é necessária para interagir com o serviço e se as mensagens usadas para invocar as operações em um serviço devem chegar na mesma ordem em que foram enviadas.  
+  
+ Entrega de mensagens entre cliente e serviço requer uma sessão para preservar a ordem na qual as operações são chamadas pelo cliente. Se não houver nenhuma sessão entre pontos de extremidade, a ordem de entrega não reflete a ordem na qual as mensagens são enviadas.  
+  
+-   O valor de <xref:System.ServiceModel.Channels.TransferSession> que um aplicativo usa Especifica se o aplicativo requer uma ordem específica na sequência de chamada. Se forem solicitados, o contrato requer que as mensagens devem chegar na ordem em que são enviados.  
+  
+-   Se desordenadas, em seguida, as mensagens usadas para invocar operações públicas podem chegar em qualquer ordem.  
+  
+ Se não houver nenhum, não existem sessões.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.TransferSession None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.TransferSession.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransferSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma sessão não é necessário para interagir com os serviços nesse contrato.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ordered">
+      <MemberSignature Language="C#" Value="Ordered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.TransferSession Ordered = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.TransferSession.Ordered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransferSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma sessão com garantias de entrega ordenada de mensagem é necessária para interagir com os serviços nesse contrato.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unordered">
+      <MemberSignature Language="C#" Value="Unordered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.Channels.TransferSession Unordered = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Channels.TransferSession.Unordered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Channels.TransferSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma sessão com garantias de entrega de mensagem não ordenada é suficiente para interagir com os serviços nesse contrato.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

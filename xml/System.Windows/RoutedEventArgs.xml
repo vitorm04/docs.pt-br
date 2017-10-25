@@ -1,0 +1,344 @@
+<Type Name="RoutedEventArgs" FullName="System.Windows.RoutedEventArgs">
+  <TypeSignature Language="C#" Value="public class RoutedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RoutedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.RoutedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações de estado e dados de eventos associados a um evento roteado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diferentes <xref:System.Windows.RoutedEventArgs> pode ser usado com um único <xref:System.Windows.RoutedEventArgs.RoutedEvent%2A>. Essa classe é responsável para empacotar os dados de evento para um <xref:System.Windows.RoutedEventArgs.RoutedEvent%2A>, fornecendo informações de estado do evento extra e é usado pelo sistema de eventos para invocar o manipulador associado ao evento roteado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoutedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventArgs.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.RoutedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao usar esse construtor sem parâmetros, o públicas todas as propriedades do novo <xref:System.Windows.RoutedEventArgs> instância assumir os seguintes valores padrão:  
+  
+-   <xref:System.Windows.RoutedEventArgs.RoutedEvent%2A>padrão é `null`.  
+  
+-   <xref:System.Windows.RoutedEventArgs.Handled%2A>padrão é`false`  
+  
+-   <xref:System.Windows.RoutedEventArgs.Source%2A>padrão é `null`.  
+  
+-   <xref:System.Windows.RoutedEventArgs.OriginalSource%2A>padrão é `null`.  
+  
+ Valores nulos para <xref:System.Windows.RoutedEventArgs.Source%2A> e <xref:System.Windows.RoutedEventArgs.OriginalSource%2A> significa que apenas o <xref:System.Windows.RoutedEventArgs> dados não faz nenhuma tentativa para especificar a origem. Quando esta instância é usada em uma chamada para <xref:System.Windows.UIElement.RaiseEvent%2A>, o <xref:System.Windows.RoutedEventArgs.Source%2A> e <xref:System.Windows.RoutedEventArgs.OriginalSource%2A> valores são preenchidos com base no elemento que disparou o evento e é passado para os ouvintes por meio de roteamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoutedEventArgs (System.Windows.RoutedEvent routedEvent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.RoutedEvent routedEvent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventArgs.#ctor(System.Windows.RoutedEvent)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+      </Parameters>
+      <Docs>
+        <param name="routedEvent">O identificador de evento roteado para essa instância da classe <see cref="T:System.Windows.RoutedEventArgs" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.RoutedEventArgs" />, usando o identificador de evento roteado fornecido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades do novo não for especificado ao usar esse construtor sobrecarregado, <xref:System.Windows.RoutedEventArgs> instância assumir os seguintes valores padrão:  
+  
+-   <xref:System.Windows.RoutedEventArgs.Handled%2A>padrão é`false`  
+  
+-   <xref:System.Windows.RoutedEventArgs.Source%2A>padrão é `null`.  
+  
+-   <xref:System.Windows.RoutedEventArgs.OriginalSource%2A>padrão é `null`.  
+  
+ Valores nulos para <xref:System.Windows.RoutedEventArgs.Source%2A> e <xref:System.Windows.RoutedEventArgs.OriginalSource%2A> somente significam que isso <xref:System.Windows.RoutedEventArgs> não faz nenhuma tentativa para especificar a origem. Quando esta instância é usada em uma chamada para <xref:System.Windows.UIElement.RaiseEvent%2A>, o <xref:System.Windows.RoutedEventArgs.Source%2A> e <xref:System.Windows.RoutedEventArgs.OriginalSource%2A> valores são preenchidos com base no elemento que disparou o evento e é passado para os ouvintes por meio de roteamento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir constrói um novo <xref:System.Windows.RoutedEventArgs> para uso em uma chamada para <xref:System.Windows.UIElement.RaiseEvent%2A>.  
+  
+ [!code-csharp[RoutedEventCustom#RaiseEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#raiseevent)]
+ [!code-vb[RoutedEventCustom#RaiseEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#raiseevent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoutedEventArgs (System.Windows.RoutedEvent routedEvent, object source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.RoutedEvent routedEvent, object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="routedEvent" Type="System.Windows.RoutedEvent" />
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="routedEvent">O identificador de evento roteado para essa instância da classe <see cref="T:System.Windows.RoutedEventArgs" />.</param>
+        <param name="source">Uma fonte alternativa será relatada quando o evento é manipulado. Isso preenche previamente o <see cref="P:System.Windows.RoutedEventArgs.Source" /> propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.RoutedEventArgs" /> classe, usando o identificador de eventos roteados fornecido e a possibilidade de declarar uma fonte diferente para o evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades do novo não for especificado ao usar esse construtor sobrecarregado, <xref:System.Windows.RoutedEventArgs> instância assumir os seguintes valores padrão:  
+  
+-   <xref:System.Windows.RoutedEventArgs.Handled%2A>padrão é`false`  
+  
+-   <xref:System.Windows.RoutedEventArgs.OriginalSource%2A>padrão é `null`.  
+  
+ Valores nulos para <xref:System.Windows.RoutedEventArgs.OriginalSource%2A> são preenchidos com base no elemento que gerou o evento e passado o roteamento, mas serão lidas `null` antes da invocação.  
+  
+ Usar essa assinatura ao passar <xref:System.Windows.RoutedEventArgs> para virtuais como <xref:System.Windows.Controls.Primitives.TextBoxBase.OnSelectionChanged%2A>, em que os argumentos são usados para chamar <xref:System.Windows.UIElement.RaiseEvent%2A> internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handled">
+      <MemberSignature Language="C#" Value="public bool Handled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Handled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventArgs.Handled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o estado atual de manipulação de eventos para um evento roteado enquanto ele trafega na rota.</summary>
+        <value>Se a configuração, defina como <see langword="true" /> se o evento deve ser marcado como tratada; caso contrário <see langword="false" />. Se esse valor, de leitura <see langword="true" /> indica que um manipulador de classe ou algum manipulador de instância na rota, já marcado este evento manipulado. <see langword="false" />.indica que nenhum manipulador marcou o evento como manipulado.  
+  
+ O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Marcar o evento manipulado limita a visibilidade do evento roteado para ouvintes na rota de evento. O evento ainda passam para o restante da rota, mas somente manipuladores especificamente adicionados com `HandledEventsToo` `true` no <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> chamada do método será chamada em resposta. Padrão de manipuladores de ouvintes de instância (como aqueles expresso em [!INCLUDE[TLA#tla_xaml](~/includes/tlasharptla-xaml-md.md)]) não serão chamados. Manipulação de eventos que são marcados como manipulados não é um cenário comum.  
+  
+ Se você for um autor de controle definindo seus próprios eventos, as decisões tomadas sobre a classe de manipulação de eventos, nível afetará os usuários de seu controle, bem como quaisquer usuários de controles derivados e potencialmente outros elementos que são contidas pelo seu controle ou que contém o controle. Para obter mais informações, consulte [Marcar eventos roteados como manipulados e manipulação de classe](~/docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+  
+ Em circunstâncias muito raras é apropriado tratar eventos onde <xref:System.Windows.RoutedEventArgs.Handled%2A> está marcado como `true`e modifique os argumentos de evento alterando <xref:System.Windows.RoutedEventArgs.Handled%2A> para `false`. Isso pode ser necessário em certas áreas de eventos de entrada de controles, como o tratamento de chaves de <xref:System.Windows.UIElement.KeyDown> versus <xref:System.Windows.UIElement.TextInput> nível baixo onde competem de eventos de entrada de alto níveis para o tratamento e cada um é tentar trabalhar com uma estratégia de roteamento diferente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa um manipulador de eventos que marca o evento manipulado.  
+  
+ [!code-csharp[ClassHandling#OnStarClassHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#onstarclasshandler)]
+ [!code-vb[ClassHandling#OnStarClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#onstarclasshandler)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected virtual void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">O manipulador genérico / delegar implementação a ser invocado.</param>
+        <param name="genericTarget">O destino no qual o manipulador fornecido deve ser invocado.</param>
+        <summary>Quando substituído em uma classe derivada, fornece uma maneira para invocar os manipuladores de eventos de uma maneira de um tipo específico, que pode aumentar a eficiência sobre a implementação base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação base incorpora reflexão para determinar o manipulador de direito para qualquer caso em que o manipulador não é literalmente <xref:System.Windows.RoutedEventHandler>, e essa etapa de reflexão tem algumas consequências de desempenho. Invocações podem ser feitas mais eficientes não depender de reflexão. Esse é o cenário que motiva a esse método está disponível para qualquer classe de argumentos de eventos roteados que escolher para substituí-la. Implementações não devem chamar a base para esse método, porque sua implementação já deve ser responsável por invocar os manipuladores de tipo seguro.  
+  
+   
+  
+## Examples  
+ Este é o pseudocódigo que ilustra um padrão básico que pode ser usado para implementação. Aqui, `MyRoutedEventHandler` é uma subclasse de <xref:System.Windows.RoutedEventHandler>.  
+  
+ [!code-csharp[CorePseudocode#RoutedEventArgs](~/samples/snippets/csharp/VS_Snippets_Wpf/CorePseudocode/CSharp/corepseudocode.cs#routedeventargs)]
+ [!code-vb[CorePseudocode#RoutedEventArgs](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CorePseudocode/visualbasic/corepseudocode.vb#routedeventargs)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Este método destina-se a ser substituído pelas classes de dados de evento derivada para fornecer uma invocação mais eficiente de seus representantes. A implementação deve converter fornecido <paramref name="genericHandler" /> específicos do tipo delegate e, em seguida, invocar esse manipulador.  
+  
+ A implementação padrão tentar invocar o manipulador fornecido, a tentativa de conversão-o como <see cref="T:System.Windows.RoutedEventHandler" />. Se qualquer um dos <paramref name="genericHandler" /> ou <paramref name="genericTarget" /> é fornecido como <see langword="null" />, exceções serão geradas.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetSource">
+      <MemberSignature Language="C#" Value="protected virtual void OnSetSource (object source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSetSource(object source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.RoutedEventArgs.OnSetSource(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">O novo valor que <see cref="P:System.Windows.RoutedEventArgs.Source" /> está sendo definido como.</param>
+        <summary>Quando substituído em uma classe derivada, fornece uma entrada de retorno de chamada de notificação ponto sempre que o valor da <see cref="P:System.Windows.RoutedEventArgs.Source" /> propriedade das alterações de uma instância.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Alterar origem relatada um evento por meio de programação pode exigir a atualização dos dados de um tipo específico dentro do evento. Por esse motivo, o <see cref="M:System.Windows.RoutedEventArgs.OnSetSource(System.Object)" /> método protegido virtual e se destina a ser substituído por subclasses de <see cref="T:System.Windows.RoutedEventArgs" />.  
+  
+ Esse método não tem nenhuma implementação padrão.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginalSource">
+      <MemberSignature Language="C#" Value="public object OriginalSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OriginalSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventArgs.OriginalSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a origem de relatório original conforme determinada pelo teste de clique puro, antes de qualquer ajuste possível da <see cref="P:System.Windows.RoutedEventArgs.Source" /> por parte de uma classe pai.</summary>
+        <value>A origem de relatório original, antes de qualquer ajuste <see cref="P:System.Windows.RoutedEventArgs.Source" /> possível realizado pelo tratamento de classe, que pode ter sido feito para mesclar árvores de elementos compostos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém seu valor uma vez, antes da classe de manipuladores de eventos ou os manipuladores de instância são invocados e nunca é ajustado após esse ponto. As informações de origem original são somente leitura para os manipuladores de classe ou implementações de classe, exatamente como ele será relatado nos dados do evento.  
+  
+ Casos comuns em que a fonte pode ser ajustada incluem elementos de conteúdo dentro de um modelo de conteúdo para um controle (o conteúdo de um item de lista, por exemplo, relatará o elemento de item de lista como o <xref:System.Windows.RoutedEventArgs.Source%2A> e o elemento real dentro do item da lista será o <xref:System.Windows.RoutedEventArgs.OriginalSource%2A>.  
+  
+ Ajuste de origem por vários elementos e modelos de conteúdo varia para cada classe. Cada classe que ajusta a fontes de evento tenta prever qual fonte é o mais útil relatar para mais cenários de entrada e os cenários para os quais destina-se a classe e, em seguida, conjuntos de origem como o <xref:System.Windows.RoutedEventArgs.Source%2A>. Se essa fonte não é aquele que tem relevância para o tratamento do evento, tente verificar <xref:System.Windows.RoutedEventArgs.OriginalSource%2A> em vez disso, para ver se ele relatará uma fonte diferente é mais adequada. Para obter mais detalhes sobre eventos de entrada, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RoutedEvent">
+      <MemberSignature Language="C#" Value="public System.Windows.RoutedEvent RoutedEvent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.RoutedEvent RoutedEvent" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventArgs.RoutedEvent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="P:System.Windows.RoutedEventArgs.RoutedEvent" /> associado a esta instância do <see cref="T:System.Windows.RoutedEventArgs" />.</summary>
+        <value>O identificador do evento que foi invocado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não pode definir esse valor em uma <xref:System.Windows.RoutedEventArgs> que já foi circulado (por exemplo, se você obteve os argumentos por meio de um manipulador). Tentar fazer isso gerará uma exceção. Só pode ser definida em uma instância que ainda não foi usada para gerar uma invocação do evento.  
+  
+ O valor de <xref:System.Windows.RoutedEventArgs.RoutedEvent%2A> não pode ser `null` a qualquer momento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria novos dados de evento roteado com um construtor inicial e, em seguida, define o <xref:System.Windows.RoutedEventArgs.RoutedEvent%2A> a propriedade como uma operação subsequente. Você deve ter <xref:System.Windows.RoutedEventArgs.RoutedEvent%2A> definido antes de gerar o evento roteado.  
+  
+ [!code-csharp[ColorPicker_v2#RoutedEventArgsRoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_v2/CSharp/ColorPicker.cs#routedeventargsroutedevent)]
+ [!code-vb[ColorPicker_v2#RoutedEventArgsRoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_v2/visualbasic/colorpicker.vb#routedeventargsroutedevent)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Tentativa de alterar o <see cref="P:System.Windows.RoutedEventArgs.RoutedEvent" /> valor enquanto o evento está sendo encaminhado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public object Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Source" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.RoutedEventArgs.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência ao objeto que ativou o evento.</summary>
+        <value>O objeto que gerencie o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para qualquer bolha roteadas evento que realmente se mover para a rota além do elemento que o gerou, e para qualquer túnel evento não roteado ainda encapsulado até o elemento que o gerou, o valor de <xref:System.Windows.RoutedEventArgs.Source%2A> será diferente do valor da `sender` parâmetro o argumentos de classe de evento. Qual dos dois elementos envolvido no evento é mais importante em qualquer determinado manipulador (<xref:System.Windows.RoutedEventArgs.Source%2A>, o elemento que o gerou, ou `sender`, o elemento que atualmente está tratando) depende da lógica do aplicativo que trata o manipulador.  
+  
+ A definição dessa propriedade é somente feita geralmente ao substituir ou implementar outros [!INCLUDE[TLA#tla_api#plural](~/includes/tlasharptla-apisharpplural-md.md)] que ajustar fontes de evento, como quando um evento de tratamento de classe. Não é recomendável redefinir fontes de evento aparente de manipuladores de instância, especialmente quando o manipulador não marcar o evento como manipulado.  
+  
+ Se você redefinir <xref:System.Windows.RoutedEventArgs.Source%2A> para relatar uma origem de evento diferentes, <xref:System.Windows.RoutedEventArgs.OriginalSource%2A> continuará reportando a fonte como primeiro gerada pela origem <xref:System.Windows.UIElement.RaiseEvent%2A> chamar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

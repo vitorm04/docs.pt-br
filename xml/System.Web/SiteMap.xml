@@ -1,0 +1,323 @@
+<Type Name="SiteMap" FullName="System.Web.SiteMap">
+  <TypeSignature Language="C#" Value="public static class SiteMap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit SiteMap extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SiteMap" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Web.SiteMap" /> classe é uma representação na memória da estrutura de navegação para um site, que é fornecido por um ou mais provedores de mapa de site. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mapas de site são usados em conjunto com o <xref:System.Web.UI.WebControls.SiteMapDataSource>, <xref:System.Web.UI.WebControls.SiteMapPath>e outros controles para processar uma interface de navegação eficiente para os usuários navegar de um site da Web. Um <xref:System.Web.SiteMap> objeto é um componente da infraestrutura de navegação do site do ASP.NET que fornece acesso às informações de mapa de site somente leitura para os desenvolvedores de página e controle usando a navegação e <xref:System.Web.UI.WebControls.SiteMapDataSource> controles. Outros componentes da infraestrutura de navegação do site do ASP.NET incluem o <xref:System.Web.SiteMapProvider> e <xref:System.Web.XmlSiteMapProvider> classes, o arquivo de sitemap e vários controles que funcionam com o <xref:System.Web.SiteMap> classe, como o <xref:System.Web.UI.WebControls.SiteMapPath> controle para renderizar o conteúdo e menus.  
+  
+ O <xref:System.Web.SiteMap> tem várias funções:  
+  
+-   Ele fornece o nó raiz da hierarquia de navegação do site (pode haver apenas um nó raiz).  
+  
+-   Ele identifica qual provedor de mapa de site é a entidade de segurança ou padrão, o provedor.  
+  
+-   Ele mantém o controle de todos os objetos de provedor que são usados para criar o <xref:System.Web.SiteMap>.  
+  
+ Essencialmente, o <xref:System.Web.SiteMap> é um contêiner para uma coleção hierárquica de <xref:System.Web.SiteMapNode> objetos. No entanto, o <xref:System.Web.SiteMap> não mantém as relações entre os nós; em vez disso, ele delegará isso para os provedores de mapa de site. O <xref:System.Web.SiteMap> atua como uma interface para as informações de navegação do site (na forma de <xref:System.Web.SiteMapNode> objetos) que é mantida por esses provedores de mapa de site. Ele mantém controle sobre os provedores do qual ele pode acessar os dados de navegação do site e expõe seu <xref:System.Web.SiteMap.Providers%2A> coleção. Um provedor pode armazenar as informações de mapa do site de qualquer forma — desde que ele estende o <xref:System.Web.SiteMapProvider> abstrato de classe, o <xref:System.Web.SiteMap> classe pode ser inicializada com êxito-lo.  
+  
+ O provedor padrão para o <xref:System.Web.SiteMap> classe é o <xref:System.Web.XmlSiteMapProvider> classe, que funciona com um arquivo de configuração XML, sitemap. No entanto, você pode escrever sua própria <xref:System.Web.SiteMapProvider> de objeto e usá-lo para inicializar o mapa do site para o seu site. Para obter um exemplo de um provedor de mapa de site personalizado, consulte <xref:System.Web.SiteMapProvider>.  
+  
+ Uma configuração de mapa de site padrão for especificada, que gerencia a configuração de navegação do site. Você pode substituir essa configuração no arquivo Web. config, você deve escolher gravar seu próprio provedor de mapa de site.  
+  
+ O <xref:System.Web.SiteMap> classe oferece apenas membros estáticos para desempenho e pode ser acessado a qualquer momento em um determinado site de um formulário da Web ou controle de servidor Web.  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como declarar um provedor de mapa de site em um arquivo Web. config. O segundo exemplo de código demonstra como usar um <xref:System.Web.SiteMap> objeto.  
+  
+ O exemplo de código a seguir é uma seção de configuração Web. config que demonstra como um <xref:System.Web.XmlSiteMapProvider> objeto for declarado como padrão <xref:System.Web.SiteMapProvider> objeto.  
+  
+```  
+<siteMap defaultProvider="MyXmlSiteMapProvider" enabled="true">  
+  <providers>  
+    <add name="MyXmlSiteMapProvider"  
+      description="The site map provider that reads in the .sitemap XML files."  
+      type="System.Web.XmlSiteMapProvider, System.Web, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"  
+      siteMapFile="my.sitemap" />  
+  </providers>  
+</siteMap>  
+```  
+  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.SiteMap> objeto acessando seus membros estáticos para exibir informações sobre o <xref:System.Web.SiteMap.RootNode%2A> e <xref:System.Web.SiteMap.CurrentNode%2A> propriedades. Compare com a saída que é processada pelo <xref:System.Web.UI.WebControls.SiteMapPath> controle.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_3/CS/sitemapcs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_3/VB/sitemapvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CurrentNode">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapNode CurrentNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapNode CurrentNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.CurrentNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um controle <see cref="T:System.Web.SiteMapNode" /> que representa a página atualmente solicitada.</summary>
+        <value>Uma instância <see cref="T:System.Web.SiteMapNode" /> que representa a página atualmente solicitada; caso contrário, <see langword="null" />, se não existir nenhum nó representativo nas informações de mapa do site.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMap> classe recupera o <xref:System.Web.SiteMap.CurrentNode%2A> propriedade solicitando-o do provedor.  
+  
+ Se não houver nenhum nó representativo para a página de informações de mapa do site, ou se a restrição de segurança está habilitada e o nó não pode ser retornado para o usuário atual, `null` será retornado.  
+  
+ O <xref:System.Web.SiteMap.SiteMapResolve> evento é gerado pelo provedor de mapa do site padrão, se uma ou mais assinaturas existentes.  
+  
+ Se você implementar sua própria <xref:System.Web.SiteMapProvider> do objeto, você pode criar seu próprio mecanismo para localizar e recuperar o <xref:System.Web.SiteMapProvider.CurrentNode%2A>. No entanto, se você estender o <xref:System.Web.StaticSiteMapProvider> classe e usar um esquema de URL para identificar as páginas, você pode substituir o <xref:System.Web.StaticSiteMapProvider.FindSiteMapNode%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.SiteMap.CurrentNode%2A> propriedade para recuperar o <xref:System.Web.SiteMapNode> objeto que representa a página atual.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_1/CS/catalogcs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_1/VB/catalogvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O recurso de mapa do site não está habilitado.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O provedor padrão especificado na configuração não existe.</exception>
+        <exception cref="T:System.Web.HttpException">O recurso tem suporte apenas quando está em execução em Confiança baixa ou níveis superiores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public static bool Enabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor booliano que indica se um provedor de mapa de site é especificado no arquivo Web. config e se o provedor de mapa de site está habilitado.</summary>
+        <value>
+          <see langword="true" />Se um provedor de mapa de site está configurado e ativado. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma configuração de mapa de site padrão for especificada, que gerencia a configuração de navegação do site. Você pode substituir essa configuração no arquivo Web. config, você deve escolher gravar seu próprio provedor de mapa de site.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir é uma seção de configuração Web. config que demonstra como um <xref:System.Web.XmlSiteMapProvider> objeto for declarado padrão <xref:System.Web.SiteMapProvider> objeto.  
+  
+```  
+<siteMap defaultProvider="MyXmlSiteMapProvider" enabled="true">  
+  <providers>  
+    <add name="MyXmlSiteMapProvider"  
+      description="SiteMap provider that reads in .sitemap XML files."  
+      type="System.Web.XmlSiteMapProvider, System.Web, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"  
+      siteMapFile="my.sitemap" />  
+  </providers>  
+</siteMap>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Provider">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapProvider Provider { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapProvider Provider" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.Provider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o padrão <see cref="T:System.Web.SiteMapProvider" /> objeto para o mapa do site atual.</summary>
+        <value>O provedor de mapa de site padrão para o <see cref="T:System.Web.SiteMap" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, o <xref:System.Web.XmlSiteMapProvider> objeto é usado e os dados de navegação do site são carregados do arquivo de sitemap que está localizado no diretório raiz do site. Isso é identificado nas classes de gerenciamento que gerencia a configuração de navegação do site e a seção de configuração de mapa de site dos arquivos Web. config. Por padrão, ele é uma instância do <xref:System.Web.XmlSiteMapProvider> classe, que usa o arquivo de sitemap como seu armazenamento persistente. No entanto, você pode implementar seu próprio esquema de armazenamento e a configuração de mapa do site, escrevendo uma classe que implementa o resumo <xref:System.Web.SiteMapProvider> classe. Para obter mais informações sobre como escrever seu próprio provedor, consulte <xref:System.Web.SiteMapProvider>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o padrão <xref:System.Web.SiteMapProvider> objeto para o site usando estático <xref:System.Web.SiteMap.Provider%2A> propriedade.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_2/CS/catalog2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_2/VB/catalog2vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O recurso de mapa do site não está habilitado.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O provedor padrão especificado na configuração não existe.</exception>
+        <exception cref="T:System.Web.HttpException">O recurso tem suporte apenas quando está em execução em Confiança baixa ou níveis superiores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Providers">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapProviderCollection Providers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapProviderCollection Providers" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.Providers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapProviderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura dos objetos <see cref="T:System.Web.SiteMapProvider" /> nomeados que estão disponíveis para a classe <see cref="T:System.Web.SiteMap" />.</summary>
+        <value>A <see cref="T:System.Web.SiteMapProviderCollection" /> de objetos <see cref="T:System.Web.SiteMapProvider" /> nomeados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os provedores de mapa de site que são listados no <xref:System.Web.SiteMap.Providers%2A> coleção são aqueles que são especificados na hierarquia de configuração para inicializar o <xref:System.Web.SiteMap> classe. Apenas o provedor padrão (identificada pelo <xref:System.Web.SiteMap.Provider%2A> propriedade) é garantido para ser usado pelo <xref:System.Web.SiteMap> durante a inicialização; a presença de um provedor no <xref:System.Web.SiteMap.Providers%2A> coleção significa que ele foi especificado na configuração e estava disponível durante a inicialização.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como recuperar o <xref:System.Web.SiteMap.Providers%2A> coleção do <xref:System.Web.SiteMap> classe e, em seguida, iterar por meio dele.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_2#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_2/CS/catalog2cs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_2#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_2/VB/catalog2vb.aspx#1)]  
+  
+ Se você tiver mais do que apenas o provedor padrão configurado para o seu site, você verá cada provedor exibido. Por exemplo, se você estiver usando o provedor do Microsoft Access de exemplo (consulte <xref:System.Web.StaticSiteMapProvider>), você verá a seguinte saída:  
+  
+```  
+XmlSiteMapProvider   System.Web.XmlSiteMapProvider  
+AccessSiteMapProvider   Samples.AspNet.AccessSiteMapProvider  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O recurso de mapa do site não está habilitado.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O provedor padrão especificado na configuração não existe.</exception>
+        <exception cref="T:System.Web.HttpException">O recurso tem suporte apenas quando está em execução em Confiança baixa ou níveis superiores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNode">
+      <MemberSignature Language="C#" Value="public static System.Web.SiteMapNode RootNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Web.SiteMapNode RootNode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.SiteMap.RootNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Web.SiteMapNode" /> que representa a página de nível superior da estrutura de navegação do site.</summary>
+        <value>Um <see cref="T:System.Web.SiteMapNode" /> que representa a página de nível superior da estrutura de navegação do site; caso contrário, <see langword="null" /> se a filtragem de segurança estiver habilitada e o nó não puder ser retornado para o usuário atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SiteMap> classe recupera o <xref:System.Web.SiteMap.RootNode%2A> propriedade solicitando-o do provedor. Se houver uma hierarquia de provedor, o <xref:System.Web.SiteMap> classe recupera o nó raiz do provedor raiz na hierarquia. Para acessar o nó raiz do provedor padrão, chame o <xref:System.Web.SiteMap.Provider%2A> propriedade, que recupera o provedor padrão e seu <xref:System.Web.SiteMapProvider.RootNode%2A> propriedade.  
+  
+ O <xref:System.Web.XmlSiteMapProvider> objeto, que é o provedor padrão para o <xref:System.Web.SiteMap> classe oferece suporte a apenas um <xref:System.Web.XmlSiteMapProvider.RootNode%2A>.  
+  
+ Se você implementar sua própria <xref:System.Web.SiteMapProvider> classe e substituir o resumo <xref:System.Web.SiteMapProvider.RootNode%2A> propriedade, você deve fornecer sua própria implementação para rastrear o <xref:System.Web.SiteMapProvider.RootNode%2A> propriedade o <xref:System.Web.SiteMapNode> instância.  
+  
+ O nó raiz deve ser visível para todos os usuários, por design. Se o nó raiz não é visível para todos os usuários quando a remoção de segurança está habilitada, acessando o <xref:System.Web.SiteMap.RootNode%2A> propriedade pode resultar em um <xref:System.InvalidOperationException> exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.SiteMap.RootNode%2A> propriedade para recuperar o <xref:System.Web.SiteMapNode> objeto que representa o nó raiz do site, independentemente da localização atual na hierarquia da página.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap_1/CS/catalogcs.aspx#1)]
+ [!code-aspx-vb[System.Web.SiteMap_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap_1/VB/catalogvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O recurso de mapa do site não está habilitado.  
+  
+ \- ou -  
+  
+ O <see cref="P:System.Web.SiteMap.RootNode" /> é resolvido para <see langword="null" />, o que ocorre se a filtragem de segurança está habilitada e o nó raiz não está visível para o usuário atual.</exception>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">O provedor padrão especificado na configuração não existe.</exception>
+        <exception cref="T:System.Web.HttpException">O recurso tem suporte apenas quando está em execução em Confiança baixa ou níveis superiores.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteMapResolve">
+      <MemberSignature Language="C#" Value="public static event System.Web.SiteMapResolveEventHandler SiteMapResolve;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.SiteMapResolveEventHandler SiteMapResolve" />
+      <MemberSignature Language="DocId" Value="E:System.Web.SiteMap.SiteMapResolve" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.SiteMapResolveEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Web.SiteMap.CurrentNode" /> é acessada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assinantes anexar um <xref:System.Web.SiteMapResolveEventHandler> objeto estático <xref:System.Web.SiteMap.SiteMapResolve> evento para receber notificações quando o <xref:System.Web.SiteMap.CurrentNode%2A> propriedade for acessada. Isso permite que o usuário implementar a lógica personalizada durante a criação de um <xref:System.Web.SiteMapNode> representação da página atualmente em execução sem a necessidade de uma implementação de provedor personalizado.  
+  
+ Se você se inscrever para o <xref:System.Web.SiteMap.SiteMapResolve> eventos, você também assina o <xref:System.Web.SiteMapProvider.SiteMapResolve> eventos no provedor de mapa de site padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como tratar o <xref:System.Web.SiteMap.SiteMapResolve> evento em uma página da Web ASP.NET para modificar as URLs de destino que são exibidas por um controle de navegação do site, como o <xref:System.Web.UI.WebControls.SiteMapPath> controle. Neste exemplo, a página atual for uma página de postagem em um quadro de avisos online ou o fórum. Para tornar mais significativa a navegação do site, as URLs de nós que são exibidos pelo controle de navegação serão anexados com cadeias de caracteres de consulta relevantes de contexto.  
+  
+> [!NOTE]
+>  A infraestrutura de navegação de site ASP.NET protege contra a recursão infinita, que fornece proteção e minimiza o risco de segurança que está associado ao acessar o <xref:System.Web.SiteMap.CurrentNode%2A> propriedade de dentro de <xref:System.Web.SiteMapResolveEventHandler> classe.  
+  
+ O código a seguir fica no arquivo global asax. O manipulador de eventos será anexado somente uma vez para o aplicativo. O código reconhece se a página implementa o `ISiteMapResolver` interface. Se a interface é implementada, a `ExpandForumPaths` função é chamada.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#1)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#1)]  
+  
+ O código a seguir define uma interface separada. (Em um projeto de site da Web, você pode colocar esse código na pasta App_Code.) O `ISiteMapResolver` interface define o `ExpandForumPaths` método.  
+  
+ [!code-csharp[System.Web.SiteMap.SiteMapResolve#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx.cs#2)]
+ [!code-vb[System.Web.SiteMap.SiteMapResolve#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx.vb#2)]  
+  
+ O código a seguir pertence com a página que é pelo menos três nós profundidade na estrutura de mapa do site. A página implementa o `ISiteMapResolver` interface, que permite que o `ExpandForumPaths` método a ser chamado.  
+  
+ [!code-aspx-csharp[System.Web.SiteMap.SiteMapResolve#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/CS/sitemapresolve1cs.aspx#3)]
+ [!code-aspx-vb[System.Web.SiteMap.SiteMapResolve#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.SiteMap.SiteMapResolve/VB/sitemapresolve1vb.aspx#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

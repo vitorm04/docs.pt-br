@@ -1,0 +1,189 @@
+<Type Name="TableItemPattern" FullName="System.Windows.Automation.TableItemPattern">
+  <TypeSignature Language="C#" Value="public class TableItemPattern : System.Windows.Automation.GridItemPattern" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TableItemPattern extends System.Windows.Automation.GridItemPattern" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.TableItemPattern" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Automation.GridItemPattern</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os controles filho dos contêineres que oferecem suporte a <see cref="T:System.Windows.Automation.TablePattern" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão de controle é análogo a <xref:System.Windows.Automation.GridItemPattern> com a diferença que qualquer controle suporte <xref:System.Windows.Automation.TableItemPattern> programaticamente irá expor a relação entre a célula individual e suas informações de linha e coluna.  
+  
+ Acesso à funcionalidade das células individuais é fornecido pelo suporte adicional de <xref:System.Windows.Automation.GridItemPattern>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cached">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TableItemPattern.TableItemPatternInformation Cached { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TableItemPattern/TableItemPatternInformation Cached" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.Cached" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TableItemPattern+TableItemPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores de propriedade em cache para este <see cref="T:System.Windows.Automation.TableItemPattern" />.</summary>
+        <value>Os valores de propriedade em cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Valores de propriedade em cache devem ser anteriormente solicitados usando um <xref:System.Windows.Automation.CacheRequest>. Para obter o valor atual de uma propriedade, obtenha a propriedade usando <xref:System.Windows.Automation.TableItemPattern.Current%2A>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade solicitada não está no cache.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnHeaderItemsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty ColumnHeaderItemsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty ColumnHeaderItemsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TableItemPattern.ColumnHeaderItemsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade que recupera todos os cabeçalhos de coluna associados a um item de tabela ou célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TableItemPatternIdentifiers>.  
+  
+ Essa propriedade não está presente no <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation> e devem ser recuperados usando <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir, uma matriz de objetos do elemento de automação que representa os itens de cabeçalho de linha ou coluna primários de uma tabela é recuperada.  
+  
+ Para os fins deste exemplo, uma relação entre o <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> itens de cabeçalho de propriedade e a linha e coluna é demonstrado. No entanto, uma tabela pode ter cabeçalhos de linha e coluna, independentemente do <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> propriedade da tabela.  
+  
+ [!code-csharp[UIATableItemPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#105)]
+ [!code-vb[UIATableItemPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.TableItemPattern.TableItemPatternInformation Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.TableItemPattern/TableItemPatternInformation Current" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.TableItemPattern.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.TableItemPattern+TableItemPatternInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os valores da propriedade atual para este <see cref="T:System.Windows.Automation.TableItemPattern" />.</summary>
+        <value>Os valores da propriedade atuais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse padrão deve ser de um <xref:System.Windows.Automation.AutomationElement> com um <xref:System.Windows.Automation.AutomationElementMode.Full> referência para obter os valores atuais. Se o <xref:System.Windows.Automation.AutomationElement> foi obtida usando <xref:System.Windows.Automation.AutomationElementMode.None>, ele contém somente dados armazenados em cache e tentar obter o valor atual de qualquer propriedade gera uma exceção. Use <xref:System.Windows.Automation.TableItemPattern.Cached%2A> para obter o valor armazenado em cache de uma propriedade que tenha sido especificado usando um <xref:System.Windows.Automation.CacheRequest>.  
+  
+ Para obter informações sobre as propriedades disponíveis e seu uso, consulte <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pattern">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationPattern Pattern;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationPattern Pattern" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TableItemPattern.Pattern" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationPattern</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="T:System.Windows.Automation.TableItemPattern" /> padrão de controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TableItemPatternIdentifiers>.  
+  
+ O identificador padrão é passado para métodos como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar o padrão de controle de interesse especificado <xref:System.Windows.Automation.AutomationElement>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.TableItemPattern> padrão de controle é obtido de um <xref:System.Windows.Automation.AutomationElement>.  
+  
+ [!code-csharp[UIATableItemPattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#101)]
+ [!code-vb[UIATableItemPattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#101)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowHeaderItemsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.Automation.AutomationProperty RowHeaderItemsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.Automation.AutomationProperty RowHeaderItemsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.TableItemPattern.RowHeaderItemsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.AutomationProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade que recupera todos os cabeçalhos de linha associados a um item de tabela ou célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse identificador é usado por aplicativos clientes de automação de interface do usuário. Provedores de automação de interface do usuário devem usar o campo equivalente em <xref:System.Windows.Automation.TableItemPatternIdentifiers>.  
+  
+ Essa propriedade não está presente no <xref:System.Windows.Automation.TableItemPattern.TableItemPatternInformation> e devem ser recuperados usando <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir, uma matriz de objetos do elemento de automação que representa os itens de cabeçalho de linha ou coluna primários de uma tabela é recuperada.  
+  
+ Para os fins deste exemplo, uma relação entre o <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> itens de cabeçalho de propriedade e a linha e coluna é demonstrado. No entanto, uma tabela pode ter cabeçalhos de linha e coluna, independentemente do <xref:System.Windows.Automation.TablePattern.TablePatternInformation.RowOrColumnMajor%2A> propriedade da tabela.  
+  
+ [!code-csharp[UIATableItemPattern_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#105)]
+ [!code-vb[UIATableItemPattern_snip#105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#105)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

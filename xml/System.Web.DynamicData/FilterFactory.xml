@@ -1,0 +1,118 @@
+<Type Name="FilterFactory" FullName="System.Web.DynamicData.FilterFactory">
+  <TypeSignature Language="C#" Value="public class FilterFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.DynamicData.FilterFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DynamicData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria um modelo de filtro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.DynamicData.FilterFactory> classe é usada em tempo de execução por dados dinâmicos para obter uma instância de um modelo de filtro para um tipo específico.  
+  
+ Você pode substituir os métodos que são definidos nessa classe para personalizar como os modelos de filtros são carregados. Por exemplo, uma implementação personalizada foi possível carregar os modelos de filtro de um local diferente da pasta de ~/DynamicData/Filters padrão.  
+  
+ Dados dinâmicos fornecem modelos de filtro para tipos de coluna de chave estrangeira, boolianos e enumeração e exibe-as usando um <xref:System.Web.UI.WebControls.DropDownList> controle. Você também pode criar modelos de filtro personalizado.  
+  
+   
+  
+## Examples  
+ Para um exemplo de filtragem de linha de tabela usa os modelos de filtro padrão, consulte o <xref:System.Web.DynamicData.QueryableFilterRepeater> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.DynamicData.FilterFactory" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFilterControl">
+      <MemberSignature Language="C#" Value="public virtual System.Web.DynamicData.QueryableFilterUserControl CreateFilterControl (System.Web.DynamicData.MetaColumn column, string filterUIHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.DynamicData.QueryableFilterUserControl CreateFilterControl(class System.Web.DynamicData.MetaColumn column, string filterUIHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterFactory.CreateFilterControl(System.Web.DynamicData.MetaColumn,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.DynamicData.QueryableFilterUserControl</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.DynamicData.MetaColumn" />
+        <Parameter Name="filterUIHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="column">A coluna de dados ao qual o modelo de filtro se aplica.</param>
+        <param name="filterUIHint">O nome do modelo de filtro a ser usado.</param>
+        <summary>Cria uma instância do modelo de filtro.</summary>
+        <returns>Uma instância da classe <see cref="T:System.Web.DynamicData.QueryableFilterUserControl" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado por dados dinâmicos para obter uma instância de um modelo de filtro. Classes derivadas podem substituir este método para personalizar como instâncias de modelos de filtro são criadas. Por exemplo, uma implementação personalizada foi possível carregar modelos de um assembly compilado em vez de na pasta ~/DynamicData/Filters padrão.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="column" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFilterVirtualPath">
+      <MemberSignature Language="C#" Value="public virtual string GetFilterVirtualPath (System.Web.DynamicData.MetaColumn column, string filterUIHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetFilterVirtualPath(class System.Web.DynamicData.MetaColumn column, string filterUIHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.DynamicData.FilterFactory.GetFilterVirtualPath(System.Web.DynamicData.MetaColumn,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DynamicData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Web.DynamicData.MetaColumn" />
+        <Parameter Name="filterUIHint" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="column">A coluna de dados ao qual o modelo de filtro se aplica.</param>
+        <param name="filterUIHint">O modelo de filtro a ser usado.</param>
+        <summary>Obtém o caminho virtual do modelo de filtro.</summary>
+        <returns>O caminho virtual do modelo de filtro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, os modelos de filtro estão localizados na pasta ~/DynamicData/Filers.  
+  
+ Este método determina o caminho virtual da pasta que contém o modelo de campo. Classes derivadas podem substituir esse método para fornecer modelos de filtro de um caminho virtual diferente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="column" /> é **nulo**.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

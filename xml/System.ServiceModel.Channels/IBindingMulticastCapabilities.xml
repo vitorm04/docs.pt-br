@@ -1,0 +1,42 @@
+<Type Name="IBindingMulticastCapabilities" FullName="System.ServiceModel.Channels.IBindingMulticastCapabilities">
+  <TypeSignature Language="C#" Value="public interface IBindingMulticastCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindingMulticastCapabilities" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IBindingMulticastCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface opcional que pode implementar uma associação para especificar se o serviço que ele configura tem multicast recursos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe tem uma única propriedade que é usado para indicar se o serviço tem multicast recursos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsMulticast">
+      <MemberSignature Language="C#" Value="public bool IsMulticast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMulticast" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IBindingMulticastCapabilities.IsMulticast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação configura o serviço com recursos de multicast.</summary>
+        <value>
+          <see langword="true" />Se o serviço tiver multicast recursos.; <see langword="false" /> caso contrário. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

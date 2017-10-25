@@ -1,0 +1,57 @@
+<Type Name="CacheItemUpdateReason" FullName="System.Web.Caching.CacheItemUpdateReason">
+  <TypeSignature Language="C#" Value="public enum CacheItemUpdateReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CacheItemUpdateReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Caching.CacheItemUpdateReason" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o motivo pelo qual um item em cache está sendo removido do <see cref="T:System.Web.Caching.Cache" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de <xref:System.Web.Caching.CacheItemRemovedReason> enumeração, esta enumeração não inclui o `Removed` ou `Underused` valores. Itens de cache atualizável não são removíveis e podem, portanto, nunca ser removidos automaticamente pelo ASP.NET mesmo se houver uma necessidade de liberar memória.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DependencyChanged">
+      <MemberSignature Language="C#" Value="DependencyChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Caching.CacheItemUpdateReason DependencyChanged = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Caching.CacheItemUpdateReason.DependencyChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheItemUpdateReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o item está sendo removido do cache porque associado <see cref="T:System.Web.Caching.CacheDependency" /> objeto alterado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Expired">
+      <MemberSignature Language="C#" Value="Expired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.Caching.CacheItemUpdateReason Expired = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Caching.CacheItemUpdateReason.Expired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Caching.CacheItemUpdateReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que o item está sendo removido do cache porque o intervalo de expiração absoluta ou deslizante expirou.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

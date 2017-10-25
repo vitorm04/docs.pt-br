@@ -1,0 +1,156 @@
+<Type Name="XamlXmlReaderSettings" FullName="System.Xaml.XamlXmlReaderSettings">
+  <TypeSignature Language="C#" Value="public class XamlXmlReaderSettings : System.Xaml.XamlReaderSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlXmlReaderSettings extends System.Xaml.XamlReaderSettings" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlXmlReaderSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlReaderSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as regras de processamento ou configurações de opção para o <see cref="T:System.Xaml.XamlXmlReader" /> implementação de leitor XAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReaderSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReaderSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xaml.XamlXmlReaderSettings" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlXmlReaderSettings (System.Xaml.XamlXmlReaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlXmlReaderSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlXmlReaderSettings.#ctor(System.Xaml.XamlXmlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Xaml.XamlXmlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">Existente <see cref="T:System.Xaml.XamlXmlReaderSettings" /> objeto a ser copiado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlXmlReaderSettings" /> classe copiando as configurações de um existente <see cref="T:System.Xaml.XamlXmlReaderSettings" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseInput">
+      <MemberSignature Language="C#" Value="public bool CloseInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CloseInput" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReaderSettings.CloseInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o leitor de texto ou o fluxo subjacente deve ser fechado que quando o <see cref="T:System.Xaml.XamlXmlReader" /> está fechado.</summary>
+        <value>
+          <see langword="true" />Se o leitor ou o fluxo subjacente deve ser fechado quando o <see cref="T:System.Xaml.XamlXmlReader" /> estiver fechado; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipXmlCompatibilityProcessing">
+      <MemberSignature Language="C#" Value="public bool SkipXmlCompatibilityProcessing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipXmlCompatibilityProcessing" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se o leitor deve ser diferentes do padrão <see cref="T:System.Xaml.XamlXmlReader" /> comportamento de como o conteúdo de compatibilidade de marcação é processado.</summary>
+        <value>
+          <see langword="true" />Se o leitor iniciante é usado diretamente, que significa que marcação de compatibilidade XML é processada como parte do fluxo principal e compatibilidade não é considerada. <see langword="false" />Se o comportamento padrão é usado, que processa compatibilidade XML separadamente. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão de comportamento de compatibilidade de marcação XML de tratamento <xref:System.Xaml.XamlXmlReader> é que o <xref:System.Xaml.XamlXmlReader>, conforme fornecido para a inicialização, é encapsulado em uma classe auxiliar interno criado. Esta classe auxiliar lê a marcação nós compatibilidade separadamente e insere os nós com base na compatibilidade de marcação do contexto do esquema.  
+  
+ Cenários sugeridos para configuração <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A> para `true` são:  
+  
+-   Você deseja manter qualquer conteúdo de compatibilidade de marcação do fluxo de XAML primário.  
+  
+-   Você já tiver processado a compatibilidade de marcação porque você está usando um leitor que pode processar marcação compatibilidade conteúdo embutido.  
+  
+-   Você optar por ignorar as convenções de compatibilidade XML em sua implementação de leitor XAML por motivos de desempenho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public string XmlLang { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReaderSettings.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o idioma definindo o valor que o leitor pode promover para gravadores gravam <see langword="xml:lang" /> atributos em nós.</summary>
+        <value>A cadeia de caracteres a ser usado para possível <see langword="xml:lang" /> saída com base no leitor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O chamador é responsável por garantir que a cadeia de caracteres que você fornecer é apropriada para `xml:lang` uso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlSpacePreserve">
+      <MemberSignature Language="C#" Value="public bool XmlSpacePreserve { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool XmlSpacePreserve" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina se o leitor XAML instrui qualquer gravadores XAML para gravar <see langword="xml:space" /> atributos em nós. Se esse comportamento é desejado, essas informações são passadas por meio do contexto de esquema XAML compartilhado.</summary>
+        <value>
+          <see langword="true" />Se os gravadores que estão processando o fluxo do nó XAML podem gravar <c>XML: space = "preserve"</c> na saída. <see langword="false" /> se <see langword="xml:space" /> atributos não podem ser gravados em nós.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os conceitos de espaço em branco XML não são robustos o suficiente para aplicar a XAML e normalmente são ignorados por leitores XAML.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

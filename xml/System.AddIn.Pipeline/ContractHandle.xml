@@ -1,0 +1,209 @@
+<Type Name="ContractHandle" FullName="System.AddIn.Pipeline.ContractHandle">
+  <TypeSignature Language="C#" Value="public class ContractHandle : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContractHandle extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.ContractHandle" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece métodos que controlam o tempo de vida de um suplemento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Como o modelo fornece a capacidade para suplementos para se comunicar entre domínios de aplicativo e entre processos, ele não pode contar o coletor de lixo para recuperá-los. Essa classe fornece uma mecanismo para o suplemento de contagem obtendo um token de tempo de vida para seu contrato de referência.  
+  
+ Quando um <xref:System.AddIn.Pipeline.ContractHandle> objeto for construído, ele chama o <xref:System.AddIn.Pipeline.ContractBase.AcquireLifetimeToken%2A> método no contrato que é transmitido ao construtor. Quando o <xref:System.AddIn.Pipeline.ContractHandle> objeto é descartado ou finalizado, ele chama o <xref:System.AddIn.Pipeline.ContractBase.RevokeLifetimeToken%2A> método no contrato, que remove sua retenção no contrato.  
+  
+ Adaptadores de implementam o contrato. O <xref:System.AddIn.Pipeline.ContractHandle> classe foi projetada para ser usado em um adaptador de contrato para exibição para ajudar os desenvolvedores de pipeline a gerenciar o tempo de vida do contrato que está sendo adaptado. Normalmente, uma instância dessa classe é criada durante a construção da classe de adaptador e é armazenada em um campo de instância do adaptador. Quando a classe de adaptador é coletado como lixo, a <xref:System.AddIn.Pipeline.ContractHandle> objeto também será coletado e <xref:System.AddIn.Pipeline.ContractHandle> objeto revogará o token de tempo de vida do contrato.  
+  
+ É recomendável que os adaptadores de contrato de exibição herdam o <xref:System.AddIn.Pipeline.ContractBase> classe. Você pode usar uma implementação padrão para os membros de <xref:System.AddIn.Contract.IContract>, que significa que você precisa implementar apenas os membros do seu contrato específico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o identificador de token de tempo de vida de um adaptador de exibição de contrato no lado do suplemento de um pipeline.  
+  
+ [!code-csharp[AddinP2HostSideAdapters#2](~/samples/snippets/csharp/VS_Snippets_CLR/AddInP2HostSideAdapters/cs/Calc2ContractToViewHostSideAdapter.cs#2)]
+ [!code-vb[AddinP2HostSideAdapters#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInP2HostSideAdapters/vb/Calc2ContractToViewHostSideAdapter.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContractHandle (System.AddIn.Contract.IContract contract);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.AddIn.Contract.IContract contract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractHandle.#ctor(System.AddIn.Contract.IContract)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contract" Type="System.AddIn.Contract.IContract" />
+      </Parameters>
+      <Docs>
+        <param name="contract">O contrato a ser usado no pipeline.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.AddIn.Pipeline.ContractHandle" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contract" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AppDomainOwner">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Contract.IContract AppDomainOwner (AppDomain domain);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Contract.IContract AppDomainOwner(class System.AppDomain domain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractHandle.AppDomainOwner(System.AppDomain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IContract</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domain" Type="System.AppDomain" />
+      </Parameters>
+      <Docs>
+        <param name="domain">O domínio de aplicativo para verificar.</param>
+        <summary>Obtém a instância do adaptador do lado do suplemento quando o domínio de aplicativo foi criado.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.IContract" /> objeto que representa o proprietário do domínio do aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os adaptadores do lado do suplemento são digitados como <xref:System.AddIn.Contract.IContract>.  
+  
+ Se o domínio do aplicativo tiver sido criado por um usuário, não há nenhum proprietário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="domain" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contract">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.IContract Contract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.AddIn.Contract.IContract Contract" />
+      <MemberSignature Language="DocId" Value="P:System.AddIn.Pipeline.ContractHandle.Contract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IContract</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contrato usado por um pipeline.</summary>
+        <value>O contrato, que é derivado de <see cref="T:System.AddIn.Contract.IContract" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractOwnsAppDomain">
+      <MemberSignature Language="C#" Value="public static bool ContractOwnsAppDomain (System.AddIn.Contract.IContract contract, AppDomain domain);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool ContractOwnsAppDomain(class System.AddIn.Contract.IContract contract, class System.AppDomain domain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractHandle.ContractOwnsAppDomain(System.AddIn.Contract.IContract,System.AppDomain)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.AddIn.Contract.IContract" />
+        <Parameter Name="domain" Type="System.AppDomain" />
+      </Parameters>
+      <Docs>
+        <param name="contract">O contrato para verificar.</param>
+        <param name="domain">O domínio de aplicativo para verificar.</param>
+        <summary>Determina se um domínio de aplicativo é de propriedade de contrato especificado.</summary>
+        <returns>
+          <see langword="true" />Se o contrato possui o domínio de aplicativo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="contract" /> ou <paramref name="domain" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractHandle.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Revoga o token de tempo de vida em um contrato, independentemente de entrada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractHandle.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Revoga o token de tempo de vida do contrato, independentemente de entrada e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ContractHandle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractHandle.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera os recursos associados a <see cref="T:System.AddIn.Pipeline.ContractHandle" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. O código do aplicativo não deve chamar este método; o método <xref:System.AddIn.Pipeline.ContractHandle.Finalize%2A> de um objeto é invocado automaticamente durante a coleta de lixo, a menos que a finalização pelo coletor de lixo tenha sido desabilitada por uma chamada para o método <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType>.  
+  
+ Quando chamado pelo coletor de lixo, este método chama o <xref:System.AddIn.Pipeline.ContractHandle.Dispose%28System.Boolean%29> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

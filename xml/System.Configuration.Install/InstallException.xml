@@ -1,0 +1,144 @@
+<Type Name="InstallException" FullName="System.Configuration.Install.InstallException">
+  <TypeSignature Language="C#" Value="public class InstallException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit InstallException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.Install.InstallException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.Install</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A exceção que é gerada quando ocorre um erro durante a fase de confirmação, reversão ou desinstalação de uma instalação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir, além de exemplos de <xref:System.Configuration.Install.InstallException.%23ctor%2A> construtores, compõem um exemplo que mostra um assembly com seu próprio instalador. O instalador é denominado `MyInstaller`, que tem um atributo `RunInstallerAttribute`, indicando que esse instalador será chamado pelo [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md). [InstallUtil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md) chama os métodos <xref:System.Configuration.Install.Installer.Commit%2A>, <xref:System.Configuration.Install.Installer.Rollback%2A>, <xref:System.Configuration.Install.Installer.Install%2A> e <xref:System.Configuration.Install.Installer.Uninstall%2A>. O código em <xref:System.Configuration.Install.Installer.Commit%2A> pressupõe que um arquivo denominado `FileDoesNotExist.txt` existe antes que a instalação do assembly pode ser confirmada. Se o arquivo `FileDoesNotExist.txt` não existir, <xref:System.Configuration.Install.Installer.Commit%2A> gera um <xref:System.Configuration.Install.InstallException>. O mesmo acontece com <xref:System.Configuration.Install.Installer.Uninstall%2A> no qual uma desinstalação ocorrerá somente se um arquivo chamado `FileDoesNotExist.txt` existe. Caso contrário, ele gera um <xref:System.Configuration.Install.InstallException>. Em <xref:System.Configuration.Install.Installer.Rollback%2A>, um fragmento de código é executado, o que pode gerar uma exceção. Se a exceção é gerada, ele é capturado e um <xref:System.Configuration.Install.InstallException> é gerado com essa exceção sendo passada para ele.  
+  
+> [!NOTE]
+>  Execute este exemplo com a Ajuda de Installutil.exe. Digite no prompt de comando:  
+  
+ `Installutil InstallException.exe`  
+  
+ -ou-  
+  
+ `Installutil /u InstallException.exe`  
+  
+ [!code-cpp[InstallException#1](~/samples/snippets/cpp/VS_Snippets_CLR/InstallException/CPP/installexception.cpp#1)]
+ [!code-csharp[InstallException#1](~/samples/snippets/csharp/VS_Snippets_CLR/InstallException/CS/installexception.cs#1)]
+ [!code-vb[InstallException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallException/VB/installexception.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstallException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.Install.InstallException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.InstallException.%23ctor%2A> construtor. Ele faz parte do exemplo da <xref:System.Configuration.Install.InstallException> classe.  
+  
+ Neste exemplo, o Installutil.exe chama o <xref:System.Configuration.Install.Installer.Commit%2A> método. O código em <xref:System.Configuration.Install.Installer.Commit%2A> pressupõe que um arquivo denominado `FileDoesNotExist.txt` existe antes que a instalação do assembly pode ser confirmada. Se o arquivo `FileDoesNotExist.txt` não existir, <xref:System.Configuration.Install.Installer.Commit%2A> gera um <xref:System.Configuration.Install.InstallException>.  
+  
+> [!NOTE]
+>  Este exemplo mostra como usar uma das versões sobrecarregadas a <xref:System.Configuration.Install.InstallException> construtor. Para obter outros exemplos que possam estar disponíveis, consulte os tópicos de sobrecarga individuais.  
+  
+ [!code-cpp[InstallException#2](~/samples/snippets/cpp/VS_Snippets_CLR/InstallException/CPP/installexception.cpp#2)]
+ [!code-csharp[InstallException#2](~/samples/snippets/csharp/VS_Snippets_CLR/InstallException/CS/installexception.cs#2)]
+ [!code-vb[InstallException#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallException/VB/installexception.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstallException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser exibida para o usuário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Configuration.Install.InstallException" /> classe e especifica a mensagem a ser exibida para o usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Configuration.Install.InstallException.%23ctor%2A> construtor. Ele faz parte do exemplo da <xref:System.Configuration.Install.InstallException> classe.  
+  
+ Neste exemplo, o Installutil.exe chama o <xref:System.Configuration.Install.Installer.Uninstall%2A> método. Desinstalação ocorrerá somente se um arquivo chamado `FileDoesNotExist.txt` existe. Caso contrário, ele gera um <xref:System.Configuration.Install.InstallException>.  
+  
+> [!NOTE]
+>  Este exemplo mostra como usar uma das versões sobrecarregadas a <xref:System.Configuration.Install.InstallException> construtor. Para obter outros exemplos que possam estar disponíveis, consulte os tópicos de sobrecarga individuais.  
+  
+ [!code-cpp[InstallException#4](~/samples/snippets/cpp/VS_Snippets_CLR/InstallException/CPP/installexception.cpp#4)]
+ [!code-csharp[InstallException#4](~/samples/snippets/csharp/VS_Snippets_CLR/InstallException/CS/installexception.cs#4)]
+ [!code-vb[InstallException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/InstallException/VB/installexception.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InstallException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que mantém os dados de objeto serializados sobre a exceção que está sendo lançada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.Install.InstallException" /> com dados serializados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstallException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.Install.InstallException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.Install</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser exibida para o usuário.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se o <c>innerException</c> parâmetro não é <see langword="null" />, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Configuration.Install.InstallException" /> classe e especifica a mensagem a ser exibida para o usuário e uma referência à exceção interna que é a causa dessa exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

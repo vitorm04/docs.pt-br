@@ -1,0 +1,102 @@
+<Type Name="Action&lt;T1,T2,T3,T4&gt;" FullName="System.Action&lt;T1,T2,T3,T4&gt;">
+  <TypeSignature Language="C#" Value="public delegate void Action&lt;in T1,in T2,in T3,in T4&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Action`4&lt;- T1, - T2, - T3, - T4&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Action`4" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T1">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T2">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T3">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="T4">
+      <Constraints>
+        <ParameterAttribute>Contravariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="arg1" Type="T1" />
+    <Parameter Name="arg2" Type="T2" />
+    <Parameter Name="arg3" Type="T3" />
+    <Parameter Name="arg4" Type="T4" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T1">O tipo do primeiro parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T2">O tipo do segundo parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T3">O tipo do terceiro parâmetro do método encapsulado por esse delegado.</typeparam>
+    <typeparam name="T4">O tipo do quarto parâmetro do método encapsulado por esse delegado.</typeparam>
+    <param name="arg1">O primeiro parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg2">O segundo parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg3">O terceiro parâmetro do método encapsulado por esse delegado.</param>
+    <param name="arg4">O quarto parâmetro do método encapsulado por esse delegado.</param>
+    <summary>Encapsula um método que tem quatro parâmetros e não retorna um valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Action%604> delegado para passar um método como um parâmetro sem declarar explicitamente um delegado personalizado. O método encapsulado deve corresponder à assinatura do método que é definida por este delegado. Isso significa que o método encapsulado deve ter quatro parâmetros que são todos passados por valor e ele não deve retornar um valor. (Em c#, o método deve retornar `void`. No Visual Basic, ele deverá ser definido pelo `Sub`...`End Sub` Construa. Ele também pode ser um método que retorna um valor que é ignorado.) Normalmente, esse é um método é usado para executar uma operação.  
+  
+> [!NOTE]
+>  Para fazer referência a um método que tem quatro parâmetros e retorna um valor, use genérica <xref:System.Func%605> delegado em vez disso.  
+  
+ Quando você usa o <xref:System.Action%604> delegado, você não precisa definir explicitamente um delegado que encapsula um método com quatro parâmetros. Por exemplo, o código a seguir declara explicitamente um delegado chamado `StringCopy` e atribui uma referência para o `CopyStrings` método para sua instância de delegado.  
+  
+ [!code-csharp[System.Action~4#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Delegate.cs#1)]
+ [!code-vb[System.Action~4#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~4/vb/Delegate.vb#1)]  
+  
+ O exemplo a seguir simplifica esse código instanciando a <xref:System.Action%604> delegado em vez de definir um novo delegado explicitamente e atribuí-lo um método nomeado.  
+  
+ [!code-csharp[System.Action~4#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Action4.cs#2)]
+ [!code-vb[System.Action~4#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~4/vb/Action4.vb#2)]  
+  
+ Você também pode usar o <xref:System.Action%604> delegar com métodos anônimos em c#, como mostra o exemplo a seguir. (Para obter uma introdução aos métodos anônimos, consulte [métodos anônimos](~/docs/csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).)  
+  
+ [!code-csharp[System.Action~4#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Anon.cs#3)]  
+  
+ Você também pode atribuir uma expressão lambda para uma <xref:System.Action%604> delegar a instância, como mostra o exemplo a seguir. (Para obter uma introdução a expressões lambda, consulte [expressões Lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).)  
+  
+ [!code-csharp[System.Action~4#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Action~4/cs/Lambda.cs#4)]
+ [!code-vb[System.Action~4#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Action~4/vb/lambda.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

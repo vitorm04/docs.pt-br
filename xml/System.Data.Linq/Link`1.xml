@@ -1,0 +1,162 @@
+<Type Name="Link&lt;T&gt;" FullName="System.Data.Linq.Link&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public struct Link&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Link`1&lt;T&gt; extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Linq.Link`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Linq</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O tipo dos elementos na origem com adiamento.</typeparam>
+    <summary>Usado para habilitar o adiamento do carregamento de propriedades individuais (semelhante a <see cref="T:System.Data.Linq.EntityRef`1" />).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você atribuir uma fonte adiada (<xref:System.Collections.Generic.IEnumerable%601>) para <xref:System.Data.Linq.Link%601>, <xref:System.Data.Linq.Link%601> carrega o valor Enumerando o tempo de origem primeiro o <xref:System.Data.Linq.Link%601.Value%2A> propriedade for acessada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Link (System.Collections.Generic.IEnumerable&lt;T&gt; source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Link`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="source">A coleção de origem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.Linq.Link`1" /> estrutura referenciando a origem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar o <xref:System.Data.Linq.Link%601> com um carregador adiado valor (implementa <xref:System.Collections.Generic.IEnumerable%601>)  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Link (System.Data.Linq.Link&lt;T&gt; link);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Data.Linq.Link`1&lt;!T&gt; link) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Link`1.#ctor(System.Data.Linq.Link{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="link" Type="System.Data.Linq.Link&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="link">O <see cref="T:System.Data.Linq.Link`1" /> instância da qual copiar.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.Linq.Link`1" /> estrutura copiando o estado interno de outra <see cref="T:System.Data.Linq.Link`1" /> instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Link (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Linq.Link`1.#ctor(`0)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor da propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.Linq.Link`1" /> estrutura referenciando o valor da propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor quando o valor da propriedade já é conhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLoadedOrAssignedValue">
+      <MemberSignature Language="C#" Value="public bool HasLoadedOrAssignedValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLoadedOrAssignedValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Link`1.HasLoadedOrAssignedValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica se o <see cref="T:System.Data.Linq.Link`1" /> foi carregado ou recebeu atribuição de valor.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Data.Linq.Link`1" /> foi carregado ou recebeu atribuição de um valor; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ "Carregar" significa que os dados foram carregados durante a materialização ou no carregamento adiado. "Atribuído" significa que você manualmente forneceu os dados de um valor.  
+  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]usa essa propriedade para certificar-se de que o <xref:System.Data.Linq.Link%601> tem um valor, para que acessar não vai disparar adiada carregamento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasValue">
+      <MemberSignature Language="C#" Value="public bool HasValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasValue" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Link`1.HasValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que especifica se a fonte tem um valor.</summary>
+        <value>Retorna <see langword="true" /> se a fonte tiver um valor de atribuído ou carregado (incluindo null).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Linq.Link`1.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Linq</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor atribuído a ou carregados pelo <see cref="T:System.Data.Linq.Link`1" />.</summary>
+        <value>O valor dessa propriedade adiada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

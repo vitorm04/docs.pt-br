@@ -1,0 +1,78 @@
+<Type Name="ComponentDesigner+ShadowPropertyCollection" FullName="System.ComponentModel.Design.ComponentDesigner+ShadowPropertyCollection">
+  <TypeSignature Language="C#" Value="protected sealed class ComponentDesigner.ShadowPropertyCollection" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi sealed beforefieldinit ComponentDesigner/ShadowPropertyCollection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ComponentDesigner.ShadowPropertyCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de propriedades de sombra deve substituir o padrão herdadas ou atribuir valores para propriedades específicas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ComponentDesigner.ShadowPropertyCollection>armazena uma coleção de valores para as propriedades específicas que substituem qualquer outro valor para essas propriedades em tempo de design. Isso é útil para garantir que uma propriedade específica é definida como um valor específico, por exemplo, nas situações em que o formulário de plano de fundo sempre deve ter sua propriedade visible definida como `true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentDesigner.ShadowPropertyCollection.Contains(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade a ser verificada na coleção.</param>
+        <summary>Indica se uma propriedade correspondente ao nome especificado existe na coleção.</summary>
+        <returns>
+          <see langword="true" />Se a propriedade existe na coleção; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string propertyName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentDesigner.ShadowPropertyCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="propertyName">O nome da propriedade para acessar a coleção.</param>
+        <summary>Obtém ou define o objeto no índice especificado.</summary>
+        <value>O valor da propriedade especificada, se ele existe na coleção. Caso contrário, o valor é recuperado do valor atual da propriedade nonshadowed.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o valor atual de uma propriedade, se a propriedade não foi definido como sombra. Portanto, é importante determinar se a propriedade é sombreada chamando <xref:System.ComponentModel.Design.ComponentDesigner.ShadowPropertyCollection.Contains%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

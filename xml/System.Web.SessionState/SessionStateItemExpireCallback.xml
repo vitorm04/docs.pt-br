@@ -1,0 +1,34 @@
+<Type Name="SessionStateItemExpireCallback" FullName="System.Web.SessionState.SessionStateItemExpireCallback">
+  <TypeSignature Language="C#" Value="public delegate void SessionStateItemExpireCallback(string id, SessionStateStoreData item);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SessionStateItemExpireCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.SessionState.SessionStateItemExpireCallback" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="id" Type="System.String" />
+    <Parameter Name="item" Type="System.Web.SessionState.SessionStateStoreData" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="id">O <see cref="P:System.Web.SessionState.HttpSessionState.SessionID" /> parâmetro da sessão que está sendo encerrado.</param>
+    <param name="item">Um <see cref="T:System.Web.SessionState.SessionStateStoreData" /> objeto que contém os dados de estado de sessão para a sessão está terminando.</param>
+    <summary>Representa o método que manipula o <see cref="E:System.Web.SessionState.SessionStateModule.End" /> eventos de um módulo de estado de sessão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.SessionState.SessionStateItemExpireCallback> delegado é usado para habilitar um <xref:System.Web.SessionState.SessionStateStoreProviderBase> implementação para chamar o `Session_OnEnd` eventos do arquivo global. asax.  
+  
+ Para obter mais informações, consulte os comentários fornecidos para o <xref:System.Web.SessionState.SessionStateStoreProviderBase.SetItemExpireCallback%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

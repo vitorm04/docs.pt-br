@@ -1,0 +1,93 @@
+<Type Name="AddressFilterMode" FullName="System.ServiceModel.AddressFilterMode">
+  <TypeSignature Language="C#" Value="public enum AddressFilterMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AddressFilterMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.AddressFilterMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de semântica de correspondência usada pelo dispatcher para encaminhar mensagens de entrada para o ponto de extremidade correto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.ServiceModel.AddressFilterMode> enumeração é ativada a <xref:System.ServiceModel.ServiceBehaviorAttribute.AddressFilterMode%2A> propriedade.  
+  
+ O critério de correspondência de prefixo mais longo especificado pelo prefixo requer que o endereço de destino sejam atendidas pelo maior número de bits de endereço à esquerda no filtro. O valor padrão é exato.  
+  
+   
+  
+## Examples  
+ [!code-csharp[S_UE_AddressFilter#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ue_addressfilter/cs/service.cs#0)]
+ [!code-vb[S_UE_AddressFilter#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_ue_addressfilter/vb/service.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AddressFilterMode Any = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AddressFilterMode.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AddressFilterMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica um filtro que faz a correspondência com qualquer endereço de uma mensagem de entrada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando este valor desativa o [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verificação de filtro de endereço. Qualquer mensagem, não importa qual o WS-Adressing: A identidade é aceito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exact">
+      <MemberSignature Language="C#" Value="Exact" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AddressFilterMode Exact = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AddressFilterMode.Exact" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AddressFilterMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica um filtro que faz a correspondência exata ao endereço de uma mensagem de entrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Prefix">
+      <MemberSignature Language="C#" Value="Prefix" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceModel.AddressFilterMode Prefix = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.AddressFilterMode.Prefix" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.AddressFilterMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica um filtro que faz a correspondência ao prefixo mais longo no endereço de uma mensagem de entrada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

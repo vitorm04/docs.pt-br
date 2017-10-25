@@ -1,0 +1,200 @@
+<Type Name="AttachablePropertyServices" FullName="System.Xaml.AttachablePropertyServices">
+  <TypeSignature Language="C#" Value="public static class AttachablePropertyServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AttachablePropertyServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.AttachablePropertyServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos auxiliares estáticos que obter as informações de método do acessador e valores de uma propriedade anexável e funcionam com um armazenamento de propriedade anexada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A maioria das funcionalidades nesta classe se baseia em um repositório de propriedade anexada, que geralmente implementa o <xref:System.Xaml.IAttachedPropertyStore> interface. No entanto, os parâmetros para passar o armazenamento em <xref:System.Xaml.AttachablePropertyServices> não são digitadas como a interface e em vez disso, são digitadas como `object`. Isso ocorre porque você pode passar um objeto arbitrário e, nesse caso, um armazenamento de propriedade anexável padrão interno é usado.  
+  
+ É prática recomendada para o objeto arbitrário passar o objeto que possa ser associado com o armazenamento. Não passe `null` para indicar que você não tem um <xref:System.Xaml.IAttachedPropertyStore> para usar. Passando `null` entra em caminhos de código que não fazem nada. Passando um objeto que não for nulo, mas é avaliada como `null` em uma tentativa <xref:System.Xaml.IAttachedPropertyStore> converter, usa o armazenamento de propriedade anexável padrão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CopyPropertiesTo">
+      <MemberSignature Language="C#" Value="public static void CopyPropertiesTo (object instance, System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,object&gt;[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CopyPropertiesTo(object instance, valuetype System.Collections.Generic.KeyValuePair`2&lt;class System.Xaml.AttachableMemberIdentifier, object&gt;[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.CopyPropertiesTo(System.Object,System.Collections.Generic.KeyValuePair{System.Xaml.AttachableMemberIdentifier,System.Object}[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="array" Type="System.Collections.Generic.KeyValuePair&lt;System.Xaml.AttachableMemberIdentifier,System.Object&gt;[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um repositório de propriedade anexável específica que implementa <see cref="T:System.Xaml.IAttachedPropertyStore" />; ou qualquer objeto não nulo para acessar um repositório de propriedade anexável padrão estático.</param>
+        <param name="array">A matriz de destino. A matriz é uma matriz genérica, devem ser passada undimensioned e deve ter os componentes do <see cref="T:System.Xaml.AttachableMemberIdentifier" /> e <see langword="object" />.</param>
+        <param name="index">O índice de origem na qual copiar.</param>
+        <summary>Copia todos os pares de valor/propriedade anexável de um repositório de propriedade anexável especificado e em uma matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar este método invoca uma subjacente <xref:System.Collections.Generic.ICollection%601.CopyTo%2A> implementação é restrita com um par chave/valor, que pode ser a origem de exceções que não estão listadas neste tópico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAttachedPropertyCount">
+      <MemberSignature Language="C#" Value="public static int GetAttachedPropertyCount (object instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetAttachedPropertyCount(object instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.GetAttachedPropertyCount(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um repositório de propriedade anexável específica que implementa <see cref="T:System.Xaml.IAttachedPropertyStore" />; ou qualquer objeto não nulo para acessar um repositório de propriedade anexável padrão estático.</param>
+        <summary>Retorna a contagem das entradas de propriedade anexável que estão no repositório especificado.</summary>
+        <returns>A contagem de inteiro de entradas no repositório.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveProperty">
+      <MemberSignature Language="C#" Value="public static bool RemoveProperty (object instance, System.Xaml.AttachableMemberIdentifier name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool RemoveProperty(object instance, class System.Xaml.AttachableMemberIdentifier name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.RemoveProperty(System.Object,System.Xaml.AttachableMemberIdentifier)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um repositório de propriedade anexável específica que implementa <see cref="T:System.Xaml.IAttachedPropertyStore" />; ou qualquer objeto não nulo para acessar um repositório de propriedade anexável padrão estático.</param>
+        <param name="name">O identificador para a entrada de propriedade anexável remover do armazenamento.</param>
+        <summary>Remove a entrada para a propriedade anexável especificada do armazenamento especificado.</summary>
+        <returns>
+          <see langword="true" />Se uma entrada de propriedade anexável para <paramref name="name" /> foi encontrado no repositório e removido dele; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As lojas são por instância. Portanto, em um repositório, o `name` o valor deve ser inequívoco.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProperty">
+      <MemberSignature Language="C#" Value="public static void SetProperty (object instance, System.Xaml.AttachableMemberIdentifier name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetProperty(object instance, class System.Xaml.AttachableMemberIdentifier name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.SetProperty(System.Object,System.Xaml.AttachableMemberIdentifier,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um repositório de propriedade anexável específica que implementa <see cref="T:System.Xaml.IAttachedPropertyStore" />; ou qualquer objeto não nulo para usar um armazenamento de propriedade anexável padrão estático.</param>
+        <param name="name">O identificador da entrada para o qual definir um valor de propriedade anexável.</param>
+        <param name="value">O valor a ser definido.</param>
+        <summary>Define um valor para a propriedade anexável especificada no repositório especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Não foi possível definir um valor no repositório.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProperty">
+      <MemberSignature Language="C#" Value="public static bool TryGetProperty (object instance, System.Xaml.AttachableMemberIdentifier name, out object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGetProperty(object instance, class System.Xaml.AttachableMemberIdentifier name, [out] object&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.TryGetProperty(System.Object,System.Xaml.AttachableMemberIdentifier,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="System.Object&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="instance">Um repositório de propriedade anexável específica que implementa <see cref="T:System.Xaml.IAttachedPropertyStore" />; ou qualquer objeto não nulo para usar um armazenamento de propriedade anexável padrão estático.</param>
+        <param name="name">O identificador da entrada para a qual obter um valor de propriedade anexável.</param>
+        <param name="value">Limite de parâmetro. Quando este método retorna, contém o objeto de destino para o valor se <c>nome</c> existe no repositório e tem um valor.</param>
+        <summary>Tenta obter um valor para a propriedade anexável especificada no repositório especificado. Não lançará uma exceção se a propriedade anexável específica não existe no repositório.</summary>
+        <returns>
+          <see langword="true" />Se uma entrada de propriedade anexável para <paramref name="name" /> foi encontrado no repositório e um valor foi lançado <paramref name="value" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public static bool TryGetProperty&lt;T&gt; (object instance, System.Xaml.AttachableMemberIdentifier name, out T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryGetProperty&lt;T&gt;(object instance, class System.Xaml.AttachableMemberIdentifier name, [out] !!T&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.AttachablePropertyServices.TryGetProperty``1(System.Object,System.Xaml.AttachableMemberIdentifier,``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="name" Type="System.Xaml.AttachableMemberIdentifier" />
+        <Parameter Name="value" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo esperado da saída.</typeparam>
+        <param name="instance">Um repositório de propriedade anexável específica que implementa <see cref="T:System.Xaml.IAttachedPropertyStore" />; ou qualquer objeto não nulo para acessar um repositório de propriedade anexável padrão estático.</param>
+        <param name="name">O identificador da entrada para a qual obter um valor de propriedade anexável.</param>
+        <param name="value">Limite de parâmetro. Quando este método retorna, contém o objeto de destino para o valor se <c>nome</c> existe no repositório e tem um valor.</param>
+        <summary>Tenta obter um valor para a propriedade anexável especificada no repositório especificado, retornando um formulário genérico de saída. Não lançará uma exceção se a propriedade anexável específica não existe no repositório.</summary>
+        <returns>
+          <see langword="true" />Se uma entrada de propriedade anexável para <paramref name="name" /> foi encontrado no repositório e um valor foi lançado <paramref name="value" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

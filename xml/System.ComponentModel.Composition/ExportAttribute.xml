@@ -1,0 +1,192 @@
+<Type Name="ExportAttribute" FullName="System.ComponentModel.Composition.ExportAttribute">
+  <TypeSignature Language="C#" Value="public class ExportAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ExportAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.ExportAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Property | System.AttributeTargets.Field, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que um tipo, uma propriedade, um campo ou um método fornece uma exportação específica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No atribuído modelo de programação, o <xref:System.ComponentModel.Composition.ExportAttribute> declara que exporta uma parte, ou fornece para o contêiner de composição, um objeto que atenda a um contrato específico. Durante a composição, partes de importações que têm correspondência contratos terá essas dependências preenchidas pelo objeto exportado.  
+  
+ O <xref:System.ComponentModel.Composition.ExportAttribute> pode decorar toda uma classe ou uma propriedade, campo ou método de uma classe. Se a classe inteira é decorada, uma instância da classe é o objeto exportado. Se um membro de uma classe está decorado, o objeto exportado será o valor do membro realçado.  
+  
+ Ou não corresponde a um contrato é determinado principalmente pelo nome do contrato e o tipo de contrato. Para obter mais informações, consulte <xref:System.ComponentModel.Composition.ImportAttribute>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra três classes decorados com o <xref:System.ComponentModel.Composition.ExportAttribute>e três importações que correspondem a elas.  
+  
+ [!code-csharp[ImportAndExport#1](~/samples/snippets/csharp/VS_Snippets_Misc/importandexport/cs/program.cs#1)]
+ [!code-vb[ImportAndExport#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/importandexport/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.ExportAttribute" />, exportando o tipo ou membro marcado com esse atributo com o nome de contrato padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado de chamar o <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> método no tipo de propriedade ou campo, ou o tipo que está marcado com esse atributo.  
+  
+ Métodos marcados com esse atributo devem especificar um nome de contrato ou um tipo usando o <xref:System.ComponentModel.Composition.ExportAttribute.%23ctor%28System.String%29> ou <xref:System.ComponentModel.Composition.ExportAttribute.%23ctor%28System.Type%29>.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportAttribute (string contractName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">O nome do contrato que é usado para exportar o tipo ou membro marcado com esse atributo, ou <see langword="null" />, ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.ExportAttribute" />, exportando o tipo ou membro marcado com esse atributo com o nome de contrato especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato padrão é o resultado de chamar o <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> método no tipo de propriedade ou campo, ou o tipo que ele é marcado com esse atributo.  
+  
+ Métodos marcados com esse atributo devem especificar um nome de contrato ou um tipo usando o <xref:System.ComponentModel.Composition.ExportAttribute.%23ctor%28System.String%29> ou <xref:System.ComponentModel.Composition.ExportAttribute.%23ctor%28System.Type%29>.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportAttribute (Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractType">Um tipo de derivação do nome de contrato que é usado para exportar o tipo ou membro marcado com esse atributo, ou <see langword="null" /> para usar um nome de contrato padrão.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.ExportAttribute" />, exportando o tipo ou membro marcado com esse atributo em um nome de contrato derivado do tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do contrato é o resultado da chamada do método <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> em `contractType`.  
+  
+ O nome do contrato padrão é o resultado de chamar o <xref:System.ComponentModel.Composition.AttributedModelServices.GetContractName%2A> método no tipo de propriedade ou campo, ou o tipo que está marcado com esse atributo.  
+  
+ Métodos marcados com esse atributo devem especificar um nome de contrato ou um tipo usando o <xref:System.ComponentModel.Composition.ExportAttribute.%23ctor%28System.String%29> ou <xref:System.ComponentModel.Composition.ExportAttribute.%23ctor%28System.Type%29>.  
+  
+ O nome do contrato é comparado usando-se a propriedade <xref:System.StringComparer.Ordinal%2A> para executar uma comparação que diferencia maiúsculas de minúsculas, não linguística.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ExportAttribute (string contractName, Type contractType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string contractName, class System.Type contractType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.ExportAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contractName" Type="System.String" />
+        <Parameter Name="contractType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="contractName">O nome do contrato que é usado para exportar o tipo ou membro marcado com esse atributo, ou <see langword="null" />, ou uma cadeia de caracteres vazia ("") para usar o nome do contrato padrão.</param>
+        <param name="contractType">O tipo a ser exportado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.ExportAttribute" />, exportando o tipo especificado com o nome de contrato especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractName">
+      <MemberSignature Language="C#" Value="public string ContractName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContractName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ExportAttribute.ContractName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do contrato que é usado para exportar o tipo ou membro marcado com esse atributo.</summary>
+        <value>O nome do contrato que é usado para exportar o tipo ou membro marcado com esse atributo. O valor padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractType">
+      <MemberSignature Language="C#" Value="public Type ContractType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ContractType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.ExportAttribute.ContractType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de contrato que é exportado pelo membro que este atributo está associado.</summary>
+        <value>O tipo de exportação que é fornecido. O valor padrão é <see langword="null" />, que significa que o tipo será obtido examinando o tipo no membro ao qual essa exportação está anexada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

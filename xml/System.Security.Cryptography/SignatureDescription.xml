@@ -1,0 +1,395 @@
+<Type Name="SignatureDescription" FullName="System.Security.Cryptography.SignatureDescription">
+  <TypeSignature Language="C#" Value="public class SignatureDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignatureDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.SignatureDescription" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações sobre as propriedades de uma assinatura digital.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar membros de <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#2)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#2)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignatureDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SignatureDescription.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.SignatureDescription" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como chamar o padrão <xref:System.Security.Cryptography.SignatureDescription.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#1)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#1)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignatureDescription (System.Security.SecurityElement el);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.SecurityElement el) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SignatureDescription.#ctor(System.Security.SecurityElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="el" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="el">O <see cref="T:System.Security.SecurityElement" /> da qual obter os algoritmos para a descrição de assinatura.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.SignatureDescription" /> classe especificado <see cref="T:System.Security.SecurityElement" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar um novo <xref:System.Security.Cryptography.SignatureDescription> classe usando um  
+  
+ <xref:System.Security.SecurityElement>que contém os algoritmos de quatro. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#3](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#3)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#3)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="el" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDeformatter">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.AsymmetricSignatureDeformatter CreateDeformatter (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.AsymmetricSignatureDeformatter CreateDeformatter(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SignatureDescription.CreateDeformatter(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureDeformatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave para usar o <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" />.</param>
+        <summary>Cria um <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" /> instância com a chave especificada usando o <see cref="P:System.Security.Cryptography.SignatureDescription.DeformatterAlgorithm" /> propriedade.</summary>
+        <returns>Recém-criado <see cref="T:System.Security.Cryptography.AsymmetricSignatureDeformatter" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.SignatureDescription.CreateDeformatter%2A> método para criar um desformatador de assinatura DSA para verificar a assinatura. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#4)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#4)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDigest">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.HashAlgorithm CreateDigest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.HashAlgorithm CreateDigest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SignatureDescription.CreateDigest" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.HashAlgorithm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instância usando o <see cref="P:System.Security.Cryptography.SignatureDescription.DigestAlgorithm" /> propriedade.</summary>
+        <returns>Recém-criado <see cref="T:System.Security.Cryptography.HashAlgorithm" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.SignatureDescription.CreateDigest%2A> método para criar um <xref:System.Security.Cryptography.HashAlgorithm> usando o algoritmo de resumo da assinatura. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#10](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#10)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#10](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#10)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#10](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFormatter">
+      <MemberSignature Language="C#" Value="public virtual System.Security.Cryptography.AsymmetricSignatureFormatter CreateFormatter (System.Security.Cryptography.AsymmetricAlgorithm key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Cryptography.AsymmetricSignatureFormatter CreateFormatter(class System.Security.Cryptography.AsymmetricAlgorithm key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.SignatureDescription.CreateFormatter(System.Security.Cryptography.AsymmetricAlgorithm)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.AsymmetricSignatureFormatter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Security.Cryptography.AsymmetricAlgorithm" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave para usar o <see cref="T:System.Security.Cryptography.AsymmetricSignatureFormatter" />.</param>
+        <summary>Cria um <see cref="T:System.Security.Cryptography.AsymmetricSignatureFormatter" /> instância com a chave especificada usando o <see cref="P:System.Security.Cryptography.SignatureDescription.FormatterAlgorithm" /> propriedade.</summary>
+        <returns>Recém-criado <see cref="T:System.Security.Cryptography.AsymmetricSignatureFormatter" /> instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Security.Cryptography.SignatureDescription.CreateFormatter%2A> método para criar um formatador de assinatura para criptografia de DSA. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#5)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#5)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeformatterAlgorithm">
+      <MemberSignature Language="C#" Value="public string DeformatterAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeformatterAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SignatureDescription.DeformatterAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo desformatador para a descrição de assinatura.</summary>
+        <value>O algoritmo desformatador para a descrição de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Security.Cryptography.SignatureDescription.DeformatterAlgorithm%2A> propriedade com o desformatador RSAPKCS1. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#8](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#8)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#8)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigestAlgorithm">
+      <MemberSignature Language="C#" Value="public string DigestAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DigestAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SignatureDescription.DigestAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo de resumo para a descrição da assinatura.</summary>
+        <value>O algoritmo de resumo para a descrição da assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Security.Cryptography.SignatureDescription.DigestAlgorithm%2A> propriedade para criptografia de RSA usando o provedor SHA1. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#6)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#6)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatterAlgorithm">
+      <MemberSignature Language="C#" Value="public string FormatterAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormatterAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SignatureDescription.FormatterAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo de formatador para a descrição de assinatura.</summary>
+        <value>O algoritmo de formatador para a descrição de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Security.Cryptography.SignatureDescription.FormatterAlgorithm%2A> propriedade com o formatador RSAPKCS1. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#9](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#9)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#9)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyAlgorithm">
+      <MemberSignature Language="C#" Value="public string KeyAlgorithm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string KeyAlgorithm" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.SignatureDescription.KeyAlgorithm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o algoritmo de chave para a descrição de assinatura.</summary>
+        <value>O algoritmo de chave para a descrição de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir a <xref:System.Security.Cryptography.SignatureDescription.KeyAlgorithm%2A> propriedade de criptografia RSA. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Security.Cryptography.SignatureDescription> classe.  
+  
+ [!code-cpp[System.Security.Cryptography.SignatureDescription#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CPP/signaturedescription.cpp#7)]
+ [!code-csharp[System.Security.Cryptography.SignatureDescription#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/CS/signaturedescription.cs#7)]
+ [!code-vb[System.Security.Cryptography.SignatureDescription#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Cryptography.SignatureDescription/VB/signaturedescription.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

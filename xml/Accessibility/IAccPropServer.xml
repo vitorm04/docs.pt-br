@@ -1,0 +1,67 @@
+<Type Name="IAccPropServer" FullName="Accessibility.IAccPropServer">
+  <TypeSignature Language="C#" Value="public interface IAccPropServer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAccPropServer" />
+  <TypeSignature Language="DocId" Value="T:Accessibility.IAccPropServer" />
+  <AssemblyInfo>
+    <AssemblyName>Accessibility</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("76C0DBBB-15E0-4E7B-B61B-20EEEA2001E0")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O <see cref="T:Accessibility.IAccPropServer" /> e todos os seus membros expostos fazem parte de um wrapper gerenciado para a interface <see langword="IAccPropServer" /> COM (Component Object Model).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre <xref:Accessibility.IAccPropServer>, consulte a documentação para `Dynamic Properties` na documentação do Microsoft Active Accessibility na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPropValue">
+      <MemberSignature Language="C#" Value="public void GetPropValue (ref byte pIDString, uint dwIDStringLen, Guid idProp, out object pvarValue, out int pfHasProp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetPropValue([in]unsigned int8&amp; pIDString, [in]unsigned int32 dwIDStringLen, [in]valuetype System.Guid idProp, [out] object&amp; pvarValue, [out] int32&amp; pfHasProp) runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Accessibility.IAccPropServer.GetPropValue(System.Byte@,System.UInt32,System.Guid,System.Object@,System.Int32@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Accessibility</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pIDString" Type="System.Byte&amp;" RefType="ref" />
+        <Parameter Name="dwIDStringLen" Type="System.UInt32" />
+        <Parameter Name="idProp" Type="System.Guid" />
+        <Parameter Name="pvarValue" Type="System.Object&amp;" RefType="out" />
+        <Parameter Name="pfHasProp" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pIDString">Contém uma cadeia de caracteres que identifica a propriedade que está sendo solicitada.</param>
+        <param name="dwIDStringLen">Especifica o comprimento da cadeia de caracteres de identidade especificado pelo <c>pIDString</c> parâmetro.</param>
+        <param name="idProp">Especifica um GUID que indica a propriedade desejada.</param>
+        <param name="pvarValue">Especifica o valor da propriedade substituída. Este parâmetro é válido somente se <c>pfHasProp</c> é TRUE. O servidor deve definir como VT_EMPTY se <c>pfHasProp</c> está definida como FALSE.</param>
+        <param name="pfHasProp">Indica se o servidor está fornecendo um valor para a propriedade solicitada. O servidor deve definir isso como TRUE se ele está retornando uma propriedade de substituição ou como FALSE se ele não está retornando uma propriedade (caso em que ele também deve definir <c>pvarValue</c> como VT_EMPTY).</param>
+        <summary>O <see cref="T:Accessibility.IAccPropServer" /> e todos os seus membros expostos fazem parte de um wrapper gerenciado para a interface <see langword="IAccPropServer" /> COM (Component Object Model).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre <xref:Accessibility.IAccPropServer>, consulte a documentação para `IAccPropServer::GetPropValue` na documentação do Microsoft Active Accessibility na biblioteca MSDN em http://msdn.microsoft.com/library.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,153 @@
+<Type Name="IPropertyValueUIService" FullName="System.Drawing.Design.IPropertyValueUIService">
+  <TypeSignature Language="C#" Value="public interface IPropertyValueUIService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPropertyValueUIService" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Design.IPropertyValueUIService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para gerenciar imagens, dicas de ferramenta e manipuladores de eventos para as propriedades de um componente exibido em um navegador de propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um componente pode usar o <xref:System.Drawing.Design.IPropertyValueUIService> interface para fornecer <xref:System.Drawing.Design.PropertyValueUIItem> objetos para as propriedades do componente. Um <xref:System.Drawing.Design.PropertyValueUIItem> associados com uma propriedade pode fornecer uma imagem, uma dica de ferramenta e um manipulador de eventos para o evento que é gerado quando a imagem associada a propriedade é clicada.  
+  
+ O <xref:System.Drawing.Design.IPropertyValueUIService> interface fornece métodos para adicionar, remover e recuperar <xref:System.Drawing.Design.PropertyValueUIHandler> delegados para ou de uma lista interna. Quando as propriedades de um componente são exibidas em um navegador de propriedade, cada <xref:System.Drawing.Design.PropertyValueUIHandler> na lista recebe uma oportunidade de fornecer um <xref:System.Drawing.Design.PropertyValueUIItem> para cada propriedade do componente.  
+  
+ Quando um navegador de propriedade é definido para exibir as propriedades de um objeto, ele chama o <xref:System.Drawing.Design.IPropertyValueUIService.GetPropertyUIValueItems%2A> método desta interface para cada propriedade do componente, passando um <xref:System.ComponentModel.PropertyDescriptor> que representa a propriedade. O <xref:System.Drawing.Design.IPropertyValueUIService.GetPropertyUIValueItems%2A> as chamadas de método cada <xref:System.Drawing.Design.PropertyValueUIHandler> que foi adicionado ao serviço. Cada <xref:System.Drawing.Design.PropertyValueUIHandler> pode adicionar um <xref:System.Drawing.Design.PropertyValueUIItem> para o <xref:System.Collections.ArrayList> parâmetro passado a `valueUIItemList` itens de parâmetro para fornecer a interface do usuário para a propriedade representada pelo <xref:System.ComponentModel.PropertyDescriptor> passado a `propDesc` parâmetro.  
+  
+ Um <xref:System.Drawing.Design.PropertyValueUIItem> pode conter uma imagem a ser exibida ao lado de um manipulador de eventos a ser invocado quando uma imagem associada a propriedade é clicado duas vezes, uma cadeia de caracteres de dica de ferramenta e o nome da propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um componente que obtém uma instância do <xref:System.Drawing.Design.IPropertyValueUIService> interface e adiciona um <xref:System.Drawing.Design.PropertyValueUIHandler> para o serviço. O manipulador fornece um <xref:System.Drawing.Design.PropertyValueUIItem> objeto para as propriedades do componente nomeado `HorizontalMargin` ou `VerticalMargin`. O <xref:System.Drawing.Design.PropertyValueUIItem> para essas propriedades fornece uma imagem, uma dica de ferramenta e um manipulador de eventos que exibe uma caixa de mensagem quando a imagem para a propriedade é clicada. A imagem e a dica de ferramenta são exibidas em um <xref:System.Windows.Forms.PropertyGrid> quando a grade está mostrando essas propriedades do componente.  
+  
+ [!code-cpp[IPropertyValueUIServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CPP/propertyuicomponent.cpp#1)]
+ [!code-csharp[IPropertyValueUIServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IPropertyValueUIServiceExample/CS/propertyuicomponent.cs#1)]
+ [!code-vb[IPropertyValueUIServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IPropertyValueUIServiceExample/VB/propertyuicomponent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddPropertyValueUIHandler">
+      <MemberSignature Language="C#" Value="public void AddPropertyValueUIHandler (System.Drawing.Design.PropertyValueUIHandler newHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddPropertyValueUIHandler(class System.Drawing.Design.PropertyValueUIHandler newHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IPropertyValueUIService.AddPropertyValueUIHandler(System.Drawing.Design.PropertyValueUIHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newHandler" Type="System.Drawing.Design.PropertyValueUIHandler" />
+      </Parameters>
+      <Docs>
+        <param name="newHandler">O manipulador de interface do usuário de valor de propriedade para adicionar.</param>
+        <summary>Adiciona o <see cref="T:System.Drawing.Design.PropertyValueUIHandler" /> para esse serviço.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando <xref:System.Drawing.Design.IPropertyValueUIService.GetPropertyUIValueItems%2A> é chamado, cada manipulador adicionados a esse serviço é chamado e terá a oportunidade de adicionar um ícone para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyUIValueItems">
+      <MemberSignature Language="C#" Value="public System.Drawing.Design.PropertyValueUIItem[] GetPropertyUIValueItems (System.ComponentModel.ITypeDescriptorContext context, System.ComponentModel.PropertyDescriptor propDesc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Drawing.Design.PropertyValueUIItem[] GetPropertyUIValueItems(class System.ComponentModel.ITypeDescriptorContext context, class System.ComponentModel.PropertyDescriptor propDesc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IPropertyValueUIService.GetPropertyUIValueItems(System.ComponentModel.ITypeDescriptorContext,System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Design.PropertyValueUIItem[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="propDesc" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que pode ser usado para obter informações de contexto adicional.</param>
+        <param name="propDesc">Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que indica a propriedade para corresponder com as propriedades a serem retornadas.</param>
+        <summary>Obtém o <see cref="T:System.Drawing.Design.PropertyValueUIItem" /> objetos que correspondem as características de descritor de propriedade e o contexto especificadas.</summary>
+        <returns>Uma matriz de <see cref="T:System.Drawing.Design.PropertyValueUIItem" /> objetos que correspondem aos parâmetros especificados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyPropertyValueUIItemsChanged">
+      <MemberSignature Language="C#" Value="public void NotifyPropertyValueUIItemsChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifyPropertyValueUIItemsChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IPropertyValueUIService.NotifyPropertyValueUIItemsChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica o <see cref="T:System.Drawing.Design.IPropertyValueUIService" /> implementação que lista global de <see cref="T:System.Drawing.Design.PropertyValueUIItem" /> objetos foi modificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyUIValueItemsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PropertyUIValueItemsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PropertyUIValueItemsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Drawing.Design.IPropertyValueUIService.PropertyUIValueItemsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a lista de <see cref="T:System.Drawing.Design.PropertyValueUIItem" /> objetos é modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Componentes que servem <xref:System.Drawing.Design.PropertyValueUIItem> objetos podem chamar <xref:System.Drawing.Design.IPropertyValueUIService.NotifyPropertyValueUIItemsChanged%2A> ao alterar sua lista de itens.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemovePropertyValueUIHandler">
+      <MemberSignature Language="C#" Value="public void RemovePropertyValueUIHandler (System.Drawing.Design.PropertyValueUIHandler newHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemovePropertyValueUIHandler(class System.Drawing.Design.PropertyValueUIHandler newHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Drawing.Design.IPropertyValueUIService.RemovePropertyValueUIHandler(System.Drawing.Design.PropertyValueUIHandler)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newHandler" Type="System.Drawing.Design.PropertyValueUIHandler" />
+      </Parameters>
+      <Docs>
+        <param name="newHandler">O manipulador a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Drawing.Design.PropertyValueUIHandler" /> do serviço de interface do usuário o valor da propriedade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

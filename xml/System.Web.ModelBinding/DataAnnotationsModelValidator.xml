@@ -1,0 +1,175 @@
+<Type Name="DataAnnotationsModelValidator" FullName="System.Web.ModelBinding.DataAnnotationsModelValidator">
+  <TypeSignature Language="C#" Value="public class DataAnnotationsModelValidator : System.Web.ModelBinding.ModelValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataAnnotationsModelValidator extends System.Web.ModelBinding.ModelValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ModelBinding.DataAnnotationsModelValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.ModelBinding.ModelValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um validador de modelo.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataAnnotationsModelValidator (System.Web.ModelBinding.ModelMetadata metadata, System.Web.ModelBinding.ModelBindingExecutionContext context, System.ComponentModel.DataAnnotations.ValidationAttribute attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.ModelBinding.ModelMetadata metadata, class System.Web.ModelBinding.ModelBindingExecutionContext context, class System.ComponentModel.DataAnnotations.ValidationAttribute attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidator.#ctor(System.Web.ModelBinding.ModelMetadata,System.Web.ModelBinding.ModelBindingExecutionContext,System.ComponentModel.DataAnnotations.ValidationAttribute)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Web.ModelBinding.ModelMetadata" />
+        <Parameter Name="context" Type="System.Web.ModelBinding.ModelBindingExecutionContext" />
+        <Parameter Name="attribute" Type="System.ComponentModel.DataAnnotations.ValidationAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">Os metadados.</param>
+        <param name="context">o contexto de execução.</param>
+        <param name="attribute">O atributo de validação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ModelBinding.DataAnnotationsModelValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="protected System.ComponentModel.DataAnnotations.ValidationAttribute Attribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.DataAnnotations.ValidationAttribute Attribute" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.DataAnnotationsModelValidator.Attribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.DataAnnotations.ValidationAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o atributo de validação para o validador do modelo.</summary>
+        <value>O atributo de validação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessage">
+      <MemberSignature Language="C#" Value="protected string ErrorMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ErrorMessage" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.DataAnnotationsModelValidator.ErrorMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de erro para uma falha de validação.</summary>
+        <value>A mensagem de erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalizedErrorMessage">
+      <MemberSignature Language="C#" Value="protected virtual string GetLocalizedErrorMessage (string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetLocalizedErrorMessage(string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidator.GetLocalizedErrorMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessage">A mensagem de erro para localizar.</param>
+        <summary>Obtém uma mensagem de erro localizada para o modelo.</summary>
+        <returns>A versão localizada da mensagem de erro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalizedString">
+      <MemberSignature Language="C#" Value="protected string GetLocalizedString (string name, params object[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance string GetLocalizedString(string name, object[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidator.GetLocalizedString(System.String,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="arguments" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">A cadeia de caracteres para localizar.</param>
+        <param name="arguments">Uma matriz de argumentos.</param>
+        <summary>Obtém uma versão localizada de uma cadeia de caracteres específica.</summary>
+        <returns>A versão localizada da cadeia de caracteres.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="public override bool IsRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Web.ModelBinding.DataAnnotationsModelValidator.IsRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modelo é necessário (ou seja, se a validação de atributo no <see cref="P:System.Web.ModelBinding.DataAnnotationsModelValidator.Attribute" /> propriedade é um <see cref="T:System.ComponentModel.DataAnnotations.RequiredAttribute" /> atributo).</summary>
+        <value>
+          <see langword="true" />Se o modelo é obrigatório. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidationResult&gt; Validate (object container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;class System.Web.ModelBinding.ModelValidationResult&gt; Validate(object container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ModelBinding.DataAnnotationsModelValidator.Validate(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.IteratorStateMachine(typeof(System.Web.ModelBinding.DataAnnotationsModelValidator/&lt;Validate&gt;d__11))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Web.ModelBinding.ModelValidationResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="container">O contêiner para o modelo.</param>
+        <summary>Retorna uma lista de validação de mensagens de erro para o modelo.</summary>
+        <returns>A lista de mensagens de erro de validação, ou uma lista vazia se não forem encontrados erros.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

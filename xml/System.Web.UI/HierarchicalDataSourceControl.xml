@@ -1,0 +1,541 @@
+<Type Name="HierarchicalDataSourceControl" FullName="System.Web.UI.HierarchicalDataSourceControl">
+  <TypeSignature Language="C#" Value="public abstract class HierarchicalDataSourceControl : System.Web.UI.Control, System.Web.UI.IHierarchicalDataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HierarchicalDataSourceControl extends System.Web.UI.Control implements class System.Web.UI.IHierarchicalDataSource" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HierarchicalDataSourceControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IHierarchicalDataSource</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.HierarchicalDataSourceDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.ControlBuilder(typeof(System.Web.UI.DataSourceControlBuilder))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Web.UI.NonVisualControl</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma classe base para os controles de fonte de dados que representam dados hierárquicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ ASP.NET oferece suporte a uma arquitetura de associação de dados de controles que permite que os controles de servidor Web associar aos dados e apresentá-lo de forma consistente. Controles de servidor Web que associar aos dados são chamados de controles associados a dados e as classes que facilitam a vinculação são chamadas de controles da fonte de dados. Controles de fonte de dados podem representar qualquer fonte de dados: um arquivo, um fluxo, um banco de dados relacional, um objeto comercial e assim por diante. Fonte de dados controla apresentar dados de uma maneira consistente para controles associados a dados, independentemente da origem ou o formato dos dados subjacentes.  
+  
+ Controles de fonte de dados que representam dados hierárquicos derivam o <xref:System.Web.UI.HierarchicalDataSourceControl> classe, enquanto que derivam de controles de fonte de dados que representam listas ou tabelas de dados de <xref:System.Web.UI.DataSourceControl> classe. O <xref:System.Web.UI.HierarchicalDataSourceControl> classe é a implementação base do <xref:System.Web.UI.IHierarchicalDataSource> interface, que define um único método para recuperar objetos de exibição de fonte de dados hierárquicos associados com o controle de fonte de dados, <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A>.  
+  
+ Você pode pensar em um controle de fonte de dados como a combinação da <xref:System.Web.UI.HierarchicalDataSourceControl> objeto e seus modos de exibição associados nos dados subjacentes, chamados de objetos de exibição de fonte de dados. Enquanto os controles de fonte de dados que representam dados tabulares são normalmente associados com apenas uma exibição nomeada, o <xref:System.Web.UI.HierarchicalDataSourceControl> classe oferece suporte a uma exibição da fonte de dados para cada nível de dados hierárquicos que representa o controle de fonte de dados. O nível de dados hierárquicos é identificado por um caminho hierárquico exclusivo, passado para o <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> método o `viewPath` parâmetro. Cada <xref:System.Web.UI.HierarchicalDataSourceView> objeto define os recursos de um controle de fonte de dados para o nível hierárquico representado e executa operações, como insert, update, delete e classificação.  
+  
+ Controles de servidor Web que derivam de <xref:System.Web.UI.WebControls.HierarchicalDataBoundControl> classe, como <xref:System.Web.UI.WebControls.TreeView>, usar controles da fonte de dados hierárquicos para associar a dados hierárquicos.  
+  
+ Controles de fonte de dados são implementados como controles para habilitar a persistência declarativa e, opcionalmente, permitir a participação no gerenciamento de estado. Controles de fonte de dados não têm nenhum processamento visual e, portanto, não oferecem suporte a temas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como estender o resumo <xref:System.Web.UI.HierarchicalDataSourceControl> classe e o <xref:System.Web.UI.HierarchicalDataSourceView> classe e implementar o <xref:System.Web.UI.IHierarchicalEnumerable> e <xref:System.Web.UI.IHierarchyData> controle que recupera o sistema de arquivos de origem de interfaces para criar um dados hierárquicos informações. O `FileSystemDataSource` controle permite que os controles de servidor Web associar a <xref:System.IO.FileSystemInfo> objetos e exibir informações do sistema de arquivo básico. O `FileSystemDataSource` classe do exemplo fornece a implementação do <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> método, que recupera um `FileSystemDataSourceView` objeto. O `FileSystemDataSourceView` objeto recupera os dados do armazenamento de dados subjacentes, neste caso, as informações do sistema de arquivos no servidor Web. Para fins de segurança, informações do sistema de arquivos serão exibidas somente se o controle de fonte de dados está sendo usado em um host local, autenticado cenário e inicia apenas com o diretório virtual que a página de Web Forms usando o controle de fonte de dados reside no. Por fim, duas classes que implementam <xref:System.Web.UI.IHierarchicalEnumerable> e <xref:System.Web.UI.IHierarchyData> são fornecidos para encapsular o <xref:System.IO.FileSystemInfo> objetos que `FileSystemDataSource` usa.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#2)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#2)]  
+  
+ O exemplo de código a seguir demonstra como associar declarativamente uma <xref:System.Web.UI.WebControls.TreeView> controle para dados do sistema de arquivos usando o `FileSystemDataSource` exemplo.  
+  
+ [!code-aspx-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_webform_1#50](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_webform_1/CS/webform7cs.aspx#50)]
+ [!code-aspx-vb[Urtue.Samples.Alexkr.FileSystemDataSource_webform_1#50](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_webform_1/VB/webform7vb.aspx#50)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HierarchicalDataSourceControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.HierarchicalDataSourceControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyStyleSheetSkin">
+      <MemberSignature Language="C#" Value="public override void ApplyStyleSheetSkin (System.Web.UI.Page page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ApplyStyleSheetSkin(class System.Web.UI.Page page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.ApplyStyleSheetSkin(System.Web.UI.Page)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="page" Type="System.Web.UI.Page" />
+      </Parameters>
+      <Docs>
+        <param name="page">O <see cref="T:System.Web.UI.Page" /> que contém o controle.</param>
+        <summary>Aplica-se as propriedades de estilo que são definidas na folha de estilo da página para o controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientID">
+      <MemberSignature Language="C#" Value="public override string ClientID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ClientID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HierarchicalDataSourceControl.ClientID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de controle de servidor gerado pelo ASP.NET.</summary>
+        <value>O identificador de controle de servidor gerado pelo ASP.NET.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientIDMode">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ClientIDMode ClientIDMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ClientIDMode ClientIDMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HierarchicalDataSourceControl.ClientIDMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ClientIDMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Essa propriedade não é usada para controles de fonte de dados.</summary>
+        <value>Essa propriedade não é usada para controles de fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade do <xref:System.Web.UI.Control> classe base não é usada para controles de fonte de dados porque os controles de fonte de dados não renderizar a marcação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ControlCollection Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.ControlCollection Controls" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HierarchicalDataSourceControl.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Web.UI.ControlCollection" /> que representa os controles filho para um controle de servidor especificado na hierarquia de interface do usuário.</summary>
+        <value>A coleção de controles filho para o controle de servidor especificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto <see cref="T:System.Web.UI.ControlCollection" /> para manter os controles filho (literal e servidor) do controle do servidor.</summary>
+        <returns>Um <see cref="T:System.Web.UI.EmptyControlCollection" /> que impede que os controles filho que está sendo adicionado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HierarchicalDataSourceControl.CreateControlCollection%2A> método é substituído pelo <xref:System.Web.UI.HierarchicalDataSourceControl> classe para impedir que os controles filho que está sendo adicionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableTheming">
+      <MemberSignature Language="C#" Value="public override bool EnableTheming { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableTheming" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HierarchicalDataSourceControl.EnableTheming" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se este controle dá suporte a temas.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.HierarchicalDataSourceControl> classe não tem nenhum processamento visual, ele não oferece suporte a temas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir o valor da propriedade <see cref="P:System.Web.UI.HierarchicalDataSourceControl.EnableTheming" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FindControl">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.Control FindControl (string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.UI.Control FindControl(string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.FindControl(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Control</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="id">O identificador do controle a ser encontrado.</param>
+        <summary>Procura o atual contêiner de nomenclatura de um controle de servidor com o parâmetro <paramref name="id" /> especificado.</summary>
+        <returns>O controle especificado, ou <see langword="null" />, se o controle especificado não existir.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Focus">
+      <MemberSignature Language="C#" Value="public override void Focus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Focus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.Focus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define o foco de entrada para o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.HierarchicalDataSourceControl> classe não tem nenhum visual de renderização, chamando o <xref:System.Web.UI.HierarchicalDataSourceControl.Focus%2A> método lança um <xref:System.NotSupportedException> exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de chamar o <see cref="M:System.Web.UI.HierarchicalDataSourceControl.Focus" /> método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHierarchicalView">
+      <MemberSignature Language="C#" Value="protected abstract System.Web.UI.HierarchicalDataSourceView GetHierarchicalView (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Web.UI.HierarchicalDataSourceView GetHierarchicalView(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">O caminho hierárquico do modo de exibição para recuperar.</param>
+        <summary>Obtém o objeto auxiliar de modo de exibição para o <see cref="T:System.Web.UI.IHierarchicalDataSource" /> interface para o caminho especificado.</summary>
+        <returns>Um <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> que representa uma única exibição dos dados no nível hierárquico identificado pelo <paramref name="viewPath" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> método fornece a implementação padrão para o <xref:System.Web.UI.HierarchicalDataSourceControl> classe, que simplesmente retorna `null`. Classes que derivam de <xref:System.Web.UI.HierarchicalDataSourceControl> classe substitua este método e fornecer uma implementação para retornar uma exibição fortemente tipada que deriva de <xref:System.Web.UI.HierarchicalDataSourceView>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> método em uma classe que estende o <xref:System.Web.UI.HierarchicalDataSourceControl> classe para retornar um fortemente tipada <xref:System.Web.UI.HierarchicalDataSourceView> objeto. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.HierarchicalDataSourceControl> classe.  
+  
+ [!code-csharp[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/CS/filesystemdatasource.cs#1)]
+ [!code-vb[Urtue.Samples.Alexkr.FileSystemDataSource_1#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Urtue.Samples.Alexkr.FileSystemDataSource_1/VB/filesystemdatasource.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasControls">
+      <MemberSignature Language="C#" Value="public override bool HasControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool HasControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.HasControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o controle de servidor contém algum controle filho.</summary>
+        <returns>
+          <see langword="true" /> se o controle contiver outros controles; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSourceChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSourceChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSourceChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.OnDataSourceChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.IHierarchicalDataSource.DataSourceChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HierarchicalDataSourceControl.OnDataSourceChanged%2A> método notifica um controle associado a dados, os dados armazenados em cache na memória ou a fonte de dados subjacente foi alterado, o controle deve associar novamente, e que qualquer trabalho necessário deve ser executado.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.HierarchicalDataSourceControl.OnDataSourceChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.HierarchicalDataSourceControl.OnDataSourceChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.HierarchicalDataSourceControl.OnDataSourceChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderControl">
+      <MemberSignature Language="C#" Value="public override void RenderControl (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RenderControl(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.RenderControl(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo do controle.</param>
+        <summary>Gera o conteúdo do controle de servidor para um objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> fornecido e armazena informações de rastreamento sobre o controle caso o rastreamento esteja habilitado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkinID">
+      <MemberSignature Language="C#" Value="public override string SkinID { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SkinID" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HierarchicalDataSourceControl.SkinID" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a capa a ser aplicada ao controle <see cref="T:System.Web.UI.HierarchicalDataSourceControl" />.</summary>
+        <value>
+          <see cref="F:System.String.Empty" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.HierarchicalDataSourceControl> não tem nenhum visual de renderização, não dá suporte a temas ou capas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir o valor da propriedade <see cref="P:System.Web.UI.HierarchicalDataSourceControl.SkinID" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IHierarchicalDataSource.GetHierarchicalView">
+      <MemberSignature Language="C#" Value="System.Web.UI.HierarchicalDataSourceView IHierarchicalDataSource.GetHierarchicalView (string viewPath);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Web.UI.HierarchicalDataSourceView System.Web.UI.IHierarchicalDataSource.GetHierarchicalView(string viewPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HierarchicalDataSourceControl.System#Web#UI#IHierarchicalDataSource#GetHierarchicalView(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HierarchicalDataSourceView</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewPath">O caminho hierárquico do modo de exibição para recuperar.</param>
+        <summary>Obtém o objeto auxiliar de modo de exibição para o <see cref="T:System.Web.UI.IHierarchicalDataSource" /> interface para o caminho especificado.</summary>
+        <returns>Retorna um <see cref="T:System.Web.UI.HierarchicalDataSourceView" /> que representa uma única exibição dos dados no nível hierárquico identificado pelo <paramref name="viewPath" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IHierarchicalDataSource.GetHierarchicalView%2A> método é chamado pelos clientes quando uma <xref:System.Web.UI.HierarchicalDataSourceControl> é manipulado como uma <xref:System.Web.UI.IHierarchicalDataSource> interface. Ela delega para o <xref:System.Web.UI.HierarchicalDataSourceControl.GetHierarchicalView%2A> substituição de método, que classes derivadas para retornar fortemente tipada <xref:System.Web.UI.HierarchicalDataSourceView> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public override bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HierarchicalDataSourceControl.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle é exibido visualmente.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Porque o <xref:System.Web.UI.HierarchicalDataSourceControl> classe não tem nenhum processamento visual, <xref:System.Web.UI.HierarchicalDataSourceControl.Visible%2A> sempre retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Foi feita uma tentativa de definir o valor da propriedade <see cref="P:System.Web.UI.HierarchicalDataSourceControl.Visible" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,154 @@
+<Type Name="ModifyRequest" FullName="System.DirectoryServices.Protocols.ModifyRequest">
+  <TypeSignature Language="C#" Value="public class ModifyRequest : System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ModifyRequest extends System.DirectoryServices.Protocols.DirectoryRequest" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.ModifyRequest" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.DirectoryServices.Protocols.DirectoryRequest</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A classe <see cref="T:System.DirectoryServices.Protocols.ModifyRequest" /> modifica os atributos de uma entrada de diretório existente.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModifyRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ModifyRequest.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>O construtor <see cref="M:System.DirectoryServices.Protocols.ModifyRequest.#ctor" /> cria uma instância da classe <see cref="T:System.DirectoryServices.Protocols.ModifyRequest" />. Este construtor cria uma solicitação vazia.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModifyRequest (string distinguishedName, params System.DirectoryServices.Protocols.DirectoryAttributeModification[] modifications);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName, class System.DirectoryServices.Protocols.DirectoryAttributeModification[] modifications) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ModifyRequest.#ctor(System.String,System.DirectoryServices.Protocols.DirectoryAttributeModification[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="modifications" Type="System.DirectoryServices.Protocols.DirectoryAttributeModification[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">O nome diferenciado do objeto a ser modificado.</param>
+        <param name="modifications">Uma matriz de objetos <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeModification" /> que especifica as modificações.</param>
+        <summary>O construtor <see cref="M:System.DirectoryServices.Protocols.ModifyRequest.#ctor(System.String,System.DirectoryServices.Protocols.DirectoryAttributeModification[])" /> cria uma instância da classe <see cref="T:System.DirectoryServices.Protocols.ModifyRequest" /> usando o nome diferenciado e as modificações especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ModifyRequest (string distinguishedName, System.DirectoryServices.Protocols.DirectoryAttributeOperation operation, string attributeName, params object[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string distinguishedName, valuetype System.DirectoryServices.Protocols.DirectoryAttributeOperation operation, string attributeName, object[] values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ModifyRequest.#ctor(System.String,System.DirectoryServices.Protocols.DirectoryAttributeOperation,System.String,System.Object[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="distinguishedName" Type="System.String" />
+        <Parameter Name="operation" Type="System.DirectoryServices.Protocols.DirectoryAttributeOperation" />
+        <Parameter Name="attributeName" Type="System.String" />
+        <Parameter Name="values" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="distinguishedName">O nome distinto do objeto a ser modificado.</param>
+        <param name="operation">Um <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeOperation" /> objeto que especifica a modificação para executar.</param>
+        <param name="attributeName">O nome do atributo para modificar. O parâmetro não pode ser <see langword="null" />.</param>
+        <param name="values">Os novos valores para o atributo.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ModifyRequest.#ctor(System.String,System.DirectoryServices.Protocols.DirectoryAttributeOperation,System.String,System.Object[])" /> construtor cria uma instância do <see cref="T:System.DirectoryServices.Protocols.ModifyRequest" /> classe usando o nome distinto especificado, modificação, nome do atributo e valores.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistinguishedName">
+      <MemberSignature Language="C#" Value="public string DistinguishedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DistinguishedName" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.ModifyRequest.DistinguishedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.ModifyRequest.DistinguishedName" /> propriedade contém o nome distinto do objeto para modificar.</summary>
+        <value>O nome diferenciado do objeto a ser modificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifications">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryAttributeModificationCollection Modifications { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DirectoryAttributeModificationCollection Modifications" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.ModifyRequest.Modifications" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryAttributeModificationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.ModifyRequest.Modifications" /> propriedade contém um <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeModificationCollection" /> objeto que especifica uma lista de modificações de atributo.</summary>
+        <value>Um <see cref="T:System.DirectoryServices.Protocols.DirectoryAttributeModificationCollection" /> objeto que especifica uma lista de modificações de atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXmlNode">
+      <MemberSignature Language="C#" Value="protected override System.Xml.XmlElement ToXmlNode (System.Xml.XmlDocument doc);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Xml.XmlElement ToXmlNode(class System.Xml.XmlDocument doc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.DirectoryServices.Protocols.ModifyRequest.ToXmlNode(System.Xml.XmlDocument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doc" Type="System.Xml.XmlDocument" />
+      </Parameters>
+      <Docs>
+        <param name="doc">Um objeto <see cref="T:System.Xml.XmlDocument" />.</param>
+        <summary>O <see cref="M:System.DirectoryServices.Protocols.ModifyRequest.ToXmlNode(System.Xml.XmlDocument)" /> método cria um nó XML especificado <see cref="T:System.Xml.XmlDocument" /> objeto.</summary>
+        <returns>O tipo do objeto <see cref="T:System.Xml.XmlElement" /> resultante.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

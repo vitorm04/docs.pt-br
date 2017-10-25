@@ -1,0 +1,199 @@
+<Type Name="IXpsFixedDocumentWriter" FullName="System.Windows.Xps.Packaging.IXpsFixedDocumentWriter">
+  <TypeSignature Language="C#" Value="public interface IXpsFixedDocumentWriter : System.Windows.Xps.Packaging.IDocumentStructureProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXpsFixedDocumentWriter implements class System.Windows.Xps.Packaging.IDocumentStructureProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Xps.Packaging.IDocumentStructureProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define métodos e propriedades para gravar um <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceWriter.AddFixedDocument%2A> método para obter um gravador de documento fixo para adicionar <xref:System.Windows.Documents.FixedPage> conteúdo para um <xref:System.Windows.Xps.Packaging.XpsDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpkgcontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpkgcontent)]
+ [!code-vb[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpkgcontent)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddFixedPage">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.IXpsFixedPageWriter AddFixedPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.IXpsFixedPageWriter AddFixedPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddFixedPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.IXpsFixedPageWriter</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Adiciona um novo <see cref="T:System.Windows.Documents.FixedPage" /> para o <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+        <returns>Um gravador de saída nova <see cref="T:System.Windows.Documents.FixedPage" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddFixedPage%2A>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateadddoccontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateadddoccontent)]
+ [!code-vb[XpsCreate#XpsCreateAddDocContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateadddoccontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddThumbnail">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.XpsThumbnail AddThumbnail (System.Windows.Xps.Packaging.XpsImageType imageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Xps.Packaging.XpsThumbnail AddThumbnail(valuetype System.Windows.Xps.Packaging.XpsImageType imageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddThumbnail(System.Windows.Xps.Packaging.XpsImageType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.XpsThumbnail</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageType" Type="System.Windows.Xps.Packaging.XpsImageType" />
+      </Parameters>
+      <Docs>
+        <param name="imageType">O tipo de imagem da miniatura para adicionar.</param>
+        <summary>Adiciona um <see cref="T:System.Windows.Xps.Packaging.XpsThumbnail" /> a imagem para o <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+        <returns>O novo <see cref="T:System.Windows.Xps.Packaging.XpsThumbnail" /> para o <see cref="T:System.Windows.Documents.FixedDocument" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, o `imageType` podem ser <xref:System.Windows.Xps.Packaging.XpsImageType.JpegImageType> ou <xref:System.Windows.Xps.Packaging.XpsImageType.PngImageType>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Apenas uma imagem em miniatura pode representar o documento como um todo (embora páginas individuais podem ter suas próprias imagens em miniatura).  Um <see cref="T:System.InvalidOperationException" /> é gerada se <see cref="M:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.AddThumbnail(System.Windows.Xps.Packaging.XpsImageType)" /> é chamado quando o documento já contém uma miniatura.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Commit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.Commit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera e fecha o <see cref="T:System.Windows.Documents.FixedDocument" /> gravador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.Commit%2A> método para liberar e fechar o <xref:System.Windows.Documents.FixedDocument> gravador.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpkgcontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpkgcontent)]
+ [!code-vb[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpkgcontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentNumber">
+      <MemberSignature Language="C#" Value="public int DocumentNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DocumentNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.DocumentNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição de base zero de <see cref="T:System.Windows.Documents.FixedDocument" /> no <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</summary>
+        <value>A posição de base zero de <see cref="T:System.Windows.Documents.FixedDocument" /> no <see cref="T:System.Windows.Documents.FixedDocumentSequence" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.DocumentNumber%2A> propriedade é baseado em zero.  Um <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.DocumentNumber%2A> valor zero (0) indica que o primeiro o <xref:System.Windows.Documents.FixedDocument> no <xref:System.Windows.Documents.FixedDocumentSequence>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintTicket">
+      <MemberSignature Language="C#" Value="public System.Printing.PrintTicket PrintTicket { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Printing.PrintTicket PrintTicket" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.PrintTicket" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PrintTicket</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define as opções de impressão para o padrão de <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A definição dessa propriedade não validar ou modificar especificado <xref:System.Printing.PrintTicket> para um determinado <xref:System.Printing.PrintQueue>.  Se necessário, use o método <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> para criar um <xref:System.Printing.PrintQueue> específico <xref:System.Printing.PrintTicket> que é válido para uma determinada impressora.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.PrintTicket%2A> propriedade para associar um <xref:System.Printing.PrintTicket> com um <xref:System.Windows.Documents.FixedDocument>.  
+  
+ [!code-cpp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#xpscreateaddpkgcontent)]
+ [!code-csharp[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#xpscreateaddpkgcontent)]
+ [!code-vb[XpsCreate#XpsCreateAddPkgContent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#xpscreateaddpkgcontent)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.IXpsFixedDocumentWriter.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.Windows.Documents.FixedDocument" />.</summary>
+        <value>O [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] do <see cref="T:System.Windows.Documents.FixedDocument" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

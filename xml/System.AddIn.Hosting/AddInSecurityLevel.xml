@@ -1,0 +1,111 @@
+<Type Name="AddInSecurityLevel" FullName="System.AddIn.Hosting.AddInSecurityLevel">
+  <TypeSignature Language="C#" Value="public enum AddInSecurityLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AddInSecurityLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Hosting.AddInSecurityLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o nível de confiança é concedido para o domínio de aplicativo que um suplemento é carregado no.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sistema suplemento ativa o suplemento com o conjunto de permissões que corresponde ao nível de confiança especificado para domínio de aplicativo do suplemento. Conjunto de permissões é definido pela configuração de segurança (ACS) de acesso de código do common language runtime.  
+  
+ Os valores dessa enumeração não podem ser combinados com o uso da operação OR bit a bit.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ativa um suplemento com um nível de confiança especificado.  
+  
+ [!code-csharp[AddInP3Host#5](~/samples/snippets/csharp/VS_Snippets_CLR/addinP3Host/cs/P3Host.cs#5)]
+ [!code-vb[AddInP3Host#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/addinP3Host/vb/p3host.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FullTrust">
+      <MemberSignature Language="C#" Value="FullTrust" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel FullTrust = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.FullTrust" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o nível de segurança de confiança total para suplementos que têm permissão para ler e gravar no sistema de arquivos local, criar conexões de rede e lidos do registro. Esse nível de segurança concede acesso completo para código acesso CAS (segurança) do suplemento, aplicando o <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /> campo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="Host" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel Host = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.Host" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o nível de segurança do host para fornecer o suplemento as mesmas permissões concedidas atualmente para o código de hospedagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa configuração tem duas finalidades:  
+  
+-   Representa o conjunto de permissões máximo que um host pode conceder aos seus suplementos.  
+  
+-   Ele permite que um ClickOnce ou um host de aplicativo de linguagem XAML (Extensible Markup) navegador XBAP (aplicativos) propagar o seu site de origem para seus suplementos, que permite que ele entre em contato com o servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Internet">
+      <MemberSignature Language="C#" Value="Internet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel Internet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.Internet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o nível de segurança da Internet para suplementos que têm um nível de confiança baixa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Intranet">
+      <MemberSignature Language="C#" Value="Intranet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.AddIn.Hosting.AddInSecurityLevel Intranet = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.AddIn.Hosting.AddInSecurityLevel.Intranet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Hosting.AddInSecurityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use o nível de segurança da Intranet para suplementos que estão localizados na intranet da empresa. Esses suplementos podem ter um maior nível de confiança porque os servidores e as informações estão no firewall da empresa.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

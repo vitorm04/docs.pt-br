@@ -1,0 +1,62 @@
+<Type Name="ISettingsProviderService" FullName="System.Configuration.ISettingsProviderService">
+  <TypeSignature Language="C#" Value="public interface ISettingsProviderService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISettingsProviderService" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ISettingsProviderService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para a definição de um provedor de configurações de aplicativos alternativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.IPersistComponentSettings> interface permite que os controles e componentes hospedados em um aplicativo para manter as configurações do aplicativo de maneira totalmente transparente para o aplicativo. No entanto, em alguns casos, o aplicativo ou o ambiente pode precisar substituir nativamente usado por um componente com um dos seus próprios escolhendo o provedor de configurações. O <xref:System.Configuration.ISettingsProviderService> interface permite a criação de um serviço simples que se comunica tal um provedor de configurações alternativas, geralmente oferecido por meio do proprietário <xref:System.ComponentModel.Container>.  
+  
+ <xref:System.Configuration.ISettingsProviderService>é normalmente usado por ferramentas de tempo de design e depuradores que fornecem suporte especial para as configurações do aplicativo. Para tornar essa uma função de disposição diretamente, a <xref:System.Configuration.ApplicationSettingsBase> classe contém construtores que usam uma referência ao componente de propriedade. Esses construtores de consulta automaticamente para provedores de configurações compatíveis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetSettingsProvider">
+      <MemberSignature Language="C#" Value="public System.Configuration.SettingsProvider GetSettingsProvider (System.Configuration.SettingsProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Configuration.SettingsProvider GetSettingsProvider(class System.Configuration.SettingsProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ISettingsProviderService.GetSettingsProvider(System.Configuration.SettingsProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.SettingsProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Configuration.SettingsProperty" />
+      </Parameters>
+      <Docs>
+        <param name="property">O <see cref="T:System.Configuration.SettingsProperty" /> que requer serialização.</param>
+        <summary>Retorna o provedor de configurações compatíveis com a propriedade de configurações especificadas.</summary>
+        <returns>Se encontrado, o <see cref="T:System.Configuration.SettingsProvider" /> que pode manter a propriedade de configurações especificado; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ISettingsProviderService.GetSettingsProvider%2A> método habilita um <xref:System.Configuration.ISettingsProviderService> oferecer seus serviços de serialização para qualquer componente que se encontra. Este método determina se o provedor de configurações associadas pode persistir o tipo de propriedade de configurações do aplicativo especificado. Se for possível, este método retorna uma referência ao provedor de configurações; Caso contrário, ele retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

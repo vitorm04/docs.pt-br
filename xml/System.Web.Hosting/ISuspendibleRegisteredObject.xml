@@ -1,0 +1,62 @@
+<Type Name="ISuspendibleRegisteredObject" FullName="System.Web.Hosting.ISuspendibleRegisteredObject">
+  <TypeSignature Language="C#" Value="public interface ISuspendibleRegisteredObject : System.Web.Hosting.IRegisteredObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISuspendibleRegisteredObject implements class System.Web.Hosting.IRegisteredObject" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.ISuspendibleRegisteredObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.Hosting.IRegisteredObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Escuta para suspender e retomar as notificações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um aplicativo passa para o <xref:System.Web.Hosting.HostingEnvironment.RegisterObject%2A> método de um objeto que implementa o <xref:System.Web.Hosting.ISuspendibleRegisteredObject> interface, o ambiente de hospedagem assinará o objeto para escutar suspender ou retomar notificações.  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Membros de instância deste tipo não há garantia de ser thread-safe. Você pode chamar o <see cref="M:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend" /> chamadas de método a qualquer momento, incluindo durante uma chamada para outro método neste mesmo objeto, durante a outros objetos <see cref="M:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend" /> métodos, ou até mesmo durante uma chamada para esse objeto <see cref="M:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend" /> método. Como a execução desses métodos é multi-threaded, há um intervalo no qual o <see cref="M:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend" /> método pode ser chamado mesmo após uma chamada para o <see cref="M:System.Web.Hosting.HostingEnvironment.UnregisterObject(System.Web.Hosting.IRegisteredObject)" /> método foi concluída.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName="Suspend">
+      <MemberSignature Language="C#" Value="public Action Suspend ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Action Suspend() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>[Suporte somente no .NET Framework 4.5.1 e versões posteriores]  
+  
+ Chamado quando o ASP.NET notifica um aplicativo que um processo está sendo suspenso.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend%2A> método não deve lançar exceções, caso contrário, o comportamento será indefinido e o processo provavelmente será encerrado. O <xref:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend%2A> método não deve bloquear a execução, porque depois de cinco segundos ASP.NET permitirá que o processo a ser suspenso, mesmo que nem todos os <xref:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend%2A> métodos concluiu.  
+  
+ Se um retorno de chamada retorna, ele será invocado quando o processo sair do modo de suspensão. O <xref:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend%2A> método pode retornar `null` se ele não precisa ser notificado quando o processo continua.  
+  
+ O <xref:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend%2A> método só tem suporte quando em execução no IIS de modo integrado. O tempo de execução do ASP.NET não garante que o <xref:System.Web.Hosting.ISuspendibleRegisteredObject.Suspend%2A> método nunca será acionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

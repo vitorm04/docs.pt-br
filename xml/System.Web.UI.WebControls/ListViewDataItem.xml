@@ -1,0 +1,198 @@
+<Type Name="ListViewDataItem" FullName="System.Web.UI.WebControls.ListViewDataItem">
+  <TypeSignature Language="C#" Value="public class ListViewDataItem : System.Web.UI.WebControls.ListViewItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ListViewDataItem extends System.Web.UI.WebControls.ListViewItem" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ListViewDataItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.ListViewItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um item de dados individual em um controle <see cref="T:System.Web.UI.WebControls.ListView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListViewDataItem> classe representa um item de dados individuais em um <xref:System.Web.UI.WebControls.ListView> controle. Um item de dados normalmente corresponde a um registro em um objeto de fonte de dados. A classe deriva de <xref:System.Web.UI.WebControls.ListViewItem> classe.  
+  
+ Cada item de <xref:System.Web.UI.WebControls.ListView> controle tem um tipo de item designado que é representado pelo <xref:System.Web.UI.WebControls.ListViewItem.ItemType%2A> propriedade. Quando o tipo de item é <xref:System.Web.UI.WebControls.ListViewItemType?displayProperty=nameWithType>, você pode usar o <xref:System.Web.UI.WebControls.ListViewDataItem> classe para obter mais informações sobre o item.  
+  
+ O <xref:System.Web.UI.WebControls.ListView> controle armazena itens de dados no <xref:System.Web.UI.WebControls.ListView.Items%2A> coleção. Para determinar o índice de um <xref:System.Web.UI.WebControls.ListViewDataItem> objeto o <xref:System.Web.UI.WebControls.ListView.Items%2A> coleção, use o <xref:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex%2A> propriedade. Para determinar o índice do item de dados na fonte de dados subjacente, use o <xref:System.Web.UI.WebControls.ListViewDataItem.DataItemIndex%2A> propriedade. A diferença entre essas propriedades de índice é que <xref:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex%2A> representa a posição do item de dados na página atual, enquanto <xref:System.Web.UI.WebControls.ListViewDataItem.DataItemIndex%2A> baseia-se o deslocamento da página. Se a funcionalidade de paginação não está habilitada no <xref:System.Web.UI.WebControls.ListView> controle usando um <xref:System.Web.UI.WebControls.DataPager> controle, essas duas propriedades conterá o mesmo valor.  
+  
+ Você pode acessar as propriedades do objeto de dados subjacente usando a <xref:System.Web.UI.WebControls.ListViewDataItem.DataItem%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.ListViewDataItem.DataItem%2A> propriedade está disponível somente durante e após o <xref:System.Web.UI.WebControls.ListView.ItemDataBound> eventos de um <xref:System.Web.UI.WebControls.ListView> controle.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.ListViewDataItem> de classe, consulte o <xref:System.Web.UI.WebControls.ListViewDataItem.%23ctor%2A> construtor.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.Web.UI.WebControls.ListViewDataItem> objeto para recuperar um valor de campo de um item de <xref:System.Web.UI.WebControls.ListView> controle.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ListViewDataItem#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDataItem/CS/ListViewDataItemDataItemCS.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ListViewDataItem#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDataItem/VB/ListViewDataItemDataItemVB.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ListViewDataItem (int dataItemIndex, int displayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 dataItemIndex, int32 displayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewDataItem.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataItemIndex" Type="System.Int32" />
+        <Parameter Name="displayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dataItemIndex">O índice do <see cref="P:System.Web.UI.WebControls.ListViewDataItem.DataItem" /> no objeto de fonte de dados subjacente.</param>
+        <param name="displayIndex">A posição do item de dados, como exibido no <see cref="T:System.Web.UI.WebControls.ListView" /> controle.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.ListViewDataItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.ListViewDataItem> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.ListViewDataItem.DataItemIndex%2A>|O valor de `dataItemIndex` parâmetro.|  
+|<xref:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex%2A>|O valor de `displayIndex` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItem">
+      <MemberSignature Language="C#" Value="public override object DataItem { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataItem" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDataItem.DataItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de dados subjacente ao qual o objeto <see cref="T:System.Web.UI.WebControls.ListViewItem" /> está associado.</summary>
+        <value>O objeto de dados subjacente ao qual o objeto <see cref="T:System.Web.UI.WebControls.ListViewItem" /> está associado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListViewDataItem.DataItem%2A> propriedade está disponível somente durante e após o <xref:System.Web.UI.WebControls.ListView.ItemDataBound> eventos de um <xref:System.Web.UI.WebControls.ListView> controle.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDataItem.DataItem%2A> propriedade para recuperar um valor de campo. O valor é usado para pre-selecionar um item em uma <xref:System.Web.UI.WebControls.DropDownList> controle que é exibido quando um item está no modo de edição. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.ListViewDataItem> classe.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListViewDataItem#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDataItem/CS/ListViewDataItemDataItemCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListViewDataItem#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListViewDataItem/VB/ListViewDataItemDataItemVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataItemIndex">
+      <MemberSignature Language="C#" Value="public override int DataItemIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DataItemIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDataItem.DataItemIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice do <see cref="P:System.Web.UI.WebControls.ListViewDataItem.DataItem" /> no objeto de fonte de dados subjacente.</summary>
+        <value>O índice de base zero de <see cref="P:System.Web.UI.WebControls.ListViewDataItem.DataItem" /> no objeto de fonte de dados subjacente.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.ListViewDataItem.DataItemIndex%2A> propriedade para determinar o índice do <xref:System.Web.UI.WebControls.ListViewDataItem.DataItem%2A> no objeto de fonte de dados subjacente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayIndex">
+      <MemberSignature Language="C#" Value="public override int DisplayIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DisplayIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a posição do item de dados, conforme exibido no controle <see cref="T:System.Web.UI.WebControls.ListView" />.</summary>
+        <value>A posição baseada em zero do item de dados, conforme exibido no controle <see cref="T:System.Web.UI.WebControls.ListView" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex%2A> propriedade corresponde à posição atual do item conforme exibido pelo <xref:System.Web.UI.WebControls.ListView> controle. Cada item <xref:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex%2A> valor reflete a ordem na qual eles foram adicionados para o controle na página de dados específica. Você pode usar o <xref:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex%2A> propriedade para recuperar um <xref:System.Web.UI.WebControls.ListViewDataItem> objeto o <xref:System.Web.UI.WebControls.ListView.Items%2A> coleção.  
+  
+> [!NOTE]
+>  Essa propriedade só se aplica a itens de dados. Não é aplicável para inserir itens ou itens vazios.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.UI.WebControls.ListViewDataItem.DisplayIndex%2A> propriedade para recuperar o índice do item que está sendo editado. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Web.UI.WebControls.ListView.UpdateItem%2A?displayProperty=nameWithType> método.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ListView.UpdateItem#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.UpdateItem/CS/ListViewUpdateItemCS.aspx#2)]
+ [!code-vb[System.Web.UI.WebControls.ListView.UpdateItem#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ListView.UpdateItem/VB/ListViewUpdateItemVB.aspx#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBubbleEvent">
+      <MemberSignature Language="C#" Value="protected override bool OnBubbleEvent (object source, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnBubbleEvent(object source, class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ListViewDataItem.OnBubbleEvent(System.Object,System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="source">A fonte do evento.</param>
+        <param name="e">Os dados do evento.</param>
+        <summary>Determina se deve transmitir um evento a hierarquia de controle de servidor ASP.NET da página.</summary>
+        <returns>
+          <see langword="true" />Se o evento foi enviado para o controle pai. Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

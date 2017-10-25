@@ -1,0 +1,357 @@
+<Type Name="EventDescriptor" FullName="System.ComponentModel.EventDescriptor">
+  <TypeSignature Language="C#" Value="public abstract class EventDescriptor : System.ComponentModel.MemberDescriptor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EventDescriptor extends System.ComponentModel.MemberDescriptor" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.EventDescriptor" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.MemberDescriptor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre um evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.EventDescriptor> consiste em um nome, seus atributos, o evento associada ao componente, o delegado de evento, o tipo de delegado, e se o representante é multicast.  
+  
+ <xref:System.ComponentModel.EventDescriptor>fornece o seguinte `abstract` propriedades e métodos:  
+  
+-   <xref:System.ComponentModel.EventDescriptor.ComponentType%2A>contém o tipo do componente que esse evento é declarado.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.EventType%2A>contém o tipo de delegado do evento.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.IsMulticast%2A>contém um valor que indica se o delegado do evento é um delegado multicast.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.AddEventHandler%2A>associa o evento para um componente.  
+  
+-   <xref:System.ComponentModel.EventDescriptor.RemoveEventHandler%2A>desvincula o delegado do componente de forma que o delegado não receberá mais eventos do componente.  
+  
+ Para obter mais informações sobre eventos, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2). Para obter mais informações sobre reflexão, consulte os tópicos [reflexão](~/docs/framework/reflection-and-codedom/reflection.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir se baseia o exemplo de <xref:System.ComponentModel.EventDescriptorCollection> classe. Imprime as informações (categoria, descrição e nome de exibição) de cada evento em um botão em uma caixa de texto. Isso requer que `button1` e `textbox1` tenham sido criadas em um formulário.  
+  
+ [!code-cpp[EventDescriptor#1](~/samples/snippets/cpp/VS_Snippets_Winforms/EventDescriptor/CPP/eventdescriptor.cpp#1)]
+ [!code-csharp[EventDescriptor#1](~/samples/snippets/csharp/VS_Snippets_Winforms/EventDescriptor/CS/eventdescriptor.cs#1)]
+ [!code-vb[EventDescriptor#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/EventDescriptor/VB/eventdescriptor.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventDescriptor (System.ComponentModel.MemberDescriptor descr);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor descr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.#ctor(System.ComponentModel.MemberDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="descr" Type="System.ComponentModel.MemberDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="descr">Um <see cref="T:System.ComponentModel.MemberDescriptor" /> que contém o nome do evento e seus atributos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.EventDescriptor" /> classe com o nome e os atributos do <see cref="T:System.ComponentModel.MemberDescriptor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventDescriptor (System.ComponentModel.MemberDescriptor descr, Attribute[] attrs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.MemberDescriptor descr, class System.Attribute[] attrs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.#ctor(System.ComponentModel.MemberDescriptor,System.Attribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="descr" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="attrs" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="descr">Um <see cref="T:System.ComponentModel.MemberDescriptor" /> que tem o nome do membro e seus atributos.</param>
+        <param name="attrs">Um <see cref="T:System.Attribute" /> matriz com os atributos que você deseja adicionar a esta descrição do evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.EventDescriptor" /> classe com o nome especificado na <see cref="T:System.ComponentModel.MemberDescriptor" /> e os atributos em ambos os <see cref="T:System.ComponentModel.MemberDescriptor" /> e o <see cref="T:System.Attribute" /> matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor acrescenta os atributos no <xref:System.Attribute> matriz aos atributos a <xref:System.ComponentModel.MemberDescriptor>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EventDescriptor (string name, Attribute[] attrs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string name, class System.Attribute[] attrs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.#ctor(System.String,System.Attribute[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attrs" Type="System.Attribute[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do evento.</param>
+        <param name="attrs">Uma matriz do tipo <see cref="T:System.Attribute" /> que contém os atributos de evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.EventDescriptor" /> classe com a matriz de nome e atributo especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEventHandler">
+      <MemberSignature Language="C#" Value="public abstract void AddEventHandler (object component, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddEventHandler(object component, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.AddEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="component">Um componente que fornece eventos para o representante.</param>
+        <param name="value">Um delegado que representa o método que manipula o evento.</param>
+        <summary>Quando substituído em uma classe derivada, associa o evento para o componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é implementado por meio de reflexão. Para obter mais informações sobre reflexão, consulte os tópicos [reflexão](~/docs/framework/reflection-and-codedom/reflection.md).  
+  
+ Para obter mais informações sobre delegados, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você substituir esse método, deve adicionar o representante para a lista de eventos do componente invocando apropriada <c>add_myHandler</c> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ComponentType">
+      <MemberSignature Language="C#" Value="public abstract Type ComponentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ComponentType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptor.ComponentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo de componente, que esse evento é vinculado ao.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de componente, o evento é vinculado ao.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esta propriedade é implementada por meio de reflexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public abstract Type EventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EventType" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptor.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém o tipo de delegado do evento.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de delegado do evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esta propriedade é implementada por meio de reflexão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMulticast">
+      <MemberSignature Language="C#" Value="public abstract bool IsMulticast { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMulticast" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.EventDescriptor.IsMulticast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém um valor que indica se o delegado do evento é um delegado multicast.</summary>
+        <value>
+          <see langword="true" />Se o delegado do evento é multicast; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esta propriedade é implementada por meio de reflexão.  
+  
+ Um delegado multicast é diferente de um delegado regular, ele pode conter referências a mais de um método. Métodos em um delegado multicast são executados de forma síncrona quando o delegado é invocado, na ordem em que aparecem. Se um dos métodos chamados gera uma exceção, em seguida, deixa o delegado e a exceção é propagada para o chamador de delegado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveEventHandler">
+      <MemberSignature Language="C#" Value="public abstract void RemoveEventHandler (object component, Delegate value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveEventHandler(object component, class System.Delegate value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.EventDescriptor.RemoveEventHandler(System.Object,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="value" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que o delegado está associado ao.</param>
+        <param name="value">O representante de desvinculação do componente.</param>
+        <summary>Quando substituído em uma classe derivada, desassocia o delegado do componente de forma que o delegado não receberá mais eventos do componente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é implementado por meio de reflexão. Para obter mais informações, consulte os tópicos [reflexão](~/docs/framework/reflection-and-codedom/reflection.md).  
+  
+ Para obter mais informações sobre delegados, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você substituir esse método, ele deve remover o representante da lista de eventos do componente invocando apropriada <c>remove_myHandler</c> método.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

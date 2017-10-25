@@ -1,0 +1,36 @@
+<Type Name="AppDomainInitializer" FullName="System.AppDomainInitializer">
+  <TypeSignature Language="C#" Value="public delegate void AppDomainInitializer(string[] args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed AppDomainInitializer extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.AppDomainInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="args" Type="System.String[]" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="args">Uma matriz de cadeias de caracteres para passar como argumentos para o método de retorno de chamada.</param>
+    <summary>Representa o método de retorno de chamada a ser invocada quando o domínio de aplicativo é inicializado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use um <xref:System.AppDomainInitializer> delegado para especificar o método de retorno de chamada a ser invocado quando uma instância do <xref:System.AppDomain> classe é inicializada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

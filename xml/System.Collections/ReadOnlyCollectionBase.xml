@@ -1,0 +1,395 @@
+<Type Name="ReadOnlyCollectionBase" FullName="System.Collections.ReadOnlyCollectionBase">
+  <TypeSignature Language="C#" Value="public abstract class ReadOnlyCollectionBase : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit ReadOnlyCollectionBase extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.ReadOnlyCollectionBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a classe base <see langword="abstract" /> para uma coleção somente leitura fortemente tipada não genérica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Collections.ReadOnlyCollectionBase> instância sempre é somente leitura. Consulte <xref:System.Collections.CollectionBase> para obter uma versão modificável dessa classe.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.ReadOnlyCollectionBase> classe.  
+  
+ [!code-cpp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CPP/readonlycollectionbase.cpp#1)]
+ [!code-csharp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CS/readonlycollectionbase.cs#1)]
+ [!code-vb[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/VB/readonlycollectionbase.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Os membros estáticos públicos (<see langword="Shared" /> no Visual Basic) desse são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Esta implementação não oferece um sincronizado wrapper (thread-safe) para um <see cref="T:System.Collections.ReadOnlyCollectionBase" />, mas as classes derivadas podem criar suas próprias versões sincronizadas do <see cref="T:System.Collections.ReadOnlyCollectionBase" /> usando o <see cref="P:System.Collections.ICollection.SyncRoot" /> propriedade.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.</threadsafe>
+    <block subset="none" type="overrides">
+      <para>Essa classe base é fornecido para tornar mais fácil para os implementadores criar uma coleção personalizada somente leitura com rigidez de tipos. Os implementadores são incentivados a estender a classe base em vez de criar seus próprios. Membros dessa classe de base são protegidos e destinam-se a ser usado por meio de uma classe derivada somente.  
+  
+ Essa classe faz com que a coleção subjacente disponíveis por meio de <see cref="P:System.Collections.ReadOnlyCollectionBase.InnerList" /> propriedade, que é destinada ao uso somente pelas classes que são derivadas diretamente de <see cref="T:System.Collections.ReadOnlyCollectionBase" />. A classe derivada deve garantir que seus próprios usuários não é possível modificar a coleção subjacente.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ReadOnlyCollectionBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ReadOnlyCollectionBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.ReadOnlyCollectionBase" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public virtual int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ReadOnlyCollectionBase.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de elementos contidos na instância <see cref="T:System.Collections.ReadOnlyCollectionBase" />.</summary>
+        <value>O número de elementos contidos na instância <see cref="T:System.Collections.ReadOnlyCollectionBase" />.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.ReadOnlyCollectionBase> classe.  
+  
+ [!code-cpp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CPP/readonlycollectionbase.cpp#1)]
+ [!code-csharp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CS/readonlycollectionbase.cs#1)]
+ [!code-vb[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/VB/readonlycollectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ReadOnlyCollectionBase.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera pela instância <see cref="T:System.Collections.ReadOnlyCollectionBase" />.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> para a instância <see cref="T:System.Collections.ReadOnlyCollectionBase" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `foreach` instrução de linguagem c# (`for each` no Visual Basic) oculta a complexidade dos enumeradores.  Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.ReadOnlyCollectionBase> classe.  
+  
+ [!code-cpp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CPP/readonlycollectionbase.cpp#1)]
+ [!code-csharp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CS/readonlycollectionbase.cs#1)]
+ [!code-vb[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/VB/readonlycollectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerList">
+      <MemberSignature Language="C#" Value="protected System.Collections.ArrayList InnerList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList InnerList" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ReadOnlyCollectionBase.InnerList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de elementos contidos na instância <see cref="T:System.Collections.ReadOnlyCollectionBase" />.</summary>
+        <value>Uma <see cref="T:System.Collections.ArrayList" /> que representa a própria instância de <see cref="T:System.Collections.ReadOnlyCollectionBase" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo implementa o <xref:System.Collections.ReadOnlyCollectionBase> classe.  
+  
+ [!code-cpp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CPP/readonlycollectionbase.cpp#1)]
+ [!code-csharp[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CS/readonlycollectionbase.cs#1)]
+ [!code-vb[System.Collections.ReadOnlyCollectionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/VB/readonlycollectionbase.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Essa classe faz com que a coleção subjacente disponíveis por meio de <see cref="P:System.Collections.ReadOnlyCollectionBase.InnerList" /> propriedade, que é destinada ao uso somente pelas classes que são derivadas diretamente de <see cref="T:System.Collections.ReadOnlyCollectionBase" />. A classe derivada deve garantir que seus próprios usuários não é possível modificar a coleção subjacente.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.ReadOnlyCollectionBase.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ReadOnlyCollectionBase" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Collections.ReadOnlyCollectionBase" /> em um <see cref="T:System.Array" /> unidimensional compatível, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A matriz especificada deve ser de um tipo compatível.  
+  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.ReadOnlyCollectionBase.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ - ou -  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ReadOnlyCollectionBase" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+        <exception cref="T:System.InvalidCastException">O tipo do <see cref="T:System.Collections.ReadOnlyCollectionBase" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ReadOnlyCollectionBase.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso a um <see cref="T:System.Collections.ReadOnlyCollectionBase" /> objeto for sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" />Se acessar para o <see cref="T:System.Collections.ReadOnlyCollectionBase" /> objeto for sincronizado (thread-safe); caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Collections.ReadOnlyCollectionBase> objeto não está sincronizado. Classes derivadas podem fornecer uma versão sincronizada do <xref:System.Collections.ReadOnlyCollectionBase> classe usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade durante toda a enumeração.  
+  
+ [!code-cpp[System.Collections.ReadOnlyCollectionBase#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CPP/source2.cpp#2)]
+ [!code-csharp[System.Collections.ReadOnlyCollectionBase#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CS/source2.cs#2)]
+ [!code-vb[System.Collections.ReadOnlyCollectionBase#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.ReadOnlyCollectionBase.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections.NonGeneric</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso a um <see cref="T:System.Collections.ReadOnlyCollectionBase" /> objeto.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Collections.ReadOnlyCollectionBase" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes derivadas podem fornecer sua própria versão sincronizada de <xref:System.Collections.ReadOnlyCollectionBase> classe usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade. O código de sincronização necessário realizar operações no <xref:System.Collections.ICollection.SyncRoot%2A> propriedade o <xref:System.Collections.ReadOnlyCollectionBase> objeto, não diretamente no <xref:System.Collections.ReadOnlyCollectionBase> objeto. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Collections.ReadOnlyCollectionBase> objeto.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção está sincronizada, outros threads ainda podem modificar a coleção, o que faz o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como bloquear a coleção usando o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade durante toda a enumeração.  
+  
+ [!code-cpp[System.Collections.ReadOnlyCollectionBase#2](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CPP/source2.cpp#2)]
+ [!code-csharp[System.Collections.ReadOnlyCollectionBase#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/CS/source2.cs#2)]
+ [!code-vb[System.Collections.ReadOnlyCollectionBase#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.ReadOnlyCollectionBase/VB/source2.vb#2)]  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

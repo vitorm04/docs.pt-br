@@ -1,0 +1,97 @@
+<Type Name="TiffBitmapEncoder" FullName="System.Windows.Media.Imaging.TiffBitmapEncoder">
+  <TypeSignature Language="C#" Value="public sealed class TiffBitmapEncoder : System.Windows.Media.Imaging.BitmapEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TiffBitmapEncoder extends System.Windows.Media.Imaging.BitmapEncoder" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Imaging.TiffBitmapEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Imaging.BitmapEncoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um codificador que é usado para codificar imagens em formato Tagged Image arquivo Format (TIFF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)] miniaturas de nível de quadro, vários quadros e metadados de nível de quadro dá suporte ao formato de bitmap. Ele não oferece suporte à visualização global, miniaturas globais, global de metadados.  
+  
+ Codificação não funciona em confiança parcial. Consulte [segurança de confiança parcial do WPF](~/docs/framework/wpf/wpf-partial-trust-security.md) para obter informações sobre a relação de confiança parcial.  
+  
+<a name="xamlTextUsage_No"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TiffBitmapEncoder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Imaging.TiffBitmapEncoder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Imaging.TiffBitmapEncoder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra como inicializar um <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> para codificar uma nova imagem de bitmap.  
+  
+ [!code-cpp[tiffbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#3)]
+ [!code-csharp[tiffbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#3)]
+ [!code-vb[tiffbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Compression">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Imaging.TiffCompressOption Compression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Imaging.TiffCompressOption Compression" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Imaging.TiffBitmapEncoder.Compression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Imaging.TiffCompressOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o tipo de compactação usado por esta imagem [!INCLUDE[TLA#tla_tiff](~/includes/tlasharptla-tiff-md.md)].</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Media.Imaging.TiffCompressOption" />. O padrão é <see cref="F:System.Windows.Media.Imaging.TiffCompressOption.Default" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Media.Imaging.TiffCompressOption.Ccitt3>, <xref:System.Windows.Media.Imaging.TiffCompressOption.Ccitt4>, e <xref:System.Windows.Media.Imaging.TiffCompressOption.Rle> valores exigem que o <xref:System.Windows.Media.PixelFormat> valor ser definido como <xref:System.Windows.Media.PixelFormats.BlackWhite%2A?displayProperty=nameWithType>.  
+  
+<a name="XAMLTextUsage_Compression"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Media.Imaging.TiffBitmapEncoder.Compression%2A> propriedade.  
+  
+ [!code-cpp[tiffbitmapdecoderencoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#3)]
+ [!code-csharp[tiffbitmapdecoderencoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#3)]
+ [!code-vb[tiffbitmapdecoderencoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

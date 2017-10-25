@@ -1,0 +1,305 @@
+<Type Name="AuthenticationService" FullName="System.Web.ApplicationServices.AuthenticationService">
+  <TypeSignature Language="C#" Value="public class AuthenticationService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AuthenticationService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.ApplicationServices.AuthenticationService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ServiceModel.Activation.AspNetCompatibilityRequirements(RequirementsMode=System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceBehavior(ConcurrencyMode=System.ServiceModel.ConcurrencyMode.Multiple, InstanceContextMode=System.ServiceModel.InstanceContextMode.Single, Namespace="http://asp.net/ApplicationServices/v200")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ServiceModel.ServiceContract(Namespace="http://asp.net/ApplicationServices/v200")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite o acesso a autenticação de formulários do ASP.NET como um serviço Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService> objeto permite que você autenticar usuários por meio de um [!INCLUDE[vsindigo](~/includes/vsindigo-md.md)] serviço. Você usa o serviço de autenticação WCF quando você deve autenticar os usuários por meio da associação ASP.NET de um aplicativo que está fora do aplicativo Web que armazena as credenciais do usuário. O aplicativo deve ser capaz de enviar e receber a mensagem no formato SOAP. Por meio de <xref:System.Web.ApplicationServices.AuthenticationService> classe, você poderá acessar os usuários, usuários de log de saída, validam credenciais, verificar o status de autenticação, personalizar autenticação e definir o cookie de autenticação.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticationService> classe contém quatro métodos que você deve acessar por meio de um serviço WCF: o <xref:System.Web.ApplicationServices.AuthenticationService.IsLoggedIn%2A>, <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A>, <xref:System.Web.ApplicationServices.AuthenticationService.Logout%2A>, e <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> métodos. Para chamar esses métodos, você habilitar o serviço de autenticação em um servidor Web e, em seguida, conecte-se um aplicativo de cliente compatível com o WCF para o serviço Web. Para obter informações sobre como configurar o serviço de autenticação, consulte [como: ativar o serviço de autenticação WCF](http://msdn.microsoft.com/library/f7913259-762e-4a73-a771-ac9e42903f44).  
+  
+ Para conectar usuários, você passa as credenciais de usuário para o <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> método. Se as credenciais forem válidas, o <xref:System.Web.ApplicationServices.AuthenticationService> classe cria um cookie de autenticação. Se o cookie de autenticação não tiver expirado, você sabe que as credenciais do usuário foram autenticadas e você não precisa validar as credenciais novamente. (Sem cookies de autenticação não está disponível por meio de <xref:System.Web.ApplicationServices.AuthenticationService> classe.)  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticationService> pode gerar eventos de dois: <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> e <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie>. O <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento ocorre quando as credenciais do usuário estão sendo validadas. Criar um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento para personalizar como as credenciais do usuário são validadas. O <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> evento ocorre quando o cookie de autenticação está sendo definido depois que as credenciais do usuário foram validadas. Criar um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> evento para personalizar o cookie de autenticação.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> método verifica as credenciais do usuário para autenticação, mas não retorna um tíquete de autenticação. Use <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> quando um usuário tiver conectado anteriormente e você deve verificar se as credenciais ainda são válidas no início de uma nova sessão do aplicativo.  
+  
+ Para obter um exemplo de como usar o serviço de autenticação do WCF de um aplicativo de console, consulte [passo a passo: usando serviços de aplicativos ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AuthenticationService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.AuthenticationService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.ApplicationServices.AuthenticationService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authenticating">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Web.ApplicationServices.AuthenticatingEventArgs&gt; Authenticating;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.ApplicationServices.AuthenticatingEventArgs&gt; Authenticating" />
+      <MemberSignature Language="DocId" Value="E:System.Web.ApplicationServices.AuthenticationService.Authenticating" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.ApplicationServices.AuthenticatingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando as credenciais do usuário estão sendo validadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento é gerado quando as credenciais do usuário estão sendo validadas. Criar um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento para personalizar como as credenciais do usuário são validadas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como associar um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento o `Application_Start` método do arquivo global. asax.  
+  
+ [!code-csharp[System.Web.Security.LoginService_MultipleCredentials#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/cs/Global.asax#1)]
+ [!code-vb[System.Web.Security.LoginService_MultipleCredentials#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/vb/Global.asax#1)]  
+  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> eventos no arquivo global. asax. O manipulador de eventos lê dois valores de autenticação do <xref:System.Web.ApplicationServices.AuthenticatingEventArgs.CustomCredential%2A> propriedade e passa-os junto com o nome de usuário e senha para uma classe de autenticação personalizada denominados `StudentAuthentication`.  
+  
+ [!code-csharp[System.Web.Security.LoginService_MultipleCredentials#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService_MultipleCredentials#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService_MultipleCredentials/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatingCookie">
+      <MemberSignature Language="C#" Value="public static event EventHandler&lt;System.Web.ApplicationServices.CreatingCookieEventArgs&gt; CreatingCookie;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.Web.ApplicationServices.CreatingCookieEventArgs&gt; CreatingCookie" />
+      <MemberSignature Language="DocId" Value="E:System.Web.ApplicationServices.AuthenticationService.CreatingCookie" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.Web.ApplicationServices.CreatingCookieEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o cookie de autenticação está sendo definido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> evento é gerado quando o cookie de autenticação está sendo definido depois que as credenciais do usuário foram validadas. Criar um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> evento para personalizar o cookie de autenticação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como associar um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> evento o `Application_Start` método do arquivo global. asax.  
+  
+ [!code-csharp[System.Web.Security.LoginService.CreatingCookieEventArgs#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService.CreatingCookieEventArgs/cs/Global.asax#1)]
+ [!code-vb[System.Web.Security.LoginService.CreatingCookieEventArgs#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService.CreatingCookieEventArgs/vb/Global.asax#1)]  
+  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> eventos no arquivo global. asax. O manipulador de eventos personaliza o cookie de autenticação, adicionando o valor de <xref:System.Web.ApplicationServices.CreatingCookieEventArgs.CustomCredential%2A> propriedade para o <xref:System.Web.Security.FormsAuthenticationTicket.UserData%2A> propriedade. Repositório de <xref:System.Web.ApplicationServices.CreatingCookieEventArgs.CustomCredential%2A> propriedade em um cookie somente se você souber que os dados na propriedade não são confidencias. Usuários mal-intencionados podem acessar os valores no cookie.  
+  
+ [!code-csharp[System.Web.Security.LoginService.CreatingCookieEventArgs#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Security.LoginService.CreatingCookieEventArgs/cs/Global.asax#2)]
+ [!code-vb[System.Web.Security.LoginService.CreatingCookieEventArgs#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Security.LoginService.CreatingCookieEventArgs/vb/Global.asax#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLoggedIn">
+      <MemberSignature Language="C#" Value="public bool IsLoggedIn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsLoggedIn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.AuthenticationService.IsLoggedIn" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o usuário atual é autenticado.</summary>
+        <returns>
+          <see langword="true" /> se o usuário foi autenticado; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.IsLoggedIn%2A> método verifica se o usuário atual está autenticado, verificando o <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A>.property.  
+  
+> [!NOTE]
+>  Não chame o <xref:System.Web.ApplicationServices.AuthenticationService.IsLoggedIn%2A> método do código que está em execução no servidor Web. Chamar o <xref:System.Web.ApplicationServices.AuthenticationService.IsLoggedIn%2A> método apenas como parte de um serviço WCF.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Login">
+      <MemberSignature Language="C#" Value="public bool Login (string username, string password, string customCredential, bool isPersistent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Login(string username, string password, string customCredential, bool isPersistent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.AuthenticationService.Login(System.String,System.String,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="customCredential" Type="System.String" />
+        <Parameter Name="isPersistent" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário a ser validado.</param>
+        <param name="password">A senha do usuário especificado.</param>
+        <param name="customCredential">O valor ou valores para validar além <c>userName</c> e <c>senha</c>, se houver.</param>
+        <param name="isPersistent">Um valor que indica se o tíquete de autenticação permanece válido entre diferentes sessões.</param>
+        <summary>Verifica as credenciais de usuário e cria um tíquete de autenticação (cookie) se as credenciais são válidas.</summary>
+        <returns>
+          <see langword="true" />Se as credenciais do usuário são válidas. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> método valida as credenciais de usuário por meio de um provedor de associação. Você pode usar o provedor de associação padrão ou especificar um provedor de associação personalizado em tempo de execução. O <xref:System.Web.ApplicationServices.AuthenticationService> classe passa `userName` e `password` para o provedor de associação <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> método, mas não foi aprovado `customCredential`. Se <xref:System.Web.Security.MembershipProvider.ValidateUser%2A> retorna `true`, <xref:System.Web.ApplicationServices.AuthenticationService> cria um tíquete de autenticação como um cookie. Definir o `isPersistent` parâmetro `true` para criar um tíquete de autenticação que dura além da sessão atual.  
+  
+> [!NOTE]
+>  Sempre usar o serviço de autenticação junto com a secure sockets layer (SSL, usando HTTPS) para proteger dados confidenciais.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> método gera o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento e o <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> evento. Criar um manipulador de eventos <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> para personalizar a autenticação, como verificar os valores `customCredential` ou validação de credenciais por meio de um provedor de associação não-padrão. Os valores em `customCredential` não são validadas pelo provedor de associação padrão. Para personalizar o cookie de autenticação, crie um manipulador de eventos <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie>.  
+  
+> [!NOTE]
+>  Não chame o <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> método do código que está em execução no servidor Web. Chamar o <xref:System.Web.ApplicationServices.AuthenticationService.Login%2A> método apenas como parte de um serviço WCF. Para obter mais informações, consulte [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="userName" /> ou <paramref name="password" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Logout">
+      <MemberSignature Language="C#" Value="public void Logout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Logout() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.AuthenticationService.Logout" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o tíquete de autenticação (cookie) no navegador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.Logout%2A> método limpa o cookie de autenticação de coleção de cookie do navegador. O usuário deve fazer logon novamente para ser autenticada.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticationService> classe não armazena informações do servidor sobre autenticação tíquetes foram limpos.  
+  
+> [!NOTE]
+>  Não chame o <xref:System.Web.ApplicationServices.AuthenticationService.Logout%2A> método do código que está em execução no servidor Web. Chamar o <xref:System.Web.ApplicationServices.AuthenticationService.Logout%2A> método apenas como parte de um serviço WCF. Para obter mais informações, consulte [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateUser">
+      <MemberSignature Language="C#" Value="public bool ValidateUser (string username, string password, string customCredential);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ValidateUser(string username, string password, string customCredential) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.ApplicationServices.AuthenticationService.ValidateUser(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ServiceModel.OperationContract</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="username" Type="System.String" />
+        <Parameter Name="password" Type="System.String" />
+        <Parameter Name="customCredential" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="username">O nome de usuário a ser validado.</param>
+        <param name="password">A senha do usuário especificado.</param>
+        <param name="customCredential">O valor ou valores para validar além <c>userName</c> e <c>senha</c>, se houver.</param>
+        <summary>Autentica as credenciais do usuário sem emitir um tíquete de autenticação.</summary>
+        <returns>
+          <see langword="true" /> se as credenciais do usuário forem válidas; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> método autentica as credenciais do usuário, mas não define um cookie de autenticação. Sem um cookie de autenticação, o usuário serão não registrado mesmo se as credenciais são válidas.  
+  
+ Use o <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> método quando você deve verificar se as credenciais do usuário são válidas sem receber um cookie de autenticação. Por exemplo, você pode fazer isso se o cookie de autenticação já está armazenado em um aplicativo cliente, mas você deseja verificar se as credenciais do usuário ainda são válidas quando uma nova sessão é iniciada.  
+  
+ O <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> método gera o <xref:System.Web.ApplicationServices.AuthenticationService.Authenticating> evento, mas não gera o <xref:System.Web.ApplicationServices.AuthenticationService.CreatingCookie> evento.  
+  
+> [!NOTE]
+>  Não chame o <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> método do código que está em execução no servidor Web. Chamar o <xref:System.Web.ApplicationServices.AuthenticationService.ValidateUser%2A> método apenas como parte de um serviço WCF. Para obter mais informações, consulte [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="userName" /> ou <paramref name="password" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

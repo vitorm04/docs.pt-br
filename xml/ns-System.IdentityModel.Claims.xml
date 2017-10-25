@@ -1,0 +1,8 @@
+<Namespace Name="System.IdentityModel.Claims">
+  <Docs>
+    <summary>O <see cref="N:System.IdentityModel.Claims" /> namespace contém classes que implementam o modelo de autorização de identidade baseada em declarações do Windows Communication Foundation (WCF). Esse modelo inclui o <see cref="T:System.IdentityModel.Claims.Claim" /> classe e o <see cref="T:System.IdentityModel.Claims.ClaimSet" /> classe.  
+  
+ Começando com o .NET Framework 4.5 e a integração do Windows Identity Foundation (WIF) no .NET Framework, o modelo de identidade baseada em declarações do WCF foi substituído pelo WIF. O WIF fornece um modelo de objeto de identidade baseada em declarações que pode ser usado para fornecer autenticação e autorização em várias pilhas de produto da Microsoft, incluindo o CLR, o WCF e ASP.NET. As classes WIF que representam declarações, tipos de declaração, e identidades e objetos que são baseados em declarações estão contidos no <see cref="N:System.Security.Claims" /> namespace. Começando com o .NET 4.5, essas classes devem ser usadas em vez no <see cref="N:System.IdentityModel.Claims" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

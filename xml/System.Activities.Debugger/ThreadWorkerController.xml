@@ -1,0 +1,74 @@
+<Type Name="ThreadWorkerController" FullName="System.Activities.Debugger.ThreadWorkerController">
+  <TypeSignature Language="C#" Value="public class ThreadWorkerController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThreadWorkerController extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Debugger.ThreadWorkerController" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Dá suporte à criação e execução de um thread de depuração auxiliar ou ilha, em um thread de trabalho dedicada. Esse tipo é uma classe de utilitário usada pelo framework e não se destina para uso público.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse thread de trabalho é necessário para habilitar a simulação de multithread como execução de atividades paralelas.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThreadWorkerController ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Debugger.ThreadWorkerController.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Activities.Debugger.ThreadWorkerController" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IslandWorker">
+      <MemberSignature Language="C#" Value="public static void IslandWorker (System.Activities.Debugger.ThreadWorkerController controller);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void IslandWorker(class System.Activities.Debugger.ThreadWorkerController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Debugger.ThreadWorkerController.IslandWorker(System.Activities.Debugger.ThreadWorkerController)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controller" Type="System.Activities.Debugger.ThreadWorkerController" />
+      </Parameters>
+      <Docs>
+        <param name="controller">O thread auxiliar do depurador para executar.</param>
+        <summary>Direciona a execução para um segmento específico depurador auxiliar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é uma função estática.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

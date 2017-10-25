@@ -1,0 +1,440 @@
+<Type Name="SqlTrackingWorkflowInstance" FullName="System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance">
+  <TypeSignature Language="C#" Value="public class SqlTrackingWorkflowInstance" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlTrackingWorkflowInstance extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece acesso aos dados mantidos em um banco de dados SQL do controle de <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingService" /> para uma instância de fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance>objetos são retornados por uma chamada para ambos <xref:System.Workflow.Runtime.Tracking.SqlTrackingQuery.TryGetWorkflow%2A?displayProperty=nameWithType> e <xref:System.Workflow.Runtime.Tracking.SqlTrackingQuery.GetWorkflows%2A?displayProperty=nameWithType> e fornecer acesso aos dados de rastreamento mantidos em um banco de dados SQL do <xref:System.Workflow.Runtime.Tracking.SqlTrackingService> para uma instância de fluxo de trabalho específico. O <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> classe otimiza o acesso ao banco de dados para suas propriedades, que mantêm a coleções. [!INCLUDE[crdefault](~/includes/crdefault-md.md)] <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter informações sobre todos os <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> exibidos de objetos contidos em uma lista de fluxos de trabalho. O código cria um `ListViewItem` para cada <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> encontrado em um `displayedWorkflows` variável. Cada <xref:System.Windows.Forms.ListViewItem> contém uma representação de cadeia de caracteres da <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A>, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType%2A> e <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> propriedades. Em seguida, adiciona o item para um `workflowStatusList`. O código usa os valores de propriedade nomeada anteriormente e uma versão de cadeia de caracteres do <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized%2A> propriedade para criar um novo `WorkflowStatusInfo` objeto também é adicionado para o `workflowStatusList`.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo Mainform.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][O Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[WF_Samples#137](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#137)]
+ [!code-vb[WF_Samples#137](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#137)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivityEvents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.ActivityTrackingRecord&gt; ActivityEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Workflow.Runtime.Tracking.ActivityTrackingRecord&gt; ActivityEvents" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.ActivityTrackingRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de atividade de registros de rastreamento que foram enviados para esta instância de fluxo de trabalho para um <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingService" /> banco de dados a infra-estrutura de controle de tempo de execução.</summary>
+        <value>A lista de <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingRecord" /> objetos enviados para essa instância de fluxo de trabalho para o banco de dados de rastreamento pela infraestrutura de controle de tempo de execução.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `true`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents%2A> contém todas as atividades de controle registros enviados para essa instância de fluxo de trabalho até o momento atual; se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `false`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents%2A> contém a atividade de controle registros enviados até o último <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A>.  
+  
+ <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents%2A>contém registros enviados para um banco de dados pela infraestrutura de controle de tempo de execução para esta instância de fluxo de trabalho de monitoramento de atividade. Registros de atividade de controle são enviados pelo mecanismo de tempo de execução de fluxo de trabalho infra-estrutura de rastreamento somente quando a instância de fluxo de trabalho emite um evento de status de atividade que corresponde a um <xref:System.Workflow.Runtime.Tracking.ActivityTrackPoint> especificado no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para a instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoRefresh">
+      <MemberSignature Language="C#" Value="public bool AutoRefresh { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoRefresh" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se os dados de propriedade para este <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance" /> devem ser atualizados automaticamente quando ele é acessado.</summary>
+        <value>
+          <see langword="true" />Se os dados de propriedade devem ser atualizados automaticamente quando ele é acessado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para otimizar o desempenho do banco de dados, propriedades que mantêm a coleções de dados consultados, como <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents%2A>, consulta o banco de dados novos elementos apenas quando a propriedade for acessada e a coleção para essa propriedade só é atualizada em uma base como necessário quando a propriedade for acessada. O <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> classe mantém dois carimbos de hora para cada propriedade: um que indica a hora em que os dados para a coleção de controle foi carregado, e outra que indica a última vez que o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> foi atualizado. Quando você recebe uma das propriedades de coleção, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> carrega quaisquer dados de rastreamento que foi adicionados ao banco de dados entre a última vez em que os dados de controle para a coleção foi carregada e a última vez que o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> foi atualizado e adiciona esses dados para a coleção mantida pela propriedade. O carimbo de hora que indica que os última vez que dados foi carregados para a propriedade, em seguida, é definido como o valor de carimbo de hora que indica a última atualização. Se esses dois carimbos de hora são iguais, mais dados de rastreamento não será carregado para a propriedade quando ele é acessado. Definir <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> para `true` para executar uma atualização sempre que uma propriedade de coleção é acessada e certifique-se de que os dados de rastreamento retornados da coleção mantida por propriedade está sempre atualizada. Se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `false`, você deve chamar <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A> para redefinir o carimbo de hora que corresponde à última atualização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="public DateTime Initialized { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime Initialized" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.DateTime" /> que indica a hora em que a primeira <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" /> para este fluxo de trabalho instância foi solicitada pelo mecanismo de tempo de execução de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que indica a hora em que a primeira <see cref="T:System.Workflow.Runtime.Tracking.TrackingChannel" /> para este fluxo de trabalho instância foi solicitada pelo mecanismo de tempo de execução de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter informações sobre todos os <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> exibidos de objetos contidos em uma lista de fluxos de trabalho. O código cria um `ListViewItem` para cada <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> encontrado em um `displayedWorkflows` variável. Cada <xref:System.Windows.Forms.ListViewItem> contém uma representação de cadeia de caracteres da <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A>, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType%2A> e <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> propriedades. Em seguida, adiciona o item para um `workflowStatusList`. O código usa os valores de propriedade nomeada anteriormente e uma versão de cadeia de caracteres do <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized%2A> propriedade para criar um novo `WorkflowStatusInfo` objeto também é adicionado para o `workflowStatusList`.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo Mainform.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][O Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[Wf_samples#288](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#288)]
+ [!code-vb[Wf_samples#288](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#288)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokedWorkflows">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance&gt; InvokedWorkflows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance&gt; InvokedWorkflows" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokedWorkflows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma lista de <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance" /> objetos que correspondem aos fluxos de trabalho que foi invocados por este fluxo de trabalho.</summary>
+        <value>Uma lista de <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance" /> objetos que correspondem aos fluxos de trabalho que foi invocados por este fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `true`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokedWorkflows%2A> contém um <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> para instâncias de cada fluxo de trabalho que foi chamado por esta instância de fluxo de trabalho até o momento atual; se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `false`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokedWorkflows%2A> contém um <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> para instâncias de cada fluxo de trabalho que foi chamado por esta instância de fluxo de trabalho até o último <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A>.  
+  
+ O conteúdo dessa propriedade é determinado pelos dados de rastreamento para essa instância de fluxo de trabalho no banco de dados SQL gerenciado pelo <xref:System.Workflow.Runtime.Tracking.SqlTrackingService>. Dados de controle correspondem ao acompanhamento de registros que são enviados pela infraestrutura de controle de tempo de execução para rastreamento de eventos que são especificados pelos pontos de controle no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> associado a esta instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokingWorkflowInstanceId">
+      <MemberSignature Language="C#" Value="public Guid InvokingWorkflowInstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid InvokingWorkflowInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokingWorkflowInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Guid" /> da instância do fluxo de trabalho que invocou a essa instância de fluxo de trabalho.</summary>
+        <value>O <see cref="T:System.Guid" /> da instância do fluxo de trabalho que invocou essa instância de fluxo de trabalho ou vazio <see cref="T:System.Guid" /> se esta instância de fluxo de trabalho não foi invocada por outra instância de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo dessa propriedade é determinado pelos dados de rastreamento para essa instância de fluxo de trabalho no banco de dados SQL gerenciado pelo <xref:System.Workflow.Runtime.Tracking.SqlTrackingService>. Dados de controle correspondem ao acompanhamento de registros que são enviados pela infraestrutura de controle de tempo de execução para rastreamento de eventos que são especificados pelos pontos de controle no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> associado a esta instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza os dados de propriedade para este <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A>não carregar, na verdade, todos os dados para o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance>. Para otimizar o desempenho do banco de dados, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> carrega dados para suas propriedades de coleção em uma base como necessário. O <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> classe mantém dois carimbos de hora para cada propriedade: um que indica a hora em que os dados para a coleção de controle foi carregado, e outra que indica a última vez que o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> foi atualizado. Quando você recebe uma das propriedades de coleção, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> carrega quaisquer dados de rastreamento que foi adicionados ao banco de dados entre a última vez em que os dados de controle para a coleção foi carregada e a última vez que o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> foi atualizado e adiciona esses dados para a coleção mantida pela propriedade. O carimbo de hora que indica que os última vez que dados foi carregados para a propriedade, em seguida, é definido como o valor de carimbo de hora que indica a última atualização. Se esses dois carimbos de hora são iguais, mais dados de rastreamento não será carregado para a propriedade quando ele é acessado. <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A>Define o carimbo de hora que corresponde ao último atualização <xref:System.DateTime.UtcNow%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.WorkflowStatus Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Runtime.WorkflowStatus Status" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.WorkflowStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status da instância do fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.WorkflowStatus" /> que representa o status atual da instância do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A>é determinado com base nos dados de rastreamento para a instância de fluxo de trabalho, especificamente no fluxo de trabalho enviados pela infraestrutura de controle de tempo de execução; os registros de controle Portanto, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> depende, em parte, o <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> objetos no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para a instância de fluxo de trabalho. <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord.TrackingWorkflowEvent%2A?displayProperty=nameWithType>em cada <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> mapeado para um o <xref:System.Workflow.Runtime.WorkflowStatus> valores. Se nenhum registro de controle de fluxo de trabalho foram enviado pela infraestrutura de controle de tempo de execução para esta instância de fluxo de trabalho, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> é <xref:System.Workflow.Runtime.WorkflowStatus.Created>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter informações sobre todos os <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> exibidos de objetos contidos em uma lista de fluxos de trabalho. O código cria um `ListViewItem` para cada <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> encontrado em um `displayedWorkflows` variável. Cada <xref:System.Windows.Forms.ListViewItem> contém uma representação de cadeia de caracteres da <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A>, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType%2A> e <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> propriedades. Em seguida, adiciona o item para um `workflowStatusList`. O código usa os valores de propriedade nomeada anteriormente e uma versão de cadeia de caracteres do <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized%2A> propriedade para criar um novo `WorkflowStatusInfo` objeto também é adicionado para o `workflowStatusList`.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo Mainform.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][O Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[Wf_samples#288](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#288)]
+ [!code-vb[Wf_samples#288](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#288)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserEvents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.UserTrackingRecord&gt; UserEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Workflow.Runtime.Tracking.UserTrackingRecord&gt; UserEvents" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.UserEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.UserTrackingRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de registros que foram enviados para essa instância de fluxo de trabalho de controle de usuário um <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingService" /> banco de dados a infra-estrutura de controle de tempo de execução.</summary>
+        <value>A lista de <see cref="T:System.Workflow.Runtime.Tracking.UserTrackingRecord" /> objetos enviados para essa instância de fluxo de trabalho para o banco de dados de rastreamento pela infraestrutura de controle de tempo de execução.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `true`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.UserEvents%2A> contém todos os usuários de controle registros enviados para essa instância de fluxo de trabalho até o momento atual; se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `false`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.UserEvents%2A> contém o usuário controle registros enviados até o último <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A>.  
+  
+ <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.UserEvents%2A>contém registros enviados para um banco de dados pela infraestrutura de controle de tempo de execução para esta instância de fluxo de trabalho de controle de usuário. Registros de controle de usuário são enviados pelo mecanismo de tempo de execução de fluxo de trabalho infra-estrutura de rastreamento somente quando a instância de fluxo de trabalho emite um evento de usuário que corresponde a um <xref:System.Workflow.Runtime.Tracking.UserTrackPoint> especificado no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para a instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinition">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity WorkflowDefinition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Activity WorkflowDefinition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowDefinition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Workflow.ComponentModel.Activity" /> que representa a definição de fluxo de trabalho atual para a instância de fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.Workflow.ComponentModel.Activity" /> que representa a definição de fluxo de trabalho atual para a instância de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo dessa propriedade é determinado pelos dados de rastreamento para essa instância de fluxo de trabalho no banco de dados SQL gerenciado pelo <xref:System.Workflow.Runtime.Tracking.SqlTrackingService>. Dados de controle correspondem ao acompanhamento de registros que são enviados pela infraestrutura de controle de tempo de execução para rastreamento de eventos que são especificados pelos pontos de controle no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> associado a esta instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinitionUpdated">
+      <MemberSignature Language="C#" Value="public bool WorkflowDefinitionUpdated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WorkflowDefinitionUpdated" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowDefinitionUpdated" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o fluxo de trabalho foi atualizado desde a última vez <see cref="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowDefinition" /> foi carregado.</summary>
+        <value>
+          <see langword="true" />Se o fluxo de trabalho tiver sido atualizado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O conteúdo dessa propriedade é determinado pelos dados de rastreamento para essa instância de fluxo de trabalho no banco de dados SQL gerenciado pelo <xref:System.Workflow.Runtime.Tracking.SqlTrackingService>. Dados de controle correspondem ao acompanhamento de registros que são enviados pela infraestrutura de controle de tempo de execução para rastreamento de eventos que são especificados pelos pontos de controle no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> associado a esta instância de fluxo de trabalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowEvents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.WorkflowTrackingRecord&gt; WorkflowEvents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Workflow.Runtime.Tracking.WorkflowTrackingRecord&gt; WorkflowEvents" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowEvents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Runtime.Tracking.WorkflowTrackingRecord&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de fluxo de trabalho de registros de rastreamento que foram enviados para esta instância de fluxo de trabalho para um <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingService" /> banco de dados a infra-estrutura de controle de tempo de execução.</summary>
+        <value>A lista de <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" /> objetos enviados para essa instância de fluxo de trabalho para o banco de dados de rastreamento pela infraestrutura de controle de tempo de execução.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `true`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowEvents%2A> contém todos os de fluxo de trabalho de controle registros enviados para essa instância de fluxo de trabalho até o momento atual; se <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.AutoRefresh%2A> é `false`, <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowEvents%2A> contém o fluxo de trabalho controle registros enviados até o último <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Refresh%2A>.  
+  
+ <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowEvents%2A>contém registros enviados para um banco de dados pela infraestrutura de controle de tempo de execução para esta instância de fluxo de trabalho de controle de fluxo de trabalho. Registros de controle de fluxo de trabalho são enviados pelo mecanismo de tempo de execução de fluxo de trabalho infra-estrutura de rastreamento somente quando a instância de fluxo de trabalho emite um evento de status do fluxo de trabalho que corresponde a um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> especificado no <xref:System.Workflow.Runtime.Tracking.TrackingProfile> para a instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowInstanceId">
+      <MemberSignature Language="C#" Value="public Guid WorkflowInstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid WorkflowInstanceId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="T:System.Guid" /> da instância do fluxo de trabalho para o qual o <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance" /> se aplica.</summary>
+        <value>O <see cref="T:System.Guid" /> da instância do fluxo de trabalho para o qual o <see cref="T:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance" /> se aplica.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter informações sobre todos os <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> exibidos de objetos contidos em uma lista de fluxos de trabalho. O código cria um `ListViewItem` para cada <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> encontrado em um `displayedWorkflows` variável. Cada <xref:System.Windows.Forms.ListViewItem> contém uma representação de cadeia de caracteres da <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A>, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType%2A> e <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> propriedades. Em seguida, adiciona o item para um `workflowStatusList`. O código usa os valores de propriedade nomeada anteriormente e uma versão de cadeia de caracteres do <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized%2A> propriedade para criar um novo `WorkflowStatusInfo` objeto também é adicionado para o `workflowStatusList`.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo Mainform.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][O Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[Wf_samples#288](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#288)]
+ [!code-vb[Wf_samples#288](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#288)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowInstanceInternalId">
+      <MemberSignature Language="C#" Value="public long WorkflowInstanceInternalId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 WorkflowInstanceInternalId" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um número que pode ser usado para localizar registros relacionados nas exibições separadas para essa instância de fluxo de trabalho.</summary>
+        <value>Um número que pode ser usado para localizar registros relacionados nas exibições separadas para essa instância de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta é uma operação de junção interna. <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A>Fornece uma maneira mais eficiente para acessar dados para uma instância de fluxo de trabalho em um banco de dados SQL usando uma instância de fluxo de trabalho <xref:System.Guid>. Use <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A> para localizar registros relacionados para essa instância de fluxo de trabalho nos modos de exibição separadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter informações sobre todos os <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> exibidos de objetos contidos em uma lista de fluxos de trabalho. O código cria um `ListViewItem` para cada <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> encontrado em um `displayedWorkflows` variável. Cada <xref:System.Windows.Forms.ListViewItem> contém uma representação de cadeia de caracteres da <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A>, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType%2A> e <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> propriedades. Em seguida, adiciona o item para um `workflowStatusList`. O código usa os valores de propriedade nomeada anteriormente e uma versão de cadeia de caracteres do <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized%2A> propriedade para criar um novo `WorkflowStatusInfo` objeto também é adicionado para o `workflowStatusList`.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo Mainform.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][O Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[Wf_samples#288](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#288)]
+ [!code-vb[Wf_samples#288](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#288)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowType">
+      <MemberSignature Language="C#" Value="public Type WorkflowType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type WorkflowType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define o <see cref="T:System.Type" /> da instância do fluxo de trabalho.</summary>
+        <value>O <see cref="T:System.Type" /> da instância do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter informações sobre todos os <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> exibidos de objetos contidos em uma lista de fluxos de trabalho. O código cria um `ListViewItem` para cada <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance> encontrado em um `displayedWorkflows` variável. Cada <xref:System.Windows.Forms.ListViewItem> contém uma representação de cadeia de caracteres da <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowInstanceInternalId%2A>, o <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowType%2A> e <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Status%2A> propriedades. Em seguida, adiciona o item para um `workflowStatusList`. O código usa os valores de propriedade nomeada anteriormente e uma versão de cadeia de caracteres do <xref:System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.Initialized%2A> propriedade para criar um novo `WorkflowStatusInfo` objeto também é adicionado para o `workflowStatusList`.  
+  
+ Este exemplo de código é parte da amostra do SDK do Monitor de fluxo de trabalho do arquivo Mainform.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][O Monitor de fluxo de trabalho](http://msdn.microsoft.com/en-us/4f70c1c5-f82d-4d5f-8b7d-943b9f99f8e2).  
+  
+ [!code-csharp[Wf_samples#288](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#288)]
+ [!code-vb[Wf_samples#288](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#288)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

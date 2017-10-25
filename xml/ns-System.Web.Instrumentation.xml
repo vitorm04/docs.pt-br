@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Instrumentation">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Instrumentation" /> namespace contém tipos que fornecem informações sobre a execução da página atual, que incluem a instrumentação e ouvintes de execução e que incluem métodos que são chamados de antes e depois que o mecanismo de exibição renderiza a saída.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

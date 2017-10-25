@@ -1,0 +1,87 @@
+<Type Name="ReadingWritingEntityEventArgs" FullName="System.Data.Services.Client.ReadingWritingEntityEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ReadingWritingEntityEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReadingWritingEntityEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.ReadingWritingEntityEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso à entidade e um <see langword="XLinq" /> objeto que representa uma entrada Atom. <see cref="T:System.Data.Services.Client.ReadingWritingEntityEventArgs" />é usado com o <see cref="E:System.Data.Services.Client.DataServiceContext.ReadingEntity" /> e <see cref="E:System.Data.Services.Client.DataServiceContext.WritingEntity" /> eventos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Services.Client.ReadingWritingEntityEventArgs>são usados com o <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> e <xref:System.Data.Services.Client.DataServiceContext.WritingEntity> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public System.Xml.Linq.XElement Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.Linq.XElement Data" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.ReadingWritingEntityEventArgs.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.Linq.XElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um XML Atom feed ou entrada de dados representados como <see cref="T:System.Xml.Linq.XElement" />.</summary>
+        <value>
+          <see cref="T:System.Xml.Linq.XElement" />
+        </value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dados de entrada ou feed Atom é lido de uma solicitação POST prestes a ser enviado ao serviço de dados ou de uma solicitação GET.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Entity">
+      <MemberSignature Language="C#" Value="public object Entity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Entity" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.ReadingWritingEntityEventArgs.Entity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a representação de objeto de dados retornados do <see cref="P:System.Data.Services.Client.ReadingWritingEntityEventArgs.Data" /> propriedade.</summary>
+        <value>
+          <see cref="T:System.Object" />representação do <see cref="P:System.Data.Services.Client.ReadingWritingEntityEventArgs.Data" /> propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse objeto é preenchido para entidades de entrada e saídas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

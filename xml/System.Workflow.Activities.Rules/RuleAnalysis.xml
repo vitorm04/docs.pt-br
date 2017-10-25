@@ -1,0 +1,117 @@
+<Type Name="RuleAnalysis" FullName="System.Workflow.Activities.Rules.RuleAnalysis">
+  <TypeSignature Language="C#" Value="public class RuleAnalysis" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RuleAnalysis extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleAnalysis" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena os campos e propriedades de leitura por uma condição ou gravado por uma ação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As informações armazenadas por <xref:System.Workflow.Activities.Rules.RuleAnalysis> é importante porque ele identifica as dependências e efeitos colaterais de regras no conjunto de regras. Essas dependências e efeitos colaterais orientam o comportamento de encadeamento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleAnalysis (System.Workflow.Activities.Rules.RuleValidation validation, bool forWrites);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Workflow.Activities.Rules.RuleValidation validation, bool forWrites) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAnalysis.#ctor(System.Workflow.Activities.Rules.RuleValidation,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validation" Type="System.Workflow.Activities.Rules.RuleValidation" />
+        <Parameter Name="forWrites" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="validation">O <see cref="T:System.Workflow.Activities.Rules.RuleValidation" /> para gerenciar o processo de validação.</param>
+        <param name="forWrites">Um <see langword="Boolean" /> valor que indica se a análise está sendo feita para gravações (no caso de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> objetos) ou lê (no caso de <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> objetos).</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSymbol">
+      <MemberSignature Language="C#" Value="public void AddSymbol (string symbol);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSymbol(string symbol) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAnalysis.AddSymbol(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="symbol" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="symbol">Uma cadeia de caracteres que representa o caminho para um campo ou propriedade.</param>
+        <summary>Adiciona os campos e propriedades usadas por uma expressão como símbolos para o <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> instância.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Workflow.Activities.Rules.RuleAnalysis.AddSymbol%2A> método para adicionar campos e propriedades usadas por uma expressão para a lista de símbolos para o <xref:System.Workflow.Activities.Rules.RuleAnalysis> instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForWrites">
+      <MemberSignature Language="C#" Value="public bool ForWrites { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ForWrites" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.RuleAnalysis.ForWrites" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a análise está sendo feita para gravações ou leituras.</summary>
+        <value>
+          <see langword="true" />Se a análise está sendo feita para gravações (no caso de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> objetos); caso contrário, <see langword="false" /> se a análise está sendo feita para leituras (no caso de <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> objetos).</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSymbols">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;string&gt; GetSymbols ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.ICollection`1&lt;string&gt; GetSymbols() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleAnalysis.GetSymbols" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a lista de símbolos da <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> instância.</summary>
+        <returns>A lista de símbolos para o <see cref="T:System.Workflow.Activities.Rules.RuleAnalysis" /> instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

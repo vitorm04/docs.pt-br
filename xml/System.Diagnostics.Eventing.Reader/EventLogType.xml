@@ -1,0 +1,82 @@
+<Type Name="EventLogType" FullName="System.Diagnostics.Eventing.Reader.EventLogType">
+  <TypeSignature Language="C#" Value="public enum EventLogType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EventLogType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define o tipo de eventos que são registrados em um log de eventos. Cada log só pode conter um tipo de evento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Administrative">
+      <MemberSignature Language="C#" Value="Administrative" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogType Administrative = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogType.Administrative" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esses eventos são principalmente para usuários finais, administradores e suporte. Os eventos que são encontrados nos logs de tipo administrativas indicam um problema e uma solução bem definida que um administrador pode agir. Um exemplo de um evento administrativo é um evento que ocorre quando um aplicativo falhar ao se conectar a uma impressora.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Analytical">
+      <MemberSignature Language="C#" Value="Analytical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogType Analytical = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogType.Analytical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eventos em um log de eventos analítico são publicados em grande volume. Eles descrevem operação de programa e indicam problemas que não podem ser manipulados por intervenção do usuário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="Debug" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogType Debug = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogType.Debug" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eventos em um log de eventos do tipo de depuração são usados somente por desenvolvedores para diagnosticar um problema de depuração.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Operational">
+      <MemberSignature Language="C#" Value="Operational" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.Eventing.Reader.EventLogType Operational = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.Eventing.Reader.EventLogType.Operational" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventLogType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Eventos em um log de eventos do tipo operacionais são usados para analisar e diagnosticar um problema ou uma ocorrência. Eles podem ser usados para disparar ferramentas ou tarefas com base no problema ou na ocorrência. Um exemplo de evento operacional é um evento que ocorre quando uma impressora é adicionada ou removida de um sistema.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

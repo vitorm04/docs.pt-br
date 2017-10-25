@@ -1,0 +1,329 @@
+<Type Name="SayAs" FullName="System.Speech.Synthesis.SayAs">
+  <TypeSignature Language="C#" Value="public enum SayAs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SayAs extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.SayAs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os tipos de conteúdo para a fala de elementos como horas, datas e moeda.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithHint%2A> método usa os membros do <xref:System.Speech.Synthesis.SayAs> enumeração para especificar o tipo de conteúdo do texto anexado, o mecanismo de síntese de fala pode usar para informar sua pronúncia.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Date">
+      <MemberSignature Language="C#" Value="Date" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Date = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Date" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como uma data. Por exemplo, fale "19/05/2004" ou "19.5.2004" como "pode dezenove dois mil quatro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Day">
+      <MemberSignature Language="C#" Value="Day" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Day = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Day" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale um número como o dia em uma data. Por exemplo, fale "3º" como "terceiro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DayMonth">
+      <MemberSignature Language="C#" Value="DayMonth" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs DayMonth = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.DayMonth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como um dia e um mês. Por exemplo, fale "12/05" como "12 de maio" e fala "05/12" como "5 de dezembro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DayMonthYear">
+      <MemberSignature Language="C#" Value="DayMonthYear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs DayMonthYear = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.DayMonthYear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como uma data, incluindo o dia, mês e ano. Por exemplo, fale "12/05/2004" como "Pode décimo-segundo de dois mil quatro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Month">
+      <MemberSignature Language="C#" Value="Month" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Month = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Month" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma palavra como um mês. Por exemplo, fale "Junho" como "Junho".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MonthDay">
+      <MemberSignature Language="C#" Value="MonthDay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs MonthDay = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.MonthDay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como um mês e um dia. Por exemplo, fale "05/12" como "12 de maio" e fala "12/5" como "5 de dezembro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MonthDayYear">
+      <MemberSignature Language="C#" Value="MonthDayYear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs MonthDayYear = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.MonthDayYear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como uma data, incluindo o dia, mês e ano. Por exemplo, fale "12/05/2004" como "Dezembro quinto dois mil quatro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MonthYear">
+      <MemberSignature Language="C#" Value="MonthYear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs MonthYear = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.MonthYear" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como um mês e um ano. Por exemplo, fale "05/2004" como "Pode dois mil quatro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberCardinal">
+      <MemberSignature Language="C#" Value="NumberCardinal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs NumberCardinal = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.NumberCardinal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale um número como um número cardinal. Por exemplo, fale "3" como "três".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOrdinal">
+      <MemberSignature Language="C#" Value="NumberOrdinal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs NumberOrdinal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.NumberOrdinal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale um número como um número ordinal. Por exemplo, fale "3º" como "terceiro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SpellOut">
+      <MemberSignature Language="C#" Value="SpellOut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs SpellOut = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.SpellOut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Soletre a palavra ou frase. Por exemplo, digamos que "clock" como "C L O C K".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Telephone">
+      <MemberSignature Language="C#" Value="Telephone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Telephone = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Telephone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como um número de telefone dos EUA. Fala, por exemplo, "(306) 555-1212" como "código de área três zero seis cinco cinco cinco um dois um dois".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Text = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale a palavra ou frase como texto. Por exemplo, fale "cronograma" como "linha de tempo".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Time">
+      <MemberSignature Language="C#" Value="Time" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Time = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Time" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como uma hora. Por exemplo, fale "9:45" como "nove 45" e fala "9:45 am" como "nove 45 M".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Time12">
+      <MemberSignature Language="C#" Value="Time12" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Time12 = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Time12" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como uma hora usando o relógio de 12 horas. Por exemplo, fale "03:25" como "três 25".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Time24">
+      <MemberSignature Language="C#" Value="Time24" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Time24 = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Time24" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como uma hora usando o relógio de 24 horas. Por exemplo, fale "18:00", "horas dezoito centena".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Year">
+      <MemberSignature Language="C#" Value="Year" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs Year = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.Year" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale um número como um ano. Por exemplo, fale "1998" como "nineteen ninety-eight".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="YearMonth">
+      <MemberSignature Language="C#" Value="YearMonth" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs YearMonth = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.YearMonth" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como um ano e um mês. Por exemplo, fale "2004 05" como "Pode dois mil quatro".</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="YearMonthDay">
+      <MemberSignature Language="C#" Value="YearMonthDay" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.SayAs YearMonthDay = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.SayAs.YearMonthDay" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.SayAs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fale uma sequência numérica como uma data, incluindo o dia, mês e ano. Por exemplo, fale "12/05/2004" como "Pode décimo-segundo de dois mil quatro".</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

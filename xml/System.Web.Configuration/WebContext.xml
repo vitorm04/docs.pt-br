@@ -1,0 +1,216 @@
+<Type Name="WebContext" FullName="System.Web.Configuration.WebContext">
+  <TypeSignature Language="C#" Value="public sealed class WebContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WebContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.WebContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia o contexto de caminho para o aplicativo Web atual. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.WebContext> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebContext#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebContext/CS/WebContext.cs#1)]
+ [!code-vb[System.Web.Configuration.WebContext#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebContext/VB/WebContext.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebContext (System.Web.Configuration.WebApplicationLevel pathLevel, string site, string applicationPath, string path, string locationSubPath, string appConfigPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Configuration.WebApplicationLevel pathLevel, string site, string applicationPath, string path, string locationSubPath, string appConfigPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebContext.#ctor(System.Web.Configuration.WebApplicationLevel,System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pathLevel" Type="System.Web.Configuration.WebApplicationLevel" />
+        <Parameter Name="site" Type="System.String" />
+        <Parameter Name="applicationPath" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="locationSubPath" Type="System.String" />
+        <Parameter Name="appConfigPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathLevel">Um objeto <see cref="T:System.Web.Configuration.WebApplicationLevel" />.</param>
+        <param name="site">O nome do site da Web.</param>
+        <param name="applicationPath">O caminho virtual do nível raiz do aplicativo Web atual.</param>
+        <param name="path">O caminho virtual do arquivo Web. config que representa o objeto de configuração atual.</param>
+        <param name="locationSubPath">O valor do caminho da <see langword="location" /> elemento que está sendo editado.</param>
+        <param name="appConfigPath">Caminho de configuração do aplicativo da Web atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.WebContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar este construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebContext> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebContext#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebContext/CS/WebContext.cs#2)]
+ [!code-vb[System.Web.Configuration.WebContext#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebContext/VB/WebContext.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationLevel">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.WebApplicationLevel ApplicationLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Configuration.WebApplicationLevel ApplicationLevel" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebContext.ApplicationLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.WebApplicationLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Web.Configuration.WebApplicationLevel" /> objeto que representa o nível de caminho do aplicativo Web atual.</summary>
+        <value>Um objeto <see cref="T:System.Web.Configuration.WebApplicationLevel" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.WebContext.ApplicationLevel%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebContext> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebContext#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebContext/CS/WebContext.cs#3)]
+ [!code-vb[System.Web.Configuration.WebContext#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebContext/VB/WebContext.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationPath">
+      <MemberSignature Language="C#" Value="public string ApplicationPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebContext.ApplicationPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho do aplicativo do aplicativo Web atual.</summary>
+        <value>O caminho do aplicativo do aplicativo Web atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.WebContext.ApplicationPath%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebContext> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebContext#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebContext/CS/WebContext.cs#4)]
+ [!code-vb[System.Web.Configuration.WebContext#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebContext/VB/WebContext.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocationSubPath">
+      <MemberSignature Language="C#" Value="public string LocationSubPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocationSubPath" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebContext.LocationSubPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o subcaminho do local do aplicativo Web.</summary>
+        <value>Subcaminho do local do aplicativo Web atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebContext.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho virtual atual do aplicativo Web.</summary>
+        <value>O caminho virtual atual do aplicativo Web.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.WebContext.Path%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebContext> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebContext#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebContext/CS/WebContext.cs#6)]
+ [!code-vb[System.Web.Configuration.WebContext#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebContext/VB/WebContext.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public string Site { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Site" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.WebContext.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do aplicativo Web atual.</summary>
+        <value>O nome do aplicativo Web atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Web.Configuration.WebContext.Site%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.WebContext> classe.  
+  
+ [!code-csharp[System.Web.Configuration.WebContext#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.WebContext/CS/WebContext.cs#7)]
+ [!code-vb[System.Web.Configuration.WebContext#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.WebContext/VB/WebContext.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.WebContext.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa o caminho de configuração do aplicativo.</summary>
+        <returns>Caminho de configuração do aplicativo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

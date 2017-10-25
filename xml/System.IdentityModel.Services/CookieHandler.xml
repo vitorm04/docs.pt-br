@@ -1,0 +1,783 @@
+<Type Name="CookieHandler" FullName="System.IdentityModel.Services.CookieHandler">
+  <TypeSignature Language="C#" Value="public abstract class CookieHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CookieHandler extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Services.CookieHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base abstrata para ler, gravar e excluir cookies de sessão em um cliente HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) usa uma instância do <xref:System.IdentityModel.Services.CookieHandler> classe para ler, gravar e excluir o cookie ou cookies que contêm o <xref:System.IdentityModel.Tokens.SessionSecurityToken> no cliente HTTP. O cookie (ou cookies, no caso em que o token de sessão é dividido em vários cookies) que contém a sessão de token é conhecido como o cookie de sessão.  
+  
+ Windows Identity Foundation (WIF) é fornecido com um manipulador de cookie chamado manipulador cookie em partes que é implementado pelo <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe. O manipulador de cookie em partes divide o token de sessão em um ou mais cookies de acordo com um tamanho de bloco especificado. Isso é para atender às limitações de tamanho em cookies individuais impostas por vários navegadores.  
+  
+ Você pode derivar de <xref:System.IdentityModel.Services.CookieHandler> para criar seu próprio manipulador de cookie. Quando você fizer isso, você deve substituir o <xref:System.IdentityModel.Services.CookieHandler.DeleteCore%2A>, <xref:System.IdentityModel.Services.CookieHandler.ReadCore%2A>, e <xref:System.IdentityModel.Services.CookieHandler.WriteCore%2A> métodos para executar o trabalho real de excluir, ler e gravar o cookie de sessão. Normalmente, esses métodos leiam o cookie do <xref:System.Web.HttpRequest.Cookies%2A?displayProperty=nameWithType> coleta e gravar ou excluir cookies por meio de <xref:System.Web.HttpResponse.Cookies%2A?displayProperty=nameWithType> coleção. O <xref:System.Web.HttpContext> objeto por meio do qual você pode acessar a solicitação e resposta é fornecida como um parâmetro para cada um desses métodos. Além dos métodos necessários, você pode opcionalmente substituir outras propriedades de métodos virtuais expostas pelo <xref:System.IdentityModel.Services.CookieHandler> classe para personalizar o comportamento do seu manipulador.  
+  
+ Várias propriedades são expostas pelo <xref:System.IdentityModel.Services.CookieHandler> classe que especificam o comportamento padrão e propriedades para o cookie de sessão. O <xref:System.IdentityModel.Services.CookieHandler.Name%2A>, <xref:System.IdentityModel.Services.CookieHandler.Domain%2A>, e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades fornecem o nome de base para o cookie, o domínio no qual ele é válido e o caminho no qual ele é armazenado no cliente. O <xref:System.IdentityModel.Services.CookieHandler.HideFromClientScript%2A> propriedade especifica se o cookie é acessível para os scripts do lado do cliente. O <xref:System.IdentityModel.Services.CookieHandler.RequireSsl%2A> propriedade especifica se o cookie deve ser transmitido apenas em conexões de seguro (HTTPS). Se definido, o <xref:System.IdentityModel.Services.CookieHandler.PersistentSessionLifetime%2A> propriedade é usada para definir o tempo de expiração de sessões persistentes, para sessões que permanecerão válidas, mesmo depois que o navegador for fechado. Todas essas propriedades têm propriedades equivalentes que normalmente são definidas em subjacente <xref:System.Web.HttpCookie> objeto (ou objetos) pelos métodos do manipulador de "core". Para obter mais informações, consulte a documentação para cada propriedade.  
+  
+ O manipulador de cookie é usado pelo SAM pode ser especificado na configuração por meio de [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento. O manipulador de cookie definido por este elemento pode ser modificado em um representante de eventos para o <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> evento ou ele pode ser definido ou acessado diretamente por meio de <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir configura o SAM para usar um manipulador personalizado de cookie do tipo `MyNamespace.MyCustomCookieHandler`.  
+  
+```xml  
+<cookieHandler mode="Custom">  
+    <customCookieHandler type="MyNamespace.MyCustomCookieHandler, MyAssembly" />  
+</cookieHandler>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CookieHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Chamado de construtores em classes derivadas para inicializar a classe <see cref="T:System.IdentityModel.Services.CookieHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui o cookie associado à solicitação atual que tem o nome padrão, o domínio e o caminho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome, o domínio e o caminho são especificados pelo <xref:System.IdentityModel.Services.CookieHandler.Name%2A>, <xref:System.IdentityModel.Services.CookieHandler.Domain%2A>, e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades. A solicitação é especificada pelo<xref:System.Web.HttpContext.Current%2A?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Delete(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cookie.</param>
+        <summary>Exclui o cookie associado à solicitação atual que tem o nome especificado e o domínio padrão e o caminho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O domínio e o caminho são especificadas pelo <xref:System.IdentityModel.Services.CookieHandler.Domain%2A> e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades. A solicitação é especificada pelo<xref:System.Web.HttpContext.Current%2A?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Delete(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Exclui o cookie associado à solicitação atual que tem o nome padrão, o domínio e o caminho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome, o domínio e o caminho são especificados pelo <xref:System.IdentityModel.Services.CookieHandler.Name%2A>, <xref:System.IdentityModel.Services.CookieHandler.Domain%2A>, e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (string name, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(string name, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Delete(System.String,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cookie.</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Exclui o cookie associado à solicitação especificada com o nome especificado e o domínio padrão e o caminho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O domínio e o caminho são especificadas pelo <xref:System.IdentityModel.Services.CookieHandler.Domain%2A> e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete (string name, string path, string domain, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete(string name, string path, string domain, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Delete(System.String,System.String,System.String,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="domain" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cookie.</param>
+        <param name="path">O caminho para o cookie.</param>
+        <param name="domain">O domínio para o cookie</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação</param>
+        <summary>Exclui o cookie associado à solicitação especificada que tem o nome especificado, o caminho e o domínio.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteCore">
+      <MemberSignature Language="C#" Value="protected abstract void DeleteCore (string name, string path, string domain, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DeleteCore(string name, string path, string domain, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.DeleteCore(System.String,System.String,System.String,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="domain" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cookie</param>
+        <param name="path">O caminho para o cookie</param>
+        <param name="domain">O domínio para o cookie</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Quando substituído em uma classe derivada, exclui o cookie associado à solicitação especificada com o nome especificado, o domínio e o caminho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado a partir do sobrecarregados <xref:System.IdentityModel.Services.CookieHandler.Delete%2A> métodos para fazer o trabalho real de excluir o cookie. O <xref:System.IdentityModel.Services.CookieHandler.Delete%2A> métodos garantirá que o nome e caminho são cadeias de caracteres não vazia.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método. A implementação é inteiramente o desenvolvedor. No caso típico, implementações de substituem o cookie especificado no <see cref="P:System.Web.HttpResponse.Cookies" /> coleção, com um cookie que tem <see langword="null" /> dados e um tempo de expiração definido antes da hora atual; no entanto, isso não é um requisito.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Domain">
+      <MemberSignature Language="C#" Value="public virtual string Domain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Domain" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandler.Domain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o domínio usado para cookies.</summary>
+        <value>O domínio usado para cookies. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Corresponde do <xref:System.Web.HttpCookie.Domain%2A?displayProperty=nameWithType> propriedade.  
+  
+ A propriedade pode ser inicializada, especificando o `domain` atributo no [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento na configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HideFromClientScript">
+      <MemberSignature Language="C#" Value="public virtual bool HideFromClientScript { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HideFromClientScript" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandler.HideFromClientScript" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o cookie deve ser oculto de script de cliente.</summary>
+        <value>
+          <see langword="true" />Se o cookie deve ser ocultado do script de cliente; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controla se o sinalizador "HttpOnly" é emitido no cabeçalho Set-Cookie gravado pelo manipulador de cookies. Alguns navegadores da web aceitam esse sinalizador, mantendo o script do lado do cliente acessem o valor do cookie.  
+  
+ Essa propriedade corresponde do <xref:System.Web.HttpCookie.HttpOnly%2A?displayProperty=nameWithType> propriedade.  
+  
+ A propriedade pode ser inicializada, especificando o `hideFromScript` atributo no [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento na configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchCookiePath">
+      <MemberSignature Language="C#" Value="public virtual string MatchCookiePath (Uri baseUri, Uri targetUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string MatchCookiePath(class System.Uri baseUri, class System.Uri targetUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.MatchCookiePath(System.Uri,System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseUri" Type="System.Uri" />
+        <Parameter Name="targetUri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="baseUri">A URL base da solicitação.</param>
+        <param name="targetUri">A URL para fazer a correspondência</param>
+        <summary>Se o domínio de destino está dentro do domínio do cookie e o caminho de destino está no caminho de cookie, corresponde maiusculas e minúsculas de parte do caminho do cookie.</summary>
+        <returns>Retorna <see cref="T:System.String" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandler.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de base para o cookie gravado pelo manipulador.</summary>
+        <value>O nome de base para usar para cookies. O padrão é "FedAuth".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do <xref:System.Web.HttpCookie.Name%2A?displayProperty=nameWithType> propriedade.  
+  
+ A propriedade pode ser inicializada, especificando o `name` atributo no [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento na configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Tentativa de definir um <see langword="null" /> ou valor vazio ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public virtual string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandler.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho virtual para o cookie gravado pelo manipulador.</summary>
+        <value>O caminho virtual. O padrão é a raiz do aplicativo ASP.NET.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do <xref:System.Web.HttpCookie.Path%2A?displayProperty=nameWithType> propriedade.  
+  
+ A propriedade pode ser inicializada, especificando o `path` atributo no [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento na configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Tentativa de definir um <see langword="null" /> ou valor vazio ocorre.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistentSessionLifetime">
+      <MemberSignature Language="C#" Value="public virtual Nullable&lt;TimeSpan&gt; PersistentSessionLifetime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; PersistentSessionLifetime" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandler.PersistentSessionLifetime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tempo de vida de sessões persistentes. Se for zero, sessões transitórias são sempre usadas.</summary>
+        <value>A duração da sessão. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permissões para sessões persistentes são armazenadas em cookies baseada em arquivo, o que significa que a sessão de logon pode continuar depois que o navegador for fechado e reaberto.  
+  
+ Esta propriedade é usada para definir o <xref:System.Web.HttpCookie.Expires%2A?displayProperty=nameWithType> propriedade.  
+  
+ A propriedade pode ser inicializada, especificando o `persistentSessionLifetime` atributo no [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento na configuração.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Um valor que é menor que zero for especificado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public byte[] Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o cookie associado à solicitação atual que tem o nome padrão.</summary>
+        <returns>O valor do cookie ou <see langword="null" /> se o cookie não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do cookie é especificado pelo <xref:System.IdentityModel.Services.CookieHandler.Name%2A> propriedade. A solicitação é especificada por <xref:System.Web.HttpContext.Current%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public byte[] Read (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Read(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Read(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cookie a ser lido.</param>
+        <summary>Lê o cookie associado à solicitação atual que tem o nome especificado.</summary>
+        <returns>O valor do cookie ou <see langword="null" /> se o cookie não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A solicitação é especificada pelo<xref:System.Web.HttpContext.Current%2A?displayProperty=nameWithType>  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public byte[] Read (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Read(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Read(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Lê o cookie associado à solicitação atual que tem o nome padrão, o domínio e o caminho.</summary>
+        <returns>O valor do cookie ou <see langword="null" /> se o cookie não foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome do cookie é especificado pelo <xref:System.IdentityModel.Services.CookieHandler.Name%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public byte[] Read (string name, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Read(string name, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Read(System.String,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cookie a ser lido.</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Lê o cookie associado à solicitação especificada com o nome especificado e o domínio padrão e o caminho.</summary>
+        <returns>O valor do cookie ou <see langword="null" /> se o cookie não foi encontrado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadCore">
+      <MemberSignature Language="C#" Value="protected abstract byte[] ReadCore (string name, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] ReadCore(string name, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.ReadCore(System.String,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do cookie</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Quando substituído em uma classe derivada, lê o cookie que tem o nome especificado e que está associado com a solicitação especificada.</summary>
+        <returns>O valor do cookie ou <see langword="null" /> se o cookie não foi encontrado</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado a partir do sobrecarregados <xref:System.IdentityModel.Services.CookieHandler.Read%2A> métodos para fazer o trabalho real de leitura do cookie. O <xref:System.IdentityModel.Services.CookieHandler.Read%2A> métodos garantirá que `name` é uma cadeia de caracteres não vazia.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método. A implementação é inteiramente o desenvolvedor. No caso típico, implementações de ler os dados do cookie do <see cref="P:System.Web.HttpRequest.Cookies" /> coleção, no entanto, isso não é um requisito.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RequireSsl">
+      <MemberSignature Language="C#" Value="public virtual bool RequireSsl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequireSsl" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Services.CookieHandler.RequireSsl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o cookie deve ser usado somente com SSL.</summary>
+        <value>
+          <see langword="true" />Se o cookie deve ser usado apenas em uma conexão SSL; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controla se o sinalizador "Secure" no cabeçalho Set-Cookie é emitido para qualquer cookie gravado. Se esse valor for `true`, a sessão de cookies só estará disponíveis via HTTPS.  
+  
+ Essa propriedade corresponde do <xref:System.Web.HttpCookie.Secure%2A?displayProperty=nameWithType> propriedade.  
+  
+ A propriedade pode ser inicializada, especificando o `requireSSL` atributo no [ &lt;cookieHandler&gt; ](~/docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) elemento na configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] value, bool isPersistent, DateTime tokenExpirationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(unsigned int8[] value, bool isPersistent, valuetype System.DateTime tokenExpirationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Write(System.Byte[],System.Boolean,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="isPersistent" Type="System.Boolean" />
+        <Parameter Name="tokenExpirationTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do cookie.</param>
+        <param name="isPersistent">
+          <see langword="true" />Se o cookie for persistente; <see langword="false" /> se o cookie for somente de sessão, ou seja, só é válida até que o navegador no cliente está fechada.</param>
+        <param name="tokenExpirationTime">O tempo de expiração do token subjacente.</param>
+        <summary>Grava um cookie associado à solicitação atual que tem o valor especificado, a persistência e o tempo de expiração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `isPersistent` parâmetro é `false`, o tempo de expiração do cookie é definido como <xref:System.DateTime?displayProperty=nameWithType>. Se o `isPersistent` parâmetro é `true`, o tempo de expiração do cookie é definido como o valor da <xref:System.IdentityModel.Services.CookieHandler.PersistentSessionLifetime%2A> propriedade se não for `null` ou, se o <xref:System.IdentityModel.Services.CookieHandler.PersistentSessionLifetime%2A> é de propriedade `null`, o tempo de expiração é definido como o valor da `tokenExpirationTime` parâmetro.  
+  
+ O nome do cookie, o domínio e o caminho são especificados pelo <xref:System.IdentityModel.Services.CookieHandler.Name%2A>, <xref:System.IdentityModel.Services.CookieHandler.Domain%2A>, e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades. A solicitação é especificada por <xref:System.Web.HttpContext.Current%2A>. Se o cookie deve ser enviado apenas via SSL for especificado o <xref:System.IdentityModel.Services.CookieHandler.RequireSsl%2A> propriedade e se o cookie deve ser ocultado dos scripts do lado do cliente é especificado pelo <xref:System.IdentityModel.Services.CookieHandler.HideFromClientScript%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] value, string name, DateTime expirationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(unsigned int8[] value, string name, valuetype System.DateTime expirationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Write(System.Byte[],System.String,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do cookie.</param>
+        <param name="name">O nome do cookie.</param>
+        <param name="expirationTime">O tempo de expiração para o cookie ou <see cref="F:System.DateTime.MinValue" /> para um cookie de sessão (sessão somente).</param>
+        <summary>Grava um cookie associado à solicitação atual que tem o nome especificado, o valor e a hora de expiração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O domínio do cookie e o caminho são especificadas pelo <xref:System.IdentityModel.Services.CookieHandler.Domain%2A> e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades. A solicitação é especificada por <xref:System.Web.HttpContext.Current%2A?displayProperty=nameWithType>.  A solicitação é especificada por <xref:System.Web.HttpContext.Current%2A>. Se o cookie deve ser enviado apenas via SSL for especificado o <xref:System.IdentityModel.Services.CookieHandler.RequireSsl%2A> propriedade e se o cookie deve ser ocultado dos scripts do lado do cliente é especificado pelo <xref:System.IdentityModel.Services.CookieHandler.HideFromClientScript%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] value, string name, DateTime expirationTime, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(unsigned int8[] value, string name, valuetype System.DateTime expirationTime, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Write(System.Byte[],System.String,System.DateTime,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do cookie.</param>
+        <param name="name">O nome do cookie.</param>
+        <param name="expirationTime">O tempo de expiração para o cookie ou <see cref="F:System.DateTime.MinValue" /> para um cookie de sessão (sessão somente).</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Grava um cookie associado com a solicitação especificada com o nome especificado, o valor e a hora de expiração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O domínio do cookie e o caminho são especificadas pelo <xref:System.IdentityModel.Services.CookieHandler.Domain%2A> e <xref:System.IdentityModel.Services.CookieHandler.Path%2A> propriedades. A solicitação é especificada por <xref:System.Web.HttpContext.Current%2A>. Se o cookie deve ser enviado apenas via SSL for especificado o <xref:System.IdentityModel.Services.CookieHandler.RequireSsl%2A> propriedade e se o cookie deve ser ocultado dos scripts do lado do cliente é especificado pelo <xref:System.IdentityModel.Services.CookieHandler.HideFromClientScript%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] value, string name, string path, string domain, DateTime expirationTime, bool requiresSsl, bool hideFromClientScript, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(unsigned int8[] value, string name, string path, string domain, valuetype System.DateTime expirationTime, bool requiresSsl, bool hideFromClientScript, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.Write(System.Byte[],System.String,System.String,System.String,System.DateTime,System.Boolean,System.Boolean,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="domain" Type="System.String" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+        <Parameter Name="requiresSsl" Type="System.Boolean" />
+        <Parameter Name="hideFromClientScript" Type="System.Boolean" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do cookie.</param>
+        <param name="name">O nome do cookie.</param>
+        <param name="path">O caminho para o cookie</param>
+        <param name="domain">O domínio para o cookie</param>
+        <param name="expirationTime">O tempo de expiração para o cookie ou <see cref="F:System.DateTime.MinValue" /> para um cookie de sessão (sessão somente).</param>
+        <param name="requiresSsl">
+          <see langword="true" />Se o cookie deve ser usado apenas em uma conexão SSL; Caso contrário, <see langword="false" />.</param>
+        <param name="hideFromClientScript">
+          <see langword="true" />Se o cookie deve ser ocultado do script de cliente; Caso contrário, <see langword="false" />.</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Grava um cookie associado com a solicitação especificada com o nome especificado, valor, domínio, caminho, tempo de expiração e visibilidade.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="name" /> é <see langword="null" /> ou vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCore">
+      <MemberSignature Language="C#" Value="protected abstract void WriteCore (byte[] value, string name, string path, string domain, DateTime expirationTime, bool secure, bool httpOnly, System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void WriteCore(unsigned int8[] value, string name, string path, string domain, valuetype System.DateTime expirationTime, bool secure, bool httpOnly, class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Services.CookieHandler.WriteCore(System.Byte[],System.String,System.String,System.String,System.DateTime,System.Boolean,System.Boolean,System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte[]" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="domain" Type="System.String" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+        <Parameter Name="secure" Type="System.Boolean" />
+        <Parameter Name="httpOnly" Type="System.Boolean" />
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor do cookie.</param>
+        <param name="name">O nome do cookie.</param>
+        <param name="path">O caminho para o cookie</param>
+        <param name="domain">O domínio para o cookie</param>
+        <param name="expirationTime">O tempo de expiração para o cookie ou <see cref="F:System.DateTime.MinValue" /> para um cookie de sessão (sessão somente).</param>
+        <param name="secure">
+          <see langword="true" />Se o cookie deve ser usado apenas em uma conexão SSL; Caso contrário, <see langword="false" />.</param>
+        <param name="httpOnly">
+          <see langword="true" />Se o cookie deve ser ocultado do script de cliente; Caso contrário, <see langword="false" />.</param>
+        <param name="context">O <see cref="T:System.Web.HttpContext" /> para a solicitação.</param>
+        <summary>Quando substituído em uma classe derivada, grava um cookie associado com a solicitação especificada que tem o nome especificado, valor, domínio, caminho, tempo de expiração, persistência e visibilidade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamado a partir do sobrecarregados <xref:System.IdentityModel.Services.CookieHandler.Write%2A> métodos para fazer o trabalho real de escrever o cookie. O <xref:System.IdentityModel.Services.CookieHandler.Write%2A> métodos garantirá que `value` é uma matriz de bytes não-vazia e que `name` e `path` são cadeias de caracteres não vazia.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você deve substituir esse método. A implementação é inteiramente o desenvolvedor. No caso típico, implementações de gravam os dados do cookie para o <see cref="P:System.Web.HttpResponse.Cookies" /> coleção, no entanto, isso não é um requisito. A maioria dos parâmetros do método normalmente são usadas para definir propriedades equivalentes em um ou mais <see cref="T:System.Web.HttpCookie" /> objetos.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

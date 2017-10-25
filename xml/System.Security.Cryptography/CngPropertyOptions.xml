@@ -1,0 +1,120 @@
+<Type Name="CngPropertyOptions" FullName="System.Security.Cryptography.CngPropertyOptions">
+  <TypeSignature Language="C#" Value="public enum CngPropertyOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CngPropertyOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.CngPropertyOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica opções de propriedade de chave CNG (Cryptography Next Generation).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas opções são usadas para inicializar <xref:System.Security.Cryptography.CngProperty> objetos, que são usados em <xref:System.Security.Cryptography.CngKey.SetProperty%2A> chamadas. Você também usar essas opções quando você consulta o valor das propriedades com o <xref:System.Security.Cryptography.CngKey.GetProperty%2A> método.  
+  
+ Propriedades devem ser consultadas com o <xref:System.Security.Cryptography.CngPropertyOptions> são armazenadas. Caso contrário, eles não serão localizados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CustomProperty">
+      <MemberSignature Language="C#" Value="CustomProperty" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngPropertyOptions CustomProperty = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngPropertyOptions.CustomProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade não é especificada pelo CNG. Use esta opção para evitar conflitos de nome de futuras com propriedades de CNG.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngPropertyOptions None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngPropertyOptions.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade referenciada não tem opções.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Persist">
+      <MemberSignature Language="C#" Value="Persist" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.CngPropertyOptions Persist = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.CngPropertyOptions.Persist" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Cng</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.CngPropertyOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade deve ser persistida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

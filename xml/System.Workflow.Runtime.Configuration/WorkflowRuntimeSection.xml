@@ -1,0 +1,231 @@
+<Type Name="WorkflowRuntimeSection" FullName="System.Workflow.Runtime.Configuration.WorkflowRuntimeSection">
+  <TypeSignature Language="C#" Value="public class WorkflowRuntimeSection : System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowRuntimeSection extends System.Configuration.ConfigurationSection" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma seção, dentro de um arquivo de configuração, que define as configurações para o mecanismo de tempo de execução do fluxo de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection>contém as configurações especificadas por um <`section`> do tipo <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection> em um arquivo de configuração. As configurações especificadas em um <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection> são usados para inicializar o mecanismo de tempo de execução do fluxo de trabalho. O aplicativo pode chamar o <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%28System.String%29?displayProperty=nameWithType> construtor para inicializar o mecanismo de tempo de execução do fluxo de trabalho da seção do arquivo de configuração nomeada apropriadamente.  
+  
+ Se seu aplicativo não usa arquivos de configuração, mas você ainda deseja inicializar o mecanismo de tempo de execução do fluxo de trabalho de um <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection> você pode configurar um <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection> em seu aplicativo e a chamada a <xref:System.Workflow.Runtime.WorkflowRuntime.%23ctor%28System.Workflow.Runtime.Configuration.WorkflowRuntimeSection%29?displayProperty=nameWithType> construtor. Por exemplo, seu aplicativo pode armazenar parâmetros de configuração em um banco de dados ou ele pode operar em um ambiente confiável, onde os arquivos de configuração não são usados  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowRuntimeSection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommonParameters">
+      <MemberSignature Language="C#" Value="public System.Configuration.NameValueConfigurationCollection CommonParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.NameValueConfigurationCollection CommonParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.CommonParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("CommonParameters", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Configuration.NameValueConfigurationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros comuns usados pelos serviços.</summary>
+        <value>Os parâmetros comuns usados pelos serviços. O padrão é uma referência nula (<see langword="Nothing" /> no Visual Basic).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.CommonParameters%2A>pode conter, por exemplo, uma cadeia de caracteres de conexão de banco de dados que pode ser compartilhada com serviços duráveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePerformanceCounters">
+      <MemberSignature Language="C#" Value="public bool EnablePerformanceCounters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnablePerformanceCounters" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.EnablePerformanceCounters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("EnablePerformanceCounters", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os contadores de desempenho estão habilitados.</summary>
+        <value>
+          <see langword="true" />Se os contadores de desempenho estão habilitados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contadores de desempenho fornecem informações sobre várias estatísticas relacionadas ao fluxo de trabalho, mas elas causam uma penalidade de desempenho quando o mecanismo de tempo de execução do fluxo de trabalho é iniciado e quando as instâncias de fluxo de trabalho estão em execução. O valor padrão é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("Name", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do mecanismo de tempo de execução do fluxo de trabalho.</summary>
+        <value>O nome do mecanismo de tempo de execução do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é usada para definir <xref:System.Workflow.Runtime.WorkflowRuntime.Name%2A?displayProperty=nameWithType>. O padrão é uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Services">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection Services { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection Services" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.Services" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("Services", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de serviços que são adicionados ao mecanismo de tempo de execução de fluxo de trabalho quando ele é inicializado.</summary>
+        <value>Os serviços a serem adicionados ao mecanismo de tempo de execução de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os serviços especificados no <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection> são inicializadas pelo mecanismo de tempo de execução de fluxo de trabalho e adicionados aos seus serviços quando apropriado <xref:System.Workflow.Runtime.WorkflowRuntime> construtor seja chamado. Portanto os serviços especificados no <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElementCollection> devem seguir determinadas regras sobre as assinaturas dos seus construtores. [!INCLUDE[crdefault](~/includes/crabout-md.md)] <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateOnCreate">
+      <MemberSignature Language="C#" Value="public bool ValidateOnCreate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ValidateOnCreate" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.ValidateOnCreate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("ValidateOnCreate", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a validação ocorre na criação da instância do fluxo de trabalho.</summary>
+        <value>
+          <see langword="true" />Se a validação ocorre na criação. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como `true`, a validação do fluxo de trabalho é executada sempre que <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> é chamado. Se forem encontrados erros de validação, um <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> é gerada.  
+  
+ Quando essa propriedade é definida como `false`, <xref:System.Workflow.Runtime.WorkflowRuntime.CreateWorkflow%2A> cria uma instância de fluxo de trabalho e ignora a validação. Nesse caso, o aplicativo de host deve garantir que o fluxo de trabalho está configurado corretamente ou o erro de tempo de execução ocorre.  
+  
+ O valor padrão dessa propriedade é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkflowDefinitionCacheCapacity">
+      <MemberSignature Language="C#" Value="public int WorkflowDefinitionCacheCapacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WorkflowDefinitionCacheCapacity" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Configuration.WorkflowRuntimeSection.WorkflowDefinitionCacheCapacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("WorkflowDefinitionCacheCapacity", DefaultValue=Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de definições de fluxo de trabalho que podem ser armazenados em cache pelo tempo de execução.</summary>
+        <value>O número de fluxos de trabalho.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

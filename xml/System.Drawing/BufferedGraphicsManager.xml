@@ -1,0 +1,75 @@
+<Type Name="BufferedGraphicsManager" FullName="System.Drawing.BufferedGraphicsManager">
+  <TypeSignature Language="C#" Value="public sealed class BufferedGraphicsManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BufferedGraphicsManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.BufferedGraphicsManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso ao principal objeto de contexto de gráficos em buffer para o domínio de aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Drawing.BufferedGraphicsManager> classe permite que você implemente o buffer duplo personalizado para seus elementos gráficos. Elementos gráficos que usam o buffer duplo podem reduzir ou eliminar a cintilação causado redesenhando uma superfície de exibição.  
+  
+ Essa classe tem uma propriedade estática, <xref:System.Drawing.BufferedGraphicsManager.Current%2A>, que retorna o principal <xref:System.Drawing.BufferedGraphicsContext> para o domínio de aplicativo atual. O <xref:System.Drawing.BufferedGraphicsContext> classe cria <xref:System.Drawing.BufferedGraphics> instâncias que podem ser usadas para desenhar os elementos gráficos em buffer.  
+  
+ O <xref:System.Drawing.BufferedGraphics> classe não tem construtor público e deve ser criada pelo <xref:System.Drawing.BufferedGraphicsContext> objeto para um domínio de aplicativo usando sua <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> método. Você pode recuperar o <xref:System.Drawing.BufferedGraphicsContext> objeto para o domínio de aplicativo atual de estático <xref:System.Drawing.BufferedGraphicsManager.Current%2A?displayProperty=nameWithType> propriedade.  
+  
+ Para obter mais informações sobre buffer duplo, consulte [gráficos em buffer duplo](~/docs/framework/winforms/advanced/double-buffered-graphics.md), <xref:System.Drawing.BufferedGraphics>, e <xref:System.Drawing.BufferedGraphicsContext>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a adquirir o <xref:System.Drawing.BufferedGraphicsContext> para o domínio de aplicativo atual.  
+  
+ [!code-cpp[BufferingExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#1)]
+ [!code-csharp[BufferingExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#1)]
+ [!code-vb[BufferingExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static System.Drawing.BufferedGraphicsContext Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Drawing.BufferedGraphicsContext Current" />
+      <MemberSignature Language="DocId" Value="P:System.Drawing.BufferedGraphicsManager.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.BufferedGraphicsContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Drawing.BufferedGraphicsContext" /> para o domínio de aplicativo atual.</summary>
+        <value>O <see cref="T:System.Drawing.BufferedGraphicsContext" /> para o domínio do aplicativo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dentro de um aplicativo de <xref:System.Drawing.BufferedGraphicsManager.Current%2A> propriedade sempre retorna o mesmo <xref:System.Drawing.BufferedGraphicsContext> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a adquirir o <xref:System.Drawing.BufferedGraphicsContext> para o domínio de aplicativo atual.  
+  
+ [!code-cpp[BufferingExamples#1](~/samples/snippets/cpp/VS_Snippets_Winforms/BufferingExamples/CPP/bufferingexamples.cpp#1)]
+ [!code-csharp[BufferingExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/BufferingExamples/CS/bufferingexamples.cs#1)]
+ [!code-vb[BufferingExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/BufferingExamples/VB/bufferingexamples.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

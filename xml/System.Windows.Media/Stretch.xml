@@ -1,0 +1,101 @@
+<Type Name="Stretch" FullName="System.Windows.Media.Stretch">
+  <TypeSignature Language="C#" Value="public enum Stretch" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Stretch extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Stretch" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve como o conteúdo é redimensionado para se ajustar a seu espaço alocado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra os diferentes <xref:System.Windows.Media.Stretch> valores.  
+  
+ ![Diferentes configurações de TileBrush Stretch](~/add/media/img-mmgraphics-stretchenum.jpg "configurações diferentes Stretch de TileBrush")  
+Valores de ampliação  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância de um <xref:System.Windows.Controls.Viewbox> e defina o <xref:System.Windows.Media.Stretch> modo de seu conteúdo por meio de código.  
+  
+ [!code-cpp[ViewBoxCode#2](~/samples/snippets/cpp/VS_Snippets_Wpf/ViewBoxCode/CPP/ViewboxCode.cpp#2)]
+ [!code-csharp[ViewBoxCode#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ViewBoxCode/Csharp/ViewboxCode.cs#2)]
+ [!code-vb[ViewBoxCode#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ViewBoxCode/VisualBasic/ViewBoxCodeVB.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="Fill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Stretch Fill = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Stretch.Fill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo é redimensionado para se ajustar às dimensões de destino. A taxa de proporção não é preservada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Stretch None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Stretch.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo preserva seu tamanho original.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="Uniform" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Stretch Uniform = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Stretch.Uniform" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo é redimensionado para se ajustar nas dimensões de destino, enquanto preserva sua taxa de proporção nativa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UniformToFill">
+      <MemberSignature Language="C#" Value="UniformToFill" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.Stretch UniformToFill = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Stretch.UniformToFill" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Stretch</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conteúdo é redimensionado para se ajustar nas dimensões de destino, enquanto preserva sua taxa de proporção nativa. Se a taxa de proporção do retângulo de destino for diferente da origem, o conteúdo de origem será cortado para se ajustar às dimensões de destino.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

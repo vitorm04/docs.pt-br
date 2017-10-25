@@ -1,0 +1,6 @@
+<Namespace Name="System.Xaml">
+  <Docs>
+    <summary>Fornece tipos relacionados para leitores XAML e autores de XAML. Isso inclui as implementações padrão de serviços XAML do .NET Framework e seus leitores XAML e gravadores XAML. Também contém tipos relevantes para o sistema de tipo XAML e outros tipos de suporte relacionados aos conceitos XAML e serviços XAML do .NET Framework.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

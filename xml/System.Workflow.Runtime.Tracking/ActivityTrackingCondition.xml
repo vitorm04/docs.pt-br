@@ -1,0 +1,188 @@
+<Type Name="ActivityTrackingCondition" FullName="System.Workflow.Runtime.Tracking.ActivityTrackingCondition">
+  <TypeSignature Language="C#" Value="public class ActivityTrackingCondition : System.Workflow.Runtime.Tracking.TrackingCondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ActivityTrackingCondition extends System.Workflow.Runtime.Tracking.TrackingCondition" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.ActivityTrackingCondition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Tracking.TrackingCondition</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma condição que compara o valor de um membro de atividade a um valor especificado usando um operador de comparação especificado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Você pode usar um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition> para restringir uma <xref:System.Workflow.Runtime.Tracking.UserTrackingLocation> ou um <xref:System.Workflow.Runtime.Tracking.ActivityTrackingLocation>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingCondition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingCondition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você usar o construtor padrão, você deve definir explicitamente <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member%2A>. Você também deve definir <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Value%2A>. O valor padrão de <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Operator%2A> é `Equals`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityTrackingCondition (string member, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string member, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="member" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="member">O ponto delimitados por nome de um membro de atividade.</param>
+        <param name="value">O valor a ser comparado</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Tracking.ActivityTrackingCondition" /> classe especificando um membro de atividade e um valor para comparação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member%2A>é definido como `member`, e <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Value%2A> é definido como `value`. O valor padrão de <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Operator%2A> é `Equals`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="member" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public override string Member { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Member" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do membro da atividade a ser comparada com <see cref="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Value" />.</summary>
+        <value>O ponto delimitados por nome do membro da atividade</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar uma propriedade de atividade ou um campo, membro do campo ou uma propriedade de atividade ou um único elemento de uma propriedade de atividade ou o campo (ou um membro da) que implementa o <xref:System.Collections.Generic.IEnumerable%601> interface. Por exemplo, você pode especificar um único elemento de uma coleção.  
+  
+ Se você usar o construtor padrão para <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition>, você deve definir explicitamente <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member%2A>.  
+  
+ O valor do membro da atividade especificada é comparado com <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Value%2A> aplicando <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Operator%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar a propriedade de membro.  Este exemplo é um exemplo de controle SDK do criador de perfil de.  Para obter mais informações, consulte [exemplo criador de perfil do controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#120](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#120)]
+ [!code-vb[WF_Samples#120](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A condição foi avaliada e <see cref="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">A condição foi avaliada e <see cref="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member" /> está formada incorretamente.</exception>
+        <exception cref="T:System.MissingMemberException">A condição foi avaliada e <see cref="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member" /> não faz referência a um membro de atividade válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Operator">
+      <MemberSignature Language="C#" Value="public override System.Workflow.Runtime.Tracking.ComparisonOperator Operator { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Runtime.Tracking.ComparisonOperator Operator" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Operator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.ComparisonOperator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o operador que é usado na comparação.</summary>
+        <value>Um dos valores de <see cref="T:System.Workflow.Runtime.Tracking.ComparisonOperator" />. O padrão é <see langword="Equals" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atualmente, apenas oferece suporte a `Equals` e `NotEquals`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O valor a ser comparado com <see cref="P:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member" />.</summary>
+        <value>O valor usado na comparação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Value%2A>é comparado com o valor de  
+  
+ <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Member%2A>aplicando <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Operator%2A>.  
+  
+ Se você usar o construtor padrão para <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition>, você deve definir explicitamente <xref:System.Workflow.Runtime.Tracking.ActivityTrackingCondition.Value%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar a propriedade de valor.  Este exemplo é um exemplo de controle SDK do criador de perfil de.  Para obter mais informações, consulte [exemplo criador de perfil do controle](http://msdn.microsoft.com/en-us/a280199c-3000-4148-ac63-cb5aaeac07c8).  
+  
+ [!code-csharp[WF_Samples#120](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets1.cs#120)]
+ [!code-vb[WF_Samples#120](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets1.vb#120)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

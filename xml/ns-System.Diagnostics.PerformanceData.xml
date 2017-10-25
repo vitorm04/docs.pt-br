@@ -1,0 +1,243 @@
+<Namespace Name="System.Diagnostics.PerformanceData">
+  <Docs>
+    <summary>Use as classes nesse namespace para fornecer dados de contador. Os contadores são usados para expor as métricas de desempenho para os consumidores, como o Monitor de desempenho. O namespace não contém classes para consumir os dados do contador. Para obter uma descrição completa da arquitetura de contadores de desempenho, consulte <see href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa373083\(v=vs.85\">contadores de desempenho</see>. aspx).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As classes neste namespace dão suporte a nova arquitetura (versão 2.0) para contadores de desempenho que foi introduzido no Windows Vista. A nova arquitetura, o provedor não responde às solicitações do consumidor diretamente, mas em vez disso, simplesmente mantém os dados do contador. O sistema injeta um thread no processo do provedor quando o provedor cria uma instância do conjunto de contador; o thread é responsável pelo tratamento das solicitações do cliente.  
+  
+ As etapas a seguir mostram o processo de gravação de um provedor de contadores.  
+  
+1.  Os contadores que fornece o provedor é definido em um manifesto de XML. Os contadores são agrupados logicamente em conjuntos de contadores. Os contadores dentro de um conjunto de contadores são identificados por um identificador numérico exclusivo dentro do conjunto de contador. Um provedor pode definir um ou mais conjuntos de contador. Um conjunto de contadores é identificado por um Guid que é exclusivo para um provedor. Observe que, se você usar essas classes para escrever seu provedor:  
+  
+    -   O atributo de retorno de chamada do elemento provedor será ignorado.  
+  
+    -   O valor de referência para o atributo de nome do elemento counterAttribute será ignorado.  
+  
+     Para obter detalhes sobre como escrever o manifesto, consulte [esquema de contadores de desempenho](https://msdn.microsoft.com/en-us/library/windows/desktop/aa373092\(v=vs.85\).aspx).  
+  
+2.  Depois de gravar o manifesto, use o [CTRPP](https://msdn.microsoft.com/en-us/library/windows/desktop/aa372128\(v=vs.85\).aspx) ferramenta para compilar o manifesto (ctrpp provider.man). A ferramenta gera quatro arquivos:. h, c,. RC, e * _r.h. Você pode ignorar os arquivos. h e. c. O arquivo. rc contém as cadeias de caracteres localizadas definidas em seu manifesto. Você pode usar os arquivos. RC e *_r.h para criar o arquivo de recurso compilado (. res) que você incluir em seu projeto. A chamada a seguir mostra como compilar o arquivo de recurso:  
+  
+    ```  
+    rc /r /i "c:\Program Files\Microsoft SDKs\Windows\v6.0\Include" provider.rc  
+    ```  
+  
+     Se você receber um erro que faz referência a SAL, copie o arquivo de sal o Microsoft Visual Studio, Visual C# incluir o diretório para o diretório especificado para a opção /i.  
+  
+     Adicione um caminho para o arquivo de recurso compilado (. res) à página de propriedades de aplicativo do projeto.  
+  
+3.  Grave seu provedor. As etapas a seguir mostram as chamadas feitas por um provedor:  
+  
+    1.  Chamar o <xref:System.Diagnostics.PerformanceData.CounterSet.%23ctor%2A?displayProperty=nameWithType> construtor para definir o conjunto de contadores. Chame este método para cada contador definido definido no manifesto.  
+  
+    2.  Para cada conjunto de contadores, chame um do <xref:System.Diagnostics.PerformanceData.CounterSet.AddCounter%2A?displayProperty=nameWithType> métodos para adicionar os contadores para o conjunto. Chame este método para cada contador definido no conjunto de contador.  
+  
+    3.  Chamar o <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A?displayProperty=nameWithType> método para criar uma instância do conjunto de contadores (uma instância contém os dados do contador). Para conjuntos de contadores de única instância, chame este método uma vez. Para vários conjuntos de contadores de instância, chame este método para cada instância para a qual você precisa fornecer dados de contador (use um nome exclusivo para cada instância).  
+  
+    4.  Use o <xref:System.Diagnostics.PerformanceData.CounterSetInstance.Counters%2A?displayProperty=nameWithType> propriedade para acessar e definir os dados do contador para o contador.  
+  
+4.  Depois de concluir seu provedor, use a ferramenta LodCtr para registrar os contadores no computador. Por exemplo,  
+  
+    ```  
+    lodctr /m:provider.man  
+    ```  
+  
+     O exemplo supõe que o manifesto e arquivo executável está no diretório atual. Para obter detalhes completos sobre como usar o LodCtr, consulte [Microsoft Technet](Http://Go.Microsoft.Com/FWLink/?LinkId=84000).  
+  
+ Você pode usar as classes neste namespace em computadores que executam o Windows Vista e sistemas operacionais posteriores.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manifesto simple:  
+  
+```  
+<!-- <?xml version="1.0" encoding="UTF-16"?> -->  
+<instrumentationManifest xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd"   
+     xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"   
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+     xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+     xmlns:trace=http://schemas.microsoft.com/win/2004/08/events/trace>  
+  
+    <instrumentation>  
+  
+        <counters xmlns=http://schemas.microsoft.com/win/2005/12/counters>  
+  
+            <provider  
+              applicationIdentity = "provider1.exe"  
+              providerType = "userMode"  
+              providerGuid = "{51D1685C-35ED-45be-99FE-17261A4F27F3}">  
+  
+               <counterSet guid = "{582803C9-AACD-45e5-8C30-571141A22092}"  
+                  uri = "Microsoft.Windows.System.PerfCounters.Typing"  
+                  name = "$(string.CounterSet1.Name)"   
+                  description = "$(string.CounterSet1.Description)"   
+                  instances = "single">  
+  
+                    <counter id = "1"  
+                      uri = "Microsoft.Windows.System.PerfCounters.Typing.TotalWords"  
+                      name = "$(string.CS1.Counter1.Name)"  
+                      description = "$(string.CS1.Counter1.Description)"  
+                      type = "perf_counter_rawcount"  
+                      detailLevel = "standard"/>  
+  
+                    <counter id = "2"  
+                      uri = "Microsoft.Windows.System.PerfCounters.Typing.WordsInInterval"  
+                      name = "$(string.CS1.Counter2.Name)"  
+                      description = "$(string.CS1.Counter2.Description)"  
+                      type = "perf_counter_delta"  
+                      detailLevel = "standard"/>  
+  
+                    <counter id = "3"  
+                      uri = "Microsoft.Windows.System.PerfCounters.Typing.LetterAPressed"  
+                      name = "$(string.CS1.Counter3.Name)"  
+                      description = "$(string.CS1.Counter3.Description)"  
+                      type = "perf_counter_rawcount"  
+                      detailLevel = "standard"/>  
+  
+                    <counter id = "4"  
+                      uri = "Microsoft.Windows.System.PerfCounters.Typing.WordsContainingLetterA"  
+                      name = "$(string.CS1.Counter4.Name)"   
+                      description = "$(string.CS1.Counter4.Description)"   
+                      type = "perf_counter_rawcount"  
+                      detailLevel = "standard"/>  
+  
+                    <counter id = "5"  
+                      uri = "Microsoft.Windows.System.PerfCounters.Typing.PercentOfWordsContainingLetterA"  
+                      name = "$(string.CS1.Counter5.Name)"   
+                      description = "$(string.CS1.Counter5.Description)"   
+                      type = "perf_sample_fraction"  
+                      baseID = "6"  
+                      detailLevel = "standard">  
+                      <counterAttributes>  
+                          <counterAttribute name = "displayAsReal" />  
+                      </counterAttributes>  
+                    </counter>  
+  
+                    <counter id = "6"  
+                      uri = "Microsoft.Windows.System.PerfCounters.Typing.PercentBase"  
+                      type = "perf_sample_base"  
+                      detailLevel = "standard">  
+                      <counterAttributes>  
+                          <counterAttribute name = "noDisplay" />  
+                      </counterAttributes>  
+                    </counter>  
+  
+                </counterSet>  
+            </provider>  
+        </counters>  
+    </instrumentation>  
+  
+    <localization>  
+        <resources culture="en-US">  
+            <stringTable>  
+  
+                <string id="CounterSet1.Name" value="Typing"/>  
+                <string id="CounterSet1.Description" value="Captures simple typing metrics."/>  
+                <string id="CS1.Counter1.Name" value="Total Words Typed"/>   
+                <string id="CS1.Counter1.Description" value="The total number of words typed."/>  
+                <string id="CS1.Counter2.Name" value="Words Typed In Interval"/>   
+                <string id="CS1.Counter2.Description" value="The total number of words typed in the interval."/>  
+                <string id="CS1.Counter3.Name" value="Letter A Pressed"/>   
+                <string id="CS1.Counter3.Description" value="The number of times that the letter A is pressed."/>  
+                <string id="CS1.Counter4.Name" value="Words Containing A"/>   
+                <string id="CS1.Counter4.Description" value="The number of words that contain the letter A."/>  
+                <string id="CS1.Counter5.Name" value="Percent of Words Containing A"/>   
+                <string id="CS1.Counter5.Description" value="The percent of words that contain the letter A in the last interval."/>  
+  
+            </stringTable>  
+        </resources>  
+    </localization>  
+</instrumentationManifest>  
+```  
+  
+ O exemplo a seguir mostra uma implementação de provedor simples para o manifesto:  
+  
+```  
+using System.Diagnostics.PerformanceData;  
+  
+        private static Guid providerId = new Guid("{51D1685C-35ED-45be-99FE-17261A4F27F3}");  
+        private static Guid typingCounterSetId = new Guid("{582803C9-AACD-45e5-8C30-571141A22092}");  
+  
+        private static CounterSet typingCounterSet;         // Defines the counter set  
+        private static CounterSetInstance typingCsInstance; // Instance of the counter set  
+  
+        private static int numberOfLetterAInWord = 0;  
+  
+        . . .  
+  
+            // Create the 'Typing' counter set.  
+            typingCounterSet = new CounterSet(providerId, typingCounterSetId, CounterSetInstanceType.Single);  
+  
+            // Add the counters to the counter set definition.  
+            typingCounterSet.AddCounter(1, CounterType.RawData32, "Total Word Count");  
+            typingCounterSet.AddCounter(2, CounterType.Delta32, "Words Typed In Interval");  
+            typingCounterSet.AddCounter(3, CounterType.RawData32, "A Key Pressed");  
+            typingCounterSet.AddCounter(4, CounterType.RawData32, "Words Containing A");  
+            typingCounterSet.AddCounter(5, CounterType.SampleFraction, "Percent of Words Containg A");  
+            typingCounterSet.AddCounter(6, CounterType.SampleBase, "Percent Base");  
+  
+            // Create an instance of the counter set (contains the counter data).  
+            typingCsInstance = typingCounterSet.CreateCounterSetInstance("Typing Instance");  
+            typingCsInstance.Counters[1].Value = 0;  
+            typingCsInstance.Counters[2].Value = 0;  
+            typingCsInstance.Counters[3].Value = 0;  
+            typingCsInstance.Counters[4].Value = 0;  
+            typingCsInstance.Counters[5].Value = 0;  
+            typingCsInstance.Counters[6].Value = 0;  
+  
+        . . .  
+  
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)  
+        {  
+            typingCounterSet.Dispose();  
+        }  
+  
+        // Simple effort to capture letter A key press and words typed.  
+        private void textInput_KeyDown(object sender, KeyEventArgs e)  
+        {  
+            Keys keyData = e.KeyData;  
+  
+            switch (e.KeyData)  
+            {  
+                case Keys.A :  
+                    // In the .NET 3.5 Framework, you had to use the  
+                    // Value property to set and increment the counter   
+                    // value. Beginning with the .NET 4.0 Framework,   
+                    // the Value property is safe to use in a multi-  
+                    // threaded application.  
+                    typingCsInstance.Counters["A Key Pressed"].Value++;  
+                    numberOfLetterAInWord++;  
+  
+                    break;  
+  
+                case Keys.Enter:  
+                case Keys.Space:  
+                case Keys.Tab:  
+  
+                    if (numberOfLetterAInWord > 0)  
+                    {  
+                        // Beginning with the .NET 4.0 Framework, you   
+                        // can use the Increment method to increment   
+                        // the counter value by 1. The Increment method   
+                        // is safe to use in a multi-threaded   
+                        // application.  
+                        typingCsInstance.Counters["Words Containing A"].Increment();  
+                        typingCsInstance.Counters["Percent of Words Containg A"].Increment();  
+                        numberOfLetterAInWord = 0;  
+                    }  
+  
+                    typingCsInstance.Counters["Percent Base"].Increment();  
+                    typingCsInstance.Counters["Total Word Count"].Increment();  
+                    typingCsInstance.Counters["Words Typed In Interval"].Increment();  
+  
+                    break;  
+            }  
+        }  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

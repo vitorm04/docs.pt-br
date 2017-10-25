@@ -1,0 +1,233 @@
+<Type Name="ComponentChangedEventArgs" FullName="System.ComponentModel.Design.ComponentChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ComponentChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComponentChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.ComponentChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.ComponentChangedEventArgs>Fornece dados para um <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> eventos. O <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento notifica o <xref:System.ComponentModel.Design.IComponentChangeService> e registrado manipuladores de eventos que um componente específico no documento ativo no momento foi alterado.  
+  
+ A <xref:System.ComponentModel.Design.ComponentChangedEventArgs> fornece as seguintes informações:  
+  
+-   Um <xref:System.ComponentModel.Design.ComponentChangedEventArgs.Component%2A> propriedade que indica o componente foi modificado.  
+  
+-   Um <xref:System.ComponentModel.Design.ComponentChangedEventArgs.Member%2A> propriedade que indica o membro que foi alterado.  
+  
+-   Um <xref:System.ComponentModel.Design.ComponentChangedEventArgs.NewValue%2A> propriedade que indica o novo valor do membro.  
+  
+-   Um <xref:System.ComponentModel.Design.ComponentChangedEventArgs.OldValue%2A> propriedade que indica o valor antigo do membro.  
+  
+ Designers de componente normalmente geram o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento automaticamente quando os componentes são adicionados, removidos ou modificados. Um <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento não é gerado durante o formulário carregar e descarregar porque as alterações no momento são esperadas. Um componente de designer pode gerar o <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> evento após uma propriedade do componente é alterado; Isso garante que a janela de propriedades exibirá a propriedade atualizada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como criar um <xref:System.ComponentModel.Design.ComponentChangedEventArgs>.  
+  
+ [!code-cpp[ComponentChangedEventArgsExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ComponentChangedEventArgsExample/CPP/componentchangedeventargsexample.cpp#1)]
+ [!code-csharp[ComponentChangedEventArgsExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ComponentChangedEventArgsExample/CS/componentchangedeventargsexample.cs#1)]
+ [!code-vb[ComponentChangedEventArgsExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ComponentChangedEventArgsExample/VB/componentchangedeventargsexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ocorrerá um erro de compilador se essa classe está especificada como a classe base de outra classe.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentChangedEventArgs (object component, System.ComponentModel.MemberDescriptor member, object oldValue, object newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object component, class System.ComponentModel.MemberDescriptor member, object oldValue, object newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.ComponentChangedEventArgs.#ctor(System.Object,System.ComponentModel.MemberDescriptor,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="member" Type="System.ComponentModel.MemberDescriptor" />
+        <Parameter Name="oldValue" Type="System.Object" />
+        <Parameter Name="newValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente que foi alterado.</param>
+        <param name="member">Um <see cref="T:System.ComponentModel.MemberDescriptor" /> que representa o membro que foi alterado.</param>
+        <param name="oldValue">O valor antigo do membro alterado.</param>
+        <param name="newValue">O novo valor do membro alterado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.ComponentChangedEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O designer de um componente chama este construtor depois de alterar uma propriedade do componente. Isso garante que a janela de propriedades exibirá o valor da propriedade atualizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Component">
+      <MemberSignature Language="C#" Value="public object Component { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Component" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.Component" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o componente foi modificado.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o componente foi modificado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.MemberDescriptor Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.MemberDescriptor Member" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MemberDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o membro que foi alterado.</summary>
+        <value>Um <see cref="T:System.ComponentModel.MemberDescriptor" /> que indica o membro que foi alterado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser `null` se o membro é desconhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public object NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo valor do membro alterado.</summary>
+        <value>O novo valor do membro alterado. Essa propriedade pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade tem um significado somente se o membro não for `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public object OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.ComponentChangedEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor antigo do membro alterado.</summary>
+        <value>O valor antigo do membro alterado. Essa propriedade pode ser <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade tem um significado somente se o membro não for `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

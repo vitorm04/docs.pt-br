@@ -1,0 +1,394 @@
+<Type Name="EventLogReader" FullName="System.Diagnostics.Eventing.Reader.EventLogReader">
+  <TypeSignature Language="C#" Value="public class EventLogReader : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EventLogReader extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.Eventing.Reader.EventLogReader" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Permite que você leia os eventos de um log de eventos com base em uma consulta de evento. Os eventos que são lidos por esse objeto são retornados como objetos de <see cref="T:System.Diagnostics.Eventing.Reader.EventRecord" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Por exemplo de código usando esta classe, consulte [como: consulta de eventos](http://msdn.microsoft.com/en-us/5231a436-4cf2-4539-90d2-a04813aba069) ou [How To: Access e ler informações do evento](http://msdn.microsoft.com/en-us/14db3375-d305-49ae-aa24-aedbe906e76c).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogReader (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">A consulta de evento usada para recuperar eventos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Eventing.Reader.EventLogReader" /> especificando uma consulta de evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.Eventing.Reader.EventLogReader.ReadEvent%2A> método para recuperar eventos deste objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogReader (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome do log de eventos para recuperar eventos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.Reader.EventLogReader" /> classe especificando um log de eventos ativo para recuperar eventos de.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.Eventing.Reader.EventLogReader.ReadEvent%2A> método para recuperar eventos deste objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogReader (System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, System.Diagnostics.Eventing.Reader.EventBookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Diagnostics.Eventing.Reader.EventLogQuery eventQuery, class System.Diagnostics.Eventing.Reader.EventBookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.#ctor(System.Diagnostics.Eventing.Reader.EventLogQuery,System.Diagnostics.Eventing.Reader.EventBookmark)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="eventQuery" Type="System.Diagnostics.Eventing.Reader.EventLogQuery" />
+        <Parameter Name="bookmark" Type="System.Diagnostics.Eventing.Reader.EventBookmark" />
+      </Parameters>
+      <Docs>
+        <param name="eventQuery">A consulta de evento usada para recuperar eventos.</param>
+        <param name="bookmark">O indicador (espaço reservado) usado como uma posição inicial no log de eventos ou fluxo de eventos. Somente eventos registrados em log depois que o evento de indicador será retornado pela consulta.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.Eventing.Reader.EventLogReader" /> classe especificando uma consulta de evento e um indicador que é usado como o início da consulta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.Eventing.Reader.EventLogReader.ReadEvent%2A> método para recuperar eventos deste objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventLogReader (string path, System.Diagnostics.Eventing.Reader.PathType pathType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.Diagnostics.Eventing.Reader.PathType pathType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.#ctor(System.String,System.Diagnostics.Eventing.Reader.PathType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="pathType" Type="System.Diagnostics.Eventing.Reader.PathType" />
+      </Parameters>
+      <Docs>
+        <param name="path">O nome do log de eventos do qual recuperar eventos ou o caminho para o arquivo de log de eventos do qual recuperar eventos.</param>
+        <param name="pathType">Especifica se a cadeia de caracteres usada no parâmetro de caminho especifica o nome de um log de eventos ou o caminho para um arquivo de log de eventos.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Diagnostics.Eventing.Reader.EventLogReader" /> especificando o nome do log de eventos do qual recuperar eventos ou o caminho para um arquivo de log do qual recuperar eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Diagnostics.Eventing.Reader.EventLogReader.ReadEvent%2A> método para recuperar eventos deste objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BatchSize">
+      <MemberSignature Language="C#" Value="public int BatchSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BatchSize" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogReader.BatchSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de eventos recuperados do fluxo de eventos em cada operação de leitura.</summary>
+        <value>Retorna um valor inteiro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelReading">
+      <MemberSignature Language="C#" Value="public void CancelReading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelReading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.CancelReading" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela a operação de consulta atual.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados por este objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados por este objeto e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogStatus">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventLogStatus&gt; LogStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Diagnostics.Eventing.Reader.EventLogStatus&gt; LogStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.Eventing.Reader.EventLogReader.LogStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Diagnostics.Eventing.Reader.EventLogStatus&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o status de cada log de eventos ou o arquivo de log associado à consulta de evento nesse objeto.</summary>
+        <value>Retorna uma lista de objetos <see cref="T:System.Diagnostics.Eventing.Reader.EventLogStatus" /> que contêm informações de status sobre um log de eventos associado à consulta de evento nesse objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadEvent">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Eventing.Reader.EventRecord ReadEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.Eventing.Reader.EventRecord ReadEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.ReadEvent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventRecord</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Lê o próximo evento retornado da consulta de evento neste objeto.</summary>
+        <returns>Retorna um objeto <see cref="T:System.Diagnostics.Eventing.Reader.EventRecord" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Por exemplo de código usando esta classe, consulte [como: consulta de eventos](http://msdn.microsoft.com/en-us/5231a436-4cf2-4539-90d2-a04813aba069).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadEvent">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.Eventing.Reader.EventRecord ReadEvent (TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Diagnostics.Eventing.Reader.EventRecord ReadEvent(valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.ReadEvent(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Eventing.Reader.EventRecord</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timeout">O tempo máximo para permitir que a operação de leitura executar antes de cancelar a operação.</param>
+        <summary>Lê o próximo evento retornado da consulta de evento neste objeto.</summary>
+        <returns>Retorna um objeto <see cref="T:System.Diagnostics.Eventing.Reader.EventRecord" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public void Seek (System.Diagnostics.Eventing.Reader.EventBookmark bookmark);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Seek(class System.Diagnostics.Eventing.Reader.EventBookmark bookmark) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.Seek(System.Diagnostics.Eventing.Reader.EventBookmark)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Diagnostics.Eventing.Reader.EventBookmark" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">O indicador (espaço reservado) usado como uma posição inicial no log de eventos ou fluxo de eventos. Somente os eventos que foram registrados depois que o evento de indicador será retornado pela consulta.</param>
+        <summary>Altera a posição no fluxo de eventos em que o próximo evento lido virão especificando um evento de indicador. Nenhum evento registrado antes do evento de indicador será recuperado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa função somente em conjuntos de resultados de um administrador ou o canal operacional ou de arquivos de log. evtx. Essa função não tem suporte no analítico e depuração canais de ou para ETL arquivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public void Seek (System.Diagnostics.Eventing.Reader.EventBookmark bookmark, long offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Seek(class System.Diagnostics.Eventing.Reader.EventBookmark bookmark, int64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.Seek(System.Diagnostics.Eventing.Reader.EventBookmark,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmark" Type="System.Diagnostics.Eventing.Reader.EventBookmark" />
+        <Parameter Name="offset" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="bookmark">O indicador (espaço reservado) usado como uma posição inicial no log de eventos ou fluxo de eventos. Somente os eventos que foram registrados depois que o evento de indicador será retornado pela consulta.</param>
+        <param name="offset">O número de eventos para alterar a posição do indicador.</param>
+        <summary>Altera a posição no fluxo de eventos em que o próximo evento lido virão especificando um evento de indicador e um número de eventos do indicador. Nenhum evento registrado antes do indicador mais o recuo será recuperado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa função somente em conjuntos de resultados de um administrador ou o canal operacional ou de arquivos de log. evtx. Essa função não tem suporte no analítico e depuração canais de ou para ETL arquivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seek">
+      <MemberSignature Language="C#" Value="public void Seek (System.IO.SeekOrigin origin, long offset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Seek(valuetype System.IO.SeekOrigin origin, int64 offset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.Eventing.Reader.EventLogReader.Seek(System.IO.SeekOrigin,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="System.IO.SeekOrigin" />
+        <Parameter Name="offset" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="origin">Um valor da <see cref="T:System.IO.SeekOrigin" /> enumeração define onde no fluxo de eventos para iniciar a consulta de eventos.</param>
+        <param name="offset">O número de eventos para adicionar à origem.</param>
+        <summary>Altera a posição no fluxo de eventos em que o próximo evento lido virão especificando uma posição inicial e um deslocamento da posição inicial. Nenhum evento registrado antes da posição inicial mais o recuo será recuperado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa função somente em conjuntos de resultados de um administrador ou o canal operacional ou de arquivos de log. evtx. Essa função não tem suporte no analítico e depuração canais de ou para ETL arquivos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

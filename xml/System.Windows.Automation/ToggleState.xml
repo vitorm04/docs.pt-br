@@ -1,0 +1,91 @@
+<Type Name="ToggleState" FullName="System.Windows.Automation.ToggleState">
+  <TypeSignature Language="C#" Value="public enum ToggleState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToggleState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ToggleState" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationTypes</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("ad7db4af-7166-4478-a402-ad5b77eab2fa")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém valores que especificam o <see cref="T:System.Windows.Automation.ToggleState" /> de um elemento da Automação da Interface do Usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle deve percorrer seu <xref:System.Windows.Automation.ToggleState> nesta ordem: On, Off e se suportado, indeterminado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Indeterminate">
+      <MemberSignature Language="C#" Value="Indeterminate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ToggleState Indeterminate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ToggleState.Indeterminate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento de Automação da Interface do Usuário está em um estado indeterminado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade indeterminada pode ser usada para indicar se o usuário foi acionado em um controle. Por exemplo, uma caixa de seleção pode aparecer marcada e esmaecida, que indica um estado indeterminado.  
+  
+ Criar um estado indeterminado é diferente de desabilitar o controle. Consequentemente, uma caixa de seleção no estado indeterminado ainda pode receber o foco. Quando o usuário clica em um controle indeterminado o <xref:System.Windows.Automation.ToggleState.Indeterminate> ciclos para seu próximo valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ToggleState Off = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ToggleState.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento da Automação da Interface do Usuário não é selecionado, verificado, marcado ou ativado de outra maneira.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="On">
+      <MemberSignature Language="C#" Value="On" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Automation.ToggleState On = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Automation.ToggleState.On" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationTypes</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ToggleState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento da Automação da Interface do Usuário é selecionado, verificado, marcado ou ativado de outra maneira.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

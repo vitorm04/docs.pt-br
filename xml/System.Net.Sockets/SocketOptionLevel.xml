@@ -1,0 +1,181 @@
+<Type Name="SocketOptionLevel" FullName="System.Net.Sockets.SocketOptionLevel">
+  <TypeSignature Language="C#" Value="public enum SocketOptionLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SocketOptionLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Sockets.SocketOptionLevel" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Sockets</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os níveis de opção de soquete para os métodos <see cref="M:System.Net.Sockets.Socket.SetSocketOption(System.Net.Sockets.SocketOptionLevel,System.Net.Sockets.SocketOptionName,System.Int32)" /> e <see cref="M:System.Net.Sockets.Socket.GetSocketOption(System.Net.Sockets.SocketOptionLevel,System.Net.Sockets.SocketOptionName)" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Sockets.SocketOptionLevel> enumeração define os níveis de opção de soquete que podem ser passados para o <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> e <xref:System.Net.Sockets.Socket.GetSocketOption%2A?displayProperty=nameWithType> métodos. <xref:System.Net.Sockets.SocketOptionName>valores enumerados são agrupados por <xref:System.Net.Sockets.SocketOptionLevel>.  
+  
+ **Observação** para usar o IPv6 no Windows XP, instale antecipada Networking Pack para Windows XP.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa essa enumeração para definir opções de soquete.  
+  
+ [!code-cpp[Socket_Socket_Options#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Socket_Socket_Options/CPP/source.cpp#1)]
+ [!code-csharp[Socket_Socket_Options#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Socket_Socket_Options/CS/source.cs#1)]
+ [!code-vb[Socket_Socket_Options#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Socket_Socket_Options/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IP">
+      <MemberSignature Language="C#" Value="IP" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionLevel IP = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionLevel.IP" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          As opções <see cref="T:System.Net.Sockets.Socket" /> se aplicam aos soquetes IP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IPv6">
+      <MemberSignature Language="C#" Value="IPv6" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionLevel IPv6 = int32(41)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionLevel.IPv6" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          As opções <see cref="T:System.Net.Sockets.Socket" /> se aplicam aos soquetes IPv6.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Socket">
+      <MemberSignature Language="C#" Value="Socket" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionLevel Socket = int32(65535)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionLevel.Socket" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          As opções <see cref="T:System.Net.Sockets.Socket" /> se aplicam a todos os soquetes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tcp">
+      <MemberSignature Language="C#" Value="Tcp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionLevel Tcp = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionLevel.Tcp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          As opções <see cref="T:System.Net.Sockets.Socket" /> se aplicam aos soquetes TCP.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Udp">
+      <MemberSignature Language="C#" Value="Udp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.Sockets.SocketOptionLevel Udp = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.Sockets.SocketOptionLevel.Udp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Sockets</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.SocketOptionLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          As opções <see cref="T:System.Net.Sockets.Socket" /> se aplicam aos soquetes UDP.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

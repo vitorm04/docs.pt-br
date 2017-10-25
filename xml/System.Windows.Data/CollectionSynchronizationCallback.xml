@@ -1,0 +1,30 @@
+<Type Name="CollectionSynchronizationCallback" FullName="System.Windows.Data.CollectionSynchronizationCallback">
+  <TypeSignature Language="C#" Value="public delegate void CollectionSynchronizationCallback(IEnumerable collection, object context, Action accessMethod, bool writeAccess);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CollectionSynchronizationCallback extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Data.CollectionSynchronizationCallback" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="collection" Type="System.Collections.IEnumerable" />
+    <Parameter Name="context" Type="System.Object" />
+    <Parameter Name="accessMethod" Type="System.Action" />
+    <Parameter Name="writeAccess" Type="System.Boolean" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="collection">A coleção para acessar em um thread diferente daquele que o criou.</param>
+    <param name="context">Um objeto usado para sincronizar a coleção.</param>
+    <param name="accessMethod">Um delegado para o método que executa a operação na coleção.</param>
+    <param name="writeAccess">
+      <see langword="true" />Se <c>accessMethod</c> grava na coleção; caso contrário, <see langword="false" />.</param>
+    <summary>Representa o método que sincroniza uma coleção para o acesso entre threads.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

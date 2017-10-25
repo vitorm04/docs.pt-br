@@ -1,0 +1,341 @@
+<Type Name="KeyGesture" FullName="System.Windows.Input.KeyGesture">
+  <TypeSignature Language="C#" Value="public class KeyGesture : System.Windows.Input.InputGesture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyGesture extends System.Windows.Input.InputGesture" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.KeyGesture" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputGesture</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Windows.Input.KeyGestureConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ValueSerializer(typeof(System.Windows.Input.KeyGestureValueSerializer))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um gesto de entrada de teclado que pode ser usado para invocar um comando.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos, um <xref:System.Windows.Input.KeyGesture> deve estar associado um ou mais <xref:System.Windows.Input.ModifierKeys>. As exceções a essa regra são as teclas de função e as chaves de teclado numérico, que podem ser um válido <xref:System.Windows.Input.KeyGesture> por si mesmos. Por exemplo, você pode criar um <xref:System.Windows.Input.KeyGesture> usando somente a tecla F12, mas usar o X da chave em um <xref:System.Windows.Input.KeyGesture> ele deve estar combinado com uma tecla modificadora.  
+  
+ Em geral, você pode  
+  
+ Você pode usar um <xref:System.Windows.Input.KeyBinding> para associar um <xref:System.Windows.Input.KeyGesture> para um <xref:System.Windows.Input.ICommand>, de modo que o comando é invocado quando o <xref:System.Windows.Input.KeyGesture> ocorre.  
+  
+ Para <xref:System.Windows.Input.KeyGesture> [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] usos, a propriedade que geralmente é definida em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] é <xref:System.Windows.Input.KeyBinding.Gesture%2A>, em casos onde o gesto representa uma chave padrão e uma chave de modificador. Você também pode definir o <xref:System.Windows.Input.KeyBinding.Gesture%2A> combinação da chave de propriedade para ser uma tecla de função ou apenas um modificador. No entanto, é mais comum para definir a <xref:System.Windows.Input.KeyBinding.Key%2A> propriedade se a associação de comando pretendido é uma tecla de função com nenhum modificador ou <xref:System.Windows.Input.KeyBinding.Modifiers%2A> se a associação de comando pretendido é apenas as teclas modificadoras.  
+  
+<a name="xamlAttributeUsage_KeyGesture"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+  
+```  
+<object property="oneOrMoreModifierKeys+key"/>  
+- or -  
+<object property="functionKey"/>  
+```  
+  
+<a name="xamlValues_KeyGesture"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ `functionKey`  
+ <xref:System.Windows.Input.Key>  
+  
+ Um único valor de chave, que deve ser uma das teclas de função (F1-12) ou chaves de teclado numérico.  
+  
+ `oneOrMoreModifierKeys`  
+ Um ou mais teclas modificadoras, definidas pelo <xref:System.Windows.Input.ModifierKeys> enumeração, delimitada por um caractere "+".  
+  
+ `key`  
+ <xref:System.Windows.Input.Key>  
+  
+ Um valor de chave único.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como associar o <xref:System.Windows.Input.ApplicationCommands.Close%2A> comando um <xref:System.Windows.Input.KeyGesture> usando um <xref:System.Windows.Input.KeyBinding>.  
+  
+ [!code-csharp[commandlibrarysnippets#KeyBindingWithKeyAndModifiers](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#keybindingwithkeyandmodifiers)]
+ [!code-vb[commandlibrarysnippets#KeyBindingWithKeyAndModifiers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#keybindingwithkeyandmodifiers)]  
+  
+ O exemplo a seguir mostra como usar <xref:System.Windows.Input.KeyGesture> em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)]. Observe que o [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] uso diretamente não declara um `<KeyGesture>` elemento. Uso do elemento de objeto não é possível porque <xref:System.Windows.Input.KeyGesture> não expõe um construtor padrão público. Em vez disso, o [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] uso usa o comportamento de typeconverter para declarar um inteiro <xref:System.Windows.Input.KeyGesture> embutidos como o `Gesture` valor do atributo.  
+  
+ [!code-xaml[commandWithHandler#CommandHandlerKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlerkeybinding)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyGesture (System.Windows.Input.Key key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.Key key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyGesture.#ctor(System.Windows.Input.Key)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave associada a esse gesto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.KeyGesture" /> com o <see cref="T:System.Windows.Input.Key" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos, um <xref:System.Windows.Input.KeyGesture> deve estar associado um ou mais <xref:System.Windows.Input.ModifierKeys>.  As exceções a essa regra são as teclas de função e as chaves de teclado numérico, que podem ser um válido <xref:System.Windows.Input.KeyGesture> por si mesmos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o construtor para criar um <xref:System.Windows.Input.KeyGesture> e associá-la a um <xref:System.Windows.Input.KeyBinding>.  O <xref:System.Windows.Input.KeyBinding> é adicionada para o <xref:System.Windows.Input.InputBindingCollection> de um <xref:System.Windows.Window>.  
+  
+ [!code-csharp[commandlibrarysnippets#KeyBindingWithNoModifier](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#keybindingwithnomodifier)]
+ [!code-vb[commandlibrarysnippets#KeyBindingWithNoModifier](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#keybindingwithnomodifier)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="key" /> não é um <see cref="T:System.Windows.Input.Key" /> válido.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="key" /> não é um <see cref="T:System.Windows.Input.KeyGesture" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyGesture (System.Windows.Input.Key key, System.Windows.Input.ModifierKeys modifiers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.Key key, valuetype System.Windows.Input.ModifierKeys modifiers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyGesture.#ctor(System.Windows.Input.Key,System.Windows.Input.ModifierKeys)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave associada com o gesto.</param>
+        <param name="modifiers">As teclas modificadoras associadas com o gesto.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Input.KeyGesture" /> com o <see cref="T:System.Windows.Input.Key" /> e <see cref="T:System.Windows.Input.ModifierKeys" /> especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos, um <xref:System.Windows.Input.KeyGesture> deve estar associado um ou mais <xref:System.Windows.Input.ModifierKeys>. As exceções a essa regra são as teclas de função e as chaves de teclado numérico, que podem ser um válido <xref:System.Windows.Input.KeyGesture> por si mesmos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o construtor para criar um <xref:System.Windows.Input.KeyGesture> e associá-la a um <xref:System.Windows.Input.KeyBinding>. O <xref:System.Windows.Input.KeyBinding> é adicionada para o <xref:System.Windows.Input.InputBindingCollection> de um <xref:System.Windows.Window>.  
+  
+ [!code-csharp[commandlibrarysnippets#KeyBindingWithKeyAndModifiers](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#keybindingwithkeyandmodifiers)]
+ [!code-vb[commandlibrarysnippets#KeyBindingWithKeyAndModifiers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#keybindingwithkeyandmodifiers)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="modifiers" />não é válido<see cref="T:System.Windows.Input.ModifierKeys" />  
+  
+ -ou-  
+  
+ <paramref name="key" /> não é um <see cref="T:System.Windows.Input.Key" /> válido.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="key" />e <paramref name="modifiers" /> não formam um válido <see cref="T:System.Windows.Input.KeyGesture" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyGesture (System.Windows.Input.Key key, System.Windows.Input.ModifierKeys modifiers, string displayString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Windows.Input.Key key, valuetype System.Windows.Input.ModifierKeys modifiers, string displayString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyGesture.#ctor(System.Windows.Input.Key,System.Windows.Input.ModifierKeys,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="key" Type="System.Windows.Input.Key" />
+        <Parameter Name="modifiers" Type="System.Windows.Input.ModifierKeys" />
+        <Parameter Name="displayString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave associada com o gesto.</param>
+        <param name="modifiers">As teclas modificadoras associadas com o gesto.</param>
+        <param name="displayString">Uma representação da cadeia de caracteres do <see cref="T:System.Windows.Input.KeyGesture" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Input.KeyGesture" /> classe com especificado <see cref="T:System.Windows.Input.Key" />, <see cref="T:System.Windows.Input.ModifierKeys" />e exibir a cadeia de caracteres.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.KeyGesture.DisplayString%2A> está definida como o `displayString` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          <paramref name="modifiers" />não é válido<see cref="T:System.Windows.Input.ModifierKeys" />  
+  
+ -ou-  
+  
+ <paramref name="key" /> não é um <see cref="T:System.Windows.Input.Key" /> válido.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="displayString" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="key" />e <paramref name="modifiers" /> não formam um válido <see cref="T:System.Windows.Input.KeyGesture" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayString">
+      <MemberSignature Language="C#" Value="public string DisplayString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayString" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyGesture.DisplayString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação de cadeia de caracteres deste <see cref="T:System.Windows.Input.KeyGesture" />.</summary>
+        <value>A cadeia de caracteres de exibição de <see cref="T:System.Windows.Input.KeyGesture" />. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma cadeia de caracteres de exibição não foi definida no construtor, uma cadeia de caracteres vazia é retornada.  
+  
+ Se essa propriedade estiver vazia, o <xref:System.Windows.Input.KeyGesture.GetDisplayStringForCulture%2A> método retorna uma cadeia de caracteres criada a partir de <xref:System.Windows.Input.KeyGesture.Key%2A> e <xref:System.Windows.Input.KeyGesture.Modifiers%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDisplayStringForCulture">
+      <MemberSignature Language="C#" Value="public string GetDisplayStringForCulture (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetDisplayStringForCulture(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyGesture.GetDisplayStringForCulture(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">As informações específicas de cultura.</param>
+        <summary>Retorna uma cadeia de caracteres que pode ser usada para exibir o <see cref="T:System.Windows.Input.KeyGesture" />.</summary>
+        <returns>A cadeia de caracteres</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a cadeia de caracteres de exibição foi definida pelo construtor, cadeia de caracteres retornada; Caso contrário, uma cadeia de caracteres é criada a partir de <xref:System.Windows.Input.KeyGesture.Key%2A> e <xref:System.Windows.Input.KeyGesture.Modifiers%2A> com qualquer conversões necessárias sejam regidos por especificado <xref:System.Globalization.CultureInfo> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.Key Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.Key Key" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyGesture.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.Key</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave associada a esta <see cref="T:System.Windows.Input.KeyGesture" />.</summary>
+        <value>A chave associada com o gesto.  O valor padrão é <see cref="F:System.Windows.Input.Key.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos, um <xref:System.Windows.Input.KeyGesture> deve estar associado um ou mais <xref:System.Windows.Input.ModifierKeys>.  As exceções a essa regra são as teclas de função e as chaves de teclado numérico, que podem ser um válido <xref:System.Windows.Input.KeyGesture> por si mesmos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="public override bool Matches (object targetElement, System.Windows.Input.InputEventArgs inputEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Matches(object targetElement, class System.Windows.Input.InputEventArgs inputEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.KeyGesture.Matches(System.Object,System.Windows.Input.InputEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetElement" Type="System.Object" />
+        <Parameter Name="inputEventArgs" Type="System.Windows.Input.InputEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="targetElement">O destino.</param>
+        <param name="inputEventArgs">Os dados de evento de entrada para comparar esse gesto.</param>
+        <summary>Determina se este <see cref="T:System.Windows.Input.KeyGesture" /> corresponde à entrada associada especificado <see cref="T:System.Windows.Input.InputEventArgs" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se os dados de evento correspondem a isso <see cref="T:System.Windows.Input.KeyGesture" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `targetElement`pode ser usado para tomar uma decisão mais específica sobre se um comando deve ser chamado em um elemento específico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como testar se um <xref:System.Windows.Input.KeyGesture> corresponde a entrada associada a uma instância de um <xref:System.Windows.Input.InputEventArgs>. Um <xref:System.Windows.UIElement.KeyDown> manipulador de eventos é criado que compara os dados de evento com o <xref:System.Windows.Input.KeyGesture> usando o <xref:System.Windows.Input.KeyGesture.Matches%2A> método.  
+  
+ [!code-csharp[commandlibrarysnippets#KeyDownHandlerKeyGestureMatches](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandLibrarySnippets/CSharp/Window1.xaml.cs#keydownhandlerkeygesturematches)]
+ [!code-vb[commandlibrarysnippets#KeyDownHandlerKeyGestureMatches](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandLibrarySnippets/visualbasic/window1.xaml.vb#keydownhandlerkeygesturematches)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Modifiers">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ModifierKeys Modifiers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.ModifierKeys Modifiers" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.KeyGesture.Modifiers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ModifierKeys</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as teclas modificadoras associadas a esta <see cref="T:System.Windows.Input.KeyGesture" />.</summary>
+        <value>As teclas modificadoras associadas com o gesto. O valor padrão é <see cref="F:System.Windows.Input.ModifierKeys.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos casos, um <xref:System.Windows.Input.KeyGesture> deve estar associado um ou mais <xref:System.Windows.Input.ModifierKeys>. As exceções a essa regra são as teclas de função e as chaves de teclado numérico, que podem ser um válido <xref:System.Windows.Input.KeyGesture> por si mesmos. Por exemplo, você pode criar um <xref:System.Windows.Input.KeyGesture> usando somente a tecla F12, mas usar o X da chave em um <xref:System.Windows.Input.KeyGesture> ele deve estar combinado com uma tecla modificadora.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

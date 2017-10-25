@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Input.Manipulations">
+  <Docs>
+    <summary>Fornece a funcionalidade para monitorar e responder a uma coleção de manipuladores de como um único composto, permitindo que um aplicativo controlar as alterações de composição, em vez de componentes individuais.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

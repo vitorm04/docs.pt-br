@@ -1,0 +1,236 @@
+<Type Name="GregorianCalendarTypes" FullName="System.Globalization.GregorianCalendarTypes">
+  <TypeSignature Language="C#" Value="public enum GregorianCalendarTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed GregorianCalendarTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.GregorianCalendarTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as diferentes versões de idioma do calendário gregoriano.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os padrões de data e hora associados a <xref:System.Globalization.GregorianCalendar> variam de acordo com o idioma. Se o <xref:System.Globalization.GregorianCalendar> está selecionado no <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>, <xref:System.Globalization.GregorianCalendarTypes> pode ser usado para especificar quais padrões de data e hora para que use <xref:System.Globalization.DateTimeFormatInfo>.  
+  
+ Para árabes culturas, estão disponíveis mais versões de idioma do calendário gregoriano. Por exemplo, você pode usar a versão francesa do <xref:System.Globalization.GregorianCalendar> usando o valor de MiddleEastFrench.  
+  
+ Uma cultura que dá suporte a <xref:System.Globalization.GregorianCalendarTypes.MiddleEastFrench> pode não oferecer suporte a todas as versões de idioma do <xref:System.Globalization.GregorianCalendar>. O <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> propriedades especificam os calendários que cultura com suporte. Se <xref:System.Globalization.GregorianCalendar> é suportado, <xref:System.Globalization.GregorianCalendar.CalendarType%2A> pode ser usado para determinar quais versões de idioma do <xref:System.Globalization.GregorianCalendar.CalendarType%2A> têm suporte.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como determinar a versão do idioma GregorianCalendar suportada pela cultura.  
+  
+ [!code-cpp[System.Globalization.GregorianCalendarTypes#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.GregorianCalendarTypes/CPP/gregoriancalendartypes.cpp#1)]
+ [!code-csharp[System.Globalization.GregorianCalendarTypes#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.GregorianCalendarTypes/CS/gregoriancalendartypes.cs#1)]
+ [!code-vb[System.Globalization.GregorianCalendarTypes#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.GregorianCalendarTypes/VB/gregoriancalendartypes.vb#1)]  
+  
+ O código a seguir exemplo imprime um <xref:System.DateTime> usando um <xref:System.Globalization.GregorianCalendar> que está localizado.  
+  
+ [!code-cpp[System.Globalization.GregorianCalendarLocalized#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.GregorianCalendarLocalized/CPP/gregorianlocalized.cpp#1)]
+ [!code-csharp[System.Globalization.GregorianCalendarLocalized#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.GregorianCalendarLocalized/CS/gregorianlocalized.cs#1)]
+ [!code-vb[System.Globalization.GregorianCalendarLocalized#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.GregorianCalendarLocalized/VB/gregorianlocalized.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Arabic">
+      <MemberSignature Language="C#" Value="Arabic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.GregorianCalendarTypes Arabic = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.GregorianCalendarTypes.Arabic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.GregorianCalendarTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se à versão em árabe do calendário gregoriano.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Localized">
+      <MemberSignature Language="C#" Value="Localized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.GregorianCalendarTypes Localized = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.GregorianCalendarTypes.Localized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.GregorianCalendarTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se à versão localizada do calendário gregoriano, com base no idioma do <see cref="T:System.Globalization.CultureInfo" /> que usa o <see cref="T:System.Globalization.DateTimeFormatInfo" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleEastFrench">
+      <MemberSignature Language="C#" Value="MiddleEastFrench" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.GregorianCalendarTypes MiddleEastFrench = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.GregorianCalendarTypes.MiddleEastFrench" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.GregorianCalendarTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se à versão em francês do Oriente Médio do calendário gregoriano.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransliteratedEnglish">
+      <MemberSignature Language="C#" Value="TransliteratedEnglish" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.GregorianCalendarTypes TransliteratedEnglish = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.GregorianCalendarTypes.TransliteratedEnglish" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.GregorianCalendarTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se à versão em inglês transliterado do calendário gregoriano.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransliteratedFrench">
+      <MemberSignature Language="C#" Value="TransliteratedFrench" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.GregorianCalendarTypes TransliteratedFrench = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.GregorianCalendarTypes.TransliteratedFrench" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.GregorianCalendarTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se à versão em francês transliterado do calendário gregoriano.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="USEnglish">
+      <MemberSignature Language="C#" Value="USEnglish" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Globalization.GregorianCalendarTypes USEnglish = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.GregorianCalendarTypes.USEnglish" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.GregorianCalendarTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Refere-se aos EUA. Versão em inglês do calendário gregoriano.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,39 @@
+<Type Name="LoadItemsEventHandler" FullName="System.Web.UI.MobileControls.LoadItemsEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void LoadItemsEventHandler(object sender, LoadItemsEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LoadItemsEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.LoadItemsEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Web.UI.MobileControls.LoadItemsEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A origem do evento, um <see cref="T:System.Web.UI.MobileControls.SelectionList" /> controle.</param>
+    <param name="e">Um objeto de <see cref="T:System.Web.UI.MobileControls.ListDataBindEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento <see cref="E:System.Web.UI.MobileControls.SelectionList.ItemDataBind" /> de um controle <see cref="T:System.Web.UI.MobileControls.SelectionList" />. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de lista contém uma coleção de itens. Esses itens são da <xref:System.Web.UI.MobileControls.MobileListItem> classe. Ao fornecer processamento padrão, o controle de lista representa um <xref:System.Web.UI.MobileControls.MobileListItem> por seu <xref:System.Web.UI.MobileControls.MobileListItem.Text%2A> propriedade. Na renderização de modelo, o modelo pode processar qualquer propriedade desejada de um <xref:System.Web.UI.MobileControls.MobileListItem> ou objeto de associação de dados associado. Se um item de dados associados a um <xref:System.Web.UI.MobileControls.MobileListItem> objeto, o <xref:System.Web.UI.MobileControls.List.ItemDataBind> é gerado. Neste momento, o manipulador pode definir propriedades do <xref:System.Web.UI.MobileControls.MobileListItem> objeto a partir de expressões arbitrárias.  
+  
+ Quando você cria um <xref:System.Web.UI.MobileControls.ListDataBindEventHandler> delegar uma <xref:System.Web.UI.MobileControls.SelectionList> controle, que você identificar o método que manipulará o evento. O <xref:System.Web.UI.MobileControls.SelectionList> controle notifica o manipulador quando um item de evento é gerado. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. A menos que você remova o representante, o manipulador de eventos é chamado sempre que o evento ocorre.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

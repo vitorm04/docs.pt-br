@@ -1,0 +1,873 @@
+<Type Name="Freezable" FullName="System.Windows.Freezable">
+  <TypeSignature Language="C#" Value="public abstract class Freezable : System.Windows.DependencyObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Freezable extends System.Windows.DependencyObject" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Freezable" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.DependencyObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um objeto que tem um estado modificável e estado somente leitura ("congelado"). Classes que derivam de <see cref="T:System.Windows.Freezable" /> fornecem notificação de alteração detalhada, podem ser transformadas em imutáveis e podem clonar a si mesmas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Freezable> classe fornece recursos especiais que podem ajudar a melhoram o desempenho do aplicativo ao usar objetos que são caros de modificar ou copiar. Exemplos de <xref:System.Windows.Freezable> objetos incluem o seguinte:  
+  
+-   <xref:System.Windows.Media.Brush>  
+  
+-   <xref:System.Windows.Media.Pen>  
+  
+-   <xref:System.Windows.Media.Geometry>  
+  
+-   <xref:System.Windows.Media.Transform>  
+  
+-   <xref:System.Windows.Media.Animation.AnimationTimeline>  
+  
+## <a name="deriving-from-freezable"></a>Derivando de Freezable  
+ Uma classe que deriva de <xref:System.Windows.Freezable> obtém os recursos a seguir:  
+  
+-   Estados especiais: estado somente leitura ("congelado") e um estado gravável.  
+  
+-   Segurança de thread: um congelada <xref:System.Windows.Freezable> objeto pode ser compartilhado entre threads.  
+  
+-   Notificação de alteração detalhada: ao contrário de outras <xref:System.Windows.DependencyObject> objetos, uma <xref:System.Windows.Freezable> objeto fornece notificações de alteração ao alterar valores de propriedade sub.  
+  
+-   Fácil clonagem: a classe Congelável tem vários métodos já implementados que produzem clones profundos.  
+  
+ Para obter informações sobre como usar e criar seu próprio <xref:System.Windows.Freezable> objetos, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Qualquer público <see langword="static" /> membros desse tipo são thread-safe. Não há garantia de que qualquer membro de instância seja thread-safe.  
+  
+ Quando o <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" />, um <see cref="T:System.Windows.Freezable" /> objeto pode ser acessado somente do thread no qual ele foi criado. Tentativa de acessá-lo de outra lança de thread um <see cref="T:System.InvalidOperationException" />. O <see cref="Overload:System.Windows.Threading.Dispatcher.Invoke" /> e <see cref="Overload:System.Windows.Threading.Dispatcher.BeginInvoke" /> métodos fornecem suporte de empacotamento do thread correto.  
+  
+ Quando seus <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="true" />, <see cref="T:System.Windows.Freezable" /> objetos são free-thread.  Para obter mais informações, consulte a [Visão geral de objetos congeláveis](~/docs/framework/wpf/advanced/freezable-objects-overview.md).</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Freezable ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância de um <see cref="T:System.Windows.Freezable" /> classe derivada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é o construtor de acessibilidade protegido de uma classe abstrata.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanFreeze">
+      <MemberSignature Language="C#" Value="public bool CanFreeze { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanFreeze" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Freezable.CanFreeze" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto pode se tornar não modificável.</summary>
+        <value>
+          <see langword="true" /> se o objeto atual puder se tornar não modificável ou já for não modificável, caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Essa implementação de método usa o <see cref="M:System.Windows.Freezable.FreezeCore(System.Boolean)" /> método com <paramref name="isChecking" /> definida como <see langword="true" /> para determinar se um <see cref="T:System.Windows.Freezable" /> podem ser feitas não modificável. Para modificar o comportamento dessa propriedade em uma classe derivada, substituir o <see cref="M:System.Windows.Freezable.FreezeCore(System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public event EventHandler Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Changed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Freezable.Changed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="T:System.Windows.Freezable" /> ou um objeto nele contido é modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você tentar adicionar ou remover manipuladores de eventos quando o objeto atual não é modificável (quando o <xref:System.Windows.Freezable.IsFrozen%2A> é de propriedade `true`), uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Freezable Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Freezable Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável do <see cref="T:System.Windows.Freezable" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência do objeto, esse método copia expressões (que não podem resolver) mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Freezable.Clone%2A> e <xref:System.Windows.Freezable.CloneCurrentValue%2A> métodos produzem clones modificáveis de congelada <xref:System.Windows.Freezable> objetos (os métodos também clonagem <xref:System.Windows.Freezable> objetos que não sejam congelados). O clone é efetivamente uma cópia em profundidade do objeto atual.  
+  
+ A tabela a seguir resume as diferenças entre o <xref:System.Windows.Freezable.Clone%2A> e <xref:System.Windows.Freezable.CloneCurrentValue%2A> métodos.  
+  
+|Ação|Comportamento do método clone|Comportamento do método CloneCurrentValue|  
+|------------|---------------------------|---------------------------------------|  
+|Copiando uma propriedade de dependência que tenha uma expressão|A expressão é copiada, mas não poderá ser resolvido. Para obter mais informações, consulte a [Visão geral de objetos congeláveis](~/docs/framework/wpf/advanced/freezable-objects-overview.md).|O valor atual da expressão é copiado, mas não a própria expressão.|  
+|Copiando uma propriedade de dependência animada|O valor da propriedade base (não animado) é copiado. Animações não são copiadas.|O valor da propriedade atual animado é copiado. Animações não são copiadas.|  
+  
+ Observe que as propriedades não definidas não são copiadas. Se uma propriedade não definida tem um valor padrão que é um congelada <xref:System.Windows.Freezable>, que o valor da propriedade permaneça congelado no clone modificável caso contrário.  
+  
+## <a name="move-a-freezable-between-threads"></a>Mover um Freezable entre Threads  
+ Esse método pode ser útil para mover um <xref:System.Windows.Freezable> entre threads. Primeiro, verifique o <xref:System.Windows.Freezable> não modificável chamando seu <xref:System.Windows.Freezable.Freeze%2A> método. Agora, outro thread pode acessar o <xref:System.Windows.Freezable> e fazer uma local <xref:System.Windows.Freezable.Clone%2A> que ele pode acessar.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método usa <see cref="M:System.Windows.Freezable.CloneCore(System.Windows.Freezable)" /> para produzir o clone. Para modificar o comportamento desse método em uma classe derivada, substituir o <see cref="M:System.Windows.Freezable.CloneCore(System.Windows.Freezable)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCore">
+      <MemberSignature Language="C#" Value="protected virtual void CloneCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CloneCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.CloneCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O objeto para clonar.</param>
+        <summary>Faz a instância de um clone (cópia em profundidade) especificada <see cref="T:System.Windows.Freezable" /> usando valores de propriedade base (não animado).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.Clone%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.Clone%2A> em vez de chamar este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você derivar de <see cref="T:System.Windows.Freezable" />, talvez seja necessário substituir esse método. Motivos para substituir incluem o seguinte:  
+  
+-   A classe derivada tem dados que não são expostos por meio de propriedades de dependência.  
+  
+-   A classe derivada deve executar o trabalho de inicialização extra não pode ser obtido por meio da substituição simplesmente <see cref="M:System.Windows.Freezable.CreateInstanceCore" />. Por exemplo, isso se aplica se sua classe derivada implementa <see cref="T:System.ComponentModel.ISupportInitialize" />.  
+  
+ Classes que armazenam todos os seus dados em Propriedades de dependência e que não é necessário executar o trabalho de inicialização extra não precisam substituir <see cref="M:System.Windows.Freezable.CloneCore(System.Windows.Freezable)" />.  
+  
+ É essencial que todas as implementações de chamar a implementação base deste método. Implementações só devem executar o trabalho que não é executado pela implementação do padrão. A implementação padrão faz cópias profundas de todas as propriedades graváveis, definidas localmente, incluindo expressões internas.  
+  
+ Se o objeto tem propriedades de dependência associada a dados, as expressões são copiadas, mas não poderá ser resolvido. Para obter mais informações sobre objetos de associação de dados de clonagem, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md). Se o objeto tem propriedades de dependência animada, o valor base (não animado) dessas propriedades é copiado. Animações não são copiadas.  
+  
+ Observe que as propriedades não definidas não são copiadas, nem são propriedades somente leitura. Se essa propriedade tem um valor padrão que é um congelada <see cref="T:System.Windows.Freezable" />, que o valor da propriedade permaneça congelado no clone modificável caso contrário.  
+  
+ A lista a seguir resume o comportamento esperado para este método:  
+  
+-   A cópia produzida contém cópias de todos os <see cref="T:System.Windows.Freezable" /> subobjetos.  
+  
+-   Propriedades não definidas e somente leitura não são copiadas.  
+  
+-   Expressões são copiadas.  
+  
+-   Nenhum desses objetos sub congeladas na criação.  
+  
+-   A cópia em si não está congelada.  
+  
+-   Animações não são copiadas.  
+  
+-   Apenas os valores base de propriedades são valores animados copiados, não atuais.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValue">
+      <MemberSignature Language="C#" Value="public System.Windows.Freezable CloneCurrentValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Freezable CloneCurrentValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.CloneCurrentValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável (cópia em profundidade) o <see cref="T:System.Windows.Freezable" /> usando seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> é de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Freezable.Clone%2A> e <xref:System.Windows.Freezable.CloneCurrentValue%2A> métodos produzem clones modificáveis de congelada <xref:System.Windows.Freezable> objetos (os métodos também clonagem <xref:System.Windows.Freezable> objetos que não sejam congelados). O clone é efetivamente uma cópia em profundidade do objeto atual.  
+  
+ A tabela a seguir resume as diferenças entre o <xref:System.Windows.Freezable.Clone%2A> e <xref:System.Windows.Freezable.CloneCurrentValue%2A> métodos.  
+  
+|Ação|Comportamento do método clone|Comportamento do método CloneCurrentValue|  
+|------------|---------------------------|---------------------------------------|  
+|Copiando uma propriedade de dependência que tenha uma expressão|A expressão é copiada, mas não poderá ser resolvido. Para obter mais informações, consulte a [Visão geral de objetos congeláveis](~/docs/framework/wpf/advanced/freezable-objects-overview.md).|O valor atual da expressão é copiado, mas não a própria expressão.|  
+|Copiando uma propriedade de dependência animada|O valor da propriedade base (não animado) é copiado. Animações não são copiadas.|O valor da propriedade atual animado é copiado. Animações não são copiadas.|  
+  
+ Observe que as propriedades não definidas não são copiadas. Se uma propriedade não definida tem um valor padrão que é um congelada <xref:System.Windows.Freezable>, que o valor da propriedade permaneça congelado no clone modificável caso contrário.  
+  
+## <a name="move-a-freezable-between-threads"></a>Mover um Freezable entre Threads  
+ Esse método pode ser útil para mover um <xref:System.Windows.Freezable> entre threads. Primeiro, verifique o <xref:System.Windows.Freezable> não modificável usando seu <xref:System.Windows.Freezable.Freeze%2A> método. Agora, outro thread pode acessar o <xref:System.Windows.Freezable> e faça uma cópia local que possa acessar.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método usa o <see cref="M:System.Windows.Freezable.CloneCurrentValueCore(System.Windows.Freezable)" /> método para produzir o clone; <see cref="T:System.Windows.Freezable" /> implementadores que substituam <see cref="M:System.Windows.Freezable.CloneCurrentValueCore(System.Windows.Freezable)" /> deve garantir que a cópia não está congelada na criação.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CloneCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected virtual void CloneCurrentValueCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CloneCurrentValueCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.CloneCurrentValueCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Freezable" /> a ser clonado.</param>
+        <summary>Faz a instância de um clone modificável (cópia em profundidade) especificado <see cref="T:System.Windows.Freezable" /> usando os valores da propriedade atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.CloneCurrentValue%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia modificável do objeto atual, chame <xref:System.Windows.Freezable.CloneCurrentValue%2A> em vez de chamar este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você derivar de <see cref="T:System.Windows.Freezable" />, talvez seja necessário substituir esse método. Motivos para substituir incluem o seguinte:  
+  
+-   A classe derivada tem dados que não são expostos por meio de propriedades de dependência.  
+  
+-   A classe derivada deve executar o trabalho de inicialização extra não pode ser obtido por meio da substituição simplesmente <see cref="M:System.Windows.Freezable.CreateInstanceCore" />. Por exemplo, isso se aplica se sua classe derivada implementa <see cref="T:System.ComponentModel.ISupportInitialize" />.  
+  
+ Classes que armazenam todos os seus dados em Propriedades de dependência e que não é necessário executar o trabalho de inicialização extra não precisam substituir <see cref="M:System.Windows.Freezable.CloneCurrentValueCore(System.Windows.Freezable)" />.  
+  
+ É essencial que todas as implementações de chamar a implementação base deste método. Implementações só devem executar o trabalho que não é executado pela implementação do padrão. A implementação padrão faz cópias profundas de todas as propriedades graváveis, definidas localmente. Se o objeto contém propriedades de dependência com expressões (como uma associação de dados), o valor atual da expressão é copiado, mas não a própria expressão.  
+  
+ Se o objeto tem propriedades de dependência de animação, o valor atual animado dessas propriedades é copiado, mas as animações não são.  
+  
+ Observe que as propriedades não definidas não são copiadas, nem são propriedades somente leitura. Se essa propriedade tem um valor padrão que é um congelada <see cref="T:System.Windows.Freezable" />, que o valor da propriedade permaneça congelado no clone modificável caso contrário.  
+  
+ A lista a seguir resume o comportamento esperado para esse método.  
+  
+-   A cópia produzida contém cópias de todos os <see cref="T:System.Windows.Freezable" /> subobjetos.  
+  
+-   Propriedades não definidas e somente leitura não são copiadas.  
+  
+-   Se uma propriedade é animada, seu valor atual é copiado, mas a animação em si não é.  
+  
+-   Nenhum desses objetos sub congeladas na criação.  
+  
+-   A cópia em si não está congelada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected System.Windows.Freezable CreateInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Windows.Freezable CreateInstance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.CreateInstance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Freezable" />.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um método protegido e as implementações específicas do objeto reais para o comportamento são dependentes de implementação de substituição do <xref:System.Windows.Freezable.CreateInstanceCore%2A> método, que este método chama internamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementado em uma classe derivada, cria uma nova instância da classe derivada <see cref="T:System.Windows.Freezable" />.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não chame este método diretamente (exceto quando chamar base em uma implementação). Este método é chamado internamente pelo <xref:System.Windows.Freezable.CreateInstance%2A> método sempre que uma nova instância do <xref:System.Windows.Freezable> é criado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação típica de <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Cada <see cref="T:System.Windows.Freezable" /> classe derivada deve implementar esse método. Uma implementação típica é simplesmente chamar o construtor padrão e retornar o resultado.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Freeze">
+      <MemberSignature Language="C#" Value="public void Freeze ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Freeze() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.Freeze" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Torna o objeto atual não modificável e define sua propriedade <see cref="P:System.Windows.Freezable.IsFrozen" /> para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar a possibilidade de um <xref:System.InvalidOperationException> ao chamar esse método, verifique o <xref:System.Windows.Freezable.CanFreeze%2A> propriedade para determinar se o <xref:System.Windows.Freezable> podem ser feitas não modificável antes de chamar esse método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Freezable" /> não pode se tornar não modificável.</exception>
+        <block subset="none" type="overrides">
+          <para>Esse método usa o <see cref="M:System.Windows.Freezable.FreezeCore(System.Boolean)" /> método para fazer o <see cref="T:System.Windows.Freezable" /> não modificável. Para modificar o comportamento de congelamento, substituir o <see cref="M:System.Windows.Freezable.FreezeCore(System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Freeze">
+      <MemberSignature Language="C#" Value="protected static bool Freeze (System.Windows.Freezable freezable, bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig bool Freeze(class System.Windows.Freezable freezable, bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.Freeze(System.Windows.Freezable,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="freezable" Type="System.Windows.Freezable" />
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="freezable">O objeto a verificação ou verifique não modificável. Se <c>isChecking</c> é <see langword="true" />, o objeto é verificado para determinar se ele pode ser feito não modificável. Se <c>isChecking</c> é <see langword="false" />, o objeto é feito não modificável, se possível.</param>
+        <param name="isChecking">
+          <see langword="true" />para retornar uma indicação de se o objeto pode ser congelado (sem realmente congelando-lo); <see langword="false" /> realmente congelar o objeto.</param>
+        <summary>Se o <paramref name="isChecking" /> parâmetro é <see langword="true" />, este método indica se especificado <see cref="T:System.Windows.Freezable" /> podem ser feitas não modificável. Se o <paramref name="isChecking" /> parâmetro é <see langword="false" />, esse método tentará fazer especificado <see cref="T:System.Windows.Freezable" /> não modificável e indica se a operação foi bem-sucedida.</summary>
+        <returns>Se <paramref name="isChecking" /> é <see langword="true" />, esse método retorna <see langword="true" /> se especificado <see cref="T:System.Windows.Freezable" /> podem ser feitas não modificável, ou <see langword="false" /> se ele não pode se tornar não modificável. Se <paramref name="isChecking" /> é <see langword="false" />, esse método retorna <see langword="true" /> se especificado <see cref="T:System.Windows.Freezable" /> agora é não modificável, ou <see langword="false" /> se ele não pode se tornar não modificável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não chame este método, a menos que você estiver derivando de <xref:System.Windows.Freezable> e substituindo o <xref:System.Windows.Freezable.FreezeCore%2A> método.  Esse método pode ser usado no <xref:System.Windows.Freezable.FreezeCore%2A> método congelar membros de dados de classe são <xref:System.Windows.Freezable> objetos.  
+  
+ É muito bem para chamar esse método novamente em um <xref:System.Windows.Freezable> objeto que já está congelado (não modificável).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Quando <paramref name="isChecking" /> é <see langword="false" />, a tentativa de fazer <paramref name="freezable" /> não modificável teve êxito; o objeto agora está em um estado desconhecido (ele pode ser parcialmente congelado).</exception>
+        <block subset="none" type="overrides">
+          <para>Esse método usa o <see cref="M:System.Windows.Freezable.FreezeCore(System.Boolean)" /> método para fazer o <see cref="T:System.Windows.Freezable" /> não modificável. Para modificar o comportamento de congelamento, substituir o <see cref="M:System.Windows.Freezable.FreezeCore(System.Boolean)" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="FreezeCore">
+      <MemberSignature Language="C#" Value="protected virtual bool FreezeCore (bool isChecking);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool FreezeCore(bool isChecking) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.FreezeCore(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isChecking" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isChecking">
+          <see langword="true" />para retornar uma indicação de se o objeto pode ser congelado (sem realmente congelando-lo); <see langword="false" /> realmente congelar o objeto.</param>
+        <summary>Torna o <see cref="T:System.Windows.Freezable" /> do objeto não modificável ou testa se ele pode se tornar não modificável.</summary>
+        <returns>Se <paramref name="isChecking" /> é <see langword="true" />, esse método retorna <see langword="true" /> se o <see cref="T:System.Windows.Freezable" /> podem ser feitas não modificável, ou <see langword="false" /> se ele não pode se tornar não modificável. Se <paramref name="isChecking" /> é <see langword="false" />, esse método retorna <see langword="true" /> se if especificado <see cref="T:System.Windows.Freezable" /> agora é não modificável, ou <see langword="false" /> se ele não pode se tornar não modificável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não chame este método diretamente (exceto quando chamar base em uma implementação). Este método é chamado internamente pelo <xref:System.Windows.Freezable.CanFreeze%2A> propriedade (com `isChecking` igual a `true`) e o <xref:System.Windows.Freezable.Freeze%2A> método (com `isChecking` igual a `false`).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>
+            <see cref="T:System.Windows.Freezable" />os implementadores devem substituir este método quando a classe contém dados que não são armazenados usando as propriedades de dependência.  
+  
+ Uma implementação típica seria chamada base, em seguida, chame estático <see cref="M:System.Windows.Freezable.Freeze(System.Windows.Freezable,System.Boolean)" /> método em todos os <see cref="T:System.Windows.Freezable" /> digitado propriedades que contém a classe, retornando <see langword="true" /> apenas se todas as propriedades estavam congeladas (ou foi congeladas, no caso de especificação <see langword="true" /> para <paramref name="isChecking" />).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozen">
+      <MemberSignature Language="C#" Value="public System.Windows.Freezable GetAsFrozen ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Freezable GetAsFrozen() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.GetAsFrozen" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia congelada o <see cref="T:System.Windows.Freezable" />, usando valores de propriedade base (não animado). Como a cópia é congelada, qualquer subobjetos congelados são copiados por referência.</summary>
+        <returns>Uma cópia congelada o <see cref="T:System.Windows.Freezable" />. A cópia <see cref="P:System.Windows.Freezable.IsFrozen" /> está definida como <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve verificar o <xref:System.Windows.Freezable.CanFreeze%2A> propriedade antes de chamar este método para verificar se o <xref:System.Windows.Freezable> pode ser congelado. Usando esse método é semelhante à criação de uma cópia usando o <xref:System.Windows.Freezable.Clone%2A> e, em seguida, congelamento com o <xref:System.Windows.Freezable.Freeze%2A> método.  
+  
+ O <xref:System.Windows.Freezable.GetAsFrozen%2A> e <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> métodos podem melhorar o desempenho de cópia porque eles não clonagem <xref:System.Windows.Freezable> subobjetos que já estão congelados; eles apenas copiá-los por referência.  
+  
+ A tabela a seguir resume as diferenças entre o <xref:System.Windows.Freezable.GetAsFrozen%2A> e <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> métodos.  
+  
+|Ação|Comportamento do método GetAsFrozen|Comportamento do método GetCurrentValueAsFrozen|  
+|------------|---------------------------------|---------------------------------------------|  
+|Copiando uma propriedade de dependência que tenha uma expressão|O método gera uma <xref:System.InvalidOperationException> porque ele não é possível <xref:System.Windows.Freezable.Freeze%2A> a propriedade.|O valor atual da expressão é copiado, mas não a própria expressão.|  
+|Copiando uma propriedade de dependência animada|O valor da propriedade base (não animado) é copiado. Animações não são copiadas.|O valor da propriedade atual animado é copiado. Animações não são copiadas.|  
+  
+ Observe que as propriedades não definidas não são copiadas, nem são propriedades somente leitura.  
+  
+ Para criar uma cópia do <xref:System.Windows.Freezable> que é não congelada, use o <xref:System.Windows.Freezable.Clone%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Freezable" /> não pode ser congelado porque ele contém expressões ou propriedades de animação.</exception>
+        <block subset="none" type="overrides">
+          <para>Esse método usa virtual <see cref="M:System.Windows.Freezable.GetAsFrozenCore(System.Windows.Freezable)" /> método para produzir o clone.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected virtual void GetAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.GetAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">A instância para copiar.</param>
+        <summary>Faz a instância de um clone congelado especificada <see cref="T:System.Windows.Freezable" /> usando valores de propriedade base (não animado).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você derivar de <see cref="T:System.Windows.Freezable" /> talvez seja necessário substituir esse método. Motivos para substituir incluem o seguinte:  
+  
+-   A classe derivada tem dados que não são expostos por meio de propriedades de dependência.  
+  
+-   A classe derivada deve executar o trabalho de inicialização extra não pode ser obtido por meio da substituição simplesmente <see cref="M:System.Windows.Freezable.CreateInstanceCore" />. Por exemplo, isso se aplica se sua classe derivada implementa <see cref="T:System.ComponentModel.ISupportInitialize" />.  
+  
+ Classes que armazenam todos os seus dados em Propriedades de dependência e que não é necessário executar o trabalho de inicialização extra não precisam substituir <see cref="M:System.Windows.Freezable.GetAsFrozenCore(System.Windows.Freezable)" />.  
+  
+ É essencial que todas as implementações de chamar a implementação base deste método. Implementações só devem executar o trabalho que não é executado pela implementação do padrão. A implementação padrão faz cópias profundas de qualquer congeláveis descongelada e superficiais cópias de todos os outros gravável, localmente definir propriedades que ele contém. Se o objeto tem propriedades de dependência associada a dados, as expressões são copiadas, mas não podem resolver; Para obter mais informações sobre objetos de associação de dados de clonagem, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md). Se o objeto tem propriedades de dependência animada, os valores base (não animado) dessas propriedades são copiados. Animações não são copiadas.  
+  
+ Observe que as propriedades não definidas não são copiadas, nem são propriedades somente leitura.  
+  
+ Se você substituir esse método, você deve chamar a implementação base.  
+  
+ Você não precisa <see cref="M:System.Windows.Freezable.Freeze" /> valores conforme são copiadas.  O resultado é congelado pelo <see cref="M:System.Windows.Freezable.GetAsFrozen" /> antes de serem retornados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozen">
+      <MemberSignature Language="C#" Value="public System.Windows.Freezable GetCurrentValueAsFrozen ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Freezable GetCurrentValueAsFrozen() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.GetCurrentValueAsFrozen" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia congelada o <see cref="T:System.Windows.Freezable" /> usando os valores da propriedade atual. Como a cópia é congelada, qualquer subobjetos congelados são copiados por referência.</summary>
+        <returns>Uma cópia congelada o <see cref="T:System.Windows.Freezable" />. A cópia <see cref="P:System.Windows.Freezable.IsFrozen" /> está definida como <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando esse método é semelhante à criação de uma cópia usando o <xref:System.Windows.Freezable.CloneCurrentValue%2A> e, em seguida, congelamento com o <xref:System.Windows.Freezable.Freeze%2A> método.  
+  
+ O <xref:System.Windows.Freezable.GetAsFrozen%2A> e <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> métodos podem melhorar o desempenho de cópia porque eles não clonagem <xref:System.Windows.Freezable> subobjetos que já estão congelados; eles apenas copiá-los por referência.  
+  
+ A tabela a seguir resume as diferenças entre o <xref:System.Windows.Freezable.GetAsFrozen%2A> e <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> métodos.  
+  
+|Ação|Comportamento do método GetAsFrozen|Comportamento do método GetCurrentValueAsFrozen|  
+|------------|---------------------------------|---------------------------------------------|  
+|Copiando uma propriedade de dependência que tenha uma expressão|O método gera uma <xref:System.InvalidOperationException> porque ele não é possível <xref:System.Windows.Freezable.Freeze%2A> a propriedade.|O valor atual da expressão é copiado, mas não a própria expressão.|  
+|Copiando uma propriedade de dependência animada|O valor da propriedade base (não animado) é copiado. Animações não são copiadas.|O valor da propriedade atual animado é copiado. Animações não são copiadas.|  
+  
+ Observe que as propriedades não definidas não são copiadas, nem são propriedades somente leitura.  
+  
+ Para criar uma cópia do <xref:System.Windows.Freezable> que é não congelada, use o <xref:System.Windows.Freezable.CloneCurrentValue%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Esse método usa virtual <see cref="M:System.Windows.Freezable.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" /> método para produzir o clone.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueAsFrozenCore">
+      <MemberSignature Language="C#" Value="protected virtual void GetCurrentValueAsFrozenCore (System.Windows.Freezable sourceFreezable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GetCurrentValueAsFrozenCore(class System.Windows.Freezable sourceFreezable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceFreezable" Type="System.Windows.Freezable" />
+      </Parameters>
+      <Docs>
+        <param name="sourceFreezable">O <see cref="T:System.Windows.Freezable" /> para copiar e congelar.</param>
+        <summary>Faz a instância atual um clone congelado especificada <see cref="T:System.Windows.Freezable" />. Se o objeto tem propriedades de dependência animada, seus valores atuais de animado serão copiados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> método e não deve ser chamado diretamente no seu código de exceção ao chamar a implementação base ao substituir esse método. Para criar uma cópia congelada do objeto atual, chame <xref:System.Windows.Freezable.GetCurrentValueAsFrozen%2A> em vez de chamar este método diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você derivar de <see cref="T:System.Windows.Freezable" />, talvez seja necessário substituir esse método. Motivos para substituir incluem o seguinte:  
+  
+-   A classe derivada tem dados que não são expostos por meio de propriedades de dependência.  
+  
+-   A classe derivada deve executar o trabalho de inicialização extra não pode ser obtido por meio da substituição simplesmente <see cref="M:System.Windows.Freezable.CreateInstanceCore" />. Por exemplo, isso se aplica se sua classe derivada implementa <see cref="T:System.ComponentModel.ISupportInitialize" />.  
+  
+ Classes que armazenam todos os seus dados em Propriedades de dependência e que não é necessário executar o trabalho de inicialização extra não precisam substituir <see cref="M:System.Windows.Freezable.GetCurrentValueAsFrozenCore(System.Windows.Freezable)" />.  
+  
+ É essencial que todas as implementações de chamar a implementação base deste método. Implementações só devem executar o trabalho que não é executado pela implementação do padrão. A implementação padrão cria um novo <see cref="T:System.Windows.Freezable" /> usando o <see cref="M:System.Windows.Freezable.CreateInstance" /> método e faz cópias profundas de congeláveis descongelada e superficiais cópias de todos os outros gravável, propriedades de conjunto contém. Se o objeto tem propriedades de dependência associada a dados, as associações de dados são copiadas, mas não podem resolver; Para obter mais informações sobre objetos de associação de dados de clonagem, consulte [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md). Se o objeto tem propriedades de dependência de animação, o valor atual animado dessas propriedades é copiado, mas as animações não são.  
+  
+ Propriedades de dependência somente leitura em um <see cref="T:System.Windows.Freezable" /> não são copiadas por esta implementação padrão.  
+  
+ Se você substituir esse método, você deve chamar a implementação base.  
+  
+ Você não precisa <see cref="M:System.Windows.Freezable.Freeze" /> valores conforme são copiadas.  O resultado é congelado pelo <see cref="M:System.Windows.Freezable.GetAsFrozen" /> antes de serem retornados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFrozen">
+      <MemberSignature Language="C#" Value="public bool IsFrozen { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFrozen" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Freezable.IsFrozen" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto pode ser modificado no momento.</summary>
+        <value>
+          <see langword="true" /> se o objeto estiver congelado e não puder ser modificado; <see langword="false" /> se o objeto poderá ser modificado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tentativa de modificar um objeto quando seu <xref:System.Windows.Freezable.IsFrozen%2A> é de propriedade `true` lança um <xref:System.InvalidOperationException>.  
+  
+ Essa propriedade é somente leitura sob a perspectiva do modelo de objeto. Parte da documentação sobre <xref:System.Windows.Freezable> comportamentos podem mencionar "define <xref:System.Windows.Freezable.IsFrozen%2A> para `true`" ou idioma semelhante ao discutir o comportamento de outros métodos de <xref:System.Windows.Freezable>, mas esse comportamento acontece internamente nas instâncias de classe quando métodos de instância manipulam as variáveis particulares que existem dentro da classe abstrata. Para definir o valor dessa propriedade, você deve chamar <xref:System.Windows.Freezable.Freeze%2A>. Isso é efetivamente uma operação única para alterar o <xref:System.Windows.Freezable.IsFrozen%2A> propriedade inicial padrão `false` estado para o `true` estado. Não há nenhum significa disponíveis para definir o valor para `false`. Em vez disso, você pode alterar qualquer cópia em profundidade feita do original (consulte o <xref:System.Windows.Freezable.Clone%2A> método). Isso ocorre por design e é como qualquer classe derivada deve se comportar quando aplicado aos casos em que o <xref:System.Windows.Freezable> padrão é útil.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.OnChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado quando o atual <see cref="T:System.Windows.Freezable" /> objeto é modificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado sempre que o <xref:System.Windows.Freezable.Changed> evento ocorre.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Quando você implementa uma classe que deriva de <see cref="T:System.Windows.Freezable" />, você pode substituir esse método para executar tarefas.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFreezablePropertyChanged">
+      <MemberSignature Language="C#" Value="protected void OnFreezablePropertyChanged (System.Windows.DependencyObject oldValue, System.Windows.DependencyObject newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnFreezablePropertyChanged(class System.Windows.DependencyObject oldValue, class System.Windows.DependencyObject newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.OnFreezablePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="System.Windows.DependencyObject" />
+        <Parameter Name="newValue" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">O valor anterior do membro de dados.</param>
+        <param name="newValue">O valor atual do membro de dados.</param>
+        <summary>Garante que são estabelecidos ponteiros de contexto apropriado para um <see cref="T:System.Windows.DependencyObjectType" /> membro de dados que foi definido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser chamado <xref:System.Windows.Freezable> herdeiros cada vez que um <xref:System.Windows.DependencyObject> membro de dados que não é armazenado como um <xref:System.Windows.DependencyProperty> está definido.  
+  
+ Esse método não precisa ser chamado para <xref:System.Windows.DependencyObject> membros de dados que são armazenados usando um <xref:System.Windows.DependencyProperty>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFreezablePropertyChanged">
+      <MemberSignature Language="C#" Value="protected void OnFreezablePropertyChanged (System.Windows.DependencyObject oldValue, System.Windows.DependencyObject newValue, System.Windows.DependencyProperty property);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnFreezablePropertyChanged(class System.Windows.DependencyObject oldValue, class System.Windows.DependencyObject newValue, class System.Windows.DependencyProperty property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.OnFreezablePropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyObject,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldValue" Type="System.Windows.DependencyObject" />
+        <Parameter Name="newValue" Type="System.Windows.DependencyObject" />
+        <Parameter Name="property" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="oldValue">O valor anterior do membro de dados.</param>
+        <param name="newValue">O valor atual do membro de dados.</param>
+        <param name="property">A propriedade alterada.</param>
+        <summary>Esse membro oferece suporte a [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] infraestrutura e não se destina a ser usado diretamente no seu código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected override void OnPropertyChanged (System.Windows.DependencyPropertyChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPropertyChanged(valuetype System.Windows.DependencyPropertyChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.DependencyPropertyChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Dados de evento que contém informações sobre as propriedades alteradas e seus valores novos e antigos.</param>
+        <summary>Substitui o <see cref="T:System.Windows.DependencyObject" /> implementação de <see cref="M:System.Windows.DependencyObject.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)" /> também chamar <see cref="E:System.Windows.Freezable.Changed" /> manipuladores em resposta a uma propriedade de dependência de alteração do tipo <see cref="T:System.Windows.Freezable" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os dados do evento contém apenas informações sobre o <xref:System.Windows.Freezable> em si. Qualquer informação de propriedade sub deve ser obtida por meio de <xref:System.Windows.Freezable.Changed> manipuladores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPreamble">
+      <MemberSignature Language="C#" Value="protected void ReadPreamble ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReadPreamble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.ReadPreamble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Garante que o <see cref="T:System.Windows.Freezable" /> estiver sendo acessado de um thread válido. Herdeiros do <see cref="T:System.Windows.Freezable" /> deve chamar esse método no início de qualquer [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] que lê membros de dados que não são propriedades de dependência.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Classes que derivam de <see cref="T:System.Windows.Freezable" /> devem chamar o <see cref="M:System.Windows.Freezable.ReadPreamble" /> método antes de tentar acessar todos os membros que não são propriedades de dependência. O <see cref="M:System.Windows.Freezable.WritePreamble" /> método deve ser chamado antes de qualquer esses membros são gravados.  
+  
+ Esse método efetivamente não faz nada mais do que chamar <see cref="M:System.Windows.Threading.DispatcherObject.VerifyAccess" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePostscript">
+      <MemberSignature Language="C#" Value="protected void WritePostscript ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WritePostscript() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.WritePostscript" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o <see cref="E:System.Windows.Freezable.Changed" /> eventos para o <see cref="T:System.Windows.Freezable" /> e chama seu <see cref="M:System.Windows.Freezable.OnChanged" /> método. Classes que derivam de <see cref="T:System.Windows.Freezable" /> devem chamar este método no final de API que modifica os membros de classe que não são armazenados como propriedades de dependência.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Classes que derivam de <see cref="T:System.Windows.Freezable" /> devem chamar este método no final de API que modifica um membro de classe que não é armazenado como um <see cref="T:System.Windows.DependencyProperty" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePreamble">
+      <MemberSignature Language="C#" Value="protected void WritePreamble ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WritePreamble() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Freezable.WritePreamble" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica se o <see cref="T:System.Windows.Freezable" /> não está congelado e que está sendo acessado de um contexto de threading válido. <see cref="T:System.Windows.Freezable" />herdeiros devem chamar este método no início de qualquer [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)] que grava os membros de dados que não são propriedades de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método chama <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> para verificar o contexto de threading está acessível e gera uma exceção se o <xref:System.Windows.Freezable> instância já está congelada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Windows.Freezable" /> instância está congelada e não podem ter seus membros gravado.</exception>
+        <block subset="none" type="overrides">
+          <para>Classes que derivam de <see cref="T:System.Windows.Freezable" /> devem chamar <see cref="M:System.Windows.Freezable.WritePreamble" /> antes de tentar gravar em todos os membros que não são propriedades de dependência. Se você chamar <see cref="M:System.Windows.Freezable.WritePreamble" /> em uma [!INCLUDE[TLA#tla_api](~/includes/tlasharptla-api-md.md)], você pode omitir uma chamada para <see cref="M:System.Windows.Freezable.ReadPreamble" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

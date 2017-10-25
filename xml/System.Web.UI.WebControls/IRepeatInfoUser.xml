@@ -1,0 +1,191 @@
+<Type Name="IRepeatInfoUser" FullName="System.Web.UI.WebControls.IRepeatInfoUser">
+  <TypeSignature Language="C#" Value="public interface IRepeatInfoUser" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRepeatInfoUser" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.IRepeatInfoUser" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define as propriedades e métodos que devem ser implementados por qualquer controle de lista que se repete uma lista de itens.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.IRepeatInfoUser> interface define as propriedades e métodos que devem ser implementados por todos os controles de lista que se repete uma lista de itens, como <xref:System.Web.UI.WebControls.CheckBoxList>, <xref:System.Web.UI.WebControls.DataList>, e <xref:System.Web.UI.WebControls.RadioButtonList>. Para indicar se um controle de lista contém uma seção de cabeçalho, seção de rodapés ou separadores, essa interface define o <xref:System.Web.UI.WebControls.IRepeatInfoUser.HasHeader%2A>, <xref:System.Web.UI.WebControls.IRepeatInfoUser.HasFooter%2A>, e <xref:System.Web.UI.WebControls.IRepeatInfoUser.HasSeparators%2A> propriedades, respectivamente. O <xref:System.Web.UI.WebControls.IRepeatInfoUser.RepeatedItemCount%2A> propriedade é usada para representar o número de itens na lista. Use o <xref:System.Web.UI.WebControls.IRepeatInfoUser.GetItemStyle%2A> método para determinar o estilo de um item na lista. O <xref:System.Web.UI.WebControls.IRepeatInfoUser.RenderItem%2A> método é usado para exibir um item.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetItemStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style GetItemStyle (System.Web.UI.WebControls.ListItemType itemType, int repeatIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.WebControls.Style GetItemStyle(valuetype System.Web.UI.WebControls.ListItemType itemType, int32 repeatIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.IRepeatInfoUser.GetItemStyle(System.Web.UI.WebControls.ListItemType,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+        <Parameter Name="repeatIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.ListItemType" />.</param>
+        <param name="repeatIndex">Um índice ordinal que especifica o local do item no controle de lista.</param>
+        <summary>Recupera o estilo do tipo especificado no índice especificado na lista de controle.</summary>
+        <returns>Um <see cref="T:System.Web.UI.WebControls.Style" /> que representa o estilo do tipo especificado no índice especificado na lista de controle.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de lista que herda o <xref:System.Web.UI.WebControls.IRepeatInfoUser> deve implementar a interface a <xref:System.Web.UI.WebControls.IRepeatInfoUser.GetItemStyle%2A> método para recuperar o estilo do tipo especificado no índice especificado na lista de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasFooter">
+      <MemberSignature Language="C#" Value="public bool HasFooter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasFooter" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IRepeatInfoUser.HasFooter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle de lista contém uma seção de rodapé.</summary>
+        <value>
+          <see langword="true" />Se o controle de lista contém uma seção de rodapé de página; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de lista que herda o <xref:System.Web.UI.WebControls.IRepeatInfoUser> deve implementar a interface do <xref:System.Web.UI.WebControls.IRepeatInfoUser.HasFooter%2A> propriedade para indicar se o controle de lista contém uma seção de rodapé.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasHeader">
+      <MemberSignature Language="C#" Value="public bool HasHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasHeader" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IRepeatInfoUser.HasHeader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle de lista contém uma seção de cabeçalho.</summary>
+        <value>
+          <see langword="true" />Se o controle de lista contém uma seção de cabeçalho; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de lista que herda o <xref:System.Web.UI.WebControls.IRepeatInfoUser> deve implementar a interface do <xref:System.Web.UI.WebControls.IRepeatInfoUser.HasHeader%2A> propriedade para indicar se o controle de lista contém uma seção de cabeçalho.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasSeparators">
+      <MemberSignature Language="C#" Value="public bool HasSeparators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasSeparators" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IRepeatInfoUser.HasSeparators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle de lista contém um separador entre os itens na lista.</summary>
+        <value>
+          <see langword="true" />Se o controle de lista contiver um separador; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de lista que herda o <xref:System.Web.UI.WebControls.IRepeatInfoUser> deve implementar a interface a <xref:System.Web.UI.WebControls.IRepeatInfoUser.HasSeparators%2A> propriedade para indicar se o controle de lista contém separadores entre itens na lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderItem">
+      <MemberSignature Language="C#" Value="public void RenderItem (System.Web.UI.WebControls.ListItemType itemType, int repeatIndex, System.Web.UI.WebControls.RepeatInfo repeatInfo, System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderItem(valuetype System.Web.UI.WebControls.ListItemType itemType, int32 repeatIndex, class System.Web.UI.WebControls.RepeatInfo repeatInfo, class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.IRepeatInfoUser.RenderItem(System.Web.UI.WebControls.ListItemType,System.Int32,System.Web.UI.WebControls.RepeatInfo,System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="itemType" Type="System.Web.UI.WebControls.ListItemType" />
+        <Parameter Name="repeatIndex" Type="System.Int32" />
+        <Parameter Name="repeatInfo" Type="System.Web.UI.WebControls.RepeatInfo" />
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="itemType">Um dos valores de enumeração <see cref="T:System.Web.UI.WebControls.ListItemType" />.</param>
+        <param name="repeatIndex">Um índice ordinal que especifica o local do item no controle de lista.</param>
+        <param name="repeatInfo">Um <see cref="T:System.Web.UI.WebControls.RepeatInfo" /> que representa as informações usadas para renderizar o item na lista.</param>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Renderiza um item na lista com as informações especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de lista que herda o <xref:System.Web.UI.WebControls.IRepeatInfoUser> deve implementar a interface de <xref:System.Web.UI.WebControls.IRepeatInfoUser.RenderItem%2A> método para processar um item na lista com as informações especificadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatedItemCount">
+      <MemberSignature Language="C#" Value="public int RepeatedItemCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RepeatedItemCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.IRepeatInfoUser.RepeatedItemCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens na lista de controle.</summary>
+        <value>O número de itens na lista de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle de lista que herda o <xref:System.Web.UI.WebControls.IRepeatInfoUser> deve implementar a interface de <xref:System.Web.UI.WebControls.IRepeatInfoUser.RepeatedItemCount%2A> propriedade para indicar o número de itens no controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

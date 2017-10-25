@@ -1,0 +1,614 @@
+<Type Name="ArgumentOutOfRangeException" FullName="System.ArgumentOutOfRangeException">
+  <TypeSignature Language="C#" Value="public class ArgumentOutOfRangeException : ArgumentException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ArgumentOutOfRangeException extends System.ArgumentException implements class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.ArgumentOutOfRangeException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ArgumentException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é gerada quando o valor de um argumento está fora do intervalo permitido de valores conforme definido pelo método invocado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ArgumentOutOfRangeException> exceção é lançada quando um método é chamado e pelo menos um dos argumentos passados para o método não é `null` e contém um valor inválido que não é um membro do conjunto de valores esperada para o argumento. O <xref:System.ArgumentException.ParamName%2A> propriedade identifica o argumento inválido e o <xref:System.ArgumentOutOfRangeException.ActualValue%2A> propriedade, se um valor estiver presente, identifica o valor inválido.  
+  
+ Normalmente, um <xref:System.ArgumentOutOfRangeException> os resultados de erro do desenvolvedor. Em vez de tratamento de exceção em uma `try` / `catch` bloco, você deve eliminar a causa da exceção ou se o argumento é retornado por uma chamada de método ou de entrada do usuário antes de ser passado para o método que lança a exceção, você deve validar argumentos antes de passá-los para o método.  
+  
+ <xref:System.ArgumentOutOfRangeException>é amplamente usada pelo:  
+  
+-   Classes de <xref:System.Collections> e <xref:System.IO> namespaces.  
+  
+-   O <xref:System.Array> classe.  
+  
+-   Métodos de manipulação de cadeia de caracteres de <xref:System.String> classe.  
+  
+ As condições em que um <xref:System.ArgumentOutOfRangeException> exceção incluem o seguinte:  
+  
+ Você está recuperando o membro de uma coleção por seu número de índice e o número de índice é inválido.  
+ Essa é a causa mais comum de um <xref:System.ArgumentOutOfRangeException> exceção.   Normalmente, o número de índice é inválido para um dos três motivos:  
+  
+-   A coleção não tem nenhum membro e seu código pressupõe que ele faz. O exemplo a seguir tenta recuperar o primeiro elemento de uma coleção que não tem elementos:  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/NoElements.cs#4)]
+     [!code-vb[System.ArgumentOutOfRangeException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/NoElements.vb#4)]  
+  
+     Para evitar a exceção, verifique se a coleção `Count` propriedade é maior que zero antes de tentar recuperar quaisquer membros, como o seguinte fragmento de código.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/NoElements.cs#5)]
+     [!code-vb[System.ArgumentOutOfRangeException#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/NoElements.vb#5)]  
+  
+     Em alguns casos, isso pode ocorrer porque você está tentando adicionar um membro a uma coleção usando um índice que não existe, em vez de chamar o método, como `Add`, que existe para essa finalidade.  O exemplo a seguir tenta adicionar um elemento em uma coleção usando um índice inexistente em vez de chamar o <xref:System.Collections.Generic.List%601.Add%2A?displayProperty=nameWithType> método.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/NoElements2.cs#13)]
+     [!code-vb[System.ArgumentOutOfRangeException#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/NoElements2.vb#13)]  
+  
+     O fragmento de código a seguir corrige esse erro:  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#14](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/NoElements2.cs#14)]
+     [!code-vb[System.ArgumentOutOfRangeException#14](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/NoElements2.vb#14)]  
+  
+-   Você está tentando recuperar um item cujo índice é negativo. Isso geralmente ocorre porque você pesquisou uma coleção para o índice de um determinado elemento e ter considerado incorretamente que a pesquisa seja bem-sucedida. No exemplo a seguir, a chamada para o <xref:System.Collections.Generic.List%601.FindIndex%28System.Predicate%7B%600%7D%29?displayProperty=nameWithType> método não conseguir localizar uma cadeia de caracteres igual a "Z" e isso retornará -1. No entanto, isso é um valor de índice inválido.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/BadSearch.cs#6)]
+     [!code-vb[System.ArgumentOutOfRangeException#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/BadSearch.vb#6)]  
+  
+     Para evitar a exceção, verifique se a pesquisa foi bem-sucedida, certificando-se de que o índice retornado é maior que ou igual a zero antes de tentar recuperar o item da coleção, como o código a seguir fragmento faz.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/BadSearch.cs#7)]
+     [!code-vb[System.ArgumentOutOfRangeException#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/BadSearch.vb#7)]  
+  
+-   Você está tentando recuperar um elemento cujo índice é igual ao valor da coleção de `Count` propriedade, como o exemplo a seguir ilustra.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/OOR2.cs#8)]
+     [!code-vb[System.ArgumentOutOfRangeException#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/OOR2.vb#8)]  
+  
+     Como coleções no .NET Framework usam indexação com base em zero, é o primeiro elemento da coleção no índice 0 e é o último elemento no índice `Count` - 1. Você pode eliminar o erro, garantindo que você acessar o último elemento no índice `Count` - 1, assim como o código a seguir.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/OOR2.cs#9)]
+     [!code-vb[System.ArgumentOutOfRangeException#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/OOR2.vb#9)]  
+  
+ Você está tentando executar uma operação de cadeia de caracteres chamando um método de manipulação de cadeia de caracteres, e o índice inicial não existe na cadeia de caracteres.  
+ Sobrecargas de métodos, como por exemplo, <xref:System.String.Compare%2A?displayProperty=nameWithType>, <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.IndexOfAny%2A>, <xref:System.String.Insert%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOfAny%2A?displayProperty=nameWithType>, <xref:System.String.Remove%2A>, ou <xref:System.String.Substring%2A?displayProperty=nameWithType> que permitem que você especifique o índice inicial da operação requer que o índice seja uma posição válida na cadeia de caracteres. Índices válidos variam de 0 a <xref:System.String.Length%2A?displayProperty=nameWithType> - 1.  
+  
+ Há quatro causas comuns desse <xref:System.ArgumentOutOfRangeException> exceção:  
+  
+-   Você está trabalhando com uma cadeia vazia., ou <xref:System.String.Empty?displayProperty=nameWithType>. Porque seu <xref:System.String.Length%2A?displayProperty=nameWithType> propriedade retorna 0, qualquer tentativa de manipulá-los por índice lança um <xref:System.ArgumentOutOfRangeException> exceção. O exemplo a seguir, define um `GetFirstCharacter` método que retorna o primeiro caractere de uma cadeia de caracteres. Se a cadeia de caracteres está vazia, como a cadeia de caracteres final passados para o método, o método gera uma <xref:System.ArgumentOutOfRangeException> exceção.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/EmptyString1.cs#15)]
+     [!code-vb[System.ArgumentOutOfRangeException#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/EmptyString1.vb#15)]  
+  
+     Você pode eliminar a exceção testando se a cadeia de caracteres <xref:System.String.Length%2A?displayProperty=nameWithType> é maior que zero ou chamando o <xref:System.String.IsNullOrEmpty%2A> método para garantir que a cadeia de caracteres não é `null` ou vazio. O fragmento de código a seguir faz o último. Nesse caso, se a cadeia de caracteres é `null` ou está vazio, o `GetFirstCharacter` método retorna U + 0000.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#16](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/EmptyString1.cs#16)]
+     [!code-vb[System.ArgumentOutOfRangeException#16](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/EmptyString1.vb#16)]  
+  
+-   Manipulação de uma cadeia de caracteres com base na posição de uma subcadeia de caracteres na cadeia de caracteres, e você falhou determinar se a subcadeia de caracteres, na verdade, foi encontrada.  
+  
+     O exemplo a seguir extrai a segunda palavra de uma frase de duas palavras. Ele gera um <xref:System.ArgumentOutOfRangeException> exceção se a expressão consiste em apenas uma palavra e, portanto, não contém um caractere de espaço inserido.  Isso ocorre porque a chamada para o <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> método retornará -1 para indicar que a falha na pesquisa, e esse valor é então passado para o <xref:System.String.Substring%28System.Int32%29?displayProperty=nameWithType> método.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/NoFind1.cs#17)]
+     [!code-vb[System.ArgumentOutOfRangeException#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/NoFind1.vb#17)]  
+  
+     Para eliminar a exceção, valide o valor retornado pelo método de pesquisa de cadeia de caracteres antes de chamar o método de manipulação de cadeia de caracteres.  
+  
+     [!code-csharp[System.ArgumentOutOfRangeException#18](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/NoFind2.cs#18)]
+     [!code-vb[System.ArgumentOutOfRangeException#18](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/NoFind2.vb#18)]  
+  
+-  
+  
+ Que você tentou extrair uma subcadeia de caracteres que está fora do intervalo da cadeia de caracteres atual.  
+ Os métodos que extrair subcadeias de caracteres que exigem que você especificar a posição inicial da subcadeia de caracteres e, para subcadeias de caracteres que não continuam até o final da cadeia de caracteres, o número de caracteres na subcadeia de caracteres. Observe que isso não é o *índice* do último caractere na subcadeia de caracteres.  
+  
+ Um <xref:System.ArgumentOutOfRangeException> normalmente exceção neste caso porque você já calculados incorretamente o número de caracteres na subcadeia de caracteres.  Se você estiver usando um método de pesquisa como <xref:System.String.IndexOf%2A?displayProperty=nameWithType> para identificar o início e término posições de uma subcadeia de caracteres:  
+  
+-   Se o caractere na posição final retornado pela <xref:System.String.IndexOf%2A?displayProperty=nameWithType> deve ser incluído na subcadeia de caracteres, a posição final da subcadeia de caracteres é fornecida pela fórmula  
+  
+    ```  
+    endIndex - startIndex + 1  
+    ```  
+  
+-   Se o caractere na posição final retornado pela <xref:System.String.IndexOf%2A?displayProperty=nameWithType> é a serem excluídos da subcadeia de caracteres, a posição final da subcadeia de caracteres é fornecida pela fórmula  
+  
+    ```  
+    endIndex - startIndex   
+    ```  
+  
+ O exemplo a seguir define uma `FindWords` método que usa o <xref:System.String.IndexOfAny%28System.Char%5B%5D%2CSystem.Int32%29?displayProperty=nameWithType> método para identificar espaços e pontuação marca em uma cadeia de caracteres e retorna uma matriz que contém as palavras encontradas na cadeia de caracteres.  
+  
+ [!code-csharp[System.ArgumentOutOfRangeException#19](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/FindWords1.cs#19)]
+ [!code-vb[System.ArgumentOutOfRangeException#19](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/FindWords1.vb#19)]  
+  
+ Você passou um número negativo para um método com um argumento que exige apenas números positivos e zero ou você passar um número negativo ou zero para um método com um argumento que exige apenas números positivos.  
+ Por exemplo, o <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> método requer que você especifique o número de elementos em cada dimensão de uma matriz bidimensional; os valores válidos para cada dimensão podem variar de 0 a <xref:System.Int32.MaxValue?displayProperty=nameWithType>. Mas como o argumento de dimensão no exemplo a seguir tem um valor negativo, o método lançará um <xref:System.ArgumentOutOfRangeException> exceção.  
+  
+ [!code-csharp[System.ArgumentOutOfRangeException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/OOR1.cs#1)]
+ [!code-vb[System.ArgumentOutOfRangeException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/OOR1.vb#1)]  
+  
+ Para corrigir o erro, certifique-se de que o valor do argumento inválido é negativo. Você pode fazer isso, fornecendo um valor válido, como o seguinte fragmento de código.  
+  
+ [!code-csharp[System.ArgumentOutOfRangeException#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/OOR1.cs#2)]
+ [!code-vb[System.ArgumentOutOfRangeException#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/OOR1.vb#2)]  
+  
+ Você também pode validar a entrada e, se ele for inválido, executar alguma ação. O fragmento de código a seguir exibe uma mensagem de erro em vez de chamar o método.  
+  
+ [!code-csharp[System.ArgumentOutOfRangeException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/OOR1.cs#3)]
+ [!code-vb[System.ArgumentOutOfRangeException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/OOR1.vb#3)]  
+  
+ Existe uma condição de corrida em um aplicativo multithread ou tem que executar de forma assíncrona e que atualiza uma matriz ou coleção de tarefas.  
+ O exemplo a seguir usa uma <xref:System.Collections.Generic.List%601> objeto para popular uma coleção de `Continent` objetos. Ele gera um <xref:System.ArgumentOutOfRangeException> exceção se o exemplo tenta exibir sete itens na coleção antes da coleção é totalmente preenchida.  
+  
+ [!code-csharp[System.ArgumentOutOfRangeException#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/Race1.cs#11)]
+ [!code-vb[System.ArgumentOutOfRangeException#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/Race1.vb#11)]  
+  
+ Nesse caso, os dois recursos são acessados de vários threads:  
+  
+-   A coleção `continents`. Seu <xref:System.Collections.Generic.List%601.Add%2A?displayProperty=nameWithType> método é chamado de vários threads. Além disso, o thread principal ou primário pressupõe que a coleção está completamente populada com sete elementos quando ele é iterado seus membros.  
+  
+-   O `msg` cadeia de caracteres, que é concatenada de vários threads.  
+  
+ Para corrigir o erro, certifique-se de que estado compartilhado é acessado em uma forma thread-safe, da seguinte maneira.  
+  
+-   Se seu aplicativo usa um objeto de matriz ou coleção, considere o uso de uma classe de coleção thread-safe, como os tipos no <xref:System.Collections.Concurrent> namespace ou o [System.Collections.Immutable](../Topic/System.Collections.Immutable.md) versão fora de banda.  
+  
+-   Certifique-se de que o estado compartilhado (ou seja, recursos que podem ser acessados por vários threads) é acessado de forma segura para thread, para que apenas um thread por vez tem acesso exclusivo aos recursos. Um grande número de classes, como <xref:System.Threading.CountdownEvent>, <xref:System.Threading.Interlocked>, <xref:System.Threading.Monitor>, e <xref:System.Threading.Mutex>, estão disponíveis para sincronizar o acesso aos recursos. Para obter mais informações, consulte [Threading](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87). Além disso, o suporte de idioma está disponível por meio de [bloqueio](~/docs/csharp/language-reference/keywords/lock-statement.md) instrução em c# e o [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) construir no Visual Basic.  
+  
+ Os seguintes endereços de exemplo de <xref:System.ArgumentOutOfRangeException> exceção e outros problemas do exemplo anterior. Ele substitui o <xref:System.Collections.Generic.List%601> do objeto com um <xref:System.Collections.Concurrent.ConcurrentBag%601> objeto para garantir que o acesso à coleção é thread-safe, usa um <xref:System.Threading.CountdownEvent> objeto para garantir que o thread de aplicativo continue somente depois de executaram outros threads, e usa um bloqueio para garantir que apenas um thread pode acessar o `msg` variável em um momento.  
+  
+ [!code-csharp[System.ArgumentOutOfRangeException#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/cs/Race2.cs#12)]
+ [!code-vb[System.ArgumentOutOfRangeException#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.ArgumentOutOfRangeException/vb/Race2.vb#12)]  
+  
+ <xref:System.ArgumentOutOfRangeException>usa o HRESULT COR_E_ARGUMENTOUTOFRANGE, que tem o valor 0x80131502.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.ArgumentOutOfRangeException>, consulte o <xref:System.ArgumentOutOfRangeException> construtores.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma classe para conter informações sobre um convidado convidado. Se o convidado é anteriores 21, um <xref:System.ArgumentOutOfRangeException> exceção será lançada.  
+  
+ [!code-csharp[ArgumentOutOfRangeException#1](~/samples/snippets/csharp/VS_Snippets_CLR/ArgumentOutOfRangeException/CS/program.cs#1)]
+ [!code-vb[ArgumentOutOfRangeException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ArgumentOutOfRangeException/VB/program.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentOutOfRangeException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgumentOutOfRangeException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ArgumentOutOfRangeException" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.ArgumentException.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "Número não negativo necessário." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ArgumentOutOfRangeException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.ArgumentOutOfRangeException.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentOutOfRangeException (string paramName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string paramName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgumentOutOfRangeException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="paramName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="paramName">O nome do parâmetro que causa essa exceção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ArgumentOutOfRangeException" /> com o nome do parâmetro que causa essa exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.ArgumentException.Message%2A> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro, como "Número não negativo necessário." Esta mensagem leva em conta a cultura do sistema atual.  
+  
+ Este construtor inicializa o <xref:System.ArgumentException.ParamName%2A> propriedade da nova instância usando o `paramName` parâmetro. O conteúdo de `paramName` deve ser compreendido por humanos.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ArgumentOutOfRangeException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|Uma referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.ArgumentOutOfRangeException.Message%2A>|A cadeia de caracteres vazia ("").|  
+|<xref:System.ArgumentException.ParamName%2A>|A cadeia de caracteres do nome do parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ArgumentOutOfRangeException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgumentOutOfRangeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">Um objeto que descreve a origem ou o destino dos dados serializados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ArgumentOutOfRangeException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo. Para obter mais informações, consulte [XML e serialização SOAP](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentOutOfRangeException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgumentOutOfRangeException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão desta exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual ou uma referência nula (<see langword="Nothing" /> no Visual Basic) se nenhuma exceção interna é especificada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ArgumentOutOfRangeException" /> com uma mensagem de erro especificada e a exceção interna que é a causa desta exceção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentOutOfRangeException (string paramName, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string paramName, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgumentOutOfRangeException.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="paramName" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="paramName">O nome do parâmetro que causou a exceção.</param>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ArgumentOutOfRangeException" /> com o nome do parâmetro que causa essa exceção e uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.ArgumentOutOfRangeException.Message%2A> propriedade da nova instância usando o valor da `message` parâmetro. O conteúdo do parâmetro `message` deve ser compreendido por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.  
+  
+ Este construtor inicializa o <xref:System.ArgumentException.ParamName%2A> propriedade da nova instância usando o `paramName` parâmetro. O conteúdo de `paramName` deve ser compreendido por humanos.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ArgumentOutOfRangeException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.ArgumentOutOfRangeException.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+|<xref:System.ArgumentException.ParamName%2A>|A cadeia de caracteres do nome do parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ArgumentOutOfRangeException (string paramName, object actualValue, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string paramName, object actualValue, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgumentOutOfRangeException.#ctor(System.String,System.Object,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="paramName" Type="System.String" />
+        <Parameter Name="actualValue" Type="System.Object" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="paramName">O nome do parâmetro que causou a exceção.</param>
+        <param name="actualValue">O valor do argumento que causa essa exceção.</param>
+        <param name="message">A mensagem que descreve o erro.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ArgumentOutOfRangeException" /> com o nome do parâmetro, o valor do argumento e uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.ArgumentException.ParamName%2A> propriedade da nova instância usando o `paramName` parâmetro, o <xref:System.ArgumentOutOfRangeException.ActualValue%2A> propriedade usando o `actualValue` parâmetro e o <xref:System.ArgumentException.Message%2A> propriedade usando o `message` parâmetro. O conteúdo a `paramName` e `message` parâmetros se destina a ser compreendidos por humanos. O chamador desse construtor é necessário para garantir que essas cadeias de caracteres foram localizadas para a cultura atual do sistema.  
+  
+ O `actualValue` parâmetro não for usado dentro da biblioteca de classe do .NET Framework. No entanto, o <xref:System.ArgumentOutOfRangeException.ActualValue%2A> é fornecida para que os aplicativos podem usar o valor do argumento disponíveis.  
+  
+ O `actualValue` parâmetro contém um valor inválido é passado para o método e faz com que essa exceção seja lançada. Esse valor é armazenado no <xref:System.ArgumentOutOfRangeException.ActualValue%2A> propriedade e sua representação de cadeia de caracteres é anexado à cadeia de caracteres de mensagem usada o <xref:System.ArgumentOutOfRangeException.Message%2A> propriedade.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.ArgumentOutOfRangeException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.ArgumentOutOfRangeException.ActualValue%2A>|O valor do argumento.|  
+|<xref:System.Exception.InnerException%2A>|A referência nula (`Nothing` no Visual Basic).|  
+|<xref:System.ArgumentOutOfRangeException.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+|<xref:System.ArgumentException.ParamName%2A>|A cadeia de caracteres do nome do parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActualValue">
+      <MemberSignature Language="C#" Value="public virtual object ActualValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ActualValue" />
+      <MemberSignature Language="DocId" Value="P:System.ArgumentOutOfRangeException.ActualValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do argumento que causa essa exceção.</summary>
+        <value>Um <see langword="Object" /> que contém o valor do parâmetro que causou o <see cref="T:System.Exception" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para recuperar o argumento inválido.  
+  
+ O `ActualValue` propriedade retorna o mesmo valor que foi passado para o construtor, ou `null` se nenhum valor foi fornecido.  
+  
+ O <xref:System.ArgumentOutOfRangeException.ActualValue%2A> é atribuído um valor de propriedade no momento da construção do objeto. Se o <xref:System.ArgumentOutOfRangeException.ActualValue%2A> o valor da propriedade não é `null`, uma representação de cadeia de caracteres do valor é anexada à cadeia de caracteres de mensagem mantida pelo <xref:System.ArgumentOutOfRangeException.Message%2A> propriedade.  
+  
+ O <xref:System.ArgumentOutOfRangeException.ActualValue%2A> propriedade não é usada dentro da biblioteca de classe do .NET Framework. Ela tem um valor nulo em todos os <xref:System.ArgumentOutOfRangeException> objetos gerados pela biblioteca de classes .NET Framework. O <xref:System.ArgumentOutOfRangeException.ActualValue%2A> é fornecida para que os aplicativos podem usar o valor do argumento disponíveis.  
+  
+ Essa propriedade é somente leitura e deve ser substituída somente para personalizar o conteúdo ou o formato do valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public override void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ArgumentOutOfRangeException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">Um objeto que descreve a origem ou o destino dos dados serializados.</param>
+        <summary>Define o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto com o valor de argumento inválido e informações adicionais de exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ArgumentOutOfRangeException.GetObjectData%2A>define uma <xref:System.Runtime.Serialization.SerializationInfo> objeto com todos os dados do objeto de exceção destinados para a serialização. Durante a desserialização, o objeto de exceção é reconstituído a partir do <xref:System.Runtime.Serialization.SerializationInfo> transmitido pelo fluxo.  
+  
+ Para obter mais informações, consulte <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O objeto <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public override string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.ArgumentOutOfRangeException.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de erro e a representação de cadeia de caracteres do valor de argumento inválido ou a mensagem de erro se o valor do argumento for nulo.</summary>
+        <value>A mensagem de texto para essa exceção. O valor dessa propriedade usa uma das duas formas, da seguinte maneira.  
+  
+ <list type="table"><listheader><term>Condição  
+  
+ </term><description>Valor  
+  
+ </description></listheader><item><term>O <paramref name="actualValue" /> é <see langword="null" />.  
+  
+ </term><description>O <paramref name="message" /> cadeia de caracteres passada para o construtor.  
+  
+ </description></item><item><term>O <paramref name="actualValue" /> não é <see langword="null" />.  
+  
+ </term><description>O <paramref name="message" /> concatenada com a representação de cadeia de caracteres do valor do argumento inválido de cadeia de caracteres.  
+  
+ </description></item></list></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade substitui <xref:System.ArgumentException.Message%2A>.  
+  
+ A mensagem de erro deve descrever os valores esperados de parâmetro que faz com que essa exceção. A mensagem de erro deve ser localizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

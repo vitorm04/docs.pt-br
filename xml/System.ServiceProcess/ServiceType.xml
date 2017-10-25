@@ -1,0 +1,195 @@
+<Type Name="ServiceType" FullName="System.ServiceProcess.ServiceType">
+  <TypeSignature Language="C#" Value="public enum ServiceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ServiceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceProcess.ServiceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o tipo do serviço.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do serviço indica como o serviço é usado pelo sistema. O <xref:System.ServiceProcess.ServiceController> que envia os comandos para o serviço armazena um valor para o tipo de serviço.  
+  
+ O valor de uma instância de ServiceType representa um conjunto de sinalizadores combinadas que usam o operador OR bit a bit.  
+  
+ Não há suporte para a criação de serviços interativos. Para solucionar isso, você pode criar um serviço não interativo e um controle separado aplicativos de interface gráfica do usuário que se comunica com o serviço usando soquetes ou remotamente.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa a <xref:System.ServiceProcess.ServiceController> classe para exibir os serviços de driver de dispositivo no computador local.  
+  
+ [!code-cpp[ServiceController#5](~/samples/snippets/cpp/VS_Snippets_CLR/ServiceController/CPP/servicecontroller.cpp#5)]
+ [!code-csharp[ServiceController#5](~/samples/snippets/csharp/VS_Snippets_CLR/ServiceController/CS/servicecontroller.cs#5)]
+ [!code-vb[ServiceController#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/ServiceController/VB/servicecontroller.vb#5)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Adapter">
+      <MemberSignature Language="C#" Value="Adapter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.ServiceType Adapter = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceType.Adapter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um serviço para um dispositivo de hardware que requer seu próprio driver.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FileSystemDriver">
+      <MemberSignature Language="C#" Value="FileSystemDriver" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.ServiceType FileSystemDriver = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceType.FileSystemDriver" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um driver de sistema de arquivos que também é um driver de dispositivo de kernel.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InteractiveProcess">
+      <MemberSignature Language="C#" Value="InteractiveProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.ServiceType InteractiveProcess = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceType.InteractiveProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um serviço que pode se comunicar com a área de trabalho.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="KernelDriver">
+      <MemberSignature Language="C#" Value="KernelDriver" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.ServiceType KernelDriver = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceType.KernelDriver" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um driver de dispositivo de kernel, como um disco rígido ou outro driver de dispositivo de hardware de baixo nível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RecognizerDriver">
+      <MemberSignature Language="C#" Value="RecognizerDriver" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.ServiceType RecognizerDriver = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceType.RecognizerDriver" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um driver de sistema de arquivos usado durante a inicialização para determinar os sistemas de arquivos presentes no sistema.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32OwnProcess">
+      <MemberSignature Language="C#" Value="Win32OwnProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.ServiceType Win32OwnProcess = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceType.Win32OwnProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um programa Win32 que pode ser iniciado pelo controlador de serviço e que obedece o protocolo de controle de serviço. Esse tipo de serviço do Win32 é executado em um processo por ele mesmo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Win32ShareProcess">
+      <MemberSignature Language="C#" Value="Win32ShareProcess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ServiceProcess.ServiceType Win32ShareProcess = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceProcess.ServiceType.Win32ShareProcess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess.ServiceController</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceProcess</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceProcess.ServiceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um serviço do Win32 que pode compartilhar um processo com outros serviços do Win32.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

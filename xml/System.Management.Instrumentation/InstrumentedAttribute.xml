@@ -1,0 +1,168 @@
+<Type Name="InstrumentedAttribute" FullName="System.Management.Instrumentation.InstrumentedAttribute">
+  <TypeSignature Language="C#" Value="public class InstrumentedAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstrumentedAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Management.Instrumentation.InstrumentedAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que este assembly fornece instrumentação de gerenciamento. Esse atributo deve aparecer uma vez por assembly.  
+  
+ Observação: as bibliotecas do .NET no WMI agora são consideradas em estado final e nenhum desenvolvimento, melhorias ou atualizações adicionais estarão disponíveis para problemas não relacionados à segurança que afetarem essas bibliotecas. O [MI APIs](https://msdn.microsoft.com/en-us/library/jj152383%28v=vs.80%29.aspx) deve ser usado para todos os novos desenvolvimentos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstrumentedAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentedAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.Instrumentation.InstrumentedAttribute" /> classe que é definido para o namespace root\default. Esse é o construtor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstrumentedAttribute (string namespaceName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string namespaceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentedAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">O namespace de instâncias de instrumentação e eventos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.Instrumentation.InstrumentedAttribute" /> classe que é definido para o namespace especificado para instrumentação dentro desse assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstrumentedAttribute (string namespaceName, string securityDescriptor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string namespaceName, string securityDescriptor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Management.Instrumentation.InstrumentedAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="namespaceName" Type="System.String" />
+        <Parameter Name="securityDescriptor" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceName">O namespace de instâncias de instrumentação e eventos.</param>
+        <param name="securityDescriptor">Um descritor de segurança que permite que somente os usuários ou grupos especificados executar aplicativos que fornecem a instrumentação suportada por este assembly.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Management.Instrumentation.InstrumentedAttribute" /> classe é definida nas configurações de segurança e o namespace especificado para instrumentação dentro desse assembly.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceName">
+      <MemberSignature Language="C#" Value="public string NamespaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NamespaceName" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.InstrumentedAttribute.NamespaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace para instâncias de instrumentação e eventos neste assembly.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o nome do namespace para instâncias de instrumentação e eventos neste assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É altamente recomendável que o nome do namespace seja especificado pelo assembly e que ela deve ser um namespace exclusivo por assembly ou por aplicativo. Ter um namespace específico para cada assembly ou aplicativo instrumentação permite maior granularidade para proteger o acesso à instrumentação fornecida por aplicativos ou assemblies diferentes.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Se não for especificado, o namespace padrão será definido como "\\\\.\root\default". Caso contrário, uma cadeia de caracteres que indica o nome do namespace para instâncias de instrumentação e eventos neste assembly.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityDescriptor">
+      <MemberSignature Language="C#" Value="public string SecurityDescriptor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SecurityDescriptor" />
+      <MemberSignature Language="DocId" Value="P:System.Management.Instrumentation.InstrumentedAttribute.SecurityDescriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um descritor de segurança que permite que somente os usuários ou grupos especificados executar aplicativos que fornecem a instrumentação suportada por este assembly.</summary>
+        <value>Retorna um <see cref="T:System.String" /> valor que contém o descritor de segurança que permite que somente os usuários ou grupos especificados executar aplicativos que fornecem a instrumentação suportada por este assembly.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usuários ou grupos não especificados nesse descritor de segurança ainda podem executar o aplicativo, mas não é possível fornecer a instrumentação deste assembly.  
+  
+## <a name="property-value"></a>Valor de propriedade  
+ Se for null, o valor padrão é definido como o grupo de Administradores Local. Isso permitirá apenas membros do grupo Administradores local para publicar dados e acionar eventos a partir desse assembly. Caso contrário, isso é uma cadeia de caracteres no formato SDDL que representa o descritor de segurança que define quais usuários e grupos podem fornecer dados de instrumentação e eventos deste aplicativo.  
+  
+## <a name="net-framework-security"></a>Segurança do .NET Framework  
+ Confiança total para o chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável. Para obter mais informações, consulte [usando bibliotecas de código parcialmente confiável](~/docs/framework/misc/using-libraries-from-partially-trusted-code.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

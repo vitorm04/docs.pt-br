@@ -1,0 +1,342 @@
+<Type Name="DetailsViewRowCollection" FullName="System.Web.UI.WebControls.DetailsViewRowCollection">
+  <TypeSignature Language="C#" Value="public class DetailsViewRowCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DetailsViewRowCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DetailsViewRowCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> em um controle <see cref="T:System.Web.UI.WebControls.DetailsView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DetailsViewRowCollection> classe é usada para armazenar e gerenciar uma coleção de <xref:System.Web.UI.WebControls.DetailsViewRow> objetos em um <xref:System.Web.UI.WebControls.DetailsView> controle. Cada linha em uma <xref:System.Web.UI.WebControls.DetailsView> controle é representado por um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto. O <xref:System.Web.UI.WebControls.DetailsView> controlar usa o <xref:System.Web.UI.WebControls.DetailsViewRowCollection> de classe para seu <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> propriedade.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> propriedade contém apenas as linhas de dados. Para acessar a linha de cabeçalho, linha de rodapé, linha superior pager e linha de pager inferior, use o <xref:System.Web.UI.WebControls.DetailsView.HeaderRow%2A>, <xref:System.Web.UI.WebControls.DetailsView.FooterRow%2A>, <xref:System.Web.UI.WebControls.DetailsView.TopPagerRow%2A>, e <xref:System.Web.UI.WebControls.DetailsView.BottomPagerRow%2A> propriedades, respectivamente.  
+  
+ O <xref:System.Web.UI.WebControls.DetailsViewRowCollection> classe oferece suporte a várias maneiras de acessar os itens na coleção:  
+  
+-   Use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.Item%2A> indexador para recuperar diretamente um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto da coleção em um índice com base em zero específico.  
+  
+-   Use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.GetEnumerator%2A> método para recuperar um enumerador que pode ser usado para iterar pela coleção.  
+  
+-   Use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.CopyTo%2A> método para copiar os itens na coleção em uma matriz, que pode ser usada para acessar os itens na coleção.  
+  
+ Para determinar o número total de itens na coleção, use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.Count%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como percorrer o <xref:System.Web.UI.WebControls.DetailsViewRow> objetos no <xref:System.Web.UI.WebControls.DetailsView.Rows%2A> coleção de um <xref:System.Web.UI.WebControls.DetailsView> controle. O valor de cada linha, em seguida, é exibido na página.  
+  
+ [!code-aspx-csharp[DetailsViewRowCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowCollection/CS/detailsviewrowcollectioncs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowCollection/VB/detailsviewrowcollectionvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DetailsViewRowCollection (System.Collections.ArrayList rows);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList rows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRowCollection.#ctor(System.Collections.ArrayList)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rows" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="rows">Um <see cref="T:System.Collections.ArrayList" /> que contém o <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> objetos com a qual inicializar a coleção.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" /> usando o objeto <see cref="T:System.Collections.ArrayList" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.DetailsViewRowCollection> classe usando especificado <xref:System.Collections.ArrayList> objeto. O <xref:System.Collections.ArrayList> objeto contém o <xref:System.Web.UI.WebControls.DetailsViewRow> objetos com o qual preencher a coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.DetailsViewRow[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.DetailsViewRow[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRowCollection.CopyTo(System.Web.UI.WebControls.DetailsViewRow[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.DetailsViewRow[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> de base zero que recebe os itens copiados do <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" />.</param>
+        <param name="index">O primeiro índice especificado na <see cref="T:System.Array" /> para receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens neste <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" /> objeto especificado <see cref="T:System.Array" /> objeto, começando no índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para copiar os itens a <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto na matriz especificada, iniciando no índice especificado. A matriz, em seguida, pode ser usada para acessar os itens na coleção.  
+  
+> [!NOTE]
+>  Você deve usar uma matriz com base em zero para o `array` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.CopyTo%2A> método para copiar os itens em uma <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto em uma matriz. Iteração, em seguida, a matriz e o valor de cada linha é exibido na página.  
+  
+ [!code-aspx-csharp[DetailsViewRowCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowCollectionCopyTo/CS/detailsviewrowcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowCollectionCopyTo/VB/detailsviewrowcollectioncopytovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRowCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens no objeto <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" />.</summary>
+        <value>O número de itens no <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.Count%2A> para determinar o número de itens na coleção. O <xref:System.Web.UI.WebControls.DetailsViewRowCollection.Count%2A> propriedade normalmente é usada quando a iteração na coleção para determinar seu superior associado. O <xref:System.Web.UI.WebControls.DetailsViewRowCollection.Count%2A> propriedade também costuma ser usada para determinar se uma coleção está vazia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.Count%2A> propriedade para determinar se um <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto contém todos os itens antes da iteração pela coleção.  
+  
+ [!code-aspx-csharp[DetailsViewRowCollection#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowCollection/CS/detailsviewrowcollectioncs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowCollection#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowCollection/VB/detailsviewrowcollectionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRowCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que contém todos os <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> objetos no <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" /> objeto.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" />-implementado o objeto que contém todos os <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> objetos no <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para obter um enumerador que pode ser iterado por meio de linearmente para acessar cada item de <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto. Para acessar o item na posição atual do enumerador, use o <xref:System.Collections.IEnumerator.Current%2A> propriedade. Use o <xref:System.Collections.IEnumerator.MoveNext%2A> método para mover para o próximo item na coleção. Para mover o enumerador como sua posição inicial, use o <xref:System.Collections.IEnumerator.Reset%2A> método.  
+  
+> [!NOTE]
+>  Quando você inicialmente obter o enumerador ou usar o <xref:System.Collections.IEnumerator.Reset%2A> método para mover o enumerador para o primeiro item na coleção, você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A> método. Caso contrário, o item é representado pelo <xref:System.Collections.IEnumerator.Current%2A> propriedade está definida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.GetEnumerator%2A> método para recuperar um enumerador que contém os itens da coleção. Iteração, em seguida, o enumerador e o valor de cada linha é exibido na página.  
+  
+ [!code-aspx-csharp[DetailsViewRowCollectionGetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowCollectionGetEnumerator/CS/detailsviewrowcollectiongetenumeratorcs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowCollectionGetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowCollectionGetEnumerator/VB/detailsviewrowcollectiongetenumeratorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRowCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se as linhas de <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" /> objeto pode ser modificado.</summary>
+        <value>Sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.IsReadOnly%2A> propriedade para determinar se o <xref:System.Web.UI.WebControls.DetailsViewRow> objetos no <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto pode ser modificado.  
+  
+> [!NOTE]
+>  Essa propriedade foi substituída para sempre retornar `false`, para indicar que o <xref:System.Web.UI.WebControls.DetailsViewRow> objetos no <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto pode ser modificado em todos os casos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRowCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" /> objeto for sincronizado (thread-safe).</summary>
+        <value>Sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.IsSynchronized%2A> propriedade para determinar se o <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto é thread-safe.  
+  
+> [!NOTE]
+>  Essa propriedade foi substituída para sempre retornar `false` para indicar que o <xref:System.Web.UI.WebControls.DetailsViewRowCollection> o objeto não é thread-safe.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A> propriedade o <xref:System.Collections.ICollection> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DetailsViewRow this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DetailsViewRow Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRowCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DetailsViewRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> para recuperar da coleção.</param>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> objeto da coleção no índice especificado.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.DetailsViewRow" /> no índice especificado na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para recuperar um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto da coleção no índice especificado, usando a notação de matriz.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o indexador para recuperar um <xref:System.Web.UI.WebControls.DetailsViewRow> objeto da coleção em um índice específico.  
+  
+ [!code-aspx-csharp[DetailsViewRowCollectionIndexer#1](~/samples/snippets/csharp/VS_Snippets_WebNet/DetailsViewRowCollectionIndexer/CS/detailsviewrowcollectionindexercs.aspx#1)]
+ [!code-aspx-vb[DetailsViewRowCollectionIndexer#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/DetailsViewRowCollectionIndexer/VB/detailsviewrowcollectionindexervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DetailsViewRowCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto usado para sincronizar o acesso à coleção.</summary>
+        <value>Um <see cref="T:System.Object" /> que pode ser usado para sincronizar o acesso à coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.SyncRoot%2A> propriedade para obter um objeto que pode ser usado para sincronizar o acesso à coleção. O objeto retornado nesta implementação é o <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto propriamente dito.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.DetailsViewRowCollection.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade o <xref:System.Collections.ICollection> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DetailsViewRowCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um <see cref="T:System.Array" /> de base zero que recebe os itens copiados do <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" />.</param>
+        <param name="index">O primeiro índice especificado na <see cref="T:System.Array" /> para receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens neste <see cref="T:System.Web.UI.WebControls.DetailsViewRowCollection" /> objeto especificado <see cref="T:System.Array" /> objeto, começando no índice especificado no <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Web.UI.WebControls.DetailsViewRowCollection.System%23Collections%23ICollection%23CopyTo%28System.Array%2CSystem.Int32%29> é um método auxiliar usado pelo <xref:System.Web.UI.WebControls.DetailsViewRowCollection> classe para copiar os itens a <xref:System.Web.UI.WebControls.DetailsViewRowCollection> objeto especificado <xref:System.Array> objeto, iniciando no índice especificado. O <xref:System.Array> objeto, em seguida, pode ser usado para acessar os itens na coleção.  
+  
+> [!NOTE]
+>  Você deve usar um com base em zero <xref:System.Array> de objeto para o `array` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

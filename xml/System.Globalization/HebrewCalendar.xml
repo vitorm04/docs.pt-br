@@ -1,0 +1,1338 @@
+<Type Name="HebrewCalendar" FullName="System.Globalization.HebrewCalendar">
+  <TypeSignature Language="C#" Value="public class HebrewCalendar : System.Globalization.Calendar" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit HebrewCalendar extends System.Globalization.Calendar" />
+  <TypeSignature Language="DocId" Value="T:System.Globalization.HebrewCalendar" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Calendars</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Globalization.Calendar</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o calendário hebraico.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O calendário hebraico reconhece dois eras: A.C. (antes era comum) e. (Latino "Anno Mundi", que significa que "o ano do mundo"). Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente o era atual (A.M.) e os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+> [!NOTE]
+>  Para obter informações sobre como usar o <xref:System.Globalization.HebrewCalendar> classe e outras classes do Framework .NET de calendário, consulte [trabalhando com calendários](~/docs/standard/datetime/working-with-calendars.md).  
+  
+ Em cada ciclo de 19 anos que termina com um ano divisível pelo 19, 3ª, 6º, 8, 11, 14, 17 e 19 anos são bissextos. Um ano comum pode ter de 353 355 dias, dependendo do posicionamento do Judeu feriados. Um ano bissexto pode ter de 383 385 dias.  
+  
+ O calendário hebraico tem 12 meses durante anos comuns e 13 meses durante os anos bissextos:  
+  
+|Valor de GetMonth (ano comum)|Valor de GetMonth (ano bissexto)|Mês|Dias em anos comuns|Dias em anos leap|  
+|------------------------------------|----------------------------------|-----------|--------------------------|------------------------|  
+|1|1|תשרי (Tishrei)|30|30|  
+|2|2|חשון (Cheshvan)|29/30|29/30|  
+|3|3|כסלו (Kislev)|29/30|29/30|  
+|4|4|טבת (Tevet)|29|29|  
+|5|5|שבט (Shevat)|30|30|  
+|6|-|אדר (Adar)|29|-|  
+|-|6|אדר א (Adar Alef)|-|30|  
+|-|7|אדר ב (Adar Beit)|-|29|  
+|7|8|ניסן (Nissan)|30|30|  
+|8|9|אייר (Iyar)|29|29|  
+|9|10|סיון (Sivan)|30|30|  
+|10|11|תמוז (Tamuz)|29|29|  
+|11|12|אב (Av)|30|30|  
+|12|13|אלול (Elul)|29|29|  
+  
+ Os dias em Cheshvan e Kislev variam, dependendo o posicionamento de Judeu feriados. Durante os anos bissextos, Adar é substituído por Adar Alef com 30 dias e Adar Beit com 29 dias. Adar Alef é considerado o mês de salto. O último dia do Adar Alef e todos os dias em Adar Beit são considerados leap dias; ou seja, o <xref:System.Globalization.HebrewCalendar.IsLeapDay%2A> método retorna `true` para estes dias.  
+  
+ A data de 1º de janeiro de 2001. no calendário gregoriano é equivalente ao sexto dia do Tevet no ano 5761 A.M. o calendário hebraico.  
+  
+ Cada <xref:System.Globalization.CultureInfo> suporta um conjunto de calendários. O <xref:System.Globalization.CultureInfo.Calendar%2A> propriedade retorna o calendário padrão para a cultura e o <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> propriedade retorna uma matriz que contém todos os calendários suportados pela cultura. Para alterar o calendário usado por um <xref:System.Globalization.CultureInfo>, o aplicativo deve definir o <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> para um novo <xref:System.Globalization.Calendar>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um arquivo que contém os intervalos de data com suporte a <xref:System.Globalization.HebrewCalendar> classe e exibe o número de dias em cada mês do ano 5772.  
+  
+ [!code-csharp[System.Globalization.HebrewCalendar.Class#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.hebrewcalendar.class/cs/example1.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar.Class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.hebrewcalendar.class/vb/example1.vb#1)]  
+  
+ O exemplo cria um <xref:System.Globalization.HebrewCalendar> do objeto e torna o calendário atual de um hebraico (Israel) <xref:System.Globalization.CultureInfo> objeto. Em seguida, faz hebraico (Israel) a cultura do thread atual. Isso faz com que o common language runtime para interpretar todas as datas e horas em relação o calendário hebraico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HebrewCalendar ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Globalization.HebrewCalendar" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMonths">
+      <MemberSignature Language="C#" Value="public override DateTime AddMonths (DateTime time, int months);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddMonths(valuetype System.DateTime time, int32 months) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.AddMonths(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="months" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> ao qual adicionar <c>meses</c>.</param>
+        <param name="months">O número de meses a serem adicionados.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é o número especificado de meses longe especificado <see cref="T:System.DateTime" />.</summary>
+        <returns>O <see cref="T:System.DateTime" /> resultante da adição do número especificado de meses ao <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+ A parte do dia de resultante <xref:System.DateTime> é afetado se o dia resultante não é um dia válido no mês do ano resultante resultante. Ele é alterado para o último dia válido no mês do ano resultante resultante. A parte do ano de resultante <xref:System.DateTime> é afetado se o mês resultante está fora do ano especificado <xref:System.DateTime>. Essa implementação oferece suporte somente a era atual. Portanto, <xref:System.ArgumentException> é gerada se o ano resultante é fora era especificada <xref:System.DateTime>. A parte de hora do dia de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>.  
+  
+ Por exemplo, se o mês especificado for Av, que tem 30 dias, o dia especificado é 30 o dia do mês e o valor da `months` parâmetro for 5, o ano resultante é um mais do que o ano especificado, o mês resultante é Tevet e o dia resultante é o dia 29, que é o último dia do Tevet.  
+  
+ Se o valor da `months` parâmetro for negativo, o resultante <xref:System.DateTime> é anterior ao especificado <xref:System.DateTime>.  
+  
+ O <xref:System.DateTime.Kind%2A> propriedade retornado <xref:System.DateTime> sempre valor for igual a <xref:System.DateTimeKind?displayProperty=nameWithType>. Você pode preservar o <xref:System.DateTime.Kind%2A> propriedade do `time` parâmetro ao chamar o <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#5)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#5)]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O resultante <see cref="T:System.DateTime" /> está fora do intervalo com suporte.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="months" /> é menor que -120.000 ou maior que 120.000.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddYears">
+      <MemberSignature Language="C#" Value="public override DateTime AddYears (DateTime time, int years);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime AddYears(valuetype System.DateTime time, int32 years) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.AddYears(System.DateTime,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+        <Parameter Name="years" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> ao qual adicionar <c>anos</c>.</param>
+        <param name="years">O número de anos a ser adicionado.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é o número especificado de anos longe especificado <see cref="T:System.DateTime" />.</summary>
+        <returns>O <see cref="T:System.DateTime" /> resultante da adição do número especificado de anos indicado ao <see cref="T:System.DateTime" /> especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+ A parte do dia de resultante <xref:System.DateTime> é afetado se o dia resultante não é um dia válido no mês do ano resultante resultante. Ele é alterado para o último dia válido no mês do ano resultante resultante. Por exemplo, Cheshvan pode ter 29 ou 30 dias, dependendo do posicionamento do Judeu feriados. Suponha que Cheshvan tem 30 dias do ano atual e 29 no ano seguinte. Se a data especificada é o dia 30 de Cheshvan no ano atual e o valor de `years` é 1, a data resultante será o dia 29 de Cheshvan no ano seguinte.  
+  
+ A parte do mês de resultante <xref:System.DateTime> é afetado se o mês resultante não é um mês válido no ano resultante. Ele é alterado para o último mês válido no ano resultante. Por exemplo, se o mês no `time` parâmetro é de 13 mês de um ano bissexto e o valor de `years` é 1, o mês resultante <xref:System.DateTime> é o 12º mês do ano seguinte, que é um ano não bissexto. Observe que mesmo quando não altera a parte do mês, ela talvez ainda se referir a um mês diferente. Por exemplo, Adar Beit é o mês 7 anos bissextos, mas Nissan é o mês 7 em comum anos.  
+  
+ Essa implementação oferece suporte somente a era atual. Portanto, <xref:System.ArgumentException> é gerada se o ano resultante é fora era especificada <xref:System.DateTime>.  
+  
+ A parte de hora do dia de resultante <xref:System.DateTime> permanece o mesmo que o especificado <xref:System.DateTime>.  
+  
+ Se `years` for negativo, o resultante <xref:System.DateTime> é anterior ao especificado <xref:System.DateTime>.  
+  
+ O <xref:System.DateTime.Kind%2A> propriedade retornado <xref:System.DateTime> sempre valor for igual a <xref:System.DateTimeKind?displayProperty=nameWithType>. Você pode preservar o <xref:System.DateTime.Kind%2A> propriedade do `time` parâmetro ao chamar o <xref:System.DateTime.SpecifyKind%2A?displayProperty=nameWithType> método, como mostra o exemplo a seguir.  
+  
+ [!code-csharp[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/cs/add1.cs#8)]
+ [!code-vb[System.Globalization.Calendar.AddMethods#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.addmethods/vb/add1.vb#8)]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O resultante <see cref="T:System.DateTime" /> está fora do intervalo com suporte.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmType">
+      <MemberSignature Language="C#" Value="public override System.Globalization.CalendarAlgorithmType AlgorithmType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Globalization.CalendarAlgorithmType AlgorithmType" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HebrewCalendar.AlgorithmType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CalendarAlgorithmType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o calendário atual é solar baseado, lunar ou uma combinação de ambos.</summary>
+        <value>Sempre retorna <see cref="F:System.Globalization.CalendarAlgorithmType.LunisolarCalendar" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir usa reflexão para criar uma instância de cada <xref:System.Globalization.Calendar> tipo encontrado no .NET Framework e exibe o valor da sua <xref:System.Globalization.Calendar.AlgorithmType%2A> propriedade.  
+  
+ [!code-csharp[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/cs/algorithmtype1.cs#1)]
+ [!code-vb[System.Globalization.Calendar.AlgorithmType#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.calendar.algorithmtype/vb/algorithmtype1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Eras">
+      <MemberSignature Language="C#" Value="public override int[] Eras { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Eras" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HebrewCalendar.Eras" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a lista de eras no <see cref="T:System.Globalization.HebrewCalendar" />.</summary>
+        <value>Uma matriz de inteiros que representa os eras no <see cref="T:System.Globalization.HebrewCalendar" /> tipo. O valor de retorno é sempre uma matriz que contém um elemento igual a <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O calendário hebraico reconhece dois eras: A.C. (antes era comum) e. (Latino "Anno Mundi", que significa que "o ano do mundo"). Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente o era atual (A.M.). Essa propriedade sempre retorna uma matriz com apenas um elemento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfMonth">
+      <MemberSignature Language="C#" Value="public override int GetDayOfMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetDayOfMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia do mês especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro de 1 a 30 que representa o dia do mês especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfWeek">
+      <MemberSignature Language="C#" Value="public override DayOfWeek GetDayOfWeek (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DayOfWeek GetDayOfWeek(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetDayOfWeek(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DayOfWeek</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia da semana especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um <see cref="T:System.DayOfWeek" /> valor que representa o dia da semana especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.DayOfWeek> valores são os seguintes:  
+  
+|Valor de DayOfWeek|Dia da semana|  
+|---------------------|-----------------|  
+|Domingo|יום ראשון (Yom Rishon)|  
+|Segunda-feira|יום שני (Yom Sheni)|  
+|Terça-feira|יום שלישי (Yom Shlishi)|  
+|Quarta-feira|יום רביעי (Yom Reviee)|  
+|Quinta-feira|יום חמישי (Yom Chamishi)|  
+|Sexta-feira|יום שישי (Yom Shishi)|  
+|Sábado|שבת (Shabat)|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDayOfYear">
+      <MemberSignature Language="C#" Value="public override int GetDayOfYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDayOfYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetDayOfYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o dia do ano especificado na <see cref="T:System.DateTime" />.</summary>
+        <returns>Um inteiro de 1 a 385 que representa o dia do ano especificado na <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dia do ano é definido como o número de dias desde o primeiro dia do ano. Por exemplo, <xref:System.Globalization.HebrewCalendar.GetDayOfYear%2A> para o primeiro dia do primeiro mês retorna 1, e <xref:System.Globalization.HebrewCalendar.GetDayOfYear%2A> para o último dia do mês anterior retorna o número total de dias no ano, que é o mesmo valor retornado por <xref:System.Globalization.HebrewCalendar.GetDaysInYear%2A>.  
+  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />17 de setembro de 1583 no calendário gregoriano anterior ou maior que <see cref="P:System.Globalization.HebrewCalendar.MaxSupportedDateTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInMonth">
+      <MemberSignature Language="C#" Value="public override int GetDaysInMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetDaysInMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 13 que representa o mês.</param>
+        <param name="era">Um inteiro que representa a era. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="Calendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Retorna o número de dias no mês do ano especificado na especificado era especificado.</summary>
+        <returns>O número de dias do mês especificado no ano especificado na era especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, este método retorna 29 ou 30 para Cheshvan, dependendo do posicionamento de Judeu feriados.  
+  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `GetDaysInMonth` para o segundo mês em cada um dos cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar.GetDaysInMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.GetDaysInMonth/CPP/hebrewcalendar_getdaysinmonth.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar.GetDaysInMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.GetDaysInMonth/CS/hebrewcalendar_getdaysinmonth.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar.GetDaysInMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.GetDaysInMonth/VB/hebrewcalendar_getdaysinmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, ou <paramref name="era" /> está fora do intervalo aceito por atual <see cref="T:System.Globalization.HebrewCalendar" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDaysInYear">
+      <MemberSignature Language="C#" Value="public override int GetDaysInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDaysInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetDaysInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Retorna o número de dias do ano especificado na era especificado.</summary>
+        <returns>O número de dias do ano especificado na era especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, este método retorna um inteiro de 353 para 355 ou de 383 a 385, dependendo do posicionamento de feriados Judeu e dependendo se `year` é um ano bissexto.  
+  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `GetDaysInYear` por cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_GetDaysInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_GetDaysInYear/CPP/hebrewcalendar_getdaysinyear.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_GetDaysInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_GetDaysInYear/CS/hebrewcalendar_getdaysinyear.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_GetDaysInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_GetDaysInYear/VB/hebrewcalendar_getdaysinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />ou <paramref name="era" /> está fora do intervalo aceito por atual <see cref="T:System.Globalization.HebrewCalendar" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEra">
+      <MemberSignature Language="C#" Value="public override int GetEra (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetEra(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetEra(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna a era no <see cref="T:System.DateTime" /> especificado.</summary>
+        <returns>Um inteiro que representa a era no <see cref="T:System.DateTime" /> especificado. O valor de retorno é sempre <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O calendário hebraico reconhece dois eras: A.C. (antes era comum) e. (Latino "Anno Mundi", que significa que "o ano do mundo"). Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente o era atual (A.M.) e somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLeapMonth">
+      <MemberSignature Language="C#" Value="public override int GetLeapMonth (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetLeapMonth(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetLeapMonth(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um ano.</param>
+        <param name="era">Uma época. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Calcula o mês de salto para um ano especificado e era.</summary>
+        <returns>Um inteiro positivo que indica o mês no ano especificado e era bissexto. O valor de retorno é 7, se o <paramref name="year" /> e <paramref name="era" /> parâmetros especificam um ano bissexto ou 0 se o ano não é um ano bissexto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um calendário que oferece suporte a noção de um mês de salto, o mês de salto pode ocorrer depois de um determinado mês ou depois de qualquer mês em um ano. Por exemplo, o <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> método retorna um número entre 1 e 13 que indica o mês associado a uma data especificada. Se houver um mês bissexto entre os oitavo e o nono meses do ano, o <xref:System.Globalization.EastAsianLunisolarCalendar.GetMonth%2A> método retorna 8 oitavo mês, 9 para o passo oitavo mês e 10 para o nono mês.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="era" /> não é <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.  
+  
+ -ou-  
+  
+ <paramref name="year" />é menor do que o ano calendário hebraico 5343 ou maior que o ano calendário hebraico 5999.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonth">
+      <MemberSignature Language="C#" Value="public override int GetMonth (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonth(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetMonth(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o mês na <see cref="T:System.DateTime" /> especificada.</summary>
+        <returns>Um inteiro de 1 a 13 que representa o mês do <see cref="T:System.DateTime" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" /> é menor que <see cref="P:System.Globalization.HebrewCalendar.MinSupportedDateTime" /> ou maior que <see cref="P:System.Globalization.HebrewCalendar.MaxSupportedDateTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMonthsInYear">
+      <MemberSignature Language="C#" Value="public override int GetMonthsInYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMonthsInYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetMonthsInYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Retorna o número de meses do ano especificado na era especificado.</summary>
+        <returns>O número de meses do ano especificado na era especificado. O valor de retorno é qualquer um dos 12 em um ano comuns ou 13 em um ano bissexto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `GetMonthsInYear` por cinco anos em cada era.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar.GetMonthsInYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.GetMonthsInYear/CPP/hebrewcalendar_getmonthsinyear.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar.GetMonthsInYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.GetMonthsInYear/CS/hebrewcalendar_getmonthsinyear.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar.GetMonthsInYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.GetMonthsInYear/VB/hebrewcalendar_getmonthsinyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />ou <paramref name="era" /> está fora do intervalo aceito por atual <see cref="T:System.Globalization.HebrewCalendar" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetYear">
+      <MemberSignature Language="C#" Value="public override int GetYear (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetYear(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.GetYear(System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">O <see cref="T:System.DateTime" /> a ser lido.</param>
+        <summary>Retorna o ano especificado na <see cref="T:System.DateTime" /> valor.</summary>
+        <returns>Um inteiro que representa o ano especificado na <see cref="T:System.DateTime" /> valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe os valores de vários componentes de um <xref:System.DateTime> em termos de calendário hebraico.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CPP/hebrewcalendar_addget.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/CS/hebrewcalendar_addget.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_AddGet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_AddGet/VB/hebrewcalendar_addget.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="time" />está fora do intervalo aceito por atual <see cref="T:System.Globalization.HebrewCalendar" /> objeto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HebrewEra">
+      <MemberSignature Language="C#" Value="public static readonly int HebrewEra;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 HebrewEra" />
+      <MemberSignature Language="DocId" Value="F:System.Globalization.HebrewCalendar.HebrewEra" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a era atual. Este campo é constante.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor desse campo é 1.  
+  
+ O calendário hebraico reconhece dois eras: A.C. (antes era comum) e. (Latino "Anno Mundi", que significa que "o ano do mundo"). Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente o era atual (A.M.).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapDay">
+      <MemberSignature Language="C#" Value="public override bool IsLeapDay (int year, int month, int day, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapDay(int32 year, int32 month, int32 day, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.IsLeapDay(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 13 que representa o mês.</param>
+        <param name="day">Um inteiro de 1 a 30 que representa o dia.</param>
+        <param name="era">Um inteiro que representa a era. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Determina se a data especificada na era especificado é um dia bissexto.</summary>
+        <returns>
+          <see langword="true" />Se o dia especificado é um dia bissexto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+ Em cada ciclo de 19 anos que termina com um ano divisível pelo 19, 3ª, 6º, 8, 11, 14, 17 e 19 anos são bissextos. Um ano comum pode ter de 353 355 dias, dependendo do posicionamento do Judeu feriados. Um ano bissexto pode ter de 383 385 dias.  
+  
+ Um dia de salto é um dia em que ocorre apenas em um ano bissexto. O calendário hebraico, o último dia do Adar Alef e todos os dias em Adar Beit são considerados leap dias.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `IsLeapDay` para o último dia do mês segundo (fevereiro) por cinco anos em cada uma das eras.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar.IsLeapDay#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapDay/CPP/hebrewcalendar_isleapday.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar.IsLeapDay#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapDay/CS/hebrewcalendar_isleapday.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar.IsLeapDay#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapDay/VB/hebrewcalendar_isleapday.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, <paramref name="day" />, ou <paramref name="era" /> está fora do intervalo aceito por este calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapMonth">
+      <MemberSignature Language="C#" Value="public override bool IsLeapMonth (int year, int month, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapMonth(int32 year, int32 month, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.IsLeapMonth(System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 13 que representa o mês.</param>
+        <param name="era">Um inteiro que representa a era. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Determina se o mês do ano especificado na especificado era especificado é um mês de salto.</summary>
+        <returns>
+          <see langword="true" />Se o mês especificado é um mês de salto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+ Em cada ciclo de 19 anos que termina com um ano divisível pelo 19, 3ª, 6º, 8, 11, 14, 17 e 19 anos são bissextos. Um ano comum pode ter de 353 355 dias, dependendo do posicionamento do Judeu feriados. Um ano bissexto pode ter de 383 385 dias.  
+  
+ Um mês de salto é um mês inteiro ocorre apenas em um ano bissexto. O calendário hebraico, Adar Beit é o mês de salto somente.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `IsLeapMonth` para todos os meses em cinco anos na era atual.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar.IsLeapMonth#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapMonth/CPP/hebrewcalendar_isleapmonth.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar.IsLeapMonth#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapMonth/CS/hebrewcalendar_isleapmonth.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar.IsLeapMonth#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapMonth/VB/hebrewcalendar_isleapmonth.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, ou <paramref name="era" /> está fora do intervalo aceito por este calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLeapYear">
+      <MemberSignature Language="C#" Value="public override bool IsLeapYear (int year, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsLeapYear(int32 year, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.IsLeapYear(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="era">Um inteiro que representa a era. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Determina se o ano especificado na era especificado é um ano bissexto.</summary>
+        <returns>
+          <see langword="true" />Se o ano especificado é um ano bissexto; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+ Em cada ciclo de 19 anos que termina com um ano divisível pelo 19, 3ª, 6º, 8, 11, 14, 17 e 19 anos são bissextos. Um ano comum pode ter de 353 355 dias, dependendo do posicionamento do Judeu feriados. Um ano bissexto pode ter de 383 385 dias.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo chama `IsLeapYear` por cinco anos em cada uma das eras.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar.IsLeapYear#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapYear/CPP/hebrewcalendar_isleapyear.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar.IsLeapYear#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapYear/CS/hebrewcalendar_isleapyear.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar.IsLeapYear#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar.IsLeapYear/VB/hebrewcalendar_isleapyear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />ou <paramref name="era" /> está fora do intervalo aceito por este calendário.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MaxSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MaxSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HebrewCalendar.MaxSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora com suporte a mais recente do <see cref="T:System.Globalization.HebrewCalendar" /> tipo.</summary>
+        <value>Na última data e hora com suporte a <see cref="T:System.Globalization.HebrewCalendar" /> de tipo, que é equivalente ao último momento 29 de setembro, de 2239 C.E. no calendário gregoriano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor mínimo e o valor máximo do calendário.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_MinMax/CPP/hebrewcalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_MinMax/CS/hebrewcalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_MinMax/VB/hebrewcalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinSupportedDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime MinSupportedDateTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime MinSupportedDateTime" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HebrewCalendar.MinSupportedDateTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora com suporte a mais antiga do <see cref="T:System.Globalization.HebrewCalendar" /> tipo.</summary>
+        <value>Data e hora com suporte mais recente do <see cref="T:System.Globalization.HebrewCalendar" /> tipo, que é equivalente ao primeiro momento 1 de janeiro, de 1583 C.E. no calendário gregoriano.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Microsoft Visual Basic representa a hora do dia, como a hora especificada na data mínima com suporte a <xref:System.DateTime> tipo, que é 1 de janeiro de 0001 C.E. No entanto, o <xref:System.Globalization.HebrewCalendar> tipo não oferece suporte a data mínima. Consequentemente, se você chamar um método para formatar a hora do dia usando o calendário atual, mas você não especificar um especificador de formato, formatação usa o ISO 8601 classificável ("s") data/hora especificador de formato padrão em vez do padrão geral ("G") de data/hora padrão especificador de formato. Para obter mais informações, consulte [padrão de data e cadeias de caracteres de formato de hora](~/docs/standard/base-types/standard-date-and-time-format-strings.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém o valor mínimo e o valor máximo do calendário.  
+  
+ [!code-cpp[System.Globalization.HebrewCalendar_MinMax#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_MinMax/CPP/hebrewcalendar_minmax.cpp#1)]
+ [!code-csharp[System.Globalization.HebrewCalendar_MinMax#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_MinMax/CS/hebrewcalendar_minmax.cs#1)]
+ [!code-vb[System.Globalization.HebrewCalendar_MinMax#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Globalization.HebrewCalendar_MinMax/VB/hebrewcalendar_minmax.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToDateTime">
+      <MemberSignature Language="C#" Value="public override DateTime ToDateTime (int year, int month, int day, int hour, int minute, int second, int millisecond, int era);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype System.DateTime ToDateTime(int32 year, int32 month, int32 day, int32 hour, int32 minute, int32 second, int32 millisecond, int32 era) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+        <Parameter Name="month" Type="System.Int32" />
+        <Parameter Name="day" Type="System.Int32" />
+        <Parameter Name="hour" Type="System.Int32" />
+        <Parameter Name="minute" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+        <Parameter Name="millisecond" Type="System.Int32" />
+        <Parameter Name="era" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um inteiro que representa o ano.</param>
+        <param name="month">Um inteiro de 1 a 13 que representa o mês.</param>
+        <param name="day">Um inteiro de 1 a 30 que representa o dia.</param>
+        <param name="hour">Um inteiro de 0 a 23 que representa a hora.</param>
+        <param name="minute">Um inteiro de 0 a 59 que representa o minuto.</param>
+        <param name="second">Um inteiro de 0 a 59 que representa o segundo.</param>
+        <param name="millisecond">Um inteiro de 0 a 999 que representa o milissegundo.</param>
+        <param name="era">Um inteiro que representa a era. Especifique o <see cref="F:System.Globalization.HebrewCalendar.HebrewEra" /> ou <see langword="HebrewCalendar.Eras[Calendar.CurrentEra]" />.</param>
+        <summary>Retorna um <see cref="T:System.DateTime" /> que é definido como a data e hora especificadas na era especificado.</summary>
+        <returns>O <see cref="T:System.DateTime" /> que é definido como a data e hora especificadas na era atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.HebrewCalendar.ToDateTime%2A> método é útil porque ele pode converter qualquer data no calendário atual em uma data do calendário gregoriano. A data no calendário gregoriano depois pode ser usada, por exemplo, para comparar as datas em calendários diferentes ou criar uma data equivalente em um calendário específico.  
+  
+ Essa implementação do <xref:System.Globalization.HebrewCalendar> classe reconhece somente os anos hebraicos 5343 para 5999 (1583 para 2239 no calendário gregoriano).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" />, <paramref name="month" />, <paramref name="day" /> ou <paramref name="era" /> está fora do intervalo aceito por atual <see cref="T:System.Globalization.HebrewCalendar" /> objeto.  
+  
+ -ou-  
+  
+ <paramref name="hour" /> é menor que 0 ou maior que 23.  
+  
+ -ou-  
+  
+ <paramref name="minute" /> é menor que 0 ou maior que 59.  
+  
+ -ou-  
+  
+ <paramref name="second" /> é menor que 0 ou maior que 59.  
+  
+ -ou-  
+  
+ <paramref name="millisecond" /> é menor que 0 ou maior que 999.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToFourDigitYear">
+      <MemberSignature Language="C#" Value="public override int ToFourDigitYear (int year);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 ToFourDigitYear(int32 year) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Globalization.HebrewCalendar.ToFourDigitYear(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="year" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="year">Um ano de 2 dígitos de 99 por meio de 0 ou um ano de calendário hebraico de 4 dígitos do 5343 por meio de 5999.</param>
+        <summary>Converte o ano especificado em um ano de 4 dígitos usando o <see cref="P:System.Globalization.HebrewCalendar.TwoDigitYearMax" /> propriedade para determinar o século apropriado.</summary>
+        <returns>Se o <paramref name="year" /> parâmetro é um ano de 2 dígitos, o valor de retorno é o ano de 4 dígitos correspondente. Se o <paramref name="year" /> parâmetro é um ano de 4 dígitos, o valor de retorno é o inalterado <paramref name="year" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.HebrewCalendar.ToFourDigitYear%2A> método usa o `year` parâmetro, o <xref:System.Globalization.HebrewCalendar.TwoDigitYearMax%2A> propriedade e um ano para calcular o ano de 4 dígitos. O século é determinado pelo localizar a ocorrência única do `year` parâmetro dentro desse intervalo de 100 anos. Por exemplo, se <xref:System.Globalization.HebrewCalendar.TwoDigitYearMax%2A> está definido para 5729, é o intervalo de 100 anos de 5630 a 5729. Portanto, um valor de 30 anos é interpretado como 5630, enquanto um valor de 29 é interpretado como 5729.  
+  
+ Se o <xref:System.Globalization.HebrewCalendar.TwoDigitYearMax%2A> propriedade possui o valor especial 99, o <xref:System.Globalization.HebrewCalendar.ToFourDigitYear%2A> método ignora as configurações regionais e de idioma opções no painel de controle e retorna o valor da `year` parâmetro inalterado.  
+  
+ <xref:System.Globalization.HebrewCalendar.ToFourDigitYear%2A>oferece suporte a um ano de dois dígitos ou um ano de quatro dígitos. Passando um valor de ano de dois dígitos (menos de 100) faz com que o método converter o valor para um valor de quatro dígitos de acordo com o <xref:System.Globalization.HebrewCalendar.TwoDigitYearMax%2A> valor que representa o século apropriado. Se o aplicativo fornece um valor de ano de quatro dígitos que está dentro do intervalo de calendário com suporte para <xref:System.Globalization.HebrewCalendar.ToFourDigitYear%2A>, o método retorna o valor de entrada real. Se o aplicativo fornece um valor de quatro dígitos que está fora do intervalo de calendário com suporte, ou se ele fornece um valor negativo, o método gera uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="year" /> é menor que 0.  
+  
+ -ou-  
+  
+ <paramref name="year" /> é menor que <see cref="P:System.Globalization.HebrewCalendar.MinSupportedDateTime" /> ou maior que <see cref="P:System.Globalization.HebrewCalendar.MaxSupportedDateTime" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TwoDigitYearMax">
+      <MemberSignature Language="C#" Value="public override int TwoDigitYearMax { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TwoDigitYearMax" />
+      <MemberSignature Language="DocId" Value="P:System.Globalization.HebrewCalendar.TwoDigitYearMax" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Calendars</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o último ano de um intervalo de 100 anos que pode ser representado por um ano de dois dígitos.</summary>
+        <value>O último ano de um intervalo de 100 anos que pode ser representado por um ano de dois dígitos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Globalization.HebrewCalendar.TwoDigitYearMax%2A> propriedade permite que um ano de 2 dígitos ser convertido corretamente em um ano de 4 dígitos. Por exemplo, se essa propriedade é definida como 5729, o intervalo de 100 anos é de 5630 5729. Portanto, um valor de 2 dígitos de 30 anos é interpretado como 5630, enquanto um valor de 2 dígitos de 29 é interpretado como 5729.  
+  
+ O valor inicial dessa propriedade é derivado das configurações na parte de opções regionais e de idioma do painel de controle. Se a configuração inicial do sistema é alterado durante a vida do seu aplicativo de <xref:System.Globalization.HebrewCalendar> classe não detecta automaticamente a alteração.  
+  
+ Especiais valor 99 faz com que o <xref:System.Globalization.HebrewCalendar.ToFourDigitYear%2A> inalterada do método para ignorar as configurações do sistema e retornar o ano especificado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O objeto <see cref="T:System.Globalization.HebrewCalendar" /> atual é somente leitura.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Em uma operação definida, o valor de ano de calendário hebraico é menor que 5343, mas não é 99, ou o valor de ano é maior do que 5999.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

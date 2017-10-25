@@ -1,0 +1,118 @@
+<Type Name="AssemblyInformationalVersionAttribute" FullName="System.Reflection.AssemblyInformationalVersionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblyInformationalVersionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblyInformationalVersionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblyInformationalVersionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define as informações de versão adicionais para um manifesto do assembly.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O atributo definido por essas informações de versão adicionais classe anexa a um assembly. Se esse atributo é aplicado a um assembly, especifica a cadeia de caracteres pode ser obtida em tempo de execução usando o <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> propriedade. A cadeia de caracteres também é usada na chave do registro e o caminho fornecida pelo <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> propriedade e o <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> propriedade. Se o <xref:System.Reflection.AssemblyInformationalVersionAttribute> não é aplicado a um assembly, o número de versão especificado pelo <xref:System.Reflection.AssemblyVersionAttribute> atributo é usado em vez disso.  
+  
+ Embora você possa especificar qualquer texto, uma mensagem de aviso aparece na compilação se a cadeia de caracteres não está no formato usado pelo número de versão do assembly, ou se está no formato correto, mas contém caracteres curinga. Esse aviso é inofensivo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblyInformationalVersionAttribute (string informationalVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string informationalVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblyInformationalVersionAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="informationalVersion" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="informationalVersion">As informações de versão do assembly.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Reflection.AssemblyInformationalVersionAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A versão informativa fornece informações de versão adicionais para um assembly, no formato de cadeia de caracteres. Ele é apenas para fins informativos e não é usado em tempo de execução. Embora você possa especificar qualquer texto, uma mensagem de aviso aparece na compilação se a cadeia de caracteres não está no formato usado pelo número de versão do assembly, ou se está no formato correto, mas contém caracteres curinga. Esse aviso é inofensivo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InformationalVersion">
+      <MemberSignature Language="C#" Value="public string InformationalVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InformationalVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblyInformationalVersionAttribute.InformationalVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações de versão.</summary>
+        <value>Uma cadeia de caracteres que contém as informações de versão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

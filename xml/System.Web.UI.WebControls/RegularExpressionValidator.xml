@@ -1,0 +1,224 @@
+<Type Name="RegularExpressionValidator" FullName="System.Web.UI.WebControls.RegularExpressionValidator">
+  <TypeSignature Language="C#" Value="public class RegularExpressionValidator : System.Web.UI.WebControls.BaseValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RegularExpressionValidator extends System.Web.UI.WebControls.BaseValidator" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.RegularExpressionValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.BaseValidator</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Web.UI.ToolboxData("&lt;{0}:RegularExpressionValidator runat="server" ErrorMessage="RegularExpressionValidator"&gt;&lt;/{0}:RegularExpressionValidator&gt;")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Valida se o valor de um controle de entrada associado corresponde ao padrão especificado por uma expressão regular.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.RegularExpressionValidator> controle verifica se o valor de um controle de entrada corresponde a um padrão definido por uma expressão regular. Esse tipo de validação permite verificar previsíveis sequências de caracteres, como aqueles em códigos postais, números de telefone e endereços de email.  
+  
+> [!NOTE]
+>  Validação terá êxito se o controle de entrada está vazio. Se um valor é necessário para o controle de entrada associado, use um <xref:System.Web.UI.WebControls.RequiredFieldValidator> controlar além de <xref:System.Web.UI.WebControls.RegularExpressionValidator> controle.  
+  
+ Validação do lado do servidor e do lado do cliente são executadas, a menos que o navegador não oferece suporte a validação do lado do cliente ou a validação do lado do cliente é desabilitada explicitamente (definindo o <xref:System.Web.UI.WebControls.BaseValidator.EnableClientScript%2A> propriedade `false`).  
+  
+ A implementação de validação de expressão regular é um pouco diferente no cliente que no servidor. No cliente, a sintaxe de expressão regular JScript é usado. No servidor, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sintaxe é usada. Desde JScript sintaxe de expressão regular é um subconjunto de <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sintaxe, recomenda-se que a sintaxe de expressões regulares do JScript ser usado para produzir os mesmos resultados no cliente e o servidor.  
+  
+> [!NOTE]
+>  Quando você usa o <xref:System.Web.UI.WebControls.RegularExpressionValidator> controle dentro de um <xref:System.Web.UI.UpdatePanel> de controle, certifique-se de que o controle de validação e o controle está associado são do mesmo painel. Para obter mais informações sobre como usar o <xref:System.Web.UI.UpdatePanel> para atualizações parciais de página, consulte [visão geral de renderização de página parcial](http://msdn.microsoft.com/library/5c12736d-d9e9-464a-9388-3fe0f9f49e49).  
+  
+ Para obter informações adicionais sobre os controles de validação, consulte <xref:System.Web.UI.WebControls.BaseValidator>. Para obter mais informações sobre expressões regulares, consulte [expressões regulares do .NET Framework](~/docs/standard/base-types/regular-expressions.md).  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ Para obter informações sobre como configurar este controle para que ele gera marcação que está de acordo com os padrões de acessibilidade, consulte [acessibilidade no Visual Studio e ASP.NET](http://msdn.microsoft.com/library/7e3ce9c4-6b7d-4fb1-94b5-72cf2a44fe13) e [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.RegularExpressionValidator> controle para validar um código postal de cinco dígitos.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic RegularExpressionValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RegularExpressionValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RegularExpressionValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RegularExpressionValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RegularExpressionValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RegularExpressionValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.RegularExpressionValidator" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributesToRender">
+      <MemberSignature Language="C#" Value="protected override void AddAttributesToRender (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddAttributesToRender(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RegularExpressionValidator.AddAttributesToRender(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> que representa o fluxo de saída para renderizar o conteúdo HTML no cliente.</param>
+        <summary>Adiciona especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> os atributos HTML e estilos que precisam ser processados para o controle do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.RegularExpressionValidator.AddAttributesToRender%2A> método em um controle de servidor personalizado para que o <xref:System.Web.UI.WebControls.RegularExpressionValidator> mensagem de erro sempre exibe como negrito.  
+  
+ [!code-csharp[CustomRegularExpressionValidatorAddAttributesToRender#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRegularExpressionValidatorAddAttributesToRender/CS/custom_regularexpressionvalidator_addattributestorender.cs#2)]
+ [!code-vb[CustomRegularExpressionValidatorAddAttributesToRender#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRegularExpressionValidatorAddAttributesToRender/VB/custom_regularexpressionvalidator_addattributestorender.vb#2)]  
+  
+ O exemplo de código a seguir demonstra como usar o uso de `CustomRegularExpressionValidatorAddAttributesToRender` controle, definida no exemplo anterior, em uma página de Web Forms.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[CustomRegularExpressionValidatorAddAttributesToRender#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRegularExpressionValidatorAddAttributesToRender/CS/custom_regularexpressionvalidator_addattributestorendercs.aspx#1)]
+ [!code-aspx-vb[CustomRegularExpressionValidatorAddAttributesToRender#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRegularExpressionValidatorAddAttributesToRender/VB/custom_regularexpressionvalidator_addattributestorendervb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EvaluateIsValid">
+      <MemberSignature Language="C#" Value="protected override bool EvaluateIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool EvaluateIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.RegularExpressionValidator.EvaluateIsValid" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se o valor no controle de entrada é válido.</summary>
+        <returns>
+          <see langword="true" /> se o valor no controle de entrada for válido, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.WebControls.RegularExpressionValidator.EvaluateIsValid%2A> método em um servidor personalizado de controle para que ele sempre verifica o valor em relação à expressão para uma correspondência em um <xref:System.Web.UI.WebControls.RegularExpressionValidator>.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[CustomRegularExpressionValidatorEvaluateIsValid#2](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRegularExpressionValidatorEvaluateIsValid/CS/custom_regularexpressionvalidator_evaluateisvalid.cs#2)]
+ [!code-vb[CustomRegularExpressionValidatorEvaluateIsValid#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRegularExpressionValidatorEvaluateIsValid/VB/custom_regularexpressionvalidator_evaluateisvalid.vb#2)]  
+  
+ O exemplo de código a seguir demonstra como usar o `CustomRegularExpressionValidatorEvaluateIsValid` controle, definida no exemplo anterior, em uma página de Web Forms.  
+  
+ [!code-aspx-csharp[CustomRegularExpressionValidatorEvaluateIsValid#1](~/samples/snippets/csharp/VS_Snippets_WebNet/CustomRegularExpressionValidatorEvaluateIsValid/CS/custom_regularexpressionvalidator_evaluateisvalidcs.aspx#1)]
+ [!code-aspx-vb[CustomRegularExpressionValidatorEvaluateIsValid#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/CustomRegularExpressionValidatorEvaluateIsValid/VB/custom_regularexpressionvalidator_evaluateisvalidvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchTimeout">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; MatchTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; MatchTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RegularExpressionValidator.MatchTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo de tempo máximo para executar uma única operação correspondente antes da operação de tempo limite.</summary>
+        <value>O intervalo de tempo máximo para executar uma única operação correspondente antes da operação de tempo limite.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidationExpression">
+      <MemberSignature Language="C#" Value="public string ValidationExpression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidationExpression" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.RegularExpressionValidator.ValidationExpression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.WebControls.RegexTypeEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a expressão regular que determina o padrão usado para validar um campo.</summary>
+        <value>Uma cadeia de caracteres que especifica a expressão regular usada para validar um campo quanto ao formato. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para especificar o padrão usado para verificar se há sequências de caracteres, como aqueles em números de previdência social, endereços de email, números de telefone e códigos postais previsíveis.  
+  
+ O <xref:System.Web.UI.WebControls.RegularExpressionValidator> não executa a validação em uma cadeia de caracteres vazia. Se a cadeia de caracteres que você está testando pode ficar em branco, use o <xref:System.Web.UI.WebControls.RequiredFieldValidator> , bem como a <xref:System.Web.UI.WebControls.RegularExpressionValidator>.  
+  
+ Para obter mais informações sobre expressões regulares, consulte [expressões regulares do .NET Framework](~/docs/standard/base-types/regular-expressions.md).  
+  
+> [!NOTE]
+>  Se você tiver problemas com construções de correspondência de padrões, tente encapsulá a expressão "^ $("e")". Por exemplo, "um &#124; ab" torna-se "^ (um &#124; ab) $".  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Web.UI.WebControls.RegularExpressionValidator.ValidationExpression%2A> propriedade para validar um campo com cinco dígitos numéricos. Quando o <xref:System.Web.UI.WebControls.Button> controle é clicado, resultante <xref:System.Web.UI.WebControls.Button.OnClick%2A> verificações de manipulador de eventos a <xref:System.Web.UI.Page.IsValid%2A> propriedade o <xref:System.Web.UI.Page> para determinar se o texto no <xref:System.Web.UI.WebControls.TextBox> satisfaz a expressão regular.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[Classic RegularExpressionValidator Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic RegularExpressionValidator Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic RegularExpressionValidator Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic RegularExpressionValidator Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">A expressão regular não está formada corretamente.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

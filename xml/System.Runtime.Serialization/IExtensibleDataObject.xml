@@ -1,0 +1,81 @@
+<Type Name="IExtensibleDataObject" FullName="System.Runtime.Serialization.IExtensibleDataObject">
+  <TypeSignature Language="C#" Value="public interface IExtensibleDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IExtensibleDataObject" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.IExtensibleDataObject" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma estrutura de dados para armazenar dados extra encontrados pelo <see cref="T:System.Runtime.Serialization.XmlObjectSerializer" /> durante a desserialização de um tipo marcado com o atributo <see cref="T:System.Runtime.Serialization.DataContractAttribute" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.IExtensibleDataObject> interface fornece uma única propriedade que define ou retorna uma estrutura usada para armazenar dados de um contrato de dados externa. Os dados extras são armazenados em uma instância do <xref:System.Runtime.Serialization.ExtensionDataObject> classe e acessados por meio de <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> propriedade. Em uma operação de ida e volta, onde os dados são recebidos, processados e enviados de volta, os dados extras são enviados ao remetente original intactos. Isso é útil para armazenar os dados recebidos de versões futuras do contrato. Se você não implementa a interface, qualquer dado extra é ignorado e descartado durante uma operação de ida e volta.  
+  
+### <a name="to-use-this-versioning-feature"></a>Para usar esse recurso de controle de versão  
+  
+1.  Implementar o <xref:System.Runtime.Serialization.IExtensibleDataObject> interface em uma classe.  
+  
+2.  Adicionar o <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> propriedade para seu tipo.  
+  
+3.  Adicionar um membro privado do tipo <xref:System.Runtime.Serialization.ExtensionDataObject> à classe.  
+  
+4.  Implementar métodos get e set para a propriedade usando o novo membro privado.  
+  
+5.  Aplicar o <xref:System.Runtime.Serialization.DataContractAttribute> à classe de atributo. Definir o <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> e <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> propriedades com valores apropriados, se necessário.  
+  
+ Para obter mais informações sobre controle de versão de tipos, consulte [controle de versão de contrato de dados](~/docs/framework/wcf/feature-details/data-contract-versioning.md). Para obter informações sobre como criar contratos de dados compatíveis por encaminhamento, consulte [contratos de dados compatíveis por encaminhamento](~/docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Para obter mais informações sobre contratos de dados, consulte [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+   
+  
+## Examples  
+ O código a seguir mostra uma instância de um tipo (`PersonVersion2`) que é a segunda versão de um tipo serializável (`Person`). A segunda versão contém dados extras (`ID` campo) que não está presente na primeira versão.  
+  
+ [!code-csharp[IUnknownSerializationData#1](~/samples/snippets/csharp/VS_Snippets_CFX/iunknownserializationdata/cs/iunknownserialization.cs#1)]
+ [!code-vb[IUnknownSerializationData#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/iunknownserializationdata/vb/iunknownserialization.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExtensionData">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.ExtensionDataObject ExtensionData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Runtime.Serialization.ExtensionDataObject ExtensionData" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.ExtensionDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a estrutura que contém dados extras.</summary>
+        <value>Um <see cref="T:System.Runtime.Serialization.ExtensionDataObject" /> que contém dados que não são reconhecidos como pertencente ao contrato de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

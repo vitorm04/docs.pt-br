@@ -1,0 +1,77 @@
+<Type Name="NetworkAccess" FullName="System.Net.NetworkAccess">
+  <TypeSignature Language="C#" Value="public enum NetworkAccess" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NetworkAccess extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkAccess" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as permissões de acesso de rede.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.NetworkAccess> enumeração é usada com a <xref:System.Net.WebPermission> e <xref:System.Net.SocketPermission> classes.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="Accept" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkAccess Accept = int32(128)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkAccess.Accept" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o aplicativo tem permissão para aceitar conexões da Internet em um recurso local. Observe que isso é uma proteção para o host local que usa Accept para permitir acesso a um recurso local (endereço/porta). No momento em que um soquete tentar se associar a esse recurso local, uma verificação de permissão será executada para ver se um Accept existe nesse recurso.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="Connect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Net.NetworkAccess Connect = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Net.NetworkAccess.Connect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o aplicativo tem permissão para se conectar aos recursos específicos da Internet. Observe que, em caso de recursos de host remoto, nenhuma verificação é realizada para ver se existem permissões Connect. Isso ocorre porque a porta de um host remoto de conexão é desconhecida e as permissões adequadas não podem ser criadas com antecedência. É responsabilidade do aplicativo verificar as permissões do host remoto tentando se conectar a um soquete de escuta.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

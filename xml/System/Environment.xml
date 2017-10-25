@@ -1,0 +1,1855 @@
+<Type Name="Environment" FullName="System.Environment">
+  <TypeSignature Language="C#" Value="public static class Environment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Environment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Environment" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece informações sobre e significa que para manipular, o ambiente atual e a plataforma. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Environment> classe para recuperar informações como argumentos de linha de comando, o código de saída, as configurações de variável de ambiente, o conteúdo da pilha de chamadas, tempo desde a última inicialização do sistema e a versão do common language runtime.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra que exibe uma lista de informações sobre o ambiente atual.  
+  
+ [!code-cpp[environment.class#1](~/samples/snippets/cpp/VS_Snippets_CLR/environment.class/CPP/env0.cpp#1)]
+ [!code-csharp[environment.class#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.class/CS/env0.cs#1)]
+ [!code-vb[environment.class#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.class/VB/env0.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CommandLine">
+      <MemberSignature Language="C#" Value="public static string CommandLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string CommandLine" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.CommandLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha de comando para esse processo.</summary>
+        <value>Uma cadeia de caracteres que contém os argumentos de linha de comando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece acesso para o nome do programa e os argumentos especificados na linha de comando quando o processo atual foi iniciado.  
+  
+ O nome do programa pode incluir informações de caminho, mas não é necessário para fazer isso. Use o <xref:System.Environment.GetCommandLineArgs%2A> método para recuperar as informações de linha de comando analisada e armazenados em uma matriz de cadeias de caracteres.  
+  
+ O tamanho máximo do buffer de linha de comando não é definido como um número específico de caracteres. ele varia dependendo do sistema operacional Windows que está em execução no computador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe a sua própria linha de comando.  
+  
+ [!code-cpp[environment.commandline#1](~/samples/snippets/cpp/VS_Snippets_CLR/environment.CommandLine/CPP/commandline.cpp#1)]
+ [!code-csharp[environment.commandline#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.CommandLine/CS/commandline.cs#1)]
+ [!code-vb[environment.commandline#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.CommandLine/VB/commandline.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">acesso de leitura para a variável de ambiente PATH. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentDirectory">
+      <MemberSignature Language="C#" Value="public static string CurrentDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property string CurrentDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.CurrentDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho totalmente qualificado do diretório de trabalho atual.</summary>
+        <value>Uma cadeia de caracteres que contém um caminho de diretório.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por definição, se esse processo é iniciado no diretório raiz de um local ou unidade de rede, o valor dessa propriedade é o nome de unidade seguido por uma barra à direita (por exemplo, "c:\\"). Se esse processo é iniciado em um subdiretório, o valor dessa propriedade é o caminho de unidade e subdiretório, sem uma barra à direita (por exemplo, "C:\mySubDirectory").  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a configuração de <xref:System.Environment.CurrentDirectory%2A> propriedade.  
+  
+ [!code-cpp[System.Environment#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Environment/CPP/Vars1.cpp#4)]
+ [!code-csharp[System.Environment#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Environment/CS/Vars1.cs#4)]
+ [!code-vb[System.Environment#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Environment/VB/Vars1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Tentativa de definir como uma cadeia de caracteres vazia ("").</exception>
+        <exception cref="T:System.ArgumentNullException">Tentativa de definir como <see langword="null." /></exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">Tentativa de definir um caminho local que não pode ser encontrado.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão apropriada.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para gravar em arquivos ou diretórios em uma operação de definição. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar as informações no caminho em uma operação get. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentManagedThreadId">
+      <MemberSignature Language="C#" Value="public static int CurrentManagedThreadId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 CurrentManagedThreadId" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.CurrentManagedThreadId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo para o thread gerenciado atual.</summary>
+        <value>Um inteiro que representa um identificador exclusivo para esse thread gerenciado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exit">
+      <MemberSignature Language="C#" Value="public static void Exit (int exitCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Exit(int32 exitCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.Exit(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exitCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="exitCode">O código de saída para retornar para o sistema operacional. Use 0 (zero) para indicar que o processo foi concluído com êxito.</param>
+        <summary>Encerra esse processo e retorna um código de saída para o sistema operacional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para o `exitCode` parâmetro, o número de uso diferente de zero para indicar um erro. Em seu aplicativo, você pode definir seus próprios códigos de erro em uma enumeração e retornar o código de erro apropriado com base no cenário. Por exemplo, retorne um valor de 1 para indicar que o arquivo necessário não está presente e um valor de 2 para indicar que o arquivo está no formato incorreto. Para obter uma lista dos códigos de saída usado pelo sistema operacional Windows, consulte [códigos de erro do sistema](http://msdn.microsoft.com/library/ms681381.aspx) na documentação do Windows.  
+  
+ Chamando o <xref:System.Environment.Exit%2A> método difere usando a linguagem de programação `return` instrução das seguintes maneiras:  
+  
+-   <xref:System.Environment.Exit%2A>sempre encerra um aplicativo. Usando o `return` instrução pode encerrar um aplicativo somente se ele é usado no ponto de entrada do aplicativo, como no `Main` método.  
+  
+-   <xref:System.Environment.Exit%2A>encerra um aplicativo imediatamente, mesmo se outros threads estão em execução. Se o `return` instrução é chamada no ponto de entrada do aplicativo, ele faz com que um aplicativo para finalizar somente depois que todos os threads de primeiro plano tem sido encerrado.  
+  
+-   <xref:System.Environment.Exit%2A>exige que o chamador tenha permissão para chamar código não gerenciado. O `return` instrução não.  
+  
+-   Se <xref:System.Environment.Exit%2A> é chamado de um `try` ou `catch` bloquear, o código em qualquer `finally` bloco não é executado. Se o `return` instrução for usada, o código de `finally` bloco é executado.  
+  
+-   Se <xref:System.Environment.Exit%2A> é chamado quando o código em um [região de execução restrita](~/docs/framework/performance/constrained-execution-regions.md) (CER) está em execução, o CER não concluiu a execução. Se o `return` instrução é usada, o CER conclui a execução.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem permissão de segurança suficiente para executar esta função.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para a capacidade de chamar código não gerenciado. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitCode">
+      <MemberSignature Language="C#" Value="public static int ExitCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ExitCode" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.ExitCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o código de saída do processo.</summary>
+        <value>Um inteiro com sinal de 32 bits que contém o código de saída. O valor padrão é 0 (zero), que indica que o processo foi concluído com êxito.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `Main` método retorna `void`, você pode usar essa propriedade para definir o código de saída que será retornado para o ambiente de chamada. Se `Main` não retorna `void`, essa propriedade será ignorada. O valor inicial dessa propriedade é zero.  
+  
+> [!WARNING]
+>  O <xref:System.Environment.ExitCode%2A> propriedade é um inteiro assinado de 32 bits. Para impedir que a propriedade retornar um código de saída negativo, você não deve usar os valores maiores que ou iguais a 0x80000000.  
+  
+ Use um número diferente de zero para indicar um erro. Em seu aplicativo, você pode definir seus próprios códigos de erro em uma enumeração e retornar o código de erro apropriado com base no cenário. Por exemplo, retorne um valor de 1 para indicar que o arquivo necessário não está presente e um valor de 2 para indicar que o arquivo está no formato incorreto. Para obter uma lista dos códigos de saída usado pelo sistema operacional Windows, consulte [códigos de erro do sistema](http://msdn.microsoft.com/library/ms681381\(v=vs.85\)) na documentação do Windows.  
+  
+   
+  
+## Examples  
+ Este é um aplicativo simples chamado Double.exe que duplica um valor inteiro passado a ele como um argumento de linha de comando. O valor atribui códigos de erro para o <xref:System.Environment.ExitCode%2A> propriedade para indicar as condições de erro. Observe que você deve adicionar uma referência ao assembly System.Numerics.dll para compilar o exemplo.  
+  
+ [!code-csharp[System.Environment.ExitCode#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.environment.exitcode/cs/double.cs#1)]
+ [!code-vb[System.Environment.ExitCode#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.environment.exitcode/vb/double.vb#1)]  
+  
+ O exemplo, em seguida, pode ser chamado de um arquivo em lotes, como o seguinte, que faz com que seus códigos de erro acessível usando o `ERRORLEVEL` comando.  
+  
+```  
+  
+echo off  
+Double.exe %1  
+If errorlevel 1639 goto NoArg   
+if errorlevel 534 goto Overflow  
+if errorlevel 160 goto BadArg  
+if errorlevel 0 echo Completed Successfully   
+goto :EOF  
+  
+:NoArg  
+echo Missing argument  
+goto :EOF  
+  
+: Overflow  
+echo Arithmetic overflow  
+goto :EOF  
+  
+:BadArg  
+echo Invalid argument  
+goto :EOF  
+  
+```  
+  
+ O exemplo a seguir mostra algumas saídas de exemplo produzida invocando o arquivo em lotes.  
+  
+```Output  
+  
+>getdouble 123>echo offResult: 246Completed Successfully>getdouble 5912323109093>echo offArithmetic overflow>getdouble>echo offMissing argument>getdouble "a string">echo offInvalid argument  
+  
+```  
+  
+ Observe que o código para Double.exe é idêntico em função ao exemplo a seguir, exceto pelo fato do primeiro define um ponto de entrada denominado `Main` que não tem nenhum valor de retorno, enquanto este exemplo define um ponto de entrada denominado `Main` que retorna um número inteiro.  
+  
+ [!code-csharp[System.Environment.ExitCode#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.environment.exitcode/cs/double1.cs#2)]
+ [!code-vb[System.Environment.ExitCode#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.environment.exitcode/vb/double1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandEnvironmentVariables">
+      <MemberSignature Language="C#" Value="public static string ExpandEnvironmentVariables (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ExpandEnvironmentVariables(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.ExpandEnvironmentVariables(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uma cadeia de caracteres que contém os nomes de zero ou mais variáveis de ambiente. Cada variável de ambiente é delimitado pelo o caractere de sinal de porcentagem (%).</param>
+        <summary>Substitui o nome de cada variável de ambiente inserida na cadeia de caracteres especificada com o equivalente de cadeia de caracteres do valor da variável e, em seguida, retorna a cadeia de caracteres resultante.</summary>
+        <returns>Uma cadeia de caracteres com cada variável de ambiente substituída por seu valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Interoperabilidade COM é usada para recuperar as variáveis de ambiente do sistema operacional. Se as variáveis de ambiente não podem ser recuperadas devido a um erro de COM, o HRESULT que explica a causa da falha é usado para gerar uma das várias possíveis exceções; ou seja, a exceção depende o HRESULT. Para obter mais informações sobre como o HRESULT é processado, consulte a seção comentários a <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A?displayProperty=nameWithType> método.  
+  
+ Substituição ocorre somente para as variáveis de ambiente são definidas. Por exemplo, suponha que `name` é "MyENV = % MyENV %". Se a variável de ambiente MyENV, é definida como 42, este método retorna "MyENV = 42". Se MyENV não for definido, não ocorre nenhuma alteração; Este método retorna "MyENV = % MyENV %".  
+  
+ O tamanho do valor de retorno é limitado a 32K.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter a unidade do sistema e variáveis de raiz do sistema.  
+  
+ [!code-cpp[Environment.ExpandEnvironmentVariables#1](~/samples/snippets/cpp/VS_Snippets_CLR/environment.ExpandEnvironmentVariables/CPP/expandenvironmentvariables.cpp#1)]
+ [!code-csharp[Environment.ExpandEnvironmentVariables#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.ExpandEnvironmentVariables/CS/expandenvironmentvariables.cs#1)]
+ [!code-vb[Environment.ExpandEnvironmentVariables#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.ExpandEnvironmentVariables/VB/expandenvironmentvariables.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">a capacidade de acessar as variáveis de ambiente em <paramref name="name" />. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FailFast">
+      <MemberSignature Language="C#" Value="public static void FailFast (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void FailFast(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.FailFast(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que explica por que o processo foi encerrado ou <see langword="null" /> se nenhuma explicação for indicada.</param>
+        <summary>Um processo é encerrado imediatamente depois de gravar uma mensagem no log de eventos dos aplicativos do Windows e, em seguida, inclui a mensagem no relatório de erros para a Microsoft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método Finaliza um processo sem executar qualquer ativo `try` / `finally` finalizadores ou blocos.  
+  
+ O <xref:System.Environment.FailFast%2A> método grava o `message` cadeia de caracteres para o log de eventos do aplicativo do Windows, cria um despejo de memória do seu aplicativo e, em seguida, encerra o processo atual. O `message` cadeia de caracteres também está incluída no relatório de erros para Microsoft.  
+  
+ Use o <xref:System.Environment.FailFast%2A> método em vez do <xref:System.Environment.Exit%2A> método para encerrar o aplicativo se o estado do seu aplicativo está danificado além do reparo e executar seu aplicativo `try` / `finally` blocos e finalizadores corromperá recursos do programa.  
+  
+ Informações são relatadas à Microsoft usando o relatório de erros do Windows. Para obter mais informações, consulte [relatório de erros do Windows: Introdução](http://msdn.microsoft.com/library/windows/hardware/dn641144.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir grava uma entrada de log para o log de eventos do aplicativo do Windows e encerra o processo atual.  
+  
+ [!code-csharp[environment.FailFast#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.FailFast/cs/ff.cs#1)]
+ [!code-vb[environment.FailFast#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.FailFast/vb/ff.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="FailFast">
+      <MemberSignature Language="C#" Value="public static void FailFast (string message, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void FailFast(string message, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.FailFast(System.String,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que explica por que o processo foi encerrado ou <see langword="null" /> se nenhuma explicação for indicada.</param>
+        <param name="exception">Uma exceção que representa o erro que causou o encerramento. Essa geralmente é a exceção em um bloco <see langword="catch" />.</param>
+        <summary>Um processo é encerrado imediatamente depois de gravar uma mensagem no log de eventos do Aplicativo do Windows e, em seguida, inclui a mensagem e as informações de exceção no relatório de erros para a Microsoft.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método encerra o processo sem executar qualquer ativo `try` / `finally` finalizadores ou blocos.  
+  
+ O <xref:System.Environment.FailFast%2A> método grava o `message` cadeia de caracteres para o log de eventos do aplicativo do Windows, cria um despejo de memória do seu aplicativo e, em seguida, encerra o processo atual.  
+  
+ Informações são relatadas à Microsoft usando o relatório de erros do Windows. Para obter mais informações, consulte [relatório de erros do Windows: Introdução](http://msdn.microsoft.com/library/windows/hardware/dn641144.aspx). Relatório de erros para a Microsoft incluem `message` e `exception` informações, que fornece detalhes usados para classificar o erro. Embora `exception` não é tratada porque o processo foi finalizado, as informações contextuais que gerou a exceção ainda são obtidas.  
+  
+ Se `exception` é `null`, ou se `exception` é gerada não, esse método funciona da mesma forma a <xref:System.Environment.FailFast%28System.String%29> sobrecarga do método.  
+  
+ Use o <xref:System.Environment.FailFast%2A> método em vez do <xref:System.Environment.Exit%2A> método para encerrar o aplicativo se o estado do seu aplicativo está danificado além do reparo e executar seu aplicativo `try` / `finally` blocos e finalizadores corromperá recursos do programa.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommandLineArgs">
+      <MemberSignature Language="C#" Value="public static string[] GetCommandLineArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] GetCommandLineArgs() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetCommandLineArgs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz de cadeia de caracteres que contém os argumentos de linha de comando para o processo atual.</summary>
+        <returns>Uma matriz de cadeia de caracteres em que cada elemento contém um argumento de linha de comando. O primeiro elemento é o nome do arquivo executável e os seguintes zero ou mais elementos contêm os argumentos de linha de comando restantes.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O primeiro elemento na matriz contém o nome do arquivo do programa em execução. Se o nome do arquivo não estiver disponível, o primeiro elemento é igual a <xref:System.String?displayProperty=nameWithType>. Os elementos restantes contém quaisquer tokens adicionais inseridos na linha de comando.  
+  
+ O nome do arquivo de programa pode, mas não é necessário para incluir informações de caminho.  
+  
+ Argumentos de linha de comando são delimitados por espaços. Você pode usar aspas duplas (") para incluir espaços dentro de um argumento. No entanto, a aspa simples (') não fornece essa funcionalidade.  
+  
+ Se um sinal de aspas dupla segue dois ou um número par de barras invertidas, cada par de barra invertida continuar é substituída por uma barra e as aspas duplas é removida. Se aspas duplas segue um número ímpar de barras invertidas, incluindo apenas uma, cada par anterior é substituída por uma barra e a barra invertida restante for removida; No entanto, nesse caso as aspas duplas não é removida.  
+  
+ A tabela a seguir mostra como os argumentos de linha de comando podem ser delimitados e pressupõe `MyApp` como o aplicativo em execução atual.  
+  
+|Entrada na linha de comando|Argumentos de linha de comando resultante|  
+|-------------------------------|--------------------------------------|  
+|`MyApp alpha beta`|`MyApp, alpha, beta`|  
+|`MyApp "alpha with spaces" "beta with spaces"`|`MyApp, alpha with spaces, beta with spaces`|  
+|`MyApp 'alpha with spaces' beta`|`MyApp, 'alpha, with, spaces', beta`|  
+|`MyApp \\\alpha \\\\"beta`|`MyApp, \\\alpha, \\beta`|  
+|`MyApp \\\\\"alpha \"beta`|`MyApp, \\"alpha, "beta`|  
+  
+ Para obter a linha de comando como uma única cadeia de caracteres, use o <xref:System.Environment.CommandLine%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe os argumentos de linha de comando do aplicativo.  
+  
+ [!code-cpp[Environment.GetCommandLineArgs#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.GetCommandLineArgs/CPP/getcommandlineargs.cpp#1)]
+ [!code-csharp[Environment.GetCommandLineArgs#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.GetCommandLineArgs/CS/getcommandlineargs.cs#1)]
+ [!code-vb[Environment.GetCommandLineArgs#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.GetCommandLineArgs/VB/getcommandlineargs.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">O sistema não dá suporte a argumentos de linha de comando.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">acesso de leitura para a variável de ambiente PATH. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentVariable">
+      <MemberSignature Language="C#" Value="public static string GetEnvironmentVariable (string variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetEnvironmentVariable(string variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetEnvironmentVariable(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variable">O nome da variável de ambiente.</param>
+        <summary>Recupera o valor de uma variável de ambiente do processo atual.</summary>
+        <returns>O valor da variável de ambiente especificado por <paramref name="variable" />, ou <see langword="null" />, se a variável de ambiente não for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Environment.GetEnvironmentVariable%28System.String%29> método recupera uma variável de ambiente do bloco de ambiente do processo atual. É equivalente a chamar o <xref:System.Environment.GetEnvironmentVariable%28System.String%2CSystem.EnvironmentVariableTarget%29> método com um `target` valor <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType>. O bloco de ambiente do processo atual inclui as seguintes variáveis de ambiente:  
+  
+-   Todos os por máquina variáveis de ambiente que são definidas no momento em que o processo é criado, junto com seus valores.  
+  
+-   Todas as variáveis de ambiente por usuário que são definidas no momento em que o processo é criado, junto com seus valores.  
+  
+-   Quaisquer variáveis adicionados para o bloco de processo, enquanto o processo é executado chamando o <xref:System.Environment.SetEnvironmentVariable%28System.String%2CSystem.String%29> método ou o <xref:System.Environment.SetEnvironmentVariable%28System.String%2CSystem.String%2CSystem.EnvironmentVariableTarget%29> método com um `target` valor <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType>.  
+  
+ Se as variáveis de ambiente são criadas após o início do processo, você pode usar esse método para recuperar somente as variáveis que foram criadas chamando o <xref:System.Environment.SetEnvironmentVariable%28System.String%2CSystem.String%29> método ou o <xref:System.Environment.SetEnvironmentVariable%28System.String%2CSystem.String%2CSystem.EnvironmentVariableTarget%29> método com um `target` valor.<xref:System.EnvironmentVariableTarget?displayProperty=nameWithType>.  
+  
+ Para recuperar todas as variáveis de ambiente junto com seus valores, chame o <xref:System.Environment.GetEnvironmentVariables%2A> método.  
+  
+ Nomes de variável de ambiente não diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Environment.GetEnvironmentVariable%2A> método para recuperar o `windir` variável de ambiente, que contém o caminho do diretório do Windows.  
+  
+ [!code-cpp[System.Environment#4](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Environment/CPP/Vars1.cpp#4)]
+ [!code-csharp[System.Environment#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Environment/CS/Vars1.cs#4)]
+ [!code-vb[System.Environment#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Environment/VB/Vars1.vb#4)]  
+  
+ O exemplo a seguir tenta recuperar o valor de uma variável de ambiente denominada `Test1` do bloco de ambiente de processo. Se a variável não existir, o exemplo cria seu e recupera seu valor. O exemplo exibe o valor da variável. Se o exemplo a criação da variável, também chamará o <xref:System.Environment.GetEnvironmentVariables%28System.EnvironmentVariableTarget%29> método com cada membro do <xref:System.EnvironmentVariableTarget> enumeração para estabelecer que a variável pode ser recuperada apenas do bloco de ambiente atual do processo. Por fim, se o exemplo a criação da variável, ele exclui-lo.  
+  
+ [!code-csharp[System.Environment.GetEnvironmentVariable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.environment.getenvironmentvariable/cs/getenvironmentvariableex1.cs#2)]
+ [!code-vb[System.Environment.GetEnvironmentVariable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.environment.getenvironmentvariable/vb/getenvironmentvariableex1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="variable" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária para executar essa operação.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">a capacidade de ler o valor de <paramref name="variable" />. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentVariable">
+      <MemberSignature Language="C#" Value="public static string GetEnvironmentVariable (string variable, EnvironmentVariableTarget target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetEnvironmentVariable(string variable, valuetype System.EnvironmentVariableTarget target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetEnvironmentVariable(System.String,System.EnvironmentVariableTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="target" Type="System.EnvironmentVariableTarget" />
+      </Parameters>
+      <Docs>
+        <param name="variable">O nome de uma variável de ambiente.</param>
+        <param name="target">Um dos valores de <see cref="T:System.EnvironmentVariableTarget" />.</param>
+        <summary>Recupera o valor de uma variável de ambiente do processo atual ou da chave do Registro do sistema operacional Windows para o usuário atual ou o computador local.</summary>
+        <returns>O valor da variável de ambiente especificada pelos parâmetros <paramref name="variable" /> e <paramref name="target" /> ou <see langword="null" /> se a variável de ambiente não for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `target` parâmetro especifica se a variável de ambiente é recuperada do processo atual ou da chave de registro do sistema operacional Windows para o usuário atual ou o computador local. Todas as variáveis de ambiente por usuário ou por computador são copiadas automaticamente para o bloco de ambiente do processo atual. No entanto, as variáveis de ambiente adicionadas somente para o bloco de ambiente do processo atual persistem apenas para a duração do processo.  
+  
+ Para recuperar todas as variáveis de ambiente junto com seus valores, chame o <xref:System.Environment.GetEnvironmentVariables%2A> método.  
+  
+ Nomes de variável de ambiente não diferenciam maiusculas de minúsculas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria variáveis de ambiente para os destinos de processo, usuário e computador, verifica se o Registro do sistema operacional contém as variáveis de ambiente de usuário e computador e, em seguida, exclui as variáveis de ambiente.  
+  
+ [!code-cpp[environment.getsetenvar#1](~/samples/snippets/cpp/VS_Snippets_CLR/environment.getsetenvar/CPP/source.cpp#1)]
+ [!code-csharp[environment.getsetenvar#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.getsetenvar/CS/gsev.cs#1)]
+ [!code-vb[environment.getsetenvar#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.getsetenvar/VB/gsev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="variable" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> não é um valor <see cref="T:System.EnvironmentVariableTarget" /> válido.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária para executar essa operação.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">a capacidade de ler o valor de <paramref name="variable" /> se <paramref name="target" /> é <see cref="F:System.EnvironmentVariableTarget.Process" /> (enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" />),  
+  
+ ou  
+  
+ Para obter acesso completo a variáveis de ambiente se <paramref name="target" /> é <see cref="F:System.EnvironmentVariableTarget.User" /> ou <see cref="F:System.EnvironmentVariableTarget.Machine" /> (enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />).</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentVariables">
+      <MemberSignature Language="C#" Value="public static System.Collections.IDictionary GetEnvironmentVariables ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IDictionary GetEnvironmentVariables() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetEnvironmentVariables" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera todos os nomes de variáveis de ambiente e seus valores do processo atual.</summary>
+        <returns>Um dicionário que contém todos os nomes de variáveis de ambiente e seus valores. Caso contrário, um dicionário vazio se nenhuma variável de ambiente for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os nomes e valores para as variáveis de ambiente são armazenados como pares chave-valor retornado <xref:System.Collections.IDictionary>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Environment.GetEnvironmentVariables%2A> método.  
+  
+ [!code-cpp[Environment.GetEnvironmentVariables#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.GetEnvironmentVariables/CPP/getenvironmentvariables.cpp#1)]
+ [!code-csharp[Environment.GetEnvironmentVariables#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.GetEnvironmentVariables/CS/getenvironmentvariables.cs#1)]
+ [!code-vb[Environment.GetEnvironmentVariables#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.GetEnvironmentVariables/VB/getenvironmentvariables.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária para executar essa operação.</exception>
+        <exception cref="T:System.OutOfMemoryException">O buffer está sem memória.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">a capacidade de ler os nomes e valores de variáveis de ambiente. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnvironmentVariables">
+      <MemberSignature Language="C#" Value="public static System.Collections.IDictionary GetEnvironmentVariables (EnvironmentVariableTarget target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.IDictionary GetEnvironmentVariables(valuetype System.EnvironmentVariableTarget target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetEnvironmentVariables(System.EnvironmentVariableTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.EnvironmentVariableTarget" />
+      </Parameters>
+      <Docs>
+        <param name="target">Um dos valores de <see cref="T:System.EnvironmentVariableTarget" />.</param>
+        <summary>Recupera todos os nomes de variáveis de ambiente e seus valores do processo atual ou de uma chave do Registro do sistema operacional Windows para o usuário atual ou o computador local.</summary>
+        <returns>Um dicionário que contém todos os nomes de variáveis de ambiente e seus valores da fonte especificada pelo parâmetro <paramref name="target" />. Caso contrário, um dicionário vazio se nenhuma variável de ambiente for encontrada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `target` parâmetro especifica se a origem é o processo atual, a chave do registro para o usuário atual ou a chave do registro para a máquina local.  
+  
+ Os nomes e valores das variáveis de ambiente são armazenados como pares chave/valor no retornado <xref:System.Collections.IDictionary> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria variáveis de ambiente para os destinos de processo, usuário e computador, verifica se o Registro do sistema operacional contém as variáveis de ambiente de usuário e computador e, em seguida, exclui as variáveis de ambiente.  
+  
+ [!code-cpp[environment.getsetenvar#1](~/samples/snippets/cpp/VS_Snippets_CLR/environment.getsetenvar/CPP/source.cpp#1)]
+ [!code-csharp[environment.getsetenvar#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.getsetenvar/CS/gsev.cs#1)]
+ [!code-vb[environment.getsetenvar#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.getsetenvar/VB/gsev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária para executar essa operação para o valor especificado de <paramref name="target" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="target" /> contém um valor inválido.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">a capacidade de ler os nomes e valores de variáveis de ambiente se <paramref name="target" /> é <see cref="F:System.EnvironmentVariableTarget.Process" /> (enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" />),  
+  
+ ou  
+  
+ Para obter acesso completo a variáveis de ambiente se <paramref name="target" /> é <see cref="F:System.EnvironmentVariableTarget.User" /> ou <see cref="F:System.EnvironmentVariableTarget.Machine" /> (enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" />).</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFolderPath">
+      <MemberSignature Language="C#" Value="public static string GetFolderPath (Environment.SpecialFolder folder);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFolderPath(valuetype System.Environment/SpecialFolder folder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetFolderPath(System.Environment.SpecialFolder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="folder" Type="System.Environment+SpecialFolder" />
+      </Parameters>
+      <Docs>
+        <param name="folder">Uma constante enumerada que identifica uma pasta especial do sistema.</param>
+        <summary>Obtém o caminho para a pasta especial do sistema identificada pela enumeração especificada.</summary>
+        <returns>O caminho para a pasta especial do sistema especificada, se essa pasta existir fisicamente no computador; caso contrário, uma cadeia de caracteres vazia ("").  
+  
+ Uma pasta não existirá fisicamente se o sistema operacional não a criar, se a pasta existente foi excluída ou se a pasta for um diretório virtual, como Meu Computador, que não corresponde a um caminho físico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o caminho para uma pasta especial do sistema, como arquivos de programa, programas, sistema ou inicialização, o que pode ser usada para acessar informações comuns. Pastas especiais são definidas por padrão pelo sistema ou explicitamente pelo usuário, ao instalar uma versão do Windows.  
+  
+ O `folder` parâmetro designa a pasta especial para recuperar e deve ser um dos valores a <xref:System.Environment.SpecialFolder> enumeração; qualquer outro valor gera uma exceção.  
+  
+ Para obter mais informações sobre manipuladores de eventos, consulte o [CSIDL](http://go.microsoft.com/fwlink/?LinkId=116664) tópico valores.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Environment.GetFolderPath%2A> método para retornar e exibir o caminho associado a `folder` parâmetro.  
+  
+ [!code-cpp[Environment.GetFolderPath#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.GetFolderPath/CPP/getfolderpath.cpp#1)]
+ [!code-csharp[Environment.GetFolderPath#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.GetFolderPath/CS/getfolderpath.cs#1)]
+ [!code-vb[Environment.GetFolderPath#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.GetFolderPath/VB/getfolderpath.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="folder" /> não é membro de <see cref="T:System.Environment.SpecialFolder" />.</exception>
+        <exception cref="T:System.PlatformNotSupportedException">Não há suporte para a plataforma atual.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar as informações no caminho em si. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFolderPath">
+      <MemberSignature Language="C#" Value="public static string GetFolderPath (Environment.SpecialFolder folder, Environment.SpecialFolderOption option);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetFolderPath(valuetype System.Environment/SpecialFolder folder, valuetype System.Environment/SpecialFolderOption option) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetFolderPath(System.Environment.SpecialFolder,System.Environment.SpecialFolderOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="folder" Type="System.Environment+SpecialFolder" />
+        <Parameter Name="option" Type="System.Environment+SpecialFolderOption" />
+      </Parameters>
+      <Docs>
+        <param name="folder">Uma constante enumerada que identifica uma pasta especial do sistema.</param>
+        <param name="option">Especifica as opções a serem usadas para acessar uma pasta especial.</param>
+        <summary>Obtém o caminho para a pasta especial do sistema identificada pela enumeração especificada e usa uma opção especificada para acessar pastas especiais.</summary>
+        <returns>O caminho para a pasta especial do sistema especificada, se essa pasta existir fisicamente no computador; caso contrário, uma cadeia de caracteres vazia ("").  
+  
+ Uma pasta não existirá fisicamente se o sistema operacional não a criar, se a pasta existente foi excluída ou se a pasta for um diretório virtual, como Meu Computador, que não corresponde a um caminho físico.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o caminho para uma pasta especial do sistema, como arquivos de programa, programas, sistema ou inicialização, o que pode ser usada para acessar informações comuns. Pastas especiais são definidas por padrão pelo sistema ou explicitamente pelo usuário, ao instalar uma versão do Windows.  
+  
+ O `folder` parâmetro designa a pasta especial para recuperar e deve ser um dos valores a <xref:System.Environment.SpecialFolder> enumeração; qualquer outro valor gera uma exceção.  
+  
+ Para obter mais informações sobre manipuladores de eventos, consulte o [CSIDL](http://go.microsoft.com/fwlink/?LinkId=116664) tópico valores.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="folder" /> não é membro de <see cref="T:System.Environment.SpecialFolder" /></exception>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.PlatformNotSupportedException" />
+        </exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar as informações no caminho em si. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLogicalDrives">
+      <MemberSignature Language="C#" Value="public static string[] GetLogicalDrives ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string[] GetLogicalDrives() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.GetLogicalDrives" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma matriz de cadeia de caracteres que contém os nomes das unidades lógicas no computador atual.</summary>
+        <returns>Uma matriz de cadeias de caracteres em que cada elemento contém o nome de uma unidade lógica. Por exemplo, se o computador do disco rígido unidade é a primeira unidade lógica, o primeiro elemento retornado é "c:\\".</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como exibir as unidades lógicas do computador atual usando o <xref:System.Environment.GetLogicalDrives%2A> método.  
+  
+ [!code-cpp[Environment.GetLogicalDrives#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.GetLogicalDrives/CPP/getlogicaldrives.cpp#1)]
+ [!code-csharp[Environment.GetLogicalDrives#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.GetLogicalDrives/CS/getlogicaldrives.cs#1)]
+ [!code-vb[Environment.GetLogicalDrives#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.GetLogicalDrives/VB/getlogicaldrives.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem as permissões necessárias.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">Para obter acesso completo ao recurso protegido por essa permissão. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="HasShutdownStarted">
+      <MemberSignature Language="C#" Value="public static bool HasShutdownStarted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool HasShutdownStarted" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.HasShutdownStarted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o domínio de aplicativo atual está sendo descarregado ou o se o CLR (Common Language Runtime) está sendo desligado.</summary>
+        <value>
+          <see langword="true" /> se o domínio de aplicativo atual estiver sendo descarregado ou o CLR estiver sendo desligado; caso contrário,<see langword="false." /></value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o CLR descarrega um domínio de aplicativo, ele executa os finalizadores em todos os objetos que têm um método finalizador no domínio de aplicativo. Quando o CLR é desligado, ele inicia o thread do finalizador em todos os objetos que têm um método finalizador. O <xref:System.Environment.HasShutdownStarted%2A> retorna propriedade `true` somente depois que o thread do finalizador foi iniciado. Quando a propriedade retorna `true`, você pode determinar se um domínio de aplicativo está sendo descarregado ou o próprio CLR está sendo encerrado chamando o <xref:System.AppDomain.IsFinalizingForUnload%2A?displayProperty=nameWithType> método. Este método retorna `true` se finalizadores são chamados, porque o domínio de aplicativo está descarregando ou `false` se o CLR está sendo desligado.  
+  
+ O <xref:System.Environment.HasShutdownStarted%2A> propriedade retorna `false` se o thread do finalizador não foi iniciado.  
+  
+ Ao usar essa propriedade, você pode determinar se é necessário acessar variáveis estáticas em seu código de finalização. Se um domínio de aplicativo ou o CLR está sendo desligado, você não pode acessar com segurança qualquer objeto que tem um método de finalização e que é referenciado por um campo estático. Isso ocorre porque esses objetos podem já ter sido finalizados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Is64BitOperatingSystem">
+      <MemberSignature Language="C#" Value="public static bool Is64BitOperatingSystem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool Is64BitOperatingSystem" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.Is64BitOperatingSystem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se o sistema operacional atual é um sistema operacional de 64 bits.</summary>
+        <value>
+          <see langword="true" /> se o sistema operacional é de 64 bits; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Is64BitProcess">
+      <MemberSignature Language="C#" Value="public static bool Is64BitProcess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool Is64BitProcess" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.Is64BitProcess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determina se o processo atual é um processo de 64 bits.</summary>
+        <value>
+          <see langword="true" /> se o processo for de 64 bits; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineName">
+      <MemberSignature Language="C#" Value="public static string MachineName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string MachineName" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.MachineName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome NetBIOS deste computador local.</summary>
+        <value>Uma cadeia de caracteres que contém o nome deste computador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome deste computador é estabelecido na inicialização do sistema quando o nome é lido no registro. Se este computador é um nó em um cluster, o nome do nó é retornado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nome do computador que executa o exemplo de código. (O nome da máquina é omitido da saída de exemplo por motivos de segurança).  
+  
+ [!code-cpp[environment.machinename#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.MachineName/CPP/machinename.cpp#1)]
+ [!code-csharp[environment.machinename#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.MachineName/CS/machinename.cs#1)]
+ [!code-vb[environment.machinename#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.MachineName/VB/machinename.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não é possível obter o nome deste computador.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">acesso de leitura para a variável de ambiente COMPUTERNAME. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NewLine">
+      <MemberSignature Language="C#" Value="public static string NewLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string NewLine" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.NewLine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cadeia de caracteres de nova linha definida para esse ambiente.</summary>
+        <value>Uma cadeia de caracteres que contém “\r\n” para plataformas não Unix ou uma cadeia de caracteres que contém “\n” para plataformas Unix.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da propriedade <xref:System.Environment.NewLine%2A> é uma constante personalizada especificamente para a plataforma atual e a implementação do .NET Framework. Para obter mais informações sobre os caracteres de escape no valor de propriedade, consulte [Escapes de caracteres](~/docs/standard/base-types/character-escapes-in-regular-expressions.md).  
+  
+ A funcionalidade fornecida pelo <xref:System.Environment.NewLine%2A> geralmente é o que significa a nova linha de termos, alimentação de linha, quebra de linha, retorno de carro, CRLF e final da linha.  
+  
+ <xref:System.Environment.NewLine%2A>pode ser usado em conjunto com o suporte da nova linha de idioma específico, como os caracteres de escape '\r' e '\n' em Microsoft c# e C/C++, ou `vbCrLf` no Microsoft Visual Basic.  
+  
+ <xref:System.Environment.NewLine%2A>será anexada automaticamente ao texto processado pelo <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendLine%2A?displayProperty=nameWithType> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe três linhas separadas por novas linhas.  
+  
+ [!code-cpp[environment.newline#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.NewLine/CPP/newline.cpp#1)]
+ [!code-csharp[environment.newline#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.NewLine/CS/newline.cs#1)]
+ [!code-vb[environment.newline#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.NewLine/VB/newline.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OSVersion">
+      <MemberSignature Language="C#" Value="public static OperatingSystem OSVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.OperatingSystem OSVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.OSVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.OperatingSystem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.OperatingSystem" /> que contém o número de versão e o identificador da plataforma atual.</summary>
+        <value>Um objeto que contém o identificador de plataforma e o número de versão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Começando com o Windows 8, o <xref:System.Environment.OSVersion%2A> propriedade retorna os mesmos números de versão primária e secundária para todas as plataformas do Windows. Portanto, não recomendamos que você recuperar o valor dessa propriedade para determinar a versão do sistema operacional.  
+  
+ Normalmente, o <xref:System.Environment.OSVersion%2A> propriedade é usada para garantir que um aplicativo está executando alguma versão base de um sistema operacional no qual um determinado recurso foi introduzido. Quando esse for o caso, você deve executar uma verificação de versão ao testar se a versão atual do sistema operacional retornado pelo <xref:System.Environment.OSVersion%2A> propriedade é igual, ou maior do que a versão do sistema operacional base. Para obter mais informações, consulte o <xref:System.Version> tópico sobre a classe.  
+  
+ Por meio do Windows 8, o <xref:System.Environment.OSVersion%2A> propriedade retorna a versão relatada pelo Windows [GetVersionEx](http://msdn.microsoft.com/library/windows/desktop/ms724451\(v=vs.85\).aspx) função. Para obter uma lista de versões de sistema operacional de desktop do Windows e seus números de versão correspondentes, consulte [versão do sistema operacional](https://msdn.microsoft.com/library/windows/desktop/ms724832.aspx) no Centro de desenvolvimento do Windows.  
+  
+> [!NOTE]
+>  O <xref:System.Environment.OSVersion%2A> propriedade informa o mesmo número de versão (6.2.0.0) para ambos [!INCLUDE[win8](~/includes/win8-md.md)] e [!INCLUDE[win81](~/includes/win81-md.md)] e o mesmo número de versão principal e secundária para Windows 10.  
+  
+ Em alguns casos, o <xref:System.Environment.OSVersion%2A> propriedade não pode retornar a versão do sistema operacional que corresponde à versão especificada para o recurso de modo de compatibilidade de programa do Windows.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o identificador de plataforma e o número de versão do computador que executa o exemplo de código.  
+  
+ [!code-cpp[environment.osversion#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.OSVersion/CPP/osversion.cpp#1)]
+ [!code-csharp[environment.osversion#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.OSVersion/CS/osversion.cs#1)]
+ [!code-vb[environment.osversion#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.OSVersion/VB/osversion.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Essa propriedade não pôde obter a versão do sistema.  
+  
+ -ou-  
+  
+ O identificador de plataforma obtido não é um membro de <see cref="T:System.PlatformID" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessorCount">
+      <MemberSignature Language="C#" Value="public static int ProcessorCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 ProcessorCount" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.ProcessorCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de processadores no computador atual.</summary>
+        <value>O inteiro com sinal de 32 bits que especifica o número de processadores no computador atual. Não há nenhum padrão. Se o computador atual contiver vários grupos de processador, essa propriedade retornará o número de processadores lógicos disponíveis para uso pelo CLR (Common Language Runtime).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre grupos de processador e processadores lógicos, consulte [grupos de processador](http://msdn.microsoft.com/library/windows/desktop/dd405503.aspx).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Environment.ProcessorCount%2A> propriedade.  
+  
+ [!code-cpp[environment.processorcount#1](~/samples/snippets/cpp/VS_Snippets_CLR/environment.processorcount/CPP/pc.cpp#1)]
+ [!code-csharp[environment.processorcount#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.processorcount/CS/pc.cs#1)]
+ [!code-vb[environment.processorcount#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.processorcount/VB/pc.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEnvironmentVariable">
+      <MemberSignature Language="C#" Value="public static void SetEnvironmentVariable (string variable, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetEnvironmentVariable(string variable, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.SetEnvironmentVariable(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variable">O nome de uma variável de ambiente.</param>
+        <param name="value">Um valor para atribuir a <c>variável</c>.</param>
+        <summary>Cria, modifica ou exclui uma variável de ambiente armazenada no processo atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar esse método é equivalente a chamar o <xref:System.Environment.SetEnvironmentVariable%28System.String%2CSystem.String%2CSystem.EnvironmentVariableTarget%29> sobrecarga com um valor de <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType> para o `target` argumento.  
+  
+ Se o `value` argumento não está vazio (consulte a discussão da exclusão de uma variável de ambiente nesta seção para a definição de um valor vazio) e a variável de ambiente denominada pelo `variable` parâmetro não existe, a variável de ambiente é criada e atribuída o conteúdo de `value`. Se ele existir, seu valor é modificado. Como a variável de ambiente é definida no bloco de ambiente do processo atual, ele não persiste após o processo terminou.  
+  
+ Se `variable` contém um hexadecimal inicial não caractere zero, os caracteres antes do caractere zero são consideradas o nome da variável de ambiente e todos os caracteres subsequentes serão ignorados.  
+  
+ Se `value` contém um hexadecimal inicial não caractere zero, os caracteres antes do caractere zero são atribuídos à variável de ambiente e todos os caracteres subsequentes serão ignorados.  
+  
+ Se `value` está vazia e a variável de ambiente denominada por `variable` existir, a variável de ambiente é excluída. Se `variable` não existir, nenhum erro ocorrer mesmo que a operação não pode ser executada. `value`é considerado vazio em qualquer uma das seguintes condições:  
+  
+-   É `null`.  
+  
+-   É <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+-   Ele consiste em um único caractere cujo valor é U + 0000.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir testa se uma variável de ambiente denominada `APPDOMAIN` existe no processo atual. Se não existir, ele cria e define seu valor como "True". Se o valor de `APPDOMAIN` variável de ambiente é "True", ele chama o `Message.Display` método em um novo domínio de aplicativo. Caso contrário, ele executa o `Message.Display` método no domínio do aplicativo atual.  
+  
+ [!code-csharp[System.Environment.SetEnvironmentVariable#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.environment.setenvironmentvariable/cs/setenvironmentvariable1.cs#1)]
+ [!code-vb[System.Environment.SetEnvironmentVariable#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.environment.setenvironmentvariable/vb/setenvironmentvariable1.vb#1)]  
+  
+ Se você executar o exemplo pela primeira vez, a mensagem "Executando no domínio domínio2" exibe no console. Se você definir a variável de ambiente na linha de comando usando o comando:  
+  
+ `Set AppDomain=False`  
+  
+ o exemplo exibe a mensagem "em execução no domínio *executável*.exe", onde *executável* é o nome do executável.  
+  
+ O exemplo a seguir tenta recuperar o valor de uma variável de ambiente denominada `Test1` do bloco de ambiente de processo. Se a variável não existir, o exemplo cria a variável e recupera seu valor. O exemplo exibe o valor da variável. Se o exemplo a criação da variável, também chamará o <xref:System.Environment.GetEnvironmentVariables%28System.EnvironmentVariableTarget%29> método com cada membro do <xref:System.EnvironmentVariableTarget> enumeração para estabelecer que a variável pode ser recuperada apenas do bloco de ambiente atual do processo. Por fim, se o exemplo a criação da variável, ele exclui-lo.  
+  
+ [!code-csharp[System.Environment.GetEnvironmentVariable#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.environment.getenvironmentvariable/cs/getenvironmentvariableex1.cs#2)]
+ [!code-vb[System.Environment.GetEnvironmentVariable#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.environment.getenvironmentvariable/vb/getenvironmentvariableex1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="variable" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="variable" /> contém uma cadeia de caracteres de tamanho zero, um caractere zero hexadecimal inicial (0x00) ou um sinal de igual ("=").  
+  
+ -ou-  
+  
+ O tamanho de <paramref name="variable" /> ou <paramref name="value" /> é maior ou igual a 32.767 caracteres.  
+  
+ -ou-  
+  
+ Ocorreu um erro durante a execução dessa operação.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária para executar essa operação.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">Para obter acesso completo a variáveis de ambiente. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEnvironmentVariable">
+      <MemberSignature Language="C#" Value="public static void SetEnvironmentVariable (string variable, string value, EnvironmentVariableTarget target);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetEnvironmentVariable(string variable, string value, valuetype System.EnvironmentVariableTarget target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Environment.SetEnvironmentVariable(System.String,System.String,System.EnvironmentVariableTarget)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="target" Type="System.EnvironmentVariableTarget" />
+      </Parameters>
+      <Docs>
+        <param name="variable">O nome de uma variável de ambiente.</param>
+        <param name="value">Um valor para atribuir a <c>variável</c>.</param>
+        <param name="target">Um dos valores de enumeração que especifica o local da variável de ambiente.</param>
+        <summary>Cria, modifica ou exclui uma variável de ambiente armazenada no processo atual ou na chave do Registro do sistema operacional Windows reservada para o usuário atual ou o computador local.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Environment.SetEnvironmentVariable%28System.String%2CSystem.String%2CSystem.EnvironmentVariableTarget%29> método permite que você defina uma variável de ambiente que está disponível para todos os processos que são executados em um computador (o <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType> valor), para todos os processos executados por um usuário (o <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType> valor), ou para o processo atual (o <xref:System.EnvironmentVariableTarget.Process> valor). Variáveis de ambiente por computador e por usuário são copiadas para o bloco de ambiente do processo atual. No entanto, as variáveis de ambiente que são exclusivas para o bloco de ambiente atual do processo persistem até que o processo termina.  
+  
+ Se o `value` argumento não está vazio (consulte a discussão da exclusão de uma variável de ambiente nesta seção para a definição de um valor vazio) e a variável de ambiente denominada pelo `variable` parâmetro não existe, a variável de ambiente é criada e atribuída o conteúdo de `value`.  Se ele existir, seu valor é modificado.  
+  
+ Se `variable` contém um hexadecimal inicial não caractere zero, os caracteres antes do caractere zero são consideradas o nome da variável de ambiente e todos os caracteres subsequentes serão ignorados.  
+  
+ Se `value` contém um hexadecimal inicial não caractere zero, os caracteres antes do caractere zero são atribuídos à variável de ambiente e todos os caracteres subsequentes serão ignorados.  
+  
+ Se `value` está vazia e a variável de ambiente denominada por `variable` existir, a variável de ambiente é excluída. `value`é considerado vazio em qualquer uma das seguintes condições:  
+  
+-   É `null`.  
+  
+-   É <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+-   Ele consiste em um único caractere cujo valor é U + 0000.  
+  
+ Se `variable` não existir, nenhum erro ocorre apesar da operação não pode ser executada. Tenha cuidado quando `target` é <xref:System.EnvironmentVariableTarget.Machine>, pois você pode excluir acidentalmente uma variável de ambiente que afeta toda a sua máquina local, não apenas o processo atual ou o usuário.  
+  
+ Se `target` é <xref:System.EnvironmentVariableTarget.User>, a variável de ambiente é armazenada na chave HKEY_CURRENT_USER\Environment do registro do computador local. Ele também é copiado para instâncias do Explorador de arquivos que estão sendo executados como o usuário atual. A variável de ambiente, em seguida, é herdada por todos os processos novo que o usuário inicia no Explorador de arquivos.  
+  
+ Da mesma forma, se `target` é <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType>, a variável de ambiente é armazenada na chave HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment do registro do computador local. Ele também é copiado para todas as instâncias do Explorador de arquivos. A variável de ambiente, em seguida, é herdada por novos processos que são iniciados a partir do Explorador de arquivos.  
+  
+ Se `target` é <xref:System.EnvironmentVariableTarget.User> ou <xref:System.EnvironmentVariableTarget.Machine>, outros aplicativos serão notificados da operação de definição por um Windows `WM_SETTINGCHANGE` mensagem.  
+  
+ Se `target` é <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType> ou <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType>, é recomendável que o comprimento de `value` ter menos de 2048 caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria variáveis de ambiente para o <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType>, <xref:System.EnvironmentVariableTarget?displayProperty=nameWithType>, e <xref:System.EnvironmentVariableTarget.Machine> tem como alvo, verifica se o registro do sistema operacional contém o usuário e variáveis de ambiente de máquina e exclui o ambiente variáveis.  
+  
+ [!code-cpp[environment.getsetenvar#1](~/samples/snippets/cpp/VS_Snippets_CLR/environment.getsetenvar/CPP/source.cpp#1)]
+ [!code-csharp[environment.getsetenvar#1](~/samples/snippets/csharp/VS_Snippets_CLR/environment.getsetenvar/CS/gsev.cs#1)]
+ [!code-vb[environment.getsetenvar#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/environment.getsetenvar/VB/gsev.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="variable" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="variable" /> contém uma cadeia de caracteres de tamanho zero, um caractere zero hexadecimal inicial (0x00) ou um sinal de igual ("=").  
+  
+ -ou-  
+  
+ O tamanho de <paramref name="variable" /> é maior ou igual a 32.767 caracteres.  
+  
+ -ou-  
+  
+ <paramref name="target" /> não é membro da enumeração <see cref="T:System.EnvironmentVariableTarget" />.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see cref="F:System.EnvironmentVariableTarget.Machine" /> ou <see cref="F:System.EnvironmentVariableTarget.User" /> e o tamanho de <paramref name="variable" /> é maior ou igual a 255.  
+  
+ -ou-  
+  
+ <paramref name="target" /> é <see cref="F:System.EnvironmentVariableTarget.Process" /> e o tamanho de <paramref name="value" /> é maior ou igual a 32.767 caracteres.  
+  
+ -ou-  
+  
+ Ocorreu um erro durante a execução dessa operação.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária para executar essa operação.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">Para obter acesso completo a variáveis de ambiente. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="StackTrace">
+      <MemberSignature Language="C#" Value="public static string StackTrace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string StackTrace" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.StackTrace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações do rastreamento de pilha atual.</summary>
+        <value>Uma cadeia de caracteres que contém informações do rastreamento de pilha. Este valor pode ser <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Environment.StackTrace%2A> listas de propriedades de chamadas de método em ordem cronológica inversa, ou seja, a chamada de método mais recente é descrita pela primeira vez e uma linha de informações de rastreamento de pilha é listada para cada chamada de método na pilha. No entanto, o <xref:System.Environment.StackTrace%2A> propriedade pode não relatar tantas chamadas de método conforme esperado, devido a transformações no código que ocorrem durante a otimização.  
+  
+> [!NOTE]
+>  Para obter uma exibição hierárquica das informações de rastreamento de pilha por classe, use o <xref:System.Diagnostics.StackTrace> classe.  
+  
+ O <xref:System.Environment.StackTrace%2A> propriedade formata as informações de rastreamento de pilha para cada chamada de método da seguinte maneira:  
+  
+ "at `FullClassName`.`MethodName` (`MethodParams`) in `FileName` :line `LineNumber` "  
+  
+ O literal "at" é precedido por três espaços e a subcadeia de caracteres inteira, começando com "in" for omitida se símbolos de depuração não estiverem disponíveis. Os espaços reservados, `FullClassName`, `MethodName`, `MethodParams`, `FileName`, e `LineNumber`, são substituídos por valores reais e são definidos da seguinte maneira:  
+  
+ FullClassName  
+ O nome completo da classe, incluindo o namespace.  
+  
+ `MethodName`  
+ O nome do método.  
+  
+ `MethodParams`  
+ A lista de pares de nome do tipo de parâmetro. Cada par é separado por uma vírgula (","). Essa informação é omitida se `MethodName` não usa nenhum parâmetro.  
+  
+ `FileName`  
+ O nome da fonte de arquivo onde o `MethodName` método for declarado. Essa informação é omitida se símbolos de depuração não estiverem disponíveis.  
+  
+ `LineNumber`  
+ O número da linha em `FileName` que contém o código-fonte do `MethodName` para a instrução que está na pilha de chamadas. Essa informação é omitida se símbolos de depuração não estiverem disponíveis.  
+  
+ O <xref:System.Environment.NewLine%2A?displayProperty=nameWithType> termina de cadeia de caracteres de cada linha de rastreamento de pilha.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o <xref:System.Environment.StackTrace%2A> propriedade.  
+  
+ [!code-cpp[environment.stacktrace#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.StackTrace/CPP/stacktrace.cpp#1)]
+ [!code-csharp[environment.stacktrace#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.StackTrace/CS/stacktrace.cs#1)]
+ [!code-vb[environment.stacktrace#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.StackTrace/VB/stacktrace.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">Para obter acesso completo ao recurso protegido pela permissão. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemDirectory">
+      <MemberSignature Language="C#" Value="public static string SystemDirectory { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string SystemDirectory" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.SystemDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o caminho totalmente qualificado do diretório do sistema.</summary>
+        <value>Uma cadeia de caracteres que contém um caminho de diretório.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo do valor retornado é a cadeia de caracteres "C:\WinNT\System32".  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o diretório do sistema do computador que executa o exemplo de código. (O diretório do sistema é omitido da saída de exemplo por motivos de segurança).  
+  
+ [!code-cpp[environment.systemdirectory#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.SystemDirectory/CPP/systemdirectory.cpp#1)]
+ [!code-csharp[environment.systemdirectory#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.SystemDirectory/CS/systemdirectory.cs#1)]
+ [!code-vb[environment.systemdirectory#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.SystemDirectory/VB/systemdirectory.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para acessar as informações no caminho em si. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemPageSize">
+      <MemberSignature Language="C#" Value="public static int SystemPageSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 SystemPageSize" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.SystemPageSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bytes na página de memória do sistema operacional.</summary>
+        <value>O número de bytes na página de memória do sistema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essas informações podem ser úteis ao determinar se irá usar o <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions?displayProperty=nameWithType> opção quando você trabalhar com arquivos mapeados na memória.  
+  
+ No Windows, esse valor é o `dwPageSize` membro o `SYSTEM_INFO` estrutura.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">para acessar variáveis de ambiente do sistema e do usuário. Exceção associada:  
+  
+ <see cref="P:System.Security.SecurityException.PermissionState" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="TickCount">
+      <MemberSignature Language="C#" Value="public static int TickCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 TickCount" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.TickCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de milissegundos decorridos desde a inicialização do sistema.</summary>
+        <value>Um inteiro com sinal de 32 bits que contém a quantidade de tempo em milissegundos decorrida desde a última vez em que o computador foi iniciado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade é derivado do timer do sistema e é armazenado como um inteiro assinado de 32 bits. Observe que, porque ele é derivado do timer do sistema, a resolução do <xref:System.Environment.TickCount%2A> propriedade está limitada à resolução do timer de sistema, que é normalmente no intervalo de 10 a 16 milissegundos.  
+  
+> [!IMPORTANT]
+>  Porque o valor da <xref:System.Environment.TickCount%2A> o valor da propriedade é um inteiro assinado de 32 bits, se o sistema é executado continuamente, <xref:System.Environment.TickCount%2A> será incrementado de zero a <xref:System.Int32?displayProperty=nameWithType> para aproximadamente 24.9 dias, em seguida, ir para <xref:System.Int32?displayProperty=nameWithType>, que é um número negativo, incrementar, em seguida, de volta para zero durante os próximos 24.9 dias. Você pode contornar esse problema, chamando o Windows [ObterContagemMarcaEscala](https://msdn.microsoft.com/library/windows/desktop/ms724408.aspx) função, que redefine para zero após aproximadamente 49.7 dias, ou chamando o [GetTickCount64](https://msdn.microsoft.com/library/windows/desktop/ms724411.aspx) função.  
+  
+ <xref:System.Environment.TickCount%2A>é diferente de <xref:System.DateTime.Ticks%2A?displayProperty=nameWithType> propriedade, que é o número de intervalos de 100 nanossegundos desde 1/1/0001, 12:00 am.  
+  
+ Use o <xref:System.DateTime.Now%2A?displayProperty=nameWithType> propriedade para obter a data local atual e a hora neste computador.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como recuperar o intervalo positive dos valores retornados pelo <xref:System.Environment.TickCount%2A> propriedade. O <xref:System.Environment.TickCount%2A> propriedade circula entre <xref:System.Int32.MinValue?displayProperty=nameWithType>, que é um número negativo, e <xref:System.Int32.MaxValue?displayProperty=nameWithType> uma vez a cada 49,8 dias. O código a seguir remove o bit de sinal para gerar um número não negativo que circula entre zero e <xref:System.Int32.MaxValue> uma vez a cada 24.9 dias.  
+  
+ [!code-cpp[environment.tickcount#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.TickCount/CPP/tickcount.cpp#1)]
+ [!code-csharp[environment.tickcount#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.TickCount/CS/tickcount.cs#1)]
+ [!code-vb[environment.tickcount#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.TickCount/VB/tickcount.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDomainName">
+      <MemberSignature Language="C#" Value="public static string UserDomainName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string UserDomainName" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.UserDomainName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de domínio de rede associado ao usuário atual.</summary>
+        <value>O nome de domínio de rede associado ao usuário atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As credenciais da conta de domínio para um usuário são formatadas como nome de domínio do usuário, o '\\' nome de usuário e de caractere. Use o <xref:System.Environment.UserDomainName%2A> propriedade para obter o nome de domínio do usuário sem o nome de usuário e a <xref:System.Environment.UserName%2A> propriedade para obter o nome de usuário sem o nome de domínio.  Por exemplo, se o nome de usuário e o nome de domínio do usuário são CORPORATENETWORK\john, o <xref:System.Environment.UserDomainName%2A> propriedade retorna "CORPORATENETWORK".  
+  
+ O <xref:System.Environment.UserDomainName%2A> propriedade primeiro tenta obter o componente de nome de domínio do nome de conta do Windows para o usuário atual. Se essa tentativa falhar, esta propriedade tentar obter o nome de domínio associado com o nome de usuário fornecido pelo <xref:System.Environment.UserName%2A> propriedade. Se essa tentativa falhar porque o host não ingressou em um domínio, o nome do computador host é retornado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional não dá suporte à recuperação do nome de domínio de rede.</exception>
+        <exception cref="T:System.InvalidOperationException">Não foi possível recuperar o nome de domínio de rede.</exception>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">acesso de leitura para a variável de ambiente USERDOMAIN. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="UserInteractive">
+      <MemberSignature Language="C#" Value="public static bool UserInteractive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool UserInteractive" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.UserInteractive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o processo atual está em execução no modo de interação com o usuário.</summary>
+        <value>
+          <see langword="true" /> se o processo atual estiver em execução no modo de interação com o usuário; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Environment.UserInteractive%2A> relatórios de propriedade `false` para um processo do Windows ou um serviço como o IIS é executado sem uma interface do usuário. Se essa propriedade for `false`, não exibir caixas de diálogo modais ou caixas de mensagem porque não há nenhuma interface gráfica do usuário para interagir com o usuário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe se o processo atual está sendo executado no modo interativo do usuário.  
+  
+ [!code-cpp[Environment.UserInteractive#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.UserInteractive/CPP/userinteractive.cpp#1)]
+ [!code-csharp[Environment.UserInteractive#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.UserInteractive/CS/userinteractive.cs#1)]
+ [!code-vb[Environment.UserInteractive#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.UserInteractive/VB/userinteractive.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public static string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string UserName" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de usuário da pessoa que está conectada no momento ao sistema operacional Windows.</summary>
+        <value>O nome de usuário da pessoa que está conectada ao Windows.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Environment.UserName%2A> propriedade para identificar o usuário no thread atual para o sistema e o aplicativo para fins de segurança e acesso. Ele também pode ser usado para personalizar um aplicativo específico para cada usuário.  
+  
+ O <xref:System.Environment.UserName%2A> propriedade encapsula uma chamada para o Windows [GetUserName](http://msdn.microsoft.com/library/windows/desktop/ms724432.aspx) função. As credenciais da conta de domínio para um usuário são formatadas como nome de domínio do usuário, o '\\' nome de usuário e de caractere. Use o <xref:System.Environment.UserDomainName%2A> propriedade para obter o nome de domínio do usuário e o <xref:System.Environment.UserName%2A> propriedade para obter o nome de usuário.  
+  
+ Se um aplicativo ASP.NET é executado em um ambiente de desenvolvimento, o <xref:System.Environment.UserName%2A> propriedade retorna o nome do usuário atual. Em um aplicativo ASP.NET publicado, essa propriedade retorna o nome da conta de pool do aplicativo (por exemplo, o AppPool padrão).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe o nome de usuário da pessoa que iniciou o thread atual.  
+  
+ [!code-cpp[Environment.UserName#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.UserName/CPP/username.cpp#1)]
+ [!code-csharp[Environment.UserName#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.UserName/CS/username.cs#1)]
+ [!code-vb[Environment.UserName#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.UserName/VB/username.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">acesso de leitura para a variável de ambiente de nome de usuário. Enumeração associada: <see cref="F:System.Security.Permissions.EnvironmentPermissionAccess.Read" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public static Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Version" /> que descreve os números de versão principal, secundária, build e de revisão do Common Language Runtime.</summary>
+        <value>Um objeto que exibe a versão do Common Language Runtime.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para as versões do .NET Framework 4, 4.5, 4.5.1 e 4.5.2, a propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Version> cuja representação da cadeia de caracteres tem a forma `4.0.30319.xxxxx`. Para o [!INCLUDE[net_v46](~/includes/net-v46-md.md)], seu ponto de versões e o .NET Framework 4.7, ele tem a forma `4.0.30319.42000`.  
+  
+> [!WARNING]
+>  Para o [!INCLUDE[net_v45](~/includes/net-v45-md.md)] e posterior, é recomendável não usar o <xref:System.Environment.Version%2A> propriedade detectar a versão do tempo de execução; em vez disso, você pode determinar a versão do common language runtime ao consultar o registro. Para obter mais informações, consulte [como: determinar qual .NET Framework versões estão instaladas](~/docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+  
+ Para obter mais informações sobre a versão do common language runtime que está instalado com cada versão do .NET Framework, consulte [versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exibe a versão do common language runtime. (A versão é omitida da saída de exemplo por motivos de segurança).  
+  
+ [!code-cpp[Environment.Version#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.Version/CPP/version.cpp#1)]
+ [!code-csharp[Environment.Version#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.Version/CS/version.cs#1)]
+ [!code-vb[Environment.Version#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.Version/VB/version.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkingSet">
+      <MemberSignature Language="C#" Value="public static long WorkingSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int64 WorkingSet" />
+      <MemberSignature Language="DocId" Value="P:System.Environment.WorkingSet" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade de memória física mapeada para o contexto do processo.</summary>
+        <value>Um inteiro de 64 bits com sinal que contém o número de bytes de memória física mapeado para o contexto do processo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o tamanho do conjunto de trabalho do computador que executa o exemplo de código.  
+  
+ [!code-cpp[Environment.WorkingSet#1](~/samples/snippets/cpp/VS_Snippets_CLR/Environment.WorkingSet/CPP/workingset.cpp#1)]
+ [!code-csharp[Environment.WorkingSet#1](~/samples/snippets/csharp/VS_Snippets_CLR/Environment.WorkingSet/CS/workingset.cs#1)]
+ [!code-vb[Environment.WorkingSet#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Environment.WorkingSet/VB/workingset.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.EnvironmentPermission">Para obter acesso completo ao recurso protegido por essa permissão. Enumeração associada: <see cref="F:System.Security.Permissions.PermissionState.Unrestricted" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

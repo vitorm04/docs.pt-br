@@ -1,0 +1,232 @@
+<Type Name="QueryStringConverter" FullName="System.ServiceModel.Dispatcher.QueryStringConverter">
+  <TypeSignature Language="C#" Value="public class QueryStringConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QueryStringConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.QueryStringConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Essa classe converte um parâmetro em uma cadeia de caracteres de consulta em um objeto do tipo apropriado. Ela também pode converter um parâmetro de um objeto em sua representação de cadeia de caracteres de consulta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros podem ser especificados em uma cadeia de caracteres de consulta em uma URL. Essa classe usa os parâmetros especificados em uma cadeia de caracteres e converte-os em objetos. Por exemplo, o seguinte contrato é definido.  
+  
+```  
+[ServiceContract]  
+interface Calculator  
+{  
+   [WebGet(UriTemplate="Add?n1={n1}&n2={n2}")]  
+   [OperationContract]  
+   long Add(long n1, long n2);  
+}  
+```  
+  
+ Um [!INCLUDE[indigo1](~/includes/indigo1-md.md)] serviço implementa essa interface e expõe um ponto de extremidade com o <xref:System.ServiceModel.Description.WebHttpBehavior> em http://localhost:8000/MyCalcService. O `Add` operação de serviço pode ser chamada enviando um HTTP GET para MyCalcService/http://localhost:8000/adicionar? n1 = 10 & n2 = 5. O <xref:System.ServiceModel.Dispatcher.QueryStringConverter> recebe essa URL e converte os dois parâmetros (n1 e n2) especificados na URL em duas `long` objetos com os valores apropriados.  
+  
+ Você pode derivar uma classe de <xref:System.ServiceModel.Dispatcher.QueryStringConverter> para controlar como parâmetros de cadeia de caracteres de consulta são mapeados para parâmetros de uma operação serviço.  
+  
+ O <xref:System.ServiceModel.Dispatcher.QueryStringConverter> suporta os seguintes tipos por padrão:  
+  
+-   <xref:System.Byte>  
+  
+-   <xref:System.SByte>  
+  
+-   <xref:System.Int16>  
+  
+-   <xref:System.Int32>  
+  
+-   <xref:System.Int64>  
+  
+-   <xref:System.UInt16>  
+  
+-   <xref:System.UInt32>  
+  
+-   <xref:System.UInt64>  
+  
+-   <xref:System.Single>  
+  
+-   <xref:System.Double>  
+  
+-   <xref:System.Char>  
+  
+-   <xref:System.Decimal>  
+  
+-   <xref:System.Boolean>  
+  
+-   <xref:System.String>  
+  
+-   <xref:System.DateTime>  
+  
+-   <xref:System.TimeSpan>  
+  
+-   <xref:System.Guid>  
+  
+-   Matriz <xref:System.Byte>  
+  
+-   <xref:System.Uri>  
+  
+-   <xref:System.Object>  
+  
+-   <xref:System.DateTimeOffset>  
+  
+-   Enums  
+  
+-   Tipos que têm um `TypeConverterAttribute` que pode converter o tipo em uma representação de cadeia de caracteres.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como usar o <xref:System.ServiceModel.Dispatcher.QueryStringConverter> classe para converter entre uma cadeia de caracteres e um inteiro de 32 bits.  
+  
+ [!code-csharp[QueryStringConverter#0](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#0)]
+ [!code-vb[QueryStringConverter#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QueryStringConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Dispatcher.QueryStringConverter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como criar uma instância do <xref:System.ServiceModel.Dispatcher.QueryStringConverter> classe.  
+  
+ [!code-csharp[QueryStringConverter#1](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#1)]
+ [!code-vb[QueryStringConverter#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanConvert">
+      <MemberSignature Language="C#" Value="public virtual bool CanConvert (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanConvert(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.CanConvert(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> a ser convertido.</param>
+        <summary>Determina se o tipo especificado pode ser convertido em uma representação de cadeia de caracteres.</summary>
+        <returns>Um valor que especifica se um tipo pode ser convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como determinar se o <xref:System.ServiceModel.Dispatcher.QueryStringConverter> pode converter para e do tipo especificado.  
+  
+ [!code-csharp[QueryStringConverter#2](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#2)]
+ [!code-vb[QueryStringConverter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertStringToValue">
+      <MemberSignature Language="C#" Value="public virtual object ConvertStringToValue (string parameter, Type parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object ConvertStringToValue(string parameter, class System.Type parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.ConvertStringToValue(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.String" />
+        <Parameter Name="parameterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O formulário de cadeia de caracteres do parâmetro e valor.</param>
+        <param name="parameterType">O <see cref="T:System.Type" /> para converter o parâmetro.</param>
+        <summary>Converte um parâmetro de cadeia de caracteres de consulta para o tipo especificado.</summary>
+        <returns>O parâmetro convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `parameterType` é um tipo de valor e o parâmetro é `null`, em seguida, o valor padrão da `parameterType` é retornado.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como converter uma cadeia de caracteres para o tipo especificado.  
+  
+ [!code-csharp[QueryStringConverter#2](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#2)]
+ [!code-vb[QueryStringConverter#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.FormatException">A cadeia de caracteres fornecida não tem o formato correto.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertValueToString">
+      <MemberSignature Language="C#" Value="public virtual string ConvertValueToString (object parameter, Type parameterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ConvertValueToString(object parameter, class System.Type parameterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.QueryStringConverter.ConvertValueToString(System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="parameterType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O parâmetro para converter.</param>
+        <param name="parameterType">O <see cref="T:System.Type" /> do parâmetro para converter.</param>
+        <summary>Converte um parâmetro em uma representação de cadeia de caracteres de consulta.</summary>
+        <returns>O nome de parâmetro e valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir mostra como converter um valor digitado em uma representação de cadeia de caracteres do valor.  
+  
+ [!code-csharp[QueryStringConverter#3](~/samples/snippets/csharp/VS_Snippets_CFX/querystringconverter/cs/program.cs#3)]
+ [!code-vb[QueryStringConverter#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/querystringconverter/vb/program.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

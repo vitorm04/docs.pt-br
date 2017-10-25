@@ -1,0 +1,109 @@
+<Type Name="UpdatePanelTrigger" FullName="System.Web.UI.UpdatePanelTrigger">
+  <TypeSignature Language="C#" Value="public abstract class UpdatePanelTrigger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UpdatePanelTrigger extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.UpdatePanelTrigger" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe base comum para objetos que podem ser gatilhos para controles de <see cref="T:System.Web.UI.UpdatePanel" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe abstrata <xref:System.Web.UI.UpdatePanelControlTrigger> deriva o <xref:System.Web.UI.UpdatePanelTrigger> classe para fornecer uma classe base mais específica para gatilhos que são baseados em controles.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UpdatePanelTrigger ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTrigger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.UpdatePanelTrigger" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTriggered">
+      <MemberSignature Language="C#" Value="protected abstract bool HasTriggered ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool HasTriggered() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTrigger.HasTriggered" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o gatilho foi invocado.</summary>
+        <returns>
+          <see langword="true" />Se o gatilho foi chamado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.UpdatePanelTrigger.HasTriggered%2A> método se precisar de sua implementação do gatilho derivada controlar se o gatilho foi invocado. A implementação padrão da <xref:System.Web.UI.UpdatePanelTrigger.HasTriggered%2A> método retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.UpdatePanelTrigger.Initialize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, permite que um gatilho para se inicializar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Owner">
+      <MemberSignature Language="C#" Value="public System.Web.UI.UpdatePanel Owner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.UpdatePanel Owner" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.UpdatePanelTrigger.Owner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.UpdatePanel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o <see cref="T:System.Web.UI.UpdatePanel" /> de controle que o <see cref="T:System.Web.UI.UpdatePanelTrigger" /> destinos.</summary>
+        <value>Um <see cref="T:System.Web.UI.UpdatePanel" /> controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

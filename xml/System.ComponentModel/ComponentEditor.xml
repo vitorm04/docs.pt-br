@@ -1,0 +1,151 @@
+<Type Name="ComponentEditor" FullName="System.ComponentModel.ComponentEditor">
+  <TypeSignature Language="C#" Value="public abstract class ComponentEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ComponentEditor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ComponentEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece a classe base para um editor de componente personalizado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um editor de componente é usado para editar um componente como um todo e pode ser usado para implementar uma interface de usuário semelhante ao que as páginas de propriedades. Você associa um editor de componente com um componente usando o <xref:System.ComponentModel.EditorAttribute> atributo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra um exemplo <xref:System.ComponentModel.ComponentEditor> implementação.  
+  
+ [!code-cpp[ComponentEditorExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ComponentEditorExample/CPP/componenteditorexamplecomponent.cpp#1)]
+ [!code-csharp[ComponentEditorExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ComponentEditorExample/CS/componenteditorexamplecomponent.cs#1)]
+ [!code-vb[ComponentEditorExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ComponentEditorExample/VB/componenteditorexamplecomponent.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Quando você herda desta classe, você deve substituir o <see cref="M:System.ComponentModel.ComponentEditor.EditComponent(System.Object)" /> método.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComponentEditor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentEditor.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.ComponentEditor" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditComponent">
+      <MemberSignature Language="C#" Value="public bool EditComponent (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EditComponent(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentEditor.EditComponent(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente a ser editado.</param>
+        <summary>Edita o componente e retorna um valor que indica se o componente foi modificado.</summary>
+        <returns>
+          <see langword="true" />Se o componente foi modificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método abre uma interface de usuário avançado que você pode usar para editar o componente. A implementação padrão abre uma caixa de diálogo com uma coleção de objetos de controle de editor de componentes e uma interface do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditComponent">
+      <MemberSignature Language="C#" Value="public abstract bool EditComponent (System.ComponentModel.ITypeDescriptorContext context, object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool EditComponent(class System.ComponentModel.ITypeDescriptorContext context, object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.ComponentEditor.EditComponent(System.ComponentModel.ITypeDescriptorContext,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto de contexto opcional que pode ser usado para obter mais informações sobre a edição.</param>
+        <param name="component">O componente a ser editado.</param>
+        <summary>Edita o componente e retorna um valor que indica se o componente foi modificado com base em um determinado contexto.</summary>
+        <returns>
+          <see langword="true" />Se o componente foi modificado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode substituir esse método para fornecer uma interface de usuário de edição personalizada para um componente. Dentro desse método você pode exibir uma caixa de diálogo ou outro tipo de interface do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

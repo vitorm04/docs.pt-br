@@ -1,0 +1,87 @@
+<Type Name="CompatibleFramework" FullName="System.Deployment.Application.CompatibleFramework">
+  <TypeSignature Language="C#" Value="public class CompatibleFramework" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompatibleFramework extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Deployment.Application.CompatibleFramework" />
+  <AssemblyInfo>
+    <AssemblyName>System.Deployment</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma versão do .NET Framework em que um aplicativo pode instalar e executar.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Profile">
+      <MemberSignature Language="C#" Value="public string Profile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Profile" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFramework.Profile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o perfil da versão do .NET Framework em que um aplicativo pode instalar e executar.</summary>
+        <value>Uma cadeia de caracteres que representa o perfil.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a versão do .NET Framework é [!INCLUDE[net_client_v40_long](~/includes/net-client-v40-long-md.md)], o <xref:System.Deployment.Application.CompatibleFramework.Profile%2A> propriedade retorna "Cliente". Se a versão do .NET Framework é [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], o <xref:System.Deployment.Application.CompatibleFramework.Profile%2A> propriedade retorna "Full".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedRuntime">
+      <MemberSignature Language="C#" Value="public string SupportedRuntime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SupportedRuntime" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFramework.SupportedRuntime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o número de versão de tempo de execução do .NET Framework em que um aplicativo pode instalar e executar.</summary>
+        <value>Uma cadeia de caracteres que representa a versão de tempo de execução.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novas versões do .NET Framework podem operar em versões lançadas anteriormente do tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetVersion">
+      <MemberSignature Language="C#" Value="public string TargetVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TargetVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Deployment.Application.CompatibleFramework.TargetVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Deployment</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica a versão do .NET Framework em que um aplicativo pode instalar e executar.</summary>
+        <value>Uma cadeia de caracteres que representa a versão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

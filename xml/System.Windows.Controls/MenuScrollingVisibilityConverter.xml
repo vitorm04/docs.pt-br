@@ -1,0 +1,121 @@
+<Type Name="MenuScrollingVisibilityConverter" FullName="System.Windows.Controls.MenuScrollingVisibilityConverter">
+  <TypeSignature Language="C#" Value="public sealed class MenuScrollingVisibilityConverter : System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuScrollingVisibilityConverter extends System.Object implements class System.Windows.Data.IMultiValueConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.MenuScrollingVisibilityConverter" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Data.IMultiValueConverter</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa um conversor de associação de dados para controlar a visibilidade dos botões de repetição em menus de rolagem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.MenuScrollingVisibilityConverter> determina se um menu deve exibir os botões de repetição quando um menu tem itens demais para caber na tela de uma só vez.  Use o conversor com um <xref:System.Windows.Data.MultiBinding> que tem quatro associações.  As associações de quatro propriedades do pai devem ser <xref:System.Windows.Controls.ScrollViewer>: se os itens de menu são organizados verticalmente (que é o padrão para menus), associar a <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>, <xref:System.Windows.Controls.ScrollViewer.VerticalOffset%2A>, <xref:System.Windows.Controls.ScrollViewer.ExtentHeight%2A>, e <xref:System.Windows.Controls.ScrollViewer.ViewportHeight%2A>.  Se os itens de menu são organizados horizontalmente, associar a <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>, <xref:System.Windows.Controls.ScrollViewer.HorizontalOffset%2A>, <xref:System.Windows.Controls.ScrollViewer.ExtentWidth%2A>, e <xref:System.Windows.Controls.ScrollViewer.ViewportWidth%2A>.  
+  
+ Definir <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A?displayProperty=nameWithType> como 0 ou 100.  O valor é tratado como uma porcentagem e determina se um botão fica oculto quando o <xref:System.Windows.Controls.ScrollViewer> está no local especificado.  Quando o <xref:System.Windows.Controls.ScrollViewer> na parte superior, a posição do <xref:System.Windows.Controls.ScrollViewer> é 0% e o botão superior está oculto.  Quando o <xref:System.Windows.Controls.ScrollViewer> na parte inferior, a posição do <xref:System.Windows.Controls.ScrollViewer> é 100% e o botão inferior é oculto.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Windows.Controls.MenuScrollingVisibilityConverter> no <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Controls.ScrollViewer> para um menu.  Para o exemplo completo, consulte [estilo com exemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+  
+ [!code-xaml[ControlTemplateExamples#MenuScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuscrollviewer)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuScrollingVisibilityConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuScrollingVisibilityConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.MenuScrollingVisibilityConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Convert">
+      <MemberSignature Language="C#" Value="public object Convert (object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object Convert(object[] values, class System.Type targetType, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuScrollingVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.Object[]" />
+        <Parameter Name="targetType" Type="System.Type" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="values">Valores gerados por meio da associação de origem.</param>
+        <param name="targetType">Tipo de destino. Tipo de origem será convertida em.</param>
+        <param name="parameter">Parâmetro de conversor.</param>
+        <param name="culture">Informações de cultura.</param>
+        <summary>Chamado ao mover um valor de uma fonte para um destino.</summary>
+        <returns>Valor convertido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DependencyProperty.UnsetValue>pode ser retornada para indicar que o conversor não produzidos nenhum valor e que o valor padrão deve ser usado.  
+  
+ <xref:System.Windows.Data.Binding.DoNothing>pode ser retornada para indicar que a associação não deve transferir o valor ou usar o valor padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertBack">
+      <MemberSignature Language="C#" Value="public object[] ConvertBack (object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object[] ConvertBack(object value, class System.Type[] targetTypes, object parameter, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.MenuScrollingVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="targetTypes" Type="System.Type[]" />
+        <Parameter Name="parameter" Type="System.Object" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="value">Este parâmetro não é usado.</param>
+        <param name="targetTypes">Este parâmetro não é usado.</param>
+        <param name="parameter">Este parâmetro não é usado.</param>
+        <param name="culture">Este parâmetro não é usado.</param>
+        <summary>Não há suporte.</summary>
+        <returns>
+          <see cref="F:System.Windows.Data.Binding.DoNothing" />
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

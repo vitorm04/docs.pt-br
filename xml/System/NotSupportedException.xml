@@ -1,0 +1,290 @@
+<Type Name="NotSupportedException" FullName="System.NotSupportedException">
+  <TypeSignature Language="C#" Value="public class NotSupportedException : SystemException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit NotSupportedException extends System.SystemException" />
+  <TypeSignature Language="DocId" Value="T:System.NotSupportedException" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="netframework-4.5">System.SystemException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A exceção que é gerada quando um método invocado não tem suporte ou quando há uma tentativa de leitura, busca ou gravação em um fluxo que não dá suporte à funcionalidade invocada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.NotSupportedException>indica que não existe uma implementação para uma propriedade ou método invocado.  
+  
+ <xref:System.NotSupportedException>usa o HRESULT COR_E_NOTSUPPORTED, que tem o valor 0x80131515.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.NotSupportedException>, consulte o <xref:System.NotSupportedException.%23ctor%2A> construtores.  
+  
+## <a name="throwing-a-notsupportedexception-exception"></a>Gerar uma exceção NotSupportedException  
+ Você pode considerar lançando um <xref:System.NotSupportedException> exceção nos seguintes casos:  
+  
+-   Você estiver implementando uma interface para fins gerais e número de métodos não têm nenhuma implementação significativa. Por exemplo, se você estiver criando uma data e hora tipo que implementa o <xref:System.IConvertible> interface, você deve lançar uma <xref:System.NotSupportedException> exceção para a maioria das conversões.  
+  
+-   Você acabou de herdar de uma classe abstrata que requer que você substitua um número de métodos. No entanto, você só está preparado para fornecer uma implementação para um subconjunto deles. Para os métodos que você decidir não implementar, você pode optar por gerar um <xref:System.NotSupportedException>.  
+  
+-   Você está definindo um tipo de uso geral com um estado que permite operações condicionalmente. Por exemplo, seu tipo pode ser somente leitura ou leitura / gravação. Nesse caso:  
+  
+    -   Se o objeto é somente leitura, a tentativa de atribuir valores às propriedades de uma instância ou chamada de métodos que modificam o estado da instância deve lançar um <xref:System.NotSupportedException> exceção.  
+  
+    -   Você deve implementar uma propriedade que retorna um <xref:System.Boolean> valor que indica se a funcionalidade específica está disponível. Por exemplo, para um tipo que pode ser somente leitura ou leitura / gravação, você pode implementar um `IsReadOnly` propriedade que indica se o conjunto de métodos de leitura-gravação estão disponíveis ou não está disponível.  
+  
+## <a name="handling-a-notsupportedexception-exception"></a>Tratando uma exceção NotSupportedException  
+ O <xref:System.NotSupportedException> exceção indica que um método não tem nenhuma implementação e que você não deve chamá-lo.  Você não deve tratar a exceção. Em vez disso, você deve fazer se depende da causa da exceção: se uma implementação está completamente ausente ou a invocação de membro é inconsistente com a finalidade de um objeto (como uma chamada para o <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType> método em somente leitura <xref:System.IO.FileStream> objeto.  
+  
+ **Uma implementação não foi fornecida porque a operação não pode ser executada de forma significativa.**  
+ Essa é uma exceção comuns, quando você chama métodos em um objeto que fornece implementações para os métodos de uma classe base abstrata ou que implementa uma interface de finalidade geral e o método não tem nenhuma implementação significativa.  
+  
+ Por exemplo, o <xref:System.Convert> classe implementa o <xref:System.IConvertible> interface, o que significa que ele deve incluir um método para converter todos os tipos primitivos em todos os outros tipos primitivos. Muitas das conversões, no entanto, não são possíveis. Como resultado, uma chamada para o <xref:System.Convert.ToBoolean%28System.DateTime%29?displayProperty=nameWithType> método, por exemplo, lança um <xref:System.NotSupportedException> exceção porque não há nenhuma conversão possível entre um <xref:System.DateTime> e um <xref:System.Boolean> valor  
+  
+ Para eliminar a exceção, você deve eliminar a chamada do método.  
+  
+ **A chamada do método não tem suporte dado o estado do objeto.**  
+ Você está tentando chamar um membro cuja funcionalidade não está disponível devido ao estado do objeto. Você pode eliminar a exceção de uma das três maneiras:  
+  
+-   Você sabe o estado do objeto com antecedência, mas você chamou um método sem suporte ou propriedade. Nesse caso, a invocação de membro é um erro e eliminá-lo.  
+  
+-   Você sabe o estado do objeto com antecedência (normalmente porque seu código tem instanciado-), mas o objeto está configurado incorretamente. O exemplo a seguir ilustra esse problema. Ele cria um somente leitura <xref:System.IO.FileStream> objeto e, em seguida, tenta gravar nele.  
+  
+     [!code-csharp[System.NotSupportedException#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.NotSupportedException/cs/BadState1.cs#1)]
+     [!code-vb[System.NotSupportedException#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.NotSupportedException/vb/BadState1.vb#1)]  
+  
+     Você pode eliminar a exceção, garantindo que o objeto instanciado suporta a funcionalidade que você pretende. O exemplo a seguir corrige o problema de somente leitura <xref:System.IO.FileStream> objeto fornecendo os argumentos corretos para o <xref:System.IO.FileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.FileAccess%29?displayProperty=nameWithType> construtor.  
+  
+-   Você não souber com antecedência o estado do objeto e o objeto não dá suporte a uma operação específica. Na maioria dos casos, o objeto deve incluir uma propriedade ou método que indica se ele dá suporte a um conjunto específico de operações. Você pode eliminar a exceção verificando o valor do objeto e invocar o membro, se apropriado.  
+  
+     O exemplo a seguir define uma `DetectEncoding` método lança um <xref:System.NotSupportedException> exceção ao tentar ler a partir do início de um fluxo que não oferece suporte a acesso de leitura.  
+  
+     [!code-csharp[System.NotSupportedException#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.NotSupportedException/cs/TestProp1.cs#3)]
+     [!code-vb[System.NotSupportedException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.NotSupportedException/vb/TestProp1.vb#3)]  
+  
+     Você pode eliminar a exceção examinando o valor de <xref:System.IO.FileStream.CanRead%2A?displayProperty=nameWithType> propriedade e sair do método, se o fluxo é somente leitura.  
+  
+     [!code-csharp[System.NotSupportedException#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/System.NotSupportedException/cs/TestProp2.cs#4)]
+     [!code-vb[System.NotSupportedException#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/System.NotSupportedException/vb/TestProp2.vb#4)]  
+  
+## <a name="related-exception-types"></a>Tipos de exceção relacionada  
+ O <xref:System.NotSupportedException> exceção está intimamente relacionada a dois outros tipos de exceção;  
+  
+ <xref:System.NotImplementedException>.  
+ Essa exceção é lançada quando um método pode ser implementado, mas não, ou porque o membro será implementado em uma versão posterior, o membro não está disponível em uma plataforma específica, ou o membro pertence a uma classe abstrata e uma classe derivada deve fornecer uma implementação.  
+  
+ <xref:System.InvalidOperationException>  
+ Essa exceção é lançada em cenários em que geralmente às vezes é possível que o objeto executar a operação solicitada e o estado do objeto determina se a operação pode ser executada.  
+  
+## <a name="net-compact-framework-notes"></a>Notas do .NET compact Framework  
+ Ao trabalhar com o [!INCLUDE[Compact](~/includes/compact-md.md)] e ao usar P/Invoke em uma função nativa, essa exceção poderá ser gerada se:  
+  
+-   A declaração em código gerenciado está incorreta.  
+  
+-   O [!INCLUDE[Compact](~/includes/compact-md.md)] não oferece suporte ao que você está tentando fazer.  
+  
+-   Os nomes de DLL são danificados na exportação.  
+  
+ Se um <xref:System.NotSupportedException.%23ctor%2A> exceção for lançada, verifique:  
+  
+-   Para qualquer violação de restrições [!INCLUDE[Compact](~/includes/compact-md.md)] P/Invoke.  
+  
+-   Para alguns argumentos que exigem memória alocada previamente. Se eles existirem, você deverá passar uma referência para uma variável existente.  
+  
+-   Se os nomes das funções exportadas estão corretos. Isso pode ser verificado com [DumpBin.exe](https://msdn.microsoft.com/library/c1h23y6c.aspx).  
+  
+-   Se você não está tentando passar argumentos demais.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotSupportedException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.NotSupportedException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.NotSupportedException" /> classe, definindo o <see cref="P:System.Exception.Message" /> propriedade da nova instância para uma mensagem fornecida pelo sistema que descreve o erro. Esta mensagem leva em conta a cultura do sistema atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.NotSupportedException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro localizada.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotSupportedException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.NotSupportedException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.String" /> que descreve o erro. O conteúdo de <c>mensagem</c> se destina a ser compreendidos por humanos. O chamador desse construtor é necessário para garantir que essa cadeia de caracteres tenha sido localizada para a cultura do sistema atual.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.NotSupportedException" /> com uma mensagem de erro especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.NotSupportedException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|`null`.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NotSupportedException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.NotSupportedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">O objeto que mantém os dados de objeto serializados.</param>
+        <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.NotSupportedException" /> com dados serializados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é chamado durante a desserialização para reconstituir o objeto de exceção transmitido por um fluxo. Para obter mais informações, consulte [XML e serialização SOAP](~/docs/standard/serialization/xml-and-soap-serialization.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NotSupportedException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.NotSupportedException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção que é a causa da exceção atual. Se o <c>innerException</c> parâmetro não é uma referência nula, a exceção atual é gerada em um <see langword="catch" /> bloco que manipula a exceção interna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.NotSupportedException" /> com uma mensagem de erro especificada e uma referência à exceção interna que é a causa da exceção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção que é lançada como um resultado direto de uma exceção anterior deve incluir uma referência para a exceção anterior na propriedade <xref:System.Exception.InnerException%2A>. A propriedade <xref:System.Exception.InnerException%2A> retorna o mesmo valor que é passado para o construtor, ou `null` caso a propriedade <xref:System.Exception.InnerException%2A> não forneça o valor de exceção interno para o construtor.  
+  
+ A tabela a seguir mostra os valores de propriedade iniciais para uma instância de <xref:System.NotSupportedException>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Exception.InnerException%2A>|A referência de exceção interna.|  
+|<xref:System.Exception.Message%2A>|A cadeia de caracteres da mensagem de erro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,302 @@
+<Type Name="NetSectionGroup" FullName="System.Net.Configuration.NetSectionGroup">
+  <TypeSignature Language="C#" Value="public sealed class NetSectionGroup : System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NetSectionGroup extends System.Configuration.ConfigurationSectionGroup" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Configuration.NetSectionGroup" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationSectionGroup</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Obtém as informações do grupo de seção para os namespaces de rede. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe corresponde do [ &lt;system.Net&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elemento de configuração descrito no [esquema de configurações de rede](http://msdn.microsoft.com/library/f1de5a0f-76c5-4833-819f-5222b8146340) documentação.  
+  
+ Este grupo de seção controla as definições de configuração para os namespaces a seguir:  
+  
+-   <xref:System.Net>  
+  
+-   <xref:System.Net.Cache>  
+  
+-   <xref:System.Net.Mail>  
+  
+ Essa classe fornece acesso programático a informações que podem ser armazenados em arquivos de configuração.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NetSectionGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.NetSectionGroup.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Configuration.NetSectionGroup" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationModules">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.AuthenticationModulesSection AuthenticationModules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.AuthenticationModulesSection AuthenticationModules" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.NetSectionGroup.AuthenticationModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("authenticationModules")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.AuthenticationModulesSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a seção de configuração que contém os módulos de autenticação registrados no computador local.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.AuthenticationModulesSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seção retornada por essa propriedade corresponde do [ &lt;authenticationModules&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionManagement">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.ConnectionManagementSection ConnectionManagement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.ConnectionManagementSection ConnectionManagement" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.NetSectionGroup.ConnectionManagement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("connectionManagement")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.ConnectionManagementSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a seção de configuração que contém as configurações de gerenciamento de conexão para o computador local.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.ConnectionManagementSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seção retornada por essa propriedade corresponde do [ &lt;connectionManagement&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultProxy">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.DefaultProxySection DefaultProxy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.DefaultProxySection DefaultProxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.NetSectionGroup.DefaultProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("defaultProxy")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.DefaultProxySection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a seção de configuração que contém as configurações de servidor de proxy Web padrão para o computador local.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.DefaultProxySection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seção retornada por essa propriedade corresponde do [ &lt;defaultProxy&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSectionGroup">
+      <MemberSignature Language="C#" Value="public static System.Net.Configuration.NetSectionGroup GetSectionGroup (System.Configuration.Configuration config);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Net.Configuration.NetSectionGroup GetSectionGroup(class System.Configuration.Configuration config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Configuration.NetSectionGroup.GetSectionGroup(System.Configuration.Configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.NetSectionGroup</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="config" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="config">Uma <see cref="T:System.Configuration.Configuration" /> que representa um arquivo de configuração.</param>
+        <summary>Obtém o grupo da seção de configuração <see langword="System.Net" /> do arquivo de configuração especificado.</summary>
+        <returns>Um <see cref="T:System.Net.Configuration.NetSectionGroup" /> que representa o <see langword="System.Net" /> configurações <paramref name="config" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para extrair as configurações de rede de um arquivo de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MailSettings">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.MailSettingsSectionGroup MailSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.MailSettingsSectionGroup MailSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.NetSectionGroup.MailSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.MailSettingsSectionGroup</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a seção de configuração que contém as configurações de email SMTP do cliente para o computador local.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.MailSettingsSectionGroup" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seção retornada por essa propriedade corresponde do [ &lt;mailSettings&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestCaching">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.RequestCachingSection RequestCaching { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.RequestCachingSection RequestCaching" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.NetSectionGroup.RequestCaching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("requestCaching")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.RequestCachingSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a seção de configuração que contém as definições de configuração de cache para o computador local.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.RequestCachingSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seção retornada por essa propriedade corresponde do [ &lt;requestCaching&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Settings">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.SettingsSection Settings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.SettingsSection Settings" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.NetSectionGroup.Settings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("settings")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.SettingsSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a seção de configuração que contém as configurações de rede para o computador local.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.SettingsSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seção retornada por essa propriedade corresponde do [ &lt;configurações&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebRequestModules">
+      <MemberSignature Language="C#" Value="public System.Net.Configuration.WebRequestModulesSection WebRequestModules { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Configuration.WebRequestModulesSection WebRequestModules" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Configuration.NetSectionGroup.WebRequestModules" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("webRequestModules")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Net.Configuration.WebRequestModulesSection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a seção de configuração que contém os módulos registrados para uso com o <see cref="T:System.Net.WebRequest" /> classe.</summary>
+        <value>Um objeto <see cref="T:System.Net.Configuration.WebRequestModulesSection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seção retornada por essa propriedade corresponde do [ &lt;webRequestModules&gt; (configurações de rede) do elemento](~/docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) elemento de configuração.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

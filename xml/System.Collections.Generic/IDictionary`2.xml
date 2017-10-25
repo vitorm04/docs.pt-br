@@ -1,0 +1,501 @@
+<Type Name="IDictionary&lt;TKey,TValue&gt;" FullName="System.Collections.Generic.IDictionary&lt;TKey,TValue&gt;">
+  <TypeSignature Language="C#" Value="public interface IDictionary&lt;TKey,TValue&gt; : System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;, System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDictionary`2&lt;TKey, TValue&gt; implements class System.Collections.Generic.ICollection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;!TKey, !TValue&gt;&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.IDictionary`2" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TKey" />
+    <TypeParameter Name="TValue" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Collections.Generic.KeyValuePair&lt;TKey,TValue&gt;&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="TKey">O tipo de chaves no dicionário.</typeparam>
+    <typeparam name="TValue">O tipo de valores no dicionário.</typeparam>
+    <summary>Representa uma coleção genérica de pares chave/valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.IDictionary%602> interface é a interface base para coleções genéricas de pares chave/valor.  
+  
+ Cada elemento é um par chave/valor armazenado em um <xref:System.Collections.Generic.KeyValuePair%602> objeto.  
+  
+ Cada par deve ter uma chave exclusiva. Implementações podem variar se eles permitem `key` ser `null`. O valor pode ser `null` e não precisa ser exclusivo. O <xref:System.Collections.Generic.IDictionary%602> interface permite que as chaves independentes e valores a serem enumerados, mas não implica em qualquer ordem de classificação específico.  
+  
+ O `foreach` instrução de linguagem c# (`For Each` no Visual Basic, `for each` em C++) retorna um objeto do tipo dos elementos na coleção. Desde que cada elemento do <xref:System.Collections.Generic.IDictionary%602> é um par chave/valor, o tipo de elemento não é o tipo de chave ou o tipo do valor. Em vez disso, o tipo de elemento é <xref:System.Collections.Generic.KeyValuePair%602>. Por exemplo:  
+  
+ [!code-cpp[Generic.IDictionary#11](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source2.cpp#11)]
+ [!code-csharp[Generic.IDictionary#11](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source2.cs#11)]
+ [!code-vb[Generic.IDictionary#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source2.vb#11)]  
+  
+ O `foreach` instrução é um wrapper em torno de enumerador, que só permite ler, gravar não à coleção.  
+  
+> [!NOTE]
+>  Porque as chaves podem ser herdadas e seu comportamento é alterado, a exclusividade absoluta não pode ser garantida pelo comparações que usam o <xref:System.Type.Equals%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um vazio <xref:System.Collections.Generic.Dictionary%602> de cadeias de caracteres, com chaves de inteiro e acessa por meio de <xref:System.Collections.Generic.IDictionary%602> interface.  
+  
+ O exemplo de código usa o <xref:System.Collections.Generic.IDictionary%602.Add%2A> método para adicionar alguns elementos. O exemplo demonstra que o <xref:System.Collections.Generic.IDictionary%602.Add%2A> método lança <xref:System.ArgumentException> ao tentar adicionar uma chave duplicada.  
+  
+ O exemplo usa o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade (indexador em c#) para recuperar valores, demonstrando que um <xref:System.Collections.Generic.KeyNotFoundException> é lançada quando uma chave solicitada não está presente e mostrando que o valor associado com uma chave pode ser substituído.  
+  
+ O exemplo mostra como usar o <xref:System.Collections.Generic.IDictionary%602.TryGetValue%2A> método como uma forma mais eficiente para recuperar valores, se um programa geralmente deve tentar valores de chave que não estão no dicionário e como usar o <xref:System.Collections.Generic.IDictionary%602.ContainsKey%2A> método para testar se uma chave existe antes de chamar o <xref:System.Collections.Generic.IDictionary%602.Add%2A>método.  
+  
+ Por fim, o exemplo mostra como enumerar as chaves e valores no dicionário e como enumerar os valores somente usando o <xref:System.Collections.Generic.IDictionary%602.Values%2A> propriedade.  
+  
+ [!code-cpp[Generic.IDictionary#1](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#1)]
+ [!code-csharp[Generic.IDictionary#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#1)]
+ [!code-vb[Generic.IDictionary#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>A classe de implementação deve ter meios para comparar as chaves.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (TKey key, TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!TKey key, !TValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IDictionary`2.Add(`0,`1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue" />
+      </Parameters>
+      <Docs>
+        <param name="key">O objeto a ser usado como chave do elemento a ser adicionado.</param>
+        <param name="value">O objeto a ser usado como o valor do elemento a ser adicionado.</param>
+        <summary>Adiciona um elemento com a chave fornecida e o valor para o <see cref="T:System.Collections.Generic.IDictionary`2" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode usar o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no dicionário; por exemplo, `myCollection["myNonexistentKey"] = myValue` em c# (`myCollection("myNonexistentKey") = myValue` no Visual Basic). No entanto, se a chave especificada já existe no dicionário, configurando o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.Generic.IDictionary%602.Add%2A> método não modifica os elementos existentes.  
+  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, o <xref:System.Collections.Generic.List%601> classe usa <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, enquanto o <xref:System.Collections.Generic.Dictionary%602> classe permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+ Implementações podem variar se eles permitem `key` ser `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um vazio <xref:System.Collections.Generic.Dictionary%602> de cadeias de caracteres, com chaves de inteiro e acessa por meio de <xref:System.Collections.Generic.IDictionary%602> interface. O exemplo de código usa o <xref:System.Collections.Generic.IDictionary%602.Add%2A> método para adicionar alguns elementos. O exemplo demonstra que o <xref:System.Collections.Generic.IDictionary%602.Add%2A> método lança um <xref:System.ArgumentException> ao tentar adicionar uma chave duplicada.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Generic.IDictionary#2](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#2)]
+ [!code-csharp[Generic.IDictionary#2](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#2)]
+ [!code-vb[Generic.IDictionary#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Já existe um elemento com a mesma chave no <see cref="T:System.Collections.Generic.IDictionary`2" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Generic.IDictionary`2" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public bool ContainsKey (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IDictionary`2.ContainsKey(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave a ser localizada no <see cref="T:System.Collections.Generic.IDictionary`2" />.</param>
+        <summary>Determina se o <see cref="T:System.Collections.Generic.IDictionary`2" /> contém um elemento com a chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.IDictionary`2" /> contiver um elemento com a chave; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, o <xref:System.Collections.Generic.List%601> classe usa <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, enquanto o <xref:System.Collections.Generic.Dictionary%602> classe permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+ Implementações podem variar se eles permitem `key` ser `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Collections.Generic.IDictionary%602.ContainsKey%2A> método para testar se uma chave existe antes de chamar o <xref:System.Collections.Generic.IDictionary%602.Add%2A> método. Ele também mostra como usar o <xref:System.Collections.Generic.IDictionary%602.TryGetValue%2A> método, que pode ser uma maneira mais eficiente para recuperar valores, se um programa tentar frequentemente valores de chave que não estão no dicionário. Finalmente, ele mostra como inserir itens usando <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade (indexador em c#).  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Generic.IDictionary#6](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#6)]
+ [!code-csharp[Generic.IDictionary#6](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#6)]
+ [!code-vb[Generic.IDictionary#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#6)]  
+[!code-cpp[Generic.IDictionary#5](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#5)]
+[!code-csharp[Generic.IDictionary#5](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#5)]
+[!code-vb[Generic.IDictionary#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#5)]  
+[!code-cpp[Generic.IDictionary#4](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#4)]
+[!code-csharp[Generic.IDictionary#4](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#4)]
+[!code-vb[Generic.IDictionary#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public TValue this[TKey key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TValue Item(!TKey)" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IDictionary`2.Item(`0)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser obtida ou adicionada.</param>
+        <summary>Obtém ou define o elemento com a chave especificada.</summary>
+        <value>O elemento com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece a capacidade de acessar um elemento específico na coleção usando a seguinte sintaxe: `myCollection[key]` (`myCollection(key)` no Visual Basic).  
+  
+ Você também pode usar o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade para adicionar novos elementos, definindo o valor de uma chave que não existe no dicionário; por exemplo, `myCollection["myNonexistentKey"] = myValue` em c# (`myCollection("myNonexistentKey") = myValue` no Visual Basic). No entanto, se a chave especificada já existe no dicionário, configurando o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade substitui o valor antigo. Em contraste, o <xref:System.Collections.Generic.IDictionary%602.Add%2A> método não modifica os elementos existentes.  
+  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, o <xref:System.Collections.Generic.List%601> classe usa <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, enquanto o <xref:System.Collections.Generic.Dictionary%602> classe permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+ A linguagem c# usa a palavra-chave para definir os indexadores em vez de implementar o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade. Visual Basic implementa <xref:System.Collections.Generic.IDictionary%602.Item%2A> como uma propriedade padrão, que fornece a mesma funcionalidade de indexação.  
+  
+ Implementações podem variar se eles permitem `key` ser `null`.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade (indexador em c#) para recuperar valores, demonstrando que um <xref:System.Collections.Generic.KeyNotFoundException> é lançada quando uma chave solicitada não está presente e mostrando que o valor associado com uma chave pode ser substituído.  
+  
+ O exemplo também mostra como usar o <xref:System.Collections.Generic.IDictionary%602.TryGetValue%2A> método como uma forma mais eficiente para recuperar valores, se um programa geralmente deve tentar valores de chave que não estão no dicionário.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Generic.IDictionary#3](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#3)]
+ [!code-csharp[Generic.IDictionary#3](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#3)]
+ [!code-vb[Generic.IDictionary#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#3)]  
+[!code-cpp[Generic.IDictionary#4](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#4)]
+[!code-csharp[Generic.IDictionary#4](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#4)]
+[!code-vb[Generic.IDictionary#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#4)]  
+[!code-cpp[Generic.IDictionary#5](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#5)]
+[!code-csharp[Generic.IDictionary#5](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#5)]
+[!code-vb[Generic.IDictionary#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Collections.Generic.KeyNotFoundException">A propriedade é recuperada e <paramref name="key" /> não foi encontrado.</exception>
+        <exception cref="T:System.NotSupportedException">A propriedade é definida e o <see cref="T:System.Collections.Generic.IDictionary`2" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Keys">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;TKey&gt; Keys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TKey&gt; Keys" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IDictionary`2.Keys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Generic.ICollection`1" /> que contém as chaves do <see cref="T:System.Collections.Generic.IDictionary`2" />.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.ICollection`1" /> que contém as chaves do objeto que implementa <see cref="T:System.Collections.Generic.IDictionary`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem das chaves no retornado <xref:System.Collections.Generic.ICollection%601> não for especificado, mas é garantido para ser a mesma ordem que os valores correspondentes no <xref:System.Collections.Generic.ICollection%601> retornado pelo <xref:System.Collections.Generic.IDictionary%602.Values%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como enumerar chaves autônoma usando o <xref:System.Collections.Generic.IDictionary%602.Keys%2A> propriedade.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Generic.IDictionary#9](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#9)]
+ [!code-csharp[Generic.IDictionary#9](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#9)]
+ [!code-vb[Generic.IDictionary#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (TKey key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!TKey key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IDictionary`2.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave do elemento a ser removido.</param>
+        <summary>Remove o elemento com a chave especificada do <see cref="T:System.Collections.Generic.IDictionary`2" />.</summary>
+        <returns>
+          <see langword="true" /> se o elemento for removido com êxito; caso contrário, <see langword="false" />.  Esse método também retornará <see langword="false" /> se <paramref name="key" /> não tiver sido encontrado no <see cref="T:System.Collections.Generic.IDictionary`2" /> original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementações podem variar em como elas determinam a igualdade de objetos; Por exemplo, o <xref:System.Collections.Generic.List%601> classe usa <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>, enquanto o <xref:System.Collections.Generic.Dictionary%602> classe permite que o usuário especifique o <xref:System.Collections.Generic.IComparer%601> implementação a ser usado para comparação de chaves.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como remover um par chave/valor de um dicionário usando o <xref:System.Collections.Generic.IDictionary%602.Remove%2A> método.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Generic.IDictionary#10](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#10)]
+ [!code-csharp[Generic.IDictionary#10](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#10)]
+ [!code-vb[Generic.IDictionary#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Collections.Generic.IDictionary`2" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetValue">
+      <MemberSignature Language="C#" Value="public bool TryGetValue (TKey key, out TValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryGetValue(!TKey key, [out] !TValue&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.IDictionary`2.TryGetValue(`0,`1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="TKey" />
+        <Parameter Name="value" Type="TValue&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="key">A chave cujo valor será obtido.</param>
+        <param name="value">Quando este método retorna, o valor associado à chave especificada, se a chave for encontrada; Caso contrário, o valor padrão para o tipo do <c>valor</c> parâmetro. Este parâmetro é passado não inicializado.</param>
+        <summary>Obtém o valor associado à chave especificada.</summary>
+        <returns>
+          <see langword="true" /> se o objeto que implementa o <see cref="T:System.Collections.Generic.IDictionary`2" /> contiver um elemento com a chave especificada; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método combina a funcionalidade do <xref:System.Collections.Generic.IDictionary%602.ContainsKey%2A> método e o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade.  
+  
+ Se a chave não for encontrada, o `value` parâmetro obtém o valor padrão apropriado para o tipo de `TValue`; por exemplo, zero (0) para tipos de inteiros, `false` para tipos boolianos, e `null` para tipos de referência.  
+  
+   
+  
+## Examples  
+ O exemplo mostra como usar o <xref:System.Collections.Generic.IDictionary%602.TryGetValue%2A> método para recuperar valores. Se um programa tentar frequentemente valores de chave que não estão em um dicionário de <xref:System.Collections.Generic.IDictionary%602.TryGetValue%2A> método pode ser mais eficiente do que usando o <xref:System.Collections.Generic.IDictionary%602.Item%2A> propriedade (indexador em c#), que gera exceções ao tentar recuperar as chaves que não existentes.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Generic.IDictionary#5](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#5)]
+ [!code-csharp[Generic.IDictionary#5](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#5)]
+ [!code-vb[Generic.IDictionary#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#5)]  
+[!code-cpp[Generic.IDictionary#4](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#4)]
+[!code-csharp[Generic.IDictionary#4](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#4)]
+[!code-vb[Generic.IDictionary#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;TValue&gt; Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;!TValue&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.IDictionary`2.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;TValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.Generic.ICollection`1" /> que contém os valores no <see cref="T:System.Collections.Generic.IDictionary`2" />.</summary>
+        <value>Um <see cref="T:System.Collections.Generic.ICollection`1" /> que contém os valores no objeto que implementa <see cref="T:System.Collections.Generic.IDictionary`2" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ordem dos valores em retornado <xref:System.Collections.Generic.ICollection%601> não for especificado, mas é garantido para ser a mesma ordem que as chaves correspondentes no <xref:System.Collections.Generic.ICollection%601> retornado pelo <xref:System.Collections.Generic.IDictionary%602.Keys%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como enumerar valores somente usando o <xref:System.Collections.Generic.IDictionary%602.Values%2A> propriedade.  
+  
+ Esse código é parte de um exemplo maior que pode ser compilado e executado. Consulte <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
+  
+ [!code-cpp[Generic.IDictionary#8](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.IDictionary/cpp/source.cpp#8)]
+ [!code-csharp[Generic.IDictionary#8](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.IDictionary/CS/source.cs#8)]
+ [!code-vb[Generic.IDictionary#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.IDictionary/VB/source.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

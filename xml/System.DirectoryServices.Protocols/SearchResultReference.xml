@@ -1,0 +1,58 @@
+<Type Name="SearchResultReference" FullName="System.DirectoryServices.Protocols.SearchResultReference">
+  <TypeSignature Language="C#" Value="public class SearchResultReference" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchResultReference extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.SearchResultReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.SearchResultReference" /> classe contém uma referência de pesquisa único retornada pelo servidor.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Controls">
+      <MemberSignature Language="C#" Value="public System.DirectoryServices.Protocols.DirectoryControl[] Controls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.DirectoryServices.Protocols.DirectoryControl[] Controls" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchResultReference.Controls" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.DirectoryControl[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.SearchResultReference.Controls" /> propriedade contém uma matriz de <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" /> objetos retornados pelo servidor na referência de pesquisa.</summary>
+        <value>Uma matriz de <see cref="T:System.DirectoryServices.Protocols.DirectoryControl" /> objetos retornados pelo servidor na referência de pesquisa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reference">
+      <MemberSignature Language="C#" Value="public Uri[] Reference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri[] Reference" />
+      <MemberSignature Language="DocId" Value="P:System.DirectoryServices.Protocols.SearchResultReference.Reference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O <see cref="P:System.DirectoryServices.Protocols.SearchResultReference.Reference" /> propriedade contém uma matriz de <see cref="T:System.Uri" /> objetos retornados pelo servidor na referência de pesquisa.</summary>
+        <value>Uma matriz de <see cref="T:System.Uri" /> objetos retornados pelo servidor na referência de pesquisa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

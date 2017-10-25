@@ -1,0 +1,2053 @@
+<Type Name="SerializationInfo" FullName="System.Runtime.Serialization.SerializationInfo">
+  <TypeSignature Language="C#" Value="public sealed class SerializationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SerializationInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.SerializationInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Armazena todos os dados necessários para serializar ou desserializar um objeto. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada por objetos com o comportamento de serialização personalizada. O <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> método na <xref:System.Runtime.Serialization.ISerializable> ou <xref:System.Runtime.Serialization.ISerializationSurrogate> preenche o <xref:System.Runtime.Serialization.SerializationInfo> repositório com o nome, tipo e valor de cada tipo de informação que deseja serializar. Durante a desserialização, a função apropriada pode extrair essas informações.  
+  
+ Objetos são adicionados ao <xref:System.Runtime.Serialization.SerializationInfo> armazenar a serialização momento usando o <xref:System.Runtime.Serialization.SerializationInfo.AddValue%2A> métodos e extraídos do <xref:System.Runtime.Serialization.SerializationInfo> armazenar a desserialização usando o <xref:System.Runtime.Serialization.SerializationInfo.GetValue%2A> métodos.  
+  
+ Para obter mais informações sobre como personalizar a serialização, consulte [serialização personalizada](~/docs/standard/serialization/custom-serialization.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Runtime.Serialization.SerializationInfo> para personalizado de serialização e desserialização de vários valores.  
+  
+ [!code-cpp[ISerializable Interface Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ISerializable Interface Example/CPP/iobjectreference.cpp#1)]
+ [!code-csharp[ISerializable Interface Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ISerializable Interface Example/CS/iobjectreference.cs#1)]
+ [!code-vb[ISerializable Interface Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISerializable Interface Example/VB/iobjectreference.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializationInfo (Type type, System.Runtime.Serialization.IFormatterConverter converter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Runtime.Serialization.IFormatterConverter converter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.#ctor(System.Type,System.Runtime.Serialization.IFormatterConverter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="converter" Type="System.Runtime.Serialization.IFormatterConverter" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do objeto a ser serializado.</param>
+        <param name="converter">O <see cref="T:System.Runtime.Serialization.IFormatterConverter" /> usado durante a desserialização.</param>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.IFormatterConverter> passado como o `converter` parâmetro converte dados de sua representação interna para o formulário, o usuário solicitado. A representação interna dos dados dentro de <xref:System.Runtime.Serialization.SerializationInfo> depende o formatador que o criou.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="type" /> ou <paramref name="converter" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SerializationInfo (Type type, System.Runtime.Serialization.IFormatterConverter converter, bool requireSameTokenInPartialTrust);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type, class System.Runtime.Serialization.IFormatterConverter converter, bool requireSameTokenInPartialTrust) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.#ctor(System.Type,System.Runtime.Serialization.IFormatterConverter,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="converter" Type="System.Runtime.Serialization.IFormatterConverter" />
+        <Parameter Name="requireSameTokenInPartialTrust" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do objeto a ser serializado.</param>
+        <param name="converter">O <see cref="T:System.Runtime.Serialization.IFormatterConverter" /> usado durante a desserialização.</param>
+        <param name="requireSameTokenInPartialTrust">Indica se o objeto requer o mesmo token em confiança parcial.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor booliano a ser serializado.</param>
+        <summary>Adiciona um valor booliano ao repositório <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada. Por exemplo:  
+  
+```csharp  
+void ISerializable.GetObject(SerializationInfo info, StreamingContext context)  
+{  
+   // This will not cause an exception to be thrown.  
+   info.AddValue("ABC", true);  
+   info.AddValue("abc", false);  
+   // However, this will cause the SerializationException to be thrown.  
+   info.AddValue("XYZ", true);  
+   info.AddValue("XYZ", false);  
+}  
+```  
+  
+```vb  
+Private Sub GetObjectData(ByVal info As SerializationInfo, _  
+ByVal context As StreamingContext)  
+   ' This will not cause an exception to be thrown.  
+   info.AddValue("ABC", "upper case")  
+   info.AddValue("abc", "lower case")  
+   ' However, this will cause the SerializationException to be thrown.  
+   info.AddValue("XYZ", "same case")  
+   info.AddValue("XYZ", "same case")  
+End Sub  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Byte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor de byte para serializar.</param>
+        <summary>Adiciona um valor inteiro não assinado de 8 bits para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor de caractere para serializar.</param>
+        <summary>Adiciona um valor de caractere Unicode para a <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, DateTime value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, valuetype System.DateTime value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.DateTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor <see cref="T:System.DateTime" /> a ser serializado.</param>
+        <summary>Adiciona um <see cref="T:System.DateTime" /> valor para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, decimal value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, valuetype System.Decimal value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor decimal para serializar.</param>
+        <summary>Adiciona um valor decimal para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Se o <paramref name="name" /> parâmetro é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Se um valor já foi associado <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor duplo para serializar.</param>
+        <summary>Adiciona um valor de ponto flutuante de precisão dupla no <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, short value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Int16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor <see langword="Int16" /> a ser serializado.</param>
+        <summary>Adiciona um valor inteiro com sinal de 16 bits para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor <see langword="Int32" /> a ser serializado.</param>
+        <summary>Adiciona um valor inteiro com sinal de 32 bits ao repositório <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ISerializable Interface Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ISerializable Interface Example/CPP/iobjectreference.cpp#1)]
+ [!code-csharp[ISerializable Interface Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ISerializable Interface Example/CS/iobjectreference.cs#1)]
+ [!code-vb[ISerializable Interface Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISerializable Interface Example/VB/iobjectreference.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, long value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor Int64 para serializar.</param>
+        <summary>Adiciona um valor inteiro com sinal de 64 bits para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor a ser serializado. Nenhum filho desse objeto será serializado automaticamente.</param>
+        <summary>Adiciona o objeto especificado ao repositório <see cref="T:System.Runtime.Serialization.SerializationInfo" />, no qual ele é associado a um nome especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto contido no `value` parâmetro é serializado como o tipo retornado por `value`.  
+  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, sbyte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.SByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.SByte" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor <see langword="Sbyte" /> a ser serializado.</param>
+        <summary>Adiciona um valor inteiro assinado de 8 bits para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, float32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O único valor para serializar.</param>
+        <summary>Adiciona um valor de ponto flutuante de precisão simples para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.UInt16)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor <see langword="UInt16" /> a ser serializado.</param>
+        <summary>Adiciona um valor inteiro não assinado de 16 bits para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.UInt32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor <see langword="UInt32" /> a ser serializado.</param>
+        <summary>Adiciona um valor inteiro não assinado de 32 bits para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Runtime.Serialization.SerializationInfo.AddValue%2A> método para personalizar a serialização de um tipo. O código adiciona uma cadeia de caracteres e um número inteiro para uma instância do <xref:System.Runtime.Serialization.SerializationInfo> classe no <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> método o <xref:System.Runtime.Serialization.ISerializable> interface. O código também usa o <xref:System.Runtime.Serialization.SerializationInfo.GetValue%2A> método para recuperar valores da <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ [!code-csharp[ISerializable_GetObjectData#0](~/samples/snippets/csharp/VS_Snippets_Remoting/ISerializable_GetObjectData/cs/ISerializable_GetObjectData.cs#0)]
+ [!code-vb[ISerializable_GetObjectData#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISerializable_GetObjectData/vb/ISerializable_GetObjectData.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, ulong value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, unsigned int64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.UInt64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor <see langword="UInt64" /> a ser serializado.</param>
+        <summary>Adiciona um valor inteiro não assinado de 64 bits para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddValue">
+      <MemberSignature Language="C#" Value="public void AddValue (string name, object value, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddValue(string name, object value, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.AddValue(System.String,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser associado ao valor, de modo que ele possa ser desserializado mais tarde.</param>
+        <param name="value">O valor a ser serializado. Nenhum filho desse objeto será serializado automaticamente.</param>
+        <param name="type">O <see cref="T:System.Type" /> para associar o objeto atual. Esse parâmetro sempre deve ser do tipo do próprio objeto ou uma de suas classes base.</param>
+        <summary>Adiciona um valor ao repositório <see cref="T:System.Runtime.Serialization.SerializationInfo" />, em que <paramref name="value" /> é associado ao <paramref name="name" /> e é serializado como sendo do <see cref="T:System.Type" /><paramref name="type" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo atribuído sempre é o tipo do objeto ou um de seus pais.  
+  
+ Se dois valores são adicionados com nomes que diferem somente por caso, nenhuma exceção será gerada, que não é uma prática recomendada. No entanto, a adição de dois valores com o mesmo nome causará o <xref:System.Runtime.Serialization.SerializationException> seja gerada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Se <paramref name="name" /> ou <paramref name="type" /> for <see langword="null" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um valor já foi associado a <paramref name="name" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyName">
+      <MemberSignature Language="C#" Value="public string AssemblyName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AssemblyName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.SerializationInfo.AssemblyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do assembly do tipo para serializar durante a serialização somente.</summary>
+        <value>O nome completo do assembly do tipo para serializar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.SerializationInfo.AssemblyName%2A> é o mesmo que o valor retornado por <xref:System.Reflection.Assembly.FullName%2A> propriedade do assembly do tipo recipiente. Este é o nome do assembly que o formatador utiliza ao serializar informações de tipo para este objeto.  
+  
+ O nome do assembly contém o nome do assembly, versão, cultura e algumas informações de segurança sobre o objeto.  
+  
+ Os usuários que estiver alterando o tipo que está sendo serializado (por exemplo, para enviar um proxy para um determinado tipo) definirá o valor dessa propriedade.  
+  
+> [!CAUTION]
+>  Não use essa propriedade durante a desserialização porque o valor dessa propriedade é indefinido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">É o valor que a propriedade é definida como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FullTypeName">
+      <MemberSignature Language="C#" Value="public string FullTypeName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.SerializationInfo.FullTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome completo do <see cref="T:System.Type" /> para serializar.</summary>
+        <value>O nome completo do tipo para serializar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.SerializationInfo.FullTypeName%2A> é o mesmo que o que deve ser retornado ao chamar o <xref:System.Type.FullName%2A> em <xref:System.Type>. Este é o nome do tipo que o formatador utiliza ao serializar informações de tipo para este objeto.  
+  
+ Os usuários que estiver alterando o tipo para serializar (por exemplo, para enviar um proxy para um determinado tipo) desejará definir o valor dessa propriedade.  
+  
+> [!CAUTION]
+>  Não use essa propriedade durante a desserialização porque o valor dessa propriedade é indefinido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">É o valor dessa propriedade é definida como <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoolean">
+      <MemberSignature Language="C#" Value="public bool GetBoolean (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetBoolean(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetBoolean(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor booliano do repositório do <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <returns>O valor booliano associado ao <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um valor booliano, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado a <paramref name="name" /> não pode ser convertido em um valor booliano.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByte">
+      <MemberSignature Language="C#" Value="public byte GetByte (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetByte(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetByte(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro não assinado de 8 bits do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O inteiro sem sinal de 8 bits associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um inteiro não assinado de 8 bits, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um inteiro não assinado de 8 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChar">
+      <MemberSignature Language="C#" Value="public char GetChar (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance char GetChar(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetChar(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor de caractere Unicode do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O caractere Unicode associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um caractere Unicode, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um caractere Unicode.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDateTime">
+      <MemberSignature Language="C#" Value="public DateTime GetDateTime (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.DateTime GetDateTime(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetDateTime(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um <see cref="T:System.DateTime" /> valor o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O <see cref="T:System.DateTime" /> valor associado com <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor for um <xref:System.DateTime>, ou pode ser convertido em um <xref:System.DateTime>, esse valor é retornado; caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um <see cref="T:System.DateTime" /> valor.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDecimal">
+      <MemberSignature Language="C#" Value="public decimal GetDecimal (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Decimal GetDecimal(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetDecimal(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Decimal</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor decimal do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>Um valor decimal do <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um número decimal, ou pode ser convertido em um decimal, o valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um decimal.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDouble">
+      <MemberSignature Language="C#" Value="public double GetDouble (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetDouble(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetDouble(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor de ponto flutuante de precisão dupla do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O valor de ponto flutuante de precisão dupla associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor for um duplo, ou pode ser convertido em um duplo, o valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um valor de ponto flutuante de precisão dupla.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Runtime.Serialization.SerializationInfoEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Runtime.Serialization.SerializationInfoEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Serialization.SerializationInfoEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um <see cref="T:System.Runtime.Serialization.SerializationInfoEnumerator" /> usado para iterar os pares nome-valor no <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>Um <see cref="T:System.Runtime.Serialization.SerializationInfoEnumerator" /> para analisar os pares nome-valor contidos no <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta função geralmente será usada por formatadores que precisa para enumerar os valores antes de gravá-los do fluxo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt16">
+      <MemberSignature Language="C#" Value="public short GetInt16 (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int16 GetInt16(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetInt16(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro com sinal de 16 bits do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O inteiro assinado de 16 bits associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um inteiro assinado de 16 bits, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um inteiro assinado de 16 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt32">
+      <MemberSignature Language="C#" Value="public int GetInt32 (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetInt32(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetInt32(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro com sinal de 32 bits do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O inteiro assinado de 32 bits associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um inteiro assinado de 32 bits, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[ISerializable Interface Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/ISerializable Interface Example/CPP/iobjectreference.cpp#1)]
+ [!code-csharp[ISerializable Interface Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/ISerializable Interface Example/CS/iobjectreference.cs#1)]
+ [!code-vb[ISerializable Interface Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/ISerializable Interface Example/VB/iobjectreference.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um inteiro assinado de 32 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInt64">
+      <MemberSignature Language="C#" Value="public long GetInt64 (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetInt64(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetInt64(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro com sinal de 64 bits do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O inteiro assinado de 64 bits associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um inteiro assinado de 64 bits, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um inteiro assinado de 64 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSByte">
+      <MemberSignature Language="C#" Value="public sbyte GetSByte (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int8 GetSByte(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetSByte(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.SByte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro assinado de 8 bits do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O inteiro assinado de 8 bits associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor for um `Int8`, ou pode ser convertido em um `Int8`, esse valor é retornado; caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um inteiro assinado de 8 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSingle">
+      <MemberSignature Language="C#" Value="public float GetSingle (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetSingle(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetSingle(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do valor a ser recuperado.</param>
+        <summary>Recupera um valor de ponto flutuante de precisão simples do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O valor de ponto flutuante de precisão única associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um número de ponto flutuante de precisão única, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um valor de ponto flutuante de precisão simples.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public string GetString (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetString(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um <see cref="T:System.String" /> valor o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O <see cref="T:System.String" /> associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor for um <xref:System.String>, ou pode ser convertido em um <xref:System.String>, esse valor é retornado; caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um <see cref="T:System.String" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUInt16">
+      <MemberSignature Language="C#" Value="public ushort GetUInt16 (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 GetUInt16(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetUInt16(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro não assinado de 16 bits do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O inteiro sem sinal de 16 bits associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um inteiro não assinado de 16 bits, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um inteiro não assinado de 16 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUInt32">
+      <MemberSignature Language="C#" Value="public uint GetUInt32 (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int32 GetUInt32(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetUInt32(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro não assinado de 32 bits do <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <returns>O inteiro sem sinal de 32 bits associado <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um inteiro assinado de 32 bits, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado com <paramref name="name" /> não pode ser convertido em um inteiro não assinado de 32 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUInt64">
+      <MemberSignature Language="C#" Value="public ulong GetUInt64 (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int64 GetUInt64(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetUInt64(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <summary>Recupera um valor inteiro sem sinal de 64 bits do repositório <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <returns>O inteiro sem sinal de 64 bits associado a <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor é um inteiro não assinado de 64 bits, ou pode ser convertido em um valor retornado; Caso contrário, um <xref:System.InvalidCastException> é gerada. Todas as conversões são executadas pelo <xref:System.Runtime.Serialization.IFormatterConverter> associado a esta <xref:System.Runtime.Serialization.SerializationInfo>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado a <paramref name="name" /> não pode ser convertido em um inteiro sem sinal de 64 bits.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="public object GetValue (string name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetValue(string name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.GetValue(System.String,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome associado ao valor a ser recuperado.</param>
+        <param name="type">O <see cref="T:System.Type" /> do valor a ser recuperado. Se o valor armazenado não puder ser convertido nesse tipo, o sistema gerará um <see cref="T:System.InvalidCastException" />.</param>
+        <summary>Recupera um valor do repositório do <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+        <returns>O objeto do <see cref="T:System.Type" /> especificado associado ao <paramref name="name" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se os dados armazenados no <xref:System.Runtime.Serialization.SerializationInfo> é do tipo solicitado (ou uma de suas classes derivadas), esse valor é retornado diretamente. Caso contrário, <xref:System.Runtime.Serialization.IFormatterConverter.Convert%2A?displayProperty=nameWithType> é chamado para convertê-lo para o tipo apropriado.  
+  
+ O valor retornado pelo <xref:System.Runtime.Serialization.SerializationInfo.GetValue%2A> método sempre pode ser convertido com segurança para o tipo especificado no `type` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.Serialization.SerializationInfo.GetValue%2A> método:  
+  
+ [!code-cpp[Classic SerializationInfo.GetValue Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic SerializationInfo.GetValue Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic SerializationInfo.GetValue Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic SerializationInfo.GetValue Example/CS/source.cs#1)]
+ [!code-vb[Classic SerializationInfo.GetValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic SerializationInfo.GetValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> ou <paramref name="type" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidCastException">O valor associado a <paramref name="name" /> não pode ser convertido em <paramref name="type" />.</exception>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">Um elemento com o nome especificado não foi encontrado na instância atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssemblyNameSetExplicit">
+      <MemberSignature Language="C#" Value="public bool IsAssemblyNameSetExplicit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAssemblyNameSetExplicit" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.SerializationInfo.IsAssemblyNameSetExplicit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o nome do assembly foi definido explicitamente.</summary>
+        <value>
+          <see langword="True" />Se o nome do assembly foi definido explicitamente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFullTypeNameSetExplicit">
+      <MemberSignature Language="C#" Value="public bool IsFullTypeNameSetExplicit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFullTypeNameSetExplicit" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.SerializationInfo.IsFullTypeNameSetExplicit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o nome completo do tipo foi definido explicitamente.</summary>
+        <value>
+          <see langword="True" />Se o nome completo do tipo foi definido explicitamente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberCount">
+      <MemberSignature Language="C#" Value="public int MemberCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MemberCount" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.SerializationInfo.MemberCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de membros que foram adicionados para o <see cref="T:System.Runtime.Serialization.SerializationInfo" /> armazenar.</summary>
+        <value>O número de membros que foram adicionados ao atual <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectType">
+      <MemberSignature Language="C#" Value="public Type ObjectType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ObjectType" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Serialization.SerializationInfo.ObjectType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o tipo do objeto a ser serializado.</summary>
+        <value>O tipo do objeto que está sendo serializado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetType">
+      <MemberSignature Language="C#" Value="public void SetType (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetType(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.SerializationInfo.SetType(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Formatters</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do objeto a ser serializado.</param>
+        <summary>Define o <see cref="T:System.Type" /> do objeto a ser serializado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Serialization.Formatter> é responsável por definir o <xref:System.Type> do <xref:System.Runtime.Serialization.SerializationInfo> instância antes de passá-lo para <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>. No entanto, os usuários que desejam enviar proxies para os objetos precisará alterar o tipo representado por esse <xref:System.Runtime.Serialization.SerializationInfo> instância. Usando o <xref:System.Runtime.Serialization.SerializationInfo.SetType%2A> método é equivalente a definir ambos os <xref:System.Runtime.Serialization.SerializationInfo.FullTypeName%2A> e <xref:System.Runtime.Serialization.SerializationInfo.AssemblyName%2A>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[IObjectReference Interface Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/IObjectReference Interface Example/CPP/iobjectreference.cpp#1)]
+ [!code-csharp[IObjectReference Interface Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/IObjectReference Interface Example/CS/iobjectreference.cs#1)]
+ [!code-vb[IObjectReference Interface Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/IObjectReference Interface Example/VB/iobjectreference.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="type" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,157 @@
+<Type Name="ProtectedData" FullName="System.Security.Cryptography.ProtectedData">
+  <TypeSignature Language="C#" Value="public sealed class ProtectedData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ProtectedData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ProtectedData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.ProtectedData</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para criptografar e descriptografar dados. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece acesso para a Data Protection DPAPI (API) disponíveis no Microsoft Windows 2000 e sistemas operacionais posteriores. Este é um serviço que é fornecido pelo sistema operacional e não requer bibliotecas adicionais. Ele oferece proteção usando as credenciais de usuário ou computador para criptografar ou descriptografar dados.  
+  
+ A classe consiste em dois wrappers para o DPAPI não gerenciada, <xref:System.Security.Cryptography.ProtectedData.Protect%2A> e <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A>. Esses dois métodos podem ser usados para criptografar e descriptografar dados, como senhas, chaves e cadeias de caracteres de conexão.  
+  
+ Se você usar esses métodos durante a representação, você poderá receber o seguinte erro: "A chave não é válido para uso em especificado estado." Isso ocorre porque a DPAPI armazena os dados de chave em perfis de usuário. Se o perfil não está carregado, o DPAPI não conseguirá realizar a descriptografia. Para evitar esse erro, carrega o perfil do usuário que você deseja representar antes de chamar qualquer método. Usando DPAPI com a representação pode incorrer em complicativo significativo e requer que as opções de design cuidadoso.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar a proteção de dados.  
+  
+ [!code-cpp[Cryptography.DataProtectionSample#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CPP/dataprotectionsample.cpp#1)]
+ [!code-csharp[Cryptography.DataProtectionSample#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CS/dataprotectionsample.cs#1)]
+ [!code-vb[Cryptography.DataProtectionSample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DataProtectionSample/vb/dataprotectionsample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Protect">
+      <MemberSignature Language="C#" Value="public static byte[] Protect (byte[] userData, byte[] optionalEntropy, System.Security.Cryptography.DataProtectionScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Protect(unsigned int8[] userData, unsigned int8[] optionalEntropy, valuetype System.Security.Cryptography.DataProtectionScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ProtectedData.Protect(System.Byte[],System.Byte[],System.Security.Cryptography.DataProtectionScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.ProtectedData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userData" Type="System.Byte[]" />
+        <Parameter Name="optionalEntropy" Type="System.Byte[]" />
+        <Parameter Name="scope" Type="System.Security.Cryptography.DataProtectionScope" />
+      </Parameters>
+      <Docs>
+        <param name="userData">Uma matriz de bytes que contém os dados a serem criptografados.</param>
+        <param name="optionalEntropy">Uma matriz de bytes adicionais opcional usada para aumentar a complexidade de criptografia, ou <see langword="null" /> para nenhuma complexidade adicional.</param>
+        <param name="scope">Um dos valores de enumeração que especifica o escopo da criptografia.</param>
+        <summary>Criptografa os dados em uma matriz de bytes especificada e retorna uma matriz de bytes que contém os dados criptografados.</summary>
+        <returns>Uma matriz de bytes que representa os dados criptografados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para criptografar dados, como senhas, chaves ou cadeias de caracteres de conexão. O `optionalEntropy` parâmetro permite que você adicione dados para aumentar a complexidade da criptografia; especifique `null` para nenhuma complexidade adicional. Se fornecido, essas informações também devem ser usadas ao descriptografar os dados usando o <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> método.  
+  
+> [!NOTE]
+>  Se você usar esse método durante a representação, você receberá o seguinte erro: "A chave não é válido para uso em especificado estado." Para evitar esse erro, carrega o perfil do usuário que você deseja representar antes de chamar o método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar a proteção de dados.  
+  
+ [!code-cpp[Cryptography.DataProtectionSample#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CPP/dataprotectionsample.cpp#1)]
+ [!code-csharp[Cryptography.DataProtectionSample#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CS/dataprotectionsample.cs#1)]
+ [!code-vb[Cryptography.DataProtectionSample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DataProtectionSample/vb/dataprotectionsample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="userData" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Falha na criptografia.</exception>
+        <exception cref="T:System.NotSupportedException">O sistema operacional não oferece suporte a esse método.</exception>
+        <exception cref="T:System.OutOfMemoryException">O sistema ficou sem memória ao criptografar os dados.</exception>
+        <permission cref="T:System.Security.Permissions.DataProtectionPermission">com o associado <see cref="P:System.Security.Permissions.DataProtectionPermissionAttribute.ProtectData" /> sinalizador de permissão proteger os dados.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Unprotect">
+      <MemberSignature Language="C#" Value="public static byte[] Unprotect (byte[] encryptedData, byte[] optionalEntropy, System.Security.Cryptography.DataProtectionScope scope);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] Unprotect(unsigned int8[] encryptedData, unsigned int8[] optionalEntropy, valuetype System.Security.Cryptography.DataProtectionScope scope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.ProtectedData.Unprotect(System.Byte[],System.Byte[],System.Security.Cryptography.DataProtectionScope)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.ProtectedData</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encryptedData" Type="System.Byte[]" />
+        <Parameter Name="optionalEntropy" Type="System.Byte[]" />
+        <Parameter Name="scope" Type="System.Security.Cryptography.DataProtectionScope" />
+      </Parameters>
+      <Docs>
+        <param name="encryptedData">Uma matriz de bytes que contém dados criptografados com o método <see cref="M:System.Security.Cryptography.ProtectedData.Protect(System.Byte[],System.Byte[],System.Security.Cryptography.DataProtectionScope)" />.</param>
+        <param name="optionalEntropy">Uma matriz de bytes adicionais opcionais que foi usada para criptografar os dados, ou <see langword="null" /> se a matriz de bytes adicionais não foi usada.</param>
+        <param name="scope">Um dos valores de enumeração que especifica o escopo de proteção de dados que foi usada para criptografar os dados.</param>
+        <summary>Descriptografa os dados em uma matriz de bytes especificada e retorna uma matriz de bytes que contém os dados descriptografados.</summary>
+        <returns>Uma matriz de bytes que representa os dados descriptografados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método pode ser usado para desproteger dados criptografados usando o <xref:System.Security.Cryptography.ProtectedData.Protect%2A> método. Se o `optionalEntropy` parâmetro foi usado durante a criptografia, ele deve ser fornecido para descriptografar os dados.  
+  
+> [!NOTE]
+>  Se você usar esse método durante a representação, você receberá o seguinte erro: "A chave não é válido para uso em especificado estado." Para evitar esse erro, carrega o perfil do usuário que você deseja representar antes de chamar o método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar a proteção de dados.  
+  
+ [!code-cpp[Cryptography.DataProtectionSample#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CPP/dataprotectionsample.cpp#1)]
+ [!code-csharp[Cryptography.DataProtectionSample#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.DataProtectionSample/CS/dataprotectionsample.cs#1)]
+ [!code-vb[Cryptography.DataProtectionSample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.DataProtectionSample/vb/dataprotectionsample.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="encryptedData" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Security.Cryptography.CryptographicException">Falha na descriptografia.</exception>
+        <exception cref="T:System.NotSupportedException">O sistema operacional não oferece suporte a esse método.</exception>
+        <exception cref="T:System.OutOfMemoryException">Sem memória.</exception>
+        <permission cref="T:System.Security.Permissions.DataProtectionPermission">com o associado <see cref="P:System.Security.Permissions.DataProtectionPermissionAttribute.UnprotectData" /> sinalizador de permissão Desproteger dados.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

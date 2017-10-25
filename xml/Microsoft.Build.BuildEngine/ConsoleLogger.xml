@@ -1,0 +1,550 @@
+<Type Name="ConsoleLogger" FullName="Microsoft.Build.BuildEngine.ConsoleLogger">
+  <TypeSignature Language="C#" Value="public class ConsoleLogger : Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConsoleLogger extends System.Object implements class Microsoft.Build.Framework.ILogger, class Microsoft.Build.Framework.INodeLogger" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.BuildEngine.ConsoleLogger" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.INodeLogger</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementa o agente de log de console padrão que gera dados de evento para a janela de console durante uma compilação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleLogger ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Framework.LoggerVerbosity verbosity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor(Microsoft.Build.Framework.LoggerVerbosity)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="verbosity" Type="Microsoft.Build.Framework.LoggerVerbosity" />
+      </Parameters>
+      <Docs>
+        <param name="verbosity">O <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> para aplicar ao agente de log.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> com o <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConsoleLogger (Microsoft.Build.Framework.LoggerVerbosity verbosity, Microsoft.Build.BuildEngine.WriteHandler write, Microsoft.Build.BuildEngine.ColorSetter colorSet, Microsoft.Build.BuildEngine.ColorResetter colorReset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Build.Framework.LoggerVerbosity verbosity, class Microsoft.Build.BuildEngine.WriteHandler write, class Microsoft.Build.BuildEngine.ColorSetter colorSet, class Microsoft.Build.BuildEngine.ColorResetter colorReset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.#ctor(Microsoft.Build.Framework.LoggerVerbosity,Microsoft.Build.BuildEngine.WriteHandler,Microsoft.Build.BuildEngine.ColorSetter,Microsoft.Build.BuildEngine.ColorResetter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="verbosity" Type="Microsoft.Build.Framework.LoggerVerbosity" />
+        <Parameter Name="write" Type="Microsoft.Build.BuildEngine.WriteHandler" />
+        <Parameter Name="colorSet" Type="Microsoft.Build.BuildEngine.ColorSetter" />
+        <Parameter Name="colorReset" Type="Microsoft.Build.BuildEngine.ColorResetter" />
+      </Parameters>
+      <Docs>
+        <param name="verbosity">O <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> para aplicar ao agente de log.</param>
+        <param name="write">O <see cref="T:Microsoft.Build.BuildEngine.WriteHandler" /> para o agente de log a ser usado.</param>
+        <param name="colorSet">O <see cref="T:Microsoft.Build.BuildEngine.ColorSetter" /> para o agente de log a ser usado.</param>
+        <param name="colorReset">O <see cref="T:Microsoft.Build.BuildEngine.ColorResetter" /> para o agente de log a ser usado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" /> classe com especificado <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" />, <see cref="T:Microsoft.Build.BuildEngine.ColorSetter" />, e <see cref="T:Microsoft.Build.BuildEngine.ColorResetter" /> valores.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyParameter">
+      <MemberSignature Language="C#" Value="public void ApplyParameter (string parameterName, string parameterValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyParameter(string parameterName, string parameterValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.ApplyParameter(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+        <Parameter Name="parameterValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">O nome do parâmetro para adicionar ao agente de log.</param>
+        <param name="parameterValue">O valor do parâmetro para atribuir ao <c>parameterName</c>.</param>
+        <summary>Adiciona o nome do parâmetro especificado e o valor para o agente de log.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildFinishedHandler">
+      <MemberSignature Language="C#" Value="public void BuildFinishedHandler (object sender, Microsoft.Build.Framework.BuildFinishedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BuildFinishedHandler(object sender, class Microsoft.Build.Framework.BuildFinishedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.BuildFinishedHandler(System.Object,Microsoft.Build.Framework.BuildFinishedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildFinishedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.BuildFinishedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.BuildFinished" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildStartedHandler">
+      <MemberSignature Language="C#" Value="public void BuildStartedHandler (object sender, Microsoft.Build.Framework.BuildStartedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BuildStartedHandler(object sender, class Microsoft.Build.Framework.BuildStartedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.BuildStartedHandler(System.Object,Microsoft.Build.Framework.BuildStartedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildStartedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.BuildStartedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.BuildStarted" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomEventHandler">
+      <MemberSignature Language="C#" Value="public void CustomEventHandler (object sender, Microsoft.Build.Framework.CustomBuildEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CustomEventHandler(object sender, class Microsoft.Build.Framework.CustomBuildEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.CustomEventHandler(System.Object,Microsoft.Build.Framework.CustomBuildEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.CustomBuildEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.CustomBuildEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.CustomEventRaised" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorHandler">
+      <MemberSignature Language="C#" Value="public void ErrorHandler (object sender, Microsoft.Build.Framework.BuildErrorEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ErrorHandler(object sender, class Microsoft.Build.Framework.BuildErrorEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.ErrorHandler(System.Object,Microsoft.Build.Framework.BuildErrorEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildErrorEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.BuildErrorEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.ErrorRaised" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.Initialize(Microsoft.Build.Framework.IEventSource)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">O <see cref="T:Microsoft.Build.Framework.IEventSource" /> a ser registrado com o agente.</param>
+        <summary>Registra o agente dos eventos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public virtual void Initialize (Microsoft.Build.Framework.IEventSource eventSource, int nodeCount);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize(class Microsoft.Build.Framework.IEventSource eventSource, int32 nodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.Initialize(Microsoft.Build.Framework.IEventSource,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSource" Type="Microsoft.Build.Framework.IEventSource" />
+        <Parameter Name="nodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="eventSource">O <see cref="T:Microsoft.Build.Framework.IEventSource" /> a ser registrado com o agente.</param>
+        <param name="nodeCount">O número de nós de inicialização.</param>
+        <summary>Registra o agente dos eventos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageHandler">
+      <MemberSignature Language="C#" Value="public void MessageHandler (object sender, Microsoft.Build.Framework.BuildMessageEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MessageHandler(object sender, class Microsoft.Build.Framework.BuildMessageEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.MessageHandler(System.Object,Microsoft.Build.Framework.BuildMessageEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildMessageEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.BuildMessageEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.MessageRaised" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public string Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ConsoleLogger.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os parâmetros passados para o <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</summary>
+        <value>Os parâmetros passados para o <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um objeto <xref:Microsoft.Build.BuildEngine.Engine> e usa o método <xref:Microsoft.Build.BuildEngine.Engine.BuildProjectFile%2A> para compilar um arquivo de projeto. A classe <xref:Microsoft.Build.BuildEngine.FileLogger> é usada para registrar em log as informações em um arquivo.  
+  
+ [!code-csharp[msbuild_BuildAProject#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_BuildAProject/CS/Program.cs#1)]
+ [!code-vb[msbuild_BuildAProject#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_BuildAProject/VB/Module1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectFinishedHandler">
+      <MemberSignature Language="C#" Value="public void ProjectFinishedHandler (object sender, Microsoft.Build.Framework.ProjectFinishedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ProjectFinishedHandler(object sender, class Microsoft.Build.Framework.ProjectFinishedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.ProjectFinishedHandler(System.Object,Microsoft.Build.Framework.ProjectFinishedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.ProjectFinishedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.ProjectFinishedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectFinished" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProjectStartedHandler">
+      <MemberSignature Language="C#" Value="public void ProjectStartedHandler (object sender, Microsoft.Build.Framework.ProjectStartedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ProjectStartedHandler(object sender, class Microsoft.Build.Framework.ProjectStartedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.ProjectStartedHandler(System.Object,Microsoft.Build.Framework.ProjectStartedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.ProjectStartedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.ProjectStartedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.ProjectStarted" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSummary">
+      <MemberSignature Language="C#" Value="public bool ShowSummary { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShowSummary" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ConsoleLogger.ShowSummary" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o agente de log exibirá um resumo de erros e avisos.</summary>
+        <value>
+          <see langword="true" />Se o agente de log exibirá um resumo de erros e avisos; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public virtual void Shutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Shutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.Shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para o agente de log e libera todos os recursos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O agente de log de console padrão não precisa liberar quaisquer recursos. Esse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipProjectStartedText">
+      <MemberSignature Language="C#" Value="public bool SkipProjectStartedText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SkipProjectStartedText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ConsoleLogger.SkipProjectStartedText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o agente de log exibirá mensagens quando novos projetos são iniciados durante a compilação.</summary>
+        <value>
+          <see langword="true" />Para exibir mensagens quando novos projetos são iniciados durante a compilação; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetFinishedHandler">
+      <MemberSignature Language="C#" Value="public void TargetFinishedHandler (object sender, Microsoft.Build.Framework.TargetFinishedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TargetFinishedHandler(object sender, class Microsoft.Build.Framework.TargetFinishedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.TargetFinishedHandler(System.Object,Microsoft.Build.Framework.TargetFinishedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.TargetFinishedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.TargetFinishedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.TargetFinished" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TargetStartedHandler">
+      <MemberSignature Language="C#" Value="public void TargetStartedHandler (object sender, Microsoft.Build.Framework.TargetStartedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TargetStartedHandler(object sender, class Microsoft.Build.Framework.TargetStartedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.TargetStartedHandler(System.Object,Microsoft.Build.Framework.TargetStartedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.TargetStartedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.TargetStartedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.TargetStarted" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskFinishedHandler">
+      <MemberSignature Language="C#" Value="public void TaskFinishedHandler (object sender, Microsoft.Build.Framework.TaskFinishedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TaskFinishedHandler(object sender, class Microsoft.Build.Framework.TaskFinishedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.TaskFinishedHandler(System.Object,Microsoft.Build.Framework.TaskFinishedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.TaskFinishedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.TaskFinishedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.TaskFinished" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskStartedHandler">
+      <MemberSignature Language="C#" Value="public void TaskStartedHandler (object sender, Microsoft.Build.Framework.TaskStartedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TaskStartedHandler(object sender, class Microsoft.Build.Framework.TaskStartedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.TaskStartedHandler(System.Object,Microsoft.Build.Framework.TaskStartedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.TaskStartedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.TaskStartedEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.TaskStarted" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verbosity">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.LoggerVerbosity Verbosity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.LoggerVerbosity Verbosity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ConsoleLogger.Verbosity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.LoggerVerbosity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> nível do agente de log.</summary>
+        <value>O <see cref="T:Microsoft.Build.Framework.LoggerVerbosity" /> nível do agente de log.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WarningHandler">
+      <MemberSignature Language="C#" Value="public void WarningHandler (object sender, Microsoft.Build.Framework.BuildWarningEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WarningHandler(object sender, class Microsoft.Build.Framework.BuildWarningEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.BuildEngine.ConsoleLogger.WarningHandler(System.Object,Microsoft.Build.Framework.BuildWarningEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Build.Framework.BuildWarningEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento.</param>
+        <param name="e">Um <see cref="T:Microsoft.Build.Framework.BuildWarningEventArgs" /> que contém os dados do evento.</param>
+        <summary>Manipula o <see cref="E:Microsoft.Build.Framework.IEventSource.WarningRaised" /> evento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteHandler">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.BuildEngine.WriteHandler WriteHandler { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.BuildEngine.WriteHandler WriteHandler" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.BuildEngine.ConsoleLogger.WriteHandler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Engine</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.BuildEngine.WriteHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:Microsoft.Build.BuildEngine.WriteHandler" /> delegar o <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</summary>
+        <value>O <see cref="T:Microsoft.Build.BuildEngine.WriteHandler" /> delegar o <see cref="T:Microsoft.Build.BuildEngine.ConsoleLogger" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

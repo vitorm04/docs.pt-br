@@ -1,0 +1,89 @@
+<Type Name="QueryBuilderMode" FullName="System.ComponentModel.Design.Data.QueryBuilderMode">
+  <TypeSignature Language="C#" Value="public enum QueryBuilderMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed QueryBuilderMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Data.QueryBuilderMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o tipo de consulta do repositório de dados que deve criar o ambiente de design.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Data.QueryBuilderMode> enumeração é usada quando você chamar o <xref:System.ComponentModel.Design.Data.IDataEnvironment.BuildQuery%2A?displayProperty=nameWithType> método para indicar o tipo de consulta desejado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Data.QueryBuilderMode Delete = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Data.QueryBuilderMode.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.QueryBuilderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A consulta que está sendo criada é uma consulta exclusão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Data.QueryBuilderMode Insert = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Data.QueryBuilderMode.Insert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.QueryBuilderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A consulta que está sendo criada é uma consulta Insert.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="Select" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Data.QueryBuilderMode Select = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Data.QueryBuilderMode.Select" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.QueryBuilderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A consulta que está sendo criada é uma consulta Select.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="Update" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.Design.Data.QueryBuilderMode Update = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.Design.Data.QueryBuilderMode.Update" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.Data.QueryBuilderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A consulta que está sendo criada é uma consulta Update.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

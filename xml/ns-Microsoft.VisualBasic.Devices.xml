@@ -1,0 +1,27 @@
+<Namespace Name="Microsoft.VisualBasic.Devices">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.VisualBasic.Devices" /> namespace contém tipos que oferecem suporte a <see langword="My" /> objetos relacionados a dispositivos no Visual Basic.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o `My` objetos relacionados a dispositivos, consulte  
+  
+-   <xref:Microsoft.VisualBasic.Devices.Computer>  
+  
+-   <xref:Microsoft.VisualBasic.Devices.Audio>  
+  
+-   <xref:Microsoft.VisualBasic.Devices.Clock>  
+  
+-   <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>  
+  
+-   <xref:Microsoft.VisualBasic.Devices.Keyboard>  
+  
+-   <xref:Microsoft.VisualBasic.Devices.Network>  
+  
+-   <xref:Microsoft.VisualBasic.Devices.Ports>  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

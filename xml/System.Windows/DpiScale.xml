@@ -1,0 +1,157 @@
+<Type Name="DpiScale" FullName="System.Windows.DpiScale">
+  <TypeSignature Language="C#" Value="public struct DpiScale" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit DpiScale extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DpiScale" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena informações de DPI das quais um <see cref="T:System.Windows.Media.Visual" /> ou <see cref="T:System.Windows.UIElement" /> é renderizado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DpiScale (double dpiScaleX, double dpiScaleY);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 dpiScaleX, float64 dpiScaleY) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.DpiScale.#ctor(System.Double,System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dpiScaleX" Type="System.Double" />
+        <Parameter Name="dpiScaleY" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="dpiScaleX">A escala DPI no eixo X.</param>
+        <param name="dpiScaleY">A escala DPI no eixo Y.</param>
+        <summary>Inicializa uma nova instância da estrutura <see cref="T:System.Windows.DpiScale" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiScaleX">
+      <MemberSignature Language="C#" Value="public double DpiScaleX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DpiScaleX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DpiScale.DpiScaleX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a escala DPI no eixo X.</summary>
+        <value>A escala DPI para o eixo X.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por exemplo, se o DPI é 120, DpiScaleX seria 1.25 (120/96).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DpiScaleY">
+      <MemberSignature Language="C#" Value="public double DpiScaleY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DpiScaleY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DpiScale.DpiScaleY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a escala DPI no Yaxis.</summary>
+        <value>A escala DPI para o eixo Y.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ DpiScaleY é sempre igual a DpiScaleX, mas ainda assim, os valores são armazenados em propriedades separadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsPerDip">
+      <MemberSignature Language="C#" Value="public double PixelsPerDip { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PixelsPerDip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DpiScale.PixelsPerDip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o PixelsPerDip em que o texto deve ser renderizado.</summary>
+        <value>O valor <see cref="P:System.Windows.DpiScale.PixelsPerDip" /> atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsPerInchX">
+      <MemberSignature Language="C#" Value="public double PixelsPerInchX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PixelsPerInchX" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DpiScale.PixelsPerInchX" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o DPI ao longo de eixo X.</summary>
+        <value>O DPI ao longo do eixo X.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DpiScale.PixelsPerInchX%2A>e <xref:System.Windows.DpiScale.PixelsPerInchY%2A> o número de pixels que são desenhadas dentro de uma polegada na tela de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelsPerInchY">
+      <MemberSignature Language="C#" Value="public double PixelsPerInchY { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PixelsPerInchY" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.DpiScale.PixelsPerInchY" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o DPI ao longo do eixo Y.</summary>
+        <value>O DPI ao longo do eixo Y.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.DpiScale.PixelsPerInchX%2A>e <xref:System.Windows.DpiScale.PixelsPerInchY%2A> o número de pixels que são desenhadas dentro de uma polegada na tela de referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

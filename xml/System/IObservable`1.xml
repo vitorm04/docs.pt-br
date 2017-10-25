@@ -1,0 +1,142 @@
+<Type Name="IObservable&lt;T&gt;" FullName="System.IObservable&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IObservable&lt;out T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IObservable`1&lt;+ T&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.IObservable`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>Covariant</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">O objeto que fornece informações de notificação.</typeparam>
+    <summary>Define um provedor para notificação por push.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IObserver%601> e <xref:System.IObservable%601> interfaces fornecem um mecanismo generalizado para notificação por push, também conhecido como o padrão de design do observador. O <xref:System.IObservable%601> interface representa a classe que envia notificações (provedor); o <xref:System.IObserver%601> interface representa a classe que recebe (o observador). `T`representa a classe que fornece as informações de notificação. Em algumas notificações por push, o <xref:System.IObserver%601> implementação e `T` pode representar o mesmo tipo.  
+  
+ O provedor deve implementar um único método, <xref:System.IObservable%601.Subscribe%2A>, que indica que um observador deseja receber notificações por push. Chamadores para o método passam uma instância do observador. O método retorna um <xref:System.IDisposable> implementação que permite que os observadores cancelar as notificações a qualquer momento antes do provedor foi interrompido enviá-los.  
+  
+ A qualquer momento determinado provedor pode ter zero, um ou vários observadores. O provedor é responsável por armazenar as referências a observadores e garantir que eles são válidos antes de enviar notificações. O <xref:System.IObservable%601> interface não fazer suposições sobre o número de observadores ou a ordem na qual as notificações são enviadas.  
+  
+ O provedor envia os seguintes três tipos de notificações para o observador chamando <xref:System.IObserver%601> métodos:  
+  
+-   Os dados atuais. O provedor pode chamar o <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType> método para passar o observador um `T` objeto com dados atuais, os dados alterados ou dados atualizados.  
+  
+-   Uma condição de erro. O provedor pode chamar o <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> método para notificar o observador que ocorreu alguma condição de erro.  
+  
+-   Não há mais dados. O provedor pode chamar o <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> método para notificar o observador que concluiu a enviar notificações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o padrão de design do observador. Define um `Location` classe que contém informações de latitude e longitude.  
+  
+ [!code-csharp[System.IObserver.Class#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iobserver.class/cs/provider.cs#5)]
+ [!code-vb[System.IObserver.Class#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iobserver.class/vb/provider.vb#5)]  
+  
+ O `LocationTracker` classe fornece a <xref:System.IObservable%601> implementação. Seu `TrackLocation` é passado um valor nulo para método `Location` objeto que contém os dados de latitude e longitude. Se o `Location` valor não é `null`, o `TrackLocation` chamadas de método de <xref:System.IObserver%601.OnNext%2A> método de cada observador.  
+  
+ [!code-csharp[System.IObserver.Class#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iobserver.class/cs/provider.cs#6)]
+ [!code-vb[System.IObserver.Class#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iobserver.class/vb/provider.vb#6)]  
+  
+ Se o `Location` valor é `null`, o `TrackLocation` método instancia um `LocationUnknownException` objeto, que é mostrado no exemplo a seguir. Depois, ele chama cada observador <xref:System.IObserver%601.OnError%2A> método e a transmite a `LocationUnknownException` objeto. Observe que `LocationUnknownException` deriva <xref:System.Exception>, mas não adiciona quaisquer novos membros.  
+  
+ [!code-csharp[System.IObserver.Class#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iobserver.class/cs/provider.cs#7)]
+ [!code-vb[System.IObserver.Class#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iobserver.class/vb/provider.vb#7)]  
+  
+ Observadores se registrar para receber notificações de um `TrackLocation` objeto chamando seu <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> método, que atribui uma referência ao objeto observador para um genérico particular <xref:System.Collections.Generic.List%601> objeto. O método retorna um `Unsubscriber` objeto, que é um <xref:System.IDisposable> implementação que permite que os observadores interromper o recebimento de notificações. O `LocationTracker` classe também inclui um `EndTransmission` método. Quando não há mais dados de local estiverem disponíveis, o método chama cada observador <xref:System.IObserver%601.OnCompleted%2A> método e, em seguida, limpa a lista interna de observadores.  
+  
+ Neste exemplo, o `LocationReporter` classe fornece a <xref:System.IObserver%601> implementação. Ele exibe informações sobre o local atual para o console. O construtor inclui um `name` parâmetro, que permite que o `LocationReporter` instância para identificar-se na sua saída de cadeia de caracteres. Ele também inclui um `Subscribe` método, que encapsula uma chamada para o provedor <xref:System.IObservable%601.Subscribe%2A> método. Isso permite que o método atribuir retornado <xref:System.IDisposable> referência a uma variável particular. O `LocationReporter` classe também inclui um `Unsubscribe` método, que chama o <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> método do objeto que é retornado pelo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> método. O código a seguir define o `LocationReporter` classe.  
+  
+ [!code-csharp[System.IObserver.Class#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iobserver.class/cs/observer.cs#8)]
+ [!code-vb[System.IObserver.Class#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iobserver.class/vb/observer.vb#8)]  
+  
+ O código a seguir cria uma instância, em seguida, o provedor e o observador.  
+  
+ [!code-csharp[System.IObserver.Class#9](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iobserver.class/cs/program.cs#9)]
+ [!code-vb[System.IObserver.Class#9](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iobserver.class/vb/module1.vb#9)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Subscribe">
+      <MemberSignature Language="C#" Value="public IDisposable Subscribe (IObserver&lt;out T&gt; observer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IDisposable Subscribe(class System.IObserver`1&lt;!T&gt; observer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IObservable`1.Subscribe(System.IObserver{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IDisposable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="observer" Type="System.IObserver&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="observer">O objeto que receberá notificações.</param>
+        <summary>Notifica o provedor que um observador deve receber notificações.</summary>
+        <returns>Uma referência a uma interface que permite que os observadores parem de receber notificações antes de o provedor terminar de enviá-los.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IObservable%601.Subscribe%2A> método deve ser chamado para registrar um observador para notificações por push. Uma implementação típica do <xref:System.IObservable%601.Subscribe%2A> método faz o seguinte:  
+  
+-   Ele armazena uma referência para o observador em um objeto de coleção, como um <xref:System.Collections.Generic.List%601> objeto.  
+  
+-   Retorna uma referência a um <xref:System.IDisposable> interface. Isso permite que os observadores cancelar a assinatura (ou seja, para interromper o recebimento de notificações) antes do provedor tem terminou de enviá-los e chamado do assinante <xref:System.IObserver%601.OnCompleted%2A> método.  
+  
+ Em determinado momento, uma instância específica de um <xref:System.IObservable%601> implementação é responsável por gerenciar todas as assinaturas e notificar todos os assinantes. A menos que a documentação para um determinado <xref:System.IObservable%601> implementação indicação contrária, observadores devem não faça suposições sobre o <xref:System.IObservable%601> implementação, como a ordem das notificações observadores vários receberá.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir ilustra o <xref:System.IObservable%601.Subscribe%2A> método para um aplicativo que relata informações de latitude e longitude. Define uma <xref:System.Collections.Generic.IList%601> objeto de coleção que armazena as referências a todos os observadores. Ele também retorna uma classe privada denominada `Unsubscriber` que implementa o <xref:System.IDisposable> interface e habilita os assinantes interromper o recebimento de notificações de eventos.  Consulte a seção exemplo de <xref:System.IObservable%601> tópico para o exemplo completo.  
+  
+ [!code-csharp[System.IObserver.Class#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.iobserver.class/cs/provider.cs#13)]
+ [!code-vb[System.IObserver.Class#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.iobserver.class/vb/provider.vb#13)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

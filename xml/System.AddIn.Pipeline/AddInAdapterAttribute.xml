@@ -1,0 +1,56 @@
+<Type Name="AddInAdapterAttribute" FullName="System.AddIn.Pipeline.AddInAdapterAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AddInAdapterAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AddInAdapterAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.AddInAdapterAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica um objeto como um segmento de adaptador do lado do suplemento do pipeline.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Hosting.AddInStore.Rebuild%2A> e <xref:System.AddIn.Hosting.AddInStore.Update%2A> métodos que mantêm o armazenamento de informações sobre segmentos de pipeline disponíveis, usam esse atributo para identificar um adaptador do lado do suplemento.  
+  
+ Esse atributo deve ser usado somente em tipos de ativar os segmentos de pipeline. Tipos que representam objetos passados entre o host e o suplemento não é necessário para este atributo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir identifica um adaptador do lado do suplemento.  
+  
+ [!code-csharp[AddInP1AddInSideAdapters#2](~/samples/snippets/csharp/VS_Snippets_CLR/AddInP1AddInSideAdapters/cs/Calc1ViewToContractAddInSideAdapter.cs#2)]
+ [!code-vb[AddInP1AddInSideAdapters#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/AddInP1AddInSideAdapters/vb/Calc1ViewToContractAddInSideAdapter.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddInAdapterAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.AddInAdapterAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.AddIn.Pipeline.AddInAdapterAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

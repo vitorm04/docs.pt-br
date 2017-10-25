@@ -1,0 +1,127 @@
+<Type Name="WorkflowInstanceExtensionManager" FullName="System.Activities.Hosting.WorkflowInstanceExtensionManager">
+  <TypeSignature Language="C#" Value="public class WorkflowInstanceExtensionManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowInstanceExtensionManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Hosting.WorkflowInstanceExtensionManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gerencia uma coleção de extensões para um <see cref="T:System.Activities.Hosting.WorkflowInstance" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowInstanceExtensionManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstanceExtensionManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Hosting.WorkflowInstanceExtensionManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual void Add (object singletonExtension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(object singletonExtension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singletonExtension" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="singletonExtension">A extensão a ser adicionada.</param>
+        <summary>Adiciona a extensão especificada para a coleção de extensões.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa sobrecarga é usada, cada instância de fluxo de trabalho que solicita esse tipo de extensão obterá a instância de extensão fornecida para este método. Se cada instância de fluxo de trabalho deve ter sua própria instância da extensão, use o outro <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add%2A> sobrecarga.  
+  
+ Se qualquer uma da <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add%2A> sobrecargas são chamadas após <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.MakeReadOnly%2A>, uma <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public virtual void Add&lt;T&gt; (Func&lt;T&gt; extensionCreationFunction) where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add&lt;class T&gt;(class System.Func`1&lt;!!T&gt; extensionCreationFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add``1(System.Func{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="extensionCreationFunction" Type="System.Func&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">O tipo de extensão para adicionar.</typeparam>
+        <param name="extensionCreationFunction">O método que cria a extensão.</param>
+        <summary>Registra um <see cref="T:System.Func`1" /> que é usado para fornecer uma instância de uma extensão quando solicitado por uma instância de fluxo de trabalho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa sobrecarga é usada, cada instância de fluxo de trabalho que solicita esse tipo de extensão receberá uma nova instância da extensão. Se desejar fazer uma extensão de singleton, use o outro <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add%2A> sobrecarga.  
+  
+ Se qualquer uma da <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add%2A> sobrecargas são chamadas após <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.MakeReadOnly%2A>, uma <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReadOnly">
+      <MemberSignature Language="C#" Value="public void MakeReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MakeReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Hosting.WorkflowInstanceExtensionManager.MakeReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca a coleção de extensões como somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando um host de fluxo de trabalho está preparado para a execução. Se qualquer uma da <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.Add%2A> sobrecargas são chamadas após <xref:System.Activities.Hosting.WorkflowInstanceExtensionManager.MakeReadOnly%2A>, uma <xref:System.InvalidOperationException> é gerada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

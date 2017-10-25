@@ -1,0 +1,208 @@
+<Type Name="FontSize" FullName="System.Web.UI.WebControls.FontSize">
+  <TypeSignature Language="C#" Value="public enum FontSize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FontSize extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.FontSize" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica os tamanhos de fonte definidos por HTML 4.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.FontSize> enumeração representa os tamanhos de fonte definidos pelo HTML 4.0. O tamanho da fonte pode ser um tamanho absoluto ou relativo.  
+  
+ Um tamanho de fonte absolutos representa um tamanho de fonte predefinidos determinado pelo navegador. Os valores possíveis para um tamanho de fonte absolutos são XXSmall, XSmall, pequeno, médio, grande, XLarge e XXLarge.  
+  
+ Um tamanho de fonte relativo representa um fonte um tamanho maior ou menor que o tamanho de fonte do elemento pai. Os valores possíveis para um tamanho de fonte relativo são menor e maior.  
+  
+> [!NOTE]
+>  Alguns navegadores não reconhecem os maiores tamanhos de fonte e pequeno. Verifique com seu navegador para compatibilidade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsUnit">
+      <MemberSignature Language="C#" Value="AsUnit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize AsUnit = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.AsUnit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é especificado por um valor de ponto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Large">
+      <MemberSignature Language="C#" Value="Large" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize Large = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.Large" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é dois tamanhos maior que o tamanho da fonte base.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Larger">
+      <MemberSignature Language="C#" Value="Larger" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize Larger = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.Larger" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é um tamanho maior que o elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Medium">
+      <MemberSignature Language="C#" Value="Medium" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize Medium = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.Medium" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é um tamanho maior que o tamanho da fonte padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSet">
+      <MemberSignature Language="C#" Value="NotSet" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize NotSet = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.NotSet" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte não está definido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Small">
+      <MemberSignature Language="C#" Value="Small" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize Small = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.Small" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte base determinado pelo navegador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Smaller">
+      <MemberSignature Language="C#" Value="Smaller" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize Smaller = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.Smaller" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é um tamanho menor que o elemento pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XLarge">
+      <MemberSignature Language="C#" Value="XLarge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize XLarge = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.XLarge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é três tamanhos maior que o tamanho da fonte base.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XSmall">
+      <MemberSignature Language="C#" Value="XSmall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize XSmall = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.XSmall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é um tamanho menor que o tamanho da fonte base.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XXLarge">
+      <MemberSignature Language="C#" Value="XXLarge" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize XXLarge = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.XXLarge" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é quatro tamanhos maior que o tamanho da fonte base.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XXSmall">
+      <MemberSignature Language="C#" Value="XXSmall" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.FontSize XXSmall = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.FontSize.XXSmall" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.FontSize</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tamanho da fonte é dois tamanhos menor que o tamanho da fonte base.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="Microsoft.VisualBasic.ApplicationServices">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.VisualBasic.ApplicationServices" /> namespace contém tipos que oferecem suporte a modelo de aplicativo do Visual Basic e fornecem acesso a informações do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelo de aplicativo, consulte [visão geral do modelo de aplicativo do Visual Basic](~/docs/visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,71 @@
+<Type Name="BuildProviderAppliesToAttribute" FullName="System.Web.Compilation.BuildProviderAppliesToAttribute">
+  <TypeSignature Language="C#" Value="public sealed class BuildProviderAppliesToAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BuildProviderAppliesToAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Compilation.BuildProviderAppliesToAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um atributo que especifica o escopo em que um provedor de compilação será aplicado quando um recurso está localizado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Compilation.BuildProvider> classe analisar e gerar código durante a compilação de um recurso com uma extensão de arquivo específico. O <xref:System.Web.Compilation.BuildProviderAppliesToAttribute> atributo define o escopo de local para o qual o <xref:System.Web.Compilation.BuildProvider> objeto será chamado.  
+  
+ Definindo o <xref:System.Web.Compilation.BuildProviderAppliesToAttribute> atributo, você pode limitar um <xref:System.Web.Compilation.BuildProvider> objeto para determinados diretórios reservados do ASP.NET, como \App_Code.  
+  
+ Se você não aplicar uma <xref:System.Web.Compilation.BuildProviderAppliesToAttribute> de atributo para um <xref:System.Web.Compilation.BuildProvider> classe, o padrão é <xref:System.Web.Compilation.BuildProviderAppliesTo.All>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BuildProviderAppliesToAttribute (System.Web.Compilation.BuildProviderAppliesTo appliesTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.Compilation.BuildProviderAppliesTo appliesTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Compilation.BuildProviderAppliesToAttribute.#ctor(System.Web.Compilation.BuildProviderAppliesTo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appliesTo" Type="System.Web.Compilation.BuildProviderAppliesTo" />
+      </Parameters>
+      <Docs>
+        <param name="appliesTo">Um dos valores de <see cref="T:System.Web.Compilation.BuildProviderAppliesTo" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Compilation.BuildProviderAppliesToAttribute" /> classe aplica-se ao local do recurso especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppliesTo">
+      <MemberSignature Language="C#" Value="public System.Web.Compilation.BuildProviderAppliesTo AppliesTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.Compilation.BuildProviderAppliesTo AppliesTo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Compilation.BuildProviderAppliesToAttribute.AppliesTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Compilation.BuildProviderAppliesTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica onde especificado <see cref="T:System.Web.Compilation.BuildProvider" /> classe será aplicada quando um recurso com a extensão apropriada foi encontrado.</summary>
+        <value>Um <see cref="T:System.Web.Compilation.BuildProviderAppliesTo" /> valor que indica onde especificado <see cref="T:System.Web.Compilation.BuildProvider" /> classe será aplicada quando um recurso com a extensão apropriada foi encontrado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

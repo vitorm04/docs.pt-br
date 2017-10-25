@@ -1,0 +1,52 @@
+<Type Name="ConfigurationDuplexChannelFactory&lt;TChannel&gt;" FullName="System.ServiceModel.Configuration.ConfigurationDuplexChannelFactory&lt;TChannel&gt;">
+  <TypeSignature Language="C#" Value="public sealed class ConfigurationDuplexChannelFactory&lt;TChannel&gt; : System.ServiceModel.DuplexChannelFactory&lt;TChannel&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfigurationDuplexChannelFactory`1&lt;TChannel&gt; extends System.ServiceModel.DuplexChannelFactory`1&lt;!TChannel&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Configuration.ConfigurationDuplexChannelFactory`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TChannel" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.ServiceModel.DuplexChannelFactory&lt;TChannel&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TChannel">TChannel</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TChannel">O tipo de canal de comunicação para o elemento de ponto de extremidade é criado.</typeparam>
+    <summary>Fornece a funcionalidade para criar e gerenciar canais duplex de tipos diferentes que são usados para enviar e receber mensagens e para pontos de extremidade de serviço.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationDuplexChannelFactory (object callbackObject, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress, System.Configuration.Configuration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object callbackObject, string endpointConfigurationName, class System.ServiceModel.EndpointAddress remoteAddress, class System.Configuration.Configuration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Configuration.ConfigurationDuplexChannelFactory`1.#ctor(System.Object,System.String,System.ServiceModel.EndpointAddress,System.Configuration.Configuration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callbackObject" Type="System.Object" />
+        <Parameter Name="endpointConfigurationName" Type="System.String" />
+        <Parameter Name="remoteAddress" Type="System.ServiceModel.EndpointAddress" />
+        <Parameter Name="configuration" Type="System.Configuration.Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="callbackObject">O processo que responde a uma mensagem do cliente.</param>
+        <param name="endpointConfigurationName">A propriedade de nome em um elemento de configuração de ponto de extremidade.</param>
+        <param name="remoteAddress">O endereço IP de um ponto de extremidade de destino em uma sessão de cliente ou servidor.</param>
+        <param name="configuration">As configurações que definem as informações apresentadas no elemento de ponto de extremidade.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.ServiceModel.Configuration.ConfigurationDuplexChannelFactory`1" /> classe com o objeto de retorno de chamada especificada, nome de configuração de ponto de extremidade, endereço remoto e as definições de configuração.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="configuration" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

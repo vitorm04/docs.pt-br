@@ -1,0 +1,875 @@
+<Type Name="PagerSettings" FullName="System.Web.UI.WebControls.PagerSettings">
+  <TypeSignature Language="C#" Value="public sealed class PagerSettings : System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PagerSettings extends System.Object implements class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.PagerSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.ComponentModel.ExpandableObjectConverter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa as propriedades dos controles de paginação em um controle que ofereça suporte à paginação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Controles que oferecem suporte à paginação (como o <xref:System.Web.UI.WebControls.GridView>, <xref:System.Web.UI.WebControls.DetailsView>, e <xref:System.Web.UI.WebControls.FormView> controles) pode exibir um conjunto de controles chamado *pager* que permite que o usuário navegue pelas páginas dentro do controle. O <xref:System.Web.UI.WebControls.PagerSettings> por esses controles, a classe é usada para representar as propriedades de pager. Em geral, o <xref:System.Web.UI.WebControls.PagerSettings> objeto é armazenado no `PagerSettings` propriedade do controle. Você pode personalizar o pager, definindo as propriedades do <xref:System.Web.UI.WebControls.PagerSettings> objeto.  
+  
+ Pager dá suporte a vários modos de exibição diferentes. Para especificar o modo de exibição de pager, defina o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> propriedade. A tabela a seguir descreve os modos diferentes.  
+  
+|Modo|Descrição|  
+|----------|-----------------|  
+|<xref:System.Web.UI.WebControls.PagerButtons.NextPrevious>|Botões de página anterior e próxima página.|  
+|<xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast>|Página anterior, próxima página, primeira página e última - botões da página.|  
+|<xref:System.Web.UI.WebControls.PagerButtons.Numeric>|Numeradas botões de link para acessar páginas diretamente.|  
+|<xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast>|Botões de link numerados, link primeiro e último link.|  
+  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPrevious>, <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast>, ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor que você pode personalizar o texto dos botões não numérico, definindo as propriedades mostradas na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A>|Texto do botão de primeira página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A>|Texto do botão página anterior.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A>|Texto do botão de próxima página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A>|Texto do botão de última página.|  
+  
+ Como alternativa, também é possível exibir imagens para os botões não numérico, definindo as propriedades conforme mostrado na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de primeira página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de página anterior.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de próxima página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de última página.|  
+  
+> [!NOTE]
+>  Quando a propriedade image é definida, a propriedade de texto correspondente atua como o texto alternativo para a imagem. Por exemplo, quando o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> propriedade for definida, o texto que é especificado pelo <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade é exibida como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.Numeric> ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor, você pode especificar o número de botões de página para exibir no pager, definindo o <xref:System.Web.UI.WebControls.PagerSettings.PageButtonCount%2A> propriedade.  
+  
+ Pager pode ser exibido na parte superior, inferior, ou tanto o superior e inferior de um controle. Para especificar a posição de pager, defina o <xref:System.Web.UI.WebControls.PagerSettings.Position%2A> propriedade. Para mostrar ou ocultar o pager, use o <xref:System.Web.UI.WebControls.PagerSettings.Visible%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings> que está contido no objeto o <xref:System.Web.UI.WebControls.GridView.PagerSettings%2A> propriedade para personalizar o texto dos botões são exibidos na linha de pager de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsText/CS/PagerSettingsTextcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsText/VB/PagerSettingsTextvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PagerSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagerSettings.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.PagerSettings" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagerSettings.%23ctor%2A> construtor para criar uma nova instância do <xref:System.Web.UI.WebControls.PagerSettings> classe.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.PagerSettings.%23ctor%2A> construtor geralmente é usado por desenvolvedores de controle ao fornecer suporte a paginação em um controle personalizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstPageImageUrl">
+      <MemberSignature Language="C#" Value="public string FirstPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FirstPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para o botão de primeira página.</summary>
+        <value>A URL para uma imagem a ser exibida para o botão de primeira página. O padrão é uma cadeia de caracteres vazia (""), que indica que o <see cref="P:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl" /> não está definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> propriedade para especificar a URL para uma imagem a ser exibida para o botão de primeira página.  
+  
+> [!NOTE]
+>  Como alternativa, você pode exibir o texto do botão de primeira página, definindo o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> propriedade para exibir uma imagem do botão de primeira página na linha de pager de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsImages#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsImages/CS/PagerSettingsImagescs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsImages#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsImages/VB/PagerSettingsImagesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstPageText">
+      <MemberSignature Language="C#" Value="public string FirstPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FirstPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.FirstPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;lt;&amp;lt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser exibido no botão de primeira página.</summary>
+        <value>O texto a ser exibido no botão de primeira página. O padrão é <c>"&amp;lt;&amp; lt;" </c>, que renderiza como <c>"&lt;&lt;"</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade para especificar o texto a ser exibido no botão de primeira página.  
+  
+> [!NOTE]
+>  Como alternativa, você pode exibir uma imagem do botão de primeira página, definindo o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade para personalizar o texto que é exibido para o botão de primeira página da linha de pager em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsText/CS/PagerSettingsTextcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsText/VB/PagerSettingsTextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastPageImageUrl">
+      <MemberSignature Language="C#" Value="public string LastPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida no botão de última página.</summary>
+        <value>A URL para uma imagem a ser exibida para o botão de última página. O padrão é uma cadeia de caracteres vazia (""), que indica que o <see cref="P:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl" /> não está definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A> propriedade para especificar a URL para uma imagem a ser exibida para o botão de última página.  
+  
+> [!NOTE]
+>  Como alternativa, você pode simplesmente exibir texto no botão de última página, definindo o <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A> propriedade para exibir uma imagem do botão de última página na linha de pager de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsImages#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsImages/CS/PagerSettingsImagescs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsImages#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsImages/VB/PagerSettingsImagesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastPageText">
+      <MemberSignature Language="C#" Value="public string LastPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LastPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.LastPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;gt;&amp;gt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser exibido no botão de última página.</summary>
+        <value>O texto a ser exibido no botão de última página. O padrão é <c>"&amp;gt;&amp; gt;" </c>, que renderiza como <c>"&gt;&gt;"</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedade para especificar o texto a ser exibido no botão de última página.  
+  
+> [!NOTE]
+>  Como alternativa, você pode exibir uma imagem do botão de última página, definindo o <xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A> propriedade para personalizar o texto que é exibido para o botão de última página da linha de pager em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsText/CS/PagerSettingsTextcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsText/VB/PagerSettingsTextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.PagerButtons Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.PagerButtons Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PagerButtons</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de exibição dos controles de paginação em um controle que dá suporte à paginação.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.PagerButtons" />. O padrão é <see langword="PagerButtons.Numeric" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os controles que oferecem suporte à paginação fornecem vários modos de exibição os controles de paginação. Use o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> propriedade para especificar o modo. A tabela a seguir descreve os diferentes modos de controles de paginação.  
+  
+|Modo|Descrição|  
+|----------|-----------------|  
+|<xref:System.Web.UI.WebControls.PagerButtons.NextPrevious>|Botões de página anterior e próxima página.|  
+|<xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast>|Botões de página anterior, próxima página, primeira página e última página.|  
+|<xref:System.Web.UI.WebControls.PagerButtons.Numeric>|Numeradas botões de link para acessar páginas diretamente.|  
+|<xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast>|Botões numerados e link primeiro e último link.|  
+  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPrevious>, <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast>, ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor, você pode especificar o texto personalizado para os botões não numérico, definindo as propriedades mostradas na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A>|Texto do botão de primeira página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A>|Texto do botão página anterior.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A>|Texto do botão de próxima página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.LastPageText%2A>|Texto do botão de última página.|  
+  
+ Como alternativa, também é possível exibir imagens para os botões não numérico, definindo as propriedades mostradas na tabela a seguir.  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de primeira página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de página anterior.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de próxima página.|  
+|<xref:System.Web.UI.WebControls.PagerSettings.LastPageImageUrl%2A>|A URL para uma imagem a ser exibida para o botão de última página.|  
+  
+> [!NOTE]
+>  Quando a propriedade image é definida, a propriedade de texto correspondente atua como o texto alternativo para a imagem. Por exemplo, quando o <xref:System.Web.UI.WebControls.PagerSettings.FirstPageImageUrl%2A> propriedade for definida, o texto que é especificado pelo <xref:System.Web.UI.WebControls.PagerSettings.FirstPageText%2A> propriedade é exibida como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> propriedade para especificar que o pager linha para um <xref:System.Web.UI.WebControls.GridView> controle deve exibir botões numéricos.  
+  
+ [!code-aspx-csharp[PagerSettingsNumeric#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsNumeric/CS/PagerSettingsNumericcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsNumeric#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsNumeric/VB/PagerSettingsNumericvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Web.UI.WebControls.PagerSettings.Mode" /> é definido com um valor que não é um dos valores <see cref="T:System.Web.UI.WebControls.PagerButtons" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPageImageUrl">
+      <MemberSignature Language="C#" Value="public string NextPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para o botão de próxima página.</summary>
+        <value>A URL para uma imagem a ser exibida para o botão de próxima página. O padrão é uma cadeia de caracteres vazia (""), que indica que o <see cref="P:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl" /> não está definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NextPrevious> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A> propriedade para especificar a URL para uma imagem a ser exibida para o botão de próxima página.  
+  
+> [!NOTE]
+>  Como alternativa, você pode simplesmente exibir texto do botão de próxima página, definindo o <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A> propriedade para exibir uma imagem do botão de próxima página na linha de pager de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsImages#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsImages/CS/PagerSettingsImagescs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsImages#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsImages/VB/PagerSettingsImagesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPageText">
+      <MemberSignature Language="C#" Value="public string NextPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.NextPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;gt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser exibido no botão de próxima página.</summary>
+        <value>O texto a ser exibido no botão de próxima página. O padrão é <c>"&amp;gt;" </c>, que renderiza como <c>"&gt;"</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NextPrevious> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedade para especificar o texto a ser exibido no botão de próxima página.  
+  
+> [!NOTE]
+>  Como alternativa, você pode exibir uma imagem do botão de próxima página, definindo o <xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.NextPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.NextPageText%2A> propriedade para personalizar o texto que é exibido para o botão de próxima página da linha de pager em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsText/CS/PagerSettingsTextcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsText/VB/PagerSettingsTextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageButtonCount">
+      <MemberSignature Language="C#" Value="public int PageButtonCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageButtonCount" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.PageButtonCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(10)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de botões de página a serem exibidos no pager quando a propriedade <see cref="P:System.Web.UI.WebControls.PagerSettings.Mode" /> está definida com o valor <see cref="F:System.Web.UI.WebControls.PagerButtons.Numeric" /> ou <see cref="F:System.Web.UI.WebControls.PagerButtons.NumericFirstLast" />.</summary>
+        <value>O número de botões de página a serem exibidos no pager. O padrão é 10.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.Numeric> ou <xref:System.Web.UI.WebControls.PagerButtons.NumericFirstLast> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.PageButtonCount%2A> propriedade para especificar o número de botões de página para exibir no pager.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.PageButtonCount%2A> propriedade para exibir os cinco botões de página por vez na linha de pager de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsNumeric#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsNumeric/CS/PagerSettingsNumericcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsNumeric#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsNumeric/VB/PagerSettingsNumericvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Web.UI.WebControls.PagerSettings.PageButtonCount" /> é definido como um valor menor que 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.PagerPosition Position { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.PagerPosition Position" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.PagerPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica o local em que o pager é exibido.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.PagerPosition" />. O padrão é <see cref="F:System.Web.UI.WebControls.PagerPosition.Bottom" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagerSettings.Position%2A> propriedade para especificar o local no qual exibir o pager. A tabela a seguir descreve as posições diferentes.  
+  
+|Posição|Local|  
+|--------------|--------------|  
+|<xref:System.Web.UI.WebControls.PagerPosition.Bottom>|A parte inferior do controle.|  
+|<xref:System.Web.UI.WebControls.PagerPosition.Top>|Na parte superior do controle.|  
+|<xref:System.Web.UI.WebControls.PagerPosition.TopAndBottom>|Na parte superior e para inferior do controle.|  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.Position%2A> propriedade para exibir a linha de pager na parte inferior de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsText/CS/PagerSettingsTextcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsText/VB/PagerSettingsTextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Web.UI.WebControls.PagerSettings.Position" /> é definido com um valor que não é um dos valores <see cref="T:System.Web.UI.WebControls.PagerPosition" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPageImageUrl">
+      <MemberSignature Language="C#" Value="public string PreviousPageImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreviousPageImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL para uma imagem a ser exibida para o botão de página anterior.</summary>
+        <value>A URL para uma imagem a ser exibida para o botão de página anterior. O padrão é uma cadeia de caracteres vazia (""), que indica que o <see cref="P:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl" /> não está definido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NextPrevious> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A> propriedade para especificar a URL para uma imagem a ser exibida para o botão de página anterior.  
+  
+> [!NOTE]
+>  Como alternativa, você pode exibir o texto do botão página anterior, definindo o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A> propriedade para exibir uma imagem do botão página anterior na linha de pager de um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsImages#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsImages/CS/PagerSettingsImagescs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsImages#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsImages/VB/PagerSettingsImagesvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPageText">
+      <MemberSignature Language="C#" Value="public string PreviousPageText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreviousPageText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.PreviousPageText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("&amp;lt;")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto a ser exibido no botão de página anterior.</summary>
+        <value>O texto a ser exibido no botão de página anterior. O padrão é <c>"&amp;lt;" </c>, que renderiza como <c>"&lt;"</c>.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.PagerSettings.Mode%2A> está definida como o <xref:System.Web.UI.WebControls.PagerButtons.NextPreviousFirstLast> ou <xref:System.Web.UI.WebControls.PagerButtons.NextPrevious> valor, use o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedade para especificar o texto a ser exibido no botão de página anterior.  
+  
+> [!NOTE]
+>  Como alternativa, você pode exibir uma imagem do botão página anterior, definindo o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A> propriedade em vez do <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedade. Se o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageImageUrl%2A> e <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedades são definidas, a imagem é exibida com o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedade atuando como o texto alternativo para a imagem. Em navegadores que oferecem suporte a dicas de ferramenta, esse texto também é exibido como uma dica de ferramenta do botão correspondente.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.PreviousPageText%2A> propriedade para personalizar o texto que é exibido para o botão de página anterior da linha de pager em um <xref:System.Web.UI.WebControls.GridView> controle.  
+  
+ [!code-aspx-csharp[PagerSettingsText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsText/CS/PagerSettingsTextcs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsText/VB/PagerSettingsTextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.PagerSettings.PropertyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma propriedade de um <see cref="T:System.Web.UI.WebControls.PagerSettings" /> valores de alterações do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PagerSettings.PropertyChanged> é gerado sempre que uma propriedade de um <xref:System.Web.UI.WebControls.PagerSettings> valores de alterações do objeto. O <xref:System.Web.UI.WebControls.PagerSettings.PropertyChanged> evento normalmente é usado por controles de associação de dados que oferecem suporte à paginação para reassociar os dados para o controle ao alterar as configurações de pager.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle de servidor para acompanhar suas alterações de estado de exibição.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição da fonte de dados está marcado para salvar seu estado. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando o <xref:System.Web.UI.WebControls.PagerSettings> instância é convertida para o <xref:System.Web.UI.IStateManager> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagerSettings.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um objeto que representa o estado de <see cref="T:System.Web.UI.WebControls.PagerSettings" />.</param>
+        <summary>Carrega o estado de exibição salvo anteriormente do <see cref="T:System.Web.UI.WebControls.PagerSettings" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagerSettings.System%23Web%23UI%23IStateManager%23LoadViewState%2A> método para carregar o estado de exibição salvo anteriormente do <xref:System.Web.UI.WebControls.PagerSettings> objeto.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.PagerSettings.System%23Web%23UI%23IStateManager%23LoadViewState%2A> método é privado e não pode ser chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagerSettings.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva o estado de exibição atual do <see cref="T:System.Web.UI.WebControls.PagerSettings" /> objeto.</summary>
+        <returns>Um objeto que contém o estado salvo do <see cref="T:System.Web.UI.WebControls.PagerSettings" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PagerSettings.System%23Web%23UI%23IStateManager%23SaveViewState%2A> é um método auxiliar que é usado pelo <xref:System.Web.UI.WebControls.PagerSettings> classe para salvar o estado do objeto.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.PagerSettings.System%23Web%23UI%23IStateManager%23SaveViewState%2A> método é privado e não pode ser chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagerSettings.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca o ponto de partida no qual começar a controlar e salvar o estado de exibição altera para o <see cref="T:System.Web.UI.WebControls.PagerSettings" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PagerSettings.System%23Web%23UI%23IStateManager%23TrackViewState%2A> método é substituído para marcar o ponto de partida no qual começar a rastreamento e salvar alterações para o <xref:System.Web.UI.WebControls.PagerSettings> objeto como parte do estado de exibição para o objeto.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.PagerSettings.System%23Web%23UI%23IStateManager%23TrackViewState%2A> método é privado e não pode ser chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.PagerSettings.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera a representação de cadeia de caracteres de um <see cref="T:System.Web.UI.WebControls.PagerSettings" /> objeto.</summary>
+        <returns>Uma cadeia de caracteres vazia ("").</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.PagerSettings.ToString%2A> método é usado para recuperar uma representação de cadeia de caracteres de um <xref:System.Web.UI.WebControls.PagerSettings> objeto. O <xref:System.Web.UI.WebControls.PagerSettings.ToString%2A> método foi substituído para sempre retornar uma cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.PagerSettings.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.NotifyParentProperty(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os controles de paginação são exibidos em um controle que dá suporte à paginação.</summary>
+        <value>
+          <see langword="true" /> para exibir o pager; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.PagerSettings.Visible%2A> propriedade para especificar se os controles de paginação são exibidos em um controle que ofereça suporte à paginação. Para ocultar os controles de paginação, defina a <xref:System.Web.UI.WebControls.PagerSettings.Visible%2A> propriedade `false`.  
+  
+ O valor dessa propriedade é armazenado em estado de exibição.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.PagerSettings.Visible%2A> propriedade para ocultar o pager de linha quando um <xref:System.Web.UI.WebControls.GridView> controle está no modo de edição.  
+  
+ [!code-aspx-csharp[PagerSettingsVisible#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PagerSettingsVisible/CS/PagerSettingsVisiblecs.aspx#1)]
+ [!code-aspx-vb[PagerSettingsVisible#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PagerSettingsVisible/VB/PagerSettingsVisiblevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

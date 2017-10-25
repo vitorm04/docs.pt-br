@@ -1,0 +1,384 @@
+<Type Name="PropertyMetadata" FullName="System.Windows.PropertyMetadata">
+  <TypeSignature Language="C#" Value="public class PropertyMetadata" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertyMetadata extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.PropertyMetadata" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define alguns aspectos do comportamento de uma propriedade de dependência conforme ela é aplicada a um tipo específico, incluindo as condições com as quais ela foi registrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Metadados de propriedade podem ser definidos e usados durante o registro de propriedade de dependência ao chamar o <xref:System.Windows.DependencyProperty.Register%2A> método (ou variações para propriedades anexadas ou propriedades de dependência somente leitura), ou após o registro de proprietário original ao chamar o <xref:System.Windows.DependencyPropertyKey.OverrideMetadata%2A> método. <xref:System.Windows.DependencyProperty.AddOwner%2A>também usa os metadados de propriedade.  
+  
+ Essa classe é uma classe base concreta que pode ser usada em cada uma dessas chamadas. No entanto, é muito comum para especificar metadados usando uma das classes derivadas como <xref:System.Windows.FrameworkPropertyMetadata>. Mais detalhados de metadados executado como valores de propriedade booliana, que são úteis para detectar ou habilitar alguns comportamentos de layout e de sistema de propriedade que só são implementados no suportam a essas classes derivadas de [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] nível de framework.  
+  
+ Várias propriedades dessa classe são leitura / gravação para o modelo de objeto, mas só pode ser gravado antes da instância que está sendo usada em uma operação de sistema de propriedade, como <xref:System.Windows.DependencyProperty.Register%2A> ou <xref:System.Windows.DependencyPropertyKey.OverrideMetadata%2A>. Cada uma dessas propriedades também poderia ter sido definido por construtor, mas são expostos para que <xref:System.Windows.PropertyMetadata.Merge%2A> implementações de método podem defini-las.  
+  
+<a name="xamlTextUsage_PropertyMetadata"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Este tipo e os membros desse tipo não são usados normalmente em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyMetadata ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyMetadata.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.PropertyMetadata" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyMetadata (object defaultValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyMetadata.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão para especificar para uma propriedade de dependência, geralmente é fornecida como um valor de um tipo específico.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.PropertyMetadata" /> classe com um valor padrão especificado para a propriedade de dependência que serão aplicados a esses metadados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido para `defaultValue` devem corresponder ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação (incompatibilidade gerará uma exceção de tempo de execução).  
+  
+ Embora seja o padrão de acordo com o construtor sem parâmetros, uma `defaultValue` de <xref:System.Windows.DependencyProperty.UnsetValue> não pode ser especificado. Tentar fazer isso gerará uma exceção.  
+  
+   
+  
+## Examples  
+ [!code-csharp[PropertyMetadataAPIs#Initpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initpm)]  
+[!code-csharp[PropertyMetadataAPIs#PMCtor1param](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#pmctor1param)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" />não é possível definir o valor <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyMetadata (System.Windows.PropertyChangedCallback propertyChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.PropertyChangedCallback propertyChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyMetadata.#ctor(System.Windows.PropertyChangedCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="propertyChangedCallback">Referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.PropertyMetadata" /> com a referência da implementação <see cref="T:System.Windows.PropertyChangedCallback" /> especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-csharp[PropertyMetadataAPIs#Initpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initpm)]  
+[!code-csharp[PropertyMetadataAPIs#PMCtor1paramcallback](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#pmctor1paramcallback)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyMetadata (object defaultValue, System.Windows.PropertyChangedCallback propertyChangedCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, class System.Windows.PropertyChangedCallback propertyChangedCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyMetadata.#ctor(System.Object,System.Windows.PropertyChangedCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente fornecido como um valor de um tipo específico.</param>
+        <param name="propertyChangedCallback">Referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.PropertyMetadata" /> com o valor padrão especificado e a referência de implementação <see cref="T:System.Windows.PropertyChangedCallback" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo do valor fornecido `defaultValue` devem corresponder ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação (incompatibilidade gerará uma exceção de tempo de execução).  
+  
+ Embora seja o padrão de acordo com o construtor sem parâmetros, uma `defaultValue` de <xref:System.Windows.DependencyProperty.UnsetValue> não pode ser especificado. Tentar fazer isso gerará uma exceção.  
+  
+   
+  
+## Examples  
+ [!code-csharp[PropertyMetadataAPIs#Initpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initpm)]  
+[!code-csharp[PropertyMetadataAPIs#PMCtor2param](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#pmctor2param)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" />não é possível definir o valor <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyMetadata (object defaultValue, System.Windows.PropertyChangedCallback propertyChangedCallback, System.Windows.CoerceValueCallback coerceValueCallback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object defaultValue, class System.Windows.PropertyChangedCallback propertyChangedCallback, class System.Windows.CoerceValueCallback coerceValueCallback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyMetadata.#ctor(System.Object,System.Windows.PropertyChangedCallback,System.Windows.CoerceValueCallback)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="propertyChangedCallback" Type="System.Windows.PropertyChangedCallback" />
+        <Parameter Name="coerceValueCallback" Type="System.Windows.CoerceValueCallback" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValue">O valor padrão da propriedade de dependência, geralmente fornecido como um valor de um tipo específico.</param>
+        <param name="propertyChangedCallback">Referência a uma implementação do manipulador que será chamada pelo sistema de propriedades sempre que o valor efetivo da propriedade for alterado.</param>
+        <param name="coerceValueCallback">Uma referência a uma implementação do manipulador que será chamada sempre que o sistema de propriedades chamar <see cref="M:System.Windows.DependencyObject.CoerceValue(System.Windows.DependencyProperty)" /> nessa propriedade.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.PropertyMetadata" /> com o valor padrão especificado e retornos de chamadas especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser especificar um <xref:System.Windows.CoerceValueCallback> , mas não um <xref:System.Windows.PropertyChangedCallback>, você pode passar `null` para o `propertyChangedCallback` parâmetro.  
+  
+ O tipo do valor fornecido para `defaultValue` devem corresponder ou ser relacionadas ao tipo especificado no registro original da propriedade de dependência que serão aplicados a esses metadados. Incompatibilidade entre o tipo de valor padrão de metadados e o tipo da propriedade de dependência que está sendo aplicada ao pode ser difícil de depurar, porque a incompatibilidade não podem ser detectada durante a compilação (incompatibilidade gerará uma exceção de tempo de execução).  
+  
+ Embora seja o padrão de acordo com o construtor sem parâmetros, uma `defaultValue` de <xref:System.Windows.DependencyProperty.UnsetValue> não pode ser especificado. Tentar fazer isso gerará uma exceção.  
+  
+   
+  
+## Examples  
+ [!code-csharp[PropertyMetadataAPIs#Initpm](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#initpm)]  
+[!code-csharp[PropertyMetadataAPIs#PMCtor3param](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#pmctor3param)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="defaultValue" />não é possível definir o valor <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CoerceValueCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.CoerceValueCallback CoerceValueCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.CoerceValueCallback CoerceValueCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PropertyMetadata.CoerceValueCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.CoerceValueCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para uma implementação de <see cref="T:System.Windows.CoerceValueCallback" /> especificada nesses metadados.</summary>
+        <value>Uma referência de implantação de <see cref="T:System.Windows.CoerceValueCallback" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os retornos de chamada nos metadados de propriedade não são normalmente públicos membros no tipo de conteúdo, o valor dessa propriedade não é importante para a maioria dos cenários que consomem apenas os metadados da propriedade de dependência existente. Um motivo para essa propriedade é exposta é para que as subclasses de metadados podem executar sua lógica de mesclagem desejado se especificam os metadados de base e os metadados substituindo/adicionando um <xref:System.Windows.CoerceValueCallback>. No entanto, o padrão de mesclagem lógica para uma <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> substitui a anterior.  
+  
+ <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>é definido no modelo de objeto como leitura-gravação. Este é o caso <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> podem ser ajustadas após a inicialização do <xref:System.Windows.PropertyMetadata> objeto propriamente dito. No entanto, quando os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e as propriedades são consideradas imutáveis. Tentativa de definir <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> quando <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não é possível definir uma propriedade de metadados após sua aplicação a uma operação de propriedade de dependência.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PropertyMetadata.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor padrão da propriedade de dependência.</summary>
+        <value>O valor padrão da propriedade. O valor padrão em um <see cref="T:System.Windows.PropertyMetadata" /> instância criada com o construtor sem parâmetro será <see cref="F:System.Windows.DependencyProperty.UnsetValue" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.PropertyMetadata.DefaultValue%2A>é definido no modelo de objeto como leitura-gravação. Este é o caso <xref:System.Windows.PropertyMetadata.DefaultValue%2A> podem ser ajustadas após a inicialização do <xref:System.Windows.PropertyMetadata> objeto propriamente dito. No entanto, quando os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e as propriedades são consideradas imutáveis. Tentativa de definir <xref:System.Windows.PropertyMetadata.DefaultValue%2A> quando <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+ Embora seja o padrão de acordo com o construtor sem parâmetros, uma `defaultValue` de <xref:System.Windows.DependencyProperty.UnsetValue> não pode ser definida usando o <xref:System.Windows.PropertyMetadata.DefaultValue%2A> ou o construtor. Tentar fazer isso gerará uma exceção.  
+  
+<a name="xamlTextUsage_PropertyChangedCallback"></a>   
+## <a name="xaml-text-usage"></a>Uso de texto XAML  
+ Membros desse tipo não são usados normalmente em [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)].  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Não é possível definir o valor <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> depois de criado.</exception>
+        <exception cref="T:System.InvalidOperationException">Não é possível definir uma propriedade de metadados após sua aplicação a uma operação de propriedade de dependência.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSealed">
+      <MemberSignature Language="C#" Value="protected bool IsSealed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSealed" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PropertyMetadata.IsSealed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que determina se os metadados foi aplicado a uma propriedade de alguma forma, resultando em um estado imutável dessa instância de metadados.</summary>
+        <value>
+          <see langword="true" />Se a instância de metadados é imutável; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Várias propriedades de <xref:System.Windows.PropertyMetadata>, como <xref:System.Windows.PropertyMetadata.DefaultValue%2A>, são definidos no modelo de objeto como leitura-gravação. Isso é para essas propriedades podem ser ajustadas após a inicialização do <xref:System.Windows.PropertyMetadata> objeto propriamente dito. No entanto, uma vez que os metadados é aplicado a uma propriedade de dependência como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e as propriedades são consideradas imutáveis. No momento de uma dessas chamadas, <xref:System.Windows.PropertyMetadata.OnApply%2A> é chamado, e o valor dessa propriedade é definido como `true`.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir verifica <xref:System.Windows.PropertyMetadata.IsSealed%2A> antes de uma operação de definição de uma propriedade de metadados personalizados.  
+  
+ [!code-csharp[PropertyMetadataAPIs#MergeImpl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#mergeimpl)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Merge">
+      <MemberSignature Language="C#" Value="protected virtual void Merge (System.Windows.PropertyMetadata baseMetadata, System.Windows.DependencyProperty dp);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Merge(class System.Windows.PropertyMetadata baseMetadata, class System.Windows.DependencyProperty dp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyMetadata.Merge(System.Windows.PropertyMetadata,System.Windows.DependencyProperty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseMetadata" Type="System.Windows.PropertyMetadata" />
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+      </Parameters>
+      <Docs>
+        <param name="baseMetadata">Os metadados de base para mesclar com valores dessa instância.</param>
+        <param name="dp">A propriedade de dependência para que esses metadados está sendo aplicado.</param>
+        <summary>Mescla esses metadados com os metadados de base.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado internamente quando metadados está sendo substituído (<xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa uma mesclagem para um tipo de metadados personalizados que adiciona uma propriedade adicional para os metadados da propriedade.  
+  
+ [!code-csharp[PropertyMetadataAPIs#MergeImpl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMetadataAPIs/CSharp/Class1.cs#mergeimpl)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implementações que derivam de classe <see cref="T:System.Windows.PropertyMetadata" /> devem substituir este método para quaisquer propriedades de metadados que tem adicionado em suas implementações. Por exemplo, sua implementação pode ter adicionado um novo valor de enumeração sinalizadora e o <see cref="M:System.Windows.PropertyMetadata.Merge(System.Windows.PropertyMetadata,System.Windows.DependencyProperty)" /> implementação poderá combinar esses sinalizadores corretamente.  
+  
+ Sempre chamar a implementação base antes de seu código de implementação, porque a implementação base cuida da mesclagem de todas as propriedades já definidas no <see cref="T:System.Windows.PropertyMetadata" /> tipo.  
+  
+ O comportamento exato da mesclagem fica a seu critério. Você pode optar por ter valores combinados, reverter ao valor de base se os metadados derivado foram deixados no padrão, ou muitos outros comportamentos com base nos tipos de propriedades que você adicionou à sua classe de metadados específico e seus significados.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApply">
+      <MemberSignature Language="C#" Value="protected virtual void OnApply (System.Windows.DependencyProperty dp, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnApply(class System.Windows.DependencyProperty dp, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.PropertyMetadata.OnApply(System.Windows.DependencyProperty,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dp" Type="System.Windows.DependencyProperty" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="dp">A propriedade de dependência para a qual os metadados foi aplicado.</param>
+        <param name="targetType">O tipo associado com esses metadados quando se trata de um tipo específico metadados. Quando se trata de metadados padrão, esse valor é uma referência nula.</param>
+        <summary>Chamado quando esses metadados foi aplicado a uma propriedade, que indica se os metadados está sendo lacrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As subclasses devem garantir que qualquer Mutabilidade da estrutura de dados de um <xref:System.Windows.PropertyMetadata> subclasse deve ser marcada como imutável uma vez <xref:System.Windows.PropertyMetadata.OnApply%2A> é chamado. Isso será chamado depois que os metadados é aplicado a uma operação de sistema de propriedade (registrar, proprietário de adicionar, substituir os metadados).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChangedCallback">
+      <MemberSignature Language="C#" Value="public System.Windows.PropertyChangedCallback PropertyChangedCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.PropertyChangedCallback PropertyChangedCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.PropertyMetadata.PropertyChangedCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.PropertyChangedCallback</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma referência para uma implementação de <see cref="T:System.Windows.PropertyChangedCallback" /> especificada nesses metadados.</summary>
+        <value>Uma referência de implantação de <see cref="T:System.Windows.PropertyChangedCallback" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os retornos de chamada nos metadados de propriedade não são membros públicos normalmente na definição de tipo, o valor dessa propriedade não é importante para a maioria dos cenários que consomem apenas os metadados da propriedade de dependência existente. Um motivo para essa propriedade é exposta é para que as classes de metadados podem executar sua lógica de mesclagem desejado se especificam os metadados de base e os metadados substituindo/adicionando um <xref:System.Windows.PropertyChangedCallback>. É a lógica de mesclagem padrão para manter todos os <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> implementações em uma tabela e chamada deles, com retornos de chamada estabelecidos pela classe mais profundo na hierarquia que executa primeiro.  
+  
+ <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>é definido no modelo de objeto como leitura-gravação. Este é o caso <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> podem ser ajustadas após a inicialização do <xref:System.Windows.PropertyMetadata> objeto propriamente dito. No entanto, quando os metadados são consumidos como parte de uma chamada para <xref:System.Windows.DependencyProperty.Register%2A>, <xref:System.Windows.DependencyProperty.AddOwner%2A>, ou <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>, o sistema de propriedade será lacrar essa instância de metadados e as propriedades são consideradas imutáveis. Tentativa de definir <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> quando <xref:System.Windows.PropertyMetadata.IsSealed%2A> é `true` nesses metadados instância gerará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não é possível definir uma propriedade de metadados após sua aplicação a uma operação de propriedade de dependência.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,621 @@
+<Type Name="CounterSample" FullName="System.Diagnostics.CounterSample">
+  <TypeSignature Language="C#" Value="public struct CounterSample" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit CounterSample extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.CounterSample" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma estrutura que contém os dados brutos de um contador de desempenho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra o uso da <xref:System.Diagnostics.CounterSample> classe para exibir dados de um contador de desempenho.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterSample (long rawValue, long baseValue, long counterFrequency, long systemFrequency, long timeStamp, long timeStamp100nSec, System.Diagnostics.PerformanceCounterType counterType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 rawValue, int64 baseValue, int64 counterFrequency, int64 systemFrequency, int64 timeStamp, int64 timeStamp100nSec, valuetype System.Diagnostics.PerformanceCounterType counterType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Diagnostics.PerformanceCounterType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawValue" Type="System.Int64" />
+        <Parameter Name="baseValue" Type="System.Int64" />
+        <Parameter Name="counterFrequency" Type="System.Int64" />
+        <Parameter Name="systemFrequency" Type="System.Int64" />
+        <Parameter Name="timeStamp" Type="System.Int64" />
+        <Parameter Name="timeStamp100nSec" Type="System.Int64" />
+        <Parameter Name="counterType" Type="System.Diagnostics.PerformanceCounterType" />
+      </Parameters>
+      <Docs>
+        <param name="rawValue">O valor numérico associado com a amostra do contador de desempenho.</param>
+        <param name="baseValue">Um base, opcional valor bruto para o contador, use apenas se o exemplo é baseado em vários contadores.</param>
+        <param name="counterFrequency">A frequência com que o contador é lido.</param>
+        <param name="systemFrequency">A frequência com que o sistema lê do contador.</param>
+        <param name="timeStamp">O carimbo de hora brutos.</param>
+        <param name="timeStamp100nSec">O carimbo de hora bruto, de alta fidelidade.</param>
+        <param name="counterType">Um <see cref="T:System.Diagnostics.PerformanceCounterType" /> objeto que indica o tipo do contador para o qual este exemplo é um instantâneo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.CounterSample" /> estrutura e conjuntos de <see cref="P:System.Diagnostics.CounterSample.CounterTimeStamp" /> propriedade como 0 (zero).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para obter um exemplo de inicial do contador de desempenho. O Monitor do sistema fornece valores para esses parâmetros automaticamente quando você chamar o <xref:System.Diagnostics.PerformanceCounter.NextSample%2A> método pela primeira vez.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CounterSample (long rawValue, long baseValue, long counterFrequency, long systemFrequency, long timeStamp, long timeStamp100nSec, System.Diagnostics.PerformanceCounterType counterType, long counterTimeStamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 rawValue, int64 baseValue, int64 counterFrequency, int64 systemFrequency, int64 timeStamp, int64 timeStamp100nSec, valuetype System.Diagnostics.PerformanceCounterType counterType, int64 counterTimeStamp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Diagnostics.PerformanceCounterType,System.Int64)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawValue" Type="System.Int64" />
+        <Parameter Name="baseValue" Type="System.Int64" />
+        <Parameter Name="counterFrequency" Type="System.Int64" />
+        <Parameter Name="systemFrequency" Type="System.Int64" />
+        <Parameter Name="timeStamp" Type="System.Int64" />
+        <Parameter Name="timeStamp100nSec" Type="System.Int64" />
+        <Parameter Name="counterType" Type="System.Diagnostics.PerformanceCounterType" />
+        <Parameter Name="counterTimeStamp" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="rawValue">O valor numérico associado com a amostra do contador de desempenho.</param>
+        <param name="baseValue">Um base, opcional valor bruto para o contador, use apenas se o exemplo é baseado em vários contadores.</param>
+        <param name="counterFrequency">A frequência com que o contador é lido.</param>
+        <param name="systemFrequency">A frequência com que o sistema lê do contador.</param>
+        <param name="timeStamp">O carimbo de hora brutos.</param>
+        <param name="timeStamp100nSec">O carimbo de hora bruto, de alta fidelidade.</param>
+        <param name="counterType">Um <see cref="T:System.Diagnostics.PerformanceCounterType" /> objeto que indica o tipo do contador para o qual este exemplo é um instantâneo.</param>
+        <param name="counterTimeStamp">A hora em que o exemplo foi realizado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.CounterSample" /> estrutura e conjuntos de <see cref="P:System.Diagnostics.CounterSample.CounterTimeStamp" /> propriedade para o valor que é transmitido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar amostras depois que você já tomou uma amostra inicial do contador de desempenho. O Monitor do sistema fornece valores para esses parâmetros automaticamente quando você chamar o <xref:System.Diagnostics.PerformanceCounter.NextSample%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como inicializar um novo <xref:System.Diagnostics.CounterSample> estrutura, passando valores para o `rawValue`, `baseValue`, `counterFrequency`, `systemFrequency`, `timeStamp`, `timeStamp100nSec`, `counterType`e `counterTimeStamp`parâmetros. Depois de criar o <xref:System.Diagnostics.CounterSample> estrutura, o exemplo exibe os valores de propriedade para o <xref:System.Diagnostics.CounterSample> na janela do console.  
+  
+ [!code-cpp[CounterSample_Ctor_2#1](~/samples/snippets/cpp/VS_Snippets_CLR/CounterSample_Ctor_2/CPP/countersample_ctor_2.cpp#1)]
+ [!code-csharp[CounterSample_Ctor_2#1](~/samples/snippets/csharp/VS_Snippets_CLR/CounterSample_Ctor_2/CS/countersample_ctor_2.cs#1)]
+ [!code-vb[CounterSample_Ctor_2#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterSample_Ctor_2/VB/countersample_ctor_2.vb#1)]  
+[!code-cpp[CounterSample_Ctor_2#2](~/samples/snippets/cpp/VS_Snippets_CLR/CounterSample_Ctor_2/CPP/countersample_ctor_2.cpp#2)]
+[!code-csharp[CounterSample_Ctor_2#2](~/samples/snippets/csharp/VS_Snippets_CLR/CounterSample_Ctor_2/CS/countersample_ctor_2.cs#2)]
+[!code-vb[CounterSample_Ctor_2#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CounterSample_Ctor_2/VB/countersample_ctor_2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseValue">
+      <MemberSignature Language="C#" Value="public long BaseValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BaseValue" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.BaseValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor bruto opcional, base para o contador.</summary>
+        <value>O base valor bruto, que é usado somente se o exemplo é baseado em vários contadores.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor de <xref:System.Diagnostics.CounterSample.BaseValue%2A> propriedade de um contador.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Calculate">
+      <MemberSignature Language="C#" Value="public static float Calculate (System.Diagnostics.CounterSample counterSample);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Calculate(valuetype System.Diagnostics.CounterSample counterSample) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.Calculate(System.Diagnostics.CounterSample)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterSample" Type="System.Diagnostics.CounterSample" />
+      </Parameters>
+      <Docs>
+        <param name="counterSample">O <see cref="T:System.Diagnostics.CounterSample" /> estrutura a ser usada como um ponto de base para calcular dados de desempenho.</param>
+        <summary>Calcula os dados de desempenho do contador, usando um ponto único de exemplo. Esse método é geralmente usado para tipos de contador de desempenho não calculadas.</summary>
+        <returns>O valor calculado de desempenho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Calculate">
+      <MemberSignature Language="C#" Value="public static float Calculate (System.Diagnostics.CounterSample counterSample, System.Diagnostics.CounterSample nextCounterSample);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Calculate(valuetype System.Diagnostics.CounterSample counterSample, valuetype System.Diagnostics.CounterSample nextCounterSample) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.Calculate(System.Diagnostics.CounterSample,System.Diagnostics.CounterSample)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="counterSample" Type="System.Diagnostics.CounterSample" />
+        <Parameter Name="nextCounterSample" Type="System.Diagnostics.CounterSample" />
+      </Parameters>
+      <Docs>
+        <param name="counterSample">O <see cref="T:System.Diagnostics.CounterSample" /> estrutura a ser usada como um ponto de base para calcular dados de desempenho.</param>
+        <param name="nextCounterSample">O <see cref="T:System.Diagnostics.CounterSample" /> estrutura para usar como um ponto final para calcular dados de desempenho.</param>
+        <summary>Calcula os dados de desempenho do contador, usando dois pontos de exemplo. Esse método é geralmente usado para tipos de contador de desempenho calculado, como médias.</summary>
+        <returns>O valor calculado de desempenho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterFrequency">
+      <MemberSignature Language="C#" Value="public long CounterFrequency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CounterFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.CounterFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a frequência do contador não processado.</summary>
+        <value>A frequência com que o contador é lido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor de <xref:System.Diagnostics.CounterSample.CounterFrequency%2A> propriedade de um contador.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterTimeStamp">
+      <MemberSignature Language="C#" Value="public long CounterTimeStamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CounterTimeStamp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.CounterTimeStamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o carimbo de hora do contador.</summary>
+        <value>A hora em que o exemplo foi realizado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor de <xref:System.Diagnostics.CounterSample.CounterTimeStamp%2A> propriedade de um contador.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CounterType">
+      <MemberSignature Language="C#" Value="public System.Diagnostics.PerformanceCounterType CounterType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Diagnostics.PerformanceCounterType CounterType" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.CounterType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de contador de desempenho.</summary>
+        <value>Um <see cref="T:System.Diagnostics.PerformanceCounterType" /> objeto que indica o tipo do contador para o qual este exemplo é um instantâneo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.CounterSample Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype System.Diagnostics.CounterSample Empty" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.CounterSample.Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.CounterSample</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define uma amostra do contador de desempenho vazio e não inicializado do tipo <see langword="NumberOfItems32" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Diagnostics.CounterSample other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Diagnostics.CounterSample other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.Equals(System.Diagnostics.CounterSample)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sample" Type="System.Diagnostics.CounterSample" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>Indica se o especificado <see cref="T:System.Diagnostics.CounterSample" /> estrutura é igual à atual <see cref="T:System.Diagnostics.CounterSample" /> estrutura.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="other" /> é igual à instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Diagnostics.CounterSample> estruturas são iguais se elas tiverem valores de propriedade idênticas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="o" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>Indica se a estrutura especificada é uma <see cref="T:System.Diagnostics.CounterSample" /> estrutura e é idêntica à atual <see cref="T:System.Diagnostics.CounterSample" /> estrutura.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="obj" /> é um <see cref="T:System.Diagnostics.CounterSample" /> estrutura e é idêntica à instância atual; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Diagnostics.CounterSample> estruturas são iguais se elas tiverem valores de propriedade idênticas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para a amostra do contador atual.</summary>
+        <returns>Um código hash para a amostra do contador atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Diagnostics.CounterSample obj1, System.Diagnostics.CounterSample obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Diagnostics.CounterSample obj1, valuetype System.Diagnostics.CounterSample obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.op_Equality(System.Diagnostics.CounterSample,System.Diagnostics.CounterSample)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Diagnostics.CounterSample" />
+        <Parameter Name="b" Type="System.Diagnostics.CounterSample" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">To be added.</param>
+        <param name="obj2">To be added.</param>
+        <summary>Retorna um valor que indica se dois <see cref="T:System.Diagnostics.CounterSample" /> estruturas são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="a" /> e <paramref name="b" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Diagnostics.CounterSample> estruturas são iguais se elas tiverem valores de propriedade idênticas.  
+  
+ O método equivalente para esse operador é <xref:System.Diagnostics.CounterSample.Equals%28System.Diagnostics.CounterSample%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Diagnostics.CounterSample obj1, System.Diagnostics.CounterSample obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Diagnostics.CounterSample obj1, valuetype System.Diagnostics.CounterSample obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.CounterSample.op_Inequality(System.Diagnostics.CounterSample,System.Diagnostics.CounterSample)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Diagnostics.CounterSample" />
+        <Parameter Name="b" Type="System.Diagnostics.CounterSample" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">To be added.</param>
+        <param name="obj2">To be added.</param>
+        <summary>Retorna um valor que indica se dois <see cref="T:System.Diagnostics.CounterSample" /> estruturas não são iguais.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="a" /> e <paramref name="b" /> não forem iguais; caso contrário,<see langword="false" /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois <xref:System.Diagnostics.CounterSample> estruturas não são iguais se qualquer um dos seus valores de propriedade são diferentes.  
+  
+ O método equivalente para esse operador é <xref:System.Diagnostics.CounterSample.Equals%28System.Diagnostics.CounterSample%29?displayProperty=nameWithType>.]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawValue">
+      <MemberSignature Language="C#" Value="public long RawValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RawValue" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.RawValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor bruto do contador.</summary>
+        <value>O valor numérico que está associado com a amostra do contador de desempenho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor de <xref:System.Diagnostics.CounterSample.RawValue%2A> propriedade de um contador.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemFrequency">
+      <MemberSignature Language="C#" Value="public long SystemFrequency { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 SystemFrequency" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.SystemFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a frequência bruta do sistema.</summary>
+        <value>A frequência com que o sistema lê do contador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor da <xref:System.Diagnostics.CounterSample.SystemFrequency%2A> propriedade de um contador.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeStamp">
+      <MemberSignature Language="C#" Value="public long TimeStamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimeStamp" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.TimeStamp" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o carimbo de hora brutos.</summary>
+        <value>O carimbo de hora do sistema.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor de <xref:System.Diagnostics.CounterSample.TimeStamp%2A> propriedade de um contador.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeStamp100nSec">
+      <MemberSignature Language="C#" Value="public long TimeStamp100nSec { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimeStamp100nSec" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.CounterSample.TimeStamp100nSec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.PerformanceCounter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o carimbo de hora bruto, de alta fidelidade.</summary>
+        <value>O sistema carimbo de hora, representado em milissegundos 0,1.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir exibe o valor de <xref:System.Diagnostics.CounterSample.TimeStamp100nSec%2A> propriedade de um contador.  
+  
+ [!code-cpp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/cpp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CPP/averagecount32.cpp#1)]
+ [!code-csharp[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/csharp/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/CS/averagecount32.cs#1)]
+ [!code-vb[PerformanceCounterType.AverageCounter64#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/PerformanceCounterType.AverageCounter64/VB/averagecount32.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

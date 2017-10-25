@@ -1,0 +1,367 @@
+<Type Name="SecurityContext" FullName="System.Security.SecurityContext">
+  <TypeSignature Language="C#" Value="public sealed class SecurityContext : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityContext extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.SecurityContext" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Encapsula e propaga todos os dados relacionados à segurança para contextos de execução transferidos entre threads. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Security.SecurityContext> objeto captura todas as informações relacionadas à segurança para um segmento lógico, incluindo as informações contidas no <xref:System.Security.Principal.WindowsIdentity> e <xref:System.Threading.CompressedStack> objetos.  Essa configuração permite que a identidade do Windows e os elementos de segurança na pilha sejam propagadas automaticamente quando o <xref:System.Security.SecurityContext> é copiado e transferidos entre threads assíncronas.  
+  
+> [!NOTE]
+>  O common language runtime (CLR) está ciente das operações executadas usando somente código gerenciado, não de representação executada fora do código gerenciado, como por meio da plataforma chamar código não gerenciado ou por meio de chamadas diretas para funções do Win32 de representação. Somente gerenciado <xref:System.Security.Principal.WindowsIdentity> objetos possam fluir entre pontos assíncronos, a menos que o `alwaysFlowImpersonationPolicy` elemento foi definido como `true` (`<alwaysFlowImpersonationPolicy enabled="true"/>`). Definindo o `alwaysFlowImpersonationPolicy` elemento `true` Especifica que a identidade do Windows sempre flui pelos pontos assíncronos, independentemente de como a representação foi executada. Para obter mais informações sobre o fluxo não gerenciado a representação pelos pontos assíncronos, consulte [ &lt;alwaysFlowImpersonationPolicy&gt; elemento](~/docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
+  
+ O <xref:System.Security.SecurityContext> é parte do maior <xref:System.Threading.ExecutionContext> e fluxos ou migra quando o <xref:System.Threading.ExecutionContext> fluxos ou migra.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public static System.Security.SecurityContext Capture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Security.SecurityContext Capture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.Capture" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Captura o contexto de segurança para o thread atual.</summary>
+        <returns>O contexto de segurança para o thread atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto de segurança capturada pode ser aplicado a outro thread. O <xref:System.Security.SecurityContext> consiste de <xref:System.Threading.CompressedStack> e <xref:System.Security.Principal.WindowsIdentity> para a execução do thread.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCopy">
+      <MemberSignature Language="C#" Value="public System.Security.SecurityContext CreateCopy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.SecurityContext CreateCopy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.CreateCopy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia do contexto de segurança atual.</summary>
+        <returns>O contexto de segurança para o thread atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto atual deve ter sido adquirido por meio de uma captura ou de uma operação de cópia. Esse método é útil para aplicar um capturada <xref:System.Security.SecurityContext> em vários threads.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O contexto de segurança atual foi usado anteriormente, foi empacotado em domínios de aplicativo ou não foi adquirido por meio de <see cref="M:System.Security.SecurityContext.Capture" /> método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Security.SecurityContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chamar `Dispose` quando tiver terminado de usar o <xref:System.Security.SecurityContext>. O `Dispose` método deixa o <xref:System.Security.SecurityContext> em um estado inutilizável. Depois de chamar `Dispose`, você deve liberar todas as referências para o <xref:System.Security.SecurityContext> para o coletor de lixo possa recuperar a memória que o <xref:System.Security.SecurityContext> estava ocupando.  
+  
+ Para obter mais informações, consulte [limpeza de recursos não gerenciados](~/docs/standard/garbage-collection/unmanaged.md) e [implementar um método Dispose](~/docs/standard/garbage-collection/implementing-dispose.md).  
+  
+> [!NOTE]
+>  Sempre chamar `Dispose` antes de liberar sua última referência para o <xref:System.Security.SecurityContext>. Caso contrário, os recursos que está usando não serão liberados até que o coletor de lixo chame o <xref:System.Security.SecurityContext> do objeto `Finalize` método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFlowSuppressed">
+      <MemberSignature Language="C#" Value="public static bool IsFlowSuppressed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsFlowSuppressed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.IsFlowSuppressed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o fluxo do contexto de segurança foram suprimido.</summary>
+        <returns>
+          <see langword="true" />Se o fluxo foi suprimido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.SecurityContext.IsFlowSuppressed%2A> método é usado pelos componentes de infraestrutura para determinar se é preciso transferir a <xref:System.Security.SecurityContext> informações durante as operações assíncronas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWindowsIdentityFlowSuppressed">
+      <MemberSignature Language="C#" Value="public static bool IsWindowsIdentityFlowSuppressed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsWindowsIdentityFlowSuppressed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.IsWindowsIdentityFlowSuppressed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o fluxo da porção de identidade de Windows do contexto de segurança atual foi suprimido.</summary>
+        <returns>
+          <see langword="true" />Se o fluxo foi suprimido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.SecurityContext.IsWindowsIdentityFlowSuppressed%2A> método é usado pelos componentes de infraestrutura para determinar se deseja transferir as informações de identidade do Windows quando o <xref:System.Security.SecurityContext> migra durante operações assíncronas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RestoreFlow">
+      <MemberSignature Language="C#" Value="public static void RestoreFlow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RestoreFlow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.RestoreFlow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Restaura o fluxo do contexto de segurança entre threads assíncronas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.SecurityContext.RestoreFlow%2A> método é chamado pelo <xref:System.Threading.AsyncFlowControl.Undo%2A?displayProperty=nameWithType> método para reverter o efeito de um anterior <xref:System.Security.SecurityContext.SuppressFlow%2A> chamada de método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O contexto de segurança é <see langword="null" /> ou uma cadeia de caracteres vazia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Run">
+      <MemberSignature Language="C#" Value="public static void Run (System.Security.SecurityContext securityContext, System.Threading.ContextCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Run(class System.Security.SecurityContext securityContext, class System.Threading.ContextCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.Run(System.Security.SecurityContext,System.Threading.ContextCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="securityContext" Type="System.Security.SecurityContext" />
+        <Parameter Name="callback" Type="System.Threading.ContextCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="securityContext">O contexto de segurança para definir.</param>
+        <param name="callback">O delegado que representa o método a ser executado no contexto de segurança especificado.</param>
+        <param name="state">O objeto para passar para o método de retorno de chamada.</param>
+        <summary>Executa o método especificado no contexto de segurança especificado no thread atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto de segurança para o segmento atual é retornado para seu estado anterior quando a chamada do método está concluída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.SecurityContext.Run%2A> método para executar um método em um contexto de segurança especificado.  
+  
+ [!code-csharp[System.Security.SecurityContext.Run#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.SecurityContext.Run/CS/form1.cs#1)]
+ [!code-vb[System.Security.SecurityContext.Run#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.SecurityContext.Run/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="securityContext" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="securityContext" />não foi adquirido por meio de uma operação de captura.  
+  
+ -ou-  
+  
+ <paramref name="securityContext" />já foi usado como argumento para um <see cref="M:System.Security.SecurityContext.Run(System.Security.SecurityContext,System.Threading.ContextCallback,System.Object)" /> chamada de método.</exception>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressFlow">
+      <MemberSignature Language="C#" Value="public static System.Threading.AsyncFlowControl SuppressFlow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.AsyncFlowControl SuppressFlow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.SuppressFlow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.AsyncFlowControl</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Suprime o fluxo do contexto de segurança entre threads assíncronas.</summary>
+        <returns>Uma estrutura <see cref="T:System.Threading.AsyncFlowControl" /> para restaurar o fluxo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para suprimir o fluxo de <xref:System.Security.SecurityContext> informações sobre o thread atual para operações assíncronas.  
+  
+ O common language runtime (CLR) só está ciente das operações de representação executadas usando código gerenciado. O CLR não tem conhecimento de representação executada fora do código gerenciado, como a plataforma invoca para código não gerenciado que faz a representação, ou por meio de chamadas a funções do Win32. A identidade de fluxo nos pontos de assíncronas, você deve usar o gerenciado <xref:System.Security.Principal.WindowsIdentity> e <xref:System.Security.Principal.WindowsImpersonationContext> métodos.  
+  
+ Use o <xref:System.Threading.AsyncFlowControl.Undo%2A> método retornado <xref:System.Threading.AsyncFlowControl> estrutura para retornar o <xref:System.Security.SecurityContext> objeto para seu estado anterior.  
+  
+ Esse método é protegido com uma <xref:System.Security.Permissions.SecurityAction?displayProperty=nameWithType> para <xref:System.Security.Permissions.SecurityPermissionFlag?displayProperty=nameWithType> permissão. Um componente totalmente confiável pode chamar esse método para suprimir o fluxo do <xref:System.Security.SecurityContext> informações durante chamadas assíncronas. Quando o fluxo é suprimido, a <xref:System.Security.SecurityContext.Capture%2A> método retornará `null`.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressFlowWindowsIdentity">
+      <MemberSignature Language="C#" Value="public static System.Threading.AsyncFlowControl SuppressFlowWindowsIdentity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Threading.AsyncFlowControl SuppressFlowWindowsIdentity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.SecurityContext.SuppressFlowWindowsIdentity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.AsyncFlowControl</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Suprime o fluxo da porção de identidade de Windows do contexto de segurança atual entre threads assíncronas.</summary>
+        <returns>Uma estrutura para restaurar o fluxo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para suprimir o fluxo da identidade do Windows quando o <xref:System.Security.SecurityContext> migra entre threads assíncronas.  
+  
+ Use o <xref:System.Threading.AsyncFlowControl.Undo%2A> método retornado <xref:System.Threading.AsyncFlowControl> estrutura para retornar o <xref:System.Security.SecurityContext> objeto para seu estado anterior.  
+  
+> [!NOTE]
+>  O common language runtime (CLR) está ciente das operações executadas usando somente código gerenciado, não de representação executada fora do código gerenciado, como por meio da plataforma chamar código não gerenciado ou por meio de chamadas diretas para funções do Win32 de representação. Somente gerenciado <xref:System.Security.Principal.WindowsIdentity> objetos possam fluir entre pontos assíncronos, a menos que o `alwaysFlowImpersonationPolicy` elemento foi definido como `true` (`<alwaysFlowImpersonationPolicy enabled="true"/>`). Definindo o `alwaysFlowImpersonationPolicy` elemento `true` Especifica que a identidade do Windows sempre flui pelos pontos assíncronos, independentemente de como a representação foi executada. Para obter mais informações sobre o fluxo não gerenciado a representação pelos pontos assíncronos, consulte [ \<alwaysFlowImpersonationPolicy > elemento](~/docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

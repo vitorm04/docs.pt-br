@@ -1,0 +1,471 @@
+<Type Name="IUIService" FullName="System.Windows.Forms.Design.IUIService">
+  <TypeSignature Language="C#" Value="public interface IUIService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUIService" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.IUIService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("06A9C74B-5E32-4561-BE73-381B37869F4F")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite a interação com a interface do usuário do objeto de ambiente de desenvolvimento que está hospedando o designer.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.Design.IUIService>pode exibir mensagens de erro, mostrar caixas de diálogo e obter propriedades do ambiente do host, como a fonte de caixas de diálogo e esquemas de cores, por meio de <xref:System.Windows.Forms.Design.IUIService.Styles%2A> propriedade de dicionário.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um designer que fornece os comandos de menu verbo do designer que chamam métodos do <xref:System.Windows.Forms.Design.IUIService>. Para usar o exemplo, compile o código de exemplo em um assembly e adicionar uma referência ao assembly em um aplicativo Windows Forms. Se você estiver usando [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], o `IUIServiceExampleControl` é adicionado automaticamente para o **caixa de ferramentas**. Adicionar uma instância do `IUIServiceExampleControl` para um <xref:System.Windows.Forms.Form>. Para acessar os comandos de verbo do designer que invocam <xref:System.Windows.Forms.Design.IUIService> métodos, com o botão direito na superfície do controle ou clique na marca inteligente do controle e selecione um item no painel de marca inteligente.  
+  
+ [!code-cpp[IUIServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#1)]
+ [!code-csharp[IUIServiceExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#1)]
+ [!code-vb[IUIServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanShowComponentEditor">
+      <MemberSignature Language="C#" Value="public bool CanShowComponentEditor (object component);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanShowComponentEditor(object component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.CanShowComponentEditor(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para verificar se há suporte para exibir um <see cref="T:System.Windows.Forms.Design.ComponentEditorForm" />.</param>
+        <summary>Indica se o componente pode exibir um <see cref="T:System.Windows.Forms.Design.ComponentEditorForm" />.</summary>
+        <returns>
+          <see langword="true" />Se o componente especificado pode exibir um formulário de editor de componente; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Editores de componente podem exibir um formulário de editor do componente que é semelhante a uma página de propriedades de modelo de objeto de componente (COM).  
+  
+ Este método verifica para determinar se o componente especificado tem um <xref:System.ComponentModel.ComponentEditor> que pode exibir um <xref:System.Windows.Forms.Design.ComponentEditorForm>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDialogOwnerWindow">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.IWin32Window GetDialogOwnerWindow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.IWin32Window GetDialogOwnerWindow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.GetDialogOwnerWindow" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.IWin32Window</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a janela que deve ser usada como o proprietário quando mostrar caixas de diálogo.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.IWin32Window" /> que indica que a janela proprietária qualquer filho caixas de diálogo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas caixas de diálogo são geradas para um aplicativo proprietário e não são visíveis na lista de tarefas. Este método retorna um <xref:System.Windows.Forms.IWin32Window> que indica a janela que deve ser o proprietário para caixas de diálogo desse tipo são gerados de um ambiente de desenvolvimento integrado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUIDirty">
+      <MemberSignature Language="C#" Value="public void SetUIDirty ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetUIDirty() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.SetUIDirty" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define um sinalizador que indica que a interface do usuário foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método indica que a interface do usuário foi alterada e deve ser atualizado. É importante indicar a necessidade de uma atualização sempre que o status de uma barra de ferramentas ou menu do item é alterado. A maioria dos ambientes de desenvolvimento armazenar em cache o status desses elementos para velocidade e precisam saber quando eles precisam ser atualizados. Esse método é chamado, por exemplo, depois de objetos selecionados no modo de exibição designer para habilitar o recortar e copiar itens de menu.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowComponentEditor">
+      <MemberSignature Language="C#" Value="public bool ShowComponentEditor (object component, System.Windows.Forms.IWin32Window parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShowComponentEditor(object component, class System.Windows.Forms.IWin32Window parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowComponentEditor(System.Object,System.Windows.Forms.IWin32Window)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.Object" />
+        <Parameter Name="parent" Type="System.Windows.Forms.IWin32Window" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente para o qual exibir um <see cref="T:System.Windows.Forms.Design.ComponentEditorForm" />.</param>
+        <param name="parent">O <see cref="T:System.Windows.Forms.IWin32Window" /> para o pai de todas as caixas de diálogo para.</param>
+        <summary>Tenta exibir um <see cref="T:System.Windows.Forms.Design.ComponentEditorForm" /> para um componente.</summary>
+        <returns>
+          <see langword="true" />Se a tentativa for bem-sucedida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.Design.ComponentEditorForm> é semelhante a uma página de propriedades de modelo de objeto de componente (COM).  
+  
+ Se o componente não oferece suporte para editores de componente, um <xref:System.ArgumentException> é gerada. Para evitar isso, certifique-se de chamar <xref:System.Windows.Forms.Design.IUIService.CanShowComponentEditor%2A> primeiro.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O componente não oferece suporte para editores de componente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDialog">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowDialog (System.Windows.Forms.Form form);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.DialogResult ShowDialog(class System.Windows.Forms.Form form) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowDialog(System.Windows.Forms.Form)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="form" Type="System.Windows.Forms.Form" />
+      </Parameters>
+      <Docs>
+        <param name="form">O <see cref="T:System.Windows.Forms.Form" /> a ser exibido.</param>
+        <summary>Tenta exibir o formulário especificado na caixa de diálogo.</summary>
+        <returns>Uma da <see cref="T:System.Windows.Forms.DialogResult" /> valores indicando o código de resultado retornado pela caixa de diálogo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir tenta obter uma instância de <xref:System.Windows.Forms.Design.IUIService> classe e invocar o serviço <xref:System.Windows.Forms.Design.IUIService.ShowDialog%2A> método.  
+  
+ [!code-cpp[IUIServiceExample#4](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#4)]
+ [!code-csharp[IUIServiceExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#4)]
+ [!code-vb[IUIServiceExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowError">
+      <MemberSignature Language="C#" Value="public void ShowError (Exception ex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowError(class System.Exception ex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowError(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ex" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="ex">O <see cref="T:System.Exception" /> a ser exibido.</param>
+        <summary>Exibe as informações sobre a exceção e a exceção especificada em uma caixa de mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que a exibição da caixa de mensagem corretamente integrada com o ambiente de desenvolvimento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowError">
+      <MemberSignature Language="C#" Value="public void ShowError (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowError(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro para exibir.</param>
+        <summary>Exibe a mensagem de erro especificada em uma caixa de mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que a exibição da caixa de mensagem corretamente integrada com o ambiente de desenvolvimento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowError">
+      <MemberSignature Language="C#" Value="public void ShowError (Exception ex, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowError(class System.Exception ex, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowError(System.Exception,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ex" Type="System.Exception" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ex">O <see cref="T:System.Exception" /> a ser exibido.</param>
+        <param name="message">Uma mensagem para exibir que fornece informações sobre a exceção.</param>
+        <summary>Exibe as informações sobre a exceção e a exceção especificada em uma caixa de mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que a exibição da caixa de mensagem corretamente integrada com o ambiente de desenvolvimento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir tenta obter uma instância de <xref:System.Windows.Forms.Design.IUIService> e invocar o serviço <xref:System.Windows.Forms.Design.IUIService.ShowError%2A> método.  
+  
+ [!code-cpp[IUIServiceExample#3](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#3)]
+ [!code-csharp[IUIServiceExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#3)]
+ [!code-vb[IUIServiceExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMessage">
+      <MemberSignature Language="C#" Value="public void ShowMessage (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowMessage(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowMessage(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser exibida</param>
+        <summary>Exibe a mensagem especificada em uma caixa de mensagem.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método garante que a exibição da caixa de mensagem corretamente é integrada com o ambiente de desenvolvimento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.Design.IUIService.ShowMessage%2A> método para exibir uma caixa de mensagem.  
+  
+ [!code-cpp[IUIServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#2)]
+ [!code-csharp[IUIServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#2)]
+ [!code-vb[IUIServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMessage">
+      <MemberSignature Language="C#" Value="public void ShowMessage (string message, string caption);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowMessage(string message, string caption) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowMessage(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser exibida.</param>
+        <param name="caption">A legenda da caixa de mensagem.</param>
+        <summary>Exibe a mensagem especificada em uma caixa de mensagem com a legenda especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método garante que a exibição da caixa de mensagem corretamente é integrada com o ambiente de desenvolvimento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir tenta obter uma instância de <xref:System.Windows.Forms.Design.IUIService> e invocar o serviço <xref:System.Windows.Forms.Design.IUIService.ShowMessage%2A> método.  
+  
+ [!code-cpp[IUIServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#2)]
+ [!code-csharp[IUIServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#2)]
+ [!code-vb[IUIServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMessage">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DialogResult ShowMessage (string message, string caption, System.Windows.Forms.MessageBoxButtons buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Windows.Forms.DialogResult ShowMessage(string message, string caption, valuetype System.Windows.Forms.MessageBoxButtons buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowMessage(System.String,System.String,System.Windows.Forms.MessageBoxButtons)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DialogResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="buttons" Type="System.Windows.Forms.MessageBoxButtons" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem a ser exibida.</param>
+        <param name="caption">A legenda para a caixa de diálogo.</param>
+        <param name="buttons">Uma da <see cref="T:System.Windows.Forms.MessageBoxButtons" /> valores: <see cref="F:System.Windows.Forms.MessageBoxButtons.OK" />, <see cref="F:System.Windows.Forms.MessageBoxButtons.OKCancel" />, <see cref="F:System.Windows.Forms.MessageBoxButtons.YesNo" />, ou <see cref="F:System.Windows.Forms.MessageBoxButtons.YesNoCancel" />.</param>
+        <summary>Exibe a mensagem especificada em uma caixa de mensagem com os botões para colocar na caixa de diálogo e a legenda especificada.</summary>
+        <returns>Uma da <see cref="T:System.Windows.Forms.DialogResult" /> valores indicando o código de resultado retornado pela caixa de diálogo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método garante que a exibição da caixa de mensagem corretamente é integrada com o ambiente de desenvolvimento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.Design.IUIService.ShowMessage%2A> método para exibir uma caixa de mensagem.  
+  
+ [!code-cpp[IUIServiceExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#2)]
+ [!code-csharp[IUIServiceExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#2)]
+ [!code-vb[IUIServiceExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowToolWindow">
+      <MemberSignature Language="C#" Value="public bool ShowToolWindow (Guid toolWindow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ShowToolWindow(valuetype System.Guid toolWindow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.IUIService.ShowToolWindow(System.Guid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolWindow" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="toolWindow">Um <see cref="T:System.Guid" /> identificador para a janela da ferramenta. Isso pode ser um personalizado <see cref="T:System.Guid" /> ou um dos valores predefinidos de <see cref="T:System.ComponentModel.Design.StandardToolWindows" />.</param>
+        <summary>Exibe a janela de ferramenta especificada.</summary>
+        <returns>
+          <see langword="true" />Se a janela da ferramenta foi mostrada com êxito; <see langword="false" /> se ele não pode ser mostrado ou encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir tenta obter uma instância de <xref:System.Windows.Forms.Design.IUIService> e invocar o serviço <xref:System.Windows.Forms.Design.IUIService.ShowToolWindow%2A> método.  
+  
+ [!code-cpp[IUIServiceExample#5](~/samples/snippets/cpp/VS_Snippets_Winforms/IUIServiceExample/CPP/class1.cpp#5)]
+ [!code-csharp[IUIServiceExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/IUIServiceExample/CS/class1.cs#5)]
+ [!code-vb[IUIServiceExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IUIServiceExample/VB/class1.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Styles">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary Styles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary Styles" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.IUIService.Styles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de estilos que são específicas para o ambiente de host.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> que contém as configurações de estilo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O dicionário pode fornecer informações do ambiente de host. No mínimo, isso consiste em da fonte que deve ser usada para texto de interface do usuário padrão e a cor a ser usado para realçar. Eles exigidos estilos são "DialogFont" e "HighlightColor".  
+  
+ Os valores para esses estilos podem ser recuperados usando o estilo como uma chave para dicionário, acessando o dicionário usando a chave como um indexador. Por exemplo: (objeto que implementa <xref:System.Windows.Forms.Design.IUIService>). Estilos [(estilo nome cadeia de caracteres entre aspas)].  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém a fonte da caixa de diálogo do ambiente de host.  
+  
+ [!code-cpp[Classic IUIService.Styles Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic IUIService.Styles Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic IUIService.Styles Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic IUIService.Styles Example/CS/source.cs#1)]
+ [!code-vb[Classic IUIService.Styles Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic IUIService.Styles Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,198 @@
+<Type Name="PeerNode" FullName="System.ServiceModel.PeerNode">
+  <TypeSignature Language="C#" Value="public sealed class PeerNode : System.ServiceModel.IOnlineStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PeerNode extends System.Object implements class System.ServiceModel.IOnlineStatus" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.PeerNode" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IOnlineStatus</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define a instância de um nó ponto a ponto usado por um aplicativo que participam de uma malha de pontos específicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nó ponto pode hospedar vários canais de ponto a ponto dentro da malha desde que eles compartilham um nome comum de URI e o host no <xref:System.ServiceModel.EndpointAddress> fornecido para a associação de cada canal.  
+  
+ Se dois ou mais canais de ponto a ponto definidos para um nó ponto a ponto são criados com ligações separadas, em seguida, o <xref:System.ServiceModel.NetPeerTcpBinding.Port%2A>, <xref:System.ServiceModel.NetPeerTcpBinding.ListenIPAddress%2A>, e <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A> propriedades devem ser idênticas em todas as associações.  
+  
+ Se uma associação de canal subsequente for criada após o primeiro para a mesma instância de nó par, o <xref:System.ServiceModel.NetPeerTcpBinding.MaxReceivedMessageSize%2A> propriedade sobre isso e associações subsequentes devem ser menor ou igual ao valor de <xref:System.ServiceModel.NetPeerTcpBinding.MaxReceivedMessageSize%2A> propriedade conforme definido na associação de canal primeiro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsOnline">
+      <MemberSignature Language="C#" Value="public bool IsOnline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOnline" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerNode.IsOnline" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o nó par está online e é capaz de enviar mensagens para nós vizinhos na malha de pontos.</summary>
+        <value>
+          <see langword="true" />Se o nó par está online; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ "Online" indica que um nó ponto tem nós de vizinho disponíveis. "Offline" indica que um nó ponto a ponto não tem disponíveis vizinhos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagePropagationFilter">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.PeerMessagePropagationFilter MessagePropagationFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.PeerMessagePropagationFilter MessagePropagationFilter" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerNode.MessagePropagationFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerMessagePropagationFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define um filtro personalizado para as mensagens recebidas via do canal par.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerMessagePropagationFilter" />que contém um filtro de mensagem personalizada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O filtro de mensagem deve ser um tipo derivado e deve ser reconvertido a um tipo para usar qualquer recurso personalizado definido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhum canal é aberto para escuta.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Offline">
+      <MemberSignature Language="C#" Value="public event EventHandler Offline;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Offline" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.PeerNode.Offline" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando o nó par fica offline do par de sinais de malha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um PeerNode offline não tem vizinho nós dentro da malha ponto a ponto para que ele possa se conectar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Online">
+      <MemberSignature Language="C#" Value="public event EventHandler Online;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Online" />
+      <MemberSignature Language="DocId" Value="E:System.ServiceModel.PeerNode.Online" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica quando um nó ponto fica online dentro da malha ponto a ponto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um nó ponto a ponto online tem pelo menos um nó vizinho dentro da malha ponto a ponto para o qual ele está conectado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.PeerNode.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a porta de rede na qual o nó par está escutando.</summary>
+        <value>
+          <see cref="T:System.Int32" />que especifica a porta de rede na qual o nó par está escutando.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhum canal é aberto para escuta.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshConnection">
+      <MemberSignature Language="C#" Value="public void RefreshConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RefreshConnection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerNode.RefreshConnection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza a conexão com a malha ponto a ponto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Nenhum canal é aberto para escuta.</exception>
+        <exception cref="T:System.TimeoutException">A operação de atualização atingiu o tempo limite.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationException">Ocorreu um erro de rede durante a tentativa de atualizar.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectAbortedException">A conexão é interrompida durante a tentativa de atualizar.</exception>
+        <exception cref="T:System.ServiceModel.CommunicationObjectFaultedException">A conexão com falha durante a tentativa de atualizar.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.PeerNode.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece uma representação de cadeia de caracteres de um nó ponto a ponto.</summary>
+        <returns>
+          <see cref="T:System.String" />valor que contém a ID de malha do nó par se a ID de malha é definida; Caso contrário, ele retorna o tipo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

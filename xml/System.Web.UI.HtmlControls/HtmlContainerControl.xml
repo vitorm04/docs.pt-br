@@ -1,0 +1,354 @@
+<Type Name="HtmlContainerControl" FullName="System.Web.UI.HtmlControls.HtmlContainerControl">
+  <TypeSignature Language="C#" Value="public abstract class HtmlContainerControl : System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HtmlContainerControl extends System.Web.UI.HtmlControls.HtmlControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlContainerControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.HtmlControls.HtmlControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Funciona como a classe base abstrata para controles de servidor HTML que mapeiam para elementos HTML que devem ter uma marca de abertura e outra de fechamento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os controles mais comuns com uma marca de fechamento são o `<form>`, `<table>`, `<tr>`, `<td>`, `<a>`, e `<span>` elementos.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> e <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedades permitem que você manipule o conteúdo entre as marcas de abertura e fechamento de <xref:System.Web.UI.HtmlControls.HtmlContainerControl>-controles derivados.  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Web.UI.HtmlControls.HtmlContainerControl>, consulte o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.%23ctor%2A> construtor.  
+  
+ Uma nova instância dessa classe não é criada diretamente.  
+  
+> [!CAUTION]
+>  Se você usar o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade para especificar o texto entre as marcas de abertura e fechamento de um controle de servidor HTML, o texto não está codificada em HTML. Isso torna possível inserir o script dentro de marcas HTML no texto. Ao usar o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade, certifique-se de validar o valor para reduzir as vulnerabilidades de segurança. Caso contrário, considere o uso de <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> propriedade em vez disso.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade dessa classe para gerar dinamicamente uma mensagem em uma página da Web.  
+  
+ [!code-aspx-csharp[Classic HtmlContainerControl Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlContainerControl Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlContainerControl Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlContainerControl Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HtmlContainerControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> usando valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.HtmlControls.HtmlContainerControl> classe usando valores padrão.  
+  
+> [!NOTE]
+>  Uma instância dessa classe não é criada diretamente. Este construtor é chamado a partir do construtor de outras classes de controle HTML para inicializar propriedades definidas nesta classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.HtmlControls.HtmlContainerControl>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|A "estender" cadeia de caracteres literal.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlContainerControl (string tag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tag" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tag">Uma cadeia de caracteres que especifica o nome da marca do controle.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> classe usando o nome da marca especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.HtmlControls.HtmlContainerControl> classe usando a marca especificada.  
+  
+> [!NOTE]
+>  Uma instância dessa classe não é criada diretamente. Este construtor é chamado a partir do construtor de outras classes de controle HTML para inicializar propriedades definidas nesta classe.  
+  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.Web.UI.HtmlControls.HtmlContainerControl>.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.HtmlControls.HtmlControl.TagName%2A>|O valor especificado pelo `tag` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateControlCollection">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.ControlCollection CreateControlCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Web.UI.ControlCollection CreateControlCollection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.CreateControlCollection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ControlCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo objeto <see cref="T:System.Web.UI.ControlCollection" /> para manter os controles filho (literal e servidor) do controle do servidor.</summary>
+        <returns>Um <see cref="T:System.Web.UI.ControlCollection" /> que contém o <see cref="T:System.Web.UI.HtmlControls.HtmlControl" /> controles de servidor filho.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerHtml">
+      <MemberSignature Language="C#" Value="public virtual string InnerHtml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerHtml" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo encontrado entre as marcas de abertura e fechamento do controle de servidor HTML especificado.</summary>
+        <value>O conteúdo HTML entre as marcas de abertura e fechamento de um controle de servidor HTML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade modificar programaticamente o conteúdo entre as marcas de abertura e fechamento de um controle de servidor HTML.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade não codifica caracteres especiais em entidades HTML automaticamente. Entidades HTML permitem que você exiba caracteres especiais, como o `<` de caracteres, que um navegador normalmente pode interpretar como tendo um significado especial. O `<` caracteres será interpretado como o início de uma marca e não será exibido na página. Para exibir o `<` caracteres, você precisa usar a entidade `&lt;`.  
+  
+ Por exemplo, se o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> está definida como `"<b> Hello </b>"`, o `<` e `>` caracteres não são convertidos em `&lt;` e `&gt;`, respectivamente. A saída renderizada ainda será: \<b > Olá  \< /b >. O navegador detectará o `<b>` marcas e exibir o texto, Olá, uma fonte em negrito.  
+  
+> [!CAUTION]
+>  Como o texto não está codificada em HTML, possível inserir o script no HTML marcas no texto. Se essa propriedade é definida dinamicamente usando a entrada do usuário, certifique-se de validar o valor para reduzir as vulnerabilidades de segurança. Para obter mais informações, consulte [segurança e entrada do usuário](~/docs/standard/security/security-and-user-input.md).  
+  
+ Para fornecer a codificação HTML e decodificação automática, use o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> propriedade.  
+  
+> [!NOTE]
+>  Se não existem controles filho, o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade contém o valor <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade para definir dinamicamente uma mensagem de texto.  
+  
+ [!code-aspx-csharp[Classic HtmlContainerControl Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlContainerControl Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlContainerControl Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlContainerControl Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Há mais de um controle de servidor HTML.  
+  
+ \- ou -  
+  
+ O controle de servidor HTML não é um <see cref="T:System.Web.UI.LiteralControl" /> ou um <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public virtual string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto entre as marcas de abertura e fechamento do controle de servidor HTML especificado.</summary>
+        <value>O texto entre as marcas de abertura e fechamento de um controle de servidor HTML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> propriedade modificar programaticamente o texto entre as marcas de abertura e fechamento de um controle de servidor HTML.  
+  
+ Ao contrário de <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade, o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> propriedade automaticamente codifica caracteres especiais em entidades HTML. Entidades HTML permitem que você exiba caracteres especiais, como o `<` de caracteres, que um navegador normalmente pode interpretar como tendo um significado especial. O `<` caracteres será interpretado como o início de uma marca e não será exibido na página. Para exibir o `<` caracteres, você precisa usar a entidade `&lt;`.  
+  
+ Por exemplo, se o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> está definida como `"<b> Hello </b>"`, o `<` e `>` símbolos são convertidos em `&lt;` e `&gt;`, respectivamente. A saída renderizada seria: &lt; b &gt; Hello &lt; /b &gt;. O `&lt;` e `&gt;` indicam entidades para o navegador que esses caracteres devem ser exibidos na página. O navegador não detectará o `<b>` marcas e exibir o texto em uma fonte em negrito. É o texto exibido na página: \<b > Olá  \< /b >.  
+  
+ Para evitar a codificação HTML e decodificação automática, use o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade.  
+  
+> [!NOTE]
+>  Se não existem controles filho, o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade contém o valor <xref:System.String.Empty?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o serviço disponível por meio de codificação de HTML a <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerText%2A> propriedade.  
+  
+ [!code-aspx-csharp[Classic HtmlContainerControl.InnerText Example#1](~/samples/snippets/csharp/VS_Snippets_WebNet/Classic HtmlContainerControl.InnerText Example/CS/sourcecs.aspx#1)]
+ [!code-aspx-vb[Classic HtmlContainerControl.InnerText Example#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Classic HtmlContainerControl.InnerText Example/VB/sourcevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Web.HttpException">Há mais de um controle de servidor HTML.  
+  
+ \- ou -  
+  
+ O controle de servidor HTML não é um <see cref="T:System.Web.UI.LiteralControl" /> ou um <see cref="T:System.Web.UI.DataBoundLiteralControl" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadViewState">
+      <MemberSignature Language="C#" Value="protected override void LoadViewState (object savedState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LoadViewState(object savedState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="savedState" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="savedState">Um <see cref="T:System.Object" /> que representa o estado de controle a ser restaurado.</param>
+        <summary>Restaura o <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> exibição de controle solicitação de estado de uma página anterior que foi salvo o <see cref="M:System.Web.UI.Control.SaveViewState" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado basicamente pela infraestrutura do .NET Framework e não se destina a ser usado diretamente no seu código. No entanto, os desenvolvedores de controle podem substituir este método para especificar como um controle de servidor personalizado restaura o estado de exibição. Para obter mais informações, consulte [visão geral do gerenciamento de estado ASP.NET](http://msdn.microsoft.com/library/0218d965-5d30-445b-b6a6-8870e70e63ce).  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlContainerControl.LoadViewState%2A> chamadas de método da classe base <xref:System.Web.UI.Control.LoadViewState%2A> método. Além disso, o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.LoadViewState%2A> método define o <xref:System.Web.UI.HtmlControls.HtmlContainerControl.InnerHtml%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> conteúdo.</param>
+        <summary>Renderiza o controle <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> no objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlContainerControl.Render%2A> substituições de método de <xref:System.Web.UI.HtmlControls.HtmlControl.Render%2A?displayProperty=nameWithType> método para processar a marca de abertura, controles filho e de uma marca de fechamento a <xref:System.Web.UI.HtmlControls.HtmlContainerControl> controle.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlContainerControl.Render%2A> método é usado principalmente por desenvolvedores de controle estender a funcionalidade do <xref:System.Web.UI.HtmlControls.HtmlContainerControl> controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir o <see cref="M:System.Web.UI.HtmlControls.HtmlContainerControl.Render(System.Web.UI.HtmlTextWriter)" /> método em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.HtmlControls.HtmlControl.Render(System.Web.UI.HtmlTextWriter)" /> método para que o <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> controle é processado corretamente.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderAttributes">
+      <MemberSignature Language="C#" Value="protected override void RenderAttributes (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RenderAttributes(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.RenderAttributes(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> instância que recebe o conteúdo renderizado.</param>
+        <summary>Renderiza os atributos do controle <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> no objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlContainerControl.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que recebe o conteúdo renderizado.</param>
+        <summary>Renderiza a marca de fechamento para o <see cref="T:System.Web.UI.HtmlControls.HtmlContainerControl" /> controle especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlContainerControl.RenderEndTag%2A> método é chamado pelo <xref:System.Web.UI.HtmlControls.HtmlContainerControl.Render%2A> método para renderizar a marcação de fechamento do <xref:System.Web.UI.HtmlControls.HtmlContainerControl> controle.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlContainerControl.RenderEndTag%2A> método é usado principalmente por desenvolvedores de controle estender a funcionalidade do <xref:System.Web.UI.HtmlControls.HtmlContainerControl> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

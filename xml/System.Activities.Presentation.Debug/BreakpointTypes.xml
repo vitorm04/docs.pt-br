@@ -1,0 +1,94 @@
+<Type Name="BreakpointTypes" FullName="System.Activities.Presentation.Debug.BreakpointTypes">
+  <TypeSignature Language="C#" Value="public enum BreakpointTypes" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BreakpointTypes extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Debug.BreakpointTypes" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma enumeração que fornece definições para pontos de interrupção.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Activities.Presentation.Debug.DebuggerService>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bounded">
+      <MemberSignature Language="C#" Value="Bounded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Debug.BreakpointTypes Bounded = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Debug.BreakpointTypes.Bounded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Debug.BreakpointTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um ponto de interrupção limitado, que implementa o onde e quando recentes em um ponto desejado em um programa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Conditional">
+      <MemberSignature Language="C#" Value="Conditional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Debug.BreakpointTypes Conditional = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Debug.BreakpointTypes.Conditional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Debug.BreakpointTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa um ponto de interrupção condicional, que é uma expressão que é avaliada para determinar se o ponto de interrupção ocorrerá.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="Enabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Debug.BreakpointTypes Enabled = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Debug.BreakpointTypes.Enabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Debug.BreakpointTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa que o ponto de interrupção está habilitado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Activities.Presentation.Debug.BreakpointTypes None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Activities.Presentation.Debug.BreakpointTypes.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Debug.BreakpointTypes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum ponto de interrupção está definido.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

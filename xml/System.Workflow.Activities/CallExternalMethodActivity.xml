@@ -1,0 +1,623 @@
+<Type Name="CallExternalMethodActivity" FullName="System.Workflow.Activities.CallExternalMethodActivity">
+  <TypeSignature Language="C#" Value="public class CallExternalMethodActivity : System.Workflow.ComponentModel.Activity, System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallExternalMethodActivity extends System.Workflow.ComponentModel.Activity implements class System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.CallExternalMethodActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Activity</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Workflow.ComponentModel.IDynamicPropertyTypeProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("MethodInvoking")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.CallExternalMethodActivityDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.Activities.CallExternalMethodActivityValidator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma atividade de comunicação do fluxo de trabalho que é usada para chamar um método em um serviço local. Esta atividade é usada para enviar dados de fluxo de trabalho para o host por meio do serviço local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Um serviço local é uma classe que implementa uma interface de serviço local (uma interface marcada com <xref:System.Workflow.Activities.ExternalDataExchangeAttribute>) e é adicionado para o <xref:System.Workflow.Activities.ExternalDataExchangeService>.  
+  
+> [!NOTE]
+>  Quando o método externo é chamado de todos os parâmetros do método são clonados. Se os tipos de parâmetro implementam <xref:System.ICloneable> o `Clone` método é chamado ou se eles são serializados e desserializados com um <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Workflow.Activities.CallExternalMethodActivity> em uma atividade personalizada para chamar um método externo. Este exemplo de código é parte do exemplo do arquivo PurchaseOrderWorkflow.Designer.cs escutar SDK. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Escutar exemplo](http://msdn.microsoft.com/en-us/1cec0e82-7544-429f-b717-0fc25eb42b7f).  
+  
+ [!code-csharp[wf_samples#213](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#213)]
+ [!code-vb[wf_samples#213](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#213)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.CallExternalMethodActivity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma instância do `CallExternalMethodActivity` classe.  Este exemplo é um exemplo PersistenceHost SDK, do arquivo DocumentApprovalWorkflow.designer.cs de. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de Host de persistência](http://msdn.microsoft.com/en-us/8ba72a8f-eb95-410f-bb00-180f3c35f251).  
+  
+ [!code-csharp[wf_samples#278](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets24.cs#278)]
+ [!code-vb[wf_samples#278](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets24.vb#278)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallExternalMethodActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.CallExternalMethodActivity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como inicializa uma nova instância do <xref:System.Workflow.Activities.CallExternalMethodActivity>. O código também inicia novas instâncias de <xref:System.Workflow.Activities.ListenActivity>, <xref:System.Workflow.Activities.EventDrivenActivity>, <xref:System.Workflow.Activities.HandleExternalEventActivity>, <xref:System.Workflow.Activities.DelayActivity> e <xref:System.Workflow.Activities.CodeActivity> classes. Este exemplo de código é parte do exemplo do arquivo PurchaseOrderWorkflow.Designer.cs escutar SDK. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Escutar exemplo](http://msdn.microsoft.com/en-us/1cec0e82-7544-429f-b717-0fc25eb42b7f).  
+  
+ [!code-csharp[wf_samples#214](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#214)]
+ [!code-vb[wf_samples#214](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#214)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallExternalMethodActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome definido pelo usuário da atividade, usado para inicializar a propriedade de nome de atividade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.CallExternalMethodActivity" /> classe usando o nome da atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationToken">
+      <MemberSignature Language="C#" Value="public virtual System.Workflow.Runtime.CorrelationToken CorrelationToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.CorrelationToken CorrelationToken" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.CallExternalMethodActivity.CorrelationToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.Activities.CorrelationTokenTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.CorrelationToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Workflow.Runtime.CorrelationToken" /> para o método externo.</summary>
+        <value>O token de correlação para o método externo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade define qual específico <xref:System.Workflow.Activities.CallExternalMethodActivity> atividade proveniente de uma chamada de método externo fornecido. Esse valor, em seguida, pode ser usado na carga do evento de comunicação local do serviço para direcionar o evento para o correto <xref:System.Workflow.Activities.HandleExternalEventActivity> atividade.  
+  
+ [!INCLUDE[crexample](~/includes/crexample-md.md)]correlação, consulte o [correlacionado exemplo de serviço Local](http://msdn.microsoft.com/en-us/5a3d0733-bbea-4dbf-88ee-a8316db55fbd).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como acessar o `CorrelationToken` propriedade de um `CallExternalMethodActivity` objeto. Este exemplo é um exemplo correlacionados SDK do serviço Local, do arquivo CorrelatedLocalServiceWorkflow.designer.cs de. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Correlacionado exemplo de serviço Local](http://msdn.microsoft.com/en-us/5a3d0733-bbea-4dbf-88ee-a8316db55fbd).  
+  
+ [!code-csharp[wf_samples#200](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#200)]
+ [!code-vb[wf_samples#200](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#200)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CorrelationTokenProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty CorrelationTokenProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty CorrelationTokenProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.CallExternalMethodActivity.CorrelationTokenProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.CorrelationToken" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override sealed System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> que contém o ambiente de execução no qual executar o <see cref="T:System.Workflow.Activities.CallExternalMethodActivity" />.</param>
+        <summary>Tenta executar o <see cref="T:System.Workflow.Activities.CallExternalMethodActivity" /> com especificado <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" />.</summary>
+        <returns>Um dos valores de <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Isso <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="executionContext" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+        <exception cref="T:System.InvalidOperationException">O objeto de serviço para o <paramref name="executionContext" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeProperties">
+      <MemberSignature Language="C#" Value="protected override void InitializeProperties ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitializeProperties() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.InitializeProperties" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa a inicialização nas propriedades de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método inicializa o <xref:System.Workflow.Activities.CallExternalMethodActivity.CorrelationToken%2A> propriedade, verifica o <xref:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType%2A> e <xref:System.Workflow.Activities.CallExternalMethodActivity.MethodName%2A> propriedades são definidas e verifica se o evento citados no <xref:System.Workflow.Activities.CallExternalMethodActivity.MethodName%2A> pode ser encontrada na interface referenciada no <xref:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceType">
+      <MemberSignature Language="C#" Value="public virtual Type InterfaceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type InterfaceType" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor(typeof(System.Workflow.ComponentModel.Design.TypeBrowserEditor), typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Workflow.ComponentModel.Design.TypeFilterProvider(typeof(System.Workflow.Activities.ExternalDataExchangeInterfaceTypeFilterProvider))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um método externo da declaração de interface que tem o <see cref="T:System.Workflow.Activities.ExternalDataExchangeAttribute" />.</summary>
+        <value>O método externo da declaração de interface que tem o <see cref="T:System.Workflow.Activities.ExternalDataExchangeAttribute" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir o <xref:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType%2A> propriedade. O tipo de interface deve ser atribuído com o <xref:System.Workflow.Activities.ExternalDataExchangeAttribute>. Este exemplo de código é parte do exemplo do arquivo PurchaseOrderWorkflow.Designer.cs escutar SDK. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Escutar exemplo](http://msdn.microsoft.com/en-us/1cec0e82-7544-429f-b717-0fc25eb42b7f).  
+  
+ [!code-csharp[wf_samples#217](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#217)]
+ [!code-vb[wf_samples#217](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#217)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceTypeProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty InterfaceTypeProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty InterfaceTypeProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.CallExternalMethodActivity.InterfaceTypeProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Activities.CallExternalMethodActivity.InterfaceType%2A> propriedade corresponde ao nome da interface que foi marcado com o <xref:System.Workflow.Activities.ExternalDataExchangeAttribute>.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodInvoking">
+      <MemberSignature Language="C#" Value="public event EventHandler MethodInvoking;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MethodInvoking" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes de chamar o método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking> evento para definir o método a ser chamado antes de chamar o método externo. Este exemplo de código é parte do exemplo do arquivo PurchaseOrderWorkflow.Designer.cs escutar SDK. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Escutar exemplo](http://msdn.microsoft.com/en-us/1cec0e82-7544-429f-b717-0fc25eb42b7f).  
+  
+ [!code-csharp[wf_samples#217](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#217)]
+ [!code-vb[wf_samples#217](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#217)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodInvokingEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty MethodInvokingEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty MethodInvokingEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.CallExternalMethodActivity.MethodInvokingEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="E:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking> evento define um delegado de evento que é executado antes que a atividade invoca o método externo no serviço local.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodName">
+      <MemberSignature Language="C#" Value="public virtual string MethodName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.CallExternalMethodActivity.MethodName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.Activities.Common.PropertyValueProviderTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do método a ser chamado no serviço local registrado com o <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" />.</summary>
+        <value>O nome do método do <see cref="T:System.Workflow.Activities.ExternalDataExchangeService" /> interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Workflow.Activities.CallExternalMethodActivity.MethodName%2A> propriedade para definir o nome do método do método externo. Este exemplo de código é parte do exemplo do arquivo PurchaseOrderWorkflow.Designer.cs escutar SDK. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Escutar exemplo](http://msdn.microsoft.com/en-us/1cec0e82-7544-429f-b717-0fc25eb42b7f).  
+  
+ [!code-csharp[wf_samples#217](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#217)]
+ [!code-vb[wf_samples#217](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#217)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodNameProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty MethodNameProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty MethodNameProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.CallExternalMethodActivity.MethodNameProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.MethodName" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Activities.CallExternalMethodActivity.MethodName%2A> propriedade corresponde ao nome de um método contido em uma interface marcada com o <xref:System.Workflow.Activities.ExternalDataExchangeAttribute>.  
+  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMethodInvoked">
+      <MemberSignature Language="C#" Value="protected virtual void OnMethodInvoked (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMethodInvoked(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.OnMethodInvoked(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados para o <see cref="E:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking" /> evento.</param>
+        <summary>Fornece um gancho para classes derivadas extrair valores de retorno e fora do <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindings" />. Esse método é chamado logo após o método externo é executado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação do `OnMethodInvoked` método.  
+  
+ [!code-csharp[wf_samples#1](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets.cs#1)]
+ [!code-vb[wf_samples#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMethodInvoking">
+      <MemberSignature Language="C#" Value="protected virtual void OnMethodInvoking (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMethodInvoking(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.OnMethodInvoking(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados para o <see cref="E:System.Workflow.Activities.CallExternalMethodActivity.MethodInvoking" /> evento.</param>
+        <summary>Fornece um gancho para classes derivadas definir <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindings" />. Este método é chamado antes do método externo é executado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir demonstra uma implementação de `OnMethodInvoking` método. Este exemplo é do exemplo de correlacionados SDK do serviço Local do arquivo CreateTask.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Correlacionado exemplo de serviço Local](http://msdn.microsoft.com/en-us/5a3d0733-bbea-4dbf-88ee-a8316db55fbd).  
+  
+ [!code-csharp[wf_samples#207](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#207)]
+ [!code-vb[wf_samples#207](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#207)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterBindings">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.WorkflowParameterBindingCollection ParameterBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.WorkflowParameterBindingCollection ParameterBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.WorkflowParameterBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de parâmetros associáveis encontrados na lista de parâmetros formais do método externo.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.WorkflowParameterBindingCollection" /> de parâmetros para associar a.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como adicionar uma associação de parâmetro na coleção de associações de parâmetro. Este exemplo é da amostra do SDK de comunicação de Host, do arquivo VotingServiceWorkflow.designer.cs. [!INCLUDE[crdefault](~/includes/crdefault-md.md)][Exemplo de comunicação de host](http://msdn.microsoft.com/en-us/ce4b0b8c-bfa3-4c24-b85a-5835a440ea8f).  
+  
+ [!code-csharp[WF_Samples#301](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets38.cs#301)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParameterBindingsProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty ParameterBindingsProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty ParameterBindingsProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindingsProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="P:System.Workflow.Activities.CallExternalMethodActivity.ParameterBindings" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetAccessType">
+      <MemberSignature Language="C#" Value="System.Workflow.ComponentModel.Compiler.AccessTypes IDynamicPropertyTypeProvider.GetAccessType (IServiceProvider serviceProvider, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance valuetype System.Workflow.ComponentModel.Compiler.AccessTypes System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetAccessType(class System.IServiceProvider serviceProvider, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.System#Workflow#ComponentModel#IDynamicPropertyTypeProvider#GetAccessType(System.IServiceProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.AccessTypes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que implementa <see cref="T:System.IServiceProvider" /> para fornecer acesso aos serviços de tempo de design se eles forem necessários.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Retorna o tipo de acesso para a propriedade especificada.</summary>
+        <returns>Um valor de enumeração <see cref="T:System.Workflow.ComponentModel.Compiler.AccessTypes" /> que indica o nível de acesso da propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado em tempo de compilação para validar se as propriedades associadas corretamente um ao outro. Sem essa interface essas informações são inferidas diretamente do getter/setters de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetPropertyType">
+      <MemberSignature Language="C#" Value="Type IDynamicPropertyTypeProvider.GetPropertyType (IServiceProvider serviceProvider, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Type System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetPropertyType(class System.IServiceProvider serviceProvider, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.CallExternalMethodActivity.System#Workflow#ComponentModel#IDynamicPropertyTypeProvider#GetPropertyType(System.IServiceProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que implementa <see cref="T:System.IServiceProvider" /> para fornecer acesso aos serviços de tempo de design se eles forem necessários.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Retorna o <see cref="T:System.Type" /> do da propriedade especificada.</summary>
+        <returns>O <see cref="T:System.Type" /> para a propriedade cujo nome é passado como o <paramref name="propertyName" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado em tempo de compilação para validar se as propriedades corretamente estão associadas a um do outro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

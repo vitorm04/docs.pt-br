@@ -1,0 +1,124 @@
+<Type Name="IPolicyImportExtension" FullName="System.ServiceModel.Description.IPolicyImportExtension">
+  <TypeSignature Language="C#" Value="public interface IPolicyImportExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPolicyImportExtension" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Description.IPolicyImportExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define um método para objetos que importar asserções de políticas personalizadas sobre associações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.ServiceModel.Description.IPolicyImportExtension> interface para pesquisar informações de WSDL expostas por um ponto de extremidade específico para declarações de políticas personalizadas sobre recursos de ponto de extremidade ou requisitos. Normalmente, um importador de política procura por uma declaração específica e ou insere um elemento de associação, configura um elemento de associação ou modifica o contrato para oferecer suporte a requisitos da asserção.  
+  
+ Diferentemente de sua contraparte <xref:System.ServiceModel.Description.IPolicyExportExtension>, <xref:System.ServiceModel.Description.IPolicyImportExtension> não exige a implementação por um <xref:System.ServiceModel.Channels.BindingElement> objeto; você pode carregá-lo usando a seção de configuração de cliente mostrada na seção exemplos ou programaticamente ao ser adicionado a <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> construtor.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)]passa dois objetos para o <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A> método, uma <xref:System.ServiceModel.Description.MetadataImporter> e um <xref:System.ServiceModel.Description.PolicyConversionContext>. Normalmente o <xref:System.ServiceModel.Description.PolicyConversionContext> objeto já contém as declarações de política para cada escopo de associação.  
+  
+ Um <xref:System.ServiceModel.Description.IPolicyImportExtension> implementação executa as seguintes etapas:  
+  
+1.  Localiza a declaração de política personalizada para os quais é responsável por chamar o <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>, ou <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> métodos, dependendo do escopo.  
+  
+2.  Remove a declaração de política da coleção de asserção. O <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> método localiza retorna e remove a asserção em uma única etapa.  
+  
+3.  Modificar a pilha de associação ou o contrato adicionando um personalizado necessário <xref:System.ServiceModel.Channels.BindingElement> para o <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A> propriedade ou modificando o <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> propriedade.  
+  
+ Etapa 2 é importante. Depois de tem sido chamados todos os importadores de políticas, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verifica a existência de quaisquer declarações de política que permanecem. Se houver, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] pressupõe que a importação da política não foi bem-sucedida e não importa a associação associada.  
+  
+> [!IMPORTANT]
+>  Um fornecedor de metadados mal-intencionado pode tentar enviar XML mal formado como parte dos metadados em uma tentativa de explorar um importador de política. É altamente recomendável que política personalizada importadores ser robusto para todas as formas de XML que pode ser passado a ele.  
+  
+ Personalizado <xref:System.ServiceModel.Description.MetadataImporter> implementações devem implementar seus próprios <xref:System.ServiceModel.Description.PolicyConversionContext> objeto para extrair as declarações de política associado ao formato de metadados personalizados.  
+  
+ Se você deseja exportar e importar os elementos WSDL personalizados que não fazem declarações de política, consulte <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>.  
+  
+> [!NOTE]
+>  Você pode usar importadores de políticas personalizadas e exporters com o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) usando os mesmos elementos de configuração em um arquivo de configuração e o `/svcutilConfig:<configFile>` opção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> método localizar, volte e remova a asserção em uma única etapa.  
+  
+ [!code-csharp[CustomPolicySample#1](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyimporter.cs#1)]
+ [!code-vb[CustomPolicySample#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyimporter.vb#1)]  
+  
+ O exemplo de código a seguir mostra o cliente do arquivo de configuração de aplicativo ao carregar o importador de política personalizada quando o <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> é invocado.  
+  
+ [!code-xml[CustomPolicySample#7](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
+  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.MetadataResolver> para baixar e resolver os metadados para objetos de descrição.  
+  
+ [!code-csharp[CustomPolicySample#10](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.cs#10)]
+ [!code-vb[CustomPolicySample#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.vb#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ImportPolicy">
+      <MemberSignature Language="C#" Value="public void ImportPolicy (System.ServiceModel.Description.MetadataImporter importer, System.ServiceModel.Description.PolicyConversionContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ImportPolicy(class System.ServiceModel.Description.MetadataImporter importer, class System.ServiceModel.Description.PolicyConversionContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy(System.ServiceModel.Description.MetadataImporter,System.ServiceModel.Description.PolicyConversionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="importer" Type="System.ServiceModel.Description.MetadataImporter" />
+        <Parameter Name="context" Type="System.ServiceModel.Description.PolicyConversionContext" />
+      </Parameters>
+      <Docs>
+        <param name="importer">O <see cref="T:System.ServiceModel.Description.MetadataImporter" /> objeto em uso.</param>
+        <param name="context">O <see cref="T:System.ServiceModel.Description.PolicyConversionContext" /> que contém as declarações de política podem ser importadas e as coleções de elementos a que a implementação de elementos de associação pode ser adicionado de associação.</param>
+        <summary>Define um método que pode importar asserções de política personalizada e adicionar a implementação de elementos de associação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o `ImportPolicy` método obter declarações de política e executar a modificação do contrato importado ou associação para dar suporte a asserção. Normalmente, um importador de política responde para localizar uma declaração de política personalizada definindo ou inserindo um elemento de associação a associação está sendo importada.  
+  
+ [!INCLUDE[indigo1](~/includes/indigo1-md.md)]passa dois objetos para o <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A> método, uma <xref:System.ServiceModel.Description.MetadataImporter> e um <xref:System.ServiceModel.Description.PolicyConversionContext>. Normalmente o <xref:System.ServiceModel.Description.PolicyConversionContext> objeto já contém as declarações de política para cada escopo de associação.  
+  
+ Um <xref:System.ServiceModel.Description.IPolicyImportExtension> implementação executa as seguintes etapas:  
+  
+1.  Localiza a declaração de política personalizada para os quais é responsável por chamar o <xref:System.ServiceModel.Description.PolicyConversionContext.GetBindingAssertions%2A>, <xref:System.ServiceModel.Description.PolicyConversionContext.GetMessageBindingAssertions%2A>, ou <xref:System.ServiceModel.Description.PolicyConversionContext.GetOperationBindingAssertions%2A> métodos, dependendo do escopo.  
+  
+2.  Remove a declaração de política da coleção de asserção. O <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> método localiza retorna e remove a asserção em uma única etapa.  
+  
+3.  Modifica a pilha de associação ou o contrato adicionando um personalizado necessário <xref:System.ServiceModel.Channels.BindingElement> para o <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A> propriedade ou modificando o <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> propriedade.  
+  
+ Etapa 2 é importante. Depois de tem sido chamados todos os importadores de políticas, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] verifica a existência de quaisquer declarações de política que permanecem. Se houver, [!INCLUDE[indigo2](~/includes/indigo2-md.md)] pressupõe que a importação da política não foi bem-sucedida e não importa a associação associada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> método localizar, volte e remova a asserção em uma única etapa.  
+  
+ [!code-csharp[CustomPolicySample#1](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyimporter.cs#1)]
+ [!code-vb[CustomPolicySample#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyimporter.vb#1)]  
+  
+ O exemplo de código a seguir mostra o cliente do arquivo de configuração de aplicativo ao carregar o importador de política personalizada quando o <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> é invocado.  
+  
+ [!code-xml[CustomPolicySample#7](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
+  
+ O exemplo de código a seguir mostra o uso do <xref:System.ServiceModel.Description.MetadataResolver> para baixar e resolver os metadados para objetos de descrição.  
+  
+ [!code-csharp[CustomPolicySample#10](~/samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.cs#10)]
+ [!code-vb[CustomPolicySample#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

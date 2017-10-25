@@ -1,0 +1,119 @@
+<Type Name="FormStartPosition" FullName="System.Windows.Forms.FormStartPosition">
+  <TypeSignature Language="C#" Value="public enum FormStartPosition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormStartPosition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FormStartPosition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a posição inicial de um formulário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelo <xref:System.Windows.Forms.Form.StartPosition%2A> propriedade o <xref:System.Windows.Forms.Form> classe. Representa as posições de início diferente do formulário. A posição de início padrão é `WindowsDefaultLocation`.  
+  
+   
+  
+## Examples  
+ Neste exemplo, altere a posição de início do formulário para o centro da tela e exibir as informações de posição usando um rótulo. Este exemplo supõe que você já tenha criado um <xref:System.Windows.Forms.Form> chamado `Form1`.  
+  
+ [!code-cpp[FormStartPosition#1](~/samples/snippets/cpp/VS_Snippets_Winforms/FormStartPosition/CPP/formstartposition.cpp#1)]
+ [!code-csharp[FormStartPosition#1](~/samples/snippets/csharp/VS_Snippets_Winforms/FormStartPosition/CS/formstartposition.cs#1)]
+ [!code-vb[FormStartPosition#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/FormStartPosition/VB/formstartposition.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CenterParent">
+      <MemberSignature Language="C#" Value="CenterParent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormStartPosition CenterParent = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormStartPosition.CenterParent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormStartPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formulário é centralizado dentro dos limites do formulário pai.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CenterScreen">
+      <MemberSignature Language="C#" Value="CenterScreen" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormStartPosition CenterScreen = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormStartPosition.CenterScreen" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormStartPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formulário é centralizado na exibição atual e tem as dimensões especificadas no tamanho do formulário.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Manual">
+      <MemberSignature Language="C#" Value="Manual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormStartPosition Manual = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormStartPosition.Manual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormStartPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A posição do formulário é determinada pela propriedade <see cref="P:System.Windows.Forms.Control.Location" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsDefaultBounds">
+      <MemberSignature Language="C#" Value="WindowsDefaultBounds" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormStartPosition WindowsDefaultBounds = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormStartPosition.WindowsDefaultBounds" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormStartPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formulário é posicionado no local padrão do Windows e tem os limites determinados pelo padrão do Windows.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowsDefaultLocation">
+      <MemberSignature Language="C#" Value="WindowsDefaultLocation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.FormStartPosition WindowsDefaultLocation = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.FormStartPosition.WindowsDefaultLocation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.FormStartPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O formulário é posicionado no local padrão do Windows e tem as dimensões especificadas no tamanho do formulário.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

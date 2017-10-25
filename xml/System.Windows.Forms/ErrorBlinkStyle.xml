@@ -1,0 +1,82 @@
+<Type Name="ErrorBlinkStyle" FullName="System.Windows.Forms.ErrorBlinkStyle">
+  <TypeSignature Language="C#" Value="public enum ErrorBlinkStyle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorBlinkStyle extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ErrorBlinkStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica constantes que indica quando o ícone de erro, fornecido por um <see cref="T:System.Windows.Forms.ErrorProvider" />, deve piscar para alertar o usuário que ocorreu um erro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada por <xref:System.Windows.Forms.ErrorProvider>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Windows.Forms.ErrorProvider> classe para notificar o usuário de um erro de entrada de dados. O exemplo cria um <xref:System.Windows.Forms.Form> que contém um <xref:System.Windows.Forms.TextBox> controle, uma <xref:System.Windows.Forms.NumericUpDown> controle e um <xref:System.Windows.Forms.ComboBox> controlar cada validando seu conteúdo e um <xref:System.Windows.Forms.ErrorProvider> para cada controle. O exemplo define o erro opções de ícone usando o <xref:System.Windows.Forms.ErrorProvider.BlinkRate%2A> e <xref:System.Windows.Forms.ErrorProvider.BlinkStyle%2A> propriedades e o <xref:System.Windows.Forms.ErrorProvider.SetIconAlignment%2A> e <xref:System.Windows.Forms.ErrorProvider.SetIconPadding%2A> métodos. O <xref:System.Windows.Forms.ErrorProvider.SetError%2A> método é chamado com ou sem o texto de erro apropriado durante um controle <xref:System.Windows.Forms.Control.Validated> eventos, dependendo do conteúdo no controle.  
+  
+ [!code-cpp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CPP/errorproviderexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/CS/errorproviderexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ErrorProvider#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ErrorProvider/VB/errorproviderexample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AlwaysBlink">
+      <MemberSignature Language="C#" Value="AlwaysBlink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorBlinkStyle AlwaysBlink = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorBlinkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sempre piscam quando o ícone de erro é exibido pela primeira vez, ou quando uma cadeia de caracteres de descrição de erro é definida para o controle e o ícone de erro já é exibido.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkIfDifferentError">
+      <MemberSignature Language="C#" Value="BlinkIfDifferentError" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorBlinkStyle BlinkIfDifferentError = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorBlinkStyle.BlinkIfDifferentError" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorBlinkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Pisca quando o ícone já é exibido e uma nova cadeia de caracteres de erro é definida para o controle.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NeverBlink">
+      <MemberSignature Language="C#" Value="NeverBlink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ErrorBlinkStyle NeverBlink = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ErrorBlinkStyle.NeverBlink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ErrorBlinkStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nunca pisca o ícone de erro.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

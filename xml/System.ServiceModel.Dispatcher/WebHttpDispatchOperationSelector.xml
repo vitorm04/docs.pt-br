@@ -1,0 +1,179 @@
+<Type Name="WebHttpDispatchOperationSelector" FullName="System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector">
+  <TypeSignature Language="C#" Value="public class WebHttpDispatchOperationSelector : System.ServiceModel.Dispatcher.IDispatchOperationSelector" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebHttpDispatchOperationSelector extends System.Object implements class System.ServiceModel.Dispatcher.IDispatchOperationSelector" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.Dispatcher.IDispatchOperationSelector</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O seletor de operação que oferece suporte ao modelo de programação da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> despacha chamadas de método com base na correspondência de identificador de URI (Uniform Resource) para uma <xref:System.UriTemplateTable>. Se várias correspondências forem encontradas no <xref:System.UriTemplateTable>, expedição é feita com o método HTTP.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebHttpDispatchOperationSelector ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebHttpDispatchOperationSelector (System.ServiceModel.Description.ServiceEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Description.ServiceEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector.#ctor(System.ServiceModel.Description.ServiceEndpoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="System.ServiceModel.Description.ServiceEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">O ponto de extremidade de serviço.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector" /> com o ponto de extremidade especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUriTemplate">
+      <MemberSignature Language="C#" Value="public virtual UriTemplate GetUriTemplate (string operationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.UriTemplate GetUriTemplate(string operationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector.GetUriTemplate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriTemplate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">A operação.</param>
+        <summary>Obtém o <see cref="T:System.UriTemplate" /> associado com o nome da operação especificada.</summary>
+        <returns>O <see cref="T:System.UriTemplate" /> para a operação especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpOperationNamePropertyName">
+      <MemberSignature Language="C#" Value="public const string HttpOperationNamePropertyName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string HttpOperationNamePropertyName" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector.HttpOperationNamePropertyName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O nome da propriedade na mensagem de solicitação que fornece o nome da operação selecionada para a solicitação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HttpOperationSelectorUriMatchedPropertyName">
+      <MemberSignature Language="C#" Value="public const string HttpOperationSelectorUriMatchedPropertyName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string HttpOperationSelectorUriMatchedPropertyName" />
+      <MemberSignature Language="DocId" Value="F:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector.HttpOperationSelectorUriMatchedPropertyName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres usada como chave para armazenar o valor que indica se uma chamada para uma operação de serviço foi correspondida pelo URI, mas não pelo método HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Dois erros diferentes podem ocorrer ao chamar uma operação de serviço: "Ponto de extremidade/URI 404 não encontrado" e "405 método não permitido". Essa cadeia de caracteres e seu valor booliano associado permitem que o modelo de serviço diferenciar entre esses dois erros. O erro de "ponto de extremidade 404/URI" ocorre quando um URI inválido é usado. O erro "405 método não permitido" ocorre quando é usado um URI válido, mas o método HTTP não era válido para o URI.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectOperation">
+      <MemberSignature Language="C#" Value="public string SelectOperation (ref System.ServiceModel.Channels.Message message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string SelectOperation(class System.ServiceModel.Channels.Message&amp; message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector.SelectOperation(System.ServiceModel.Channels.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> objeto enviado para invocar uma operação de serviço.</param>
+        <summary>Seleciona a operação de serviço para chamar.</summary>
+        <returns>O nome da operação de serviço para chamar.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectOperation">
+      <MemberSignature Language="C#" Value="protected virtual string SelectOperation (ref System.ServiceModel.Channels.Message message, out bool uriMatched);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string SelectOperation(class System.ServiceModel.Channels.Message&amp; message, [out] bool&amp; uriMatched) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector.SelectOperation(System.ServiceModel.Channels.Message@,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.ServiceModel.Channels.Message&amp;" RefType="ref" />
+        <Parameter Name="uriMatched" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="message">O <see cref="T:System.ServiceModel.Channels.Message" /> objeto enviado para invocar uma operação de serviço.</param>
+        <param name="uriMatched">Um valor que especifica se o URI corresponde a uma operação de serviço específico.</param>
+        <summary>Seleciona a operação de serviço para chamar.</summary>
+        <returns>O nome da operação de serviço para chamar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível que um URI de entrada corresponde a uma operação, mas o método HTTP não é permitido pela operação. Nesses casos, o [!INCLUDE[indigo1](~/includes/indigo1-md.md)] tempo de execução retorna 404 (não encontrado) quando `uriMatched` é `false`e retorna 405 (método não permitido) quando `uriMatched` é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

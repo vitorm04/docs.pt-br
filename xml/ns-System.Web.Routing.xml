@@ -1,0 +1,6 @@
+<Namespace Name="System.Web.Routing">
+  <Docs>
+    <summary>O <see cref="N:System.Web.Routing" /> namespace fornece classes que são usadas com a URL de roteamento, que permite que você use as URLs que não são mapeados para um arquivo físico.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

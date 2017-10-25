@@ -1,0 +1,1069 @@
+<Type Name="ToolTask" FullName="Microsoft.Build.Utilities.ToolTask">
+  <TypeSignature Language="C#" Value="public abstract class ToolTask : Microsoft.Build.Utilities.Task, Microsoft.Build.Framework.ICancelableTask" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ToolTask extends Microsoft.Build.Utilities.Task implements class Microsoft.Build.Framework.ICancelableTask, class Microsoft.Build.Framework.ITask" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Utilities.ToolTask" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ICancelableTask</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Quando substituído em um formulário derivado, fornece a funcionalidade de uma tarefa que encapsula uma ferramenta de linha de comando.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe abstrata fornece implementações padrão para os métodos e propriedades de uma tarefa que encapsula uma ferramenta de linha de comando.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:Microsoft.Build.Utilities.ToolTask> que executa [Ilasm.exe (IL Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). As classes <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper> e <xref:Microsoft.Build.Utilities.TaskLoggingHelper> são usadas para gerar as informações necessárias para executar a tarefa.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ToolTask ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Utilities.ToolTask" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ToolTask (System.Resources.ResourceManager taskResources);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.#ctor(System.Resources.ResourceManager)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">O <see cref="T:System.Resources.ResourceManager" /> para recursos da tarefa.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Utilities.ToolTask" /> com o <see cref="T:System.Resources.ResourceManager" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ToolTask (System.Resources.ResourceManager taskResources, string helpKeywordPrefix);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Resources.ResourceManager taskResources, string helpKeywordPrefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.#ctor(System.Resources.ResourceManager,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="taskResources" Type="System.Resources.ResourceManager" />
+        <Parameter Name="helpKeywordPrefix" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="taskResources">O <see cref="T:System.Resources.ResourceManager" /> para recursos da tarefa.</param>
+        <param name="helpKeywordPrefix">A palavra-chave ajuda a ser usado para as mensagens geradas pela tarefa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:Microsoft.Build.Utilities.ToolTask" /> classe com especificado <see cref="T:System.Resources.ResourceManager" /> e um prefixo de palavra-chave da Ajuda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallHostObjectToExecute">
+      <MemberSignature Language="C#" Value="protected virtual bool CallHostObjectToExecute ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CallHostObjectToExecute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.CallHostObjectToExecute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chama o objeto de host para executar o trabalho da tarefa.</summary>
+        <returns>
+          <see langword="true" />Se o método foi successfule; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public virtual void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela o processo de execução da tarefa, fazendo a fechar satisfatoriamente, em seguida, após um curto período, forçar o encerramento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTempFile">
+      <MemberSignature Language="C#" Value="protected void DeleteTempFile (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void DeleteTempFile(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.DeleteTempFile(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">O nome do arquivo temporário para excluir.</param>
+        <summary>Exclui o arquivo temporário especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a operação de exclusão falhar por algum motivo (como se um arquivo está protegido pelo software antivírus), em seguida, esse método registra um aviso em vez de gerar uma exceção, o que causa a compilação falhar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EchoOff">
+      <MemberSignature Language="C#" Value="public bool EchoOff { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EchoOff" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.EchoOff" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o eco de linha de comando é desativado.</summary>
+        <value>True quando a linha de comando echo está desativado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ MSBuild desativa o eco de linha de comando, passando /Q na linha de comando cmd.exe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentOverride">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.Specialized.StringDictionary EnvironmentOverride { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringDictionary EnvironmentOverride" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Use EnvironmentVariables property")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto de pares de nome-valor de variável de ambiente. Projetado para ser substituído em uma classe de tarefa personalizada (derivada da ToolTask) para retornar um conjunto de variáveis de ambiente nova ou alterada para criar o contexto de execução da ferramenta associada.</summary>
+        <value>Retorna um conjunto de variáveis de ambiente. Cada chave de dicionário é o nome da variável de ambiente para substituir e o valor de dicionário é o valor a ser definido para aquela variável de ambiente. A implementação padrão de EnvironmentOverride retorna null.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método ExecuteTool passa essas variáveis de ambiente para StartInfo do processo no qual a ferramenta é executada. As variáveis de ambiente não são incluídas no dicionário EnvironmentOverride são herdadas do processo no qual o método ExecuteTool é executado.  
+  
+   
+  
+## Examples  
+  
+```  
+using System;  
+using Microsoft.Build.Utilities;  
+using System.Collections.Specialized;  
+  
+/// <summary>  
+/// CustomToolTask overrides the EnvironmentOverride property of ToolTask to add a directory  
+/// to the Path environment variable of the process being executed  
+/// </summary>  
+abstract class CustomToolTask : ToolTask  
+{  
+      protected override StringDictionary EnvironmentOverride  
+      {  
+            get  
+            {  
+                  string newPath = Environment.GetEnvironmentVariable("Path", EnvironmentVariableTarget.Process) + @";C:\MyDirectory";  
+                  StringDictionary result = new StringDictionary();  
+                  result.Add("Path", newPath);  
+                  return result;  
+            }  
+      }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnvironmentVariables">
+      <MemberSignature Language="C#" Value="public string[] EnvironmentVariables { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] EnvironmentVariables" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Matriz de pares separados equals de variáveis de ambiente que devem ser passados para o executável gerado, além (ou substituindo seletivamente) o bloco de ambiente regular.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usando isso, em vez de EnvironmentOverride como que leva um StringDictionary, que não pode ser definido de um projeto do MSBuild.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o arquivo de exectuable com os parâmetros de tarefa especificada.</summary>
+        <returns>
+          <see langword="true" />Se a tarefa é executada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteTool">
+      <MemberSignature Language="C#" Value="protected virtual int ExecuteTool (string pathToTool, string responseFileCommands, string commandLineCommands);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 ExecuteTool(string pathToTool, string responseFileCommands, string commandLineCommands) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ExecuteTool(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToTool" Type="System.String" />
+        <Parameter Name="responseFileCommands" Type="System.String" />
+        <Parameter Name="commandLineCommands" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathToTool">O caminho para o arquivo executável.</param>
+        <param name="responseFileCommands">Os argumentos de linha de comando para colocar no arquivo. rsp.</param>
+        <param name="commandLineCommands">Os argumentos de linha de comando para passar diretamente para o arquivo executável.</param>
+        <summary>Cria um arquivo de resposta (. rsp) temporoary e executa o arquivo executável.</summary>
+        <returns>O código de saída retornado do arquivo executável. Se a tarefa de log erros, mas o executável retornou um código de saída 0, esse método retornará -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExitCode">
+      <MemberSignature Language="C#" Value="public int ExitCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ExitCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ExitCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Output</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de saída retornado do arquivo executável.</summary>
+        <value>O código de saída retornado do arquivo executável. Se a tarefa de log erros, mas o executável retornou um código de saída 0, esse método retornará -1.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCommandLineCommands">
+      <MemberSignature Language="C#" Value="protected virtual string GenerateCommandLineCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GenerateCommandLineCommands() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GenerateCommandLineCommands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor de cadeia de caracteres que contém os argumentos de linha de comando para passar diretamente para o arquivo executável.</summary>
+        <returns>Um valor de cadeia de caracteres que contém os argumentos de linha de comando para passar diretamente para o arquivo executável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado após <xref:Microsoft.Build.Utilities.ToolTask.ValidateParameters%2A> e <xref:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:Microsoft.Build.Utilities.ToolTask> que executa [Ilasm.exe (IL Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). As classes <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper> e <xref:Microsoft.Build.Utilities.TaskLoggingHelper> são usadas para gerar as informações necessárias para executar a tarefa.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFullPathToTool">
+      <MemberSignature Language="C#" Value="protected abstract string GenerateFullPathToTool ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GenerateFullPathToTool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GenerateFullPathToTool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o caminho totalmente qualificado para o arquivo executável.</summary>
+        <returns>O caminho totalmente qualificado para o arquivo executável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna o valor da <xref:Microsoft.Build.Utilities.ToolTask.ToolName%2A> propriedade se a ferramenta está localizada no caminho do sistema.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:Microsoft.Build.Utilities.ToolTask> que executa [Ilasm.exe (IL Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). As classes <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper> e <xref:Microsoft.Build.Utilities.TaskLoggingHelper> são usadas para gerar as informações necessárias para executar a tarefa.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateResponseFileCommands">
+      <MemberSignature Language="C#" Value="protected virtual string GenerateResponseFileCommands ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GenerateResponseFileCommands() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GenerateResponseFileCommands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor de cadeia de caracteres que contém os argumentos de linha de comando para adicionar o arquivo de resposta (. rsp) antes de executar o arquivo executável.</summary>
+        <returns>um valor de cadeia de caracteres que contém os argumentos de linha de comando para adicionar o arquivo de resposta (. rsp) antes de executar o arquivo executável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado após <xref:Microsoft.Build.Utilities.ToolTask.ValidateParameters%2A> e <xref:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProcessStartInfo">
+      <MemberSignature Language="C#" Value="protected System.Diagnostics.ProcessStartInfo GetProcessStartInfo (string pathToTool, string commandLineCommands, string responseFileSwitch);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Diagnostics.ProcessStartInfo GetProcessStartInfo(string pathToTool, string commandLineCommands, string responseFileSwitch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GetProcessStartInfo(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.ProcessStartInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathToTool" Type="System.String" />
+        <Parameter Name="commandLineCommands" Type="System.String" />
+        <Parameter Name="responseFileSwitch" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathToTool">O caminho para a ferramenta.</param>
+        <param name="commandLineCommands">Os comandos de linha de comando.</param>
+        <param name="responseFileSwitch">A opção de arquivo de resposta.</param>
+        <summary>Inicializa as informações necessárias para gerar o processo de executar a ferramenta.</summary>
+        <returns>As informações necessárias para iniciar o processo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResponseFileSwitch">
+      <MemberSignature Language="C#" Value="protected virtual string GetResponseFileSwitch (string responseFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetResponseFileSwitch(string responseFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GetResponseFileSwitch(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="responseFilePath">O caminho completo para o arquivo. rsp temporário.</param>
+        <summary>Retorna que a opção de linha de comando usada pelo arquivo executável para especificar um arquivo de resposta (. rsp).</summary>
+        <returns>A opção de linha de comando usada pelo arquivo executável para especificar um arquivo de resposta (. rsp).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente se <xref:Microsoft.Build.Utilities.ToolTask.GenerateResponseFileCommands%2A> retorna um valor de cadeia de caracteres não vazia.  
+  
+ Esse método é chamado após <xref:Microsoft.Build.Utilities.ToolTask.ValidateParameters%2A>, <xref:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution%2A> e <xref:Microsoft.Build.Utilities.ToolTask.GenerateResponseFileCommands%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkingDirectory">
+      <MemberSignature Language="C#" Value="protected virtual string GetWorkingDirectory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetWorkingDirectory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.GetWorkingDirectory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o diretório no qual executar o arquivo executável.</summary>
+        <returns>O diretório no qual executar o arquivo executável ou uma referência nula (<see langword="Nothing" /> em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]) se o arquivo executável deve ser executado no diretório atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é um método em vez de uma propriedade para que as classes derivadas (como Exec) podem escolher para expor uma propriedade pública de WorkingDirectory e seria confuso tem duas propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTaskExecutionErrors">
+      <MemberSignature Language="C#" Value="protected virtual bool HandleTaskExecutionErrors ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HandleTaskExecutionErrors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.HandleTaskExecutionErrors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula erros de execução gerados pelo arquivo executável.</summary>
+        <returns>
+          <see langword="true" />Se o método for executado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado somente se o arquivo executável retorna um código de saída diferente de zero.  
+  
+ O valor de retorno desse método é usado como o valor de retorno da tarefa.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasLoggedErrors">
+      <MemberSignature Language="C#" Value="protected virtual bool HasLoggedErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasLoggedErrors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.HasLoggedErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Se este ToolTask registrou os erros</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeHostObject">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype Microsoft.Build.Utilities.HostObjectInitializationStatus InitializeHostObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.InitializeHostObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Utilities.HostObjectInitializationStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o objeto de host da tarefa.</summary>
+        <returns>O <see cref="T:Microsoft.Build.Utilities.HostObjectInitializationStatus" /> do objeto de host.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogEventsFromTextOutput">
+      <MemberSignature Language="C#" Value="protected virtual void LogEventsFromTextOutput (string singleLine, Microsoft.Build.Framework.MessageImportance messageImportance);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LogEventsFromTextOutput(string singleLine, valuetype Microsoft.Build.Framework.MessageImportance messageImportance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.LogEventsFromTextOutput(System.String,Microsoft.Build.Framework.MessageImportance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="singleLine" Type="System.String" />
+        <Parameter Name="messageImportance" Type="Microsoft.Build.Framework.MessageImportance" />
+      </Parameters>
+      <Docs>
+        <param name="singleLine">Uma única linha de texto para o método de análise.</param>
+        <param name="messageImportance">Um valor de <see cref="T:Microsoft.Build.Framework.MessageImportance" /> que indica o nível de prioridade com a qual a mensagem de log.</param>
+        <summary>Analisa uma única linha de texto para identificar quaisquer erros ou avisos em formato canônico.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogPathToTool">
+      <MemberSignature Language="C#" Value="protected virtual void LogPathToTool (string toolName, string pathToTool);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LogPathToTool(string toolName, string pathToTool) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.LogPathToTool(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toolName" Type="System.String" />
+        <Parameter Name="pathToTool" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="toolName">O nome do arquivo executável.</param>
+        <param name="pathToTool">O caminho para o arquivo executável.</param>
+        <summary>Registra o nome da ferramenta e o caminho em todos os agentes de log registrados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogStandardErrorAsError">
+      <MemberSignature Language="C#" Value="public bool LogStandardErrorAsError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LogStandardErrorAsError" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Todas as mensagens recebidas no fluxo de erro padrão devem ser registradas como erros.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogToolCommand">
+      <MemberSignature Language="C#" Value="protected virtual void LogToolCommand (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void LogToolCommand(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.LogToolCommand(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem descritiva para fornecer os agentes de log, geralmente a linha de comando e comutadores.</param>
+        <summary>Registra o ponto de partida da execução de todos os agentes de log registrados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseFileEncoding">
+      <MemberSignature Language="C#" Value="protected virtual System.Text.Encoding ResponseFileEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding ResponseFileEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ResponseFileEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Text.Encoding" /> do arquivo de resposta.</summary>
+        <value>O <see cref="T:System.Text.Encoding" /> do arquivo de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A codificação é <xref:System.Text.Encoding.UTF8%2A> por padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseFileEscape">
+      <MemberSignature Language="C#" Value="protected virtual string ResponseFileEscape (string responseString);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string ResponseFileEscape(string responseString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ResponseFileEscape(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="responseString">A cadeia de caracteres de resposta.</param>
+        <summary>Método substituível para escapar o conteúdo do arquivo de resposta.</summary>
+        <returns>Retorna a cadeia de caracteres de resposta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SkipTaskExecution">
+      <MemberSignature Language="C#" Value="protected virtual bool SkipTaskExecution ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool SkipTaskExecution() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.SkipTaskExecution" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se a execução da tarefa deve ser ignorada.</summary>
+        <returns>
+          <see langword="true" />para ignorar a execução da tarefa; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado após <xref:Microsoft.Build.Utilities.ToolTask.ValidateParameters%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardErrorEncoding">
+      <MemberSignature Language="C#" Value="protected virtual System.Text.Encoding StandardErrorEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding StandardErrorEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Text.Encoding" /> do fluxo de erro padrão da tarefa.</summary>
+        <value>O <see cref="T:System.Text.Encoding" /> do arquivo de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída com base no console usa a página de código OEM do sistema atual. Observe que nós não devem usar OutputEncoding aqui como processos executada realmente não tem muito o que fazer com nossa janela do console (e também OutputEncoding não retorna a página de código OEM se o aplicativo em execução que hospeda o MSBuild não é um aplicativo de console).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardErrorImportance">
+      <MemberSignature Language="C#" Value="public string StandardErrorImportance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StandardErrorImportance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorImportance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O parâmetro de tarefa: Importância com a qual o texto de log do fluxo de erro padrão.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardErrorImportanceToUse">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Framework.MessageImportance StandardErrorImportanceToUse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MessageImportance StandardErrorImportanceToUse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorImportanceToUse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a importância real no qual erro padrão de mensagens serão registradas.</summary>
+        <value>Retorna a importância real no qual erro padrão de mensagens serão registradas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardErrorLoggingImportance">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.Build.Framework.MessageImportance StandardErrorLoggingImportance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MessageImportance StandardErrorLoggingImportance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardErrorLoggingImportance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:Microsoft.Build.Framework.MessageImportance" /> com a qual o log de erros.</summary>
+        <value>O <see cref="T:Microsoft.Build.Framework.MessageImportance" /> com a qual o log de erros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputEncoding">
+      <MemberSignature Language="C#" Value="protected virtual System.Text.Encoding StandardOutputEncoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding StandardOutputEncoding" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputEncoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Text.Encoding" /> do fluxo de saída padrão da tarefa.</summary>
+        <value>O <see cref="T:System.Text.Encoding" /> do arquivo de resposta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a saída com base no console usa a página de código OEM do sistema atual. Observe que nós não devem usar OutputEncoding aqui como processos executada realmente não tem muito o que fazer com nossa janela do console (e também OutputEncoding não retorna a página de código OEM se o aplicativo em execução que hospeda o MSBuild não é um aplicativo de console).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputImportance">
+      <MemberSignature Language="C#" Value="public string StandardOutputImportance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StandardOutputImportance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O parâmetro de tarefa: Importância com a qual o texto de log do fluxo de saída do padrão.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputImportanceToUse">
+      <MemberSignature Language="C#" Value="protected Microsoft.Build.Framework.MessageImportance StandardOutputImportanceToUse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MessageImportance StandardOutputImportanceToUse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputImportanceToUse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a importância real no qual padrão de mensagens será registrado.</summary>
+        <value>Retorna a importância real no qual padrão de mensagens será registrado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardOutputLoggingImportance">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.Build.Framework.MessageImportance StandardOutputLoggingImportance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.MessageImportance StandardOutputLoggingImportance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.StandardOutputLoggingImportance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.MessageImportance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:Microsoft.Build.Framework.MessageImportance" /> com a qual o log de erros.</summary>
+        <value>O <see cref="T:Microsoft.Build.Framework.MessageImportance" /> com a qual o log de erros.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskProcessTerminationTimeout">
+      <MemberSignature Language="C#" Value="protected int TaskProcessTerminationTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TaskProcessTerminationTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.TaskProcessTerminationTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um tempo limite ao aguardar uma tarefa seja encerrado antes de encerrá-lo. Em milissegundos.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public virtual int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de tempo após o qual a tarefa executável é encerrada.</summary>
+        <value>O tempo limite, em milissegundos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolCanceled">
+      <MemberSignature Language="C#" Value="protected System.Threading.ManualResetEvent ToolCanceled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.ManualResetEvent ToolCanceled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolCanceled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.ManualResetEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado para sinalizar quando uma ferramenta foi cancelada.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolExe">
+      <MemberSignature Language="C#" Value="public virtual string ToolExe { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolExe" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolExe" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Projetos podem definir esta opção para substituir o nome da ferramenta uma tarefa. Tarefas podem substituir isso para evitar que isso.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolName">
+      <MemberSignature Language="C#" Value="protected abstract string ToolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do arquivo executável para ser executado.</summary>
+        <value>O nome do arquivo executável para ser executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:Microsoft.Build.Utilities.ToolTask> que executa [Ilasm.exe (IL Assembler)](~/docs/framework/tools/ilasm-exe-il-assembler.md). As classes <xref:Microsoft.Build.Utilities.CommandLineBuilder>, <xref:Microsoft.Build.Utilities.ToolLocationHelper> e <xref:Microsoft.Build.Utilities.TaskLoggingHelper> são usadas para gerar as informações necessárias para executar a tarefa.  
+  
+ [!code-csharp[msbuild_ToolTask#1](~/samples/snippets/csharp/VS_Snippets_Misc/msbuild_ToolTask/CS/ILAsm.cs#1)]
+ [!code-vb[msbuild_ToolTask#1](~/samples/snippets/visualbasic/VS_Snippets_Misc/msbuild_ToolTask/VB/ILAsm.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToolPath">
+      <MemberSignature Language="C#" Value="public string ToolPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToolPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.ToolPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho do arquivo executável para ser executado.</summary>
+        <value>O caminho do arquivo a ser executado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCommandProcessor">
+      <MemberSignature Language="C#" Value="public bool UseCommandProcessor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCommandProcessor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.UseCommandProcessor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma opção que especifica se a tarefa da ferramenta criará um arquivo em lotes para a linha de comando e execute que usando o processador de comando, em vez de executar o comando diretamente.</summary>
+        <value>Se for true, a tarefa com a ferramenta criará um arquivo em lotes para a linha de comando e executará que usando o processador de comandos. Se false a tarefa da ferramenta executará o comando diretamente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateParameters">
+      <MemberSignature Language="C#" Value="protected virtual bool ValidateParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool ValidateParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Utilities.ToolTask.ValidateParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica se todos os paratmeters de tarefa são válidos.</summary>
+        <returns>
+          <see langword="true" />Se todos os parâmetros da tarefa são válidos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YieldDuringToolExecution">
+      <MemberSignature Language="C#" Value="public bool YieldDuringToolExecution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool YieldDuringToolExecution" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a tarefa gerará o nó durante a execução da ferramenta.</summary>
+        <value>True quando a tarefa gerará o nó durante a execução da ferramenta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

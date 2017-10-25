@@ -1,0 +1,110 @@
+<Type Name="CustomProviderDataAttribute" FullName="System.Web.Profile.CustomProviderDataAttribute">
+  <TypeSignature Language="C#" Value="public sealed class CustomProviderDataAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit CustomProviderDataAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Profile.CustomProviderDataAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma cadeia de caracteres de dados personalizados para o provedor para uma propriedade de perfil.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.CustomProviderDataAttribute> classe é usada para fornecer uma cadeia de caracteres de dados com uma propriedade de perfil para um provedor de perfil personalizado. A cadeia de caracteres de dados personalizada pode ser definida como qualquer valor de cadeia de caracteres e é definida usando o `customProviderData` atributo do elemento de configuração para adicionar propriedades de perfil. Se o `customProviderData` atributo é definido, o valor é colocado no <xref:System.Configuration.SettingsProperty.Attributes%2A> coleção para a propriedade e é indexado com o nome "CustomProviderData".  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomProviderDataAttribute (string customProviderData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string customProviderData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.CustomProviderDataAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="customProviderData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="customProviderData">A cadeia de caracteres de dados personalizados para fornecer ao provedor.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Web.Profile.CustomProviderDataAttribute" /> classe e especifica uma cadeia de caracteres de dados personalizados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.CustomProviderDataAttribute> classe é usada para fornecer uma cadeia de caracteres de dados com uma propriedade de perfil para um provedor de perfil personalizado. A cadeia de caracteres de dados personalizada pode ser definida como qualquer valor de cadeia de caracteres e é definida usando o `customProviderData` atributo do elemento de configuração para adicionar propriedades de perfil. Se o `customProviderData` atributo é definido, o valor é colocado no <xref:System.Configuration.SettingsProperty.Attributes%2A> coleção para a propriedade e é indexado com o nome "CustomProviderData".  
+  
+ Este construtor é usado o .NET Framework e não se destina a ser chamado no código do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomProviderData">
+      <MemberSignature Language="C#" Value="public string CustomProviderData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CustomProviderData" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Profile.CustomProviderDataAttribute.CustomProviderData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres de dados personalizados para o provedor de propriedade de perfil.</summary>
+        <value>Uma cadeia de caracteres de dados personalizados para o provedor de propriedade de perfil. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Profile.CustomProviderDataAttribute.CustomProviderData%2A> o valor da propriedade é definido usando o `customProviderData` atributo do elemento de configuração para adicionar propriedades de perfil. O <xref:System.Web.Profile.CustomProviderDataAttribute.CustomProviderData%2A> propriedade pode ser definida como qualquer valor de cadeia de caracteres a ser usado pelo provedor de perfil para a propriedade. Se o `customProviderData` atributo é definido, o valor é colocado no <xref:System.Configuration.SettingsProperty.Attributes%2A> coleção para a propriedade e é indexado com o nome "CustomProviderData".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Profile.CustomProviderDataAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="P:System.Web.Profile.CustomProviderDataAttribute.CustomProviderData" /> propriedade é definida como o valor padrão.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="P:System.Web.Profile.CustomProviderDataAttribute.CustomProviderData" /> propriedade é definida como o valor padrão; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para o <xref:System.Web.Profile.CustomProviderDataAttribute.CustomProviderData%2A> é de propriedade `null`, ou uma cadeia de caracteres vazia para propriedades de perfil do tipo `String`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

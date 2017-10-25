@@ -1,0 +1,170 @@
+<Type Name="SecurityRoleAttribute" FullName="System.EnterpriseServices.SecurityRoleAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SecurityRoleAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SecurityRoleAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.SecurityRoleAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma função para um aplicativo ou componente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.EnterpriseServices.SecurityRoleAttribute> para adicionar funções para um aplicativo e associá-los a componentes. Quando <xref:System.EnterpriseServices.SecurityRoleAttribute> é aplicado a um assembly como um todo, ele garante que a função existe na configuração do aplicativo (catálogo do COM+). Você pode adicionar os membros da função usando o Gerenciador de COM+.  
+  
+ Quando aplicado a um componente, o <xref:System.EnterpriseServices.SecurityRoleAttribute> assegura que a função existe na configuração do aplicativo e associa o componente de destino com a função.  
+  
+ Por padrão, as funções criadas não têm nenhum membro. Se o <xref:System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess%2A> está definida como `true`, esse grupo do usuário é adicionado automaticamente à função. Isso é ideal para as funções de tipo de acesso que recebem controle mínimo sobre o sistema.  
+  
+ Funções de segurança podem ser especificadas no nível do componente, por interface e método. Assim como acontece com outros atributos de método, a configuração de segurança não estiver sendo compartilhada entre a definição de interface e a implementação do método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse atributo para associar uma função um assembly que contém <xref:System.EnterpriseServices.ServicedComponent> classes.  
+  
+ [!code-cpp[EnterpriseServices_Security#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#3)]
+ [!code-csharp[EnterpriseServices_Security#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#3)]
+ [!code-vb[EnterpriseServices_Security#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.SecurityRoleAttribute" /> classe e define o <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.Role" /> propriedade.</summary>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityRoleAttribute (string role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.SecurityRoleAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="role">Uma função de segurança para o aplicativo, componente, interface ou método.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.SecurityRoleAttribute" /> classe e define o <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.Role" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse atributo para associar uma função um assembly que contém <xref:System.EnterpriseServices.ServicedComponent> classes.  
+  
+ [!code-cpp[EnterpriseServices_Security#3](~/samples/snippets/cpp/VS_Snippets_Remoting/EnterpriseServices_Security/CPP/employeeinformation.cpp#3)]
+ [!code-csharp[EnterpriseServices_Security#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Security/CS/employeeinformation.cs#3)]
+ [!code-vb[EnterpriseServices_Security#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServices_Security/VB/employeeinformation.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SecurityRoleAttribute (string role, bool everyone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string role, bool everyone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.SecurityRoleAttribute.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="role" Type="System.String" />
+        <Parameter Name="everyone" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="role">Uma função de segurança para o aplicativo, componente, interface ou método.</param>
+        <param name="everyone">
+          <see langword="true" />para exigir que o role recém-criado tem todos grupo de usuários é adicionado como um usuário; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.SecurityRoleAttribute" /> classe e define o <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.Role" /> e <see cref="P:System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess" /> propriedades.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityRoleAttribute.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição da função.</summary>
+        <value>A descrição para a função.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public string Role { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Role" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityRoleAttribute.Role" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a função de segurança.</summary>
+        <value>A função de segurança aplicada a um aplicativo, componente, interface ou método.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEveryoneAccess">
+      <MemberSignature Language="C#" Value="public bool SetEveryoneAccess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SetEveryoneAccess" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.SecurityRoleAttribute.SetEveryoneAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Define um valor que indica se deseja adicionar todos grupo de usuário como um usuário.</summary>
+        <value>
+          <see langword="true" />para exigir que uma função recém-criada têm todos grupo de usuários é adicionado como um usuário (funções que já existem no aplicativo não são modificadas); Caso contrário, <see langword="false" /> para suprimir a adição de todos os usuário grupo como um usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como `false` para suprimir a adição de todos os usuário grupo como um usuário recentemente criadas funções. Defina a propriedade como `true` para exigir que uma função recém-criada tenham todos adicionado como um usuário. Funções que já existem no aplicativo não são modificadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,252 @@
+<Type Name="DisplayColumnAttribute" FullName="System.ComponentModel.DataAnnotations.DisplayColumnAttribute">
+  <TypeSignature Language="C#" Value="public class DisplayColumnAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DisplayColumnAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a coluna que é exibida na tabela referida como uma coluna de chave estrangeira.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma coluna em uma tabela contiver uma chave estrangeira, dados dinâmicos infere o valor de exibição para a coluna da tabela de referência. Por padrão, a primeira coluna da tabela referenciada cujo tipo é a cadeia de caracteres (ou texto) é usada. O <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute> atributo permite que você alterar esse comportamento padrão e especificar uma coluna da tabela pai diferente para usar como a coluna para o campo de chave estrangeiro.  
+  
+ Quando você aplica esse atributo, você deve cumprir as seguintes restrições de uso:  
+  
+-   O atributo só pode ser aplicado a uma classe.  
+  
+-   O atributo pode ser herdado por classes derivadas.  
+  
+-   O atributo pode ser aplicado a apenas uma vez.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute> atributo. O exemplo executa as seguintes tarefas:  
+  
+-   Classes parciais do metadados implementa as tabelas de endereço e o cliente, que são tabelas pai para a tabela CustomerAddress.  
+  
+-   Aplica-se a <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute> de atributo para o `Address` metadados de classe parcial para especificar o seguinte:  
+  
+    -   A coluna City da tabela de endereço (a tabela pai) é exibida como a coluna de chave estrangeira na tabela filho CustomerAddress.  
+  
+    -   A coluna de CEP da tabela de endereço (a tabela pai) é usada para classificar a caixa de seleção de endereço na tabela CustomerAddress filho.  
+  
+    -   A ordem de classificação é definida como crescente.  
+  
+ O exemplo aplica o <xref:System.ComponentModel.DataAnnotations.DisplayColumnAttribute> de atributo para o `Customer` metadados de classe parcial para especificar que a coluna LastName exibido como a coluna de chave estrangeira para a tabela CustomerAddress.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/CS/Address.cs#1)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/VB/Address.vb#1)]  
+  
+ Para compilar o exemplo, você precisará do seguinte:  
+  
+-   Visual Studio 2008 Service Pack 1 ou Visual Developer 2008 Express Edition Service Pack 1.  
+  
+-   O banco de dados de exemplo AdventureWorksLT. Para obter informações sobre como baixar e instalar o banco de dados de exemplo do SQL Server, consulte [Microsoft SQL Server Product Samples: banco de dados](http://go.microsoft.com/fwlink/?LinkId=117483) no site da CodePlex. Certifique-se de que você instale a versão correta do banco de dados de exemplo para a versão do SQL Server que você está executando (SQL Server 2005 ou SQL Server 2008).  
+  
+-   Um controlada por dados de site dinâmico. Isso permite que você criar um contexto de dados para o banco de dados e para criar a classe que contém o campo de dados para personalizar. Para obter mais informações, consulte `Walkthrough: Creating a New Dynamic Data Web Site using Scaffolding`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayColumnAttribute (string displayColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayColumn">O nome da coluna a ser usado como a coluna de exibição.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" /> classe por meio da coluna especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir a coluna pai para exibir em uma página para a tabela filho como a coluna de chave estrangeira.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/CS/Address.cs#3)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/VB/Address.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayColumnAttribute (string displayColumn, string sortColumn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayColumn, string sortColumn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayColumn" Type="System.String" />
+        <Parameter Name="sortColumn" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayColumn">O nome da coluna a ser usado como a coluna de exibição.</param>
+        <param name="sortColumn">O nome da coluna a ser usada para classificação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" /> classe usando colunas de exibição e de classificação especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, a coluna especificada na `sortColumn` será classificado em ordem crescente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DisplayColumnAttribute (string displayColumn, string sortColumn, bool sortDescending);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayColumn, string sortColumn, bool sortDescending) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayColumn" Type="System.String" />
+        <Parameter Name="sortColumn" Type="System.String" />
+        <Parameter Name="sortDescending" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="displayColumn">O nome da coluna a ser usado como a coluna de exibição.</param>
+        <param name="sortColumn">O nome da coluna a ser usada para classificação.</param>
+        <param name="sortDescending">
+          <see langword="true" />Para classificar em ordem decrescente; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.DataAnnotations.DisplayColumnAttribute" /> classe usando a coluna de exibição especificado e a coluna de classificação especificada e a ordem de classificação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como definir a coluna pai para exibir em uma página para a tabela filho como a coluna de chave estrangeira. Ele define o pai de coluna de tabela para classificação e também define a ordem de classificação.  
+  
+ [!code-csharp[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/CS/Address.cs#2)]
+ [!code-vb[System.ComponentModel.DataAnnotations.DisplayColumnAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.ComponentModel.DataAnnotations.DisplayColumnAttribute/VB/Address.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayColumn">
+      <MemberSignature Language="C#" Value="public string DisplayColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayColumn" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.DisplayColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da coluna a ser usado como o campo de exibição.</summary>
+        <value>O nome da coluna de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortColumn">
+      <MemberSignature Language="C#" Value="public string SortColumn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SortColumn" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.SortColumn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da coluna a ser usada para classificação.</summary>
+        <value>O nome da coluna de classificação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortDescending">
+      <MemberSignature Language="C#" Value="public bool SortDescending { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SortDescending" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.DataAnnotations.DisplayColumnAttribute.SortDescending" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Annotations</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.DataAnnotations</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se deve classificar em ordem crescente ou decrescente.</summary>
+        <value>
+          <see langword="true" />Se a coluna será classificada em ordem decrescente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

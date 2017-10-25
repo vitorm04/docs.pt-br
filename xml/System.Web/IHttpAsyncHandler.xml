@@ -1,0 +1,81 @@
+<Type Name="IHttpAsyncHandler" FullName="System.Web.IHttpAsyncHandler">
+  <TypeSignature Language="C#" Value="public interface IHttpAsyncHandler : System.Web.IHttpHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHttpAsyncHandler implements class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.IHttpAsyncHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define o contrato que os objetos manipuladores assíncronos HTTP devem implementar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Web.IHttpAsyncHandler> classe pode ser associada com uma extensão de nome de arquivo ou uma URL em particular por um arquivo de configuração no `httpHandlers` seção de configuração. A infra-estrutura do ASP.NET será, em seguida, criar uma instância e chama o manipulador quando a solicitação correspondente é recebida. Como alternativa, o manipulador pode ser definido em um arquivo. ashx e quando a solicitação correspondente é recebida para o arquivo. ashx que o manipulador será executado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginProcessRequest">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginProcessRequest (System.Web.HttpContext context, AsyncCallback cb, object extraData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginProcessRequest(class System.Web.HttpContext context, class System.AsyncCallback cb, object extraData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IHttpAsyncHandler.BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+        <Parameter Name="cb" Type="System.AsyncCallback" />
+        <Parameter Name="extraData" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um objeto <see cref="T:System.Web.HttpContext" /> que fornece referências aos objetos intrínsecos do servidor (por exemplo, <see langword="Request" />, <see langword="Response" />, <see langword="Session" /> e <see langword="Server" />) usados para atender a solicitações HTTP.</param>
+        <param name="cb">O <see cref="T:System.AsyncCallback" /> a ser chamado quando a chamada de método assíncrono é concluída. Se <c>cb</c> é <see langword="null" />, o delegado não é chamado.</param>
+        <param name="extraData">Quaisquer dados extra necessários para processar a solicitação.</param>
+        <summary>Inicia uma chamada assíncrona para o manipulador HTTP.</summary>
+        <returns>Um <see cref="T:System.IAsyncResult" /> que contém informações sobre o status do processo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndProcessRequest">
+      <MemberSignature Language="C#" Value="public void EndProcessRequest (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndProcessRequest(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.IHttpAsyncHandler.EndProcessRequest(System.IAsyncResult)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">Um <see cref="T:System.IAsyncResult" /> que contém informações sobre o status do processo.</param>
+        <summary>Fornece um método de final do processo assíncrono quando o processo termina.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar <xref:System.Web.IHttpAsyncHandler.EndProcessRequest%2A> para gerar qualquer exceção capturada durante o processo assíncrono.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

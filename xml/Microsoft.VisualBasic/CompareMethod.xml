@@ -1,0 +1,59 @@
+<Type Name="CompareMethod" FullName="Microsoft.VisualBasic.CompareMethod">
+  <TypeSignature Language="C#" Value="public enum CompareMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CompareMethod extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.CompareMethod" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica como comparar cadeias de caracteres ao chamar funções de comparação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chamar funções de comparação, você pode usar o `CompareMethod` enumeração em seu código no lugar dos valores reais. O `Compare` argumento leva o `CompareMethod` membros de enumeração.  
+  
+ Para obter detalhes sobre as comparações de texto e binários, consulte [Option Compare Statement](~/docs/visual-basic/language-reference/statements/option-compare-statement.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Binary">
+      <MemberSignature Language="C#" Value="Binary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CompareMethod Binary = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.CompareMethod.Binary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Executa uma comparação binária. Esse membro é equivalente à constante <see langword="vbBinaryCompare" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="Text" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.VisualBasic.CompareMethod Text = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.VisualBasic.CompareMethod.Text" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.CompareMethod</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Executa uma comparação textual. Esse membro é equivalente à constante <see langword="vbTextCompare" /> do Visual Basic.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

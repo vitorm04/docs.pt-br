@@ -1,0 +1,594 @@
+<Type Name="XamlObjectWriter" FullName="System.Xaml.XamlObjectWriter">
+  <TypeSignature Language="C#" Value="public class XamlObjectWriter : System.Xaml.XamlWriter, System.Xaml.IXamlLineInfoConsumer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlObjectWriter extends System.Xaml.XamlWriter implements class System.Xaml.IXamlLineInfoConsumer" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.XamlObjectWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlWriter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xaml.IXamlLineInfoConsumer</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Cria um grafo de objeto com base em um fluxo de nó XAML de origem.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Write` métodos de <xref:System.Xaml.XamlObjectWriter> implementar um padrão para que o <xref:System.Xaml.XamlObjectWriter> usa o <xref:System.Xaml.XamlWriter> que é definido pelo <xref:System.Xaml.XamlWriter.WriteNode%2A> método. <xref:System.Xaml.XamlWriter.WriteNode%2A>Alterna entre a lógica de `Write` métodos, dependendo de qual nó tipo está na posição atual do leitor.  
+  
+## <a name="scope"></a>Escopo  
+ Um <xref:System.Xaml.XamlObjectWriter> tem um conceito do escopo; o que é, o <xref:System.Xaml.XamlObjectWriter> mantém um ponto conceitual de referência em seu gráfico de objeto de saída. Para um determinado escopo, determinadas operações podem ser válido ou inválido ou produzir um resultado de operação não. Por exemplo, se você chamar <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A> para gravar as diretivas de inicialização em um objeto que já existe como uma instância, a implementação padrão gera uma exceção.  
+  
+ Uma técnica possíveis para controlar o escopo em um personalizado <xref:System.Xaml.XamlObjectWriter> é para alinhar as ações de nó com uma classe ou quadro de pilha. A pilha ou um quadro pode manter controle de push e pop para cada nível de profundidade do modelo de objeto que é inserida ou encerrada enquanto o <xref:System.Xaml.XamlObjectWriter> grava o gráfico de objeto.  
+  
+## <a name="callbacks"></a>Retornos de chamada  
+ Para dar suporte a intermediários e avançados <xref:System.Xaml.XamlObjectWriter> cenários, o mecanismo de gravação de um gráfico de objeto fornece retorno de chamada de pontos de entrada que ocorrem quando um <xref:System.Xaml.XamlObjectWriter> confirma ou está prestes a confirmar determinadas ações. Alguns retornos de chamada estão habilitados nas configurações e não são específicos para o tipo de objeto ou o membro que está sendo gravado; No entanto, as informações de retorno de chamada geralmente estarão disponíveis no contexto ou de eventos são dados que são enviados por meio do retorno de chamada. A seguir está uma lista de retornos de chamada relevantes:  
+  
+-   O retorno de chamada que é declarado pelo <xref:System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler%2A> é invocado quando o escopo vai para um novo objeto e no <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> fase do tempo de vida de objeto para cada objeto criado.  
+  
+-   O retorno de chamada que é declarado pelo <xref:System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler%2A> é invocado quando o escopo vai para um novo objeto e no <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> fase do tempo de vida de objeto para cada objeto criado.  
+  
+-   O retorno de chamada que é declarado pelo <xref:System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler%2A> é invocado quando o escopo é iniciado em um objeto e ocorre quando o primeiro <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A> chamada para esse escopo de objeto é feita, mas ainda não foram confirmada.  
+  
+-   O retorno de chamada que é declarado pelo <xref:System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler%2A> é invocado quando o escopo é iniciado em um objeto e acontece quando o <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> chamada para esse escopo de objeto é feita, mas ainda não foram confirmada.  
+  
+-   O retorno de chamada que é declarado pelo <xref:System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler%2A> é invocado quando <xref:System.Xaml.XamlObjectWriter.OnSetValue%2A> é chamado.  
+  
+## <a name="writing-dictionary-keys"></a>Chaves de dicionário de gravação  
+ A implementação padrão de <xref:System.Xaml.XamlObjectWriter> dá suporte à conversão de tipo em restrições de um <xref:System.Collections.Generic.Dictionary%602> antes do dicionário de conteúdo é adicionado ao gráfico de objeto. Dessa maneira, um dicionário genérico pode ser configurado em tempo de execução por objetos e pode corresponder a genérica relevante `Add` e o comportamento do indexador. No entanto, como implementado para a base de <xref:System.Xaml.XamlObjectWriter>, esse recurso existe somente para a criação do gráfico de objeto da base de <xref:System.Collections.Generic.Dictionary%602> classe e não para classes derivadas de <xref:System.Collections.Generic.Dictionary%602>.  
+  
+## <a name="checks-for-disposed"></a>Verifica se há descartado  
+ Gravadores XAML potencialmente são usados para operações adiadas ou onde é feita uma chamada em uma instância do gravador XAML que foi descartada durante o processo. Várias APIs de <xref:System.Xaml.XamlObjectWriter> poderá gerar <xref:System.ObjectDisposedException> nesses casos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlObjectWriter (System.Xaml.XamlSchemaContext schemaContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.#ctor(System.Xaml.XamlSchemaContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">Um contexto de esquema XAML que é compartilhado com o leitor XAML que fornece mais nós para gravação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlObjectWriter" /> classe usando o contexto do esquema XAML que é usado por um <see cref="T:System.Xaml.XamlReader" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlObjectWriter (System.Xaml.XamlSchemaContext schemaContext, System.Xaml.XamlObjectWriterSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xaml.XamlSchemaContext schemaContext, class System.Xaml.XamlObjectWriterSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.#ctor(System.Xaml.XamlSchemaContext,System.Xaml.XamlObjectWriterSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemaContext" Type="System.Xaml.XamlSchemaContext" />
+        <Parameter Name="settings" Type="System.Xaml.XamlObjectWriterSettings" />
+      </Parameters>
+      <Docs>
+        <param name="schemaContext">Um contexto de esquema XAML que é compartilhado com o leitor XAML que fornece mais nós para gravação.</param>
+        <param name="settings">Um objeto de configurações especificadas determinadas opções para <see cref="T:System.Xaml.XamlObjectWriter" /> comportamento e saída.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xaml.XamlObjectWriter" /> classe usando o contexto que é usado por um <see cref="T:System.Xaml.XamlReader" /> e suas configurações.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="schemaContext" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine todos os quadros possíveis e limpa o gráfico de objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar os recursos gerenciados; Caso contrário, <see langword="false" />.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Xaml.XamlObjectWriter" />e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterBeginInit">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterBeginInit (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterBeginInit(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnAfterBeginInit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para o relatório. O objeto é empacotado em <see cref="T:System.Xaml.XamlObjectEventArgs" /> quando o manipulador é invocado.</param>
+        <summary>Invoca um <see cref="P:System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler" /> método que está associado com <see cref="T:System.Xaml.XamlObjectWriterSettings" /> para este <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterEndInit">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterEndInit (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterEndInit(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnAfterEndInit(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para o relatório. O valor é empacotado em <see cref="T:System.Xaml.XamlObjectEventArgs" /> quando o manipulador é invocado.</param>
+        <summary>Invoca um <see cref="P:System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler" /> método que está associado com <see cref="T:System.Xaml.XamlObjectWriterSettings" /> para este <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAfterProperties">
+      <MemberSignature Language="C#" Value="protected virtual void OnAfterProperties (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAfterProperties(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnAfterProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para o relatório. Isso é empacotado em <see cref="T:System.Xaml.XamlObjectEventArgs" /> quando o manipulador é invocado.</param>
+        <summary>Invoca um <see cref="P:System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler" /> referenciado que está associado ao método <see cref="T:System.Xaml.XamlObjectWriterSettings" /> para este <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBeforeProperties">
+      <MemberSignature Language="C#" Value="protected virtual void OnBeforeProperties (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBeforeProperties(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnBeforeProperties(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor para passar pelo <see cref="T:System.Xaml.XamlObjectEventArgs" /> quando o manipulador é invocado.</param>
+        <summary>Invoca um <see cref="P:System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler" /> referenciado que está associado ao método <see cref="T:System.Xaml.XamlObjectWriterSettings" /> para este <see cref="T:System.Xaml.XamlObjectWriter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSetValue">
+      <MemberSignature Language="C#" Value="protected virtual bool OnSetValue (object eventSender, System.Xaml.XamlMember member, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnSetValue(object eventSender, class System.Xaml.XamlMember member, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.OnSetValue(System.Object,System.Xaml.XamlMember,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventSender" Type="System.Object" />
+        <Parameter Name="member" Type="System.Xaml.XamlMember" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="eventSender">O objeto como a fonte para o manipulador de relatório.</param>
+        <param name="member">O nome da propriedade a ser definida, que é passado para o manipulador como parte do <see cref="T:System.Windows.Markup.XamlSetValueEventArgs" />.</param>
+        <param name="value">O valor para fornecer para a propriedade que é chamada por <c>propriedade</c>. O valor é passado para o manipulador como parte do <see cref="T:System.Windows.Markup.XamlSetValueEventArgs" />.</param>
+        <summary>Invoca um <see cref="P:System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler" /> referenciado que está associado ao método <see cref="T:System.Xaml.XamlObjectWriterSettings" /> para este gravador, contanto que <paramref name="handled" /> na <see cref="T:System.Windows.Markup.XamlSetValueEventArgs" /> dados de evento não são <see langword="true" />.</summary>
+        <returns>Um valor booliano que é definido por qualquer manipulador associado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `SetValue` operação para este gravador XAML tem um manipulador associado (um <xref:System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler%2A> declarado em <xref:System.Xaml.XamlObjectWriterSettings>), esse método cria novos <xref:System.Windows.Markup.XamlSetValueEventArgs> e os passa para o manipulador. O valor de retorno é definido pela leitura de <xref:System.Windows.Markup.XamlSetValueEventArgs.Handled%2A> valor que é passado por meio de dados do evento. Se nenhum manipulador existe e esse método é chamado, a chamada retornará `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public virtual object Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Result" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.Result" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último objeto que foi gravado. Normalmente chamado apenas quando o fluxo do nó é o final e o gráfico de objeto é concluído.</summary>
+        <value>O último objeto gravado, ou <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O uso mais comum de <xref:System.Xaml.XamlObjectWriter.Result%2A> deve chamá-lo somente quando o fluxo do nó é conhecido para ser seu final e o gráfico de objeto for concluído. Caso contrário, o gráfico de objeto poderá ser incompleto e não é útil para a maioria dos cenários de plataforma.  
+  
+ <xref:System.Xaml.XamlObjectWriter.Result%2A>normalmente contém apenas um valor não nulo se ele é chamado imediatamente após uma chamada para <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A>, e se o escopo atual é no membro onde o objeto fornece um valor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootNameScope">
+      <MemberSignature Language="C#" Value="public System.Windows.Markup.INameScope RootNameScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Markup.INameScope RootNameScope" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.RootNameScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Markup.INameScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Markup.INameScope" /> serviço que mantém o namescope XAML para a raiz do nó absoluto do gravador de objeto XAML.</summary>
+        <value>O <see cref="T:System.Windows.Markup.INameScope" /> serviço que mantém o namescope XAML para a raiz atual do gravador de objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade pode vir de contexto de gravador do objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o contexto do esquema XAML ativo.</summary>
+        <value>O contexto do esquema XAML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contexto do esquema XAML é uma fonte de informações necessárias para cenários de gravação do objeto mais práticos. O contexto do esquema XAML influencia a pesquisa de tipo para tipos de backup e contém informações sobre os assemblies onde existem tipos de backup. O contexto do esquema XAML padrão baseia-se em regras de mapeamento de tipo CLR. Estruturas normalmente fornecem seu próprio contexto de esquema XAML para assegurar que os mecanismos de carregamento de assembly correspondem modelos de aplicativo amd programação do framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLineInfo">
+      <MemberSignature Language="C#" Value="public void SetLineInfo (int lineNumber, int linePosition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetLineInfo(int32 lineNumber, int32 linePosition) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.SetLineInfo(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="linePosition" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="lineNumber">O número da linha do leitor.</param>
+        <param name="linePosition">A posição da linha do leitor.</param>
+        <summary>Implementa <see cref="M:System.Xaml.IXamlLineInfoConsumer.SetLineInfo(System.Int32,System.Int32)" /> e fornece informações de linha para exceções.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método de serviço não se destina a ser chamado diretamente no seu código. No entanto, se você estiver criando uma classe derivada de <xref:System.Xaml.XamlObjectWriter> e esperar relatar um contexto em que os números de linha estão disponíveis ou não são úteis, esse método pode ser chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldProvideLineInfo">
+      <MemberSignature Language="C#" Value="public bool ShouldProvideLineInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ShouldProvideLineInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.XamlObjectWriter.ShouldProvideLineInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que informa se um serviço de informações de linha deve fornecer valores e, portanto, também deve chamar o <see cref="M:System.Xaml.IXamlLineInfoConsumer.SetLineInfo(System.Int32,System.Int32)" /> método quando ele é relevante.</summary>
+        <value>
+          <see langword="true" />Se as informações de linha são usadas pelo gravador; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndMember">
+      <MemberSignature Language="C#" Value="public override void WriteEndMember ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndMember() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteEndMember" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o escopo do membro atual e pode gravar o valor de escopo do membro enquanto ela será fechada. O novo escopo torna-se o escopo do objeto pai do membro.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">Falha ao criar o valor do membro de um nó de valor é encontrado entre essa chamada e anterior <see langword="StartMember" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEndObject">
+      <MemberSignature Language="C#" Value="public override void WriteEndObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteEndObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteEndObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o escopo do objeto atual em que o gravador. O novo escopo de objeto se torna o escopo do membro pai.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se este `EndObject` posição escopo está fechando o objeto raiz, o novo escopo de objeto se torna o escopo raiz.  
+  
+ A chamada para <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> talvez ainda não tiver criado o objeto como um membro de objeto pode ser um caminho de inicialização necessária, como texto de inicialização ou parâmetros de inicialização. Para esses casos, a chamada para <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> realmente grava o objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteGetObject">
+      <MemberSignature Language="C#" Value="public override void WriteGetObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteGetObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteGetObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava conceitual <see langword="StartObject" /> para o gráfico de objeto quando o objeto especificado é um valor padrão ou implícito da propriedade pai. O valor implícita vem de informações que são obtidas a partir do contexto do esquema XAML e informações de tipo de backup, em vez de ser especificada como um valor de objeto no conjunto de nós XAML entrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A diferença entre a escrever com <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> e gravar com <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> pode ser visto no gráfico de objeto resultante. <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A>não criar uma instância de um tipo porque o <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> API não tem nenhuma informação para informar o gráfico de objeto do que construir. Em vez disso, o objeto foi criado quando a propriedade pai foi inicializada; para um <xref:System.Xaml.XamlObjectWriter> não precisa construí-lo. Por outro lado, <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> Especifica que uma instância desse tipo deve ser criada e inserida no gráfico do objeto.  
+  
+ Se você considerar o fluxo do nó XAML como uma série de quadros, um <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> é equilibrada para um <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> chamar. Portanto, o número de <xref:System.Xaml.XamlObjectWriter.WriteGetObject%2A> mais <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> chamadas devem ser igual ao número de <xref:System.Xaml.XamlObjectWriter.WriteEndObject%2A> chamadas como parte de uma avaliação completa da gravação do objeto de fluxo do nó XAML.  
+  
+ Conceitual `StartObject` posição de um objeto implícita no gráfico de objeto é necessário porque, embora o valor do objeto é um padrão implícito, esse objeto ainda pode ter membros que precisam ser gravados com base no fluxo do nó XAML. Um cenário típico em que isso ocorre é que quando <xref:System.Xaml.XamlObjectWriter> gravações nós de membro para uma propriedade de coleção e a inicialização de coleção é implícita para criar o objeto que possui a propriedade da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNamespace">
+      <MemberSignature Language="C#" Value="public override void WriteNamespace (System.Xaml.NamespaceDeclaration namespaceDeclaration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteNamespace(class System.Xaml.NamespaceDeclaration namespaceDeclaration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteNamespace(System.Xaml.NamespaceDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="namespaceDeclaration" Type="System.Xaml.NamespaceDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="namespaceDeclaration">A declaração de namespace para gravação.</param>
+        <summary>Define uma declaração de namespace que se aplica ao seguinte escopo de objeto ou escopo do membro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma declaração de namespace pode ser gravada se o escopo atual é um escopo raiz, o escopo do objeto ou o escopo do membro. No entanto, <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A> só pode ser chamado imediatamente antes de uma chamada para um dos seguintes: <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A>, <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A>, ou <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A>. O consecutivas <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A> caso é para gravar várias declarações de namespace ao mesmo nó. Por fim, o <xref:System.Xaml.XamlObjectWriter.WriteStartObject%2A> ou <xref:System.Xaml.XamlObjectWriter.WriteStartMember%2A> deve ser chamado.  
+  
+ <xref:System.Xaml.XamlObjectWriter.WriteNamespace%2A>Não use um `Start` / `End` metáfora. Embora um namespace XAML tem membros no sentido de representação do CLR, os membros são conhecidos e não precisa ser representado como um tipo especial de <xref:System.Xaml.XamlMember> para extensibilidade. Para acessar os valores de uma <xref:System.Xaml.NamespaceDeclaration>, você acessa seu <xref:System.Xaml.NamespaceDeclaration.Namespace%2A> e <xref:System.Xaml.NamespaceDeclaration.Prefix%2A> propriedades.  
+  
+ Uma declaração de namespace pode ter um <xref:System.String.Empty?displayProperty=nameWithType> valor para o prefixo. Um <xref:System.String.Empty?displayProperty=nameWithType> prefixo representa uma declaração de namespace XAML padrão. Não tente usar null para representar o prefixo padrão.  ele gera uma exceção nessa API. Para obter mais informações, consulte <xref:System.Xaml.NamespaceDeclaration>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="namespaceDeclaration" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um componente do <paramref name="namespaceDeclaration" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Xaml.XamlObjectReaderException">Tentativa de gravar um nó de namespace XAML em um escopo inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartMember">
+      <MemberSignature Language="C#" Value="public override void WriteStartMember (System.Xaml.XamlMember property);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartMember(class System.Xaml.XamlMember property) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteStartMember(System.Xaml.XamlMember)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="property" Type="System.Xaml.XamlMember" />
+      </Parameters>
+      <Docs>
+        <param name="property">A propriedade XAML para gravação. Normalmente você obter esse valor de um leitor XAML por meio de fluxo do nó XAML intermediário.</param>
+        <summary>Grava um novo nó de membro para o escopo atual do objeto, e o escopo se torna um novo escopo do membro.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!TIP]
+>  Procure um <xref:System.Xaml.XamlDuplicateMemberException>, que ocorre quando a mesma propriedade XAML é definida duas vezes no XAML de entrada. Em casos simples, como quando a mesma propriedade é definida na sintaxe de atributo e a sintaxe de elemento de propriedade, você pode ver facilmente essa exceção na marcação da entrada. No entanto, podem ocorrer mais casos sutis que são mais difíceis de especiais. Por exemplo, essa exceção pode ocorrer se você definir uma propriedade de conteúdo XAML, se envolver propriedades de ambiente de XAML, e se uma propriedade permite um uso anexável e o uso de uma instância. Nas fases de depuração de desenvolvimento, geralmente você pode localizar essa exceção exibindo a representação de nó XAML intermediária que conecta a marcação de leitura e a gravação de gráfico de objeto.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">
+          <paramref name="property" />has <see cref="P:System.Xaml.XamlMember.IsUnknown" /> set to <see langword="true" />.  
+  
+ -ou-  
+  
+ <see cref="P:System.Xaml.XamlLanguage.UnknownContent" />passado, que indica que o fluxo do nó XAML continha conteúdo de um objeto que não oferece suporte a conteúdo.  
+  
+ -ou-  
+  
+ Tentativa de gravar um membro de início em um escopo inválido.</exception>
+        <exception cref="T:System.Xaml.XamlDuplicateMemberException">
+          <paramref name="property" />Especifica uma propriedade que já explicitamente é definida no escopo do objeto pai.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="property" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteStartObject">
+      <MemberSignature Language="C#" Value="public override void WriteStartObject (System.Xaml.XamlType xamlType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteStartObject(class System.Xaml.XamlType xamlType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteStartObject(System.Xaml.XamlType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xamlType" Type="System.Xaml.XamlType" />
+      </Parameters>
+      <Docs>
+        <param name="xamlType">O tipo para gravação. Normalmente você obter esse valor de um leitor XAML.</param>
+        <summary>Grava um nó de objeto no escopo atual e define o escopo para um novo escopo de objeto.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">Processando uma <see cref="P:System.Xaml.XamlType.IsUnknown" /> de tipo e não é possível criar um objeto.  
+  
+ -ou-  
+  
+ Tentativa de gravar um objeto de início em um escopo inválido.</exception>
+        <exception cref="T:System.Xaml.XamlParseException">Tentativa de gravar um objeto raiz quando o objeto raiz já foi fornecido nas configurações.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="xamlType" /> é <see langword="null" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Se o escopo atual está dentro de uma coleção, um dicionário ou uma matriz, a nova instância deve ser adicionada ao dicionário, coleção ou matriz usando o <see langword="Add" /> método do tipo relevante. Caso contrário, o membro deve ser atribuído para a nova instância.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteValue">
+      <MemberSignature Language="C#" Value="public override void WriteValue (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteValue(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.XamlObjectWriter.WriteValue(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser gravado.</param>
+        <summary>Grava um valor para o escopo do membro atual. Se o escopo atual está dentro de uma coleção, um dicionário ou um objeto de matriz, o valor deve ser adicionado à coleção, dicionário ou matriz.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Xaml.XamlObjectWriterException">Tentativa de gravar um valor em um escopo inválido.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

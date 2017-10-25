@@ -1,0 +1,232 @@
+<Type Name="ValidationError" FullName="System.Activities.Validation.ValidationError">
+  <TypeSignature Language="C#" Value="public class ValidationError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ValidationError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Validation.ValidationError" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma instância de um erro de validação ocorre antes da execução do fluxo de trabalho.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ValidationError.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">As informações sobre o erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Validation.ValidationError" /> classe usando a mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (string message, bool isWarning);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, bool isWarning) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ValidationError.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="isWarning" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro.</param>
+        <param name="isWarning">
+          <see langword="true" />Se o erro é um aviso; Caso contrário, <see langword="false" />.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Validation.ValidationError" /> classe usando a mensagem de erro especificada e a indicação de aviso.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (string message, bool isWarning, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, bool isWarning, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ValidationError.#ctor(System.String,System.Boolean,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="isWarning" Type="System.Boolean" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro.</param>
+        <param name="isWarning">Um indicador se o erro é um aviso.</param>
+        <param name="propertyName">O nome alfanumérico da propriedade que gerou o erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Validation.ValidationError" /> classe usando a mensagem de erro especificada, o indicador de aviso e o nome da propriedade que causou o erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ValidationError (string message, bool isWarning, string propertyName, object sourceDetail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, bool isWarning, string propertyName, object sourceDetail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ValidationError.#ctor(System.String,System.Boolean,System.String,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="isWarning" Type="System.Boolean" />
+        <Parameter Name="propertyName" Type="System.String" />
+        <Parameter Name="sourceDetail" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro.</param>
+        <param name="isWarning">Um indicador se o erro é um aviso.</param>
+        <param name="propertyName">O nome alfanumérico da propriedade que gerou o erro.</param>
+        <param name="sourceDetail">Os detalhes sobre a origem do erro.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Validation.ValidationError" /> classe usando a mensagem de erro especificada, o aviso de indicador, o nome da propriedade e a fonte de detalhe que causou o erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationError.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um identificador alfanumérico exclusivo para o <see cref="T:System.Activities.Activity" /> que é a origem do erro. Esse identificador é exclusivo para cada atividade em um fluxo de trabalho específico.</summary>
+        <value>Um identificador para a atividade que é a origem do erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWarning">
+      <MemberSignature Language="C#" Value="public bool IsWarning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarning" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationError.IsWarning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o erro de validação é um aviso e não um erro.</summary>
+        <value>
+          <see langword="true" />Se o erro de validação é um aviso; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationError.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma mensagem alfanumérica que fornece informações sobre o erro de validação.</summary>
+        <value>Uma mensagem que fornece informações sobre o erro de validação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyName">
+      <MemberSignature Language="C#" Value="public string PropertyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PropertyName" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationError.PropertyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome alfanumérico da propriedade que gerou o erro.</summary>
+        <value>Um nome de propriedade que gerou o erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public System.Activities.Activity Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Activity Source" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationError.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a atividade que é a origem do erro.</summary>
+        <value>Uma atividade que é a origem do erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceDetail">
+      <MemberSignature Language="C#" Value="public object SourceDetail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SourceDetail" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Validation.ValidationError.SourceDetail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os detalhes sobre a origem do erro.</summary>
+        <value>Os detalhes sobre a origem do erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Validation.ValidationError.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converte os nomes de propriedade de erro de validação e valores em uma cadeia de caracteres de mensagem que lista-los.</summary>
+        <returns>Uma representação de cadeia de caracteres do erro de validação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

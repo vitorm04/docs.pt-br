@@ -1,0 +1,346 @@
+<Type Name="DnsEndPoint" FullName="System.Net.DnsEndPoint">
+  <TypeSignature Language="C#" Value="public class DnsEndPoint : System.Net.EndPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DnsEndPoint extends System.Net.EndPoint" />
+  <TypeSignature Language="DocId" Value="T:System.Net.DnsEndPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Primitives</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.EndPoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um ponto de extremidade de rede como um nome de host ou uma representação de cadeia de caracteres de um endereço IP e um número de porta.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint> classe contém um nome de host ou um endereço IP e as informações de porta remota necessitados para um aplicativo para se conectar a um serviço em um host. Combinando o nome do host ou o número de porta e endereço IP de um serviço, o <xref:System.Net.DnsEndPoint> classe formulários uma conexão ponto a um serviço.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DnsEndPoint (string host, int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string host, int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsEndPoint.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="host">O nome do host ou uma representação de cadeia de caracteres do endereço IP.</param>
+        <param name="port">O número da porta associado ao endereço ou 0 para especificar uma porta disponível. <c>porta</c> está na ordem de host.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.DnsEndPoint" /> com o nome do host ou a representação de cadeia de caracteres de um endereço IP e um número da porta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint.%23ctor%28System.String%2CSystem.Int32%29> construtor pode ser usado para inicializar um <xref:System.Net.DnsEndPoint> classe usando um nome de host ou uma cadeia de caracteres que representa um endereço IP e uma porta. Esse construtor define o <xref:System.Net.DnsEndPoint.AddressFamily%2A> propriedade <xref:System.Net.Sockets.AddressFamily.Unknown>.  
+  
+ Ao usar esse construtor com um nome de host em vez de uma representação de cadeia de caracteres de um IP de endereços, a família de endereços do <xref:System.Net.DnsEndPoint> permanecerá <xref:System.Net.Sockets.AddressFamily.Unknown> até mesmo após o uso. O <xref:System.Net.DnsEndPoint.AddressFamily%2A> propriedade de qualquer <xref:System.Net.Sockets.Socket> que é criado por chamadas para o <xref:System.Net.Sockets.Socket.ConnectAsync%2A> método será a família de endereços do primeiro endereço no qual uma conexão pode ser com êxito estabelecida (não necessariamente o primeiro endereço a ser resolvido).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="host" /> contém uma cadeia de caracteres vazia.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="host" /> é um <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> é menor que <see cref="F:System.Net.IPEndPoint.MinPort" />.  
+  
+ -ou-  
+  
+ <paramref name="port" /> é maior que <see cref="F:System.Net.IPEndPoint.MaxPort" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DnsEndPoint (string host, int port, System.Net.Sockets.AddressFamily addressFamily);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string host, int32 port, valuetype System.Net.Sockets.AddressFamily addressFamily) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsEndPoint.#ctor(System.String,System.Int32,System.Net.Sockets.AddressFamily)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="addressFamily" Type="System.Net.Sockets.AddressFamily" />
+      </Parameters>
+      <Docs>
+        <param name="host">O nome do host ou uma representação de cadeia de caracteres do endereço IP.</param>
+        <param name="port">O número da porta associado ao endereço ou 0 para especificar uma porta disponível. <c>porta</c> está na ordem de host.</param>
+        <param name="addressFamily">Um dos valores de <see cref="T:System.Net.Sockets.AddressFamily" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Net.DnsEndPoint" /> classe com a representação de cadeia de caracteres ou nome de host de um endereço IP, um número de porta e uma família de endereços.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint.%23ctor%28System.String%2CSystem.Int32%2CSystem.Net.Sockets.AddressFamily%29> construtor pode ser usado para inicializar um <xref:System.Net.DnsEndPoint> usando um nome de host ou uma cadeia de caracteres que representa um endereço IP, uma porta e uma família de endereços de classe.  
+  
+ Ao usar o construtor com um nome de host em vez de uma representação de cadeia de caracteres de um endereço IP, a família de endereços restringe a resolução DNS preferir endereços do valor de família de endereço especificado. Ao usar o construtor com a família de endereços especificada como <xref:System.Net.Sockets.AddressFamily.Unknown>, a família de endereços do <xref:System.Net.DnsEndPoint> permanecerá <xref:System.Net.Sockets.AddressFamily.Unknown> até mesmo após o uso. O <xref:System.Net.DnsEndPoint.AddressFamily%2A> propriedade de qualquer <xref:System.Net.Sockets.Socket> que é criado por chamadas para o <xref:System.Net.Sockets.Socket.ConnectAsync%2A> método será a família de endereços do primeiro endereço no qual uma conexão pode ser com êxito estabelecida (não necessariamente o primeiro endereço a ser resolvido).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="host" /> contém uma cadeia de caracteres vazia.  
+  
+ -ou-  
+  
+ <paramref name="addressFamily" /> é <see cref="F:System.Net.Sockets.AddressFamily.Unknown" />.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="host" /> é um <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="port" /> é menor que <see cref="F:System.Net.IPEndPoint.MinPort" />.  
+  
+ -ou-  
+  
+ <paramref name="port" /> é maior que <see cref="F:System.Net.IPEndPoint.MaxPort" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddressFamily">
+      <MemberSignature Language="C#" Value="public override System.Net.Sockets.AddressFamily AddressFamily { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Sockets.AddressFamily AddressFamily" />
+      <MemberSignature Language="DocId" Value="P:System.Net.DnsEndPoint.AddressFamily" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.AddressFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a família de endereços do protocolo IP.</summary>
+        <value>Um dos valores de <see cref="T:System.Net.Sockets.AddressFamily" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint.AddressFamily%2A> propriedade indica a família de endereços para uma instância de <xref:System.Net.DnsEndPoint> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object comparand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object comparand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsEndPoint.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="comparand" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="comparand">Um <see cref="T:System.Net.DnsEndPoint" /> instância a ser comparado com a instância atual.</param>
+        <summary>Compara dois objetos <see cref="T:System.Net.DnsEndPoint" />.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Net.DnsEndPoint" /> instâncias forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint.Equals%2A> método compara atual <xref:System.Net.DnsEndPoint> instância com o `comparand` parâmetro e retorna `true` se as duas instâncias contêm o mesmo ponto de extremidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsEndPoint.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor de hash para um <see cref="T:System.Net.DnsEndPoint" />.</summary>
+        <returns>Um valor de hash de inteiro para o <see cref="T:System.Net.DnsEndPoint" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint.GetHashCode%2A> método retorna um código hash de <xref:System.Net.DnsEndPoint>. Esse valor pode ser usado como uma chave em tabelas de hash.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public string Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Host" />
+      <MemberSignature Language="DocId" Value="P:System.Net.DnsEndPoint.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o host de representação de cadeia de caracteres ou o nome do endereço IP (Internet Protocol) do host.</summary>
+        <value>Um host nome ou a cadeia de caracteres de representação de um endereço IP.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint.Host%2A> propriedade indica a representação de cadeia de caracteres ou nome de host do endereço IP para uma instância do <xref:System.Net.DnsEndPoint> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.Net.DnsEndPoint.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da porta de <see cref="T:System.Net.DnsEndPoint" />.</summary>
+        <value>Um valor inteiro no intervalo de 0 a 0xffff indicando o número da porta de <see cref="T:System.Net.DnsEndPoint" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.DnsEndPoint.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Primitives</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o host representação de cadeia de caracteres ou nome do número de porta e endereço IP do <see cref="T:System.Net.DnsEndPoint" />.</summary>
+        <returns>Uma cadeia de caracteres que contém a família de endereços, nome de host ou cadeia de caracteres de endereço IP e o número da porta especificada <see cref="T:System.Net.DnsEndPoint" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.DnsEndPoint.ToString%2A> método retorna uma cadeia de caracteres que contém a família de endereços, o nome do host ou cadeia de caracteres de endereço IP e o número da porta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

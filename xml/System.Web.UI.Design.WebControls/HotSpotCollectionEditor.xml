@@ -1,0 +1,135 @@
+<Type Name="HotSpotCollectionEditor" FullName="System.Web.UI.Design.WebControls.HotSpotCollectionEditor">
+  <TypeSignature Language="C#" Value="public class HotSpotCollectionEditor : System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HotSpotCollectionEditor extends System.ComponentModel.Design.CollectionEditor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.CollectionEditor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um editor de componente para <see cref="T:System.Web.UI.WebControls.HotSpotCollection" /> objetos em um <see cref="T:System.Web.UI.WebControls.ImageMap" /> ou um controle semelhante.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> classe fornece uma interface do usuário para edição de <xref:System.Web.UI.WebControls.HotSpot> elementos do <xref:System.Web.UI.WebControls.HotSpotCollection> objeto que é inserido em um <xref:System.Web.UI.WebControls.ImageMap> ou um controle semelhante.  
+  
+ O <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> é invocado selecionando o botão de reticências (**... **) sobre o **pontos de acesso** propriedade no visual designer **propriedades** grade.  
+  
+ O <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CanSelectMultipleInstances%2A> método sempre retorna `false` para indicar que apenas um objeto pode ser selecionado por vez no editor. O <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CreateNewItemTypes%2A> método retorna uma matriz de tipos que o editor pode criar. O <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic%2A> propriedade retorna o nome do tópico da Ajuda que o editor exibe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HotSpotCollectionEditor (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de coleção para editar.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> classe quando você selecionar o botão de reticências (**... **) no **pontos de acesso** propriedade no visual designer **propriedades** grade, durante a criação de um <xref:System.Web.UI.WebControls.ImageMap> controle ou outro controle que encapsula uma <xref:System.Web.UI.WebControls.HotSpotCollection> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanSelectMultipleInstances">
+      <MemberSignature Language="C#" Value="protected override bool CanSelectMultipleInstances ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanSelectMultipleInstances() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CanSelectMultipleInstances" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um valor que indica se várias <see cref="T:System.Web.UI.WebControls.HotSpot" /> elementos da coleção podem ser selecionados ao mesmo tempo.</summary>
+        <returns>Sempre <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CanSelectMultipleInstances%2A> método sempre retorna `false`; assim, apenas um <xref:System.Web.UI.WebControls.HotSpot> objeto pode ser selecionado por vez no <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewItemTypes">
+      <MemberSignature Language="C#" Value="protected override Type[] CreateNewItemTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Type[] CreateNewItemTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.CreateNewItemTypes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém os vários tipos de dados que pode criar o editor de coleção.</summary>
+        <returns>Uma matriz de tipo dos tipos de dados de <see cref="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" /> pode criar.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os tipos que o <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> objeto pode criar são <xref:System.Web.UI.WebControls.CircleHotSpot>, <xref:System.Web.UI.WebControls.RectangleHotSpot>, <xref:System.Web.UI.WebControls.PolygonHotSpot>e que podem ser derivadas de outras pessoas o <xref:System.Web.UI.WebControls.HotSpot> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HelpTopic">
+      <MemberSignature Language="C#" Value="protected override string HelpTopic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HelpTopic" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tópico da ajuda a ser exibida para o <see cref="T:System.Web.UI.Design.WebControls.HotSpotCollectionEditor" /> objeto.</summary>
+        <value>Uma cadeia de caracteres que especifica o tópico da Ajuda para exibir.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic%2A> propriedade obtém o nome do tópico da Ajuda para exibir quando o <xref:System.Web.UI.Design.WebControls.HotSpotCollectionEditor> caixa de diálogo **ajuda** botão é clicado ou quando o **F1** tecla é pressionada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="P:System.Web.UI.Design.WebControls.HotSpotCollectionEditor.HelpTopic" /> propriedade para exibir um tópico da Ajuda diferente.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

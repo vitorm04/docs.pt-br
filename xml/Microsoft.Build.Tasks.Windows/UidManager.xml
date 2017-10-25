@@ -1,0 +1,124 @@
+<Type Name="UidManager" FullName="Microsoft.Build.Tasks.Windows.UidManager">
+  <TypeSignature Language="C#" Value="public sealed class UidManager : Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UidManager extends Microsoft.Build.Utilities.Task" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.Windows.UidManager" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationBuildTasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Build.Utilities.Task</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implementa o <c>UidManager</c> tarefa. Use o <c>UidManager</c> elemento no arquivo de projeto para criar e executar essa tarefa. Para obter informações de uso e de parâmetro, consulte [UidManager](http://msdn.microsoft.com/library/4fc7b5a5-11b0-46ca-9656-8c2a0b08d1fe).</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UidManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Windows.UidManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:Microsoft.Build.Tasks.Windows.UidManager" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public override bool Execute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Execute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.Windows.UidManager.Execute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa uma tarefa.</summary>
+        <returns>
+          <see langword="true" />Se a tarefa foi executada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IntermediateDirectory">
+      <MemberSignature Language="C#" Value="public string IntermediateDirectory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IntermediateDirectory" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.UidManager.IntermediateDirectory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o diretório que é usado para fazer backup de origem [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] arquivos que são especificados pelo <see cref="P:Microsoft.Build.Tasks.Windows.UidManager.MarkupFiles" /> propriedade.</summary>
+        <value>O diretório que é usado para fazer backup de origem [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] arquivos que são especificados pelo <see cref="P:Microsoft.Build.Tasks.Windows.UidManager.MarkupFiles" /> propriedade.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MarkupFiles">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITaskItem[] MarkupFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Build.Framework.ITaskItem[] MarkupFiles" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.UidManager.MarkupFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITaskItem[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a origem [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] arquivos a serem incluídos para UID verificando, atualizar ou remover.</summary>
+        <value>A fonte de [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] arquivos a serem incluídos para UID verificando, atualizar ou remover.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Task">
+      <MemberSignature Language="C#" Value="public string Task { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Task" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.Windows.UidManager.Task" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationBuildTasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Microsoft.Build.Framework.Required</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a tarefa de gerenciamento de UID que você deseja executar. As opções válidas são **Verificar**, **Atualizar** ou **Remover**.</summary>
+        <value>A tarefa de gerenciamento de UID que você deseja executar. As opções válidas são **Verificar**, **Atualizar** ou **Remover**.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,119 @@
+<Type Name="DataflowLinkOptions" FullName="System.Threading.Tasks.Dataflow.DataflowLinkOptions">
+  <TypeSignature Language="C#" Value="public class DataflowLinkOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataflowLinkOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.Tasks.Dataflow.DataflowLinkOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
+    <AssemblyVersion>4.6.1.0</AssemblyVersion>
+    <AssemblyVersion>4.6.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece as opções usadas para configurar um link entre blocos de fluxo de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  A biblioteca de fluxo de dados TPL (<xref:System.Threading.Tasks.Dataflow> namespace) não é distribuído com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)]. Para instalar o <xref:System.Threading.Tasks.Dataflow> namespace, abra seu projeto no [!INCLUDE[vs_dev11_long](~/includes/vs-dev11-long-md.md)], escolha **gerenciar pacotes NuGet** no menu projeto e pesquise online o `Microsoft.Tpl.Dataflow` pacote.  
+  
+ <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions>é mutável e pode ser configurado por meio de suas propriedades.  
+  
+ Quando as opções de configuração específicos não forem definidas, os seguintes padrões são usados:  
+  
+|Opções|Padrão|  
+|-------------|-------------|  
+|PropagateCompletion|False|  
+|MaxMessages|DataflowBlockOptions.Unbounded (-1)|  
+|Acrescentar|verdadeiro|  
+  
+ Blocos de fluxo de dados capturam o estado das opções na vinculação. As alterações subsequentes fornecido <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> instância não deve afetar o comportamento de um link.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataflowLinkOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Threading.Tasks.Dataflow.DataflowLinkOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa o <see cref="T:System.Threading.Tasks.Dataflow.DataflowLinkOptions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Append">
+      <MemberSignature Language="C#" Value="public bool Append { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Append" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowLinkOptions.Append" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o link deve ser acrescentado à lista de origem de links, ou se ele deve ser colocado.</summary>
+        <value>Retorna <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMessages">
+      <MemberSignature Language="C#" Value="public int MaxMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxMessages" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowLinkOptions.MaxMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de mensagens que podem ser consumidos pelo link.</summary>
+        <value>Retorna <see cref="T:System.Int32" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropagateCompletion">
+      <MemberSignature Language="C#" Value="public bool PropagateCompletion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PropagateCompletion" />
+      <MemberSignature Language="DocId" Value="P:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks.Dataflow</AssemblyName>
+        <AssemblyVersion>4.6.0.0</AssemblyVersion>
+        <AssemblyVersion>4.6.1.0</AssemblyVersion>
+        <AssemblyVersion>4.6.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se o destino vinculado terá conclusão e notificação de falha propagadas automaticamente para ele.</summary>
+        <value>Retorna <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

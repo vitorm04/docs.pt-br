@@ -1,0 +1,224 @@
+<Type Name="BrowserCapabilitiesFactoryBase" FullName="System.Web.Configuration.BrowserCapabilitiesFactoryBase">
+  <TypeSignature Language="C#" Value="public class BrowserCapabilitiesFactoryBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BrowserCapabilitiesFactoryBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.BrowserCapabilitiesFactoryBase" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Web.Configuration.BrowserCapabilitiesFactoryBase" /> classe é a classe base da qual <see cref="T:System.Web.Configuration.BrowserCapabilitiesFactory" /> é derivado. Ela é usada internamente em tempo de execução, o sistema de configuração para criar instâncias de solicitação específica do <see cref="T:System.Web.Configuration.HttpCapabilitiesBase" /> classe publicamente acessado por meio do ASP.NET intrínseco <see langword="Request.Browser" /> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir recursos do navegador em um arquivo. browser. Você pode usar a hierarquia padrão no arquivo. browser ou criar uma hierarquia personalizada para definir os recursos do navegador.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BrowserCapabilitiesFactoryBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesFactoryBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Usado internamente pelo sistema de configuração para criar uma nova instância dessa classe.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="BrowserElements">
+      <MemberSignature Language="C#" Value="protected System.Collections.IDictionary BrowserElements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary BrowserElements" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.BrowserCapabilitiesFactoryBase.BrowserElements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado internamente pelo sistema de configuração para representar uma coleção de informações relacionadas a vários recursos do navegador.</summary>
+        <value>Um dicionário de recursos do navegador.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureBrowserCapabilities">
+      <MemberSignature Language="C#" Value="public virtual void ConfigureBrowserCapabilities (System.Collections.Specialized.NameValueCollection headers, System.Web.HttpBrowserCapabilities browserCaps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConfigureBrowserCapabilities(class System.Collections.Specialized.NameValueCollection headers, class System.Web.HttpBrowserCapabilities browserCaps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesFactoryBase.ConfigureBrowserCapabilities(System.Collections.Specialized.NameValueCollection,System.Web.HttpBrowserCapabilities)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="browserCaps" Type="System.Web.HttpBrowserCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="headers">Uma coleção de cabeçalhos de solicitação.</param>
+        <param name="browserCaps">Um objeto <see cref="T:System.Web.HttpBrowserCapabilities" />.</param>
+        <summary>Usado internamente em tempo de execução para configurar um <see cref="T:System.Web.HttpBrowserCapabilities" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureCustomCapabilities">
+      <MemberSignature Language="C#" Value="public virtual void ConfigureCustomCapabilities (System.Collections.Specialized.NameValueCollection headers, System.Web.HttpBrowserCapabilities browserCaps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConfigureCustomCapabilities(class System.Collections.Specialized.NameValueCollection headers, class System.Web.HttpBrowserCapabilities browserCaps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesFactoryBase.ConfigureCustomCapabilities(System.Collections.Specialized.NameValueCollection,System.Web.HttpBrowserCapabilities)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="browserCaps" Type="System.Web.HttpBrowserCapabilities" />
+      </Parameters>
+      <Docs>
+        <param name="headers">Uma coleção de cabeçalhos de solicitação.</param>
+        <param name="browserCaps">Um objeto que especifica os recursos do navegador.</param>
+        <summary>Usado internamente em tempo de execução para configurar as hierarquias personalizadas dos recursos do navegador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir recursos do navegador em um arquivo. browser. Você pode usar a hierarquia padrão no arquivo. browser ou criar uma hierarquia personalizada para definir os recursos do navegador. O <xref:System.Web.Configuration.BrowserCapabilitiesFactoryBase.ConfigureCustomCapabilities%2A> método processa uma hierarquia personalizada. A hierarquia personalizada deve conter um `parentID` valor o `browser` elemento.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsBrowserUnknown">
+      <MemberSignature Language="C#" Value="protected bool IsBrowserUnknown (System.Web.Configuration.HttpCapabilitiesBase browserCaps);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool IsBrowserUnknown(class System.Web.Configuration.HttpCapabilitiesBase browserCaps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesFactoryBase.IsBrowserUnknown(System.Web.Configuration.HttpCapabilitiesBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="browserCaps" Type="System.Web.Configuration.HttpCapabilitiesBase" />
+      </Parameters>
+      <Docs>
+        <param name="browserCaps">Um objeto <see cref="T:System.Web.HttpBrowserCapabilities" />.</param>
+        <summary>Usado internamente pelo sistema de configuração para determinar se o navegador representada pelo <see cref="T:System.Web.HttpBrowserCapabilities" /> objeto não tem um adaptador disponível.</summary>
+        <returns>
+          <see langword="true" />Se o navegador representado não tiver um adaptador disponível; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="MatchedHeaders">
+      <MemberSignature Language="C#" Value="protected System.Collections.IDictionary MatchedHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary MatchedHeaders" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.BrowserCapabilitiesFactoryBase.MatchedHeaders" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Usado internamente pelo sistema de configuração para representar uma coleção de valores de cabeçalho de solicitação.</summary>
+        <value>Uma coleção de cabeçalhos de solicitação.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateBrowserElements">
+      <MemberSignature Language="C#" Value="protected virtual void PopulateBrowserElements (System.Collections.IDictionary dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PopulateBrowserElements(class System.Collections.IDictionary dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesFactoryBase.PopulateBrowserElements(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Uma coleção de pares chave/valor que representa os recursos do navegador.</param>
+        <summary>Usado internamente pelo sistema de configuração para preencher uma coleção de recursos do navegador com base no navegador com suporte.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="PopulateMatchedHeaders">
+      <MemberSignature Language="C#" Value="protected virtual void PopulateMatchedHeaders (System.Collections.IDictionary dictionary);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void PopulateMatchedHeaders(class System.Collections.IDictionary dictionary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.BrowserCapabilitiesFactoryBase.PopulateMatchedHeaders(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dictionary" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="dictionary">Uma coleção de pares chave/valor que representa os recursos do navegador.</param>
+        <summary>Usado internamente pelo sistema de configuração para preencher uma coleção de cabeçalhos de solicitação com base no navegador com suporte.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

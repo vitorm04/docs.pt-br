@@ -1,0 +1,324 @@
+<Type Name="X509CertificateValidator" FullName="System.IdentityModel.Selectors.X509CertificateValidator">
+  <TypeSignature Language="C#" Value="public abstract class X509CertificateValidator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract X509CertificateValidator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.X509CertificateValidator" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Valida um certificado X.509.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe para especificar como um certificado x. 509 é considerado válido. Isso pode ser feito usando derivando uma classe de <xref:System.IdentityModel.Selectors.X509CertificateValidator> e substituindo o <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> método.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_X509CertificateValidator#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_x509certificatevalidator/cs/source.cs#1)]
+ [!code-vb[c_X509CertificateValidator#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_x509certificatevalidator/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected X509CertificateValidator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509CertificateValidator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, este construtor não inicializa as propriedades.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_X509CertificateValidator#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_x509certificatevalidator/cs/source.cs#3)]
+ [!code-vb[c_X509CertificateValidator#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_x509certificatevalidator/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChainTrust">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.X509CertificateValidator ChainTrust { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Selectors.X509CertificateValidator ChainTrust" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um validador que valida o certificado X.509 usando uma cadeia confiável.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que valida o certificado X.509 usando uma cadeia confiável.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este validador verifica se o certificado x. 509 é emitido por um emissor confiável usando uma cadeia de certificados e válido.  
+  
+ O valor dessa propriedade estático pode ser fornecido como um parâmetro para um dos construtores para o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChainTrustValidator">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.X509CertificateValidator CreateChainTrustValidator (bool useMachineContext, System.Security.Cryptography.X509Certificates.X509ChainPolicy chainPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Selectors.X509CertificateValidator CreateChainTrustValidator(bool useMachineContext, class System.Security.Cryptography.X509Certificates.X509ChainPolicy chainPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509CertificateValidator.CreateChainTrustValidator(System.Boolean,System.Security.Cryptography.X509Certificates.X509ChainPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useMachineContext" Type="System.Boolean" />
+        <Parameter Name="chainPolicy" Type="System.Security.Cryptography.X509Certificates.X509ChainPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="useMachineContext">
+          <see langword="true" />Para usar o contexto do computador; <see langword="false" /> para usar o contexto do usuário atual.</param>
+        <param name="chainPolicy">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509ChainPolicy" /> que especifica a política usada para criar e verificar a cadeia de confiança.</param>
+        <summary>Obtém uma validação que verifica o certificado x. 509 especificando o contexto e a política de cadeia que é usada para criar e verificar uma cadeia de confiança.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que valida o certificado X.509 usando uma cadeia confiável.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.X509CertificateValidator.CreateChainTrustValidator%2A> método em vez do <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> para especificar o contexto de ou para definir a política de cadeia de propriedade. Política de cadeia pode ser usada para especificar a chave EKU (uso avançado) para o qual a cadeia deve ser validado ou especificar a verificação de revogação.  
+  
+ O valor de retorno deste método estático pode ser fornecido como um parâmetro para os construtores de <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> classe que levam um validador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePeerOrChainTrustValidator">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.X509CertificateValidator CreatePeerOrChainTrustValidator (bool useMachineContext, System.Security.Cryptography.X509Certificates.X509ChainPolicy chainPolicy);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IdentityModel.Selectors.X509CertificateValidator CreatePeerOrChainTrustValidator(bool useMachineContext, class System.Security.Cryptography.X509Certificates.X509ChainPolicy chainPolicy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509CertificateValidator.CreatePeerOrChainTrustValidator(System.Boolean,System.Security.Cryptography.X509Certificates.X509ChainPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useMachineContext" Type="System.Boolean" />
+        <Parameter Name="chainPolicy" Type="System.Security.Cryptography.X509Certificates.X509ChainPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="useMachineContext">
+          <see langword="true" />Para usar o contexto do computador; <see langword="false" /> para usar o contexto do usuário atual.</param>
+        <param name="chainPolicy">Um <see cref="T:System.Security.Cryptography.X509Certificates.X509ChainPolicy" /> que especifica a política usada para criar a cadeia de confiança.</param>
+        <summary>Obtém um validador que verifica o certificado está no <see langword="TrustedPeople" /> repositório de certificados ou especificando a diretiva de contexto e a cadeia que é usada para construir uma cadeia de certificados confiáveis. O certificado é confiável se ele passa um método de verificação.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que verifica o certificado está no <see langword="TrustedPeople" /> repositório de certificados ou criando uma cadeia de certificados confiáveis.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Selectors.X509CertificateValidator.CreatePeerOrChainTrustValidator%2A> método em vez do <xref:System.IdentityModel.Selectors.X509CertificateValidator.PeerOrChainTrust%2A> para especificar o contexto de ou para definir a política de cadeia de propriedade. Política de cadeia pode ser usada para especificar a chave EKU (uso avançado) para o qual a cadeia deve ser validado ou especificar a verificação de revogação.  
+  
+ O valor dessa propriedade estático pode ser fornecido como um parâmetro para um dos construtores para o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadCustomConfiguration">
+      <MemberSignature Language="C#" Value="public virtual void LoadCustomConfiguration (System.Xml.XmlNodeList nodelist);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadCustomConfiguration(class System.Xml.XmlNodeList nodelist) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509CertificateValidator.LoadCustomConfiguration(System.Xml.XmlNodeList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodelist" Type="System.Xml.XmlNodeList" />
+      </Parameters>
+      <Docs>
+        <param name="nodelist">Os elementos de configuração personalizados.</param>
+        <summary>Quando substituído em uma classe derivada, carrega a configuração personalizada do XML.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, gera um <xref:System.NotImplementedException>. Você pode substituir esse método para fornecer a funcionalidade em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.X509CertificateValidator None { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Selectors.X509CertificateValidator None" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.X509CertificateValidator.None" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um validador que não executa nenhuma validação em um certificado x. 509. Como resultado, um certificado x. 509 sempre é considerado válido.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que não executa nenhuma validação do certificado x. 509.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este validador pode ser útil ao trabalhar com um certificado x. 509 de teste ou desenvolvimento, como aquele gerado pelo utilitário Makecert.exe.  
+  
+ O valor dessa propriedade estático pode ser fornecido como um parâmetro para um dos construtores para o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerOrChainTrust">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.X509CertificateValidator PeerOrChainTrust { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Selectors.X509CertificateValidator PeerOrChainTrust" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.X509CertificateValidator.PeerOrChainTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um validador que verifica o certificado está no <see langword="TrustedPeople" /> repositório de certificados ou criando uma cadeia de certificados confiáveis. O certificado é confiável se ele passa um método de verificação.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que verifica o certificado está no <see langword="TrustedPeople" /> repositório de certificados ou criando uma cadeia de certificados confiáveis.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade estático pode ser fornecido como um parâmetro para um dos construtores para o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PeerTrust">
+      <MemberSignature Language="C#" Value="public static System.IdentityModel.Selectors.X509CertificateValidator PeerTrust { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.IdentityModel.Selectors.X509CertificateValidator PeerTrust" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Selectors.X509CertificateValidator.PeerTrust" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Selectors.X509CertificateValidator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um validador que verifica o certificado está no <see langword="TrustedPeople" /> repositório de certificados</summary>
+        <value>Um <see cref="T:System.IdentityModel.Selectors.X509CertificateValidator" /> que verifica o certificado está no <see langword="TrustedPeople" /> repositório de certificados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor dessa propriedade estático pode ser fornecido como um parâmetro para um dos construtores para o <xref:System.IdentityModel.Selectors.X509SecurityTokenAuthenticator> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public abstract void Validate (System.Security.Cryptography.X509Certificates.X509Certificate2 certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Validate(class System.Security.Cryptography.X509Certificates.X509Certificate2 certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.X509CertificateValidator.Validate(System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2" /> que representa o certificado X.509 a ser validado.</param>
+        <summary>Quando substituído em uma classe derivada, valida o certificado X.509.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> método para especificar como o certificado x. 509 é validado.  
+  
+ Quando a x. 509 do certificado que é passado para o `certificate` parâmetro não passa na validação, gerar o <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>.  
+  
+   
+  
+## Examples  
+ [!code-csharp[c_X509CertificateValidator#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_x509certificatevalidator/cs/source.cs#2)]
+ [!code-vb[c_X509CertificateValidator#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_x509certificatevalidator/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

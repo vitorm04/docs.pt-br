@@ -1,0 +1,44 @@
+<Type Name="IXamlLoadErrorService" FullName="System.Activities.Presentation.IXamlLoadErrorService">
+  <TypeSignature Language="C#" Value="public interface IXamlLoadErrorService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXamlLoadErrorService" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.IXamlLoadErrorService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define como o host do Visual Studio exibe a lista de erros gerados pelo leitor de XAML ao carregar o arquivo XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é API usada pelo [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] infraestrutura e não deve ser chamado pelos usuários.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ShowXamlLoadErrors">
+      <MemberSignature Language="C#" Value="public void ShowXamlLoadErrors (System.Collections.Generic.IList&lt;System.Activities.Presentation.XamlLoadErrorInfo&gt; errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowXamlLoadErrors(class System.Collections.Generic.IList`1&lt;class System.Activities.Presentation.XamlLoadErrorInfo&gt; errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors(System.Collections.Generic.IList{System.Activities.Presentation.XamlLoadErrorInfo})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errors" Type="System.Collections.Generic.IList&lt;System.Activities.Presentation.XamlLoadErrorInfo&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="errors">O <see cref="T:System.Collections.Generic.IList`1" /> de <see cref="T:System.Activities.Presentation.XamlLoadErrorInfo" /> instâncias geradas pelo leitor ao carregar um arquivo XAML.</param>
+        <summary>Exibe a lista de erros no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] host.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,135 @@
+<Type Name="ComparisonSettings" FullName="System.Management.ComparisonSettings">
+  <TypeSignature Language="C#" Value="public enum ComparisonSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ComparisonSettings extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Management.ComparisonSettings" />
+  <AssemblyInfo>
+    <AssemblyName>System.Management</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Descreve os modos de comparação de objeto que podem ser usados com <see cref="M:System.Management.ManagementBaseObject.CompareTo(System.Management.ManagementBaseObject,System.Management.ComparisonSettings)" />. Observe que esses valores podem ser combinados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IgnoreCase">
+      <MemberSignature Language="C#" Value="IgnoreCase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.ComparisonSettings IgnoreCase = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.ComparisonSettings.IgnoreCase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ComparisonSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo que compara valores da cadeia de caracteres em minúsculas. Isso se aplica a cadeias de caracteres e valores de qualificador. Nomes de propriedade e qualificador sempre são comparados em minúsculas se este sinalizador for especificado ou não. Valor: 16.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreClass">
+      <MemberSignature Language="C#" Value="IgnoreClass" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.ComparisonSettings IgnoreClass = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.ComparisonSettings.IgnoreClass" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ComparisonSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo que pressupõe que os objetos que estão sendo comparados são instâncias da mesma classe. Consequentemente, esse valor faz a comparação de informações relacionadas à instância apenas. Use este sinalizador para otimizar o desempenho. Se os objetos não são da mesma classe, os resultados serão indefinidos. Valor: 8.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreDefaultValues">
+      <MemberSignature Language="C#" Value="IgnoreDefaultValues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.ComparisonSettings IgnoreDefaultValues = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.ComparisonSettings.IgnoreDefaultValues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ComparisonSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo que ignora os valores padrão das propriedades. Esse valor só é significativo quando comparando classes. Valor: 4.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreFlavor">
+      <MemberSignature Language="C#" Value="IgnoreFlavor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.ComparisonSettings IgnoreFlavor = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.ComparisonSettings.IgnoreFlavor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ComparisonSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo que ignora o qualificador *tipos*. Este sinalizador ainda considera valores de qualificador, mas ignora diferenças de tipo, como regras de propagação e substituir as restrições. Valor: 32.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreObjectSource">
+      <MemberSignature Language="C#" Value="IgnoreObjectSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.ComparisonSettings IgnoreObjectSource = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.ComparisonSettings.IgnoreObjectSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ComparisonSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo que ignora a origem dos objetos, ou seja, o servidor e o namespace que de onde vieram, em comparação a outros objetos. Valor: 2.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreQualifiers">
+      <MemberSignature Language="C#" Value="IgnoreQualifiers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.ComparisonSettings IgnoreQualifiers = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.ComparisonSettings.IgnoreQualifiers" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ComparisonSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo que compara os objetos, ignorando *qualificadores*. Valor: 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeAll">
+      <MemberSignature Language="C#" Value="IncludeAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Management.ComparisonSettings IncludeAll = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Management.ComparisonSettings.IncludeAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Management</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Management.ComparisonSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um modo que compara todos os elementos dos objetos comparados. Valor: 0.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,145 @@
+<Type Name="ContractAdapter" FullName="System.AddIn.Pipeline.ContractAdapter">
+  <TypeSignature Language="C#" Value="public static class ContractAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ContractAdapter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Pipeline.ContractAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece métodos para compartilhar e readapting suplementos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa classe para compartilhar um suplemento com outro host que não têm o mesmo canal para esse suplemento (particularmente, outro host que não têm o mesmo host exibição do suplemento).  
+  
+ Se você precisar adaptar um ativado suplemento de seu modo de exibição do host para o contrato, use o <xref:System.AddIn.Pipeline.ContractAdapter.ViewToContractAdapter%2A> método.  
+  
+ Se você tiver uma instância do contrato e precisa convertê-lo para o modo de host, use o <xref:System.AddIn.Pipeline.ContractAdapter.ContractToViewAdapter%2A> método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContractToViewAdapter&lt;TView&gt;">
+      <MemberSignature Language="C#" Value="public static TView ContractToViewAdapter&lt;TView&gt; (System.AddIn.Pipeline.ContractHandle contract, System.AddIn.Hosting.PipelineStoreLocation location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TView ContractToViewAdapter&lt;TView&gt;(class System.AddIn.Pipeline.ContractHandle contract, valuetype System.AddIn.Hosting.PipelineStoreLocation location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractAdapter.ContractToViewAdapter``1(System.AddIn.Pipeline.ContractHandle,System.AddIn.Hosting.PipelineStoreLocation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>TView</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TView" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contract" Type="System.AddIn.Pipeline.ContractHandle" />
+        <Parameter Name="location" Type="System.AddIn.Hosting.PipelineStoreLocation" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TView">O tipo que define o modo de host do suplemento.</typeparam>
+        <param name="contract">Um identificador para o contrato usado pelo suplemento deve ser compartilhado.</param>
+        <param name="location">Base de dados de aplicativo do host.</param>
+        <summary>Obtém uma exibição de host de um suplemento, se um adaptador do host adequado foi encontrado em um local especificado por um valor da <see cref="T:System.AddIn.Hosting.PipelineStoreLocation" /> enumeração.</summary>
+        <returns>O modo de host do suplemento que é compartilhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nesse cenário, uma entidade tem uma instância de um contrato e deseja adaptá-la para uma determinada exibição. Use esse método para o sistema para localizar e criar uma instância de um adaptador para converter esse modo de exibição de consulta.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="location" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContractToViewAdapter&lt;TView&gt;">
+      <MemberSignature Language="C#" Value="public static TView ContractToViewAdapter&lt;TView&gt; (System.AddIn.Pipeline.ContractHandle contract, string pipelineRoot);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig !!TView ContractToViewAdapter&lt;TView&gt;(class System.AddIn.Pipeline.ContractHandle contract, string pipelineRoot) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractAdapter.ContractToViewAdapter``1(System.AddIn.Pipeline.ContractHandle,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>TView</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TView" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="contract" Type="System.AddIn.Pipeline.ContractHandle" />
+        <Parameter Name="pipelineRoot" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TView">O tipo que define o modo de host do suplemento.</typeparam>
+        <param name="contract">Um identificador para o contrato usado pelo suplemento deve ser compartilhado.</param>
+        <param name="pipelineRoot">Um caminho para o repositório de suplementos.</param>
+        <summary>Obtém uma exibição de host de um suplemento se um adaptador do host adequado foi encontrado em um local especificado por um caminho.</summary>
+        <returns>O modo de host do suplemento que é compartilhado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nesse cenário, uma entidade tem uma instância de um contrato e deseja adaptá-la para uma determinada exibição. Use esse método para o sistema para localizar e criar uma instância de um adaptador para converter esse modo de exibição de consulta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewToContractAdapter">
+      <MemberSignature Language="C#" Value="public static System.AddIn.Pipeline.ContractHandle ViewToContractAdapter (object view);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.AddIn.Pipeline.ContractHandle ViewToContractAdapter(object view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Pipeline.ContractAdapter.ViewToContractAdapter(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Pipeline.ContractHandle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="view">O modo de host do suplemento ativado pelo sistema do domínio de aplicativo atual.</param>
+        <summary>Obtém o identificador para o contrato para uma exibição de host fornecido de um suplemento.</summary>
+        <returns>Um identificador para o contrato.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nesse cenário, a entidade de origem (um host) tem um suplemento que deseja ser compartilhado por uma entidade de destino (outro host).  
+  
+ Use esse método para obter o identificador para o contrato que foi instanciado da entidade de origem pelo sistema do suplemento.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="view" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

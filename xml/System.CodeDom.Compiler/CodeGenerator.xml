@@ -1,0 +1,3257 @@
+<Type Name="CodeGenerator" FullName="System.CodeDom.Compiler.CodeGenerator">
+  <TypeSignature Language="C#" Value="public abstract class CodeGenerator : System.CodeDom.Compiler.ICodeGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CodeGenerator extends System.Object implements class System.CodeDom.Compiler.ICodeGenerator" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CodeGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.CodeDom.Compiler.ICodeGenerator</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma implementação de exemplo da interface <see cref="T:System.CodeDom.Compiler.ICodeGenerator" />. Esta classe é abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso é uma classe base útil para geradores de código derivar. Geradores de código são capazes de processar o código-fonte em um idioma específico de acordo com a estrutura de um gráfico de modelo de objeto de documento de código (CodeDOM). Essa classe fornece muitas funções e métodos para gerar tipos específicos de código de um gráfico CodeDOM.  
+  
+> [!NOTE]
+>  Esta classe contém uma demanda de link e uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é lançado quando o chamador imediato ou a classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CodeGenerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.Compiler.CodeGenerator" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueOnNewLine">
+      <MemberSignature Language="C#" Value="protected virtual void ContinueOnNewLine (string st);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ContinueOnNewLine(string st) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.ContinueOnNewLine(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="st" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="st">A cadeia de caracteres para gravar na nova linha.</param>
+        <summary>Gera um caractere de continuação de linha e saídas de cadeia de caracteres especificada em uma nova linha.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao implementar um gerador de código para um idioma que dá suporte a um caractere de continuação de linha (por exemplo, o Visual Basic), esse método deve gerar o caractere de continuação de linha antes de ele produz um caractere de nova linha.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEscapedIdentifier">
+      <MemberSignature Language="C#" Value="protected abstract string CreateEscapedIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string CreateEscapedIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.CreateEscapedIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para criar um identificador com caracteres de escape.</param>
+        <summary>Cria um identificador com caracteres de escape para o valor especificado.</summary>
+        <returns>O identificador com caracteres de escape para o valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CodeGenerator.CreateEscapedIdentifier%2A>Testa se o identificador está em conflito com reservadas ou palavras-chave e nesse caso, retorna um nome equivalente com formatação de código de escape de idioma específico. O nome retornado é conhecido como um identificador com caracteres de escape. O identificador com escape contém o mesmo `value` mas inclui a formatação de código de escape para diferenciá-la das palavras-chave conflitantes. Por exemplo, `value` pode ser precedido por um sinal de arroba ("@") ou delimitados por colchetes ("[" e "]") para criar um identificador de escape.  
+  
+> [!NOTE]
+>  A implementação padrão desse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateValidIdentifier">
+      <MemberSignature Language="C#" Value="protected abstract string CreateValidIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string CreateValidIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.CreateValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Uma cadeia de caracteres para criar um identificador válido.</param>
+        <summary>Cria um identificador válido para o valor especificado.</summary>
+        <returns>Um identificador válido para o valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CodeGenerator.CreateValidIdentifier%2A>Testa se o identificador está em conflito com reservadas ou palavras-chave e nesse caso, retorna um nome de identificador válido que não está em conflito. O identificador retornado contém o mesmo `value` mas inclui a formatação de código de escape para diferenciá-la das palavras-chave conflitantes. Normalmente, se o valor requer modificação, ele é precedido por um sublinhado "_".  
+  
+> [!NOTE]
+>  A implementação padrão desse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentClass">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.CodeTypeDeclaration CurrentClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeDeclaration CurrentClass" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.CurrentClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo de declaração de código para a classe atual.</summary>
+        <value>A declaração de tipo de código para a classe atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentMember">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.CodeTypeMember CurrentMember { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeTypeMember CurrentMember" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.CurrentMember" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeTypeMember</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o membro atual da classe.</summary>
+        <value>O membro atual da classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentMemberName">
+      <MemberSignature Language="C#" Value="protected string CurrentMemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentMemberName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.CurrentMemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do membro atual.</summary>
+        <value>O nome do membro atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTypeName">
+      <MemberSignature Language="C#" Value="protected string CurrentTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CurrentTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.CurrentTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da classe atual.</summary>
+        <value>O nome de classe atual.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateArgumentReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateArgumentReferenceExpression (System.CodeDom.CodeArgumentReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateArgumentReferenceExpression(class System.CodeDom.CodeArgumentReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateArgumentReferenceExpression(System.CodeDom.CodeArgumentReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeArgumentReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeArgumentReferenceExpression" /> que indica a expressão para gerar código para.</param>
+        <summary>Gera código para a expressão de referência do argumento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateArrayCreateExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateArrayCreateExpression (System.CodeDom.CodeArrayCreateExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateArrayCreateExpression(class System.CodeDom.CodeArrayCreateExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateArrayCreateExpression(System.CodeDom.CodeArrayCreateExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeArrayCreateExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeArrayCreateExpression" /> que indica a expressão para gerar código para.</param>
+        <summary>Gera código para a expressão de criação de matriz especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateArrayIndexerExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateArrayIndexerExpression (System.CodeDom.CodeArrayIndexerExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateArrayIndexerExpression(class System.CodeDom.CodeArrayIndexerExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateArrayIndexerExpression(System.CodeDom.CodeArrayIndexerExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeArrayIndexerExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeArrayIndexerExpression" /> que indica a expressão para gerar código para.</param>
+        <summary>Gera código para a expressão de indexador de matriz especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAssignStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateAssignStatement (System.CodeDom.CodeAssignStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateAssignStatement(class System.CodeDom.CodeAssignStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateAssignStatement(System.CodeDom.CodeAssignStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeAssignStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeAssignStatement" /> que indica a instrução para gerar código para.</param>
+        <summary>Gera código para a instrução de atribuição especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAttachEventStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateAttachEventStatement (System.CodeDom.CodeAttachEventStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateAttachEventStatement(class System.CodeDom.CodeAttachEventStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateAttachEventStatement(System.CodeDom.CodeAttachEventStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeAttachEventStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeAttachEventStatement" /> que indica a instrução para gerar código para.</param>
+        <summary>Gera código para a declaração de evento de anexação especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAttributeDeclarationsEnd">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateAttributeDeclarationsEnd (System.CodeDom.CodeAttributeDeclarationCollection attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateAttributeDeclarationsEnd(class System.CodeDom.CodeAttributeDeclarationCollection attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateAttributeDeclarationsEnd(System.CodeDom.CodeAttributeDeclarationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.CodeDom.CodeAttributeDeclarationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Um <see cref="T:System.CodeDom.CodeAttributeDeclarationCollection" /> que indica o fim do bloco de atributo para gerar código para.</param>
+        <summary>Gera código para o fim do bloco de atributo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAttributeDeclarationsStart">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateAttributeDeclarationsStart (System.CodeDom.CodeAttributeDeclarationCollection attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateAttributeDeclarationsStart(class System.CodeDom.CodeAttributeDeclarationCollection attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateAttributeDeclarationsStart(System.CodeDom.CodeAttributeDeclarationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.CodeDom.CodeAttributeDeclarationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Um <see cref="T:System.CodeDom.CodeAttributeDeclarationCollection" /> que indica o início do bloco de atributo para gerar código para.</param>
+        <summary>Gera código para o início do bloco de atributo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateBaseReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateBaseReferenceExpression (System.CodeDom.CodeBaseReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateBaseReferenceExpression(class System.CodeDom.CodeBaseReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateBaseReferenceExpression(System.CodeDom.CodeBaseReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeBaseReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeBaseReferenceExpression" /> que indica a expressão para gerar código para.</param>
+        <summary>Gera código para a expressão de referência de base especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateBinaryOperatorExpression">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateBinaryOperatorExpression (System.CodeDom.CodeBinaryOperatorExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateBinaryOperatorExpression(class System.CodeDom.CodeBinaryOperatorExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateBinaryOperatorExpression(System.CodeDom.CodeBinaryOperatorExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeBinaryOperatorExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeBinaryOperatorExpression" /> que indica a expressão para gerar código para.</param>
+        <summary>Gera código para a expressão de operador binário especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCastExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateCastExpression (System.CodeDom.CodeCastExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateCastExpression(class System.CodeDom.CodeCastExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateCastExpression(System.CodeDom.CodeCastExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCastExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeCastExpression" /> que indica a expressão para gerar código para.</param>
+        <summary>Gera código para a expressão de conversão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCodeFromMember">
+      <MemberSignature Language="C#" Value="public virtual void GenerateCodeFromMember (System.CodeDom.CodeTypeMember member, System.IO.TextWriter writer, System.CodeDom.Compiler.CodeGeneratorOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GenerateCodeFromMember(class System.CodeDom.CodeTypeMember member, class System.IO.TextWriter writer, class System.CodeDom.Compiler.CodeGeneratorOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateCodeFromMember(System.CodeDom.CodeTypeMember,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="member" Type="System.CodeDom.CodeTypeMember" />
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+        <Parameter Name="options" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="member">O membro de classe para gerar código para.</param>
+        <param name="writer">O text writer de saída do código.</param>
+        <param name="options">As opções para usar ao gerar o código.</param>
+        <summary>Gera código para o membro de classe especificada usando as opções de gerador de código e o gravador de texto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Código para membros é gerado de forma diferente dependendo do contexto. Por exemplo, código de métodos em uma interface ou campos em uma enumeração é gerado diferente do código para o mesmo membro em uma classe. Essa implementação supõe que o membro está sendo gerado para o contexto da classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A propriedade <see cref="P:System.CodeDom.Compiler.CodeGenerator.Output" /> não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateComment">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateComment (System.CodeDom.CodeComment e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateComment(class System.CodeDom.CodeComment e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateComment(System.CodeDom.CodeComment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeComment" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.CodeDom.CodeComment" /> para gerar código para.</param>
+        <summary>Gera código para o comentário especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCommentStatement">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateCommentStatement (System.CodeDom.CodeCommentStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateCommentStatement(class System.CodeDom.CodeCommentStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateCommentStatement(System.CodeDom.CodeCommentStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCommentStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução de comentário especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="P:System.CodeDom.CodeCommentStatement.Comment" /> propriedade <paramref name="e" /> não está definido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCommentStatements">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateCommentStatements (System.CodeDom.CodeCommentStatementCollection e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateCommentStatements(class System.CodeDom.CodeCommentStatementCollection e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateCommentStatements(System.CodeDom.CodeCommentStatementCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCommentStatementCollection" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para as instruções de comentário especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCompileUnit">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateCompileUnit (System.CodeDom.CodeCompileUnit e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateCompileUnit(class System.CodeDom.CodeCompileUnit e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateCompileUnit(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="e">A unidade de compilação para gerar código para.</param>
+        <summary>Gera código para a unidade de compilação especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCompileUnitEnd">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateCompileUnitEnd (System.CodeDom.CodeCompileUnit e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateCompileUnitEnd(class System.CodeDom.CodeCompileUnit e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateCompileUnitEnd(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="e">A unidade de compilação para gerar código para.</param>
+        <summary>Gera código para o final de uma unidade de compilação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateCompileUnitStart">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateCompileUnitStart (System.CodeDom.CodeCompileUnit e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateCompileUnitStart(class System.CodeDom.CodeCompileUnit e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateCompileUnitStart(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="e">A unidade de compilação para gerar código para.</param>
+        <summary>Gera código para o início de uma unidade de compilação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateConditionStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateConditionStatement (System.CodeDom.CodeConditionStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateConditionStatement(class System.CodeDom.CodeConditionStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateConditionStatement(System.CodeDom.CodeConditionStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeConditionStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução condicional.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos idiomas, esse método irá gerar código para um `if` instrução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateConstructor">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateConstructor (System.CodeDom.CodeConstructor e, System.CodeDom.CodeTypeDeclaration c);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateConstructor(class System.CodeDom.CodeConstructor e, class System.CodeDom.CodeTypeDeclaration c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateConstructor(System.CodeDom.CodeConstructor,System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeConstructor" />
+        <Parameter Name="c" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="e">O construtor para gerar código para.</param>
+        <param name="c">O tipo do objeto que constrói este construtor.</param>
+        <summary>Gera código para o construtor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDecimalValue">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateDecimalValue (decimal d);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateDecimalValue(valuetype System.Decimal d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateDecimalValue(System.Decimal)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="d">O valor decimal para gerar código para.</param>
+        <summary>Gera código para o valor especificado de decimal.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDefaultValueExpression">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateDefaultValueExpression (System.CodeDom.CodeDefaultValueExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateDefaultValueExpression(class System.CodeDom.CodeDefaultValueExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateDefaultValueExpression(System.CodeDom.CodeDefaultValueExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeDefaultValueExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A referência ao gerar código para.</param>
+        <summary>Gera código para a referência especificada para um valor padrão.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDelegateCreateExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateDelegateCreateExpression (System.CodeDom.CodeDelegateCreateExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateDelegateCreateExpression(class System.CodeDom.CodeDelegateCreateExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateDelegateCreateExpression(System.CodeDom.CodeDelegateCreateExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeDelegateCreateExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de criação de representante especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDelegateInvokeExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateDelegateInvokeExpression (System.CodeDom.CodeDelegateInvokeExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateDelegateInvokeExpression(class System.CodeDom.CodeDelegateInvokeExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateDelegateInvokeExpression(System.CodeDom.CodeDelegateInvokeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeDelegateInvokeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão que invoca o delegado especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDirectionExpression">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateDirectionExpression (System.CodeDom.CodeDirectionExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateDirectionExpression(class System.CodeDom.CodeDirectionExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateDirectionExpression(System.CodeDom.CodeDirectionExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeDirectionExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de direção especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDirectives">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateDirectives (System.CodeDom.CodeDirectiveCollection directives);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateDirectives(class System.CodeDom.CodeDirectiveCollection directives) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateDirectives(System.CodeDom.CodeDirectiveCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directives" Type="System.CodeDom.CodeDirectiveCollection" />
+      </Parameters>
+      <Docs>
+        <param name="directives">As diretivas de código para gerar código para.</param>
+        <summary>Gera código para as diretivas de código especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDoubleValue">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateDoubleValue (double d);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateDoubleValue(float64 d) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateDoubleValue(System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="d" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="d">O valor para gerar código para.</param>
+        <summary>Gera código para um número de ponto flutuante de precisão dupla.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEntryPointMethod">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateEntryPointMethod (System.CodeDom.CodeEntryPointMethod e, System.CodeDom.CodeTypeDeclaration c);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateEntryPointMethod(class System.CodeDom.CodeEntryPointMethod e, class System.CodeDom.CodeTypeDeclaration c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateEntryPointMethod(System.CodeDom.CodeEntryPointMethod,System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeEntryPointMethod" />
+        <Parameter Name="c" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="e">O ponto de entrada para o código.</param>
+        <param name="c">O código que declara o tipo.</param>
+        <summary>Gera código para o método de ponto de entrada especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEvent">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateEvent (System.CodeDom.CodeMemberEvent e, System.CodeDom.CodeTypeDeclaration c);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateEvent(class System.CodeDom.CodeMemberEvent e, class System.CodeDom.CodeTypeDeclaration c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateEvent(System.CodeDom.CodeMemberEvent,System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeMemberEvent" />
+        <Parameter Name="c" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="e">O evento de membro para gerar código para.</param>
+        <param name="c">O tipo do objeto que este evento ocorre no.</param>
+        <summary>Gera código para o evento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEventReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateEventReferenceExpression (System.CodeDom.CodeEventReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateEventReferenceExpression(class System.CodeDom.CodeEventReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateEventReferenceExpression(System.CodeDom.CodeEventReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeEventReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de referência de evento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateExpression">
+      <MemberSignature Language="C#" Value="protected void GenerateExpression (System.CodeDom.CodeExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void GenerateExpression(class System.CodeDom.CodeExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateExpression(System.CodeDom.CodeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão de código para gerar código para.</param>
+        <summary>Gera código para a expressão de código especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="e" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="e" /> não é um <see cref="T:System.CodeDom.CodeStatement" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateExpressionStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateExpressionStatement (System.CodeDom.CodeExpressionStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateExpressionStatement(class System.CodeDom.CodeExpressionStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateExpressionStatement(System.CodeDom.CodeExpressionStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeExpressionStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução de expressão especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateField">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateField (System.CodeDom.CodeMemberField e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateField(class System.CodeDom.CodeMemberField e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateField(System.CodeDom.CodeMemberField)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeMemberField" />
+      </Parameters>
+      <Docs>
+        <param name="e">O campo para gerar código para.</param>
+        <summary>Gera código para o campo de membro especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateFieldReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateFieldReferenceExpression (System.CodeDom.CodeFieldReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateFieldReferenceExpression(class System.CodeDom.CodeFieldReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateFieldReferenceExpression(System.CodeDom.CodeFieldReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeFieldReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de referência do campo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateGotoStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateGotoStatement (System.CodeDom.CodeGotoStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateGotoStatement(class System.CodeDom.CodeGotoStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateGotoStatement(System.CodeDom.CodeGotoStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeGotoStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para especificado <see langword="goto" /> instrução.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIndexerExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateIndexerExpression (System.CodeDom.CodeIndexerExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateIndexerExpression(class System.CodeDom.CodeIndexerExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateIndexerExpression(System.CodeDom.CodeIndexerExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeIndexerExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de indexador especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateIterationStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateIterationStatement (System.CodeDom.CodeIterationStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateIterationStatement(class System.CodeDom.CodeIterationStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateIterationStatement(System.CodeDom.CodeIterationStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeIterationStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução de iteração especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Na maioria dos idiomas, esse método irá gerar código para um `for` loop ou uma `while` loop.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateLabeledStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateLabeledStatement (System.CodeDom.CodeLabeledStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateLabeledStatement(class System.CodeDom.CodeLabeledStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateLabeledStatement(System.CodeDom.CodeLabeledStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeLabeledStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução rotulada especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateLinePragmaEnd">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateLinePragmaEnd (System.CodeDom.CodeLinePragma e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateLinePragmaEnd(class System.CodeDom.CodeLinePragma e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateLinePragmaEnd(System.CodeDom.CodeLinePragma)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeLinePragma" />
+      </Parameters>
+      <Docs>
+        <param name="e">O fim de gerar código para o pragma de linha.</param>
+        <summary>Gera código para o fim de pragma de linha especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateLinePragmaStart">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateLinePragmaStart (System.CodeDom.CodeLinePragma e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateLinePragmaStart(class System.CodeDom.CodeLinePragma e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateLinePragmaStart(System.CodeDom.CodeLinePragma)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeLinePragma" />
+      </Parameters>
+      <Docs>
+        <param name="e">O início para gerar código para o pragma de linha.</param>
+        <summary>Gera código para o início de pragma de linha especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethod">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateMethod (System.CodeDom.CodeMemberMethod e, System.CodeDom.CodeTypeDeclaration c);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateMethod(class System.CodeDom.CodeMemberMethod e, class System.CodeDom.CodeTypeDeclaration c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateMethod(System.CodeDom.CodeMemberMethod,System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeMemberMethod" />
+        <Parameter Name="c" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="e">O método de membro para gerar código para.</param>
+        <param name="c">O tipo do objeto que este método ocorre em.</param>
+        <summary>Gera código para o método especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethodInvokeExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateMethodInvokeExpression (System.CodeDom.CodeMethodInvokeExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateMethodInvokeExpression(class System.CodeDom.CodeMethodInvokeExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateMethodInvokeExpression(System.CodeDom.CodeMethodInvokeExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeMethodInvokeExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão que invoca o método especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethodReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateMethodReferenceExpression (System.CodeDom.CodeMethodReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateMethodReferenceExpression(class System.CodeDom.CodeMethodReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateMethodReferenceExpression(System.CodeDom.CodeMethodReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeMethodReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de referência de método especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMethodReturnStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateMethodReturnStatement (System.CodeDom.CodeMethodReturnStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateMethodReturnStatement(class System.CodeDom.CodeMethodReturnStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateMethodReturnStatement(System.CodeDom.CodeMethodReturnStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeMethodReturnStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução de retorno do método especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNamespace">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateNamespace (System.CodeDom.CodeNamespace e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateNamespace(class System.CodeDom.CodeNamespace e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateNamespace(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="e">O namespace para o qual gerar código.</param>
+        <summary>Gera código para o namespace especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNamespaceEnd">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateNamespaceEnd (System.CodeDom.CodeNamespace e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateNamespaceEnd(class System.CodeDom.CodeNamespace e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateNamespaceEnd(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="e">O namespace para o qual gerar código.</param>
+        <summary>Gera código para o final de um namespace.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNamespaceImport">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateNamespaceImport (System.CodeDom.CodeNamespaceImport e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateNamespaceImport(class System.CodeDom.CodeNamespaceImport e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateNamespaceImport(System.CodeDom.CodeNamespaceImport)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeNamespaceImport" />
+      </Parameters>
+      <Docs>
+        <param name="e">A importação do namespace para gerar código para.</param>
+        <summary>Gera código para a importação do namespace especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNamespaceImports">
+      <MemberSignature Language="C#" Value="protected void GenerateNamespaceImports (System.CodeDom.CodeNamespace e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void GenerateNamespaceImports(class System.CodeDom.CodeNamespace e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateNamespaceImports(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="e">A importação do namespace para gerar código para.</param>
+        <summary>Gera código para a importação do namespace especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNamespaces">
+      <MemberSignature Language="C#" Value="protected void GenerateNamespaces (System.CodeDom.CodeCompileUnit e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void GenerateNamespaces(class System.CodeDom.CodeCompileUnit e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateNamespaces(System.CodeDom.CodeCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="e">A unidade de compilação para gerar namespaces para.</param>
+        <summary>Gera código para os namespaces na unidade de compilação especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNamespaceStart">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateNamespaceStart (System.CodeDom.CodeNamespace e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateNamespaceStart(class System.CodeDom.CodeNamespace e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateNamespaceStart(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="e">O namespace para o qual gerar código.</param>
+        <summary>Gera código para o início de um namespace.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateObjectCreateExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateObjectCreateExpression (System.CodeDom.CodeObjectCreateExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateObjectCreateExpression(class System.CodeDom.CodeObjectCreateExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateObjectCreateExpression(System.CodeDom.CodeObjectCreateExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeObjectCreateExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de criação do objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateParameterDeclarationExpression">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateParameterDeclarationExpression (System.CodeDom.CodeParameterDeclarationExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateParameterDeclarationExpression(class System.CodeDom.CodeParameterDeclarationExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateParameterDeclarationExpression(System.CodeDom.CodeParameterDeclarationExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeParameterDeclarationExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de declaração de parâmetro especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratePrimitiveExpression">
+      <MemberSignature Language="C#" Value="protected virtual void GeneratePrimitiveExpression (System.CodeDom.CodePrimitiveExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GeneratePrimitiveExpression(class System.CodeDom.CodePrimitiveExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GeneratePrimitiveExpression(System.CodeDom.CodePrimitiveExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodePrimitiveExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de primitivo especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="e" />usa um tipo de dados inválido. Somente os seguintes tipos de dados são válidos:  
+  
+-   cadeia de caracteres  
+  
+-   char  
+  
+-   byte  
+  
+-   Int16  
+  
+-   Int32  
+  
+-   Int64  
+  
+-   Simples  
+  
+-   Duplo  
+  
+-   Decimal</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateProperty">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateProperty (System.CodeDom.CodeMemberProperty e, System.CodeDom.CodeTypeDeclaration c);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateProperty(class System.CodeDom.CodeMemberProperty e, class System.CodeDom.CodeTypeDeclaration c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateProperty(System.CodeDom.CodeMemberProperty,System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeMemberProperty" />
+        <Parameter Name="c" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="e">A propriedade para gerar código para.</param>
+        <param name="c">O tipo do objeto que esta propriedade ocorre em.</param>
+        <summary>Gera código para a propriedade especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratePropertyReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GeneratePropertyReferenceExpression (System.CodeDom.CodePropertyReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GeneratePropertyReferenceExpression(class System.CodeDom.CodePropertyReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GeneratePropertyReferenceExpression(System.CodeDom.CodePropertyReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodePropertyReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de referência da propriedade especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratePropertySetValueReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GeneratePropertySetValueReferenceExpression (System.CodeDom.CodePropertySetValueReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GeneratePropertySetValueReferenceExpression(class System.CodeDom.CodePropertySetValueReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GeneratePropertySetValueReferenceExpression(System.CodeDom.CodePropertySetValueReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodePropertySetValueReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de referência de valor de conjunto de propriedade especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateRemoveEventStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateRemoveEventStatement (System.CodeDom.CodeRemoveEventStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateRemoveEventStatement(class System.CodeDom.CodeRemoveEventStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateRemoveEventStatement(System.CodeDom.CodeRemoveEventStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeRemoveEventStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a declaração de evento remove especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSingleFloatValue">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateSingleFloatValue (float s);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateSingleFloatValue(float32 s) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateSingleFloatValue(System.Single)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="s" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="s">O valor para gerar código para.</param>
+        <summary>Gera código para um número de ponto flutuante de precisão simples.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSnippetCompileUnit">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateSnippetCompileUnit (System.CodeDom.CodeSnippetCompileUnit e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateSnippetCompileUnit(class System.CodeDom.CodeSnippetCompileUnit e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateSnippetCompileUnit(System.CodeDom.CodeSnippetCompileUnit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeSnippetCompileUnit" />
+      </Parameters>
+      <Docs>
+        <param name="e">O fragmento de código literal compilar unidade para gerar código para.</param>
+        <summary>Gera o código da unidade de compilação de fragmento de código literal especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSnippetExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateSnippetExpression (System.CodeDom.CodeSnippetExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateSnippetExpression(class System.CodeDom.CodeSnippetExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateSnippetExpression(System.CodeDom.CodeSnippetExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeSnippetExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera o código da expressão de fragmento de código literal especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSnippetMember">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateSnippetMember (System.CodeDom.CodeSnippetTypeMember e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateSnippetMember(class System.CodeDom.CodeSnippetTypeMember e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateSnippetMember(System.CodeDom.CodeSnippetTypeMember)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeSnippetTypeMember" />
+      </Parameters>
+      <Docs>
+        <param name="e">O membro para gerar código para.</param>
+        <summary>Gera o código do membro da classe de fragmento de código literal especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateSnippetStatement">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateSnippetStatement (System.CodeDom.CodeSnippetStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateSnippetStatement(class System.CodeDom.CodeSnippetStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateSnippetStatement(System.CodeDom.CodeSnippetStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeSnippetStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera o código da instrução de fragmento de código literal especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateStatement">
+      <MemberSignature Language="C#" Value="protected void GenerateStatement (System.CodeDom.CodeStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void GenerateStatement(class System.CodeDom.CodeStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateStatement(System.CodeDom.CodeStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução especificada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="e" /> não é um <see cref="T:System.CodeDom.CodeStatement" /> válido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateStatements">
+      <MemberSignature Language="C#" Value="protected void GenerateStatements (System.CodeDom.CodeStatementCollection stms);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void GenerateStatements(class System.CodeDom.CodeStatementCollection stms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateStatements(System.CodeDom.CodeStatementCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stms" Type="System.CodeDom.CodeStatementCollection" />
+      </Parameters>
+      <Docs>
+        <param name="stms">As instruções para gerar código para.</param>
+        <summary>Gera código para a coleção de instrução especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateThisReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateThisReferenceExpression (System.CodeDom.CodeThisReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateThisReferenceExpression(class System.CodeDom.CodeThisReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateThisReferenceExpression(System.CodeDom.CodeThisReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeThisReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código especificado esta expressão de referência.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateThrowExceptionStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateThrowExceptionStatement (System.CodeDom.CodeThrowExceptionStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateThrowExceptionStatement(class System.CodeDom.CodeThrowExceptionStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateThrowExceptionStatement(System.CodeDom.CodeThrowExceptionStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeThrowExceptionStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a declaração de exceção throw especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTryCatchFinallyStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateTryCatchFinallyStatement (System.CodeDom.CodeTryCatchFinallyStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateTryCatchFinallyStatement(class System.CodeDom.CodeTryCatchFinallyStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateTryCatchFinallyStatement(System.CodeDom.CodeTryCatchFinallyStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeTryCatchFinallyStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para especificado <see langword="try...catch...finally" /> instrução.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTypeConstructor">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateTypeConstructor (System.CodeDom.CodeTypeConstructor e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateTypeConstructor(class System.CodeDom.CodeTypeConstructor e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateTypeConstructor(System.CodeDom.CodeTypeConstructor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeTypeConstructor" />
+      </Parameters>
+      <Docs>
+        <param name="e">O construtor da classe para gerar código para.</param>
+        <summary>Gera código para o construtor da classe especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTypeEnd">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateTypeEnd (System.CodeDom.CodeTypeDeclaration e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateTypeEnd(class System.CodeDom.CodeTypeDeclaration e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateTypeEnd(System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="e">O fim da classe para gerar código para.</param>
+        <summary>Gera código para o final da classe especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTypeOfExpression">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateTypeOfExpression (System.CodeDom.CodeTypeOfExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateTypeOfExpression(class System.CodeDom.CodeTypeOfExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateTypeOfExpression(System.CodeDom.CodeTypeOfExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeTypeOfExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para o tipo de expressão especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTypeReferenceExpression">
+      <MemberSignature Language="C#" Value="protected virtual void GenerateTypeReferenceExpression (System.CodeDom.CodeTypeReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateTypeReferenceExpression(class System.CodeDom.CodeTypeReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateTypeReferenceExpression(System.CodeDom.CodeTypeReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeTypeReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de referência do tipo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTypes">
+      <MemberSignature Language="C#" Value="protected void GenerateTypes (System.CodeDom.CodeNamespace e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void GenerateTypes(class System.CodeDom.CodeNamespace e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateTypes(System.CodeDom.CodeNamespace)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeNamespace" />
+      </Parameters>
+      <Docs>
+        <param name="e">O namespace para gerar classes para.</param>
+        <summary>Gera código para o namespace especificado e as classes que ele contém.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateTypeStart">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateTypeStart (System.CodeDom.CodeTypeDeclaration e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateTypeStart(class System.CodeDom.CodeTypeDeclaration e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateTypeStart(System.CodeDom.CodeTypeDeclaration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeTypeDeclaration" />
+      </Parameters>
+      <Docs>
+        <param name="e">O início da classe para gerar código para.</param>
+        <summary>Gera código para o início da classe especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateVariableDeclarationStatement">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateVariableDeclarationStatement (System.CodeDom.CodeVariableDeclarationStatement e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateVariableDeclarationStatement(class System.CodeDom.CodeVariableDeclarationStatement e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateVariableDeclarationStatement(System.CodeDom.CodeVariableDeclarationStatement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeVariableDeclarationStatement" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução para a qual gerar código.</param>
+        <summary>Gera código para a instrução de declaração de variável especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateVariableReferenceExpression">
+      <MemberSignature Language="C#" Value="protected abstract void GenerateVariableReferenceExpression (System.CodeDom.CodeVariableReferenceExpression e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void GenerateVariableReferenceExpression(class System.CodeDom.CodeVariableReferenceExpression e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GenerateVariableReferenceExpression(System.CodeDom.CodeVariableReferenceExpression)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeVariableReferenceExpression" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <summary>Gera código para a expressão de referência de variável especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTypeOutput">
+      <MemberSignature Language="C#" Value="protected abstract string GetTypeOutput (System.CodeDom.CodeTypeReference value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string GetTypeOutput(class System.CodeDom.CodeTypeReference value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.GetTypeOutput(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="value">O tipo cujo nome será retornado.</param>
+        <summary>Obtém o nome do tipo de dados especificado.</summary>
+        <returns>O nome da referência de tipo de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indent">
+      <MemberSignature Language="C#" Value="protected int Indent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Indent" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.Indent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade de espaços para recuar cada nível de recuo.</summary>
+        <value>O número de espaços para recuo para cada nível de recuo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Segmentos de código geralmente são recuados para facilitar o reconhecimento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentClass">
+      <MemberSignature Language="C#" Value="protected bool IsCurrentClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentClass" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.IsCurrentClass" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto atual que está sendo gerado é uma classe.</summary>
+        <value>
+          <see langword="true" />Se o objeto atual é uma classe. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentDelegate">
+      <MemberSignature Language="C#" Value="protected bool IsCurrentDelegate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentDelegate" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.IsCurrentDelegate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto atual que está sendo gerado é um delegado.</summary>
+        <value>
+          <see langword="true" />Se o objeto atual for um representante; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentEnum">
+      <MemberSignature Language="C#" Value="protected bool IsCurrentEnum { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentEnum" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.IsCurrentEnum" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto atual que está sendo gerado é uma enumeração.</summary>
+        <value>
+          <see langword="true" />Se o objeto atual é uma enumeração; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentInterface">
+      <MemberSignature Language="C#" Value="protected bool IsCurrentInterface { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentInterface" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.IsCurrentInterface" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto atual que está sendo gerado é uma interface.</summary>
+        <value>
+          <see langword="true" />Se o objeto atual é uma interface. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentStruct">
+      <MemberSignature Language="C#" Value="protected bool IsCurrentStruct { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCurrentStruct" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.IsCurrentStruct" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o objeto atual que está sendo gerado é um tipo de valor ou estrutura.</summary>
+        <value>
+          <see langword="true" />Se o objeto atual é um tipo de valor ou estrutura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidIdentifier">
+      <MemberSignature Language="C#" Value="protected abstract bool IsValidIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool IsValidIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.IsValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor para testar está em conflito com os identificadores válidos.</param>
+        <summary>Obtém um valor que indica se o valor especificado é um identificador válido.</summary>
+        <returns>
+          <see langword="true" />Se o valor é um identificador válido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidLanguageIndependentIdentifier">
+      <MemberSignature Language="C#" Value="public static bool IsValidLanguageIndependentIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsValidLanguageIndependentIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.IsValidLanguageIndependentIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para testar a validade.</param>
+        <summary>Obtém um valor que indica se a cadeia de caracteres especificada é um identificador válido.</summary>
+        <returns>
+          <see langword="true" />Se a cadeia de caracteres especificada é um identificador válido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método verifica a cadeia de caracteres especificada para garantir que ele não contém alguns caracteres que podem ser usados para um campo de identificador de escape. O <xref:System.CodeDom.Compiler.CodeGenerator.ValidateIdentifiers%2A> método chama esse método para executar a validação da cadeia de caracteres. Chamando o <xref:System.CodeDom.Compiler.CodeGenerator.ValidateIdentifiers%2A> método e passando um <xref:System.CodeDom.CodeCompileUnit> antes de gerar código dele pode impedir o uso de determinadas sequências de caracteres para incluir o código oculto dentro de um campo de identificador.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="NullToken">
+      <MemberSignature Language="C#" Value="protected abstract string NullToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullToken" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.NullToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o token que representa <see langword="null" />.</summary>
+        <value>O token que representa <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="protected System.CodeDom.Compiler.CodeGeneratorOptions Options { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.Compiler.CodeGeneratorOptions Options" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.Options" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.Compiler.CodeGeneratorOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as opções a serem usadas pelo gerador de código.</summary>
+        <value>Um objeto que indica as opções para o gerador de código a ser usado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Output">
+      <MemberSignature Language="C#" Value="protected System.IO.TextWriter Output { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.TextWriter Output" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGenerator.Output" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.TextWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o gravador de texto a ser usado para saída.</summary>
+        <value>O gravador de texto a ser usado para saída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputAttributeArgument">
+      <MemberSignature Language="C#" Value="protected virtual void OutputAttributeArgument (System.CodeDom.CodeAttributeArgument arg);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputAttributeArgument(class System.CodeDom.CodeAttributeArgument arg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputAttributeArgument(System.CodeDom.CodeAttributeArgument)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="System.CodeDom.CodeAttributeArgument" />
+      </Parameters>
+      <Docs>
+        <param name="arg">O argumento de atributo para gerar código para.</param>
+        <summary>Gera um argumento em um bloco de atributo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputAttributeDeclarations">
+      <MemberSignature Language="C#" Value="protected virtual void OutputAttributeDeclarations (System.CodeDom.CodeAttributeDeclarationCollection attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputAttributeDeclarations(class System.CodeDom.CodeAttributeDeclarationCollection attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputAttributeDeclarations(System.CodeDom.CodeAttributeDeclarationCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.CodeDom.CodeAttributeDeclarationCollection" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Os atributos para gerar código para.</param>
+        <summary>Gera código para a coleção de declaração de atributo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputDirection">
+      <MemberSignature Language="C#" Value="protected virtual void OutputDirection (System.CodeDom.FieldDirection dir);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputDirection(valuetype System.CodeDom.FieldDirection dir) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputDirection(System.CodeDom.FieldDirection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dir" Type="System.CodeDom.FieldDirection" />
+      </Parameters>
+      <Docs>
+        <param name="dir">Um dos valores de enumeração que indica o atributo do campo.</param>
+        <summary>Gera código para especificado <see cref="T:System.CodeDom.FieldDirection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputExpressionList">
+      <MemberSignature Language="C#" Value="protected virtual void OutputExpressionList (System.CodeDom.CodeExpressionCollection expressions);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputExpressionList(class System.CodeDom.CodeExpressionCollection expressions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputExpressionList(System.CodeDom.CodeExpressionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressions" Type="System.CodeDom.CodeExpressionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="expressions">As expressões para gerar código para.</param>
+        <summary>Gera código para a lista de expressões especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputExpressionList">
+      <MemberSignature Language="C#" Value="protected virtual void OutputExpressionList (System.CodeDom.CodeExpressionCollection expressions, bool newlineBetweenItems);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputExpressionList(class System.CodeDom.CodeExpressionCollection expressions, bool newlineBetweenItems) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputExpressionList(System.CodeDom.CodeExpressionCollection,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expressions" Type="System.CodeDom.CodeExpressionCollection" />
+        <Parameter Name="newlineBetweenItems" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="expressions">As expressões para gerar código para.</param>
+        <param name="newlineBetweenItems">
+          <see langword="true" />Para inserir uma nova linha após cada item; Caso contrário, <see langword="false" />.</param>
+        <summary>Gera código para a lista de expressões especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputFieldScopeModifier">
+      <MemberSignature Language="C#" Value="protected virtual void OutputFieldScopeModifier (System.CodeDom.MemberAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputFieldScopeModifier(valuetype System.CodeDom.MemberAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputFieldScopeModifier(System.CodeDom.MemberAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.CodeDom.MemberAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Um dos valores de enumeração que especifica os atributos.</param>
+        <summary>Gera um modificador de escopo de campo correspondente para os atributos especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputIdentifier">
+      <MemberSignature Language="C#" Value="protected virtual void OutputIdentifier (string ident);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputIdentifier(string ident) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ident" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ident">O identificador para a saída.</param>
+        <summary>Gera o identificador especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputMemberAccessModifier">
+      <MemberSignature Language="C#" Value="protected virtual void OutputMemberAccessModifier (System.CodeDom.MemberAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputMemberAccessModifier(valuetype System.CodeDom.MemberAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputMemberAccessModifier(System.CodeDom.MemberAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.CodeDom.MemberAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Um dos valores de enumeração que indica o modificador de acesso de membro para gerar código para.</param>
+        <summary>Gera código para o modificador de acesso de membro especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputMemberScopeModifier">
+      <MemberSignature Language="C#" Value="protected virtual void OutputMemberScopeModifier (System.CodeDom.MemberAttributes attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputMemberScopeModifier(valuetype System.CodeDom.MemberAttributes attributes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputMemberScopeModifier(System.CodeDom.MemberAttributes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.CodeDom.MemberAttributes" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Um dos valores de enumeração que indica o modificador de escopo do membro para gerar código para.</param>
+        <summary>Gera código para o modificador de escopo do membro especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputOperator">
+      <MemberSignature Language="C#" Value="protected virtual void OutputOperator (System.CodeDom.CodeBinaryOperatorType op);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputOperator(valuetype System.CodeDom.CodeBinaryOperatorType op) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputOperator(System.CodeDom.CodeBinaryOperatorType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="op" Type="System.CodeDom.CodeBinaryOperatorType" />
+      </Parameters>
+      <Docs>
+        <param name="op">O operador para gerar código para.</param>
+        <summary>Gera código para o operador especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputParameters">
+      <MemberSignature Language="C#" Value="protected virtual void OutputParameters (System.CodeDom.CodeParameterDeclarationExpressionCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputParameters(class System.CodeDom.CodeParameterDeclarationExpressionCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputParameters(System.CodeDom.CodeParameterDeclarationExpressionCollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.CodeDom.CodeParameterDeclarationExpressionCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">As expressões de declaração de parâmetro para gerar código para.</param>
+        <summary>Gera código para os parâmetros especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputType">
+      <MemberSignature Language="C#" Value="protected abstract void OutputType (System.CodeDom.CodeTypeReference typeRef);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputType(class System.CodeDom.CodeTypeReference typeRef) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputType(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeRef" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="typeRef">O tipo para gerar código para.</param>
+        <summary>Gera código para o tipo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypeAttributes">
+      <MemberSignature Language="C#" Value="protected virtual void OutputTypeAttributes (System.Reflection.TypeAttributes attributes, bool isStruct, bool isEnum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputTypeAttributes(valuetype System.Reflection.TypeAttributes attributes, bool isStruct, bool isEnum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputTypeAttributes(System.Reflection.TypeAttributes,System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="System.Reflection.TypeAttributes" />
+        <Parameter Name="isStruct" Type="System.Boolean" />
+        <Parameter Name="isEnum" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">Um dos valores de enumeração que indica os atributos de tipo para gerar código para.</param>
+        <param name="isStruct">
+          <see langword="true" />Se o tipo é um struct; Caso contrário, <see langword="false" />.</param>
+        <param name="isEnum">
+          <see langword="true" />Se o tipo é enum; Caso contrário, <see langword="false" />.</param>
+        <summary>Gera código para os atributos do tipo especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputTypeNamePair">
+      <MemberSignature Language="C#" Value="protected virtual void OutputTypeNamePair (System.CodeDom.CodeTypeReference typeRef, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OutputTypeNamePair(class System.CodeDom.CodeTypeReference typeRef, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.OutputTypeNamePair(System.CodeDom.CodeTypeReference,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typeRef" Type="System.CodeDom.CodeTypeReference" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="typeRef">O tipo.</param>
+        <param name="name">O nome do objeto.</param>
+        <summary>Gera código para o par de nome e o tipo do objeto especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuoteSnippetString">
+      <MemberSignature Language="C#" Value="protected abstract string QuoteSnippetString (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string QuoteSnippetString(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.QuoteSnippetString(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser convertida.</param>
+        <summary>Converte a cadeia de caracteres especificada por formatação com códigos de escape.</summary>
+        <returns>A cadeia de caracteres convertida.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método retorna uma versão modificada da cadeia de caracteres especificada que foi formatada com caracteres de escape de código. Por exemplo, `/"` pode ser usado para representar `"`. Esses códigos de escape são usados para substituir os elementos de cadeia de caracteres especificada que, caso contrário, podem estar em conflito com a sintaxe de linguagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Supports">
+      <MemberSignature Language="C#" Value="protected abstract bool Supports (System.CodeDom.Compiler.GeneratorSupport support);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool Supports(valuetype System.CodeDom.Compiler.GeneratorSupport support) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.Supports(System.CodeDom.Compiler.GeneratorSupport)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="support" Type="System.CodeDom.Compiler.GeneratorSupport" />
+      </Parameters>
+      <Docs>
+        <param name="support">O tipo de geração de código de suporte para testar.</param>
+        <summary>Obtém um valor que indica se o suporte à geração de código especificado é fornecida.</summary>
+        <returns>
+          <see langword="true" />Se a geração de código especificada suporte é fornecida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.CreateEscapedIdentifier">
+      <MemberSignature Language="C#" Value="string ICodeGenerator.CreateEscapedIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.CodeDom.Compiler.ICodeGenerator.CreateEscapedIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#CreateEscapedIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para criar um identificador com caracteres de escape.</param>
+        <summary>Cria um identificador com caracteres de escape para o valor especificado.</summary>
+        <returns>O identificador com caracteres de escape para o valor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.CreateValidIdentifier">
+      <MemberSignature Language="C#" Value="string ICodeGenerator.CreateValidIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.CodeDom.Compiler.ICodeGenerator.CreateValidIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#CreateValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres para gerar um identificador válido.</param>
+        <summary>Cria um identificador válido para o valor especificado.</summary>
+        <returns>Um identificador válido para o valor especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromCompileUnit">
+      <MemberSignature Language="C#" Value="void ICodeGenerator.GenerateCodeFromCompileUnit (System.CodeDom.CodeCompileUnit e, System.IO.TextWriter w, System.CodeDom.Compiler.CodeGeneratorOptions o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromCompileUnit(class System.CodeDom.CodeCompileUnit e, class System.IO.TextWriter w, class System.CodeDom.Compiler.CodeGeneratorOptions o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#GenerateCodeFromCompileUnit(System.CodeDom.CodeCompileUnit,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeCompileUnit" />
+        <Parameter Name="w" Type="System.IO.TextWriter" />
+        <Parameter Name="o" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="e">A unidade de compilação de CodeDOM para gerar código para.</param>
+        <param name="w">O text writer de saída do código.</param>
+        <param name="o">As opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a unidade de compilação especificada do modelo de objeto de documento de código (CodeDOM) e o envia para o gravador de texto especificado usando as opções especificadas.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="w" /> não está disponível. <paramref name="w" /> pode ter sido fechado antes da chamada de método ter sido feita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromExpression">
+      <MemberSignature Language="C#" Value="void ICodeGenerator.GenerateCodeFromExpression (System.CodeDom.CodeExpression e, System.IO.TextWriter w, System.CodeDom.Compiler.CodeGeneratorOptions o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromExpression(class System.CodeDom.CodeExpression e, class System.IO.TextWriter w, class System.CodeDom.Compiler.CodeGeneratorOptions o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#GenerateCodeFromExpression(System.CodeDom.CodeExpression,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeExpression" />
+        <Parameter Name="w" Type="System.IO.TextWriter" />
+        <Parameter Name="o" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="e">A expressão para a qual gerar código.</param>
+        <param name="w">O text writer de saída do código.</param>
+        <param name="o">As opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a expressão de modelo de objeto de documento de código (CodeDOM) especificado e o envia para o gravador de texto especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="w" /> não está disponível. <paramref name="w" /> pode ter sido fechado antes da chamada de método ter sido feita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromNamespace">
+      <MemberSignature Language="C#" Value="void ICodeGenerator.GenerateCodeFromNamespace (System.CodeDom.CodeNamespace e, System.IO.TextWriter w, System.CodeDom.Compiler.CodeGeneratorOptions o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromNamespace(class System.CodeDom.CodeNamespace e, class System.IO.TextWriter w, class System.CodeDom.Compiler.CodeGeneratorOptions o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#GenerateCodeFromNamespace(System.CodeDom.CodeNamespace,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeNamespace" />
+        <Parameter Name="w" Type="System.IO.TextWriter" />
+        <Parameter Name="o" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="e">O namespace para o qual gerar código.</param>
+        <param name="w">O text writer de saída do código.</param>
+        <param name="o">As opções a serem usadas para gerar código.</param>
+        <summary>Gera código para o namespace do modelo de objeto de documento de código (CodeDOM) especificado e o envia para o gravador de texto especificado usando as opções especificadas.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="w" /> não está disponível. <paramref name="w" /> pode ter sido fechado antes da chamada de método ter sido feita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromStatement">
+      <MemberSignature Language="C#" Value="void ICodeGenerator.GenerateCodeFromStatement (System.CodeDom.CodeStatement e, System.IO.TextWriter w, System.CodeDom.Compiler.CodeGeneratorOptions o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromStatement(class System.CodeDom.CodeStatement e, class System.IO.TextWriter w, class System.CodeDom.Compiler.CodeGeneratorOptions o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#GenerateCodeFromStatement(System.CodeDom.CodeStatement,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeStatement" />
+        <Parameter Name="w" Type="System.IO.TextWriter" />
+        <Parameter Name="o" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="e">A instrução que contém os elementos de CodeDOM traduzir.</param>
+        <param name="w">O text writer de saída do código.</param>
+        <param name="o">As opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a instrução do modelo de objeto de documento de código (CodeDOM) e o envia para o gravador de texto especificado usando as opções especificadas.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="w" /> não está disponível. <paramref name="w" /> pode ter sido fechado antes da chamada de método ter sido feita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromType">
+      <MemberSignature Language="C#" Value="void ICodeGenerator.GenerateCodeFromType (System.CodeDom.CodeTypeDeclaration e, System.IO.TextWriter w, System.CodeDom.Compiler.CodeGeneratorOptions o);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromType(class System.CodeDom.CodeTypeDeclaration e, class System.IO.TextWriter w, class System.CodeDom.Compiler.CodeGeneratorOptions o) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#GenerateCodeFromType(System.CodeDom.CodeTypeDeclaration,System.IO.TextWriter,System.CodeDom.Compiler.CodeGeneratorOptions)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeTypeDeclaration" />
+        <Parameter Name="w" Type="System.IO.TextWriter" />
+        <Parameter Name="o" Type="System.CodeDom.Compiler.CodeGeneratorOptions" />
+      </Parameters>
+      <Docs>
+        <param name="e">O tipo para gerar código para.</param>
+        <param name="w">O text writer de saída do código.</param>
+        <param name="o">As opções a serem usadas para gerar código.</param>
+        <summary>Gera código para a declaração de tipo de modelo de objeto de documento de código (CodeDOM) especificado e o envia para o gravador de texto especificado usando as opções especificadas.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="w" /> não está disponível. <paramref name="w" /> pode ter sido fechado antes da chamada de método ter sido feita.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.GetTypeOutput">
+      <MemberSignature Language="C#" Value="string ICodeGenerator.GetTypeOutput (System.CodeDom.CodeTypeReference type);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance string System.CodeDom.Compiler.ICodeGenerator.GetTypeOutput(class System.CodeDom.CodeTypeReference type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#GetTypeOutput(System.CodeDom.CodeTypeReference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.CodeDom.CodeTypeReference" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo de retorno.</param>
+        <summary>Obtém o tipo indicado pelo especificado <see cref="T:System.CodeDom.CodeTypeReference" />.</summary>
+        <returns>O nome da referência de tipo de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.IsValidIdentifier">
+      <MemberSignature Language="C#" Value="bool ICodeGenerator.IsValidIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.CodeDom.Compiler.ICodeGenerator.IsValidIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#IsValidIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor para teste.</param>
+        <summary>Obtém um valor que indica se o valor especificado é um identificador válido para o idioma atual.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="value" /> parâmetro é um identificador válido; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.Supports">
+      <MemberSignature Language="C#" Value="bool ICodeGenerator.Supports (System.CodeDom.Compiler.GeneratorSupport support);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.CodeDom.Compiler.ICodeGenerator.Supports(valuetype System.CodeDom.Compiler.GeneratorSupport support) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#Supports(System.CodeDom.Compiler.GeneratorSupport)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="support" Type="System.CodeDom.Compiler.GeneratorSupport" />
+      </Parameters>
+      <Docs>
+        <param name="support">Os recursos para o gerador de teste.</param>
+        <summary>Obtém um valor que indica se o gerador fornece suporte para os recursos de idioma representados pelo <see cref="T:System.CodeDom.Compiler.GeneratorSupport" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se os recursos especificados forem compatíveis; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.CodeDom.Compiler.ICodeGenerator.ValidateIdentifier">
+      <MemberSignature Language="C#" Value="void ICodeGenerator.ValidateIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.CodeDom.Compiler.ICodeGenerator.ValidateIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.System#CodeDom#Compiler#ICodeGenerator#ValidateIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O identificador a ser validado.</param>
+        <summary>Gera uma exceção se o valor especificado não é um identificador válido.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateIdentifier">
+      <MemberSignature Language="C#" Value="protected virtual void ValidateIdentifier (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ValidateIdentifier(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.ValidateIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O identificador para testar a validade como um identificador.</param>
+        <summary>Gera uma exceção se a cadeia de caracteres especificada não é um identificador válido.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Se o identificador especificado é inválido ou está em conflito com reservadas ou palavras-chave.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateIdentifiers">
+      <MemberSignature Language="C#" Value="public static void ValidateIdentifiers (System.CodeDom.CodeObject e);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ValidateIdentifiers(class System.CodeDom.CodeObject e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGenerator.ValidateIdentifiers(System.CodeDom.CodeObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.CodeDom.CodeObject" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um objeto de teste para identificadores inválidos.</param>
+        <summary>Tenta validar cada campo de identificador contido na especificado <see cref="T:System.CodeDom.CodeObject" /> ou <see cref="N:System.CodeDom" /> árvore.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ É possível para os campos de identificador de <xref:System.CodeDom.CodeObject> objetos para conter os caracteres de escape de campo e código oculto que pode permitir que as violações de segurança. Este método verifica os campos literais de cada <xref:System.CodeDom.CodeObject> em um <xref:System.CodeDom> árvore de caracteres que podem ser usados para ocultar código e lança uma exceção se um campo identificador contém um caractere inválido.  
+  
+ Este método chama o <xref:System.CodeDom.Compiler.CodeGenerator.IsValidLanguageIndependentIdentifier%2A> método para validar cada identificador especificado na <xref:System.CodeDom.CodeObject> ou <xref:System.CodeDom> de árvore e lança uma exceção se um identificador é inválido ou contém caracteres inválidos.  
+  
+ Chame este método e passá-lo a <xref:System.CodeDom.CodeCompileUnit> que contém o gráfico de código para gerar antes de gerar código para bloquear o uso de certos sequências de caracteres que pode ser usado para incluir código oculto dentro de um campo de identificador. Esse método não é chamado automaticamente por métodos gerar código.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Especificado <see cref="T:System.CodeDom.CodeObject" /> contém um identificador inválido.</exception>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Este membro não pode ser usado pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

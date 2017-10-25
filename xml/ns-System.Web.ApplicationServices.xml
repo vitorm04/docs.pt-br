@@ -1,0 +1,21 @@
+<Namespace Name="System.Web.ApplicationServices">
+  <Docs>
+    <summary>O <see cref="N:System.Web.ApplicationServices" /> namespace fornece classes que permitem a autenticação de formulários do ASP.NET de acesso, funções e perfis de serviços de aplicativos como serviços Windows Communication Foundation (WCF).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.ApplicationServices.AuthenticationService>, <xref:System.Web.ApplicationServices.RoleService>, e <xref:System.Web.ApplicationServices.ProfileService> classes contêm métodos que permitem a você fazer logon de usuários, verifique quais funções de usuário atual pertence e recuperar propriedades de perfil para o usuário por meio de serviços do WCF. O namespace também inclui as seguintes classes:  
+  
+-   <xref:System.Web.ApplicationServices.CreatingCookieEventArgs>, que é usado para personalizar o cookie de autenticação de <xref:System.Web.ApplicationServices.AuthenticationService> classe.  
+  
+-   <xref:System.Web.ApplicationServices.AuthenticatingEventArgs>, que é usado para selecionar o provedor de associação em tempo de execução.  
+  
+-   <xref:System.Web.ApplicationServices.SelectingProviderEventArgs>, que é usado para selecionar o provedor de função em tempo de execução.  
+  
+-   <xref:System.Web.ApplicationServices.ValidatingPropertiesEventArgs>, que é usada para criar propriedades do perfil de validação personalizada para o usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

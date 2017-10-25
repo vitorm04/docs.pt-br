@@ -1,0 +1,1445 @@
+<Type Name="TreeNodeCollection" FullName="System.Windows.Forms.TreeNodeCollection">
+  <TypeSignature Language="C#" Value="public class TreeNodeCollection : System.Collections.IList" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeNodeCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Collections.IList" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeNodeCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IList</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.TreeNodeCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Forms.TreeNode" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, e <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> métodos permitem que você adicionar e remover nós de árvore individuais da coleção.  
+  
+> [!NOTE]
+>  Não há suporte para enumerar a coleção e remover nós.  
+  
+ Você também pode usar o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> métodos para adicionar ou remover todos os nós de árvore da coleção.  
+  
+ Classes não podem herdar do <xref:System.Windows.Forms.TreeNodeCollection> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações do cliente em um <xref:System.Windows.Forms.TreeView> controle. Os nós de árvore raiz exibem nomes de clientes, e os nós de árvore filho exibem os números de ordem atribuídos a cada cliente. Neste exemplo, 1.000 clientes são exibidos com 15 pedidos. De refazer o <xref:System.Windows.Forms.TreeView> é suprimida usando o <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> e <xref:System.Windows.Forms.TreeView.EndUpdate%2A> métodos e uma espera <xref:System.Windows.Forms.Cursor> é exibida enquanto o <xref:System.Windows.Forms.TreeView> cria e pinta o <xref:System.Windows.Forms.TreeNode> objetos. Este exemplo requer que você tenha um `Customer` objeto que pode conter uma coleção de `Order` objetos. Ele também requer que você tenha criado uma instância de um <xref:System.Windows.Forms.TreeView> control em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">O texto do rótulo exibido pelo <see cref="T:System.Windows.Forms.TreeNode" />.</param>
+        <summary>Adiciona um novo nó de árvore com o texto do rótulo especificado ao final da coleção de nós de árvore atual.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.TreeNode" /> que representa o nó de árvore que está sendo adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+ Para remover um <xref:System.Windows.Forms.TreeNode> que você adicionou anteriormente, use o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, ou <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações do cliente em um <xref:System.Windows.Forms.TreeView> controle. Os nós de árvore raiz exibem nomes de clientes, e os nós de árvore filho exibem os números de ordem atribuídos a cada cliente. Neste exemplo, 1.000 clientes são exibidos com 15 pedidos. De refazer o <xref:System.Windows.Forms.TreeView> é suprimida usando o <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> e <xref:System.Windows.Forms.TreeView.EndUpdate%2A> métodos e uma espera <xref:System.Windows.Forms.Cursor> é exibida enquanto o <xref:System.Windows.Forms.TreeView> cria e pinta o <xref:System.Windows.Forms.TreeNode> objetos. Este exemplo requer que você tenha um `Customer` objeto que pode conter uma coleção de `Order` objetos. Ele também requer que você tenha criado uma instância de um <xref:System.Windows.Forms.TreeView> control em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual int Add (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Add(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a adicionar à coleção.</param>
+        <summary>Adiciona um nó de árvore criada anteriormente ao fim da coleção de nó de árvore.</summary>
+        <returns>O valor de índice baseado em zero do <see cref="T:System.Windows.Forms.TreeNode" />, adicionado à coleção de nó de árvore.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta versão do <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> método permite que você adicione criado anteriormente <xref:System.Windows.Forms.TreeNode> objetos ao final da coleção de nós de árvore.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+ Para remover um <xref:System.Windows.Forms.TreeNode> que você adicionou anteriormente, use o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, ou <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> métodos.  
+  
+> [!NOTE]
+>  Um <xref:System.Windows.Forms.TreeNode> podem ser atribuídos a apenas um <xref:System.Windows.Forms.TreeView> controle por vez. Para adicionar o nó de árvore para um novo controle de exibição de árvore, você deve removê-lo da exibição de árvore primeiro ou cloná-lo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe informações do cliente em um <xref:System.Windows.Forms.TreeView> controle. Os nós de árvore raiz exibem nomes de clientes, e os nós de árvore filho exibem os números de ordem atribuídos a cada cliente. Neste exemplo, 1.000 clientes são exibidos com 15 pedidos. De refazer o <xref:System.Windows.Forms.TreeView> é suprimida usando o <xref:System.Windows.Forms.TreeView.BeginUpdate%2A> e <xref:System.Windows.Forms.TreeView.EndUpdate%2A> métodos e uma espera <xref:System.Windows.Forms.Cursor> é exibida enquanto o <xref:System.Windows.Forms.TreeView> cria e pinta o <xref:System.Windows.Forms.TreeNode> objetos. Este exemplo requer que você tenha um `Customer` objeto que pode conter uma coleção de `Order` objetos. Ele também requer que você tenha criado uma instância de um <xref:System.Windows.Forms.TreeView> control em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeView#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeView/CPP/treeview.cpp#1)]
+ [!code-csharp[TreeView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeView/CS/treeview.cs#1)]
+ [!code-vb[TreeView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeView/VB/treeview.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="node" /> está atualmente atribuído a outra <see cref="T:System.Windows.Forms.TreeView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <summary>Cria um novo nó de árvore com a chave e o texto especificados e o adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageIndex">O índice da imagem para exibir no nó de árvore.</param>
+        <summary>Cria um nó de árvore com a chave especificada, texto e imagem e o adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O `imageIndex` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ O nó de árvore é adicionado ao final da coleção. Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageKey">A imagem a ser exibida no nó de árvore.</param>
+        <summary>Cria um nó de árvore com a chave especificada, texto e imagem e o adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O nó de árvore é adicionado ao final da coleção. Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+ O `imageKey` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, int imageIndex, int selectedImageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, int32 imageIndex, int32 selectedImageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageIndex">O índice da imagem para exibir no nó de árvore.</param>
+        <param name="selectedImageIndex">O índice da imagem a ser exibida no nó de árvore quando ele está em um estado selecionado.</param>
+        <summary>Cria um nó de árvore com a chave, texto e imagens especificados e os adiciona à coleção.</summary>
+        <returns>O nó de árvore que foi adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O nó de árvore é adicionado ao final da coleção. Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+ O `imageIndex` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ O `selectedImageIndex` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.StateImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Add (string key, string text, string imageKey, string selectedImageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Add(string key, string text, string imageKey, string selectedImageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Add(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+        <Parameter Name="selectedImageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageKey">A chave da imagem para exibir no nó de árvore.</param>
+        <param name="selectedImageKey">A chave da imagem a ser exibida quando o nó está em um estado selecionado.</param>
+        <summary>Cria um nó de árvore com a chave, texto e imagens especificados e os adiciona à coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> adicionado à coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O nó de árvore é adicionado ao final da coleção. Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+ O `imageKey` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ O `selectedImageKey` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.StateImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRange">
+      <MemberSignature Language="C#" Value="public virtual void AddRange (System.Windows.Forms.TreeNode[] nodes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRange(class System.Windows.Forms.TreeNode[] nodes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.AddRange(System.Windows.Forms.TreeNode[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nodes" Type="System.Windows.Forms.TreeNode[]" />
+      </Parameters>
+      <Docs>
+        <param name="nodes">Uma matriz de objetos <see cref="T:System.Windows.Forms.TreeNode" /> que representa os nós de árvore a se adicionar à coleção.</param>
+        <summary>Adiciona uma matriz de nós de árvore criados anteriormente à coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode> objetos contidos na `nodes` matriz são acrescentados ao final da coleção.  
+  
+ Você pode usar o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> método para adicionar rapidamente um grupo de previamente criado <xref:System.Windows.Forms.TreeNode> objetos na coleção em vez de adicionar manualmente cada <xref:System.Windows.Forms.TreeNode> à coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> método.  
+  
+ Para remover um <xref:System.Windows.Forms.TreeNode> que você adicionou anteriormente, use o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, ou <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> métodos.  
+  
+   
+  
+## Examples  
+ Cópias de exemplo de código a seguir a <xref:System.Windows.Forms.TreeNodeCollection> de um <xref:System.Windows.Forms.TreeView> para um temporário <xref:System.Array>e, em seguida, adiciona o conteúdo da matriz a outra <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> método. O <xref:System.Windows.Forms.TreeNodeCollection> da origem <xref:System.Windows.Forms.TreeView> é desmarcada usando o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> método. Este exemplo requer que você tenha dois <xref:System.Windows.Forms.TreeView> controla, uma com uma coleção de <xref:System.Windows.Forms.TreeNode> objetos.  
+  
+ [!code-cpp[TreeNodeCollection_Clear#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CPP/treenodecollection_clear.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Clear#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CS/treenodecollection_clear.cs#1)]
+ [!code-vb[TreeNodeCollection_Clear#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Clear/VB/treenodecollection_clear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="nodes" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="nodes" /> é filho de outro <see cref="T:System.Windows.Forms.TreeView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os nós de árvore da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para limpar toda a coleção de nós de árvore de uma exibição de árvore.  
+  
+ Para remover um nó de árvore individual da coleção, use o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> métodos.  
+  
+ Para adicionar uma nova <xref:System.Windows.Forms.TreeNode> objetos na coleção, use o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+   
+  
+## Examples  
+ Cópias de exemplo de código a seguir a <xref:System.Windows.Forms.TreeNodeCollection> de um <xref:System.Windows.Forms.TreeView> para um temporário <xref:System.Array>e, em seguida, adiciona o conteúdo da matriz a outra <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> método. O <xref:System.Windows.Forms.TreeNodeCollection> da origem <xref:System.Windows.Forms.TreeView> é desmarcada usando o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> método. Este exemplo requer que você tenha dois <xref:System.Windows.Forms.TreeView> controla, uma com uma coleção de <xref:System.Windows.Forms.TreeNode> objetos.  
+  
+ [!code-cpp[TreeNodeCollection_Clear#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CPP/treenodecollection_clear.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Clear#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Clear/CS/treenodecollection_clear.cs#1)]
+ [!code-vb[TreeNodeCollection_Clear#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Clear/VB/treenodecollection_clear.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Contains(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser localizado na coleção.</param>
+        <summary>Determina se o nó de árvore especificado é membro da coleção.</summary>
+        <returns>
+          <see langword="true" /> se o <see cref="T:System.Windows.Forms.TreeNode" /> é um membro da coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método permite que você determine se um <xref:System.Windows.Forms.TreeNode> é um membro da coleção antes de tentar realizar operações de <xref:System.Windows.Forms.TreeNode>. Você pode usar esse método para confirmar que um <xref:System.Windows.Forms.TreeNode> foi adicionado ao ou ainda é um membro da coleção.  
+  
+ A quantidade de tempo que esse método usa é proporcional ao tamanho da coleção de nós, portanto, talvez você queira evitar usá-lo com grandes coleções de.  
+  
+ Este método verifica a igualdade de referência somente. Você não pode usá-lo para determinar se um nó equivalente, mas diferente está na coleção.  
+  
+> [!NOTE]
+>  Uma implicação o requisito de igualdade de referência é que você não pode personalizar o comportamento desse método para derivados <xref:System.Windows.Forms.TreeNode> tipos, substituindo o <xref:System.Object.Equals%2A> método o <xref:System.Windows.Forms.TreeNode> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um especificado <xref:System.Windows.Forms.TreeNode> está dentro de um <xref:System.Windows.Forms.TreeNodeCollection>e, em seguida, enumera a coleção. Este exemplo requer que você tenha um <xref:System.Windows.Forms.Form> com um <xref:System.Windows.Forms.TreeView> que tem um <xref:System.Windows.Forms.TreeNodeCollection> que contém um <xref:System.Windows.Forms.TreeNode> chamado `myTreeNode2`.  
+  
+ [!code-cpp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CS/treenodecollection_contains_getenumerator.cs#1)]
+ [!code-vb[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsKey">
+      <MemberSignature Language="C#" Value="public virtual bool ContainsKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ContainsKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.ContainsKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do <see cref="T:System.Windows.Forms.TreeNode" /> a ser pesquisado.</param>
+        <summary>Determina se a coleção contém um nó de árvore com a chave especificada.</summary>
+        <returns>
+          <see langword="true" /> para indicar que a coleção contém um <see cref="T:System.Windows.Forms.TreeNode" /> com a chave especificada. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, o <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> propriedade retorna `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array dest, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array dest, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dest" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dest">A matriz de destino.</param>
+        <param name="index">O índice na matriz de destino na qual armazenar iniciada.</param>
+        <summary>Copia toda a coleção em uma matriz existente de um local especificado na matriz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir exibe o número de <xref:System.Windows.Forms.TreeNode> objetos em um <xref:System.Windows.Forms.TreeNodeCollection>, copia o conteúdo da coleção para um <xref:System.Object> matriz e, em seguida, exibe uma lista de nós de árvore em um <xref:System.Windows.Forms.Label> controle. Este exemplo requer que você tenha um <xref:System.Windows.Forms.TreeView> com pelo menos um <xref:System.Windows.Forms.TreeNode> no seu <xref:System.Windows.Forms.TreeNodeCollection>e um <xref:System.Windows.Forms.Label> control em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CPP/treenodecollection_count_copyto.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CS/treenodecollection_count_copyto.cs#1)]
+ [!code-vb[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/VB/treenodecollection_count_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de <see cref="T:System.Windows.Forms.TreeNode" /> objetos na coleção.</summary>
+        <value>O número total de <see cref="T:System.Windows.Forms.TreeNode" /> objetos na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNodeCollection.Count%2A> propriedade contém o número de <xref:System.Windows.Forms.TreeNode> atribuídos à coleção de objetos. Você pode usar o <xref:System.Windows.Forms.TreeNodeCollection.Count%2A> valor da propriedade como os limites superiores de um loop para iterar por meio de uma coleção.  
+  
+> [!NOTE]
+>  Como o valor de índice de uma coleção é um índice com base em zero, você deve subtrair um variável de loop. Se você não conta para isso, você exceder os limites superiores da coleção e lançar um <xref:System.IndexOutOfRangeException> exceção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o número de <xref:System.Windows.Forms.TreeNode> objetos em um <xref:System.Windows.Forms.TreeNodeCollection>, copia o conteúdo da coleção para um <xref:System.Object> matriz e, em seguida, exibe uma lista de nós de árvore em um <xref:System.Windows.Forms.Label> controle. Este exemplo requer que você tenha um <xref:System.Windows.Forms.TreeView> com pelo menos um <xref:System.Windows.Forms.TreeNode> no seu <xref:System.Windows.Forms.TreeNodeCollection>e um <xref:System.Windows.Forms.Label> control em um <xref:System.Windows.Forms.Form>.  
+  
+ [!code-cpp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CPP/treenodecollection_count_copyto.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/CS/treenodecollection_count_copyto.cs#1)]
+ [!code-vb[TreeNodeCollection_Count_CopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Count_CopyTo/VB/treenodecollection_count_copyto.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode[] Find (string key, bool searchAllChildren);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Forms.TreeNode[] Find(string key, bool searchAllChildren) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Find(System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="searchAllChildren" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore a pesquisar.</param>
+        <param name="searchAllChildren">
+          <see langword="true" />para pesquisar os nós filho do nó de árvore; Caso contrário, <see langword="false" />.</param>
+        <summary>Localiza os nós de árvore com a chave especificada, se desejar pesquisar subnós.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Windows.Forms.TreeNode" /> cuja propriedade <see cref="P:System.Windows.Forms.TreeNode.Name" /> corresponde à chave especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia ou não há nenhuma correspondência, o <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> propriedade retorna uma matriz vazia`.`  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para iterar por meio da coleção do nó de árvore.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que representa o a coleção do nó de árvore.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir determina se um especificado <xref:System.Windows.Forms.TreeNode> está dentro de um <xref:System.Windows.Forms.TreeNodeCollection>e, em seguida, enumera a coleção. Este exemplo requer que você tenha um <xref:System.Windows.Forms.Form> com um <xref:System.Windows.Forms.TreeView> que tem um <xref:System.Windows.Forms.TreeNodeCollection> que contém um <xref:System.Windows.Forms.TreeNode> chamado `myTreeNode2`.  
+  
+ [!code-cpp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp#1)]
+ [!code-csharp[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CS/treenodecollection_contains_getenumerator.cs#1)]
+ [!code-vb[TreeNodeCollection_Contains_GetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.IndexOf(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser localizado na coleção.</param>
+        <summary>Retorna o índice do nó de árvore especificado na coleção.</summary>
+        <returns>O índice baseado em zero do item encontrado na coleção de nós de árvore; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A quantidade de tempo que esse método usa é proporcional ao tamanho da coleção de nós, portanto, talvez você queira evitar usá-lo com grandes coleções de.  
+  
+ Este método verifica a igualdade de referência somente. Você não pode usá-lo para recuperar o índice de um nó equivalente, mas diferente na coleção.  
+  
+> [!NOTE]
+>  Uma implicação o requisito de igualdade de referência é que você não pode personalizar o comportamento desse método para derivados <xref:System.Windows.Forms.TreeNode> tipos, substituindo o <xref:System.Object.Equals%2A> método o <xref:System.Windows.Forms.TreeNode> classe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir determina se um especificado <xref:System.Windows.Forms.TreeNode> está dentro de um <xref:System.Windows.Forms.TreeNodeCollection>e, em seguida, enumera a coleção. Este exemplo requer que você tenha um <xref:System.Windows.Forms.Form> com um <xref:System.Windows.Forms.TreeView> que tem um <xref:System.Windows.Forms.TreeNodeCollection> que contém um <xref:System.Windows.Forms.TreeNode> chamado `myTreeNode2`.  
+  
+ [!code-cpp[TreeNodeCollection_Contains_GetEnumerator#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CPP/treenodecollection_contains_getenumerator.cpp#2)]
+ [!code-csharp[TreeNodeCollection_Contains_GetEnumerator#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/CS/treenodecollection_contains_getenumerator.cs#2)]
+ [!code-vb[TreeNodeCollection_Contains_GetEnumerator#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection_Contains_GetEnumerator/VB/treenodecollection_contains_getenumerator.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOfKey">
+      <MemberSignature Language="C#" Value="public virtual int IndexOfKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOfKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.IndexOfKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore a pesquisar.</param>
+        <summary>Retorna o índice da primeira ocorrência de um nó de árvore com a chave especificada.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de um nó de árvore com a chave especificada, se encontrada; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Windows.Forms.TreeNodeCollection.IndexOfKey%2A> é chamado sucessivamente, a última retornou o índice será verificado para uma correspondência de chave pela primeira vez e se não houver nenhuma correspondência, a pesquisa começa no início da coleção.  
+  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se `key` é `null` ou uma cadeia de caracteres vazia, o <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> propriedade retornará -1.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o nó.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <summary>Cria um nó de árvore com o texto especificado e o insere no índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A> está definida como `true`, o `index` o valor do parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Windows.Forms.TreeView> é classificada novamente.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual void Insert (int index, System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local indexado na coleção para inserir o nó de árvore.</param>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser inserido na coleção.</param>
+        <summary>Insere um nó de árvore existente na coleção de nós de árvore no local especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A?displayProperty=nameWithType> está definida como `true`, o `index` o valor do parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Windows.Forms.TreeView> classificados.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> métodos.  
+  
+ Para remover um <xref:System.Windows.Forms.TreeNode> que você adicionou anteriormente, use o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>, <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A>, ou <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> métodos.  
+  
+> [!NOTE]
+>  Um <xref:System.Windows.Forms.TreeNode> podem ser atribuídos a apenas um <xref:System.Windows.Forms.TreeView> controle por vez. Para adicionar o nó de árvore para um novo controle de exibição de árvore, você deve removê-lo da exibição de árvore primeiro ou cloná-lo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove o nó selecionado na árvore de um <xref:System.Windows.Forms.TreeView> e o adiciona à outra se ambas as coleções de nó de árvore não são somente leitura. Quando um <xref:System.Windows.Forms.Button> é clicado, o <xref:System.Windows.Forms.TreeNode> representado pelo <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> é excluído de uma <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> método e adicionado a outro <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> método. Este exemplo requer que você tenha um <xref:System.Windows.Forms.Form> que contém duas <xref:System.Windows.Forms.TreeView> controles e um <xref:System.Windows.Forms.Button>. O <xref:System.Windows.Forms.TreeView> controles devem ser nomeados `treeView1` e `treeView2`.  
+  
+ [!code-cpp[TreeNodeCollection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#1)]
+ [!code-csharp[TreeNodeCollection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#1)]
+ [!code-vb[TreeNodeCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <paramref name="node" /> está atualmente atribuído a outra <see cref="T:System.Windows.Forms.TreeView" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o nó.</param>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <summary>Cria um nó de árvore com o texto especificado e a chave e o insere na coleção.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A> está definida como `true`, o `index` o valor do parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Windows.Forms.TreeView> é classificada novamente.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> métodos.  
+  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, int imageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, int32 imageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o nó.</param>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageIndex">O índice da imagem para exibir no nó de árvore.</param>
+        <summary>Cria um nó de árvore com a chave especificada, texto e imagem e a insere na coleção no índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A> está definida como `true`, o `index` o valor do parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Windows.Forms.TreeView> é classificada novamente.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> métodos.  
+  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O `imageIndex` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, string imageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, string imageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o nó.</param>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageKey">A chave da imagem para exibir no nó de árvore.</param>
+        <summary>Cria um nó de árvore com a chave especificada, texto e imagem e a insere na coleção no índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A> está definida como `true`, o `index` o valor do parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Windows.Forms.TreeView> é classificada novamente.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> métodos.  
+  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O `imageKey` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, int imageIndex, int selectedImageIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, int32 imageIndex, int32 selectedImageIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageIndex" Type="System.Int32" />
+        <Parameter Name="selectedImageIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o nó.</param>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageIndex">O índice da imagem para exibir no nó de árvore.</param>
+        <param name="selectedImageIndex">O índice da imagem a ser exibida no nó de árvore quando ele está em um estado selecionado.</param>
+        <summary>Cria um nó de árvore com a chave especificada, texto e imagens e o insere na coleção no índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A> está definida como `true`, o `index` o valor do parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Windows.Forms.TreeView> é classificada novamente.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> métodos.  
+  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O `imageIndex` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ O `selectedimageIndex` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.StateImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode Insert (int index, string key, string text, string imageKey, string selectedImageKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Windows.Forms.TreeNode Insert(int32 index, string key, string text, string imageKey, string selectedImageKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Insert(System.Int32,System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="imageKey" Type="System.String" />
+        <Parameter Name="selectedImageKey" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local na coleção para inserir o nó.</param>
+        <param name="key">O nome do nó de árvore.</param>
+        <param name="text">O texto a ser exibido no nó de árvore.</param>
+        <param name="imageKey">A chave da imagem para exibir no nó de árvore.</param>
+        <param name="selectedImageKey">A chave da imagem a ser exibida no nó de árvore quando ele está em um estado selecionado.</param>
+        <summary>Cria um nó de árvore com a chave especificada, texto e imagens e o insere na coleção no índice especificado.</summary>
+        <returns>O <see cref="T:System.Windows.Forms.TreeNode" /> que foi inserido na coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A> está definida como `true`, o `index` o valor do parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Windows.Forms.TreeView> é classificada novamente.  
+  
+ Você também pode adicionar novas <xref:System.Windows.Forms.TreeNode> objetos na coleção usando o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A> métodos.  
+  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ O `imageKey` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.ImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ O `selectedimageKey` parâmetro faz referência a uma imagem no <xref:System.Windows.Forms.TreeView.StateImageList%2A> propriedade do pai <xref:System.Windows.Forms.TreeView>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir remove o nó selecionado na árvore de um <xref:System.Windows.Forms.TreeView> e o adiciona à outra se ambas as coleções de nó de árvore não são somente leitura. Quando um <xref:System.Windows.Forms.Button> é clicado, o <xref:System.Windows.Forms.TreeNode> representado pelo <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> é excluído de uma <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> método e adicionado a outro <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> método. Este exemplo requer que você tenha um <xref:System.Windows.Forms.Form> que contém duas <xref:System.Windows.Forms.TreeView> controles e um <xref:System.Windows.Forms.Button>. O <xref:System.Windows.Forms.TreeView> controles devem ser nomeados `treeView1` e `treeView2`.  
+  
+ [!code-cpp[TreeNodeCollection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#1)]
+ [!code-csharp[TreeNodeCollection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#1)]
+ [!code-vb[TreeNodeCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">A localização indexada do <see cref="T:System.Windows.Forms.TreeNode" /> na coleção.</param>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.TreeNode" /> no local especificado indexada local na coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TreeNode" /> no local especificado indexada local na coleção.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para atribuir <xref:System.Windows.Forms.TreeNode> objetos em um local específico ou para recuperá-los do <xref:System.Windows.Forms.TreeNodeCollection>, você pode referenciar o objeto de coleção com um valor de índice específico. O valor de índice de <xref:System.Windows.Forms.TreeNodeCollection> é um índice com base em zero.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove a primeira <xref:System.Windows.Forms.TreeNode> de um <xref:System.Windows.Forms.TreeView> se seu <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> estiver definida como "Node0". Quando um <xref:System.Windows.Forms.Button> é clicado, a primeira <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeView> for excluído usando o <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> método. Este exemplo requer que você tenha criado um <xref:System.Windows.Forms.TreeView> e um <xref:System.Windows.Forms.Button> em um <xref:System.Windows.Forms.Form>. A primeira <xref:System.Windows.Forms.TreeNode> no seu <xref:System.Windows.Forms.TreeView> devem ter uma propriedade de texto de "Node0".  
+  
+ [!code-cpp[TreeNodeCollection#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#2)]
+ [!code-csharp[TreeNodeCollection#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#2)]
+ [!code-vb[TreeNodeCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <paramref name="index" /> valor é menor que 0 ou for maior do que o número de nós de árvore na coleção.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.TreeNode this[string key] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do <see cref="T:System.Windows.Forms.TreeNode" /> a ser recuperado da coleção.</param>
+        <summary>Obtém o nó de árvore com a chave especificada da coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TreeNode" /> com a chave especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ A chave comparação não diferencia maiusculas de minúsculas. Se o `key` parâmetro é `null` ou uma cadeia de caracteres vazia, o <xref:System.Windows.Forms.TreeNodeCollection.Item%2A> propriedade retorna `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Windows.Forms.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Windows.Forms.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.Remove(System.Windows.Forms.TreeNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Windows.Forms.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser removido.</param>
+        <summary>Remove o nó de árvore especificado da coleção de nós de árvore.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.TreeNode> é removido da coleção de nó de árvore, todas as árvores subsequentes nós são movidos para cima uma posição na coleção.  
+  
+ Você também pode remover um <xref:System.Windows.Forms.TreeNode> que você adicionou anteriormente usando o <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> métodos.  
+  
+> [!NOTE]
+>  Não há suporte para enumerar a coleção e remover nós.  
+  
+ Para adicionar uma nova <xref:System.Windows.Forms.TreeNode> objetos na coleção, use o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove o nó selecionado na árvore de um <xref:System.Windows.Forms.TreeView> e o adiciona à outra se ambas as coleções de nó de árvore não são somente leitura. Quando um <xref:System.Windows.Forms.Button> é clicado, o <xref:System.Windows.Forms.TreeNode> representado pelo <xref:System.Windows.Forms.TreeView.SelectedNode%2A?displayProperty=nameWithType> é excluído de uma <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> método e adicionado a outro <xref:System.Windows.Forms.TreeView> usando o <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> método. Este exemplo requer que você tenha um <xref:System.Windows.Forms.Form> que contém duas <xref:System.Windows.Forms.TreeView> controles e um <xref:System.Windows.Forms.Button>. O <xref:System.Windows.Forms.TreeView> controles devem ser nomeados `treeView1` e `treeView2`.  
+  
+ [!code-cpp[TreeNodeCollection#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#1)]
+ [!code-csharp[TreeNodeCollection#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#1)]
+ [!code-vb[TreeNodeCollection#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do <see cref="T:System.Windows.Forms.TreeNode" /> a ser removido.</param>
+        <summary>Remove um nó de árvore a coleção de nós de árvore em um índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Windows.Forms.TreeNode> é removido da coleção de nó de árvore, todas as árvores subsequentes nós são movidos para cima uma posição na coleção.  
+  
+ Você também pode remover um <xref:System.Windows.Forms.TreeNode> que você adicionou anteriormente usando o <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> ou <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> métodos.  
+  
+> [!NOTE]
+>  Não há suporte para enumerar a coleção e remover nós.  
+  
+ Para adicionar uma nova <xref:System.Windows.Forms.TreeNode> objetos na coleção, use o <xref:System.Windows.Forms.TreeNodeCollection.Add%2A>, <xref:System.Windows.Forms.TreeNodeCollection.AddRange%2A>, ou <xref:System.Windows.Forms.TreeNodeCollection.Insert%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir remove a primeira <xref:System.Windows.Forms.TreeNode> de um <xref:System.Windows.Forms.TreeView> se seu <xref:System.Windows.Forms.TreeNode.Text%2A?displayProperty=nameWithType> estiver definida como "Node0". Quando um <xref:System.Windows.Forms.Button> é clicado, a primeira <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeView> for excluído usando o <xref:System.Windows.Forms.TreeNodeCollection.RemoveAt%2A> método. Este exemplo requer que você tenha criado um <xref:System.Windows.Forms.TreeView> e um <xref:System.Windows.Forms.Button> em um <xref:System.Windows.Forms.Form>. A primeira <xref:System.Windows.Forms.TreeNode> no seu <xref:System.Windows.Forms.TreeView> devem ter uma propriedade de texto de "Node0".  
+  
+ [!code-cpp[TreeNodeCollection#2](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeNodeCollection/CPP/treenodecollection.cpp#2)]
+ [!code-csharp[TreeNodeCollection#2](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeNodeCollection/CS/treenodecollection.cs#2)]
+ [!code-vb[TreeNodeCollection#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeNodeCollection/VB/treenodecollection.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveByKey">
+      <MemberSignature Language="C#" Value="public virtual void RemoveByKey (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveByKey(string key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.RemoveByKey(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">O nome do nó de árvore a ser removido da coleção.</param>
+        <summary>Remove o nó de árvore com a chave especificada da coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeNode.Name%2A> propriedade corresponde à chave para um <xref:System.Windows.Forms.TreeNode> no <xref:System.Windows.Forms.TreeNodeCollection>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à coleção é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso à coleção.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Windows.Forms.TreeNodeCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Add">
+      <MemberSignature Language="C#" Value="int IList.Add (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.Add(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Add(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">O objeto a ser adicionado à coleção de nó de árvore.</param>
+        <summary>Adiciona um objeto ao final da coleção de nós de árvore.</summary>
+        <returns>O valor de índice com base em zero a <see cref="T:System.Windows.Forms.TreeNode" /> que foi adicionado à coleção de nós de árvore.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `node` não é um <xref:System.Windows.Forms.TreeNodeCollection>, o <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Add%2A> método usará a cadeia de caracteres retornada pelo <xref:System.Windows.Forms.TreeNode.ToString%2A> método o <xref:System.Windows.Forms.TreeNode> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">
+          <paramref name="node" />atualmente atribuído a outro <see cref="T:System.Windows.Forms.TreeView" /> controle.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Contains">
+      <MemberSignature Language="C#" Value="bool IList.Contains (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Collections.IList.Contains(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Contains(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">O objeto a ser localizado na coleção.</param>
+        <summary>Determina se o nó de árvore especificado é membro da coleção.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="node" /> é um membro da coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `node` não é um <xref:System.Windows.Forms.TreeNode>, o <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23Contains%2A> método retornará `false`. Portanto, você não pode passar de uma cadeia de caracteres para determinar se a coleção contém um nó que possui o valor da cadeia de caracteres como seu <xref:System.Windows.Forms.TreeNode.Text%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IndexOf">
+      <MemberSignature Language="C#" Value="int IList.IndexOf (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance int32 System.Collections.IList.IndexOf(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#IndexOf(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser localizado na coleção.</param>
+        <summary>Retorna o índice do nó de árvore especificado na coleção.</summary>
+        <returns>O índice baseado em zero do item encontrado na coleção de nós de árvore; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `node` não é um <xref:System.Windows.Forms.TreeNode>, o <xref:System.Windows.Forms.TreeNodeCollection.System%23Collections%23IList%23IndexOf%2A> método retornará -1. Portanto, você não pode passar de uma cadeia de caracteres para localizar o nó que tem o valor da cadeia de caracteres como seu <xref:System.Windows.Forms.TreeNode.Text%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Insert">
+      <MemberSignature Language="C#" Value="void IList.Insert (int index, object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Insert(int32 index, object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Insert(System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local indexado na coleção para inserir o nó de árvore.</param>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser inserido na coleção.</param>
+        <summary>Insere um nó de árvore existente na coleção de nós de árvore no local especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.TreeView.Sorted%2A> está definida como `true`, o `index` parâmetro é ignorado. O <xref:System.Windows.Forms.TreeNode> é inserida na exibição de árvore e o <xref:System.Web.UI.WebControls.TreeView> é classificada novamente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="node" />atualmente atribuído a outro <see cref="T:System.Windows.Forms.TreeView" />.  
+  
+ -ou-  
+  
+ <paramref name="node" /> não é um <see cref="T:System.Windows.Forms.TreeNode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.IsFixedSize">
+      <MemberSignature Language="C#" Value="bool System.Collections.IList.IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.IList.IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#IsFixedSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção de nós de árvore tem um tamanho fixo.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Item">
+      <MemberSignature Language="C#" Value="object System.Collections.IList.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IList.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice baseado em zero no qual obter ou definir o item.</param>
+        <summary>Obtém ou define o nó de árvore no índice especificado na coleção.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TreeNode" /> no índice especificado no <see cref="T:System.Windows.Forms.TreeNodeCollection" />.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O conjunto de valor não é um <see cref="T:System.Windows.Forms.TreeNode" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IList.Remove">
+      <MemberSignature Language="C#" Value="void IList.Remove (object node);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.IList.Remove(object node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeNodeCollection.System#Collections#IList#Remove(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Windows.Forms.TreeNode" /> a ser removido da coleção.</param>
+        <summary>Remove o nó de árvore especificado da coleção de nós de árvore.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não pode passar de uma cadeia de caracteres para remover o nó que tem o valor da cadeia de caracteres como seu <xref:System.Windows.Forms.TreeNode.Text%2A> propriedade.  
+  
+ Quando um <xref:System.Windows.Forms.TreeNode> é removido da coleção de nó de árvore, todas as árvores subsequentes nós são movidos para cima uma posição na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

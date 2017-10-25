@@ -1,0 +1,175 @@
+<Type Name="NormalizationForm" FullName="System.Text.NormalizationForm">
+  <TypeSignature Language="C#" Value="public enum NormalizationForm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NormalizationForm extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Text.NormalizationForm" />
+  <AssemblyInfo>
+    <AssemblyName>System.Globalization.Extensions</AssemblyName>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define o tipo de normalização a executar.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas sequências de Unicode são consideradas equivalentes porque eles representam o mesmo caractere. Por exemplo, a seguir é considerados equivalentes porque qualquer um deles pode ser usado para representar "ắ":  
+  
+-   "\u1EAF"  
+  
+-   "\u0103\u0301"  
+  
+-   "\u0061\u0306\u0301"  
+  
+ No entanto, ordinal, ou seja, as comparações binárias, considere estas sequências diferentes porque eles contêm valores diferentes de código Unicode. Antes de executar comparações ordinal, aplicativos necessário normalizar essas cadeias de caracteres para decompor-los em seus componentes básicos.  
+  
+ Cada caractere Unicode composto é mapeado para uma sequência mais básica de um ou mais caracteres. O processo de Decomposição substitui caracteres compostos em uma cadeia de caracteres com seus mapeamentos mais básicos. Um total de Decomposição recursivamente executa essa substituição até que nenhum dos caracteres na cadeia de caracteres pode ser decomposto ainda mais.  
+  
+ O Unicode define dois tipos de decomposições: Decomposição de compatibilidade e Decomposição canônica. Em Decomposição de compatibilidade, as informações de formatação podem ser perdidas. Canonical Decomposição, o que é um subconjunto de Decomposição de compatibilidade, as informações de formatação é preservada.  
+  
+ Dois conjuntos de caracteres são considerados como tendo equivalência canônica se seus decomposições canônicas completo forem idênticas. Da mesma forma, os dois conjuntos de caracteres são considerados como tendo equivalência de compatibilidade, se seus decomposições de compatibilidade total são idênticas.  
+  
+ Para obter mais informações sobre normalização, decomposições e equivalência, consulte [Unicode Standard Annex #15: formulários de normalização Unicode](http://unicode.org/reports/tr15/) no site unicode.org.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FormC">
+      <MemberSignature Language="C#" Value="FormC" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormC = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormC" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma cadeia de caracteres Unicode é normalizada usando a decomposição canônica completa, seguida da substituição de sequências por seus compostos primários, se possível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FormD">
+      <MemberSignature Language="C#" Value="FormD" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormD = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormD" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma cadeia de caracteres Unicode é normalizada usando a decomposição canônica completa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FormKC">
+      <MemberSignature Language="C#" Value="FormKC" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormKC = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormKC" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma cadeia de caracteres Unicode é normalizada usando a decomposição de compatibilidade completa, seguida da substituição de sequências por seus compostos primários, se possível.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FormKD">
+      <MemberSignature Language="C#" Value="FormKD" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Text.NormalizationForm FormKD = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Text.NormalizationForm.FormKD" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Globalization.Extensions</AssemblyName>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.NormalizationForm</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que uma cadeia de caracteres Unicode é normalizada usando a decomposição de compatibilidade completa.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

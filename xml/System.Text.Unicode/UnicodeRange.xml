@@ -1,0 +1,139 @@
+<Type Name="UnicodeRange" FullName="System.Text.Unicode.UnicodeRange">
+  <TypeSignature Language="C#" Value="public sealed class UnicodeRange" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit UnicodeRange extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Text.Unicode.UnicodeRange" />
+  <AssemblyInfo>
+    <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa os pontos de código um intervalo contíguo de Unicode.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+## Remarks  
+
+Use estático <xref:System.Text.Unicode.UnicodeRange.Create%2A> método ou o <xref:System.Text.Unicode.UnicodeRange.%23ctor%2A> construtor para criar uma uma arbitrário intervalo pontos de código Unicode. Use as propriedades estáticas do <xref:System.Text.Unicode.UnicodeRanges> classe para recuperar um <xref:System.Text.Unicode.UnicodeRange> intervalo nomeado de instância que contém os pontos de código Unicode.
+
+Atualmente, o <xref:System.Text.Unicode.UnicodeRange> classe oferece suporte somente a básica multilíngue BMP (plano), que se estende de U + 0000 a U + FFFF. 
+
+  ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnicodeRange (int firstCodePoint, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 firstCodePoint, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Unicode.UnicodeRange.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="firstCodePoint" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="firstCodePoint">O primeiro ponto de código no intervalo.</param>
+        <param name="length">O número de pontos de código no intervalo.</param>
+        <summary>Cria um novo <see cref="System.Text.Unicode.UnicodeRange" /> que inclui um número especificado de caracteres começando em um ponto de código Unicode especificado.</summary>
+        <remarks>
+        <format type="text/markdown"><![CDATA[  
+## Remarks  
+
+Qualquer código indefinido pontos entre `firstCodePoint` e `firstCodePoint`  +  `length` -1 são incluídos no <xref:System.Text.Unicode.UnicodeRange> criada chamando o construtor de instância.
+
+        ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException"> 
+
+           <paramref name="firstCodePoint" />é menor que zero ou maiores que 0xFFFF. 
+
+-ou-           
+
+<paramref name="length" /> é menor que zero.
+
+-ou-
+
+<paramref name="firstCodePoint" />Além de <paramref name="length" /> é maior do que 0xFFFF.
+        </exception>    
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Text.Unicode.UnicodeRange Create (char firstCharacter, char lastCharacter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Text.Unicode.UnicodeRange Create(char firstCharacter, char lastCharacter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Text.Unicode.UnicodeRange.Create(System.Char,System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Unicode.UnicodeRange</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstCharacter" Type="System.Char" />
+        <Parameter Name="lastCharacter" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="firstCharacter">O primeiro caractere no intervalo.</param>
+        <param name="lastCharacter">O último caractere no intervalo.</param>
+        <summary>Cria um novo <see cref="System.Text.Unicode.UnicodeRange" /> instância de um intervalo de caracteres.</summary>
+        <returns>Um intervalo que inclui todos os caracteres entre <paramref name="firstCharacter"/> e <paramref name="lastCharacter"/>.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="System.ArgumentOutOfRangeException"><paramref name="lastCharacter"/>precede <paramref name="firstCharacter" />.
+        </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstCodePoint">
+      <MemberSignature Language="C#" Value="public int FirstCodePoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FirstCodePoint" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRange.FirstCodePoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código do primeiro ponto no intervalo representado por esse <see cref="System.Text.Unicode.UnicodeRange"/> instância.</summary>
+        <value>O primeiro ponto de código no intervalo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:System.Text.Unicode.UnicodeRange.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Text.Encodings.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.1.0</AssemblyVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pontos de código no intervalo representado por esse <see cref="System.Text.Unicode.UnicodeRange"/> instância.</summary>
+        <value>O número de pontos de código no intervalo. </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

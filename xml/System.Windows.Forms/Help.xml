@@ -1,0 +1,312 @@
+<Type Name="Help" FullName="System.Windows.Forms.Help">
+  <TypeSignature Language="C#" Value="public class Help" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Help extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Help" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Encapsula o mecanismo de Ajuda HTML 1.0.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não é possível criar uma nova instância do <xref:System.Windows.Forms.Help> classe. Para fornecer ajuda para um aplicativo, chame estático <xref:System.Windows.Forms.Help.ShowHelp%2A> e <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> métodos.  
+  
+ Você pode usar <xref:System.Windows.Forms.Help> Mostrar compilados arquivos de Ajuda (. chm) ou HTML no formato de Ajuda em HTML. Compilado ajuda arquivos fornecem uma tabela de conteúdo, um índice, funcionalidade de pesquisa e links de palavra-chave em páginas. Atalhos funcionam somente em arquivos de ajuda compilados.  
+  
+ Você pode gerar os arquivos da Ajuda HTML 1. x usando HTML Help Workshop. Para obter mais informações sobre a Ajuda HTML, consulte "HTML Help Workshop" e outros tópicos de ajuda HTML em [Microsoft HTML Help](http://go.microsoft.com/fwlink/?LinkId=178661).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário que contém três botões que podem ser usados para interagir com o arquivo de ajuda Mspaint.chm. O **Mostrar índice da Ajuda** botão exibe o **índice** guia para o arquivo de Ajuda. O **Mostrar Ajuda** botão exibe o conteúdo no arquivo de ajuda com base no valor selecionado no **navegador Ajuda** lista. O **palavra-chave Mostrar** botão exibe o conteúdo no arquivo de ajuda com a palavra-chave que é especificado no **palavra-chave** caixa de texto.  
+  
+ Por exemplo, para mostrar a página de ajuda de elipses pelo valor de índice, selecione o <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> valor o **navegação da Ajuda** lista suspensa, digite **ovais** no **parâmetro** caixa de texto e clique o **Mostrar Ajuda** botão. Para exibir o tópico da Ajuda "para pintar com um pincel" da palavra-chave, digite **mspaint.chm::/paint_brush.htm** no **palavra-chave** caixa de texto e clique o **palavra-chave Mostrar** botão.  
+  
+ O exemplo usa o <xref:System.Windows.Forms.Help.ShowHelp%2A> método para exibir as diferentes guias de Ajuda e os tópicos da Ajuda e o <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> método para exibir o índice da Ajuda.  
+  
+ [!code-cpp[System.Windows.Forms.Help#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#1)]
+ [!code-csharp[System.Windows.Forms.Help#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#1)]
+ [!code-vb[System.Windows.Forms.Help#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Um <see cref="T:System.Windows.Forms.Control" /> que identifica o pai da caixa de diálogo de Ajuda.</param>
+        <param name="url">O caminho e o nome do arquivo de Ajuda.</param>
+        <summary>Exibe o conteúdo do arquivo de Ajuda na URL especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `url` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.Help.ShowHelp%2A> método. Para executar este exemplo, cole o código a seguir em um formulário que contém um botão chamado `Button1`.  
+  
+ [!code-cpp[System.Windows.Forms.HelpExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.HelpExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.HelpExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url, string keyword);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url, string keyword) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="keyword" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Um <see cref="T:System.Windows.Forms.Control" /> que identifica o pai da caixa de diálogo de Ajuda.</param>
+        <param name="url">O caminho e o nome do arquivo de Ajuda.</param>
+        <param name="keyword">A palavra-chave para a qual exibir a Ajuda.</param>
+        <summary>Exibe o conteúdo do arquivo de Ajuda encontrado no URL especificado para uma palavra-chave específica.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `url` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+ Se você fornecer a palavra-chave `null`, a tabela de conteúdo para o arquivo de Ajuda será exibida.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário com três botões que pode ser usado para interagir com o arquivo de ajuda mspaint.chm. O **Mostrar índice da Ajuda** botão exibe o **índice** guia para o arquivo de Ajuda. O **Mostrar Ajuda** botão exibe o conteúdo no arquivo de ajuda com base no valor selecionado no **navegador Ajuda** lista. O **palavra-chave Mostrar** botão exibe o conteúdo no arquivo de ajuda com a palavra-chave que é especificado no **palavra-chave** caixa de texto.  
+  
+ Por exemplo, para mostrar a página de ajuda de elipses pelo valor de índice, selecione o <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> valor o **navegação da Ajuda** lista suspensa, digite **ovais** no **parâmetro** caixa de texto e clique o **Mostrar Ajuda** botão. Para exibir o tópico da Ajuda "para pintar com um pincel" da palavra-chave, digite **mspaint.chm::/paint_brush.htm** no **palavra-chave** caixa de texto e clique o **palavra-chave Mostrar** botão.  
+  
+ Este exemplo mostra apenas a chamada para o <xref:System.Windows.Forms.Help.ShowHelp%2A> método. Consulte o <xref:System.Windows.Forms.Help> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Help#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#4)]
+ [!code-csharp[System.Windows.Forms.Help#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#4)]
+ [!code-vb[System.Windows.Forms.Help#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url, System.Windows.Forms.HelpNavigator navigator);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url, valuetype System.Windows.Forms.HelpNavigator navigator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String,System.Windows.Forms.HelpNavigator)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="navigator" Type="System.Windows.Forms.HelpNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Um <see cref="T:System.Windows.Forms.Control" /> que identifica o pai da caixa de diálogo de Ajuda.</param>
+        <param name="url">O caminho e o nome do arquivo de Ajuda.</param>
+        <param name="navigator">Um dos valores de <see cref="T:System.Windows.Forms.HelpNavigator" />.</param>
+        <summary>Exibe o conteúdo do arquivo de Ajuda localizado no URL especificado para um tópico específico.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `url` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+ Compilado ajuda arquivos fornecem sumário, índice, pesquisa e links de palavra-chave em páginas. Você pode usar os seguintes valores para o `navigator` parâmetro: <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Find>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Topic>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.Help.ShowHelp%2A> método para abrir um arquivo de ajuda para sua página de índice. Para executar este exemplo, cole o código a seguir em um formulário que contém um botão chamado `Button2`.  
+  
+ [!code-cpp[System.Windows.Forms.HelpExample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CPP/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.HelpExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.HelpExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HelpExample/VB/form1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelp">
+      <MemberSignature Language="C#" Value="public static void ShowHelp (System.Windows.Forms.Control parent, string url, System.Windows.Forms.HelpNavigator command, object parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelp(class System.Windows.Forms.Control parent, string url, valuetype System.Windows.Forms.HelpNavigator command, object parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelp(System.Windows.Forms.Control,System.String,System.Windows.Forms.HelpNavigator,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+        <Parameter Name="command" Type="System.Windows.Forms.HelpNavigator" />
+        <Parameter Name="parameter" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Um <see cref="T:System.Windows.Forms.Control" /> que identifica o pai da caixa de diálogo de Ajuda.</param>
+        <param name="url">O caminho e o nome do arquivo de Ajuda.</param>
+        <param name="command">Um dos valores de <see cref="T:System.Windows.Forms.HelpNavigator" />.</param>
+        <param name="parameter">Uma cadeia de caracteres que contém o identificador do tópico.</param>
+        <summary>Exibe o conteúdo do arquivo de Ajuda localizado na URL fornecida pelo usuário.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Compilado ajuda arquivos fornecem links do sumário, índice, pesquisa e palavra-chave em páginas. Você pode usar o `param` parâmetro para fornecer adicionais de ajuste da <xref:System.Windows.Forms.HelpNavigator.Topic>, <xref:System.Windows.Forms.HelpNavigator.TopicId>, <xref:System.Windows.Forms.HelpNavigator.KeywordIndex>, ou <xref:System.Windows.Forms.HelpNavigator.AssociateIndex> comando. Se o valor especificado no `command` parâmetro é <xref:System.Windows.Forms.HelpNavigator.TableOfContents>, <xref:System.Windows.Forms.HelpNavigator.Index>, ou <xref:System.Windows.Forms.HelpNavigator.Find>, esse valor deve ser um `empty string`. Se o `command` referências de parâmetro <xref:System.Windows.Forms.HelpNavigator.Topic>, <xref:System.Windows.Forms.HelpNavigator.TopicId>, <xref:System.Windows.Forms.HelpNavigator.KeywordIndex>, ou <xref:System.Windows.Forms.HelpNavigator.AssociateIndex>, esse valor deve ser uma cadeia de caracteres que contém o nome do tópico ou o identificador numérico ou de palavra-chave do tópico para exibir.  
+  
+ O `url` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário com três botões que pode ser usado para interagir com o arquivo de ajuda mspaint.chm. O **Mostrar índice da Ajuda** botão exibe o **índice** guia para o arquivo de Ajuda. O **Mostrar Ajuda** botão exibe o conteúdo no arquivo de ajuda com base no valor selecionado no **navegador Ajuda** lista. O **palavra-chave Mostrar** botão exibe o conteúdo no arquivo de ajuda com a palavra-chave que é especificado no **palavra-chave** caixa de texto.  
+  
+ Por exemplo, para mostrar a página de ajuda de elipses pelo valor de índice, selecione o <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> valor o **navegação da Ajuda** lista suspensa, digite **ovais** no **parâmetro** caixa de texto e clique o **Mostrar Ajuda** botão. Para exibir o tópico da Ajuda "para pintar com um pincel" da palavra-chave, digite **mspaint.chm::/paint_brush.htm** no **palavra-chave** caixa de texto e clique o **palavra-chave Mostrar** botão.  
+  
+ Este exemplo mostra apenas a chamada para o <xref:System.Windows.Forms.Help.ShowHelp%2A> método. Consulte o <xref:System.Windows.Forms.Help> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Help#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#3)]
+ [!code-csharp[System.Windows.Forms.Help#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#3)]
+ [!code-vb[System.Windows.Forms.Help#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="parameter" /> é um inteiro.</exception>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHelpIndex">
+      <MemberSignature Language="C#" Value="public static void ShowHelpIndex (System.Windows.Forms.Control parent, string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowHelpIndex(class System.Windows.Forms.Control parent, string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowHelpIndex(System.Windows.Forms.Control,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Um <see cref="T:System.Windows.Forms.Control" /> que identifica o pai da caixa de diálogo de Ajuda.</param>
+        <param name="url">O caminho e o nome do arquivo de Ajuda.</param>
+        <summary>Exibe o índice do arquivo de ajuda especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `url` parâmetro pode ser do formulário C:\path\sample.chm ou /folder/file.htm.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe um formulário com três botões que pode ser usado para interagir com o arquivo de ajuda mspaint.chm. O **Mostrar índice da Ajuda** botão exibe o **índice** guia para o arquivo de Ajuda. O **Mostrar Ajuda** botão exibe o conteúdo no arquivo de ajuda com base no valor selecionado no **navegador Ajuda** lista. O **palavra-chave Mostrar** botão exibe o conteúdo no arquivo de ajuda com a palavra-chave que é especificado no **palavra-chave** caixa de texto.  
+  
+ Por exemplo, para mostrar a página de ajuda de elipses pelo valor de índice, selecione o <xref:System.Windows.Forms.HelpNavigator?displayProperty=nameWithType> valor o **navegação da Ajuda** lista suspensa, digite **ovais** no **parâmetro** caixa de texto e clique o **Mostrar Ajuda** botão. Para exibir o tópico da Ajuda "para pintar com um pincel" da palavra-chave, digite **mspaint.chm::/paint_brush.htm** no **palavra-chave** caixa de texto e clique o **palavra-chave Mostrar** botão.  
+  
+ Este exemplo mostra apenas a chamada para o <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> método. Consulte o <xref:System.Windows.Forms.Help> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Help#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Help/CPP/helpsnippet.cpp#2)]
+ [!code-csharp[System.Windows.Forms.Help#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Help/CS/helpsnippet.cs#2)]
+ [!code-vb[System.Windows.Forms.Help#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Help/VB/helpsnippet.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Net.WebPermission">para acessar um arquivo de ajuda HTML por meio de uma solicitação HTTP. Enumeração associada: <see cref="F:System.Net.NetworkAccess.Connect" /></permission>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para acessar um arquivo de ajuda HTML não atendidas a partir de um servidor HTTP. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowPopup">
+      <MemberSignature Language="C#" Value="public static void ShowPopup (System.Windows.Forms.Control parent, string caption, System.Drawing.Point location);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowPopup(class System.Windows.Forms.Control parent, string caption, valuetype System.Drawing.Point location) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Help.ShowPopup(System.Windows.Forms.Control,System.String,System.Drawing.Point)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Windows.Forms.Control" />
+        <Parameter Name="caption" Type="System.String" />
+        <Parameter Name="location" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="parent">Um <see cref="T:System.Windows.Forms.Control" /> que identifica o pai da caixa de diálogo de Ajuda.</param>
+        <param name="caption">A mensagem a ser exibida na janela pop-up.</param>
+        <param name="location">Um valor que especifica as coordenadas horizontal e verticais no qual exibir a janela pop-up, em relação ao canto superior esquerdo da tela.</param>
+        <summary>Exibe uma janela pop-up de Ajuda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.Control.KeyUp> evento com o <xref:System.Windows.Forms.Help> classe para exibir ajuda pop-up de estilo para o usuário.  
+  
+ [!code-cpp[Control.KeyUp#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Control.KeyUp/CPP/form1.cpp#1)]
+ [!code-csharp[Control.KeyUp#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Control.KeyUp/CS/form1.cs#1)]
+ [!code-vb[Control.KeyUp#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Control.KeyUp/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

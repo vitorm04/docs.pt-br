@@ -1,0 +1,85 @@
+<Type Name="HierarchicalDataSourceConverter" FullName="System.Web.UI.Design.HierarchicalDataSourceConverter">
+  <TypeSignature Language="C#" Value="public class HierarchicalDataSourceConverter : System.Web.UI.Design.DataSourceConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HierarchicalDataSourceConverter extends System.Web.UI.Design.DataSourceConverter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.HierarchicalDataSourceConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.DataSourceConverter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo que pode recuperar uma lista das fontes de dados hierárquicos que são acessíveis ao componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.HierarchicalDataSourceConverter> classe fornece métodos que podem ser usados para recuperar uma lista das fontes de dados hierárquicos que são acessíveis para o componente de tempo de design atual.  
+  
+ O <xref:System.Web.UI.Design.HierarchicalDataSourceConverter> conversor de tipo é usada pelo Microsoft Visual Studio para fornecer os valores que aparecem na lista de dados de fontes no **propriedades** janela.  
+  
+> [!CAUTION]
+>  Você nunca deve acessar diretamente um conversor de tipo. Em vez disso, chame o conversor apropriado usando a <xref:System.ComponentModel.TypeDescriptor> classe. Para obter mais informações, consulte os exemplos em <xref:System.ComponentModel.TypeConverter>.  
+  
+ Para obter mais informações sobre conversores de tipo, consulte o <xref:System.ComponentModel.TypeConverter> classe base e [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como associar um <xref:System.Web.UI.Design.HierarchicalDataSourceConverter> com uma propriedade de fonte de dados hierárquicos que está dentro de um controle personalizado.  
+  
+ [!code-csharp[HierarchicalDataSourceConverter#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HierarchicalDataSourceConverter/CS/HierarchicalDataSourceControl.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HierarchicalDataSourceConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HierarchicalDataSourceConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Design.HierarchicalDataSourceConverter" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsValidDataSource">
+      <MemberSignature Language="C#" Value="protected override bool IsValidDataSource (System.ComponentModel.IComponent component);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsValidDataSource(class System.ComponentModel.IComponent component) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.HierarchicalDataSourceConverter.IsValidDataSource(System.ComponentModel.IComponent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="component" Type="System.ComponentModel.IComponent" />
+      </Parameters>
+      <Docs>
+        <param name="component">O componente de verificação como uma fonte de dados válido.</param>
+        <summary>Indica se o componente especificado é uma fonte de dados válido para esse conversor.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="component" /> implementa <see cref="T:System.Web.UI.IHierarchicalEnumerable" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.DataSourceConverter.GetStandardValues%2A> método usa o <xref:System.Web.UI.Design.HierarchicalDataSourceConverter.IsValidDataSource%2A> método para determinar quais componentes estão disponíveis como fontes de dados acessível padrão. Para o <xref:System.Web.UI.Design.HierarchicalDataSourceConverter> classe, uma fonte de dados válido é um componente que implementa o <xref:System.Web.UI.IHierarchicalEnumerable> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

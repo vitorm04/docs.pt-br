@@ -1,0 +1,178 @@
+<Type Name="ApplicationQueuingAttribute" FullName="System.EnterpriseServices.ApplicationQueuingAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ApplicationQueuingAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ApplicationQueuingAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.ApplicationQueuingAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Habilita o suporte de enfileiramento de mensagens para o assembly marcado e permite que o aplicativo leia chamadas de método de filas do enfileiramento de mensagens. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.EnterpriseServices.ApplicationQueuingAttribute>, consulte o <xref:System.EnterpriseServices.ApplicationQueuingAttribute.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.EnterpriseServices.ApplicationQueuingAttribute> tipo.  
+  
+ [!code-csharp[EnterpriseServicesApplicationQueuingAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/CS/class1.cs#0)]
+ [!code-vb[EnterpriseServicesApplicationQueuingAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/VB/class1.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationQueuingAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.ApplicationQueuingAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.EnterpriseServices.ApplicationQueuingAttribute" /> classe, permitindo o enfileiramento de mensagens para o assembly e a inicialização de <see cref="P:System.EnterpriseServices.ApplicationQueuingAttribute.Enabled" />, <see cref="P:System.EnterpriseServices.ApplicationQueuingAttribute.QueueListenerEnabled" />, e <see cref="P:System.EnterpriseServices.ApplicationQueuingAttribute.MaxListenerThreads" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância do <xref:System.EnterpriseServices.ApplicationQueuingAttribute>.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|`Enabled`|`true`|  
+|`QueueListenerEnabled`|`false`|  
+|`MaxListenerThreads`|Zero (0)|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.EnterpriseServices.ApplicationQueuingAttribute>.  
+  
+ [!code-csharp[EnterpriseServicesApplicationQueuingAttribute#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/CS/class1.cs#1)]
+ [!code-vb[EnterpriseServicesApplicationQueuingAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/VB/class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationQueuingAttribute.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o suporte de enfileiramento de mensagens está habilitado.</summary>
+        <value>
+          <see langword="true" />Se o suporte ao enfileiramento de mensagens está habilitado; Caso contrário, <see langword="false" />. É o valor padrão definido pelo construtor <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos não são capazes de usar componentes na fila por padrão. Criando <xref:System.EnterpriseServices.ApplicationQueuingAttribute> permite que um aplicativo para usar componentes enfileirados; no entanto, ele não ativar o aplicativo para escutar mensagens na fila de clientes.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de um `ApplicationQueuing` do atributo <xref:System.EnterpriseServices.ApplicationQueuingAttribute.Enabled%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServicesApplicationQueuingAttribute#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/CS/class1.cs#2)]
+ [!code-vb[EnterpriseServicesApplicationQueuingAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/VB/class1.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxListenerThreads">
+      <MemberSignature Language="C#" Value="public int MaxListenerThreads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxListenerThreads" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationQueuingAttribute.MaxListenerThreads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de threads usados para extrair as mensagens da fila e ativar o componente correspondente.</summary>
+        <value>O número máximo de threads a serem usados para processar as mensagens que chegam na fila. O padrão é zero.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O intervalo válido para esta propriedade é 0 a 1000. O padrão é zero. Para um aplicativo criado recentemente, a configuração é derivada do algoritmo usado atualmente para determinar o número padrão de threads de ouvinte: 16 vezes o número de CPUs no servidor.  
+  
+ Para obter mais informações, consulte `QcListenerMaxThreads` na [aplicativos COM+](http://msdn.microsoft.com/library/default.asp?url=/library/cossdk/html/c0c46592-5282-412d-8f54-67637be8218a.asp).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de um `ApplicationQueuing` do atributo <xref:System.EnterpriseServices.ApplicationQueuingAttribute.MaxListenerThreads%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServicesApplicationQueuingAttribute#4](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/CS/class1.cs#4)]
+ [!code-vb[EnterpriseServicesApplicationQueuingAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/VB/class1.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueListenerEnabled">
+      <MemberSignature Language="C#" Value="public bool QueueListenerEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool QueueListenerEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.EnterpriseServices.ApplicationQueuingAttribute.QueueListenerEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o aplicativo aceita chamadas de componente na fila de clientes.</summary>
+        <value>
+          <see langword="true" />Se o aplicativo aceita chamadas de componente enfileirado; Caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém e define o valor de um `ApplicationQueuing` do atributo <xref:System.EnterpriseServices.ApplicationQueuingAttribute.QueueListenerEnabled%2A> propriedade.  
+  
+ [!code-csharp[EnterpriseServicesApplicationQueuingAttribute#3](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/CS/class1.cs#3)]
+ [!code-vb[EnterpriseServicesApplicationQueuingAttribute#3](~/samples/snippets/visualbasic/VS_Snippets_Remoting/EnterpriseServicesApplicationQueuingAttribute/VB/class1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

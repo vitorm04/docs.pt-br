@@ -1,0 +1,104 @@
+<Type Name="QueryOperationResponse&lt;T&gt;" FullName="System.Data.Services.Client.QueryOperationResponse&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public sealed class QueryOperationResponse&lt;T&gt; : System.Data.Services.Client.QueryOperationResponse, System.Collections.Generic.IEnumerable&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit QueryOperationResponse`1&lt;T&gt; extends System.Data.Services.Client.QueryOperationResponse implements class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Client.QueryOperationResponse`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services.Client</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Data.Services.Client.QueryOperationResponse</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">To be added.</typeparam>
+    <summary>Representa as respostas para uma <see cref="T:System.Data.Services.Client.DataServiceQuery`1" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetContinuation">
+      <MemberSignature Language="C#" Value="public System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt; GetContinuation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Services.Client.DataServiceQueryContinuation`1&lt;!T&gt; GetContinuation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.QueryOperationResponse`1.GetContinuation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Services.Client.DataServiceQueryContinuation&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Data.Services.Client.DataServiceQueryContinuation`1" /> objeto que contém o URI que é usado para recuperar a próxima página de resultados.</summary>
+        <returns>Um objeto que contém o URI que é usado para retornar a próxima página de resultados.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo usa o <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> método em um `do…while` loop carregar `Customers` entidades de um resultados paginados do serviço de dados.  
+  
+ [!code-csharp[Astoria Northwind Client#GetCustomersPaged](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspaged)]
+ [!code-vb[Astoria Northwind Client#GetCustomersPaged](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspaged)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;T&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Client.QueryOperationResponse`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o <see cref="T:System.Data.Services.Client.DataServiceQuery`1" /> e obtém <see cref="T:System.Data.Services.Client.QueryOperationResponse`1" /> itens.</summary>
+        <returns>Um enumerador para uma coleção de <see cref="T:System.Data.Services.Client.QueryOperationResponse`1" /> itens.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalCount">
+      <MemberSignature Language="C#" Value="public override long TotalCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TotalCount" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Client.QueryOperationResponse`1.TotalCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services.Client</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O resultado do servidor definir valor de contagem de uma consulta, se a consulta tem o valor solicitado.</summary>
+        <value>O valor de retorno pode ser zero ou um valor positivo igual ao número de entidades do conjunto no servidor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.InvalidOperationException>é gerada quando a contagem não fazia parte da solicitação original; ou seja, se a marca de contagem não foi encontrada no fluxo de resposta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

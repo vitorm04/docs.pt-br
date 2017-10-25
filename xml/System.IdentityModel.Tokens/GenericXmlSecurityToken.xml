@@ -1,0 +1,410 @@
+<Type Name="GenericXmlSecurityToken" FullName="System.IdentityModel.Tokens.GenericXmlSecurityToken">
+  <TypeSignature Language="C#" Value="public class GenericXmlSecurityToken : System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GenericXmlSecurityToken extends System.IdentityModel.Tokens.SecurityToken" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Tokens.GenericXmlSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Tokens.SecurityToken</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um token de segurança baseado em XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> classe quando você recebe um token na transmissão que não está definido em uma especificação ou não há nenhuma maneira de determinar o tipo de token de segurança. Por exemplo, em um cenário de Federação ao enviar uma solicitação de segurança Token (primeira) para um Token de segurança Service (STS) é sempre souber o tipo do token de segurança retornado pelo STS. Nesses casos, você pode usar um <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> para armazenar o token de segurança como XML, juntamente com suas referências internas e externas.  
+  
+ Use o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> declarações de classe para definir usando XML quando um dos tokens de segurança interna não é suficiente. Outros tokens de segurança podem definir suas declarações usando XML, no entanto, a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token de segurança genericamente permite que um token de segurança ter um conjunto de XML definido pelo aplicativo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GenericXmlSecurityToken (System.Xml.XmlElement tokenXml, System.IdentityModel.Tokens.SecurityToken proofToken, DateTime effectiveTime, DateTime expirationTime, System.IdentityModel.Tokens.SecurityKeyIdentifierClause internalTokenReference, System.IdentityModel.Tokens.SecurityKeyIdentifierClause externalTokenReference, System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; authorizationPolicies);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlElement tokenXml, class System.IdentityModel.Tokens.SecurityToken proofToken, valuetype System.DateTime effectiveTime, valuetype System.DateTime expirationTime, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause internalTokenReference, class System.IdentityModel.Tokens.SecurityKeyIdentifierClause externalTokenReference, class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; authorizationPolicies) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityToken.#ctor(System.Xml.XmlElement,System.IdentityModel.Tokens.SecurityToken,System.DateTime,System.DateTime,System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.IdentityModel.Tokens.SecurityKeyIdentifierClause,System.Collections.ObjectModel.ReadOnlyCollection{System.IdentityModel.Policy.IAuthorizationPolicy})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenXml" Type="System.Xml.XmlElement" />
+        <Parameter Name="proofToken" Type="System.IdentityModel.Tokens.SecurityToken" />
+        <Parameter Name="effectiveTime" Type="System.DateTime" />
+        <Parameter Name="expirationTime" Type="System.DateTime" />
+        <Parameter Name="internalTokenReference" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="externalTokenReference" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+        <Parameter Name="authorizationPolicies" Type="System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tokenXml">Um <see cref="T:System.Xml.XmlElement" /> que representa o XML que está associado com o token de segurança. Define a propriedade <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.TokenXml" />.</param>
+        <param name="proofToken">Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de prova para o token de segurança. Define a propriedade <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ProofToken" />.</param>
+        <param name="effectiveTime">Um <see cref="T:System.DateTime" /> que representa o primeiro instantâneo na hora em que esse token de segurança é válido. Define a propriedade <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom" />.</param>
+        <param name="expirationTime">Um <see cref="T:System.DateTime" /> que representa o último no momento em que esse token de segurança é válido. Define a propriedade <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom" />.</param>
+        <param name="internalTokenReference">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa uma referência a esse token de segurança quando ele está incluído em uma mensagem SOAP no qual ele é referenciado. Define a propriedade <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference" />.</param>
+        <param name="externalTokenReference">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa uma referência a esse token de segurança quando ele não está incluído em uma mensagem SOAP no qual ele é referenciado. Define a propriedade <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom" />.</param>
+        <param name="authorizationPolicies">Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" /> que contém as diretivas de autorização de conjunto para este token de segurança.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Tokens.GenericXmlSecurityToken" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o `internalTokenReference` parâmetro é `null`, um <xref:System.IdentityModel.Tokens.LocalIdKeyIdentifierClause> cláusula de identificador de chave é criada para este token de segurança e definida como o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A> propriedade.  
+  
+ Quando o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> é obtido em um cenário de federação, o token de prova contém a chave criptografada para o cliente.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tokenXml" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="proofToken" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizationPolicies">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt; AuthorizationPolicies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Policy.IAuthorizationPolicy&gt; AuthorizationPolicies" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.AuthorizationPolicies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Policy.IAuthorizationPolicy&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de políticas de autorização para esse token de segurança.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Policy.IAuthorizationPolicy" /> que contém as diretivas de autorização de conjunto para este token de segurança.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanCreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override bool CanCreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool CanCreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Obtém um valor que indica se esse token de segurança é capaz de criar a cláusula de identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="T" /> não é <see langword="null" /> e o mesmo tipo, como o <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference" /> ou <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference" /> valores de propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause%60%601> método para determinar se um <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token de segurança pode criar um identificador de chave específico. Para criar a chamada de identificador de chave de <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause%60%601> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateKeyIdentifierClause&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public override T CreateKeyIdentifierClause&lt;T&gt; () where T : System.IdentityModel.Tokens.SecurityKeyIdentifierClause;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!T CreateKeyIdentifierClause&lt;(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que especifica o identificador de chave para criar.</typeparam>
+        <summary>Cria a cláusula de identificador de chave especificado.</summary>
+        <returns>Um <see cref="T:System.IdentityModel.Tokens.SamlAssertionKeyIdentifierClause" /> que é uma cláusula de identificador de chave para um <see cref="T:System.IdentityModel.Tokens.GenericXmlSecurityToken" /> token de segurança.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A> propriedade ou o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference%2A> retornada pela propriedade de <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause%2A> método dependendo do tipo que é passado para o `T` parâmetro.  
+  
+ Use o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CanCreateKeyIdentifierClause%60%601> método para determinar se um <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token de segurança pode criar um identificador de chave específico. Para criar a chamada de identificador de chave de <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.CreateKeyIdentifierClause%60%601> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IdentityModel.Tokens.SecurityTokenException">
+          <paramref name="T" />não é <see langword="null" /> e não o mesmo tipo como uma da <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference" /> ou <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference" /> valores de propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalTokenReference">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifierClause ExternalTokenReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause ExternalTokenReference" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cláusula de identificador de chave de segurança que faz referência a essa segurança token quando esse token de segurança não está incluído na mensagem SOAP no qual ele é referenciado.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa uma referência a esse token de segurança quando ele não está incluído em uma mensagem SOAP no qual ele é referenciado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public override string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um identificador exclusivo do token de segurança.</summary>
+        <value>O identificador exclusivo do token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token de segurança é serializado em XML, o valor da `Id` atributo é definido como o valor da <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.Id%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalTokenReference">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifierClause InternalTokenReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause InternalTokenReference" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cláusula de identificador de chave de segurança que faz referência a essa segurança token quando esse token de segurança está incluído na mensagem SOAP no qual ele é referenciado.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que representa uma referência a esse token de segurança quando ele está incluído em uma mensagem SOAP no qual ele é referenciado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesKeyIdentifierClause">
+      <MemberSignature Language="C#" Value="public override bool MatchesKeyIdentifierClause (System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MatchesKeyIdentifierClause(class System.IdentityModel.Tokens.SecurityKeyIdentifierClause skiClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityToken.MatchesKeyIdentifierClause(System.IdentityModel.Tokens.SecurityKeyIdentifierClause)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyIdentifierClause" Type="System.IdentityModel.Tokens.SecurityKeyIdentifierClause" />
+      </Parameters>
+      <Docs>
+        <param name="skiClause">To be added.</param>
+        <summary>Retorna um valor que indica se o identificador de chave para esta instância é igual ao identificador de chave especificado.</summary>
+        <returns>
+          <see langword="true" />Quando <paramref name="skiClause" /> não é <see langword="null" /> e corresponde a qualquer um de <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference" /> ou <see cref="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference" /> valores de propriedade; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `keyIdentifierClause` parâmetro é comparado com o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A> e <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference%2A> valores de propriedade usando o <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause.Matches%2A> método na cláusula de identificador de chave que é retornado pelos valores de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProofToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken ProofToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityToken ProofToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ProofToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a prova de token para o token de segurança.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de prova para o token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de prova é a segurança de token que o solicitante de <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> usado para autenticação na obtenção do token de segurança a <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token de segurança.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityKeys">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.IdentityModel.Tokens.SecurityKey&gt; SecurityKeys" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.SecurityKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.IdentityModel.Tokens.SecurityKey&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as chaves criptográficas associadas ao token de prova.</summary>
+        <value>Um <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> do tipo <see cref="T:System.IdentityModel.Tokens.SecurityKey" /> que contém o conjunto de chaves associadas ao token de prova.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token de prova pode ser obtido obtendo o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ProofToken%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TokenXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement TokenXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement TokenXml" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.TokenXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o XML que está associado com o token de segurança.</summary>
+        <value>Um <see cref="T:System.Xml.XmlElement" /> que representa o XML que está associado com o token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token de segurança é extensível, portanto exatamente o que está contido dentro do XML depende do aplicativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Tokens.GenericXmlSecurityToken.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o objeto atual.</summary>
+        <returns>O objeto atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ToString%2A> método retorna o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A>, <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A>, <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.InternalTokenReference%2A>, e <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ExternalTokenReference%2A> propriedades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidFrom">
+      <MemberSignature Language="C#" Value="public override DateTime ValidFrom { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidFrom" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro instantâneo na hora em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o primeiro instantâneo na hora em que esse token de segurança é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> propriedades para determinar o período de tempo no qual um <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token é válido. O <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> propriedades representam os primeiro e o últimos instants na hora em que o token de segurança é válido, respectivamente.  
+  
+ O <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> propriedade é especificada usando o `effectiveTime` parâmetro do construtor. O valor retornado dessa propriedade é sempre em tempo Universal Coordenado (UTC).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidTo">
+      <MemberSignature Language="C#" Value="public override DateTime ValidTo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ValidTo" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último no momento em que esse token de segurança é válido.</summary>
+        <value>Um <see cref="T:System.DateTime" /> que representa o último no momento em que esse token de segurança é válido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> propriedades para determinar o período de tempo no qual um <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken> token é válido. O <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidFrom%2A> e <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> propriedades representam os primeiro e o últimos instants na hora em que o token de segurança é válido, respectivamente.  
+  
+ O <xref:System.IdentityModel.Tokens.GenericXmlSecurityToken.ValidTo%2A> propriedade é especificada usando o `expirationTime` parâmetro do construtor. O valor retornado dessa propriedade é sempre em tempo Universal Coordenado (UTC).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

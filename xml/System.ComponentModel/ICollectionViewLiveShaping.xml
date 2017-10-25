@@ -1,0 +1,250 @@
+<Type Name="ICollectionViewLiveShaping" FullName="System.ComponentModel.ICollectionViewLiveShaping">
+  <TypeSignature Language="C#" Value="public interface ICollectionViewLiveShaping" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICollectionViewLiveShaping" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.ICollectionViewLiveShaping" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define propriedades que permitem classificação, agrupamento e filtragem em uma <see cref="T:System.Windows.Data.CollectionView" /> em tempo real.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando live classificação, agrupamento, ou a filtragem está ativada, um <xref:System.Windows.Data.CollectionView> reorganizará a posição dos dados no <xref:System.Windows.Data.CollectionView> quando os dados são modificados.  Por exemplo, suponha que um aplicativo usa um <xref:System.Windows.Controls.DataGrid> para listar as ações em um mercado de ações e as ações são classificadas pelo valor de estoque.  Se a classificação ao vivo está habilitada nas ações <xref:System.Windows.Data.CollectionView>, a posição do estoque no <xref:System.Windows.Controls.DataGrid> move quando o valor do estoque se torna maior ou o valor do estoque menor que outro.  
+  
+ O <xref:System.Windows.Data.ListCollectionView>, <xref:System.Windows.Data.BindingListCollectionView>, e <xref:System.Windows.Controls.ItemCollection> classes implementam o <xref:System.ComponentModel.ICollectionViewLiveShaping> interface. O <xref:System.Windows.Data.CollectionViewSource> classe também implementa as propriedades definidas por <xref:System.ComponentModel.ICollectionViewLiveShaping> para configurar as propriedades em XAML.  
+  
+## <a name="notes-for-inheritors"></a>Observações para herdeiros  
+ Implementar essa interface personalizados <xref:System.Windows.Data.CollectionView> para oferecer suporte a classificação, agrupamento e filtragem de dados em tempo real. O <xref:System.Windows.Data.CollectionView> pode implementar a classificação, agrupamento e operações de filtragem em si, ou você pode delegar um ou mais da outro objeto, como a coleção subjacente. Se você delegar as operações de formatação, o <xref:System.Windows.Data.CollectionView> talvez não tenha controle sobre se a formatação ao vivo está habilitada. O <xref:System.Windows.Data.CollectionView> deve aceitar o comportamento do objeto ao qual ela delega. Nesse caso, defina apropriada **CanChange*** propriedades para `false`.  Se seu <xref:System.Windows.Data.CollectionView> sabe se o objeto do representante oferece suporte à formatação ao vivo, pode definir as `IsLive`* propriedades para o valor conhecido.  Caso contrário, o <xref:System.Windows.Data.CollectionView> deve definir o `IsLive`* propriedades para `null`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CanChangeLiveFiltering">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveFiltering { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição de coleção dá suporte ao ativar ou desativar a filtragem de dados em tempo real.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição de coleção oferece suporte à filtragem dinâmica ativar ou desativar; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Observações para herdeiros  
+ O <xref:System.Windows.Data.CollectionView> pode implementar live filtragem em si, ou você pode delegar a filtragem dinâmica para outro objeto, como a coleção subjacente. Se você delegar filtragem dinâmica, o <xref:System.Windows.Data.CollectionView> talvez não tenha controle sobre se ele está habilitado. O <xref:System.Windows.Data.CollectionView> deve aceitar o comportamento do objeto ao qual ela delega. Nesse caso, defina o <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveFiltering%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveGrouping">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveGrouping { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição de coleção oferece suporte a agrupamento de transformação de dados em tempo real ou desativar.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição de coleção dão suporte a agrupamento ao vivo de ativar ou desativar; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Observações para herdeiros  
+ O <xref:System.Windows.Data.CollectionView> pode implementar ao vivo de agrupamento em si, ou você pode delegar ao vivo agrupamento para outro objeto, como a coleção subjacente. Se você delegar agrupamento ao vivo, o <xref:System.Windows.Data.CollectionView> talvez não tenha controle sobre se ele está habilitado. O <xref:System.Windows.Data.CollectionView> deve aceitar o comportamento do objeto ao qual ela delega. Nesse caso, defina o <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveGrouping%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanChangeLiveSorting">
+      <MemberSignature Language="C#" Value="public bool CanChangeLiveSorting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanChangeLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o modo de exibição de coleção dá suporte ao ativar ou desativar a classificação de dados em tempo real.</summary>
+        <value>
+          <see langword="true" />Se o modo de exibição de coleção dá suporte à classificação ao vivo ativar ou desativar; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Observações para herdeiros  
+ O <xref:System.Windows.Data.CollectionView> pode implementar live classificação em si, ou você pode delegar a classificação ao vivo a outro objeto, como a coleção subjacente. Se você delegar classificação ao vivo, o <xref:System.Windows.Data.CollectionView> talvez não tenha controle sobre se ele está habilitado. O <xref:System.Windows.Data.CollectionView> deve aceitar o comportamento do objeto ao qual ela delega. Nesse caso, defina o <xref:System.ComponentModel.ICollectionViewLiveShaping.CanChangeLiveSorting%2A> propriedade `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveFiltering">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveFiltering { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveFiltering" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a filtragem de dados em tempo real está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a filtragem de dados em tempo real está habilitada; <see langword="false" /> se a filtragem em tempo real não está habilitada; <see langword="null" /> se não é possível determinar se o modo de exibição de coleção implementa a filtragem em tempo real.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Observações para herdeiros  
+ O <xref:System.Windows.Data.CollectionView> pode implementar live filtragem em si, ou você pode delegar a filtragem dinâmica para outro objeto, como a coleção subjacente. Se você delegar filtragem dinâmica, o <xref:System.Windows.Data.CollectionView> talvez não tenha controle sobre se ele está habilitado. O <xref:System.Windows.Data.CollectionView> deve aceitar o comportamento do objeto ao qual ela delega. Se seu <xref:System.Windows.Data.CollectionView> sabe se o objeto do representante oferece suporte ao vivo filtragem, definir o <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering%2A> propriedade para o valor conhecido.  Caso contrário, defina <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveFiltering%2A> para `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveGrouping">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveGrouping { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveGrouping" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o agrupamento de dados em tempo real está habilitada.</summary>
+        <value>
+          <see langword="true" />Se o agrupamento de dados em tempo real é habilitar; <see langword="false" /> se o agrupamento ao vivo não estiver habilitado; <see langword="null" /> se não for possível determinar se o modo de exibição de coleção implementa agrupamento ao vivo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Observações para herdeiros  
+ O <xref:System.Windows.Data.CollectionView> pode implementar ao vivo de agrupamento em si, ou você pode delegar ao vivo agrupamento para outro objeto, como a coleção subjacente. Se você delegar agrupamento ao vivo, o <xref:System.Windows.Data.CollectionView> talvez não tenha controle sobre se ele está habilitado. O <xref:System.Windows.Data.CollectionView> deve aceitar o comportamento do objeto ao qual ela delega. Se seu <xref:System.Windows.Data.CollectionView> sabe se o objeto do representante oferece suporte ao vivo de agrupamento, defina o <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping%2A> propriedade para o valor conhecido.  Caso contrário, defina <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveGrouping%2A> para `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiveSorting">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsLiveSorting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsLiveSorting" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a classificação em tempo real está habilitada.</summary>
+        <value>
+          <see langword="true" /> se a classificação de dados em tempo real está habilitada; <see langword="false" /> se a classificação em tempo real não está habilitada; <see langword="null" /> se não é possível determinar se o modo de exibição de coleção implementa a classificação em tempo real.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+## <a name="notes-for-inheritors"></a>Observações para herdeiros  
+ O <xref:System.Windows.Data.CollectionView> pode implementar live classificação em si, ou você pode delegar a classificação ao vivo a outro objeto, como a coleção subjacente. Se você delegar classificação ao vivo, o <xref:System.Windows.Data.CollectionView> talvez não tenha controle sobre se ele está habilitado. O <xref:System.Windows.Data.CollectionView> deve aceitar o comportamento do objeto ao qual ela delega. Se seu <xref:System.Windows.Data.CollectionView> sabe se o objeto do representante oferece suporte ao vivo de classificação, defina o <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting%2A> propriedade para o valor conhecido.  Caso contrário, defina <xref:System.ComponentModel.ICollectionViewLiveShaping.IsLiveSorting%2A> para `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveFilteringProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveFilteringProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveFilteringProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.LiveFilteringProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cadeias de caracteres que especificam as propriedades que participam da filtragem de dados em tempo real.</summary>
+        <value>Uma coleção de cadeias de caracteres que especificam as propriedades que participam da filtragem de dados em tempo real.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveGroupingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveGroupingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveGroupingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.LiveGroupingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cadeias de caracteres que especifica as propriedades que participam no agrupamento de dados em tempo real.</summary>
+        <value>Uma coleção de cadeias de caracteres que especifica as propriedades que participam no agrupamento de dados em tempo real.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LiveSortingProperties">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ObservableCollection&lt;string&gt; LiveSortingProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ObservableCollection`1&lt;string&gt; LiveSortingProperties" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.ICollectionViewLiveShaping.LiveSortingProperties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ObservableCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de cadeias de caracteres que especifica as propriedades que participam na classificação de dados em tempo real.</summary>
+        <value>Uma coleção de cadeias de caracteres que especifica as propriedades que participam na classificação de dados em tempo real.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

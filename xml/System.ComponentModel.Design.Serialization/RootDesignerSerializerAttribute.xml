@@ -1,0 +1,302 @@
+<Type Name="RootDesignerSerializerAttribute" FullName="System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RootDesignerSerializerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RootDesignerSerializerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This attribute has been deprecated. Use DesignerSerializerAttribute instead.  For example, to specify a root designer for CodeDom, use DesignerSerializerAttribute(...,typeof(TypeCodeDomSerializer)).  http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica o serializador base a ser usado para um objeto de designer raiz. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute>indica o serializador a ser usado quando o Gerenciador de serialização serializa o documento de design, e se o serializador especificado oferece suporte a recarga automática do documento de design sem primeiro descartar completamente o documento.  
+  
+ Este atributo contém os seguintes membros significativos:  
+  
+-   <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.SerializerTypeName%2A>indica o objeto de serialização para serializar a classe em tempo de design.  
+  
+-   <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.SerializerBaseTypeName%2A>indica o nome totalmente qualificado do tipo base do objeto de serialização.  
+  
+-   <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.Reloadable%2A>Indica se o serializador suporta recarregar um documento de design sem interação do usuário para abrir uma nova exibição de designer.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir aplica-se um <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute> para um componente.  
+  
+ [!code-cpp[IDesignerSerializationManagerSample#2](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerSerializationManagerSample/CPP/idesignerserializationmanagersample.cpp#2)]
+ [!code-csharp[IDesignerSerializationManagerSample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/IDesignerSerializationManagerSample/CS/idesignerserializationmanagersample.cs#2)]
+ [!code-vb[IDesignerSerializationManagerSample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerSerializationManagerSample/VB/idesignerserializationmanagersample.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RootDesignerSerializerAttribute (string serializerTypeName, string baseSerializerTypeName, bool reloadable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string serializerTypeName, string baseSerializerTypeName, bool reloadable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializerTypeName" Type="System.String" />
+        <Parameter Name="baseSerializerTypeName" Type="System.String" />
+        <Parameter Name="reloadable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serializerTypeName">O nome totalmente qualificado do tipo de dados do serializador.</param>
+        <param name="baseSerializerTypeName">O nome do tipo base do serializador. Uma classe pode incluir vários serializadores tiverem diferentes tipos de base.</param>
+        <param name="reloadable">
+          <see langword="true" />Se este serializador dá suporte a dinâmico recarregar o documento. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute" /> classe usando os atributos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um novo atributo de designer de serialização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RootDesignerSerializerAttribute (string serializerTypeName, Type baseSerializerType, bool reloadable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string serializerTypeName, class System.Type baseSerializerType, bool reloadable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.#ctor(System.String,System.Type,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializerTypeName" Type="System.String" />
+        <Parameter Name="baseSerializerType" Type="System.Type" />
+        <Parameter Name="reloadable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serializerTypeName">O nome totalmente qualificado do tipo de dados do serializador.</param>
+        <param name="baseSerializerType">O nome do tipo base do serializador. Uma classe pode incluir vários serializadores, todos eles têm diferentes tipos de base.</param>
+        <param name="reloadable">
+          <see langword="true" />Se este serializador dá suporte a dinâmico recarregar o documento. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute" /> classe usando os atributos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um novo atributo de designer de serialização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RootDesignerSerializerAttribute (Type serializerType, Type baseSerializerType, bool reloadable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type serializerType, class System.Type baseSerializerType, bool reloadable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.#ctor(System.Type,System.Type,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializerType" Type="System.Type" />
+        <Parameter Name="baseSerializerType" Type="System.Type" />
+        <Parameter Name="reloadable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serializerType">O tipo de dados do serializador.</param>
+        <param name="baseSerializerType">O tipo base do serializador. Uma classe pode incluir vários serializadores tiverem diferentes tipos de base.</param>
+        <param name="reloadable">
+          <see langword="true" />Se este serializador dá suporte a dinâmico recarregar o documento. Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute" /> classe usando os atributos especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um novo atributo de designer de serialização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reloadable">
+      <MemberSignature Language="C#" Value="public bool Reloadable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Reloadable" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.Reloadable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o serializador raiz dá suporte ao recarregar o documento de design sem primeiro descarte o designer host.</summary>
+        <value>
+          <see langword="true" />Se o serializador raiz dá suporte ao recarregar; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se essa propriedade é definida como `false`, o documento de design não executa automaticamente uma recarga em nome do usuário. Se essa propriedade é definida como `false`, é responsabilidade do usuário reabra a janela do designer de exibição para o documento de design, se uma atualização ou recarregar é desejado.  
+  
+ Alguns serializadores exigem a interação de componentes externos no designer de processo de carregamento para recriar o documento de design. Esses serializadores, às vezes, precisam criar um novo host designer sempre que o documento de design é carregado. Se esse for o caso, <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.Reloadable%2A> será definida como `false`, e o host do designer deve ser recriado pela interação do usuário (iniciando o designer do documento) após o design do documento é descartado. Os eventos e serviços que estavam conectados ao host do designer, exceto por meio de desserialização, permanecem não e talvez precise ser definido novamente. Se <xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.Reloadable%2A> é `true`, o documento de design pode ser recarregado depois que são feitas alterações fora do designer para o código sem fechar a janela do designer e abri-la.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializerBaseTypeName">
+      <MemberSignature Language="C#" Value="public string SerializerBaseTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerializerBaseTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.SerializerBaseTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo totalmente qualificado do tipo base do serializador.</summary>
+        <value>O nome do tipo base do serializador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializerTypeName">
+      <MemberSignature Language="C#" Value="public string SerializerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerializerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.SerializerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo totalmente qualificado do serializador.</summary>
+        <value>O nome do tipo do serializador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma ID exclusiva para esse tipo de atributo.</summary>
+        <value>Um objeto que contém uma ID exclusiva para esse tipo de atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é usada por filtragem de algoritmos para identificar dois atributos que são do mesmo tipo. Para a maioria dos atributos, isso retorna apenas o <xref:System.Type> instância para o atributo. <xref:System.ComponentModel.EditorAttribute>substitui isto para incluir o tipo do tipo de base do editor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

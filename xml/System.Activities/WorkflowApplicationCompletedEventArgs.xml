@@ -1,0 +1,109 @@
+<Type Name="WorkflowApplicationCompletedEventArgs" FullName="System.Activities.WorkflowApplicationCompletedEventArgs">
+  <TypeSignature Language="C#" Value="public class WorkflowApplicationCompletedEventArgs : System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WorkflowApplicationCompletedEventArgs extends System.Activities.WorkflowApplicationEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.WorkflowApplicationCompletedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Activities.WorkflowApplicationEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações sobre uma instância de fluxo de trabalho que concluiu sua execução.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Verifica se o exemplo de código a seguir a <xref:System.Activities.WorkflowApplicationCompletedEventArgs> passado para o <xref:System.Activities.WorkflowApplication.Completed%2A> manipulador de um <xref:System.Activities.WorkflowApplication> instância e exibe informações sobre como o fluxo de trabalho é concluído.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CompletionState">
+      <MemberSignature Language="C#" Value="public System.Activities.ActivityInstanceState CompletionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Activities.ActivityInstanceState CompletionState" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationCompletedEventArgs.CompletionState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.ActivityInstanceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado de conclusão da instância do fluxo de trabalho, que indica se a instância de fluxo de trabalho foi concluído com êxito, foi cancelada ou com falha.</summary>
+        <value>O estado de conclusão da instância do fluxo de trabalho, que indica se a instância de fluxo de trabalho foi concluído com êxito, foi cancelada ou com falha.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Verifica se o exemplo de código a seguir a <xref:System.Activities.WorkflowApplicationCompletedEventArgs> passado para o <xref:System.Activities.WorkflowApplication.Completed%2A> manipulador de um <xref:System.Activities.WorkflowApplication> instância e exibe informações sobre como o fluxo de trabalho é concluído.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Outputs">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Outputs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Outputs" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém os valores de <see cref="T:System.Activities.OutArgument" />s de atividade de raiz da instância de fluxo de trabalho, chaveada segundo o nome do argumento.</summary>
+        <value>Um dicionário que contém os valores de <see cref="T:System.Activities.OutArgument" />s de atividade de raiz da instância de fluxo de trabalho, chaveada segundo o nome do argumento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Verifica se o exemplo de código a seguir a <xref:System.Activities.WorkflowApplicationCompletedEventArgs> passado para o <xref:System.Activities.WorkflowApplication.Completed%2A> manipulador de um <xref:System.Activities.WorkflowApplication> instância e exibe informações sobre como o fluxo de trabalho é concluído.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminationException">
+      <MemberSignature Language="C#" Value="public Exception TerminationException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception TerminationException" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.WorkflowApplicationCompletedEventArgs.TerminationException" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção associada a conclusão de uma instância do fluxo de trabalho.</summary>
+        <value>A exceção associada a conclusão de uma instância do fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Verifica se o exemplo de código a seguir a <xref:System.Activities.WorkflowApplicationCompletedEventArgs> passado para o <xref:System.Activities.WorkflowApplication.Completed%2A> manipulador de um <xref:System.Activities.WorkflowApplication> instância e exibe informações sobre como o fluxo de trabalho é concluído.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

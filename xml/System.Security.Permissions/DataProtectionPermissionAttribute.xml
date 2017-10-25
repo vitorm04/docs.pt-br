@@ -1,0 +1,201 @@
+<Type Name="DataProtectionPermissionAttribute" FullName="System.Security.Permissions.DataProtectionPermissionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DataProtectionPermissionAttribute : System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit DataProtectionPermissionAttribute extends System.Security.Permissions.CodeAccessSecurityAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.DataProtectionPermissionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.Permissions.CodeAccessSecurityAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly | System.AttributeTargets.Class | System.AttributeTargets.Struct | System.AttributeTargets.Constructor | System.AttributeTargets.Method, AllowMultiple=true, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Permite que as ações de segurança para <see cref="T:System.Security.Permissions.DataProtectionPermission" /> sejam aplicadas ao código usando a segurança declarativa. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O escopo da declaração que é permitido depende do <xref:System.Security.Permissions.SecurityAction> valor que é usado.  
+  
+ As informações de segurança declaradas por um atributo de segurança são armazenadas nos metadados do atributo de destino e são acessadas pelo sistema em tempo de execução. <xref:System.Security.Permissions.DataProtectionPermissionAttribute>é usado apenas para a segurança declarativa. Para segurança obrigatória, use o <xref:System.Security.Permissions.DataProtectionPermission> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataProtectionPermissionAttribute (System.Security.Permissions.SecurityAction action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.SecurityAction action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.Security.Permissions.SecurityAction" />
+      </Parameters>
+      <Docs>
+        <param name="action">Um dos valores de <see cref="T:System.Security.Permissions.SecurityAction" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.DataProtectionPermissionAttribute" /> com o <see cref="T:System.Security.Permissions.SecurityAction" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePermission">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission CreatePermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission CreatePermission() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.DataProtectionPermissionAttribute.CreatePermission" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um novo <see cref="T:System.Security.Permissions.DataProtectionPermission" />.</summary>
+        <returns>Um <see cref="T:System.Security.Permissions.DataProtectionPermission" /> que corresponde ao atributo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método só deve ser chamado pelo sistema de segurança, nunca pelo código do aplicativo.  
+  
+ Em tempo de compilação, atributos convertem declarações de segurança para um formato serializado em metadados. Dados de segurança declarativa em metadados são criados a partir da permissão que esse método retorna.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flags">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.DataProtectionPermissionFlags Flags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.DataProtectionPermissionFlags Flags" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.DataProtectionPermissionAttribute.Flags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.DataProtectionPermissionFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as permissões de proteção de dados.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.DataProtectionPermissionFlags" />. O padrão é <see cref="F:System.Security.Permissions.DataProtectionPermissionFlags.NoFlags" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectData">
+      <MemberSignature Language="C#" Value="public bool ProtectData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProtectData" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.DataProtectionPermissionAttribute.ProtectData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os dados podem ser criptografados usando o <see cref="T:System.Security.Cryptography.ProtectedData" /> classe.</summary>
+        <value>
+          <see langword="true" />Se os dados podem ser criptografados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor for `false`, um <xref:System.Security.SecurityException> ocorre quando o <xref:System.Security.Cryptography.ProtectedData.Protect%2A?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtectMemory">
+      <MemberSignature Language="C#" Value="public bool ProtectMemory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProtectMemory" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.DataProtectionPermissionAttribute.ProtectMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a memória pode ser criptografada usando o <see cref="T:System.Security.Cryptography.ProtectedMemory" /> classe.</summary>
+        <value>
+          <see langword="true" />Se a memória pode ser criptografada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o valor for `false`, um <xref:System.Security.SecurityException> ocorre quando o <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnprotectData">
+      <MemberSignature Language="C#" Value="public bool UnprotectData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnprotectData" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.DataProtectionPermissionAttribute.UnprotectData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os dados podem ser descriptografados usando a <see cref="T:System.Security.Cryptography.ProtectedData" /> classe.</summary>
+        <value>
+          <see langword="true" />Se os dados podem ser descriptografados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse valor for `false`, um <xref:System.Security.SecurityException> ocorre quando o <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnprotectMemory">
+      <MemberSignature Language="C#" Value="public bool UnprotectMemory { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnprotectMemory" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.DataProtectionPermissionAttribute.UnprotectMemory" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a memória pode ser descriptografada usando a <see cref="T:System.Security.Cryptography.ProtectedMemory" /> classe.</summary>
+        <value>
+          <see langword="true" />Se a memória pode ser descriptografada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se esse valor for `false`, um <xref:System.Security.SecurityException> ocorre quando o <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A?displayProperty=nameWithType> método é chamado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

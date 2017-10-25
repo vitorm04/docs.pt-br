@@ -1,0 +1,114 @@
+<Type Name="BindableSupport" FullName="System.ComponentModel.BindableSupport">
+  <TypeSignature Language="C#" Value="public enum BindableSupport" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BindableSupport extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.BindableSupport" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica valores para indicar se uma propriedade pode ser associada a um elemento de dados ou outra propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada em tempo de design para indicar se um designer deve oferecer uma propriedade como disponível para vinculação de dados em um designer visual. Essa classe não afeta se a propriedade pode ser associados em tempo de execução de dados.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo sobre como usar o <xref:System.ComponentModel.BindableSupport> enumeração para indicar se uma propriedade pode ser vinculada, consulte o código de exemplo <xref:System.ComponentModel.BindableAttribute.%23ctor%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.BindableSupport Default = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BindableSupport.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindableSupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade é definida como o padrão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="No" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.BindableSupport No = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BindableSupport.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindableSupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade não é vinculável em tempo de design.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="Yes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.ComponentModel.BindableSupport Yes = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.BindableSupport.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.BindableSupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A propriedade é vinculável em tempo de design.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

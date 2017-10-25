@@ -1,0 +1,121 @@
+<Type Name="IDesignerLoaderHost" FullName="System.ComponentModel.Design.Serialization.IDesignerLoaderHost">
+  <TypeSignature Language="C#" Value="public interface IDesignerLoaderHost : IServiceProvider, System.ComponentModel.Design.IDesignerHost" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerLoaderHost implements class System.ComponentModel.Design.IDesignerHost, class System.ComponentModel.Design.IServiceContainer, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.IDesignerLoaderHost" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.Design.IDesignerHost</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece uma interface que pode estender um host de designer para dar suporte a carregamento de um estado serializado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.ComponentModel.Design.IDesignerHost> pode implementar essa interface para habilitar o suporte para carregamento por um <xref:System.ComponentModel.Design.Serialization.DesignerLoader>.  
+  
+ O carregador de designer informa ao host de designer que precisa chamar uma carga ou recarregar para que o host de designer pode executar tarefas adicionais nos seguintes momentos.  
+  
+ Essa classe é isolada de <xref:System.ComponentModel.Design.IDesignerHost> para enfatizar que o carregador do designer, não no host do designer, deve iniciar todos os carregar e recarregar o documento de design.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EndLoad">
+      <MemberSignature Language="C#" Value="public void EndLoad (string baseClassName, bool successful, System.Collections.ICollection errorCollection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndLoad(string baseClassName, bool successful, class System.Collections.ICollection errorCollection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.EndLoad(System.String,System.Boolean,System.Collections.ICollection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseClassName" Type="System.String" />
+        <Parameter Name="successful" Type="System.Boolean" />
+        <Parameter Name="errorCollection" Type="System.Collections.ICollection" />
+      </Parameters>
+      <Docs>
+        <param name="baseClassName">O nome totalmente qualificado da classe base do documento que está criando esse designer.</param>
+        <param name="successful">
+          <see langword="true" />Se o designer é carregado com êxito; Caso contrário, <see langword="false" />.</param>
+        <param name="errorCollection">Uma coleção que contém os erros encontrados durante o carregamento, se houver. Se nenhum erro foi encontrado, passe em uma coleção vazia ou <see langword="null" />.</param>
+        <summary>Termina o designer de operação de carregamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerLoader> que carrega o documento de design chama esse método para indicar que a carga é encerrado.  
+  
+ Se forem encontrados erros durante o carregamento, eles devem ser passados a `errorCollection` parâmetro como uma coleção de exceções. Se não houver exceções, o host do carregador de designer pode chamar <xref:System.Object.ToString%2A> neles e passá-los como uma coleção. Se a carga for bem-sucedida, o `errorCollection` parâmetro deve ser `null` ou uma coleção vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reload">
+      <MemberSignature Language="C#" Value="public void Reload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Reload() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.IDesignerLoaderHost.Reload" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recarrega o documento de design.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.Serialization.DesignerLoader> chama esse método para recarregar o documento de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

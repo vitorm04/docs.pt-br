@@ -1,0 +1,219 @@
+<Type Name="Trustee" FullName="System.Messaging.Trustee">
+  <TypeSignature Language="C#" Value="public class Trustee" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Trustee extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Messaging.Trustee" />
+  <AssemblyInfo>
+    <AssemblyName>System.Messaging</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica uma conta de usuário, conta de grupo ou sessão de logon à qual se aplica uma entrada de controle de acesso.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto de confiança é a entidade ao qual você está conceder ou negar direitos de acesso quando você cria uma entrada de controle de acesso. Definir o <xref:System.Messaging.Trustee.TrusteeType%2A> membro (diretamente ou usando o <xref:System.Messaging.Trustee.%23ctor%2A> construtor) para especificar se o objeto de confiança é um usuário, computador ou outro tipo. Se você não especificar o tipo de objeto de confiança antes de definir permissões para o objeto de confiança, o tipo padrão é `Unknown`.  
+  
+ Você deve especificar um valor para o <xref:System.Messaging.Trustee.Name%2A> propriedade antes de usar o <xref:System.Messaging.Trustee> para definir permissões. O <xref:System.Messaging.Trustee.Name%2A> contém o nome da conta de usuário, grupo ou computador ao qual os direitos de acesso a novos serão atribuídos. Opcionalmente, você pode definir o <xref:System.Messaging.Trustee.SystemName%2A> propriedade para identificar o nome do sistema no qual a conta do objeto de confiança é pesquisada para resolver o identificador de segurança do nome. Se você não especificar um valor para <xref:System.Messaging.Trustee.SystemName%2A>, procura o nome da conta do computador local.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.Trustee" /> classe sem definir qualquer uma de suas propriedades de leitura/gravação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve especificar um valor para o <xref:System.Messaging.Trustee.Name%2A> propriedade antes de usar o <xref:System.Messaging.Trustee> instância para definir permissões. Opcionalmente, você pode definir o <xref:System.Messaging.Trustee.SystemName%2A> propriedade para identificar o nome do sistema no qual a conta do objeto de confiança é pesquisada para resolver o identificador de segurança do nome. Se você não especificar um valor para <xref:System.Messaging.Trustee.SystemName%2A>, procura o nome da conta do computador local.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O valor a ser atribuído para o <see cref="P:System.Messaging.Trustee.Name" /> propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.Trustee" /> classe do tipo <see langword="Unknown" />, a definição de <see cref="P:System.Messaging.Trustee.Name" /> propriedade para o valor especificado e o <see cref="P:System.Messaging.Trustee.SystemName" /> para <see langword="null" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para definir a conta do objeto de confiança e especificar que o computador local seja usada para pesquisar a conta. O <xref:System.Messaging.Trustee.TrusteeType%2A> está definida como `Unknown`, mas você pode modificar esse valor antes de usar essa instância de <xref:System.Messaging.Trustee> para definir permissões.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee (string name, string systemName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string systemName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="systemName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O valor a ser atribuído para o <see cref="P:System.Messaging.Trustee.Name" /> propriedade.</param>
+        <param name="systemName">O valor a ser atribuído para o <see cref="P:System.Messaging.Trustee.SystemName" /> propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.Trustee" /> classe do tipo <see langword="Unknown" />, a definição de <see cref="P:System.Messaging.Trustee.Name" /> e o <see langword="SystemName" /> propriedades para os valores especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga para definir a conta do objeto de confiança e especificar que um computador da rede seja usada para pesquisar a conta. O <xref:System.Messaging.Trustee.TrusteeType%2A> está definida como `Unknown`, mas você pode modificar esse valor antes de usar essa instância de <xref:System.Messaging.Trustee> para definir permissões.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Trustee (string name, string systemName, System.Messaging.TrusteeType trusteeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string systemName, valuetype System.Messaging.TrusteeType trusteeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Messaging.Trustee.#ctor(System.String,System.String,System.Messaging.TrusteeType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="systemName" Type="System.String" />
+        <Parameter Name="trusteeType" Type="System.Messaging.TrusteeType" />
+      </Parameters>
+      <Docs>
+        <param name="name">O valor a ser atribuído para o <see cref="P:System.Messaging.Trustee.Name" /> propriedade.</param>
+        <param name="systemName">O valor a ser atribuído para o <see cref="P:System.Messaging.Trustee.SystemName" /> propriedade.</param>
+        <param name="trusteeType">Um <see cref="T:System.Messaging.TrusteeType" /> que indica o tipo de conta do objeto de confiança.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Messaging.Trustee" /> classe do tipo especificado, definindo o <see cref="P:System.Messaging.Trustee.Name" /> e <see cref="P:System.Messaging.Trustee.SystemName" /> propriedades para os valores especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa sobrecarga quando o tipo de objeto de confiança é conhecido para definir a conta do objeto de confiança e especificar um computador de rede a ser usado para pesquisar a conta.  
+  
+ Essa sobrecarga define o <xref:System.Messaging.Trustee.TrusteeType%2A> propriedade em construção, mas você pode modificar esse valor antes de usar essa instância de <xref:System.Messaging.Trustee> para definir permissões. O `Unknown` tipo de objeto de confiança (que outras sobrecargas do construtor definidas por padrão) deve ser usado somente quando você não souber o tipo de relação de confiança que está sendo usado, mas souber que ele é válido.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Trustee.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do objeto de confiança.</summary>
+        <value>O nome da conta para o qual novos direitos serão atribuídos. O padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve especificar um valor para o <xref:System.Messaging.Trustee.Name%2A> propriedade antes de usar o <xref:System.Messaging.Trustee> para definir permissões. O <xref:System.Messaging.Trustee.Name%2A> contém o nome da conta de usuário, grupo ou computador ao qual os direitos de acesso a novos serão atribuídos.  
+  
+ Se você não especificar um valor para o <xref:System.Messaging.Trustee.SystemName%2A> propriedade, a conta que você identifica no <xref:System.Messaging.Trustee.Name%2A> propriedade é procurada no computador local. Se você especificar um <xref:System.Messaging.Trustee.SystemName%2A>, a conta é procurada no computador que você especificar.  
+  
+ Se você não estiver conectado à rede (por exemplo, se você estiver no modo de grupo de trabalho), o <xref:System.Messaging.Trustee.Name%2A> propriedade pode ser qualquer usuário ou grupo local. Nesse caso, você não deve especificar qualquer valor de <xref:System.Messaging.Trustee.SystemName%2A>, como o modo de grupo de trabalho é local, por definição.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Messaging.Trustee.Name" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemName">
+      <MemberSignature Language="C#" Value="public string SystemName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SystemName" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Trustee.SystemName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o computador no qual pesquisar conta do objeto de confiança.</summary>
+        <value>O computador local ou remoto, no qual a conta existe. O padrão é <see langword="null" />, que indica que o nome será pesquisado no computador local.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve especificar um valor para <xref:System.Messaging.Trustee.Name%2A> antes de usar essa instância do <xref:System.Messaging.Trustee> para definir permissões, mas <xref:System.Messaging.Trustee.SystemName%2A> é opcional. Se você deixar <xref:System.Messaging.Trustee.SystemName%2A> `null`, o computador local é usado para pesquisar a conta que você especificar na <xref:System.Messaging.Trustee.Name%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrusteeType">
+      <MemberSignature Language="C#" Value="public System.Messaging.TrusteeType TrusteeType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Messaging.TrusteeType TrusteeType" />
+      <MemberSignature Language="DocId" Value="P:System.Messaging.Trustee.TrusteeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Messaging</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Messaging.TrusteeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do objeto de confiança, que identifica se o objeto de confiança é um usuário, grupo, computador, domínio ou alias.</summary>
+        <value>Um <see cref="T:System.Messaging.TrusteeType" /> que indica qual tipo de conta que o objeto de confiança tem no sistema. O padrão é <see langword="Unknown" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Messaging.Trustee.TrusteeType%2A> indica qual tipo de conta em que o objeto de confiança está associado no controlador de domínio ou no computador local. Isso pode ser, por exemplo, uma conta de usuário, uma conta de grupo ou uma conta de computador.  
+  
+ Se você estiver especificando um nome de grupo predefinido para o <xref:System.Messaging.Trustee.Name%2A> propriedade, como todos, o <xref:System.Messaging.Trustee.TrusteeType%2A> é `Group`, em vez de `Alias`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">O tipo de objeto de confiança especificado não é um do <see cref="T:System.Messaging.TrusteeType" /> membros de enumeração.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Net.WebSockets">
+  <Docs>
+    <summary>O <see cref="N:System.Net.WebSockets" /> namespace fornece uma implementação gerenciada da interface do WebSocket para desenvolvedores.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Algumas das classes no <xref:System.Net.WebSockets> namespace têm suporte no Windows 7, Windows Vista SP2 e Windows Server 2008. No entanto, as implementações somente públicas do cliente e servidor WebSocket têm suporte no Windows 8 e Windows Server 2012. As classes e os elementos de classe no <xref:System.Net.WebSockets> namespace que têm suporte no Windows 7, Windows Vista SP2 e Windows Server 2008 são classes abstratas. Isso permite que um desenvolvedor de aplicativos herdar e estender essas classes abstratas com uma implementação real do WebSocket do cliente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

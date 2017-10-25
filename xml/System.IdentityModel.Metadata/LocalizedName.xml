@@ -1,0 +1,79 @@
+<Type Name="LocalizedName" FullName="System.IdentityModel.Metadata.LocalizedName">
+  <TypeSignature Language="C#" Value="public class LocalizedName : System.IdentityModel.Metadata.LocalizedEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LocalizedName extends System.IdentityModel.Metadata.LocalizedEntry" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Metadata.LocalizedName" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Metadata.LocalizedEntry</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um nome localizado.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizedName ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.LocalizedName.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Metadata.LocalizedName" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IdentityModel.Metadata.LocalizedName.Name%2A> propriedade é inicializada para `null` na nova instância.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LocalizedName (string name, System.Globalization.CultureInfo language);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Globalization.CultureInfo language) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Metadata.LocalizedName.#ctor(System.String,System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="language" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome para essa instância. Inicializa o <see cref="P:System.IdentityModel.Metadata.LocalizedName.Name" /> propriedade.</param>
+        <param name="language">O <see cref="T:System.Globalization.CultureInfo" /> que define o idioma para essa instância. Inicializa o <see cref="P:System.IdentityModel.Metadata.LocalizedEntry.Language" /> propriedade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Metadata.LocalizedName" /> classe que tem o nome especificado e a cultura (linguagem).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Metadata.LocalizedName.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome.</summary>
+        <value>O nome.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,74 @@
+<Type Name="LenientErrorPrototype" FullName="Microsoft.JScript.LenientErrorPrototype">
+  <TypeSignature Language="C#" Value="public sealed class LenientErrorPrototype : Microsoft.JScript.ErrorPrototype" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LenientErrorPrototype extends Microsoft.JScript.ErrorPrototype" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.LenientErrorPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.ErrorPrototype</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena objetos que representam os métodos estáticos do <see cref="T:Microsoft.JScript.ErrorPrototype" /> classe. O <see cref="T:Microsoft.JScript.LenientErrorPrototype" /> classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public object constructor;" />
+      <MemberSignature Language="ILAsm" Value=".field public object constructor" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientErrorPrototype.constructor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena uma referência a um <see cref="T:Microsoft.JScript.ErrorConstructor" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="name">
+      <MemberSignature Language="C#" Value="public object name;" />
+      <MemberSignature Language="ILAsm" Value=".field public object name" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientErrorPrototype.name" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena uma cadeia de caracteres que contém o nome do subtipo do erro.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public object toString;" />
+      <MemberSignature Language="ILAsm" Value=".field public object toString" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientErrorPrototype.toString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.ErrorPrototype.toString(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.ErrorPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

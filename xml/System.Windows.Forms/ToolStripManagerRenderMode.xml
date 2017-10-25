@@ -1,0 +1,80 @@
+<Type Name="ToolStripManagerRenderMode" FullName="System.Windows.Forms.ToolStripManagerRenderMode">
+  <TypeSignature Language="C#" Value="public enum ToolStripManagerRenderMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripManagerRenderMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripManagerRenderMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o estilo de pintura aplicado a vários <see cref="T:System.Windows.Forms.ToolStrip" /> objetos contidos em um formulário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ToolStripManagerRenderMode> é usado pelo <xref:System.Windows.Forms.ToolStripManager> classe e define o estilo de pintura para <xref:System.Windows.Forms.ToolStrip> objetos que têm suas <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> propriedade definida como <xref:System.Windows.Forms.ToolStripRenderMode?displayProperty=nameWithType>.  
+  
+ Você não pode definir explicitamente o <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> personalizada, no entanto, a <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> é retornado personalizada quando o <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> é definido como uma extensão do <xref:System.Windows.Forms.ToolStripRenderer> classe que não seja <xref:System.Windows.Forms.ToolStripProfessionalRenderer> ou <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripManagerRenderMode Custom = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripManagerRenderMode.Custom" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripManagerRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o uso de um <see cref="T:System.Windows.Forms.ToolStripRenderer" /> diferente de <see cref="T:System.Windows.Forms.ToolStripProfessionalRenderer" /> ou <see cref="T:System.Windows.Forms.ToolStripSystemRenderer" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Professional">
+      <MemberSignature Language="C#" Value="Professional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripManagerRenderMode Professional = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripManagerRenderMode.Professional" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripManagerRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o uso de um <see cref="T:System.Windows.Forms.ToolStripProfessionalRenderer" /> para pintar.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="System">
+      <MemberSignature Language="C#" Value="System" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripManagerRenderMode System = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripManagerRenderMode.System" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripManagerRenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o uso de um <see cref="T:System.Windows.Forms.ToolStripSystemRenderer" /> para pintar.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

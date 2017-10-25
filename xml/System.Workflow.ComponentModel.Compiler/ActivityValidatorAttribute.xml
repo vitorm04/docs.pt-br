@@ -1,0 +1,127 @@
+<Type Name="ActivityValidatorAttribute" FullName="System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ActivityValidatorAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityValidatorAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Identifica a classe que realiza a validação em um <see cref="T:System.Workflow.ComponentModel.Activity" /> que está sujeito a validação. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute> de classe, consulte o <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.%23ctor%2A> construtor.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir mostra os valores de propriedade inicial para uma instância de <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute> classe.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.ValidatorTypeName%2A>|`null`referência (`Nothing` no Visual Basic).|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityValidatorAttribute (string validatorTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string validatorTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validatorTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="validatorTypeName">Tipo do <see cref="T:System.Workflow.ComponentModel.Compiler.Validator" />.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute" /> classe usando o tipo do validador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute> de classe, consulte o <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityValidatorAttribute (Type validatorType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type validatorType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="validatorType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="validatorType">O nome do <see cref="T:System.Workflow.ComponentModel.Compiler.Validator" /> tipo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute" /> classe usando o nome de tipo de validação especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de valores de propriedade inicial para uma instância do <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute> de classe, consulte o <xref:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.%23ctor%2A> construtor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidatorTypeName">
+      <MemberSignature Language="C#" Value="public string ValidatorTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValidatorTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.Compiler.ActivityValidatorAttribute.ValidatorTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do tipo de associado <see cref="T:System.Workflow.ComponentModel.Compiler.Validator" /> classe.</summary>
+        <value>O nome do tipo de associado <see cref="T:System.Workflow.ComponentModel.Compiler.Validator" /> classe.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,132 @@
+<Type Name="DataControlFieldCell" FullName="System.Web.UI.WebControls.DataControlFieldCell">
+  <TypeSignature Language="C#" Value="public class DataControlFieldCell : System.Web.UI.WebControls.TableCell" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataControlFieldCell extends System.Web.UI.WebControls.TableCell" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlFieldCell" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.TableCell</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma célula da tabela renderizada de um controle de tabela associado a dados do ASP.NET, como <see cref="T:System.Web.UI.WebControls.DetailsView" /> ou <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataControlFieldCell> classe é fortemente tipada <xref:System.Web.UI.WebControls.TableCell> a classe que representa uma célula em controles associados a dados ASP.NET que processam o conteúdo em um layout tabular, como <xref:System.Web.UI.WebControls.GridView> e <xref:System.Web.UI.WebControls.DetailsView>.  
+  
+ O <xref:System.Web.UI.WebControls.DataControlField> objeto que contém o <xref:System.Web.UI.WebControls.DataControlFieldCell> objeto controla como a célula é renderizada aplicando estilos de célula. Você pode acessar o contendo <xref:System.Web.UI.WebControls.DataControlField> objeto usando o <xref:System.Web.UI.WebControls.DataControlFieldCell.ContainingField%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como um <xref:System.Web.UI.WebControls.DataControlFieldCell> objeto pode ser usado e manipulado por uma classe que deriva de <xref:System.Web.UI.WebControls.DataControlField>. O `RadioButtonField` classe adiciona um <xref:System.Web.UI.WebControls.RadioButton> controle para cada <xref:System.Web.UI.WebControls.DataControlFieldCell> do objeto no seu <xref:System.Web.UI.WebControls.DataControlField.InitializeCell%2A> método e depois verifica o valor da <xref:System.Web.UI.WebControls.RadioButton> controlar o <xref:System.Web.UI.WebControls.DataControlField.ExtractValuesFromCell%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataControlField> classe.  
+  
+ [!code-csharp[Samples.AspNet.RadioButtonField#2](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/CS/radiobuttonfield.cs#2)]
+ [!code-vb[Samples.AspNet.RadioButtonField#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/VB/radiobuttonfield.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataControlFieldCell (System.Web.UI.WebControls.DataControlField containingField);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.DataControlField containingField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCell.#ctor(System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="containingField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="containingField">O <see cref="T:System.Web.UI.WebControls.DataControlField" /> que contém a célula atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> classe, definindo especificado <see cref="T:System.Web.UI.WebControls.DataControlField" /> objeto como contêiner da célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor usa o <xref:System.Web.UI.HtmlTextWriterTag?displayProperty=nameWithType> elemento definido por sua classe base para renderizar a célula. O <xref:System.Web.UI.WebControls.DataControlField> objeto passado a `containingField` parâmetro é usado para determinar se deseja mostrar cabeçalhos e quais estilos para aplicar à célula quando ele for renderizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataControlFieldCell (System.Web.UI.HtmlTextWriterTag tagKey, System.Web.UI.WebControls.DataControlField containingField);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Web.UI.HtmlTextWriterTag tagKey, class System.Web.UI.WebControls.DataControlField containingField) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.DataControlFieldCell.#ctor(System.Web.UI.HtmlTextWriterTag,System.Web.UI.WebControls.DataControlField)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tagKey" Type="System.Web.UI.HtmlTextWriterTag" />
+        <Parameter Name="containingField" Type="System.Web.UI.WebControls.DataControlField" />
+      </Parameters>
+      <Docs>
+        <param name="tagKey">Um <see cref="T:System.Web.UI.HtmlTextWriterTag" /> que especifica a marca HTML para renderizar para a célula. A marca padrão usada pelo <see cref="T:System.Web.UI.WebControls.TableCell" /> classe é <see cref="F:System.Web.UI.HtmlTextWriterTag.Td" />.</param>
+        <param name="containingField">O <see cref="T:System.Web.UI.WebControls.DataControlField" /> que contém a célula atual.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.DataControlFieldCell" /> classe, definindo especificado <see cref="T:System.Web.UI.WebControls.DataControlField" /> objeto como contêiner da célula.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `tagKey` parâmetro é passado para o <xref:System.Web.UI.WebControls.WebControl> base do construtor de classe e marca de controles HTML que é emitida pelo controle. O <xref:System.Web.UI.WebControls.DataControlField> passado a `containingField` parâmetro é usado para determinar se deseja mostrar cabeçalhos e quais estilos para aplicar à célula quando ele for renderizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainingField">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.DataControlField ContainingField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.DataControlField ContainingField" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlFieldCell.ContainingField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlField</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Web.UI.WebControls.DataControlField" /> que contém a célula atual.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.DataControlField" /> que contém a célula atual ou <see langword="null" /> se nenhum <see cref="T:System.Web.UI.WebControls.DataControlField" /> for passado para o construtor de classe.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O processamento de conteúdo para o <xref:System.Web.UI.WebControls.DataControlFieldCell> objeto pode ser afetado pelas várias <xref:System.Web.UI.WebControls.DataControlField> propriedades do campo, como <xref:System.Web.UI.WebControls.DataControlField.ItemStyle%2A>, <xref:System.Web.UI.WebControls.DataControlField.ControlStyle%2A>, e <xref:System.Web.UI.WebControls.DataControlField.ShowHeader%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateRequestMode">
+      <MemberSignature Language="C#" Value="public override System.Web.UI.ValidateRequestMode ValidateRequestMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.ValidateRequestMode ValidateRequestMode" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.DataControlFieldCell.ValidateRequestMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.ValidateRequestMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o controle valida a entrada do cliente.</summary>
+        <value>
+          <see langword="true" />Se o controle valida a entrada do cliente; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

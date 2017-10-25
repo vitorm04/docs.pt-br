@@ -1,0 +1,113 @@
+<Type Name="WorkflowTrackPoint" FullName="System.Workflow.Runtime.Tracking.WorkflowTrackPoint">
+  <TypeSignature Language="C#" Value="public sealed class WorkflowTrackPoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WorkflowTrackPoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um ponto associado a um conjunto de eventos de status do fluxo de trabalho que são rastreados no caminho de execução potencial de uma instância de fluxo de trabalho raiz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Sempre que altera o status da instância do fluxo de trabalho, a instância de fluxo de trabalho emite um evento de status do fluxo de trabalho com base em um do <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> valores para o infra-estrutura de controle de tempo de execução. Um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> define todos os pontos de interesse durante a execução de uma instância de fluxo de trabalho para quais tipos específicos de fluxo de trabalho ocorrem eventos de status. Você pode adicionar uma <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> para <xref:System.Workflow.Runtime.Tracking.TrackingProfile.WorkflowTrackPoints%2A?displayProperty=nameWithType> para instruir a infra-estrutura de controle de tempo de execução para enviar um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> para o serviço de rastreamento quando ocorrer um conjunto de eventos de status do fluxo de trabalho especificado. Um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> pode ser correspondido em vários pontos na instância de fluxo de trabalho.  
+  
+ Definir <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> com adequadamente configurado <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation> para especificar os tipos de eventos de status do fluxo de trabalho que usa a infra-estrutura de controle de tempo de execução para corresponder a <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint>. Você pode adicionar a <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.Annotations%2A> para especificar informações adicionais associadas ao ponto de controle que deve ser enviado pelo tempo de execução de infra-estrutura de controle quando o ponto de controle for correspondido.  
+  
+ Essa classe não pode ser herdada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkflowTrackPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackPoint" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint> é inicializada com nenhuma anotação e não <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A>. Você deve definir um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> para o ponto de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Annotations">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.TrackingAnnotationCollection Annotations" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.Annotations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.TrackingAnnotationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de anotações associadas ao ponto de controle.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.TrackingAnnotationCollection" /> que contém as anotações associadas ao ponto de controle. O padrão é uma coleção vazia; Especifica que nenhuma anotação devem ser associados ao ponto de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar a <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.Annotations%2A> para especificar as anotações a serem retornados no <xref:System.Workflow.Runtime.Tracking.WorkflowTrackingRecord> enviados para o serviço de controle quando o ponto de controle for correspondido.  
+  
+ As anotações são cadeias de caracteres que você definir que contêm informações para associar o ponto de controle. Por exemplo, uma anotação pode conter informações sobre o caminho de execução possível o fluxo de trabalho pode levar a partir deste ponto de controle, ou ele pode conter informações a serem exibidas em uma interface de usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingLocation">
+      <MemberSignature Language="C#" Value="public System.Workflow.Runtime.Tracking.WorkflowTrackingLocation MatchingLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Runtime.Tracking.WorkflowTrackingLocation MatchingLocation" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Runtime.Tracking.WorkflowTrackingLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation" /> que especifica os eventos de status do fluxo de trabalho que devem ser correspondidos pelo tempo de execução de infra-estrutura para o ponto de controle de controle.</summary>
+        <value>Um <see cref="T:System.Workflow.Runtime.Tracking.WorkflowTrackingLocation" /> que especificado de eventos de status do fluxo de trabalho que devem ser correspondidos pelo tempo de execução de infra-estrutura para o ponto de controle de controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve definir um <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> para o ponto de controle. O <xref:System.Workflow.Runtime.Tracking.WorkflowTrackPoint.MatchingLocation%2A> Especifica um ou mais <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent> valores que são usados pelo tempo de execução de infra-estrutura de controle para coincidir com o ponto de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,70 @@
+<Type Name="ObjectConverter" FullName="System.Web.UI.ObjectConverter">
+  <TypeSignature Language="C#" Value="public sealed class ObjectConverter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ObjectConverter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.ObjectConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The recommended alternative is System.Convert and String.Format. http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Converte um objeto de um tipo de objeto para outro tipo de objeto. Essa classe está obsoleta. Use o <see cref="T:System.Convert" /> classe e o <see cref="M:System.String.Format(System.String,System.Object)" /> método em vez disso.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ObjectConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.ObjectConverter" />. Essa classe está obsoleta. Use o <see cref="T:System.Convert" /> classe e o <see cref="M:System.String.Format(System.String,System.Object)" /> método em vez disso.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertValue">
+      <MemberSignature Language="C#" Value="public static object ConvertValue (object value, Type toType, string formatString);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object ConvertValue(object value, class System.Type toType, string formatString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.ObjectConverter.ConvertValue(System.Object,System.Type,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="toType" Type="System.Type" />
+        <Parameter Name="formatString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto a ser convertido.</param>
+        <param name="toType">O <see cref="T:System.Type" /> converter <c>valor</c> para.</param>
+        <param name="formatString">A cadeia de caracteres de formato se aplicam durante a conversão.</param>
+        <summary>Converte um objeto de um tipo de objeto para outro tipo de objeto. Essa classe está obsoleta. Use o <see cref="T:System.Convert" /> classe e o <see cref="M:System.String.Format(System.String,System.Object)" /> método em vez disso.</summary>
+        <returns>O objeto convertido.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Value" />não pode ser convertido no tipo <paramref name="toType" /> com esse método.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

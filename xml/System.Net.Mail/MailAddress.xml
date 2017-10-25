@@ -1,0 +1,576 @@
+<Type Name="MailAddress" FullName="System.Net.Mail.MailAddress">
+  <TypeSignature Language="C#" Value="public class MailAddress" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MailAddress extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Mail.MailAddress" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Mail</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o endereço de um remetente ou destinatário de email.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+O <xref:System.Net.Mail.MailAddress> classe é usada pelo <xref:System.Net.Mail.SmtpClient> e <xref:System.Net.Mail.MailMessage> classes para armazenar informações de endereço para mensagens de email.  
+  
+Um endereço de email é composto de um <xref:System.Net.Mail.MailAddress.User%2A> nome, <xref:System.Net.Mail.MailAddress.Host%2A> nome e, opcionalmente, um <xref:System.Net.Mail.MailAddress.DisplayName%2A>. O <xref:System.Net.Mail.MailAddress.DisplayName%2A> pode conter caracteres não ASCII, se você codificá-los.  
+  
+O <xref:System.Net.Mail.MailAddress> classe suporta os seguintes formatos de endereço de email:  
+  
+-   Um formato de endereço simples de `user@host`. Se um <xref:System.Net.Mail.MailAddress.DisplayName%2A> não estiver definido, este é o formato de endereço de email gerado.  
+  
+-   Um formato de nome de exibição entre aspas padrão de `"display name" <user@host>`. Se um <xref:System.Net.Mail.MailAddress.DisplayName%2A> estiver definido, este é o formato gerado.  
+  
+-   Colchetes angulares são adicionados ao redor de <xref:System.Net.Mail.MailAddress.User%2A> nome, <xref:System.Net.Mail.MailAddress.Host%2A> nome `"display name" user@host` se eles não são incluídos.  
+  
+-   As aspas são adicionadas ao redor de <xref:System.Net.Mail.MailAddress.DisplayName%2A> para `display name <user@host>`, se eles não são incluídos.  
+  
+-   Caracteres Unicode têm suporte no <xref:System.Net.Mail.MailAddress.DisplayName%2A> propriedade.  
+  
+-   Um <xref:System.Net.Mail.MailAddress.User%2A> nome entre aspas. Por exemplo, `"user name"@host`.  
+  
+-   Pontos consecutivos e à direita em nomes de usuário. Por exemplo, `user...name..@host`.  
+  
+-   Literais de domínio entre colchetes. Por exemplo, `<user@[my domain]>`.  
+  
+-   Comentários. Por exemplo, `(comment)"display name"(comment)<(comment)user(comment)@(comment)domain(comment)>(comment)`. Comentários são removidos antes da transmissão.  
+  
+A vírgula é usada para separar elementos em uma lista de endereços de email. Como resultado, uma vírgula não deve ser usada em nomes de exibição sem aspas em uma lista. Os seguintes endereços de email deve ser permitidos:
+  
+`"John, Doe" <user@host>, "Bob, Smith" <user2@host>`  
+  
+O seguinte endereço de email não será permitido:  
+  
+`John, Doe <user@host>, Bob, Smith <user2@host>`  
+  
+As aspas podem ser inseridas em uma cadeia de caracteres entre aspas, mas eles devem ser substituídos. Os seguintes endereços de email deve ser permitidos:
+  
+`"John \"Jr\" Doe" <user@host>`  
+  
+`"\"John \\\"Jr\\\" Doe\" <user@host>"`  
+  
+O seguinte endereço de email não será permitido:  
+  
+`"John "Jr" Doe" <user@host>`  
+  
+Quando o nome de usuário é Observação entre aspas, todo o texto entre o início da cadeia de caracteres (ou por vírgula) e o endereço são consideradas parte do <xref:System.Net.Mail.MailAddress.DisplayName%2A>, incluindo comentários. Por exemplo:
+  
+`(non comment) unquoted display (non comment) name (non comment) <user@host>`
+  
+Embora o <xref:System.Net.Mail.MailAddress> classe aceita um endereço de email, como servidores de email válido, não podem aceitar o endereço de email.  
+  
+O <xref:System.Net.Mail.MailAddress> classe não tem suporte para os seguintes formatos de endereço de email:  
+  
+- Misto nomes de exibição entre aspas e sem aspas. Por exemplo, `display "name" <user@host>`.
+  
+- Grupos, conforme definido na RFC 2822 seção 3.4 publicado pela IETF.  
+  
+- Os formatos de nome de usuário obsoletos de `"user"."name"@host`, `user."name"@host` ou `"user".name@host`.
+  
+   
+  
+## Examples  
+O exemplo de código a seguir demonstra a enviar uma mensagem de email usando o <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Mail.MailAddress>, e <xref:System.Net.Mail.MailMessage> classes.  
+  
+[!code-cpp[NclMailSync#10](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#10)]
+[!code-csharp[NclMailSync#10](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#10)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailAddress (string address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddress.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.String" /> que contém um endereço de email.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.MailAddress" /> usando o endereço especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `address` parâmetro pode conter um nome de exibição e o endereço de email associado, se você colocar o endereço de colchetes angulares. Por exemplo:  
+  
+ `"Tom Smith <tsmith@contoso.com>"`  
+  
+ Espaço em branco é permitido entre o nome de exibição e os colchetes angulares.  
+  
+ A tabela a seguir mostra os valores de propriedade para um <xref:System.Net.Mail.MailAddress> objeto construído usando o endereço do exemplo anterior.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.Net.Mail.MailAddress.DisplayName%2A>|`"Tom Smith"`|  
+|<xref:System.Net.Mail.MailAddress.Host%2A>|`"contoso.com"`|  
+|<xref:System.Net.Mail.MailAddress.User%2A>|`"tsmith"`|  
+|<xref:System.Net.Mail.MailAddress.Address%2A>|`"tsmith@contoso.com"`|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa o construtor para criar um <xref:System.Net.Mail.MailAddress> de objeto para o <xref:System.Net.Mail.MailMessage.Bcc%2A> destinatário de uma mensagem de email.  
+  
+ [!code-cpp[NclMailSync#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#9)]
+ [!code-csharp[NclMailSync#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" /> é <see cref="F:System.String.Empty" /> ("").</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="address" /> não está em um formato reconhecido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailAddress (string address, string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string address, string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddress.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.String" /> que contém um endereço de email.</param>
+        <param name="displayName">Um <see cref="T:System.String" /> que contém o nome de exibição associado <c>endereço</c>. Esse parâmetro pode ser <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.MailAddress" />, usando o endereço e o nome de exibição especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Espaço em branco à esquerda e à direita no nome de exibição é preservado.  
+  
+ Se `displayName` contém caracteres não ASCII, o conjunto de caracteres iso 8859-1 é usado para o `displayName` codificação. Codificação de caracteres não ASCII é discutido em RFC 1522, que está disponível em [http://www.ietf.org](http://www.ietf.org).  
+  
+ Se `address` contém um nome de exibição e `displayName` não é `null` e não é igual a <xref:System.String?displayProperty=nameWithType>, `displayName` substitui o valor especificado em `address`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa o construtor para criar <xref:System.Net.Mail.MailAddress> instâncias para o remetente e destinatário de uma mensagem de email.  
+  
+ [!code-cpp[NclMailSync#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#9)]
+ [!code-csharp[NclMailSync#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" /> é <see cref="F:System.String.Empty" /> ("").</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="address" /> não está em um formato reconhecido.  
+  
+ -ou-  
+  
+ <paramref name="address" /> contém caracteres não ASCII.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MailAddress (string address, string displayName, System.Text.Encoding displayNameEncoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string address, string displayName, class System.Text.Encoding displayNameEncoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddress.#ctor(System.String,System.String,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("We don't do anything with displayNameEncoding")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="displayNameEncoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="address">Um <see cref="T:System.String" /> que contém um endereço de email.</param>
+        <param name="displayName">Um <see cref="T:System.String" /> que contém o nome de exibição associado <c>endereço</c>.</param>
+        <param name="displayNameEncoding">O <see cref="T:System.Text.Encoding" /> que define o conjunto de caracteres usado para <c>displayName</c>.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.Mail.MailAddress" /> usando o endereço especificado, o nome de exibição e a codificação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Espaço em branco à esquerda e à direita no nome de exibição é preservado.  
+  
+ Se `address` contém um nome de exibição e `displayName` não é `null` e não é igual a <xref:System.String?displayProperty=nameWithType>, `displayName` substitui o valor especificado em `address`.  
+  
+ O <xref:System.Net.Mail.MailAddress.%23ctor%2A> método não verifica se o `displayName` parâmetro é válido. Este método Remove não exibidas por aspas ao redor do <xref:System.Net.Mail.MailAddress.DisplayName%2A> propriedade. As aspas serão adicionadas antes da transmissão, exceto onde <xref:System.Text.Encoding.ASCII%2A> ou <xref:System.Text.Encoding.Unicode%2A> é especificado no `displayNameEncoding` parâmetro. A codificação especificada no `displayNameEncoding` parâmetro será aplicado ao <xref:System.Net.Mail.MailAddress.DisplayName%2A> propriedade antes da transmissão <xref:System.Text.Encoding.ASCII%2A> ou <xref:System.Text.Encoding.Unicode%2A> é especificado no `displayNameEncoding` parâmetro. <xref:System.Text.Encoding.UTF8%2A>é a codificação padrão se nenhum for especificado.  
+  
+ Para obter mais informações sobre formatos de endereço de email com suporte, consulte <xref:System.Net.Mail.MailAddress>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir usa o construtor para criar <xref:System.Net.Mail.MailAddress> instâncias para o remetente de uma mensagem de email.  
+  
+ [!code-cpp[NclMailASync#2](~/samples/snippets/cpp/VS_Snippets_Remoting/NclMailASync/cpp/mailasync.cpp#2)]
+ [!code-csharp[NclMailASync#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NclMailASync/CS/mailasync.cs#2)]
+ [!code-vb[NclMailASync#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NclMailASync/vb/mailasync.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="displayName" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="address" /> é <see cref="F:System.String.Empty" /> ("").  
+  
+ -ou-  
+  
+ <paramref name="displayName" /> é <see cref="F:System.String.Empty" /> ("").</exception>
+        <exception cref="T:System.FormatException">
+          <paramref name="address" /> não está em um formato reconhecido.  
+  
+ -ou-  
+  
+ <paramref name="address" /> contém caracteres não ASCII.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public string Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Address" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.MailAddress.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço de email especificado quando essa instância foi criada.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o endereço de email.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor retornado por essa propriedade não inclui o <xref:System.Net.Mail.MailAddress.DisplayName%2A> informações.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o endereço para um destinatário da mensagem de email.  
+  
+ [!code-cpp[NclMailSync#10](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#10)]
+ [!code-csharp[NclMailSync#10](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.MailAddress.DisplayName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de exibição composto do nome de exibição e das informações de endereço especificadas quando essa instância foi criada.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome de exibição; caso contrário, <see cref="F:System.String.Empty" /> ("") se nenhuma informação de nome de exibição foi especificada quando essa instância foi criada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Nomes de exibição que contêm caracteres não ASCII são retornados em formato legível. Use o <xref:System.Net.Mail.MailAddress.ToString%2A> método para obter o formato codificado do <xref:System.Net.Mail.MailAddress.DisplayName%2A>.  
+  
+ Alguns programas de software que são usados para ler a exibição de email a <xref:System.Net.Mail.MailAddress.DisplayName%2A> valor da propriedade em vez de ou além dele, o endereço de email.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo exibe o <xref:System.Net.Mail.MailAddress.DisplayName%2A> para o destinatário de uma mensagem de email.  
+  
+ [!code-cpp[NclMailSync#9](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#9)]
+ [!code-csharp[NclMailSync#9](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#9)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddress.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>Compara dois endereços de email.</summary>
+        <returns>
+          <see langword="true" />Se os endereços de dois email forem iguais; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddress.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor de hash para um endereço de email.</summary>
+        <returns>Um valor de hash inteiro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Mail.MailAddress.GetHashCode%2A> método retorna um código hash do endereço de email. Esse valor pode ser usado como uma chave em tabelas de hash.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public string Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Host" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.MailAddress.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a parte de host do endereço especificado quando esta instância foi criada.</summary>
+        <value>Uma <see cref="T:System.String" /> que contém o nome do computador host que aceita email para a propriedade <see cref="P:System.Net.Mail.MailAddress.User" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um endereço de email típico, a cadeia de caracteres de host inclui todos os procedimentos de informações de "`@`" logon. Por exemplo, em `"tsmith@contoso.com"`, o host é `"contoso.com"`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o destino de uma mensagem de email.  
+  
+ [!code-cpp[NclMailSync#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#4)]
+ [!code-csharp[NclMailSync#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Mail.MailAddress.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres dessa instância.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém o conteúdo deste <see cref="T:System.Net.Mail.MailAddress" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A cadeia de caracteres retornada por este método não é necessariamente idêntica à cadeia de caracteres especificada quando a instância foi criada. Se o <xref:System.Net.Mail.MailAddress.DisplayName%2A> propriedade não é `null` e não é igual a <xref:System.String.Empty?displayProperty=nameWithType> (""), <xref:System.Net.Mail.MailAddress.ToString%2A> retorna uma cadeia de caracteres composta usando a seguinte sintaxe:  
+  
+ <xref:System.Net.Mail.MailAddress.DisplayName%2A> \<<xref:System.Net.Mail.MailAddress.User%2A>@<xref:System.Net.Mail.MailAddress.Host%2A>>  
+  
+ Se <xref:System.Net.Mail.MailAddress.DisplayName%2A> é `null` ou é igual a <xref:System.String.Empty?displayProperty=nameWithType>, <xref:System.Net.Mail.MailAddress.ToString%2A> retorna o valor da <xref:System.Net.Mail.MailAddress.Address%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o destino de uma mensagem de email.  
+  
+ [!code-cpp[NclMailSync#7](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#7)]
+ [!code-csharp[NclMailSync#7](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public string User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string User" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Mail.MailAddress.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Mail</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as informações do usuário do endereço especificado quando essa instância foi criada.</summary>
+        <value>Um <see cref="T:System.String" /> que contém a parte do nome de usuário do <see cref="P:System.Net.Mail.MailAddress.Address" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um endereço de email típico, a cadeia de caracteres de usuário inclui todas as informações anteriores a "`@`" logon. Por exemplo, em `"tsmith@contoso.com"`, o usuário é `"tsmith"`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir exibe o destino de uma mensagem de email.  
+  
+ [!code-cpp[NclMailSync#4](~/samples/snippets/cpp/VS_Snippets_Remoting/NCLMailSync/CPP/NclMailSync.cpp#4)]
+ [!code-csharp[NclMailSync#4](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLMailSync/CS/mail.cs#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

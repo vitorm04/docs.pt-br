@@ -1,0 +1,73 @@
+<Type Name="BaseUriHelper" FullName="System.Windows.Navigation.BaseUriHelper">
+  <TypeSignature Language="C#" Value="public static class BaseUriHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed BaseUriHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Navigation.BaseUriHelper" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um método para resolver (URIs) relativo uniform resource identifiers em relação ao URI de base de um contêiner, como um <see cref="T:System.Windows.Controls.Frame" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BaseUriProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty BaseUriProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty BaseUriProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Navigation.BaseUriHelper.BaseUriProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade <see langword="BaseUri" /> anexada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaseUri">
+      <MemberSignature Language="C#" Value="public static Uri GetBaseUri (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Uri GetBaseUri(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Navigation.BaseUriHelper.GetBaseUri(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o valor da propriedade é lido.</param>
+        <summary>Obtém o valor da <see langword="BaseUri" /> para um <see cref="T:System.Windows.UIElement" />.</summary>
+        <returns>A base de [!INCLUDE[TLA2#tla_uri](~/includes/tla2sharptla-uri-md.md)] de um determinado elemento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para obter o <xref:System.Windows.Markup.IUriContext.BaseUri%2A?displayProperty=nameWithType> propriedade se ele é implementado ou <xref:System.Windows.Navigation.BaseUriHelper.BaseUri%2A> propriedade anexada se for definido em um elemento. <xref:System.Windows.Navigation.BaseUriHelper.GetBaseUri%2A>atravessam os elementos pai de `element` para procurar mais próximo <xref:System.Windows.Navigation.BaseUriHelper.BaseUri%2A> (<xref:System.Windows.Markup.IUriContext> ou a propriedade anexada).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="element" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">Para obter o valor de <see langword="BaseUri" /> propriedade anexada. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery" /></permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

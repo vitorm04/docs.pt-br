@@ -1,0 +1,83 @@
+<Type Name="IAuthorizeRemotingConnection" FullName="System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection">
+  <TypeSignature Language="C#" Value="public interface IAuthorizeRemotingConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAuthorizeRemotingConnection" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>O <see cref="T:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection" /> interface fornece métodos que indicam se um cliente está autorizado a conectar-se no canal atual, com base na identidade de usuário e endereço de rede do cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do <xref:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection> interface é passada para <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.%23ctor%28System.Collections.IDictionary%2CSystem.Runtime.Remoting.Channels.IServerChannelSinkProvider%2CSystem.Runtime.Remoting.Channels.IAuthorizeRemotingConnection%29>. Ele fornece um ponto único de autorização para todas as conexões de entrada em um <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel>. Permite a autorização do chamador antes de quaisquer mensagens de entrada são desserializadas para minimizar a ameaça de segurança de fontes não confiáveis.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsConnectingEndPointAuthorized">
+      <MemberSignature Language="C#" Value="public bool IsConnectingEndPointAuthorized (System.Net.EndPoint endPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsConnectingEndPointAuthorized(class System.Net.EndPoint endPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingEndPointAuthorized(System.Net.EndPoint)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endPoint" Type="System.Net.EndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="endPoint">O <see cref="T:System.Net.EndPoint" /> que identifica o endereço de rede do cliente.</param>
+        <summary>Obtém um valor booliano que indica se o endereço de rede do cliente está autorizado a conectar-se no canal atual.</summary>
+        <returns>
+          <see langword="true" />Se o endereço de rede do cliente estiver autorizado; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do <xref:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection> interface é passada para <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.%23ctor%28System.Collections.IDictionary%2CSystem.Runtime.Remoting.Channels.IServerChannelSinkProvider%2CSystem.Runtime.Remoting.Channels.IAuthorizeRemotingConnection%29>. Ele fornece um ponto único de autorização para todas as conexões de entrada em um <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel>. Permite a autorização do chamador antes de quaisquer mensagens de entrada são desserializadas para minimizar a ameaça de segurança de fontes não confiáveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnectingIdentityAuthorized">
+      <MemberSignature Language="C#" Value="public bool IsConnectingIdentityAuthorized (System.Security.Principal.IIdentity identity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsConnectingIdentityAuthorized(class System.Security.Principal.IIdentity identity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection.IsConnectingIdentityAuthorized(System.Security.Principal.IIdentity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Remoting</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="identity" Type="System.Security.Principal.IIdentity" />
+      </Parameters>
+      <Docs>
+        <param name="identity">O <see cref="T:System.Security.Principal.IIdentity" /> que representa a identidade do usuário do cliente.</param>
+        <summary>Obtém um valor booliano que indica se a identidade do usuário do cliente está autorizada a conectar-se no canal atual.</summary>
+        <returns>
+          <see langword="true" />Se a identidade do usuário do cliente estiver autorizada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância do <xref:System.Runtime.Remoting.Channels.IAuthorizeRemotingConnection> interface é passada para <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel.%23ctor%28System.Collections.IDictionary%2CSystem.Runtime.Remoting.Channels.IServerChannelSinkProvider%2CSystem.Runtime.Remoting.Channels.IAuthorizeRemotingConnection%29>. Ele fornece um ponto único de autorização para todas as conexões de entrada em um <xref:System.Runtime.Remoting.Channels.Tcp.TcpServerChannel>. Permite a autorização do chamador antes de quaisquer mensagens de entrada são desserializadas para minimizar a ameaça de segurança de fontes não confiáveis.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

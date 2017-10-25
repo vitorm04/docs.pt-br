@@ -1,0 +1,1626 @@
+<Type Name="StreamWriter" FullName="System.IO.StreamWriter">
+  <TypeSignature Language="C#" Value="public class StreamWriter : System.IO.TextWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit StreamWriter extends System.IO.TextWriter" />
+  <TypeSignature Language="DocId" Value="T:System.IO.StreamWriter" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IO.TextWriter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa um <see cref="T:System.IO.TextWriter" /> para gravar caracteres em um fluxo em uma codificação específica.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Para exibir o código-fonte do .NET Framework para este tipo, consulte o [fonte de referência](http://referencesource.microsoft.com/#mscorlib/system/io/streamwriter.cs#9e38cb1c84769eba). Percorra o código-fonte online, baixe a referência para exibição offline e percorrer as fontes (incluindo atualizações e patches) durante a depuração; consulte [instruções](http://referencesource.microsoft.com/).  
+  
+ <xref:System.IO.StreamWriter>foi projetada para saída de caractere em uma codificação específica, enquanto as classes derivadas de <xref:System.IO.Stream> são projetados para entrada e saída em bytes.  
+  
+> [!IMPORTANT]
+>  Este tipo implementa o <xref:System.IDisposable> interface. Quando você terminar de usar o tipo, descarte-direta ou indiretamente. Para descartar o tipo diretamente, chame seu <xref:System.IDisposable.Dispose%2A> método em um `try` / `catch` bloco. Para descartar indiretamente dele, use uma construção de linguagem, como `using` (em c#) ou `Using` (no Visual Basic). Para obter mais informações, consulte a seção "Usando um objeto que implementa IDisposable" o <xref:System.IDisposable> tópico de interface.  
+  
+ <xref:System.IO.StreamWriter>o padrão é usar uma instância da <xref:System.Text.UTF8Encoding> , a menos que especificado o contrário. Esta instância do `UTF8Encoding` é construída sem uma marca de ordem de byte (BOM), portanto seu <xref:System.Text.Encoding.GetPreamble%2A> método retorna uma matriz de bytes vazia. A codificação padrão UTF-8 para esse construtor lançará uma exceção em bytes inválidos. Esse comportamento é diferente do comportamento fornecido pelo objeto de codificação no <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> propriedade. Para especificar um BOM e determinar se uma exceção será lançada em bytes inválidos, use um construtor que aceita um objeto de codificação como um parâmetro, como <xref:System.IO.StreamWriter.%23ctor%28System.String%2CSystem.Boolean%2CSystem.Text.Encoding%29> ou <xref:System.IO.StreamWriter.%23ctor%2A>.  
+  
+ Por padrão, um <xref:System.IO.StreamWriter> não é thread-safe. Consulte <xref:System.IO.TextWriter.Synchronized%2A?displayProperty=nameWithType> para um wrapper thread-safe.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar um <xref:System.IO.StreamWriter> objeto gravar um arquivo que lista os diretórios na unidade C e, em seguida, usa um <xref:System.IO.StreamReader> objeto para ler e exibir cada nome de diretório. Uma prática recomendada é usar esses objetos em um `using` instrução para que os recursos não gerenciados são descartados corretamente. O `using` instrução chama automaticamente <xref:System.IDisposable.Dispose%2A> no objeto quando o código que ele está em uso foi concluída. Não há suporte para o construtor usado neste exemplo para uso em [!INCLUDE[win8_appstore_long](~/includes/win8-appstore-long-md.md)] aplicativos.  
+  
+ [!code-csharp[StreamReadWrite#1](~/samples/snippets/csharp/VS_Snippets_CLR/streamreadwrite/cs/program.cs#1)]
+ [!code-vb[StreamReadWrite#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/streamreadwrite/vb/module1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para gravação.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o fluxo especificado usando a codificação UTF-8 e o tamanho do buffer padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.StreamWriter> com UTF-8 codificação sem uma ordem de Byte (BOM marca), portanto seu <xref:System.Text.Encoding.GetPreamble%2A> método retorna uma matriz de bytes vazia. A codificação padrão UTF-8 para esse construtor lançará uma exceção em bytes inválidos. Esse comportamento é diferente do comportamento fornecido pelo objeto de codificação no <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> propriedade. Para especificar se uma exceção será lançada em bytes inválidos, use um construtor que aceita um objeto de codificação como um parâmetro, como <xref:System.IO.StreamWriter.%23ctor%2A>. O <xref:System.IO.StreamWriter.BaseStream%2A> propriedade é inicializada usando o `stream` parâmetro. A posição do fluxo não é redefinida.  
+  
+ O <xref:System.IO.StreamWriter> objeto chamadas <xref:System.IO.Stream.Dispose> em fornecidos <xref:System.IO.Stream> objeto quando <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> é chamado.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma configuração cultural específica e recupera os mesmos caracteres com uma configuração cultural diferente, os caracteres talvez não sejam interpretáveis e poderiam causar uma exceção a ser lançada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program1.cs#1)]
+ [!code-vb[System.IO.StreamWriter.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" /> não é gravável.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho de arquivo completo no qual gravar. <c>caminho</c> pode ser um nome de arquivo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o arquivo especificado usando o tamanho do buffer e a codificação padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.StreamWriter> com UTF-8 codificação sem uma ordem de Byte (BOM marca), portanto seu <xref:System.Text.Encoding.GetPreamble%2A> método retorna uma matriz de bytes vazia. A codificação padrão UTF-8 para esse construtor lançará uma exceção em bytes inválidos. Esse comportamento é diferente do comportamento fornecido pelo objeto de codificação no <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> propriedade. Para especificar um BOM e determinar se uma exceção será lançada em bytes inválidos, use um construtor que aceita um objeto de codificação como um parâmetro, como <xref:System.IO.StreamWriter.%23ctor%28System.String%2CSystem.Boolean%2CSystem.Text.Encoding%29>.  
+  
+ O `path` parâmetro pode ser um nome de arquivo, incluindo um arquivo em um compartilhamento de convenção de nomenclatura Universal (UNC). Se o arquivo existir, ele será substituído; Caso contrário, um novo arquivo é criado.  
+  
+ O `path` parâmetro não é necessário ser um arquivo armazenado em disco; pode ser qualquer parte de um sistema que dá suporte ao acesso usando fluxos.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma configuração cultural específica e recupera os mesmos caracteres com uma configuração cultural diferente, os caracteres talvez não sejam interpretáveis e poderiam causar uma exceção a ser lançada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program5.cs#5)]
+ [!code-vb[System.IO.StreamWriter.ctor#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program5.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso foi negado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="path" /> contém o nome de um dispositivo de sistema (com1, com2 e assim por diante).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido (por exemplo, ele está em uma unidade não mapeada).</exception>
+        <exception cref="T:System.IO.PathTooLongException">O caminho especificado, o nome de arquivo, ou ambos excedem o tamanho máximo definido pelo sistema. Por exemplo, em plataformas baseadas no Windows, os caminhos não devem exceder 248 caracteres e os nomes de arquivo não devem exceder 260 caracteres.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" /> inclui uma sintaxe incorreta ou inválida para o nome do arquivo, o nome do diretório ou a sintaxe de rótulo do volume.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler e gravar arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para gravação.</param>
+        <param name="encoding">A codificação de caracteres a ser usada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o fluxo especificado usando a codificação especificada e o tamanho do buffer padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.IO.StreamWriter.Encoding%2A> propriedade usando o parâmetro de codificação e o <xref:System.IO.StreamWriter.BaseStream%2A> propriedade usando o parâmetro de fluxo. A posição do fluxo não é redefinida. Para obter mais informações, consulte: <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ O <xref:System.IO.StreamWriter> objeto chamadas <xref:System.IO.Stream.Dispose> em fornecidos <xref:System.IO.Stream> objeto quando <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> é chamado.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma determinada configuração cultural e recuperar os mesmos caracteres com uma configuração de cultura diferente, os caracteres podem não ser pode ser interpretados e podem causar uma exceção seja lançada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program2.cs#2)]
+ [!code-vb[System.IO.StreamWriter.ctor#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ou <paramref name="encoding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" /> não é gravável.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path, bool append);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, bool append) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="append" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho de arquivo completo no qual gravar.</param>
+        <param name="append">
+          <see langword="true" /> para acrescentar dados ao arquivo; <see langword="false" /> para substituir o arquivo. Se o arquivo especificado não existir, esse parâmetro não terá efeito e o construtor criará um novo arquivo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o arquivo especificado usando o tamanho do buffer e a codificação padrão. Se o arquivo existir, ele poderá ser substituído ou dados poderão ser acrescentados a ele. Se o arquivo não existir, esse construtor criará um novo arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria um <xref:System.IO.StreamWriter> com UTF-8 codificação sem uma ordem de Byte (BOM marca), portanto seu <xref:System.Text.Encoding.GetPreamble%2A> método retorna uma matriz de bytes vazia. A codificação padrão UTF-8 para esse construtor lançará uma exceção em bytes inválidos. Esse comportamento é diferente do comportamento fornecido pelo objeto de codificação no <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType> propriedade. Para especificar um BOM e determinar se uma exceção será lançada em bytes inválidos, use um construtor que aceita um objeto de codificação como um parâmetro, como <xref:System.IO.StreamWriter.%23ctor%28System.String%2CSystem.Boolean%2CSystem.Text.Encoding%29>.  
+  
+ O `path` parâmetro pode ser um nome de arquivo, incluindo um arquivo em um compartilhamento de convenção de nomenclatura Universal (UNC).  
+  
+ O `path` parâmetro não é necessário ser um arquivo armazenado em disco; pode ser qualquer parte de um sistema que dá suporte ao acesso usando fluxos.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma determinada configuração cultural e recuperar os mesmos caracteres com uma configuração de cultura diferente, os caracteres podem não ser pode ser interpretados e podem causar uma exceção seja lançada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program6.cs#6)]
+ [!code-vb[System.IO.StreamWriter.ctor#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program6.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso foi negado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> está vazio.  
+  
+ -ou-  
+  
+ <paramref name="path" /> contém o nome de um dispositivo de sistema (com1, com2 e assim por diante).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido (por exemplo, ele está em uma unidade não mapeada).</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" /> inclui uma sintaxe incorreta ou inválida para o nome do arquivo, o nome do diretório ou a sintaxe de rótulo do volume.</exception>
+        <exception cref="T:System.IO.PathTooLongException">O caminho especificado, o nome de arquivo, ou ambos excedem o tamanho máximo definido pelo sistema. Por exemplo, em plataformas baseadas no Windows, os caminhos não devem exceder 248 caracteres e os nomes de arquivo não devem exceder 260 caracteres.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler e gravar arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Text.Encoding encoding, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para gravação.</param>
+        <param name="encoding">A codificação de caracteres a ser usada.</param>
+        <param name="bufferSize">O tamanho do buffer, em bytes.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o fluxo especificado usando o tamanho do buffer e a codificação especificados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.IO.StreamWriter.Encoding%2A> propriedade usando o `encoding` parâmetro e o <xref:System.IO.StreamWriter.BaseStream%2A> propriedade usando o `stream` parâmetro. A posição do fluxo não é redefinida. Para obter mais informações, consulte: <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ O <xref:System.IO.StreamWriter> objeto chamadas <xref:System.IO.Stream.Dispose> em fornecidos <xref:System.IO.Stream> objeto quando <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> é chamado.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma determinada configuração cultural e recuperar os mesmos caracteres com uma configuração de cultura diferente, os caracteres podem não ser pode ser interpretados e podem causar uma exceção seja lançada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program3.cs#3)]
+ [!code-vb[System.IO.StreamWriter.ctor#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program3.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ou <paramref name="encoding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" /> não é gravável.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path, bool append, System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, bool append, class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String,System.Boolean,System.Text.Encoding)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="append" Type="System.Boolean" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho de arquivo completo no qual gravar.</param>
+        <param name="append">
+          <see langword="true" /> para acrescentar dados ao arquivo; <see langword="false" /> para substituir o arquivo. Se o arquivo especificado não existir, esse parâmetro não terá efeito e o construtor criará um novo arquivo.</param>
+        <param name="encoding">A codificação de caracteres a ser usada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o arquivo especificado usando a codificação especificada e o tamanho do buffer padrão. Se o arquivo existir, ele poderá ser substituído ou dados poderão ser acrescentados a ele. Se o arquivo não existir, esse construtor criará um novo arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.IO.StreamWriter.Encoding%2A> propriedade usando o parâmetro de codificação. Para obter mais informações, consulte: <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ `path`pode ser um nome de arquivo, incluindo um arquivo em um compartilhamento de convenção de nomenclatura Universal (UNC).  
+  
+ `path`não é necessário ser um arquivo armazenado em disco. pode ser qualquer parte de um sistema que dá suporte ao acesso por meio de fluxos.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma determinada configuração cultural e recuperar os mesmos caracteres com uma configuração de cultura diferente, os caracteres podem não ser pode ser interpretados e podem causar uma exceção seja lançada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program7.cs#7)]
+ [!code-vb[System.IO.StreamWriter.ctor#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program7.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso foi negado.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> está vazio.  
+  
+ -ou-  
+  
+ <paramref name="path" /> contém o nome de um dispositivo de sistema (com1, com2 e assim por diante).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido (por exemplo, ele está em uma unidade não mapeada).</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" /> inclui uma sintaxe incorreta ou inválida para o nome do arquivo, o nome do diretório ou a sintaxe de rótulo do volume.</exception>
+        <exception cref="T:System.IO.PathTooLongException">O caminho especificado, o nome de arquivo, ou ambos excedem o tamanho máximo definido pelo sistema. Por exemplo, em plataformas baseadas no Windows, os caminhos não devem exceder 248 caracteres e os nomes de arquivo não devem exceder 260 caracteres.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler e gravar arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (System.IO.Stream stream, System.Text.Encoding encoding, int bufferSize, bool leaveOpen);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Text.Encoding encoding, int32 bufferSize, bool leaveOpen) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">O fluxo para gravação.</param>
+        <param name="encoding">A codificação de caracteres a ser usada.</param>
+        <param name="bufferSize">O tamanho do buffer, em bytes.</param>
+        <param name="leaveOpen">
+          <see langword="true" /> para deixar o fluxo aberto após o objeto <see cref="T:System.IO.StreamWriter" /> ser descartado; caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o fluxo especificado usando o tamanho do buffer e a codificação especificados e opcionalmente deixa o fluxo aberto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A menos que você defina o `leaveOpen` parâmetro `true`, o <xref:System.IO.StreamWriter> objeto chamadas <xref:System.IO.Stream.Dispose> em fornecidos <xref:System.IO.Stream> objeto quando <xref:System.IO.StreamWriter.Dispose%2A?displayProperty=nameWithType> é chamado.  
+  
+ Este construtor inicializa o <xref:System.IO.StreamWriter.Encoding%2A> propriedade usando o `encoding` parâmetro e inicializa o <xref:System.IO.StreamWriter.BaseStream%2A> propriedade usando o `stream` parâmetro. A posição do fluxo não é redefinida. Para obter informações adicionais, consulte o <xref:System.IO.TextWriter.Encoding%2A> propriedade.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma determinada configuração cultural e recuperar os mesmos caracteres com uma configuração de cultura diferente, os caracteres podem não ser pode ser interpretados e podem causar uma exceção seja lançada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#4](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program4.cs#4)]
+ [!code-vb[System.IO.StreamWriter.ctor#4](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program4.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ou <paramref name="encoding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> é negativo.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="stream" /> não é gravável.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StreamWriter (string path, bool append, System.Text.Encoding encoding, int bufferSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, bool append, class System.Text.Encoding encoding, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.#ctor(System.String,System.Boolean,System.Text.Encoding,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="append" Type="System.Boolean" />
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho de arquivo completo no qual gravar.</param>
+        <param name="append">
+          <see langword="true" /> para acrescentar dados ao arquivo; <see langword="false" /> para substituir o arquivo. Se o arquivo especificado não existir, esse parâmetro não terá efeito e o construtor criará um novo arquivo.</param>
+        <param name="encoding">A codificação de caracteres a ser usada.</param>
+        <param name="bufferSize">O tamanho do buffer, em bytes.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.StreamWriter" /> para o arquivo especificado no caminho especificado usando a codificação especificada e o tamanho do buffer. Se o arquivo existir, ele poderá ser substituído ou dados poderão ser acrescentados a ele. Se o arquivo não existir, esse construtor criará um novo arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor inicializa o <xref:System.IO.StreamWriter.Encoding%2A> propriedade usando o parâmetro de codificação. Para obter mais informações, consulte: <xref:System.IO.TextWriter.Encoding%2A>.  
+  
+ `path`pode ser um nome de arquivo, incluindo um arquivo em um compartilhamento de convenção de nomenclatura Universal (UNC).  
+  
+ `path`não é necessário ser um arquivo armazenado em disco. pode ser qualquer parte de um sistema que dá suporte ao acesso por meio de fluxos.  
+  
+> [!CAUTION]
+>  Quando você compila um conjunto de caracteres com uma determinada configuração cultural e recuperar os mesmos caracteres com uma configuração de cultura diferente, os caracteres podem não ser pode ser interpretados e podem causar uma exceção seja lançada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra esse construtor.  
+  
+ [!code-csharp[System.IO.StreamWriter.ctor#8](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.io.streamwriter.ctor/cs/program8.cs#8)]
+ [!code-vb[System.IO.StreamWriter.ctor#8](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.streamwriter.ctor/vb/program8.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="path" /> é uma cadeia de caracteres vazia ("").  
+  
+ -ou-  
+  
+ <paramref name="path" /> contém o nome de um dispositivo de sistema (com1, com2 e assim por diante).</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="path" /> ou <paramref name="encoding" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="bufferSize" /> é negativo.</exception>
+        <exception cref="T:System.IO.IOException">
+          <paramref name="path" /> inclui uma sintaxe incorreta ou inválida para o nome do arquivo, o nome do diretório ou a sintaxe de rótulo do volume.</exception>
+        <exception cref="T:System.Security.SecurityException">O chamador não tem a permissão necessária.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso foi negado.</exception>
+        <exception cref="T:System.IO.DirectoryNotFoundException">O caminho especificado é inválido (por exemplo, ele está em uma unidade não mapeada).</exception>
+        <exception cref="T:System.IO.PathTooLongException">O caminho especificado, o nome de arquivo, ou ambos excedem o tamanho máximo definido pelo sistema. Por exemplo, em plataformas baseadas no Windows, os caminhos não devem exceder 248 caracteres e os nomes de arquivo não devem exceder 260 caracteres.</exception>
+        <permission cref="T:System.Security.Permissions.FileIOPermission">para ler e gravar arquivos. Enumeração associada: <see cref="F:System.Security.Permissions.FileIOPermissionAccess.Read" />,<see cref="F:System.Security.Permissions.FileIOPermissionAccess.Write" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="public virtual bool AutoFlush { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoFlush" />
+      <MemberSignature Language="DocId" Value="P:System.IO.StreamWriter.AutoFlush" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.IO.StreamWriter" /> liberará o buffer para o fluxo subjacente após toda a chamada para <see cref="M:System.IO.StreamWriter.Write(System.Char)" />.</summary>
+        <value>
+          <see langword="true" /> para forçar o <see cref="T:System.IO.StreamWriter" /> a liberar o buffer; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.IO.StreamWriter.Flush%2A> ou <xref:System.IO.StreamWriter.Close%2A>. Configuração <xref:System.IO.StreamWriter.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer para o fluxo após cada operação de gravação, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+ Quando `AutoFlush` é definido como `false`, `StreamWriter` fará uma quantidade limitada de buffer, ambos internamente e potencialmente no codificador da codificação é passado. Você pode obter um melhor desempenho, definindo `AutoFlush` para `false`, supondo que você sempre chamar `Close` (ou pelo menos `Flush`) quando você terminar gravação com um `StreamWriter`.  
+  
+ Por exemplo, definir `AutoFlush` para `true` quando você está escrevendo para um dispositivo em que o usuário espera feedback imediato. `Console.Out`é um destes casos: O `StreamWriter` usada internamente para gravar em `Console` libera todos os seu estado interno exceto o estado de codificador após cada chamada para <xref:System.IO.StreamWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra a sintaxe para usar o `AutoFlush` propriedade.  
+  
+ [!code-cpp[System.IO.StreamWriter#5](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#5)]
+ [!code-csharp[System.IO.StreamWriter#5](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#5)]
+ [!code-vb[System.IO.StreamWriter#5](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStream">
+      <MemberSignature Language="C#" Value="public virtual System.IO.Stream BaseStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IO.Stream BaseStream" />
+      <MemberSignature Language="DocId" Value="P:System.IO.StreamWriter.BaseStream" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o fluxo subjacente que faz interface com um repositório de backup.</summary>
+        <value>O fluxo para o qual <see langword="StreamWriter" /> está gravando.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha o atual objeto <see langword="StreamWriter" /> e o fluxo subjacente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>.  
+  
+ Essa implementação de <xref:System.IO.StreamWriter.Close%2A> chama o <xref:System.IO.StreamWriter.Dispose%2A> método passando um `true` valor.  
+  
+ Você deve chamar <xref:System.IO.StreamWriter.Close%2A> para garantir que todos os dados corretamente é gravado para o fluxo subjacente. Após uma chamada para <xref:System.IO.StreamWriter.Close%2A>, operações de <xref:System.IO.StreamWriter> pode gerar exceções. Se houver espaço suficiente no disco, chamando <xref:System.IO.StreamWriter.Close%2A> gerará uma exceção.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente <xref:System.IO.StreamWriter.Flush%2A> ou <xref:System.IO.StreamWriter.Close%2A>. Configuração <xref:System.IO.StreamWriter.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer no fluxo, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o `Close` método.  
+  
+ [!code-cpp[System.IO.StreamWriter#17](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#17)]
+ [!code-csharp[System.IO.StreamWriter#17](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#17)]
+ [!code-vb[System.IO.StreamWriter#17](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#17)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.EncoderFallbackException">A codificação atual não dá suporte à exibição de metade de um par alternativo Unicode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.IO.StreamWriter" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.IO.StreamWriter> referências. Este método invoca o método `Dispose` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Text.EncoderFallbackException">A codificação atual não dá suporte à exibição de metade de um par alternativo Unicode.</exception>
+        <block subset="none" type="overrides">
+          <para>
+            <see langword="Dispose" /> pode ser chamado várias vezes por outros objetos. Ao substituir <see langword="Dispose" />, tenha cuidado em não para referenciar objetos que foi descartados anteriormente em uma chamada anterior para <see langword="Dispose" />.  
+  
+ Este método chama o método dispose da classe base, <see cref="M:System.IO.TextWriter.Dispose(System.Boolean)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Encoding">
+      <MemberSignature Language="C#" Value="public override System.Text.Encoding Encoding { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Text.Encoding Encoding" />
+      <MemberSignature Language="DocId" Value="P:System.IO.StreamWriter.Encoding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Text.Encoding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Text.Encoding" /> no qual a saída é gravada.</summary>
+        <value>O <see cref="T:System.Text.Encoding" /> especificado no construtor para a instância atual ou <see cref="T:System.Text.UTF8Encoding" /> se uma codificação não foi especificada.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é necessária para alguns cenários XML em que um cabeçalho deve ser escrito que contém a codificação usada pelo <xref:System.IO.StreamWriter>. Isso permite que o código XML consumir um arbitrário <xref:System.IO.StreamWriter> e gerar o cabeçalho XML correto.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir recupera a codificação especificada <xref:System.IO.StreamWriter> instância.  
+  
+ [!code-cpp[System.IO.StreamWriter#11](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#11)]
+ [!code-csharp[System.IO.StreamWriter#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#11)]
+ [!code-vb[System.IO.StreamWriter#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Flush" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os buffers para o gravador atual e faz com que todos os dados armazenados em buffer sejam gravados no fluxo subjacente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.TextWriter.Flush%2A?displayProperty=nameWithType>.  
+  
+ Liberando o fluxo não liberar seu codificador subjacente, a menos que você chamar explicitamente `Flush` ou <xref:System.IO.StreamWriter.Close%2A>. Configuração <xref:System.IO.StreamWriter.AutoFlush%2A> para `true` significa que os dados serão liberados do buffer para o fluxo após cada operação de gravação, mas o estado de codificador não será liberado. Isso permite que o codificador deve manter o estado (parcial caracteres) para que ele pode codificar o próximo bloco de caracteres corretamente. Este cenário afeta UTF8 e UTF7 onde determinados caracteres podem ser codificados somente depois que o codificador recebe adjacentes ou mais caracteres.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador atual está fechado.</exception>
+        <exception cref="T:System.IO.IOException">Ocorreu um erro de E/S.</exception>
+        <exception cref="T:System.Text.EncoderFallbackException">A codificação atual não dá suporte à exibição de metade de um par alternativo Unicode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FlushAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task FlushAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task FlushAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.FlushAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os buffers de forma assíncrona para esse fluxo e faz com que os dados armazenados em buffer sejam gravados no dispositivo subjacente.</summary>
+        <returns>Uma tarefa que representa a operação de liberação assíncrona.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O fluxo foi descartado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Null">
+      <MemberSignature Language="C#" Value="public static readonly System.IO.StreamWriter Null;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.IO.StreamWriter Null" />
+      <MemberSignature Language="DocId" Value="F:System.IO.StreamWriter.Null" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.StreamWriter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fornece um <see langword="StreamWriter" /> sem nenhum repositório de backup que pode ser gravado, mas não lido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use `Null` para redirecionar a saída para um `StreamWriter` que não consumirá quaisquer recursos do sistema operacional.  
+  
+ Quando o `StreamWriter.Write` métodos são chamados em `Null`, simplesmente retorna a chamada, e não é realmente gravar dados a qualquer armazenamento de backup.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra um uso de `Null` campo.  
+  
+ [!code-cpp[System.IO.StreamWriter#6](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamWriter/CPP/logger.cpp#6)]
+ [!code-csharp[System.IO.StreamWriter#6](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/logger.cs#6)]
+ [!code-vb[System.IO.StreamWriter#6](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/logger.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser gravado no fluxo.</param>
+        <summary>Grava um caractere no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ O caractere especificado é gravado para o fluxo subjacente, a menos que o final do fluxo for atingido prematuramente. Se <xref:System.IO.StreamWriter.AutoFlush%2A> é `true`, <xref:System.IO.StreamWriter.Flush%2A> é invocado automaticamente.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer <see cref="T:System.IO.StreamWriter" /> está cheio e o gravador atual está fechado.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer de <see cref="T:System.IO.StreamWriter" /> está cheio e o conteúdo do buffer não pode ser gravado no fluxo subjacente de tamanho fixo, porque o <see cref="T:System.IO.StreamWriter" /> está no final do fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char[] buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char[] buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.Char[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">Uma matriz de caracteres que contém os dados a serem gravados. Se <c>buffer</c> é <see langword="null" />, nada será gravado.</param>
+        <summary>Grava uma matriz de caracteres no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Os caracteres especificados são gravados no fluxo subjacente, a menos que o final do fluxo for atingido prematuramente. Se <xref:System.IO.StreamWriter.AutoFlush%2A> é `true`, <xref:System.IO.StreamWriter.Flush%2A> é invocado automaticamente.  
+  
+ Esse método pode fornecer desempenho mais rápido `Write` (`char[],``int,``int`) porque ela tem menos argumentos para verificar.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer <see cref="T:System.IO.StreamWriter" /> está cheio e o gravador atual está fechado.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer de <see cref="T:System.IO.StreamWriter" /> está cheio e o conteúdo do buffer não pode ser gravado no fluxo subjacente de tamanho fixo, porque o <see cref="T:System.IO.StreamWriter" /> está no final do fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser gravada no fluxo. Se <c>valor</c> é nulo, nada será gravado.</param>
+        <summary>Grava uma cadeia de caracteres no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Especificado <xref:System.String> é gravado para o fluxo subjacente, a menos que o final do fluxo for atingido prematuramente.  
+  
+ <xref:System.IO.StreamWriter.Flush%2A>é invocado automaticamente se <xref:System.IO.StreamWriter.AutoFlush%2A> é `true`. Se `value` é `null`, nenhuma entrada é gravada.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer <see cref="T:System.IO.StreamWriter" /> está cheio e o gravador atual está fechado.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer de <see cref="T:System.IO.StreamWriter" /> está cheio e o conteúdo do buffer não pode ser gravado no fluxo subjacente de tamanho fixo, porque o <see cref="T:System.IO.StreamWriter" /> está no final do fluxo.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.Write(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres que contém os dados a serem gravados.</param>
+        <param name="index">A posição do caractere no buffer no qual iniciar a leitura de dados.</param>
+        <param name="count">O número máximo de caracteres a serem gravados.</param>
+        <summary>Grava uma submatriz de caracteres no fluxo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.IO.TextWriter.Write%2A?displayProperty=nameWithType>.  
+  
+ Os caracteres são lidas do `buffer` começando no `index` e continuando pela `index` + (`count` - 1). Todos os caracteres são gravados no fluxo subjacente, a menos que o final do fluxo subjacente é atingido prematuramente. <xref:System.IO.StreamWriter.Flush%2A>é invocado automaticamente se <xref:System.IO.StreamWriter.AutoFlush%2A> é `true`.  
+  
+ Para obter uma lista de tarefas comuns de e/s, consulte [tarefas comuns de e/s](~/docs/standard/io/common-i-o-tasks.md).  
+  
+   
+  
+## Examples  
+ Este exemplo grava oito caracteres de uma matriz de elementos de 13 em um arquivo, começando no terceiro elemento da matriz.  
+  
+ [!code-cpp[Classic StreamWriter.Write2 Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic StreamWriter.Write2 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic StreamWriter.Write2 Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic StreamWriter.Write2 Example/CS/source.cs#1)]
+ [!code-vb[Classic StreamWriter.Write2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic StreamWriter.Write2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O tamanho do buffer menos <paramref name="index" /> é menor que <paramref name="count" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.IO.IOException">Ocorre um erro de E/S.</exception>
+        <exception cref="T:System.ObjectDisposedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer <see cref="T:System.IO.StreamWriter" /> está cheio e o gravador atual está fechado.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <see cref="P:System.IO.StreamWriter.AutoFlush" /> é verdadeiro ou o buffer de <see cref="T:System.IO.StreamWriter" /> está cheio e o conteúdo do buffer não pode ser gravado no fluxo subjacente de tamanho fixo, porque o <see cref="T:System.IO.StreamWriter" /> está no final do fluxo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteAsync(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser gravado no fluxo.</param>
+        <summary>Grava um caractere no fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como gravar um caractere único (a letra "a") para um arquivo de texto usando o <xref:System.IO.StreamWriter.WriteAsync%28System.Char%29> método.  
+  
+ [!code-csharp[System.IO.StreamWriter#20](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example20.cs#20)]
+ [!code-vb[System.IO.StreamWriter#20](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example20.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de fluxo é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de fluxo está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser gravada no fluxo. Se <c>valor</c> é <see langword="null" />, nada será gravado.</param>
+        <summary>Grava uma cadeia de caracteres no fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como gravar uma cadeia de caracteres em um arquivo de texto usando o <xref:System.IO.StreamWriter.WriteAsync%28System.String%29> método.  
+  
+ [!code-csharp[System.IO.StreamWriter#21](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example21.cs#21)]
+ [!code-vb[System.IO.StreamWriter#21](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example21.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de fluxo é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de fluxo está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caracteres que contém os dados a serem gravados.</param>
+        <param name="index">A posição do caractere no buffer no qual iniciar a leitura de dados.</param>
+        <param name="count">O número máximo de caracteres a serem gravados.</param>
+        <summary>Grava uma submatriz de caracteres para o fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como gravar vários caracteres em um arquivo de texto usando o <xref:System.IO.StreamWriter.WriteAsync%28System.Char%5B%5D%2CSystem.Int32%2CSystem.Int32%29> método.  
+  
+ [!code-csharp[System.IO.StreamWriter#24](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example24.cs#24)]
+ [!code-vb[System.IO.StreamWriter#24](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example24.vb#24)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="index" /> mais <paramref name="count" /> é maior que o comprimento do buffer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O gravador de fluxo é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de fluxo está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava um terminador de linha no fluxo de forma assíncrona.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de fluxo é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de fluxo está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">O caractere a ser gravado no fluxo.</param>
+        <summary>Grava um caractere seguido por um terminador de linha assíncrona no fluxo.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como gravar um caractere único (a letra "a") para uma linha em um arquivo de texto, seguido de outra linha que contém um caractere único (a letra "b"), usando o <xref:System.IO.StreamWriter.WriteLineAsync%28System.Char%29> método.  
+  
+ [!code-csharp[System.IO.StreamWriter#22](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example22.cs#22)]
+ [!code-vb[System.IO.StreamWriter#22](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example22.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de fluxo é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de fluxo está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A cadeia de caracteres a ser gravada. Se o valor for <see langword="null" />, somente um terminador de linha será gravado.</param>
+        <summary>Grava uma cadeia de caracteres seguida por um terminador de linha, de forma assíncrona, no fluxo.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como gravar duas linhas que consistem em valores de cadeia de caracteres para um arquivo de texto usando o <xref:System.IO.StreamWriter.WriteLineAsync%28System.String%29> método.  
+  
+ [!code-csharp[System.IO.StreamWriter#23](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example23.cs#23)]
+ [!code-vb[System.IO.StreamWriter#23](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example23.vb#23)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">O gravador de fluxo é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de fluxo está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLineAsync">
+      <MemberSignature Language="C#" Value="public override System.Threading.Tasks.Task WriteLineAsync (char[] buffer, int index, int count);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Threading.Tasks.Task WriteLineAsync(char[] buffer, int32 index, int32 count) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.StreamWriter.WriteLineAsync(System.Char[],System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Char[]" />
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">A matriz de caractere para gravar dados.</param>
+        <param name="index">A posição do caractere no buffer no qual iniciar a leitura de dados.</param>
+        <param name="count">O número máximo de caracteres a serem gravados.</param>
+        <summary>Grava uma submatriz seguido por um terminador de linha assincronamente para o fluxo de caracteres.</summary>
+        <returns>Uma tarefa que representa a operação de gravação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O terminador de linha é definido pelo <xref:System.IO.TextWriter.NewLine%2A?displayProperty=nameWithType> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como escrever caracteres em duas linhas separadas em um arquivo de texto usando o <xref:System.IO.StreamWriter.WriteLineAsync%28System.Char%5B%5D%2CSystem.Int32%2CSystem.Int32%29> método. A primeira linha contém os primeiro 11 caracteres de cadeia de caracteres (as letras "Primeira linha" seguida por um espaço). A segunda linha contém os caracteres restantes da cadeia de caracteres (as letras "e a segunda linha").  
+  
+ [!code-csharp[System.IO.StreamWriter#25](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamWriter/CS/example25.cs#25)]
+ [!code-vb[System.IO.StreamWriter#25](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamWriter/VB/example25.vb#25)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="buffer" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="index" /> mais <paramref name="count" /> é maior que o comprimento do buffer.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> ou <paramref name="count" /> é negativo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O gravador de fluxo é descartado.</exception>
+        <exception cref="T:System.InvalidOperationException">O gravador de fluxo está sendo usado no momento por uma operação de gravação anterior.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,42 @@
+<Type Name="CanExecuteRoutedEventHandler" FullName="System.Windows.Input.CanExecuteRoutedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void CanExecuteRoutedEventHandler(object sender, CanExecuteRoutedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CanExecuteRoutedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.CanExecuteRoutedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.CanExecuteRoutedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O destino do comando que invoca o manipulador.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Windows.Input.CommandBinding.CanExecute" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.CanExecuteRoutedEventHandler> determina se o comando associado a origem do evento é capaz de executar o destino de comando. Se o comando tem uma fonte de comando que especifica um destino, as informações de destino podem ser obtidas por meio de `sender`. Se o <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> não estiver definido, o elemento com o foco do teclado é o destino e também pode ser obtido por meio de `sender`.  Se for determinado que o comando pode ser executado no destino, o <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A?displayProperty=nameWithType> propriedade deve ser definida como `true`; caso contrário, defina-a como `false`.  
+  
+ Você não precisa confiar nos dados do evento para determinar o comando, origem e destino. Você pode limitar o uso do manipulador para invocações de comando possíveis conhecido, embora isso seja mais difícil fazer se a sua estrutura de comando utiliza extensivamente o roteamento de comando para executar o mesmo comando sucessivas destinos possíveis em uma rota de evento.  
+  
+   
+  
+## Examples  
+ A exemplo a seguir mostra um <xref:System.Windows.Input.CanExecuteRoutedEventHandler> que define <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> para `true`.  
+  
+ [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
+ [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

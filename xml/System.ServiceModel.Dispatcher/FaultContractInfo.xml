@@ -1,0 +1,109 @@
+<Type Name="FaultContractInfo" FullName="System.ServiceModel.Dispatcher.FaultContractInfo">
+  <TypeSignature Language="C#" Value="public class FaultContractInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FaultContractInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Dispatcher.FaultContractInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações sobre uma falha SOAP que é especificada em um <see cref="T:System.ServiceModel.FaultContractAttribute" /> atributo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode obter uma coleção de <xref:System.ServiceModel.Dispatcher.FaultContractInfo> objetos acessando o <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A?displayProperty=nameWithType> e <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A?displayProperty=nameWithType> propriedades. O <xref:System.ServiceModel.Dispatcher.FaultContractInfo> classe expõe a ação de falha SOAP e o tipo de detalhe é serializado em falha de SOAP.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FaultContractInfo (string action, Type detail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string action, class System.Type detail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Dispatcher.FaultContractInfo.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="action" Type="System.String" />
+        <Parameter Name="detail" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="action">A ação de falha SOAP.</param>
+        <param name="detail">O tipo de detalhe é serializado como os detalhes de falhas SOAP.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Dispatcher.FaultContractInfo" /> classe que usa o tipo de ação e detalhes especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um novo FaultContractInfo do `action` e `detail`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public string Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Action" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.FaultContractInfo.Action" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de ação de falha SOAP.</summary>
+        <value>O valor de ação de falha SOAP.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Detail">
+      <MemberSignature Language="C#" Value="public Type Detail { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Detail" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Dispatcher.FaultContractInfo.Detail" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O tipo do objeto é serializado como os detalhes de falhas SOAP.</summary>
+        <value>O <see cref="T:System.Type" /> que representa o detalhe de falhas SOAP serializado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

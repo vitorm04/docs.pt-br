@@ -1,0 +1,79 @@
+<Type Name="IApplicationPreloadUtil" FullName="System.Web.Hosting.IApplicationPreloadUtil">
+  <TypeSignature Language="C#" Value="public interface IApplicationPreloadUtil" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationPreloadUtil" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Hosting.IApplicationPreloadUtil" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("940D8ADD-9E40-4475-9A67-2CDCDF57995C")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos que o ASP.NET usa para se comunicar com o IIS 7.0, enquanto o servidor pré-carrega um aplicativo.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetApplicationPreloadInfo">
+      <MemberSignature Language="C#" Value="public void GetApplicationPreloadInfo (string context, out bool enabled, out string startupObjType, out string[] parametersForStartupObj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetApplicationPreloadInfo([in]string context, [out] bool&amp; enabled, [out] string&amp; startupObjType, [out] string[]&amp; parametersForStartupObj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationPreloadUtil.GetApplicationPreloadInfo(System.String,System.Boolean@,System.String@,System.String[]@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.String" />
+        <Parameter Name="enabled" Type="System.Boolean&amp;" RefType="out" />
+        <Parameter Name="startupObjType" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="parametersForStartupObj" Type="System.String[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto do aplicativo.</param>
+        <param name="enabled">Quando este método retorna, contém <see langword="true" /> para indicar que o aplicativo precisa ser pré-carregada; caso contrário, <see langword="false" />. Este parâmetro é passado não inicializado.</param>
+        <param name="startupObjType">Quando este método retorna, contém uma cadeia de caracteres que identifica o tipo gerenciado que faz parte do processo de pré-carregamento. Este parâmetro é passado não inicializado.</param>
+        <param name="parametersForStartupObj">Quando este método retorna, contém os dados que serão passados para o tipo pré-carregados. Este parâmetro é passado não inicializado.</param>
+        <summary>Obtém os dados de inicialização necessárias para pré-carregar um aplicativo. Este método é chamado pelo ASP.NET.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ReportApplicationPreloadFailure">
+      <MemberSignature Language="C#" Value="public void ReportApplicationPreloadFailure (string context, int errorCode, string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportApplicationPreloadFailure([in]string context, [in]int32 errorCode, [in]string errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Hosting.IApplicationPreloadUtil.ReportApplicationPreloadFailure(System.String,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="errorMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">O contexto do aplicativo.</param>
+        <param name="errorCode">O código de erro numérico.</param>
+        <param name="errorMessage">O texto de erro.</param>
+        <summary>Relatórios que ocorreu um erro no [!INCLUDE[iisver](~/includes/iisver-md.md)] enquanto o servidor foi pré-carregamento do aplicativo ASP.NET.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

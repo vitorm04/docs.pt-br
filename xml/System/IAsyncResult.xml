@@ -1,0 +1,297 @@
+<Type Name="IAsyncResult" FullName="System.IAsyncResult">
+  <TypeSignature Language="C#" Value="public interface IAsyncResult" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAsyncResult" />
+  <TypeSignature Language="DocId" Value="T:System.IAsyncResult" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa o status de uma operação assíncrona.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IAsyncResult> interface é implementada por classes que contém métodos que podem operar de forma assíncrona. É o tipo de retorno dos métodos que iniciam uma operação assíncrona, como <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>, e ele é passado para métodos que concluir uma operação assíncrona, como <xref:System.IO.FileStream.EndRead%2A?displayProperty=nameWithType>. <xref:System.IAsyncResult>objetos também são passados para os métodos invocados por <xref:System.AsyncCallback> delega quando uma operação assíncrona é concluída.  
+  
+ Um objeto que oferece suporte a <xref:System.IAsyncResult> interface armazena informações de estado para uma operação assíncrona e fornece um objeto de sincronização para permitir que os threads para ser avisado quando a operação for concluída.  
+  
+> [!NOTE]
+>  O <xref:System.Runtime.Remoting.Messaging.AsyncResult> classe é a implementação de <xref:System.IAsyncResult> que é retornado pelo `BeginInvoke` método quando você usar um delegado para chamar um método de forma assíncrona.  
+  
+ Para obter uma descrição detalhada de como o <xref:System.IAsyncResult> interface é usada, consulte o [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) tópico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncWaitHandle%2A> propriedade para obter um <xref:System.Threading.WaitHandle>e como aguardar uma chamada assíncrona em um representante. O <xref:System.Threading.WaitHandle> é sinalizado quando a chamada assíncrona é concluída, e você pode esperar para que ele ao chamar o <xref:System.Threading.WaitHandle.WaitOne%2A> método.  
+  
+ O exemplo consiste em duas classes: a classe que contém o método que é chamado de forma assíncrona e a classe que contém o método `Main` que faz a chamada.  
+  
+ Para obter mais informações e mais exemplos de como chamar métodos de forma assíncrona usando delegados, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+ [!code-cpp[AsyncDelegateExamples#1](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/TestMethod.cpp#1)]
+ [!code-csharp[AsyncDelegateExamples#1](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/TestMethod.cs#1)]
+ [!code-vb[AsyncDelegateExamples#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]  
+[!code-cpp[AsyncDelegateExamples#3](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
+[!code-csharp[AsyncDelegateExamples#3](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
+[!code-vb[AsyncDelegateExamples#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/WaitHandle.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsyncState">
+      <MemberSignature Language="C#" Value="public object AsyncState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AsyncState" />
+      <MemberSignature Language="DocId" Value="P:System.IAsyncResult.AsyncState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto definido pelo usuário que qualifica ou contém informações sobre uma operação assíncrona.</summary>
+        <value>Um objeto definido pelo usuário que qualifica ou contém informações sobre uma operação assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade retorna o objeto que é o último parâmetro do método que inicia uma operação assíncrona.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncState%2A> propriedade é usada para passar informações para um método de retorno de chamada. O último parâmetro do `BeginInvoke` chamada de método é uma cadeia de caracteres de formato, que usa o método de retorno de chamada para formatar uma mensagem de saída.  
+  
+ O exemplo consiste em duas classes: a classe que contém o método que é chamado de forma assíncrona e a classe que contém o método `Main` que faz a chamada.  
+  
+ Para obter mais informações sobre como funciona a este exemplo de retorno de chamada e mais exemplos de como chamar métodos de forma assíncrona usando delegados, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+ [!code-cpp[AsyncDelegateExamples#1](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/TestMethod.cpp#1)]
+ [!code-csharp[AsyncDelegateExamples#1](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/TestMethod.cs#1)]
+ [!code-vb[AsyncDelegateExamples#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]  
+[!code-cpp[AsyncDelegateExamples#5](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
+[!code-csharp[AsyncDelegateExamples#5](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
+[!code-vb[AsyncDelegateExamples#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Implemente essa propriedade para permitir que o chamador de uma operação assíncrona obter um objeto definido pelo aplicativo especificado no início da operação.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Esse objeto pode ser usado para transmitir informações de estado para a operação assíncrona para um <see cref="T:System.AsyncCallback" /> que você fornecer.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="AsyncWaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle AsyncWaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle AsyncWaitHandle" />
+      <MemberSignature Language="DocId" Value="P:System.IAsyncResult.AsyncWaitHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Threading.WaitHandle" /> que é usado para aguardar a conclusão de uma operação assíncrona.</summary>
+        <value>Um <see cref="T:System.Threading.WaitHandle" /> que é usado para aguardar a conclusão de uma operação assíncrona.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno permite que o cliente aguardar uma operação assíncrona concluir em vez de sondagem <xref:System.IAsyncResult.IsCompleted%2A> até que a operação é concluída. O valor de retorno pode ser usado para executar um <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, ou <xref:System.Threading.WaitHandle.WaitAll%2A> operação.  
+  
+ O common language runtime fornece um número de objetos de espera, como <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>, e <xref:System.Threading.Mutex>, que espelha os primitivos de sincronização do Win32.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como usar o <xref:System.IAsyncResult.AsyncWaitHandle%2A> propriedade para obter um <xref:System.Threading.WaitHandle>e como aguardar uma chamada assíncrona em um representante. O <xref:System.Threading.WaitHandle> é sinalizado quando a chamada assíncrona é concluída, e você pode esperar para que ele ao chamar o <xref:System.Threading.WaitHandle.WaitOne%2A> método.  
+  
+ O exemplo consiste em duas classes: a classe que contém o método que é chamado de forma assíncrona e a classe que contém o método `Main` que faz a chamada.  
+  
+ Para obter mais informações e mais exemplos de como chamar métodos de forma assíncrona usando delegados, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+ [!code-cpp[AsyncDelegateExamples#1](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/TestMethod.cpp#1)]
+ [!code-csharp[AsyncDelegateExamples#1](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/TestMethod.cs#1)]
+ [!code-vb[AsyncDelegateExamples#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]  
+[!code-cpp[AsyncDelegateExamples#3](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
+[!code-csharp[AsyncDelegateExamples#3](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
+[!code-vb[AsyncDelegateExamples#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/WaitHandle.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O objeto que implementa <see cref="T:System.IAsyncResult" /> não precisa criar o <see cref="T:System.Threading.WaitHandle" /> até que o <see cref="P:System.IAsyncResult.AsyncWaitHandle" /> propriedade é lido. É a opção do <see cref="T:System.IAsyncResult" /> implementador. No entanto, se o implementador cria <see cref="P:System.IAsyncResult.AsyncWaitHandle" />, é responsabilidade do implementador para sinalizar o <see cref="T:System.Threading.WaitHandle" /> que terminará a espera no momento apropriado. Por exemplo, <see cref="T:System.Runtime.Remoting.Messaging.AsyncResult" /> encerra o tempo de espera em nome do chamador quando retorna um método invocado de forma assíncrona. Depois de criado, <see cref="P:System.IAsyncResult.AsyncWaitHandle" /> deve ser mantida ativa até que o usuário chama o método que conclui a operação assíncrona. AT que o objeto atrás <see cref="P:System.IAsyncResult.AsyncWaitHandle" /> podem ser descartadas.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Os clientes que esperar para que a operação ser concluída (em vez de sondagem) usam essa propriedade para obter um objeto de sincronização para aguardar.  
+  
+ <block subset="none" type="note"><para>  
+ Quando você usa o <see langword="BeginInvoke" /> método de um delegado para chamar um método de maneira assíncrona e obter um identificador de espera do resultante <see cref="T:System.IAsyncResult" />, recomendamos que você feche o identificador de espera assim que tiver terminado de usá-lo, chamando o <see cref="M:System.Threading.WaitHandle.Close" /> método. Se você simplesmente liberar todas as referências para o identificador de espera, recursos de sistema são liberados quando a coleta de lixo recupera o identificador de espera, mas a coleta de lixo funciona com mais eficiência quando objetos descartáveis explicitamente estão fechados ou descartados. Para obter mais informações, consulte a propriedade <see cref="P:System.Runtime.Remoting.Messaging.AsyncResult.AsyncWaitHandle" />.  
+  
+</para></block></para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="CompletedSynchronously">
+      <MemberSignature Language="C#" Value="public bool CompletedSynchronously { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CompletedSynchronously" />
+      <MemberSignature Language="DocId" Value="P:System.IAsyncResult.CompletedSynchronously" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a operação assíncrona foi concluída de forma síncrona.</summary>
+        <value>
+          <see langword="true" /> se a operação assíncrona é concluída de forma síncrona; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a conclusão síncrona da chamada for detectada no <xref:System.AsyncCallback> representante, é provável que o thread que iniciou a operação assíncrona é o thread atual.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>A maioria dos implementadores do <see cref="T:System.IAsyncResult" /> interface não usará essa propriedade e deve retornar <see langword="false" />. Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], uma tarefa que é criada com o <see cref="M:System.Threading.Tasks.TaskFactory.FromAsync(System.IAsyncResult,System.Action{System.IAsyncResult},System.Threading.Tasks.TaskCreationOptions)" /> método não será concluída se essa propriedade não está implementada corretamente. Consulte [compatibilidade de aplicativos no 4.5](~/docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md).</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Use essa propriedade para determinar se a operação assíncrona concluída de forma síncrona. Por exemplo, essa propriedade pode retornar <see langword="true" /> para uma operação de e/s assíncrona se a solicitação de e/s era pequena.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCompleted">
+      <MemberSignature Language="C#" Value="public bool IsCompleted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCompleted" />
+      <MemberSignature Language="DocId" Value="P:System.IAsyncResult.IsCompleted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a operação assíncrona foi concluída.</summary>
+        <value>
+          <see langword="true" /> se a operação for concluída; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade for `true`, você pode considerar que é seguro descartar os recursos que você alocar para uso pela operação assíncrona.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.IAsyncResult.IsCompleted%2A> propriedade o <xref:System.IAsyncResult> para descobrir quando uma chamada assíncrona é concluída. Nesse caso, a chamada assíncrona é feita usando o `BeginInvoke` método de um representante. Você pode usar o <xref:System.IAsyncResult.IsCompleted%2A> propriedade de sondagem para conclusão ao fazer a chamada assíncrona de um thread que a interface do usuário de serviços. Sondagem para conclusão permite que o thread de chamada continuar a executar quando a chamada assíncrona é executado em um <xref:System.Threading.ThreadPool> thread.  
+  
+ O exemplo consiste em duas classes: a classe que contém o método que é chamado de forma assíncrona e a classe que contém o método `Main` que faz a chamada.  
+  
+ Para obter mais informações e mais exemplos de como chamar métodos de forma assíncrona usando delegados, consulte [chamando métodos síncronos assincronamente](~/docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+  
+ [!code-cpp[AsyncDelegateExamples#1](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/TestMethod.cpp#1)]
+ [!code-csharp[AsyncDelegateExamples#1](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/TestMethod.cs#1)]
+ [!code-vb[AsyncDelegateExamples#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]  
+[!code-cpp[AsyncDelegateExamples#4](~/samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/polling.cpp#4)]
+[!code-csharp[AsyncDelegateExamples#4](~/samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/polling.cs#4)]
+[!code-vb[AsyncDelegateExamples#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/polling.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Os implementadores normalmente retornará o valor de um campo particular ou internos de teste como o valor dessa propriedade.</para>
+        </block>
+        <block subset="none" type="usage">
+          <para>Clientes que sondam o status da operação (em vez de aguardar um objeto de sincronização) usar essa propriedade para determinar o status da operação.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

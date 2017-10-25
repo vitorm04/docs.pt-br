@@ -1,0 +1,337 @@
+<Type Name="Baml2006Reader" FullName="System.Windows.Baml2006.Baml2006Reader">
+  <TypeSignature Language="C#" Value="public class Baml2006Reader : System.Xaml.XamlReader, System.Xaml.IXamlLineInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Baml2006Reader extends System.Xaml.XamlReader implements class System.Xaml.IXamlLineInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Baml2006.Baml2006Reader" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Xaml.XamlReader</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xaml.IXamlLineInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Processa o XAML na forma BAML otimizada e produz um fluxo de nós XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Formulário BAML é uma forma otimizada de XAML usado pela implementação de WPF XAML. Ela é otimizada no sentido de que ele usa tokens e pesquisas internas para tipos de uso geral ou membros. A otimização é útil como um detalhe de implementação que tratam de tempo de tamanho e a carga de empacotamento para cenários de aplicativo do WPF que envolvem XAML. O <xref:System.Windows.Baml2006.Baml2006Reader> classe leitor constitui grande parte da superfície de API pública que tem um desenvolvedor de aplicativos do WPF para interagir com BAML.  
+  
+ O XAML otimizado para o formulário BAML pode precisar ser localizado. Localização de XAML e caminhos possíveis de ferramentas para fazer isso não é discutida neste tópico. Consulte [globalização para WPF](~/docs/framework/wpf/advanced/globalization-for-wpf.md).  
+  
+ <xref:System.Windows.Baml2006.Baml2006Reader>usa um contexto de esquema XAML implementado internamente. Neste contexto de esquema fornece a lógica necessária para pesquisar os tipos no formulário BAML, incluindo referenciando a otimizações e tokens inerentes BAML.  
+  
+ O cenário principal para <xref:System.Windows.Baml2006.Baml2006Reader> é usá-lo como o <xref:System.Xaml.XamlReader> implementação que você passar para uma chamada para <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Baml2006Reader (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Baml2006.Baml2006Reader.#ctor(System.IO.Stream)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Fluxo de entrada de fonte de BAML.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Baml2006.Baml2006Reader" /> classe com base em um fluxo de entrada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Baml2006Reader (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Baml2006.Baml2006Reader.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">Cadeia de caracteres que declara um caminho de arquivo para o arquivo que contém BAML ler.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Baml2006.Baml2006Reader" /> classe, com base no nome do arquivo de um arquivo local para ler.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="fileName" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Baml2006Reader (System.IO.Stream stream, System.Xaml.XamlReaderSettings xamlReaderSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class System.Xaml.XamlReaderSettings xamlReaderSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Baml2006.Baml2006Reader.#ctor(System.IO.Stream,System.Xaml.XamlReaderSettings)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="xamlReaderSettings" Type="System.Xaml.XamlReaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Fluxo de entrada de fonte de BAML.</param>
+        <param name="xamlReaderSettings">Configurações do leitor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Baml2006.Baml2006Reader" /> classe com base em uma entrada configurações de fluxo e um leitor.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Baml2006.Baml2006Reader>usa uma substituição da classe de configurações internas. No entanto você pode passar as informações que é permitido pelo <xref:System.Xaml.XamlReaderSettings> classe base e suas configurações passadas internamente são atualizados para ou mesclados para as configurações internas. Passando `null` para `xamlReaderSettings` desta assinatura gera uma exceção. Se você não tiver nenhuma configuração especial para o relatório, use o <xref:System.Windows.Baml2006.Baml2006Reader.%23ctor%28System.IO.Stream%29> assinatura.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stream" /> ou <paramref name="xamlReaderSettings" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Baml2006.Baml2006Reader.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" />para liberar os recursos gerenciados; Caso contrário, <see langword="false" />.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Baml2006.Baml2006Reader" /> e opcionalmente libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEof">
+      <MemberSignature Language="C#" Value="public override bool IsEof { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEof" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.IsEof" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que informa se a posição do leitor está no final do arquivo.</summary>
+        <value>
+          <see langword="true" />Se a posição do leitor estiver no final do arquivo. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Member">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlMember Member { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlMember Member" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.Member" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlMember</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o membro atual na posição de leitor, se a posição do leitor estiver em um <see cref="F:System.Xaml.XamlNodeType.StartMember" />.</summary>
+        <value>O membro atual, ou <see langword="null" /> se a posição não está em um membro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public override System.Xaml.NamespaceDeclaration Namespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.NamespaceDeclaration Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.NamespaceDeclaration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o namespace XAML do nó atual.</summary>
+        <value>O namespace XAML, se disponível, caso contrário, <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeType">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlNodeType NodeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Xaml.XamlNodeType NodeType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.NodeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlNodeType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do nó atual.</summary>
+        <value>Um valor da enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override bool Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Baml2006.Baml2006Reader.Read" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece o próximo nó XAML da fonte de BAML, se um nó estiver disponível.</summary>
+        <returns>
+          <see langword="true" />Se um nó está disponível. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método retorna `false` para casos em que o leitor relata <xref:System.Windows.Baml2006.Baml2006Reader.IsEof%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ObjectDisposedException">Leitor foi descartado durante a passagem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SchemaContext">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlSchemaContext SchemaContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlSchemaContext SchemaContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.SchemaContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlSchemaContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que fornece informações de contexto de esquema para o conjunto de informações.</summary>
+        <value>Definir um objeto que fornece informações de contexto de esquema para obter as informações.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xaml.IXamlLineInfo.HasLineInfo">
+      <MemberSignature Language="C#" Value="bool System.Xaml.IXamlLineInfo.HasLineInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Xaml.IXamlLineInfo.HasLineInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.System#Xaml#IXamlLineInfo#HasLineInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Consulte <see cref="P:System.Xaml.IXamlLineInfo.HasLineInfo" />.</summary>
+        <value>
+          <see langword="true" />Se as informações de linha estão disponíveis. Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xaml.IXamlLineInfo.LineNumber">
+      <MemberSignature Language="C#" Value="int System.Xaml.IXamlLineInfo.LineNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Xaml.IXamlLineInfo.LineNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.System#Xaml#IXamlLineInfo#LineNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Consulte <see cref="P:System.Xaml.IXamlLineInfo.LineNumber" />.</summary>
+        <value>O número de linha ao relatório.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xaml.IXamlLineInfo.LinePosition">
+      <MemberSignature Language="C#" Value="int System.Xaml.IXamlLineInfo.LinePosition { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 System.Xaml.IXamlLineInfo.LinePosition" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.System#Xaml#IXamlLineInfo#LinePosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Consulte <see cref="P:System.Xaml.IXamlLineInfo.LinePosition" />.</summary>
+        <value>A posição da linha ao relatório.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override System.Xaml.XamlType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xaml.XamlType Type" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.XamlType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Xaml.XamlType" /> do nó atual.</summary>
+        <value>O <see cref="T:System.Xaml.XamlType" /> do nó atual, ou <see langword="null" /> se a posição não está em um objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public override object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Baml2006.Baml2006Reader.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor do nó atual.</summary>
+        <value>O valor do nó atual, ou <see langword="null" /> se a posição não está em um <see cref="F:System.Xaml.XamlNodeType.Value" /> tipo de nó.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,128 @@
+<Type Name="DataControlRowState" FullName="System.Web.UI.WebControls.DataControlRowState">
+  <TypeSignature Language="C#" Value="public enum DataControlRowState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataControlRowState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.DataControlRowState" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o estado de uma linha em um controle de dados, como <see cref="T:System.Web.UI.WebControls.DetailsView" /> ou <see cref="T:System.Web.UI.WebControls.GridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.DataControlRowState> enumeração identifica o estado de uma linha em um controle de dados como <xref:System.Web.UI.WebControls.DetailsView> ou <xref:System.Web.UI.WebControls.GridView>. Estado de uma linha pode ser um ou uma combinação da <xref:System.Web.UI.WebControls.DataControlRowState> valores, então use operações bit a bit para determinar se o estado da linha inclui um <xref:System.Web.UI.WebControls.DataControlRowState> valor, em vez de um teste de equivalência. O <xref:System.Web.UI.WebControls.DataControlRowState> enumeração é usada para qualquer tipo de linha, não apenas <xref:System.Web.UI.WebControls.DataControlRowType.DataRow> linhas (normalmente, o estado de linhas de cabeçalho e rodapé é definido como Normal).  
+  
+ Você pode usar o <xref:System.Web.UI.WebControls.DataControlRowState.Normal> enumeração para identificar o estado de um <xref:System.Web.UI.WebControls.GridViewRow> ou <xref:System.Web.UI.WebControls.DetailsViewRow> do objeto ao enumerar por meio de um <xref:System.Web.UI.WebControls.GridViewRowCollection> ou <xref:System.Web.UI.WebControls.DetailsViewRowCollection> coleção, respectivamente. Se você estiver escrevendo um controle de dados que usa linhas, você pode usar o <xref:System.Web.UI.WebControls.DataControlRowState> enumeração para identificar quando renderizar cores diferentes para uma linha (o valor alternativo), ou controles que estão habilitados ou desabilitados para edição de uma linha (os valores de edição e inserção).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.DataControlRowState> enumeração para renderizar uma interface de usuário (UI) com base no estado de uma linha em um <xref:System.Web.UI.WebControls.GridView> controle. O `RadioButtonField` classe, que é um controle de campo personalizado que deriva o <xref:System.Web.UI.WebControls.CheckBoxField> controlar, renderiza um botão de opção de associação de dados para cada linha em um <xref:System.Web.UI.WebControls.GridView> controle. Quando a linha está exibindo os dados para um usuário e não está no modo de edição, o <xref:System.Web.UI.WebControls.RadioButton> controle está desabilitado. Quando o usuário atualiza uma linha em <xref:System.Web.UI.WebControls.GridView> e a linha estiver no modo de edição, o <xref:System.Web.UI.WebControls.RadioButton> controle é processado como habilitado para que ele pode ser clicado. O exemplo usa operadores AND bit a bit, porque o estado de linha pode ser uma combinação de um ou mais <xref:System.Web.UI.WebControls.DataControlRowState> valores. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.WebControls.DataControlField> classe.  
+  
+ [!code-csharp[Samples.AspNet.RadioButtonField#3](~/samples/snippets/csharp/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/CS/radiobuttonfield.cs#3)]
+ [!code-vb[Samples.AspNet.RadioButtonField#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/Samples.AspNet.RadioButtonField/VB/radiobuttonfield.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alternate">
+      <MemberSignature Language="C#" Value="Alternate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Alternate = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Alternate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a linha de controle de dados é uma linha alternativa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estado alternativo pode ser combinado com outros estados, como Normal, editar ou inserção, a qualquer momento. Essas linhas podem ser afetadas pelo `AlternateRowStyle` propriedade dos dados de controle, se definido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="Edit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Edit = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a linha está em um estado de edição, geralmente o resultado de clicar em um botão de edição para a linha. Normalmente, os estados <see cref="F:System.Web.UI.WebControls.DataControlRowState.Edit" /> e <see cref="F:System.Web.UI.WebControls.DataControlRowState.Insert" /> são mutuamente exclusivos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="Insert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Insert = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Insert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a linha é uma nova linha, geralmente o resultado de clicar em um botão de inserção para adicionar uma nova linha. Normalmente, os estados <see cref="F:System.Web.UI.WebControls.DataControlRowState.Insert" /> e <see cref="F:System.Web.UI.WebControls.DataControlRowState.Edit" /> são mutuamente exclusivos.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Normal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a linha de controle de dados está em um estado normal. O estado <see cref="F:System.Web.UI.WebControls.DataControlRowState.Normal" /> é mutuamente exclusivo com outros estados, exceto o estado <see cref="F:System.Web.UI.WebControls.DataControlRowState.Alternate" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="Selected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.WebControls.DataControlRowState Selected = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.WebControls.DataControlRowState.Selected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.DataControlRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a linha foi selecionada pelo usuário.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="Microsoft.CSharp.RuntimeBinder">
+  <Docs>
+    <summary>O <see cref="N:Microsoft.CSharp.RuntimeBinder" /> namespace fornece classes e interfaces que suporte a interoperação entre Dynamic Language Runtime e c#.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

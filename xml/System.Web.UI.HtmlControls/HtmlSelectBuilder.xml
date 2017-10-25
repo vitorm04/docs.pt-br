@@ -1,0 +1,131 @@
+<Type Name="HtmlSelectBuilder" FullName="System.Web.UI.HtmlControls.HtmlSelectBuilder">
+  <TypeSignature Language="C#" Value="public class HtmlSelectBuilder : System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HtmlSelectBuilder extends System.Web.UI.ControlBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlControls.HtmlSelectBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.ControlBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Interage com o analisador para criar um <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder> controle interage com o analisador de página para criar um <xref:System.Web.UI.HtmlControls.HtmlSelect> controle. Use o <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder> controle para personalizar a análise de um <xref:System.Web.UI.HtmlControls.HtmlSelect> controle.  
+  
+ O <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder.AllowWhitespaceLiterals%2A> está definida como `false` para que o espaço em branco é sempre ignorado. Use o <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder.GetChildControlType%2A> método para determinar o tipo do <xref:System.Web.UI.HtmlControls.HtmlSelect> os controles filho do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar um personalizado <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder> controle que define dois tipos de `<option>` elementos filho de um personalizado <xref:System.Web.UI.HtmlControls.HtmlSelect> controle e, em seguida, os processos de cada tipo diferente.  
+  
+ [!code-aspx-csharp[HtmlSelectBuilder#1](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectBuilder/cs/source.aspx#1)]
+ [!code-aspx-vb[HtmlSelectBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectBuilder/vb/source.aspx#1)]  
+  
+ [!code-csharp[HtmlSelectBuilder#2](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectBuilder/cs/source.cs#2)]
+ [!code-vb[HtmlSelectBuilder#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectBuilder/vb/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Para criar um construtor de controle personalizado para um <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> controle, você precisa herdar dessa classe.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HtmlSelectBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelectBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.HtmlControls.HtmlSelectBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Este construtor é usado pelo ASP.NET ao analisar a página e criar a hierarquia de controle. Ele não se destina para uso em seu código.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowWhitespaceLiterals">
+      <MemberSignature Language="C#" Value="public override bool AllowWhitespaceLiterals ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool AllowWhitespaceLiterals() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelectBuilder.AllowWhitespaceLiterals" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se o branco espaço literais em um <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> controle devem ser processados ou ignorado.</summary>
+        <returns>Esse método sempre retornará <see langword="false" />, indicando que espaço em branco no <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> controle será ignorada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método substitui o <xref:System.Web.UI.ControlBuilder.AllowWhitespaceLiterals%2A?displayProperty=nameWithType> método sempre ignorar espaço em branco no <xref:System.Web.UI.HtmlControls.HtmlSelect> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildControlType">
+      <MemberSignature Language="C#" Value="public override Type GetChildControlType (string tagName, System.Collections.IDictionary attribs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Type GetChildControlType(string tagName, class System.Collections.IDictionary attribs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.HtmlControls.HtmlSelectBuilder.GetChildControlType(System.String,System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="attribs" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="tagName">O nome da marca do controle filho.</param>
+        <param name="attribs">Uma matriz de atributos contidos no controle filho.</param>
+        <summary>Obtém o <see cref="T:System.Type" /> para o <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> os controles filho do controle.</summary>
+        <returns>O <see cref="T:System.Type" /> do <see cref="T:System.Web.UI.HtmlControls.HtmlSelect" /> controle especificadas controle filho.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder.GetChildControlType%2A> método para retornar o <xref:System.Type> de um controle filho especificado em um <xref:System.Web.UI.HtmlControls.HtmlSelect> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como substituir o <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder.GetChildControlType%2A> método para verificar tipos de controle personalizados filho. Para obter um exemplo de código completa e funcionando, consulte o <xref:System.Web.UI.HtmlControls.HtmlSelectBuilder> tópico de visão geral da classe.  
+  
+ [!code-csharp[HtmlSelectBuilder#3](~/samples/snippets/csharp/VS_Snippets_WebNet/HtmlSelectBuilder/cs/source.cs#3)]
+ [!code-vb[HtmlSelectBuilder#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/HtmlSelectBuilder/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

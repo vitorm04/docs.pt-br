@@ -1,0 +1,937 @@
+<Type Name="FileIOPermission" FullName="System.Security.Permissions.FileIOPermission">
+  <TypeSignature Language="C#" Value="public sealed class FileIOPermission : System.Security.CodeAccessPermission, System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed FileIOPermission extends System.Security.CodeAccessPermission implements class System.Security.Permissions.IUnrestrictedPermission" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.FileIOPermission" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.CodeAccessPermission</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.Permissions.IUnrestrictedPermission</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Controla a capacidade de acessar arquivos e pastas. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa permissão faz distinção entre os seguintes quatro tipos de acesso de e/s de arquivo fornecida pelo <xref:System.Security.Permissions.FileIOPermissionAccess>:  
+  
+-   `Read`: Acesso de leitura para o conteúdo do arquivo ou acesso a informações sobre o arquivo, como seu comprimento ou a hora da última modificação.  
+  
+-   `Write`: Acesso de gravação para o conteúdo do arquivo ou acesso para alterar as informações sobre o arquivo, como seu nome. Também possibilita a exclusão e substituição.  
+  
+-   `Append`: A capacidade de gravar o final de um arquivo somente. Nenhuma capacidade de ler.  
+  
+-   `PathDiscovery`: O acesso às informações no caminho em si. Isso ajuda a proteger informações confidenciais no caminho, como nomes de usuário, bem como informações sobre a estrutura de diretório que será exibida no caminho. Esse valor não concede acesso a arquivos ou pastas representadas pelo caminho.  
+  
+> [!NOTE]
+>  Fornecendo <xref:System.Security.Permissions.FileIOPermissionAccess.Write> acesso a um assembly é semelhante à concessão de confiança total. Se um aplicativo não deve gravar o sistema de arquivos, ele não deve ter <xref:System.Security.Permissions.FileIOPermissionAccess.Write> acesso.  
+  
+ Todas essas permissões são independentes, que significa que os direitos para um não implicam direitos para outro. Por exemplo, `Write` permissão não implica a permissão para `Read` ou `Append`. Se desejar fazer mais de uma permissão, eles podem ser combinados usando um OR bit a bit, conforme mostrado no exemplo de código que segue. Permissão de arquivo é definida em termos de caminhos absolutos canônicos; chamadas sempre devem ser feitas com caminhos de arquivo canônico.  
+  
+ <xref:System.Security.Permissions.FileIOPermission>Descreve as operações protegidas em arquivos e pastas. O <xref:System.IO.File> classe ajuda a fornecer acesso seguro a arquivos e pastas. A verificação de acesso de segurança é executada quando o identificador para o arquivo é criado. Ao fazer a verificação no momento da criação, o impacto no desempenho da verificação de segurança é minimizado. Abrir um arquivo acontece uma vez, enquanto a leitura e gravação podem ocorrer várias vezes. Se o arquivo for aberto, nenhuma verificação é feita. Se o objeto é passado para um chamador não confiável, ele pode ser usado de forma incorreta. Por exemplo, os identificadores de arquivos não devem ser armazenados em pública estática global onde o código com menos permissão possam acessá-los.  
+  
+ <xref:System.Security.Permissions.FileIOPermissionAccess>Especifica as ações que podem ser executadas no arquivo ou pasta. Além disso, essas ações podem ser combinadas usando um OR bit a bit para formar instâncias complexas.  
+  
+ Acesso a uma pasta implica em acesso a todos os arquivos que ele contém, bem como acesso a todos os arquivos e pastas em suas subpastas. Por exemplo, `Read` implica em acesso a C:\folder1\ `Read` acesso a C:\folder1\file1.txt, C:\folder1\folder2\\, C:\folder1\folder2\file2.txt e assim por diante.  
+  
+> [!NOTE]
+>  Em versões do .NET Framework antes do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], você pode usar o <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=nameWithType> método para impedir o acesso inadvertido aos recursos do sistema por código confiável. <xref:System.Security.CodeAccessPermission.Deny%2A>Agora é obsoleta, e acesso a recursos agora somente é determinado da permissão concedida definido para um assembly. Para limitar o acesso aos arquivos, você deve executar código parcialmente confiável em uma área restrita e atribua a ela permissões apenas para recursos que o código tem permissão para acessar. Para obter informações sobre como executar um aplicativo em uma área restrita, consulte [como: executar código parcialmente confiável em uma área restrita](~/docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir ilustram o código que usa <xref:System.Security.Permissions.FileIOPermission>. Após as duas linhas seguintes do código, o objeto `f` representa a permissão para ler todos os arquivos no cliente discos locais do computador. O exemplo de código, em seguida, exige a permissão para determinar se o aplicativo tem permissão para ler os arquivos.  
+  
+ [!code-cpp[Classic FileIOPermission Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileIOPermission Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CS/source.cs#1)]
+ [!code-vb[Classic FileIOPermission Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileIOPermission Example/VB/source.vb#1)]  
+  
+ Após as duas linhas seguintes do código, o objeto `f2` representa as permissões de leitura C:\test_r e ler e gravar C:\example\out.txt. `Read`e `Write` representar as permissões de arquivo/pasta conforme descritas anteriormente. Depois de criar a permissão, o código exige a permissão para determinar se o aplicativo tem o direito de leitura e gravação para o arquivo.  
+  
+ [!code-cpp[Classic FileIOPermission Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic FileIOPermission Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CS/source.cs#2)]
+ [!code-vb[Classic FileIOPermission Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileIOPermission Example/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileIOPermission (System.Security.Permissions.PermissionState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.PermissionState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="state" Type="System.Security.Permissions.PermissionState" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um dos valores de enumeração <see cref="T:System.Security.Permissions.PermissionState" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.FileIOPermission" /> com permissão irrestrita ou totalmente restrita, conforme especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um totalmente restrito (`None`) ou `Unrestricted` acesso a arquivos e diretórios.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria uma nova instância do <xref:System.Security.Permissions.FileIOPermission> classe com acesso de leitura totalmente restrito.  
+  
+ [!code-cpp[Classic FileIOPermission Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileIOPermission Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CS/source.cs#1)]
+ [!code-vb[Classic FileIOPermission Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileIOPermission Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="state" /> não é um valor válido de <see cref="T:System.Security.Permissions.PermissionState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileIOPermission (System.Security.Permissions.FileIOPermissionAccess access, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.FileIOPermissionAccess access, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.#ctor(System.Security.Permissions.FileIOPermissionAccess,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="path">O caminho absoluto do arquivo ou diretório.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.FileIOPermission" /> com o acesso especificado ao arquivo ou diretório designado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite apenas uma da <xref:System.Security.Permissions.FileIOPermissionAccess> valores deve ser especificado para o arquivo ou diretório especificado. Use o <xref:System.Security.Permissions.FileIOPermission.AddPathList%2A> método para definir permissões complexas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.FileIOPermission.%23ctor%28System.Security.Permissions.FileIOPermissionAccess%2CSystem.String%29?displayProperty=nameWithType> construtor para criar uma nova instância do <xref:System.Security.Permissions.FileIOPermission> classe, que fornece acesso completo para o arquivo C:\test_r.  
+  
+ [!code-cpp[Classic FileIOPermission Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic FileIOPermission Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CS/source.cs#2)]
+ [!code-vb[Classic FileIOPermission Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileIOPermission Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não é uma cadeia de caracteres válida.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não especifica o caminho absoluto para o arquivo ou diretório.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileIOPermission (System.Security.Permissions.FileIOPermissionAccess access, string[] pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.FileIOPermissionAccess access, string[] pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.#ctor(System.Security.Permissions.FileIOPermissionAccess,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="pathList">Uma matriz que contém os caminhos absolutos dos arquivos e diretórios.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.FileIOPermission" /> classe com o acesso especificado para os diretórios e arquivos designados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite apenas um <xref:System.Security.Permissions.FileIOPermissionAccess> valor deve ser especificado para os arquivos especificados e diretórios. Use o <xref:System.Security.Permissions.FileIOPermission.AddPathList%2A> método para definir permissões complexas.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ Uma entrada de <paramref name="pathList" /> matriz não é uma cadeia de caracteres válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileIOPermission (System.Security.Permissions.FileIOPermissionAccess access, System.Security.AccessControl.AccessControlActions control, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.FileIOPermissionAccess access, valuetype System.Security.AccessControl.AccessControlActions control, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.#ctor(System.Security.Permissions.FileIOPermissionAccess,System.Security.AccessControl.AccessControlActions,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="control" Type="System.Security.AccessControl.AccessControlActions" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="control">Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlActions" />.</param>
+        <param name="path">O caminho absoluto do arquivo ou diretório.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.FileIOPermission" /> com o acesso especificado ao arquivo ou diretório designado e os direitos de acesso especificados a informações de controle de arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite apenas um <xref:System.Security.Permissions.FileIOPermissionAccess> valor deve ser especificado para o arquivo especificado ou diretórios. Use o <xref:System.Security.Permissions.FileIOPermission.AddPathList%2A> método para definir permissões complexas.  
+  
+ O `control` parâmetro especifica se o controle de acesso ACL (lista) para o arquivo ou diretório especificado por `path` podem ser alterados, exibido, ou não pode ser acessado.  
+  
+> [!IMPORTANT]
+>  Uma lista de controle de acesso (ACL) descreve a indivíduos ou grupos que têm ou não tem direitos para ações específicas em um determinado arquivo e suas propriedades.  A capacidade de alterar ou exibir uma ACL é uma permissão importante e deve ser concedida com cuidado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não é uma cadeia de caracteres válida.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não especifica o caminho absoluto para o arquivo ou diretório.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileIOPermission (System.Security.Permissions.FileIOPermissionAccess access, System.Security.AccessControl.AccessControlActions control, string[] pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Security.Permissions.FileIOPermissionAccess access, valuetype System.Security.AccessControl.AccessControlActions control, string[] pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.#ctor(System.Security.Permissions.FileIOPermissionAccess,System.Security.AccessControl.AccessControlActions,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="control" Type="System.Security.AccessControl.AccessControlActions" />
+        <Parameter Name="pathList" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="control">Uma combinação bit a bit dos valores de enumeração <see cref="T:System.Security.AccessControl.AccessControlActions" />.</param>
+        <param name="pathList">Uma matriz que contém os caminhos absolutos dos arquivos e diretórios.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.FileIOPermission" /> classe com o acesso especificado para os arquivos designados e diretórios e os direitos de acesso especificado para informações de controle de arquivo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor permite apenas um <xref:System.Security.Permissions.FileIOPermissionAccess> valor deve ser especificado para os arquivos especificados e diretórios. Use o <xref:System.Security.Permissions.FileIOPermission.AddPathList%2A> método para definir permissões complexas.  
+  
+ O `control` parâmetro especifica se o controle de acesso ACL (lista) para o arquivo ou diretório especificado por `path` podem ser alterados, exibido, ou não pode ser acessado.  
+  
+> [!IMPORTANT]
+>  Uma lista de controle de acesso (ACL) descreve a indivíduos ou grupos que têm ou não tem direitos para ações específicas em um determinado arquivo e suas propriedades.  A capacidade de alterar ou exibir uma ACL é uma permissão importante e deve ser concedida com cuidado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ Uma entrada de <paramref name="pathList" /> matriz não é uma cadeia de caracteres válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPathList">
+      <MemberSignature Language="C#" Value="public void AddPathList (System.Security.Permissions.FileIOPermissionAccess access, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPathList(valuetype System.Security.Permissions.FileIOPermissionAccess access, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.AddPathList(System.Security.Permissions.FileIOPermissionAccess,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="path">O caminho absoluto de um arquivo ou diretório.</param>
+        <summary>Adiciona o acesso para o arquivo ou diretório especificado ao estado existente da permissão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para modificar o acesso de arquivo e diretório adicionando-se para o estado da permissão atual.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.FileIOPermission.AddPathList%28System.Security.Permissions.FileIOPermissionAccess%2CSystem.String%29?displayProperty=nameWithType> método.  
+  
+ [!code-cpp[Classic FileIOPermission Example#2](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic FileIOPermission Example#2](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CS/source.cs#2)]
+ [!code-vb[Classic FileIOPermission Example#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileIOPermission Example/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não é uma cadeia de caracteres válida.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não especificou o caminho absoluto para o arquivo ou diretório.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="path" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">O parâmetro <paramref name="path" /> tem um formato inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPathList">
+      <MemberSignature Language="C#" Value="public void AddPathList (System.Security.Permissions.FileIOPermissionAccess access, string[] pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPathList(valuetype System.Security.Permissions.FileIOPermissionAccess access, string[] pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.AddPathList(System.Security.Permissions.FileIOPermissionAccess,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="pathList">Uma matriz que contém os caminhos absolutos dos arquivos e diretórios.</param>
+        <summary>Adiciona acesso para os arquivos especificados e os diretórios para o estado existente da permissão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para modificar o acesso de arquivo e diretório adicionando-se para o estado da permissão atual.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ Uma entrada de <paramref name="pathList" /> matriz não é válida.</exception>
+        <exception cref="T:System.NotSupportedException">Uma entrada de <paramref name="pathList" /> matriz tem um formato inválido.</exception>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="pathList" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllFiles">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.FileIOPermissionAccess AllFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.FileIOPermissionAccess AllFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.FileIOPermission.AllFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.FileIOPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acesso permitido para todos os arquivos.</summary>
+        <value>A definição dos sinalizadores de E/S para todos os arquivos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade obtém ou define o acesso permitido para todos os arquivos nas unidades de rede e computador locais.  
+  
+ Um indivíduo <xref:System.Security.Permissions.FileIOPermissionAccess> valor pode ser verificado para o uso de uma operação AND de bit a bit.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.FileIOPermission.AllFiles%2A> propriedade.  
+  
+ [!code-cpp[Classic FileIOPermission Example#3](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic FileIOPermission Example#3](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CS/source.cs#3)]
+ [!code-vb[Classic FileIOPermission Example#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileIOPermission Example/VB/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllLocalFiles">
+      <MemberSignature Language="C#" Value="public System.Security.Permissions.FileIOPermissionAccess AllLocalFiles { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Permissions.FileIOPermissionAccess AllLocalFiles" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.FileIOPermission.AllLocalFiles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Permissions.FileIOPermissionAccess</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o acesso permitido para todos os arquivos locais.</summary>
+        <value>Sinaliza o conjunto de e/s de arquivo para todos os arquivos locais.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Arquivos locais são arquivos contidos no computador local. Todos os arquivos não são acessados por meio de uma unidade de rede são arquivos locais.  
+  
+ Um indivíduo <xref:System.Security.Permissions.FileIOPermissionAccess> valor pode ser verificado para o uso de uma operação AND de bit a bit.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.FileIOPermission.AllLocalFiles%2A> propriedade.  
+  
+ [!code-cpp[Classic FileIOPermission Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic FileIOPermission Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic FileIOPermission Example/CS/source.cs#1)]
+ [!code-vb[Classic FileIOPermission Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic FileIOPermission Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.Copy" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna uma cópia idêntica da permissão atual.</summary>
+        <returns>Uma cópia da permissão atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma cópia da permissão representa o mesmo acesso a recursos como a permissão original.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Security.Permissions.FileIOPermission" /> objeto a ser comparado com o atual <see cref="T:System.Security.Permissions.FileIOPermission" />.</param>
+        <summary>Determina se o especificado <see cref="T:System.Security.Permissions.FileIOPermission" /> objeto é igual ao atual <see cref="T:System.Security.Permissions.FileIOPermission" />.</summary>
+        <returns>
+          <see langword="true" />Se especificado <see cref="T:System.Security.Permissions.FileIOPermission" /> é igual à atual <see cref="T:System.Security.Permissions.FileIOPermission" /> objeto; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações, consulte <xref:System.Object.Equals%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromXml">
+      <MemberSignature Language="C#" Value="public override void FromXml (System.Security.SecurityElement esd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void FromXml(class System.Security.SecurityElement esd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.FromXml(System.Security.SecurityElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="esd" Type="System.Security.SecurityElement" />
+      </Parameters>
+      <Docs>
+        <param name="esd">A codificação XML usado para reconstruir a permissão.</param>
+        <summary>Reconstrói uma permissão com um estado especificado de uma codificação de XML.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O parâmetro <paramref name="esd" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">O <paramref name="esd" /> parâmetro não é um elemento de permissão válido.  
+  
+ -ou-  
+  
+ O <paramref name="esd" /> o número de versão do parâmetro não é compatível.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém um código hash para o <see cref="T:System.Security.Permissions.FileIOPermission" /> objeto que é adequado para uso em algoritmos e estruturas de dados como uma tabela de hash de hash.</summary>
+        <returns>Um código hash para a atual <see cref="T:System.Security.Permissions.FileIOPermission" /> objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O código hash para duas instâncias da mesma permissão pode ser diferente, portanto, um código de hash não deve ser usado para comparar dois <xref:System.Security.Permissions.FileIOPermission> objetos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPathList">
+      <MemberSignature Language="C#" Value="public string[] GetPathList (System.Security.Permissions.FileIOPermissionAccess access);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetPathList(valuetype System.Security.Permissions.FileIOPermissionAccess access) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.GetPathList(System.Security.Permissions.FileIOPermissionAccess)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+      </Parameters>
+      <Docs>
+        <param name="access">Um dos valores <see cref="T:System.Security.Permissions.FileIOPermissionAccess" /> que representa um único tipo de acesso ao arquivo.</param>
+        <summary>Obtém todos os arquivos e diretórios com o <see cref="T:System.Security.Permissions.FileIOPermissionAccess" /> especificado.</summary>
+        <returns>Uma matriz que contém os caminhos dos arquivos e diretórios para o qual o acesso especificado pelo parâmetro <paramref name="access" /> é concedido.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para obter o estado da permissão atual. Para obter o estado de ambos `Read` e `Write` acesso, duas chamadas para esse método são necessárias.  
+  
+> [!NOTE]
+>  O `access` parâmetro é limitado aos valores de <xref:System.Security.Permissions.FileIOPermissionAccess>, que representam tipos único de acesso de arquivo. Esses valores são <xref:System.Security.Permissions.FileIOPermissionAccess.Read>, <xref:System.Security.Permissions.FileIOPermissionAccess.Write>, <xref:System.Security.Permissions.FileIOPermissionAccess.Append>, e <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery>. Os valores aceitáveis para `access` não incluem <xref:System.Security.Permissions.FileIOPermissionAccess.NoAccess> e <xref:System.Security.Permissions.FileIOPermissionAccess.AllAccess>, que não representam tipos único de acesso de arquivo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.FileIOPermission.GetPathList%2A> método. Este exemplo é parte de um exemplo maior fornecido para a <xref:System.Security.Permissions.FileIOPermission> classe.  
+  
+ [!code-cpp[System.Security.Permissions.FileIOPermission#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CPP/fileiopermission.cpp#7)]
+ [!code-csharp[System.Security.Permissions.FileIOPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CS/fileiopermission.cs#7)]
+ [!code-vb[System.Security.Permissions.FileIOPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/VB/fileiopermission.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ <paramref name="access" /> é <see cref="F:System.Security.Permissions.FileIOPermissionAccess.AllAccess" />, que representa mais de um tipo de acesso aos arquivos, ou <see cref="F:System.Security.Permissions.FileIOPermissionAccess.NoAccess" />, que não representa nenhum tipo de acesso aos arquivos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Intersect (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Intersect(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.Intersect(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a interseção com a permissão atual. Ele deve ser o mesmo tipo que a permissão atual.</param>
+        <summary>Cria e retorna uma permissão que é a interseção de permissão atual e da permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a interseção de permissão atual e a permissão especificada. Essa nova permissão é <see langword="null" /> se a interseção estiver vazia.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A interseção de duas permissões é uma permissão que descreve o conjunto de operações que ambas descrevem em comum. Somente uma demanda que passa as permissões originais passará a interseção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="target" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubsetOf">
+      <MemberSignature Language="C#" Value="public override bool IsSubsetOf (System.Security.IPermission target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsSubsetOf(class System.Security.IPermission target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.IsSubsetOf(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="target">Uma permissão a ser testado para a relação de subconjunto. Essa permissão deve ser do mesmo tipo que a permissão atual.</param>
+        <summary>Determina se a permissão atual é um subconjunto de permissão especificada.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é um subconjunto da permissão especificada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A permissão atual é um subconjunto de permissão especificada se a permissão atual especifica um conjunto de operações que contém a permissão especificada. Por exemplo, uma permissão que representa o acesso de leitura para C:\example.txt é um subconjunto de uma permissão que representa o acesso de leitura em c:\\. Se esse método retornar `true`, a permissão atual não representa nenhum mais acesso ao recurso protegido que a permissão especificada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="target" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnrestricted">
+      <MemberSignature Language="C#" Value="public bool IsUnrestricted ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUnrestricted() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.IsUnrestricted" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se a permissão atual é irrestrita.</summary>
+        <returns>
+          <see langword="true" />Se a permissão atual é irrestrita; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma permissão irrestrita representa acesso a todos os recursos protegidos pela permissão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPathList">
+      <MemberSignature Language="C#" Value="public void SetPathList (System.Security.Permissions.FileIOPermissionAccess access, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPathList(valuetype System.Security.Permissions.FileIOPermissionAccess access, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.SetPathList(System.Security.Permissions.FileIOPermissionAccess,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="path">O caminho absoluto do arquivo ou diretório.</param>
+        <summary>Define o acesso especificado ao arquivo ou diretório especificado, substituindo o estado existente da permissão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estado anterior da permissão atual para o tipo de acesso especificado é substituído. O código a seguir define o acesso para C:\temp para <xref:System.Security.Permissions.FileIOPermissionAccess.Read>.  
+  
+ [!code-cpp[System.Security.Permissions.FileIOPermission#12](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CPP/remarks.cpp#12)]
+ [!code-csharp[System.Security.Permissions.FileIOPermission#12](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CS/remarks.cs#12)]
+ [!code-vb[System.Security.Permissions.FileIOPermission#12](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/VB/remarks.vb#12)]  
+  
+ Esse acesso não será substituído pelo código a seguir porque os tipos de acesso não são iguais.  
+  
+ [!code-cpp[System.Security.Permissions.FileIOPermission#13](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CPP/remarks.cpp#13)]
+ [!code-csharp[System.Security.Permissions.FileIOPermission#13](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CS/remarks.cs#13)]
+ [!code-vb[System.Security.Permissions.FileIOPermission#13](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/VB/remarks.vb#13)]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.Security.Permissions.FileIOPermission.SetPathList%28System.Security.Permissions.FileIOPermissionAccess%2CSystem.String%29?displayProperty=nameWithType> método.  
+  
+ [!code-cpp[System.Security.Permissions.FileIOPermission#7](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CPP/fileiopermission.cpp#7)]
+ [!code-csharp[System.Security.Permissions.FileIOPermission#7](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CS/fileiopermission.cs#7)]
+ [!code-vb[System.Security.Permissions.FileIOPermission#7](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/VB/fileiopermission.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não é uma cadeia de caracteres válida.  
+  
+ -ou-  
+  
+ O parâmetro <paramref name="path" /> não especificou o caminho absoluto para o arquivo ou diretório.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPathList">
+      <MemberSignature Language="C#" Value="public void SetPathList (System.Security.Permissions.FileIOPermissionAccess access, string[] pathList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPathList(valuetype System.Security.Permissions.FileIOPermissionAccess access, string[] pathList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.SetPathList(System.Security.Permissions.FileIOPermissionAccess,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="access" Type="System.Security.Permissions.FileIOPermissionAccess" />
+        <Parameter Name="pathList" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="access">Uma combinação bit a bit dos valores <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.</param>
+        <param name="pathList">Uma matriz que contém os caminhos absolutos dos arquivos e diretórios.</param>
+        <summary>Define o acesso especificado aos arquivos e diretórios especificados, substituindo o estado atual para o acesso especificado pelo novo conjunto de caminhos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O estado anterior da permissão atual para o tipo de acesso especificado é substituído. O código a seguir define o acesso para C:\temp para <xref:System.Security.Permissions.FileIOPermissionAccess.Read>.  
+  
+ Esse acesso não será substituído pelo código a seguir porque os tipos de acesso não são iguais.  
+  
+ [!code-cpp[System.Security.Permissions.FileIOPermission#15](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CPP/remarks.cpp#15)]
+ [!code-csharp[System.Security.Permissions.FileIOPermission#15](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/CS/remarks.cs#15)]
+ [!code-vb[System.Security.Permissions.FileIOPermission#15](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Permissions.FileIOPermission/VB/remarks.vb#15)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="access" /> não é um valor válido de <see cref="T:System.Security.Permissions.FileIOPermissionAccess" />.  
+  
+ -ou-  
+  
+ Uma entrada no parâmetro <paramref name="pathList" /> não é uma cadeia de caracteres válida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public override System.Security.SecurityElement ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.SecurityElement ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.SecurityElement</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma codificação de XML de permissão e seu estado atual.</summary>
+        <returns>Uma codificação de XML de permissão, incluindo quaisquer informações de estado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="public override System.Security.IPermission Union (System.Security.IPermission other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Security.IPermission Union(class System.Security.IPermission other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.FileIOPermission.Union(System.Security.IPermission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.IPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Security.IPermission" />
+      </Parameters>
+      <Docs>
+        <param name="other">Uma permissão para combinar com a permissão atual. Ele deve ser o mesmo tipo que a permissão atual.</param>
+        <summary>Cria uma permissão que é a união de permissão atual e a permissão especificada.</summary>
+        <returns>Uma nova permissão que representa a união de permissão atual e a permissão especificada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O resultado de uma chamada para <xref:System.Security.Permissions.FileIOPermission.Union%2A> é uma permissão que representa todas as operações representadas pela permissão atual e a permissão especificada. Qualquer solicitação que passa a ter a permissão passa seu union.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="other" /> não é <see langword="null" /> e não é do mesmo tipo que a permissão atual.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

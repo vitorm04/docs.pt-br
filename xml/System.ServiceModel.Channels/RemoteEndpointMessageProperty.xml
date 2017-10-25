@@ -1,0 +1,118 @@
+<Type Name="RemoteEndpointMessageProperty" FullName="System.ServiceModel.Channels.RemoteEndpointMessageProperty">
+  <TypeSignature Language="C#" Value="public sealed class RemoteEndpointMessageProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RemoteEndpointMessageProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.RemoteEndpointMessageProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Disponibiliza o número da porta e endereço IP do cliente associado com o ponto de extremidade remoto do qual a mensagem foi enviada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A propriedade é adicionada a cada mensagem de entrada para um [!INCLUDE[indigo1](~/includes/indigo1-md.md)] serviço por meio de transportes HTTP e TCP.  
+  
+ A propriedade não está presente nas mensagens recebidas por meio de qualquer um conjunto nomeado pipes ou transporte MSMQ.  
+  
+ Disponibilidade da propriedade quando usando HTTP hospedado no IIS depende de ter uma solicitação ativa no momento.  Portanto, essa propriedade não está disponível depois que a solicitação foi concluída, por exemplo, ao executar um recebimento unidirecional.  
+  
+ O número de porta e endereço IP são que o nó do qual a mensagem foi recebida. Se uma mensagem passa por um proxy ou de retransmissão, o número de porta e endereço IP do respectivo retransmissão ou proxy é um anexado à mensagem por essa propriedade.  
+  
+ Lembre-se de que o endereço IP e porta podem ser falsificados por um invasor e, portanto, não devem ser considerados para autorização ou autenticação confidenciais de segurança a menos que a lógica específica do aplicativo adicional é adicionada.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemoteEndpointMessageProperty (string address, int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string address, int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.RemoteEndpointMessageProperty.#ctor(System.String,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="address">O endereço IP do ponto de extremidade remoto associado à mensagem.</param>
+        <param name="port">O número da porta do ponto de extremidade remoto associado à mensagem.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.RemoteEndpointMessageProperty" /> classe para um endereço IP especificado e uma porta que identificam o cliente do qual a mensagem foi enviada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Lembre-se de que o endereço IP e porta podem ser falsificados por um invasor e, portanto, não devem ser considerados para autorização ou autenticação confidenciais de segurança a menos que a lógica específica do aplicativo adicional é adicionada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="address" /> é <see langword="null" /> ou vazio.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O número da porta é menor que zero ou maior que 65535 (0xffff).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public string Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Address" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RemoteEndpointMessageProperty.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o endereço IP do cliente do qual a mensagem foi enviada.</summary>
+        <value>O endereço IP do cliente do qual a mensagem foi enviada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public static string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string Name" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RemoteEndpointMessageProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a cadeia de caracteres “System.ServiceModel.Channels.RemoteEndpointMessageProperty”.</summary>
+        <value>“System.ServiceModel.Channels.RemoteEndpointMessageProperty”</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.RemoteEndpointMessageProperty.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número da porta do cliente do qual a mensagem foi enviada.</summary>
+        <value>O número da porta do cliente do qual a mensagem foi enviada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

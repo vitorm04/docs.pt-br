@@ -1,0 +1,67 @@
+<Type Name="AutoSizeMode" FullName="System.Windows.Forms.AutoSizeMode">
+  <TypeSignature Language="C#" Value="public enum AutoSizeMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AutoSizeMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AutoSizeMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como um controle se comportará quando sua propriedade <see cref="P:System.Windows.Forms.Control.AutoSize" /> for habilitada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o valor de GrowAndShrink produz o mesmo comportamento que você obter controles com o <xref:System.Windows.Forms.Control.AutoSize%2A> propriedade habilitado, mas que não haja  
+  
+ `AutoSizeMode`propriedade. O <xref:System.Windows.Forms.Control.MinimumSize%2A> e <xref:System.Windows.Forms.Control.MaximumSize%2A> propriedades são respeitadas, mas o valor atual do <xref:System.Windows.Forms.Control.Size%2A> propriedade será ignorada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra um formulário criado usando o código que pode ser redimensionada automaticamente para ajustar seu conteúdo. Quando executado, o formulário exibirá um <xref:System.Windows.Forms.Label>, um <xref:System.Windows.Forms.TextBox> para inserir uma URL e um <xref:System.Windows.Forms.Button> para exibir essa URL no navegador de Web padrão do usuário. O exemplo de código usa um <xref:System.Windows.Forms.FlowLayoutPanel> para dispor independente controla um após o outro e define o <xref:System.Windows.Forms.Control.AutoSize%2A> e <xref:System.Windows.Forms.AutoSizeMode> para aumentar ou reduzir para ajustar o conteúdo do seu formulário.  
+  
+ [!code-csharp[Form.AutoSize#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Form.AutoSize/CS/Form1.cs#1)]
+ [!code-vb[Form.AutoSize#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Form.AutoSize/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GrowAndShrink">
+      <MemberSignature Language="C#" Value="GrowAndShrink" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoSizeMode GrowAndShrink = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoSizeMode.GrowAndShrink" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle aumenta ou diminui para ajustar-se ao conteúdo. O controle não pode ser redimensionado manualmente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GrowOnly">
+      <MemberSignature Language="C#" Value="GrowOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AutoSizeMode GrowOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AutoSizeMode.GrowOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoSizeMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O controle aumenta conforme o necessário para ajustar seu conteúdo, mas não reduz seja menor do que o valor de seu <see cref="P:System.Windows.Forms.Control.Size" /> propriedade. O formulário pode ser redimensionado, mas não pode ficar tão pequeno de forma a ocultar seus controles.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

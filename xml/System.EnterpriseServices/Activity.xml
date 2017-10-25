@@ -1,0 +1,173 @@
+<Type Name="Activity" FullName="System.EnterpriseServices.Activity">
+  <TypeSignature Language="C#" Value="public sealed class Activity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Activity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.Activity" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Cria uma atividade para fazer o trabalho em lotes síncrona ou assíncrona que pode usar serviços COM+ sem a necessidade de criar um componente COM+. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O contexto associado à atividade completamente é determinado por uma <xref:System.EnterpriseServices.ServiceConfig> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.EnterpriseServices.Activity> de classe e usar o serviço de sincronização.  
+  
+ [!code-csharp[EnterpriseServices_Activity#0](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Activity/CS/EnterpriseServices_Activity.cs#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Activity (System.EnterpriseServices.ServiceConfig cfg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.EnterpriseServices.ServiceConfig cfg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Activity.#ctor(System.EnterpriseServices.ServiceConfig)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="cfg" Type="System.EnterpriseServices.ServiceConfig" />
+      </Parameters>
+      <Docs>
+        <param name="cfg">Um <see cref="T:System.EnterpriseServices.ServiceConfig" /> que contém as informações de configuração para os serviços a serem usados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.EnterpriseServices.Activity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cria um <xref:System.EnterpriseServices.Activity> que é usado para enviar o trabalho em lotes para serviços COM+. O contexto associado à atividade completamente é determinado pelo <xref:System.EnterpriseServices.ServiceConfig> objeto que é passado a `cfg` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar uma nova instância do <xref:System.EnterpriseServices.Activity> classe.  
+  
+ [!code-csharp[EnterpriseServices_Activity#1](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Activity/CS/EnterpriseServices_Activity.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">
+          <see cref="T:System.EnterpriseServices.Activity" />Não há suporte na plataforma atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AsynchronousCall">
+      <MemberSignature Language="C#" Value="public void AsynchronousCall (System.EnterpriseServices.IServiceCall serviceCall);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AsynchronousCall(class System.EnterpriseServices.IServiceCall serviceCall) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Activity.AsynchronousCall(System.EnterpriseServices.IServiceCall)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceCall" Type="System.EnterpriseServices.IServiceCall" />
+      </Parameters>
+      <Docs>
+        <param name="serviceCall">Um <see cref="T:System.EnterpriseServices.IServiceCall" /> objeto que é usado para implementar o trabalho em lotes.</param>
+        <summary>Executa o trabalho de lote definido pelo usuário especificado de forma assíncrona.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar esse método.  
+  
+ [!code-csharp[EnterpriseServices_Activity#2](~/samples/snippets/csharp/VS_Snippets_Remoting/EnterpriseServices_Activity/CS/EnterpriseServices_Activity.cs#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindToCurrentThread">
+      <MemberSignature Language="C#" Value="public void BindToCurrentThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindToCurrentThread() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Activity.BindToCurrentThread" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Associa o trabalho definido pelo usuário para o thread atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Activity.BindToCurrentThread%2A>associa o trabalho de lote que é enviado para o <xref:System.EnterpriseServices.Activity.SynchronousCall%2A> ou <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A> métodos para o atual single-threaded apartment (STA). <xref:System.EnterpriseServices.Activity.BindToCurrentThread%2A>Se o thread atual está sendo executado no multi-threaded apartment (MTA) não tem nenhum efeito. O modelo de thread atual é determinado pela configuração do <xref:System.EnterpriseServices.ServiceConfig.ThreadPool%2A> propriedade o <xref:System.EnterpriseServices.ServiceConfig> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SynchronousCall">
+      <MemberSignature Language="C#" Value="public void SynchronousCall (System.EnterpriseServices.IServiceCall serviceCall);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SynchronousCall(class System.EnterpriseServices.IServiceCall serviceCall) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Activity.SynchronousCall(System.EnterpriseServices.IServiceCall)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceCall" Type="System.EnterpriseServices.IServiceCall" />
+      </Parameters>
+      <Docs>
+        <param name="serviceCall">Um <see cref="T:System.EnterpriseServices.IServiceCall" /> objeto que é usado para implementar o trabalho em lotes.</param>
+        <summary>Executa o trabalho de lote definido pelo usuário especificado sincronicamente.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnbindFromThread">
+      <MemberSignature Language="C#" Value="public void UnbindFromThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnbindFromThread() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.Activity.UnbindFromThread" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Desvincula o trabalho de lote que é enviado para o <see cref="M:System.EnterpriseServices.Activity.SynchronousCall(System.EnterpriseServices.IServiceCall)" /> ou <see cref="M:System.EnterpriseServices.Activity.AsynchronousCall(System.EnterpriseServices.IServiceCall)" /> métodos do thread em que o trabalho em lotes é executado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.Activity.UnbindFromThread%2A>Se o trabalho em lotes não foi associado anteriormente a um thread não tem nenhum efeito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

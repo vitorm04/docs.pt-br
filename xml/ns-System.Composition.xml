@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition">
+  <Docs>
+    <summary>O <see cref="N:System.Composition" /> namespace contém classes para criar e especificar atributos de exportação, recuperar exportações da composição, configurar atributos de importação e para especificar como as partes interagem durante a composição.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

@@ -1,0 +1,13 @@
+<Namespace Name="System.Web.Security.AntiXss">
+  <Docs>
+    <summary>Contém métodos que você pode usar para codificar cadeias de caracteres na Ajuda da ordem proteger seu aplicativo contra ataques de script entre sites (XSS) e ataques de injeção do LDAP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Procure os algoritmos de codificação para um determinado conjunto de caracteres que são considerados seguros e codificar todos os outros caracteres. (Isso às vezes é chamado de "listagem safe" ou "lista branca.")  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

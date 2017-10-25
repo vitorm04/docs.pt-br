@@ -1,0 +1,98 @@
+<Type Name="WorkflowLoaderService" FullName="System.Workflow.Runtime.Hosting.WorkflowLoaderService">
+  <TypeSignature Language="C#" Value="public abstract class WorkflowLoaderService : System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WorkflowLoaderService extends System.Workflow.Runtime.Hosting.WorkflowRuntimeService" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Runtime.Hosting.WorkflowLoaderService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Runtime.Hosting.WorkflowRuntimeService</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A classe base abstrata da qual fluxo de trabalho dos serviços de carregador são derivados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Você pode derivar desta classe para criar uma versão personalizada do carregador de fluxo de trabalho.  
+  
+ O carregador de fluxo de trabalho fornece um mecanismo para desenvolvedores gerar definições de fluxo de trabalho e instâncias de outros, por sua vez, a formatos de XML que não são aplicativos linguagem XAML (extensible Markup). O usuário é responsável por seu formato XML exclusivo de análise, geração de uma árvore de atividade e fornecendo a raiz da árvore de atividade para o tempo de execução do fluxo de trabalho para execução.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WorkflowLoaderService ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowLoaderService.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Quando implementada em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Workflow.Runtime.Hosting.WorkflowLoaderService" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.ComponentModel.Activity CreateInstance (Type workflowType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.ComponentModel.Activity CreateInstance(class System.Type workflowType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowLoaderService.CreateInstance(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="workflowType">O <see cref="T:System.Type" /> do fluxo de trabalho para criar.</param>
+        <summary>Cria uma nova instância de fluxo de trabalho usando o fluxo de trabalho especificado <see cref="T:System.Type" />.</summary>
+        <returns>Um <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> objeto que representa a instância de fluxo de trabalho criada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstance">
+      <MemberSignature Language="C#" Value="protected abstract System.Workflow.ComponentModel.Activity CreateInstance (System.Xml.XmlReader workflowDefinitionReader, System.Xml.XmlReader rulesReader);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Workflow.ComponentModel.Activity CreateInstance(class System.Xml.XmlReader workflowDefinitionReader, class System.Xml.XmlReader rulesReader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Runtime.Hosting.WorkflowLoaderService.CreateInstance(System.Xml.XmlReader,System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="workflowDefinitionReader" Type="System.Xml.XmlReader" />
+        <Parameter Name="rulesReader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="workflowDefinitionReader">Um <see cref="T:System.Xml.XmlReader" /> que contém a definição de fluxo de trabalho.</param>
+        <param name="rulesReader">Um <see cref="T:System.Xml.XmlReader" />.</param>
+        <summary>Cria uma instância de fluxo de trabalho usando especificado <see cref="T:System.Xml.XmlReader" />.</summary>
+        <returns>Um <see cref="T:System.Workflow.Runtime.WorkflowInstance" /> objeto que representa a instância de fluxo de trabalho criada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

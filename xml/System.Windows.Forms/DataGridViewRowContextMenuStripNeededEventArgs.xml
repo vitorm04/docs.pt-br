@@ -1,0 +1,137 @@
+<Type Name="DataGridViewRowContextMenuStripNeededEventArgs" FullName="System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs">
+  <TypeSignature Language="C#" Value="public class DataGridViewRowContextMenuStripNeededEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataGridViewRowContextMenuStripNeededEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento ocorre somente quando o <xref:System.Windows.Forms.DataGridView> controle <xref:System.Windows.Forms.DataGridView.DataSource%2A> está definida ou seu <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> é de propriedade `true`. Manipulando o <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento é útil quando você deseja exibir um menu de atalho, determinado pelo estado atual da linha ou valores que ele contém.  
+  
+ Quando você processa o <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento, o menu de atalho que você especificar o manipulador é mostrado sempre que o usuário clica uma linha, a menos que o <xref:System.Windows.Forms.DataGridView.CellContextMenuStripNeeded> substituições de evento de menu de atalho da célula específica que foi clicado.  
+  
+ O <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento também ocorre sempre que o valor de <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A?displayProperty=nameWithType> propriedade é recuperada, ou programaticamente ou quando o usuário clica uma linha.  
+  
+ Você pode usar o <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.RowIndex%2A> propriedade para determinar o estado de uma linha ou valores que ele contém e usar essas informações para alterar ou modificar o <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.ContextMenuStrip%2A> propriedade. Essa propriedade é inicializada com o valor da linha <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> propriedade, que substitui o valor do evento.  
+  
+ Manipular o <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> eventos ao trabalhar com grandes quantidades de dados para evitar as penalidades de desempenho de definir a linha <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> valor para várias linhas. Para obter mais informações, consulte [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](~/docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento para fornecer um <xref:System.Windows.Forms.ContextMenuStrip> com base no título do funcionário. Neste exemplo, há menus de atalho de dois, um para gerentes e para todos os outros funcionários.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView_NeededEvents#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/CS/Form1.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridView_NeededEvents#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/VB/Form1.vb#00)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridViewRowContextMenuStripNeededEventArgs (int rowIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 rowIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rowIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowIndex">O índice da linha.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor usa o `rowIndex` valor de parâmetro para inicializar o <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.RowIndex%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="rowIndex" /> é menor que -1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextMenuStrip">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.ContextMenuStrip ContextMenuStrip { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.ContextMenuStrip ContextMenuStrip" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.ContextMenuStrip" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ContextMenuStrip</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o menu de atalho para a linha que gerou o <see cref="E:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded" /> evento.</summary>
+        <value>O <see cref="T:System.Windows.Forms.ContextMenuStrip" /> em uso.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Inicialmente, essa propriedade contém o valor da <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A?displayProperty=nameWithType> propriedade se ele tiver sido definido para uma linha.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento para fornecer um <xref:System.Windows.Forms.ContextMenuStrip> com base no título do funcionário. Neste exemplo, há menus de atalho de dois, um para gerentes e para todos os outros funcionários. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs> visão geral da classe.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView_NeededEvents#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView_NeededEvents#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/VB/Form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowIndex">
+      <MemberSignature Language="C#" Value="public int RowIndex { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RowIndex" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs.RowIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o índice da linha que está solicitando um menu de atalho.</summary>
+        <value>O índice baseado em zero da linha que está solicitando um menu de atalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para obter mais informações sobre a linha.  
+  
+   
+  
+## Examples  
+ O seguinte código exemplo manipula o <xref:System.Windows.Forms.DataGridView.RowContextMenuStripNeeded> evento para fornecer um <xref:System.Windows.Forms.ContextMenuStrip> com base no título do funcionário. Neste exemplo, há menus de atalho de dois, um para gerentes e para todos os outros funcionários. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridViewRowContextMenuStripNeededEventArgs> visão geral da classe.  
+  
+ [!code-csharp[System.Windows.Forms.DataGridView_NeededEvents#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.DataGridView_NeededEvents#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView_NeededEvents/VB/Form1.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

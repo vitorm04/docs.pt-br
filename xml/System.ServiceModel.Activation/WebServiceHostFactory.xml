@@ -1,0 +1,101 @@
+<Type Name="WebServiceHostFactory" FullName="System.ServiceModel.Activation.WebServiceHostFactory">
+  <TypeSignature Language="C#" Value="public class WebServiceHostFactory : System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebServiceHostFactory extends System.ServiceModel.Activation.ServiceHostFactory" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Activation.WebServiceHostFactory" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Activation.ServiceHostFactory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma fábrica que fornece instâncias do <see cref="T:System.ServiceModel.Web.WebServiceHost" /> em ambientes de hospedagem gerenciados em que a instância do host é criada dinamicamente em resposta às mensagens de entrada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os ambientes de hospedagem gerenciados que oferece suporte à ativação dinâmica são serviços de informações da Internet (IIS) e o serviço de ativação de processos do Windows (WAS).  
+  
+ Se você tiver implementado um personalizado derivado de <xref:System.ServiceModel.Web.WebServiceHost>, considere também a implementação de uma fábrica que deriva de <xref:System.ServiceModel.Activation.WebServiceHostFactory> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como derivar uma classe de <xref:System.ServiceModel.Activation.WebServiceHostFactory>.  
+  
+  
+  
+ Para que sua fábrica de host de serviço Web derivada usada, especificá-lo em um. Arquivo SVC. O exemplo a seguir mostra a sintaxe usada em um arquivo. svc.  
+  
+```  
+<%@ServiceHost language=c# Service="Microsoft.Samples.MyWCFService" Factory="Microsoft.Samples.MyWebServiceHostFactory" %>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebServiceHostFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WebServiceHostFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Activation.WebServiceHostFactory" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método não é chamado diretamente. Ele é chamado quando um serviço está sendo ativado dinamicamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServiceHost">
+      <MemberSignature Language="C#" Value="protected override System.ServiceModel.ServiceHost CreateServiceHost (Type serviceType, Uri[] baseAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.ServiceModel.ServiceHost CreateServiceHost(class System.Type serviceType, class System.Uri[] baseAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost(System.Type,System.Uri[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.ServiceHost</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="baseAddresses" Type="System.Uri[]" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de host de serviço para criar.</param>
+        <param name="baseAddresses">Uma matriz de endereços de base para o serviço.</param>
+        <summary>Cria uma instância especificada <see cref="T:System.ServiceModel.Web.WebServiceHost" /> derivado da classe com os endereços de base especificados.</summary>
+        <returns>Uma instância de um <see cref="T:System.ServiceModel.ServiceHost" /> classe derivada.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substitua este método para criar o tipo de host de serviço necessários e executar qualquer processamento necessário.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação básica desse método.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,122 @@
+<Type Name="ViewStateChangedEventArgs" FullName="System.Activities.Presentation.View.ViewStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ViewStateChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ViewStateChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.View.ViewStateChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um objeto formatado para servir como um argumento de evento que contém as informações sobre o estado de exibição alterada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterações de estado de exibição são as alterações feitas em um fluxo de trabalho que afetam o layout, como o posicionamento de um elemento em um fluxograma ou expandindo e recolhendo um contêiner em uma sequência.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ViewStateChangedEventArgs (System.Activities.Presentation.Model.ModelItem modelItem, string key, object newValue, object oldValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Activities.Presentation.Model.ModelItem modelItem, string key, object newValue, object oldValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.View.ViewStateChangedEventArgs.#ctor(System.Activities.Presentation.Model.ModelItem,System.String,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="modelItem" Type="System.Activities.Presentation.Model.ModelItem" />
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="newValue" Type="System.Object" />
+        <Parameter Name="oldValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="modelItem">Um item no modelo de designer de atividade que serve como um elemento pai na exibição de XML do modelo.</param>
+        <param name="key">O nome de um atributo no elemento pai especificado.</param>
+        <param name="newValue">O novo valor para a chave de atributo especificado.</param>
+        <param name="oldValue">O valor antigo da chave de atributo especificado.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Activities.Presentation.View.ViewStateChangedEventArgs" /> classe com um item de modelo pai especificado e o par chave/valor com o antigo e os novos valores.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Key">
+      <MemberSignature Language="C#" Value="public string Key { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Key" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.ViewStateChangedEventArgs.Key" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um nome de chave de atributo em um elemento de exibição especificado.</summary>
+        <value>Uma cadeia de caracteres que representa o nome de uma chave em um elemento de exibição.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public object NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object NewValue" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.ViewStateChangedEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o novo valor para a chave do par de chave/valor de atributo atual.</summary>
+        <value>Um objeto que contém um valor de chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public object OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object OldValue" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.ViewStateChangedEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor antigo da chave do par de chave/valor de atributo atual.</summary>
+        <value>Um objeto que contém um valor de chave.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentModelItem">
+      <MemberSignature Language="C#" Value="public System.Activities.Presentation.Model.ModelItem ParentModelItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.Presentation.Model.ModelItem ParentModelItem" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.View.ViewStateChangedEventArgs.ParentModelItem" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Presentation.Model.ModelItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um item no modelo de designer de atividade que serve como um item pai no modo de exibição XAML do modelo.</summary>
+        <value>Um elemento pai em um modelo de designer de atividade.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

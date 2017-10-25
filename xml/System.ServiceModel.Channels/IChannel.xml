@@ -1,0 +1,98 @@
+<Type Name="IChannel" FullName="System.ServiceModel.Channels.IChannel">
+  <TypeSignature Language="C#" Value="public interface IChannel : System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IChannel implements class System.ServiceModel.ICommunicationObject" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IChannel" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.ICommunicationObject</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define a interface básica que todos os objetos de canal devem implementar. É necessário que eles implementem a interface de máquina de estado compartilhada por todos os objetos de comunicação e que implementem um método para recuperar objetos da pilha de canais.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Canais devem satisfazer o contrato de uma máquina de estado, conforme definido pelo <xref:System.ServiceModel.ICommunicationObject> interface.  
+  
+ O <xref:System.ServiceModel.Channels.IChannel> interface adiciona o  
+  
+ <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A>método para o <xref:System.ServiceModel.ICommunicationObject> interface. Esse método fornece um mecanismo para recuperar as propriedades da pilha de canais, independentemente de onde na pilha dessas propriedades em tempo real. O termo "property" no nome do método se refere a uma parte das informações que pertence a um dos canais na pilha. O tipo CLR para essa propriedade é determinado pelo `T`. Esse método de recuperação também é usado em fábricas de canais e ouvintes de canais.  
+  
+ `IChannel`é herdada por cada uma das interfaces de canal associadas com os padrões de troca de mensagens básicas:  
+  
+-   <xref:System.ServiceModel.Channels.IInputChannel>para receber mensagens.  
+  
+-   <xref:System.ServiceModel.Channels.IOutputChannel>para enviar mensagens.  
+  
+-   <xref:System.ServiceModel.Channels.IRequestChannel>para enviar uma solicitação.  
+  
+-   <xref:System.ServiceModel.Channels.IReplyChannel>para enviar uma resposta.  
+  
+-   <xref:System.ServiceModel.Channels.IDuplexChannel>para mensagens bidirecionais.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetProperty&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetProperty&lt;T&gt; () where T : class;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !!T GetProperty&lt;class T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.IChannel.GetProperty``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">O objeto com tipo para o qual o método está consultando.</typeparam>
+        <summary>Retorna um objeto com tipo solicitado, se presente, a camada apropriada na pilha de canais.</summary>
+        <returns>O objeto de tipo <paramref name="T" /> solicitado se ele estiver presente ou <see langword="null" /> se não for.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use isto para solicitar um objeto de tipo como uma interface para definir propriedades ou obter o status da camada de apropriado na pilha de canais. Se uma camada de suporte para retornar o objeto solicitado, ele retorna. Caso contrário, ela delega a chamada para a próxima camada da pilha. Se ele obtém a parte inferior da pilha de nenhuma camada de canal suporte para o objeto solicitado e o método retornará `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como essa propriedade pode ser implementada por um canal que delega a chamada a pilha usando um`InnerChannel` propriedade que recupera o canal interno para este canal.  
+  
+ [!code-csharp[S_UEIChannel#0](~/samples/snippets/csharp/VS_Snippets_CFX/s_ueichannel/cs/generatedclient.cs#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

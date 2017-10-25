@@ -1,0 +1,268 @@
+<Type Name="PageRange" FullName="System.Windows.Controls.PageRange">
+  <TypeSignature Language="C#" Value="public struct PageRange" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit PageRange extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.PageRange" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica um intervalo de páginas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.PageRange>define um intervalo de páginas que devem ser processados em uma operação como impressão.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageRange (int page);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="page" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="page">A página impressa ou processada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Controls.PageRange" /> classe que inclui somente a página especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `page` o valor do parâmetro é de base 1; número da página 1 é a primeira página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PageRange (int pageFrom, int pageTo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pageFrom, int32 pageTo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.#ctor(System.Int32,System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pageFrom" Type="System.Int32" />
+        <Parameter Name="pageTo" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageFrom">A primeira página do intervalo.</param>
+        <param name="pageTo">A última página do intervalo.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Controls.PageRange" /> classe com as primeira e última páginas especificadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `pageFrom` e `PageTo` valores de parâmetro são baseados em 1; número da página 1 é a primeira página.  
+  
+ Desde que o intervalo inclui tanto o "de" e "para" páginas, o número total de páginas é "<xref:System.Windows.Controls.PageRange.PageTo%2A>  -  <xref:System.Windows.Controls.PageRange.PageFrom%2A> + 1".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto é testada.</param>
+        <summary>Testa se um objeto de tipo desconhecido é igual a este <see cref="T:System.Windows.Controls.PageRange" />.</summary>
+        <returns>
+          <see langword="true" />Se o objeto é do tipo <see cref="T:System.Windows.Controls.PageRange" /> e é igual a este <see cref="T:System.Windows.Controls.PageRange" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (System.Windows.Controls.PageRange pageRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(valuetype System.Windows.Controls.PageRange pageRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.Equals(System.Windows.Controls.PageRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageRange" Type="System.Windows.Controls.PageRange" />
+      </Parameters>
+      <Docs>
+        <param name="pageRange">O <see cref="T:System.Windows.Controls.PageRange" /> testados.</param>
+        <summary>Testes se um <see cref="T:System.Windows.Controls.PageRange" /> é igual a este <see cref="T:System.Windows.Controls.PageRange" />.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.Controls.PageRange" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o valor de código hash para o <see cref="T:System.Windows.Controls.PageRange" />.</summary>
+        <returns>O valor de código hash para o <see cref="T:System.Windows.Controls.PageRange" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.Controls.PageRange pr1, System.Windows.Controls.PageRange pr2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.Controls.PageRange pr1, valuetype System.Windows.Controls.PageRange pr2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.op_Equality(System.Windows.Controls.PageRange,System.Windows.Controls.PageRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pr1" Type="System.Windows.Controls.PageRange" />
+        <Parameter Name="pr2" Type="System.Windows.Controls.PageRange" />
+      </Parameters>
+      <Docs>
+        <param name="pr1">O primeiro <see cref="T:System.Windows.Controls.PageRange" />.</param>
+        <param name="pr2">O segundo <see cref="T:System.Windows.Controls.PageRange" />.</param>
+        <summary>Define o operador "= =" para testar se dois especificados <see cref="T:System.Windows.Controls.PageRange" /> objetos são iguais.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.Controls.PageRange" /> objetos forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é<xref:System.Windows.Controls.PageRange.Equals*?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.Controls.PageRange pr1, System.Windows.Controls.PageRange pr2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.Controls.PageRange pr1, valuetype System.Windows.Controls.PageRange pr2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.op_Inequality(System.Windows.Controls.PageRange,System.Windows.Controls.PageRange)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pr1" Type="System.Windows.Controls.PageRange" />
+        <Parameter Name="pr2" Type="System.Windows.Controls.PageRange" />
+      </Parameters>
+      <Docs>
+        <param name="pr1">O primeiro <see cref="T:System.Windows.Controls.PageRange" />.</param>
+        <param name="pr2">O segundo <see cref="T:System.Windows.Controls.PageRange" />.</param>
+        <summary>Define o "! =" operador para testar se dois especificados <see cref="T:System.Windows.Controls.PageRange" /> são objetos *não* igual.</summary>
+        <returns>
+          <see langword="true" />Se os dois <see cref="T:System.Windows.Controls.PageRange" /> são objetos *não* iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[O método equivalente para esse operador é a negação de<xref:System.Windows.Controls.PageRange.Equals%2A?displayProperty=nameWithType>]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageFrom">
+      <MemberSignature Language="C#" Value="public int PageFrom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageFrom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.PageRange.PageFrom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de página da primeira página do intervalo.</summary>
+        <value>O número da página com base em 1 da primeira página do intervalo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.PageRange.PageFrom%2A> é de propriedade base 1; número da página 1 é a primeira página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageTo">
+      <MemberSignature Language="C#" Value="public int PageTo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageTo" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.PageRange.PageTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número da última página do intervalo.</summary>
+        <value>O número da página com base em 1 da última página do intervalo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.PageRange.PageTo%2A> é de propriedade base 1; número da página 1 é a primeira página.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.PageRange.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma representação de cadeia de caracteres do intervalo.</summary>
+        <returns>Uma cadeia de caracteres que representa o intervalo de páginas no formato "<see cref="P:System.Windows.Controls.PageRange.PageFrom" /><c>-</c><see cref="P:System.Windows.Controls.PageRange.PageTo" />".</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

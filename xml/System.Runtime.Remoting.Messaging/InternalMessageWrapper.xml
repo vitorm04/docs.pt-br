@@ -1,0 +1,83 @@
+<Type Name="InternalMessageWrapper" FullName="System.Runtime.Remoting.Messaging.InternalMessageWrapper">
+  <TypeSignature Language="C#" Value="public class InternalMessageWrapper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InternalMessageWrapper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Messaging.InternalMessageWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula os dados de comunicação remota para passagem entre Coletores de mensagem, para solicitações do cliente para o servidor ou para as respostas subsequentes.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.InternalMessageWrapper> classe é a classe base para o <xref:System.Runtime.Remoting.Messaging.MethodCallMessageWrapper> e <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> classes, que quebrar mensagens para chamadas de método em objetos remotos.  
+  
+ <xref:System.Runtime.Remoting.Messaging.InternalMessageWrapper>é usado pela infraestrutura do .NET Framework. Você não precisa criar instâncias de <xref:System.Runtime.Remoting.Messaging.InternalMessageWrapper>, <xref:System.Runtime.Remoting.Messaging.MethodCallMessageWrapper>, e <xref:System.Runtime.Remoting.Messaging.MethodReturnMessageWrapper> classes diretamente.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InternalMessageWrapper (System.Runtime.Remoting.Messaging.IMessage msg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Remoting.Messaging.IMessage msg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Messaging.InternalMessageWrapper.#ctor(System.Runtime.Remoting.Messaging.IMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Runtime.Remoting.Messaging.IMessage" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Uma mensagem que atua como uma chamada de método de saída em um objeto remoto ou como a resposta subsequente.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Remoting.Messaging.InternalMessageWrapper" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Messaging.InternalMessageWrapper> classe é usada pela infraestrutura de comunicação remota do .NET Framework. Você não precisa criar um <xref:System.Runtime.Remoting.Messaging.InternalMessageWrapper> diretamente.  
+  
+ O <xref:System.Runtime.Remoting.Messaging.IMessage> parâmetro também implementa a interface derivada, <xref:System.Runtime.Remoting.Messaging.IMethodMessage>, que indica que a mensagem atua como uma solicitação ou como uma resposta em uma chamada de método remoto. O <xref:System.Runtime.Remoting.Messaging.IMethodCallMessage> e <xref:System.Runtime.Remoting.Messaging.IMethodReturnMessage> interfaces, por sua vez, herdam o <xref:System.Runtime.Remoting.Messaging.IMethodMessage> interface.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="WrappedMessage">
+      <MemberSignature Language="C#" Value="protected System.Runtime.Remoting.Messaging.IMessage WrappedMessage;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Runtime.Remoting.Messaging.IMessage WrappedMessage" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.Remoting.Messaging.InternalMessageWrapper.WrappedMessage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa a solicitação ou resposta <see cref="T:System.Runtime.Remoting.Messaging.IMethodMessage" /> interface que é encapsulado pelo wrapper de mensagem.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

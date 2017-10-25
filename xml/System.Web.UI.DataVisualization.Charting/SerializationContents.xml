@@ -1,0 +1,94 @@
+<Type Name="SerializationContents" FullName="System.Web.UI.DataVisualization.Charting.SerializationContents">
+  <TypeSignature Language="C#" Value="public enum SerializationContents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SerializationContents extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.SerializationContents" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de conteúdo do gráfico a ser serializado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.SerializationContents> enumeração representa o tipo de conteúdo do gráfico a ser serializado. Essa enumeração é usada com a <xref:System.Web.UI.DataVisualization.Charting.ChartSerializer.Content%2A> e <xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateContent%2A> propriedades.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SerializationContents All = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SerializationContents.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialize todas as informações de gráfico. Isso inclui todos os valores de ponto de dados e propriedades de aparência.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Appearance">
+      <MemberSignature Language="C#" Value="Appearance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SerializationContents Appearance = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Appearance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialize todas as propriedades de aparência, como o estilo de cor ou linha, se elas tiverem valores não padrão</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="Data" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SerializationContents Data = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Data" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialize os valores de dados de todas as séries do gráfico. Não inclui propriedades de aparência.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.DataVisualization.Charting.SerializationContents Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.DataVisualization.Charting.SerializationContents.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.SerializationContents</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Serialize todo o conteúdo do gráfico não padrão. Isso inclui propriedades de aparência, série e pontos de dados, eixo mínimos/máximos e assim por diante.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

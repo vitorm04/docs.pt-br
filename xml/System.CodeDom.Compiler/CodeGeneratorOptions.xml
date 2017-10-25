@@ -1,0 +1,238 @@
+<Type Name="CodeGeneratorOptions" FullName="System.CodeDom.Compiler.CodeGeneratorOptions">
+  <TypeSignature Language="C#" Value="public class CodeGeneratorOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CodeGeneratorOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.Compiler.CodeGeneratorOptions" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um conjunto de opções usadas por um gerador de código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.Compiler.CodeGeneratorOptions>é passado para os métodos de geração de código de um <xref:System.CodeDom.Compiler.ICodeGenerator> implementação para especificar as opções usadas durante a geração de código.  
+  
+ O <xref:System.CodeDom.Compiler.CodeGeneratorOptions.IndentString%2A> propriedade especifica a cadeia de caracteres a ser usado para cada recuo de espaçamento. O <xref:System.CodeDom.Compiler.CodeGeneratorOptions.BracingStyle%2A> propriedade especifica o estilo de posicionamento de chaves que indica os limites dos blocos de código. O <xref:System.CodeDom.Compiler.CodeGeneratorOptions.ElseOnClosing%2A> propriedade especifica se deve acrescentar uma `else`, `catch`, ou `finally` bloco, incluindo os colchetes, na linha de fechamento de cada `if` ou `try` bloco. O <xref:System.CodeDom.Compiler.CodeGeneratorOptions.BlankLinesBetweenMembers%2A> propriedade especifica se deseja inserir linhas em branco entre membros.  
+  
+ Um <xref:System.CodeDom.Compiler.ICodeGenerator> implementação pode fornecer código personalizado opções de geração de que você pode definir ou passar dados para usar o <xref:System.CodeDom.Compiler.CodeGeneratorOptions.Item%2A> indexador de dicionário, que um gerador de código pode pesquisar para localizar as opções de geração de código adicional.  
+  
+> [!NOTE]
+>  Esta classe contém uma demanda de link e uma demanda de herança no nível de classe que se aplica a todos os membros. Um <xref:System.Security.SecurityException> é lançado quando o chamador imediato ou a classe derivada não tem permissão de confiança total. Para obter detalhes sobre as exigências de segurança, consulte [demandas de Link](~/docs/framework/misc/link-demands.md) e [demandas de herança](http://msdn.microsoft.com/en-us/28b9adbb-8f08-4f10-b856-dbf59eb932d9).  
+  
+   
+  
+## Examples  
+ [!code-cpp[CodeGeneratorOptionsExample#1](~/samples/snippets/cpp/VS_Snippets_CLR/CodeGeneratorOptionsExample/CPP/class1.cpp#1)]
+ [!code-csharp[CodeGeneratorOptionsExample#1](~/samples/snippets/csharp/VS_Snippets_CLR/CodeGeneratorOptionsExample/CS/class1.cs#1)]
+ [!code-vb[CodeGeneratorOptionsExample#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeGeneratorOptionsExample/VB/class1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+    <permission cref="F:System.Security.Permissions.SecurityAction.InheritanceDemand">para confiança total de herdeiros. Esta classe não pode ser herdada pelo código parcialmente confiável.</permission>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeGeneratorOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.Compiler.CodeGeneratorOptions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.Compiler.CodeGeneratorOptions" />.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="F:System.Security.Permissions.SecurityAction.LinkDemand">para confiança total do chamador imediato. Esta classe não pode ser usada pelo código parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BlankLinesBetweenMembers">
+      <MemberSignature Language="C#" Value="public bool BlankLinesBetweenMembers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BlankLinesBetweenMembers" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.BlankLinesBetweenMembers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deseja inserir linhas em branco entre membros.</summary>
+        <value>
+          <see langword="true" />Se linhas em branco devem ser inseridas; Caso contrário, <see langword="false" />. Por padrão, o valor dessa propriedade é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BracingStyle">
+      <MemberSignature Language="C#" Value="public string BracingStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BracingStyle" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.BracingStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de chaves a ser usado.</summary>
+        <value>Uma cadeia de caracteres que contém o estilo de chaves a ser usado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão dessa propriedade é `Block`, que indica que o código deve ser gerado para que as chaves iniciar na mesma linha como a instrução ou uma declaração que estão associados. Um valor da propriedade `C` indica que as chaves iniciado na linha após a declaração ou instrução que eles estão associados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElseOnClosing">
+      <MemberSignature Language="C#" Value="public bool ElseOnClosing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ElseOnClosing" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.ElseOnClosing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se deve acrescentar uma <see langword="else" />, <see langword="catch" />, ou <see langword="finally" /> bloco, incluindo os colchetes, na linha de fechamento de cada anterior <see langword="if" /> ou <see langword="try" /> bloco.</summary>
+        <value>
+          <see langword="true" />Se uma pessoa deve ser acrescentado; Caso contrário, <see langword="false" />. O valor padrão dessa propriedade é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndentString">
+      <MemberSignature Language="C#" Value="public string IndentString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IndentString" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.IndentString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres a ser usado para recuos.</summary>
+        <value>Uma cadeia de caracteres que contém os caracteres a ser usado para recuos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão dessa propriedade é "/ ---/" (quatro espaços).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="index">O nome associado ao objeto para recuperar.</param>
+        <summary>Obtém ou define o objeto no índice especificado.</summary>
+        <value>O objeto associado com o nome especificado. Se nenhum objeto associado com o nome especificado existir na coleção, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse dicionário fornece um mecanismo de extensibilidade para desenvolvedores fornecer dados para recursos personalizados de um gerador de código. Um gerador de código deve implementar esses recursos e suporte a verificar o dicionário para que isso seja útil.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbatimOrder">
+      <MemberSignature Language="C#" Value="public bool VerbatimOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool VerbatimOrder" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.Compiler.CodeGeneratorOptions.VerbatimOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se é para gerar os membros na ordem em que ocorrem em coleções de membro.</summary>
+        <value>
+          <see langword="true" />para gerar os membros na ordem em que ocorrem na coleção de membros; Caso contrário, <see langword="false" />. O valor padrão dessa propriedade é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão gera membros por seu tipo, por exemplo, campo, membro, construtor ou propriedade.  Um gerador de código pode usar o <xref:System.CodeDom.Compiler.CodeGeneratorOptions.VerbatimOrder%2A> propriedade injetar #region blocos em código, portanto, a alteração da ordem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,56 @@
+<Type Name="IXamlNameProvider" FullName="System.Xaml.IXamlNameProvider">
+  <TypeSignature Language="C#" Value="public interface IXamlNameProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXamlNameProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IXamlNameProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um serviço que é usado durante a salvar e operações para um objeto de entrada e retornar um nome XAML de gravação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse serviço só é relevante para a gravação de operação de caminho, como quando um <xref:System.Xaml.XamlXmlWriter> serializa um uso de conversor de valor atribuído e o conversor de tipo ou valor serializador dá suporte à serialização. Um <xref:System.Xaml.XamlObjectWriter> não fornecer o serviço em seu contexto de serviço.  
+  
+ Um conversor de tipo ou um serializador de valor pode acessar esse serviço usando um contexto de esquema disponível como um provedor de serviços e, em seguida, obter o <xref:System.Xaml.IXamlNameProvider> serviço que é implementado nesse contexto. Para obter mais informações, consulte [conversores de tipo e extensões de marcação para XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) e [contextos de serviço disponíveis para conversores de tipo e extensões de marcação](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ Para usar corretamente os nomes definidos em XAML, você também precisará obter informações sobre a ação namescope XAML e o <xref:System.Windows.Markup.INameScope> valor que o representa.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetName">
+      <MemberSignature Language="C#" Value="public string GetName (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetName(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xaml.IXamlNameProvider.GetName(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto para obter o nome.</param>
+        <summary>Recupera o nome XAML do objeto especificado.</summary>
+        <returns>O valor de nome XAML do objeto solicitado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação de serviços XAML do .NET Framework padrão se baseia em um contexto de esquema XAML que pode relatar os nomes de objeto que está sendo usados no gráfico de objeto de tempo de execução.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

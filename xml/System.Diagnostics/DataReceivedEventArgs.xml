@@ -1,0 +1,95 @@
+<Type Name="DataReceivedEventArgs" FullName="System.Diagnostics.DataReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class DataReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.DataReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Diagnostics.Process</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de <see cref="E:System.Diagnostics.Process.OutputDataReceived" /> e de <see cref="E:System.Diagnostics.Process.ErrorDataReceived" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ De forma assíncrona coletar o redirecionamento <xref:System.Diagnostics.Process.StandardOutput%2A> ou <xref:System.Diagnostics.Process.StandardError%2A> fluxo de saída de um processo, você deve criar um método que trata os eventos de saída do fluxo redirecionado. O método do manipulador de eventos é chamado quando o processo grava o fluxo redirecionado. O delegado de evento chama o manipulador de eventos com uma instância do <xref:System.Diagnostics.DataReceivedEventArgs>. O <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> propriedade contém a linha de texto que gravou o processo para o fluxo redirecionado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra como executar operações de leitura assíncronas no redirecionamento <xref:System.Diagnostics.Process.StandardOutput%2A> fluxo do `sort` comando. O `sort` comando é um aplicativo de console que lê e classifica a entrada de texto.  
+  
+ O exemplo cria um delegado de evento para o `SortOutputHandler` manipulador de eventos e o associa a <xref:System.Diagnostics.Process.OutputDataReceived> eventos. O manipulador de eventos recebe linhas de texto do redirecionamento <xref:System.Diagnostics.Process.StandardOutput%2A> fluxo, formata o texto e escreve o texto na tela.  
+  
+ [!code-cpp[Process_AsyncStreams#1](~/samples/snippets/cpp/VS_Snippets_CLR/process_asyncstreams/CPP/sort_async.cpp#1)]
+ [!code-csharp[Process_AsyncStreams#1](~/samples/snippets/csharp/VS_Snippets_CLR/process_asyncstreams/CS/sort_async.cs#1)]
+ [!code-vb[Process_AsyncStreams#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/process_asyncstreams/VB/sort_async.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public string Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Data" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.DataReceivedEventArgs.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Diagnostics.Process</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a linha de caracteres que foi gravada em um fluxo de saída <see cref="T:System.Diagnostics.Process" /> redirecionado.</summary>
+        <value>A linha que foi escrita por uma <see cref="T:System.Diagnostics.Process" /> associada ao seu fluxo redirecionado <see cref="P:System.Diagnostics.Process.StandardOutput" /> ou <see cref="P:System.Diagnostics.Process.StandardError" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você redirecionar o <xref:System.Diagnostics.Process.StandardOutput%2A> ou <xref:System.Diagnostics.Process.StandardError%2A> fluxo de um <xref:System.Diagnostics.Process> ao manipulador de eventos, um evento é gerado sempre que o processo grava uma linha para o fluxo redirecionado. O <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> propriedade é a linha que o <xref:System.Diagnostics.Process> gravou o fluxo de saída redirecionado. O manipulador de eventos pode usar o <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> para filtrar a saída do processo ou gravar a saída para um local alternativo. Por exemplo, você pode criar um manipulador de eventos que armazena todas as linhas de saída de erro em um arquivo de log de erros designado.  
+  
+ Uma linha é definida como uma cadeia de caracteres seguido por uma linha de feed ("\n") ou um retorno de carro imediatamente seguido por uma linha de alimentação ("\r\n"). Os caracteres de linha são codificados usando a página de código ANSI padrão sistema. O <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> propriedade não inclua o retorno de carro terminação ou alimentação de linha.  
+  
+ Quando o fluxo redirecionado é fechado, uma linha nulo é enviada ao manipulador de eventos. Verifique se as verificações de manipulador de eventos de <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> propriedade adequadamente para acessá-lo. Por exemplo, você pode usar o método estático <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> para validar o <xref:System.Diagnostics.DataReceivedEventArgs.Data%2A> propriedade em seu manipulador de eventos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir ilustra um manipulador de eventos simples associado a <xref:System.Diagnostics.Process.OutputDataReceived> eventos. O manipulador de eventos recebe linhas de texto do redirecionamento <xref:System.Diagnostics.Process.StandardOutput%2A> fluxo, formata o texto e escreve o texto na tela.  
+  
+ [!code-cpp[Process_AsyncStreams#4](~/samples/snippets/cpp/VS_Snippets_CLR/process_asyncstreams/CPP/datareceivedevent.cpp#4)]
+ [!code-csharp[Process_AsyncStreams#4](~/samples/snippets/csharp/VS_Snippets_CLR/process_asyncstreams/CS/datareceivedevent.cs#4)]
+ [!code-vb[Process_AsyncStreams#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/process_asyncstreams/VB/datareceivedevent.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

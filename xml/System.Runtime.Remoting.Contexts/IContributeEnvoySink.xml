@@ -1,0 +1,63 @@
+<Type Name="IContributeEnvoySink" FullName="System.Runtime.Remoting.Contexts.IContributeEnvoySink">
+  <TypeSignature Language="C#" Value="public interface IContributeEnvoySink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContributeEnvoySink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContributeEnvoySink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contribui com um coletor envoy de mensagem no lado do cliente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Contexts.IContributeEnvoySink> interface é implementada por propriedades de contexto do servidor <xref:System.Runtime.Remoting.Contexts.Context> classe que deseja contribuir um coletor envoy de mensagem no lado do cliente. A cadeia de envoy do servidor é composta dessas propriedades de contexto que implementam <xref:System.Runtime.Remoting.Contexts.IContributeEnvoySink>. A cadeia envoy reside no lado do cliente e atua como um representante da mensagem correspondente Coletores de propriedades de contexto do servidor.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetEnvoySink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink GetEnvoySink (MarshalByRefObject obj, System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetEnvoySink(class System.MarshalByRefObject obj, class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContributeEnvoySink.GetEnvoySink(System.MarshalByRefObject,System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto de servidor para o qual a cadeia está sendo criada.</param>
+        <param name="nextSink">A cadeia de Coletores composto até o momento.</param>
+        <summary>Usa o primeiro coletor da cadeia de Coletores composto até o momento e, em seguida, o coletor de mensagem na frente da cadeia já formada se encadeia.</summary>
+        <returns>A cadeia de composição de coletor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Contexts.IContributeEnvoySink.GetEnvoySink%2A> método é usado como uma otimização para criar um coletor envoy quando o destino for um contexto diferente no mesmo domínio do aplicativo e é usado pela operação Wrap.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

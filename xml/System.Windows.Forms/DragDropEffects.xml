@@ -1,0 +1,143 @@
+<Type Name="DragDropEffects" FullName="System.Windows.Forms.DragDropEffects">
+  <TypeSignature Language="C#" Value="public enum DragDropEffects" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DragDropEffects extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DragDropEffects" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os possíveis efeitos de uma operação do tipo "arrastar e soltar".</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é usada pelas classes: <xref:System.Windows.Forms.DragEventArgs>, <xref:System.Windows.Forms.GiveFeedbackEventArgs>, e <xref:System.Windows.Forms.Control>.  
+  
+ Você pode usar <xref:System.Windows.Forms.DragDropEffects> para exibir os ponteiros do mouse diferentes para operações de arrastar e soltar. Por exemplo, você pode exibir um símbolo de adição de uma operação de arrastar e soltar de cópia, um símbolo de seta para uma operação de arrastar e soltar de movimentação, ou um círculo vermelho com uma linha e do símbolo para nenhum operação de arrastar e soltar.  
+  
+ Se você quiser descartar dados em uma posição no destino que não estiver visível, você pode rolar o destino enquanto arrasta. Se um destino não dá suporte a rolagem, você deve garantir que a posição de soltar está visível no destino antes de iniciar a operação de arrastar e soltar. Esses são alguns cenários quando talvez seja necessário rolar um destino:  
+  
+-   Você estiver arrastando o texto em um documento e você deseja descartar o texto em uma posição não é visível na janela do documento.  
+  
+-   Você estiver arrastando um arquivo em uma árvore de arquivos, e você deseja descartar o arquivo em um nó não é visível na árvore de arquivos.  
+  
+   
+  
+## Examples  
+ Este exemplo de código demonstra como usar o <xref:System.Windows.Forms.DragDropEffects.Copy> enumeração quando o usuário move o mouse sobre o destino durante uma operação de arrastar e soltar. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método o <xref:System.Windows.Forms.Control> classe. Consulte o <xref:System.Windows.Forms.Control.DoDragDrop%2A> método para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CPP/form1.cpp#4)]
+ [!code-csharp[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/CS/form1.cs#4)]
+ [!code-vb[System.Windows.Forms.Control.DoDragDrop#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Control.DoDragDrop/VB/form1.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects All = int32(-2147483645)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A combinação dos efeitos <see cref="F:System.Windows.DragDropEffects.Copy" />, <see cref="F:System.Windows.Forms.DragDropEffects.Move" /> e <see cref="F:System.Windows.Forms.DragDropEffects.Scroll" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="Copy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Copy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Copy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados da fonte da operação arrastar são copiados para a reprodução automática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Link">
+      <MemberSignature Language="C#" Value="Link" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Link = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Link" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados da fonte da operação arrastar são vinculados à reprodução automática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="Move" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Move = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Move" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados da fonte da operação arrastar são movidos para a reprodução automática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A reprodução automática não aceita os dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="Scroll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.DragDropEffects Scroll = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.DragDropEffects.Scroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O destino pode ser rolado enquanto arrasta para localizar uma posição de soltar que no momento não está visível no destino.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

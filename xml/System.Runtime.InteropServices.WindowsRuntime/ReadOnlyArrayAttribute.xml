@@ -1,0 +1,71 @@
+<Type Name="ReadOnlyArrayAttribute" FullName="System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ReadOnlyArrayAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ReadOnlyArrayAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Parameter, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Quando aplicado a um parâmetro de matriz em um componente de tempo de execução do Windows, especifica que o conteúdo da matriz que é passado para esse parâmetro é usado somente para entrada. O chamador espera que a matriz não seja alterada pela chamada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um parâmetro de matriz em seu [!INCLUDE[wrt](~/includes/wrt-md.md)] componente é transmitido por valor (`ByVal` no Visual Basic), você deve aplicar um dos seguintes atributos a ele:  
+  
+-   Aplicar o <xref:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute> se você pretende que o conteúdo da matriz a ser usado para entrada apenas de atributo.  
+  
+-   Aplicar o <xref:System.Runtime.InteropServices.WindowsRuntime.WriteOnlyArrayAttribute> se você pretende que o conteúdo da matriz a ser usada apenas de saída de atributo (ou seja, o método define o conteúdo da matriz, mas não lê-los).  
+  
+ Aplicar os atributos para um parâmetro causa um erro. Para obter mais informações, inclusive o padrão de fazer alterações em uma matriz, consulte [passando matrizes para um componente de tempo de execução do Windows](http://go.microsoft.com/fwlink/?LinkId=251026) no Centro de desenvolvimento do Windows.  
+  
+> [!IMPORTANT]
+>  Parâmetros que têm o <xref:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute> se comportam de maneira diferente dependendo se o chamador é escrito em código nativo ou em código gerenciado. Se o chamador é o código nativo (JavaScript ou [!INCLUDE[cppwrt](~/includes/cppwrt-md.md)]), a matriz é copiada quando a chamada cruza o limite ABI (interface binária) do aplicativo. Os elementos são convertidos, se necessário. Portanto, quaisquer alterações acidentais feitas pelo método em uma matriz somente entrada não são visíveis para o autor da chamada.  
+>   
+>  Se o chamador é gerenciado código, a matriz não é copiado. A matriz original estará disponível para o método chamado, como estaria em qualquer chamada de método no .NET Framework. Como o conteúdo da matriz é mutável no código do .NET Framework, quaisquer alterações feitas pelo método na matriz são visíveis para o autor da chamada. Isso é importante lembrar porque ele afeta os testes de unidade escritos para um [!INCLUDE[wrt](~/includes/wrt-md.md)] componente. Se os testes forem escritos em código gerenciado, o conteúdo de uma matriz parecerá ser mutável durante o teste.  
+  
+ Aplicar esse atributo para um parâmetro que tem o <xref:System.Runtime.InteropServices.InAttribute> ou <xref:System.Runtime.InteropServices.OutAttribute> atributo causa um erro quando o módulo é exportado. Aplicando o atributo para um `out` parâmetro também causa um erro.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReadOnlyArrayAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices.WindowsRuntime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.WindowsRuntime.ReadOnlyArrayAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

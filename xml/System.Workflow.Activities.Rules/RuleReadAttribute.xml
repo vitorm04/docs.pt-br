@@ -1,0 +1,70 @@
+<Type Name="RuleReadAttribute" FullName="System.Workflow.Activities.Rules.RuleReadAttribute">
+  <TypeSignature Language="C#" Value="public sealed class RuleReadAttribute : System.Workflow.Activities.Rules.RuleReadWriteAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RuleReadAttribute extends System.Workflow.Activities.Rules.RuleReadWriteAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.RuleReadAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.Activities.Rules.RuleReadWriteAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method | System.AttributeTargets.Property, AllowMultiple=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica que uma propriedade é lido por um <see cref="T:System.Workflow.Activities.Rules.Rule" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este atributo é usado para dar suporte a um modelo de encadeamento direta que causa a reavaliação de regras com base na alteração de estado. O <xref:System.Workflow.Activities.Rules.RuleReadAttribute>, <xref:System.Workflow.Activities.Rules.RuleInvokeAttribute>, e <xref:System.Workflow.Activities.Rules.RuleWriteAttribute> classes cada indicam as propriedades usadas para ler uma condição, uma ação de gravação e invocar um método. Esses atributos permitem o fluxo de trabalho reavaliar apenas regras que alteram a saída final.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleReadAttribute (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleReadAttribute.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho lógico do membro ler pela condição.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleReadAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RuleReadAttribute (string path, System.Workflow.Activities.Rules.RuleAttributeTarget target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, valuetype System.Workflow.Activities.Rules.RuleAttributeTarget target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.RuleReadAttribute.#ctor(System.String,System.Workflow.Activities.Rules.RuleAttributeTarget)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="target" Type="System.Workflow.Activities.Rules.RuleAttributeTarget" />
+      </Parameters>
+      <Docs>
+        <param name="path">O caminho lógico do membro ler pela condição.</param>
+        <param name="target">
+          <see cref="T:System.Workflow.Activities.Rules.RuleAttributeTarget" />enumeração; Especifica se o caminho é relativo a <see langword="this" /> ou para um parâmetro de método.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.RuleReadAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

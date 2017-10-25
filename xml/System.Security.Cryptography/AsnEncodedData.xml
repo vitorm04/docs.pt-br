@@ -1,0 +1,426 @@
+<Type Name="AsnEncodedData" FullName="System.Security.Cryptography.AsnEncodedData">
+  <TypeSignature Language="C#" Value="public class AsnEncodedData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AsnEncodedData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.AsnEncodedData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa dados codificados por ASN.1 (Abstract Syntax Notation Um).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Abstrato sintaxe notação um ASN. 1 (), que é definido em CCITT Recomendação X.208, é uma maneira de especificar objetos abstratos que serão transmitidos em série. O conjunto de regras de ASN. 1 para representar esses objetos como cadeias de caracteres de uns e os zeros é chamado de codificação DER (regras distintas) e é definido em CCITT recomendação x. 509, seção 8.7. Esses métodos de codificação estão sendo usados pelo namespace de criptografia no .NET Framework.  
+  
+ Observe que, se for encontrado um tipo de dados desconhecido ao acessar uma instância dessa classe, dados são retornados como uma cadeia de caracteres hexadecimal.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AsnEncodedData ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedData.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Cryptography.AsnEncodedData" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsnEncodedData (byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">Uma matriz de bytes que contém dados codificados abstrata sintaxe um ASN. 1 notação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.AsnEncodedData" /> classe usando uma matriz de bytes.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsnEncodedData (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">Uma instância da classe <see cref="T:System.Security.Cryptography.AsnEncodedData" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.AsnEncodedData" /> classe usando uma instância do <see cref="T:System.Security.Cryptography.AsnEncodedData" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor faz uma cópia do <xref:System.Security.Cryptography.AsnEncodedData> instância.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asnEncodedData" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsnEncodedData (System.Security.Cryptography.Oid oid, byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Security.Cryptography.Oid oid, unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.Security.Cryptography.Oid,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.Security.Cryptography.Oid" />
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Um objeto <see cref="T:System.Security.Cryptography.Oid" />.</param>
+        <param name="rawData">Uma matriz de bytes que contém dados codificados abstrata sintaxe um ASN. 1 notação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.AsnEncodedData" /> classe usando um <see cref="T:System.Security.Cryptography.Oid" /> objeto e uma matriz de bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AsnEncodedData (string oid, byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string oid, unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.String,System.Byte[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="oid" Type="System.String" />
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="oid">Uma cadeia de caracteres que representa <see cref="T:System.Security.Cryptography.Oid" /> informações.</param>
+        <param name="rawData">Uma matriz de bytes que contém dados codificados abstrata sintaxe um ASN. 1 notação.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Cryptography.AsnEncodedData" /> classe usando uma matriz de bytes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyFrom">
+      <MemberSignature Language="C#" Value="public virtual void CopyFrom (System.Security.Cryptography.AsnEncodedData asnEncodedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyFrom(class System.Security.Cryptography.AsnEncodedData asnEncodedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedData.CopyFrom(System.Security.Cryptography.AsnEncodedData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asnEncodedData" Type="System.Security.Cryptography.AsnEncodedData" />
+      </Parameters>
+      <Docs>
+        <param name="asnEncodedData">O <see cref="T:System.Security.Cryptography.AsnEncodedData" /> objeto para basear o novo objeto.</param>
+        <summary>Copia informações de um <see cref="T:System.Security.Cryptography.AsnEncodedData" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método copia informações para um <xref:System.Security.Cryptography.AsnEncodedData> objeto baseado em especificado <xref:System.Security.Cryptography.AsnEncodedData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="asnEncodedData" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public virtual string Format (bool multiLine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Format(bool multiLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Cryptography.AsnEncodedData.Format(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiLine" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="multiLine">
+          <see langword="true" /> se a cadeia de caracteres retornada precisar conter retornos de carro; caso contrário, <see langword="false" />.</param>
+        <summary>Retorna uma versão formatada dos dados codificados em ASN.1 (Abstract Syntax Notation One) como uma cadeia de caracteres.</summary>
+        <returns>Uma cadeia de caracteres formatada que representa os dados codificados em ASN.1 (Abstract Syntax Notation One).</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este método se você precisa imprimir dados codificados abstrata sintaxe um ASN. 1 notação ou as informações para uma caixa de texto de saída. Use o `multiLine` parâmetro para controlar o layout da saída.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oid">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.Oid Oid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.Oid Oid" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedData.Oid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.Oid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor <see cref="T:System.Security.Cryptography.Oid" /> para um objeto <see cref="T:System.Security.Cryptography.AsnEncodedData" />.</summary>
+        <value>Um objeto <see cref="T:System.Security.Cryptography.Oid" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade pode ser usada para fornecer informações sobre os dados codificados em abstrata sintaxe um ASN. 1 notação, como o algoritmo usado para criptografar os dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawData">
+      <MemberSignature Language="C#" Value="public byte[] RawData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] RawData" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Cryptography.AsnEncodedData.RawData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Encoding</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os dados codificados em ASN.1 (Abstract Syntax Notation One) representados em uma matriz de bytes.</summary>
+        <value>Uma matriz de bytes que representa os dados codificados em ASN.1 (Abstract Syntax Notation One).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade é a maneira mais fácil acessar as informações em um <xref:System.Security.Cryptography.AsnEncodedData> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Security.Cryptography.AsnEncodedData> classe.  
+  
+ [!code-cpp[Cryptography.AsnEncodedData#1](~/samples/snippets/cpp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CPP/asnencodeddata.cpp#1)]
+ [!code-csharp[Cryptography.AsnEncodedData#1](~/samples/snippets/csharp/VS_Snippets_CLR/Cryptography.AsnEncodedData/CS/asnencodeddata.cs#1)]
+ [!code-vb[Cryptography.AsnEncodedData#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.AsnEncodedData/VB/asnencodeddata.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

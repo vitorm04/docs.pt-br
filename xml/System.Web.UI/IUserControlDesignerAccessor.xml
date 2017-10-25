@@ -1,0 +1,66 @@
+<Type Name="IUserControlDesignerAccessor" FullName="System.Web.UI.IUserControlDesignerAccessor">
+  <TypeSignature Language="C#" Value="public interface IUserControlDesignerAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IUserControlDesignerAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IUserControlDesignerAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define as propriedades que permitem que o designer acessar informações sobre um controle de usuário em tempo de design.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InnerText">
+      <MemberSignature Language="C#" Value="public string InnerText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InnerText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IUserControlDesignerAccessor.InnerText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém ou define o texto entre as marcas de abertura e fechamento de um controle de usuário.</summary>
+        <value>O texto colocado entre as marcas de abertura e fechamento de um controle de usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IUserControlDesignerAccessor.InnerText%2A> pelo designer, a propriedade é usada para especificar ou determinar o texto entre as marcas de abertura e fechamento de um controle de usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="public string TagName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IUserControlDesignerAccessor.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando implementada, obtém ou define o nome da marca completo do controle de usuário.</summary>
+        <value>O nome completo de marca do controle de usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IUserControlDesignerAccessor.TagName%2A> pelo designer, a propriedade é usada para especificar ou determinar o nome completo de marca do controle de usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

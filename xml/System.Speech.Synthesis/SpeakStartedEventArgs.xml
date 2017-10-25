@@ -1,0 +1,27 @@
+<Type Name="SpeakStartedEventArgs" FullName="System.Speech.Synthesis.SpeakStartedEventArgs">
+  <TypeSignature Language="C#" Value="public class SpeakStartedEventArgs : System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpeakStartedEventArgs extends System.Speech.Synthesis.PromptEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.SpeakStartedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Speech.Synthesis.PromptEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Retorna a notificação do evento <see cref="E:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma instância de <xref:System.Speech.Synthesis.SpeakStartedEventArgs> é criado quando o <xref:System.Speech.Synthesis.SpeechSynthesizer> objeto gera o <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> evento. O <xref:System.Speech.Synthesis.SpeechSynthesizer> gera o <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> evento quando ele começa falando um prompt usando qualquer um do <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A>, <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakAsync%2A>, <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsml%2A>, ou <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsmlAsync%2A> métodos.  
+  
+ O <xref:System.Speech.Synthesis.SpeakStartedEventArgs> classe não tem propriedades e não retorna dados a partir de <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> eventos. Ele é fornecido para habilitar os autores de aplicativos escrever manipuladores de eventos para o <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakStarted> evento.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

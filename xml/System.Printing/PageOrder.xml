@@ -1,0 +1,92 @@
+<Type Name="PageOrder" FullName="System.Printing.PageOrder">
+  <TypeSignature Language="C#" Value="public enum PageOrder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PageOrder extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Printing.PageOrder" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se um dispositivo de impressão imprime documentos de várias páginas de frente para trás ou para trás para frente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use os valores desse tipo principalmente para esses fins:  
+  
+-   Como membros do <xref:System.Printing.PrintCapabilities.PageOrderCapability%2A> coleção, uma propriedade de <xref:System.Printing.PrintCapabilities>, esses valores indicam o tipo de ordem de página que dá suporte a uma impressora. (O muitas impressoras oferecem suporte a ambos os tipos.)  
+  
+-   Como o valor da <xref:System.Printing.PrintTicket.PageOrder%2A> propriedade de um <xref:System.Printing.PrintTicket>, o valor direciona uma impressora para imprimir a saída em uma ordem especificada.  
+  
+ O **desconhecido** valor nunca é usado nas propriedades de <xref:System.Printing.PrintCapabilities> objetos.  
+  
+ Você nunca deve definir um <xref:System.Printing.PrintTicket> propriedade **desconhecido**. Se algum outro <xref:System.Printing.PrintTicket> produzir aplicativo tiver criado um *documento PrintTicket* que define o recurso de ordem de página como uma opção não reconhecida (ou seja, uma opção que não está definida no [esquema de impressão](http://go.microsoft.com/fwlink/?LinkId=186397)), uma <xref:System.Printing.PrintTicket> objeto em um aplicativo que é construído com esse documento terá **desconhecido** como o valor do <xref:System.Printing.PrintTicket.PageOrder%2A> propriedade.  
+  
+ Embora o <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes não podem ser herdadas, você pode estender o [imprimir esquema](http://go.microsoft.com/fwlink/?LinkId=186397) para reconhecer os recursos de dispositivo de impressão que não são tratados do <xref:System.Printing.PrintTicket> ou <xref:System.Printing.PrintCapabilities> classes. Para obter mais informações, consulte [NOTINBUILD: como: estender o esquema de impressão e criar novas Classes de sistema de impressão](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como testar os recursos da impressora e configurar o trabalho de impressão para tirar proveito deles.  
+  
+ [!code-cpp[XpsCreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[XpsCreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[XpsCreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Reverse">
+      <MemberSignature Language="C#" Value="Reverse" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrder Reverse = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrder.Reverse" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Saída imprime na ordem de trás para frente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Standard">
+      <MemberSignature Language="C#" Value="Standard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrder Standard = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrder.Standard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Saída é impressa na ordem de frente para trás.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Printing.PageOrder Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Printing.PageOrder.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Printing.PageOrder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O recurso (cujas opções são representadas por esta enumeração) é definido como uma opção não definida no [impressão esquema](http://go.microsoft.com/fwlink/?LinkId=186397).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

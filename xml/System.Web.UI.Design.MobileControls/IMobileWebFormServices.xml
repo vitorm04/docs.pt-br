@@ -1,0 +1,155 @@
+<Type Name="IMobileWebFormServices" FullName="System.Web.UI.Design.MobileControls.IMobileWebFormServices">
+  <TypeSignature Language="C#" Value="public interface IMobileWebFormServices" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IMobileWebFormServices" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.MobileControls.IMobileWebFormServices" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define uma interface para um componente do designer de página obter serviços de um host de designer, como Visual Studio 2005 em tempo de design. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todos os métodos nessa interface devem ser implementadas pelo host de design e disponibilizado para os componentes do designer nesta <xref:System.Web.UI.Design.MobileControls.IMobileWebFormServices> interface. Antes de tentar usar os métodos em um componente de designer personalizado, verifique se que o host de design, na verdade, implementa a interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearUndoStack">
+      <MemberSignature Language="C#" Value="public void ClearUndoStack ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearUndoStack() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.IMobileWebFormServices.ClearUndoStack" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os itens no designer do host **desfazer** cache em tempo de design. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desde o <xref:System.Web.UI.Design.MobileControls.IMobileWebFormServices.ClearUndoStack%2A> método é implementado pelo host do designer, verifique se ele existe antes de invocá-lo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCache">
+      <MemberSignature Language="C#" Value="public object GetCache (string controlID, object key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetCache(string controlID, object key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.IMobileWebFormServices.GetCache(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlID" Type="System.String" />
+        <Parameter Name="key" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="controlID">A ID do controle de contêiner.</param>
+        <param name="key">A chave para o item de cache.</param>
+        <summary>Obtém um item de cache do host do designer em tempo de design. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <returns>Um objeto do cache do host do designer.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desde o <xref:System.Web.UI.Design.MobileControls.IMobileWebFormServices.GetCache%2A> método é implementado pelo host do designer, verifique se ele existe antes de invocá-lo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshPageView">
+      <MemberSignature Language="C#" Value="public void RefreshPageView ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RefreshPageView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.IMobileWebFormServices.RefreshPageView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza a página no host de designer em tempo de design. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Desde o <xref:System.Web.UI.Design.MobileControls.IMobileWebFormServices.RefreshPageView%2A> método é implementado pelo host do designer, verifique se ele existe antes de invocá-lo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCache">
+      <MemberSignature Language="C#" Value="public void SetCache (string controlID, object key, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCache(string controlID, object key, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.IMobileWebFormServices.SetCache(System.String,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="controlID" Type="System.String" />
+        <Parameter Name="key" Type="System.Object" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="controlID">A ID do controle de contêiner.</param>
+        <param name="key">A chave para o item de cache.</param>
+        <param name="value">O item para armazenar em cache.</param>
+        <summary>Armazena um objeto no cache do host de designer em tempo de design. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRenderingRecursive">
+      <MemberSignature Language="C#" Value="public void UpdateRenderingRecursive (System.Web.UI.Control rootControl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateRenderingRecursive(class System.Web.UI.Control rootControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.MobileControls.IMobileWebFormServices.UpdateRenderingRecursive(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rootControl" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="rootControl">O controle de contêiner com o qual iniciar a atualização.</param>
+        <summary>Recursivamente atualiza o controle associado e cada um de seus controles filhos no host de design em tempo de design. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

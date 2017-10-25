@@ -1,0 +1,545 @@
+<Type Name="ReservationCollection" FullName="System.IO.Log.ReservationCollection">
+  <TypeSignature Language="C#" Value="public abstract class ReservationCollection : System.Collections.Generic.ICollection&lt;long&gt;, System.Collections.Generic.IEnumerable&lt;long&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ReservationCollection extends System.Object implements class System.Collections.Generic.ICollection`1&lt;int64&gt;, class System.Collections.Generic.IEnumerable`1&lt;int64&gt;, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Log.ReservationCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Log</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Int64&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Int64&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Gerencia a coleção de reserva de espaço feitas em uma sequência de registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa um conjunto de áreas de reserva que são feitas em uma sequência de registro. Adicionar itens à coleção aloca reservas de novo. Remover itens da coleção libera as reservas.  
+  
+ Um aplicativo reserva espaço no log quando ele tem dados que deve ser gravado no log no futuro, mas não é possível gravá-la imediatamente. As reservas de fornecem uma garantia de que os dados podem ser gravados no log quando os dados estão disponíveis a serem gravados. Ao usar logs, aplicativos geralmente reservam um ou mais registros de log em uma área de controle. Você deve reservar registros antes da anexação.  
+  
+ As reservas de podem ser usadas para garantir que uma operação pode ser concluída antes dos dados são confirmados. Caso contrário, as alterações serão revertidas. Ele também pode ser usado para gravar uma "ação de desfazer" no log. Durante uma operação de reversão, um Gerenciador de recursos transacional (RM) deve ser capaz de recuperar seu estado, se o RM for interrompido durante a operação de reversão. Usando uma área de reserva, um RM pode reservar espaço em um log antes de ser usada.  
+  
+ O <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A> método pode reservar espaço ou acrescentar dados, ou ambos, dependendo dos parâmetros que são especificados ao fazer a chamada. Como o progresso do trabalho em uma transação, um aplicativo pode acrescentar as informações de desfazer e reservar espaço para registros de compensação. Durante uma operação de reversão, registros de compensação que são criados indicam que foi desfeito no disco. Os registros são adicionados usando o espaço que foi reservado anteriormente. Isso garante que um RM não é executado fora do espaço de log, que é uma condição fatal, ao executar uma operação de reversão. Se um log ficar cheio durante uma transação, um aplicativo pode com segurança reverter uma transação sem corromper os dados duráveis.  
+  
+ CLFS é um sistema de registro em log ARIES compatíveis, destinam-se para log write-ahead. No registro em log write-ahead, um aplicativo grava um registro de desfazer antes de executar a operação, reservando a quantidade de espaço necessário no log para gravar um registro de compensação, que pode ser usado durante a reversão. Posteriormente, o espaço reservado é usado quando o registro de compensação, na verdade, ser gravado.  
+  
+ Aplicativos podem reservar ou acessar espaço longo em um determinado momento (são operações mutuamente exclusivas). Após uma confirmação de registro é gravado no log, um aplicativo pode liberar as reservas para os registros de compensação. Esta ação pode ser feita chamando a <xref:System.IO.Log.ReservationCollection.FreeReservation%2A> ou <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A> método. Chamando o <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A> método garante que a operação é atômica, ao chamar o <xref:System.IO.Log.ReservationCollection.FreeReservation%2A> método não.  
+  
+ Quando você liberar registros, você deve liberar os mesmos registros que você reservou juntos em uma chamada anterior para o <xref:System.IO.Log.IRecordSequence.ReserveAndAppend%2A> método.  
+  
+> [!NOTE]
+>  A implementação do <xref:System.IO.Log.IRecordSequence> deve implementar o <xref:System.IO.Log.ReservationCollection.MakeReservation%2A> e <xref:System.IO.Log.ReservationCollection.FreeReservation%2A> métodos para executar a alocação de reserva real e a desalocação. Além disso, sua implementação também deve chamar <xref:System.IO.Log.ReservationCollection.ReservationFreed%2A> quando um registro é gravado em um espaço reservado.  
+  
+   
+  
+## Examples  
+ As reservas de podem ser executadas de duas maneiras, conforme mostrado nos exemplos a seguir. Você pode adotar as práticas nos exemplos para processamento eficiente. Observe que essa tarefa só pode ser executada ao usar o CLFS baseado em <xref:System.IO.Log.LogRecordSequence> classe.  
+  
+```  
+//Using the ReserveAndAppend Method  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+long[] lengthOfUndoRecords = new long[] { 1000 };  
+recordSequence.ReserveAndAppend(recordData,  
+                                                     userSqn,  
+                                                     previousSqn,  
+                                                     RecordSequenceAppendOptions.None,  
+                                                     reservations,  
+                                                     lengthOfUndoRecords);  
+recordSequence.Append(undoRecordData,    // If necessary …  
+                                    userSqn,  
+                                    previousSqn,  
+                                    RecordSequenceAppendOptions.ForceFlush,  
+                                    reservations);  
+  
+// Using the Manual Approach  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+reservations.Add(lengthOfUndoRecord);  
+try  
+{  
+   recordSequence.Append(recordData, userSqn, previousSqn, RecordAppendOptions.None);  
+}  
+catch (Exception)  
+{  
+   reservations.Remove(lengthOfUndoRecord);  
+   throw;  
+}  
+  
+recordSequence.Append(undoRecordData, userSqn, previousSqn, RecordAppendOptions.ForceFlush, reservations);  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ReservationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IO.Log.ReservationCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Add(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho da reserva solicitado, em bytes.</param>
+        <summary>Aloca uma reserva e o adiciona à coleção. Esse método não pode ser herdado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar manualmente uma reserva. Observe que essa tarefa só pode ser executada ao usar o CLFS baseado em <xref:System.IO.Log.LogRecordSequence> classe.  
+  
+```  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+reservations.Add(lengthOfUndoRecord);  
+try  
+{  
+   recordSequence.Append(recordData, userSqn, previousSqn, RecordAppendOptions.None);  
+}  
+catch (Exception)  
+{  
+   reservations.Remove(lengthOfUndoRecord);  
+   throw;  
+}  
+  
+recordSequence.Append(undoRecordData, userSqn, previousSqn, RecordAppendOptions.ForceFlush, reservations);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="archiveTail" />não está entre os números de base e última sequência dessa sequência.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="size" />é inválido ou excede o tamanho máximo de reserva.</exception>
+        <exception cref="T:System.IO.IOException">Ocorrerá um erro de e/s ao criar o instantâneo de arquivo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todas as reservas na coleção. Esse método não pode ser herdado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="size" />é inválido ou excede o tamanho máximo de reserva.</exception>
+        <exception cref="T:System.IO.IOException">Ocorrerá um erro de e/s ao criar o instantâneo de arquivo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Contains(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho a ser localizado na coleção.</param>
+        <summary>Determina se foi feita uma reserva do tamanho especificado. Esse método não pode ser herdado.</summary>
+        <returns>
+          <see langword="true" />Se pelo menos uma reserva do tamanho especificado foi feita; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (long[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(int64[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.CopyTo(System.Int64[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Int64[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">A matriz de destino da cópia.</param>
+        <param name="arrayIndex">O índice de base zero na matriz em que a cópia começa.</param>
+        <summary>Copia toda a coleção para uma matriz unidimensional, começando no índice especificado da matriz de destino. Esse método não pode ser herdado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> ou <paramref name="arrayIndex" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="arrayIndex" />é menor que zero, ou maior que ou igual ao comprimento da <paramref name="array" />.</exception>
+        <exception cref="T:System.ArgumentException">Não há espaço suficiente na matriz especificada para copiar os dados.  
+  
+ -ou-  
+  
+ <paramref name="array" />não é uma matriz dimensional única, que é o único tipo com suporte para a ação solicitada.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.ReservationCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de reservas da coleção.</summary>
+        <value>O número de reservas da coleção.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ReservationCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Finalize" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que o <see cref="T:System.IO.Log.ReservationCollection" /> para liberar recursos antes de ele é destruído pelo coletor de lixo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FreeReservation">
+      <MemberSignature Language="C#" Value="protected abstract void FreeReservation (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FreeReservation(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.FreeReservation(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho de reserva para liberar.</param>
+        <summary>Quando substituído em uma classe derivada, libera uma reserva do tamanho especificado.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar de <see cref="T:System.IO.Log.ReservationCollection" />, você deve implementar esse método para realmente liberar espaço na sequência de registro. Você não deve chamar <see cref="M:System.IO.Log.ReservationCollection.ReservationFreed(System.Int64)" /> quando esse método é concluído; que a lógica é manipulada para você.  
+  
+ Quando você liberar registros, você deve liberar os mesmos registros que você reservou juntos em uma chamada anterior para o <see cref="Overload:System.IO.Log.IRecordSequence.ReserveAndAppend" /> método.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBestMatchingReservation">
+      <MemberSignature Language="C#" Value="protected long GetBestMatchingReservation (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int64 GetBestMatchingReservation(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.GetBestMatchingReservation(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho de reserva que deve ser ajustado.</param>
+        <summary>Quando substituído em uma classe derivada, obtém a melhor correspondência de reserva para um determinado tamanho.</summary>
+        <returns>Uma reserva da coleção que é maior que ou igual ao tamanho especificado, ou -1 se tal reserva não existe.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado normalmente ao anexar um registro de espaço reservado para uma sequência de registro. Quando retorna, uma reserva de tamanho retornado foi removida da coleção. Se, por algum motivo, o espaço reservado não é realmente acessado, o <xref:System.IO.Log.ReservationCollection.ReservationMade%2A> método deve ser chamado para garantir que o <xref:System.IO.Log.ReservationCollection> representa com precisão a quantidade de espaço reservado na sequência de registro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;long&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;int64&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode iterar por meio de <see cref="T:System.IO.Log.ReservationCollection" />. Esse método não pode ser herdado.</summary>
+        <returns>Um enumerador que pode iterar por meio de <see cref="T:System.IO.Log.ReservationCollection" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A operação é inválida para um dos seguintes motivos:  
+  
+-   A enumeração terminou.  
+  
+-   A coleção foi modificada.  
+  
+-   A enumeração não foi iniciada. Uma chamada para <see cref="M:System.Collections.IEnumerator.MoveNext" /> devem ser feitas.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Log.ReservationCollection.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a coleção é somente leitura.</summary>
+        <value>Essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.IO.Log.ReservationCollection> nunca é somente leitura.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeReservation">
+      <MemberSignature Language="C#" Value="protected abstract void MakeReservation (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void MakeReservation(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.MakeReservation(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho de reserva para alocar.</param>
+        <summary>Quando substituído em uma classe derivada, aloca uma reserva do tamanho especificado.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar de <see cref="T:System.IO.Log.ReservationCollection" />, você deve implementar esse método para realmente reservar espaço na sequência de registro. Você não deve chamar <see cref="M:System.IO.Log.ReservationCollection.ReservationMade(System.Int64)" /> quando esse método é concluído; que a lógica é manipulada para você.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (long item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(int64 item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.Remove(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="item">O tamanho de reserva para liberar.</param>
+        <summary>Libera uma reserva de tamanho especificado, se um tiver sido feito. Esse método não pode ser herdado.</summary>
+        <returns>
+          <see langword="true" />Se uma reserva do tamanho especificado foi encontrada e removida; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como criar manualmente uma reserva. Observe que essa tarefa só pode ser executada ao usar o CLFS baseado em <xref:System.IO.Log.LogRecordSequence> classe.  
+  
+```  
+ReservationCollection reservations = recordSequence.CreateReservationCollection();  
+reservations.Add(lengthOfUndoRecord);  
+try  
+{  
+   recordSequence.Append(recordData, userSqn, previousSqn, RecordAppendOptions.None);  
+}  
+catch (Exception)  
+{  
+   reservations.Remove(lengthOfUndoRecord);  
+   throw;  
+}  
+  
+recordSequence.Append(undoRecordData, userSqn, previousSqn, RecordAppendOptions.ForceFlush, reservations);  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Nenhuma reserva grande o suficiente para ajustar o registro fornecido pode ser encontrada na coleção de reserva especificada.</exception>
+        <exception cref="T:System.IO.IOException">Ocorrerá um erro de e/s ao criar o instantâneo de arquivo.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.IO.Log.SequenceFullException">A sequência de registro está cheia.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservationFreed">
+      <MemberSignature Language="C#" Value="protected void ReservationFreed (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReservationFreed(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.ReservationFreed(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho de reserva que foi liberado.</param>
+        <summary>Quando substituído em uma classe derivada, indica que uma reserva foi liberada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao herdar de <xref:System.IO.Log.ReservationCollection>, você deve chamar este método quando uma reserva é lançada por um motivo diferente de removê-lo da coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservationMade">
+      <MemberSignature Language="C#" Value="protected void ReservationMade (long size);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ReservationMade(int64 size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.ReservationMade(System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="size">O tamanho de reserva que foi feita.</param>
+        <summary>Quando substituído em uma classe derivada, indica que foi feita uma reserva.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao herdar de <xref:System.IO.Log.ReservationCollection>, você deve chamar este método quando é feita uma reserva de fora de uma chamada para <xref:System.IO.Log.ReservationCollection.Add%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IO.Log.ReservationCollection.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Log</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode iterar por meio de <see cref="T:System.IO.Log.ReservationCollection" />. Esse método não pode ser herdado.</summary>
+        <returns>Um enumerador que pode iterar por meio de <see cref="T:System.IO.Log.ReservationCollection" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">A operação é inválida para um dos seguintes motivos:  
+  
+-   A enumeração terminou.  
+  
+-   A coleção foi modificada.  
+  
+-   A enumeração não foi iniciada. Uma chamada para <see cref="M:System.Collections.IEnumerator.MoveNext" /> devem ser feitas.</exception>
+        <exception cref="T:System.ObjectDisposedException">O método foi chamado depois que a sequência foi descartada.</exception>
+        <exception cref="T:System.OutOfMemoryException">Não há memória suficiente para continuar a execução do programa.</exception>
+        <exception cref="T:System.UnauthorizedAccessException">O acesso para o armazenamento de log especificado é negado pelo sistema operacional.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

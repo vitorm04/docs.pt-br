@@ -1,0 +1,134 @@
+<Type Name="TabletHardwareCapabilities" FullName="System.Windows.Input.TabletHardwareCapabilities">
+  <TypeSignature Language="C#" Value="public enum TabletHardwareCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed TabletHardwareCapabilities extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.TabletHardwareCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define os valores que especificam os recursos de hardware de um dispositivo de tablet, incluindo mouses e digitalizadores de área de trabalho.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta enumeração tem um atributo <xref:System.FlagsAttribute> que permite uma combinação bit a bit dos valores de seus membros.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como determinar os recursos de hardware de um dispositivo de tablet.  
+  
+ [!code-csharp[HwCaps#26](~/samples/snippets/csharp/VS_Snippets_Wpf/HwCaps/CSharp/Window1.xaml.cs#26)]
+ [!code-vb[HwCaps#26](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HwCaps/VisualBasic/Window1.xaml.vb#26)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HardProximity">
+      <MemberSignature Language="C#" Value="HardProximity" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.TabletHardwareCapabilities HardProximity = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TabletHardwareCapabilities.HardProximity" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletHardwareCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o dispositivo de tablet pode gerar pacotes no ar quando a caneta está no intervalo de detecção física (proximidade) do dispositivo tablet.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Integrated">
+      <MemberSignature Language="C#" Value="Integrated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.TabletHardwareCapabilities Integrated = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TabletHardwareCapabilities.Integrated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletHardwareCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o digitalizador é integrado com a exibição.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.TabletHardwareCapabilities None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TabletHardwareCapabilities.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletHardwareCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o dispositivo de tablet não pode fornecer essas informações.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusHasPhysicalIds">
+      <MemberSignature Language="C#" Value="StylusHasPhysicalIds" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.TabletHardwareCapabilities StylusHasPhysicalIds = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TabletHardwareCapabilities.StylusHasPhysicalIds" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletHardwareCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o dispositivo de tablet pode identificar exclusivamente a caneta ativa.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StylusMustTouch">
+      <MemberSignature Language="C#" Value="StylusMustTouch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.TabletHardwareCapabilities StylusMustTouch = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TabletHardwareCapabilities.StylusMustTouch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletHardwareCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que a caneta deve estar em contato com o dispositivo de tablet para relatar sua posição.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsPressure">
+      <MemberSignature Language="C#" Value="SupportsPressure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Input.TabletHardwareCapabilities SupportsPressure = int32(1073741824)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Input.TabletHardwareCapabilities.SupportsPressure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.TabletHardwareCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o dispositivo de tablet pode detectar a quantidade de pressão que o usuário aplica-se ao usar a caneta.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

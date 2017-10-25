@@ -1,0 +1,90 @@
+<Type Name="SqlDataSourceSelectingEventArgs" FullName="System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs">
+  <TypeSignature Language="C#" Value="public class SqlDataSourceSelectingEventArgs : System.Web.UI.WebControls.SqlDataSourceCommandEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlDataSourceSelectingEventArgs extends System.Web.UI.WebControls.SqlDataSourceCommandEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.SqlDataSourceCommandEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento <see cref="E:System.Web.UI.WebControls.SqlDataSource.Selecting" /> do controle <see cref="T:System.Web.UI.WebControls.SqlDataSource" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionando um delegado de manipulador de eventos para lidar com o <xref:System.Web.UI.WebControls.SqlDataSource.Selecting> eventos, você pode executar qualquer pré-processamento adicional necessária ou cancele a consulta de banco de dados. Porque o <xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs> classe é derivada do <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs> classe, você pode cancelar um pendente <xref:System.Web.UI.WebControls.SqlDataSource> consulta de banco de dados, definindo o <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> propriedade `true`. Você pode examinar e manipular o <xref:System.Data.Common.DbCommand.CommandText%2A>, <xref:System.Data.Common.DbCommand.Parameters%2A> coleta e outras propriedades de consulta de banco de dados antes de executar a consulta, acessando o <xref:System.Data.Common.DbCommand> objeto exposto pelo <xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs.Command%2A> propriedade. Você também pode examinar o <xref:System.Web.UI.DataSourceSelectArguments> objeto que é passado para o <xref:System.Web.UI.WebControls.SqlDataSource.Select%2A> método acessando o <xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.Arguments%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs> classe é usada no <xref:System.Web.UI.WebControls.SqlDataSourceView.OnSelecting%2A> método para fornecer acesso a um <xref:System.Web.UI.WebControls.SqlDataSource> consulta de banco de dados antes de ser executado.  
+  
+ O <xref:System.Web.UI.WebControls.SqlDataSource> controle expõe vários eventos que você pode manipular para trabalhar com os objetos de dados subjacente durante o curso de uma operação de dados. A tabela a seguir lista os eventos e associados <xref:System.EventArgs> classes e delegados de manipulador de eventos.  
+  
+|Evento|EventArgs|EventHandler|  
+|-----------|---------------|------------------|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selecting>.<br /><br /> Ocorre antes que os dados são recuperados.|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Inserting>, <xref:System.Web.UI.WebControls.SqlDataSource.Updating> e <xref:System.Web.UI.WebControls.SqlDataSource.Deleting>.<br /><br /> Ocorre antes de uma operação de inserção, atualização ou delete é executada.|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceCommandEventHandler>|  
+|<xref:System.Web.UI.WebControls.SqlDataSource.Selected>, <xref:System.Web.UI.WebControls.SqlDataSource.Inserted>, <xref:System.Web.UI.WebControls.SqlDataSource.Updated> e <xref:System.Web.UI.WebControls.SqlDataSource.Deleted>.<br /><br /> Ocorre após a recuperação de dados, inserção, atualização ou operação de exclusão.|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.SqlDataSourceStatusEventHandler>|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlDataSourceSelectingEventArgs (System.Data.Common.DbCommand command, System.Web.UI.DataSourceSelectArguments arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DbCommand command, class System.Web.UI.DataSourceSelectArguments arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.#ctor(System.Data.Common.DbCommand,System.Web.UI.DataSourceSelectArguments)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.Common.DbCommand" />
+        <Parameter Name="arguments" Type="System.Web.UI.DataSourceSelectArguments" />
+      </Parameters>
+      <Docs>
+        <param name="command">Um <see cref="T:System.Data.Common.DbCommand" /> objeto que representa o cancelável <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> consulta.</param>
+        <param name="arguments">O <see cref="T:System.Web.UI.DataSourceSelectArguments" /> objeto passado para o <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> método.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs" /> classe usando especificado <see cref="T:System.Data.Common.DbCommand" /> objeto e qualquer <see cref="T:System.Web.UI.DataSourceSelectArguments" /> passado para o <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `inputParameters` parâmetro é um <xref:System.Collections.IDictionary> coleção de pares de nome/valor que coincide com a assinatura do método e são transmitidos por referência.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arguments">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataSourceSelectArguments Arguments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataSourceSelectArguments Arguments" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs.Arguments" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataSourceSelectArguments</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.DataSourceSelectArguments" /> objeto passado para o <see cref="M:System.Web.UI.WebControls.SqlDataSource.Select(System.Web.UI.DataSourceSelectArguments)" /> método.</summary>
+        <value>Um <see cref="T:System.Web.UI.DataSourceSelectArguments" /> objeto, ou <see langword="null" /> se nenhum <see cref="T:System.Web.UI.DataSourceSelectArguments" /> objeto é especificado durante a <see cref="T:System.Web.UI.WebControls.SqlDataSourceSelectingEventArgs" /> criação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode examinar o <xref:System.Web.UI.DataSourceSelectArguments> de objeto para determinar se a classificação, paginação, ou uma contagem de linha são solicitadas como parte da operação de recuperação de dados.  
+  
+ Controles associados a dados usam o <xref:System.Web.UI.DataSourceSelectArguments> classe solicitar que o <xref:System.Web.UI.WebControls.SqlDataSource> executar operações relacionadas a dados adicionais em um conjunto de resultados, como os dados de classificação ou retornando um subconjunto específico de dados. Essas operações relacionadas a dados são enumeradas pelo <xref:System.Web.UI.DataSourceCapabilities> enumeração. Para obter mais informações, consulte <xref:System.Web.UI.DataSourceSelectArguments>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

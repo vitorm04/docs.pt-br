@@ -1,0 +1,1114 @@
+<Type Name="TreeViewItem" FullName="System.Windows.Controls.TreeViewItem">
+  <TypeSignature Language="C#" Value="public class TreeViewItem : System.Windows.Controls.HeaderedItemsControl, System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TreeViewItem extends System.Windows.Controls.HeaderedItemsControl implements class System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.TreeViewItem" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.HeaderedItemsControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.StyleTypedProperty(Property="ItemContainerStyle", StyleTargetType=typeof(System.Windows.Controls.TreeViewItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="PART_Header", Type=typeof(System.Windows.FrameworkElement))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Windows.TemplatePart(Name="ItemsHost", Type=typeof(System.Windows.Controls.ItemsPresenter))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Implementa um item selecionável em um controle <see cref="T:System.Windows.Controls.TreeView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.TreeViewItem>é um <xref:System.Windows.Controls.HeaderedItemsControl>, que significa que seu cabeçalho e a coleção de objetos pode ser de qualquer tipo (como cadeia de caracteres, imagem ou painel). Para obter mais informações, consulte a classe <xref:System.Windows.Controls.HeaderedItemsControl>.  
+  
+ <xref:System.Windows.Controls.TreeViewItem>controles podem ser inseridos dentro de outros <xref:System.Windows.Controls.TreeViewItem> controles para criar uma hierarquia de nós dentro de um <xref:System.Windows.Controls.TreeView> controle.  
+  
+ A ilustração a seguir mostra uma hierarquia de <xref:System.Windows.Controls.TreeViewItem> controla dentro de um <xref:System.Windows.Controls.TreeView>.  
+  
+ ![Ilustração de TreeView](~/add/media/treeviewillustration.JPG "ilustração de TreeView")  
+  
+ Para expandir ou recolher uma <xref:System.Windows.Controls.TreeViewItem>, use o <xref:System.Windows.Controls.TreeViewItem.IsExpanded%2A> propriedade.  
+  
+ Para obter mais informações sobre o <xref:System.Windows.Controls.TreeView> , consulte o [visão geral de TreeView](~/docs/framework/wpf/controls/treeview-overview.md).  
+  
+## <a name="customizing-the-treeviewitem-control"></a>Personalizando o controle TreeViewItem  
+ Para aplicar as mesmas configurações de propriedade a vários <xref:System.Windows.Controls.TreeViewItem> controles, use o <xref:System.Windows.FrameworkElement.Style%2A> propriedade. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações sobre como criar um <xref:System.Windows.Controls.ControlTemplate>, consulte [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  Para ver as partes e os estados que são específicos para o <xref:System.Windows.Controls.TreeViewItem>, consulte [modelos e estilos de TreeView](~/docs/framework/wpf/controls/treeview-styles-and-templates.md).  
+  
+ Propriedades de dependência para este controle podem ser definidas pelo estilo padrão do controle.  Se uma propriedade é definida por um estilo padrão, a propriedade pode ser alterada de seu valor padrão quando o controle é exibido no aplicativo. O estilo padrão é determinado pelo qual tema de área de trabalho é usado quando o aplicativo está em execução.  Para obter mais informações, consulte [padrão WPF temas](http://go.microsoft.com/fwlink/?LinkID=158252).  
+  
+> [!NOTE]
+>  Definir uma propriedade visual só terá efeito se essa propriedade estiver presente em ambos <xref:System.Windows.Controls.TreeViewItem> controle do modelo padrão e é definido usando um. Você pode encontrar uma lista de propriedades visuais na seção "Alterando o Visual estrutura de um controle de" [Personalizando a aparência de um controle existente, criando um ControlTemplate](~/docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar uma hierarquia de <xref:System.Windows.Controls.TreeViewItem> controles em um <xref:System.Windows.Controls.TreeView> controle.  
+  
+ [!code-xaml[TreeViewSnips#EmbeddedTVIs](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeViewItem ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.TreeViewItem" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ArrangeOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Size ArrangeOverride (System.Windows.Size arrangeSize);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Windows.Size ArrangeOverride(valuetype System.Windows.Size arrangeSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.ArrangeOverride(System.Windows.Size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arrangeSize" Type="System.Windows.Size" />
+      </Parameters>
+      <Docs>
+        <param name="arrangeSize">A área final dentro do pai que o <see cref="T:System.Windows.Controls.TreeViewItem" /> devem usar para organizar próprio e seus filhos.</param>
+        <summary>Organiza o conteúdo a <see cref="T:System.Windows.Controls.TreeViewItem" />.</summary>
+        <returns>O tamanho real usado pelo <see cref="T:System.Windows.Controls.TreeViewItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Collapsed">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Collapsed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Collapsed" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.TreeViewItem.Collapsed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Controls.TreeViewItem.IsExpanded" /> muda de <see langword="true" /> para <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre quando um <xref:System.Windows.Controls.TreeViewItem> é recolhido para que os elementos filho estão ocultos.  
+  
+<a name="routedEventInfo_Collapsed"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TreeViewItem.CollapsedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como atribuir um manipulador de eventos para o <xref:System.Windows.Controls.TreeViewItem.Collapsed> evento para um <xref:System.Windows.Controls.TreeViewItem>e como definir o manipulador de eventos.  
+  
+ [!code-xaml[TreeViewSnips#OnCollapsedExpanded](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#oncollapsedexpanded)]  
+  
+ [!code-csharp[TreeViewSnips#OnCollapsed](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml.cs#oncollapsed)]
+ [!code-vb[TreeViewSnips#OnCollapsed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewSnips/visualbasic/window1.xaml.vb#oncollapsed)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CollapsedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent CollapsedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent CollapsedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TreeViewItem.CollapsedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.TreeViewItem.Collapsed" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador do evento roteado <xref:System.Windows.Controls.TreeViewItem.Collapsed>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expanded">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Expanded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Expanded" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.TreeViewItem.Expanded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Controls.TreeViewItem.IsExpanded" /> muda de <see langword="false" /> para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento ocorre quando um <xref:System.Windows.Controls.TreeViewItem> é expandido para que seus elementos filho são visíveis.  
+  
+<a name="routedEventInfo_Expanded"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TreeViewItem.ExpandedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como atribuir um manipulador de eventos para o <xref:System.Windows.Controls.TreeViewItem.Expanded> evento para um <xref:System.Windows.Controls.TreeViewItem> e como definir o manipulador de eventos no code-behind.  
+  
+ [!code-xaml[TreeViewSnips#OnCollapsedExpanded](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#oncollapsedexpanded)]  
+  
+ [!code-csharp[TreeViewSnips#OnExpanded](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml.cs#onexpanded)]
+ [!code-vb[TreeViewSnips#OnExpanded](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewSnips/visualbasic/window1.xaml.vb#onexpanded)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent ExpandedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent ExpandedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TreeViewItem.ExpandedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o evento roteado <see cref="E:System.Windows.Controls.TreeViewItem.Expanded" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador do evento roteado <xref:System.Windows.Controls.TreeViewItem.Expanded>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpandSubtree">
+      <MemberSignature Language="C#" Value="public void ExpandSubtree ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExpandSubtree() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.ExpandSubtree" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Expande o controle <see cref="T:System.Windows.Controls.TreeViewItem" /> e todos os seus elementos <see cref="T:System.Windows.Controls.TreeViewItem" /> filho.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Os exemplos a seguir mostram como localizar selecionado <xref:System.Windows.Controls.TreeViewItem> e expanda- e -itens filho.  O seguinte [!INCLUDE[TLA2#tla_xaml](~/includes/tla2sharptla-xaml-md.md)] cria um <xref:System.Windows.Controls.TreeView> e o preenche com alguns dados.  
+  
+ [!code-xaml[TreeViewExpand#1](~/samples/snippets/csharp/VS_Snippets_Wpf/treeviewexpand/csharp/mainwindow.xaml#1)]  
+  
+ O código a seguir percorre o <xref:System.Windows.Controls.TreeView> localizar selecionado <xref:System.Windows.Controls.TreeViewItem> e, em seguida, chama <xref:System.Windows.Controls.TreeViewItem.ExpandSubtree%2A> para exibir todos os itens filho selecionados <xref:System.Windows.Controls.TreeViewItem>.  
+  
+> [!NOTE]
+>  O `GetTreeViewItem` método só funciona para <xref:System.Windows.Controls.TreeViewItem> controles não virtualizados.  Para aprender a localizar um <xref:System.Windows.Controls.TreeViewItem> que podem ser virtualizados, consulte [como: localizar um TreeViewItem em um modo de exibição de árvore](~/docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md).  
+  
+ [!code-csharp[TreeViewExpand#2](~/samples/snippets/csharp/VS_Snippets_Wpf/treeviewexpand/csharp/mainwindow.xaml.cs#2)]
+ [!code-vb[TreeViewExpand#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/treeviewexpand/visualbasic/mainwindow.xaml.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContainerForItemOverride">
+      <MemberSignature Language="C#" Value="protected override System.Windows.DependencyObject GetContainerForItemOverride ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.DependencyObject GetContainerForItemOverride() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.GetContainerForItemOverride" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um novo <see cref="T:System.Windows.Controls.TreeViewItem" /> usar para exibir o objeto.</summary>
+        <returns>Um novo <see cref="T:System.Windows.Controls.TreeViewItem" /> usar para exibir o objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpanded">
+      <MemberSignature Language="C#" Value="public bool IsExpanded { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsExpanded" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.IsExpanded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se os itens aninhados em uma <see cref="T:System.Windows.Controls.TreeViewItem" /> estão expandidos ou recolhidos.</summary>
+        <value>
+          <see langword="true" /> se os itens aninhados de uma <see cref="T:System.Windows.Controls.TreeViewItem" /> estiverem visíveis, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A aparência do botão que se expande e recolhe o <xref:System.Windows.Controls.TreeViewItem> é alterado quando o <xref:System.Windows.Controls.TreeViewItem> é expandido ou recolhido. Quando o <xref:System.Windows.Controls.TreeViewItem.IsExpanded%2A> altera o valor da propriedade de `true` para `false`, o <xref:System.Windows.Controls.TreeViewItem.Collapsed> evento ocorre. Da mesma forma, o <xref:System.Windows.Controls.TreeViewItem.Expanded> evento ocorre quando o <xref:System.Windows.Controls.TreeViewItem.IsExpanded%2A> altera o valor da propriedade de `false` para `true`.  
+  
+<a name="dependencyPropertyInfo_IsExpanded"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TreeViewItem.IsExpandedProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TreeViewItem.IsExpanded%2A> propriedade.  
+  
+ [!code-xaml[TreeViewSnips#OnCollapsedExpanded](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#oncollapsedexpanded)]  
+  
+ [!code-csharp[TreeViewSnips#IsExpanded](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml.cs#isexpanded)]
+ [!code-vb[TreeViewSnips#IsExpanded](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewSnips/visualbasic/window1.xaml.vb#isexpanded)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsExpandedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsExpandedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsExpandedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TreeViewItem.IsExpandedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TreeViewItem.IsExpanded" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.TreeViewItem.IsExpanded%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsItemItsOwnContainerOverride">
+      <MemberSignature Language="C#" Value="protected override bool IsItemItsOwnContainerOverride (object item);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsItemItsOwnContainerOverride(object item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.IsItemItsOwnContainerOverride(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser avaliada.</param>
+        <summary>Determina se um objeto é um <see cref="T:System.Windows.Controls.TreeViewItem" />.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="item" /> é um <see cref="T:System.Windows.Controls.TreeViewItem" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelected">
+      <MemberSignature Language="C#" Value="public bool IsSelected { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelected" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.IsSelected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se um controle de <see cref="T:System.Windows.Controls.TreeViewItem" /> está selecionado.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Windows.Controls.TreeViewItem" /> estiver selecionado, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A> altera o valor da propriedade para `true`, o <xref:System.Windows.Controls.TreeViewItem.Selected> evento ocorre. Quando o <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A> altera o valor da propriedade para `false`, o <xref:System.Windows.Controls.TreeViewItem.Unselected> evento ocorre.  
+  
+<a name="dependencyPropertyInfo_IsSelected"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TreeViewItem.IsSelectedProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como definir o <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A> propriedade.  
+  
+ [!code-csharp[TreeViewSnips#IsSelected](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml.cs#isselected)]
+ [!code-vb[TreeViewSnips#IsSelected](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewSnips/visualbasic/window1.xaml.vb#isselected)]
+ [!code-xaml[TreeViewSnips#IsSelected](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#isselected)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectedProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectedProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectedProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TreeViewItem.IsSelectedProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TreeViewItem.IsSelected" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActive">
+      <MemberSignature Language="C#" Value="public bool IsSelectionActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSelectionActive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.IsSelectionActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Appearance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.ReadOnly(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Windows.Controls.TreeViewItem" /> tem foco do teclado.</summary>
+        <value>
+          <see langword="true" /> se <see cref="T:System.Windows.Controls.TreeViewItem" /> tiver o foco do teclado, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se as alterações de teclado foco de um <xref:System.Windows.Controls.TreeViewItem> para um <xref:System.Windows.Controls.Menu> ou um <xref:System.Windows.Controls.ToolBar>, o valor dessa propriedade permanece `true`.  
+  
+<a name="dependencyPropertyInfo_IsSelectionActive"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TreeViewItem.IsSelectionActiveProperty>|  
+|Propriedades de metadados é definido como`true`|<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o valor de <xref:System.Windows.Controls.TreeViewItem.IsSelectionActive%2A> propriedade.  
+  
+ [!code-csharp[TreeViewSnips#IsSelectionActive](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml.cs#isselectionactive)]
+ [!code-vb[TreeViewSnips#IsSelectionActive](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewSnips/visualbasic/window1.xaml.vb#isselectionactive)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSelectionActiveProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsSelectionActiveProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsSelectionActiveProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TreeViewItem.IsSelectionActiveProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.TreeViewItem.IsSelectionActive" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador da propriedade de dependência <xref:System.Windows.Controls.TreeViewItem.IsSelectionActive%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCollapsed">
+      <MemberSignature Language="C#" Value="protected virtual void OnCollapsed (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCollapsed(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnCollapsed(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os argumentos de evento.</param>
+        <summary>Gera um <see cref="E:System.Windows.Controls.TreeViewItem.Collapsed" /> eventos quando o <see cref="P:System.Windows.Controls.TreeViewItem.IsExpanded" /> propriedade muda de <see langword="true" /> para <see langword="false" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Define uma <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> para o <see cref="T:System.Windows.Controls.TreeViewItem" />.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.TreeViewItemAutomationPeer" /> de objeto para o <see cref="T:System.Windows.Controls.TreeViewItem" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnExpanded">
+      <MemberSignature Language="C#" Value="protected virtual void OnExpanded (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnExpanded(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnExpanded(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os argumentos de evento.</param>
+        <summary>Gera um <see cref="E:System.Windows.Controls.TreeViewItem.Expanded" /> eventos quando o <see cref="P:System.Windows.Controls.TreeViewItem.IsExpanded" /> propriedade muda de <see langword="false" /> para <see langword="true" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGotFocus">
+      <MemberSignature Language="C#" Value="protected override void OnGotFocus (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnGotFocus(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnGotFocus(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.UIElement.GotFocus" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta implementação define o <xref:System.Windows.Controls.TreeView> seleção até o <xref:System.Windows.Controls.TreeViewItem> que é em foco.  
+  
+ O <xref:System.Windows.UIElement.GotFocus> evento ocorre quando o valor da <xref:System.Windows.UIElement.IsFocused%2A> propriedade muda de `false` para `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnItemsChanged">
+      <MemberSignature Language="C#" Value="protected override void OnItemsChanged (System.Collections.Specialized.NotifyCollectionChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnItemsChanged(class System.Collections.Specialized.NotifyCollectionChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para o <see cref="E:System.Windows.Controls.ItemContainerGenerator.ItemsChanged" /> evento que ocorre quando há uma alteração no <see cref="P:System.Windows.Controls.ItemsControl.Items" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação ajusta o <xref:System.Windows.Controls.TreeView> seleção quando há uma alteração no <xref:System.Windows.Controls.ItemsControl.Items%2A> coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnKeyDown">
+      <MemberSignature Language="C#" Value="protected override void OnKeyDown (System.Windows.Input.KeyEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnKeyDown(class System.Windows.Input.KeyEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnKeyDown(System.Windows.Input.KeyEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.KeyEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para um <see cref="E:System.Windows.UIElement.KeyDown" /> eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método define <xref:System.Windows.RoutedEventArgs.Handled%2A> para `true` recolhe e expande o <xref:System.Windows.Controls.TreeViewItem> quando uma das seguintes chaves é pressionada:  
+  
+-   <xref:System.Windows.Input.Key.Add>  
+  
+-   <xref:System.Windows.Input.Key.Subtract>  
+  
+-   <xref:System.Windows.Input.Key.Left>  
+  
+-   <xref:System.Windows.Input.Key.Right>  
+  
+-   <xref:System.Windows.Input.Key.Down>  
+  
+-   <xref:System.Windows.Input.Key.Up>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMouseLeftButtonDown">
+      <MemberSignature Language="C#" Value="protected override void OnMouseLeftButtonDown (System.Windows.Input.MouseButtonEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnMouseLeftButtonDown(class System.Windows.Input.MouseButtonEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Input.MouseButtonEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os dados do evento.</param>
+        <summary>Fornece a manipulação de classe para um <see cref="E:System.Windows.UIElement.MouseLeftButtonDown" /> eventos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o mouse <xref:System.Windows.Input.MouseButtonEventArgs.ClickCount%2A> é dois, o valor da <xref:System.Windows.Controls.TreeViewItem.IsExpanded%2A> propriedade alterna para o `true` ou `false`, que faz com que o <xref:System.Windows.Controls.TreeViewItem> para expandir ou recolher.  
+  
+ Essa implementação marca o <xref:System.Windows.UIElement.MouseLeftButtonDown> eventos como manipulada, definindo o <xref:System.Windows.RoutedEventArgs.Handled%2A> propriedade dos dados do evento para `true`.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Se você substituir <see cref="M:System.Windows.Controls.TreeViewItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" />, sempre chamar a implementação base sua <see cref="M:System.Windows.Controls.TreeViewItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)" /> implementação. Falha ao chamar a implementação base impede que as classes base manipular o evento com um manipulador de classe, que pode alterar o comportamento de tempo de execução da classe final. Você pode chamar a implementação base antes ou depois do tratamento especial, dependendo dos seus requisitos.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelected">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnSelected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os argumentos de evento.</param>
+        <summary>Gera o <see cref="E:System.Windows.Controls.TreeViewItem.Selected" /> eventos roteados quando o <see cref="P:System.Windows.Controls.TreeViewItem.IsSelected" /> propriedade muda de <see langword="false" /> para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle gera o <xref:System.Windows.Controls.TreeViewItem.Selected> evento chamando <xref:System.Windows.UIElement.RaiseEvent%2A>. Para obter mais informações, consulte [Visão geral de eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Controls.TreeViewItem.OnSelected(System.Windows.RoutedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Controls.TreeViewItem.OnSelected(System.Windows.RoutedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUnselected">
+      <MemberSignature Language="C#" Value="protected virtual void OnUnselected (System.Windows.RoutedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUnselected(class System.Windows.RoutedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnUnselected(System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Os argumentos de evento.</param>
+        <summary>Gera o <see cref="E:System.Windows.Controls.TreeViewItem.Unselected" /> eventos roteados quando o <see cref="P:System.Windows.Controls.TreeViewItem.IsSelected" /> propriedade muda de <see langword="true" /> para <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O controle gera o <xref:System.Windows.Controls.TreeViewItem.Unselected> evento chamando <xref:System.Windows.UIElement.RaiseEvent%2A>. Para obter mais informações, consulte [Visão geral de eventos roteados](~/docs/framework/wpf/advanced/routed-events-overview.md).  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Controls.TreeViewItem.OnUnselected(System.Windows.RoutedEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Controls.TreeViewItem.OnUnselected(System.Windows.RoutedEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnVisualParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnVisualParentChanged (System.Windows.DependencyObject oldParent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnVisualParentChanged(class System.Windows.DependencyObject oldParent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.TreeViewItem.OnVisualParentChanged(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldParent" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="oldParent">O visual pai anterior.</param>
+        <summary>Responde a uma alteração no visual pai de um <see cref="T:System.Windows.Controls.TreeViewItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa implementação atualiza o <xref:System.Windows.Controls.TreeView> <xref:System.Windows.Controls.TreeView.SelectedItem%2A> se <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A> é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Selected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Selected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Selected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.TreeViewItem.Selected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Controls.TreeViewItem.IsSelected" /> de um <see cref="T:System.Windows.Controls.TreeViewItem" /> é alterada de <see langword="false" /> para <see langword="true" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento ocorre quando um <xref:System.Windows.Controls.TreeViewItem> torna-se selecionado <xref:System.Windows.Controls.TreeViewItem> em um <xref:System.Windows.Controls.TreeView> controle. Este evento está relacionado a <xref:System.Windows.Controls.TreeView.SelectedItemChanged> evento que ocorre quando há uma alteração no <xref:System.Windows.Controls.TreeView.SelectedItem%2A> propriedade de um <xref:System.Windows.Controls.TreeView> controle.  
+  
+<a name="routedEventInfo_Selected"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TreeViewItem.SelectedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como atribuir um manipulador de eventos para o <xref:System.Windows.Controls.TreeViewItem.Selected> evento para um <xref:System.Windows.Controls.TreeViewItem>e como definir o manipulador de eventos.  
+  
+ [!code-xaml[TreeViewSnips#Selected](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#selected)]  
+  
+ [!code-csharp[TreeViewSnips#ChooseWine](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml.cs#choosewine)]
+ [!code-vb[TreeViewSnips#ChooseWine](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewSnips/visualbasic/window1.xaml.vb#choosewine)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent SelectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent SelectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TreeViewItem.SelectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identificando o <see cref="E:System.Windows.Controls.TreeViewItem.Selected" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador do evento roteado <xref:System.Windows.Controls.TreeViewItem.Selected>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.Constraints">
+      <MemberSignature Language="C#" Value="System.Windows.Controls.HierarchicalVirtualizationConstraints System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.Constraints { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.HierarchicalVirtualizationConstraints System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.Constraints" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.System#Windows#Controls#Primitives#IHierarchicalVirtualizationAndScrollInfo#Constraints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.HierarchicalVirtualizationConstraints</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que representa os tamanhos visor e o cache do <see cref="T:System.Windows.Controls.TreeViewItem" />.</summary>
+        <value>Um objeto que representa os tamanhos visor e o cache do <see cref="T:System.Windows.Controls.TreeViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.TreeViewItem> é convertida em uma interface de <xref:System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.HeaderDesiredSizes">
+      <MemberSignature Language="C#" Value="System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.HeaderDesiredSizes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.HeaderDesiredSizes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.System#Windows#Controls#Primitives#IHierarchicalVirtualizationAndScrollInfo#HeaderDesiredSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.HierarchicalVirtualizationHeaderDesiredSizes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que representa o tamanho desejado do <see cref="P:System.Windows.Controls.HeaderedItemsControl.Header" />, em pixels e em unidades lógicas.</summary>
+        <value>Um objeto que representa o tamanho desejado do <see cref="P:System.Windows.Controls.HeaderedItemsControl.Header" />, em pixels e em unidades lógicas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.TreeViewItem> é convertida em uma interface de <xref:System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.InBackgroundLayout">
+      <MemberSignature Language="C#" Value="bool System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.InBackgroundLayout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.InBackgroundLayout" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.System#Windows#Controls#Primitives#IHierarchicalVirtualizationAndScrollInfo#InBackgroundLayout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a passagem de layout do controle ocorre em uma prioridade mais baixa.</summary>
+        <value>
+          <see langword="true" />Se o layout do controle passar ocorre em uma prioridade mais baixa; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.TreeViewItem> é convertida em uma interface de <xref:System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemDesiredSizes">
+      <MemberSignature Language="C#" Value="System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemDesiredSizes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemDesiredSizes" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.System#Windows#Controls#Primitives#IHierarchicalVirtualizationAndScrollInfo#ItemDesiredSizes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.HierarchicalVirtualizationItemDesiredSizes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que representa o tamanho desejado de itens do controle, em pixels e em unidades lógicas.</summary>
+        <value>Um objeto que representa o tamanho desejado de itens do controle, em pixels e em unidades lógicas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.TreeViewItem> é convertida em uma interface de <xref:System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemsHost">
+      <MemberSignature Language="C#" Value="System.Windows.Controls.Panel System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemsHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Controls.Panel System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.ItemsHost" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.System#Windows#Controls#Primitives#IHierarchicalVirtualizationAndScrollInfo#ItemsHost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Panel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Controls.Panel" /> que exibe o <see cref="P:System.Windows.Controls.ItemsControl.Items" /> do <see cref="T:System.Windows.Controls.TreeViewItem" />.</summary>
+        <value>O <see cref="T:System.Windows.Controls.Panel" /> que exibe o <see cref="P:System.Windows.Controls.ItemsControl.Items" /> do <see cref="T:System.Windows.Controls.TreeViewItem" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.TreeViewItem> é convertida em uma interface de <xref:System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.MustDisableVirtualization">
+      <MemberSignature Language="C#" Value="bool System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.MustDisableVirtualization { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo.MustDisableVirtualization" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.TreeViewItem.System#Windows#Controls#Primitives#IHierarchicalVirtualizationAndScrollInfo#MustDisableVirtualization" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a propriedade <see cref="T:System.Windows.Controls.ItemsControl" /> deve virtualizar seus itens.</summary>
+        <value>
+          <see langword="true" />Se o proprietário <see cref="T:System.Windows.Controls.ItemsControl" /> deve virtualizar seus itens; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Windows.Controls.TreeViewItem> é convertida em uma interface de <xref:System.Windows.Controls.Primitives.IHierarchicalVirtualizationAndScrollInfo>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unselected">
+      <MemberSignature Language="C#" Value="public event System.Windows.RoutedEventHandler Unselected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Windows.RoutedEventHandler Unselected" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.TreeViewItem.Unselected" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Category("Behavior")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Controls.TreeViewItem.IsSelected" /> de um <see cref="T:System.Windows.Controls.TreeViewItem" /> é alterada de <see langword="true" /> para <see langword="false" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O evento ocorre quando a seleção é alterado neste <xref:System.Windows.Controls.TreeViewItem> para outro <xref:System.Windows.Controls.TreeViewItem> em um <xref:System.Windows.Controls.TreeView> controle. Este evento está relacionado a <xref:System.Windows.Controls.TreeView.SelectedItemChanged> evento que ocorre quando há uma alteração no <xref:System.Windows.Controls.TreeView.SelectedItem%2A> propriedade de um <xref:System.Windows.Controls.TreeView> controle.  
+  
+<a name="routedEventInfo_Unselected"></a>   
+## <a name="routed-event-information"></a>Informações de evento encaminhado  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.TreeViewItem.UnselectedEvent>|  
+|Estratégia de roteamento|Bolha|  
+|Representante|<xref:System.Windows.RoutedEventHandler>|  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como atribuir um manipulador de eventos para o <xref:System.Windows.Controls.TreeViewItem.Selected> evento para um <xref:System.Windows.Controls.TreeViewItem>e como definir o manipulador de eventos.  
+  
+ [!code-xaml[TreeViewSnips#Selected](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#selected)]  
+  
+ [!code-csharp[TreeViewSnips#ChangeWineChoice](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml.cs#changewinechoice)]
+ [!code-vb[TreeViewSnips#ChangeWineChoice](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewSnips/visualbasic/window1.xaml.vb#changewinechoice)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnselectedEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.RoutedEvent UnselectedEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.RoutedEvent UnselectedEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.TreeViewItem.UnselectedEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.RoutedEvent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identificando o <see cref="E:System.Windows.Controls.TreeViewItem.Unselected" /> eventos roteados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador do evento roteado <xref:System.Windows.Controls.TreeViewItem.Unselected>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

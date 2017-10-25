@@ -1,0 +1,236 @@
+<Type Name="CodeCompileUnit" FullName="System.CodeDom.CodeCompileUnit">
+  <TypeSignature Language="C#" Value="public class CodeCompileUnit : System.CodeDom.CodeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CodeCompileUnit extends System.CodeDom.CodeObject" />
+  <TypeSignature Language="DocId" Value="T:System.CodeDom.CodeCompileUnit" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.CodeDom</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.CodeDom.CodeObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um contêiner para um grafo de programa CodeDOM.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.CodeDom.CodeCompileUnit>Fornece um contêiner para um gráfico de programa CodeDOM.  
+  
+ <xref:System.CodeDom.CodeCompileUnit>contém uma coleção que pode armazenar <xref:System.CodeDom.CodeNamespace> objetos que contenham CodeDOM gráficos de código, juntamente com uma coleção de assemblies referenciados pelo projeto e uma coleção de atributos de origem para o assembly de projeto.  
+  
+ Um <xref:System.CodeDom.CodeCompileUnit> pode ser passado para o <xref:System.CodeDom.Compiler.ICodeGenerator.GenerateCodeFromCompileUnit%2A> método de um <xref:System.CodeDom.Compiler.ICodeGenerator> implementação juntamente com outros parâmetros para gerar o código com base no gráfico de programa contido por unidade de compilação.  
+  
+> [!NOTE]
+>  Alguns idiomas oferecem suporte a apenas um único namespace que contém uma única classe em uma unidade de compilação.  
+  
+   
+  
+## Examples  
+ Construções de exemplo de código a seguir um <xref:System.CodeDom.CodeCompileUnit> que modela a estrutura do programa de um programa simple de "Olá, mundo". Este exemplo de código é parte de um exemplo maior que também produz código deste modelo e é fornecido para o <xref:System.CodeDom.Compiler.CodeDomProvider> classe.  
+  
+ [!code-cpp[CodeDomExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source.cpp#2)]
+ [!code-csharp[CodeDomExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source.cs#2)]
+ [!code-vb[CodeDomExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CodeCompileUnit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.CodeDom.CodeCompileUnit.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.CodeDom.CodeCompileUnit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AssemblyCustomAttributes">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeAttributeDeclarationCollection AssemblyCustomAttributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeAttributeDeclarationCollection AssemblyCustomAttributes" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCompileUnit.AssemblyCustomAttributes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeAttributeDeclarationCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de atributos personalizados para o assembly gerado.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeAttributeDeclarationCollection" /> que indica os atributos personalizados para o assembly gerado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar e remover <xref:System.CodeDom.CodeAttributeDeclaration> objetos que representam atributos para o assembly gerado desta coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDirectives">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeDirectiveCollection EndDirectives { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeDirectiveCollection EndDirectives" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCompileUnit.EndDirectives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeDirectiveCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.CodeDom.CodeDirectiveCollection" /> objeto que contém as diretivas de término.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeDirectiveCollection" /> objeto que contém as diretivas de término.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.CodeCompileUnit.EndDirectives%2A> propriedade.  Este exemplo é parte de um exemplo maior fornecido para a <xref:System.CodeDom.CodeRegionDirective> classe.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#3)]
+ [!code-vb[System.CodeDom.CodeDirectives#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespaces">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeNamespaceCollection Namespaces { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeNamespaceCollection Namespaces" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCompileUnit.Namespaces" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeNamespaceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a coleção de namespaces.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeNamespaceCollection" /> que indica os namespaces que usa a unidade de compilação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar e remover <xref:System.CodeDom.CodeNamespace> objetos dessa coleção. Cada objeto representa um namespace.  
+  
+> [!NOTE]
+>  Alguns idiomas oferecem suporte a apenas um único namespace que contém uma única classe em uma unidade de compilação.  
+  
+   
+  
+## Examples  
+ Construções de exemplo de código a seguir um <xref:System.CodeDom.CodeCompileUnit> que modela a estrutura do programa de um programa simple de "Olá, mundo". Este exemplo é parte de um exemplo maior que também produz código deste modelo e é fornecido para o <xref:System.CodeDom.Compiler.CodeDomProvider> classe.  
+  
+ [!code-cpp[CodeDomExample#2](~/samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source.cpp#2)]
+ [!code-csharp[CodeDomExample#2](~/samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source.cs#2)]
+ [!code-vb[CodeDomExample#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedAssemblies">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.StringCollection ReferencedAssemblies { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.StringCollection ReferencedAssemblies" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCompileUnit.ReferencedAssemblies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.StringCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os assemblies referenciados.</summary>
+        <value>Um <see cref="T:System.Collections.Specialized.StringCollection" /> que contém os nomes de arquivo dos assemblies referenciados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode adicionar e remover os nomes de arquivo desta coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartDirectives">
+      <MemberSignature Language="C#" Value="public System.CodeDom.CodeDirectiveCollection StartDirectives { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.CodeDom.CodeDirectiveCollection StartDirectives" />
+      <MemberSignature Language="DocId" Value="P:System.CodeDom.CodeCompileUnit.StartDirectives" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.CodeDom</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.CodeDom.CodeDirectiveCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.CodeDom.CodeDirectiveCollection" /> objeto contendo iniciar diretivas.</summary>
+        <value>Um <see cref="T:System.CodeDom.CodeDirectiveCollection" /> objeto contendo iniciar diretivas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o uso do <xref:System.CodeDom.CodeCompileUnit.StartDirectives%2A> propriedade.  Este exemplo é parte de um exemplo maior fornecido para a <xref:System.CodeDom.CodeRegionDirective> classe.  
+  
+ [!code-csharp[System.CodeDom.CodeDirectives#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/CS/codedirective.cs#2)]
+ [!code-vb[System.CodeDom.CodeDirectives#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.CodeDom.CodeDirectives/VB/codedirective.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

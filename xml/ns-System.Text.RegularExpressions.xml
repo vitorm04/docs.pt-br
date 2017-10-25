@@ -1,0 +1,6 @@
+<Namespace Name="System.Text.RegularExpressions">
+  <Docs>
+    <summary>O <see cref="N:System.Text.RegularExpressions" /> namespace contém classes que fornecem acesso ao mecanismo de expressão regular do .NET Framework. O namespace fornece funcionalidade de expressão regular que pode ser usada em qualquer plataforma ou linguagem que é executado dentro do Microsoft .NET Framework. Além dos tipos contidos neste namespace, o <see cref="T:System.Configuration.RegexStringValidator" /> classe permite que você determine se uma determinada cadeia de caracteres estiver de acordo com um padrão de expressão regular.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

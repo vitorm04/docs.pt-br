@@ -1,0 +1,250 @@
+<Type Name="ImageIndexConverter" FullName="System.Windows.Forms.ImageIndexConverter">
+  <TypeSignature Language="C#" Value="public class ImageIndexConverter : System.ComponentModel.Int32Converter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageIndexConverter extends System.ComponentModel.Int32Converter" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ImageIndexConverter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Int32Converter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conversor de tipo para converter dados de um índice de imagem em uma cadeia de caracteres.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ImageIndexConverter> classe é usada para converter valores de índice de um <xref:System.Windows.Forms.ImageList> de e para outros tipos de dados, normalmente <xref:System.String>. Para obter mais informações sobre conversores de tipo, consulte o <xref:System.ComponentModel.TypeConverter> classe base e [como: implementar um conversor de tipo](http://msdn.microsoft.com/library/90373a3f-d8c8-492d-841c-945d62393c56).  
+  
+> [!NOTE]
+>  Normalmente, você não criar diretamente uma instância de um <xref:System.Windows.Forms.ImageIndexConverter>. Em vez disso, chame o <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> método <xref:System.ComponentModel.TypeDescriptor>. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter> classe base.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageIndexConverter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ImageIndexConverter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa e a instância do <see cref="T:System.Windows.Forms.ImageIndexConverter" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não criar diretamente uma instância de um <xref:System.Windows.Forms.ImageIndexConverter>. Em vez disso, chame o <xref:System.ComponentModel.TypeDescriptor.GetConverter%2A> método <xref:System.ComponentModel.TypeDescriptor>. Para obter mais informações, consulte os exemplos de <xref:System.ComponentModel.TypeConverter> classe base.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertFrom">
+      <MemberSignature Language="C#" Value="public override object ConvertFrom (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertFrom(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ImageIndexConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> para fornecer informações de localidade.</param>
+        <param name="value">O <see cref="T:System.Object" /> a ser convertido.</param>
+        <summary>Converte o objeto de valor especificado para um objeto inteiro assinado de 32 bits.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o objeto <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este conversor de tipo só pode converter um objeto inteiro assinado de 32 bits para e de uma cadeia de caracteres.  
+  
+ O `context` pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de tipo do. Isso pode ser `null`, portanto, você sempre deve verificar. Além disso, as propriedades no objeto de contexto também podem retornar `null`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Não foi possível executar a conversão.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertTo">
+      <MemberSignature Language="C#" Value="public override object ConvertTo (System.ComponentModel.ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ConvertTo(class System.ComponentModel.ITypeDescriptorContext context, class System.Globalization.CultureInfo culture, object value, class System.Type destinationType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ImageIndexConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="destinationType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de tipo do. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <param name="culture">Um <see cref="T:System.Globalization.CultureInfo" /> que fornece informações de localidade.</param>
+        <param name="value">O objeto converter, geralmente um índice representado como um <see cref="T:System.Int32" />.</param>
+        <param name="destinationType">O tipo para converter o objeto, geralmente um <see cref="T:System.String" />.</param>
+        <summary>Converte o objeto especificado para o tipo de destino especificado.</summary>
+        <returns>Um <see cref="T:System.Object" /> que representa o objeto <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação padrão desse método só pode converter um valor de índice representado como um <xref:System.Int32> para um <xref:System.String>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="destinationType" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">Especificado <paramref name="value" /> não pôde ser convertido para especificado <paramref name="destinationType" />.</exception>
+        <block subset="none" type="overrides">
+          <para>Substitua este método para fornecer seus próprios recursos de conversão.  
+  
+ O <paramref name="context" /> parâmetro pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de tipo do. Isso pode ser <see langword="null" />, portanto, você sempre deve verificar esse valor de retorno. Além disso, as propriedades no objeto de contexto também podem retornar <see langword="null" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValues">
+      <MemberSignature Language="C#" Value="public override System.ComponentModel.TypeConverter.StandardValuesCollection GetStandardValues (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.ComponentModel.TypeConverter/StandardValuesCollection GetStandardValues(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ImageIndexConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter+StandardValuesCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de tipo do. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Retorna uma coleção de valores de índice padrão para a lista de imagens associado ao contexto do formato especificado.</summary>
+        <returns>Um <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> que contém um conjunto padrão de valores de índice válido. Se nenhuma lista de imagem for encontrada, essa coleção conterá um único objeto com um valor de -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Retorna uma coleção de valores de índice para listas de imagens associadas a <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A?displayProperty=nameWithType> propriedade o `context` parâmetro. Se um <xref:System.Windows.Forms.ImageList> não for encontrado, em seguida, o pai do componente será pesquisado para essa lista.  
+  
+ Normalmente o <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValuesSupported%2A> método é chamado para antes de uma tentativa de usar o <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValues%2A> e <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValuesExclusive%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesExclusive">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesExclusive (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesExclusive(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ImageIndexConverter.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um contexto do formatador.</param>
+        <summary>Determina se a lista de valores padrão retornados a <see cref="Overload:System.Windows.Forms.ImageIndexConverter.GetStandardValues" /> método é uma lista exclusiva.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="Overload:System.Windows.Forms.ImageIndexConverter.GetStandardValues" /> método retorna uma lista exclusiva de valores válidos; caso contrário, <see langword="false" />. Essa implementação sempre retorna <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a lista retornada pelo <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValues%2A> método for exclusivo, nenhum outro valor é válido. Isso é típico de um tipo de dados enumerado. Se a lista não é exclusiva, há outros valores válidos, além de valores de lista padrão que <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValues%2A> fornece.  
+  
+ Conforme implementado neste conversor de tipo, esse método sempre retornará `false`.  
+  
+ Normalmente o <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValuesSupported%2A> método é chamado para antes de uma tentativa de usar o <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValues%2A> e <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValuesExclusive%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardValuesSupported">
+      <MemberSignature Language="C#" Value="public override bool GetStandardValuesSupported (System.ComponentModel.ITypeDescriptorContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool GetStandardValuesSupported(class System.ComponentModel.ITypeDescriptorContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ImageIndexConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.ComponentModel.ITypeDescriptorContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> que fornece um contexto de formato, que pode ser usado para extrair informações adicionais sobre o ambiente está sendo invocado este conversor de tipo do. Esse parâmetro ou as propriedades desse parâmetro podem ser <see langword="null" />.</param>
+        <summary>Determina se o conversor de tipo oferece suporte a um conjunto padrão de valores que podem ser escolhidos em uma lista.</summary>
+        <returns>
+          <see langword="true" />Se o <see cref="Overload:System.Windows.Forms.ImageIndexConverter.GetStandardValues" /> método retorna um padrão de conjunto de valores; caso contrário, <see langword="false" />. Sempre retorna <see langword="true" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nesta classe <xref:System.Windows.Forms.ImageIndexConverter.GetStandardValuesSupported%2A> sempre retorna `true` como esse objeto dá suporte a um conjunto padrão de valores de índice de imagens que podem ser escolhidas em uma lista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncludeNoneAsStandardValue">
+      <MemberSignature Language="C#" Value="protected virtual bool IncludeNoneAsStandardValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IncludeNoneAsStandardValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ImageIndexConverter.IncludeNoneAsStandardValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um <see langword="none" /> ou <see langword="null" /> valor é válido no <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection" /> coleção.</summary>
+        <value>
+          <see langword="true" />Se um <see langword="none" /> ou <see langword="null" /> valor é válido na coleção de valores padrão; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Conforme implementado nessa classe é sempre retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

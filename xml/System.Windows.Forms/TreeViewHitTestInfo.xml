@@ -1,0 +1,123 @@
+<Type Name="TreeViewHitTestInfo" FullName="System.Windows.Forms.TreeViewHitTestInfo">
+  <TypeSignature Language="C#" Value="public class TreeViewHitTestInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TreeViewHitTestInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewHitTestInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém informações sobre uma área de um controle <see cref="T:System.Windows.Forms.TreeView" /> ou um <see cref="T:System.Windows.Forms.TreeNode" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.TreeViewHitTestInfo> é retornado pelo <xref:System.Windows.Forms.TreeView> quando o <xref:System.Windows.Forms.TreeView.HitTest%2A> método é chamado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.TreeViewHitTestInfo> classe. Para executar este exemplo, cole o seguinte código em um Windows Form que contém um <xref:System.Windows.Forms.TreeView> controle chamado `treeView1`e preencher o <xref:System.Windows.Forms.TreeView> com itens. Certifique-se de que `treeview1` e <xref:System.Windows.Forms.Control.MouseDown> de evento para o formulário são associados com o `HandleMouseDown` método.  
+  
+ [!code-csharp[System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers/VB/Form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeViewHitTestInfo (System.Windows.Forms.TreeNode hitNode, System.Windows.Forms.TreeViewHitTestLocations hitLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.TreeNode hitNode, valuetype System.Windows.Forms.TreeViewHitTestLocations hitLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.TreeViewHitTestInfo.#ctor(System.Windows.Forms.TreeNode,System.Windows.Forms.TreeViewHitTestLocations)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="hitNode" Type="System.Windows.Forms.TreeNode" />
+        <Parameter Name="hitLocation" Type="System.Windows.Forms.TreeViewHitTestLocations" />
+      </Parameters>
+      <Docs>
+        <param name="hitNode">O nó de árvore localizado na posição indicada pelo teste de clique.</param>
+        <param name="hitLocation">Um dos valores de <see cref="T:System.Windows.Forms.TreeViewHitTestLocations" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.TreeViewHitTestInfo" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `hitNode` parâmetro pode ser `null`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeViewHitTestLocations Location { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.TreeViewHitTestLocations Location" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeViewHitTestInfo.Location" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeViewHitTestLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o local de um teste de clique um <see cref="T:System.Windows.Forms.TreeView" /> controle em relação ao <see cref="T:System.Windows.Forms.TreeView" /> e os nós que ele contém.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.TreeViewHitTestLocations" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.TreeViewHitTestInfo.Location%2A> propriedade. Para executar este exemplo, cole o seguinte código em um Windows Form que contém um <xref:System.Windows.Forms.TreeView> controle chamado `treeView1`e preencher o <xref:System.Windows.Forms.TreeView> com itens. Certifique-se de que `treeview1` e <xref:System.Windows.Forms.Control.MouseDown> de evento para o formulário são associados com o `HandleMouseDown` método.  
+  
+ [!code-csharp[System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewPictureBoxWhidbeyMembers/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.TreeViewHitTestInfo.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.TreeNode" /> na posição indicada por uma ocorrência de teste de um <see cref="T:System.Windows.Forms.TreeView" /> controle.</summary>
+        <value>O <see cref="T:System.Windows.Forms.TreeNode" /> na posição indicada por uma ocorrência de teste de um <see cref="T:System.Windows.Forms.TreeView" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o local de teste de clique não está em um <xref:System.Windows.Forms.TreeNode>, o <xref:System.Windows.Forms.TreeViewHitTestInfo.Node%2A> propriedade será `null`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.TreeViewHitTestInfo.Node%2A> propriedade. Para executar este exemplo, crie um formulário do Windows que contém um <xref:System.Windows.Forms.TreeView> chamado `treeView1`e preenchê-lo com vários níveis de nós. Cole o código a seguir em um formulário e associar o <xref:System.Windows.Forms.Control.MouseDown> evento `treeView1` com o `treeView1_MouseDown` método.  
+  
+ [!code-cpp[System.Windows.Forms.TreeViewWhidbeyMembers#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/cpp/Form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.TreeViewWhidbeyMembers#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/CS/Form1.cs#3)]
+ [!code-vb[System.Windows.Forms.TreeViewWhidbeyMembers#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TreeViewWhidbeyMembers/VB/Form1.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

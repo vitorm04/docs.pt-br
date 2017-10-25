@@ -1,0 +1,15 @@
+<Namespace Name="System.IO.IsolatedStorage">
+  <Docs>
+    <summary>O <see cref="N:System.IO.IsolatedStorage" /> namespace contém tipos que permitem a criação e uso de repositórios isolados. Com essas lojas, você pode ler e gravar dados menos confiável código não é possível acessar e evitar a exposição de informações confidenciais que podem ser salvos em outro lugar no sistema de arquivos. Os dados são armazenados em compartimentos isolados pelo usuário atual e pelo assembly onde existe o código. Além disso, os dados podem ser isolados por domínio. Os perfis móveis podem ser usado em conjunto com armazenamento isolado para que repositórios isolados serão transmitida com o perfil do usuário. O <see cref="T:System.IO.IsolatedStorage.IsolatedStorageScope" /> enumeração indica os diferentes tipos de isolamento. Para obter mais informações sobre quando usar armazenamento isolado, consulte [armazenamento isolado](~/docs/standard/io/isolated-storage.md).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.IO.IsolatedStorage.IsolatedStorageFile> classe fornece a maioria da funcionalidade necessária para o armazenamento isolado. Use esta classe para obter, excluir e gerenciar o armazenamento isolado. O <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> classe manipula ler e gravar arquivos em um repositório. Isso é semelhante ao ler e gravar em classes de e/s de arquivo padrão. Para obter mais informações sobre e/s, consulte o <xref:System.IO> namespace.  
+  
+ Para obter exemplos usando armazenamento isolado, consulte [armazenamento isolado](~/docs/standard/io/isolated-storage.md)  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

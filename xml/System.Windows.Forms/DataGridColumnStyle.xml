@@ -1,0 +1,1597 @@
+<Type Name="DataGridColumnStyle" FullName="System.Windows.Forms.DataGridColumnStyle">
+  <TypeSignature Language="C#" Value="public abstract class DataGridColumnStyle : System.ComponentModel.Component, System.Windows.Forms.IDataGridColumnStyleEditingNotificationService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataGridColumnStyle extends System.ComponentModel.Component implements class System.Windows.Forms.IDataGridColumnStyleEditingNotificationService" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridColumnStyle" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Component</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IDataGridColumnStyleEditingNotificationService</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Header")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DesignTimeVisible(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica a aparência, a formatação de texto e o comportamento de uma coluna do controle <see cref="T:System.Windows.Forms.DataGrid" />. Esta classe é abstrata.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A coleção de <xref:System.Windows.Forms.DataGridColumnStyle> objetos (o <xref:System.Windows.Forms.GridColumnStylesCollection>) é acessada por meio de <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> do controle <xref:System.Windows.Forms.DataGrid.TableStyles%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle automaticamente cria uma coleção de <xref:System.Windows.Forms.DataGridColumnStyle> objetos para você quando você define o <xref:System.Windows.Forms.DataGrid.DataSource%2A> propriedade a uma fonte de dados apropriado. Os objetos criados na verdade são instâncias de uma das seguintes classes que herdam de <xref:System.Windows.Forms.DataGridColumnStyle>: <xref:System.Windows.Forms.DataGridBoolColumn> ou <xref:System.Windows.Forms.DataGridTextBoxColumn> classe.  
+  
+ Para formatar a exibição de dados, defina o <xref:System.Windows.Forms.DataGridTextBoxColumn.Format%2A> propriedade o <xref:System.Windows.Forms.DataGridTextBoxColumn> classe para um dos valores de formatação. Para obter mais informações sobre formatação de valores válido, consulte [tipos de formatação](~/docs/standard/base-types/formatting-types.md) e [Data personalizada e cadeias de caracteres de formato de hora](~/docs/standard/base-types/custom-date-and-time-format-strings.md).  
+  
+ Você também pode criar seu próprio conjunto de <xref:System.Windows.Forms.DataGridColumnStyle> objetos e adicioná-los para o <xref:System.Windows.Forms.GridColumnStylesCollection>. Quando você fizer isso, você deve definir o <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> de cada estilo de coluna para o <xref:System.Data.DataColumn.ColumnName%2A> de um <xref:System.Data.DataColumn> para sincronizar a exibição de colunas com os dados reais.  
+  
+> [!CAUTION]
+>  Sempre criar <xref:System.Windows.Forms.DataGridColumnStyle> objetos e adicioná-los para o <xref:System.Windows.Forms.GridColumnStylesCollection> antes de adicionar <xref:System.Windows.Forms.DataGridTableStyle> objetos para o <xref:System.Windows.Forms.GridTableStylesCollection>. Quando você adiciona um vazio <xref:System.Windows.Forms.DataGridTableStyle> com uma validade <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valor à coleção, <xref:System.Windows.Forms.DataGridColumnStyle> objetos são gerados automaticamente para você. Consequentemente, uma exceção será lançada se você tentar adicionar uma nova <xref:System.Windows.Forms.DataGridColumnStyle> objetos com duplicata <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valores para o <xref:System.Windows.Forms.GridColumnStylesCollection>.  
+  
+ Quando uma das classes derivadas é instanciada por um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle, a classe criada depende de <xref:System.Data.DataColumn.DataType%2A> do <xref:System.Data.DataColumn> associado a <xref:System.Windows.Forms.DataGridColumnStyle> objeto. Por exemplo, um <xref:System.Data.DataColumn> com seus <xref:System.Data.DataColumn.DataType%2A> definida como `System.Boolean` será associado com um <xref:System.Windows.Forms.DataGridBoolColumn>. Para determinar o tipo de qualquer <xref:System.Windows.Forms.DataGridColumnStyle>, use o <xref:System.Object.GetType%2A> método.  
+  
+ Para criar suas próprias classes de coluna, você pode herdar de <xref:System.Windows.Forms.DataGridColumnStyle>. Talvez você queira fazer isso para criar colunas especiais que hospedam controles, como exemplificadas pelo <xref:System.Windows.Forms.DataGridTextBox> classe, que hospeda o <xref:System.Windows.Forms.TextBox> controle. Por exemplo, você pode hospedar um <xref:System.Drawing.Image> de controle para exibir imagens em colunas, ou você pode criar seu próprio controle de usuário ao host na coluna.  
+  
+ A funcionalidade do <xref:System.Windows.Forms.DataGridColumnStyle> não deve ser confundido com que o <xref:System.Data.DataColumn>. Enquanto o <xref:System.Data.DataColumn> contém as propriedades e métodos apropriados para criar o esquema da tabela de dados, o <xref:System.Windows.Forms.DataGridColumnStyle> contém as propriedades e métodos relacionados a aparência de uma coluna individual na tela.  
+  
+ Se uma linha contiver um <xref:System.DBNull.Value?displayProperty=nameWithType>, o texto exibido na coluna pode ser definido com o <xref:System.Windows.Forms.DataGridColumnStyle.NullText%2A> propriedade.  
+  
+ O <xref:System.Windows.Forms.DataGridColumnStyle> classe também permite que você especifique o comportamento de uma coluna, enquanto os dados estão sendo alterados. O <xref:System.Windows.Forms.DataGridColumnStyle.BeginUpdate%2A> e <xref:System.Windows.Forms.DataGridColumnStyle.EndUpdate%2A> métodos suspender temporariamente o desenho da coluna enquanto estão sendo feitas grandes atualizações para os dados da coluna. Sem essa funcionalidade, todas as alterações em cada célula da grade deve ser desenhada imediatamente; Isso pode ser confuso o usuário e a responsabilidade de desempenho.  
+  
+ Vários métodos que permitem o monitoramento da coluna conforme ele é editado pelo usuário, incluindo o <xref:System.Windows.Forms.DataGridColumnStyle.Edit%2A> e <xref:System.Windows.Forms.DataGridColumnStyle.Commit%2A> eventos.  
+  
+ A maioria das propriedades e métodos da classe, são adaptados para controlar a aparência de uma coluna. Mas alguns, tais como o <xref:System.Windows.Forms.DataGridColumnStyle.GetColumnValueAtRow%2A> e <xref:System.Windows.Forms.DataGridColumnStyle.SetColumnValueAtRow%2A> permitem que você examine e altere o valor em uma célula especificada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.DataGridColumnStyle> que hospeda um <xref:System.Windows.Forms.DateTimePicker> controle.  
+  
+ [!code-cpp[DataGridColumnStyle Overview#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle Overview/CPP/timecolumn.cpp#1)]
+ [!code-csharp[DataGridColumnStyle Overview#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle Overview/CS/timecolumn.cs#1)]
+ [!code-vb[DataGridColumnStyle Overview#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle Overview/VB/timecolumn.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Ao herdar de <see cref="T:System.Windows.Forms.DataGridColumnStyle" />, você deve substituir os seguintes membros: <see cref="M:System.Windows.Forms.DataGridColumnStyle.Abort(System.Int32)" />, <see cref="M:System.Windows.Forms.DataGridColumnStyle.Commit(System.Windows.Forms.CurrencyManager,System.Int32)" />, <see cref="M:System.Windows.Forms.DataGridColumnStyle.Edit(System.Windows.Forms.CurrencyManager,System.Int32,System.Drawing.Rectangle,System.Boolean)" />, e <see cref="M:System.Windows.Forms.DataGridColumnStyle.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,System.Int32)" /> (duas vezes).</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridColumnStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Em uma classe derivada, inicializa uma nova instância do <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância de um <xref:System.Windows.Forms.DataGridColumnStyle>, as seguintes propriedades são inicializadas.  
+  
+|Propriedade|Valor padrão|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.Alignment%2A>|`HorizontalAlignment.Left`|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.DataGridTableStyle%2A>|`null`|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.FontHeight%2A>|-1|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.Invalidate%2A>|`false`|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.NullText%2A>|A cadeia de caracteres "(nulo)"|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.ReadOnly%2A>|`false`|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridColumnStyle (System.ComponentModel.PropertyDescriptor prop);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.ComponentModel.PropertyDescriptor prop) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.#ctor(System.ComponentModel.PropertyDescriptor)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prop" Type="System.ComponentModel.PropertyDescriptor" />
+      </Parameters>
+      <Docs>
+        <param name="prop">Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que fornece os atributos para a coluna.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> com o <see cref="T:System.ComponentModel.PropertyDescriptor" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar um novo <xref:System.Windows.Forms.DataGridColumnStyle>, você deve primeiro obter o <xref:System.Windows.Forms.CurrencyManager> da fonte de dados da tabela à qual a coluna será adicionada. Consulte o `CurrencyManager` e `BindingManager` para obter detalhes sobre como obter específico `CurrencyManager` objetos para um formulário.  
+  
+ Do <xref:System.Windows.Forms.CurrencyManager>, em seguida, você pode obter o <xref:System.ComponentModel.PropertyDescriptor> para o <xref:System.Data.DataColumn> que fornecerá dados para a coluna.  
+  
+ Quando você cria uma instância de um <xref:System.Windows.Forms.DataGridColumnStyle>, as seguintes propriedades de leitura/gravação são inicializadas.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.Alignment%2A>|`HorizontalAlignment.Left`|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.DataGridTableStyle%2A>|`null`|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.FontHeight%2A>|-1|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.Invalidate%2A>|`false`|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.NullText%2A>|"(nulo)"|  
+|<xref:System.Windows.Forms.DataGridColumnStyle.ReadOnly%2A>|`false`|  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um novo <xref:System.Windows.Forms.DataGridTextBoxColumn> (derivado de <xref:System.Windows.Forms.DataGridColumnStyle>) e adiciona-o para o <xref:System.Windows.Forms.GridColumnStylesCollection> de um <xref:System.Windows.Forms.DataGridTableStyle>.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.DataGridColumnStyle1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.DataGridColumnStyle1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.DataGridColumnStyle1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.DataGridColumnStyle1 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.DataGridColumnStyle1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.DataGridColumnStyle1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Abort">
+      <MemberSignature Language="C#" Value="protected abstract void Abort (int rowNum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Abort(int32 rowNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Abort(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rowNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rowNum">O número da linha na qual uma operação está sendo interrompida.</param>
+        <summary>Quando substituído em uma classe derivada, inicia uma solicitação para interromper um procedimento de edição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridColumnStyle.Abort%2A> método é usado pelo <xref:System.Windows.Forms.DataGrid> quando o <xref:System.Windows.Forms.DataGridColumnStyle.Commit%2A> método o <xref:System.Windows.Forms.DataGridColumnStyle> método retorna `false`. Nesse caso, o valor da coluna será revertido para seu valor anterior.  
+  
+ O <xref:System.Windows.Forms.DataGridColumnStyle> deve terminar qualquer edição operações antes de retornar. Use o <xref:System.Windows.Forms.DataGridColumnStyle.Abort%2A> método para fazer isso.  
+  
+ O <xref:System.Windows.Forms.DataGrid.EndEdit%2A> método o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle indiretamente chama <xref:System.Windows.Forms.DataGridColumnStyle.Abort%2A> se seu `ShouldAbort` parâmetro está definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Alignment">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.HorizontalAlignment Alignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.HorizontalAlignment Alignment" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.Alignment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.HorizontalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o alinhamento do texto em uma coluna.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.HorizontalAlignment" />. O padrão é <see langword="Left" />. As opções válidas incluem <see langword="Left" />, <see langword="Center" /> e <see langword="Right" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridColumnStyle.Alignment%2A> propriedade para cada coluna em uma <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> para `HorizontalAlignment.Center` se os dados não não uma cadeia de caracteres.  
+  
+ [!code-vb[Classic DataGridColumnStyle.Alignment Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.Alignment Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlignmentChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AlignmentChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AlignmentChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.AlignmentChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DataGridColumnStyle.Alignment" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_AlignmentChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_AlignmentChanged/CPP/datagridcolumnstyle_alignmentchanged.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_AlignmentChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_AlignmentChanged/CS/datagridcolumnstyle_alignmentchanged.cs#1)]
+ [!code-vb[DataGridColumnStyle_AlignmentChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_AlignmentChanged/VB/datagridcolumnstyle_alignmentchanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdate">
+      <MemberSignature Language="C#" Value="protected void BeginUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void BeginUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.BeginUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Suspende a pintura da coluna até que o método <see cref="M:System.Windows.Forms.DataGridColumnStyle.EndUpdate" /> seja chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando várias alterações são feitas para a aparência de um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle (se as alterações nos atributos de coluna ou os dados exibidos pelo controle), você deve chamar o <xref:System.Windows.Forms.DataGridColumnStyle.BeginUpdate%2A> método congelar temporariamente o desenho do controle. Isso resulta em menos distração para o usuário e um ganho de desempenho. Depois que todas as atualizações foram feitas, chamar o <xref:System.Windows.Forms.DataGridColumnStyle.EndUpdate%2A> método para continuar o desenho do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckValidDataSource">
+      <MemberSignature Language="C#" Value="protected void CheckValidDataSource (System.Windows.Forms.CurrencyManager value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckValidDataSource(class System.Windows.Forms.CurrencyManager value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.CheckValidDataSource(System.Windows.Forms.CurrencyManager)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.CurrencyManager" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Windows.Forms.CurrencyManager" /> para verificar.</param>
+        <summary>Gera uma exceção se o <see cref="T:System.Windows.Forms.DataGrid" /> não tem uma fonte de dados válido, ou se essa coluna não está mapeada para uma propriedade válida na fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo obtém uma <xref:System.Windows.Forms.CurrencyManager> para uma fonte de dados e usa o <xref:System.Windows.Forms.DataGridColumnStyle.CheckValidDataSource%2A> para determinar se o <xref:System.Windows.Forms.CurrencyManager> é válido.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.CheckValidDataSource Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.CheckValidDataSource Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.CheckValidDataSource Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.CheckValidDataSource Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.CheckValidDataSource Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.CheckValidDataSource Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ApplicationException">O <see cref="T:System.ComponentModel.PropertyDescriptor" /> para essa coluna é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnStartedEditing">
+      <MemberSignature Language="C#" Value="protected virtual void ColumnStartedEditing (System.Windows.Forms.Control editingControl);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void ColumnStartedEditing(class System.Windows.Forms.Control editingControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.ColumnStartedEditing(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="editingControl">O <see cref="T:System.Windows.Forms.Control" /> que é hospedado pela coluna.</param>
+        <summary>Informa o <see cref="T:System.Windows.Forms.DataGrid" /> que o usuário começou a edição da coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando chamado, o <xref:System.Windows.Forms.IDataGridColumnStyleEditingNotificationService.ColumnStartedEditing%2A> método permite que o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle para mostrar um lápis no cabeçalho da linha que indica a linha está sendo editado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="protected abstract bool Commit (System.Windows.Forms.CurrencyManager dataSource, int rowNum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool Commit(class System.Windows.Forms.CurrencyManager dataSource, int32 rowNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Commit(System.Windows.Forms.CurrencyManager,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataSource" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dataSource">O <see cref="T:System.Windows.Forms.CurrencyManager" /> para o <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <param name="rowNum">O número da linha que está sendo editado.</param>
+        <summary>Quando substituído em uma classe derivada, inicia uma solicitação para concluir um procedimento de edição.</summary>
+        <returns>
+          <see langword="true" />Se o procedimento de edição foi confirmada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra uma possível substituição do <xref:System.Windows.Forms.DataGridColumnStyle.Commit%2A> método. O código chama o <xref:System.Windows.Forms.DataGridColumnStyle.SetColumnValueAtRow%2A> método e, em seguida, define uma variável que permite que outras funções determinar se a coluna ainda está em Editar mais. O código, em seguida, chama o <xref:System.Windows.Forms.DataGridColumnStyle.Invalidate%2A> método redesenhar o controle. Por fim, a função retorna `true` para indicar que a alteração tenha sido confirmada.  
+  
+ [!code-vb[Classic DataGridColumnStyle.Commit Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.Commit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Windows.Forms.DataGridColumnStyle.Commit(System.Windows.Forms.CurrencyManager,System.Int32)" /> método deve ser usado por classes derivadas do <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> classe para redefinir seu estado de edição, por exemplo, para conceder o foco, se o <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> hospeda um controle de edição. Consulte o <see cref="M:System.Windows.Forms.DataGridColumnStyle.ConcedeFocus" /> método.  
+  
+ Chamar o <see cref="M:System.Windows.Forms.DataGridColumnStyle.Commit(System.Windows.Forms.CurrencyManager,System.Int32)" /> método quando o <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> recebe uma solicitação para concluir a edição. Se isso não for possível sem erro, retornar <see langword="false" />.  
+  
+ O <see cref="M:System.Windows.Forms.DataGridColumnStyle.Commit(System.Windows.Forms.CurrencyManager,System.Int32)" /> método é chamado pelo método público <see cref="M:System.Windows.Forms.DataGrid.OnMouseDown(System.Windows.Forms.MouseEventArgs)" /> do <see cref="T:System.Windows.Forms.DataGrid" /> controle. O método também é chamado por outros métodos privados, por exemplo, quando a linha atual é alterada.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ConcedeFocus">
+      <MemberSignature Language="C#" Value="protected virtual void ConcedeFocus ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void ConcedeFocus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.ConcedeFocus" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Notifica uma coluna que ele deve liberar o foco para o controle que está hospedando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esse método para determinar quando uma ação adicional é necessária em uma classe derivada. Por exemplo, esse método é substituído pelo <xref:System.Windows.Forms.DataGridTextBoxColumn> para ocultar o <xref:System.Windows.Forms.DataGridTextBox>.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridColumnStyle.ConcedeFocus%2A> método para ocultar um <xref:System.Windows.Forms.TextBox> hospedado pelo <xref:System.Windows.Forms.DataGridTextBoxColumn>.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.ConcedeFocus Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.ConcedeFocus Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.ConcedeFocus Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.ConcedeFocus Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.ConcedeFocus Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.ConcedeFocus Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateHeaderAccessibleObject">
+      <MemberSignature Language="C#" Value="protected virtual System.Windows.Forms.AccessibleObject CreateHeaderAccessibleObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Windows.Forms.AccessibleObject CreateHeaderAccessibleObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.CreateHeaderAccessibleObject" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.AccessibleObject" /> da coluna.</summary>
+        <returns>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> para a coluna.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade é chamada por um <xref:System.Windows.Forms.DataGridTableStyle> quando seu <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> alterações de propriedade. Esta propriedade é necessária porque os controles filho hospedada por um <xref:System.Windows.Forms.DataGridColumnStyle> devem ser adicionados para o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> do controle `ControlCollection`.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> de um <xref:System.Windows.Forms.DataGridColumnStyle>.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.CreateHeaderAccessibleObject Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.CreateHeaderAccessibleObject Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.CreateHeaderAccessibleObject Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.CreateHeaderAccessibleObject Example/CS/source.cs#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataGridTableStyle">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.DataGridTableStyle DataGridTableStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataGridTableStyle DataGridTableStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.DataGridTableStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataGridTableStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.DataGridTableStyle" /> da coluna.</summary>
+        <value>O <see cref="P:System.Windows.Forms.DataGridColumnStyle.DataGridTableStyle" /> que contém o <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O código a seguir exemplo imprime o <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> de um <xref:System.Windows.Forms.DataGridColumnStyle.DataGridTableStyle%2A> que contém um <xref:System.Windows.Forms.DataGridColumnStyle>.  
+  
+ [!code-vb[Classic DataGridColumnStyle.DataGridTableStyle Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.DataGridTableStyle Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="protected virtual void Edit (System.Windows.Forms.CurrencyManager source, int rowNum, System.Drawing.Rectangle bounds, bool readOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Edit(class System.Windows.Forms.CurrencyManager source, int32 rowNum, valuetype System.Drawing.Rectangle bounds, bool readOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Edit(System.Windows.Forms.CurrencyManager,System.Int32,System.Drawing.Rectangle,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> para o <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <param name="rowNum">O número de linha para editar.</param>
+        <param name="bounds">O delimitador <see cref="T:System.Drawing.Rectangle" /> na qual o controle a ser localizado.</param>
+        <param name="readOnly">Um valor que indica se a coluna é somente leitura. <see langword="true" />Se o valor é somente leitura; Caso contrário, <see langword="false" />.</param>
+        <summary>Prepara uma célula para edição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.Windows.Forms.DataGridColumnStyle.Edit%2A> método sites um controle para a grade no local da célula que está sendo editado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="protected virtual void Edit (System.Windows.Forms.CurrencyManager source, int rowNum, System.Drawing.Rectangle bounds, bool readOnly, string displayText);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Edit(class System.Windows.Forms.CurrencyManager source, int32 rowNum, valuetype System.Drawing.Rectangle bounds, bool readOnly, string displayText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Edit(System.Windows.Forms.CurrencyManager,System.Int32,System.Drawing.Rectangle,System.Boolean,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+        <Parameter Name="displayText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> para o <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <param name="rowNum">O número de linha desta coluna que está sendo editado.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual é o controle a ser localizado.</param>
+        <param name="readOnly">Um valor que indica se a coluna é somente leitura. <see langword="true" />Se o valor é somente leitura; Caso contrário, <see langword="false" />.</param>
+        <param name="displayText">O texto a ser exibido no controle.</param>
+        <summary>Prepara a célula para edição usando especificado <see cref="T:System.Windows.Forms.CurrencyManager" />, número de linha e <see cref="T:System.Drawing.Rectangle" /> parâmetros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.Windows.Forms.DataGridColumnStyle.Edit%2A> método sites um controle para a grade no local da célula que está sendo editado.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridColumnStyle.Edit%2A> método para alterar o texto de uma célula clicado no <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.Edit1 Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.Edit1 Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.Edit1 Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.Edit1 Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.Edit1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.Edit1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="protected abstract void Edit (System.Windows.Forms.CurrencyManager source, int rowNum, System.Drawing.Rectangle bounds, bool readOnly, string displayText, bool cellIsVisible);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Edit(class System.Windows.Forms.CurrencyManager source, int32 rowNum, valuetype System.Drawing.Rectangle bounds, bool readOnly, string displayText, bool cellIsVisible) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Edit(System.Windows.Forms.CurrencyManager,System.Int32,System.Drawing.Rectangle,System.Boolean,System.String,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="readOnly" Type="System.Boolean" />
+        <Parameter Name="displayText" Type="System.String" />
+        <Parameter Name="cellIsVisible" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> para o <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <param name="rowNum">O número de linha desta coluna que está sendo editado.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> no qual é o controle a ser localizado.</param>
+        <param name="readOnly">Um valor que indica se a coluna é somente leitura. <see langword="true" />Se o valor é somente leitura; Caso contrário, <see langword="false" />.</param>
+        <param name="displayText">O texto a ser exibido no controle.</param>
+        <param name="cellIsVisible">Um valor que indica se a célula estiver visível. <see langword="true" /> se a célula estiver visível; caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, prepara uma célula para edição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, o <xref:System.Windows.Forms.DataGridColumnStyle.Edit%2A> método sites um controle para a grade no local da célula que está sendo editado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdate">
+      <MemberSignature Language="C#" Value="protected void EndUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EndUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.EndUpdate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retoma a pintura de colunas suspenso chamando o <see cref="M:System.Windows.Forms.DataGridColumnStyle.BeginUpdate" /> método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando várias alterações são feitas para a aparência de um <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle (se as alterações nos atributos de coluna ou os dados exibidos pelo controle), você deve chamar o <xref:System.Windows.Forms.DataGridColumnStyle.BeginUpdate%2A> método congelar temporariamente o desenho do controle. Isso resulta em menos distração para o usuário e um ganho de desempenho. Depois que todas as atualizações foram feitas, chamar o <xref:System.Windows.Forms.DataGridColumnStyle.EndUpdate%2A> método para continuar o desenho do controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterNullValue">
+      <MemberSignature Language="C#" Value="protected virtual void EnterNullValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void EnterNullValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.EnterNullValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Insere um <see cref="F:System.DBNull.Value" /> na coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado quando o usuário pressionar ALT + 0 para permitir que uma coluna inserir o valor nulo apropriado. Por exemplo, quando chamado em um <xref:System.Windows.Forms.DataGridTextBoxColumn>, apropriada <xref:System.Windows.Forms.DataGridColumnStyle.NullText%2A> valor é inserido na coluna.  
+  
+ O <xref:System.Windows.Forms.DataGridColumnStyle.EnterNullValue%2A> não tem nenhum comportamento padrão. Ao herdar de <xref:System.Windows.Forms.DataGridColumnStyle>, substitua o método para inserir `null` em uma coluna.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra uma possível substituição do <xref:System.Windows.Forms.DataGridColumnStyle.EnterNullValue%2A> método.  
+  
+ [!code-vb[Classic DataGridColumnStyle.EnterNullValue Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.EnterNullValue Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler FontChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler FontChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.FontChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a fonte da coluna é alterada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FontHeight">
+      <MemberSignature Language="C#" Value="protected int FontHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 FontHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.FontHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a altura da fonte da coluna.</summary>
+        <value>A altura da fonte, em pixels. Se nenhuma altura fonte tiver sido definida, a propriedade retorna o <see cref="T:System.Windows.Forms.DataGrid" /> altura da fonte do controle; se essa propriedade não foi definida, o valor de altura de fonte padrão para o <see cref="T:System.Windows.Forms.DataGrid" /> controle é retornado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnValueAtRow">
+      <MemberSignature Language="C#" Value="protected virtual object GetColumnValueAtRow (System.Windows.Forms.CurrencyManager source, int rowNum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance object GetColumnValueAtRow(class System.Windows.Forms.CurrencyManager source, int32 rowNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.GetColumnValueAtRow(System.Windows.Forms.CurrencyManager,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> que contém os dados.</param>
+        <param name="rowNum">O número da linha que contém os dados.</param>
+        <summary>Obtém o valor na linha especificada especificado <see cref="T:System.Windows.Forms.CurrencyManager" />.</summary>
+        <returns>Um <see cref="T:System.Object" /> que contém o valor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a fonte de dados para a coluna é uma <xref:System.Data.DataTable>, use o <xref:System.Data.DataTable.ColumnChanging> ou <xref:System.Data.DataTable.RowChanging> eventos para determinar quando um valor de linha ou coluna foi alterada.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ApplicationException">O <see cref="T:System.Data.DataColumn" /> para este <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> ainda não foi definida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMinimumHeight">
+      <MemberSignature Language="C#" Value="protected abstract int GetMinimumHeight ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance int32 GetMinimumHeight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.GetMinimumHeight" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído em uma classe derivada, obtém a altura mínima de uma linha.</summary>
+        <returns>A altura mínima de uma linha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir obtém a altura mínima da coluna.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.GetMinimumHeight Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetMinimumHeight Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.GetMinimumHeight Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetMinimumHeight Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.GetMinimumHeight Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetMinimumHeight Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredHeight">
+      <MemberSignature Language="C#" Value="protected abstract int GetPreferredHeight (System.Drawing.Graphics g, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance int32 GetPreferredHeight(class System.Drawing.Graphics g, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.GetPreferredHeight(System.Drawing.Graphics,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um objeto <see cref="T:System.Drawing.Graphics" />.</param>
+        <param name="value">Um valor de objeto para o qual você deseja saber a largura e altura da tela.</param>
+        <summary>Quando substituído em uma classe derivada, obtém a altura usada para redimensionar automaticamente as colunas.</summary>
+        <returns>A altura usada para uma célula de redimensionamento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridColumnStyle.GetPreferredSize%2A> geralmente será invocado de mouse para baixo de evento para redimensionar a altura de uma coluna para uma cadeia de caracteres longa.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridColumnStyle.GetPreferredHeight%2A> método para retornar a altura de uma célula.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.GetPreferredHeight Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetPreferredHeight Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.GetPreferredHeight Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetPreferredHeight Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.GetPreferredHeight Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetPreferredHeight Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPreferredSize">
+      <MemberSignature Language="C#" Value="protected abstract System.Drawing.Size GetPreferredSize (System.Drawing.Graphics g, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance valuetype System.Drawing.Size GetPreferredSize(class System.Drawing.Graphics g, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.GetPreferredSize(System.Drawing.Graphics,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="g">Um objeto <see cref="T:System.Drawing.Graphics" />.</param>
+        <param name="value">Um valor de objeto para o qual você deseja saber a largura e altura da tela.</param>
+        <summary>Quando substituído em uma classe derivada, obtém a largura e altura do valor especificado. A largura e altura são usados quando o usuário navega para <see cref="T:System.Windows.Forms.DataGridTableStyle" /> usando o <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</summary>
+        <returns>Um <see cref="T:System.Drawing.Size" /> que contém as dimensões da célula.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Windows.Forms.DataGridColumnStyle.GetPreferredSize%2A> para determinar a largura de uma coluna deve ser redimensionada, fornecida uma determinada cadeia de caracteres ou número.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridColumnStyle.GetPreferredSize%2A> método para retornar o tamanho ideal para um valor.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.GetPreferredSize Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetPreferredSize Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.GetPreferredSize Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetPreferredSize Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.GetPreferredSize Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.GetPreferredSize Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderAccessibleObject">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AccessibleObject HeaderAccessibleObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.AccessibleObject HeaderAccessibleObject" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.HeaderAccessibleObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Forms.AccessibleObject" /> da coluna.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.AccessibleObject" /> para a coluna.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderText">
+      <MemberSignature Language="C#" Value="public virtual string HeaderText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HeaderText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.HeaderText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto do cabeçalho da coluna.</summary>
+        <value>Uma cadeia de caracteres que é exibida como o cabeçalho de coluna. Se ela é criada pelo <see cref="T:System.Windows.Forms.DataGrid" />, o valor padrão é o nome do <see cref="T:System.ComponentModel.PropertyDescriptor" /> usado para criar a coluna. Se ela for criada pelo usuário, o padrão é uma cadeia de caracteres vazia ("").</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> propriedade normalmente é usada para exibir uma legenda que é diferente de <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> valor quando o <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> valor não é facilmente entendido. Por exemplo, você pode alterar o <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> para "Nome" quando o <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> valor é "FName".  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridColumnStyle.HeaderText%2A> propriedade para um novo valor.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.HeaderText Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.HeaderText Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.HeaderText Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.HeaderText Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.HeaderText Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.HeaderText Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeaderTextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler HeaderTextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler HeaderTextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.HeaderTextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DataGridColumnStyle.HeaderText" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_HeaderTextChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_HeaderTextChanged/CPP/datagridcolumnstyle_headertextchanged.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_HeaderTextChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_HeaderTextChanged/CS/datagridcolumnstyle_headertextchanged.cs#1)]
+ [!code-vb[DataGridColumnStyle_HeaderTextChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_HeaderTextChanged/VB/datagridcolumnstyle_headertextchanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Invalidate">
+      <MemberSignature Language="C#" Value="protected virtual void Invalidate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Invalidate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Invalidate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redesenha a coluna e faz com que uma mensagem de pintura sejam enviados para o controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridColumnStyle.Invalidate%2A> método normalmente é chamado depois que uma operação de edição é interrompida. Por exemplo, você pode chamar o método ao implementar o <xref:System.Windows.Forms.DataGridColumnStyle.Abort%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappingName">
+      <MemberSignature Language="C#" Value="public string MappingName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MappingName" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.MappingName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Windows.Forms.Design.DataGridColumnStyleMappingNameEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do membro para mapear o estilo de coluna de dados.</summary>
+        <value>O nome do membro para mapear o estilo de coluna de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A comparação usada para corresponder a <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> para os dados de membro diferencia maiusculas de minúsculas.  
+  
+ Isso <xref:System.Windows.Forms.DataGridColumnStyle> é usado para processar os dados no membro de dados indicado sempre que a fonte de dados corresponde a uma indicado pelo <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> propriedade o <xref:System.Windows.Forms.DataGridTableStyle> que contém esse estilo de coluna.  
+  
+ O <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A?displayProperty=nameWithType> propriedade geralmente é definida como o <xref:System.Data.DataColumn.ColumnName%2A> de um <xref:System.Data.DataColumn>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria um <xref:System.Windows.Forms.DataGridTableStyle>e adiciona dois <xref:System.Windows.Forms.DataGridColumnStyle> objetos para o <xref:System.Windows.Forms.GridColumnStylesCollection>. O <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> para cada <xref:System.Windows.Forms.DataGridColumnStyle> é definido como o <xref:System.Data.DataColumn.ColumnName%2A> de um <xref:System.Data.DataColumn>.  
+  
+ [!code-cpp[GridTableStylesCollectionExamples#4](~/samples/snippets/cpp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CPP/gridtablestylescollectionexamples.cpp#4)]
+ [!code-csharp[GridTableStylesCollectionExamples#4](~/samples/snippets/csharp/VS_Snippets_Winforms/GridTableStylesCollectionExamples/CS/gridtablestylescollectionexamples.cs#4)]
+ [!code-vb[GridTableStylesCollectionExamples#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/GridTableStylesCollectionExamples/VB/gridtablestylescollectionexamples.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MappingNameChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler MappingNameChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler MappingNameChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.MappingNameChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridColumnStyle.MappingName" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_MappingNameChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_MappingNameChanged/CPP/datagridcolumnstyle_mappingnamechanged.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_MappingNameChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_MappingNameChanged/CS/datagridcolumnstyle_mappingnamechanged.cs#1)]
+ [!code-vb[DataGridColumnStyle_MappingNameChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_MappingNameChanged/VB/datagridcolumnstyle_mappingnamechanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullText">
+      <MemberSignature Language="C#" Value="public virtual string NullText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NullText" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.NullText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto que é exibido quando a coluna contém <see langword="null" />.</summary>
+        <value>Uma cadeia de caracteres exibida em uma coluna que contém um <see cref="F:System.DBNull.Value" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataColumn> da classe <xref:System.Data.DataColumn.AllowDBNull%2A> propriedade determina se uma coluna pode conter valores nulos.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridColumnStyle.NullText%2A> propriedade para uma nova cadeia de caracteres.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.NullText Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.NullText Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.NullText Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.NullText Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.NullText Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.NullText Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NullTextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler NullTextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler NullTextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.NullTextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o <see cref="P:System.Windows.Forms.DataGridColumnStyle.NullText" /> o valor é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_NullTextChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_NullTextChanged/CPP/datagridcolumnstyle_nulltextchanged.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_NullTextChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_NullTextChanged/CS/datagridcolumnstyle_nulltextchanged.cs#1)]
+ [!code-vb[DataGridColumnStyle_NullTextChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_NullTextChanged/VB/datagridcolumnstyle_nulltextchanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected abstract void Paint (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Paint(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.CurrencyManager source, int32 rowNum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> delimitador no qual pintar.</param>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> do <see cref="T:System.Windows.Forms.DataGrid" /> controle a coluna pertence.</param>
+        <param name="rowNum">O número de linha nos dados subjacentes que está sendo referenciadas.</param>
+        <summary>Pinta o <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> com especificado <see cref="T:System.Drawing.Graphics" />, <see cref="T:System.Drawing.Rectangle" />, <see cref="T:System.Windows.Forms.CurrencyManager" />e o número de linha.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected abstract void Paint (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum, bool alignToRight);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Paint(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.CurrencyManager source, int32 rowNum, bool alignToRight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,System.Int32,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="alignToRight" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> delimitador no qual pintar.</param>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> do <see cref="T:System.Windows.Forms.DataGrid" /> controle a coluna pertence.</param>
+        <param name="rowNum">O número de linha nos dados subjacentes que está sendo referenciadas.</param>
+        <param name="alignToRight">Um valor que indica se o conteúdo da coluna deve ser alinhado à direita. <see langword="true" />Se o conteúdo deve ser alinhado à direita; Caso contrário, <see langword="false" />.</param>
+        <summary>Quando substituído em uma classe derivada, pinta uma <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> com especificado <see cref="T:System.Drawing.Graphics" />, <see cref="T:System.Drawing.Rectangle" />, <see cref="T:System.Windows.Forms.CurrencyManager" />, número de linha e o alinhamento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Paint">
+      <MemberSignature Language="C#" Value="protected virtual void Paint (System.Drawing.Graphics g, System.Drawing.Rectangle bounds, System.Windows.Forms.CurrencyManager source, int rowNum, System.Drawing.Brush backBrush, System.Drawing.Brush foreBrush, bool alignToRight);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Paint(class System.Drawing.Graphics g, valuetype System.Drawing.Rectangle bounds, class System.Windows.Forms.CurrencyManager source, int32 rowNum, class System.Drawing.Brush backBrush, class System.Drawing.Brush foreBrush, bool alignToRight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.Paint(System.Drawing.Graphics,System.Drawing.Rectangle,System.Windows.Forms.CurrencyManager,System.Int32,System.Drawing.Brush,System.Drawing.Brush,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="g" Type="System.Drawing.Graphics" />
+        <Parameter Name="bounds" Type="System.Drawing.Rectangle" />
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="backBrush" Type="System.Drawing.Brush" />
+        <Parameter Name="foreBrush" Type="System.Drawing.Brush" />
+        <Parameter Name="alignToRight" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="g">O <see cref="T:System.Drawing.Graphics" /> desenhar.</param>
+        <param name="bounds">O <see cref="T:System.Drawing.Rectangle" /> delimitador no qual pintar.</param>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> do <see cref="T:System.Windows.Forms.DataGrid" /> controle a coluna pertence.</param>
+        <param name="rowNum">O número da linha na tabela de dados subjacente que está sendo referenciada.</param>
+        <param name="backBrush">Um <see cref="T:System.Drawing.Brush" /> usados para pintar a cor de plano de fundo.</param>
+        <param name="foreBrush">Um <see cref="T:System.Drawing.Color" /> usados para pintar a cor de primeiro plano.</param>
+        <param name="alignToRight">Um valor que indica se é alinhar o conteúdo à direita. <see langword="true" />Se o conteúdo é alinhado à direita, caso contrário, <see langword="false" />.</param>
+        <summary>Pinta uma <see cref="T:System.Windows.Forms.DataGridColumnStyle" /> com especificado <see cref="T:System.Drawing.Graphics" />, <see cref="T:System.Drawing.Rectangle" />, <see cref="T:System.Windows.Forms.CurrencyManager" />, número, cor de plano de fundo, cor de primeiro plano e o alinhamento de linhas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptor">
+      <MemberSignature Language="C#" Value="public virtual System.ComponentModel.PropertyDescriptor PropertyDescriptor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.PropertyDescriptor PropertyDescriptor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.PropertyDescriptor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyDescriptor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.ComponentModel.PropertyDescriptor" /> que determina os atributos dos dados exibidos pelo <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</summary>
+        <value>Um <see cref="T:System.ComponentModel.PropertyDescriptor" /> que contém dados sobre os atributos da coluna.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.PropertyDescriptor> para uma coluna é definida usando o <xref:System.Windows.Forms.BindingManagerBase.GetItemProperties%2A> método o <xref:System.Windows.Forms.BindingManagerBase>. Consulte o <xref:System.Windows.Forms.DataGridColumnStyle.%23ctor%2A> construtor para obter um exemplo de como usar o <xref:System.ComponentModel.PropertyDescriptor> para criar um novo <xref:System.Windows.Forms.DataGridColumnStyle>.  
+  
+   
+  
+## Examples  
+ O código a seguir exemplo obtém o <xref:System.ComponentModel.PropertyDescriptor> de uma coluna em um <xref:System.Windows.Forms.GridColumnStylesCollection>. O segundo exemplo cria um novo <xref:System.Windows.Forms.DataGridColumnStyle> com um <xref:System.ComponentModel.PropertyDescriptor>.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.PropertyDescriptor Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.PropertyDescriptor Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.PropertyDescriptor Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.PropertyDescriptor Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.PropertyDescriptor Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.PropertyDescriptor Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyDescriptorChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PropertyDescriptorChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PropertyDescriptorChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.PropertyDescriptorChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DataGridColumnStyle.PropertyDescriptor" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_PropertyDescriptorChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_PropertyDescriptorChanged/CPP/propertydescriptorchanged.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_PropertyDescriptorChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_PropertyDescriptorChanged/CS/propertydescriptorchanged.cs#1)]
+ [!code-vb[DataGridColumnStyle_PropertyDescriptorChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_PropertyDescriptorChanged/VB/propertydescriptorchanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os dados na coluna podem ser editados.</summary>
+        <value>
+          <see langword="true" />, se os dados não podem ser editados; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Tornar uma coluna somente leitura se ele contém uma chave primária ou se seu valor é gerado automaticamente (como quando o <xref:System.Data.DataColumn> do objeto <xref:System.Data.DataColumn.AutoIncrement%2A> está definida como `true`).  
+  
+ Propriedades somente leitura semelhantes existem em outras classes, cada permitindo mais controle sobre o acesso aos dados. Por exemplo, o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controle pode ser definido para o modo somente leitura usando seu <xref:System.Windows.Forms.DataGrid.ReadOnly%2A> propriedade; o <xref:System.Windows.Forms.DataGridTableStyle> também tem um <xref:System.Windows.Forms.DataGridTableStyle.ReadOnly%2A> propriedade e o <xref:System.Data.DataColumn> classe tiver um <xref:System.Data.DataColumn.ReadOnly%2A> propriedade para restringir as atualizações de dados.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Windows.Forms.DataGridColumnStyle> do objeto <xref:System.Windows.Forms.DataGridColumnStyle.ReadOnly%2A> propriedade com o mesmo valor como o <xref:System.Data.DataColumn> do objeto <xref:System.Data.DataColumn.ReadOnly%2A> propriedade.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.ReadOnly Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.ReadOnly Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.ReadOnly Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.ReadOnly Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.ReadOnly Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.ReadOnly Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnlyChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler ReadOnlyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler ReadOnlyChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.ReadOnlyChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DataGridColumnStyle.ReadOnly" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_ReadOnlyChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_ReadOnlyChanged/CPP/datagridcolumnstyle_readonlychanged.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_ReadOnlyChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_ReadOnlyChanged/CS/datagridcolumnstyle_readonlychanged.cs#1)]
+ [!code-vb[DataGridColumnStyle_ReadOnlyChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_ReadOnlyChanged/VB/datagridcolumnstyle_readonlychanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseHostedControl">
+      <MemberSignature Language="C#" Value="protected virtual void ReleaseHostedControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void ReleaseHostedControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.ReleaseHostedControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Permite que a coluna para liberar recursos quando o controle hospeda não é necessária.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você criar uma classe que deriva de <xref:System.Windows.Forms.DataGridColumnStyle>, geralmente você utilizará a classe derivada para hospedar um controle que é usado para editar os dados. Você deve substituir o <xref:System.Windows.Forms.DataGridColumnStyle.ReleaseHostedControl%2A> método para liberar todas as referências para o controle para liberar recursos do sistema. Por exemplo, o <xref:System.Windows.Forms.DataGridTextBoxColumn> classe derivada usa esse método para liberar a referência a hospedado <xref:System.Windows.Forms.DataGridTextBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetHeaderText">
+      <MemberSignature Language="C#" Value="public void ResetHeaderText ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetHeaderText() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.ResetHeaderText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o <see cref="P:System.Windows.Forms.DataGridColumnStyle.HeaderText" /> para seu valor padrão, <see langword="null" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType>, ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_ResetHeaderText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_ResetHeaderText/CPP/datagridcolumnstyle_resetheadertext.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_ResetHeaderText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_ResetHeaderText/CS/datagridcolumnstyle_resetheadertext.cs#1)]
+ [!code-vb[DataGridColumnStyle_ResetHeaderText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_ResetHeaderText/VB/datagridcolumnstyle_resetheadertext.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnValueAtRow">
+      <MemberSignature Language="C#" Value="protected virtual void SetColumnValueAtRow (System.Windows.Forms.CurrencyManager source, int rowNum, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetColumnValueAtRow(class System.Windows.Forms.CurrencyManager source, int32 rowNum, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.SetColumnValueAtRow(System.Windows.Forms.CurrencyManager,System.Int32,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="source">Um <see cref="T:System.Windows.Forms.CurrencyManager" /> associado a <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <param name="rowNum">O número da linha.</param>
+        <param name="value">O valor a ser definido.</param>
+        <summary>Define o valor em uma linha especificada com o valor de um <see cref="T:System.Windows.Forms.CurrencyManager" />.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Windows.Forms.CurrencyManager" /> do objeto <see cref="P:System.Windows.Forms.BindingManagerBase.Position" /> não coincide com <paramref name="rowNum" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataGrid">
+      <MemberSignature Language="C#" Value="protected virtual void SetDataGrid (System.Windows.Forms.DataGrid value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetDataGrid(class System.Windows.Forms.DataGrid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.SetDataGrid(System.Windows.Forms.DataGrid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.DataGrid" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Windows.Forms.DataGrid" /> controle ao qual esta coluna pertence.</param>
+        <summary>Define o <see cref="T:System.Windows.Forms.DataGrid" /> controle ao qual esta coluna pertence.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você deve usar o <xref:System.Windows.Forms.DataGridColumnStyle.SetDataGridInColumn%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDataGridInColumn">
+      <MemberSignature Language="C#" Value="protected virtual void SetDataGridInColumn (System.Windows.Forms.DataGrid value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetDataGridInColumn(class System.Windows.Forms.DataGrid value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.SetDataGridInColumn(System.Windows.Forms.DataGrid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Windows.Forms.DataGrid" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um <see cref="T:System.Windows.Forms.DataGrid" />.</param>
+        <summary>Define o <see cref="T:System.Windows.Forms.DataGrid" /> para a coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, esse método é substituído por classes derivadas para fazer um processamento especial quando o <xref:System.Windows.Forms.DataGridColumnStyle> é adicionado ao <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType>. Por exemplo, o <xref:System.Windows.Forms.DataGridTextBoxColumn> usa esse método para adicionar o <xref:System.Windows.Forms.DataGridTextBox> como um filho de <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Forms.IDataGridColumnStyleEditingNotificationService.ColumnStartedEditing">
+      <MemberSignature Language="C#" Value="void IDataGridColumnStyleEditingNotificationService.ColumnStartedEditing (System.Windows.Forms.Control editingControl);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Forms.IDataGridColumnStyleEditingNotificationService.ColumnStartedEditing(class System.Windows.Forms.Control editingControl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.System#Windows#Forms#IDataGridColumnStyleEditingNotificationService#ColumnStartedEditing(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingControl" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="editingControl">O <see cref="T:System.Windows.Forms.Control" /> que está editando a coluna.</param>
+        <summary>Informa o <see cref="T:System.Windows.Forms.DataGrid" /> controle que o usuário começou a edição da coluna.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando chamado, o <xref:System.Windows.Forms.DataGridColumnStyle.ColumnStartedEditing%2A> método permite que o <xref:System.Windows.Forms.DataGrid> controle para mostrar um lápis no cabeçalho da linha que indica a linha está sendo editado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateUI">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateUI (System.Windows.Forms.CurrencyManager source, int rowNum, string displayText);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void UpdateUI(class System.Windows.Forms.CurrencyManager source, int32 rowNum, string displayText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.DataGridColumnStyle.UpdateUI(System.Windows.Forms.CurrencyManager,System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.Windows.Forms.CurrencyManager" />
+        <Parameter Name="rowNum" Type="System.Int32" />
+        <Parameter Name="displayText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="source">O <see cref="T:System.Windows.Forms.CurrencyManager" /> associado ao <see cref="T:System.Windows.Forms.DataGridColumnStyle" />.</param>
+        <param name="rowNum">A linha a ser atualizada.</param>
+        <param name="displayText">O novo valor.</param>
+        <summary>Atualiza o valor de uma linha especificada com o texto especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Windows.Forms.DataGridColumnStyle.UpdateUI%2A> para definir um novo valor.  
+  
+ [!code-cpp[Classic DataGridColumnStyle.UpdateUI Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic DataGridColumnStyle.UpdateUI Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic DataGridColumnStyle.UpdateUI Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic DataGridColumnStyle.UpdateUI Example/CS/source.cs#1)]
+ [!code-vb[Classic DataGridColumnStyle.UpdateUI Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.UpdateUI Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public virtual int Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataGridColumnStyle.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da coluna.</summary>
+        <value>A largura da coluna em pixels.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir define a largura de uma <xref:System.Windows.Forms.DataGridColumnStyle> para um novo valor.  
+  
+ [!code-vb[Classic DataGridColumnStyle.Width Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic DataGridColumnStyle.Width Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WidthChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler WidthChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler WidthChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.DataGridColumnStyle.WidthChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.DataGridColumnStyle.Width" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro.  
+  
+ [!code-cpp[DataGridColumnStyle_WidthChanged#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DataGridColumnStyle_WidthChanged/CPP/datagridcolumnstyle_widthchanged.cpp#1)]
+ [!code-csharp[DataGridColumnStyle_WidthChanged#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DataGridColumnStyle_WidthChanged/CS/datagridcolumnstyle_widthchanged.cs#1)]
+ [!code-vb[DataGridColumnStyle_WidthChanged#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DataGridColumnStyle_WidthChanged/VB/datagridcolumnstyle_widthchanged.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

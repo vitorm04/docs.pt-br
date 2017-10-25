@@ -1,0 +1,339 @@
+<Type Name="AsyncVoidMethodBuilder" FullName="System.Runtime.CompilerServices.AsyncVoidMethodBuilder">
+  <TypeSignature Language="C#" Value="public struct AsyncVoidMethodBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit AsyncVoidMethodBuilder extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Threading.Tasks</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um construtor para métodos assíncronos que não retornam um valor.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AwaitOnCompleted&lt;TAwaiter,TStateMachine&gt;">
+      <MemberSignature Language="C#" Value="public void AwaitOnCompleted&lt;TAwaiter,TStateMachine&gt; (ref TAwaiter awaiter, ref TStateMachine stateMachine) where TAwaiter : System.Runtime.CompilerServices.INotifyCompletion where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AwaitOnCompleted&lt;(class System.Runtime.CompilerServices.INotifyCompletion) TAwaiter, (class System.Runtime.CompilerServices.IAsyncStateMachine) TStateMachine&gt;(!!TAwaiter&amp; awaiter, !!TStateMachine&amp; stateMachine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitOnCompleted``2(``0@,``1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAwaiter">
+          <Constraints>
+            <InterfaceName>System.Runtime.CompilerServices.INotifyCompletion</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TStateMachine">
+          <Constraints>
+            <InterfaceName>System.Runtime.CompilerServices.IAsyncStateMachine</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="awaiter" Type="TAwaiter&amp;" RefType="ref" />
+        <Parameter Name="stateMachine" Type="TStateMachine&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAwaiter">O tipo do awaiter.</typeparam>
+        <typeparam name="TStateMachine">O tipo da máquina de estado.</typeparam>
+        <param name="awaiter">O awaiter.</param>
+        <param name="stateMachine">A máquina de estado.</param>
+        <summary>Agenda a máquina de estado para prosseguir para a próxima ação quando o awaiter especificado for concluída.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AwaitUnsafeOnCompleted&lt;TAwaiter,TStateMachine&gt;">
+      <MemberSignature Language="C#" Value="public void AwaitUnsafeOnCompleted&lt;TAwaiter,TStateMachine&gt; (ref TAwaiter awaiter, ref TStateMachine stateMachine) where TAwaiter : System.Runtime.CompilerServices.ICriticalNotifyCompletion where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AwaitUnsafeOnCompleted&lt;(class System.Runtime.CompilerServices.ICriticalNotifyCompletion) TAwaiter, (class System.Runtime.CompilerServices.IAsyncStateMachine) TStateMachine&gt;(!!TAwaiter&amp; awaiter, !!TStateMachine&amp; stateMachine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted``2(``0@,``1@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TAwaiter">
+          <Constraints>
+            <InterfaceName>System.Runtime.CompilerServices.ICriticalNotifyCompletion</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+        <TypeParameter Name="TStateMachine">
+          <Constraints>
+            <InterfaceName>System.Runtime.CompilerServices.IAsyncStateMachine</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="awaiter" Type="TAwaiter&amp;" RefType="ref" />
+        <Parameter Name="stateMachine" Type="TStateMachine&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TAwaiter">O tipo do awaiter.</typeparam>
+        <typeparam name="TStateMachine">O tipo da máquina de estado.</typeparam>
+        <param name="awaiter">O awaiter.</param>
+        <param name="stateMachine">A máquina de estado.</param>
+        <summary>Agenda a máquina de estado para prosseguir para a próxima ação quando o awaiter especificado for concluída. Esse método pode ser chamado de código parcialmente confiável.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Runtime.CompilerServices.AsyncVoidMethodBuilder Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Runtime.CompilerServices.AsyncVoidMethodBuilder Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.CompilerServices.AsyncVoidMethodBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.CompilerServices.AsyncVoidMethodBuilder" /> classe.</summary>
+        <returns>Uma nova instância do construtor.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetException">
+      <MemberSignature Language="C#" Value="public void SetException (Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetException(class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException(System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="exception">A exceção para associar.</param>
+        <summary>Associa uma exceção ao construtor de método.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="exception" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">O construtor não é inicializado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResult">
+      <MemberSignature Language="C#" Value="public void SetResult ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetResult() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Marca o construtor de método como concluído com êxito.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo e seus membros são destinados para uso pelo compilador.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O construtor não é inicializado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStateMachine">
+      <MemberSignature Language="C#" Value="public void SetStateMachine (System.Runtime.CompilerServices.IAsyncStateMachine stateMachine);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetStateMachine(class System.Runtime.CompilerServices.IAsyncStateMachine stateMachine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stateMachine" Type="System.Runtime.CompilerServices.IAsyncStateMachine" />
+      </Parameters>
+      <Docs>
+        <param name="stateMachine">A instância de máquina de estado para associar com o construtor.</param>
+        <summary>Associa o construtor com a máquina de estado especificado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stateMachine" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">A máquina de estado foi definida anteriormente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start&lt;TStateMachine&gt;">
+      <MemberSignature Language="C#" Value="public void Start&lt;TStateMachine&gt; (ref TStateMachine stateMachine) where TStateMachine : System.Runtime.CompilerServices.IAsyncStateMachine;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start&lt;(class System.Runtime.CompilerServices.IAsyncStateMachine) TStateMachine&gt;(!!TStateMachine&amp; stateMachine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start``1(``0@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Threading.Tasks</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TStateMachine">
+          <Constraints>
+            <InterfaceName>System.Runtime.CompilerServices.IAsyncStateMachine</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="stateMachine" Type="TStateMachine&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TStateMachine">O tipo da máquina de estado.</typeparam>
+        <param name="stateMachine">A estado instância de máquina, passada por referência.</param>
+        <summary>Começa a executar o construtor com a máquina de estado associados.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="stateMachine" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

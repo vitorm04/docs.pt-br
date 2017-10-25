@@ -1,0 +1,1230 @@
+<Type Name="DocumentViewerBase" FullName="System.Windows.Controls.Primitives.DocumentViewerBase">
+  <TypeSignature Language="C#" Value="public abstract class DocumentViewerBase : System.Windows.Controls.Control, IServiceProvider, System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract DocumentViewerBase extends System.Windows.Controls.Control implements class System.IServiceProvider, class System.Windows.Markup.IAddChild" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.Primitives.DocumentViewerBase" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.Control</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Windows.Markup.IAddChild</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Document")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma classe base para os visualizadores que devem exibir conteúdo fixo ou de fluxo (representado por um <see cref="T:System.Windows.Documents.FixedDocument" /> ou <see cref="T:System.Windows.Documents.FlowDocument" />, respectivamente).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Controls.Primitives.DocumentViewerBase>é uma classe base mínima, o objetivo de fornecer funcionalidade somente básica que é comum em cenários de visualização do documento. Essa classe base não fornece nenhuma interface do usuário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DocumentViewerBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa valores de classe quando chamado por uma classe derivada de base.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelPrint">
+      <MemberSignature Language="C#" Value="public void CancelPrint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelPrint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.CancelPrint" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela qualquer trabalho de impressão atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Print%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoToNextPage">
+      <MemberSignature Language="C#" Value="public virtual bool CanGoToNextPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoToNextPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o visualizador pode ir para a próxima página atual <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" />.</summary>
+        <value>**True** se o visualizador pode ir para a próxima página; caso contrário, **false**.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CanGoToNextPage"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPageProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoToNextPageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanGoToNextPageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanGoToNextPageProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPage" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoToNextPagePropertyKey">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyPropertyKey CanGoToNextPagePropertyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Windows.DependencyPropertyKey CanGoToNextPagePropertyKey" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPagePropertyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPage" /> chave de propriedade de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você derivar de <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, você precisa essa chave para definir o valor da <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPage%2A> propriedade de dependência. Chamar <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>, passando <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPagePropertyKey> como o `key` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoToPage">
+      <MemberSignature Language="C#" Value="public virtual bool CanGoToPage (int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool CanGoToPage(int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPage(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">Um número de página para verificar como um destino do salto válido.</param>
+        <summary>Retorna um valor que indica se ou o visualizador pode saltar para o número de página especificada.</summary>
+        <returns>Um valor booliano que indica se ou o visualizador pode saltar para o número de página especificada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoToPreviousPage">
+      <MemberSignature Language="C#" Value="public virtual bool CanGoToPreviousPage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanGoToPreviousPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o visualizador pode ir para a página anterior no atual <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" />.</summary>
+        <value>**True** se o visualizador pode ir para a página anterior; caso contrário, **false**.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_CanGoToPreviousPage"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPageProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoToPreviousPageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty CanGoToPreviousPageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty CanGoToPreviousPageProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPage" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanGoToPreviousPagePropertyKey">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyPropertyKey CanGoToPreviousPagePropertyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Windows.DependencyPropertyKey CanGoToPreviousPagePropertyKey" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPagePropertyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPage" /> chave de propriedade de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você derivar de <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, você precisa essa chave para definir o valor da <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPage%2A> propriedade de dependência. Chamar <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>, passando <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPagePropertyKey> como o `key` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Windows.Documents.IDocumentPaginatorSource Document { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Documents.IDocumentPaginatorSource Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Documents.IDocumentPaginatorSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Windows.Documents.IDocumentPaginatorSource" /> a ser paginado e exibido pelo visualizador.</summary>
+        <value>Um <see cref="T:System.Windows.Documents.IDocumentPaginatorSource" /> a ser paginado e exibido pelo visualizador.  
+  
+ A propriedade padrão é **null**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="dependencyPropertyInfo_Document"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.DocumentViewerBase.DocumentProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DocumentProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DocumentProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.DocumentProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstPage">
+      <MemberSignature Language="C#" Value="public void FirstPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FirstPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.FirstPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o visualizador ir para a primeira página do documento atual (representado pelo <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" /> propriedade).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsMasterPage">
+      <MemberSignature Language="C#" Value="public static bool GetIsMasterPage (System.Windows.DependencyObject element);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsMasterPage(class System.Windows.DependencyObject element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.GetIsMasterPage(System.Windows.DependencyObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência da qual recuperar o valor de <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage" />.</param>
+        <summary>Retorna o valor da <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage" /> anexado a propriedade de um objeto de dependência especificada.</summary>
+        <returns>O valor de <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage" /> anexado lido do objeto de dependência especificado pela propriedade *elemento*.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página mestra corresponde ao <xref:System.Windows.Controls.Primitives.DocumentPageView> objeto (no <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> coleção) que inclui o <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A> anexado a propriedade com um valor de **true**.  Para obter mais informações, consulte <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Se gerado <paramref name="element" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMasterPageView">
+      <MemberSignature Language="C#" Value="protected System.Windows.Controls.Primitives.DocumentPageView GetMasterPageView ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.Windows.Controls.Primitives.DocumentPageView GetMasterPageView() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.GetMasterPageView" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Controls.Primitives.DocumentPageView</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o mestre atual <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> para esse visualizador.</summary>
+        <returns>O mestre atual <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> para esse visualizador, ou **nulo** se nenhum mestre <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> pode ser encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.DocumentPageView> fornece um visor para uma página específica de conteúdo (representado por uma subjacente <xref:System.Windows.Documents.DocumentPage>).  A página mestra corresponde ao <xref:System.Windows.Controls.Primitives.DocumentPageView> objeto (no <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> coleção) que inclui o <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A> anexado a propriedade com um valor de **true**.  Para obter mais informações, consulte <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPageViewsCollection">
+      <MemberSignature Language="C#" Value="protected virtual System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.Primitives.DocumentPageView&gt; GetPageViewsCollection (out bool changed);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Controls.Primitives.DocumentPageView&gt; GetPageViewsCollection([out] bool&amp; changed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.GetPageViewsCollection(System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.Primitives.DocumentPageView&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="changed" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="changed">Retorna <see langword="true" /> na primeira chamada para <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.GetPageViewsCollection(System.Boolean@)" /> ou se a coleção não foi alterada desde a última <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.GetPageViewsCollection(System.Boolean@)" /> chamar; caso contrário, <see langword="false" /> se a coleção foi alterada desde a última <see cref="M:System.Windows.Controls.Primitives.DocumentViewerBase.GetPageViewsCollection(System.Boolean@)" /> chamar.</param>
+        <summary>Cria e retorna uma coleção de novo, somente leitura de <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> documento de exibir objetos que estão associados com a atual (representado pelo <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" /> propriedade).</summary>
+        <returns>Uma coleção somente leitura de <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> objetos que estão associados com a atual exibem o documento.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.DocumentPageView> fornece um visor para uma página específica de conteúdo (representado por uma subjacente <xref:System.Windows.Documents.DocumentPage>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoToPage">
+      <MemberSignature Language="C#" Value="public void GoToPage (int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GoToPage(int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.GoToPage(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">O número da página para ir para.</param>
+        <summary>Faz com que o visualizador saltar para um número de página especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se *pageNumber* Especifica uma página inválida para ir para (conforme indicado pelo <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPage%2A> método), esse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidatePageViews">
+      <MemberSignature Language="C#" Value="protected void InvalidatePageViews ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InvalidatePageViews() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.InvalidatePageViews" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o trabalho <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews" /> coleção a ser recriado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMasterPageProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty IsMasterPageProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty IsMasterPageProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPageProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage" /> propriedade anexada</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastPage">
+      <MemberSignature Language="C#" Value="public void LastPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LastPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.LastPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o visualizador para ir para a última página do documento atual (representado pelo <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" /> propriedade).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalChildren">
+      <MemberSignature Language="C#" Value="protected override System.Collections.IEnumerator LogicalChildren { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerator LogicalChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DocumentViewerBase.LogicalChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um enumerador para os filhos na árvore lógica do visualizador.</summary>
+        <value>Um <see cref="T:System.Collections.IEnumerator" /> objeto que pode ser usado para enumerar os filhos lógicos do visualizador.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o visualizador não tiver nenhum filho lógico, um enumerador vazio será retornado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MasterPageNumber">
+      <MemberSignature Language="C#" Value="public virtual int MasterPageNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MasterPageNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de página para a página mestra atual.</summary>
+        <value>O número da página para a página mestra atual, ou **0** se nenhum documento for carregado no momento.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página mestra corresponde ao <xref:System.Windows.Controls.Primitives.DocumentPageView> objeto (no <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> coleção) que inclui o <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A> anexado a propriedade com um valor de **true**.  Para obter mais informações, consulte <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A>.  
+  
+<a name="dependencyPropertyInfo_MasterPageNumber"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumberProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MasterPageNumberProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty MasterPageNumberProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty MasterPageNumberProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumberProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumber" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MasterPageNumberPropertyKey">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyPropertyKey MasterPageNumberPropertyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Windows.DependencyPropertyKey MasterPageNumberPropertyKey" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumberPropertyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumber" /> chave de propriedade de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você derivar de <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, você precisa essa chave para definir o valor da <xref:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumber%2A> propriedade de dependência. Chamar <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>, passando <xref:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumberPropertyKey> como o `key` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPage">
+      <MemberSignature Language="C#" Value="public void NextPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NextPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.NextPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o visualizador ir para a próxima página no documento atual (representado pelo <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" /> propriedade).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnApplyTemplate">
+      <MemberSignature Language="C#" Value="public override void OnApplyTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnApplyTemplate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnApplyTemplate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria a árvore visual para o visualizador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é chamado sempre que <xref:System.Windows.FrameworkElement.ApplyTemplate%2A> é chamado.  
+  
+ Este método substitui <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBringIntoView">
+      <MemberSignature Language="C#" Value="protected virtual void OnBringIntoView (System.Windows.DependencyObject element, System.Windows.Rect rect, int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnBringIntoView(class System.Windows.DependencyObject element, valuetype System.Windows.Rect rect, int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnBringIntoView(System.Windows.DependencyObject,System.Windows.Rect,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="rect" Type="System.Windows.Rect" />
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="element">O elemento do qual o <see cref="E:System.Windows.FrameworkElement.RequestBringIntoView" /> evento foi originado.</param>
+        <param name="rect">Uma região retangular, no espaço de coordenada de <c>elemento</c>, que deve ficar visível.</param>
+        <param name="pageNumber">O número da página para a página que contém <c>elemento</c>.</param>
+        <summary>Invocado sempre que o <see cref="E:System.Windows.FrameworkElement.RequestBringIntoView" /> evento atinge um elemento derivado dessa classe no seu roteiro.  Implemente este método para adicionar a manipulação de classes para este evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A implementação base desse método fará com que o visualizador para ir para a página indicada pelo *pageNumber*.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Se gerado *elemento* é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCancelPrintCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnCancelPrintCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCancelPrintCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnCancelPrintCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o comando <see cref="P:System.Windows.Input.ApplicationCommands.CancelPrint" /> roteado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado quando o <xref:System.Windows.Input.ApplicationCommands.CancelPrint%2A> comando é invocado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateAutomationPeer">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Automation.Peers.AutomationPeer OnCreateAutomationPeer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnCreateAutomationPeer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.Peers.AutomationPeer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este visualizador.</summary>
+        <returns>Um <see cref="T:System.Windows.Automation.Peers.AutomationPeer" /> objeto para este visualizador.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método substitui <xref:System.Windows.ContentElement.OnCreateAutomationPeer%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDocumentChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnDocumentChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDocumentChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnDocumentChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado sempre que o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" /> propriedade é modificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método faz com que o conjunto de trabalho <xref:System.Windows.Controls.Primitives.DocumentPageView> objetos (representadas pelo <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> propriedade) seja invalidado e geradas novamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDpiChanged">
+      <MemberSignature Language="C#" Value="protected override void OnDpiChanged (System.Windows.DpiScale oldDpiScaleInfo, System.Windows.DpiScale newDpiScaleInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDpiChanged(valuetype System.Windows.DpiScale oldDpiScaleInfo, valuetype System.Windows.DpiScale newDpiScaleInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnDpiChanged(System.Windows.DpiScale,System.Windows.DpiScale)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldDpiScaleInfo" Type="System.Windows.DpiScale" />
+        <Parameter Name="newDpiScaleInfo" Type="System.Windows.DpiScale" />
+      </Parameters>
+      <Docs>
+        <param name="oldDpiScaleInfo">A escala DPI anterior configuração.</param>
+        <param name="newDpiScaleInfo">A nova configuração da escala de DPI.</param>
+        <summary>Chamado quando altera a escala DPI. Define o DPI do documento de fluxo para a nova escala.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFirstPageCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnFirstPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnFirstPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnFirstPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o comando <see cref="P:System.Windows.Input.NavigationCommands.FirstPage" /> roteado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.NavigationCommands.FirstPage%2A> comando faz com que o visualizador ir para a primeira página atual <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnGoToPageCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnGoToPageCommand (int pageNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnGoToPageCommand(int32 pageNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnGoToPageCommand(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pageNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pageNumber">O número da página para ir para.</param>
+        <summary>Manipula o comando <see cref="P:System.Windows.Input.NavigationCommands.GoToPage" /> roteado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.NavigationCommands.GoToPage%2A> comando fazer com que o visualizador saltar para um número de página indicada no atual <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A>.  O <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPage%2A> método indica se um número de página especificada é uma página válida para ir para o documento atual.  
+  
+ Se *pageNumber* Especifica uma página inválida para ir para (conforme indicado pelo <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPage%2A> método), esse método não fará nada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLastPageCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnLastPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLastPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnLastPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o comando <see cref="P:System.Windows.Input.NavigationCommands.LastPage" /> roteado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.NavigationCommands.LastPage%2A> comando faz com que o visualizador para ir para a última página atual <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMasterPageNumberChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnMasterPageNumberChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMasterPageNumberChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnMasterPageNumberChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado sempre que o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.MasterPageNumber" /> propriedade é modificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página mestra corresponde ao <xref:System.Windows.Controls.Primitives.DocumentPageView> objeto (no <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> coleção) que inclui o <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A> anexado a propriedade com um valor de **true**.  Para obter mais informações, consulte <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNextPageCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnNextPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNextPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnNextPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o comando <see cref="P:System.Windows.Input.NavigationCommands.NextPage" /> roteado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.NavigationCommands.NextPage%2A> comando faz com que o visualizador ir para a próxima página (se disponível) atual <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A>.  O <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToNextPage%2A> propriedade indica se há ou não uma próxima página para ir para o documento atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPageViewsChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnPageViewsChanged ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPageViewsChanged() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnPageViewsChanged" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Chamado sempre que o conjunto de trabalho de <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> objetos para este visualizador (representado pelo <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews" /> propriedade) é modificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreviousPageCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnPreviousPageCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPreviousPageCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnPreviousPageCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o comando <see cref="P:System.Windows.Input.NavigationCommands.PreviousPage" /> roteado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.NavigationCommands.PreviousPage%2A> comando faz com que o visualizador ir para a próxima página (se disponível) atual <xref:System.Windows.Controls.Primitives.DocumentViewerBase.Document%2A>.  O <xref:System.Windows.Controls.Primitives.DocumentViewerBase.CanGoToPreviousPage%2A> propriedade indica se há ou não uma página anterior para ir para o documento atual.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPrintCommand">
+      <MemberSignature Language="C#" Value="protected virtual void OnPrintCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnPrintCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.OnPrintCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Manipula o comando <see cref="P:System.Windows.Input.ApplicationCommands.Print" /> roteado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado sempre que o <xref:System.Windows.Input.ApplicationCommands.Print%2A> comando é invocado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageCount">
+      <MemberSignature Language="C#" Value="public int PageCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PageCount" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DocumentViewerBase.PageCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número total de páginas no atual <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" />.</summary>
+        <value>O número de páginas no documento atual, ou **0** se nenhum documento for carregado no momento.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é atualizado conforme o conteúdo é paginado.  Como o conteúdo de fluxo não tem nenhuma noção de páginas fixas, o valor dessa propriedade pode alterar se o Visualizador é redimensionado ou se o conteúdo que está sendo exibido é alterado.  
+  
+<a name="dependencyPropertyInfo_PageCount"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageCountProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageCountProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty PageCountProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty PageCountProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.PageCountProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.PageCount" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageCountPropertyKey">
+      <MemberSignature Language="C#" Value="protected static readonly System.Windows.DependencyPropertyKey PageCountPropertyKey;" />
+      <MemberSignature Language="ILAsm" Value=".field family static initonly class System.Windows.DependencyPropertyKey PageCountPropertyKey" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.Primitives.DocumentViewerBase.PageCountPropertyKey" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyPropertyKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.PageCount" /> chave de propriedade de dependência.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você derivar de <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, você precisa essa chave para definir o valor da <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageCount%2A> propriedade de dependência. Chamar <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>, passando <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageCountPropertyKey> como o `key` parâmetro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageViews">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.Primitives.DocumentPageView&gt; PageViews { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Windows.Controls.Primitives.DocumentPageView&gt; PageViews" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Windows.Controls.Primitives.DocumentPageView&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção somente leitura de ativo <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> objetos contidos no visualizador.</summary>
+        <value>Uma coleção somente leitura de ativo <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> objetos contidos no visualizador.  
+  
+ Esta propriedade não tem valor padrão.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Controls.Primitives.DocumentPageView> fornece um visor para uma página específica de conteúdo (representado por uma subjacente <xref:System.Windows.Documents.DocumentPage>).  O conjunto de <xref:System.Windows.Controls.Primitives.DocumentPageView> objetos representados pelo <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> propriedade é usada pelo visualizador para exibir o conteúdo.  
+  
+ A página mestra corresponde ao <xref:System.Windows.Controls.Primitives.DocumentPageView> objeto (no <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> coleção) que inclui o <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A> anexado a propriedade com um valor de **true**.  Para obter mais informações, consulte <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PageViewsChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler PageViewsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PageViewsChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Controls.Primitives.DocumentViewerBase.PageViewsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a coleção de <see cref="T:System.Windows.Controls.Primitives.DocumentPageView" /> itens associados a este visualizador (representado pelo <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews" /> propriedade) as alterações.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousPage">
+      <MemberSignature Language="C#" Value="public void PreviousPage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PreviousPage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.PreviousPage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que o visualizador para ir para a página anterior do documento atual (representado pelo <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.Document" /> propriedade).</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public void Print ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Print() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.Print" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invoca um padrão **imprimir** caixa de diálogo que pode ser usada para imprimir o conteúdo do visualizador e configurar as preferências de impressão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A figura a seguir mostra um exemplo de um padrão **impressão** caixa de diálogo.  Observe que a aparência específica do **impressão** caixa de diálogo pode variar dependendo da configuração do computador host.  
+  
+ ![Captura de tela: Caixa de diálogo de impressão](~/add/media/flowdocrdr-print.png "captura de tela: caixa de diálogo Imprimir")  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIsMasterPage">
+      <MemberSignature Language="C#" Value="public static void SetIsMasterPage (System.Windows.DependencyObject element, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetIsMasterPage(class System.Windows.DependencyObject element, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.SetIsMasterPage(System.Windows.DependencyObject,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.DependencyObject" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="element">Um objeto de dependência no qual definir o valor de <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage" />.</param>
+        <param name="value">O novo valor a ser definido para a propriedade.</param>
+        <summary>Define o <see cref="P:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage" /> anexado propriedade em um objeto de dependência especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A página mestra corresponde ao <xref:System.Windows.Controls.Primitives.DocumentPageView> objeto (no <xref:System.Windows.Controls.Primitives.DocumentViewerBase.PageViews%2A> coleção) que inclui o <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A> anexado a propriedade com um valor de **true**.  Para obter mais informações, consulte <xref:System.Windows.Controls.Primitives.DocumentViewerBase.IsMasterPage%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Se gerado *elemento* é **nulo**.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.IServiceProvider.GetService">
+      <MemberSignature Language="C#" Value="object IServiceProvider.GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.IServiceProvider.GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.System#IServiceProvider#GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">Um objeto que especifica o tipo de objeto de serviço a ser obtido.</param>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <returns>Um objeto de serviço do tipo <paramref name="serviceType" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddChild">
+      <MemberSignature Language="C#" Value="void IAddChild.AddChild (object value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddChild(object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.System#Windows#Markup#IAddChild#AddChild(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="value">Um objeto a ser adicionado como filho.</param>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Markup.IAddChild.AddText">
+      <MemberSignature Language="C#" Value="void IAddChild.AddText (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Windows.Markup.IAddChild.AddText(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.Primitives.DocumentViewerBase.System#Windows#Markup#IAddChild#AddText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Uma cadeia de caracteres para adicionar ao objeto.</param>
+        <summary>Este tipo ou membro dá suporte à infraestrutura [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)] e não se destina a ser usado diretamente do código.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

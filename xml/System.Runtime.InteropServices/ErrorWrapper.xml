@@ -1,0 +1,228 @@
+<Type Name="ErrorWrapper" FullName="System.Runtime.InteropServices.ErrorWrapper">
+  <TypeSignature Language="C#" Value="public sealed class ErrorWrapper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ErrorWrapper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ErrorWrapper" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Encapsula objetos que o empacotador deve realizar marshaling como um <see langword="VT_ERROR" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão, <xref:System.Object> argumentos de tipo são empacotados como uma `VARIANT` tipo, onde o tipo de objeto determina o `VARTYPE` valor o `VARIANT`.  
+  
+ O <xref:System.Runtime.InteropServices.ErrorWrapper> tipo devem ser passados como um <xref:System.Object> tipo a ser empacotado como um `VARIANT` do tipo `VT_ERROR`, caso contrário, o <xref:System.Runtime.InteropServices.ErrorWrapper> tipo é empacotado como um inteiro.  
+  
+ A tabela a seguir ilustra a realização de marshaling em uma chamada de gerenciado para uma função nativa, usando invocação de plataforma.  
+  
+|Parâmetro de assinatura gerenciada|valor de pArr|Realizar marshaling como|  
+|---------------------------------|----------------|------------------|  
+|ErrorWrapper [] pArr|ErrorWrapper [10] de ErrorWrapper(77)|`Int[10]`|  
+|PArr do objeto]|ErrorWrapper [10] de ErrorWrapper(77)|`VARIANT[10]`de`VT_ERROR`|  
+|PArr do objeto]|Objeto [10] do ErrorWrapper(77)|`VARIANT[10]`de`VT_ERROR`|  
+  
+ A tabela a seguir ilustra o marshaling de dados em uma chamada de gerenciado para uma função nativa, usando COM runtime callable wrappers do (RCW).  
+  
+|Parâmetro de assinatura gerenciada|valor de pArr|Realizar marshaling como|  
+|---------------------------------|----------------|------------------|  
+|ErrorWrapper [] pArr|ErrorWrapper [10] de ErrorWrapper(77)|`Int[10]`|  
+|PArr do objeto]|ErrorWrapper [10] de ErrorWrapper(77)|`SafeArrayTypeMismatch`exceção|  
+|PArr do objeto]|Objeto [10] do ErrorWrapper(77)|`SAFEARRAY(VARIANT)`|  
+  
+ Observe que <xref:System.Runtime.InteropServices.ErrorWrapper> objetos não são empacotados como tipo `VT_ERROR` depois que eles são passados de volta de COM.  Um valor único é empacotado COM como tipo de `VT_I4`, enquanto as matrizes são empacotadas COM como tipo de `VT_UI4`.  
+  
+ Para obter mais informações sobre `VT_ERROR`, consulte a documentação existente para `VARENUM::VT_ERROR` na biblioteca MSDN.  
+  
+   
+  
+## Examples  
+ Primeiro, o exemplo de código a seguir demonstra uma única <xref:System.Int32> objeto empacotado do COM como uma <xref:System.Int32> objeto. Em seguida, demonstra uma <xref:System.Int32> matriz passa por marshaling do COM como uma <xref:System.UInt32> matriz.  
+  
+```  
+// Scenario 1:  
+// Pass a single value.  
+Int32 x = 3;  
+Object o = new ErrorWrapper(x);  
+// Pass 'o' to COM.  
+// On the return trip, 'o' has been unwrapped and is still an Int32 object.  
+Int32 y = (Int32)o;  
+Scenario 2:  
+// Pass an array of values.  
+Int32[] arr = new Int32[3];  
+Object o = new ErrorWrapper(arr);  
+// Pass 'o' to COM.  
+// On the return trip, 'o' has been unwrapped and is now a UInt32[] array.  
+UInt32[ ] arr2 = (UInt32[])o;  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorWrapper (Exception e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Exception e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="e" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="e">A exceção a ser convertido em um código de erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ErrorWrapper" /> classe com o HRESULT que corresponde à exceção fornecida.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">permissão chamar código não gerenciado.  
+  
+ Ação de segurança: demanda.  
+  
+ Enumeração associada:<see cref="F:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorWrapper (int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Int32)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">O HRESULT do erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ErrorWrapper" /> classe com o HRESULT do erro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ErrorWrapper (object errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ErrorWrapper.#ctor(System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorCode" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="errorCode">O objeto que contém o HRESULT do erro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.InteropServices.ErrorWrapper" /> classe com um objeto que contém o HRESULT do erro.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O parâmetro <paramref name="errorCode" /> não é um tipo <see cref="T:System.Int32" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public int ErrorCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.InteropServices.ErrorWrapper.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o código de erro do wrapper.</summary>
+        <value>O HRESULT do erro.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

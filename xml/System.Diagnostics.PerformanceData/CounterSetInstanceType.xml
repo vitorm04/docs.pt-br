@@ -1,0 +1,122 @@
+<Type Name="CounterSetInstanceType" FullName="System.Diagnostics.PerformanceData.CounterSetInstanceType">
+  <TypeSignature Language="C#" Value="public enum CounterSetInstanceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CounterSetInstanceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceData.CounterSetInstanceType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica se o conjunto de contadores permite várias instâncias, como processos e discos físicos, ou uma única instância, como memória.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GlobalAggregate">
+      <MemberSignature Language="C#" Value="GlobalAggregate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterSetInstanceType GlobalAggregate = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.GlobalAggregate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterSetInstanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conjunto de contadores contém contadores de única instância cujo valor de agregação é obtido de uma ou mais fontes. Por exemplo, um contador nesse tipo de conjunto de contadores pode obter o número de leituras de cada um dos três discos rígidos no computador e soma os valores.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GlobalAggregateWithHistory">
+      <MemberSignature Language="C#" Value="GlobalAggregateWithHistory" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterSetInstanceType GlobalAggregateWithHistory = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.GlobalAggregateWithHistory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterSetInstanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo é semelhante ao <see cref="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.GlobalAggregate" /> exceto que esse conjunto de contadores tipo armazena todos os valores de contador para o tempo de vida do aplicativo cliente (o valor do contador em cache além do tempo de vida do contador). Por exemplo, se um dos discos rígidos no exemplo a agregação global se tornar indisponível, o total de bytes lidos por esse disco ainda seria disponíveis e usados para calcular o valor de agregação.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceAggregate">
+      <MemberSignature Language="C#" Value="InstanceAggregate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterSetInstanceType InstanceAggregate = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.InstanceAggregate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterSetInstanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este tipo é semelhante ao <see cref="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.MultipleAggregate" />, exceto que, em vez de agregar todos os dados de instância para uma instância de agregados ( total), ele irá agregar dados de contador de instâncias do mesmo nome. Por exemplo, se o provedor múltiplo processa instâncias contidas chamadas IExplore, <see cref="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.Multiple" /> e <see cref="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.MultipleAggregate" /> CounterSet mostrará as várias instâncias de IExplore (IExplore, IExplore #1, IExplore n º 2 e assim por diante); no entanto, um <see cref="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.InstanceAggregate" /> tipo de instância publicará apenas uma instância de IExplore com dados de contador agregados de todas as instâncias nomeadas IExplore.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse tipo não é suportado no Windows Vista.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiple">
+      <MemberSignature Language="C#" Value="Multiple" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterSetInstanceType Multiple = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.Multiple" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterSetInstanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conjunto de contadores contém vários contadores de instância, por exemplo, um contador que mede a média e/s de disco para um processo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultipleAggregate">
+      <MemberSignature Language="C#" Value="MultipleAggregate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterSetInstanceType MultipleAggregate = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.MultipleAggregate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterSetInstanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conjunto de contadores contém vários contadores de instância cujo valor de agregação é obtido em todas as instâncias do contador. Por exemplo, um contador nesse tipo de conjunto de contadores pode obter o tempo de execução do thread total para todos os threads em um aplicativo multithread e soma de seus valores.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Single">
+      <MemberSignature Language="C#" Value="Single" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterSetInstanceType Single = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterSetInstanceType.Single" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterSetInstanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O conjunto de contadores contém contadores de instância única, por exemplo, um contador que mede a memória física.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

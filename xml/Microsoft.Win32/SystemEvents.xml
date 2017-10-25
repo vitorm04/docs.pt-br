@@ -1,0 +1,766 @@
+<Type Name="SystemEvents" FullName="Microsoft.Win32.SystemEvents">
+  <TypeSignature Language="C#" Value="public sealed class SystemEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SystemEvents extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Win32.SystemEvents" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso às notificações de eventos do sistema. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:Microsoft.Win32.SystemEvents> classe fornece a capacidade de responder a tipos específicos de eventos do sistema.  
+  
+ Quando um evento do sistema é gerado, quaisquer delegados anexados ao evento que são chamados usando o thread que monitora eventos do sistema. Portanto, você deve fazer as chamadas do seu thread-safe manipuladores de eventos. Se você precisar chamar um evento do sistema que não é exposto como um membro dessa classe, você pode usar o <xref:Microsoft.Win32.SystemEvents.InvokeOnEventsThread%2A> método.  
+  
+> [!CAUTION]
+>  Não executa processamento demorado no thread que gera um manipulador de eventos do sistema, pois isso poderá impedir que outros aplicativos funcionem.  
+  
+> [!NOTE]
+>  Alguns eventos do sistema não podem ser gerados no [!INCLUDE[windowsver](~/includes/windowsver-md.md)]. Certifique-se de verificar se seu aplicativo funciona conforme o esperado em [!INCLUDE[windowsver](~/includes/windowsver-md.md)].  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos. O primeiro exemplo mostra como usar eventos do sistema em um aplicativo comum, e o segundo exemplo mostra como usar eventos do sistema em um serviço do Windows.  
+  
+ **Exemplo 1**  
+  
+ O exemplo de código a seguir registra o interesse em alguns eventos do sistema e, em seguida, aguarda para qualquer um desses eventos ocorra. A saída mostrada ocorre se o usuário alterar a resolução de vídeo.  
+  
+ [!code-cpp[SystemEvents#1](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#1)]
+ [!code-csharp[SystemEvents#1](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#1)]
+ [!code-vb[SystemEvents#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#1)]  
+  
+ **Exemplo 2**  
+  
+ O exemplo de código a seguir demonstra um serviço do Windows muito simple que trata o <xref:Microsoft.Win32.SystemEvents.TimeChanged> e <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> eventos. O exemplo inclui um serviço chamado `SimpleService`, um formulário denominado `HiddenForm`e um instalador. O formulário fornece o loop de mensagem que é necessária para eventos do sistema.  
+  
+> [!NOTE]
+>  Os serviços não tem loops de mensagens, a menos que eles têm permissão para interagir com a área de trabalho. Se o loop de mensagem não é fornecido por um formulário oculto, como neste exemplo, o serviço deve ser executado sob a conta sistema local, e é necessária a intervenção manual para habilitar a interação com a área de trabalho. Ou seja, o administrador precisa verificar manualmente a **permitir que o serviço interaja com a área de trabalho** caixa de seleção a **logon** guia da caixa de diálogo de propriedades do serviço. Nesse caso, um loop de mensagem é fornecido automaticamente. Essa opção está disponível apenas quando o serviço é executado sob a conta sistema local. Interação com a área de trabalho não pode ser habilitada por meio de programação.  
+  
+ O serviço neste exemplo inicia um thread que executa uma instância de `HiddenForm`. Os eventos são conectados e gerenciados no formulário. Os eventos devem ser vinculados no evento de carregamento do formulário, para certificar-se de que o formulário seja completamente carregado pela primeira vez; Caso contrário, os eventos não serão gerados.  
+  
+> [!NOTE]
+>  O exemplo fornece todo o código necessário, incluindo o código de inicialização do formulário normalmente gerado pelo [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] designers. Se você estiver desenvolvendo seu serviço em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], você pode omitir a segunda classe parcial e usar o **propriedades** janela para definir a altura e largura do formulário oculto para zero, o estilo de borda para <xref:System.Windows.Forms.FormBorderStyle?displayProperty=nameWithType>e o estado da janela para <xref:System.Windows.Forms.FormWindowState?displayProperty=nameWithType>.  
+  
+ Para executar o exemplo:  
+  
+1.  Compile o código da linha de comando. O nome que você usa para o arquivo de origem não é importante.  
+  
+2.  Instalar o serviço de linha de comando usando o [Installutil.exe (ferramenta de instalação)](~/docs/framework/tools/installutil-exe-installer-tool.md) utilitário. Por exemplo, `InstallUtil example.exe` se o nome do arquivo de origem é `example.cs` ou `example.vb`. Você deve ser um administrador para instalar o serviço.  
+  
+3.  Use o console de serviços para iniciar o serviço.  
+  
+4.  Alterar a hora do sistema, ou alterar as preferências do usuário, como as propriedades de mouse.  
+  
+5.  Exibir as mensagens de **aplicativo** categoria do Visualizador de eventos.  
+  
+6.  Use o console de serviços para interromper o serviço.  
+  
+7.  Desinstalar o serviço na linha de comando usando o `/u` opção. Por exemplo, `InstallUtil /u example.exe`.  
+  
+ [!code-csharp[ManagedWindowsService#1](~/samples/snippets/csharp/VS_Snippets_CLR/ManagedWindowsService/cs/source.cs#1)]
+ [!code-vb[ManagedWindowsService#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ManagedWindowsService/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <permission cref="T:System.Security.NamedPermissionSet">Para obter acesso completo aos recursos do sistema. Exigem valores: <see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" />. Estados associados:</permission>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateTimer">
+      <MemberSignature Language="C#" Value="public static IntPtr CreateTimer (int interval);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig native int CreateTimer(int32 interval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SystemEvents.CreateTimer(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="interval" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="interval">Especifica o intervalo entre as notificações de timer, em milissegundos.</param>
+        <summary>Cria um novo timer de janela associado com a janela de eventos do sistema.</summary>
+        <returns>A ID do novo timer.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">O intervalo é menor ou igual a zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida ou a tentativa de criar o timer não teve êxito.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplaySettingsChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler DisplaySettingsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DisplaySettingsChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.DisplaySettingsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário altera as configurações de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como monitorar o <xref:Microsoft.Win32.SystemEvents.DisplaySettingsChanged> evento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+ [!code-cpp[SystemEvents#2](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#2)]
+ [!code-csharp[SystemEvents#2](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#2)]
+ [!code-vb[SystemEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplaySettingsChanging">
+      <MemberSignature Language="C#" Value="public static event EventHandler DisplaySettingsChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler DisplaySettingsChanging" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.DisplaySettingsChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando as configurações de exibição estão sendo alteradas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EventsThreadShutdown">
+      <MemberSignature Language="C#" Value="public static event EventHandler EventsThreadShutdown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EventsThreadShutdown" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.EventsThreadShutdown" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes que o thread de escuta para eventos do sistema é encerrado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado como o thread de escuta para eventos do sistema está prestes a ser encerrada. Delegados de eventos do sistema são invocados usando o thread de escuta para eventos do sistema.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InstalledFontsChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler InstalledFontsChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler InstalledFontsChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.InstalledFontsChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário adiciona fontes ou remove fontes do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeOnEventsThread">
+      <MemberSignature Language="C#" Value="public static void InvokeOnEventsThread (Delegate method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeOnEventsThread(class System.Delegate method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SystemEvents.InvokeOnEventsThread(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="method">Um delegado para chamar usando o thread de escuta para eventos do sistema.</param>
+        <summary>Invoca o delegado especificado usando o thread de escuta para eventos do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método sempre que você necessita para manipular um evento do sistema que não é exposta caso contrário, o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+ Quando você chamar esse método, o delegado especificado será chamado pelo thread que seu aplicativo está usando para processar eventos do sistema.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="KillTimer">
+      <MemberSignature Language="C#" Value="public static void KillTimer (IntPtr timerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void KillTimer(native int timerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Win32.SystemEvents.KillTimer(System.IntPtr)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="timerId" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="timerId">A ID do temporizador para encerrar.</param>
+        <summary>Encerra o timer especificado pela id de determinado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida ou a tentativa de finalizar o timer não teve êxito.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LowMemory">
+      <MemberSignature Language="C#" Value="public static event EventHandler LowMemory;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LowMemory" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.LowMemory" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o sistema está ficando sem memória RAM disponível.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento encapsula a mensagem WM_COMPACTING. Esta mensagem é enviada para todas as janelas de nível superior quando o sistema detecta mais de 12,5% de tempo do sistema em um intervalo de 30 a 60 segundos está sendo gasto compactar memória. Isso indica que a memória do sistema está baixa.  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+        <block subset="none" type="usage">
+          <para>Esta mensagem é fornecida somente para compatibilidade com aplicativos baseados no Windows de 16 bits.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="PaletteChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler PaletteChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PaletteChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.PaletteChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário alterna para um aplicativo que usa uma paleta diferente.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como monitorar o <xref:Microsoft.Win32.SystemEvents.PaletteChanged> evento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+ [!code-cpp[SystemEvents#2](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#2)]
+ [!code-csharp[SystemEvents#2](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#2)]
+ [!code-vb[SystemEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerModeChanged">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.PowerModeChangedEventHandler PowerModeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.PowerModeChangedEventHandler PowerModeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.PowerModeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.PowerModeChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário suspende ou retoma o sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionEnded">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.SessionEndedEventHandler SessionEnded;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.SessionEndedEventHandler SessionEnded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.SessionEnded" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionEndedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário está tentando fazer logoff ou desligar o sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionEnding">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.SessionEndingEventHandler SessionEnding;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.SessionEndingEventHandler SessionEnding" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.SessionEnding" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionEndingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário está tentando fazer logoff ou desligar o sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este é um evento cancelável. Definindo o <xref:Microsoft.Win32.SessionEndingEventArgs.Cancel%2A> propriedade `true` solicitará que a sessão continue a executar. Ele fornece nenhuma garantia de que a sessão não será finalizada.  
+  
+ Se você estiver usando <xref:Microsoft.Win32.SystemEvents.SessionEnding> em um formulário do Windows para detectar um logoff do sistema ou uma reinicialização, não há nenhuma maneira determinante para decidir se o <xref:System.Windows.Forms.Form.Closing> evento será disparado antes desse evento.  
+  
+ Se você deseja executar algumas tarefas especiais antes de <xref:System.Windows.Forms.Form.Closing> é disparado, você precisa garantir que <xref:Microsoft.Win32.SystemEvents.SessionEnding> dispara antes <xref:System.Windows.Forms.Form.Closing>. Para fazer isso, você precisa de interceptação de `WM_QUERYENDSESSION` no formulário, substituindo o `WndProc` função.  Este exemplo demonstra como fazer isso.  
+  
+```vb  
+Private Shared WM_QUERYENDSESSION As Integer = &H11  
+ Private Shared systemShutdown As Boolean = False  
+ Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)  
+     If m.Msg = WM_QUERYENDSESSION Then  
+         MessageBox.Show("queryendsession: this is a logoff, shutdown, or reboot")  
+         systemShutdown = True  
+     End If  
+     ' If this is WM_QUERYENDSESSION, the closing event should be raised in the base WndProc.  
+     MyBase.WndProc(m)  
+ End Sub 'WndProc   
+ Private Sub Form1_Closing(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing  
+     If (systemShutdown) Then  
+     ' Reset the variable because the user might cancel the shutdown.  
+         systemShutdown = False  
+         If (System.Windows.Forms.DialogResult.Yes = _  
+                 MessageBox.Show("My application", "Do you want to save your work before logging off?", MessageBoxButtons.YesNo)) Then  
+                 e.Cancel = True  
+         Else  
+                 e.Cancel = False  
+         End If  
+     End If  
+ End Sub  
+  
+```  
+  
+```csharp  
+private static int WM_QUERYENDSESSION = 0x11;  
+private static bool systemShutdown = false;  
+protected override void WndProc(ref System.Windows.Forms.Message m)  
+{  
+    if (m.Msg==WM_QUERYENDSESSION)  
+    {  
+        MessageBox.Show("queryendsession: this is a logoff, shutdown, or reboot");  
+        systemShutdown = true;  
+    }  
+  
+    // If this is WM_QUERYENDSESSION, the closing event should be  
+    // raised in the base WndProc.  
+    base.WndProc(ref m);  
+  
+} //WndProc   
+  
+private void Form1_Closing(  
+    System.Object sender,   
+    System.ComponentModel.CancelEventArgs e)  
+{  
+    if (systemShutdown)  
+        // Reset the variable because the user might cancel the   
+        // shutdown.  
+    {  
+        systemShutdown = false;  
+        if (DialogResult.Yes==MessageBox.Show("My application",   
+            "Do you want to save your work before logging off?",   
+            MessageBoxButtons.YesNo))  
+        {  
+            e.Cancel = true;  
+        }  
+        else  
+        {  
+            e.Cancel = false;  
+        }  
+    }  
+}  
+```  
+  
+> [!IMPORTANT]
+>  Aplicativos de console não aumente o <xref:Microsoft.Win32.SystemEvents.SessionEnding> evento.  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionSwitch">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.SessionSwitchEventHandler SessionSwitch;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.SessionSwitchEventHandler SessionSwitch" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.SessionSwitch" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.SessionSwitchEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário conectado no momento foi alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeChanged">
+      <MemberSignature Language="C#" Value="public static event EventHandler TimeChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TimeChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.TimeChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o usuário altera a hora no relógio do sistema.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimerElapsed">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.TimerElapsedEventHandler TimerElapsed;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.TimerElapsedEventHandler TimerElapsed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.TimerElapsed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.TimerElapsedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um intervalo de timer do windows expirou.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPreferenceChanged">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.UserPreferenceChangedEventHandler UserPreferenceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.UserPreferenceChangedEventHandler UserPreferenceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.UserPreferenceChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.UserPreferenceChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma preferência do usuário foi alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPreferenceChanging">
+      <MemberSignature Language="C#" Value="public static event Microsoft.Win32.UserPreferenceChangingEventHandler UserPreferenceChanging;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Win32.UserPreferenceChangingEventHandler UserPreferenceChanging" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Win32.SystemEvents.UserPreferenceChanging" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.MonoTODO("Currently does nothing on Mono")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Win32.UserPreferenceChangingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando uma preferência de usuário está sendo alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Esse evento é gerado apenas se a bomba de mensagens está em execução. Em um serviço do Windows, a menos que um formulário oculto é usado ou a bomba de mensagens foi iniciada manualmente, esse evento não ocorrerá. Para obter um exemplo de código que mostra como tratar eventos do sistema por meio de um formulário oculto em um serviço do Windows, consulte o <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+> [!CAUTION]
+>  Como esse é um evento estático, você deve desanexá seus manipuladores de eventos quando seu aplicativo é descartado ou resultarão vazamentos de memória.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como monitorar o <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> evento. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:Microsoft.Win32.SystemEvents> classe.  
+  
+ [!code-cpp[SystemEvents#2](~/samples/snippets/cpp/VS_Snippets_Winforms/SystemEvents/cpp/SystemEvents.cpp#2)]
+ [!code-csharp[SystemEvents#2](~/samples/snippets/csharp/VS_Snippets_Winforms/SystemEvents/CS/SystemEvents.cs#2)]
+ [!code-vb[SystemEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/SystemEvents/VB/SystemEvents.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Não há suporte para notificações de eventos do sistema no contexto atual. Os processos do servidor, por exemplo, podem não dar suporte a notificações de eventos globais do sistema.</exception>
+        <exception cref="T:System.Runtime.InteropServices.ExternalException">A tentativa de criar um thread de janela de eventos do sistema não foi bem-sucedida.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

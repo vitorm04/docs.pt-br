@@ -1,0 +1,138 @@
+<Type Name="UnsupportedPolicyOptionsException" FullName="System.IdentityModel.Selectors.UnsupportedPolicyOptionsException">
+  <TypeSignature Language="C#" Value="public class UnsupportedPolicyOptionsException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit UnsupportedPolicyOptionsException extends System.Exception" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel.Selectors</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Indica que uma política foi fornecida para o sistema que incluídas opções sem suporte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma exceção <xref:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException> indica que uma política fornecida ao sistema inclui opções sem suporte. As restrições que podem causar essas falhas incluem:  
+  
+ Um destinatário solicitou um token de serviço de token de segurança local especificando http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self como o emissor do token. No entanto, um dos requisitos especificados na política não tem suporte no serviço de token de segurança local do CardSpace. Para obter mais informações, consulte [uma referência técnica para o perfil de cartão de informações v 1.0](http://go.microsoft.com/fwlink/?LinkId=102401). Os exemplos de opções sem suporte incluem:  
+  
+-   Uma declaração solicitada pelo destinatário não está na lista de declarações com suporte especificado no [suporte para tipos de declaração](http://go.microsoft.com/fwlink/?LinkId=102402) seção de "Uma referência técnica para o perfil de cartão de informações v 1.0".  
+  
+-   O tipo de token é diferente de SAML 1.0 ou 1.1.  
+  
+-   Para sites não SSL, a chave não é simétrica.  
+  
+-   O KeyWrapAlgorithm é diferente do algoritmo padrão.  
+  
+-   Um elemento sem suporte é especificado na política. Os elementos com suporte são os seguintes:  
+  
+    -   EncryptionAlgorithm  
+  
+    -   CanonicalizationAlgorithm  
+  
+    -   SignWith  
+  
+    -   TokenType  
+  
+    -   ClaimsElement  
+  
+    -   KeyType  
+  
+    -   KeySize  
+  
+    -   EncryptWith  
+  
+    -   RequestType  
+  
+    -   SecondaryParameters  
+  
+    -   KeyWrapAlgorithm  
+  
+-   wst:RequestType não é do tipo Issue.  
+  
+-   Para tipos de chave assimétrica, um tamanho de chave não é 2048.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnsupportedPolicyOptionsException ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Selectors</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma instância da classe <see cref="T:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnsupportedPolicyOptionsException (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Selectors</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException" /> classe com a mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UnsupportedPolicyOptionsException (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Selectors</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">
+          <see cref="T:System.Runtime.Serialization.SerializationInfo" />que contém os dados do objeto serializado sobre a exceção que está sendo gerada.</param>
+        <param name="context">O <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém informações contextuais sobre a fonte ou o destino.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException" /> classe com as informações de serialização e contexto de fluxo contínuo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnsupportedPolicyOptionsException (string message, Exception innerException);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel.Selectors</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="innerException" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">A mensagem de erro que explica a razão da exceção.</param>
+        <param name="innerException">A exceção original que provocou essa exceção seja lançada.</param>
+        <summary>Inicializa uma instância do <see cref="T:System.IdentityModel.Selectors.UnsupportedPolicyOptionsException" /> classe com a mensagem de erro especificada e a exceção original que provocou essa exceção seja lançada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

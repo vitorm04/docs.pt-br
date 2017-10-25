@@ -1,0 +1,118 @@
+<Type Name="ObjectDataSourceMethodEventArgs" FullName="System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs">
+  <TypeSignature Language="C#" Value="public class ObjectDataSourceMethodEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectDataSourceMethodEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Inserting" />, <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Updating" />, e <see cref="E:System.Web.UI.WebControls.ObjectDataSource.Deleting" /> eventos o <see cref="T:System.Web.UI.WebControls.ObjectDataSource" /> controle.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs> classe é usada no <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnSelecting%2A>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnUpdating%2A>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnInserting%2A>, e <xref:System.Web.UI.WebControls.ObjectDataSourceView.OnDeleting%2A> métodos para fornecer acesso aos parâmetros de entrada que são passados para o <xref:System.Web.UI.WebControls.ObjectDataSource.Select%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.Update%2A>, <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A>, e <xref:System.Web.UI.WebControls.ObjectDataSource.Insert%2A> métodos do <xref:System.Web.UI.WebControls.ObjectDataSource> controle. Esses parâmetros são acessados usando o <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.InputParameters%2A> propriedade. Adicionando um delegado para manipular o <xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating>, <xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, ou <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting> eventos, você pode examinar e manipular os valores dos parâmetros e executar qualquer pré-processamento adicional é necessária. As alterações para os parâmetros deste dicionário afetará quais sobrecarga do método é chamada para a operação. Quando o <xref:System.Web.UI.WebControls.ObjectDataSource.DataObjectTypeName%2A> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSource> controle for definido, você só pode modificar as propriedades do objeto de dados para os itens neste dicionário; você não pode adicionar ou remover parâmetros. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A>.  
+  
+ O <xref:System.Web.UI.WebControls.ObjectDataSource> controle expõe vários eventos que você pode manipular para trabalhar com o objeto comercial subjacente várias vezes durante seu ciclo de vida. A tabela a seguir lista os eventos e associados <xref:System.EventArgs> classes e delegados de manipulador de eventos.  
+  
+|Evento|Classe `EventArgs`|Delegado EventHandler|  
+|-----------|-----------------------|---------------------------|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreating>.<br /><br /> Ocorre imediatamente antes que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectCreated>.<br /><br /> Ocorre imediatamente depois que a instância do objeto comercial é criada.|<xref:System.Web.UI.WebControls.ObjectDataSourceEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceObjectEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selecting>.<br /><br /> Ocorre antes que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceSelectingEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserting>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updating> e <xref:System.Web.UI.WebControls.ObjectDataSource.Deleting>.<br /><br /> Ocorre antes de uma operação de inserção, atualização ou delete é executada.|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Selected>.<br /><br /> Ocorre depois que os dados são recuperados.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.Inserted>, <xref:System.Web.UI.WebControls.ObjectDataSource.Updated> e <xref:System.Web.UI.WebControls.ObjectDataSource.Deleted>.<br /><br /> Ocorre após a inserção, atualização ou operação de exclusão é concluída.|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventHandler>|  
+|<xref:System.Web.UI.WebControls.ObjectDataSource.ObjectDisposing>.<br /><br /> Ocorre antes de um objeto comercial é destruído.|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventArgs>|<xref:System.Web.UI.WebControls.ObjectDataSourceDisposingEventHandler>|  
+  
+   
+  
+## Examples  
+ Esta seção contém dois exemplos de código. O primeiro exemplo de código demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.DetailsView> controle para inserir dados. O segundo exemplo de código fornece um objeto comercial de camada intermediária de exemplo que é usado pelo primeiro exemplo de código.  
+  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.ObjectDataSource> controle com um objeto comercial e um <xref:System.Web.UI.WebControls.DetailsView> controle para inserir dados. O <xref:System.Web.UI.WebControls.DetailsView> inicialmente exibe uma nova `NorthwindEmployee` registro, junto com um gerado automaticamente **inserir** botão. Depois de inserir dados nos campos da <xref:System.Web.UI.WebControls.DetailsView> de controle, clique no **inserir** botão e o <xref:System.Web.UI.WebControls.ObjectDataSource.InsertMethod%2A> propriedade identifica qual método executa o <xref:System.Web.UI.WebControls.ObjectDataSource.Insert%2A> ação.  
+  
+ Neste exemplo, o `UpdateEmployeeInfo` método é usado para executar uma inserção; no entanto, ele exige um `NorthwindEmployee` parâmetro para inserir os dados. Por esse motivo, a coleção de cadeias de caracteres de <xref:System.Web.UI.WebControls.DetailsView> controle passa automaticamente não é suficiente. O `NorthwindEmployeeInserting` delegado é uma <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler> objeto que manipula o <xref:System.Web.UI.WebControls.ObjectDataSource.Inserting> eventos e permite que você manipule os parâmetros de entrada antes do <xref:System.Web.UI.WebControls.ObjectDataSource.Insert%2A> operação prossegue. Porque o `UpdateEmployeeInfo` método exige um `NorthwindEmployee` um é criado usando a coleção de cadeias de caracteres e é adicionado para o objeto como um parâmetro, o <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.InputParameters%2A> coleção.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/CS/objds4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/VB/objds4vb.aspx#1)]  
+  
+ O exemplo de código a seguir fornece um objeto comercial de camada intermediária de exemplo que usa o exemplo de código anterior. A lista a seguir descreve as duas classes principais que são definidas no código de exemplo:  
+  
+-   O `EmployeeLogic` classe, que é uma classe sem monitoração de estado que encapsula a lógica de negócios.  
+  
+-   O `NorthwindEmployee` classe, que é uma classe de modelo que contém apenas a funcionalidade básica que é necessário para carregar e manter os dados da camada de dados.  
+  
+ Além disso, um `NorthwindDataException` classe é fornecida como uma conveniência.  
+  
+ Esse conjunto de classes de exemplo usa o banco de dados Northwind Traders, que é um banco de dados de exemplo disponível com o Microsoft SQL Server e Microsoft Access. Para obter um exemplo de trabalho completa, use essas classes, colocando-os no diretório App_Code na raiz do aplicativo ou compilá-los e colocando a DLL resultante no diretório Bin. O `UpdateEmployeeInfo` método não está totalmente implementado, portanto você não irá inserir dados no banco de dados Northwind Traders quando você testar este exemplo.  
+  
+ [!code-csharp[System.Web.UI.WebControls.ObjectDataSource_4#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/CS/northwindemployee4.cs#2)]
+ [!code-vb[System.Web.UI.WebControls.ObjectDataSource_4#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_4/VB/northwindemployee4.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ObjectDataSourceMethodEventArgs (System.Collections.Specialized.IOrderedDictionary inputParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Specialized.IOrderedDictionary inputParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.#ctor(System.Collections.Specialized.IOrderedDictionary)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inputParameters" Type="System.Collections.Specialized.IOrderedDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="inputParameters">Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> de <see cref="T:System.Web.UI.WebControls.Parameter" /> objetos que representam os nomes dos parâmetros do método objeto comercial e seus valores associados.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs" /> classe usando a coleção de parâmetros de entrada especificados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary InputParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.IOrderedDictionary InputParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.InputParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção que contém parâmetros de método de objeto comercial e seus valores.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> de pares nome/valor que representam os parâmetros de método de objeto comercial e seus valores correspondentes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Parâmetros podem ser passados para o método do objeto comercial por referência ou por valor. Se você usar um <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler> objeto para manipular o <xref:System.Web.UI.WebControls.ObjectDataSourceView.Selecting>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.Updating>, <xref:System.Web.UI.WebControls.ObjectDataSourceView.Inserting>, ou <xref:System.Web.UI.WebControls.ObjectDataSourceView.Deleting> eventos, você pode acessar e manipular esses parâmetros usando o <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.InputParameters%2A> propriedade. As alterações para os parâmetros deste dicionário afetará quais sobrecarga do método é chamada para a operação.  Quando o <xref:System.Web.UI.WebControls.ObjectDataSource.DataObjectTypeName%2A> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSource> controle for definido, você pode modificar somente as propriedades do objeto de dados para os itens neste dicionário; você não pode adicionar ou remover parâmetros. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.ObjectDataSource.Delete%2A>.  
+  
+ Parâmetros que são passados por referência são retornados no <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs.OutputParameters%2A> propriedade o <xref:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs> objeto.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar um <xref:System.Web.UI.WebControls.DropDownList> controle, <xref:System.Web.UI.WebControls.TextBox> controles e vários <xref:System.Web.UI.WebControls.ObjectDataSource> controles para atualizar dados. O <xref:System.Web.UI.WebControls.DropDownList> exibe o nome de um funcionário Northwind, enquanto o <xref:System.Web.UI.WebControls.TextBox> controles são usados para inserir e atualizar informações de endereço. Porque o <xref:System.Web.UI.WebControls.ObjectDataSource.UpdateParameters%2A> propriedade contém um <xref:System.Web.UI.WebControls.ControlParameter> objeto que está associado ao valor de selecionado o <xref:System.Web.UI.WebControls.DropDownList> controlar, o botão que dispara o <xref:System.Web.UI.WebControls.ObjectDataSource.Update%2A> método só é habilitado depois que um funcionário é selecionado.  
+  
+ Neste exemplo, o `NorthwindEmployeeUpdating` método é chamado antes do <xref:System.Web.UI.WebControls.ObjectDataSource.Update%2A> método para adicionar os parâmetros corretos e valores para o <xref:System.Web.UI.WebControls.ObjectDataSourceMethodEventArgs.InputParameters%2A> coleção. Você pode adicionar os parâmetros e valores dinamicamente, conforme demonstrado ou declarativamente.  
+  
+ [!code-aspx-csharp[System.Web.UI.WebControls.ObjectDataSource_13#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_13/CS/objds13cs.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.WebControls.ObjectDataSource_13#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.WebControls.ObjectDataSource_13/VB/objds13vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

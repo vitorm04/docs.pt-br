@@ -1,0 +1,149 @@
+<Type Name="MessageSecurityOverTcp" FullName="System.ServiceModel.MessageSecurityOverTcp">
+  <TypeSignature Language="C#" Value="public sealed class MessageSecurityOverTcp" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageSecurityOverTcp extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.MessageSecurityOverTcp" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.1.2.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Configura a segurança no nível de mensagem para uma mensagem enviada usando o transporte TCP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse objeto é acessado da associação usando o <xref:System.ServiceModel.NetTcpBinding.Security%2A> propriedade, que retorna um <xref:System.ServiceModel.NetTcpSecurity> objeto. O <xref:System.ServiceModel.NetTcpSecurity.Message%2A> propriedade fornece uma referência para o <xref:System.ServiceModel.MessageSecurityOverTcp> objeto.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageSecurityOverTcp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.MessageSecurityOverTcp.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.MessageSecurityOverTcp" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmSuite">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Security.SecurityAlgorithmSuite AlgorithmSuite" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityOverTcp.AlgorithmSuite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.ServiceModel.Security.SecurityAlgorithmSuite), "Default")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Security.SecurityAlgorithmSuite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o conjunto de algoritmos para ser usado para proteger as mensagens no nível de SOAP.</summary>
+        <value>Um <see cref="T:System.ServiceModel.Security.SecurityAlgorithmSuite" />. O padrão é <see cref="P:System.ServiceModel.Security.SecurityAlgorithmSuite.Basic256" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve conhecer as vantagens e desvantagens dos algoritmos relevantes ao fazer modificações para essa configuração.  
+  
+ Se você definir essa propriedade como um valor diferente do padrão e gerar um arquivo de configuração usando [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](~/docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), ele não é gerado e você deve editar manualmente o arquivo de configuração para definir o atributo de configuração correspondentes para o valor desejado.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar e defina essa propriedade.  
+  
+ [!code-csharp[S_UEMessageSecurityOverTcp#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uemessagesecurityovertcp/cs/source.cs#2)]
+ [!code-vb[S_UEMessageSecurityOverTcp#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uemessagesecurityovertcp/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O valor de <see cref="P:System.ServiceModel.MessageSecurityOverTcp.AlgorithmSuite" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCredentialType">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.MessageCredentialType ClientCredentialType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.MessageCredentialType ClientCredentialType" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.NetTcp</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.1.2.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.MessageCredentialType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o tipo de credencial do cliente que o cliente usa para se autenticar no serviço no nível SOAP.</summary>
+        <value>Um <see cref="T:System.ServiceModel.MessageCredentialType" />. O padrão é <see cref="F:System.ServiceModel.MessageCredentialType.Windows" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno pode ser um dos seguintes membros de enumeração:  
+  
+-   <xref:System.ServiceModel.HttpClientCredentialType.Basic>  
+  
+-   <xref:System.ServiceModel.HttpClientCredentialType.Certificate>  
+  
+-   <xref:System.ServiceModel.HttpClientCredentialType.Digest>  
+  
+-   <xref:System.ServiceModel.HttpClientCredentialType.None>  
+  
+-   <xref:System.ServiceModel.HttpClientCredentialType.Ntlm>  
+  
+-   <xref:System.ServiceModel.HttpClientCredentialType.Windows>  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar e defina essa propriedade.  
+  
+ [!code-csharp[S_UEMessageSecurityOverTcp#2](~/samples/snippets/csharp/VS_Snippets_CFX/s_uemessagesecurityovertcp/cs/source.cs#2)]
+ [!code-vb[S_UEMessageSecurityOverTcp#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/s_uemessagesecurityovertcp/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor de <see cref="P:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType" /> não é válido <see cref="T:System.ServiceModel.MessageCredentialType" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

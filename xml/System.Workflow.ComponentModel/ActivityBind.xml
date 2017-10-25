@@ -1,0 +1,369 @@
+<Type Name="ActivityBind" FullName="System.Workflow.ComponentModel.ActivityBind">
+  <TypeSignature Language="C#" Value="public sealed class ActivityBind : System.Workflow.ComponentModel.Serialization.MarkupExtension" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityBind extends System.Workflow.ComponentModel.Serialization.MarkupExtension" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.ActivityBind" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Serialization.MarkupExtension</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Browsable(true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Design.Serialization.DesignerSerializer(typeof(System.Workflow.ComponentModel.Serialization.BindMarkupExtensionSerializer), typeof(System.Workflow.ComponentModel.Serialization.WorkflowMarkupSerializer))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ActivityBindTypeConverter))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.ComponentModel.Compiler.ActivityBindValidator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Associa a propriedade de uma atividade para uma propriedade, campo, indexador, método, evento ou propriedade de outra atividade. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ <xref:System.Workflow.ComponentModel.ActivityBind>permite que os dados de fluxo de uma atividade para outra atividade dentro de um fluxo de trabalho. <xref:System.Workflow.ComponentModel.ActivityBind>é uma forma declarativa de fazer o contrário deve ser feito usando o código e, portanto, é um elemento fundamental da maioria dos fluxos de trabalho que são gravados completamente na marcação XAML.  
+  
+ <xref:System.Workflow.ComponentModel.ActivityBind>representa uma expressão de associação que tem um <xref:System.Workflow.ComponentModel.Activity> membro como um destino. O membro de atividade de destino pode ser uma propriedade, um evento ou um campo. Um <xref:System.Workflow.ComponentModel.Activity> pode usar a propriedade ou método <xref:System.Workflow.ComponentModel.ActivityBind> para vincular a outro <xref:System.Workflow.ComponentModel.Activity> membro.  
+  
+ Por exemplo, se atividade1 tiver definido com um valor de property1 e atividade2 tem seu property1 definido como <xref:System.Workflow.ComponentModel.ActivityBind> com Name = "atividade1" e o caminho = "property1", em tempo de execução de activity2.property1 obtém seu valor de activity1.property1.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityBind ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo ilustra a criação e uso de um <xref:System.Workflow.ComponentModel.ActivityBind>.  
+  
+ Este exemplo de código é parte do exemplo gerar atividade SDK e do arquivo de ThrowActivity.cs. Para obter mais informações, consulte [usando a atividade de ThrowActivity](http://msdn.microsoft.com/en-us/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+  
+ [!code-csharp[WF_Samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[WF_Samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityBind (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> classe com o <paramref name="name" /> parâmetro.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityBind (string name, string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <param name="path">O caminho do novo <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> classe com <paramref name="name" /> e <paramref name="path" /> parâmetros.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo ilustra a criação e uso de <xref:System.Workflow.ComponentModel.ActivityBind>.  
+  
+ O exemplo de código é parte do exemplo gerar atividade SDK e do arquivo de ThrowActivity.cs. Para obter mais informações, consulte [usando a atividade de ThrowActivity](http://msdn.microsoft.com/en-us/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+  
+ [!code-csharp[WF_Samples#178](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets11.cs#178)]
+ [!code-vb[WF_Samples#178](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets11.vb#178)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetRuntimeValue">
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém o valor de tempo de execução da associação.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+Retorna o valor de tempo de execução.  
+  
+> [!CAUTION]
+>  Este método lança uma exceção se essa associação é uma associação a um método e uma <xref:System.Workflow.ComponentModel.Compiler.BindValidationContext.TargetType> não for fornecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetRuntimeValue">
+      <MemberSignature Language="C#" Value="public object GetRuntimeValue (System.Workflow.ComponentModel.Activity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetRuntimeValue(class System.Workflow.ComponentModel.Activity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.GetRuntimeValue(System.Workflow.ComponentModel.Activity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+      </Parameters>
+      <Docs>
+        <param name="activity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> que possui essa ligação.</param>
+        <summary>Obtém o <see cref="T:System.Object" /> que representa o valor de tempo de execução deste <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</summary>
+        <returns>O <see cref="T:System.Object" /> que representa o valor de tempo de execução deste <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activity" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRuntimeValue">
+      <MemberSignature Language="C#" Value="public object GetRuntimeValue (System.Workflow.ComponentModel.Activity activity, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetRuntimeValue(class System.Workflow.ComponentModel.Activity activity, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.GetRuntimeValue(System.Workflow.ComponentModel.Activity,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="activity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> que possui essa ligação.</param>
+        <param name="targetType">O <see cref="T:System.Type" /> do objeto se um <see cref="T:System.Delegate" />; caso contrário, uma referência nula (<see langword="Nothing" /> no Visual Basic). <c>atividade</c> é nulo.</param>
+        <summary>Obtém o <see cref="T:System.Object" /> que representa o valor de tempo de execução deste <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</summary>
+        <returns>O <see cref="T:System.Object" /> que representa o valor de tempo de execução deste <see cref="T:System.Workflow.ComponentModel.ActivityBind" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activity" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityBind.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Workflow.ComponentModel.Serialization.ConstructorArgument("name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do <see cref="T:System.Workflow.ComponentModel.Activity" /> que o <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> aponta para.</summary>
+        <value>O nome do <see cref="T:System.Workflow.ComponentModel.Activity" /> que o <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> aponta para.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ Este exemplo ilustra a criação e uso de um <xref:System.Workflow.ComponentModel.ActivityBind> e também da configuração de <xref:System.Workflow.ComponentModel.ActivityBind.Name%2A>.  
+  
+ Este exemplo de código é parte do exemplo gerar atividade SDK e do arquivo de ThrowActivity.cs. Para obter mais informações, consulte [usando a atividade de ThrowActivity](http://msdn.microsoft.com/en-us/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.ReadOnlyException">Ocorre quando você tentar definir esse valor quando o <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> não está no modo de design.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityBind.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.ComponentModel.Design.ActivityBindPathTypeConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho para um membro da atividade de destino. O valor pode usar a notação pontilhada para indicar um caminho para um valor aninhado. Por exemplo, um caminho de "A.b. c" indica que o <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> é um campo ou propriedade denominada 'c', que é um membro do campo ou propriedade 'B', que por sua vez é um campo ou propriedade 'A', que é um membro da atividade de destino.</summary>
+        <value>O caminho do item de dados de interesse no escolhido <see cref="T:System.Workflow.ComponentModel.Activity" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!CAUTION]
+>  Essa propriedade não pode ser definida em tempo de execução.  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra a criação e uso de um <xref:System.Workflow.ComponentModel.ActivityBind>e também definir o <xref:System.Workflow.ComponentModel.ActivityBind.Name%2A> e <xref:System.Workflow.ComponentModel.ActivityBind.Path%2A>.  
+  
+ Este exemplo de código é parte do exemplo gerar atividade SDK e do arquivo de ThrowActivity.cs. Para obter mais informações, consulte [usando a atividade de ThrowActivity](http://msdn.microsoft.com/en-us/82bc0fef-d78a-4750-82b4-e4cb397a10f1).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.ReadOnlyException">Ocorre quando você tentar definir esse valor quando o <see cref="T:System.Workflow.ComponentModel.ActivityBind" /> não está no modo de design.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvideValue">
+      <MemberSignature Language="C#" Value="public override object ProvideValue (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object ProvideValue(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.ProvideValue(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Um <see cref="T:System.IServiceProvider" />.</param>
+        <summary>Retorna a instância atual dessa classe.</summary>
+        <returns>A instância atual dessa classe.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRuntimeValue">
+      <MemberSignature Language="C#" Value="public void SetRuntimeValue (System.Workflow.ComponentModel.Activity activity, object value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetRuntimeValue(class System.Workflow.ComponentModel.Activity activity, object value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.SetRuntimeValue(System.Workflow.ComponentModel.Activity,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activity" Type="System.Workflow.ComponentModel.Activity" />
+        <Parameter Name="value" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="activity">O <see cref="T:System.Workflow.ComponentModel.Activity" /> proprietária desta associação.</param>
+        <param name="value">O <see cref="T:System.Object" /> para definir o valor de tempo de execução.</param>
+        <summary>Define o valor de tempo de execução.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="activity" /> é uma referência nula (<see langword="Nothing" /> no Visual Basic).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityBind.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Calcula e retorna uma combinação da <see cref="P:System.Workflow.ComponentModel.ActivityBind.Name" /> e <see cref="P:System.Workflow.ComponentModel.ActivityBind.Path" /> cadeias de caracteres de propriedade.</summary>
+        <returns>Uma combinação da <see cref="P:System.Workflow.ComponentModel.ActivityBind.Name" /> e <see cref="P:System.Workflow.ComponentModel.ActivityBind.Path" /> cadeias de caracteres de propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserData">
+      <MemberSignature Language="C#" Value="public System.Collections.IDictionary UserData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary UserData" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityBind.UserData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Collections.IDictionary" /> de dados de usuário relativas a esta instância.</summary>
+        <value>Um <see cref="T:System.Collections.IDictionary" /> de dados de usuário relativas a esta instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

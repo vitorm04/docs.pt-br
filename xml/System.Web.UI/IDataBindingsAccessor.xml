@@ -1,0 +1,53 @@
+<Type Name="IDataBindingsAccessor" FullName="System.Web.UI.IDataBindingsAccessor">
+  <TypeSignature Language="C#" Value="public interface IDataBindingsAccessor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataBindingsAccessor" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDataBindingsAccessor" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Permite o acesso à coleção de expressões de associação de dados em um controle em tempo de design.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DataBindings">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataBindingCollection DataBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.DataBindingCollection DataBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataBindingsAccessor.DataBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataBindingCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de todas as associações de dados no controle. Esta propriedade é somente para leitura.</summary>
+        <value>A coleção de associações de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDataBindings">
+      <MemberSignature Language="C#" Value="public bool HasDataBindings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDataBindings" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDataBindingsAccessor.HasDataBindings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle contém qualquer lógica de associação de dados.</summary>
+        <value>
+          <see langword="true" />Se o controle contém a lógica de associação de dados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,17 @@
+<Namespace Name="System.Linq.Expressions">
+  <Docs>
+    <summary>O <see cref="N:System.Linq.Expressions" /> namespace contém classes, interfaces e enumerações que permitem que as expressões de código no nível de linguagem sejam representadas como objetos na forma de árvores de expressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A classe abstrata <xref:System.Linq.Expressions.Expression> fornece a raiz de uma hierarquia de classe usada para árvores de expressão de modelo.  
+  
+ As classes neste namespace que derivam de <xref:System.Linq.Expressions.Expression>, por exemplo <xref:System.Linq.Expressions.MemberExpression> e <xref:System.Linq.Expressions.ParameterExpression>, são usados para representar nós em uma árvore de expressão. O <xref:System.Linq.Expressions.Expression> classe contém `static` (`Shared` no Visual Basic) métodos de fábrica para criar nós de árvore dos vários tipos de expressão.  
+  
+ O tipo de enumeração <xref:System.Linq.Expressions.ExpressionType> Especifica os tipos de nó único.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

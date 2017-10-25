@@ -1,0 +1,87 @@
+<Type Name="MimeTypeAttribute" FullName="System.Data.Services.MimeTypeAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MimeTypeAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MimeTypeAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.MimeTypeAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica o tipo MIME da solicitação HTTP.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo usado para controlar o formato de serialização usado para uma solicitação enviada de um cliente para um serviço de dados é o `Content-Type` cabeçalho HTTP. O mecanismo padrão de controlar o formato usado em uma resposta de um serviço de dados é o `Accept` cabeçalho HTTP. O `Accept` cabeçalho é usado para indicar que a resposta para a solicitação é limitada a um conjunto específico de tipos MIME. O tipo MIME retornado ao analisar o cabeçalho accept, em seguida, é usado como o formato da resposta.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimeTypeAttribute (string memberName, string mimeType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string memberName, string mimeType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.MimeTypeAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="memberName" Type="System.String" />
+        <Parameter Name="mimeType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="memberName">O nome do atributo.</param>
+        <param name="mimeType">O tipo MIME do atributo.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Services.MimeTypeAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberName">
+      <MemberSignature Language="C#" Value="public string MemberName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MemberName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.MimeTypeAttribute.MemberName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do atributo.</summary>
+        <value>Um valor de cadeia de caracteres que contém o nome do atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MimeType">
+      <MemberSignature Language="C#" Value="public string MimeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MimeType" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.MimeTypeAttribute.MimeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo MIME de uma solicitação.</summary>
+        <value>Uma cadeia de caracteres que contém o tipo MIME.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,557 @@
+<Type Name="Int32Animation" FullName="System.Windows.Media.Animation.Int32Animation">
+  <TypeSignature Language="C#" Value="public class Int32Animation : System.Windows.Media.Animation.Int32AnimationBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Int32Animation extends System.Windows.Media.Animation.Int32AnimationBase" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.Int32Animation" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.Int32AnimationBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Anima o valor de um <see cref="T:System.Int32" /> propriedade entre dois valores de destino usando a interpolação linear em determinado <see cref="P:System.Windows.Media.Animation.Timeline.Duration" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma animação atualiza o valor de uma propriedade em um período de tempo.  Um efeito de animação pode ser sutil, como mover um <xref:System.Windows.Shapes.Shape> alguns pixels à esquerda e direita ou significativas, como o aumento de um objeto para 200 vezes o tamanho original, girando-lo e alterar sua cor. Para criar uma animação em [!INCLUDE[TLA#tla_winclient](~/includes/tlasharptla-winclient-md.md)], associar uma animação com valor de propriedade de um objeto.  
+  
+## <a name="target-values"></a>Valores de destino  
+ O <xref:System.Windows.Media.Animation.Int32Animation> classe cria uma transição entre dois valores de destino. Para definir seus valores de destino, use seu <xref:System.Windows.Media.Animation.Int32Animation.From%2A>, <xref:System.Windows.Media.Animation.Int32Animation.To%2A>, e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades.  A tabela a seguir resume como o <xref:System.Windows.Media.Animation.Int32Animation.From%2A>, <xref:System.Windows.Media.Animation.Int32Animation.To%2A>, e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades podem ser usadas em conjunto ou separadamente para determinar o alvo de uma animação valores.  
+  
+|Propriedades especificadas|Comportamento resultante|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor base da propriedade que está sendo animada ou para uma animação anterior valor de saída, dependendo de como a animação anterior é configurada.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.From%2A> o valor especificado pela propriedade de <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor especificado pela soma do <xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor base da propriedade animada ou uma animação anterior valor de saída para o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor base da propriedade que está sendo animada ou uma animação anterior valor de saída para a soma do valor e o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade.|  
+  
+> [!NOTE]
+>  Se você definir ambos os <xref:System.Windows.Media.Animation.Int32Animation.To%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades, o <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade terá precedência e o <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade será ignorada.  
+  
+ Para usar outros métodos de interpolação ou animar entre mais de dois valores de destino, use um <xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames> objeto.  
+  
+ Para obter informações sobre como aplicar várias animações a uma única propriedade, consulte [visão geral de animações de quadro-chave](~/docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+  
+## <a name="freezable-features"></a>Recursos congeláveis  
+ Porque o <xref:System.Windows.Media.Animation.Int32Animation> classe herda de <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Animation.Int32Animation> objetos obtém vários recursos especiais, que incluem o seguinte: eles podem ser declarados como, compartilhados entre vários objetos, somente leitura para melhorar o desempenho, clonados e tornados thread-safe. Para obter mais informações sobre os diferentes recursos fornecidos pelo <xref:System.Windows.Freezable> objetos, consulte o [visão geral de objetos Freezable](~/docs/framework/wpf/advanced/freezable-objects-overview.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Int32Animation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.Int32Animation" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Int32Animation (int toValue, System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 toValue, valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.#ctor(System.Int32,System.Windows.Duration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toValue" Type="System.Int32" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="toValue">O valor de destino da animação.</param>
+        <param name="duration">O período de tempo a animação leva para executar a partir do início ao fim, uma vez. Consulte a propriedade <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> para obter mais informações.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.Int32Animation" /> classe anima para o valor especificado durante a duração especificada. O valor inicial para a animação é o valor base da propriedade que está sendo animada ou a saída de outra animação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Int32Animation (int fromValue, int toValue, System.Windows.Duration duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 fromValue, int32 toValue, valuetype System.Windows.Duration duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.#ctor(System.Int32,System.Int32,System.Windows.Duration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fromValue" Type="System.Int32" />
+        <Parameter Name="toValue" Type="System.Int32" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+      </Parameters>
+      <Docs>
+        <param name="fromValue">O valor inicial da animação.</param>
+        <param name="toValue">O valor de destino da animação.</param>
+        <param name="duration">O período de tempo a animação leva para executar a partir do início ao fim, uma vez. Consulte a propriedade <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> para obter mais informações.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.Int32Animation" /> que é animada do valor inicial especificado para o valor de destino especificado durante o período especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Int32Animation (int toValue, System.Windows.Duration duration, System.Windows.Media.Animation.FillBehavior fillBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 toValue, valuetype System.Windows.Duration duration, valuetype System.Windows.Media.Animation.FillBehavior fillBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.#ctor(System.Int32,System.Windows.Duration,System.Windows.Media.Animation.FillBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="toValue" Type="System.Int32" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+        <Parameter Name="fillBehavior" Type="System.Windows.Media.Animation.FillBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="toValue">O valor de destino da animação.</param>
+        <param name="duration">O período de tempo a animação leva para executar a partir do início ao fim, uma vez. Consulte a propriedade <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> para obter mais informações.</param>
+        <param name="fillBehavior">Especifica como a animação se comporta quando ela não está ativa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.Int32Animation" /> classe anima para o valor especificado durante a duração especificada e tem o comportamento de preenchimento especificado. O valor inicial para a animação é o valor base da propriedade que está sendo animada ou a saída de outra animação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Int32Animation (int fromValue, int toValue, System.Windows.Duration duration, System.Windows.Media.Animation.FillBehavior fillBehavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 fromValue, int32 toValue, valuetype System.Windows.Duration duration, valuetype System.Windows.Media.Animation.FillBehavior fillBehavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.#ctor(System.Int32,System.Int32,System.Windows.Duration,System.Windows.Media.Animation.FillBehavior)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fromValue" Type="System.Int32" />
+        <Parameter Name="toValue" Type="System.Int32" />
+        <Parameter Name="duration" Type="System.Windows.Duration" />
+        <Parameter Name="fillBehavior" Type="System.Windows.Media.Animation.FillBehavior" />
+      </Parameters>
+      <Docs>
+        <param name="fromValue">O valor inicial da animação.</param>
+        <param name="toValue">O valor de destino da animação.</param>
+        <param name="duration">O período de tempo a animação leva para executar a partir do início ao fim, uma vez. Consulte a propriedade <see cref="P:System.Windows.Media.Animation.Timeline.Duration" /> para obter mais informações.</param>
+        <param name="fillBehavior">Especifica como a animação se comporta quando ela não está ativa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.Int32Animation" /> classe anima do valor inicial especificado para o valor de destino especificado durante a duração especificada e tem o comportamento de preenchimento especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="By">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; By { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; By" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Int32Animation.By" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a quantidade total pela qual a animação altera seu valor inicial.</summary>
+        <value>A quantidade total pela qual a animação altera seu valor inicial.     O valor padrão é null.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade quando você deseja animar um valor "por" um determinado valor, em vez de especificar um valor inicial ou final. Você também pode usar o <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade com o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade. A tabela a seguir resume como o <xref:System.Windows.Media.Animation.Int32Animation.From%2A>, <xref:System.Windows.Media.Animation.Int32Animation.To%2A>, e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades podem ser usadas em conjunto ou separadamente para determinar o alvo de uma animação valores.  
+  
+|Propriedades especificadas|Comportamento resultante|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor base da propriedade que está sendo animada ou para uma animação anterior valor de saída, dependendo de como a animação anterior é configurada.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.From%2A> o valor especificado pela propriedade de <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor especificado pela soma do <xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor base da propriedade animada ou uma animação anterior valor de saída para o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor base da propriedade que está sendo animada ou uma animação anterior valor de saída para a soma do valor e o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade.|  
+  
+ **Observação** se tanto o <xref:System.Windows.Media.Animation.Int32Animation.To%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades, o <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade terá precedência e o <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade será ignorada.  
+  
+ Para usar outros métodos de interpolação ou animar entre mais de dois valores de destino, use um <xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames> objeto.  
+  
+<a name="xamlAttributeUsage_By"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* `By`="<xref:System.Int32> "/>  
+  
+ \- ou -  
+  
+ <*objeto* `By`= "{[extensão de marcação X:Null](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="dependencyPropertyInfo_Value"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.Int32Animation.ByProperty>|  
+|Definir propriedades de metadados **true**|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ByProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ByProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ByProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Int32Animation.ByProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.Int32Animation.By" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.Int32Animation Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Windows.Media.Animation.Int32Animation Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.Int32Animation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um clone modificável desse <see cref="T:System.Windows.Media.Animation.Int32Animation" />, fazendo cópias em profundidade dos valores do objeto. Ao copiar as propriedades de dependência, esse método copia associações de dados e referências de recurso (mas eles não podem mais resolver), mas não animações ou seus valores atuais.</summary>
+        <returns>Um clone modificável do objeto atual. O objeto clonado <see cref="P:System.Windows.Freezable.IsFrozen" /> propriedade será <see langword="false" /> mesmo se a fonte <see cref="P:System.Windows.Freezable.IsFrozen" /> era de propriedade<see langword="true." /></returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método é usado para produzir cópias modificáveis de congelada <xref:System.Windows.Freezable> objetos (ou qualquer <xref:System.Windows.Freezable> objeto). Para sua conveniência, este método sombreia a versão herdada com uma implementação fortemente tipada.  
+  
+ Para obter mais informações, consulte <xref:System.Windows.Freezable.Clone%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Windows.Media.Animation.Int32Animation" />.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunction">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.IEasingFunction EasingFunction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.IEasingFunction EasingFunction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Int32Animation.EasingFunction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.IEasingFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a função de easing aplicada a essa animação.</summary>
+        <value>A função de easing aplicada a essa animação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Atenuação funções permitem que você crie uma variedade de efeitos de animação especializado incluindo saltando, spring oscilações e várias animações de aceleração e desaceleração magnitude.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunctionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EasingFunctionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EasingFunctionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Int32Animation.EasingFunctionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.Int32Animation.EasingFunction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; From { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; From" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Int32Animation.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor inicial da animação.</summary>
+        <value>O valor inicial da animação. O valor padrão é null.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir resume como o <xref:System.Windows.Media.Animation.Int32Animation.From%2A>, <xref:System.Windows.Media.Animation.Int32Animation.To%2A>, e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades podem ser usadas em conjunto ou separadamente para determinar o alvo de uma animação valores.  
+  
+|Propriedades especificadas|Comportamento resultante|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor base da propriedade que está sendo animada ou para uma animação anterior valor de saída, dependendo de como a animação anterior é configurada.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.From%2A> o valor especificado pela propriedade de <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor especificado pela soma do <xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor base da propriedade animada ou uma animação anterior valor de saída para o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor base da propriedade que está sendo animada ou uma animação anterior valor de saída para a soma do valor e o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade.|  
+  
+ **Observação** se tanto o <xref:System.Windows.Media.Animation.Int32Animation.To%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades, o <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade terá precedência e o <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade será ignorada.  
+  
+ Para usar outros métodos de interpolação ou animar entre mais de dois valores de destino, use um <xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames> objeto.  
+  
+<a name="xamlAttributeUsage_From"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* `From`="<xref:System.Int32>"/>  
+  
+ \- ou -  
+  
+ <*objeto* `From`= "{[extensão de marcação X:Null](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="dependencyPropertyInfo_From"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.Int32Animation.FromProperty>|  
+|Definir propriedades de metadados **true**|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty FromProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty FromProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Int32Animation.FromProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.Int32Animation.From" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentValueCore">
+      <MemberSignature Language="C#" Value="protected override int GetCurrentValueCore (int defaultOriginValue, int defaultDestinationValue, System.Windows.Media.Animation.AnimationClock animationClock);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 GetCurrentValueCore(int32 defaultOriginValue, int32 defaultDestinationValue, class System.Windows.Media.Animation.AnimationClock animationClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.Int32Animation.GetCurrentValueCore(System.Int32,System.Int32,System.Windows.Media.Animation.AnimationClock)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultOriginValue" Type="System.Int32" />
+        <Parameter Name="defaultDestinationValue" Type="System.Int32" />
+        <Parameter Name="animationClock" Type="System.Windows.Media.Animation.AnimationClock" />
+      </Parameters>
+      <Docs>
+        <param name="defaultOriginValue">O valor de origem sugerido, usado se a animação não tiver definido sua própria explicitamente valor inicial.</param>
+        <param name="defaultDestinationValue">O valor de destino sugerido, usado se a animação não tiver definido sua própria explicitamente terminar de valor.</param>
+        <param name="animationClock">Um <see cref="T:System.Windows.Media.Animation.AnimationClock" /> que gera a <see cref="P:System.Windows.Media.Animation.Clock.CurrentTime" /> ou <see cref="P:System.Windows.Media.Animation.Clock.CurrentProgress" /> usado pela animação.</param>
+        <summary>Calcula um valor que representa o valor atual da propriedade que está sendo animada, conforme determinado pelo <see cref="T:System.Windows.Media.Animation.Int32Animation" />.</summary>
+        <returns>O valor calculado da propriedade, conforme determinado pela animação atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o `defaultOriginValue` é o primeiro na cadeia de composição, esse valor será o valor de instantâneo (se estiver disponível) ou o valor da propriedade base; caso contrário, esse valor será o valor retornado pela animação anterior na cadeia com um <xref:System.Windows.Media.Animation.AnimationClock> que não é <xref:System.Windows.Media.Animation.Clock.Stopped%2A>.  
+  
+ O `defaultDestinationValue` é o valor de base se a animação for a primeira camada de composição de animações em uma propriedade; caso contrário, o valor é o valor de saída da camada de composição anterior de animações para a propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAdditive">
+      <MemberSignature Language="C#" Value="public bool IsAdditive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAdditive" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Int32Animation.IsAdditive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o valor atual da propriedade de destino deve ser adicionado para valor inicial da animação este.</summary>
+        <value>
+          <see langword="true" />Se a propriedade de destino atual do valor deve ser adicionado ao valor inicial da animação este; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a animação tiver apenas um dos seus <xref:System.Windows.Media.Animation.Int32Animation.From%2A>, <xref:System.Windows.Media.Animation.Int32Animation.To%2A>, ou <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades definidas, a definição dessa propriedade não tem nenhum efeito.  
+  
+<a name="dependencyPropertyInfo_Additive"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.AnimationTimeline.IsAdditiveProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+> [!NOTE]
+>  Essa propriedade de dependência é incomum em que o campo de identificador para ela vem de <xref:System.Windows.Media.Animation.AnimationTimeline>e é compartilhado por várias classes derivadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCumulative">
+      <MemberSignature Language="C#" Value="public bool IsCumulative { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCumulative" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Int32Animation.IsCumulative" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que especifica se o valor da animação acumula quando ela se repete.</summary>
+        <value>**True** se a animação acumula seus valores ao seu <see cref="P:System.Windows.Media.Animation.Timeline.RepeatBehavior" /> propriedade faz com que ele Repita sua duração simples. Caso contrário, **false**. O valor padrão é **false**.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando essa propriedade é definida como **true**, a saída da animação valores acumulam somente quando a animação <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> propriedade faz com que ele Repita sua duração simples. Ele não se acumulam seus valores quando ele for reiniciado, pois seu pai é repetido ou porque seu relógio foi reiniciado a partir um <xref:System.Windows.Media.Animation.ClockController.Begin%2A> chamar.  
+  
+<a name="dependencyPropertyInfo_Cumulative"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.AnimationTimeline.IsCumulativeProperty>|  
+|Propriedades de metadados é definido como`true`|Nenhum|  
+  
+> [!NOTE]
+>  Essa propriedade de dependência é incomum em que o campo de identificador para ela vem de <xref:System.Windows.Media.Animation.AnimationTimeline>e é compartilhado por várias classes derivadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public Nullable&lt;int&gt; To { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; To" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.Int32Animation.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor final da animação.</summary>
+        <value>O valor final da animação. O valor padrão é null.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A tabela a seguir resume como o <xref:System.Windows.Media.Animation.Int32Animation.From%2A>, <xref:System.Windows.Media.Animation.Int32Animation.To%2A>, e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades podem ser usadas em conjunto ou separadamente para determinar o alvo de uma animação valores.  
+  
+|Propriedades especificadas|Comportamento resultante|  
+|--------------------------|------------------------|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor base da propriedade que está sendo animada ou para uma animação anterior valor de saída, dependendo de como a animação anterior é configurada.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.From%2A> o valor especificado pela propriedade de <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor especificado o <xref:System.Windows.Media.Animation.Int32Animation.From%2A> propriedade para o valor especificado pela soma do <xref:System.Windows.Media.Animation.Int32Animation.From%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.To%2A>|A animação progride do valor base da propriedade animada ou uma animação anterior valor de saída para o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade.|  
+|<xref:System.Windows.Media.Animation.Int32Animation.By%2A>|A animação progride do valor base da propriedade que está sendo animada ou uma animação anterior valor de saída para a soma do valor e o valor especificado pelo <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade.|  
+  
+ **Observação** se tanto o <xref:System.Windows.Media.Animation.Int32Animation.To%2A> e <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedades, o <xref:System.Windows.Media.Animation.Int32Animation.To%2A> propriedade terá precedência e o <xref:System.Windows.Media.Animation.Int32Animation.By%2A> propriedade será ignorada.  
+  
+ Para usar outros métodos de interpolação ou animar entre mais de dois valores de destino, use um <xref:System.Windows.Media.Animation.Int32AnimationUsingKeyFrames> objeto.  
+  
+<a name="xamlAttributeUsage_To"></a>   
+## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
+ <*object* `To`="<xref:System.Int32>"/>  
+  
+ \- ou -  
+  
+ <*objeto* `To`= "{[extensão de marcação X:Null](~/docs/framework/xaml-services/x-null-markup-extension.md)}" / >  
+  
+<a name="dependencyPropertyInfo_To"></a>   
+## <a name="dependency-property-information"></a>Informações da propriedade de dependência  
+  
+|||  
+|-|-|  
+|Campo de identificador|<xref:System.Windows.Media.Animation.Int32Animation.ToProperty>|  
+|Definir propriedades de metadados **true**|Nenhum|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ToProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ToProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.Int32Animation.ToProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.Int32Animation.To" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1586 @@
+<Type Name="HtmlTextWriterTag" FullName="System.Web.UI.HtmlTextWriterTag">
+  <TypeSignature Language="C#" Value="public enum HtmlTextWriterTag" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HtmlTextWriterTag extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.HtmlTextWriterTag" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica as marcas HTML que podem ser passadas para um fluxo de saída do objeto <see cref="T:System.Web.UI.HtmlTextWriter" /> ou <see cref="T:System.Web.UI.Html32TextWriter" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração permite que o fluxo de saída gravar a marca HTML, junto com os controles de servidor HTML, em resposta a uma solicitação da Web.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra o uso do <xref:System.Web.UI.HtmlTextWriterTag> enumeração. O campo Img é usado durante o processamento de um <xref:System.Web.UI.HtmlTextWriterTag.Img> chamado `writer`.  
+  
+ [!code-cpp[System.Web.UI.HtmlTextWriter#3](~/samples/snippets/cpp/VS_Snippets_WebNet/System.Web.UI.HtmlTextWriter/CPP/htmltextwriter.cpp#3)]
+ [!code-csharp[System.Web.UI.HtmlTextWriter#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.HtmlTextWriter/CS/htmltextwriter.cs#3)]
+ [!code-vb[System.Web.UI.HtmlTextWriter#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.HtmlTextWriter/VB/htmltextwriter.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="A">
+      <MemberSignature Language="C#" Value="A" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag A = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.A" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="a" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Acronym">
+      <MemberSignature Language="C#" Value="Acronym" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Acronym = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Acronym" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="acronym" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="Address" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Address = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Address" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="address" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Area">
+      <MemberSignature Language="C#" Value="Area" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Area = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Area" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="area" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="B">
+      <MemberSignature Language="C#" Value="B" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag B = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.B" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="b" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Base">
+      <MemberSignature Language="C#" Value="Base" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Base = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Base" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="base" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Basefont">
+      <MemberSignature Language="C#" Value="Basefont" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Basefont = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Basefont" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="basefont" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bdo">
+      <MemberSignature Language="C#" Value="Bdo" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Bdo = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Bdo" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="bdo" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bgsound">
+      <MemberSignature Language="C#" Value="Bgsound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Bgsound = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Bgsound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="bgsound" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Big">
+      <MemberSignature Language="C#" Value="Big" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Big = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Big" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="big" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Blockquote">
+      <MemberSignature Language="C#" Value="Blockquote" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Blockquote = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Blockquote" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="blockquote" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Body">
+      <MemberSignature Language="C#" Value="Body" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Body = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Body" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="body" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Br">
+      <MemberSignature Language="C#" Value="Br" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Br = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Br" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="br" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Button">
+      <MemberSignature Language="C#" Value="Button" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Button = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Button" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="button" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="Caption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Caption = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Caption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="caption" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Center = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Center" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="center" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cite">
+      <MemberSignature Language="C#" Value="Cite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Cite = int32(17)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Cite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="cite" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Code">
+      <MemberSignature Language="C#" Value="Code" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Code = int32(18)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Code" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="code" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Col">
+      <MemberSignature Language="C#" Value="Col" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Col = int32(19)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Col" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="col" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Colgroup">
+      <MemberSignature Language="C#" Value="Colgroup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Colgroup = int32(20)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Colgroup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="colgroup" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dd">
+      <MemberSignature Language="C#" Value="Dd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Dd = int32(21)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Dd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="dd" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Del">
+      <MemberSignature Language="C#" Value="Del" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Del = int32(22)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Del" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="del" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dfn">
+      <MemberSignature Language="C#" Value="Dfn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Dfn = int32(23)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Dfn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="dfn" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dir">
+      <MemberSignature Language="C#" Value="Dir" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Dir = int32(24)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Dir" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="dir" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Div">
+      <MemberSignature Language="C#" Value="Div" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Div = int32(25)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Div" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="div" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dl">
+      <MemberSignature Language="C#" Value="Dl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Dl = int32(26)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Dl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="dl" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Dt">
+      <MemberSignature Language="C#" Value="Dt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Dt = int32(27)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Dt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="dt" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Em">
+      <MemberSignature Language="C#" Value="Em" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Em = int32(28)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Em" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="em" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Embed">
+      <MemberSignature Language="C#" Value="Embed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Embed = int32(29)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Embed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="embed" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fieldset">
+      <MemberSignature Language="C#" Value="Fieldset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Fieldset = int32(30)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Fieldset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="fieldset" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="Font" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Font = int32(31)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Font" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="font" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Form">
+      <MemberSignature Language="C#" Value="Form" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Form = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Form" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="form" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Frame">
+      <MemberSignature Language="C#" Value="Frame" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Frame = int32(33)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Frame" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="frame" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Frameset">
+      <MemberSignature Language="C#" Value="Frameset" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Frameset = int32(34)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Frameset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="frameset" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="H1">
+      <MemberSignature Language="C#" Value="H1" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag H1 = int32(35)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.H1" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="H1" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="H2">
+      <MemberSignature Language="C#" Value="H2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag H2 = int32(36)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.H2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="H2" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="H3">
+      <MemberSignature Language="C#" Value="H3" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag H3 = int32(37)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.H3" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="H3" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="H4">
+      <MemberSignature Language="C#" Value="H4" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag H4 = int32(38)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.H4" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="H4" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="H5">
+      <MemberSignature Language="C#" Value="H5" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag H5 = int32(39)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.H5" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="H5" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="H6">
+      <MemberSignature Language="C#" Value="H6" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag H6 = int32(40)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.H6" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="H6" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Head">
+      <MemberSignature Language="C#" Value="Head" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Head = int32(41)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Head" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="head" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Hr">
+      <MemberSignature Language="C#" Value="Hr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Hr = int32(42)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Hr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="hr" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Html">
+      <MemberSignature Language="C#" Value="Html" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Html = int32(43)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Html" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="html" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="I">
+      <MemberSignature Language="C#" Value="I" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag I = int32(44)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.I" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="i" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Iframe">
+      <MemberSignature Language="C#" Value="Iframe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Iframe = int32(45)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Iframe" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="iframe" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Img">
+      <MemberSignature Language="C#" Value="Img" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Img = int32(46)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Img" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="img" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="Input" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Input = int32(47)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Input" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="input" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ins">
+      <MemberSignature Language="C#" Value="Ins" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Ins = int32(48)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Ins" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="ins" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Isindex">
+      <MemberSignature Language="C#" Value="Isindex" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Isindex = int32(49)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Isindex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="isindex" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Kbd">
+      <MemberSignature Language="C#" Value="Kbd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Kbd = int32(50)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Kbd" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="kbd" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="Label" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Label = int32(51)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Label" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="label" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Legend">
+      <MemberSignature Language="C#" Value="Legend" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Legend = int32(52)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Legend" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="legend" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Li">
+      <MemberSignature Language="C#" Value="Li" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Li = int32(53)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Li" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="li" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Link">
+      <MemberSignature Language="C#" Value="Link" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Link = int32(54)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Link" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="link" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Map">
+      <MemberSignature Language="C#" Value="Map" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Map = int32(55)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Map" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="map" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Marquee">
+      <MemberSignature Language="C#" Value="Marquee" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Marquee = int32(56)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Marquee" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="marquee" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Menu">
+      <MemberSignature Language="C#" Value="Menu" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Menu = int32(57)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Menu" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="menu" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Meta">
+      <MemberSignature Language="C#" Value="Meta" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Meta = int32(58)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Meta" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="meta" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Nobr">
+      <MemberSignature Language="C#" Value="Nobr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Nobr = int32(59)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Nobr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="nobr" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Noframes">
+      <MemberSignature Language="C#" Value="Noframes" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Noframes = int32(60)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Noframes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="noframes" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Noscript">
+      <MemberSignature Language="C#" Value="Noscript" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Noscript = int32(61)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Noscript" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="noscript" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Object">
+      <MemberSignature Language="C#" Value="Object" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Object = int32(62)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Object" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="object" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ol">
+      <MemberSignature Language="C#" Value="Ol" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Ol = int32(63)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Ol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="ol" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Option">
+      <MemberSignature Language="C#" Value="Option" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Option = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Option" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="option" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="P">
+      <MemberSignature Language="C#" Value="P" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag P = int32(65)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.P" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="p" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Param">
+      <MemberSignature Language="C#" Value="Param" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Param = int32(66)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Param" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="param" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pre">
+      <MemberSignature Language="C#" Value="Pre" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Pre = int32(67)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Pre" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="pre" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Q">
+      <MemberSignature Language="C#" Value="Q" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Q = int32(68)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Q" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="q" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Rt">
+      <MemberSignature Language="C#" Value="Rt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Rt = int32(69)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Rt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento DHTML <see langword="rt" />, que especifica o texto para o elemento <see langword="ruby" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ruby">
+      <MemberSignature Language="C#" Value="Ruby" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Ruby = int32(70)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Ruby" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento DHTML <see langword="ruby" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="S">
+      <MemberSignature Language="C#" Value="S" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag S = int32(71)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.S" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="s" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Samp">
+      <MemberSignature Language="C#" Value="Samp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Samp = int32(72)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Samp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="samp" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Script">
+      <MemberSignature Language="C#" Value="Script" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Script = int32(73)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Script" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="script" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="Select" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Select = int32(74)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Select" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="select" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Small">
+      <MemberSignature Language="C#" Value="Small" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Small = int32(75)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Small" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="small" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Span">
+      <MemberSignature Language="C#" Value="Span" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Span = int32(76)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Span" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="span" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strike">
+      <MemberSignature Language="C#" Value="Strike" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Strike = int32(77)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Strike" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="strike" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Strong">
+      <MemberSignature Language="C#" Value="Strong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Strong = int32(78)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Strong" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="strong" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Style">
+      <MemberSignature Language="C#" Value="Style" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Style = int32(79)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Style" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="style" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sub">
+      <MemberSignature Language="C#" Value="Sub" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Sub = int32(80)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Sub" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="sub" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sup">
+      <MemberSignature Language="C#" Value="Sup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Sup = int32(81)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Sup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="sup" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="Table" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Table = int32(82)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Table" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="table" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tbody">
+      <MemberSignature Language="C#" Value="Tbody" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Tbody = int32(83)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Tbody" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="tbody" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Td">
+      <MemberSignature Language="C#" Value="Td" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Td = int32(84)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Td" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="td" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Textarea">
+      <MemberSignature Language="C#" Value="Textarea" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Textarea = int32(85)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Textarea" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="textarea" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tfoot">
+      <MemberSignature Language="C#" Value="Tfoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Tfoot = int32(86)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Tfoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="tfoot" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Th">
+      <MemberSignature Language="C#" Value="Th" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Th = int32(87)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Th" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="th" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Thead">
+      <MemberSignature Language="C#" Value="Thead" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Thead = int32(88)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Thead" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="thead" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="Title" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Title = int32(89)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Title" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="title" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tr">
+      <MemberSignature Language="C#" Value="Tr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Tr = int32(90)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Tr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="tr" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tt">
+      <MemberSignature Language="C#" Value="Tt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Tt = int32(91)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Tt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="tt" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="U">
+      <MemberSignature Language="C#" Value="U" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag U = int32(92)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.U" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="u" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ul">
+      <MemberSignature Language="C#" Value="Ul" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Ul = int32(93)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Ul" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="ul" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A cadeia de caracteres passada como uma marca HTML não é reconhecida.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Var">
+      <MemberSignature Language="C#" Value="Var" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Var = int32(94)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Var" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="var" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Wbr">
+      <MemberSignature Language="C#" Value="Wbr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Wbr = int32(95)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Wbr" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="wbr" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="Xml" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.HtmlTextWriterTag Xml = int32(96)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.HtmlTextWriterTag.Xml" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O elemento HTML <see langword="xml" />.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

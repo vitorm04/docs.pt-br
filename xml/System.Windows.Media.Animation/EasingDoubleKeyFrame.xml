@@ -1,0 +1,230 @@
+<Type Name="EasingDoubleKeyFrame" FullName="System.Windows.Media.Animation.EasingDoubleKeyFrame">
+  <TypeSignature Language="C#" Value="public class EasingDoubleKeyFrame : System.Windows.Media.Animation.DoubleKeyFrame" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EasingDoubleKeyFrame extends System.Windows.Media.Animation.DoubleKeyFrame" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.Animation.EasingDoubleKeyFrame" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.Animation.DoubleKeyFrame</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma classe que permite associar funções de easing a uma animação de quadro chave <see cref="T:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada como parte de um <xref:System.Windows.Media.Animation.DoubleKeyFrameCollection> em conjunto com um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> para animar uma <xref:System.Double> valor da propriedade ao longo de um conjunto de quadros-chave. Isso <xref:System.Windows.Media.Animation.DoubleKeyFrame> interpola entre o <xref:System.Double> valor de quadro chave anterior e seu próprio valor linearmente com uma função de atenuação para produzir o valor de saída.  
+  
+<a name="xamlObjectElementUsage_EasingDoubleKeyFrame"></a>   
+## <a name="xaml-object-element-usage"></a>Uso de elemento Object do XAML  
+  
+```  
+<EasingDoubleKeyFrame .../>  
+```  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar a quadros-chave com a atenuação funções associadas a eles para criar uma animação de um retângulo que contratos para cima, lento, em seguida, expande para baixo (que caem) e devoluções, em seguida, para uma parada.  
+  
+ [!code-xaml[EasingFunctionDoubleKeyFrame_Snippet#EasingFunctionDoubleKeyFrame](~/samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)] 
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingDoubleKeyFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingDoubleKeyFrame.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.EasingDoubleKeyFrame" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingDoubleKeyFrame (double value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingDoubleKeyFrame.#ctor(System.Double)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="value">Inicial <see cref="T:System.Double" /> valor.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Media.Animation.EasingDoubleKeyFrame" /> com o valor <see cref="T:System.Double" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingDoubleKeyFrame (double value, System.Windows.Media.Animation.KeyTime keyTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value, valuetype System.Windows.Media.Animation.KeyTime keyTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingDoubleKeyFrame.#ctor(System.Double,System.Windows.Media.Animation.KeyTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+      </Parameters>
+      <Docs>
+        <param name="value">Inicial <see cref="T:System.Double" /> valor.</param>
+        <param name="keyTime">A hora inicial de chave.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.EasingDoubleKeyFrame" /> classe com especificado <see cref="T:System.Double" /> valor e chave de tempo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EasingDoubleKeyFrame (double value, System.Windows.Media.Animation.KeyTime keyTime, System.Windows.Media.Animation.IEasingFunction easingFunction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 value, valuetype System.Windows.Media.Animation.KeyTime keyTime, class System.Windows.Media.Animation.IEasingFunction easingFunction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingDoubleKeyFrame.#ctor(System.Double,System.Windows.Media.Animation.KeyTime,System.Windows.Media.Animation.IEasingFunction)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" />
+        <Parameter Name="keyTime" Type="System.Windows.Media.Animation.KeyTime" />
+        <Parameter Name="easingFunction" Type="System.Windows.Media.Animation.IEasingFunction" />
+      </Parameters>
+      <Docs>
+        <param name="value">Inicial <see cref="T:System.Double" /> valor.</param>
+        <param name="keyTime">A hora inicial de chave.</param>
+        <param name="easingFunction">A função de easing.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Media.Animation.EasingDoubleKeyFrame" /> classe com especificado <see cref="T:System.Double" /> valor, a chave de tempo e facilitando a função.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceCore">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Freezable CreateInstanceCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.Freezable CreateInstanceCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingDoubleKeyFrame.CreateInstanceCore" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Freezable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância do <see cref="T:System.Windows.Freezable" /> classe derivada. Ao criar uma classe derivada, você deve substituir esse método.</summary>
+        <returns>A nova instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Classes de animação herdam indiretamente <xref:System.Windows.Freezable>. Por isso, você precisa substituir o <xref:System.Windows.Media.Animation.BackEase.CreateInstanceCore%2A> método para construir um objeto de animação personalizada.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação típica de <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  
+  
+ [!code-csharp[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#createinstancecoreexample)]
+ [!code-vb[freezablesample_procedural#CreateInstanceCoreExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#createinstancecoreexample)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunction">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Animation.IEasingFunction EasingFunction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Animation.IEasingFunction EasingFunction" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Media.Animation.EasingDoubleKeyFrame.EasingFunction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Animation.IEasingFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a função de easing aplicada ao quadro chave.</summary>
+        <value>A função de atenuação aplicada ao quadro chave.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+<a name="elementUsage_EasingFunction"></a>   
+## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
+  
+```  
+<EasingDoubleKeyFrame>  
+  <EasingDoubleKeyFrame.EasingFunction>  
+    easingFunction  
+  </EasingDoubleKeyFrame.EasingFunction>  
+</EasingDoubleKeyFrame  
+```  
+  
+<a name="xamlValues_EasingFunction"></a>   
+## <a name="xaml-values"></a>Valores XAML  
+ *easingFunction*  
+ Elemento de exatamente um objeto de um objeto que deriva de <xref:System.Windows.Media.Animation.EasingFunctionBase> e, portanto, implementa <xref:System.Windows.Media.Animation.IEasingFunction>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EasingFunctionProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EasingFunctionProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EasingFunctionProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.Animation.EasingDoubleKeyFrame.EasingFunctionProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Media.Animation.EasingDoubleKeyFrame.EasingFunction" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterpolateValueCore">
+      <MemberSignature Language="C#" Value="protected override double InterpolateValueCore (double baseValue, double keyFrameProgress);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance float64 InterpolateValueCore(float64 baseValue, float64 keyFrameProgress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Media.Animation.EasingDoubleKeyFrame.InterpolateValueCore(System.Double,System.Double)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Double" />
+        <Parameter Name="keyFrameProgress" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor para animar do.</param>
+        <param name="keyFrameProgress">Um valor entre 0,0 e 1,0, inclusive, que especifica a porcentagem de tempo decorrido para este quadro-chave.</param>
+        <summary>Interpola, acordo com a função de easing usada entre o valor anterior de quadro-chave e o valor do quadro atual da chave, usando o incremento de andamento fornecido.</summary>
+        <returns>O valor de saída de quadro chave recebe o valor de base especificado e o andamento.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

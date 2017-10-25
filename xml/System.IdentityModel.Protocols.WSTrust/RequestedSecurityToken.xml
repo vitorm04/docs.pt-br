@@ -1,0 +1,144 @@
+<Type Name="RequestedSecurityToken" FullName="System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken">
+  <TypeSignature Language="C#" Value="public class RequestedSecurityToken" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestedSecurityToken extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o token de segurança (emitido) solicitado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O token é geralmente opaco para o solicitante de token.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedSecurityToken (System.IdentityModel.Tokens.SecurityToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Tokens.SecurityToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.#ctor(System.IdentityModel.Tokens.SecurityToken)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="token" Type="System.IdentityModel.Tokens.SecurityToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança solicitado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> classe usando o token emitido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é geralmente usado pelo emissor de token.  
+  
+ A tabela a seguir mostra as propriedades da nova instância.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken%2A>|O valor de `token` parâmetro.|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml%2A>|`null`.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="token" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestedSecurityToken (System.Xml.XmlElement tokenAsXml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.XmlElement tokenAsXml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.#ctor(System.Xml.XmlElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tokenAsXml" Type="System.Xml.XmlElement" />
+      </Parameters>
+      <Docs>
+        <param name="tokenAsXml">Um <see cref="T:System.Xml.XmlElement" /> que contém a representação XML do token de segurança solicitado.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> classe usando o XML do token.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é geralmente usado pelo receptor.  
+  
+ A tabela a seguir mostra as propriedades da nova instância.  
+  
+|Propriedade|Valor|  
+|--------------|-----------|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken%2A>|`null`.|  
+|<xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml%2A>|O valor de `tokenAsXml` parâmetro.|  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="tokenAsXml" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityToken SecurityToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityToken SecurityToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém token de segurança emitida quando o <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> instância foi criada usando o token em si.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> que representa o token de segurança emitido. <see langword="null" />Se o <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> instância foi criada usando o XML do token.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém token de segurança emitida quando o <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken> objeto foi criado usando o token em si (representado por um <xref:System.IdentityModel.Tokens.SecurityToken> objeto). O valor da propriedade é `null` se a instância foi criada usando o XML do token. Nesse caso o XML do token pode ser acessado a partir do <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityTokenXml">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlElement SecurityTokenXml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlElement SecurityTokenXml" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityTokenXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a representação XML de segurança emitida token quando o <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> instância foi criada usando o XML do token.</summary>
+        <value>Um <see cref="T:System.Xml.XmlElement" /> que contém a representação XML do token de segurança. <see langword="null" />Se o <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> instância foi criada usando um <see cref="T:System.IdentityModel.Tokens.SecurityToken" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Obtém token de segurança emitida quando o <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken> XML do token. O valor da propriedade é `null` se a instância foi criada usando o token em si (representado por um <xref:System.IdentityModel.Tokens.SecurityToken> objeto). Nesse caso o token pode ser acessado a partir do <xref:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken.SecurityToken%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

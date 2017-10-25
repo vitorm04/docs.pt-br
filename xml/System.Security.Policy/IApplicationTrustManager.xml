@@ -1,0 +1,83 @@
+<Type Name="IApplicationTrustManager" FullName="System.Security.Policy.IApplicationTrustManager">
+  <TypeSignature Language="C#" Value="public interface IApplicationTrustManager : System.Security.ISecurityEncodable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IApplicationTrustManager implements class System.Security.ISecurityEncodable" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Policy.IApplicationTrustManager" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Security.ISecurityEncodable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Determina se um aplicativo deve ser executado e qual conjunto de permissões deve ser concedido a ele.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Confiança gerenciadores devem implementar o <xref:System.Security.Policy.IApplicationTrustManager> interface. O host chama o <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A?displayProperty=nameWithType> método para determinar se um aplicativo deve ser executado e quais permissões devem ser concedidas ao aplicativo.  
+  
+ No [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] e posterior, há apenas um Gerenciador de confiança, que pode ser uma implementação personalizada do <xref:System.Security.Policy.IApplicationTrustManager> interface. A implementação do Gerenciador de confiança padrão solicita ao usuário permissão para instalar o aplicativo e elevar as permissões concedidas ao aplicativo. Outras implementações do Gerenciador de confiança podem fornecer experiências de usuário diferente. Por exemplo, uma implementação pode consultar uma lista de enterprise para aplicativos confiáveis em vez de solicitar ao usuário essas informações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação simples de <xref:System.Security.Policy.IApplicationTrustManager>.  
+  
+ [!code-csharp[System.Security.Policy.IApplicationTrustManager#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/CS/customTrustManager.cs#1)]
+ [!code-vb[System.Security.Policy.IApplicationTrustManager#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/VB/customtrustmanager.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DetermineApplicationTrust">
+      <MemberSignature Language="C#" Value="public System.Security.Policy.ApplicationTrust DetermineApplicationTrust (ActivationContext activationContext, System.Security.Policy.TrustManagerContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Security.Policy.ApplicationTrust DetermineApplicationTrust(class System.ActivationContext activationContext, class System.Security.Policy.TrustManagerContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust(System.ActivationContext,System.Security.Policy.TrustManagerContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Policy.ApplicationTrust</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="activationContext" Type="System.ActivationContext" />
+        <Parameter Name="context" Type="System.Security.Policy.TrustManagerContext" />
+      </Parameters>
+      <Docs>
+        <param name="activationContext">O contexto de ativação para o aplicativo.</param>
+        <param name="context">O contexto do Gerenciador de confiança para o aplicativo.</param>
+        <summary>Determina se um aplicativo deve ser executado e qual conjunto de permissões deve ser concedido a ele.</summary>
+        <returns>Um objeto que contém as decisões de segurança sobre o aplicativo.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A> método é chamado pelo host para determinar se um aplicativo deve ser executado e o conjunto de permissões que ele deve ser concedido. <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A>Retorna um <xref:System.Security.Policy.ApplicationTrust> do objeto com um <xref:System.Security.Policy.ApplicationTrust.DefaultGrantSet%2A> que contém uma permissão definida que representa as permissões para ser concedida a cada assembly em execução dentro do contexto do aplicativo. Não se aplicam as permissões concedidas a assemblies no cache de assembly global. O <xref:System.Security.Policy.ApplicationTrust> objeto também tem um <xref:System.Security.Policy.ApplicationTrust.IsApplicationTrustedToRun%2A> propriedade que define o Gerenciador de confiança para indicar se o aplicativo deve ser confiável. Se o Gerenciador de confiança indica que o aplicativo pode ser confiável, o host ativa o aplicativo e concede o conjunto de permissões fornecidas de seus assemblies de <xref:System.Security.Policy.ApplicationTrust> coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra uma implementação do <xref:System.Security.Policy.IApplicationTrustManager.DetermineApplicationTrust%2A> método para um Gerenciador de confiança personalizado. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Security.Policy.IApplicationTrustManager> interface.  
+  
+ [!code-csharp[System.Security.Policy.IApplicationTrustManager#2](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/CS/customTrustManager.cs#2)]
+ [!code-vb[System.Security.Policy.IApplicationTrustManager#2](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Policy.IApplicationTrustManager/VB/customtrustmanager.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

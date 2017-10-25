@@ -1,0 +1,163 @@
+<Type Name="WSFederationHttpSecurity" FullName="System.ServiceModel.WSFederationHttpSecurity">
+  <TypeSignature Language="C#" Value="public sealed class WSFederationHttpSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit WSFederationHttpSecurity extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.WSFederationHttpSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Especifica as configurações de segurança para o <see cref="T:System.ServiceModel.WSFederationHttpBinding" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta classe especifica o tipo de segurança a serem aplicadas para o `wsFederationHttpBinding` de associação e as configurações de segurança específico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WSFederationHttpSecurity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSFederationHttpSecurity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.WSFederationHttpSecurity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.FederatedMessageSecurityOverHttp Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.FederatedMessageSecurityOverHttp Message" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSFederationHttpSecurity.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.FederatedMessageSecurityOverHttp</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica as configurações de segurança de mensagem para o <see cref="T:System.ServiceModel.WSFederationHttpBinding" />.</summary>
+        <value>Um valor <see cref="T:System.ServiceModel.FederatedMessageSecurityOverHttp" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto retornado especifica as propriedades de segurança de nível de mensagem detalhada para o `wsFederationHttpBinding`.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como acessar essa propriedade e usá-lo para definir propriedades da `wsFederationHttpBinding`.  
+  
+ [!code-csharp[WSFederationHttpSecurity#2](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#2)]
+ [!code-vb[WSFederationHttpSecurity#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.WSFederationHttpSecurityMode Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.WSFederationHttpSecurityMode Mode" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.WSFederationHttpSecurity.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.WSFederationHttpSecurityMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de segurança a ser aplicado.</summary>
+        <value>Um <see cref="T:System.ServiceModel.WSFederationHttpSecurityMode" />. O padrão é <see cref="F:System.ServiceModel.WSFederationHttpSecurityMode.Message" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O membro de enumeração retornado especifica tipo geral de segurança a ser aplicado.  
+  
+ Os valores permitidos são <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message> e <xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>.  
+  
+ No <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message> modo de segurança, a mensagem é enviada por HTTP e segurança de mensagens SOAP é usada para proteger a mensagem. Autenticação de cliente é executada com base no token emitido obtido do serviço de token de segurança. Autenticação de servidor baseia-se no certificado do servidor.  
+  
+ No <xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential> modo de segurança, a mensagem é enviada por HTTPS. Autenticação de cliente é executada, incluindo o token emitido obtido do serviço de token de segurança na mensagem SOAP. Autenticação de servidor, com base em certificado do servidor, é executada como parte da configuração de conexão HTTPS.  
+  
+   
+  
+## Examples  
+ O código a seguir mostra como definir essa propriedade.  
+  
+ [!code-csharp[WSFederationHttpSecurity#3](~/samples/snippets/csharp/VS_Snippets_CFX/wsfederationhttpsecurity/cs/source.cs#3)]
+ [!code-vb[WSFederationHttpSecurity#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/wsfederationhttpsecurity/vb/source.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMessage">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMessage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSFederationHttpSecurity.ShouldSerializeMessage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="P:System.ServiceModel.WSFederationHttpSecurity.Message" /> propriedade foi alterado do valor padrão e deve ser serializada.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.WSFederationHttpSecurity.Message" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShouldSerializeMode">
+      <MemberSignature Language="C#" Value="public bool ShouldSerializeMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ShouldSerializeMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.WSFederationHttpSecurity.ShouldSerializeMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o <see cref="P:System.ServiceModel.WSFederationHttpSecurity.Mode" /> propriedade foi alterado do valor padrão e deve ser serializada.</summary>
+        <returns>
+          <see langword="true" /> se o valor da propriedade <see cref="P:System.ServiceModel.WSFederationHttpSecurity.Mode" /> precisar ser serializado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

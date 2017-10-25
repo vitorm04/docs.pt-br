@@ -1,0 +1,253 @@
+<Type Name="ManipulationStartingEventArgs" FullName="System.Windows.Input.ManipulationStartingEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ManipulationStartingEventArgs : System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManipulationStartingEventArgs extends System.Windows.Input.InputEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.ManipulationStartingEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Input.InputEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Windows.UIElement.ManipulationStarting" />, evento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Input.ManipulationStartingEventArgs> permitem que você especifique o comportamento de uma manipulação.  Use o <xref:System.Windows.Input.ManipulationStartingEventArgs> para fazer o seguinte:  
+  
+-   Especifica que a posição deve ser em relação a um elemento, definindo o <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> propriedade.  
+  
+-   Especifique se a manipulação de único dedo estão habilitados, definindo o <xref:System.Windows.Input.ManipulationStartingEventArgs.IsSingleTouchEnabled%2A?displayProperty=nameWithType> propriedade.  
+  
+-   Especificar quais tipos de manipulação de estão habilitados, definindo o <xref:System.Windows.Input.ManipulationStartingEventArgs.Mode%2A?displayProperty=nameWithType> propriedade para um <xref:System.Windows.Input.ManipulationModes> enumeração.  
+  
+-   Especificar o Centro de rotação de um único dedo, definindo o <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A?displayProperty=nameWithType> propriedade.  
+  
+-   Cancelar a manipulação, definindo o <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A?displayProperty=nameWithType> propriedade `true`.  
+  
+ Para obter mais informações sobre manipulações, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  Para obter um exemplo de um aplicativo que responde às manipulações, consulte [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationStartingEventArgs.Cancel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela a manipulação e promove o toque para eventos de mouse.</summary>
+        <returns>
+          <see langword="true" />Se o toque foi promovido com êxito a eventos de mouse, caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o método for bem-sucedido, o padrão <xref:System.Windows.Input.TouchDevice> envia anterior toque eventos como eventos do mouse e manipulação futura não ocorrem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationStartingEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSingleTouchEnabled">
+      <MemberSignature Language="C#" Value="public bool IsSingleTouchEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSingleTouchEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationStartingEventArgs.IsSingleTouchEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se um dedo pode iniciar uma manipulação.</summary>
+        <value>
+          <see langword="true" />um dedo pode iniciar uma manipulação; Caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre manipulações, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  Para obter um exemplo de um aplicativo que responde às manipulações, consulte [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ManipulationContainer">
+      <MemberSignature Language="C#" Value="public System.Windows.IInputElement ManipulationContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.IInputElement ManipulationContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.IInputElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contêiner que todos os eventos de manipulação e cálculos são relativas.</summary>
+        <value>O contêiner que todos os eventos de manipulação e cálculos são relativos ao. O padrão é o elemento no qual o evento ocorreu.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode especificar que a posição deve ser relativo ao outro elemento definindo o <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> propriedade. Por exemplo, você pode fazer as posições de manipulação em relação ao pai do elemento que recebe os eventos de manipulação. O <xref:System.Windows.UIElement.ManipulationStarting> manipulador de eventos é o único lugar no qual você pode definir o <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>.  
+  
+ Para obter mais informações sobre manipulações, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  Para obter um exemplo de um aplicativo que responde às manipulações, consulte [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manipulators">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Windows.Input.IManipulator&gt; Manipulators { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Windows.Input.IManipulator&gt; Manipulators" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationStartingEventArgs.Manipulators" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Windows.Input.IManipulator&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de objetos que representa o contata o toque para a manipulação.</summary>
+        <value>Uma coleção de objetos que representa o contata o toque para a manipulação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ManipulationModes Mode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Input.ManipulationModes Mode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationStartingEventArgs.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ManipulationModes</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define os tipos de manipulações são possíveis.</summary>
+        <value>Um dos valores de enumeração. O padrão é <see cref="F:System.Windows.Input.ManipulationModes.All" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre manipulações, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  Para obter um exemplo de um aplicativo que responde às manipulações, consulte [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A propriedade é definida como um valor diferente de um ou mais do <see cref="T:System.Windows.Input.ManipulationModes" /> valor enumerações</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Pivot">
+      <MemberSignature Language="C#" Value="public System.Windows.Input.ManipulationPivot Pivot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Input.ManipulationPivot Pivot" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Input.ManipulationStartingEventArgs.Pivot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Input.ManipulationPivot</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um objeto que descreve dinâmico para manipulação de um único ponto.</summary>
+        <value>Um objeto que descreve dinâmico para manipulação de um único ponto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define o <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A> propriedade, a manipulação conterá dados rotação quando o usuário utiliza um dedo durante uma manipulação.  Isso é para simular situações reais onde você pode usar um dedo para girar um objeto, como uma parte do documento em uma tabela.  Se o <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A> é `null`, o usuário deve usar dois dedos para fazer com que a rotação.  
+  
+ Para obter mais informações sobre manipulações, consulte o [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  Para obter um exemplo de um aplicativo que responde às manipulações, consulte [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra um manipulador de eventos para o <xref:System.Windows.UIElement.ManipulationStarting> eventos e define o <xref:System.Windows.Input.ManipulationStartingEventArgs.Pivot%2A?displayProperty=nameWithType> propriedade. Para testar este exemplo, siga as etapas em [passo a passo: Criando seu primeiro toque aplicativo](~/docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md) e substitua o código na etapa 4 por este código.  
+  
+ [!code-csharp[BasicManipulation#ManipulationPivot](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/reportboundaryfeedbackexample.xaml.cs#manipulationpivot)]
+ [!code-vb[BasicManipulation#ManipulationPivot](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/reportboundaryfeedbackexample.xaml.vb#manipulationpivot)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetManipulationParameter">
+      <MemberSignature Language="C#" Value="public void SetManipulationParameter (System.Windows.Input.Manipulations.ManipulationParameters2D parameter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetManipulationParameter(class System.Windows.Input.Manipulations.ManipulationParameters2D parameter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.ManipulationStartingEventArgs.SetManipulationParameter(System.Windows.Input.Manipulations.ManipulationParameters2D)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Windows.Input.Manipulations.ManipulationParameters2D" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">O parâmetro para adicionar.</param>
+        <summary>Adiciona parâmetros para a manipulação atual do elemento especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, você não precisa chamar este método.  Use as propriedades de <xref:System.Windows.Input.ManipulationStartingEventArgs> em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

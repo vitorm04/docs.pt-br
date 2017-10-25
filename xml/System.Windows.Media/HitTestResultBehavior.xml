@@ -1,0 +1,67 @@
+<Type Name="HitTestResultBehavior" FullName="System.Windows.Media.HitTestResultBehavior">
+  <TypeSignature Language="C#" Value="public enum HitTestResultBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HitTestResultBehavior extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.HitTestResultBehavior" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina se deve continuar a enumeração de todos os objetos restantes visual durante um teste de clique.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Resultados de teste de hit método de retorno de chamada define as ações executadas quando um teste de clique é identificado em um determinado objeto visual na árvore visual. Depois de executar as ações, você retornar um <xref:System.Windows.Media.HitTestResultBehavior> valor que determina se deseja continuar a enumeração de quaisquer outros objetos visuais.  
+  
+ Você pode enumerar todos os objetos visuais em uma árvore visual cuja geometria contém um valor de coordenada especificado. Retornando continuar em seu método de retorno de chamada de teste de clique, você pode identificar todos os objetos visuais que são atingidos, mesmo aqueles que podem ser totalmente ou parcialmente encobertos por outros objetos de visual.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como retornar um <xref:System.Windows.Media.HitTestResultBehavior.Continue> método de retorno de chamada de resultados do valor de um teste de clique.  
+  
+ [!code-csharp[HitTestingOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[HitTestingOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#102)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Continue">
+      <MemberSignature Language="C#" Value="Continue" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.HitTestResultBehavior Continue = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.HitTestResultBehavior.Continue" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResultBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Continue o teste de clique em Avançar visual na hierarquia de árvore visual.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="Stop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.HitTestResultBehavior Stop = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.HitTestResultBehavior.Stop" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.HitTestResultBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Interrompa todos os testes mais ocorrências e o retorno de chamada de retorno.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

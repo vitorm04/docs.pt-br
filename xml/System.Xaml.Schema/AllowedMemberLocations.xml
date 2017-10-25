@@ -1,0 +1,94 @@
+<Type Name="AllowedMemberLocations" FullName="System.Xaml.Schema.AllowedMemberLocations">
+  <TypeSignature Language="C#" Value="public enum AllowedMemberLocations" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AllowedMemberLocations extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.Schema.AllowedMemberLocations" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica as restrições de sintaxe impostas em uma propriedade quando ela é definida em XAML, conforme relatado por um <see cref="T:System.Xaml.XamlDirective" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Informações relatadas por essa propriedade não conta para qualquer extensão de marcação possíveis. Extensões de marcação são processadas primeiro e potencialmente podem retornar objetos a partir de uso de um atributo, mesmo para propriedades que é representado como MemberElement somente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="Any" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xaml.Schema.AllowedMemberLocations Any = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Xaml.Schema.AllowedMemberLocations.Any" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.AllowedMemberLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Propriedade pode ser definida no <see cref="F:System.Xaml.Schema.AllowedMemberLocations.Attribute" /> ou <see cref="F:System.Xaml.Schema.AllowedMemberLocations.MemberElement" /> local. (Este membro de enumeração é definido como a combinação desses valores).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="Attribute" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xaml.Schema.AllowedMemberLocations Attribute = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xaml.Schema.AllowedMemberLocations.Attribute" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.AllowedMemberLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Propriedade pode ser definida na sintaxe de atributo XAML.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberElement">
+      <MemberSignature Language="C#" Value="MemberElement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xaml.Schema.AllowedMemberLocations MemberElement = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xaml.Schema.AllowedMemberLocations.MemberElement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.AllowedMemberLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Propriedade pode ser definida na sintaxe de elemento de propriedade XAML.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xaml.Schema.AllowedMemberLocations None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xaml.Schema.AllowedMemberLocations.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xaml.Schema.AllowedMemberLocations</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Propriedade em todos os não pode ser definida em XAML. Esse é o padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

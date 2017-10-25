@@ -1,0 +1,1083 @@
+<Type Name="ContainerControl" FullName="System.Windows.Forms.ContainerControl">
+  <TypeSignature Language="C#" Value="public class ContainerControl : System.Windows.Forms.ScrollableControl, System.Windows.Forms.IContainerControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContainerControl extends System.Windows.Forms.ScrollableControl implements class System.Windows.Forms.IContainerControl" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ContainerControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.ScrollableControl</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Windows.Forms.IContainerControl</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a funcionalidade de gerenciamento de foco para controles que podem funcionar como um contêiner para outros controles.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.ContainerControl> representa um controle que pode funcionar como um contêiner para outros controles e fornece gerenciamento de foco. Controles que herdam desta classe podem acompanhar o controle ativo, que eles contêm, mesmo quando o foco é movido em algum lugar dentro de um contêiner diferente.  
+  
+ <xref:System.Windows.Forms.ContainerControl>objetos fornecem um limite lógico para controles contidos. O controle de contêiner pode capturar o pressionamento da tecla TAB e move o foco para o próximo controle na coleção.  
+  
+> [!NOTE]
+>  O controle do contêiner não recebe foco. o foco é sempre definido como o primeiro controle filho da coleção de controles contidos.  
+  
+ Você normalmente não herda diretamente a partir de <xref:System.Windows.Forms.ContainerControl> classe. <xref:System.Windows.Forms.Form>, <xref:System.Windows.Forms.UserControl>, e <xref:System.Windows.Forms.UpDownBase> classes herdadas de <xref:System.Windows.Forms.ContainerControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContainerControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.ContainerControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir herda o <xref:System.Windows.Forms.ScrollableControl> classe e implemente o <xref:System.Windows.Forms.IContainerControl> interface. Implementação é adicionada para o <xref:System.Windows.Forms.IContainerControl.ActiveControl%2A> propriedade e o <xref:System.Windows.Forms.IContainerControl.ActivateControl%2A> método.  
+  
+ [!code-cpp[IContainerControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IContainerControl Implementation/CPP/mycontainercontrol.cpp#1)]
+ [!code-csharp[IContainerControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IContainerControl Implementation/CS/mycontainercontrol.cs#1)]
+ [!code-vb[IContainerControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IContainerControl Implementation/VB/mycontainercontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveControl">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control ActiveControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control ActiveControl" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.ActiveControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o controle ativo no controle de contêiner.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Control" /> que está ativo atualmente no <see cref="T:System.Windows.Forms.ContainerControl" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> propriedade ativa ou recupera o controle ativo no controle de contêiner.  
+  
+ Para receber um valor válido dessa propriedade, o objeto que chama deve conter ou estar contido no controle que está chamando. Se um formulário tenta chamar outro formulário <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> propriedades, ele receberá um valor indefinido. Nesse caso, você precisa definir seu próprio mecanismo de comunicação entre as formas de passar esses dados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir herda o <xref:System.Windows.Forms.ScrollableControl> classe e implemente o <xref:System.Windows.Forms.IContainerControl> interface. Implementação é adicionada para o <xref:System.Windows.Forms.IContainerControl.ActiveControl%2A> propriedade e o <xref:System.Windows.Forms.IContainerControl.ActivateControl%2A> método.  
+  
+ [!code-cpp[IContainerControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IContainerControl Implementation/CPP/mycontainercontrol.cpp#1)]
+ [!code-csharp[IContainerControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IContainerControl Implementation/CS/mycontainercontrol.cs#1)]
+ [!code-vb[IContainerControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IContainerControl Implementation/VB/mycontainercontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Windows.Forms.Control" /> atribuído não pôde ser ativado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustFormScrollbars">
+      <MemberSignature Language="C#" Value="protected override void AdjustFormScrollbars (bool displayScrollbars);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AdjustFormScrollbars(bool displayScrollbars) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.AdjustFormScrollbars(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="displayScrollbars" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="displayScrollbars">
+          <see langword="true" /> para mostrar as barras de rolagem, caso contrário, <see langword="false" />.</param>
+        <summary>Ajusta as barras de rolagem no contêiner com base nas posições de controle atuais e o controle selecionado no momento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScaleDimensions">
+      <MemberSignature Language="C#" Value="public System.Drawing.SizeF AutoScaleDimensions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.SizeF AutoScaleDimensions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.AutoScaleDimensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as dimensões para as quais o controle foi projetado.</summary>
+        <value>Um <see cref="T:System.Drawing.SizeF" /> contendo DPI (pontos por polegada) ou o tamanho de <see cref="T:System.Drawing.Font" /> para o qual o controle foi projetado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> propriedade representa a configuração de DPI ou a fonte da tela que o controle foi dimensionado ou destinado. Especificamente, no design de tempo, que essa propriedade será definida pelo designer de formulários do Windows para o valor do monitor está usando no momento. Em seguida, quando o formulário é carregado no tempo de execução, se o <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> propriedade é diferente de <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, o <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> método será chamado para executar o dimensionamento do controle e todos os seus filhos. Posteriormente, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> será atualizada para refletir o novo tamanho de dimensionamento.  
+  
+ Para obter mais informações sobre o dimensionamento automático, consulte [dimensionamento automático de formulários do Windows](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A largura ou altura do valor <see cref="T:System.Drawing.SizeF" /> é menor que 0 ao definir esse valor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScaleFactor">
+      <MemberSignature Language="C#" Value="protected System.Drawing.SizeF AutoScaleFactor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.SizeF AutoScaleFactor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.AutoScaleFactor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o fator de dimensionamento entre as dimensões de dimensionamento automático atual e em tempo de design.</summary>
+        <value>Um <see cref="T:System.Drawing.SizeF" /> que contém a taxa de escala entre as dimensões de dimensionamento automático atual e em tempo de design.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> propriedade representa o fator de escala entre o <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> e <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> propriedades. Esse valor é calculado quando necessário. Por exemplo, se <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> é (192, 144) e <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> é (96, 96), o <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> é (2.0, 1.5).  
+  
+ Para obter mais informações sobre o dimensionamento automático, consulte [dimensionamento automático de formulários do Windows](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoScaleMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.AutoScaleMode AutoScaleMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoScaleMode AutoScaleMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.AutoScaleMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoScaleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de dimensionamento automático do controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.AutoScaleMode" /> que representa o modo de dimensionamento atual. O padrão é <see cref="F:System.Windows.Forms.AutoScaleMode.None" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriedade especifica o modo de dimensionamento automático atual deste controle. Escala por <xref:System.Windows.Forms.AutoScaleMode.Font> é útil se você deseja ter um controle ou formulário aumentar ou diminuir de acordo com o tamanho das fontes no sistema operacional e deve ser usada quando o tamanho absoluto do formulário ou controle não faz diferença. Escala por <xref:System.Windows.Forms.AutoScaleMode.Dpi> é útil quando você deseja dimensionar um controle ou formulário em relação à tela. Por exemplo, você talvez queira usar pontos por polegada (DPI) o dimensionamento de um controle que exibe um gráfico ou outro elemento gráfico para que ele sempre ocupa uma determinada porcentagem da tela.  
+  
+ Para obter mais informações sobre o dimensionamento automático, consulte [dimensionamento automático de formulários do Windows](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Um valor <see cref="T:System.Windows.Forms.AutoScaleMode" /> inválido foi usado para definir essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoValidate">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Forms.AutoValidate AutoValidate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.AutoValidate AutoValidate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.AutoValidate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.AmbientValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AutoValidate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os controles neste contêiner serão validados automaticamente quando o foco mudar.</summary>
+        <value>Um valor enumerado <see cref="T:System.Windows.Forms.AutoValidate" /> que indica se os controles contidos são validados implicitamente na mudança de foco. O padrão é <see cref="F:System.Windows.Forms.AutoValidate.Inherit" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão para <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> serão diferentes para cada controle. Para obter mais detalhes sobre validação implícita, consulte [validação de entrada do usuário no Windows Forms](~/docs/framework/winforms/user-input-validation-in-windows-forms.md).  
+  
+ A definição dessa propriedade para um novo valor irá gerar o <xref:System.Windows.Forms.ContainerControl.AutoValidateChanged> evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir desativa a validação implícita para um formulário e todos os seus controles independentes e em vez disso, executa manualmente a validação de todos os filhos do formulário quando um botão do mouse é clicado.  
+  
+ [!code-csharp[ValidateChildren#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ValidateChildren/CS/Form1.cs#1)]
+ [!code-vb[ValidateChildren#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ValidateChildren/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Um valor <see cref="T:System.Windows.Forms.AutoValidate" /> inválido foi usado para definir essa propriedade.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoValidateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler AutoValidateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler AutoValidateChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.ContainerControl.AutoValidateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a propriedade <see cref="P:System.Windows.Forms.ContainerControl.AutoValidate" /> muda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>  
+  
+ <xref:System.Windows.Forms.ContainerControl.OnAutoValidateChanged%2A>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BindingContext">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.BindingContext BindingContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.BindingContext BindingContext" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.BindingContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.BindingContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see cref="T:System.Windows.Forms.BindingContext" /> do controle.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.BindingContext" /> para o controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanEnableIme">
+      <MemberSignature Language="C#" Value="protected override bool CanEnableIme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanEnableIme" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.CanEnableIme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a propriedade <see cref="P:System.Windows.Forms.Control.ImeMode" /> pode ser definida para um valor ativo para habilitar o suporte ao IME.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] e posterior, funcionalidade do IME é tratada pela estrutura e suporte nativo do IME para controles individuais é desabilitado.  
+  
+ Um controle de usuário que deriva de <xref:System.Windows.Forms.ContainerControl> classe pode habilitar o suporte nativo do IME, substituindo essa propriedade para retornar `true`. No entanto, o aplicativo, em seguida, é responsável por garantir que não haja nenhum conflito entre o IME nativo e o IME de formulários do Windows. Não há suporte para esse cenário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém os parâmetros de criação necessários quando a alça de controle é criada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentAutoScaleDimensions">
+      <MemberSignature Language="C#" Value="public System.Drawing.SizeF CurrentAutoScaleDimensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.SizeF CurrentAutoScaleDimensions" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém as dimensões de tempo de execução atuais da tela.</summary>
+        <value>Um <see cref="T:System.Drawing.SizeF" /> que contém o DPI (pontos por polegada) atual ou o tamanho <see cref="T:System.Drawing.Font" /> da tela.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> propriedade representa as dimensões de referência na tela atual. Em contraste, o <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> propriedade representa as dimensões de referência de tempo de design do ambiente de design para o controle atual, enquanto o <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A> propriedade é a razão entre os dois.  
+  
+ A interpretação do valor de dimensão depende do <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriedade das seguintes maneiras:  
+  
+-   Se o modo for <xref:System.Windows.Forms.AutoScaleMode.Dpi>, esta propriedade representa a resolução da tela, em pontos por polegada.  
+  
+-   Se o modo for <xref:System.Windows.Forms.AutoScaleMode.Font>, esta propriedade representa o tamanho de caractere fonte médio em pixels.  
+  
+ Se o <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> está definida como <xref:System.Windows.Forms.AutoScaleMode.None>, <xref:System.Windows.Forms.ContainerControl.CurrentAutoScaleDimensions%2A> é definido como <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>.  
+  
+ Para obter mais informações sobre o dimensionamento automático, consulte [dimensionamento automático de formulários do Windows](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ComponentModel.Win32Exception">Não foi possível criar um contexto de dispositivo do Win32 para a tela atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Windows.Forms.Control" /> e seus controles filho e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAutoValidateChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnAutoValidateChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAutoValidateChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.OnAutoValidateChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.ContainerControl.AutoValidateChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ContainerControl.OnAutoValidateChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ContainerControl.OnAutoValidateChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ContainerControl.OnAutoValidateChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateControl">
+      <MemberSignature Language="C#" Value="protected override void OnCreateControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnCreateControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.OnCreateControl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gera o método <see cref="M:System.Windows.Forms.Control.CreateControl" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFontChanged">
+      <MemberSignature Language="C#" Value="protected override void OnFontChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFontChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.OnFontChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.FontChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alterar a fonte usada por um <xref:System.Windows.Forms.ContainerControl> fará com que o layout ser recalculado e reaplicadas em controles contidos se o <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriedade tem um valor de <xref:System.Windows.Forms.AutoScaleMode.Font>.  
+  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.ContainerControl.OnFontChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.ContainerControl.OnFontChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.ContainerControl.OnFontChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLayout">
+      <MemberSignature Language="C#" Value="protected override void OnLayout (System.Windows.Forms.LayoutEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnLayout(class System.Windows.Forms.LayoutEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.OnLayout(System.Windows.Forms.LayoutEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Windows.Forms.LayoutEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Windows.Forms.LayoutEventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Layout" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParentChanged">
+      <MemberSignature Language="C#" Value="protected override void OnParentChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnParentChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.OnParentChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.ParentChanged" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParentForm">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Form ParentForm { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Form ParentForm" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ContainerControl.ParentForm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Form</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o formulário ao qual o controle de contêiner foi atribuído.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Form" /> ao qual o controle do contêiner foi atribuído. Essa propriedade retornará nulo se o controle for hospedado no Internet Explorer ou em outro contexto de hospedagem em que não há nenhum formulário pai.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como criar duas formas: `Form1` e `Form2`. Definir o <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade `Form1` para `true` e torná-lo a <xref:System.Windows.Forms.Form.MdiParent%2A> de `Form2`. Em seguida, crie um botão, `button1`, em cada formulário. Quando o botão no formulário pai é clicado, o manipulador de eventos exibe o formulário filho. Quando o botão no formulário filho é clicado, o manipulador de eventos exibe os <xref:System.Windows.Forms.Control.Name%2A> propriedade do seu formulário pai. Use os seguintes segmentos de código de dois para substituir `button1` manipuladores de eventos em ambas as formas.  
+  
+ [!code-cpp[ParentForm2#1](~/samples/snippets/cpp/VS_Snippets_Winforms/ParentForm2/CPP/form1.cpp#1)]
+ [!code-csharp[ParentForm2#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ParentForm2/CS/form1.cs#1)]
+ [!code-vb[ParentForm2#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ParentForm2/VB/form1.vb#1)]  
+  
+ [!code-cpp[ParentForm2#2](~/samples/snippets/cpp/VS_Snippets_Winforms/ParentForm2/CPP/form2.cpp#2)]
+ [!code-csharp[ParentForm2#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ParentForm2/CS/form2.cs#2)]
+ [!code-vb[ParentForm2#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ParentForm2/VB/form2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.Permissions.UIPermission">para todas as janelas obter o valor da propriedade. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformAutoScale">
+      <MemberSignature Language="C#" Value="public void PerformAutoScale ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformAutoScale() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.PerformAutoScale" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Executa o dimensionamento da caixa de controles e seus filhos.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma chamada explícita para o <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> método normalmente é necessário apenas após a alteração programática para o layout durante o tempo de execução. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>é chamado implicitamente a partir de <xref:System.Windows.Forms.ContainerControl.OnLayout%2A> método.  
+  
+ <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>é recursivo; cada controle filho, se ele é um contêiner, terá a versão desse método chamado quando a versão do contêiner é executado.  
+  
+ Para obter mais informações sobre o dimensionamento automático, consulte [dimensionamento automático de formulários do Windows](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessCmdKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessCmdKey (ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessCmdKey(valuetype System.Windows.Forms.Message&amp; msg, valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="msg" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="msg">Um <see cref="T:System.Windows.Forms.Message" />, passado por referência, que representa a mensagem de janela a ser processada.</param>
+        <param name="keyData">Um dos valores <see cref="T:System.Windows.Forms.Keys" /> que representa a chave a ser processada.</param>
+        <summary>Processa uma chave de comando.</summary>
+        <returns>
+          <see langword="true" /> se o caractere foi processado pelo controle; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessDialogChar">
+      <MemberSignature Language="C#" Value="protected override bool ProcessDialogChar (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessDialogChar(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.ProcessDialogChar(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">O caractere a ser processado.</param>
+        <summary>Processa um caractere de caixa de diálogo.</summary>
+        <returns>
+          <see langword="true" /> se o caractere foi processado pelo controle; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessDialogKey">
+      <MemberSignature Language="C#" Value="protected override bool ProcessDialogKey (System.Windows.Forms.Keys keyData);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ProcessDialogKey(valuetype System.Windows.Forms.Keys keyData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.ProcessDialogKey(System.Windows.Forms.Keys)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyData" Type="System.Windows.Forms.Keys" />
+      </Parameters>
+      <Docs>
+        <param name="keyData">Um dos valores <see cref="T:System.Windows.Forms.Keys" /> que representa a chave a ser processada.</param>
+        <summary>Processa uma chave de caixa de diálogo.</summary>
+        <returns>
+          <see langword="true" /> se a chave foi processada pelo controle; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessMnemonic">
+      <MemberSignature Language="C#" Value="protected override bool ProcessMnemonic (char charCode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool ProcessMnemonic(char charCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.ProcessMnemonic(System.Char)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charCode" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="charCode">O caractere a ser processado.</param>
+        <summary>Processa um caractere mnemônico.</summary>
+        <returns>
+          <see langword="true" /> se o caractere tiver sido processado como mnemônico pelo controle; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessTabKey">
+      <MemberSignature Language="C#" Value="protected virtual bool ProcessTabKey (bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ProcessTabKey(bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.ProcessTabKey(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forward">
+          <see langword="true" /> para percorrer os controles no <see cref="T:System.Windows.Forms.ContainerControl" />. Caso contrário, <see langword="false" />.</param>
+        <summary>Seleciona o próximo controle disponível e faz dele o controle ativo.</summary>
+        <returns>
+          <see langword="true" /> se um controle estiver selecionado. Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um controle com seu <xref:System.Windows.Forms.Control.TabStop%2A> propriedade definida como `false` não pode ser selecionado para o próximo controle disponível será selecionado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Select">
+      <MemberSignature Language="C#" Value="protected override void Select (bool directed, bool forward);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Select(bool directed, bool forward) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.Select(System.Boolean,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="directed" Type="System.Boolean" />
+        <Parameter Name="forward" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="directed">
+          <see langword="true" />para especificar a direção do controle para selecionar; Caso contrário, <see langword="false" />.</param>
+        <param name="forward">
+          <see langword="true" /> para avançar na ordem de tabulação; <see langword="false" /> para voltar na ordem de tabulação.</param>
+        <summary>Ativa um controle filho. Opcionalmente, especifica a direção na ordem de tabulação para selecionar o controle de.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Windows.Forms.IContainerControl.ActivateControl">
+      <MemberSignature Language="C#" Value="bool IContainerControl.ActivateControl (System.Windows.Forms.Control control);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool System.Windows.Forms.IContainerControl.ActivateControl(class System.Windows.Forms.Control control) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.System#Windows#Forms#IContainerControl#ActivateControl(System.Windows.Forms.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="control" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="control">O <see cref="T:System.Windows.Forms.Control" /> para ativar.</param>
+        <summary>Ativa o controle especificado.</summary>
+        <returns>
+          <see langword="true" />Se o controle é ativado com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `control` parâmetro deve ser um filho do controle de contêiner.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como herdam o <xref:System.Windows.Forms.ScrollableControl> classe e implementar o <xref:System.Windows.Forms.IContainerControl> interface. Implementação é adicionada para o <xref:System.Windows.Forms.IContainerControl.ActiveControl%2A> propriedade e o <xref:System.Windows.Forms.IContainerControl.ActivateControl%2A> método.  
+  
+ [!code-cpp[IContainerControl Implementation#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IContainerControl Implementation/CPP/mycontainercontrol.cpp#1)]
+ [!code-csharp[IContainerControl Implementation#1](~/samples/snippets/csharp/VS_Snippets_Winforms/IContainerControl Implementation/CS/mycontainercontrol.cs#1)]
+ [!code-vb[IContainerControl Implementation#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IContainerControl Implementation/VB/mycontainercontrol.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateDefaultButton">
+      <MemberSignature Language="C#" Value="protected virtual void UpdateDefaultButton ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdateDefaultButton() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.UpdateDefaultButton" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Quando substituído por uma classe derivada, atualiza o botão é o padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl> classe não fornecer uma implementação para o <xref:System.Windows.Forms.ContainerControl.UpdateDefaultButton%2A> método. As classes que herdam este método devem implementar <xref:System.Windows.Forms.ContainerControl.UpdateDefaultButton%2A> para atualizar o botão padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public bool Validate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Validate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.Validate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica o valor do controle que está perdendo o foco fazendo com que os eventos <see cref="E:System.Windows.Forms.Control.Validating" /> e <see cref="E:System.Windows.Forms.Control.Validated" /> ocorram, nessa ordem.</summary>
+        <returns>
+          <see langword="true" /> se a validação for bem-sucedida; caso contrário, <see langword="false" />. Se for chamado dos manipuladores de eventos <see cref="E:System.Windows.Forms.Control.Validating" /> ou <see cref="E:System.Windows.Forms.Control.Validated" />, esse método sempre retornará <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl.Validate%2A> método valida o último controle filho que não é validado e seus ancestrais backup por meio de, mas não incluindo, o controle do contêiner atual. Esta versão sobrecarregada sempre executa validação, independentemente do valor de <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> propriedade do pai do controle. Portanto, usá-lo para forçar a validação incondicionalmente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validate">
+      <MemberSignature Language="C#" Value="public bool Validate (bool checkAutoValidate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Validate(bool checkAutoValidate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.Validate(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="checkAutoValidate" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="checkAutoValidate">Se <see langword="true" />, o valor da propriedade <see cref="P:System.Windows.Forms.ContainerControl.AutoValidate" /> será usado para determinar se a validação deve ser executada; se <see langword="false" />, a validação será incondicionalmente executada.</param>
+        <summary>Verifica o valor do controle que está perdendo o foco; condicionalmente dependente da ativação da validação automática.</summary>
+        <returns>
+          <see langword="true" /> se a validação for bem-sucedida; caso contrário, <see langword="false" />. Se for chamado dos manipuladores de eventos <see cref="E:System.Windows.Forms.Control.Validating" /> ou <see cref="E:System.Windows.Forms.Control.Validated" />, esse método sempre retornará <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.ContainerControl.Validate%2A> método valida o último controle filho que não é validado e seus ancestrais backup por meio de, mas não incluindo, o controle do contêiner atual. Esta versão sobrecarregada executa validação com base nas seguintes condições:  
+  
+-   Se o `checkAutoValidate` parâmetro é `true`, ocorre a validação sempre para controles filho que não são validados.  
+  
+-   Se o `checkAutoValidate` parâmetro é `false`, a validação ocorre apenas se o <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> propriedade do pai do controle está habilitada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateChildren">
+      <MemberSignature Language="C#" Value="public virtual bool ValidateChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ValidateChildren() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.ValidateChildren" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Faz com que todos os controles filho em um controle que dá suporte à validação validem seus dados.</summary>
+        <returns>
+          <see langword="true" /> se todos os filhos forem validados com êxito; caso contrário, <see langword="false" />. Se for chamado dos manipuladores de eventos <see cref="E:System.Windows.Forms.Control.Validating" /> ou <see cref="E:System.Windows.Forms.Control.Validated" />, esse método sempre retornará <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>será decrescem hierarquia do controle e examine cada controle para ver se ele dá suporte à validação. Se o controle pode ser selecionado pelo usuário e sua <xref:System.Windows.Forms.Control.CausesValidation%2A> é de propriedade `true`, <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> fará com que o <xref:System.Windows.Forms.Control.Validating> evento ocorra. Se qualquer um dos controles cancelar o <xref:System.Windows.Forms.Control.Validating> eventos, esse método retornará `false`; caso contrário, ela retornará `true`.  
+  
+ Se um controle é vinculado a uma fonte de dados e o <xref:System.Windows.Forms.Control.Validating> evento ocorrer, ela fará com que o controle enviar seus dados atuais volta para a fonte de dados.  
+  
+ Chamando <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> é equivalente a chamar <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> com um <xref:System.Windows.Forms.ValidationConstraints> de <xref:System.Windows.Forms.ValidationConstraints.None>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir desativa a validação implícita para um formulário e todos os seus controles independentes e em vez disso, executa manualmente a validação de todos os filhos do formulário quando um botão do mouse é clicado.  
+  
+ [!code-csharp[ValidateChildren#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ValidateChildren/CS/Form1.cs#1)]
+ [!code-vb[ValidateChildren#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ValidateChildren/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateChildren">
+      <MemberSignature Language="C#" Value="public virtual bool ValidateChildren (System.Windows.Forms.ValidationConstraints validationConstraints);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool ValidateChildren(valuetype System.Windows.Forms.ValidationConstraints validationConstraints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.ValidateChildren(System.Windows.Forms.ValidationConstraints)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="validationConstraints" Type="System.Windows.Forms.ValidationConstraints" />
+      </Parameters>
+      <Docs>
+        <param name="validationConstraints">Impõe restrições quanto a quais controles têm seu evento <see cref="E:System.Windows.Forms.Control.Validating" /> acionado.</param>
+        <summary>Faz com que todos os controles filho em um controle que dá suporte à validação validem seus dados.</summary>
+        <returns>
+          <see langword="true" /> se todos os filhos forem validados com êxito; caso contrário, <see langword="false" />. Se for chamado dos manipuladores de eventos <see cref="E:System.Windows.Forms.Control.Validating" /> ou <see cref="E:System.Windows.Forms.Control.Validated" />, esse método sempre retornará <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>examinar todos os filhos do controle atual, fazendo com que o <xref:System.Windows.Forms.Control.Validating> evento ocorra em um controle se ele atende aos critérios descritos por <xref:System.Windows.Forms.ValidationConstraints>.  
+  
+ Você pode usar vários <xref:System.Windows.Forms.ValidationConstraints> parâmetros ao mesmo tempo, combinando-os com um operador OR bit a bit. Combinação de parâmetros com um operador OR bit a bit resultará em uma operação AND lógica. Por exemplo, chamar `ValidateChildren(ValidationConstraints.ImmediateChildren | ValidationConstraints.Enabled)` gerará somente o <xref:System.Windows.Forms.Control.Validating> evento em controles que são filhos imediatos do contêiner e estão habilitados.  
+  
+ Independentemente de quais parâmetros que você especificar para esse método, um controle deve ter sua <xref:System.Windows.Forms.Control.CausesValidation%2A> propriedade definida como `true` para que seu <xref:System.Windows.Forms.Control.Validating> evento ocorra. Você também deve definir o <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> propriedade do controle ou do contêiner do controle `false` se você quiser que a validação ocorrer somente quando você chama <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>, e não quando o usuário desloca o foco do controle.  
+  
+ Se um controle é vinculado a uma fonte de dados e o <xref:System.Windows.Forms.Control.Validating> evento ocorrer, ela fará com que o controle enviar seus dados atuais volta para a fonte de dados.  
+  
+ Você não pode obter o efeito oposto de uma <xref:System.Windows.Forms.ValidationConstraints> parâmetro aplicando um operador de negação bit a bit. Por exemplo, se você fornecer o valor negativo do <xref:System.Windows.Forms.ValidationConstraints.Visible> campo <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>, ele não será validado, todos os filhos que não são visíveis no contêiner. Fornecendo qualquer parâmetro negativo para <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> não tem efeito sobre o contêiner ou seus filhos.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir só fará com que o <xref:System.Windows.Forms.Control.Validating> evento ocorra para filhos imediatos do formulário cujo <xref:System.Windows.Forms.Control.Enabled%2A> é de propriedade `true`.  
+  
+ [!code-csharp[ValidateChildrenWithConstraints#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ValidateChildrenWithConstraints/CS/Form1.cs#1)]
+ [!code-vb[ValidateChildrenWithConstraints#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ValidateChildrenWithConstraints/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.ContainerControl.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Processa mensagens do Windows.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

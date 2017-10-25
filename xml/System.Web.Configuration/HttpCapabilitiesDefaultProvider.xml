@@ -1,0 +1,191 @@
+<Type Name="HttpCapabilitiesDefaultProvider" FullName="System.Web.Configuration.HttpCapabilitiesDefaultProvider">
+  <TypeSignature Language="C#" Value="public class HttpCapabilitiesDefaultProvider : System.Web.Configuration.HttpCapabilitiesProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpCapabilitiesDefaultProvider extends System.Web.Configuration.HttpCapabilitiesProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.HttpCapabilitiesDefaultProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.Configuration.HttpCapabilitiesProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A extensão padrão da <see cref="T:System.Web.Configuration.HttpCapabilitiesProvider" /> classe que está incluso no ASP.NET.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCapabilitiesDefaultProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCapabilitiesDefaultProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Configuration.HttpCapabilitiesDefaultProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpCapabilitiesDefaultProvider (System.Web.Configuration.HttpCapabilitiesDefaultProvider parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.Configuration.HttpCapabilitiesDefaultProvider parent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCapabilitiesDefaultProvider.#ctor(System.Web.Configuration.HttpCapabilitiesDefaultProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="parent" Type="System.Web.Configuration.HttpCapabilitiesDefaultProvider" />
+      </Parameters>
+      <Docs>
+        <param name="parent">O <see cref="T:System.Web.Configuration.HttpCapabilitiesDefaultProvider" /> instância a ser usada para inicializar uma nova instância.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.HttpCapabilitiesDefaultProvider" /> classe com os valores da instância especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDependency">
+      <MemberSignature Language="C#" Value="public void AddDependency (string variable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddDependency(string variable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCapabilitiesDefaultProvider.AddDependency(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variable" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="variable">A cadeia de caracteres a ser usado para analisar as informações de recursos do navegador.</param>
+        <summary>Adiciona uma cadeia de caracteres de solicitação HTTP a ser usado para analisar as informações de recursos do navegador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona à coleção que é criada pelo `use` elemento filho do `browserCaps` elemento do arquivo Web. config.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddRuleList">
+      <MemberSignature Language="C#" Value="public virtual void AddRuleList (System.Collections.ArrayList ruleList);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddRuleList(class System.Collections.ArrayList ruleList) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCapabilitiesDefaultProvider.AddRuleList(System.Collections.ArrayList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ruleList" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="ruleList">A cadeia de caracteres de pesquisa que modifica uma definição de navegador.</param>
+        <summary>Adiciona uma cadeia de caracteres de pesquisa que modifica uma definição de navegador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método adiciona à coleção que é criada pelo `filter` elemento filho do `browserCaps` elemento do arquivo Web. config.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheTime">
+      <MemberSignature Language="C#" Value="public TimeSpan CacheTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CacheTime" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpCapabilitiesDefaultProvider.CacheTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o período de tempo em segundos para reter o <see cref="T:System.Web.HttpBrowserCapabilities" /> objeto no cache.</summary>
+        <value>O período de tempo em segundos para reter o <see cref="T:System.Web.HttpBrowserCapabilities" /> objeto no cache.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBrowserCapabilities">
+      <MemberSignature Language="C#" Value="public override System.Web.HttpBrowserCapabilities GetBrowserCapabilities (System.Web.HttpRequest request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Web.HttpBrowserCapabilities GetBrowserCapabilities(class System.Web.HttpRequest request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.HttpCapabilitiesDefaultProvider.GetBrowserCapabilities(System.Web.HttpRequest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.HttpBrowserCapabilities</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Web.HttpRequest" />
+      </Parameters>
+      <Docs>
+        <param name="request">O objeto <see cref="T:System.Web.HttpRequest" />.</param>
+        <summary>Obtém o <see cref="T:System.Web.HttpBrowserCapabilities" /> objeto especificado <see cref="T:System.Web.HttpRequest" /> objeto.</summary>
+        <returns>O <see cref="T:System.Web.HttpBrowserCapabilities" /> de objeto para o <see cref="T:System.Web.HttpRequest" /> objeto que foi passado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResultType">
+      <MemberSignature Language="C#" Value="public Type ResultType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ResultType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpCapabilitiesDefaultProvider.ResultType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo da classe que é usado para armazenar os resultados da análise de <see langword="browserCap" /> elemento do arquivo Web. config.</summary>
+        <value>O tipo da classe que é usado para armazenar os resultados da análise de <see langword="browserCaps" /> elemento do arquivo Web. config.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade corresponde do `result` elemento filho do `browserCaps` elemento do arquivo Web. config.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgentCacheKeyLength">
+      <MemberSignature Language="C#" Value="public int UserAgentCacheKeyLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UserAgentCacheKeyLength" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.HttpCapabilitiesDefaultProvider.UserAgentCacheKeyLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de caracteres da cadeia de agente de usuário a ser usado para armazenamento em cache do <see cref="T:System.Web.HttpBrowserCapabilities" /> objeto.</summary>
+        <value>O número de caracteres da cadeia de agente de usuário fornecido para armazenamento do <see cref="T:System.Web.HttpBrowserCapabilities" /> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

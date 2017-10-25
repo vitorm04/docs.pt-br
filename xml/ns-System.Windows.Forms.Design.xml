@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Forms.Design">
+  <Docs>
+    <summary>O <see cref="N:System.Windows.Forms.Design" /> namespace contém classes que oferecem suporte à configuração de tempo de design e o comportamento de componentes de Windows Forms. Essas classes consistem de designers classes que oferecem suporte para componentes do Windows Forms, um conjunto de serviços de tempo de design; <see langword="UITypeEditor" /> classes para a configuração de certos tipos de propriedades e classes para a importação de controles ActiveX.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

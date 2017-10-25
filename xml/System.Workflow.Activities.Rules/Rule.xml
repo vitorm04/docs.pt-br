@@ -1,0 +1,364 @@
+<Type Name="Rule" FullName="System.Workflow.Activities.Rules.Rule">
+  <TypeSignature Language="C#" Value="public class Rule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit Rule extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.Rules.Rule" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define uma condição com um conjunto associado de ações a serem executadas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Workflow.Activities.Rules.Rule> consiste em uma <xref:System.Workflow.Activities.Rules.RuleCondition> e uma ou ambas as <xref:System.Workflow.Activities.Rules.Rule.ThenActions%2A> ou <xref:System.Workflow.Activities.Rules.Rule.ElseActions%2A> coleções.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como criar um conjunto nomeado <xref:System.Workflow.Activities.Rules.Rule>.  
+  
+```csharp  
+private Rule firstRule = new Rule("firstRule");  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rule ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Rule.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.Rules.Rule" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rule (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Rule.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.Activities.Rules.Rule" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.Rule" /> classe usando o nome do <see cref="T:System.Workflow.Activities.Rules.Rule" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rule (string name, System.Workflow.Activities.Rules.RuleCondition condition, System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt; thenActions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Workflow.Activities.Rules.RuleCondition condition, class System.Collections.Generic.IList`1&lt;class System.Workflow.Activities.Rules.RuleAction&gt; thenActions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Rule.#ctor(System.String,System.Workflow.Activities.Rules.RuleCondition,System.Collections.Generic.IList{System.Workflow.Activities.Rules.RuleAction})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="condition" Type="System.Workflow.Activities.Rules.RuleCondition" />
+        <Parameter Name="thenActions" Type="System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.Activities.Rules.Rule" />.</param>
+        <param name="condition">O <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> para o <see cref="T:System.Workflow.Activities.Rules.Rule" />.</param>
+        <param name="thenActions">Uma coleção de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> objetos para avaliar se a condição for verdadeira.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.Rule" /> classe usando o nome do <see langword="Rule" />, a condição de regra e uma lista de ações, em seguida.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Rule (string name, System.Workflow.Activities.Rules.RuleCondition condition, System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt; thenActions, System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt; elseActions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Workflow.Activities.Rules.RuleCondition condition, class System.Collections.Generic.IList`1&lt;class System.Workflow.Activities.Rules.RuleAction&gt; thenActions, class System.Collections.Generic.IList`1&lt;class System.Workflow.Activities.Rules.RuleAction&gt; elseActions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Rule.#ctor(System.String,System.Workflow.Activities.Rules.RuleCondition,System.Collections.Generic.IList{System.Workflow.Activities.Rules.RuleAction},System.Collections.Generic.IList{System.Workflow.Activities.Rules.RuleAction})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="condition" Type="System.Workflow.Activities.Rules.RuleCondition" />
+        <Parameter Name="thenActions" Type="System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt;" />
+        <Parameter Name="elseActions" Type="System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome do <see cref="T:System.Workflow.Activities.Rules.Rule" />.</param>
+        <param name="condition">O <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> para o <see cref="T:System.Workflow.Activities.Rules.Rule" />.</param>
+        <param name="thenActions">Uma coleção de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> objetos para avaliar se a condição for verdadeira.</param>
+        <param name="elseActions">Uma coleção de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> objetos para avaliar se a condição for falsa.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.Rules.Rule" /> classe usando o nome do <see langword="Rule" />, a condição de regra, uma lista de ações, em seguida e uma lista de ações ELSE.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Active">
+      <MemberSignature Language="C#" Value="public bool Active { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Active" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.Active" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o <see cref="T:System.Workflow.Activities.Rules.Rule" /> devem ser avaliadas.</summary>
+        <value>
+          <see langword="true" />Se a regra deve ser avaliada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando definido como `false`, esta propriedade é semelhante ao comentar a regra. O padrão é `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.Rule Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Workflow.Activities.Rules.Rule Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Rule.Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.Rule</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma cópia profunda da atual <see cref="T:System.Workflow.Activities.Rules.Rule" />.</summary>
+        <returns>Um <see cref="T:System.Workflow.Activities.Rules.Rule" /> que é idêntica a esta instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Condition">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleCondition Condition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.Activities.Rules.RuleCondition Condition" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.Condition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleCondition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> para o <see cref="T:System.Workflow.Activities.Rules.Rule" /> para avaliar.</summary>
+        <value>Um <see cref="T:System.Workflow.Activities.Rules.RuleCondition" /> para o <see cref="T:System.Workflow.Activities.Rules.Rule" /> para avaliar.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma descrição do <see cref="T:System.Workflow.Activities.Rules.Rule" />.</summary>
+        <value>Uma descrição do <see cref="T:System.Workflow.Activities.Rules.Rule" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElseActions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt; ElseActions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Workflow.Activities.Rules.RuleAction&gt; ElseActions" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.ElseActions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> classes para executar no caso de ELSE.</summary>
+        <value>Uma coleção de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> para executar no caso de ELSE.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Rules.Rule.ElseActions%2A>normalmente definido um valor de variável em uma das propriedades da atividade, chama um método de atividade ou chama métodos estáticos em tipos em assemblies referenciados.  
+  
+ O <xref:System.Workflow.Activities.Rules.RuleHaltAction> faz com que o <xref:System.Workflow.Activities.Rules.RuleSet> para interromper a execução e retorna o controle para o método de chamada. Um <xref:System.Workflow.Activities.Rules.RuleStatementAction> modifica uma propriedade ou chama um método. Um <xref:System.Workflow.Activities.Rules.RuleUpdateAction> explicitamente indica que uma regra está atualizando uma variável. Isso faz com que a reavaliação de quaisquer regras afetadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Rule.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto para comparar o objeto atual.</param>
+        <summary>Determina se esta instância de <see cref="T:System.Workflow.Activities.Rules.Rule" /> e o objeto passado como o parâmetro têm o mesmo valor.</summary>
+        <returns>
+          <see langword="true" />Se o objeto atual e <paramref name="obj" /> forem iguais; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.Rules.Rule.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>O código hash para essa instância.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de <see cref="T:System.Workflow.Activities.Rules.Rule" />.</summary>
+        <value>O nome do <see cref="T:System.Workflow.Activities.Rules.Rule" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public int Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Priority" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.Priority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica a ordem na qual um <see cref="T:System.Workflow.Activities.Rules.Rule" /> deve ser executado.</summary>
+        <value>Um valor que indica a ordem na qual um <see cref="T:System.Workflow.Activities.Rules.Rule" /> deve ser executado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Rules.Rule>as classes que têm um valor de prioridade mais alto são executadas antes de prioridade mais baixa <xref:System.Workflow.Activities.Rules.Rule> classes. As regras que têm a mesma prioridade são executadas na ordem alfabética de suas propriedades name.  
+  
+ O <xref:System.Workflow.Activities.Rules.Rule.Priority%2A> valor pode ser positivo ou negativo. O valor padrão para qualquer <xref:System.Workflow.Activities.Rules.Rule> é 0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReevaluationBehavior">
+      <MemberSignature Language="C#" Value="public System.Workflow.Activities.Rules.RuleReevaluationBehavior ReevaluationBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.Activities.Rules.RuleReevaluationBehavior ReevaluationBehavior" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.ReevaluationBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.Activities.Rules.RuleReevaluationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se um <see cref="T:System.Workflow.Activities.Rules.Rule" /> pode ser reavaliado.</summary>
+        <value>O <see cref="T:System.Workflow.Activities.Rules.RuleReevaluationBehavior" /> que indica se o <see cref="T:System.Workflow.Activities.Rules.Rule" /> pode ser reavaliado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThenActions">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt; ThenActions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class System.Workflow.Activities.Rules.RuleAction&gt; ThenActions" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.Rules.Rule.ThenActions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Content)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;System.Workflow.Activities.Rules.RuleAction&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> classes para executar no caso de, em seguida.</summary>
+        <value>Uma coleção de <see cref="T:System.Workflow.Activities.Rules.RuleAction" /> classes para executar no caso de, em seguida.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Workflow.Activities.Rules.Rule.ThenActions%2A>normalmente define um valor de variável em uma das propriedades da atividade, chamar um método de atividade ou chamar métodos estáticos em tipos em assemblies referenciados.  
+  
+ O <xref:System.Workflow.Activities.Rules.RuleHaltAction> faz com que o <xref:System.Workflow.Activities.Rules.RuleSet> para interromper a execução e retorna o controle para o método de chamada. Um <xref:System.Workflow.Activities.Rules.RuleUpdateAction> explicitamente indica que uma regra está atualizando uma variável. Isso faz com que a reavaliação de quaisquer regras afetadas.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

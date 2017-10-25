@@ -1,0 +1,97 @@
+<Type Name="FindRequestContext" FullName="System.ServiceModel.Discovery.FindRequestContext">
+  <TypeSignature Language="C#" Value="public class FindRequestContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FindRequestContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Discovery.FindRequestContext" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma solicitação de localização enviada por um cliente.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FindRequestContext (System.ServiceModel.Discovery.FindCriteria criteria);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Discovery.FindCriteria criteria) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindRequestContext.#ctor(System.ServiceModel.Discovery.FindCriteria)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="criteria" Type="System.ServiceModel.Discovery.FindCriteria" />
+      </Parameters>
+      <Docs>
+        <param name="criteria">Os critérios de localização.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ServiceModel.Discovery.FindRequestContext" /> usando o <see cref="T:System.ServiceModel.Discovery.FindCriteria" /> especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMatchingEndpoint">
+      <MemberSignature Language="C#" Value="public void AddMatchingEndpoint (System.ServiceModel.Discovery.EndpointDiscoveryMetadata matchingEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMatchingEndpoint(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata matchingEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindRequestContext.AddMatchingEndpoint(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matchingEndpoint" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="matchingEndpoint">Os metadados de descoberta do ponto de extremidade para enviar ao cliente.</param>
+        <summary>Permite que o serviço de descoberta enviar os resultados ao cliente que são recebidas.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Criteria">
+      <MemberSignature Language="C#" Value="public System.ServiceModel.Discovery.FindCriteria Criteria { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ServiceModel.Discovery.FindCriteria Criteria" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Discovery.FindRequestContext.Criteria" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.Discovery.FindCriteria</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ServiceModel.Discovery.FindCriteria" /> associados a <see cref="T:System.ServiceModel.Discovery.FindRequestContext" /> enviado pelo cliente.</summary>
+        <value>Os critérios de localização enviados pelo cliente.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAddMatchingEndpoint">
+      <MemberSignature Language="C#" Value="protected virtual void OnAddMatchingEndpoint (System.ServiceModel.Discovery.EndpointDiscoveryMetadata matchingEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnAddMatchingEndpoint(class System.ServiceModel.Discovery.EndpointDiscoveryMetadata matchingEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Discovery.FindRequestContext.OnAddMatchingEndpoint(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matchingEndpoint" Type="System.ServiceModel.Discovery.EndpointDiscoveryMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="matchingEndpoint">Os metadados de descoberta do ponto de extremidade para enviar ao cliente.</param>
+        <summary>Chamado depois que o usuário adiciona um ponto de extremidade para o <see cref="T:System.ServiceModel.Discovery.FindRequestContext" /> chamando <see cref="M:System.ServiceModel.Discovery.FindRequestContext.AddMatchingEndpoint(System.ServiceModel.Discovery.EndpointDiscoveryMetadata)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

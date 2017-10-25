@@ -1,0 +1,122 @@
+<Type Name="StylusPlugInCollection" FullName="System.Windows.Input.StylusPlugIns.StylusPlugInCollection">
+  <TypeSignature Language="C#" Value="public sealed class StylusPlugInCollection : System.Collections.ObjectModel.Collection&lt;System.Windows.Input.StylusPlugIns.StylusPlugIn&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit StylusPlugInCollection extends System.Collections.ObjectModel.Collection`1&lt;class System.Windows.Input.StylusPlugIns.StylusPlugIn&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.StylusPlugIns.StylusPlugInCollection" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.ObjectModel.Collection&lt;System.Windows.Input.StylusPlugIns.StylusPlugIn&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="!0">System.Windows.Input.StylusPlugIns.StylusPlugIn</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coleção de objetos <see cref="T:System.Windows.Input.StylusPlugIns.StylusPlugIn" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Windows.UIElement> tem um <xref:System.Windows.UIElement.StylusPlugIns%2A> propriedade que é um <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Adicionar um <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> para o elemento <xref:System.Windows.UIElement.StylusPlugIns%2A> propriedade para manipular tinta no thread em tempo real. A ordem dos <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objetos no <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> afeta a aparência da tinta quando ele for renderizado. Suponha que você tenha um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> chamado `dynamicRenderer` e um personalizado <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> chamado `translatePlugin` que desloca a tinta da caneta eletrônica. Se `translatePlugin` é o primeiro <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> no <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, e `dynamicRenderer` é o segundo, a tinta que "flui" será deslocada à medida que o usuário move a caneta. Se `dynamicRenderer` primeiro, e `translatePlugin` é o segundo, a tinta parecerão "fluxo" embaixo da caneta e quando o usuário retira a caneta tinta será movido.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como adicionar um <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> a um controle personalizado. Para criar um controle que coleta tinta, consulte [criando um controle de entrada de tinta](~/docs/framework/wpf/advanced/creating-an-ink-input-control.md).  
+  
+ [!code-csharp[StylusPluginSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/StylusPluginSamples/CSharp/StylusControl.cs#3)]
+ [!code-vb[StylusPluginSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylusPluginSamples/VisualBasic/StylusControl.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ClearItems">
+      <MemberSignature Language="C#" Value="protected override void ClearItems ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClearItems() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.StylusPlugInCollection.ClearItems" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsertItem">
+      <MemberSignature Language="C#" Value="protected override void InsertItem (int index, System.Windows.Input.StylusPlugIns.StylusPlugIn plugIn);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InsertItem(int32 index, class System.Windows.Input.StylusPlugIns.StylusPlugIn plugIn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.StylusPlugInCollection.InsertItem(System.Int32,System.Windows.Input.StylusPlugIns.StylusPlugIn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="plugIn" Type="System.Windows.Input.StylusPlugIns.StylusPlugIn" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="plugIn">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveItem">
+      <MemberSignature Language="C#" Value="protected override void RemoveItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.StylusPlugInCollection.RemoveItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="protected override void SetItem (int index, System.Windows.Input.StylusPlugIns.StylusPlugIn plugIn);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetItem(int32 index, class System.Windows.Input.StylusPlugIns.StylusPlugIn plugIn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Input.StylusPlugIns.StylusPlugInCollection.SetItem(System.Int32,System.Windows.Input.StylusPlugIns.StylusPlugIn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="plugIn" Type="System.Windows.Input.StylusPlugIns.StylusPlugIn" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="plugIn">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

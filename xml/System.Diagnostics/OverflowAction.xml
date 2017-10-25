@@ -1,0 +1,93 @@
+<Type Name="OverflowAction" FullName="System.Diagnostics.OverflowAction">
+  <TypeSignature Language="C#" Value="public enum OverflowAction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OverflowAction extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.OverflowAction" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como lidar com as entradas em um log de eventos que atingiu seu tamanho máximo do arquivo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada log de eventos tem um limite de tamanho máximo e uma definição configurável que fornece a regra para escrever novas entradas em que o limite. Quando o log de eventos atingiu seu tamanho máximo, você pode especificar uma das seguintes regras:  
+  
+-   As novas entradas serão descartadas.  
+  
+-   As novas entradas substituirá as entradas mais antigas.  
+  
+-   Novas entradas ou serão descartadas ou substituir as entradas existentes, dependendo do modo a idade das entradas existentes.  
+  
+ Use o <xref:System.Diagnostics.EventLog.ModifyOverflowPolicy%2A> método para definir o comportamento de estouro de um <xref:System.Diagnostics.EventLog>. Verificar o comportamento atual configurado de um <xref:System.Diagnostics.EventLog> por meio de seu <xref:System.Diagnostics.EventLog.OverflowAction%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DoNotOverwrite">
+      <MemberSignature Language="C#" Value="DoNotOverwrite" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.OverflowAction DoNotOverwrite = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.OverflowAction.DoNotOverwrite" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.OverflowAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que as entradas existentes serão retidas quando o log de eventos está cheio e novas entradas são descartadas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteAsNeeded">
+      <MemberSignature Language="C#" Value="OverwriteAsNeeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.OverflowAction OverwriteAsNeeded = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.OverflowAction.OverwriteAsNeeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.OverflowAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que cada nova entrada substitui a entrada mais antiga, quando o log de eventos está cheio.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OverwriteOlder">
+      <MemberSignature Language="C#" Value="OverwriteOlder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.OverflowAction OverwriteOlder = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.OverflowAction.OverwriteOlder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.OverflowAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que os novos eventos substituem eventos mais antigos que o especificado pelo <see cref="P:System.Diagnostics.EventLog.MinimumRetentionDays" /> valor da propriedade quando o log de eventos está cheio. Novos eventos serão descartados se o log de eventos está cheio e não existem eventos mais antigos que o especificado pelo <see cref="P:System.Diagnostics.EventLog.MinimumRetentionDays" /> o valor da propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir enumera os logs de evento definidos no computador local e exibe os detalhes de configuração para cada log de eventos.  
+  
+ [!code-cpp[EventLogProperties#2](~/samples/snippets/cpp/VS_Snippets_CLR/EventLogProperties/CPP/source.cpp#2)]
+ [!code-csharp[EventLogProperties#2](~/samples/snippets/csharp/VS_Snippets_CLR/EventLogProperties/CS/source.cs#2)]
+ [!code-vb[EventLogProperties#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/EventLogProperties/VB/source.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

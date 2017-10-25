@@ -1,0 +1,53 @@
+<Type Name="SearchOption" FullName="System.DirectoryServices.Protocols.SearchOption">
+  <TypeSignature Language="C#" Value="public enum SearchOption" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SearchOption extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.Protocols.SearchOption" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.Protocols.SearchOption" /> enumeração Especifica as opções de pesquisa que definem o comportamento de pesquisa.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DomainScope">
+      <MemberSignature Language="C#" Value="DomainScope" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.SearchOption DomainScope = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.SearchOption.DomainScope" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SearchOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Impede que as referências de ser gerada quando os resultados da pesquisa são retornados. O valor é igual a 1.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PhantomRoot">
+      <MemberSignature Language="C#" Value="PhantomRoot" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.Protocols.SearchOption PhantomRoot = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.Protocols.SearchOption.PhantomRoot" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.Protocols.SearchOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Instrui o servidor para pesquisar todos os contextos de nomeação que são subordinados a base de pesquisa. O valor é igual a 2.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

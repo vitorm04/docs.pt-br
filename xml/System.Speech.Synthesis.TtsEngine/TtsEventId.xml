@@ -1,0 +1,242 @@
+<Type Name="TtsEventId" FullName="System.Speech.Synthesis.TtsEngine.TtsEventId">
+  <TypeSignature Language="C#" Value="public enum TtsEventId" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TtsEventId extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.TtsEngine.TtsEventId" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Enumera os tipos de eventos de síntese de fala.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Mecanismos de síntese de fala personalizado definem os tipos de eventos enviados para a infraestrutura da plataforma de fala sintetizador com o <xref:System.Speech.Synthesis.TtsEngine.TtsEventId>.  
+  
+ Especificação é efetuada, definindo a <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo.EventId%2A> propriedade de <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo> instâncias passadas para o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.AddEvents%2A> membro do classe que implementa o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> interface passada para o <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A> método na implementação do mecanismo de fala personalizado <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>.  
+  
+ A infraestrutura da plataforma de fala indica o tipo de eventos que trata-se no momento por meio de <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> propriedade o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite> passado para a implementação de fala.  
+  
+ O valor de <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> é um bitmask, onde os membros de <xref:System.Speech.Synthesis.TtsEngine.TtsEventId> definem o local do bit correspondente ao tipo de evento. Por exemplo, WordBoundary tem um valor de cinco (5), que significa que o quinto bit no valor retornado por <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> indica se o site oferece suporte ao tipo de evento.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir faz parte de uma implementação de síntese de fala personalizado herdando <xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml>e use-o de <xref:System.Speech.Synthesis.TtsEngine.TextFragment>, <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo>, <xref:System.Speech.Synthesis.TtsEngine.FragmentState>, e<xref:System.Speech.Synthesis.TtsEngine.TtsEventId>  
+  
+ A implementação de<xref:System.Speech.Synthesis.TtsEngine.TtsEngineSsml.Speak%2A>  
+  
+1.  Recebe uma matriz de <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instâncias e cria uma nova matriz de <xref:System.Speech.Synthesis.TtsEngine.TextFragment> instâncias a serem passados para o `Speak` método em um mecanismo de síntese subjacente.  
+  
+2.  Se o <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction> por encontrado valor de enumeração do <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> propriedade o <xref:System.Speech.Synthesis.TtsEngine.FragmentState.Action%2A> retornado pelo <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> propriedade de cada <xref:System.Speech.Synthesis.TtsEngine.TextFragment.State%2A> instância é <xref:System.Speech.Synthesis.TtsEngine.TtsEngineAction>, a implementação  
+  
+    -   Converte Americanism para Britishisms no texto a ser falado.  
+  
+    -   Se o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> propriedade o <xref:System.Speech.Synthesis.TtsEngine.ITtsEngineSite.EventInterest%2A> interfaces fornecidas para a implementação de suportam para o tipo de evento WordBoundary, um <xref:System.Speech.Synthesis.TtsEngine.SpeechEventInfo> instância é usada para criar um evento para a unidade de um medidor de progresso do sintetizador é criado.  
+  
+3.  Um mecanismo de processamento de fala é chamado com a modificação <xref:System.Speech.Synthesis.TtsEngine.TextFragment> matriz.  
+  
+```  
+private const int WordBoundaryFlag = 1 << (int)TtsEventId.WordBoundary;  
+private readonly char[] spaces = new char[] { ' ', '\t', '\r', '\n' };  
+internal struct UsVsUk  
+{  
+  internal string UK;  
+  internal string US;  
+}  
+  
+override public void Speak (TextFragment [] frags, IntPtr wfx, ITtsEngineSite site)  
+{  
+  TextFragment [] newFrags=new TextFragment[frags.Length];  
+  
+  for (int i=0;i<frags.Length;i++){  
+    newFrags[i].State=frags[i].State;  
+    //truncate  
+    newFrags[i].TextToSpeak = frags[i].TextToSpeak.Substring(frags[i].TextOffset,  
+                               frags[i].TextLength);  
+    newFrags[i].TextLength = newFrags[i].TextToSpeak.Length;  
+    newFrags[i].TextOffset = 0;  
+    if (newFrags[i].State.Action == TtsEngineAction.Speak) {  
+      //Us to UK conversion  
+      foreach (UsVsUk term in TransList) {  
+      newFrags[i].TextToSpeak.Replace(term.US, term.UK);  
+      }  
+      //Generate progress meter events if supported  
+      if ((site.EventInterest & WordBoundaryFlag) != 0) {  
+      string[] subs = newFrags[i].TextToSpeak.Split(spaces);  
+  
+      foreach (string s in subs) {  
+        int offset = newFrags[i].TextOffset;  
+        SpeechEventInfo spEvent = new SpeechEventInfo((Int16)TtsEventId.WordBoundary,   
+                (Int16)EventParameterType.Undefined,   
+                 s.Length, new IntPtr(offset));  
+        offset += s.Length;  
+        if (s.Trim().Length > 0) {  
+          SpeechEventInfo[] events = new SpeechEventInfo[1];  
+          events[0] = spEvent;  
+          site.AddEvents(events, 1);  
+        }  
+      }  
+      }  
+    }  
+  }  
+  
+  _baseSynthesize.Speak(newFrags, wfx, site);  
+  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AudioLevel">
+      <MemberSignature Language="C#" Value="AudioLevel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId AudioLevel = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.AudioLevel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar mecanismo conclui uma alteração do nível de áudio enquanto fala.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Bookmark">
+      <MemberSignature Language="C#" Value="Bookmark" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId Bookmark = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.Bookmark" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar mecanismo encontra um indicador enquanto fala.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInputStream">
+      <MemberSignature Language="C#" Value="EndInputStream" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId EndInputStream = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.EndInputStream" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar mecanismo encontra o término de seu fluxo de entrada enquanto fala.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Phoneme">
+      <MemberSignature Language="C#" Value="Phoneme" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId Phoneme = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.Phoneme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar o mecanismo conclui um phoneme enquanto fala.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SentenceBoundary">
+      <MemberSignature Language="C#" Value="SentenceBoundary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId SentenceBoundary = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.SentenceBoundary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar o mecanismo conclui uma frase enquanto fala.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="StartInputStream">
+      <MemberSignature Language="C#" Value="StartInputStream" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId StartInputStream = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.StartInputStream" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar mecanismo um começa falando um fluxo.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Viseme">
+      <MemberSignature Language="C#" Value="Viseme" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId Viseme = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.Viseme" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar o mecanismo conclui um viseme enquanto fala.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VoiceChange">
+      <MemberSignature Language="C#" Value="VoiceChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId VoiceChange = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.VoiceChange" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar mecanismo encontra uma alteração de voz enquanto fala.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WordBoundary">
+      <MemberSignature Language="C#" Value="WordBoundary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Speech.Synthesis.TtsEngine.TtsEventId WordBoundary = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Speech.Synthesis.TtsEngine.TtsEventId.WordBoundary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Speech.Synthesis.TtsEngine.TtsEventId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica os eventos gerados quando uma fala sintetizar o mecanismo conclui uma palavra enquanto fala.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

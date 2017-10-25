@@ -1,0 +1,421 @@
+<Type Name="RecognizerInfo" FullName="System.Speech.Recognition.RecognizerInfo">
+  <TypeSignature Language="C#" Value="public class RecognizerInfo : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RecognizerInfo extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Recognition.RecognizerInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa informações sobre uma instância <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode obter informações de identificação para um mecanismo de reconhecimento inicializado usando <xref:System.Speech.Recognition.SpeechRecognizer.RecognizerInfo%2A?displayProperty=nameWithType> para um <xref:System.Speech.Recognition.SpeechRecognizer> objeto ou <xref:System.Speech.Recognition.SpeechRecognitionEngine.RecognizerInfo%2A?displayProperty=nameWithType> para um <xref:System.Speech.Recognition.SpeechRecognitionEngine> objeto.  
+  
+ As informações retornadas em instâncias do <xref:System.Speech.Recognition.RecognizerInfo> obtido um <xref:System.Speech.Recognition.SpeechRecognizer> é determinado pelas configurações no **propriedades de fala** membro do **painel de controle**.  
+  
+ Você pode usar instâncias de <xref:System.Speech.Recognition.RecognizerInfo> para construir uma configuração específica do <xref:System.Speech.Recognition.SpeechRecognitionEngine> usando o <xref:System.Speech.Recognition.SpeechRecognitionEngine.%23ctor%28System.Speech.Recognition.RecognizerInfo%29> construtor.  
+  
+ O método estático <xref:System.Speech.Recognition.SpeechRecognitionEngine.InstalledRecognizers%2A> retorna uma lista de todas as <xref:System.Speech.Recognition.SpeechRecognitionEngine> configurações como <xref:System.Speech.Recognition.RecognizerInfo> instâncias.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir valida um determinado <xref:System.Globalization.CultureInfo> e identificador de cadeia de caracteres em relação a permitido <xref:System.Speech.Recognition.SpeechRecognitionEngine> configurações, expressadas como uma lista de <xref:System.Speech.Recognition.RecognizerInfo> objetos.  
+  
+ Se o <xref:System.Globalization.CultureInfo> e cadeia de caracteres de identificador válido, o exemplo cria uma nova instância da <xref:System.Speech.Recognition.SpeechRecognitionEngine> usando o <xref:System.Speech.Recognition.RecognizerInfo> instância como um argumento.  
+  
+```csharp  
+  
+private SpeechRecognitionEngine SelectRecognizer(CultureInfo requiredCulture, string requiredId)   
+{  
+  // Select based on a specific recognizer configuration  
+  SpeechRecognitionEngine speechRecognitionEngine=null;  
+  foreach (RecognizerInfo config in SpeechRecognitionEngine.InstalledRecognizers())   
+  {  
+    if (config.Culture.Equals(requiredCulture) && config.Id== requiredId)   
+    {  
+      speechRecognitionEngine = new SpeechRecognitionEngine(config);  
+      break;  
+    }  
+  }  
+  return speechRecognitionEngine;  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdditionalInfo">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; AdditionalInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; AdditionalInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizerInfo.AdditionalInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém informações adicionais um <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</summary>
+        <value>Retorna uma instância de <see cref="T:System.Collections.Generic.IDictionary`2" /> que contém informações sobre a configuração de um <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa um clique do botão que exibe todas as informações em um <xref:System.Speech.Recognition.RecognizerInfo> do objeto em um <xref:System.Windows.Forms.MessageBox>.  
+  
+ Os pares de chave/valor contidos no <xref:System.Collections.Generic.IDictionary%602> instância retornada por <xref:System.Speech.Recognition.RecognizerInfo.AdditionalInfo%2A> são concatenados em uma tabela de texto.  
+  
+```csharp  
+private void recognizerInfoButton_Click(object sender, EventArgs e)   
+{  
+  RecognizerInfo info = _recognizer.RecognizerInfo;  
+  string AudioFormats = "";  
+  foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)   
+  {  
+    AudioFormats += String.Format("       {0}\n", fmt.EncodingFormat.ToString());  
+  }  
+  string AdditionalInfo = "";  
+  foreach (string key in info.AdditionalInfo.Keys)   
+  {  
+    AdditionalInfo += String.Format("      {0}: {1}\n", key, info.AdditionalInfo[key]);  
+  }  
+  MessageBox.Show(String.Format(  
+                     "Name:                 {0 } \n" +  
+                     "Description:          {1} \n" +  
+                     "SupportedAudioFormats:\n" +  
+                     " {2} " +  
+                     "Culture:              {3} \n" +  
+                     "AdditionalInfo:       \n" +  
+                     " {4}\n",  
+                     info.Name.ToString(),  
+                     info.Description.ToString(),  
+                     AudioFormats,  
+                     info.Culture.ToString(),  
+                     AdditionalInfo));  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizerInfo.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a cultura com suporte por um <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</summary>
+        <value>Retorna informações sobre a cultura com suporte por um determinado <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Globalization.CultureInfo> objeto pode incluir o nome da cultura, o idioma associado, o país/região, o calendário usado e como formatar datas e cadeias de caracteres de classificação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa um clique do botão que exibe todas as informações em um <xref:System.Speech.Recognition.RecognizerInfo> instância. O exemplo usa o <xref:System.Speech.Recognition.RecognizerInfo.Culture%2A> propriedade para obter a identificação de cadeia de caracteres para o <xref:System.Globalization.CultureInfo> usado pela configuração do mecanismo de reconhecimento.  
+  
+```csharp  
+private void recognizerInfoButton_Click(object sender, EventArgs e)   
+{  
+  RecognizerInfo info = _recognizer.RecognizerInfo;  
+  string AudioFormats = "";  
+  foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)   
+  {  
+    AudioFormats += String.Format("       {0}\n", fmt.EncodingFormat.ToString());  
+  }  
+  string AdditionalInfo = "";  
+  foreach (string key in info.AdditionalInfo.Keys)   
+  {  
+    AdditionalInfo += String.Format("      {0}: {1}\n", key, info.AdditionalInfo[key]);  
+  }  
+  MessageBox.Show(String.Format(  
+                     "Name:                 {0 }\n" +  
+                     "Description:          {1} \n" +  
+                     "SupportedAudioFormats:\n" +  
+                     "{2} " +  
+                     "Culture:              {3} \n" +  
+                     "AdditionalInfo:       \n" +  
+                     " {4}\n",  
+                     info.Name.ToString(),  
+                     info.Description.ToString(),  
+                     AudioFormats,  
+                     info.Culture.ToString(),  
+                     AdditionalInfo));  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizerInfo.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição de um <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</summary>
+        <value>Retorna um <see langword="string" /> que descreve a configuração para um determinado <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa um clique do botão que exibe todas as informações em um <xref:System.Speech.Recognition.RecognizerInfo> instância. O exemplo usa o <xref:System.Speech.Recognition.RecognizerInfo.Description%2A> propriedade para obter a descrição de uma configuração de mecanismo de reconhecimento de fala e, em seguida, exibe-o em um <xref:System.Windows.Forms.MessageBox>.  
+  
+```csharp  
+private void recognizerInfoButton_Click(object sender, EventArgs e)   
+{  
+  RecognizerInfo info = _recognizer.RecognizerInfo;  
+  string AudioFormats = "";  
+  foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)   
+  {  
+    AudioFormats += String.Format("       {0}\n", fmt.EncodingFormat.ToString());  
+  }  
+  string AdditionalInfo = "";  
+  foreach (string key in info.AdditionalInfo.Keys)   
+  {  
+    AdditionalInfo += String.Format("      {0}: {1}\n", key, info.AdditionalInfo[key]);  
+  }  
+  MessageBox.Show(String.Format(  
+                     "Name:                 {0 }\n" +  
+                     "Description:          {1} \n" +  
+                     "SupportedAudioFormats:\n" +  
+                     "{2} " +  
+                     "Culture:              {3} \n" +  
+                     "AdditionalInfo:       \n" +  
+                     " {4}\n",  
+                     info.Name.ToString(),  
+                     info.Description.ToString(),  
+                     AudioFormats,  
+                     info.Culture.ToString(),  
+                     AdditionalInfo));  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Recognition.RecognizerInfo.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Descarta o <c>RecognizerInfo</c> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizerInfo.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de um <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</summary>
+        <value>Retorna o identificador para um determinado <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O identificador retornado pelo <xref:System.Speech.Recognition.RecognizerInfo.Id%2A> propriedade é o mesmo que o nome do token do mecanismo de reconhecimento no registro do Windows.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir implementa um clique do botão que exibe todas as informações em um <xref:System.Speech.Recognition.RecognizerInfo> instância. O exemplo usa o <xref:System.Speech.Recognition.RecognizerInfo.Id%2A> propriedade para obter a cadeia de caracteres de identificador de uma configuração do mecanismo de reconhecimento e, em seguida, exibe-o em um <xref:System.Windows.Forms.MessageBox>.  
+  
+```  
+private void recognizerInfoButton_Click(object sender, EventArgs e)   
+{  
+  RecognizerInfo info = _recognizer.RecognizerInfo;  
+  string AudioFormats = "";  
+  foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)   
+  {  
+    AudioFormats += String.Format("       {0}\n",  fmt.EncodingFormat.ToString());  
+  }  
+  string AdditionalInfo = "";  
+  foreach (string key in info.AdditionalInfo.Keys)   
+  {  
+    AdditionalInfo += String.Format("      {0}: {1}\n", key, info.AdditionalInfo[key]);  
+  }  
+  MessageBox.Show(String.Format(  
+                           "Name:                 {0 }\n" +  
+                           "Description:          {1} \n" +  
+                           "SupportedAudioFormats:\n" +  
+                           "{2} " +  
+                           "Culture:              {3} \n" +  
+                           "AdditionalInfo:       \n" +  
+                           " {4}\n",  
+                           info.Name.ToString(),  
+                           info.Description.ToString(),  
+                           AudioFormats,  
+                           info.Culture.ToString(),  
+                           AdditionalInfo));  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizerInfo.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome amigável de um <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</summary>
+        <value>Retorna o nome amigável para um determinado <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa um clique do botão que exibe todas as informações em um <xref:System.Speech.Recognition.RecognizerInfo> instância. O exemplo usa o <xref:System.Speech.Recognition.RecognizerInfo.Name%2A> propriedade para obter o nome amigável de uma configuração do mecanismo de reconhecimento e, em seguida, exibe-o em um <xref:System.Windows.Forms.MessageBox>.  
+  
+```  
+private void recognizerInfoButton_Click(object sender, EventArgs e)   
+{  
+  RecognizerInfo info = _recognizer.RecognizerInfo;  
+  string AudioFormats = "";  
+  foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)   
+  {  
+    AudioFormats += String.Format("       {0}\n", fmt.EncodingFormat.ToString());  
+  }  
+  string AdditionalInfo = "";  
+  foreach (string key in info.AdditionalInfo.Keys)   
+  {  
+    AdditionalInfo += String.Format("      {0}: {1}\n", key, info.AdditionalInfo[key]);  
+  }  
+  MessageBox.Show(String.Format(  
+                           "Name:                 {0 }\n" +  
+                           "Description:          {1} \n" +  
+                           "SupportedAudioFormats:\n" +  
+                           "{2} " +  
+                           "Culture:              {3} \n" +  
+                           "AdditionalInfo:       \n" +  
+                           " {4}\n",  
+                           info.Name.ToString(),  
+                           info.Description.ToString(),  
+                           AudioFormats,  
+                           info.Culture.ToString(),  
+                           AdditionalInfo));  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedAudioFormats">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.AudioFormat.SpeechAudioFormatInfo&gt; SupportedAudioFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Speech.AudioFormat.SpeechAudioFormatInfo&gt; SupportedAudioFormats" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Recognition.RecognizerInfo.SupportedAudioFormats" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Speech.AudioFormat.SpeechAudioFormatInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os áudio formatos suportados por um <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</summary>
+        <value>Retorna uma lista de formatos de áudio com suporte por um determinado <see cref="T:System.Speech.Recognition.SpeechRecognizer" /> ou <see cref="T:System.Speech.Recognition.SpeechRecognitionEngine" /> instância.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir implementa um clique do botão que exibe todas as informações em um <xref:System.Speech.Recognition.RecognizerInfo> instância. O exemplo usa o <xref:System.Speech.Recognition.RecognizerInfo.SupportedAudioFormats%2A> propriedade para obter os formatos de codificação com suporte por uma configuração do mecanismo de reconhecimento e, em seguida, exibe-o em um <xref:System.Windows.Forms.MessageBox>.  
+  
+```  
+private void recognizerInfoButton_Click(object sender, EventArgs e)   
+{  
+  RecognizerInfo info = _recognizer.RecognizerInfo;  
+  string AudioFormats = "";  
+  foreach (SpeechAudioFormatInfo fmt in info.SupportedAudioFormats)   
+  {  
+    AudioFormats += String.Format("       {0}\n", fmt.EncodingFormat.ToString());  
+  }  
+  string AdditionalInfo = "";  
+  foreach (string key in info.AdditionalInfo.Keys)   
+  {  
+    AdditionalInfo += String.Format("      {0}: {1}\n", key, info.AdditionalInfo[key]);  
+  }  
+  MessageBox.Show(String.Format(  
+                           "Name:                 {0 }\n" +  
+                           "Description:          {1} \n" +  
+                           "SupportedAudioFormats:\n" +  
+                           "{2} " +  
+                           "Culture:              {3} \n" +  
+                           "AdditionalInfo:       \n" +  
+                           " {4}\n",  
+                           info.Name.ToString(),  
+                           info.Description.ToString(),  
+                           AudioFormats,  
+                           info.Culture.ToString(),  
+                           AdditionalInfo));  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

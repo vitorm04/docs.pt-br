@@ -1,0 +1,558 @@
+<Type Name="CommonObjectSecurity" FullName="System.Security.AccessControl.CommonObjectSecurity">
+  <TypeSignature Language="C#" Value="public abstract class CommonObjectSecurity : System.Security.AccessControl.ObjectSecurity" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CommonObjectSecurity extends System.Security.AccessControl.ObjectSecurity" />
+  <TypeSignature Language="DocId" Value="T:System.Security.AccessControl.CommonObjectSecurity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.AccessControl</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Security.AccessControl.ObjectSecurity</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Controla o acesso a objetos sem a manipulação direta de listas de controle de acesso (ACLs). Essa é a classe base abstrata para a classe <see cref="T:System.Security.AccessControl.NativeObjectSecurity" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CommonObjectSecurity (bool isContainer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(bool isContainer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="isContainer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="isContainer">
+          <see langword="true" />Se o novo objeto é um objeto de contêiner.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.AccessControl.CommonObjectSecurity" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAccessRule">
+      <MemberSignature Language="C#" Value="protected void AddAccessRule (System.Security.AccessControl.AccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddAccessRule(class System.Security.AccessControl.AccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.AddAccessRule(System.Security.AccessControl.AccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a adicionar.</param>
+        <summary>Aplica a regra de acesso especificada à DACL (Lista de Controle de Acesso Discricionário) associada a esse objeto <see cref="T:System.Security.AccessControl.CommonObjectSecurity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionar uma regra de acesso pode causar regras de acesso existentes na DACL a serem mesclados.  
+  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuditRule">
+      <MemberSignature Language="C#" Value="protected void AddAuditRule (System.Security.AccessControl.AuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AddAuditRule(class System.Security.AccessControl.AuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.AddAuditRule(System.Security.AccessControl.AuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para adicionar.</param>
+        <summary>Adiciona a regra de auditoria para o acesso controle lista SACL (sistema) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Adicionar uma regra de auditoria pode gerar regras de acesso existentes nos SACL a serem mesclados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccessRules">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.AuthorizationRuleCollection GetAccessRules (bool includeExplicit, bool includeInherited, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.AuthorizationRuleCollection GetAccessRules(bool includeExplicit, bool includeInherited, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.GetAccessRules(System.Boolean,System.Boolean,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuthorizationRuleCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeExplicit" Type="System.Boolean" />
+        <Parameter Name="includeInherited" Type="System.Boolean" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="includeExplicit">
+          <see langword="true" />para incluir o acesso a regras definidas explicitamente para o objeto.</param>
+        <param name="includeInherited">
+          <see langword="true" />para incluir regras de acesso herdado.</param>
+        <param name="targetType">Especifica se o identificador de segurança para o qual recuperar regras de acesso é do tipo T:System.Security.Principal.SecurityIdentifier ou T:System.Security.Principal.NTAccount. O valor desse parâmetro deve ser um tipo que possa ser convertido para o <see cref="T:System.Security.Principal.SecurityIdentifier" /> tipo.</param>
+        <summary>Obtém uma coleção das regras de acesso associadas ao identificador de segurança especificado.</summary>
+        <returns>A coleção de regras de acesso associadas ao objeto <see cref="T:System.Security.Principal.SecurityIdentifier" /> especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAuditRules">
+      <MemberSignature Language="C#" Value="public System.Security.AccessControl.AuthorizationRuleCollection GetAuditRules (bool includeExplicit, bool includeInherited, Type targetType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Security.AccessControl.AuthorizationRuleCollection GetAuditRules(bool includeExplicit, bool includeInherited, class System.Type targetType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.GetAuditRules(System.Boolean,System.Boolean,System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.AccessControl.AuthorizationRuleCollection</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="includeExplicit" Type="System.Boolean" />
+        <Parameter Name="includeInherited" Type="System.Boolean" />
+        <Parameter Name="targetType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="includeExplicit">
+          <see langword="true" />para incluir a auditoria regras explicitamente definida para o objeto.</param>
+        <param name="includeInherited">
+          <see langword="true" />para incluir regras de auditoria herdadas.</param>
+        <param name="targetType">O identificador de segurança para o qual recuperar regras de auditoria. Isso deve ser um objeto que pode ser convertido como um <see cref="T:System.Security.Principal.SecurityIdentifier" /> objeto.</param>
+        <summary>Obtém uma coleção das regras de auditoria associadas ao identificador de segurança especificado.</summary>
+        <returns>A coleção de regras de auditoria associadas ao objeto <see cref="T:System.Security.Principal.SecurityIdentifier" /> especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifyAccess">
+      <MemberSignature Language="C#" Value="protected override bool ModifyAccess (System.Security.AccessControl.AccessControlModification modification, System.Security.AccessControl.AccessRule rule, out bool modified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ModifyAccess(valuetype System.Security.AccessControl.AccessControlModification modification, class System.Security.AccessControl.AccessRule rule, [out] bool&amp; modified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.ModifyAccess(System.Security.AccessControl.AccessControlModification,System.Security.AccessControl.AccessRule,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modification" Type="System.Security.AccessControl.AccessControlModification" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+        <Parameter Name="modified" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="modification">A modificação para aplicar a DACL.</param>
+        <param name="rule">A regra de acesso para modificar.</param>
+        <param name="modified">
+          <see langword="true" /> se a DACL for modificada com êxito; caso contrário, <see langword="false" />.</param>
+        <summary>Aplica a modificação especificada à DACL (Lista de controle de acesso discricionário) associada a esse objeto <see cref="T:System.Security.AccessControl.CommonObjectSecurity" />.</summary>
+        <returns>
+          <see langword="true" /> se a DACL for modificada com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModifyAudit">
+      <MemberSignature Language="C#" Value="protected override bool ModifyAudit (System.Security.AccessControl.AccessControlModification modification, System.Security.AccessControl.AuditRule rule, out bool modified);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ModifyAudit(valuetype System.Security.AccessControl.AccessControlModification modification, class System.Security.AccessControl.AuditRule rule, [out] bool&amp; modified) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.ModifyAudit(System.Security.AccessControl.AccessControlModification,System.Security.AccessControl.AuditRule,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modification" Type="System.Security.AccessControl.AccessControlModification" />
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule" />
+        <Parameter Name="modified" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="modification">A modificação para aplicar a SACL.</param>
+        <param name="rule">A regra de auditoria para modificar.</param>
+        <param name="modified">
+          <see langword="true" />Se a SACL é modificada com êxito; Caso contrário, <see langword="false" />.</param>
+        <summary>Aplica-se a modificação especificada para o acesso controle lista SACL (sistema) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se a SACL é modificada com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRule">
+      <MemberSignature Language="C#" Value="protected bool RemoveAccessRule (System.Security.AccessControl.AccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool RemoveAccessRule(class System.Security.AccessControl.AccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.RemoveAccessRule(System.Security.AccessControl.AccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove as regras de acesso que contêm a mesma máscara de acesso e o identificador de segurança, como a regra de acesso especificada da DACL (lista de controle de acesso discricionário) associada a esse objeto <see cref="T:System.Security.AccessControl.CommonObjectSecurity" />.</summary>
+        <returns>
+          <see langword="true" /> se a regra de acesso for removida com êxito; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remoção de acesso é feita usando um algoritmo complexo que pode adicionar regras de controle de acesso além de removê-los.  
+  
+ Esse método falhar ao remover a regra de acesso e retorna `false` se as regras de herança associadas à regra de acesso são muito complexas para o algoritmo de remoção bem-sucedida.  
+  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleAll">
+      <MemberSignature Language="C#" Value="protected void RemoveAccessRuleAll (System.Security.AccessControl.AccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RemoveAccessRuleAll(class System.Security.AccessControl.AccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.RemoveAccessRuleAll(System.Security.AccessControl.AccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove todas as regras de acesso que tem o mesmo identificador de segurança, como a regra de acesso especificado da lista de controle de acesso (DACL) discricionário associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAccessRuleSpecific">
+      <MemberSignature Language="C#" Value="protected void RemoveAccessRuleSpecific (System.Security.AccessControl.AccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RemoveAccessRuleSpecific(class System.Security.AccessControl.AccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.RemoveAccessRuleSpecific(System.Security.AccessControl.AccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso a ser removida.</param>
+        <summary>Remove todas as regras de acesso que correspondem exatamente à regra de acesso especificado do acesso controle DACL (lista discricionário) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRule">
+      <MemberSignature Language="C#" Value="protected bool RemoveAuditRule (System.Security.AccessControl.AuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool RemoveAuditRule(class System.Security.AccessControl.AuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.RemoveAuditRule(System.Security.AccessControl.AuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove regras de auditoria que contêm a mesma máscara de acesso e o identificador de segurança, como a regra de auditoria do sistema acesso de controle de lista (SACL) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> objeto.</summary>
+        <returns>
+          <see langword="true" />Se a regra de auditoria foi removida com êxito; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remoção de auditoria é realizada usando um algoritmo complexo que pode adicionar regras de controle de auditoria além de removê-los.  
+  
+ Esse método falhar ao remover a regra de auditoria e retorna `false` se as regras de herança associadas à regra de auditoria forem muito complexas para o algoritmo de remoção bem-sucedida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleAll">
+      <MemberSignature Language="C#" Value="protected void RemoveAuditRuleAll (System.Security.AccessControl.AuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RemoveAuditRuleAll(class System.Security.AccessControl.AuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.RemoveAuditRuleAll(System.Security.AccessControl.AuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove todas as regras de auditoria que tem o mesmo identificador de segurança, como a regra de auditoria do sistema acesso de controle de lista (SACL) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuditRuleSpecific">
+      <MemberSignature Language="C#" Value="protected void RemoveAuditRuleSpecific (System.Security.AccessControl.AuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RemoveAuditRuleSpecific(class System.Security.AccessControl.AuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.RemoveAuditRuleSpecific(System.Security.AccessControl.AuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para remover.</param>
+        <summary>Remove todas as regras de auditoria que correspondem exatamente a regra de auditoria do acesso controle lista SACL (sistema) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAccessRule">
+      <MemberSignature Language="C#" Value="protected void ResetAccessRule (System.Security.AccessControl.AccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ResetAccessRule(class System.Security.AccessControl.AccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.ResetAccessRule(System.Security.AccessControl.AccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso para redefinição.</param>
+        <summary>Remove todas as regras de acesso no acesso controle DACL (lista discricionário) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> do objeto e, em seguida, adiciona a regra de acesso especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccessRule">
+      <MemberSignature Language="C#" Value="protected void SetAccessRule (System.Security.AccessControl.AccessRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetAccessRule(class System.Security.AccessControl.AccessRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.SetAccessRule(System.Security.AccessControl.AccessRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AccessRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de acesso ao conjunto.</param>
+        <summary>Remove todas as regras de acesso que contêm o mesmo identificador de segurança e qualificador, como a regra de acesso especificado na lista de controle de acesso (DACL) discricionário associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> do objeto e, em seguida, adiciona a regra de acesso especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para evitar, inadvertidamente, permitindo o acesso a entidades de segurança, aplicativos devem verificar a existência de uma permissão todos completa a entrada de controle de acesso (ACE) de acesso (AEFA) e removê-la antes de modificar uma DACL.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAuditRule">
+      <MemberSignature Language="C#" Value="protected void SetAuditRule (System.Security.AccessControl.AuditRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetAuditRule(class System.Security.AccessControl.AuditRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.AccessControl.CommonObjectSecurity.SetAuditRule(System.Security.AccessControl.AuditRule)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.AccessControl</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="System.Security.AccessControl.AuditRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">A regra de auditoria para definir.</param>
+        <summary>Remove todas as regras de auditoria que contêm o mesmo identificador de segurança e qualificador, como a regra de auditoria no sistema acesso de controle de lista (SACL) associado a esta <see cref="T:System.Security.AccessControl.CommonObjectSecurity" /> do objeto e, em seguida, adiciona a regra de auditoria.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

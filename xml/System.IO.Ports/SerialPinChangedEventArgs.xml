@@ -1,0 +1,59 @@
+<Type Name="SerialPinChangedEventArgs" FullName="System.IO.Ports.SerialPinChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class SerialPinChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SerialPinChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.IO.Ports.SerialPinChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.IO.Ports</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o evento de <see cref="E:System.IO.Ports.SerialPort.PinChanged" /> .</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada com a <xref:System.IO.Ports.SerialPort.PinChanged> eventos.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EventType">
+      <MemberSignature Language="C#" Value="public System.IO.Ports.SerialPinChange EventType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.IO.Ports.SerialPinChange EventType" />
+      <MemberSignature Language="DocId" Value="P:System.IO.Ports.SerialPinChangedEventArgs.EventType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.IO.Ports</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Ports.SerialPinChange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de evento.</summary>
+        <value>Um dos valores de <see cref="T:System.IO.Ports.SerialPinChange" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta propriedade fornece informações sobre o tipo de evento que causou o <xref:System.IO.Ports.SerialPort.PinChanged> evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

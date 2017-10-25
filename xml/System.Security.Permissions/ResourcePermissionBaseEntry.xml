@@ -1,0 +1,136 @@
+<Type Name="ResourcePermissionBaseEntry" FullName="System.Security.Permissions.ResourcePermissionBaseEntry">
+  <TypeSignature Language="C#" Value="public class ResourcePermissionBaseEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit ResourcePermissionBaseEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Permissions.ResourcePermissionBaseEntry" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Permissions</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a menor unidade de um conjunto de permissões de segurança de acesso do código.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir herda o <xref:System.Security.Permissions.ResourcePermissionBase> classe. 4 tipos de construtores são implementados. O exemplo também fornece uma implementação de uma classe chamada `MailslotPermissionEntry`. O <xref:System.Security.Permissions.ResourcePermissionBase.PermissionAccessType%2A> propriedade em particular, em seguida, é definida como o tipo de `MailslotPermissionEntry`. O <xref:System.Security.Permissions.ResourcePermissionBase.TagNames%2A> propriedade é definida em particular, como "Nome" e "Computador".  
+  
+ [!code-cpp[ResourcePermissionBase#1](~/samples/snippets/cpp/VS_Snippets_CLR/ResourcePermissionBase/CPP/resourcepermissionbase.cpp#1)]
+ [!code-csharp[ResourcePermissionBase#1](~/samples/snippets/csharp/VS_Snippets_CLR/ResourcePermissionBase/CS/resourcepermissionbase.cs#1)]
+ [!code-vb[ResourcePermissionBase#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/ResourcePermissionBase/VB/resourcepermissionbase.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourcePermissionBaseEntry ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ResourcePermissionBaseEntry.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Security.Permissions.ResourcePermissionBaseEntry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccess%2A> propriedade é definida como zero.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourcePermissionBaseEntry (int permissionAccess, string[] permissionAccessPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 permissionAccess, string[] permissionAccessPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Security.Permissions.ResourcePermissionBaseEntry.#ctor(System.Int32,System.String[])" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="permissionAccess" Type="System.Int32" />
+        <Parameter Name="permissionAccessPath" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="permissionAccess">A representação de inteiro do valor de enumeração de nível de acesso de permissão. O <see cref="P:System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccess" /> propriedade é definida para esse valor.</param>
+        <param name="permissionAccessPath">A matriz de cadeias de caracteres que identifica o recurso que você está protegendo. O <see cref="P:System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccessPath" /> propriedade é definida para esse valor.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Security.Permissions.ResourcePermissionBaseEntry" /> classe com o acesso de permissão especificada e o caminho de acesso de permissão.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="permissionAccessPath" /> especificado é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionAccess">
+      <MemberSignature Language="C#" Value="public int PermissionAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PermissionAccess" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma representação inteira do valor de enumeração de nível de acesso.</summary>
+        <value>O valor de enumeração de nível de acesso.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionAccessPath">
+      <MemberSignature Language="C#" Value="public string[] PermissionAccessPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] PermissionAccessPath" />
+      <MemberSignature Language="DocId" Value="P:System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccessPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Permissions</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz de cadeias de caracteres que identifica o recurso que você está protegendo.</summary>
+        <value>Uma matriz de cadeias de caracteres que identifica o recurso que você está protegendo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Diagnostics.PerformanceCounterPermissionEntry>tem duas propriedades, <xref:System.Diagnostics.PerformanceCounterPermissionEntry.CategoryName%2A> e <xref:System.Diagnostics.PerformanceCounterPermissionEntry.MachineName%2A>. The <xref:System.Security.Permissions.ResourcePermissionBaseEntry.PermissionAccessPath%2A> for <xref:System.Diagnostics.PerformanceCounterPermissionEntry> returns <xref:System.Diagnostics.PerformanceCounterPermissionEntry.MachineName%2A> + "\\\\" + <xref:System.Diagnostics.PerformanceCounterPermissionEntry.CategoryName%2A>. Por exemplo, "myMachine\\\myCategory".  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

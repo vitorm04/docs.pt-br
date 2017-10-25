@@ -1,0 +1,275 @@
+<Type Name="DataSource" FullName="Microsoft.Build.Framework.XamlTypes.DataSource">
+  <TypeSignature Language="C#" Value="public sealed class DataSource : System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DataSource extends System.Object implements class System.ComponentModel.ISupportInitialize" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Framework.XamlTypes.DataSource" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ComponentModel.ISupportInitialize</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o local e o agrupamento para um <see cref="T:Microsoft.Build.Framework.XamlTypes.BaseProperty" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você manualmente criar uma instância dessa classe, chame <xref:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit%2A> antes de definir a primeira propriedade do objeto e <xref:Microsoft.Build.Framework.XamlTypes.DataSource.EndInit%2A> depois de definir a última propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.DataSource.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Construtor padrão. Necessário para desserialização de XAML correta.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInit">
+      <MemberSignature Language="C#" Value="public void BeginInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void BeginInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.DataSource.BeginInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Consulte <see cref="M:System.ComponentModel.ISupportInitialize.BeginInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInit">
+      <MemberSignature Language="C#" Value="public void EndInit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndInit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Framework.XamlTypes.DataSource.EndInit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Consulte <see cref="M:System.ComponentModel.ISupportInitialize.EndInit" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasConfigurationCondition">
+      <MemberSignature Language="C#" Value="public bool HasConfigurationCondition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasConfigurationCondition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.HasConfigurationCondition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se uma propriedade é dependente de configuração, conforme indicado pela presença de uma condição de configuração que está anexada à definição de propriedade em seu local de persistência.</summary>
+        <value>Retorna <see langword="true" /> se uma propriedade é dependente de configuração; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é opcional e tem o valor padrão `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemType">
+      <MemberSignature Language="C#" Value="public string ItemType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ItemType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.ItemType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de item da fonte de dados.</summary>
+        <value>Retorna o tipo de item da fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se um <xref:Microsoft.Build.Framework.XamlTypes.BaseProperty> é um metadados da definição do item ou metadados de item, este campo especificam o tipo de item da definição do item ou o item, respectivamente. Para as propriedades comuns, este campo não deve ser definido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.Label" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o rótulo do grupo de definição do item do grupo de MSBuild propriedades ao qual pertence um metadados de definição de propriedade/item.</summary>
+        <value>Retorna o rótulo do grupo de propriedade ou item.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão é a cadeia de caracteres vazia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MSBuildTarget">
+      <MemberSignature Language="C#" Value="public string MSBuildTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MSBuildTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.MSBuildTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a lista delimitada por ponto e vírgula de destinos do MSBuild que deve ser executado antes de ler as propriedades somente leitura ou itens desta fonte de dados.</summary>
+        <value>Retorna uma lista separada por ponto-e-vírgula.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistedName">
+      <MemberSignature Language="C#" Value="public string PersistedName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PersistedName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.PersistedName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome de propriedade de MSBuild real usado como o valor dessa propriedade de leitura/gravação.</summary>
+        <value>Retorna o nome de propriedade de MSBuild real usado como o valor dessa propriedade de leitura/gravação.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicável somente a <xref:Microsoft.Build.Framework.XamlTypes.DataSource> objetos anexados às propriedades.  
+  
+ O nome persistente geralmente será o mesmo que o nome da propriedade como ele aparece no <xref:Microsoft.Build.Framework.XamlTypes.Rule> e, portanto, pode ser deixado o valor dessa propriedade é o padrão de `null`.  
+  
+ Pode haver vezes quando os nomes de propriedade de regra devem ser alterados para ser exclusivo no arquivo XAML, mas sem alterar como a propriedade é mantida no MSBuild do arquivo como nomes de propriedade devem ser exclusivos, mas não precisam ser exclusivos no armazenamento persistente (devido a outras diferenças na fonte de dados, como o tipo de item).  
+  
+ É nos casos em que essa propriedade se torna útil. Ele também pode ser útil em ambientes de desenvolvimento especializadas onde os nomes de propriedade devem ser diferente do nome normalmente usado para manter a compatibilidade com o sistema de projeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persistence">
+      <MemberSignature Language="C#" Value="public string Persistence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Persistence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.Persistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o local de armazenamento para esta fonte de dados.</summary>
+        <value>Retorna o local de armazenamento para esta fonte de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é obrigatório e é a cultura invariável.  
+  
+ Atual os valores aceitos são `ProjectFile` e `UserFile`. `ProjectFile`faz com que o valor da propriedade a ser gravados e lidos do arquivo de manifesto do projeto ou a folha de propriedades, dependendo de qual nó **Solution Explorer** ou **propriedades** janela é usada para gerar as páginas de propriedade da interface do usuário. `UserFile`faz com que o valor da propriedade a ser gravados e lidos do arquivo. User.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceOfDefaultValue">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation SourceOfDefaultValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation SourceOfDefaultValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.SourceOfDefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor de um <see cref="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation" /> que indica o local do valor padrão para esta fonte de dados.</summary>
+        <value>Retorna <see cref="T:Microsoft.Build.Framework.XamlTypes.DefaultValueSourceLocation" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceType">
+      <MemberSignature Language="C#" Value="public string SourceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Framework.XamlTypes.DataSource.SourceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados de origem, que controla como os dados são tratados durante a compilação.</summary>
+        <value>Retorna o tipo de dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Normalmente, tem o valor `Item`, `ItemDefinition`, ou `Property`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

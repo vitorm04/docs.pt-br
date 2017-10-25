@@ -1,0 +1,6 @@
+<Namespace Name="System.Composition.Hosting.Core">
+  <Docs>
+    <summary>O <see cref="N:System.Composition.Hosting.Core" /> namespace contém classes que representam a funcionalidade básica do mecanismo de composição, incluindo operações de composição, contratos, parte dependências, descrições de exportação e o contexto de tempo de vida de uma parte compartilhada que controla como ele pode pode ser descartado.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

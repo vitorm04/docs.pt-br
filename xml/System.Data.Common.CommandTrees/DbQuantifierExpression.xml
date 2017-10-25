@@ -1,0 +1,117 @@
+<Type Name="DbQuantifierExpression" FullName="System.Data.Common.CommandTrees.DbQuantifierExpression">
+  <TypeSignature Language="C#" Value="public sealed class DbQuantifierExpression : System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DbQuantifierExpression extends System.Data.Common.CommandTrees.DbExpression" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.CommandTrees.DbQuantifierExpression" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.CommandTrees.DbExpression</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma operação de quantificador do tipo especificado sobre os elementos do conjunto de entrada especificado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe representa `Any` e `All` quantificadores. `Any`e `All` são codificados no <xref:System.Data.Common.CommandTrees.DbExpressionKind>. O tipo de resultado de uma expressão de quantificador é sempre um `Boolean`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public override void Accept (System.Data.Common.CommandTrees.DbExpressionVisitor visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Accept(class System.Data.Common.CommandTrees.DbExpressionVisitor visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbQuantifierExpression.Accept(System.Data.Common.CommandTrees.DbExpressionVisitor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor" />
+      </Parameters>
+      <Docs>
+        <param name="visitor">Uma instância de <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />.</param>
+        <summary>Implementa o padrão do visitante para expressões que não produzem um valor de resultado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept&lt;TResultType&gt;">
+      <MemberSignature Language="C#" Value="public override TResultType Accept&lt;TResultType&gt; (System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt; visitor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance !!TResultType Accept&lt;TResultType&gt;(class System.Data.Common.CommandTrees.DbExpressionVisitor`1&lt;!!TResultType&gt; visitor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.CommandTrees.DbQuantifierExpression.Accept``1(System.Data.Common.CommandTrees.DbExpressionVisitor{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TResultType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TResultType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="visitor" Type="System.Data.Common.CommandTrees.DbExpressionVisitor&lt;TResultType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TResultType">O tipo do resultado produzido por <c>visitante</c>.</typeparam>
+        <param name="visitor">Uma instância de um tipo <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" /> que produz um valor de resultado de um tipo específico.</param>
+        <summary>Implementa o padrão do visitante para expressões que produz um valor de resultado de um tipo específico.</summary>
+        <returns>Um valor de um tipo específico de resultado produzido por <see cref="T:System.Data.Common.CommandTrees.DbExpressionVisitor" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="visitor" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Input">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpressionBinding Input { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpressionBinding Input" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbQuantifierExpression.Input" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpressionBinding</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.Common.CommandTrees.DbExpressionBinding" /> que especifica o conjunto de entrada.</summary>
+        <value>O <see cref="T:System.Data.Common.CommandTrees.DbExpressionBinding" /> que especifica o conjunto de entrada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Predicate">
+      <MemberSignature Language="C#" Value="public System.Data.Common.CommandTrees.DbExpression Predicate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Common.CommandTrees.DbExpression Predicate" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Common.CommandTrees.DbQuantifierExpression.Predicate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.CommandTrees.DbExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o <see langword="Boolean" /> predicado deve ser avaliado para cada elemento no conjunto de entrada.</summary>
+        <value>O <see langword="Boolean" /> predicado deve ser avaliado para cada elemento no conjunto de entrada.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">A expressão é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A expressão não está associada com a árvore de comandos para o <see cref="T:System.Data.Common.CommandTrees.DbQuantifierExpression" />,  
+  
+ ou seu tipo de resultado não é um <see langword="Boolean" /> tipo.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

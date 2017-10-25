@@ -1,0 +1,379 @@
+<Type Name="TagPrefixInfo" FullName="System.Web.Configuration.TagPrefixInfo">
+  <TypeSignature Language="C#" Value="public sealed class TagPrefixInfo : System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TagPrefixInfo extends System.Configuration.ConfigurationElement" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.TagPrefixInfo" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Configuration.ConfigurationElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um elemento de configuração que contém informações relacionadas à marca.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TagPrefixInfo> classe permite que você programaticamente acessar e modificar informações de prefixo de marca armazenadas em um arquivo de configuração. Ele fornece a mesma funcionalidade que o ASP.NET `@Register` diretiva. Prefixos de marca associar "namespace" no ASP.NET para os assemblies e namespaces que devem ser incluídas para controles personalizados e controles de usuário funcione corretamente. <xref:System.Web.Configuration.TagPrefixInfo>os objetos são armazenados como membros de uma <xref:System.Web.Configuration.TagPrefixCollection> objeto. O <xref:System.Web.Configuration.TagPrefixCollection> classe permite que você acessar e modificar programaticamente o `controls` subseção do `pages` seção de um arquivo de configuração.  
+  
+ <xref:System.Web.Configuration.TagPrefixInfo>os objetos são adicionados à coleção usando o `add` elemento e especificando um valor para o `tagPrefix` atributo juntamente com os valores para outros atributos relevantes. As outras informações necessárias varia de acordo com o tipo de controle que você usará com o prefixo de marca especificada:  
+  
+-   Se for um controle de usuário, você deve definir o <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A>, <xref:System.Web.Configuration.TagPrefixInfo.TagName%2A>, e <xref:System.Web.Configuration.TagPrefixInfo.Source%2A> propriedades.  
+  
+-   Se for um controle personalizado, você deve definir o <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A>, <xref:System.Web.Configuration.TagPrefixInfo.Namespace%2A>, e <xref:System.Web.Configuration.TagPrefixInfo.Assembly%2A> propriedades. O <xref:System.Web.Configuration.TagPrefixInfo.Assembly%2A> propriedade não será necessária se o controle está no diretório de código do aplicativo.  
+  
+ O mesmo `tagPrefix` valor pode ser usado para mapear para vários assemblies ou namespaces.  
+  
+> [!NOTE]
+>  Quando uma fonte for especificada, o controle de usuário não deve ser no mesmo diretório que a página. Se for, você receberá um erro de tempo de execução quando você tentar carregar a página.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra como especificar valores declarativamente para vários atributos do `controls` seção, que também pode ser acessada como membros de <xref:System.Web.Configuration.TagPrefixInfo> classe.  
+  
+```  
+  
+<system.web>  
+  <pages>  
+    <controls>  
+      <!—- Searches all linked assemblies for the namespace -->  
+      <add tagPrefix="MyTags1" namespace=" MyNameSpace "/>  
+      <!-- Uses a specified assembly -->  
+      <add tagPrefix="MyTags2" namespace="MyNameSpace"   
+        assembly="MyAssembly"/>  
+      <!-- Uses the specified source for the user control -->  
+      <add tagprefix="MyTags3" tagname="MyCtrl" src="MyControl.ascx"/>  
+    </controls>  
+   </pages>  
+</system.web>  
+```  
+  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TagPrefixInfo> classe programaticamente modificar configurações de prefixo de marca. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#12)]
+ [!code-vb[System.Web.Configuration.PagesSection#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#12)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagPrefixInfo (string tagPrefix, string nameSpace, string assembly, string tagName, string source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string tagPrefix, string nameSpace, string assembly, string tagName, string source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.#ctor(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tagPrefix" Type="System.String" />
+        <Parameter Name="nameSpace" Type="System.String" />
+        <Parameter Name="assembly" Type="System.String" />
+        <Parameter Name="tagName" Type="System.String" />
+        <Parameter Name="source" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="tagPrefix">O prefixo de marca que é mapeado para um arquivo de origem ou namespace e assembly.</param>
+        <param name="nameSpace">O namespace associado com o prefixo de marca.</param>
+        <param name="assembly">O assembly em que reside o namespace.</param>
+        <param name="tagName">O nome do controle a ser usado na página.</param>
+        <param name="source">O nome do arquivo que contém o controle de usuário.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.Configuration.TagPrefixInfo" /> classe usando os valores passados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor cria uma instância de <xref:System.Web.Configuration.TagPrefixInfo> classe e a inicializa usando os parâmetros passados. Os parâmetros para os quais você pode especificar valores dependem do tipo de controle que você consulte com o prefixo de marca especificada. Parâmetros não é necessários para esse prefixo de marca devem ser deixados em branco. (Use uma cadeia de caracteres vazia).  
+  
+-   Se o controle for um controle de usuário, você deve especificar valores para o `tagPrefix`, `tagName`, e `source` parâmetros.  
+  
+-   Se o controle for um controle personalizado, você deve especificar valores para o `tagPrefix` e `nameSpace` parâmetros. Se o controle não está no diretório de código do aplicativo, você deve também especificar o `assembly` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TagPrefixInfo.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#32](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#32)]
+ [!code-vb[System.Web.Configuration.PagesSection#32](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#32)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Assembly">
+      <MemberSignature Language="C#" Value="public string Assembly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Assembly" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Assembly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("assembly")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do assembly que contém a implementação de controle.</summary>
+        <value>O nome do assembly (sem extensão). O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o assembly no qual reside o controle. Ele só se aplica a um controle personalizado e não será necessário se o controle está no diretório de código do aplicativo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TagPrefixInfo.Assembly%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementProperty">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationElementProperty ElementProperty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationElementProperty ElementProperty" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.ElementProperty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationElementProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object prefix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object prefix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="prefix" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="prefix">Objeto a ser comparado.</param>
+        <summary>Compara a essa instância para outro objeto.</summary>
+        <returns>
+          <see langword="true" />Se os objetos são idênticos; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.TagPrefixInfo.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor de hash para a instância atual.</summary>
+        <returns>Um valor de hash para a instância atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public string Namespace { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Namespace" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Namespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("namespace")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace no qual reside o controle.</summary>
+        <value>O nome do namespace. O padrão é uma cadeia de caracteres vazia.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o namespace no qual reside o controle. Aplica-se somente a controles personalizados.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TagPrefixInfo.Namespace%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="protected override System.Configuration.ConfigurationPropertyCollection Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationPropertyCollection Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationPropertyCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public string Source { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Source" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("src")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome e caminho do arquivo que contém o controle de usuário.</summary>
+        <value>O nome e caminho do arquivo que contém o controle de usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o nome e caminho do arquivo que contém a implementação de controle de usuário. Aplica-se somente a controles de usuário. O caminho pode ser relativo ao aplicativo ou a raiz do aplicativo.  
+  
+> [!NOTE]
+>  O controle de usuário não deve ser no mesmo diretório que a página. Se for, você receberá um erro de tempo de execução quando você tentar carregar a página.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TagPrefixInfo.Source%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagName">
+      <MemberSignature Language="C#" Value="public string TagName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagName" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.TagName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tagName")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do controle de usuário.</summary>
+        <value>O nome do controle de usuário.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade especifica o nome do controle. Aplica-se somente a controles de usuário. Esse é o valor que deve seguir o prefixo de marca no código do ASP.NET. Por exemplo, "myControl" em `<myTag: myControl />`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TagPrefixInfo.TagName%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagPrefix">
+      <MemberSignature Language="C#" Value="public string TagPrefix { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TagPrefix" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.TagPrefixInfo.TagPrefix" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Configuration.ConfigurationProperty("tagPrefix", DefaultValue=Mono.Cecil.CustomAttributeArgument, IsRequired=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Configuration.StringValidator(MinLength=1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o prefixo da marca que está sendo associado a um arquivo de origem ou namespace e assembly.</summary>
+        <value>O prefixo da marca.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A> propriedade define o alias usado para o namespace no qual reside o controle. Ele se aplica ao usuário e controles personalizados. Esse é o valor que precede o nome da marca no código do ASP.NET. Por exemplo "myTag" em `<myTag: myControl />`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.Configuration.TagPrefixInfo.TagPrefix%2A> propriedade. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.Configuration.PagesSection> classe.  
+  
+ [!code-csharp[System.Web.Configuration.PagesSection#30](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/CS/usingpagessection.cs#30)]
+ [!code-vb[System.Web.Configuration.PagesSection#30](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Configuration.PagesSection/VB/usingpagessection.vb#30)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

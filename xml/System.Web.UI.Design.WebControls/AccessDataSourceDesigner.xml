@@ -1,0 +1,177 @@
+<Type Name="AccessDataSourceDesigner" FullName="System.Web.UI.Design.WebControls.AccessDataSourceDesigner">
+  <TypeSignature Language="C#" Value="public class AccessDataSourceDesigner : System.Web.UI.Design.WebControls.SqlDataSourceDesigner" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AccessDataSourceDesigner extends System.Web.UI.Design.WebControls.SqlDataSourceDesigner" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.WebControls.AccessDataSourceDesigner" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Design.WebControls.SqlDataSourceDesigner</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece suporte de tempo de design em um designer visual para o <see cref="T:System.Web.UI.WebControls.AccessDataSource" /> controle de servidor Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um designer visual, quando você alternar de origem para o modo de Design, o código-fonte marcação que descreve o <xref:System.Web.UI.WebControls.AccessDataSource> controle é analisado e uma versão de tempo de design do controle, que é apenas um espaço reservado, é criada na superfície de design. Quando você alternar para a fonte de exibição, o controle de tempo de design, que inclui os valores das propriedades de **propriedades** grade, são mantidas para o código-fonte marcação e editado na marcação da página da Web.  
+  
+   
+  
+## Examples  
+ Esta seção fornece dois exemplos de código. A primeira demonstra como estender o <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner> classe. O segundo demonstra como obter uma cópia do <xref:System.Web.UI.WebControls.AccessDataSource> classe e associá-lo a um designer.  
+  
+ O exemplo de código a seguir demonstra como estender o <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner> classe. O código altera o espaço reservado que representa o controle na superfície de design e adiciona uma propriedade para o **propriedades** grade.  
+  
+ [!code-csharp[WebNet.Design.WebControls.AccessDataSourceDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/CS/exampleaccessdatasource.cs#4)]
+ [!code-vb[WebNet.Design.WebControls.AccessDataSourceDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/VB/ExampleAccessDataSource.vb#4)]  
+  
+ O exemplo de código a seguir demonstra como obter uma cópia do <xref:System.Web.UI.WebControls.AccessDataSource> classe e associá-lo com o designer que foi definido no exemplo anterior.  
+  
+ [!code-csharp[WebNet.Design.WebControls.AccessDataSourceDesigner#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/CS/exampleaccessdatasource.cs#2)]
+ [!code-vb[WebNet.Design.WebControls.AccessDataSourceDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/VB/ExampleAccessDataSource.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AccessDataSourceDesigner ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.AccessDataSource" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner> classe quando ele cria um espaço reservado para o associado <xref:System.Web.UI.WebControls.AccessDataSource> controle na superfície de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFile">
+      <MemberSignature Language="C#" Value="public string DataFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataFile" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.DataFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Implementa uma propriedade de designer para sombra a <see cref="P:System.Web.UI.WebControls.AccessDataSource.DataFile" /> propriedade do controle associado.</summary>
+        <value>Um <see cref="T:System.String" /> que contém o nome e caminho do arquivo de dados associado a <see cref="T:System.Web.UI.WebControls.AccessDataSource" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir o <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.DataFile%2A> propriedade no designer para o nome e caminho do arquivo. mdb que contém o banco de dados do Microsoft Access a ser usado para o associado <xref:System.Web.UI.WebControls.AccessDataSource> controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.DataFile%2A> propriedade para exibir o nome e caminho do arquivo de dados do Access que está associado com o <xref:System.Web.UI.WebControls.AccessDataSource> controle no espaço reservado de controle em tempo de design.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner> classe.  
+  
+ [!code-csharp[WebNet.Design.WebControls.AccessDataSourceDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/CS/exampleaccessdatasource.cs#5)]
+ [!code-vb[WebNet.Design.WebControls.AccessDataSourceDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/VB/ExampleAccessDataSource.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectionString">
+      <MemberSignature Language="C#" Value="protected override string GetConnectionString ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetConnectionString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.GetConnectionString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém a cadeia de conexão é válida em tempo de design para o controle que está associado este designer.</summary>
+        <returns>Um <see cref="T:System.String" /> que contém a cadeia de conexão de tempo de design para o associado <see cref="T:System.Web.UI.WebControls.AccessDataSource" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.GetConnectionString%2A> método mapeia o <xref:System.Web.UI.WebControls.AccessDataSource.DataFile%2A> propriedade do controle para o site designer e, em seguida, usa o <xref:System.Web.UI.WebControls.AccessDataSource.ConnectionString%2A> propriedade do controle para gerar a cadeia de caracteres de conexão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.GetConnectionString%2A> método para exibir a cadeia de caracteres de conexão do banco de dados Microsoft Access que está associado com o <xref:System.Web.UI.WebControls.AccessDataSource> controle no espaço reservado de controle em tempo de design.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner> classe.  
+  
+ [!code-csharp[WebNet.Design.WebControls.AccessDataSourceDesigner#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/CS/exampleaccessdatasource.cs#5)]
+ [!code-vb[WebNet.Design.WebControls.AccessDataSourceDesigner#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/VB/ExampleAccessDataSource.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreFilterProperties">
+      <MemberSignature Language="C#" Value="protected override void PreFilterProperties (System.Collections.IDictionary properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void PreFilterProperties(class System.Collections.IDictionary properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.PreFilterProperties(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="properties">Implementando uma coleção de <see cref="T:System.Collections.IDictionary" /> das propriedades adicionadas e sombreadas.</param>
+        <summary>Usado pelo designer para adicionar propriedades a ou removê-los, o **propriedades** grade ou a propriedades de sombra do controle associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Designers de controle usam métodos que são derivados do <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A?displayProperty=nameWithType> método sombra várias propriedades de controle com as propriedades de tempo de design correspondentes que implementa o designer, e para adicionar propriedades a ou removê-los, o **propriedades** grade.  
+  
+ Para o <xref:System.Web.UI.WebControls.AccessDataSource> controle, o <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.PreFilterProperties%2A> método cria o tempo de design <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.DataFile%2A> propriedade sombra a <xref:System.Web.UI.WebControls.AccessDataSource.DataFile%2A> propriedade do controle.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como substituir o <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.PreFilterProperties%2A> método para fazer o <xref:System.Web.UI.WebControls.AccessDataSource.ConnectionString%2A> propriedade somente leitura e visível no **propriedades** grade.  
+  
+ Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Web.UI.Design.WebControls.AccessDataSourceDesigner> classe.  
+  
+ [!code-csharp[WebNet.Design.WebControls.AccessDataSourceDesigner#4](~/samples/snippets/csharp/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/CS/exampleaccessdatasource.cs#4)]
+ [!code-vb[WebNet.Design.WebControls.AccessDataSourceDesigner#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebNet.Design.WebControls.AccessDataSourceDesigner/VB/ExampleAccessDataSource.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Substituir o <see cref="M:System.Web.UI.Design.WebControls.AccessDataSourceDesigner.PreFilterProperties(System.Collections.IDictionary)" /> método para adicionar propriedades à coleção de propriedades de tempo de design ou alterar seus atributos. Certifique-se de chamar o método base antes de executar outro processamento.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

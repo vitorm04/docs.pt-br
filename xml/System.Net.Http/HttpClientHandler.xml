@@ -1,0 +1,828 @@
+<Type Name="HttpClientHandler" FullName="System.Net.Http.HttpClientHandler">
+  <TypeSignature Language="C#" Value="public class HttpClientHandler : System.Net.Http.HttpMessageHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HttpClientHandler extends System.Net.Http.HttpMessageHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Net.Http.HttpClientHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Net.Http.HttpMessageHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>O manipulador de mensagens padrão usado pelo <see cref="T:System.Net.Http.HttpClient" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http.HttpClientHandler> classe e classes derivadas dele permitem aos desenvolvedores configurar uma variedade de opções que variam de proxies a autenticação.  
+  
+   
+  
+## Examples  
+ [!code-csharp[System.Net.Http.HttpClientHandler#1](~/samples/snippets/csharp/VS_Snippets_Misc/system.net.http.httpclienthandler/cs/source.cs#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HttpClientHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClientHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de um <see cref="T:System.Net.Http.HttpClientHandler" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowAutoRedirect">
+      <MemberSignature Language="C#" Value="public bool AllowAutoRedirect { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowAutoRedirect" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.AllowAutoRedirect" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o manipulador deve seguir as respostas de redirecionamento.</summary>
+        <value>
+          <see langword="true" /> se o manipulador precisar seguir respostas de redirecionamento; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definir <xref:System.Net.Http.HttpClientHandler.AllowAutoRedirect%2A> para `true` se desejar que o manipulador execute automaticamente os cabeçalhos de redirecionamento de HTTP para o novo local do recurso. O número máximo de redirecionamentos a seguir é definido <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A> propriedade.  
+  
+ Se <xref:System.Net.Http.HttpClientHandler.AllowAutoRedirect%2A> é definido como `false`, todas as respostas de HTTP com um código de status HTTP de 300 a 399 são retornadas para o aplicativo.  
+  
+ O cabeçalho de autorização está desmarcado na redirecionamentos automáticos e o manipulador automaticamente tenta autenticar novamente para o local de redirecionamento. Na prática, isso significa que um aplicativo não é possível colocar informações de autenticação personalizado para o cabeçalho de autorização se é possível encontrar o redirecionamento. Em vez disso, o aplicativo deve implementar e registrar um módulo de autenticação personalizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticDecompression">
+      <MemberSignature Language="C#" Value="public System.Net.DecompressionMethods AutomaticDecompression { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.DecompressionMethods AutomaticDecompression" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.AutomaticDecompression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.DecompressionMethods</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de método de descompactação usado pelo manipulador para descompactação automática da resposta de conteúdo HTTP.</summary>
+        <value>O método de descompactação automática usado pelo manipulador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+
+## Remarks  
+Para o .NET Framework 4. x `System.Net.Http` binário no Cache de Assembly Global (GAC), o valor padrão é <xref:System.Net.DecompressionMethods.None>.
+
+Quando o [ `System.Net.Http` pacote NuGet](https://www.nuget.org/packages/System.Net.Http/) v4.1.0 para v4.3.2 for usado, o padrão é <xref:System.Net.DecompressionMethods.GZip> e <xref:System.Net.DecompressionMethods.Deflate>.
+
+Depois de v4.3.2 de pacote do NuGet, o valor padrão de <xref:System.Net.DecompressionMethods.None> é usado.
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckCertificateRevocationList">
+      <MemberSignature Language="C#" Value="public bool CheckCertificateRevocationList { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CheckCertificateRevocationList" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.CheckCertificateRevocationList" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o certificado é verificado em relação à lista de revogação de autoridade de certificação.</summary>
+        <value><see langword="true" /> se a lista de certificados revogados é verificada; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificateOptions">
+      <MemberSignature Language="C#" Value="public System.Net.Http.ClientCertificateOption ClientCertificateOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Http.ClientCertificateOption ClientCertificateOptions" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.ClientCertificateOptions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Http.ClientCertificateOption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o certificado é selecionado automaticamente do repositório de certificados ou se o chamador tem permissão para passar um certificado do cliente específico.</summary>
+        <value>A coleção de certificados de segurança associados a esse manipulador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClientCertificates">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509CertificateCollection ClientCertificates" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.ClientCertificates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509CertificateCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento máximo permitido dos cabeçalhos de resposta.</summary>
+        <value>O comprimento, em quilobytes (1024 bytes), dos cabeçalhos de resposta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CookieContainer">
+      <MemberSignature Language="C#" Value="public System.Net.CookieContainer CookieContainer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.CookieContainer CookieContainer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.CookieContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.CookieContainer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o contêiner do cookie usado para armazenar cookies de servidor pelo manipulador.</summary>
+        <value>O contêiner do cookie usado para armazenar cookies de servidor pelo manipulador.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http.HttpClientHandler.CookieContainer%2A> propriedade fornece uma instância do <xref:System.Net.CookieContainer> classe que contém os cookies associados a este manipulador.  
+  
+ Se o <xref:System.Net.Http.HttpClientHandler.UseCookies%2A> é de propriedade `true`, o <xref:System.Net.Http.HttpClientHandler.CookieContainer%2A> propriedade representa o contêiner do cookie usado para armazenar os cookies de servidor. O usuário pode definir cookies personalizados antes de enviar solicitações usando essa propriedade. Se o <xref:System.Net.Http.HttpClientHandler.UseCookies%2A> propriedade é false e o usuário adiciona cookies <xref:System.Net.Http.HttpClientHandler.CookieContainer%2A>, cookies são ignorados e não são enviados ao servidor. Definindo o <xref:System.Net.Http.HttpClientHandler.CookieContainer%2A> para `null` lançará uma exceção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials Credentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials Credentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.Credentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define informações de autenticação usadas por este manipulador.</summary>
+        <value>As credenciais de autenticação associadas ao manipulador. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DangerousAcceptAnyServerCertificateValidator">
+      <MemberSignature Language="C#" Value="public static Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,bool&gt; DangerousAcceptAnyServerCertificateValidator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Func`5&lt;class System.Net.Http.HttpRequestMessage, class System.Security.Cryptography.X509Certificates.X509Certificate2, class System.Security.Cryptography.X509Certificates.X509Chain, valuetype System.Net.Security.SslPolicyErrors, bool&gt; DangerousAcceptAnyServerCertificateValidator" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.DangerousAcceptAnyServerCertificateValidator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultProxyCredentials">
+      <MemberSignature Language="C#" Value="public System.Net.ICredentials DefaultProxyCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.ICredentials DefaultProxyCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.DefaultProxyCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.ICredentials</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando o proxy padrão (sistema) está sendo usado, obtém ou define as credenciais a serem enviadas ao servidor de proxy padrão para autenticação. O proxy padrão é usado apenas quando <see cref="T:System.Net.Http.HttpClientHandler.UseProxy%2A"/> é definido como <see langword="true"/> e <see cref="T:System.Net.Http.HttpClientHandler.Proxy%2A"/> é definido como <see langword="null"/>.</summary>
+        <value>As credenciais necessárias para autenticar uma solicitação para o servidor de proxy padrão.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClientHandler.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> para liberar recursos gerenciados e não gerenciados; <see langword="false" /> para liberar apenas recursos não gerenciados.</param>
+        <summary>Libera os recursos não gerenciados usados pelo <see cref="T:System.Net.Http.HttpClientHandler" /> e, opcionalmente, libera os recursos gerenciados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é chamado pelo método público `Dispose()` e pelo método <xref:System.Object.Finalize%2A>. `Dispose()` invoca o método `Dispose(Boolean)` protegido com o parâmetro `disposing` definido como `true`. <xref:System.Object.Finalize%2A> invoca `Dispose` com `disposing` definido como `false`.  
+  
+ Quando o `disposing` parâmetro é `true`, esse método libera todos os recursos mantidos por qualquer objeto gerenciado que este <xref:System.Net.Http.HttpClientHandler> referências. Este método invoca o método `Dispose()` de cada objeto referenciado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAutomaticRedirections">
+      <MemberSignature Language="C#" Value="public int MaxAutomaticRedirections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxAutomaticRedirections" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de redirecionamentos que o manipulador segue.</summary>
+        <value>O número máximo de respostas de redirecionamento que o manipulador segue. O valor padrão é 50.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A> propriedade define o número máximo de redirecionamentos de solicitação a seguir se o <xref:System.Net.Http.HttpClientHandler.AllowAutoRedirect%2A> é de propriedade `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxConnectionsPerServer">
+      <MemberSignature Language="C#" Value="public int MaxConnectionsPerServer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxConnectionsPerServer" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.MaxConnectionsPerServer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número máximo de conexões simultâneas (por ponto de extremidade do servidor) permitidos ao fazer solicitações usando um <see cref="T:System.Net.Http.HttpClient" /> objeto. Observe que o limite é por ponto de extremidade do servidor, por exemplo, um valor de 256 permitiria 256 conexões simultâneas com http://www.adatum.com/ e outro 256 para http://www.adventure-works.com/.</summary>
+        <value>O número máximo de conexões simultâneas (por ponto de extremidade do servidor) permitido por um <see cref="T:System.Net.Http.HttpClient"/> objeto.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRequestContentBufferSize">
+      <MemberSignature Language="C#" Value="public long MaxRequestContentBufferSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaxRequestContentBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tamanho do buffer de conteúdo de máximo de solicitação usado pelo manipulador.</summary>
+        <value>O tamanho de buffer de conteúdo de solicitação máximo em bytes. O valor padrão é 2 gigabytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode definir o <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A> propriedade para um valor menor para limitar o tamanho do buffer de solicitação. Se o tamanho do conteúdo da solicitação é maior do que o <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A> propriedade, uma exceção será lançada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxResponseHeadersLength">
+      <MemberSignature Language="C#" Value="public int MaxResponseHeadersLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxResponseHeadersLength" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.MaxResponseHeadersLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o comprimento máximo, em quilobytes (1024 bytes), dos cabeçalhos de resposta. Por exemplo, se o valor é 64, 65536 bytes são permitidos para o comprimento dos cabeçalhos de resposta máximo.</summary>
+        <value>O comprimento máximo, em quilobytes (1024 bytes), dos cabeçalhos de resposta.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreAuthenticate">
+      <MemberSignature Language="C#" Value="public bool PreAuthenticate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PreAuthenticate" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.PreAuthenticate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o manipulador envia um cabeçalho de autorização com a solicitação.</summary>
+        <value>
+          <see langword="true" /> para o manipulador enviar um cabeçalho de autorização HTTP com solicitações após a autenticação ser realizada, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de uma solicitação de cliente para um determinado <xref:System.Uri> for autenticado com êxito, se o <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A> é de propriedade `true` e as credenciais sejam fornecidas, <xref:System.Net.Http.HttpClientHandler> correspondências na lista de credencial fornecido no <xref:System.Net.Http.HttpClientHandler.Credentials%2A> propriedade. O cabeçalho de autorização é enviado com cada solicitação para qualquer <xref:System.Uri> que corresponde a específica <xref:System.Uri> até a última barra invertida.  
+  
+ Se o cliente a solicitação para um determinado <xref:System.Uri> é autenticado não com êxito, a solicitação usa os procedimentos de autenticação padrão.  
+  
+ Com exceção da primeira solicitação, o <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A> propriedade indica se deseja enviar informações de autenticação com solicitações subsequentes para um <xref:System.Uri> que corresponde a específica <xref:System.Uri> até o último barra sem esperar que o servidor ser um desafio.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,object&gt; Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário gravável (ou seja, um mapa) de propriedades personalizadas para o <see cref="T:System.Net.Http.HttpClient"/> solicitações. O dicionário é inicializado vazio. Você pode inserir e consultar os pares chave-valor para seus manipuladores personalizados e processamento especial.</summary>
+        <value>um dicionário gravável de propriedades personalizadas.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Proxy">
+      <MemberSignature Language="C#" Value="public System.Net.IWebProxy Proxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IWebProxy Proxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.Proxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IWebProxy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de proxy usadas pelo manipulador.</summary>
+        <value>As informações de proxy usadas pelo manipulador. O valor padrão é <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Net.Http.HttpClientHandler.Proxy%2A> propriedade identifica o <xref:System.Net.WebProxy> objeto a ser usado para processar solicitações aos recursos da Internet. Para especificar que nenhum proxy deve ser usada, defina o <xref:System.Net.Http.HttpClientHandler.Proxy%2A> propriedade para a instância do proxy retornada pelo <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A> método.  
+  
+ O computador local ou o arquivo de configuração de aplicativo pode especificar que um proxy padrão ser usado. Se o <xref:System.Net.Http.HttpClientHandler.Proxy%2A> propriedade for especificada, em seguida, as configurações de proxy do <xref:System.Net.Http.HttpClientHandler.Proxy%2A> substituição de propriedade do computador local ou arquivo de configuração do aplicativo e o manipulador usará as configurações de proxy especificadas. Se nenhum proxy for especificado em um arquivo de configuração e o <xref:System.Net.Http.HttpClientHandler.Proxy%2A> propriedade não for especificada, o manipulador usará as configurações de proxy herdadas do Internet Explorer no computador local. Se não houver nenhuma configuração de proxy no Internet Explorer, a solicitação é enviada diretamente para o servidor.  
+  
+ O <xref:System.Net.Http.HttpClientHandler> classe analisa uma lista de proxies com caracteres curinga herdada do Internet Explorer o mesmo que a lista de bypass é analisada diretamente pelo Internet Explorer. Por exemplo, o <xref:System.Net.Http.HttpClientHandler> classe analisa uma lista de bypass de "nt *" do Internet Explorer como uma expressão regular "nt.\*". Para uma URL de "http://nt.com" ignoram o proxy usando o <xref:System.Net.Http.HttpClientHandler> classe e usando o Internet Explorer.  
+  
+ O <xref:System.Net.Http.HttpClientHandler> classe dá suporte ao desvio de proxy local. A classe considera um destino local se qualquer uma das seguintes condições forem atendidas:  
+  
+1.  O destino contém um nome simples (sem pontos na URL).  
+  
+2.  O destino contém um endereço de loopback (<xref:System.Net.IPAddress.Loopback> ou <xref:System.Net.IPAddress.IPv6Loopback>) ou o destino contém um <xref:System.Net.IPAddress> atribuído ao computador local.  
+  
+3.  O sufixo do domínio de destino corresponde o sufixo do domínio do computador local (<xref:System.Net.NetworkInformation.IPGlobalProperties.DomainName%2A>).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendAsync">
+      <MemberSignature Language="C#" Value="protected override System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt; SendAsync (System.Net.Http.HttpRequestMessage request, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Threading.Tasks.Task`1&lt;class System.Net.Http.HttpResponseMessage&gt; SendAsync(class System.Net.Http.HttpRequestMessage request, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.Http.HttpClientHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.DebuggerStepThrough</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.AsyncStateMachine(typeof(System.Net.Http.HttpClientHandler/&lt;SendAsync&gt;c__async0))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Net.Http.HttpResponseMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="System.Net.Http.HttpRequestMessage" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="request">A mensagem de solicitação HTTP.</param>
+        <param name="cancellationToken">Um token de cancelamento para cancelar a operação.</param>
+        <summary>Cria uma instância de <see cref="T:System.Net.Http.HttpResponseMessage" /> com base nas informações fornecidas no <see cref="T:System.Net.Http.HttpRequestMessage" /> como uma operação que não será bloqueado.</summary>
+        <returns>O objeto de tarefa que representa a operação assíncrona.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esta operação é não bloquear. Retorna uma instância de <xref:System.Threading.Tasks.Task%601> para representar a operação assíncrona. Quando a operação for concluída, <xref:System.Threading.Tasks.Task%601.Result%2A> contém a mensagem de resposta.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="request" /> era <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerCertificateCustomValidationCallback">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,bool&gt; ServerCertificateCustomValidationCallback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`5&lt;class System.Net.Http.HttpRequestMessage, class System.Security.Cryptography.X509Certificates.X509Certificate2, class System.Security.Cryptography.X509Certificates.X509Chain, valuetype System.Net.Security.SslPolicyErrors, bool&gt; ServerCertificateCustomValidationCallback" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.ServerCertificateCustomValidationCallback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Net.Http.HttpRequestMessage,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors,System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um método de retorno de chamada para validar o certificado do servidor.</summary>
+        <value>Um método de retorno de chamada para validar o certificado do servidor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SslProtocols">
+      <MemberSignature Language="C#" Value="public System.Security.Authentication.SslProtocols SslProtocols { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Security.Authentication.SslProtocols SslProtocols" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.SslProtocols" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Authentication.SslProtocols</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o protocolo TLS/SSL usado pelo <see cref="T:System.Net.Http.HttpClient"/> objetos gerenciados pelo objeto HttpClientHandler.</summary>
+        <value>Um dos valores definidos na enumeração <see cref="T:System.Security.Authentication.SslProtocols"/>.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAutomaticDecompression">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsAutomaticDecompression { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsAutomaticDecompression" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.SupportsAutomaticDecompression" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o manipulador suporta descompactação de conteúdo de resposta automática.</summary>
+        <value>
+          <see langword="true" />Se o se o manipulador suporta descompactação de conteúdo de resposta automática; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsProxy">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsProxy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsProxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.SupportsProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o manipulador é compatível com as configurações de proxy.</summary>
+        <value>
+          <see langword="true" />Se o se o manipulador suporta as configurações de proxy; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsRedirectConfiguration">
+      <MemberSignature Language="C#" Value="public virtual bool SupportsRedirectConfiguration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsRedirectConfiguration" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o manipulador é compatível com definições de configuração para o <see cref="P:System.Net.Http.HttpClientHandler.AllowAutoRedirect" /> e <see cref="P:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections" /> propriedades.</summary>
+        <value>
+          <see langword="true" />Se o se o manipulador de definições de configuração para oferecer suporte a <see cref="P:System.Net.Http.HttpClientHandler.AllowAutoRedirect" /> e <see cref="P:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections" /> propriedades; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseCookies">
+      <MemberSignature Language="C#" Value="public bool UseCookies { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseCookies" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.UseCookies" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o manipulador utiliza o <see cref="P:System.Net.Http.HttpClientHandler.CookieContainer" /> propriedade para armazenar cookies de servidor e usa esses cookies ao enviar solicitações.</summary>
+        <value>
+          <see langword="true" />Se o se o manipulador suporta usa o <see cref="P:System.Net.Http.HttpClientHandler.CookieContainer" /> propriedade para armazenar cookies de servidor e usa esses cookies ao enviar solicitações; caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseDefaultCredentials">
+      <MemberSignature Language="C#" Value="public bool UseDefaultCredentials { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseDefaultCredentials" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.UseDefaultCredentials" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que controla se as credenciais padrão são enviadas com solicitações pelo manipulador.</summary>
+        <value>
+          <see langword="true" /> se as credenciais padrão forem usadas; caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Defina essa propriedade como `true` quando as solicitações feitas com o <xref:System.Net.Http.HttpClientHandler> objeto, se solicitado pelo servidor, forem autenticado usando as credenciais do usuário conectado no momento. Para aplicativos cliente, esse é o comportamento desejado na maioria dos cenários. Para aplicativos de camada intermediária, como aplicativos do ASP.NET, em vez de usar essa propriedade, você normalmente definirá o <xref:System.Net.Http.HttpClientHandler.Credentials%2A> propriedade para as credenciais do cliente em cujo nome a solicitação é feita.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseProxy">
+      <MemberSignature Language="C#" Value="public bool UseProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseProxy" />
+      <MemberSignature Language="DocId" Value="P:System.Net.Http.HttpClientHandler.UseProxy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.Http</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o manipulador utiliza um proxy para solicitações.</summary>
+        <value>
+          <see langword="true" />Se o manipulador deve usar um proxy para solicitações; Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

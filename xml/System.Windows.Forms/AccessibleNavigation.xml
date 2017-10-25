@@ -1,0 +1,168 @@
+<Type Name="AccessibleNavigation" FullName="System.Windows.Forms.AccessibleNavigation">
+  <TypeSignature Language="C#" Value="public enum AccessibleNavigation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AccessibleNavigation extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.AccessibleNavigation" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica valores para navegar entre os objetos acessíveis.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Instruções de navegação acessível são espaciais (para cima, para baixo, para a esquerda e direita) ou lógico (primeiro filho, último filho, próximo e anterior). Direções lógicas são usadas quando os clientes navegar do elemento de interface de um usuário para outro dentro do mesmo contêiner.  
+  
+ <xref:System.Windows.Forms.AccessibleObject>usa essa enumeração.  
+  
+ Para obter mais informações sobre o aplicativo de acessibilidade, pesquise o tópico "Microsoft Active Accessibility" na biblioteca MSDN.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a criação de um gráfico com suporte a acessibilidade de controle, usando o <xref:System.Windows.Forms.AccessibleObject> e <xref:System.Windows.Forms.Control.ControlAccessibleObject> classes para expor informações acessíveis. O controle plota duas curvas junto com uma legenda. O `ChartControlAccessibleObject` classe que deriva de `ControlAccessibleObject`, é usado no <xref:System.Windows.Forms.Control.CreateAccessibilityInstance%2A> método para fornecer informações acessíveis personalizadas para o controle de gráfico. Como a legenda do gráfico não é um real <xref:System.Windows.Forms.Control> -com base em controle, mas em vez disso, é desenhado pelo controle do gráfico, ele faz não todas as informações acessíveis internas. Por isso, o `ChartControlAccessibleObject` substituições de classe a <xref:System.Windows.Forms.AccessibleObject.GetChild%2A> método para retornar o `CurveLegendAccessibleObject` que representa informações acessíveis para cada parte da legenda. Quando um aplicativo acessível ciente usa esse controle, o controle pode fornecer as informações necessárias de acessíveis.  
+  
+ Este exemplo demonstra como usar o <xref:System.Windows.Forms.AccessibleNavigation> enumeração com o <xref:System.Windows.Forms.AccessibleObject.Navigate%2A> método. Consulte o <xref:System.Windows.Forms.AccessibleObject> visão geral da classe para o exemplo de código completo.  
+  
+ [!code-cpp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CPP/chartcontrol.cpp#4)]
+ [!code-csharp[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/CS/chartcontrol.cs#4)]
+ [!code-vb[System.Windows.Forms.AccessibleObject#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.AccessibleObject/VB/chartcontrol.vb#4)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation Down = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.Down" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação para um objeto de irmão localizado abaixo do objeto inicial.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstChild">
+      <MemberSignature Language="C#" Value="FirstChild" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation FirstChild = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.FirstChild" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação para o primeiro filho do objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LastChild">
+      <MemberSignature Language="C#" Value="LastChild" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation LastChild = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.LastChild" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação para o último filho do objeto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="Left" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation Left = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.Left" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação para o objeto irmão localizado à esquerda do objeto inicial.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Next">
+      <MemberSignature Language="C#" Value="Next" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation Next = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.Next" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação para o próximo objeto lógico, normalmente a partir de um objeto irmão para o objeto inicial.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Previous">
+      <MemberSignature Language="C#" Value="Previous" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation Previous = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.Previous" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação ao objeto lógico de anterior, normalmente a partir de um objeto irmão para o objeto inicial.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="Right" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation Right = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.Right" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação para o objeto irmão à direita do objeto inicial.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Up">
+      <MemberSignature Language="C#" Value="Up" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.AccessibleNavigation Up = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.AccessibleNavigation.Up" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.AccessibleNavigation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Navegação para um objeto de irmão localizado acima do objeto inicial.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

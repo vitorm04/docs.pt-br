@@ -1,0 +1,117 @@
+<Type Name="UnescapedXmlDiagnosticData" FullName="System.Diagnostics.UnescapedXmlDiagnosticData">
+  <TypeSignature Language="C#" Value="public class UnescapedXmlDiagnosticData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UnescapedXmlDiagnosticData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.UnescapedXmlDiagnosticData" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados XML sem escape para o registro em log dos dados de rastreamento fornecida pelo usuário.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada pelo <xref:System.Diagnostics.EventSchemaTraceListener.TraceData%2A> métodos. Ele também pode ser usado para passar dados XML para o <xref:System.Diagnostics.EventSchemaTraceListener.TraceData%2A> métodos.  
+  
+> [!NOTE]
+>  Os dados fornecidos pelo usuário não são verificados para a validade do esquema.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar <xref:System.Diagnostics.UnescapedXmlDiagnosticData> classe. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.EventSchemaTraceListener> classe.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#11)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#11)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UnescapedXmlDiagnosticData (string xmlPayload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string xmlPayload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.UnescapedXmlDiagnosticData.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="xmlPayload" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlPayload">Os dados XML a ser conectado a <see langword="UserData" /> nó do esquema de evento.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Diagnostics.UnescapedXmlDiagnosticData" /> classe usando a cadeia de caracteres de dados XML especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser que seu código seja de ponta a ponta compatíveis com o esquema, o `xmlPayload` parâmetro deve ser um fragmento XML que pode ser validado em relação ao esquema de evento de ponta a ponta. Se `xmlPayload` é `null`, o <xref:System.Diagnostics.UnescapedXmlDiagnosticData.UnescapedXml%2A> propriedade é uma cadeia de caracteres vazia.  
+  
+> [!NOTE]
+>  `xmlPayload`não é verificado para a validade do XML.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Diagnostics.UnescapedXmlDiagnosticData.%23ctor%2A> construtor. Este exemplo de código é parte de um exemplo maior fornecido para a <xref:System.Diagnostics.EventSchemaTraceListener> classe.  
+  
+ [!code-csharp[System.Diagnostics.EventSchemaTraceListener#11](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/cs/program.cs#11)]
+ [!code-vb[System.Diagnostics.EventSchemaTraceListener#11](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.EventSchemaTraceListener/vb/program.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Diagnostics.UnescapedXmlDiagnosticData.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres da <see cref="T:System.Diagnostics.UnescapedXmlDiagnosticData" /> objeto.</summary>
+        <returns>Uma representação de cadeia de caracteres da <see cref="T:System.Diagnostics.UnescapedXmlDiagnosticData" /> objeto. Se o objeto for <see langword="null" />, esse método retorna uma cadeia de caracteres vazia.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnescapedXml">
+      <MemberSignature Language="C#" Value="public string UnescapedXml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UnescapedXml" />
+      <MemberSignature Language="DocId" Value="P:System.Diagnostics.UnescapedXmlDiagnosticData.UnescapedXml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres de dados XML sem escape.</summary>
+        <value>Uma cadeia de caracteres XML sem escape.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você quiser que seu código seja de ponta a ponta compatíveis com o esquema, o <xref:System.Diagnostics.UnescapedXmlDiagnosticData.UnescapedXml%2A> o valor da propriedade deve ser um fragmento XML que pode ser validado em relação ao esquema de evento de ponta a ponta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,58 @@
+<Type Name="IContributeObjectSink" FullName="System.Runtime.Remoting.Contexts.IContributeObjectSink">
+  <TypeSignature Language="C#" Value="public interface IContributeObjectSink" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IContributeObjectSink" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Contexts.IContributeObjectSink" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contribui com um coletor de interceptação específica de objetos na extremidade do servidor de uma chamada de comunicação remota.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Remoting.Contexts.IContributeObjectSink> interface é implementada por propriedades de contexto em um <xref:System.Runtime.Remoting.Contexts.Context> classe que deseja contribuir um coletor de interceptação específica de objetos na extremidade do servidor de uma chamada de comunicação remota.  
+  
+ A cadeia de objeto de servidor é composta dessas propriedades de contexto no contexto do objeto server que implementam <xref:System.Runtime.Remoting.Contexts.IContributeObjectSink>. [&#91; \<topic://cpconjust-in-timeactivation > &#93; ](http://msdn.microsoft.com/en-us/6f7a7912-93cd-4c94-824f-42554c17c8d4) é um exemplo de tal propriedade; ou seja, a mensagem sink ativará o objeto após a chamada chega e, em seguida, passe a mensagem para o objeto.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="GetObjectSink">
+      <MemberSignature Language="C#" Value="public System.Runtime.Remoting.Messaging.IMessageSink GetObjectSink (MarshalByRefObject obj, System.Runtime.Remoting.Messaging.IMessageSink nextSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Runtime.Remoting.Messaging.IMessageSink GetObjectSink(class System.MarshalByRefObject obj, class System.Runtime.Remoting.Messaging.IMessageSink nextSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Contexts.IContributeObjectSink.GetObjectSink(System.MarshalByRefObject,System.Runtime.Remoting.Messaging.IMessageSink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.Messaging.IMessageSink</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.MarshalByRefObject" />
+        <Parameter Name="nextSink" Type="System.Runtime.Remoting.Messaging.IMessageSink" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O objeto de servidor que fornece o coletor de mensagem que está para ser encadeadas na frente da cadeia de determinado.</param>
+        <param name="nextSink">A cadeia de Coletores composto até o momento.</param>
+        <summary>O coletor de mensagem do objeto de servidor fornecido na frente da cadeia do coletor fornecido se encadeia.</summary>
+        <returns>A cadeia de composição de coletor.</returns>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,119 @@
+<Type Name="DragDropEffects" FullName="System.Windows.DragDropEffects">
+  <TypeSignature Language="C#" Value="public enum DragDropEffects" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DragDropEffects extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.DragDropEffects" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os efeitos de uma operação do tipo "arrastar e soltar".</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.DragDropEffects All = int32(-2147483645)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDropEffects.All" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados são copiados, removidos da origem de arrasto e rolados na reprodução automática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="Copy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.DragDropEffects Copy = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDropEffects.Copy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados são copiados para a reprodução automática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Link">
+      <MemberSignature Language="C#" Value="Link" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.DragDropEffects Link = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDropEffects.Link" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados da fonte da operação arrastar são vinculados à reprodução automática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="Move" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.DragDropEffects Move = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDropEffects.Move" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os dados da fonte da operação arrastar são movidos para a reprodução automática.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.DragDropEffects None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDropEffects.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A reprodução automática não aceita os dados.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Scroll">
+      <MemberSignature Language="C#" Value="Scroll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.DragDropEffects Scroll = int32(-2147483648)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.DragDropEffects.Scroll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DragDropEffects</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Rolagem está prestes a iniciar ou está ocorrendo atualmente na reprodução automática.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

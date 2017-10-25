@@ -1,0 +1,137 @@
+<Type Name="LazyThreadSafetyMode" FullName="System.Threading.LazyThreadSafetyMode">
+  <TypeSignature Language="C#" Value="public enum LazyThreadSafetyMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LazyThreadSafetyMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Threading.LazyThreadSafetyMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como uma instância <see cref="T:System.Lazy`1" /> sincroniza o acesso entre vários threads.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta enumeração para especificar o `mode` parâmetro <xref:System.Lazy%601> construtores. Os efeitos de todos os construtores na sincronização de thread podem ser descritos em termos esta enumeração tenham ou não `mode` parâmetros.  
+  
+ Um <xref:System.Lazy%601> instância é inicializada por um método de inicialização especificado pelo usuário ou pelo construtor padrão para `T`. O método de inicialização for especificado o `valueFactory` parâmetro de um <xref:System.Lazy%601> construtor. O método retorna uma instância de `T`, que é o tipo que é instanciado lentamente pela instância do <xref:System.Lazy%601>. Se um construtor não tiver um `valueFactory` parâmetro, o construtor padrão para `T` é usado para inicializar o <xref:System.Lazy%601> instância. Em ambos os casos, a inicialização ocorre na primeira vez que você chamar o <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> propriedade.  
+  
+ Além de especificar a segurança de thread de um <xref:System.Lazy%601> instância, esta enumeração afeta o cache de exceções. Quando exceções são armazenados em cache para um <xref:System.Lazy%601> instância, você obtém apenas uma chance para inicializar a instância. Se uma exceção será lançada na primeira vez que você chamar o <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> propriedade, que a exceção é armazenado em cache e lançada novamente em todas as chamadas subsequentes para o <xref:System.Lazy%601.Value%2A?displayProperty=nameWithType> propriedade. A vantagem de exceções de cache é que qualquer dois threads sempre obtém o mesmo resultado, mesmo quando ocorrem erros.  
+  
+ Quando você especificar o modo de PublicationOnly, exceções nunca são armazenadas em cache. Quando você especificar nenhuma ou ExecutionAndPublication, cache depende se você especifica um método de inicialização ou permitir que o construtor padrão para `T` a ser usado. Especificar um método de inicialização permite o cache de exceções para esses dois modos. O método de inicialização pode ser muito simples. Por exemplo, ele pode chamar o construtor padrão para `T`: `new Lazy<Contents>(() => new Contents(), mode)` em C# ou `New Lazy(Of Contents)(Function() New Contents())` no Visual Basic. Se você usar um construtor que não especifica um método de inicialização, exceções que são geradas pelo construtor padrão para `T` não são armazenados em cache. A tabela a seguir resume o comportamento do cache de exceção.  
+  
+|Modo|Usando o método de inicialização|Usando o construtor padrão para`T`|  
+|----------|---------------------------------|---------------------------------------|  
+|Nenhum|Armazenado em cache|Não armazenado em cache|  
+|PublicationOnly|Não armazenado em cache|Não armazenado em cache|  
+|ExecutionAndPublication|Armazenado em cache|Não armazenado em cache|  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExecutionAndPublication">
+      <MemberSignature Language="C#" Value="ExecutionAndPublication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LazyThreadSafetyMode ExecutionAndPublication = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LazyThreadSafetyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os bloqueios são usados para garantir que apenas um único thread possa inicializar uma instância <see cref="T:System.Lazy`1" /> de uma forma thread-safe. Se o método de inicialização (ou o construtor padrão, se não houver nenhum método de inicialização) usa bloqueios internamente, deadlocks poderão ocorrer. Se você usar um construtor <see cref="T:System.Lazy`1" /> que especifica um método de inicialização (parâmetro <paramref name="valueFactory" />) e se o método de inicialização lança uma exceção (ou não consegue manipular uma exceção) na primeira vez que você chama a propriedade <see cref="P:System.Lazy`1.Value" /> e, em seguida, a exceção é armazenada em cache e gerada novamente em chamadas subsequentes para a propriedade <see cref="P:System.Lazy`1.Value" />. Se você usar um construtor <see cref="T:System.Lazy`1" /> que não especifica um método de inicialização, exceções que serão geradas pelo construtor padrão para <paramref name="T" /> não são armazenadas em cache. No caso, uma chamada subsequente para a propriedade <see cref="P:System.Lazy`1.Value" /> pode ser inicializada com êxito a <see cref="T:System.Lazy`1" /> instância. Se acessar recursivamente o método de inicialização, a propriedade <see cref="P:System.Lazy`1.Value" /> da instância <see cref="T:System.Lazy`1" />, uma <see cref="T:System.InvalidOperationException" /> será lançada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LazyThreadSafetyMode None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LazyThreadSafetyMode.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LazyThreadSafetyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A instância <see cref="T:System.Lazy`1" /> não é segura para thread; se a instância é acessada de vários threads, seu comportamento é indefinido. Use esse modo apenas quando o alto desempenho é fundamental e é garantido que a instância <see cref="T:System.Lazy`1" /> nunca será inicializada de mais de um thread. Se você usar um construtor <see cref="T:System.Lazy`1" /> que especifica um método de inicialização (parâmetro <paramref name="valueFactory" />) e se o método de inicialização lança uma exceção (ou não consegue manipular uma exceção) na primeira vez que você chama a propriedade <see cref="P:System.Lazy`1.Value" /> e, em seguida, a exceção é armazenada em cache e gerada novamente em chamadas subsequentes para a propriedade <see cref="P:System.Lazy`1.Value" />. Se você usar um construtor <see cref="T:System.Lazy`1" /> que não especifica um método de inicialização, exceções que serão geradas pelo construtor padrão para <paramref name="T" /> não são armazenadas em cache. No caso, uma chamada subsequente para a propriedade <see cref="P:System.Lazy`1.Value" /> pode ser inicializada com êxito a <see cref="T:System.Lazy`1" /> instância. Se acessar recursivamente o método de inicialização, a propriedade <see cref="P:System.Lazy`1.Value" /> da instância <see cref="T:System.Lazy`1" />, uma <see cref="T:System.InvalidOperationException" /> será lançada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicationOnly">
+      <MemberSignature Language="C#" Value="PublicationOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Threading.LazyThreadSafetyMode PublicationOnly = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Threading.LazyThreadSafetyMode.PublicationOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.LazyThreadSafetyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Quando vários threads tentam inicializar uma instância <see cref="T:System.Lazy`1" /> simultaneamente, todos os threads têm permissão para executar o método de inicialização (ou o construtor padrão, se não houver nenhum método de inicialização). O primeiro thread para concluir a inicialização define o valor da <see cref="T:System.Lazy`1" /> instância. Esse valor é retornado a outros threads que estavam executando simultaneamente o método de inicialização, a menos que o método de inicialização lance exceções nesses threads. Quaisquer instâncias de <paramref name="T" /> que foram criadas pelos threads concorrentes são descartadas. Se o método de inicialização lança uma exceção em qualquer thread, a exceção é propagada para fora da propriedade <see cref="P:System.Lazy`1.Value" /> nesse thread. A exceção não é armazenado em cache. O valor da <see cref="P:System.Lazy`1.IsValueCreated" /> propriedade permanece <see langword="false" />e as chamadas subsequentes para o <see cref="P:System.Lazy`1.Value" /> propriedade pelo thread em que a exceção foi lançada ou por outros threads, fazer com que o método de inicialização ser executado novamente. Se acessar recursivamente o método de inicialização, a propriedade <see cref="P:System.Lazy`1.Value" /> da instância <see cref="T:System.Lazy`1" />, nenhuma exceção será lançada.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

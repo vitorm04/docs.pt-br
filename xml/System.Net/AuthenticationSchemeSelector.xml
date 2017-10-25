@@ -1,0 +1,55 @@
+<Type Name="AuthenticationSchemeSelector" FullName="System.Net.AuthenticationSchemeSelector">
+  <TypeSignature Language="C#" Value="public delegate System.Net.AuthenticationSchemes AuthenticationSchemeSelector(HttpListenerRequest httpRequest);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AuthenticationSchemeSelector extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Net.AuthenticationSchemeSelector" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Net.HttpListener</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="httpRequest" Type="System.Net.HttpListenerRequest" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Net.AuthenticationSchemes</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="httpRequest">A instância <see cref="T:System.Net.HttpListenerRequest" /> para a qual selecionar um esquema de autenticação.</param>
+    <summary>Seleciona o esquema de autenticação para uma instância <see cref="T:System.Net.HttpListener" />.</summary>
+    <returns>Um dos valores <see cref="T:System.Net.AuthenticationSchemes" /> que indica o método de autenticação a ser usado para a solicitação do cliente especificado.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Delegados desse tipo são usados pelo <xref:System.Net.HttpListener> instâncias para selecionar um esquema de autenticação com base nas características de uma solicitação.  
+  
+ Um <xref:System.Net.AuthenticationSchemeSelector> representante é passado um <xref:System.Net.HttpListenerRequest> objeto para cada solicitação de entrada que não forneceu informações de autenticação. O método invocado, o representante usa o <xref:System.Net.HttpListenerRequest> objeto e qualquer outra informação disponível para decidir qual esquema de autenticação para exigir. O representante é especificado usando o <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa uma instância desse tipo para definir o <xref:System.Net.HttpListener.AuthenticationSchemeSelectorDelegate%2A> propriedade.  
+  
+ [!code-csharp[NCLListener#2](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#2)]
+ [!code-vb[NCLListener#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#2)]  
+  
+ O exemplo a seguir mostra a implementação do método invocado pelo <xref:System.Net.AuthenticationSchemeSelector> delegar no exemplo anterior.  
+  
+ [!code-csharp[NCLListener#1](~/samples/snippets/csharp/VS_Snippets_Remoting/NCLListener/CS/sample.cs#1)]
+ [!code-vb[NCLListener#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/NCLListener/vb/sample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

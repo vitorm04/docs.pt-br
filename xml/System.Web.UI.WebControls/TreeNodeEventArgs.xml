@@ -1,0 +1,105 @@
+<Type Name="TreeNodeEventArgs" FullName="System.Web.UI.WebControls.TreeNodeEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class TreeNodeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TreeNodeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.TreeNodeEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para o <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeCheckChanged" />, <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeCollapsed" />, <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeDataBound" />, <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodeExpanded" />, e <see cref="E:System.Web.UI.WebControls.TreeView.TreeNodePopulate" /> eventos o <see cref="T:System.Web.UI.WebControls.TreeView" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.TreeNodeEventArgs> classe é usada para armazenar os dados de evento que são passados para um método de manipulação de eventos.  
+  
+ Para obter uma lista dos valores de propriedade inicial para uma instância do <xref:System.Web.UI.WebControls.TreeNodeEventArgs> de classe, consulte <xref:System.Web.UI.WebControls.TreeNodeEventArgs.%23ctor%28System.Web.UI.WebControls.TreeNode%29>.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como preencher um nó dinamicamente usando a <xref:System.Web.UI.WebControls.TreeNodeEventArgs> objeto que é passado para o método de manipulação de eventos.  
+  
+ [!code-aspx-csharp[TreeViewPopulateNodesFromClient#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/CS/treeviewpopulatenodesfromclientcs.aspx#1)]
+ [!code-aspx-vb[TreeViewPopulateNodesFromClient#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewPopulateNodesFromClient/VB/treeviewpopulatenodesfromclientvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TreeNodeEventArgs (System.Web.UI.WebControls.TreeNode node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.TreeNode node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.TreeNodeEventArgs.#ctor(System.Web.UI.WebControls.TreeNode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="node" Type="System.Web.UI.WebControls.TreeNode" />
+      </Parameters>
+      <Docs>
+        <param name="node">Um <see cref="T:System.Web.UI.WebControls.TreeNode" /> que representa o nó atual quando o evento é gerado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.TreeNodeEventArgs" /> usando o objeto <see cref="T:System.Web.UI.WebControls.TreeNode" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TreeNodeEventArgs.%23ctor%2A> construtor para criar e inicializar uma nova instância do <xref:System.Web.UI.WebControls.TreeNodeEventArgs> classe.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.TreeNodeEventArgs.%23ctor%2A> construtor é usado principalmente por desenvolvedores de controle quando a geração de eventos.  
+  
+ A tabela a seguir mostra o valor da propriedade inicial para uma instância de <xref:System.Web.UI.WebControls.TreeNodeEventArgs> classe.  
+  
+|Propriedade|Valor inicial|  
+|--------------|-------------------|  
+|<xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A>|O <xref:System.Web.UI.WebControls.TreeNode> contidas no `node`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.TreeNode Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.TreeNode Node" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.TreeNodeEventArgs.Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.TreeNode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nó que gerou o evento.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.TreeNode" /> que representa o nó que gerou o evento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A> propriedade para acessar as propriedades do nó que gerou o evento. O <xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A> propriedade retorna um <xref:System.Web.UI.WebControls.TreeNode> do objeto e é normalmente usado para determinar o conteúdo do nó, para modificar as propriedades do nó, ou para adicionar nós filho dinamicamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.TreeNodeEventArgs.Node%2A> propriedade para determinar o valor de texto de um nó expandido.  
+  
+ [!code-aspx-csharp[TreeViewTreeNodeExpand#1](~/samples/snippets/csharp/VS_Snippets_WebNet/TreeViewTreeNodeExpand/CS/treeviewtreenodeexpandcs.aspx#1)]
+ [!code-aspx-vb[TreeViewTreeNodeExpand#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/TreeViewTreeNodeExpand/VB/treeviewtreenodeexpandvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,56 @@
+<Type Name="ExpandCollapsePattern+ExpandCollapsePatternInformation" FullName="System.Windows.Automation.ExpandCollapsePattern+ExpandCollapsePatternInformation">
+  <TypeSignature Language="C#" Value="public struct ExpandCollapsePattern.ExpandCollapsePatternInformation" />
+  <TypeSignature Language="ILAsm" Value=".class nested public sequential ansi sealed beforefieldinit ExpandCollapsePattern/ExpandCollapsePatternInformation extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation" />
+  <AssemblyInfo>
+    <AssemblyName>UIAutomationClient</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso aos valores de propriedade de um <see cref="T:System.Windows.Automation.ExpandCollapsePattern" /> objeto usando seu <see cref="P:System.Windows.Automation.ExpandCollapsePattern.Current" /> ou <see cref="P:System.Windows.Automation.ExpandCollapsePattern.Cached" /> acessadores.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ExpandCollapseState">
+      <MemberSignature Language="C#" Value="public System.Windows.Automation.ExpandCollapseState ExpandCollapseState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Automation.ExpandCollapseState ExpandCollapseState" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>UIAutomationClient</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Automation.ExpandCollapseState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Windows.Automation.ExpandCollapseState" /> do <see cref="T:System.Windows.Automation.AutomationElement" />.</summary>
+        <value>O <see cref="T:System.Windows.Automation.ExpandCollapseState" /> de <see cref="T:System.Windows.Automation.AutomationElement" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Automation.ExpandCollapseState>refere-se a visibilidade dos objetos de filho imediatos. ele não faz referência a visibilidade de todos os objetos descendentes.  
+  
+ O valor padrão é <xref:System.Windows.Automation.ExpandCollapseState.Expanded>.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, uma <xref:System.Windows.Automation.AutomationElement> que representa um item de menu é passado para uma função que tenta expandir ou recolher o item de menu com base na atual <xref:System.Windows.Automation.ExpandCollapseState>.  
+  
+ [!code-csharp[UIAExpandCollapsePattern_snip#101](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#101)]
+ [!code-vb[UIAExpandCollapsePattern_snip#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#101)]  
+[!code-csharp[UIAExpandCollapsePattern_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/CSharp/UIAExpandCollapsePattern_snippets.cs#102)]
+[!code-vb[UIAExpandCollapsePattern_snip#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UIAExpandCollapsePattern_snip/VisualBasic/UIAExpandCollapsePattern_snippets.vb#102)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

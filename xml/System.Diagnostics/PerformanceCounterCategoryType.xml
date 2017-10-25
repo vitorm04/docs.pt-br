@@ -1,0 +1,73 @@
+<Type Name="PerformanceCounterCategoryType" FullName="System.Diagnostics.PerformanceCounterCategoryType">
+  <TypeSignature Language="C#" Value="public enum PerformanceCounterCategoryType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PerformanceCounterCategoryType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceCounterCategoryType" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica se a categoria do contador de desempenho pode ter várias instâncias.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Há dois tipos de categorias de contador de desempenho: instância única e várias instâncias. Por padrão, uma categoria é uma instância única quando ele é criado e torna-se várias instâncias quando é adicionada a outra instância. Categorias são criadas quando um aplicativo está configurado e instâncias são adicionadas em tempo de execução. No .NET Framework versão 1.0 e 1.1 de versão, não é necessário saber se uma categoria de contador de desempenho é várias instâncias ou de instância única. No .NET Framework versão 2.0, o <xref:System.Diagnostics.PerformanceCounterCategoryType> enumeração é usada para indicar se um contador de desempenho pode ter várias instâncias.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MultiInstance">
+      <MemberSignature Language="C#" Value="MultiInstance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterCategoryType MultiInstance = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterCategoryType.MultiInstance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A categoria do contador de desempenho pode ter diversas instâncias.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SingleInstance">
+      <MemberSignature Language="C#" Value="SingleInstance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterCategoryType SingleInstance = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterCategoryType.SingleInstance" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A categoria do contador de desempenho pode ter apenas uma única instância.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceCounterCategoryType Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceCounterCategoryType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceCounterCategoryType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A funcionalidade de instância para a categoria do contador de desempenho é desconhecida.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

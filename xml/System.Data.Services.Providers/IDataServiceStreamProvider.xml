@@ -1,0 +1,330 @@
+<Type Name="IDataServiceStreamProvider" FullName="System.Data.Services.Providers.IDataServiceStreamProvider">
+  <TypeSignature Language="C#" Value="public interface IDataServiceStreamProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataServiceStreamProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Services.Providers.IDataServiceStreamProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Services</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Permite que os dados binários a ser acessados e alterados como um recurso de mídia que pertence a uma entidade que é uma entrada de link de mídia.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O Open Data Protocol (OData) permite que uma propriedade de dados binários de uma entidade exposta por um serviço de dados seja definido independentemente uma entrada em um feed usando um mecanismo baseado nas seguintes construções de dados:  
+  
+-   Recurso de mídia - os dados de objeto binário grande são dados binários, como um vídeo, áudio, imagens ou outros recursos de mídia.  
+  
+-   Entrada de link de mídia - uma entrada AtomPub em um feed de dados que representa uma entidade e que tem uma referência a um recurso de mídia relacionada.  
+  
+ Para obter mais informações, consulte [provedor Streaming](~/docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeleteStream">
+      <MemberSignature Language="C#" Value="public void DeleteStream (object entity, System.Data.Services.DataServiceOperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteStream(object entity, class System.Data.Services.DataServiceOperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream(System.Object,System.Data.Services.DataServiceOperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="operationContext" Type="System.Data.Services.DataServiceOperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="entity">O link de mídia entrada excluída.</param>
+        <param name="operationContext">O <see cref="T:System.Data.Services.DataServiceOperationContext" /> instância que processa a solicitação.</param>
+        <summary>Exclui o recurso de mídia associado quando uma entrada de link de mídia é excluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A> método fornece a implementação para excluir um recurso de mídia quando sua mídia associada entrada do link é excluída do serviço de dados. Para obter mais informações, consulte [provedor Streaming](~/docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Quando <paramref name="entity" /> ou <paramref name="operationContext" /> são <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Quando <paramref name="entity" /> não é uma entidade que tem uma propriedade binária em fluxo.</exception>
+        <exception cref="T:System.Data.Services.DataServiceException">Quando o fluxo associado a <paramref name="entity" /> não pode ser excluído.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReadStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetReadStream (object entity, string etag, Nullable&lt;bool&gt; checkETagForEquality, System.Data.Services.DataServiceOperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetReadStream(object entity, string etag, valuetype System.Nullable`1&lt;bool&gt; checkETagForEquality, class System.Data.Services.DataServiceOperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream(System.Object,System.String,System.Nullable{System.Boolean},System.Data.Services.DataServiceOperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="etag" Type="System.String" />
+        <Parameter Name="checkETagForEquality" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="operationContext" Type="System.Data.Services.DataServiceOperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade que é uma mídia de entrada com um recurso de mídia relacionada do link.</param>
+        <param name="etag">O valor de eTag enviado como parte da solicitação HTTP que é enviada para o serviço de dados.</param>
+        <param name="checkETagForEquality">Um valor nulo <see cref="T:System.Boolean" /> valor que determina se o serviço de dados tiver o tipo de eTag é usado.</param>
+        <param name="operationContext">O <see cref="T:System.Data.Services.DataServiceOperationContext" /> instância usada pelo serviço de dados para processar a solicitação.</param>
+        <summary>Retorna um fluxo que contém os dados de recurso de mídia para a entidade especificada, o que é uma media link entry.</summary>
+        <returns>Os dados <see cref="T:System.IO.Stream" /> que contém os dados de propriedade binária do <paramref name="entity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `eTag`é o valor de um cabeçalho If-Match ou If-None-Match. Há suporte para os seguintes valores:  
+  
+-   `true`-Quando o eTag representa um cabeçalho If-Match.  
+  
+-   `false`-Quando o eTag representa um cabeçalho If-None-Match.  
+  
+-   `null`-Quando um cabeçalho If-Match ou If-None-Match não está presente na solicitação.  
+  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> método é chamado pelo tempo de execução de serviço de dados para adquirir o fluxo que o serviço de dados retorna ao cliente quando o cliente solicita o recurso de mídia especificado `entity`, que é uma mídia de entrada de link. Para obter mais informações, consulte [provedor Streaming](~/docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReadStreamUri">
+      <MemberSignature Language="C#" Value="public Uri GetReadStreamUri (object entity, System.Data.Services.DataServiceOperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Uri GetReadStreamUri(object entity, class System.Data.Services.DataServiceOperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStreamUri(System.Object,System.Data.Services.DataServiceOperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="operationContext" Type="System.Data.Services.DataServiceOperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade que é uma mídia de entrada com um recurso de mídia relacionada do link.</param>
+        <param name="operationContext">O <see cref="T:System.Data.Services.DataServiceOperationContext" /> instância usada pelo serviço de dados para processar a solicitação.</param>
+        <summary>Retorna o URI que é usado para solicitar o recurso de mídia que pertence a entidade especificada.</summary>
+        <returns>Um <see cref="T:System.Uri" /> valor que é usado para solicitar o fluxo de dados binários.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStreamUri%2A> método é chamado pelo tempo de execução de serviço de dados para obter o URI que os clientes devem usar quando eles fizerem recuperar (ou seja, obter) solicitações para o recurso de mídia.  
+  
+ O <xref:System.Uri> valor retornado pelo <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStreamUri%2A> implementação do método é usada como edit-media link na entrada de link de mídia para referências a localização do recurso de mídia.  
+  
+ Quando a implementação do método retornará nula, o serviço de dados criará um padrão <xref:System.Uri>, que geralmente é o URI da entidade acrescentado com `/$value`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamContentType">
+      <MemberSignature Language="C#" Value="public string GetStreamContentType (object entity, System.Data.Services.DataServiceOperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetStreamContentType(object entity, class System.Data.Services.DataServiceOperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType(System.Object,System.Data.Services.DataServiceOperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="operationContext" Type="System.Data.Services.DataServiceOperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade que é uma mídia de entrada com um recurso de mídia relacionada do link.</param>
+        <param name="operationContext">O <see cref="T:System.Data.Services.DataServiceOperationContext" /> instância usada pelo serviço de dados para processar a solicitação.</param>
+        <summary>Retorna o tipo de conteúdo do recurso de mídia que pertence a entidade especificada.</summary>
+        <returns>Um válido tipo de conteúdo dos dados binários.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A> método é chamado no tempo de execução do serviço de dados para recuperar o tipo de conteúdo do recurso de mídia que pertence ao especificado `entity`. Use o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A> implementação do método para definir o tipo de conteúdo do recurso de mídia. Não defina diretamente o cabeçalho Content-Type seu <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementação de provedor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStreamETag">
+      <MemberSignature Language="C#" Value="public string GetStreamETag (object entity, System.Data.Services.DataServiceOperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetStreamETag(object entity, class System.Data.Services.DataServiceOperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag(System.Object,System.Data.Services.DataServiceOperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="operationContext" Type="System.Data.Services.DataServiceOperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade que é uma mídia de entrada com um recurso de mídia relacionada do link.</param>
+        <param name="operationContext">O <see cref="T:System.Data.Services.DataServiceOperationContext" /> instância usada pelo serviço de dados para processar a solicitação.</param>
+        <summary>Retorna o eTag do recurso de mídia que pertence à entrada de link de mídia especificado.</summary>
+        <returns>eTag do recurso de mídia associado a <paramref name="entity" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A> método é chamado, o tempo de execução do serviço de dados para recuperar o eTag do recurso de mídia que está associado com o `entity`.  
+  
+ Você deve implementar o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A> método para habilitar o serviço de dados gerenciar a simultaneidade para o recurso de mídia.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWriteStream">
+      <MemberSignature Language="C#" Value="public System.IO.Stream GetWriteStream (object entity, string etag, Nullable&lt;bool&gt; checkETagForEquality, System.Data.Services.DataServiceOperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream GetWriteStream(object entity, string etag, valuetype System.Nullable`1&lt;bool&gt; checkETagForEquality, class System.Data.Services.DataServiceOperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream(System.Object,System.String,System.Nullable{System.Boolean},System.Data.Services.DataServiceOperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entity" Type="System.Object" />
+        <Parameter Name="etag" Type="System.String" />
+        <Parameter Name="checkETagForEquality" Type="System.Nullable&lt;System.Boolean&gt;" />
+        <Parameter Name="operationContext" Type="System.Data.Services.DataServiceOperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="entity">A entidade que é uma mídia de entrada com um recurso de mídia relacionada do link.</param>
+        <param name="etag">O valor de eTag é enviado como parte da solicitação HTTP que é enviada para o serviço de dados.</param>
+        <param name="checkETagForEquality">Um valor nulo <see cref="T:System.Boolean" /> valor que indica o tipo de verificação de simultaneidade solicitada pelo cliente.</param>
+        <param name="operationContext">O <see cref="T:System.Data.Services.DataServiceOperationContext" /> instância que é usada pelo serviço de dados para processar a solicitação.</param>
+        <summary>Retorna o fluxo que o serviço de dados usa para gravar os dados binários para o recurso de mídia recebido do cliente que pertence a entidade especificada.</summary>
+        <returns>Uma opção válida <see cref="T:System.Stream" /> o serviço de dados usa para gravar o conteúdo de um binário de dados recebidos do cliente.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> método é chamado pelo tempo de execução de serviço de dados quando uma inserção ou a operação de atualização está sendo processada para o recurso de mídia que está associado com o `entity`.  
+  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> método nunca deve retornar um `null` valor.  
+  
+ O `operationContext` é fornecido como um argumento porque um implementador desse método de interface precisará de informações dos cabeçalhos de solicitação HTTP para criar um fluxo de gravação. Ao implementar esse método, você deve executar verificações de simultaneidade, conforme necessário. Se um cabeçalho de solicitação If-Match ou If-None-Match foi incluído na solicitação, o `etag` não será `null`. Nesse caso, esse método deve executar a verificação de simultaneidade apropriada. Se a verificação de simultaneidade passa, esse método deve retornar o fluxo solicitado. Se a simultaneidade verifica falhar, o método deve gerar um <xref:System.Data.Services.DataServiceException> com o código de resposta HTTP apropriado.  
+  
+ `eTag`é o valor de um cabeçalho If-Match ou If-None-Match.  
+  
+ Os seguintes valores de `checkETagForEquality` têm suporte:  
+  
+-   `true`-Quando o eTag representa um cabeçalho If-Match.  
+  
+-   `false`-Quando o eTag representa um cabeçalho If-None-Match.  
+  
+-   `null`-Quando um cabeçalho If-Match ou If-None-Match não está presente na solicitação.  
+  
+ Ao implementar esse método, não configure o tipo de conteúdo ou eTag cabeçalhos de resposta HTTP porque elas são definidas no tempo de execução do serviço de dados. Você pode definir os cabeçalhos de resposta HTTP restantes usando fornecido `operationContext`.  
+  
+ Ao implementar esse método, você só deve definir as propriedades em `operationContext` que são necessários para uma resposta bem-sucedida. Alterar outras propriedades em `operationContext` pode corromper a resposta do serviço de dados.  
+  
+ O tempo de execução do serviço de dados fecha o fluxo quando todos os bytes foram gravados com êxito para o fluxo. Se ocorrer um erro ao gravar no fluxo, o serviço de dados gera uma resposta de erro para o cliente.  
+  
+ Quando você implementa o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> método, você deverá aumentar as exceções a seguir, conforme indicado:  
+  
+|Tipo de exceção|Condição|  
+|--------------------|---------------|  
+|<xref:System.ArgumentNullException>|Quando `entity` ou `operationContext` são `null`.|  
+|<xref:System.ArgumentException>|Quando `entity` não tem uma propriedade binária.|  
+|<xref:System.Data.Services.DataServiceException>|Quando um fluxo válido não pode ser retornado.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveType">
+      <MemberSignature Language="C#" Value="public string ResolveType (string entitySetName, System.Data.Services.DataServiceOperationContext operationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ResolveType(string entitySetName, class System.Data.Services.DataServiceOperationContext operationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType(System.String,System.Data.Services.DataServiceOperationContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entitySetName" Type="System.String" />
+        <Parameter Name="operationContext" Type="System.Data.Services.DataServiceOperationContext" />
+      </Parameters>
+      <Docs>
+        <param name="entitySetName">Nome de conjunto de entidades totalmente qualificado.</param>
+        <param name="operationContext">O <see cref="T:System.Data.Services.DataServiceOperationContext" /> instância que é usada pelo serviço de dados para processar a solicitação.</param>
+        <summary>Retorna um nome de tipo qualificado para namespace que representa o tipo que o tempo de execução do serviço de dados deve criar para a entrada de link de mídia associada ao fluxo de dados do recurso de mídia que está sendo inserido.</summary>
+        <returns>Um nome de tipo qualificado por namespace.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A> método é chamado pelo serviço de dados quando uma nova entidade é uma entrada de link de mídia está sendo criada junto com seu recurso de mídia. Um implementador deste método deve inspecionar os cabeçalhos de solicitação no `operationContext` e retornar o nome de tipo qualificado de namespace que representa o tipo que o tempo de execução do serviço de dados deve criar uma instância para criar a mídia de entrada de link que está associada com o novo recurso de mídia. A cadeia de caracteres que representa o nome do tipo é passada para o <xref:System.Data.Services.IUpdatable.CreateResource%2A> método para criar a mídia de entrada de link.  
+  
+ Quando você implementa o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> método, você deverá aumentar as exceções a seguir, conforme indicado:  
+  
+|Tipo de exceção|Condição|  
+|--------------------|---------------|  
+|<xref:System.ArgumentNullException>|Quando `operationContext` é `null`.|  
+|<xref:System.Data.Services.DataServiceException>|Quando um nome de tipo de entidade não pode ser resolvido com base no `operationContext`.|  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StreamBufferSize">
+      <MemberSignature Language="C#" Value="public int StreamBufferSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StreamBufferSize" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Services.Providers.IDataServiceStreamProvider.StreamBufferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Services</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tamanho do buffer de fluxo.</summary>
+        <value>Inteiro que representa o tamanho do buffer.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tamanho do buffer padrão é 64 KB.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,335 @@
+<Type Name="XmlTextAttribute" FullName="System.Xml.Serialization.XmlTextAttribute">
+  <TypeSignature Language="C#" Value="public class XmlTextAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XmlTextAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.XmlTextAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property | System.AttributeTargets.Field | System.AttributeTargets.Parameter | System.AttributeTargets.ReturnValue)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica para o <see cref="T:System.Xml.Serialization.XmlSerializer" /> que o membro deve ser tratado como texto XML quando a classe que o contém é serializada ou desserializada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xml.Serialization.XmlTextAttribute> pertence a uma família de atributos que controla como o <xref:System.Xml.Serialization.XmlSerializer> serializa e desserializa um objeto (por meio de seu <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> e <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> métodos). Para obter uma lista completa de atributos semelhantes, consulte [atributos que controle a serialização XML](~/docs/standard/serialization/attributes-that-control-xml-serialization.md).  
+  
+ Apenas uma instância do <xref:System.Xml.Serialization.XmlTextAttribute> classe pode ser aplicada em uma classe.  
+  
+ Você pode aplicar o <xref:System.Xml.Serialization.XmlTextAttribute> campos públicos e propriedades públicas de leitura/gravação que retornam tipos primitivos e de enumeração.  
+  
+ Você pode aplicar o <xref:System.Xml.Serialization.XmlTextAttribute> para um campo ou propriedade que retorna uma matriz de cadeias de caracteres. Você também pode aplicar o atributo em uma matriz do tipo <xref:System.Object> , mas você deve definir o <xref:System.Xml.Serialization.XmlTextAttribute.Type%2A> propriedade de cadeia de caracteres. Nesse caso, as cadeias de caracteres inseridas na matriz são serializadas como texto XML.  
+  
+ O <xref:System.Xml.Serialization.XmlTextAttribute> também podem ser aplicadas a um campo que retorna um <xref:System.Xml.XmlNode> ou uma matriz de <xref:System.Xml.XmlNode> objetos.  
+  
+ Por padrão, o <xref:System.Xml.Serialization.XmlSerializer> serializa um membro de classe como um elemento XML. No entanto, se você aplicar o <xref:System.Xml.Serialization.XmlTextAttribute> para um membro, o <xref:System.Xml.Serialization.XmlSerializer> converte seu valor em texto XML. Isso significa que o valor é codificado para o conteúdo de um elemento XML.  
+  
+ O [ferramenta de definição de esquema XML (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) ocasionalmente gera o <xref:System.Xml.Serialization.XmlTextAttribute> durante a criação de classes de um arquivo de esquema XML XSD (definição). Isso ocorre quando o esquema contém um `complexType` com conteúdo misto; nesse caso, a classe correspondente contém um membro que retorna uma matriz de cadeia de caracteres para o qual o <xref:System.Xml.Serialization.XmlTextAttribute> é aplicada. Por exemplo, quando o `Xml Schema Definition` ferramenta processa este esquema:  
+  
+```  
+<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace=""   
+xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+  <xs:element name="LinkList" type="LinkList" />  
+  <xs:complexType name="LinkList" mixed="true">  
+    <xs:sequence>  
+      <xs:element minOccurs="1" maxOccurs="1" name="id" type="xs:int" />  
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />  
+      <xs:element minOccurs="0" maxOccurs="1" name="next" type="LinkList" />  
+    </xs:sequence>  
+  </xs:complexType>  
+</xs:schema>  
+```  
+  
+ a seguinte classe é gerada (espaços adicionais e comentários foram removidos):  
+  
+ [!code-csharp[XmlTextAttribute#0](~/samples/snippets/csharp/VS_Snippets_Remoting/XmlTextAttribute/cs/source.cs#0)]
+ [!code-vb[XmlTextAttribute#0](~/samples/snippets/visualbasic/VS_Snippets_Remoting/XmlTextAttribute/vb/source.vb#0)]  
+  
+ Para obter mais informações sobre o uso de atributos, consulte [atributos](~/docs/standard/attributes/index.md).  
+  
+> [!NOTE]
+>  Você pode usar a palavra `XmlText` em seu código em vez do mais <xref:System.Xml.Serialization.XmlTextAttribute>.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Classic XmlTextAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTextAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTextAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTextAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlTextAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlTextAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlTextAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode substituir a forma que o <xref:System.Xml.Serialization.XmlSerializer> serializa um campo público ou propriedade pública de leitura/gravação, criando um <xref:System.Xml.Serialization.XmlAttributes>e configuração de seu <xref:System.Xml.Serialization.XmlAttributes.XmlText%2A> propriedade para um <xref:System.Xml.Serialization.XmlTextAttribute>. Para obter mais detalhes, consulte o <xref:System.Xml.Serialization.XmlAttributeOverrides> classe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir serializa uma classe que contém um campo público, chamado `Comment`. O exemplo aplica um <xref:System.Xml.Serialization.XmlTextAttribute> para o campo, substituindo assim sua serialização como um elemento XML e, em vez disso, serialização, como texto XML.  
+  
+ [!code-cpp[Classic XmlTextAttribute.XmlTextAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTextAttribute.XmlTextAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTextAttribute.XmlTextAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTextAttribute.XmlTextAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTextAttribute.XmlTextAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTextAttribute.XmlTextAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlTextAttribute (Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.XmlTextAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="type">O <see cref="T:System.Type" /> do membro a ser serializado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Xml.Serialization.XmlTextAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode substituir a forma que o <xref:System.Xml.Serialization.XmlSerializer> serializa um campo público ou propriedade pública de leitura/gravação, criando um <xref:System.Xml.Serialization.XmlAttributes>e configuração de seu <xref:System.Xml.Serialization.XmlAttributes.XmlText%2A> propriedade para um <xref:System.Xml.Serialization.XmlTextAttribute>. Para obter mais detalhes, consulte o <xref:System.Xml.Serialization.XmlAttributeOverrides> classe.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Classic XmlTextAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTextAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTextAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTextAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataType">
+      <MemberSignature Language="C#" Value="public string DataType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataType" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTextAttribute.DataType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de dados XSD (Linguagem de Definição de Esquema XML) do texto gerado pelo <see cref="T:System.Xml.Serialization.XmlSerializer" />.</summary>
+        <value>Um tipo de dados de esquema XML (XSD), conforme definido pelo documento do World Wide Web Consortium (www.w3.org) denominado "XML Schema Part 2: Datatypes" (Esquema XML Parte 2: Tipos de dados).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Xml.Serialization.XmlTextAttribute.DataType%2A> propriedade para um tipo de dados simples do esquema XML afeta o formato do XML gerado. Por exemplo, definir a propriedade como "Data" faz com que o texto gerado sejam formatados em estilo geral de data, por exemplo: 2001-08-31. Por outro lado, definindo a propriedade como "dateTime" resultados em um instante específico conforme definido pela organização internacional de documento de padronização 8601, "Representações de datas e horas", por exemplo: 2001-08-15T06:59:11.0508456-07:00.  
+  
+ O efeito da configuração de <xref:System.Xml.Serialization.XmlTextAttribute.DataType%2A> propriedade também pode ser vista ao usar o [ferramenta de definição de esquema XML (Xsd.exe)](~/docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) para gerar o esquema XML para um arquivo compilado. Para obter mais informações sobre como usar a ferramenta, consulte [serialização de XML e a ferramenta de definição de esquema XML](~/docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md).  
+  
+ A tabela a seguir lista os tipos de dados simples do esquema XML com seus equivalentes do .NET.  
+  
+ O esquema XML `base64Binary` e `hexBinary` tipos de dados, use uma matriz de <xref:System.Byte> estruturas e aplicar um <xref:System.Xml.Serialization.XmlTextAttribute> com o <xref:System.Xml.Serialization.XmlTextAttribute.DataType%2A> definido como "base64Binary" ou "hexBinary", conforme apropriado. O esquema XML `time` e `date` tipos de dados, use o <xref:System.DateTime> digite e aplicar o <xref:System.Xml.Serialization.XmlTextAttribute> com o <xref:System.Xml.Serialization.XmlTextAttribute.DataType%2A> definido como "Data" ou "Hora".  
+  
+ Para cada tipo de dados de esquema XML que é mapeado para uma cadeia de caracteres, aplicar o <xref:System.Xml.Serialization.XmlTextAttribute> com seus <xref:System.Xml.Serialization.XmlTextAttribute.DataType%2A> propriedade definida para o tipo de dados de esquema XML. Observe que isso não altera o formato de serialização, somente o esquema para o membro.  
+  
+> [!NOTE]
+>  A propriedade diferencia maiusculas de minúsculas, portanto você deve configurá-lo exatamente a um dos tipos de dados de esquema XML.  
+  
+> [!NOTE]
+>  Elemento passando dados binários como um XML é mais eficiente do que passá-lo como um atributo XML.  
+  
+ Para obter mais informações sobre tipos de dados de esquema XML, consulte o documento de World Wide Web Consortium (www.w3.org) chamado "XML Schema Part 2: tipos de dados".  
+  
+|Tipo de dados XSD|Tipo de dados .NET|  
+|-------------------|--------------------|  
+|anyURI|<xref:System.String>|  
+|base64Binary|Matriz de <xref:System.Byte> objetos|  
+|boolean|<xref:System.Boolean>|  
+|byte|<xref:System.SByte>|  
+|date|<xref:System.DateTime>|  
+|dateTime|<xref:System.DateTime>|  
+|decimal|<xref:System.Decimal>|  
+|double|<xref:System.Double>|  
+|ENTITY|<xref:System.String>|  
+|ENTIDADES|<xref:System.String>|  
+|float|<xref:System.Single>|  
+|gDay|<xref:System.String>|  
+|gMonth|<xref:System.String>|  
+|gMonthDay|<xref:System.String>|  
+|gYear|<xref:System.String>|  
+|gYearMonth|<xref:System.String>|  
+|hexBinary|Matriz de <xref:System.Byte> objetos|  
+|ID|<xref:System.String>|  
+|IDREF|<xref:System.String>|  
+|IDREFS|<xref:System.String>|  
+|int|<xref:System.Int32>|  
+|inteiro|<xref:System.String>|  
+|linguagem|<xref:System.String>|  
+|long|<xref:System.Int64>|  
+|Nome|<xref:System.String>|  
+|NCName|<xref:System.String>|  
+|negativeInteger|<xref:System.String>|  
+|NMTOKEN|<xref:System.String>|  
+|NMTOKENS|<xref:System.String>|  
+|normalizedString|<xref:System.String>|  
+|nonNegativeInteger|<xref:System.String>|  
+|nonPositiveInteger|<xref:System.String>|  
+|NOTATION|<xref:System.String>|  
+|positiveInteger|<xref:System.String>|  
+|QName|<xref:System.Xml.XmlQualifiedName>|  
+|duration|<xref:System.String>|  
+|cadeia de caracteres|<xref:System.String>|  
+|short|<xref:System.Int16>|  
+|hora|<xref:System.DateTime>|  
+|Token|<xref:System.String>|  
+|unsignedByte|<xref:System.Byte>|  
+|unsignedInt|<xref:System.UInt32>|  
+|unsignedLong|<xref:System.UInt64>|  
+|unsignedShort|<xref:System.UInt16>|  
+  
+   
+  
+## Examples  
+ [!code-cpp[Classic XmlTextAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTextAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTextAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTextAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">O tipo de dados de esquema XML que você especificou não pode ser mapeado para o tipo de dados .NET.</exception>
+        <exception cref="T:System.InvalidOperationException">O tipo de dados de esquema XML que você especificou é inválido para a propriedade e não pode ser convertido para o tipo de membro.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Xml.Serialization.XmlTextAttribute.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.XmlSerializer</AssemblyName>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo do membro.</summary>
+        <value>O <see cref="T:System.Type" /> do membro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Type> propriedade só pode ser definida para tipos primitivos e enumerações.  
+  
+ O <xref:System.Xml.Serialization.XmlTextAttribute> também podem ser aplicadas a um campo que retorna um <xref:System.Xml.XmlNode> ou uma matriz de <xref:System.Xml.XmlNode> objetos.  
+  
+ Você pode aplicar o <xref:System.Xml.Serialization.XmlTextAttribute> para um campo ou propriedade que retorna uma matriz de cadeias de caracteres. Você também pode aplicar o atributo em uma matriz do tipo <xref:System.Object> , mas você deve definir o <xref:System.Xml.Serialization.XmlTextAttribute.Type%2A> propriedade de cadeia de caracteres. Nesse caso, as cadeias de caracteres inseridas na matriz são serializadas como texto XML.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Classic XmlTextAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic XmlTextAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Classic XmlTextAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic XmlTextAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Classic XmlTextAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,377 @@
+<Type Name="IListContract&lt;T&gt;" FullName="System.AddIn.Contract.IListContract&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IListContract&lt;T&gt; : System.AddIn.Contract.IContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IListContract`1&lt;T&gt; implements class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.IListContract`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">O tipo de contrato dos objetos na lista.</typeparam>
+    <summary>Representa uma lista genérica de tipos que são definidos por um contrato e são usadas para passar coleções desse tipo de contrato entre um host e um suplemento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Pipeline.CollectionAdapters> classe usa um <xref:System.AddIn.Contract.IListContract%601> interface para passar coleções, nas duas direções, entre o host e o suplemento. É recomendável que você use o <xref:System.AddIn.Pipeline.CollectionAdapters> classe em vez de usar essa classe diretamente no seu código. Para obter um exemplo, consulte [passo a passo: passando coleções entre Hosts e suplementos](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5).  
+  
+ Essa classe pode ser usada para passar objetos por referência entre domínios de aplicativo, porque os objetos não são serializados.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a adicionar.</param>
+        <summary>Adiciona um objeto para um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `item` parâmetro deve ser de um tipo definido pelo contrato.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os objetos de um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a ser pesquisado na coleção.</param>
+        <summary>Determina se um item específico está em um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <returns>
+          <see langword="true" />Se <paramref name="item" /> está na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCount">
+      <MemberSignature Language="C#" Value="public int GetCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.GetCount" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o número de itens em uma <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <returns>Número de itens na coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumeratorContract">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.IEnumeratorContract&lt;T&gt; GetEnumeratorContract ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.AddIn.Contract.IEnumeratorContract`1&lt;!T&gt; GetEnumeratorContract() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.GetEnumeratorContract" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IEnumeratorContract&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio de um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.IEnumeratorContract`1" /> enumerador para iteração pela coleção.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsReadOnly">
+      <MemberSignature Language="C#" Value="public bool GetIsReadOnly ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool GetIsReadOnly() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.GetIsReadOnly" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção é somente leitura.</summary>
+        <returns>
+          <see langword="true" /> se a coleção for somente leitura; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetItem">
+      <MemberSignature Language="C#" Value="public T GetItem (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !T GetItem(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.GetItem(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero do item para obter.</param>
+        <summary>Retorna o item no índice especificado de uma <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <returns>O item no índice especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Contract.IListContract%601.GetItem%2A> método não remove o item no índice especificado. Para remover um item do <xref:System.AddIn.Contract.IListContract%601> coleção, use o <xref:System.AddIn.Contract.IListContract%601.RemoveAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" />é igual a ou maior que o valor de retorno <see cref="M:System.AddIn.Contract.IListContract`1.GetCount" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.IndexOf(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um item na coleção.</param>
+        <summary>Retorna o índice de um item específico em um <see cref="T:System.AddIn.Contract.Collections.IListContract`1" /> coleção.</summary>
+        <returns>O índice do item especificado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver vários objetos do mesmo tipo na coleção, esse método identifica o índice do item que é a primeira ocorrência do tipo especificado na coleção.  
+  
+ O <xref:System.AddIn.Contract.IListContract%601.GetItem%2A> método não remove o item no índice especificado. Para remover um item do <xref:System.AddIn.Contract.IListContract%601> coleção, use o <xref:System.AddIn.Contract.IListContract%601.RemoveAt%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" />é igual a ou maior que o valor de retorno de <see cref="M:System.AddIn.Contract.IListContract`1.GetCount" /> método.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.Insert(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual inserir <c>item</c>.</param>
+        <param name="item">O <see cref="T:System.AddIn.Contract.IContract" /> objeto a ser inserido no <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</param>
+        <summary>Insere um item no índice especificado em um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de chamar o <xref:System.AddIn.Contract.IListContract%601.Insert%2A> método, os itens que seguem o ponto de inserção mover para acomodar o novo item. Os índices dos itens que são movidos também são atualizados. Para substituir um item em um índice especificado, use o <xref:System.AddIn.Contract.IListContract%601.SetItem%2A> método.  
+  
+ Para determinar se um <xref:System.AddIn.Contract.IListContract%601> coleção é somente leitura, chame o <xref:System.AddIn.Contract.IListContract%601.GetIsReadOnly%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" />é igual a ou maior que o valor de retorno <see cref="M:System.AddIn.Contract.IListContract`1.GetCount" />.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção <see cref="T:System.AddIn.Contract.IListContract`1" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="item">O item a ser removido da coleção.</param>
+        <summary>Remove um item de um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção de um tipo especificado.</summary>
+        <returns>
+          <see langword="true" />Se um item for removido; Caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve repetir esse método para cada objeto de um tipo específico na coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice do item a ser removido.</param>
+        <summary>Remove o item no índice especificado em um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de chamar <xref:System.AddIn.Contract.IListContract%601.RemoveAt%2A>, mover os itens que seguem o item removido para ocupar o ponto vagas. Os índices dos itens que são movidos também são atualizados.  
+  
+ Para determinar se um <xref:System.AddIn.Contract.IListContract%601> coleção é somente leitura, chame o <xref:System.AddIn.Contract.IListContract%601.GetIsReadOnly%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" />é igual a ou maior que o valor de retorno de <see cref="M:System.AddIn.Contract.IListContract`1.GetCount" /> método.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção <see cref="T:System.AddIn.Contract.IListContract`1" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetItem">
+      <MemberSignature Language="C#" Value="public void SetItem (int index, T item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetItem(int32 index, !T item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.IListContract`1.SetItem(System.Int32,`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero no qual definir o item.</param>
+        <param name="item">O item a ser definido no índice especificado.</param>
+        <summary>Define o item no índice especificado em um <see cref="T:System.AddIn.Contract.IListContract`1" /> coleção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.AddIn.Contract.IListContract%601.SetItem%2A> método define o item no índice especificado. Para adicionar um item para o <xref:System.AddIn.Contract.IListContract%601> coleção, use o <xref:System.AddIn.Contract.IListContract%601.Insert%2A> método.  
+  
+ Para determinar se um <xref:System.AddIn.Contract.IListContract%601> coleção é somente leitura, chame o <xref:System.AddIn.Contract.IListContract%601.GetIsReadOnly%2A> método.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">
+          <paramref name="index" /> é menor que zero.  
+  
+ -ou-  
+  
+ <paramref name="index" />é igual a ou maior que o valor de retorno de <see cref="M:System.AddIn.Contract.IListContract`1.GetCount" /> método.</exception>
+        <exception cref="T:System.NotSupportedException">A coleção <see cref="T:System.AddIn.Contract.IListContract`1" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

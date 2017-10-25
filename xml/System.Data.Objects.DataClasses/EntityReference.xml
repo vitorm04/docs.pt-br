@@ -1,0 +1,63 @@
+<Type Name="EntityReference" FullName="System.Data.Objects.DataClasses.EntityReference">
+  <TypeSignature Language="C#" Value="public abstract class EntityReference : System.Data.Objects.DataClasses.RelatedEnd" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract serializable beforefieldinit EntityReference extends System.Data.Objects.DataClasses.RelatedEnd" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Objects.DataClasses.EntityReference" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Objects.DataClasses.RelatedEnd</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.Serialization.DataContract</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Classe base que implementa a funcionalidade não genérica para um <see cref="T:System.Data.Objects.DataClasses.EntityReference`1" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Objects.DataClasses.EntityReference> classe expõe o <xref:System.Data.EntityKey> do objeto relacionado e é uma classe base para o <xref:System.Data.Objects.DataClasses.EntityReference%601> classe. Um <xref:System.Data.Objects.DataClasses.EntityReference%601> objeto é retornado por uma propriedade de navegação quando relacionado final tenha uma multiplicidade de zero ou um. Para obter mais informações, consulte [elemento NavigationProperty (CSDL)](http://msdn.microsoft.com/en-us/5829a238-a50e-4c81-901d-7b54fc00f27e).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EntityKey">
+      <MemberSignature Language="C#" Value="public System.Data.EntityKey EntityKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.EntityKey EntityKey" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Objects.DataClasses.EntityReference.EntityKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.Serialization.DataMember</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.EntityKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna a chave para o objeto relacionado.</summary>
+        <value>Um <see cref="T:System.Data.EntityKey" /> que é a chave do objeto relacionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ter a chave do objeto relacionada disponíveis na entidade do <xref:System.Data.Objects.DataClasses.EntityReference> objeto torna mais fácil retornar informações sobre o objeto relacionado sem ter de carregá-lo da fonte de dados.  
+  
+ Expondo o <xref:System.Data.EntityKey> do objeto relacionado no <xref:System.Data.Objects.DataClasses.EntityReference> objeto também permite que o objeto de serviço criar uma associação entre dois objetos anexados e excluir um objeto sem a necessidade de carregar as extremidades relacionadas dinamicamente. Para obter mais informações, consulte [criando, adicionando, modificando e excluindo objetos](http://msdn.microsoft.com/en-us/f76f1fad-c553-4b59-820b-89b3dec2fad1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,601 @@
+<Type Name="CounterType" FullName="System.Diagnostics.PerformanceData.CounterType">
+  <TypeSignature Language="C#" Value="public enum CounterType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CounterType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Diagnostics.PerformanceData.CounterType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Define os possíveis tipos de contadores. Cada contador é atribuído um tipo de contador. O tipo de contador determina como os dados do contador são calculados, calculados e exibidos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter detalhes sobre os tipos listados nesta enumeração, consulte a seção tipos de contador de [Kit de implantação do Windows Server 2003](http://go.microsoft.com/FWLink/?LinkId=84422).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AverageBase">
+      <MemberSignature Language="C#" Value="AverageBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType AverageBase = int32(1073939458)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.AverageBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este contador é usado como os dados básicos (denominador) na computação da hora ou contagem calcula a média para o <see cref="F:System.Diagnostics.PerformanceData.CounterType.AverageCount64" /> e <see cref="F:System.Diagnostics.PerformanceData.CounterType.AverageTimer32" /> tipos de contador. Esse tipo de contador coleta apenas o último valor observado. (Consulte o tipo de contador PERF_AVERAGE_BASE no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AverageCount64">
+      <MemberSignature Language="C#" Value="AverageCount64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType AverageCount64 = int32(1073874176)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.AverageCount64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra quantos itens são processados, em média, durante uma operação. Contadores desse tipo exibem uma taxa de itens processados (como bytes enviados) para o número de operações concluídas. O índice é calculado ao comparar o número de itens processados durante o último intervalo para o número de operações concluídas durante o último intervalo. (Consulte o tipo de contador PERF_AVERAGE_BULK no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AverageTimer32">
+      <MemberSignature Language="C#" Value="AverageTimer32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType AverageTimer32 = int32(805438464)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.AverageTimer32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mede o tempo médio necessário para concluir um processo ou operação. Contadores desse tipo exibem um índice do tempo total decorrido do intervalo de amostragem para o número de processos ou operações concluídas durante esse período. Esse tipo de contador mede o tempo em tiques do relógio do sistema. (Consulte o tipo de contador PERF_AVERAGE_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta32">
+      <MemberSignature Language="C#" Value="Delta32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType Delta32 = int32(4195328)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.Delta32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra a alteração no atributo medido entre os dois intervalos de amostra mais recentes. (Consulte o tipo de contador PERF_COUNTER_DELTA no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delta64">
+      <MemberSignature Language="C#" Value="Delta64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType Delta64 = int32(4195584)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.Delta64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra a alteração no atributo medido entre os dois intervalos de amostra mais recentes. É o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.Delta32" /> do contador de tipo, exceto que ele usa campos maior para acomodar os valores maiores. (Consulte o tipo de contador PERF_COUNTER_LARGE_DELTA no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ElapsedTime">
+      <MemberSignature Language="C#" Value="ElapsedTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType ElapsedTime = int32(807666944)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.ElapsedTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o tempo total entre quando o componente ou processo iniciado e a hora em que esse valor é calculado. (Consulte o tipo de contador PERF_ELAPSED_TIME no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LargeQueueLength">
+      <MemberSignature Language="C#" Value="LargeQueueLength" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType LargeQueueLength = int32(4523264)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.LargeQueueLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador monitora a duração média de uma fila para um recurso ao longo do tempo. Contadores desse tipo mostram a diferença entre os tamanhos de fila observados durante os últimos dois intervalos de amostragem divididos pela duração do intervalo. Esse tipo de contador é o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.QueueLength" /> do contador de tipo, exceto que ele usa campos maior para acomodar os valores maiores. (Consulte o tipo de contador PERF_COUNTER_LARGE_QUEUELEN_TYPE no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerBase">
+      <MemberSignature Language="C#" Value="MultiTimerBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerBase = int32(1107494144)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica o número de itens de amostra. Ele é usado como o denominador nos cálculos para obter uma média entre os itens de amostra quando intervalos de várias, mas semelhante, itens. Esse tipo suporta os seguintes tipos de contador: <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive" />, <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive" />, <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive100Ns" />, e <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive100Ns" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageActive">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageActive = int32(574686464)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador é um multitimer. Multitimers coletar dados de mais de uma instância de um componente, como um processador ou um disco. Os contadores deste tipo de exibem o tempo de atividade de um ou mais componentes como uma porcentagem do tempo total do intervalo de amostragem. Como o numerador registra o tempo de atividade de componentes operacionais ao mesmo tempo, o percentual resultante pode exceder 100 por cento. Esse tipo de contador difere do <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive100Ns" /> em que ela mede o tempo em unidades de tiques de timer de desempenho do sistema, em vez de em unidades de 100 nanossegundos. (Consulte o tipo de contador PERF_COUNTER_MULTI_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageActive100Ns">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageActive100Ns = int32(575735040)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o tempo de atividade de um ou mais componentes como uma porcentagem do tempo total do intervalo de amostragem. Ela mede o tempo em unidades de 100 nanossegundos. Esse tipo de contador é um multitimer. Multitimers são projetados para monitorar mais de uma instância de um componente, como um processador ou um disco. (Consulte o tipo de contador PERF_100NSEC_MULTI_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageNotActive">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageNotActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageNotActive = int32(591463680)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o tempo de atividade de um ou mais componentes como uma porcentagem do tempo total do intervalo de amostragem. Esse tipo de contador é um multitimer inverso. Multitimers monitorar mais de uma instância de um componente, como um processador ou um disco. Contadores inversas medem o tempo que um componente não está ativo e derivam o tempo de atividade essa medida. Esse contador é diferente do <see cref="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive100Ns" /> em que ela mede o tempo em unidades de tiques de timer de desempenho do sistema, em vez de em unidades de 100 nanossegundos. (Consulte o tipo de contador PERF_COUNTER_MULTI_TIMER_INV no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiTimerPercentageNotActive100Ns">
+      <MemberSignature Language="C#" Value="MultiTimerPercentageNotActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType MultiTimerPercentageNotActive100Ns = int32(592512256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.MultiTimerPercentageNotActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o tempo de atividade de um ou mais componentes como uma porcentagem do tempo total do intervalo de amostragem. Contadores de tempo esse tipo em unidades de 100 nanossegundos. Esse tipo de contador é um multitimer inverso. Multitimers são projetados para monitorar mais de uma instância de um componente, como um processador ou um disco. Contadores inversas medem o tempo que um componente não está ativo e seu tempo ativo é derivada da medida de tempo de inatividade. (Consulte o tipo de contador PERF_100NSEC_MULTI_TIMER_INV no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectSpecificTimer">
+      <MemberSignature Language="C#" Value="ObjectSpecificTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType ObjectSpecificTimer = int32(543229184)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.ObjectSpecificTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador de 64 bits é um temporizador que exibe em unidades específicas do objeto. (Consulte o tipo de contador PERF_OBJ_TIME_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageActive">
+      <MemberSignature Language="C#" Value="PercentageActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageActive = int32(541132032)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o tempo médio que um componente estava ativo como uma porcentagem do tempo total de exemplo. (Consulte o tipo de contador PERF_COUNTER_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageActive100Ns">
+      <MemberSignature Language="C#" Value="PercentageActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageActive100Ns = int32(542180608)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o tempo de atividade de um componente como uma porcentagem do tempo total decorrido do intervalo de amostragem. Ela mede o tempo, em unidades de 100 nanossegundos. Contadores desse tipo são projetados para medir a atividade de um componente por vez. (Consulte o tipo de contador PERF_100NSEC_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageNotActive">
+      <MemberSignature Language="C#" Value="PercentageNotActive" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageNotActive = int32(557909248)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageNotActive" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Este é um tipo de contador inverso. Contadores inversas medem o tempo que um componente não está ativo e derivam o tempo de atividade essa medida. Os contadores deste tipo exibem a porcentagem média de tempo observado durante o intervalo de amostragem. O valor desses contadores é calculado pelo monitoramento do percentual de tempo que o serviço está inativo e pela subtração desse valor de 100%. Esse tipo de contador é o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.PercentageNotActive100Ns" /> do contador de tipo, exceto que ela mede o tempo em unidades de tiques de timer de desempenho do sistema, em vez de em unidades de 100 nanossegundos. (Consulte o tipo de contador PERF_COUNTER_TIMER_INV no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PercentageNotActive100Ns">
+      <MemberSignature Language="C#" Value="PercentageNotActive100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PercentageNotActive100Ns = int32(558957824)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PercentageNotActive100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o percentual médio de tempo de atividade observado durante o intervalo de amostragem. Este é um contador inverso. Contadores inversas são calculados pelo monitoramento a porcentagem de tempo que o serviço está inativo e subtraindo esse valor de 100%. (Consulte o tipo de contador PERF_100NSEC_TIMER_INV no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrecisionObjectSpecificTimer">
+      <MemberSignature Language="C#" Value="PrecisionObjectSpecificTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PrecisionObjectSpecificTimer = int32(543622400)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PrecisionObjectSpecificTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra um valor que consiste em dois valores de contador: a contagem de tempo decorrido do evento que está sendo monitorado e a frequência especificada no campo PerfFreq de cabeçalho do objeto. Esse tipo de contador é diferente de outros timers de contador, o valor de escala de relógio acompanha o valor do contador para eliminar qualquer diferença possível devido à latência na chamada de função. Tipos de contador precisão são usados quando os temporizadores de sistema padrão não são precisos para leituras precisas. (Consulte o tipo de contador PERF_PRECISION_OBJECT_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrecisionSystemTimer">
+      <MemberSignature Language="C#" Value="PrecisionSystemTimer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PrecisionSystemTimer = int32(541525248)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PrecisionSystemTimer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra um valor que consiste em dois valores de contador: a contagem de tempo decorrido do evento que está sendo monitorado e a frequência do que o timer de desempenho do sistema. Esse tipo de contador difere outros timers de contador em que o valor de escala de relógio acompanha o valor do contador, eliminando qualquer diferença possível devido à latência na chamada de função. Tipos de contador precisão são usados quando os temporizadores de sistema padrão não são precisos para leituras precisas. (Consulte o tipo de contador PERF_PRECISION_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrecisionTimer100Ns">
+      <MemberSignature Language="C#" Value="PrecisionTimer100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType PrecisionTimer100Ns = int32(542573824)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.PrecisionTimer100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra um valor que consiste em dois valores de contador: a contagem de tempo decorrido do evento que está sendo monitorado e a parte "Hora" de um timer privada nas mesmas unidades. Ela mede o tempo em unidades de 100 nanossegundos. Esse tipo de contador é diferente de outros timers de contador, o valor de escala de relógio acompanha o valor do contador eliminar qualquer diferença possível devido à latência na chamada de função. Tipos de contador precisão são usados quando os temporizadores de sistema padrão não são precisos para leituras precisas. (Consulte o tipo de contador PERF_PRECISION_100NS_TIMER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueLength">
+      <MemberSignature Language="C#" Value="QueueLength" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType QueueLength = int32(4523008)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.QueueLength" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador foi projetado para monitorar a duração média de uma fila para um recurso ao longo do tempo. Ele mostra a diferença entre os tamanhos de fila observados durante os últimos dois intervalos de amostragem divididos pela duração do intervalo. (Consulte o tipo de contador PERF_COUNTER_QUEUELEN_TYPE no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueLength100Ns">
+      <MemberSignature Language="C#" Value="QueueLength100Ns" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType QueueLength100Ns = int32(5571840)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.QueueLength100Ns" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mede o produto de ligação de comprimento da fila usando uma base de tempo de 100 nanossegundos. (Consulte o tipo de contador PERF_COUNTER_100NS_QUEUELEN_TYPE no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="QueueLengthObjectTime">
+      <MemberSignature Language="C#" Value="QueueLengthObjectTime" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType QueueLengthObjectTime = int32(6620416)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.QueueLengthObjectTime" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mede o produto de ligação de comprimento da fila usando uma base de tempo específica de objetos. (Consulte o tipo de contador PERF_COUNTER_OBJ_QUEUELEN_TYPE no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RateOfCountPerSecond32">
+      <MemberSignature Language="C#" Value="RateOfCountPerSecond32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RateOfCountPerSecond32 = int32(272696320)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RateOfCountPerSecond32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o número médio de operações concluídas durante a cada segundo intervalo de exemplo. Contadores desse tipo medem o tempo em tiques do relógio do sistema. (Consulte o tipo de contador PERF_COUNTER_COUNTER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RateOfCountPerSecond64">
+      <MemberSignature Language="C#" Value="RateOfCountPerSecond64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RateOfCountPerSecond64 = int32(272696576)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RateOfCountPerSecond64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o número médio de operações concluídas durante a cada segundo intervalo de exemplo. Contadores desse tipo medem o tempo em tiques do relógio do sistema. Esse tipo de contador é o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.RateOfCountPerSecond32" /> tipo, mas usa campos maior para acomodar os valores maiores. (Consulte o tipo de contador PERF_COUNTER_BULK_COUNT no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawBase32">
+      <MemberSignature Language="C#" Value="RawBase32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawBase32 = int32(1073939459)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawBase32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador coleta apenas o último valor observado. O valor é usado como o denominador de um contador que apresenta uma fração de aritmética geral. Esse tipo oferece suporte a <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawFraction32" /> tipo do contador. (Consulte o tipo de contador PERF_RAW_BASE no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawBase64">
+      <MemberSignature Language="C#" Value="RawBase64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawBase64 = int32(1073939712)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawBase64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador coleta o último valor observado. É o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawBase32" /> contador tipo, exceto que ele usa campos maior para acomodar os valores maiores. Esse tipo oferece suporte a <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawFraction64" /> tipo do contador. (Consulte o tipo de contador PERF_LARGE_RAW_BASE no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawData32">
+      <MemberSignature Language="C#" Value="RawData32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawData32 = int32(65536)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawData32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra apenas o último valor observado. Ele não exiba uma média. (Consulte o tipo de contador PERF_COUNTER_RAWCOUNT no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawData64">
+      <MemberSignature Language="C#" Value="RawData64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawData64 = int32(65792)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawData64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o último valor observado, não é uma média. É o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawData32" /> do contador de tipo, exceto que ele usa campos maior para acomodar os valores maiores. (Consulte o tipo de contador PERF_COUNTER_LARGE_RAWCOUNT no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawDataHex32">
+      <MemberSignature Language="C#" Value="RawDataHex32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawDataHex32 = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawDataHex32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o valor observado mais recentemente, em formato hexadecimal. Ele não exiba uma média. (Consulte o tipo de contador PERF_COUNTER_RAWCOUNT_HEX no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawDataHex64">
+      <MemberSignature Language="C#" Value="RawDataHex64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawDataHex64 = int32(256)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawDataHex64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o último valor observado, em formato hexadecimal. É o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawDataHex32" /> do contador de tipo, exceto que ele usa campos maior para acomodar os valores maiores. (Consulte o tipo de contador PERF_COUNTER_LARGE_RAWCOUNT_HEX no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawFraction32">
+      <MemberSignature Language="C#" Value="RawFraction32" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawFraction32 = int32(537003008)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawFraction32" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra a taxa de um subconjunto de seu conjunto como uma porcentagem. Por exemplo, ele compara o número de bytes em uso em um disco ao número total de bytes no disco. Contadores desse tipo exibem o percentual atual apenas, não uma média ao longo do tempo. (Consulte o tipo de contador PERF_RAW_FRACTION no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RawFraction64">
+      <MemberSignature Language="C#" Value="RawFraction64" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType RawFraction64 = int32(537003264)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.RawFraction64" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra a taxa de um subconjunto de seu conjunto como uma porcentagem. Por exemplo, ele compara o número de bytes em uso em um disco ao número total de bytes no disco. Contadores desse tipo exibem o percentual atual apenas, não uma média ao longo do tempo. É o mesmo que o <see cref="F:System.Diagnostics.PerformanceData.CounterType.RawFraction32" /> do contador de tipo, exceto que ele usa campos maior para acomodar os valores maiores.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleBase">
+      <MemberSignature Language="C#" Value="SampleBase" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType SampleBase = int32(1073939457)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.SampleBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse contador armazena o número de interrupções de amostragem executada e é usado como um denominador de fração de amostragem. Esse tipo oferece suporte a <see cref="F:System.Diagnostics.PerformanceData.CounterType.SampleFraction" /> tipo do contador.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleCounter">
+      <MemberSignature Language="C#" Value="SampleCounter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType SampleCounter = int32(4260864)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.SampleCounter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra o número médio de operações concluídas em um segundo. Ele mede o tempo, em unidades de tiques do timer de desempenho do sistema. A variável F representa o número de tiques que ocorrem em um segundo. O valor de F é acrescentado à equação para que o resultado é exibido em segundos. (Consulte o tipo de contador PERF_SAMPLE_COUNTER no kit de implantação).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleFraction">
+      <MemberSignature Language="C#" Value="SampleFraction" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Diagnostics.PerformanceData.CounterType SampleFraction = int32(549585920)" />
+      <MemberSignature Language="DocId" Value="F:System.Diagnostics.PerformanceData.CounterType.SampleFraction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.PerformanceData.CounterType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Esse tipo de contador mostra a taxa média de visitas a todas as operações durante os últimos dois intervalos de amostra. (Consulte o tipo de contador PERF_SAMPLE_FRACTION no kit de implantação).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

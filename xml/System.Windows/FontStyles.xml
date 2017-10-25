@@ -1,0 +1,145 @@
+<Type Name="FontStyles" FullName="System.Windows.FontStyles">
+  <TypeSignature Language="C#" Value="public static class FontStyles" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FontStyles extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.FontStyles" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de valores estáticos predefinidos <see cref="T:System.Windows.FontStyle" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um estilo de fonte se refere a inclinação de uma fonte: normal, itálico e oblíquo.  
+  
+|Estilo da fonte|Descrição|  
+|----------------|-----------------|  
+|Normal|Os caracteres em uma fonte normal ou roman, são vertical.|  
+|Italic|Os caracteres em uma fonte em itálico são realmente inclinados e aparecem como eles foram criados.|  
+|Oblíqua|Os caracteres em uma fonte oblíqua são artificialmente inclinados|  
+  
+ Para <xref:System.Windows.FontStyles.Oblique%2A>, a inclinação é obtida executando uma transformação de distorção de caracteres de uma fonte normal. Quando uma fonte em itálico real não está disponível em um computador ou impressora, um estilo Oblíquo pode ser gerado a partir da fonte normal e usado para simular uma fonte em itálico.  
+  
+ A ilustração a seguir mostra os estilos de fonte normal, itálico e Oblíquo para a fonte Palatino Linotype. Observe como o estilo de fonte em itálico tem uma mais fluindo e visualmente atraentes aparência que o estilo de fonte Oblíqua, que simplesmente é criada por meio da inclinação a versão de estilo de fonte normal do texto.  
+  
+ ![estilos de fonte normal, itálico e Oblíquo](~/add/media/fontstyle01.PNG "estilos de fonte normal, itálico e Oblíquo")  
+Exemplo de estilos de fonte  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, <xref:System.Windows.FontStyles.Normal%2A>, <xref:System.Windows.FontStyles.Italic%2A>, e <xref:System.Windows.FontStyles.Oblique%2A> são usadas para definir os estilos de fonte para o <xref:System.Windows.Controls.TextBlock> objetos.  
+  
+ [!code-xaml[FontSnippets#FontStyleSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml#fontstylesnippet1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Italic">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle Italic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontStyle Italic" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontStyles.Italic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um <see cref="T:System.Windows.FontStyle" /> itálico.</summary>
+        <value>Um valor que representa um <see cref="T:System.Windows.FontStyle" /> itálico.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os caracteres em uma fonte em itálico são realmente inclinados e aparecem como eles foram criados.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o <xref:System.Windows.FontStyles.Italic%2A> propriedade é usada para retornar um <xref:System.Windows.FontStyle>.  
+  
+ [!code-csharp[FontSnippets#FontStyleSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml.cs#fontstylesnippet3)]
+ [!code-vb[FontSnippets#FontStyleSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontstylesnippets.xaml.vb#fontstylesnippet3)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle Normal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontStyle Normal" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontStyles.Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um normal <see cref="T:System.Windows.FontStyle" />.</summary>
+        <value>Um valor que representa um normal <see cref="T:System.Windows.FontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os caracteres em uma fonte normal ou roman, são vertical.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o <xref:System.Windows.FontStyles.Normal%2A> propriedade é usada para retornar um <xref:System.Windows.FontStyle>.  
+  
+ [!code-csharp[FontSnippets#FontStyleSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml.cs#fontstylesnippet2)]
+ [!code-vb[FontSnippets#FontStyleSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontstylesnippets.xaml.vb#fontstylesnippet2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Oblique">
+      <MemberSignature Language="C#" Value="public static System.Windows.FontStyle Oblique { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.Windows.FontStyle Oblique" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.FontStyles.Oblique" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FontStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica um Oblíquo <see cref="T:System.Windows.FontStyle" />.</summary>
+        <value>Um valor que representa um Oblíquo <see cref="T:System.Windows.FontStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os caracteres em uma fonte oblíqua são inclinados artificialmente. A inclinação é obtida executando uma transformação de distorção de caracteres de uma fonte normal. Quando uma fonte em itálico real não está disponível em um computador ou impressora, um estilo Oblíquo pode ser gerado a partir da fonte normal e usado para simular uma fonte em itálico.  
+  
+   
+  
+## Examples  
+ No exemplo de código a seguir, o <xref:System.Windows.FontStyles.Oblique%2A> propriedade é usada para retornar um <xref:System.Windows.FontStyle>.  
+  
+ [!code-csharp[FontSnippets#FontStyleSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontStyleSnippets.xaml.cs#fontstylesnippet4)]
+ [!code-vb[FontSnippets#FontStyleSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontstylesnippets.xaml.vb#fontstylesnippet4)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

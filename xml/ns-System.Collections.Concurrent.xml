@@ -1,0 +1,8 @@
+<Namespace Name="System.Collections.Concurrent">
+  <Docs>
+    <summary>O <see langword="System.Collections.Concurrent" /> namespace fornece várias classes de coleção thread-safe que devem ser usados no lugar de tipos correspondentes no <see cref="N:System.Collections" /> e <see cref="N:System.Collections.Generic" /> namespaces sempre que vários threads estão acessando a coleção simultaneamente.  
+  
+ No entanto, os membros acessados por meio de uma das interfaces de que implementam as coleções atuais, incluindo métodos de extensão, não há garantia de ser thread-safe e talvez precise ser sincronizado pelo chamador.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

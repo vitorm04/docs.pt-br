@@ -1,0 +1,2341 @@
+<Type Name="DataRow" FullName="System.Data.DataRow">
+  <TypeSignature Language="C#" Value="public class DataRow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataRow extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.DataRow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Common</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma linha de dados em um <see cref="T:System.Data.DataTable" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataRow> e <xref:System.Data.DataColumn> objetos são os principais componentes de um <xref:System.Data.DataTable>. Use o <xref:System.Data.DataRow> objeto e suas propriedades e métodos para recuperar e avaliar; inserir, excluir e atualizar os valores de <xref:System.Data.DataTable>. O <xref:System.Data.DataRowCollection> representa o valor real <xref:System.Data.DataRow> objetos no <xref:System.Data.DataTable>e o <xref:System.Data.DataColumnCollection> contém o <xref:System.Data.DataColumn> objetos que descrevem o esquema do <xref:System.Data.DataTable>. Use o sobrecarregado <xref:System.Data.DataRow.Item%2A> para retornar ou definir o valor da propriedade de um <xref:System.Data.DataColumn>.  
+  
+ Use o <xref:System.Data.DataRow.HasVersion%2A> e <xref:System.Data.DataRow.IsNull%2A> propriedades para determinar o status de um valor de linha específico e o <xref:System.Data.DataRow.RowState*> propriedade para determinar o estado da linha em relação ao seu pai <xref:System.Data.DataTable>.  
+  
+ Para criar um novo <xref:System.Data.DataRow>, use o <xref:System.Data.DataTable.NewRow%2A> método o <xref:System.Data.DataTable> objeto. Depois de criar um novo <xref:System.Data.DataRow>, use o <xref:System.Data.DataRowCollection.Add%2A> método para adicionar o novo <xref:System.Data.DataRow> para o <xref:System.Data.DataRowCollection>. Finalmente, chame o <xref:System.Data.DataRow.AcceptChanges%2A> método o <xref:System.Data.DataTable> objeto para confirmar a adição. Para obter mais informações sobre como adicionar dados a um <xref:System.Data.DataTable>, consulte [adicionando dados a uma DataTable](~/docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md).  
+  
+ Você pode excluir um <xref:System.Data.DataRow> do <xref:System.Data.DataRowCollection> chamando o <xref:System.Data.DataRowCollection.Remove%2A> método do <xref:System.Data.DataRowCollection>, ou chamando o <xref:System.Data.DataRow.Delete%2A> método do <xref:System.Data.DataRow> objeto. O <xref:System.Data.DataRowCollection.Remove%2A> método remove a linha da coleção. Por outro lado, <xref:System.Data.DataRow.Delete%2A> marcas a <xref:System.Data.DataRow> para remoção. A remoção real ocorre quando você chamar <xref:System.Data.DataRow.AcceptChanges%2A> método. Chamando <xref:System.Data.DataRow.Delete%2A>, você pode verificar programaticamente quais linhas são marcadas para remoção antes de realmente excluí-los. Para obter mais informações, consulte [exclusão de DataRow](~/docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Data.DataRow> chamando o <xref:System.Data.DataTable.NewRow%2A> método o <xref:System.Data.DataTable> objeto.  
+  
+ [!code-csharp[Classic WebData DataRow Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é seguro para operações de leitura e multithread. Você deve sincronizar todas as operações de gravação.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataRow (System.Data.DataRowBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Data.DataRowBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.#ctor(System.Data.DataRowBuilder)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Data.DataRowBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">construtor</param>
+        <summary>Inicializa uma nova instância do DataRow. Constrói uma linha do construtor. Somente para uso interno.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptChanges">
+      <MemberSignature Language="C#" Value="public void AcceptChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AcceptChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.AcceptChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Confirma todas as alterações feitas nessa linha desde a última vez que <see cref="M:System.Data.DataRow.AcceptChanges" /> foi chamado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao invocar <xref:System.Data.DataRow.AcceptChanges%2A>, o <xref:System.Data.DataRow.EndEdit%2A> método é chamado implicitamente para encerrar todas as edições. Se o < xref:System.Data.DataRow.RowState*> da linha foi adicionado ou modificado, o < xref:System.Data.DataRow.RowState*> fica inalterado. Se o <xref:System.Data.DataRow.RowState*> foi excluído, a linha é removida.  
+  
+ Consulte o método <xref:System.Data.DataRow.BeginEdit%2A> para obter mais informações.  
+  
+ O <xref:System.Data.DataTable> classe também tem um <xref:System.Data.DataTable.AcceptChanges%2A> método que afeta as alterações feitas para a tabela inteira. Para obter mais informações e um exemplo de código que demonstra como aceitar e rejeitar alterações em linhas de dados individuais, consulte [AcceptChanges e RejectChanges](~/docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Data.DataTable> com uma coluna e, em seguida, cria um único <xref:System.Data.DataRow>. Como o <xref:System.Data.DataRow> é criado, adicionado, modificado e excluído, seu <xref:System.Data.DataRow.RowState*> é impresso.  
+  
+ [!code-csharp[Classic WebData DataRow.AcceptChanges Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.AcceptChanges Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.AcceptChanges Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.AcceptChanges Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEdit">
+      <MemberSignature Language="C#" Value="public void BeginEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BeginEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.BeginEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma operação de edição em um objeto <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataRow.BeginEdit%2A> método para colocar um <xref:System.Data.DataRow> em modo de edição. Nesse modo, eventos estão temporariamente suspensos, permitindo que o usuário fazer alterações em mais de uma linha sem disparar regras de validação. Por exemplo, se você deve certificar-se de que o valor da coluna para um valor total é igual aos valores de débito e crédito colunas em uma linha, você pode colocar cada linha em modo de edição para suspender a validação dos valores de linha até que o usuário tenta confirmar os valores.  
+  
+ O <xref:System.Data.DataRow.BeginEdit%2A> método é chamado implicitamente quando o usuário altera o valor de um controle associado a dados; o <xref:System.Data.DataRow.EndEdit%2A> método é chamado implicitamente quando você invoca o <xref:System.Data.DataTable.AcceptChanges%2A> método para o <xref:System.Data.DataTable> objeto. No modo de edição, o <xref:System.Data.DataRow> armazena representações de original e novos valores de proposta. Portanto, enquanto o <xref:System.Data.DataRow.EndEdit%2A> método não foi chamado, você pode recuperar a versão original ou proposta, passando o `DataRowVersion.Original` ou `DataRowVersion.Proposed` para o `version` parâmetro do <xref:System.Data.DataRow.Item%2A> propriedade. Você também pode cancelar as edições neste ponto, chamando o <xref:System.Data.DataRow.CancelEdit%2A> método.  
+  
+ Para ver se a linha contiver um valor original ou proposto, chame o <xref:System.Data.DataRow.HasVersion%2A> método.  
+  
+> [!NOTE]
+>  O <xref:System.Data.DataRow.BeginEdit%2A> método suspende temporariamente <xref:System.Data.DataTable.RowChanging> eventos, mas o `delete` operação não.  
+  
+   
+  
+## Examples  
+ O exemplo cria um simples <xref:System.Data.DataTable> com um <xref:System.Data.DataColumn> e cinco <xref:System.Data.DataRow> objetos e um <xref:System.Data.UniqueConstraint>. Um <xref:System.Data.DataTable.RowChanged> manipulador de eventos também é adicionado para monitorar quando o valor da linha que está sendo alterado. Depois de invocar <xref:System.Data.DataRow.BeginEdit%2A> nas linhas existentes, a restrição e o evento estão temporariamente desabilitadas e os valores originais e propostos são impressas. O <xref:System.Data.DataRow.BeginEdit%2A> é chamado novamente para definir duas linhas com o mesmo valor. Quando <xref:System.Data.DataRow.EndEdit%2A> é chamado, o <xref:System.Data.UniqueConstraint> é imposta nos valores idênticos.  
+  
+ [!code-csharp[Classic WebData DataRow.BeginEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.BeginEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.BeginEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.BeginEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.InRowChangingEventException">O método foi chamado dentro do evento <see cref="E:System.Data.DataTable.RowChanging" />.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">O método foi chamado em uma linha excluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelEdit">
+      <MemberSignature Language="C#" Value="public void CancelEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CancelEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.CancelEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cancela a edição atual da linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o método <xref:System.Data.DataRow.BeginEdit%2A> para obter mais informações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir edita o valor de uma coluna na última linha de um <xref:System.Windows.Forms.DataGrid> controle. O exemplo usa o <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, métodos para editar o valor da coluna e confirmar a alteração para a linha.  
+  
+ [!code-csharp[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.InRowChangingEventException">O método foi chamado dentro do evento <see cref="E:System.Data.DataTable.RowChanging" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearErrors">
+      <MemberSignature Language="C#" Value="public void ClearErrors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearErrors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.ClearErrors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa os erros da linha. Isso inclui o <see cref="P:System.Data.DataRow.RowError" /> e erros definidos com <see cref="M:System.Data.DataRow.SetColumnError(System.Int32,System.String)" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Data.DataRow.SetColumnError%2A> e <xref:System.Data.DataRow.GetColumnError%2A> para definir e retornar erros para colunas individuais.  
+  
+ Definir o <xref:System.Data.DataRow.RowError%2A> propriedade para definir um erro que se aplica a toda a linha.  
+  
+ Para determinar se existe algum erro para a coleção de colunas, use o método <xref:System.Data.DataRow.HasErrors%2A>. Consequentemente, é possível usar o método <xref:System.Data.DataRow.GetColumnsInError%2A> para recuperar todas as colunas com erros.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.HasErrors%2A> para procurar por erros. Se a linha tem erros, o <xref:System.Data.DataRow.GetColumnsInError%2A> método retorna uma matriz de colunas com erros que podem ser resolvidos. O <xref:System.Data.DataRow.ClearErrors%2A> método é chamado para limpar todos os erros.  
+  
+ [!code-csharp[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Delete() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.Delete" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Exclui o <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o < xref:System.Data.DataRow.RowState*> da linha é adicionada, o < xref:System.Data.DataRow.RowState*> se torna `Detached` e a linha é removida da tabela quando você chamar <xref:System.Data.DataRow.AcceptChanges%2A>.  
+  
+ O <xref:System.Data.DataRow.RowState*> se torna `Deleted` depois de usar o <xref:System.Data.DataRow.Delete%2A> método em uma <xref:System.Data.DataRow>. Ele permanece `Deleted` até que você chame <xref:System.Data.DataRow.AcceptChanges%2A>. Neste momento, o <xref:System.Data.DataRow> é removida da tabela.  
+  
+ <xref:System.Data.DataRow.Delete%2A>não deve ser chamado em um loop foreach durante a iteração por meio de um <xref:System.Data.DataRowCollection> objeto. <xref:System.Data.DataRow.Delete%2A>modifica o estado da coleção.  
+  
+ Uma linha excluída pode não excluída invocando <xref:System.Data.DataRow.RejectChanges%2A>.  
+  
+> [!NOTE]
+>  O <xref:System.Data.DataRow.BeginEdit%2A> método suspende temporariamente <xref:System.Data.DataTable.RowChanging> eventos, mas a operação de exclusão não.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um simples <xref:System.Data.DataTable> com duas colunas e linhas de dez. Após a exclusão de vários <xref:System.Data.DataRow> itens com o <xref:System.Data.DataRow.Delete%2A> método, uma das linhas é não excluído invocando <xref:System.Data.DataRow.RejectChanges%2A>.  
+  
+ [!code-csharp[Classic WebData DataRow.Delete Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.Delete Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">O <see cref="T:System.Data.DataRow" /> já foi excluído.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEdit">
+      <MemberSignature Language="C#" Value="public void EndEdit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEdit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.EndEdit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Finaliza a edição que ocorre na linha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define a propriedade, uma exceção será gerada se uma exceção ocorrer no evento <xref:System.Data.DataTable.RowChanging>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.EndEdit%2A> método para terminar a edição de uma <xref:System.Data.DataRow> valor se a função de validação retornará true.  
+  
+ [!code-csharp[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.CancelEdit Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.CancelEdit Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.InRowChangingEventException">O método foi chamado dentro do evento <see cref="E:System.Data.DataTable.RowChanging" />.</exception>
+        <exception cref="T:System.Data.ConstraintException">A edição violou uma restrição.</exception>
+        <exception cref="T:System.Data.ReadOnlyException">A linha pertence à tabela e a edição tentou alterar o valor de uma coluna somente leitura.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">A edição tentou colocar um valor nulo em uma coluna em que <see cref="P:System.Data.DataColumn.AllowDBNull" /> é false.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="relation">O <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <summary>Obtém as linhas filho deste <see cref="T:System.Data.DataRow" /> usando o <see cref="T:System.Data.DataRelation" /> especificado.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" /> ou uma matriz de comprimento zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation> retornada pela propriedade <xref:System.Data.DataTable.ChildRelations%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetChildRows%2A> para retornar o filho <xref:System.Data.DataRow> objetos para cada filho <xref:System.Data.DataRelation> em um <xref:System.Data.DataTable>. Em seguida, o valor de cada coluna na linha é impresso.  
+  
+ [!code-csharp[Classic WebData DataRow.GetChildRows2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetChildRows2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.ArgumentNullException">A relação é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem esta versão de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (string relationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(string relationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">O <see cref="P:System.Data.DataRelation.RelationName" /> da <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <summary>Obtém as linhas filhas de uma <see cref="T:System.Data.DataRow" /> usando o <see cref="P:System.Data.DataRelation.RelationName" /> especificado de uma <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" /> ou uma matriz de comprimento zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation> retornada pela propriedade <xref:System.Data.DataTable.ChildRelations%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (System.Data.DataRelation relation, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(class System.Data.DataRelation relation, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.Data.DataRelation,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relation">O <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <param name="version">Um dos valores de <see cref="T:System.Data.DataRowVersion" /> especificando a versão dos dados a serem obtidos. Os valores possíveis são <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> e <see langword="Proposed" />.</param>
+        <summary>Obtém as linhas filho de um <see cref="T:System.Data.DataRow" /> usando o <see cref="T:System.Data.DataRelation" /> especificado e <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation> retornada pela propriedade <xref:System.Data.DataTable.ChildRelations%2A>.  
+  
+ Use a propriedade <xref:System.Data.DataRow.HasVersion%2A> para determinar se o <xref:System.Data.DataRowVersion> desejado existe.  
+  
+ Se <xref:System.Data.DataRowVersion.Default> for especificado, a versão que é usada depende de <xref:System.Data.DataRow.RowState*> da linha na qual `GetChildRows` é invocado. Se a linha na qual `GetChildRows` é invocado tem um `RowState` de `Modified`, `New`, ou `Unchanged`, o <xref:System.Data.DataRowVersion.Current> versão da linha é usado para buscar linhas filho relacionadas com valores correspondentes em suas versões atuais. Se a linha na qual `GetChildRows` é invocado tem um `RowState` de `Deleted`, o <xref:System.Data.DataRowVersion.Original> versão da linha é usado para buscar linhas filho relacionadas com valores correspondentes em suas versões originais.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetChildRows%2A> para retornar o filho <xref:System.Data.DataRow> objetos para cada filho <xref:System.Data.DataRelation> em um <xref:System.Data.DataTable>. O valor de cada coluna com a versão especificada na linha, em seguida, é impressa.  
+  
+ [!code-csharp[Classic WebData DataRow.GetChildRows3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetChildRows3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetChildRows3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="relation" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem o <see cref="T:System.Data.DataRowVersion" /> solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChildRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetChildRows (string relationName, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetChildRows(string relationName, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetChildRows(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">O <see cref="P:System.Data.DataRelation.RelationName" /> da <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <param name="version">Um dos valores de <see cref="T:System.Data.DataRowVersion" /> especificando a versão dos dados a serem obtidos. Os valores possíveis são <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> e <see langword="Proposed" />.</param>
+        <summary>Obtém o filho linhas de uma <see cref="T:System.Data.DataRow" /> usando especificado <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />, e <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" /> ou uma matriz de comprimento zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation> retornada pela propriedade <xref:System.Data.DataTable.ChildRelations%2A>.  
+  
+ Use a propriedade <xref:System.Data.DataRow.HasVersion%2A> para determinar se o <xref:System.Data.DataRowVersion> desejado existe.  
+  
+ Se <xref:System.Data.DataRowVersion.Default> for especificado, a versão que é usada depende de <xref:System.Data.DataRow.RowState*> da linha na qual `GetChildRows` é invocado. Se a linha na qual `GetChildRows` é invocado tem um `RowState` de `Modified`, `New`, ou `Unchanged`, o <xref:System.Data.DataRowVersion.Current> versão da linha é usado para buscar linhas filho relacionadas com valores correspondentes em suas versões atuais. Se a linha na qual `GetChildRows` é invocado tem um `RowState` de `Deleted`, o <xref:System.Data.DataRowVersion.Original> versão da linha é usado para buscar linhas filho relacionadas com valores correspondentes em suas versões originais.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="relation" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem o <see cref="T:System.Data.DataRowVersion" /> solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnError">
+      <MemberSignature Language="C#" Value="public string GetColumnError (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetColumnError(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnError(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Um <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Obtém a descrição de erro especificada <see cref="T:System.Data.DataColumn" />.</summary>
+        <returns>O texto da descrição do erro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataRow.SetColumnError%2A> método para definir os erros de coluna.  
+  
+ Para determinar se existe algum erro para a coleção de colunas, use o método <xref:System.Data.DataRow.HasErrors%2A>. Consequentemente, é possível usar o método <xref:System.Data.DataRow.GetColumnsInError%2A> para recuperar todas as colunas com erros. Como alternativa, o <xref:System.Data.DataTable.GetErrors%2A> método o <xref:System.Data.DataTable> retorna todas as linhas com erros.  
+  
+ Para limpar todos os erros da coleção de colunas, use o método <xref:System.Data.DataRow.ClearErrors%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma descrição de erro para um <xref:System.Data.DataRow> especificado.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnError">
+      <MemberSignature Language="C#" Value="public string GetColumnError (int columnIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetColumnError(int32 columnIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnError(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">O índice com base em zero da coluna.</param>
+        <summary>Obtém a descrição do erro para a coluna especificada por índice.</summary>
+        <returns>O texto da descrição do erro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataRow.SetColumnError%2A> método para definir os erros de coluna.  
+  
+ Para determinar se existe algum erro para a coleção de colunas, use o método <xref:System.Data.DataRow.HasErrors%2A>. Consequentemente, é possível usar o método <xref:System.Data.DataRow.GetColumnsInError%2A> para recuperar todas as colunas com erros.  
+  
+ Para limpar todos os erros da coleção de colunas, use o método <xref:System.Data.DataRow.ClearErrors%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma descrição de erro para um <xref:System.Data.DataRow> especificado.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O argumento <paramref name="columnIndex" /> está fora do intervalo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnError">
+      <MemberSignature Language="C#" Value="public string GetColumnError (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetColumnError(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnError(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">O nome da coluna.</param>
+        <summary>Obtém a descrição do erro para uma coluna, especificada pelo nome.</summary>
+        <returns>O texto da descrição do erro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataRow.SetColumnError%2A> método para definir os erros de coluna.  
+  
+ Para determinar se existe algum erro para a coleção de colunas, use o método <xref:System.Data.DataRow.HasErrors%2A>. Consequentemente, é possível usar o método <xref:System.Data.DataRow.GetColumnsInError%2A> para recuperar todas as colunas com erros.  
+  
+ Para limpar todos os erros da coleção de colunas, use o método <xref:System.Data.DataRow.ClearErrors%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma descrição de erro para um <xref:System.Data.DataRow> especificado.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetColumnsInError">
+      <MemberSignature Language="C#" Value="public System.Data.DataColumn[] GetColumnsInError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataColumn[] GetColumnsInError() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetColumnsInError" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataColumn[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém uma matriz de colunas que contêm erros.</summary>
+        <returns>Uma matriz de objetos <see cref="T:System.Data.DataColumn" /> que contêm erros.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.DataRow.GetColumnsInError%2A> permite que você reduza o número de <xref:System.Data.DataColumn> objetos que devem ser processados para erros, retornando apenas as colunas que têm um erro. Erros podem ser definidos para colunas individuais com o <xref:System.Data.DataRow.SetColumnError%2A> método. Para reduzir ainda mais o número de processamento, examine o <xref:System.Data.DataRow.HasErrors%2A> propriedade o <xref:System.Data.DataRow> classe para determinar se um <xref:System.Data.DataRow> tem erros antes de chamar <xref:System.Data.DataRow.GetColumnsInError%2A>.  
+  
+ Use o <xref:System.Data.DataRow.ClearErrors%2A> método para limpar todos os erros na linha. Isso inclui o <xref:System.Data.DataRow.RowError%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.HasErrors%2A> para procurar por erros. Se a linha tem erros, o <xref:System.Data.DataRow.GetColumnsInError%2A> método retorna uma matriz de colunas com erros que podem ser resolvidos. O <xref:System.Data.DataRow.ClearErrors%2A> método é chamado para limpar todos os erros.  
+  
+ [!code-csharp[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.ClearErrors Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.ClearErrors Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="relation">O <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <summary>Obtém a linha pai de um <see cref="T:System.Data.DataRow" /> usando o <see cref="T:System.Data.DataRelation" /> especificado.</summary>
+        <returns>O <see cref="T:System.Data.DataRow" /> pai da linha atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetParentRow%2A> para retornar o filho <xref:System.Data.DataRow> objetos para cada filho <xref:System.Data.DataRelation> em um <xref:System.Data.DataTable>. Em seguida, o valor de cada coluna na linha é impresso.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow2 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow2 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="relation" /> não pertence ao <see cref="T:System.Data.DataTable" />.  
+  
+ A linha é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.DataException">Uma linha filho tem vários pais.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Essa linha não pertence à tabela filho do objeto <see cref="T:System.Data.DataRelation" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence a uma tabela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (string relationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(string relationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">O <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />.</param>
+        <summary>Obtém a linha pai de um <see cref="T:System.Data.DataRow" /> usando especificado <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>O <see cref="T:System.Data.DataRow" /> pai da linha atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetParentRow%2A> para imprimir um valor de cada linha pai de cada <xref:System.Data.DataRow> em um <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.Data.DataException">Uma linha filho tem vários pais.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (System.Data.DataRelation relation, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(class System.Data.DataRelation relation, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.Data.DataRelation,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relation">O <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <param name="version">Um dos valores de <see cref="T:System.Data.DataRowVersion" /> especificando a versão dos dados a serem obtidos.</param>
+        <summary>Obtém a linha pai de um <see cref="T:System.Data.DataRow" /> usando especificado <see cref="T:System.Data.DataRelation" />, e <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>O <see cref="T:System.Data.DataRow" /> pai da linha atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+ Use a propriedade <xref:System.Data.DataRow.HasVersion%2A> para determinar se o <xref:System.Data.DataRowVersion> desejado existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetParentRow%2A> para retornar o filho <xref:System.Data.DataRow> objetos para cada filho <xref:System.Data.DataRelation> em um <xref:System.Data.DataTable>. Em seguida, o valor de cada coluna na linha é impresso.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow3 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow3 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A linha é <see langword="null" />.  
+  
+ O <paramref name="relation" /> não pertencer a relações de pai desta tabela.</exception>
+        <exception cref="T:System.Data.DataException">Uma linha filho tem vários pais.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Tabela de filho da relação não é a tabela em que a linha pertence.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence a uma tabela.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem esta versão de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRow">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow GetParentRow (string relationName, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow GetParentRow(string relationName, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRow(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">O <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />.</param>
+        <param name="version">Um dos valores de <see cref="T:System.Data.DataRowVersion" />.</param>
+        <summary>Obtém a linha pai de um <see cref="T:System.Data.DataRow" /> usando especificado <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />, e <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>O <see cref="T:System.Data.DataRow" /> pai da linha atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+ Use a propriedade <xref:System.Data.DataRow.HasVersion%2A> para determinar se o <xref:System.Data.DataRowVersion> desejado existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetParentRow%2A> para imprimir um valor de cada linha pai de cada <xref:System.Data.DataRow> em um <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataRow.GetParentRow1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.GetParentRow1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRow1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="relation" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.DataException">Uma linha filho tem vários pais.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem o <see cref="T:System.Data.DataRowVersion" /> solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="relation">O <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <summary>Obtém o pai linhas de uma <see cref="T:System.Data.DataRow" /> usando especificado <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" /> ou uma matriz de comprimento zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetParentRows%2A> para retornar o filho <xref:System.Data.DataRow> objetos para cada filho <xref:System.Data.DataRelation> em um <xref:System.Data.DataTable>. Em seguida, o valor de cada coluna na linha é impresso.  
+  
+ [!code-vb[Classic WebData DataRow.GetParentRows2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRows2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Data.DataRelation" /> não pertence a esta linha <see cref="T:System.Data.DataSet" />.</exception>
+        <exception cref="T:System.ArgumentNullException">A linha é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Tabela de filho da relação não é a tabela em que a linha pertence.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence a um <see cref="T:System.Data.DataTable" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (string relationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(string relationName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">O <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />.</param>
+        <summary>Obtém o pai linhas de uma <see cref="T:System.Data.DataRow" /> usando especificado <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" /> ou uma matriz de comprimento zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (System.Data.DataRelation relation, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(class System.Data.DataRelation relation, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.Data.DataRelation,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relation">O <see cref="T:System.Data.DataRelation" /> a ser usado.</param>
+        <param name="version">Um dos valores de <see cref="T:System.Data.DataRowVersion" /> especificando a versão dos dados a serem obtidos.</param>
+        <summary>Obtém o pai linhas de uma <see cref="T:System.Data.DataRow" /> usando especificado <see cref="T:System.Data.DataRelation" />, e <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" /> ou uma matriz de comprimento zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+ Use a propriedade <xref:System.Data.DataRow.HasVersion%2A> para determinar se o <xref:System.Data.DataRowVersion> desejado existe.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.GetParentRows%2A> para retornar o filho <xref:System.Data.DataRow> objetos para cada filho <xref:System.Data.DataRelation> em um <xref:System.Data.DataTable>. Em seguida, o valor de cada coluna na linha é impresso.  
+  
+ [!code-vb[Classic WebData DataRow.GetParentRows3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.GetParentRows3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O <see cref="T:System.Data.DataRelation" /> não pertence a esta linha <see cref="T:System.Data.DataSet" />.</exception>
+        <exception cref="T:System.ArgumentNullException">A linha é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">Tabela de filho da relação não é a tabela em que a linha pertence.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence a um <see cref="T:System.Data.DataTable" />.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem o <see cref="T:System.Data.DataRowVersion" /> solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParentRows">
+      <MemberSignature Language="C#" Value="public System.Data.DataRow[] GetParentRows (string relationName, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.DataRow[] GetParentRows(string relationName, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.GetParentRows(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRow[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="relationName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="relationName">O <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />.</param>
+        <param name="version">Um dos valores de <see cref="T:System.Data.DataRowVersion" /> especificando a versão dos dados a serem obtidos. Os valores possíveis são <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> e <see langword="Proposed" />.</param>
+        <summary>Obtém o pai linhas de uma <see cref="T:System.Data.DataRow" /> usando especificado <see cref="P:System.Data.DataRelation.RelationName" /> de um <see cref="T:System.Data.DataRelation" />, e <see cref="T:System.Data.DataRowVersion" />.</summary>
+        <returns>Uma matriz de objetos de <see cref="T:System.Data.DataRow" /> ou uma matriz de comprimento zero.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Em um <xref:System.Data.DataSet>, a coleção de todos os objetos pai de <xref:System.Data.DataRelation> para o conjunto de dados é retornada pelo método <xref:System.Data.DataRow.GetParentRows%2A>.  
+  
+ O <xref:System.Data.DataTable> também contém uma coleção de objetos <xref:System.Data.DataRelation>, retornada pela propriedade <xref:System.Data.DataTable.ParentRelations%2A>.  
+  
+ Use a propriedade <xref:System.Data.DataRow.HasVersion%2A> para determinar se o <xref:System.Data.DataRowVersion> desejado existe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A relação e a linha não pertencem à mesma tabela.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="relation" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem o <see cref="T:System.Data.DataRowVersion" /> solicitado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasErrors">
+      <MemberSignature Language="C#" Value="public bool HasErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.HasErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se há erros em uma linha.</summary>
+        <value>
+          <see langword="true" /> se a linha contiver um erro; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `HasErrors`Retorna `true` se houver <xref:System.Data.DataColumn> objeto na linha contiver um erro, ou se o <xref:System.Data.DataRow.RowError%2A> propriedade o <xref:System.Data.DataRow> não é uma cadeia de caracteres vazia.  
+  
+ Quando a validação de dados, você pode definir um erro em qualquer coluna em uma linha. Esse tipo de coluna, quando exibido no <xref:System.Windows.Forms.DataGrid?displayProperty=nameWithType> controlar, é marcado com um ponto de exclamação vermelho para indicar ao usuário que a coluna é um erro.  
+  
+ Use <xref:System.Data.DataRow.SetColumnError%2A> para definir erro em qualquer coluna.  
+  
+ Use o <xref:System.Data.DataRow.GetColumnError%2A> e `GetColumnsInError` métodos para retornar as colunas com erros.  
+  
+ O <xref:System.Data.DataRow.ClearErrors%2A> método limpa todos os erros da linha.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.HasErrors%2A> para procurar por erros. Se a linha tem erros, o <xref:System.Data.DataRow.GetColumnsInError%2A> método retorna uma matriz de colunas com erros que podem ser resolvidos. O <xref:System.Data.DataRow.ClearErrors%2A> método é chamado para limpar todos os erros.  
+  
+ [!code-csharp[Classic WebData DataRow.HasErrors Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.HasErrors Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.HasErrors Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.HasErrors Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasVersion">
+      <MemberSignature Language="C#" Value="public bool HasVersion (System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasVersion(valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.HasVersion(System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="version">Um dos valores <see cref="T:System.Data.DataRowVersion" /> que especifica a versão de linha.</param>
+        <summary>Obtém um valor que indica se existe uma versão especificada.</summary>
+        <returns>
+          <see langword="true" /> se a versão existir; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Consulte o método <xref:System.Data.DataRow.BeginEdit%2A> para obter mais informações.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.HasVersion%2A> método para determinar se o valor atual de uma coluna e o valor proposto são os mesmos. Nesse caso, a edição é cancelada. Caso contrário, o <xref:System.Data.DataRow.AcceptChanges%2A> método é chamado para terminar a edição.  
+  
+ [!code-vb[Classic WebData DataRow.HasVersion Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.HasVersion Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Um <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.DataColumn" /> especificado contém um valor null.</summary>
+        <returns>
+          <see langword="true" /> se a coluna contiver um valor nulo; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir imprime cada coluna de cada linha em cada tabela de um <xref:System.Data.DataSet>. Se a linha é definida como um valor nulo, o valor não é impresso.  
+  
+ [!code-vb[Classic WebData DataRow.IsNull2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.IsNull2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (int columnIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(int32 columnIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">O índice com base em zero da coluna.</param>
+        <summary>Obtém um valor que indica se a coluna no índice especificado contém um valor nulo.</summary>
+        <returns>
+          <see langword="true" /> se a coluna contiver um valor nulo; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir altera o valor de uma coluna com um valor nulo e, em seguida, usa o <xref:System.Data.DataRow.IsNull%2A> método para determinar se o valor é null.  
+  
+ [!code-vb[Classic WebData DataRow.IsNull Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.IsNull Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (string columnName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(string columnName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">O nome da coluna.</param>
+        <summary>Obtém um valor que indica se a coluna nomeada contém um valor null.</summary>
+        <returns>
+          <see langword="true" /> se a coluna contiver um valor nulo; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir altera o valor de uma coluna com um valor nulo e, em seguida, usa o <xref:System.Data.DataRow.IsNull%2A> método para determinar se o valor é null.  
+  
+ [!code-vb[Classic WebData DataRow.IsNull1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.IsNull1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsNull">
+      <MemberSignature Language="C#" Value="public bool IsNull (System.Data.DataColumn column, System.Data.DataRowVersion version);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsNull(class System.Data.DataColumn column, valuetype System.Data.DataRowVersion version) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.IsNull(System.Data.DataColumn,System.Data.DataRowVersion)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="column">Um <see cref="T:System.Data.DataColumn" />.</param>
+        <param name="version">Um dos valores <see cref="T:System.Data.DataRowVersion" /> que especifica a versão de linha. Os valores possíveis são <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> e <see langword="Proposed" />.</param>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Data.DataColumn" /> e <see cref="T:System.Data.DataRowVersion" /> especificados contêm um valor nulo.</summary>
+        <returns>
+          <see langword="true" /> se a coluna contiver um valor nulo; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[System.Data.DataColumn column] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(class System.Data.DataColumn)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Data.DataColumn)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Um <see cref="T:System.Data.DataColumn" /> que contém os dados.</param>
+        <summary>Obtém ou define os dados armazenados no <see cref="T:System.Data.DataColumn" /> especificado.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define a propriedade, uma exceção será gerada se uma exceção ocorrer no evento <xref:System.Data.DataTable.ColumnChanging>.  
+  
+ Se essa for uma edição imediata, consulte <xref:System.Data.DataRow.EndEdit%2A> para obter exceções que possam ser geradas.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir demonstram o uso do <xref:System.Data.DataRow.Item%2A> propriedade para obter e definir o valor de um índice de coluna específica. O primeiro exemplo obtém o valor da primeira coluna em qualquer linha que um usuário clica em um <xref:System.Windows.Forms.DataGrid> controle. O segundo define um valor passado como um argumento para o método.  
+  
+ [!code-vb[Classic WebData DataRow.this2 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this2 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A coluna não pertence a essa tabela.</exception>
+        <exception cref="T:System.ArgumentNullException">O <paramref name="column" /> é nulo.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Ocorreu uma tentativa de definir um valor em uma linha excluída.</exception>
+        <exception cref="T:System.InvalidCastException">Os tipos de dados do valor e a coluna não correspondem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int columnIndex] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">O índice com base em zero da coluna.</param>
+        <summary>Obtém ou define os dados armazenados na coluna especificada por índice.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define a propriedade, uma exceção será gerada se uma exceção ocorrer no evento <xref:System.Data.DataTable.ColumnChanging>.  
+  
+ Se esta for uma edição, consulte <xref:System.Data.DataRow.EndEdit%2A> para as exceções que podem ser geradas.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir demonstram o uso do <xref:System.Data.DataRow.Item%2A> propriedade para obter e definir o valor de um índice de coluna específica. O primeiro exemplo obtém o valor da primeira coluna em qualquer linha que um usuário clica em um <xref:System.Windows.Forms.DataGrid> controle.  
+  
+ [!code-csharp[Classic WebData DataRow.this Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Ocorre quando você tenta definir um valor em uma linha excluída.</exception>
+        <exception cref="T:System.IndexOutOfRangeException">O argumento <paramref name="columnIndex" /> está fora do intervalo.</exception>
+        <exception cref="T:System.InvalidCastException">Ocorre quando você define o valor e o <see cref="T:System.Type" /> do novo valor não corresponde a <see cref="P:System.Data.DataColumn.DataType" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string columnName] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">O nome da coluna.</param>
+        <summary>Obtém ou define os dados armazenados na coluna especificada por nome.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define a propriedade, uma exceção será gerada se uma exceção ocorrer no evento <xref:System.Data.DataTable.ColumnChanging>.  
+  
+ Se essa for uma edição imediata, consulte <xref:System.Data.DataRow.EndEdit%2A> para obter exceções que possam ser geradas.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir demonstram o uso do <xref:System.Data.DataRow.Item%2A> propriedade para obter e definir o valor de um índice de coluna específica. O primeiro exemplo obtém o valor da primeira coluna em qualquer linha que um usuário clica em um <xref:System.Windows.Forms.DataGrid> controle. O segundo define um valor passado como um argumento para o método.  
+  
+ [!code-csharp[Classic WebData DataRow.this1 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this1 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A coluna especificada por <paramref name="columnName" /> não pode ser encontrada.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Ocorre quando você tenta definir um valor em uma linha excluída.</exception>
+        <exception cref="T:System.InvalidCastException">Ocorre quando você define um valor e seu <see cref="T:System.Type" /> não corresponde a <see cref="P:System.Data.DataColumn.DataType" />.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">Ocorre quando você tentar inserir um valor nulo em uma coluna em que <see cref="P:System.Data.DataColumn.AllowDBNull" /> está definido como <see langword="false" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[System.Data.DataColumn column, System.Data.DataRowVersion version] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(class System.Data.DataColumn, valuetype System.Data.DataRowVersion)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Data.DataColumn,System.Data.DataRowVersion)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="column">Um <see cref="T:System.Data.DataColumn" /> que contém informações sobre a coluna.</param>
+        <param name="version">Um dos valores <see cref="T:System.Data.DataRowVersion" /> que especifica a versão de linha que você deseja. Os valores possíveis são <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> e <see langword="Proposed" />.</param>
+        <summary>Obtém a versão especificada de dados armazenados no <see cref="T:System.Data.DataColumn" /> especificado.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `version` não deve ser confundido com o <xref:System.Data.DataRow.RowState*> propriedade. O `version` argumento descreve o estado dos dados que contém a coluna em relação ao valor original da coluna.  
+  
+ Quando você define a propriedade, uma exceção será gerada se uma exceção ocorrer no evento <xref:System.Data.DataTable.ColumnChanging>.  
+  
+ Se essa for uma edição imediata, consulte <xref:System.Data.DataRow.EndEdit%2A> para obter exceções que possam ser geradas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o valor atual de uma célula clicado no <xref:System.Windows.Forms.DataGrid> controle.  
+  
+ [!code-csharp[Classic WebData DataRow.this5 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this5 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this5 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this5 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A coluna não pertence à tabela.</exception>
+        <exception cref="T:System.ArgumentNullException">O argumento <paramref name="column" /> contém null.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem esta versão de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[int columnIndex, System.Data.DataRowVersion version] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(int32, valuetype System.Data.DataRowVersion)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.Int32,System.Data.DataRowVersion)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">O índice com base em zero da coluna.</param>
+        <param name="version">Um dos valores <see cref="T:System.Data.DataRowVersion" /> que especifica a versão de linha que você deseja. Os valores possíveis são <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> e <see langword="Proposed" />.</param>
+        <summary>Obtém os dados armazenados na coluna, especificados pelo índice e a versão dos dados a serem recuperados.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você só pode criar ou atualizar uma linha depois de chamar o <xref:System.Data.DataRow.BeginEdit%2A> método; da mesma forma, o <xref:System.Data.DataRow.EndEdit%2A> método deve ser chamado para confirmar a edição. Depois de chamar o <xref:System.Data.DataRow.EndEdit%2A> método, e antes de chamar o <xref:System.Data.DataRow.AcceptChanges%2A> proposta de representações internas do original e novo método, os valores são armazenados. Portanto, até que você chame o <xref:System.Data.DataRow.AcceptChanges%2A>, você pode usar o `version` argumento para especificar qual versão do valor de uma coluna for necessário, ou o `DataRowVersion.Original` ou `DataRowVersion.Proposed`. No entanto, assim que você chamar o <xref:System.Data.DataRow.AcceptChanges%2A> método, a versão da coluna será revertido para `DataRowVersion.Original`. Se a linha for nova, você também pode passar `DataRowVersion.Default` para o parâmetro para recuperar o valor padrão da coluna. Ao passar `DataRowVersion.Current`, a propriedade retorna o atual valor, o que pode ser sua versão.  
+  
+> [!NOTE]
+>  O <xref:System.Data.DataRow.BeginEdit%2A> método é chamado implicitamente quando você alterar o valor de um controle associado a dados ou quando um <xref:System.Data.DataRow> objeto é adicionado ao <xref:System.Data.DataRowCollection>; o <xref:System.Data.DataRow.EndEdit%2A> método é chamado implicitamente quando você chamar os métodos a seguir: o <xref:System.Data.DataRow.AcceptChanges%2A> método do <xref:System.Data.DataRow> objeto, o <xref:System.Data.DataTable.AcceptChanges%2A> método do <xref:System.Data.DataTable> objeto, ou o <xref:System.Data.DataRow.CancelEdit%2A> método.  
+  
+ Por outro lado, o <xref:System.Data.DataRowVersion> enumeração `Current` retorna a versão dos dados após o <xref:System.Data.DataRow.EndEdit%2A> método foi chamado.  
+  
+ O `version` argumento não deve ser confundido com o < xref:System.Data.DataRow.RowState*> Propriedades. O `version` argumento descreve o estado dos dados que contém a coluna em relação ao valor original da coluna. O < xref:System.Data.DataRow.RowState*> propriedade descreve o estado da linha inteira em relação ao seu pai <xref:System.Data.DataTable>.  
+  
+ Quando você define a propriedade, uma exceção será gerada se uma exceção ocorrer no evento <xref:System.Data.DataTable.ColumnChanging>.  
+  
+ Se essa for uma edição imediata, consulte <xref:System.Data.DataRow.EndEdit%2A> para obter exceções que possam ser geradas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém o valor atual de uma coluna por meio de <xref:System.Data.DataRow.Item%2A> propriedade o <xref:System.Data.DataRow> objeto.  
+  
+ [!code-vb[Classic WebData DataRow.this3 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this3 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O argumento <paramref name="columnIndex" /> está fora do intervalo.</exception>
+        <exception cref="T:System.InvalidCastException">Os tipos de dados do valor e a coluna não correspondem.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem esta versão de dados.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">Ocorreu uma tentativa de definir um valor em uma linha excluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public object this[string columnName, System.Data.DataRowVersion version] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string, valuetype System.Data.DataRowVersion)" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Item(System.String,System.Data.DataRowVersion)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="version" Type="System.Data.DataRowVersion" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">O nome da coluna.</param>
+        <param name="version">Um dos valores <see cref="T:System.Data.DataRowVersion" /> que especifica a versão de linha que você deseja. Os valores possíveis são <see langword="Default" />, <see langword="Original" />, <see langword="Current" /> e <see langword="Proposed" />.</param>
+        <summary>Obtém a versão especificada de dados armazenados na coluna nomeada.</summary>
+        <value>Um <see cref="T:System.Object" /> que contém os dados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A versão não deve ser confundida com o < xref:System.Data.DataRow.RowState*> Propriedades. O `version` argumento descreve o estado dos dados que contém a coluna em relação ao valor original da coluna. O < xref:System.Data.DataRow.RowState*> propriedade descreve o estado da linha inteira em relação ao seu pai <xref:System.Data.DataTable>.  
+  
+ Quando você define a propriedade, uma exceção será gerada se uma exceção ocorrer no evento <xref:System.Data.DataTable.ColumnChanging>.  
+  
+ Se essa for uma edição imediata, consulte <xref:System.Data.DataRow.EndEdit%2A> para obter exceções que possam ser geradas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir obtém a versão atual dos dados em uma célula clicada de um <xref:System.Windows.Forms.DataGrid> controle.  
+  
+ [!code-csharp[Classic WebData DataRow.this4 Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.this4 Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.this4 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.this4 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A coluna especificada por <paramref name="columnName" /> não pode ser encontrada.</exception>
+        <exception cref="T:System.InvalidCastException">Os tipos de dados do valor e a coluna não correspondem.</exception>
+        <exception cref="T:System.Data.VersionNotFoundException">A linha não tem esta versão de dados.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">A linha foi excluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemArray">
+      <MemberSignature Language="C#" Value="public object[] ItemArray { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] ItemArray" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.ItemArray" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define todos os valores para essa linha por meio de uma matriz.</summary>
+        <value>Uma matriz do tipo <see cref="T:System.Object" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar essa propriedade para definir ou obter valores para essa linha por meio de uma matriz. Se você usar essa propriedade para definir valores, a matriz deve ter o mesmo tamanho e a ordenação como a coleção de colunas. Passando `null` no <xref:System.Data.DataRow.ItemArray%2A> indica que nenhum valor foi especificado.  
+  
+ Os usuários podem gerar exceções no <xref:System.Data.DataTable.ColumnChanging> evento ou <xref:System.Data.DataTable.RowChanging> eventos.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir mostram como obter e definir valores usando o <xref:System.Data.DataRow.ItemArray%2A> propriedade.  
+  
+ [!code-csharp[Classic WebData DataRow.ItemArray Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.ItemArray Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.ItemArray Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.ItemArray Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">A matriz é maior que o número de colunas na tabela.</exception>
+        <exception cref="T:System.InvalidCastException">Um valor na matriz não corresponde ao <see cref="P:System.Data.DataColumn.DataType" /> no <see cref="T:System.Data.DataColumn" /> respectivo.</exception>
+        <exception cref="T:System.Data.ConstraintException">Uma edição violou uma restrição.</exception>
+        <exception cref="T:System.Data.ReadOnlyException">Uma edição tentou alterar o valor de uma coluna somente leitura.</exception>
+        <exception cref="T:System.Data.NoNullAllowedException">Uma edição tentou colocar um valor nulo em uma coluna em que <see cref="P:System.Data.DataColumn.AllowDBNull" /> do objeto <see cref="T:System.Data.DataColumn" /> é <see langword="false" />.</exception>
+        <exception cref="T:System.Data.DeletedRowInaccessibleException">A linha foi excluída.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RejectChanges">
+      <MemberSignature Language="C#" Value="public void RejectChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RejectChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.RejectChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Rejeita todas as alterações feitas na linha desde que <see cref="M:System.Data.DataRow.AcceptChanges" /> foi chamado pela última vez.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama o <xref:System.Data.DataRow.RejectChanges%2A> método, o <xref:System.Data.DataRow.CancelEdit%2A> método é chamado implicitamente para cancelar todas as edições. Se < xref:System.Data.DataRow.RowState*> for excluído ou modificado, a linha será revertido para seus valores anteriores, e < xref:System.Data.DataRow.RowState*> fica inalterado. Se o <xref:System.Data.DataRow.RowState*> for adicionada, a linha é removida.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um simples <xref:System.Data.DataTable> com 2 colunas e linhas de 10. Depois de várias <xref:System.Data.DataRow> itens são excluídos com o <xref:System.Data.DataRow.Delete%2A> método, uma das linhas é não excluído invocando <xref:System.Data.DataRow.RejectChanges%2A>.  
+  
+ [!code-csharp[Classic WebData DataRow.Delete Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.Delete Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.Delete Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.RowNotInTableException">A linha não pertence à tabela.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RowError">
+      <MemberSignature Language="C#" Value="public string RowError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RowError" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.RowError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a descrição de erro personalizada de uma linha.</summary>
+        <value>O texto que descreve um erro.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usa o <xref:System.Data.DataRow.HasErrors%2A> propriedade primeiro determinar se um <xref:System.Data.DataRow> contém erros.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define o texto de erro para dez linhas de uma tabela exibida em um <xref:System.Windows.Forms.DataGrid> controle.  
+  
+ [!code-csharp[Classic WebData DataRow.RowError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.RowError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.RowError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.RowError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowState">
+      <MemberSignature Language="C#" Value="public System.Data.DataRowState RowState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.DataRowState RowState" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.RowState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataRowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual da linha no que diz respeito à sua relação com o <see cref="T:System.Data.DataRowCollection" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Data.DataRowState" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor da <xref:System.Data.DataRow.RowState*> depende de dois fatores: o tipo de operação foi executado na linha e se <xref:System.Data.DataRow.AcceptChanges%2A> foi chamada no <xref:System.Data.DataRow>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Data.DataTable> com uma coluna e, em seguida, cria um único <xref:System.Data.DataRow>. Como o <xref:System.Data.DataRow> é criado, adicionado, modificado e excluído, seu <xref:System.Data.DataRow.RowState*> é impresso.  
+  
+ [!code-csharp[Classic WebData DataRow.RowState Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.RowState Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.RowState Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.RowState Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAdded">
+      <MemberSignature Language="C#" Value="public void SetAdded ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAdded() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetAdded" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Altera o <see cref="P:System.Data.DataRow.Rowstate" /> de um <see cref="T:System.Data.DataRow" /> para <see langword="Added" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Altera o <xref:System.Data.DataRow.RowState*> de um <xref:System.Data.DataRow> para `Added`. Se a linha atual não estiver em um um `Unchanged` ou um `Added` de estado, ele lança uma <xref:System.InvalidOperationException> com a mensagem que `SetAdded` só pode ser chamado em um `DataRow` instância em que o `RowState` é `Unchanged`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnError">
+      <MemberSignature Language="C#" Value="public void SetColumnError (System.Data.DataColumn column, string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnError(class System.Data.DataColumn column, string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetColumnError(System.Data.DataColumn,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="column">O <see cref="T:System.Data.DataColumn" /> para o qual definir a descrição do erro.</param>
+        <param name="error">A descrição do erro.</param>
+        <summary>Define a descrição do erro para uma coluna especificada como um <see cref="T:System.Data.DataColumn" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para examinar as descrições de erro, use o <xref:System.Data.DataRow.GetColumnError%2A> método.  
+  
+ Para determinar se existem quaisquer erros para a coleção de colunas, use o <xref:System.Data.DataRow.HasErrors%2A> propriedade. Consequentemente, é possível usar o método <xref:System.Data.DataRow.GetColumnsInError%2A> para recuperar todas as colunas com erros.  
+  
+ Se `null` ou uma cadeia de caracteres vazia é passada como o `error` parâmetro, o <xref:System.Data.DataRow> se comporta como se nenhum erro foi definido e o <xref:System.Data.DataRow.HasErrors%2A> propriedade retornará false.  
+  
+ Para definir uma descrição de erro personalizada em toda a linha, use o <xref:System.Data.DataRow.RowError%2A> propriedade.  
+  
+ Para determinar se existe algum erro para a coleção de colunas, use o método <xref:System.Data.DataRow.HasErrors%2A>.  
+  
+ Para limpar todos os erros da coleção de colunas, use o método <xref:System.Data.DataRow.ClearErrors%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma descrição de erro para um <xref:System.Data.DataRow> especificado.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnError">
+      <MemberSignature Language="C#" Value="public void SetColumnError (int columnIndex, string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnError(int32 columnIndex, string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetColumnError(System.Int32,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnIndex" Type="System.Int32" />
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnIndex">O índice com base em zero da coluna.</param>
+        <param name="error">A descrição do erro.</param>
+        <summary>Define a descrição do erro para uma coluna especificada por índice.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O método é usado para definir as descrições de erro personalizada nas colunas especificadas. Você pode usar o <xref:System.Windows.Forms.ErrorProvider> controle para exibir o texto do erro.  
+  
+ Para examinar as descrições de erro, use o <xref:System.Data.DataRow.GetColumnError%2A> método.  
+  
+ Para determinar se existem quaisquer erros para a coleção de colunas, use o <xref:System.Data.DataRow.HasErrors%2A> propriedade. Consequentemente, é possível usar o método <xref:System.Data.DataRow.GetColumnsInError%2A> para recuperar todas as colunas com erros.  
+  
+ Se `null` ou uma cadeia de caracteres vazia é passada como o `error` parâmetro, o <xref:System.Data.DataRow> se comporta como se nenhum erro foi definido e o <xref:System.Data.DataRow.HasErrors%2A> propriedade retornará false.  
+  
+ Para definir uma descrição de erro personalizada em toda a linha, use o <xref:System.Data.DataRow.RowError%2A> propriedade.  
+  
+ Para limpar todos os erros da coleção de colunas, use o método <xref:System.Data.DataRow.ClearErrors%2A>.  
+  
+ Para definir o texto de erro que se aplica a toda a linha, defina a <xref:System.Data.DataRow.RowError%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma descrição de erro para um <xref:System.Data.DataRow> especificado.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">O <paramref name="columnIndex" /> argumento está fora do intervalo</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetColumnError">
+      <MemberSignature Language="C#" Value="public void SetColumnError (string columnName, string error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetColumnError(string columnName, string error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetColumnError(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="columnName" Type="System.String" />
+        <Parameter Name="error" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="columnName">O nome da coluna.</param>
+        <param name="error">A descrição do erro.</param>
+        <summary>Define a descrição do erro para uma coluna especificada por nome.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome de uma coluna é definido com o <xref:System.Data.DataColumn.ColumnName%2A> propriedade o <xref:System.Data.DataColumn> classe.  
+  
+ Para examinar as descrições de erro, use o <xref:System.Data.DataRow.GetColumnError%2A> método.  
+  
+ Para determinar se existem quaisquer erros para a coleção de colunas, use o <xref:System.Data.DataRow.HasErrors%2A> propriedade. Consequentemente, é possível usar o método <xref:System.Data.DataRow.GetColumnsInError%2A> para recuperar todas as colunas com erros.  
+  
+ Se `null` ou uma cadeia de caracteres vazia é passada como o `error` parâmetro, o <xref:System.Data.DataRow> se comporta como se nenhum erro foi definido e o <xref:System.Data.DataRow.HasErrors%2A> propriedade retornará false.  
+  
+ Para definir uma descrição de erro personalizada em toda a linha, use o <xref:System.Data.DataRow.RowError%2A> propriedade.  
+  
+ Para determinar se existe algum erro para a coleção de colunas, use o método <xref:System.Data.DataRow.HasErrors%2A>.  
+  
+ Para limpar todos os erros da coleção de colunas, use o método <xref:System.Data.DataRow.ClearErrors%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma descrição de erro para um <xref:System.Data.DataRow> especificado.  
+  
+ [!code-csharp[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.SetColumnError Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetColumnError Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetModified">
+      <MemberSignature Language="C#" Value="public void SetModified ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetModified() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetModified" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Altera o <see cref="P:System.Data.DataRow.Rowstate" /> de um <see cref="T:System.Data.DataRow" /> para <see langword="Modified" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Altera o <xref:System.Data.DataRow.RowState*> de um <xref:System.Data.DataRow> para `Modified`. Se a linha atual não estiver em um um `Unchanged` ou um `Added` de estado, ele lança uma <xref:System.InvalidOperationException> com a mensagem que `SetModified` só pode ser chamado em um `DataRow` instância em que o `RowState` é `Unchanged`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNull">
+      <MemberSignature Language="C#" Value="protected void SetNull (System.Data.DataColumn column);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetNull(class System.Data.DataColumn column) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetNull(System.Data.DataColumn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Data.DataColumn" />
+      </Parameters>
+      <Docs>
+        <param name="column">Um <see cref="T:System.Data.DataColumn" />.</param>
+        <summary>Define o valor do <see cref="T:System.Data.DataColumn" /> especificado para um valor nulo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Data.DataRow.IsNull%2A> método para determinar se uma coluna contém um valor nulo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParentRow">
+      <MemberSignature Language="C#" Value="public void SetParentRow (System.Data.DataRow parentRow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParentRow(class System.Data.DataRow parentRow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetParentRow(System.Data.DataRow)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentRow" Type="System.Data.DataRow" />
+      </Parameters>
+      <Docs>
+        <param name="parentRow">O novo pai <see cref="T:System.Data.DataRow" />.</param>
+        <summary>Define a linha pai de um <see cref="T:System.Data.DataRow" /> com o novo pai especificado <see cref="T:System.Data.DataRow" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParentRow">
+      <MemberSignature Language="C#" Value="public void SetParentRow (System.Data.DataRow parentRow, System.Data.DataRelation relation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetParentRow(class System.Data.DataRow parentRow, class System.Data.DataRelation relation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.DataRow.SetParentRow(System.Data.DataRow,System.Data.DataRelation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentRow" Type="System.Data.DataRow" />
+        <Parameter Name="relation" Type="System.Data.DataRelation" />
+      </Parameters>
+      <Docs>
+        <param name="parentRow">O novo pai <see cref="T:System.Data.DataRow" />.</param>
+        <param name="relation">A relação <see cref="T:System.Data.DataRelation" /> a ser usada.</param>
+        <summary>Define a linha pai de um <see cref="T:System.Data.DataRow" /> com novo pai especificado <see cref="T:System.Data.DataRow" /> e <see cref="T:System.Data.DataRelation" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir define a linha pai de uma linha filho específicos.  
+  
+ [!code-vb[Classic WebData DataRow.SetParentRow1 Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.SetParentRow1 Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Data.RowNotInTableException">Uma das linhas não pertence a uma tabela</exception>
+        <exception cref="T:System.ArgumentNullException">Uma das linhas é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">A relação não pertence ao <see cref="T:System.Data.DataRelationCollection" /> do objeto <see cref="T:System.Data.DataSet" />.</exception>
+        <exception cref="T:System.Data.InvalidConstraintException">O filho <see cref="T:System.Data.DataTable" /> da relação não é a tabela a qual essa linha pertence.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Table">
+      <MemberSignature Language="C#" Value="public System.Data.DataTable Table { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.DataTable Table" />
+      <MemberSignature Language="DocId" Value="P:System.Data.DataRow.Table" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Common</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Data.DataTable" /> para o qual essa linha tem um esquema.</summary>
+        <value>O <see cref="T:System.Data.DataTable" /> ao qual essa linha pertence.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.DataRow> não pertence necessariamente a coleção qualquer tabela de linhas. Esse comportamento ocorre quando o <xref:System.Data.DataRow> foi criado, mas não adicionar o <xref:System.Data.DataRowCollection>. Se o <xref:System.Data.DataRow.RowState*> propriedade retorna `DataRowState.Detached`, a linha não está em qualquer coleção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Data.DataRow.Table%2A> propriedade para retornar uma referência à coleção de colunas a <xref:System.Data.DataTable>.  
+  
+ [!code-csharp[Classic WebData DataRow.Table Example#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData DataRow.Table Example/CS/source.cs#1)]
+ [!code-vb[Classic WebData DataRow.Table Example#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData DataRow.Table Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

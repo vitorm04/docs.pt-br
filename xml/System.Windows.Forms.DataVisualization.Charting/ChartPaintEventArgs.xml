@@ -1,0 +1,127 @@
+<Type Name="ChartPaintEventArgs" FullName="System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs">
+  <TypeSignature Language="C#" Value="public class ChartPaintEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ChartPaintEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados para os eventos de pintura do controle <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs> objeto é usado para definir as propriedades do gráfico durante o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.PostPaint> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.PrePaint> eventos o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.Position%2A> propriedade permite que você posicione os elementos do gráfico e o <xref:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.ChartGraphics%2A> propriedade facilita as operações de desenho GDI+.  
+  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.Chart%2A> propriedade fornece o acesso de desenvolvedor para a raiz <xref:System.Windows.Forms.DataVisualization.Charting.Chart> objeto, que pode ser usado para definir várias propriedades do gráfico.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Chart">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.Chart Chart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.Chart Chart" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.Chart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.Chart</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a raiz <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> objeto.</summary>
+        <value>A raiz <see cref="T:System.Windows.Forms.DataVisualization.Charting.Chart" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.Chart%2A> propriedade permite que o desenvolvedor definir as propriedades do gráfico durante o <xref:System.Windows.Forms.DataVisualization.Charting.Chart.PostPaint> e <xref:System.Windows.Forms.DataVisualization.Charting.Chart.PrePaint> eventos o <xref:System.Windows.Forms.DataVisualization.Charting.Chart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartElement">
+      <MemberSignature Language="C#" Value="public object ChartElement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ChartElement" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.ChartElement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Object" /> para o evento.</summary>
+        <value>Um <see cref="T:System.Object" /> que representa o elemento dinâmico.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChartGraphics">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ChartGraphics ChartGraphics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ChartGraphics ChartGraphics" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.ChartGraphics" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ChartGraphics</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartGraphics" />.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ChartGraphics" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade do objeto durante um evento de pintura para:  
+  
+-   Ajuda com a conversão em coordenadas relativas e/ou absoluto do gráfico.  
+  
+-   Executar desenho personalizado usando um GDI+ <xref:System.Drawing.Graphics> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.DataVisualization.Charting.ElementPosition Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.DataVisualization.Charting.ElementPosition Position" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.DataVisualization.Charting.ElementPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um <see cref="T:System.Windows.Forms.DataVisualization.Charting.ElementPosition" /> objeto.</summary>
+        <value>Um objeto <see cref="T:System.Windows.Forms.DataVisualization.Charting.ElementPosition" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade do objeto durante um evento de pintura para posicionar um elemento de gráfico.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

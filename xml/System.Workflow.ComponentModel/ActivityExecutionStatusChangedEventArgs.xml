@@ -1,0 +1,121 @@
+<Type Name="ActivityExecutionStatusChangedEventArgs" FullName="System.Workflow.ComponentModel.ActivityExecutionStatusChangedEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ActivityExecutionStatusChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit ActivityExecutionStatusChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.ActivityExecutionStatusChangedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Contém informações relacionadas à alteração de evento de status de execução para um <see cref="T:System.Workflow.ComponentModel.Activity" />. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Activity Activity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Workflow.ComponentModel.Activity Activity" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityExecutionStatusChangedEventArgs.Activity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Activity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.Activity" /> que gerou o evento.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.Activity" /> que gerou o evento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionResult">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityExecutionResult ExecutionResult { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.ActivityExecutionResult ExecutionResult" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityExecutionStatusChangedEventArgs.ExecutionResult" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionResult" /> do <see cref="T:System.Workflow.ComponentModel.Activity" /> que gerou o evento correspondente ao valor quando o evento ocorreu.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionResult" /> do <see cref="T:System.Workflow.ComponentModel.Activity" /> que gerou o evento correspondente ao valor quando o evento ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecutionStatus">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.ActivityExecutionStatus ExecutionStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus ExecutionStatus" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.ComponentModel.ActivityExecutionStatusChangedEventArgs.ExecutionStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" /> do <see cref="T:System.Workflow.ComponentModel.Activity" /> que gerou o evento correspondente ao valor quando o evento ocorreu.</summary>
+        <value>O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionStatus" /> do <see cref="T:System.Workflow.ComponentModel.Activity" /> que gerou o evento correspondente ao valor quando o evento ocorreu.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.ActivityExecutionStatusChangedEventArgs.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece um <see cref="T:System.String" /> que representa a instância atual.</summary>
+        <returns>Um <see cref="T:System.String" /> que representa a instância atual.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Contém as seguintes cadeias de caracteres na ordem de descrição:  
+  
+-   O <xref:System.Workflow.ComponentModel.Activity.QualifiedName%2A> de origem <xref:System.Workflow.ComponentModel.Activity>.  
+  
+-   O <xref:System.Workflow.ComponentModel.ActivityExecutionStatus> como uma enumeração convertidos para cadeia de caracteres de origem <xref:System.Workflow.ComponentModel.Activity>.  
+  
+-   O <xref:System.Workflow.ComponentModel.ActivityExecutionResult> como uma enumeração convertidos para cadeia de caracteres de origem <xref:System.Workflow.ComponentModel.Activity>.  
+  
+-  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

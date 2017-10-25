@@ -1,0 +1,115 @@
+<Type Name="IComponentInitializer" FullName="System.ComponentModel.Design.IComponentInitializer">
+  <TypeSignature Language="C#" Value="public interface IComponentInitializer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IComponentInitializer" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IComponentInitializer" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um conjunto de valores padrão recomendado durante a criação do componente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.IComponentInitializer> interface pode ser implementada por qualquer designer, que é um componente que também implementa <xref:System.ComponentModel.Design.IDesigner>, que recebe um conjunto de valores padrão para o componente que está criando. <xref:System.ComponentModel.Design.IComponentInitializer>consultada durante a criação do novo componente. Valores padrão recomendado para as propriedades do componente são passados como pares de nome/valor em um dicionário.  
+  
+ Esse design fornece dois pontos de personalização: o item de caixa de ferramentas em si pode ser substituído ou alterado para executar ações personalizadas, ou o designer de um componente pode ser alterado para fornecer uma ação personalizada. Um designer que implementa <xref:System.ComponentModel.Design.IComponentInitializer> não deve depender dos seus métodos —<xref:System.ComponentModel.Design.IComponentInitializer.InitializeNewComponent%2A> ou <xref:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent%2A>— chamado, como itens de caixa de ferramentas não são obrigadas a chamar esses métodos.  
+  
+ Para obter uma visão geral de criação de componentes de design, consulte [Estendendo suporte em tempo de Design](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InitializeExistingComponent">
+      <MemberSignature Language="C#" Value="public void InitializeExistingComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeExistingComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Um dicionário de valores de propriedade padrão, que são pares de nome/valor, com o qual deseja redefinir o estado do componente.</param>
+        <summary>Restaura uma instância de um componente para seu estado padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent%2A> método é chamado quando um designer novamente inicializar um componente existente. Por exemplo, <xref:System.ComponentModel.Design.IComponentInitializer.InitializeExistingComponent%2A> é geralmente chamado após uma operação de arrastar e soltar. O `defaultValues` parâmetro é um dicionário que contém pares de nome/valor de valores padrão que devem ser aplicados às propriedades do componente associado. Esse dicionário pode ser `null` se nenhum valor padrão tiver sido especificado.  
+  
+> [!CAUTION]
+>  Ao implementar esse método, geralmente você não deve modificar as propriedades do componente além essas recomendações encontradas em `defaultValue`. O componente existente pode já ter tido suas propriedades definido pelo usuário ou outro código de tempo de design.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeNewComponent">
+      <MemberSignature Language="C#" Value="public void InitializeNewComponent (System.Collections.IDictionary defaultValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeNewComponent(class System.Collections.IDictionary defaultValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.IComponentInitializer.InitializeNewComponent(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="defaultValues" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="defaultValues">Um dicionário de valores de propriedade padrão, que são pares de nome/valor, com a qual inicializar o estado do componente.</param>
+        <summary>Inicializa um novo componente usando um conjunto de valores recomendados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.IComponentInitializer.InitializeNewComponent%2A> método é chamado depois que um novo componente é criado. Ele geralmente é chamado pelo próprio item da caixa de ferramentas e é usado para configurar os valores padrão do componente.  
+  
+ Esse dicionário pode ser `null` se nenhum valor padrão especificado. Se o dicionário for `null`, as propriedades do componente devem ser deixadas em seus estados padrão implícito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

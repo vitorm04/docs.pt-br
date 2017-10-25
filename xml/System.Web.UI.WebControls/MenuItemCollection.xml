@@ -1,0 +1,733 @@
+<Type Name="MenuItemCollection" FullName="System.Web.UI.WebControls.MenuItemCollection">
+  <TypeSignature Language="C#" Value="public sealed class MenuItemCollection : System.Collections.ICollection, System.Web.UI.IStateManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MenuItemCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Web.UI.IStateManager" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.MenuItemCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Web.UI.IStateManager</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa uma coleção de itens de menu em um <see cref="T:System.Web.UI.WebControls.Menu" /> controle. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MenuItemCollection> classe é usada para armazenar e gerenciar uma coleção de <xref:System.Web.UI.WebControls.MenuItem> objetos no <xref:System.Web.UI.WebControls.Menu> controle. O <xref:System.Web.UI.WebControls.Menu> controlar usa o <xref:System.Web.UI.WebControls.MenuItemCollection> itens de classe para armazenar seu menu de raiz no <xref:System.Web.UI.WebControls.Menu.Items%2A> propriedade. Essa coleção também é usada para o <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> propriedade de um <xref:System.Web.UI.WebControls.MenuItem> objeto para armazenar itens de submenu de um item de menu (se houver).  
+  
+ O <xref:System.Web.UI.WebControls.MenuItemCollection> classe oferece suporte a várias maneiras de acessar os itens na coleção:  
+  
+-   Use o <xref:System.Web.UI.WebControls.MenuItemCollection.Item%2A> indexador para recuperar diretamente um <xref:System.Web.UI.WebControls.MenuItem> objeto em um índice com base em zero específico.  
+  
+-   Use o <xref:System.Web.UI.WebControls.MenuItemCollection.GetEnumerator%2A> método para criar um enumerador que pode ser usado para iterar pela coleção.  
+  
+-   Use o <xref:System.Web.UI.WebControls.MenuItemCollection.CopyTo%2A> método para copiar o conteúdo da coleção em uma matriz.  
+  
+ Você pode gerenciar programaticamente um <xref:System.Web.UI.WebControls.MenuItemCollection> objeto adicionando e removendo <xref:System.Web.UI.WebControls.MenuItem> objetos. Para adicionar itens de menu à coleção, use o <xref:System.Web.UI.WebControls.MenuItemCollection.Add%2A> ou <xref:System.Web.UI.WebControls.MenuItemCollection.AddAt%2A> método. Para remover nós da coleção, use o <xref:System.Web.UI.WebControls.MenuItemCollection.Remove%2A>, o <xref:System.Web.UI.WebControls.MenuItemCollection.RemoveAt%2A>, ou o <xref:System.Web.UI.WebControls.MenuItemCollection.Clear%2A> método.  
+  
+> [!NOTE]
+>  Quando o <xref:System.Web.UI.WebControls.Menu> controle está associado a uma fonte de dados, o <xref:System.Web.UI.WebControls.Menu.Items%2A> e <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> coleções são preenchidas automaticamente cada vez que a associação ocorre. As alterações para as coleções entre associações serão perdidas. Para reter essas alterações, atualizar a fonte de dados ou reconstruir manualmente a coleção de cada vez que você associar.  
+  
+ O <xref:System.Web.UI.WebControls.MenuItemCollection> classe contém propriedades e métodos que permitem que você recupere informações sobre a própria coleção. Para descobrir quantos itens estão na coleção, use o <xref:System.Web.UI.WebControls.MenuItemCollection.Count%2A> propriedade. Se você quiser determinar se a coleção contém um determinado <xref:System.Web.UI.WebControls.MenuItem> de objeto, use o <xref:System.Web.UI.WebControls.MenuItemCollection.Contains%2A> método. Para obter o índice de um <xref:System.Web.UI.WebControls.MenuItem> objeto na coleção, use o <xref:System.Web.UI.WebControls.MenuItemCollection.IndexOf%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como preencher o <xref:System.Web.UI.WebControls.Menu.Items%2A> e <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> coleções usando a sintaxe declarativa.  
+  
+ [!code-aspx-csharp[MenuDeclarative#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuDeclarative/CS/menudeclarativecs.aspx#1)]
+ [!code-aspx-vb[MenuDeclarative#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuDeclarative/VB/menudeclarativevb.aspx#1)]  
+  
+ O exemplo de código a seguir demonstra como adicionar programaticamente uma <xref:System.Web.UI.WebControls.MenuItem> o objeto para o <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> coleção de um item de menu de raiz.  
+  
+ [!code-aspx-csharp[MenuItemCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionAdd/CS/menuitemcollectionaddcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionAdd/VB/menuitemcollectionaddvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItemCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> classe usando os valores padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.MenuItemCollection> classe usando os valores padrão. Este construtor é comumente usado ao criar uma coleção de raiz de itens de menu onde um menu pai (ou proprietário) não é necessário.  
+  
+> [!NOTE]
+>  Ao criar uma coleção de filhos de itens de menu, você deve usar o construtor sobrecarregado que usa o `owner` parâmetro, em vez desse construtor, para especificar o item de menu pai.  
+  
+ Este construtor é usado principalmente por desenvolvedores de controle ao estender o <xref:System.Web.UI.WebControls.Menu> controle para inicializar o <xref:System.Web.UI.WebControls.Menu.Items%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MenuItemCollection (System.Web.UI.WebControls.MenuItem owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Web.UI.WebControls.MenuItem owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.#ctor(System.Web.UI.WebControls.MenuItem)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="owner" Type="System.Web.UI.WebControls.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="owner">Um <see cref="T:System.Web.UI.WebControls.MenuItem" /> que representa o item de menu pai do atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> classe usando o item de menu pai especificado (ou proprietário).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este construtor para inicializar uma nova instância do <xref:System.Web.UI.WebControls.MenuItemCollection> classe usando o item de menu pai especificado (ou proprietário). Este construtor é comumente usado durante a criação de uma coleção de itens de menu filho em que você precisa especificar o item de menu pai.  
+  
+> [!NOTE]
+>  Ao criar uma coleção de raiz de itens de menu, considere usando o construtor padrão porque os itens de menu raiz não tem um item de menu pai.  
+  
+ Este construtor é usado principalmente por desenvolvedores de controle ao estender o <xref:System.Web.UI.WebControls.MenuItem> classe ao inicializar o <xref:System.Web.UI.WebControls.MenuItem.ChildItems%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Web.UI.WebControls.MenuItem child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class System.Web.UI.WebControls.MenuItem child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.Add(System.Web.UI.WebControls.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="System.Web.UI.WebControls.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="child">O <see cref="T:System.Web.UI.WebControls.MenuItem" /> ser acrescentada ao final da atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />.</param>
+        <summary>Acrescenta especificado <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto ao final da atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.Add%2A> método acrescentar especificado <xref:System.Web.UI.WebControls.MenuItem> objeto ao final da coleção.  
+  
+> [!NOTE]
+>  Você pode adicionar valores nulos e duplicar <xref:System.Web.UI.WebControls.MenuItem> objetos na coleção.  
+  
+ Como alternativa, você pode inserir um <xref:System.Web.UI.WebControls.MenuItem> objeto da coleção em um índice específico usando o <xref:System.Web.UI.WebControls.MenuItemCollection.AddAt%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.Add%2A> método para adicionar programaticamente uma <xref:System.Web.UI.WebControls.MenuItem> o objeto para um <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+ [!code-aspx-csharp[MenuItemCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionAdd/CS/menuitemcollectionaddcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionAdd/VB/menuitemcollectionaddvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="child" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAt">
+      <MemberSignature Language="C#" Value="public void AddAt (int index, System.Web.UI.WebControls.MenuItem child);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAt(int32 index, class System.Web.UI.WebControls.MenuItem child) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.AddAt(System.Int32,System.Web.UI.WebControls.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="child" Type="System.Web.UI.WebControls.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local de índice baseado em zero no qual o <see cref="T:System.Web.UI.WebControls.MenuItem" /> será inserido.</param>
+        <param name="child">O <see cref="T:System.Web.UI.WebControls.MenuItem" /> a ser inserido.</param>
+        <summary>Insere o objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> especificado no objeto <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> atual no local de índice especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.AddAt%2A> método inserir especificado <xref:System.Web.UI.WebControls.MenuItem> objeto na coleção no índice especificado.  
+  
+> [!NOTE]
+>  Você pode adicionar valores nulos e duplicar <xref:System.Web.UI.WebControls.MenuItem> objetos na coleção.  
+  
+ Como alternativa, você pode simplesmente acrescentar um <xref:System.Web.UI.WebControls.MenuItem> objeto ao final da coleção usando o <xref:System.Web.UI.WebControls.MenuItemCollection.Add%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.AddAt%2A> método programaticamente inserir um <xref:System.Web.UI.WebControls.MenuItem> do objeto em um <xref:System.Web.UI.WebControls.MenuItemCollection> objeto em um local de índice especificado.  
+  
+ [!code-aspx-csharp[MenuItemCollectionAddAt#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionAddAt/CS/menuitemcollectionaddatcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionAddAt#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionAddAt/VB/menuitemcollectionaddatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os itens do atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.Clear%2A> método para remover cada <xref:System.Web.UI.WebControls.MenuItem> objeto do atual <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+> [!NOTE]
+>  Para remover um nó individual da coleção, considere usar o <xref:System.Web.UI.WebControls.MenuItemCollection.Remove%2A> ou <xref:System.Web.UI.WebControls.MenuItemCollection.RemoveAt%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.Clear%2A> método para remover todos os itens do <xref:System.Web.UI.WebControls.Menu.Items%2A> coleção de um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+ [!code-aspx-csharp[MenuItemCollectionClear#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionClear/CS/menuitemcollectionclearcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionClear#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionClear/VB/menuitemcollectionclearvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Web.UI.WebControls.MenuItem c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class System.Web.UI.WebControls.MenuItem c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.Contains(System.Web.UI.WebControls.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="c" Type="System.Web.UI.WebControls.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="c">O <see cref="T:System.Web.UI.WebControls.MenuItem" /> para localizar.</param>
+        <summary>Determina se o objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> especificado está na coleção.</summary>
+        <returns>
+          <see langword="true" /> se o objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> especificado estiver contido na coleção; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.Contains%2A> método para determinar se um <xref:System.Web.UI.WebControls.MenuItem> objeto está contido no atual <xref:System.Web.UI.WebControls.MenuItemCollection> objeto. O <xref:System.Web.UI.WebControls.MenuItem> e suas propriedades é comparado com o valor passado. Esse método é geralmente usado para testar a existência de uma <xref:System.Web.UI.WebControls.MenuItem> objeto antes de executar uma tarefa, como a adição ou remoção de um item de menu da coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.Contains%2A> método para determinar se um <xref:System.Web.UI.WebControls.MenuItem> objeto está contido dentro de uma <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+ [!code-aspx-csharp[MenuItemCollectionContains#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionContains/CS/menuitemcollectioncontainscs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionContains#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionContains/VB/menuitemcollectioncontainsvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma base zero <see cref="T:System.Array" /> que recebe os itens copiados do atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />.</param>
+        <param name="index">A posição na matriz de destino na qual começar a receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens do <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto para um unidimensional compatível <see cref="T:System.Array" />, começando no índice especificado na matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.CopyTo%2A> método para copiar o conteúdo do atual <xref:System.Web.UI.WebControls.MenuItemCollection> objeto especificado com base em zero <xref:System.Array?displayProperty=nameWithType>. Itens são copiados iniciando no índice especificado da matriz de destino. Com o <xref:System.Array?displayProperty=nameWithType>, você pode usar sintaxe de matriz para acessar os itens a <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+ Como alternativa, você também pode usar o <xref:System.Web.UI.WebControls.MenuItemCollection.GetEnumerator%2A> método para criar um enumerador que pode ser usado para acessar os itens na coleção.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" />não é uma matriz de <see cref="T:System.Web.UI.WebControls.MenuItem" /> objetos.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.UI.WebControls.MenuItem[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.UI.WebControls.MenuItem[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.CopyTo(System.Web.UI.WebControls.MenuItem[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.UI.WebControls.MenuItem[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Uma matriz de base zero de objetos <see cref="T:System.Web.UI.WebControls.MenuItem" /> que recebe os itens copiados do <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> atual.</param>
+        <param name="index">A posição na matriz de destino na qual começar a receber o conteúdo copiado.</param>
+        <summary>Copia todos os itens do objeto <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> para uma matriz unidimensional compatível de objetos <see cref="T:System.Web.UI.WebControls.MenuItem" />, começando no índice especificado na matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.CopyTo%2A> método para copiar o conteúdo do atual <xref:System.Web.UI.WebControls.MenuItemCollection> objeto na matriz de base zero especificado. Itens são copiados iniciando no índice especificado da matriz de destino. Com a matriz, você pode usar sintaxe de matriz para acessar os itens a <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+ Como alternativa, você também pode usar o <xref:System.Web.UI.WebControls.MenuItemCollection.GetEnumerator%2A> método para criar um enumerador que pode ser usado para acessar os itens na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.CopyTo%2A> método para copiar os itens em uma <xref:System.Web.UI.WebControls.MenuItemCollection> objeto para uma matriz de <xref:System.Web.UI.WebControls.MenuItem> objetos.  
+  
+ [!code-aspx-csharp[MenuItemCollectionCopyTo#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionCopyTo/CS/menuitemcollectioncopytocs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionCopyTo#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionCopyTo/VB/menuitemcollectioncopytovb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de itens de menu contidos no atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</summary>
+        <value>O número de itens de menu contidos no atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.Count%2A> propriedade para determinar o número de itens em uma <xref:System.Web.UI.WebControls.MenuItemCollection> objeto. Essa propriedade é usada ao fazer a iteração por meio de uma coleção para determinar o limite superior da coleção. O <xref:System.Web.UI.WebControls.MenuItemCollection.Count%2A> propriedade também costuma ser usada para determinar se uma coleção está vazia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.Count%2A> propriedade para determinar o número de itens de menu em um <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+ [!code-aspx-csharp[MenuItemCollectionCount#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionCount/CS/menuitemcollectioncountcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionCount#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionCount/VB/menuitemcollectioncountvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que pode ser usado para percorrer os itens no atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</summary>
+        <returns>Um enumerador que pode ser usado para percorrer os itens no atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.GetEnumerator%2A> método para criar um enumerador que pode ser iterado facilmente por meio de colocar cada item atual <xref:System.Web.UI.WebControls.MenuItemCollection> objeto. Para obter o item atualmente apontado no enumerador, use o <xref:System.Collections.IEnumerator.Current%2A> propriedade. Use o <xref:System.Collections.IEnumerator.MoveNext%2A> método para mover para o próximo item. Se você precisar mover o enumerador de volta para o início da coleção, use o <xref:System.Collections.IEnumerator.Reset%2A> método.  
+  
+> [!NOTE]
+>  Depois de criar um enumerador ou usar o <xref:System.Collections.IEnumerator.Reset%2A> método, você deve chamar o <xref:System.Collections.IEnumerator.MoveNext%2A> método. Caso contrário, o item é representado pelo <xref:System.Collections.IEnumerator.Current%2A> propriedade está definida.  
+  
+ Como alternativa, você também pode usar o <xref:System.Web.UI.WebControls.MenuItemCollection.CopyTo%2A> método para copiar os itens na coleção para uma matriz. Você pode usar a matriz para acessar os itens na coleção.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.GetEnumerator%2A> método para criar um enumerador que contém os itens de submenu a `Music` item de menu em um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+ [!code-aspx-csharp[MenuItemCollectionGetEnumerator#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionGetEnumerator/CS/menuitemcollectiongetenumeratorcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionGetEnumerator#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionGetEnumerator/VB/menuitemcollectiongetenumeratorvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Web.UI.WebControls.MenuItem value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class System.Web.UI.WebControls.MenuItem value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.IndexOf(System.Web.UI.WebControls.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="value">O <see cref="T:System.Web.UI.WebControls.MenuItem" /> a ser localizado.</param>
+        <summary>Determina o índice especificado <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto na coleção.</summary>
+        <returns>O índice baseado em zero da primeira ocorrência de <paramref name="value" /> no atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />, se encontrado; caso contrário, -1.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.IndexOf%2A> método para determinar o índice especificado <xref:System.Web.UI.WebControls.MenuItem> objeto atual <xref:System.Web.UI.WebControls.MenuItemCollection> objeto. Se o item de menu não está na coleção, o método retornará -1.  
+  
+> [!NOTE]
+>  Se o item de menu especificado aparece várias vezes na coleção, o índice da primeira ocorrência será retornado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.IndexOf%2A> método para determinar o índice de um <xref:System.Web.UI.WebControls.MenuItem> objeto dentro de uma <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+ [!code-aspx-csharp[MenuItemCollectionIndexOf#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionIndexOf/CS/menuitemcollectionindexofcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionIndexOf#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionIndexOf/VB/menuitemcollectionindexofvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemCollection.IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso para o <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto for sincronizado (thread-safe).</summary>
+        <value>Sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MenuItemCollection.IsSynchronized%2A> propriedade é usada para indicar se o acesso a <xref:System.Web.UI.WebControls.MenuItemCollection> objeto for sincronizado (thread-safe). Essa propriedade é derivada de <xref:System.Collections.ICollection?displayProperty=nameWithType> classe e é substituído para retornar sempre `false`.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.MenuItemCollection.IsSynchronized%2A> propriedade, consulte o <xref:System.Collections.ICollection.IsSynchronized%2A> propriedade o <xref:System.Collections.ICollection> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.MenuItem this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.MenuItem Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.MenuItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O índice de base zero de <see cref="T:System.Web.UI.WebControls.MenuItem" /> para recuperar.</param>
+        <summary>Obtém o <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto no índice especificado atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.MenuItem" /> no índice especificado atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use este indexador para acessar um <xref:System.Web.UI.WebControls.MenuItem> objeto do atual <xref:System.Web.UI.WebControls.MenuItemCollection> objeto no índice especificado usando a notação de matriz. O indexador permite acessar, modificar ou substituir uma <xref:System.Web.UI.WebControls.MenuItem> objeto na coleção diretamente.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o indexador para recuperar o item de menu de raiz de <xref:System.Web.UI.WebControls.Menu.Items%2A> coleção de um <xref:System.Web.UI.WebControls.Menu> controle.  
+  
+ [!code-aspx-csharp[MenuItemCollectionAdd#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionAdd/CS/menuitemcollectionaddcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionAdd#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionAdd/VB/menuitemcollectionaddvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Web.UI.WebControls.MenuItem value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Web.UI.WebControls.MenuItem value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.Remove(System.Web.UI.WebControls.MenuItem)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Web.UI.WebControls.MenuItem" />
+      </Parameters>
+      <Docs>
+        <param name="value">O objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> a ser removido.</param>
+        <summary>Remove o objeto <see cref="T:System.Web.UI.WebControls.MenuItem" /> especificado do objeto <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.Remove%2A> método para remover o item de menu especificado da coleção. Todos os itens que seguem esse item de menu, em seguida, são movidos para cima para preencher a posição vaga nesse tipo. Os índices dos itens movidos também são atualizados.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.MenuItemCollection> objeto pode conter valores nulos, bem como duplicar <xref:System.Web.UI.WebControls.MenuItem> objetos.  
+  
+ Como alternativa, você pode remover um item de menu de um índice específico na coleção usando o <xref:System.Web.UI.WebControls.MenuItemCollection.RemoveAt%2A> método. Você também pode remover todos os itens da coleção usando o <xref:System.Web.UI.WebControls.MenuItemCollection.Clear%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.Remove%2A> método para remover programaticamente um <xref:System.Web.UI.WebControls.MenuItem> de objeto um <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+ [!code-aspx-csharp[MenuItemCollectionRemove#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionRemove/CS/menuitemcollectionremovecs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionRemove#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionRemove/VB/menuitemcollectionremovevb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">O local do índice de base zero do item de menu a ser removido.</param>
+        <summary>Remove o <see cref="T:System.Web.UI.WebControls.MenuItem" /> objeto no local do índice especificado do atual <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.MenuItemCollection.RemoveAt%2A> método para remover o <xref:System.Web.UI.WebControls.MenuItem> objeto no local do índice especificado da coleção. Todos os itens que seguem esse item de menu, em seguida, são movidos para cima para preencher a posição vaga nesse tipo. Os índices dos itens movidos também são atualizados.  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.WebControls.MenuItemCollection> objeto pode conter valores nulos, bem como duplicar <xref:System.Web.UI.WebControls.MenuItem> objetos.  
+  
+ Como alternativa, você pode remover um determinado <xref:System.Web.UI.WebControls.MenuItem> objeto usando o <xref:System.Web.UI.WebControls.MenuItemCollection.Remove%2A> método. Você também pode remover todos os itens da coleção usando o <xref:System.Web.UI.WebControls.MenuItemCollection.Clear%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Web.UI.WebControls.MenuItemCollection.RemoveAt%2A> método para remover programaticamente um <xref:System.Web.UI.WebControls.MenuItem> de objeto um <xref:System.Web.UI.WebControls.MenuItemCollection> objeto em um local de índice especificado.  
+  
+ [!code-aspx-csharp[MenuItemCollectionRemoveAt#1](~/samples/snippets/csharp/VS_Snippets_WebNet/MenuItemCollectionRemoveAt/CS/menuitemcollectionremoveatcs.aspx#1)]
+ [!code-aspx-vb[MenuItemCollectionRemoveAt#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/MenuItemCollectionRemoveAt/VB/menuitemcollectionremoveatvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemCollection.SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso a <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto.</summary>
+        <value>Um <see cref="T:System.Object" /> que pode ser usado para sincronizar o acesso a <see cref="T:System.Web.UI.WebControls.MenuItemCollection" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.MenuItemCollection.SyncRoot%2A> propriedade fornece uma versão sincronizada do <xref:System.Web.UI.WebControls.MenuItemCollection> objeto que pode ser usado com a sincronização de código (thread).  
+  
+> [!CAUTION]
+>  O <xref:System.Web.UI.WebControls.MenuItemCollection.IsSynchronized%2A> propriedade desta classe sempre retorna `false`, que indica que o <xref:System.Web.UI.WebControls.MenuItemCollection> classe não está sincronizada (não thread-safe).  
+  
+ Sincronizar o código necessário realizar operações no <xref:System.Web.UI.WebControls.MenuItemCollection.SyncRoot%2A> objeto do <xref:System.Web.UI.WebControls.MenuItemCollection> coleção, não diretamente no <xref:System.Web.UI.WebControls.MenuItemCollection> objeto propriamente dito. Isso garante a operação apropriada das coleções que são derivadas de outros objetos. Especificamente, ele mantém uma sincronização adequada com outros threads que podem ser simultaneamente modificando o <xref:System.Web.UI.WebControls.MenuItemCollection> objeto.  
+  
+> [!NOTE]
+>  O objeto retornado nesta implementação é o <xref:System.Collections.ArrayList> objeto usado para armazenar o <xref:System.Web.UI.WebControls.MenuItem> objetos na coleção.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Mesmo quando uma coleção é sincronizada, outros threads ainda podem modificar a coleção, fazendo com que o enumerador lançar uma exceção. Para garantir thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração ou verificar as exceções resultantes das alterações feitas por outros threads.  
+  
+ Para obter mais informações sobre o <xref:System.Web.UI.WebControls.MenuItemCollection.SyncRoot%2A> propriedade, consulte o <xref:System.Collections.ICollection.SyncRoot%2A> propriedade o <xref:System.Collections.ICollection> interface.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.IsTrackingViewState">
+      <MemberSignature Language="C#" Value="bool System.Web.UI.IStateManager.IsTrackingViewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.UI.IStateManager.IsTrackingViewState" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.MenuItemCollection.System#Web#UI#IStateManager#IsTrackingViewState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto está salvando alterações ao seu estado de exibição.</summary>
+        <value>
+          <see langword="true" /> se o controle estiver marcado para salvar seu estado; caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.LoadViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.LoadViewState (object state);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.LoadViewState(object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.System#Web#UI#IStateManager#LoadViewState(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="state">Um <see cref="T:System.Object" /> que contém os valores de estado de exibição salvo.</param>
+        <summary>Carrega o <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto do salvo anteriormente o estado de exibição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.SaveViewState">
+      <MemberSignature Language="C#" Value="object IStateManager.SaveViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.Web.UI.IStateManager.SaveViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.System#Web#UI#IStateManager#SaveViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações para exibir o estado para um <see cref="T:System.Object" />.</summary>
+        <returns>O <see cref="T:System.Object" /> que contém as alterações de estado de exibição.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.UI.IStateManager.TrackViewState">
+      <MemberSignature Language="C#" Value="void IStateManager.TrackViewState ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.UI.IStateManager.TrackViewState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.MenuItemCollection.System#Web#UI#IStateManager#TrackViewState" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Instrui o <see cref="T:System.Web.UI.WebControls.MenuItemCollection" /> objeto para controlar alterações em seu estado de exibição.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que esse método é chamado em um controle de servidor, o <xref:System.Web.UI.Control.IsTrackingViewState%2A> propriedade retorna `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

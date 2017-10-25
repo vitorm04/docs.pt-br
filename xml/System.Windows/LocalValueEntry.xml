@@ -1,0 +1,187 @@
+<Type Name="LocalValueEntry" FullName="System.Windows.LocalValueEntry">
+  <TypeSignature Language="C#" Value="public struct LocalValueEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit LocalValueEntry extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.LocalValueEntry" />
+  <AssemblyInfo>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um identificador de propriedade e o valor da propriedade para a propriedade de dependência definida localmente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As instâncias dessa classe são retornadas ao obter o valor da <xref:System.Windows.LocalValueEnumerator.Current%2A> propriedade de um <xref:System.Windows.LocalValueEnumerator>. Todos os <xref:System.Windows.LocalValueEntry> propriedades são somente leitura.  
+  
+ Essa classe não tem construtor público. Para obter as instâncias dessa classe, você deve chamar <xref:System.Windows.DependencyObject.GetLocalValueEnumerator%2A>e, em seguida, obter o valor de <xref:System.Windows.LocalValueEnumerator.Current%2A> de retornado <xref:System.Windows.LocalValueEnumerator>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir itera localmente conjunto de valores de um <xref:System.Windows.DependencyObject> e consultas <xref:System.Windows.LocalValueEntry> propriedades.  
+  
+ [!code-csharp[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/csharp/VS_Snippets_Wpf/DPClearValue/CSharp/default.xaml.cs#iteratelocalvaluesandclear)]
+ [!code-vb[DPClearValue#IterateLocalValuesAndClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPClearValue/VisualBasic/default.xaml.vb#iteratelocalvaluesandclear)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LocalValueEntry.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">O <see cref="T:System.Windows.LocalValueEntry" /> para comparar com a atual <see cref="T:System.Windows.LocalValueEntry" />.</param>
+        <summary>Determina se duas instâncias <see cref="T:System.Windows.LocalValueEntry" /> são iguais.</summary>
+        <returns>Isso <see cref="M:System.Windows.LocalValueEntry.op_Equality(System.Windows.LocalValueEntry,System.Windows.LocalValueEntry)" /> implementação compara os valores de <see cref="P:System.Windows.LocalValueEntry.Property" />e potencialmente compara os valores de <see cref="P:System.Windows.LocalValueEntry.Value" />. O <see cref="P:System.Windows.LocalValueEntry.Property" /> componentes de um <see cref="T:System.Windows.LocalValueEntry" /> é um tipo de valor, portanto, sempre será uma comparação bit a bit. Para o <see cref="P:System.Windows.LocalValueEntry.Value" /> componente, essa implementação usa uma comparação bit a bit se ele é um tipo de valor. Para definir propriedades locais que têm tipos de referência, o comportamento é adiado até os mecanismos de determinação de igualdade do tipo, porque ele usa apenas o = = operador dois valores internamente. Por padrão, isso seria uma igualdade de referência dos valores e, portanto, a igualdade de todo o <see cref="T:System.Windows.LocalValueEntry" /> se tornarão uma igualdade de referência.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LocalValueEntry.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para este <see cref="T:System.Windows.LocalValueEntry" />.</summary>
+        <returns>Um valor inteiro de 32 bits com sinal.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Windows.LocalValueEntry obj1, System.Windows.LocalValueEntry obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype System.Windows.LocalValueEntry obj1, valuetype System.Windows.LocalValueEntry obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LocalValueEntry.op_Equality(System.Windows.LocalValueEntry,System.Windows.LocalValueEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="System.Windows.LocalValueEntry" />
+        <Parameter Name="obj2" Type="System.Windows.LocalValueEntry" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">A primeira instância a ser comparado.</param>
+        <param name="obj2">A segunda instância a ser comparado.</param>
+        <summary>Compara especificado <see cref="T:System.Windows.LocalValueEntry" /> instâncias para determinar se eles são os mesmos.</summary>
+        <returns>
+          <see langword="true" />Se o <paramref name="obj1" /> <see cref="T:System.Windows.LocalValueEntry" /> é igual a <paramref name="obj2" /> <see cref="T:System.Windows.LocalValueEntry" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso <xref:System.Windows.LocalValueEntry.op_Equality%2A> implementação compara os valores de <xref:System.Windows.LocalValueEntry.Property%2A>e potencialmente compara os valores de <xref:System.Windows.LocalValueEntry.Value%2A>. O <xref:System.Windows.LocalValueEntry.Property%2A> componentes de um <xref:System.Windows.LocalValueEntry> sempre é um tipo de valor, portanto essa comparação sempre será uma comparação de valor de bit a bit. Para o <xref:System.Windows.LocalValueEntry.Value%2A> componente, essa implementação usa uma comparação bit a bit se ele é um tipo de valor.  
+  
+ Para definir propriedades locais que têm tipos de referência, o comportamento é adiado até os mecanismos de determinação de igualdade do tipo, porque ele usa o `==` operador nos dois valores internamente. Por padrão, essa é uma igualdade de referência dos valores.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Windows.LocalValueEntry obj1, System.Windows.LocalValueEntry obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype System.Windows.LocalValueEntry obj1, valuetype System.Windows.LocalValueEntry obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.LocalValueEntry.op_Inequality(System.Windows.LocalValueEntry,System.Windows.LocalValueEntry)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="System.Windows.LocalValueEntry" />
+        <Parameter Name="obj2" Type="System.Windows.LocalValueEntry" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">A primeira instância a ser comparado.</param>
+        <param name="obj2">A segunda instância a ser comparado.</param>
+        <summary>Compara especificado <see cref="T:System.Windows.LocalValueEnumerator" /> instâncias para determinar se eles são diferentes.</summary>
+        <returns>Essa implementação compara os valores da <see cref="P:System.Windows.LocalValueEntry.Property" /> e <see cref="P:System.Windows.LocalValueEntry.Value" /> componentes de um <see cref="T:System.Windows.LocalValueEntry" />. O <see cref="P:System.Windows.LocalValueEntry.Property" /> componentes de um <see cref="T:System.Windows.LocalValueEntry" /> sempre é um tipo de valor, portanto essa comparação sempre será uma comparação bit a bit. Para o <see cref="P:System.Windows.LocalValueEntry.Value" /> componente, essa implementação usa uma comparação bit a bit se ele é um tipo de valor.  
+  
+ Para definir propriedades locais que têm tipos de referência, o comportamento é adiado até os mecanismos de determinação de igualdade do tipo, porque ele usa o <see langword="==" /> operador nos dois valores internamente. Por padrão, essa é uma igualdade de referência dos valores.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Property">
+      <MemberSignature Language="C#" Value="public System.Windows.DependencyProperty Property { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.DependencyProperty Property" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalValueEntry.Property" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o identificador de definido localmente propriedade de dependência que é representada por esta entrada.</summary>
+        <value>O identificador definido localmente uma propriedade de dependência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use esta propriedade para consultar o identificador do definido localmente uma propriedade de dependência e obter seus metadados. Esses metadados obtido podem incluir o valor padrão da propriedade e se a propriedade oferece suporte a herança de valor de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public object Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Value" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.LocalValueEntry.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>WindowsBase</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor definido localmente uma propriedade de dependência.</summary>
+        <value>O valor definido localmente uma propriedade como um objeto de dependência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para determinar um tipo mais específico para esse valor, verifique o <xref:System.Windows.LocalValueEntry.Property%2A> atual <xref:System.Windows.LocalValueEntry> e obter sua <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

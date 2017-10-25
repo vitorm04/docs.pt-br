@@ -1,0 +1,60 @@
+<Type Name="ToolTipEventArgs" FullName="System.Windows.Controls.ToolTipEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class ToolTipEventArgs : System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ToolTipEventArgs extends System.Windows.RoutedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.ToolTipEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.RoutedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece informações de evento para eventos que ocorrem quando uma dica de ferramenta é aberta ou fechada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma dica de ferramenta é aberto e fechado, essa classe fornece informações de evento. O elemento que especifica a dica de ferramenta herda do <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.ContentElement>. Portanto, os eventos de aberto e fechamento existem essas duas classes. A tabela a seguir lista os eventos que usam essa classe.  
+  
+|Eventos que ocorrem quando uma dica de ferramenta é aberto|Eventos que ocorrem quando uma dica de ferramenta é fechada|  
+|--------------------------------------------|---------------------------------------------|  
+|<xref:System.Windows.FrameworkElement.ToolTipOpening?displayProperty=nameWithType>|<xref:System.Windows.FrameworkElement.ToolTipClosing?displayProperty=nameWithType>|  
+|<xref:System.Windows.FrameworkContentElement.ToolTipOpening?displayProperty=nameWithType>|<xref:System.Windows.FrameworkContentElement.ToolTipClosing?displayProperty=nameWithType>|  
+  
+ Esses eventos são registrados pelo <xref:System.Windows.Controls.ToolTipService> classe como o <xref:System.Windows.Controls.ToolTipService.ToolTipOpeningEvent> e <xref:System.Windows.Controls.ToolTipService.ToolTipClosingEvent> campos. O <xref:System.Windows.FrameworkElement> e <xref:System.Windows.FrameworkContentElement> ambas as classes implementam o <xref:System.Windows.Controls.ToolTipService> e expor esse evento definindo os eventos na tabela anterior  
+  
+ O <xref:System.Windows.Controls.ToolTipEventArgs> substituições de classe a <xref:System.Windows.RoutedEventArgs.InvokeEventHandler%2A> método. No entanto, esse membro protegido não aparece no <xref:System.Windows.Controls.ToolTipEventArgs> lista de membros porque o método está lacrado e não pode ser substituído nas classes de <xref:System.Windows.Controls.ToolTipEventArgs>. A implementação do método nessa classe converte o delegado de manipulador de eventos que é fornecido como um parâmetro para o método para o <xref:System.Windows.Controls.ToolTipEventHandler> tipo.  
+  
+ Se a dica de ferramenta é definida como um <xref:System.Windows.Controls.ToolTip> objeto, o <xref:System.Windows.Controls.ToolTip.Opened> e <xref:System.Windows.Controls.ToolTip.Closed> eventos o <xref:System.Windows.Controls.ToolTip> classe também são gerados quando uma dica de ferramenta para abre e fecha.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InvokeEventHandler">
+      <MemberSignature Language="C#" Value="protected override void InvokeEventHandler (Delegate genericHandler, object genericTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InvokeEventHandler(class System.Delegate genericHandler, object genericTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.ToolTipEventArgs.InvokeEventHandler(System.Delegate,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="genericHandler" Type="System.Delegate" />
+        <Parameter Name="genericTarget" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="genericHandler">To be added.</param>
+        <param name="genericTarget">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

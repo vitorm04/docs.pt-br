@@ -1,0 +1,146 @@
+<Type Name="EdmFunction" FullName="System.Data.Metadata.Edm.EdmFunction">
+  <TypeSignature Language="C#" Value="public sealed class EdmFunction : System.Data.Metadata.Edm.EdmType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EdmFunction extends System.Data.Metadata.Edm.EdmType" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Metadata.Edm.EdmFunction" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Metadata.Edm.EdmType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa informações sobre as funções que podem ser invocadas de consultas gravadas pela linguagem de consulta do Entity SQL. Elas podem ser as funções internas expostas pelo provedor de armazenamento ou funções definidas pelo usuário em um determinado banco de dados.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BuiltInTypeKind">
+      <MemberSignature Language="C#" Value="public override System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.Metadata.Edm.BuiltInTypeKind BuiltInTypeKind" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EdmFunction.BuiltInTypeKind" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.BuiltInTypeKind</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo do tipo interno para este <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</summary>
+        <value>Um dos valores de enumeração de <see cref="T:System.Data.Metadata.Edm.BuiltInTypeKind" /> enumeração.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandTextAttribute">
+      <MemberSignature Language="C#" Value="public string CommandTextAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandTextAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EdmFunction.CommandTextAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma consulta no idioma usado pelo modelo de armazenamento ou o sistema de gerenciamento de banco de dados.</summary>
+        <value>Um valor de cadeia de caracteres na sintaxe usada pelo modelo de armazenamento ou sistema de gerenciamento de banco de dados que contém a instrução de atualização ou consulta do <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FullName">
+      <MemberSignature Language="C#" Value="public override string FullName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FullName" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EdmFunction.FullName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna o nome completo (namespace e nome) desse tipo.</summary>
+        <value>O nome completo do tipo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsComposableAttribute">
+      <MemberSignature Language="C#" Value="public bool IsComposableAttribute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsComposableAttribute" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EdmFunction.IsComposableAttribute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define se esta instância é mapeada para uma função ou um procedimento armazenado.</summary>
+        <value>
+          <see langword="true" />Se esta instância for mapeada para uma função. <see langword="false" /> se esta instância for mapeada para um procedimento armazenado.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.FunctionParameter&gt; Parameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1&lt;class System.Data.Metadata.Edm.FunctionParameter&gt; Parameters" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EdmFunction.Parameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.FunctionParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros deste <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</summary>
+        <value>Uma coleção de tipo <see cref="T:System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1" /> que contém os parâmetros deste <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnParameter">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.FunctionParameter ReturnParameter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.FunctionParameter ReturnParameter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EdmFunction.ReturnParameter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.FunctionParameter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o parâmetro de retorno deste <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</summary>
+        <value>Um <see cref="T:System.Data.Metadata.Edm.FunctionParameter" /> objeto que representa o parâmetro de retorno deste <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnParameters">
+      <MemberSignature Language="C#" Value="public System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.FunctionParameter&gt; ReturnParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1&lt;class System.Data.Metadata.Edm.FunctionParameter&gt; ReturnParameters" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Metadata.Edm.EdmFunction.ReturnParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Metadata.Edm.ReadOnlyMetadataCollection&lt;System.Data.Metadata.Edm.FunctionParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de retorno deste <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</summary>
+        <value>Uma coleção de tipo <see cref="T:System.Data.Metadata.Edm.ReadOnlyMetadataCollection`1" /> que representa os parâmetros de retorno deste <see cref="T:System.Data.Metadata.Edm.EdmFunction" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

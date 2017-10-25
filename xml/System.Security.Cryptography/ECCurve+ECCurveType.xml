@@ -1,0 +1,184 @@
+<Type Name="ECCurve+ECCurveType" FullName="System.Security.Cryptography.ECCurve+ECCurveType">
+  <TypeSignature Language="C#" Value="public enum ECCurve.ECCurveType" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ECCurve/ECCurveType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Security.Cryptography.ECCurve.ECCurveType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+    <AssemblyVersion>4.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Core</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indica como interpretar os dados contidos em um objeto <see cref="T:System.Security.Cryptography.ECCurve" />.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Characteristic2">
+      <MemberSignature Language="C#" Value="Characteristic2" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECCurve/ECCurveType Characteristic2 = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.ECCurveType.Characteristic2" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve+ECCurveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os parâmetros de curva representam uma curva 2 característica.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Implicit">
+      <MemberSignature Language="C#" Value="Implicit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECCurve/ECCurveType Implicit = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.ECCurveType.Implicit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve+ECCurveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Nenhum dado de curva é interpretado. O chamador deve saber qual é a curva.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Named">
+      <MemberSignature Language="C#" Value="Named" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECCurve/ECCurveType Named = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.ECCurveType.Named" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve+ECCurveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os parâmetros de curva representam uma curva nomeada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimeMontgomery">
+      <MemberSignature Language="C#" Value="PrimeMontgomery" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECCurve/ECCurveType PrimeMontgomery = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.ECCurveType.PrimeMontgomery" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve+ECCurveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os parâmetros de curva representam uma curva principal com a fórmula B * y ^ 2 = x ^ 3 + A\*x ^ 2 + x.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimeShortWeierstrass">
+      <MemberSignature Language="C#" Value="PrimeShortWeierstrass" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECCurve/ECCurveType PrimeShortWeierstrass = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.ECCurveType.PrimeShortWeierstrass" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve+ECCurveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os parâmetros de curva representam uma curva principal com a fórmula y^2 = x^3 + A*x + B no campo principal P.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimeTwistedEdwards">
+      <MemberSignature Language="C#" Value="PrimeTwistedEdwards" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Security.Cryptography.ECCurve/ECCurveType PrimeTwistedEdwards = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Security.Cryptography.ECCurve.ECCurveType.PrimeTwistedEdwards" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Security.Cryptography.Algorithms</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+        <AssemblyVersion>4.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Core</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.ECCurve+ECCurveType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os parâmetros de curva representam uma curva principal com a fórmula A * x ^ 2 + y ^ 2 = 1 + B\*x ^ 2\*y ^ 2 no primo campo P.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

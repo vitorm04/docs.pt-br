@@ -1,0 +1,51 @@
+<Type Name="IRemoteDelegateContract" FullName="System.AddIn.Contract.Automation.IRemoteDelegateContract">
+  <TypeSignature Language="C#" Value="public interface IRemoteDelegateContract : System.AddIn.Contract.Automation.IRemoteObjectContract" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRemoteDelegateContract implements class System.AddIn.Contract.Automation.IRemoteObjectContract, class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:System.AddIn.Contract.Automation.IRemoteDelegateContract" />
+  <AssemblyInfo>
+    <AssemblyName>System.AddIn.Contract</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.Automation.IRemoteObjectContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define um contrato que componentes podem usar para acessar um delegado entre limites de domínio e o processo do aplicativo.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para invocar um delegado, use o <xref:System.AddIn.Contract.Automation.IRemoteDelegateContract.InvokeDelegate%2A> método.  
+  
+ Para adicionar um delegado a um evento ou remover um delegado de um evento, chame o <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke%2A> método o <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract> que é retornado por <xref:System.AddIn.Contract.Automation.IRemoteEventInfoContract.GetAddMethod%2A> ou <xref:System.AddIn.Contract.Automation.IRemoteEventInfoContract.GetRemoveMethod%2A>. Passar um <xref:System.AddIn.Contract.Automation.IRemoteDelegateContract> que representa o representante para a `parameters` parâmetro <xref:System.AddIn.Contract.Automation.IRemoteMethodInfoContract.Invoke%2A>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="InvokeDelegate">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.RemoteArgument InvokeDelegate (System.AddIn.Contract.Collections.IRemoteArgumentArrayContract args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.AddIn.Contract.RemoteArgument InvokeDelegate(class System.AddIn.Contract.Collections.IRemoteArgumentArrayContract args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.AddIn.Contract.Automation.IRemoteDelegateContract.InvokeDelegate(System.AddIn.Contract.Collections.IRemoteArgumentArrayContract)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.AddIn.Contract</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" />
+      </Parameters>
+      <Docs>
+        <param name="args">Um <see cref="T:System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" /> que especifica os parâmetros do delegado.</param>
+        <summary>Invoca o delegado que este <see cref="T:System.AddIn.Contract.Automation.IRemoteDelegateContract" /> identifica.</summary>
+        <returns>Um <see cref="T:System.AddIn.Contract.RemoteArgument" /> que especifica o valor de retorno do delegado invocado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

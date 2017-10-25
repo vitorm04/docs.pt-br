@@ -1,0 +1,471 @@
+<Type Name="ServiceManager" FullName="System.Activities.Presentation.ServiceManager">
+  <TypeSignature Language="C#" Value="public abstract class ServiceManager : IServiceProvider, System.Collections.Generic.IEnumerable&lt;Type&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServiceManager extends System.Object implements class System.Collections.Generic.IEnumerable`1&lt;class System.Type&gt;, class System.Collections.IEnumerable, class System.IServiceProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.ServiceManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Type&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IServiceProvider</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implementa <see cref="T:System.IserviceProvider" /> e fornece acesso aos serviços oferecidos pelo contexto de edição.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Activities.Presentation.EditingContext.Services%2A>representa a funcionalidade que é fornecido pelo host para usar o designer ou que é usado pelo designer para tornar a funcionalidade disponível para todos os designers dentro do editor. Ele é obtido o <xref:System.Activities.Presentation.EditingContext> pelo <xref:System.Activities.Presentation.EditingContext.Services%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServiceManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Presentation.ServiceManager" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public abstract bool Contains (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Contains(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço para verificar.</param>
+        <summary>Retorna um valor booliano que indica se o Gerenciador de serviço contém um serviço do tipo em questão.</summary>
+        <returns>
+          <see langword="true" />Se um serviço do tipo <paramref name="serviceType" /> tiver sido publicado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains&lt;TServiceType&gt;">
+      <MemberSignature Language="C#" Value="public bool Contains&lt;TServiceType&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains&lt;TServiceType&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Contains``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TServiceType" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TServiceType">O tipo de serviço para verificar.</typeparam>
+        <summary>Retorna um valor booliano que indica se o Gerenciador de serviço contém um serviço do tipo em questão.</summary>
+        <returns>
+          <see langword="true" />Se um serviço do tipo <paramref name="serviceType" /> tiver sido publicado; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerator&lt;Type&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Type&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Type&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um enumerador que pode ser usado para enumerar todos os serviços que publica esse gerenciador de serviço.</summary>
+        <returns>Retorna <see cref="T:System.Collections.Generic.IEnumerator`1" />, que contém uma enumeração de serviços publicados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRequiredService&lt;TServiceType&gt;">
+      <MemberSignature Language="C#" Value="public TServiceType GetRequiredService&lt;TServiceType&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TServiceType GetRequiredService&lt;TServiceType&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.GetRequiredService``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TServiceType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TServiceType" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TServiceType">O tipo de serviço a ser recuperado.</typeparam>
+        <summary>Recupera o serviço solicitado.</summary>
+        <returns>Retorna um tipo genérico, que é uma instância do serviço.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Ao contrário de <xref:System.Activities.Presentation.ServiceManager.GetService%2A>, este método lança um <xref:System.NotSupportedException> se o serviço não está disponível.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há nenhum serviço do tipo determinado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService">
+      <MemberSignature Language="C#" Value="public abstract object GetService (Type serviceType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetService(class System.Type serviceType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.GetService(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço a ser recuperado.</param>
+        <summary>Recupera o serviço solicitado.  Este método retorna <see langword="null" /> se o serviço não pôde ser localizado.</summary>
+        <returns>Retorna <see cref="T:System.Object" />, que é uma instância do serviço, ou <see langword="null" /> se o serviço não foi publicado.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetService&lt;TServiceType&gt;">
+      <MemberSignature Language="C#" Value="public TServiceType GetService&lt;TServiceType&gt; ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!TServiceType GetService&lt;TServiceType&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.GetService``1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TServiceType</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TServiceType" />
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="TServiceType">O tipo de serviço a ser recuperado.</typeparam>
+        <summary>Recupera o serviço solicitado.  Este método retorna <see langword="null" /> se o serviço não pôde ser localizado.</summary>
+        <returns>Retorna um tipo genérico, que é uma instância do serviço, ou <see langword="null" /> se o serviço não foi publicado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTarget">
+      <MemberSignature Language="C#" Value="protected static object GetTarget (Delegate callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig object GetTarget(class System.Delegate callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.GetTarget(System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O representante para obter o destino.</param>
+        <summary>Um método auxiliar que retorna o objeto de destino para um representante. Se o representante foi criado para o proxy um delegate genérico, isto retornará corretamente o objeto original, não o proxy.</summary>
+        <returns>Retorna <see cref="T:System.Object" />, que é o destino de retorno de chamada. Isso poderá retornar <see langword="null" /> se o retorno de chamada representa um objeto estático.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Publish">
+      <MemberSignature Language="C#" Value="public abstract void Publish (Type serviceType, System.Activities.Presentation.PublishServiceCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Publish(class System.Type serviceType, class System.Activities.Presentation.PublishServiceCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Publish(System.Type,System.Activities.Presentation.PublishServiceCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="callback" Type="System.Activities.Presentation.PublishServiceCallback" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço para publicar.</param>
+        <param name="callback">Um retorno de chamada que será chamado quando uma instância do serviço é necessária.</param>
+        <summary>Publica o tipo de serviço especificado, mas não declara uma instância. Quando o serviço for solicitado, o retorno de chamada de serviço de publicação será invocado para criar a instância. O retorno de chamada é invocado apenas uma vez. Depois disso, a instância retornado por ele é armazenado em cache.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ou <paramref name="callback" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="serviceType" />já foi publicado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Publish">
+      <MemberSignature Language="C#" Value="public abstract void Publish (Type serviceType, object serviceInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Publish(class System.Type serviceType, object serviceInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Publish(System.Type,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="serviceInstance" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço para publicar.</param>
+        <param name="serviceInstance">Uma instância do serviço.</param>
+        <summary>Publica o serviço especificado. Depois que ela for publicada, a instância do serviço permanece no service manager até que o contexto de edição é descartado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ou <paramref name="serviceInstance" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="serviceInstance" />não derivar de ou implementar <paramref name="serviceType" />, ou <paramref name="serviceType" /> já foi publicado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Publish&lt;TServiceType&gt;">
+      <MemberSignature Language="C#" Value="public void Publish&lt;TServiceType&gt; (System.Activities.Presentation.PublishServiceCallback&lt;TServiceType&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Publish&lt;TServiceType&gt;(class System.Activities.Presentation.PublishServiceCallback`1&lt;!!TServiceType&gt; callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Publish``1(System.Activities.Presentation.PublishServiceCallback{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TServiceType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Activities.Presentation.PublishServiceCallback&lt;TServiceType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TServiceType">O tipo de serviço para publicar.</typeparam>
+        <param name="callback">Um retorno de chamada que será chamado quando uma instância do serviço é necessária.</param>
+        <summary>Publica o tipo de serviço, mas não declarar uma instância. Quando o serviço for solicitado, o <see langword="PublishServiceCallback" /> será invocada para criar a instância. O retorno de chamada é invocado apenas uma vez. Depois disso, a instância retornado por ele é armazenado em cache.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Publish&lt;TServiceType&gt;">
+      <MemberSignature Language="C#" Value="public void Publish&lt;TServiceType&gt; (TServiceType serviceInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Publish&lt;TServiceType&gt;(!!TServiceType serviceInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Publish``1(``0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TServiceType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="serviceInstance" Type="TServiceType" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TServiceType">O tipo de serviço para publicar.</typeparam>
+        <param name="serviceInstance">Uma instância do serviço.</param>
+        <summary>Publica o serviço especificado. Depois que ela for publicada, a instância do serviço permanece no service manager até que o contexto de edição é descartado.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceInstance" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCallback">
+      <MemberSignature Language="C#" Value="protected static Delegate RemoveCallback (Delegate existing, Delegate toRemove);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig class System.Delegate RemoveCallback(class System.Delegate existing, class System.Delegate toRemove) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.RemoveCallback(System.Delegate,System.Delegate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Delegate</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="existing" Type="System.Delegate" />
+        <Parameter Name="toRemove" Type="System.Delegate" />
+      </Parameters>
+      <Docs>
+        <param name="existing">O representante existente para remover o retorno de chamada do.</param>
+        <param name="toRemove">O retorno de chamada para remover.</param>
+        <summary>Um método auxiliar que realiza uma <see langword="Delegate.Remove" /> operação e é desencapsulado delegados proxies para retornos de chamada genéricos. Você deve usar esse método no seu <see cref="Overload:System.Activities.Presentation.ServiceManager.UnSubscribe" /> implementações.</summary>
+        <returns>Retorna <see cref="T:System.Delegate" />, que é um novo valor para atribuir ao representante existente.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subscribe">
+      <MemberSignature Language="C#" Value="public abstract void Subscribe (Type serviceType, System.Activities.Presentation.SubscribeServiceCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Subscribe(class System.Type serviceType, class System.Activities.Presentation.SubscribeServiceCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Subscribe(System.Type,System.Activities.Presentation.SubscribeServiceCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="callback" Type="System.Activities.Presentation.SubscribeServiceCallback" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço para inscrever-se.</param>
+        <param name="callback">Um retorno de chamada será notificado quando o serviço está disponível.</param>
+        <summary>Invoca o retorno de chamada fornecido quando alguém publicou o serviço solicitado. Se o serviço já estiver disponível, este método chama o retorno de chamada imediatamente.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ou <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subscribe&lt;TServiceType&gt;">
+      <MemberSignature Language="C#" Value="public void Subscribe&lt;TServiceType&gt; (System.Activities.Presentation.SubscribeServiceCallback&lt;TServiceType&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Subscribe&lt;TServiceType&gt;(class System.Activities.Presentation.SubscribeServiceCallback`1&lt;!!TServiceType&gt; callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Subscribe``1(System.Activities.Presentation.SubscribeServiceCallback{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TServiceType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Activities.Presentation.SubscribeServiceCallback&lt;TServiceType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TServiceType">O tipo do serviço para inscrever-se.</typeparam>
+        <param name="callback">Um retorno de chamada será notificado quando o serviço está disponível.</param>
+        <summary>Invoca o retorno de chamada fornecido quando alguém publicou o serviço solicitado. Se o serviço já estiver disponível, este método chama o retorno de chamada imediatamente.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera um enumerador que pode ser usado para enumerar todos os serviços que publica esse gerenciador de serviço.</summary>
+        <returns>Retorna <see cref="T:System.Collections.IEnumerator" />, que contém uma enumeração de serviços publicados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsubscribe">
+      <MemberSignature Language="C#" Value="public abstract void Unsubscribe (Type serviceType, System.Activities.Presentation.SubscribeServiceCallback callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Unsubscribe(class System.Type serviceType, class System.Activities.Presentation.SubscribeServiceCallback callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Unsubscribe(System.Type,System.Activities.Presentation.SubscribeServiceCallback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceType" Type="System.Type" />
+        <Parameter Name="callback" Type="System.Activities.Presentation.SubscribeServiceCallback" />
+      </Parameters>
+      <Docs>
+        <param name="serviceType">O tipo de serviço para remover a assinatura do.</param>
+        <param name="callback">O objeto de retorno de chamada para remover da assinatura.</param>
+        <summary>Remove uma assinatura para um tipo de serviço.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="serviceType" /> ou <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsubscribe&lt;TServiceType&gt;">
+      <MemberSignature Language="C#" Value="public void Unsubscribe&lt;TServiceType&gt; (System.Activities.Presentation.SubscribeServiceCallback&lt;TServiceType&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Unsubscribe&lt;TServiceType&gt;(class System.Activities.Presentation.SubscribeServiceCallback`1&lt;!!TServiceType&gt; callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ServiceManager.Unsubscribe``1(System.Activities.Presentation.SubscribeServiceCallback{``0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TServiceType" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Activities.Presentation.SubscribeServiceCallback&lt;TServiceType&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TServiceType">O tipo de serviço para remover a assinatura do.</typeparam>
+        <param name="callback">O objeto de retorno de chamada para remover da assinatura.</param>
+        <summary>Remove uma assinatura para um tipo de serviço.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="callback" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

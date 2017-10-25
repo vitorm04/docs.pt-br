@@ -1,0 +1,43 @@
+<Type Name="DataGridViewRowsAddedEventHandler" FullName="System.Windows.Forms.DataGridViewRowsAddedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void DataGridViewRowsAddedEventHandler(object sender, DataGridViewRowsAddedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DataGridViewRowsAddedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.DataGridViewRowsAddedEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.DataGridViewRowsAddedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.DataGridViewRowsAddedEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o evento de <see cref="E:System.Windows.Forms.DataGridView.RowsAdded" /> de <see cref="T:System.Windows.Forms.DataGridView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.DataGridView.RowsAdded> evento ocorre quando linhas são adicionadas a um <xref:System.Windows.Forms.DataGridView> controle.  
+  
+ Quando você cria um <xref:System.Windows.Forms.DataGridViewRowsAddedEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa um <xref:System.Windows.Forms.DataGridViewRowsAddedEventHandler> no modo virtual para armazenar o fato de que uma linha foi adicionada. Este exemplo é parte de um exemplo maior disponível no <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> tópico de referência.  
+  
+ [!code-cpp[System.Windows.Forms.DataGridView._Virtual#30](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CPP/virtual.cpp#30)]
+ [!code-csharp[System.Windows.Forms.DataGridView._Virtual#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/CS/virtual.cs#30)]
+ [!code-vb[System.Windows.Forms.DataGridView._Virtual#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._Virtual/VB/virtual.vb#30)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

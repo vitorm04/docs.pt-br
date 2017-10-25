@@ -1,0 +1,352 @@
+<Type Name="MergablePropertyAttribute" FullName="System.ComponentModel.MergablePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class MergablePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MergablePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.MergablePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.All)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica que esta propriedade pode ser combinada com propriedades que pertencem a outros objetos em uma janela Propriedades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Propriedades que são marcadas com o <xref:System.ComponentModel.MergablePropertyAttribute> definida como `true` podem ser combinados com propriedades que pertencem a outros objetos em uma janela de propriedades. Propriedades que são marcadas com o <xref:System.ComponentModel.MergablePropertyAttribute> definida como `false` deve ser exibido separadamente. O padrão é `true`.  
+  
+> [!NOTE]
+>  Quando você marca uma propriedade com o <xref:System.ComponentModel.MergablePropertyAttribute> definida como `true`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.MergablePropertyAttribute.Yes>. Para uma propriedade é marcada com o <xref:System.ComponentModel.MergablePropertyAttribute> propriedade definida como `false`, o valor é <xref:System.ComponentModel.MergablePropertyAttribute.No>. Portanto, quando você quiser verificar o valor desse atributo no seu código, você deve especificar o atributo como <xref:System.ComponentModel.MergablePropertyAttribute.Yes?displayProperty=nameWithType> ou <xref:System.ComponentModel.MergablePropertyAttribute.No?displayProperty=nameWithType>.  
+  
+ Para obter mais informações, consulte [Atributos](~/docs/standard/attributes/index.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade de acordo com a mesclagem.  
+  
+ [!code-cpp[Classic MergablePropertyAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MergablePropertyAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic MergablePropertyAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/VB/source.vb#1)]  
+  
+ O exemplo a seguir mostra como verificar o valor da <xref:System.ComponentModel.MergablePropertyAttribute> para `MyProperty`. Primeiro o código obtém um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto. Em seguida ele indexará no <xref:System.ComponentModel.PropertyDescriptorCollection> obter `MyProperty`. Em seguida, ele retorna os atributos para essa propriedade e os salva na variável de atributos.  
+  
+ O exemplo apresenta duas maneiras de verificar o valor de <xref:System.ComponentModel.MergablePropertyAttribute>. No segundo fragmento de código, o exemplo chama o <xref:System.ComponentModel.MergablePropertyAttribute.Equals%2A> método com um `static` valor. No último fragmento de código, o exemplo usa o <xref:System.ComponentModel.MergablePropertyAttribute.AllowMerge%2A> propriedade para verificar o valor.  
+  
+ [!code-cpp[Classic MergablePropertyAttribute Example#2](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/CPP/source.cpp#2)]
+ [!code-csharp[Classic MergablePropertyAttribute Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/CS/source.cs#2)]
+ [!code-vb[Classic MergablePropertyAttribute Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/VB/source.vb#2)]  
+  
+ Se você marcou uma classe com o <xref:System.ComponentModel.MergablePropertyAttribute>, use o seguinte código para verificar o valor.  
+  
+ [!code-cpp[Classic MergablePropertyAttribute Example#3](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/CPP/source.cpp#3)]
+ [!code-csharp[Classic MergablePropertyAttribute Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/CS/source.cs#3)]
+ [!code-vb[Classic MergablePropertyAttribute Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MergablePropertyAttribute Example/VB/source.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MergablePropertyAttribute (bool allowMerge);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool allowMerge) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.MergablePropertyAttribute.#ctor(System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="allowMerge" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="allowMerge">
+          <see langword="true" />Se essa propriedade pode ser combinada com propriedades que pertencem a outros objetos em uma janela de propriedades; Caso contrário, <see langword="false" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.MergablePropertyAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir marca uma propriedade de acordo com a mesclagem. Esse código cria um novo <xref:System.ComponentModel.MergablePropertyAttribute>, define seu valor como <xref:System.ComponentModel.MergablePropertyAttribute?displayProperty=nameWithType>e o associa à propriedade.  
+  
+ [!code-cpp[Classic MergablePropertyAttribute.MergablePropertyAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MergablePropertyAttribute.MergablePropertyAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MergablePropertyAttribute.MergablePropertyAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MergablePropertyAttribute.MergablePropertyAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic MergablePropertyAttribute.MergablePropertyAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MergablePropertyAttribute.MergablePropertyAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowMerge">
+      <MemberSignature Language="C#" Value="public bool AllowMerge { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowMerge" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.MergablePropertyAttribute.AllowMerge" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se essa propriedade pode ser combinada com propriedades que pertencem a outros objetos em uma janela de propriedades.</summary>
+        <value>
+          <see langword="true" />Se essa propriedade pode ser combinada com propriedades que pertencem a outros objetos em uma janela de propriedades; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir verifica se `MyProperty` é apropriado para mesclagem. Primeiro, o código obtém os atributos de `MyProperty` por:  
+  
+-   Recuperando um <xref:System.ComponentModel.PropertyDescriptorCollection> com todas as propriedades do objeto.  
+  
+-   A indexação para o <xref:System.ComponentModel.PropertyDescriptorCollection> obter `MyProperty`.  
+  
+-   Salvando os atributos para essa propriedade na variável de atributos.  
+  
+ Em seguida, o código define `myAttribute` para o valor da <xref:System.ComponentModel.MergablePropertyAttribute> no <xref:System.ComponentModel.AttributeCollection> e verifica se a propriedade é apropriada para mesclar.  
+  
+ [!code-cpp[Classic MergablePropertyAttribute.AllowMerge Example#1](~/samples/snippets/cpp/VS_Snippets_Winforms/Classic MergablePropertyAttribute.AllowMerge Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic MergablePropertyAttribute.AllowMerge Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/Classic MergablePropertyAttribute.AllowMerge Example/CS/source.cs#1)]
+ [!code-vb[Classic MergablePropertyAttribute.AllowMerge Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/Classic MergablePropertyAttribute.AllowMerge Example/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.MergablePropertyAttribute Default;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.MergablePropertyAttribute Default" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MergablePropertyAttribute.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MergablePropertyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica o valor padrão, que é <see cref="F:System.ComponentModel.MergablePropertyAttribute.Yes" />, que é uma propriedade pode ser combinada com propriedades que pertencem a outros objetos em uma janela de propriedades. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com esse valor, esse atributo é definido como o membro constante <xref:System.ComponentModel.MergablePropertyAttribute.No>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.MergablePropertyAttribute?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.MergablePropertyAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Outro objeto a ser comparado.</param>
+        <summary>Indica se essa instância e um objeto especificado são iguais.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual a essa instância; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.MergablePropertyAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código hash do <see cref="T:System.ComponentModel.MergablePropertyAttribute" /> atual.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultAttribute">
+      <MemberSignature Language="C#" Value="public override bool IsDefaultAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool IsDefaultAttribute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.MergablePropertyAttribute.IsDefaultAttribute" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determina se este atributo é o padrão.</summary>
+        <returns>
+          <see langword="true" />Se o atributo é o valor padrão para essa classe de atributo; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="No">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.MergablePropertyAttribute No;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.MergablePropertyAttribute No" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MergablePropertyAttribute.No" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MergablePropertyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade não pode ser combinada com propriedades que pertencem a outros objetos em uma janela de propriedades. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você marca uma propriedade com o <xref:System.ComponentModel.MergablePropertyAttribute> definida como `false`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.MergablePropertyAttribute.No>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.MergablePropertyAttribute.No?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yes">
+      <MemberSignature Language="C#" Value="public static readonly System.ComponentModel.MergablePropertyAttribute Yes;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.ComponentModel.MergablePropertyAttribute Yes" />
+      <MemberSignature Language="DocId" Value="F:System.ComponentModel.MergablePropertyAttribute.Yes" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Primitives</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.MergablePropertyAttribute</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que uma propriedade pode ser combinada com propriedades que pertencem a outros objetos em uma janela de propriedades. Esse campo <see langword="static" /> é somente leitura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este campo é a configuração padrão para esse atributo.  
+  
+ Quando você marca uma propriedade com o <xref:System.ComponentModel.MergablePropertyAttribute> definida como `true`, o valor desse atributo é definido como o membro constante <xref:System.ComponentModel.MergablePropertyAttribute.Yes>. Portanto, quando você deseja verificar se o atributo é definido como esse valor em seu código, você deve especificar o atributo como <xref:System.ComponentModel.MergablePropertyAttribute.Yes?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

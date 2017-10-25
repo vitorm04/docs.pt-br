@@ -1,0 +1,13 @@
+<Namespace Name="System.Xml.Serialization.Advanced">
+  <Docs>
+    <summary>O <see langword="System.Xml.Serialization.Advanced" /> namespace contém classes que permitem que você personalize o código gerado a partir de um documento WSDL Web Services Description Language ().</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um exemplo de como usar o recurso de geração de código é o **adicionar referência Web** caixa de diálogo do Visual Studio. Outro exemplo é o [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/en-us/b9210348-8bc2-4367-8c91-d1a04b403e88).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

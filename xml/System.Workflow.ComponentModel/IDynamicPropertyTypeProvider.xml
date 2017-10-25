@@ -1,0 +1,94 @@
+<Type Name="IDynamicPropertyTypeProvider" FullName="System.Workflow.ComponentModel.IDynamicPropertyTypeProvider">
+  <TypeSignature Language="C#" Value="public interface IDynamicPropertyTypeProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDynamicPropertyTypeProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece um tipo de propriedade para a infraestrutura de associação. Ele é implementado por atividades que contém uma propriedade de tipo de variável, onde o tipo pode variar dependendo de outras configurações de atividade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Essa interface permite que a atividade pai à qual associar duas propriedades e indicar à infraestrutura de associação de tipo a ser usado na validação de associação. Por exemplo, você pode ter uma atividade com duas propriedades, `TypeProperty` e `ValueProperty`, onde `TypeProperty` Especifica um tipo válido para o valor de `ValueProperty`. Nesse caso, a atividade pai implementa o <xref:System.Workflow.ComponentModel.IDynamicPropertyTypeProvider> interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAccessType">
+      <MemberSignature Language="C#" Value="public System.Workflow.ComponentModel.Compiler.AccessTypes GetAccessType (IServiceProvider serviceProvider, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Workflow.ComponentModel.Compiler.AccessTypes GetAccessType(class System.IServiceProvider serviceProvider, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetAccessType(System.IServiceProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.Compiler.AccessTypes</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que implementa <see cref="T:System.IServiceProvider" /> para fornecer acesso aos serviços de tempo de design se eles forem necessários.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Retorna o tipo de acesso para a propriedade especificada.</summary>
+        <returns>Um valor de enumeração <see cref="T:System.Workflow.ComponentModel.Compiler.AccessTypes" /> que indica o nível de acesso da propriedade.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado em tempo de compilação para validar se as propriedades corretamente estiverem associadas a um do outro. Sem essa interface, essa informação é inferida diretamente do getter/setters de propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPropertyType">
+      <MemberSignature Language="C#" Value="public Type GetPropertyType (IServiceProvider serviceProvider, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Type GetPropertyType(class System.IServiceProvider serviceProvider, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.ComponentModel.IDynamicPropertyTypeProvider.GetPropertyType(System.IServiceProvider,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.ComponentModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serviceProvider" Type="System.IServiceProvider" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serviceProvider">Um objeto que implementa <see cref="T:System.IServiceProvider" /> para fornecer acesso aos serviços de tempo de design se forem necessários.</param>
+        <param name="propertyName">O nome da propriedade.</param>
+        <summary>Retorna o <see cref="T:System.Type" /> do da propriedade especificada.</summary>
+        <returns>O <see cref="T:System.Type" /> para a propriedade cujo nome é passado como o <paramref name="propertyName" /> parâmetro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Usado em tempo de compilação para validar se as propriedades corretamente estiverem associadas a um do outro.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,19 @@
+<Namespace Name="System.Globalization">
+  <Docs>
+    <summary>O <see cref="N:System.Globalization" /> namespace contém classes que definem informações relacionadas à cultura, incluindo idioma, país/região, calendários em uso, padrões de formato para datas, moeda e números e classificar a ordem de cadeias de caracteres. Essas classes são úteis para escrever aplicativos globalizados (internacionalizados). Classes como <see cref="T:System.Globalization.StringInfo" /> e <see cref="T:System.Globalization.TextInfo" /> fornecer funcionalidades avançadas de globalização, incluindo o processamento de elementos de texto e suporte de substitutos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os seguintes blogs do MSDN incluem discussões sobre o <xref:System.Globalization> namespace e suas classes:  
+  
+-   [http://blogs.msdn.com/shawnste/](http://go.microsoft.com/fwlink/?LinkId=160948)  
+  
+-   [http://blogs.msdn.com/kierans/](http://go.microsoft.com/fwlink/?LinkId=160951)  
+  
+ Observe que dois dos tipos neste namespace, <xref:System.Globalization.CultureAndRegionInfoBuilder> e <xref:System.Globalization.CultureAndRegionModifiers>, encontram-se em um conjunto denominado sysglobl.dll. Compilando o código que usa esses tipos com êxito requer que você adicione uma referência a sysglobl.dll.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

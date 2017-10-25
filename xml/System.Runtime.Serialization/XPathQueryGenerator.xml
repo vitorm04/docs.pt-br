@@ -1,0 +1,149 @@
+<Type Name="XPathQueryGenerator" FullName="System.Runtime.Serialization.XPathQueryGenerator">
+  <TypeSignature Language="C#" Value="public static class XPathQueryGenerator" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit XPathQueryGenerator extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Serialization.XPathQueryGenerator" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+    <AssemblyVersion>4.1.3.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Quando recebe uma classe que representa um contrato de dados e metadados que representam um membro do contrato, produz uma consulta XPath para o membro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre contratos de dados, consulte [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+ Para usar a classe, há quatro etapas:  
+  
+1.  Criar o tipo de contrato de dados, aplicando o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> conforme apropriado para o tipo e seus campos ou propriedades.  
+  
+2.  Use o <xref:System.Type.GetMember%2A> método o <xref:System.Type> classe para gerar a matriz de MemberInfo.  
+  
+3.  Passe o tipo e a matriz para o método.  
+  
+4.  Se necessário, use o <xref:System.Xml.XmlNamespaceManager> retornado pelo `namespaces` parâmetro para examinar os namespaces XML referenciados pelos prefixos de namespaces na consulta XPath.  
+  
+> [!NOTE]
+>  O prefixo de namespace "xg" (para o "gerador de XPath) é usado como o padrão no XPath. Isso não pode ser alterado. Em vez disso, consulte a coleção NameTable para ver quais namespace o prefixo está associado.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria consultas XPath de duas classes para o qual o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos tiverem sido aplicados.  
+  
+ [!code-csharp[XPathQueryGenerator#0](~/samples/snippets/csharp/VS_Snippets_CFX/xpathquerygenerator/cs/source.cs#0)]
+ [!code-vb[XPathQueryGenerator#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xpathquerygenerator/vb/source.vb#0)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateFromDataContractSerializer">
+      <MemberSignature Language="C#" Value="public static string CreateFromDataContractSerializer (Type type, System.Reflection.MemberInfo[] pathToMember, out System.Xml.XmlNamespaceManager namespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateFromDataContractSerializer(class System.Type type, class System.Reflection.MemberInfo[] pathToMember, [out] class System.Xml.XmlNamespaceManager&amp; namespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XPathQueryGenerator.CreateFromDataContractSerializer(System.Type,System.Reflection.MemberInfo[],System.Xml.XmlNamespaceManager@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="pathToMember" Type="System.Reflection.MemberInfo[]" />
+        <Parameter Name="namespaces" Type="System.Xml.XmlNamespaceManager&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo que representa um contrato de dados.</param>
+        <param name="pathToMember">Os metadados, gerado usando o <see cref="Overload:System.Type.GetMember" /> método o <see cref="T:System.Type" /> classe, que aponta para o membro de dados específico usado para gerar a consulta.</param>
+        <param name="namespaces">Os namespaces XML e seus prefixos encontrados no contrato de dados.</param>
+        <summary>Cria um XPath de um contrato de dados usando o tipo de contrato de dados especificado, a matriz de elementos de metadados e os namespaces.</summary>
+        <returns>
+          <see cref="T:System.String" />  
+  
+ O XPath gerado a partir de dados de tipo e membro.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre contratos de dados, consulte [usando contratos de dados](~/docs/framework/wcf/feature-details/using-data-contracts.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria consultas XPath de duas classes para o qual o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos tiverem sido aplicados.  
+  
+ [!code-csharp[XPathQueryGenerator#0](~/samples/snippets/csharp/VS_Snippets_CFX/xpathquerygenerator/cs/source.cs#0)]
+ [!code-vb[XPathQueryGenerator#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/xpathquerygenerator/vb/source.vb#0)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromDataContractSerializer">
+      <MemberSignature Language="C#" Value="public static string CreateFromDataContractSerializer (Type type, System.Reflection.MemberInfo[] pathToMember, System.Text.StringBuilder rootElementXpath, out System.Xml.XmlNamespaceManager namespaces);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string CreateFromDataContractSerializer(class System.Type type, class System.Reflection.MemberInfo[] pathToMember, class System.Text.StringBuilder rootElementXpath, [out] class System.Xml.XmlNamespaceManager&amp; namespaces) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Serialization.XPathQueryGenerator.CreateFromDataContractSerializer(System.Type,System.Reflection.MemberInfo[],System.Text.StringBuilder,System.Xml.XmlNamespaceManager@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Serialization.Xml</AssemblyName>
+        <AssemblyVersion>4.1.3.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="pathToMember" Type="System.Reflection.MemberInfo[]" />
+        <Parameter Name="rootElementXpath" Type="System.Text.StringBuilder" />
+        <Parameter Name="namespaces" Type="System.Xml.XmlNamespaceManager&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="type">O tipo que representa um contrato de dados.</param>
+        <param name="pathToMember">Os metadados, gerado usando o <see cref="Overload:System.Type.GetMember" /> método o <see cref="T:System.Type" /> classe, que aponta para o membro de dados específico usado para gerar a consulta.</param>
+        <param name="rootElementXpath">O elemento de nível superior no xpath.</param>
+        <param name="namespaces">Os namespaces XML e seus prefixos encontrados no contrato de dados.</param>
+        <summary>Cria um XPath de um contrato de dados usando o tipo de dados de contrato especificado, a matriz de elementos de metadados, o elemento de nível superior e namespaces.</summary>
+        <returns>
+          <see cref="T:System.String" />  
+  
+ O XPath gerado a partir de dados de tipo e membro.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

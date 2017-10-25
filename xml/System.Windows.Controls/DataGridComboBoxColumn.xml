@@ -1,0 +1,696 @@
+<Type Name="DataGridComboBoxColumn" FullName="System.Windows.Controls.DataGridComboBoxColumn">
+  <TypeSignature Language="C#" Value="public class DataGridComboBoxColumn : System.Windows.Controls.DataGridColumn" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi DataGridComboBoxColumn extends System.Windows.Controls.DataGridColumn" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Controls.DataGridComboBoxColumn" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Controls.DataGridColumn</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma coluna <see cref="T:System.Windows.Controls.DataGrid" /> que hospeda controles <see cref="T:System.Windows.Controls.ComboBox" /> em suas células.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Windows.Controls.DataGridComboBoxColumn> para exibir dados em que há um conjunto de itens para escolha, como uma enumeração. <xref:System.Windows.Controls.DataGridComboBoxColumn>permite que os usuários selecionem um item de uma lista suspensa. A ilustração a seguir mostra um <xref:System.Windows.Controls.DataGridComboBoxColumn>.  
+  
+ ![Um DataGridComboBoxColumn](~/add/media/ndp-datagridcombobox.png "um DataGridComboBoxColumn")  
+  
+ Para preencher a lista suspensa, o primeiro conjunto de <xref:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource%2A> propriedade para o <xref:System.Windows.Controls.ComboBox> usando uma das seguintes opções:  
+  
+-   Um recurso estático. Para obter mais informações, consulte [StaticResource Markup Extension](~/docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+  
+-   Uma entidade de código estático: x. Para obter mais informações, consulte [extensão de marcação X:Static](~/docs/framework/xaml-services/x-static-markup-extension.md).  
+  
+-   Uma coleção de embutido de <xref:System.Windows.Controls.ComboBoxItem> tipos.  
+  
+ Uma vez o <xref:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource%2A> é definida, associar o item selecionado no <xref:System.Windows.Controls.ComboBox> para o item de dados para a linha que a célula está em. Você pode definir a associação, usando uma das seguintes propriedades:  
+  
+|Propriedade|Descrição|  
+|--------------|-----------------|  
+|<xref:System.Windows.Controls.DataGridComboBoxColumn.TextBinding%2A>|Define o caminho de associação do texto do item atualmente selecionado.|  
+|<xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding%2A>|Define o caminho de associação do objeto selecionado no momento.|  
+|<xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding%2A>|Define o caminho de associação para o valor do item selecionado especificado pelo <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath%2A> propriedade.|  
+  
+ Quando o <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A> está definida como `true`, os usuários não é possível editar a coluna e eles não poderão ver a lista suspensa.  
+  
+ Se você desejar exibir outros tipos de dados, <xref:System.Windows.Controls.DataGrid> fornece os seguintes tipos de coluna:  
+  
+|Tipo de coluna|Exibição de dados|  
+|-----------------|------------------|  
+|<xref:System.Windows.Controls.DataGridHyperlinkColumn>|Use para exibir dados URI.|  
+|<xref:System.Windows.Controls.DataGridCheckBoxColumn>|Use para exibir dados booliano.|  
+|<xref:System.Windows.Controls.DataGridTextColumn>|Use para exibir o texto.|  
+  
+ Se você quiser usar outros controles em seu <xref:System.Windows.Controls.DataGrid>, você pode criar seus próprios tipos de coluna usando <xref:System.Windows.Controls.DataGridTemplateColumn>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como preencher a lista suspensa para cada <xref:System.Windows.Controls.ComboBox> na coluna com os valores de uma enumeração. O item selecionado na lista suspensa está associado, definindo o <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding%2A> propriedade para a propriedade do objeto exibido em cada linha.  
+  
+ [!code-xaml[DataGrid_CustomColumns#ComboBox1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_customcolumns/csharp/window1.xaml#combobox1)]  
+[!code-xaml[DataGrid_CustomColumns#ComboBox2](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_customcolumns/csharp/window1.xaml#combobox2)]  
+  
+ [!code-csharp[DataGrid_CustomColumns#Top](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_customcolumns/csharp/window1.xaml.cs#top)]
+ [!code-vb[DataGrid_CustomColumns#Top](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb#top)]  
+[!code-csharp[DataGrid_CustomColumns#All2](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_customcolumns/csharp/window1.xaml.cs#all2)]
+[!code-vb[DataGrid_CustomColumns#All2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb#all2)]  
+[!code-csharp[DataGrid_CustomColumns#CustomerClass](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_customcolumns/csharp/window1.xaml.cs#customerclass)]
+[!code-vb[DataGrid_CustomColumns#CustomerClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb#customerclass)]  
+[!code-csharp[DataGrid_CustomColumns#Enum](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_customcolumns/csharp/window1.xaml.cs#enum)]
+[!code-vb[DataGrid_CustomColumns#Enum](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_customcolumns/vb/window1.xaml.vb#enum)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataGridComboBoxColumn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Controls.DataGridComboBoxColumn" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelCellEdit">
+      <MemberSignature Language="C#" Value="protected override void CancelCellEdit (System.Windows.FrameworkElement editingElement, object uneditedValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CancelCellEdit(class System.Windows.FrameworkElement editingElement, object uneditedValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.CancelCellEdit(System.Windows.FrameworkElement,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="uneditedValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">O elemento que exibe a coluna de uma célula no modo de edição.</param>
+        <param name="uneditedValue">O valor anterior, não editado na célula que está sendo editado.</param>
+        <summary>Faz com que a célula da coluna que está sendo editada para reverter ao valor especificado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipboardContentBinding">
+      <MemberSignature Language="C#" Value="public override System.Windows.Data.BindingBase ClipboardContentBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase ClipboardContentBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.ClipboardContentBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto de associação a ser usado ao obter ou definir o conteúdo da célula para a área de transferência.</summary>
+        <value>Um objeto que representa o associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommitCellEdit">
+      <MemberSignature Language="C#" Value="protected override bool CommitCellEdit (System.Windows.FrameworkElement editingElement);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CommitCellEdit(class System.Windows.FrameworkElement editingElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.CommitCellEdit(System.Windows.FrameworkElement)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">O elemento que exibe a coluna de uma célula no modo de edição.</param>
+        <summary>Executa nenhuma validação necessária antes de sair do modo de edição.</summary>
+        <returns>
+          <see langword="false" />Se a validação falhar; Caso contrário, <see langword="true" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultEditingElementStyle">
+      <MemberSignature Language="C#" Value="public static System.Windows.Style DefaultEditingElementStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Style DefaultEditingElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.DefaultEditingElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor padrão de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyle" /> propriedade.</summary>
+        <value>O valor padrão de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este estilo é o mesmo que o <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle%2A>.  
+  
+ Se você está criando novos estilos de células e você deseja herdar alguns dos elementos de estilo existentes, basear o novo estilo <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultEditingElementStyle%2A> usando o <xref:System.Windows.Style.BasedOn%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultElementStyle">
+      <MemberSignature Language="C#" Value="public static System.Windows.Style DefaultElementStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.Style DefaultElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor padrão de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.ElementStyle" />.</summary>
+        <value>O valor padrão de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.ElementStyle" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você está criando novos estilos e você deseja herdar alguns dos elementos de estilo existentes, basear o novo estilo <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle%2A> usando o <xref:System.Windows.Style.BasedOn%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMemberPath">
+      <MemberSignature Language="C#" Value="public string DisplayMemberPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayMemberPath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.DisplayMemberPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um caminho para um valor no objeto de origem para fornecer a representação visual do objeto.</summary>
+        <value>O caminho para um valor no objeto de origem. O padrão registrado é uma cadeia de caracteres vazia (""). Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use essa propriedade para definir um modelo simple que descreve como exibir os objetos de dados. Definindo o <xref:System.Windows.Controls.DataGridComboBoxColumn.DisplayMemberPath%2A> propriedade é equivalente à configuração de <xref:System.Windows.Data.Binding.Path%2A> do <xref:System.Windows.Controls.TextBlock.Text%2A?displayProperty=nameWithType> associação de propriedade em um modelo. O modelo a seguir mostra um exemplo da configuração equivalente.  
+  
+ [!code-xaml[DataGrid_ComboBoxColumnSample2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_comboboxcolumnsample2/CS/window1.xaml#1)]   
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayMemberPathProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty DisplayMemberPathProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty DisplayMemberPathProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridComboBoxColumn.DisplayMemberPathProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.DisplayMemberPath" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingElementStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style EditingElementStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style EditingElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo usado ao renderizar o elemento que a coluna exibe para uma célula no modo de edição.</summary>
+        <value>O estilo usado ao renderizar um elemento de edição. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode redefinir o padrão <xref:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyle%2A> obtendo o <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultEditingElementStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EditingElementStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty EditingElementStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty EditingElementStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.EditingElementStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementStyle">
+      <MemberSignature Language="C#" Value="public System.Windows.Style ElementStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Style ElementStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.ElementStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo usado ao renderizar o elemento que a coluna exibe para uma célula que não está no modo de edição.</summary>
+        <value>O estilo usado ao renderizar um elemento somente para exibição. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode redefinir o padrão <xref:System.Windows.Controls.DataGridComboBoxColumn.ElementStyle%2A> obtendo o <xref:System.Windows.Controls.DataGridComboBoxColumn.DefaultElementStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElementStyleProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ElementStyleProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ElementStyleProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridComboBoxColumn.ElementStyleProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.ElementStyle" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateEditingElement">
+      <MemberSignature Language="C#" Value="protected override System.Windows.FrameworkElement GenerateEditingElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.FrameworkElement GenerateEditingElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.GenerateEditingElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">A célula que contém o elemento gerado.</param>
+        <param name="dataItem">Os dados de item é representados pela linha que contém a célula pretendida.</param>
+        <summary>Obtém uma combinação de controle de caixa que está associado à coluna de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding" />, <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding" />, e <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.TextBinding" /> valores.</summary>
+        <returns>Um novo controle de caixa de combinação que está associado à coluna de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding" />, <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding" />, e <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.TextBinding" /> valores.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateElement">
+      <MemberSignature Language="C#" Value="protected override System.Windows.FrameworkElement GenerateElement (System.Windows.Controls.DataGridCell cell, object dataItem);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Windows.FrameworkElement GenerateElement(class System.Windows.Controls.DataGridCell cell, object dataItem) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.GenerateElement(System.Windows.Controls.DataGridCell,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.FrameworkElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cell" Type="System.Windows.Controls.DataGridCell" />
+        <Parameter Name="dataItem" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="cell">A célula que contém o elemento gerado.</param>
+        <param name="dataItem">Os dados de item é representados pela linha que contém a célula pretendida.</param>
+        <summary>Obtém uma combinação de somente leitura de controle de caixa que está associado à coluna de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding" />, <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding" />, e <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.TextBinding" /> valores.</summary>
+        <returns>Um controle de caixa de combinação de novo, somente leitura que está associado à coluna de <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding" />, <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding" />, e <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.TextBinding" /> valores.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsSource">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerable ItemsSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IEnumerable ItemsSource" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define uma coleção que é usada para gerar o conteúdo do controle de caixa de combinação.</summary>
+        <value>Uma coleção que é usada para gerar o conteúdo do controle de caixa de combinação. O padrão registrado é <see langword="null" />. Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade preenche a lista suspensa para todas as caixas de combinação na coluna. Isso é equivalente a <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propriedade <xref:System.Windows.Controls.ItemsControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ItemsSourceProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty ItemsSourceProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty ItemsSourceProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridComboBoxColumn.ItemsSourceProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.ItemsSource" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCoerceIsReadOnly">
+      <MemberSignature Language="C#" Value="protected override bool OnCoerceIsReadOnly (bool baseValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool OnCoerceIsReadOnly(bool baseValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.OnCoerceIsReadOnly(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baseValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="baseValue">O valor passado para o delegado.</param>
+        <summary>Determina o valor da <see cref="P:System.Windows.Controls.DataGridColumn.IsReadOnly" /> propriedade com base nas regras de propriedade do <see cref="T:System.Windows.Controls.DataGrid" /> que contém esta coluna.</summary>
+        <returns>
+          <see langword="true" />Se a caixa de combinação caixas na coluna não pode ser editada; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedItemBindingChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectedItemBindingChanged (System.Windows.Data.BindingBase oldBinding, System.Windows.Data.BindingBase newBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectedItemBindingChanged(class System.Windows.Data.BindingBase oldBinding, class System.Windows.Data.BindingBase newBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.OnSelectedItemBindingChanged(System.Windows.Data.BindingBase,System.Windows.Data.BindingBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldBinding" Type="System.Windows.Data.BindingBase" />
+        <Parameter Name="newBinding" Type="System.Windows.Data.BindingBase" />
+      </Parameters>
+      <Docs>
+        <param name="oldBinding">A associação anterior.</param>
+        <param name="newBinding">A associação para qual a coluna foi alterada.</param>
+        <summary>Notifica o <see cref="T:System.Windows.Controls.DataGrid" /> quando a propriedade <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding" /> mudar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSelectedValueBindingChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnSelectedValueBindingChanged (System.Windows.Data.BindingBase oldBinding, System.Windows.Data.BindingBase newBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSelectedValueBindingChanged(class System.Windows.Data.BindingBase oldBinding, class System.Windows.Data.BindingBase newBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.OnSelectedValueBindingChanged(System.Windows.Data.BindingBase,System.Windows.Data.BindingBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldBinding" Type="System.Windows.Data.BindingBase" />
+        <Parameter Name="newBinding" Type="System.Windows.Data.BindingBase" />
+      </Parameters>
+      <Docs>
+        <param name="oldBinding">A associação anterior.</param>
+        <param name="newBinding">A associação para qual a coluna foi alterada.</param>
+        <summary>Notifica o <see cref="T:System.Windows.Controls.DataGrid" /> quando a propriedade <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding" /> mudar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTextBindingChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnTextBindingChanged (System.Windows.Data.BindingBase oldBinding, System.Windows.Data.BindingBase newBinding);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTextBindingChanged(class System.Windows.Data.BindingBase oldBinding, class System.Windows.Data.BindingBase newBinding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.OnTextBindingChanged(System.Windows.Data.BindingBase,System.Windows.Data.BindingBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldBinding" Type="System.Windows.Data.BindingBase" />
+        <Parameter Name="newBinding" Type="System.Windows.Data.BindingBase" />
+      </Parameters>
+      <Docs>
+        <param name="oldBinding">A associação anterior.</param>
+        <param name="newBinding">A associação para qual a coluna foi alterada.</param>
+        <summary>Notifica o <see cref="T:System.Windows.Controls.DataGrid" /> quando a propriedade <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.TextBinding" /> mudar.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareCellForEdit">
+      <MemberSignature Language="C#" Value="protected override object PrepareCellForEdit (System.Windows.FrameworkElement editingElement, System.Windows.RoutedEventArgs editingEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance object PrepareCellForEdit(class System.Windows.FrameworkElement editingElement, class System.Windows.RoutedEventArgs editingEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.PrepareCellForEdit(System.Windows.FrameworkElement,System.Windows.RoutedEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="editingElement" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="editingEventArgs" Type="System.Windows.RoutedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="editingElement">O elemento que exibe a coluna de uma célula no modo de edição.</param>
+        <param name="editingEventArgs">Informações sobre o gesto do usuário que está causando uma célula para entrar no modo de edição.</param>
+        <summary>Chamado quando uma célula na coluna entra em modo de edição.</summary>
+        <returns>O valor não editado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshCellContent">
+      <MemberSignature Language="C#" Value="protected override void RefreshCellContent (System.Windows.FrameworkElement element, string propertyName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RefreshCellContent(class System.Windows.FrameworkElement element, string propertyName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Controls.DataGridComboBoxColumn.RefreshCellContent(System.Windows.FrameworkElement,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="element" Type="System.Windows.FrameworkElement" />
+        <Parameter Name="propertyName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="element">A célula para atualizar.</param>
+        <param name="propertyName">O nome da propriedade de coluna foi alterada.</param>
+        <summary>Atualiza o conteúdo de uma célula na coluna em resposta a uma alteração de associação.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedItemBinding">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Data.BindingBase SelectedItemBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase SelectedItemBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a associação para o item selecionado.</summary>
+        <value>A associação para o item selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedItemBinding%2A> propriedade é equivalente à configuração de <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A> propriedade de <xref:System.Windows.Controls.ComboBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValueBinding">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Data.BindingBase SelectedValueBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase SelectedValueBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValueBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o valor do item selecionado, obtido usando <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath" />.</summary>
+        <value>A associação do valor selecionado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor selecionado é determinado pelo <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath%2A> propriedade do item selecionado. O caminho do valor selecionado é uma propriedade no objeto do item selecionado. A definição dessa propriedade é equivalente à configuração de <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> propriedade <xref:System.Windows.Controls.ComboBox>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValuePath">
+      <MemberSignature Language="C#" Value="public string SelectedValuePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SelectedValuePath" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho usado para obter o <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedValue" /> do <see cref="P:System.Windows.Controls.Primitives.Selector.SelectedItem" />.</summary>
+        <value>O caminho para obter o valor selecionado. O padrão registrado é uma cadeia de caracteres vazia (""). Para obter informações sobre o que pode influenciar o valor, consulte <see cref="T:System.Windows.DependencyProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath%2A> propriedade permite que você exiba um valor do objeto do item selecionado, definindo o caminho para essa propriedade. Isso é equivalente a <xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A> propriedade <xref:System.Windows.Controls.Primitives.Selector>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectedValuePathProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Windows.DependencyProperty SelectedValuePathProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Windows.DependencyProperty SelectedValuePathProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePathProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Identifica a propriedade de dependência <see cref="P:System.Windows.Controls.DataGridComboBoxColumn.SelectedValuePath" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBinding">
+      <MemberSignature Language="C#" Value="public virtual System.Windows.Data.BindingBase TextBinding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Data.BindingBase TextBinding" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.TextBinding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Data.BindingBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a associação para o texto na parte da caixa de texto do controle <see cref="T:System.Windows.Controls.ComboBox" />.</summary>
+        <value>A associação para o texto do item selecionado no momento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definindo o <xref:System.Windows.Controls.DataGridComboBoxColumn.TextBinding%2A> propriedade é equivalente à configuração de <xref:System.Windows.Controls.ComboBox.Text%2A> propriedade do <xref:System.Windows.Controls.ComboBox> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBlockComboBoxStyleKey">
+      <MemberSignature Language="C#" Value="public static System.Windows.ComponentResourceKey TextBlockComboBoxStyleKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Windows.ComponentResourceKey TextBlockComboBoxStyleKey" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Controls.DataGridComboBoxColumn.TextBlockComboBoxStyleKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.ComponentResourceKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave de recurso para o estilo a ser aplicada a uma caixa de combinação de somente leitura.</summary>
+        <value>A chave para o estilo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

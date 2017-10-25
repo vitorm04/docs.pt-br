@@ -1,0 +1,6 @@
+<Namespace Name="System.Drawing.Configuration">
+  <Docs>
+    <summary>O <see cref="N:System.Drawing.Configuration" /> namespace contém uma classe que dá suporte à configuração de classes de <see cref="N:System.Drawing" /> namespace.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

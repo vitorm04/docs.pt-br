@@ -1,0 +1,48 @@
+<Type Name="BeginEventHandler" FullName="System.Web.BeginEventHandler">
+  <TypeSignature Language="C#" Value="public delegate IAsyncResult BeginEventHandler(object sender, EventArgs e, AsyncCallback cb, object extraData);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BeginEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.BeginEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.EventArgs" />
+    <Parameter Name="cb" Type="System.AsyncCallback" />
+    <Parameter Name="extraData" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.IAsyncResult</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+    <param name="cb">O delegado a ser chamado quando a chamada de método assíncrono é concluída. Se <c>cb</c> é <see langword="null" />, o delegado não é chamado.</param>
+    <param name="extraData">Dados adicionais necessários para processar a solicitação.</param>
+    <summary>Representa o método que trata eventos assíncronos como eventos do aplicativo. Esse delegado é chamado no início de uma operação assíncrona.</summary>
+    <returns>O <see cref="T:System.IAsyncResult" /> que representa o resultado da operação <see cref="T:System.Web.BeginEventHandler" />.</returns>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Web.BeginEventHandler> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código usa o <xref:System.Web.BeginEventHandler> delegado para registrar um manipulador de uma página assíncrona.  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-aspx-csharp[PageAddOnPreRenderCompleteAsync#1](~/samples/snippets/csharp/VS_Snippets_WebNet/PageAddOnPreRenderCompleteAsync/CS/pageaddonprerendercompleteasynccs.aspx#1)]
+ [!code-aspx-vb[PageAddOnPreRenderCompleteAsync#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/PageAddOnPreRenderCompleteAsync/VB/pageaddonprerendercompleteasyncvb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

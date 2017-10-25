@@ -1,0 +1,50 @@
+<Type Name="IRootObjectProvider" FullName="System.Xaml.IRootObjectProvider">
+  <TypeSignature Language="C#" Value="public interface IRootObjectProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRootObjectProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Xaml.IRootObjectProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Descreve um serviço que pode retornar o objeto raiz de marcação que está sendo analisado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Xaml.IRootObjectProvider> service é principalmente relevante para os serviços de aplicativo que são expostos por um determinado framework ou recursos de uma classe de elemento raiz comumente usados em uma estrutura.  
+  
+ Conversores de tipo e extensões de marcação podem consultar <xref:System.Xaml.IRootObjectProvider> como um serviço no contexto do serviço é fornecido por um autor de objeto XAML, quando o gravador de objeto XAML invoca o comportamento de conversão do valor. Para obter mais informações, consulte [conversores de tipo e extensões de marcação para XAML](~/docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md) e [contextos de serviço disponíveis para conversores de tipo e extensões de marcação](~/docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RootObject">
+      <MemberSignature Language="C#" Value="public object RootObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object RootObject" />
+      <MemberSignature Language="DocId" Value="P:System.Xaml.IRootObjectProvider.RootObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o objeto raiz de marcação ou de um grafo de objeto.</summary>
+        <value>O objeto raiz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O objeto raiz em um cenário de marcação XAML pode ser útil para cenários de extensão de marcação devido a atributos que podem por convenção definidos no nível raiz de marcação XAML. Recursos do objeto raiz específica podem ser especificados por estruturas. Por exemplo, determinados atributos só podem ser válidos no nível raiz, ou uma estrutura pode oferecer suporte a herança de propriedades globais da raiz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

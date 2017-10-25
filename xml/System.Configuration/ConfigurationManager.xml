@@ -1,0 +1,997 @@
+<Type Name="ConfigurationManager" FullName="System.Configuration.ConfigurationManager">
+  <TypeSignature Language="C#" Value="public static class ConfigurationManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit ConfigurationManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationManager" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece acesso a arquivos de configuração para aplicativos cliente. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationManager> classe permite que você acessar o computador, aplicativos e informações de configuração do usuário. Esta classe substitui o <xref:System.Configuration.ConfigurationSettings> classe, que foi preterido. Para aplicativos web, use o <xref:System.Web.Configuration.WebConfigurationManager> classe.  
+  
+ Para usar o <xref:System.Configuration.ConfigurationManager> classe, seu projeto deve fazer referência a `System.Configuration` assembly. Por padrão, alguns modelos de projeto, como o aplicativo de Console, não faça referência a esse assembly para que você precisa referenciá-lo manualmente.  
+  
+> [!NOTE]
+>  O nome e o local do arquivo de configuração do aplicativo dependem do host do aplicativo. Para obter mais informações, consulte [NIB: arquivos de configuração de aplicativo](http://msdn.microsoft.com/en-us/0d05b1b8-b18b-43d8-bb3c-526ff0c44fe0).  
+  
+ Você pode usar o interno <xref:System.Configuration> tipos ou derivar delas para lidar com informações de configuração. Ao usar esses tipos, você pode trabalhar diretamente com informações de configuração e você pode estender os arquivos de configuração para incluir informações personalizadas.  
+  
+ O <xref:System.Configuration.ConfigurationManager> classe contém membros que permitem que você execute as seguintes tarefas:  
+  
+-   Ler uma seção de um arquivo de configuração. Para acessar informações de configuração, chame o <xref:System.Configuration.ConfigurationManager.GetSection%2A> método. Para algumas seções como `appSettings` e `connectionStrings`, use o <xref:System.Configuration.ConfigurationManager.AppSettings%2A> e <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> classes. Esses membros executar operações somente leitura, use uma única instância armazenada em cache da configuração e são multithread com suporte.  
+  
+-   Ler e gravar arquivos de configuração como um todo. Seu aplicativo pode ler e gravar configurações em qualquer nível para si mesmo ou para outros aplicativos ou computadores, localmente ou remotamente. Use um dos métodos fornecidos pelo <xref:System.Configuration.ConfigurationManager> classe para abrir um arquivo de configuração como SampleApp.exe.config. Esses métodos retornam um <xref:System.Configuration.Configuration> objeto que por sua vez, expõe métodos e propriedades que você pode usar para trabalhar com os arquivos de configuração associada. Os métodos de realizar a leitura ou operações de gravação e crie os dados de configuração toda vez que um arquivo é gravado.  
+  
+-   Suporte a tarefas de configuração. Os tipos a seguir são usados para oferecer suporte a várias tarefas de configuração:  
+  
+    -   <xref:System.Configuration.SectionInformation>  
+  
+    -   <xref:System.Configuration.PropertyInformation>  
+  
+    -   <xref:System.Configuration.PropertyInformationCollection>  
+  
+    -   <xref:System.Configuration.ElementInformation>  
+  
+    -   <xref:System.Configuration.ContextInformation>  
+  
+    -   <xref:System.Configuration.ConfigurationSectionGroup>  
+  
+    -   <xref:System.Configuration.ConfigurationSectionGroupCollection>  
+  
+     Além de trabalhar com informações de configuração existentes, você pode criar e trabalhar com elementos de configuração personalizada ao estender os tipos internos de configuração, como o <xref:System.Configuration.ConfigurationElement>, <xref:System.Configuration.ConfigurationElementCollection>, <xref:System.Configuration.ConfigurationProperty>, e <xref:System.Configuration.ConfigurationSection> classes. Para obter um exemplo de como estender um tipo de configuração interna programaticamente, consulte <xref:System.Configuration.ConfigurationSection>. Para obter um exemplo de como estender um tipo de configuração interna que usa o modelo com base em atributo, consulte <xref:System.Configuration.ConfigurationElement>.  
+  
+   
+  
+## Examples  
+ O primeiro exemplo mostra um aplicativo de console simples que lê as configurações do aplicativo, adiciona uma nova configuração e atualiza uma configuração existente.  
+  
+```csharp  
+using System;  
+using System.Configuration;  
+  
+namespace ConsoleApplication1  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            ReadAllSettings();  
+            ReadSetting("Setting1");  
+            ReadSetting("NotValid");  
+            AddUpdateAppSettings("NewSetting", "May 7, 2014");  
+            AddUpdateAppSettings("Setting1", "May 8, 2014");  
+            ReadAllSettings();  
+        }  
+  
+        static void ReadAllSettings()  
+        {  
+            try  
+            {  
+                var appSettings = ConfigurationManager.AppSettings;  
+  
+                if (appSettings.Count == 0)  
+                {  
+                    Console.WriteLine("AppSettings is empty.");  
+                }  
+                else  
+                {  
+                    foreach (var key in appSettings.AllKeys)  
+                    {  
+                        Console.WriteLine("Key: {0} Value: {1}", key, appSettings[key]);  
+                    }  
+                }  
+            }  
+            catch (ConfigurationErrorsException)  
+            {  
+                Console.WriteLine("Error reading app settings");  
+            }  
+        }  
+  
+        static void ReadSetting(string key)  
+        {  
+            try  
+            {  
+                var appSettings = ConfigurationManager.AppSettings;  
+                string result = appSettings[key] ?? "Not Found";  
+                Console.WriteLine(result);  
+            }  
+            catch (ConfigurationErrorsException)  
+            {  
+                Console.WriteLine("Error reading app settings");  
+            }  
+        }  
+  
+        static void AddUpdateAppSettings(string key, string value)  
+        {  
+            try  
+            {  
+                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);  
+                var settings = configFile.AppSettings.Settings;  
+                if (settings[key] == null)  
+                {  
+                    settings.Add(key, value);  
+                }  
+                else  
+                {  
+                    settings[key].Value = value;  
+                }  
+                configFile.Save(ConfigurationSaveMode.Modified);  
+                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);  
+            }  
+            catch (ConfigurationErrorsException)  
+            {  
+                Console.WriteLine("Error writing app settings");  
+            }  
+        }  
+    }  
+}  
+```  
+  
+```vb  
+Imports System.Configuration  
+Module Module1  
+  
+    Sub Main()  
+        ReadAllSettings()  
+        ReadSetting("Setting1")  
+        ReadSetting("NotValid")  
+        AddUpdateAppSettings("NewSetting", "May 7, 2014")  
+        AddUpdateAppSettings("Setting1", "May 8, 2014")  
+        ReadAllSettings()  
+    End Sub  
+  
+    Sub ReadAllSettings()  
+        Try  
+            Dim appSettings = ConfigurationManager.AppSettings  
+  
+            If appSettings.Count = 0 Then  
+                Console.WriteLine("AppSettings is empty.")  
+            Else  
+                For Each key As String In appSettings.AllKeys  
+                    Console.WriteLine("Key: {0} Value: {1}", key, appSettings(key))  
+                Next  
+            End If  
+        Catch e As ConfigurationErrorsException  
+            Console.WriteLine("Error reading app settings")  
+        End Try  
+    End Sub  
+  
+    Sub ReadSetting(key As String)  
+        Try  
+            Dim appSettings = ConfigurationManager.AppSettings  
+            Dim result As String = appSettings(key)  
+            If IsNothing(result) Then  
+                result = "Not found"  
+            End If  
+            Console.WriteLine(result)  
+        Catch e As ConfigurationErrorsException  
+            Console.WriteLine("Error reading app settings")  
+        End Try  
+    End Sub  
+  
+    Sub AddUpdateAppSettings(key As String, value As String)  
+        Try  
+            Dim configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None)  
+            Dim settings = configFile.AppSettings.Settings  
+            If IsNothing(settings(key)) Then  
+                settings.Add(key, value)  
+            Else  
+                settings(key).Value = value  
+            End If  
+            configFile.Save(ConfigurationSaveMode.Modified)  
+            ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name)  
+        Catch e As ConfigurationErrorsException  
+            Console.WriteLine("Error writing app settings")  
+        End Try  
+    End Sub  
+  
+End Module  
+```  
+  
+ O exemplo anterior pressupõe que seu projeto tem um arquivo App. config, conforme mostrado abaixo.  
+  
+```xml  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+    <startup>   
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
+    </startup>  
+  <appSettings>  
+    <add key="Setting1" value="May 5, 2014"/>  
+    <add key="Setting2" value="May 6, 2014"/>  
+  </appSettings>  
+</configuration>  
+```  
+  
+ O exemplo a seguir mostra como usar uma cadeia de caracteres de conexão para ler dados de um banco de dados.  
+  
+```csharp  
+using System;  
+using System.Configuration;  
+using System.Data.SqlClient;  
+  
+namespace ConsoleApplication1  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            ReadProducts();  
+        }  
+  
+        static void ReadProducts()  
+        {  
+            var connectionString = ConfigurationManager.ConnectionStrings["WingtipToys"].ConnectionString;  
+            string queryString = "SELECT Id, ProductName FROM dbo.Products;";  
+            using (var connection = new SqlConnection(connectionString))  
+            {  
+                var command = new SqlCommand(queryString, connection);  
+                connection.Open();  
+                using (var reader = command.ExecuteReader())  
+                {  
+                    while (reader.Read())  
+                    {  
+                        Console.WriteLine(String.Format("{0}, {1}", reader[0], reader[1]));  
+                    }  
+                }  
+            }  
+        }  
+    }  
+}  
+```  
+  
+```vb  
+Imports System.Configuration  
+Imports System.Data.SqlClient  
+Module Module1  
+  
+    Sub Main()  
+        ReadProducts()  
+    End Sub  
+  
+    Sub ReadProducts()  
+        Dim connectionString = ConfigurationManager.ConnectionStrings("WingtipToys").ConnectionString  
+        Dim queryString = "SELECT Id, ProductName FROM dbo.Products;"  
+        Using connection As New SqlConnection(connectionString)  
+            Dim command = New SqlCommand(queryString, connection)  
+            connection.Open()  
+  
+            Using reader As SqlDataReader = command.ExecuteReader()  
+                While reader.Read()  
+                    Console.WriteLine(String.Format("{0}, {1}", reader(0), reader(1)))  
+                End While  
+            End Using  
+        End Using  
+    End Sub  
+  
+End Module  
+```  
+  
+ O exemplo anterior pressupõe que seu projeto tem um App. config, conforme mostrado abaixo.  
+  
+```xml  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+    <startup>   
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
+    </startup>  
+    <connectionStrings>  
+      <add name="WingtipToys" connectionString="Data Source=(LocalDB)\v11.0;Initial Catalog=WingtipToys;Integrated Security=True;Pooling=False" />  
+    </connectionStrings>  
+</configuration>  
+```  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>O <see cref="T:System.Configuration.Configuration" /> classe permite o acesso programático para edição de arquivos de configuração. Você usar um dos métodos Open fornecidos pelo <see cref="T:System.Configuration.ConfigurationManager" />. Esses métodos retornam um <see cref="T:System.Configuration.Configuration" /> objeto, que por sua vez, fornece os métodos e propriedades necessários para lidar com os arquivos de configuração subjacentes. Você pode acessar esses arquivos para leitura ou gravação.  
+  
+ Para ler os arquivos de configuração, use <see cref="M:System.Configuration.Configuration.GetSection(System.String)" /> ou <see cref="M:System.Configuration.Configuration.GetSectionGroup(System.String)" /> para ler informações de configuração. O usuário ou processo que lê deve ter as seguintes permissões:  
+  
+-   Permissão de leitura no arquivo de configuração no nível da hierarquia de configuração atual.  
+  
+-   Permissões de leitura no pai todos os arquivos de configuração.  
+  
+ Se seu aplicativo precisa de acesso somente leitura para sua própria configuração, é recomendável que você use o <see cref="M:System.Configuration.ConfigurationManager.GetSection(System.String)" /> método. Esse método fornece acesso para os valores de configuração em cache para o aplicativo atual, que tem um desempenho melhor que o <see cref="T:System.Configuration.Configuration" /> classe.  
+  
+ Para gravar os arquivos de configuração, use um do <see cref="Overload:System.Configuration.Configuration.Save" /> métodos. O usuário ou processo que grava deve ter as seguintes permissões:  
+  
+-   Permissão de gravação no arquivo de configuração e do diretório no nível da hierarquia de configuração atual.  
+  
+-   Permissões de leitura em todos os arquivos de configuração.</para>
+    </block>
+  </Docs>
+  <Members>
+    <Member MemberName="AppSettings">
+      <MemberSignature Language="C#" Value="public static System.Collections.Specialized.NameValueCollection AppSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Specialized.NameValueCollection AppSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationManager.AppSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados de <see cref="T:System.Configuration.AppSettingsSection" /> da configuração padrão do aplicativo atual.</summary>
+        <value>Retorna um objeto <see cref="T:System.Collections.Specialized.NameValueCollection" /> com o conteúdo do objeto <see cref="T:System.Configuration.AppSettingsSection" /> referente à configuração padrão do aplicativo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Configuration.AppSettingsSection> objeto contém o conteúdo do arquivo de configuração `appSettings` seção.  
+  
+   
+  
+## Examples  
+ O primeiro exemplo mostra um aplicativo de console simples que lê as configurações do aplicativo, adiciona uma nova configuração e atualiza uma configuração existente.  
+  
+```csharp  
+using System;  
+using System.Configuration;  
+  
+namespace ConsoleApplication1  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            ReadAllSettings();  
+            ReadSetting("Setting1");  
+            ReadSetting("NotValid");  
+            AddUpdateAppSettings("NewSetting", "May 7, 2014");  
+            AddUpdateAppSettings("Setting1", "May 8, 2014");  
+            ReadAllSettings();  
+        }  
+  
+        static void ReadAllSettings()  
+        {  
+            try  
+            {  
+                var appSettings = ConfigurationManager.AppSettings;  
+  
+                if (appSettings.Count == 0)  
+                {  
+                    Console.WriteLine("AppSettings is empty.");  
+                }  
+                else  
+                {  
+                    foreach (var key in appSettings.AllKeys)  
+                    {  
+                        Console.WriteLine("Key: {0} Value: {1}", key, appSettings[key]);  
+                    }  
+                }  
+            }  
+            catch (ConfigurationErrorsException)  
+            {  
+                Console.WriteLine("Error reading app settings");  
+            }  
+        }  
+  
+        static void ReadSetting(string key)  
+        {  
+            try  
+            {  
+                var appSettings = ConfigurationManager.AppSettings;  
+                string result = appSettings[key] ?? "Not Found";  
+                Console.WriteLine(result);  
+            }  
+            catch (ConfigurationErrorsException)  
+            {  
+                Console.WriteLine("Error reading app settings");  
+            }  
+        }  
+  
+        static void AddUpdateAppSettings(string key, string value)  
+        {  
+            try  
+            {  
+                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);  
+                var settings = configFile.AppSettings.Settings;  
+                if (settings[key] == null)  
+                {  
+                    settings.Add(key, value);  
+                }  
+                else  
+                {  
+                    settings[key].Value = value;  
+                }  
+                configFile.Save(ConfigurationSaveMode.Modified);  
+                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);  
+            }  
+            catch (ConfigurationErrorsException)  
+            {  
+                Console.WriteLine("Error writing app settings");  
+            }  
+        }  
+    }  
+}  
+```  
+  
+```vb  
+Imports System.Configuration  
+Module Module1  
+  
+    Sub Main()  
+        ReadAllSettings()  
+        ReadSetting("Setting1")  
+        ReadSetting("NotValid")  
+        AddUpdateAppSettings("NewSetting", "May 7, 2014")  
+        AddUpdateAppSettings("Setting1", "May 8, 2014")  
+        ReadAllSettings()  
+    End Sub  
+  
+    Sub ReadAllSettings()  
+        Try  
+            Dim appSettings = ConfigurationManager.AppSettings  
+  
+            If appSettings.Count = 0 Then  
+                Console.WriteLine("AppSettings is empty.")  
+            Else  
+                For Each key As String In appSettings.AllKeys  
+                    Console.WriteLine("Key: {0} Value: {1}", key, appSettings(key))  
+                Next  
+            End If  
+        Catch e As ConfigurationErrorsException  
+            Console.WriteLine("Error reading app settings")  
+        End Try  
+    End Sub  
+  
+    Sub ReadSetting(key As String)  
+        Try  
+            Dim appSettings = ConfigurationManager.AppSettings  
+            Dim result As String = appSettings(key)  
+            If IsNothing(result) Then  
+                result = "Not found"  
+            End If  
+            Console.WriteLine(result)  
+        Catch e As ConfigurationErrorsException  
+            Console.WriteLine("Error reading app settings")  
+        End Try  
+    End Sub  
+  
+    Sub AddUpdateAppSettings(key As String, value As String)  
+        Try  
+            Dim configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None)  
+            Dim settings = configFile.AppSettings.Settings  
+            If IsNothing(settings(key)) Then  
+                settings.Add(key, value)  
+            Else  
+                settings(key).Value = value  
+            End If  
+            configFile.Save(ConfigurationSaveMode.Modified)  
+            ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name)  
+        Catch e As ConfigurationErrorsException  
+            Console.WriteLine("Error writing app settings")  
+        End Try  
+    End Sub  
+  
+End Module  
+```  
+  
+ O exemplo anterior pressupõe que seu projeto tem um arquivo App. config, conforme mostrado abaixo.  
+  
+```xml  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+    <startup>   
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
+    </startup>  
+  <appSettings>  
+    <add key="Setting1" value="May 5, 2014"/>  
+    <add key="Setting2" value="May 6, 2014"/>  
+  </appSettings>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível recuperar um objeto <see cref="T:System.Collections.Specialized.NameValueCollection" /> com os dados de configurações do aplicativo.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionStrings">
+      <MemberSignature Language="C#" Value="public static System.Configuration.ConnectionStringSettingsCollection ConnectionStrings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Configuration.ConnectionStringSettingsCollection ConnectionStrings" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationManager.ConnectionStrings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConnectionStringSettingsCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os dados de <see cref="T:System.Configuration.ConnectionStringsSection" /> da configuração padrão do aplicativo atual.</summary>
+        <value>Retorna um objeto <see cref="T:System.Configuration.ConnectionStringSettingsCollection" /> com o conteúdo do objeto <see cref="T:System.Configuration.ConnectionStringsSection" /> referente à configuração padrão do aplicativo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Configuration.ConnectionStringsSection> objeto contém o conteúdo do arquivo de configuração `connectionStrings` seção.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar uma cadeia de caracteres de conexão para ler dados de um banco de dados.  
+  
+```csharp  
+using System;  
+using System.Configuration;  
+using System.Data.SqlClient;  
+  
+namespace ConsoleApplication1  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            ReadProducts();  
+        }  
+  
+        static void ReadProducts()  
+        {  
+            var connectionString = ConfigurationManager.ConnectionStrings["WingtipToys"].ConnectionString;  
+            string queryString = "SELECT Id, ProductName FROM dbo.Products;";  
+            using (var connection = new SqlConnection(connectionString))  
+            {  
+                var command = new SqlCommand(queryString, connection);  
+                connection.Open();  
+                using (var reader = command.ExecuteReader())  
+                {  
+                    while (reader.Read())  
+                    {  
+                        Console.WriteLine(String.Format("{0}, {1}", reader[0], reader[1]));  
+                    }  
+                }  
+            }  
+        }  
+    }  
+}  
+```  
+  
+```vb  
+Imports System.Configuration  
+Imports System.Data.SqlClient  
+Module Module1  
+  
+    Sub Main()  
+        ReadProducts()  
+    End Sub  
+  
+    Sub ReadProducts()  
+        Dim connectionString = ConfigurationManager.ConnectionStrings("WingtipToys").ConnectionString  
+        Dim queryString = "SELECT Id, ProductName FROM dbo.Products;"  
+        Using connection As New SqlConnection(connectionString)  
+            Dim command = New SqlCommand(queryString, connection)  
+            connection.Open()  
+  
+            Using reader As SqlDataReader = command.ExecuteReader()  
+                While reader.Read()  
+                    Console.WriteLine(String.Format("{0}, {1}", reader(0), reader(1)))  
+                End While  
+            End Using  
+        End Using  
+    End Sub  
+  
+End Module  
+```  
+  
+ O exemplo anterior pressupõe que seu projeto tem um App. config, conforme mostrado abaixo.  
+  
+```xml  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+    <startup>   
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
+    </startup>  
+    <connectionStrings>  
+      <add name="WingtipToys" connectionString="Data Source=(LocalDB)\v11.0;Initial Catalog=WingtipToys;Integrated Security=True;Pooling=False" />  
+    </connectionStrings>  
+</configuration>  
+```  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível recuperar um objeto <see cref="T:System.Configuration.ConnectionStringSettingsCollection" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSection">
+      <MemberSignature Language="C#" Value="public static object GetSection (string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig object GetSection(string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.GetSection(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">O nome e o caminho da seção de configuração.</param>
+        <summary>Recupera uma seção de configuração especificada para a configuração padrão do aplicativo atual.</summary>
+        <returns>O objeto <see cref="T:System.Configuration.ConfigurationSection" /> especificado, ou <see langword="null" /> se a seção não existir.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para aplicativos cliente, esse método recupera um arquivo de configuração obtido ao mesclar o arquivo de configuração do aplicativo, o arquivo de configuração de usuário local e o arquivo de configuração móvel.  
+  
+ O <xref:System.Configuration.ConfigurationManager.GetSection%2A> método acessa as informações de configuração de tempo de execução não pode ser alterado. Para alterar a configuração, você deve usar o <xref:System.Configuration.Configuration.GetSection%2A> método no arquivo de configuração que você pode obter usando um dos seguintes métodos abertos:  
+  
+-   <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A>  
+  
+-   <xref:System.Configuration.ConfigurationManager.OpenMachineConfiguration%2A>  
+  
+-   <xref:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration%2A>  
+  
+-   <xref:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration%2A>  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como usar o método <xref:System.Configuration.ConfigurationManager.GetSection%2A>. O exemplo é parte de um exemplo maior fornecido para a <xref:System.Configuration.ConfigurationManager> classe.  
+  
+ [!code-csharp[System.Configuration.ConfigurationManager#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/CS/configurationmanager.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationManager#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/VB/configurationmanager.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração.</exception>
+        <block subset="none" type="overrides">
+          <para>Você deve converter o valor de retorno para o tipo de configuração esperado. Para evitar exceções de conversão possível, você deve usar uma operação de conversão condicional, como o <see langword="as" /> operador em c# ou a função no Visual Basic.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExeConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenExeConfiguration (System.Configuration.ConfigurationUserLevel userLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenExeConfiguration(valuetype System.Configuration.ConfigurationUserLevel userLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.OpenExeConfiguration(System.Configuration.ConfigurationUserLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userLevel" Type="System.Configuration.ConfigurationUserLevel" />
+      </Parameters>
+      <Docs>
+        <param name="userLevel">O <see cref="T:System.Configuration.ConfigurationUserLevel" /> para o qual você está abrindo a configuração.</param>
+        <summary>Abre o arquivo de configuração para o aplicativo atual como um objeto <see cref="T:System.Configuration.Configuration" />.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos cliente usam uma configuração global que se aplica a todos os usuários, configurações separadas que se aplicam a usuários individuais e configurações que se aplicam a usuários móveis. O `userLevel` parâmetro determina o local do arquivo de configuração que está sendo aberto, indicando se ele tem nenhum nível de usuário (o arquivo de configuração está no mesmo diretório que o aplicativo) ou tem um nível por usuário (o arquivo de configuração está em um caminho de configurações do aplicativo determinado pelo nível de usuário).  
+  
+ Especifique a configuração para obter passando um dos seguintes valores para `userLevel`:  
+  
+-   Para obter o <xref:System.Configuration.Configuration> conjunto de objetos que se aplica a todos os usuários, `userLevel` para <xref:System.Configuration.ConfigurationUserLevel.None>.  
+  
+-   Para obter o local <xref:System.Configuration.Configuration> conjunto de objetos que se aplica ao usuário atual, `userLevel` para <xref:System.Configuration.ConfigurationUserLevel.PerUserRoamingAndLocal>.  
+  
+-   Para obter o roaming <xref:System.Configuration.Configuration> conjunto de objetos que se aplica ao usuário atual, `userLevel` para <xref:System.Configuration.ConfigurationUserLevel.PerUserRoaming>.  
+  
+    > [!NOTE]
+    >  Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter permissões em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter permissões de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationManager#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/CS/configurationmanager.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationManager#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/VB/configurationmanager.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenExeConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenExeConfiguration (string exePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenExeConfiguration(string exePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.OpenExeConfiguration(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="exePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="exePath">O caminho do arquivo executável (exe).</param>
+        <summary>Abre o arquivo de configuração do cliente especificado como um objeto <see cref="T:System.Configuration.Configuration" />.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Aplicativos cliente usam uma configuração global que se aplica a todos os usuários, configurações separadas que se aplicam a usuários individuais e configurações que se aplicam a usuários móveis. O `userLevel` valor determina o local do arquivo de configuração que está sendo aberto. Indica se ele possui nenhum nível de usuário (o arquivo de configuração está no mesmo diretório que o aplicativo) ou tem um nível por usuário (o arquivo de configuração está em um caminho de configurações do aplicativo determinado pelo tipo de nível de usuário.).  
+  
+ Chamar essa sobrecarga de método é equivalente a chamar o <xref:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration%28System.Configuration.ExeConfigurationFileMap%2CSystem.Configuration.ConfigurationUserLevel%2CSystem.Boolean%29> sobrecarga com a `preLoad` parâmetro definido como `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> método.  
+  
+ [!code-csharp[System.Configuration.ConfigurationManager#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/CS/configurationmanager.cs#6)]
+ [!code-vb[System.Configuration.ConfigurationManager#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/VB/configurationmanager.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMachineConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMachineConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.OpenMachineConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre o arquivo de configuração do computador no computador atual como um objeto <see cref="T:System.Configuration.Configuration" />.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definições de configuração de máquina se aplicam a todo o computador e todos os aplicativos que residem nele, a menos que substituída para o aplicativo local. Definições de configuração de máquina são lidas do arquivo Machine. config da versão do .NET Framework em execução no momento. O arquivo Machine. config está localizado no subdiretório do seguinte:  
+  
+ *% windir %*\Microsoft.NET\Framework\\*versão*\config  
+  
+> [!NOTE]
+>  Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter permissões em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter permissões de gravação para o arquivo de configuração e o diretório em que ele existe. Não é possível acessar o arquivo Machine. config para outras versões do .NET Framework que podem ser instalados no computador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationManager.OpenMachineConfiguration%2A> método para obter todas as seções que estão contidas no arquivo de configuração.  
+  
+ [!code-csharp[System.Configuration.ConfigurationManager#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/CS/configurationmanager.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationManager#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/VB/configurationmanager.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMappedExeConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedExeConfiguration (System.Configuration.ExeConfigurationFileMap fileMap, System.Configuration.ConfigurationUserLevel userLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedExeConfiguration(class System.Configuration.ExeConfigurationFileMap fileMap, valuetype System.Configuration.ConfigurationUserLevel userLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(System.Configuration.ExeConfigurationFileMap,System.Configuration.ConfigurationUserLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Configuration.ExeConfigurationFileMap" />
+        <Parameter Name="userLevel" Type="System.Configuration.ConfigurationUserLevel" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">Um objeto <see cref="T:System.Configuration.ExeConfigurationFileMap" /> que referencia o arquivo de configuração a ser usado em vez do arquivo de configuração padrão do aplicativo.</param>
+        <param name="userLevel">O objeto <see cref="T:System.Configuration.ConfigurationUserLevel" /> para o qual você está abrindo a configuração.</param>
+        <summary>Abre o arquivo de configuração do cliente especificado como um objeto <see cref="T:System.Configuration.Configuration" /> que usa o mapeamento de arquivo e nível de usuário especificados.</summary>
+        <returns>O objeto de configuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationUserLevel> objeto determina o local do arquivo de configuração que está sendo aberto. Indica se o arquivo não tem nenhum nível de usuário (o arquivo de configuração está no mesmo diretório que o aplicativo) ou tem um nível por usuário (o arquivo de configuração está em um caminho de configurações do aplicativo determinado pelo `userLevel`).  
+  
+> [!NOTE]
+>  Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter permissões em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter permissões de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration%2A> método para obter todas as seções que estão contidas no arquivo de configuração.  
+  
+ [!code-csharp[System.Configuration.ConfigurationManager#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/CS/configurationmanager.cs#9)]
+ [!code-vb[System.Configuration.ConfigurationManager#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/VB/configurationmanager.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMappedExeConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedExeConfiguration (System.Configuration.ExeConfigurationFileMap fileMap, System.Configuration.ConfigurationUserLevel userLevel, bool preLoad);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedExeConfiguration(class System.Configuration.ExeConfigurationFileMap fileMap, valuetype System.Configuration.ConfigurationUserLevel userLevel, bool preLoad) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration(System.Configuration.ExeConfigurationFileMap,System.Configuration.ConfigurationUserLevel,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Configuration.ExeConfigurationFileMap" />
+        <Parameter Name="userLevel" Type="System.Configuration.ConfigurationUserLevel" />
+        <Parameter Name="preLoad" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">Um objeto <see cref="T:System.Configuration.ExeConfigurationFileMap" /> que referencia o arquivo de configuração a ser usado em vez do arquivo de configuração padrão de aplicativo.</param>
+        <param name="userLevel">O objeto <see cref="T:System.Configuration.ConfigurationUserLevel" /> para o qual você está abrindo a configuração.</param>
+        <param name="preLoad">
+          <see langword="true" /> para pré-carregar todos os grupos de seções e seções; caso contrário, <see langword="false" />.</param>
+        <summary>Abre o arquivo de configuração do cliente especificado como um objeto <see cref="T:System.Configuration.Configuration" /> que usa o mapeamento de arquivo, nível de usuário e opção de pré-carga especificados.</summary>
+        <returns>O objeto de configuração.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Configuration.ConfigurationUserLevel> objeto determina o local do arquivo de configuração que está sendo aberto. Indica se o arquivo não tem nenhum nível de usuário (o arquivo de configuração está no mesmo diretório que o aplicativo) ou tem um nível por usuário (o arquivo de configuração está em um caminho de configurações do aplicativo que é determinado pelo `userLevel`).  
+  
+> [!NOTE]
+>  Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter permissões em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter permissões de gravação para o arquivo de configuração e o diretório em que ele existe.  
+  
+ Para obter um exemplo de código, consulte o <xref:System.Configuration.ConfigurationManager.OpenMappedExeConfiguration%2A> de sobrecarga.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenMappedMachineConfiguration">
+      <MemberSignature Language="C#" Value="public static System.Configuration.Configuration OpenMappedMachineConfiguration (System.Configuration.ConfigurationFileMap fileMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Configuration.Configuration OpenMappedMachineConfiguration(class System.Configuration.ConfigurationFileMap fileMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.OpenMappedMachineConfiguration(System.Configuration.ConfigurationFileMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.Configuration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileMap" Type="System.Configuration.ConfigurationFileMap" />
+      </Parameters>
+      <Docs>
+        <param name="fileMap">Um objeto <see cref="T:System.Configuration.ExeConfigurationFileMap" /> que referencia o arquivo de configuração a ser usado em vez do arquivo de configuração padrão do aplicativo.</param>
+        <summary>Abre o arquivo de configuração do computador como um objeto <see cref="T:System.Configuration.Configuration" /> que usa o mapeamento de arquivo especificado.</summary>
+        <returns>Um objeto <see cref="T:System.Configuration.Configuration" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Definições de configuração de máquina se aplicam a todo o computador e todos os aplicativos que residem nele, a menos que substituída para o aplicativo local. Definições de configuração de máquina são lidas do arquivo Machine. config da versão do .NET Framework em execução no momento. O arquivo Machine. config está localizado no subdiretório do seguinte:  
+  
+ *% windir %*\Microsoft.NET\Framework\\*versão*\config  
+  
+> [!NOTE]
+>  Para obter o <xref:System.Configuration.Configuration> do objeto para um recurso, seu código deve ter permissões em todos os arquivos de configuração da qual ela herda as configurações de leitura. Para atualizar um arquivo de configuração, seu código adicionalmente deve ter permissões de gravação para o arquivo de configuração e o diretório em que ele existe. Não é possível acessar o arquivo Machine. config para outras versões do .NET Framework que podem ser instalados no computador.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationManager.OpenMappedMachineConfiguration%2A> método para obter todas as seções no arquivo de configuração.  
+  
+ [!code-csharp[System.Configuration.ConfigurationManager#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/CS/configurationmanager.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationManager#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/VB/configurationmanager.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Configuration.ConfigurationErrorsException">Não foi possível carregar um arquivo de configuração.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshSection">
+      <MemberSignature Language="C#" Value="public static void RefreshSection (string sectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RefreshSection(string sectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationManager.RefreshSection(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sectionName">O nome da seção de configuração ou o nome da seção e o caminho de configuração da seção a serem atualizados.</param>
+        <summary>Atualiza a seção nomeada para que na próxima vez que ela for recuperada ela seja lida novamente do disco.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método invalida o cache para a seção de configuração especificado sem afetar outras seções.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationManager.RefreshSection%2A> método para atualizar a seção de configuração de configurações do aplicativo.  
+  
+ [!code-csharp[System.Configuration.ConfigurationManager#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/CS/configurationmanager.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationManager#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationManager/VB/configurationmanager.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

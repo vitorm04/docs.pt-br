@@ -1,0 +1,134 @@
+<Type Name="FileDialogCustomPlace" FullName="System.Windows.Forms.FileDialogCustomPlace">
+  <TypeSignature Language="C#" Value="public class FileDialogCustomPlace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileDialogCustomPlace extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.FileDialogCustomPlace" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma entrada em um <see cref="T:System.Windows.Forms.FileDialog" /> coleção local personalizado para o Windows Vista.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O padrão abrir e salvar caixas de diálogo em [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] tem uma área no lado esquerdo da caixa de diálogo intitulada **Links Favoritos**. Essa área é denominada locais personalizados. Essa classe representa um local personalizado.  
+  
+ Em [!INCLUDE[winxp](~/includes/winxp-md.md)] ou [!INCLUDE[winxpsvr](~/includes/winxpsvr-md.md)], essa classe não tem nenhum efeito.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlace (Guid knownFolderGuid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Guid knownFolderGuid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlace.#ctor(System.Guid)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="knownFolderGuid" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="knownFolderGuid">Um <see cref="T:System.Guid" /> que representa um [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] pasta conhecido.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Forms.FileDialogCustomPlace" /> classe com um local personalizado identificado por um [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] conhecido GUID da pasta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter uma lista dos [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] pastas conhecidas, consulte [GUIDs de pasta conhecidas para locais do arquivo de caixa de diálogo personalizada](~/docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md) ou o arquivo KnownFolders.h a [!INCLUDE[winSDK](~/includes/winsdk-md.md)].  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Windows.Forms.FileDialogCustomPlace.%23ctor%2A> método. Para executar este exemplo, cole o seguinte código em um formulário do Windows e a chamada `InitializeDialogAndButton` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-csharp[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FileDialogCommonPlaces#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FileDialogCommonPlaces/VB/Form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileDialogCustomPlace (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlace.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho de pasta para o local personalizado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.FileDialogCustomPlace" />. com um caminho de pasta especificada para um local personalizado.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KnownFolderGuid">
+      <MemberSignature Language="C#" Value="public Guid KnownFolderGuid { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid KnownFolderGuid" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FileDialogCustomPlace.KnownFolderGuid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] conhecido GUID de pasta para o local personalizado.</summary>
+        <value>Um <see cref="T:System.Guid" /> que indica o [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] pasta conhecida para o local personalizado. Se o local personalizado foi especificado um caminho de pasta, um GUID vazio será retornado. Para obter uma lista dos [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] pastas conhecidas, consulte [GUIDs de pasta conhecidas para locais do arquivo de caixa de diálogo personalizada](~/docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md) ou o arquivo KnownFolders.h a [!INCLUDE[winSDK](~/includes/winsdk-md.md)].</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.FileDialogCustomPlace.Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o caminho da pasta para o local personalizado.</summary>
+        <value>Um caminho de pasta para o local personalizado. Se o local personalizado foi especificado com um [!INCLUDE[wiprlhext](~/includes/wiprlhext-md.md)] conhecido GUID de pasta, em seguida, uma cadeia de caracteres vazia é retornada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.FileDialogCustomPlace.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma cadeia de caracteres que representa esta <see cref="T:System.Windows.Forms.FileDialogCustomPlace" /> instância.</summary>
+        <returns>Uma cadeia de caracteres que representa essa instância <see cref="T:System.Windows.Forms.FileDialogCustomPlace" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

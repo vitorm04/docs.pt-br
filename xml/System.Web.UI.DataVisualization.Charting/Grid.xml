@@ -1,0 +1,388 @@
+<Type Name="Grid" FullName="System.Web.UI.DataVisualization.Charting.Grid">
+  <TypeSignature Language="C#" Value="public class Grid" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Grid extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.DataVisualization.Charting.Grid" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.DataVisualization</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Enabled")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece métodos e propriedades que gerenciam as grades principais e secundárias de objetos <see cref="T:System.Web.UI.DataVisualization.Charting.Axis" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe fornece a funcionalidade para as grades no gráfico e é exposta usando o <xref:System.Web.UI.DataVisualization.Charting.Axis.MajorGrid%2A> e <xref:System.Web.UI.DataVisualization.Charting.Axis.MinorGrid%2A> propriedades de cada <xref:System.Web.UI.DataVisualization.Charting.Axis> objeto.  
+  
+ Linhas de grade principais por padrão não têm seus <xref:System.Web.UI.DataVisualization.Charting.Grid.Interval%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A>, e <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType%2A> conjunto de propriedades. Quando essas propriedades para linhas de grade principais não forem definidas, o <xref:System.Web.UI.DataVisualization.Charting.Chart> controle determina os valores apropriados para linhas de grade automaticamente.  
+  
+ O eixo e suas linhas de grade secundárias por padrão têm seus <xref:System.Web.UI.DataVisualization.Charting.Grid.Interval%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset%2A>, <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A>, e <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType%2A> propriedades definidas como **automática** (0). Se os rótulos de eixo ou linhas de grade secundárias estão habilitadas e essas propriedades não são modificadas, o <xref:System.Web.UI.DataVisualization.Charting.Chart> controle determina automaticamente a frequência de desenhar as linhas de grade secundárias.  
+  
+ Grade de eixo:  
+  
+-   Pode ser habilitado ou desabilitado.  
+  
+-   Ter um ponto de partida que determina onde são desenhadas primeiro.  
+  
+-   Exibir as linhas que podem ser definidas para o estilo, a largura e a cor.  
+  
+-   Pode ter intervalos automática ou intervalos que são definidos manualmente.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Grid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.DataVisualization.Charting.Grid.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.DataVisualization.Charting.Grid" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um sinalizador que determina se as linhas de grade principais ou secundárias estão habilitadas.</summary>
+        <value>
+          <see langword="True" />Se habilitada, <see langword="false" /> se desabilitado. O padrão é <see langword="true" /> para objetos de grade principais e <see langword="false" /> para objetos de grade secundárias.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Grade principal e secundária é visível quando habilitado e não quando desabilitada.  
+  
+ As marcas de escala não serão exibidas se desabilitado.  
+  
+ Você pode desabilitar as marcas de escala, definindo o <xref:System.Web.UI.DataVisualization.Charting.TickMark.TickMarkStyle%2A> propriedade <xref:System.Web.UI.DataVisualization.Charting.TickMarkStyle.None>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Interval">
+      <MemberSignature Language="C#" Value="public double Interval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Interval" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.Interval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AxisElementIntervalValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o intervalo entre as linhas de grade principais ou secundárias.</summary>
+        <value>Um valor <see langword="double" /> que representa o intervalo entre linhas de grade. Por padrão, o valor não é definido (<see cref="F:System.Double.NaN" />) para linhas de grade principais. Para linhas de grade secundárias, o valor padrão é zero (0).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão essa propriedade não está definida para rótulos de eixo, marcas de escala principais e linhas de grade principais. Se não for definido — por padrão, explicitamente usando <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> em tempo de design ou atribuindo um valor de <xref:System.Double.NaN> em tempo de execução — o valor real dessa propriedade é determinado pelo <xref:System.Web.UI.DataVisualization.Charting.Axis.Interval%2A> propriedade do <xref:System.Web.UI.DataVisualization.Charting.Axis> do objeto ao qual pertence o elemento de gráfico, como uma marca de escala ou de linha de grade.  
+  
+ O intervalo de linhas de grade e marcas de escala secundárias nunca é afetado pelo <xref:System.Web.UI.DataVisualization.Charting.Axis.Interval%2A> o valor da propriedade.  
+  
+ O intervalo é medido em unidades de eixo e determina quantas vezes um elemento gráfico aplicável é desenhado. Por exemplo, suponha que um gráfico de coluna tem uma etapa de eixo X 1 (ou seja, 1, 2, 3, 4 e assim por diante); Se você definir o <xref:System.Windows.Forms.DataVisualization.Charting.LabelStyle.Interval%2A> propriedade para o eixo X 2, um rótulo de eixo será exibido para todas as outras colunas.  
+  
+ O mesmo é verdadeiro para todos os elementos do gráfico aplicável. Em outras palavras, se na faixa de exemplo anterior linhas estavam sendo usadas, com um <xref:System.Web.UI.DataVisualization.Charting.StripLine.IntervalOffset%2A> de 0,5 e seus <xref:System.Web.UI.DataVisualization.Charting.StripLine.Interval%2A> propriedade 2, uma faixa será exibida em 0,5, 2.5, 4.5 e assim por diante.  
+  
+ Se você definir um elemento de gráfico `Interval` propriedade como zero, um intervalo será automaticamente determinado pelo <xref:System.Web.UI.DataVisualization.Charting.Chart> controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffset">
+      <MemberSignature Language="C#" Value="public double IntervalOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 IntervalOffset" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Web.UI.DataVisualization.Charting.AxisElementIntervalValueConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o deslocamento de linhas de grade.</summary>
+        <value>Um valor <see langword="double" /> que representa o deslocamento do intervalo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão essa propriedade não está definida para rótulos de eixo, marcas de escala principais e linhas de grade principais. Se não for definido — por padrão, especificando explicitamente "Não configurado" em tempo de design ou atribuindo um valor de <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> em tempo de execução — o valor real dessa propriedade é determinado pelo <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffset%2A> propriedade do <xref:System.Web.UI.DataVisualization.Charting.Axis> objeto ao qual pertence o elemento de gráfico, como uma linha de grade ou uma marca de escala.  
+  
+ O deslocamento do intervalo de linhas de grade e marcas de escala secundárias nunca é afetado pelo valor da <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffset%2A> propriedade o <xref:System.Web.UI.DataVisualization.Charting.Axis> objeto.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType%2A> configuração de propriedade define as unidades de medida do deslocamento.  
+  
+ O <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffset%2A> pode ser um valor negativo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalOffsetType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalOffsetType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.IntervalOffsetType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de deslocamento de intervalo de linhas de grade principais e secundárias.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> que indica o tipo de intervalo. Por padrão, não é definido para linhas de grade principais. O valor padrão para linhas de grade secundárias é <see cref="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão essa propriedade não está definida para rótulos de eixo, marcas de escala principais e linhas de grade principais. Se não for definido — por padrão, especificando explicitamente "Não configurado" em tempo de design ou atribuindo um valor de <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> em tempo de execução — o valor real dessa propriedade é determinado pelo <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffsetType%2A> propriedade do <xref:System.Web.UI.DataVisualization.Charting.Axis> do objeto que o elemento de gráfico — uma linha de grade ou escala marcar, por exemplo — pertence.  
+  
+ O tipo de deslocamento de intervalo de linhas de grade e marcas de escala secundárias nunca é afetado pelo <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffsetType%2A> o valor da propriedade.  
+  
+ Se o tipo de deslocamento esse intervalo é definido como <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto>, o <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A> propriedade será usada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntervalType">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.DateTimeIntervalType IntervalType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.IntervalType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.DateTimeIntervalType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de intervalo de linhas de grade principais ou secundárias.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType" /> que indica o tipo de intervalo. Por padrão, ele não é definido para rótulos de eixo, marcas de escala principais e linhas de grade principais, usando o <see cref="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet" /> valor de enumeração. O valor padrão para linhas de grade e marcas de escala secundárias é <see cref="F:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Por padrão essa propriedade não está definida para rótulos de eixo, marcas de escala principais e linhas de grade principais. Se não for definido — por padrão, explicitamente usando "Não configurado" em tempo de design ou atribuindo a ele um valor de <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.NotSet> em tempo de execução — o valor real dessa propriedade é determinado pelo <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalOffsetType%2A> propriedade do <xref:System.Web.UI.DataVisualization.Charting.Axis> do objeto que o elemento de gráfico — uma linha de grade ou escala marcar, por exemplo — pertence.  
+  
+ O tipo de intervalo de linhas de grade e marcas de escala secundárias nunca é afetado pelo valor de <xref:System.Web.UI.DataVisualization.Charting.Axis.IntervalType%2A> propriedade.  
+  
+ Tipos de intervalo podem ser definidos como <xref:System.Web.UI.DataVisualization.Charting.DateTimeIntervalType.Auto>; o tipo de intervalo, em seguida, depende de valores de X ou o valores de Y do plotada <xref:System.Web.UI.DataVisualization.Charting.DataPoint> objetos, dependendo de qual eixo os elementos aplicáveis pertencem ao.  
+  
+ Definindo o <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A> propriedade para um eixo de valor só terá efeito se os valores dos pontos de dados forem <xref:System.DateTime> ou `double` valores. Além disso, o <xref:System.Web.UI.DataVisualization.Charting.Series.XValueType%2A> ou <xref:System.Web.UI.DataVisualization.Charting.Series.YValueType%2A> propriedade o plotada <xref:System.Web.UI.DataVisualization.Charting.Series> deve ser definido como <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.Auto> ou <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime>.  
+  
+ Definindo o <xref:System.Web.UI.DataVisualization.Charting.Grid.IntervalType%2A> propriedade para um eixo de categoria só terá efeito se a <xref:System.Web.UI.DataVisualization.Charting.Series.XValueType%2A> propriedade (ou <xref:System.Web.UI.DataVisualization.Charting.Series.YValueType%2A> propriedade, dependendo do eixo em questão) do plotada <xref:System.Web.UI.DataVisualization.Charting.Series> objeto seja <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.Auto> ou <xref:System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime>.  
+  
+> [!NOTE]
+>  Domingo é considerado o primeiro dia da semana.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color LineColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color LineColor" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.LineColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(typeof(System.Drawing.Color), "Black")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.DataVisualization.Charting.ChartColorEditor, System.Web.DataVisualization.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Drawing.ColorConverter))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor da linha de uma grade.</summary>
+        <value>Um objeto <see cref="T:System.Drawing.Color" />. O valor padrão é <see cref="P:System.Drawing.Color.Black" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.Grid.LineColor%2A> propriedade é usada para especificar a cor das marcas de escala principais e secundárias ou grades.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineDashStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.DataVisualization.Charting.ChartDashStyle LineDashStyle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.DataVisualization.Charting.ChartDashStyle LineDashStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.LineDashStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.DataVisualization.Charting.ChartDashStyle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o estilo de linha de uma grade.</summary>
+        <value>Um valor de enumeração <see cref="T:System.Web.UI.DataVisualization.Charting.ChartDashStyle" />. O padrão é <see cref="F:System.Web.UI.DataVisualization.Charting.ChartDashStyle.Solid" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.Grid.LineDashStyle%2A> propriedade pode ser usada para especificar o estilo de linha de grade ou de marcas de escala principais e secundárias. A linha pode ser sólida, pontilhada e assim por diante.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineWidth">
+      <MemberSignature Language="C#" Value="public int LineWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LineWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.DataVisualization.Charting.Grid.LineWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.DataVisualization</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.PersistenceMode(System.Web.UI.PersistenceMode.Attribute)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura da linha de linhas de grade principais e secundárias.</summary>
+        <value>Um <see langword="integer" /> que representa a largura da linha em pixels. O valor padrão é um (1).</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.DataVisualization.Charting.Grid.LineWidth%2A> propriedade pode ser usada para especificar a largura da linha, em pixels, da grade ou de marcas de escala principais e secundárias.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

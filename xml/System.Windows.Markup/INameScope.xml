@@ -1,0 +1,125 @@
+<Type Name="INameScope" FullName="System.Windows.Markup.INameScope">
+  <TypeSignature Language="C#" Value="public interface INameScope" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract INameScope" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Markup.INameScope" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xaml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.TypeForwardedFrom("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um contrato para como nomes de elementos devem ser acessados dentro de um determinado namescope XAML e como impor exclusividade dos nomes dentro desse namescope XAML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa interface é implementada por classes que têm elementos filho que devem ser reutilizado por meio do modelo ou adiar metáfora. Modelos, fábricas e construções semelhantes devem ter exclusivo namescopes XAML que são separados de um gráfico de objeto principal e raiz XAML. O princípio aqui é que não deve haver nenhum conflitos de nome quando objetos criados a partir desses elementos filho são introduzidos no gráfico de objeto do aplicativo e para que as operações de DOM e técnicas de referência XAML que contam com o identificador de nome podem contar com exclusividade de nome em cada namescope XAML.  
+  
+ Nas versões anteriores do .NET Framework, essa interface existia no assembly específicos de WPF WindowsBase. Em [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], <xref:System.Windows.Markup.INameScope> está no assembly System. XAML. Para obter mais informações, consulte [tipos migrados do WPF para System. XAML](~/docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
+ Essa interface é implementada pela classe WPF <xref:System.Windows.NameScope>. A maioria das operações de namescope XAML em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)] operar usando <xref:System.Windows.NameScope> instâncias, mas as informações às vezes são comunicadas internamente usando <xref:System.Windows.Markup.INameScope> referências.  
+  
+ Exemplos de classes do WPF que usam uma fábrica ou adiar metáfora combinada com a representação de XAML são <xref:System.Windows.Style> e <xref:System.Windows.FrameworkTemplate>. Essas implementações normalmente se baseiam nas versões explícitas dos métodos disponíveis na interface de <xref:System.Windows.NameScope> classe.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FindName">
+      <MemberSignature Language="C#" Value="public object FindName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object FindName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.INameScope.FindName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O identificador de nome para o objeto que está sendo solicitado.</param>
+        <summary>Retorna um objeto que tem o nome de identificação fornecido.</summary>
+        <returns>O objeto, se encontrado. Retorna <see langword="null" /> se nenhum objeto desse nome foi encontrado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cadeias de caracteres de nome válido na marcação XAML devem corresponder aos requisitos documentados na [gramática XamlName](~/docs/framework/xaml-services/xamlname-grammar.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterName">
+      <MemberSignature Language="C#" Value="public void RegisterName (string name, object scopedElement);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RegisterName(string name, object scopedElement) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.INameScope.RegisterName(System.String,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="scopedElement" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome para registrar.</param>
+        <param name="scopedElement">O elemento específico que fornecido <c>nome</c> refere-se a.</param>
+        <summary>Registra o nome fornecido para o namescope XAML atual.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Não são permitidos nomes duplicados em um namescope XAML.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Não permitir nomes duplicados para ser registrado. Se a entrada <paramref name="name" /> já está atribuído a um elemento existente na representação interna de coleta de namescope a XAML (mesmo se ele é o mesmo que <paramref name="scopedElement" />), lançar uma exceção.  
+  
+ Também considere a possibilidade de gerar uma exceção se o nome fornecido não corresponde à [gramática XamlName](~/docs/framework/xaml-services/xamlname-grammar.md).</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterName">
+      <MemberSignature Language="C#" Value="public void UnregisterName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UnregisterName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Markup.INameScope.UnregisterName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xaml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome para cancelar o registro.</param>
+        <summary>Cancela o registro o nome fornecido do namescope XAML atual.</summary>
+        <remarks>To be added.</remarks>
+        <block subset="none" type="overrides">
+          <para>Se o nome de entrada não existir, lance uma exceção.  
+  
+ Você deve remover o nome e o elemento registrado anteriormente se refere a partir da representação de coleção de namescope XAML, para que o mesmo nome potencialmente pôde ser registrado novamente no futuro.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

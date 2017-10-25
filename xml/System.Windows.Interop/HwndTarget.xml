@@ -1,0 +1,209 @@
+<Type Name="HwndTarget" FullName="System.Windows.Interop.HwndTarget">
+  <TypeSignature Language="C#" Value="public class HwndTarget : System.Windows.Media.CompositionTarget" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi HwndTarget extends System.Windows.Media.CompositionTarget" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Interop.HwndTarget" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Media.CompositionTarget</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma associação a um identificador de janela que dá suporte à composição visual.</summary>
+    <remarks>To be added.</remarks>
+    <threadsafe>Um <see cref="T:System.Windows.Interop.HwndTarget" /> não é thread-safe. Você pode fazer referência a um <see cref="T:System.Windows.Interop.HwndTarget" /> somente do thread que criou. Se você tentar acessar <see cref="T:System.Windows.Interop.HwndTarget" /> de um thread diferente, um <see cref="T:System.InvalidOperationException" /> é gerada.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HwndTarget (IntPtr hwnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int hwnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndTarget.#ctor(System.IntPtr)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="hwnd" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hwnd">O identificador para a janela que desenha esse objeto.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Windows.Interop.HwndTarget" /> de classe, usando o HWND especificado.</summary>
+        <remarks>To be added.</remarks>
+        <permission cref="T:System.Security.Permissions.UIPermissionWindow">para criar uma instância. Enumeração associada: <see cref="F:System.Security.Permissions.UIPermissionWindow.AllWindows" />.</permission>
+      </Docs>
+    </Member>
+    <Member MemberName="BackgroundColor">
+      <MemberSignature Language="C#" Value="public System.Windows.Media.Color BackgroundColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Color BackgroundColor" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndTarget.BackgroundColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cor de plano de fundo da janela referenciada por este <see cref="T:System.Windows.Interop.HwndTarget" />.</summary>
+        <value>A cor do plano de fundo, como um <see cref="T:System.Windows.Media.Color" /> valor.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O plano de fundo é desenhado antes de qualquer outro componente do visual. A cor usada deve ter um componente alfa de 1.0. Se você tentar especificar um valor diferente de alfa em fornecidos <xref:System.Windows.Media.Color>, ele redefine automaticamente a 1.0.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Interop.HwndTarget.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pelo <see cref="T:System.Windows.Interop.HwndTarget" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderMode">
+      <MemberSignature Language="C#" Value="public System.Windows.Interop.RenderMode RenderMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Interop.RenderMode RenderMode" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndTarget.RenderMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Interop.RenderMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o modo de renderização para a janela referenciada por esta <see cref="T:System.Windows.Interop.HwndTarget" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Interop.RenderMode" /> que especifica o modo de renderização atual. O padrão é <see cref="F:System.Windows.Interop.RenderMode.Default" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RootVisual">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Visual RootVisual { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Media.Visual RootVisual" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndTarget.RootVisual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>set: System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Visual</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o objeto visual raiz da página que é hospedado pela janela.</summary>
+        <value>O objeto raiz visual da página hospedado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!IMPORTANT]
+>  Esta classe apenas substitui a implementação dessa propriedade {}. Embora uma implementação de {get existe, ela é proveniente de <xref:System.Windows.Media.CompositionTarget> classe base que originalmente declarado essa propriedade virtual. Em <xref:System.Windows.Interop.HwndTarget> instâncias, essa propriedade é realmente leitura-gravação, apesar de como a sintaxe lê neste tópico de documentação.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformFromDevice">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix TransformFromDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix TransformFromDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndTarget.TransformFromDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz que transforma as coordenadas do dispositivo que está associada ao destino de renderização desse destino.</summary>
+        <value>A matriz de transformação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformToDevice">
+      <MemberSignature Language="C#" Value="public override System.Windows.Media.Matrix TransformToDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Media.Matrix TransformToDevice" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndTarget.TransformToDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.Matrix</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma matriz que transforma as coordenadas desse destino para o dispositivo que está associado ao destino de renderização.</summary>
+        <value>A matriz de transformação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesPerPixelOpacity">
+      <MemberSignature Language="C#" Value="public bool UsesPerPixelOpacity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesPerPixelOpacity" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Interop.HwndTarget.UsesPerPixelOpacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que declara se o valor de opacidade por pixel o janela do conteúdo de origem é usado para processamento.</summary>
+        <value>
+          <see langword="true" />Se usar opacidade por pixel; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você habilitar a opacidade por pixel, o subsistema de processamento não desenha a área não cliente (borda da janela).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

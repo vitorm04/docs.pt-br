@@ -1,0 +1,151 @@
+<Type Name="SoapBinding" FullName="System.Web.Services.Discovery.SoapBinding">
+  <TypeSignature Language="C#" Value="public sealed class SoapBinding" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapBinding extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Services.Discovery.SoapBinding" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Services</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Xml.Serialization.XmlRoot("soap", IsNullable=true, Namespace="http://schemas.xmlsoap.org/disco/soap/")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma associação SOAP em um documento de descoberta. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma associação SOAP é semelhante a uma interface de serviços Web XML. É útil para controle de versão e quando você procurar um serviço Web XML implementando uma associação específica de SOAP. Por exemplo, um documento de descoberta pode conter informações opcionais sobre associações de SOAP, que especificam as associações de SOAP implementadas pelo referenciado serviços da Web. Associações de SOAP são especificadas dentro de containd de documento XML em um documento de descoberta com a adição de um `SOAP` elemento XML com um namespace XML igual a <xref:System.Web.Services.Discovery.SoapBinding.Namespace> constante. O <xref:System.Web.Services.Discovery.SoapBinding.Address%2A> propriedade especifica a URL do serviço da Web em XML e o <xref:System.Web.Services.Discovery.SoapBinding.Binding%2A> propriedade especifica a associação de SOAP implementada por esse serviço da Web em XML.  
+  
+   
+  
+## Examples  
+ [!code-cpp[Discovery_SoapBinding1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/Discovery_SoapBinding1/CPP/discovery_soapbinding.cpp#1)]
+ [!code-csharp[Discovery_SoapBinding1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/Discovery_SoapBinding1/CS/discovery_soapbinding.cs#1)]
+ [!code-vb[Discovery_SoapBinding1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Discovery_SoapBinding1/VB/discovery_soapbinding.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapBinding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Services.Discovery.SoapBinding.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Services.Discovery.SoapBinding" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public string Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Address" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.SoapBinding.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("address")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL do serviço Web XML Implementando a associação SOAP.</summary>
+        <value>A URL do serviço Web XML Implementando a associação SOAP. O valor padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[Discovery_SoapBinding1#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Discovery_SoapBinding1/CPP/discovery_soapbinding.cpp#2)]
+ [!code-csharp[Discovery_SoapBinding1#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Discovery_SoapBinding1/CS/discovery_soapbinding.cs#2)]
+ [!code-vb[Discovery_SoapBinding1#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Discovery_SoapBinding1/VB/discovery_soapbinding.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Binding">
+      <MemberSignature Language="C#" Value="public System.Xml.XmlQualifiedName Binding { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlQualifiedName Binding" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Services.Discovery.SoapBinding.Binding" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlAttribute("binding")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlQualifiedName</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome qualificado XML da associação SOAP implementado pelo serviço da Web em XML.</summary>
+        <value>O <see cref="T:System.Xml.XmlQualifiedName" /> da associação SOAP implementada pelo serviço da Web em XML.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ [!code-cpp[Discovery_SoapBinding1#2](~/samples/snippets/cpp/VS_Snippets_Remoting/Discovery_SoapBinding1/CPP/discovery_soapbinding.cpp#2)]
+ [!code-csharp[Discovery_SoapBinding1#2](~/samples/snippets/csharp/VS_Snippets_Remoting/Discovery_SoapBinding1/CS/discovery_soapbinding.cs#2)]
+ [!code-vb[Discovery_SoapBinding1#2](~/samples/snippets/visualbasic/VS_Snippets_Remoting/Discovery_SoapBinding1/VB/discovery_soapbinding.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Namespace">
+      <MemberSignature Language="C#" Value="public const string Namespace;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string Namespace" />
+      <MemberSignature Language="DocId" Value="F:System.Web.Services.Discovery.SoapBinding.Namespace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Services</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O namespace XML do elemento que especifica uma associação SOAP dentro de um documento de descoberta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Associações SOAP dentro de um documento de descoberta residem dentro de um `SOAP` elemento XML, que é um membro do que o especificado de namespace XML, o <xref:System.Web.Services.Discovery.SoapBinding.Namespace> constante.  
+  
+   
+  
+## Examples  
+ Discovery_SoapBinding1 n º 2  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

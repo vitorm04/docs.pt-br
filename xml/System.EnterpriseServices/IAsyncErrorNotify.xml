@@ -1,0 +1,63 @@
+<Type Name="IAsyncErrorNotify" FullName="System.EnterpriseServices.IAsyncErrorNotify">
+  <TypeSignature Language="C#" Value="public interface IAsyncErrorNotify" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAsyncErrorNotify" />
+  <TypeSignature Language="DocId" Value="T:System.EnterpriseServices.IAsyncErrorNotify" />
+  <AssemblyInfo>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("FE6777FB-A674-4177-8F32-6D707E113484")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Interceptação de erro implementa no trabalho assíncrona em lotes que é enviada para o <see cref="T:System.EnterpriseServices.Activity" /> objeto.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.EnterpriseServices.IAsyncErrorNotify>é usado para implementar a interceptação de erro no trabalho assíncrona em lotes que é enviado para o <xref:System.EnterpriseServices.Activity> objeto. Implementar essa interface no objeto que é passado na chamada para <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A> no <xref:System.EnterpriseServices.Activity> objeto. <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A>Determina se um erro ocorreu em um trabalho em lotes que está executando de forma assíncrona. Essa interface permite que você se mantenha informado sobre erros que ocorrem no trabalho assíncrona em lotes, e o processo será encerrado (failfast) qualquer erro irrecuperável.  
+  
+ Para obter informações sobre failfast, consulte o tópico "Isolamento de falhas e política de Failfast" no SDK da plataforma no MSDN.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnError">
+      <MemberSignature Language="C#" Value="public void OnError (int hresult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnError(int32 hresult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.EnterpriseServices.IAsyncErrorNotify.OnError(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.EnterpriseServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hresult" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="hresult">O HRESULT do erro que ocorreu enquanto o trabalho em lotes estava sendo executada de forma assíncrona.</param>
+        <summary>Manipula erros de trabalho assíncrona em lotes.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método deve ser implementado para manipular normalmente erros que ocorrem quando o trabalho em lotes está sendo executado de forma assíncrona. Como o processo termina (failfast) qualquer erro irrecuperável, sem que esse método não é possível saber quando ocorrem erros no trabalho assíncrona em lotes. O processo também é encerrado quando este método retorna um erro como valor de retorno. O trabalho em lotes em si é implementado em <xref:System.EnterpriseServices.IServiceCall.OnCall%2A>, e ele é executado de forma assíncrona chamando <xref:System.EnterpriseServices.Activity.AsynchronousCall%2A>.  
+  
+ Este método dá suporte a valores de retorno padrão `E_FAIL`, `E_INVALIDARG`, e `E_OUTOFMEMORY`, bem como `S_OK`, que indica que a chamada do método é retornado com êxito.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

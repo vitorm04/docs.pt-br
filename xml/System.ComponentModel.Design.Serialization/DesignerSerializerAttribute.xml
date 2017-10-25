@@ -1,0 +1,224 @@
+<Type Name="DesignerSerializerAttribute" FullName="System.ComponentModel.Design.Serialization.DesignerSerializerAttribute">
+  <TypeSignature Language="C#" Value="public sealed class DesignerSerializerAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DesignerSerializerAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indica um serializador para o Gerenciador de serialização a ser usado para serializar os valores do tipo a que esse atributo é aplicado. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute>Fornece uma maneira para indicar para o Gerenciador de serialização designer que um tipo específico de serializador deve ser usado ao serializar os valores de um objeto. Isso permite que você especifique um serializador que é capaz de serializar um tipo personalizado, por exemplo. Coloque esse atributo em uma classe para indicar o objeto a ser usado ao serializar a classe de serialização.  
+  
+   
+  
+## Examples  
+ O código a seguir usa um <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute> para associar um serializador de exemplo com um componente de exemplo.  
+  
+ [!code-cpp[DesignerSerializerAttribute#1](~/samples/snippets/cpp/VS_Snippets_Winforms/DesignerSerializerAttribute/CPP/source.cpp#1)]
+ [!code-csharp[DesignerSerializerAttribute#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DesignerSerializerAttribute/CS/source.cs#1)]
+ [!code-vb[DesignerSerializerAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DesignerSerializerAttribute/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerSerializerAttribute (string serializerTypeName, string baseSerializerTypeName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string serializerTypeName, string baseSerializerTypeName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializerTypeName" Type="System.String" />
+        <Parameter Name="baseSerializerTypeName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="serializerTypeName">O nome totalmente qualificado do tipo de dados do serializador.</param>
+        <param name="baseSerializerTypeName">O nome totalmente qualificado do tipo de dados base do serializador. Vários serializadores podem ser fornecidos para uma classe como os serializadores têm diferentes tipos de base.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerSerializerAttribute (string serializerTypeName, Type baseSerializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string serializerTypeName, class System.Type baseSerializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializerTypeName" Type="System.String" />
+        <Parameter Name="baseSerializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serializerTypeName">O nome totalmente qualificado do tipo de dados do serializador.</param>
+        <param name="baseSerializerType">O tipo de dados base do serializador. Vários serializadores podem ser fornecidos para uma classe como os serializadores têm diferentes tipos de base.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerSerializerAttribute (Type serializerType, Type baseSerializerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type serializerType, class System.Type baseSerializerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.#ctor(System.Type,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serializerType" Type="System.Type" />
+        <Parameter Name="baseSerializerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="serializerType">O tipo de dados do serializador.</param>
+        <param name="baseSerializerType">O tipo de dados base do serializador. Vários serializadores podem ser fornecidos para uma classe como os serializadores têm diferentes tipos de base.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializerBaseTypeName">
+      <MemberSignature Language="C#" Value="public string SerializerBaseTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerializerBaseTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.SerializerBaseTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo totalmente qualificado do tipo base serializador.</summary>
+        <value>O nome de tipo totalmente qualificado do tipo base serializador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializerTypeName">
+      <MemberSignature Language="C#" Value="public string SerializerTypeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SerializerTypeName" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.SerializerTypeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome de tipo totalmente qualificado do serializador.</summary>
+        <value>O nome de tipo totalmente qualificado do serializador.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeId">
+      <MemberSignature Language="C#" Value="public override object TypeId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object TypeId" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute.TypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica uma ID exclusiva para esse tipo de atributo.</summary>
+        <value>Uma ID exclusiva para esse tipo de atributo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa ID é usada por filtragem de algoritmos para identificar dois atributos que são do mesmo tipo. Para a maioria dos atributos, isso retorna apenas o <xref:System.Type> instância para o atributo. <xref:System.ComponentModel.EditorAttribute>substitui isto para incluir o tipo do tipo de base do editor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

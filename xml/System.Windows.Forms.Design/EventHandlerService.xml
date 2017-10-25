@@ -1,0 +1,174 @@
+<Type Name="EventHandlerService" FullName="System.Windows.Forms.Design.EventHandlerService">
+  <TypeSignature Language="C#" Value="public sealed class EventHandlerService" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit EventHandlerService extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.Design.EventHandlerService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira sistemática de gerenciar manipuladores de eventos para o documento atual.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os desenvolvedores talvez queira ser capaz de gravar o código que trata os eventos de um determinado tipo.  
+  
+ Além disso, os desenvolvedores podem precisam globalmente altere o comportamento dos manipuladores de eventos específicos ou tipos de eventos, que podem ser distribuídos entre os componentes do designer.  
+  
+ Os designers para um projeto típico são muitos objetos diferentes, portanto, pode ser útil listar e armazenar a referência a esses eventos em um local comum.  
+  
+ Este serviço implementa uma "pilha de evento" que contém o conjunto atual de manipuladores de eventos. A pilha pode ter uma variedade de diferentes tipos de manipuladores na pilha.  
+  
+ Por exemplo, um designer pode enviar por push, ou adicionar, um manipulador de teclado e um manipulador de mouse para a pilha. Quando um designer solicita um manipulador de eventos, o serviço encontrará o manipulador de nível superior na pilha que corresponda a classe solicitada.  
+  
+ Dessa forma o serviço pode ser estendido para qualquer esquema de eventos, e também permite que os tipos específicos de manipuladores de eventos a ser substituído. Por exemplo, você pode substituir os manipuladores de eventos de mouse sem afetar os manipuladores de eventos de menu ou manipuladores de eventos de teclado.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EventHandlerService (System.Windows.Forms.Control focusWnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Windows.Forms.Control focusWnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventHandlerService.#ctor(System.Windows.Forms.Control)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="focusWnd" Type="System.Windows.Forms.Control" />
+      </Parameters>
+      <Docs>
+        <param name="focusWnd">O <see cref="T:System.Windows.Forms.Control" /> que está sendo criado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.Design.EventHandlerService" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EventHandlerChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler EventHandlerChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler EventHandlerChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.Design.EventHandlerService.EventHandlerChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Dispara um evento OnEventHandlerChanged.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FocusWindow">
+      <MemberSignature Language="C#" Value="public System.Windows.Forms.Control FocusWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.Control FocusWindow" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.Design.EventHandlerService.FocusWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.Control</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o controle de qual evento manipuladores anexados.</summary>
+        <value>O <see cref="T:System.Windows.Forms.Control" /> que foi conectado por meio do construtor.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHandler">
+      <MemberSignature Language="C#" Value="public object GetHandler (Type handlerType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetHandler(class System.Type handlerType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventHandlerService.GetHandler(System.Type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handlerType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="handlerType">O tipo de manipulador para obter.</param>
+        <summary>Obtém o manipulador de eventos atualmente ativos do tipo especificado.</summary>
+        <returns>Uma instância do manipulador, ou <see langword="null" /> se não houver nenhum manipulador do tipo solicitado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você nunca deve armazenar esse valor porque outros componentes estão livres para alterá-la. Esta chamada é muito rápida, porém, especialmente para casos em que você está solicitando sempre o mesmo tipo de manipulador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PopHandler">
+      <MemberSignature Language="C#" Value="public void PopHandler (object handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PopHandler(object handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventHandlerService.PopHandler(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O manipulador a ser removido da pilha.</param>
+        <summary>Exibe o manipulador especificado da pilha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o manipulador não é o componente mais acima na pilha, isso será exibida todos os manipuladores até e incluindo manipulador.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PushHandler">
+      <MemberSignature Language="C#" Value="public void PushHandler (object handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void PushHandler(object handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.Design.EventHandlerService.PushHandler(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="handler" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="handler">O manipulador para adicionar a pilha.</param>
+        <summary>Envia um novo manipulador de eventos na pilha.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse manipulador será usado por todos os componentes que solicitam um tipo de manipulador compatível. Se este manipulador não oferece suporte para o tipo solicitado, será usado o manipulador de Avançar na pilha.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

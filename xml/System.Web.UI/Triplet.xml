@@ -1,0 +1,145 @@
+<Type Name="Triplet" FullName="System.Web.UI.Triplet">
+  <TypeSignature Language="C#" Value="public sealed class Triplet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit Triplet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Triplet" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma classe utilitária básica usada para armazenar três objetos relacionados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.Triplet> classe é usada como uma estrutura básica para armazenar três objetos relacionados. É uma classe de utilitário que é usada de várias maneiras ao longo do ASP.NET. Você pode usar o <xref:System.Web.UI.Triplet> classe em seu próprio código em qualquer lugar que você precisa de uma estrutura contenha três objetos relacionados e onde ocultação de dados não é essencial. O <xref:System.Web.UI.Triplet> classe encapsula seu `object` referências, <xref:System.Web.UI.Triplet.First>, <xref:System.Web.UI.Triplet.Second>, e <xref:System.Web.UI.Triplet.Third>, nas propriedades; ele expõe diretamente a todos os códigos de chamada como campos de classes públicas.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa uma <xref:System.Web.UI.Triplet> objeto para armazenar três valores inteiros e outro <xref:System.Web.UI.Triplet> para manter três controles de rótulo.  
+  
+> [!NOTE]
+>  Ao acessar tipos de referência como membros de um <xref:System.Web.UI.Triplet>somente genérica <xref:System.Object> métodos estão disponíveis para esse membro.  
+  
+ [!code-aspx-csharp[System.Web.UI.Triplet#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.Triplet/CS/Default.aspx#1)]
+ [!code-aspx-vb[System.Web.UI.Triplet#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.Triplet/VB/Default.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Triplet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Triplet.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.Triplet" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Triplet (object x, object y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object x, object y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Triplet.#ctor(System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">Objeto atribuído a <see cref="F:System.Web.UI.Triplet.First" />.</param>
+        <param name="y">Objeto atribuído a <see cref="F:System.Web.UI.Triplet.Second" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Triplet" /> classe e define os primeiros dois objetos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Triplet (object x, object y, object z);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object x, object y, object z) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Triplet.#ctor(System.Object,System.Object,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="x" Type="System.Object" />
+        <Parameter Name="y" Type="System.Object" />
+        <Parameter Name="z" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="x">Objeto atribuído a <see cref="F:System.Web.UI.Triplet.First" />.</param>
+        <param name="y">Objeto atribuído a <see cref="F:System.Web.UI.Triplet.Second" />.</param>
+        <param name="z">Objeto atribuído a <see cref="F:System.Web.UI.Triplet.Third" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.Triplet" /> classe com os três objetos fornecidos.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="public object First;" />
+      <MemberSignature Language="ILAsm" Value=".field public object First" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Triplet.First" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o primeiro <see langword="object" /> do triplo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Second">
+      <MemberSignature Language="C#" Value="public object Second;" />
+      <MemberSignature Language="ILAsm" Value=".field public object Second" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Triplet.Second" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o segundo <see langword="object" /> do triplo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Third">
+      <MemberSignature Language="C#" Value="public object Third;" />
+      <MemberSignature Language="ILAsm" Value=".field public object Third" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.Triplet.Third" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o terceiro <see langword="object" /> do triplo.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

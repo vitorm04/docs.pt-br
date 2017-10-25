@@ -1,0 +1,6 @@
+<Namespace Name="System.IO.Log">
+  <Docs>
+    <summary>O namespace System.IO.Log define uma interface para registro em log para um sistema de e/s sequencial orientados a registros.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

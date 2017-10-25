@@ -1,0 +1,2226 @@
+<Type Name="PromptBuilder" FullName="System.Speech.Synthesis.PromptBuilder">
+  <TypeSignature Language="C#" Value="public class PromptBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit PromptBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Speech.Synthesis.PromptBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Speech</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Cria um objeto <see cref="T:System.Speech.Synthesis.Prompt" /> vazio e fornece métodos para adicionar conteúdo, selecionar vozes, controlar atributos de voz e a pronúncia de palavras faladas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Com <xref:System.Speech.Synthesis.PromptBuilder>, você pode adicionar áudio gravado de uma variedade de tipos de conteúdo para um prompt, incluindo texto sem formatação, marcação SSML (como uma cadeia de caracteres ou um arquivo), ou até mesmo outra <xref:System.Speech.Synthesis.PromptBuilder> objeto.  
+  
+ Para acrescentar o texto para um <xref:System.Speech.Synthesis.PromptBuilder> de objeto e, opcionalmente, controlam os atributos de voz como ênfase e taxa de volume, usam um do <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> métodos.  Você também pode controlar os atributos de voz como um grupo com o <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> e <xref:System.Speech.Synthesis.PromptBuilder.EndStyle%2A> métodos.  
+  
+ Você pode acrescentar o texto e controlar o que é falado ou como ele é pronunciado usando o <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithHint%2A>, <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithAlias%2A>, <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithPronunciation%2A>, <xref:System.Speech.Synthesis.PromptBuilder.AppendSsml%2A>, ou <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A> métodos.  
+  
+ Alterar a voz falada selecionada no momento no prompt do usando um dos sobrecarregados <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> métodos, uma voz específica para uso ou a especificação de nomeação necessários características de voz, como idade e sexo.  
+  
+ Para gerar a fala de um <xref:System.Speech.Synthesis.PromptBuilder> do objeto, você pode passá-lo como um argumento para o <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A> método.  
+  
+ Para obter mais informações, consulte [construir complexos Prompt](http://msdn.microsoft.com/en-us/552cb356-7344-473e-b0f2-7a9983f8c1a4).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Speech.Synthesis.PromptBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um novo <xref:System.Speech.Synthesis.PromptBuilder> instância e adiciona uma cadeia de caracteres de texto a ele.  
+  
+```csharp  
+using System.Speech.Synthesis;  
+  
+public void MySimpleText ()  
+{  
+    PromptBuilder builder = new PromptBuilder ();  
+    builder.AppendText("Hello world!");  
+}  
+```  
+  
+ A marcação a seguir mostra o equivalente no fala síntese Markup Language SSML (), (`xml:lang` é um atributo necessário do `speak` elemento):  
+  
+```xml  
+<speak version="1.0"  
+ xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="en-US">  
+  Hello world!  
+</speak>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PromptBuilder (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.#ctor(System.Globalization.CultureInfo)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Fornece informações sobre uma cultura específica, como o idioma, o nome da cultura, o sistema de escrita, o calendário usado e como formatar datas e cadeias de caracteres de classificação.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Speech.Synthesis.PromptBuilder" /> classe e especifica uma cultura.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor define o valor para o <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade. O <xref:System.Speech.Synthesis.SpeechSynthesizer> objeto tentar selecionar uma voz instalada que dá suporte ao idioma especificado pelo `culture` parâmetro para processar o prompt. Se uma voz com a cultura especificada for encontrada, ele será usado. Se não for encontrada uma voz com a cultura especificada, a voz padrão será usada.  
+  
+ Corretamente pronunciá palavras no idioma especificado pelo `culture` parâmetro, um mecanismo de síntese (texto em fala ou TTS) de fala que ofereça suporte o idioma deve ser instalado. Um mecanismo TTS instalado é chamado de voz. Para obter informações sobre quais as vozes estão instaladas para uma cultura específica, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> método.  
+  
+ Microsoft Windows e a API Speech aceitar todos os códigos de país de idioma válidos como valores para `culture`. Os mecanismos TTS que acompanham o Windows 7 suportam os seguintes códigos de país de idioma:  
+  
+-   en-US. Inglês (Estados Unidos)  
+  
+-   zh-CN. Chinês (China)  
+  
+-   zh-TW. Chinês (Taiwan)  
+  
+ Códigos de idioma de duas letras, como "en" também são permitidos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> instância e especifica seu <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A>.  
+  
+```csharp  
+using System.Speech.Synthesis;  
+  
+public void MySimpleText ()  
+{  
+    PromptBuilder builder = new PromptBuilder(new System.Globalization.CultureInfo("en-US"));  
+    builder.AppendText("Hello world!");  
+}  
+```  
+  
+ A marcação a seguir mostra o equivalente SSML:  
+  
+```xml  
+<speak version="1.0"  
+ xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="en-US">  
+  Hello world!  
+</speak>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendAudio">
+      <MemberSignature Language="C#" Value="public void AppendAudio (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendAudio(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendAudio(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho totalmente qualificado para o arquivo de áudio.</param>
+        <summary>Anexa o arquivo de áudio especificado para o <see cref="T:System.Speech.Synthesis.PromptBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendAudio">
+      <MemberSignature Language="C#" Value="public void AppendAudio (Uri audioFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendAudio(class System.Uri audioFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendAudio(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioFile" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="audioFile">URI para o arquivo de áudio.</param>
+        <summary>Anexa o arquivo de áudio no URI especificado para o <see cref="T:System.Speech.Synthesis.PromptBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Speech.Synthesis.PromptBuilder> de classe e, em seguida, adiciona texto a ele, seguido de um arquivo de áudio.  
+  
+```csharp  
+using System.Speech.PromptBuilder;  
+  
+public void SimpleConcatenation()  
+{  
+    // Add a prompt fragment from a .wav file.  
+    PromptBuilder builder = new PromptBuilder ();  
+    builder.AppendText("How are you today?");  
+    builder.AppendAudio(new Uri ("http://www.speech.microsoft.com/ding.wav"));  
+}  
+```  
+  
+ A marcação a seguir mostra a marcação SSML equivalente.  
+  
+```xml  
+<speak xmlns="http://www.w3.org/2001/10/synthesis"  
+       xmlns:ms="http://www.microsoft.com/speech/synthesis" xml:lang="en">  
+  
+  How are you today?  
+  <audio src="http://www.speech.microsoft.com/ding.wav" />  
+  
+</speak>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendAudio">
+      <MemberSignature Language="C#" Value="public void AppendAudio (Uri audioFile, string alternateText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendAudio(class System.Uri audioFile, string alternateText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendAudio(System.Uri,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioFile" Type="System.Uri" />
+        <Parameter Name="alternateText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="audioFile">URI para o arquivo de áudio.</param>
+        <param name="alternateText">Uma cadeia de caracteres que contém o texto alternativo que representa o áudio.</param>
+        <summary>Anexa o arquivo de áudio especificado e o texto alternativo para o <see cref="T:System.Speech.Synthesis.PromptBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O mecanismo de síntese de fala irá falar o texto alternativo se o arquivo de áudio não pode ser executado.  
+  
+   
+  
+## Examples  
+ Os exemplos a seguir adiciona um arquivo de áudio para um <xref:System.Speech.Synthesis.PromptBuilder> de instância e especifica o texto para fala se o arquivo de áudio não pode ser executado.  
+  
+```csharp  
+using System.Speech.PromptBuilder;  
+  
+public void SimpleConcatenation()  
+{  
+  
+    // Concatenate a prompt fragment from a .wav file.  
+    PromptBuilder builder = new PromptBuilder ();  
+    builder.AppendAudio(new Uri ("C:\\OnHold.wav"), "Your call will be answered in the order it was received");  
+}  
+```  
+  
+ A marcação a seguir mostra a marcação SSML equivalente.  
+  
+```xml  
+<speak xmlns="http://www.w3.org/2001/10/synthesis"  
+       xmlns:ms="http://www.microsoft.com/speech/synthesis" xml:lang="en">  
+  
+  <audio src="C:\OnHold.wav"> Your call will be answered in the order it was received. </audio>  
+  
+</speak>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendBookmark">
+      <MemberSignature Language="C#" Value="public void AppendBookmark (string bookmarkName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendBookmark(string bookmarkName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendBookmark(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bookmarkName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="bookmarkName">Uma cadeia de caracteres que contém o nome do indicador adicionado.</param>
+        <summary>Acrescenta um indicador ao objeto <see cref="T:System.Speech.Synthesis.PromptBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um mecanismo de síntese de fala irá gerar um <xref:System.Speech.Synthesis.SpeechSynthesizer.BookmarkReached> evento se encontrar um indicador enquanto fala de um prompt usando qualquer um do <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A>, <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakAsync%2A>, <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsml%2A>, ou <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsmlAsync%2A> métodos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um prompt que inclui os dois indicadores e envia a saída para um arquivo WAV para reprodução. O manipulador para o <xref:System.Speech.Synthesis.SpeechSynthesizer.BookmarkReached> evento grava o nome do indicador e sua posição no fluxo de áudio quando o evento foi gerado para o console.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToWaveFile(@"C:\test\weather.wav");  
+  
+        // Create a SoundPlayer instance to play the output audio file.  
+        System.Media.SoundPlayer m_SoundPlayer =  
+          new System.Media.SoundPlayer(@"C:\test\weather.wav");  
+  
+        // Build a prompt and append bookmarks.  
+        PromptBuilder builder = new PromptBuilder(  
+          new System.Globalization.CultureInfo("en-US"));  
+        builder.AppendText(  
+          "The weather forecast for today is partly cloudy with some sun breaks.");  
+        builder.AppendBookmark("Daytime forecast");  
+        builder.AppendText(  
+          "Tonight's weather will be cloudy with a 30% chance of showers.");  
+        builder.AppendBookmark("Nightime forecast");  
+  
+        // Add a handler for the BookmarkReached event.  
+        synth.BookmarkReached +=  
+          new EventHandler<BookmarkReachedEventArgs>(synth_BookmarkReached);  
+  
+        // Speak the prompt and play back the output file.  
+        synth.Speak(builder);  
+        m_SoundPlayer.Play();  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  
+    // Write the name and position of the bookmark to the console.  
+    static void synth_BookmarkReached(object sender, BookmarkReachedEventArgs e)  
+    {  
+      Console.WriteLine("Bookmark ({0}) reached at: {1} ",  
+        e.Bookmark, e.AudioPosition);  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendBreak">
+      <MemberSignature Language="C#" Value="public void AppendBreak ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendBreak() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendBreak" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Acrescenta uma quebra para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método não especificar uma duração do intervalo. O <xref:System.Speech.Synthesis.SpeechSynthesizer> determina um valor de duração com base no contexto de linguística.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma solicitação que contém duas frases separadas por uma quebra e fala o prompt para o dispositivo de áudio padrão no computador.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Build a prompt with two sentences separated by a break.  
+        PromptBuilder builder = new PromptBuilder(  
+          new System.Globalization.CultureInfo("en-US"));  
+        builder.AppendText(  
+          "Tonight's movie showings in theater A are at 5:45, 7:15, and 8:45.");  
+        builder.AppendBreak();  
+        builder.AppendText(  
+          "Tonight's movie showings in theater B are at 5:15, 7:30, and 9:15.");  
+  
+        // Speak the prompt.  
+        synth.Speak(builder);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendBreak">
+      <MemberSignature Language="C#" Value="public void AppendBreak (System.Speech.Synthesis.PromptBreak strength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendBreak(valuetype System.Speech.Synthesis.PromptBreak strength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendBreak(System.Speech.Synthesis.PromptBreak)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="strength" Type="System.Speech.Synthesis.PromptBreak" />
+      </Parameters>
+      <Docs>
+        <param name="strength">Indica a duração do intervalo, com os seguintes valores de aumento:</param>
+        <summary>Acrescenta uma quebra para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e especifica sua intensidade (duração).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores de <xref:System.Speech.Synthesis.PromptBreak> enumeração representa um intervalo de intervalos de separação (pausa) entre limites de palavras. O mecanismo de síntese de fala determina a duração exata do intervalo. Quando for solicitada uma quebra de, um desses valores é passado para o mecanismo de texto em fala (TTS), que contém um mapeamento entre esses valores e os valores correspondentes de quebra de milissegundo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma solicitação que contém duas frases separadas por uma quebra e envia a saída para um arquivo WAV para reprodução.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToWaveFile(@"C:\test\weather.wav");  
+  
+        // Create a SoundPlayer instance to play the output audio file.  
+        System.Media.SoundPlayer m_SoundPlayer =  
+          new System.Media.SoundPlayer(@"C:\test\weather.wav");  
+  
+        // Build a prompt with two sentences separated by a break.  
+        PromptBuilder builder = new PromptBuilder(  
+          new System.Globalization.CultureInfo("en-US"));  
+        builder.AppendText(  
+          "Tonight's movie showings in theater A are at 5:45, 7:15, and 8:45");  
+        builder.AppendBreak(PromptBreak.Medium);  
+        builder.AppendText(  
+          "Tonight's movie showings in theater B are at 5:15, 7:15, and 9:15");  
+  
+        // Speak the prompt and play back the output file.  
+        synth.Speak(builder);  
+        m_SoundPlayer.Play();  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendBreak">
+      <MemberSignature Language="C#" Value="public void AppendBreak (TimeSpan duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendBreak(valuetype System.TimeSpan duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendBreak(System.TimeSpan)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="duration">A hora em tiques, onde um tique é igual a 100 nanossegundos.</param>
+        <summary>Acrescenta uma quebra da duração especificada para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma quebra de pode ser usada para controlar a pausa ou outros limites prosódico entre palavras. Uma quebra é opcional. Se não houver uma quebra, o sintetizador determina o intervalo entre palavras, dependendo do contexto linguístico.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria uma solicitação que contém duas frases separadas por uma quebra de 15,000,000 tiques (1,5 segundos) e faz a solicitação para o dispositivo de áudio padrão no computador.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Build a prompt with two sentences separated by a break.  
+        PromptBuilder builder = new PromptBuilder(  
+          new System.Globalization.CultureInfo("en-US"));  
+        builder.AppendText(  
+          "Tonight's movie showings in theater A are at 5:45, 7:15, and 8:45");  
+        builder.AppendBreak(new TimeSpan(15000000));  
+        builder.AppendText(  
+          "Tonight's movie showings in theater B are at 5:15, 7:15, and 9:15");  
+  
+        // Speak the prompt.  
+        synth.Speak(builder);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendPromptBuilder">
+      <MemberSignature Language="C#" Value="public void AppendPromptBuilder (System.Speech.Synthesis.PromptBuilder promptBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendPromptBuilder(class System.Speech.Synthesis.PromptBuilder promptBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendPromptBuilder(System.Speech.Synthesis.PromptBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="promptBuilder" Type="System.Speech.Synthesis.PromptBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="promptBuilder">O conteúdo para anexar.</param>
+        <summary>Acrescenta um <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto para outro <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria dois <xref:System.Speech.Synthesis.PromptBuilder> instâncias e, em seguida, anexa-los para um terceiro <xref:System.Speech.Synthesis.PromptBuilder>.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToWaveFile(@"C:\test\showtimes.wav");  
+  
+        // Create a SoundPlayer instance to play the output audio file.  
+        System.Media.SoundPlayer m_SoundPlayer =  
+          new System.Media.SoundPlayer(@"C:\test\showtimes.wav");  
+  
+        // Build child prompts.  
+        PromptBuilder theatreA = new PromptBuilder();  
+        theatreA.AppendText(  
+          "Tonight's movie showings in theater A are at 5:45, 7:15, and 9:30");  
+        theatreA.AppendBreak(PromptBreak.Large);  
+        PromptBuilder theatreB = new PromptBuilder();  
+        theatreB.AppendText(  
+          "Tonight's movie showings in theater B are at 5:15, 7:15, and 9:15");  
+  
+        // Build the parent prompt and append the two child prompts.  
+        PromptBuilder showTimes = new PromptBuilder(  
+          new System.Globalization.CultureInfo("en-US"));  
+        showTimes.AppendText(  
+          "The following are the show times for tonight's movies:");  
+        showTimes.AppendPromptBuilder(theatreA);  
+        showTimes.AppendPromptBuilder(theatreB);  
+  
+        // Speak the prompt and play back the output file.  
+        synth.Speak(showTimes);  
+        m_SoundPlayer.Play();  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSsml">
+      <MemberSignature Language="C#" Value="public void AppendSsml (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSsml(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendSsml(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Um caminho totalmente qualificado para o arquivo SSML acrescentar.</param>
+        <summary>Anexa o arquivo SSML no caminho especificado para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo SSML deve ser um arquivo de formato XML em conformidade com a [linguagem de marcação de síntese de fala (SSML) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201763) especificação.  
+  
+ Você também pode acrescentar marcação SSML como uma cadeia de caracteres usando <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> de objeto e acrescenta o conteúdo de um arquivo SSML usando o <xref:System.Speech.Synthesis.PromptBuilder.AppendSsml%2A> método.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and append a file that defines an SSML prompt.  
+        PromptBuilder ssmlFile = new PromptBuilder();  
+        ssmlFile.AppendSsml("c:\\test\\Weather.ssml");  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(ssmlFile);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ Este é o arquivo SSML que referencia o exemplo anterior.  
+  
+```xml  
+<?xml version="1.0" encoding="ISO-8859-1"?>  
+<speak version="1.0"  
+ xmlns="http://www.w3.org/2001/10/synthesis"  
+ xml:lang="en-US">  
+  
+  <s> The weather forecast for today is partly cloudy with some sun breaks. </s>  
+  
+</speak>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSsml">
+      <MemberSignature Language="C#" Value="public void AppendSsml (Uri ssmlFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSsml(class System.Uri ssmlFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendSsml(System.Uri)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ssmlFile" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="ssmlFile">Um URI totalmente qualificado para o arquivo SSML acrescentar.</param>
+        <summary>Anexa o arquivo SSML no URI especificado para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo SSML deve ser um arquivo de formato XML em conformidade com a [linguagem de marcação de síntese de fala (SSML) versão 1.0](http://www.w3.org/TR/speech-synthesis/) especificação.  
+  
+ Você também pode acrescentar marcação SSML como uma cadeia de caracteres usando <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> de objeto e acrescenta o conteúdo de um arquivo SSML usando o <xref:System.Speech.Synthesis.PromptBuilder.AppendSsml%2A> método.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and append a file that defines an SSML prompt.  
+        PromptBuilder ssmlFile = new PromptBuilder();  
+        ssmlFile.AppendSsml(new Uri("c:\\test\\Weather.ssml"));  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(ssmlFile);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+```  
+  
+ Este é o arquivo SSML que referencia o exemplo anterior.  
+  
+```xml  
+<?xml version="1.0" encoding="ISO-8859-1"?>  
+<speak version="1.0"  
+ xmlns="http://www.w3.org/2001/10/synthesis"  
+ xml:lang="en-US">  
+  
+  <s> The weather forecast for today is partly cloudy with some sun breaks. </s>  
+  
+</speak>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSsml">
+      <MemberSignature Language="C#" Value="public void AppendSsml (System.Xml.XmlReader ssmlFile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSsml(class System.Xml.XmlReader ssmlFile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendSsml(System.Xml.XmlReader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ssmlFile" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="ssmlFile">Um nome totalmente qualificado para o arquivo XML para anexar.</param>
+        <summary>Acrescenta uma <c>XMLReader</c> objeto que faz referência a um prompt SSML para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O arquivo SSML deve ser um arquivo de formato XML em conformidade com a [linguagem de marcação de síntese de fala (SSML) versão 1.0](http://www.w3.org/TR/speech-synthesis/) especificação.  
+  
+ Você também pode acrescentar marcação SSML como uma cadeia de caracteres usando <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> de objeto um <xref:System.Xml.XmlReader> objeto que faz referência a um arquivo que contém a marcação de linguagem de marcação de síntese de fala (SSML).  
+  
+```csharp  
+using System;  
+using System.Xml;  
+using System.IO;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToWaveFile(@"C:\test\weather.wav");  
+  
+        // Create a SoundPlayer instance to play the output audio file.  
+        System.Media.SoundPlayer m_SoundPlayer =  
+          new System.Media.SoundPlayer(@"C:\test\weather.wav");  
+  
+        // Create the path to the SSML file.  
+        string weatherFile = Path.GetFullPath("c:\\test\\Weather.xml");  
+        PromptBuilder builder = null;  
+  
+        // Create an XML Reader from the file, create a PromptBuilder and   
+        // append the XmlReader.  
+        if (File.Exists(weatherFile))  
+        {  
+          XmlReader reader = XmlReader.Create(weatherFile);  
+          builder = new PromptBuilder();  
+          builder.AppendSsml(reader);  
+          reader.Close();  
+        }  
+  
+        // Speak the prompt and play back the output file.  
+        synth.Speak(builder);  
+        m_SoundPlayer.Play();  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendSsmlMarkup">
+      <MemberSignature Language="C#" Value="public void AppendSsmlMarkup (string ssmlMarkup);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendSsmlMarkup(string ssmlMarkup) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ssmlMarkup" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ssmlMarkup">Marcação SSML que contém uma cadeia de caracteres.</param>
+        <summary>Acrescenta a cadeia de caracteres especificada com SSML marcação para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você deve usar os caracteres de escape adequados ao anexar marcação SSML. Observe os-invertidas antes das aspas colocando o valor da `interpret-as` atributo no exemplo a seguir:  
+  
+```csharp  
+builder.AppendSsmlMarkup("<say-as interpret-as = \"characters\"> chair </say-as>");  
+```  
+  
+> [!NOTE]
+>  A cadeia de caracteres usada como um argumento para <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A> não pode incluir um `speak` elemento.  
+  
+ Ao usar <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A> para especificar pronúncia embutido em um `phoneme` elemento, você pode usar telefones de qualquer um dos seguintes alfabetos de fonético fornecidos que o mecanismo de fala atual oferece suporte a ela:  
+  
+-   Alfabeto fonético de internacional (IPA)  
+  
+-   Conjunto de telefone universal (no-break)  
+  
+-   SAPI telefone definido  
+  
+ Qualquer mecanismo de fala compatível com SSML irá falar telefones de IPA.  
+  
+ Você também pode anexar um arquivo que contém a marcação SSML usando uma da <xref:System.Speech.Synthesis.PromptBuilder.AppendSsml%2A> métodos. Para acrescentar o texto a ser falado que não está formatado com a linguagem de marcação, use um do <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A>, <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithAlias%2A>, <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithHint%2A>, ou <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithPronunciation%2A> métodos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public void AppendText (string textToSpeak);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendText(string textToSpeak) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendText(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém o texto a ser falado.</param>
+        <summary>Especifica o texto a ser acrescentado para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para acrescentar o texto que é formatado como linguagem de marcação SSML, use <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> de objeto e acrescenta uma cadeia de caracteres de texto usando o <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> método.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and append a text string.  
+        PromptBuilder speakText = new PromptBuilder();  
+        speakText.AppendText("Say the name of the song you want to hear");  
+  
+        // Speak the contents of the prompt.  
+        synth.Speak(speakText);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public void AppendText (string textToSpeak, System.Speech.Synthesis.PromptEmphasis emphasis);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendText(string textToSpeak, valuetype System.Speech.Synthesis.PromptEmphasis emphasis) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendText(System.String,System.Speech.Synthesis.PromptEmphasis)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="emphasis" Type="System.Speech.Synthesis.PromptEmphasis" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém o texto a ser falado.</param>
+        <param name="emphasis">O valor para a ênfase ou sobrecarga para aplicar ao texto.</param>
+        <summary>Acrescenta texto para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e especifica o grau de ênfase de texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os mecanismos de síntese de fala no Windows não dão suporte para o parâmetro de ênfase no momento. Configuração de valores para o parâmetro de ênfase não produzirá nenhuma alteração audível na saída de fala sintetizada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public void AppendText (string textToSpeak, System.Speech.Synthesis.PromptRate rate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendText(string textToSpeak, valuetype System.Speech.Synthesis.PromptRate rate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendText(System.String,System.Speech.Synthesis.PromptRate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="rate" Type="System.Speech.Synthesis.PromptRate" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém o texto a ser falado.</param>
+        <param name="rate">O valor para a taxa de fala aplicar ao texto.</param>
+        <summary>Acrescenta texto para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e especifica a taxa de fala para o texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> de objeto e anexa cadeias de caracteres de texto. O exemplo usa o <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> método para especificar um falante lenta de taxa para a cadeia de caracteres que está sendo adicionada, que enumera o conteúdo de um pedido.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and add content.  
+        PromptBuilder speakRate = new PromptBuilder();  
+        speakRate.AppendText("Your order for");  
+        speakRate.AppendText("one kitchen sink and one faucet", PromptRate.Slow);  
+        speakRate.AppendText("has been confirmed.");  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(speakRate);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendText">
+      <MemberSignature Language="C#" Value="public void AppendText (string textToSpeak, System.Speech.Synthesis.PromptVolume volume);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendText(string textToSpeak, valuetype System.Speech.Synthesis.PromptVolume volume) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendText(System.String,System.Speech.Synthesis.PromptVolume)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="volume" Type="System.Speech.Synthesis.PromptVolume" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém o texto a ser falado.</param>
+        <param name="volume">O valor para o volume de falando (intensidade) para aplicar ao texto.</param>
+        <summary>Acrescenta texto para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e especifica o volume para falar o texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.PromptVolume.Default> configuração <xref:System.Speech.Synthesis.PromptVolume> é o volume completo, que é o mesmo como <xref:System.Speech.Synthesis.PromptVolume.ExtraLoud>. As outras configurações de reduzir o volume de saída de fala em relação ao volume completo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> método para especificar as configurações de volume que o <xref:System.Speech.Synthesis.SpeechSynthesizer> devem ser aplicados a saída de fala.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Build a prompt that applies different volume settings.  
+        PromptBuilder builder = new PromptBuilder();  
+        builder.AppendText("This is the default speaking volume.", PromptVolume.Default);  
+        builder.AppendBreak();  
+        builder.AppendText("This is the extra loud speaking volume.", PromptVolume.ExtraLoud);  
+        builder.AppendBreak();  
+        builder.AppendText("This is the medium speaking volume.", PromptVolume.Medium);  
+  
+        // Speak the prompt.  
+        synth.Speak(builder);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendTextWithAlias">
+      <MemberSignature Language="C#" Value="public void AppendTextWithAlias (string textToSpeak, string substitute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextWithAlias(string textToSpeak, string substitute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendTextWithAlias(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="substitute" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém a representação de texto.</param>
+        <param name="substitute">Uma cadeia de caracteres que contém o texto a ser falado.</param>
+        <summary>Acrescenta texto para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e especifica o texto de alias a ser falado no lugar de texto anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Isso permite que um documento conter um faladas e um formulário escrito para um prompt. Por exemplo, o formulário escrito pode ser um acrônimo, como SAPI, e a forma falada pode ser texto expandido para o acrônimo, nesse caso fala Application Programming Interface.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir acrescenta uma cadeia de caracteres de texto ("fala síntese de linguagem de marcação") e seu alias "SSML (") para um <xref:System.Speech.Synthesis.PromptBuilder> objeto. O sintetizador será pronuncie "S S M L".  
+  
+```  
+PromptBuilder alias = new PromptBuilder();  
+alias.AppendTextWithAlias("Speech Synthesis Markup Language","SSML");   
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendTextWithHint">
+      <MemberSignature Language="C#" Value="public void AppendTextWithHint (string textToSpeak, System.Speech.Synthesis.SayAs sayAs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextWithHint(string textToSpeak, valuetype System.Speech.Synthesis.SayAs sayAs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendTextWithHint(System.String,System.Speech.Synthesis.SayAs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="sayAs" Type="System.Speech.Synthesis.SayAs" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém o texto a ser falado.</param>
+        <param name="sayAs">O tipo de conteúdo do texto.</param>
+        <summary>Acrescenta texto para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e especifica o tipo de conteúdo usando um membro do <see cref="T:System.Speech.Synthesis.SayAs" /> enumeração.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O tipo de conteúdo especificado por `sayAs` pode fornecer orientação para o mecanismo de síntese de fala sobre como pronunciá o conteúdo de `textToSpeak`.  
+  
+   
+  
+## Examples  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and define the data types for some of the added strings.  
+        PromptBuilder sayAs = new PromptBuilder();  
+        sayAs.AppendText("Your");  
+        sayAs.AppendTextWithHint("1st", SayAs.NumberOrdinal);  
+        sayAs.AppendText("request was for");  
+        sayAs.AppendTextWithHint("1", SayAs.NumberCardinal);  
+        sayAs.AppendText("room, on");  
+        sayAs.AppendTextWithHint("10/19/2012,", SayAs.MonthDayYear);  
+        sayAs.AppendText("with early arrival at");  
+        sayAs.AppendTextWithHint("12:35pm", SayAs.Time12);  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(sayAs);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendTextWithHint">
+      <MemberSignature Language="C#" Value="public void AppendTextWithHint (string textToSpeak, string sayAs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextWithHint(string textToSpeak, string sayAs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendTextWithHint(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="sayAs" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém o texto a ser falado.</param>
+        <param name="sayAs">O tipo de conteúdo do texto.</param>
+        <summary>Acrescenta texto para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto e um <see cref="T:System.String" /> que especifica o tipo de conteúdo do texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar esse método para especificar um tipo de conteúdo que não está incluído no <xref:System.Speech.Synthesis.SayAs> enumeração. No entanto, o mecanismo TTS deve dar suporte o parâmetro que você especificar.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppendTextWithPronunciation">
+      <MemberSignature Language="C#" Value="public void AppendTextWithPronunciation (string textToSpeak, string pronunciation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AppendTextWithPronunciation(string textToSpeak, string pronunciation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.AppendTextWithPronunciation(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textToSpeak" Type="System.String" />
+        <Parameter Name="pronunciation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="textToSpeak">Uma cadeia de caracteres que contém a forma escrita da palavra usando o alfabeto convencional para um idioma.</param>
+        <param name="pronunciation">Uma cadeia de caracteres que contém os fonemas do IPA (alfabeto fonético internacional) a pronunciar.</param>
+        <summary>Acrescenta texto ao objeto <see cref="T:System.Speech.Synthesis.PromptBuilder" /> e especifica a pronúncia do texto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O sintetizador fala o conteúdo do `pronunciation` parâmetro, não o conteúdo do `textToSpeak` parâmetro.  
+  
+ Pronúncia especificados embutidos nos prompts se aplicam apenas a ocorrência de individuais de uma palavra e substituem Pronúncia do mecanismo de fala ou qualquer um dos seus dicionários ativos no momento. Normalmente, você usará pronúncia embutido para personalizado pronúncia de palavras existentes ou de pronúncia de palavras incomuns, como nomes próprios, que o mecanismo de síntese de fala não pode pronuncie bem como esperado.  
+  
+ Pronúncia embutido deve ser especificada usando telefones do alfabeto fonético de internacional (IPA). Um telefone é uma letra ou um caractere que representa um som discreto de fala. Mecanismos de fala que estão em conformidade com a [linguagem de marcação de síntese de fala (SSML) versão 1.0](http://go.microsoft.com/fwlink/?LinkId=201763) especificação será pronuncie telefones de IPA. Para especificar a pronúncia embutido usando outras letras do alfabeto fonético, consulte <xref:System.Speech.Synthesis.PromptBuilder.AppendSsmlMarkup%2A>.  
+  
+ O IPA publica um [gráfico](http://go.microsoft.com/fwlink/?LinkId=58362) que lista seus telefones e mapeá-las para números de Unicode.  
+  
+ Alguns telefones do alfabeto de IPA têm as mesmo representações como letras do alfabeto latino. Nesses casos, é possível digitar os caracteres latinos e ter a representação adequada para um telefone. Porque os caracteres latinos que são usados em texto podem representar vários telefones do conjunto de telefone de IPA, simplesmente digitar os caracteres latinos não pode resultar no telefone IPA preciso desejado. Outros telefones de IPA alfabeto precisar ser representado em código como caractere referências consiste em um e comercial (&), sinal numérico (#), e um número de Unicode para o telefone desejado no hexadecimal ou decimal, todos os seguido por um ponto e vírgula (;). Por exemplo, um schwa (&\#x0259;) poderia ser representado por `&#x0259;`.  
+  
+ Para adicionar nova ou personalizada pronúncia várias palavras, por exemplo para dialetos express regionais ou para adicionar nomes próprios ou vocabulário específico para uma disciplina educacional ou médica, criar um léxico e adicioná-lo para o <xref:System.Speech.Synthesis.SpeechSynthesizer> usando <xref:System.Speech.Synthesis.SpeechSynthesizer.AddLexicon%2A>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir inicializa uma nova instância do <xref:System.Speech.Synthesis.PromptBuilder> classe. Ele então adiciona a cadeia de caracteres de texto "meu nome é" para a instância. Finalmente, ele acrescenta uma cadeia de caracteres que contém o nome do próprio "DuBois" e especifica a pronúncia do nome.  
+  
+```csharp  
+public void ProperName()  
+{  
+    PromptBuilder builder = new PromptBuilder();  
+    builder.AppendText("My name is");  
+  
+    // Add a proper name and its pronunciation.  
+    builder.AppendTextWithPronunciation("DuBois", "duˈbwɑ");     
+}  
+```  
+  
+ A marcação a seguir mostra o SSML que este <xref:System.Speech.Synthesis.PromptBuilder> gera do objeto.  
+  
+```xml  
+<speak xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="en-us">  
+  My name is <phoneme ph="duˈbwɑ"> DuBois </phoneme>  
+</speak>  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearContent">
+      <MemberSignature Language="C#" Value="public void ClearContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.ClearContent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa o conteúdo a partir de <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.PromptBuilder.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define as informações de cultura para o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.SpeechSynthesizer> objeto tentar selecionar uma voz instalada que dá suporte ao idioma especificado pelo <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade para processar o prompt. Se uma voz com a cultura especificada for encontrada, ele será usado. Se não for encontrada uma voz com a cultura especificada, a voz padrão será usada.  
+  
+ Uma cultura também pode ser especificada no prompt para discretos seções de conteúdo usando o <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A>, <xref:System.Speech.Synthesis.PromptBuilder.StartParagraph%2A>, e <xref:System.Speech.Synthesis.PromptBuilder.StartSentence%2A> métodos. Uma cultura especificada para uma parte do conteúdo usando um dos métodos acima substituirá o <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade enquanto em vigor e o <xref:System.Speech.Synthesis.SpeechSynthesizer> tentar selecionar uma voz instalada que dá suporte ao idioma especificado pelo `culture` parâmetro do método.  
+  
+ Corretamente pronunciá palavras no idioma especificado pelo <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade, um mecanismo de síntese (texto em fala ou TTS) de fala que ofereça suporte o idioma deve ser instalada. Um mecanismo TTS instalado é chamado de voz. Para obter informações sobre quais as vozes estão instaladas para uma cultura específica, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> método.  
+  
+ Microsoft Windows e a API Speech aceitar todos os códigos de país de idioma válidos como valores para `culture`. Os mecanismos TTS que acompanham o Windows 7 suportam os seguintes códigos de país de idioma:  
+  
+-   en-US. Inglês (Estados Unidos)  
+  
+-   zh-CN. Chinês (China)  
+  
+-   zh-TW. Chinês (Taiwan)  
+  
+ Códigos de idioma de duas letras, como "en" também são permitidos.  Consulte [cadeias de caracteres e constantes de identificador de idioma](http://msdn.microsoft.com/library/dd318693\(VS.85\).aspx) para obter uma lista abrangente dos códigos de idioma.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndParagraph">
+      <MemberSignature Language="C#" Value="public void EndParagraph ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndParagraph() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.EndParagraph" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica o final de um parágrafo no <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos. Para ver um exemplo, consulte <xref:System.Speech.Synthesis.PromptBuilder.StartParagraph%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSentence">
+      <MemberSignature Language="C#" Value="public void EndSentence ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSentence() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.EndSentence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica o final de uma frase de <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos. Para ver um exemplo, consulte <xref:System.Speech.Synthesis.PromptBuilder.StartSentence%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndStyle">
+      <MemberSignature Language="C#" Value="public void EndStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndStyle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.EndStyle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica o término de um estilo no <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.PromptBuilder.EndStyle%2A> método interrompe o estilo de fala atual. O estilo de fala é revertida para a configuração que estava em vigor antes de <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> método iniciou um novo estilo de fala. Para ver um exemplo, consulte <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndVoice">
+      <MemberSignature Language="C#" Value="public void EndVoice ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndVoice() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.EndVoice" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica o final do uso de uma voz o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A> método interrompe o uso de voz atual para a saída de fala. A voz será revertido para a configuração que estava em vigor antes de <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> método iniciou uma nova voz.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEmpty">
+      <MemberSignature Language="C#" Value="public bool IsEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEmpty" />
+      <MemberSignature Language="DocId" Value="P:System.Speech.Synthesis.PromptBuilder.IsEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém se o <see cref="T:System.Speech.Synthesis.PromptBuilder" /> está vazio.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="StartParagraph">
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Especifica o início de um parágrafo no <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto e, opcionalmente, especifica um idioma.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="StartParagraph">
+      <MemberSignature Language="C#" Value="public void StartParagraph ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartParagraph() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartParagraph" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica o início de um parágrafo no <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> objeto acrescenta o conteúdo e organiza o conteúdo em sentenças e parágrafos.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and add content as paragraphs and sentences.  
+        PromptBuilder parSent = new PromptBuilder();  
+        parSent.StartParagraph();  
+        parSent.StartSentence();  
+        parSent.AppendText("Introducing the sentence element.");  
+        parSent.EndSentence();  
+        parSent.StartSentence();  
+        parSent.AppendText("You can use it to mark individual sentences.");  
+        parSent.EndSentence();  
+        parSent.EndParagraph();  
+        parSent.StartParagraph();  
+        parSent.AppendText("Another simple paragraph. Sentence structure in this paragraph" +  
+          "is not explicitly marked.");  
+        parSent.EndParagraph();  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(parSent);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartParagraph">
+      <MemberSignature Language="C#" Value="public void StartParagraph (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartParagraph(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartParagraph(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Fornece informações sobre uma cultura específica, como o idioma, o nome da cultura, o sistema de escrita, o calendário usado e como formatar datas e classificar cadeias de caracteres.</param>
+        <summary>Especifica o início de um parágrafo na cultura especificada no <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos.  
+  
+ O `culture` parâmetro para um parágrafo pode ser diferente a <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade do <xref:System.Speech.Synthesis.PromptBuilder> objeto que o contém. Na verdade, enquanto o valor da `culture` parâmetro substituirá o <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade. O <xref:System.Speech.Synthesis.SpeechSynthesizer> tentar selecionar uma voz instalada que dá suporte ao idioma especificado pelo `culture` parâmetro falar o parágrafo. Se uma voz com a cultura especificada for encontrada, ele será usado. Se não for encontrada uma voz com a cultura especificada, a voz padrão será usada. Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartParagraph%2A>, chame <xref:System.Speech.Synthesis.PromptBuilder.EndParagraph%2A>.  
+  
+ Corretamente pronunciá palavras no idioma especificado pelo `culture` parâmetro, um mecanismo de síntese (texto em fala ou TTS) de fala que ofereça suporte o idioma deve ser instalado. Um mecanismo TTS instalado é chamado de voz. Para obter informações sobre quais as vozes estão instaladas para uma cultura específica, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> método.  
+  
+ Microsoft Windows e a API Speech aceitar todos os códigos de país de idioma válidos como valores para `culture`. Os mecanismos TTS que acompanham o Windows 7 suportam os seguintes códigos de país de idioma:  
+  
+-   en-US. Inglês (Estados Unidos)  
+  
+-   zh-CN. Chinês (China)  
+  
+-   zh-TW. Chinês (Taiwan)  
+  
+ Códigos de idioma de duas letras, como "en" também são permitidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="StartSentence">
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Especifica o início de uma frase de <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e, opcionalmente, especifica um idioma.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="StartSentence">
+      <MemberSignature Language="C#" Value="public void StartSentence ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartSentence() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartSentence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Especifica o início de uma frase de <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> objeto acrescenta o conteúdo e organiza o conteúdo em sentenças e parágrafos.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and add content as paragraphs and sentences.  
+        PromptBuilder parSent = new PromptBuilder();  
+        parSent.StartParagraph();  
+        parSent.StartSentence();  
+        parSent.AppendText("Introducing the sentence element.");  
+        parSent.EndSentence();  
+        parSent.StartSentence();  
+        parSent.AppendText("You can use it to mark individual sentences.");  
+        parSent.EndSentence();  
+        parSent.EndParagraph();  
+        parSent.StartParagraph();  
+        parSent.AppendText("Another simple paragraph. Sentence structure in this paragraph" +  
+          "is not explicitly marked.");  
+        parSent.EndParagraph();  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(parSent);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSentence">
+      <MemberSignature Language="C#" Value="public void StartSentence (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartSentence(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartSentence(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Fornece informações sobre uma cultura específica, como o idioma, o nome da cultura, o sistema de escrita, o calendário usado e como formatar datas e classificar cadeias de caracteres.</param>
+        <summary>Especifica o início de uma sentença da cultura especificada no <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Prompts longos podem ser renderizados como voz humana se eles são divididos em sentenças e parágrafos.  
+  
+ O `culture` parâmetro de uma sentença pode ser diferente de `culture` parâmetro para o parágrafo que contém a sentença ou o <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade do <xref:System.Speech.Synthesis.PromptBuilder> objeto que contém.  
+  
+ Em vigor, enquanto o valor da `culture` parâmetro substituirá o <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade e o `culture` parâmetro para o parágrafo que contém a sentença. O <xref:System.Speech.Synthesis.SpeechSynthesizer> tentar selecionar uma voz instalada que dá suporte ao idioma especificado o `culture` parâmetro fale a frase. Se uma voz com a cultura especificada for encontrada, ele será usado. Se não for encontrada uma voz com a cultura especificada, a voz padrão será usada. Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartSentence%2A>, chame <xref:System.Speech.Synthesis.PromptBuilder.EndSentence%2A>.  
+  
+ Corretamente pronunciá palavras no idioma especificado pelo `culture` parâmetro, um mecanismo de síntese (texto em fala ou TTS) de fala que ofereça suporte o idioma deve ser instalado. Um mecanismo TTS instalado é chamado de voz. Para obter informações sobre quais as vozes estão instaladas para uma cultura específica, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> método.  
+  
+ Microsoft Windows e a API Speech aceitar todos os códigos de país de idioma válidos como valores para `culture`. Os mecanismos TTS que acompanham o Windows 7 suportam os seguintes códigos de país de idioma:  
+  
+-   en-US. Inglês (Estados Unidos)  
+  
+-   zh-CN. Chinês (China)  
+  
+-   zh-TW. Chinês (Taiwan)  
+  
+ Códigos de idioma de duas letras, como "en" também são permitidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartStyle">
+      <MemberSignature Language="C#" Value="public void StartStyle (System.Speech.Synthesis.PromptStyle style);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartStyle(class System.Speech.Synthesis.PromptStyle style) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartStyle(System.Speech.Synthesis.PromptStyle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="style" Type="System.Speech.Synthesis.PromptStyle" />
+      </Parameters>
+      <Docs>
+        <param name="style">O estilo para iniciar.</param>
+        <summary>Especifica o início de um estilo no <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> leva um <xref:System.Speech.Synthesis.PromptStyle> objeto como seu argumento. Você pode usar as propriedades do <xref:System.Speech.Synthesis.PromptStyle> objeto para definir a ênfase, falando taxa e volume (intensidade) para aplicar a fala saída enquanto o estilo estiver em vigor. Para parar de usar o estilo atual, chame o <xref:System.Speech.Synthesis.PromptBuilder.EndStyle%2A> método.  
+  
+> [!NOTE]
+>  -   Os mecanismos de síntese de fala no Windows não dão suporte para o parâmetro de ênfase no momento. Configuração de valores para o parâmetro de ênfase não produzirá nenhuma alteração audível na saída de fala sintetizada.  
+> -   O <xref:System.Speech.Synthesis.PromptVolume.Default> configuração <xref:System.Speech.Synthesis.PromptVolume> é o volume completo, que é o mesmo como <xref:System.Speech.Synthesis.PromptVolume.ExtraLoud>. As outras configurações de reduzir o volume de saída de fala em relação ao volume completo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> de objeto e anexa cadeias de caracteres de texto. O exemplo usa o <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> método para especificar um falante lenta de taxa para a cadeia de caracteres que está sendo adicionada, que enumera o conteúdo de um pedido.  
+  
+```csharp  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and add content.  
+        PromptBuilder style = new PromptBuilder();  
+        style.AppendText("Your order for");  
+        style.StartStyle(new PromptStyle(PromptRate.Slow));  
+        style.AppendText("one kitchen sink and one faucet");  
+        style.EndStyle();  
+        style.AppendText("has been confirmed.");  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(style);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="StartVoice">
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Instrui o sintetizador para alterar a voz em uma <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma voz representa um mecanismo TTS instalado. Use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> métodos e <xref:System.Speech.Synthesis.VoiceInfo> classe para obter os nomes e os atributos do instalado vozes de texto em fala (TTS) que você pode selecionar.  
+  
+ Quando um aplicativo chama <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A>, o método verifica que cada uma das vozes encontrar no registro atenda a certos critérios mínimo. Para qualquer falha de verificação, voz <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> define seu <xref:System.Speech.Synthesis.InstalledVoice.Enabled%2A> propriedade `False`. Um aplicativo não pode chamar qualquer uma da <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> métodos em uma voz cujo <xref:System.Speech.Synthesis.InstalledVoice.Enabled%2A> é de propriedade `False`. Normalmente, os aplicativos não configuram uma voz <xref:System.Speech.Synthesis.InstalledVoice.Enabled%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="StartVoice">
+      <MemberSignature Language="C#" Value="public void StartVoice (System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartVoice(class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartVoice(System.Globalization.CultureInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Fornece informações sobre uma cultura específica, como o idioma, o nome da cultura, o sistema de escrita, o calendário usado e como formatar datas e classificar cadeias de caracteres.</param>
+        <summary>Instrui o sintetizador a alterar a voz no objeto <see cref="T:System.Speech.Synthesis.PromptBuilder" /> e especifica a cultura da voz a ser usada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `culture` parâmetro para <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> pode ser diferente a <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade do <xref:System.Speech.Synthesis.PromptBuilder> objeto que o contém.  Na verdade, enquanto o valor da `culture` parâmetro substituirá o <xref:System.Speech.Synthesis.PromptBuilder.Culture%2A> propriedade. O <xref:System.Speech.Synthesis.SpeechSynthesizer> tentar selecionar uma voz instalada que dá suporte ao idioma especificado pelo `culture` parâmetro falar o conteúdo entre <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> e <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A>. Se uma voz com a cultura especificada for encontrada, ele será usado. Se não for encontrada uma voz com a cultura especificada, a voz padrão será usada. Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A>, chame <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A>.  
+  
+ Corretamente pronunciá palavras no idioma especificado pelo `culture` parâmetro, um mecanismo de síntese (texto em fala ou TTS) de fala que ofereça suporte o idioma deve ser instalado. Um mecanismo TTS instalado é chamado de voz. Para obter informações sobre quais as vozes estão instaladas para uma cultura específica, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> método.  
+  
+ Microsoft Windows e a API Speech aceitar todos os códigos de país de idioma válidos como valores para `culture`. Os mecanismos TTS que acompanham o Windows 7 suportam os seguintes códigos de país de idioma:  
+  
+-   en-US. Inglês (Estados Unidos)  
+  
+-   zh-CN. Chinês (China)  
+  
+-   zh-TW. Chinês (Taiwan)  
+  
+ Códigos de idioma de duas letras, como "en" também são permitidos.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartVoice">
+      <MemberSignature Language="C#" Value="public void StartVoice (System.Speech.Synthesis.VoiceGender gender);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartVoice(valuetype System.Speech.Synthesis.VoiceGender gender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartVoice(System.Speech.Synthesis.VoiceGender)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gender" Type="System.Speech.Synthesis.VoiceGender" />
+      </Parameters>
+      <Docs>
+        <param name="gender">O sexo de voz para usar.</param>
+        <summary>Instrui o sintetizador para alterar a voz do <see cref="T:System.Speech.Synthesis.PromptBuilder" /> do objeto e especifica o sexo de voz para usar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> métodos e <xref:System.Speech.Synthesis.VoiceInfo> classe para obter os nomes e os atributos do instalado vozes de texto em fala (TTS) que você pode selecionar.  
+  
+ Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> chamar <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartVoice">
+      <MemberSignature Language="C#" Value="public void StartVoice (System.Speech.Synthesis.VoiceInfo voice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartVoice(class System.Speech.Synthesis.VoiceInfo voice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartVoice(System.Speech.Synthesis.VoiceInfo)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="voice" Type="System.Speech.Synthesis.VoiceInfo" />
+      </Parameters>
+      <Docs>
+        <param name="voice">Os critérios de voz usar.</param>
+        <summary>Instrui o sintetizador para alterar a voz do <see cref="T:System.Speech.Synthesis.PromptBuilder" /> do objeto e especifica os critérios para a nova voz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> métodos e <xref:System.Speech.Synthesis.VoiceInfo> classe para obter os nomes e os atributos do instalado vozes de texto em fala (TTS) que você pode selecionar.  
+  
+ Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> chamar <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartVoice">
+      <MemberSignature Language="C#" Value="public void StartVoice (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartVoice(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartVoice(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome de voz para usar.</param>
+        <summary>Instrui o sintetizador para alterar a voz do <see cref="T:System.Speech.Synthesis.PromptBuilder" /> de objeto e especifica o nome de voz para usar.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter informações sobre quais vozes estiverem instaladas, use um do <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> métodos.  
+  
+ Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> chamar <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartVoice">
+      <MemberSignature Language="C#" Value="public void StartVoice (System.Speech.Synthesis.VoiceGender gender, System.Speech.Synthesis.VoiceAge age);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartVoice(valuetype System.Speech.Synthesis.VoiceGender gender, valuetype System.Speech.Synthesis.VoiceAge age) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartVoice(System.Speech.Synthesis.VoiceGender,System.Speech.Synthesis.VoiceAge)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gender" Type="System.Speech.Synthesis.VoiceGender" />
+        <Parameter Name="age" Type="System.Speech.Synthesis.VoiceAge" />
+      </Parameters>
+      <Docs>
+        <param name="gender">O sexo de nova voz para usar.</param>
+        <param name="age">A idade de voz para usar.</param>
+        <summary>Instrui o sintetizador para alterar a voz do <see cref="T:System.Speech.Synthesis.PromptBuilder" /> do objeto e especifica o sexo e a idade da nova voz.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> métodos e <xref:System.Speech.Synthesis.VoiceInfo> classe para obter os nomes e os atributos do instalado vozes de texto em fala (TTS) que você pode selecionar.  
+  
+ Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> chamar <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartVoice">
+      <MemberSignature Language="C#" Value="public void StartVoice (System.Speech.Synthesis.VoiceGender gender, System.Speech.Synthesis.VoiceAge age, int voiceAlternate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartVoice(valuetype System.Speech.Synthesis.VoiceGender gender, valuetype System.Speech.Synthesis.VoiceAge age, int32 voiceAlternate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.StartVoice(System.Speech.Synthesis.VoiceGender,System.Speech.Synthesis.VoiceAge,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gender" Type="System.Speech.Synthesis.VoiceGender" />
+        <Parameter Name="age" Type="System.Speech.Synthesis.VoiceAge" />
+        <Parameter Name="voiceAlternate" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="gender">O sexo de voz para usar.</param>
+        <param name="age">A idade de voz para usar.</param>
+        <param name="voiceAlternate">Um inteiro que especifica uma voz preferencial quando mais de uma voz corresponde a <c>sexo</c> e <c>idade</c> parâmetros.</param>
+        <summary>Instrui o sintetizador para alterar a voz do <see cref="T:System.Speech.Synthesis.PromptBuilder" /> do objeto e especifica seu sexo, idade e uma voz preferencial que corresponda a idade e sexo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um mecanismo de síntese de fala contagens as correspondências encontradas para os parâmetros especificados e retorna a voz quando a contagem é igual a `voiceAlternate` parâmetro.  
+  
+ Use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> métodos e <xref:System.Speech.Synthesis.VoiceInfo> classe para obter os nomes e os atributos do instalado vozes de texto em fala (TTS) que você pode selecionar.  
+  
+ Para parar de usar a voz especificada por <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> chamar <xref:System.Speech.Synthesis.PromptBuilder.EndVoice%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToXml">
+      <MemberSignature Language="C#" Value="public string ToXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string ToXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Speech.Synthesis.PromptBuilder.ToXml" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Speech</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o SSML gerado a partir de <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto.</summary>
+        <returns>Retorna o SSML gerado a partir de <see cref="T:System.Speech.Synthesis.PromptBuilder" /> objeto como uma única linha.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Speech.Synthesis.PromptBuilder.ToXml%2A> método não faz nenhuma tentativa de formatar o SSML retornado de qualquer forma.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Speech.Synthesis.PromptBuilder> objeto, acrescenta texto e grava o equivalente SSML do prompt de para o console antes de falar o conteúdo da solicitação de.  
+  
+```csharp  
+  
+using System;  
+using System.Speech.Synthesis;  
+  
+namespace SampleSynthesis  
+{  
+  class Program  
+  {  
+    static void Main(string[] args)  
+    {  
+  
+      // Initialize a new instance of the SpeechSynthesizer.  
+      using (SpeechSynthesizer synth = new SpeechSynthesizer())  
+      {  
+  
+        // Configure the audio output.   
+        synth.SetOutputToDefaultAudioDevice();  
+  
+        // Create a PromptBuilder object and add content.  
+        PromptBuilder style = new PromptBuilder();  
+        style.AppendText("Your order for");  
+        style.StartStyle(new PromptStyle(PromptRate.Slow));  
+        style.AppendText("one kitchen sink and one faucet");  
+        style.EndStyle();  
+        style.AppendText("has been confirmed.");  
+  
+        // Write the contents of the PromptBuilder object to the console as  
+        // an SSML-compatible XML file.  
+        string myXml = style.ToXml();  
+        Console.WriteLine("This is the SSML equivalent of the PromptBuilder: \n\n" + myXml);  
+  
+        // Speak the contents of the SSML prompt.  
+        synth.Speak(style);  
+      }  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press any key to exit...");  
+      Console.ReadKey();  
+    }  
+  }  
+}  
+  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

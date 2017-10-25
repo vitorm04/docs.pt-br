@@ -1,0 +1,95 @@
+<Type Name="IAuthorizationPolicy" FullName="System.IdentityModel.Policy.IAuthorizationPolicy">
+  <TypeSignature Language="C#" Value="public interface IAuthorizationPolicy : System.IdentityModel.Policy.IAuthorizationComponent" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IAuthorizationPolicy implements class System.IdentityModel.Policy.IAuthorizationComponent" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Policy.IAuthorizationPolicy" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IdentityModel.Policy.IAuthorizationComponent</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Define um conjunto de regras para autorizar um usuário, dado um conjunto de declarações.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Implementar o <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface para adicionar ou mapear um conjunto de declarações para outro. Uma política de autorização examina um conjunto de declarações e adiciona declarações adicionais com base no conjunto atual. Por exemplo, uma política de autorização pode avaliar uma declaração que contém a data de nascimento e adicionar uma declaração que declara que o usuário está em 21 anos e adicionar uma declaração de Over21 para o <xref:System.IdentityModel.Policy.EvaluationContext>.  
+  
+ As classes que implementam o <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface não autorizar os usuários, mas elas permitem que o <xref:System.ServiceModel.ServiceAuthorizationManager> classe para fazer isso. O <xref:System.ServiceModel.ServiceAuthorizationManager> chama o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método para cada política de autorização em vigor. O <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método determina se as declarações adicionais devem ser adicionadas para o usuário, com base no contexto atual. Uma política de autorização <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método pode ser chamado várias vezes, as declarações são adicionadas ao <xref:System.IdentityModel.Policy.EvaluationContext> por outras políticas de autorização. Quando todas as políticas de autorização em vigor terminar, a <xref:System.ServiceModel.ServiceAuthorizationManager> classe toma decisões de autorização com base no conjunto final de declarações. O <xref:System.ServiceModel.ServiceAuthorizationManager> classe, em seguida, cria um <xref:System.IdentityModel.Policy.AuthorizationContext> que contém um conjunto imutável de declarações que reflete essas decisões de autorização.  
+  
+   
+  
+## Examples  
+ [!code-csharp[C_IAuthorizationPolicy#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_iauthorizationpolicy/cs/service.cs#1)]
+ [!code-vb[C_IAuthorizationPolicy#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_iauthorizationpolicy/vb/myauthorizationpolicy.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public bool Evaluate (System.IdentityModel.Policy.EvaluationContext evaluationContext, ref object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Evaluate(class System.IdentityModel.Policy.EvaluationContext evaluationContext, object&amp; state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate(System.IdentityModel.Policy.EvaluationContext,System.Object@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="evaluationContext" Type="System.IdentityModel.Policy.EvaluationContext" />
+        <Parameter Name="state" Type="System.Object&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="evaluationContext">Um <see cref="T:System.IdentityModel.Policy.EvaluationContext" /> que contém o conjunto de declarações avaliado pela política de autorização.</param>
+        <param name="state">Um <see cref="T:System.Object" />, passado por referência, que representa o estado personalizado dessa política de autorização.</param>
+        <summary>Avalia se um usuário atende aos requisitos dessa política de autorização.</summary>
+        <returns>
+          <see langword="false" /> se o método <see cref="M:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate(System.IdentityModel.Policy.EvaluationContext,System.Object@)" /> dessa política de autorização precisar ser chamado caso declarações adicionais forem adicionadas por outras políticas de autorização ao <paramref name="evaluationContext" />; caso contrário, <see langword="true" /> para indicar que nenhuma avaliação adicional é necessária para essa política de autorização.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Os implementadores do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface deve esperar o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método a ser chamado várias vezes por threads diferentes.  
+  
+ Os implementadores do <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interface pode usar o `state` parâmetro para controlar o estado entre as chamadas para o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método. Se um objeto de estado é definido dentro de uma determinada chamada para o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método, a mesma instância do objeto é passada para cada chamada subsequente para a <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método no processo de avaliação atual.  
+  
+   
+  
+## Examples  
+ [!code-csharp[C_IAuthorizationPolicy#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_iauthorizationpolicy/cs/service.cs#2)]
+ [!code-vb[C_IAuthorizationPolicy#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_iauthorizationpolicy/vb/myauthorizationpolicy.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Claims.ClaimSet Issuer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Claims.ClaimSet Issuer" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Claims.ClaimSet</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto de declarações que representa o emissor da política de autorização.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Claims.ClaimSet" /> que representa o emissor da política de autorização.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

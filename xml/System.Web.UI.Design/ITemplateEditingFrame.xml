@@ -1,0 +1,354 @@
+<Type Name="ITemplateEditingFrame" FullName="System.Web.UI.Design.ITemplateEditingFrame">
+  <TypeSignature Language="C#" Value="public interface ITemplateEditingFrame : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ITemplateEditingFrame implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.ITemplateEditingFrame" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("Use of this type is not recommended because template editing is handled in ControlDesigner. To support template editing expose template data in the TemplateGroups property and call SetViewFlags(ViewFlags.TemplateEditing, true). http://go.microsoft.com/fwlink/?linkid=14202")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece uma interface para gerenciar um modelo de área de edição.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> propriedade para acessar os grupos de modelos e definições de modelo dentro de grupos de modelo para um controle de designer.  
+  
+ Um quadro de edição de modelo representa a interface do usuário para um editor de modelo de um designer de modelo de controle.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close (bool saveChanges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close(bool saveChanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Close(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="saveChanges" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="saveChanges">
+          <see langword="true" />Se as alterações no documento devem ser salvo; Caso contrário, <see langword="false" />.</param>
+        <summary>Fecha o controle e, opcionalmente, salva as alterações.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> propriedade em cada elemento grupo modelo o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlStyle">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style ControlStyle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style ControlStyle" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.ControlStyle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estilo do quadro de edição.</summary>
+        <value>Um <see cref="T:System.Web.UI.WebControls.Style" /> que representa os atributos de estilo do controle de servidor Web para o quadro de edição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> propriedade em cada elemento grupo modelo o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialHeight">
+      <MemberSignature Language="C#" Value="public int InitialHeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InitialHeight" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.InitialHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a altura inicial do controle.</summary>
+        <value>A altura inicial do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.WebControls.Style.Height%2A> propriedade no <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> propriedade para cada elemento de grupo do modelo no <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialWidth">
+      <MemberSignature Language="C#" Value="public int InitialWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 InitialWidth" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.InitialWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a largura inicial do controle.</summary>
+        <value>A largura inicial do controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.WebControls.Style.Width%2A> propriedade no <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> propriedade para cada elemento de grupo do modelo no <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do quadro de edição.</summary>
+        <value>O nome do quadro de edição.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. O nome do grupo de modelo é fornecido no <xref:System.Web.UI.Design.TemplateGroup.GroupName%2A> propriedade de cada elemento de grupo do modelo no <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre e exibe o controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Resize(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Resize(System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">A nova largura do controle.</param>
+        <param name="height">A nova altura do controle.</param>
+        <summary>Redimensiona o controle para a altura e largura especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> propriedade em cada elemento grupo modelo o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.Save" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva as alterações no documento.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateNames">
+      <MemberSignature Language="C#" Value="public string[] TemplateNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] TemplateNames" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.TemplateNames" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um conjunto de nomes de modelos para uso.</summary>
+        <value>Uma matriz de nomes de modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Um nome de modelo é fornecido por meio de <xref:System.Web.UI.Design.DesignerObject.Name%2A> propriedade de um <xref:System.Web.UI.Design.TemplateDefinition> objeto. Enumerar a coleção de definições de modelo usando o <xref:System.Web.UI.Design.TemplateGroup.Templates%2A> propriedade de cada <xref:System.Web.UI.Design.TemplateGroup> elemento o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemplateStyles">
+      <MemberSignature Language="C#" Value="public System.Web.UI.WebControls.Style[] TemplateStyles { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.Style[] TemplateStyles" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.TemplateStyles" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.Style[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os estilos do modelo para o controle.</summary>
+        <value>Uma matriz de <see cref="T:System.Web.UI.WebControls.Style" /> objetos que representam os estilos de modelo para o controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Um estilo de modelo é fornecido por meio de <xref:System.Web.UI.Design.TemplateDefinition.Style%2A> propriedade de um <xref:System.Web.UI.Design.TemplateDefinition> objeto. Enumerar a coleção de definições de modelo usando o <xref:System.Web.UI.Design.TemplateGroup.Templates%2A> propriedade de cada <xref:System.Web.UI.Design.TemplateGroup> elemento o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateControlName">
+      <MemberSignature Language="C#" Value="public void UpdateControlName (string newName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void UpdateControlName(string newName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.ITemplateEditingFrame.UpdateControlName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="newName">O novo nome para o controle.</param>
+        <summary>Altera o nome do controle para o nome especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.Design.TemplateGroup.GroupStyle%2A> propriedade em cada elemento grupo modelo o <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção de um controle de designer.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verb">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.TemplateEditingVerb Verb { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.Design.TemplateEditingVerb Verb" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.Design.ITemplateEditingFrame.Verb" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.TemplateEditingVerb</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o verbo que invoca o modelo.</summary>
+        <value>Um <see cref="T:System.Web.UI.Design.TemplateEditingVerb" /> que invoca o modelo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  O <xref:System.Web.UI.Design.ITemplateEditingFrame> interface está obsoleta. Use o <xref:System.Web.UI.Design.TemplateGroup.GroupName%2A> propriedade de cada grupo de modelo de <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> coleção para um designer de controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

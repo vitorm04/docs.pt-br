@@ -1,0 +1,252 @@
+<Type Name="RequestSecurityTokenResponse" FullName="System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse">
+  <TypeSignature Language="C#" Value="public class RequestSecurityTokenResponse : System.IdentityModel.Protocols.WSTrust.WSTrustMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestSecurityTokenResponse extends System.IdentityModel.Protocols.WSTrust.WSTrustMessage" />
+  <TypeSignature Language="DocId" Value="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse" />
+  <AssemblyInfo>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.IdentityModel.Protocols.WSTrust.WSTrustMessage</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa o elemento wst:RequestSecurityTokenResponse, que é usado para retornar um token de segurança.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O elemento wst:RequestSecurityTokenResponse (mensagem) contém os parâmetros e as propriedades na resposta enviada por um serviço de token de segurança (STS) para uma solicitação de token de segurança (primeira) feita por um cliente. A mensagem de resposta (ou elemento) é abreviado como RSTR. O <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenRequest> classe contém propriedades que representam os elementos de RSTR. Um RSTR pode formar uma resposta a uma solicitação que corresponde a qualquer uma das associações de solicitação definidas pelo WS-Trust; Por exemplo, a associação de emissão, a associação de renovação, a associação de validar ou a associação de cancelamento. Muitas das propriedades de <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse> classe correspondem aos elementos que estão presentes somente em tipos específicos de respostas conforme definido por essas associações. Dependendo do tipo de resposta de um determinado <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse> objeto representa ou parâmetros presentes na resposta específica que ele representa, algumas propriedades do objeto podem ser `null`.  
+  
+ Solicitações forem recebidas no STS em uma mensagem que contém um elemento wst:RequestSecurityToken (primeira). Esta mensagem é representada pela <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> classe.  
+  
+ Para obter mais informações sobre o elemento que essa classe representa, consulte a versão da especificação WS-Trust que se aplica ao seu cenário.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestSecurityTokenResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é geralmente usado pelo destinatário de uma RSTR.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestSecurityTokenResponse (System.IdentityModel.Protocols.WSTrust.WSTrustMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IdentityModel.Protocols.WSTrust.WSTrustMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.#ctor(System.IdentityModel.Protocols.WSTrust.WSTrustMessage)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.IdentityModel.Protocols.WSTrust.WSTrustMessage" />
+      </Parameters>
+      <Docs>
+        <param name="message">Um <see cref="T:System.IdentityModel.Protocols.WSTrust.WSTrustMessage" /> que representa a solicitação (primeira).</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse" /> classe com base na mensagem de solicitação especificado (primeira).</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor é geralmente usado pelo remetente de um RSTR. As seguintes propriedades são definidas da mensagem de solicitação: <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.Context%2A>, <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeyType%2A>, <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.KeySizeInBits%2A> (se a chave for simétrica), e <xref:System.IdentityModel.Protocols.WSTrust.WSTrustMessage.RequestType%2A>.  
+  
+> [!NOTE]
+>  Ao trabalhar em um ambiente de desafio/resposta o RequestType é usado dentro do contexto de wst:RequestSecurityTokenResponse para estabelecer as regras de processamento em uma resposta que voltam para um determinado desafio.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="message" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFinal">
+      <MemberSignature Language="C#" Value="public bool IsFinal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFinal" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.IsFinal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o sinalizador que determina se o RSTR é o final da mensagem e deve ser serializado como tal.</summary>
+        <value>
+          <see langword="true" />Se o RSTR é a mensagem final; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse sinalizador só tem efeito quando a versão do WS-Trust fornece regras para serializar o RSTR final em um fluxo de mensagens. Por exemplo, WS-Trust 1.3 requer RSTR final sejam colocados dentro de um elemento wst:RequestSecurityTokenResponseCollection.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedAttachedReference">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifierClause RequestedAttachedReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause RequestedAttachedReference" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.RequestedAttachedReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a referência de token de segurança quando o token solicitado é anexado à mensagem.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que contém a referência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:RequestedAttachedReference. Esse elemento opcional é especificado para indicar como referenciar o token retornado quando esse token não dá suporte a referências de fragmentos URI.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedProofToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.RequestedProofToken RequestedProofToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.RequestedProofToken RequestedProofToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.RequestedProofToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.RequestedProofToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento opcional usado para retornar a prova de token de posse.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedProofToken" /> que representa o token de prova.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do wst:RequestedProofToken.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedSecurityToken">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken RequestedSecurityToken { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken RequestedSecurityToken" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.RequestedSecurityToken" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento opcional usado para retornar o token de segurança solicitado.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.RequestedSecurityToken" /> que representa o token de segurança.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:RequestedSecurityToken.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedTokenCancelled">
+      <MemberSignature Language="C#" Value="public bool RequestedTokenCancelled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RequestedTokenCancelled" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.RequestedTokenCancelled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento wst:RequestedTokenCancelled.</summary>
+        <value>
+          <see langword="true" />Se o token tiver sido cancelado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.RequestedTokenCancelled%2A> é de propriedade `true` , em seguida, a resposta contém um elemento wst:RequestedTokenCancelled, que indica que a solicitação de cancelamento foi bem-sucedida e o token foi cancelado. Se for `false`, o elemento não foi incluído na resposta e o token não foi cancelado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedUnattachedReference">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Tokens.SecurityKeyIdentifierClause RequestedUnattachedReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Tokens.SecurityKeyIdentifierClause RequestedUnattachedReference" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.RequestedUnattachedReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Tokens.SecurityKeyIdentifierClause</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a referência de token de segurança quando o token solicitado não está anexado à mensagem.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Tokens.SecurityKeyIdentifierClause" /> que contém a referência.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Representa o conteúdo do elemento wst:RequestedUnattachedReference. Esse elemento opcional é especificado para indicar como referenciar o token retornado quando esse token não é colocado na mensagem.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public System.IdentityModel.Protocols.WSTrust.Status Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IdentityModel.Protocols.WSTrust.Status Status" />
+      <MemberSignature Language="DocId" Value="P:System.IdentityModel.Protocols.WSTrust.RequestSecurityTokenResponse.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.IdentityModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IdentityModel.Protocols.WSTrust.Status</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o elemento wst:Status no RSTR.</summary>
+        <value>Um <see cref="T:System.IdentityModel.Protocols.WSTrust.Status" /> que contém informações de status de uma solicitação de validação de WS-Trust.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

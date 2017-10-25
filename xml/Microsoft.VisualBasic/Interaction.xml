@@ -1,0 +1,1268 @@
+<Type Name="Interaction" FullName="Microsoft.VisualBasic.Interaction">
+  <TypeSignature Language="C#" Value="public sealed class Interaction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Interaction extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.VisualBasic.Interaction" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Microsoft.VisualBasic.CompilerServices.StandardModule</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>O módulo <see langword="Interaction" /> contém procedimentos usados para interagir com objetos, aplicativos e sistemas.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este módulo oferece suporte a palavras-chave de linguagem Visual Basic e membros da biblioteca em tempo de execução que executem outros programas, chamam um método ou propriedade, um aviso sonoro do computador, fornecem uma cadeia de caracteres de linha de comando, manipulam objetos COM e controlam caixas de diálogo.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `Shell` função para executar um aplicativo especificado pelo usuário. Especificar <xref:Microsoft.VisualBasic.AppWinStyle?displayProperty=nameWithType> como o segundo argumento abre o aplicativo em tamanho normal e concede a ele o foco.  
+  
+```  
+Dim procID As Integer  
+' Run calculator.  
+procID = Shell("C:\Windows\system32\calc.exe", AppWinStyle.NormalFocus)  
+' The preceding path is for Windows XP.  
+' The Windows 2000 path is C:\WINNT\system32\calc.exe.  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppActivate">
+      <MemberSignature Language="C#" Value="public static void AppActivate (int ProcessId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void AppActivate(int32 ProcessId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.AppActivate(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ProcessId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ProcessId">
+          <see langword="Integer" /> especificando o número de identificação do processo Win32 atribuído ao processo. Você pode usar a identificação retornada pelo <see cref="M:Microsoft.VisualBasic.Interaction.Shell(System.String,Microsoft.VisualBasic.AppWinStyle,System.Boolean,System.Int32)" />, desde que não seja zero.</param>
+        <summary>Ativa um aplicativo que já está em execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa `AppActivate` para deixar a janela ativa de um aplicativo em foco. Você não pode ter um identificador ou uma referência para a janela ativa ou mesmo saber qual janela está ativa em um determinado momento. Nesse caso, você não pode usar o <xref:System.Windows.Forms.Control.Focus%2A> método.  
+  
+ O `AppActivate` função altera o foco para o aplicativo ou janela nomeado, mas não afeta se ele está minimizado ou maximizado. Foco é movido para fora da janela do aplicativo ativado quando o usuário executa alguma ação para alterar o foco ou feche a janela. Você pode usar o `Shell` função para iniciar um aplicativo e definir o estilo da janela.  
+  
+ Se você usar o `Title` parâmetro `AppActivate` usa uma comparação que diferencia maiusculas de minúsculas, mas caso contrário, requer uma correspondência exata com o conteúdo da barra de título. Primeiro, ele procura por meio de janelas de nível superior e, em seguida, as janelas filho. Se ele não encontrar uma correspondência, ele lança um <xref:System.ArgumentException>.  
+  
+ Você pode usar `AppActivate` somente com os processos que possuem o windows. A maioria dos aplicativos de console não possui janelas, que significa que eles não aparecem na lista de processos que `AppActivate` pesquisas. Durante a execução de um aplicativo de console, o sistema cria um processo separado para executar o aplicativo e retorna a saída para o processo do console. Consequentemente, quando você solicita a ID do processo atual, você obtém a ID do processo desse processo separado, em vez de ID de processo. do aplicativo de console  
+  
+ Em tempo de execução, o `AppActivate` função ativa qualquer aplicativo em execução com um título que corresponda `Title` ou com uma ID de processo que corresponde a `ProcessId`. Se não houver nenhuma correspondência exata, ele ativa quaisquer aplicativos cuja cadeia de caracteres de título termina com `Title`. Se houver mais de um aplicativo chamado `Title`, o `AppActivate` função arbitrariamente escolhe um para ativar.  
+  
+> [!NOTE]
+>  O `AppActivate` função requer `UIPermission` no <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> nível, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.UIPermission>.  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra vários usos do `AppActivate` função para ativar uma janela de aplicativo. Se um processo do bloco de notas não está em execução, o exemplo gera um <xref:System.ArgumentException>. O `Shell` procedimento pressupõe que os aplicativos estão nos caminhos especificados.  
+  
+ [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AppActivate">
+      <MemberSignature Language="C#" Value="public static void AppActivate (string Title);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void AppActivate(string Title) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.AppActivate(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Title" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Title">
+          Expressão <see langword="String" /> que especifica o título na barra de título do aplicativo que você deseja ativar. Você poderá usar o título atribuído ao aplicativo quando ele foi iniciado.</param>
+        <summary>Ativa um aplicativo que já está em execução.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa `AppActivate` para deixar a janela ativa de um aplicativo em foco. Você não pode ter um identificador ou uma referência para a janela ativa ou mesmo saber qual janela está ativa em um determinado momento. Nesse caso, você não pode usar o <xref:System.Windows.Forms.Control.Focus%2A> método.  
+  
+ O `AppActivate` função altera o foco para o aplicativo ou janela nomeado, mas não afeta se ele está minimizado ou maximizado. Foco é movido para fora da janela do aplicativo ativado quando o usuário executa alguma ação para alterar o foco ou feche a janela. Você pode usar o `Shell` função para iniciar um aplicativo e definir o estilo da janela.  
+  
+ Se você usar o `Title` parâmetro `AppActivate` usa uma comparação que diferencia maiusculas de minúsculas, mas caso contrário, requer uma correspondência exata com o conteúdo da barra de título. Primeiro, ele procura por meio de janelas de nível superior e, em seguida, as janelas filho. Se ele não encontrar uma correspondência, ele lança um <xref:System.ArgumentException>.  
+  
+ Você pode usar `AppActivate` somente com os processos que possuem o windows. A maioria dos aplicativos de console não possui janelas, que significa que eles não aparecem na lista de processos que `AppActivate` pesquisas. Durante a execução de um aplicativo de console, o sistema cria um processo separado para executar o aplicativo e retorna a saída para o processo do console. Consequentemente, quando você solicita a ID do processo atual, você obtém a ID do processo desse processo separado, em vez de ID de processo. do aplicativo de console  
+  
+ Em tempo de execução, o `AppActivate` função ativa qualquer aplicativo em execução com um título que corresponda `Title` ou com uma ID de processo que corresponde a `ProcessId`. Se não houver nenhuma correspondência exata, ele ativa quaisquer aplicativos cuja cadeia de caracteres de título termina com `Title`. Se houver mais de um aplicativo chamado `Title`, o `AppActivate` função arbitrariamente escolhe um para ativar.  
+  
+> [!NOTE]
+>  O `AppActivate` função requer `UIPermission` no <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> nível, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.UIPermission>.  
+  
+   
+  
+## Examples  
+ Este exemplo ilustra vários usos do `AppActivate` função para ativar uma janela de aplicativo. Se um processo do bloco de notas não está em execução, o exemplo gera um <xref:System.ArgumentException>. O `Shell` procedimento pressupõe que os aplicativos estão nos caminhos especificados.  
+  
+ [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Beep">
+      <MemberSignature Language="C#" Value="public static void Beep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static void Beep() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Beep" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Emite um sinal sonoro pelo alto-falante do computador.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A densidade e a duração do alarme sonoro dependem de seu software de hardware e do sistema e, portanto, variam entre computadores.  
+  
+> [!NOTE]
+>  O `Beep` função requer `UIPermission` no <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> nível, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.UIPermission>.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Beep` função um som por meio do apresentador do computador.  
+  
+ [!code-vb[VbVbalrCatRef#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#59)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallByName">
+      <MemberSignature Language="C#" Value="public static object CallByName (object ObjectRef, string ProcName, Microsoft.VisualBasic.CallType UseCallType, params object[] Args);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object CallByName(object ObjectRef, string ProcName, valuetype Microsoft.VisualBasic.CallType UseCallType, object[] Args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.CallByName(System.Object,System.String,Microsoft.VisualBasic.CallType,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ObjectRef" Type="System.Object" />
+        <Parameter Name="ProcName" Type="System.String" />
+        <Parameter Name="UseCallType" Type="Microsoft.VisualBasic.CallType" />
+        <Parameter Name="Args" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="ObjectRef">Necessário. <see langword="Object" />. Um ponteiro para o objeto expondo a propriedade ou método.</param>
+        <param name="ProcName">Necessário. <see langword="String" />. Uma expressão de cadeia de caracteres que contém o nome da propriedade ou método no objeto.</param>
+        <param name="UseCallType">Necessário. Um membro de enumeração do tipo <see cref="T:Microsoft.VisualBasic.CallType" /> representando o tipo de procedimento sendo chamado. O valor de <see langword="CallType" /> pode ser <see langword="Method" />, <see langword="Get" /> ou <see langword="Set" />.</param>
+        <param name="Args">Opcional. <see langword="ParamArray" />. Uma matriz de parâmetros que contém os argumentos a serem passados para a propriedade ou método sendo chamado.</param>
+        <summary>Executa um método em um objeto ou define ou retorna uma propriedade em um objeto.</summary>
+        <returns>Executa um método em um objeto ou define ou retorna uma propriedade em um objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `CallByName` função é usada em tempo de execução para obter uma propriedade, definir uma propriedade ou chamar um método.  
+  
+   
+  
+## Examples  
+ No exemplo a seguir, a primeira linha usa `CallByName` para definir o `Text` propriedade de uma caixa de texto, a segunda linha recupera o valor da `Text` propriedade e a terceira linha chama o `Move` método para mover a caixa de texto.  
+  
+ [!code-vb[VbVbalrFunctions#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#99)]  
+  
+ [!code-vb[VbVbalrFunctions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#20)]  
+  
+ O exemplo a seguir usa o `CallByName` função para chamar o `Add` e `Item` métodos de um objeto de coleção.  
+  
+ [!code-vb[VbVbalrFunctions#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#21)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Valor <paramref name="UseCallType" /> inválido, deve ser <see langword="Method" />, <see langword="Get" /> ou <see langword="Set" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Choose">
+      <MemberSignature Language="C#" Value="public static object Choose (double Index, params object[] Choice);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object Choose(float64 Index, object[] Choice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Choose(System.Double,System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Index" Type="System.Double" />
+        <Parameter Name="Choice" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="Index">Necessário. <see langword="Double" />. Expressão numérica que resulta em um valor entre 1 e o número de elementos passado a <c>opção</c> argumento.</param>
+        <param name="Choice">Necessário. Matriz de parâmetros <see langword="Object" />. Você pode fornecer uma única variável ou uma expressão que é avaliada como o tipo de dados <see langword="Object" />, como uma lista de variáveis ou expressões <see langword="Object" /> separadas por vírgulas ou uma matriz unidimensional de elementos <see langword="Object" />.</param>
+        <summary>Seleciona e retorna um valor de uma lista de argumentos.</summary>
+        <returns>Seleciona e retorna um valor de uma lista de argumentos.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Choose` função retorna um membro da lista passada em `Choice()`, com base no valor de `Index`. O primeiro membro da lista é selecionado quando `Index` é 1. O último membro da lista é selecionado quando `Index` é `UBound`(`Choice()`). Se `Index` está fora desses limites, `Choose` retorna `Nothing`.  
+  
+ Se `Index` não é um número inteiro, ele é arredondado para o próximo número inteiro antes de ser avaliado.  
+  
+ Você pode usar `Choose` para pesquisar um valor em uma lista de possibilidades.  
+  
+> [!NOTE]
+>  As expressões na lista de argumentos podem incluir chamadas de função. Como parte da preparação da lista de argumentos para a chamada `Choose`, o compilador do Visual Basic chama toda função em cada expressão. Isso significa que você não pode confiar em uma função particular não ser chamada se uma expressão diferente é selecionada por `Index`.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Choose` função para exibir um nome em resposta a um índice passado para o procedimento de `Ind` parâmetro.  
+  
+ [!code-vb[VbVbalrFunctions#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#22)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public static string Command ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Command() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna a parte do argumento da linha de comando usada para iniciar o Visual Basic ou um programa executável desenvolvido com o Visual Basic. O <see langword="My" /> recurso fornece maior produtividade e desempenho do que o <see langword="Command" /> função. Para obter mais informações, consulte <see cref="P:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase.CommandLineArgs" />.</summary>
+        <returns>Retorna a parte do argumento da linha de comando usada para iniciar o Visual Basic ou um programa executável desenvolvido com o Visual Basic.  
+  
+ O <see langword="My" /> recurso fornece maior produtividade e desempenho do que o <see langword="Command" /> função. Para obter mais informações, consulte <see cref="P:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase.CommandLineArgs" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que os argumentos são retornados, você pode procurar delimitadores comuns, como espaços, barras de trás ou para frente, hífens ou aspas, para dividir ou pesquisar a cadeia de caracteres de parâmetros individuais.  
+  
+ Para aplicativos desenvolvidos com o Visual Basic e compilados para um arquivo .exe, o `Command` função retorna quaisquer argumentos que apareçam depois do nome do aplicativo na linha de comando neste formulário: `MyApp(cmdlineargs)`.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `Command` função para retornar os argumentos de linha de comando em um objeto que contém uma matriz.  
+  
+ [!code-vb[VbVbalrCatRef#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#58)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObject">
+      <MemberSignature Language="C#" Value="public static object CreateObject (string ProgId, string ServerName = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object CreateObject(string ProgId, string ServerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.CreateObject(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ProgId" Type="System.String" />
+        <Parameter Name="ServerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ProgId">Necessário. <see langword="String" />. A ID do programa do objeto a ser criado.</param>
+        <param name="ServerName">Opcional. <see langword="String" />. O nome do servidor de rede no qual o objeto será criado. Se <c>ServerName</c> é uma cadeia de caracteres vazia (""), será usado o computador local.</param>
+        <summary>Cria e retorna uma referência a um objeto COM. <see langword="CreateObject" /> não pode ser usado para criar instâncias de classes no Visual Basic, a menos que essas classes sejam explicitamente expostas como componentes COM.</summary>
+        <returns>Cria e retorna uma referência a um objeto COM. <see langword="CreateObject" /> não pode ser usado para criar instâncias de classes no Visual Basic, a menos que essas classes sejam explicitamente expostas como componentes COM.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para criar uma instância de um componente COM, atribua o objeto retornado por `CreateObject` para uma variável de objeto:  
+  
+```vb  
+Sub CreateADODB()  
+   Dim adoApp As Object  
+   adoApp = CreateObject("ADODB.Connection")  
+End Sub  
+```  
+  
+ O tipo da variável de objeto, que você pode usar para armazenar o objeto retornado pode afetar o desempenho do aplicativo. Declarando uma variável de objeto com o `As Object` cláusula cria uma variável que pode conter uma referência a qualquer tipo de objeto. No entanto, o acesso ao objeto através dessa variável é *tardia*, ou seja, a associação ocorre quando o programa é executado. Há muitos motivos, você deve evitar associação tardia, incluindo o desempenho mais lento do aplicativo.  
+  
+ Você pode criar uma variável de objeto que resulta na associação antecipada — ou seja, vinculação quando o programa é compilado. Para fazer isso, adicione uma referência à biblioteca de tipos para o objeto do **COM** guia do **adicionar referência** caixa de diálogo de **projeto** menu. Em seguida, declare a variável de objeto do tipo específico de seu objeto. Na maioria dos casos, é mais eficiente usar o `Dim` instrução e um assembly de interoperabilidade primária para criar objetos que usam o `CreateObject` função.  
+  
+## <a name="interacting-with-unmanaged-code"></a>Interagindo com código não gerenciado  
+ Outro problema é que objetos usam código não gerenciado — código sem o benefício do common language runtime. Há um bom grau de complexidade envolvida na combinação de código gerenciado do Visual Basic com código não gerenciado de COM. Quando você adiciona uma referência a um objeto COM, o Visual Basic procura por um assembly de interoperabilidade primária (PIA) para essa biblioteca; Se ele encontrar um, em seguida, ele é usado. Se não encontrar um PIA, ele cria um assembly de interoperabilidade que contém as classes de interoperabilidade local para cada classe de biblioteca COM. Para obter mais informações, consulte [interoperabilidade COM em aplicativos do .NET Framework](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+  
+ Em geral, você deve usar objetos fortemente associados e assemblies de interoperabilidade primários sempre que possível. Os exemplos a seguir usa o `CreateObject` fins função com objetos do Microsoft Office para demonstração. No entanto, esses objetos são mais fáceis de usar e mais confiável quando usado com o assembly de interoperabilidade primária apropriado.  
+  
+## <a name="creating-an-object-on-a-remote-computer"></a>Criando um objeto em um computador remoto  
+ Você pode criar um objeto em um computador remoto na rede, passando o nome do computador para o `ServerName` argumento o `CreateObject` função. Esse nome é o mesmo que a parte do nome do computador de um nome de compartilhamento: para um compartilhamento chamado "\\\MyServer\Public," `ServerName` é "MyServer".  
+  
+> [!NOTE]
+>  Consulte a documentação COM (consulte Microsoft Developer Network) para obter informações adicionais sobre como tornar um aplicativo acessíveis em um computador remoto na rede. Talvez seja necessário adicionar uma chave do registro para o seu aplicativo.  
+  
+ O código a seguir retorna o número de versão de uma instância do Excel em execução em um computador remoto denominado `MyServer`:  
+  
+```vb  
+Sub CreateRemoteExcelObj()  
+    Dim xlApp As Object  
+    ' Replace string "\\MyServer" with name of the remote computer.  
+    xlApp = CreateObject("Excel.Application", "\\MyServer")  
+    MsgBox(xlApp.Version)  
+End Sub  
+```  
+  
+ Se o nome do servidor remoto está incorreto, ou se ele não estiver disponível, ocorrerá um erro de tempo de execução.  
+  
+> [!NOTE]
+>  Use `CreateObject` quando não há nenhuma instância atual do objeto. Se uma instância do objeto já está em execução, uma nova instância é iniciada e será criado um objeto do tipo especificado. Para usar a instância atual, ou para iniciar o aplicativo e ele carregar um arquivo, use o `GetObject` função. Se um objeto registrou ele mesmo como um objeto de instância única, apenas uma instância do objeto é criada, não importa como muitas vezes `CreateObject` é executado.  
+  
+## <a name="creating-framework-objects"></a>Criando objetos de estrutura  
+ Você pode usar o `CreateObject` função apenas para criar um objeto COM. Embora não haja nenhum mecanismo equivalente exato para a criação de um objeto do .NET Framework, o <xref:System.Activator> no <xref:System> namespace contém métodos para criar objetos locais ou remotos. Em particular, o <xref:System.Activator.CreateInstance%2A> método ou o <xref:System.Activator.CreateInstanceFrom%2A> método pode ser útil.  
+  
+> [!IMPORTANT]
+>  O `CreateObject` função requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `CreateObject` de função para criar uma planilha do Microsoft Excel e salva a planilha em um arquivo. Para usar este exemplo, o Excel deve ser instalado no computador em que este programa é executado. Além disso, você deve adicionar uma referência à biblioteca de tipos do **COM** guia do **adicionar referência** caixa de diálogo de **projeto** menu. O nome da biblioteca de tipos varia dependendo da versão do Excel instalada no seu computador. Por exemplo, a biblioteca de tipos para o Microsoft Excel 2002 é denominada **biblioteca de objetos do Microsoft Excel 10.0**.  
+  
+ [!code-vb[VbVbalrExcelObject#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExcelObject/VB/Class1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Servidor não disponível</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Não existe nenhum objeto do tipo especificado</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSetting">
+      <MemberSignature Language="C#" Value="public static void DeleteSetting (string AppName, string Section = null, string Key = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void DeleteSetting(string AppName, string Section, string Key) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.DeleteSetting(System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AppName" Type="System.String" />
+        <Parameter Name="Section" Type="System.String" />
+        <Parameter Name="Key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AppName">Necessário. <see langword="String" />expressão que contém o nome do aplicativo ou projeto ao qual a seção ou chave de configuração se aplica.</param>
+        <param name="Section">Necessário. <see langword="String" />expressão que contém o nome da seção da qual a configuração da chave está sendo excluída. Se apenas <c>AppName</c> e <c>seção</c> são fornecidos, a seção especificada é excluída juntamente com as configurações de chave todos relacionadas.</param>
+        <param name="Key">Opcional. <see langword="String" />expressão que contém o nome da configuração principal que está sendo excluído.</param>
+        <summary>Exclui uma seção ou configuração de chave de entrada de um aplicativo no registro do Windows. O <see langword="My" /> recurso oferece maior produtividade e desempenho em operações de registro que o <see langword="DeleteSetting" /> função. Para obter mais informações, consulte <see cref="P:Microsoft.VisualBasic.Devices.ServerComputer.Registry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se todos os argumentos forem fornecidos, a configuração especificada será excluída. Ocorrerá um erro de tempo de execução se você tentar usar `DeleteSetting` em uma seção inexistente ou configuração de chave.  
+  
+ `DeleteSetting`requer que um usuário tenha feito logon desde que ele opera com o `HKEY_LOCAL_USER` chave do registro, que não está ativa até que um usuário fizer logon interativamente.  
+  
+ Configurações do registro que devem ser acessados de um processo não interativo (como Mtx.exe) devem ser armazenadas no `HKEY_LOCAL_MACHINE\Software\` ou `HKEY_USER\DEFAULT\Software` chaves do registro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir primeiro usa o `SaveSetting` procedimento para fazer as entradas no registro do Windows para o `MyApp` aplicativo e, em seguida, usa o `DeleteSetting` função para removê-los. Porque nenhum `Key` argumento for especificado, todo o `Startup` seção for excluída, incluindo o nome da seção e todas suas chaves.  
+  
+ [!code-vb[VbVbalrCatRef#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#45)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Usuário não está conectado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Environ">
+      <MemberSignature Language="C#" Value="public static string Environ (int Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Environ(int32 Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Environ(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão que avalia uma cadeia de caracteres que contém o nome de uma variável de ambiente ou um inteiro correspondente à ordem numérica de uma cadeia de caracteres de ambiente na tabela de cadeia de caracteres de ambiente.</param>
+        <summary>Retorna a cadeia de caracteres associada com uma variável de ambiente do sistema operacional.</summary>
+        <returns>Retorna a cadeia de caracteres associada com uma variável de ambiente do sistema operacional.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Expression` contém uma cadeia de caracteres, o <xref:Microsoft.VisualBasic.Interaction.Environ%2A> função retorna o texto atribuído à cadeia de caracteres de ambiente especificada — ou seja, o texto após o sinal de igual (=) na tabela de cadeia de caracteres de ambiente para aquela variável de ambiente. Se a cadeia de caracteres em `Expression` não pode ser encontrada na tabela de cadeia de caracteres de ambiente, uma cadeia de caracteres de comprimento zero ("") será retornado.  
+  
+ Se `Expression` contém um valor inteiro, a cadeia de caracteres que ocupam que posição numérica na tabela de cadeia de caracteres de ambiente é retornada. Nesse caso, <xref:Microsoft.VisualBasic.Interaction.Environ%2A> retorna todo o texto, incluindo o nome da variável de ambiente. Se não houver nenhuma cadeia de caracteres de ambiente na posição especificada, <xref:Microsoft.VisualBasic.Interaction.Environ%2A> retorna uma cadeia de caracteres de comprimento zero.  
+  
+> [!IMPORTANT]
+>  O <xref:Microsoft.VisualBasic.Interaction.Environ%2A> função requer permissão de ambiente, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:Microsoft.VisualBasic.Interaction.Environ%2A> função para fornecer o número de entrada e o comprimento do `PATH` instrução da tabela de cadeia de caracteres de ambiente.  
+  
+ [!code-vb[VbVbalrCatRef#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Expression" /> está ausente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Environ">
+      <MemberSignature Language="C#" Value="public static string Environ (string Expression);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Environ(string Expression) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Environ(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. Expressão que avalia uma cadeia de caracteres que contém o nome de uma variável de ambiente ou um inteiro correspondente à ordem numérica de uma cadeia de caracteres de ambiente na tabela de cadeia de caracteres de ambiente.</param>
+        <summary>Retorna a cadeia de caracteres associada com uma variável de ambiente do sistema operacional.</summary>
+        <returns>Retorna a cadeia de caracteres associada com uma variável de ambiente do sistema operacional.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se `Expression` contém uma cadeia de caracteres, o <xref:Microsoft.VisualBasic.Interaction.Environ%2A> função retorna o texto atribuído à cadeia de caracteres de ambiente especificada — ou seja, o texto após o sinal de igual (=) na tabela de cadeia de caracteres de ambiente para aquela variável de ambiente. Se a cadeia de caracteres em `Expression` não pode ser encontrada na tabela de cadeia de caracteres de ambiente, uma cadeia de caracteres de comprimento zero ("") será retornado.  
+  
+ Se `Expression` contém um valor inteiro, a cadeia de caracteres que ocupam que posição numérica na tabela de cadeia de caracteres de ambiente é retornada. Nesse caso, <xref:Microsoft.VisualBasic.Interaction.Environ%2A> retorna todo o texto, incluindo o nome da variável de ambiente. Se não houver nenhuma cadeia de caracteres de ambiente na posição especificada, <xref:Microsoft.VisualBasic.Interaction.Environ%2A> retorna uma cadeia de caracteres de comprimento zero.  
+  
+> [!IMPORTANT]
+>  O <xref:Microsoft.VisualBasic.Interaction.Environ%2A> função requer permissão de ambiente, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ Este exemplo usa o <xref:Microsoft.VisualBasic.Interaction.Environ%2A> função para fornecer o número de entrada e o comprimento do `PATH` instrução da tabela de cadeia de caracteres de ambiente.  
+  
+ [!code-vb[VbVbalrCatRef#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#28)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Expression" /> está ausente.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllSettings">
+      <MemberSignature Language="C#" Value="public static string[,] GetAllSettings (string AppName, string Section);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string[,] GetAllSettings(string AppName, string Section) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.GetAllSettings(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[,]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AppName" Type="System.String" />
+        <Parameter Name="Section" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AppName">Necessário. <see langword="String" />expressão que contém o nome do aplicativo ou do projeto cujas configurações principais são solicitadas.</param>
+        <param name="Section">Necessário. <see langword="String" />expressão que contém o nome da seção cujas configurações principais são solicitadas. <see langword="GetAllSettings" />Retorna um objeto que contém uma matriz bidimensional de cadeias de caracteres. As cadeias de caracteres contém todas as configurações de chave da seção especificada, além de seus valores correspondentes.</param>
+        <summary>Retorna uma lista de configurações de chave e seus respectivos valores (originalmente criados com <see langword="SaveSetting" />) de entrada de um aplicativo no registro do Windows. Usando o <see langword="My" /> recurso oferece maior produtividade e desempenho em operações de registro que <see langword="GetAllSettings" />. Para obter mais informações, consulte <see cref="P:Microsoft.VisualBasic.Devices.ServerComputer.Registry" />.</summary>
+        <returns>Retorna uma lista de configurações de chave e seus respectivos valores (originalmente criados com <see langword="SaveSetting" />) de entrada de um aplicativo no registro do Windows.  
+  
+ Usando o <see langword="My" /> recurso oferece maior produtividade e desempenho em operações de registro que <see langword="GetAllSettings" />. Para obter mais informações, consulte <see cref="P:Microsoft.VisualBasic.Devices.ServerComputer.Registry" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `GetAllSettings`Retorna um não inicializada `Object` se `AppName` ou `Section` não existe.  
+  
+ Como ele funciona com o `HKEY_LOCAL_USER` chave do registro, que não está ativa até que um usuário fizer logon interativamente, `GetAllSettings` requer que um usuário tenha feito logon.  
+  
+ Configurações do registro que devem ser acessados de um processo não interativo (como Mtx.exe) devem ser armazenadas no `HKEY_LOCAL_MACHINE\Software\` ou `HKEY_USER\DEFAULT\Software` chaves do registro.  
+  
+   
+  
+## Examples  
+ Este primeiro exemplo usa o `SaveSetting` função para tornar as entradas no registro do Windows para o aplicativo especificado como `AppName`, em seguida, usa o `GetAllSettings` função para exibir as configurações. Observe que o aplicativo nomes e `Section` nomes não podem ser recuperados com `GetAllSettings`. Por fim, o `DeleteSetting` função remove entradas do aplicativo.  
+  
+ [!code-vb[VbVbalrCatRef#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#68)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Usuário não está conectado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObject">
+      <MemberSignature Language="C#" Value="public static object GetObject (string PathName = null, string Class = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object GetObject(string PathName, string Class) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.GetObject(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="PathName" Type="System.String" />
+        <Parameter Name="Class" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="PathName">Opcional. <see langword="String" />. O nome e caminho completo do arquivo que contém o objeto a ser recuperado. Se <c>PathName</c> for omitido, <c>classe</c> é necessária.</param>
+        <param name="Class">Necessário se <c>PathName</c> não for fornecido. <see langword="String" />. Uma cadeia de caracteres que representa a classe do objeto. O <c>classe</c> argumento tem a seguinte sintaxe e partes:  
+  
+ <c>appname</c><c>.</c> <c>objecttype</c>  
+  
+ [1|1] Parâmetro  
+  
+ [1|2] Descrição  
+  
+ [2 | 1] <c>appname</c>  
+  
+ [2|2] Necessário. <see langword="String" />. O nome do aplicativo que fornece o objeto.  
+  
+ [3 | 1] <c>objecttype</c>  
+  
+ [3|2] Necessário. <see langword="String" />. O tipo ou a classe de objeto a ser criado.</param>
+        <summary>Retorna uma referência a um objeto fornecido por um componente COM.</summary>
+        <returns>Retorna uma referência a um objeto fornecido por um componente COM.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o `GetObject` função para carregar uma instância de um componente COM de um arquivo. O exemplo a seguir ilustra essa situação.  
+  
+```vb  
+Dim CADObject As Object  
+CADObject = GetObject("C:\CAD\schema.cad")  
+```  
+  
+ Quando esse código é executado, o aplicativo associado especificado `PathName` é iniciado e o objeto no arquivo especificado é ativado.  
+  
+## <a name="default-cases"></a>Casos padrão  
+ Se `PathName` é uma cadeia de caracteres de comprimento zero (`""`), `GetObject` retorna uma nova instância de objeto do tipo de classe especificado. Se o `PathName` argumento for omitido, `GetObject` retorna um objeto ativo do tipo de classe especificado no `Class`. Se nenhum objeto do tipo especificado existir, ocorrerá um erro.  
+  
+## <a name="accessing-a-subobject"></a>Acessando um Subobjeto  
+ Alguns aplicativos permitem que você ative um Subobjeto associado a um arquivo. Para fazer isso, adicione um ponto de exclamação (`!`) ao final do nome de arquivo e execute-o com uma cadeia de caracteres que identifica a parte do arquivo deseja ativar. Para obter informações sobre como criar essa cadeia de caracteres, consulte a documentação para o aplicativo que criou o objeto.  
+  
+ Por exemplo, em um aplicativo de desenho, você pode ter várias camadas para um desenho armazenado em um arquivo. Você pode usar o código a seguir para ativar uma camada em um desenho chamado `schema.cad`.  
+  
+```vb  
+layerObject = GetObject("C:\CAD\schema.cad!Layer3")  
+```  
+  
+## <a name="specifying-a-class"></a>Especificando uma classe  
+ Se você não especificar o objeto `Class`, automação determina o aplicativo para iniciar e o objeto para ativar, com base no nome do arquivo que você fornecer. Alguns arquivos, no entanto, podem dar suporte a mais de uma classe de objeto. Por exemplo, um desenho pode oferecer suporte a três tipos diferentes de objetos: um `Application` objeto, um `Drawing` objeto e um `Toolbar` objeto, que são parte do mesmo arquivo. Para especificar qual objeto em um arquivo que você deseja ativar, use opcional `Class` argumento. O exemplo a seguir ilustra essa situação.  
+  
+```vb  
+Dim drawObj As Object  
+drawObj = GetObject("C:\Drawings\sample.drw", "Figment.Drawing")  
+```  
+  
+ No exemplo anterior, `Figment` é o nome de um aplicativo de desenho e `Drawing` é um dos tipos de objeto suportados.  
+  
+## <a name="using-the-object"></a>Usando o objeto  
+ Depois que um objeto é ativado, você se referir a ele no código usando a variável de objeto que é declarada. O exemplo anterior, você acessa propriedades e métodos do novo objeto usando a variável de objeto `drawObj`. O exemplo a seguir ilustra essa situação.  
+  
+```vb  
+drawObj.Line(9, 90)  
+drawObj.InsertText(9, 100, "Hello, world.")  
+drawObj.SaveAs("C:\Drawings\sample.drw")  
+```  
+  
+> [!NOTE]
+>  Use o `GetObject` funcionar quando há uma instância atual do objeto ou se você deseja criar o objeto com um arquivo carregado. Se não houver nenhuma instância atual, e você não deseja o objeto iniciado com um arquivo carregado, use o <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A> função.  
+>   
+>  Se um objeto registrou ele mesmo como um objeto de instância única do ActiveX, apenas uma instância do objeto é criada, não importa como muitas vezes `CreateObject` é chamado. Com um objeto de instância única, `GetObject` sempre retorna a mesma instância quando chamado com a cadeia de caracteres de comprimento zero (`""`) sintaxe e isso causa um erro se o `PathName` argumento for omitido. Não é possível usar `GetObject` para obter uma referência a uma classe criada com o Visual Basic.  
+  
+> [!IMPORTANT]
+>  O `GetObject` função requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `GetObject` função para obter uma referência a uma planilha específica do Microsoft Excel (`excelObj`). Ele usa a planilha `Application` propriedade para tornar o Excel visível, fechá-la e executar outras ações. Usando duas chamadas de API, o `detectExcel` procedimento procurará o Excel e se ele estiver em execução, entra na tabela de objetos em execução. A primeira chamada para `GetObject` causa um erro se o Excel não estiver sendo executado, que neste exemplo faz com que o `excelWasNotRunning` sinalizador definido como `True`. A segunda chamada para `GetObject` Especifica um arquivo a ser aberto. Se o Excel não estiver sendo executado, a segunda chamada inicia e retorna uma referência à planilha representada pelo arquivo especificado, `test.xls`. O arquivo deve existir no local especificado. Caso contrário, o Visual Basic gera um <xref:System.IO.FileNotFoundException>. Em seguida, o código de exemplo faz o Excel e a janela que contém a planilha especificada visíveis.  
+  
+ Este exemplo requer `Option Strict Off` porque ele usa associação tardia, onde os objetos são atribuídos a variáveis do tipo `Object`. Você pode especificar `Option Strict On` e declarar objetos dos tipos de objeto específico, se você adicionar uma referência para a biblioteca de tipos do Excel a **COM** guia do **adicionar referência** caixa de diálogo do ** Projeto** menu do Visual Studio.  
+  
+ [!code-vb[VbVbalrExcelObject#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExcelObject/VB/Class1.vb#2)]  
+  
+ [!code-vb[VbVbalrExcelObject#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExcelObject/VB/Class1.vb#4)]  
+  
+ [!code-vb[VbVbalrExcelObject#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExcelObject/VB/Class1.vb#5)]  
+  
+ Quando você chama o `getExcel` função, é feita uma verificação para ver se o Excel já está em execução. Se não estiver, uma instância é criada.  
+  
+> [!IMPORTANT]
+>  Para simplificar, o exemplo anterior pressupõe que qualquer janela chamado `XLMAIN` pertence a uma instância do Microsoft Excel. Se outro objeto, possivelmente iniciado por violação ilegal, criou uma janela com esse nome, receberia todas as mensagens que você pretendia para Excel. Em um aplicativo a ser usado para produção, você deve incluir alguns testes mais rigorosos para verificar se `XLMAIN` certo para o Excel.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Não existe nenhum objeto do tipo de classe especificado.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">Não existe nenhum objeto com o caminho e nome de arquivo especificados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSetting">
+      <MemberSignature Language="C#" Value="public static string GetSetting (string AppName, string Section, string Key, string Default = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string GetSetting(string AppName, string Section, string Key, string Default) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.GetSetting(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AppName" Type="System.String" />
+        <Parameter Name="Section" Type="System.String" />
+        <Parameter Name="Key" Type="System.String" />
+        <Parameter Name="Default" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AppName">Necessário. Expressão <see langword="String" /> que contém o nome do aplicativo ou do projeto cuja configuração de chave é solicitada.</param>
+        <param name="Section">Necessário. Expressão <see langword="String" /> que contém o nome da seção na qual a configuração de chave está localizada.</param>
+        <param name="Key">Necessário. Expressão <see langword="String" /> que contém o nome da configuração de chave a ser retornada.</param>
+        <param name="Default">Opcional. Expressão que contém o valor a ser retornado se nenhum valor for definido <c>chave</c> configuração. Se omitido, <c>padrão</c> é considerado como uma cadeia de caracteres de comprimento zero ("").</param>
+        <summary>Retorna um valor de configuração de chave da entrada de um aplicativo no Registro do Windows. O recurso <see langword="My" /> oferece melhor produtividade e desempenho em operações do Registro do que o <see langword="GetAllSettings" />. Para obter mais informações, consulte <see cref="P:Microsoft.VisualBasic.Devices.ServerComputer.Registry" />.</summary>
+        <returns>Retorna um valor de configuração de chave da entrada de um aplicativo no Registro do Windows.  
+  
+ O recurso <see langword="My" /> oferece melhor produtividade e desempenho em operações do Registro do que o <see langword="GetAllSettings" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se qualquer um dos itens nomeada no `GetSetting` argumentos não existirem, `GetSetting` retorna um valor de `Default`.  
+  
+ Como ele funciona com o `HKEY_LOCAL_USER` chave do registro, que não está ativa até que um usuário fizer logon interativamente, `GetSetting` requer que um usuário tenha feito logon.  
+  
+ Configurações do registro que devem ser acessados de um processo não interativo (como Mtx.exe) devem ser armazenadas no `HKEY_LOCAL_MACHINE\Software\` ou `HKEY_USER\DEFAULT\Software` chaves do registro.  
+  
+ `GetSetting`requer `Read` <xref:System.Security.Permissions.RegistryPermission> .  
+  
+   
+  
+## Examples  
+ Este primeiro exemplo usa o `SaveSetting` função para tornar as entradas no registro do Windows para o aplicativo especificado como `AppName`e, em seguida, usa o `GetSetting` função para exibir as configurações. Porque o `Default` argumento for especificado, é garantido algum valor a ser retornado. Observe que `Section` nomes não podem ser recuperados com `GetSetting`. Por fim, o `DeleteSetting` função remove as entradas de todas as do aplicativo.  
+  
+ [!code-vb[VbVbalrCatRef#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#61)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Um ou mais argumentos não são expressões <see langword="String" /> ou o usuário não está conectado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IIf">
+      <MemberSignature Language="C#" Value="public static object IIf (bool Expression, object TruePart, object FalsePart);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object IIf(bool Expression, object TruePart, object FalsePart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.IIf(System.Boolean,System.Object,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Expression" Type="System.Boolean" />
+        <Parameter Name="TruePart" Type="System.Object" />
+        <Parameter Name="FalsePart" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Expression">Necessário. <see langword="Boolean" />. A expressão que você deseja avaliar.</param>
+        <param name="TruePart">Necessário. <see langword="Object" />. Retornado se <c>expressão</c> é avaliada como <see langword="True" />.</param>
+        <param name="FalsePart">Necessário. <see langword="Object" />. Retornado se <c>expressão</c> é avaliada como <see langword="False" />.</param>
+        <summary>Retorna um dos dois objetos, dependendo da avaliação de uma expressão.</summary>
+        <returns>Retorna um dos dois objetos, dependendo da avaliação de uma expressão.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `IIf` função fornece um equivalente para o ternário [operador condicional:?:](http://msdn.microsoft.com/library/88643ee8-7100-4f86-880a-705ec22b6271) no Visual C++.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `IIf` função para avaliar a `testMe` parâmetro o `checkIt` procedimento e retorna ações a palavra "Grande" se o valor é maior que 1000; caso contrário, retorna a palavra "Pequeno".  
+  
+ [!code-vb[VbVbalrFunctions#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#33)]  
+  
+ Observe que, se `Option Strict` é `On`, você deve usar o `CStr` palavra-chave para converter explicitamente o retorno de `Object` para `String`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputBox">
+      <MemberSignature Language="C#" Value="public static string InputBox (string Prompt, string Title = &quot;&quot;, string DefaultResponse = &quot;&quot;, int XPos = -1, int YPos = -1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string InputBox(string Prompt, string Title, string DefaultResponse, int32 XPos, int32 YPos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.InputBox(System.String,System.String,System.String,System.Int32,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Prompt" Type="System.String" />
+        <Parameter Name="Title" Type="System.String" />
+        <Parameter Name="DefaultResponse" Type="System.String" />
+        <Parameter Name="XPos" Type="System.Int32" />
+        <Parameter Name="YPos" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="Prompt">Expressão <see langword="String" /> necessária exibida como a mensagem na caixa de diálogo. O comprimento máximo de <c>Prompt</c> é aproximadamente 1024 caracteres, dependendo da largura dos caracteres usados. Se <c>Prompt</c> consiste de mais de uma linha, você pode separar as linhas usando um caractere de retorno de carro (<see langword="Chr(" />13<see langword=")" />), caracteres de alimentação de uma linha (<see langword="Chr(" />10<see langword=")" />), ou uma quebra de linha combinação de alimentação (<see langword="Chr(" />13<see langword=")" /> &amp; <see langword="Chr(" />10<see langword=")" />) entre cada linha.</param>
+        <param name="Title">Opcional. Expressão <see langword="String" /> exibida na barra de título da caixa de diálogo. Se você omitir <c>título</c>, o nome do aplicativo é colocado na barra de título.</param>
+        <param name="DefaultResponse">Opcional. Expressão <see langword="String" /> exibida na caixa de texto como a resposta padrão se nenhuma outra entrada for fornecida. Se você omitir <c>DefaultResponse</c>, a caixa de texto exibido está vazia.</param>
+        <param name="XPos">Opcional. Expressão numérica que especifica, em twips, a distância desde a borda esquerda da caixa de diálogo até a borda esquerda da tela. Se você omitir <c>XPos</c>, a caixa de diálogo é centralizada horizontalmente.</param>
+        <param name="YPos">Opcional. Expressão numérica que especifica, em twips, a distância desde a borda superior da caixa de diálogo até a parte superior da tela. Se você omitir <c>YPos</c>, a caixa de diálogo é posicionada verticalmente aproximadamente um terço da maneira como a tela para baixo.</param>
+        <summary>Exibe um aviso em uma caixa de diálogo, aguarda até que o usuário insira um texto ou clique em um botão e retorna uma cadeia de caracteres que contém o conteúdo da caixa de texto.</summary>
+        <returns>Exibe um aviso em uma caixa de diálogo, aguarda até que o usuário insira um texto ou clique em um botão e retorna uma cadeia de caracteres que contém o conteúdo da caixa de texto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o usuário clica em **Cancelar**, uma cadeia de caracteres de comprimento zero será retornada.  
+  
+ Para especificar mais que o primeiro argumento, você deve usar o `InputBox` função em uma expressão. Se você omitir argumentos posicionais, você deve reter o delimitador de vírgula correspondente.  
+  
+> [!NOTE]
+>  O `InputBox` função requer `UIPermission` no <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> nível, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte e <xref:System.Security.Permissions.UIPermission> .  
+  
+   
+  
+## Examples  
+ Este exemplo mostra várias maneiras de usar o `InputBox` função para solicitar que o usuário insira um valor. Se x e y posições forem omitidas, a caixa de diálogo é centralizada automaticamente para os respectivos eixos. A variável `MyValue` contém o valor inserido pelo usuário, se o usuário clica Okey ou pressiona a tecla ENTER.  
+  
+ [!code-vb[VbVbalrCatRef#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#67)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MsgBox">
+      <MemberSignature Language="C#" Value="public static Microsoft.VisualBasic.MsgBoxResult MsgBox (object Prompt, Microsoft.VisualBasic.MsgBoxStyle Buttons = Microsoft.VisualBasic.MsgBoxStyle.ApplicationModal, object Title = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public static valuetype Microsoft.VisualBasic.MsgBoxResult MsgBox(object Prompt, valuetype Microsoft.VisualBasic.MsgBoxStyle Buttons, object Title) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.MsgBox(System.Object,Microsoft.VisualBasic.MsgBoxStyle,System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualBasic.MsgBoxResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Prompt" Type="System.Object" />
+        <Parameter Name="Buttons" Type="Microsoft.VisualBasic.MsgBoxStyle" />
+        <Parameter Name="Title" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="Prompt">Necessário. Expressão <see langword="String" /> exibida como a mensagem na caixa de diálogo. O comprimento máximo de <c>Prompt</c> é aproximadamente 1024 caracteres, dependendo da largura dos caracteres usados. Se <c>Prompt</c> consiste de mais de uma linha, você pode separar as linhas usando um caractere de retorno de carro (<see langword="Chr(" />13<see langword=")" />), caracteres de alimentação de uma linha (<see langword="Chr(" />10<see langword=")" />), ou um retorno de carro / combinação de caracteres de avanço de linha (<see langword="Chr(" />13<see langword=")" /> &amp; <see langword="Chr(" />10<see langword=")" />) entre cada linha.</param>
+        <param name="Buttons">Opcional. Expressão numérica que é a soma dos valores que especificam o número e o tipo de botões a serem exibidos, o estilo de ícone a ser usado, a identidade do botão padrão e a modalidade da caixa de mensagem. Se você omitir <c>botões</c>, o valor padrão é zero.</param>
+        <param name="Title">Opcional. Expressão <see langword="String" /> exibida na barra de título da caixa de diálogo. Se você omitir <c>título</c>, o nome do aplicativo é colocado na barra de título.</param>
+        <summary>Exibe uma mensagem em uma caixa de diálogo, aguarda que o usuário clique em um botão e retorna um inteiro que indica em qual botão o usuário clicou.</summary>
+        <returns>
+          <list type="table">
+            <item>
+              <term> Constante  
+  
+ </term>
+              <description> Valor  
+  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="OK" />
+              </term>
+              <description> 1  
+  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Cancel" />
+              </term>
+              <description> 2  
+  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Abort" />
+              </term>
+              <description> 3  
+  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Retry" />
+              </term>
+              <description> 4  
+  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Ignore" />
+              </term>
+              <description> 5  
+  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Yes" />
+              </term>
+              <description> 6  
+  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="No" />
+              </term>
+              <description> 7  
+  
+ </description>
+            </item>
+          </list>
+        </returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você omitir argumentos posicionais, você deve reter o delimitador de vírgula correspondente.  
+  
+ Se a caixa de diálogo exibe uma **Cancelar** botão, pressionando a tecla ESC tem o mesmo efeito de clicar **Cancelar**  
+  
+ Se a caixa de diálogo contém um **ajuda** botão, ajuda contextual é fornecida para a caixa de diálogo. No entanto, nenhum valor é retornado até que um dos outros botões é escolhido. Em aplicativos do Windows Form, escolhendo o **ajuda** botão executa o <xref:System.Windows.Forms.Control.HelpRequested> evento para o formulário.  
+  
+> [!NOTE]
+>  O `MsgBox` função requer `UIPermission` no <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> nível, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.UIPermission>.  
+  
+ O `MsgBoxStyle` valores de enumeração são listados na tabela a seguir.  
+  
+|Membro|Valor|Descrição|  
+|-|-|-|  
+|Membro|Valor|Descrição|  
+|`OKOnly`|0|Apenas botão exibe Okey.|  
+|`OKCancel`|1|Exibe Okey e botões de cancelamento.|  
+|`AbortRetryIgnore`|2|Exibe os botões abortar, repetir e ignorar.|  
+|`YesNoCancel`|3|Exibe Sim, não e botões de cancelamento.|  
+|`YesNo`|4|Exibe os botões Sim e não.|  
+|`RetryCancel`|5|Exibe os botões Cancelar e tente novamente.|  
+|`Critical`|16|Exibe o ícone de mensagem crítica.|  
+|`Question`|32|Exibe o ícone de aviso de consulta.|  
+|`Exclamation`|48|Exibe o ícone de mensagem de aviso.|  
+|`Information`|64|Exibe o ícone de mensagem de informações.|  
+|`DefaultButton1`|0|O primeiro botão é padrão.|  
+|`DefaultButton2`|256|O segundo botão é padrão.|  
+|`DefaultButton3`|512|O terceiro botão é padrão.|  
+|`ApplicationModal`|0|Aplicativo é restrito. O usuário deve responder à caixa de mensagem antes de continuar o trabalho no aplicativo atual.|  
+|`SystemModal`|4096|O sistema é restrito. Todos os aplicativos são suspensos até que o usuário responda à caixa de mensagem.|  
+|`MsgBoxSetForeground`|65536|Especifica a janela da caixa de mensagem como a janela de primeiro plano.|  
+|`MsgBoxRight`|524288|Texto é alinhado à direita.|  
+|`MsgBoxRtlReading`|1048576|Especifica o texto deve aparecer como direita-leitura para a esquerda nos sistemas hebraico e árabe.|  
+  
+ O primeiro grupo de valores (0 – 5) descreve o número e tipo dos botões exibidos na caixa de diálogo. O segundo grupo (16, 32, 48, 64) descreve o estilo de ícone. O terceiro grupo (0, 256, 512) determina qual botão é o padrão. O quarto grupo (0, 4096) determina a modalidade da caixa de mensagem e o quinto grupo Especifica se a janela da caixa de mensagem é a janela de primeiro plano, juntamente com o alinhamento e a direção do texto. Ao adicionar números para criar um valor final para o `Buttons` argumento, use apenas um número de cada grupo.  
+  
+   
+  
+## Examples  
+ Este exemplo usa o `MsgBox` função para exibir uma mensagem de erro crítico na caixa de diálogo com os botões Sim e não. O botão não é especificado como a resposta padrão. Isso é feito combinando o `MsgBox` valores constantes em uma expressão numérica. Nesse caso, adicionando 4 (a combinação botão Sim/não) e 16 (o **mensagem crítica** janela) e 256 (o segundo botão como botão padrão) oferece um total de 276. O valor retornado pelo `MsgBox` função depende o botão escolhido pelo usuário: Sim retorna um valor de 6; Não retorna um valor de 7.  
+  
+ [!code-vb[VbVbalrCatRef#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#20)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Prompt" /> não é uma expressão <see langword="String" />, ou <paramref name="Title" /> é inválido.</exception>
+        <exception cref="T:System.InvalidOperationException">O processo não está em execução no modo Interativo do Usuário.</exception>
+        <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Um ou mais parâmetros não são membro da enumeração <see langword="MsgBoxResult" /> ou <see langword="MsgBoxStyle" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Partition">
+      <MemberSignature Language="C#" Value="public static string Partition (long Number, long Start, long Stop, long Interval);" />
+      <MemberSignature Language="ILAsm" Value=".method public static string Partition(int64 Number, int64 Start, int64 Stop, int64 Interval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Partition(System.Int64,System.Int64,System.Int64,System.Int64)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Number" Type="System.Int64" />
+        <Parameter Name="Start" Type="System.Int64" />
+        <Parameter Name="Stop" Type="System.Int64" />
+        <Parameter Name="Interval" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="Number">Necessário. <see langword="Long" />. Número inteiro que você deseja localizar em um dos intervalos calculados.</param>
+        <param name="Start">Necessário. <see langword="Long" />. Número inteiro que indica o início do conjunto de intervalos calculados. <c>Iniciar</c> não pode ser menor que 0.</param>
+        <param name="Stop">Necessário. <see langword="Long" />. Número inteiro que indica o fim do conjunto de intervalos calculados. <c>Parar</c> não pode ser menor ou igual a <c>iniciar</c>.</param>
+        <param name="Interval">Necessário. <see langword="Long" />. Número inteiro que indica o tamanho de cada intervalo calculado entre <c>iniciar</c> e <c>parar</c>. <c>Intervalo de</c> não pode ser menor que 1.</param>
+        <summary>Retorna uma cadeia de caracteres que representa o intervalo calculado que contém um número.</summary>
+        <returns>Retorna uma cadeia de caracteres que representa o intervalo calculado que contém um número.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `Partition` função calcula um conjunto de intervalos numéricos, cada uma contendo o número de valores especificados pelo `Interval`. O primeiro intervalo começa em `Start`, e o último intervalo termina em `Stop`. O `Partition` função identifica qual intervalo contém `Number` e retorna uma cadeia de caracteres descrevendo esse intervalo. O intervalo é representado na cadeia de caracteres como "*valormínimo*:*valormáximo*", onde a extremidade baixa do intervalo (*valormínimo*) é separada da extremidade alta (*valormáximo*) por dois-pontos (:).  
+  
+ Se necessário, o `Partition` função insere espaços à esquerda antes *valormínimo* e *valormáximo* para que tenham o mesmo número de caracteres que a representação de cadeia de caracteres do valor (`Stop` + 1). Isso garante que, se você usar a saída do `Partition` função com vários valores de `Number`, o texto resultante será manipulado corretamente durante qualquer tipo de operação subsequente.  
+  
+ A tabela a seguir mostra algumas cadeias de caracteres de exemplo para intervalos calculados usando três conjuntos de `Start`, `Stop`, e `Interval`. O "Primeiro intervalo" e "Último intervalo" colunas mostram menor e mais intervalos possíveis dados os valores de `Start` e `Stop`. As colunas "antes do primeiro intervalo" e "depois do último intervalo" mostram as cadeias de caracteres retornadas para valores de `Number` menor `Start` e maior `Stop`, respectivamente.  
+  
+|`Start`|`Stop`|`Interval`|Antes do primeiro intervalo|Primeiro intervalo|Último intervalo|Depois do último intervalo|  
+|-|-|-|-|-|-|-|  
+|0|99|5|"   : -1"|"  0:  4"|" 95: 99"|"100:   "|  
+|20|199|10|"   : 19"|" 20: 29"|"190:199"|"200:   "|  
+|100|1010|20|"    : 99"|" 100: 119"|"1000:1010"|"1011:    "|  
+  
+ Na tabela anterior, a terceira linha mostra o resultado quando `Start` e `Stop` definir um conjunto de números que não podem ser divididos uniformemente por `Interval`. O último intervalo termina em `Stop`, tornando-o somente 11 números, embora `Interval` é 20.  
+  
+ Se `Interval` é 1, o intervalo é "`Number`:`Number`", independentemente do `Start` e `Stop` argumentos. Por exemplo, se `Number` é 267, `Stop` é 1000, e `Interval` é 1, `Partition` retorna "267: 267".  
+  
+ `Partition`pode ser útil ao construir consultas de banco de dados. Você pode criar uma consulta SELECT que mostra quantos pedidos ocorrerem em vários intervalos de valor, por exemplo, com valores de fatura de 1 a 1000, 1001 a 2000 e assim por diante.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir define uma série de intervalos de décadas de 1950 até 2049. Ele localiza o valor de `year` dentro do intervalo apropriado e retorna um `String` mostrando o intervalo de valor. Se `year` tem um valor de 1984, por exemplo, `Partition` retorna "1980: 1989".  
+  
+ [!code-vb[VbVbalrFunctions#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#45)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Start" />&lt; 0, <paramref name="Stop" /> &lt; =  <paramref name="Start" />, ou <paramref name="Interval" /> &lt; 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveSetting">
+      <MemberSignature Language="C#" Value="public static void SaveSetting (string AppName, string Section, string Key, string Setting);" />
+      <MemberSignature Language="ILAsm" Value=".method public static void SaveSetting(string AppName, string Section, string Key, string Setting) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.SaveSetting(System.String,System.String,System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="AppName" Type="System.String" />
+        <Parameter Name="Section" Type="System.String" />
+        <Parameter Name="Key" Type="System.String" />
+        <Parameter Name="Setting" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="AppName">Necessário. Expressão <see langword="String" /> que contém o nome do aplicativo ou do projeto a que a configuração se aplica.</param>
+        <param name="Section">Necessário. Expressão <see langword="String" /> que contém o nome da seção na qual a configuração de chave está sendo salva.</param>
+        <param name="Key">Necessário. Expressão <see langword="String" /> que contém o nome da configuração de chave que está sendo salva.</param>
+        <param name="Setting">Necessário. Expressão que contém o valor para o qual <c>chave</c> está sendo definido.</param>
+        <summary>Salva ou cria uma entrada de aplicativo no Registro do Windows. O recurso <see langword="My" /> oferece melhor produtividade e desempenho em operações do Registro do que o <see langword="SaveSetting" />. Para obter mais informações, consulte <see cref="P:Microsoft.VisualBasic.Devices.ServerComputer.Registry" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `SaveSetting` função adiciona a chave para `HKEY_CURRENT_USER\Software\VB and VBA Program Settings`.  
+  
+ Se a configuração da chave não pode ser salvo por algum motivo, ocorrerá um erro.  
+  
+ `SaveSetting`requer que um usuário tenha feito logon desde que ele opera com o `HKEY_LOCAL_USER` chave do registro, que não está ativa até que um usuário fizer logon interativamente.  
+  
+ Configurações do registro que devem ser acessados de um processo não interativo (como Mtx.exe) devem ser armazenadas no `HKEY_LOCAL_MACHINE\Software\` ou `HKEY_USER\DEFAULT\Software` chaves do registro.  
+  
+ `SaveSetting`requires `Write` and `Create`<xref:System.Security.Permissions.RegistryPermission> .  
+  
+   
+  
+## Examples  
+ O exemplo a seguir primeiro usa o `SaveSetting` função para tornar as entradas no registro do Windows para o `MyApp` aplicativo e, em seguida, usa o `DeleteSetting` função para removê-los.  
+  
+ [!code-vb[VbVbalrCatRef#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#56)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">Não foi possível criar o Registro de chave ou o usuário não está conectado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Shell">
+      <MemberSignature Language="C#" Value="public static int Shell (string PathName, Microsoft.VisualBasic.AppWinStyle Style = Microsoft.VisualBasic.AppWinStyle.MinimizedFocus, bool Wait = false, int Timeout = -1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static int32 Shell(string PathName, valuetype Microsoft.VisualBasic.AppWinStyle Style, bool Wait, int32 Timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Shell(System.String,Microsoft.VisualBasic.AppWinStyle,System.Boolean,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecuritySafeCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="PathName" Type="System.String" />
+        <Parameter Name="Style" Type="Microsoft.VisualBasic.AppWinStyle" />
+        <Parameter Name="Wait" Type="System.Boolean" />
+        <Parameter Name="Timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="PathName">Necessário. <see langword="String" />. Nome do programa a ser executado, junto com argumentos necessários e opções de linha de comando. <c>Nome de caminho</c> também pode incluir a unidade e o caminho do diretório ou pasta.  
+  
+ Se você não souber o caminho para o programa, poderá usar o <see cref="Overload:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles" /> para localizá-lo. Por exemplo, você pode chamar <c>GetFiles ("c:\", True,"Testfile")</c>, que retorna o caminho completo de cada arquivo chamado <c>Testfile</c> em qualquer lugar na unidade c:\\ .</param>
+        <param name="Style">Opcional. <see langword="AppWinStyle" />. Um valor escolhido do <see cref="T:Microsoft.VisualBasic.AppWinStyle" /> que especifica o estilo da janela em que o programa será executado. Se <c>estilo</c> for omitido, <see langword="Shell" /> usa <see langword="AppWinStyle.MinimizedFocus" />, que inicia o programa minimizado e com foco.</param>
+        <param name="Wait">Opcional. <see langword="Boolean" />. Um valor que indica se a função <see langword="Shell" /> deve aguardar a conclusão do programa. Se <c>espera</c> for omitido, <see langword="Shell" /> usa <see langword="False" />.</param>
+        <param name="Timeout">Opcional. <see langword="Integer" />. O número de milissegundos a aguardar pela conclusão se <c>espera</c> é <see langword="True" />. Se <c>Timeout</c> for omitido, <see langword="Shell" /> usa -1, o que significa que não há nenhum tempo limite e <see langword="Shell" /> não retorna até que o programa for concluído. Portanto, se você omitir <c>Timeout</c> ou conjunto como-1, é possível que <see langword="Shell" /> nunca retorne o controle ao seu programa.</param>
+        <summary>Executa um programa executável e retorna um inteiro que contém a ID do processo do programa se ele ainda está em execução.</summary>
+        <returns>Executa um programa executável e retorna um inteiro que contém a ID do processo do programa se ele ainda está em execução.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor de retorno de `Shell` função depende se o programa de chamada no `PathName` ainda está em execução quando `Shell` retorna. Se você definir `Wait` para `True` e o programa for concluído antes do tempo limite expirar, `Shell` retorna zero. Se o tempo limite expirar, ou se você omitir `Wait` ou defina-a como `False`, `Shell` retorna a ID do processo do programa. A ID do processo é um número exclusivo que identifica o programa em execução.  
+  
+## <a name="failure-to-start"></a>Falha ao iniciar  
+ Se o `Shell` função não é possível iniciar o programa nomeado, um <xref:System.IO.FileNotFoundException> erro ocorre. Isso pode acontecer, por exemplo, quando você tenta executar um programa de 16 bits, tais como `command.com`, de um aplicativo usando <xref:System.Windows.Forms?displayProperty=nameWithType>. Para solucionar esse problema, você pode executar um programa de 32 bits que chama o programa de 16 bits desejado. No caso de `command.com`, você pode executar `cmd.exe` como uma alternativa.  
+  
+## <a name="waiting-for-completion"></a>Aguardando conclusão  
+ Por padrão, o `Shell` função executa o programa de forma assíncrona. Isso significa que um programa iniciado com a `Shell` função não pode concluir a execução antes de seguir as instruções de `Shell` função são executadas. Se você desejar esperar para que o programa termine antes de continuar, defina `Wait` para `True`.  
+  
+## <a name="determining-the-exit-code"></a>Determinando o código de saída  
+ Um processo pode retornar um *código de saída* quando ele termina. No entanto, você não pode usar `Shell` recuperar este código de saída, porque `Shell` retorna zero se ele aguarda o encerramento e também porque o processo é executado em um objeto diferente de `Shell`.  
+  
+ Para recuperar o código de saída de um processo, você deve escrever seu próprio código para iniciar o processo e aguardar o encerramento. O exemplo a seguir mostra como iniciar um processo, espere até que ela seja finalizado e recupera seu código de saída.  
+  
+```vb  
+Dim procID As Integer  
+Dim newProc As Diagnostics.Process  
+newProc = Diagnostics.Process.Start("C:\WINDOWS\NOTEPAD.EXE")  
+procID = newProc.Id  
+newProc.WaitForExit()  
+Dim procEC As Integer = -1  
+If newProc.HasExited Then  
+    procEC = newProc.ExitCode  
+End If  
+MsgBox("Process with ID " & CStr(ProcID) & _  
+    " terminated with exit code " & CStr(procEC))  
+```  
+  
+## <a name="protecting-the-file-specification"></a>Protegendo a especificação de arquivo  
+ Você deve sempre colocar a especificação de arquivo e caminho toda entre aspas, como mostra o exemplo a seguir.  
+  
+```vb  
+ID = Shell("""C:\Program Files\display.exe"" -a -q", , True, 100000)  
+```  
+  
+ Cada par de aspas duplas adjacentes (`" "`) na cadeia de caracteres literal é interpretado como um caractere aspas duplas na cadeia de caracteres. Portanto, o exemplo anterior apresenta a seguinte cadeia de caracteres para o `Shell` função:  
+  
+```  
+"C:\Program Files\display.exe" -a -q  
+```  
+  
+ Se você não tem o caminho entre aspas, Windows procurará por um arquivo chamado `Program.exe` na pasta C:\, em vez de `display.exe` no diretório C:\Program Files.  
+  
+> [!IMPORTANT]
+>  Se você não colocar a especificação de arquivo e caminho entre aspas, há um risco de segurança se o nome do arquivo ou um nó de caminho contiver espaços. No exemplo anterior, o nó de caminho `\Program Files` inclui um espaço. Se a especificação não estivesse dentro de aspas simples e um programa denominado `Program.exe` tinha sido instalado em c:\\, por exemplo por violação ilegal, Windows seria executá-lo em vez de `display.exe`.  
+  
+> [!IMPORTANT]
+>  O `Shell` função requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `Shell` função para executar um aplicativo especificado pelo usuário. Especificar <xref:Microsoft.VisualBasic.AppWinStyle?displayProperty=nameWithType> como o segundo argumento abre o aplicativo em tamanho normal e concede a ele o foco.  
+  
+ [!code-vb[VbVbalrFunctions#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#47)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="Style" /> não está no intervalo de 0 a 9, inclusive.</exception>
+        <exception cref="T:System.IO.FileNotFoundException">
+          <see langword="Shell" /> não pode localizar o arquivo <paramref name="PathName" />.</exception>
+        <exception cref="T:System.NullReferenceException">
+          <paramref name="PathName" /> é <see langword="Nothing" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Switch">
+      <MemberSignature Language="C#" Value="public static object Switch (params object[] VarExpr);" />
+      <MemberSignature Language="ILAsm" Value=".method public static object Switch(object[] VarExpr) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.VisualBasic.Interaction.Switch(System.Object[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="VarExpr" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="VarExpr">Necessário. Matriz de parâmetros <see langword="Object" />. Deve ter um número par de elementos. Você pode fornecer uma lista de variáveis <see langword="Object" /> ou expressões separadas por vírgulas ou uma matriz unidimensional de elementos <see langword="Object" />.</param>
+        <summary>Avalia uma lista de expressões e retorna um valor <see langword="Object" /> correspondente à primeira expressão na lista, que é <see langword="True" />.</summary>
+        <returns>Avalia uma lista de expressões e retorna um valor <see langword="Object" /> correspondente à primeira expressão na lista, que é <see langword="True" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O argumento fornecido para `VarExpr` consiste em pares de expressões e valores. O `Switch` função avalia as expressões de número ímpar do menor para o maior índice em `VarExpr`e retorna o valor do par associado à primeira expressão que é avaliada como `True`. Por exemplo, se `VarExpr(0)` é `True`, `Switch` retorna `VarExpr(1)`e se `VarExpr(0)` é `False` mas `VarExpr(2)` é `True`, `Switch` retorna `VarExpr(3)`, e assim por diante.  
+  
+ Se você não fornecer o `VarExpr` argumento, `Switch` retorna `Nothing`.  
+  
+> [!NOTE]
+>  As expressões na lista de argumentos podem incluir chamadas de função. Como parte da preparação da lista de argumentos para a chamada `Switch`, o compilador do Visual Basic chama toda função em cada expressão. Isso significa que você não pode confiar em uma função particular não ser chamada se uma expressão anterior na lista de argumentos é `True`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa o `Switch` função para retornar o nome de um idioma que corresponda ao nome de uma cidade. Isso requer que `Option Strict` ser `Off`.  
+  
+ [!code-vb[VbVbalrFunctions#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#48)]  
+  
+ Porque o <xref:System.Diagnostics> namespace também contém uma classe chamada <xref:System.Diagnostics.Switch>, uma chamada para o `Switch` função deve ser qualificada com o <xref:Microsoft.VisualBasic> namespace.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O número de argumentos é ímpar.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

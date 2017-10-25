@@ -1,0 +1,78 @@
+<Type Name="ListDecoration" FullName="System.Web.UI.MobileControls.ListDecoration">
+  <TypeSignature Language="C#" Value="public enum ListDecoration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ListDecoration extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.MobileControls.ListDecoration" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web.Mobile</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Web.Mobile.dll assembly has been deprecated and should no longer be used. For information about how to develop ASP.NET mobile applications, see http://go.microsoft.com/fwlink/?LinkId=157231.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o tipo de decoração a ser adicionado aos itens de lista. Essa classe não pode ser herdada. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.MobileControls.ListDecoration> enumeração representa como você especificará decoração para obter uma lista, como marcadores, números ou sem decoração em todos os. No ASP.NET, você deve especificar o tipo de decoração para obter uma lista, definindo a <xref:System.Web.UI.MobileControls.List.Decoration%2A> propriedade.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bulleted">
+      <MemberSignature Language="C#" Value="Bulleted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.ListDecoration Bulleted = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.ListDecoration.Bulleted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ListDecoration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Itens de lista são decorados com um marcador. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.ListDecoration None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.ListDecoration.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ListDecoration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Sem decoração. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Numbered">
+      <MemberSignature Language="C#" Value="Numbered" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Web.UI.MobileControls.ListDecoration Numbered = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Web.UI.MobileControls.ListDecoration.Numbered" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web.Mobile</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.MobileControls.ListDecoration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Itens de lista são decorados com um número. Esta API está obsoleta. Para obter informações sobre como desenvolver aplicativos móveis, consulte o [www.asp.net/mobile](http://go.microsoft.com/fwlink/?LinkID=182900) site da Web.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

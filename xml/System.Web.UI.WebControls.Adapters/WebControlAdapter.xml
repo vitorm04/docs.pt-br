@@ -1,0 +1,260 @@
+<Type Name="WebControlAdapter" FullName="System.Web.UI.WebControls.Adapters.WebControlAdapter">
+  <TypeSignature Language="C#" Value="public class WebControlAdapter : System.Web.UI.Adapters.ControlAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WebControlAdapter extends System.Web.UI.Adapters.ControlAdapter" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.Adapters.ControlAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Personaliza a renderização do controle da Web ao qual o adaptador de controle é anexado, para modificar a marcação padrão ou o comportamento para navegadores específicos.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebControl> classe é a classe base da qual herdam de controles da Web. Ele define várias propriedades comuns a todos os controles da Web. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebControl>.  
+  
+ Um <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> objeto é um componente que substitui certos <xref:System.Web.UI.WebControls.WebControl> classe ou métodos herdados e eventos em seu ciclo de vida de execução para permitir que o tratamento de navegador ou marcação específica. O .NET Framework mapeia um adaptador de controle único para um derivado <xref:System.Web.UI.WebControls.WebControl> objeto para cada solicitação de cliente.  
+  
+ Um adaptador modifica um comportamento de controle para uma classe de navegadores ou um navegador específico ou atua como um filtro arbitrário em algum recurso. Grande parte da capacidade de adaptação no comportamento de renderização pode ser encapsulado nas classes especializadas que derivam de <xref:System.Web.UI.HtmlTextWriter> classe. Portanto, é provável que um único adaptador pode ser usado para um número de comportamentos de classe do navegador ou que inclusão de capacidade de adaptação no <xref:System.Web.UI.HtmlTextWriter> classes podem tornar o uso de um adaptador de controle desnecessária.  
+  
+ Controles em si não exigem necessariamente um adaptador. Se os controles são estendidos por meio da composição, geralmente os adaptadores para os controles filho são suficientes.  
+  
+ Cada controle tem mapeamentos explícitos para adaptadores através dos arquivos de definição. browser. Assim, qualquer acesso ao <xref:System.Web.UI.Control.Adapter%2A> propriedade <xref:System.Web.UI.WebControls.WebControl> usa o <xref:System.Web.HttpBrowserCapabilities> objeto extraído dos arquivos de definição. browser para executar a pesquisa para o mapeamento do adaptador de controle.  
+  
+ Durante o processamento, o .NET Framework intercepta chamadas para os métodos substituíveis de um controle que pode ser um destino específico. Se estiver conectado a um adaptador de controle, o .NET Framework chama os métodos de adaptador associado. Para obter mais informações, consulte <xref:System.Web.UI.Adapters.ControlAdapter>.  
+  
+ O processamento para um <xref:System.Web.UI.WebControls.WebControl> normalmente é constituído de um início e marca final e alguns marcação interna entre o início e fim as marcas. As marcas são definidas quando o <xref:System.Web.UI.WebControls.WebControl> é criado. Para obter mais informações, consulte <xref:System.Web.UI.WebControls.WebControl.%23ctor%2A>.  
+  
+ As marcas são geradas pelo <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> e <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> métodos, respectivamente. A marcação interna é gerada pelo <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> método.  
+  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> método gera marcação todos, chamando métodos na seguinte ordem:  
+  
+1.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A>.  
+  
+2.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A>.  
+  
+3.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A>.  
+  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.IsEnabled%2A> propriedade retorna `true` somente se o <xref:System.Web.UI.WebControls.WebControl> e todos os seus controles pai estão habilitados. O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Control%2A> propriedade retorna uma referência com rigidez de tipos para o <xref:System.Web.UI.WebControls.WebControl>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WebControlAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O .NET Framework internamente constrói uma nova instância do <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> classe quando ele cria correspondente <xref:System.Web.UI.WebControls.WebControl> objeto.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="protected System.Web.UI.WebControls.WebControl Control { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.UI.WebControls.WebControl Control" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.WebControlAdapter.Control" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.WebControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para o controle da Web ao qual este adaptador de controle está anexado.</summary>
+        <value>O <see cref="T:System.Web.UI.WebControls.WebControl" /> ao qual este <see cref="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" /> está anexado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando um <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> o objeto é anexado a um <xref:System.Web.UI.WebControls.WebControl> do objeto, o .NET Framework chama os métodos de ciclo de vida do adaptador em vez de métodos de controle. Para obter mais informações, consulte <xref:System.Web.UI.Adapters.ControlAdapter>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao herdar do <see cref="T:System.Web.UI.WebControls.Adapters.WebControlAdapter" /> classe, no mínimo, você deve implementar um <see langword="Control" /> propriedade para retornar uma instância fortemente tipado do controle.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="protected bool IsEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.Adapters.WebControlAdapter.IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o controle da Web e todos os seus controles pai estão habilitados.</summary>
+        <value>
+          <see langword="true" />Se associado <see cref="T:System.Web.UI.WebControls.WebControl" /> e todos os seus controles pai estiverem habilitada; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.IsEnabled%2A> propriedade fornece acesso para o adaptador e qualquer uma de suas classes derivadas de <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A?displayProperty=nameWithType> propriedade. <xref:System.Web.UI.WebControls.WebControl.IsEnabled%2A?displayProperty=nameWithType>verifica a hierarquia dos controles pai e retorna `true` somente se o controle da Web e todos os seus pais estão habilitados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para processar a saída de destino específico.</param>
+        <summary>Gera a marcação de destino específico para o controle ao qual o adaptador de controle está anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A> método gera marcação de destino específico para enviar para o navegador do cliente. <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A>é chamado em vez do <xref:System.Web.UI.WebControls.WebControl.Render%2A?displayProperty=nameWithType> método se um <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter> o objeto é anexado a um <xref:System.Web.UI.WebControls.WebControl> objeto.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> chamadas de método de base <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />, em seguida, <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" />e, em seguida, <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" />. Se você substituir <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render(System.Web.UI.HtmlTextWriter)" /> e não chamar o método base, certifique-se fornecer essa funcionalidade.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderBeginTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderBeginTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderBeginTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para processar a saída de destino específico.</param>
+        <summary>Cria a marca de início para o controle da Web na marcação que é transmitida para o navegador de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> método escrever marcações adicionais ou adicionar atributos para a marca de início para o <xref:System.Web.UI.WebControls.WebControl> objeto. Use <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> em conjunto com o <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> método para garantir a abertura e fechamento de consistência de marca.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> chamadas de método de base de <see cref="M:System.Web.UI.WebControls.WebControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> método. Por sua vez, o <see cref="M:System.Web.UI.WebControls.WebControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> chamadas de método base apropriado <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" /> sobrecarga, que é determinado pelo tipo da marca com o qual o <see cref="T:System.Web.UI.WebControls.WebControl" /> objeto foi criado. Você pode evitar a substituição de <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> derivando de <see cref="T:System.Web.UI.HtmlTextWriter" /> classe e substituir <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" />e também possivelmente <see cref="M:System.Web.UI.HtmlTextWriter.RenderEndTag" />.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected virtual void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para processar a saída de destino específico.</param>
+        <summary>Gera a marcação interna de destino específico para o controle da Web ao qual o adaptador de controle está anexado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> método gera marcação interna, entre o início e fim as marcas do controle. Normalmente, a marcação é gerada pelo <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.Render%2A>, que chama os métodos na seguinte ordem:  
+  
+1.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A>.  
+  
+2.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A>.  
+  
+3.  <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A>.  
+  
+ Substituir <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> para gerar marcação interna de destino específico para enviar para o navegador do cliente.  
+  
+ O <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> base chamadas de método <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A?displayProperty=nameWithType>. O <xref:System.Web.UI.WebControls.WebControl.RenderContents%2A?displayProperty=nameWithType> chamadas de método de base <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType>, que por sua vez chama <xref:System.Web.UI.Control.RenderChildren%2A?displayProperty=nameWithType>. Assim, substituições de <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> devem chamar o <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents%2A> base método somente se o processamento for além, em vez de em vez de <xref:System.Web.UI.Control.Render%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Para um controle composto, você deve garantir que os controles filho são renderizados. Se você substituir o <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" /> método e não chamar o método base, você poderá causar o filho controles a ser renderizado chamando <see cref="M:System.Web.UI.Adapters.ControlAdapter.RenderChildren(System.Web.UI.HtmlTextWriter)" /> que, se não for substituída, chama <see cref="M:System.Web.UI.Control.RenderChildren(System.Web.UI.HtmlTextWriter)" /> do <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderContents(System.Web.UI.HtmlTextWriter)" /> substituir.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEndTag">
+      <MemberSignature Language="C#" Value="protected virtual void RenderEndTag (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void RenderEndTag(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">O <see cref="T:System.Web.UI.HtmlTextWriter" /> que contém métodos para processar a saída de destino específico.</param>
+        <summary>Cria a marca final para o controle da Web na marcação que é transmitida para o navegador de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Substituir o <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> método escrever marcações adicionais ou adicionar atributos à marca final para o <xref:System.Web.UI.WebControls.WebControl> objeto. Use <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag%2A> em conjunto com o <xref:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag%2A> método para garantir a abertura e fechamento de consistência de marca.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>O <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderEndTag(System.Web.UI.HtmlTextWriter)" /> chamadas de método de base de <see cref="M:System.Web.UI.WebControls.WebControl.RenderEndTag(System.Web.UI.HtmlTextWriter)" /> método. Por sua vez, o <see cref="M:System.Web.UI.WebControls.WebControl.RenderEndTag(System.Web.UI.HtmlTextWriter)" /> chamadas de método de base de <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" /> método. Você pode evitar a substituição de <see cref="M:System.Web.UI.WebControls.Adapters.WebControlAdapter.RenderBeginTag(System.Web.UI.HtmlTextWriter)" /> derivando de <see cref="T:System.Web.UI.HtmlTextWriter" /> classe e substituir <see cref="M:System.Web.UI.HtmlTextWriter.RenderEndTag" />e também possivelmente <see cref="M:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)" />.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

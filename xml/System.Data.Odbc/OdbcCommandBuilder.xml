@@ -1,0 +1,721 @@
+<Type Name="OdbcCommandBuilder" FullName="System.Data.Odbc.OdbcCommandBuilder">
+  <TypeSignature Language="C#" Value="public sealed class OdbcCommandBuilder : System.Data.Common.DbCommandBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcCommandBuilder extends System.Data.Common.DbCommandBuilder" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcCommandBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbCommandBuilder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Gera automaticamente os comandos de tabela única que são usados para reconciliar as alterações feitas em um <see cref="T:System.Data.DataSet" /> com a fonte de dados associada. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcDataAdapter> não gera automaticamente as instruções SQL necessárias para reconciliar as alterações feitas em um <xref:System.Data.DataSet> associado à fonte de dados. No entanto, você pode criar um <xref:System.Data.Odbc.OdbcCommandBuilder> objeto que gera instruções SQL para atualizações de tabela única, definindo o <xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A> propriedade o <xref:System.Data.Odbc.OdbcDataAdapter>. O <xref:System.Data.Odbc.OdbcCommandBuilder> gera qualquer instrução SQL adicional que você não definir.  
+  
+ A relação entre um <xref:System.Data.Odbc.OdbcDataAdapter> e correspondente <xref:System.Data.Odbc.OdbcCommandBuilder> é sempre um para um. Para criar essa correspondência, você deve definir o <xref:System.Data.Odbc.OdbcDataAdapter> propriedade o <xref:System.Data.Odbc.OdbcCommandBuilder> objeto. Isso faz com que o <xref:System.Data.Odbc.OdbcCommandBuilder> para se registrar como um ouvinte, que gera a saída de <xref:System.Data.Odbc.OdbcDataAdapter.RowUpdating> eventos que afetam o <xref:System.Data.DataSet>.  
+  
+ Para gerar instruções INSERT, UPDATE ou DELETE, o <xref:System.Data.Odbc.OdbcCommandBuilder> usa o <xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A> propriedade para recuperar um conjunto necessário de metadados. Se você alterar o valor de <xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A> depois que os metadados são recuperados, como após a primeira atualização, em seguida, você deve chamar o <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> método para atualizar os metadados.  
+  
+> [!NOTE]
+>  Se a instrução SELECT é atribuído para o <xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A> propriedade usa um alias nomes de coluna, o resultante INSERT, UPDATE, e instruções DELETE podem não ser precisas ou falhar. Se o driver ODBC subjacente não pode fornecer o nome da coluna de base apropriado para o nome da coluna alias (usando o valor SQL_DESC_BASE_COLUMN_NAME de `SQLColAttribute`), o nome do alias pode ser usado nas instruções INSERT, UPDATE e DELETE geradas. Por exemplo, o Microsoft ODBC Driver for Oracle retorna o nome do alias como o nome da coluna base. Portanto, as instruções INSERT, UPDATE e DELETE geradas poderia causar erros.  
+  
+ O <xref:System.Data.Odbc.OdbcCommandBuilder> também usa o <xref:System.Data.Odbc.OdbcCommand.Connection%2A>, <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A>, e <xref:System.Data.Odbc.OdbcCommand.Transaction%2A> propriedades referenciada pelo <xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A>. O usuário deve chamar <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se uma ou mais dessas propriedades são modificadas, ou se o valor da <xref:System.Data.Odbc.OdbcDataAdapter.SelectCommand%2A> própria propriedade é alterada. Caso contrário, o <xref:System.Data.Odbc.OdbcDataAdapter.InsertCommand%2A>, <xref:System.Data.Odbc.OdbcDataAdapter.UpdateCommand%2A>, e <xref:System.Data.Odbc.OdbcDataAdapter.DeleteCommand%2A> propriedades retêm os valores anteriores.  
+  
+ Se você chamar <xref:System.ComponentModel.Component.Dispose%2A>, o <xref:System.Data.Odbc.OdbcCommandBuilder> seja desassociado do <xref:System.Data.Odbc.OdbcDataAdapter>, e os comandos gerados não são mais usados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir usa <xref:System.Data.Odbc.OdbcCommand>, junto com <xref:System.Data.Odbc.OdbcDataAdapter> e <xref:System.Data.Odbc.OdbcConnection>, para selecionar linhas de uma fonte de dados. O exemplo é passado uma inicializado <xref:System.Data.DataSet>, uma cadeia de caracteres de conexão, uma cadeia de caracteres de consulta que é uma instrução SQL SELECT e uma cadeia de caracteres que é o nome da tabela de fonte de dados. O exemplo cria um <xref:System.Data.Odbc.OdbcCommandBuilder>.  
+  
+ [!code-csharp[Classic WebData OdbcCommandBuilder#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcCommandBuilder/CS/mysample.cs#1)]
+ [!code-vb[Classic WebData OdbcCommandBuilder#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcCommandBuilder/VB/mysample.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcCommandBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcCommandBuilder" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor base inicializa todos os campos com seus valores padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcCommandBuilder (System.Data.Odbc.OdbcDataAdapter adapter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Data.Odbc.OdbcDataAdapter adapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.#ctor(System.Data.Odbc.OdbcDataAdapter)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="adapter" Type="System.Data.Odbc.OdbcDataAdapter" />
+      </Parameters>
+      <Docs>
+        <param name="adapter">Um <see cref="T:System.Data.Odbc.OdbcDataAdapter" /> objeto para associar a este <see cref="T:System.Data.Odbc.OdbcCommandBuilder" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcCommandBuilder" /> com o objeto <see cref="T:System.Data.Odbc.OdbcDataAdapter" /> associado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcCommandBuilder> se registra como um ouvinte para <xref:System.Data.Odbc.OdbcDataAdapter.RowUpdating> eventos gerados pelo <xref:System.Data.Odbc.OdbcDataAdapter> especificado nesta propriedade.  
+  
+ Quando você cria uma nova instância da <xref:System.Data.Odbc.OdbcCommandBuilder>, qualquer existente <xref:System.Data.Odbc.OdbcCommandBuilder> associado a esta <xref:System.Data.Odbc.OdbcDataAdapter> é liberado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyParameterInfo">
+      <MemberSignature Language="C#" Value="protected override void ApplyParameterInfo (System.Data.Common.DbParameter parameter, System.Data.DataRow datarow, System.Data.StatementType statementType, bool whereClause);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ApplyParameterInfo(class System.Data.Common.DbParameter parameter, class System.Data.DataRow datarow, valuetype System.Data.StatementType statementType, bool whereClause) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.ApplyParameterInfo(System.Data.Common.DbParameter,System.Data.DataRow,System.Data.StatementType,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameter" Type="System.Data.Common.DbParameter" />
+        <Parameter Name="datarow" Type="System.Data.DataRow" />
+        <Parameter Name="statementType" Type="System.Data.StatementType" />
+        <Parameter Name="whereClause" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="parameter">To be added.</param>
+        <param name="datarow">To be added.</param>
+        <param name="statementType">To be added.</param>
+        <param name="whereClause">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataAdapter">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcDataAdapter DataAdapter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Data.Odbc.OdbcDataAdapter DataAdapter" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcCommandBuilder.DataAdapter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcDataAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um <see cref="T:System.Data.Odbc.OdbcDataAdapter" /> objeto para o qual o <see cref="T:System.Data.Odbc.OdbcCommandBuilder" /> objeto irá gerar instruções SQL.</summary>
+        <value>Um <see cref="T:System.Data.Odbc.OdbcDataAdapter" /> objeto que é associado a essa <see cref="T:System.Data.Odbc.OdbcCommandBuilder" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcCommandBuilder> se registra como um ouvinte para <xref:System.Data.Odbc.OdbcDataAdapter.RowUpdating> eventos gerados pelo <xref:System.Data.Odbc.OdbcDataAdapter> especificado nesta propriedade.  
+  
+ Quando você cria uma nova instância da <xref:System.Data.Odbc.OdbcCommandBuilder>, qualquer existente <xref:System.Data.Odbc.OdbcCommandBuilder> associado a esta <xref:System.Data.Odbc.OdbcDataAdapter> é liberado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeriveParameters">
+      <MemberSignature Language="C#" Value="public static void DeriveParameters (System.Data.Odbc.OdbcCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DeriveParameters(class System.Data.Odbc.OdbcCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.DeriveParameters(System.Data.Odbc.OdbcCommand)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Data.Odbc.OdbcCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">O <see cref="T:System.Data.Odbc.OdbcCommand" /> que referencia o procedimento armazenado do qual as informações de parâmetro devem ser derivadas. Os parâmetros derivados são adicionados à coleção <see cref="P:System.Data.Odbc.OdbcCommand.Parameters" /> do <see cref="T:System.Data.Odbc.OdbcCommand" />.</param>
+        <summary>Recupera informações de parâmetro do procedimento armazenado especificado no <see cref="T:System.Data.Odbc.OdbcCommand" /> e popula a coleção <see cref="P:System.Data.Odbc.OdbcCommand.Parameters" /> do objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Data.Odbc.OdbcCommandBuilder.DeriveParameters%2A>substitui quaisquer informações de parâmetro existentes para o <xref:System.Data.Odbc.OdbcCommand>.  
+  
+ <xref:System.Data.Odbc.OdbcCommandBuilder.DeriveParameters%2A>requer uma chamada adicional para a fonte de dados para obter as informações. Se as informações de parâmetro são conhecidas antecipadamente, é mais eficiente para preencher a coleção de parâmetros definindo explicitamente as informações.  
+  
+ Você só pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.DeriveParameters%2A> com procedimentos armazenados. Não é possível usar <xref:System.Data.Odbc.OdbcCommandBuilder.DeriveParameters%2A> para preencher o <xref:System.Data.Odbc.OdbcParameterCollection> com arbitrárias instruções Transact-SQL, como uma instrução SELECT com parâmetros.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O driver ODBC subjacente não oferece suporte a retornar informações de parâmetro de procedimento armazenado, ou o texto do comando não é um nome válido de procedimento armazenado, ou o <see cref="T:System.Data.CommandType" /> especificado não era <see langword="CommandType.StoredProcedure" />.</exception>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetDeleteCommand">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.Odbc.OdbcCommand" /> devem fazer exclusões na fonte de dados de objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> ainda estiver usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetDeleteCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand GetDeleteCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcCommand GetDeleteCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.Odbc.OdbcCommand" /> devem fazer exclusões na fonte de dados de objeto.</summary>
+        <returns>Gerado automaticamente <see cref="T:System.Data.Odbc.OdbcCommand" /> devem fazer exclusões de objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> estará usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeleteCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand GetDeleteCommand (bool useColumnsForParameterNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcCommand GetDeleteCommand(bool useColumnsForParameterNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useColumnsForParameterNames" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useColumnsForParameterNames">Se <see langword="true" />, gerar nomes de parâmetro de correspondência de nomes de coluna, se possível. Se <see langword="false" />, gerar @p1, @p2e assim por diante.</param>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.Odbc.OdbcCommand" /> devem fazer exclusões na fonte de dados de objeto.</summary>
+        <returns>Gerado automaticamente <see cref="T:System.Data.Odbc.OdbcCommand" /> devem fazer exclusões de objeto.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A> estará usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetDeleteCommand%2A>.  
+  
+ O comportamento padrão, ao gerar nomes de parâmetro, é usar @p1, @p2, e assim por diante para os vários parâmetros. Passando `true` para o `useColumnsForParameterNames` parâmetro permite que você force a <xref:System.Data.Odbc.OdbcCommandBuilder> para gerar parâmetros com base nos nomes de coluna em vez disso. Isso é realizada somente se as seguintes condições forem atendidas:  
+  
+-   O <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNameMaxLength> foi especificado, e seu comprimento é igual ou maior que o nome de parâmetro gerado.  
+  
+-   O nome de parâmetro gerado atende aos critérios especificados a <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNamePattern> expressão regular.  
+  
+-   Um <xref:System.Data.Common.DbMetaDataColumnNames.ParameterMarkerFormat> for especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetInsertCommand">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.Odbc.OdbcCommand" /> objeto necessário para executar as inserções na fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> estará usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetInsertCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand GetInsertCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcCommand GetInsertCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.Odbc.OdbcCommand" /> objeto necessário para executar as inserções na fonte de dados.</summary>
+        <returns>O objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> gerado automaticamente necessário para executar inserções.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> ainda estiver usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInsertCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand GetInsertCommand (bool useColumnsForParameterNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcCommand GetInsertCommand(bool useColumnsForParameterNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useColumnsForParameterNames" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useColumnsForParameterNames">Se <see langword="true" />, gerar nomes de parâmetro de correspondência de nomes de coluna, se possível. Se <see langword="false" />, gerar @p1, @p2e assim por diante.</param>
+        <summary>Obtém automaticamente gerado <see cref="T:System.Data.Odbc.OdbcCommand" /> objeto necessário para executar as inserções na fonte de dados.</summary>
+        <returns>O objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> gerado automaticamente necessário para executar inserções.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A> estará usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetInsertCommand%2A>.  
+  
+ O comportamento padrão, ao gerar nomes de parâmetro, é usar @p1, @p2, e assim por diante para os vários parâmetros. Passando `true` para o `useColumnsForParameterNames` parâmetro permite que você force a <xref:System.Data.Common.DbCommandBuilder> para gerar parâmetros com base nos nomes de coluna em vez disso. Isso é realizada somente se as seguintes condições forem atendidas:  
+  
+-   O <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNameMaxLength> foi especificado, e seu comprimento é igual ou maior que o nome de parâmetro gerado.  
+  
+-   O nome de parâmetro gerado atende aos critérios especificados a <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNamePattern> expressão regular.  
+  
+-   Um <xref:System.Data.Common.DbMetaDataColumnNames.ParameterMarkerFormat> for especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterName">
+      <MemberSignature Language="C#" Value="protected override string GetParameterName (int parameterOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParameterName(int32 parameterOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetParameterName(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterOrdinal">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterName">
+      <MemberSignature Language="C#" Value="protected override string GetParameterName (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParameterName(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetParameterName(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameterPlaceholder">
+      <MemberSignature Language="C#" Value="protected override string GetParameterPlaceholder (int parameterOrdinal);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string GetParameterPlaceholder(int32 parameterOrdinal) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetParameterPlaceholder(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterOrdinal" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="parameterOrdinal">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="GetUpdateCommand">
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> gerado automaticamente necessário para realizar atualizações na fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> estará usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="GetUpdateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand GetUpdateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcCommand GetUpdateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém o objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> gerado automaticamente necessário para realizar atualizações na fonte de dados.</summary>
+        <returns>O objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> gerado automaticamente necessário para executar atualizações.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> ainda estiver usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetUpdateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand GetUpdateCommand (bool useColumnsForParameterNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcCommand GetUpdateCommand(bool useColumnsForParameterNames) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="useColumnsForParameterNames" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="useColumnsForParameterNames">Se <see langword="true" />, gerar nomes de parâmetro de correspondência de nomes de coluna, se possível. Se <see langword="false" />, gerar @p1, @p2e assim por diante.</param>
+        <summary>Obtém o objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> gerado automaticamente necessário para realizar atualizações na fonte de dados.</summary>
+        <returns>O objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> gerado automaticamente necessário para executar atualizações.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode usar o <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> fins de método de informação ou solução de problemas, porque retorna a <xref:System.Data.Odbc.OdbcCommand> objeto a ser executado.  
+  
+ Você também pode usar <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> como a base de um comando modificado. Por exemplo, você pode chamar <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> e modificar o <xref:System.Data.Odbc.OdbcCommand.CommandTimeout%2A> valor e, em seguida, definir explicitamente que o <xref:System.Data.Odbc.OdbcDataAdapter>.  
+  
+ Depois que a instrução SQL é gerada pela primeira vez, você deve chamar explicitamente <xref:System.Data.Common.DbCommandBuilder.RefreshSchema%2A> se altera a instrução de forma alguma. Caso contrário, o <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A> ainda estiver usando informações da instrução anterior, que pode não estar correta. As instruções SQL são geradas pela primeira vez quando o aplicativo chama o <xref:System.Data.Common.DbDataAdapter.Update%2A> ou <xref:System.Data.Odbc.OdbcCommandBuilder.GetUpdateCommand%2A>.  
+  
+ O comportamento padrão, ao gerar nomes de parâmetro, é usar @p1, @p2, e assim por diante para os vários parâmetros. Passando `true` para o `useColumnsForParameterNames` parâmetro permite que você force a <xref:System.Data.Common.DbCommandBuilder> para gerar parâmetros com base nos nomes de coluna em vez disso. Isso é realizada somente se as seguintes condições forem atendidas:  
+  
+-   O <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNameMaxLength> foi especificado, e seu comprimento é igual ou maior que o nome de parâmetro gerado.  
+  
+-   O nome de parâmetro gerado atende aos critérios especificados a <xref:System.Data.Common.DbMetaDataColumnNames.ParameterNamePattern> expressão regular.  
+  
+-   Um <xref:System.Data.Common.DbMetaDataColumnNames.ParameterMarkerFormat> for especificado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuoteIdentifier">
+      <MemberSignature Language="C#" Value="public override string QuoteIdentifier (string unquotedIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string QuoteIdentifier(string unquotedIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.QuoteIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unquotedIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="unquotedIdentifier">O identificador original sem aspas.</param>
+        <summary>Dado um identificador sem aspas no caso de catálogo correto, retorna a forma entre aspas correta desse identificador. Isso inclui o uso da sequência de escape correta de quaisquer aspas inseridas no identificador.</summary>
+        <returns>A versão entre aspas do identificador. A sequência de escape das aspas inseridas no identificador está correta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuoteIdentifier">
+      <MemberSignature Language="C#" Value="public string QuoteIdentifier (string unquotedIdentifier, System.Data.Odbc.OdbcConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string QuoteIdentifier(string unquotedIdentifier, class System.Data.Odbc.OdbcConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.QuoteIdentifier(System.String,System.Data.Odbc.OdbcConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unquotedIdentifier" Type="System.String" />
+        <Parameter Name="connection" Type="System.Data.Odbc.OdbcConnection" />
+      </Parameters>
+      <Docs>
+        <param name="unquotedIdentifier">O identificador original sem aspas.</param>
+        <param name="connection">Quando uma conexão for passado, faz com que o wrapper gerenciado obter o caractere de aspas do driver ODBC, chamar SQLGetInfo(SQL_IDENTIFIER_QUOTE_CHAR). Quando nenhuma conexão é passado, a cadeia de caracteres está entre aspas usando valores de <see cref="P:System.Data.Common.DbCommandBuilder.QuotePrefix" /> e <see cref="P:System.Data.Common.DbCommandBuilder.QuoteSuffix" />.</param>
+        <summary>Dado um identificador sem aspas no caso de catálogo correto, retorna a forma entre aspas correta desse identificador. Isso inclui o uso da sequência de escape correta de quaisquer aspas inseridas no identificador.</summary>
+        <returns>A versão entre aspas do identificador. A sequência de escape das aspas inseridas no identificador está correta.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRowUpdatingHandler">
+      <MemberSignature Language="C#" Value="protected override void SetRowUpdatingHandler (System.Data.Common.DbDataAdapter adapter);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetRowUpdatingHandler(class System.Data.Common.DbDataAdapter adapter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.SetRowUpdatingHandler(System.Data.Common.DbDataAdapter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adapter" Type="System.Data.Common.DbDataAdapter" />
+      </Parameters>
+      <Docs>
+        <param name="adapter">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnquoteIdentifier">
+      <MemberSignature Language="C#" Value="public override string UnquoteIdentifier (string quotedIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string UnquoteIdentifier(string quotedIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.UnquoteIdentifier(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quotedIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="quotedIdentifier">O identificador que terá seus removidas as aspas inseridas.</param>
+        <summary>Recebe um identificador entre aspas, retorna a forma sem aspas correta de identificador, incluindo corretamente unescaping quaisquer aspas inseridas no identificador.</summary>
+        <returns>O identificador sem aspas, com aspas inseridas corretamente sem escape.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnquoteIdentifier">
+      <MemberSignature Language="C#" Value="public string UnquoteIdentifier (string quotedIdentifier, System.Data.Odbc.OdbcConnection connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string UnquoteIdentifier(string quotedIdentifier, class System.Data.Odbc.OdbcConnection connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcCommandBuilder.UnquoteIdentifier(System.String,System.Data.Odbc.OdbcConnection)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quotedIdentifier" Type="System.String" />
+        <Parameter Name="connection" Type="System.Data.Odbc.OdbcConnection" />
+      </Parameters>
+      <Docs>
+        <param name="quotedIdentifier">O identificador que terá seus removidas as aspas inseridas.</param>
+        <param name="connection">O <see cref="T:System.Data.Odbc.OdbcConnection" />.</param>
+        <summary>Recebe um identificador entre aspas, retorna a forma sem aspas correta de identificador, incluindo corretamente unescaping quaisquer aspas inseridas no identificador.</summary>
+        <returns>O identificador sem aspas, com aspas inseridas corretamente sem escape.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

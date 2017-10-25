@@ -1,0 +1,491 @@
+<Type Name="IPInterfaceStatistics" FullName="System.Net.NetworkInformation.IPInterfaceStatistics">
+  <TypeSignature Language="C#" Value="public abstract class IPInterfaceStatistics" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit IPInterfaceStatistics extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Net.NetworkInformation.IPInterfaceStatistics" />
+  <AssemblyInfo>
+    <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece dados estatísticos de protocolo IP para um adaptador de rede no computador local.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe é usada pelo <xref:System.Net.NetworkInformation.NetworkInterface.GetIPStatistics%2A> método para retornar informações de tráfego de rede para uma interface.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected IPInterfaceStatistics ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Net.NetworkInformation.IPInterfaceStatistics.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Net.NetworkInformation.IPInterfaceStatistics" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este construtor pode ser chamado somente por classes que derivam de <xref:System.Net.NetworkInformation.IPInterfaceStatistics>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BytesReceived">
+      <MemberSignature Language="C#" Value="public abstract long BytesReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.BytesReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bytes que foram recebidos na interface.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de bytes que foram recebidos na interface.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BytesSent">
+      <MemberSignature Language="C#" Value="public abstract long BytesSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 BytesSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.BytesSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de bytes enviados na interface.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de bytes enviados na interface.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingPacketsDiscarded">
+      <MemberSignature Language="C#" Value="public abstract long IncomingPacketsDiscarded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 IncomingPacketsDiscarded" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.IncomingPacketsDiscarded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes de entrada que foram descartados.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes de entrada que foram descartados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados não incluem pacotes com erros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingPacketsWithErrors">
+      <MemberSignature Language="C#" Value="public abstract long IncomingPacketsWithErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 IncomingPacketsWithErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.IncomingPacketsWithErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes de entrada com erros.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes de entrada com erros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados não incluem pacotes sem erros que foram descartados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingUnknownProtocolPackets">
+      <MemberSignature Language="C#" Value="public abstract long IncomingUnknownProtocolPackets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 IncomingUnknownProtocolPackets" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.IncomingUnknownProtocolPackets" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes de entrada com um protocolo desconhecido que foram recebidos na interface.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes de entrada com um protocolo desconhecido que foram recebidos na interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados refletem os pacotes que foram descartados porque o identificador de protocolo no cabeçalho do pacote não foi reconhecido.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonUnicastPacketsReceived">
+      <MemberSignature Language="C#" Value="public abstract long NonUnicastPacketsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 NonUnicastPacketsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.NonUnicastPacketsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes não unicast recebidas na interface.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes não unicast de entrada recebidos na interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pacotes com endereços unicast são entregues a uma única interface. Pacotes com endereços unicast não podem ser entregues a várias interfaces. Endereços de multicast e de difusão, difusão, são tipos de endereços não unicast.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonUnicastPacketsSent">
+      <MemberSignature Language="C#" Value="public abstract long NonUnicastPacketsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 NonUnicastPacketsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.NonUnicastPacketsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes não unicast que foram enviadas na interface.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes não unicast que foram enviadas na interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pacotes com endereços unicast são entregues a uma única interface. Pacotes com endereços unicast não podem ser entregues a várias interfaces. Endereços de multicast e de difusão, difusão, são tipos de endereços não unicast.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingPacketsDiscarded">
+      <MemberSignature Language="C#" Value="public abstract long OutgoingPacketsDiscarded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 OutgoingPacketsDiscarded" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.OutgoingPacketsDiscarded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes de saída que foram descartados.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes de saída que foram descartados.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados não incluem pacotes de saída com erros.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingPacketsWithErrors">
+      <MemberSignature Language="C#" Value="public abstract long OutgoingPacketsWithErrors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 OutgoingPacketsWithErrors" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.OutgoingPacketsWithErrors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes de saída com erros.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes de saída com erros.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esses dados não incluem pacotes sem erros que foram descartados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputQueueLength">
+      <MemberSignature Language="C#" Value="public abstract long OutputQueueLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 OutputQueueLength" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.OutputQueueLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o comprimento da fila de saída.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes na fila de saída.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnicastPacketsReceived">
+      <MemberSignature Language="C#" Value="public abstract long UnicastPacketsReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 UnicastPacketsReceived" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.UnicastPacketsReceived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes unicast recebidas na interface.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes unicast recebidas na interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pacotes com endereços unicast são entregues a uma única interface. Pacotes com endereços unicast não podem ser entregues a várias interfaces. Endereços de multicast e de difusão, difusão, são tipos de endereços não unicast.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnicastPacketsSent">
+      <MemberSignature Language="C#" Value="public abstract long UnicastPacketsSent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 UnicastPacketsSent" />
+      <MemberSignature Language="DocId" Value="P:System.Net.NetworkInformation.IPInterfaceStatistics.UnicastPacketsSent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Net.NetworkInformation</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de pacotes unicast que foram enviadas na interface.</summary>
+        <value>Retorna <see cref="T:System.Int64" />.  
+  
+ O número total de pacotes unicast que foram enviadas na interface.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Pacotes com endereços unicast são entregues a uma única interface. Pacotes com endereços unicast não podem ser entregues a várias interfaces. Endereços de multicast e de difusão, difusão, são tipos de endereços não unicast.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

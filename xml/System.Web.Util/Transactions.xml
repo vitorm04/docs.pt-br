@@ -1,0 +1,93 @@
+<Type Name="Transactions" FullName="System.Web.Util.Transactions">
+  <TypeSignature Language="C#" Value="public class Transactions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Transactions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Util.Transactions" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma maneira para encapsular um método de retorno de chamada dentro de um limite de transação.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Transactions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.Transactions.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Util.Transactions" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransacted">
+      <MemberSignature Language="C#" Value="public static void InvokeTransacted (System.Web.Util.TransactedCallback callback, System.EnterpriseServices.TransactionOption mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransacted(class System.Web.Util.TransactedCallback callback, valuetype System.EnterpriseServices.TransactionOption mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.Transactions.InvokeTransacted(System.Web.Util.TransactedCallback,System.EnterpriseServices.TransactionOption)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.Util.TransactedCallback" />
+        <Parameter Name="mode" Type="System.EnterpriseServices.TransactionOption" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O <see cref="T:System.Web.Util.TransactedCallback" /> deve ser executado com o suporte de transação especificada.</param>
+        <param name="mode">O <see cref="T:System.EnterpriseServices.TransactionOption" /> que especifica o suporte a transações do representante.</param>
+        <summary>Encapsula um suporte de transação especificada em torno de um método de retorno de chamada.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.Web.HttpException">O código transacionado não pode ser executado.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InvokeTransacted">
+      <MemberSignature Language="C#" Value="public static void InvokeTransacted (System.Web.Util.TransactedCallback callback, System.EnterpriseServices.TransactionOption mode, ref bool transactionAborted);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void InvokeTransacted(class System.Web.Util.TransactedCallback callback, valuetype System.EnterpriseServices.TransactionOption mode, bool&amp; transactionAborted) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Util.Transactions.InvokeTransacted(System.Web.Util.TransactedCallback,System.EnterpriseServices.TransactionOption,System.Boolean@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Web.Util.TransactedCallback" />
+        <Parameter Name="mode" Type="System.EnterpriseServices.TransactionOption" />
+        <Parameter Name="transactionAborted" Type="System.Boolean&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="callback">O <see cref="T:System.Web.Util.TransactedCallback" /> deve ser executado com o suporte de transação especificada.</param>
+        <param name="mode">O <see cref="T:System.EnterpriseServices.TransactionOption" /> que especifica o suporte a transações do representante.</param>
+        <param name="transactionAborted">O parâmetro de referência que retorna <see langword="true" /> se a transação foi anulada durante o método de retorno de chamada; caso contrário, <see langword="false" />.</param>
+        <summary>Encapsula um suporte de transação especificada em torno de um método de retorno de chamada e indica se a transação foi anulada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `transactionAborted` parâmetro indica o resultado da chamada de retorno transacionado que você está invocando.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">O sistema operacional não é o Windows NT ou posterior.</exception>
+        <exception cref="T:System.Web.HttpException">O código transacionado não pode ser executado.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

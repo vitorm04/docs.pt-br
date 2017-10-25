@@ -1,0 +1,192 @@
+<Type Name="MultidimensionalArrayItemReference&lt;TItem&gt;" FullName="System.Activities.Expressions.MultidimensionalArrayItemReference&lt;TItem&gt;">
+  <TypeSignature Language="C#" Value="public sealed class MultidimensionalArrayItemReference&lt;TItem&gt; : System.Activities.CodeActivity&lt;System.Activities.Location&lt;TItem&gt;&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MultidimensionalArrayItemReference`1&lt;TItem&gt; extends System.Activities.CodeActivity`1&lt;class System.Activities.Location`1&lt;!TItem&gt;&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TItem" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Activities.CodeActivity&lt;System.Activities.Location&lt;TItem&gt;&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TResult">System.Activities.Location&lt;TItem&gt;</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Windows.Markup.ContentProperty("Indices")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="TItem">O tipo dos elementos na matriz.</typeparam>
+    <summary>Representa um elemento em uma matriz multidimensional que pode ser usado como um l-value em uma expressão.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O seguinte exemplo de código usa <xref:System.Activities.Expressions.MultidimensionalArrayItemReference%601> em um `Assign` atividade para atribuir um valor inteiro para o elemento da matriz na linha 1 e 2 da coluna e imprime o valor do elemento da matriz para o console. O `Assign` atividade é equivalente à instrução a seguir ao usar matrizes: `array[1, 2] = 1;`.  
+  
+> [!NOTE]
+>  Em vez de criar uma instância de <xref:System.Activities.Expressions.MultidimensionalArrayItemReference%601> atividade de expressão de valor de l diretamente, é altamente recomendável que você chamar <xref:System.Activities.Expressions.ExpressionServices.ConvertReference%2A>, que fornece um nível mais alto de abstração e permite que você implemente seu fluxo de trabalho de maneira mais intuitiva.  
+  
+```  
+  
+public static void MultidimensionalArrayItemReferenceSample()  
+{  
+    // Create a variable to store a multidimensional array.  
+    var arrayvar = new Variable<int[,]>("arrayvar", new int[4, 5]);  
+  
+    Activity myActivity = new Sequence  
+    {  
+        Variables = { arrayvar },  
+        Activities =   
+        {                      
+            // Create an Assign activity to assign a value to the array item at index [1,2].  
+            new Assign<int>  
+            {  
+                To = new MultidimensionalArrayItemReference<int>  
+                {  
+                    Array = arrayvar,  
+                    Indices = {1, 2}  
+                },  
+                // Assign an integer value to the array item at row 1 column 2.  
+                Value = 1,  
+            },  
+            // Print the array item value to the console.  
+            new WriteLine()  
+            {  
+                Text = ExpressionServices.Convert<string>(ctx => arrayvar.Get(ctx)[1, 2].ToString()),  
+            }  
+        }  
+    };  
+  
+    // Invoke the Sequence activity.  
+    WorkflowInvoker.Invoke(myActivity);  
+}  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultidimensionalArrayItemReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.MultidimensionalArrayItemReference`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Array">
+      <MemberSignature Language="C#" Value="public System.Activities.InArgument&lt;Array&gt; Array { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Activities.InArgument`1&lt;class System.Array&gt; Array" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.MultidimensionalArrayItemReference`1.Array" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Activities.RequiredArgument</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Activities.InArgument&lt;System.Array&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a matriz referenciada pelo <see cref="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />.</summary>
+        <value>A matriz referenciada pelo <see cref="T:System.Activities.Expressions.MultidimensionalArrayItemReference`1" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMetadata">
+      <MemberSignature Language="C#" Value="protected override void CacheMetadata (System.Activities.CodeActivityMetadata metadata);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CacheMetadata(valuetype System.Activities.CodeActivityMetadata metadata) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.MultidimensionalArrayItemReference`1.CacheMetadata(System.Activities.CodeActivityMetadata)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="metadata" Type="System.Activities.CodeActivityMetadata" />
+      </Parameters>
+      <Docs>
+        <param name="metadata">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override System.Activities.Location&lt;TItem&gt; Execute (System.Activities.CodeActivityContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Activities.Location`1&lt;!TItem&gt; Execute(class System.Activities.CodeActivityContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Expressions.MultidimensionalArrayItemReference`1.Execute(System.Activities.CodeActivityContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Activities.Location&lt;TItem&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Activities.CodeActivityContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Indices">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Activities.InArgument&lt;int&gt;&gt; Indices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class System.Activities.InArgument`1&lt;int32&gt;&gt; Indices" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Expressions.MultidimensionalArrayItemReference`1.Indices" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Activities.InArgument&lt;System.Int32&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de argumentos que representam os índices do elemento na matriz.</summary>
+        <value>Os índices do elemento na matriz.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Activities.Expressions.MultidimensionalArrayItemReference%601.Indices%2A> propriedade é somente leitura, mas os itens na coleção podem ser modificados e os índices podem ser alterados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

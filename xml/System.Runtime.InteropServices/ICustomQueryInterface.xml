@@ -1,0 +1,103 @@
+<Type Name="ICustomQueryInterface" FullName="System.Runtime.InteropServices.ICustomQueryInterface">
+  <TypeSignature Language="C#" Value="public interface ICustomQueryInterface" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICustomQueryInterface" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ICustomQueryInterface" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.1.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Os desenvolvedores podem fornecer uma implementação personalizada gerenciada do [IUnknown:: QueryInterface (REFIID riid, void * * ppvObject)](http://go.microsoft.com/fwlink/?LinkID=144867) método.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe permite que os usuários avançados para fornecer uma implementação personalizada gerenciada do `QueryInterface` método.  
+  
+ Gerenciado e aplicativos nativos podem usar a implementação personalizada para retornar uma interface específica para uma ID de interface especificado, exceto IID_IUnknown. Ou seja, quando `QueryInterface` é chamado, ele irá ignorar implementações personalizadas que seu `riid` parâmetro for definido como IID_IUnknown. No entanto, você ainda pode retornar [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) como o `ppvObject`.  
+  
+ Os desenvolvedores podem fornecer implementações personalizadas de todas as interfaces (exceto para `IUnknown`) se eles definir e implementar uma interface correspondente válida.  
+  
+ Uma interface válida definida pelo usuário tem um layout de tabela v que corresponda a interface COM não gerenciada, e sua <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> é <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetInterface">
+      <MemberSignature Language="C#" Value="public System.Runtime.InteropServices.CustomQueryInterfaceResult GetInterface (ref Guid iid, out IntPtr ppv);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Runtime.InteropServices.CustomQueryInterfaceResult GetInterface([in]valuetype System.Guid&amp; iid, [out] native int&amp; ppv) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ICustomQueryInterface.GetInterface(System.Guid@,System.IntPtr@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.1.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.InteropServices.CustomQueryInterfaceResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="iid" Type="System.Guid&amp;" RefType="ref" />
+        <Parameter Name="ppv" Type="System.IntPtr&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="iid">O GUID da interface solicitada.</param>
+        <param name="ppv">Uma referência para a interface solicitada, quando este método retorna.</param>
+        <summary>Retorna uma interface de acordo com uma ID de interface especificado.</summary>
+        <returns>Um dos valores de enumeração que indica se uma implementação personalizada de [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) foi usado.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um aplicativo pode usar código gerenciado para especificar sua própria implementação de interfaces personalizados e do tempo de execução padrão.  
+  
+ O <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult> retornar o valor pode ser usado para habilitar ou desabilitar implementações personalizadas mostrando ou ocultando interfaces específicas durante o acesso de COM.  
+  
+ Esse método é invisível para COM.  
+  
+ ]]></format>
+        </remarks>
+        <permission cref="T:System.Security.SecurityCriticalAttribute">requer confiança total para o chamador imediato. Este membro não pode ser usado pelo código transparente ou parcialmente confiável.</permission>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,35 @@
+<Type Name="IDesignTimeResourceProviderFactoryService" FullName="System.Web.UI.Design.IDesignTimeResourceProviderFactoryService">
+  <TypeSignature Language="C#" Value="public interface IDesignTimeResourceProviderFactoryService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignTimeResourceProviderFactoryService" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.Design.IDesignTimeResourceProviderFactoryService" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece uma interface para criar um personalizado <see cref="T:System.Web.UI.Design.DesignTimeResourceProviderFactory" /> classe.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetFactory">
+      <MemberSignature Language="C#" Value="public System.Web.UI.Design.DesignTimeResourceProviderFactory GetFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Web.UI.Design.DesignTimeResourceProviderFactory GetFactory() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.Design.IDesignTimeResourceProviderFactoryService.GetFactory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.Design.DesignTimeResourceProviderFactory</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um objeto <see cref="T:System.Web.UI.Design.DesignTimeResourceProviderFactory" />.</summary>
+        <returns>Uma fábrica de provedor de recursos de tempo de design.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

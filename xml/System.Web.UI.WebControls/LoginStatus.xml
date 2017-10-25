@@ -1,0 +1,712 @@
+<Type Name="LoginStatus" FullName="System.Web.UI.WebControls.LoginStatus">
+  <TypeSignature Language="C#" Value="public class LoginStatus : System.Web.UI.WebControls.CompositeControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LoginStatus extends System.Web.UI.WebControls.CompositeControl" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.LoginStatus" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.CompositeControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("LoggingOut")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer("System.Web.UI.Design.WebControls.LoginStatusDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Detecta o estado de autenticação do usuário e alterna o estado de um link para fazer logon no ou logoff em um site da Web.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Neste tópico:  
+  
+-   [Introdução](#introduction)  
+  
+-   [Sintaxe declarativa](#declarative_syntax)  
+  
+<a name="introduction"></a>   
+## <a name="introduction"></a>Introdução  
+ O <xref:System.Web.UI.WebControls.LoginStatus> controle tem dois estados, conectado ao site da Web e registrado fora do site da Web, determinado pelo <xref:System.Web.HttpRequest.IsAuthenticated%2A> propriedade o <xref:System.Web.UI.Page> do objeto <xref:System.Web.UI.Page.Request%2A> propriedade.  
+  
+ O <xref:System.Web.UI.WebControls.LoginStatus> controle exibe um texto ou um link de imagem, dependendo da configuração do <xref:System.Web.UI.WebControls.LoginStatus.LoginImageUrl%2A> e <xref:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl%2A> propriedades. Você pode exibir texto ou imagens para um ou ambos os estados.  
+  
+> [!NOTE]
+>  Se você não estiver familiarizado com o conjunto de controles de logon disponíveis no ASP.NET, consulte [visão geral dos controles de logon ASP.NET](http://msdn.microsoft.com/library/ac032230-6469-4b03-b68d-03ef2643a24d) antes de continuar. Para obter uma lista de outros tópicos relacionados a controles de logon e associação, consulte [Gerenciando usuários com o uso de associações](http://msdn.microsoft.com/library/824c3a24-f0af-427c-a652-0d2d1e9397cd).  
+  
+ Quando um usuário não estiver conectado ao site, o <xref:System.Web.UI.WebControls.LoginStatus> controle fornece um link para a página de logon definido nas configurações de aplicativo. Quando o usuário está conectado ao site da Web, o <xref:System.Web.UI.WebControls.LoginStatus> controle fornece um link para fazer logoff de site da Web. Fazer logoff do site da Web limpa o status de autenticação do usuário e ao uso de cookies limpará o cookie do computador cliente do usuário. Em qualquer subsequente visita ao site da Web, o <xref:System.Web.UI.WebControls.LoginStatus> controle exibirá o prompt para fazer logon.  
+  
+ O comportamento de logout é controlado pelo <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A> propriedade, que especifica se deseja atualizar a página atual, redirecionará o usuário para a página de logon definida nas configurações de aplicativo ou redirecionar o usuário para uma página especificada pelo <xref:System.Web.UI.WebControls.LoginStatus.LogoutPageUrl%2A> propriedade. O padrão é atualizar a página atual.  
+  
+> [!NOTE]
+>  Quando um usuário utiliza o <xref:System.Web.UI.WebControls.LoginStatus> controlar para sair de um site da Web, todos os dados presentes na exibição de estado e todos os dados de postagem é perdida.  
+  
+<a name="declarative_syntax"></a>   
+## <a name="declarative-syntax"></a>Sintaxe declarativa  
+  
+```  
+<asp:LoginStatus  
+    AccessKey="string"  
+    BackColor="color name|#dddddd"  
+    BorderColor="color name|#dddddd"  
+    BorderStyle="NotSet|None|Dotted|Dashed|Solid|Double|Groove|Ridge|  
+                 Inset|Outset"  
+    BorderWidth="size"  
+    CssClass="string"  
+    Enabled="True|False"  
+    EnableTheming="True|False"  
+    EnableViewState="True|False"  
+    Font-Bold="True|False"  
+    Font-Italic="True|False"  
+    Font-Names="string"  
+    Font-Overline="True|False"  
+    Font-Size="string|Smaller|Larger|XX-Small|X-Small|Small|Medium|  
+               Large|X-Large|XX-Large"  
+    Font-Strikeout="True|False"  
+    Font-Underline="True|False"  
+    ForeColor="color name|#dddddd"  
+    Height="size"  
+    ID="string"  
+    LoginImageUrl="uri"  
+    LoginText="string"  
+    LogoutAction="Refresh|Redirect|RedirectToLoginPage"  
+    LogoutImageUrl="uri"  
+    LogoutPageUrl="uri"  
+    LogoutText="string"  
+    OnDataBinding="DataBinding event handler"  
+    OnDisposed="Disposed event handler"  
+    OnInit="Init event handler"  
+    OnLoad="Load event handler"  
+    OnLoggedOut="LoggedOut event handler"  
+    OnLoggingOut="LoggingOut event handler"  
+    OnPreRender="PreRender event handler"  
+    OnUnload="Unload event handler"  
+    runat="server"  
+    SkinID="string"  
+    Style="string"  
+    TabIndex="integer"  
+    ToolTip="string"  
+    Visible="True|False"  
+    Width="size"  
+/>  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoginStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.WebControls.LoginStatus" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria os controles que compõem o filho de <see cref="T:System.Web.UI.WebControls.LoginStatus" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é usado principalmente por desenvolvedores de controle ao derivar um controle personalizado do <xref:System.Web.UI.WebControls.LoginStatus> classe.  
+  
+ Este método é chamado pela infraestrutura do ASP.NET para notificar os controles que usam a implementação baseada em composição, incluindo controles que derivam de <xref:System.Web.UI.WebControls.CompositeDataBoundControl> e <xref:System.Web.UI.WebControls.CompositeControl>, para criar qualquer filho que eles contêm os controles na preparação de postback ou de renderização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggedOut">
+      <MemberSignature Language="C#" Value="public event EventHandler LoggedOut;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler LoggedOut" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LoginStatus.LoggedOut" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gerado depois que o usuário clica no link de logoff e o processo de logout é concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LoggedOut> é gerado no servidor depois que o usuário clica no link de logoff e o processo de logout estiver concluído.  
+  
+ Quando o usuário clica no link de logoff, o <xref:System.Web.UI.WebControls.LoginStatus.LoggingOut> é gerado, em seguida, o processo de logoff é executado e, finalmente, o <xref:System.Web.UI.WebControls.LoginStatus.LoggedOut> é gerado.  
+  
+ Use o <xref:System.Web.UI.WebControls.LoginStatus.LoggedOut> dados em cache de eventos para fornecer processamento como limpeza de conexões de banco de dados ou remover por usuário adicional após o usuário fizer logon fora de um site da Web. A identidade do usuário ainda está disponível enquanto o <xref:System.Web.UI.WebControls.LoginStatus.LoggedOut> evento está em execução. Se o manipulador para o <xref:System.Web.UI.WebControls.LoginStatus.LoggedOut> evento redireciona o navegador do cliente para outra página, o cookie de autenticação do cliente será limpo.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir anexa um manipulador de eventos para o <xref:System.Web.UI.WebControls.LoginStatus.LoggedOut> evento. Neste exemplo, o manipulador de eventos está vazio.  
+  
+ [!code-aspx-csharp[LoginStatusAfterLogout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusAfterLogout/CS/loginstatusafterlogoutcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusAfterLogout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusAfterLogout/VB/loginstatusafterlogoutvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggingOut">
+      <MemberSignature Language="C#" Value="public event System.Web.UI.WebControls.LoginCancelEventHandler LoggingOut;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Web.UI.WebControls.LoginCancelEventHandler LoggingOut" />
+      <MemberSignature Language="DocId" Value="E:System.Web.UI.WebControls.LoginStatus.LoggingOut" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LoginCancelEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Acionado quando o usuário clica no botão de logoff.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LoggingOut> é gerado no servidor quando o usuário clica no link de logoff. O processo de logoff não ocorrerá até depois deste evento, e informações de usuário ainda estão disponíveis.  
+  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LoggingOut> evento permite que você cancelar o processo de logoff, se o usuário deve concluir uma atividade antes de sair do site, como itens em um carrinho de compras ou enviar alterações para um banco de dados. Você pode cancelar o <xref:System.Web.UI.WebControls.LoginStatus.LoggingOut> evento definindo o <xref:System.Web.UI.WebControls.LoginCancelEventArgs.Cancel%2A> propriedade o <xref:System.Web.UI.WebControls.LoginCancelEventArgs> parâmetro para `true`.  
+  
+ Use o <xref:System.Web.UI.WebControls.LoginStatus.LoggingOut> evento para fornecer processamento adicional, como limpar dados por usuário, antes que um usuário faz logoff de um site.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir anexa um manipulador de eventos para o <xref:System.Web.UI.WebControls.LoginStatus.LoggingOut> evento. O manipulador de eventos atualiza um campo no formulário e, em seguida, cancela a tentativa de logout.  
+  
+ [!code-aspx-csharp[LoginStatusBeforeLogout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusBeforeLogout/CS/loginstatusbeforelogoutcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusBeforeLogout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusBeforeLogout/VB/loginstatusbeforelogoutvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string LoginImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoginImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginStatus.LoginImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da imagem usada para o link de logon.</summary>
+        <value>Uma cadeia de caracteres que contém a URL da imagem usada para o link de logon. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LoginImageUrl%2A> propriedade contém o local da imagem usada para o link de logon. O <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> propriedade é usada como o texto alternativo para a imagem.  
+  
+ Se <xref:System.Web.UI.WebControls.LoginStatus.LoginImageUrl%2A> estiver vazia, o <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> propriedade é processada como o link.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir o <xref:System.Web.UI.WebControls.LoginStatus.LoginImageUrl%2A> propriedade para uma imagem específica.  
+  
+ [!code-aspx-csharp[LoginStatusLoginImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusLoginImageUrl/CS/loginstatusloginimageurlcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusLoginImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusLoginImageUrl/VB/loginstatusloginimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginText">
+      <MemberSignature Language="C#" Value="public virtual string LoginText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoginText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginStatus.LoginText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto usado para o link de logon.</summary>
+        <value>Uma cadeia de caracteres exibida como o link de logon. O padrão é “Login”.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> propriedade é exibida como o texto do link quando o <xref:System.Web.UI.WebControls.LoginStatus.LoginImageUrl%2A> propriedade está vazia.  
+  
+ Quando o <xref:System.Web.UI.WebControls.LoginStatus.LoginImageUrl%2A> propriedade contém um link, o <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> propriedade é usada como o texto alternativo para a imagem.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir o <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginStatusLoginText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusLoginText/CS/loginstatuslogintextcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusLoginText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusLoginText/VB/loginstatuslogintextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogoutAction">
+      <MemberSignature Language="C#" Value="public virtual System.Web.UI.WebControls.LogoutAction LogoutAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.WebControls.LogoutAction LogoutAction" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginStatus.LogoutAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.WebControls.LogoutAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que determina a ação executada quando um usuário faz logoff de um site com o controle <see cref="T:System.Web.UI.WebControls.LoginStatus" />.</summary>
+        <value>Um dos valores de <see cref="T:System.Web.UI.WebControls.LogoutAction" />. O padrão é <see cref="F:System.Web.UI.WebControls.LogoutAction.Refresh" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A> propriedade determina qual página é apresentada ao usuário quando ele faz logoff usando o <xref:System.Web.UI.WebControls.LoginStatus> controle.  
+  
+ A tabela a seguir descreve as ações executadas para cada <xref:System.Web.UI.WebControls.LogoutAction> valor.  
+  
+|Valor <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A>|Ação realizada|  
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
+|<xref:System.Web.UI.WebControls.LogoutAction.Redirect>|Redireciona o usuário para o URL contida no <xref:System.Web.UI.WebControls.LoginStatus.LogoutPageUrl%2A> propriedade. Se <xref:System.Web.UI.WebControls.LoginStatus.LogoutPageUrl%2A> estiver vazia, o usuário é redirecionado para a página de logon definida nas configurações de aplicativo.|  
+|<xref:System.Web.UI.WebControls.LogoutAction.RedirectToLoginPage>|Redireciona o usuário para a página de logon definida nas configurações de aplicativo.|  
+|<xref:System.Web.UI.WebControls.LogoutAction.Refresh>|Atualiza a página atual.|  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A> propriedade para o <xref:System.Web.UI.WebControls.LogoutAction.RedirectToLoginPage> valor a ser enviado ao usuário para a página de logon.  
+  
+ [!code-aspx-csharp[LoginStatusLogoutAction#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusLogoutAction/CS/loginstatuslogoutactioncs.aspx#1)]
+ [!code-aspx-vb[LoginStatusLogoutAction#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusLogoutAction/VB/loginstatuslogoutactionvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade é definida com um valor <see cref="T:System.Web.UI.WebControls.LogoutAction" /> inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LogoutImageUrl">
+      <MemberSignature Language="C#" Value="public virtual string LogoutImageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogoutImageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da imagem usada no botão de logoff.</summary>
+        <value>Uma cadeia de caracteres que contém a URL da imagem usada para o link de logoff. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl%2A> propriedade contém o local da imagem usada para o link de logoff. O <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> propriedade é usada como o texto alternativo para a imagem em navegadores.  
+  
+ Se <xref:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl%2A> estiver vazia, o <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> propriedade é processada como o link.  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl%2A> propriedade para uma imagem específica.  
+  
+ [!code-aspx-csharp[LoginStatusLogoutImageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusLogoutImageUrl/CS/loginstatuslogoutimageurlcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusLogoutImageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusLogoutImageUrl/VB/loginstatuslogoutimageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogoutPageUrl">
+      <MemberSignature Language="C#" Value="public virtual string LogoutPageUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogoutPageUrl" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginStatus.LogoutPageUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("System.Web.UI.Design.UrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.UrlProperty</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a URL da página de logoff.</summary>
+        <value>Uma cadeia de caracteres que contém a URL da página de logout. O padrão é <see cref="F:System.String.Empty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A> está definida como <xref:System.Web.UI.WebControls.LogoutAction.Redirect>, o usuário é redirecionado para a URL contida em <xref:System.Web.UI.WebControls.LoginStatus.LogoutPageUrl%2A>.  
+  
+ Se <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A> é definido como qualquer outro valor, o conteúdo do <xref:System.Web.UI.WebControls.LoginStatus.LogoutPageUrl%2A> são ignoradas.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+   
+  
+## Examples  
+ O seguinte exemplo de código define o <xref:System.Web.UI.WebControls.LoginStatus.LogoutPageUrl%2A> propriedade a uma página de logout e a <xref:System.Web.UI.WebControls.LoginStatus.LogoutAction%2A> propriedade <xref:System.Web.UI.WebControls.LogoutAction.Redirect> para que o usuário é redirecionado quando o logout.  
+  
+ [!code-aspx-csharp[LoginStatusLogoutPageUrl#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusLogoutPageUrl/CS/loginstatuslogoutpageurlcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusLogoutPageUrl#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusLogoutPageUrl/VB/loginstatuslogoutpageurlvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogoutText">
+      <MemberSignature Language="C#" Value="public virtual string LogoutText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LogoutText" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginStatus.LogoutText" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto usado para o link de logoff.</summary>
+        <value>Uma cadeia de caracteres exibida como o link de logoff. O padrão é "Logoff".</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> propriedade é exibida quando o <xref:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl%2A> propriedade está vazia.  
+  
+ Quando o <xref:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl%2A> propriedade contém um link, o <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> propriedade é usada como o texto alternativo para a imagem em navegadores que não oferecem suporte a imagens.  
+  
+ O valor dessa propriedade, quando definido, podem ser salvos automaticamente em um arquivo de recurso usando uma ferramenta de designer. Para obter mais informações, consulte <xref:System.ComponentModel.LocalizableAttribute> e [globalização e localização](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como definir o <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> propriedade.  
+  
+ [!code-aspx-csharp[LoginStatusLogoutText#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusLogoutText/CS/loginstatuslogouttextcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusLogoutText#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusLogoutText/VB/loginstatuslogouttextvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoggedOut">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoggedOut (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoggedOut(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.OnLoggedOut(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Gera o evento <see cref="E:System.Web.UI.WebControls.LoginStatus.LoggedOut" /> depois de o usuário clicar no link de logoff e o processo de logoff ser concluído.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.LoginStatus.LoggedOut> evento para fornecer processamento adicional, como fechar conexões de banco de dados ou limpeza por usuário dados armazenados em cache, depois que o usuário fez fora de um site da Web.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: consumindo eventos](http://msdn.microsoft.com/en-us/01e4f1bc-e55e-413f-98c7-6588493e5f67). A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [NIB: gerar um evento](http://msdn.microsoft.com/en-us/f2adaf01-1ed1-42e1-8c31-8d467e7e0ee2).  
+  
+ O <xref:System.Web.UI.WebControls.LoginStatus.OnLoggedOut%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir anexa um manipulador de eventos para o <xref:System.Web.UI.WebControls.LoginStatus.OnLoggedOut%2A> evento. Neste exemplo, o manipulador de eventos está vazio.  
+  
+ [!code-aspx-csharp[LoginStatusAfterLogout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusAfterLogout/CS/loginstatusafterlogoutcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusAfterLogout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusAfterLogout/VB/loginstatusafterlogoutvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LoginStatus.OnLoggedOut(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LoginStatus.OnLoggedOut(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnLoggingOut">
+      <MemberSignature Language="C#" Value="protected virtual void OnLoggingOut (System.Web.UI.WebControls.LoginCancelEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLoggingOut(class System.Web.UI.WebControls.LoginCancelEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.OnLoggingOut(System.Web.UI.WebControls.LoginCancelEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.Web.UI.WebControls.LoginCancelEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.Web.UI.WebControls.LoginCancelEventArgs" /> que contém dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Web.UI.WebControls.LoginStatus.LoggingOut" /> quando um usuário clica no link de logoff no controle <see cref="T:System.Web.UI.WebControls.LoginStatus" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Web.UI.WebControls.LoginStatus.LoggingOut> evento para fornecer processamento adicional, como limpeza de dados por usuário, antes que um usuário faz logoff de um site. O <xref:System.Web.UI.WebControls.LoginStatus.OnLoggingOut%2A> evento pode ser cancelado, portanto você pode fornecer ao usuário a opção de salvar os dados como um carrinho de compras ou alterações de banco de dados antes de sair do site.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ O <xref:System.Web.UI.WebControls.LoginStatus.OnLoggingOut%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir anexa um manipulador de eventos para o <xref:System.Web.UI.WebControls.LoginStatus.OnLoggingOut%2A> evento. O manipulador de eventos atualiza um campo no formulário e, em seguida, cancela a tentativa de logout.  
+  
+ [!code-aspx-csharp[LoginStatusBeforeLogout#1](~/samples/snippets/csharp/VS_Snippets_WebNet/LoginStatusBeforeLogout/CS/loginstatusbeforelogoutcs.aspx#1)]
+ [!code-aspx-vb[LoginStatusBeforeLogout#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/LoginStatusBeforeLogout/VB/loginstatusbeforelogoutvb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LoginStatus.OnLoggingOut(System.Web.UI.WebControls.LoginCancelEventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LoginStatus.OnLoggingOut(System.Web.UI.WebControls.LoginCancelEventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados de evento.</param>
+        <summary>Determina se um usuário está conectado e obtém a URL da página de logon.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.OnPreRender%2A> método determina se o usuário é conectado por meio do exame de <xref:System.Web.HttpRequest.IsAuthenticated%2A> propriedade o <xref:System.Web.UI.Page> do objeto <xref:System.Web.UI.Page.Request%2A> propriedade. Se o usuário estiver conectado, o <xref:System.Web.UI.WebControls.LoginStatus.LogoutText%2A> ou <xref:System.Web.UI.WebControls.LoginStatus.LogoutImageUrl%2A> propriedade é usada para renderizar o controle. Se o usuário não estiver conectado, o <xref:System.Web.UI.WebControls.LoginStatus.LoginText%2A> ou <xref:System.Web.UI.WebControls.LoginStatus.LoginImageUrl%2A> propriedade é usada para renderizar o controle.  
+  
+ Para obter mais informações sobre a manipulação de eventos, consulte [NIB: eventos e delegados](http://msdn.microsoft.com/en-us/d98fd58b-fa4f-4598-8378-addf4355a115).  
+  
+ O <xref:System.Web.UI.WebControls.LoginStatus.OnPreRender%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Web.UI.WebControls.LoginStatus.OnPreRender(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Web.UI.WebControls.LoginStatus.OnPreRender(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="protected override void Render (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Render(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.Render(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto que representa o fluxo de saída que renderiza o conteúdo do HTML para o cliente.</param>
+        <summary>Renderiza o <see cref="T:System.Web.UI.WebControls.LoginName" /> controle especificado <see cref="T:System.Web.UI.HtmlTextWriter" /> controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">Um <see cref="T:System.Web.UI.HtmlTextWriter" /> objeto que representa o fluxo de saída que renderiza o conteúdo do HTML para o cliente.</param>
+        <summary>Renderiza o conteúdo do controle no gravador especificado. Esse método é usado principalmente por desenvolvedores de controle.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDesignModeState">
+      <MemberSignature Language="C#" Value="protected override void SetDesignModeState (System.Collections.IDictionary data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDesignModeState(class System.Collections.IDictionary data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.LoginStatus.SetDesignModeState(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um <see cref="T:System.Collections.IDictionary" /> contendo o estado do <see cref="T:System.Web.UI.WebControls.LoginStatus" /> controle.</param>
+        <summary>Substitui a base de <see cref="M:System.Web.UI.Control.SetDesignModeState(System.Collections.IDictionary)" /> método.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TagKey">
+      <MemberSignature Language="C#" Value="protected override System.Web.UI.HtmlTextWriterTag TagKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Web.UI.HtmlTextWriterTag TagKey" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.LoginStatus.TagKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.UI.HtmlTextWriterTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Web.UI.HtmlTextWriterTag" /> valor para o <see cref="T:System.Web.UI.WebControls.LoginStatus" /> controle.</summary>
+        <value>Sempre retorna <see cref="F:System.Web.UI.HtmlTextWriterTag.A" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.LoginStatus.TagKey%2A> propriedade permite que o fluxo de saída gravar a marcação HTML apropriada para o <xref:System.Web.UI.WebControls.LoginStatus> controle. O <xref:System.Web.UI.WebControls.LoginStatus.TagKey%2A> propriedade é usada principalmente por desenvolvedores de controle.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Você pode substituir essa propriedade para especificar qual <see cref="T:System.Web.UI.HtmlTextWriterTag" /> valor a ser usado para o seu controle derivado.</para>
+        </block>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

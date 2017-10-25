@@ -1,0 +1,617 @@
+<Type Name="PrintPreviewControl" FullName="System.Windows.Forms.PrintPreviewControl">
+  <TypeSignature Language="C#" Value="public class PrintPreviewControl : System.Windows.Forms.Control" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PrintPreviewControl extends System.Windows.Forms.Control" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.PrintPreviewControl" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Windows.Forms.Control</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultProperty("Document")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa a parte da visualização bruto de visualização de impressão de um aplicativo de Windows Forms, sem caixas de diálogo ou botões. A maioria dos objetos <see cref="T:System.Windows.Forms.PrintPreviewControl" /> foi encontrada em objetos <see cref="T:System.Windows.Forms.PrintPreviewDialog" />, mas essa não é uma regra.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância do <xref:System.Windows.Forms.PrintPreviewControl> classe, algumas das propriedades de leitura/gravação são definidas para valores iniciais. Para obter uma lista desses valores, consulte o <xref:System.Windows.Forms.PrintPreviewControl.%23ctor%2A> construtor.  
+  
+ Para obter mais informações sobre como imprimir com formulários do Windows, consulte o <xref:System.Drawing.Printing> visão geral do namespace. Se você quiser imprimir a partir de um aplicativo do Windows Presentation Foundation, consulte o <xref:System.Printing> namespace.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A>, e <xref:System.Windows.Forms.PrintPreviewControl.Zoom%2A> propriedades da <xref:System.Windows.Forms.PrintPreviewControl>. Para executar este exemplo, coloque o seguinte código em um formulário e a chamada a `InitializePrintPreviewControl` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PrintPreviewControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Forms.PrintPreviewControl" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria uma instância do <xref:System.Windows.Forms.PrintPreviewControl> classe, os seguintes propriedades são inicializadas de leitura/gravação.  
+  
+|Propriedade|Valor padrão|  
+|--------------|-------------------|  
+|<xref:System.Windows.Forms.PrintPreviewControl.AutoZoom%2A>|`true`|  
+|<xref:System.Windows.Forms.PrintPreviewControl.Document%2A>|`null`|  
+|<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>|1|  
+|<xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>|0|  
+|<xref:System.Windows.Forms.PrintPreviewControl.StartPage%2A>|0|  
+  
+ Você pode alterar o valor de qualquer uma dessas propriedades por meio de uma chamada separada para a propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A>, e <xref:System.Windows.Forms.PrintPreviewControl.Zoom%2A> propriedades da <xref:System.Windows.Forms.PrintPreviewControl>. Para executar este exemplo, coloque o seguinte código em um formulário e a chamada a `InitializePrintPreviewControl` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoZoom">
+      <MemberSignature Language="C#" Value="public bool AutoZoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoZoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.AutoZoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se o controle de redimensionamento ou alterando o número de páginas mostrado automaticamente ajusta o <see cref="P:System.Windows.Forms.PrintPreviewControl.Zoom" /> propriedade.</summary>
+        <value>
+          <see langword="true" />Se alterar o tamanho do controle ou o número de páginas ajusta o <see cref="P:System.Windows.Forms.PrintPreviewControl.Zoom" /> propriedade; caso contrário, <see langword="false" />. O padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Columns">
+      <MemberSignature Language="C#" Value="public int Columns { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Columns" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.Columns" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de páginas exibidas horizontalmente pela tela.</summary>
+        <value>O número de páginas exibidas horizontalmente pela tela. O padrão é 1.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido for menor que 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateParams">
+      <MemberSignature Language="C#" Value="protected override System.Windows.Forms.CreateParams CreateParams { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Forms.CreateParams CreateParams" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.CreateParams" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.CreateParams</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém os parâmetros de criação necessários quando a alça de controle é criada.</summary>
+        <value>Um <see cref="T:System.Windows.Forms.CreateParams" /> que contém os parâmetros de criação necessários quando a alça de controle é criada.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="public System.Drawing.Printing.PrintDocument Document { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Drawing.Printing.PrintDocument Document" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.Document" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(null)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Printing.PrintDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o documento para visualização.</summary>
+        <value>O <see cref="T:System.Drawing.Printing.PrintDocument" /> que representa o documento para visualização.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A>, e <xref:System.Windows.Forms.PrintPreviewControl.Zoom%2A> propriedades da <xref:System.Windows.Forms.PrintPreviewControl>. Para executar este exemplo, coloque o seguinte código em um formulário e a chamada a `InitializePrintPreviewControl` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvalidatePreview">
+      <MemberSignature Language="C#" Value="public void InvalidatePreview ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InvalidatePreview() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.InvalidatePreview" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Atualiza a visualização do documento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Chame este método se a aparência do documento foi alterado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPaint">
+      <MemberSignature Language="C#" Value="protected override void OnPaint (System.Windows.Forms.PaintEventArgs pevent);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPaint(class System.Windows.Forms.PaintEventArgs pevent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.OnPaint(System.Windows.Forms.PaintEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pevent" Type="System.Windows.Forms.PaintEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="pevent">Um <see cref="T:System.Windows.Forms.PaintEventArgs" /> que contém os dados do evento.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.OnPaint(System.Windows.Forms.PaintEventArgs)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResize">
+      <MemberSignature Language="C#" Value="protected override void OnResize (EventArgs eventargs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnResize(class System.EventArgs eventargs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.OnResize(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventargs" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventargs">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.Control.Resize" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Windows.Forms.PrintPreviewControl.AutoZoom%2A> está definida como `true`, o <xref:System.Windows.Forms.PrintPreviewControl.OnResize%2A> método redimensiona a página proportion para o <xref:System.Windows.Forms.PrintPreviewControl> controle. Se <xref:System.Windows.Forms.PrintPreviewControl.AutoZoom%2A> é `false`, o <xref:System.Windows.Forms.PrintPreviewControl> centraliza a página no controle.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartPageChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnStartPageChanged (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartPageChanged(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.OnStartPageChanged(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Um <see cref="T:System.EventArgs" /> que contém os dados do evento.</param>
+        <summary>Aciona o evento <see cref="E:System.Windows.Forms.PrintPreviewControl.StartPageChanged" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A geração de um evento invoca o manipulador de eventos por meio de um delegado. Para obter mais informações, consulte [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+ O <xref:System.Windows.Forms.PrintPreviewControl.OnStartPageChanged%2A> método também permite que classes derivadas manipular o evento sem anexar um representante. Isso é a técnica preferida para manipular o evento em uma classe derivada.  
+  
+ ]]></format>
+        </remarks>
+        <block subset="none" type="overrides">
+          <para>Ao substituir <see cref="M:System.Windows.Forms.PrintPreviewControl.OnStartPageChanged(System.EventArgs)" /> em uma classe derivada, certifique-se de chamar a classe base <see cref="M:System.Windows.Forms.PrintPreviewControl.OnStartPageChanged(System.EventArgs)" /> método para que registrado delegados receber o evento.</para>
+        </block>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetBackColor">
+      <MemberSignature Language="C#" Value="public override void ResetBackColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetBackColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.ResetBackColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine o <see cref="P:System.Windows.Forms.Control.BackColor" /> propriedade <see cref="P:System.Drawing.SystemColors.AppWorkspace" />, que é a cor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.PrintPreviewControl> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.PrintPreviewControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetForeColor">
+      <MemberSignature Language="C#" Value="public override void ResetForeColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ResetForeColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.ResetForeColor" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Redefine a cor de primeiro plano o <see cref="T:System.Windows.Forms.PrintPreviewControl" /> para <see cref="P:System.Drawing.Color.White" />, que é a cor padrão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você normalmente usa esse método se você estiver criando ou um designer para o <xref:System.Windows.Forms.PrintPreviewControl> ou criar seu próprio controle incorporando o <xref:System.Windows.Forms.PrintPreviewControl>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RightToLeft">
+      <MemberSignature Language="C#" Value="public override System.Windows.Forms.RightToLeft RightToLeft { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Windows.Forms.RightToLeft RightToLeft" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.RightToLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.AmbientValue(Mono.Cecil.CustomAttributeArgument)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Localizable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.RightToLeft</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os elementos do controle estão alinhados para dar suporte a localidades que usam fontes da direita para a esquerda.</summary>
+        <value>Um dos valores de <see cref="T:System.Windows.Forms.RightToLeft" />. O padrão é <see cref="F:System.Windows.Forms.RightToLeft.Inherit" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rows">
+      <MemberSignature Language="C#" Value="public int Rows { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Rows" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.Rows" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de páginas exibidas verticalmente na tela.</summary>
+        <value>O número de páginas exibidas verticalmente na tela. O padrão é 0.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">O valor definido for menor que 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPage">
+      <MemberSignature Language="C#" Value="public int StartPage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StartPage" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.StartPage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o número de página da página esquerda superior.</summary>
+        <value>O número de página da página esquerda superior. O padrão é 0.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Defina o valor é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPageChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler StartPageChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler StartPageChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewControl.StartPageChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a página inicial é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para obter mais informações sobre a manipulação de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso desse membro. No exemplo, um manipulador de eventos relatórios sobre a ocorrência da <xref:System.Windows.Forms.PrintPreviewControl.StartPageChanged> eventos. Este relatório ajuda você a saber quando o evento ocorre e pode ajudá-lo na depuração. Para gerar relatórios sobre vários eventos ou eventos que ocorrem com frequência, considere substituir <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> com <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> ou anexar a mensagem como um multiline <xref:System.Windows.Forms.TextBox>.  
+  
+ Para executar o código de exemplo, cole-o em um projeto que contém uma instância do tipo <xref:System.Windows.Forms.PrintPreviewControl> chamado `PrintPreviewControl1`. Certifique-se de que o manipulador de eventos está associado com o <xref:System.Windows.Forms.PrintPreviewControl.StartPageChanged> evento.  
+  
+ [!code-csharp[System.Windows.Forms.EventExamples#654](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/CS/EventExamples.cs#654)]
+ [!code-vb[System.Windows.Forms.EventExamples#654](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.EventExamples/VB/EventExamples.vb#654)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Text">
+      <MemberSignature Language="C#" Value="public override string Text { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Text" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.Text" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Bindable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o texto associado a esse controle.</summary>
+        <value>O texto associado a esse controle.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler TextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TextChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Windows.Forms.PrintPreviewControl.TextChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o valor da propriedade <see cref="P:System.Windows.Forms.PrintPreviewControl.Text" /> muda.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseAntiAlias">
+      <MemberSignature Language="C#" Value="public bool UseAntiAlias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseAntiAlias" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.UseAntiAlias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se a impressão usa os recursos de suavização do sistema operacional.</summary>
+        <value>
+          <see langword="true" />Se a suavização é usada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Remove a suavização linhas irregulares quando as fontes são renderizadas.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A>, e <xref:System.Windows.Forms.PrintPreviewControl.Zoom%2A> propriedades da <xref:System.Windows.Forms.PrintPreviewControl>. Para executar este exemplo, coloque o seguinte código em um formulário e a chamada a `InitializePrintPreviewControl` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WndProc">
+      <MemberSignature Language="C#" Value="protected override void WndProc (ref System.Windows.Forms.Message m);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void WndProc(valuetype System.Windows.Forms.Message&amp; m) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Forms.PrintPreviewControl.WndProc(System.Windows.Forms.Message@)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="m" Type="System.Windows.Forms.Message&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="m">O <see cref="T:System.Windows.Forms.Message" /> do Windows a ser processado.</param>
+        <summary>Substitui o método <see cref="M:System.Windows.Forms.Control.WndProc(System.Windows.Forms.Message@)" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zoom">
+      <MemberSignature Language="C#" Value="public double Zoom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Zoom" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.PrintPreviewControl.Zoom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(0.3)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica o tamanho com que as páginas aparecerão.</summary>
+        <value>Um valor que indica o quão grande as páginas serão exibidas. Um valor de 1.0 indica o tamanho máximo.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra o <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A>, e <xref:System.Windows.Forms.PrintPreviewControl.Zoom%2A> propriedades da <xref:System.Windows.Forms.PrintPreviewControl>. Para executar este exemplo, coloque o seguinte código em um formulário e a chamada a `InitializePrintPreviewControl` método de construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+  
+ [!code-cpp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.PrintPreviewControlExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PrintPreviewControlExample/VB/form1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor é menor que ou igual a 0.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,222 @@
+<Type Name="TraceHandler" FullName="System.Web.Handlers.TraceHandler">
+  <TypeSignature Language="C#" Value="public class TraceHandler : System.Web.IHttpHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TraceHandler extends System.Object implements class System.Web.IHttpHandler" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Handlers.TraceHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.IHttpHandler</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece um manipulador HTTP síncrono que processa solicitações de informações de rastreamento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.TraceHandler.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.Handlers.TraceHandler" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReusable">
+      <MemberSignature Language="C#" Value="protected bool IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Handlers.TraceHandler.IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se outra solicitação pode usar a instância de <see cref="T:System.Web.Handlers.TraceHandler" />.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessRequest">
+      <MemberSignature Language="C#" Value="protected void ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.TraceHandler.ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Web.HttpContext" /> objeto que fornece acesso ao atual <see langword="Request" /> e <see langword="Response" /> instâncias.</param>
+        <summary>Processa uma solicitação HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Handlers.TraceHandler.ProcessRequest%2A> método gravações um <xref:System.Web.HttpResponse> que inclui todas as informações de rastreamento atual. As informações de rastreamento incluem chamadas para o `protected` <xref:System.Web.Handlers.TraceHandler.ShowDetails%2A>, <xref:System.Web.Handlers.TraceHandler.ShowRequests%2A>, e <xref:System.Web.Handlers.TraceHandler.ShowVersionDetails%2A> métodos.  
+  
+ O <xref:System.Web.Handlers.TraceHandler> classe implementa o <xref:System.Web.Handlers.TraceHandler.ProcessRequest%2A> método delegue a implementação do <xref:System.Web.Handlers.TraceHandler.ProcessRequest%2A> método. Se você estender o <xref:System.Web.Handlers.TraceHandler> classe, implementar seu próprio <xref:System.Web.Handlers.TraceHandler.ProcessRequest%2A> método para exibir informações de rastreamento diferente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDetails">
+      <MemberSignature Language="C#" Value="protected void ShowDetails (System.Data.DataSet data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ShowDetails(class System.Data.DataSet data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.TraceHandler.ShowDetails(System.Data.DataSet)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Data.DataSet" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um <see cref="T:System.Data.DataSet" /> objeto que contém informações de rastreamento.</param>
+        <summary>Grava os detalhes das informações atuais de página e o estado do sistema para o fluxo de resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Handlers.TraceHandler.ShowDetails%2A> método grava os detalhes de rastreamento para o fluxo de resposta, incluindo informações sobre o estado do aplicativo, estado de sessão para a sessão atual, a árvore de controle criado para a página atual e informações de solicitação HTTP, como os parâmetros de cadeia de caracteres e o formulário de consulta. Ele é chamado <xref:System.Web.Handlers.TraceHandler.ProcessRequest%2A>e não pode ser substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowRequests">
+      <MemberSignature Language="C#" Value="protected void ShowRequests (System.Collections.IList data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ShowRequests(class System.Collections.IList data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.TraceHandler.ShowRequests(System.Collections.IList)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.IList" />
+      </Parameters>
+      <Docs>
+        <param name="data">Um conjunto de <see cref="T:System.Data.DataSet" /> objetos que representam as solicitações HTTP recentes o servidor tiver processado.</param>
+        <summary>Grava os detalhes de tráfego recente de solicitação HTTP para o fluxo de resposta.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Handlers.TraceHandler.ShowRequests%2A> método grava os detalhes de rastreamento para o fluxo de resposta, incluindo informações sobre as solicitações HTTP mais recentes processados pelo ASP.NET para o site. Ele é chamado <xref:System.Web.Handlers.TraceHandler.ProcessRequest%2A>e não pode ser substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowVersionDetails">
+      <MemberSignature Language="C#" Value="protected void ShowVersionDetails ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void ShowVersionDetails() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.TraceHandler.ShowVersionDetails" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Grava que os detalhes do Common Language Runtime atual e ASP.NET criar versões que o servidor Web está usando.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Handlers.TraceHandler.ShowVersionDetails%2A> método grava os detalhes de rastreamento nas versões de Common Language Runtime (CLR) e ASP.NET em uso no momento. Ele é chamado <xref:System.Web.Handlers.TraceHandler.ProcessRequest%2A>e não pode ser substituído.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.IsReusable">
+      <MemberSignature Language="C#" Value="bool System.Web.IHttpHandler.IsReusable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Web.IHttpHandler.IsReusable" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Handlers.TraceHandler.System#Web#IHttpHandler#IsReusable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se outra solicitação pode usar a instância de <see cref="T:System.Web.Handlers.TraceHandler" />.</summary>
+        <value>
+          <see langword="false" /> em todos os casos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse membro é uma implementação de membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Web.Handlers.TraceHandler> é convertida em uma interface de <xref:System.Web.IHttpHandler>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Web.IHttpHandler.ProcessRequest">
+      <MemberSignature Language="C#" Value="void IHttpHandler.ProcessRequest (System.Web.HttpContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Web.IHttpHandler.ProcessRequest(class System.Web.HttpContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Handlers.TraceHandler.System#Web#IHttpHandler#ProcessRequest(System.Web.HttpContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Web.HttpContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Um <see cref="T:System.Web.HttpContext" /> objeto que fornece acesso ao atual <see langword="Request" /> e <see langword="Response" /> instâncias.</param>
+        <summary>Processa uma solicitação HTTP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método grava todas as informações de rastreamento atual para o <xref:System.Web.HttpResponse>. As informações de rastreamento incluem informações sobre o estado do servidor Web, a sessão atual, a árvore de controle para a página atual, os parâmetros de solicitação HTTP e recentes solicitações HTTP processadas pelo servidor.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,283 @@
+<Type Name="VirtualDirectoryMappingCollection" FullName="System.Web.Configuration.VirtualDirectoryMappingCollection">
+  <TypeSignature Language="C#" Value="public sealed class VirtualDirectoryMappingCollection : System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit VirtualDirectoryMappingCollection extends System.Collections.Specialized.NameObjectCollectionBase" />
+  <TypeSignature Language="DocId" Value="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Collections.Specialized.NameObjectCollectionBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Contém uma coleção de objetos <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> . Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.Configuration.VirtualDirectoryMappingCollection> classe permite que você acessar programaticamente uma coleção de <xref:System.Web.Configuration.VirtualDirectoryMapping> objetos. A coleção pode ser acessada com a chave ou o índice.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VirtualDirectoryMappingCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (string virtualDirectory, System.Web.Configuration.VirtualDirectoryMapping mapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(string virtualDirectory, class System.Web.Configuration.VirtualDirectoryMapping mapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.Add(System.String,System.Web.Configuration.VirtualDirectoryMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualDirectory" Type="System.String" />
+        <Parameter Name="mapping" Type="System.Web.Configuration.VirtualDirectoryMapping" />
+      </Parameters>
+      <Docs>
+        <param name="virtualDirectory">Um <see cref="T:System.String" /> que contém o caminho do diretório virtual.</param>
+        <param name="mapping">Um objeto <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" />.</param>
+        <summary>Adiciona um <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> o objeto para a <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> instância.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="mapping" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">
+          A <paramref name="virtualDirectory" /> já existe em <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />.</exception>
+        <exception cref="T:System.NotSupportedException">O <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> é somente leitura.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllKeys">
+      <MemberSignature Language="C#" Value="public System.Collections.ICollection AllKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ICollection AllKeys" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.VirtualDirectoryMappingCollection.AllKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ICollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Retorna uma matriz de cadeia de caracteres que contém todas as chaves na <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> instância.</summary>
+        <value>Uma matriz de cadeia de caracteres que contém todas as chaves na <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> instância.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Limpa todos os <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> de objetos a partir de <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Web.Configuration.VirtualDirectoryMapping[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(class System.Web.Configuration.VirtualDirectoryMapping[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.CopyTo(System.Web.Configuration.VirtualDirectoryMapping[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Web.Configuration.VirtualDirectoryMapping[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">Um unidimensional <see cref="T:System.Array" /> que é o destino dos elementos copiados a partir de <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> coleção para um unidimensional compatível <see cref="T:System.Array" />, começando no índice especificado da matriz de destino.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">O <see cref="P:System.Array.Length" /> propriedade <paramref name="array" /> é menor que o valor de <see cref="P:System.Collections.Specialized.NameObjectCollectionBase.Count" /> mais <paramref name="index" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.VirtualDirectoryMapping Get (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.VirtualDirectoryMapping Get(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.Get(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.VirtualDirectoryMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor inteiro que especifica um determinado <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> dentro do objeto de <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />.</param>
+        <summary>Obtém o especificado <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> elemento de coleção no índice especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> elemento no índice especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.VirtualDirectoryMapping Get (string virtualDirectory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Web.Configuration.VirtualDirectoryMapping Get(string virtualDirectory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.Get(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.VirtualDirectoryMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualDirectory" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualDirectory">Uma cadeia de caracteres que contém o nome do <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> objeto.</param>
+        <summary>Obtém o <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> elemento de coleção com base no nome do diretório virtual especificado.</summary>
+        <returns>O <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> elemento com base no nome do diretório virtual especificado.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKey">
+      <MemberSignature Language="C#" Value="public string GetKey (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetKey(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.GetKey(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor inteiro que especifica um determinado <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> dentro do objeto de <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />.</param>
+        <summary>Obtém a chave da entrada no índice especificado do <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> instância.</summary>
+        <returns>Uma cadeia de caracteres que contém o nome do <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> objeto.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.VirtualDirectoryMapping this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.VirtualDirectoryMapping Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.VirtualDirectoryMappingCollection.Item(System.Int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.VirtualDirectoryMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor inteiro que especifica um determinado <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> dentro do objeto de <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> objeto no local do índice especificado.</summary>
+        <value>Um objeto <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Web.Configuration.VirtualDirectoryMapping this[string virtualDirectory] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Web.Configuration.VirtualDirectoryMapping Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Web.Configuration.VirtualDirectoryMappingCollection.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Web.Configuration.VirtualDirectoryMapping</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualDirectory" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualDirectory">Uma cadeia de caracteres que contém o nome do <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> objeto.</param>
+        <summary>Obtém ou define o <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> objeto com base no nome do diretório virtual especificado.</summary>
+        <value>Um objeto <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (string virtualDirectory);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(string virtualDirectory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.Remove(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="virtualDirectory" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="virtualDirectory">Uma cadeia de caracteres que contém o nome do <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> objeto.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> de objeto o <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" /> instância.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.Configuration.VirtualDirectoryMappingCollection.RemoveAt(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Um valor inteiro que especifica um determinado <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> dentro do objeto de <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />.</param>
+        <summary>Remove um <see cref="T:System.Web.Configuration.VirtualDirectoryMapping" /> objeto no índice especificado do <see cref="T:System.Web.Configuration.VirtualDirectoryMappingCollection" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

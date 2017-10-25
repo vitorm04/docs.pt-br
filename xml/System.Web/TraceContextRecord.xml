@@ -1,0 +1,188 @@
+<Type Name="TraceContextRecord" FullName="System.Web.TraceContextRecord">
+  <TypeSignature Language="C#" Value="public sealed class TraceContextRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit TraceContextRecord extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Web.TraceContextRecord" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma mensagem de rastreamento do ASP.NET e nenhum dado associado.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.TraceContextRecord> objeto encapsula a mensagem de rastreamento, categoria, qualquer associada <xref:System.Exception>, e se o registro de rastreamento foi gravado pelo <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> método.  
+  
+ Todas as chamadas para o <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> e <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> métodos gera um <xref:System.Web.TraceContextRecord> objeto que é adicionado ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A?displayProperty=nameWithType> mensagens de coleção. Você pode acessar a coleção dos registros manipulando o <xref:System.Web.TraceContext.TraceFinished> evento.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como você pode registrar um <xref:System.Web.TraceContextEventHandler> delegado para manipular o <xref:System.Web.TraceContext.TraceFinished> evento. Neste exemplo, o `OnTraceFinished` método acessa a coleção de <xref:System.Web.TraceContextRecord> objetos por meio de <xref:System.Web.TraceContextEventArgs.TraceRecords%2A> propriedade, itera-los e os grava no fluxo de resposta.  
+  
+ [!code-aspx-csharp[System.Web.Trace_3#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_3/CS/form3cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_3#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_3/VB/form3vb.aspx#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TraceContextRecord (string category, string msg, bool isWarning, Exception errorInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string category, string msg, bool isWarning, class System.Exception errorInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.TraceContextRecord.#ctor(System.String,System.String,System.Boolean,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="System.String" />
+        <Parameter Name="msg" Type="System.String" />
+        <Parameter Name="isWarning" Type="System.Boolean" />
+        <Parameter Name="errorInfo" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="category">A categoria de rastreamento que recebe a mensagem.</param>
+        <param name="msg">A mensagem de rastreamento.</param>
+        <param name="isWarning">
+          <see langword="true" />Se o método associado com o <see cref="T:System.Web.TraceContextRecord" /> é o <see cref="Overload:System.Web.TraceContext.Warn" /> método; <see langword="false" /> se o método de rastreamento é o <see cref="Overload:System.Web.TraceContext.Write" /> método.</param>
+        <param name="errorInfo">Um <see cref="T:System.Exception" /> objeto que contém informações de erro adicionais.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.TraceContextRecord" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Todas as chamadas para o <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> e <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> métodos gera um <xref:System.Web.TraceContextRecord> objeto que é adicionado ao <xref:System.Web.TraceContextEventArgs.TraceRecords%2A?displayProperty=nameWithType> mensagens de coleção. O <xref:System.Web.TraceContext.Warn%2A> conjuntos de chamada de método a <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade `true`, enquanto o <xref:System.Web.TraceContext.Write%2A> chamadas de método defini-lo como `false`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public string Category { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Category" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.Category" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a categoria definida pelo usuário para o registro de rastreamento.</summary>
+        <value>Uma cadeia de caracteres que representa uma categoria para o registro de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A categoria é usada para organizar melhor as mensagens de rastreamento em grupos reconhecíveis, mas pode ser qualquer cadeia de caracteres. O <xref:System.Web.TraceContext> classe usa <xref:System.String.Empty?displayProperty=nameWithType> como sua categoria padrão para métodos que usam apenas um `message` parâmetro. A categoria padrão ASP.NET, que grava vários registros de rastreamento quando o rastreamento está habilitado, é "aspx.page".  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o <xref:System.Web.TraceContextRecord.Category%2A> propriedade de um <xref:System.Web.TraceContextRecord>e imprimi-lo e sua mensagem de rastreamento associado para o `Response` fluxo.  
+  
+ [!code-aspx-csharp[System.Web.Trace_5#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_5/CS/form5cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_5#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_5/VB/form5vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorInfo">
+      <MemberSignature Language="C#" Value="public Exception ErrorInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception ErrorInfo" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.ErrorInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Exception" /> associados com o registro de rastreamento, se houver um disponível.</summary>
+        <value>Um <see cref="T:System.Exception" /> associados com o registro de rastreamento, se houver, ou <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode incluir uma exceção em um registro de rastreamento, se você estiver usando o rastreamento para depurar um aplicativo ou para solucionar o erro e tratamento de exceção. O <xref:System.Web.TraceContextRecord.ErrorInfo%2A> é de propriedade `null` quando o registro de rastreamento está associado uma da <xref:System.Web.TraceContext> métodos que não têm uma explícita `errorInfo` parâmetro ou nenhuma exceção é fornecida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWarning">
+      <MemberSignature Language="C#" Value="public bool IsWarning { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWarning" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.IsWarning" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o registro de rastreamento está associado com um <see cref="Overload:System.Web.TraceContext.Warn" /> chamada de método.</summary>
+        <value>
+          <see langword="true" />Se o <see cref="T:System.Web.TraceContextRecord" /> está associado a <see cref="Overload:System.Web.TraceContext.Warn" /> chamada de método; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como verificar o <xref:System.Web.TraceContextRecord.IsWarning%2A> propriedade de um <xref:System.Web.TraceContextRecord> para determinar se a mensagem que contém o registro foi gravada por um <xref:System.Web.TraceContext.Warn%2A> ou <xref:System.Web.TraceContext.Write%2A> chamada de método. Se o registro de rastreamento é uma mensagem de aviso, outra ação será executada que se trata de uma mensagem de erro.  
+  
+ [!code-aspx-csharp[System.Web.Trace_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_4/CS/form4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_4/VB/form4vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:System.Web.TraceContextRecord.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a mensagem de rastreamento definidos pelo usuário.</summary>
+        <value>Uma cadeia de caracteres que representa uma mensagem para o registro de rastreamento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A mensagem pode ser qualquer cadeia de caracteres e é usada para gravar informações de rastreamento detalhadas. Ele corresponde ao parâmetro de mensagem que é passado para o <xref:System.Web.TraceContext.Write%2A?displayProperty=nameWithType> e <xref:System.Web.TraceContext.Warn%2A?displayProperty=nameWithType> métodos. As informações podem ser valores de tempo de execução, as mensagens para orientar você e orientá-lo durante a execução do programa, ou outros dados de diagnóstico.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como acessar o <xref:System.Web.TraceContextRecord.Message%2A> propriedade de um <xref:System.Web.TraceContextRecord>e imprimi-lo para o `Response` fluxo.  
+  
+ [!code-aspx-csharp[System.Web.Trace_4#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.Trace_4/CS/form4cs.aspx#1)]
+ [!code-aspx-vb[System.Web.Trace_4#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.Trace_4/VB/form4vb.aspx#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

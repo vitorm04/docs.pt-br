@@ -1,0 +1,74 @@
+<Type Name="LenientBooleanPrototype" FullName="Microsoft.JScript.LenientBooleanPrototype">
+  <TypeSignature Language="C#" Value="public sealed class LenientBooleanPrototype : Microsoft.JScript.BooleanPrototype" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LenientBooleanPrototype extends Microsoft.JScript.BooleanPrototype" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.JScript.LenientBooleanPrototype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.JScript</AssemblyName>
+    <AssemblyVersion>10.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.JScript.BooleanPrototype</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Armazena objetos que representam os métodos estáticos do <see cref="T:Microsoft.JScript.BooleanPrototype" /> classe. O <see cref="T:Microsoft.JScript.LenientBooleanPrototype" /> classe pertence à categoria de modelo de objeto interno.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="constructor">
+      <MemberSignature Language="C#" Value="public object constructor;" />
+      <MemberSignature Language="ILAsm" Value=".field public object constructor" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientBooleanPrototype.constructor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena uma referência a um <see cref="T:Microsoft.JScript.BooleanConstructor" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="toString">
+      <MemberSignature Language="C#" Value="public object toString;" />
+      <MemberSignature Language="ILAsm" Value=".field public object toString" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientBooleanPrototype.toString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.BooleanPrototype.toString(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.BooleanPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="valueOf">
+      <MemberSignature Language="C#" Value="public object valueOf;" />
+      <MemberSignature Language="ILAsm" Value=".field public object valueOf" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.JScript.LenientBooleanPrototype.valueOf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.JScript</AssemblyName>
+        <AssemblyVersion>10.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Armazena um objeto que representa o método <see cref="M:Microsoft.JScript.BooleanPrototype.valueOf(System.Object)" /> estático da classe <see cref="T:Microsoft.JScript.BooleanPrototype" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

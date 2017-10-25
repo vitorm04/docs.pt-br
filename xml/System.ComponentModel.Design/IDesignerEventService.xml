@@ -1,0 +1,226 @@
+<Type Name="IDesignerEventService" FullName="System.ComponentModel.Design.IDesignerEventService">
+  <TypeSignature Language="C#" Value="public interface IDesignerEventService" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDesignerEventService" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.IDesignerEventService" />
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece notificações de eventos quando os designers de raiz são adicionados e removidos, quando um componente selecionado é alterado, e quando alterações designers atual da raiz.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.ComponentModel.Design.IDesignerEventService>Fornece uma notificação quando um novo designer raiz é criado, alterado ou descartado. Um designer raiz fornece suporte de tempo de design para o componente básico de um documento no designer de exibição. O <xref:System.ComponentModel.Design.IDesignerEventService.SelectionChanged> evento fornece uma notificação quando a seleção atual do componente foi alterada.  
+  
+   
+  
+## Examples  
+ Este exemplo demonstra um designer que usa o <xref:System.ComponentModel.Design.IDesignerEventService> para exibir as notificações de eventos em um controle. Para usar este exemplo, compile o código em uma biblioteca de classe. Adicione uma referência à biblioteca para um novo projeto de formulários do Windows e adicionar o controle da biblioteca para o **caixa de ferramentas**.  Adicionar uma instância do `DesignerMonitor` a um formulário no modo de design. Clique com botão direito no controle e clique no `Start monitoring` comando para exibir as notificações de eventos gerados pelo <xref:System.ComponentModel.Design.IDesignerEventService>.  
+  
+ [!code-cpp[IDesignerEventServiceExample#1](~/samples/snippets/cpp/VS_Snippets_Winforms/IDesignerEventServiceExample/CPP/source.cpp#1)]
+ [!code-vb[IDesignerEventServiceExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/IDesignerEventServiceExample/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveDesigner">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.IDesignerHost ActiveDesigner { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.IDesignerHost ActiveDesigner" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesignerEventService.ActiveDesigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.IDesignerHost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o designer raiz para o documento ativo no momento.</summary>
+        <value>O documento ativo no momento, ou <see langword="null" /> se não houver nenhum documento ativo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveDesignerChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.ActiveDesignerEventHandler ActiveDesignerChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.ActiveDesignerEventHandler ActiveDesignerChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.ActiveDesignerChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.ActiveDesignerEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o designer raiz atual é alterado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento pode resultar do usuário abrir ou definir o foco para um novo documento, ou ao fechar um documento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerCreated">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.DesignerEventHandler DesignerCreated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.DesignerEventHandler DesignerCreated" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.DesignerCreated" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um designer raiz é criado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando um novo documento foi carregado e está pronto para a entrada do usuário.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesignerDisposed">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.Design.DesignerEventHandler DesignerDisposed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.Design.DesignerEventHandler DesignerDisposed" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.DesignerDisposed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando um designer raiz para um documento é descartado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento é gerado quando um documento está prestes a ser descartado, mas antes do documento realmente começa a descartar em si.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Designers">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Design.DesignerCollection Designers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Design.DesignerCollection Designers" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Design.IDesignerEventService.Designers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Design.DesignerCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma coleção de designers de raiz para documentos de design que estão atualmente ativos no ambiente de desenvolvimento.</summary>
+        <value>Um <see cref="T:System.ComponentModel.Design.DesignerCollection" /> que contém os designers de raiz que foram criados e ainda não foi descartados.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectionChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler SelectionChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler SelectionChanged" />
+      <MemberSignature Language="DocId" Value="E:System.ComponentModel.Design.IDesignerEventService.SelectionChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.TypeConverter</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando a seleção de exibição de design atual é alterada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento alterado de seleção pode resultar do usuário alterar a seleção do documento ativo no momento ou do usuário alternar para um novo documento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

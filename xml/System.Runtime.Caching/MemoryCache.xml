@@ -1,0 +1,1171 @@
+<Type Name="MemoryCache" FullName="System.Runtime.Caching.MemoryCache">
+  <TypeSignature Language="C#" Value="public class MemoryCache : System.Runtime.Caching.ObjectCache, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MemoryCache extends System.Runtime.Caching.ObjectCache implements class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Caching.MemoryCache" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Caching</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Caching.ObjectCache</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Representa o tipo que implementa um cache na memória.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.MemoryCache> classe é uma implementação concreta do resumo <xref:System.Runtime.Caching.ObjectCache> classe.  
+  
+> [!NOTE]
+>  O <xref:System.Runtime.Caching.MemoryCache> classe é semelhante para o ASP.NET <xref:System.Web.Caching.Cache> classe. O <xref:System.Runtime.Caching.MemoryCache> classe possui muitas propriedades e métodos para acessar o cache será familiar se você tiver usado o ASP.NET <xref:System.Web.Caching.Cache> classe. As principais diferenças entre o <xref:System.Web.Caching.Cache> e <xref:System.Runtime.Caching.MemoryCache> classes são que o <xref:System.Runtime.Caching.MemoryCache> classe foi alterada para torná-lo utilizável por [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicativos que não são aplicativos ASP.NET. Por exemplo, o <xref:System.Runtime.Caching.MemoryCache> classe não tem nenhuma dependência de `System.Web` assembly. Outra diferença é que você pode criar várias instâncias do <xref:System.Runtime.Caching.MemoryCache> classe para uso no mesmo aplicativo e na mesma <xref:System.AppDomain> instância.  
+  
+ O <xref:System.Runtime.Caching.MemoryCache> não permitir que a classe `null` como um valor em cache. Qualquer tentativa de adicionar ou alterar uma entrada de cache com um valor de `null` falhará.  
+  
+ O <xref:System.Runtime.Caching.MemoryCache> tipo não implementa *regiões de cache*. Portanto, quando você chama <xref:System.Runtime.Caching.MemoryCache> métodos que implementam métodos base que contêm um parâmetro de regiões, não passe um valor para o parâmetro. Os métodos que usam o parâmetro de região todos fornecem um padrão `null` valor. Por exemplo, o <xref:System.Runtime.Caching.MemoryCache.AddOrGetExisting%2A?displayProperty=nameWithType> sobrecarga de método tem um `regionName` parâmetro cujo valor padrão é `null`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir declara uma referência à instância padrão do cache de memória. A entrada de cache usa um <xref:System.Runtime.Caching.CacheItemPolicy> objeto para fornecer detalhes de remoção e vencimento para a entrada de cache. Ele também usa um <xref:System.Runtime.Caching.ChangeMonitor> objeto para monitorar o estado da fonte de dados (que é um arquivo) no sistema de arquivos.  
+  
+```vb  
+Private Sub btnGet_Click(ByVal sender As Object, ByVal e As EventArgs)   
+    Dim cache As ObjectCache = MemoryCache.[Default]   
+    Dim fileContents As String = TryCast(cache("filecontents"), String)   
+  
+    If fileContents Is Nothing Then   
+        Dim policy As New CacheItemPolicy()   
+        Dim filePaths As New List(Of String)()   
+        filePaths.Add("c:\cache\example.txt")   
+  
+        policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))   
+  
+        ' Fetch the file contents.  
+        fileContents = File.ReadAllText("c:\cache\example.txt")   
+  
+        cache.[Set]("filecontents", fileContents, policy)   
+    End If   
+  
+    Label1.Text = fileContents  
+End Sub  
+```  
+  
+```csharp  
+private void btnGet_Click(object sender, EventArgs e)  
+{  
+    ObjectCache cache = MemoryCache.Default;  
+    string fileContents = cache["filecontents"] as string;  
+  
+    if (fileContents == null)  
+    {  
+        CacheItemPolicy policy = new CacheItemPolicy();  
+  
+        List<string> filePaths = new List<string>();  
+        filePaths.Add("c:\\cache\\example.txt");  
+  
+        policy.ChangeMonitors.Add(new   
+        HostFileChangeMonitor(filePaths));  
+  
+        // Fetch the file contents.  
+        fileContents =   
+            File.ReadAllText("c:\\cache\\example.txt");  
+  
+        cache.Set("filecontents", fileContents, policy);  
+    }  
+  
+    Label1.Text = fileContents;  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Este tipo é thread-safe.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryCache (string name, System.Collections.Specialized.NameValueCollection config = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Collections.Specialized.NameValueCollection config) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.#ctor(System.String,System.Collections.Specialized.NameValueCollection)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser usado para pesquisar informações de configuração.  
+  
+ <c>Observação</c> não é necessário para as informações de configuração para cada nome.  
+  
+ Se houver uma entrada de configuração correspondente, as informações de configuração serão usadas para configurar a instância de <see cref="T:System.Runtime.Caching.MemoryCache" />. Se não existir uma entrada de configuração correspondente, o nome poderá ser acessado por meio da propriedade <see cref="P:System.Runtime.Caching.MemoryCache.Name" />, porque o nome especificado está associado à instância de <see cref="T:System.Runtime.Caching.MemoryCache" />. Para obter mais informações sobre a configuração de cache de memória, consulte <see cref="T:System.Runtime.Caching.Configuration.MemoryCacheElement" />.</param>
+        <param name="config">Uma coleção de pares nome/valor das informações de configuração a serem usadas para configurar o cache.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Caching.MemoryCache" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando o <xref:System.Runtime.Caching.MemoryCache> classe é inicializada, ele verifica se há entradas de configuração que podem ter foi substituídas com o uso opcional `config` parâmetro no construtor. Você pode passar os seguintes parâmetros no `config` parâmetro. Todos os valores podem ser passados como inteiros.  
+  
+-   <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.CacheMemoryLimitMegabytes%2A>  
+  
+-   <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.PhysicalMemoryLimitPercentage%2A>  
+  
+-   <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.PollingInterval%2A>  
+  
+ Quando este construtor é chamado, as definições de configuração são recuperadas primeiro dos arquivos de configuração do aplicativo. Se nenhuma entrada de configuração existir no arquivo de configuração do aplicativo, somente as configurações fornecidas no `config` são aplicadas. Se as entradas de configuração na configuração do aplicativo existem e se informações também são transmitidas em `config`, as informações de `config` substitui as informações que são lidos a partir do arquivo de configuração.  
+  
+ O valor do nome que é atribuído a uma instância de cache é usado de duas maneiras:  
+  
+-   Para ajudá-lo a manter o controle de várias instâncias de cache quando houver mais de uma instância.  
+  
+-   Para fazer referência a configurações na configuração de arquivo quando o <xref:System.Runtime.Caching.MemoryCache> instância será inicializada.  
+  
+    > [!NOTE]
+    >  Não há nenhum mecanismo para impor nomes exclusivos para instâncias de cache. Portanto, é possível ter várias instâncias de cache com o mesmo nome.  
+  
+    > [!CAUTION]
+    >  Não crie <xref:System.Runtime.Caching.MemoryCache> instâncias, a menos que seja necessário. Se você criar instâncias de cache no cliente e aplicativos Web, o <xref:System.Runtime.Caching.MemoryCache> instâncias devem ser criadas no início do ciclo de vida do aplicativo. Você deve criar apenas o número de instâncias de cache que será usado em seu aplicativo e armazenar as referências para as instâncias de cache em variáveis que podem ser acessados globalmente. Por exemplo, em aplicativos ASP.NET, você pode armazenar as referências de estado do aplicativo. Se você criar apenas uma instância única do cache em seu aplicativo, use o cache padrão e obter uma referência a ela o <xref:System.Runtime.Caching.MemoryCache.Default%2A> propriedade quando precisar acessar o cache.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="name" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um nome ou valor no parâmetro <paramref name="config" /> não pôde ser analisado.</exception>
+        <exception cref="T:System.Configuration.ConfigurationException">Um valor da coleção <paramref name="config" /> é inválido.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MemoryCache (string name, System.Collections.Specialized.NameValueCollection config, bool ignoreConfigSection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Collections.Specialized.NameValueCollection config, bool ignoreConfigSection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.#ctor(System.String,System.Collections.Specialized.NameValueCollection,System.Boolean)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="config" Type="System.Collections.Specialized.NameValueCollection" />
+        <Parameter Name="ignoreConfigSection" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome a ser usado para pesquisar informações de configuração.</param>
+        <param name="config">Uma coleção de pares nome/valor das informações de configuração a serem usadas para configurar o cache.</param>
+        <param name="ignoreConfigSection">Indica se a seção de configuração deve ser ignorada.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.Caching.MemoryCache" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public override bool Add (System.Runtime.Caching.CacheItem item, System.Runtime.Caching.CacheItemPolicy policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Add(class System.Runtime.Caching.CacheItem item, class System.Runtime.Caching.CacheItemPolicy policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Add(System.Runtime.Caching.CacheItem,System.Runtime.Caching.CacheItemPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Runtime.Caching.CacheItem" />
+        <Parameter Name="policy" Type="System.Runtime.Caching.CacheItemPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a adicionar.</param>
+        <param name="policy">Um objeto que contém os detalhes da remoção da entrada de cache. Esse objeto fornece mais opções de remoção do que uma expiração absoluta simples.</param>
+        <summary>Insere uma entrada de cache no cache como uma instância <see cref="T:System.Runtime.Caching.CacheItem" /> e adiciona os detalhes sobre como a entrada deve ser removida.</summary>
+        <returns>true se a inserção for bem-sucedida ou false se já houver uma entrada no cache com a mesma chave que o item.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  As sobrecargas do método <xref:System.Runtime.Caching.ObjectCache.Add%2A> e <xref:System.Runtime.Caching.ObjectCache.AddOrGetExisting%2A> não dão suporte à propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A>. Portanto, para definir a propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A> para uma entrada de cache, use as sobrecargas do método <xref:System.Runtime.Caching.MemoryCache.Set%2A>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="AddOrGetExisting">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Insere uma entrada de cache no cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.MemoryCache.AddOrGetExisting%2A> sobrecargas de método são usadas para inserir uma entrada de cache no cache. Se não existir uma entrada de cache com uma chave correspondente, esses métodos de inserir uma nova entrada. Se já existir uma entrada de cache com uma chave correspondente, elas retornam a entrada existente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="AddOrGetExisting">
+      <MemberSignature Language="C#" Value="public override System.Runtime.Caching.CacheItem AddOrGetExisting (System.Runtime.Caching.CacheItem item, System.Runtime.Caching.CacheItemPolicy policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Runtime.Caching.CacheItem AddOrGetExisting(class System.Runtime.Caching.CacheItem item, class System.Runtime.Caching.CacheItemPolicy policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.AddOrGetExisting(System.Runtime.Caching.CacheItem,System.Runtime.Caching.CacheItemPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Runtime.Caching.CacheItem" />
+        <Parameter Name="policy" Type="System.Runtime.Caching.CacheItemPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="item">O objeto a adicionar.</param>
+        <param name="policy">Um objeto que contém os detalhes da remoção da entrada de cache. Esse objeto fornece mais opções de remoção do que uma expiração absoluta simples.</param>
+        <summary>Adiciona uma entrada de cache no cache usando a instância <see cref="T:System.Runtime.Caching.CacheItem" /> especificada e os detalhes sobre como remover a entrada.</summary>
+        <returns>Se houver uma entrada de cache com a mesma chave, a entrada de cache existente; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `item` parâmetro fornece a chave e o valor que é usado pelo método. Se o cache tem uma entrada de cache com a mesma chave como chave do `item` , o método retornará a entrada existente como um <xref:System.Runtime.Caching.CacheItem> instância. Se não houver nenhuma entrada de cache existente, o método cria um novo usando a chave e o valor fornecido pelo `item` parâmetro e com os detalhes de remoção especificados pelo `policy`.  
+  
+> [!WARNING]
+>  As sobrecargas do método <xref:System.Runtime.Caching.ObjectCache.Add%2A> e <xref:System.Runtime.Caching.ObjectCache.AddOrGetExisting%2A> não dão suporte à propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A>. Portanto, para definir a propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A> para uma entrada de cache, use as sobrecargas do método <xref:System.Runtime.Caching.MemoryCache.Set%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">A propriedade <see cref="P:System.Runtime.Caching.CacheItem.Value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Os valores de expiração absoluta e deslizante para o objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" /> são definidos como valores diferentes dos padrões dos campos <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> e <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />. A classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não pode definir a política de expiração com base em uma combinação de uma expiração absoluta e uma expiração deslizante. Somente uma configuração de expiração pode ser definida explicitamente quando você usa a instância <see cref="T:System.Runtime.Caching.MemoryCache" />. A outra configuração de expiração deve ser definida como o campo <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> ou o <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor menor que <see cref="F:System.TimeSpan.Zero" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor maior que um ano.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.Priority" /> não é um valor da enumeração <see cref="T:System.Runtime.Caching.CacheItemPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrGetExisting">
+      <MemberSignature Language="C#" Value="public override object AddOrGetExisting (string key, object value, DateTimeOffset absoluteExpiration, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object AddOrGetExisting(string key, object value, valuetype System.DateTimeOffset absoluteExpiration, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.AddOrGetExisting(System.String,System.Object,System.DateTimeOffset,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="absoluteExpiration" Type="System.DateTimeOffset" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser adicionada.</param>
+        <param name="value">Os dados de entrada de cache.</param>
+        <param name="absoluteExpiration">A data e a hora fixas em que a entrada de cache vai expirar.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache pode ser adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Adiciona uma entrada de cache ao cache usando a chave especificada e um valor de expiração absoluta.</summary>
+        <returns>Se houver uma entrada de cache com a mesma chave, a entrada de cache existente; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o cache não tiver uma entrada de cache cuja chave corresponde a `key` parâmetro, uma nova entrada de cache é criada e o <xref:System.Runtime.Caching.MemoryCache.AddOrGetExisting%2A?displayProperty=nameWithType> retorna sobrecarga do método `null`. Se houver uma entrada de cache correspondente, a entrada existente será retornada.  
+  
+> [!WARNING]
+>  As sobrecargas do método <xref:System.Runtime.Caching.ObjectCache.Add%2A> e <xref:System.Runtime.Caching.ObjectCache.AddOrGetExisting%2A> não dão suporte à propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A>. Portanto, para definir a propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A> para uma entrada de cache, use as sobrecargas do método <xref:System.Runtime.Caching.MemoryCache.Set%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Os valores de expiração absoluta e deslizante para o objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" /> são definidos como valores diferentes dos padrões dos campos <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> e <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />. A classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não pode definir a política de expiração com base em uma combinação de uma expiração absoluta e uma expiração deslizante. Somente uma configuração de expiração pode ser definida explicitamente quando você usa a instância <see cref="T:System.Runtime.Caching.MemoryCache" />. A outra configuração de expiração deve ser definida como <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> ou <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" /></exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor menor que <see cref="F:System.TimeSpan.Zero" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor maior que um ano.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.Priority" /> não é um valor da enumeração <see cref="T:System.Runtime.Caching.CacheItemPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddOrGetExisting">
+      <MemberSignature Language="C#" Value="public override object AddOrGetExisting (string key, object value, System.Runtime.Caching.CacheItemPolicy policy, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object AddOrGetExisting(string key, object value, class System.Runtime.Caching.CacheItemPolicy policy, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.AddOrGetExisting(System.String,System.Object,System.Runtime.Caching.CacheItemPolicy,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="policy" Type="System.Runtime.Caching.CacheItemPolicy" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo da entrada de cache a ser adicionada ou obtida.</param>
+        <param name="value">Os dados de entrada de cache.</param>
+        <param name="policy">Um objeto que contém os detalhes da remoção da entrada de cache. Esse objeto fornece mais opções de remoção do que uma expiração absoluta simples.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache pode ser adicionada. Não passe um valor para esse parâmetro. Por padrão, esse parâmetro é <see langword="null" />, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Insere uma entrada de cache no cache usando a chave e o valor especificados, bem como os detalhes especificados para sua remoção.</summary>
+        <returns>Se uma entrada de cache correspondente já existir, uma entrada de cache; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!WARNING]
+>  As sobrecargas do método <xref:System.Runtime.Caching.ObjectCache.Add%2A> e <xref:System.Runtime.Caching.ObjectCache.AddOrGetExisting%2A> não dão suporte à propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A>. Portanto, para definir a propriedade <xref:System.Runtime.Caching.CacheItemPolicy.UpdateCallback%2A> para uma entrada de cache, use as sobrecargas do método <xref:System.Runtime.Caching.MemoryCache.Set%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Os valores de expiração absoluta e deslizante para o objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" /> são definidos como valores diferentes dos padrões de <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> e <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />. A classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não pode definir a política de expiração com base em uma combinação de uma expiração absoluta e uma expiração deslizante. Somente uma configuração de expiração pode ser definida explicitamente quando você usa a classe <see cref="T:System.Runtime.Caching.MemoryCache" />. A outra configuração deve ser definida como <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> ou <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />.  
+  
+ -ou-  
+  
+ O retorno de chamada de remoção e o retorno de chamada de atualização foram especificados para <see cref="T:System.Runtime.Caching.CacheItemPolicy" />. O <see cref="T:System.Runtime.Caching.MemoryCache" /> dá suporte apenas ao uso de um tipo de retorno de chamada por entrada de cache.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor menor que <see cref="F:System.TimeSpan.Zero" />.  
+  
+ -ou-  
+  
+ O <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> foi definido como um valor maior que um ano.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.Priority" /> não é um valor da enumeração <see cref="T:System.Runtime.Caching.CacheItemPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheMemoryLimit">
+      <MemberSignature Language="C#" Value="public long CacheMemoryLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 CacheMemoryLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.MemoryCache.CacheMemoryLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a quantidade de memória no computador, em bytes, que pode ser usada pelo cache.</summary>
+        <value>A quantidade de memória em bytes.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a instância atual do cache excede o limite de memória definido pelo <xref:System.Runtime.Caching.MemoryCache.CacheMemoryLimit%2A> propriedade, a implementação de cache remove entradas de cache. Cada instância de cache no aplicativo pode usar a quantidade de memória que é especificada pelo <xref:System.Runtime.Caching.MemoryCache.CacheMemoryLimit%2A> propriedade.  
+  
+ As configurações para o <xref:System.Runtime.Caching.MemoryCache.CacheMemoryLimit%2A> propriedade pode ser especificada no arquivo de configuração do aplicativo. Como alternativa, eles poderão ser passados no construtor quando a <xref:System.Runtime.Caching.MemoryCache> classe é inicializada. Para obter mais informações sobre como configurar essa propriedade, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md). Para obter mais informações sobre como definir esse valor quando o <xref:System.Runtime.Caching.MemoryCache> classe está sendo inicializada, consulte o <xref:System.Runtime.Caching.MemoryCache.%23ctor%2A> método.  
+  
+ <xref:System.Runtime.Caching.MemoryCache>não impõe instantaneamente <xref:System.Runtime.Caching.MemoryCache.CacheMemoryLimit%2A> cada vez que um novo item é adicionado a um <xref:System.Runtime.Caching.MemoryCache> instância. A heurística interna que remove itens adicionais a partir de <xref:System.Runtime.Caching.MemoryCache> faz isso gradualmente e leva em informações de conta do coletor de lixo (consulte [coleta de lixo](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9)) e outros fatores, como o tamanho do cache atual e a pressão de memória geral do sistema. Portanto, embora o <xref:System.Runtime.Caching.MemoryCache> tenta manter o tamanho do cache no configurado <xref:System.Runtime.Caching.MemoryCache.CacheMemoryLimit%2A> é possível temporariamente exceder o limite, adicionando itens de cache em uma taxa muito alta.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public override bool Contains (string key, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Contains(string key, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Contains(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser pesquisada.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache foi adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Determina se existe uma entrada de cache no cache.</summary>
+        <returns>
+          <see langword="true" /> se o cache contém uma entrada de cache cuja chave corresponde a <paramref name="key" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCacheEntryChangeMonitor">
+      <MemberSignature Language="C#" Value="public override System.Runtime.Caching.CacheEntryChangeMonitor CreateCacheEntryChangeMonitor (System.Collections.Generic.IEnumerable&lt;string&gt; keys, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Runtime.Caching.CacheEntryChangeMonitor CreateCacheEntryChangeMonitor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; keys, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.CreateCacheEntryChangeMonitor(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheEntryChangeMonitor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Uma enumeração de chaves de entrada de cache exclusivas para o objeto <see cref="T:System.Runtime.Caching.CacheEntryChangeMonitor" />.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache pode ser adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Cria um objeto <see cref="T:System.Runtime.Caching.CacheEntryChangeMonitor" /> que pode disparar eventos em resposta a alterações nas entradas de cache especificadas.</summary>
+        <returns>Um monitor de alteração que monitora as entradas no cache.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.MemoryCache.CreateCacheEntryChangeMonitor%2A> método cria um <xref:System.Runtime.Caching.CacheEntryChangeMonitor> instância. Esse monitor de alteração especializado é usado para monitorar as entradas de cache que são especificadas no `keys` coleta e eventos de gatilho quando as entradas de alteração.  
+  
+ Uma entrada monitorada é considerada ter sido alterado para qualquer um dos seguintes motivos:  
+  
+-   A chave não existe no momento da chamada para o <xref:System.Runtime.Caching.MemoryCache.CreateCacheEntryChangeMonitor%2A> método. Nesse caso, o resultante <xref:System.Runtime.Caching.CacheEntryChangeMonitor> instância imediatamente é definida como um estado de alteração. Isso significa que, quando o código subsequentemente associa um retorno de chamada de notificação de alteração, o retorno de chamada é disparado imediatamente.  
+  
+-   A entrada do cache associado foi removida do cache. Isso pode ocorrer se a entrada for explicitamente removida, se ele expirar ou se ele é removido para recuperar memória  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keys" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Um item na coleção <paramref name="keys" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public static System.Runtime.Caching.MemoryCache Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Runtime.Caching.MemoryCache Default" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.MemoryCache.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.MemoryCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma referência para a instância <see cref="T:System.Runtime.Caching.MemoryCache" /> padrão.</summary>
+        <value>A instância padrão do cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa propriedade sempre retorna uma referência à instância padrão do cache. Para cenários de aplicativo típico, apenas uma instância de <xref:System.Runtime.Caching.MemoryCache> é necessária.  
+  
+ Como a instância de cache padrão não é criada pelo construtor, você deve usar a configuração para definir explicitamente a memória e os valores de pesquisa para a instância de cache padrão. Para obter mais informações, consulte [ &lt;memoryCache&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultCacheCapabilities">
+      <MemberSignature Language="C#" Value="public override System.Runtime.Caching.DefaultCacheCapabilities DefaultCacheCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Caching.DefaultCacheCapabilities DefaultCacheCapabilities" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.MemoryCache.DefaultCacheCapabilities" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.DefaultCacheCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma descrição dos recursos que o cache fornece.</summary>
+        <value>Uma combinação bit a bit dos sinalizadores que indica as funcionalidades padrão da implementação de cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os recursos de uma implementação de cache são uma combinação dos seguintes valores:  
+  
+-   <xref:System.Runtime.Caching.DefaultCacheCapabilities.InMemoryProvider>  
+  
+-   <xref:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryChangeMonitors>  
+  
+-   <xref:System.Runtime.Caching.DefaultCacheCapabilities.AbsoluteExpirations>  
+  
+-   <xref:System.Runtime.Caching.DefaultCacheCapabilities.SlidingExpirations>  
+  
+-   <xref:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryUpdateCallback>  
+  
+-   <xref:System.Runtime.Caching.DefaultCacheCapabilities.CacheEntryRemovedCallback>  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Dispose" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Libera todos os recursos usados pela instância atual da classe <see cref="T:System.Runtime.Caching.MemoryCache" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Cada <xref:System.Runtime.Caching.MemoryCache> instância é associada ao <xref:System.Web.Compilation.ClientBuildManager.AppDomainUnloaded> evento. No entanto, durante o desligamento do domínio de aplicativo, se um cache de memória não foi explicitamente descartado, a instância de cache irá automaticamente chamar o <xref:System.Runtime.Caching.MemoryCache.Dispose%2A> método.  
+  
+ A instância de cache descartado for desligada usando as seguintes etapas:  
+  
+1.  O estado do cache é definido para indicar que o cache seja descartado. Qualquer tentativa de chamar pública cache métodos que alteram o estado do cache, como métodos adicionar, remover ou recuperar entradas de cache, pode causar um comportamento inesperado. Por exemplo, se você chamar o <xref:System.Runtime.Caching.MemoryCache.Set%2A> método depois que o cache é descartado, um erro de operações não ocorre. Se você tentar recuperar itens do cache, o <xref:System.Runtime.Caching.MemoryCache.Get%2A> método sempre retornará `null`.  
+  
+2.  Informações do contador de desempenho não são geradas na instância atual do cache.  
+  
+3.  Todas as referências a objetos em cache mantidos pela instância atual do cache são liberadas.  
+  
+4.  Qualquer <xref:System.Runtime.Caching.CacheEntryChangeMonitor> devem ser notificadas instâncias que estão monitorando entradas no cache.  
+  
+5.  Objetos de retorno de chamada que fornecem notificação de alterações para esses monitores são chamados.  
+  
+6.  Qualquer <xref:System.Web.Caching.CacheItemRemovedCallback> são chamadas de instâncias que estão registradas com entradas no cache. O motivo de remoção que é passado para os retornos de chamada é <xref:System.Runtime.Caching.CacheEntryRemovedReason.CacheSpecificEviction>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public override object Get (string key, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Get(string key, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Get(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser obtida.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache foi adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Retorna uma entrada do cache.</summary>
+        <returns>Uma referência para a entrada de cache identificada por <paramref name="key" /> se a entrada existir; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCacheItem">
+      <MemberSignature Language="C#" Value="public override System.Runtime.Caching.CacheItem GetCacheItem (string key, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Runtime.Caching.CacheItem GetCacheItem(string key, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.GetCacheItem(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Caching.CacheItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser obtida.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache foi adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Retorna a entrada especificada do cache como uma instância <see cref="T:System.Runtime.Caching.CacheItem" />.</summary>
+        <returns>Uma referência para a entrada de cache identificada por <paramref name="key" /> se a entrada existir; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entrada de cache especificado por `key` existe no cache, o <xref:System.Runtime.Caching.MemoryCache.GetCacheItem%2A> método retorna-o como um <xref:System.Runtime.Caching.CacheItem> instância. O <xref:System.Runtime.Caching.CacheItem.Key%2A> e <xref:System.Runtime.Caching.CacheItem.Value%2A> propriedades da <xref:System.Runtime.Caching.CacheItem> instância será definida. No entanto, o <xref:System.Runtime.Caching.CacheItem.RegionName%2A> propriedade será `null`, porque regiões não estão implementadas no <xref:System.Runtime.Caching.MemoryCache> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCount">
+      <MemberSignature Language="C#" Value="public override long GetCount (string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int64 GetCount(string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.GetCount(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache foi adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Retorna o número total de entradas de cache no cache.</summary>
+        <returns>O número de entradas no cache.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="protected override System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;string,object&gt;&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Collections.Generic.IEnumerator`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;string, object&gt;&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Collections.Generic.KeyValuePair&lt;System.String,System.Object&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um enumerador que pode ser usado para iterar entre uma coleção de entradas de cache.</summary>
+        <returns>O objeto enumerador que fornece acesso aos itens no cache.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O enumerador retornado pelo <xref:System.Runtime.Caching.MemoryCache.GetEnumerator%2A> método pode ser usado para iterar sobre entradas no cache.  
+  
+> [!IMPORTANT]
+>  Recuperando um enumerador para um <xref:System.Runtime.Caching.MemoryCache> instância é uma operação de bloqueio e de uso intensivo de recursos. Portanto, o enumerador não deve ser usado em aplicativos de produção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLastSize">
+      <MemberSignature Language="C#" Value="public long GetLastSize (string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetLastSize(string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.GetLastSize(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="regionName">O nome da região.</param>
+        <summary>Obtém o tamanho da região nomeada.</summary>
+        <returns>O tamanho da região nomeada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValues">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IDictionary&lt;string,object&gt; GetValues (System.Collections.Generic.IEnumerable&lt;string&gt; keys, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Collections.Generic.IDictionary`2&lt;string, object&gt; GetValues(class System.Collections.Generic.IEnumerable`1&lt;string&gt; keys, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.GetValues(System.Collections.Generic.IEnumerable{System.String},System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.Object&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Um conjunto de identificadores exclusivos a serem retornados pelas entradas de cache.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache foi adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Retorna um conjunto de entradas de cache que correspondem às chaves especificadas.</summary>
+        <returns>Um conjunto de entradas de cache que correspondem às chaves especificadas.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma entrada de cache que é representada pelo `keys` não existir, o valor correspondente para o objeto retornado no dicionário é definido como `null`. Portanto, o dicionário retornado sempre tem o mesmo número de itens que o número de elementos em `keys`.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="keys" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Uma chave individual na coleção é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public override object this[string key] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Item(string)" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.MemoryCache.Item(System.String)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para o valor de cache a ser obtido ou definido.</param>
+        <summary>Obtém ou define um valor em cache usando a propriedade indexadora padrão para uma instância da classe <see cref="T:System.Runtime.Caching.MemoryCache" />.</summary>
+        <value>O valor na instância de cache para a chave especificada, se a entrada existir. Caso contrário, <see langword="null" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você define essa propriedade, o valor é inserido no cache. A política de expiração para a entrada de cache é definida como <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>. Se já existir uma entrada de cache com uma chave correspondente, seu valor seja atualizado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ O valor inserido é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public override string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.MemoryCache.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do cache.</summary>
+        <value>O nome do cache.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.MemoryCache.Name%2A> propriedade retorna o nome da instância atual do <xref:System.Runtime.Caching.MemoryCache> classe. Em um aplicativo que usa várias instâncias de cache, você pode usar o <xref:System.Runtime.Caching.MemoryCache.Name%2A> propriedade para ajudar a distinguir as instâncias. Para obter mais informações, consulte o método <xref:System.Runtime.Caching.MemoryCache.%23ctor%28System.String%2CSystem.Collections.Specialized.NameValueCollection%29?displayProperty=nameWithType>. O cache de memória com base no padrão retorna o nome padrão.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalMemoryLimit">
+      <MemberSignature Language="C#" Value="public long PhysicalMemoryLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 PhysicalMemoryLimit" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.MemoryCache.PhysicalMemoryLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o percentual de memória física que o cache pode usar.</summary>
+        <value>O percentual de memória física que o cache pode usar.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.MemoryCache.PhysicalMemoryLimit%2A> propriedade retorna a porcentagem de memória total de computador físico que pode ser usada por uma única instância de <xref:System.Runtime.Caching.MemoryCache> classe. Se a instância do cache excede o limite especificado, as entradas de cache são removidas.  
+  
+ As configurações para o <xref:System.Runtime.Caching.MemoryCache.PhysicalMemoryLimit%2A> propriedade pode ser especificada no arquivo de configuração do aplicativo. Como alternativa, eles podem ser transmitidos por um chamador quando a <xref:System.Runtime.Caching.MemoryCache> classe é inicializada. Para obter mais informações sobre como configurar essa propriedade, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md). Para obter mais informações sobre como configurar a propriedade quando o <xref:System.Runtime.Caching.MemoryCache> classe está sendo inicializada, consulte o <xref:System.Runtime.Caching.MemoryCache.%23ctor%28System.String%2CSystem.Collections.Specialized.NameValueCollection%29?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PollingInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan PollingInterval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PollingInterval" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Caching.MemoryCache.PollingInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tempo máximo após o qual o cache atualiza suas estatísticas de memória.</summary>
+        <value>O tempo máximo que pode transcorrer antes que as estatísticas de memória sejam atualizadas.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As configurações para o <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A> propriedade pode ser especificada no arquivo de configuração do aplicativo. Como alternativa podem ser passados quando o <xref:System.Runtime.Caching.MemoryCache> classe é inicializada. Para obter mais informações sobre como configurar essa propriedade, consulte [ &lt;namedCaches&gt; (configurações de Cache) do elemento](~/docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md). Para obter mais informações sobre como configurar a propriedade quando o <xref:System.Runtime.Caching.MemoryCache> classe está sendo inicializada, consulte o <xref:System.Runtime.Caching.MemoryCache.%23ctor%28System.String%2CSystem.Collections.Specialized.NameValueCollection%29?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public override object Remove (string key, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Remove(string key, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Remove(System.String,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser removida.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache foi adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Remove uma entrada de cache do cache.</summary>
+        <returns>Se a entrada for encontrada no cache, a entrada de cache removida; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entrada especificada pelo `key` existe no cache, removendo os gatilhos de item qualquer monitores de alteração associada. Se o item removido foi associado um <xref:System.Web.Caching.CacheItemUpdateCallback> objeto ou um <xref:System.Web.Caching.CacheItemRemovedCallback> do objeto, o motivo passado ao retorno de chamada é <xref:System.Runtime.Caching.CacheEntryRemovedReason.Removed>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public object Remove (string key, System.Runtime.Caching.CacheEntryRemovedReason reason, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object Remove(string key, valuetype System.Runtime.Caching.CacheEntryRemovedReason reason, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Remove(System.String,System.Runtime.Caching.CacheEntryRemovedReason,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="reason" Type="System.Runtime.Caching.CacheEntryRemovedReason" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser removida.</param>
+        <param name="reason">O motivo pelo qual o item foi removido.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache foi adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Remove uma entrada de cache do cache usando o motivo.</summary>
+        <returns>Se a entrada for encontrada no cache, a entrada de cache removida; caso contrário, <see langword="null" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <MemberGroup MemberName="Set">
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Insere uma entrada de cache no cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se a entrada especificada não existir, ele será criado. Se a entrada especificada existe, ele será atualizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public override void Set (System.Runtime.Caching.CacheItem item, System.Runtime.Caching.CacheItemPolicy policy);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Set(class System.Runtime.Caching.CacheItem item, class System.Runtime.Caching.CacheItemPolicy policy) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Set(System.Runtime.Caching.CacheItem,System.Runtime.Caching.CacheItemPolicy)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Runtime.Caching.CacheItem" />
+        <Parameter Name="policy" Type="System.Runtime.Caching.CacheItemPolicy" />
+      </Parameters>
+      <Docs>
+        <param name="item">Um objeto que representa uma entrada de cache a ser inserido.</param>
+        <param name="policy">Um objeto que contém os detalhes da remoção da entrada de cache. Esse objeto fornece mais opções de remoção do que uma expiração absoluta simples.</param>
+        <summary>Insere uma entrada de cache no cache usando uma instância <see cref="T:System.Runtime.Caching.CacheItem" /> para fornecer a chave e valor para a entrada de cache.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assim como outros <xref:System.Runtime.Caching.MemoryCache.Set%2A> sobrecargas do método, o <xref:System.Runtime.Caching.MemoryCache.Set%2A> método sempre coloca um valor de cache no cache, independentemente se uma entrada já existe com a mesma chave. Se a entrada especificada não existe no cache, uma nova entrada de cache é inserida. Se a entrada especificada já existir, seu valor seja atualizado.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="item" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItem.Key" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItem.Value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">Foi passada uma combinação de argumentos inválida para a entrada de cache. Isso ocorrerá se os seguintes detalhes de expiração forem definidos no objeto de política para a entrada de cache:  
+  
+-   Se os valores de expiração absoluta e deslizante para o objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" /> forem definidos como valores diferentes dos padrões dos campos <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> e <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />. A classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não pode definir a política de expiração com base em na expiração absoluta e uma expiração deslizante. Somente uma configuração de expiração pode ser definida explicitamente quando você usa a classe <see cref="T:System.Runtime.Caching.MemoryCache" />. A outra configuração deve ser definida como propriedade <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> ou <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />.  
+  
+-   Se o retorno de chamada de remoção e o retorno de chamada de atualização forem especificados para o objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" />. A classe <see cref="T:System.Runtime.Caching.MemoryCache" /> dá suporte apenas ao uso de um tipo de retorno de chamada por entrada de cache.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor menor que <see cref="F:System.TimeSpan.Zero" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor maior que um ano.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.Priority" /> não é um valor da enumeração de <see cref="T:System.Runtime.Caching.CacheItemPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public override void Set (string key, object value, DateTimeOffset absoluteExpiration, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Set(string key, object value, valuetype System.DateTimeOffset absoluteExpiration, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Set(System.String,System.Object,System.DateTimeOffset,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="absoluteExpiration" Type="System.DateTimeOffset" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser inserida.</param>
+        <param name="value">Os dados de entrada de cache.</param>
+        <param name="absoluteExpiration">A data e a hora fixas em que a entrada de cache vai expirar.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache pode ser adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Insere uma entrada de cache no cache usando uma chave e um valor e especifica os detalhes de expiração baseados em tempo.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assim como outros <xref:System.Runtime.Caching.MemoryCache.Set%2A> sobrecargas do método, o <xref:System.Runtime.Caching.MemoryCache.Set%2A> método sempre coloca um valor de cache no cache, independentemente se já existe uma entrada com a mesma chave. Se a entrada especificada não existir, uma nova entrada de cache é inserida. Se a entrada especificada existe, ele será atualizado.  
+  
+ O `absoluteExpiration` parâmetro indica quando a entrada deve ser removida do cache.  
+  
+ Removendo uma entrada dispara qualquer monitores de alteração associada. Se o item removido foi associado um <xref:System.Web.Caching.CacheItemUpdateCallback> objeto ou <xref:System.Web.Caching.CacheItemRemovedCallback> do objeto, o motivo para remoção que é passado para os retornos de chamada está contido no <xref:System.Runtime.Caching.CacheEntryRemovedReason.Removed> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="Value" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">-   Foi passada uma combinação de argumentos inválida para a entrada de cache. Isso ocorrerá se os seguintes detalhes de expiração forem definidos no objeto de política para a entrada de cache:  
+  
+-   Se os valores de expiração absoluta e deslizante no objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" /> forem definidos como valores diferentes dos padrões de <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> e <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />. Isso ocorre porque a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não dá suporte a entradas de expiração com base em uma expiração absoluta e deslizante. Somente uma configuração de expiração pode ser definida explicitamente quando você usa a classe <see cref="T:System.Runtime.Caching.MemoryCache" />. A outra configuração deve ser definida como <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> ou <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />.  
+  
+-   Se o retorno de chamada de remoção e o retorno de chamada de atualização foram especificados no objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" />. A classe <see cref="T:System.Runtime.Caching.MemoryCache" /> dá suporte apenas ao uso de um tipo de retorno de chamada por entrada de cache.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor menor que <see cref="F:System.TimeSpan.Zero" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor maior que um ano.  
+  
+ -ou-  
+  
+-   A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.Priority" /> não é um valor da enumeração <see cref="T:System.Runtime.Caching.CacheItemPriority" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public override void Set (string key, object value, System.Runtime.Caching.CacheItemPolicy policy, string regionName = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Set(string key, object value, class System.Runtime.Caching.CacheItemPolicy policy, string regionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Set(System.String,System.Object,System.Runtime.Caching.CacheItemPolicy,System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.Object" />
+        <Parameter Name="policy" Type="System.Runtime.Caching.CacheItemPolicy" />
+        <Parameter Name="regionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">Um identificador exclusivo para a entrada de cache a ser inserida.</param>
+        <param name="value">Os dados de entrada de cache.</param>
+        <param name="policy">Um objeto que contém os detalhes da remoção da entrada de cache. Esse objeto fornece mais opções de remoção do que uma expiração absoluta simples.</param>
+        <param name="regionName">Uma região nomeada no cache à qual uma entrada de cache pode ser adicionada. Não passe um valor para esse parâmetro. Esse parâmetro é <see langword="null" /> por padrão, pois a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não implementa regiões.</param>
+        <summary>Insere uma entrada de cache no cache usando uma chave e um valor e remoção.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Assim como outros <xref:System.Runtime.Caching.MemoryCache.Set%2A> sobrecargas do método, o <xref:System.Runtime.Caching.MemoryCache.Set%2A> método sempre coloca um valor de cache no cache, independentemente se uma entrada correspondente já existe. Se a entrada especificada não existe no cache, uma nova entrada de cache é inserida. Se a entrada especificada existe, ele será atualizado.  
+  
+ Removendo uma entrada dispara qualquer monitores de alteração associada. Se o item removido foi associado um <xref:System.Web.Caching.CacheItemUpdateCallback> objeto ou <xref:System.Web.Caching.CacheItemRemovedCallback> do objeto, o motivo para remoção que é passado para os retornos de chamada está contido no <xref:System.Runtime.Caching.CacheEntryRemovedReason.Removed> propriedade.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="key" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="value" /> é <see langword="null" />  
+  
+ -ou-  
+  
+ A referência de retorno de chamada passada para o método auxiliar na propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.UpdateCallback" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentException">-   Existe uma combinação inválida de argumentos para a entrada de cache. Isso ocorrerá se os seguintes detalhes de expiração forem definidos no objeto de política para a entrada de cache:  
+  
+-   Se os valores de expiração absoluta e deslizante no objeto <see cref="T:System.Runtime.Caching.CacheItemPolicy" /> forem definidos como valores diferentes dos padrões de <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> e <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />. Isso ocorre porque a classe <see cref="T:System.Runtime.Caching.MemoryCache" /> não dá suporte a entradas de expiração com base em uma expiração absoluta e deslizante. Somente uma configuração de expiração pode ser definida explicitamente quando você usa a classe <see cref="T:System.Runtime.Caching.MemoryCache" />. A outra configuração deve ser definida como <see cref="F:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration" /> ou <see cref="F:System.Runtime.Caching.ObjectCache.NoSlidingExpiration" />.  
+  
+-   Se o retorno de chamada de remoção e o retorno de chamada de atualização foram especificados na classe <see cref="T:System.Runtime.Caching.CacheItemPolicy" />. A classe <see cref="T:System.Runtime.Caching.MemoryCache" /> dá suporte apenas ao uso de um tipo de retorno de chamada por entrada de cache.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor menor que <see cref="F:System.TimeSpan.Zero" />.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.SlidingExpiration" /> é definida com um valor maior que um ano.  
+  
+ -ou-  
+  
+ A propriedade <see cref="P:System.Runtime.Caching.CacheItemPolicy.Priority" /> não é um valor da enumeração <see cref="T:System.Runtime.Caching.CacheItemPriority" />.</exception>
+        <exception cref="T:System.NotSupportedException">
+          <paramref name="regionName" /> não é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fornece suporte à iteração em uma coleção genérica.</summary>
+        <returns>O objeto de enumerador que fornece acesso às entradas no cache.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele pode ser usado somente quando um <xref:System.Runtime.Caching.MemoryCache> instância é convertida em um <xref:System.Collections.IEnumerable> interface.  
+  
+ Você pode usar esse método para iterar por meio de uma coleção genérica de entradas de cache.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Trim">
+      <MemberSignature Language="C#" Value="public long Trim (int percent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 Trim(int32 percent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Caching.MemoryCache.Trim(System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Caching</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="percent" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="percent">O percentual do total de entradas de cache a serem removidas.</param>
+        <summary>Remove um percentual especificado de entradas de cache do objeto de cache.</summary>
+        <returns>O número de elementos removidas do cache.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.Caching.MemoryCache.Trim%2A> propriedade primeiro remove entradas que excederam um absoluto ou a expiração deslizante. Qualquer retornos de chamada que são registrados para itens que são removidos receberão um motivo removido do <xref:System.Web.Caching.CacheItemRemovedReason.Expired>.  
+  
+ Se remover entradas expiradas não é suficiente para alcançar a porcentagem especificada de corte, entradas adicionais serão removidas do cache com base em um algoritmo de usados menos recentemente (LRU) até que a porcentagem de corte solicitada seja atingida. Qualquer retornos de chamada que são registrados para os itens que são removidos dessa maneira receberão um motivo de remoção de <xref:System.Runtime.Caching.CacheEntryRemovedReason.Evicted>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

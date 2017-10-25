@@ -1,0 +1,55 @@
+<Type Name="IVersioningPersonalizable" FullName="System.Web.UI.WebControls.WebParts.IVersioningPersonalizable">
+  <TypeSignature Language="C#" Value="public interface IVersioningPersonalizable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IVersioningPersonalizable" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma interface que pode gerenciar os dados de personalização que pertencem a uma versão anterior de um controle de Web Parts.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você atualiza um controle de Web Parts para uma versão mais recente, pode haver alterações nas propriedades personalizáveis na classe atualizada. Por exemplo, uma versão atualizada de um controle de Web Parts não pode oferecer suporte a propriedades que estavam disponíveis em versões anteriores. Nesse cenário, o conjunto de controles de Web Parts pode carregar os dados de personalização do armazenamento de dados subjacente, mas não têm nenhuma propriedade em relação ao qual aplicar esses dados. Se um controle implementa o <xref:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable> interface, o controle de Web Parts passado os dados de personalização de órfãos. O aplicativo pode usar esses dados para atualizar as propriedades na versão mais recente, ou usar os dados em alguma outra forma. Observe que, se as propriedades órfãos são detectadas durante a importação de controles de Web Parts a <xref:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable.Load%2A> também é chamado de método.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.Collections.IDictionary unknownProperties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Load(class System.Collections.IDictionary unknownProperties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.IVersioningPersonalizable.Load(System.Collections.IDictionary)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="unknownProperties" Type="System.Collections.IDictionary" />
+      </Parameters>
+      <Docs>
+        <param name="unknownProperties">Um dicionário de dados de personalização que não puderam ser aplicados a um controle.</param>
+        <summary>Carrega os dados de personalização para um controle de Web Parts que não tem uma propriedade personalizada correspondente para os dados devido a uma alteração de versão.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `unknownProperties` parâmetro contém uma representação mesclada dos dados de personalização desconhecido, do escopo de "Usuário" e "Shared", que não pôde ser aplicado ao controle. Quando uma página está em execução no escopo do usuário, os valores de escopo de usuário desconhecido são fornecidos (se disponível) em vez de valores desconhecidos de escopo compartilhado. Essas informações são armazenadas como uma série de pares de nome/valor onde cada nome é o nome de cadeia de caracteres de uma propriedade que não foi encontrado no controle e cada valor contém o valor da propriedade. É responsabilidade do controle para converter ou converter o valor para o tipo apropriado e realizar processamento (como o mapeamento de dados de uma propriedade antiga para uma nova propriedade).  
+  
+ Se o estado do controle de alterações, ele deve chamar <xref:System.Web.UI.WebControls.WebParts.WebPart.SetPersonalizationDirty%2A> (o método herdado, ou o método estático público no caso de um controle que não é derivado de <xref:System.Web.UI.WebControls.WebParts.WebPart>). Se um controle de marcar a próprio como "sujos", o conjunto de controles de Web Parts será extrair dados de personalização de controle, independentemente do estado do controle "sujos" e salvá-lo novamente no repositório de dados subjacente posteriormente no ciclo de vida de personalização. Um controle em si marcará como "sujo" se, como resultado do processamento de valores no `unknownProperties` parâmetro, o estado do controle foi alterado.  
+  
+ Observe que, se propriedades órfãos são detectadas quando importar Web Parts controla, esse método é chamado automaticamente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

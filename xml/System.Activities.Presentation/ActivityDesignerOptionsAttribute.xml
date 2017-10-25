@@ -1,0 +1,109 @@
+<Type Name="ActivityDesignerOptionsAttribute" FullName="System.Activities.Presentation.ActivityDesignerOptionsAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ActivityDesignerOptionsAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ActivityDesignerOptionsAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.ActivityDesignerOptionsAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o detalhamento e o nó de modo de visualização para um <see cref="T:system.Activities.Presentation.ActivityDesigner" />, como fluxogramas, que são usados para compor atividades.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Drill-down até os elementos de interface do usuário é permitido por padrão. Ele pode ser permitido, definindo o <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn%2A> propriedade `false`. Nós filho não são recolhidos por padrão, mas pode ser definidos para sempre recolher definindo o <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren%2A> propriedade `true`.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivityDesignerOptionsAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.ActivityDesignerOptionsAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="M:System.Activities.Presentation.ActivityDesignerOptionsAttribute" /> classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os valores padrão atribuídos por este construtor são `true` para o <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn%2A> propriedade e `false` para o <xref:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren%2A> propriedade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowDrillIn">
+      <MemberSignature Language="C#" Value="public bool AllowDrillIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowDrillIn" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AllowDrillIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se aprofundar em um nível em uma <see cref="T:system.Activities.Presentation.ActivityDesigner" /> é permitido.</summary>
+        <value>
+          <see langword="true" />Se o detalhamento para os elementos de interface do usuário é permitido. Caso contrário, <see langword="false" />. O valor padrão é <see langword="true" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlwaysCollapseChildren">
+      <MemberSignature Language="C#" Value="public bool AlwaysCollapseChildren { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AlwaysCollapseChildren" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ActivityDesignerOptionsAttribute.AlwaysCollapseChildren" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um valor que indica se os nós filho são recolhidos.</summary>
+        <value>
+          <see langword="true" />Se os nós filho são recolhidos; Caso contrário, <see langword="false" />. O valor padrão é <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutlineViewIconProvider">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Activities.Presentation.Model.ModelItem,System.Windows.Media.DrawingBrush&gt; OutlineViewIconProvider { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;class System.Activities.Presentation.Model.ModelItem, class System.Windows.Media.DrawingBrush&gt; OutlineViewIconProvider" />
+      <MemberSignature Language="DocId" Value="P:System.Activities.Presentation.ActivityDesignerOptionsAttribute.OutlineViewIconProvider" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Activities.Presentation.Model.ModelItem,System.Windows.Media.DrawingBrush&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a função do provedor de ícone de exibição de estrutura de tópicos.</summary>
+        <value>A função do provedor de ícone de exibição de estrutura de tópicos.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

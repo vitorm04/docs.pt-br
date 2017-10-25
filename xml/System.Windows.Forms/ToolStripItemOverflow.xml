@@ -1,0 +1,73 @@
+<Type Name="ToolStripItemOverflow" FullName="System.Windows.Forms.ToolStripItemOverflow">
+  <TypeSignature Language="C#" Value="public enum ToolStripItemOverflow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ToolStripItemOverflow extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ToolStripItemOverflow" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Determina se um <see cref="T:System.Windows.Forms.ToolStripItem" /> é colocado no estouro <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se houver mais itens de estouro que podem ser exibidas no formulário, use o [Editor de coleção de itens de ToolStrip](http://msdn.microsoft.com/en-us/e681f3ab-94ba-4b2b-ac64-1dfad46caa25) para gerenciar essa situação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Always">
+      <MemberSignature Language="C#" Value="Always" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemOverflow Always = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemOverflow.Always" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemOverflow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um <see cref="T:System.Windows.Forms.ToolStripItem" /> permanentemente é mostrado no estouro <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AsNeeded">
+      <MemberSignature Language="C#" Value="AsNeeded" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemOverflow AsNeeded = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemOverflow.AsNeeded" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemOverflow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um <see cref="T:System.Windows.Forms.ToolStripItem" /> estiver dessincronizado relação entre principal <see cref="T:System.Windows.Forms.ToolStrip" /> e o estouro <see cref="T:System.Windows.Forms.ToolStrip" /> como necessário se não há espaço disponível no principal <see cref="T:System.Windows.Forms.ToolStrip" />.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Never">
+      <MemberSignature Language="C#" Value="Never" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.ToolStripItemOverflow Never = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.ToolStripItemOverflow.Never" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.ToolStripItemOverflow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que um <see cref="T:System.Windows.Forms.ToolStripItem" /> nunca é um candidato para o estouro <see cref="T:System.Windows.Forms.ToolStrip" />. Se o <see cref="T:System.Windows.Forms.ToolStripItem" /> não puder ser ajustado principal <see cref="T:System.Windows.Forms.ToolStrip" />, ele não será mostrado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

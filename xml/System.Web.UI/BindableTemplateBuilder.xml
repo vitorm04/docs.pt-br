@@ -1,0 +1,106 @@
+<Type Name="BindableTemplateBuilder" FullName="System.Web.UI.BindableTemplateBuilder">
+  <TypeSignature Language="C#" Value="public sealed class BindableTemplateBuilder : System.Web.UI.TemplateBuilder, System.Web.UI.IBindableTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit BindableTemplateBuilder extends System.Web.UI.TemplateBuilder implements class System.Web.UI.IBindableTemplate, class System.Web.UI.ITemplate" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.BindableTemplateBuilder" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.TemplateBuilder</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Web.UI.IBindableTemplate</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Dá suporte à análise da página de controles associados a dados que associam automaticamente para um controle de fonte de dados do ASP.NET dentro das seções de conteúdo de modelo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.BindableTemplateBuilder> classe é usada em tempo de design em páginas de não-compilação para dar suporte a extração de valores de propriedades do controle associado bidirecional em um modelo de associação de dados. O <xref:System.Web.UI.BindableTemplateBuilder> objeto gera o código que implementa o <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A?displayProperty=nameWithType> método para o modelo.  
+  
+ O <xref:System.Web.UI.BindableTemplateBuilder> é um <xref:System.Web.UI.TemplateBuilder> para controles associados a dados que incluem o conteúdo do modelo. Se o controle de associação de dados é usado em tempo de design ou em uma página de não-compilação, o <xref:System.Web.UI.IBindableTemplate> interface no <xref:System.Web.UI.BindableTemplateBuilder> é usado para analisar a associação de dados bidirecional dentro do controle modelado. Se o controle de associação de dados é compilado, uma instância do <xref:System.Web.UI.CompiledBindableTemplateBuilder> classe é criada e atribuída ao valor da <xref:System.Web.UI.IBindableTemplate> objeto.  
+  
+ Para obter mais informações sobre associação de dados, expressões e sintaxe do ASP.NET, consulte [para bancos de dados de associação](http://msdn.microsoft.com/en-us/ab7b2846-975b-4057-a948-45527497c742) e [visão geral de expressões de associação de dados](http://msdn.microsoft.com/library/14cdd57d-0f82-4667-b503-73e1a96f136a).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BindableTemplateBuilder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.BindableTemplateBuilder" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtractValues">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.IOrderedDictionary ExtractValues (System.Web.UI.Control container);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Specialized.IOrderedDictionary ExtractValues(class System.Web.UI.Control container) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.ExtractValues(System.Web.UI.Control)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.IOrderedDictionary</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="container" Type="System.Web.UI.Control" />
+      </Parameters>
+      <Docs>
+        <param name="container">O <see cref="T:System.Web.UI.Control" /> do qual extrair pares nome/valor, que são passados pelo controle associado a dados a um controle de fonte de dados associados em cenários de associação de dados bidirecionais.</param>
+        <summary>Recupera um conjunto de pares de nome/valor para valores que são associados usando a sintaxe de associação de dados bidirecional do ASP.NET dentro do conteúdo do modelo em tempo de design e em páginas de não-compilação.</summary>
+        <returns>Um <see cref="T:System.Collections.Specialized.IOrderedDictionary" /> de pares de nome/valor, em que o nome representa o campo de item de dados especificado como o primeiro parâmetro para associar dentro do conteúdo de modelo e o valor é o valor atual de um valor de propriedade associado usando a sintaxe de associação de dados bidirecional do ASP.NET.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.BindableTemplateBuilder.ExtractValues%2A> método é o <xref:System.Web.UI.BindableTemplateBuilder> implementação da classe de <xref:System.Web.UI.IBindableTemplate.ExtractValues%2A?displayProperty=nameWithType> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnAppendToParentBuilder">
+      <MemberSignature Language="C#" Value="public override void OnAppendToParentBuilder (System.Web.UI.ControlBuilder parentBuilder);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void OnAppendToParentBuilder(class System.Web.UI.ControlBuilder parentBuilder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.BindableTemplateBuilder.OnAppendToParentBuilder(System.Web.UI.ControlBuilder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentBuilder" Type="System.Web.UI.ControlBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="parentBuilder">O <see cref="T:System.Web.UI.BindableTemplateBuilder" /> ao qual adicionar o construtor atual.</param>
+        <summary>Notifica o <see cref="T:System.Web.UI.BindableTemplateBuilder" /> que está sendo adicionado a um construtor de controle pai do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o controle de associação de dados inclui o conteúdo do modelo que oferecem suporte à associação de dados bidirecional, o <xref:System.Web.UI.BindableTemplateBuilder.OnAppendToParentBuilder%2A> método, além de chamar o <xref:System.Web.UI.ControlBuilder.OnAppendToParentBuilder%2A?displayProperty=nameWithType> método da classe base, cria uma instância do <xref:System.Web.UI.ExtractTemplateValuesMethod> delegate.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

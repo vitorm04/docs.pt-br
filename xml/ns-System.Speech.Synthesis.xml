@@ -1,0 +1,43 @@
+<Namespace Name="System.Speech.Synthesis">
+  <Docs>
+    <summary>O <c>N:System.Speech.Synthesis</c> namespace contém classes para inicializar e configurar um mecanismo de síntese de fala, para a criação de avisos para a geração de fala, para responder a eventos e para modificar a voz características.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ **Inicializar e configurar**  
+  
+ O <xref:System.Speech.Synthesis.SpeechSynthesizer> classe fornece acesso à funcionalidade de um mecanismo de síntese de fala está instalado no computador host. Instalado mecanismos são representados por uma voz, por exemplo Microsoft Anna a síntese de fala. Um <xref:System.Speech.Synthesis.SpeechSynthesizer> instância inicializa a voz padrão. Para configurar um <xref:System.Speech.Synthesis.SpeechSynthesizer> instância para usar uma das outras instaladas vozes, chamada de <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoice%2A> ou <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoiceByHints%2A> métodos. Para obter informações sobre quais vozes estiverem instaladas, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.GetInstalledVoices%2A> método.  
+  
+ Você pode rotear a saída do <xref:System.Speech.Synthesis.SpeechSynthesizer> para um fluxo, um arquivo, o dispositivo de áudio padrão ou para um dispositivo do nulo usando um dos métodos no <xref:System.Speech.Synthesis.SpeechSynthesizer> classe cujo nome começa com "`SetOutputTo`".  
+  
+ **Criar solicitações**  
+  
+ Use um os métodos do <xref:System.Speech.Synthesis.PromptBuilder> classe cujo nome começa com "`Append`" para criar conteúdo de prompts de texto, fala síntese Markup Language (SSML), arquivos que contêm texto ou marcação SSML ou arquivos de áudio pré-gravados.  
+  
+ Consulte [construir complexos Prompt](http://msdn.microsoft.com/en-us/552cb356-7344-473e-b0f2-7a9983f8c1a4) no [guia de programação de fala de sistema para o .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) para obter mais informações e exemplos.  
+  
+ **Gerar fala**  
+  
+ Para gerar fala a partir de uma cadeia de caracteres ou um <xref:System.Speech.Synthesis.Prompt> ou <xref:System.Speech.Synthesis.PromptBuilder> de objeto, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.Speak%2A> ou <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakAsync%2A> métodos. Para gerar fala de marcação SSML, use o <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsml%2A> ou <xref:System.Speech.Synthesis.SpeechSynthesizer.SpeakSsmlAsync%2A> métodos. Consulte [referência de linguagem de marcação de síntese de fala](http://msdn.microsoft.com/en-us/0c51279e-84d2-4f73-a924-8832039abf94) para um guia para marcação SSML.  
+  
+ Você pode fornecer a pronúncia de palavras usando o <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithHint%2A> ou <xref:System.Speech.Synthesis.PromptBuilder.AppendTextWithPronunciation%2A> métodos e adicionando ou removendo dicionários para um <xref:System.Speech.Synthesis.SpeechSynthesizer> instância usando o <xref:System.Speech.Synthesis.SpeechSynthesizer.AddLexicon%2A> e <xref:System.Speech.Synthesis.SpeechSynthesizer.RemoveLexicon%2A> métodos.  
+  
+ **Responder a eventos**  
+  
+ O <xref:System.Speech.Synthesis.SpeechSynthesizer> classe inclui eventos que informam um aplicativo de fala que o <xref:System.Speech.Synthesis.SpeechSynthesizer> encontrou um recurso específico em um prompt, conforme relatado pelo <xref:System.Speech.Synthesis.SpeakProgressEventArgs>, <xref:System.Speech.Synthesis.BookmarkReachedEventArgs>, <xref:System.Speech.Synthesis.PhonemeReachedEventArgs>, e <xref:System.Speech.Synthesis.VisemeReachedEventArgs> classes.  
+  
+ Para obter informações sobre o início e fim da fala de um prompt, o <xref:System.Speech.Synthesis.SpeechSynthesizer>, use o <xref:System.Speech.Synthesis.SpeakStartedEventArgs> e <xref:System.Speech.Synthesis.SpeakCompletedEventArgs> classes.  
+  
+ Consulte [usando eventos de síntese de fala](http://msdn.microsoft.com/en-us/09bf41e6-b88c-4ff2-9287-e42bfd38d836) no [guia de programação de fala de sistema para o .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) para obter mais informações e exemplos.  
+  
+ **Modificar as características de voz**  
+  
+ O <xref:System.Speech.Synthesis.PromptStyle> classe e <xref:System.Speech.Synthesis.PromptBuilder.StartStyle%2A> e <xref:System.Speech.Synthesis.PromptBuilder.AppendText%2A> métodos permitem que você modifique características de um <xref:System.Speech.Synthesis.SpeechSynthesizer> voz usando <xref:System.Speech.Synthesis.PromptStyle.Emphasis%2A>, <xref:System.Speech.Synthesis.PromptStyle.Rate%2A>, e <xref:System.Speech.Synthesis.PromptStyle.Volume%2A> parâmetros. Para modificar as características de uma voz como cultura, idade e sexo, use um do <xref:System.Speech.Synthesis.PromptBuilder.StartVoice%2A> métodos do <xref:System.Speech.Synthesis.PromptBuilder> classe ou o <xref:System.Speech.Synthesis.SpeechSynthesizer.SelectVoiceByHints%2A> métodos do <xref:System.Speech.Synthesis.SpeechSynthesizer> classe.  
+  
+ Consulte [controlando atributos de voz](http://msdn.microsoft.com/en-us/0fa3f10d-2696-4701-9735-68c59ffe4816) no [guia de programação de fala de sistema para o .NET Framework 4.0](http://msdn.microsoft.com/en-us/610116c7-3817-40ff-857b-5d41e8511043) para obter mais informações.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Namespace>

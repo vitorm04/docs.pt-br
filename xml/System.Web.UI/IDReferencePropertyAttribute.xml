@@ -1,0 +1,157 @@
+<Type Name="IDReferencePropertyAttribute" FullName="System.Web.UI.IDReferencePropertyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class IDReferencePropertyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit IDReferencePropertyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.IDReferencePropertyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Property)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Define um atributo aplicado a propriedades que contêm referências de ID. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.IDReferencePropertyAttribute> classe é aplicada a propriedades que contêm referências de ID. <xref:System.Web.UI.WebControls.Content.ContentPlaceHolderID%2A>é um exemplo de uma propriedade que contém uma referência de ID. Quando esse atributo é aplicado, designers podem fornecer funcionalidade adicional durante o tempo de design, como a lista de IDs.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.IDReferencePropertyAttribute> atributo é aplicado a uma propriedade que é avaliada como uma cadeia de caracteres. Neste exemplo, o `DataSourceID` membro identifica um controle de fonte de dados e, portanto, especifica o <xref:System.Web.UI.DataSourceControl> tipo.  
+  
+ [!code-csharp[System.Web.UI.IDReferencePropertyAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDReferencePropertyAttribute/CS/IDReferencePropertyAttribute2.cs#2)]
+ [!code-vb[System.Web.UI.IDReferencePropertyAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDReferencePropertyAttribute/VB/IDReferencePropertyAttribute2.vb#2)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IDReferencePropertyAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDReferencePropertyAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Web.UI.IDReferencePropertyAttribute" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você chama este construtor o <xref:System.Web.UI.IDReferencePropertyAttribute.ReferencedControlType%2A> está definida como <xref:System.Web.UI.Control>, que é seu valor padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.IDReferencePropertyAttribute> atributo é aplicado a uma propriedade que é avaliada como uma cadeia de caracteres. Neste exemplo, o `DataSourceID` membro identifica um controle de fonte de dados em tempo de execução. Usando o construtor padrão, o <xref:System.Web.UI.IDReferencePropertyAttribute.ReferencedControlType%2A> propriedade é definida como o valor padrão, <xref:System.Web.UI.Control>.  
+  
+ [!code-csharp[System.Web.UI.IDReferencePropertyAttribute#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDReferencePropertyAttribute/CS/IDReferencePropertyAttribute1.cs#1)]
+ [!code-vb[System.Web.UI.IDReferencePropertyAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDReferencePropertyAttribute/VB/IDReferencePropertyAttribute1.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IDReferencePropertyAttribute (Type referencedControlType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type referencedControlType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDReferencePropertyAttribute.#ctor(System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="referencedControlType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="referencedControlType">Um <see cref="T:System.Type" /> que especifica o tipo de controle representado pela propriedade à qual o <see cref="T:System.Web.UI.IDReferencePropertyAttribute" /> é aplicada.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Web.UI.IDReferencePropertyAttribute" /> classe usando o tipo especificado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como o <xref:System.Web.UI.IDReferencePropertyAttribute> atributo é aplicado a uma propriedade que é avaliada como uma cadeia de caracteres. Neste exemplo, o `DataSourceID` membro identifica um controle de fonte de dados e, portanto, especifica o <xref:System.Web.UI.DataSourceControl> tipo.  
+  
+ [!code-csharp[System.Web.UI.IDReferencePropertyAttribute#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Web.UI.IDReferencePropertyAttribute/CS/IDReferencePropertyAttribute2.cs#2)]
+ [!code-vb[System.Web.UI.IDReferencePropertyAttribute#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Web.UI.IDReferencePropertyAttribute/VB/IDReferencePropertyAttribute2.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDReferencePropertyAttribute.Equals(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Um <see cref="T:System.Object" /> a ser comparado com esta instância ou uma referência nula (<see langword="Nothing" /> no Visual Basic).</param>
+        <summary>Retorna um valor que indica se essa instância é igual a um objeto especificado.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="obj" /> for igual ao tipo e ao valor dessa instância, caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.IDReferencePropertyAttribute.GetHashCode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna o código hash para essa instância.</summary>
+        <returns>Um código de hash do inteiro assinado de 32 bits.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferencedControlType">
+      <MemberSignature Language="C#" Value="public Type ReferencedControlType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ReferencedControlType" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.IDReferencePropertyAttribute.ReferencedControlType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo dos controles permitido por propriedade à qual o <see cref="T:System.Web.UI.IDReferencePropertyAttribute" /> atributo é aplicado.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo de controle permitido por propriedade à qual o <see cref="T:System.Web.UI.IDReferencePropertyAttribute" /> é aplicada. O padrão é <see cref="T:System.Web.UI.Control" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

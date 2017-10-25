@@ -1,0 +1,110 @@
+<Type Name="SqlColumnEncryptionCspProvider" FullName="System.Data.SqlClient.SqlColumnEncryptionCspProvider">
+  <TypeSignature Language="C#" Value="public class SqlColumnEncryptionCspProvider : System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SqlColumnEncryptionCspProvider extends System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider" />
+  <TypeSignature Language="DocId" Value="T:System.Data.SqlClient.SqlColumnEncryptionCspProvider" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.SqlClient.SqlColumnEncryptionKeyStoreProvider</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A implementação de provedor de repositório CMK para usar o Microsoft CAPI com base em provedores de serviço de criptografia (CSP) com [sempre criptografado](https://msdn.microsoft.com/library/mt163865.aspx).</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Permite armazenar chaves de chave mestra de coluna sempre criptografado em um repositório, como um hardware de segurança HSM (módulo), que oferece suporte ao Microsoft CAPI com base em provedores de serviços de criptografia (CSP).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SqlColumnEncryptionCspProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCspProvider.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.SqlClient.SqlColumnEncryptionCspProvider" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecryptColumnEncryptionKey">
+      <MemberSignature Language="C#" Value="public override byte[] DecryptColumnEncryptionKey (string masterKeyPath, string encryptionAlgorithm, byte[] encryptedColumnEncryptionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] DecryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, unsigned int8[] encryptedColumnEncryptionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCspProvider.DecryptColumnEncryptionKey(System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterKeyPath" Type="System.String" />
+        <Parameter Name="encryptionAlgorithm" Type="System.String" />
+        <Parameter Name="encryptedColumnEncryptionKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="masterKeyPath">O caminho da chave mestra.</param>
+        <param name="encryptionAlgorithm">O algoritmo de criptografia.</param>
+        <param name="encryptedColumnEncryptionKey">A chave de criptografia de coluna criptografada.</param>
+        <summary>Descriptografa o valor criptografado especificado usando uma chave assimétrica especificada pelo caminho da chave e algoritmo. O caminho da chave será no formato [ProviderName] / KeyIdentifier e deve ser uma chave assimétrica armazenada no provedor de CSP especificado. O algoritmo inválido usado para criptografar/descriptografar a CEK é 'RSA_OAEP'.</summary>
+        <returns>A chave de criptografia de coluna descriptografada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptColumnEncryptionKey">
+      <MemberSignature Language="C#" Value="public override byte[] EncryptColumnEncryptionKey (string masterKeyPath, string encryptionAlgorithm, byte[] columnEncryptionKey);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] EncryptColumnEncryptionKey(string masterKeyPath, string encryptionAlgorithm, unsigned int8[] columnEncryptionKey) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.SqlClient.SqlColumnEncryptionCspProvider.EncryptColumnEncryptionKey(System.String,System.String,System.Byte[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterKeyPath" Type="System.String" />
+        <Parameter Name="encryptionAlgorithm" Type="System.String" />
+        <Parameter Name="columnEncryptionKey" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="masterKeyPath">O caminho da chave mestra.</param>
+        <param name="encryptionAlgorithm">O algoritmo de criptografia.</param>
+        <param name="columnEncryptionKey">A chave de criptografia de coluna criptografada.</param>
+        <summary>Criptografa a chave de criptografia de coluna de texto não criptografado usando uma chave assimétrica especificada pelo caminho da chave e o algoritmo especificado. O caminho da chave será no formato [ProviderName] / KeyIdentifier e deve ser uma chave assimétrica armazenada no provedor de CSP especificado. O algoritmo inválido usado para criptografar/descriptografar a CEK é 'RSA_OAEP'.</summary>
+        <returns>A chave de criptografia de coluna criptografada.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProviderName">
+      <MemberSignature Language="C#" Value="public const string ProviderName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ProviderName" />
+      <MemberSignature Language="DocId" Value="F:System.Data.SqlClient.SqlColumnEncryptionCspProvider.ProviderName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma cadeia de caracteres constante para o nome do provedor 'MSSQL_CSP_PROVIDER'.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,6 @@
+<Namespace Name="System.EnterpriseServices">
+  <Docs>
+    <summary>O <see cref="N:System.EnterpriseServices" /> namespace fornece uma infraestrutura importante para aplicativos corporativos. COM+ fornece uma arquitetura de serviços para modelos de programação de componente implantados em um ambiente corporativo. Este namespace fornece objetos .NET com acesso aos serviços COM+ tornando os objetos do .NET Framework mais prático para aplicativos corporativos.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

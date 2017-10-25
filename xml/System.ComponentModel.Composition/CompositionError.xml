@@ -1,0 +1,186 @@
+<Type Name="CompositionError" FullName="System.ComponentModel.Composition.CompositionError">
+  <TypeSignature Language="C#" Value="public class CompositionError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit CompositionError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Composition.CompositionError" />
+  <AssemblyInfo>
+    <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.ComponentModel.Composition.CompositionErrorDebuggerProxy))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa um erro que ocorreu durante a composição.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionError (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionError.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve o <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Description" /> propriedade como uma cadeia de caracteres vazia ("").</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Composition.CompositionError" /> com a mensagem de erro especificada.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionError (string message, System.ComponentModel.Composition.Primitives.ICompositionElement element);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.ComponentModel.Composition.Primitives.ICompositionElement element) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionError.#ctor(System.String,System.ComponentModel.Composition.Primitives.ICompositionElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="element" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve o <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Description" /> propriedade como uma cadeia de caracteres vazia ("").</param>
+        <param name="element">O elemento de composição é a causa o <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Element" /> propriedade <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.CompositionError" /> classe com a mensagem de erro especificada e o elemento de composição é a causa do erro de composição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionError (string message, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionError.#ctor(System.String,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve o <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Description" /> propriedade como uma cadeia de caracteres vazia ("").</param>
+        <param name="exception">O <see cref="P:System.ComponentModel.Composition.CompositionError.Exception" /> que é a causa subjacente do <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Exception" /> propriedade <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.CompositionError" /> classe com a mensagem de erro especificada e a exceção que é a causa do erro de composição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompositionError (string message, System.ComponentModel.Composition.Primitives.ICompositionElement element, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.ComponentModel.Composition.Primitives.ICompositionElement element, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionError.#ctor(System.String,System.ComponentModel.Composition.Primitives.ICompositionElement,System.Exception)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="element" Type="System.ComponentModel.Composition.Primitives.ICompositionElement" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="message">Uma mensagem que descreve o <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Description" /> propriedade como uma cadeia de caracteres vazia ("").</param>
+        <param name="element">O elemento de composição é a causa o <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Element" /> propriedade <see langword="null" />.</param>
+        <param name="exception">O <see cref="P:System.ComponentModel.Composition.CompositionError.Exception" /> que é a causa subjacente do <see cref="T:System.ComponentModel.Composition.CompositionError" /> ou <see langword="null" /> para definir o <see cref="P:System.ComponentModel.Composition.CompositionError.Exception" /> propriedade <see langword="null" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ComponentModel.Composition.CompositionError" /> classe com a mensagem de erro especificada e o elemento de composição e a exceção que são a causa do erro de composição.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.CompositionError.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma descrição do erro de composição.</summary>
+        <value>Uma mensagem que descreve o <see cref="T:System.ComponentModel.Composition.CompositionError" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Element">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.Composition.Primitives.ICompositionElement Element { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.Composition.Primitives.ICompositionElement Element" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.CompositionError.Element" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.Composition.Primitives.ICompositionElement</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o elemento de composição é a causa do erro.</summary>
+        <value>O elemento de composição é a causa o <see cref="T:System.ComponentModel.Composition.CompositionError" />. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:System.ComponentModel.Composition.CompositionError.Exception" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a exceção que é a causa do erro de composição.</summary>
+        <value>A exceção que é subjacente causa o <see cref="T:System.ComponentModel.Composition.CompositionError" />. O padrão é <see langword="null" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Composition.CompositionError.ToString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ComponentModel.Composition</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna uma representação de cadeia de caracteres do erro de composição.</summary>
+        <returns>Uma cadeia de caracteres que contém o <see cref="P:System.ComponentModel.Composition.CompositionError.Description" /> propriedade.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

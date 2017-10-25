@@ -1,0 +1,6 @@
+<Namespace Name="System.Messaging.Design">
+  <Docs>
+    <summary>O <see cref="N:System.Messaging.Design" /> namespace contém classes que podem ser usados para estender o suporte de tempo de design para <see cref="N:System.Messaging" /> classes.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

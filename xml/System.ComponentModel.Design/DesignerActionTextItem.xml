@@ -1,0 +1,77 @@
+<Type Name="DesignerActionTextItem" FullName="System.ComponentModel.Design.DesignerActionTextItem">
+  <TypeSignature Language="C#" Value="public class DesignerActionTextItem : System.ComponentModel.Design.DesignerActionItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DesignerActionTextItem extends System.ComponentModel.Design.DesignerActionItem" />
+  <TypeSignature Language="DocId" Value="T:System.ComponentModel.Design.DesignerActionTextItem" />
+  <AssemblyInfo>
+    <AssemblyName>System.Design</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.Design.DesignerActionItem</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um item de texto estático em um painel de marca inteligente.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionTextItem> classe representa os itens individuais de texto estático em um painel de marca inteligente. Os itens individuais são associados para formar um painel, retornando o grupo de uma chamada para o <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> método.  
+  
+ Normalmente, um item de texto estático é usado para criar um rótulo informativo em um painel. Clicar em um item de texto estático faz com que nenhuma ação. O tipo derivado <xref:System.ComponentModel.Design.DesignerActionHeaderItem> normalmente é usado para criar rótulos para separar as categorias.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma coleção de <xref:System.ComponentModel.Design.DesignerActionItem> objetos.  
+  
+ Para obter um exemplo completo de implementação de marcas inteligentes, consulte [como: Anexar marcas inteligentes para um componente de Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DesignerActionTextItem (string displayName, string category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string displayName, string category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ComponentModel.Design.DesignerActionTextItem.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Design</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="displayName" Type="System.String" />
+        <Parameter Name="category" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="displayName">O texto do painel para este item.</param>
+        <param name="category">A categoria usada para agrupar os itens semelhantes no painel.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.ComponentModel.Design.DesignerActionTextItem" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ComponentModel.Design.DesignerActionTextItem.%23ctor%2A> construtor define o <xref:System.ComponentModel.Design.DesignerActionItem.Description%2A> propriedade `null`.  
+  
+ Para obter mais informações sobre como o `category` parâmetro é usado para agrupar itens em um painel, consulte o <xref:System.ComponentModel.Design.DesignerActionList.GetSortedActionItems%2A> método.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma coleção de <xref:System.ComponentModel.Design.DesignerActionItem> objetos.  
+  
+ Para obter um exemplo completo de implementação de marcas inteligentes, consulte [como: Anexar marcas inteligentes para um componente de Windows Forms](http://msdn.microsoft.com/library/42cc4a0c-9ab3-47e1-93b8-03b6a6ccf233).  
+  
+ [!code-csharp[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/CS/smarttags.cs#7)]
+ [!code-vb[System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.Design.DesignerAction.AddSmartTagsToWFComponent/VB/smarttags.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

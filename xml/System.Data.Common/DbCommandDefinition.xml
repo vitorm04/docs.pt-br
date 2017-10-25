@@ -1,0 +1,94 @@
+<Type Name="DbCommandDefinition" FullName="System.Data.Common.DbCommandDefinition">
+  <TypeSignature Language="C#" Value="public class DbCommandDefinition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DbCommandDefinition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Common.DbCommandDefinition" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Entity</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define um plano de comando armazenável em cache.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Common.DbCommandDefinition> classe é usada pelo Entity Framework e não se destina para uso como um componente autônomo.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbCommandDefinition ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommandDefinition.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Common.DbCommandDefinition" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O construtor padrão é usado por classes que derivam de <xref:System.Data.Common.DbCommandDefinition>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DbCommandDefinition (System.Data.Common.DbCommand prototype);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Data.Common.DbCommand prototype) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommandDefinition.#ctor(System.Data.Common.DbCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="prototype" Type="System.Data.Common.DbCommand" />
+      </Parameters>
+      <Docs>
+        <param name="prototype">Fornecido <see cref="T:System.Data.Common.DbCommand" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Data.Common.DbCommandDefinition" /> classe usando fornecido <see cref="T:System.Data.Common.DbCommand" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Fornecido <xref:System.Data.Common.DbCommand> deve implementar <xref:System.ICloneable>; caso contrário, um <xref:System.Data.ProviderIncompatibleException> é gerado.  
+  
+ Este construtor é usado por classes que derivam de <xref:System.Data.Common.DbCommandDefinition>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCommand">
+      <MemberSignature Language="C#" Value="public virtual System.Data.Common.DbCommand CreateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Data.Common.DbCommand CreateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Common.DbCommandDefinition.CreateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Entity</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um <see cref="T:System.Data.Common.DbCommand" /> objeto que pode ser executado.</summary>
+        <returns>O comando de banco de dados.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

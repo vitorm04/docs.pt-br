@@ -1,0 +1,126 @@
+<Type Name="SoapFieldAttribute" FullName="System.Runtime.Remoting.Metadata.SoapFieldAttribute">
+  <TypeSignature Language="C#" Value="public sealed class SoapFieldAttribute : System.Runtime.Remoting.Metadata.SoapAttribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SoapFieldAttribute extends System.Runtime.Remoting.Metadata.SoapAttribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Remoting.Metadata.SoapFieldAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Runtime.Remoting.Metadata.SoapAttribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Field)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Personaliza a geração de SOAP e processamento de um campo. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Objetos de destino para o <xref:System.Runtime.Remoting.Metadata.SoapFieldAttribute> atributo são campos de objeto. O <xref:System.Runtime.Remoting.Metadata.SoapFieldAttribute> atributo é usado para especificar as informações que controla como o Framework .NET gera o formato de transmissão do XML de SOAP para campos de destino.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra a personalização de SOAP gerada para um campo de uma classe com o <xref:System.Runtime.Remoting.Metadata.SoapFieldAttribute>. O SOAP pode ser produzido pelo código mostrado no <xref:System.SerializableAttribute> exemplo de classe.  
+  
+ [!code-cpp[SoapAttributes1#1](~/samples/snippets/cpp/VS_Snippets_Remoting/SoapAttributes1/CPP/s.cpp#1)]
+ [!code-csharp[SoapAttributes1#1](~/samples/snippets/csharp/VS_Snippets_Remoting/SoapAttributes1/CS/s.cs#1)]
+ [!code-vb[SoapAttributes1#1](~/samples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributes1/VB/s.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapFieldAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.SoapFieldAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma instância de <see cref="T:System.Runtime.Remoting.Metadata.SoapFieldAttribute" /> classe.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInteropXmlElement">
+      <MemberSignature Language="C#" Value="public bool IsInteropXmlElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsInteropXmlElement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Remoting.Metadata.SoapFieldAttribute.IsInteropXmlElement" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um valor que indica se o atributo atual contém valores de elemento XML interoperabilidade.</summary>
+        <returns>
+          <see langword="true" />Se o atributo atual contém valores de elemento XML interoperabilidade; Caso contrário, <see langword="false" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Order">
+      <MemberSignature Language="C#" Value="public int Order { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Order" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.SoapFieldAttribute.Order" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a ordem do atributo de campo atual.</summary>
+        <value>A ordem do atributo de campo atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não deve usar essa propriedade; ele não é usado pela infraestrutura de comunicação remota do .NET Framework.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlElementName">
+      <MemberSignature Language="C#" Value="public string XmlElementName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlElementName" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Remoting.Metadata.SoapFieldAttribute.XmlElementName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome do elemento XML do campo dentro de <see cref="T:System.Runtime.Remoting.Metadata.SoapFieldAttribute" /> atributo.</summary>
+        <value>O nome do elemento XML do campo contido nesse atributo.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

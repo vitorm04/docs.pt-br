@@ -1,0 +1,92 @@
+<Type Name="ExtendedDN" FullName="System.DirectoryServices.ExtendedDN">
+  <TypeSignature Language="C#" Value="public enum ExtendedDN" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExtendedDN extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.DirectoryServices.ExtendedDN" />
+  <AssemblyInfo>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>O <see cref="T:System.DirectoryServices.ExtendedDN" /> enumeração Especifica o formato no qual retornar o nome distinto estendido. Essa enumeração é usada com a <see cref="P:System.DirectoryServices.DirectorySearcher.ExtendedDN" /> propriedade.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A forma estendida de um nome diferenciado inclui uma representação de cadeia de caracteres da propriedade objectGUID de um objeto. Para objetos de segurança, como usuários, grupos e computadores, de forma estendida também inclui uma representação de cadeia de caracteres da propriedade objectSID. Para obter mais informações sobre o objectGUID e objectSID propriedades, consulte os tópicos [Guid de objeto](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_objectguid.asp) e [Sid do objeto](http://msdn.microsoft.com/library/default.asp?url=/library/adschema/adschema/a_objectguid.asp) na biblioteca MSDN em [http://msdn.microsoft.com/library](http://msdn.microsoft.com/library).  
+  
+   
+  
+## Examples  
+ O exemplo c# a seguir mostra como retornar uma coleção de nomes distintos em formato hexadecimal.  
+  
+```csharp  
+using System.DirectoryServices;  
+...  
+DirectorySearcher src = new DirectorySearcher("…");  
+src.PropertiesToLoad = new string[] {ntSecurityDescriptor,…};  
+src.ExtendedDN = ExtendedDN.HexString;  
+SearchResultCollection res = src.FindAll();  
+  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="HexString">
+      <MemberSignature Language="C#" Value="HexString" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ExtendedDN HexString = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ExtendedDN.HexString" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ExtendedDN</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o nome distinto usa o formato hexadecimal.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ExtendedDN None = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ExtendedDN.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ExtendedDN</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o nome distinto usa o formato de nome distinto.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Standard">
+      <MemberSignature Language="C#" Value="Standard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.DirectoryServices.ExtendedDN Standard = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.DirectoryServices.ExtendedDN.Standard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.DirectoryServices</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DirectoryServices.ExtendedDN</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica que o nome distinto usa o formato de cadeia de caracteres padrão.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

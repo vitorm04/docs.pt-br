@@ -1,0 +1,1704 @@
+<Type Name="LinkedList&lt;T&gt;" FullName="System.Collections.Generic.LinkedList&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class LinkedList&lt;T&gt; : System.Collections.Generic.ICollection&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;, System.Collections.Generic.IReadOnlyCollection&lt;T&gt;, System.Collections.ICollection, System.Runtime.Serialization.IDeserializationCallback, System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit LinkedList`1&lt;T&gt; extends System.Object implements class System.Collections.Generic.ICollection`1&lt;!T&gt;, class System.Collections.Generic.IEnumerable`1&lt;!T&gt;, class System.Collections.Generic.IReadOnlyCollection`1&lt;!T&gt;, class System.Collections.ICollection, class System.Collections.IEnumerable, class System.Runtime.Serialization.IDeserializationCallback, class System.Runtime.Serialization.ISerializable" />
+  <TypeSignature Language="DocId" Value="T:System.Collections.Generic.LinkedList`1" />
+  <AssemblyInfo>
+    <AssemblyName>System.Collections</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IReadOnlyCollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.IDeserializationCallback</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerDisplay("Count = {Count}")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerTypeProxy(typeof(System.Collections.Generic.System_CollectionDebugView`1))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <typeparam name="T">Especifica o tipo de elemento da lista vinculada.</typeparam>
+    <summary>Representa uma lista duplamente vinculada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601>é uma lista vinculada de uso geral. Ele dá suporte a enumeradores e implementa o <xref:System.Collections.ICollection> interface, consistente com as outras classes de coleção do .NET Framework.  
+  
+ <xref:System.Collections.Generic.LinkedList%601>Fornece nós separados de tipo <xref:System.Collections.Generic.LinkedListNode%601>, portanto, inserção e remoção são operações (1).  
+  
+ Você pode remover os nós e reinseri-los, na mesma lista ou em outra lista, o que resulta em nenhum objeto adicional alocado no heap. Como a lista também mantém uma contagem interna, obtendo o <xref:System.Collections.Generic.LinkedList%601.Count%2A> propriedade é uma operação de (1).  
+  
+ Cada nó em um <xref:System.Collections.Generic.LinkedList%601> objeto é do tipo <xref:System.Collections.Generic.LinkedListNode%601>. Porque o <xref:System.Collections.Generic.LinkedList%601> duplamente está vinculado, cada pontos de nó para o <xref:System.Collections.Generic.LinkedListNode%601.Next%2A> nó e para trás para a <xref:System.Collections.Generic.LinkedListNode%601.Previous%2A> nó.  
+  
+ Listas que contenham tipos de referência têm melhor desempenho quando um nó e seu valor são criados ao mesmo tempo. <xref:System.Collections.Generic.LinkedList%601>aceita `null` como uma opção válida <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> tipos de propriedade de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, as propriedades <xref:System.Collections.Generic.LinkedList%601.First%2A> e <xref:System.Collections.Generic.LinkedList%601.Last%2A> contêm `null`.  
+  
+ O <xref:System.Collections.Generic.LinkedList%601> classe não oferece suporte a encadeamento, dividir, ciclos ou outros recursos que podem deixar a lista em um estado inconsistente. A lista permanecerá consistente em um único thread. O único cenário com multithread com suporte <xref:System.Collections.Generic.LinkedList%601> é multi-threaded operações de leitura.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra muitos recursos da <xref:System.Collections.Generic.LinkedList%601> classe.  
+  
+ [!code-cpp[Generic.LinkedList#1](~/samples/snippets/cpp/VS_Snippets_CLR/Generic.LinkedList/cpp/source.cpp#1)]
+ [!code-csharp[Generic.LinkedList#1](~/samples/snippets/csharp/VS_Snippets_CLR/Generic.LinkedList/cs/source.cs#1)]
+ [!code-vb[Generic.LinkedList#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Generic.LinkedList/vb/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+    <threadsafe>Esse tipo não é thread-safe. Se o <see cref="T:System.Collections.Generic.LinkedList`1" /> precisa ser acessado por vários threads, você precisará implementar seu próprio mecanismo de sincronização.  
+  
+ Um <see cref="T:System.Collections.Generic.LinkedList`1" /> pode dar suporte a vários leitores simultaneamente, desde que a coleção não é modificada. Mesmo assim, enumerar através de uma coleção intrinsecamente não é um procedimento de thread-safe. Em casos raros em que uma enumeração afirma com acessos de gravação, a coleção deve ser bloqueada durante toda a enumeração. Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.</threadsafe>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.LinkedList`1" /> que está vazia.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, as propriedades <xref:System.Collections.Generic.LinkedList%601.First%2A> e <xref:System.Collections.Generic.LinkedList%601.Last%2A> contêm `null`.  
+  
+ Este construtor é uma operação O(1).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir cria e inicializa um <xref:System.Collections.Generic.LinkedList%601> do tipo <xref:System.String>, adiciona vários nós e, em seguida, exibe seu conteúdo.  
+  
+ [!code-cpp[System.Collections.Generic.LinkedList.ctor#1](~/samples/snippets/cpp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedList.ctor/CPP/llctor.cpp#1)]
+ [!code-csharp[System.Collections.Generic.LinkedList.ctor#1](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.Generic.LinkedList.ctor/CS/llctor.cs#1)]
+ [!code-vb[System.Collections.Generic.LinkedList.ctor#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.Generic.LinkedList.ctor/VB/llctor.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LinkedList (System.Collections.Generic.IEnumerable&lt;T&gt; collection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;!T&gt; collection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.#ctor(System.Collections.Generic.IEnumerable{`0})" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="collection" Type="System.Collections.Generic.IEnumerable&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="collection">O <see cref="T:System.Collections.IEnumerable" /> cujos elementos são copiados para o novo <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Collections.Generic.LinkedList`1" />, que contém os elementos copiados do <see cref="T:System.Collections.IEnumerable" /> especificado e tem capacidade suficiente para acomodar o número de elementos copiados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Se `collection` não tem nenhum elemento novo <xref:System.Collections.Generic.LinkedList%601> está vazia e o <xref:System.Collections.Generic.LinkedList%601.First%2A> e <xref:System.Collections.Generic.LinkedList%601.Last%2A> propriedades contêm `null`.  
+  
+ Este construtor é uma operação (n), onde `n` é o número de elementos em `collection`.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclui esse construtor, consulte o <xref:System.Collections.Generic.LinkedList%601> classe.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="collection" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LinkedList (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um objeto <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém as informações necessárias para serializar o <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <param name="context">Um objeto <see cref="T:System.Runtime.Serialization.StreamingContext" /> que contém a origem e o destino do fluxo serializado associado a <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Collections.Generic.LinkedList`1" /> classe que pode ser serializado com especificado <see cref="T:System.Runtime.Serialization.SerializationInfo" /> e <see cref="T:System.Runtime.Serialization.StreamingContext" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, as propriedades <xref:System.Collections.Generic.LinkedList%601.First%2A> e <xref:System.Collections.Generic.LinkedList%601.Last%2A> contêm `null`.  
+  
+ Este construtor é uma operação (n).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAfter">
+      <MemberSignature Language="C#" Value="public void AddAfter (System.Collections.Generic.LinkedListNode&lt;T&gt; node, System.Collections.Generic.LinkedListNode&lt;T&gt; newNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAfter(class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; node, class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; newNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddAfter(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+        <Parameter Name="newNode" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Collections.Generic.LinkedListNode`1" /> após o qual <c>newNode</c>.</param>
+        <param name="newNode">O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> a ser adicionado ao <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona o novo nó especificado após o nó especificado existente no <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="newNode" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" /> não está no <see cref="T:System.Collections.Generic.LinkedList`1" /> atual.  
+  
+ -ou-  
+  
+ <paramref name="newNode" /> pertence a outro <see cref="T:System.Collections.Generic.LinkedList`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAfter">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; AddAfter (System.Collections.Generic.LinkedListNode&lt;T&gt; node, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; AddAfter(class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; node, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddAfter(System.Collections.Generic.LinkedListNode{`0},`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Collections.Generic.LinkedListNode`1" /> após o qual um novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> contendo <c>valor</c>.</param>
+        <param name="value">O valor a ser adicionado ao <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona um novo nó que contém o valor especificado após o nó existente especificado no <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <returns>O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> que contém <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" /> não está no <see cref="T:System.Collections.Generic.LinkedList`1" /> atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBefore">
+      <MemberSignature Language="C#" Value="public void AddBefore (System.Collections.Generic.LinkedListNode&lt;T&gt; node, System.Collections.Generic.LinkedListNode&lt;T&gt; newNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddBefore(class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; node, class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; newNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddBefore(System.Collections.Generic.LinkedListNode{`0},System.Collections.Generic.LinkedListNode{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+        <Parameter Name="newNode" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Collections.Generic.LinkedListNode`1" /> qual inserir <c>newNode</c>.</param>
+        <param name="newNode">O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> a ser adicionado ao <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona o novo nó especificado antes do nó existente especificado no <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.  
+  
+ -ou-  
+  
+ <paramref name="newNode" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" /> não está no <see cref="T:System.Collections.Generic.LinkedList`1" /> atual.  
+  
+ -ou-  
+  
+ <paramref name="newNode" /> pertence a outro <see cref="T:System.Collections.Generic.LinkedList`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddBefore">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; AddBefore (System.Collections.Generic.LinkedListNode&lt;T&gt; node, T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; AddBefore(class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; node, !T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddBefore(System.Collections.Generic.LinkedListNode{`0},`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Collections.Generic.LinkedListNode`1" /> qual inserir um novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> contendo <c>valor</c>.</param>
+        <param name="value">O valor a ser adicionado ao <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona um novo nó que contém o valor especificado antes do nó existente especificado no <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <returns>O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> que contém <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" /> não está no <see cref="T:System.Collections.Generic.LinkedList`1" /> atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFirst">
+      <MemberSignature Language="C#" Value="public void AddFirst (System.Collections.Generic.LinkedListNode&lt;T&gt; node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFirst(class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddFirst(System.Collections.Generic.LinkedListNode{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="node">O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> a ser adicionado ao início do <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona o novo nó especificado ao início do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, o novo nó transforma-se no <xref:System.Collections.Generic.LinkedList%601.First%2A> e no <xref:System.Collections.Generic.LinkedList%601.Last%2A>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" /> pertence a outro <see cref="T:System.Collections.Generic.LinkedList`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFirst">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; AddFirst (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; AddFirst(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddFirst(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser adicionado no início da <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona um novo nó que contém o valor especificado no início da <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <returns>O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> que contém <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, o novo nó transforma-se no <xref:System.Collections.Generic.LinkedList%601.First%2A> e no <xref:System.Collections.Generic.LinkedList%601.Last%2A>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLast">
+      <MemberSignature Language="C#" Value="public void AddLast (System.Collections.Generic.LinkedListNode&lt;T&gt; node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddLast(class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddLast(System.Collections.Generic.LinkedListNode{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="node">O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> a adicionar no final de <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona o novo nó especificado no final de <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, o novo nó transforma-se no <xref:System.Collections.Generic.LinkedList%601.First%2A> e no <xref:System.Collections.Generic.LinkedList%601.Last%2A>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" /> pertence a outro <see cref="T:System.Collections.Generic.LinkedList`1" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddLast">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; AddLast (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; AddLast(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.AddLast(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser adicionado ao final do <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Adiciona um novo nó que contém o valor especificado no final do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <returns>O novo <see cref="T:System.Collections.Generic.LinkedListNode`1" /> que contém <paramref name="value" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, o novo nó transforma-se no <xref:System.Collections.Generic.LinkedList%601.First%2A> e no <xref:System.Collections.Generic.LinkedList%601.Last%2A>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.Clear" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove todos os nós de <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601.Count%2A>é definido como zero, e referências a outros objetos de elementos da coleção também são liberadas.  <xref:System.Collections.Generic.LinkedList%601.First%2A>e <xref:System.Collections.Generic.LinkedList%601.Last%2A> são definidos como `null`.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.Contains(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser localizado na <see cref="T:System.Collections.Generic.LinkedList`1" />. O valor pode ser <see langword="null" /> para tipos de referência.</param>
+        <summary>Determina se um valor está no <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <returns>
+          <see langword="true" /> se <paramref name="value" /> for encontrado no <see cref="T:System.Collections.Generic.LinkedList`1" />; caso contrário, <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (T[] array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(!T[] array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.CopyTo(`0[],System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="T[]" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.Generic.LinkedList`1" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia todo o <see cref="T:System.Collections.Generic.LinkedList`1" /> em um <see cref="T:System.Array" /> unidimensional compatível, começando no índice especificado da matriz de destino.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método usa <xref:System.Array.Copy%2A?displayProperty=nameWithType> para copiar os elementos.  
+  
+ Os elementos são copiados para o <xref:System.Array> na mesma ordem em que o enumerador que itera por meio de <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">O número de elementos na origem <see cref="T:System.Collections.Generic.LinkedList`1" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedList`1.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o número de nós que realmente estão contidos na <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <value>O número de nós que realmente estão contidos na <see cref="T:System.Collections.Generic.LinkedList`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclui essa propriedade, consulte o <xref:System.Collections.Generic.LinkedList%601> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; Find (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; Find(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.Find(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser localizado na <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Encontra o primeiro nó que contém o valor especificado.</summary>
+        <returns>O primeiro <see cref="T:System.Collections.Generic.LinkedListNode`1" /> que contém o valor especificado, se for encontrado; caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.LinkedList%601> é pesquisado forward começando em <xref:System.Collections.Generic.LinkedList%601.First%2A> e final em <xref:System.Collections.Generic.LinkedList%601.Last%2A>.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindLast">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; FindLast (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; FindLast(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.FindLast(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser localizado na <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Localiza o último nó que contém o valor especificado.</summary>
+        <returns>O último <see cref="T:System.Collections.Generic.LinkedListNode`1" /> que contém o valor especificado, caso seja encontrado, caso contrário, <see langword="null" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Collections.Generic.LinkedList%601> é pesquisada começando com versões anteriores em <xref:System.Collections.Generic.LinkedList%601.Last%2A> e final em <xref:System.Collections.Generic.LinkedList%601.First%2A>.  
+  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="First">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; First { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; First" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedList`1.First" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o primeiro nó do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <value>O primeiro <see cref="T:System.Collections.Generic.LinkedListNode`1" /> de <see cref="T:System.Collections.Generic.LinkedList`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, as propriedades <xref:System.Collections.Generic.LinkedList%601.First%2A> e <xref:System.Collections.Generic.LinkedList%601.Last%2A> contêm `null`.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclui essa propriedade, consulte o <xref:System.Collections.Generic.LinkedList%601> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedList&lt;T&gt;.Enumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Collections.Generic.LinkedList`1/Enumerator&lt;!T&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedList&lt;T&gt;+Enumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera por meio do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.LinkedList`1.Enumerator" /> para o <see cref="T:System.Collections.Generic.LinkedList`1" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, <xref:System.Collections.Generic.LinkedList%601.Enumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.Generic.LinkedList%601.Enumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.LinkedList%601.Enumerator.Current%2A>.  
+  
+ <xref:System.Collections.Generic.LinkedList%601.Enumerator.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.Generic.LinkedList%601.Enumerator.MoveNext%2A> é chamado. <xref:System.Collections.Generic.LinkedList%601.Enumerator.MoveNext%2A> define <xref:System.Collections.Generic.LinkedList%601.Enumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601.Enumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.Generic.LinkedList%601.Enumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.Generic.LinkedList%601.Enumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.Generic.LinkedList%601.Enumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.LinkedList%601.Enumerator.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.LinkedList%601.Enumerator.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjectData">
+      <MemberSignature Language="C#" Value="public virtual void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetObjectData(class System.Runtime.Serialization.SerializationInfo info, valuetype System.Runtime.Serialization.StreamingContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="context" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="info">Um objeto <see cref="T:System.Runtime.Serialization.SerializationInfo" /> que contém as informações necessárias para serializar a instância <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <param name="context">Um <see cref="T:System.Runtime.Serialization.StreamingContext" /> objeto que contém a origem e destino do fluxo serializado associado a <see cref="T:System.Collections.Generic.LinkedList`1" /> instância.</param>
+        <summary>Implementa a interface <see cref="T:System.Runtime.Serialization.ISerializable" /> e retorna os dados necessários para serializar a instância <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="info" /> é <see langword="null" />.</exception>
+        <permission cref="T:System.Security.Permissions.SecurityPermission">para fornecer serviços de serialização. Enumeração associada: <see cref="F:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter" /> ação de segurança:<see cref="F:System.Security.Permissions.SecurityAction.LinkDemand" /></permission>
+      </Docs>
+    </Member>
+    <Member MemberName="Last">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.LinkedListNode&lt;T&gt; Last { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; Last" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedList`1.Last" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.LinkedListNode&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o último nó da <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <value>O último <see cref="T:System.Collections.Generic.LinkedListNode`1" /> da <see cref="T:System.Collections.Generic.LinkedList`1" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, as propriedades <xref:System.Collections.Generic.LinkedList%601.First%2A> e <xref:System.Collections.Generic.LinkedList%601.Last%2A> contêm `null`.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclui essa propriedade, consulte o <xref:System.Collections.Generic.LinkedList%601> classe.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDeserialization">
+      <MemberSignature Language="C#" Value="public virtual void OnDeserialization (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnDeserialization(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.OnDeserialization(System.Object)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">A fonte do evento de desserialização.</param>
+        <summary>Implementa o <see cref="T:System.Runtime.Serialization.ISerializable" /> interface e gera o evento de desserialização quando a desserialização foi concluída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Runtime.Serialization.SerializationException">O <see cref="T:System.Runtime.Serialization.SerializationInfo" /> objeto associado atual <see cref="T:System.Collections.Generic.LinkedList`1" /> instância é inválida.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (System.Collections.Generic.LinkedListNode&lt;T&gt; node);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class System.Collections.Generic.LinkedListNode`1&lt;!T&gt; node) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.Remove(System.Collections.Generic.LinkedListNode{`0})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Collections.Generic.LinkedListNode&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="node">O <see cref="T:System.Collections.Generic.LinkedListNode`1" /> a ser removido de <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Remove o nó especificado do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="node" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.InvalidOperationException">
+          <paramref name="node" /> não está no <see cref="T:System.Collections.Generic.LinkedList`1" /> atual.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.Remove(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser removido de <see cref="T:System.Collections.Generic.LinkedList`1" />.</param>
+        <summary>Remove a primeira ocorrência do valor especificado do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <returns>
+          <see langword="true" /> se o elemento contendo <paramref name="value" /> for removido com êxito; caso contrário, <see langword="false" />.  Esse método também retornará <see langword="false" /> se <paramref name="value" /> não tiver sido encontrado no <see cref="T:System.Collections.Generic.LinkedList`1" /> original.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método executa uma pesquisa linear; por isso, esse método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFirst">
+      <MemberSignature Language="C#" Value="public void RemoveFirst ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveFirst() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.RemoveFirst" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o nó no início do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Collections.Generic.LinkedList`1" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveLast">
+      <MemberSignature Language="C#" Value="public void RemoveLast ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveLast() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.RemoveLast" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Remove o nó no final do <see cref="T:System.Collections.Generic.LinkedList`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">O <see cref="T:System.Collections.Generic.LinkedList`1" /> está vazio.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.Add">
+      <MemberSignature Language="C#" Value="void ICollection&lt;T&gt;.Add (T value);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.Generic.ICollection&lt;T&gt;.Add(!T value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.System#Collections#Generic#ICollection&lt;T&gt;#Add(`0)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="value">O valor a ser adicionado ao final do <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        <summary>Adiciona um item no final de <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Collections.Generic.LinkedList%601> aceita `null` como um <xref:System.Collections.Generic.LinkedListNode%601.Value%2A> válido para tipos de referência e permite valores duplicados.  
+  
+ Caso <xref:System.Collections.Generic.LinkedList%601> esteja vazio, o novo nó transforma-se no <xref:System.Collections.Generic.LinkedList%601.First%2A> e no <xref:System.Collections.Generic.LinkedList%601.Last%2A>.  
+  
+ Este método é uma operação O(1).  
+  
+   
+  
+## Examples  
+ Para obter um exemplo que inclua esse método, consulte a classe <xref:System.Collections.Generic.LinkedList%601>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly">
+      <MemberSignature Language="C#" Value="bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedList`1.System#Collections#Generic#ICollection&lt;T&gt;#IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o <see cref="T:System.Collections.Generic.ICollection`1" /> é somente leitura.</summary>
+        <value>
+          <see langword="true" /> se o <see cref="T:System.Collections.Generic.ICollection`1" /> for somente leitura; caso contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.LinkedList`1" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Uma coleção que seja somente leitura não permite a adição, a remoção ou a modificação de elementos após a coleção ser criada.  
+  
+ Uma coleção somente leitura é apenas uma coleção com um wrapper que impede a modificação da coleção; por isso, caso as alterações sejam feitas na coleção subjacente, a coleção somente leitura reflete as alterações.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.Generic.IEnumerator&lt;T&gt; IEnumerable&lt;T&gt;.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;!T&gt; System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.System#Collections#Generic#IEnumerable&lt;T&gt;#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera em uma coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.Generic.IEnumerator`1" /> que pode ser usado para iterar pela coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. Nesta posição, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+  
+ <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.Generic.IEnumerator%601.Current%2A> está indefinido. Não é possível definir <xref:System.Collections.Generic.IEnumerator%601.Current%2A> como o primeiro elemento da coleção novamente; você deve criar uma nova instância de enumerador em vez disso.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco. Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.CopyTo">
+      <MemberSignature Language="C#" Value="void ICollection.CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Collections.ICollection.CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">O <see cref="T:System.Array" /> unidimensional que é o destino dos elementos copiados de <see cref="T:System.Collections.ICollection" />. O <see cref="T:System.Array" /> deve ter indexação com base em zero.</param>
+        <param name="index">O índice de base zero em <c>matriz</c> no qual a cópia começa.</param>
+        <summary>Copia os elementos do <see cref="T:System.Collections.ICollection" /> para um <see cref="T:System.Array" />, começando em um determinado índice <see cref="T:System.Array" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Se o tipo da fonte de <xref:System.Collections.ICollection> não pode ser convertido automaticamente para o tipo de destino `array`, as implementações não genérica de <xref:System.Collections.ICollection.CopyTo%2A?displayProperty=nameWithType> gerar <xref:System.InvalidCastException>, enquanto as implementações genéricas lançam <xref:System.ArgumentException>.  
+  
+ Este método é uma operação O(`n`), em que `n` é <xref:System.Collections.Generic.LinkedList%601.Count%2A>.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="array" /> é <see langword="null" />.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="index" /> é menor que zero.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="array" /> é multidimensional.  
+  
+ -ou-  
+  
+ O <paramref name="array" /> não tem indexação baseada em zero.  
+  
+ -ou-  
+  
+ O número de elementos na origem <see cref="T:System.Collections.ICollection" /> é maior do que o espaço disponível de <paramref name="index" /> até o final do <paramref name="array" /> de destino.  
+  
+ -ou-  
+  
+ O tipo do <see cref="T:System.Collections.ICollection" /> de origem não pode ser automaticamente convertido para o tipo de <paramref name="array" /> de destino.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.IsSynchronized">
+      <MemberSignature Language="C#" Value="bool System.Collections.ICollection.IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool System.Collections.ICollection.IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedList`1.System#Collections#ICollection#IsSynchronized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o acesso à <see cref="T:System.Collections.ICollection" /> é sincronizado (thread-safe).</summary>
+        <value>
+          <see langword="true" /> caso o acesso ao <see cref="T:System.Collections.ICollection" /> seja sincronizado (thread-safe); do contrário, <see langword="false" />.  Na implementação padrão de <see cref="T:System.Collections.Generic.LinkedList`1" />, essa propriedade sempre retorna <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ <xref:System.Collections.ICollection.SyncRoot%2A>Retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads bloquear este objeto antes de acessar a coleção.  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.ICollection.SyncRoot">
+      <MemberSignature Language="C#" Value="object System.Collections.ICollection.SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.ICollection.SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:System.Collections.Generic.LinkedList`1.System#Collections#ICollection#SyncRoot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.</summary>
+        <value>Um objeto que pode ser usado para sincronizar o acesso ao <see cref="T:System.Collections.ICollection" />.  Na implementação padrão da <see cref="T:System.Collections.Generic.LinkedList`1" />, essa propriedade sempre retorna a instância atual.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ A enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ <xref:System.Collections.ICollection.SyncRoot%2A>Retorna um objeto que pode ser usado para sincronizar o acesso a <xref:System.Collections.ICollection>. A sincronização é eficaz somente se todos os threads bloquear este objeto antes de acessar a coleção. O código a seguir mostra o uso do <xref:System.Collections.ICollection.SyncRoot%2A> propriedade para c#, C++ e Visual Basic.  
+  
+```csharp  
+ICollection ic = ...;  
+lock (ic.SyncRoot) {  
+   // Access the collection.  
+}  
+```  
+  
+```vb  
+Dim ic As ICollection = ...  
+SyncLock ic.SyncRoot  
+   ' Access the collection.  
+End SyncLock  
+```  
+  
+```cpp#  
+ICollection^ ic = ...;  
+try {  
+   Monitor::Enter(ic->SyncRoot);  
+   // Access the collection.  
+}  
+finally {  
+   Monitor::Exit(ic->SyncRoot);  
+}  
+```  
+  
+ A recuperação do valor dessa propriedade é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Collections.Generic.LinkedList`1.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Collections</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna um enumerador que itera através da lista vinculada como uma coleção.</summary>
+        <returns>Um <see cref="T:System.Collections.IEnumerator" /> que pode ser usado para iterar através da lista vinculada como uma coleção.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A instrução `foreach` da linguagem C# (`for each` no C++, `For Each` no Visual Basic) oculta a complexidade dos enumeradores. Portanto, o uso de `foreach` é recomendado, em vez de manipular diretamente o enumerador.  
+  
+ Os enumeradores podem ser usados para ler os dados na coleção, mas não podem ser usados para modificar a coleção subjacente.  
+  
+ Inicialmente, o enumerador é posicionado antes do primeiro elemento da coleção. <xref:System.Collections.IEnumerator.Reset%2A> também traz o enumerador de volta para essa posição.  Nesta posição, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Por isso, você deve chamar <xref:System.Collections.IEnumerator.MoveNext%2A> para avançar o enumerador até o primeiro elemento da coleção antes de ler o valor de <xref:System.Collections.IEnumerator.Current%2A>.  
+  
+ <xref:System.Collections.IEnumerator.Current%2A> retorna o mesmo objeto até <xref:System.Collections.IEnumerator.MoveNext%2A> ou <xref:System.Collections.IEnumerator.Reset%2A> ser chamado. <xref:System.Collections.IEnumerator.MoveNext%2A> define <xref:System.Collections.IEnumerator.Current%2A> como o próximo elemento.  
+  
+ Caso <xref:System.Collections.IEnumerator.MoveNext%2A> passe o final da coleção, o enumerador é posicionado após o último elemento na coleção e <xref:System.Collections.IEnumerator.MoveNext%2A> retorna `false`. Quando o enumerador está nessa posição, as chamadas subsequentes para <xref:System.Collections.IEnumerator.MoveNext%2A> também retornam `false`. Caso a última chamada para <xref:System.Collections.IEnumerator.MoveNext%2A> tenha retornado `false`, <xref:System.Collections.IEnumerator.Current%2A> está indefinido. Para definir <xref:System.Collections.IEnumerator.Current%2A> como o primeiro elemento da coleção novamente, é possível chamar <xref:System.Collections.IEnumerator.Reset%2A> seguido de <xref:System.Collections.IEnumerator.MoveNext%2A>.  
+  
+ Um enumerador permanece válido desde que a coleção continue inalterada. Se forem feitas alterações na coleção, como adicionar, modificar ou excluir elementos, o enumerador será invalidado de maneira irrevogável e seu comportamento permanecerá indefinido.  
+  
+ O enumerador não tem acesso exclusivo à coleção; por isso, a enumeração por meio de uma coleção não é um procedimento thread-safe intrínseco.  Para garantir acesso thread-safe durante a enumeração, é possível bloquear a coleção durante toda a enumeração.  Para permitir que a coleção a ser acessado por vários threads para leitura e gravação, você deve implementar sua sincronização.  
+  
+ As implementações padrão de coleções em <xref:System.Collections.Generic?displayProperty=nameWithType> não são sincronizadas.  
+  
+ Este método é uma operação O(1).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

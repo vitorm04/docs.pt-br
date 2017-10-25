@@ -1,0 +1,163 @@
+<Type Name="AssemblySignatureKeyAttribute" FullName="System.Reflection.AssemblySignatureKeyAttribute">
+  <TypeSignature Language="C#" Value="public sealed class AssemblySignatureKeyAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AssemblySignatureKeyAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Reflection.AssemblySignatureKeyAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.0.20.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple=false, Inherited=false)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a migração de uma chave de nome forte mais antiga e mais simples para uma chave maior com um algoritmo de hash mais forte.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A nova chave maior é a chave de assinatura. Nas versões anteriores a [!INCLUDE[net_v45](~/includes/net-v45-md.md)], a chave de assinatura foi idêntica à chave de identidade. Começando com o [!INCLUDE[net_v45](~/includes/net-v45-md.md)], o <xref:System.Reflection.AssemblySignatureKeyAttribute> atributo permite que os metadados de assembly continuar a ter o token de chave pública antigo e o objeto binário grande (BLOB) para que as referências de assembly existentes continuam a funcionar. Ele também garante que o mapeamento é proveniente de um proprietário da chave de identidade.  
+  
+ A presença do atributo não significa necessariamente que a validação do nome forte ocorra. Cenários de confiança total em comum, o atributo é nunca considerado, porque as assinaturas de nome forte nunca são validadas. No entanto, quando a assinatura de nome forte tem que ser validada, a assinatura de nome forte e a referenda devem ser validadas. Chave de identidade do assembly não tem que ser idênticos para a chave de assinatura (a chave usada para fazer a assinatura real e validação). A chave de identidade pode ser mapeada para uma chave de assinatura (mais robusta) diferente. Isso permite que você definir a identidade de um assembly e atualizar as chaves e os algoritmos de assinatura para versões mais seguras.  
+  
+ As referenda endereços preocupações de segurança quando um assembly mal-intencionado alguns outros identidade baseada em declarações. Por exemplo, um assembly System.Core.dll mal-intencionado pode conter a chave pública da Microsoft em seus metadados e use o atributo dizer a validação de nome forte para usar a chave de assinatura do invasor se não houver nenhum referenda. Assim, ele pode se mascarar como um assembly de Microsoft validados de nome forte.  
+  
+ Para obter informações sobre como assinar assemblies para uso com esse novo atributo, consulte [de nomeação forte aprimorada](~/docs/framework/app-domains/enhanced-strong-naming.md).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AssemblySignatureKeyAttribute (string publicKey, string countersignature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string publicKey, string countersignature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Reflection.AssemblySignatureKeyAttribute.#ctor(System.String,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="publicKey" Type="System.String" />
+        <Parameter Name="countersignature" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="publicKey">A chave pública ou identidade.</param>
+        <param name="countersignature">A referenda, que é parte de chave de assinatura de chave de nome forte.</param>
+        <summary>Cria uma nova instância do <see cref="T:System.Reflection.AssemblySignatureKeyAttribute" /> classe usando a chave pública especificada e a referenda.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use Sn.exe para gerar os parâmetros para esse construtor.  
+  
+```  
+sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Countersignature">
+      <MemberSignature Language="C#" Value="public string Countersignature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Countersignature" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblySignatureKeyAttribute.Countersignature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a referenda para o nome forte para esse assembly.</summary>
+        <value>A referenda para esta chave de assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A referenda representa a chave pública que está assinada pela chave de identidade.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublicKey">
+      <MemberSignature Language="C#" Value="public string PublicKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PublicKey" />
+      <MemberSignature Language="DocId" Value="P:System.Reflection.AssemblySignatureKeyAttribute.PublicKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.0.20.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a chave pública do nome forte usado para assinar o assembly.</summary>
+        <value>A chave pública para esse assembly.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

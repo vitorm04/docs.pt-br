@@ -1,0 +1,147 @@
+<Type Name="SoapSchemaExporter" FullName="System.Xml.Serialization.SoapSchemaExporter">
+  <TypeSignature Language="C#" Value="public class SoapSchemaExporter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SoapSchemaExporter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.Serialization.SoapSchemaExporter" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Preenche <see cref="T:System.Xml.Schema.XmlSchema" /> definições para tipos do .NET Framework que são serializados usando a codificação de SOAP de tipos de objetos com dados de esquema XML.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Codificação de SOAP das mensagens do serviço Web SOAP é descrito na seção 5 da especificação do SOAP 1.1.  
+  
+ O <xref:System.Xml.Schema.XmlSchema> classe fornece uma representação programática de um documento de linguagem XSD de definição de esquema XML.  
+  
+ Você não deve usar o <xref:System.Xml.Serialization.SoapSchemaExporter> classe diretamente.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SoapSchemaExporter (System.Xml.Serialization.XmlSchemas schemas);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Xml.Serialization.XmlSchemas schemas) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapSchemaExporter.#ctor(System.Xml.Serialization.XmlSchemas)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schemas" Type="System.Xml.Serialization.XmlSchemas" />
+      </Parameters>
+      <Docs>
+        <param name="schemas">Uma coleção de <see cref="T:System.Xml.Schema.XmlSchema" /> objetos para o elemento declarações obtidas mapeamentos de tipo devem ser adicionadas.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Xml.Serialization.SoapSchemaExporter" /> classe, que fornece a coleção de <see cref="T:System.Xml.Schema.XmlSchema" /> objetos para o esquema XML declarações de elemento devem ser adicionadas.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não deve criar uma instância do <xref:System.Xml.Serialization.SoapSchemaExporter> classe diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportMembersMapping">
+      <MemberSignature Language="C#" Value="public void ExportMembersMapping (System.Xml.Serialization.XmlMembersMapping xmlMembersMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportMembersMapping(class System.Xml.Serialization.XmlMembersMapping xmlMembersMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapSchemaExporter.ExportMembersMapping(System.Xml.Serialization.XmlMembersMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlMembersMapping" Type="System.Xml.Serialization.XmlMembersMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlMembersMapping">Mapeamentos de tipo do .NET Framework internos para as partes do elemento de uma definição de mensagem WSDL.</param>
+        <summary>Adiciona o aplicável <see cref="T:System.Xml.Schema.XmlSchema" /> uma definição de tipo de dados de objeto para cada uma das partes de elemento de uma definição de mensagens codificadas em SOAP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não deve usar o <xref:System.Xml.Serialization.SoapSchemaExporter> classe diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportMembersMapping">
+      <MemberSignature Language="C#" Value="public void ExportMembersMapping (System.Xml.Serialization.XmlMembersMapping xmlMembersMapping, bool exportEnclosingType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportMembersMapping(class System.Xml.Serialization.XmlMembersMapping xmlMembersMapping, bool exportEnclosingType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapSchemaExporter.ExportMembersMapping(System.Xml.Serialization.XmlMembersMapping,System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlMembersMapping" Type="System.Xml.Serialization.XmlMembersMapping" />
+        <Parameter Name="exportEnclosingType" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="xmlMembersMapping">Mapeamentos de tipo do .NET Framework internos para as partes do elemento de uma definição de mensagem WSDL.</param>
+        <param name="exportEnclosingType">
+          <see langword="true" />Para exportar uma definição de tipo para o elemento pai de partes de WSDL. Caso contrário, <see langword="false" />.</param>
+        <summary>Adiciona o aplicável <see cref="T:System.Xml.Schema.XmlSchema" /> uma definição de tipo de dados de objeto para cada uma das partes de elemento de uma definição de mensagens codificadas em SOAP.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não deve usar o <xref:System.Xml.Serialization.SoapSchemaExporter> classe diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ExportTypeMapping">
+      <MemberSignature Language="C#" Value="public void ExportTypeMapping (System.Xml.Serialization.XmlTypeMapping xmlTypeMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ExportTypeMapping(class System.Xml.Serialization.XmlTypeMapping xmlTypeMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Xml.Serialization.SoapSchemaExporter.ExportTypeMapping(System.Xml.Serialization.XmlTypeMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlTypeMapping" Type="System.Xml.Serialization.XmlTypeMapping" />
+      </Parameters>
+      <Docs>
+        <param name="xmlTypeMapping">Um mapeamento interno entre um tipo .NET Framework e um elemento de esquema XML.</param>
+        <summary>Adiciona o aplicável <see cref="T:System.Xml.Schema.XmlSchema" /> objeto uma definição de tipo de dados para um tipo .NET Framework.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você não deve usar o <xref:System.Xml.Serialization.SoapSchemaExporter> classe diretamente.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

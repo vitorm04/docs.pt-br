@@ -1,0 +1,134 @@
+<Type Name="Cer" FullName="System.Runtime.ConstrainedExecution.Cer">
+  <TypeSignature Language="C#" Value="public enum Cer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed Cer extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.ConstrainedExecution.Cer" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica o comportamento do método quando chamado em uma região de execução restrita.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Runtime.ConstrainedExecution.Cer> enumeração Especifica o comportamento de um método, tipo ou assembly dentro de uma região de execução restrita (CER). Use um dos três valores disponíveis para indicar que a entidade terá êxito, não tem conhecimento de uma CER ou (de forma determinista) poderá relatar êxito ou falha.  
+  
+ CER fornece garantias de que a região de código será executado sem interrupção mesmo se ocorrer uma exceção assíncrona como um estouro de pilha ou a exceção de falta de memória thread anulado.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra o uso do <xref:System.Runtime.ConstrainedExecution.Cer> ao especificar uma região de execução restrita para um método de enumeração. Este exemplo de código é parte de um exemplo maior fornecido para o <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute.%23ctor%2A> construtor.  
+  
+ [!code-csharp[System.Runtime.ConstrainedExecution#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Runtime.ConstrainedExecution/cs/program.cs#3)]
+ [!code-vb[System.Runtime.ConstrainedExecution#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Runtime.ConstrainedExecution/vb/program.vb#3)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MayFail">
+      <MemberSignature Language="C#" Value="MayFail" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.ConstrainedExecution.Cer MayFail = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.ConstrainedExecution.Cer.MayFail" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Cer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diante de condições excepcionais, o método pode falhar. Nesse caso, o método reportará de volta para o método de chamada se ele teve êxito ou falhou. O método deve ter uma CER em torno do corpo do método para garantir que ela possa relatar o valor retornado.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.ConstrainedExecution.Cer None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.ConstrainedExecution.Cer.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Cer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O método, tipo ou assembly não tem nenhum conceito de uma CER. Ele não aproveita as garantias da CER. Isso significa o seguinte:</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+-   No caso de condições excepcionais, o método pode falhar.  
+  
+-   O método pode ou não o relatório que falhou, pode (é não determinístico).  
+  
+-   O método não é gravado com CERs em mente (que é o cenário mais provável).  
+  
+ Se um método, tipo ou assembly não está marcado explicitamente para ter êxito, ele implicitamente está marcado como `Cer.None`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Success">
+      <MemberSignature Language="C#" Value="Success" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Runtime.ConstrainedExecution.Cer Success = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Runtime.ConstrainedExecution.Cer.Success" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.ConstrainedExecution.Cer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Diante de condições excepcionais, o método tem garantia de êxito. Você sempre deve construir uma CER em torno do método chamado, mesmo quando ele é chamado de dentro de uma região fora da CER. Um método será bem-sucedido se ele fizer o que é desejado. Por exemplo, marcar <see cref="P:System.Collections.ArrayList.Count" /> com <c>ReliabilityContractAttribute(Cer.Success)</c> significa que quando ele é executado em uma CER, ele sempre retorna uma contagem do número de elementos no <see cref="T:System.Collections.ArrayList" /> e nunca pode deixar o campos internos em um estado indeterminado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

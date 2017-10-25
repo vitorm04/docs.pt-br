@@ -1,0 +1,114 @@
+<Type Name="CombineMode" FullName="System.Drawing.Drawing2D.CombineMode">
+  <TypeSignature Language="C#" Value="public enum CombineMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CombineMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Drawing.Drawing2D.CombineMode" />
+  <AssemblyInfo>
+    <AssemblyName>System.Drawing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como as diferentes regiões de recorte podem ser combinadas.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Complement">
+      <MemberSignature Language="C#" Value="Complement" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CombineMode Complement = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CombineMode.Complement" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CombineMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a região existente é substituída pelo resultado da remoção da região existente da nova região. Em outras palavras, a região existente é excluída da nova região.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Exclude">
+      <MemberSignature Language="C#" Value="Exclude" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CombineMode Exclude = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CombineMode.Exclude" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CombineMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Especifica que a região existente é substituída pelo resultado da remoção da nova região da região existente. Em outras palavras, a nova região é excluída da região existente.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Intersect">
+      <MemberSignature Language="C#" Value="Intersect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CombineMode Intersect = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CombineMode.Intersect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CombineMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Duas regiões de recorte são combinadas selecionando a interseção entre elas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="Replace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CombineMode Replace = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CombineMode.Replace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CombineMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Uma área de recorte é substituída por outra.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Union">
+      <MemberSignature Language="C#" Value="Union" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CombineMode Union = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CombineMode.Union" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CombineMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Duas regiões de recorte são combinadas selecionando a união de ambas.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xor">
+      <MemberSignature Language="C#" Value="Xor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Drawing.Drawing2D.CombineMode Xor = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Drawing.Drawing2D.CombineMode.Xor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Drawing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Drawing2D.CombineMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Duas regiões de recorte são combinadas selecionando apenas as áreas delimitadas por uma região ou pela outra, mas não ambas.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

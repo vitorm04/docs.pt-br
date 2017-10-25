@@ -1,0 +1,1047 @@
+<Type Name="OdbcConnection" FullName="System.Data.Odbc.OdbcConnection">
+  <TypeSignature Language="C#" Value="public sealed class OdbcConnection : System.Data.Common.DbConnection, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit OdbcConnection extends System.Data.Common.DbConnection implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:System.Data.Odbc.OdbcConnection" />
+  <AssemblyInfo>
+    <AssemblyName>System.Data</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Data.Odbc</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Data.Common.DbConnection</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("InfoMessage")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Representa uma conexão aberta com uma fonte de dados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Um <xref:System.Data.Odbc.OdbcConnection> objeto representa uma conexão exclusiva com uma fonte de dados criada usando uma cadeia de caracteres de conexão ou nome de fonte de dados ODBC (DSN). Com um sistema de banco de dados cliente/servidor, é equivalente a uma conexão de rede para o servidor. Dependendo da funcionalidade com suporte pelo driver ODBC native, alguns métodos ou propriedades de um <xref:System.Data.Odbc.OdbcConnection> objeto pode não estar disponível.  
+  
+ O <xref:System.Data.Odbc.OdbcConnection> objeto usa recursos nativos, como identificadores de ambiente e conexão ODBC. Você sempre deve fechar qualquer aberto <xref:System.Data.Odbc.OdbcConnection> objetos chamando <xref:System.Data.Odbc.OdbcConnection.Close%2A> ou **Dispose** antes do <xref:System.Data.Odbc.OdbcConnection> objeto fica fora do escopo ou colocando-se a conexão em um `Using` instrução. Não fazer isso deixa a liberação desses recursos nativos para coleta de lixo. Ele pode não liberá-las imediatamente. Isso, por sua vez, eventualmente pode causar o driver subjacente para ficar sem recursos ou atingir um limite máximo. Isso resultou em falhas intermitentes. Por exemplo, você pode experimentar `Maximum Connections` -erros relacionados ao número de conexões está aguardando para ser excluída pelo coletor de lixo. Fechar explicitamente as conexões permite um uso mais eficiente dos recursos nativos, melhorando a escalabilidade e melhorar o desempenho geral do aplicativo.  
+  
+> [!NOTE]
+>  Para implantar aplicativos de alto desempenho, você geralmente deve usar o pooling de conexão. No entanto, quando você usa o .NET Framework Data Provider para ODBC, você não precisa habilitar o pool de conexão porque o provedor gerencia isso automaticamente.  
+  
+ Se um do `Execute` métodos do <xref:System.Data.Odbc.OdbcCommand> classe faz com que um fatal <xref:System.Data.Odbc.OdbcException> (por exemplo, uma SQL Server severidade de nível de 20 ou maior), o <xref:System.Data.Odbc.OdbcConnection> pode fechar. No entanto, o usuário pode reabrir a conexão e continuar.  
+  
+ Um aplicativo que cria uma instância do <xref:System.Data.Odbc.OdbcConnection> objeto pode exigir que todos os chamadores diretos e indiretos tenha permissão suficiente para o código, definindo as demandas de segurança declarativa ou obrigatório. <xref:System.Data.Odbc.OdbcConnection>cria solicitações de segurança usando o <xref:System.Data.Odbc.OdbcPermission> objeto. Os usuários podem verificar se o seu código tem permissões suficientes, usando o <xref:System.Data.Odbc.OdbcPermissionAttribute> objeto. Os usuários e administradores também podem usar a ferramenta de política de segurança de acesso de código (Caspol.exe) para modificar a política de segurança em níveis de empresa, computador e usuário. Para obter mais informações, consulte [Segurança de acesso do código e ADO.NET](~/docs/framework/data/adonet/code-access-security.md).  
+  
+ Para obter mais informações sobre o tratamento de mensagens de aviso e informativas da fonte de dados, consulte [eventos de Conexão](~/docs/framework/data/adonet/connection-events.md).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcCommand> e um <xref:System.Data.Odbc.OdbcConnection>. O <xref:System.Data.Odbc.OdbcConnection> é aberto e definido como o <xref:System.Data.Odbc.OdbcCommand.Connection%2A> propriedade. O exemplo, em seguida, chama <xref:System.Data.Odbc.OdbcCommand.ExecuteNonQuery%2A>e fecha a conexão. Para fazer isso, o <xref:System.Data.Odbc.OdbcCommand.ExecuteNonQuery%2A> é passado uma cadeia de caracteres de conexão e uma cadeia de caracteres de consulta que é uma instrução SQL INSERT.  
+  
+ [!code-csharp[Classic WebData OdbcConnection#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma nova instância da <xref:System.Data.Odbc.OdbcConnection> é criado, o somente gravação e somente leitura propriedades são definidas para os seguintes valores iniciais, a menos que eles são definidos especificamente usando palavras-chave associadas no <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade.  
+  
+|Propriedades|Valor inicial|  
+|----------------|-------------------|  
+|<xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>|Cadeia de caracteres vazia ("")|  
+|<xref:System.Data.Odbc.OdbcConnection.ConnectionTimeout%2A>|15|  
+|<xref:System.Data.Odbc.OdbcConnection.Database%2A>|Cadeia de caracteres vazia ("")|  
+  
+ Você pode alterar o valor dessas propriedades usando somente o <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria e abre um <xref:System.Data.Odbc.OdbcConnection>.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.OdbcConnection#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.OdbcConnection/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.OdbcConnection#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.OdbcConnection/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OdbcConnection (string connectionString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string connectionString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connectionString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="connectionString">A conexão usada para abrir a fonte de dados.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Data.Odbc.OdbcConnection" /> com a cadeia de conexão especificada.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando uma nova instância da <xref:System.Data.Odbc.OdbcConnection> é criado, o somente gravação e somente leitura propriedades são definidas para os seguintes valores iniciais, a menos que eles são definidos especificamente usando palavras-chave associadas no <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade.  
+  
+|Propriedades|Valor inicial|  
+|----------------|-------------------|  
+|<xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>|`connectionString`|  
+|<xref:System.Data.Odbc.OdbcConnection.ConnectionTimeout%2A>|15|  
+|<xref:System.Data.Odbc.OdbcConnection.Database%2A>|Cadeia de caracteres vazia ("")|  
+  
+ Você pode alterar o valor dessas propriedades usando somente o <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria e abre um <xref:System.Data.Odbc.OdbcConnection>.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.OdbcConnection1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.OdbcConnection1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.OdbcConnection1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.OdbcConnection1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDbTransaction">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbTransaction BeginDbTransaction (System.Data.IsolationLevel isolationLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbTransaction BeginDbTransaction(valuetype System.Data.IsolationLevel isolationLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.BeginDbTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolationLevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolationLevel">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcTransaction BeginTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcTransaction BeginTransaction() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.BeginTransaction" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Inicia uma transação na fonte de dados.</summary>
+        <returns>Um objeto que representa a nova transação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para confirmar ou reverter a transação, você deve usar explicitamente o <xref:System.Data.Odbc.OdbcTransaction.Commit%2A> ou <xref:System.Data.Odbc.OdbcTransaction.Rollback%2A> métodos.  
+  
+ Para certificar-se de que o provedor de dados .NET Framework para o modelo de gerenciamento de transação de ODBC executa corretamente, evite o uso de outros modelos de gerenciamento de transações, como aqueles fornecidos pela fonte de dados.  
+  
+> [!NOTE]
+>  Se você não especificar um nível de isolamento, o nível de isolamento será determinado pelo driver que está sendo usado. Para especificar um nível de isolamento com o <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A> método, use a sobrecarga que utiliza o `isolevel` parâmetro.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e um <xref:System.Data.Odbc.OdbcTransaction>. Ele também demonstra como usar o <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A>, <xref:System.Data.Odbc.OdbcTransaction.Commit%2A>, e <xref:System.Data.Odbc.OdbcTransaction.Rollback%2A> métodos.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Uma transação está ativa no momento. Não há suporte para transações paralelas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransaction">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcTransaction BeginTransaction (System.Data.IsolationLevel isolevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcTransaction BeginTransaction(valuetype System.Data.IsolationLevel isolevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.BeginTransaction(System.Data.IsolationLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="isolevel" Type="System.Data.IsolationLevel" />
+      </Parameters>
+      <Docs>
+        <param name="isolevel">O nível de isolamento da transação desta conexão. Se você não especificar um nível de isolamento, o nível de isolamento padrão do driver será usado.</param>
+        <summary>Inicia uma transação na fonte de dados com o valor <see cref="T:System.Data.IsolationLevel" /> especificado.</summary>
+        <returns>Um objeto que representa a nova transação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Para confirmar ou reverter a transação, você deve usar explicitamente o <xref:System.Data.Odbc.OdbcTransaction.Commit%2A> ou <xref:System.Data.Odbc.OdbcTransaction.Rollback%2A> métodos.  
+  
+ Para certificar-se de que o provedor de dados .NET Framework para o modelo de gerenciamento de transação de ODBC executa corretamente, evite o uso de outros modelos de gerenciamento de transações, como aqueles fornecidos pela fonte de dados.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e um <xref:System.Data.Odbc.OdbcTransaction>. Ele também demonstra como usar o <xref:System.Data.Odbc.OdbcConnection.BeginTransaction%2A>, <xref:System.Data.Odbc.OdbcTransaction.Commit%2A>, e <xref:System.Data.Odbc.OdbcTransaction.Rollback%2A> métodos.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.BeginTransaction1#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.BeginTransaction1/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Uma transação está ativa no momento. Não há suporte para transações paralelas.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeDatabase">
+      <MemberSignature Language="C#" Value="public override void ChangeDatabase (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ChangeDatabase(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.ChangeDatabase(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">Nome do banco de dados.</param>
+        <summary>Altera o banco de dados atual associado a um aberto <see cref="T:System.Data.Odbc.OdbcConnection" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O `value` parâmetro deve conter um nome de banco de dados válido e não pode conter um valor nulo, uma cadeia de caracteres vazia (""), ou uma cadeia de caracteres com apenas os caracteres em branco.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e altera o banco de dados atual.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.Database#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.Database/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.Database#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.Database/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O nome do banco de dados não é válido.</exception>
+        <exception cref="T:System.InvalidOperationException">A conexão não está aberta.</exception>
+        <exception cref="T:System.Data.Odbc.OdbcException">Não é possível alterar o banco de dados.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public override void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.Close" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Fecha a conexão com a fonte de dados.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcConnection.Close%2A> método reverterá qualquer transação pendente. Ele libera a conexão ao pool de conexão ou fecha a conexão se o pool de conexão está desabilitado. Se <xref:System.Data.Odbc.OdbcConnection.Close%2A> é chamado durante a manipulação de um <xref:System.Data.Common.DbConnection.StateChange> evento, não adicional <xref:System.Data.Common.DbConnection.StateChange> os eventos são disparados.  
+  
+ Um aplicativo pode chamar <xref:System.Data.Odbc.OdbcConnection.Close%2A> mais de uma vez sem gerar uma exceção.  
+  
+> [!NOTE]
+>  Quando você usa o .NET Framework Data Provider para ODBC, você não precisa habilitar o pool de conexão porque o Gerenciador de Driver ODBC gerencia isso automaticamente. Para obter mais informações sobre como habilitar e desabilitar o pooling de conexão, consulte a documentação do Microsoft ODBC Open Database Connectivity ().  
+  
+> [!CAUTION]
+>  Não chame <xref:System.Data.Odbc.OdbcConnection.Close%2A> ou `Dispose` em uma Conexão, um DataReader ou qualquer objeto gerenciado no `Finalize` método de sua classe. Em um finalizador, você só deve liberar recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](http://msdn.microsoft.com/library/22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection>, abre, exibe algumas de suas propriedades e, em seguida, fecha a conexão.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.Close#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.Close/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.Close#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.Close/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionString">
+      <MemberSignature Language="C#" Value="public override string ConnectionString { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConnectionString" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcConnection.ConnectionString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Editor("Microsoft.VSDesigner.Data.Odbc.Design.OdbcConnectionStringEditor, Microsoft.VSDesigner, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RecommendedAsConfigurable(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.SettingsBindable(true)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define a cadeia de caracteres usada para abrir uma fonte de dados.</summary>
+        <value>A cadeia de conexão de driver ODBC que inclui configurações, como o nome da fonte de dados, necessárias para estabelecer a conexão inicial. O valor padrão é uma cadeia de caracteres vazia (""). O tamanho máximo é de 1.024 caracteres.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade foi projetada para corresponder ao máximo o formato de cadeia de conexão ODBC. O <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> pode ser definido somente quando a conexão é fechada, e assim que ele está definido for passado, inalterado, o Gerenciador de Driver e o driver subjacente. Portanto, a sintaxe para a <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> deve corresponder exatamente ao Gerenciador de Driver e suporte do driver subjacente.  
+  
+ Você pode usar o <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade para se conectar a uma variedade de fontes de dados. Isso inclui um nome de fonte de dados ODBC (DSN). O exemplo a seguir ilustra várias cadeias de caracteres de conexão possíveis.  
+  
+```  
+"Driver={SQL Server};Server=(local);Trusted_Connection=Yes;Database=AdventureWorks;"  
+  
+"Driver={Microsoft ODBC for Oracle};Server=ORACLE8i7;Persist Security Info=False;Trusted_Connection=Yes"  
+  
+"Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\bin\Northwind.mdb"  
+  
+"Driver={Microsoft Excel Driver (*.xls)};DBQ=c:\bin\book1.xls"  
+  
+"Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=c:\bin"  
+  
+"DSN=dsnname"  
+```  
+  
+> [!NOTE]
+>  O .NET Framework Data Provider para ODBC não suporta a `Persist Security Info` palavra-chave que é suportado por outros provedores de dados do .NET Framework. No entanto, o <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade se comporta como se `Persist Security Info` foram definidos como `false`. Isso significa que não é possível recuperar a senha das <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade se a conexão foi aberta. Quando o <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade é lido de um <xref:System.Data.Odbc.OdbcConnection> objeto que foi aberto, a cadeia de caracteres de conexão é retornada menos a senha. Você não pode alterar esse comportamento; Portanto, se o aplicativo exige que a senha, armazená-lo separadamente antes de chamar <xref:System.Data.Odbc.OdbcConnection.Open%2A>.  
+  
+ Muitas das configurações especificadas na cadeia de caracteres têm propriedades correspondentes de somente leitura (por exemplo, `Server=(local)`, que corresponde do <xref:System.Data.Odbc.OdbcConnection.DataSource%2A> propriedade). Essas propriedades serão atualizadas depois que a conexão for aberta, exceto quando for detectado um erro. Nesse caso, nenhuma das propriedades são atualizadas. <xref:System.Data.Odbc.OdbcConnection>propriedades (como <xref:System.Data.Odbc.OdbcConnection.Database%2A>) retornar apenas as configurações padrão ou as configurações especificadas no <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>.  
+  
+ O Microsoft .NET Framework versão 1.0, a validação da cadeia de caracteres de conexão não ocorrerá até que um aplicativo chama o <xref:System.Data.Odbc.OdbcConnection.Open%2A> método. É responsabilidade do ODBC driver subjacente para validar a cadeia de caracteres de conexão. Se a cadeia de caracteres de conexão contém propriedades inválidas ou sem suporte, o driver pode gerar um <xref:System.Data.Odbc.OdbcException> em tempo de execução.  
+  
+ No entanto, o .NET Framework versão 1.1 e versões posteriores, uma validação básica da cadeia de caracteres de conexão ocorre assim que você definir o <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> propriedade. Nesse momento, o provedor de dados verifica se a cadeia de caracteres de conexão atende a "palavra-chave = valor;..." formato, mas ele não verifica se as palavras-chave ou valores são válidos. A verificação restante é executada pelo driver ODBC subjacente quando o aplicativo chama o <xref:System.Data.Odbc.OdbcConnection.Open%2A> método.  
+  
+ Uma cadeia de caracteres de conexão ODBC tem a seguinte sintaxe:  
+  
+```  
+connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string  
+empty-string ::=  
+attribute ::= attribute-keyword=attribute-value | DRIVER=[{]attribute-value[}]  
+attribute-keyword ::= DSN | UID | PWD  
+ | driver-defined-attribute-keyword  
+attribute-value ::= character-string  
+driver-defined-attribute-keyword ::= identifier  
+```  
+  
+ onde `character-string` tem zero ou mais caracteres; `identifier` tem um ou mais caracteres; `attribute-keyword` não diferencia maiusculas de minúsculas; `attribute-value` pode diferenciar maiusculas de minúsculas; e o valor da palavra-chave DSN não consistir apenas de espaços em branco.  
+  
+ Devido a gramática de arquivo de inicialização e de cadeia de caracteres da conexão, as palavras-chave e valores de atributo devem ser evitados que contêm os caracteres [] {} (),? * =! @ não incluídos com colchetes. O valor da palavra-chave DSN não pode consistir apenas de espaços em branco e não deve conter espaços em branco à esquerda. Devido a gramática as informações do sistema, os nomes de fontes de dados e palavras-chave não podem conter uma barra invertida (\\) caracteres.  
+  
+ Aplicativos não têm que adicionar colchetes ao redor do valor do atributo após a palavra-chave Driver, a menos que o atributo contém um ponto e vírgula (;), no caso em que as chaves são necessárias. Se o valor do atributo que o driver recebe inclui chaves, o driver não deve removê-los, mas eles devem ser parte da cadeia de conexão retornado.  
+  
+ Um DSN ou conexão valor cadeia de caracteres entre chaves ({}) que contenha os caracteres [] {} (),? * =! @ é passados intacto para o driver. No entanto, quando você usa esses caracteres em uma palavra-chave, o Gerenciador de Driver retornará um erro quando você trabalha com DSNs de arquivos, mas passa a cadeia de caracteres de conexão para o driver para cadeias de caracteres de conexão regular. Evite usar chaves inseridas em um valor de palavra-chave.  
+  
+ A cadeia de caracteres de conexão pode incluir qualquer número de palavras-chave definidos pelo driver. Como a palavra-chave DRIVER não usa informações do sistema, o driver deve definir palavras-chave suficientes para que um driver pode se conectar a uma fonte de dados usando apenas as informações na cadeia de conexão. O driver define quais palavras-chave é necessárias para se conectar à fonte de dados.  
+  
+ Se quaisquer palavras-chave é repetidos na cadeia de conexão, não há nenhuma garantia de qual valor será selecionado.  
+  
+> [!NOTE]
+>  Se um driver ODBC dá suporte a mais de 1024 caracteres de cadeias de conexão, você pode usar um nome de fonte de dados (DSN) para exceder a limitação de tamanho máximo.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionTimeout">
+      <MemberSignature Language="C#" Value="public int ConnectionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcConnection.ConnectionTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DefaultValue(15)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tempo de espera durante a tentativa de estabelecimento da conexão, antes que a tentativa seja terminada e um erro seja gerado.</summary>
+        <value>O tempo (em segundos) de espera para abrir uma conexão. O valor padrão é 15 segundos.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Diferentemente de provedores de dados do .NET Framework para SQL Server e banco de dados OLE, o .NET Framework Data Provider para ODBC não suporta a definição dessa propriedade como um valor de cadeia de caracteres de conexão, porque ele não é uma palavra-chave válida do ODBC conexão. Para especificar um tempo limite de conexão, defina o <xref:System.Data.Odbc.OdbcConnection.ConnectionTimeout%2A> propriedade antes de chamar <xref:System.Data.Odbc.OdbcConnection.Open%2A>. Isso é equivalente a definir o ODBC `SQLSetConnectAttr` atributo SQL_ATTR_LOGIN_TIMOUT.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.ArgumentException">O valor definido é menor que 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCommand">
+      <MemberSignature Language="C#" Value="public System.Data.Odbc.OdbcCommand CreateCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Data.Odbc.OdbcCommand CreateCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.CreateCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria e retorna um objeto <see cref="T:System.Data.Odbc.OdbcCommand" /> associado ao <see cref="T:System.Data.Odbc.OdbcConnection" />.</summary>
+        <returns>Um objeto <see cref="T:System.Data.Odbc.OdbcCommand" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDbCommand">
+      <MemberSignature Language="C#" Value="protected override System.Data.Common.DbCommand CreateDbCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Data.Common.DbCommand CreateDbCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.CreateDbCommand" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Common.DbCommand</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Database">
+      <MemberSignature Language="C#" Value="public override string Database { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Database" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcConnection.Database" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do banco de dados atual ou o banco de dados a ser usado após uma conexão ser aberta.</summary>
+        <value>O nome do banco de dados atual. O valor padrão é uma cadeia de caracteres vazia ("") até que a conexão seja aberta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Primeiro, o <xref:System.Data.Odbc.OdbcConnection.Database%2A> propriedade é definida na cadeia de conexão. O <xref:System.Data.Odbc.OdbcConnection.Database%2A> propriedade pode ser atualizada usando o <xref:System.Data.Odbc.OdbcConnection.ChangeDatabase%2A> método. Se você alterar o banco de dados atual usando uma instrução SQL ou o <xref:System.Data.Odbc.OdbcConnection.ChangeDatabase%2A> método, uma mensagem informativa é enviada e, em seguida, a propriedade é atualizada.  
+  
+ Recuperando o <xref:System.Data.Odbc.OdbcConnection.Database%2A> propriedade é equivalente a chamar a função ODBC `SQLGetInfo` com o `Attribute` parâmetro definido como SQL_ATTR_CURRENT_CATALOG.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e altera o banco de dados atual.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.Database#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.Database/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.Database#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.Database/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSource">
+      <MemberSignature Language="C#" Value="public override string DataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DataSource" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcConnection.DataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do servidor ou o nome de arquivo da fonte de dados.</summary>
+        <value>O nome do servidor ou o nome de arquivo da fonte de dados. O valor padrão é uma cadeia de caracteres vazia ("") até que a conexão seja aberta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recuperando o <xref:System.Data.Odbc.OdbcConnection.DataSource%2A> propriedade é equivalente a chamar a função ODBC `SQLGetInfo` com o `InfoType` parâmetro definido como SQL_SERVER_NAME.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir cria um <xref:System.Data.Odbc.OdbcConnection> e exibe o nome de fonte de dados de back-end.  
+  
+ [!code-csharp[Classic WebData OdbcConnection.DataSource#1](~/samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.DataSource/CS/source.cs#1)]
+ [!code-vb[Classic WebData OdbcConnection.DataSource#1](~/samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData OdbcConnection.DataSource/VB/source.vb#1)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.Dispose(System.Boolean)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Driver">
+      <MemberSignature Language="C#" Value="public string Driver { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Driver" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcConnection.Driver" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome do driver ODBC especificado para a conexão atual.</summary>
+        <value>O nome do driver ODBC. Esse, normalmente, é o nome da DLL (por exemplo, Sqlsrv32.dll). O valor padrão é uma cadeia de caracteres vazia ("") até que a conexão seja aberta.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Recuperando o <xref:System.Data.Odbc.OdbcConnection.Driver%2A> propriedade é equivalente a chamar a função ODBC `SQLGetInfo` com o `InfoType` parâmetro definido como SQL_DRIVER_NAME.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistDistributedTransaction">
+      <MemberSignature Language="C#" Value="public void EnlistDistributedTransaction (System.EnterpriseServices.ITransaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnlistDistributedTransaction(class System.EnterpriseServices.ITransaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.EnlistDistributedTransaction(System.EnterpriseServices.ITransaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.EnterpriseServices.ITransaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Uma referência a um <see cref="T:System.EnterpriseServices.ITransaction" /> existente no qual se inscrever.</param>
+        <summary>Inscreve-se na transação especificada como uma transação distribuída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novo no ADO.NET 2.0 é suporte para usar o <xref:System.Data.Common.DbConnection.EnlistTransaction%2A> método para se inscrever em uma transação distribuída. Porque ele pede uma conexão em um <xref:System.Transactions.Transaction> instância, **EnlistTransaction** aproveita a funcionalidade disponível a <xref:System.Transactions> distribuídas de namespace para o gerenciamento de transações, tornando-o melhor **EnlistDistributedTransaction** para essa finalidade. Para obter mais informações, consulte [transações distribuídas](~/docs/framework/data/adonet/distributed-transactions.md).  
+  
+ Você pode continuar a inscrever-se em uma transação distribuída existente usando o <xref:System.Data.Odbc.OdbcConnection.EnlistDistributedTransaction*> método se a inscrição automática está desabilitada. Inscrição em uma transação distribuída existente torna-se de que, se a transação é confirmada ou revertida, as modificações feitas pelo código na fonte de dados são também confirmadas ou revertidas. Para obter mais informações sobre transações distribuídas, consulte [transações distribuídas](~/docs/framework/data/adonet/distributed-transactions.md).  
+  
+ <xref:System.Data.Odbc.OdbcConnection.EnlistDistributedTransaction%2A>Retorna uma exceção se o <xref:System.Data.Odbc.OdbcConnection> já iniciou uma transação usando < xref:System.Data.Odbc.OdbcConnection.BeginTransaction*>. No entanto, se a transação é uma transação local iniciada na fonte de dados (por exemplo, executando explicitamente a instrução BEGIN TRANSACTION usando um <xref:System.Data.Odbc.OdbcCommand> objeto), <xref:System.Data.Odbc.OdbcConnection.EnlistDistributedTransaction%2A> reverte a transação local e inscreve o existente transação distribuída como solicitado. Você não receberá o aviso que a transação local foi revertida e responsável por gerenciar todas as transações locais não é iniciadas usando < xref:System.Data.Odbc.OdbcConnection.BeginTransaction*>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnlistTransaction">
+      <MemberSignature Language="C#" Value="public override void EnlistTransaction (System.Transactions.Transaction transaction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void EnlistTransaction(class System.Transactions.Transaction transaction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.EnlistTransaction(System.Transactions.Transaction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transaction" Type="System.Transactions.Transaction" />
+      </Parameters>
+      <Docs>
+        <param name="transaction">Uma referência a um <see cref="T:System.Transactions.Transaction" /> existente no qual se inscrever.</param>
+        <summary>Inscreve-se na transação especificada como uma transação distribuída.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Novo no ADO.NET 2.0 é suporte para usar o <xref:System.Data.Common.DbConnection.EnlistTransaction%2A> método para se inscrever em uma transação distribuída. Porque ele pede uma conexão em um <xref:System.Transactions.Transaction> instância, **EnlistTransaction** tira proveito da funcionalidade disponível no <xref:System.Transactions> distribuídas de namespace para o gerenciamento de transações, tornando-o melhor **EnlistDistributedTransaction**, que usa um **System.EnterpriseServices.ITransaction** objeto. Ele também tem semânticas ligeiramente diferentes: quando uma conexão é explicitamente inscrito em uma transação, ele não pode ser unenlisted ou inscrito em outra transação até que a primeira transação seja concluída. Para obter mais informações sobre transações distribuídas, consulte [transações distribuídas](~/docs/framework/data/adonet/distributed-transactions.md).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.GetSchema" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Retorna informações de esquema para a fonte de dados deste <see cref="T:System.Data.Odbc.OdbcConnection" />.</summary>
+        <returns>Um <see cref="T:System.Data.DataTable" /> que contém informações de esquema.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchema (string collectionName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchema(string collectionName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.GetSchema(System.String)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="collectionName">Especifica o nome do esquema a retornar.</param>
+        <summary>Retorna informações de esquema para a fonte de dados deste <see cref="T:System.Data.Odbc.OdbcConnection" /> usando o nome especificado para o nome do esquema.</summary>
+        <returns>Um <see cref="T:System.Data.DataTable" /> que contém informações de esquema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `collectionName` for nulo, o <xref:System.Data.DataTable> contém informações sobre metadados disponíveis e as restrições.  
+  
+> [!NOTE]
+>  Todas as restrições que se aplicam ao `SQLStatistics` método também se aplicam a `ODBCConnection.GetSchema("indexes")` coleção.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSchema">
+      <MemberSignature Language="C#" Value="public override System.Data.DataTable GetSchema (string collectionName, string[] restrictionValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Data.DataTable GetSchema(string collectionName, string[] restrictionValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.GetSchema(System.String,System.String[])" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.DataTable</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="collectionName" Type="System.String" />
+        <Parameter Name="restrictionValues" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="collectionName">Especifica o nome do esquema a retornar.</param>
+        <param name="restrictionValues">Especifica um conjunto de valores de restrição do esquema solicitado.</param>
+        <summary>Retorna informações de esquema para a fonte de dados desse <see cref="T:System.Data.Odbc.OdbcConnection" /> usando a cadeia de caracteres especificada para o nome do esquema e a matriz de cadeia de caracteres especificada para os valores de restrição.</summary>
+        <returns>Um <see cref="T:System.Data.DataTable" /> que contém informações de esquema.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando `collectionName` é especificado como null, o <xref:System.Data.DataTable> contém informações sobre todos os metadados que estão disponíveis e suas restrições.  
+  
+ O `restrictionValues` parâmetro pode fornecer * n * profundidade de valores que são especificadas na coleção de restrições para uma coleção específica. Para definir valores em uma restrição de determinado e não definir os valores das outras restrições, você deve definir as restrições anteriores para nulo e, em seguida, coloque o valor apropriado para a restrição que você deseja especificar um valor para.  
+  
+ Um exemplo disso é a coleção de "Tabelas". Se a coleção "Tabelas" tem três restrições (banco de dados, proprietário e nome de tabela) e você quiser obter somente as tabelas associadas com o proprietário "Carl", você precisa passar pelo menos os seguintes valores: null, "Carl". Se um valor de restrição não for passado, os valores padrão são usados para essa restrição. Isso é o mesmo mapeamento como passar null, que é diferente da passagem de uma cadeia de caracteres vazia para o valor do parâmetro. Nesse caso, a cadeia de caracteres vazia ("") é considerado o valor para o parâmetro especificado.  
+  
+> [!NOTE]
+>  Todas as restrições que se aplicam ao método SQLStatistics serão aplicada à coleção ODBCConnection.GetSchema("indexes").  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InfoMessage">
+      <MemberSignature Language="C#" Value="public event System.Data.Odbc.OdbcInfoMessageEventHandler InfoMessage;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Data.Odbc.OdbcInfoMessageEventHandler InfoMessage" />
+      <MemberSignature Language="DocId" Value="E:System.Data.Odbc.OdbcConnection.InfoMessage" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Data.Odbc.OdbcInfoMessageEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre quando o driver ODBC envia um aviso ou uma mensagem informativa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Os clientes que deseja processar avisos ou mensagens informativas enviadas pelo servidor devem criar um <xref:System.Data.Odbc.OdbcInfoMessageEventHandler> delegado para escutar esse evento.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public override void Open ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Open() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.Open" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Abre uma conexão com uma fonte de dados com as configurações de propriedade especificadas pelo <see cref="P:System.Data.Odbc.OdbcConnection.ConnectionString" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Data.Odbc.OdbcConnection> desenha uma conexão aberta do pool de conexão, se houver um disponível. Caso contrário, ele estabelece uma nova conexão à fonte de dados.  
+  
+> [!NOTE]
+>  Se o <xref:System.Data.Odbc.OdbcConnection> sai do escopo, a conexão representa não será fechado automaticamente. Portanto, você deve fechar explicitamente a conexão chamando <xref:System.Data.Odbc.OdbcConnection.Close%2A>, **Dispose**, ou colocando-se a conexão em um `Using` instrução.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.NotSupportedException">Não há suporte para a funcionalidade desse método na classe base. Em vez disso, ela deve ser implementada em uma classe derivada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseObjectPool">
+      <MemberSignature Language="C#" Value="public static void ReleaseObjectPool ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReleaseObjectPool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.ReleaseObjectPool" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Indica que o identificador de ambiente do Gerenciador de Driver ODBC pode ser liberado quando a última conexão subjacente é liberado.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ `ReleaseObjectPool`pode ser chamado para liberar o identificador de ambiente ODBC. Você talvez queira chamar este método se, por exemplo, o objeto de conexão será não ser usado novamente. Quando todas as conexões no ambiente são fechadas, o ambiente pode ser descartado. Observe que chamar o método sozinho não realmente liberar as conexões ativas que existem no ambiente.  
+  
+ O seguinte deve ocorrer antes do ambiente é descartado por último:  
+  
+1.  Chamar <xref:System.Data.Odbc.OdbcConnection.Close%2A> para liberar o <xref:System.Data.Odbc.OdbcConnection> objeto do ambiente.  
+  
+2.  Permitir que cada objeto de conexão para o tempo limite.  
+  
+3.  Call <xref:System.Data.Odbc.OdbcConnection.ReleaseObjectPool%2A>.  
+  
+4.  Invocar a coleta de lixo.  
+  
+ Por outro lado, se você chamar <xref:System.Data.Odbc.OdbcConnection.Close%2A> em todas as conexões ativas e chamar a coleta de lixo, mas não chame <xref:System.Data.Odbc.OdbcConnection.ReleaseObjectPool%2A>, os recursos reservados para o ambiente permanecem disponíveis.  
+  
+ Após o lançamento de um identificador de ambiente, uma solicitação para um novo <xref:System.Data.Odbc.OdbcConnection> cria um novo ambiente.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerVersion">
+      <MemberSignature Language="C#" Value="public override string ServerVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerVersion" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcConnection.ServerVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém uma cadeia de caracteres que contém a versão do servidor ao qual o cliente está conectado.</summary>
+        <value>A versão do servidor conectado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se <xref:System.Data.Odbc.OdbcConnection.ServerVersion%2A> não tem suporte pelo driver ODBC subjacente, uma cadeia de caracteres vazia ("") será retornado.  
+  
+ O <xref:System.Data.Odbc.OdbcConnection.ServerVersion%2A> propriedade assume a forma '*# #. # #. # # #*,' onde os dois primeiros dígitos são a versão principal, os dois dígitos são a versão secundária, e os quatro últimos dígitos são a versão de lançamento. O driver deve processar a versão do produto neste formulário, mas também pode acrescentar a versão de produto específica como uma cadeia de caracteres (por exemplo, "04.01.0000 Rdb 4.1"). Essa cadeia de caracteres assume a forma '*Minor*' onde *principais* e *secundária* são exatamente dois dígitos e *criar* são exatamente quatro dígitos.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A conexão está fechada.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public override System.Data.ConnectionState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Data.ConnectionState State" />
+      <MemberSignature Language="DocId" Value="P:System.Data.Odbc.OdbcConnection.State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Data.ConnectionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o estado atual da conexão.</summary>
+        <value>Uma combinação bit a bit dos valores <see cref="T:System.Data.ConnectionState" />. O padrão é <see langword="Closed" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A seguir é permitidas alterações de estado:  
+  
+-   De `Closed` para `Open`, usando o <xref:System.Data.Odbc.OdbcConnection.Open%2A> método.  
+  
+-   De `Open` para `Closed`, usando o <xref:System.Data.Odbc.OdbcConnection.Close%2A> ou **Dispose** método.  
+  
+> [!NOTE]
+>  Chamando o <xref:System.Data.Odbc.OdbcConnection.State%2A> propriedade em uma conexão aberta aumenta a sobrecarga de aplicativo porque cada essa chamada faz com que uma chamada SQL_ATTR_CONNECTION_DEAD para o driver ODBC subjacente determinar se a conexão ainda é válida.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Data.Odbc.OdbcConnection.System#ICloneable#Clone" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Data</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Data.Odbc</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Para obter uma descrição desse membro, consulte <see cref="M:System.ICloneable.Clone" />.</summary>
+        <returns>Um novo <see cref="T:System.Object" /> que é uma cópia dessa instância.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este membro é uma implementação do membro de interface explícita. Ele só pode ser usado quando a instância de <xref:System.Data.Odbc.OdbcConnection> é convertida em uma interface de <xref:System.ICloneable>.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

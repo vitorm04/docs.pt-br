@@ -1,0 +1,346 @@
+<Type Name="PropertyGridEditorPart" FullName="System.Web.UI.WebControls.WebParts.PropertyGridEditorPart">
+  <TypeSignature Language="C#" Value="public sealed class PropertyGridEditorPart : System.Web.UI.WebControls.WebParts.EditorPart" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit PropertyGridEditorPart extends System.Web.UI.WebControls.WebParts.EditorPart" />
+  <TypeSignature Language="DocId" Value="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" />
+  <AssemblyInfo>
+    <AssemblyName>System.Web</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Web.UI.WebControls.WebParts.EditorPart</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Fornece um controle de editor que permite aos usuários finais editar propriedades personalizadas em um tipo de <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> ou controle de servidor. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> fornece uma interface de usuário genérica (UI) que permite aos usuários editar propriedades personalizadas em <xref:System.Web.UI.WebControls.WebParts.WebPart> e controles de servidor colocado no <xref:System.Web.UI.WebControls.WebParts.WebPartZoneBase> zonas. Em contraste, o outro <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles, como o <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> e <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart> controles, editar somente existentes, propriedades e orientada a interface do usuário da <xref:System.Web.UI.WebControls.WebParts.WebPart> classe.  
+  
+ Apenas há orientada a ferramenta zonas no conjunto de controle de Web Parts (para obter detalhes, consulte o <xref:System.Web.UI.WebControls.WebParts.ToolZone> visão geral da classe), existem controles de parte orientada a ferramenta, e cada um deles deve residir em um tipo de zona de ferramenta correspondente. Esse tipo de controles no conjunto de controle de Web Parts têm características de distinção dois:  
+  
+-   Eles são controles de auxiliar que permitem que os usuários finais personalizar os controles que formam a interface do usuário principal de uma página em um aplicativo de Web Parts.  
+  
+-   Elas são visíveis apenas em certos modos de exibição de página.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> é um controle especial, e se torna visível apenas quando uma página da Web está em modo de edição e quando um determinado <xref:System.Web.UI.WebControls.WebParts.WebPart> ou controle de servidor tiver sido selecionada por um usuário para edição. O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle, como todos os outros <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles, deve residir em um <xref:System.Web.UI.WebControls.WebParts.EditorZone> zona na página.  
+  
+> [!IMPORTANT]
+>  Um <xref:System.Web.UI.WebControls.WebParts.EditorZone> zona só pode conter <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles, e <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles não podem ser colocados em qualquer outro tipo de zona.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle fornece uma interface do usuário de edição para as propriedades que são marcadas no código-fonte com o `WebBrowsable` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebBrowsableAttribute> classe). Quando uma propriedade é marcada com esse atributo, um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle cria a interface do usuário de edição com base no tipo da propriedade e usa um <xref:System.ComponentModel.PropertyDescriptor> se necessário para converter o valor em cada controle de edição para o tipo da propriedade do objeto. Você também pode adicionar outros atributos que ajudam a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle para exibir a interface do usuário de edição. O `WebDisplayName` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebDisplayNameAttribute> classe) permite que você especifique o texto do rótulo que aparece com cada controle na edição IU. O `WebDescription` atributo (da <xref:System.Web.UI.WebControls.WebParts.WebDescriptionAttribute> classe) permite que você especifique uma cadeia de caracteres que aparece como uma dica de ferramenta para cada controle na edição IU.  
+  
+ Os controles criados para editar as propriedades de vários tipos são listados na tabela a seguir.  
+  
+|Tipo de propriedade|Criado para editar a propriedade de controle|  
+|-------------------|------------------------------------------|  
+|Cadeia de caracteres|<xref:System.Web.UI.WebControls.TextBox>|  
+|Int, Float, unidade|<xref:System.Web.UI.WebControls.TextBox>|  
+|Boolean|<xref:System.Web.UI.WebControls.CheckBox>|  
+|<xref:System.Enum>|<xref:System.Web.UI.WebControls.DropDownList>(contém a lista de valores enumerados)|  
+|<xref:System.DateTime>|<xref:System.Web.UI.WebControls.TextBox>|  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> classe tiver um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> propriedade, que é usada para obter ou definir o texto do título visível do controle. Há também um protegido <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> propriedade, que determina se o controle é exibido quando a página entra em modo de edição.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> classe também tem dois métodos importantes, <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.ApplyChanges%2A> e <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart.SyncChanges%2A>, que ele herda o <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe e substituições. Os métodos são essenciais porque elas permitem obter e definir os valores de propriedade entre os valores de campo de controle de editor e as propriedades no <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar o que está sendo editado.  
+  
+ Porque o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle permite que você edite apenas as propriedades personalizadas, você precisará de outro <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles no controle de Web Parts definido para editar a aparência, o layout e o comportamento de <xref:System.Web.UI.WebControls.WebParts.WebPart> controles. Os outros controles incluem o <xref:System.Web.UI.WebControls.WebParts.BehaviorEditorPart>, o <xref:System.Web.UI.WebControls.WebParts.LayoutEditorPart>e o <xref:System.Web.UI.WebControls.WebParts.AppearanceEditorPart> controles. Essas <xref:System.Web.UI.WebControls.WebParts.EditorPart> controles devem fornecer a maioria dos recursos de edição necessárias para editar <xref:System.Web.UI.WebControls.WebParts.WebPart> controles, mas se necessário, você também pode criar um controle editor personalizado herdando do <xref:System.Web.UI.WebControls.WebParts.EditorPart> classe. Para obter um exemplo de código, consulte o <xref:System.Web.UI.WebControls.WebParts.EditorPart> tópico de visão geral da classe.  
+  
+> [!NOTE]
+>  Para melhorar a acessibilidade, a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle é processado em um `<fieldset>` elemento. O `<fieldset>` elemento agrupa um conjunto relacionado de controles usados para edição no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle e facilita a navegação com guias entre esses controles para os agentes do usuário visual (como navegadores comuns) e os agentes de usuário orientada a fala (como o software de leitura de tela).  
+  
+## <a name="accessibility"></a>Acessibilidade  
+ A marcação processada por padrão para este controle pode não estar de acordo com os padrões de acessibilidade, como as diretrizes de prioridade 1 conteúdo WCAG Web Accessibility Guidelines 1.0 (). Para obter detalhes sobre o suporte de acessibilidade para este controle, consulte [controles ASP.NET e acessibilidade](http://msdn.microsoft.com/library/847a37e3-ce20-41da-b0d3-7dfb0fdae9a0).  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como declarar uma <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> control em uma página da Web e habilitá-lo editar várias propriedades de interface do usuário de um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. O exemplo de código tem quatro partes:  
+  
+-   Um controle de usuário que permite que você altere os modos de exibição em uma página de Web Parts.  
+  
+-   Uma página da Web que contém um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle e um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle, juntamente com uma referência a um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+-   Uma classe que contém a custom <xref:System.Web.UI.WebControls.WebParts.WebPart> controle.  
+  
+-   O exemplo de uma explicação de como funciona o ao carregar a página em um navegador.  
+  
+ O código-fonte para o controle de usuário proveniente de outro tópico. Para este exemplo de código funcione, você precisa obter o arquivo. ascx para o controle de usuário da [passo a passo: alterando modos de exibição em uma página de Web Parts](http://msdn.microsoft.com/library/24e42f74-82dc-4c13-8574-130398985fc0) tópico e coloque o arquivo na mesma pasta que a página. aspx neste exemplo de código.  
+  
+ A segunda parte do exemplo de código é a página da Web. Ele contém uma referência declarativa para um <xref:System.Web.UI.WebControls.WebParts.EditorZone> controle, com um filho `<zonetemplate>` elemento que contém uma referência declarativa para um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. A página faz referência personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar, usando um `Register` diretiva para o assembly e o `<aspSample:UserInfoWebPart>` elemento para o controle.  
+  
+ [!code-aspx-csharp[WebParts_PropertyGridEditorPart_Overview#1](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#1)]
+ [!code-aspx-vb[WebParts_PropertyGridEditorPart_Overview#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#1)]  
+  
+ A terceira parte do exemplo de código é um personalizado <xref:System.Web.UI.WebControls.WebParts.WebPart> classe denominada `UserInfoWebPart`, que é referenciado na página da Web. Observe que as várias propriedades que contêm informações sobre um usuário são todos os marcados com o `WebBrowsable` atributo. Isso permite que o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle para fornecer a interface do usuário para editar essas propriedades. As propriedades também são marcadas com um `WebDisplayName` atributo, para especificar o texto do rótulo que aparece ao lado de cada controle na edição IU.  
+  
+ Para o exemplo de código seja executado, você deve compilar este código-fonte. Você pode compilá-lo explicitamente e colocar o assembly resultante na pasta Bin do seu site da Web ou o cache de assembly global. Como alternativa, você pode colocar o código-fonte na pasta App_Code de seu site, onde ele será compilado dinamicamente em tempo de execução. Para uma explicação passo a passo que demonstre como compilar, consulte [passo a passo: desenvolvendo e usando um controle de servidor Web personalizado](http://msdn.microsoft.com/library/6d90782a-a1a4-45a6-b2d4-cf6362b83b08).  
+  
+> [!IMPORTANT]
+>  Este exemplo tem uma caixa de texto que aceita a entrada do usuário, que é uma possível ameaça à segurança. Por padrão, a páginas da Web ASP.NET validam a entrada do usuário não inclui elementos HTML ou script. Para obter mais informações, consulte [visão geral sobre scripts maliciosos](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07).  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#5](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/userinfowebpart.cs#5)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/userinfowebpart.vb#5)]  
+  
+ Quando você carrega a página em um navegador, selecione **modo de edição** no **modo de exibição** controle de lista suspensa para alternar para modo de edição. Você pode clicar no menu de verbos (seta para baixo) na barra de título do **Web Part de informações do usuário** de controle e, em seguida, clique em **editar** para o controle de edição. Quando a interface do usuário de edição estiver visível, você pode ver o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. Observe que um controle é renderizado para cada uma das propriedades da `UserInfoWebPart` classe, com base no tipo da propriedade. Se você fizer alterações a edição da interface do usuário e clique no **aplicar** botão, você pode usar o **modo de exibição** lista suspensa para retornar a página para o modo de procura e ver o efeito total das alterações de edição.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PropertyGridEditorPart ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma nova instância da classe.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.%23ctor%2A> construtor é um padrão; nenhum construtor está declarado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> classe e tarefas especiais, portanto, não são executadas quando uma nova instância da classe é criada.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyChanges">
+      <MemberSignature Language="C#" Value="public override bool ApplyChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ApplyChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Salva os valores de uma <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> controle para as propriedades correspondentes na associado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle.</summary>
+        <returns>
+          <see langword="true" />Se a ação de salvar os valores do <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> para o <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> for bem-sucedida; caso contrário (se ocorrer um erro), <see langword="false" />.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> é um método crítico em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. O método salva os valores que um usuário tiver definido em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle para as propriedades correspondentes na associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. O controle associado é referenciado no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> herdado do controle do <xref:System.Web.UI.WebControls.WebParts.EditorPart.WebPartToEdit%2A> propriedade.  
+  
+> [!IMPORTANT]
+>  Você não pode substituir o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> método porque o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> tipo é lacrado, para evitar a herança dele. No entanto, se você precisar de mais controle programático sobre o processo de edição de várias <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar propriedades do que o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> fornece controle, você pode criar um personalizado <xref:System.Web.UI.WebControls.WebParts.EditorPart> controlar e fornecer sua própria implementação deste método. Para obter um exemplo de código, consulte o <xref:System.Web.UI.WebControls.WebParts.EditorPart.ApplyChanges%2A> método.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> método tenta definir os valores em propriedades personalizadas públicas associada <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar, desde que essas propriedades têm um `[WebBrowsable(true)]` atributo.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> método é chamado quando o usuário clica em um botão que representa um Okey ou um verbo aplicar na interface do usuário edição (IU). Você também pode chamá-lo diretamente no seu próprio código se é necessário salvar os valores editados além de ações do usuário.  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Ocorreu um erro ao tentar definir o valor de uma propriedade em associado <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateChildControls">
+      <MemberSignature Language="C#" Value="protected override void CreateChildControls ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void CreateChildControls() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.CreateChildControls" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultButton">
+      <MemberSignature Language="C#" Value="public override string DefaultButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultButton" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.DefaultButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.Browsable(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Web.UI.Themeable(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Substitui a propriedade base herdada da <see cref="T:System.Web.UI.WebControls.Panel" /> controle para ocultar a propriedade de designers e impedir que sejam afetados por temas.</summary>
+        <value>Uma cadeia de caracteres que contém a ID do <see cref="T:System.Web.UI.WebControls.Button" /> controle que recebe o foco padrão em um <see cref="T:System.Web.UI.WebControls.Panel" /> controle.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Embora seja público, essa propriedade é usada para a renderização padrão deste controle e não se destina a ser chamado no código do desenvolvedor.  
+  
+ Essa propriedade não pode ser definida por temas ou temas de folha de estilo. Para obter mais informações, consulte <xref:System.Web.UI.ThemeableAttribute> e [capas e temas do ASP.NET](http://msdn.microsoft.com/library/5df3ebbd-d46c-4502-9406-02f9df4ef2c3).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public override bool Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Display" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se um controle deve ser exibido quando seus associados <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controle está no modo de edição.</summary>
+        <value>Um valor booliano que indica se o controle deve ser exibido.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> propriedade retorna `false` se o valor da propriedade base também será `false`. Caso contrário, se o controle de edição não está `null`, em seguida, o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle é exibido.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Display%2A> propriedade se aplica somente quando uma página está em modo de edição e um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle foi selecionado para edição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPreRender">
+      <MemberSignature Language="C#" Value="protected override void OnPreRender (EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OnPreRender(class System.EventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.OnPreRender(System.EventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderContents">
+      <MemberSignature Language="C#" Value="protected override void RenderContents (System.Web.UI.HtmlTextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RenderContents(class System.Web.UI.HtmlTextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.RenderContents(System.Web.UI.HtmlTextWriter)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Web.UI.HtmlTextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncChanges">
+      <MemberSignature Language="C#" Value="public override void SyncChanges ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SyncChanges() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Recupera os valores de uma <see cref="T:System.Web.UI.WebControls.WebParts.WebPart" /> controlar e atualiza os controles correspondentes usados para editar os valores de propriedade dentro de um <see cref="T:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart" /> controle.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> é um método crítico em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. Ele implementa o <xref:System.Web.UI.WebControls.WebParts.EditorPart.SyncChanges%2A?displayProperty=nameWithType> método da classe base, recupera os valores atuais de associado <xref:System.Web.UI.WebControls.WebParts.WebPart> controlar e atualiza os controles de <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle com esses valores para um usuário pode editá-los.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> método é chamado sempre que os valores associados <xref:System.Web.UI.WebControls.WebParts.WebPart> controle pode ter alterado. Para um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle, o <xref:System.Web.UI.WebControls.WebParts.EditorZoneBase> zona que contém as chamadas de controle de <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> método imediatamente após a chamada a <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.ApplyChanges%2A> método, para que os valores no <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle sempre são sincronizados com os valores associados <xref:System.Web.UI.WebControls.WebParts.WebPart> controle. Outro caso em que o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.SyncChanges%2A> método é chamado quando um <xref:System.Web.UI.WebControls.WebParts.WebPart> controle está no modo de edição.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Title">
+      <MemberSignature Language="C#" Value="public override string Title { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Title" />
+      <MemberSignature Language="DocId" Value="P:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Web</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define um título para o controle de editor.</summary>
+        <value>Uma cadeia de caracteres que é usada como o título do controle. O valor padrão é um nome de controle calculado fornecidas pelo conjunto de controle de Web Parts.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> o valor da propriedade é exibido na barra de título de um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controlar quando o controle está visível no modo de edição. Quando o controle for declarado em uma página, você pode definir um valor para o `Title` atributo. Se você não fornecer um valor para o título, é fornecido um valor padrão de específicos de cultura.  
+  
+ O <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> propriedade substitui a propriedade de base para que, se nenhum valor de título for fornecido, um padrão de título apropriado para um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle pode ser fornecido pelo conjunto de controle de Web Parts.  
+  
+   
+  
+## Examples  
+ Este exemplo de código demonstra como usar o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> propriedade de um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle. Para o necessário para executar o exemplo de código completo, consulte a seção exemplo de <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> tópico de visão geral da classe.  
+  
+ O exemplo de código a seguir mostra como definir o título em um <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle declarativamente em uma página da Web.  
+  
+ [!code-aspx-csharp[WebParts_PropertyGridEditorPart_Overview#2](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#2)]
+ [!code-aspx-vb[WebParts_PropertyGridEditorPart_Overview#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#2)]  
+  
+ A próxima parte do exemplo de código mostra como definir o valor de <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> propriedade programaticamente. Para manter o valor atribuído por meio de programação, uma variável estática denominada `editControlTitle` for usado, e esse valor é atribuído para o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart.Title%2A> propriedade sempre que o controle é inicializado, para que o valor é mantido entre os eventos de postback.  
+  
+ [!code-csharp[WebParts_PropertyGridEditorPart_Overview#3](~/samples/snippets/csharp/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/CS/propertyGridEditorPartCS.aspx#3)]
+ [!code-vb[WebParts_PropertyGridEditorPart_Overview#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/WebParts_PropertyGridEditorPart_Overview/VB/propertyGridEditorPartVB.aspx#3)]  
+  
+ Quando você carrega a página em um navegador, você pode selecionar **modo de edição** no **modo de exibição** controle de lista suspensa para alternar para modo de edição. Você pode clicar no menu de verbos (seta para baixo) na barra de título do **Web Part de informações do usuário** de controle e, em seguida, clique em **editar** para iniciar a edição. Quando a interface do usuário (UI) edição estiver visível, você pode ver o <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle e uma botão e caixa de texto posicionada acima dele. Observe que o título do <xref:System.Web.UI.WebControls.WebParts.PropertyGridEditorPart> controle é o valor atribuído a ele na marcação declarativa da página da Web. Se você inserir um texto na caixa de texto ao lado de **atualização EditorPart título** botão e, em seguida, clique no botão, o título para o controle é atualizado.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

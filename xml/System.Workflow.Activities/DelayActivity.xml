@@ -1,0 +1,448 @@
+<Type Name="DelayActivity" FullName="System.Workflow.Activities.DelayActivity">
+  <TypeSignature Language="C#" Value="public sealed class DelayActivity : System.Workflow.ComponentModel.Activity, System.Workflow.Activities.IEventActivity, System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit DelayActivity extends System.Workflow.ComponentModel.Activity implements class System.Workflow.Activities.IEventActivity, class System.Workflow.ComponentModel.IActivityEventListener`1&lt;class System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Workflow.Activities.DelayActivity" />
+  <AssemblyInfo>
+    <AssemblyName>System.Workflow.Activities</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Workflow.ComponentModel.Activity</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Workflow.Activities.IEventActivity</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.DefaultEvent("InitializeTimeoutDuration")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.Designer(typeof(System.Workflow.Activities.DelayDesigner), typeof(System.ComponentModel.Design.IDesigner))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.ComponentModel.ToolboxItem(typeof(System.Workflow.ComponentModel.Design.ActivityToolboxItem))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Drawing.ToolboxBitmap(typeof(System.Workflow.Activities.DelayActivity), "Resources.Delay.png")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("The System.Workflow.* types are deprecated.  Instead, please use the new types from System.Activities.*")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Workflow.ComponentModel.Compiler.ActivityValidator(typeof(System.Workflow.Activities.DelayActivity/DelayActivityValidator))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Fornece a lógica para estabelecer um temporizador e esperar, de forma assíncrona, a expiração do temporizador.  Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  [!INCLUDE[DeprecatedContent](~/includes/deprecatedcontent-md.md)]  
+  
+ Quando for notificado de que o timer expirar, um <xref:System.Workflow.Activities.DelayActivity> conclui sua execução.  
+  
+ Você pode definir um tempo limite no <xref:System.Workflow.Activities.DelayActivity> para que o fluxo de trabalho faz uma pausa antes de continuar a execução. Especificar o <xref:System.Workflow.Activities.DelayActivity.TimeoutDuration%2A> usando <xref:System.TimeSpan>. Isso faz com que o fluxo de trabalho Pausar especificado <xref:System.TimeSpan> expirou.  
+  
+ O <xref:System.Workflow.Activities.DelayActivity> classe executa o método de código associado a <xref:System.Workflow.Activities.DelayActivity.InitializeTimeoutDuration> evento antes do início da atividade e o método ao lado do código pode ser usado para inicializar o <xref:System.Workflow.Activities.DelayActivity.TimeoutDuration%2A> propriedade.  
+  
+ O <xref:System.Workflow.Activities.DelayActivity> é garantido para ser concluída sem antes que o indicado <xref:System.Workflow.Activities.DelayActivity.TimeoutDuration%2A>. O atraso pode levar mais tempo porque a notificação de timer pode ocorrer algum tempo após o <xref:System.Workflow.Activities.DelayActivity.TimeoutDuration%2A> for atingido. Um motivo para um atraso mais longo é se o fluxo de trabalho está sendo executado na sobrecarga do sistema de alta em um ambiente de servidor.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como criar uma nova instância do <xref:System.Workflow.Activities.DelayActivity> classe.  Este exemplo de código é parte do exemplo SimpleStateMachineWorkflow SDK do arquivo StateMachineWorkflow.cs. Para obter mais informações, consulte simples máquina de estado.  
+  
+ [!code-csharp[wf_samples#188](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#188)]
+ [!code-vb[wf_samples#188](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#188)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelayActivity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Workflow.Activities.DelayActivity" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir demonstra como inicializar uma nova instância do <xref:System.Workflow.Activities.DelayActivity> classe.  Este exemplo de código é parte do exemplo SimpleStateMachineWorkflow SDK do arquivo StateMachineWorkflow.cs. Para obter mais informações, consulte [simples máquina de estado](http://msdn.microsoft.com/en-us/1974edbd-253d-4e01-9095-38ff9c3e749e).  
+  
+ [!code-csharp[wf_samples#188](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#188)]
+ [!code-vb[wf_samples#188](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#188)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DelayActivity (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.#ctor(System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome definido pelo usuário da atividade.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Workflow.Activities.DelayActivity" /> classe usando o nome da atividade.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Cancel (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Cancel(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.Cancel(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="protected override System.Workflow.ComponentModel.ActivityExecutionStatus Execute (System.Workflow.ComponentModel.ActivityExecutionContext executionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus Execute(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.Execute(System.Workflow.ComponentModel.ActivityExecutionContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleFault">
+      <MemberSignature Language="C#" Value="protected override sealed System.Workflow.ComponentModel.ActivityExecutionStatus HandleFault (System.Workflow.ComponentModel.ActivityExecutionContext executionContext, Exception exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Workflow.ComponentModel.ActivityExecutionStatus HandleFault(class System.Workflow.ComponentModel.ActivityExecutionContext executionContext, class System.Exception exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.HandleFault(System.Workflow.ComponentModel.ActivityExecutionContext,System.Exception)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.ActivityExecutionStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="executionContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="exception" Type="System.Exception" />
+      </Parameters>
+      <Docs>
+        <param name="executionContext">To be added.</param>
+        <param name="exception">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.Initialize(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeTimeoutDuration">
+      <MemberSignature Language="C#" Value="public event EventHandler InitializeTimeoutDuration;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler InitializeTimeoutDuration" />
+      <MemberSignature Language="DocId" Value="E:System.Workflow.Activities.DelayActivity.InitializeTimeoutDuration" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Ocorre antes do início da duração do tempo limite.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse evento não deve ser usado para definir o <xref:System.Workflow.Activities.DelayActivity.TimeoutDuration%2A> para um <xref:System.Workflow.Activities.DelayActivity>. A duração do tempo limite deve ser definida no fluxo de trabalho `InitializeComponent` método em vez disso.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeTimeoutDurationEvent">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty InitializeTimeoutDurationEvent;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty InitializeTimeoutDurationEvent" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.DelayActivity.InitializeTimeoutDurationEvent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="E:System.Workflow.Activities.DelayActivity.InitializeTimeoutDuration" /> evento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnClosed">
+      <MemberSignature Language="C#" Value="protected override void OnClosed (IServiceProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnClosed(class System.IServiceProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.OnClosed(System.IServiceProvider)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.IServiceProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Activities.IEventActivity.QueueName">
+      <MemberSignature Language="C#" Value="IComparable System.Workflow.Activities.IEventActivity.QueueName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.IComparable System.Workflow.Activities.IEventActivity.QueueName" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.DelayActivity.System#Workflow#Activities#IEventActivity#QueueName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IComparable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da fila de fluxo de trabalho que será entregue quando o timer expira.</summary>
+        <value>O nome da fila de fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O nome da fila de fluxo de trabalho é definido <xref:System.Workflow.Runtime.WorkflowQueuingService.CreateWorkflowQueue%2A> método.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Activities.IEventActivity.Subscribe">
+      <MemberSignature Language="C#" Value="void IEventActivity.Subscribe (System.Workflow.ComponentModel.ActivityExecutionContext parentContext, System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.Activities.IEventActivity.Subscribe(class System.Workflow.ComponentModel.ActivityExecutionContext parentContext, class System.Workflow.ComponentModel.IActivityEventListener`1&lt;class System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.System#Workflow#Activities#IEventActivity#Subscribe(System.Workflow.ComponentModel.ActivityExecutionContext,System.Workflow.ComponentModel.IActivityEventListener{System.Workflow.ComponentModel.QueueEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="parentEventHandler" Type="System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parentContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> que representa o ambiente de execução do <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <param name="parentEventHandler">O <see cref="T:System.EventHandler" /> para o evento pai.</param>
+        <summary>Cria a assinatura do <see cref="T:System.Workflow.Activities.DelayActivity" /> a um evento.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parentContext" /> ou <paramref name="parentEventHandler" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.Activities.IEventActivity.Unsubscribe">
+      <MemberSignature Language="C#" Value="void IEventActivity.Unsubscribe (System.Workflow.ComponentModel.ActivityExecutionContext parentContext, System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.Activities.IEventActivity.Unsubscribe(class System.Workflow.ComponentModel.ActivityExecutionContext parentContext, class System.Workflow.ComponentModel.IActivityEventListener`1&lt;class System.Workflow.ComponentModel.QueueEventArgs&gt; parentEventHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.System#Workflow#Activities#IEventActivity#Unsubscribe(System.Workflow.ComponentModel.ActivityExecutionContext,System.Workflow.ComponentModel.IActivityEventListener{System.Workflow.ComponentModel.QueueEventArgs})" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentContext" Type="System.Workflow.ComponentModel.ActivityExecutionContext" />
+        <Parameter Name="parentEventHandler" Type="System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="parentContext">O <see cref="T:System.Workflow.ComponentModel.ActivityExecutionContext" /> que representa o ambiente de execução do <see cref="T:System.Workflow.ComponentModel.Activity" />.</param>
+        <param name="parentEventHandler">O <see cref="T:System.EventHandler" /> para o evento pai.</param>
+        <summary>Cancela a assinatura do <see cref="T:System.Workflow.Activities.DelayActivity" /> a um evento.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="parentContext" /> ou <paramref name="parentEventHandler" /> é <see langword="null" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;.OnEvent">
+      <MemberSignature Language="C#" Value="void IActivityEventListener&lt;QueueEventArgs&gt;.OnEvent (object sender, System.Workflow.ComponentModel.QueueEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Workflow.ComponentModel.IActivityEventListener&lt;System.Workflow.ComponentModel.QueueEventArgs&gt;.OnEvent(object sender, class System.Workflow.ComponentModel.QueueEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Workflow.Activities.DelayActivity.System#Workflow#ComponentModel#IActivityEventListener&lt;System#Workflow#ComponentModel#QueueEventArgs&gt;#OnEvent(System.Object,System.Workflow.ComponentModel.QueueEventArgs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.Workflow.ComponentModel.QueueEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">O objeto que gerencie o evento.</param>
+        <param name="e">Os argumentos do evento digitado anteriormente.</param>
+        <summary>Define o procedimento de processamento quando ocorre o evento inscrito para.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutDuration">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeoutDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeoutDuration" />
+      <MemberSignature Language="DocId" Value="P:System.Workflow.Activities.DelayActivity.TimeoutDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.MergableProperty(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.TypeConverter(typeof(System.Workflow.Activities.DelayActivity/TimeoutDurationConverter))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a duração do atraso no fluxo de trabalho.</summary>
+        <value>Um <see cref="T:System.TimeSpan" /> que indica o tempo de atraso no fluxo de trabalho.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O período de tempo definido nessa propriedade determina a hora em que o fluxo de trabalho ficará ocioso antes que o fluxo de trabalho prossiga para a próxima atividade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como definir o valor de <xref:System.Workflow.Activities.DelayActivity.TimeoutDuration%2A> propriedade em 3 segundos. Esse código supõe que `delay2` é do tipo <xref:System.Workflow.Activities.DelayActivity>. Este exemplo de código é parte do exemplo SimpleStateMachineWorkflow SDK do arquivo StateMachineWorkflow.cs. Para obter mais informações, consulte [simples máquina de estado](http://msdn.microsoft.com/en-us/1974edbd-253d-4e01-9095-38ff9c3e749e).  
+  
+ [!code-csharp[wf_samples#190](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#190)]
+ [!code-vb[wf_samples#190](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#190)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeoutDurationProperty">
+      <MemberSignature Language="C#" Value="public static readonly System.Workflow.ComponentModel.DependencyProperty TimeoutDurationProperty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class System.Workflow.ComponentModel.DependencyProperty TimeoutDurationProperty" />
+      <MemberSignature Language="DocId" Value="F:System.Workflow.Activities.DelayActivity.TimeoutDurationProperty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Workflow.Activities</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Workflow.ComponentModel.DependencyProperty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Representa o <see cref="T:System.Workflow.ComponentModel.DependencyProperty" /> que tem como destino o <see cref="P:System.Workflow.Activities.DelayActivity.TimeoutDuration" /> propriedade.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ [!INCLUDE[DependencyPropertyRemark](~/includes/dependencypropertyremark-md.md)]  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir demonstra como usar o <xref:System.Workflow.Activities.DelayActivity.TimeoutDurationProperty> campo.  
+  
+ [!code-csharp[WF_Samples#190](~/samples/snippets/csharp/VS_Snippets_CFX/wf_samples/cs/snippets19.cs#190)]
+ [!code-vb[WF_Samples#190](~/samples/snippets/visualbasic/VS_Snippets_CFX/wf_samples/vb/snippets19.vb#190)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

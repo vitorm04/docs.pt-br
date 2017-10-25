@@ -1,0 +1,673 @@
+<Type Name="ConfigurationProperty" FullName="System.Configuration.ConfigurationProperty">
+  <TypeSignature Language="C#" Value="public sealed class ConfigurationProperty" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConfigurationProperty extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Configuration.ConfigurationProperty" />
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa um atributo ou um filho de um elemento de configuração. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ No caso de um simples <xref:System.Configuration.ConfigurationElement>, como o `CustomSection` mostrado no exemplo a seguir, o <xref:System.Configuration.ConfigurationProperty> objetos representam atributos como `fileName`.  
+  
+ No caso de elementos de configuração mais complexos, como uma seção que contém subseções, por exemplo `authentication`, o <xref:System.Configuration.ConfigurationProperty> objetos podem representar <xref:System.Configuration.ConfigurationElement> objetos, bem como atributos.  
+  
+ O <xref:System.Configuration.ConfigurationPropertyCollection> classe representa a coleção do <xref:System.Configuration.ConfigurationProperty> objetos que podem ser qualquer um dos atributos ou <xref:System.Configuration.ConfigurationElement> objetos de um elemento de configuração.  
+  
+ O <xref:System.Configuration.ConfigurationProperty> classe representa uma definição de configuração individual. Essa classe permite que você obtenha ou defina o nome, tipo e valor padrão para uma determinada entidade de configuração (elemento ou atributo) e especifique se o atributo é necessário, é uma chave de elemento ou representa uma coleção de elementos padrão.  
+  
+   
+  
+## Examples  
+  
+1.  O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationProperty> quando você cria uma seção personalizada.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#1](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#1)]
+ [!code-vb[System.Configuration.ConfigurationProperty#1](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#1)]  
+  
+ A seguir está um trecho do arquivo de configuração usado pelo código no exemplo anterior.  
+  
+  
+  
+ O exemplo a seguir mostra como criar a seção anterior no código.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#30](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#30)]
+ [!code-vb[System.Configuration.ConfigurationProperty#30](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#30)]  
+  
+ ]]></format>
+    </remarks>
+    <block subset="none" type="overrides">
+      <para>Cada <see cref="T:System.Configuration.ConfigurationElement" /> objeto cria interno <see cref="T:System.Configuration.ConfigurationPropertyCollection" /> coleção de <see cref="T:System.Configuration.ConfigurationProperty" /> objetos que representa os atributos do elemento ou uma coleção de elementos filho.  
+  
+ Informações não é personalizável e funcionalidade está contido por um <see cref="T:System.Configuration.ElementInformation" /> objeto fornecido pelo <see cref="P:System.Configuration.ConfigurationElement.ElementInformation" /> propriedade.  
+  
+ Você pode usar um modelo declarativo de codificação (atribuído) ou por uma programação para criar um elemento de configuração personalizado.  
+  
+-   Modelo de programação. Este modelo requer que você crie uma propriedade para cada atributo de elemento para obter e/ou definir seu valor e adicioná-lo para o recipiente de propriedades internas de subjacente <see cref="T:System.Configuration.ConfigurationElement" /> classe base.  
+  
+-   Modelo declarativo. Esse modelo mais simples, também chamado modelo atribuída, permite que você definir um atributo de elemento usando uma propriedade e decore-a com atributos. Esses atributos instruem o sistema de configuração ASP.NET sobre os tipos de propriedades e seus valores padrão. Com essas informações obtidas através de reflexão, o sistema de configuração do ASP.NET cria objetos de propriedade de elemento para você e realiza a inicialização necessária.</para>
+    </block>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationProperty (string name, Type type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationProperty.#ctor(System.String,System.Type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da entidade de configuração.</param>
+        <param name="type">O tipo da entidade de configuração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationProperty (string name, Type type, object default_value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type, object default_value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationProperty.#ctor(System.String,System.Type,System.Object)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da entidade de configuração.</param>
+        <param name="type">O tipo da entidade de configuração.</param>
+        <param name="default_value">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você instancia um <xref:System.Configuration.ConfigurationProperty> usando este construtor do objeto de <xref:System.Configuration.ConfigurationProperty.IsRequired%2A> e <xref:System.Configuration.ConfigurationProperty.IsKey%2A> propriedades são definidas como `false`. Além disso, uma instância feita com esse construtor não funcionará como uma propriedade de chave da coleção padrão.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%29?displayProperty=nameWithType> construtor para instanciar um objeto de propriedade de configuração.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#2](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#2)]
+ [!code-vb[System.Configuration.ConfigurationProperty#2](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#2)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationProperty (string name, Type type, object default_value, System.Configuration.ConfigurationPropertyOptions flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type, object default_value, valuetype System.Configuration.ConfigurationPropertyOptions flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationProperty.#ctor(System.String,System.Type,System.Object,System.Configuration.ConfigurationPropertyOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="options" Type="System.Configuration.ConfigurationPropertyOptions" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da entidade de configuração.</param>
+        <param name="type">O tipo da entidade de configuração.</param>
+        <param name="default_value">To be added.</param>
+        <param name="flags">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%2CSystem.Configuration.ConfigurationPropertyOptions%29?displayProperty=nameWithType> construtor para instanciar um objeto de propriedade de configuração.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#3](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#3)]
+ [!code-vb[System.Configuration.ConfigurationProperty#3](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#3)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationProperty (string name, Type type, object default_value, System.ComponentModel.TypeConverter converter, System.Configuration.ConfigurationValidatorBase validation, System.Configuration.ConfigurationPropertyOptions flags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type, object default_value, class System.ComponentModel.TypeConverter converter, class System.Configuration.ConfigurationValidatorBase validation, valuetype System.Configuration.ConfigurationPropertyOptions flags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationProperty.#ctor(System.String,System.Type,System.Object,System.ComponentModel.TypeConverter,System.Configuration.ConfigurationValidatorBase,System.Configuration.ConfigurationPropertyOptions)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="typeConverter" Type="System.ComponentModel.TypeConverter" />
+        <Parameter Name="validator" Type="System.Configuration.ConfigurationValidatorBase" />
+        <Parameter Name="options" Type="System.Configuration.ConfigurationPropertyOptions" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da entidade de configuração.</param>
+        <param name="type">O tipo da entidade de configuração.</param>
+        <param name="default_value">To be added.</param>
+        <param name="converter">To be added.</param>
+        <param name="validation">To be added.</param>
+        <param name="flags">To be added.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra o tipo de parâmetros a serem usados ao chamar o <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%2CSystem.ComponentModel.TypeConverter%2CSystem.Configuration.ConfigurationValidatorBase%2CSystem.Configuration.ConfigurationPropertyOptions%29?displayProperty=nameWithType> construtor.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationProperty#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConfigurationProperty (string name, Type type, object default_value, System.ComponentModel.TypeConverter converter, System.Configuration.ConfigurationValidatorBase validation, System.Configuration.ConfigurationPropertyOptions flags, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Type type, object default_value, class System.ComponentModel.TypeConverter converter, class System.Configuration.ConfigurationValidatorBase validation, valuetype System.Configuration.ConfigurationPropertyOptions flags, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Configuration.ConfigurationProperty.#ctor(System.String,System.Type,System.Object,System.ComponentModel.TypeConverter,System.Configuration.ConfigurationValidatorBase,System.Configuration.ConfigurationPropertyOptions,System.String)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="type" Type="System.Type" />
+        <Parameter Name="defaultValue" Type="System.Object" />
+        <Parameter Name="typeConverter" Type="System.ComponentModel.TypeConverter" />
+        <Parameter Name="validator" Type="System.Configuration.ConfigurationValidatorBase" />
+        <Parameter Name="options" Type="System.Configuration.ConfigurationPropertyOptions" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">O nome da entidade de configuração.</param>
+        <param name="type">O tipo da entidade de configuração.</param>
+        <param name="default_value">To be added.</param>
+        <param name="converter">To be added.</param>
+        <param name="validation">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="description">A descrição da entidade de configuração.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationProperty.%23ctor%28System.String%2CSystem.Type%2CSystem.Object%2CSystem.ComponentModel.TypeConverter%2CSystem.Configuration.ConfigurationValidatorBase%2CSystem.Configuration.ConfigurationPropertyOptions%2CSystem.String%29?displayProperty=nameWithType> construtor para instanciar um objeto de propriedade de configuração.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#4](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#4)]
+ [!code-vb[System.Configuration.ConfigurationProperty#4](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#4)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Converter">
+      <MemberSignature Language="C#" Value="public System.ComponentModel.TypeConverter Converter { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.ComponentModel.TypeConverter Converter" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.Converter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.TypeConverter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.ComponentModel.TypeConverter" /> usada para converter isso <see cref="T:System.Configuration.ConfigurationProperty" /> em uma representação XML para gravar no arquivo de configuração.</summary>
+        <value>Um <see cref="T:System.ComponentModel.TypeConverter" /> usada para converter isso <see cref="T:System.Configuration.ConfigurationProperty" /> em uma representação XML para gravar no arquivo de configuração.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como usar o <xref:System.Configuration.ConfigurationProperty.Converter%2A> propriedade para obter o <xref:System.ComponentModel.TypeConverter> para um objeto de propriedade de configuração especificado.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#5](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#5)]
+ [!code-vb[System.Configuration.ConfigurationProperty#5](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#5)]  
+  
+ ]]></format>
+        </remarks>
+        <exception cref="T:System.Exception">Isso <see cref="T:System.Configuration.ConfigurationProperty" /> não pode ser convertido.</exception>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultValue">
+      <MemberSignature Language="C#" Value="public object DefaultValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DefaultValue" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.DefaultValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor padrão desta propriedade <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <value>Um <see cref="T:System.Object" /> que pode ser convertido no tipo especificado pela propriedade <see cref="P:System.Configuration.ConfigurationProperty.Type" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor padrão de um novo <xref:System.Configuration.ConfigurationProperty> objeto é passado para o construtor. Esse mesmo objeto será retornado pelo <xref:System.Configuration.ConfigurationProperty.DefaultValue%2A> propriedade.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Configuration.ConfigurationProperty.DefaultValue%2A> para uma propriedade especificada.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#6](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#6)]
+ [!code-vb[System.Configuration.ConfigurationProperty#6](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#6)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a descrição associada a <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <value>Um <see langword="string" /> valor que descreve a propriedade.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Configuration.ConfigurationProperty.Description%2A> para uma propriedade especificada.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#11](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#11)]
+ [!code-vb[System.Configuration.ConfigurationProperty#11](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#11)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsAssemblyStringTransformationRequired">
+      <MemberSignature Language="C#" Value="public bool IsAssemblyStringTransformationRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAssemblyStringTransformationRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.IsAssemblyStringTransformationRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o nome do assembly para a propriedade de configuração requer transformação quando ele é serializado para uma versão anterior do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <value>
+          <see langword="true" />Se a propriedade requer transformação de nome de assembly. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa <xref:System.Configuration.ConfigurationPropertyOptions> para definir essa propriedade quando você chamar um construtor que inclui um <xref:System.Configuration.ConfigurationPropertyOptions> parâmetro. Esse valor será ignorado se a propriedade não contém uma cadeia de caracteres de nome de assembly.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultCollection">
+      <MemberSignature Language="C#" Value="public bool IsDefaultCollection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefaultCollection" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.IsDefaultCollection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a propriedade é a coleção padrão de um elemento.</summary>
+        <value>
+          <see langword="true" /> se a propriedade for a coleção padrão de um elemento, caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse valor é ignorado se a propriedade não é uma coleção.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsKey">
+      <MemberSignature Language="C#" Value="public bool IsKey { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsKey" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.IsKey" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta <see cref="T:System.Configuration.ConfigurationProperty" /> é a chave para o objeto <see cref="T:System.Configuration.ConfigurationElement" /> que a contém.</summary>
+        <value>
+          <see langword="true" /> se este objeto <see cref="T:System.Configuration.ConfigurationProperty" /> é a chave para o elemento que o contém; caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode definir um novo <xref:System.Configuration.ConfigurationProperty> objeto para ser a chave para o elemento que contém ao implementar o <xref:System.Configuration.ConfigurationElement> elemento. Se este sinalizador não for usado, o <xref:System.Configuration.ConfigurationProperty.IsKey%2A> propriedade retornará `false`.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Configuration.ConfigurationProperty.IsKey%2A> propriedade para uma propriedade especificada.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#7](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#7)]
+ [!code-vb[System.Configuration.ConfigurationProperty#7](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#7)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsRequired">
+      <MemberSignature Language="C#" Value="public bool IsRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.IsRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se esta <see cref="T:System.Configuration.ConfigurationProperty" /> é necessária.</summary>
+        <value>
+          <see langword="true" /> se a <see cref="T:System.Configuration.ConfigurationProperty" /> for necessária, caso contrário, <see langword="false" />. O padrão é <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Configuration.ConfigurationProperty.IsRequired%2A> valor de propriedade para um objeto de propriedade de configuração especificado.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#8](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#8)]
+ [!code-vb[System.Configuration.ConfigurationProperty#8](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#8)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsTypeStringTransformationRequired">
+      <MemberSignature Language="C#" Value="public bool IsTypeStringTransformationRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTypeStringTransformationRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.IsTypeStringTransformationRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se o nome do tipo para a propriedade de configuração requer transformação quando ele é serializado para uma versão anterior do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</summary>
+        <value>
+          <see langword="true" />Se a propriedade requer o nome do tipo de transformação. Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você usa <xref:System.Configuration.ConfigurationPropertyOptions> para definir essa propriedade quando você chamar um construtor que inclui um <xref:System.Configuration.ConfigurationPropertyOptions> parâmetro. Esse valor será ignorado se a propriedade não contém uma cadeia de caracteres de nome de tipo.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsVersionCheckRequired">
+      <MemberSignature Language="C#" Value="public bool IsVersionCheckRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVersionCheckRequired" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.IsVersionCheckRequired" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Indica se a seção de configuração da propriedade de configuração pai é consultada no tempo de serialização para determinar se a propriedade de configuração deve ser serializada em XML.</summary>
+        <value>
+          <see langword="true" />Se a seção de configuração pai deve ser consultada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se você estiver criando uma propriedade de configuração para o [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] ou versões posteriores e se o valor da propriedade não deve ser serializado para XML quando uma versão anterior do framework é afetada, defina essa propriedade como `true`.  
+  
+ Você usa <xref:System.Configuration.ConfigurationPropertyOptions> para definir essa propriedade quando você chamar um construtor que inclui um <xref:System.Configuration.ConfigurationPropertyOptions> parâmetro.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome deste <see cref="T:System.Configuration.ConfigurationProperty" />.</summary>
+        <value>O nome do <see cref="T:System.Configuration.ConfigurationProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se uma instância de um <xref:System.Configuration.ConfigurationProperty> é uma coleção padrão, seu nome será definido automaticamente para ser uma cadeia de caracteres vazia.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Configuration.ConfigurationProperty.Name%2A> para uma propriedade especificada.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#9](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#9)]
+ [!code-vb[System.Configuration.ConfigurationProperty#9](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#9)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Type Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type Type" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o tipo deste <see cref="T:System.Configuration.ConfigurationProperty" /> objeto.</summary>
+        <value>Um <see cref="T:System.Type" /> que representa o tipo deste <see cref="T:System.Configuration.ConfigurationProperty" /> objeto.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use `Type` para determinar o nome totalmente qualificado de namespace e classe desta instância derivada do <xref:System.Configuration.ConfigurationProperty>.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir mostra como obter o <xref:System.Configuration.ConfigurationProperty.Type%2A> valor de propriedade para um objeto de propriedade de configuração especificado.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#10](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#10)]
+ [!code-vb[System.Configuration.ConfigurationProperty#10](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#10)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="Validator">
+      <MemberSignature Language="C#" Value="public System.Configuration.ConfigurationValidatorBase Validator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Configuration.ConfigurationValidatorBase Validator" />
+      <MemberSignature Language="DocId" Value="P:System.Configuration.ConfigurationProperty.Validator" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Configuration.ConfigurationManager</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Configuration.ConfigurationValidatorBase</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o <see cref="T:System.Configuration.ConfigurationValidatorAttribute" />, que é usado para validar essa <see cref="T:System.Configuration.ConfigurationProperty" /> objeto.</summary>
+        <value>O <see cref="T:System.Configuration.ConfigurationValidatorBase" /> validador, que é usado para validar essa <see cref="T:System.Configuration.ConfigurationProperty" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo de código a seguir mostra como obter o <xref:System.Configuration.ConfigurationProperty.Validator%2A> para uma propriedade especificada.  
+  
+ [!code-csharp[System.Configuration.ConfigurationProperty#12](~/samples/snippets/csharp/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/CS/ConfigurationProperty.cs#12)]
+ [!code-vb[System.Configuration.ConfigurationProperty#12](~/samples/snippets/visualbasic/VS_Snippets_WebNet/System.Configuration.ConfigurationProperty/VB/ConfigurationProperty.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

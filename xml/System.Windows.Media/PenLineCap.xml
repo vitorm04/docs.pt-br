@@ -1,0 +1,92 @@
+<Type Name="PenLineCap" FullName="System.Windows.Media.PenLineCap">
+  <TypeSignature Language="C#" Value="public enum PenLineCap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PenLineCap extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.PenLineCap" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Descreve o formato no final de uma linha ou um segmento.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A ilustração a seguir mostra os estilos disponíveis para linhas ou segmentos. A parte vermelha da linha mostra a área de extra adicionada, a configuração de extremidade de linha.  
+  
+ ![Configurações de PenLineCap](~/add/media/wcpsdk-graphicsmm-linecaps.png "PenLineCap configurações")  
+Terminações de linha  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.PenLineCap Flat = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PenLineCap.Flat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineCap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um limite não se estende após o último ponto da linha. Comparável a nenhum limite de linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Round">
+      <MemberSignature Language="C#" Value="Round" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.PenLineCap Round = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PenLineCap.Round" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineCap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um semicírculo com diâmetro igual à espessura da linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Square">
+      <MemberSignature Language="C#" Value="Square" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.PenLineCap Square = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PenLineCap.Square" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineCap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um retângulo com altura igual à espessura da linha e comprimento igual à metade da espessura da linha.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Triangle">
+      <MemberSignature Language="C#" Value="Triangle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.PenLineCap Triangle = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.PenLineCap.Triangle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.PenLineCap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Um triângulo isósceles reto cujo tamanho da base é igual à espessura da linha.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

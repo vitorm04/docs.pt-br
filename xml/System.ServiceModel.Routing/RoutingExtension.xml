@@ -1,0 +1,98 @@
+<Type Name="RoutingExtension" FullName="System.ServiceModel.Routing.RoutingExtension">
+  <TypeSignature Language="C#" Value="public sealed class RoutingExtension : System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RoutingExtension extends System.Object implements class System.ServiceModel.IExtension`1&lt;class System.ServiceModel.ServiceHostBase&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Routing.RoutingExtension" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Fornece acesso de tempo de execução para o serviço de roteamento para permitir a modificação dinâmica da configuração de roteamento.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplyConfiguration">
+      <MemberSignature Language="C#" Value="public void ApplyConfiguration (System.ServiceModel.Routing.RoutingConfiguration routingConfiguration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyConfiguration(class System.ServiceModel.Routing.RoutingConfiguration routingConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration(System.ServiceModel.Routing.RoutingConfiguration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routingConfiguration" Type="System.ServiceModel.Routing.RoutingConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="routingConfiguration">A configuração de roteamento a ser aplicado.</param>
+        <summary>Aplica-se um novo <see cref="T:System.ServiceModel.Routing.RoutingConfiguration" /> para executar uma instância do serviço de roteamento.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois de chamar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>, o novo <xref:System.ServiceModel.Routing.RoutingConfiguration> se aplica somente a novas sessões e mensagens.  
+  
+> [!WARNING]
+>  Não modifique o <xref:System.ServiceModel.Routing.RoutingConfiguration> objeto depois de chamar <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>, como <xref:System.ServiceModel.Routing.RoutingConfiguration> não fornece extensões ou atualizações de thread-safe.  
+>   
+>  Se for necessário executar atualizações subsequentes da configuração de roteamento, use uma nova instância da <xref:System.ServiceModel.Routing.RoutingConfiguration> para cada atualização.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Attach">
+      <MemberSignature Language="C#" Value="void IExtension&lt;ServiceHostBase&gt;.Attach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Attach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingExtension.System#ServiceModel#IExtension&lt;System#ServiceModel#ServiceHostBase&gt;#Attach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O host de serviço base.</param>
+        <summary>Chamado quando o tempo de execução anexa a extensão a uma instância do <see cref="T:System.ServiceModel.ServiceHostBase" /> classe.  Somente para uso interno.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Detach">
+      <MemberSignature Language="C#" Value="void IExtension&lt;ServiceHostBase&gt;.Detach (System.ServiceModel.ServiceHostBase owner);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.ServiceModel.IExtension&lt;System.ServiceModel.ServiceHostBase&gt;.Detach(class System.ServiceModel.ServiceHostBase owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Routing.RoutingExtension.System#ServiceModel#IExtension&lt;System#ServiceModel#ServiceHostBase&gt;#Detach(System.ServiceModel.ServiceHostBase)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel.Routing</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="owner" Type="System.ServiceModel.ServiceHostBase" />
+      </Parameters>
+      <Docs>
+        <param name="owner">O host de serviço base.</param>
+        <summary>Chamado quando o tempo de execução Desanexa a extensão de uma instância do <see cref="T:System.ServiceModel.ServiceHostBase" /> classe.  Somente para uso interno.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

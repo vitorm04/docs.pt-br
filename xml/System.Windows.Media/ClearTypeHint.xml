@@ -1,0 +1,57 @@
+<Type Name="ClearTypeHint" FullName="System.Windows.Media.ClearTypeHint">
+  <TypeSignature Language="C#" Value="public enum ClearTypeHint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClearTypeHint extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Media.ClearTypeHint" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Uma enumeração que especifica uma dica para o mecanismo de renderização de que o texto pode ser renderizado com ClearType.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use o <xref:System.Windows.Media.RenderOptions.ClearTypeHint%2A?displayProperty=nameWithType> propriedade anexa para controlar como o texto é renderizado em um plano de fundo transparente. Para obter mais informações, consulte <xref:System.Windows.Media.RenderOptions.ClearTypeHint%2A?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Auto">
+      <MemberSignature Language="C#" Value="Auto" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.ClearTypeHint Auto = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ClearTypeHint.Auto" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ClearTypeHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O mecanismo de renderização usa ClearType quando possível. Se a opacidade for introduzida, ClearType será desabilitado nessa subárvore.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="Enabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Media.ClearTypeHint Enabled = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Media.ClearTypeHint.Enabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>PresentationCore</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Media.ClearTypeHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O mecanismo de renderização reabilita ClearType para a subárvore atual. Quando a opacidade é introduzida nessa subárvore, ClearType é desabilitado.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

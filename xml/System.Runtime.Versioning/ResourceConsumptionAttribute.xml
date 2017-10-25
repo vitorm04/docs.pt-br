@@ -1,0 +1,175 @@
+<Type Name="ResourceConsumptionAttribute" FullName="System.Runtime.Versioning.ResourceConsumptionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ResourceConsumptionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ResourceConsumptionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.Versioning.ResourceConsumptionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.Extensions</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Constructor | System.AttributeTargets.Method | System.AttributeTargets.Property, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Diagnostics.Conditional("RESOURCE_ANNOTATION_WORK")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica os recursos consumidos pelo membro de uma classe. Essa classe não pode ser herdada.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Runtime.Versioning.ResourceConsumptionAttribute> atributo é aplicado a um membro, o <xref:System.Runtime.Versioning.ResourceExposureAttribute> atributo também deve ser aplicado.  
+  
+ Se o escopo do recurso do recurso consumido for diferente do que o recurso de como ele é consumido, o construtor que usa um `consumptionScope` parâmetro deve ser usado para especificar como os recursos são consumidos. Por exemplo, um recurso pode ser exposto como um <xref:System.Runtime.Versioning.ResourceScope.Machine> recursos, mas só é usado no <xref:System.Runtime.Versioning.ResourceScope.Process> e <xref:System.Runtime.Versioning.ResourceScope.Assembly> escopo. Para este exemplo de `consumptionScope` parâmetro está definido como <xref:System.Runtime.Versioning.ResourceScope.Process> &#124; <xref:System.Runtime.Versioning.ResourceScope.Assembly>.  
+  
+ O `resourceScope` parâmetro no construtor deve especificar um <xref:System.Runtime.Versioning.ResourceScope> maior que ou igual a exposição de recursos de todos os membros de chamada.  Por exemplo, um método consumindo dois <xref:System.Runtime.Versioning.ResourceScope.Process> recursos e um <xref:System.Runtime.Versioning.ResourceScope.Machine> recurso seria identificado como consumir um <xref:System.Runtime.Versioning.ResourceScope.Machine> e um <xref:System.Runtime.Versioning.ResourceScope.Process> recurso definindo `resourceScope` para <xref:System.Runtime.Versioning.ResourceScope.Machine> &#124; <xref:System.Runtime.Versioning.ResourceScope.Process>.  
+  
+ `Public`membros não podem expor <xref:System.Runtime.Versioning.ResourceScope.Assembly> ou <xref:System.Runtime.Versioning.ResourceScope.Private> recursos.  <xref:System.Runtime.Versioning.ResourceScope.Assembly>membros não podem expor <xref:System.Runtime.Versioning.ResourceScope.Private> recursos.  
+  
+ O gráfico de métodos termina quando um <xref:System.Runtime.Versioning.ResourceExposureAttribute> atributo com um escopo de recursos de <xref:System.Runtime.Versioning.ResourceScope.None> é aplicado a um método.  
+  
+ ]]></format>
+    </remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceConsumptionAttribute (System.Runtime.Versioning.ResourceScope resourceScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Versioning.ResourceScope resourceScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.ResourceConsumptionAttribute.#ctor(System.Runtime.Versioning.ResourceScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceScope" Type="System.Runtime.Versioning.ResourceScope" />
+      </Parameters>
+      <Docs>
+        <param name="resourceScope">O <see cref="T:System.Runtime.Versioning.ResourceScope" /> para os recursos consumidos.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Versioning.ResourceConsumptionAttribute" /> classe especifica o escopo do recurso consumido.</summary>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ResourceConsumptionAttribute (System.Runtime.Versioning.ResourceScope resourceScope, System.Runtime.Versioning.ResourceScope consumptionScope);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Runtime.Versioning.ResourceScope resourceScope, valuetype System.Runtime.Versioning.ResourceScope consumptionScope) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.Versioning.ResourceConsumptionAttribute.#ctor(System.Runtime.Versioning.ResourceScope,System.Runtime.Versioning.ResourceScope)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="resourceScope" Type="System.Runtime.Versioning.ResourceScope" />
+        <Parameter Name="consumptionScope" Type="System.Runtime.Versioning.ResourceScope" />
+      </Parameters>
+      <Docs>
+        <param name="resourceScope">O <see cref="T:System.Runtime.Versioning.ResourceScope" /> para os recursos consumidos.</param>
+        <param name="consumptionScope">O <see cref="T:System.Runtime.Versioning.ResourceScope" /> usado por este membro.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.Runtime.Versioning.ResourceConsumptionAttribute" /> classe especifica o escopo do recurso consumido e o escopo de como ele é consumido.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Se o <xref:System.Runtime.Versioning.ResourceExposureAttribute> atributo especifica um escopo de <xref:System.Runtime.Versioning.ResourceScope.None>, em seguida, o <xref:System.Runtime.Versioning.ResourceConsumptionAttribute> atributo deve especificar um recurso consome e como ele consome, especificando um valor para o `consumptionScope` parâmetro.  
+  
+ O escopo especificado por `consumptionScope` deve ser menor ou igual ao escopo especificado pelo `resourceScope`. Por exemplo, um <xref:System.Runtime.Versioning.ResourceScope.Process> escopo pode ser consumido como um <xref:System.Runtime.Versioning.ResourceScope.Process> ou <xref:System.Runtime.Versioning.ResourceScope.AppDomain> escopo, mas não como um <xref:System.Runtime.Versioning.ResourceScope.Machine> escopo.  
+  
+ ]]></format>
+        </remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ConsumptionScope">
+      <MemberSignature Language="C#" Value="public System.Runtime.Versioning.ResourceScope ConsumptionScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Versioning.ResourceScope ConsumptionScope" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.ResourceConsumptionAttribute.ConsumptionScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o escopo de consumo para esse membro.</summary>
+        <value>Um <see cref="T:System.Runtime.Versioning.ResourceScope" /> objeto que especifica o escopo do recurso usado por este membro.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceScope">
+      <MemberSignature Language="C#" Value="public System.Runtime.Versioning.ResourceScope ResourceScope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Runtime.Versioning.ResourceScope ResourceScope" />
+      <MemberSignature Language="DocId" Value="P:System.Runtime.Versioning.ResourceConsumptionAttribute.ResourceScope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.Extensions</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Versioning.ResourceScope</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o escopo do recurso para o recurso consumido.</summary>
+        <value>Um <see cref="T:System.Runtime.Versioning.ResourceScope" /> objeto que especifica o escopo do recurso do membro consumido.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,249 @@
+<Type Name="OffsetType" FullName="System.Windows.Forms.VisualStyles.OffsetType">
+  <TypeSignature Language="C#" Value="public enum OffsetType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OffsetType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.VisualStyles.OffsetType" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica onde um deslocamento é aplicado a um elemento de janela.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.Windows.Forms.VisualStyles.OffsetType> valores representam os valores de retorno de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.GetEnumValue%2A?displayProperty=nameWithType> método quando ele é chamado com um valor de argumento de <xref:System.Windows.Forms.VisualStyles.EnumProperty?displayProperty=nameWithType>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AboveLastButton">
+      <MemberSignature Language="C#" Value="AboveLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType AboveLastButton = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.AboveLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado acima do botão de última.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BelowLastButton">
+      <MemberSignature Language="C#" Value="BelowLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BelowLastButton = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BelowLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado abaixo o último botão.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomLeft">
+      <MemberSignature Language="C#" Value="BottomLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BottomLeft = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BottomLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado na parte inferior esquerda do elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomMiddle">
+      <MemberSignature Language="C#" Value="BottomMiddle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BottomMiddle = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BottomMiddle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado do meio inferior do elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BottomRight">
+      <MemberSignature Language="C#" Value="BottomRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType BottomRight = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.BottomRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado na parte inferior direita do elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftOfCaption">
+      <MemberSignature Language="C#" Value="LeftOfCaption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType LeftOfCaption = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.LeftOfCaption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado à esquerda da legenda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftOfLastButton">
+      <MemberSignature Language="C#" Value="LeftOfLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType LeftOfLastButton = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.LeftOfLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado à esquerda do botão de última.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleLeft">
+      <MemberSignature Language="C#" Value="MiddleLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType MiddleLeft = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.MiddleLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado no meio à esquerda do elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MiddleRight">
+      <MemberSignature Language="C#" Value="MiddleRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType MiddleRight = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.MiddleRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado no meio à direita do elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightOfCaption">
+      <MemberSignature Language="C#" Value="RightOfCaption" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType RightOfCaption = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.RightOfCaption" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado à direita da legenda.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightOfLastButton">
+      <MemberSignature Language="C#" Value="RightOfLastButton" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType RightOfLastButton = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.RightOfLastButton" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado à direita do botão de última.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopLeft">
+      <MemberSignature Language="C#" Value="TopLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType TopLeft = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.TopLeft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado na parte superior esquerda do elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopMiddle">
+      <MemberSignature Language="C#" Value="TopMiddle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType TopMiddle = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.TopMiddle" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado no meio superior do elemento.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TopRight">
+      <MemberSignature Language="C#" Value="TopRight" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Windows.Forms.VisualStyles.OffsetType TopRight = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Windows.Forms.VisualStyles.OffsetType.TopRight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Forms.VisualStyles.OffsetType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>O deslocamento é aplicado na parte superior direita do elemento.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

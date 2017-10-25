@@ -1,0 +1,382 @@
+<Type Name="XpsDigitalSignature" FullName="System.Windows.Xps.Packaging.XpsDigitalSignature">
+  <TypeSignature Language="C#" Value="public class XpsDigitalSignature" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XpsDigitalSignature extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Xps.Packaging.XpsDigitalSignature" />
+  <AssemblyInfo>
+    <AssemblyName>ReachFramework</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Representa uma assinatura digital para um <see cref="T:System.Windows.Xps.Packaging.XpsDocument" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Use <xref:System.Windows.Xps.Packaging.XpsDigitalSignature> em vez de <xref:System.IO.Packaging.PackageDigitalSignature> quando você trabalha com um [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento.  <xref:System.IO.Packaging.PackageDigitalSignature>não é [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)]-com suporte e não garante que todas as partes em uma [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] documento estão totalmente assinados.  
+  
+ Para obter mais informações sobre assinaturas digitais, consulte o artigo do MSDN *estrutura de assinaturas digitais de Open Packaging Conventions* disponível em [http://go.microsoft.com/fwlink/?LinkId=74494](http://go.microsoft.com/fwlink/?LinkId=74494).  
+  
+ Para obter mais informações sobre [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] consulte o *XML Paper Specification (XPS)* disponível para download em [http://go.microsoft.com/fwlink/?LinkID=65761](http://go.microsoft.com/fwlink/?LinkID=65761).  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XpsDigitalSignature (System.IO.Packaging.PackageDigitalSignature packageSignature, System.Windows.Xps.Packaging.XpsDocument package);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Packaging.PackageDigitalSignature packageSignature, class System.Windows.Xps.Packaging.XpsDocument package) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsDigitalSignature.#ctor(System.IO.Packaging.PackageDigitalSignature,System.Windows.Xps.Packaging.XpsDocument)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="packageSignature" Type="System.IO.Packaging.PackageDigitalSignature" />
+        <Parameter Name="package" Type="System.Windows.Xps.Packaging.XpsDocument" />
+      </Parameters>
+      <Docs>
+        <param name="packageSignature">A assinatura digital associada para o pacote.</param>
+        <param name="package">O pacote associado.</param>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Windows.Xps.Packaging.XpsDigitalSignature" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentPropertiesRestricted">
+      <MemberSignature Language="C#" Value="public bool DocumentPropertiesRestricted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DocumentPropertiesRestricted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.DocumentPropertiesRestricted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a alteração das propriedades do documento invalida a assinatura digital.</summary>
+        <value>
+          <see langword="true" />Se alterar as propriedades do documento invalida a assinatura; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Guid&gt; Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.Guid&gt; Id" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Guid&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o [!INCLUDE[TLA2#tla_guid](~/includes/tla2sharptla-guid-md.md)] da assinatura.</summary>
+        <value>O [!INCLUDE[TLA#tla_guid](~/includes/tlasharptla-guid-md.md)] da assinatura.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Examples  
+ O exemplo a seguir mostra como usar o <xref:System.Windows.Xps.Packaging.XpsDigitalSignature.Id%2A> propriedade para exibir e atualizar informações de assinatura.  
+  
+ [!code-csharp[XpsReadWriteSign#IterateSignatureDefinitions](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsReadWriteSign/CSharp/SignatureDefinitionsAndSigning.cs#iteratesignaturedefinitions)]
+ [!code-vb[XpsReadWriteSign#IterateSignatureDefinitions](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsReadWriteSign/visualbasic/signaturedefinitionsandsigning.vb#iteratesignaturedefinitions)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCertificateAvailable">
+      <MemberSignature Language="C#" Value="public bool IsCertificateAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCertificateAvailable" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.IsCertificateAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se o certificado de x. 509 do assinante está contido no documento <see cref="T:System.IO.Packaging.Package" />.</summary>
+        <value>
+          <see langword="true" />Se o certificado x. 509 do assinante será inserido no documento <see cref="T:System.IO.Packaging.Package" />; caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O certificado x. 509 do assinante é inserido o <xref:System.Windows.Xps.Packaging.XpsDocument.SignDigitally%2A> método quando chamado com o `embedCertificate` parâmetro definido como `true`.  
+  
+ Para obter mais informações sobre certificados e assinaturas digitais, consulte a seção 3.3 assinaturas digitais a *Open Packaging Conventions* especificação disponível para download em [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureOriginRestricted">
+      <MemberSignature Language="C#" Value="public bool SignatureOriginRestricted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SignatureOriginRestricted" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.SignatureOriginRestricted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a assinatura digital é invalidada se alguém se o pacote.</summary>
+        <value>
+          <see langword="true" />Se a assinatura será invalidada se uma assinatura digital adicional é aplicada; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ A restrição de origem de assinatura é definida pelo <xref:System.Windows.Xps.Packaging.XpsDocument.SignDigitally%2A> método quando chamado com o `restrictions` parâmetro definido para excluir o <xref:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.SignatureOrigin> parte.  
+  
+ Se um documento deve ser assinado por mais de uma pessoa, o <xref:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.SignatureOrigin> parte precisa ser excluído da assinatura quando o documento está assinado pela primeira vez.  (Exclusões são especificados no `restrictions` parâmetro da chamada para <xref:System.Windows.Xps.Packaging.XpsDocument.SignDigitally%2A>.)  Se o <xref:System.Windows.Xps.Packaging.XpsDigSigPartAlteringRestrictions.SignatureOrigin> parte não é excluída, assinaturas adicionais invalidam a assinatura do assinante primeiro.  
+  
+ Para obter mais informações sobre as propriedades de núcleo e partes de origem da assinatura, consulte o capítulo 3 o *Open Packaging Conventions* especificação disponível para download em [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureType">
+      <MemberSignature Language="C#" Value="public string SignatureType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SignatureType" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.SignatureType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um [!INCLUDE[TLA2#tla_url](~/includes/tla2sharptla-url-md.md)] cadeia de caracteres que identifica o tipo de assinatura.</summary>
+        <value>Uma cadeia de caracteres [!INCLUDE[TLA2#tla_url](~/includes/tla2sharptla-url-md.md)] que identifica o tipo de assinatura. O tipo de assinatura padrão é <see cref="F:System.Security.Cryptography.Xml.SignedXml.XmlDsigC14NTransformUrl" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureValue">
+      <MemberSignature Language="C#" Value="public byte[] SignatureValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SignatureValue" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.SignatureValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o valor de hash criptografado da assinatura.</summary>
+        <value>A <see cref="T:System.Byte" /> matriz que contém o valor de hash criptografado da assinatura.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedDocumentSequence">
+      <MemberSignature Language="C#" Value="public System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader SignedDocumentSequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader SignedDocumentSequence" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.SignedDocumentSequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o leitor de sequência de documento para a sequência de documento assinado.</summary>
+        <value>Um <see cref="T:System.Windows.Xps.Packaging.IXpsFixedDocumentSequenceReader" />; ou <see langword="null" /> se não válidos [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] foram assinadas partes do documento.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignerCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate SignerCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate SignerCertificate" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.SignerCertificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o certificado X.509 do signatário.</summary>
+        <value>O certificado x. 509 do assinante; ou <see langword="null" /> quando não houver nenhum certificado incorporado no pacote de documento.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O certificado x. 509 do assinante é inserido o <xref:System.Windows.Xps.Packaging.XpsDocument.SignDigitally%2A> método quando chamado com o `embedCertificate` parâmetro definido como `true`.  
+  
+ Para obter mais informações sobre certificados e assinaturas digitais, consulte a seção 3.3 assinaturas digitais a *Open Packaging Conventions* especificação disponível para download em [http://go.microsoft.com/fwlink/?LinkID=71255](http://go.microsoft.com/fwlink/?LinkID=71255).  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SigningTime">
+      <MemberSignature Language="C#" Value="public DateTime SigningTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime SigningTime" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Xps.Packaging.XpsDigitalSignature.SigningTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém a data e hora em que a assinatura foi criada.</summary>
+        <value>A data e hora quando as páginas, documentos ou sequência de documento foi assinado.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ <xref:System.Windows.Xps.Packaging.XpsDigitalSignature.SigningTime%2A>baseia-se na hora do sistema do computador em que a assinatura foi feita.  
+  
+ <xref:System.Windows.Xps.Packaging.XpsDigitalSignature.SigningTime%2A>não é um "carimbo de hora seguro" e não é de autoridade confiável de carimbo de data / hora.  Um carimbo de hora seguro deve ser obtido e aplicado por meio de uma autoridade confiável de carimbo de data / hora.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.VerifyResult Verify ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.IO.Packaging.VerifyResult Verify() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsDigitalSignature.Verify" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.VerifyResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica a assinatura digital de documento em relação ao certificado x. 509 inserido no [!INCLUDE[TLA2#tla_xps](~/includes/tla2sharptla-xps-md.md)] <see cref="T:System.IO.Packaging.Package" />.</summary>
+        <returns>Uma da <see cref="T:System.IO.Packaging.VerifyResult" /> valores de enumeração que especificam o resultado da tentativa de verificação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Esse método de sobrecarga verifica a assinatura digital de documento em relação ao certificado x. 509 incorporado, o <xref:System.Windows.Xps.Packaging.XpsDocument.SignDigitally%2A> método quando chamado com o `embedCertificate` parâmetro definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Verify">
+      <MemberSignature Language="C#" Value="public System.IO.Packaging.VerifyResult Verify (System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.IO.Packaging.VerifyResult Verify(class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsDigitalSignature.Verify(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Packaging.VerifyResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">O certificado de autenticidade do signatário.</param>
+        <summary>Verifica a assinatura digital de documento em relação a um certificado x. 509 especificado.</summary>
+        <returns>Uma da <see cref="T:System.IO.Packaging.VerifyResult" /> valores de enumeração que especificam o resultado da tentativa de verificação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509ChainStatusFlags VerifyCertificate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags VerifyCertificate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsDigitalSignature.VerifyCertificate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Verifica o certificado x. 509 inserido no pacote.</summary>
+        <returns>Uma combinação bit a bit dos valores de enumeração que especificam o resultado da tentativa de verificação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seu aplicativo precisará decidir quais sinalizadores são essenciais para a verificação de certificados.  
+  
+ Algumas verificações de certificado podem exigir conectividade com a Internet.  
+  
+ O certificado x. 509 do assinante é inserido o <xref:System.Windows.Xps.Packaging.XpsDocument.SignDigitally%2A> método quando chamado com o `embedCertificate` parâmetro definido como `true`.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyCertificate">
+      <MemberSignature Language="C#" Value="public static System.Security.Cryptography.X509Certificates.X509ChainStatusFlags VerifyCertificate (System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Security.Cryptography.X509Certificates.X509ChainStatusFlags VerifyCertificate(class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Windows.Xps.Packaging.XpsDigitalSignature.VerifyCertificate(System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ReachFramework</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509ChainStatusFlags</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">Um certificado de autenticidade.</param>
+        <summary>Verifica o certificado x. 509 especificado.</summary>
+        <returns>Uma combinação bit a bit dos valores de enumeração que especificam o resultado da tentativa de verificação.</returns>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Seu aplicativo precisará decidir quais sinalizadores são essenciais para a verificação de certificados.  
+  
+ Algumas verificações de certificado podem exigir conectividade com a Internet.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

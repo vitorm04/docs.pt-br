@@ -1,0 +1,80 @@
+<Type Name="MetadataStore" FullName="System.Activities.Presentation.Metadata.MetadataStore">
+  <TypeSignature Language="C#" Value="public static class MetadataStore" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed MetadataStore extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Activities.Presentation.Metadata.MetadataStore" />
+  <AssemblyInfo>
+    <AssemblyName>System.Activities.Presentation</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Uma coleção de memória das tabelas de hash que permite que a pesquisa rápida de elementos de designer em <see cref="T:System.Type" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O repositório de metadados contém metadados de atributo personalizado, como a associação entre os tipos e designers. Atributos personalizados podem ser definidos em um <xref:System.Activities.Presentation.Metadata.AttributeTable> e adicionado ao repositório de metadados. Depois que os atributos são adicionados, eles serão exibidos em chamadas para <xref:System.ComponentModel.TypeDescriptor>.  
+  
+   
+  
+## Examples  
+ O exemplo de código a seguir mostra como associar o `AcitivityDesigner1` designer de atividade personalizada com uma atividade personalizada. [!INCLUDE[crabout](~/includes/crabout-md.md)]como criar designers de atividade personalizada, consulte [como: criar um Designer de atividade personalizado](~/docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+  
+```csharp  
+internal class Metadata : IRegisterMetadata  
+{  
+    private AttributeTable attributes;  
+  
+    // Called by the designer to register any design-time metadata.  
+    public void Register()  
+    {  
+        AttributeTableBuilder builder = new AttributeTableBuilder();  
+  
+        // Add the custom attributes to associate the ActivityDesigner1 custom designer  
+        // with the custom activity MyActivity.  
+        builder.AddCustomAttributes(  
+            typeof(MyActivity),  
+            new DesignerAttribute(typeof(ActivityDesigner1)));  
+        MetadataStore.AddAttributeTable(builder.CreateTable());  
+  
+    }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddAttributeTable">
+      <MemberSignature Language="C#" Value="public static void AddAttributeTable (System.Activities.Presentation.Metadata.AttributeTable table);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddAttributeTable(class System.Activities.Presentation.Metadata.AttributeTable table) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable(System.Activities.Presentation.Metadata.AttributeTable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Activities.Presentation</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="table" Type="System.Activities.Presentation.Metadata.AttributeTable" />
+      </Parameters>
+      <Docs>
+        <param name="table">A tabela a adicionar.</param>
+        <summary>Adiciona a tabela especificada para o atual <see cref="T:System.AppDomain" /> repositório de atributos do objeto.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Depois que a tabela é adicionada, chamadas para <xref:System.ComponentModel.TypeDescriptor> usará atributos definidos na tabela recém-adicionada. Várias tabelas podem ser adicionadas para o repositório de atributos. No caso de conflitos, atributos na tabela adicionada mais recentemente são usados.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

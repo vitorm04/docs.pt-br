@@ -1,0 +1,43 @@
+<Type Name="TreeViewCancelEventHandler" FullName="System.Windows.Forms.TreeViewCancelEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void TreeViewCancelEventHandler(object sender, TreeViewCancelEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TreeViewCancelEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.TreeViewCancelEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Forms.TreeViewCancelEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">A fonte do evento.</param>
+    <param name="e">Um <see cref="T:System.Windows.Forms.TreeViewCancelEventArgs" /> que contém os dados do evento.</param>
+    <summary>Representa o método que manipulará o <see cref="E:System.Windows.Forms.TreeView.BeforeCheck" />, <see cref="E:System.Windows.Forms.TreeView.BeforeCollapse" />, <see cref="E:System.Windows.Forms.TreeView.BeforeExpand" />, ou <see cref="E:System.Windows.Forms.TreeView.BeforeSelect" /> eventos de um <see cref="T:System.Windows.Forms.TreeView" />.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Quando você cria um <xref:System.Windows.Forms.TreeViewCancelEventArgs> delegado, você identificar o método que manipulará o evento. Para associar o evento com o manipulador de eventos, adicione uma instância do representante ao evento. O manipulador de eventos é chamado sempre que o evento ocorre, a menos que você remova o representante. Para obter mais informações sobre delegados de manipulador de eventos, consulte [eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como alterar o estado recolhido de uma <xref:System.Windows.Forms.TreeView> para que todos os nós marcados estão visíveis. Primeiro, todos os nós são recolhidos, e um manipulador é adicionado para o <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> evento. Em seguida, todos os nós são expandidos. O <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> manipulador de eventos determina se um determinado nó tem nós filhos que são verificadas. Se um nó não tem filhos marcados, a expansão é cancelada para esse nó. Para permitir a expansão do nó normal quando o sinal de adição ao lado de um nó é clicado, o <xref:System.Windows.Forms.TreeView.BeforeExpand?displayProperty=nameWithType> manipulador de eventos é então removido.  
+  
+ Esse comportamento também pode ser implementado pelo tratamento de <xref:System.Windows.Forms.TreeView.BeforeCollapse?displayProperty=nameWithType> evento, conforme ilustrado no exemplo para esse tópico.  
+  
+ [!code-cpp[TreeViewShowCheckedNodes1#1](~/samples/snippets/cpp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CPP/treeviewshowcheckednodes1.cpp#1)]
+ [!code-csharp[TreeViewShowCheckedNodes1#1](~/samples/snippets/csharp/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/CS/treeviewshowcheckednodes1.cs#1)]
+ [!code-vb[TreeViewShowCheckedNodes1#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TreeViewShowCheckedNodes1/VB/treeviewshowcheckednodes1.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

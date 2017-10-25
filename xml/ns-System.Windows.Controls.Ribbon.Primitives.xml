@@ -1,0 +1,6 @@
+<Namespace Name="System.Windows.Controls.Ribbon.Primitives">
+  <Docs>
+    <summary>Contém tipos que são usados como contêineres de layout em um Microsoft Ribbon controle WPF.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Namespace>

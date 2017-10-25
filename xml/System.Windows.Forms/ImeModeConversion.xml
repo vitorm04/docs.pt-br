@@ -1,0 +1,59 @@
+<Type Name="ImeModeConversion" FullName="System.Windows.Forms.ImeModeConversion">
+  <TypeSignature Language="C#" Value="public struct ImeModeConversion" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ImeModeConversion extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Forms.ImeModeConversion" />
+  <AssemblyInfo>
+    <AssemblyName>System.Windows.Forms</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Classe auxiliar que fornece informações sobre o modo de conversão de IME.</summary>
+    <remarks>To be added.</remarks>
+    <forInternalUseOnly />
+  </Docs>
+  <Members>
+    <Member MemberName="ImeModeConversionBits">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.Dictionary&lt;System.Windows.Forms.ImeMode,System.Windows.Forms.ImeModeConversion&gt; ImeModeConversionBits { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.Dictionary`2&lt;valuetype System.Windows.Forms.ImeMode, valuetype System.Windows.Forms.ImeModeConversion&gt; ImeModeConversionBits" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ImeModeConversion.ImeModeConversionBits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.Dictionary&lt;System.Windows.Forms.ImeMode,System.Windows.Forms.ImeModeConversion&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um dicionário que contém os sinalizadores de modo de conversão correspondente a cada <see cref="T:System.Windows.Forms.ImeMode" />.</summary>
+        <value>Um dicionário que contém os sinalizadores para <see cref="T:System.Windows.Forms.ImeMode" /> mapeamento.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentConversionTableSupported">
+      <MemberSignature Language="C#" Value="public static bool IsCurrentConversionTableSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsCurrentConversionTableSupported" />
+      <MemberSignature Language="DocId" Value="P:System.Windows.Forms.ImeModeConversion.IsCurrentConversionTableSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Windows.Forms</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a tabela de linguagem atual tem suporte.</summary>
+        <value>
+          <see langword="true" />Se a tabela de idioma é suportada; Caso contrário, <see langword="false" />.</value>
+        <remarks>To be added.</remarks>
+        <forInternalUseOnly />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,58 @@
+<Type Name="MouseWheelEventHandler" FullName="System.Windows.Input.MouseWheelEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MouseWheelEventHandler(object sender, MouseWheelEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MouseWheelEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:System.Windows.Input.MouseWheelEventHandler" />
+  <AssemblyInfo>
+    <AssemblyName>PresentationCore</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="System.Windows.Input.MouseWheelEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">O objeto em que o manipulador de eventos está anexado.</param>
+    <param name="e">Os dados do evento.</param>
+    <summary>Representa o método que manipulará os eventos roteados <see cref="E:System.Windows.UIElement.MouseWheel" /> e <see cref="E:System.Windows.ContentElement.MouseWheel" />, bem como eventos de visualização e anexados relacionados.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Este delegado é usado com os seguintes eventos anexados.  
+  
+-   <xref:System.Windows.Input.Mouse.MouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.Input.Mouse.PreviewMouseWheel?displayProperty=nameWithType>  
+  
+ Este delegado é usado com os seguintes eventos roteados. Esses eventos roteados encaminham os eventos anexados listados anteriormente para torná-las mais acessível para o modelo de elemento geral em [!INCLUDE[TLA2#tla_winclient](~/includes/tla2sharptla-winclient-md.md)].  
+  
+-   <xref:System.Windows.UIElement.MouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.MouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.UIElement.PreviewMouseWheel?displayProperty=nameWithType>  
+  
+-   <xref:System.Windows.ContentElement.PreviewMouseWheel?displayProperty=nameWithType>  
+  
+ Os eventos anexados e os eventos roteado de elemento base compartilham seus dados de evento e bolha e túnel versões dos eventos roteados também compartilham dados de evento. Isso pode afetar as características manipuladas do evento conforme ela se desloca a rota de evento. Para obter detalhes, consulte [visão geral de entrada](~/docs/framework/wpf/advanced/input-overview.md).  
+  
+ O <xref:System.Windows.Input.MouseWheelEventArgs.Delta%2A> é de propriedade positivo se a roda do mouse é movida para frente (afastada de usuário) ou negativo se a roda do mouse é movida para baixo (em direção ao usuário).  
+  
+   
+  
+## Examples  
+ O exemplo a seguir move um <xref:System.Windows.Controls.TextBox>, que está anexado a uma <xref:System.Windows.Controls.Canvas>, para cima se a roda do mouse <xref:System.Windows.Input.MouseWheelEventArgs.Delta%2A> for positivo e move o <xref:System.Windows.Controls.TextBox> para baixo se a roda do mouse <xref:System.Windows.Input.MouseWheelEventArgs.Delta%2A> é negativo.  
+  
+ [!code-csharp[mousesnippetsample#MouseWheelDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseSnippetSample/CSharp/Window1.xaml.cs#mousewheeldelta)]
+ [!code-vb[mousesnippetsample#MouseWheelDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseSnippetSample/visualbasic/window1.xaml.vb#mousewheeldelta)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+</Type>

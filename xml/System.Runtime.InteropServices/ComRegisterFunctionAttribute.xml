@@ -1,0 +1,90 @@
+<Type Name="ComRegisterFunctionAttribute" FullName="System.Runtime.InteropServices.ComRegisterFunctionAttribute">
+  <TypeSignature Language="C#" Value="public sealed class ComRegisterFunctionAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ComRegisterFunctionAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:System.Runtime.InteropServices.ComRegisterFunctionAttribute" />
+  <AssemblyInfo>
+    <AssemblyName>mscorlib</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Especifica o método a ser chamado quando você registra um assembly para ser usado de COM. Isso habilita a execução de código escrito pelo usuário durante o processo de registro.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Você pode aplicar esse atributo para métodos.  
+  
+ <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>permite que você adicione código de registro arbitrário para acomodar os requisitos de clientes COM. Por exemplo, você pode atualizar o registro usando as funções de registro da <xref:Microsoft.Win32> namespace. Se você fornecer um método de registro, você também deve aplicar <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=nameWithType> a um método de cancelamento de registro, que reverte as operações realizadas no método de registro.  
+  
+ O common language runtime chama o método com esse atributo quando seu assembly contendo é registrado (direta ou indiretamente) com o [Regasm.exe (ferramenta de registro de Assembly)](~/docs/framework/tools/regasm-exe-assembly-registration-tool.md)ou por meio de <xref:System.Runtime.InteropServices.RegistrationServices.RegisterAssembly%2A?displayProperty=nameWithType> método.  
+  
+ Esse atributo pode ser aplicado apenas para os métodos que têm as seguintes características:  
+  
+-   Escopo: Qualquer (público, privado e assim por diante).  
+  
+-   Digite: `static`.  
+  
+-   Parâmetros: Aceita um único <xref:System.Type> parâmetro ou um <xref:System.String> tipo de parâmetro.  
+  
+-   Tipo de retorno: `void`.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir demonstra como aplicar <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> e <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> para métodos com a assinatura apropriada.  
+  
+ [!code-cpp[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/cpp/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/CPP/source.cpp#1)]
+ [!code-csharp[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/csharp/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/CS/source.cs#1)]
+ [!code-vb[Classic ComRegisterFunctionAttribute Example#1](~/samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic ComRegisterFunctionAttribute Example/VB/source.vb#1)]  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComRegisterFunctionAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Runtime.InteropServices.ComRegisterFunctionAttribute.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>mscorlib</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Runtime.InteropServices</AssemblyName>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância da classe <see cref="T:System.Runtime.InteropServices.ComRegisterFunctionAttribute" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,225 @@
+<Type Name="XamlTaskFactory" FullName="Microsoft.Build.Tasks.XamlTaskFactory">
+  <TypeSignature Language="C#" Value="public class XamlTaskFactory : Microsoft.Build.Framework.ITaskFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit XamlTaskFactory extends System.Object implements class Microsoft.Build.Framework.ITaskFactory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Build.Tasks.XamlTaskFactory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Build.Framework.ITaskFactory</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>O provedor de fábrica de tarefas para tarefas XAML.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XamlTaskFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.XamlTaskFactory.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Cria uma fábrica de tarefas para tarefas XAML.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanupTask">
+      <MemberSignature Language="C#" Value="public void CleanupTask (Microsoft.Build.Framework.ITask task);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CleanupTask(class Microsoft.Build.Framework.ITask task) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.XamlTaskFactory.CleanupTask(Microsoft.Build.Framework.ITask)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="task" Type="Microsoft.Build.Framework.ITask" />
+      </Parameters>
+      <Docs>
+        <param name="task">A tarefa de limpeza.</param>
+        <summary>Limpa qualquer contexto ou o estado que pode ter foram criado para uma determinada tarefa.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Alguns fábricas podem criar um AppDomain como parte de uma instância de tarefa individual. Tais fábricas de usam esse método para desligar o AppDomain.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTask">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.ITask CreateTask (Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Framework.ITask CreateTask(class Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.XamlTaskFactory.CreateTask(Microsoft.Build.Framework.IBuildEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.ITask</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskFactoryLoggingHost" Type="Microsoft.Build.Framework.IBuildEngine" />
+      </Parameters>
+      <Docs>
+        <param name="taskFactoryLoggingHost">O host de log de fábrica de tarefas que registra em log mensagens no contexto da tarefa.</param>
+        <summary>Cria uma instância da tarefa a ser usado.</summary>
+        <returns>Retorna a nova fábrica de tarefas.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FactoryName">
+      <MemberSignature Language="C#" Value="public string FactoryName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FactoryName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.XamlTaskFactory.FactoryName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém o nome da fábrica tarefa, a ser usado em mensagens de erro. Por exemplo, a tarefa "Mytask" Falha ao carregar do "FactoryName".</summary>
+        <value>Retorna o nome desta fábrica de tarefas</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTaskParameters">
+      <MemberSignature Language="C#" Value="public Microsoft.Build.Framework.TaskPropertyInfo[] GetTaskParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Build.Framework.TaskPropertyInfo[] GetTaskParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.XamlTaskFactory.GetTaskParameters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Build.Framework.TaskPropertyInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Obtém as informações de tipo para os parâmetros da tarefa.</summary>
+        <returns>Retorna as informações de tipo como uma matriz de PropertyInfo.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public bool Initialize (string taskName, System.Collections.Generic.IDictionary&lt;string,Microsoft.Build.Framework.TaskPropertyInfo&gt; taskParameters, string taskElementContents, Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Initialize(string taskName, class System.Collections.Generic.IDictionary`2&lt;string, class Microsoft.Build.Framework.TaskPropertyInfo&gt; taskParameters, string taskElementContents, class Microsoft.Build.Framework.IBuildEngine taskFactoryLoggingHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Build.Tasks.XamlTaskFactory.Initialize(System.String,System.Collections.Generic.IDictionary{System.String,Microsoft.Build.Framework.TaskPropertyInfo},System.String,Microsoft.Build.Framework.IBuildEngine)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="taskName" Type="System.String" />
+        <Parameter Name="taskParameters" Type="System.Collections.Generic.IDictionary&lt;System.String,Microsoft.Build.Framework.TaskPropertyInfo&gt;" />
+        <Parameter Name="taskElementContents" Type="System.String" />
+        <Parameter Name="taskFactoryLoggingHost" Type="Microsoft.Build.Framework.IBuildEngine" />
+      </Parameters>
+      <Docs>
+        <param name="taskName">O nome da tarefa.</param>
+        <param name="taskParameters">Os parâmetros para passar para a tarefa.</param>
+        <param name="taskElementContents">O conteúdo do elemento.</param>
+        <param name="taskFactoryLoggingHost">O host de log de fábrica de tarefas que registra em log mensagens no contexto da tarefa.</param>
+        <summary>Inicializa a fábrica.</summary>
+        <returns>Retorna <see cref="T:System.Boolean" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskElementContents">
+      <MemberSignature Language="C#" Value="public string TaskElementContents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskElementContents" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskElementContents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o conteúdo do corpo do UsingTask.</summary>
+        <value>Retorna o conteúdo do corpo do UsingTask.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskName">
+      <MemberSignature Language="C#" Value="public string TaskName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o nome da tarefa, extraída do XAML.</summary>
+        <value>Retorna o nome da tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskNamespace">
+      <MemberSignature Language="C#" Value="public string TaskNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TaskNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o namespace da tarefa, extraída do XAML.</summary>
+        <value>Retorna o namespace da tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskType">
+      <MemberSignature Language="C#" Value="public Type TaskType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type TaskType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Build.Tasks.XamlTaskFactory.TaskType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Build.Tasks.v4.0</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém ou define o tipo de tarefa, extraída do XAML.</summary>
+        <value>Retorna o tipo de tarefa.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

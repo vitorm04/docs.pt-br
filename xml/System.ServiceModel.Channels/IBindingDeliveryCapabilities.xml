@@ -1,0 +1,232 @@
+<Type Name="IBindingDeliveryCapabilities" FullName="System.ServiceModel.Channels.IBindingDeliveryCapabilities">
+  <TypeSignature Language="C#" Value="public interface IBindingDeliveryCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBindingDeliveryCapabilities" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.IBindingDeliveryCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Define a interface que associações devem implementar para descrever e os recursos que podem exigir que os clientes e serviços de anúncio.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O <xref:System.ServiceModel.Channels.IBindingDeliveryCapabilities> interface deve ser implementada por uma associação, se os clientes e serviços para poder estipular, como parte de seu contrato, que os recursos que eles exigem são fornecidos por meio da associação.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exige que `CalculatorService` devem usar um <xref:System.ServiceModel.WSHttpBinding> com a entrega de mensagens ordenadas. Sessões confiáveis e na fila de entrega não são usados por padrão com essa associação, mas podem ser habilitados.  
+  
+```csharp  
+<!-- Here is the configuration for a CalculatorService using a WSHttpBinding with ordered message delivery required. -->  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+   <system.serviceModel>  
+      <services>  
+         <service   
+             type="Microsoft.ServiceModel.Samples.CalculatorService">  
+            <!-- Use base address provided by host and a WSHttpBinding named "Binding1" -->  
+            <endpoint address=""  
+                      binding="wsHttpBinding"  
+                      bindingConfiguration="Binding1"   
+                      contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+         </service>  
+      </services>  
+  
+      <bindings>  
+         <wsHttpBinding>   
+            <binding name="Binding1">           
+               <!-- The next element enables a ReliableSession and required ordered delivery-->  
+      <reliableSession enabled="true" ordered="true"/>  
+      </binding>  
+         </wsHttpBinding>  
+      </bindings>  
+  
+   </system.serviceModel>  
+</configuration>  
+  
+// The CalculatorService configuration has enabled a reliable session  
+// with ordered delivery set to true. This means that the binding  
+// requirement for ordered delivery specified by the  
+// BindingRequirementsAttribute on the CalculatorService class  
+// implemented below will be satisfied by this WSHttpBinding.  
+  
+using System;  
+using System.ServiceModel;  
+  
+[ServiceContract]  
+interface ICalculatorService  
+{  
+  [OperationBehavior()]  
+  int Add(int a, int b);    
+  
+  [OperationContract]  
+  int Subtract(int a, int b);  
+}  
+  
+[BindingRequirements(  
+  QueuedDeliveryRequirements=RequirementsMode.Disallow,  
+  RequireOrderedDelivery=true  
+)]  
+class CalculatorService: ICalculatorService  
+{  
+  public int Add(int a, int b)  
+  {  
+    Console.WriteLine("Add called.");  
+    return a + b;   
+  }  
+  
+  public int Subtract(int a, int b)  
+  {  
+    Console.WriteLine("Subtract called.");  
+    return a - b;  
+  }  
+  
+  public int Multiply(int a, int b)  
+  {  
+    return a * b;  
+  }  
+}  
+```  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AssuresOrderedDelivery">
+      <MemberSignature Language="C#" Value="public bool AssuresOrderedDelivery { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AssuresOrderedDelivery" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IBindingDeliveryCapabilities.AssuresOrderedDelivery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação pode dar suporte a garantias para a entrega de mensagens na ordem em que foram enviadas.</summary>
+        <value>
+          <see langword="true" />Se as mensagens devem ser entregues na ordem em que foram enviadas; <see langword="false" />, se as mensagens não podem ser entregue nesta ordem.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor deste <xref:System.ServiceModel.Channels.IBindingDeliveryCapabilities.AssuresOrderedDelivery%2A> propriedade é consumida pelo <xref:System.ServiceModel.DeliveryRequirementsAttribute.RequireOrderedDelivery%2A> quando a descrição do serviço é carregada no tempo de execução. Essa verificação é feita para determinar se os requisitos de entrega ordenada do serviço são atendidos pela associação selecionado ou criado para o serviço.  
+  
+   
+  
+## Examples  
+ O exemplo a seguir exige que `CalculatorService` devem usar um <xref:System.ServiceModel.WSHttpBinding> com a entrega de mensagens ordenadas. Sessões confiáveis e na fila de entrega não são usados por padrão com essa associação, mas podem ser habilitados.  
+  
+```csharp  
+<!-- Here is the configuration for a CalculatorService using a WSHttpBinding with ordered message delivery required. -->  
+<?xml version="1.0" encoding="utf-8" ?>  
+<configuration>  
+   <system.serviceModel>  
+      <services>  
+         <service   
+             type="Microsoft.ServiceModel.Samples.CalculatorService">  
+            <!-- Use base address provided by host and a WSHttpBinding named "Binding1" -->  
+            <endpoint address=""  
+                      binding="wsHttpBinding"  
+                      bindingConfiguration="Binding1"   
+                      contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+         </service>  
+      </services>  
+  
+      <bindings>  
+         <wsHttpBinding>   
+            <binding name="Binding1">           
+               <!-- The next element enables a ReliableSession and required ordered delivery-->  
+      <reliableSession enabled="true" ordered="true"/>  
+      </binding>  
+         </wsHttpBinding>  
+      </bindings>  
+  
+   </system.serviceModel>  
+</configuration>  
+  
+// The CalculatorService configuration has enabled a reliable session  
+// with ordered delivery set to true. This means that the binding  
+// requirement for ordered delivery specified by the  
+// BindingRequirementsAttribute on the CalculatorService class  
+// implemented below will be satisfied by this WSHttpBinding.  
+  
+using System;  
+using System.ServiceModel;  
+  
+[ServiceContract]  
+interface ICalculatorService  
+{  
+  [OperationBehavior()]  
+  int Add(int a, int b);    
+  
+  [OperationContract]  
+  int Subtract(int a, int b);  
+}  
+  
+[BindingRequirements(  
+  QueuedDeliveryRequirements=RequirementsMode.Disallow,  
+  RequireOrderedDelivery=true  
+)]  
+class CalculatorService: ICalculatorService  
+{  
+  public int Add(int a, int b)  
+  {  
+    Console.WriteLine("Add called.");  
+    return a + b;   
+  }  
+  
+  public int Subtract(int a, int b)  
+  {  
+    Console.WriteLine("Subtract called.");  
+    return a - b;  
+  }  
+  
+  public int Multiply(int a, int b)  
+  {  
+    return a * b;  
+  }  
+}  
+```  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueuedDelivery">
+      <MemberSignature Language="C#" Value="public bool QueuedDelivery { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool QueuedDelivery" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.IBindingDeliveryCapabilities.QueuedDelivery" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém um valor que indica se a associação pode dar suporte a entrega na fila de mensagens.</summary>
+        <value>
+          <see langword="true" />Se na fila de entrega de mensagens é suportado; Caso contrário, <see langword="false" />.</value>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ O valor deste <xref:System.ServiceModel.Channels.IBindingDeliveryCapabilities.QueuedDelivery%2A> propriedade é consumida quando a descrição do serviço é carregada no tempo de execução. Essa verificação é feita para determinar se os requisitos de entrega na fila do serviço são atendidos pela associação selecionado ou criado para o serviço.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

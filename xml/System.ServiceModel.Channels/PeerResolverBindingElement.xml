@@ -1,0 +1,99 @@
+<Type Name="PeerResolverBindingElement" FullName="System.ServiceModel.Channels.PeerResolverBindingElement">
+  <TypeSignature Language="C#" Value="public abstract class PeerResolverBindingElement : System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PeerResolverBindingElement extends System.ServiceModel.Channels.BindingElement" />
+  <TypeSignature Language="DocId" Value="T:System.ServiceModel.Channels.PeerResolverBindingElement" />
+  <AssemblyInfo>
+    <AssemblyName>System.ServiceModel</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ServiceModel.Channels.BindingElement</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Define a classe base abstrata para elementos usados para criar objetos de resolvedor de pares de associação.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa classe define a classe base abstrata para todos os elementos de associação usado para criar objetos de resolvedor de ponto a ponto. Para implementações específicas dessa classe, consulte a documentação de <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement> e <xref:System.ServiceModel.Channels.PeerCustomResolverBindingElement>.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PeerResolverBindingElement ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PeerResolverBindingElement.#ctor" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Inicializa uma nova instância padrão da classe <see cref="T:System.ServiceModel.Channels.PeerResolverBindingElement" />.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PeerResolverBindingElement (System.ServiceModel.Channels.PeerResolverBindingElement other);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.ServiceModel.Channels.PeerResolverBindingElement other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PeerResolverBindingElement.#ctor(System.ServiceModel.Channels.PeerResolverBindingElement)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="other" Type="System.ServiceModel.Channels.PeerResolverBindingElement" />
+      </Parameters>
+      <Docs>
+        <param name="other">
+          <see cref="T:System.ServiceModel.Channels.PeerResolverBindingElement" />objeto a ser copiado durante a criação desta instância de classe.</param>
+        <summary>Inicializa uma nova instância do <see cref="T:System.ServiceModel.Channels.PeerResolverBindingElement" /> classe duplicando fornecido <see cref="T:System.ServiceModel.Channels.PeerResolverBindingElement" /> objeto.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePeerResolver">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.PeerResolver CreatePeerResolver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.ServiceModel.PeerResolver CreatePeerResolver() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.ServiceModel.Channels.PeerResolverBindingElement.CreatePeerResolver" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolver</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cria um objeto do resolvedor de ponto a ponto com as configurações definidas neste elemento de associação.</summary>
+        <returns>
+          <see cref="T:System.ServiceModel.PeerResolver" />objeto que é usado para executar o nome do par de resolução de endereço. As configurações no resolvedor peer devem ser definidas no elemento de associação.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferralPolicy">
+      <MemberSignature Language="C#" Value="public abstract System.ServiceModel.PeerResolvers.PeerReferralPolicy ReferralPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ServiceModel.PeerResolvers.PeerReferralPolicy ReferralPolicy" />
+      <MemberSignature Language="DocId" Value="P:System.ServiceModel.Channels.PeerResolverBindingElement.ReferralPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.ServiceModel</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ServiceModel.PeerResolvers.PeerReferralPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtém e define a política de referência de ponto a ponto resolvedores criados com elementos criados pelas implementações dessa classe de associação.</summary>
+        <value>
+          <see cref="T:System.ServiceModel.PeerResolvers.PeerReferralPolicy" />valor de enumeração que especifica a diretiva de referência para o resolvedor peer criado com esse elemento de associação.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

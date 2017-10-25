@@ -1,0 +1,123 @@
+<Type Name="NewLineHandling" FullName="System.Xml.NewLineHandling">
+  <TypeSignature Language="C#" Value="public enum NewLineHandling" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed NewLineHandling extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:System.Xml.NewLineHandling" />
+  <AssemblyInfo>
+    <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <AssemblyVersion>4.0.10.0</AssemblyVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <AssemblyVersion>4.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>System.Xml</AssemblyName>
+    <AssemblyVersion>2.0.5.0</AssemblyVersion>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <AssemblyInfo>
+    <AssemblyName>netstandard</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Especifica como lidar com quebras de linha.</summary>
+    <remarks>
+      <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Essa enumeração é passada para o <xref:System.Xml.XmlWriter.Create%2A> método para especificar se o <xref:System.Xml.XmlWriter> objeto normalizarão quebras de linha na saída.  
+  
+ Consulte o <xref:System.Xml.XmlWriterSettings.NewLineHandling%2A> propriedade para ver uma tabela detalhando o comportamento de cada um dos tipos de validação.  
+  
+ ]]></format>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Entitize">
+      <MemberSignature Language="C#" Value="Entitize" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.NewLineHandling Entitize = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.NewLineHandling.Entitize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.NewLineHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caracteres de nova linha são transformados em entidades. Essa configuração preserva todos os caracteres quando a saída é lida por um <see cref="T:System.Xml.XmlReader" /> de normalização.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.NewLineHandling None = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.NewLineHandling.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.NewLineHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Os caracteres de nova linha estão inalterados. A saída é a mesma que a entrada.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="Replace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Xml.NewLineHandling Replace = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:System.Xml.NewLineHandling.Replace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+        <AssemblyVersion>4.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <AssemblyInfo>
+        <AssemblyName>netstandard</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.NewLineHandling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Caracteres de nova linha são substituídos de acordo com o caractere especificado no <see cref="P:System.Xml.XmlWriterSettings.NewLineChars" /> propriedade.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
